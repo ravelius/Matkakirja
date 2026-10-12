@@ -1,0 +1,2871 @@
+{
+  "schemaVersion": "capital-city-role-assets/v1",
+  "era": "e07",
+  "city": "khartum",
+  "authorization": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+  "sourceContentAfterSHA256": "f8f52cd4508afc665d78e8c25994c6041a919a3e5f7312f0dd6c5c728e412a8d",
+  "assets": [
+    {
+      "era": "e07",
+      "city": "khartum",
+      "slot": "O4",
+      "type": "illustration",
+      "assetID": "e07-khartum-O4-v1-20261012",
+      "galleryImageID": "e07-khartum-O4-v1-20261012",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "matkailijalle",
+        "artikkeli",
+        "jaksot",
+        3,
+        "kuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/khartum/e07-khartum-O4-v1-20261012-6a41a095f8b7.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Vehnäpohjaisen leivän ja okra-lihakastikkeen havainnekuva; ei dokumentoitu ravintola-annos.",
+        "lyhyt": "Vehnäpohjaisen leivän ja okra-lihakastikkeen havainnekuva; ei dokumentoitu ravintola-annos."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/khartum/e07-khartum-O4-v1-20261012-6a41a095f8b7.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Vehnäpohjaisen leivän ja okra-lihakastikkeen havainnekuva; ei dokumentoitu ravintola-annos.",
+        "lyhyt": "Vehnäpohjaisen leivän ja okra-lihakastikkeen havainnekuva; ei dokumentoitu ravintola-annos."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "6a41a095f8b7d04f8ccc1fa65779255d7f5c8e0bc1bd4163f813bada890a3fda",
+      "exportSHA256": "49ec19c763fc4280f4721e2eb29fe3fdfc26ab23e5300e216c4b37a53d1c7c6e",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/khartum/e07-khartum-O4-v1-20261012-6a41a095f8b7.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/khartum/e07-khartum-O4-v1-20261012-6a41a095f8b7.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/khartum/e07-khartum-O4-v1-20261012-6a41a095f8b7.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/khartum/sisalto.json",
+      "sourceContentSHA256": "f8f52cd4508afc665d78e8c25994c6041a919a3e5f7312f0dd6c5c728e412a8d",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "b8c01ba245de5c502c8e0315c626254bf5089e0f8e9502ff8fc8b99184d0595b",
+        "subjectTitle": "Ruokaperinne",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": [
+            "Food and common plain tableware; no protected work, logo or identifiable restaurant."
+          ],
+          "QA": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/khartum/assets/e07-khartum-O4-v1-20261012/kuva.png",
+            "width": 1536,
+            "height": 1024,
+            "fullNativeImageViewed": true,
+            "captionFi": "Vehnäpohjaisen leivän ja okra-lihakastikkeen havainnekuva; ei dokumentoitu ravintola-annos.",
+            "sourceEvidence": [
+              {
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/khartum/sisalto.json",
+                "contentSha256": "ab8c22ac5d61b12a81dd05c3565ec3fd5796eb7bf9144cf3432f302c4eb146e9",
+                "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+                "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/khartum/faktapohja.md",
+                "evidenceMode": "current source-backed guide food topic; generalized illustration",
+                "targetTextAtIssue": ""
+              }
+            ],
+            "sourceBoundTopicChecked": true,
+            "rightsScope": "Natural animal/material/food and common functional objects, no protected artwork or real-place reconstruction",
+            "currentContentSHA256": "ab8c22ac5d61b12a81dd05c3565ec3fd5796eb7bf9144cf3432f302c4eb146e9",
+            "targetStillExists": true
+          },
+          "qaReason": "Paksu vehnäleipä tavallisella alustalla ja okraa sekä lihapaloja sisältävä kastike. Kypsät pinnat ja lohkojako uskottavia, ei tekstiä, logoja, kasvoja tai ravintolan tunnisteita. Nykyisen oppaan gurasa/okra-liha-aihetta vastaava yleishavainnollistus, ei todellisen ravintola-annoksen tai nykyisen palvelun kuva."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Vehnäpohjaisen leivän ja okra-lihakastikkeen havainnekuva; ei dokumentoitu ravintola-annos.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/khartum/qa.json",
+        "fileSHA256": "28fba4cfbb9fd72fdac1f8730a89ae13a815de9f99f0f97bf6781719b09fe4b5",
+        "item": {
+          "slot": "O4",
+          "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+          "verdict": "accepted",
+          "reason": "Paksu vehnäleipä tavallisella alustalla ja okraa sekä lihapaloja sisältävä kastike. Kypsät pinnat ja lohkojako uskottavia, ei tekstiä, logoja, kasvoja tai ravintolan tunnisteita. Nykyisen oppaan gurasa/okra-liha-aihetta vastaava yleishavainnollistus, ei todellisen ravintola-annoksen tai nykyisen palvelun kuva.",
+          "evidence": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/khartum/assets/e07-khartum-O4-v1-20261012/kuva.png",
+            "width": 1536,
+            "height": 1024,
+            "fullNativeImageViewed": true,
+            "captionFi": "Vehnäpohjaisen leivän ja okra-lihakastikkeen havainnekuva; ei dokumentoitu ravintola-annos.",
+            "sourceEvidence": [
+              {
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/khartum/sisalto.json",
+                "contentSha256": "ab8c22ac5d61b12a81dd05c3565ec3fd5796eb7bf9144cf3432f302c4eb146e9",
+                "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+                "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/khartum/faktapohja.md",
+                "evidenceMode": "current source-backed guide food topic; generalized illustration",
+                "targetTextAtIssue": ""
+              }
+            ],
+            "sourceBoundTopicChecked": true,
+            "rightsScope": "Natural animal/material/food and common functional objects, no protected artwork or real-place reconstruction",
+            "currentContentSHA256": "ab8c22ac5d61b12a81dd05c3565ec3fd5796eb7bf9144cf3432f302c4eb146e9",
+            "targetStillExists": true
+          },
+          "reviewedAt": "2026-10-12T18:02:22.831015+00:00",
+          "assetID": "e07-khartum-O4-v1-20261012",
+          "sha256": "6a41a095f8b7d04f8ccc1fa65779255d7f5c8e0bc1bd4163f813bada890a3fda"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/khartum/qa.json",
+            "sha256": "28fba4cfbb9fd72fdac1f8730a89ae13a815de9f99f0f97bf6781719b09fe4b5"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/khartum/illustration-qa-extra.json",
+            "sha256": "d6cb0f264fed57c081d58d5703785299fb2a12d44105c1c0997e94f8a37b0622"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/khartum/e07-khartum-O4-v1-20261012-6a41a095f8b7.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/khartum/e07-khartum-O4-v1-20261012-6a41a095f8b7.png?t=49ec19c763fc4280",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/khartum/e07-khartum-O4-v1-20261012-6a41a095f8b7.png",
+        "sha256": "49ec19c763fc4280f4721e2eb29fe3fdfc26ab23e5300e216c4b37a53d1c7c6e",
+        "bytes": 2710740,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e07-khartum-O4-v1-20261012",
+        "nativeSHA256": "6a41a095f8b7d04f8ccc1fa65779255d7f5c8e0bc1bd4163f813bada890a3fda",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/khartum/e07-khartum-O4-v1-20261012-6a41a095f8b7.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e07",
+        "city": "khartum",
+        "slot": "O4",
+        "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+        "verifiedAt": "2026-10-12T18:04:43.837092+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/khartum/e07-khartum-O4-v1-20261012-6a41a095f8b7.png",
+        "sha256": "49ec19c763fc4280f4721e2eb29fe3fdfc26ab23e5300e216c4b37a53d1c7c6e",
+        "bytes": 2710740,
+        "SHAReadAt": "2026-10-12T18:29:51.130062+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "6a41a095f8b7d04f8ccc1fa65779255d7f5c8e0bc1bd4163f813bada890a3fda",
+        "rgbPixelSHA256": "ae3fc92a533b4a54326a5a51de1c86d04ea38c2afc563097355d5d64076d92ba",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "f8f52cd4508afc665d78e8c25994c6041a919a3e5f7312f0dd6c5c728e412a8d",
+      "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+      "contextAfterSHA256": "b8c01ba245de5c502c8e0315c626254bf5089e0f8e9502ff8fc8b99184d0595b"
+    },
+    {
+      "era": "e07",
+      "city": "khartum",
+      "slot": "K2",
+      "type": "illustration",
+      "assetID": "e07-khartum-K2-v1-20261012",
+      "galleryImageID": "e07-khartum-K2-v1-20261012",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].nostot[1]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "nostot",
+        1
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/khartum/e07-khartum-K2-v1-20261012-740147eb699e.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Sitrusviljelyn havainnekuva; kuva ei esitä Tutin nykyistä maisemaa.",
+        "lyhyt": "Sitrusviljelyn havainnekuva; kuva ei esitä Tutin nykyistä maisemaa."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/khartum/e07-khartum-K2-v1-20261012-740147eb699e.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Sitrusviljelyn havainnekuva; kuva ei esitä Tutin nykyistä maisemaa.",
+        "lyhyt": "Sitrusviljelyn havainnekuva; kuva ei esitä Tutin nykyistä maisemaa."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "740147eb699e57e6249fb29ebcd33084658a970733d57d0b111fced32216a298",
+      "exportSHA256": "0d722b0a55da7303fce5ae9de9edc2afb4f3d94f62d2b539f03f0fb12ecc3fbc",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/khartum/e07-khartum-K2-v1-20261012-740147eb699e.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/khartum/e07-khartum-K2-v1-20261012-740147eb699e.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/khartum/e07-khartum-K2-v1-20261012-740147eb699e.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/khartum/sisalto.json",
+      "sourceContentSHA256": "f8f52cd4508afc665d78e8c25994c6041a919a3e5f7312f0dd6c5c728e412a8d",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "651a5aa042a39f049ee2d4f5145ee2f6d92b25a842b607f5db17a53667417ddb",
+        "semanticContextSHA256": "651a5aa042a39f049ee2d4f5145ee2f6d92b25a842b607f5db17a53667417ddb",
+        "subjectTitle": "Viljelysaari kaupunkien välissä",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": [
+            "New generated illustration of natural subject or common utility object; no reproduction of a protected work.",
+            "Named buildings, identifiable people and exact contemporary art/design excluded."
+          ],
+          "QA": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/khartum/assets/e07-khartum-K2-v1-20261012/kuva.png",
+            "width": 1536,
+            "height": 1024,
+            "fullNativeImageViewed": true,
+            "captionFi": "Sitrusviljelyn havainnekuva; kuva ei esitä Tutin nykyistä maisemaa.",
+            "sourceEvidence": [
+              {
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/khartum/sisalto.json",
+                "contentSha256": "ab8c22ac5d61b12a81dd05c3565ec3fd5796eb7bf9144cf3432f302c4eb146e9",
+                "targetJsonPath": "$.kaupunkilehti[0].nostot[1]",
+                "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/khartum/faktapohja.md",
+                "evidenceMode": "source-backed text topic; generalized material/food/biological illustration, not exact place appearance",
+                "targetTextAtIssue": "Tutin saaren kylähistoria on modernia Khartumia vanhempi. Jokisaari sijaitsee kolmen kaupungin välissä, ja sen aiemmin dokumentoitu maisema yhdisti kylän, pellot ja kasvitarhat. Sitrus- ja limettipuut sekä vihannesviljely liittivät saaren kaupunkiseudun ruoantuotantoon. Ennen modernia siltaa yhteys kulki vettä pitkin. Tämä on saaren maataloushistoriaa, ei kuvaus sen nykyisestä toiminnasta. Tutin tarinassa kaupunkiseudun keskellä ollut maa ei ollut vain rakennustontti: sillä tuotettiin myös ruokaa."
+              }
+            ],
+            "rightsScope": "Common food/tool material, no city panorama or protected artwork",
+            "currentContentSHA256": "ab8c22ac5d61b12a81dd05c3565ec3fd5796eb7bf9144cf3432f302c4eb146e9",
+            "targetStillExists": true
+          },
+          "qaReason": "Limettejä, sitruslehtiä ja leikatun hedelmän luonnollinen lohkojako punotulla tavallisella alustalla. Kuoripinnat vaihtelevat, ei kasvoja, tekstiä tai logoja. Yleinen viljelyhavainnollistus vastaa Tutin historiallista sitrusaihetta; caption ei esitä nykyistä Tutin maisemaa."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Sitrusviljelyn havainnekuva; kuva ei esitä Tutin nykyistä maisemaa.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/khartum/qa.json",
+        "fileSHA256": "28fba4cfbb9fd72fdac1f8730a89ae13a815de9f99f0f97bf6781719b09fe4b5",
+        "item": {
+          "slot": "K2",
+          "targetJsonPath": "$.kaupunkilehti[0].nostot[1]",
+          "verdict": "accepted",
+          "reason": "Limettejä, sitruslehtiä ja leikatun hedelmän luonnollinen lohkojako punotulla tavallisella alustalla. Kuoripinnat vaihtelevat, ei kasvoja, tekstiä tai logoja. Yleinen viljelyhavainnollistus vastaa Tutin historiallista sitrusaihetta; caption ei esitä nykyistä Tutin maisemaa.",
+          "evidence": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/khartum/assets/e07-khartum-K2-v1-20261012/kuva.png",
+            "width": 1536,
+            "height": 1024,
+            "fullNativeImageViewed": true,
+            "captionFi": "Sitrusviljelyn havainnekuva; kuva ei esitä Tutin nykyistä maisemaa.",
+            "sourceEvidence": [
+              {
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/khartum/sisalto.json",
+                "contentSha256": "ab8c22ac5d61b12a81dd05c3565ec3fd5796eb7bf9144cf3432f302c4eb146e9",
+                "targetJsonPath": "$.kaupunkilehti[0].nostot[1]",
+                "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/khartum/faktapohja.md",
+                "evidenceMode": "source-backed text topic; generalized material/food/biological illustration, not exact place appearance",
+                "targetTextAtIssue": "Tutin saaren kylähistoria on modernia Khartumia vanhempi. Jokisaari sijaitsee kolmen kaupungin välissä, ja sen aiemmin dokumentoitu maisema yhdisti kylän, pellot ja kasvitarhat. Sitrus- ja limettipuut sekä vihannesviljely liittivät saaren kaupunkiseudun ruoantuotantoon. Ennen modernia siltaa yhteys kulki vettä pitkin. Tämä on saaren maataloushistoriaa, ei kuvaus sen nykyisestä toiminnasta. Tutin tarinassa kaupunkiseudun keskellä ollut maa ei ollut vain rakennustontti: sillä tuotettiin myös ruokaa."
+              }
+            ],
+            "rightsScope": "Common food/tool material, no city panorama or protected artwork",
+            "currentContentSHA256": "ab8c22ac5d61b12a81dd05c3565ec3fd5796eb7bf9144cf3432f302c4eb146e9",
+            "targetStillExists": true
+          },
+          "reviewedAt": "2026-10-12T17:55:57.298189+00:00",
+          "assetID": "e07-khartum-K2-v1-20261012",
+          "sha256": "740147eb699e57e6249fb29ebcd33084658a970733d57d0b111fced32216a298"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/khartum/qa.json",
+            "sha256": "28fba4cfbb9fd72fdac1f8730a89ae13a815de9f99f0f97bf6781719b09fe4b5"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/khartum/illustration-qa-extra.json",
+            "sha256": "d6cb0f264fed57c081d58d5703785299fb2a12d44105c1c0997e94f8a37b0622"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/khartum/e07-khartum-K2-v1-20261012-740147eb699e.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/khartum/e07-khartum-K2-v1-20261012-740147eb699e.png?t=0d722b0a55da7303",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/khartum/e07-khartum-K2-v1-20261012-740147eb699e.png",
+        "sha256": "0d722b0a55da7303fce5ae9de9edc2afb4f3d94f62d2b539f03f0fb12ecc3fbc",
+        "bytes": 2375059,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e07-khartum-K2-v1-20261012",
+        "nativeSHA256": "740147eb699e57e6249fb29ebcd33084658a970733d57d0b111fced32216a298",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/khartum/e07-khartum-K2-v1-20261012-740147eb699e.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e07",
+        "city": "khartum",
+        "slot": "K2",
+        "targetJsonPath": "$.kaupunkilehti[0].nostot[1]",
+        "verifiedAt": "2026-10-12T17:57:27.755180+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/khartum/e07-khartum-K2-v1-20261012-740147eb699e.png",
+        "sha256": "0d722b0a55da7303fce5ae9de9edc2afb4f3d94f62d2b539f03f0fb12ecc3fbc",
+        "bytes": 2375059,
+        "SHAReadAt": "2026-10-12T18:29:50.926177+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "740147eb699e57e6249fb29ebcd33084658a970733d57d0b111fced32216a298",
+        "rgbPixelSHA256": "8efce8bc9960a0ffb7f84e1d1d65001b1ca47cae2d7abede1687835124c3136d",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "f8f52cd4508afc665d78e8c25994c6041a919a3e5f7312f0dd6c5c728e412a8d",
+      "targetAfterSHA256": "651a5aa042a39f049ee2d4f5145ee2f6d92b25a842b607f5db17a53667417ddb",
+      "contextAfterSHA256": "651a5aa042a39f049ee2d4f5145ee2f6d92b25a842b607f5db17a53667417ddb"
+    },
+    {
+      "era": "e07",
+      "city": "khartum",
+      "slot": "K3",
+      "type": "illustration",
+      "assetID": "e07-khartum-K3-v1-20261012",
+      "galleryImageID": "e07-khartum-K3-v1-20261012",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].nostot[2]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "nostot",
+        2
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/khartum/e07-khartum-K3-v1-20261012-13eaa7e57654.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Kultamateriaalin kaupankäyntiin liittyvä havainnekuva.",
+        "lyhyt": "Kultamateriaalin kaupankäyntiin liittyvä havainnekuva."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/khartum/e07-khartum-K3-v1-20261012-13eaa7e57654.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Kultamateriaalin kaupankäyntiin liittyvä havainnekuva.",
+        "lyhyt": "Kultamateriaalin kaupankäyntiin liittyvä havainnekuva."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "13eaa7e57654a457e1645f7c4697f1f7cbffd92968699dd7a8d05a4478c9ed8f",
+      "exportSHA256": "7690407f9f6d9d22e5008cfd5921dde799a1ba4c4c95899a4d478f87b9378f3c",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/khartum/e07-khartum-K3-v1-20261012-13eaa7e57654.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/khartum/e07-khartum-K3-v1-20261012-13eaa7e57654.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/khartum/e07-khartum-K3-v1-20261012-13eaa7e57654.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/khartum/sisalto.json",
+      "sourceContentSHA256": "f8f52cd4508afc665d78e8c25994c6041a919a3e5f7312f0dd6c5c728e412a8d",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "56ed4fc60f8370683c91aa68bc968b1ef07f57c14658bce516d9996a6dd25d03",
+        "semanticContextSHA256": "56ed4fc60f8370683c91aa68bc968b1ef07f57c14658bce516d9996a6dd25d03",
+        "subjectTitle": "Tavara määrää torin suunnan",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": [
+            "New depiction of common functional shapes or natural materials; no identified artwork, brand design, person or building reproduced."
+          ],
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/khartum/assets/e07-khartum-K3-v1-20261012/kuva.png",
+            "nativeSha256Verified": "13eaa7e57654a457e1645f7c4697f1f7cbffd92968699dd7a8d05a4478c9ed8f",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Kaksi tekstittämätöntä sileää kultaista rengasta, luonteva metallikiilto ja hieno kuluminen. Ei nimettyä korumuotoilua, ihmisiä tai lisättyjä merkintöjä.",
+            "captionFi": "Kultamateriaalin kaupankäyntiin liittyvä havainnekuva.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/khartum/sisalto.json",
+            "contentSha256": "ab8c22ac5d61b12a81dd05c3565ec3fd5796eb7bf9144cf3432f302c4eb146e9",
+            "targetCurrentlyPresent": true,
+            "targetText": "Souq al Arabi on Khartumin keskustan dokumentoitu ulkoilmamarkkina, joka levittäytyy usealle korttelille. Myyjät sijoittuvat siellä tuoteryhmittäisiin osiin. Vanhoissa paikkakuvauksissa mainitaan esimerkiksi kultaan keskittyvä myyntialue. Kaupunkiseudun muut torit eivät ole saman paikan eri nimiä: Omdurmanin markkina ja Bahrin Saad Gishra ovat erillisiä kauppapaikkoja. Tuoteryhmät auttavat hahmottamaan torin rakennetta, mutta vanha kuvaus ei kerro, mitkä myyjät tai kojut toimivat juuri nyt.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/khartum/faktapohja.md",
+            "factSheetSha256": "faf18807de5816ebc74b76fb1f4dcce0d7b0c490fb28aa7763edfea393626ce0",
+            "topicEvidence": "K3 kertoo kultaan keskittyvästä myyntialueesta; kuva ei todista torin nykyistä toimintaa.",
+            "sourceEvidence": [
+              {
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/khartum/sisalto.json",
+                "contentSha256": "ab8c22ac5d61b12a81dd05c3565ec3fd5796eb7bf9144cf3432f302c4eb146e9",
+                "targetJsonPath": "$.kaupunkilehti[0].nostot[2]",
+                "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/khartum/faktapohja.md",
+                "evidenceMode": "Common material/utility object for a source-backed textual subject; no claim about the real named place, item or event",
+                "targetTextAtIssue": "Souq al Arabi on Khartumin keskustan dokumentoitu ulkoilmamarkkina, joka levittäytyy usealle korttelille. Myyjät sijoittuvat siellä tuoteryhmittäisiin osiin. Vanhoissa paikkakuvauksissa mainitaan esimerkiksi kultaan keskittyvä myyntialue. Kaupunkiseudun muut torit eivät ole saman paikan eri nimiä: Omdurmanin markkina ja Bahrin Saad Gishra ovat erillisiä kauppapaikkoja. Tuoteryhmät auttavat hahmottamaan torin rakennetta, mutta vanha kuvaus ei kerro, mitkä myyjät tai kojut toimivat juuri nyt."
+              }
+            ],
+            "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+            "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+          },
+          "qaReason": "Yleiset sileät kultarenkaat havainnollistavat kultatuotteiden materiaalia. Selite ei nimeä todellista myyjää, koruntekijää tai torikojuja."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Kultamateriaalin kaupankäyntiin liittyvä havainnekuva.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/khartum/illustration-qa-extra.json",
+        "fileSHA256": "d6cb0f264fed57c081d58d5703785299fb2a12d44105c1c0997e94f8a37b0622",
+        "item": {
+          "slot": "K3",
+          "targetJsonPath": "$.kaupunkilehti[0].nostot[2]",
+          "assetID": "e07-khartum-K3-v1-20261012",
+          "sha256": "13eaa7e57654a457e1645f7c4697f1f7cbffd92968699dd7a8d05a4478c9ed8f",
+          "verdict": "accepted",
+          "reason": "Yleiset sileät kultarenkaat havainnollistavat kultatuotteiden materiaalia. Selite ei nimeä todellista myyjää, koruntekijää tai torikojuja.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/khartum/assets/e07-khartum-K3-v1-20261012/kuva.png",
+            "nativeSha256Verified": "13eaa7e57654a457e1645f7c4697f1f7cbffd92968699dd7a8d05a4478c9ed8f",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Kaksi tekstittämätöntä sileää kultaista rengasta, luonteva metallikiilto ja hieno kuluminen. Ei nimettyä korumuotoilua, ihmisiä tai lisättyjä merkintöjä.",
+            "captionFi": "Kultamateriaalin kaupankäyntiin liittyvä havainnekuva.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/khartum/sisalto.json",
+            "contentSha256": "ab8c22ac5d61b12a81dd05c3565ec3fd5796eb7bf9144cf3432f302c4eb146e9",
+            "targetCurrentlyPresent": true,
+            "targetText": "Souq al Arabi on Khartumin keskustan dokumentoitu ulkoilmamarkkina, joka levittäytyy usealle korttelille. Myyjät sijoittuvat siellä tuoteryhmittäisiin osiin. Vanhoissa paikkakuvauksissa mainitaan esimerkiksi kultaan keskittyvä myyntialue. Kaupunkiseudun muut torit eivät ole saman paikan eri nimiä: Omdurmanin markkina ja Bahrin Saad Gishra ovat erillisiä kauppapaikkoja. Tuoteryhmät auttavat hahmottamaan torin rakennetta, mutta vanha kuvaus ei kerro, mitkä myyjät tai kojut toimivat juuri nyt.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/khartum/faktapohja.md",
+            "factSheetSha256": "faf18807de5816ebc74b76fb1f4dcce0d7b0c490fb28aa7763edfea393626ce0",
+            "topicEvidence": "K3 kertoo kultaan keskittyvästä myyntialueesta; kuva ei todista torin nykyistä toimintaa.",
+            "sourceEvidence": [
+              {
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/khartum/sisalto.json",
+                "contentSha256": "ab8c22ac5d61b12a81dd05c3565ec3fd5796eb7bf9144cf3432f302c4eb146e9",
+                "targetJsonPath": "$.kaupunkilehti[0].nostot[2]",
+                "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/khartum/faktapohja.md",
+                "evidenceMode": "Common material/utility object for a source-backed textual subject; no claim about the real named place, item or event",
+                "targetTextAtIssue": "Souq al Arabi on Khartumin keskustan dokumentoitu ulkoilmamarkkina, joka levittäytyy usealle korttelille. Myyjät sijoittuvat siellä tuoteryhmittäisiin osiin. Vanhoissa paikkakuvauksissa mainitaan esimerkiksi kultaan keskittyvä myyntialue. Kaupunkiseudun muut torit eivät ole saman paikan eri nimiä: Omdurmanin markkina ja Bahrin Saad Gishra ovat erillisiä kauppapaikkoja. Tuoteryhmät auttavat hahmottamaan torin rakennetta, mutta vanha kuvaus ei kerro, mitkä myyjät tai kojut toimivat juuri nyt."
+              }
+            ],
+            "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+            "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+          },
+          "reviewedAt": "2026-10-12T19:30:12.504560+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/khartum/qa.json",
+            "sha256": "28fba4cfbb9fd72fdac1f8730a89ae13a815de9f99f0f97bf6781719b09fe4b5"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/khartum/illustration-qa-extra.json",
+            "sha256": "d6cb0f264fed57c081d58d5703785299fb2a12d44105c1c0997e94f8a37b0622"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/khartum/e07-khartum-K3-v1-20261012-13eaa7e57654.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/khartum/e07-khartum-K3-v1-20261012-13eaa7e57654.png?t=7690407f9f6d9d22",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/khartum/e07-khartum-K3-v1-20261012-13eaa7e57654.png",
+        "sha256": "7690407f9f6d9d22e5008cfd5921dde799a1ba4c4c95899a4d478f87b9378f3c",
+        "bytes": 1863785,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e07-khartum-K3-v1-20261012",
+        "nativeSHA256": "13eaa7e57654a457e1645f7c4697f1f7cbffd92968699dd7a8d05a4478c9ed8f",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/khartum/e07-khartum-K3-v1-20261012-13eaa7e57654.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e07",
+        "city": "khartum",
+        "slot": "K3",
+        "targetJsonPath": "$.kaupunkilehti[0].nostot[2]",
+        "verifiedAt": "2026-10-12T19:30:18.808294+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/khartum/e07-khartum-K3-v1-20261012-13eaa7e57654.png",
+        "sha256": "7690407f9f6d9d22e5008cfd5921dde799a1ba4c4c95899a4d478f87b9378f3c",
+        "bytes": 1863785,
+        "SHAReadAt": "2026-10-12T19:32:05.190991+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "13eaa7e57654a457e1645f7c4697f1f7cbffd92968699dd7a8d05a4478c9ed8f",
+        "rgbPixelSHA256": "131549d69c145eb14c3a0d2abcd10c67feb3730c7728ba712e44d00f524ffd66",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "f8f52cd4508afc665d78e8c25994c6041a919a3e5f7312f0dd6c5c728e412a8d",
+      "targetAfterSHA256": "56ed4fc60f8370683c91aa68bc968b1ef07f57c14658bce516d9996a6dd25d03",
+      "contextAfterSHA256": "56ed4fc60f8370683c91aa68bc968b1ef07f57c14658bce516d9996a6dd25d03"
+    },
+    {
+      "era": "e07",
+      "city": "khartum",
+      "slot": "K4",
+      "type": "illustration",
+      "assetID": "e07-khartum-K4-v2-20261012",
+      "galleryImageID": "e07-khartum-K4-v2-20261012",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].nostot[3]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "nostot",
+        3
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/khartum/e07-khartum-K4-v2-20261012-fa07d4d42ec8.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Maanmittauksen välineiden havainnekuva.",
+        "lyhyt": "Maanmittauksen välineiden havainnekuva."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/khartum/e07-khartum-K4-v2-20261012-fa07d4d42ec8.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Maanmittauksen välineiden havainnekuva.",
+        "lyhyt": "Maanmittauksen välineiden havainnekuva."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "fa07d4d42ec853a22f990ccf744ad7be49147b9163ddfd9686ae58f15a33f14f",
+      "exportSHA256": "9326e3f685aeca904ea86452ff471536f70e755af90e22c61dbda6a0584448e1",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/khartum/e07-khartum-K4-v2-20261012-fa07d4d42ec8.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/khartum/e07-khartum-K4-v2-20261012-fa07d4d42ec8.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/khartum/e07-khartum-K4-v2-20261012-fa07d4d42ec8.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/khartum/sisalto.json",
+      "sourceContentSHA256": "f8f52cd4508afc665d78e8c25994c6041a919a3e5f7312f0dd6c5c728e412a8d",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "d4fd74d800c165ccb19563fbfd1787c82a67c7f15651908a30bc9bcc22c571dd",
+        "semanticContextSHA256": "d4fd74d800c165ccb19563fbfd1787c82a67c7f15651908a30bc9bcc22c571dd",
+        "subjectTitle": "Mittaaja ja opettaja samassa collegessa",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": [
+            "New generated illustration of natural subject or common utility object; no reproduction of a protected work.",
+            "Named buildings, identifiable people and exact contemporary art/design excluded."
+          ],
+          "QA": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/khartum/assets/e07-khartum-K4-v2-20261012/kuva.png",
+            "width": 1536,
+            "height": 1024,
+            "fullNativeImageViewed": true,
+            "captionFi": "Maanmittauksen välineiden havainnekuva.",
+            "sourceEvidence": [
+              {
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/khartum/sisalto.json",
+                "contentSha256": "ab8c22ac5d61b12a81dd05c3565ec3fd5796eb7bf9144cf3432f302c4eb146e9",
+                "targetJsonPath": "$.kaupunkilehti[0].nostot[3]",
+                "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/khartum/faktapohja.md",
+                "evidenceMode": "source-backed text topic; generalized material/food/biological illustration, not exact place appearance",
+                "targetTextAtIssue": "Gordon Memorial College perustettiin Khartumiin 1900-luvun alussa. Sen opetukseen kuului aluksi alkeisopetusta, myöhemmin teknistä koulutusta apulaisinsinööreille ja maanmittaajille. Myös opettajia koulutettiin, ja ammatillisiin aloihin lisättiin kirjanpitoa, toimistotyötä sekä tiedettä. Opetus liittyi aikakauden hallinnon työtehtäviin. College yhdistyi myöhemmin lääketieteen koulun kanssa yliopistocollegeksi, josta kehittyi Khartumin yliopisto. Nykyisen yliopiston taustalla on siis useita opetuksen tehtäviä ja vaiheita."
+              }
+            ],
+            "rightsScope": "common functional measuring tool, no protected work or named place reconstruction",
+            "currentContentSHA256": "ab8c22ac5d61b12a81dd05c3565ec3fd5796eb7bf9144cf3432f302c4eb146e9",
+            "targetStillExists": true
+          },
+          "qaReason": "Kokonaan uusi v2 katsottu natiivina: kaksikärkinen mittaharppi, merkitsemätön puinen suorakulmainen suora kappale ja tyhjä paperi, uskottava nivel/metalli/puu. Ei generoituja numeroita, tekstiä, logoa, kasvoja tai rakennusta. Yleishavainnollistus, ei collegeen kuulunut dokumentoitu laite. Oikaisu omaan aiempaan tallennukseen: v1:n hylkäys oli kohdistunut virheellisesti myös v2-tietueeseen; v2 on nyt tarkistettu erikseen ja hyväksytty."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Maanmittauksen välineiden havainnekuva.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/khartum/qa.json",
+        "fileSHA256": "28fba4cfbb9fd72fdac1f8730a89ae13a815de9f99f0f97bf6781719b09fe4b5",
+        "item": {
+          "slot": "K4",
+          "targetJsonPath": "$.kaupunkilehti[0].nostot[3]",
+          "verdict": "accepted",
+          "reason": "Kokonaan uusi v2 katsottu natiivina: kaksikärkinen mittaharppi, merkitsemätön puinen suorakulmainen suora kappale ja tyhjä paperi, uskottava nivel/metalli/puu. Ei generoituja numeroita, tekstiä, logoa, kasvoja tai rakennusta. Yleishavainnollistus, ei collegeen kuulunut dokumentoitu laite. Oikaisu omaan aiempaan tallennukseen: v1:n hylkäys oli kohdistunut virheellisesti myös v2-tietueeseen; v2 on nyt tarkistettu erikseen ja hyväksytty.",
+          "evidence": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/khartum/assets/e07-khartum-K4-v2-20261012/kuva.png",
+            "width": 1536,
+            "height": 1024,
+            "fullNativeImageViewed": true,
+            "captionFi": "Maanmittauksen välineiden havainnekuva.",
+            "sourceEvidence": [
+              {
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/khartum/sisalto.json",
+                "contentSha256": "ab8c22ac5d61b12a81dd05c3565ec3fd5796eb7bf9144cf3432f302c4eb146e9",
+                "targetJsonPath": "$.kaupunkilehti[0].nostot[3]",
+                "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/khartum/faktapohja.md",
+                "evidenceMode": "source-backed text topic; generalized material/food/biological illustration, not exact place appearance",
+                "targetTextAtIssue": "Gordon Memorial College perustettiin Khartumiin 1900-luvun alussa. Sen opetukseen kuului aluksi alkeisopetusta, myöhemmin teknistä koulutusta apulaisinsinööreille ja maanmittaajille. Myös opettajia koulutettiin, ja ammatillisiin aloihin lisättiin kirjanpitoa, toimistotyötä sekä tiedettä. Opetus liittyi aikakauden hallinnon työtehtäviin. College yhdistyi myöhemmin lääketieteen koulun kanssa yliopistocollegeksi, josta kehittyi Khartumin yliopisto. Nykyisen yliopiston taustalla on siis useita opetuksen tehtäviä ja vaiheita."
+              }
+            ],
+            "rightsScope": "common functional measuring tool, no protected work or named place reconstruction",
+            "currentContentSHA256": "ab8c22ac5d61b12a81dd05c3565ec3fd5796eb7bf9144cf3432f302c4eb146e9",
+            "targetStillExists": true
+          },
+          "reviewedAt": "2026-10-12T17:56:55.365864+00:00",
+          "assetID": "e07-khartum-K4-v2-20261012",
+          "sha256": "fa07d4d42ec853a22f990ccf744ad7be49147b9163ddfd9686ae58f15a33f14f",
+          "decisionHistory": [
+            {
+              "verdict": "rejected",
+              "reason": "Katsotussa AI-kuvassa viivaimen asteikossa on epäselviä generoituja numero-/kirjainmerkkejä. V1 ei täytä promptin eikä tämän AI-tilauksen tekstirajaa. Tuottajan v1-hylkäys vahvistettu omalla natiivikatselulla. Säilytä alkuperäinen; kokonaan uusi v2 ilman numerotekstiä, ei paikallista retusointia.",
+              "reviewedAt": "2026-10-12T17:55:57.359563+00:00"
+            }
+          ]
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/khartum/qa.json",
+            "sha256": "28fba4cfbb9fd72fdac1f8730a89ae13a815de9f99f0f97bf6781719b09fe4b5"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/khartum/illustration-qa-extra.json",
+            "sha256": "d6cb0f264fed57c081d58d5703785299fb2a12d44105c1c0997e94f8a37b0622"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/khartum/e07-khartum-K4-v2-20261012-fa07d4d42ec8.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/khartum/e07-khartum-K4-v2-20261012-fa07d4d42ec8.png?t=9326e3f685aeca90",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/khartum/e07-khartum-K4-v2-20261012-fa07d4d42ec8.png",
+        "sha256": "9326e3f685aeca904ea86452ff471536f70e755af90e22c61dbda6a0584448e1",
+        "bytes": 2089270,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e07-khartum-K4-v2-20261012",
+        "nativeSHA256": "fa07d4d42ec853a22f990ccf744ad7be49147b9163ddfd9686ae58f15a33f14f",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/khartum/e07-khartum-K4-v2-20261012-fa07d4d42ec8.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e07",
+        "city": "khartum",
+        "slot": "K4",
+        "targetJsonPath": "$.kaupunkilehti[0].nostot[3]",
+        "verifiedAt": "2026-10-12T17:59:24.874417+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/khartum/e07-khartum-K4-v2-20261012-fa07d4d42ec8.png",
+        "sha256": "9326e3f685aeca904ea86452ff471536f70e755af90e22c61dbda6a0584448e1",
+        "bytes": 2089270,
+        "SHAReadAt": "2026-10-12T18:29:51.025286+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "fa07d4d42ec853a22f990ccf744ad7be49147b9163ddfd9686ae58f15a33f14f",
+        "rgbPixelSHA256": "d413201a8ed2d087952306d71b1af85338d68e204bdd2801f8fed17792899cb1",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "f8f52cd4508afc665d78e8c25994c6041a919a3e5f7312f0dd6c5c728e412a8d",
+      "targetAfterSHA256": "d4fd74d800c165ccb19563fbfd1787c82a67c7f15651908a30bc9bcc22c571dd",
+      "contextAfterSHA256": "d4fd74d800c165ccb19563fbfd1787c82a67c7f15651908a30bc9bcc22c571dd"
+    },
+    {
+      "era": "e07",
+      "city": "khartum",
+      "slot": "L1",
+      "type": "illustration",
+      "assetID": "e07-khartum-L1-v1-20261012",
+      "galleryImageID": "e07-khartum-L1-v1-20261012",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[1].nostot[0]",
+      "targetTokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        0
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/khartum/e07-khartum-L1-v1-20261012-01cd61c840a9.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Ruoko-, maa- ja kivimateriaalien havainnekuva; ei Khartumin historiallisen rakennuksen kuva.",
+        "lyhyt": "Ruoko-, maa- ja kivimateriaalien havainnekuva; ei Khartumin historiallisen rakennuksen kuva."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/khartum/e07-khartum-L1-v1-20261012-01cd61c840a9.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Ruoko-, maa- ja kivimateriaalien havainnekuva; ei Khartumin historiallisen rakennuksen kuva.",
+        "lyhyt": "Ruoko-, maa- ja kivimateriaalien havainnekuva; ei Khartumin historiallisen rakennuksen kuva."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "01cd61c840a96f2fe8ae89f1243e80cee3210e8f7a76e8dc7f528b32132be6e9",
+      "exportSHA256": "99b2655017de21b5fb545abe798b7695b8141ec5b567b1099638ae2717c2dfef",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/khartum/e07-khartum-L1-v1-20261012-01cd61c840a9.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/khartum/e07-khartum-L1-v1-20261012-01cd61c840a9.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/khartum/e07-khartum-L1-v1-20261012-01cd61c840a9.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/khartum/sisalto.json",
+      "sourceContentSHA256": "f8f52cd4508afc665d78e8c25994c6041a919a3e5f7312f0dd6c5c728e412a8d",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "ee19c176c3e4f25eb9cdd6ad65b51b2c10111be8ee14941701f8710757d88c71",
+        "semanticContextSHA256": "ee19c176c3e4f25eb9cdd6ad65b51b2c10111be8ee14941701f8710757d88c71",
+        "subjectTitle": "Tulva muutti rakennusaineita",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": [
+            "Natural construction materials only; no reproduction of architecture or artwork."
+          ],
+          "QA": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/khartum/assets/e07-khartum-L1-v1-20261012/kuva.png",
+            "width": 1536,
+            "height": 1024,
+            "fullNativeImageViewed": true,
+            "captionFi": "Ruoko-, maa- ja kivimateriaalien havainnekuva; ei Khartumin historiallisen rakennuksen kuva.",
+            "sourceEvidence": [
+              {
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/khartum/sisalto.json",
+                "contentSha256": "ab8c22ac5d61b12a81dd05c3565ec3fd5796eb7bf9144cf3432f302c4eb146e9",
+                "targetJsonPath": "$.kaupunkilehti[1].nostot[0]",
+                "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/khartum/faktapohja.md",
+                "evidenceMode": "current material-change text topic; no historical appearance claim",
+                "targetTextAtIssue": "Khartum syntyi 1800-luvun alussa tukikohdasta, josta kasvoi hallinnon ja kaupan paikka. Kaupunkiin liittyivät myös karavaanireittien pysähdykset. Vuosisadan keskivaiheen tulvat ja jälleenrakentaminen muuttivat rakentamista: olki- ja ruokorakenteita korvattiin muta- ja kivirakenteilla. Kaupunkiin perustettiin konsulaatteja ja uskonnollisia laitoksia. Myöhemmän 1800-luvun uudelleenrakentaminen tuotti uuden katuverkon. Isoisän matkavuoden 1873 kaupunki ja nykyisestä kartasta tuttu keskusta eivät siten ole sama rakennusvaihe."
+              }
+            ],
+            "sourceBoundTopicChecked": true,
+            "rightsScope": "Natural animal/material/food and common functional objects, no protected artwork or real-place reconstruction",
+            "currentContentSHA256": "ab8c22ac5d61b12a81dd05c3565ec3fd5796eb7bf9144cf3432f302c4eb146e9",
+            "targetStillExists": true
+          },
+          "qaReason": "Kuivaa ruokomaista kasvainesta, kuituja sisältävä maapaakku ja epäsäännöllisiä kiviä. Materiaalierot selviä ja luonnollisia, ei rakennusta, tulvatapahtumaa, ihmistä, tekstiä tai suojattua teosta. Hyväksytty rakentamismateriaalien yleishavainnollistukseksi, ei Khartumin historiallisen rakennuksen tai tapahtuman rekonstruktioksi."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Ruoko-, maa- ja kivimateriaalien havainnekuva; ei Khartumin historiallisen rakennuksen kuva.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/khartum/qa.json",
+        "fileSHA256": "28fba4cfbb9fd72fdac1f8730a89ae13a815de9f99f0f97bf6781719b09fe4b5",
+        "item": {
+          "slot": "L1",
+          "targetJsonPath": "$.kaupunkilehti[1].nostot[0]",
+          "verdict": "accepted",
+          "reason": "Kuivaa ruokomaista kasvainesta, kuituja sisältävä maapaakku ja epäsäännöllisiä kiviä. Materiaalierot selviä ja luonnollisia, ei rakennusta, tulvatapahtumaa, ihmistä, tekstiä tai suojattua teosta. Hyväksytty rakentamismateriaalien yleishavainnollistukseksi, ei Khartumin historiallisen rakennuksen tai tapahtuman rekonstruktioksi.",
+          "evidence": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/khartum/assets/e07-khartum-L1-v1-20261012/kuva.png",
+            "width": 1536,
+            "height": 1024,
+            "fullNativeImageViewed": true,
+            "captionFi": "Ruoko-, maa- ja kivimateriaalien havainnekuva; ei Khartumin historiallisen rakennuksen kuva.",
+            "sourceEvidence": [
+              {
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/khartum/sisalto.json",
+                "contentSha256": "ab8c22ac5d61b12a81dd05c3565ec3fd5796eb7bf9144cf3432f302c4eb146e9",
+                "targetJsonPath": "$.kaupunkilehti[1].nostot[0]",
+                "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/khartum/faktapohja.md",
+                "evidenceMode": "current material-change text topic; no historical appearance claim",
+                "targetTextAtIssue": "Khartum syntyi 1800-luvun alussa tukikohdasta, josta kasvoi hallinnon ja kaupan paikka. Kaupunkiin liittyivät myös karavaanireittien pysähdykset. Vuosisadan keskivaiheen tulvat ja jälleenrakentaminen muuttivat rakentamista: olki- ja ruokorakenteita korvattiin muta- ja kivirakenteilla. Kaupunkiin perustettiin konsulaatteja ja uskonnollisia laitoksia. Myöhemmän 1800-luvun uudelleenrakentaminen tuotti uuden katuverkon. Isoisän matkavuoden 1873 kaupunki ja nykyisestä kartasta tuttu keskusta eivät siten ole sama rakennusvaihe."
+              }
+            ],
+            "sourceBoundTopicChecked": true,
+            "rightsScope": "Natural animal/material/food and common functional objects, no protected artwork or real-place reconstruction",
+            "currentContentSHA256": "ab8c22ac5d61b12a81dd05c3565ec3fd5796eb7bf9144cf3432f302c4eb146e9",
+            "targetStillExists": true
+          },
+          "reviewedAt": "2026-10-12T18:02:22.856014+00:00",
+          "assetID": "e07-khartum-L1-v1-20261012",
+          "sha256": "01cd61c840a96f2fe8ae89f1243e80cee3210e8f7a76e8dc7f528b32132be6e9"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/khartum/qa.json",
+            "sha256": "28fba4cfbb9fd72fdac1f8730a89ae13a815de9f99f0f97bf6781719b09fe4b5"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/khartum/illustration-qa-extra.json",
+            "sha256": "d6cb0f264fed57c081d58d5703785299fb2a12d44105c1c0997e94f8a37b0622"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/khartum/e07-khartum-L1-v1-20261012-01cd61c840a9.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/khartum/e07-khartum-L1-v1-20261012-01cd61c840a9.png?t=99b2655017de21b5",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/khartum/e07-khartum-L1-v1-20261012-01cd61c840a9.png",
+        "sha256": "99b2655017de21b5fb545abe798b7695b8141ec5b567b1099638ae2717c2dfef",
+        "bytes": 2959245,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e07-khartum-L1-v1-20261012",
+        "nativeSHA256": "01cd61c840a96f2fe8ae89f1243e80cee3210e8f7a76e8dc7f528b32132be6e9",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/khartum/e07-khartum-L1-v1-20261012-01cd61c840a9.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e07",
+        "city": "khartum",
+        "slot": "L1",
+        "targetJsonPath": "$.kaupunkilehti[1].nostot[0]",
+        "verifiedAt": "2026-10-12T18:04:45.873787+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/khartum/e07-khartum-L1-v1-20261012-01cd61c840a9.png",
+        "sha256": "99b2655017de21b5fb545abe798b7695b8141ec5b567b1099638ae2717c2dfef",
+        "bytes": 2959245,
+        "SHAReadAt": "2026-10-12T18:29:51.256216+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "01cd61c840a96f2fe8ae89f1243e80cee3210e8f7a76e8dc7f528b32132be6e9",
+        "rgbPixelSHA256": "e3cdd46f9096420f238a476bc378a7d7329c137983f8c70dea424a4c000c32d7",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "f8f52cd4508afc665d78e8c25994c6041a919a3e5f7312f0dd6c5c728e412a8d",
+      "targetAfterSHA256": "ee19c176c3e4f25eb9cdd6ad65b51b2c10111be8ee14941701f8710757d88c71",
+      "contextAfterSHA256": "ee19c176c3e4f25eb9cdd6ad65b51b2c10111be8ee14941701f8710757d88c71"
+    },
+    {
+      "era": "e07",
+      "city": "khartum",
+      "slot": "L2",
+      "type": "illustration",
+      "assetID": "e07-khartum-L2-herbaario-v1-20261012",
+      "galleryImageID": "e07-khartum-L2-herbaario-v1-20261012",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[1].nostot[1]",
+      "targetTokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        1
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/khartum/e07-khartum-L2-herbaario-v1-20261012-77279ebfd167.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Herbaarion ja elävän kasviaineiston havainnekuva.",
+        "lyhyt": "Herbaarion ja elävän kasviaineiston havainnekuva."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/khartum/e07-khartum-L2-herbaario-v1-20261012-77279ebfd167.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Herbaarion ja elävän kasviaineiston havainnekuva.",
+        "lyhyt": "Herbaarion ja elävän kasviaineiston havainnekuva."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "77279ebfd1672664181c9d82f7e903ce18caf685f1adfa5c1945c390be17a5df",
+      "exportSHA256": "757949a327791fb92cfb4322e87a432d0c4c970f5061ae2a9ef3b9ffd2538303",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/khartum/e07-khartum-L2-herbaario-v1-20261012-77279ebfd167.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/khartum/e07-khartum-L2-herbaario-v1-20261012-77279ebfd167.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/khartum/e07-khartum-L2-herbaario-v1-20261012-77279ebfd167.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/khartum/sisalto.json",
+      "sourceContentSHA256": "f8f52cd4508afc665d78e8c25994c6041a919a3e5f7312f0dd6c5c728e412a8d",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "1dbc84c2e5d9459355cc2f7c3a99f57ec86b19ae026ab51e99038605954a760a",
+        "semanticContextSHA256": "1dbc84c2e5d9459355cc2f7c3a99f57ec86b19ae026ab51e99038605954a760a",
+        "subjectTitle": "Elävän kasvin rinnalla on arkistokasvi",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": [
+            "New generated illustration of natural subject or common utility object; no reproduction of a protected work.",
+            "Named buildings, identifiable people and exact contemporary art/design excluded."
+          ],
+          "QA": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/khartum/assets/e07-khartum-L2-herbaario-v1-20261012/kuva.png",
+            "width": 1536,
+            "height": 1024,
+            "fullNativeImageViewed": true,
+            "captionFi": "Herbaarion ja elävän kasviaineiston havainnekuva.",
+            "sourceContentSHA256": "ab8c22ac5d61b12a81dd05c3565ec3fd5796eb7bf9144cf3432f302c4eb146e9",
+            "targetStillExists": true,
+            "sourceEvidence": [
+              {
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/khartum/sisalto.json",
+                "contentSha256": "ab8c22ac5d61b12a81dd05c3565ec3fd5796eb7bf9144cf3432f302c4eb146e9",
+                "targetJsonPath": "$.kaupunkilehti[1].nostot[1]",
+                "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/khartum/faktapohja.md",
+                "evidenceMode": "source-backed text topic; generalized material/food/biological illustration, not exact place appearance"
+              }
+            ],
+            "rightsEvidence": "Natural material/food/plant subject without protected artwork, person, trademark or real-place reconstruction. Generic illustrative caption checked.",
+            "pngChunks": [
+              "IHDR",
+              "caBX",
+              "IDAT",
+              "IEND"
+            ],
+            "colorMetadata": "untagged PNG; explicit embedded sRGB not independently verified",
+            "claimScope": "generic illustration only"
+          },
+          "qaReason": "Kuivattu kasvi juurineen arkistopaperilla ja tuore vihreä kasvi sen vieressä. Lehti-, kukka-, juuri- ja paperipinnat epäsäännöllisiä ja uskottavia; ei etikettitekstiä, kasvoja tai teoksia. Hyväksytty kasviaineiston yleishavainnollistukseksi, ei dokumentaariseksi näytteeksi Khartumin nykyisestä kokoelmasta tai nimetystä lajista."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Herbaarion ja elävän kasviaineiston havainnekuva.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/khartum/qa.json",
+        "fileSHA256": "28fba4cfbb9fd72fdac1f8730a89ae13a815de9f99f0f97bf6781719b09fe4b5",
+        "item": {
+          "slot": "L2",
+          "targetJsonPath": "$.kaupunkilehti[1].nostot[1]",
+          "assetID": "e07-khartum-L2-herbaario-v1-20261012",
+          "sha256": "77279ebfd1672664181c9d82f7e903ce18caf685f1adfa5c1945c390be17a5df",
+          "verdict": "accepted",
+          "reason": "Kuivattu kasvi juurineen arkistopaperilla ja tuore vihreä kasvi sen vieressä. Lehti-, kukka-, juuri- ja paperipinnat epäsäännöllisiä ja uskottavia; ei etikettitekstiä, kasvoja tai teoksia. Hyväksytty kasviaineiston yleishavainnollistukseksi, ei dokumentaariseksi näytteeksi Khartumin nykyisestä kokoelmasta tai nimetystä lajista.",
+          "evidence": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/khartum/assets/e07-khartum-L2-herbaario-v1-20261012/kuva.png",
+            "width": 1536,
+            "height": 1024,
+            "fullNativeImageViewed": true,
+            "captionFi": "Herbaarion ja elävän kasviaineiston havainnekuva.",
+            "sourceContentSHA256": "ab8c22ac5d61b12a81dd05c3565ec3fd5796eb7bf9144cf3432f302c4eb146e9",
+            "targetStillExists": true,
+            "sourceEvidence": [
+              {
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/khartum/sisalto.json",
+                "contentSha256": "ab8c22ac5d61b12a81dd05c3565ec3fd5796eb7bf9144cf3432f302c4eb146e9",
+                "targetJsonPath": "$.kaupunkilehti[1].nostot[1]",
+                "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/khartum/faktapohja.md",
+                "evidenceMode": "source-backed text topic; generalized material/food/biological illustration, not exact place appearance"
+              }
+            ],
+            "rightsEvidence": "Natural material/food/plant subject without protected artwork, person, trademark or real-place reconstruction. Generic illustrative caption checked.",
+            "pngChunks": [
+              "IHDR",
+              "caBX",
+              "IDAT",
+              "IEND"
+            ],
+            "colorMetadata": "untagged PNG; explicit embedded sRGB not independently verified",
+            "claimScope": "generic illustration only"
+          },
+          "reviewedAt": "2026-10-12T17:49:48.514228+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/khartum/qa.json",
+            "sha256": "28fba4cfbb9fd72fdac1f8730a89ae13a815de9f99f0f97bf6781719b09fe4b5"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/khartum/illustration-qa-extra.json",
+            "sha256": "d6cb0f264fed57c081d58d5703785299fb2a12d44105c1c0997e94f8a37b0622"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/khartum/e07-khartum-L2-herbaario-v1-20261012-77279ebfd167.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/khartum/e07-khartum-L2-herbaario-v1-20261012-77279ebfd167.png?t=757949a327791fb9",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/khartum/e07-khartum-L2-herbaario-v1-20261012-77279ebfd167.png",
+        "sha256": "757949a327791fb92cfb4322e87a432d0c4c970f5061ae2a9ef3b9ffd2538303",
+        "bytes": 2638156,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e07-khartum-L2-herbaario-v1-20261012",
+        "nativeSHA256": "77279ebfd1672664181c9d82f7e903ce18caf685f1adfa5c1945c390be17a5df",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/khartum/e07-khartum-L2-herbaario-v1-20261012-77279ebfd167.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e07",
+        "city": "khartum",
+        "slot": "L2",
+        "targetJsonPath": "$.kaupunkilehti[1].nostot[1]",
+        "verifiedAt": "2026-10-12T17:57:25.662282+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/khartum/e07-khartum-L2-herbaario-v1-20261012-77279ebfd167.png",
+        "sha256": "757949a327791fb92cfb4322e87a432d0c4c970f5061ae2a9ef3b9ffd2538303",
+        "bytes": 2638156,
+        "SHAReadAt": "2026-10-12T18:29:50.805989+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "77279ebfd1672664181c9d82f7e903ce18caf685f1adfa5c1945c390be17a5df",
+        "rgbPixelSHA256": "b81534268eb3acda00057f40d37ead5c93ba39d378b018a122d647a5fd8e4180",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "f8f52cd4508afc665d78e8c25994c6041a919a3e5f7312f0dd6c5c728e412a8d",
+      "targetAfterSHA256": "1dbc84c2e5d9459355cc2f7c3a99f57ec86b19ae026ab51e99038605954a760a",
+      "contextAfterSHA256": "1dbc84c2e5d9459355cc2f7c3a99f57ec86b19ae026ab51e99038605954a760a"
+    },
+    {
+      "era": "e07",
+      "city": "khartum",
+      "slot": "PHOTO",
+      "type": "commons",
+      "assetID": "capital-cc-e07-khartum-photo-a02c95213a6b69dd",
+      "galleryImageID": "capital-cc-e07-khartum-photo-a02c95213a6b69dd",
+      "commonsFile": "Iss070e002191.jpg",
+      "targetJsonPath": "$.valokuva",
+      "targetTokens": [
+        "valokuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e07/khartum/photo-a02c95213a6b69ddb899.jpg",
+        "suora": true,
+        "lahde": "NASA Johnson Space Center, Commons (PD)",
+        "selite": "Khartumin ja Omdurmanin jokiseutu avaruusasemalta kuvattuna.",
+        "lyhyt": "Khartumin ja Omdurmanin jokiseutu avaruusasemalta kuvattuna.",
+        "tiedosto": "Iss070e002191.jpg",
+        "vuosi": "2023"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "NASA Johnson Space Center, Commons (PD)",
+        "selite": "Khartumin ja Omdurmanin jokiseutu avaruusasemalta kuvattuna.",
+        "lyhyt": "Khartumin ja Omdurmanin jokiseutu avaruusasemalta kuvattuna.",
+        "tiedosto": "Iss070e002191.jpg",
+        "vuosi": "2023"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e07/khartum/photo-a02c95213a6b69ddb899.jpg",
+        "suora": true,
+        "lahde": "NASA Johnson Space Center, Commons (PD)",
+        "selite": "Khartumin ja Omdurmanin jokiseutu avaruusasemalta kuvattuna.",
+        "lyhyt": "Khartumin ja Omdurmanin jokiseutu avaruusasemalta kuvattuna.",
+        "tiedosto": "Iss070e002191.jpg",
+        "vuosi": "2023"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "a02c95213a6b69ddb89991244f715145895261c53bf0f57d97471723da46cfdd",
+      "exportSHA256": "a02c95213a6b69ddb89991244f715145895261c53bf0f57d97471723da46cfdd",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e07/khartum/photo-a02c95213a6b69ddb899.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e07/khartum/photo-a02c95213a6b69ddb899.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/khartum/cc-evidence/Iss070e002191.jpg",
+      "dimensions": [
+        5568,
+        3712
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/khartum/sisalto.json",
+      "sourceContentSHA256": "f8f52cd4508afc665d78e8c25994c6041a919a3e5f7312f0dd6c5c728e412a8d",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "2d00bd13803b058a99dd2b34a1b139e5869225f5282a23f2679457a3586c9a4f",
+        "semanticContextSHA256": "2d00bd13803b058a99dd2b34a1b139e5869225f5282a23f2679457a3586c9a4f",
+        "subjectTitle": "khartum — aito paikkavalokuva",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "NASA Johnson Space Center",
+        "license": "PD",
+        "licenseUrl": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Iss070e002191.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9c/Iss070e002191.jpg",
+        "rightsEvidence": {
+          "selection": [
+            "Commonsin explicit Author: NASA Johnson Space Center; ei uploaderista pääteltyä kuvaajaa. Commons PD-USGov-NASA -lisenssimalli.",
+            "NASAn alkuperäinen mediaohje haettu sallittu_haku-apurilla: https://www.nasa.gov/nasa-brand-center/images-and-media/ . Informatiivinen käyttö ja kaupallinen käyttö sallitaan ehtojen mukaan, NASA-tuen vaikutelmaa ei saa antaa. Ei NASA-logoja eikä tunnistettavia henkilöitä kuvassa.",
+            "Silmin katsottu alkuperäinen: Niilin haarat, kaupunkialueita, viljelyruutuja ja maastoa avaruusasemalta. Ei yksilöityä suojattua rakennusta tai taideteosta pääaiheena; ei lähikasvoja, lisättyä tekstiä, logoja, vesileimaa tai kehystä.",
+            "Kuvatekijän lisenssi ja pääaiheen teoskerros erotettu; kuva on kaupunkimaantieteen etäinen todellinen valokuva. Päiväys 6.10.2023 Commonsin Description/Date-riviltä; ei väitetä kuvaa vuoden 2026 nykytilaksi."
+          ],
+          "QA": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/khartum/cc-evidence/Iss070e002191.jpg",
+            "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9c/Iss070e002191.jpg",
+            "width": 5568,
+            "height": 3712,
+            "fullImageViewed": true,
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Iss070e002191.jpg",
+            "sourcePageSHA256": "1481af7069103805c26d3b433be12063e305cd63a969b26daa318d40abf4eb94",
+            "author": "NASA Johnson Space Center",
+            "license": "PD",
+            "licenseUrl": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+            "photographedAt": "2023-10-06",
+            "placeSource": "Commons File description/date identifies Khartoum and Omdurman, Sudan; actual city and river layout inspected",
+            "sourceProof": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/khartum/qa-evidence/photo-source-check.json"
+          },
+          "qaReason": "Aito vuoden 2023 ISS-valokuva Khartumin ja Omdurmanin kaupunkikudoksesta sekä Niilin haaroista. Kaupunginasettelu perustuu todelliseen valokuvaan; ei lähikasvoja, lisättyä tekstiä/logoja, nykykonfliktin kuvausta tai erotettavaa suojattua rakennuspääaihetta. Caption rajaa aiheen jokiseuduksi, ei vuoden 2026 nykytilan palvelulupaukseksi. NASA Johnson Space Center / PD kuvasivulta varmennettu."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Khartumin ja Omdurmanin jokiseutu avaruusasemalta kuvattuna.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/khartum/qa.json",
+        "fileSHA256": "28fba4cfbb9fd72fdac1f8730a89ae13a815de9f99f0f97bf6781719b09fe4b5",
+        "item": {
+          "slot": "PHOTO",
+          "targetJsonPath": "$.valokuva",
+          "commonsFile": "Iss070e002191.jpg",
+          "sha256": "a02c95213a6b69ddb89991244f715145895261c53bf0f57d97471723da46cfdd",
+          "verdict": "accepted",
+          "reason": "Aito vuoden 2023 ISS-valokuva Khartumin ja Omdurmanin kaupunkikudoksesta sekä Niilin haaroista. Kaupunginasettelu perustuu todelliseen valokuvaan; ei lähikasvoja, lisättyä tekstiä/logoja, nykykonfliktin kuvausta tai erotettavaa suojattua rakennuspääaihetta. Caption rajaa aiheen jokiseuduksi, ei vuoden 2026 nykytilan palvelulupaukseksi. NASA Johnson Space Center / PD kuvasivulta varmennettu.",
+          "evidence": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/khartum/cc-evidence/Iss070e002191.jpg",
+            "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9c/Iss070e002191.jpg",
+            "width": 5568,
+            "height": 3712,
+            "fullImageViewed": true,
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Iss070e002191.jpg",
+            "sourcePageSHA256": "1481af7069103805c26d3b433be12063e305cd63a969b26daa318d40abf4eb94",
+            "author": "NASA Johnson Space Center",
+            "license": "PD",
+            "licenseUrl": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+            "photographedAt": "2023-10-06",
+            "placeSource": "Commons File description/date identifies Khartoum and Omdurman, Sudan; actual city and river layout inspected",
+            "sourceProof": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/khartum/qa-evidence/photo-source-check.json"
+          },
+          "reviewedAt": "2026-10-12T17:49:48.514228+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/khartum/qa.json",
+            "sha256": "28fba4cfbb9fd72fdac1f8730a89ae13a815de9f99f0f97bf6781719b09fe4b5"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/khartum/illustration-qa-extra.json",
+            "sha256": "d6cb0f264fed57c081d58d5703785299fb2a12d44105c1c0997e94f8a37b0622"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e07",
+        "city": "khartum",
+        "slot": "PHOTO",
+        "targetJsonPath": "$.valokuva",
+        "commonsFile": "Iss070e002191.jpg",
+        "sha256": "a02c95213a6b69ddb89991244f715145895261c53bf0f57d97471723da46cfdd",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Iss070e002191.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9c/Iss070e002191.jpg",
+        "author": "NASA Johnson Space Center",
+        "license": "PD",
+        "licenseUrl": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+        "width": 5568,
+        "height": 3712,
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e07/khartum/photo-a02c95213a6b69ddb899.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e07/khartum/photo-a02c95213a6b69ddb899.jpg",
+        "bytes": 4943183,
+        "http": 200,
+        "mime": "image/jpeg",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T18:02:25.571496+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "Iss070e002191.jpg",
+        "lahde": "NASA Johnson Space Center, Commons (PD)",
+        "selite": "Khartumin ja Omdurmanin jokiseutu avaruusasemalta kuvattuna.",
+        "lyhyt": "Khartumin ja Omdurmanin jokiseutu avaruusasemalta kuvattuna.",
+        "vuosi": "2023"
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "NASA Johnson Space Center, Commons (PD)",
+        "selite": "Khartumin ja Omdurmanin jokiseutu avaruusasemalta kuvattuna.",
+        "lyhyt": "Khartumin ja Omdurmanin jokiseutu avaruusasemalta kuvattuna.",
+        "tiedosto": "Iss070e002191.jpg",
+        "vuosi": "2023"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "f8f52cd4508afc665d78e8c25994c6041a919a3e5f7312f0dd6c5c728e412a8d",
+      "targetAfterSHA256": "2d00bd13803b058a99dd2b34a1b139e5869225f5282a23f2679457a3586c9a4f",
+      "contextAfterSHA256": "2d00bd13803b058a99dd2b34a1b139e5869225f5282a23f2679457a3586c9a4f"
+    },
+    {
+      "era": "e07",
+      "city": "khartum",
+      "slot": "C1",
+      "type": "commons",
+      "assetID": "capital-cc-e07-khartum-c1-4698c01116dbbade",
+      "galleryImageID": "capital-cc-e07-khartum-c1-4698c01116dbbade",
+      "commonsFile": "ISS-64 Khartoum, Sudan.jpg",
+      "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "kansikuvat",
+        0
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e07/khartum/c1-4698c01116dbbade6b3b.jpg",
+        "suora": true,
+        "lahde": "NASA, Wikimedia Commons (PD)",
+        "selite": "Khartumin jokien erottamaa kaupunkiseutua yövalokuvassa avaruusasemalta.",
+        "lyhyt": "Khartumin jokien erottamaa kaupunkiseutua yövalokuvassa avaruusasemalta.",
+        "tiedosto": "ISS-64 Khartoum, Sudan.jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "NASA, Wikimedia Commons (PD)",
+        "selite": "Khartumin jokien erottamaa kaupunkiseutua yövalokuvassa avaruusasemalta.",
+        "lyhyt": "Khartumin jokien erottamaa kaupunkiseutua yövalokuvassa avaruusasemalta.",
+        "tiedosto": "ISS-64 Khartoum, Sudan.jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e07/khartum/c1-4698c01116dbbade6b3b.jpg",
+        "suora": true,
+        "lahde": "NASA, Wikimedia Commons (PD)",
+        "selite": "Khartumin jokien erottamaa kaupunkiseutua yövalokuvassa avaruusasemalta.",
+        "lyhyt": "Khartumin jokien erottamaa kaupunkiseutua yövalokuvassa avaruusasemalta.",
+        "tiedosto": "ISS-64 Khartoum, Sudan.jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "4698c01116dbbade6b3bdb033da3131ef22282f371c00824f5da518213a9ecc9",
+      "exportSHA256": "4698c01116dbbade6b3bdb033da3131ef22282f371c00824f5da518213a9ecc9",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e07/khartum/c1-4698c01116dbbade6b3b.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e07/khartum/c1-4698c01116dbbade6b3b.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/commons-originals/e07/khartum/fd430a891a759e2617294cdd312494279cc27b7be493abe320868a01f9f0ec5a.jpg",
+      "dimensions": [
+        3712,
+        5568
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/khartum/sisalto.json",
+      "sourceContentSHA256": "f8f52cd4508afc665d78e8c25994c6041a919a3e5f7312f0dd6c5c728e412a8d",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "af24b22c3bc5b14d982785bffd1d760fa32f76cc23e79c0855b0c62627d57e10",
+        "semanticContextSHA256": "af24b22c3bc5b14d982785bffd1d760fa32f76cc23e79c0855b0c62627d57e10",
+        "subjectTitle": "Khartum",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "NASA",
+        "license": "PD",
+        "licenseUrl": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:ISS-64_Khartoum,_Sudan.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/3/32/ISS-64_Khartoum%2C_Sudan.jpg",
+        "rightsEvidence": {
+          "selection": [
+            "Kuvan Author/Artist-kenttä ja valokuvan oma lisenssimalli tarkistettu tallennetusta Commons-lähteestä; upload-historian nimeä ei käytetä tekijänä. Lisenssiversion linkki on valokuvan lisenssiosassa, ei Commons-sivun yleinen alatunnistelupa.",
+            "Pääaihe on kaupunkimaantiede avaruusasemalta. Yksittäinen moderni rakennus tai taideteos ei ole tunnistettava pääteos. NASA PD-USGov-NASA -tagi ja NASAn oma mediaohje tarkistettu.",
+            "Silmin katsottu alkuperäinen: Laaja todellinen yöilmakuva: kaupungin valaistus, Niilin haarat, tummat vesialueet ja teiden valoviivat. Ei lähikasvoja, lisättyä tekstiä, vesileimaa tai kehystä. Yökuvan pieni rakeisuus kirjattu, ei tuoreeksi vuoden 2026 kuvaksi nimetty.",
+            "NASA:n oma alkuperäinen mediaohje: https://www.nasa.gov/nasa-brand-center/images-and-media/ . Informatiivinen käyttö ilman NASA:n tuen vaikutelmaa; ei NASA-logoja tai henkilöitä kuvassa."
+          ],
+          "QA": {
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:ISS-64_Khartoum,_Sudan.jpg",
+            "savedSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/65f9ab57e986da2214539724db6cd3d7389ab3367f2fe7fdfd9dcca62bcb0b8b.html",
+            "sourceSHA256": "cbb1309ee3a1294780cdbef98bf2ad4415cbcf614f930dc8b7d1765351c99982",
+            "directAuthors": [
+              "NASA",
+              "VIV"
+            ],
+            "directLicenses": [
+              "Public domain"
+            ],
+            "directRows": {
+              "Date": "Taken on 11 November 2020"
+            },
+            "sourceOriginalDimensions": [
+              3712,
+              5568
+            ],
+            "localDimensions": [
+              3712,
+              5568
+            ],
+            "mediaPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/khartum/cc-evidence/meta-01.jpg",
+            "mediaSHA256": "4698c01116dbbade6b3bdb033da3131ef22282f371c00824f5da518213a9ecc9",
+            "authorMatches": true,
+            "licenseMatches": true,
+            "dimensionsMatch": true,
+            "licenseUrl": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+            "directDescriptionRows": [
+              "English: This nighttime shot from the International Space Station shows Khartoum, the capital of Sudan, surrounded by the Nile, Blue Nile and White Nile Rivers."
+            ],
+            "fullImageViewed": true,
+            "captionFi": "Khartumin jokien erottamaa kaupunkiseutua yövalokuvassa avaruusasemalta.",
+            "rightsScope": "Natural geography/city landscape; no protected structure/artwork singled out as principal reproduced subject",
+            "currentContentSHA256": "ab8c22ac5d61b12a81dd05c3565ec3fd5796eb7bf9144cf3432f302c4eb146e9",
+            "targetStillExists": true
+          },
+          "qaReason": "Aito laaja ISS-yövalokuva kaupungin valaistuksesta ja Niilin haaroista. Kuva on rakeinen mutta kaupunginasettelu ja jokien erottamat alueet hahmottuvat; ei ihmiskasvoja, lisättyä tekstiä, logoa tai yksittäistä tunnistettavaa teospääaihetta. Pysty on sallittu CC-kannessa. Varmennettu NASA Summary Author ja PD; EXIF:n VIV-tekijärivi säilytetty metadataan, siitä ei arvata bylineä. Kuva 11.11.2020, ei esitetä 2026 valaistuksen nykytilan todisteena."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Khartumin jokien erottamaa kaupunkiseutua yövalokuvassa avaruusasemalta.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/khartum/qa.json",
+        "fileSHA256": "28fba4cfbb9fd72fdac1f8730a89ae13a815de9f99f0f97bf6781719b09fe4b5",
+        "item": {
+          "slot": "C1",
+          "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
+          "verdict": "accepted",
+          "reason": "Aito laaja ISS-yövalokuva kaupungin valaistuksesta ja Niilin haaroista. Kuva on rakeinen mutta kaupunginasettelu ja jokien erottamat alueet hahmottuvat; ei ihmiskasvoja, lisättyä tekstiä, logoa tai yksittäistä tunnistettavaa teospääaihetta. Pysty on sallittu CC-kannessa. Varmennettu NASA Summary Author ja PD; EXIF:n VIV-tekijärivi säilytetty metadataan, siitä ei arvata bylineä. Kuva 11.11.2020, ei esitetä 2026 valaistuksen nykytilan todisteena.",
+          "evidence": {
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:ISS-64_Khartoum,_Sudan.jpg",
+            "savedSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/65f9ab57e986da2214539724db6cd3d7389ab3367f2fe7fdfd9dcca62bcb0b8b.html",
+            "sourceSHA256": "cbb1309ee3a1294780cdbef98bf2ad4415cbcf614f930dc8b7d1765351c99982",
+            "directAuthors": [
+              "NASA",
+              "VIV"
+            ],
+            "directLicenses": [
+              "Public domain"
+            ],
+            "directRows": {
+              "Date": "Taken on 11 November 2020"
+            },
+            "sourceOriginalDimensions": [
+              3712,
+              5568
+            ],
+            "localDimensions": [
+              3712,
+              5568
+            ],
+            "mediaPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/khartum/cc-evidence/meta-01.jpg",
+            "mediaSHA256": "4698c01116dbbade6b3bdb033da3131ef22282f371c00824f5da518213a9ecc9",
+            "authorMatches": true,
+            "licenseMatches": true,
+            "dimensionsMatch": true,
+            "licenseUrl": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+            "directDescriptionRows": [
+              "English: This nighttime shot from the International Space Station shows Khartoum, the capital of Sudan, surrounded by the Nile, Blue Nile and White Nile Rivers."
+            ],
+            "fullImageViewed": true,
+            "captionFi": "Khartumin jokien erottamaa kaupunkiseutua yövalokuvassa avaruusasemalta.",
+            "rightsScope": "Natural geography/city landscape; no protected structure/artwork singled out as principal reproduced subject",
+            "currentContentSHA256": "ab8c22ac5d61b12a81dd05c3565ec3fd5796eb7bf9144cf3432f302c4eb146e9",
+            "targetStillExists": true
+          },
+          "reviewedAt": "2026-10-12T18:30:26.477345+00:00",
+          "commonsFile": "ISS-64 Khartoum, Sudan.jpg",
+          "sha256": "4698c01116dbbade6b3bdb033da3131ef22282f371c00824f5da518213a9ecc9"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/khartum/qa.json",
+            "sha256": "28fba4cfbb9fd72fdac1f8730a89ae13a815de9f99f0f97bf6781719b09fe4b5"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/khartum/illustration-qa-extra.json",
+            "sha256": "d6cb0f264fed57c081d58d5703785299fb2a12d44105c1c0997e94f8a37b0622"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e07",
+        "city": "khartum",
+        "slot": "C1",
+        "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
+        "commonsFile": "ISS-64 Khartoum, Sudan.jpg",
+        "sha256": "4698c01116dbbade6b3bdb033da3131ef22282f371c00824f5da518213a9ecc9",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:ISS-64_Khartoum,_Sudan.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/3/32/ISS-64_Khartoum%2C_Sudan.jpg",
+        "author": "NASA",
+        "license": "PD",
+        "licenseUrl": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+        "width": 3712,
+        "height": 5568,
+        "originalSHA256": "4698c01116dbbade6b3bdb033da3131ef22282f371c00824f5da518213a9ecc9",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e07/khartum/c1-4698c01116dbbade6b3b.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e07/khartum/c1-4698c01116dbbade6b3b.jpg",
+        "bytes": 7152173,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T18:31:40.670542+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "ISS-64 Khartoum, Sudan.jpg",
+        "lahde": "NASA, Wikimedia Commons (PD)",
+        "selite": "Khartumin jokien erottamaa kaupunkiseutua yövalokuvassa avaruusasemalta.",
+        "lyhyt": "Khartumin jokien erottamaa kaupunkiseutua yövalokuvassa avaruusasemalta."
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "NASA, Wikimedia Commons (PD)",
+        "selite": "Khartumin jokien erottamaa kaupunkiseutua yövalokuvassa avaruusasemalta.",
+        "lyhyt": "Khartumin jokien erottamaa kaupunkiseutua yövalokuvassa avaruusasemalta.",
+        "tiedosto": "ISS-64 Khartoum, Sudan.jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "f8f52cd4508afc665d78e8c25994c6041a919a3e5f7312f0dd6c5c728e412a8d",
+      "targetAfterSHA256": "af24b22c3bc5b14d982785bffd1d760fa32f76cc23e79c0855b0c62627d57e10",
+      "contextAfterSHA256": "af24b22c3bc5b14d982785bffd1d760fa32f76cc23e79c0855b0c62627d57e10"
+    },
+    {
+      "era": "e07",
+      "city": "khartum",
+      "slot": "C2",
+      "type": "commons",
+      "assetID": "capital-cc-e07-khartum-c2-7dba4c208fb2e07f",
+      "galleryImageID": "capital-cc-e07-khartum-c2-7dba4c208fb2e07f",
+      "commonsFile": "River Nile2.jpg",
+      "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[1]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "kansikuvat",
+        1
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e07/khartum/c2-7dba4c208fb2e07f9c44.jpg",
+        "suora": true,
+        "lahde": "Wikimomsd, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Niilin rantamaisema ja Khartumin kaupunkiseutu joen takana.",
+        "lyhyt": "Niilin rantamaisema ja Khartumin kaupunkiseutu joen takana.",
+        "tiedosto": "River Nile2.jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Wikimomsd, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Niilin rantamaisema ja Khartumin kaupunkiseutu joen takana.",
+        "lyhyt": "Niilin rantamaisema ja Khartumin kaupunkiseutu joen takana.",
+        "tiedosto": "River Nile2.jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e07/khartum/c2-7dba4c208fb2e07f9c44.jpg",
+        "suora": true,
+        "lahde": "Wikimomsd, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Niilin rantamaisema ja Khartumin kaupunkiseutu joen takana.",
+        "lyhyt": "Niilin rantamaisema ja Khartumin kaupunkiseutu joen takana.",
+        "tiedosto": "River Nile2.jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "7dba4c208fb2e07f9c443af6335fec14472a5937580efddd66ab47f70ee56bdb",
+      "exportSHA256": "7dba4c208fb2e07f9c443af6335fec14472a5937580efddd66ab47f70ee56bdb",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e07/khartum/c2-7dba4c208fb2e07f9c44.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e07/khartum/c2-7dba4c208fb2e07f9c44.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/commons-originals/e07/khartum/aef683d88920f8d7e05fe184ca00eb229debe6755320479485bc30adee08604f.jpg",
+      "dimensions": [
+        2448,
+        3264
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/khartum/sisalto.json",
+      "sourceContentSHA256": "f8f52cd4508afc665d78e8c25994c6041a919a3e5f7312f0dd6c5c728e412a8d",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "f9675f2c0c3eece54ed29b31c5aa25620a317edf6fedada49f9822f43e4025ed",
+        "semanticContextSHA256": "f9675f2c0c3eece54ed29b31c5aa25620a317edf6fedada49f9822f43e4025ed",
+        "subjectTitle": "Khartum",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Wikimomsd",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:River_Nile2.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/8/84/River_Nile2.jpg",
+        "rightsEvidence": {
+          "selection": [
+            "Kuvan Author/Artist-kenttä ja valokuvan oma lisenssimalli tarkistettu tallennetusta Commons-lähteestä; upload-historian nimeä ei käytetä tekijänä. Lisenssiversion linkki on valokuvan lisenssiosassa, ei Commons-sivun yleinen alatunnistelupa.",
+            "Pääaihe on jokimaisema ja kasvillisuus; kaupunki on etäisenä taustana. Valokuva ei esitä yksittäistä suojattua arkkitehtuuriteosta pääteoksena. Kuvaajan CC BY-SA 4.0 ja teoskerroksen visuaalinen rajaus erillisiä.",
+            "Silmin katsottu alkuperäinen: Joen laaja vesipinta, rannan kasvillisuus ja kaupungin etäinen siluetti. Ei tunnistettavia ihmisiä, lisättyä tekstiä, vesileimaa tai kehystä. Modernit rakennukset kaukana horisontissa, eivät kuvan yksilöity pääaihe."
+          ],
+          "QA": {
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:River_Nile2.jpg",
+            "savedSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/1f80281e9125422bfe4cc3559d35ca0b06fa19176530621c34307affc27eb1c2.html",
+            "sourceSHA256": "624a1c234140a4887e2dd643afd6a7a4d2dd02904b161e03b347b628d7424ca2",
+            "directAuthors": [
+              "Wikimomsd"
+            ],
+            "directLicenses": [
+              "CC BY-SA 4.0"
+            ],
+            "directRows": {
+              "Date": "6 March 2022"
+            },
+            "sourceOriginalDimensions": [
+              2448,
+              3264
+            ],
+            "localDimensions": [
+              2448,
+              3264
+            ],
+            "mediaPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/khartum/cc-evidence/meta-04.jpg",
+            "mediaSHA256": "7dba4c208fb2e07f9c443af6335fec14472a5937580efddd66ab47f70ee56bdb",
+            "authorMatches": true,
+            "licenseMatches": true,
+            "dimensionsMatch": true,
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "directDescriptionRows": [
+              "العربية: منظر لنهر النيل الخالد سليل الفراديس، الخرطوم،السودان"
+            ],
+            "fullImageViewed": true,
+            "captionFi": "Niilin rantamaisema ja Khartumin kaupunkiseutu joen takana.",
+            "rightsScope": "Natural geography/city landscape; no protected structure/artwork singled out as principal reproduced subject",
+            "currentContentSHA256": "ab8c22ac5d61b12a81dd05c3565ec3fd5796eb7bf9144cf3432f302c4eb146e9",
+            "targetStillExists": true
+          },
+          "qaReason": "Aito laaja Niilin rantaveden, kasvillisuuden ja kaukaisen Khartumin kaupunkisiluetin valokuva. Alkuperäinen arabiankielinen Description nimeää Khartumin/Sudanin, ei pelkkä yleinen tiedostonimi. Ei lähikasvoja, lisättyä tekstiä tai yksittäistä rakennuspääaihetta; modernit profiilit pieniä kaukaisessa horisontissa, ei FOP-blanketväitettä. Wikimomsd, CC BY-SA 4.0, päiväys 6.3.2022."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Niilin rantamaisema ja Khartumin kaupunkiseutu joen takana.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/khartum/qa.json",
+        "fileSHA256": "28fba4cfbb9fd72fdac1f8730a89ae13a815de9f99f0f97bf6781719b09fe4b5",
+        "item": {
+          "slot": "C2",
+          "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[1]",
+          "verdict": "accepted",
+          "reason": "Aito laaja Niilin rantaveden, kasvillisuuden ja kaukaisen Khartumin kaupunkisiluetin valokuva. Alkuperäinen arabiankielinen Description nimeää Khartumin/Sudanin, ei pelkkä yleinen tiedostonimi. Ei lähikasvoja, lisättyä tekstiä tai yksittäistä rakennuspääaihetta; modernit profiilit pieniä kaukaisessa horisontissa, ei FOP-blanketväitettä. Wikimomsd, CC BY-SA 4.0, päiväys 6.3.2022.",
+          "evidence": {
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:River_Nile2.jpg",
+            "savedSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/1f80281e9125422bfe4cc3559d35ca0b06fa19176530621c34307affc27eb1c2.html",
+            "sourceSHA256": "624a1c234140a4887e2dd643afd6a7a4d2dd02904b161e03b347b628d7424ca2",
+            "directAuthors": [
+              "Wikimomsd"
+            ],
+            "directLicenses": [
+              "CC BY-SA 4.0"
+            ],
+            "directRows": {
+              "Date": "6 March 2022"
+            },
+            "sourceOriginalDimensions": [
+              2448,
+              3264
+            ],
+            "localDimensions": [
+              2448,
+              3264
+            ],
+            "mediaPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/khartum/cc-evidence/meta-04.jpg",
+            "mediaSHA256": "7dba4c208fb2e07f9c443af6335fec14472a5937580efddd66ab47f70ee56bdb",
+            "authorMatches": true,
+            "licenseMatches": true,
+            "dimensionsMatch": true,
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "directDescriptionRows": [
+              "العربية: منظر لنهر النيل الخالد سليل الفراديس، الخرطوم،السودان"
+            ],
+            "fullImageViewed": true,
+            "captionFi": "Niilin rantamaisema ja Khartumin kaupunkiseutu joen takana.",
+            "rightsScope": "Natural geography/city landscape; no protected structure/artwork singled out as principal reproduced subject",
+            "currentContentSHA256": "ab8c22ac5d61b12a81dd05c3565ec3fd5796eb7bf9144cf3432f302c4eb146e9",
+            "targetStillExists": true
+          },
+          "reviewedAt": "2026-10-12T18:30:26.527426+00:00",
+          "commonsFile": "River Nile2.jpg",
+          "sha256": "7dba4c208fb2e07f9c443af6335fec14472a5937580efddd66ab47f70ee56bdb"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/khartum/qa.json",
+            "sha256": "28fba4cfbb9fd72fdac1f8730a89ae13a815de9f99f0f97bf6781719b09fe4b5"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/khartum/illustration-qa-extra.json",
+            "sha256": "d6cb0f264fed57c081d58d5703785299fb2a12d44105c1c0997e94f8a37b0622"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e07",
+        "city": "khartum",
+        "slot": "C2",
+        "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[1]",
+        "commonsFile": "River Nile2.jpg",
+        "sha256": "7dba4c208fb2e07f9c443af6335fec14472a5937580efddd66ab47f70ee56bdb",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:River_Nile2.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/8/84/River_Nile2.jpg",
+        "author": "Wikimomsd",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "width": 2448,
+        "height": 3264,
+        "originalSHA256": "7dba4c208fb2e07f9c443af6335fec14472a5937580efddd66ab47f70ee56bdb",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e07/khartum/c2-7dba4c208fb2e07f9c44.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e07/khartum/c2-7dba4c208fb2e07f9c44.jpg",
+        "bytes": 1663297,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T18:31:42.586880+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "River Nile2.jpg",
+        "lahde": "Wikimomsd, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Niilin rantamaisema ja Khartumin kaupunkiseutu joen takana.",
+        "lyhyt": "Niilin rantamaisema ja Khartumin kaupunkiseutu joen takana."
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Wikimomsd, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Niilin rantamaisema ja Khartumin kaupunkiseutu joen takana.",
+        "lyhyt": "Niilin rantamaisema ja Khartumin kaupunkiseutu joen takana.",
+        "tiedosto": "River Nile2.jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "f8f52cd4508afc665d78e8c25994c6041a919a3e5f7312f0dd6c5c728e412a8d",
+      "targetAfterSHA256": "f9675f2c0c3eece54ed29b31c5aa25620a317edf6fedada49f9822f43e4025ed",
+      "contextAfterSHA256": "f9675f2c0c3eece54ed29b31c5aa25620a317edf6fedada49f9822f43e4025ed"
+    },
+    {
+      "era": "e07",
+      "city": "khartum",
+      "slot": "C3",
+      "type": "commons",
+      "assetID": "capital-cc-e07-khartum-c3-3d37cb6361fafb38",
+      "galleryImageID": "capital-cc-e07-khartum-c3-3d37cb6361fafb38",
+      "commonsFile": "Sunut Forest, Khartoum.jpg",
+      "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[2]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "kansikuvat",
+        2
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e07/khartum/c3-3d37cb6361fafb383c76.jpg",
+        "suora": true,
+        "lahde": "Mohoseen, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Sunutin rantametsää Khartumissa.",
+        "lyhyt": "Sunutin rantametsää Khartumissa.",
+        "tiedosto": "Sunut Forest, Khartoum.jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Mohoseen, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Sunutin rantametsää Khartumissa.",
+        "lyhyt": "Sunutin rantametsää Khartumissa.",
+        "tiedosto": "Sunut Forest, Khartoum.jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e07/khartum/c3-3d37cb6361fafb383c76.jpg",
+        "suora": true,
+        "lahde": "Mohoseen, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Sunutin rantametsää Khartumissa.",
+        "lyhyt": "Sunutin rantametsää Khartumissa.",
+        "tiedosto": "Sunut Forest, Khartoum.jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "3d37cb6361fafb383c76b2b28ffc3ea1275a71c47ce10c75bf2aef793b4713b4",
+      "exportSHA256": "3d37cb6361fafb383c76b2b28ffc3ea1275a71c47ce10c75bf2aef793b4713b4",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e07/khartum/c3-3d37cb6361fafb383c76.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e07/khartum/c3-3d37cb6361fafb383c76.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/commons-originals/e07/khartum/774da4403491e79ec6494fa8606bfc9442d0e4a7c514b0238a124da52d19eea0.jpg",
+      "dimensions": [
+        3264,
+        1836
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/khartum/sisalto.json",
+      "sourceContentSHA256": "f8f52cd4508afc665d78e8c25994c6041a919a3e5f7312f0dd6c5c728e412a8d",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "eec31c4ddc3be8584775a68da249e117defb619c2bf24ff413bef91288ee88ff",
+        "semanticContextSHA256": "eec31c4ddc3be8584775a68da249e117defb619c2bf24ff413bef91288ee88ff",
+        "subjectTitle": "Khartum",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Mohoseen",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Sunut_Forest,_Khartoum.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a5/Sunut_Forest%2C_Khartoum.jpg",
+        "rightsEvidence": {
+          "selection": [
+            "Kuvan Author/Artist-kenttä ja valokuvan oma lisenssimalli tarkistettu tallennetusta Commons-lähteestä; upload-historian nimeä ei käytetä tekijänä. Lisenssiversion linkki on valokuvan lisenssiosassa, ei Commons-sivun yleinen alatunnistelupa.",
+            "Luonnonpuusto ja rantavesi, ei tekijänoikeudella suojattua teosta. Paikka Sunut Forest, Khartoum on kuvaajan Commonsin Description-kentässä, tarkistettu erikseen kategoriasta.",
+            "Silmin katsottu alkuperäinen: Laaja puustoinen rantametsän tila ja vesi puiden välissä; ei rakennuksia, taideteoksia, henkilöitä, lisättyä tekstiä, logoja, vesileimaa tai kehystä. Ei nimetä tätä Tutin saareksi tai kansalliseksi kasvitieteelliseksi puutarhaksi."
+          ],
+          "QA": {
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Sunut_Forest,_Khartoum.jpg",
+            "savedSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/db0fd230df72c187005c59d5ea5d4fea21f830662e3adcd3e143c273473577a5.html",
+            "sourceSHA256": "5c1d57fc2c6d7a44fa5bd4afacce33893fee3d02ce778924aa4edad3a13bba30",
+            "directAuthors": [
+              "Mohoseen"
+            ],
+            "directLicenses": [
+              "CC BY-SA 4.0"
+            ],
+            "directRows": {
+              "Date": "10 September 2016, 13:43:34"
+            },
+            "sourceOriginalDimensions": [
+              3264,
+              1836
+            ],
+            "localDimensions": [
+              3264,
+              1836
+            ],
+            "mediaPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/khartum/cc-evidence/meta-02.jpg",
+            "mediaSHA256": "3d37cb6361fafb383c76b2b28ffc3ea1275a71c47ce10c75bf2aef793b4713b4",
+            "authorMatches": true,
+            "licenseMatches": true,
+            "dimensionsMatch": true,
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "directDescriptionRows": [
+              "English: Sunut Forest, Khartoum at the confluence of The Whit Nile and The blue Nile,Khartoum,Sudan Igbo: Ọhịa Sunut, Khartoum, na njikọta nke White Nile na Blue Nile, Khartoum, Sudan This is an image from Sudan"
+            ],
+            "fullImageViewed": true,
+            "captionFi": "Sunutin rantametsää Khartumissa.",
+            "rightsScope": "Natural geography/city landscape; no protected structure/artwork singled out as principal reproduced subject",
+            "currentContentSHA256": "ab8c22ac5d61b12a81dd05c3565ec3fd5796eb7bf9144cf3432f302c4eb146e9",
+            "targetStillExists": true
+          },
+          "qaReason": "Aito laaja rantametsä-/vesitilan näkymä kaupungin luonnollisesta jokirannasta. Kuvaajan Description nimeää Sunut Forestin Khartumissa, eikä kuvia sekoiteta Tutin saareen tai kasvitieteelliseen puutarhaan. Ei rakennuksia, kasvoja, tekstiä, logoja tai taideteoksia. Kuva vuodelta 2016 säilyy lähdemetassa, ei uutena nykytilan palvelulupauksena."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Sunutin rantametsää Khartumissa.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/khartum/qa.json",
+        "fileSHA256": "28fba4cfbb9fd72fdac1f8730a89ae13a815de9f99f0f97bf6781719b09fe4b5",
+        "item": {
+          "slot": "C3",
+          "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[2]",
+          "verdict": "accepted",
+          "reason": "Aito laaja rantametsä-/vesitilan näkymä kaupungin luonnollisesta jokirannasta. Kuvaajan Description nimeää Sunut Forestin Khartumissa, eikä kuvia sekoiteta Tutin saareen tai kasvitieteelliseen puutarhaan. Ei rakennuksia, kasvoja, tekstiä, logoja tai taideteoksia. Kuva vuodelta 2016 säilyy lähdemetassa, ei uutena nykytilan palvelulupauksena.",
+          "evidence": {
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Sunut_Forest,_Khartoum.jpg",
+            "savedSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/db0fd230df72c187005c59d5ea5d4fea21f830662e3adcd3e143c273473577a5.html",
+            "sourceSHA256": "5c1d57fc2c6d7a44fa5bd4afacce33893fee3d02ce778924aa4edad3a13bba30",
+            "directAuthors": [
+              "Mohoseen"
+            ],
+            "directLicenses": [
+              "CC BY-SA 4.0"
+            ],
+            "directRows": {
+              "Date": "10 September 2016, 13:43:34"
+            },
+            "sourceOriginalDimensions": [
+              3264,
+              1836
+            ],
+            "localDimensions": [
+              3264,
+              1836
+            ],
+            "mediaPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/khartum/cc-evidence/meta-02.jpg",
+            "mediaSHA256": "3d37cb6361fafb383c76b2b28ffc3ea1275a71c47ce10c75bf2aef793b4713b4",
+            "authorMatches": true,
+            "licenseMatches": true,
+            "dimensionsMatch": true,
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "directDescriptionRows": [
+              "English: Sunut Forest, Khartoum at the confluence of The Whit Nile and The blue Nile,Khartoum,Sudan Igbo: Ọhịa Sunut, Khartoum, na njikọta nke White Nile na Blue Nile, Khartoum, Sudan This is an image from Sudan"
+            ],
+            "fullImageViewed": true,
+            "captionFi": "Sunutin rantametsää Khartumissa.",
+            "rightsScope": "Natural geography/city landscape; no protected structure/artwork singled out as principal reproduced subject",
+            "currentContentSHA256": "ab8c22ac5d61b12a81dd05c3565ec3fd5796eb7bf9144cf3432f302c4eb146e9",
+            "targetStillExists": true
+          },
+          "reviewedAt": "2026-10-12T18:30:26.625259+00:00",
+          "commonsFile": "Sunut Forest, Khartoum.jpg",
+          "sha256": "3d37cb6361fafb383c76b2b28ffc3ea1275a71c47ce10c75bf2aef793b4713b4"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/khartum/qa.json",
+            "sha256": "28fba4cfbb9fd72fdac1f8730a89ae13a815de9f99f0f97bf6781719b09fe4b5"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/khartum/illustration-qa-extra.json",
+            "sha256": "d6cb0f264fed57c081d58d5703785299fb2a12d44105c1c0997e94f8a37b0622"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e07",
+        "city": "khartum",
+        "slot": "C3",
+        "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[2]",
+        "commonsFile": "Sunut Forest, Khartoum.jpg",
+        "sha256": "3d37cb6361fafb383c76b2b28ffc3ea1275a71c47ce10c75bf2aef793b4713b4",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Sunut_Forest,_Khartoum.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a5/Sunut_Forest%2C_Khartoum.jpg",
+        "author": "Mohoseen",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "width": 3264,
+        "height": 1836,
+        "originalSHA256": "3d37cb6361fafb383c76b2b28ffc3ea1275a71c47ce10c75bf2aef793b4713b4",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e07/khartum/c3-3d37cb6361fafb383c76.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e07/khartum/c3-3d37cb6361fafb383c76.jpg",
+        "bytes": 3412863,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T18:31:44.249858+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "Sunut Forest, Khartoum.jpg",
+        "lahde": "Mohoseen, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Sunutin rantametsää Khartumissa.",
+        "lyhyt": "Sunutin rantametsää Khartumissa."
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Mohoseen, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Sunutin rantametsää Khartumissa.",
+        "lyhyt": "Sunutin rantametsää Khartumissa.",
+        "tiedosto": "Sunut Forest, Khartoum.jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "f8f52cd4508afc665d78e8c25994c6041a919a3e5f7312f0dd6c5c728e412a8d",
+      "targetAfterSHA256": "eec31c4ddc3be8584775a68da249e117defb619c2bf24ff413bef91288ee88ff",
+      "contextAfterSHA256": "eec31c4ddc3be8584775a68da249e117defb619c2bf24ff413bef91288ee88ff"
+    },
+    {
+      "era": "e07",
+      "city": "khartum",
+      "slot": "L3",
+      "type": "commons",
+      "assetID": "capital-cc-e07-khartum-l3-086375780a5134b0",
+      "galleryImageID": "capital-cc-e07-khartum-l3-086375780a5134b0",
+      "commonsFile": "Relief Semna temple Sesostris III barge.jpg",
+      "targetJsonPath": "$.kaupunkilehti[1].nostot[2]",
+      "targetTokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        2
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e07/khartum/l3-086375780a5134b0813d.jpg",
+        "suora": true,
+        "lahde": "Matthias Gehricke, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Semnan temppelin muinainen reliefi Sudanin kansallismuseossa, kuvattu vuonna 2019.",
+        "lyhyt": "Semnan temppelin muinainen reliefi Sudanin kansallismuseossa, kuvattu vuonna 2019.",
+        "tiedosto": "Relief Semna temple Sesostris III barge.jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Matthias Gehricke, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Semnan temppelin muinainen reliefi Sudanin kansallismuseossa, kuvattu vuonna 2019.",
+        "lyhyt": "Semnan temppelin muinainen reliefi Sudanin kansallismuseossa, kuvattu vuonna 2019.",
+        "tiedosto": "Relief Semna temple Sesostris III barge.jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e07/khartum/l3-086375780a5134b0813d.jpg",
+        "suora": true,
+        "lahde": "Matthias Gehricke, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Semnan temppelin muinainen reliefi Sudanin kansallismuseossa, kuvattu vuonna 2019.",
+        "lyhyt": "Semnan temppelin muinainen reliefi Sudanin kansallismuseossa, kuvattu vuonna 2019.",
+        "tiedosto": "Relief Semna temple Sesostris III barge.jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "086375780a5134b0813d92a5355e7dd1086961c8b969496b12a5c50053c37f28",
+      "exportSHA256": "086375780a5134b0813d92a5355e7dd1086961c8b969496b12a5c50053c37f28",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e07/khartum/l3-086375780a5134b0813d.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e07/khartum/l3-086375780a5134b0813d.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/commons-originals/e07/khartum/9eb9f990a1585722ebe4cdc5037c4cfdae0fe4ac5880d44f298533a1e52ea092.jpg",
+      "dimensions": [
+        6720,
+        4480
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/khartum/sisalto.json",
+      "sourceContentSHA256": "f8f52cd4508afc665d78e8c25994c6041a919a3e5f7312f0dd6c5c728e412a8d",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "02ec49520de4043187f0ad293d25ee4f0f490b792d60b577bc717ece13cf36c6",
+        "semanticContextSHA256": "02ec49520de4043187f0ad293d25ee4f0f490b792d60b577bc717ece13cf36c6",
+        "subjectTitle": "Temppeli on vanha, sijainti uudempi",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Matthias Gehricke",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Relief_Semna_temple_Sesostris_III_barge.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/6/67/Relief_Semna_temple_Sesostris_III_barge.jpg",
+        "rightsEvidence": {
+          "selection": [
+            "Kuvan Author/Artist-kenttä ja valokuvan oma lisenssimalli tarkistettu tallennetusta Commons-lähteestä; upload-historian nimeä ei käytetä tekijänä. Lisenssiversion linkki on valokuvan lisenssiosassa, ei Commons-sivun yleinen alatunnistelupa.",
+            "Valokuvaajan alkuperäinen Description yksilöi Semnan Thutmosis III:n ajan temppelin (noin1450eaa.), purkamisen1965 ja uudelleenpystytyksen Sudanin kansallismuseoon Khartumissa. Kuvattu reliefi on antiikin alkuperäinen teos, ei nykytaideteos; kokoantiikin tekijäketju on tuhansien vuosien takaa. Nykyinen valokuva CC BY-SA4.0 on erillinen kerros. Kuvassa ei esitetä museon nykyistä rakennusta tai modernia museomallia taideteoksena; uudet rakenteelliset tukipinnat sivuosassa. L3-teksti nimeää Semnan rakennusosat siirrettyjen temppelien joukossa.",
+            "Silmin katsottu alkuperäinen: Kivireliefin veistosjäljet ja kivilohkot näkyvät selkeästi; ei eläviä ihmisiä tai kasvoja. Seinän vanhat kaiverrukset ja myöhemmät raaputukset ovat fyysisiä pintajälkiä, eivät kuvan päälle lisättyä tekstiä. Ei watermarkia tai kehystä."
+          ],
+          "QA": {
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Relief_Semna_temple_Sesostris_III_barge.jpg",
+            "savedSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/7533db4d0663b684c0302e479afad549171441cb7c5502e6de3dae266c983f7f.html",
+            "sourceSHA256": "ac4936798cde70a02018d0ba0024f5c77cfbf31af564095fe458be2a74a03d55",
+            "directAuthors": [
+              "Matthias Gehricke",
+              "Matthias Gehricke"
+            ],
+            "directLicenses": [
+              "CC BY-SA 4.0"
+            ],
+            "directRows": {
+              "Date": "1 January 2019, 13:57:52",
+              "Camera location": "15° 36′ 21.08″ N, 32° 30′ 27.3″ E"
+            },
+            "sourceOriginalDimensions": [
+              6720,
+              4480
+            ],
+            "localDimensions": [
+              6720,
+              4480
+            ],
+            "mediaPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/khartum/cc-evidence/meta-07.jpg",
+            "mediaSHA256": "086375780a5134b0813d92a5355e7dd1086961c8b969496b12a5c50053c37f28",
+            "authorMatches": true,
+            "licenseMatches": true,
+            "dimensionsMatch": true,
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "descriptions": [
+              "English: Semna was built 35 km south of the 2nd Nile-cataract as a fortified area by Sesostris III (12. Dyn., c. 1860 BC). Thutmose III (18. Dyn, 1450 BC) added a temple honouring the nubian god Dedwen, that was disassemble in 1965 und re-erected in Sudan National Museum in Khartoum. On the opposite banks of the Nile there is the fortification of Kumma - both submerged in the Nubian Lake, part of the Nasser Lake. George A. Reisner investigated them in the late 1920s. Deutsch: Semna wurde 35 km südlich zweiten Nil-Katarakts als Befestigungsanlage von Sesostris III. (12. Dyn., ca. 1860 v. Chr.) errichtet. Thutmosis III. (18. Dyn, 1450 v. Chr.) ließ einen Tempel zu Ehren des nubischen Gottes Dedwen bauen, der 1965 zerlegt wurde und im National Museum Sudan ausgestellt wird. Auf der anderenSeite des Nils liegt die Kumma - beide versunken im Nubia-See, Teil des Nassersees. George A. Reisner untersuchte sie in den 1920er Jahren.",
+              "English: Semna was built 35 km south of the 2nd Nile-cataract as a fortified area by Sesostris III (12. Dyn., c. 1860 BC). Thutmose III (18. Dyn, 1450 BC) added a temple honouring the nubian god Dedwen, that was disassemble in 1965 und re-erected in Sudan National Museum in Khartoum. On the opposite banks of the Nile there is the fortification of Kumma - both submerged in the Nubian Lake, part of the Nasser Lake. George A. Reisner investigated them in the late 1920s.",
+              "Deutsch: Semna wurde 35 km südlich zweiten Nil-Katarakts als Befestigungsanlage von Sesostris III. (12. Dyn., ca. 1860 v. Chr.) errichtet. Thutmosis III. (18. Dyn, 1450 v. Chr.) ließ einen Tempel zu Ehren des nubischen Gottes Dedwen bauen, der 1965 zerlegt wurde und im National Museum Sudan ausgestellt wird. Auf der anderenSeite des Nils liegt die Kumma - beide versunken im Nubia-See, Teil des Nassersees. George A. Reisner untersuchte sie in den 1920er Jahren.",
+              "I, the copyright holder of this work, hereby publish it under the following license:"
+            ],
+            "fullImageViewed": true,
+            "fullNativeImageViewed": false,
+            "personallyViewedByJob27": true,
+            "viewMethod": "view_image high; entire 6720x4480 original displayed resized to 1920x1280",
+            "currentContentSHA256": "ab8c22ac5d61b12a81dd05c3565ec3fd5796eb7bf9144cf3432f302c4eb146e9",
+            "targetStillExists": true
+          },
+          "qaReason": "Koko alkuperäisestä tiedostosta avattu kuva itse katsottu: muinaisen Semnan temppelin reliefiseinä ja kivipinnan vanhat kaiverrukset/pintajäljet. Valokuvatekijän oma Description yksilöi muinaisen temppelin, siirron 1965 ja uudelleenpystytyksen Khartumin Sudanin kansallismuseoon; paikka sopii L3:n siirrettyjä rakennusosia koskevaan tekstiin. Kuvattu reliefin historiallinen ilmaisu on tuhansien vuosien takaa, ei jäljennetty nykyteos tai nykymuseon mallirekonstruktio; sivuosan tavallinen tuki/katto ei ole aiheen luova teos. Matthias Gehricke / CC BY-SA 4.0, 6720×4480, 1.1.2019 sekä SHA ja lähteen kuvaus varmennettu. Ei eläviä tunnistettavia kasvoja, kuvan päälle lisättyä tekstiä tai vesileimaa. Fyysiset hieroglyfit ja seinän myöhemmät naarmut eivät ole overlayta. Selite sanoo museossa 2019; ei nykyisen museotilan/kohteen säilymisen tai saavutettavuuden lupausta."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Semnan temppelin muinainen reliefi Sudanin kansallismuseossa, kuvattu vuonna 2019.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/khartum/qa.json",
+        "fileSHA256": "28fba4cfbb9fd72fdac1f8730a89ae13a815de9f99f0f97bf6781719b09fe4b5",
+        "item": {
+          "slot": "L3",
+          "targetJsonPath": "$.kaupunkilehti[1].nostot[2]",
+          "verdict": "accepted",
+          "reason": "Koko alkuperäisestä tiedostosta avattu kuva itse katsottu: muinaisen Semnan temppelin reliefiseinä ja kivipinnan vanhat kaiverrukset/pintajäljet. Valokuvatekijän oma Description yksilöi muinaisen temppelin, siirron 1965 ja uudelleenpystytyksen Khartumin Sudanin kansallismuseoon; paikka sopii L3:n siirrettyjä rakennusosia koskevaan tekstiin. Kuvattu reliefin historiallinen ilmaisu on tuhansien vuosien takaa, ei jäljennetty nykyteos tai nykymuseon mallirekonstruktio; sivuosan tavallinen tuki/katto ei ole aiheen luova teos. Matthias Gehricke / CC BY-SA 4.0, 6720×4480, 1.1.2019 sekä SHA ja lähteen kuvaus varmennettu. Ei eläviä tunnistettavia kasvoja, kuvan päälle lisättyä tekstiä tai vesileimaa. Fyysiset hieroglyfit ja seinän myöhemmät naarmut eivät ole overlayta. Selite sanoo museossa 2019; ei nykyisen museotilan/kohteen säilymisen tai saavutettavuuden lupausta.",
+          "evidence": {
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Relief_Semna_temple_Sesostris_III_barge.jpg",
+            "savedSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/7533db4d0663b684c0302e479afad549171441cb7c5502e6de3dae266c983f7f.html",
+            "sourceSHA256": "ac4936798cde70a02018d0ba0024f5c77cfbf31af564095fe458be2a74a03d55",
+            "directAuthors": [
+              "Matthias Gehricke",
+              "Matthias Gehricke"
+            ],
+            "directLicenses": [
+              "CC BY-SA 4.0"
+            ],
+            "directRows": {
+              "Date": "1 January 2019, 13:57:52",
+              "Camera location": "15° 36′ 21.08″ N, 32° 30′ 27.3″ E"
+            },
+            "sourceOriginalDimensions": [
+              6720,
+              4480
+            ],
+            "localDimensions": [
+              6720,
+              4480
+            ],
+            "mediaPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/khartum/cc-evidence/meta-07.jpg",
+            "mediaSHA256": "086375780a5134b0813d92a5355e7dd1086961c8b969496b12a5c50053c37f28",
+            "authorMatches": true,
+            "licenseMatches": true,
+            "dimensionsMatch": true,
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "descriptions": [
+              "English: Semna was built 35 km south of the 2nd Nile-cataract as a fortified area by Sesostris III (12. Dyn., c. 1860 BC). Thutmose III (18. Dyn, 1450 BC) added a temple honouring the nubian god Dedwen, that was disassemble in 1965 und re-erected in Sudan National Museum in Khartoum. On the opposite banks of the Nile there is the fortification of Kumma - both submerged in the Nubian Lake, part of the Nasser Lake. George A. Reisner investigated them in the late 1920s. Deutsch: Semna wurde 35 km südlich zweiten Nil-Katarakts als Befestigungsanlage von Sesostris III. (12. Dyn., ca. 1860 v. Chr.) errichtet. Thutmosis III. (18. Dyn, 1450 v. Chr.) ließ einen Tempel zu Ehren des nubischen Gottes Dedwen bauen, der 1965 zerlegt wurde und im National Museum Sudan ausgestellt wird. Auf der anderenSeite des Nils liegt die Kumma - beide versunken im Nubia-See, Teil des Nassersees. George A. Reisner untersuchte sie in den 1920er Jahren.",
+              "English: Semna was built 35 km south of the 2nd Nile-cataract as a fortified area by Sesostris III (12. Dyn., c. 1860 BC). Thutmose III (18. Dyn, 1450 BC) added a temple honouring the nubian god Dedwen, that was disassemble in 1965 und re-erected in Sudan National Museum in Khartoum. On the opposite banks of the Nile there is the fortification of Kumma - both submerged in the Nubian Lake, part of the Nasser Lake. George A. Reisner investigated them in the late 1920s.",
+              "Deutsch: Semna wurde 35 km südlich zweiten Nil-Katarakts als Befestigungsanlage von Sesostris III. (12. Dyn., ca. 1860 v. Chr.) errichtet. Thutmosis III. (18. Dyn, 1450 v. Chr.) ließ einen Tempel zu Ehren des nubischen Gottes Dedwen bauen, der 1965 zerlegt wurde und im National Museum Sudan ausgestellt wird. Auf der anderenSeite des Nils liegt die Kumma - beide versunken im Nubia-See, Teil des Nassersees. George A. Reisner untersuchte sie in den 1920er Jahren.",
+              "I, the copyright holder of this work, hereby publish it under the following license:"
+            ],
+            "fullImageViewed": true,
+            "fullNativeImageViewed": false,
+            "personallyViewedByJob27": true,
+            "viewMethod": "view_image high; entire 6720x4480 original displayed resized to 1920x1280",
+            "currentContentSHA256": "ab8c22ac5d61b12a81dd05c3565ec3fd5796eb7bf9144cf3432f302c4eb146e9",
+            "targetStillExists": true
+          },
+          "reviewedAt": "2026-10-12T19:24:17.677535+00:00",
+          "commonsFile": "Relief Semna temple Sesostris III barge.jpg",
+          "sha256": "086375780a5134b0813d92a5355e7dd1086961c8b969496b12a5c50053c37f28"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/khartum/qa.json",
+            "sha256": "28fba4cfbb9fd72fdac1f8730a89ae13a815de9f99f0f97bf6781719b09fe4b5"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/khartum/illustration-qa-extra.json",
+            "sha256": "d6cb0f264fed57c081d58d5703785299fb2a12d44105c1c0997e94f8a37b0622"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e07",
+        "city": "khartum",
+        "slot": "L3",
+        "targetJsonPath": "$.kaupunkilehti[1].nostot[2]",
+        "commonsFile": "Relief Semna temple Sesostris III barge.jpg",
+        "sha256": "086375780a5134b0813d92a5355e7dd1086961c8b969496b12a5c50053c37f28",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Relief_Semna_temple_Sesostris_III_barge.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/6/67/Relief_Semna_temple_Sesostris_III_barge.jpg",
+        "author": "Matthias Gehricke",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "width": 6720,
+        "height": 4480,
+        "originalSHA256": "086375780a5134b0813d92a5355e7dd1086961c8b969496b12a5c50053c37f28",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e07/khartum/l3-086375780a5134b0813d.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e07/khartum/l3-086375780a5134b0813d.jpg",
+        "bytes": 42673981,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T19:24:56.514583+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "Relief Semna temple Sesostris III barge.jpg",
+        "lahde": "Matthias Gehricke, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Semnan temppelin muinainen reliefi Sudanin kansallismuseossa, kuvattu vuonna 2019.",
+        "lyhyt": "Semnan temppelin muinainen reliefi Sudanin kansallismuseossa, kuvattu vuonna 2019."
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Matthias Gehricke, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Semnan temppelin muinainen reliefi Sudanin kansallismuseossa, kuvattu vuonna 2019.",
+        "lyhyt": "Semnan temppelin muinainen reliefi Sudanin kansallismuseossa, kuvattu vuonna 2019.",
+        "tiedosto": "Relief Semna temple Sesostris III barge.jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "f8f52cd4508afc665d78e8c25994c6041a919a3e5f7312f0dd6c5c728e412a8d",
+      "targetAfterSHA256": "02ec49520de4043187f0ad293d25ee4f0f490b792d60b577bc717ece13cf36c6",
+      "contextAfterSHA256": "02ec49520de4043187f0ad293d25ee4f0f490b792d60b577bc717ece13cf36c6"
+    },
+    {
+      "era": "e07",
+      "city": "khartum",
+      "slot": "N1",
+      "type": "commons",
+      "assetID": "capital-cc-e07-khartum-n1-83b4053facae21d7",
+      "galleryImageID": "capital-cc-e07-khartum-n1-83b4053facae21d7",
+      "commonsFile": "Tuti Island (Khartoum, Sudan) 001.jpg",
+      "targetJsonPath": "$.nahtavyydet[\"Tutin saari\"].kuvat[0]",
+      "targetTokens": [
+        "nahtavyydet",
+        "Tutin saari",
+        "kuvat",
+        0
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e07/khartum/n1-83b4053facae21d7bedd.jpg",
+        "suora": true,
+        "lahde": "Petr Adam Dohnálek, Wikimedia Commons (CC BY-SA 3.0 cz)",
+        "selite": "Tutin saaren taloja ja piha-aluetta heinäkuussa 2009.",
+        "lyhyt": "Tutin saaren taloja ja piha-aluetta heinäkuussa 2009.",
+        "tiedosto": "Tuti Island (Khartoum, Sudan) 001.jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Petr Adam Dohnálek, Wikimedia Commons (CC BY-SA 3.0 cz)",
+        "selite": "Tutin saaren taloja ja piha-aluetta heinäkuussa 2009.",
+        "lyhyt": "Tutin saaren taloja ja piha-aluetta heinäkuussa 2009.",
+        "tiedosto": "Tuti Island (Khartoum, Sudan) 001.jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e07/khartum/n1-83b4053facae21d7bedd.jpg",
+        "suora": true,
+        "lahde": "Petr Adam Dohnálek, Wikimedia Commons (CC BY-SA 3.0 cz)",
+        "selite": "Tutin saaren taloja ja piha-aluetta heinäkuussa 2009.",
+        "lyhyt": "Tutin saaren taloja ja piha-aluetta heinäkuussa 2009.",
+        "tiedosto": "Tuti Island (Khartoum, Sudan) 001.jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "83b4053facae21d7bedd7e9fe2f0c8a04dc102679f72186c1b6136e997b46a90",
+      "exportSHA256": "83b4053facae21d7bedd7e9fe2f0c8a04dc102679f72186c1b6136e997b46a90",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e07/khartum/n1-83b4053facae21d7bedd.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e07/khartum/n1-83b4053facae21d7bedd.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/commons-originals/e07/khartum/2d74403341de0cc930c7621e83e09d407d78049be22c58314e3c99ccecba67fa.jpg",
+      "dimensions": [
+        1600,
+        1200
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/khartum/sisalto.json",
+      "sourceContentSHA256": "f8f52cd4508afc665d78e8c25994c6041a919a3e5f7312f0dd6c5c728e412a8d",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "92e6e66470a2c4a25c500e36bd8cc16b20f1463bc63e769817d5515407e239c0",
+        "semanticContextSHA256": "eef44e61b48dbe9a09c301a7831ddfb85a0de6b2911333334a6e38ec8a2899a7",
+        "subjectTitle": "Tutin saari",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Petr Adam Dohnálek",
+        "license": "CC BY-SA 3.0 cz",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/cz/",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Tuti_Island_(Khartoum,_Sudan)_001.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7b/Tuti_Island_%28Khartoum%2C_Sudan%29_001.jpg",
+        "rightsEvidence": {
+          "selection": [
+            "Kuvan Author/Artist-kenttä ja valokuvan oma lisenssimalli tarkistettu tallennetusta Commons-lähteestä; upload-historian nimeä ei käytetä tekijänä. Lisenssiversion linkki on valokuvan lisenssiosassa, ei Commons-sivun yleinen alatunnistelupa.",
+            "Description nimeää nimenomaan Houses on Tuti Island, Khartoum, Sudan. Pääaihe on kylän tavallinen piha- ja asuinympäristö, ei yksittäinen nimetty arkkitehtuuriteos tai taide. Oman valokuvan kaupallinen lisenssi on CC BY-SA 3.0 Czech Republic, ei unported 3.0. Kuvaus2009 kirjataan; kuvasta ei johdeta nykyisen pääsyn tai talojen säilymisen lupausta.",
+            "Silmin katsottu alkuperäinen: Aito näkymä useisiin taloihin, puihin ja piha-alueeseen Tutin saarella. Ihmiset ovat pieninä/selin tai varjossa; alkuperäisessä 1600 pikselin kuvassa ei tunnistettavia kasvonpiirteitä. Ei lisättyä tekstiä, logoja, kehystä tai vesileimaa. Kansiin tätä ei käytetä."
+          ],
+          "QA": {
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Tuti_Island_(Khartoum,_Sudan)_001.jpg",
+            "savedSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/b88dba05d92348bb4089d001d975348a0861060e2aa8f42cdd9f0b021a8deb19.html",
+            "sourceSHA256": "b35046c7a00c2ddadcd424ec242f127137db6a376a0611c3737bd056fff8c780",
+            "directAuthors": [
+              "Petr Adam Dohnálek"
+            ],
+            "directLicenses": [
+              "CC BY-SA 3.0 cz"
+            ],
+            "directRows": {
+              "Date": "27 July 2009",
+              "Object location": "15° 36′ 47.11″ N, 32° 30′ 44.86″ E",
+              "Camera location": "15° 36′ 44.81″ N, 32° 30′ 45.09″ E"
+            },
+            "sourceOriginalDimensions": [
+              1600,
+              1200
+            ],
+            "localDimensions": [
+              1600,
+              1200
+            ],
+            "mediaPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/khartum/cc-evidence/meta-05.jpg",
+            "mediaSHA256": "83b4053facae21d7bedd7e9fe2f0c8a04dc102679f72186c1b6136e997b46a90",
+            "authorMatches": true,
+            "licenseMatches": true,
+            "dimensionsMatch": true,
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/cz/",
+            "descriptions": [
+              "Čeština: Domy na ostrově Tuti , Chartúm , Súdán . English: Houses on Tuti Island , Khartoum , Sudan . Esperanto: Domoj sur la insulo Tuti , Ĥartumo , Sudano .",
+              "Čeština: Domy na ostrově Tuti , Chartúm , Súdán .",
+              "English: Houses on Tuti Island , Khartoum , Sudan .",
+              "Esperanto: Domoj sur la insulo Tuti , Ĥartumo , Sudano ."
+            ],
+            "fullImageViewed": true,
+            "fullNativeImageViewed": true,
+            "personallyViewedByJob27": true,
+            "viewMethod": "view_image original native 1600x1200",
+            "currentContentSHA256": "ab8c22ac5d61b12a81dd05c3565ec3fd5796eb7bf9144cf3432f302c4eb146e9",
+            "targetStillExists": true
+          },
+          "qaReason": "Oma alkuperäisen 1600×1200 koko kuvan katselu: Tutin saaren tavallinen piha-/asuinympäristö, puut ja pieniä kaukaisia/selin/varjoon jääviä ihmishahmoja, ei tunnistettavia kasvonpiirteitä. Valokuvatekijän oma alkuperäinen Description nimeää Houses on Tuti Island, Khartoum, Sudan; kamera- ja kohdekoordinaatit tukevat paikkaa. Petr Adam Dohnálek / CC BY-SA 3.0 cz, nimenomaan Czech Republic -versio, ja 27.7.2009 varmennettu HTML:stä, mitat ja SHA kuvasta. Ei erillistä luovaa taide-/muistomerkkipääaihetta tai lisättyä tekstiä; pelkästä talojen iästä ei päätellä PD:tä. N1-teksti kuvaa historiallista kylä-/viljelyympäristöä eikä lupaa nykyistä pääsyä/samaa maisemaa; vuoden 2009 selite säilytettävä."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Tutin saaren taloja ja piha-aluetta heinäkuussa 2009.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/khartum/qa.json",
+        "fileSHA256": "28fba4cfbb9fd72fdac1f8730a89ae13a815de9f99f0f97bf6781719b09fe4b5",
+        "item": {
+          "slot": "N1",
+          "targetJsonPath": "$.nahtavyydet[\"Tutin saari\"].kuvat[0]",
+          "verdict": "accepted",
+          "reason": "Oma alkuperäisen 1600×1200 koko kuvan katselu: Tutin saaren tavallinen piha-/asuinympäristö, puut ja pieniä kaukaisia/selin/varjoon jääviä ihmishahmoja, ei tunnistettavia kasvonpiirteitä. Valokuvatekijän oma alkuperäinen Description nimeää Houses on Tuti Island, Khartoum, Sudan; kamera- ja kohdekoordinaatit tukevat paikkaa. Petr Adam Dohnálek / CC BY-SA 3.0 cz, nimenomaan Czech Republic -versio, ja 27.7.2009 varmennettu HTML:stä, mitat ja SHA kuvasta. Ei erillistä luovaa taide-/muistomerkkipääaihetta tai lisättyä tekstiä; pelkästä talojen iästä ei päätellä PD:tä. N1-teksti kuvaa historiallista kylä-/viljelyympäristöä eikä lupaa nykyistä pääsyä/samaa maisemaa; vuoden 2009 selite säilytettävä.",
+          "evidence": {
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Tuti_Island_(Khartoum,_Sudan)_001.jpg",
+            "savedSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/b88dba05d92348bb4089d001d975348a0861060e2aa8f42cdd9f0b021a8deb19.html",
+            "sourceSHA256": "b35046c7a00c2ddadcd424ec242f127137db6a376a0611c3737bd056fff8c780",
+            "directAuthors": [
+              "Petr Adam Dohnálek"
+            ],
+            "directLicenses": [
+              "CC BY-SA 3.0 cz"
+            ],
+            "directRows": {
+              "Date": "27 July 2009",
+              "Object location": "15° 36′ 47.11″ N, 32° 30′ 44.86″ E",
+              "Camera location": "15° 36′ 44.81″ N, 32° 30′ 45.09″ E"
+            },
+            "sourceOriginalDimensions": [
+              1600,
+              1200
+            ],
+            "localDimensions": [
+              1600,
+              1200
+            ],
+            "mediaPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/khartum/cc-evidence/meta-05.jpg",
+            "mediaSHA256": "83b4053facae21d7bedd7e9fe2f0c8a04dc102679f72186c1b6136e997b46a90",
+            "authorMatches": true,
+            "licenseMatches": true,
+            "dimensionsMatch": true,
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/cz/",
+            "descriptions": [
+              "Čeština: Domy na ostrově Tuti , Chartúm , Súdán . English: Houses on Tuti Island , Khartoum , Sudan . Esperanto: Domoj sur la insulo Tuti , Ĥartumo , Sudano .",
+              "Čeština: Domy na ostrově Tuti , Chartúm , Súdán .",
+              "English: Houses on Tuti Island , Khartoum , Sudan .",
+              "Esperanto: Domoj sur la insulo Tuti , Ĥartumo , Sudano ."
+            ],
+            "fullImageViewed": true,
+            "fullNativeImageViewed": true,
+            "personallyViewedByJob27": true,
+            "viewMethod": "view_image original native 1600x1200",
+            "currentContentSHA256": "ab8c22ac5d61b12a81dd05c3565ec3fd5796eb7bf9144cf3432f302c4eb146e9",
+            "targetStillExists": true
+          },
+          "reviewedAt": "2026-10-12T19:24:17.661086+00:00",
+          "commonsFile": "Tuti Island (Khartoum, Sudan) 001.jpg",
+          "sha256": "83b4053facae21d7bedd7e9fe2f0c8a04dc102679f72186c1b6136e997b46a90"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/khartum/qa.json",
+            "sha256": "28fba4cfbb9fd72fdac1f8730a89ae13a815de9f99f0f97bf6781719b09fe4b5"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/khartum/illustration-qa-extra.json",
+            "sha256": "d6cb0f264fed57c081d58d5703785299fb2a12d44105c1c0997e94f8a37b0622"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e07",
+        "city": "khartum",
+        "slot": "N1",
+        "targetJsonPath": "$.nahtavyydet[\"Tutin saari\"].kuvat[0]",
+        "commonsFile": "Tuti Island (Khartoum, Sudan) 001.jpg",
+        "sha256": "83b4053facae21d7bedd7e9fe2f0c8a04dc102679f72186c1b6136e997b46a90",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Tuti_Island_(Khartoum,_Sudan)_001.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7b/Tuti_Island_%28Khartoum%2C_Sudan%29_001.jpg",
+        "author": "Petr Adam Dohnálek",
+        "license": "CC BY-SA 3.0 cz",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/cz/",
+        "width": 1600,
+        "height": 1200,
+        "originalSHA256": "83b4053facae21d7bedd7e9fe2f0c8a04dc102679f72186c1b6136e997b46a90",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e07/khartum/n1-83b4053facae21d7bedd.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e07/khartum/n1-83b4053facae21d7bedd.jpg",
+        "bytes": 564446,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T19:24:46.183435+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "Tuti Island (Khartoum, Sudan) 001.jpg",
+        "lahde": "Petr Adam Dohnálek, Wikimedia Commons (CC BY-SA 3.0 cz)",
+        "selite": "Tutin saaren taloja ja piha-aluetta heinäkuussa 2009.",
+        "lyhyt": "Tutin saaren taloja ja piha-aluetta heinäkuussa 2009."
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Petr Adam Dohnálek, Wikimedia Commons (CC BY-SA 3.0 cz)",
+        "selite": "Tutin saaren taloja ja piha-aluetta heinäkuussa 2009.",
+        "lyhyt": "Tutin saaren taloja ja piha-aluetta heinäkuussa 2009.",
+        "tiedosto": "Tuti Island (Khartoum, Sudan) 001.jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "f8f52cd4508afc665d78e8c25994c6041a919a3e5f7312f0dd6c5c728e412a8d",
+      "targetAfterSHA256": "92e6e66470a2c4a25c500e36bd8cc16b20f1463bc63e769817d5515407e239c0",
+      "contextAfterSHA256": "eef44e61b48dbe9a09c301a7831ddfb85a0de6b2911333334a6e38ec8a2899a7"
+    }
+  ],
+  "runtimeIntegrationPending": true,
+  "ownerAcceptedNotImpliedByAuthorization": true,
+  "gameIntegrated": false
+}

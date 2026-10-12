@@ -1,0 +1,1772 @@
+{
+  "schemaVersion": "capital-city-role-assets/v1",
+  "era": "e07",
+  "city": "kampala",
+  "authorization": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+  "sourceContentAfterSHA256": "4fe0ece56e55c425f17175a3b42c358753ab3293ff288ac1a2cdabf75e58b21e",
+  "assets": [
+    {
+      "era": "e07",
+      "city": "kampala",
+      "slot": "K1",
+      "type": "illustration",
+      "assetID": "e07-kampala-K1-v1-20261012",
+      "galleryImageID": "e07-kampala-K1-v1-20261012",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].nostot[0]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "nostot",
+        0
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/kampala/e07-kampala-K1-v1-20261012-cd3fbb607c61.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Impalan havainnekuva kaupungin nimen taustaan; ei nykyinen Kampala-havainto.",
+        "lyhyt": "Impalan havainnekuva kaupungin nimen taustaan; ei nykyinen Kampala-havainto."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/kampala/e07-kampala-K1-v1-20261012-cd3fbb607c61.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Impalan havainnekuva kaupungin nimen taustaan; ei nykyinen Kampala-havainto.",
+        "lyhyt": "Impalan havainnekuva kaupungin nimen taustaan; ei nykyinen Kampala-havainto."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "cd3fbb607c614816c7c9979f04c3ee12f0bcac1ac9c19069cb7580a853f16314",
+      "exportSHA256": "837b562105e60c82a4870d63a253f2eb0e13d52ce2f6a83a2543f570dbff7201",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/kampala/e07-kampala-K1-v1-20261012-cd3fbb607c61.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/kampala/e07-kampala-K1-v1-20261012-cd3fbb607c61.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/kampala/e07-kampala-K1-v1-20261012-cd3fbb607c61.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/kampala/sisalto.json",
+      "sourceContentSHA256": "1e1717a83383ac2ae16ea8e15d31775db771cf84ec01b86ba4e5d45b3c29b4f9",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "170748e4189c4e808078bbe551da4363b87f774f1c14c6ebc310cbbdde324b7f",
+        "semanticContextSHA256": "170748e4189c4e808078bbe551da4363b87f774f1c14c6ebc310cbbdde324b7f",
+        "subjectTitle": "Kukkulan nimi levisi kaupungiksi",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": [
+            "New generated illustration of natural subject or common utility object; no reproduction of a protected work.",
+            "Named buildings, identifiable people and exact contemporary art/design excluded."
+          ],
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/kampala/assets/e07-kampala-K1-v1-20261012/kuva.png",
+            "nativeSha256Verified": "cd3fbb607c614816c7c9979f04c3ee12f0bcac1ac9c19069cb7580a853f16314",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Yksi impalauros savannikasvillisuudessa, kaksi sarvea ja korvaa, yksi häntä, takajalkapari ja lähes päällekkäiset etujalat. Turkki ja kasvillisuus vaihtelevat luontevasti; ei tekstiä.",
+            "captionFi": "Impalan havainnekuva kaupungin nimen taustaan; ei nykyinen Kampala-havainto.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/kampala/sisalto.json",
+            "contentSha256": "1e52f7661182f84337e1873db9721b3a400b5028edc7a3a3f3bf9f522126ecf4",
+            "targetCurrentlyPresent": true,
+            "targetText": "Kampala-nimi tarkoitti ensin nykyistä Old Kampala -kukkulaa. Nimen yleinen selitys liittää sen impala-antilooppeihin ja Bugandan kuninkaan metsästysalueeseen. Lugandan Akasozi k’empala on tässä selityksessä impalakukkula. Myöhemmin mäelle rakennettiin Fort Lugard, ja kaupungin kasvaessa muille kukkuloille alkuperäistä aluetta alettiin kutsua Old Kampalaksi. Nykyinen naapurusto on asuin- ja kaupankäyntialuetta. Kaupungin nimen eläintausta ei siis tarkoita, että vanha kukkula olisi säilynyt villieläinpuistona.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/kampala/faktapohja.md",
+            "factSheetSha256": "24778728ba14f17e3d94967f05cd201adf1149a2719af7876920c1741bc51412",
+            "topicEvidence": "K1 kertoo Kampala-nimen impalaperäisestä selityksestä.",
+            "sourceEvidence": [
+              {
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/kampala/sisalto.json",
+                "contentSha256": "1e52f7661182f84337e1873db9721b3a400b5028edc7a3a3f3bf9f522126ecf4",
+                "targetJsonPath": "$.kaupunkilehti[0].nostot[0]",
+                "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/kampala/faktapohja.md",
+                "evidenceMode": "source-backed text topic; generalized material/food/biological illustration, not exact place appearance",
+                "targetTextAtIssue": "Kampala-nimi tarkoitti ensin nykyistä Old Kampala -kukkulaa. Nimen yleinen selitys liittää sen impala-antilooppeihin ja Bugandan kuninkaan metsästysalueeseen. Lugandan Akasozi k’empala on tässä selityksessä impalakukkula. Myöhemmin mäelle rakennettiin Fort Lugard, ja kaupungin kasvaessa muille kukkuloille alkuperäistä aluetta alettiin kutsua Old Kampalaksi. Nykyinen naapurusto on asuin- ja kaupankäyntialuetta. Kaupungin nimen eläintausta ei siis tarkoita, että vanha kukkula olisi säilynyt villieläinpuistona."
+              }
+            ],
+            "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+            "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+          },
+          "qaReason": "Impala vastaa kaupungin nimen tausta-aihetta. Kuvateksti erottaa yleisen eläinhavainnollistuksen nykyisestä Kampala-havainnosta."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Impalan havainnekuva kaupungin nimen taustaan; ei nykyinen Kampala-havainto.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/kampala/illustration-qa-extra.json",
+        "fileSHA256": "2af478b979ea705256d59e1fc991b7cad8eda0c84ad64d221886289da1c2ad48",
+        "item": {
+          "slot": "K1",
+          "targetJsonPath": "$.kaupunkilehti[0].nostot[0]",
+          "assetID": "e07-kampala-K1-v1-20261012",
+          "sha256": "cd3fbb607c614816c7c9979f04c3ee12f0bcac1ac9c19069cb7580a853f16314",
+          "verdict": "accepted",
+          "reason": "Impala vastaa kaupungin nimen tausta-aihetta. Kuvateksti erottaa yleisen eläinhavainnollistuksen nykyisestä Kampala-havainnosta.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/kampala/assets/e07-kampala-K1-v1-20261012/kuva.png",
+            "nativeSha256Verified": "cd3fbb607c614816c7c9979f04c3ee12f0bcac1ac9c19069cb7580a853f16314",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Yksi impalauros savannikasvillisuudessa, kaksi sarvea ja korvaa, yksi häntä, takajalkapari ja lähes päällekkäiset etujalat. Turkki ja kasvillisuus vaihtelevat luontevasti; ei tekstiä.",
+            "captionFi": "Impalan havainnekuva kaupungin nimen taustaan; ei nykyinen Kampala-havainto.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/kampala/sisalto.json",
+            "contentSha256": "1e52f7661182f84337e1873db9721b3a400b5028edc7a3a3f3bf9f522126ecf4",
+            "targetCurrentlyPresent": true,
+            "targetText": "Kampala-nimi tarkoitti ensin nykyistä Old Kampala -kukkulaa. Nimen yleinen selitys liittää sen impala-antilooppeihin ja Bugandan kuninkaan metsästysalueeseen. Lugandan Akasozi k’empala on tässä selityksessä impalakukkula. Myöhemmin mäelle rakennettiin Fort Lugard, ja kaupungin kasvaessa muille kukkuloille alkuperäistä aluetta alettiin kutsua Old Kampalaksi. Nykyinen naapurusto on asuin- ja kaupankäyntialuetta. Kaupungin nimen eläintausta ei siis tarkoita, että vanha kukkula olisi säilynyt villieläinpuistona.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/kampala/faktapohja.md",
+            "factSheetSha256": "24778728ba14f17e3d94967f05cd201adf1149a2719af7876920c1741bc51412",
+            "topicEvidence": "K1 kertoo Kampala-nimen impalaperäisestä selityksestä.",
+            "sourceEvidence": [
+              {
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/kampala/sisalto.json",
+                "contentSha256": "1e52f7661182f84337e1873db9721b3a400b5028edc7a3a3f3bf9f522126ecf4",
+                "targetJsonPath": "$.kaupunkilehti[0].nostot[0]",
+                "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/kampala/faktapohja.md",
+                "evidenceMode": "source-backed text topic; generalized material/food/biological illustration, not exact place appearance",
+                "targetTextAtIssue": "Kampala-nimi tarkoitti ensin nykyistä Old Kampala -kukkulaa. Nimen yleinen selitys liittää sen impala-antilooppeihin ja Bugandan kuninkaan metsästysalueeseen. Lugandan Akasozi k’empala on tässä selityksessä impalakukkula. Myöhemmin mäelle rakennettiin Fort Lugard, ja kaupungin kasvaessa muille kukkuloille alkuperäistä aluetta alettiin kutsua Old Kampalaksi. Nykyinen naapurusto on asuin- ja kaupankäyntialuetta. Kaupungin nimen eläintausta ei siis tarkoita, että vanha kukkula olisi säilynyt villieläinpuistona."
+              }
+            ],
+            "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+            "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+          },
+          "reviewedAt": "2026-10-12T18:16:25.627332+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/kampala/qa.json",
+            "sha256": "2523016a506c6b5a114a0790adfbb8a7222fddf5bb374a5e49756e9901f06557"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/kampala/illustration-qa-extra.json",
+            "sha256": "2af478b979ea705256d59e1fc991b7cad8eda0c84ad64d221886289da1c2ad48"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/kampala/e07-kampala-K1-v1-20261012-cd3fbb607c61.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/kampala/e07-kampala-K1-v1-20261012-cd3fbb607c61.png?t=837b562105e60c82",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/kampala/e07-kampala-K1-v1-20261012-cd3fbb607c61.png",
+        "sha256": "837b562105e60c82a4870d63a253f2eb0e13d52ce2f6a83a2543f570dbff7201",
+        "bytes": 2437144,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e07-kampala-K1-v1-20261012",
+        "nativeSHA256": "cd3fbb607c614816c7c9979f04c3ee12f0bcac1ac9c19069cb7580a853f16314",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/kampala/e07-kampala-K1-v1-20261012-cd3fbb607c61.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e07",
+        "city": "kampala",
+        "slot": "K1",
+        "targetJsonPath": "$.kaupunkilehti[0].nostot[0]",
+        "verifiedAt": "2026-10-12T18:19:12.799942+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/kampala/e07-kampala-K1-v1-20261012-cd3fbb607c61.png",
+        "sha256": "837b562105e60c82a4870d63a253f2eb0e13d52ce2f6a83a2543f570dbff7201",
+        "bytes": 2437144,
+        "SHAReadAt": "2026-10-12T18:29:49.959502+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "cd3fbb607c614816c7c9979f04c3ee12f0bcac1ac9c19069cb7580a853f16314",
+        "rgbPixelSHA256": "8de9cf9c4efd894b736843b6593f8da802ed63fd87799a9d12f339cf466f2e82",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "4fe0ece56e55c425f17175a3b42c358753ab3293ff288ac1a2cdabf75e58b21e",
+      "targetAfterSHA256": "170748e4189c4e808078bbe551da4363b87f774f1c14c6ebc310cbbdde324b7f",
+      "contextAfterSHA256": "170748e4189c4e808078bbe551da4363b87f774f1c14c6ebc310cbbdde324b7f"
+    },
+    {
+      "era": "e07",
+      "city": "kampala",
+      "slot": "K2",
+      "type": "illustration",
+      "assetID": "e07-kampala-K2-v1-20261012",
+      "galleryImageID": "e07-kampala-K2-v1-20261012",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].nostot[1]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "nostot",
+        1
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/kampala/e07-kampala-K2-v1-20261012-4eb73babb345.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Tuoreruokatorin tuotteiden havainnekuva; ei todellinen Nakasero-koju.",
+        "lyhyt": "Tuoreruokatorin tuotteiden havainnekuva; ei todellinen Nakasero-koju."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/kampala/e07-kampala-K2-v1-20261012-4eb73babb345.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Tuoreruokatorin tuotteiden havainnekuva; ei todellinen Nakasero-koju.",
+        "lyhyt": "Tuoreruokatorin tuotteiden havainnekuva; ei todellinen Nakasero-koju."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "4eb73babb345522321068b12b8b75db0edbaff7aa9444f402ca2d9fc270d73f4",
+      "exportSHA256": "ee60c5e7317fdd09d36316f694924c042bc76dbfba2bc58916d224be4aacbb82",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/kampala/e07-kampala-K2-v1-20261012-4eb73babb345.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/kampala/e07-kampala-K2-v1-20261012-4eb73babb345.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/kampala/e07-kampala-K2-v1-20261012-4eb73babb345.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/kampala/sisalto.json",
+      "sourceContentSHA256": "1e1717a83383ac2ae16ea8e15d31775db771cf84ec01b86ba4e5d45b3c29b4f9",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "1053d7a844545f27e0b88ac4f926603667a3194a554c6d6b6e9c3d59774799d7",
+        "semanticContextSHA256": "1053d7a844545f27e0b88ac4f926603667a3194a554c6d6b6e9c3d59774799d7",
+        "subjectTitle": "Torilla on kaksi eri puolta",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": [
+            "New generated illustration of natural subject or common utility object; no reproduction of a protected work.",
+            "Named buildings, identifiable people and exact contemporary art/design excluded."
+          ],
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/kampala/assets/e07-kampala-K2-v1-20261012/kuva.png",
+            "nativeSha256Verified": "4eb73babb345522321068b12b8b75db0edbaff7aa9444f402ca2d9fc270d73f4",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Lähikuva kasviksista, hedelmistä ja pienistä maustekulhoista puupinnalla. Luontevat lehdet, kuoret ja mausterakeet; ei ihmisiä, kylttejä tai brändejä.",
+            "captionFi": "Tuoreruokatorin tuotteiden havainnekuva; ei todellinen Nakasero-koju.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/kampala/sisalto.json",
+            "contentSha256": "1e52f7661182f84337e1873db9721b3a400b5028edc7a3a3f3bf9f522126ecf4",
+            "targetCurrentlyPresent": true,
+            "targetText": "Nakasero-tori on samannimisen kukkulan juurella. Sen avoin, osittain katettu osa painottuu tuoreisiin elintarvikkeisiin. Suljetummassa rakennusosassa myydään esimerkiksi vaatteita ja tarvikkeita. Tuotejoukkoon kuuluvat hedelmät, vihannekset, liha, mausteet ja tekstiilit. Toripaikka on myös muuttanut sijaintiaan historiansa aikana, joten tori ei ole aina tarkoittanut samaa kohtaa kaupungissa. Myyjät, kauppiaat ja palveluntarjoajat kuuluvat sen toimintaan. Kaupankäynnin rakenne näkyy siten sekä tuotteissa että tilan eri osissa.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/kampala/faktapohja.md",
+            "factSheetSha256": "24778728ba14f17e3d94967f05cd201adf1149a2719af7876920c1741bc51412",
+            "topicEvidence": "K2 nimeää hedelmät, vihannekset ja mausteet torin tuotteiksi.",
+            "sourceEvidence": [
+              {
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/kampala/sisalto.json",
+                "contentSha256": "1e52f7661182f84337e1873db9721b3a400b5028edc7a3a3f3bf9f522126ecf4",
+                "targetJsonPath": "$.kaupunkilehti[0].nostot[1]",
+                "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/kampala/faktapohja.md",
+                "evidenceMode": "source-backed text topic; generalized material/food/biological illustration, not exact place appearance",
+                "targetTextAtIssue": "Nakasero-tori on samannimisen kukkulan juurella. Sen avoin, osittain katettu osa painottuu tuoreisiin elintarvikkeisiin. Suljetummassa rakennusosassa myydään esimerkiksi vaatteita ja tarvikkeita. Tuotejoukkoon kuuluvat hedelmät, vihannekset, liha, mausteet ja tekstiilit. Toripaikka on myös muuttanut sijaintiaan historiansa aikana, joten tori ei ole aina tarkoittanut samaa kohtaa kaupungissa. Myyjät, kauppiaat ja palveluntarjoajat kuuluvat sen toimintaan. Kaupankäynnin rakenne näkyy siten sekä tuotteissa että tilan eri osissa."
+              }
+            ],
+            "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+            "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+          },
+          "qaReason": "Kasvikset, hedelmät ja mausteet sopivat torin tuotejoukkoon. Selite ei esitä yleistä asetelmaa Nakasero-torin todellisena kojuna."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Tuoreruokatorin tuotteiden havainnekuva; ei todellinen Nakasero-koju.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/kampala/illustration-qa-extra.json",
+        "fileSHA256": "2af478b979ea705256d59e1fc991b7cad8eda0c84ad64d221886289da1c2ad48",
+        "item": {
+          "slot": "K2",
+          "targetJsonPath": "$.kaupunkilehti[0].nostot[1]",
+          "assetID": "e07-kampala-K2-v1-20261012",
+          "sha256": "4eb73babb345522321068b12b8b75db0edbaff7aa9444f402ca2d9fc270d73f4",
+          "verdict": "accepted",
+          "reason": "Kasvikset, hedelmät ja mausteet sopivat torin tuotejoukkoon. Selite ei esitä yleistä asetelmaa Nakasero-torin todellisena kojuna.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/kampala/assets/e07-kampala-K2-v1-20261012/kuva.png",
+            "nativeSha256Verified": "4eb73babb345522321068b12b8b75db0edbaff7aa9444f402ca2d9fc270d73f4",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Lähikuva kasviksista, hedelmistä ja pienistä maustekulhoista puupinnalla. Luontevat lehdet, kuoret ja mausterakeet; ei ihmisiä, kylttejä tai brändejä.",
+            "captionFi": "Tuoreruokatorin tuotteiden havainnekuva; ei todellinen Nakasero-koju.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/kampala/sisalto.json",
+            "contentSha256": "1e52f7661182f84337e1873db9721b3a400b5028edc7a3a3f3bf9f522126ecf4",
+            "targetCurrentlyPresent": true,
+            "targetText": "Nakasero-tori on samannimisen kukkulan juurella. Sen avoin, osittain katettu osa painottuu tuoreisiin elintarvikkeisiin. Suljetummassa rakennusosassa myydään esimerkiksi vaatteita ja tarvikkeita. Tuotejoukkoon kuuluvat hedelmät, vihannekset, liha, mausteet ja tekstiilit. Toripaikka on myös muuttanut sijaintiaan historiansa aikana, joten tori ei ole aina tarkoittanut samaa kohtaa kaupungissa. Myyjät, kauppiaat ja palveluntarjoajat kuuluvat sen toimintaan. Kaupankäynnin rakenne näkyy siten sekä tuotteissa että tilan eri osissa.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/kampala/faktapohja.md",
+            "factSheetSha256": "24778728ba14f17e3d94967f05cd201adf1149a2719af7876920c1741bc51412",
+            "topicEvidence": "K2 nimeää hedelmät, vihannekset ja mausteet torin tuotteiksi.",
+            "sourceEvidence": [
+              {
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/kampala/sisalto.json",
+                "contentSha256": "1e52f7661182f84337e1873db9721b3a400b5028edc7a3a3f3bf9f522126ecf4",
+                "targetJsonPath": "$.kaupunkilehti[0].nostot[1]",
+                "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/kampala/faktapohja.md",
+                "evidenceMode": "source-backed text topic; generalized material/food/biological illustration, not exact place appearance",
+                "targetTextAtIssue": "Nakasero-tori on samannimisen kukkulan juurella. Sen avoin, osittain katettu osa painottuu tuoreisiin elintarvikkeisiin. Suljetummassa rakennusosassa myydään esimerkiksi vaatteita ja tarvikkeita. Tuotejoukkoon kuuluvat hedelmät, vihannekset, liha, mausteet ja tekstiilit. Toripaikka on myös muuttanut sijaintiaan historiansa aikana, joten tori ei ole aina tarkoittanut samaa kohtaa kaupungissa. Myyjät, kauppiaat ja palveluntarjoajat kuuluvat sen toimintaan. Kaupankäynnin rakenne näkyy siten sekä tuotteissa että tilan eri osissa."
+              }
+            ],
+            "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+            "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+          },
+          "reviewedAt": "2026-10-12T18:18:03.073577+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/kampala/qa.json",
+            "sha256": "2523016a506c6b5a114a0790adfbb8a7222fddf5bb374a5e49756e9901f06557"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/kampala/illustration-qa-extra.json",
+            "sha256": "2af478b979ea705256d59e1fc991b7cad8eda0c84ad64d221886289da1c2ad48"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/kampala/e07-kampala-K2-v1-20261012-4eb73babb345.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/kampala/e07-kampala-K2-v1-20261012-4eb73babb345.png?t=ee60c5e7317fdd09",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/kampala/e07-kampala-K2-v1-20261012-4eb73babb345.png",
+        "sha256": "ee60c5e7317fdd09d36316f694924c042bc76dbfba2bc58916d224be4aacbb82",
+        "bytes": 2624015,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e07-kampala-K2-v1-20261012",
+        "nativeSHA256": "4eb73babb345522321068b12b8b75db0edbaff7aa9444f402ca2d9fc270d73f4",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/kampala/e07-kampala-K2-v1-20261012-4eb73babb345.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e07",
+        "city": "kampala",
+        "slot": "K2",
+        "targetJsonPath": "$.kaupunkilehti[0].nostot[1]",
+        "verifiedAt": "2026-10-12T18:19:16.110362+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/kampala/e07-kampala-K2-v1-20261012-4eb73babb345.png",
+        "sha256": "ee60c5e7317fdd09d36316f694924c042bc76dbfba2bc58916d224be4aacbb82",
+        "bytes": 2624015,
+        "SHAReadAt": "2026-10-12T18:29:50.178372+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "4eb73babb345522321068b12b8b75db0edbaff7aa9444f402ca2d9fc270d73f4",
+        "rgbPixelSHA256": "2c4ce709815597e856ebe69913d63536549a3e4533edb8ede93d1860df316bfe",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "4fe0ece56e55c425f17175a3b42c358753ab3293ff288ac1a2cdabf75e58b21e",
+      "targetAfterSHA256": "1053d7a844545f27e0b88ac4f926603667a3194a554c6d6b6e9c3d59774799d7",
+      "contextAfterSHA256": "1053d7a844545f27e0b88ac4f926603667a3194a554c6d6b6e9c3d59774799d7"
+    },
+    {
+      "era": "e07",
+      "city": "kampala",
+      "slot": "K3",
+      "type": "illustration",
+      "assetID": "e07-kampala-K3-v1-20261012",
+      "galleryImageID": "e07-kampala-K3-v1-20261012",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].nostot[2]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "nostot",
+        2
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/kampala/e07-kampala-K3-v1-20261012-f327e1be7e57.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Puusepäntyön havainnekuva Makereren koulutushistorian aiheeseen.",
+        "lyhyt": "Puusepäntyön havainnekuva Makereren koulutushistorian aiheeseen."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/kampala/e07-kampala-K3-v1-20261012-f327e1be7e57.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Puusepäntyön havainnekuva Makereren koulutushistorian aiheeseen.",
+        "lyhyt": "Puusepäntyön havainnekuva Makereren koulutushistorian aiheeseen."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "f327e1be7e57cd261b58e58aff505d6d3e2219b1e68955789d78e0ef392a23ef",
+      "exportSHA256": "7f89e9b55ce0ab1271d0f3b001584e87f4087abbba7d09d2a93325c3ca2ff449",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/kampala/e07-kampala-K3-v1-20261012-f327e1be7e57.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/kampala/e07-kampala-K3-v1-20261012-f327e1be7e57.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/kampala/e07-kampala-K3-v1-20261012-f327e1be7e57.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/kampala/sisalto.json",
+      "sourceContentSHA256": "1e1717a83383ac2ae16ea8e15d31775db771cf84ec01b86ba4e5d45b3c29b4f9",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "0c3cd287071a79f5834fb6223abac1dfb2391f4ca519e7ce43816c92fe467ab8",
+        "semanticContextSHA256": "0c3cd287071a79f5834fb6223abac1dfb2391f4ca519e7ce43816c92fe467ab8",
+        "subjectTitle": "Puusepästä korkeakouluun",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": [
+            "New generated illustration of natural subject or common utility object; no reproduction of a protected work.",
+            "Named buildings, identifiable people and exact contemporary art/design excluded."
+          ],
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/kampala/assets/e07-kampala-K3-v1-20261012/kuva.png",
+            "nativeSha256Verified": "f327e1be7e57cd261b58e58aff505d6d3e2219b1e68955789d78e0ef392a23ef",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Puinen käsihöylä terineen höyläpenkillä, puulankku ja höylälastuja. Puu, kuluminen ja ohuet lastut ovat luontevia; ei käsiä, kasvoja tai kirjoitusta.",
+            "captionFi": "Puusepäntyön havainnekuva Makereren koulutushistorian aiheeseen.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/kampala/sisalto.json",
+            "contentSha256": "1e52f7661182f84337e1873db9721b3a400b5028edc7a3a3f3bf9f522126ecf4",
+            "targetCurrentlyPresent": true,
+            "targetText": "Makerere aloitti teknisenä kouluna 1900-luvun alkupuolella. Varhaisiin aineisiin kuuluivat puusepäntyö, rakentaminen ja mekaniikka. Opetus laajeni myöhemmin muun muassa maatalouteen, lääketieteeseen ja opettamiseen. Ammatillisen koulutuksen osa erotettiin kehityksen aikana omaksi tekniseksi kouluksi, kun korkeakoulutus sai uusia muotoja. Nykyinen yliopiston pääkampus on Makerere-kukkulalla. Suuren korkeakoulun taustalla olivat siis myös työpajan käytännön taidot; koulu ei syntynyt heti valmiiksi nykyisen kaltaisena yliopistona.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/kampala/faktapohja.md",
+            "factSheetSha256": "24778728ba14f17e3d94967f05cd201adf1149a2719af7876920c1741bc51412",
+            "topicEvidence": "K3 nimeää puusepäntyön Makereren varhaiseksi oppiaineeksi.",
+            "sourceEvidence": [
+              {
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/kampala/sisalto.json",
+                "contentSha256": "1e52f7661182f84337e1873db9721b3a400b5028edc7a3a3f3bf9f522126ecf4",
+                "targetJsonPath": "$.kaupunkilehti[0].nostot[2]",
+                "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/kampala/faktapohja.md",
+                "evidenceMode": "source-backed text topic; generalized material/food/biological illustration, not exact place appearance",
+                "targetTextAtIssue": "Makerere aloitti teknisenä kouluna 1900-luvun alkupuolella. Varhaisiin aineisiin kuuluivat puusepäntyö, rakentaminen ja mekaniikka. Opetus laajeni myöhemmin muun muassa maatalouteen, lääketieteeseen ja opettamiseen. Ammatillisen koulutuksen osa erotettiin kehityksen aikana omaksi tekniseksi kouluksi, kun korkeakoulutus sai uusia muotoja. Nykyinen yliopiston pääkampus on Makerere-kukkulalla. Suuren korkeakoulun taustalla olivat siis myös työpajan käytännön taidot; koulu ei syntynyt heti valmiiksi nykyisen kaltaisena yliopistona."
+              }
+            ],
+            "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+            "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+          },
+          "qaReason": "Yleinen käsihöylä ja puutyö sopivat varhaisen teknisen koulun oppiaineeseen. Selite nimeää havainnollistuksen eikä väitä esinettä Makereren kokoelmaksi."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Puusepäntyön havainnekuva Makereren koulutushistorian aiheeseen.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/kampala/illustration-qa-extra.json",
+        "fileSHA256": "2af478b979ea705256d59e1fc991b7cad8eda0c84ad64d221886289da1c2ad48",
+        "item": {
+          "slot": "K3",
+          "targetJsonPath": "$.kaupunkilehti[0].nostot[2]",
+          "assetID": "e07-kampala-K3-v1-20261012",
+          "sha256": "f327e1be7e57cd261b58e58aff505d6d3e2219b1e68955789d78e0ef392a23ef",
+          "verdict": "accepted",
+          "reason": "Yleinen käsihöylä ja puutyö sopivat varhaisen teknisen koulun oppiaineeseen. Selite nimeää havainnollistuksen eikä väitä esinettä Makereren kokoelmaksi.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/kampala/assets/e07-kampala-K3-v1-20261012/kuva.png",
+            "nativeSha256Verified": "f327e1be7e57cd261b58e58aff505d6d3e2219b1e68955789d78e0ef392a23ef",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Puinen käsihöylä terineen höyläpenkillä, puulankku ja höylälastuja. Puu, kuluminen ja ohuet lastut ovat luontevia; ei käsiä, kasvoja tai kirjoitusta.",
+            "captionFi": "Puusepäntyön havainnekuva Makereren koulutushistorian aiheeseen.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/kampala/sisalto.json",
+            "contentSha256": "1e52f7661182f84337e1873db9721b3a400b5028edc7a3a3f3bf9f522126ecf4",
+            "targetCurrentlyPresent": true,
+            "targetText": "Makerere aloitti teknisenä kouluna 1900-luvun alkupuolella. Varhaisiin aineisiin kuuluivat puusepäntyö, rakentaminen ja mekaniikka. Opetus laajeni myöhemmin muun muassa maatalouteen, lääketieteeseen ja opettamiseen. Ammatillisen koulutuksen osa erotettiin kehityksen aikana omaksi tekniseksi kouluksi, kun korkeakoulutus sai uusia muotoja. Nykyinen yliopiston pääkampus on Makerere-kukkulalla. Suuren korkeakoulun taustalla olivat siis myös työpajan käytännön taidot; koulu ei syntynyt heti valmiiksi nykyisen kaltaisena yliopistona.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/kampala/faktapohja.md",
+            "factSheetSha256": "24778728ba14f17e3d94967f05cd201adf1149a2719af7876920c1741bc51412",
+            "topicEvidence": "K3 nimeää puusepäntyön Makereren varhaiseksi oppiaineeksi.",
+            "sourceEvidence": [
+              {
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/kampala/sisalto.json",
+                "contentSha256": "1e52f7661182f84337e1873db9721b3a400b5028edc7a3a3f3bf9f522126ecf4",
+                "targetJsonPath": "$.kaupunkilehti[0].nostot[2]",
+                "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/kampala/faktapohja.md",
+                "evidenceMode": "source-backed text topic; generalized material/food/biological illustration, not exact place appearance",
+                "targetTextAtIssue": "Makerere aloitti teknisenä kouluna 1900-luvun alkupuolella. Varhaisiin aineisiin kuuluivat puusepäntyö, rakentaminen ja mekaniikka. Opetus laajeni myöhemmin muun muassa maatalouteen, lääketieteeseen ja opettamiseen. Ammatillisen koulutuksen osa erotettiin kehityksen aikana omaksi tekniseksi kouluksi, kun korkeakoulutus sai uusia muotoja. Nykyinen yliopiston pääkampus on Makerere-kukkulalla. Suuren korkeakoulun taustalla olivat siis myös työpajan käytännön taidot; koulu ei syntynyt heti valmiiksi nykyisen kaltaisena yliopistona."
+              }
+            ],
+            "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+            "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+          },
+          "reviewedAt": "2026-10-12T18:16:35.505526+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/kampala/qa.json",
+            "sha256": "2523016a506c6b5a114a0790adfbb8a7222fddf5bb374a5e49756e9901f06557"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/kampala/illustration-qa-extra.json",
+            "sha256": "2af478b979ea705256d59e1fc991b7cad8eda0c84ad64d221886289da1c2ad48"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/kampala/e07-kampala-K3-v1-20261012-f327e1be7e57.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/kampala/e07-kampala-K3-v1-20261012-f327e1be7e57.png?t=7f89e9b55ce0ab12",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/kampala/e07-kampala-K3-v1-20261012-f327e1be7e57.png",
+        "sha256": "7f89e9b55ce0ab1271d0f3b001584e87f4087abbba7d09d2a93325c3ca2ff449",
+        "bytes": 2195228,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e07-kampala-K3-v1-20261012",
+        "nativeSHA256": "f327e1be7e57cd261b58e58aff505d6d3e2219b1e68955789d78e0ef392a23ef",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/kampala/e07-kampala-K3-v1-20261012-f327e1be7e57.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e07",
+        "city": "kampala",
+        "slot": "K3",
+        "targetJsonPath": "$.kaupunkilehti[0].nostot[2]",
+        "verifiedAt": "2026-10-12T18:19:14.270503+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/kampala/e07-kampala-K3-v1-20261012-f327e1be7e57.png",
+        "sha256": "7f89e9b55ce0ab1271d0f3b001584e87f4087abbba7d09d2a93325c3ca2ff449",
+        "bytes": 2195228,
+        "SHAReadAt": "2026-10-12T18:29:50.065229+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "f327e1be7e57cd261b58e58aff505d6d3e2219b1e68955789d78e0ef392a23ef",
+        "rgbPixelSHA256": "95cd803375b8823d96915fdce78444d987d3a847f6aeba970ae62e9bafa7c3aa",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "4fe0ece56e55c425f17175a3b42c358753ab3293ff288ac1a2cdabf75e58b21e",
+      "targetAfterSHA256": "0c3cd287071a79f5834fb6223abac1dfb2391f4ca519e7ce43816c92fe467ab8",
+      "contextAfterSHA256": "0c3cd287071a79f5834fb6223abac1dfb2391f4ca519e7ce43816c92fe467ab8"
+    },
+    {
+      "era": "e07",
+      "city": "kampala",
+      "slot": "L1",
+      "type": "illustration",
+      "assetID": "e07-kampala-L1-v1-20261012",
+      "galleryImageID": "e07-kampala-L1-v1-20261012",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[1].nostot[0]",
+      "targetTokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        0
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/kampala/e07-kampala-L1-v1-20261012-5d4d0e4b3e93.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Jauhamiseen käytettyjen välineiden havainnekuva; ei aito Mengon esine.",
+        "lyhyt": "Jauhamiseen käytettyjen välineiden havainnekuva; ei aito Mengon esine."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/kampala/e07-kampala-L1-v1-20261012-5d4d0e4b3e93.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Jauhamiseen käytettyjen välineiden havainnekuva; ei aito Mengon esine.",
+        "lyhyt": "Jauhamiseen käytettyjen välineiden havainnekuva; ei aito Mengon esine."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "5d4d0e4b3e93740ac23447857c27ad5189b43a10f1bf3b33c7861bdd8f11ce6c",
+      "exportSHA256": "2cfcaab6efd84430f6fc7a873b4673007c9a0d42ff07e7ea0714b293a2dcd439",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/kampala/e07-kampala-L1-v1-20261012-5d4d0e4b3e93.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/kampala/e07-kampala-L1-v1-20261012-5d4d0e4b3e93.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/kampala/e07-kampala-L1-v1-20261012-5d4d0e4b3e93.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/kampala/sisalto.json",
+      "sourceContentSHA256": "1e1717a83383ac2ae16ea8e15d31775db771cf84ec01b86ba4e5d45b3c29b4f9",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "a9f6de8f0a7afc5680f8df13f893039b4c896a416d6b072c905c029d1144c3b8",
+        "semanticContextSHA256": "a9f6de8f0a7afc5680f8df13f893039b4c896a416d6b072c905c029d1144c3b8",
+        "subjectTitle": "Mengo ja jauhinkiven nimi",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": [
+            "New generated illustration of natural subject or common utility object; no reproduction of a protected work.",
+            "Named buildings, identifiable people and exact contemporary art/design excluded."
+          ],
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/kampala/assets/e07-kampala-L1-v1-20261012/kuva.png",
+            "nativeSha256Verified": "5d4d0e4b3e93740ac23447857c27ad5189b43a10f1bf3b33c7861bdd8f11ce6c",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Laakea kivinen jauhinalusta, pienempi käsikivi, jyviä ja jauhoa. Kivien rakeisuus ja jauhon jakautuminen ovat luontevia; ei käsiä tai tekstiä.",
+            "captionFi": "Jauhamiseen käytettyjen välineiden havainnekuva; ei aito Mengon esine.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/kampala/sisalto.json",
+            "contentSha256": "1e52f7661182f84337e1873db9721b3a400b5028edc7a3a3f3bf9f522126ecf4",
+            "targetCurrentlyPresent": true,
+            "targetText": "Mengo on kukkula ja sen mukaan nimetty kaupunginosa. Lugandan mengo-sana liittyy jauhinkiviin, ja perimätieto kertoo kivien käyttämisestä ruoan jauhamiseen. Mäellä tunnetaan Bugandan palatsialue, mutta nykyinen rakennus ja palatsipaikan pidempi historia ovat eri asioita. Läheinen Kabakan järvi on oma paikkansa. Myös Mengo Hospital sijaitsee nimestään huolimatta viereisen Namiremben alueella. Kaupungissa sama nimi voi siis kulkea mäen, kaupunginosan ja laitoksen mukana ilman, että ne ovat yksi ja sama piste.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/kampala/faktapohja.md",
+            "factSheetSha256": "24778728ba14f17e3d94967f05cd201adf1149a2719af7876920c1741bc51412",
+            "topicEvidence": "L1 liittää mengo-sanan jauhinkiviin ja ruoan jauhamiseen.",
+            "sourceEvidence": [
+              {
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/kampala/sisalto.json",
+                "contentSha256": "1e52f7661182f84337e1873db9721b3a400b5028edc7a3a3f3bf9f522126ecf4",
+                "targetJsonPath": "$.kaupunkilehti[1].nostot[0]",
+                "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/kampala/faktapohja.md",
+                "evidenceMode": "source-backed text topic; generalized material/food/biological illustration, not exact place appearance",
+                "targetTextAtIssue": "Mengo on kukkula ja sen mukaan nimetty kaupunginosa. Lugandan mengo-sana liittyy jauhinkiviin, ja perimätieto kertoo kivien käyttämisestä ruoan jauhamiseen. Mäellä tunnetaan Bugandan palatsialue, mutta nykyinen rakennus ja palatsipaikan pidempi historia ovat eri asioita. Läheinen Kabakan järvi on oma paikkansa. Myös Mengo Hospital sijaitsee nimestään huolimatta viereisen Namiremben alueella. Kaupungissa sama nimi voi siis kulkea mäen, kaupunginosan ja laitoksen mukana ilman, että ne ovat yksi ja sama piste."
+              }
+            ],
+            "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+            "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+          },
+          "qaReason": "Jauhinkiven yleinen havainnollistus vastaa nimen taustaa. Selite ei väitä esinettä aidoksi Mengo-löydöksi."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Jauhamiseen käytettyjen välineiden havainnekuva; ei aito Mengon esine.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/kampala/illustration-qa-extra.json",
+        "fileSHA256": "2af478b979ea705256d59e1fc991b7cad8eda0c84ad64d221886289da1c2ad48",
+        "item": {
+          "slot": "L1",
+          "targetJsonPath": "$.kaupunkilehti[1].nostot[0]",
+          "assetID": "e07-kampala-L1-v1-20261012",
+          "sha256": "5d4d0e4b3e93740ac23447857c27ad5189b43a10f1bf3b33c7861bdd8f11ce6c",
+          "verdict": "accepted",
+          "reason": "Jauhinkiven yleinen havainnollistus vastaa nimen taustaa. Selite ei väitä esinettä aidoksi Mengo-löydöksi.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/kampala/assets/e07-kampala-L1-v1-20261012/kuva.png",
+            "nativeSha256Verified": "5d4d0e4b3e93740ac23447857c27ad5189b43a10f1bf3b33c7861bdd8f11ce6c",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Laakea kivinen jauhinalusta, pienempi käsikivi, jyviä ja jauhoa. Kivien rakeisuus ja jauhon jakautuminen ovat luontevia; ei käsiä tai tekstiä.",
+            "captionFi": "Jauhamiseen käytettyjen välineiden havainnekuva; ei aito Mengon esine.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/kampala/sisalto.json",
+            "contentSha256": "1e52f7661182f84337e1873db9721b3a400b5028edc7a3a3f3bf9f522126ecf4",
+            "targetCurrentlyPresent": true,
+            "targetText": "Mengo on kukkula ja sen mukaan nimetty kaupunginosa. Lugandan mengo-sana liittyy jauhinkiviin, ja perimätieto kertoo kivien käyttämisestä ruoan jauhamiseen. Mäellä tunnetaan Bugandan palatsialue, mutta nykyinen rakennus ja palatsipaikan pidempi historia ovat eri asioita. Läheinen Kabakan järvi on oma paikkansa. Myös Mengo Hospital sijaitsee nimestään huolimatta viereisen Namiremben alueella. Kaupungissa sama nimi voi siis kulkea mäen, kaupunginosan ja laitoksen mukana ilman, että ne ovat yksi ja sama piste.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/kampala/faktapohja.md",
+            "factSheetSha256": "24778728ba14f17e3d94967f05cd201adf1149a2719af7876920c1741bc51412",
+            "topicEvidence": "L1 liittää mengo-sanan jauhinkiviin ja ruoan jauhamiseen.",
+            "sourceEvidence": [
+              {
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/kampala/sisalto.json",
+                "contentSha256": "1e52f7661182f84337e1873db9721b3a400b5028edc7a3a3f3bf9f522126ecf4",
+                "targetJsonPath": "$.kaupunkilehti[1].nostot[0]",
+                "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/kampala/faktapohja.md",
+                "evidenceMode": "source-backed text topic; generalized material/food/biological illustration, not exact place appearance",
+                "targetTextAtIssue": "Mengo on kukkula ja sen mukaan nimetty kaupunginosa. Lugandan mengo-sana liittyy jauhinkiviin, ja perimätieto kertoo kivien käyttämisestä ruoan jauhamiseen. Mäellä tunnetaan Bugandan palatsialue, mutta nykyinen rakennus ja palatsipaikan pidempi historia ovat eri asioita. Läheinen Kabakan järvi on oma paikkansa. Myös Mengo Hospital sijaitsee nimestään huolimatta viereisen Namiremben alueella. Kaupungissa sama nimi voi siis kulkea mäen, kaupunginosan ja laitoksen mukana ilman, että ne ovat yksi ja sama piste."
+              }
+            ],
+            "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+            "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+          },
+          "reviewedAt": "2026-10-12T18:18:13.056764+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/kampala/qa.json",
+            "sha256": "2523016a506c6b5a114a0790adfbb8a7222fddf5bb374a5e49756e9901f06557"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/kampala/illustration-qa-extra.json",
+            "sha256": "2af478b979ea705256d59e1fc991b7cad8eda0c84ad64d221886289da1c2ad48"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/kampala/e07-kampala-L1-v1-20261012-5d4d0e4b3e93.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/kampala/e07-kampala-L1-v1-20261012-5d4d0e4b3e93.png?t=2cfcaab6efd84430",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/kampala/e07-kampala-L1-v1-20261012-5d4d0e4b3e93.png",
+        "sha256": "2cfcaab6efd84430f6fc7a873b4673007c9a0d42ff07e7ea0714b293a2dcd439",
+        "bytes": 2823926,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e07-kampala-L1-v1-20261012",
+        "nativeSHA256": "5d4d0e4b3e93740ac23447857c27ad5189b43a10f1bf3b33c7861bdd8f11ce6c",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/kampala/e07-kampala-L1-v1-20261012-5d4d0e4b3e93.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e07",
+        "city": "kampala",
+        "slot": "L1",
+        "targetJsonPath": "$.kaupunkilehti[1].nostot[0]",
+        "verifiedAt": "2026-10-12T18:19:17.774580+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/kampala/e07-kampala-L1-v1-20261012-5d4d0e4b3e93.png",
+        "sha256": "2cfcaab6efd84430f6fc7a873b4673007c9a0d42ff07e7ea0714b293a2dcd439",
+        "bytes": 2823926,
+        "SHAReadAt": "2026-10-12T18:29:50.342410+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "5d4d0e4b3e93740ac23447857c27ad5189b43a10f1bf3b33c7861bdd8f11ce6c",
+        "rgbPixelSHA256": "036aa82292ca77939ddf88af457ec93e05eb63ebf08caf8d9f7f2ca5148fdd60",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "4fe0ece56e55c425f17175a3b42c358753ab3293ff288ac1a2cdabf75e58b21e",
+      "targetAfterSHA256": "a9f6de8f0a7afc5680f8df13f893039b4c896a416d6b072c905c029d1144c3b8",
+      "contextAfterSHA256": "a9f6de8f0a7afc5680f8df13f893039b4c896a416d6b072c905c029d1144c3b8"
+    },
+    {
+      "era": "e07",
+      "city": "kampala",
+      "slot": "PHOTO",
+      "type": "commons",
+      "assetID": "capital-cc-e07-kampala-photo-6eab2bed7c8efd04",
+      "galleryImageID": "capital-cc-e07-kampala-photo-6eab2bed7c8efd04",
+      "commonsFile": "A local small forest in Kampala Uganda.jpg",
+      "targetJsonPath": "$.valokuva",
+      "targetTokens": [
+        "valokuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e07/kampala/photo-6eab2bed7c8efd04a62d.jpg",
+        "suora": true,
+        "lahde": "Gratypius, Commons (CC BY-SA 4.0)",
+        "selite": "Paikallista metsämaisemaa Kampalasta.",
+        "lyhyt": "Paikallista metsämaisemaa Kampalasta.",
+        "tiedosto": "A local small forest in Kampala Uganda.jpg",
+        "vuosi": "2026"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Gratypius, Commons (CC BY-SA 4.0)",
+        "selite": "Paikallista metsämaisemaa Kampalasta.",
+        "lyhyt": "Paikallista metsämaisemaa Kampalasta.",
+        "tiedosto": "A local small forest in Kampala Uganda.jpg",
+        "vuosi": "2026"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e07/kampala/photo-6eab2bed7c8efd04a62d.jpg",
+        "suora": true,
+        "lahde": "Gratypius, Commons (CC BY-SA 4.0)",
+        "selite": "Paikallista metsämaisemaa Kampalasta.",
+        "lyhyt": "Paikallista metsämaisemaa Kampalasta.",
+        "tiedosto": "A local small forest in Kampala Uganda.jpg",
+        "vuosi": "2026"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "6eab2bed7c8efd04a62d0392135ad2f83406eaf9db24075437d5b5a921bbc4c4",
+      "exportSHA256": "6eab2bed7c8efd04a62d0392135ad2f83406eaf9db24075437d5b5a921bbc4c4",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e07/kampala/photo-6eab2bed7c8efd04a62d.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e07/kampala/photo-6eab2bed7c8efd04a62d.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/kampala/cc-evidence/meta-03.jpg",
+      "dimensions": [
+        4000,
+        3000
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/kampala/sisalto.json",
+      "sourceContentSHA256": "1e1717a83383ac2ae16ea8e15d31775db771cf84ec01b86ba4e5d45b3c29b4f9",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "0e2d3dfbb9d10c3cc957c722aff82a6e2eabeddfdc5bcf6ad966174cfb7e0ba5",
+        "semanticContextSHA256": "0e2d3dfbb9d10c3cc957c722aff82a6e2eabeddfdc5bcf6ad966174cfb7e0ba5",
+        "subjectTitle": "kampala — aito paikkavalokuva",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Gratypius",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:A_local_small_forest_in_Kampala_Uganda.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/0/03/A_local_small_forest_in_Kampala_Uganda.jpg",
+        "rightsEvidence": {
+          "selection": [
+            "Kuvan Author/Artist-kenttä ja valokuvan oma lisenssimalli tarkistettu tallennetusta Commons-lähteestä; upload-historian nimeä ei käytetä tekijänä. Lisenssiversion linkki on valokuvan lisenssiosassa, ei Commons-sivun yleinen alatunnistelupa.",
+            "Luonnonpuusto ja kasvit, ei tekijänoikeudella suojattua teosta. Alkuperäisen kuvaajan Own work/Author ja tämän toimittama Commons-tiedostonimi A local small forest in Kampala Uganda yhdistävät kuvan kaupunkiin. CC BY-SA 4.0 tarkistettu.",
+            "Silmin katsottu alkuperäinen: Vihreä puustoinen alue, aluskasvillisuutta ja polku; ei henkilöitä, rakennus- tai taideteospääaihetta, lisättyä tekstiä, logoa, vesileimaa tai kehystä. Ei nimetä tätä Makerereksi, Kabakan alueeksi tai muuksi tarkaksi paikaksi."
+          ],
+          "QA": {
+            "reviewer": "job-25 independent-image-QA",
+            "reviewedAt": "2026-10-12T18:51:13.237845+00:00",
+            "visualTool": "view_image",
+            "visualDetail": "original",
+            "localOriginal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/kampala/cc-evidence/meta-03.jpg",
+            "actualWidth": 4000,
+            "actualHeight": 3000,
+            "actualFormat": "JPEG",
+            "nativePixelWidth": 4000,
+            "nativePixelHeight": 3000,
+            "exifOrientation": 1,
+            "dimensionsConvention": "actualWidth/Height are correctly oriented display dimensions; native stored pixel dimensions are separately recorded",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:A_local_small_forest_in_Kampala_Uganda.jpg",
+            "savedSourcePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/e0f17932295bbe92b878de0c2aab482d8912c60dc0ce11a30073761c118acf51.html",
+            "savedSourceSHA256": "41c00b4e7d334cf53ad824404707878d37fbe39fdd771933cf175743a3d9eb71",
+            "authorVerified": "Gratypius",
+            "authorField": "Original Commons Author table, independently read; not inferred from uploader",
+            "licenseVerified": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "captureDate": "26 September 2026, 09:24:12",
+            "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/kampala/sisalto.json",
+            "sourceContentSHA256": "1e52f7661182f84337e1873db9721b3a400b5028edc7a3a3f3bf9f522126ecf4",
+            "captionFi": "Paikallista metsämaisemaa Kampalasta.",
+            "depictedWorkLayer": "Pääaiheina puut ja kasvillisuus. Etäisen tietoliikennemaston pieni osuus ei muodosta yksilöidyn suojatun rakennus- tai taideteoksen pääaihetta. Ei erillistä tunnistettua suojattua teoskerrosta.",
+            "duplicateInCity": false,
+            "placeEvidence": "Alkuperäinen Commons-tiedostonimi A local small forest in Kampala Uganda.jpg sekä Kampala-luokka, kuvaajan Own work/Author-taulukko luettu itse. Tarkempaa puistoa ei nimetä.",
+            "sourcePageSHA256Verified": "41c00b4e7d334cf53ad824404707878d37fbe39fdd771933cf175743a3d9eb71",
+            "qualityNote": "Melko vaalea ja pehmeä näkymä; puiden muodot, polku ja aluskasvillisuus erottuvat. PHOTO ei edellytä laajaa kaupunkipanoraamaa.",
+            "captureDateAsStated": "26 September 2026, 09:24:12"
+          },
+          "qaReason": "Silmin katsottu alkuperäinen: puustoa, aluskasvillisuutta ja polku; ei ihmisiä, kasvoja, lisättyä tekstiä, vesileimaa tai kehystä. Näkymä on melko pehmeä ja vaalea, mutta puusto ja ympäristö ovat selvästi tunnistettavia. Commonsin tekijän oman työn tiedostonimi ja Kampala-luokka sitovat kuvan nimenomaan Kampalaan; pelkkään Ugandan nimeen ei nojata. PHOTO sallii kaupungin lähteellä sidotun luontovalokuvan. Kuvasta ei väitetä tarkkaa nimettyä metsää, puistoa, puulajia tai koskematonta metsää."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Paikallista metsämaisemaa Kampalasta.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/kampala/qa.json",
+        "fileSHA256": "2523016a506c6b5a114a0790adfbb8a7222fddf5bb374a5e49756e9901f06557",
+        "item": {
+          "slot": "PHOTO",
+          "targetJsonPath": "$.valokuva",
+          "commonsFile": "A local small forest in Kampala Uganda.jpg",
+          "sha256": "6eab2bed7c8efd04a62d0392135ad2f83406eaf9db24075437d5b5a921bbc4c4",
+          "verdict": "accepted",
+          "reason": "Silmin katsottu alkuperäinen: puustoa, aluskasvillisuutta ja polku; ei ihmisiä, kasvoja, lisättyä tekstiä, vesileimaa tai kehystä. Näkymä on melko pehmeä ja vaalea, mutta puusto ja ympäristö ovat selvästi tunnistettavia. Commonsin tekijän oman työn tiedostonimi ja Kampala-luokka sitovat kuvan nimenomaan Kampalaan; pelkkään Ugandan nimeen ei nojata. PHOTO sallii kaupungin lähteellä sidotun luontovalokuvan. Kuvasta ei väitetä tarkkaa nimettyä metsää, puistoa, puulajia tai koskematonta metsää.",
+          "evidence": {
+            "reviewer": "job-25 independent-image-QA",
+            "reviewedAt": "2026-10-12T18:51:13.237845+00:00",
+            "visualTool": "view_image",
+            "visualDetail": "original",
+            "localOriginal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/kampala/cc-evidence/meta-03.jpg",
+            "actualWidth": 4000,
+            "actualHeight": 3000,
+            "actualFormat": "JPEG",
+            "nativePixelWidth": 4000,
+            "nativePixelHeight": 3000,
+            "exifOrientation": 1,
+            "dimensionsConvention": "actualWidth/Height are correctly oriented display dimensions; native stored pixel dimensions are separately recorded",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:A_local_small_forest_in_Kampala_Uganda.jpg",
+            "savedSourcePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/e0f17932295bbe92b878de0c2aab482d8912c60dc0ce11a30073761c118acf51.html",
+            "savedSourceSHA256": "41c00b4e7d334cf53ad824404707878d37fbe39fdd771933cf175743a3d9eb71",
+            "authorVerified": "Gratypius",
+            "authorField": "Original Commons Author table, independently read; not inferred from uploader",
+            "licenseVerified": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "captureDate": "26 September 2026, 09:24:12",
+            "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/kampala/sisalto.json",
+            "sourceContentSHA256": "1e52f7661182f84337e1873db9721b3a400b5028edc7a3a3f3bf9f522126ecf4",
+            "captionFi": "Paikallista metsämaisemaa Kampalasta.",
+            "depictedWorkLayer": "Pääaiheina puut ja kasvillisuus. Etäisen tietoliikennemaston pieni osuus ei muodosta yksilöidyn suojatun rakennus- tai taideteoksen pääaihetta. Ei erillistä tunnistettua suojattua teoskerrosta.",
+            "duplicateInCity": false,
+            "placeEvidence": "Alkuperäinen Commons-tiedostonimi A local small forest in Kampala Uganda.jpg sekä Kampala-luokka, kuvaajan Own work/Author-taulukko luettu itse. Tarkempaa puistoa ei nimetä.",
+            "sourcePageSHA256Verified": "41c00b4e7d334cf53ad824404707878d37fbe39fdd771933cf175743a3d9eb71",
+            "qualityNote": "Melko vaalea ja pehmeä näkymä; puiden muodot, polku ja aluskasvillisuus erottuvat. PHOTO ei edellytä laajaa kaupunkipanoraamaa.",
+            "captureDateAsStated": "26 September 2026, 09:24:12"
+          }
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/kampala/qa.json",
+            "sha256": "2523016a506c6b5a114a0790adfbb8a7222fddf5bb374a5e49756e9901f06557"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/kampala/illustration-qa-extra.json",
+            "sha256": "2af478b979ea705256d59e1fc991b7cad8eda0c84ad64d221886289da1c2ad48"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e07",
+        "city": "kampala",
+        "slot": "PHOTO",
+        "targetJsonPath": "$.valokuva",
+        "commonsFile": "A local small forest in Kampala Uganda.jpg",
+        "sha256": "6eab2bed7c8efd04a62d0392135ad2f83406eaf9db24075437d5b5a921bbc4c4",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:A_local_small_forest_in_Kampala_Uganda.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/0/03/A_local_small_forest_in_Kampala_Uganda.jpg",
+        "author": "Gratypius",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "width": 4000,
+        "height": 3000,
+        "originalSHA256": "6eab2bed7c8efd04a62d0392135ad2f83406eaf9db24075437d5b5a921bbc4c4",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e07/kampala/photo-6eab2bed7c8efd04a62d.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e07/kampala/photo-6eab2bed7c8efd04a62d.jpg",
+        "bytes": 3565437,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T18:51:39.711653+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "A local small forest in Kampala Uganda.jpg",
+        "lahde": "Gratypius, Commons (CC BY-SA 4.0)",
+        "selite": "Paikallista metsämaisemaa Kampalasta.",
+        "lyhyt": "Paikallista metsämaisemaa Kampalasta.",
+        "vuosi": "2026"
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Gratypius, Commons (CC BY-SA 4.0)",
+        "selite": "Paikallista metsämaisemaa Kampalasta.",
+        "lyhyt": "Paikallista metsämaisemaa Kampalasta.",
+        "tiedosto": "A local small forest in Kampala Uganda.jpg",
+        "vuosi": "2026"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "4fe0ece56e55c425f17175a3b42c358753ab3293ff288ac1a2cdabf75e58b21e",
+      "targetAfterSHA256": "0e2d3dfbb9d10c3cc957c722aff82a6e2eabeddfdc5bcf6ad966174cfb7e0ba5",
+      "contextAfterSHA256": "0e2d3dfbb9d10c3cc957c722aff82a6e2eabeddfdc5bcf6ad966174cfb7e0ba5"
+    },
+    {
+      "era": "e07",
+      "city": "kampala",
+      "slot": "C3",
+      "type": "commons",
+      "assetID": "capital-cc-e07-kampala-c3-46ac10f97fd0f72d",
+      "galleryImageID": "capital-cc-e07-kampala-c3-46ac10f97fd0f72d",
+      "commonsFile": "Makerere, Kikoni.jpg",
+      "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[2]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "kansikuvat",
+        2
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e07/kampala/c3-46ac10f97fd0f72df743.jpg",
+        "suora": true,
+        "lahde": "Timothy Akolamazima, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Makereren ja Kikonin alueen asutusta Kampalassa vuonna 2022.",
+        "lyhyt": "Makereren ja Kikonin alueen asutusta Kampalassa vuonna 2022.",
+        "tiedosto": "Makerere, Kikoni.jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Timothy Akolamazima, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Makereren ja Kikonin alueen asutusta Kampalassa vuonna 2022.",
+        "lyhyt": "Makereren ja Kikonin alueen asutusta Kampalassa vuonna 2022.",
+        "tiedosto": "Makerere, Kikoni.jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e07/kampala/c3-46ac10f97fd0f72df743.jpg",
+        "suora": true,
+        "lahde": "Timothy Akolamazima, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Makereren ja Kikonin alueen asutusta Kampalassa vuonna 2022.",
+        "lyhyt": "Makereren ja Kikonin alueen asutusta Kampalassa vuonna 2022.",
+        "tiedosto": "Makerere, Kikoni.jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "46ac10f97fd0f72df743df384cc159043e84beb81deaac66fe3689576aad4c92",
+      "exportSHA256": "46ac10f97fd0f72df743df384cc159043e84beb81deaac66fe3689576aad4c92",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e07/kampala/c3-46ac10f97fd0f72df743.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e07/kampala/c3-46ac10f97fd0f72df743.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/kampala/cc-evidence/meta-10.jpg",
+      "dimensions": [
+        6960,
+        4640
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/kampala/sisalto.json",
+      "sourceContentSHA256": "1e1717a83383ac2ae16ea8e15d31775db771cf84ec01b86ba4e5d45b3c29b4f9",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "d501c3019d1374cc7f2ae51f2b1e9642f377511f9b520b3e2a2e5a3c2906533c",
+        "semanticContextSHA256": "d501c3019d1374cc7f2ae51f2b1e9642f377511f9b520b3e2a2e5a3c2906533c",
+        "subjectTitle": "Kampala",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Timothy Akolamazima",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Makerere,_Kikoni.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/7/74/Makerere%2C_Kikoni.jpg",
+        "rightsEvidence": {
+          "selection": [
+            "Kuvan Author/Artist-kenttä ja valokuvan oma lisenssimalli tarkistettu tallennetusta Commons-lähteestä; upload-historian nimeä ei käytetä tekijänä. Lisenssiversion linkki on valokuvan lisenssiosassa, ei Commons-sivun yleinen alatunnistelupa.",
+            "Alkuperäisen kuvaajan Description nimeää Makerere Kikonin ja Makerere Universityn alueiden asuntojen/kaupunkirakenteen, kuvauspäivä25.1.2022. Pääaihe on asutuksen, katujen, puuston ja kattomaiseman laaja asettelu. Tavalliset rivimäiset asuintalot ovat osia tästä kokonaisuudesta; kuvassa ei esitellä yksittäistä nimettyä taideteosta tai rakennussuunnittelijan teosta. Valokuvan CC BY-SA4.0 on varmennettu erikseen; kaikkien taustarakennusten vapautta ei oleteta. N7-kukkulapaikkaa ei täytetä samalla tiedostolla eikä Makerere/Kikoni-nimestä päätellä tarkkaa hill/ward-rajaa. Riippumaton QA arvioi myös lähellä näkyvien osien mahdollisen teoskerroksen.",
+            "Silmin katsottu alkuperäinen: Aito laaja näkymä etualan asuinalueeseen ja kaupunkiseudun kattoihin. Tiedosto katsottu myös view_image original -asetuksella. Ihmiset näkyvät ylhäältä/kaukaa; kasvonpiirteitä ei tässä tarkastelussa pystytä lukemaan. Ei suuria Glovo/KFC-/juomamainostauluja aiempien C1/C2-kuvien tapaan, lisättyä tekstiä tai kehystä. Yksittäiset todelliset pienet esine-/laitosmerkinnät ovat ympäristön osia."
+          ],
+          "QA": {
+            "inputManifest": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/kampala/cc-selection.json",
+            "reviewer": "job-25 independent-image-QA",
+            "reviewedAt": "2026-10-12T19:51:43.471617+00:00",
+            "visualTool": "view_image",
+            "visualDetail": "original",
+            "localOriginal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/kampala/cc-evidence/meta-10.jpg",
+            "actualWidth": 6960,
+            "actualHeight": 4640,
+            "actualFormat": "JPEG",
+            "nativePixelWidth": 6960,
+            "nativePixelHeight": 4640,
+            "exifOrientation": 1,
+            "dimensionsConvention": "actualWidth/Height are correctly oriented display dimensions; native stored pixel dimensions are separately recorded",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Makerere,_Kikoni.jpg",
+            "savedSourcePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/019509e3cf1fab96c32ca11f7f3ca2db0bb03fb6b69731d8d11c125b6f3b6d43.html",
+            "savedSourceSHA256": "3b10b6d73aa85562b760dce2d45fc6b0ab7e0d3c466e4ae27254829e5ccfda06",
+            "authorVerified": "Timothy Akolamazima",
+            "authorField": "Original Commons Author table, independently read; not inferred from uploader",
+            "licenseVerified": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "captureDate": "25 January 2022, 09:05:22",
+            "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/kampala/sisalto.json",
+            "sourceContentSHA256": "1e52f7661182f84337e1873db9721b3a400b5028edc7a3a3f3bf9f522126ecf4",
+            "captionFi": "Makereren ja Kikonin alueen asutusta Kampalassa vuonna 2022.",
+            "depictedWorkLayer": "Author Timothy Akolamazima, Source Own work ja CC BY-SA4.0 varmistettu alkuperäisestä Commons-taulukosta/licensing-osiosta. Pääaihe kaupungin laaja asutus ja puusto; etualan rivimäiset arjen asuinrakennukset kuuluvat kokonaisuuteen. Yksilöityä suojattua nykytaideteosta, julkisivureliefiä tai eristettyä nimettyä arkkitehtuuriteosta ei esitellä pääaiheena. Pienet laitosten nimimerkinnät ja tavallisen ajoneuvon merkinnät ovat ympäristön sivuosia, eivät tämän kuvan päälle lisättyä mainosgrafiikkaa. C1/C2:n suuret kuvalliset mainosteokset ja TRAVELERin liike-mainoskerros ovat eri täsmällisten kuvien ratkaisemattomia kerroksia; niiden estettä ei yleistetä kaikkiin Kampala-valokuviin. Rakennuksen iästä tai kaikesta Ugandan arkkitehtuurista ei tehdä PD/FOP-oletusta.",
+            "duplicateInCity": false,
+            "sourcePageSHA256Verified": "3b10b6d73aa85562b760dce2d45fc6b0ab7e0d3c466e4ae27254829e5ccfda06",
+            "captureDateAsStated": "25 January2022,09:05:22",
+            "placeEvidence": "Original Description: Makerere Kikoni and Makerere University residents/housing; nykyinen Kampalan intro ja oppaan Makerere-konteksti.",
+            "pixelInspection": {
+              "tool": "node_repl emitImage/PIL native pixel viewports, no files written",
+              "nativeRectangles": [
+                [
+                  1100,
+                  2300,
+                  1750,
+                  3100
+                ],
+                [
+                  220,
+                  3400,
+                  850,
+                  4100
+                ]
+              ],
+              "observation": "Lähimmätkin henkilöt pieniä, tummia ja pääosin sivu-/selkäkuvia; yksilöllisiä luettavia kasvonpiirteitä ei erotu.",
+              "originalModified": false
+            },
+            "qualityNote": "Kaukainen yläala utuinen, lähi-/keskialan katu-/kattoasettelu ja rivimäiset talot luettavat."
+          },
+          "qaReason": "Silmin katsottu alkuperäinen6960×4640: laaja Makereren/Kikonin asutus, puusto, katot ja kulkureitit vastaavat nykyisen Kampalan introa ja Makerere-aihetta. LähdeDescription yksilöi alueen, ei pelkkää Ugandaa; ei keksittyä tarkkaa ward-/kukkularajaa. Native-pikselialueet1100,2300–1750,3100 ja220,3400–850,4100 katsottu lähimpien ihmisten takia: pään sivu-/selkämuotoja tai pieniä tummia kasvoja ilman luettavia yksilöllisiä silmä-/suupiirteitä. Etu-/keskialan katot ovat luettavat, kaukaisen alan utu kirjattu. Ei lisättyä tekstiä, vesileimaa tai kehystä. Eri laaja paikkakuva kuin C1/C2; suuria Glovo/KFC-/juomamainostauluja ei ole tässä kuvassa. Kuvausvuosi2022 ilmoitettu."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Makereren ja Kikonin alueen asutusta Kampalassa vuonna 2022.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/kampala/qa.json",
+        "fileSHA256": "2523016a506c6b5a114a0790adfbb8a7222fddf5bb374a5e49756e9901f06557",
+        "item": {
+          "slot": "C3",
+          "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[2]",
+          "commonsFile": "Makerere, Kikoni.jpg",
+          "sha256": "46ac10f97fd0f72df743df384cc159043e84beb81deaac66fe3689576aad4c92",
+          "verdict": "accepted",
+          "reason": "Silmin katsottu alkuperäinen6960×4640: laaja Makereren/Kikonin asutus, puusto, katot ja kulkureitit vastaavat nykyisen Kampalan introa ja Makerere-aihetta. LähdeDescription yksilöi alueen, ei pelkkää Ugandaa; ei keksittyä tarkkaa ward-/kukkularajaa. Native-pikselialueet1100,2300–1750,3100 ja220,3400–850,4100 katsottu lähimpien ihmisten takia: pään sivu-/selkämuotoja tai pieniä tummia kasvoja ilman luettavia yksilöllisiä silmä-/suupiirteitä. Etu-/keskialan katot ovat luettavat, kaukaisen alan utu kirjattu. Ei lisättyä tekstiä, vesileimaa tai kehystä. Eri laaja paikkakuva kuin C1/C2; suuria Glovo/KFC-/juomamainostauluja ei ole tässä kuvassa. Kuvausvuosi2022 ilmoitettu.",
+          "evidence": {
+            "inputManifest": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/kampala/cc-selection.json",
+            "reviewer": "job-25 independent-image-QA",
+            "reviewedAt": "2026-10-12T19:51:43.471617+00:00",
+            "visualTool": "view_image",
+            "visualDetail": "original",
+            "localOriginal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/kampala/cc-evidence/meta-10.jpg",
+            "actualWidth": 6960,
+            "actualHeight": 4640,
+            "actualFormat": "JPEG",
+            "nativePixelWidth": 6960,
+            "nativePixelHeight": 4640,
+            "exifOrientation": 1,
+            "dimensionsConvention": "actualWidth/Height are correctly oriented display dimensions; native stored pixel dimensions are separately recorded",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Makerere,_Kikoni.jpg",
+            "savedSourcePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/019509e3cf1fab96c32ca11f7f3ca2db0bb03fb6b69731d8d11c125b6f3b6d43.html",
+            "savedSourceSHA256": "3b10b6d73aa85562b760dce2d45fc6b0ab7e0d3c466e4ae27254829e5ccfda06",
+            "authorVerified": "Timothy Akolamazima",
+            "authorField": "Original Commons Author table, independently read; not inferred from uploader",
+            "licenseVerified": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "captureDate": "25 January 2022, 09:05:22",
+            "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/kampala/sisalto.json",
+            "sourceContentSHA256": "1e52f7661182f84337e1873db9721b3a400b5028edc7a3a3f3bf9f522126ecf4",
+            "captionFi": "Makereren ja Kikonin alueen asutusta Kampalassa vuonna 2022.",
+            "depictedWorkLayer": "Author Timothy Akolamazima, Source Own work ja CC BY-SA4.0 varmistettu alkuperäisestä Commons-taulukosta/licensing-osiosta. Pääaihe kaupungin laaja asutus ja puusto; etualan rivimäiset arjen asuinrakennukset kuuluvat kokonaisuuteen. Yksilöityä suojattua nykytaideteosta, julkisivureliefiä tai eristettyä nimettyä arkkitehtuuriteosta ei esitellä pääaiheena. Pienet laitosten nimimerkinnät ja tavallisen ajoneuvon merkinnät ovat ympäristön sivuosia, eivät tämän kuvan päälle lisättyä mainosgrafiikkaa. C1/C2:n suuret kuvalliset mainosteokset ja TRAVELERin liike-mainoskerros ovat eri täsmällisten kuvien ratkaisemattomia kerroksia; niiden estettä ei yleistetä kaikkiin Kampala-valokuviin. Rakennuksen iästä tai kaikesta Ugandan arkkitehtuurista ei tehdä PD/FOP-oletusta.",
+            "duplicateInCity": false,
+            "sourcePageSHA256Verified": "3b10b6d73aa85562b760dce2d45fc6b0ab7e0d3c466e4ae27254829e5ccfda06",
+            "captureDateAsStated": "25 January2022,09:05:22",
+            "placeEvidence": "Original Description: Makerere Kikoni and Makerere University residents/housing; nykyinen Kampalan intro ja oppaan Makerere-konteksti.",
+            "pixelInspection": {
+              "tool": "node_repl emitImage/PIL native pixel viewports, no files written",
+              "nativeRectangles": [
+                [
+                  1100,
+                  2300,
+                  1750,
+                  3100
+                ],
+                [
+                  220,
+                  3400,
+                  850,
+                  4100
+                ]
+              ],
+              "observation": "Lähimmätkin henkilöt pieniä, tummia ja pääosin sivu-/selkäkuvia; yksilöllisiä luettavia kasvonpiirteitä ei erotu.",
+              "originalModified": false
+            },
+            "qualityNote": "Kaukainen yläala utuinen, lähi-/keskialan katu-/kattoasettelu ja rivimäiset talot luettavat."
+          }
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/kampala/qa.json",
+            "sha256": "2523016a506c6b5a114a0790adfbb8a7222fddf5bb374a5e49756e9901f06557"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/kampala/illustration-qa-extra.json",
+            "sha256": "2af478b979ea705256d59e1fc991b7cad8eda0c84ad64d221886289da1c2ad48"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e07",
+        "city": "kampala",
+        "slot": "C3",
+        "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[2]",
+        "commonsFile": "Makerere, Kikoni.jpg",
+        "sha256": "46ac10f97fd0f72df743df384cc159043e84beb81deaac66fe3689576aad4c92",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Makerere,_Kikoni.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/7/74/Makerere%2C_Kikoni.jpg",
+        "author": "Timothy Akolamazima",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "width": 6960,
+        "height": 4640,
+        "originalSHA256": "46ac10f97fd0f72df743df384cc159043e84beb81deaac66fe3689576aad4c92",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e07/kampala/c3-46ac10f97fd0f72df743.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e07/kampala/c3-46ac10f97fd0f72df743.jpg",
+        "bytes": 4830689,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T19:52:37.054780+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "Makerere, Kikoni.jpg",
+        "lahde": "Timothy Akolamazima, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Makereren ja Kikonin alueen asutusta Kampalassa vuonna 2022.",
+        "lyhyt": "Makereren ja Kikonin alueen asutusta Kampalassa vuonna 2022."
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Timothy Akolamazima, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Makereren ja Kikonin alueen asutusta Kampalassa vuonna 2022.",
+        "lyhyt": "Makereren ja Kikonin alueen asutusta Kampalassa vuonna 2022.",
+        "tiedosto": "Makerere, Kikoni.jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "4fe0ece56e55c425f17175a3b42c358753ab3293ff288ac1a2cdabf75e58b21e",
+      "targetAfterSHA256": "d501c3019d1374cc7f2ae51f2b1e9642f377511f9b520b3e2a2e5a3c2906533c",
+      "contextAfterSHA256": "d501c3019d1374cc7f2ae51f2b1e9642f377511f9b520b3e2a2e5a3c2906533c"
+    },
+    {
+      "era": "e07",
+      "city": "kampala",
+      "slot": "N1",
+      "type": "commons",
+      "assetID": "capital-cc-e07-kampala-n1-eafe7854d6088fb1",
+      "galleryImageID": "capital-cc-e07-kampala-n1-eafe7854d6088fb1",
+      "commonsFile": "Gaddafi Mosque view 24.jpg",
+      "targetJsonPath": "$.nahtavyydet[\"Vanhan Kampalan kukkula\"].kuvat[0]",
+      "targetTokens": [
+        "nahtavyydet",
+        "Vanhan Kampalan kukkula",
+        "kuvat",
+        0
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e07/kampala/n1-eafe7854d6088fb13cb8.jpg",
+        "suora": true,
+        "lahde": "Ruslik0, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Näkymä Vanhan Kampalan kukkulalta kaupungin asutukseen ja muille kukkuloille, 2015.",
+        "lyhyt": "Näkymä Vanhan Kampalan kukkulalta kaupungin asutukseen ja muille kukkuloille, 2015.",
+        "tiedosto": "Gaddafi Mosque view 24.jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Ruslik0, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Näkymä Vanhan Kampalan kukkulalta kaupungin asutukseen ja muille kukkuloille, 2015.",
+        "lyhyt": "Näkymä Vanhan Kampalan kukkulalta kaupungin asutukseen ja muille kukkuloille, 2015.",
+        "tiedosto": "Gaddafi Mosque view 24.jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e07/kampala/n1-eafe7854d6088fb13cb8.jpg",
+        "suora": true,
+        "lahde": "Ruslik0, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Näkymä Vanhan Kampalan kukkulalta kaupungin asutukseen ja muille kukkuloille, 2015.",
+        "lyhyt": "Näkymä Vanhan Kampalan kukkulalta kaupungin asutukseen ja muille kukkuloille, 2015.",
+        "tiedosto": "Gaddafi Mosque view 24.jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "eafe7854d6088fb13cb890a4a47d1bfc92ecd73862a68f6a671483c88b7bdd2d",
+      "exportSHA256": "eafe7854d6088fb13cb890a4a47d1bfc92ecd73862a68f6a671483c88b7bdd2d",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e07/kampala/n1-eafe7854d6088fb13cb8.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e07/kampala/n1-eafe7854d6088fb13cb8.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/kampala/cc-evidence/meta-103.jpg",
+      "dimensions": [
+        3264,
+        2448
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/kampala/sisalto.json",
+      "sourceContentSHA256": "1e1717a83383ac2ae16ea8e15d31775db771cf84ec01b86ba4e5d45b3c29b4f9",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "79de8a0d7014943ce832ac8f8d3a527151f55d2196dd0df8079f4c02747713fc",
+        "subjectTitle": "Vanhan Kampalan kukkula",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Ruslik0",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Gaddafi_Mosque_view_24.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/4/41/Gaddafi_Mosque_view_24.jpg",
+        "rightsEvidence": {
+          "selection": [
+            "Kuvan Author/Artist-kenttä ja valokuvan oma lisenssimalli tarkistettu tallennetusta Commons-lähteestä; upload-historian nimeä ei käytetä tekijänä. Lisenssiversion linkki on valokuvan lisenssiosassa, ei Commons-sivun yleinen alatunnistelupa.",
+            "Kuvaajan alkuperäinen Description sanoo Views of Kampala from Gaddafi Mosque, eli todellinen kuvauspaikka on Vanhan Kampalan kukkulalla sijaitseva katselupaikka. Kaupungin faktapohja S2/N1 erottaa itse kukkulan nykyisestä moskeijarakennuksesta. Kuvan kohde on kukkulalta nähtävä ympäröivä maasto ja laaja asutus; modernin moskeijan rakennusta ei nimetty uudelleen luontokuvaksi. N1-teksti käsittelee maastonpaikkaa ja ympäröivien kukkuloiden suhteita, joten kuvateksti on näkymä kukkulalta, ei moskeijan esittely. Valokuvaaja Ruslik0, Own work ja CC BY-SA4.0 varmennettu erikseen. Kaukaisille rakennuksille ei anneta yleistä teosvapautta; yksittäistä suojattua teosta ei ole pääaiheena.",
+            "Silmin katsottu alkuperäinen: Alkuperäinen3264×2448 nähty: todellinen laaja kattomaisema ja maaston kukkulat. Kaupungin ihmiset ovat erittäin kaukana, ei tunnistettavia kasvonpiirteitä. Itse moskeijaa, sen kupolia tai modernia sisätaidetta ei näy tässä rajauksessa. Ei lisättyä tekstiä, watermarkia tai kehystä.",
+            "Paikan ja kukkula/moskeija-rajan faktaketju: e07/paakaupungit-pilvi/e07/kampala/faktapohja.md N1/S2 ja ajantasainen sisalto.json Vanhan Kampalan kukkula. Kuvan päiväys2.5.2015 säilyy, eikä kuvaa esitetä tuoreena opaskuvana."
+          ],
+          "QA": {
+            "inputManifest": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/kampala/cc-selection.json",
+            "reviewer": "job-25 independent-image-QA",
+            "reviewedAt": "2026-10-12T20:16:07.126760+00:00",
+            "visualTool": "view_image",
+            "visualDetail": "original",
+            "localOriginal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/kampala/cc-evidence/meta-103.jpg",
+            "actualWidth": 3264,
+            "actualHeight": 2448,
+            "actualFormat": "JPEG",
+            "nativePixelWidth": 3264,
+            "nativePixelHeight": 2448,
+            "exifOrientation": 1,
+            "dimensionsConvention": "actualWidth/Height are correctly oriented display dimensions; native stored pixel dimensions are separately recorded",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Gaddafi_Mosque_view_24.jpg",
+            "savedSourcePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/b4bfb95eaab2966c1b3349c5b3c885e417b2c6b580dea004d59197c46328b601.html",
+            "savedSourceSHA256": "a09d5d03b84feaaeade1435b84576bc2aaa36eed129b40d4b700edabdf88ff8e",
+            "authorVerified": "Ruslik0",
+            "authorField": "Original Commons Author table, independently read; not inferred from uploader",
+            "licenseVerified": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "captureDate": "2 May 2015, 16:52:28",
+            "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/kampala/sisalto.json",
+            "sourceContentSHA256": "1e52f7661182f84337e1873db9721b3a400b5028edc7a3a3f3bf9f522126ecf4",
+            "captionFi": "Näkymä Vanhan Kampalan kukkulalta kaupungin asutukseen ja muille kukkuloille, 2015.",
+            "depictedWorkLayer": "Valokuvakerros: Ruslik0 / CC BY-SA4.0, Source Own work sekä alkuperäiset Author/Licensing-rivit luettu itse. Erillinen teoskerros: ympäröivät maaston kukkulat sekä tavallisten kattojen, seinien ja liikenneväylien laaja kaupunkimassa; moskeijaa ei kuvata teoksena eikä sen modernia rakennusikää sekoiteta kukkulan ikään. Native-etualassa ei eristettyä mainosvalokuvaa, kuvamuraalia, veistosta tai omaperäistä julkisivuteosta. Pienet kaukana olevat ympäristön tunnisteet eivät ole overlay-merkkejä. Tämä täsmäkuva ei sisällä C1/C2/TRAVELER-ehdokkaiden tunnistettuja isoja mainospintoja eikä peri niiden erillistä oikeusestettä; ei yleistä Ugandan panoraamaoikeusväitettä.",
+            "duplicateInCity": false,
+            "sourceRevision": 1070274754,
+            "locationEvidenceVerified": {
+              "photoDescription": "Views of Kampala from Gaddafi Mosque",
+              "placeURL": "https://en.wikipedia.org/wiki/Kampala_Hill",
+              "placePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/kampala-A/oldkampala.html",
+              "placeSHA256": "38558b8f3677bcbc74a13775c24f9879beb8b72a49a5c72798eb5c1193bc00dc",
+              "readPersonally": true,
+              "relevantSection": "History and Points of interest identify Gaddafi National Mosque on the same hill; no building rights approval inferred"
+            },
+            "nativePixelViewport": {
+              "bounds": [
+                0,
+                1600,
+                1300,
+                2300
+              ],
+              "tool": "node_repl emitImage using PIL crop in memory",
+              "observation": "People tiny and indistinct, ordinary roof/wall/street detail; no dominant photographic ad or independently identifiable artwork",
+              "originalBytesChanged": false
+            },
+            "targetObjectVerified": true,
+            "targetMapName": "Vanhan Kampalan kukkula",
+            "targetMapCoordinates": [
+              0.31528,
+              32.56861
+            ]
+          },
+          "qaReason": "Todellinen näkymä Vanhan Kampalan kukkulalta ympäröivään asutukseen ja kukkuloille2.5.2015. Commonsin alkuperäinen Description Views of Kampala from Gaddafi Mosque ja itse luettu Kampala Hill -lähde yhdistävät kuvauspaikan juuri N1-kukkulaan. Kohdejuttu ja karttakohde ovat nykyisessä sisallossa. Itse moskeijarakennus, kupoli tai sisätaide eivät näy tässä kuvassa. Kaupungin ihmiset jäävät erittäin pieniksi; native-etualatarkastuksessa ei tunnistettavia kasvonpiirteitä. Ei lisättyä tekstiä, vesileimaa tai kehystä. Suuri taivas ja kevyt kaukotaustan pehmeys eivät estä nähtävän kukkula-/asutusrakenteen lukemista."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Näkymä Vanhan Kampalan kukkulalta kaupungin asutukseen ja muille kukkuloille, 2015.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/kampala/qa.json",
+        "fileSHA256": "2523016a506c6b5a114a0790adfbb8a7222fddf5bb374a5e49756e9901f06557",
+        "item": {
+          "slot": "N1",
+          "targetJsonPath": "$.nahtavyydet[\"Vanhan Kampalan kukkula\"].kuvat[0]",
+          "commonsFile": "Gaddafi Mosque view 24.jpg",
+          "sha256": "eafe7854d6088fb13cb890a4a47d1bfc92ecd73862a68f6a671483c88b7bdd2d",
+          "verdict": "accepted",
+          "reason": "Todellinen näkymä Vanhan Kampalan kukkulalta ympäröivään asutukseen ja kukkuloille2.5.2015. Commonsin alkuperäinen Description Views of Kampala from Gaddafi Mosque ja itse luettu Kampala Hill -lähde yhdistävät kuvauspaikan juuri N1-kukkulaan. Kohdejuttu ja karttakohde ovat nykyisessä sisallossa. Itse moskeijarakennus, kupoli tai sisätaide eivät näy tässä kuvassa. Kaupungin ihmiset jäävät erittäin pieniksi; native-etualatarkastuksessa ei tunnistettavia kasvonpiirteitä. Ei lisättyä tekstiä, vesileimaa tai kehystä. Suuri taivas ja kevyt kaukotaustan pehmeys eivät estä nähtävän kukkula-/asutusrakenteen lukemista.",
+          "evidence": {
+            "inputManifest": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/kampala/cc-selection.json",
+            "reviewer": "job-25 independent-image-QA",
+            "reviewedAt": "2026-10-12T20:16:07.126760+00:00",
+            "visualTool": "view_image",
+            "visualDetail": "original",
+            "localOriginal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/kampala/cc-evidence/meta-103.jpg",
+            "actualWidth": 3264,
+            "actualHeight": 2448,
+            "actualFormat": "JPEG",
+            "nativePixelWidth": 3264,
+            "nativePixelHeight": 2448,
+            "exifOrientation": 1,
+            "dimensionsConvention": "actualWidth/Height are correctly oriented display dimensions; native stored pixel dimensions are separately recorded",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Gaddafi_Mosque_view_24.jpg",
+            "savedSourcePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/b4bfb95eaab2966c1b3349c5b3c885e417b2c6b580dea004d59197c46328b601.html",
+            "savedSourceSHA256": "a09d5d03b84feaaeade1435b84576bc2aaa36eed129b40d4b700edabdf88ff8e",
+            "authorVerified": "Ruslik0",
+            "authorField": "Original Commons Author table, independently read; not inferred from uploader",
+            "licenseVerified": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "captureDate": "2 May 2015, 16:52:28",
+            "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/kampala/sisalto.json",
+            "sourceContentSHA256": "1e52f7661182f84337e1873db9721b3a400b5028edc7a3a3f3bf9f522126ecf4",
+            "captionFi": "Näkymä Vanhan Kampalan kukkulalta kaupungin asutukseen ja muille kukkuloille, 2015.",
+            "depictedWorkLayer": "Valokuvakerros: Ruslik0 / CC BY-SA4.0, Source Own work sekä alkuperäiset Author/Licensing-rivit luettu itse. Erillinen teoskerros: ympäröivät maaston kukkulat sekä tavallisten kattojen, seinien ja liikenneväylien laaja kaupunkimassa; moskeijaa ei kuvata teoksena eikä sen modernia rakennusikää sekoiteta kukkulan ikään. Native-etualassa ei eristettyä mainosvalokuvaa, kuvamuraalia, veistosta tai omaperäistä julkisivuteosta. Pienet kaukana olevat ympäristön tunnisteet eivät ole overlay-merkkejä. Tämä täsmäkuva ei sisällä C1/C2/TRAVELER-ehdokkaiden tunnistettuja isoja mainospintoja eikä peri niiden erillistä oikeusestettä; ei yleistä Ugandan panoraamaoikeusväitettä.",
+            "duplicateInCity": false,
+            "sourceRevision": 1070274754,
+            "locationEvidenceVerified": {
+              "photoDescription": "Views of Kampala from Gaddafi Mosque",
+              "placeURL": "https://en.wikipedia.org/wiki/Kampala_Hill",
+              "placePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/kampala-A/oldkampala.html",
+              "placeSHA256": "38558b8f3677bcbc74a13775c24f9879beb8b72a49a5c72798eb5c1193bc00dc",
+              "readPersonally": true,
+              "relevantSection": "History and Points of interest identify Gaddafi National Mosque on the same hill; no building rights approval inferred"
+            },
+            "nativePixelViewport": {
+              "bounds": [
+                0,
+                1600,
+                1300,
+                2300
+              ],
+              "tool": "node_repl emitImage using PIL crop in memory",
+              "observation": "People tiny and indistinct, ordinary roof/wall/street detail; no dominant photographic ad or independently identifiable artwork",
+              "originalBytesChanged": false
+            },
+            "targetObjectVerified": true,
+            "targetMapName": "Vanhan Kampalan kukkula",
+            "targetMapCoordinates": [
+              0.31528,
+              32.56861
+            ]
+          }
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/kampala/qa.json",
+            "sha256": "2523016a506c6b5a114a0790adfbb8a7222fddf5bb374a5e49756e9901f06557"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/kampala/illustration-qa-extra.json",
+            "sha256": "2af478b979ea705256d59e1fc991b7cad8eda0c84ad64d221886289da1c2ad48"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e07",
+        "city": "kampala",
+        "slot": "N1",
+        "targetJsonPath": "$.nahtavyydet[\"Vanhan Kampalan kukkula\"].kuvat[0]",
+        "commonsFile": "Gaddafi Mosque view 24.jpg",
+        "sha256": "eafe7854d6088fb13cb890a4a47d1bfc92ecd73862a68f6a671483c88b7bdd2d",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Gaddafi_Mosque_view_24.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/4/41/Gaddafi_Mosque_view_24.jpg",
+        "author": "Ruslik0",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "width": 3264,
+        "height": 2448,
+        "originalSHA256": "eafe7854d6088fb13cb890a4a47d1bfc92ecd73862a68f6a671483c88b7bdd2d",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e07/kampala/n1-eafe7854d6088fb13cb8.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e07/kampala/n1-eafe7854d6088fb13cb8.jpg",
+        "bytes": 3215947,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T20:17:10.844262+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Ruslik0, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Näkymä Vanhan Kampalan kukkulalta kaupungin asutukseen ja muille kukkuloille, 2015.",
+        "lyhyt": "Näkymä Vanhan Kampalan kukkulalta kaupungin asutukseen ja muille kukkuloille, 2015.",
+        "tiedosto": "Gaddafi Mosque view 24.jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "4fe0ece56e55c425f17175a3b42c358753ab3293ff288ac1a2cdabf75e58b21e",
+      "targetAfterSHA256": "372abbe446115183ab5a9c9f8054088c34c6a39b482c120ac0f75e0cf2353b87",
+      "contextAfterSHA256": "e3ea07c360d86ed1dffeba0274c5402ae9dcfacf4d48f8f1838c314399e9ce74"
+    }
+  ],
+  "runtimeIntegrationPending": true,
+  "ownerAcceptedNotImpliedByAuthorization": true,
+  "gameIntegrated": false
+}

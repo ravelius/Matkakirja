@@ -10,22 +10,22 @@
       "johdanto": "Joet erottavat Khartumin, Omdurmanin ja Bahrin, mutta niiden historia kuuluu samaan kaupunkiseutuun.",
       "kansikuvat": [
         {
-          "tiedosto": "",
-          "lyhyt": "",
-          "selite": "",
-          "lahde": ""
+          "tiedosto": "ISS-64 Khartoum, Sudan.jpg",
+          "lyhyt": "Khartumin jokien erottamaa kaupunkiseutua yövalokuvassa avaruusasemalta.",
+          "selite": "Khartumin jokien erottamaa kaupunkiseutua yövalokuvassa avaruusasemalta.",
+          "lahde": "NASA, Wikimedia Commons (PD)"
         },
         {
-          "tiedosto": "",
-          "lyhyt": "",
-          "selite": "",
-          "lahde": ""
+          "tiedosto": "River Nile2.jpg",
+          "lyhyt": "Niilin rantamaisema ja Khartumin kaupunkiseutu joen takana.",
+          "selite": "Niilin rantamaisema ja Khartumin kaupunkiseutu joen takana.",
+          "lahde": "Wikimomsd, Wikimedia Commons (CC BY-SA 4.0)"
         },
         {
-          "tiedosto": "",
-          "lyhyt": "",
-          "selite": "",
-          "lahde": ""
+          "tiedosto": "Sunut Forest, Khartoum.jpg",
+          "lyhyt": "Sunutin rantametsää Khartumissa.",
+          "selite": "Sunutin rantametsää Khartumissa.",
+          "lahde": "Mohoseen, Wikimedia Commons (CC BY-SA 4.0)"
         }
       ],
       "nostot": [
@@ -209,10 +209,10 @@
           "otsikko": "Temppeli on vanha, sijainti uudempi",
           "teksti": "Sudanin kansallismuseon puutarhaan siirrettiin muinaisia rakennuksia Nubian alueelta. Niitä pelastettiin paikoista, jotka jäivät Niilin padotuksen muodostaman järven vaikutusalueelle. Siirrettyihin rakennuksiin kuuluvat Buhenin temppeli sekä Akshan, Kumman ja Semnan rakennusosia. Ne pystytettiin uudelleen alkuperäisten suuntiensa mukaisesti. Vuonna 1873 rakennukset olivat vielä alkuperäisillä paikoillaan. Muinaisen seinän ikä ja sen Khartumin-sijainnin ikä ovat siis eri asioita.",
           "wiki": "National Museum of Sudan",
-          "tiedosto": "",
-          "lyhyt": "",
-          "selite": "",
-          "lahde": ""
+          "tiedosto": "Relief Semna temple Sesostris III barge.jpg",
+          "lyhyt": "Semnan temppelin muinainen reliefi Sudanin kansallismuseossa, kuvattu vuonna 2019.",
+          "selite": "Semnan temppelin muinainen reliefi Sudanin kansallismuseossa, kuvattu vuonna 2019.",
+          "lahde": "Matthias Gehricke, Wikimedia Commons (CC BY-SA 4.0)"
         },
         {
           "otsikko": "Katedraali vaihtoi tehtävää",
@@ -350,10 +350,10 @@
       "teksti": "Tuti on oma jokisaarensa Khartumin, Omdurmanin ja Bahrin välissä. Sen kylähistoria edeltää modernia Khartumia. Aiemmissa paikkakuvauksissa pellot ja kasvitarhat levittäytyivät saaren eri osiin, ja viljely kuului keskeisiin maankäyttötapoihin. Sitrus- ja limettipuut sekä vihannekset liittivät saaren kaupunkiseudun ruoantuotantoon.\n\nEnnen modernia siltaa yhteydet kulkivat vesitse. Saari ja vanhempi kylä kuuluivat paikan historiaan jo ennen vuotta 1873, mutta nykyisen sillan tai yksittäisten talojen ikää ei voi siirtää tuohon vuoteen. Tämä on dokumentoitua maatalous- ja kylähistoriaa. Sen perusteella ei voi luvata samaa nykymaisemaa, toimivaa lauttaa tai turvallista saarikävelyä; matkailu Khartumiin ei tällä hetkellä ole turvallista.",
       "kuvat": [
         {
-          "tiedosto": "",
-          "lyhyt": "",
-          "selite": "",
-          "lahde": ""
+          "tiedosto": "Tuti Island (Khartoum, Sudan) 001.jpg",
+          "lyhyt": "Tutin saaren taloja ja piha-aluetta heinäkuussa 2009.",
+          "selite": "Tutin saaren taloja ja piha-aluetta heinäkuussa 2009.",
+          "lahde": "Petr Adam Dohnálek, Wikimedia Commons (CC BY-SA 3.0 cz)"
         }
       ],
       "lahde": "Wikipedia"
@@ -413,10 +413,11 @@
     }
   },
   "valokuva": {
-    "tiedosto": "",
-    "lyhyt": "",
-    "selite": "",
-    "lahde": ""
+    "tiedosto": "Iss070e002191.jpg",
+    "lyhyt": "Khartumin ja Omdurmanin jokiseutu avaruusasemalta kuvattuna.",
+    "selite": "Khartumin ja Omdurmanin jokiseutu avaruusasemalta kuvattuna.",
+    "lahde": "NASA Johnson Space Center, Commons (PD)",
+    "vuosi": "2023"
   },
   "saatiedot": null
 }

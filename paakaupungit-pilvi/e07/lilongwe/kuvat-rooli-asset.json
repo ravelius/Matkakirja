@@ -1,0 +1,2041 @@
+{
+  "schemaVersion": "capital-city-role-assets/v1",
+  "era": "e07",
+  "city": "lilongwe",
+  "authorization": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+  "sourceContentAfterSHA256": "2f6d0e006b1b04cc9a459c316f6737355cbb7bf4d2de971ddb18a5c3aba4dd8a",
+  "assets": [
+    {
+      "era": "e07",
+      "city": "lilongwe",
+      "slot": "K2",
+      "type": "illustration",
+      "assetID": "e07-lilongwe-K2-v1-20261012",
+      "galleryImageID": "e07-lilongwe-K2-v1-20261012",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].nostot[1]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "nostot",
+        1
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/lilongwe/e07-lilongwe-K2-v1-20261012-50ed7c7543f9.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Nsima-aterian havainnekuva; ei Lilongwen ravintolavalokuva.",
+        "lyhyt": "Nsima-aterian havainnekuva; ei Lilongwen ravintolavalokuva."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/lilongwe/e07-lilongwe-K2-v1-20261012-50ed7c7543f9.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Nsima-aterian havainnekuva; ei Lilongwen ravintolavalokuva.",
+        "lyhyt": "Nsima-aterian havainnekuva; ei Lilongwen ravintolavalokuva."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "50ed7c7543f95acf339541e6992125cc2ad831aefa9ef06466e02d170ee5d8ac",
+      "exportSHA256": "719caf696baa5b380f7fc40cc1ad4ef05d9976cb9d37133f92c1b1f597d23154",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/lilongwe/e07-lilongwe-K2-v1-20261012-50ed7c7543f9.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/lilongwe/e07-lilongwe-K2-v1-20261012-50ed7c7543f9.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/lilongwe/e07-lilongwe-K2-v1-20261012-50ed7c7543f9.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lilongwe/sisalto.json",
+      "sourceContentSHA256": "2f6d0e006b1b04cc9a459c316f6737355cbb7bf4d2de971ddb18a5c3aba4dd8a",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "bf02727a27b60ff3c29d0b43b8543a90ef313b27f5e20c50bd03c5b799593512",
+        "semanticContextSHA256": "bf02727a27b60ff3c29d0b43b8543a90ef313b27f5e20c50bd03c5b799593512",
+        "subjectTitle": "Nsima alkaa jo pellolla",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": [
+            "New generated illustration of natural subject or common utility object; no reproduction of a protected work.",
+            "Named buildings, identifiable people and exact contemporary art/design excluded."
+          ],
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lilongwe/assets/e07-lilongwe-K2-v1-20261012/kuva.png",
+            "nativeSha256Verified": "50ed7c7543f95acf339541e6992125cc2ad831aefa9ef06466e02d170ee5d8ac",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Vaalea puurokeko, kypsiä papuja kastikkeessa ja lehtivihanneksia. Luonteva rakeisuus ja vaihtelevat papujen muodot; ei henkilöitä tai merkintöjä.",
+            "captionFi": "Nsima-aterian havainnekuva; ei Lilongwen ravintolavalokuva.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lilongwe/sisalto.json",
+            "contentSha256": "03c2c151cbaa5b969cbdf368d2589fbc1fbc11c0bebc9dfd3825b2ddadc3a063",
+            "targetCurrentlyPresent": true,
+            "targetText": "Nsima on maissijauhosta valmistettu paksu ruoka, mutta Malawin kulinaarinen perinne alkaa paljon ennen tarjoilua. Siihen kuuluvat viljely, varastointi ja maissin käsittely sekä jauhamisen, lisukkeiden valinnan ja tarjoilun taidot. Lihan, papujen ja vihannesten kaltaiset lisukkeet täydentävät ateriaa. Yhteinen syöminen ja taitojen siirtyminen ovat osa samaa kokonaisuutta. Nsima voi siksi nimetä sekä lautasella olevan ruoan että pitkän käytännön ketjun, joka yhdistää pellon, keittiön ja ruokapöydän.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lilongwe/faktapohja.md",
+            "factSheetSha256": "c40e874b42fa1894f52b3bb7097affe84a0c8683d6a660c42c8b570148a41277",
+            "topicEvidence": "K2 kuvaa maissijauhosta tehdyn nsiman sekä pavut ja vihannekset lisukkeina.",
+            "sourceEvidence": [
+              {
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lilongwe/sisalto.json",
+                "contentSha256": "03c2c151cbaa5b969cbdf368d2589fbc1fbc11c0bebc9dfd3825b2ddadc3a063",
+                "targetJsonPath": "$.kaupunkilehti[0].nostot[1]",
+                "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lilongwe/faktapohja.md",
+                "evidenceMode": "source-backed text topic; generalized material/food/biological illustration, not exact place appearance",
+                "targetTextAtIssue": "Nsima on maissijauhosta valmistettu paksu ruoka, mutta Malawin kulinaarinen perinne alkaa paljon ennen tarjoilua. Siihen kuuluvat viljely, varastointi ja maissin käsittely sekä jauhamisen, lisukkeiden valinnan ja tarjoilun taidot. Lihan, papujen ja vihannesten kaltaiset lisukkeet täydentävät ateriaa. Yhteinen syöminen ja taitojen siirtyminen ovat osa samaa kokonaisuutta. Nsima voi siksi nimetä sekä lautasella olevan ruoan että pitkän käytännön ketjun, joka yhdistää pellon, keittiön ja ruokapöydän."
+              }
+            ],
+            "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+            "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+          },
+          "qaReason": "Tiivis maissipuuro, pavut ja vihannekset vastaavat nsima-aterian tekstiaihetta. Selite ei väitä paikallista ravintolavalokuvaa."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Nsima-aterian havainnekuva; ei Lilongwen ravintolavalokuva.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lilongwe/illustration-qa-extra.json",
+        "fileSHA256": "cbf9e5f3f94c6b8c77c5af8bee52a0771c8cab2c9689dc0ebf4df0ee52ead646",
+        "item": {
+          "slot": "K2",
+          "targetJsonPath": "$.kaupunkilehti[0].nostot[1]",
+          "assetID": "e07-lilongwe-K2-v1-20261012",
+          "sha256": "50ed7c7543f95acf339541e6992125cc2ad831aefa9ef06466e02d170ee5d8ac",
+          "verdict": "accepted",
+          "reason": "Tiivis maissipuuro, pavut ja vihannekset vastaavat nsima-aterian tekstiaihetta. Selite ei väitä paikallista ravintolavalokuvaa.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lilongwe/assets/e07-lilongwe-K2-v1-20261012/kuva.png",
+            "nativeSha256Verified": "50ed7c7543f95acf339541e6992125cc2ad831aefa9ef06466e02d170ee5d8ac",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Vaalea puurokeko, kypsiä papuja kastikkeessa ja lehtivihanneksia. Luonteva rakeisuus ja vaihtelevat papujen muodot; ei henkilöitä tai merkintöjä.",
+            "captionFi": "Nsima-aterian havainnekuva; ei Lilongwen ravintolavalokuva.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lilongwe/sisalto.json",
+            "contentSha256": "03c2c151cbaa5b969cbdf368d2589fbc1fbc11c0bebc9dfd3825b2ddadc3a063",
+            "targetCurrentlyPresent": true,
+            "targetText": "Nsima on maissijauhosta valmistettu paksu ruoka, mutta Malawin kulinaarinen perinne alkaa paljon ennen tarjoilua. Siihen kuuluvat viljely, varastointi ja maissin käsittely sekä jauhamisen, lisukkeiden valinnan ja tarjoilun taidot. Lihan, papujen ja vihannesten kaltaiset lisukkeet täydentävät ateriaa. Yhteinen syöminen ja taitojen siirtyminen ovat osa samaa kokonaisuutta. Nsima voi siksi nimetä sekä lautasella olevan ruoan että pitkän käytännön ketjun, joka yhdistää pellon, keittiön ja ruokapöydän.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lilongwe/faktapohja.md",
+            "factSheetSha256": "c40e874b42fa1894f52b3bb7097affe84a0c8683d6a660c42c8b570148a41277",
+            "topicEvidence": "K2 kuvaa maissijauhosta tehdyn nsiman sekä pavut ja vihannekset lisukkeina.",
+            "sourceEvidence": [
+              {
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lilongwe/sisalto.json",
+                "contentSha256": "03c2c151cbaa5b969cbdf368d2589fbc1fbc11c0bebc9dfd3825b2ddadc3a063",
+                "targetJsonPath": "$.kaupunkilehti[0].nostot[1]",
+                "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lilongwe/faktapohja.md",
+                "evidenceMode": "source-backed text topic; generalized material/food/biological illustration, not exact place appearance",
+                "targetTextAtIssue": "Nsima on maissijauhosta valmistettu paksu ruoka, mutta Malawin kulinaarinen perinne alkaa paljon ennen tarjoilua. Siihen kuuluvat viljely, varastointi ja maissin käsittely sekä jauhamisen, lisukkeiden valinnan ja tarjoilun taidot. Lihan, papujen ja vihannesten kaltaiset lisukkeet täydentävät ateriaa. Yhteinen syöminen ja taitojen siirtyminen ovat osa samaa kokonaisuutta. Nsima voi siksi nimetä sekä lautasella olevan ruoan että pitkän käytännön ketjun, joka yhdistää pellon, keittiön ja ruokapöydän."
+              }
+            ],
+            "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+            "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+          },
+          "reviewedAt": "2026-10-12T18:24:14.709479+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lilongwe/qa.json",
+            "sha256": "9ed200a517e9b2f6574a727418b5ec2ab63c507a36fb3a857f2eaf45fc35a58b"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lilongwe/illustration-qa-extra.json",
+            "sha256": "cbf9e5f3f94c6b8c77c5af8bee52a0771c8cab2c9689dc0ebf4df0ee52ead646"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/lilongwe/e07-lilongwe-K2-v1-20261012-50ed7c7543f9.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/lilongwe/e07-lilongwe-K2-v1-20261012-50ed7c7543f9.png?t=719caf696baa5b38",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/lilongwe/e07-lilongwe-K2-v1-20261012-50ed7c7543f9.png",
+        "sha256": "719caf696baa5b380f7fc40cc1ad4ef05d9976cb9d37133f92c1b1f597d23154",
+        "bytes": 2355356,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e07-lilongwe-K2-v1-20261012",
+        "nativeSHA256": "50ed7c7543f95acf339541e6992125cc2ad831aefa9ef06466e02d170ee5d8ac",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/lilongwe/e07-lilongwe-K2-v1-20261012-50ed7c7543f9.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e07",
+        "city": "lilongwe",
+        "slot": "K2",
+        "targetJsonPath": "$.kaupunkilehti[0].nostot[1]",
+        "verifiedAt": "2026-10-12T18:27:51.683264+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/lilongwe/e07-lilongwe-K2-v1-20261012-50ed7c7543f9.png",
+        "sha256": "719caf696baa5b380f7fc40cc1ad4ef05d9976cb9d37133f92c1b1f597d23154",
+        "bytes": 2355356,
+        "SHAReadAt": "2026-10-12T18:29:51.376554+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "50ed7c7543f95acf339541e6992125cc2ad831aefa9ef06466e02d170ee5d8ac",
+        "rgbPixelSHA256": "696319a96f138a97589bbb35799a38384c90feabf3b11291361820f34d955595",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "2f6d0e006b1b04cc9a459c316f6737355cbb7bf4d2de971ddb18a5c3aba4dd8a",
+      "targetAfterSHA256": "bf02727a27b60ff3c29d0b43b8543a90ef313b27f5e20c50bd03c5b799593512",
+      "contextAfterSHA256": "bf02727a27b60ff3c29d0b43b8543a90ef313b27f5e20c50bd03c5b799593512"
+    },
+    {
+      "era": "e07",
+      "city": "lilongwe",
+      "slot": "K3",
+      "type": "illustration",
+      "assetID": "e07-lilongwe-K3-v1-20261012",
+      "galleryImageID": "e07-lilongwe-K3-v1-20261012",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].nostot[2]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "nostot",
+        2
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/lilongwe/e07-lilongwe-K3-v1-20261012-eaaf908877cd.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Maataloustuotteiden havainnekuva Lilongwen torikaupan aiheeseen.",
+        "lyhyt": "Maataloustuotteiden havainnekuva Lilongwen torikaupan aiheeseen."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/lilongwe/e07-lilongwe-K3-v1-20261012-eaaf908877cd.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Maataloustuotteiden havainnekuva Lilongwen torikaupan aiheeseen.",
+        "lyhyt": "Maataloustuotteiden havainnekuva Lilongwen torikaupan aiheeseen."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "eaaf908877cd377dd86804f6d590b307e803b2424e4da630e648495719837d93",
+      "exportSHA256": "e15b3285f48e77b303e502679aeb13b56a68859f45c5cc122cbbe60184bebcc4",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/lilongwe/e07-lilongwe-K3-v1-20261012-eaaf908877cd.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/lilongwe/e07-lilongwe-K3-v1-20261012-eaaf908877cd.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/lilongwe/e07-lilongwe-K3-v1-20261012-eaaf908877cd.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lilongwe/sisalto.json",
+      "sourceContentSHA256": "2f6d0e006b1b04cc9a459c316f6737355cbb7bf4d2de971ddb18a5c3aba4dd8a",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "a33be3bcef7e786892fafbd3c5a5b352d1dcd17765e68f444c1a2a5e8d77635f",
+        "semanticContextSHA256": "a33be3bcef7e786892fafbd3c5a5b352d1dcd17765e68f444c1a2a5e8d77635f",
+        "subjectTitle": "Torikaupunki ulottuu pelloille",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": [
+            "New generated illustration of natural subject or common utility object; no reproduction of a protected work.",
+            "Named buildings, identifiable people and exact contemporary art/design excluded."
+          ],
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lilongwe/assets/e07-lilongwe-K3-v1-20261012/kuva.png",
+            "nativeSha256Verified": "eaaf908877cd377dd86804f6d590b307e803b2424e4da630e648495719837d93",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Maissintähkiä, juureksia, tomaatteja ja kurpitsoja koreissa. Luonteva koko- ja värivaihtelu sekä kuitupinnat; ei myyjiä tai kylttejä.",
+            "captionFi": "Maataloustuotteiden havainnekuva Lilongwen torikaupan aiheeseen.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lilongwe/sisalto.json",
+            "contentSha256": "03c2c151cbaa5b969cbdf368d2589fbc1fbc11c0bebc9dfd3825b2ddadc3a063",
+            "targetCurrentlyPresent": true,
+            "targetText": "Lilongween tulee viljelytuotteita ja eläimiä ympäröiviltä maatalousalueilta. Kaupungin markkinarooli sisältää asukkaiden ruokaostoksia, raaka-aineiden jatkokäsittelyä ja kuljetuksia. Old Town on vanhempi kaupallinen ydin, mutta kaikki kaupankäynti ei ole samaa toria. Kunnallisten toripaikkojen myyntipaikkamaksuja on kirjattu sähköisesti 2020-luvulla. Kaupankäynti yhdistää näin kaupungin palvelut sen ulkopuolella tehtyyn työhön: ruoka tulee torille jostakin ja voi jatkaa sieltä uuteen käsittelyvaiheeseen.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lilongwe/faktapohja.md",
+            "factSheetSha256": "c40e874b42fa1894f52b3bb7097affe84a0c8683d6a660c42c8b570148a41277",
+            "topicEvidence": "K3 käsittelee ympäröiviltä maatalousalueilta tulevia viljelytuotteita.",
+            "sourceEvidence": [
+              {
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lilongwe/sisalto.json",
+                "contentSha256": "03c2c151cbaa5b969cbdf368d2589fbc1fbc11c0bebc9dfd3825b2ddadc3a063",
+                "targetJsonPath": "$.kaupunkilehti[0].nostot[2]",
+                "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lilongwe/faktapohja.md",
+                "evidenceMode": "source-backed text topic; generalized material/food/biological illustration, not exact place appearance",
+                "targetTextAtIssue": "Lilongween tulee viljelytuotteita ja eläimiä ympäröiviltä maatalousalueilta. Kaupungin markkinarooli sisältää asukkaiden ruokaostoksia, raaka-aineiden jatkokäsittelyä ja kuljetuksia. Old Town on vanhempi kaupallinen ydin, mutta kaikki kaupankäynti ei ole samaa toria. Kunnallisten toripaikkojen myyntipaikkamaksuja on kirjattu sähköisesti 2020-luvulla. Kaupankäynti yhdistää näin kaupungin palvelut sen ulkopuolella tehtyyn työhön: ruoka tulee torille jostakin ja voi jatkaa sieltä uuteen käsittelyvaiheeseen."
+              }
+            ],
+            "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+            "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+          },
+          "qaReason": "Yleinen maataloustuotteiden asetelma sopii torikaupan teemaan. Selite nimeää havainnollistuksen ilman väitettä tietystä torista tai satolajikkeesta."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Maataloustuotteiden havainnekuva Lilongwen torikaupan aiheeseen.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lilongwe/illustration-qa-extra.json",
+        "fileSHA256": "cbf9e5f3f94c6b8c77c5af8bee52a0771c8cab2c9689dc0ebf4df0ee52ead646",
+        "item": {
+          "slot": "K3",
+          "targetJsonPath": "$.kaupunkilehti[0].nostot[2]",
+          "assetID": "e07-lilongwe-K3-v1-20261012",
+          "sha256": "eaaf908877cd377dd86804f6d590b307e803b2424e4da630e648495719837d93",
+          "verdict": "accepted",
+          "reason": "Yleinen maataloustuotteiden asetelma sopii torikaupan teemaan. Selite nimeää havainnollistuksen ilman väitettä tietystä torista tai satolajikkeesta.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lilongwe/assets/e07-lilongwe-K3-v1-20261012/kuva.png",
+            "nativeSha256Verified": "eaaf908877cd377dd86804f6d590b307e803b2424e4da630e648495719837d93",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Maissintähkiä, juureksia, tomaatteja ja kurpitsoja koreissa. Luonteva koko- ja värivaihtelu sekä kuitupinnat; ei myyjiä tai kylttejä.",
+            "captionFi": "Maataloustuotteiden havainnekuva Lilongwen torikaupan aiheeseen.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lilongwe/sisalto.json",
+            "contentSha256": "03c2c151cbaa5b969cbdf368d2589fbc1fbc11c0bebc9dfd3825b2ddadc3a063",
+            "targetCurrentlyPresent": true,
+            "targetText": "Lilongween tulee viljelytuotteita ja eläimiä ympäröiviltä maatalousalueilta. Kaupungin markkinarooli sisältää asukkaiden ruokaostoksia, raaka-aineiden jatkokäsittelyä ja kuljetuksia. Old Town on vanhempi kaupallinen ydin, mutta kaikki kaupankäynti ei ole samaa toria. Kunnallisten toripaikkojen myyntipaikkamaksuja on kirjattu sähköisesti 2020-luvulla. Kaupankäynti yhdistää näin kaupungin palvelut sen ulkopuolella tehtyyn työhön: ruoka tulee torille jostakin ja voi jatkaa sieltä uuteen käsittelyvaiheeseen.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lilongwe/faktapohja.md",
+            "factSheetSha256": "c40e874b42fa1894f52b3bb7097affe84a0c8683d6a660c42c8b570148a41277",
+            "topicEvidence": "K3 käsittelee ympäröiviltä maatalousalueilta tulevia viljelytuotteita.",
+            "sourceEvidence": [
+              {
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lilongwe/sisalto.json",
+                "contentSha256": "03c2c151cbaa5b969cbdf368d2589fbc1fbc11c0bebc9dfd3825b2ddadc3a063",
+                "targetJsonPath": "$.kaupunkilehti[0].nostot[2]",
+                "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lilongwe/faktapohja.md",
+                "evidenceMode": "source-backed text topic; generalized material/food/biological illustration, not exact place appearance",
+                "targetTextAtIssue": "Lilongween tulee viljelytuotteita ja eläimiä ympäröiviltä maatalousalueilta. Kaupungin markkinarooli sisältää asukkaiden ruokaostoksia, raaka-aineiden jatkokäsittelyä ja kuljetuksia. Old Town on vanhempi kaupallinen ydin, mutta kaikki kaupankäynti ei ole samaa toria. Kunnallisten toripaikkojen myyntipaikkamaksuja on kirjattu sähköisesti 2020-luvulla. Kaupankäynti yhdistää näin kaupungin palvelut sen ulkopuolella tehtyyn työhön: ruoka tulee torille jostakin ja voi jatkaa sieltä uuteen käsittelyvaiheeseen."
+              }
+            ],
+            "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+            "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+          },
+          "reviewedAt": "2026-10-12T18:24:39.722958+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lilongwe/qa.json",
+            "sha256": "9ed200a517e9b2f6574a727418b5ec2ab63c507a36fb3a857f2eaf45fc35a58b"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lilongwe/illustration-qa-extra.json",
+            "sha256": "cbf9e5f3f94c6b8c77c5af8bee52a0771c8cab2c9689dc0ebf4df0ee52ead646"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/lilongwe/e07-lilongwe-K3-v1-20261012-eaaf908877cd.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/lilongwe/e07-lilongwe-K3-v1-20261012-eaaf908877cd.png?t=e15b3285f48e77b3",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/lilongwe/e07-lilongwe-K3-v1-20261012-eaaf908877cd.png",
+        "sha256": "e15b3285f48e77b303e502679aeb13b56a68859f45c5cc122cbbe60184bebcc4",
+        "bytes": 2696514,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e07-lilongwe-K3-v1-20261012",
+        "nativeSHA256": "eaaf908877cd377dd86804f6d590b307e803b2424e4da630e648495719837d93",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/lilongwe/e07-lilongwe-K3-v1-20261012-eaaf908877cd.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e07",
+        "city": "lilongwe",
+        "slot": "K3",
+        "targetJsonPath": "$.kaupunkilehti[0].nostot[2]",
+        "verifiedAt": "2026-10-12T18:27:53.169035+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/lilongwe/e07-lilongwe-K3-v1-20261012-eaaf908877cd.png",
+        "sha256": "e15b3285f48e77b303e502679aeb13b56a68859f45c5cc122cbbe60184bebcc4",
+        "bytes": 2696514,
+        "SHAReadAt": "2026-10-12T18:29:51.492922+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "eaaf908877cd377dd86804f6d590b307e803b2424e4da630e648495719837d93",
+        "rgbPixelSHA256": "d73acf2d97ed5c7ca278a2e8583cd637ef8455daeefae332a0027d883f27b29d",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "2f6d0e006b1b04cc9a459c316f6737355cbb7bf4d2de971ddb18a5c3aba4dd8a",
+      "targetAfterSHA256": "a33be3bcef7e786892fafbd3c5a5b352d1dcd17765e68f444c1a2a5e8d77635f",
+      "contextAfterSHA256": "a33be3bcef7e786892fafbd3c5a5b352d1dcd17765e68f444c1a2a5e8d77635f"
+    },
+    {
+      "era": "e07",
+      "city": "lilongwe",
+      "slot": "L1",
+      "type": "illustration",
+      "assetID": "e07-lilongwe-L1-v2-20261012",
+      "galleryImageID": "e07-lilongwe-L1-v2-20261012",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[1].nostot[0]",
+      "targetTokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        0
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/lilongwe/e07-lilongwe-L1-v2-20261012-fc2ce7c7a693.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Combretum molle -lajin siivellisen hedelmän havainnekuva.",
+        "lyhyt": "Combretum molle -lajin siivellisen hedelmän havainnekuva."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/lilongwe/e07-lilongwe-L1-v2-20261012-fc2ce7c7a693.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Combretum molle -lajin siivellisen hedelmän havainnekuva.",
+        "lyhyt": "Combretum molle -lajin siivellisen hedelmän havainnekuva."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "fc2ce7c7a693ebbaa766cb886484a2dadd4bf427b5b581b2174ddd70e9980e87",
+      "exportSHA256": "fa26238987dd8d2b9d23775bf0143836df0a45abe83e36819fefce0a75564b5e",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/lilongwe/e07-lilongwe-L1-v2-20261012-fc2ce7c7a693.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/lilongwe/e07-lilongwe-L1-v2-20261012-fc2ce7c7a693.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/lilongwe/e07-lilongwe-L1-v2-20261012-fc2ce7c7a693.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lilongwe/sisalto.json",
+      "sourceContentSHA256": "2f6d0e006b1b04cc9a459c316f6737355cbb7bf4d2de971ddb18a5c3aba4dd8a",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "a7097c3c9e1de6bce96636679d520d69755afc5d313b0217c32e4283becce6ea",
+        "semanticContextSHA256": "a7097c3c9e1de6bce96636679d520d69755afc5d313b0217c32e4283becce6ea",
+        "subjectTitle": "Puulla on siivet hedelmässä",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": [
+            "Natural biological form, new generated depiction; no reproduction of protected artwork or specific photograph composition.",
+            "Inspected reference photograph is PD-self, author Rotational; output remains type illustration."
+          ],
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lilongwe/assets/e07-lilongwe-L1-v2-20261012/kuva.png",
+            "nativeSha256Verified": "fc2ce7c7a693ebbaa766cb886484a2dadd4bf427b5b581b2174ddd70e9980e87",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Kolme riippuvaa kuivaa hedelmää, joissa siipimäiset pitkittäiset levyt, sekä harmaanvihreitä lehtiä. Luontevat hedelmän ja lehden pinnat, ei tekstiä.",
+            "captionFi": "Combretum molle -lajin siivellisen hedelmän havainnekuva.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lilongwe/sisalto.json",
+            "contentSha256": "03c2c151cbaa5b969cbdf368d2589fbc1fbc11c0bebc9dfd3825b2ddadc3a063",
+            "targetCurrentlyPresent": true,
+            "targetText": "Lilongwe Wildlife Centren metsää kuvataan Acacia- ja Combretum-puiden ympäristöksi. Paikallinen vierailuopas tunnistaa Combretum molle -lajin, jonka englanninkielinen nimi on velvet bushwillow. Sen hedelmässä on siipimäisiä osia, joten puuta voi tarkastella myös hedelmän muodon kautta. Laji kasvaa laajasti länsi-, itä- ja eteläisessä Afrikassa; se ei ole vain Lilongwen oma puu. Se toimii myös eräiden perhosten toukkien ravintokasvina. Yhden puun ympärille liittyy siten muutakin elämää kuin sen omat lehdet.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lilongwe/faktapohja.md",
+            "factSheetSha256": "c40e874b42fa1894f52b3bb7097affe84a0c8683d6a660c42c8b570148a41277",
+            "topicEvidence": "L1 ja faktapohja kuvaavat Combretum molle -lajin siipimäistä hedelmää. Korvaava v2 on katsottu omalla SHA-tunnisteellaan.",
+            "sourceEvidence": [
+              {
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lilongwe/sisalto.json",
+                "contentSha256": "03c2c151cbaa5b969cbdf368d2589fbc1fbc11c0bebc9dfd3825b2ddadc3a063",
+                "targetJsonPath": "$.kaupunkilehti[1].nostot[0]",
+                "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lilongwe/faktapohja.md",
+                "targetTextAtIssue": "Lilongwe Wildlife Centren metsää kuvataan Acacia- ja Combretum-puiden ympäristöksi. Paikallinen vierailuopas tunnistaa Combretum molle -lajin, jonka englanninkielinen nimi on velvet bushwillow. Sen hedelmässä on siipimäisiä osia, joten puuta voi tarkastella myös hedelmän muodon kautta. Laji kasvaa laajasti länsi-, itä- ja eteläisessä Afrikassa; se ei ole vain Lilongwen oma puu. Se toimii myös eräiden perhosten toukkien ravintokasvina. Yhden puun ympärille liittyy siten muutakin elämää kuin sen omat lehdet."
+              },
+              {
+                "sourcePage": "https://commons.wikimedia.org/wiki/File:Combretum_molle00.jpg",
+                "referencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lilongwe/illustration-reference/combretum-fruit-reference.jpg",
+                "referenceSha256": "314ee88323e2d19d82072aa6899bb8826f6f1fb172f88a3a0ded4f38b4becf7a",
+                "referenceCreator": "Rotational",
+                "licenseEvidence": "PD-self in original author/licensing fields",
+                "referencePhotoLocation": "Magaliesberg, South Africa",
+                "use": "biological morphology inspected only; not selected as a Lilongwe place photograph"
+              }
+            ],
+            "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+            "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+          },
+          "qaReason": "Siivellinen kuivunut hedelmä ja lehdet vastaavat Combretum molle -aihetta. Selite on havainnollistus eikä aito Lilongwen näyte."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Combretum molle -lajin siivellisen hedelmän havainnekuva.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lilongwe/illustration-qa-extra.json",
+        "fileSHA256": "cbf9e5f3f94c6b8c77c5af8bee52a0771c8cab2c9689dc0ebf4df0ee52ead646",
+        "item": {
+          "slot": "L1",
+          "targetJsonPath": "$.kaupunkilehti[1].nostot[0]",
+          "assetID": "e07-lilongwe-L1-v2-20261012",
+          "sha256": "fc2ce7c7a693ebbaa766cb886484a2dadd4bf427b5b581b2174ddd70e9980e87",
+          "verdict": "accepted",
+          "reason": "Siivellinen kuivunut hedelmä ja lehdet vastaavat Combretum molle -aihetta. Selite on havainnollistus eikä aito Lilongwen näyte.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lilongwe/assets/e07-lilongwe-L1-v2-20261012/kuva.png",
+            "nativeSha256Verified": "fc2ce7c7a693ebbaa766cb886484a2dadd4bf427b5b581b2174ddd70e9980e87",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Kolme riippuvaa kuivaa hedelmää, joissa siipimäiset pitkittäiset levyt, sekä harmaanvihreitä lehtiä. Luontevat hedelmän ja lehden pinnat, ei tekstiä.",
+            "captionFi": "Combretum molle -lajin siivellisen hedelmän havainnekuva.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lilongwe/sisalto.json",
+            "contentSha256": "03c2c151cbaa5b969cbdf368d2589fbc1fbc11c0bebc9dfd3825b2ddadc3a063",
+            "targetCurrentlyPresent": true,
+            "targetText": "Lilongwe Wildlife Centren metsää kuvataan Acacia- ja Combretum-puiden ympäristöksi. Paikallinen vierailuopas tunnistaa Combretum molle -lajin, jonka englanninkielinen nimi on velvet bushwillow. Sen hedelmässä on siipimäisiä osia, joten puuta voi tarkastella myös hedelmän muodon kautta. Laji kasvaa laajasti länsi-, itä- ja eteläisessä Afrikassa; se ei ole vain Lilongwen oma puu. Se toimii myös eräiden perhosten toukkien ravintokasvina. Yhden puun ympärille liittyy siten muutakin elämää kuin sen omat lehdet.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lilongwe/faktapohja.md",
+            "factSheetSha256": "c40e874b42fa1894f52b3bb7097affe84a0c8683d6a660c42c8b570148a41277",
+            "topicEvidence": "L1 ja faktapohja kuvaavat Combretum molle -lajin siipimäistä hedelmää. Korvaava v2 on katsottu omalla SHA-tunnisteellaan.",
+            "sourceEvidence": [
+              {
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lilongwe/sisalto.json",
+                "contentSha256": "03c2c151cbaa5b969cbdf368d2589fbc1fbc11c0bebc9dfd3825b2ddadc3a063",
+                "targetJsonPath": "$.kaupunkilehti[1].nostot[0]",
+                "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lilongwe/faktapohja.md",
+                "targetTextAtIssue": "Lilongwe Wildlife Centren metsää kuvataan Acacia- ja Combretum-puiden ympäristöksi. Paikallinen vierailuopas tunnistaa Combretum molle -lajin, jonka englanninkielinen nimi on velvet bushwillow. Sen hedelmässä on siipimäisiä osia, joten puuta voi tarkastella myös hedelmän muodon kautta. Laji kasvaa laajasti länsi-, itä- ja eteläisessä Afrikassa; se ei ole vain Lilongwen oma puu. Se toimii myös eräiden perhosten toukkien ravintokasvina. Yhden puun ympärille liittyy siten muutakin elämää kuin sen omat lehdet."
+              },
+              {
+                "sourcePage": "https://commons.wikimedia.org/wiki/File:Combretum_molle00.jpg",
+                "referencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lilongwe/illustration-reference/combretum-fruit-reference.jpg",
+                "referenceSha256": "314ee88323e2d19d82072aa6899bb8826f6f1fb172f88a3a0ded4f38b4becf7a",
+                "referenceCreator": "Rotational",
+                "licenseEvidence": "PD-self in original author/licensing fields",
+                "referencePhotoLocation": "Magaliesberg, South Africa",
+                "use": "biological morphology inspected only; not selected as a Lilongwe place photograph"
+              }
+            ],
+            "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+            "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+          },
+          "reviewedAt": "2026-10-12T18:46:13.146643+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lilongwe/qa.json",
+            "sha256": "9ed200a517e9b2f6574a727418b5ec2ab63c507a36fb3a857f2eaf45fc35a58b"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lilongwe/illustration-qa-extra.json",
+            "sha256": "cbf9e5f3f94c6b8c77c5af8bee52a0771c8cab2c9689dc0ebf4df0ee52ead646"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/lilongwe/e07-lilongwe-L1-v2-20261012-fc2ce7c7a693.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/lilongwe/e07-lilongwe-L1-v2-20261012-fc2ce7c7a693.png?t=fa26238987dd8d2b",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/lilongwe/e07-lilongwe-L1-v2-20261012-fc2ce7c7a693.png",
+        "sha256": "fa26238987dd8d2b9d23775bf0143836df0a45abe83e36819fefce0a75564b5e",
+        "bytes": 2035014,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e07-lilongwe-L1-v2-20261012",
+        "nativeSHA256": "fc2ce7c7a693ebbaa766cb886484a2dadd4bf427b5b581b2174ddd70e9980e87",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/lilongwe/e07-lilongwe-L1-v2-20261012-fc2ce7c7a693.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e07",
+        "city": "lilongwe",
+        "slot": "L1",
+        "targetJsonPath": "$.kaupunkilehti[1].nostot[0]",
+        "verifiedAt": "2026-10-12T18:46:32.343672+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/lilongwe/e07-lilongwe-L1-v2-20261012-fc2ce7c7a693.png",
+        "sha256": "fa26238987dd8d2b9d23775bf0143836df0a45abe83e36819fefce0a75564b5e",
+        "bytes": 2035014,
+        "SHAReadAt": "2026-10-12T19:03:34.467023+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "fc2ce7c7a693ebbaa766cb886484a2dadd4bf427b5b581b2174ddd70e9980e87",
+        "rgbPixelSHA256": "7cbb175053efd2a1c10b6fbc483102e3e694bbf8040a4903df8aebca083bf1a3",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "2f6d0e006b1b04cc9a459c316f6737355cbb7bf4d2de971ddb18a5c3aba4dd8a",
+      "targetAfterSHA256": "a7097c3c9e1de6bce96636679d520d69755afc5d313b0217c32e4283becce6ea",
+      "contextAfterSHA256": "a7097c3c9e1de6bce96636679d520d69755afc5d313b0217c32e4283becce6ea"
+    },
+    {
+      "era": "e07",
+      "city": "lilongwe",
+      "slot": "L2",
+      "type": "illustration",
+      "assetID": "e07-lilongwe-L2-v1-20261012",
+      "galleryImageID": "e07-lilongwe-L2-v1-20261012",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[1].nostot[1]",
+      "targetTokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        1
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/lilongwe/e07-lilongwe-L2-v1-20261012-c8aa9a4bc820.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Vervet-apinoiden turkinhoidon havainnekuva; ei todellinen Lilongwen kohtaaminen.",
+        "lyhyt": "Vervet-apinoiden turkinhoidon havainnekuva; ei todellinen Lilongwen kohtaaminen."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/lilongwe/e07-lilongwe-L2-v1-20261012-c8aa9a4bc820.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Vervet-apinoiden turkinhoidon havainnekuva; ei todellinen Lilongwen kohtaaminen.",
+        "lyhyt": "Vervet-apinoiden turkinhoidon havainnekuva; ei todellinen Lilongwen kohtaaminen."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "c8aa9a4bc8200ce071ce937cd77edc417a6c27ebd439059870cae87302191e14",
+      "exportSHA256": "a16b9e07c467c14e3b2b5a76420a3f480c9c43cb91c11e9f2d9535791c7dd004",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/lilongwe/e07-lilongwe-L2-v1-20261012-c8aa9a4bc820.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/lilongwe/e07-lilongwe-L2-v1-20261012-c8aa9a4bc820.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/lilongwe/e07-lilongwe-L2-v1-20261012-c8aa9a4bc820.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lilongwe/sisalto.json",
+      "sourceContentSHA256": "2f6d0e006b1b04cc9a459c316f6737355cbb7bf4d2de971ddb18a5c3aba4dd8a",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "f666f9c4ff64a71edc6ed9ec3ac06371dcf353eb6756982fd23c7724baa9a764",
+        "semanticContextSHA256": "f666f9c4ff64a71edc6ed9ec3ac06371dcf353eb6756982fd23c7724baa9a764",
+        "subjectTitle": "Apinaryhmä pitää turkista huolta",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": [
+            "New generated illustration of natural subject or common utility object; no reproduction of a protected work.",
+            "Named buildings, identifiable people and exact contemporary art/design excluded."
+          ],
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lilongwe/assets/e07-lilongwe-L2-v1-20261012/kuva.png",
+            "nativeSha256Verified": "c8aa9a4bc8200ce071ce937cd77edc417a6c27ebd439059870cae87302191e14",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Kaksi vervet-apinaa oksalla, toinen hoitaa toisen selän turkkia kahdella kädellä. Raajojen asento, näkyvät sormet, kasvonmuoto ja vaihteleva turkki uskottavia; ei ihmisiä tai merkintöjä.",
+            "captionFi": "Vervet-apinoiden turkinhoidon havainnekuva; ei todellinen Lilongwen kohtaaminen.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lilongwe/sisalto.json",
+            "contentSha256": "03c2c151cbaa5b969cbdf368d2589fbc1fbc11c0bebc9dfd3825b2ddadc3a063",
+            "targetCurrentlyPresent": true,
+            "targetText": "Metsässä elää luonnonvaraisia vervet-apinoiden ryhmiä, erillään kuntoutuksessa olevista eläimistä. Ne liikkuvat päivällä ja nukkuvat puissa yöllä. Toistensa turkkia hoitaessaan apinat poistavat likaa ja loisia. Lajilla on myös erilaisia varoitusääniä eri tilanteita varten. Ravintoon kuuluu lehtiä, hedelmiä ja siemeniä, mutta se ei rajoitu pelkkiin kasveihin. Metsän vierailija antaa eläimille tilaa eikä ruoki niitä: luonnonvaraisen ryhmän arkea ei tarvitse muuttaa ihmisen kohtaamiseksi.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lilongwe/faktapohja.md",
+            "factSheetSha256": "c40e874b42fa1894f52b3bb7097affe84a0c8683d6a660c42c8b570148a41277",
+            "topicEvidence": "L2 kertoo luonnonvaraisten vervet-apinoiden turkinhoidosta.",
+            "sourceEvidence": [
+              {
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lilongwe/sisalto.json",
+                "contentSha256": "03c2c151cbaa5b969cbdf368d2589fbc1fbc11c0bebc9dfd3825b2ddadc3a063",
+                "targetJsonPath": "$.kaupunkilehti[1].nostot[1]",
+                "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lilongwe/faktapohja.md",
+                "evidenceMode": "source-backed text topic; generalized material/food/biological illustration, not exact place appearance",
+                "targetTextAtIssue": "Metsässä elää luonnonvaraisia vervet-apinoiden ryhmiä, erillään kuntoutuksessa olevista eläimistä. Ne liikkuvat päivällä ja nukkuvat puissa yöllä. Toistensa turkkia hoitaessaan apinat poistavat likaa ja loisia. Lajilla on myös erilaisia varoitusääniä eri tilanteita varten. Ravintoon kuuluu lehtiä, hedelmiä ja siemeniä, mutta se ei rajoitu pelkkiin kasveihin. Metsän vierailija antaa eläimille tilaa eikä ruoki niitä: luonnonvaraisen ryhmän arkea ei tarvitse muuttaa ihmisen kohtaamiseksi."
+              }
+            ],
+            "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+            "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+          },
+          "qaReason": "Vervet-apinoiden turkinhoito vastaa tekstin käyttäytymisaihetta. Selite ei väitä todellista Lilongwen eläinkohtaamista."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Vervet-apinoiden turkinhoidon havainnekuva; ei todellinen Lilongwen kohtaaminen.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lilongwe/illustration-qa-extra.json",
+        "fileSHA256": "cbf9e5f3f94c6b8c77c5af8bee52a0771c8cab2c9689dc0ebf4df0ee52ead646",
+        "item": {
+          "slot": "L2",
+          "targetJsonPath": "$.kaupunkilehti[1].nostot[1]",
+          "assetID": "e07-lilongwe-L2-v1-20261012",
+          "sha256": "c8aa9a4bc8200ce071ce937cd77edc417a6c27ebd439059870cae87302191e14",
+          "verdict": "accepted",
+          "reason": "Vervet-apinoiden turkinhoito vastaa tekstin käyttäytymisaihetta. Selite ei väitä todellista Lilongwen eläinkohtaamista.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lilongwe/assets/e07-lilongwe-L2-v1-20261012/kuva.png",
+            "nativeSha256Verified": "c8aa9a4bc8200ce071ce937cd77edc417a6c27ebd439059870cae87302191e14",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Kaksi vervet-apinaa oksalla, toinen hoitaa toisen selän turkkia kahdella kädellä. Raajojen asento, näkyvät sormet, kasvonmuoto ja vaihteleva turkki uskottavia; ei ihmisiä tai merkintöjä.",
+            "captionFi": "Vervet-apinoiden turkinhoidon havainnekuva; ei todellinen Lilongwen kohtaaminen.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lilongwe/sisalto.json",
+            "contentSha256": "03c2c151cbaa5b969cbdf368d2589fbc1fbc11c0bebc9dfd3825b2ddadc3a063",
+            "targetCurrentlyPresent": true,
+            "targetText": "Metsässä elää luonnonvaraisia vervet-apinoiden ryhmiä, erillään kuntoutuksessa olevista eläimistä. Ne liikkuvat päivällä ja nukkuvat puissa yöllä. Toistensa turkkia hoitaessaan apinat poistavat likaa ja loisia. Lajilla on myös erilaisia varoitusääniä eri tilanteita varten. Ravintoon kuuluu lehtiä, hedelmiä ja siemeniä, mutta se ei rajoitu pelkkiin kasveihin. Metsän vierailija antaa eläimille tilaa eikä ruoki niitä: luonnonvaraisen ryhmän arkea ei tarvitse muuttaa ihmisen kohtaamiseksi.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lilongwe/faktapohja.md",
+            "factSheetSha256": "c40e874b42fa1894f52b3bb7097affe84a0c8683d6a660c42c8b570148a41277",
+            "topicEvidence": "L2 kertoo luonnonvaraisten vervet-apinoiden turkinhoidosta.",
+            "sourceEvidence": [
+              {
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lilongwe/sisalto.json",
+                "contentSha256": "03c2c151cbaa5b969cbdf368d2589fbc1fbc11c0bebc9dfd3825b2ddadc3a063",
+                "targetJsonPath": "$.kaupunkilehti[1].nostot[1]",
+                "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lilongwe/faktapohja.md",
+                "evidenceMode": "source-backed text topic; generalized material/food/biological illustration, not exact place appearance",
+                "targetTextAtIssue": "Metsässä elää luonnonvaraisia vervet-apinoiden ryhmiä, erillään kuntoutuksessa olevista eläimistä. Ne liikkuvat päivällä ja nukkuvat puissa yöllä. Toistensa turkkia hoitaessaan apinat poistavat likaa ja loisia. Lajilla on myös erilaisia varoitusääniä eri tilanteita varten. Ravintoon kuuluu lehtiä, hedelmiä ja siemeniä, mutta se ei rajoitu pelkkiin kasveihin. Metsän vierailija antaa eläimille tilaa eikä ruoki niitä: luonnonvaraisen ryhmän arkea ei tarvitse muuttaa ihmisen kohtaamiseksi."
+              }
+            ],
+            "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+            "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+          },
+          "reviewedAt": "2026-10-12T18:32:36.883434+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lilongwe/qa.json",
+            "sha256": "9ed200a517e9b2f6574a727418b5ec2ab63c507a36fb3a857f2eaf45fc35a58b"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lilongwe/illustration-qa-extra.json",
+            "sha256": "cbf9e5f3f94c6b8c77c5af8bee52a0771c8cab2c9689dc0ebf4df0ee52ead646"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/lilongwe/e07-lilongwe-L2-v1-20261012-c8aa9a4bc820.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/lilongwe/e07-lilongwe-L2-v1-20261012-c8aa9a4bc820.png?t=a16b9e07c467c14e",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/lilongwe/e07-lilongwe-L2-v1-20261012-c8aa9a4bc820.png",
+        "sha256": "a16b9e07c467c14e3b2b5a76420a3f480c9c43cb91c11e9f2d9535791c7dd004",
+        "bytes": 2815283,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e07-lilongwe-L2-v1-20261012",
+        "nativeSHA256": "c8aa9a4bc8200ce071ce937cd77edc417a6c27ebd439059870cae87302191e14",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/lilongwe/e07-lilongwe-L2-v1-20261012-c8aa9a4bc820.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e07",
+        "city": "lilongwe",
+        "slot": "L2",
+        "targetJsonPath": "$.kaupunkilehti[1].nostot[1]",
+        "verifiedAt": "2026-10-12T18:32:46.334746+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/lilongwe/e07-lilongwe-L2-v1-20261012-c8aa9a4bc820.png",
+        "sha256": "a16b9e07c467c14e3b2b5a76420a3f480c9c43cb91c11e9f2d9535791c7dd004",
+        "bytes": 2815283,
+        "SHAReadAt": "2026-10-12T18:32:39.651393+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "c8aa9a4bc8200ce071ce937cd77edc417a6c27ebd439059870cae87302191e14",
+        "rgbPixelSHA256": "15c5707668509c3deed830004558f0adda79d75b30bca8379ad6c4a8c973c8cd",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "2f6d0e006b1b04cc9a459c316f6737355cbb7bf4d2de971ddb18a5c3aba4dd8a",
+      "targetAfterSHA256": "f666f9c4ff64a71edc6ed9ec3ac06371dcf353eb6756982fd23c7724baa9a764",
+      "contextAfterSHA256": "f666f9c4ff64a71edc6ed9ec3ac06371dcf353eb6756982fd23c7724baa9a764"
+    },
+    {
+      "era": "e07",
+      "city": "lilongwe",
+      "slot": "L3",
+      "type": "illustration",
+      "assetID": "e07-lilongwe-L3-v2-20261012",
+      "galleryImageID": "e07-lilongwe-L3-v2-20261012",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[1].nostot[2]",
+      "targetTokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        2
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/lilongwe/e07-lilongwe-L3-v2-20261012-738501962941.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Hamerkopin ja katollisen risupesän havainnekuva.",
+        "lyhyt": "Hamerkopin ja katollisen risupesän havainnekuva."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/lilongwe/e07-lilongwe-L3-v2-20261012-738501962941.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Hamerkopin ja katollisen risupesän havainnekuva.",
+        "lyhyt": "Hamerkopin ja katollisen risupesän havainnekuva."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "738501962941b05f58ca3898b45a5ceccfedffe1c87d15c5a9e19fd43ab1a6a7",
+      "exportSHA256": "58635894f0c1d2ed541b74e6f10b4fc898e41e3d939afb2ad2860f67463cacea",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/lilongwe/e07-lilongwe-L3-v2-20261012-738501962941.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/lilongwe/e07-lilongwe-L3-v2-20261012-738501962941.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/lilongwe/e07-lilongwe-L3-v2-20261012-738501962941.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lilongwe/sisalto.json",
+      "sourceContentSHA256": "2f6d0e006b1b04cc9a459c316f6737355cbb7bf4d2de971ddb18a5c3aba4dd8a",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "84164f3a1bbcc38a75e6c6302fc1cac8f0dfb50ec3b7ce4fc04f5894630a70a2",
+        "semanticContextSHA256": "84164f3a1bbcc38a75e6c6302fc1cac8f0dfb50ec3b7ce4fc04f5894630a70a2",
+        "subjectTitle": "Lintu rakentaa pesälle katon",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": [
+            "New generated illustration of natural subject or common utility object; no reproduction of a protected work.",
+            "Named buildings, identifiable people and exact contemporary art/design excluded."
+          ],
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lilongwe/assets/e07-lilongwe-L3-v2-20261012/kuva.png",
+            "nativeSha256Verified": "738501962941b05f58ca3898b45a5ceccfedffe1c87d15c5a9e19fd43ab1a6a7",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Hamerkop kahdella jalalla oksalla, suuri suljettu risu- ja mutapesä puunhaarassa, pieni tumma pyöreä sisäänmeno alhaalla. Luontevat oksat ja höyhenpinta, ei tekstiä.",
+            "captionFi": "Hamerkopin ja katollisen risupesän havainnekuva.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lilongwe/sisalto.json",
+            "contentSha256": "03c2c151cbaa5b969cbdf368d2589fbc1fbc11c0bebc9dfd3825b2ddadc3a063",
+            "targetCurrentlyPresent": true,
+            "targetText": "Lingadzi-joen linnustossa esiintyvä hamerkop on ruskea vesilintu. Se etsii ravintoa matalasta vedestä ja syö muun muassa kaloja sekä sammakkoeläimiä. Sen pesä on suuri risurakennelma, jossa on kupolimainen katto, ja molemmat parin linnut osallistuvat rakentamiseen. Pesä ei siis ole vain avoin kuppi oksien välissä. Lajia koskevissa kuvauksissa myös muut eläimet voivat käyttää sen pesiä. Metsässä katollinen risurakenne on kiinnostava havainto, vaikka sen rakentajaa ei näkisi joka käynnillä.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lilongwe/faktapohja.md",
+            "factSheetSha256": "c40e874b42fa1894f52b3bb7097affe84a0c8683d6a660c42c8b570148a41277",
+            "topicEvidence": "L3:n kattoaihe ja paikallisen hamerkop.txt-lähteen pieni sisäänmeno/tunnelirakenne vastaavat v2:ta. Uusi native-SHA on tarkistettu erikseen.",
+            "sourceEvidence": [
+              {
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lilongwe/sisalto.json",
+                "contentSha256": "03c2c151cbaa5b969cbdf368d2589fbc1fbc11c0bebc9dfd3825b2ddadc3a063",
+                "targetJsonPath": "$.kaupunkilehti[1].nostot[2]",
+                "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lilongwe/faktapohja.md",
+                "evidenceMode": "source-backed text topic; generalized material/food/biological illustration, not exact place appearance",
+                "targetTextAtIssue": "Lingadzi-joen linnustossa esiintyvä hamerkop on ruskea vesilintu. Se etsii ravintoa matalasta vedestä ja syö muun muassa kaloja sekä sammakkoeläimiä. Sen pesä on suuri risurakennelma, jossa on kupolimainen katto, ja molemmat parin linnut osallistuvat rakentamiseen. Pesä ei siis ole vain avoin kuppi oksien välissä. Lajia koskevissa kuvauksissa myös muut eläimet voivat käyttää sen pesiä. Metsässä katollinen risurakenne on kiinnostava havainto, vaikka sen rakentajaa ei näkisi joka käynnillä."
+              }
+            ],
+            "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+            "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+          },
+          "qaReason": "Uusi v2 korjaa v1:n suuren avoimen pesäluolan: pesä on suljettu risukupu ja alaosassa pieni mudattu sisäänmeno. Linnun ja materiaalien rakenne on uskottava."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Hamerkopin ja katollisen risupesän havainnekuva.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lilongwe/illustration-qa-extra.json",
+        "fileSHA256": "cbf9e5f3f94c6b8c77c5af8bee52a0771c8cab2c9689dc0ebf4df0ee52ead646",
+        "item": {
+          "slot": "L3",
+          "targetJsonPath": "$.kaupunkilehti[1].nostot[2]",
+          "assetID": "e07-lilongwe-L3-v2-20261012",
+          "sha256": "738501962941b05f58ca3898b45a5ceccfedffe1c87d15c5a9e19fd43ab1a6a7",
+          "verdict": "accepted",
+          "reason": "Uusi v2 korjaa v1:n suuren avoimen pesäluolan: pesä on suljettu risukupu ja alaosassa pieni mudattu sisäänmeno. Linnun ja materiaalien rakenne on uskottava.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lilongwe/assets/e07-lilongwe-L3-v2-20261012/kuva.png",
+            "nativeSha256Verified": "738501962941b05f58ca3898b45a5ceccfedffe1c87d15c5a9e19fd43ab1a6a7",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Hamerkop kahdella jalalla oksalla, suuri suljettu risu- ja mutapesä puunhaarassa, pieni tumma pyöreä sisäänmeno alhaalla. Luontevat oksat ja höyhenpinta, ei tekstiä.",
+            "captionFi": "Hamerkopin ja katollisen risupesän havainnekuva.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lilongwe/sisalto.json",
+            "contentSha256": "03c2c151cbaa5b969cbdf368d2589fbc1fbc11c0bebc9dfd3825b2ddadc3a063",
+            "targetCurrentlyPresent": true,
+            "targetText": "Lingadzi-joen linnustossa esiintyvä hamerkop on ruskea vesilintu. Se etsii ravintoa matalasta vedestä ja syö muun muassa kaloja sekä sammakkoeläimiä. Sen pesä on suuri risurakennelma, jossa on kupolimainen katto, ja molemmat parin linnut osallistuvat rakentamiseen. Pesä ei siis ole vain avoin kuppi oksien välissä. Lajia koskevissa kuvauksissa myös muut eläimet voivat käyttää sen pesiä. Metsässä katollinen risurakenne on kiinnostava havainto, vaikka sen rakentajaa ei näkisi joka käynnillä.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lilongwe/faktapohja.md",
+            "factSheetSha256": "c40e874b42fa1894f52b3bb7097affe84a0c8683d6a660c42c8b570148a41277",
+            "topicEvidence": "L3:n kattoaihe ja paikallisen hamerkop.txt-lähteen pieni sisäänmeno/tunnelirakenne vastaavat v2:ta. Uusi native-SHA on tarkistettu erikseen.",
+            "sourceEvidence": [
+              {
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lilongwe/sisalto.json",
+                "contentSha256": "03c2c151cbaa5b969cbdf368d2589fbc1fbc11c0bebc9dfd3825b2ddadc3a063",
+                "targetJsonPath": "$.kaupunkilehti[1].nostot[2]",
+                "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lilongwe/faktapohja.md",
+                "evidenceMode": "source-backed text topic; generalized material/food/biological illustration, not exact place appearance",
+                "targetTextAtIssue": "Lingadzi-joen linnustossa esiintyvä hamerkop on ruskea vesilintu. Se etsii ravintoa matalasta vedestä ja syö muun muassa kaloja sekä sammakkoeläimiä. Sen pesä on suuri risurakennelma, jossa on kupolimainen katto, ja molemmat parin linnut osallistuvat rakentamiseen. Pesä ei siis ole vain avoin kuppi oksien välissä. Lajia koskevissa kuvauksissa myös muut eläimet voivat käyttää sen pesiä. Metsässä katollinen risurakenne on kiinnostava havainto, vaikka sen rakentajaa ei näkisi joka käynnillä."
+              }
+            ],
+            "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+            "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+          },
+          "reviewedAt": "2026-10-12T18:56:43.811096+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lilongwe/qa.json",
+            "sha256": "9ed200a517e9b2f6574a727418b5ec2ab63c507a36fb3a857f2eaf45fc35a58b"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lilongwe/illustration-qa-extra.json",
+            "sha256": "cbf9e5f3f94c6b8c77c5af8bee52a0771c8cab2c9689dc0ebf4df0ee52ead646"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/lilongwe/e07-lilongwe-L3-v2-20261012-738501962941.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/lilongwe/e07-lilongwe-L3-v2-20261012-738501962941.png?t=58635894f0c1d2ed",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/lilongwe/e07-lilongwe-L3-v2-20261012-738501962941.png",
+        "sha256": "58635894f0c1d2ed541b74e6f10b4fc898e41e3d939afb2ad2860f67463cacea",
+        "bytes": 3163848,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e07-lilongwe-L3-v2-20261012",
+        "nativeSHA256": "738501962941b05f58ca3898b45a5ceccfedffe1c87d15c5a9e19fd43ab1a6a7",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/lilongwe/e07-lilongwe-L3-v2-20261012-738501962941.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e07",
+        "city": "lilongwe",
+        "slot": "L3",
+        "targetJsonPath": "$.kaupunkilehti[1].nostot[2]",
+        "verifiedAt": "2026-10-12T18:57:05.465312+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/lilongwe/e07-lilongwe-L3-v2-20261012-738501962941.png",
+        "sha256": "58635894f0c1d2ed541b74e6f10b4fc898e41e3d939afb2ad2860f67463cacea",
+        "bytes": 3163848,
+        "SHAReadAt": "2026-10-12T19:03:34.603002+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "738501962941b05f58ca3898b45a5ceccfedffe1c87d15c5a9e19fd43ab1a6a7",
+        "rgbPixelSHA256": "70d904eef815d21aa63e207e6041c3b7b88fb1c686ac7263e67f195ae7e9645a",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "2f6d0e006b1b04cc9a459c316f6737355cbb7bf4d2de971ddb18a5c3aba4dd8a",
+      "targetAfterSHA256": "84164f3a1bbcc38a75e6c6302fc1cac8f0dfb50ec3b7ce4fc04f5894630a70a2",
+      "contextAfterSHA256": "84164f3a1bbcc38a75e6c6302fc1cac8f0dfb50ec3b7ce4fc04f5894630a70a2"
+    },
+    {
+      "era": "e07",
+      "city": "lilongwe",
+      "slot": "L4",
+      "type": "illustration",
+      "assetID": "e07-lilongwe-L4-v1-20261012",
+      "galleryImageID": "e07-lilongwe-L4-v1-20261012",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
+      "targetTokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        3
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/lilongwe/e07-lilongwe-L4-v1-20261012-b5c23932a303.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Metsän latvuskerroksen havainnekuva; ei Lilongwen latvuspolun valokuva.",
+        "lyhyt": "Metsän latvuskerroksen havainnekuva; ei Lilongwen latvuspolun valokuva."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/lilongwe/e07-lilongwe-L4-v1-20261012-b5c23932a303.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Metsän latvuskerroksen havainnekuva; ei Lilongwen latvuspolun valokuva.",
+        "lyhyt": "Metsän latvuskerroksen havainnekuva; ei Lilongwen latvuspolun valokuva."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "b5c23932a3036ba9df6cd6572978ef10f402b4b75f675937cb42bb499dc7b52f",
+      "exportSHA256": "c5c2d1d4fef07aea2a8bf62c8afc85150a5a41197aa45bfa1a6e782ed9d0c943",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/lilongwe/e07-lilongwe-L4-v1-20261012-b5c23932a303.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/lilongwe/e07-lilongwe-L4-v1-20261012-b5c23932a303.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/lilongwe/e07-lilongwe-L4-v1-20261012-b5c23932a303.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lilongwe/sisalto.json",
+      "sourceContentSHA256": "2f6d0e006b1b04cc9a459c316f6737355cbb7bf4d2de971ddb18a5c3aba4dd8a",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "90c21171a94d82353738ab472e9dcbef755ce98f14c0efd2b3e284dd1cf168c5",
+        "semanticContextSHA256": "90c21171a94d82353738ab472e9dcbef755ce98f14c0efd2b3e284dd1cf168c5",
+        "subjectTitle": "Metsän ylin kerros on elintila",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": [
+            "New generated illustration of natural subject or common utility object; no reproduction of a protected work.",
+            "Named buildings, identifiable people and exact contemporary art/design excluded."
+          ],
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lilongwe/assets/e07-lilongwe-L4-v1-20261012/kuva.png",
+            "nativeSha256Verified": "b5c23932a3036ba9df6cd6572978ef10f402b4b75f675937cb42bb499dc7b52f",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Ylöspäin kuvattu puiden latvusten, lehtien ja taivaan näkymä. Runkojen ja lehdistön valo luonnollista, ei keinotekoista polkua, rakennuksia tai tekstiä.",
+            "captionFi": "Metsän latvuskerroksen havainnekuva; ei Lilongwen latvuspolun valokuva.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lilongwe/sisalto.json",
+            "contentSha256": "03c2c151cbaa5b969cbdf368d2589fbc1fbc11c0bebc9dfd3825b2ddadc3a063",
+            "targetCurrentlyPresent": true,
+            "targetText": "Puulatvukset muodostavat metsän ylemmän kerroksen. Niissä elää lintuja, hyönteisiä ja muita eliöitä, samalla kun puut varjostavat alempia kasvustoja. Lilongwen metsäalueen vierailuopas esittelee tätä kerrosta havainnollistavan latvuspolun, jossa on käytetty myös kierrätettyä muovia. Ympäristökasvatus nostaa näin huomion maan pinnalta ylöspäin. Metsä ei ole vain runkojen välinen tila: latvuksessa on oma elinympäristönsä, jota voi tarkastella erillään suljetun eläinkuntoutusalueen toiminnasta.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lilongwe/faktapohja.md",
+            "factSheetSha256": "c40e874b42fa1894f52b3bb7097affe84a0c8683d6a660c42c8b570148a41277",
+            "topicEvidence": "L4 käsittelee puulatvuksia yleisenä elinympäristönä. Kuva hyväksytään yleiseen latvuskerrosaiheeseen, ei paikka- tai lajistotodisteeksi.",
+            "sourceEvidence": [
+              {
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lilongwe/sisalto.json",
+                "contentSha256": "03c2c151cbaa5b969cbdf368d2589fbc1fbc11c0bebc9dfd3825b2ddadc3a063",
+                "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
+                "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lilongwe/faktapohja.md",
+                "evidenceMode": "source-backed text topic; generalized material/food/biological illustration, not exact place appearance",
+                "targetTextAtIssue": "Puulatvukset muodostavat metsän ylemmän kerroksen. Niissä elää lintuja, hyönteisiä ja muita eliöitä, samalla kun puut varjostavat alempia kasvustoja. Lilongwen metsäalueen vierailuopas esittelee tätä kerrosta havainnollistavan latvuspolun, jossa on käytetty myös kierrätettyä muovia. Ympäristökasvatus nostaa näin huomion maan pinnalta ylöspäin. Metsä ei ole vain runkojen välinen tila: latvuksessa on oma elinympäristönsä, jota voi tarkastella erillään suljetun eläinkuntoutusalueen toiminnasta."
+              }
+            ],
+            "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+            "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+          },
+          "qaReason": "Yleinen ylöspäin katsottu latvuskerros havainnollistaa metsän rakennetta. Selite erottaa sen Lilongwen latvuspolun valokuvasta; puulajistoa ei saa esittää paikallisena lajiluettelona."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Metsän latvuskerroksen havainnekuva; ei Lilongwen latvuspolun valokuva.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lilongwe/illustration-qa-extra.json",
+        "fileSHA256": "cbf9e5f3f94c6b8c77c5af8bee52a0771c8cab2c9689dc0ebf4df0ee52ead646",
+        "item": {
+          "slot": "L4",
+          "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
+          "assetID": "e07-lilongwe-L4-v1-20261012",
+          "sha256": "b5c23932a3036ba9df6cd6572978ef10f402b4b75f675937cb42bb499dc7b52f",
+          "verdict": "accepted",
+          "reason": "Yleinen ylöspäin katsottu latvuskerros havainnollistaa metsän rakennetta. Selite erottaa sen Lilongwen latvuspolun valokuvasta; puulajistoa ei saa esittää paikallisena lajiluettelona.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lilongwe/assets/e07-lilongwe-L4-v1-20261012/kuva.png",
+            "nativeSha256Verified": "b5c23932a3036ba9df6cd6572978ef10f402b4b75f675937cb42bb499dc7b52f",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Ylöspäin kuvattu puiden latvusten, lehtien ja taivaan näkymä. Runkojen ja lehdistön valo luonnollista, ei keinotekoista polkua, rakennuksia tai tekstiä.",
+            "captionFi": "Metsän latvuskerroksen havainnekuva; ei Lilongwen latvuspolun valokuva.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lilongwe/sisalto.json",
+            "contentSha256": "03c2c151cbaa5b969cbdf368d2589fbc1fbc11c0bebc9dfd3825b2ddadc3a063",
+            "targetCurrentlyPresent": true,
+            "targetText": "Puulatvukset muodostavat metsän ylemmän kerroksen. Niissä elää lintuja, hyönteisiä ja muita eliöitä, samalla kun puut varjostavat alempia kasvustoja. Lilongwen metsäalueen vierailuopas esittelee tätä kerrosta havainnollistavan latvuspolun, jossa on käytetty myös kierrätettyä muovia. Ympäristökasvatus nostaa näin huomion maan pinnalta ylöspäin. Metsä ei ole vain runkojen välinen tila: latvuksessa on oma elinympäristönsä, jota voi tarkastella erillään suljetun eläinkuntoutusalueen toiminnasta.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lilongwe/faktapohja.md",
+            "factSheetSha256": "c40e874b42fa1894f52b3bb7097affe84a0c8683d6a660c42c8b570148a41277",
+            "topicEvidence": "L4 käsittelee puulatvuksia yleisenä elinympäristönä. Kuva hyväksytään yleiseen latvuskerrosaiheeseen, ei paikka- tai lajistotodisteeksi.",
+            "sourceEvidence": [
+              {
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lilongwe/sisalto.json",
+                "contentSha256": "03c2c151cbaa5b969cbdf368d2589fbc1fbc11c0bebc9dfd3825b2ddadc3a063",
+                "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
+                "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lilongwe/faktapohja.md",
+                "evidenceMode": "source-backed text topic; generalized material/food/biological illustration, not exact place appearance",
+                "targetTextAtIssue": "Puulatvukset muodostavat metsän ylemmän kerroksen. Niissä elää lintuja, hyönteisiä ja muita eliöitä, samalla kun puut varjostavat alempia kasvustoja. Lilongwen metsäalueen vierailuopas esittelee tätä kerrosta havainnollistavan latvuspolun, jossa on käytetty myös kierrätettyä muovia. Ympäristökasvatus nostaa näin huomion maan pinnalta ylöspäin. Metsä ei ole vain runkojen välinen tila: latvuksessa on oma elinympäristönsä, jota voi tarkastella erillään suljetun eläinkuntoutusalueen toiminnasta."
+              }
+            ],
+            "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+            "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+          },
+          "reviewedAt": "2026-10-12T18:35:29.473291+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lilongwe/qa.json",
+            "sha256": "9ed200a517e9b2f6574a727418b5ec2ab63c507a36fb3a857f2eaf45fc35a58b"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lilongwe/illustration-qa-extra.json",
+            "sha256": "cbf9e5f3f94c6b8c77c5af8bee52a0771c8cab2c9689dc0ebf4df0ee52ead646"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/lilongwe/e07-lilongwe-L4-v1-20261012-b5c23932a303.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/lilongwe/e07-lilongwe-L4-v1-20261012-b5c23932a303.png?t=c5c2d1d4fef07aea",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/lilongwe/e07-lilongwe-L4-v1-20261012-b5c23932a303.png",
+        "sha256": "c5c2d1d4fef07aea2a8bf62c8afc85150a5a41197aa45bfa1a6e782ed9d0c943",
+        "bytes": 3565081,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e07-lilongwe-L4-v1-20261012",
+        "nativeSHA256": "b5c23932a3036ba9df6cd6572978ef10f402b4b75f675937cb42bb499dc7b52f",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/lilongwe/e07-lilongwe-L4-v1-20261012-b5c23932a303.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e07",
+        "city": "lilongwe",
+        "slot": "L4",
+        "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
+        "verifiedAt": "2026-10-12T18:35:39.979508+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/lilongwe/e07-lilongwe-L4-v1-20261012-b5c23932a303.png",
+        "sha256": "c5c2d1d4fef07aea2a8bf62c8afc85150a5a41197aa45bfa1a6e782ed9d0c943",
+        "bytes": 3565081,
+        "SHAReadAt": "2026-10-12T18:35:35.679372+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "b5c23932a3036ba9df6cd6572978ef10f402b4b75f675937cb42bb499dc7b52f",
+        "rgbPixelSHA256": "173c1e7db96390ca210986d477372ef81fd8b96e2591a6c2136b64b0dd493f5b",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "2f6d0e006b1b04cc9a459c316f6737355cbb7bf4d2de971ddb18a5c3aba4dd8a",
+      "targetAfterSHA256": "90c21171a94d82353738ab472e9dcbef755ce98f14c0efd2b3e284dd1cf168c5",
+      "contextAfterSHA256": "90c21171a94d82353738ab472e9dcbef755ce98f14c0efd2b3e284dd1cf168c5"
+    },
+    {
+      "era": "e07",
+      "city": "lilongwe",
+      "slot": "PHOTO",
+      "type": "commons",
+      "assetID": "capital-cc-e07-lilongwe-photo-249675ed384d2637",
+      "galleryImageID": "capital-cc-e07-lilongwe-photo-249675ed384d2637",
+      "commonsFile": "Kanengo, Lilongwe, Malawi - panoramio (2).jpg",
+      "targetJsonPath": "$.valokuva",
+      "targetTokens": [
+        "valokuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e07/lilongwe/photo-249675ed384d2637bd3f.jpg",
+        "suora": true,
+        "lahde": "Timon Zingg, Commons (CC BY-SA 3.0)",
+        "selite": "Nosturi Kanengon alueella Lilongwessa.",
+        "lyhyt": "Nosturi Kanengon alueella Lilongwessa.",
+        "tiedosto": "Kanengo, Lilongwe, Malawi - panoramio (2).jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Timon Zingg, Commons (CC BY-SA 3.0)",
+        "selite": "Nosturi Kanengon alueella Lilongwessa.",
+        "lyhyt": "Nosturi Kanengon alueella Lilongwessa.",
+        "tiedosto": "Kanengo, Lilongwe, Malawi - panoramio (2).jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e07/lilongwe/photo-249675ed384d2637bd3f.jpg",
+        "suora": true,
+        "lahde": "Timon Zingg, Commons (CC BY-SA 3.0)",
+        "selite": "Nosturi Kanengon alueella Lilongwessa.",
+        "lyhyt": "Nosturi Kanengon alueella Lilongwessa.",
+        "tiedosto": "Kanengo, Lilongwe, Malawi - panoramio (2).jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "249675ed384d2637bd3fb20024d326ecbf3dd59097c119747a8afe85ada927f5",
+      "exportSHA256": "249675ed384d2637bd3fb20024d326ecbf3dd59097c119747a8afe85ada927f5",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e07/lilongwe/photo-249675ed384d2637bd3f.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e07/lilongwe/photo-249675ed384d2637bd3f.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/commons-originals/e07/lilongwe/a57281f85cab8c57eea55c02acfacdb46d5a45aaf56f36c345344038c5f0a255.jpg",
+      "dimensions": [
+        3648,
+        2736
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lilongwe/sisalto.json",
+      "sourceContentSHA256": "2f6d0e006b1b04cc9a459c316f6737355cbb7bf4d2de971ddb18a5c3aba4dd8a",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "28c77f2f7a7bf8488a1d13c732b0e3ef15a6543a8604323ff4deefafdd7e4732",
+        "semanticContextSHA256": "28c77f2f7a7bf8488a1d13c732b0e3ef15a6543a8604323ff4deefafdd7e4732",
+        "subjectTitle": "lilongwe — aito paikkavalokuva",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Timon Zingg",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Kanengo,_Lilongwe,_Malawi_-_panoramio_(2).jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c5/Kanengo%2C_Lilongwe%2C_Malawi_-_panoramio_%282%29.jpg",
+        "rightsEvidence": {
+          "selection": [
+            "Kuvan Author/Artist-kenttä ja valokuvan oma lisenssimalli tarkistettu tallennetusta Commons-lähteestä; upload-historian nimeä ei käytetä tekijänä. Lisenssiversion linkki on valokuvan lisenssiosassa, ei Commons-sivun yleinen alatunnistelupa.",
+            "Pääaihe tavanomainen toiminnallinen teollisuusnosturi; ei nimetty moderni taideteos tai arkkitehtuuri pääteoksena. Luonnolliset mallimerkinnät arvioitu omistajan UHER-tarkennuksen mukaan. Kuvaajan Panoramio-otsikko ja Commons Description Kanengo, Lilongwe, Malawi todentavat paikan. CC BY-SA 3.0 todennettu.",
+            "Silmin katsottu alkuperäinen: Todellinen käyttönosturi ja ratapihan ympäristö, ei henkilöitä, lisättyä tekstiä, logoa/vesileimaa tai kehystä kuvan päällä. Valmistajan Carruthers/Monobox-merkinnät ovat itse nosturissa, eivät mainos- tai pakkauskuva."
+          ],
+          "QA": {
+            "rows": [
+              [
+                "Description Kanengo, Lilongwe, Malawi - panoramio (2).jpg",
+                "Kanengo, Lilongwe, Malawi"
+              ],
+              [
+                "Date",
+                "Taken on 12 July 2011"
+              ],
+              [
+                "Source",
+                "https://web.archive.org/web/20161101171129/http://www.panoramio.com/photo/110168951"
+              ],
+              [
+                "Author",
+                "Timon Zingg"
+              ]
+            ],
+            "licenses": [
+              "CC BY-SA 3.0"
+            ],
+            "publicDomainTemplateText": [],
+            "pageDimensions": [
+              3648,
+              2736
+            ],
+            "actualDimensions": [
+              3648,
+              2736
+            ],
+            "pageSha256": "c7649d493aea2d3b57b608daa4843cb115a3e9472f648dcba83f3edf946e740b",
+            "nativeSha256": "249675ed384d2637bd3fb20024d326ecbf3dd59097c119747a8afe85ada927f5",
+            "cached": false,
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Kanengo,_Lilongwe,_Malawi_-_panoramio_(2).jpg",
+            "sourcePageEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lilongwe/qa-evidence/source-photo-53856c6eb962.html",
+            "viewPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lilongwe/cc-evidence/meta-04.jpg",
+            "localMatchesManifestSHA": true,
+            "personallyViewed": true,
+            "sourceMetadataProof": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lilongwe/qa-evidence/source-photo-53856c6eb962.json",
+            "author": "Timon Zingg",
+            "authorFieldVerified": true,
+            "license": "CC BY-SA 3.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+            "explicitPDRelease": null,
+            "existingGameUseHits": [],
+            "reuseSearchScope": "e04-e14 game JS, sisalto.json and rooli-asset-liite.json; filename/underscores/encoded name/original URL",
+            "captionFi": "Nosturi Kanengon alueella Lilongwessa.",
+            "sourceContentSHA256": "03c2c151cbaa5b969cbdf368d2589fbc1fbc11c0bebc9dfd3825b2ddadc3a063",
+            "targetParentExists": true,
+            "imageLeafMayBeEmpty": true,
+            "rightsScope": "Täsmäkuvan näkyvä pääaihe ja taustan osien arvio kuvattu reason-kentässä. Valokuvan lupa on erillinen; ei lupa irrottaa kuvan sivuosan rakennusta/taidetta omaksi kohdekuvaksi."
+          },
+          "qaReason": "Aito Kanengossa Lilongwessa kuvattu käyttönosturi; alkuperäisen Description ja Panoramio-lähde nimeävät paikan. 3648×2736 alkuperäispikselit tarkastettu. Ei ihmisiä tai lisättyä tekstiä/vesileimaa. Carruthers/Monobox-mallikilvet ovat luonnollisia koneessa, eivät kuvapäälle lisättyä logoa tai mainos-/pakkauskuva. Tavallinen toiminnallinen kone, ei osoitettua luovaa taideteosta. PHOTO saa olla paikallinen yksityiskohta, ei panoraamapakkoa. Vuosi2011."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Nosturi Kanengon alueella Lilongwessa.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lilongwe/qa.json",
+        "fileSHA256": "9ed200a517e9b2f6574a727418b5ec2ab63c507a36fb3a857f2eaf45fc35a58b",
+        "item": {
+          "slot": "PHOTO",
+          "targetJsonPath": "$.valokuva",
+          "commonsFile": "Kanengo, Lilongwe, Malawi - panoramio (2).jpg",
+          "sha256": "249675ed384d2637bd3fb20024d326ecbf3dd59097c119747a8afe85ada927f5",
+          "verdict": "accepted",
+          "reason": "Aito Kanengossa Lilongwessa kuvattu käyttönosturi; alkuperäisen Description ja Panoramio-lähde nimeävät paikan. 3648×2736 alkuperäispikselit tarkastettu. Ei ihmisiä tai lisättyä tekstiä/vesileimaa. Carruthers/Monobox-mallikilvet ovat luonnollisia koneessa, eivät kuvapäälle lisättyä logoa tai mainos-/pakkauskuva. Tavallinen toiminnallinen kone, ei osoitettua luovaa taideteosta. PHOTO saa olla paikallinen yksityiskohta, ei panoraamapakkoa. Vuosi2011.",
+          "required": true,
+          "reviewedAt": "2026-10-12T19:19:54.340351+00:00",
+          "evidence": {
+            "rows": [
+              [
+                "Description Kanengo, Lilongwe, Malawi - panoramio (2).jpg",
+                "Kanengo, Lilongwe, Malawi"
+              ],
+              [
+                "Date",
+                "Taken on 12 July 2011"
+              ],
+              [
+                "Source",
+                "https://web.archive.org/web/20161101171129/http://www.panoramio.com/photo/110168951"
+              ],
+              [
+                "Author",
+                "Timon Zingg"
+              ]
+            ],
+            "licenses": [
+              "CC BY-SA 3.0"
+            ],
+            "publicDomainTemplateText": [],
+            "pageDimensions": [
+              3648,
+              2736
+            ],
+            "actualDimensions": [
+              3648,
+              2736
+            ],
+            "pageSha256": "c7649d493aea2d3b57b608daa4843cb115a3e9472f648dcba83f3edf946e740b",
+            "nativeSha256": "249675ed384d2637bd3fb20024d326ecbf3dd59097c119747a8afe85ada927f5",
+            "cached": false,
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Kanengo,_Lilongwe,_Malawi_-_panoramio_(2).jpg",
+            "sourcePageEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lilongwe/qa-evidence/source-photo-53856c6eb962.html",
+            "viewPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lilongwe/cc-evidence/meta-04.jpg",
+            "localMatchesManifestSHA": true,
+            "personallyViewed": true,
+            "sourceMetadataProof": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lilongwe/qa-evidence/source-photo-53856c6eb962.json",
+            "author": "Timon Zingg",
+            "authorFieldVerified": true,
+            "license": "CC BY-SA 3.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+            "explicitPDRelease": null,
+            "existingGameUseHits": [],
+            "reuseSearchScope": "e04-e14 game JS, sisalto.json and rooli-asset-liite.json; filename/underscores/encoded name/original URL",
+            "captionFi": "Nosturi Kanengon alueella Lilongwessa.",
+            "sourceContentSHA256": "03c2c151cbaa5b969cbdf368d2589fbc1fbc11c0bebc9dfd3825b2ddadc3a063",
+            "targetParentExists": true,
+            "imageLeafMayBeEmpty": true,
+            "rightsScope": "Täsmäkuvan näkyvä pääaihe ja taustan osien arvio kuvattu reason-kentässä. Valokuvan lupa on erillinen; ei lupa irrottaa kuvan sivuosan rakennusta/taidetta omaksi kohdekuvaksi."
+          }
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lilongwe/qa.json",
+            "sha256": "9ed200a517e9b2f6574a727418b5ec2ab63c507a36fb3a857f2eaf45fc35a58b"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lilongwe/illustration-qa-extra.json",
+            "sha256": "cbf9e5f3f94c6b8c77c5af8bee52a0771c8cab2c9689dc0ebf4df0ee52ead646"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e07",
+        "city": "lilongwe",
+        "slot": "PHOTO",
+        "targetJsonPath": "$.valokuva",
+        "commonsFile": "Kanengo, Lilongwe, Malawi - panoramio (2).jpg",
+        "sha256": "249675ed384d2637bd3fb20024d326ecbf3dd59097c119747a8afe85ada927f5",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Kanengo,_Lilongwe,_Malawi_-_panoramio_(2).jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c5/Kanengo%2C_Lilongwe%2C_Malawi_-_panoramio_%282%29.jpg",
+        "author": "Timon Zingg",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "width": 3648,
+        "height": 2736,
+        "originalSHA256": "249675ed384d2637bd3fb20024d326ecbf3dd59097c119747a8afe85ada927f5",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e07/lilongwe/photo-249675ed384d2637bd3f.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e07/lilongwe/photo-249675ed384d2637bd3f.jpg",
+        "bytes": 3627074,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T19:21:40.456086+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "Kanengo, Lilongwe, Malawi - panoramio (2).jpg",
+        "lahde": "Timon Zingg, Commons (CC BY-SA 3.0)",
+        "selite": "Nosturi Kanengon alueella Lilongwessa.",
+        "lyhyt": "Nosturi Kanengon alueella Lilongwessa."
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Timon Zingg, Commons (CC BY-SA 3.0)",
+        "selite": "Nosturi Kanengon alueella Lilongwessa.",
+        "lyhyt": "Nosturi Kanengon alueella Lilongwessa.",
+        "tiedosto": "Kanengo, Lilongwe, Malawi - panoramio (2).jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "2f6d0e006b1b04cc9a459c316f6737355cbb7bf4d2de971ddb18a5c3aba4dd8a",
+      "targetAfterSHA256": "28c77f2f7a7bf8488a1d13c732b0e3ef15a6543a8604323ff4deefafdd7e4732",
+      "contextAfterSHA256": "28c77f2f7a7bf8488a1d13c732b0e3ef15a6543a8604323ff4deefafdd7e4732"
+    },
+    {
+      "era": "e07",
+      "city": "lilongwe",
+      "slot": "C1",
+      "type": "commons",
+      "assetID": "capital-cc-e07-lilongwe-c1-b3cf55a88d92993c",
+      "galleryImageID": "capital-cc-e07-lilongwe-c1-b3cf55a88d92993c",
+      "commonsFile": "Lilongwe Area 2.jpg",
+      "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "kansikuvat",
+        0
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e07/lilongwe/c1-b3cf55a88d92993cf906.jpg",
+        "suora": true,
+        "lahde": "Brian Dell, Wikimedia Commons (PD)",
+        "selite": "Lilongwen Area 2 -alueen katunäkymä.",
+        "lyhyt": "Lilongwen Area 2 -alueen katunäkymä.",
+        "tiedosto": "Lilongwe Area 2.jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Brian Dell, Wikimedia Commons (PD)",
+        "selite": "Lilongwen Area 2 -alueen katunäkymä.",
+        "lyhyt": "Lilongwen Area 2 -alueen katunäkymä.",
+        "tiedosto": "Lilongwe Area 2.jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e07/lilongwe/c1-b3cf55a88d92993cf906.jpg",
+        "suora": true,
+        "lahde": "Brian Dell, Wikimedia Commons (PD)",
+        "selite": "Lilongwen Area 2 -alueen katunäkymä.",
+        "lyhyt": "Lilongwen Area 2 -alueen katunäkymä.",
+        "tiedosto": "Lilongwe Area 2.jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "b3cf55a88d92993cf9067698a1dcd42b3d8650921d0d4ab39fae591e072caa9d",
+      "exportSHA256": "b3cf55a88d92993cf9067698a1dcd42b3d8650921d0d4ab39fae591e072caa9d",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e07/lilongwe/c1-b3cf55a88d92993cf906.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e07/lilongwe/c1-b3cf55a88d92993cf906.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/commons-originals/e07/lilongwe/f51356bffd9cd78a78765cbdb5610251a17708c179a06cb7826639b9faff74ba.jpg",
+      "dimensions": [
+        1229,
+        859
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lilongwe/sisalto.json",
+      "sourceContentSHA256": "2f6d0e006b1b04cc9a459c316f6737355cbb7bf4d2de971ddb18a5c3aba4dd8a",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "5e225ba60080eb24970fc515d2989f3bb4fa78e240cdbd225ddbd779820ec8cb",
+        "semanticContextSHA256": "5e225ba60080eb24970fc515d2989f3bb4fa78e240cdbd225ddbd779820ec8cb",
+        "subjectTitle": "Lilongwe",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Brian Dell",
+        "license": "PD",
+        "licenseUrl": "https://commons.wikimedia.org/wiki/File:Lilongwe_Area_2.jpg#Licensing",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Lilongwe_Area_2.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/9/99/Lilongwe_Area_2.jpg",
+        "rightsEvidence": {
+          "selection": [
+            "Kuvan Author/Artist-kenttä ja valokuvan oma lisenssimalli tarkistettu tallennetusta Commons-lähteestä; upload-historian nimeä ei käytetä tekijänä. Lisenssiversion linkki on valokuvan lisenssiosassa, ei Commons-sivun yleinen alatunnistelupa.",
+            "Pääaihe on kaupunkitila ja liikenne, yksittäinen suojattu teos ei kuvan pääaihe. Alkuperäinen kuvaajan tiedostonimi Lilongwe Area 2, Source Own work, Author Brian Dell. Commonsin valokuvan PD-luovutus erillisenä kerroksena, ei arkkitehtuurin blanketlupa.",
+            "Silmin katsottu alkuperäinen: Laaja todellinen katu-/liikennenäkymä, kauppoja, puita ja rakennuksia; ei lähikuvaa henkilöistä eikä tunnistettavia kasvopiirteitä. Luonnollisia myymäläkylttejä, ei lisättyä tekstiä, vesileimaa tai kehystä. Ei nimetä yksittäistä moskeijaa tai muuta rakennusta pääteokseksi."
+          ],
+          "QA": {
+            "rows": [
+              [
+                "Description Lilongwe Area 2.jpg",
+                "English: view east into Area 2 of Old Town Lilongwe, Malawi. View is from a pedestrian overpass. The Lilongwe River runs north-south 100 or 150 meters behind the camera. Altimeter 1055 meters."
+              ],
+              [
+                "Date",
+                "15 October 2008"
+              ],
+              [
+                "Source",
+                "Own work"
+              ],
+              [
+                "Author",
+                "Brian Dell"
+              ]
+            ],
+            "licenses": [
+              "Public domain"
+            ],
+            "publicDomainTemplateText": [
+              "Public domain Public domain false false"
+            ],
+            "pageDimensions": [
+              1229,
+              859
+            ],
+            "actualDimensions": [
+              1229,
+              859
+            ],
+            "pageSha256": "6ec9dcc81af1e47ec3aebaea091c7c1f935378e1aefd528dcfce36be1b2c5bc0",
+            "nativeSha256": "b3cf55a88d92993cf9067698a1dcd42b3d8650921d0d4ab39fae591e072caa9d",
+            "cached": false,
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Lilongwe_Area_2.jpg",
+            "sourcePageEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lilongwe/qa-evidence/source-c1-c1dbdd1e9297.html",
+            "viewPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lilongwe/cc-evidence/meta-01.jpg",
+            "localMatchesManifestSHA": true,
+            "personallyViewed": true,
+            "sourceMetadataProof": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lilongwe/qa-evidence/source-c1-c1dbdd1e9297.json",
+            "author": "Brian Dell",
+            "authorFieldVerified": true,
+            "license": "PD",
+            "licenseUrl": "https://commons.wikimedia.org/wiki/File:Lilongwe_Area_2.jpg#Licensing",
+            "explicitPDRelease": {
+              "explicitHolderReleaseVerified": true,
+              "nature": "Kuvaaja luovuttaa teoksen public domainiin maailmanlaajuisesti; ellei kansallinen laki salli, tarjoaa käyttöoikeuden kaikkiin tarkoituksiin ilman ehtoja paitsi lain edellyttämät."
+            },
+            "existingGameUseHits": [],
+            "reuseSearchScope": "e04-e14 game JS, sisalto.json and rooli-asset-liite.json; filename/underscores/encoded name/original URL",
+            "captionFi": "Lilongwen Area 2 -alueen katunäkymä.",
+            "sourceContentSHA256": "03c2c151cbaa5b969cbdf368d2589fbc1fbc11c0bebc9dfd3825b2ddadc3a063",
+            "targetParentExists": true,
+            "imageLeafMayBeEmpty": true,
+            "rightsScope": "Täsmäkuvan näkyvä pääaihe ja taustan osien arvio kuvattu reason-kentässä. Valokuvan lupa on erillinen; ei lupa irrottaa kuvan sivuosan rakennusta/taidetta omaksi kohdekuvaksi."
+          },
+          "qaReason": "Alkuperäinen Description yksilöi näkymän itään Lilongwen Old Town Area2:een jalankulkusillalta. Valokuvan tekijä Brian Dell ja PD-self-luovutus tarkistettu lähteen valokuvan Licensing-osiosta, ei rakennuksen iästä. Todellinen laaja katu ja liikenne; kasvoista ei erotu tunnistettavia yksityiskohtia. Myymäläkyltit fyysisiä ympäristössä eivätkä kuvan päämainos. Moskeija ja tavallinen rakennusrivi kokonaisuuden sivuosia, ei yksittäisen teoksen pääkuva. Alkuperäinen1229×859 ylittää1200leveyden. Vuosi2008."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Lilongwen Area 2 -alueen katunäkymä.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lilongwe/qa.json",
+        "fileSHA256": "9ed200a517e9b2f6574a727418b5ec2ab63c507a36fb3a857f2eaf45fc35a58b",
+        "item": {
+          "slot": "C1",
+          "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
+          "commonsFile": "Lilongwe Area 2.jpg",
+          "sha256": "b3cf55a88d92993cf9067698a1dcd42b3d8650921d0d4ab39fae591e072caa9d",
+          "verdict": "accepted",
+          "reason": "Alkuperäinen Description yksilöi näkymän itään Lilongwen Old Town Area2:een jalankulkusillalta. Valokuvan tekijä Brian Dell ja PD-self-luovutus tarkistettu lähteen valokuvan Licensing-osiosta, ei rakennuksen iästä. Todellinen laaja katu ja liikenne; kasvoista ei erotu tunnistettavia yksityiskohtia. Myymäläkyltit fyysisiä ympäristössä eivätkä kuvan päämainos. Moskeija ja tavallinen rakennusrivi kokonaisuuden sivuosia, ei yksittäisen teoksen pääkuva. Alkuperäinen1229×859 ylittää1200leveyden. Vuosi2008.",
+          "required": true,
+          "reviewedAt": "2026-10-12T19:19:54.340351+00:00",
+          "evidence": {
+            "rows": [
+              [
+                "Description Lilongwe Area 2.jpg",
+                "English: view east into Area 2 of Old Town Lilongwe, Malawi. View is from a pedestrian overpass. The Lilongwe River runs north-south 100 or 150 meters behind the camera. Altimeter 1055 meters."
+              ],
+              [
+                "Date",
+                "15 October 2008"
+              ],
+              [
+                "Source",
+                "Own work"
+              ],
+              [
+                "Author",
+                "Brian Dell"
+              ]
+            ],
+            "licenses": [
+              "Public domain"
+            ],
+            "publicDomainTemplateText": [
+              "Public domain Public domain false false"
+            ],
+            "pageDimensions": [
+              1229,
+              859
+            ],
+            "actualDimensions": [
+              1229,
+              859
+            ],
+            "pageSha256": "6ec9dcc81af1e47ec3aebaea091c7c1f935378e1aefd528dcfce36be1b2c5bc0",
+            "nativeSha256": "b3cf55a88d92993cf9067698a1dcd42b3d8650921d0d4ab39fae591e072caa9d",
+            "cached": false,
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Lilongwe_Area_2.jpg",
+            "sourcePageEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lilongwe/qa-evidence/source-c1-c1dbdd1e9297.html",
+            "viewPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lilongwe/cc-evidence/meta-01.jpg",
+            "localMatchesManifestSHA": true,
+            "personallyViewed": true,
+            "sourceMetadataProof": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lilongwe/qa-evidence/source-c1-c1dbdd1e9297.json",
+            "author": "Brian Dell",
+            "authorFieldVerified": true,
+            "license": "PD",
+            "licenseUrl": "https://commons.wikimedia.org/wiki/File:Lilongwe_Area_2.jpg#Licensing",
+            "explicitPDRelease": {
+              "explicitHolderReleaseVerified": true,
+              "nature": "Kuvaaja luovuttaa teoksen public domainiin maailmanlaajuisesti; ellei kansallinen laki salli, tarjoaa käyttöoikeuden kaikkiin tarkoituksiin ilman ehtoja paitsi lain edellyttämät."
+            },
+            "existingGameUseHits": [],
+            "reuseSearchScope": "e04-e14 game JS, sisalto.json and rooli-asset-liite.json; filename/underscores/encoded name/original URL",
+            "captionFi": "Lilongwen Area 2 -alueen katunäkymä.",
+            "sourceContentSHA256": "03c2c151cbaa5b969cbdf368d2589fbc1fbc11c0bebc9dfd3825b2ddadc3a063",
+            "targetParentExists": true,
+            "imageLeafMayBeEmpty": true,
+            "rightsScope": "Täsmäkuvan näkyvä pääaihe ja taustan osien arvio kuvattu reason-kentässä. Valokuvan lupa on erillinen; ei lupa irrottaa kuvan sivuosan rakennusta/taidetta omaksi kohdekuvaksi."
+          }
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lilongwe/qa.json",
+            "sha256": "9ed200a517e9b2f6574a727418b5ec2ab63c507a36fb3a857f2eaf45fc35a58b"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lilongwe/illustration-qa-extra.json",
+            "sha256": "cbf9e5f3f94c6b8c77c5af8bee52a0771c8cab2c9689dc0ebf4df0ee52ead646"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e07",
+        "city": "lilongwe",
+        "slot": "C1",
+        "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
+        "commonsFile": "Lilongwe Area 2.jpg",
+        "sha256": "b3cf55a88d92993cf9067698a1dcd42b3d8650921d0d4ab39fae591e072caa9d",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Lilongwe_Area_2.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/9/99/Lilongwe_Area_2.jpg",
+        "author": "Brian Dell",
+        "license": "PD",
+        "licenseUrl": "https://commons.wikimedia.org/wiki/File:Lilongwe_Area_2.jpg#Licensing",
+        "width": 1229,
+        "height": 859,
+        "originalSHA256": "b3cf55a88d92993cf9067698a1dcd42b3d8650921d0d4ab39fae591e072caa9d",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e07/lilongwe/c1-b3cf55a88d92993cf906.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e07/lilongwe/c1-b3cf55a88d92993cf906.jpg",
+        "bytes": 359112,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T19:21:42.088826+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "Lilongwe Area 2.jpg",
+        "lahde": "Brian Dell, Wikimedia Commons (PD)",
+        "selite": "Lilongwen Area 2 -alueen katunäkymä.",
+        "lyhyt": "Lilongwen Area 2 -alueen katunäkymä."
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Brian Dell, Wikimedia Commons (PD)",
+        "selite": "Lilongwen Area 2 -alueen katunäkymä.",
+        "lyhyt": "Lilongwen Area 2 -alueen katunäkymä.",
+        "tiedosto": "Lilongwe Area 2.jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "2f6d0e006b1b04cc9a459c316f6737355cbb7bf4d2de971ddb18a5c3aba4dd8a",
+      "targetAfterSHA256": "5e225ba60080eb24970fc515d2989f3bb4fa78e240cdbd225ddbd779820ec8cb",
+      "contextAfterSHA256": "5e225ba60080eb24970fc515d2989f3bb4fa78e240cdbd225ddbd779820ec8cb"
+    }
+  ],
+  "runtimeIntegrationPending": true,
+  "ownerAcceptedNotImpliedByAuthorization": true,
+  "gameIntegrated": false
+}

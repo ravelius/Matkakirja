@@ -1,0 +1,2395 @@
+{
+  "schemaVersion": "capital-city-role-assets/v1",
+  "era": "e07",
+  "city": "juba",
+  "authorization": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+  "sourceContentAfterSHA256": "7af8736d59562bc3eb4c569bdf734e3a011f2cfa23e213f02cd7d029d5c5b136",
+  "assets": [
+    {
+      "era": "e07",
+      "city": "juba",
+      "slot": "O4",
+      "type": "illustration",
+      "assetID": "e07-juba-O4-v1-20261012",
+      "galleryImageID": "e07-juba-O4-v1-20261012",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "matkailijalle",
+        "artikkeli",
+        "jaksot",
+        3,
+        "kuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/juba/e07-juba-O4-v1-20261012-b3c882a3a6dc.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Härkäpapuaterian havainnekuva; ei Juban ravintolavalokuva.",
+        "lyhyt": "Härkäpapuaterian havainnekuva; ei Juban ravintolavalokuva."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/juba/e07-juba-O4-v1-20261012-b3c882a3a6dc.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Härkäpapuaterian havainnekuva; ei Juban ravintolavalokuva.",
+        "lyhyt": "Härkäpapuaterian havainnekuva; ei Juban ravintolavalokuva."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "b3c882a3a6dc3ace90e8d16da8261e64d6b8dee5033cad5cb7dd8a67390dcb5c",
+      "exportSHA256": "78994ba3ca3011acf05acf16847de07f1ff9bd31f3a23675e19a99da5be0590b",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/juba/e07-juba-O4-v1-20261012-b3c882a3a6dc.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/juba/e07-juba-O4-v1-20261012-b3c882a3a6dc.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/juba/e07-juba-O4-v1-20261012-b3c882a3a6dc.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/juba/sisalto.json",
+      "sourceContentSHA256": "7af8736d59562bc3eb4c569bdf734e3a011f2cfa23e213f02cd7d029d5c5b136",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "64f26854fef7bcadaf90717fa753e3308382d13ad9ef69aa7543cecd21001ee5",
+        "subjectTitle": "Ruokaperinne",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": [
+            "Food and common plain tableware; no protected work, logo or identifiable restaurant."
+          ],
+          "QA": {
+            "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/juba/assets/e07-juba-O4-v1-20261012/kuva.png",
+            "width": 1536,
+            "height": 1024,
+            "sha256": "b3c882a3a6dc3ace90e8d16da8261e64d6b8dee5033cad5cb7dd8a67390dcb5c",
+            "auditEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/juba/qa-evidence/952e69c257c0-technical-source.json",
+            "visualViewed": true,
+            "visualNotes": "Kypsät härkäpavut, tavallinen astia ja ruoan ainespinnat uskottavia. Ei kasvoja, logoja, pakkausta tai suojattua teosta. Opasjakson varsinainen teksti luettu kuvalehtikentän asemesta: ful medames mainittu. Yleistetty ateriahavainne, ei Juban ravintolavalokuva tai täydellisen paikallisen reseptin todistus.",
+            "captionFi": "Härkäpapuaterian havainnekuva; ei Juban ravintolavalokuva.",
+            "imageType": "illustration",
+            "realPlacePhotograph": false,
+            "rights": "Tavallinen kirja ilman kansiteosta, luonnonmateriaali tai elintarvike/astia"
+          },
+          "qaReason": "Kypsät härkäpavut, tavallinen astia ja ruoan ainespinnat uskottavia. Ei kasvoja, logoja, pakkausta tai suojattua teosta. Opasjakson varsinainen teksti luettu kuvalehtikentän asemesta: ful medames mainittu. Yleistetty ateriahavainne, ei Juban ravintolavalokuva tai täydellisen paikallisen reseptin todistus."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Härkäpapuaterian havainnekuva; ei Juban ravintolavalokuva.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/juba/qa.json",
+        "fileSHA256": "e468dcf42bc80f02f7dd18637edca1ef9526d6113d945b3639fb3a5222e3e05d",
+        "item": {
+          "slot": "O4",
+          "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+          "assetID": "e07-juba-O4-v1-20261012",
+          "sha256": "b3c882a3a6dc3ace90e8d16da8261e64d6b8dee5033cad5cb7dd8a67390dcb5c",
+          "verdict": "accepted",
+          "reason": "Kypsät härkäpavut, tavallinen astia ja ruoan ainespinnat uskottavia. Ei kasvoja, logoja, pakkausta tai suojattua teosta. Opasjakson varsinainen teksti luettu kuvalehtikentän asemesta: ful medames mainittu. Yleistetty ateriahavainne, ei Juban ravintolavalokuva tai täydellisen paikallisen reseptin todistus.",
+          "evidence": {
+            "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/juba/assets/e07-juba-O4-v1-20261012/kuva.png",
+            "width": 1536,
+            "height": 1024,
+            "sha256": "b3c882a3a6dc3ace90e8d16da8261e64d6b8dee5033cad5cb7dd8a67390dcb5c",
+            "auditEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/juba/qa-evidence/952e69c257c0-technical-source.json",
+            "visualViewed": true,
+            "visualNotes": "Kypsät härkäpavut, tavallinen astia ja ruoan ainespinnat uskottavia. Ei kasvoja, logoja, pakkausta tai suojattua teosta. Opasjakson varsinainen teksti luettu kuvalehtikentän asemesta: ful medames mainittu. Yleistetty ateriahavainne, ei Juban ravintolavalokuva tai täydellisen paikallisen reseptin todistus.",
+            "captionFi": "Härkäpapuaterian havainnekuva; ei Juban ravintolavalokuva.",
+            "imageType": "illustration",
+            "realPlacePhotograph": false,
+            "rights": "Tavallinen kirja ilman kansiteosta, luonnonmateriaali tai elintarvike/astia"
+          },
+          "checkedAt": "2026-10-12T18:48:20.522748+00:00",
+          "contentSHA256": "0fb60dfba3ce5b20a3d1c75c1b64306c6995c563f34d9f75d6120544bd10eefa",
+          "targetSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+          "independentReviews": [
+            {
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/juba/illustration-qa-extra.json",
+              "sha256": "4abb90298b6ef8e3d2019cf409bc82a458873049f0daeb850f502712fb7e6d4f",
+              "reviewerGroup": "kuvitus-2",
+              "assetID": "e07-juba-O4-v1-20261012",
+              "nativeSHA256": "b3c882a3a6dc3ace90e8d16da8261e64d6b8dee5033cad5cb7dd8a67390dcb5c",
+              "verdict": "accepted",
+              "reason": "Härkäpapuateria vastaa tekstin ful medames -aihetta; selite ei väitä annosta paikalliseksi ravintolavalokuvaksi.",
+              "evidence": {
+                "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/juba/assets/e07-juba-O4-v1-20261012/kuva.png",
+                "nativeSha256Verified": "b3c882a3a6dc3ace90e8d16da8261e64d6b8dee5033cad5cb7dd8a67390dcb5c",
+                "nativeWidth": 1536,
+                "nativeHeight": 1024,
+                "format": "PNG",
+                "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Kypsiä osin murskattuja härkäpapuja kulhossa, öljyä ja valkosipulimaisia paloja sekä leipää. Uskottavat ruokapinnat, luonnonvalo, ei tekstiä tai henkilöitä.",
+                "captionFi": "Härkäpapuaterian havainnekuva; ei Juban ravintolavalokuva.",
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/juba/sisalto.json",
+                "contentSha256": "0fb60dfba3ce5b20a3d1c75c1b64306c6995c563f34d9f75d6120544bd10eefa",
+                "targetCurrentlyPresent": true,
+                "targetText": "Ful medames kuuluu Jubassa kuvattuihin aamiaisruokiin. Siinä kypsennettyjä härkäpapuja muussataan ja maustetaan esimerkiksi valkosipulilla, sitruunamehulla ja oliiviöljyllä. Ruokaa voidaan tarjota leivän kanssa. Se ei ole vain Juban oma ruoka, vaan liittyy laajempaan ruokaperinteeseen.",
+                "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/juba/faktapohja.md",
+                "factSheetSha256": "ae67c119b1c67d52be4beefef5b2f73253eda4e6f1d03e9e62bbe648f3b6d718",
+                "topicEvidence": "O4 kuvaa härkäpapuja, valkosipulia, sitruunaa, oliiviöljyä ja leipää.",
+                "sourceEvidence": [
+                  {
+                    "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/juba/sisalto.json",
+                    "contentSha256": "0fb60dfba3ce5b20a3d1c75c1b64306c6995c563f34d9f75d6120544bd10eefa",
+                    "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+                    "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/juba/faktapohja.md",
+                    "evidenceMode": "current source-backed guide food topic; generalized illustration",
+                    "targetTextAtIssue": ""
+                  }
+                ],
+                "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+                "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+              }
+            },
+            {
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/juba/illustration-qa-extra.json",
+              "sha256": "4abb90298b6ef8e3d2019cf409bc82a458873049f0daeb850f502712fb7e6d4f",
+              "reviewerGroup": "kuvitus-2",
+              "assetID": "e07-juba-O4-v1-20261012",
+              "nativeSHA256": "b3c882a3a6dc3ace90e8d16da8261e64d6b8dee5033cad5cb7dd8a67390dcb5c",
+              "verdict": "accepted",
+              "reason": "Härkäpapuateria vastaa tekstin ful medames -aihetta; selite ei väitä annosta paikalliseksi ravintolavalokuvaksi.",
+              "evidence": {
+                "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/juba/assets/e07-juba-O4-v1-20261012/kuva.png",
+                "nativeSha256Verified": "b3c882a3a6dc3ace90e8d16da8261e64d6b8dee5033cad5cb7dd8a67390dcb5c",
+                "nativeWidth": 1536,
+                "nativeHeight": 1024,
+                "format": "PNG",
+                "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Kypsiä osin murskattuja härkäpapuja kulhossa, öljyä ja valkosipulimaisia paloja sekä leipää. Uskottavat ruokapinnat, luonnonvalo, ei tekstiä tai henkilöitä.",
+                "captionFi": "Härkäpapuaterian havainnekuva; ei Juban ravintolavalokuva.",
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/juba/sisalto.json",
+                "contentSha256": "0fb60dfba3ce5b20a3d1c75c1b64306c6995c563f34d9f75d6120544bd10eefa",
+                "targetCurrentlyPresent": true,
+                "targetText": "Ful medames kuuluu Jubassa kuvattuihin aamiaisruokiin. Siinä kypsennettyjä härkäpapuja muussataan ja maustetaan esimerkiksi valkosipulilla, sitruunamehulla ja oliiviöljyllä. Ruokaa voidaan tarjota leivän kanssa. Se ei ole vain Juban oma ruoka, vaan liittyy laajempaan ruokaperinteeseen.",
+                "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/juba/faktapohja.md",
+                "factSheetSha256": "ae67c119b1c67d52be4beefef5b2f73253eda4e6f1d03e9e62bbe648f3b6d718",
+                "topicEvidence": "O4 kuvaa härkäpapuja, valkosipulia, sitruunaa, oliiviöljyä ja leipää.",
+                "sourceEvidence": [
+                  {
+                    "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/juba/sisalto.json",
+                    "contentSha256": "0fb60dfba3ce5b20a3d1c75c1b64306c6995c563f34d9f75d6120544bd10eefa",
+                    "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+                    "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/juba/faktapohja.md",
+                    "evidenceMode": "current source-backed guide food topic; generalized illustration",
+                    "targetTextAtIssue": ""
+                  }
+                ],
+                "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+                "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+              },
+              "opinionSHA256": "3e230fe6b0f00f4a40b0a2ff1f7be2a16d3c800b59f50a517884e120540e4c2d",
+              "capturedSourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/juba/qa-evidence/extra-review-snapshots/4abb90298b6ef8e3d2019cf409bc82a458873049f0daeb850f502712fb7e6d4f.json"
+            }
+          ]
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/juba/qa.json",
+            "sha256": "e468dcf42bc80f02f7dd18637edca1ef9526d6113d945b3639fb3a5222e3e05d"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/juba/illustration-qa-extra.json",
+            "sha256": "77718d2368a0bb747ba10c14e4100bc3493f82d759efc5eebbe504bd4743da30"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/juba/e07-juba-O4-v1-20261012-b3c882a3a6dc.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/juba/e07-juba-O4-v1-20261012-b3c882a3a6dc.png?t=78994ba3ca3011ac",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/juba/e07-juba-O4-v1-20261012-b3c882a3a6dc.png",
+        "sha256": "78994ba3ca3011acf05acf16847de07f1ff9bd31f3a23675e19a99da5be0590b",
+        "bytes": 2465874,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e07-juba-O4-v1-20261012",
+        "nativeSHA256": "b3c882a3a6dc3ace90e8d16da8261e64d6b8dee5033cad5cb7dd8a67390dcb5c",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/juba/e07-juba-O4-v1-20261012-b3c882a3a6dc.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e07",
+        "city": "juba",
+        "slot": "O4",
+        "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+        "verifiedAt": "2026-10-12T18:14:08.464676+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/juba/e07-juba-O4-v1-20261012-b3c882a3a6dc.png",
+        "sha256": "78994ba3ca3011acf05acf16847de07f1ff9bd31f3a23675e19a99da5be0590b",
+        "bytes": 2465874,
+        "SHAReadAt": "2026-10-12T18:29:49.846362+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "b3c882a3a6dc3ace90e8d16da8261e64d6b8dee5033cad5cb7dd8a67390dcb5c",
+        "rgbPixelSHA256": "df67c799a43b90d415f3421adefba8d49b8f3dd44604db53600aabf4830deb38",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "7af8736d59562bc3eb4c569bdf734e3a011f2cfa23e213f02cd7d029d5c5b136",
+      "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+      "contextAfterSHA256": "64f26854fef7bcadaf90717fa753e3308382d13ad9ef69aa7543cecd21001ee5"
+    },
+    {
+      "era": "e07",
+      "city": "juba",
+      "slot": "K1",
+      "type": "illustration",
+      "assetID": "e07-juba-K1-v1-20261012",
+      "galleryImageID": "e07-juba-K1-v1-20261012",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].nostot[0]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "nostot",
+        0
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/juba/e07-juba-K1-v1-20261012-272894ed2f3a.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Oppimisen välineiden havainnekuva; ei Juban vanhan koulun sisätila.",
+        "lyhyt": "Oppimisen välineiden havainnekuva; ei Juban vanhan koulun sisätila."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/juba/e07-juba-K1-v1-20261012-272894ed2f3a.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Oppimisen välineiden havainnekuva; ei Juban vanhan koulun sisätila.",
+        "lyhyt": "Oppimisen välineiden havainnekuva; ei Juban vanhan koulun sisätila."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "272894ed2f3a9578614f257dca30e2576b419587ef237d5cdd57f53a952880af",
+      "exportSHA256": "bd374ec6472105e698f2a4845b08143017feb098f2468e5d4a3eb1cbe3ee6a7d",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/juba/e07-juba-K1-v1-20261012-272894ed2f3a.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/juba/e07-juba-K1-v1-20261012-272894ed2f3a.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/juba/e07-juba-K1-v1-20261012-272894ed2f3a.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/juba/sisalto.json",
+      "sourceContentSHA256": "7af8736d59562bc3eb4c569bdf734e3a011f2cfa23e213f02cd7d029d5c5b136",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "7d918d8f0e817757ad4eecc173476b3042910b735b8f0a270a26dbed6c81b871",
+        "semanticContextSHA256": "7d918d8f0e817757ad4eecc173476b3042910b735b8f0a270a26dbed6c81b871",
+        "subjectTitle": "Koulu ehti ennen kaupunkisuunnitelmaa",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": [
+            "New depiction of common functional shapes or natural materials; no identified artwork, brand design, person or building reproduced."
+          ],
+          "QA": {
+            "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/juba/assets/e07-juba-K1-v1-20261012/kuva.png",
+            "width": 1536,
+            "height": 1024,
+            "sha256": "272894ed2f3a9578614f257dca30e2576b419587ef237d5cdd57f53a952880af",
+            "nativeGeometry": {
+              "rawWidth": 1536,
+              "rawHeight": 1024,
+              "exifOrientation": 1,
+              "width": 1536,
+              "height": 1024
+            },
+            "auditEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/juba/qa-evidence/2e5bc332b3d4-technical-source.json",
+            "visualViewedByThisSession": false,
+            "visualReviewSource": "independent extra reviewer; not personally viewed here",
+            "independentReview": {
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/juba/illustration-qa-extra.json",
+              "sha256": "1749a18ca60ff0c9ac0384ddcd678e8f355ffba3f6e0ad2fd030d2ae1b5c0992",
+              "reviewerGroup": "kuvitus-2",
+              "assetID": "e07-juba-K1-v1-20261012",
+              "nativeSHA256": "272894ed2f3a9578614f257dca30e2576b419587ef237d5cdd57f53a952880af",
+              "verdict": "accepted",
+              "reason": "Yleiset oppimisvälineet sopivat koulun historiaan. Selite ei rekonstruoi Juban vanhan koulun sisätilaa tai väitä välineitä sen alkuperäisiksi esineiksi.",
+              "evidence": {
+                "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/juba/assets/e07-juba-K1-v1-20261012/kuva.png",
+                "nativeSha256Verified": "272894ed2f3a9578614f257dca30e2576b419587ef237d5cdd57f53a952880af",
+                "nativeWidth": 1536,
+                "nativeHeight": 1024,
+                "format": "PNG",
+                "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Tyhjä vihko, kynä ja tekstittämätön kirjoitustaulu pöydällä. Luonteva paperi, puu ja liitupinnan kuluminen; ei henkilöitä tai kuvan päälle lisättyä kehystä.",
+                "captionFi": "Oppimisen välineiden havainnekuva; ei Juban vanhan koulun sisätila.",
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/juba/sisalto.json",
+                "contentSha256": "0fb60dfba3ce5b20a3d1c75c1b64306c6995c563f34d9f75d6120544bd10eefa",
+                "targetCurrentlyPresent": true,
+                "targetText": "Nykyisen Juban paikalla oli Bari-kylä ennen uuden hallintokaupungin rakentamista. Church Missionary Society perusti tänne 1900-luvun alussa lähetysaseman ja koulun. Paikkaan kuului talo, kirkko, työpaja sekä oppilaiden majoja. Koulun olemassaolo ja jokikuljetuksen läheisyys vaikuttivat uuden keskuksen paikan valintaan. Hallintorakennusten rinnalle tuli kauppaa, ja myös Rejafin kauppiaita muutti Jubaan. Kaupungin historia ei siten ala yhdestä perustamispäivästä: kylä, koulu ja hallintokeskus ovat eri vaiheita.",
+                "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/juba/faktapohja.md",
+                "factSheetSha256": "ae67c119b1c67d52be4beefef5b2f73253eda4e6f1d03e9e62bbe648f3b6d718",
+                "topicEvidence": "K1 käsittelee koulua ennen hallintokaupungin rakentamista.",
+                "sourceEvidence": [
+                  {
+                    "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/juba/sisalto.json",
+                    "contentSha256": "0fb60dfba3ce5b20a3d1c75c1b64306c6995c563f34d9f75d6120544bd10eefa",
+                    "targetJsonPath": "$.kaupunkilehti[0].nostot[0]",
+                    "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/juba/faktapohja.md",
+                    "evidenceMode": "Common material/utility object for a source-backed textual subject; no claim about the real named place, item or event",
+                    "targetTextAtIssue": "Nykyisen Juban paikalla oli Bari-kylä ennen uuden hallintokaupungin rakentamista. Church Missionary Society perusti tänne 1900-luvun alussa lähetysaseman ja koulun. Paikkaan kuului talo, kirkko, työpaja sekä oppilaiden majoja. Koulun olemassaolo ja jokikuljetuksen läheisyys vaikuttivat uuden keskuksen paikan valintaan. Hallintorakennusten rinnalle tuli kauppaa, ja myös Rejafin kauppiaita muutti Jubaan. Kaupungin historia ei siten ala yhdestä perustamispäivästä: kylä, koulu ja hallintokeskus ovat eri vaiheita."
+                  }
+                ],
+                "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+                "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+              },
+              "opinionSHA256": "03b18d5aeefb1f8f0f28142839c3553570509b7e9a824567d68f03e27cda16a0",
+              "capturedSourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/juba/qa-evidence/extra-review-snapshots/1749a18ca60ff0c9ac0384ddcd678e8f355ffba3f6e0ad2fd030d2ae1b5c0992.json"
+            },
+            "imageType": "illustration",
+            "captionFi": "Oppimisen välineiden havainnekuva; ei Juban vanhan koulun sisätila.",
+            "realPlacePhotograph": false
+          },
+          "qaReason": "Lisätarkistajan kuvitus-2 dokumentoitu arvio täsmälleen samasta assetID/nativeSHA-versiosta: Yleiset oppimisvälineet sopivat koulun historiaan. Selite ei rekonstruoi Juban vanhan koulun sisätilaa tai väitä välineitä sen alkuperäisiksi esineiksi."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Oppimisen välineiden havainnekuva; ei Juban vanhan koulun sisätila.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/juba/qa.json",
+        "fileSHA256": "e468dcf42bc80f02f7dd18637edca1ef9526d6113d945b3639fb3a5222e3e05d",
+        "item": {
+          "slot": "K1",
+          "targetJsonPath": "$.kaupunkilehti[0].nostot[0]",
+          "assetID": "e07-juba-K1-v1-20261012",
+          "sha256": "272894ed2f3a9578614f257dca30e2576b419587ef237d5cdd57f53a952880af",
+          "verdict": "accepted",
+          "reason": "Lisätarkistajan kuvitus-2 dokumentoitu arvio täsmälleen samasta assetID/nativeSHA-versiosta: Yleiset oppimisvälineet sopivat koulun historiaan. Selite ei rekonstruoi Juban vanhan koulun sisätilaa tai väitä välineitä sen alkuperäisiksi esineiksi.",
+          "evidence": {
+            "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/juba/assets/e07-juba-K1-v1-20261012/kuva.png",
+            "width": 1536,
+            "height": 1024,
+            "sha256": "272894ed2f3a9578614f257dca30e2576b419587ef237d5cdd57f53a952880af",
+            "nativeGeometry": {
+              "rawWidth": 1536,
+              "rawHeight": 1024,
+              "exifOrientation": 1,
+              "width": 1536,
+              "height": 1024
+            },
+            "auditEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/juba/qa-evidence/2e5bc332b3d4-technical-source.json",
+            "visualViewedByThisSession": false,
+            "visualReviewSource": "independent extra reviewer; not personally viewed here",
+            "independentReview": {
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/juba/illustration-qa-extra.json",
+              "sha256": "1749a18ca60ff0c9ac0384ddcd678e8f355ffba3f6e0ad2fd030d2ae1b5c0992",
+              "reviewerGroup": "kuvitus-2",
+              "assetID": "e07-juba-K1-v1-20261012",
+              "nativeSHA256": "272894ed2f3a9578614f257dca30e2576b419587ef237d5cdd57f53a952880af",
+              "verdict": "accepted",
+              "reason": "Yleiset oppimisvälineet sopivat koulun historiaan. Selite ei rekonstruoi Juban vanhan koulun sisätilaa tai väitä välineitä sen alkuperäisiksi esineiksi.",
+              "evidence": {
+                "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/juba/assets/e07-juba-K1-v1-20261012/kuva.png",
+                "nativeSha256Verified": "272894ed2f3a9578614f257dca30e2576b419587ef237d5cdd57f53a952880af",
+                "nativeWidth": 1536,
+                "nativeHeight": 1024,
+                "format": "PNG",
+                "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Tyhjä vihko, kynä ja tekstittämätön kirjoitustaulu pöydällä. Luonteva paperi, puu ja liitupinnan kuluminen; ei henkilöitä tai kuvan päälle lisättyä kehystä.",
+                "captionFi": "Oppimisen välineiden havainnekuva; ei Juban vanhan koulun sisätila.",
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/juba/sisalto.json",
+                "contentSha256": "0fb60dfba3ce5b20a3d1c75c1b64306c6995c563f34d9f75d6120544bd10eefa",
+                "targetCurrentlyPresent": true,
+                "targetText": "Nykyisen Juban paikalla oli Bari-kylä ennen uuden hallintokaupungin rakentamista. Church Missionary Society perusti tänne 1900-luvun alussa lähetysaseman ja koulun. Paikkaan kuului talo, kirkko, työpaja sekä oppilaiden majoja. Koulun olemassaolo ja jokikuljetuksen läheisyys vaikuttivat uuden keskuksen paikan valintaan. Hallintorakennusten rinnalle tuli kauppaa, ja myös Rejafin kauppiaita muutti Jubaan. Kaupungin historia ei siten ala yhdestä perustamispäivästä: kylä, koulu ja hallintokeskus ovat eri vaiheita.",
+                "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/juba/faktapohja.md",
+                "factSheetSha256": "ae67c119b1c67d52be4beefef5b2f73253eda4e6f1d03e9e62bbe648f3b6d718",
+                "topicEvidence": "K1 käsittelee koulua ennen hallintokaupungin rakentamista.",
+                "sourceEvidence": [
+                  {
+                    "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/juba/sisalto.json",
+                    "contentSha256": "0fb60dfba3ce5b20a3d1c75c1b64306c6995c563f34d9f75d6120544bd10eefa",
+                    "targetJsonPath": "$.kaupunkilehti[0].nostot[0]",
+                    "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/juba/faktapohja.md",
+                    "evidenceMode": "Common material/utility object for a source-backed textual subject; no claim about the real named place, item or event",
+                    "targetTextAtIssue": "Nykyisen Juban paikalla oli Bari-kylä ennen uuden hallintokaupungin rakentamista. Church Missionary Society perusti tänne 1900-luvun alussa lähetysaseman ja koulun. Paikkaan kuului talo, kirkko, työpaja sekä oppilaiden majoja. Koulun olemassaolo ja jokikuljetuksen läheisyys vaikuttivat uuden keskuksen paikan valintaan. Hallintorakennusten rinnalle tuli kauppaa, ja myös Rejafin kauppiaita muutti Jubaan. Kaupungin historia ei siten ala yhdestä perustamispäivästä: kylä, koulu ja hallintokeskus ovat eri vaiheita."
+                  }
+                ],
+                "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+                "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+              },
+              "opinionSHA256": "03b18d5aeefb1f8f0f28142839c3553570509b7e9a824567d68f03e27cda16a0",
+              "capturedSourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/juba/qa-evidence/extra-review-snapshots/1749a18ca60ff0c9ac0384ddcd678e8f355ffba3f6e0ad2fd030d2ae1b5c0992.json"
+            },
+            "imageType": "illustration",
+            "captionFi": "Oppimisen välineiden havainnekuva; ei Juban vanhan koulun sisätila.",
+            "realPlacePhotograph": false
+          },
+          "importedIndependentReview": true,
+          "independentReviews": [
+            {
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/juba/illustration-qa-extra.json",
+              "sha256": "1749a18ca60ff0c9ac0384ddcd678e8f355ffba3f6e0ad2fd030d2ae1b5c0992",
+              "reviewerGroup": "kuvitus-2",
+              "assetID": "e07-juba-K1-v1-20261012",
+              "nativeSHA256": "272894ed2f3a9578614f257dca30e2576b419587ef237d5cdd57f53a952880af",
+              "verdict": "accepted",
+              "reason": "Yleiset oppimisvälineet sopivat koulun historiaan. Selite ei rekonstruoi Juban vanhan koulun sisätilaa tai väitä välineitä sen alkuperäisiksi esineiksi.",
+              "evidence": {
+                "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/juba/assets/e07-juba-K1-v1-20261012/kuva.png",
+                "nativeSha256Verified": "272894ed2f3a9578614f257dca30e2576b419587ef237d5cdd57f53a952880af",
+                "nativeWidth": 1536,
+                "nativeHeight": 1024,
+                "format": "PNG",
+                "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Tyhjä vihko, kynä ja tekstittämätön kirjoitustaulu pöydällä. Luonteva paperi, puu ja liitupinnan kuluminen; ei henkilöitä tai kuvan päälle lisättyä kehystä.",
+                "captionFi": "Oppimisen välineiden havainnekuva; ei Juban vanhan koulun sisätila.",
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/juba/sisalto.json",
+                "contentSha256": "0fb60dfba3ce5b20a3d1c75c1b64306c6995c563f34d9f75d6120544bd10eefa",
+                "targetCurrentlyPresent": true,
+                "targetText": "Nykyisen Juban paikalla oli Bari-kylä ennen uuden hallintokaupungin rakentamista. Church Missionary Society perusti tänne 1900-luvun alussa lähetysaseman ja koulun. Paikkaan kuului talo, kirkko, työpaja sekä oppilaiden majoja. Koulun olemassaolo ja jokikuljetuksen läheisyys vaikuttivat uuden keskuksen paikan valintaan. Hallintorakennusten rinnalle tuli kauppaa, ja myös Rejafin kauppiaita muutti Jubaan. Kaupungin historia ei siten ala yhdestä perustamispäivästä: kylä, koulu ja hallintokeskus ovat eri vaiheita.",
+                "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/juba/faktapohja.md",
+                "factSheetSha256": "ae67c119b1c67d52be4beefef5b2f73253eda4e6f1d03e9e62bbe648f3b6d718",
+                "topicEvidence": "K1 käsittelee koulua ennen hallintokaupungin rakentamista.",
+                "sourceEvidence": [
+                  {
+                    "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/juba/sisalto.json",
+                    "contentSha256": "0fb60dfba3ce5b20a3d1c75c1b64306c6995c563f34d9f75d6120544bd10eefa",
+                    "targetJsonPath": "$.kaupunkilehti[0].nostot[0]",
+                    "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/juba/faktapohja.md",
+                    "evidenceMode": "Common material/utility object for a source-backed textual subject; no claim about the real named place, item or event",
+                    "targetTextAtIssue": "Nykyisen Juban paikalla oli Bari-kylä ennen uuden hallintokaupungin rakentamista. Church Missionary Society perusti tänne 1900-luvun alussa lähetysaseman ja koulun. Paikkaan kuului talo, kirkko, työpaja sekä oppilaiden majoja. Koulun olemassaolo ja jokikuljetuksen läheisyys vaikuttivat uuden keskuksen paikan valintaan. Hallintorakennusten rinnalle tuli kauppaa, ja myös Rejafin kauppiaita muutti Jubaan. Kaupungin historia ei siten ala yhdestä perustamispäivästä: kylä, koulu ja hallintokeskus ovat eri vaiheita."
+                  }
+                ],
+                "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+                "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+              },
+              "opinionSHA256": "03b18d5aeefb1f8f0f28142839c3553570509b7e9a824567d68f03e27cda16a0",
+              "capturedSourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/juba/qa-evidence/extra-review-snapshots/1749a18ca60ff0c9ac0384ddcd678e8f355ffba3f6e0ad2fd030d2ae1b5c0992.json"
+            }
+          ],
+          "checkedAt": "2026-10-12T19:22:52.287784+00:00",
+          "contentSHA256": "0fb60dfba3ce5b20a3d1c75c1b64306c6995c563f34d9f75d6120544bd10eefa",
+          "targetSHA256": "7d918d8f0e817757ad4eecc173476b3042910b735b8f0a270a26dbed6c81b871"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/juba/qa.json",
+            "sha256": "e468dcf42bc80f02f7dd18637edca1ef9526d6113d945b3639fb3a5222e3e05d"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/juba/illustration-qa-extra.json",
+            "sha256": "77718d2368a0bb747ba10c14e4100bc3493f82d759efc5eebbe504bd4743da30"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/juba/e07-juba-K1-v1-20261012-272894ed2f3a.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/juba/e07-juba-K1-v1-20261012-272894ed2f3a.png?t=bd374ec6472105e6",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/juba/e07-juba-K1-v1-20261012-272894ed2f3a.png",
+        "sha256": "bd374ec6472105e698f2a4845b08143017feb098f2468e5d4a3eb1cbe3ee6a7d",
+        "bytes": 2169284,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e07-juba-K1-v1-20261012",
+        "nativeSHA256": "272894ed2f3a9578614f257dca30e2576b419587ef237d5cdd57f53a952880af",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/juba/e07-juba-K1-v1-20261012-272894ed2f3a.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e07",
+        "city": "juba",
+        "slot": "K1",
+        "targetJsonPath": "$.kaupunkilehti[0].nostot[0]",
+        "verifiedAt": "2026-10-12T19:22:41.158117+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/juba/e07-juba-K1-v1-20261012-272894ed2f3a.png",
+        "sha256": "bd374ec6472105e698f2a4845b08143017feb098f2468e5d4a3eb1cbe3ee6a7d",
+        "bytes": 2169284,
+        "SHAReadAt": "2026-10-12T19:32:04.827254+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "272894ed2f3a9578614f257dca30e2576b419587ef237d5cdd57f53a952880af",
+        "rgbPixelSHA256": "a02c3fa337d8e833cfc9db9910cb7c4411317a71ced8d1d5fb0d6a74e6eae6bf",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "7af8736d59562bc3eb4c569bdf734e3a011f2cfa23e213f02cd7d029d5c5b136",
+      "targetAfterSHA256": "7d918d8f0e817757ad4eecc173476b3042910b735b8f0a270a26dbed6c81b871",
+      "contextAfterSHA256": "7d918d8f0e817757ad4eecc173476b3042910b735b8f0a270a26dbed6c81b871"
+    },
+    {
+      "era": "e07",
+      "city": "juba",
+      "slot": "K2",
+      "type": "illustration",
+      "assetID": "e07-juba-K2-v1-20261012",
+      "galleryImageID": "e07-juba-K2-v1-20261012",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].nostot[1]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "nostot",
+        1
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/juba/e07-juba-K2-v1-20261012-3e5c9b11e9ea.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Rakentamisen kivimateriaalin havainnekuva; ei Jebel Kujurin maisematodiste.",
+        "lyhyt": "Rakentamisen kivimateriaalin havainnekuva; ei Jebel Kujurin maisematodiste."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/juba/e07-juba-K2-v1-20261012-3e5c9b11e9ea.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Rakentamisen kivimateriaalin havainnekuva; ei Jebel Kujurin maisematodiste.",
+        "lyhyt": "Rakentamisen kivimateriaalin havainnekuva; ei Jebel Kujurin maisematodiste."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "3e5c9b11e9ead5dafb78c301ed1186e63a502b57ba10ade6d599bf126c1cc357",
+      "exportSHA256": "b5621af4df3a37dddfb189ba230bb6c44b315b519408d0ee958f01ff63d0fed7",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/juba/e07-juba-K2-v1-20261012-3e5c9b11e9ea.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/juba/e07-juba-K2-v1-20261012-3e5c9b11e9ea.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/juba/e07-juba-K2-v1-20261012-3e5c9b11e9ea.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/juba/sisalto.json",
+      "sourceContentSHA256": "7af8736d59562bc3eb4c569bdf734e3a011f2cfa23e213f02cd7d029d5c5b136",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "ebef1e11dc5e5f0457f415172869be0f94d73355b3630fde4f177ab546ac6908",
+        "semanticContextSHA256": "ebef1e11dc5e5f0457f415172869be0f94d73355b3630fde4f177ab546ac6908",
+        "subjectTitle": "Kukkulasta tuli rakennusmateriaalia",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": [
+            "New generated illustration of natural subject or common utility object; no reproduction of a protected work.",
+            "Named buildings, identifiable people and exact contemporary art/design excluded."
+          ],
+          "QA": {
+            "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/juba/assets/e07-juba-K2-v1-20261012/kuva.png",
+            "width": 1536,
+            "height": 1024,
+            "sha256": "3e5c9b11e9ead5dafb78c301ed1186e63a502b57ba10ade6d599bf126c1cc357",
+            "auditEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/juba/qa-evidence/248f3d27ca54-technical-source.json",
+            "visualViewed": true,
+            "visualNotes": "Murskekivi, sora ja hiekka muodostavat uskottavan rakentamisen materiaalikuvan. Kivien murtopinnat, koko ja mineraalikuviot vaihtelevat. Ei nimetyn kukkulan/kaivoksen maiseman rekonstruktiota; ei tarkkaa Jebel Kujurin kivilajitodistetta.",
+            "captionFi": "Rakentamisen kivimateriaalin havainnekuva; ei Jebel Kujurin maisematodiste.",
+            "imageType": "illustration",
+            "realPlacePhotograph": false,
+            "rights": "Tavallinen luonnonmateriaali tai elintarvike; ei suojattua teosta",
+            "sourceFactSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/juba/faktapohja.md"
+          },
+          "qaReason": "Murskekivi, sora ja hiekka muodostavat uskottavan rakentamisen materiaalikuvan. Kivien murtopinnat, koko ja mineraalikuviot vaihtelevat. Ei nimetyn kukkulan/kaivoksen maiseman rekonstruktiota; ei tarkkaa Jebel Kujurin kivilajitodistetta."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Rakentamisen kivimateriaalin havainnekuva; ei Jebel Kujurin maisematodiste.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/juba/qa.json",
+        "fileSHA256": "e468dcf42bc80f02f7dd18637edca1ef9526d6113d945b3639fb3a5222e3e05d",
+        "item": {
+          "slot": "K2",
+          "targetJsonPath": "$.kaupunkilehti[0].nostot[1]",
+          "assetID": "e07-juba-K2-v1-20261012",
+          "sha256": "3e5c9b11e9ead5dafb78c301ed1186e63a502b57ba10ade6d599bf126c1cc357",
+          "verdict": "accepted",
+          "reason": "Murskekivi, sora ja hiekka muodostavat uskottavan rakentamisen materiaalikuvan. Kivien murtopinnat, koko ja mineraalikuviot vaihtelevat. Ei nimetyn kukkulan/kaivoksen maiseman rekonstruktiota; ei tarkkaa Jebel Kujurin kivilajitodistetta.",
+          "evidence": {
+            "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/juba/assets/e07-juba-K2-v1-20261012/kuva.png",
+            "width": 1536,
+            "height": 1024,
+            "sha256": "3e5c9b11e9ead5dafb78c301ed1186e63a502b57ba10ade6d599bf126c1cc357",
+            "auditEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/juba/qa-evidence/248f3d27ca54-technical-source.json",
+            "visualViewed": true,
+            "visualNotes": "Murskekivi, sora ja hiekka muodostavat uskottavan rakentamisen materiaalikuvan. Kivien murtopinnat, koko ja mineraalikuviot vaihtelevat. Ei nimetyn kukkulan/kaivoksen maiseman rekonstruktiota; ei tarkkaa Jebel Kujurin kivilajitodistetta.",
+            "captionFi": "Rakentamisen kivimateriaalin havainnekuva; ei Jebel Kujurin maisematodiste.",
+            "imageType": "illustration",
+            "realPlacePhotograph": false,
+            "rights": "Tavallinen luonnonmateriaali tai elintarvike; ei suojattua teosta",
+            "sourceFactSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/juba/faktapohja.md"
+          },
+          "checkedAt": "2026-10-12T18:48:20.522688+00:00",
+          "contentSHA256": "0fb60dfba3ce5b20a3d1c75c1b64306c6995c563f34d9f75d6120544bd10eefa",
+          "targetSHA256": "ebef1e11dc5e5f0457f415172869be0f94d73355b3630fde4f177ab546ac6908",
+          "independentReviews": [
+            {
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/juba/illustration-qa-extra.json",
+              "sha256": "4abb90298b6ef8e3d2019cf409bc82a458873049f0daeb850f502712fb7e6d4f",
+              "reviewerGroup": "kuvitus-2",
+              "assetID": "e07-juba-K2-v1-20261012",
+              "nativeSHA256": "3e5c9b11e9ead5dafb78c301ed1186e63a502b57ba10ade6d599bf126c1cc357",
+              "verdict": "accepted",
+              "reason": "Kivi ja sora sopivat noston rakennusmateriaaliaiheeseen. Selite erottaa materiaalitutkielman Jebel Kujurin todellisesta maisemasta.",
+              "evidence": {
+                "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/juba/assets/e07-juba-K2-v1-20261012/kuva.png",
+                "nativeSha256Verified": "3e5c9b11e9ead5dafb78c301ed1186e63a502b57ba10ade6d599bf126c1cc357",
+                "nativeWidth": 1536,
+                "nativeHeight": 1024,
+                "format": "PNG",
+                "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Epäsäännöllisiä lohkottuja kiviä, soraa ja hiekkamainen kasa lähikuvassa. Vaihtelevat koot, särmät ja mineraalipinnat; ei toistettua pintaleimaa, henkilöitä tai merkintöjä.",
+                "captionFi": "Rakentamisen kivimateriaalin havainnekuva; ei Jebel Kujurin maisematodiste.",
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/juba/sisalto.json",
+                "contentSha256": "0fb60dfba3ce5b20a3d1c75c1b64306c6995c563f34d9f75d6120544bd10eefa",
+                "targetCurrentlyPresent": true,
+                "targetText": "Jebel Kujur on Juban maisemassa erottuva pitkänomainen kukkula, jonka vanha paikallinen nimi on Korok. Kaupungin kasvu on ympäröinyt sitä. Kukkulan juurelle on sijoittunut varastoja ja kivimateriaalin käsittelyä, ja kiveä sekä soraa on käytetty teihin ja betonirakentamiseen. Materiaalia käsitellään käsin ja koneellisesti. Rinteillä on kuvattu myös pienimuotoista viljelyä. Luonnonmuoto ei siis ole vain kaukaa katsottava siluetti: sen materiaali on ollut osa kasvavan kaupungin käytännön rakentamista.",
+                "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/juba/faktapohja.md",
+                "factSheetSha256": "ae67c119b1c67d52be4beefef5b2f73253eda4e6f1d03e9e62bbe648f3b6d718",
+                "topicEvidence": "K2 käsittelee kiven ja soran käyttöä teihin ja betonirakentamiseen.",
+                "sourceEvidence": [
+                  {
+                    "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/juba/sisalto.json",
+                    "contentSha256": "0fb60dfba3ce5b20a3d1c75c1b64306c6995c563f34d9f75d6120544bd10eefa",
+                    "targetJsonPath": "$.kaupunkilehti[0].nostot[1]",
+                    "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/juba/faktapohja.md",
+                    "evidenceMode": "source-backed text topic; generalized material/food/biological illustration, not exact place appearance",
+                    "targetTextAtIssue": "Jebel Kujur on Juban maisemassa erottuva pitkänomainen kukkula, jonka vanha paikallinen nimi on Korok. Kaupungin kasvu on ympäröinyt sitä. Kukkulan juurelle on sijoittunut varastoja ja kivimateriaalin käsittelyä, ja kiveä sekä soraa on käytetty teihin ja betonirakentamiseen. Materiaalia käsitellään käsin ja koneellisesti. Rinteillä on kuvattu myös pienimuotoista viljelyä. Luonnonmuoto ei siis ole vain kaukaa katsottava siluetti: sen materiaali on ollut osa kasvavan kaupungin käytännön rakentamista."
+                  }
+                ],
+                "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+                "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+              }
+            },
+            {
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/juba/illustration-qa-extra.json",
+              "sha256": "4abb90298b6ef8e3d2019cf409bc82a458873049f0daeb850f502712fb7e6d4f",
+              "reviewerGroup": "kuvitus-2",
+              "assetID": "e07-juba-K2-v1-20261012",
+              "nativeSHA256": "3e5c9b11e9ead5dafb78c301ed1186e63a502b57ba10ade6d599bf126c1cc357",
+              "verdict": "accepted",
+              "reason": "Kivi ja sora sopivat noston rakennusmateriaaliaiheeseen. Selite erottaa materiaalitutkielman Jebel Kujurin todellisesta maisemasta.",
+              "evidence": {
+                "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/juba/assets/e07-juba-K2-v1-20261012/kuva.png",
+                "nativeSha256Verified": "3e5c9b11e9ead5dafb78c301ed1186e63a502b57ba10ade6d599bf126c1cc357",
+                "nativeWidth": 1536,
+                "nativeHeight": 1024,
+                "format": "PNG",
+                "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Epäsäännöllisiä lohkottuja kiviä, soraa ja hiekkamainen kasa lähikuvassa. Vaihtelevat koot, särmät ja mineraalipinnat; ei toistettua pintaleimaa, henkilöitä tai merkintöjä.",
+                "captionFi": "Rakentamisen kivimateriaalin havainnekuva; ei Jebel Kujurin maisematodiste.",
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/juba/sisalto.json",
+                "contentSha256": "0fb60dfba3ce5b20a3d1c75c1b64306c6995c563f34d9f75d6120544bd10eefa",
+                "targetCurrentlyPresent": true,
+                "targetText": "Jebel Kujur on Juban maisemassa erottuva pitkänomainen kukkula, jonka vanha paikallinen nimi on Korok. Kaupungin kasvu on ympäröinyt sitä. Kukkulan juurelle on sijoittunut varastoja ja kivimateriaalin käsittelyä, ja kiveä sekä soraa on käytetty teihin ja betonirakentamiseen. Materiaalia käsitellään käsin ja koneellisesti. Rinteillä on kuvattu myös pienimuotoista viljelyä. Luonnonmuoto ei siis ole vain kaukaa katsottava siluetti: sen materiaali on ollut osa kasvavan kaupungin käytännön rakentamista.",
+                "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/juba/faktapohja.md",
+                "factSheetSha256": "ae67c119b1c67d52be4beefef5b2f73253eda4e6f1d03e9e62bbe648f3b6d718",
+                "topicEvidence": "K2 käsittelee kiven ja soran käyttöä teihin ja betonirakentamiseen.",
+                "sourceEvidence": [
+                  {
+                    "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/juba/sisalto.json",
+                    "contentSha256": "0fb60dfba3ce5b20a3d1c75c1b64306c6995c563f34d9f75d6120544bd10eefa",
+                    "targetJsonPath": "$.kaupunkilehti[0].nostot[1]",
+                    "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/juba/faktapohja.md",
+                    "evidenceMode": "source-backed text topic; generalized material/food/biological illustration, not exact place appearance",
+                    "targetTextAtIssue": "Jebel Kujur on Juban maisemassa erottuva pitkänomainen kukkula, jonka vanha paikallinen nimi on Korok. Kaupungin kasvu on ympäröinyt sitä. Kukkulan juurelle on sijoittunut varastoja ja kivimateriaalin käsittelyä, ja kiveä sekä soraa on käytetty teihin ja betonirakentamiseen. Materiaalia käsitellään käsin ja koneellisesti. Rinteillä on kuvattu myös pienimuotoista viljelyä. Luonnonmuoto ei siis ole vain kaukaa katsottava siluetti: sen materiaali on ollut osa kasvavan kaupungin käytännön rakentamista."
+                  }
+                ],
+                "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+                "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+              },
+              "opinionSHA256": "3c17df07ad081b5ed983f62657f188de8c246feb1f9e77d808252790a40dfaa5",
+              "capturedSourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/juba/qa-evidence/extra-review-snapshots/4abb90298b6ef8e3d2019cf409bc82a458873049f0daeb850f502712fb7e6d4f.json"
+            }
+          ]
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/juba/qa.json",
+            "sha256": "e468dcf42bc80f02f7dd18637edca1ef9526d6113d945b3639fb3a5222e3e05d"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/juba/illustration-qa-extra.json",
+            "sha256": "77718d2368a0bb747ba10c14e4100bc3493f82d759efc5eebbe504bd4743da30"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/juba/e07-juba-K2-v1-20261012-3e5c9b11e9ea.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/juba/e07-juba-K2-v1-20261012-3e5c9b11e9ea.png?t=b5621af4df3a37dd",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/juba/e07-juba-K2-v1-20261012-3e5c9b11e9ea.png",
+        "sha256": "b5621af4df3a37dddfb189ba230bb6c44b315b519408d0ee958f01ff63d0fed7",
+        "bytes": 3381916,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e07-juba-K2-v1-20261012",
+        "nativeSHA256": "3e5c9b11e9ead5dafb78c301ed1186e63a502b57ba10ade6d599bf126c1cc357",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/juba/e07-juba-K2-v1-20261012-3e5c9b11e9ea.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e07",
+        "city": "juba",
+        "slot": "K2",
+        "targetJsonPath": "$.kaupunkilehti[0].nostot[1]",
+        "verifiedAt": "2026-10-12T18:10:57.480983+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/juba/e07-juba-K2-v1-20261012-3e5c9b11e9ea.png",
+        "sha256": "b5621af4df3a37dddfb189ba230bb6c44b315b519408d0ee958f01ff63d0fed7",
+        "bytes": 3381916,
+        "SHAReadAt": "2026-10-12T18:29:49.378067+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "3e5c9b11e9ead5dafb78c301ed1186e63a502b57ba10ade6d599bf126c1cc357",
+        "rgbPixelSHA256": "db3809f3b9633ca48ce0d58073de606231880f3f3df27dcca0ce1f7c1cef5670",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "7af8736d59562bc3eb4c569bdf734e3a011f2cfa23e213f02cd7d029d5c5b136",
+      "targetAfterSHA256": "ebef1e11dc5e5f0457f415172869be0f94d73355b3630fde4f177ab546ac6908",
+      "contextAfterSHA256": "ebef1e11dc5e5f0457f415172869be0f94d73355b3630fde4f177ab546ac6908"
+    },
+    {
+      "era": "e07",
+      "city": "juba",
+      "slot": "K3",
+      "type": "illustration",
+      "assetID": "e07-juba-K3-v1-20261012",
+      "galleryImageID": "e07-juba-K3-v1-20261012",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].nostot[2]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "nostot",
+        2
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/juba/e07-juba-K3-v1-20261012-8f80d25fe50d.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Tuoretuotteiden torikaupan havainnekuva; ei todellinen Konyo Konyon koju.",
+        "lyhyt": "Tuoretuotteiden torikaupan havainnekuva; ei todellinen Konyo Konyon koju."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/juba/e07-juba-K3-v1-20261012-8f80d25fe50d.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Tuoretuotteiden torikaupan havainnekuva; ei todellinen Konyo Konyon koju.",
+        "lyhyt": "Tuoretuotteiden torikaupan havainnekuva; ei todellinen Konyo Konyon koju."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "8f80d25fe50dadad15594ff5e1089cbc44360d9da8e3f446fe44bed2c47adc20",
+      "exportSHA256": "73645b4c8d33b0ca2b1a9aea6dd8cdbe0a41fa0657a1da0427861b92ed19f1ac",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/juba/e07-juba-K3-v1-20261012-8f80d25fe50d.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/juba/e07-juba-K3-v1-20261012-8f80d25fe50d.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/juba/e07-juba-K3-v1-20261012-8f80d25fe50d.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/juba/sisalto.json",
+      "sourceContentSHA256": "7af8736d59562bc3eb4c569bdf734e3a011f2cfa23e213f02cd7d029d5c5b136",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "25f1769b4b40ad154d8d7a0d795e915a061988aa5ba1a3d7b3e7481e5837c28a",
+        "semanticContextSHA256": "25f1769b4b40ad154d8d7a0d795e915a061988aa5ba1a3d7b3e7481e5837c28a",
+        "subjectTitle": "Ruokatori on tavaran jatkoyhteys",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": [
+            "New generated illustration of natural subject or common utility object; no reproduction of a protected work.",
+            "Named buildings, identifiable people and exact contemporary art/design excluded."
+          ],
+          "QA": {
+            "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/juba/assets/e07-juba-K3-v1-20261012/kuva.png",
+            "width": 1536,
+            "height": 1024,
+            "sha256": "8f80d25fe50dadad15594ff5e1089cbc44360d9da8e3f446fe44bed2c47adc20",
+            "auditEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/juba/qa-evidence/216e95f4d183-technical-source.json",
+            "visualViewed": true,
+            "visualNotes": "Tuoreita hedelmiä ja vihanneksia tavallisissa laatikoissa, luonnollinen muotojen/kokojen/kasvipintojen vaihtelu. Ei kasvoja, tekstiä, rakennusta tai tuotekampanjaa. Hyväksyttävä vain yleisenä torikaupan havainnollistuksena: kuvassa näkyvien yksittäisten tuotteiden saatavuutta Konyo Konyossa ei väitetä eikä kuvata todellista paikallista kojua.",
+            "captionFi": "Tuoretuotteiden torikaupan havainnekuva; ei todellinen Konyo Konyon koju.",
+            "imageType": "illustration",
+            "realPlacePhotograph": false,
+            "rights": "Tavallinen luonnonmateriaali tai elintarvike; ei suojattua teosta",
+            "sourceFactSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/juba/faktapohja.md"
+          },
+          "qaReason": "Tuoreita hedelmiä ja vihanneksia tavallisissa laatikoissa, luonnollinen muotojen/kokojen/kasvipintojen vaihtelu. Ei kasvoja, tekstiä, rakennusta tai tuotekampanjaa. Hyväksyttävä vain yleisenä torikaupan havainnollistuksena: kuvassa näkyvien yksittäisten tuotteiden saatavuutta Konyo Konyossa ei väitetä eikä kuvata todellista paikallista kojua."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Tuoretuotteiden torikaupan havainnekuva; ei todellinen Konyo Konyon koju.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/juba/qa.json",
+        "fileSHA256": "e468dcf42bc80f02f7dd18637edca1ef9526d6113d945b3639fb3a5222e3e05d",
+        "item": {
+          "slot": "K3",
+          "targetJsonPath": "$.kaupunkilehti[0].nostot[2]",
+          "assetID": "e07-juba-K3-v1-20261012",
+          "sha256": "8f80d25fe50dadad15594ff5e1089cbc44360d9da8e3f446fe44bed2c47adc20",
+          "verdict": "accepted",
+          "reason": "Tuoreita hedelmiä ja vihanneksia tavallisissa laatikoissa, luonnollinen muotojen/kokojen/kasvipintojen vaihtelu. Ei kasvoja, tekstiä, rakennusta tai tuotekampanjaa. Hyväksyttävä vain yleisenä torikaupan havainnollistuksena: kuvassa näkyvien yksittäisten tuotteiden saatavuutta Konyo Konyossa ei väitetä eikä kuvata todellista paikallista kojua.",
+          "evidence": {
+            "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/juba/assets/e07-juba-K3-v1-20261012/kuva.png",
+            "width": 1536,
+            "height": 1024,
+            "sha256": "8f80d25fe50dadad15594ff5e1089cbc44360d9da8e3f446fe44bed2c47adc20",
+            "auditEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/juba/qa-evidence/216e95f4d183-technical-source.json",
+            "visualViewed": true,
+            "visualNotes": "Tuoreita hedelmiä ja vihanneksia tavallisissa laatikoissa, luonnollinen muotojen/kokojen/kasvipintojen vaihtelu. Ei kasvoja, tekstiä, rakennusta tai tuotekampanjaa. Hyväksyttävä vain yleisenä torikaupan havainnollistuksena: kuvassa näkyvien yksittäisten tuotteiden saatavuutta Konyo Konyossa ei väitetä eikä kuvata todellista paikallista kojua.",
+            "captionFi": "Tuoretuotteiden torikaupan havainnekuva; ei todellinen Konyo Konyon koju.",
+            "imageType": "illustration",
+            "realPlacePhotograph": false,
+            "rights": "Tavallinen luonnonmateriaali tai elintarvike; ei suojattua teosta",
+            "sourceFactSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/juba/faktapohja.md"
+          },
+          "checkedAt": "2026-10-12T18:48:20.522717+00:00",
+          "contentSHA256": "0fb60dfba3ce5b20a3d1c75c1b64306c6995c563f34d9f75d6120544bd10eefa",
+          "targetSHA256": "25f1769b4b40ad154d8d7a0d795e915a061988aa5ba1a3d7b3e7481e5837c28a",
+          "independentReviews": [
+            {
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/juba/illustration-qa-extra.json",
+              "sha256": "4abb90298b6ef8e3d2019cf409bc82a458873049f0daeb850f502712fb7e6d4f",
+              "reviewerGroup": "kuvitus-2",
+              "assetID": "e07-juba-K3-v1-20261012",
+              "nativeSHA256": "8f80d25fe50dadad15594ff5e1089cbc44360d9da8e3f446fe44bed2c47adc20",
+              "verdict": "accepted",
+              "reason": "Hedelmät ja vihannekset havainnollistavat tuoretuotteiden jakelua yleisesti; selite sulkee pois todellisen Konyo Konyon kojun väitteen.",
+              "evidence": {
+                "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/juba/assets/e07-juba-K3-v1-20261012/kuva.png",
+                "nativeSha256Verified": "8f80d25fe50dadad15594ff5e1089cbc44360d9da8e3f446fe44bed2c47adc20",
+                "nativeWidth": 1536,
+                "nativeHeight": 1024,
+                "format": "PNG",
+                "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Kasviksia ja hedelmiä puisissa laatikoissa. Lehdissä, porkkanoissa ja hedelmissä on luontevaa vaihtelua, eikä kuvassa ole myyjiä, hintakylttejä tai tunnistettavaa paikkaa.",
+                "captionFi": "Tuoretuotteiden torikaupan havainnekuva; ei todellinen Konyo Konyon koju.",
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/juba/sisalto.json",
+                "contentSha256": "0fb60dfba3ce5b20a3d1c75c1b64306c6995c563f34d9f75d6120544bd10eefa",
+                "targetCurrentlyPresent": true,
+                "targetText": "Konyo Konyossa myydään ruokatarvikkeiden lisäksi vaatteita ja ruoanvalmistusvälineitä. Tuotteissa on paikallista satoa, mutta tuoreita hedelmiä ja vihanneksia on tuotu myös Ugandasta maanteitse. Konyo Konyo ja Gumbo Market välittävät tuoretuotteita pienemmille toreille Juban piirikunnassa ja sen ulkopuolella. Tori on siis myös jakelupaikka. Siellä on lisäksi järjestetty kansallisarkiston asiakirjojen pop-up-esittely: kaupankäynnin keskellä on voinut kohdata kaupungin historiaa, ilman että paikasta tuli pysyvä arkistomuseo.",
+                "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/juba/faktapohja.md",
+                "factSheetSha256": "ae67c119b1c67d52be4beefef5b2f73253eda4e6f1d03e9e62bbe648f3b6d718",
+                "topicEvidence": "K3 käsittelee hedelmien ja vihannesten kauppaa ja edelleenjakelua.",
+                "sourceEvidence": [
+                  {
+                    "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/juba/sisalto.json",
+                    "contentSha256": "0fb60dfba3ce5b20a3d1c75c1b64306c6995c563f34d9f75d6120544bd10eefa",
+                    "targetJsonPath": "$.kaupunkilehti[0].nostot[2]",
+                    "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/juba/faktapohja.md",
+                    "evidenceMode": "source-backed text topic; generalized material/food/biological illustration, not exact place appearance",
+                    "targetTextAtIssue": "Konyo Konyossa myydään ruokatarvikkeiden lisäksi vaatteita ja ruoanvalmistusvälineitä. Tuotteissa on paikallista satoa, mutta tuoreita hedelmiä ja vihanneksia on tuotu myös Ugandasta maanteitse. Konyo Konyo ja Gumbo Market välittävät tuoretuotteita pienemmille toreille Juban piirikunnassa ja sen ulkopuolella. Tori on siis myös jakelupaikka. Siellä on lisäksi järjestetty kansallisarkiston asiakirjojen pop-up-esittely: kaupankäynnin keskellä on voinut kohdata kaupungin historiaa, ilman että paikasta tuli pysyvä arkistomuseo."
+                  }
+                ],
+                "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+                "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+              }
+            },
+            {
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/juba/illustration-qa-extra.json",
+              "sha256": "4abb90298b6ef8e3d2019cf409bc82a458873049f0daeb850f502712fb7e6d4f",
+              "reviewerGroup": "kuvitus-2",
+              "assetID": "e07-juba-K3-v1-20261012",
+              "nativeSHA256": "8f80d25fe50dadad15594ff5e1089cbc44360d9da8e3f446fe44bed2c47adc20",
+              "verdict": "accepted",
+              "reason": "Hedelmät ja vihannekset havainnollistavat tuoretuotteiden jakelua yleisesti; selite sulkee pois todellisen Konyo Konyon kojun väitteen.",
+              "evidence": {
+                "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/juba/assets/e07-juba-K3-v1-20261012/kuva.png",
+                "nativeSha256Verified": "8f80d25fe50dadad15594ff5e1089cbc44360d9da8e3f446fe44bed2c47adc20",
+                "nativeWidth": 1536,
+                "nativeHeight": 1024,
+                "format": "PNG",
+                "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Kasviksia ja hedelmiä puisissa laatikoissa. Lehdissä, porkkanoissa ja hedelmissä on luontevaa vaihtelua, eikä kuvassa ole myyjiä, hintakylttejä tai tunnistettavaa paikkaa.",
+                "captionFi": "Tuoretuotteiden torikaupan havainnekuva; ei todellinen Konyo Konyon koju.",
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/juba/sisalto.json",
+                "contentSha256": "0fb60dfba3ce5b20a3d1c75c1b64306c6995c563f34d9f75d6120544bd10eefa",
+                "targetCurrentlyPresent": true,
+                "targetText": "Konyo Konyossa myydään ruokatarvikkeiden lisäksi vaatteita ja ruoanvalmistusvälineitä. Tuotteissa on paikallista satoa, mutta tuoreita hedelmiä ja vihanneksia on tuotu myös Ugandasta maanteitse. Konyo Konyo ja Gumbo Market välittävät tuoretuotteita pienemmille toreille Juban piirikunnassa ja sen ulkopuolella. Tori on siis myös jakelupaikka. Siellä on lisäksi järjestetty kansallisarkiston asiakirjojen pop-up-esittely: kaupankäynnin keskellä on voinut kohdata kaupungin historiaa, ilman että paikasta tuli pysyvä arkistomuseo.",
+                "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/juba/faktapohja.md",
+                "factSheetSha256": "ae67c119b1c67d52be4beefef5b2f73253eda4e6f1d03e9e62bbe648f3b6d718",
+                "topicEvidence": "K3 käsittelee hedelmien ja vihannesten kauppaa ja edelleenjakelua.",
+                "sourceEvidence": [
+                  {
+                    "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/juba/sisalto.json",
+                    "contentSha256": "0fb60dfba3ce5b20a3d1c75c1b64306c6995c563f34d9f75d6120544bd10eefa",
+                    "targetJsonPath": "$.kaupunkilehti[0].nostot[2]",
+                    "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/juba/faktapohja.md",
+                    "evidenceMode": "source-backed text topic; generalized material/food/biological illustration, not exact place appearance",
+                    "targetTextAtIssue": "Konyo Konyossa myydään ruokatarvikkeiden lisäksi vaatteita ja ruoanvalmistusvälineitä. Tuotteissa on paikallista satoa, mutta tuoreita hedelmiä ja vihanneksia on tuotu myös Ugandasta maanteitse. Konyo Konyo ja Gumbo Market välittävät tuoretuotteita pienemmille toreille Juban piirikunnassa ja sen ulkopuolella. Tori on siis myös jakelupaikka. Siellä on lisäksi järjestetty kansallisarkiston asiakirjojen pop-up-esittely: kaupankäynnin keskellä on voinut kohdata kaupungin historiaa, ilman että paikasta tuli pysyvä arkistomuseo."
+                  }
+                ],
+                "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+                "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+              },
+              "opinionSHA256": "ca97587b9b8d643faa67cb2dc6161989f4bb5c387b6ed7d61f504af9f2d1e979",
+              "capturedSourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/juba/qa-evidence/extra-review-snapshots/4abb90298b6ef8e3d2019cf409bc82a458873049f0daeb850f502712fb7e6d4f.json"
+            }
+          ]
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/juba/qa.json",
+            "sha256": "e468dcf42bc80f02f7dd18637edca1ef9526d6113d945b3639fb3a5222e3e05d"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/juba/illustration-qa-extra.json",
+            "sha256": "77718d2368a0bb747ba10c14e4100bc3493f82d759efc5eebbe504bd4743da30"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/juba/e07-juba-K3-v1-20261012-8f80d25fe50d.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/juba/e07-juba-K3-v1-20261012-8f80d25fe50d.png?t=73645b4c8d33b0ca",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/juba/e07-juba-K3-v1-20261012-8f80d25fe50d.png",
+        "sha256": "73645b4c8d33b0ca2b1a9aea6dd8cdbe0a41fa0657a1da0427861b92ed19f1ac",
+        "bytes": 2870371,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e07-juba-K3-v1-20261012",
+        "nativeSHA256": "8f80d25fe50dadad15594ff5e1089cbc44360d9da8e3f446fe44bed2c47adc20",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/juba/e07-juba-K3-v1-20261012-8f80d25fe50d.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e07",
+        "city": "juba",
+        "slot": "K3",
+        "targetJsonPath": "$.kaupunkilehti[0].nostot[2]",
+        "verifiedAt": "2026-10-12T18:10:59.918422+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/juba/e07-juba-K3-v1-20261012-8f80d25fe50d.png",
+        "sha256": "73645b4c8d33b0ca2b1a9aea6dd8cdbe0a41fa0657a1da0427861b92ed19f1ac",
+        "bytes": 2870371,
+        "SHAReadAt": "2026-10-12T18:29:49.515245+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "8f80d25fe50dadad15594ff5e1089cbc44360d9da8e3f446fe44bed2c47adc20",
+        "rgbPixelSHA256": "6ac0e3c9ed56397717e2518b9502a51bcedb210e87bdca908f3814c466e00342",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "7af8736d59562bc3eb4c569bdf734e3a011f2cfa23e213f02cd7d029d5c5b136",
+      "targetAfterSHA256": "25f1769b4b40ad154d8d7a0d795e915a061988aa5ba1a3d7b3e7481e5837c28a",
+      "contextAfterSHA256": "25f1769b4b40ad154d8d7a0d795e915a061988aa5ba1a3d7b3e7481e5837c28a"
+    },
+    {
+      "era": "e07",
+      "city": "juba",
+      "slot": "K4",
+      "type": "illustration",
+      "assetID": "e07-juba-K4-v1-20261012",
+      "galleryImageID": "e07-juba-K4-v1-20261012",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].nostot[3]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "nostot",
+        3
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/juba/e07-juba-K4-v1-20261012-be296b89bda0.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Kirjakokoelman havainnekuva; ei Juba Peace Libraryn sisätila.",
+        "lyhyt": "Kirjakokoelman havainnekuva; ei Juba Peace Libraryn sisätila."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/juba/e07-juba-K4-v1-20261012-be296b89bda0.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Kirjakokoelman havainnekuva; ei Juba Peace Libraryn sisätila.",
+        "lyhyt": "Kirjakokoelman havainnekuva; ei Juba Peace Libraryn sisätila."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "be296b89bda0567d0adfcd8b33686a743708013c267e0226fe550510bcb96189",
+      "exportSHA256": "151660e0d3355be9197f693225f4e2037e75477227ac427cfa279ddd2ff64a34",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/juba/e07-juba-K4-v1-20261012-be296b89bda0.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/juba/e07-juba-K4-v1-20261012-be296b89bda0.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/juba/e07-juba-K4-v1-20261012-be296b89bda0.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/juba/sisalto.json",
+      "sourceContentSHA256": "7af8736d59562bc3eb4c569bdf734e3a011f2cfa23e213f02cd7d029d5c5b136",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "b67fc720f7407985daeef82c31131830440d1bddbd6a4561b7ad4086612c8aa4",
+        "semanticContextSHA256": "b67fc720f7407985daeef82c31131830440d1bddbd6a4561b7ad4086612c8aa4",
+        "subjectTitle": "Kirjasto syntyi yhteistyöstä",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": [
+            "New generated illustration of natural subject or common utility object; no reproduction of a protected work.",
+            "Named buildings, identifiable people and exact contemporary art/design excluded."
+          ],
+          "QA": {
+            "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/juba/assets/e07-juba-K4-v1-20261012/kuva.png",
+            "width": 1536,
+            "height": 1024,
+            "sha256": "be296b89bda0567d0adfcd8b33686a743708013c267e0226fe550510bcb96189",
+            "auditEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/juba/qa-evidence/fa73ef09d157-technical-source.json",
+            "visualViewed": true,
+            "visualNotes": "Tavallisten nimeämättömien kirjojen kangaskannet ja sivupinnat näyttävät luontevilta. Ei tekstiä, taidetta, kasvoja tai toistettua kansisuunnittelua. Hyväksytty yleisenä kirjakokoelman havainnekuvana, ei Juba Peace Libraryn sisätilatodisteena.",
+            "captionFi": "Kirjakokoelman havainnekuva; ei Juba Peace Libraryn sisätila.",
+            "imageType": "illustration",
+            "realPlacePhotograph": false,
+            "rights": "Tavallinen kirja ilman kansiteosta, luonnonmateriaali tai elintarvike/astia"
+          },
+          "qaReason": "Tavallisten nimeämättömien kirjojen kangaskannet ja sivupinnat näyttävät luontevilta. Ei tekstiä, taidetta, kasvoja tai toistettua kansisuunnittelua. Hyväksytty yleisenä kirjakokoelman havainnekuvana, ei Juba Peace Libraryn sisätilatodisteena."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Kirjakokoelman havainnekuva; ei Juba Peace Libraryn sisätila.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/juba/qa.json",
+        "fileSHA256": "e468dcf42bc80f02f7dd18637edca1ef9526d6113d945b3639fb3a5222e3e05d",
+        "item": {
+          "slot": "K4",
+          "targetJsonPath": "$.kaupunkilehti[0].nostot[3]",
+          "assetID": "e07-juba-K4-v1-20261012",
+          "sha256": "be296b89bda0567d0adfcd8b33686a743708013c267e0226fe550510bcb96189",
+          "verdict": "accepted",
+          "reason": "Tavallisten nimeämättömien kirjojen kangaskannet ja sivupinnat näyttävät luontevilta. Ei tekstiä, taidetta, kasvoja tai toistettua kansisuunnittelua. Hyväksytty yleisenä kirjakokoelman havainnekuvana, ei Juba Peace Libraryn sisätilatodisteena.",
+          "evidence": {
+            "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/juba/assets/e07-juba-K4-v1-20261012/kuva.png",
+            "width": 1536,
+            "height": 1024,
+            "sha256": "be296b89bda0567d0adfcd8b33686a743708013c267e0226fe550510bcb96189",
+            "auditEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/juba/qa-evidence/fa73ef09d157-technical-source.json",
+            "visualViewed": true,
+            "visualNotes": "Tavallisten nimeämättömien kirjojen kangaskannet ja sivupinnat näyttävät luontevilta. Ei tekstiä, taidetta, kasvoja tai toistettua kansisuunnittelua. Hyväksytty yleisenä kirjakokoelman havainnekuvana, ei Juba Peace Libraryn sisätilatodisteena.",
+            "captionFi": "Kirjakokoelman havainnekuva; ei Juba Peace Libraryn sisätila.",
+            "imageType": "illustration",
+            "realPlacePhotograph": false,
+            "rights": "Tavallinen kirja ilman kansiteosta, luonnonmateriaali tai elintarvike/astia"
+          },
+          "checkedAt": "2026-10-12T18:48:20.522729+00:00",
+          "contentSHA256": "0fb60dfba3ce5b20a3d1c75c1b64306c6995c563f34d9f75d6120544bd10eefa",
+          "targetSHA256": "b67fc720f7407985daeef82c31131830440d1bddbd6a4561b7ad4086612c8aa4",
+          "independentReviews": [
+            {
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/juba/illustration-qa-extra.json",
+              "sha256": "4abb90298b6ef8e3d2019cf409bc82a458873049f0daeb850f502712fb7e6d4f",
+              "reviewerGroup": "kuvitus-2",
+              "assetID": "e07-juba-K4-v1-20261012",
+              "nativeSHA256": "be296b89bda0567d0adfcd8b33686a743708013c267e0226fe550510bcb96189",
+              "verdict": "accepted",
+              "reason": "Kirjapino havainnollistaa kokoelman rakentamista eikä jäljittele nimetyn kirjaston sisätilaa tai teosten kansitaidetta.",
+              "evidence": {
+                "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/juba/assets/e07-juba-K4-v1-20261012/kuva.png",
+                "nativeSha256Verified": "be296b89bda0567d0adfcd8b33686a743708013c267e0226fe550510bcb96189",
+                "nativeWidth": 1536,
+                "nativeHeight": 1024,
+                "format": "PNG",
+                "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Kolme kulunutta kangaskantista kirjaa pöydällä. Sivujen ja kansien muodot ja varjot ovat uskottavia; kannet ja selät tekstittömiä, ei henkilöitä.",
+                "captionFi": "Kirjakokoelman havainnekuva; ei Juba Peace Libraryn sisätila.",
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/juba/sisalto.json",
+                "contentSha256": "0fb60dfba3ce5b20a3d1c75c1b64306c6995c563f34d9f75d6120544bd10eefa",
+                "targetCurrentlyPresent": true,
+                "targetText": "Juba Peace Library avattiin 2000-luvulla yleiseksi lukupaikaksi Gudeleen. Sen taustalla on South Sudan Library Foundation sekä Yawusa Kinthan ja Kevin Lenahanin yhteistyö. Kirjakokoelma koottiin lahjoittajien ja kumppanien tuella. Tavoitteena oli tukea opiskelua, tutkimista ja tavallista lukemista. Avausvaiheen yleisöön kuului myös koululaisia. Kirjaston tarina on näin sekä paikallista valmistelutyötä että yhteisen kokoelman rakentamista: lukupaikka tarvitsee kirjojen lisäksi toimijoita, jotka kokoavat sen.",
+                "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/juba/faktapohja.md",
+                "factSheetSha256": "ae67c119b1c67d52be4beefef5b2f73253eda4e6f1d03e9e62bbe648f3b6d718",
+                "topicEvidence": "K4 kertoo lahjoituksista kootusta kirjakokoelmasta.",
+                "sourceEvidence": [
+                  {
+                    "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/juba/sisalto.json",
+                    "contentSha256": "0fb60dfba3ce5b20a3d1c75c1b64306c6995c563f34d9f75d6120544bd10eefa",
+                    "targetJsonPath": "$.kaupunkilehti[0].nostot[3]",
+                    "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/juba/faktapohja.md",
+                    "evidenceMode": "source-backed text topic; generalized material/food/biological illustration, not exact place appearance",
+                    "targetTextAtIssue": "Juba Peace Library avattiin 2000-luvulla yleiseksi lukupaikaksi Gudeleen. Sen taustalla on South Sudan Library Foundation sekä Yawusa Kinthan ja Kevin Lenahanin yhteistyö. Kirjakokoelma koottiin lahjoittajien ja kumppanien tuella. Tavoitteena oli tukea opiskelua, tutkimista ja tavallista lukemista. Avausvaiheen yleisöön kuului myös koululaisia. Kirjaston tarina on näin sekä paikallista valmistelutyötä että yhteisen kokoelman rakentamista: lukupaikka tarvitsee kirjojen lisäksi toimijoita, jotka kokoavat sen."
+                  }
+                ],
+                "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+                "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+              }
+            },
+            {
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/juba/illustration-qa-extra.json",
+              "sha256": "4abb90298b6ef8e3d2019cf409bc82a458873049f0daeb850f502712fb7e6d4f",
+              "reviewerGroup": "kuvitus-2",
+              "assetID": "e07-juba-K4-v1-20261012",
+              "nativeSHA256": "be296b89bda0567d0adfcd8b33686a743708013c267e0226fe550510bcb96189",
+              "verdict": "accepted",
+              "reason": "Kirjapino havainnollistaa kokoelman rakentamista eikä jäljittele nimetyn kirjaston sisätilaa tai teosten kansitaidetta.",
+              "evidence": {
+                "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/juba/assets/e07-juba-K4-v1-20261012/kuva.png",
+                "nativeSha256Verified": "be296b89bda0567d0adfcd8b33686a743708013c267e0226fe550510bcb96189",
+                "nativeWidth": 1536,
+                "nativeHeight": 1024,
+                "format": "PNG",
+                "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Kolme kulunutta kangaskantista kirjaa pöydällä. Sivujen ja kansien muodot ja varjot ovat uskottavia; kannet ja selät tekstittömiä, ei henkilöitä.",
+                "captionFi": "Kirjakokoelman havainnekuva; ei Juba Peace Libraryn sisätila.",
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/juba/sisalto.json",
+                "contentSha256": "0fb60dfba3ce5b20a3d1c75c1b64306c6995c563f34d9f75d6120544bd10eefa",
+                "targetCurrentlyPresent": true,
+                "targetText": "Juba Peace Library avattiin 2000-luvulla yleiseksi lukupaikaksi Gudeleen. Sen taustalla on South Sudan Library Foundation sekä Yawusa Kinthan ja Kevin Lenahanin yhteistyö. Kirjakokoelma koottiin lahjoittajien ja kumppanien tuella. Tavoitteena oli tukea opiskelua, tutkimista ja tavallista lukemista. Avausvaiheen yleisöön kuului myös koululaisia. Kirjaston tarina on näin sekä paikallista valmistelutyötä että yhteisen kokoelman rakentamista: lukupaikka tarvitsee kirjojen lisäksi toimijoita, jotka kokoavat sen.",
+                "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/juba/faktapohja.md",
+                "factSheetSha256": "ae67c119b1c67d52be4beefef5b2f73253eda4e6f1d03e9e62bbe648f3b6d718",
+                "topicEvidence": "K4 kertoo lahjoituksista kootusta kirjakokoelmasta.",
+                "sourceEvidence": [
+                  {
+                    "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/juba/sisalto.json",
+                    "contentSha256": "0fb60dfba3ce5b20a3d1c75c1b64306c6995c563f34d9f75d6120544bd10eefa",
+                    "targetJsonPath": "$.kaupunkilehti[0].nostot[3]",
+                    "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/juba/faktapohja.md",
+                    "evidenceMode": "source-backed text topic; generalized material/food/biological illustration, not exact place appearance",
+                    "targetTextAtIssue": "Juba Peace Library avattiin 2000-luvulla yleiseksi lukupaikaksi Gudeleen. Sen taustalla on South Sudan Library Foundation sekä Yawusa Kinthan ja Kevin Lenahanin yhteistyö. Kirjakokoelma koottiin lahjoittajien ja kumppanien tuella. Tavoitteena oli tukea opiskelua, tutkimista ja tavallista lukemista. Avausvaiheen yleisöön kuului myös koululaisia. Kirjaston tarina on näin sekä paikallista valmistelutyötä että yhteisen kokoelman rakentamista: lukupaikka tarvitsee kirjojen lisäksi toimijoita, jotka kokoavat sen."
+                  }
+                ],
+                "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+                "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+              },
+              "opinionSHA256": "1d1ebc53f4f6ad2ea3542ee095963907531c18b86c0d36c59d3690d1a25b60b2",
+              "capturedSourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/juba/qa-evidence/extra-review-snapshots/4abb90298b6ef8e3d2019cf409bc82a458873049f0daeb850f502712fb7e6d4f.json"
+            }
+          ]
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/juba/qa.json",
+            "sha256": "e468dcf42bc80f02f7dd18637edca1ef9526d6113d945b3639fb3a5222e3e05d"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/juba/illustration-qa-extra.json",
+            "sha256": "77718d2368a0bb747ba10c14e4100bc3493f82d759efc5eebbe504bd4743da30"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/juba/e07-juba-K4-v1-20261012-be296b89bda0.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/juba/e07-juba-K4-v1-20261012-be296b89bda0.png?t=151660e0d3355be9",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/juba/e07-juba-K4-v1-20261012-be296b89bda0.png",
+        "sha256": "151660e0d3355be9197f693225f4e2037e75477227ac427cfa279ddd2ff64a34",
+        "bytes": 2303763,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e07-juba-K4-v1-20261012",
+        "nativeSHA256": "be296b89bda0567d0adfcd8b33686a743708013c267e0226fe550510bcb96189",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/juba/e07-juba-K4-v1-20261012-be296b89bda0.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e07",
+        "city": "juba",
+        "slot": "K4",
+        "targetJsonPath": "$.kaupunkilehti[0].nostot[3]",
+        "verifiedAt": "2026-10-12T18:14:05.187199+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/juba/e07-juba-K4-v1-20261012-be296b89bda0.png",
+        "sha256": "151660e0d3355be9197f693225f4e2037e75477227ac427cfa279ddd2ff64a34",
+        "bytes": 2303763,
+        "SHAReadAt": "2026-10-12T18:29:49.621038+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "be296b89bda0567d0adfcd8b33686a743708013c267e0226fe550510bcb96189",
+        "rgbPixelSHA256": "7e485f928601521950914782d60701370aed2c9e34dd043ee5363d34b06b4e64",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "7af8736d59562bc3eb4c569bdf734e3a011f2cfa23e213f02cd7d029d5c5b136",
+      "targetAfterSHA256": "b67fc720f7407985daeef82c31131830440d1bddbd6a4561b7ad4086612c8aa4",
+      "contextAfterSHA256": "b67fc720f7407985daeef82c31131830440d1bddbd6a4561b7ad4086612c8aa4"
+    },
+    {
+      "era": "e07",
+      "city": "juba",
+      "slot": "L2",
+      "type": "illustration",
+      "assetID": "e07-juba-L2-v1-20261012",
+      "galleryImageID": "e07-juba-L2-v1-20261012",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[1].nostot[1]",
+      "targetTokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        1
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/juba/e07-juba-L2-v1-20261012-d69cf10c91c8.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Elokuvan esitysmateriaalin havainnekuva; ei Juba Picture Housen todellinen kalusto.",
+        "lyhyt": "Elokuvan esitysmateriaalin havainnekuva; ei Juba Picture Housen todellinen kalusto."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/juba/e07-juba-L2-v1-20261012-d69cf10c91c8.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Elokuvan esitysmateriaalin havainnekuva; ei Juba Picture Housen todellinen kalusto.",
+        "lyhyt": "Elokuvan esitysmateriaalin havainnekuva; ei Juba Picture Housen todellinen kalusto."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "d69cf10c91c8c80b5c5640988e2ff39fae08da2035dada178eb112e7512d91e8",
+      "exportSHA256": "78e0255997071cf20fd25c2d491444ca6a178c391e33af1577a93e8ea30411c1",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/juba/e07-juba-L2-v1-20261012-d69cf10c91c8.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/juba/e07-juba-L2-v1-20261012-d69cf10c91c8.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/juba/e07-juba-L2-v1-20261012-d69cf10c91c8.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/juba/sisalto.json",
+      "sourceContentSHA256": "7af8736d59562bc3eb4c569bdf734e3a011f2cfa23e213f02cd7d029d5c5b136",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "1ebc6d576ffa28ba4ac15f61f031f537a7a2f27a37f316bc9ae26d48ec832734",
+        "semanticContextSHA256": "1ebc6d576ffa28ba4ac15f61f031f537a7a2f27a37f316bc9ae26d48ec832734",
+        "subjectTitle": "Elokuvailta jatkui yleisössä",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": [
+            "New depiction of common functional shapes or natural materials; no identified artwork, brand design, person or building reproduced."
+          ],
+          "QA": {
+            "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/juba/assets/e07-juba-L2-v1-20261012/kuva.png",
+            "width": 1536,
+            "height": 1024,
+            "sha256": "d69cf10c91c8c80b5c5640988e2ff39fae08da2035dada178eb112e7512d91e8",
+            "nativeGeometry": {
+              "rawWidth": 1536,
+              "rawHeight": 1024,
+              "exifOrientation": 1,
+              "width": 1536,
+              "height": 1024
+            },
+            "auditEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/juba/qa-evidence/5952956b9f46-technical-source.json",
+            "visualViewedByThisSession": false,
+            "visualReviewSource": "independent extra reviewer; not personally viewed here",
+            "independentReview": {
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/juba/illustration-qa-extra.json",
+              "sha256": "77718d2368a0bb747ba10c14e4100bc3493f82d759efc5eebbe504bd4743da30",
+              "reviewerGroup": "kuvitus-2",
+              "assetID": "e07-juba-L2-v1-20261012",
+              "nativeSHA256": "d69cf10c91c8c80b5c5640988e2ff39fae08da2035dada178eb112e7512d91e8",
+              "verdict": "accepted",
+              "reason": "Yleinen filmikela sopii elokuvien esitysmateriaaliin. Selite ei väitä kalustoa Juba Picture Housen aidoksi esineeksi eikä näytä suojattuja filmiruutuja.",
+              "evidence": {
+                "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/juba/assets/e07-juba-L2-v1-20261012/kuva.png",
+                "nativeSha256Verified": "d69cf10c91c8c80b5c5640988e2ff39fae08da2035dada178eb112e7512d91e8",
+                "nativeWidth": 1536,
+                "nativeHeight": 1024,
+                "format": "PNG",
+                "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Yksi metallinen filmikela, musta filmi ja kaksi rei'itysreunaa irtonaisessa kaarevassa päässä. Uskottavat pinnat ja rakenne, ei tekstiä tai henkilöitä.",
+                "captionFi": "Elokuvan esitysmateriaalin havainnekuva; ei Juba Picture Housen todellinen kalusto.",
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/juba/sisalto.json",
+                "contentSha256": "0fb60dfba3ce5b20a3d1c75c1b64306c6995c563f34d9f75d6120544bd10eefa",
+                "targetCurrentlyPresent": true,
+                "targetText": "Juba Picture House esitti 1900-luvulla muun muassa intialaisia, egyptiläisiä ja yhdysvaltalaisia elokuvia. Ohjelmassa oli lännenelokuvia, rakkaustarinoita, seikkailuja ja luontokuvauksia. Katsojat saattoivat nauraa, huutaa sekä selittää tai kääntää tapahtumia toisilleen. Salissa oli myös eri hintaluokan istumapaikkoja. Rakennusta käytettiin myöhemmin seurakuntatilana, mutta alueelle jäi nimi Hai Cinema. Teatterin toiminta siis päättyi, kun sen muisto jatkoi elämää kaupungin paikannimessä.",
+                "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/juba/faktapohja.md",
+                "factSheetSha256": "ae67c119b1c67d52be4beefef5b2f73253eda4e6f1d03e9e62bbe648f3b6d718",
+                "topicEvidence": "L2 kertoo elokuvateatterin esitystoiminnasta.",
+                "sourceEvidence": [
+                  {
+                    "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/juba/sisalto.json",
+                    "contentSha256": "0fb60dfba3ce5b20a3d1c75c1b64306c6995c563f34d9f75d6120544bd10eefa",
+                    "targetJsonPath": "$.kaupunkilehti[1].nostot[1]",
+                    "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/juba/faktapohja.md",
+                    "evidenceMode": "Common material/utility object for a source-backed textual subject; no claim about the real named place, item or event",
+                    "targetTextAtIssue": "Juba Picture House esitti 1900-luvulla muun muassa intialaisia, egyptiläisiä ja yhdysvaltalaisia elokuvia. Ohjelmassa oli lännenelokuvia, rakkaustarinoita, seikkailuja ja luontokuvauksia. Katsojat saattoivat nauraa, huutaa sekä selittää tai kääntää tapahtumia toisilleen. Salissa oli myös eri hintaluokan istumapaikkoja. Rakennusta käytettiin myöhemmin seurakuntatilana, mutta alueelle jäi nimi Hai Cinema. Teatterin toiminta siis päättyi, kun sen muisto jatkoi elämää kaupungin paikannimessä."
+                  }
+                ],
+                "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+                "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+              },
+              "opinionSHA256": "2f7e202962de5f539753dee542094623f641fbc5da2dd51fee70c68032ad4528",
+              "capturedSourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/juba/qa-evidence/extra-review-snapshots/77718d2368a0bb747ba10c14e4100bc3493f82d759efc5eebbe504bd4743da30.json"
+            },
+            "imageType": "illustration",
+            "captionFi": "Elokuvan esitysmateriaalin havainnekuva; ei Juba Picture Housen todellinen kalusto.",
+            "realPlacePhotograph": false
+          },
+          "qaReason": "Lisätarkistajan kuvitus-2 dokumentoitu arvio täsmälleen samasta assetID/nativeSHA-versiosta: Yleinen filmikela sopii elokuvien esitysmateriaaliin. Selite ei väitä kalustoa Juba Picture Housen aidoksi esineeksi eikä näytä suojattuja filmiruutuja."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Elokuvan esitysmateriaalin havainnekuva; ei Juba Picture Housen todellinen kalusto.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/juba/qa.json",
+        "fileSHA256": "e468dcf42bc80f02f7dd18637edca1ef9526d6113d945b3639fb3a5222e3e05d",
+        "item": {
+          "slot": "L2",
+          "targetJsonPath": "$.kaupunkilehti[1].nostot[1]",
+          "assetID": "e07-juba-L2-v1-20261012",
+          "sha256": "d69cf10c91c8c80b5c5640988e2ff39fae08da2035dada178eb112e7512d91e8",
+          "verdict": "accepted",
+          "reason": "Lisätarkistajan kuvitus-2 dokumentoitu arvio täsmälleen samasta assetID/nativeSHA-versiosta: Yleinen filmikela sopii elokuvien esitysmateriaaliin. Selite ei väitä kalustoa Juba Picture Housen aidoksi esineeksi eikä näytä suojattuja filmiruutuja.",
+          "evidence": {
+            "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/juba/assets/e07-juba-L2-v1-20261012/kuva.png",
+            "width": 1536,
+            "height": 1024,
+            "sha256": "d69cf10c91c8c80b5c5640988e2ff39fae08da2035dada178eb112e7512d91e8",
+            "nativeGeometry": {
+              "rawWidth": 1536,
+              "rawHeight": 1024,
+              "exifOrientation": 1,
+              "width": 1536,
+              "height": 1024
+            },
+            "auditEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/juba/qa-evidence/5952956b9f46-technical-source.json",
+            "visualViewedByThisSession": false,
+            "visualReviewSource": "independent extra reviewer; not personally viewed here",
+            "independentReview": {
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/juba/illustration-qa-extra.json",
+              "sha256": "77718d2368a0bb747ba10c14e4100bc3493f82d759efc5eebbe504bd4743da30",
+              "reviewerGroup": "kuvitus-2",
+              "assetID": "e07-juba-L2-v1-20261012",
+              "nativeSHA256": "d69cf10c91c8c80b5c5640988e2ff39fae08da2035dada178eb112e7512d91e8",
+              "verdict": "accepted",
+              "reason": "Yleinen filmikela sopii elokuvien esitysmateriaaliin. Selite ei väitä kalustoa Juba Picture Housen aidoksi esineeksi eikä näytä suojattuja filmiruutuja.",
+              "evidence": {
+                "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/juba/assets/e07-juba-L2-v1-20261012/kuva.png",
+                "nativeSha256Verified": "d69cf10c91c8c80b5c5640988e2ff39fae08da2035dada178eb112e7512d91e8",
+                "nativeWidth": 1536,
+                "nativeHeight": 1024,
+                "format": "PNG",
+                "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Yksi metallinen filmikela, musta filmi ja kaksi rei'itysreunaa irtonaisessa kaarevassa päässä. Uskottavat pinnat ja rakenne, ei tekstiä tai henkilöitä.",
+                "captionFi": "Elokuvan esitysmateriaalin havainnekuva; ei Juba Picture Housen todellinen kalusto.",
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/juba/sisalto.json",
+                "contentSha256": "0fb60dfba3ce5b20a3d1c75c1b64306c6995c563f34d9f75d6120544bd10eefa",
+                "targetCurrentlyPresent": true,
+                "targetText": "Juba Picture House esitti 1900-luvulla muun muassa intialaisia, egyptiläisiä ja yhdysvaltalaisia elokuvia. Ohjelmassa oli lännenelokuvia, rakkaustarinoita, seikkailuja ja luontokuvauksia. Katsojat saattoivat nauraa, huutaa sekä selittää tai kääntää tapahtumia toisilleen. Salissa oli myös eri hintaluokan istumapaikkoja. Rakennusta käytettiin myöhemmin seurakuntatilana, mutta alueelle jäi nimi Hai Cinema. Teatterin toiminta siis päättyi, kun sen muisto jatkoi elämää kaupungin paikannimessä.",
+                "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/juba/faktapohja.md",
+                "factSheetSha256": "ae67c119b1c67d52be4beefef5b2f73253eda4e6f1d03e9e62bbe648f3b6d718",
+                "topicEvidence": "L2 kertoo elokuvateatterin esitystoiminnasta.",
+                "sourceEvidence": [
+                  {
+                    "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/juba/sisalto.json",
+                    "contentSha256": "0fb60dfba3ce5b20a3d1c75c1b64306c6995c563f34d9f75d6120544bd10eefa",
+                    "targetJsonPath": "$.kaupunkilehti[1].nostot[1]",
+                    "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/juba/faktapohja.md",
+                    "evidenceMode": "Common material/utility object for a source-backed textual subject; no claim about the real named place, item or event",
+                    "targetTextAtIssue": "Juba Picture House esitti 1900-luvulla muun muassa intialaisia, egyptiläisiä ja yhdysvaltalaisia elokuvia. Ohjelmassa oli lännenelokuvia, rakkaustarinoita, seikkailuja ja luontokuvauksia. Katsojat saattoivat nauraa, huutaa sekä selittää tai kääntää tapahtumia toisilleen. Salissa oli myös eri hintaluokan istumapaikkoja. Rakennusta käytettiin myöhemmin seurakuntatilana, mutta alueelle jäi nimi Hai Cinema. Teatterin toiminta siis päättyi, kun sen muisto jatkoi elämää kaupungin paikannimessä."
+                  }
+                ],
+                "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+                "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+              },
+              "opinionSHA256": "2f7e202962de5f539753dee542094623f641fbc5da2dd51fee70c68032ad4528",
+              "capturedSourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/juba/qa-evidence/extra-review-snapshots/77718d2368a0bb747ba10c14e4100bc3493f82d759efc5eebbe504bd4743da30.json"
+            },
+            "imageType": "illustration",
+            "captionFi": "Elokuvan esitysmateriaalin havainnekuva; ei Juba Picture Housen todellinen kalusto.",
+            "realPlacePhotograph": false
+          },
+          "importedIndependentReview": true,
+          "independentReviews": [
+            {
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/juba/illustration-qa-extra.json",
+              "sha256": "77718d2368a0bb747ba10c14e4100bc3493f82d759efc5eebbe504bd4743da30",
+              "reviewerGroup": "kuvitus-2",
+              "assetID": "e07-juba-L2-v1-20261012",
+              "nativeSHA256": "d69cf10c91c8c80b5c5640988e2ff39fae08da2035dada178eb112e7512d91e8",
+              "verdict": "accepted",
+              "reason": "Yleinen filmikela sopii elokuvien esitysmateriaaliin. Selite ei väitä kalustoa Juba Picture Housen aidoksi esineeksi eikä näytä suojattuja filmiruutuja.",
+              "evidence": {
+                "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/juba/assets/e07-juba-L2-v1-20261012/kuva.png",
+                "nativeSha256Verified": "d69cf10c91c8c80b5c5640988e2ff39fae08da2035dada178eb112e7512d91e8",
+                "nativeWidth": 1536,
+                "nativeHeight": 1024,
+                "format": "PNG",
+                "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Yksi metallinen filmikela, musta filmi ja kaksi rei'itysreunaa irtonaisessa kaarevassa päässä. Uskottavat pinnat ja rakenne, ei tekstiä tai henkilöitä.",
+                "captionFi": "Elokuvan esitysmateriaalin havainnekuva; ei Juba Picture Housen todellinen kalusto.",
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/juba/sisalto.json",
+                "contentSha256": "0fb60dfba3ce5b20a3d1c75c1b64306c6995c563f34d9f75d6120544bd10eefa",
+                "targetCurrentlyPresent": true,
+                "targetText": "Juba Picture House esitti 1900-luvulla muun muassa intialaisia, egyptiläisiä ja yhdysvaltalaisia elokuvia. Ohjelmassa oli lännenelokuvia, rakkaustarinoita, seikkailuja ja luontokuvauksia. Katsojat saattoivat nauraa, huutaa sekä selittää tai kääntää tapahtumia toisilleen. Salissa oli myös eri hintaluokan istumapaikkoja. Rakennusta käytettiin myöhemmin seurakuntatilana, mutta alueelle jäi nimi Hai Cinema. Teatterin toiminta siis päättyi, kun sen muisto jatkoi elämää kaupungin paikannimessä.",
+                "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/juba/faktapohja.md",
+                "factSheetSha256": "ae67c119b1c67d52be4beefef5b2f73253eda4e6f1d03e9e62bbe648f3b6d718",
+                "topicEvidence": "L2 kertoo elokuvateatterin esitystoiminnasta.",
+                "sourceEvidence": [
+                  {
+                    "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/juba/sisalto.json",
+                    "contentSha256": "0fb60dfba3ce5b20a3d1c75c1b64306c6995c563f34d9f75d6120544bd10eefa",
+                    "targetJsonPath": "$.kaupunkilehti[1].nostot[1]",
+                    "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/juba/faktapohja.md",
+                    "evidenceMode": "Common material/utility object for a source-backed textual subject; no claim about the real named place, item or event",
+                    "targetTextAtIssue": "Juba Picture House esitti 1900-luvulla muun muassa intialaisia, egyptiläisiä ja yhdysvaltalaisia elokuvia. Ohjelmassa oli lännenelokuvia, rakkaustarinoita, seikkailuja ja luontokuvauksia. Katsojat saattoivat nauraa, huutaa sekä selittää tai kääntää tapahtumia toisilleen. Salissa oli myös eri hintaluokan istumapaikkoja. Rakennusta käytettiin myöhemmin seurakuntatilana, mutta alueelle jäi nimi Hai Cinema. Teatterin toiminta siis päättyi, kun sen muisto jatkoi elämää kaupungin paikannimessä."
+                  }
+                ],
+                "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+                "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+              },
+              "opinionSHA256": "2f7e202962de5f539753dee542094623f641fbc5da2dd51fee70c68032ad4528",
+              "capturedSourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/juba/qa-evidence/extra-review-snapshots/77718d2368a0bb747ba10c14e4100bc3493f82d759efc5eebbe504bd4743da30.json"
+            }
+          ],
+          "checkedAt": "2026-10-12T19:25:35.854429+00:00",
+          "contentSHA256": "0fb60dfba3ce5b20a3d1c75c1b64306c6995c563f34d9f75d6120544bd10eefa",
+          "targetSHA256": "1ebc6d576ffa28ba4ac15f61f031f537a7a2f27a37f316bc9ae26d48ec832734"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/juba/qa.json",
+            "sha256": "e468dcf42bc80f02f7dd18637edca1ef9526d6113d945b3639fb3a5222e3e05d"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/juba/illustration-qa-extra.json",
+            "sha256": "77718d2368a0bb747ba10c14e4100bc3493f82d759efc5eebbe504bd4743da30"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/juba/e07-juba-L2-v1-20261012-d69cf10c91c8.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/juba/e07-juba-L2-v1-20261012-d69cf10c91c8.png?t=78e0255997071cf2",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/juba/e07-juba-L2-v1-20261012-d69cf10c91c8.png",
+        "sha256": "78e0255997071cf20fd25c2d491444ca6a178c391e33af1577a93e8ea30411c1",
+        "bytes": 2242970,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e07-juba-L2-v1-20261012",
+        "nativeSHA256": "d69cf10c91c8c80b5c5640988e2ff39fae08da2035dada178eb112e7512d91e8",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/juba/e07-juba-L2-v1-20261012-d69cf10c91c8.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e07",
+        "city": "juba",
+        "slot": "L2",
+        "targetJsonPath": "$.kaupunkilehti[1].nostot[1]",
+        "verifiedAt": "2026-10-12T19:24:30.235653+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/juba/e07-juba-L2-v1-20261012-d69cf10c91c8.png",
+        "sha256": "78e0255997071cf20fd25c2d491444ca6a178c391e33af1577a93e8ea30411c1",
+        "bytes": 2242970,
+        "SHAReadAt": "2026-10-12T19:32:04.953588+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "d69cf10c91c8c80b5c5640988e2ff39fae08da2035dada178eb112e7512d91e8",
+        "rgbPixelSHA256": "6ae82dc76f2344c1c28de29eedb14e14f92ad48d5dc515398762dbd3686c79c7",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "7af8736d59562bc3eb4c569bdf734e3a011f2cfa23e213f02cd7d029d5c5b136",
+      "targetAfterSHA256": "1ebc6d576ffa28ba4ac15f61f031f537a7a2f27a37f316bc9ae26d48ec832734",
+      "contextAfterSHA256": "1ebc6d576ffa28ba4ac15f61f031f537a7a2f27a37f316bc9ae26d48ec832734"
+    },
+    {
+      "era": "e07",
+      "city": "juba",
+      "slot": "L4",
+      "type": "illustration",
+      "assetID": "e07-juba-L4-v1-20261012",
+      "galleryImageID": "e07-juba-L4-v1-20261012",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
+      "targetTokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        3
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/juba/e07-juba-L4-v1-20261012-0bd020a8cd9e.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Lateriittisen rakennusmateriaalin havainnekuva.",
+        "lyhyt": "Lateriittisen rakennusmateriaalin havainnekuva."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/juba/e07-juba-L4-v1-20261012-0bd020a8cd9e.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Lateriittisen rakennusmateriaalin havainnekuva.",
+        "lyhyt": "Lateriittisen rakennusmateriaalin havainnekuva."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "0bd020a8cd9e8b1c5fe5283f3c0abe40ab2b2e2871fa86cf10674c4425ba830e",
+      "exportSHA256": "207b7591dc0a05cc4466735cb8fc4a8dcfcba2e80346972bbf3ffd1ecef8181e",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/juba/e07-juba-L4-v1-20261012-0bd020a8cd9e.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/juba/e07-juba-L4-v1-20261012-0bd020a8cd9e.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/juba/e07-juba-L4-v1-20261012-0bd020a8cd9e.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/juba/sisalto.json",
+      "sourceContentSHA256": "7af8736d59562bc3eb4c569bdf734e3a011f2cfa23e213f02cd7d029d5c5b136",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "7ac3823125e650c6349c71e8625d1ddae801c06279a776cca2df3bbcbe0a4bf2",
+        "semanticContextSHA256": "7ac3823125e650c6349c71e8625d1ddae801c06279a776cca2df3bbcbe0a4bf2",
+        "subjectTitle": "Lentomatka tarvitsi työtä maassa",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": [
+            "New generated illustration of natural subject or common utility object; no reproduction of a protected work.",
+            "Named buildings, identifiable people and exact contemporary art/design excluded."
+          ],
+          "QA": {
+            "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/juba/assets/e07-juba-L4-v1-20261012/kuva.png",
+            "width": 1536,
+            "height": 1024,
+            "sha256": "0bd020a8cd9e8b1c5fe5283f3c0abe40ab2b2e2871fa86cf10674c4425ba830e",
+            "auditEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/juba/qa-evidence/295e3cb3c4f1-technical-source.json",
+            "visualViewed": true,
+            "visualNotes": "Lateriittinen murske ja sora vaihtelevat koossa ja pinnassa, punertava väri uskottava. Ei tekstiä, rakennusta tai suojattua teosta; ei väitetä kuvatun juuri Juban historiallisen kiitotien paikalla.",
+            "captionFi": "Lateriittisen rakennusmateriaalin havainnekuva.",
+            "imageType": "illustration",
+            "realPlacePhotograph": false,
+            "rights": "Tavallinen kirja ilman kansiteosta, luonnonmateriaali tai elintarvike/astia"
+          },
+          "qaReason": "Lateriittinen murske ja sora vaihtelevat koossa ja pinnassa, punertava väri uskottava. Ei tekstiä, rakennusta tai suojattua teosta; ei väitetä kuvatun juuri Juban historiallisen kiitotien paikalla."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Lateriittisen rakennusmateriaalin havainnekuva.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/juba/qa.json",
+        "fileSHA256": "e468dcf42bc80f02f7dd18637edca1ef9526d6113d945b3639fb3a5222e3e05d",
+        "item": {
+          "slot": "L4",
+          "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
+          "assetID": "e07-juba-L4-v1-20261012",
+          "sha256": "0bd020a8cd9e8b1c5fe5283f3c0abe40ab2b2e2871fa86cf10674c4425ba830e",
+          "verdict": "accepted",
+          "reason": "Lateriittinen murske ja sora vaihtelevat koossa ja pinnassa, punertava väri uskottava. Ei tekstiä, rakennusta tai suojattua teosta; ei väitetä kuvatun juuri Juban historiallisen kiitotien paikalla.",
+          "evidence": {
+            "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/juba/assets/e07-juba-L4-v1-20261012/kuva.png",
+            "width": 1536,
+            "height": 1024,
+            "sha256": "0bd020a8cd9e8b1c5fe5283f3c0abe40ab2b2e2871fa86cf10674c4425ba830e",
+            "auditEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/juba/qa-evidence/295e3cb3c4f1-technical-source.json",
+            "visualViewed": true,
+            "visualNotes": "Lateriittinen murske ja sora vaihtelevat koossa ja pinnassa, punertava väri uskottava. Ei tekstiä, rakennusta tai suojattua teosta; ei väitetä kuvatun juuri Juban historiallisen kiitotien paikalla.",
+            "captionFi": "Lateriittisen rakennusmateriaalin havainnekuva.",
+            "imageType": "illustration",
+            "realPlacePhotograph": false,
+            "rights": "Tavallinen kirja ilman kansiteosta, luonnonmateriaali tai elintarvike/astia"
+          },
+          "checkedAt": "2026-10-12T18:48:20.522739+00:00",
+          "contentSHA256": "0fb60dfba3ce5b20a3d1c75c1b64306c6995c563f34d9f75d6120544bd10eefa",
+          "targetSHA256": "7ac3823125e650c6349c71e8625d1ddae801c06279a776cca2df3bbcbe0a4bf2",
+          "independentReviews": [
+            {
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/juba/illustration-qa-extra.json",
+              "sha256": "4abb90298b6ef8e3d2019cf409bc82a458873049f0daeb850f502712fb7e6d4f",
+              "reviewerGroup": "kuvitus-2",
+              "assetID": "e07-juba-L4-v1-20261012",
+              "nativeSHA256": "0bd020a8cd9e8b1c5fe5283f3c0abe40ab2b2e2871fa86cf10674c4425ba830e",
+              "verdict": "accepted",
+              "reason": "Punertava murskattu maa- ja kivimateriaali sopii noston lateriittiaiheeseen. Kuvateksti ilmoittaa havainnekuvan eikä nimeä näkymää Juban kiitotieksi.",
+              "evidence": {
+                "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/juba/assets/e07-juba-L4-v1-20261012/kuva.png",
+                "nativeSha256Verified": "0bd020a8cd9e8b1c5fe5283f3c0abe40ab2b2e2871fa86cf10674c4425ba830e",
+                "nativeWidth": 1536,
+                "nativeHeight": 1024,
+                "format": "PNG",
+                "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Vaihtelevan kokoisia punaruskeita kiviä ja hienoa maa-ainesta kasassa, taustalla anonyymi maapohja. Luonnolliset rakeiset pinnat; ei lentokentän rakennuksia tai tekstiä.",
+                "captionFi": "Lateriittisen rakennusmateriaalin havainnekuva.",
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/juba/sisalto.json",
+                "contentSha256": "0fb60dfba3ce5b20a3d1c75c1b64306c6995c563f34d9f75d6120544bd10eefa",
+                "targetCurrentlyPresent": true,
+                "targetText": "Jubaan raivattiin lentopaikka 1900-luvun alkupuolella hallintokaupungin rakennusvaiheessa. Kiitotiehen käytettiin myöhemmin murskattua lateriittia eli murramia. Juba kuului kaukoliikenteen välilaskupaikkoihin, ja yöksi pysähtyneitä matkustajia vietiin autolla hotelliin. Lentotoiminta vaati myös kentän raivaamista, polttoaineen kuljettamista sekä koneiden ja matkatavaroiden käsittelyä. Ilmassa kulkevan matkan taustalla oli siis paljon paikallista työtä maassa. Laituri taas liitti maanteitse saapuneen tavaran jokikuljetukseen.",
+                "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/juba/faktapohja.md",
+                "factSheetSha256": "ae67c119b1c67d52be4beefef5b2f73253eda4e6f1d03e9e62bbe648f3b6d718",
+                "topicEvidence": "L4 nimeää murskatun lateriitin eli murramin kiitotien materiaalina.",
+                "sourceEvidence": [
+                  {
+                    "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/juba/sisalto.json",
+                    "contentSha256": "0fb60dfba3ce5b20a3d1c75c1b64306c6995c563f34d9f75d6120544bd10eefa",
+                    "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
+                    "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/juba/faktapohja.md",
+                    "evidenceMode": "source-backed text topic; generalized material/food/biological illustration, not exact place appearance",
+                    "targetTextAtIssue": "Jubaan raivattiin lentopaikka 1900-luvun alkupuolella hallintokaupungin rakennusvaiheessa. Kiitotiehen käytettiin myöhemmin murskattua lateriittia eli murramia. Juba kuului kaukoliikenteen välilaskupaikkoihin, ja yöksi pysähtyneitä matkustajia vietiin autolla hotelliin. Lentotoiminta vaati myös kentän raivaamista, polttoaineen kuljettamista sekä koneiden ja matkatavaroiden käsittelyä. Ilmassa kulkevan matkan taustalla oli siis paljon paikallista työtä maassa. Laituri taas liitti maanteitse saapuneen tavaran jokikuljetukseen."
+                  }
+                ],
+                "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+                "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+              }
+            },
+            {
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/juba/illustration-qa-extra.json",
+              "sha256": "4abb90298b6ef8e3d2019cf409bc82a458873049f0daeb850f502712fb7e6d4f",
+              "reviewerGroup": "kuvitus-2",
+              "assetID": "e07-juba-L4-v1-20261012",
+              "nativeSHA256": "0bd020a8cd9e8b1c5fe5283f3c0abe40ab2b2e2871fa86cf10674c4425ba830e",
+              "verdict": "accepted",
+              "reason": "Punertava murskattu maa- ja kivimateriaali sopii noston lateriittiaiheeseen. Kuvateksti ilmoittaa havainnekuvan eikä nimeä näkymää Juban kiitotieksi.",
+              "evidence": {
+                "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/juba/assets/e07-juba-L4-v1-20261012/kuva.png",
+                "nativeSha256Verified": "0bd020a8cd9e8b1c5fe5283f3c0abe40ab2b2e2871fa86cf10674c4425ba830e",
+                "nativeWidth": 1536,
+                "nativeHeight": 1024,
+                "format": "PNG",
+                "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Vaihtelevan kokoisia punaruskeita kiviä ja hienoa maa-ainesta kasassa, taustalla anonyymi maapohja. Luonnolliset rakeiset pinnat; ei lentokentän rakennuksia tai tekstiä.",
+                "captionFi": "Lateriittisen rakennusmateriaalin havainnekuva.",
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/juba/sisalto.json",
+                "contentSha256": "0fb60dfba3ce5b20a3d1c75c1b64306c6995c563f34d9f75d6120544bd10eefa",
+                "targetCurrentlyPresent": true,
+                "targetText": "Jubaan raivattiin lentopaikka 1900-luvun alkupuolella hallintokaupungin rakennusvaiheessa. Kiitotiehen käytettiin myöhemmin murskattua lateriittia eli murramia. Juba kuului kaukoliikenteen välilaskupaikkoihin, ja yöksi pysähtyneitä matkustajia vietiin autolla hotelliin. Lentotoiminta vaati myös kentän raivaamista, polttoaineen kuljettamista sekä koneiden ja matkatavaroiden käsittelyä. Ilmassa kulkevan matkan taustalla oli siis paljon paikallista työtä maassa. Laituri taas liitti maanteitse saapuneen tavaran jokikuljetukseen.",
+                "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/juba/faktapohja.md",
+                "factSheetSha256": "ae67c119b1c67d52be4beefef5b2f73253eda4e6f1d03e9e62bbe648f3b6d718",
+                "topicEvidence": "L4 nimeää murskatun lateriitin eli murramin kiitotien materiaalina.",
+                "sourceEvidence": [
+                  {
+                    "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/juba/sisalto.json",
+                    "contentSha256": "0fb60dfba3ce5b20a3d1c75c1b64306c6995c563f34d9f75d6120544bd10eefa",
+                    "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
+                    "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/juba/faktapohja.md",
+                    "evidenceMode": "source-backed text topic; generalized material/food/biological illustration, not exact place appearance",
+                    "targetTextAtIssue": "Jubaan raivattiin lentopaikka 1900-luvun alkupuolella hallintokaupungin rakennusvaiheessa. Kiitotiehen käytettiin myöhemmin murskattua lateriittia eli murramia. Juba kuului kaukoliikenteen välilaskupaikkoihin, ja yöksi pysähtyneitä matkustajia vietiin autolla hotelliin. Lentotoiminta vaati myös kentän raivaamista, polttoaineen kuljettamista sekä koneiden ja matkatavaroiden käsittelyä. Ilmassa kulkevan matkan taustalla oli siis paljon paikallista työtä maassa. Laituri taas liitti maanteitse saapuneen tavaran jokikuljetukseen."
+                  }
+                ],
+                "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+                "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+              },
+              "opinionSHA256": "545c6d9d0d4cfcaf0e65b1c5a9f2296cb3383a8764e739e37f2a1e5e42acc864",
+              "capturedSourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/juba/qa-evidence/extra-review-snapshots/4abb90298b6ef8e3d2019cf409bc82a458873049f0daeb850f502712fb7e6d4f.json"
+            }
+          ]
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/juba/qa.json",
+            "sha256": "e468dcf42bc80f02f7dd18637edca1ef9526d6113d945b3639fb3a5222e3e05d"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/juba/illustration-qa-extra.json",
+            "sha256": "77718d2368a0bb747ba10c14e4100bc3493f82d759efc5eebbe504bd4743da30"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/juba/e07-juba-L4-v1-20261012-0bd020a8cd9e.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/juba/e07-juba-L4-v1-20261012-0bd020a8cd9e.png?t=207b7591dc0a05cc",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/juba/e07-juba-L4-v1-20261012-0bd020a8cd9e.png",
+        "sha256": "207b7591dc0a05cc4466735cb8fc4a8dcfcba2e80346972bbf3ffd1ecef8181e",
+        "bytes": 3157274,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e07-juba-L4-v1-20261012",
+        "nativeSHA256": "0bd020a8cd9e8b1c5fe5283f3c0abe40ab2b2e2871fa86cf10674c4425ba830e",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/juba/e07-juba-L4-v1-20261012-0bd020a8cd9e.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e07",
+        "city": "juba",
+        "slot": "L4",
+        "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
+        "verifiedAt": "2026-10-12T18:14:06.655315+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/juba/e07-juba-L4-v1-20261012-0bd020a8cd9e.png",
+        "sha256": "207b7591dc0a05cc4466735cb8fc4a8dcfcba2e80346972bbf3ffd1ecef8181e",
+        "bytes": 3157274,
+        "SHAReadAt": "2026-10-12T18:29:49.734085+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "0bd020a8cd9e8b1c5fe5283f3c0abe40ab2b2e2871fa86cf10674c4425ba830e",
+        "rgbPixelSHA256": "0c75e8ce16ef5997c11cec5745b6c22db4b8dbf4c957892c21c3ed9a646a37fc",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "7af8736d59562bc3eb4c569bdf734e3a011f2cfa23e213f02cd7d029d5c5b136",
+      "targetAfterSHA256": "7ac3823125e650c6349c71e8625d1ddae801c06279a776cca2df3bbcbe0a4bf2",
+      "contextAfterSHA256": "7ac3823125e650c6349c71e8625d1ddae801c06279a776cca2df3bbcbe0a4bf2"
+    },
+    {
+      "era": "e07",
+      "city": "juba",
+      "slot": "PHOTO",
+      "type": "commons",
+      "assetID": "capital-cc-e07-juba-photo-71010fb06803f4ad",
+      "galleryImageID": "capital-cc-e07-juba-photo-71010fb06803f4ad",
+      "commonsFile": "ISS-30 Juba - South Sudan.jpg",
+      "targetJsonPath": "$.valokuva",
+      "targetTokens": [
+        "valokuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e07/juba/photo-71010fb06803f4ad3d14.jpg",
+        "suora": true,
+        "lahde": "NASA, Commons (PD)",
+        "selite": "Juban ja Niilin seutua avaruusasemalta kuvattuna.",
+        "lyhyt": "Juban ja Niilin seutua avaruusasemalta kuvattuna.",
+        "tiedosto": "ISS-30 Juba - South Sudan.jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "NASA, Commons (PD)",
+        "selite": "Juban ja Niilin seutua avaruusasemalta kuvattuna.",
+        "lyhyt": "Juban ja Niilin seutua avaruusasemalta kuvattuna.",
+        "tiedosto": "ISS-30 Juba - South Sudan.jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e07/juba/photo-71010fb06803f4ad3d14.jpg",
+        "suora": true,
+        "lahde": "NASA, Commons (PD)",
+        "selite": "Juban ja Niilin seutua avaruusasemalta kuvattuna.",
+        "lyhyt": "Juban ja Niilin seutua avaruusasemalta kuvattuna.",
+        "tiedosto": "ISS-30 Juba - South Sudan.jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "71010fb06803f4ad3d143a97202cb7706b79a975f5b0960303f413a7fbfee9ee",
+      "exportSHA256": "71010fb06803f4ad3d143a97202cb7706b79a975f5b0960303f413a7fbfee9ee",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e07/juba/photo-71010fb06803f4ad3d14.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e07/juba/photo-71010fb06803f4ad3d14.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/commons-originals/e07/juba/2678a8a01a59bc8492bf68cf3cde8d4c4e6da4b514b6f1e7083b707b6df24f53.jpg",
+      "dimensions": [
+        4288,
+        2848
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/juba/sisalto.json",
+      "sourceContentSHA256": "7af8736d59562bc3eb4c569bdf734e3a011f2cfa23e213f02cd7d029d5c5b136",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "1b582b3ed0ff8f0adbc51ddc30cd0c42268226a20e0f2113132f0dad3d8065ae",
+        "semanticContextSHA256": "1b582b3ed0ff8f0adbc51ddc30cd0c42268226a20e0f2113132f0dad3d8065ae",
+        "subjectTitle": "juba — aito paikkavalokuva",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "NASA",
+        "license": "PD",
+        "licenseUrl": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:ISS-30_Juba_-_South_Sudan.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/7/72/ISS-30_Juba_-_South_Sudan.jpg",
+        "rightsEvidence": {
+          "selection": [
+            "Kuvan Author/Artist-kenttä ja valokuvan oma lisenssimalli tarkistettu tallennetusta Commons-lähteestä; upload-historian nimeä ei käytetä tekijänä. Lisenssiversion linkki on valokuvan lisenssiosassa, ei Commons-sivun yleinen alatunnistelupa.",
+            "Kaupunkimaantieteen etäinen valokuva, ei yksittäisen suojatun rakennuksen tai muistomerkin jäljennöstä pääaiheena. NASA-valokuvan PD-tagia vastaa alkuperäinen NASA-mediaohje.",
+            "Silmin katsottu alkuperäinen: Todellinen avaruusasemalta otettu valokuva: jokivarsi, kaupunkialue ja ympäröivä maasto. Ei yksilöitäviä henkilöitä, rakennus- tai taideteospääaihetta, lisättyä tekstiä, logoja, vesileimaa tai kehystä. Historiallinen vuoden 2011 päiväys säilytetään.",
+            "NASAn alkuperäinen mediaohje tallennettu Khartumin cc-evidence/nasa-policy.html: https://www.nasa.gov/nasa-brand-center/images-and-media/ ."
+          ],
+          "QA": {
+            "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/juba/qa-evidence/1441c767ed87-original.jpg",
+            "width": 4288,
+            "height": 2848,
+            "sha256": "71010fb06803f4ad3d143a97202cb7706b79a975f5b0960303f413a7fbfee9ee",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:ISS-30_Juba_-_South_Sudan.jpg",
+            "sourcePagePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/juba/qa-evidence/cc-source-snapshots/846f0e3a2a422d18fda6578fe7a20bb133790963f5025b536c02ab200262ca0a.html",
+            "sourcePageSHA256": "846f0e3a2a422d18fda6578fe7a20bb133790963f5025b536c02ab200262ca0a",
+            "sourceFields": {
+              "Date": "26 November 2011",
+              "Source": "http://spaceflight.nasa.gov/gallery/images/station/crew-30/html/iss030e005199.html",
+              "Author": "NASA"
+            },
+            "authors": [
+              "NASA"
+            ],
+            "authorOrigin": "Author table",
+            "licenseChoices": [
+              "Public domain"
+            ],
+            "license": "PD",
+            "licenseUrl": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+            "existingGameUse": [],
+            "sameCityOtherSlots": [],
+            "auditEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/juba/qa-evidence/1441c767ed87-technical-source.json",
+            "visualViewedByThisSession": true,
+            "visualObservation": "Todellinen NASAn ratavalokuva Jubasta ja Valkoisesta Niilistä, lähteen päiväys 26.11.2011. Kaupungin ja joen asettelu näkyy laajasti. Kuvan ilmakehäpehmeys ja pienet sensoripisteet eivät peitä aihetta; ei lisättyjä merkintöjä, kasvoja tai pääaiheena yksittäistä teosta. Kuvateksti ei saa väittää tuoreeksi.",
+            "visualReviewStage": "native original viewed in preceding uninterrupted QA context",
+            "workLayerAssessment": "Todellinen NASAn ratavalokuva Jubasta ja Valkoisesta Niilistä, lähteen päiväys 26.11.2011. Kaupungin ja joen asettelu näkyy laajasti. Kuvan ilmakehäpehmeys ja pienet sensoripisteet eivät peitä aihetta; ei lisättyjä merkintöjä, kasvoja tai pääaiheena yksittäistä teosta. Kuvateksti ei saa väittää tuoreeksi.",
+            "upstreamSourcePagePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/lahdevarasto/2b9270de2f2df4f315b573ac23f58d40e9e778db2c1db202aad99fe379f2609b.body",
+            "immutableSourceSnapshot": true
+          },
+          "qaReason": "Todellinen NASAn ratavalokuva Jubasta ja Valkoisesta Niilistä, lähteen päiväys 26.11.2011. Kaupungin ja joen asettelu näkyy laajasti. Kuvan ilmakehäpehmeys ja pienet sensoripisteet eivät peitä aihetta; ei lisättyjä merkintöjä, kasvoja tai pääaiheena yksittäistä teosta. Kuvateksti ei saa väittää tuoreeksi."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Juban ja Niilin seutua avaruusasemalta kuvattuna.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/juba/qa.json",
+        "fileSHA256": "e468dcf42bc80f02f7dd18637edca1ef9526d6113d945b3639fb3a5222e3e05d",
+        "item": {
+          "slot": "PHOTO",
+          "targetJsonPath": "$.valokuva",
+          "commonsFile": "ISS-30 Juba - South Sudan.jpg",
+          "type": "commons",
+          "sha256": "71010fb06803f4ad3d143a97202cb7706b79a975f5b0960303f413a7fbfee9ee",
+          "verdict": "accepted",
+          "reason": "Todellinen NASAn ratavalokuva Jubasta ja Valkoisesta Niilistä, lähteen päiväys 26.11.2011. Kaupungin ja joen asettelu näkyy laajasti. Kuvan ilmakehäpehmeys ja pienet sensoripisteet eivät peitä aihetta; ei lisättyjä merkintöjä, kasvoja tai pääaiheena yksittäistä teosta. Kuvateksti ei saa väittää tuoreeksi.",
+          "evidence": {
+            "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/juba/qa-evidence/1441c767ed87-original.jpg",
+            "width": 4288,
+            "height": 2848,
+            "sha256": "71010fb06803f4ad3d143a97202cb7706b79a975f5b0960303f413a7fbfee9ee",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:ISS-30_Juba_-_South_Sudan.jpg",
+            "sourcePagePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/juba/qa-evidence/cc-source-snapshots/846f0e3a2a422d18fda6578fe7a20bb133790963f5025b536c02ab200262ca0a.html",
+            "sourcePageSHA256": "846f0e3a2a422d18fda6578fe7a20bb133790963f5025b536c02ab200262ca0a",
+            "sourceFields": {
+              "Date": "26 November 2011",
+              "Source": "http://spaceflight.nasa.gov/gallery/images/station/crew-30/html/iss030e005199.html",
+              "Author": "NASA"
+            },
+            "authors": [
+              "NASA"
+            ],
+            "authorOrigin": "Author table",
+            "licenseChoices": [
+              "Public domain"
+            ],
+            "license": "PD",
+            "licenseUrl": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+            "existingGameUse": [],
+            "sameCityOtherSlots": [],
+            "auditEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/juba/qa-evidence/1441c767ed87-technical-source.json",
+            "visualViewedByThisSession": true,
+            "visualObservation": "Todellinen NASAn ratavalokuva Jubasta ja Valkoisesta Niilistä, lähteen päiväys 26.11.2011. Kaupungin ja joen asettelu näkyy laajasti. Kuvan ilmakehäpehmeys ja pienet sensoripisteet eivät peitä aihetta; ei lisättyjä merkintöjä, kasvoja tai pääaiheena yksittäistä teosta. Kuvateksti ei saa väittää tuoreeksi.",
+            "visualReviewStage": "native original viewed in preceding uninterrupted QA context",
+            "workLayerAssessment": "Todellinen NASAn ratavalokuva Jubasta ja Valkoisesta Niilistä, lähteen päiväys 26.11.2011. Kaupungin ja joen asettelu näkyy laajasti. Kuvan ilmakehäpehmeys ja pienet sensoripisteet eivät peitä aihetta; ei lisättyjä merkintöjä, kasvoja tai pääaiheena yksittäistä teosta. Kuvateksti ei saa väittää tuoreeksi.",
+            "upstreamSourcePagePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/lahdevarasto/2b9270de2f2df4f315b573ac23f58d40e9e778db2c1db202aad99fe379f2609b.body",
+            "immutableSourceSnapshot": true
+          },
+          "checkedAt": "2026-10-12T19:08:39.509406+00:00",
+          "contentSHA256": "0fb60dfba3ce5b20a3d1c75c1b64306c6995c563f34d9f75d6120544bd10eefa",
+          "targetSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/juba/qa.json",
+            "sha256": "e468dcf42bc80f02f7dd18637edca1ef9526d6113d945b3639fb3a5222e3e05d"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/juba/illustration-qa-extra.json",
+            "sha256": "77718d2368a0bb747ba10c14e4100bc3493f82d759efc5eebbe504bd4743da30"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e07",
+        "city": "juba",
+        "slot": "PHOTO",
+        "targetJsonPath": "$.valokuva",
+        "commonsFile": "ISS-30 Juba - South Sudan.jpg",
+        "sha256": "71010fb06803f4ad3d143a97202cb7706b79a975f5b0960303f413a7fbfee9ee",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:ISS-30_Juba_-_South_Sudan.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/7/72/ISS-30_Juba_-_South_Sudan.jpg",
+        "author": "NASA",
+        "license": "PD",
+        "licenseUrl": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+        "width": 4288,
+        "height": 2848,
+        "originalSHA256": "71010fb06803f4ad3d143a97202cb7706b79a975f5b0960303f413a7fbfee9ee",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e07/juba/photo-71010fb06803f4ad3d14.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e07/juba/photo-71010fb06803f4ad3d14.jpg",
+        "bytes": 1032166,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T18:29:43.209166+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "ISS-30 Juba - South Sudan.jpg",
+        "lahde": "NASA, Commons (PD)",
+        "selite": "Juban ja Niilin seutua avaruusasemalta kuvattuna.",
+        "lyhyt": "Juban ja Niilin seutua avaruusasemalta kuvattuna."
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "NASA, Commons (PD)",
+        "selite": "Juban ja Niilin seutua avaruusasemalta kuvattuna.",
+        "lyhyt": "Juban ja Niilin seutua avaruusasemalta kuvattuna.",
+        "tiedosto": "ISS-30 Juba - South Sudan.jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "7af8736d59562bc3eb4c569bdf734e3a011f2cfa23e213f02cd7d029d5c5b136",
+      "targetAfterSHA256": "1b582b3ed0ff8f0adbc51ddc30cd0c42268226a20e0f2113132f0dad3d8065ae",
+      "contextAfterSHA256": "1b582b3ed0ff8f0adbc51ddc30cd0c42268226a20e0f2113132f0dad3d8065ae"
+    }
+  ],
+  "runtimeIntegrationPending": true,
+  "ownerAcceptedNotImpliedByAuthorization": true,
+  "gameIntegrated": false
+}

@@ -1,0 +1,1154 @@
+{
+  "schemaVersion": "capital-city-role-assets/v1",
+  "era": "e07",
+  "city": "dodoma",
+  "authorization": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+  "sourceContentAfterSHA256": "ac8585b55a7571f1718a0bb244e0f57781ef0863438f537f3ba91baf325b7ffa",
+  "assets": [
+    {
+      "era": "e07",
+      "city": "dodoma",
+      "slot": "K2",
+      "type": "illustration",
+      "assetID": "e07-dodoma-K2-v1-20261012",
+      "galleryImageID": "e07-dodoma-K2-v1-20261012",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].nostot[1]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "nostot",
+        1
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/dodoma/e07-dodoma-K2-v1-20261012-306035396833.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Viiniköynnöksen havainnekuva; ei tietyn Makutupora-lajikkeen tai tilan valokuva.",
+        "lyhyt": "Viiniköynnöksen havainnekuva; ei tietyn Makutupora-lajikkeen tai tilan valokuva."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/dodoma/e07-dodoma-K2-v1-20261012-306035396833.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Viiniköynnöksen havainnekuva; ei tietyn Makutupora-lajikkeen tai tilan valokuva.",
+        "lyhyt": "Viiniköynnöksen havainnekuva; ei tietyn Makutupora-lajikkeen tai tilan valokuva."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "306035396833d76e356c785eedba6c68653450df999fdc414ce35c5f5aa6a7ba",
+      "exportSHA256": "d9f3617f33be084f9470756a4003dbe602819d862d9def380da819127c15e9f1",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/dodoma/e07-dodoma-K2-v1-20261012-306035396833.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/dodoma/e07-dodoma-K2-v1-20261012-306035396833.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/dodoma/e07-dodoma-K2-v1-20261012-306035396833.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/dodoma/sisalto.json",
+      "sourceContentSHA256": "ac8585b55a7571f1718a0bb244e0f57781ef0863438f537f3ba91baf325b7ffa",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "cbbf7be672865fe6fdfcf7b402cda0d53ea4d9774454bf76285cf9d825e282d5",
+        "semanticContextSHA256": "cbbf7be672865fe6fdfcf7b402cda0d53ea4d9774454bf76285cf9d825e282d5",
+        "subjectTitle": "Rypäleellä on seudun nimi",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": [
+            "New generated illustration of natural subject or common utility object; no reproduction of a protected work.",
+            "Named buildings, identifiable people and exact contemporary art/design excluded."
+          ],
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/dodoma/assets/e07-dodoma-K2-v1-20261012/kuva.png",
+            "nativeSha256Verified": "306035396833d76e356c785eedba6c68653450df999fdc414ce35c5f5aa6a7ba",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Tummia ja osin punertavia rypäleitä kahdessa tertussa, köynnöksen varret ja lehtiä. Marjojen pinnassa on vaihteleva vahapeite, luonteva valo; ei merkintöjä tai henkilöitä.",
+            "captionFi": "Viiniköynnöksen havainnekuva; ei tietyn Makutupora-lajikkeen tai tilan valokuva.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/dodoma/sisalto.json",
+            "contentSha256": "7be5b0b461ee1f1ea88fd0ac8243a48d5b45015684a52e9c963f5f84debfdc82",
+            "targetCurrentlyPresent": true,
+            "targetText": "Dodoman seutu kuuluu Tansanian viininviljelyn alueisiin. Varhaisessa vaiheessa lähetysyhteisöt kasvattivat köynnöksiä omaan käyttöönsä, myöhemmin viljely laajeni kaupallisiksi tiloiksi ja tuottajayrityksiksi. Makutupora on seudun nimellä tunnettu paikallinen rypälelajike. Viljelyssä esiintyy myös Chenin Blancia, Syrah’ta ja Cabernet Sauvignonia. Köynnöksen kasvattaminen ja viinin valmistaminen ovat eri työvaiheita, jotka voivat sijoittua eri paikkoihin. Lajikkeen nimi kertoo paikallisesta tuotantohistoriasta.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/dodoma/faktapohja.md",
+            "factSheetSha256": "06a6cc9c4b0469dba2587d554a01324624c413b36642ee31c3f96c6ba683f814",
+            "topicEvidence": "K2 käsittelee Dodoman seudun viininviljelyä ja eri lajikkeita.",
+            "sourceEvidence": [
+              {
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/dodoma/sisalto.json",
+                "contentSha256": "7be5b0b461ee1f1ea88fd0ac8243a48d5b45015684a52e9c963f5f84debfdc82",
+                "targetJsonPath": "$.kaupunkilehti[0].nostot[1]",
+                "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/dodoma/faktapohja.md",
+                "evidenceMode": "source-backed text topic; generalized material/food/biological illustration, not exact place appearance",
+                "targetTextAtIssue": "Dodoman seutu kuuluu Tansanian viininviljelyn alueisiin. Varhaisessa vaiheessa lähetysyhteisöt kasvattivat köynnöksiä omaan käyttöönsä, myöhemmin viljely laajeni kaupallisiksi tiloiksi ja tuottajayrityksiksi. Makutupora on seudun nimellä tunnettu paikallinen rypälelajike. Viljelyssä esiintyy myös Chenin Blancia, Syrah’ta ja Cabernet Sauvignonia. Köynnöksen kasvattaminen ja viinin valmistaminen ovat eri työvaiheita, jotka voivat sijoittua eri paikkoihin. Lajikkeen nimi kertoo paikallisesta tuotantohistoriasta."
+              }
+            ],
+            "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+            "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+          },
+          "qaReason": "Viiniköynnös ja rypäleet vastaavat viljelyaihetta. Selite ei väitä kuvaa Makutupora-lajikkeen tai tietyn tilan valokuvaksi."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Viiniköynnöksen havainnekuva; ei tietyn Makutupora-lajikkeen tai tilan valokuva.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/dodoma/illustration-qa-extra.json",
+        "fileSHA256": "a336221d37eddc427ea65a6024f6c7653b6707059cd8f0e3c093017a11bdec60",
+        "item": {
+          "slot": "K2",
+          "targetJsonPath": "$.kaupunkilehti[0].nostot[1]",
+          "assetID": "e07-dodoma-K2-v1-20261012",
+          "sha256": "306035396833d76e356c785eedba6c68653450df999fdc414ce35c5f5aa6a7ba",
+          "verdict": "accepted",
+          "reason": "Viiniköynnös ja rypäleet vastaavat viljelyaihetta. Selite ei väitä kuvaa Makutupora-lajikkeen tai tietyn tilan valokuvaksi.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/dodoma/assets/e07-dodoma-K2-v1-20261012/kuva.png",
+            "nativeSha256Verified": "306035396833d76e356c785eedba6c68653450df999fdc414ce35c5f5aa6a7ba",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Tummia ja osin punertavia rypäleitä kahdessa tertussa, köynnöksen varret ja lehtiä. Marjojen pinnassa on vaihteleva vahapeite, luonteva valo; ei merkintöjä tai henkilöitä.",
+            "captionFi": "Viiniköynnöksen havainnekuva; ei tietyn Makutupora-lajikkeen tai tilan valokuva.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/dodoma/sisalto.json",
+            "contentSha256": "7be5b0b461ee1f1ea88fd0ac8243a48d5b45015684a52e9c963f5f84debfdc82",
+            "targetCurrentlyPresent": true,
+            "targetText": "Dodoman seutu kuuluu Tansanian viininviljelyn alueisiin. Varhaisessa vaiheessa lähetysyhteisöt kasvattivat köynnöksiä omaan käyttöönsä, myöhemmin viljely laajeni kaupallisiksi tiloiksi ja tuottajayrityksiksi. Makutupora on seudun nimellä tunnettu paikallinen rypälelajike. Viljelyssä esiintyy myös Chenin Blancia, Syrah’ta ja Cabernet Sauvignonia. Köynnöksen kasvattaminen ja viinin valmistaminen ovat eri työvaiheita, jotka voivat sijoittua eri paikkoihin. Lajikkeen nimi kertoo paikallisesta tuotantohistoriasta.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/dodoma/faktapohja.md",
+            "factSheetSha256": "06a6cc9c4b0469dba2587d554a01324624c413b36642ee31c3f96c6ba683f814",
+            "topicEvidence": "K2 käsittelee Dodoman seudun viininviljelyä ja eri lajikkeita.",
+            "sourceEvidence": [
+              {
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/dodoma/sisalto.json",
+                "contentSha256": "7be5b0b461ee1f1ea88fd0ac8243a48d5b45015684a52e9c963f5f84debfdc82",
+                "targetJsonPath": "$.kaupunkilehti[0].nostot[1]",
+                "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/dodoma/faktapohja.md",
+                "evidenceMode": "source-backed text topic; generalized material/food/biological illustration, not exact place appearance",
+                "targetTextAtIssue": "Dodoman seutu kuuluu Tansanian viininviljelyn alueisiin. Varhaisessa vaiheessa lähetysyhteisöt kasvattivat köynnöksiä omaan käyttöönsä, myöhemmin viljely laajeni kaupallisiksi tiloiksi ja tuottajayrityksiksi. Makutupora on seudun nimellä tunnettu paikallinen rypälelajike. Viljelyssä esiintyy myös Chenin Blancia, Syrah’ta ja Cabernet Sauvignonia. Köynnöksen kasvattaminen ja viinin valmistaminen ovat eri työvaiheita, jotka voivat sijoittua eri paikkoihin. Lajikkeen nimi kertoo paikallisesta tuotantohistoriasta."
+              }
+            ],
+            "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+            "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+          },
+          "reviewedAt": "2026-10-12T18:17:54.153560+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/dodoma/qa.json",
+            "sha256": "f7c4d6b861e51944ef27e2522655d0469721e9df16adc8b83e4b82cb9cdafc3f"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/dodoma/illustration-qa-extra.json",
+            "sha256": "a336221d37eddc427ea65a6024f6c7653b6707059cd8f0e3c093017a11bdec60"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/dodoma/e07-dodoma-K2-v1-20261012-306035396833.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/dodoma/e07-dodoma-K2-v1-20261012-306035396833.png?t=d9f3617f33be084f",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/dodoma/e07-dodoma-K2-v1-20261012-306035396833.png",
+        "sha256": "d9f3617f33be084f9470756a4003dbe602819d862d9def380da819127c15e9f1",
+        "bytes": 2215334,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e07-dodoma-K2-v1-20261012",
+        "nativeSHA256": "306035396833d76e356c785eedba6c68653450df999fdc414ce35c5f5aa6a7ba",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/dodoma/e07-dodoma-K2-v1-20261012-306035396833.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e07",
+        "city": "dodoma",
+        "slot": "K2",
+        "targetJsonPath": "$.kaupunkilehti[0].nostot[1]",
+        "verifiedAt": "2026-10-12T18:19:11.405236+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/dodoma/e07-dodoma-K2-v1-20261012-306035396833.png",
+        "sha256": "d9f3617f33be084f9470756a4003dbe602819d862d9def380da819127c15e9f1",
+        "bytes": 2215334,
+        "SHAReadAt": "2026-10-12T18:29:49.090036+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "306035396833d76e356c785eedba6c68653450df999fdc414ce35c5f5aa6a7ba",
+        "rgbPixelSHA256": "51ab622f605d1e22b7d9db5115e13e809d9bdd9ba95435c3202f7b6ea05d658f",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "ac8585b55a7571f1718a0bb244e0f57781ef0863438f537f3ba91baf325b7ffa",
+      "targetAfterSHA256": "cbbf7be672865fe6fdfcf7b402cda0d53ea4d9774454bf76285cf9d825e282d5",
+      "contextAfterSHA256": "cbbf7be672865fe6fdfcf7b402cda0d53ea4d9774454bf76285cf9d825e282d5"
+    },
+    {
+      "era": "e07",
+      "city": "dodoma",
+      "slot": "L1",
+      "type": "illustration",
+      "assetID": "e07-dodoma-L1-v1-20261012",
+      "galleryImageID": "e07-dodoma-L1-v1-20261012",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[1].nostot[0]",
+      "targetTokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        0
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/dodoma/e07-dodoma-L1-v1-20261012-b7dab62cb3b0.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Geologisten näytteiden havainnekuva; ei Dodoman omaa löytöpaikkaa tai museoesinettä.",
+        "lyhyt": "Geologisten näytteiden havainnekuva; ei Dodoman omaa löytöpaikkaa tai museoesinettä."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/dodoma/e07-dodoma-L1-v1-20261012-b7dab62cb3b0.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Geologisten näytteiden havainnekuva; ei Dodoman omaa löytöpaikkaa tai museoesinettä.",
+        "lyhyt": "Geologisten näytteiden havainnekuva; ei Dodoman omaa löytöpaikkaa tai museoesinettä."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "b7dab62cb3b09a9948fde99bf9a33d4bdd01c21d4b269f6c8e7b8182cf973093",
+      "exportSHA256": "d7e73228b959ef4fa7a68f890efcb30a13663a6e16610a2063c355b9a1fcbab8",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/dodoma/e07-dodoma-L1-v1-20261012-b7dab62cb3b0.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/dodoma/e07-dodoma-L1-v1-20261012-b7dab62cb3b0.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/dodoma/e07-dodoma-L1-v1-20261012-b7dab62cb3b0.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/dodoma/sisalto.json",
+      "sourceContentSHA256": "ac8585b55a7571f1718a0bb244e0f57781ef0863438f537f3ba91baf325b7ffa",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "8910ceb4f61f00e7137253200059d3f7d5a9030c0166016aef5533bfc44bc482",
+        "semanticContextSHA256": "8910ceb4f61f00e7137253200059d3f7d5a9030c0166016aef5533bfc44bc482",
+        "subjectTitle": "Kivi museossa, näyte tutkimuksessa",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": [
+            "New generated illustration of natural subject or common utility object; no reproduction of a protected work.",
+            "Named buildings, identifiable people and exact contemporary art/design excluded."
+          ],
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/dodoma/assets/e07-dodoma-L1-v1-20261012/kuva.png",
+            "nativeSha256Verified": "b7dab62cb3b09a9948fde99bf9a33d4bdd01c21d4b269f6c8e7b8182cf973093",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Kolme erilaista kivinäytettä, yksi vaalea läpikuultava ja kaksi rakeista. Murtopinnat ja mineraalirakeet luonnollisia, ei etikettejä, tekstiä tai henkilöitä.",
+            "captionFi": "Geologisten näytteiden havainnekuva; ei Dodoman omaa löytöpaikkaa tai museoesinettä.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/dodoma/sisalto.json",
+            "contentSha256": "7be5b0b461ee1f1ea88fd0ac8243a48d5b45015684a52e9c963f5f84debfdc82",
+            "targetCurrentlyPresent": true,
+            "targetText": "Geological Survey of Tanzanian päätoimisto on Dodomassa. Virasto säilyttää geotieteellistä tietoa, ja sen museossa on kiviä sekä mineraaleja. Tutkimustyöhön kuuluvat myös eri puolilta maata kairatut näytteet, geologiset kartat, raportit, kirjasto ja arkisto. Museo ja kairausnäytevarasto ovat eri aineistoja ja tiloja. Näyttelyssä oleva kivi ei siksi ole välttämättä kaupungin maaperästä: sen paikka museossa kertoo kokoelman sijainnista, ei yksin alkuperäisestä löytöpaikasta.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/dodoma/faktapohja.md",
+            "factSheetSha256": "06a6cc9c4b0469dba2587d554a01324624c413b36642ee31c3f96c6ba683f814",
+            "topicEvidence": "L1 erottaa museon kivikokoelman näytteiden alkuperäisistä löytöpaikoista.",
+            "sourceEvidence": [
+              {
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/dodoma/sisalto.json",
+                "contentSha256": "7be5b0b461ee1f1ea88fd0ac8243a48d5b45015684a52e9c963f5f84debfdc82",
+                "targetJsonPath": "$.kaupunkilehti[1].nostot[0]",
+                "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/dodoma/faktapohja.md",
+                "evidenceMode": "source-backed text topic; generalized material/food/biological illustration, not exact place appearance",
+                "targetTextAtIssue": "Geological Survey of Tanzanian päätoimisto on Dodomassa. Virasto säilyttää geotieteellistä tietoa, ja sen museossa on kiviä sekä mineraaleja. Tutkimustyöhön kuuluvat myös eri puolilta maata kairatut näytteet, geologiset kartat, raportit, kirjasto ja arkisto. Museo ja kairausnäytevarasto ovat eri aineistoja ja tiloja. Näyttelyssä oleva kivi ei siksi ole välttämättä kaupungin maaperästä: sen paikka museossa kertoo kokoelman sijainnista, ei yksin alkuperäisestä löytöpaikasta."
+              }
+            ],
+            "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+            "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+          },
+          "qaReason": "Yleiset kivi- ja mineraalinäytteet sopivat museon ja tutkimusaineiston teemaan. Selite sulkee pois tietyn löytöpaikan tai museoesineen väitteen."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Geologisten näytteiden havainnekuva; ei Dodoman omaa löytöpaikkaa tai museoesinettä.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/dodoma/illustration-qa-extra.json",
+        "fileSHA256": "a336221d37eddc427ea65a6024f6c7653b6707059cd8f0e3c093017a11bdec60",
+        "item": {
+          "slot": "L1",
+          "targetJsonPath": "$.kaupunkilehti[1].nostot[0]",
+          "assetID": "e07-dodoma-L1-v1-20261012",
+          "sha256": "b7dab62cb3b09a9948fde99bf9a33d4bdd01c21d4b269f6c8e7b8182cf973093",
+          "verdict": "accepted",
+          "reason": "Yleiset kivi- ja mineraalinäytteet sopivat museon ja tutkimusaineiston teemaan. Selite sulkee pois tietyn löytöpaikan tai museoesineen väitteen.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/dodoma/assets/e07-dodoma-L1-v1-20261012/kuva.png",
+            "nativeSha256Verified": "b7dab62cb3b09a9948fde99bf9a33d4bdd01c21d4b269f6c8e7b8182cf973093",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Kolme erilaista kivinäytettä, yksi vaalea läpikuultava ja kaksi rakeista. Murtopinnat ja mineraalirakeet luonnollisia, ei etikettejä, tekstiä tai henkilöitä.",
+            "captionFi": "Geologisten näytteiden havainnekuva; ei Dodoman omaa löytöpaikkaa tai museoesinettä.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/dodoma/sisalto.json",
+            "contentSha256": "7be5b0b461ee1f1ea88fd0ac8243a48d5b45015684a52e9c963f5f84debfdc82",
+            "targetCurrentlyPresent": true,
+            "targetText": "Geological Survey of Tanzanian päätoimisto on Dodomassa. Virasto säilyttää geotieteellistä tietoa, ja sen museossa on kiviä sekä mineraaleja. Tutkimustyöhön kuuluvat myös eri puolilta maata kairatut näytteet, geologiset kartat, raportit, kirjasto ja arkisto. Museo ja kairausnäytevarasto ovat eri aineistoja ja tiloja. Näyttelyssä oleva kivi ei siksi ole välttämättä kaupungin maaperästä: sen paikka museossa kertoo kokoelman sijainnista, ei yksin alkuperäisestä löytöpaikasta.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/dodoma/faktapohja.md",
+            "factSheetSha256": "06a6cc9c4b0469dba2587d554a01324624c413b36642ee31c3f96c6ba683f814",
+            "topicEvidence": "L1 erottaa museon kivikokoelman näytteiden alkuperäisistä löytöpaikoista.",
+            "sourceEvidence": [
+              {
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/dodoma/sisalto.json",
+                "contentSha256": "7be5b0b461ee1f1ea88fd0ac8243a48d5b45015684a52e9c963f5f84debfdc82",
+                "targetJsonPath": "$.kaupunkilehti[1].nostot[0]",
+                "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/dodoma/faktapohja.md",
+                "evidenceMode": "source-backed text topic; generalized material/food/biological illustration, not exact place appearance",
+                "targetTextAtIssue": "Geological Survey of Tanzanian päätoimisto on Dodomassa. Virasto säilyttää geotieteellistä tietoa, ja sen museossa on kiviä sekä mineraaleja. Tutkimustyöhön kuuluvat myös eri puolilta maata kairatut näytteet, geologiset kartat, raportit, kirjasto ja arkisto. Museo ja kairausnäytevarasto ovat eri aineistoja ja tiloja. Näyttelyssä oleva kivi ei siksi ole välttämättä kaupungin maaperästä: sen paikka museossa kertoo kokoelman sijainnista, ei yksin alkuperäisestä löytöpaikasta."
+              }
+            ],
+            "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+            "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+          },
+          "reviewedAt": "2026-10-12T18:23:58.448633+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/dodoma/qa.json",
+            "sha256": "f7c4d6b861e51944ef27e2522655d0469721e9df16adc8b83e4b82cb9cdafc3f"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/dodoma/illustration-qa-extra.json",
+            "sha256": "a336221d37eddc427ea65a6024f6c7653b6707059cd8f0e3c093017a11bdec60"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/dodoma/e07-dodoma-L1-v1-20261012-b7dab62cb3b0.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/dodoma/e07-dodoma-L1-v1-20261012-b7dab62cb3b0.png?t=d7e73228b959ef4f",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/dodoma/e07-dodoma-L1-v1-20261012-b7dab62cb3b0.png",
+        "sha256": "d7e73228b959ef4fa7a68f890efcb30a13663a6e16610a2063c355b9a1fcbab8",
+        "bytes": 2413589,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e07-dodoma-L1-v1-20261012",
+        "nativeSHA256": "b7dab62cb3b09a9948fde99bf9a33d4bdd01c21d4b269f6c8e7b8182cf973093",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/dodoma/e07-dodoma-L1-v1-20261012-b7dab62cb3b0.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e07",
+        "city": "dodoma",
+        "slot": "L1",
+        "targetJsonPath": "$.kaupunkilehti[1].nostot[0]",
+        "verifiedAt": "2026-10-12T18:27:50.317906+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/dodoma/e07-dodoma-L1-v1-20261012-b7dab62cb3b0.png",
+        "sha256": "d7e73228b959ef4fa7a68f890efcb30a13663a6e16610a2063c355b9a1fcbab8",
+        "bytes": 2413589,
+        "SHAReadAt": "2026-10-12T18:29:49.245447+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "b7dab62cb3b09a9948fde99bf9a33d4bdd01c21d4b269f6c8e7b8182cf973093",
+        "rgbPixelSHA256": "076f49441395797a45f88f6f5a27ad77c4a47c71ea134169b7ba9e9d55fd931a",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "ac8585b55a7571f1718a0bb244e0f57781ef0863438f537f3ba91baf325b7ffa",
+      "targetAfterSHA256": "8910ceb4f61f00e7137253200059d3f7d5a9030c0166016aef5533bfc44bc482",
+      "contextAfterSHA256": "8910ceb4f61f00e7137253200059d3f7d5a9030c0166016aef5533bfc44bc482"
+    },
+    {
+      "era": "e07",
+      "city": "dodoma",
+      "slot": "PHOTO",
+      "type": "commons",
+      "assetID": "capital-cc-e07-dodoma-photo-126aeef047cb02de",
+      "galleryImageID": "capital-cc-e07-dodoma-photo-126aeef047cb02de",
+      "commonsFile": "Iyumbu ward landscape, Dodoma City.jpg",
+      "targetJsonPath": "$.valokuva",
+      "targetTokens": [
+        "valokuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e07/dodoma/photo-126aeef047cb02de4476.jpg",
+        "suora": true,
+        "lahde": "Mangapwani, Commons (CC BY-SA 4.0)",
+        "selite": "Maastoa Iyumbun alueella Dodomassa.",
+        "lyhyt": "Maastoa Iyumbun alueella Dodomassa.",
+        "tiedosto": "Iyumbu ward landscape, Dodoma City.jpg",
+        "vuosi": "2022"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Mangapwani, Commons (CC BY-SA 4.0)",
+        "selite": "Maastoa Iyumbun alueella Dodomassa.",
+        "lyhyt": "Maastoa Iyumbun alueella Dodomassa.",
+        "tiedosto": "Iyumbu ward landscape, Dodoma City.jpg",
+        "vuosi": "2022"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e07/dodoma/photo-126aeef047cb02de4476.jpg",
+        "suora": true,
+        "lahde": "Mangapwani, Commons (CC BY-SA 4.0)",
+        "selite": "Maastoa Iyumbun alueella Dodomassa.",
+        "lyhyt": "Maastoa Iyumbun alueella Dodomassa.",
+        "tiedosto": "Iyumbu ward landscape, Dodoma City.jpg",
+        "vuosi": "2022"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "126aeef047cb02de4476bd7150f834a03109688de446aa4d06a1b317f566a30e",
+      "exportSHA256": "126aeef047cb02de4476bd7150f834a03109688de446aa4d06a1b317f566a30e",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e07/dodoma/photo-126aeef047cb02de4476.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e07/dodoma/photo-126aeef047cb02de4476.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/commons-originals/e07/dodoma/d509fa398dee7263a0696ccc6dec2c0a2a9eb078bb3d154f5affbbd7930c29c8.jpg",
+      "dimensions": [
+        3489,
+        1635
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/dodoma/sisalto.json",
+      "sourceContentSHA256": "ac8585b55a7571f1718a0bb244e0f57781ef0863438f537f3ba91baf325b7ffa",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "9713fae7b46bf0b44e88530d009cb15b3f2f1014b569a9f8a449c51470b97272",
+        "semanticContextSHA256": "9713fae7b46bf0b44e88530d009cb15b3f2f1014b569a9f8a449c51470b97272",
+        "subjectTitle": "dodoma — aito paikkavalokuva",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Mangapwani",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Iyumbu_ward_landscape,_Dodoma_City.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/6/62/Iyumbu_ward_landscape%2C_Dodoma_City.jpg",
+        "rightsEvidence": {
+          "selection": [
+            "Kuvan Author/Artist-kenttä ja valokuvan oma lisenssimalli tarkistettu tallennetusta Commons-lähteestä; upload-historian nimeä ei käytetä tekijänä. Lisenssiversion linkki on valokuvan lisenssiosassa, ei Commons-sivun yleinen alatunnistelupa.",
+            "Luonnonmaasto ja kasvillisuus, ei suojattua teosta. QA on jo varmentanut tämän tiedoston kuvauspaikan, tekijän CC BY-SA 4.0 -lisenssin ja mitat; sen C1-hylkäys koski kansipaikan soveltuvuutta. PHOTO sallii aidon paikallisen luonnonvalokuvan. Baobab-PHOTO ja vanha C1-valinta säilyvät hylättyinä historiassa.",
+            "Silmin katsottu alkuperäinen: Kasvoton todellinen maisemavalokuva: polku, kuivaa kasvillisuutta ja kukkuloita. Ei tunnistettavia ihmisiä, rakennus- tai taideteospääaihetta, lisättyä tekstiä, logoa, vesileimaa tai kehystä. Tämä ei ole kansikuva eikä väite kaupungin rakennetusta asettelusta."
+          ],
+          "QA": {
+            "manifestPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/dodoma/cc-selection.json",
+            "candidateSnapshot": {
+              "slot": "PHOTO",
+              "targetJsonPath": "$.valokuva",
+              "type": "commons",
+              "commonsFile": "Iyumbu ward landscape, Dodoma City.jpg",
+              "sourcePage": "https://commons.wikimedia.org/wiki/File:Iyumbu_ward_landscape,_Dodoma_City.jpg",
+              "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/6/62/Iyumbu_ward_landscape%2C_Dodoma_City.jpg",
+              "author": "Mangapwani",
+              "license": "CC BY-SA 4.0",
+              "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+              "width": 3489,
+              "height": 1635,
+              "captionFi": "Maastoa Iyumbun alueella Dodomassa.",
+              "rightsEvidence": [
+                "Kuvan Author/Artist-kenttä ja valokuvan oma lisenssimalli tarkistettu tallennetusta Commons-lähteestä; upload-historian nimeä ei käytetä tekijänä. Lisenssiversion linkki on valokuvan lisenssiosassa, ei Commons-sivun yleinen alatunnistelupa.",
+                "Luonnonmaasto ja kasvillisuus, ei suojattua teosta. QA on jo varmentanut tämän tiedoston kuvauspaikan, tekijän CC BY-SA 4.0 -lisenssin ja mitat; sen C1-hylkäys koski kansipaikan soveltuvuutta. PHOTO sallii aidon paikallisen luonnonvalokuvan. Baobab-PHOTO ja vanha C1-valinta säilyvät hylättyinä historiassa.",
+                "Silmin katsottu alkuperäinen: Kasvoton todellinen maisemavalokuva: polku, kuivaa kasvillisuutta ja kukkuloita. Ei tunnistettavia ihmisiä, rakennus- tai taideteospääaihetta, lisättyä tekstiä, logoa, vesileimaa tai kehystä. Tämä ei ole kansikuva eikä väite kaupungin rakennetusta asettelusta."
+              ],
+              "reviewState": "candidate",
+              "photographedAt": "12 July 2022, 11:36:09",
+              "photographedAtEvidence": "Commonsin alkuperäinen Date-rivi; Description tallennettu meta-info.json:iin.",
+              "previewPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/dodoma/cc-evidence/meta-03.jpg",
+              "sha256": "126aeef047cb02de4476bd7150f834a03109688de446aa4d06a1b317f566a30e",
+              "sourcePageSha256": "4b1d826e8d558ad0acf0d4f1eb0c6f11b5b44d3956ca1ff8eeb069ad4e3c1106",
+              "metadataEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/dodoma/cc-evidence/meta-03.json",
+              "visualReview": "Oma silmätarkistus tehty. Riippumaton QA vielä avoin.",
+              "reservationEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/dodoma/cc-evidence/PHOTO-claim.json"
+            },
+            "candidateFingerprintSHA256": "a0663def220a6c345369aef055fdfcc8bb11e900ee90436fed736e78b1c6726e",
+            "currentContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/dodoma/sisalto.json",
+            "currentContentSHA256": "7be5b0b461ee1f1ea88fd0ac8243a48d5b45015684a52e9c963f5f84debfdc82",
+            "targetExists": true,
+            "currentTargetContent": {
+              "tiedosto": "",
+              "lyhyt": "",
+              "selite": "",
+              "lahde": ""
+            },
+            "visualObservation": "Katsoin paikallisen alkuperäisen uudelleen PHOTO-roolia vasten. Kuiva kasvillisuus, hiekkapolku, kukkulat ja aivan etäiset kattopisteet. Ei ihmisiä, kasvokuvia, teospintoja, lisättyjä merkintöjä tai kehystä. Valokuva sopii rehellisesti nimettyyn Iyumbun maastoaiheeseen; se ei muutu hyväksytyksi kaupunkikanneksi.",
+            "reviewedAt": "2026-10-12T19:16:47.221686+00:00",
+            "pixelsViewed": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/dodoma/cc-evidence/meta-03.jpg",
+            "pixelSHA256": "126aeef047cb02de4476bd7150f834a03109688de446aa4d06a1b317f566a30e",
+            "sourceEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/fe510937816589aa2e1b4c83f08c94651717350edaf9d3f962904824ae48324c.html",
+            "sourceMetadata": {
+              "author": [
+                "Mangapwani"
+              ],
+              "licenses": [
+                "CC BY-SA 4.0"
+              ],
+              "dimensions": [
+                3489,
+                1635
+              ],
+              "sourceSHA256": "4b1d826e8d558ad0acf0d4f1eb0c6f11b5b44d3956ca1ff8eeb069ad4e3c1106"
+            },
+            "sourceLicenseLinks": [
+              "//creativecommons.org/licenses/by-sa/4.0/deed.en",
+              "https://creativecommons.org/share-your-work/licensing-considerations/compatible-licenses",
+              "https://creativecommons.org/publicdomain/zero/1.0/",
+              "https://creativecommons.org/licenses/by-sa/4.0/"
+            ],
+            "sourceDescriptionExcerpt": "Descriptions\":{\"search\":true,\"watchlist\":true,\"tagline\":true,\"nearby\":true},\"wgWMESchemaEditAttemptStepOversample\":false,\"wgWMEPageLength\":400,\"wbUserPreferredContentLanguages\":[\"en\"],\"wbUserSpecifiedLanguages\":[\"en\"],\"wbCopyright\":{\"version\":\"wikibase-1\",\"messageHtml\":\"By clicking \\\"publish\\\", you agree to the \\u003Ca href=\\\"/wiki/Commons:Copyrights\\\" class=\\\"mw-redirect\\\" title=\\\"Commons:Copyrights\\\"\\u003Eterms of use\\u003C/a\\u003E, and you irrevocably agree to release your contribution under the \\u003Ca rel=\\\"nofollow\\\" class=\\\"external text\\\" href=\\\"https://creativecommons.org/publicdomain/zero/1.0/\\\"\\u003ECreative Commons CC0 License\\u003C/a\\u003E.\"},\"wbBadgeItems\":[],\"wbMultiLingualStringLimit\":250,\"wbTaintedReferencesEnabled\":false,\"wbEntityId\":\"M134007582\",\"wgEditSubmitButtonLabelPublish\":true,\"wgCoordinates\":{\"lat\":-6.216828,\"lon\":35.802369},\"wgTestKitchenUserExperiments\":{\"overrides\":[],\"enrolled\":[],\"assigned\":[],\"subject_ids\":[]},\"upwizPropertyTitles\":{\"P180\":\"Main subjects",
+            "sourceDateExcerpt": "DateFormat\":\"dmy\",\"wgMonthNames\":[\"\",\"January\",\"February\",\"March\",\"April\",\"May\",\"June\",\"July\",\"August\",\"September\",\"October\",\"November\",\"December\"],\"wgRequestId\":\"01515cab-d765-46c2-8493-cd54dd758362\",\"wgCanonicalNamespace\":\"File\",\"wgCanonicalSpecialPageName\":false,\"wgNamespaceNumber\":6,\"wgPageName\":\"File:Iyumbu_ward_landscape,_Dodoma_City.jpg\",\"wgTitle\":\"Iyumbu ward landscape, Dodoma City.jpg\",\"wgCurRevisionId\":802927694,\"wgRevisionId\":802927694,\"wgArticleId\":134007582,\"wgIsArticle\":true,\"wgIsRedirect\":false,\"wgAction\":\"view\",\"wgUserName\":null,\"wgUserGroups\":[\"*\"],\"wgCategories\":[\"Files with coordinates missing SDC location of creation\",\"CC-BY-SA-4.0\",\"Self-published work\",\"Dodoma\",\"Dodoma Region\"],\"wgPageViewLanguage\":\"en\",\"wgPageContentLanguage\":\"en\",\"wgPageContentModel\":\"wikitext\",\"wgRelevantPageName\":\"File:Iyumbu_ward_landscape,_Dodoma_City.jpg\",\"wgRelevantArticleId\":134007582,\"wgTempUserName\":null,\"wgIsProbablyEditable\":true,\"wgRelevantPageIsProbablyEditable\":true,\"wgRestrictionE",
+            "sourceAuthorExcerpt": "Author Mangapwani Camera location 6° 13′ 00.58″ S, 35° 48′ 08.53″ E View this and other nearby images on: OpenStreetMap -6.216828; 35.802369 Licensing [ edit ] I, the copyright holder of this work, hereby publish it under the following license: This file is licensed under the Creative Commons Attribution-Share Alike 4.0 International license. You are free: to share – to copy, distribute and transmit the work to remix – to adapt the work Under the following conditions: attribution – You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use. share alike – If you remix, transform, or build upon the material, you must distribute your contributions under the same or compatible license as the original. https://creativecommons.org/licenses/by-sa/4.0 CC BY-SA 4.0 Creative Commons Attribution-Share Alike 4.0 true true File history Click on a da",
+            "sourceLicensingExcerpt": "Licensing 4 File history 5 File usage on Commons 6 Metadata Toggle the table of contents File : Iyumbu ward landscape, Dodoma City.jpg File Discussion English Read Edit View history Tools Tools move to sidebar hide Actions Read Edit View history General What links here Related changes Permanent link Page information Cite this page Get shortened URL Concept URI Print/export Download as PDF Printable version In other projects Appearance move to sidebar hide From Wikimedia Commons, the free media repository Size of this preview: 960 × 450 pixels . Other resolutions: 330 × 155 pixels | 1,280 × 600 pixels | 3,489 × 1,635 pixels . Original file (3,489 × 1,635 pixels, file size: 2.83 MB, MIME type: image/jpeg ) File information Structured data Captions Captions English Add a one-line explanation of what this file represents Summary [ edit ] Description Iyumbu ward landscape, Dodoma City.jpg English: Dodoma City Council, Dodoma Region, Tanzania Date 12 July 2022, 11:36:09 Source Own work Autho",
+            "sourceCameralocationExcerpt": "Camera location 6° 13′ 00.58″ S, 35° 48′ 08.53″ E View this and other nearby images on: OpenStreetMap -6.216828; 35.802369 Licensing [ edit ] I, the copyright holder of this work, hereby publish it under the following license: This file is licensed under the Creative Commons Attribution-Share Alike 4.0 International license. You are free: to share – to copy, distribute and transmit the work to remix – to adapt the work Under the following conditions: attribution – You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use. share alike – If you remix, transform, or build upon the material, you must distribute your contributions under the same or compatible license as the original. https://creativecommons.org/licenses/by-sa/4.0 CC BY-SA 4.0 Creative Commons Attribution-Share Alike 4.0 true true File history Click on a date/time to view th",
+            "actualDimensions": [
+              3489,
+              1635
+            ],
+            "photographedAt": "2022-07-12",
+            "placeEvidence": "Commons Summary: Dodoma City Council, Dodoma Region, Tanzania; file title Iyumbu ward landscape; camera -6.216828, 35.802369.",
+            "roleBoundary": "Accepted only for PHOTO. Prior C1 rejection for insufficient urban arrangement remains unchanged."
+          },
+          "qaReason": "Hyväksytty PHOTO-paikkaan: aito Dodoman Iyumbun luonnonmaaston valokuva, tekijä Mangapwani ja CC BY-SA 4.0 alkuperäislähteessä. Todelliset mitat 3489×1635 ja alkuperäinen SHA varmennettu. Kuvateksti rajaa aiheen maastoksi; ei tunnistettavia kasvoja tai teospääaihetta. Aiempi saman kuvan C1-hylkäys säilyy, koska PHOTO sallii paikallisen luontokuvan eikä edellytä rakennettua kaupunkinäkymää."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Maastoa Iyumbun alueella Dodomassa.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/dodoma/qa.json",
+        "fileSHA256": "f7c4d6b861e51944ef27e2522655d0469721e9df16adc8b83e4b82cb9cdafc3f",
+        "item": {
+          "slot": "PHOTO",
+          "targetJsonPath": "$.valokuva",
+          "commonsFile": "Iyumbu ward landscape, Dodoma City.jpg",
+          "verdict": "accepted",
+          "reason": "Hyväksytty PHOTO-paikkaan: aito Dodoman Iyumbun luonnonmaaston valokuva, tekijä Mangapwani ja CC BY-SA 4.0 alkuperäislähteessä. Todelliset mitat 3489×1635 ja alkuperäinen SHA varmennettu. Kuvateksti rajaa aiheen maastoksi; ei tunnistettavia kasvoja tai teospääaihetta. Aiempi saman kuvan C1-hylkäys säilyy, koska PHOTO sallii paikallisen luontokuvan eikä edellytä rakennettua kaupunkinäkymää.",
+          "evidence": {
+            "manifestPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/dodoma/cc-selection.json",
+            "candidateSnapshot": {
+              "slot": "PHOTO",
+              "targetJsonPath": "$.valokuva",
+              "type": "commons",
+              "commonsFile": "Iyumbu ward landscape, Dodoma City.jpg",
+              "sourcePage": "https://commons.wikimedia.org/wiki/File:Iyumbu_ward_landscape,_Dodoma_City.jpg",
+              "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/6/62/Iyumbu_ward_landscape%2C_Dodoma_City.jpg",
+              "author": "Mangapwani",
+              "license": "CC BY-SA 4.0",
+              "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+              "width": 3489,
+              "height": 1635,
+              "captionFi": "Maastoa Iyumbun alueella Dodomassa.",
+              "rightsEvidence": [
+                "Kuvan Author/Artist-kenttä ja valokuvan oma lisenssimalli tarkistettu tallennetusta Commons-lähteestä; upload-historian nimeä ei käytetä tekijänä. Lisenssiversion linkki on valokuvan lisenssiosassa, ei Commons-sivun yleinen alatunnistelupa.",
+                "Luonnonmaasto ja kasvillisuus, ei suojattua teosta. QA on jo varmentanut tämän tiedoston kuvauspaikan, tekijän CC BY-SA 4.0 -lisenssin ja mitat; sen C1-hylkäys koski kansipaikan soveltuvuutta. PHOTO sallii aidon paikallisen luonnonvalokuvan. Baobab-PHOTO ja vanha C1-valinta säilyvät hylättyinä historiassa.",
+                "Silmin katsottu alkuperäinen: Kasvoton todellinen maisemavalokuva: polku, kuivaa kasvillisuutta ja kukkuloita. Ei tunnistettavia ihmisiä, rakennus- tai taideteospääaihetta, lisättyä tekstiä, logoa, vesileimaa tai kehystä. Tämä ei ole kansikuva eikä väite kaupungin rakennetusta asettelusta."
+              ],
+              "reviewState": "candidate",
+              "photographedAt": "12 July 2022, 11:36:09",
+              "photographedAtEvidence": "Commonsin alkuperäinen Date-rivi; Description tallennettu meta-info.json:iin.",
+              "previewPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/dodoma/cc-evidence/meta-03.jpg",
+              "sha256": "126aeef047cb02de4476bd7150f834a03109688de446aa4d06a1b317f566a30e",
+              "sourcePageSha256": "4b1d826e8d558ad0acf0d4f1eb0c6f11b5b44d3956ca1ff8eeb069ad4e3c1106",
+              "metadataEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/dodoma/cc-evidence/meta-03.json",
+              "visualReview": "Oma silmätarkistus tehty. Riippumaton QA vielä avoin.",
+              "reservationEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/dodoma/cc-evidence/PHOTO-claim.json"
+            },
+            "candidateFingerprintSHA256": "a0663def220a6c345369aef055fdfcc8bb11e900ee90436fed736e78b1c6726e",
+            "currentContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/dodoma/sisalto.json",
+            "currentContentSHA256": "7be5b0b461ee1f1ea88fd0ac8243a48d5b45015684a52e9c963f5f84debfdc82",
+            "targetExists": true,
+            "currentTargetContent": {
+              "tiedosto": "",
+              "lyhyt": "",
+              "selite": "",
+              "lahde": ""
+            },
+            "visualObservation": "Katsoin paikallisen alkuperäisen uudelleen PHOTO-roolia vasten. Kuiva kasvillisuus, hiekkapolku, kukkulat ja aivan etäiset kattopisteet. Ei ihmisiä, kasvokuvia, teospintoja, lisättyjä merkintöjä tai kehystä. Valokuva sopii rehellisesti nimettyyn Iyumbun maastoaiheeseen; se ei muutu hyväksytyksi kaupunkikanneksi.",
+            "reviewedAt": "2026-10-12T19:16:47.221686+00:00",
+            "pixelsViewed": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/dodoma/cc-evidence/meta-03.jpg",
+            "pixelSHA256": "126aeef047cb02de4476bd7150f834a03109688de446aa4d06a1b317f566a30e",
+            "sourceEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/fe510937816589aa2e1b4c83f08c94651717350edaf9d3f962904824ae48324c.html",
+            "sourceMetadata": {
+              "author": [
+                "Mangapwani"
+              ],
+              "licenses": [
+                "CC BY-SA 4.0"
+              ],
+              "dimensions": [
+                3489,
+                1635
+              ],
+              "sourceSHA256": "4b1d826e8d558ad0acf0d4f1eb0c6f11b5b44d3956ca1ff8eeb069ad4e3c1106"
+            },
+            "sourceLicenseLinks": [
+              "//creativecommons.org/licenses/by-sa/4.0/deed.en",
+              "https://creativecommons.org/share-your-work/licensing-considerations/compatible-licenses",
+              "https://creativecommons.org/publicdomain/zero/1.0/",
+              "https://creativecommons.org/licenses/by-sa/4.0/"
+            ],
+            "sourceDescriptionExcerpt": "Descriptions\":{\"search\":true,\"watchlist\":true,\"tagline\":true,\"nearby\":true},\"wgWMESchemaEditAttemptStepOversample\":false,\"wgWMEPageLength\":400,\"wbUserPreferredContentLanguages\":[\"en\"],\"wbUserSpecifiedLanguages\":[\"en\"],\"wbCopyright\":{\"version\":\"wikibase-1\",\"messageHtml\":\"By clicking \\\"publish\\\", you agree to the \\u003Ca href=\\\"/wiki/Commons:Copyrights\\\" class=\\\"mw-redirect\\\" title=\\\"Commons:Copyrights\\\"\\u003Eterms of use\\u003C/a\\u003E, and you irrevocably agree to release your contribution under the \\u003Ca rel=\\\"nofollow\\\" class=\\\"external text\\\" href=\\\"https://creativecommons.org/publicdomain/zero/1.0/\\\"\\u003ECreative Commons CC0 License\\u003C/a\\u003E.\"},\"wbBadgeItems\":[],\"wbMultiLingualStringLimit\":250,\"wbTaintedReferencesEnabled\":false,\"wbEntityId\":\"M134007582\",\"wgEditSubmitButtonLabelPublish\":true,\"wgCoordinates\":{\"lat\":-6.216828,\"lon\":35.802369},\"wgTestKitchenUserExperiments\":{\"overrides\":[],\"enrolled\":[],\"assigned\":[],\"subject_ids\":[]},\"upwizPropertyTitles\":{\"P180\":\"Main subjects",
+            "sourceDateExcerpt": "DateFormat\":\"dmy\",\"wgMonthNames\":[\"\",\"January\",\"February\",\"March\",\"April\",\"May\",\"June\",\"July\",\"August\",\"September\",\"October\",\"November\",\"December\"],\"wgRequestId\":\"01515cab-d765-46c2-8493-cd54dd758362\",\"wgCanonicalNamespace\":\"File\",\"wgCanonicalSpecialPageName\":false,\"wgNamespaceNumber\":6,\"wgPageName\":\"File:Iyumbu_ward_landscape,_Dodoma_City.jpg\",\"wgTitle\":\"Iyumbu ward landscape, Dodoma City.jpg\",\"wgCurRevisionId\":802927694,\"wgRevisionId\":802927694,\"wgArticleId\":134007582,\"wgIsArticle\":true,\"wgIsRedirect\":false,\"wgAction\":\"view\",\"wgUserName\":null,\"wgUserGroups\":[\"*\"],\"wgCategories\":[\"Files with coordinates missing SDC location of creation\",\"CC-BY-SA-4.0\",\"Self-published work\",\"Dodoma\",\"Dodoma Region\"],\"wgPageViewLanguage\":\"en\",\"wgPageContentLanguage\":\"en\",\"wgPageContentModel\":\"wikitext\",\"wgRelevantPageName\":\"File:Iyumbu_ward_landscape,_Dodoma_City.jpg\",\"wgRelevantArticleId\":134007582,\"wgTempUserName\":null,\"wgIsProbablyEditable\":true,\"wgRelevantPageIsProbablyEditable\":true,\"wgRestrictionE",
+            "sourceAuthorExcerpt": "Author Mangapwani Camera location 6° 13′ 00.58″ S, 35° 48′ 08.53″ E View this and other nearby images on: OpenStreetMap -6.216828; 35.802369 Licensing [ edit ] I, the copyright holder of this work, hereby publish it under the following license: This file is licensed under the Creative Commons Attribution-Share Alike 4.0 International license. You are free: to share – to copy, distribute and transmit the work to remix – to adapt the work Under the following conditions: attribution – You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use. share alike – If you remix, transform, or build upon the material, you must distribute your contributions under the same or compatible license as the original. https://creativecommons.org/licenses/by-sa/4.0 CC BY-SA 4.0 Creative Commons Attribution-Share Alike 4.0 true true File history Click on a da",
+            "sourceLicensingExcerpt": "Licensing 4 File history 5 File usage on Commons 6 Metadata Toggle the table of contents File : Iyumbu ward landscape, Dodoma City.jpg File Discussion English Read Edit View history Tools Tools move to sidebar hide Actions Read Edit View history General What links here Related changes Permanent link Page information Cite this page Get shortened URL Concept URI Print/export Download as PDF Printable version In other projects Appearance move to sidebar hide From Wikimedia Commons, the free media repository Size of this preview: 960 × 450 pixels . Other resolutions: 330 × 155 pixels | 1,280 × 600 pixels | 3,489 × 1,635 pixels . Original file (3,489 × 1,635 pixels, file size: 2.83 MB, MIME type: image/jpeg ) File information Structured data Captions Captions English Add a one-line explanation of what this file represents Summary [ edit ] Description Iyumbu ward landscape, Dodoma City.jpg English: Dodoma City Council, Dodoma Region, Tanzania Date 12 July 2022, 11:36:09 Source Own work Autho",
+            "sourceCameralocationExcerpt": "Camera location 6° 13′ 00.58″ S, 35° 48′ 08.53″ E View this and other nearby images on: OpenStreetMap -6.216828; 35.802369 Licensing [ edit ] I, the copyright holder of this work, hereby publish it under the following license: This file is licensed under the Creative Commons Attribution-Share Alike 4.0 International license. You are free: to share – to copy, distribute and transmit the work to remix – to adapt the work Under the following conditions: attribution – You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use. share alike – If you remix, transform, or build upon the material, you must distribute your contributions under the same or compatible license as the original. https://creativecommons.org/licenses/by-sa/4.0 CC BY-SA 4.0 Creative Commons Attribution-Share Alike 4.0 true true File history Click on a date/time to view th",
+            "actualDimensions": [
+              3489,
+              1635
+            ],
+            "photographedAt": "2022-07-12",
+            "placeEvidence": "Commons Summary: Dodoma City Council, Dodoma Region, Tanzania; file title Iyumbu ward landscape; camera -6.216828, 35.802369.",
+            "roleBoundary": "Accepted only for PHOTO. Prior C1 rejection for insufficient urban arrangement remains unchanged."
+          },
+          "reviewedAt": "2026-10-12T19:16:47.249653+00:00",
+          "sha256": "126aeef047cb02de4476bd7150f834a03109688de446aa4d06a1b317f566a30e"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/dodoma/qa.json",
+            "sha256": "f7c4d6b861e51944ef27e2522655d0469721e9df16adc8b83e4b82cb9cdafc3f"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/dodoma/illustration-qa-extra.json",
+            "sha256": "a336221d37eddc427ea65a6024f6c7653b6707059cd8f0e3c093017a11bdec60"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e07",
+        "city": "dodoma",
+        "slot": "PHOTO",
+        "targetJsonPath": "$.valokuva",
+        "commonsFile": "Iyumbu ward landscape, Dodoma City.jpg",
+        "sha256": "126aeef047cb02de4476bd7150f834a03109688de446aa4d06a1b317f566a30e",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Iyumbu_ward_landscape,_Dodoma_City.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/6/62/Iyumbu_ward_landscape%2C_Dodoma_City.jpg",
+        "author": "Mangapwani",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "width": 3489,
+        "height": 1635,
+        "originalSHA256": "126aeef047cb02de4476bd7150f834a03109688de446aa4d06a1b317f566a30e",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e07/dodoma/photo-126aeef047cb02de4476.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e07/dodoma/photo-126aeef047cb02de4476.jpg",
+        "bytes": 2965274,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T19:17:54.442970+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "Iyumbu ward landscape, Dodoma City.jpg",
+        "lahde": "Mangapwani, Commons (CC BY-SA 4.0)",
+        "selite": "Maastoa Iyumbun alueella Dodomassa.",
+        "lyhyt": "Maastoa Iyumbun alueella Dodomassa.",
+        "vuosi": "2022"
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Mangapwani, Commons (CC BY-SA 4.0)",
+        "selite": "Maastoa Iyumbun alueella Dodomassa.",
+        "lyhyt": "Maastoa Iyumbun alueella Dodomassa.",
+        "tiedosto": "Iyumbu ward landscape, Dodoma City.jpg",
+        "vuosi": "2022"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "ac8585b55a7571f1718a0bb244e0f57781ef0863438f537f3ba91baf325b7ffa",
+      "targetAfterSHA256": "9713fae7b46bf0b44e88530d009cb15b3f2f1014b569a9f8a449c51470b97272",
+      "contextAfterSHA256": "9713fae7b46bf0b44e88530d009cb15b3f2f1014b569a9f8a449c51470b97272"
+    },
+    {
+      "era": "e07",
+      "city": "dodoma",
+      "slot": "C1",
+      "type": "commons",
+      "assetID": "capital-cc-e07-dodoma-c1-022c2e2a083d2848",
+      "galleryImageID": "capital-cc-e07-dodoma-c1-022c2e2a083d2848",
+      "commonsFile": "Makulu from Udom, Dodoma City.jpg",
+      "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "kansikuvat",
+        0
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e07/dodoma/c1-022c2e2a083d2848eb2a.jpg",
+        "suora": true,
+        "lahde": "Mangapwani, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Makulu Dodomassa yliopiston suunnasta nähtynä, 2022.",
+        "lyhyt": "Makulu Dodomassa yliopiston suunnasta nähtynä, 2022.",
+        "tiedosto": "Makulu from Udom, Dodoma City.jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Mangapwani, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Makulu Dodomassa yliopiston suunnasta nähtynä, 2022.",
+        "lyhyt": "Makulu Dodomassa yliopiston suunnasta nähtynä, 2022.",
+        "tiedosto": "Makulu from Udom, Dodoma City.jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e07/dodoma/c1-022c2e2a083d2848eb2a.jpg",
+        "suora": true,
+        "lahde": "Mangapwani, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Makulu Dodomassa yliopiston suunnasta nähtynä, 2022.",
+        "lyhyt": "Makulu Dodomassa yliopiston suunnasta nähtynä, 2022.",
+        "tiedosto": "Makulu from Udom, Dodoma City.jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "022c2e2a083d2848eb2a07ec7381bcea8143ed9b8e8af31309a1af3c0a3125e4",
+      "exportSHA256": "022c2e2a083d2848eb2a07ec7381bcea8143ed9b8e8af31309a1af3c0a3125e4",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e07/dodoma/c1-022c2e2a083d2848eb2a.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e07/dodoma/c1-022c2e2a083d2848eb2a.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/commons-originals/e07/dodoma/877abdf7b31fbb3a4d3f3707ebcaf3b0d5d637553023e30300b1189b88b249c6.jpg",
+      "dimensions": [
+        3979,
+        2139
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/dodoma/sisalto.json",
+      "sourceContentSHA256": "ac8585b55a7571f1718a0bb244e0f57781ef0863438f537f3ba91baf325b7ffa",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "ed43af0dcc5e184402eba332af745de0cc1fab8a8b0171f3b95485da189d7296",
+        "semanticContextSHA256": "ed43af0dcc5e184402eba332af745de0cc1fab8a8b0171f3b95485da189d7296",
+        "subjectTitle": "Dodoma",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Mangapwani",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Makulu_from_Udom,_Dodoma_City.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1c/Makulu_from_Udom%2C_Dodoma_City.jpg",
+        "rightsEvidence": {
+          "selection": [
+            "Kuvan Author/Artist-kenttä ja valokuvan oma lisenssimalli tarkistettu tallennetusta Commons-lähteestä; upload-historian nimeä ei käytetä tekijänä. Lisenssiversion linkki on valokuvan lisenssiosassa, ei Commons-sivun yleinen alatunnistelupa.",
+            "Pääaihe on Makulun katuverkko, lukuisat pienet asuintalot ja laaja kaupunkimaantiede. Ei yksittäistä nimettyä modernia arkkitehtuuria tai taideteosta kuvan pääaiheena. Yksittäisten kaukaisten rakennusten vapautta ei oleteta. Original Description nimeää Dodoma City Councilin; tekijän oma nimi Makulu from Udom tarkentaa suunnan.",
+            "Silmin katsottu alkuperäinen: Alkuperäinen laaja näkymä: katu johtaa tiheän asutuksen ja laajan kaupunkialueen läpi. Kävelijät ovat kaukana/selin; ei luettavia kasvonpiirteitä. Ei lisättyä tekstiä, kehystä tai vesileimaa. Tämä kuva näyttää kaupunkiasettelun toisin kuin hylätty Iyumbun maastokuva."
+          ],
+          "QA": {
+            "manifestPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/dodoma/cc-selection.json",
+            "candidateSnapshot": {
+              "slot": "C1",
+              "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
+              "type": "commons",
+              "commonsFile": "Makulu from Udom, Dodoma City.jpg",
+              "sourcePage": "https://commons.wikimedia.org/wiki/File:Makulu_from_Udom,_Dodoma_City.jpg",
+              "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1c/Makulu_from_Udom%2C_Dodoma_City.jpg",
+              "author": "Mangapwani",
+              "license": "CC BY-SA 4.0",
+              "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+              "width": 3979,
+              "height": 2139,
+              "captionFi": "Makulu Dodomassa yliopiston suunnasta nähtynä, 2022.",
+              "rightsEvidence": [
+                "Kuvan Author/Artist-kenttä ja valokuvan oma lisenssimalli tarkistettu tallennetusta Commons-lähteestä; upload-historian nimeä ei käytetä tekijänä. Lisenssiversion linkki on valokuvan lisenssiosassa, ei Commons-sivun yleinen alatunnistelupa.",
+                "Pääaihe on Makulun katuverkko, lukuisat pienet asuintalot ja laaja kaupunkimaantiede. Ei yksittäistä nimettyä modernia arkkitehtuuria tai taideteosta kuvan pääaiheena. Yksittäisten kaukaisten rakennusten vapautta ei oleteta. Original Description nimeää Dodoma City Councilin; tekijän oma nimi Makulu from Udom tarkentaa suunnan.",
+                "Silmin katsottu alkuperäinen: Alkuperäinen laaja näkymä: katu johtaa tiheän asutuksen ja laajan kaupunkialueen läpi. Kävelijät ovat kaukana/selin; ei luettavia kasvonpiirteitä. Ei lisättyä tekstiä, kehystä tai vesileimaa. Tämä kuva näyttää kaupunkiasettelun toisin kuin hylätty Iyumbun maastokuva."
+              ],
+              "reviewState": "candidate",
+              "photographedAt": "12 July 2022, 12:43:14",
+              "photographedAtEvidence": "Commonsin alkuperäinen Date-rivi; Description tallennettu meta-info.json:iin.",
+              "previewPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/dodoma/cc-evidence/meta-06.jpg",
+              "sha256": "022c2e2a083d2848eb2a07ec7381bcea8143ed9b8e8af31309a1af3c0a3125e4",
+              "sourcePageSha256": "9de1397b628f6c6f71572664963d99650088c89a88623d31060ab894edf5fbac",
+              "metadataEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/dodoma/cc-evidence/meta-06.json",
+              "visualReview": "Oma silmätarkistus tehty. Riippumaton QA vielä avoin.",
+              "reservationEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/dodoma/cc-evidence/C1-claim.json"
+            },
+            "candidateFingerprintSHA256": "c5ec920369c90c7e6219df31f8a1178fefb3d3fe1d6b9c7e3522a9967ddbbef0",
+            "currentContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/dodoma/sisalto.json",
+            "currentContentSHA256": "7be5b0b461ee1f1ea88fd0ac8243a48d5b45015684a52e9c963f5f84debfdc82",
+            "targetExists": true,
+            "currentTargetContent": {
+              "tiedosto": "",
+              "lyhyt": "",
+              "selite": "",
+              "lahde": ""
+            },
+            "visualObservation": "Katsoin paikallisen alkuperäisen 3979×2139. Maantie kaartelee laajan todellisen asutuksen läpi; lukuisat katot, kadut ja kaukainen kaupunkirakenne näkyvät. Lähin pyörää taluttava ihminen on selin ja muut kävelijät erittäin pieniä; ei luettavia kasvonpiirteitä. Autojen ja ympäristön luonnolliset pienet merkinnät eivät ole lisättyjä vesileimoja. Ei itsenäistä taideteosta pääaiheena tai keksittyä kaupunkiasettelua.",
+            "reviewedAt": "2026-10-12T19:18:56.037692+00:00",
+            "pixelsViewed": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/dodoma/cc-evidence/meta-06.jpg",
+            "pixelSHA256": "022c2e2a083d2848eb2a07ec7381bcea8143ed9b8e8af31309a1af3c0a3125e4",
+            "sourceEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/c554be1f21bdacea1325cb222c3e7b2aeea3b4ed184a5e9585b1c92c5b3f1fb9.html",
+            "sourceMetadata": {
+              "author": [
+                "Mangapwani"
+              ],
+              "licenses": [
+                "CC BY-SA 4.0"
+              ],
+              "dimensions": [
+                3979,
+                2139
+              ],
+              "sourceSHA256": "9de1397b628f6c6f71572664963d99650088c89a88623d31060ab894edf5fbac"
+            },
+            "sourceLicenseLinks": [
+              "//creativecommons.org/licenses/by-sa/4.0/deed.en",
+              "https://creativecommons.org/share-your-work/licensing-considerations/compatible-licenses",
+              "https://creativecommons.org/publicdomain/zero/1.0/",
+              "https://creativecommons.org/licenses/by-sa/4.0/"
+            ],
+            "sourceDescriptionExcerpt": "Descriptions\":{\"search\":true,\"watchlist\":true,\"tagline\":true,\"nearby\":true},\"wgWMESchemaEditAttemptStepOversample\":false,\"wgWMEPageLength\":400,\"wbUserPreferredContentLanguages\":[\"en\"],\"wbUserSpecifiedLanguages\":[\"en\"],\"wbCopyright\":{\"version\":\"wikibase-1\",\"messageHtml\":\"By clicking \\\"publish\\\", you agree to the \\u003Ca href=\\\"/wiki/Commons:Copyrights\\\" class=\\\"mw-redirect\\\" title=\\\"Commons:Copyrights\\\"\\u003Eterms of use\\u003C/a\\u003E, and you irrevocably agree to release your contribution under the \\u003Ca rel=\\\"nofollow\\\" class=\\\"external text\\\" href=\\\"https://creativecommons.org/publicdomain/zero/1.0/\\\"\\u003ECreative Commons CC0 License\\u003C/a\\u003E.\"},\"wbBadgeItems\":[],\"wbMultiLingualStringLimit\":250,\"wbTaintedReferencesEnabled\":false,\"wbEntityId\":\"M134007584\",\"wgEditSubmitButtonLabelPublish\":true,\"wgCoordinates\":{\"lat\":-6.199714,\"lon\":35.793722},\"wgTestKitchenUserExperiments\":{\"overrides\":[],\"enrolled\":[],\"assigned\":[],\"subject_ids\":[]},\"upwizPropertyTitles\":{\"P180\":\"Main subjects",
+            "sourceDateExcerpt": "DateFormat\":\"dmy\",\"wgMonthNames\":[\"\",\"January\",\"February\",\"March\",\"April\",\"May\",\"June\",\"July\",\"August\",\"September\",\"October\",\"November\",\"December\"],\"wgRequestId\":\"37557d58-6acd-4ed4-957d-1aeb91e62d0c\",\"wgCanonicalNamespace\":\"File\",\"wgCanonicalSpecialPageName\":false,\"wgNamespaceNumber\":6,\"wgPageName\":\"File:Makulu_from_Udom,_Dodoma_City.jpg\",\"wgTitle\":\"Makulu from Udom, Dodoma City.jpg\",\"wgCurRevisionId\":971086247,\"wgRevisionId\":971086247,\"wgArticleId\":134007584,\"wgIsArticle\":true,\"wgIsRedirect\":false,\"wgAction\":\"view\",\"wgUserName\":null,\"wgUserGroups\":[\"*\"],\"wgCategories\":[\"Files with coordinates missing SDC location of creation\",\"CC-BY-SA-4.0\",\"Self-published work\",\"Dodoma\",\"Dodoma Region\"],\"wgPageViewLanguage\":\"en\",\"wgPageContentLanguage\":\"en\",\"wgPageContentModel\":\"wikitext\",\"wgRelevantPageName\":\"File:Makulu_from_Udom,_Dodoma_City.jpg\",\"wgRelevantArticleId\":134007584,\"wgTempUserName\":null,\"wgIsProbablyEditable\":true,\"wgRelevantPageIsProbablyEditable\":true,\"wgRestrictionEdit\":[],\"wgRest",
+            "sourceAuthorExcerpt": "Author Mangapwani Camera location 6° 11′ 58.97″ S, 35° 47′ 37.4″ E View this and other nearby images on: OpenStreetMap -6.199714; 35.793722 Licensing [ edit ] I, the copyright holder of this work, hereby publish it under the following license: This file is licensed under the Creative Commons Attribution-Share Alike 4.0 International license. You are free: to share – to copy, distribute and transmit the work to remix – to adapt the work Under the following conditions: attribution – You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use. share alike – If you remix, transform, or build upon the material, you must distribute your contributions under the same or compatible license as the original. https://creativecommons.org/licenses/by-sa/4.0 CC BY-SA 4.0 Creative Commons Attribution-Share Alike 4.0 true true File history Click on a dat",
+            "sourceLicensingExcerpt": "Licensing 4 File history 5 File usage on Commons 6 Metadata Toggle the table of contents File : Makulu from Udom, Dodoma City.jpg File Discussion English Read Edit View history Tools Tools move to sidebar hide Actions Read Edit View history General What links here Related changes Permanent link Page information Cite this page Get shortened URL Concept URI Print/export Download as PDF Printable version In other projects Appearance move to sidebar hide From Wikimedia Commons, the free media repository Size of this preview: 960 × 516 pixels . Other resolutions: 330 × 177 pixels | 1,280 × 688 pixels | 3,840 × 2,064 pixels . Original file (3,979 × 2,139 pixels, file size: 4.4 MB, MIME type: image/jpeg ) File information Structured data Captions Captions English Add a one-line explanation of what this file represents Summary [ edit ] Description Makulu from Udom, Dodoma City.jpg English: Dodoma City Council, Dodoma Region, Tanzania Date 12 July 2022, 12:43:14 Source Own work Author Mangapwan",
+            "sourceCameralocationExcerpt": "Camera location 6° 11′ 58.97″ S, 35° 47′ 37.4″ E View this and other nearby images on: OpenStreetMap -6.199714; 35.793722 Licensing [ edit ] I, the copyright holder of this work, hereby publish it under the following license: This file is licensed under the Creative Commons Attribution-Share Alike 4.0 International license. You are free: to share – to copy, distribute and transmit the work to remix – to adapt the work Under the following conditions: attribution – You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use. share alike – If you remix, transform, or build upon the material, you must distribute your contributions under the same or compatible license as the original. https://creativecommons.org/licenses/by-sa/4.0 CC BY-SA 4.0 Creative Commons Attribution-Share Alike 4.0 true true File history Click on a date/time to view the",
+            "actualDimensions": [
+              3979,
+              2139
+            ],
+            "photographedAt": "2022-07-12",
+            "placeEvidence": "Commons title Makulu from Udom, Dodoma City; Summary Dodoma City Council, Dodoma Region, Tanzania; camera -6.199714, 35.793722.",
+            "depictedWorkAssessment": "Kaupunkirakenne laajana kokonaisympäristönä, tavalliset talot ja kadut eivät muodosta yksittäisen teoksen julkisivututkielmaa. Ei rakennusten ikään tai yleiseen FOP-oletukseen perustuvaa vapautusta."
+          },
+          "qaReason": "Aito laaja Dodoman Makulun rakennettu kaupunkinäkymä korjaa C1-paikan puutteen: kadut, asuintalot ja kaupunkialue erottuvat. Mangapwani ja CC BY-SA 4.0 varmennettu alkuperäiseltä Commons-sivulta. Vuoden 2022 selite, alkuperäisen 3979×2139 mitat ja SHA vastaavat lähdettä. Ei tunnistettavia kasvoja tai erillistä teospääaihetta."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Makulu Dodomassa yliopiston suunnasta nähtynä, 2022.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/dodoma/qa.json",
+        "fileSHA256": "f7c4d6b861e51944ef27e2522655d0469721e9df16adc8b83e4b82cb9cdafc3f",
+        "item": {
+          "slot": "C1",
+          "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
+          "commonsFile": "Makulu from Udom, Dodoma City.jpg",
+          "verdict": "accepted",
+          "reason": "Aito laaja Dodoman Makulun rakennettu kaupunkinäkymä korjaa C1-paikan puutteen: kadut, asuintalot ja kaupunkialue erottuvat. Mangapwani ja CC BY-SA 4.0 varmennettu alkuperäiseltä Commons-sivulta. Vuoden 2022 selite, alkuperäisen 3979×2139 mitat ja SHA vastaavat lähdettä. Ei tunnistettavia kasvoja tai erillistä teospääaihetta.",
+          "evidence": {
+            "manifestPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/dodoma/cc-selection.json",
+            "candidateSnapshot": {
+              "slot": "C1",
+              "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
+              "type": "commons",
+              "commonsFile": "Makulu from Udom, Dodoma City.jpg",
+              "sourcePage": "https://commons.wikimedia.org/wiki/File:Makulu_from_Udom,_Dodoma_City.jpg",
+              "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1c/Makulu_from_Udom%2C_Dodoma_City.jpg",
+              "author": "Mangapwani",
+              "license": "CC BY-SA 4.0",
+              "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+              "width": 3979,
+              "height": 2139,
+              "captionFi": "Makulu Dodomassa yliopiston suunnasta nähtynä, 2022.",
+              "rightsEvidence": [
+                "Kuvan Author/Artist-kenttä ja valokuvan oma lisenssimalli tarkistettu tallennetusta Commons-lähteestä; upload-historian nimeä ei käytetä tekijänä. Lisenssiversion linkki on valokuvan lisenssiosassa, ei Commons-sivun yleinen alatunnistelupa.",
+                "Pääaihe on Makulun katuverkko, lukuisat pienet asuintalot ja laaja kaupunkimaantiede. Ei yksittäistä nimettyä modernia arkkitehtuuria tai taideteosta kuvan pääaiheena. Yksittäisten kaukaisten rakennusten vapautta ei oleteta. Original Description nimeää Dodoma City Councilin; tekijän oma nimi Makulu from Udom tarkentaa suunnan.",
+                "Silmin katsottu alkuperäinen: Alkuperäinen laaja näkymä: katu johtaa tiheän asutuksen ja laajan kaupunkialueen läpi. Kävelijät ovat kaukana/selin; ei luettavia kasvonpiirteitä. Ei lisättyä tekstiä, kehystä tai vesileimaa. Tämä kuva näyttää kaupunkiasettelun toisin kuin hylätty Iyumbun maastokuva."
+              ],
+              "reviewState": "candidate",
+              "photographedAt": "12 July 2022, 12:43:14",
+              "photographedAtEvidence": "Commonsin alkuperäinen Date-rivi; Description tallennettu meta-info.json:iin.",
+              "previewPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/dodoma/cc-evidence/meta-06.jpg",
+              "sha256": "022c2e2a083d2848eb2a07ec7381bcea8143ed9b8e8af31309a1af3c0a3125e4",
+              "sourcePageSha256": "9de1397b628f6c6f71572664963d99650088c89a88623d31060ab894edf5fbac",
+              "metadataEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/dodoma/cc-evidence/meta-06.json",
+              "visualReview": "Oma silmätarkistus tehty. Riippumaton QA vielä avoin.",
+              "reservationEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/dodoma/cc-evidence/C1-claim.json"
+            },
+            "candidateFingerprintSHA256": "c5ec920369c90c7e6219df31f8a1178fefb3d3fe1d6b9c7e3522a9967ddbbef0",
+            "currentContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/dodoma/sisalto.json",
+            "currentContentSHA256": "7be5b0b461ee1f1ea88fd0ac8243a48d5b45015684a52e9c963f5f84debfdc82",
+            "targetExists": true,
+            "currentTargetContent": {
+              "tiedosto": "",
+              "lyhyt": "",
+              "selite": "",
+              "lahde": ""
+            },
+            "visualObservation": "Katsoin paikallisen alkuperäisen 3979×2139. Maantie kaartelee laajan todellisen asutuksen läpi; lukuisat katot, kadut ja kaukainen kaupunkirakenne näkyvät. Lähin pyörää taluttava ihminen on selin ja muut kävelijät erittäin pieniä; ei luettavia kasvonpiirteitä. Autojen ja ympäristön luonnolliset pienet merkinnät eivät ole lisättyjä vesileimoja. Ei itsenäistä taideteosta pääaiheena tai keksittyä kaupunkiasettelua.",
+            "reviewedAt": "2026-10-12T19:18:56.037692+00:00",
+            "pixelsViewed": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/dodoma/cc-evidence/meta-06.jpg",
+            "pixelSHA256": "022c2e2a083d2848eb2a07ec7381bcea8143ed9b8e8af31309a1af3c0a3125e4",
+            "sourceEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/c554be1f21bdacea1325cb222c3e7b2aeea3b4ed184a5e9585b1c92c5b3f1fb9.html",
+            "sourceMetadata": {
+              "author": [
+                "Mangapwani"
+              ],
+              "licenses": [
+                "CC BY-SA 4.0"
+              ],
+              "dimensions": [
+                3979,
+                2139
+              ],
+              "sourceSHA256": "9de1397b628f6c6f71572664963d99650088c89a88623d31060ab894edf5fbac"
+            },
+            "sourceLicenseLinks": [
+              "//creativecommons.org/licenses/by-sa/4.0/deed.en",
+              "https://creativecommons.org/share-your-work/licensing-considerations/compatible-licenses",
+              "https://creativecommons.org/publicdomain/zero/1.0/",
+              "https://creativecommons.org/licenses/by-sa/4.0/"
+            ],
+            "sourceDescriptionExcerpt": "Descriptions\":{\"search\":true,\"watchlist\":true,\"tagline\":true,\"nearby\":true},\"wgWMESchemaEditAttemptStepOversample\":false,\"wgWMEPageLength\":400,\"wbUserPreferredContentLanguages\":[\"en\"],\"wbUserSpecifiedLanguages\":[\"en\"],\"wbCopyright\":{\"version\":\"wikibase-1\",\"messageHtml\":\"By clicking \\\"publish\\\", you agree to the \\u003Ca href=\\\"/wiki/Commons:Copyrights\\\" class=\\\"mw-redirect\\\" title=\\\"Commons:Copyrights\\\"\\u003Eterms of use\\u003C/a\\u003E, and you irrevocably agree to release your contribution under the \\u003Ca rel=\\\"nofollow\\\" class=\\\"external text\\\" href=\\\"https://creativecommons.org/publicdomain/zero/1.0/\\\"\\u003ECreative Commons CC0 License\\u003C/a\\u003E.\"},\"wbBadgeItems\":[],\"wbMultiLingualStringLimit\":250,\"wbTaintedReferencesEnabled\":false,\"wbEntityId\":\"M134007584\",\"wgEditSubmitButtonLabelPublish\":true,\"wgCoordinates\":{\"lat\":-6.199714,\"lon\":35.793722},\"wgTestKitchenUserExperiments\":{\"overrides\":[],\"enrolled\":[],\"assigned\":[],\"subject_ids\":[]},\"upwizPropertyTitles\":{\"P180\":\"Main subjects",
+            "sourceDateExcerpt": "DateFormat\":\"dmy\",\"wgMonthNames\":[\"\",\"January\",\"February\",\"March\",\"April\",\"May\",\"June\",\"July\",\"August\",\"September\",\"October\",\"November\",\"December\"],\"wgRequestId\":\"37557d58-6acd-4ed4-957d-1aeb91e62d0c\",\"wgCanonicalNamespace\":\"File\",\"wgCanonicalSpecialPageName\":false,\"wgNamespaceNumber\":6,\"wgPageName\":\"File:Makulu_from_Udom,_Dodoma_City.jpg\",\"wgTitle\":\"Makulu from Udom, Dodoma City.jpg\",\"wgCurRevisionId\":971086247,\"wgRevisionId\":971086247,\"wgArticleId\":134007584,\"wgIsArticle\":true,\"wgIsRedirect\":false,\"wgAction\":\"view\",\"wgUserName\":null,\"wgUserGroups\":[\"*\"],\"wgCategories\":[\"Files with coordinates missing SDC location of creation\",\"CC-BY-SA-4.0\",\"Self-published work\",\"Dodoma\",\"Dodoma Region\"],\"wgPageViewLanguage\":\"en\",\"wgPageContentLanguage\":\"en\",\"wgPageContentModel\":\"wikitext\",\"wgRelevantPageName\":\"File:Makulu_from_Udom,_Dodoma_City.jpg\",\"wgRelevantArticleId\":134007584,\"wgTempUserName\":null,\"wgIsProbablyEditable\":true,\"wgRelevantPageIsProbablyEditable\":true,\"wgRestrictionEdit\":[],\"wgRest",
+            "sourceAuthorExcerpt": "Author Mangapwani Camera location 6° 11′ 58.97″ S, 35° 47′ 37.4″ E View this and other nearby images on: OpenStreetMap -6.199714; 35.793722 Licensing [ edit ] I, the copyright holder of this work, hereby publish it under the following license: This file is licensed under the Creative Commons Attribution-Share Alike 4.0 International license. You are free: to share – to copy, distribute and transmit the work to remix – to adapt the work Under the following conditions: attribution – You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use. share alike – If you remix, transform, or build upon the material, you must distribute your contributions under the same or compatible license as the original. https://creativecommons.org/licenses/by-sa/4.0 CC BY-SA 4.0 Creative Commons Attribution-Share Alike 4.0 true true File history Click on a dat",
+            "sourceLicensingExcerpt": "Licensing 4 File history 5 File usage on Commons 6 Metadata Toggle the table of contents File : Makulu from Udom, Dodoma City.jpg File Discussion English Read Edit View history Tools Tools move to sidebar hide Actions Read Edit View history General What links here Related changes Permanent link Page information Cite this page Get shortened URL Concept URI Print/export Download as PDF Printable version In other projects Appearance move to sidebar hide From Wikimedia Commons, the free media repository Size of this preview: 960 × 516 pixels . Other resolutions: 330 × 177 pixels | 1,280 × 688 pixels | 3,840 × 2,064 pixels . Original file (3,979 × 2,139 pixels, file size: 4.4 MB, MIME type: image/jpeg ) File information Structured data Captions Captions English Add a one-line explanation of what this file represents Summary [ edit ] Description Makulu from Udom, Dodoma City.jpg English: Dodoma City Council, Dodoma Region, Tanzania Date 12 July 2022, 12:43:14 Source Own work Author Mangapwan",
+            "sourceCameralocationExcerpt": "Camera location 6° 11′ 58.97″ S, 35° 47′ 37.4″ E View this and other nearby images on: OpenStreetMap -6.199714; 35.793722 Licensing [ edit ] I, the copyright holder of this work, hereby publish it under the following license: This file is licensed under the Creative Commons Attribution-Share Alike 4.0 International license. You are free: to share – to copy, distribute and transmit the work to remix – to adapt the work Under the following conditions: attribution – You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use. share alike – If you remix, transform, or build upon the material, you must distribute your contributions under the same or compatible license as the original. https://creativecommons.org/licenses/by-sa/4.0 CC BY-SA 4.0 Creative Commons Attribution-Share Alike 4.0 true true File history Click on a date/time to view the",
+            "actualDimensions": [
+              3979,
+              2139
+            ],
+            "photographedAt": "2022-07-12",
+            "placeEvidence": "Commons title Makulu from Udom, Dodoma City; Summary Dodoma City Council, Dodoma Region, Tanzania; camera -6.199714, 35.793722.",
+            "depictedWorkAssessment": "Kaupunkirakenne laajana kokonaisympäristönä, tavalliset talot ja kadut eivät muodosta yksittäisen teoksen julkisivututkielmaa. Ei rakennusten ikään tai yleiseen FOP-oletukseen perustuvaa vapautusta."
+          },
+          "reviewedAt": "2026-10-12T19:18:56.071727+00:00",
+          "sha256": "022c2e2a083d2848eb2a07ec7381bcea8143ed9b8e8af31309a1af3c0a3125e4"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/dodoma/qa.json",
+            "sha256": "f7c4d6b861e51944ef27e2522655d0469721e9df16adc8b83e4b82cb9cdafc3f"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/dodoma/illustration-qa-extra.json",
+            "sha256": "a336221d37eddc427ea65a6024f6c7653b6707059cd8f0e3c093017a11bdec60"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e07",
+        "city": "dodoma",
+        "slot": "C1",
+        "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
+        "commonsFile": "Makulu from Udom, Dodoma City.jpg",
+        "sha256": "022c2e2a083d2848eb2a07ec7381bcea8143ed9b8e8af31309a1af3c0a3125e4",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Makulu_from_Udom,_Dodoma_City.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1c/Makulu_from_Udom%2C_Dodoma_City.jpg",
+        "author": "Mangapwani",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "width": 3979,
+        "height": 2139,
+        "originalSHA256": "022c2e2a083d2848eb2a07ec7381bcea8143ed9b8e8af31309a1af3c0a3125e4",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e07/dodoma/c1-022c2e2a083d2848eb2a.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e07/dodoma/c1-022c2e2a083d2848eb2a.jpg",
+        "bytes": 4612193,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T19:20:08.381098+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "Makulu from Udom, Dodoma City.jpg",
+        "lahde": "Mangapwani, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Makulu Dodomassa yliopiston suunnasta nähtynä, 2022.",
+        "lyhyt": "Makulu Dodomassa yliopiston suunnasta nähtynä, 2022."
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Mangapwani, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Makulu Dodomassa yliopiston suunnasta nähtynä, 2022.",
+        "lyhyt": "Makulu Dodomassa yliopiston suunnasta nähtynä, 2022.",
+        "tiedosto": "Makulu from Udom, Dodoma City.jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "ac8585b55a7571f1718a0bb244e0f57781ef0863438f537f3ba91baf325b7ffa",
+      "targetAfterSHA256": "ed43af0dcc5e184402eba332af745de0cc1fab8a8b0171f3b95485da189d7296",
+      "contextAfterSHA256": "ed43af0dcc5e184402eba332af745de0cc1fab8a8b0171f3b95485da189d7296"
+    }
+  ],
+  "runtimeIntegrationPending": true,
+  "ownerAcceptedNotImpliedByAuthorization": true,
+  "gameIntegrated": false
+}

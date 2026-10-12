@@ -22,10 +22,10 @@
           "lahde": ""
         },
         {
-          "tiedosto": "",
-          "lyhyt": "",
-          "selite": "",
-          "lahde": ""
+          "tiedosto": "Makerere, Kikoni.jpg",
+          "lyhyt": "Makereren ja Kikonin alueen asutusta Kampalassa vuonna 2022.",
+          "selite": "Makereren ja Kikonin alueen asutusta Kampalassa vuonna 2022.",
+          "lahde": "Timothy Akolamazima, Wikimedia Commons (CC BY-SA 4.0)"
         }
       ],
       "nostot": [
@@ -374,10 +374,10 @@
       "teksti": "Old Kampala eli Kampala Hill on fyysinen kukkula keskustassa. Kampala-nimi tarkoitti ensin tätä paikkaa, ja sen yleinen selitys liittyy impala-antilooppeihin sekä Bugandan kuninkaan metsästysalueeseen. Kaupungin levittäytyessä muille mäille vanhaa aluetta alettiin kutsua Old Kampalaksi. Nykyisessä naapurustossa on asumista ja kaupankäyntiä.\n\nMakerere sijaitsee pohjoisessa, Namirembe lännessä ja Nakasero idempänä. Vuonna 1873 seutu oli Bugandan ydinaluetta, mutta myöhempää Fort Lugardia ei vielä ollut. Kukkulan historia kertoo maastonpaikasta ja kaupungin nimen laajenemisesta. Sen päällä olevat nykyiset rakennukset ovat omia myöhempiä kohteitaan, eikä niiden ikä ole sama kuin kukkulan tai paikannimen ikä.",
       "kuvat": [
         {
-          "tiedosto": "",
-          "lyhyt": "",
-          "selite": "",
-          "lahde": ""
+          "tiedosto": "Gaddafi Mosque view 24.jpg",
+          "lyhyt": "Näkymä Vanhan Kampalan kukkulalta kaupungin asutukseen ja muille kukkuloille, 2015.",
+          "selite": "Näkymä Vanhan Kampalan kukkulalta kaupungin asutukseen ja muille kukkuloille, 2015.",
+          "lahde": "Ruslik0, Wikimedia Commons (CC BY-SA 4.0)"
         }
       ],
       "lahde": "Wikipedia"
@@ -488,10 +488,11 @@
     }
   },
   "valokuva": {
-    "tiedosto": "",
-    "lyhyt": "",
-    "selite": "",
-    "lahde": ""
+    "tiedosto": "A local small forest in Kampala Uganda.jpg",
+    "lyhyt": "Paikallista metsämaisemaa Kampalasta.",
+    "selite": "Paikallista metsämaisemaa Kampalasta.",
+    "lahde": "Gratypius, Commons (CC BY-SA 4.0)",
+    "vuosi": "2026"
   },
   "saatiedot": null
 }

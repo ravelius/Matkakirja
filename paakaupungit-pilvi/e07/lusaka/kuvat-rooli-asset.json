@@ -1,0 +1,1729 @@
+{
+  "schemaVersion": "capital-city-role-assets/v1",
+  "era": "e07",
+  "city": "lusaka",
+  "authorization": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+  "sourceContentAfterSHA256": "b1b740a6eb3da1781346a1286ae4f6fc14cbacf7fdcce07bb9db8ab8a4752ec7",
+  "assets": [
+    {
+      "era": "e07",
+      "city": "lusaka",
+      "slot": "O4",
+      "type": "illustration",
+      "assetID": "e07-lusaka-O4-v1-20261012",
+      "galleryImageID": "e07-lusaka-O4-v1-20261012",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "matkailijalle",
+        "artikkeli",
+        "jaksot",
+        3,
+        "kuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/lusaka/e07-lusaka-O4-v1-20261012-158c2e0c9aa6.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Kasvislisukkeen ja maissipuuron havainnekuva; ei Lusakan ravintolavalokuva.",
+        "lyhyt": "Kasvislisukkeen ja maissipuuron havainnekuva; ei Lusakan ravintolavalokuva."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/lusaka/e07-lusaka-O4-v1-20261012-158c2e0c9aa6.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Kasvislisukkeen ja maissipuuron havainnekuva; ei Lusakan ravintolavalokuva.",
+        "lyhyt": "Kasvislisukkeen ja maissipuuron havainnekuva; ei Lusakan ravintolavalokuva."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "158c2e0c9aa64ee3b0da2c552d9abf35f86593c532d0f3931603cf14dc33927f",
+      "exportSHA256": "793f6e317e0f1e745f65e947e9538f9a8c1bf62a58c7c94648e9cba6da3abad6",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/lusaka/e07-lusaka-O4-v1-20261012-158c2e0c9aa6.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/lusaka/e07-lusaka-O4-v1-20261012-158c2e0c9aa6.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/lusaka/e07-lusaka-O4-v1-20261012-158c2e0c9aa6.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lusaka/sisalto.json",
+      "sourceContentSHA256": "b1b740a6eb3da1781346a1286ae4f6fc14cbacf7fdcce07bb9db8ab8a4752ec7",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "062fb62b46d813e9d3b08d5626453ffe0918e05ef7151dd427430af6986693b9",
+        "subjectTitle": "Mitä nshiman rinnalla syödään",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": [
+            "Food and common plain tableware; no protected work, logo or identifiable restaurant."
+          ],
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lusaka/assets/e07-lusaka-O4-v1-20261012/kuva.png",
+            "nativeSha256Verified": "158c2e0c9aa64ee3b0da2c552d9abf35f86593c532d0f3931603cf14dc33927f",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Pieni puurokeko ja kulhossa kypsiä vihreitä kasviksia sekä rouhetta. Luontevat kosteat ruokapinnat ja rakenne; ei merkintöjä tai henkilöitä.",
+            "captionFi": "Kasvislisukkeen ja maissipuuron havainnekuva; ei Lusakan ravintolavalokuva.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lusaka/sisalto.json",
+            "contentSha256": "21f4eb010c31afc76b8f137e649fce7dbcd77707d3a0418635f0cfd81ae84257",
+            "targetCurrentlyPresent": true,
+            "targetText": "Nshima on maissipuuroa, jonka lisukkeet voivat sisältää kasviksia, kalaa tai lihaa. Ifisashi ja kurpitsan lehdet avaavat paikallista ruokasanastoa. Aterian kokonaisuus selviää lisukkeista, eikä yhden annoksen nimi edusta kaikkia kaupungin ruokapaikkoja. Juomavetenä käytetään pullotettua vettä.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lusaka/faktapohja.md",
+            "factSheetSha256": "ff5a2ba51da3755e09695f74f6045eda1212fe08ebbd4190ddca114d14508350",
+            "topicEvidence": "O4 kertoo nshiman kasvislisukkeista ja ifisashista.",
+            "sourceEvidence": [
+              {
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lusaka/sisalto.json",
+                "contentSha256": "21f4eb010c31afc76b8f137e649fce7dbcd77707d3a0418635f0cfd81ae84257",
+                "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+                "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lusaka/faktapohja.md",
+                "evidenceMode": "current source-backed guide food topic; generalized illustration",
+                "targetTextAtIssue": ""
+              }
+            ],
+            "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+            "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+          },
+          "qaReason": "Maissipuuro ja vihreä kasvislisuke vastaavat oppaan aihetta. Selite on yleinen havainnekuva eikä paikallinen ravintolatodiste."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Kasvislisukkeen ja maissipuuron havainnekuva; ei Lusakan ravintolavalokuva.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lusaka/illustration-qa-extra.json",
+        "fileSHA256": "2c27665ee3e24368834d9433c4e37a42b45d5af9eaff7f0f8a4815a2909c0ac0",
+        "item": {
+          "slot": "O4",
+          "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+          "assetID": "e07-lusaka-O4-v1-20261012",
+          "sha256": "158c2e0c9aa64ee3b0da2c552d9abf35f86593c532d0f3931603cf14dc33927f",
+          "verdict": "accepted",
+          "reason": "Maissipuuro ja vihreä kasvislisuke vastaavat oppaan aihetta. Selite on yleinen havainnekuva eikä paikallinen ravintolatodiste.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lusaka/assets/e07-lusaka-O4-v1-20261012/kuva.png",
+            "nativeSha256Verified": "158c2e0c9aa64ee3b0da2c552d9abf35f86593c532d0f3931603cf14dc33927f",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Pieni puurokeko ja kulhossa kypsiä vihreitä kasviksia sekä rouhetta. Luontevat kosteat ruokapinnat ja rakenne; ei merkintöjä tai henkilöitä.",
+            "captionFi": "Kasvislisukkeen ja maissipuuron havainnekuva; ei Lusakan ravintolavalokuva.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lusaka/sisalto.json",
+            "contentSha256": "21f4eb010c31afc76b8f137e649fce7dbcd77707d3a0418635f0cfd81ae84257",
+            "targetCurrentlyPresent": true,
+            "targetText": "Nshima on maissipuuroa, jonka lisukkeet voivat sisältää kasviksia, kalaa tai lihaa. Ifisashi ja kurpitsan lehdet avaavat paikallista ruokasanastoa. Aterian kokonaisuus selviää lisukkeista, eikä yhden annoksen nimi edusta kaikkia kaupungin ruokapaikkoja. Juomavetenä käytetään pullotettua vettä.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lusaka/faktapohja.md",
+            "factSheetSha256": "ff5a2ba51da3755e09695f74f6045eda1212fe08ebbd4190ddca114d14508350",
+            "topicEvidence": "O4 kertoo nshiman kasvislisukkeista ja ifisashista.",
+            "sourceEvidence": [
+              {
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lusaka/sisalto.json",
+                "contentSha256": "21f4eb010c31afc76b8f137e649fce7dbcd77707d3a0418635f0cfd81ae84257",
+                "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+                "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lusaka/faktapohja.md",
+                "evidenceMode": "current source-backed guide food topic; generalized illustration",
+                "targetTextAtIssue": ""
+              }
+            ],
+            "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+            "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+          },
+          "reviewedAt": "2026-10-12T18:38:26.451992+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lusaka/qa.json",
+            "sha256": "12d947e165ee2ec42c9a50a863239e7d213c64f260b6da547fc998c5b14b7d2e"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lusaka/illustration-qa-extra.json",
+            "sha256": "2c27665ee3e24368834d9433c4e37a42b45d5af9eaff7f0f8a4815a2909c0ac0"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/lusaka/e07-lusaka-O4-v1-20261012-158c2e0c9aa6.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/lusaka/e07-lusaka-O4-v1-20261012-158c2e0c9aa6.png?t=793f6e317e0f1e74",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/lusaka/e07-lusaka-O4-v1-20261012-158c2e0c9aa6.png",
+        "sha256": "793f6e317e0f1e745f65e947e9538f9a8c1bf62a58c7c94648e9cba6da3abad6",
+        "bytes": 2433524,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e07-lusaka-O4-v1-20261012",
+        "nativeSHA256": "158c2e0c9aa64ee3b0da2c552d9abf35f86593c532d0f3931603cf14dc33927f",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/lusaka/e07-lusaka-O4-v1-20261012-158c2e0c9aa6.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e07",
+        "city": "lusaka",
+        "slot": "O4",
+        "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+        "verifiedAt": "2026-10-12T18:38:45.971053+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/lusaka/e07-lusaka-O4-v1-20261012-158c2e0c9aa6.png",
+        "sha256": "793f6e317e0f1e745f65e947e9538f9a8c1bf62a58c7c94648e9cba6da3abad6",
+        "bytes": 2433524,
+        "SHAReadAt": "2026-10-12T18:38:38.347594+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "158c2e0c9aa64ee3b0da2c552d9abf35f86593c532d0f3931603cf14dc33927f",
+        "rgbPixelSHA256": "912615449a7929b233a00b2e7761455b0c976265e66e5a76735f9d912442993d",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "b1b740a6eb3da1781346a1286ae4f6fc14cbacf7fdcce07bb9db8ab8a4752ec7",
+      "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+      "contextAfterSHA256": "062fb62b46d813e9d3b08d5626453ffe0918e05ef7151dd427430af6986693b9"
+    },
+    {
+      "era": "e07",
+      "city": "lusaka",
+      "slot": "K3",
+      "type": "illustration",
+      "assetID": "e07-lusaka-K3-v1-20261012",
+      "galleryImageID": "e07-lusaka-K3-v1-20261012",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].nostot[2]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "nostot",
+        2
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/lusaka/e07-lusaka-K3-v1-20261012-c300d9baeac2.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Nshiman ja kasvislisukkeen havainnekuva; ei Lusakan ravintolavalokuva.",
+        "lyhyt": "Nshiman ja kasvislisukkeen havainnekuva; ei Lusakan ravintolavalokuva."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/lusaka/e07-lusaka-K3-v1-20261012-c300d9baeac2.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Nshiman ja kasvislisukkeen havainnekuva; ei Lusakan ravintolavalokuva.",
+        "lyhyt": "Nshiman ja kasvislisukkeen havainnekuva; ei Lusakan ravintolavalokuva."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "c300d9baeac2fc16c54eb3b7e1048ce8d46980bce4e0be7bf89fae0fc9f46dcb",
+      "exportSHA256": "066ede738cf85ce0e2d3609ba94c272bc0ce5ac8a955977783d9e6e3391773ac",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/lusaka/e07-lusaka-K3-v1-20261012-c300d9baeac2.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/lusaka/e07-lusaka-K3-v1-20261012-c300d9baeac2.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/lusaka/e07-lusaka-K3-v1-20261012-c300d9baeac2.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lusaka/sisalto.json",
+      "sourceContentSHA256": "b1b740a6eb3da1781346a1286ae4f6fc14cbacf7fdcce07bb9db8ab8a4752ec7",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "dad21dfb179d09dc39a1d2449eb8bf9a9a457cf5bc59fc0659bca590739cb762",
+        "semanticContextSHA256": "dad21dfb179d09dc39a1d2449eb8bf9a9a457cf5bc59fc0659bca590739cb762",
+        "subjectTitle": "Puuro ottaa lisukkeen mukaansa",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": [
+            "New generated illustration of natural subject or common utility object; no reproduction of a protected work.",
+            "Named buildings, identifiable people and exact contemporary art/design excluded."
+          ],
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lusaka/assets/e07-lusaka-K3-v1-20261012/kuva.png",
+            "nativeSha256Verified": "c300d9baeac2fc16c54eb3b7e1048ce8d46980bce4e0be7bf89fae0fc9f46dcb",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Vaalea puurokeko ja kypsiä vihreitä kasviksia pähkinöineen. Luonteva rakeisuus, kosteus ja epäsäännölliset ainekset; ei käsiä, kasvoja tai merkintöjä.",
+            "captionFi": "Nshiman ja kasvislisukkeen havainnekuva; ei Lusakan ravintolavalokuva.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lusaka/sisalto.json",
+            "contentSha256": "21f4eb010c31afc76b8f137e649fce7dbcd77707d3a0418635f0cfd81ae84257",
+            "targetCurrentlyPresent": true,
+            "targetText": "Nshima on Sambian paksu maissijauhopuuro, jota syödään erilaisten lisukkeiden kanssa. Kasvikset, kala tai liha muuttavat aterian kokonaisuutta; pelkkä puuron nimi ei vielä kerro kaikkia makuja. Chibwabwa tarkoittaa kurpitsan lehtiä, ja ifisashi yhdistää vihreitä kasviksia sekä maapähkinöitä, joskus myös lihaa. Käsin syödessä puuron pala voi toimia lisukkeen ottamisen välineenä. Lusakan ruokapaikoissa ateriaa voi siis ymmärtää myös osiensa kautta: pohjaruoka ja sen rinnalla syötävät ruoat tekevät kokonaisuuden.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lusaka/faktapohja.md",
+            "factSheetSha256": "ff5a2ba51da3755e09695f74f6045eda1212fe08ebbd4190ddca114d14508350",
+            "topicEvidence": "K3 kuvaa nshiman sekä kasviksia ja maapähkinöitä lisukkeissa.",
+            "sourceEvidence": [
+              {
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lusaka/sisalto.json",
+                "contentSha256": "21f4eb010c31afc76b8f137e649fce7dbcd77707d3a0418635f0cfd81ae84257",
+                "targetJsonPath": "$.kaupunkilehti[0].nostot[2]",
+                "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lusaka/faktapohja.md",
+                "evidenceMode": "source-backed text topic; generalized material/food/biological illustration, not exact place appearance",
+                "targetTextAtIssue": "Nshima on Sambian paksu maissijauhopuuro, jota syödään erilaisten lisukkeiden kanssa. Kasvikset, kala tai liha muuttavat aterian kokonaisuutta; pelkkä puuron nimi ei vielä kerro kaikkia makuja. Chibwabwa tarkoittaa kurpitsan lehtiä, ja ifisashi yhdistää vihreitä kasviksia sekä maapähkinöitä, joskus myös lihaa. Käsin syödessä puuron pala voi toimia lisukkeen ottamisen välineenä. Lusakan ruokapaikoissa ateriaa voi siis ymmärtää myös osiensa kautta: pohjaruoka ja sen rinnalla syötävät ruoat tekevät kokonaisuuden."
+              }
+            ],
+            "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+            "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+          },
+          "qaReason": "Tiivis maissipuuro ja lehtikasvislisuke sopivat nshima-aiheeseen. Selite rajaa kuvan yleiseksi havainnollistukseksi."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Nshiman ja kasvislisukkeen havainnekuva; ei Lusakan ravintolavalokuva.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lusaka/illustration-qa-extra.json",
+        "fileSHA256": "2c27665ee3e24368834d9433c4e37a42b45d5af9eaff7f0f8a4815a2909c0ac0",
+        "item": {
+          "slot": "K3",
+          "targetJsonPath": "$.kaupunkilehti[0].nostot[2]",
+          "assetID": "e07-lusaka-K3-v1-20261012",
+          "sha256": "c300d9baeac2fc16c54eb3b7e1048ce8d46980bce4e0be7bf89fae0fc9f46dcb",
+          "verdict": "accepted",
+          "reason": "Tiivis maissipuuro ja lehtikasvislisuke sopivat nshima-aiheeseen. Selite rajaa kuvan yleiseksi havainnollistukseksi.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lusaka/assets/e07-lusaka-K3-v1-20261012/kuva.png",
+            "nativeSha256Verified": "c300d9baeac2fc16c54eb3b7e1048ce8d46980bce4e0be7bf89fae0fc9f46dcb",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Vaalea puurokeko ja kypsiä vihreitä kasviksia pähkinöineen. Luonteva rakeisuus, kosteus ja epäsäännölliset ainekset; ei käsiä, kasvoja tai merkintöjä.",
+            "captionFi": "Nshiman ja kasvislisukkeen havainnekuva; ei Lusakan ravintolavalokuva.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lusaka/sisalto.json",
+            "contentSha256": "21f4eb010c31afc76b8f137e649fce7dbcd77707d3a0418635f0cfd81ae84257",
+            "targetCurrentlyPresent": true,
+            "targetText": "Nshima on Sambian paksu maissijauhopuuro, jota syödään erilaisten lisukkeiden kanssa. Kasvikset, kala tai liha muuttavat aterian kokonaisuutta; pelkkä puuron nimi ei vielä kerro kaikkia makuja. Chibwabwa tarkoittaa kurpitsan lehtiä, ja ifisashi yhdistää vihreitä kasviksia sekä maapähkinöitä, joskus myös lihaa. Käsin syödessä puuron pala voi toimia lisukkeen ottamisen välineenä. Lusakan ruokapaikoissa ateriaa voi siis ymmärtää myös osiensa kautta: pohjaruoka ja sen rinnalla syötävät ruoat tekevät kokonaisuuden.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lusaka/faktapohja.md",
+            "factSheetSha256": "ff5a2ba51da3755e09695f74f6045eda1212fe08ebbd4190ddca114d14508350",
+            "topicEvidence": "K3 kuvaa nshiman sekä kasviksia ja maapähkinöitä lisukkeissa.",
+            "sourceEvidence": [
+              {
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lusaka/sisalto.json",
+                "contentSha256": "21f4eb010c31afc76b8f137e649fce7dbcd77707d3a0418635f0cfd81ae84257",
+                "targetJsonPath": "$.kaupunkilehti[0].nostot[2]",
+                "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lusaka/faktapohja.md",
+                "evidenceMode": "source-backed text topic; generalized material/food/biological illustration, not exact place appearance",
+                "targetTextAtIssue": "Nshima on Sambian paksu maissijauhopuuro, jota syödään erilaisten lisukkeiden kanssa. Kasvikset, kala tai liha muuttavat aterian kokonaisuutta; pelkkä puuron nimi ei vielä kerro kaikkia makuja. Chibwabwa tarkoittaa kurpitsan lehtiä, ja ifisashi yhdistää vihreitä kasviksia sekä maapähkinöitä, joskus myös lihaa. Käsin syödessä puuron pala voi toimia lisukkeen ottamisen välineenä. Lusakan ruokapaikoissa ateriaa voi siis ymmärtää myös osiensa kautta: pohjaruoka ja sen rinnalla syötävät ruoat tekevät kokonaisuuden."
+              }
+            ],
+            "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+            "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+          },
+          "reviewedAt": "2026-10-12T18:37:54.082513+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lusaka/qa.json",
+            "sha256": "12d947e165ee2ec42c9a50a863239e7d213c64f260b6da547fc998c5b14b7d2e"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lusaka/illustration-qa-extra.json",
+            "sha256": "2c27665ee3e24368834d9433c4e37a42b45d5af9eaff7f0f8a4815a2909c0ac0"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/lusaka/e07-lusaka-K3-v1-20261012-c300d9baeac2.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/lusaka/e07-lusaka-K3-v1-20261012-c300d9baeac2.png?t=066ede738cf85ce0",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/lusaka/e07-lusaka-K3-v1-20261012-c300d9baeac2.png",
+        "sha256": "066ede738cf85ce0e2d3609ba94c272bc0ce5ac8a955977783d9e6e3391773ac",
+        "bytes": 2355600,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e07-lusaka-K3-v1-20261012",
+        "nativeSHA256": "c300d9baeac2fc16c54eb3b7e1048ce8d46980bce4e0be7bf89fae0fc9f46dcb",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/lusaka/e07-lusaka-K3-v1-20261012-c300d9baeac2.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e07",
+        "city": "lusaka",
+        "slot": "K3",
+        "targetJsonPath": "$.kaupunkilehti[0].nostot[2]",
+        "verifiedAt": "2026-10-12T18:38:44.384365+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/lusaka/e07-lusaka-K3-v1-20261012-c300d9baeac2.png",
+        "sha256": "066ede738cf85ce0e2d3609ba94c272bc0ce5ac8a955977783d9e6e3391773ac",
+        "bytes": 2355600,
+        "SHAReadAt": "2026-10-12T18:38:37.973070+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "c300d9baeac2fc16c54eb3b7e1048ce8d46980bce4e0be7bf89fae0fc9f46dcb",
+        "rgbPixelSHA256": "f4b7e4a7f096ca96d289d17fe71030c39e6d400ddc19d6f87dfd26452f5d69ba",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "b1b740a6eb3da1781346a1286ae4f6fc14cbacf7fdcce07bb9db8ab8a4752ec7",
+      "targetAfterSHA256": "dad21dfb179d09dc39a1d2449eb8bf9a9a457cf5bc59fc0659bca590739cb762",
+      "contextAfterSHA256": "dad21dfb179d09dc39a1d2449eb8bf9a9a457cf5bc59fc0659bca590739cb762"
+    },
+    {
+      "era": "e07",
+      "city": "lusaka",
+      "slot": "L1",
+      "type": "illustration",
+      "assetID": "e07-lusaka-L1-v1-20261012",
+      "galleryImageID": "e07-lusaka-L1-v1-20261012",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[1].nostot[0]",
+      "targetTokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        0
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/lusaka/e07-lusaka-L1-v1-20261012-d3b6e9112174.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Karbonaattikallion ja veden havainnekuva; ei Lusakan maanalaisen tilan kuva.",
+        "lyhyt": "Karbonaattikallion ja veden havainnekuva; ei Lusakan maanalaisen tilan kuva."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/lusaka/e07-lusaka-L1-v1-20261012-d3b6e9112174.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Karbonaattikallion ja veden havainnekuva; ei Lusakan maanalaisen tilan kuva.",
+        "lyhyt": "Karbonaattikallion ja veden havainnekuva; ei Lusakan maanalaisen tilan kuva."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "d3b6e91121742b9a465270dbb0a6f16cb43a1a6757a9734dd2d31e61a8dc3fcd",
+      "exportSHA256": "8d448542013b03ed9a181ab493bc2680e602ed8e2fb47e970826028de29c33eb",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/lusaka/e07-lusaka-L1-v1-20261012-d3b6e9112174.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/lusaka/e07-lusaka-L1-v1-20261012-d3b6e9112174.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/lusaka/e07-lusaka-L1-v1-20261012-d3b6e9112174.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lusaka/sisalto.json",
+      "sourceContentSHA256": "b1b740a6eb3da1781346a1286ae4f6fc14cbacf7fdcce07bb9db8ab8a4752ec7",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "54f9bbad5d5fab683e354fdec17e27f7f012ded3d469895e77533ba11ba02931",
+        "semanticContextSHA256": "54f9bbad5d5fab683e354fdec17e27f7f012ded3d469895e77533ba11ba02931",
+        "subjectTitle": "Vesi voi jatkaa pinnan alle",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": [
+            "New generated illustration of natural subject or common utility object; no reproduction of a protected work.",
+            "Named buildings, identifiable people and exact contemporary art/design excluded."
+          ],
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lusaka/assets/e07-lusaka-L1-v1-20261012/kuva.png",
+            "nativeSha256Verified": "d3b6e91121742b9a465270dbb0a6f16cb43a1a6757a9734dd2d31e61a8dc3fcd",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Vaalean harmaata halkeilevaa kalliota ja ohut vesikerros raossa. Epäsäännölliset murtopinnat ja heijastukset luontevia; ei maanalaista järveä, henkilöitä tai tekstiä.",
+            "captionFi": "Karbonaattikallion ja veden havainnekuva; ei Lusakan maanalaisen tilan kuva.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lusaka/sisalto.json",
+            "contentSha256": "21f4eb010c31afc76b8f137e649fce7dbcd77707d3a0418635f0cfd81ae84257",
+            "targetCurrentlyPresent": true,
+            "targetText": "Lusakan eteläosien kallioperässä on kalkkikiveä ja dolomiittista marmoria. Liukenevaan karbonaattikallioon voi syntyä karstia, jossa vesi käyttää rakoja ja liukenemisen avaamia reittejä. Paikallinen karsti liittyy pintavesien imeytymiseen ja suurten jokien vähäisyyteen ylängöllä. Pohjavesikerros ei silti tarkoita valtavaa tyhjää maanalaista järveä: vettä voi olla huokosissa ja raoissa. Kaupungin vesiverkkoa ei siksi näe kokonaan maan pinnalta, eikä näkymätön valunta itsessään lupaa puhdasta juomavettä.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lusaka/faktapohja.md",
+            "factSheetSha256": "ff5a2ba51da3755e09695f74f6045eda1212fe08ebbd4190ddca114d14508350",
+            "topicEvidence": "L1 kertoo veden kulusta raoissa ja huokosissa.",
+            "sourceEvidence": [
+              {
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lusaka/sisalto.json",
+                "contentSha256": "21f4eb010c31afc76b8f137e649fce7dbcd77707d3a0418635f0cfd81ae84257",
+                "targetJsonPath": "$.kaupunkilehti[1].nostot[0]",
+                "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lusaka/faktapohja.md",
+                "evidenceMode": "source-backed text topic; generalized material/food/biological illustration, not exact place appearance",
+                "targetTextAtIssue": "Lusakan eteläosien kallioperässä on kalkkikiveä ja dolomiittista marmoria. Liukenevaan karbonaattikallioon voi syntyä karstia, jossa vesi käyttää rakoja ja liukenemisen avaamia reittejä. Paikallinen karsti liittyy pintavesien imeytymiseen ja suurten jokien vähäisyyteen ylängöllä. Pohjavesikerros ei silti tarkoita valtavaa tyhjää maanalaista järveä: vettä voi olla huokosissa ja raoissa. Kaupungin vesiverkkoa ei siksi näe kokonaan maan pinnalta, eikä näkymätön valunta itsessään lupaa puhdasta juomavettä."
+              }
+            ],
+            "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+            "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+          },
+          "qaReason": "Vesi karbonaattikallion raossa sopii tekstin valunta-aiheeseen. Selite erottaa havainnollistuksen Lusakan todellisesta maanalaisesta tilasta."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Karbonaattikallion ja veden havainnekuva; ei Lusakan maanalaisen tilan kuva.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lusaka/illustration-qa-extra.json",
+        "fileSHA256": "2c27665ee3e24368834d9433c4e37a42b45d5af9eaff7f0f8a4815a2909c0ac0",
+        "item": {
+          "slot": "L1",
+          "targetJsonPath": "$.kaupunkilehti[1].nostot[0]",
+          "assetID": "e07-lusaka-L1-v1-20261012",
+          "sha256": "d3b6e91121742b9a465270dbb0a6f16cb43a1a6757a9734dd2d31e61a8dc3fcd",
+          "verdict": "accepted",
+          "reason": "Vesi karbonaattikallion raossa sopii tekstin valunta-aiheeseen. Selite erottaa havainnollistuksen Lusakan todellisesta maanalaisesta tilasta.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lusaka/assets/e07-lusaka-L1-v1-20261012/kuva.png",
+            "nativeSha256Verified": "d3b6e91121742b9a465270dbb0a6f16cb43a1a6757a9734dd2d31e61a8dc3fcd",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Vaalean harmaata halkeilevaa kalliota ja ohut vesikerros raossa. Epäsäännölliset murtopinnat ja heijastukset luontevia; ei maanalaista järveä, henkilöitä tai tekstiä.",
+            "captionFi": "Karbonaattikallion ja veden havainnekuva; ei Lusakan maanalaisen tilan kuva.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lusaka/sisalto.json",
+            "contentSha256": "21f4eb010c31afc76b8f137e649fce7dbcd77707d3a0418635f0cfd81ae84257",
+            "targetCurrentlyPresent": true,
+            "targetText": "Lusakan eteläosien kallioperässä on kalkkikiveä ja dolomiittista marmoria. Liukenevaan karbonaattikallioon voi syntyä karstia, jossa vesi käyttää rakoja ja liukenemisen avaamia reittejä. Paikallinen karsti liittyy pintavesien imeytymiseen ja suurten jokien vähäisyyteen ylängöllä. Pohjavesikerros ei silti tarkoita valtavaa tyhjää maanalaista järveä: vettä voi olla huokosissa ja raoissa. Kaupungin vesiverkkoa ei siksi näe kokonaan maan pinnalta, eikä näkymätön valunta itsessään lupaa puhdasta juomavettä.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lusaka/faktapohja.md",
+            "factSheetSha256": "ff5a2ba51da3755e09695f74f6045eda1212fe08ebbd4190ddca114d14508350",
+            "topicEvidence": "L1 kertoo veden kulusta raoissa ja huokosissa.",
+            "sourceEvidence": [
+              {
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lusaka/sisalto.json",
+                "contentSha256": "21f4eb010c31afc76b8f137e649fce7dbcd77707d3a0418635f0cfd81ae84257",
+                "targetJsonPath": "$.kaupunkilehti[1].nostot[0]",
+                "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lusaka/faktapohja.md",
+                "evidenceMode": "source-backed text topic; generalized material/food/biological illustration, not exact place appearance",
+                "targetTextAtIssue": "Lusakan eteläosien kallioperässä on kalkkikiveä ja dolomiittista marmoria. Liukenevaan karbonaattikallioon voi syntyä karstia, jossa vesi käyttää rakoja ja liukenemisen avaamia reittejä. Paikallinen karsti liittyy pintavesien imeytymiseen ja suurten jokien vähäisyyteen ylängöllä. Pohjavesikerros ei silti tarkoita valtavaa tyhjää maanalaista järveä: vettä voi olla huokosissa ja raoissa. Kaupungin vesiverkkoa ei siksi näe kokonaan maan pinnalta, eikä näkymätön valunta itsessään lupaa puhdasta juomavettä."
+              }
+            ],
+            "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+            "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+          },
+          "reviewedAt": "2026-10-12T18:47:13.212896+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lusaka/qa.json",
+            "sha256": "12d947e165ee2ec42c9a50a863239e7d213c64f260b6da547fc998c5b14b7d2e"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lusaka/illustration-qa-extra.json",
+            "sha256": "2c27665ee3e24368834d9433c4e37a42b45d5af9eaff7f0f8a4815a2909c0ac0"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/lusaka/e07-lusaka-L1-v1-20261012-d3b6e9112174.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/lusaka/e07-lusaka-L1-v1-20261012-d3b6e9112174.png?t=8d448542013b03ed",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/lusaka/e07-lusaka-L1-v1-20261012-d3b6e9112174.png",
+        "sha256": "8d448542013b03ed9a181ab493bc2680e602ed8e2fb47e970826028de29c33eb",
+        "bytes": 2866830,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e07-lusaka-L1-v1-20261012",
+        "nativeSHA256": "d3b6e91121742b9a465270dbb0a6f16cb43a1a6757a9734dd2d31e61a8dc3fcd",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/lusaka/e07-lusaka-L1-v1-20261012-d3b6e9112174.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e07",
+        "city": "lusaka",
+        "slot": "L1",
+        "targetJsonPath": "$.kaupunkilehti[1].nostot[0]",
+        "verifiedAt": "2026-10-12T18:47:27.448420+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/lusaka/e07-lusaka-L1-v1-20261012-d3b6e9112174.png",
+        "sha256": "8d448542013b03ed9a181ab493bc2680e602ed8e2fb47e970826028de29c33eb",
+        "bytes": 2866830,
+        "SHAReadAt": "2026-10-12T19:03:34.774559+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "d3b6e91121742b9a465270dbb0a6f16cb43a1a6757a9734dd2d31e61a8dc3fcd",
+        "rgbPixelSHA256": "9c97b6620592f5211e6a05c68736dff8b3a11ad54a5040e6cdafb27bc774b53e",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "b1b740a6eb3da1781346a1286ae4f6fc14cbacf7fdcce07bb9db8ab8a4752ec7",
+      "targetAfterSHA256": "54f9bbad5d5fab683e354fdec17e27f7f012ded3d469895e77533ba11ba02931",
+      "contextAfterSHA256": "54f9bbad5d5fab683e354fdec17e27f7f012ded3d469895e77533ba11ba02931"
+    },
+    {
+      "era": "e07",
+      "city": "lusaka",
+      "slot": "L3",
+      "type": "illustration",
+      "assetID": "e07-lusaka-L3-v1-20261012",
+      "galleryImageID": "e07-lusaka-L3-v1-20261012",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[1].nostot[2]",
+      "targetTokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        2
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/lusaka/e07-lusaka-L3-v1-20261012-74ce0c0044eb.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Saviastian materiaalin havainnekuva; ei todellinen museoesine.",
+        "lyhyt": "Saviastian materiaalin havainnekuva; ei todellinen museoesine."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/lusaka/e07-lusaka-L3-v1-20261012-74ce0c0044eb.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Saviastian materiaalin havainnekuva; ei todellinen museoesine.",
+        "lyhyt": "Saviastian materiaalin havainnekuva; ei todellinen museoesine."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "74ce0c0044eb677e77973d63a9397b11a9abb948bcae95e8581cf3a54977fa00",
+      "exportSHA256": "9e0213f6a77f72afc49fd5a4fb3c5c6a34ed40d56d771a3556e3392dd4697301",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/lusaka/e07-lusaka-L3-v1-20261012-74ce0c0044eb.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/lusaka/e07-lusaka-L3-v1-20261012-74ce0c0044eb.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/lusaka/e07-lusaka-L3-v1-20261012-74ce0c0044eb.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lusaka/sisalto.json",
+      "sourceContentSHA256": "b1b740a6eb3da1781346a1286ae4f6fc14cbacf7fdcce07bb9db8ab8a4752ec7",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "321090eafa8ff8cbd7281f78d9a49919ba057476f401cf443851c86cd3d14967",
+        "semanticContextSHA256": "321090eafa8ff8cbd7281f78d9a49919ba057476f401cf443851c86cd3d14967",
+        "subjectTitle": "Saviastia on historian havainto",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": [
+            "New generated illustration of natural subject or common utility object; no reproduction of a protected work.",
+            "Named buildings, identifiable people and exact contemporary art/design excluded."
+          ],
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lusaka/assets/e07-lusaka-L3-v1-20261012/kuva.png",
+            "nativeSha256Verified": "74ce0c0044eb677e77973d63a9397b11a9abb948bcae95e8581cf3a54977fa00",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Yksi pyöreä saviastia, kaksi kahvaa ja luontevasti kulunut pinta. Ehjät muodot ja varjot, ei koristekuviota, tekstiä tai henkilöitä.",
+            "captionFi": "Saviastian materiaalin havainnekuva; ei todellinen museoesine.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lusaka/sisalto.json",
+            "contentSha256": "21f4eb010c31afc76b8f137e649fce7dbcd77707d3a0418635f0cfd81ae84257",
+            "targetCurrentlyPresent": true,
+            "targetText": "Lusakan kansallismuseo käsittelee Sambian historiaa ja kulttuuria kivikaudesta nykyiseen aikaan. Arkeologisessa ja historiallisessa aineistossa on työkaluja, keramiikkaa ja koriste-esineitä. Museo avautui yleisölle 1990-luvulla, kun aiempi itsenäistymishistoriaan painottunut suunnitelma oli laajentunut kulttuurihistoriaksi. Mukana on myös nykytaidetta. Arkinen saviastia ja työkalu voivat siten säilyttää tietoa ajasta, josta ei ole katuvalokuvia; kokoelma ulottuu paljon museon omaa rakennushistoriaa kauemmas.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lusaka/faktapohja.md",
+            "factSheetSha256": "ff5a2ba51da3755e09695f74f6045eda1212fe08ebbd4190ddca114d14508350",
+            "topicEvidence": "L3 kertoo museon arkeologisesta keramiikasta ja arkiesineiden historiallisesta tiedosta.",
+            "sourceEvidence": [
+              {
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lusaka/sisalto.json",
+                "contentSha256": "21f4eb010c31afc76b8f137e649fce7dbcd77707d3a0418635f0cfd81ae84257",
+                "targetJsonPath": "$.kaupunkilehti[1].nostot[2]",
+                "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lusaka/faktapohja.md",
+                "evidenceMode": "source-backed text topic; generalized material/food/biological illustration, not exact place appearance",
+                "targetTextAtIssue": "Lusakan kansallismuseo käsittelee Sambian historiaa ja kulttuuria kivikaudesta nykyiseen aikaan. Arkeologisessa ja historiallisessa aineistossa on työkaluja, keramiikkaa ja koriste-esineitä. Museo avautui yleisölle 1990-luvulla, kun aiempi itsenäistymishistoriaan painottunut suunnitelma oli laajentunut kulttuurihistoriaksi. Mukana on myös nykytaidetta. Arkinen saviastia ja työkalu voivat siten säilyttää tietoa ajasta, josta ei ole katuvalokuvia; kokoelma ulottuu paljon museon omaa rakennushistoriaa kauemmas."
+              }
+            ],
+            "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+            "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+          },
+          "qaReason": "Yleinen saviastia sopii keramiikan materiaaliaiheeseen. Selite ei väitä astiaa Lusakan museoesineeksi tai nimetyn taiteilijan työksi."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Saviastian materiaalin havainnekuva; ei todellinen museoesine.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lusaka/illustration-qa-extra.json",
+        "fileSHA256": "2c27665ee3e24368834d9433c4e37a42b45d5af9eaff7f0f8a4815a2909c0ac0",
+        "item": {
+          "slot": "L3",
+          "targetJsonPath": "$.kaupunkilehti[1].nostot[2]",
+          "assetID": "e07-lusaka-L3-v1-20261012",
+          "sha256": "74ce0c0044eb677e77973d63a9397b11a9abb948bcae95e8581cf3a54977fa00",
+          "verdict": "accepted",
+          "reason": "Yleinen saviastia sopii keramiikan materiaaliaiheeseen. Selite ei väitä astiaa Lusakan museoesineeksi tai nimetyn taiteilijan työksi.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lusaka/assets/e07-lusaka-L3-v1-20261012/kuva.png",
+            "nativeSha256Verified": "74ce0c0044eb677e77973d63a9397b11a9abb948bcae95e8581cf3a54977fa00",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Yksi pyöreä saviastia, kaksi kahvaa ja luontevasti kulunut pinta. Ehjät muodot ja varjot, ei koristekuviota, tekstiä tai henkilöitä.",
+            "captionFi": "Saviastian materiaalin havainnekuva; ei todellinen museoesine.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lusaka/sisalto.json",
+            "contentSha256": "21f4eb010c31afc76b8f137e649fce7dbcd77707d3a0418635f0cfd81ae84257",
+            "targetCurrentlyPresent": true,
+            "targetText": "Lusakan kansallismuseo käsittelee Sambian historiaa ja kulttuuria kivikaudesta nykyiseen aikaan. Arkeologisessa ja historiallisessa aineistossa on työkaluja, keramiikkaa ja koriste-esineitä. Museo avautui yleisölle 1990-luvulla, kun aiempi itsenäistymishistoriaan painottunut suunnitelma oli laajentunut kulttuurihistoriaksi. Mukana on myös nykytaidetta. Arkinen saviastia ja työkalu voivat siten säilyttää tietoa ajasta, josta ei ole katuvalokuvia; kokoelma ulottuu paljon museon omaa rakennushistoriaa kauemmas.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lusaka/faktapohja.md",
+            "factSheetSha256": "ff5a2ba51da3755e09695f74f6045eda1212fe08ebbd4190ddca114d14508350",
+            "topicEvidence": "L3 kertoo museon arkeologisesta keramiikasta ja arkiesineiden historiallisesta tiedosta.",
+            "sourceEvidence": [
+              {
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lusaka/sisalto.json",
+                "contentSha256": "21f4eb010c31afc76b8f137e649fce7dbcd77707d3a0418635f0cfd81ae84257",
+                "targetJsonPath": "$.kaupunkilehti[1].nostot[2]",
+                "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lusaka/faktapohja.md",
+                "evidenceMode": "source-backed text topic; generalized material/food/biological illustration, not exact place appearance",
+                "targetTextAtIssue": "Lusakan kansallismuseo käsittelee Sambian historiaa ja kulttuuria kivikaudesta nykyiseen aikaan. Arkeologisessa ja historiallisessa aineistossa on työkaluja, keramiikkaa ja koriste-esineitä. Museo avautui yleisölle 1990-luvulla, kun aiempi itsenäistymishistoriaan painottunut suunnitelma oli laajentunut kulttuurihistoriaksi. Mukana on myös nykytaidetta. Arkinen saviastia ja työkalu voivat siten säilyttää tietoa ajasta, josta ei ole katuvalokuvia; kokoelma ulottuu paljon museon omaa rakennushistoriaa kauemmas."
+              }
+            ],
+            "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+            "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+          },
+          "reviewedAt": "2026-10-12T18:48:36.865671+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lusaka/qa.json",
+            "sha256": "12d947e165ee2ec42c9a50a863239e7d213c64f260b6da547fc998c5b14b7d2e"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lusaka/illustration-qa-extra.json",
+            "sha256": "2c27665ee3e24368834d9433c4e37a42b45d5af9eaff7f0f8a4815a2909c0ac0"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/lusaka/e07-lusaka-L3-v1-20261012-74ce0c0044eb.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/lusaka/e07-lusaka-L3-v1-20261012-74ce0c0044eb.png?t=9e0213f6a77f72af",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/lusaka/e07-lusaka-L3-v1-20261012-74ce0c0044eb.png",
+        "sha256": "9e0213f6a77f72afc49fd5a4fb3c5c6a34ed40d56d771a3556e3392dd4697301",
+        "bytes": 2365498,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e07-lusaka-L3-v1-20261012",
+        "nativeSHA256": "74ce0c0044eb677e77973d63a9397b11a9abb948bcae95e8581cf3a54977fa00",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/lusaka/e07-lusaka-L3-v1-20261012-74ce0c0044eb.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e07",
+        "city": "lusaka",
+        "slot": "L3",
+        "targetJsonPath": "$.kaupunkilehti[1].nostot[2]",
+        "verifiedAt": "2026-10-12T18:49:20.998822+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/lusaka/e07-lusaka-L3-v1-20261012-74ce0c0044eb.png",
+        "sha256": "9e0213f6a77f72afc49fd5a4fb3c5c6a34ed40d56d771a3556e3392dd4697301",
+        "bytes": 2365498,
+        "SHAReadAt": "2026-10-12T19:03:34.932860+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "74ce0c0044eb677e77973d63a9397b11a9abb948bcae95e8581cf3a54977fa00",
+        "rgbPixelSHA256": "16cbbc1a8f0b289ad6e5142e8304f2b14a92218cd2a101795e0e2c48323f31b8",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "b1b740a6eb3da1781346a1286ae4f6fc14cbacf7fdcce07bb9db8ab8a4752ec7",
+      "targetAfterSHA256": "321090eafa8ff8cbd7281f78d9a49919ba057476f401cf443851c86cd3d14967",
+      "contextAfterSHA256": "321090eafa8ff8cbd7281f78d9a49919ba057476f401cf443851c86cd3d14967"
+    },
+    {
+      "era": "e07",
+      "city": "lusaka",
+      "slot": "L4",
+      "type": "illustration",
+      "assetID": "e07-lusaka-L4-v1-20261012",
+      "galleryImageID": "e07-lusaka-L4-v1-20261012",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
+      "targetTokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        3
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/lusaka/e07-lusaka-L4-v1-20261012-398720eb5183.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Säämittauksen havainnekuva; ei Lusakan nimetty mittausasema.",
+        "lyhyt": "Säämittauksen havainnekuva; ei Lusakan nimetty mittausasema."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/lusaka/e07-lusaka-L4-v1-20261012-398720eb5183.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Säämittauksen havainnekuva; ei Lusakan nimetty mittausasema.",
+        "lyhyt": "Säämittauksen havainnekuva; ei Lusakan nimetty mittausasema."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "398720eb51834c56d75bc66de6fde7184864b871eabd743547983ee02bbf6312",
+      "exportSHA256": "243c0d338c9068446f9fb29411ef2a315792ddca3688bbce63e449d3d5bbe682",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/lusaka/e07-lusaka-L4-v1-20261012-398720eb5183.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/lusaka/e07-lusaka-L4-v1-20261012-398720eb5183.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/lusaka/e07-lusaka-L4-v1-20261012-398720eb5183.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lusaka/sisalto.json",
+      "sourceContentSHA256": "b1b740a6eb3da1781346a1286ae4f6fc14cbacf7fdcce07bb9db8ab8a4752ec7",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "2649ad0289b85d5955181172e35cf9c2400c313fff70ad9fa7b159682183a9d7",
+        "semanticContextSHA256": "2649ad0289b85d5955181172e35cf9c2400c313fff70ad9fa7b159682183a9d7",
+        "subjectTitle": "Lentoaseman sää on paikan sää",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": [
+            "New generated illustration of natural subject or common utility object; no reproduction of a protected work.",
+            "Named buildings, identifiable people and exact contemporary art/design excluded."
+          ],
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lusaka/assets/e07-lusaka-L4-v1-20261012/kuva.png",
+            "nativeSha256Verified": "398720eb51834c56d75bc66de6fde7184864b871eabd743547983ee02bbf6312",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Valkoinen säleikköinen mittauskoppi ja avoin läpinäkyvä keräin jalustalla. Puun, metallin ja veden pinnat uskottavia, ei asteikkotekstiä tai henkilöitä.",
+            "captionFi": "Säämittauksen havainnekuva; ei Lusakan nimetty mittausasema.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lusaka/sisalto.json",
+            "contentSha256": "21f4eb010c31afc76b8f137e649fce7dbcd77707d3a0418635f0cfd81ae84257",
+            "targetCurrentlyPresent": true,
+            "targetText": "Lusakassa on erilliset ilmastotaulukot City Airportille ja Kenneth Kaundan kansainväliselle lentoasemalle. Ne kuvaavat eri mittauspaikkoja, ja niiden kuukausiarvot eroavat. Pitkän kauden kuukausikeskiarvo ei ole saapumispäivän ennuste: keskilämpö, päivän keskimääräinen ylin ja yön keskimääräinen alin ovat myös eri suureita. Matkailijan lentoaseman nimi ja mittausaseman nimi voivat siksi johtaa eri taulukoihin saman kaupungin sisällä. Paikka, ajanjakso ja mitattava suure kuuluvat kaikki luvun merkitykseen.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lusaka/faktapohja.md",
+            "factSheetSha256": "ff5a2ba51da3755e09695f74f6045eda1212fe08ebbd4190ddca114d14508350",
+            "topicEvidence": "L4 erottaa sääasemien mittauspaikat ja ilmastotaulukot.",
+            "sourceEvidence": [
+              {
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lusaka/sisalto.json",
+                "contentSha256": "21f4eb010c31afc76b8f137e649fce7dbcd77707d3a0418635f0cfd81ae84257",
+                "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
+                "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lusaka/faktapohja.md",
+                "evidenceMode": "source-backed text topic; generalized material/food/biological illustration, not exact place appearance",
+                "targetTextAtIssue": "Lusakassa on erilliset ilmastotaulukot City Airportille ja Kenneth Kaundan kansainväliselle lentoasemalle. Ne kuvaavat eri mittauspaikkoja, ja niiden kuukausiarvot eroavat. Pitkän kauden kuukausikeskiarvo ei ole saapumispäivän ennuste: keskilämpö, päivän keskimääräinen ylin ja yön keskimääräinen alin ovat myös eri suureita. Matkailijan lentoaseman nimi ja mittausaseman nimi voivat siksi johtaa eri taulukoihin saman kaupungin sisällä. Paikka, ajanjakso ja mitattava suure kuuluvat kaikki luvun merkitykseen."
+              }
+            ],
+            "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+            "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+          },
+          "qaReason": "Yleinen säähavaintovälineistö sopii mittauspaikkoja käsittelevään nostoon. Selite ei väitä sitä Lusakan aidoksi asemaksi."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Säämittauksen havainnekuva; ei Lusakan nimetty mittausasema.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lusaka/illustration-qa-extra.json",
+        "fileSHA256": "2c27665ee3e24368834d9433c4e37a42b45d5af9eaff7f0f8a4815a2909c0ac0",
+        "item": {
+          "slot": "L4",
+          "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
+          "assetID": "e07-lusaka-L4-v1-20261012",
+          "sha256": "398720eb51834c56d75bc66de6fde7184864b871eabd743547983ee02bbf6312",
+          "verdict": "accepted",
+          "reason": "Yleinen säähavaintovälineistö sopii mittauspaikkoja käsittelevään nostoon. Selite ei väitä sitä Lusakan aidoksi asemaksi.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lusaka/assets/e07-lusaka-L4-v1-20261012/kuva.png",
+            "nativeSha256Verified": "398720eb51834c56d75bc66de6fde7184864b871eabd743547983ee02bbf6312",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Valkoinen säleikköinen mittauskoppi ja avoin läpinäkyvä keräin jalustalla. Puun, metallin ja veden pinnat uskottavia, ei asteikkotekstiä tai henkilöitä.",
+            "captionFi": "Säämittauksen havainnekuva; ei Lusakan nimetty mittausasema.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lusaka/sisalto.json",
+            "contentSha256": "21f4eb010c31afc76b8f137e649fce7dbcd77707d3a0418635f0cfd81ae84257",
+            "targetCurrentlyPresent": true,
+            "targetText": "Lusakassa on erilliset ilmastotaulukot City Airportille ja Kenneth Kaundan kansainväliselle lentoasemalle. Ne kuvaavat eri mittauspaikkoja, ja niiden kuukausiarvot eroavat. Pitkän kauden kuukausikeskiarvo ei ole saapumispäivän ennuste: keskilämpö, päivän keskimääräinen ylin ja yön keskimääräinen alin ovat myös eri suureita. Matkailijan lentoaseman nimi ja mittausaseman nimi voivat siksi johtaa eri taulukoihin saman kaupungin sisällä. Paikka, ajanjakso ja mitattava suure kuuluvat kaikki luvun merkitykseen.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lusaka/faktapohja.md",
+            "factSheetSha256": "ff5a2ba51da3755e09695f74f6045eda1212fe08ebbd4190ddca114d14508350",
+            "topicEvidence": "L4 erottaa sääasemien mittauspaikat ja ilmastotaulukot.",
+            "sourceEvidence": [
+              {
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lusaka/sisalto.json",
+                "contentSha256": "21f4eb010c31afc76b8f137e649fce7dbcd77707d3a0418635f0cfd81ae84257",
+                "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
+                "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lusaka/faktapohja.md",
+                "evidenceMode": "source-backed text topic; generalized material/food/biological illustration, not exact place appearance",
+                "targetTextAtIssue": "Lusakassa on erilliset ilmastotaulukot City Airportille ja Kenneth Kaundan kansainväliselle lentoasemalle. Ne kuvaavat eri mittauspaikkoja, ja niiden kuukausiarvot eroavat. Pitkän kauden kuukausikeskiarvo ei ole saapumispäivän ennuste: keskilämpö, päivän keskimääräinen ylin ja yön keskimääräinen alin ovat myös eri suureita. Matkailijan lentoaseman nimi ja mittausaseman nimi voivat siksi johtaa eri taulukoihin saman kaupungin sisällä. Paikka, ajanjakso ja mitattava suure kuuluvat kaikki luvun merkitykseen."
+              }
+            ],
+            "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+            "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+          },
+          "reviewedAt": "2026-10-12T18:49:14.664130+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lusaka/qa.json",
+            "sha256": "12d947e165ee2ec42c9a50a863239e7d213c64f260b6da547fc998c5b14b7d2e"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lusaka/illustration-qa-extra.json",
+            "sha256": "2c27665ee3e24368834d9433c4e37a42b45d5af9eaff7f0f8a4815a2909c0ac0"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/lusaka/e07-lusaka-L4-v1-20261012-398720eb5183.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/lusaka/e07-lusaka-L4-v1-20261012-398720eb5183.png?t=243c0d338c906844",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/lusaka/e07-lusaka-L4-v1-20261012-398720eb5183.png",
+        "sha256": "243c0d338c9068446f9fb29411ef2a315792ddca3688bbce63e449d3d5bbe682",
+        "bytes": 2433096,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e07-lusaka-L4-v1-20261012",
+        "nativeSHA256": "398720eb51834c56d75bc66de6fde7184864b871eabd743547983ee02bbf6312",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/lusaka/e07-lusaka-L4-v1-20261012-398720eb5183.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e07",
+        "city": "lusaka",
+        "slot": "L4",
+        "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
+        "verifiedAt": "2026-10-12T18:49:22.491084+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/lusaka/e07-lusaka-L4-v1-20261012-398720eb5183.png",
+        "sha256": "243c0d338c9068446f9fb29411ef2a315792ddca3688bbce63e449d3d5bbe682",
+        "bytes": 2433096,
+        "SHAReadAt": "2026-10-12T19:03:35.079118+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "398720eb51834c56d75bc66de6fde7184864b871eabd743547983ee02bbf6312",
+        "rgbPixelSHA256": "3755cae9b62072efbe92faec225812a48176d2dadd7d74a64f7d336fcebd77cf",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "b1b740a6eb3da1781346a1286ae4f6fc14cbacf7fdcce07bb9db8ab8a4752ec7",
+      "targetAfterSHA256": "2649ad0289b85d5955181172e35cf9c2400c313fff70ad9fa7b159682183a9d7",
+      "contextAfterSHA256": "2649ad0289b85d5955181172e35cf9c2400c313fff70ad9fa7b159682183a9d7"
+    },
+    {
+      "era": "e07",
+      "city": "lusaka",
+      "slot": "PHOTO",
+      "type": "commons",
+      "assetID": "capital-cc-e07-lusaka-photo-5435d99b97dc36d6",
+      "galleryImageID": "capital-cc-e07-lusaka-photo-5435d99b97dc36d6",
+      "commonsFile": "Lusaka Jun 1 2023 001.jpg",
+      "targetJsonPath": "$.valokuva",
+      "targetTokens": [
+        "valokuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e07/lusaka/photo-5435d99b97dc36d60fdc.jpg",
+        "suora": true,
+        "lahde": "Jae zambia, Commons (CC BY-SA 4.0)",
+        "selite": "Kukka kuvattuna Lusakassa.",
+        "lyhyt": "Kukka kuvattuna Lusakassa.",
+        "tiedosto": "Lusaka Jun 1 2023 001.jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Jae zambia, Commons (CC BY-SA 4.0)",
+        "selite": "Kukka kuvattuna Lusakassa.",
+        "lyhyt": "Kukka kuvattuna Lusakassa.",
+        "tiedosto": "Lusaka Jun 1 2023 001.jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e07/lusaka/photo-5435d99b97dc36d60fdc.jpg",
+        "suora": true,
+        "lahde": "Jae zambia, Commons (CC BY-SA 4.0)",
+        "selite": "Kukka kuvattuna Lusakassa.",
+        "lyhyt": "Kukka kuvattuna Lusakassa.",
+        "tiedosto": "Lusaka Jun 1 2023 001.jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "5435d99b97dc36d60fdccd5dd048a966f0a529d3f626859cc9c46d0c90acacb3",
+      "exportSHA256": "5435d99b97dc36d60fdccd5dd048a966f0a529d3f626859cc9c46d0c90acacb3",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e07/lusaka/photo-5435d99b97dc36d60fdc.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e07/lusaka/photo-5435d99b97dc36d60fdc.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/commons-originals/e07/lusaka/5a64209962a0d1137d149afa37f5732ab77afff0ea0bc9945ed85db2b3590f96.jpg",
+      "dimensions": [
+        4032,
+        2268
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lusaka/sisalto.json",
+      "sourceContentSHA256": "b1b740a6eb3da1781346a1286ae4f6fc14cbacf7fdcce07bb9db8ab8a4752ec7",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "36bd9afa9477fc13c8ff505c3822f88db2990cc2d390a45b6e3789677d46e380",
+        "semanticContextSHA256": "36bd9afa9477fc13c8ff505c3822f88db2990cc2d390a45b6e3789677d46e380",
+        "subjectTitle": "lusaka — aito paikkavalokuva",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Jae zambia",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Lusaka_Jun_1_2023_001.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/b/bd/Lusaka_Jun_1_2023_001.jpg",
+        "rightsEvidence": {
+          "selection": [
+            "Kuvan Author/Artist-kenttä ja valokuvan oma lisenssimalli tarkistettu tallennetusta Commons-lähteestä; upload-historian nimeä ei käytetä tekijänä. Lisenssiversion linkki on valokuvan lisenssiosassa, ei Commons-sivun yleinen alatunnistelupa.",
+            "Luonnonkasvi, ei suojattua teosta. Kuvaajan itse toimittama tiedostonimi Lusaka Jun1 2023 001, Author Jae zambia ja Own work ovat alkuperäisen kuvaajan paikkaväite; ei nimetä tarkkaa puutarhaa tai kokoelmaa. CC BY-SA 4.0 vahvistettu.",
+            "Silmin katsottu alkuperäinen: Todellinen kasvin lähikuva, terälehtiä ja vesipisaroita; ei ihmisiä, rakennuksia, teoksia, lisättyä tekstiä, logoa, vesileimaa tai kehystä. Lajia ei arvata kuvan perusteella."
+          ],
+          "QA": {
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Lusaka_Jun_1_2023_001.jpg",
+            "savedSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/32c453b74185483c1fea4d9e03bd2ac45fdf0193a1b1e67f1f7b19ca1c7e391e.html",
+            "sourceSHA256": "4d102183f6336b9e1318bd2a7194573c019d528bce768ff63c30a61ee0dacb0a",
+            "directAuthors": [
+              "Jae zambia"
+            ],
+            "directLicenses": [
+              "CC BY-SA 4.0"
+            ],
+            "directRows": {
+              "Date": "20 January 2023, 18:44:02"
+            },
+            "sourceOriginalDimensions": [
+              4032,
+              2268
+            ],
+            "localDimensions": [
+              4032,
+              2268
+            ],
+            "mediaPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lusaka/cc-evidence/meta-05.jpg",
+            "mediaSHA256": "5435d99b97dc36d60fdccd5dd048a966f0a529d3f626859cc9c46d0c90acacb3",
+            "authorMatches": true,
+            "licenseMatches": true,
+            "dimensionsMatch": true,
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "fullImageViewed": true,
+            "captionFi": "Kukka kuvattuna Lusakassa.",
+            "placeEvidence": {
+              "specificOriginalTitle": "Lusaka Jun 1 2023 001.jpg",
+              "sourceCityCategory": "Lusaka / Aerial photographs of Lusaka",
+              "ownWorkAuthor": "Jae zambia",
+              "scope": "city/locality claim from original photographer metadata, no inferred exact venue/ward boundary"
+            },
+            "captureDateUncertainty": {
+              "sourceDate": "20 January 2023",
+              "fileTitleDate": "1 June 2023",
+              "safeYear": 2023,
+              "exactDayVerified": false
+            },
+            "currentContentSHA256": "21f4eb010c31afc76b8f137e649fce7dbcd77707d3a0418635f0cfd81ae84257",
+            "targetStillExists": true
+          },
+          "qaReason": "Aito kukkamakro, luonnolliset terälehdet, pisarat ja tumma kasvillisuustausta; ei kasvoja, taideteosta, tekstiä tai logoa. Alkuperäisen kuvaajan Own work -julkaisun nimi Lusaka ja sama City-kategoria muodostavat paikkaväitteen, ei tunnistamatonta maan nimeä. Jae zambia, CC BY-SA 4.0 ja native 4032×2268 varmennettu. Lajia tai tarkkaa puutarhaa ei arvata. Kuvauspäivässä Source Date 20.1.2023 vs tiedostonimi 1.6.2023: caption ei ilmoita päivää, täsmäpäivä jää epävarmaksi ja mahdollisessa vuoden esityksessä vain 2023."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Kukka kuvattuna Lusakassa.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lusaka/qa.json",
+        "fileSHA256": "12d947e165ee2ec42c9a50a863239e7d213c64f260b6da547fc998c5b14b7d2e",
+        "item": {
+          "slot": "PHOTO",
+          "targetJsonPath": "$.valokuva",
+          "verdict": "accepted",
+          "reason": "Aito kukkamakro, luonnolliset terälehdet, pisarat ja tumma kasvillisuustausta; ei kasvoja, taideteosta, tekstiä tai logoa. Alkuperäisen kuvaajan Own work -julkaisun nimi Lusaka ja sama City-kategoria muodostavat paikkaväitteen, ei tunnistamatonta maan nimeä. Jae zambia, CC BY-SA 4.0 ja native 4032×2268 varmennettu. Lajia tai tarkkaa puutarhaa ei arvata. Kuvauspäivässä Source Date 20.1.2023 vs tiedostonimi 1.6.2023: caption ei ilmoita päivää, täsmäpäivä jää epävarmaksi ja mahdollisessa vuoden esityksessä vain 2023.",
+          "evidence": {
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Lusaka_Jun_1_2023_001.jpg",
+            "savedSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/32c453b74185483c1fea4d9e03bd2ac45fdf0193a1b1e67f1f7b19ca1c7e391e.html",
+            "sourceSHA256": "4d102183f6336b9e1318bd2a7194573c019d528bce768ff63c30a61ee0dacb0a",
+            "directAuthors": [
+              "Jae zambia"
+            ],
+            "directLicenses": [
+              "CC BY-SA 4.0"
+            ],
+            "directRows": {
+              "Date": "20 January 2023, 18:44:02"
+            },
+            "sourceOriginalDimensions": [
+              4032,
+              2268
+            ],
+            "localDimensions": [
+              4032,
+              2268
+            ],
+            "mediaPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lusaka/cc-evidence/meta-05.jpg",
+            "mediaSHA256": "5435d99b97dc36d60fdccd5dd048a966f0a529d3f626859cc9c46d0c90acacb3",
+            "authorMatches": true,
+            "licenseMatches": true,
+            "dimensionsMatch": true,
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "fullImageViewed": true,
+            "captionFi": "Kukka kuvattuna Lusakassa.",
+            "placeEvidence": {
+              "specificOriginalTitle": "Lusaka Jun 1 2023 001.jpg",
+              "sourceCityCategory": "Lusaka / Aerial photographs of Lusaka",
+              "ownWorkAuthor": "Jae zambia",
+              "scope": "city/locality claim from original photographer metadata, no inferred exact venue/ward boundary"
+            },
+            "captureDateUncertainty": {
+              "sourceDate": "20 January 2023",
+              "fileTitleDate": "1 June 2023",
+              "safeYear": 2023,
+              "exactDayVerified": false
+            },
+            "currentContentSHA256": "21f4eb010c31afc76b8f137e649fce7dbcd77707d3a0418635f0cfd81ae84257",
+            "targetStillExists": true
+          },
+          "reviewedAt": "2026-10-12T19:10:40.434061+00:00",
+          "commonsFile": "Lusaka Jun 1 2023 001.jpg",
+          "sha256": "5435d99b97dc36d60fdccd5dd048a966f0a529d3f626859cc9c46d0c90acacb3"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lusaka/qa.json",
+            "sha256": "12d947e165ee2ec42c9a50a863239e7d213c64f260b6da547fc998c5b14b7d2e"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lusaka/illustration-qa-extra.json",
+            "sha256": "2c27665ee3e24368834d9433c4e37a42b45d5af9eaff7f0f8a4815a2909c0ac0"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e07",
+        "city": "lusaka",
+        "slot": "PHOTO",
+        "targetJsonPath": "$.valokuva",
+        "commonsFile": "Lusaka Jun 1 2023 001.jpg",
+        "sha256": "5435d99b97dc36d60fdccd5dd048a966f0a529d3f626859cc9c46d0c90acacb3",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Lusaka_Jun_1_2023_001.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/b/bd/Lusaka_Jun_1_2023_001.jpg",
+        "author": "Jae zambia",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "width": 4032,
+        "height": 2268,
+        "originalSHA256": "5435d99b97dc36d60fdccd5dd048a966f0a529d3f626859cc9c46d0c90acacb3",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e07/lusaka/photo-5435d99b97dc36d60fdc.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e07/lusaka/photo-5435d99b97dc36d60fdc.jpg",
+        "bytes": 1863803,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T19:11:10.248433+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "Lusaka Jun 1 2023 001.jpg",
+        "lahde": "Jae zambia, Commons (CC BY-SA 4.0)",
+        "selite": "Kukka kuvattuna Lusakassa.",
+        "lyhyt": "Kukka kuvattuna Lusakassa."
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Jae zambia, Commons (CC BY-SA 4.0)",
+        "selite": "Kukka kuvattuna Lusakassa.",
+        "lyhyt": "Kukka kuvattuna Lusakassa.",
+        "tiedosto": "Lusaka Jun 1 2023 001.jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "b1b740a6eb3da1781346a1286ae4f6fc14cbacf7fdcce07bb9db8ab8a4752ec7",
+      "targetAfterSHA256": "36bd9afa9477fc13c8ff505c3822f88db2990cc2d390a45b6e3789677d46e380",
+      "contextAfterSHA256": "36bd9afa9477fc13c8ff505c3822f88db2990cc2d390a45b6e3789677d46e380"
+    },
+    {
+      "era": "e07",
+      "city": "lusaka",
+      "slot": "C1",
+      "type": "commons",
+      "assetID": "capital-cc-e07-lusaka-c1-4e1ab8e51d3ef69b",
+      "galleryImageID": "capital-cc-e07-lusaka-c1-4e1ab8e51d3ef69b",
+      "commonsFile": "Taking off from bauleni.jpg",
+      "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "kansikuvat",
+        0
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e07/lusaka/c1-4e1ab8e51d3ef69bffec.jpg",
+        "suora": true,
+        "lahde": "Joseph Manase, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Ilmakuva Baulenin alueelta Lusakassa.",
+        "lyhyt": "Ilmakuva Baulenin alueelta Lusakassa.",
+        "tiedosto": "Taking off from bauleni.jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Joseph Manase, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Ilmakuva Baulenin alueelta Lusakassa.",
+        "lyhyt": "Ilmakuva Baulenin alueelta Lusakassa.",
+        "tiedosto": "Taking off from bauleni.jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e07/lusaka/c1-4e1ab8e51d3ef69bffec.jpg",
+        "suora": true,
+        "lahde": "Joseph Manase, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Ilmakuva Baulenin alueelta Lusakassa.",
+        "lyhyt": "Ilmakuva Baulenin alueelta Lusakassa.",
+        "tiedosto": "Taking off from bauleni.jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "4e1ab8e51d3ef69bffec18754e670c021cb50eee85a63e637adf8899fadba467",
+      "exportSHA256": "4e1ab8e51d3ef69bffec18754e670c021cb50eee85a63e637adf8899fadba467",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e07/lusaka/c1-4e1ab8e51d3ef69bffec.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e07/lusaka/c1-4e1ab8e51d3ef69bffec.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/commons-originals/e07/lusaka/fe10d86943a8a740085ce9c0d6ff74866ffc17bc0b50da9b9ce032c561d71e16.jpg",
+      "dimensions": [
+        8000,
+        6000
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lusaka/sisalto.json",
+      "sourceContentSHA256": "b1b740a6eb3da1781346a1286ae4f6fc14cbacf7fdcce07bb9db8ab8a4752ec7",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "07f789dac06ff1ce84d28474073535b0958783d643d8a82e5ad1160261722be4",
+        "semanticContextSHA256": "07f789dac06ff1ce84d28474073535b0958783d643d8a82e5ad1160261722be4",
+        "subjectTitle": "Lusaka",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Joseph Manase",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Taking_off_from_bauleni.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/3/31/Taking_off_from_bauleni.jpg",
+        "rightsEvidence": {
+          "selection": [
+            "Kuvan Author/Artist-kenttä ja valokuvan oma lisenssimalli tarkistettu tallennetusta Commons-lähteestä; upload-historian nimeä ei käytetä tekijänä. Lisenssiversion linkki on valokuvan lisenssiosassa, ei Commons-sivun yleinen alatunnistelupa.",
+            "Pääaihe on laaja maantieteellinen kaupunkinäkymä, yksittäinen teos ei erotu pääaiheeksi. Tekijän Own work/Author Joseph Manase, alkuperäinen nimi Taking off from bauleni ja Commonsin Lusaka-aluekonteksti; Bauleni-kaupunginosan suhde Lusakaan tarkennettava QA:ssa tarvittaessa, ei rakennuksen nimellä tehtyä teosvapautusta.",
+            "Silmin katsottu alkuperäinen: Laaja todellinen ilmavalokuva kaupunkialueesta, viljely-/avotiloista ja puustosta. Ei kasvoja, yksilöityä modernia suojattua rakennuspääaihetta, lisättyä tekstiä, logoa tai kehystä. Kuvausikkunan reuna pieni luonnollinen osa kuvaa, ei lisätty kehys."
+          ],
+          "QA": {
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Taking_off_from_bauleni.jpg",
+            "savedSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/cc2545e755761f13571ac7fabe508afde873fef5cd5bfa0039af5508d2b0a681.html",
+            "sourceSHA256": "bc43301168f638869518f6b202ab35a0bce34b9dd359e6a00ca9e270b7b9f201",
+            "directAuthors": [
+              "Joseph Manase"
+            ],
+            "directLicenses": [
+              "CC BY-SA 4.0"
+            ],
+            "directRows": {
+              "Date": "22 January 2022 (according to Exif data)",
+              "Camera location": "15° 23′ 33.76″ S, 28° 24′ 32.32″ E"
+            },
+            "sourceOriginalDimensions": [
+              8000,
+              6000
+            ],
+            "localDimensions": [
+              8000,
+              6000
+            ],
+            "mediaPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lusaka/cc-evidence/meta-01.jpg",
+            "mediaSHA256": "4e1ab8e51d3ef69bffec18754e670c021cb50eee85a63e637adf8899fadba467",
+            "authorMatches": true,
+            "licenseMatches": true,
+            "dimensionsMatch": true,
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "fullImageViewed": true,
+            "captionFi": "Ilmakuva Baulenin alueelta Lusakassa.",
+            "placeEvidence": {
+              "specificOriginalTitle": "Taking off from bauleni.jpg",
+              "sourceCityCategory": "Lusaka / Aerial photographs of Lusaka",
+              "ownWorkAuthor": "Joseph Manase",
+              "scope": "city/locality claim from original photographer metadata, no inferred exact venue/ward boundary"
+            },
+            "currentContentSHA256": "21f4eb010c31afc76b8f137e649fce7dbcd77707d3a0418635f0cfd81ae84257",
+            "targetStillExists": true
+          },
+          "qaReason": "Aito laaja ilmavalokuva asutuksesta, puustosta, avotiloista ja tieverkosta, tavallinen pieni kuvausikkunan reuna. Ei kasvoja, lisättyä kehystä tai yksittäistä modernia teosta pääaiheena. Original Own work / Taking off from bauleni ja Aerial photographs of Lusaka -luokitus sekä kamerakoordinaatti sitovat kuvan Lusakan kaupunkiseutuun. Joseph Manase / CC BY-SA 4.0 ja native 8000×6000 varmennettu. Hyväksyntä yleiseen Lusaka-asetteluun; ei tästä johdettua tarkkaa kadun tai hallintoalueen rajaa."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Ilmakuva Baulenin alueelta Lusakassa.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lusaka/qa.json",
+        "fileSHA256": "12d947e165ee2ec42c9a50a863239e7d213c64f260b6da547fc998c5b14b7d2e",
+        "item": {
+          "slot": "C1",
+          "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
+          "verdict": "accepted",
+          "reason": "Aito laaja ilmavalokuva asutuksesta, puustosta, avotiloista ja tieverkosta, tavallinen pieni kuvausikkunan reuna. Ei kasvoja, lisättyä kehystä tai yksittäistä modernia teosta pääaiheena. Original Own work / Taking off from bauleni ja Aerial photographs of Lusaka -luokitus sekä kamerakoordinaatti sitovat kuvan Lusakan kaupunkiseutuun. Joseph Manase / CC BY-SA 4.0 ja native 8000×6000 varmennettu. Hyväksyntä yleiseen Lusaka-asetteluun; ei tästä johdettua tarkkaa kadun tai hallintoalueen rajaa.",
+          "evidence": {
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Taking_off_from_bauleni.jpg",
+            "savedSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/cc2545e755761f13571ac7fabe508afde873fef5cd5bfa0039af5508d2b0a681.html",
+            "sourceSHA256": "bc43301168f638869518f6b202ab35a0bce34b9dd359e6a00ca9e270b7b9f201",
+            "directAuthors": [
+              "Joseph Manase"
+            ],
+            "directLicenses": [
+              "CC BY-SA 4.0"
+            ],
+            "directRows": {
+              "Date": "22 January 2022 (according to Exif data)",
+              "Camera location": "15° 23′ 33.76″ S, 28° 24′ 32.32″ E"
+            },
+            "sourceOriginalDimensions": [
+              8000,
+              6000
+            ],
+            "localDimensions": [
+              8000,
+              6000
+            ],
+            "mediaPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lusaka/cc-evidence/meta-01.jpg",
+            "mediaSHA256": "4e1ab8e51d3ef69bffec18754e670c021cb50eee85a63e637adf8899fadba467",
+            "authorMatches": true,
+            "licenseMatches": true,
+            "dimensionsMatch": true,
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "fullImageViewed": true,
+            "captionFi": "Ilmakuva Baulenin alueelta Lusakassa.",
+            "placeEvidence": {
+              "specificOriginalTitle": "Taking off from bauleni.jpg",
+              "sourceCityCategory": "Lusaka / Aerial photographs of Lusaka",
+              "ownWorkAuthor": "Joseph Manase",
+              "scope": "city/locality claim from original photographer metadata, no inferred exact venue/ward boundary"
+            },
+            "currentContentSHA256": "21f4eb010c31afc76b8f137e649fce7dbcd77707d3a0418635f0cfd81ae84257",
+            "targetStillExists": true
+          },
+          "reviewedAt": "2026-10-12T19:10:40.551280+00:00",
+          "commonsFile": "Taking off from bauleni.jpg",
+          "sha256": "4e1ab8e51d3ef69bffec18754e670c021cb50eee85a63e637adf8899fadba467"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lusaka/qa.json",
+            "sha256": "12d947e165ee2ec42c9a50a863239e7d213c64f260b6da547fc998c5b14b7d2e"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lusaka/illustration-qa-extra.json",
+            "sha256": "2c27665ee3e24368834d9433c4e37a42b45d5af9eaff7f0f8a4815a2909c0ac0"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e07",
+        "city": "lusaka",
+        "slot": "C1",
+        "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
+        "commonsFile": "Taking off from bauleni.jpg",
+        "sha256": "4e1ab8e51d3ef69bffec18754e670c021cb50eee85a63e637adf8899fadba467",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Taking_off_from_bauleni.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/3/31/Taking_off_from_bauleni.jpg",
+        "author": "Joseph Manase",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "width": 8000,
+        "height": 6000,
+        "originalSHA256": "4e1ab8e51d3ef69bffec18754e670c021cb50eee85a63e637adf8899fadba467",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e07/lusaka/c1-4e1ab8e51d3ef69bffec.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e07/lusaka/c1-4e1ab8e51d3ef69bffec.jpg",
+        "bytes": 16833665,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T19:11:12.924471+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "Taking off from bauleni.jpg",
+        "lahde": "Joseph Manase, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Ilmakuva Baulenin alueelta Lusakassa.",
+        "lyhyt": "Ilmakuva Baulenin alueelta Lusakassa."
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Joseph Manase, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Ilmakuva Baulenin alueelta Lusakassa.",
+        "lyhyt": "Ilmakuva Baulenin alueelta Lusakassa.",
+        "tiedosto": "Taking off from bauleni.jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "b1b740a6eb3da1781346a1286ae4f6fc14cbacf7fdcce07bb9db8ab8a4752ec7",
+      "targetAfterSHA256": "07f789dac06ff1ce84d28474073535b0958783d643d8a82e5ad1160261722be4",
+      "contextAfterSHA256": "07f789dac06ff1ce84d28474073535b0958783d643d8a82e5ad1160261722be4"
+    }
+  ],
+  "runtimeIntegrationPending": true,
+  "ownerAcceptedNotImpliedByAuthorization": true,
+  "gameIntegrated": false
+}
