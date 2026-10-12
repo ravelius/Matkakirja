@@ -27,5 +27,7 @@ Ajoskriptit tämän session scratchpadissa: /private/tmp/claude-502/-Users-Share
 - **Intron sävy** c0e04260c + 4c596c7d0 (intro-vinkki-183): 8 paria PT:llä kuittauksessa
   (lokit/natiivi-ui-intro-savy4-20261012/, NYKYINEN 2127c0097 = 0fae4495f). Kuittauksen jälkeen SHA Natiivisepälle.
 - **Metro vapaassa lennossa** ef1bc2818 (metro-vapaa-183): simuajo OK iPhone + iPad (todistus-metro-*-20261012-1209),
-  PT:llä kuittauksessa. Paluun valmistuminen testissä = "opas: saapui" (LS1).
+  PT:llä kuittauksessa. Paluun valmistuminen testissä = "opas: saapui" (LS1). Kun metro yhdistetään LS1:n
+  184-haaraan linssiseppa/katso2-yhd-184 (53d2f08cc), EtsintaKaynnissa-määrittely pidetään VAIN OpasSovitin.Etsinta.cs:ssä
+  (183:n aina-false-versio pois); VapaaKohteeseen palauttaa siellä false etsinnän aikana.
 - **184**: varivakiot 2c2054d8a + web #4482; museo-nyt-184 b2599db7f; Pelikoodarin säädin-paperi 028764614.
