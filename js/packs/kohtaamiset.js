@@ -2142,7 +2142,7 @@ export const KOHTAAMISET = {
     frame: 'Rita avaa lippukopin luukun ja kysyy',
     tervehdys: 'Rita nojaa lippukoppiin vanhan oopperatalon paikalla: '
       + '"Isoisäsi käyntivuonna talo oli juuri palanut sisältä '
-      + 'tyhjäksi — se pysyi kiinni lähes viisi vuotta. Näytä että '
+      + 'tyhjäksi — se pysyi kiinni yli neljä vuotta. Näytä että '
       + 'tunnet maailmaa kuten piirtäjä — niin kerron, mistä liekit '
       + 'silloin lähtivät."',
     tervehdysLuenta: [
@@ -2150,7 +2150,7 @@ export const KOHTAAMISET = {
         + 'oopperatalon paikalla:' },
       { rooli: 'hahmo', teksti: '[curious] "Isoisäsi käyntivuonna '
         + 'talo oli juuri palanut sisältä tyhjäksi — se pysyi kiinni '
-        + 'lähes viisi vuotta. [warmly] Näytä että tunnet maailmaa '
+        + 'yli neljä vuotta. [warmly] Näytä että tunnet maailmaa '
         + 'kuten piirtäjä — niin kerron, mistä liekit silloin '
         + 'lähtivät."' },
     ],
