@@ -378,20 +378,20 @@
       "maa": "RUS",
       "hahmo": "Sellisti Polina",
       "saapumispiste": {
-        "nimi": "Palatsisilta, Nevan rannalla (Polinan siltojen aukeamisaikataulun paikka)",
-        "lat": 59.9411,
-        "lon": 30.3081
+        "nimi": "Vitebskin asema (kaanon: kohtaamispaikka vaihtui 12.9.)",
+        "lat": 59.920278,
+        "lon": 30.329444
       },
       "a": {
         "laji": "etsi_kartalta",
         "palkkio": 25,
         "muistomerkki": false,
-        "vihjelause": "Odotan siltojen aukeamista ja katson kaupunkia. Nevski-prospektin varrella pitkä pylväikkö avautuu kadulle; kirkon esikuva oli Rooman Pietarinkirkko. Etsi se.",
+        "vihjelause": "Odotan junaa Vitebskin asemalla ja mietin kaupungin kauneinta kirkkoa. Nevski-prospektin varrella pitkä pylväikkö avautuu kadulle; kirkon esikuva oli Rooman Pietarinkirkko. Etsi se.",
         "kohde": {
           "nimi": "Kazanin katedraali",
           "lat": 59.9343,
           "lon": 30.3245,
-          "etaisyys_saapumispisteesta_m": 1186
+          "etaisyys_saapumispisteesta_m": 1583
         },
         "vihje_vaarin": "Ei se. Kulje Nevski-prospektia pitkin ja etsi kirkko, jonka pitkä pylväikkö avautuu kadulle. Se valmistui 1811.",
         "tiesitko": "Kirkko rakennettiin 1801–1811 arkkitehti Andrei Voronikhinin piirustusten mukaan, ja sen esikuvana oli Pyhän Pietarin kirkko Roomassa."
@@ -610,7 +610,7 @@
       "kaupunki": "pietari",
       "vihjeet": [
         "Venäjällä pääsiäisenä tervehditään: Kristus nousi kuolleista. Munat keitetään sipulinkuorissa punaruskeiksi. Mietin, millainen muna olisi kultaa ja jalokiviä.",
-        "Kultasepän oppipoika kuiskasi: hovissa suunnitellaan pääsiäislahjaa, pientä esinettä, jonka sisään kätketään toinen. Sellaiset voivat joskus kadota.",
+        "Kultasepän oppipoika kuiskasi: keisarinnalle suunnitellaan lahjaa, pientä esinettä, jonka sisään kätketään toinen. Sellaiset voivat joskus kadota.",
         "Etsi jälki Pietarista: Fabergén kultasepänliike on toiminut siellä vuodesta 1842."
       ]
     },
