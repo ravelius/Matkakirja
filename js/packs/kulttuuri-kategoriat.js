@@ -5732,11 +5732,11 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           ampari: 'herokoe/hero-tukholma-ilta.png',
-          lyhyt: 'Riddarholmenin kirkko, Ruotsin kuninkaiden hautakirkko, sai valurautaisen pitsitornin 1846.',
+          lyhyt: 'Riddarholmenin kirkko, Ruotsin kuninkaiden hautakirkko, sai valurautaisen pitsitornin 1838–1840.',
           selite: 'Riddarholmenin kirkko on Tukholman vanhimpia '
             + 'rakennuksia ja Ruotsin kuninkaiden hautakirkko '
             + '1600-luvulta asti — sen valurautainen pitsitorni nousi '
-            + 'tulipalon jälkeen 1846.',
+            + '1835 tuhoutuneen tornin tilalle 1838–1840.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
