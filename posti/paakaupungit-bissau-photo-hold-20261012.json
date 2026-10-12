@@ -1,0 +1,213 @@
+{
+  "updatedAt": "2026-10-12T21:23:04.357167+00:00",
+  "status": "active-exact-version-hold",
+  "era": "e04",
+  "city": "bissau",
+  "slot": "PHOTO",
+  "targetJsonPath": "$.valokuva",
+  "targetTokens": [
+    "valokuva"
+  ],
+  "assetID": "capital-cc-e04-bissau-photo-daeed063f12e98b7",
+  "producerAssetID": null,
+  "commonsFile": "Bissau (19362097179).jpg",
+  "nativeSHA256": "daeed063f12e98b7379934b8351f092644d3431ab716adf50cb9c20f4df372c8",
+  "exportSHA256": "daeed063f12e98b7379934b8351f092644d3431ab716adf50cb9c20f4df372c8",
+  "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/bissau/photo-daeed063f12e98b73799.jpg",
+  "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/bissau/photo-daeed063f12e98b73799.jpg",
+  "sourceBranch": "paakaupungit-e04-codex",
+  "sourceCommit": "02a5f093c0a7497eb32614ad4be44f92a58b4f93",
+  "sourceContentAfterSHA256": "048d429b138863c1d51150d22d37d24fee0a387cf28b42adec4ddff5fc1e02c5",
+  "targetAfterSHA256": "553176f995cc25c60813fb159a06cfc638ddba1b23afa36c8bea2c386f3b16ea",
+  "contextAfterSHA256": "553176f995cc25c60813fb159a06cfc638ddba1b23afa36c8bea2c386f3b16ea",
+  "priorMediaFields": {
+    "tiedosto": "Bissau (19362097179).jpg",
+    "lahde": "Barnabe Freixo, Commons (CC BY 2.0)",
+    "selite": "Bissaun talon seinustalla kuivuva pyykki kuuluu arkiseen katutilaan vuoden 2015 valokuvassa.",
+    "lyhyt": "Pyykkinaru kuuluu Bissaun katutilaan vuonna 2015.",
+    "vuosi": "2015"
+  },
+  "priorMediaStillNamesHeldFile": true,
+  "reason": "Alkuperäisen valokuvan visuaalinen laatu, Bissau/2015-selite ja kuvaajan Barnabe Freixon CC BY2.0 -lisenssitodiste täyttyvät. Natiivikuvassa keskellä ovessa on kuitenkin tekstijuliste, jossa on erillinen painettu ihmisfiguurin kuvitus. Aiempi preview-QA väitti ettei kuvajulistetta näy. Tallennetut todisteet eivät yksilöi tämän kuvituksen tekijää, lisenssiä tai tähän käyttöön soveltuvaa erillistä oikeusperustetta. Tavallinen luonnollinen teksti ei ole hylkäysperuste; ratkaisematon kuvallinen oikeuskerros estää tämän täydentävän hyväksynnän.",
+  "QAPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/capital-native-qa/e04-bissau-PHOTO.json",
+  "QAFileSHA256": "931e667b803c6e8b397c546b03cd839fc7818ace7760a6370f4ec3986ac787ac",
+  "fullNativeQA": {
+    "era": "e04",
+    "city": "bissau",
+    "slot": "PHOTO",
+    "targetJsonPath": "$.valokuva",
+    "commonsFile": "Bissau (19362097179).jpg",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:Bissau_(19362097179).jpg",
+    "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/commons-originals/e04/bissau/892f170dfebf3c93a947fb419d8b52b3e049ccef5ce1ae3dbce282b75a557d72.org&utm_campaign=index&utm_content=original",
+    "sha256": "daeed063f12e98b7379934b8351f092644d3431ab716adf50cb9c20f4df372c8",
+    "actualOriginalSHA256": "daeed063f12e98b7379934b8351f092644d3431ab716adf50cb9c20f4df372c8",
+    "originalSHA256": "daeed063f12e98b7379934b8351f092644d3431ab716adf50cb9c20f4df372c8",
+    "originalPixelsViewed": true,
+    "fullFrameInspected": true,
+    "nativeDetailsInspected": true,
+    "verdict": "rejected",
+    "reason": "Alkuperäisen valokuvan visuaalinen laatu, Bissau/2015-selite ja kuvaajan Barnabe Freixon CC BY2.0 -lisenssitodiste täyttyvät. Natiivikuvassa keskellä ovessa on kuitenkin tekstijuliste, jossa on erillinen painettu ihmisfiguurin kuvitus. Aiempi preview-QA väitti ettei kuvajulistetta näy. Tallennetut todisteet eivät yksilöi tämän kuvituksen tekijää, lisenssiä tai tähän käyttöön soveltuvaa erillistä oikeusperustetta. Tavallinen luonnollinen teksti ei ole hylkäysperuste; ratkaisematon kuvallinen oikeuskerros estää tämän täydentävän hyväksynnän.",
+    "observations": [
+      "Alkuperäinen JPEG avattu suoraan nasPath-polusta; SHA256 ja Commons-snapshotin SHA1 täsmäävät alkuperäistavuihin. Esikatselun aiempaa visualSHA256-arviota ei siirretty alkuperäisen katselutodisteeksi.",
+      "Koko kehys esittää pyykkinarua, puita ja tavallisen matalan rappaus-/peltikattotalon taustaa. Ei tunnistettavia eläviä kasvoja, ihmisruumiita, veistosta, seinämaalausta tai nimettyä nykyarkkitehtuurin maamerkkiä. Rakennuksen public domain -asemaa ei päätellä pinnan kulumisesta.",
+      "Ovessa näkyvä pieni juliste sisältää tekstirivejä ja ihmisfiguurin kaltaisen painetun kuvituksen. Teksti ja kuvitus ovat olemassa olevan paikkavalokuvan luonnollisia yksityiskohtia, eivät lisätty vesileima. Kuvituksen tekijä ei ole tunnistettavissa tallennetuista lähteistä.",
+      "Pyykkien saumat, vyötäröraidoitus ja pieni kangaslappu tarkastettu natiivisti. Ei luettavaa tuotemerkkiä tai tunnistettavaa logoa. Tavallista kuvassa olevaa tekstiä tai geneeristä vaatteen kuosia ei käytetä itsenäisenä hylkäyksenä.",
+      "Natiivirajaukset puunkuoresta, lehdistä, ikkunoista, talon seinästä ja pyykeistä ovat luonnollisia. Mustavalkoinen kuva on teknisesti käyttökelpoinen; voimakkaat luonnonvalon kirkkaat kohdat ja tummat varjot kuuluvat alkuperäisen valokuvan ilmeeseen.",
+      "Kuvatekstin Bissau ja vuosi2015 vastaavat Commons-snapshotin Description/Date-kenttiä ja alkuperäisen EXIF-kuvausaikaa. Tarkkaa katua tai rakennuksen nimeä ei väitetä.",
+      "Erillinen Bissaun unresolved-oikeusmuistio koskee K1/L1-kuvia, ei tätä PHOTO-kuvaa tai ovijulistetta. Sen lain voimaantuloa koskevia epävarmuuksia ei käytetä koko maan blanket-hylkäyksenä."
+    ],
+    "checks": {
+      "originalIdentityPass": true,
+      "photoLicenseEvidencePass": true,
+      "locationCaptionPass": true,
+      "dateCaptionPass": true,
+      "identifiableFacesAbsent": true,
+      "qualityPass": true,
+      "separateDepictedWorkRightsEvidenceComplete": false,
+      "ordinaryTextAloneRejected": false
+    },
+    "originalTechnicalEvidence": {
+      "format": "JPEG",
+      "mode": "RGB",
+      "dimensions": [
+        5184,
+        3456
+      ],
+      "bytes": 7520281,
+      "actualSHA1": "ccf05346658a42dc25c10a512b4a146583c25144",
+      "commonsRecordedSHA1": "ccf05346658a42dc25c10a512b4a146583c25144",
+      "matchesCommonsRecordedSHA1": true,
+      "exifOrientation": 1,
+      "captureTimeEXIF": "2015:05:24 14:49:41",
+      "cameraModel": "Canon EOS7D",
+      "originalPixelsAltered": false
+    },
+    "evidence": {
+      "roleAssetHandoffPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/role-asset-handoff.json",
+      "roleAssetHandoffSHA256": "9f38d3cd44fcbed6743314959a0f96c51adef2ddf914df94d22536d70bd25fa3",
+      "currentContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/bissau/sisalto.json",
+      "currentContentSHA256": "048d429b138863c1d51150d22d37d24fee0a387cf28b42adec4ddff5fc1e02c5",
+      "currentTargetContent": {
+        "tiedosto": "Bissau (19362097179).jpg",
+        "lyhyt": "Pyykkinaru kuuluu Bissaun katutilaan vuonna 2015.",
+        "selite": "Bissaun talon seinustalla kuivuva pyykki kuuluu arkiseen katutilaan vuoden 2015 valokuvassa.",
+        "lahde": "Barnabe Freixo, Commons (CC BY 2.0)",
+        "vuosi": "2015"
+      },
+      "previousQaPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/bissau/qa.json",
+      "previousQaSHA256": "92a23f6feb4d750c950b6b86970d03b3fa17b29c393ec3a1b4be39c494984fbf",
+      "previousPreviewPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/bissau-B/preview-03.jpg",
+      "previousPreviewSHA256": "7d8436a284200baa819d695d9e48045281a63334035474d0b1c24ad146938c23",
+      "sourceHTML": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/bissau-B/candidate-03.html",
+      "sourceSHA256": "fe910212d904c169488134cd753d70af49764837d8eace8f8fae43f49b7ec17a",
+      "sourceFactsRead": {
+        "description": "Bissau town, Guiné-Bissau, Africa",
+        "author": "Barnabe Freixo",
+        "license": "CC BY2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+        "dateOnSourcePage": "24 May2015,14:49",
+        "flickrSource": "https://flickr.com/photos/134612494@N06/19362097179",
+        "flickrLicenseReview": "FlickreviewR2,24June2018,cc-by-2.0 confirmed",
+        "attributionRequirement": "Credit Barnabe Freixo, link CC BY2.0, indicate any publication modifications; reviewer did not alter original pixels."
+      },
+      "separateRightsEvidence": [
+        {
+          "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/rights-support/afrikka/afrikka-rights-bissau.json",
+          "sha256": "0816891986bb2d08db5124dfad34933eb33b9f8a5f888d6101ac6994b910bc1e"
+        },
+        {
+          "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/rights-support/afrikka/rights-bissau.md",
+          "sha256": "f7b7b16278fc2fe34a501c0c13cc8c5f70bb33ab6caebd4a895f0618c519c43f"
+        },
+        {
+          "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/rights-support/afrikka/evidence/photo-license-checks.json",
+          "sha256": "4d4cda6caaa8ada067bfc3ac26f380b888a2a5025ff393092905d0b670d62264"
+        }
+      ],
+      "separateRightsScope": "afrikka-rights-bissau covers K1/L1 only; no stored author/license for PHOTO door-poster illustration found in these records.",
+      "readEvidenceFiles": [
+        {
+          "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/role-asset-handoff.json",
+          "sha256": "9f38d3cd44fcbed6743314959a0f96c51adef2ddf914df94d22536d70bd25fa3"
+        },
+        {
+          "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/bissau/sisalto.json",
+          "sha256": "048d429b138863c1d51150d22d37d24fee0a387cf28b42adec4ddff5fc1e02c5"
+        },
+        {
+          "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/bissau/qa.json",
+          "sha256": "92a23f6feb4d750c950b6b86970d03b3fa17b29c393ec3a1b4be39c494984fbf"
+        },
+        {
+          "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/bissau-B/candidate-03.html",
+          "sha256": "fe910212d904c169488134cd753d70af49764837d8eace8f8fae43f49b7ec17a"
+        },
+        {
+          "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/rights-support/afrikka/afrikka-rights-bissau.json",
+          "sha256": "0816891986bb2d08db5124dfad34933eb33b9f8a5f888d6101ac6994b910bc1e"
+        },
+        {
+          "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/rights-support/afrikka/rights-bissau.md",
+          "sha256": "f7b7b16278fc2fe34a501c0c13cc8c5f70bb33ab6caebd4a895f0618c519c43f"
+        },
+        {
+          "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/rights-support/afrikka/evidence/photo-license-checks.json",
+          "sha256": "4d4cda6caaa8ada067bfc3ac26f380b888a2a5025ff393092905d0b670d62264"
+        }
+      ],
+      "nativeDetailCrops": [
+        {
+          "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/capital-native-qa/crops/e04-bissau-PHOTO/door-poster.png",
+          "sha256": "b2bf0f58827f064b1c51d204a3eced361e55165ca8525f5d68a166ba8f7d0418",
+          "resized": false
+        },
+        {
+          "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/capital-native-qa/crops/e04-bissau-PHOTO/right-laundry.png",
+          "sha256": "3cd078be4d6cf64da04f22bcf0878bcdf387ffc3150cf39d08f401bb957063d4",
+          "resized": false
+        },
+        {
+          "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/capital-native-qa/crops/e04-bissau-PHOTO/left-laundry.png",
+          "sha256": "7ba9fcd41ae75ccad21b6d07fa0d561fa9a833e229bfb6b4447a370623ac0295",
+          "resized": false
+        },
+        {
+          "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/capital-native-qa/crops/e04-bissau-PHOTO/right-bark-window.png",
+          "sha256": "753526e94af0b49b605e02742ad27649f90843b7f4fad449573183cced404041",
+          "resized": false
+        },
+        {
+          "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/capital-native-qa/crops/e04-bissau-PHOTO/bottom-right-wall.png",
+          "sha256": "8cc357879a4807f41498410e567a338857e04ce8b3b929c46cb796153b78caea",
+          "resized": false
+        }
+      ],
+      "fullFrameDisplay": "Original JPEG viewed with detail=original; tool automatically displayed5184x3456 at3888x2592. Relevant native crops viewed without scaling.",
+      "originalPixelsViewedMethod": "Source NAS original opened directly plus five unscaled crops from its decoded pixels.",
+      "correctedPreviousAssertion": "Previous preview reason said no illustrated poster; original crop shows an illustrated poster.",
+      "liveSourceFetchPerformed": false,
+      "CCSearchPerformed": false,
+      "generationCallsIssued": 0,
+      "R2CallsIssued": 0,
+      "otherFilesModified": false
+    },
+    "missingEvidence": [
+      "Ovijulisteen erillisen ihmisfiguurin kuvituksen tekijä/oikeusketju ja käyttölupa tai dokumentoitu, tähän täsmäkuvaan soveltuva julkaisuperuste."
+    ],
+    "photoLayerAccepted": true,
+    "ownerAcceptanceVerified": false,
+    "gameIntegrated": false,
+    "reviewedAt": "2026-10-12T20:36:27.362482+00:00"
+  },
+  "includedInOriginal829Snapshot": true,
+  "excludedFromQualified755Handoff": true,
+  "runtimeInstructions": [
+    "Do not apply or render this exact Bissau PHOTO asset while the native rights hold is active.",
+    "If the original 829 snapshot was integrated, suppress the exact held PHOTO image in runtime. Check city, slot, URL/file identity and SHA first; keep a different independently accepted replacement.",
+    "The snapshot priorMediaFields still names the same held Commons file. Merely restoring it does not clear this hold. Suppress matching osoite/tiedosto rendering pointers; preserve captions, credit, year, article text, maps and all other images.",
+    "Do not delete the NAS original, R2 original or historical evidence. Delivery does not claim runtime suppression has happened."
+  ],
+  "ownerAcceptanceRequired": false,
+  "gameIntegrated": false,
+  "runtimeSuppressionVerified": false
+}
