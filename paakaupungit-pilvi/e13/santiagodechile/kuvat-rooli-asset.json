@@ -1,0 +1,2492 @@
+{
+  "schemaVersion": "capital-city-role-assets/v1",
+  "era": "e13",
+  "city": "santiagodechile",
+  "authorization": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+  "sourceContentAfterSHA256": "8056f9b84584c2a4a64d090771a2007208ed8bc3c9863a62f6fa97d43483d4d3",
+  "assets": [
+    {
+      "era": "e13",
+      "city": "santiagodechile",
+      "slot": "TRAVELER",
+      "type": "illustration",
+      "assetID": "e13-santiagodechile-traveler-mote-con-huesillo-v1",
+      "galleryImageID": "e13-santiagodechile-traveler-mote-con-huesillo-v1",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "matkailijalle",
+        "kuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/santiagodechile/e13-santiagodechile-traveler-mote-con-huesillo-v1-c04a15927c8a.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Mote con huesillo yhdistää persikan ja keitetyn vehnän. Havainnekuva.",
+        "lyhyt": "Mote con huesillo yhdistää persikan ja keitetyn vehnän. Havainnekuva."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/santiagodechile/e13-santiagodechile-traveler-mote-con-huesillo-v1-c04a15927c8a.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Mote con huesillo yhdistää persikan ja keitetyn vehnän. Havainnekuva.",
+        "lyhyt": "Mote con huesillo yhdistää persikan ja keitetyn vehnän. Havainnekuva."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "c04a15927c8aa66fb29c8db829bfa5ca4f0fc9412745fc739d037aa6a9eeaf84",
+      "exportSHA256": "9b57fef6668db2ccca57f1cbf128eb96cba5a3007b43e4d5949bce4bd1b46348",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/santiagodechile/e13-santiagodechile-traveler-mote-con-huesillo-v1-c04a15927c8a.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/santiagodechile/e13-santiagodechile-traveler-mote-con-huesillo-v1-c04a15927c8a.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e13/santiagodechile/e13-santiagodechile-traveler-mote-con-huesillo-v1-c04a15927c8a.png",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e13/paakaupungit-pilvi/e13/santiagodechile/sisalto.json",
+      "sourceContentSHA256": "8056f9b84584c2a4a64d090771a2007208ed8bc3c9863a62f6fa97d43483d4d3",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "093f31f15ee03460aecff29ad519fe61daaa5d859b69781e3e897775579dc7c7",
+        "subjectTitle": "Matkailijalle",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Generic drink and ordinary unbranded cup/glass; no protected artwork, human likeness, logo or real place claim.",
+          "QA": {
+            "contentSHA256": "530fc708f19698a4d308ff74023b2c369f1e5ca5d78193b10c0b621724323ed0",
+            "visualObservationFi": "Korkea tavallinen lasi, kirkas meripihkanvärinen neste, ryppyisiä persikoita ja pohjalle painuneita keitettyjä jyviä. Luonteva lasin reunus, nestepinta, taittuminen ja heijastus; ei tekstiä, logoja, ihmisiä tai paikkataustaa.",
+            "topicMatchFi": "Santiagon O4 mainitsee mote con huesillon persikan ja vehnän yhdistelmän. Pystykuvan selite nimeää havainnekuvan, ei todellista katumyyjää tai ravintolaa.",
+            "sourceEvidence": [
+              {
+                "url": "https://en.wikipedia.org/wiki/Mote_con_huesillo",
+                "nasSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/santiagodechile/illustration-work/mote.txt",
+                "support": "Sweet liquid with cooked dried peach and cooked husked wheat, served chilled in tall glass."
+              }
+            ],
+            "aspectRatio": 0.6666666666666666,
+            "rightsScopeFi": "Yleinen ruoka ja astia.",
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/santiagodechile/assets/e13-santiagodechile-traveler-mote-con-huesillo-v1/original.png",
+            "nativeDimensions": [
+              1024,
+              1536
+            ],
+            "nativeSHA256Verified": true,
+            "viewedByReviewer": true
+          },
+          "qaReason": "Persikka ja keitetty vehnä näkyvät luontevasti kirkkaassa juomassa; native-pysty 1024×1536 täyttää TRAVELER-suhteen 0,667."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Mote con huesillo yhdistää persikan ja keitetyn vehnän. Havainnekuva.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/santiagodechile/illustration-qa-extra.json",
+        "fileSHA256": "be15a28b6a9bc680560b546bc871d13c5af08776c609c61abefe8082aa20e820",
+        "item": {
+          "slot": "TRAVELER",
+          "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
+          "assetID": "e13-santiagodechile-traveler-mote-con-huesillo-v1",
+          "sha256": "c04a15927c8aa66fb29c8db829bfa5ca4f0fc9412745fc739d037aa6a9eeaf84",
+          "verdict": "accepted",
+          "reason": "Persikka ja keitetty vehnä näkyvät luontevasti kirkkaassa juomassa; native-pysty 1024×1536 täyttää TRAVELER-suhteen 0,667.",
+          "evidence": {
+            "contentSHA256": "530fc708f19698a4d308ff74023b2c369f1e5ca5d78193b10c0b621724323ed0",
+            "visualObservationFi": "Korkea tavallinen lasi, kirkas meripihkanvärinen neste, ryppyisiä persikoita ja pohjalle painuneita keitettyjä jyviä. Luonteva lasin reunus, nestepinta, taittuminen ja heijastus; ei tekstiä, logoja, ihmisiä tai paikkataustaa.",
+            "topicMatchFi": "Santiagon O4 mainitsee mote con huesillon persikan ja vehnän yhdistelmän. Pystykuvan selite nimeää havainnekuvan, ei todellista katumyyjää tai ravintolaa.",
+            "sourceEvidence": [
+              {
+                "url": "https://en.wikipedia.org/wiki/Mote_con_huesillo",
+                "nasSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/santiagodechile/illustration-work/mote.txt",
+                "support": "Sweet liquid with cooked dried peach and cooked husked wheat, served chilled in tall glass."
+              }
+            ],
+            "aspectRatio": 0.6666666666666666,
+            "rightsScopeFi": "Yleinen ruoka ja astia.",
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/santiagodechile/assets/e13-santiagodechile-traveler-mote-con-huesillo-v1/original.png",
+            "nativeDimensions": [
+              1024,
+              1536
+            ],
+            "nativeSHA256Verified": true,
+            "viewedByReviewer": true
+          },
+          "reviewedAt": "2026-10-12T18:44:57.557230+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/santiagodechile/qa.json",
+            "sha256": "326702e12d0706d2715e117a40e2b060bae3d3fd3ce10414241af164e37bd82e"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/santiagodechile/illustration-qa-extra.json",
+            "sha256": "be15a28b6a9bc680560b546bc871d13c5af08776c609c61abefe8082aa20e820"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/santiagodechile/e13-santiagodechile-traveler-mote-con-huesillo-v1-c04a15927c8a.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/santiagodechile/e13-santiagodechile-traveler-mote-con-huesillo-v1-c04a15927c8a.png?t=9b57fef6668db2cc",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/santiagodechile/e13-santiagodechile-traveler-mote-con-huesillo-v1-c04a15927c8a.png",
+        "sha256": "9b57fef6668db2ccca57f1cbf128eb96cba5a3007b43e4d5949bce4bd1b46348",
+        "bytes": 2036155,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e13-santiagodechile-traveler-mote-con-huesillo-v1",
+        "nativeSHA256": "c04a15927c8aa66fb29c8db829bfa5ca4f0fc9412745fc739d037aa6a9eeaf84",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e13/santiagodechile/e13-santiagodechile-traveler-mote-con-huesillo-v1-c04a15927c8a.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e13",
+        "city": "santiagodechile",
+        "slot": "TRAVELER",
+        "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
+        "verifiedAt": "2026-10-12T18:45:31.364714+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e13/santiagodechile/e13-santiagodechile-traveler-mote-con-huesillo-v1-c04a15927c8a.png",
+        "sha256": "9b57fef6668db2ccca57f1cbf128eb96cba5a3007b43e4d5949bce4bd1b46348",
+        "bytes": 2036155,
+        "SHAReadAt": "2026-10-12T18:45:01.794839+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1024,
+        "height": 1536,
+        "pixelWidth": 1024,
+        "pixelHeight": 1536,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "c04a15927c8aa66fb29c8db829bfa5ca4f0fc9412745fc739d037aa6a9eeaf84",
+        "rgbPixelSHA256": "2d09fee368ef74d1875ef42b28eb5a4d773a77e6144ba62be443c789ca61c57d",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "8056f9b84584c2a4a64d090771a2007208ed8bc3c9863a62f6fa97d43483d4d3",
+      "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+      "contextAfterSHA256": "093f31f15ee03460aecff29ad519fe61daaa5d859b69781e3e897775579dc7c7"
+    },
+    {
+      "era": "e13",
+      "city": "santiagodechile",
+      "slot": "O4",
+      "type": "illustration",
+      "assetID": "e13-santiagodechile-o4-completo-italiano-v1",
+      "galleryImageID": "e13-santiagodechile-o4-completo-italiano-v1",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "matkailijalle",
+        "artikkeli",
+        "jaksot",
+        3,
+        "kuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/santiagodechile/e13-santiagodechile-o4-completo-italiano-v1-c8b28ea5d791.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Completo italiano: nakkisämpylä, tomaatti, avokado ja majoneesi. Havainnekuva.",
+        "lyhyt": "Completo italiano: nakkisämpylä, tomaatti, avokado ja majoneesi. Havainnekuva."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/santiagodechile/e13-santiagodechile-o4-completo-italiano-v1-c8b28ea5d791.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Completo italiano: nakkisämpylä, tomaatti, avokado ja majoneesi. Havainnekuva.",
+        "lyhyt": "Completo italiano: nakkisämpylä, tomaatti, avokado ja majoneesi. Havainnekuva."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "c8b28ea5d79147696e8285ab60228cb0d264a9d507ceb67df1b592121ea9b17e",
+      "exportSHA256": "d952d835c1e8d169cd72b634cd72225ff84995f11f1ab5da9fd479d4347048cb",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/santiagodechile/e13-santiagodechile-o4-completo-italiano-v1-c8b28ea5d791.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/santiagodechile/e13-santiagodechile-o4-completo-italiano-v1-c8b28ea5d791.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e13/santiagodechile/e13-santiagodechile-o4-completo-italiano-v1-c8b28ea5d791.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e13/paakaupungit-pilvi/e13/santiagodechile/sisalto.json",
+      "sourceContentSHA256": "8056f9b84584c2a4a64d090771a2007208ed8bc3c9863a62f6fa97d43483d4d3",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "0e69d7134408accc472698a69236f8320d7e3c38aeffada50455f70937fd4cdc",
+        "subjectTitle": "Mitä täällä syödään",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Generic dish and ordinary serving utensils, no architecture, artwork, identified people or logos. Illustration only; no real-place claim.",
+          "QA": {
+            "personallyViewed": true,
+            "viewPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/santiagodechile/assets/e13-santiagodechile-o4-completo-italiano-v1/original.png",
+            "actualWidth": 1536,
+            "actualHeight": 1024,
+            "actualFormat": "PNG",
+            "actualColorSpace": "RGB",
+            "embeddedProfile": null,
+            "sRGBProfileVerified": false,
+            "captionFi": "Completo italiano: nakkisämpylä, tomaatti, avokado ja majoneesi. Havainnekuva.",
+            "sourceEvidence": [
+              {
+                "url": "https://en.wikivoyage.org/wiki/Santiago_de_Chile",
+                "nasSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/nopea-e13-santiagodechile/Santiago-guide.txt",
+                "support": "Eat: completo italiano with tomato, avocado and mayonnaise; generic food illustration."
+              }
+            ],
+            "rightsEvidence": "Generic dish and ordinary serving utensils, no architecture, artwork, identified people or logos. Illustration only; no real-place claim.",
+            "independentOfProducer": true
+          },
+          "qaReason": "Yksi nakki sämpylässä, tomaatti, muussattu avokado ja majoneesi vastaavat lähteen completo italiano -aineksia. Ruoka, kosteus, sämpylän pinta ja lautastila luontevia; ei pakkausta, tekstiä, logoja, käsivarsia tai nimetyn ravintolan kuvaa. CaptionFi nimeää havainnekuvan, ei dokumentaarista annosta."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Completo italiano: nakkisämpylä, tomaatti, avokado ja majoneesi. Havainnekuva.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/santiagodechile/qa.json",
+        "fileSHA256": "326702e12d0706d2715e117a40e2b060bae3d3fd3ce10414241af164e37bd82e",
+        "item": {
+          "slot": "O4",
+          "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+          "assetID": "e13-santiagodechile-o4-completo-italiano-v1",
+          "sha256": "c8b28ea5d79147696e8285ab60228cb0d264a9d507ceb67df1b592121ea9b17e",
+          "verdict": "accepted",
+          "reason": "Yksi nakki sämpylässä, tomaatti, muussattu avokado ja majoneesi vastaavat lähteen completo italiano -aineksia. Ruoka, kosteus, sämpylän pinta ja lautastila luontevia; ei pakkausta, tekstiä, logoja, käsivarsia tai nimetyn ravintolan kuvaa. CaptionFi nimeää havainnekuvan, ei dokumentaarista annosta.",
+          "required": true,
+          "reviewedAt": "2026-10-12T18:07:28.589279+00:00",
+          "evidence": {
+            "personallyViewed": true,
+            "viewPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/santiagodechile/assets/e13-santiagodechile-o4-completo-italiano-v1/original.png",
+            "actualWidth": 1536,
+            "actualHeight": 1024,
+            "actualFormat": "PNG",
+            "actualColorSpace": "RGB",
+            "embeddedProfile": null,
+            "sRGBProfileVerified": false,
+            "captionFi": "Completo italiano: nakkisämpylä, tomaatti, avokado ja majoneesi. Havainnekuva.",
+            "sourceEvidence": [
+              {
+                "url": "https://en.wikivoyage.org/wiki/Santiago_de_Chile",
+                "nasSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/nopea-e13-santiagodechile/Santiago-guide.txt",
+                "support": "Eat: completo italiano with tomato, avocado and mayonnaise; generic food illustration."
+              }
+            ],
+            "rightsEvidence": "Generic dish and ordinary serving utensils, no architecture, artwork, identified people or logos. Illustration only; no real-place claim.",
+            "independentOfProducer": true
+          }
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/santiagodechile/qa.json",
+            "sha256": "326702e12d0706d2715e117a40e2b060bae3d3fd3ce10414241af164e37bd82e"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/santiagodechile/illustration-qa-extra.json",
+            "sha256": "be15a28b6a9bc680560b546bc871d13c5af08776c609c61abefe8082aa20e820"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/santiagodechile/e13-santiagodechile-o4-completo-italiano-v1-c8b28ea5d791.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/santiagodechile/e13-santiagodechile-o4-completo-italiano-v1-c8b28ea5d791.png?t=d952d835c1e8d169",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/santiagodechile/e13-santiagodechile-o4-completo-italiano-v1-c8b28ea5d791.png",
+        "sha256": "d952d835c1e8d169cd72b634cd72225ff84995f11f1ab5da9fd479d4347048cb",
+        "bytes": 2110822,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e13-santiagodechile-o4-completo-italiano-v1",
+        "nativeSHA256": "c8b28ea5d79147696e8285ab60228cb0d264a9d507ceb67df1b592121ea9b17e",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e13/santiagodechile/e13-santiagodechile-o4-completo-italiano-v1-c8b28ea5d791.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e13",
+        "city": "santiagodechile",
+        "slot": "O4",
+        "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+        "verifiedAt": "2026-10-12T18:11:10.133823+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e13/santiagodechile/e13-santiagodechile-o4-completo-italiano-v1-c8b28ea5d791.png",
+        "sha256": "d952d835c1e8d169cd72b634cd72225ff84995f11f1ab5da9fd479d4347048cb",
+        "bytes": 2110822,
+        "SHAReadAt": "2026-10-12T18:30:04.433119+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "c8b28ea5d79147696e8285ab60228cb0d264a9d507ceb67df1b592121ea9b17e",
+        "rgbPixelSHA256": "7826e8c8b7c97cdf8f9d2e59eb7303e4fcd0b799b9a75e10cabec2be64f78a69",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "8056f9b84584c2a4a64d090771a2007208ed8bc3c9863a62f6fa97d43483d4d3",
+      "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+      "contextAfterSHA256": "0e69d7134408accc472698a69236f8320d7e3c38aeffada50455f70937fd4cdc"
+    },
+    {
+      "era": "e13",
+      "city": "santiagodechile",
+      "slot": "K1",
+      "type": "illustration",
+      "assetID": "e13-santiagodechile-k1-kuiva-uoma-v2",
+      "galleryImageID": "e13-santiagodechile-k1-kuiva-uoma-v2",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].nostot[0]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "nostot",
+        0
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/santiagodechile/e13-santiagodechile-k1-kuiva-uoma-v2-3fdb381d675f.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Kuivunut uoma voi saada myöhemmin uuden käyttötavan. Havainnekuva.",
+        "lyhyt": "Kuivunut uoma voi saada myöhemmin uuden käyttötavan. Havainnekuva."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/santiagodechile/e13-santiagodechile-k1-kuiva-uoma-v2-3fdb381d675f.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Kuivunut uoma voi saada myöhemmin uuden käyttötavan. Havainnekuva.",
+        "lyhyt": "Kuivunut uoma voi saada myöhemmin uuden käyttötavan. Havainnekuva."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "3fdb381d675f0a9191d97cfcbcf6f6d1a1cb94e2d50193f78c1c1eef7c36246f",
+      "exportSHA256": "29e46e7f6e1149e3344b666329383400f5a77aa49222851d11acfd3a63137bbf",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/santiagodechile/e13-santiagodechile-k1-kuiva-uoma-v2-3fdb381d675f.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/santiagodechile/e13-santiagodechile-k1-kuiva-uoma-v2-3fdb381d675f.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e13/santiagodechile/e13-santiagodechile-k1-kuiva-uoma-v2-3fdb381d675f.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e13/paakaupungit-pilvi/e13/santiagodechile/sisalto.json",
+      "sourceContentSHA256": "8056f9b84584c2a4a64d090771a2007208ed8bc3c9863a62f6fa97d43483d4d3",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "b93493a13e9963f312dfd112cfd45707abfe64bb45d728a74c362ceb9b8a087a",
+        "semanticContextSHA256": "b93493a13e9963f312dfd112cfd45707abfe64bb45d728a74c362ceb9b8a087a",
+        "subjectTitle": "Alameda alkoi joenhaarana",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Plain natural sediment/stone and unnamed terrain, no actual designed city arrangement, monument, architecture or identified person.",
+          "QA": {
+            "contentSHA256": "530fc708f19698a4d308ff74023b2c369f1e5ca5d78193b10c0b621724323ed0",
+            "visualObservationFi": "Kuivaa halkeillutta hienoainesta, erikokoisia kiviä ja rantakasvillisuutta; ei vesivirtaa tai lammikoita. Luontevat pinnat, ei tekstiä tai ihmisiä.",
+            "topicMatchFi": "Selite on yleinen kuivuneen uoman havainne, ei La Cañadan historiallinen rekonstruktio.",
+            "sourceEvidence": [
+              {
+                "url": "https://en.wikipedia.org/wiki/Santiago",
+                "nasSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/nopea-e13-santiagodechile/Santiago.txt",
+                "support": "History: Alameda occupies a former dry southern river arm; only generic dry-channel material."
+              }
+            ],
+            "replacesRejectedAssetID": "e13-santiagodechile-k1-kuiva-uoma-v1",
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/santiagodechile/assets/e13-santiagodechile-k1-kuiva-uoma-v2/original.png",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "nativeSHA256Verified": true,
+            "viewedByReviewer": true
+          },
+          "qaReason": "Uusi v2 näyttää kuivaa uomaa ja korjaa v1:n vesivirran."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Kuivunut uoma voi saada myöhemmin uuden käyttötavan. Havainnekuva.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/santiagodechile/illustration-qa-extra.json",
+        "fileSHA256": "be15a28b6a9bc680560b546bc871d13c5af08776c609c61abefe8082aa20e820",
+        "item": {
+          "slot": "K1",
+          "targetJsonPath": "$.kaupunkilehti[0].nostot[0]",
+          "assetID": "e13-santiagodechile-k1-kuiva-uoma-v2",
+          "sha256": "3fdb381d675f0a9191d97cfcbcf6f6d1a1cb94e2d50193f78c1c1eef7c36246f",
+          "verdict": "accepted",
+          "reason": "Uusi v2 näyttää kuivaa uomaa ja korjaa v1:n vesivirran.",
+          "evidence": {
+            "contentSHA256": "530fc708f19698a4d308ff74023b2c369f1e5ca5d78193b10c0b621724323ed0",
+            "visualObservationFi": "Kuivaa halkeillutta hienoainesta, erikokoisia kiviä ja rantakasvillisuutta; ei vesivirtaa tai lammikoita. Luontevat pinnat, ei tekstiä tai ihmisiä.",
+            "topicMatchFi": "Selite on yleinen kuivuneen uoman havainne, ei La Cañadan historiallinen rekonstruktio.",
+            "sourceEvidence": [
+              {
+                "url": "https://en.wikipedia.org/wiki/Santiago",
+                "nasSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/nopea-e13-santiagodechile/Santiago.txt",
+                "support": "History: Alameda occupies a former dry southern river arm; only generic dry-channel material."
+              }
+            ],
+            "replacesRejectedAssetID": "e13-santiagodechile-k1-kuiva-uoma-v1",
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/santiagodechile/assets/e13-santiagodechile-k1-kuiva-uoma-v2/original.png",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "nativeSHA256Verified": true,
+            "viewedByReviewer": true
+          },
+          "reviewedAt": "2026-10-12T19:40:28.531983+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/santiagodechile/qa.json",
+            "sha256": "326702e12d0706d2715e117a40e2b060bae3d3fd3ce10414241af164e37bd82e"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/santiagodechile/illustration-qa-extra.json",
+            "sha256": "be15a28b6a9bc680560b546bc871d13c5af08776c609c61abefe8082aa20e820"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/santiagodechile/e13-santiagodechile-k1-kuiva-uoma-v2-3fdb381d675f.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/santiagodechile/e13-santiagodechile-k1-kuiva-uoma-v2-3fdb381d675f.png?t=29e46e7f6e1149e3",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/santiagodechile/e13-santiagodechile-k1-kuiva-uoma-v2-3fdb381d675f.png",
+        "sha256": "29e46e7f6e1149e3344b666329383400f5a77aa49222851d11acfd3a63137bbf",
+        "bytes": 3488299,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e13-santiagodechile-k1-kuiva-uoma-v2",
+        "nativeSHA256": "3fdb381d675f0a9191d97cfcbcf6f6d1a1cb94e2d50193f78c1c1eef7c36246f",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e13/santiagodechile/e13-santiagodechile-k1-kuiva-uoma-v2-3fdb381d675f.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e13",
+        "city": "santiagodechile",
+        "slot": "K1",
+        "targetJsonPath": "$.kaupunkilehti[0].nostot[0]",
+        "verifiedAt": "2026-10-12T19:41:24.367891+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e13/santiagodechile/e13-santiagodechile-k1-kuiva-uoma-v2-3fdb381d675f.png",
+        "sha256": "29e46e7f6e1149e3344b666329383400f5a77aa49222851d11acfd3a63137bbf",
+        "bytes": 3488299,
+        "SHAReadAt": "2026-10-12T19:40:29.985122+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "3fdb381d675f0a9191d97cfcbcf6f6d1a1cb94e2d50193f78c1c1eef7c36246f",
+        "rgbPixelSHA256": "e43b8bbfdeb2e93b8556b39274b8751624def236702ace0985d70df3b6529abf",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "8056f9b84584c2a4a64d090771a2007208ed8bc3c9863a62f6fa97d43483d4d3",
+      "targetAfterSHA256": "b93493a13e9963f312dfd112cfd45707abfe64bb45d728a74c362ceb9b8a087a",
+      "contextAfterSHA256": "b93493a13e9963f312dfd112cfd45707abfe64bb45d728a74c362ceb9b8a087a"
+    },
+    {
+      "era": "e13",
+      "city": "santiagodechile",
+      "slot": "K2",
+      "type": "illustration",
+      "assetID": "e13-santiagodechile-k2-kolikkoaihiot-v1",
+      "galleryImageID": "e13-santiagodechile-k2-kolikkoaihiot-v1",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].nostot[1]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "nostot",
+        1
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/santiagodechile/e13-santiagodechile-k2-kolikkoaihiot-v1-c8f4b824d0e9.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Kolikkoaihio on metallinen pohja lyötävälle kolikolle. Havainnekuva.",
+        "lyhyt": "Kolikkoaihio on metallinen pohja lyötävälle kolikolle. Havainnekuva."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/santiagodechile/e13-santiagodechile-k2-kolikkoaihiot-v1-c8f4b824d0e9.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Kolikkoaihio on metallinen pohja lyötävälle kolikolle. Havainnekuva.",
+        "lyhyt": "Kolikkoaihio on metallinen pohja lyötävälle kolikolle. Havainnekuva."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "c8f4b824d0e9f7a01fe5aa0ab044ddbffc5ee82202a1be0e34433222e714558d",
+      "exportSHA256": "639a6e9adf72ff893371af8fe13861b29f15c206e7db48bfbc10b31150d2fcbf",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/santiagodechile/e13-santiagodechile-k2-kolikkoaihiot-v1-c8f4b824d0e9.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/santiagodechile/e13-santiagodechile-k2-kolikkoaihiot-v1-c8f4b824d0e9.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e13/santiagodechile/e13-santiagodechile-k2-kolikkoaihiot-v1-c8f4b824d0e9.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e13/paakaupungit-pilvi/e13/santiagodechile/sisalto.json",
+      "sourceContentSHA256": "8056f9b84584c2a4a64d090771a2007208ed8bc3c9863a62f6fa97d43483d4d3",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "4beb8527ae355ac6c5bf1e436aca23aa67bf776f1a6635b566acd8842611d1ac",
+        "semanticContextSHA256": "4beb8527ae355ac6c5bf1e436aca23aa67bf776f1a6635b566acd8842611d1ac",
+        "subjectTitle": "Palatsi, jossa lyötiin rahaa",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Ordinary food or blank functional metal discs, no currency artwork, portrait, copied mint design or place reconstruction.",
+          "QA": {
+            "contentSHA256": "530fc708f19698a4d308ff74023b2c369f1e5ca5d78193b10c0b621724323ed0",
+            "visualObservationFi": "Neljä pyöreää metallikiekkoa vaihtelevine naarmuineen ja yhtenäisine reunoineen. Ei numeroita, tekstiä, logoa, teosta tai ihmisiä.",
+            "topicMatchFi": "K2 käsittelee La Monedan rahapajataustaa. Selite kertoo yleisestä aihiosta, ei oikeasta chileläisestä kolikosta tai historiallisesta työpajasta.",
+            "sourceEvidence": [
+              {
+                "url": "https://en.wikipedia.org/wiki/La_Moneda_Palace",
+                "nasSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/nopea-e13-santiagodechile/La_Moneda.txt",
+                "support": "La Moneda originally served as mint; generic blank coin-making material, not an identified coin or authentic workshop."
+              }
+            ],
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/santiagodechile/assets/e13-santiagodechile-k2-kolikkoaihiot-v1/original.png",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "nativeSHA256Verified": true,
+            "viewedByReviewer": true
+          },
+          "qaReason": "Merkitsemättömät metalliaihiot ovat luontevat ja sopivat rahapaja-aiheeseen."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Kolikkoaihio on metallinen pohja lyötävälle kolikolle. Havainnekuva.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/santiagodechile/illustration-qa-extra.json",
+        "fileSHA256": "be15a28b6a9bc680560b546bc871d13c5af08776c609c61abefe8082aa20e820",
+        "item": {
+          "slot": "K2",
+          "targetJsonPath": "$.kaupunkilehti[0].nostot[1]",
+          "assetID": "e13-santiagodechile-k2-kolikkoaihiot-v1",
+          "sha256": "c8f4b824d0e9f7a01fe5aa0ab044ddbffc5ee82202a1be0e34433222e714558d",
+          "verdict": "accepted",
+          "reason": "Merkitsemättömät metalliaihiot ovat luontevat ja sopivat rahapaja-aiheeseen.",
+          "evidence": {
+            "contentSHA256": "530fc708f19698a4d308ff74023b2c369f1e5ca5d78193b10c0b621724323ed0",
+            "visualObservationFi": "Neljä pyöreää metallikiekkoa vaihtelevine naarmuineen ja yhtenäisine reunoineen. Ei numeroita, tekstiä, logoa, teosta tai ihmisiä.",
+            "topicMatchFi": "K2 käsittelee La Monedan rahapajataustaa. Selite kertoo yleisestä aihiosta, ei oikeasta chileläisestä kolikosta tai historiallisesta työpajasta.",
+            "sourceEvidence": [
+              {
+                "url": "https://en.wikipedia.org/wiki/La_Moneda_Palace",
+                "nasSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/nopea-e13-santiagodechile/La_Moneda.txt",
+                "support": "La Moneda originally served as mint; generic blank coin-making material, not an identified coin or authentic workshop."
+              }
+            ],
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/santiagodechile/assets/e13-santiagodechile-k2-kolikkoaihiot-v1/original.png",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "nativeSHA256Verified": true,
+            "viewedByReviewer": true
+          },
+          "reviewedAt": "2026-10-12T19:35:41.264739+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/santiagodechile/qa.json",
+            "sha256": "326702e12d0706d2715e117a40e2b060bae3d3fd3ce10414241af164e37bd82e"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/santiagodechile/illustration-qa-extra.json",
+            "sha256": "be15a28b6a9bc680560b546bc871d13c5af08776c609c61abefe8082aa20e820"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/santiagodechile/e13-santiagodechile-k2-kolikkoaihiot-v1-c8f4b824d0e9.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/santiagodechile/e13-santiagodechile-k2-kolikkoaihiot-v1-c8f4b824d0e9.png?t=639a6e9adf72ff89",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/santiagodechile/e13-santiagodechile-k2-kolikkoaihiot-v1-c8f4b824d0e9.png",
+        "sha256": "639a6e9adf72ff893371af8fe13861b29f15c206e7db48bfbc10b31150d2fcbf",
+        "bytes": 2410913,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e13-santiagodechile-k2-kolikkoaihiot-v1",
+        "nativeSHA256": "c8f4b824d0e9f7a01fe5aa0ab044ddbffc5ee82202a1be0e34433222e714558d",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e13/santiagodechile/e13-santiagodechile-k2-kolikkoaihiot-v1-c8f4b824d0e9.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e13",
+        "city": "santiagodechile",
+        "slot": "K2",
+        "targetJsonPath": "$.kaupunkilehti[0].nostot[1]",
+        "verifiedAt": "2026-10-12T19:35:57.033871+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e13/santiagodechile/e13-santiagodechile-k2-kolikkoaihiot-v1-c8f4b824d0e9.png",
+        "sha256": "639a6e9adf72ff893371af8fe13861b29f15c206e7db48bfbc10b31150d2fcbf",
+        "bytes": 2410913,
+        "SHAReadAt": "2026-10-12T19:35:46.694378+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "c8f4b824d0e9f7a01fe5aa0ab044ddbffc5ee82202a1be0e34433222e714558d",
+        "rgbPixelSHA256": "2f3a09d9e6fd14d0526d2294778aeff1fc2a08a9ea97aadc97c20a372cd96908",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "8056f9b84584c2a4a64d090771a2007208ed8bc3c9863a62f6fa97d43483d4d3",
+      "targetAfterSHA256": "4beb8527ae355ac6c5bf1e436aca23aa67bf776f1a6635b566acd8842611d1ac",
+      "contextAfterSHA256": "4beb8527ae355ac6c5bf1e436aca23aa67bf776f1a6635b566acd8842611d1ac"
+    },
+    {
+      "era": "e13",
+      "city": "santiagodechile",
+      "slot": "K3",
+      "type": "illustration",
+      "assetID": "e13-santiagodechile-k3-rakennuskivi-v1",
+      "galleryImageID": "e13-santiagodechile-k3-rakennuskivi-v1",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].nostot[2]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "nostot",
+        2
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/santiagodechile/e13-santiagodechile-k3-rakennuskivi-v1-80c759103074.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Louhittu kivi voi päätyä rakennusten materiaaliksi. Havainnekuva.",
+        "lyhyt": "Louhittu kivi voi päätyä rakennusten materiaaliksi. Havainnekuva."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/santiagodechile/e13-santiagodechile-k3-rakennuskivi-v1-80c759103074.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Louhittu kivi voi päätyä rakennusten materiaaliksi. Havainnekuva.",
+        "lyhyt": "Louhittu kivi voi päätyä rakennusten materiaaliksi. Havainnekuva."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "80c759103074b940c73369a1e0262ea70807135d1e504e66fccd08a8b3309105",
+      "exportSHA256": "aacec6f002191b217bfaa713f50436e101b670664ca5b5408dd0cbc52add212a",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/santiagodechile/e13-santiagodechile-k3-rakennuskivi-v1-80c759103074.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/santiagodechile/e13-santiagodechile-k3-rakennuskivi-v1-80c759103074.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e13/santiagodechile/e13-santiagodechile-k3-rakennuskivi-v1-80c759103074.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e13/paakaupungit-pilvi/e13/santiagodechile/sisalto.json",
+      "sourceContentSHA256": "8056f9b84584c2a4a64d090771a2007208ed8bc3c9863a62f6fa97d43483d4d3",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "4144a42a0c8cfe59c941d8996f7efdb036c8aa9d16a29b4b1900021845a1c0ea",
+        "semanticContextSHA256": "4144a42a0c8cfe59c941d8996f7efdb036c8aa9d16a29b4b1900021845a1c0ea",
+        "subjectTitle": "Kukkula vaihtoi tehtävää",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Plain natural sediment/stone and unnamed terrain, no actual designed city arrangement, monument, architecture or identified person.",
+          "QA": {
+            "contentSHA256": "530fc708f19698a4d308ff74023b2c369f1e5ca5d78193b10c0b621724323ed0",
+            "visualObservationFi": "Erikokoisia kulmikkaita kivilohkareita ja irtoainesta, vaihteleva väritys ja yhtenäiset varjot. Ei monistuvaa pintaa, tekstiä tai ihmisiä.",
+            "topicMatchFi": "K3 mainitsee rakennuskiven louhinnan. Selite on yleinen materiaalihavainne, ei Santa Lucían todellinen näyte, louhos tai kivilajimääritys.",
+            "sourceEvidence": [
+              {
+                "url": "https://en.wikipedia.org/wiki/Santa_Luc%C3%ADa_Hill",
+                "nasSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/nopea-e13-santiagodechile/Santa_Lucia.txt",
+                "support": "History: stone was quarried for city buildings; generic stone material only."
+              }
+            ],
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/santiagodechile/assets/e13-santiagodechile-k3-rakennuskivi-v1/original.png",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "nativeSHA256Verified": true,
+            "viewedByReviewer": true
+          },
+          "qaReason": "Louhittujen kivien epäsäännölliset murtopinnat ja rakeisuus ovat luontevat."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Louhittu kivi voi päätyä rakennusten materiaaliksi. Havainnekuva.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/santiagodechile/illustration-qa-extra.json",
+        "fileSHA256": "be15a28b6a9bc680560b546bc871d13c5af08776c609c61abefe8082aa20e820",
+        "item": {
+          "slot": "K3",
+          "targetJsonPath": "$.kaupunkilehti[0].nostot[2]",
+          "assetID": "e13-santiagodechile-k3-rakennuskivi-v1",
+          "sha256": "80c759103074b940c73369a1e0262ea70807135d1e504e66fccd08a8b3309105",
+          "verdict": "accepted",
+          "reason": "Louhittujen kivien epäsäännölliset murtopinnat ja rakeisuus ovat luontevat.",
+          "evidence": {
+            "contentSHA256": "530fc708f19698a4d308ff74023b2c369f1e5ca5d78193b10c0b621724323ed0",
+            "visualObservationFi": "Erikokoisia kulmikkaita kivilohkareita ja irtoainesta, vaihteleva väritys ja yhtenäiset varjot. Ei monistuvaa pintaa, tekstiä tai ihmisiä.",
+            "topicMatchFi": "K3 mainitsee rakennuskiven louhinnan. Selite on yleinen materiaalihavainne, ei Santa Lucían todellinen näyte, louhos tai kivilajimääritys.",
+            "sourceEvidence": [
+              {
+                "url": "https://en.wikipedia.org/wiki/Santa_Luc%C3%ADa_Hill",
+                "nasSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/nopea-e13-santiagodechile/Santa_Lucia.txt",
+                "support": "History: stone was quarried for city buildings; generic stone material only."
+              }
+            ],
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/santiagodechile/assets/e13-santiagodechile-k3-rakennuskivi-v1/original.png",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "nativeSHA256Verified": true,
+            "viewedByReviewer": true
+          },
+          "reviewedAt": "2026-10-12T19:36:40.098943+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/santiagodechile/qa.json",
+            "sha256": "326702e12d0706d2715e117a40e2b060bae3d3fd3ce10414241af164e37bd82e"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/santiagodechile/illustration-qa-extra.json",
+            "sha256": "be15a28b6a9bc680560b546bc871d13c5af08776c609c61abefe8082aa20e820"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/santiagodechile/e13-santiagodechile-k3-rakennuskivi-v1-80c759103074.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/santiagodechile/e13-santiagodechile-k3-rakennuskivi-v1-80c759103074.png?t=aacec6f002191b21",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/santiagodechile/e13-santiagodechile-k3-rakennuskivi-v1-80c759103074.png",
+        "sha256": "aacec6f002191b217bfaa713f50436e101b670664ca5b5408dd0cbc52add212a",
+        "bytes": 3188340,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e13-santiagodechile-k3-rakennuskivi-v1",
+        "nativeSHA256": "80c759103074b940c73369a1e0262ea70807135d1e504e66fccd08a8b3309105",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e13/santiagodechile/e13-santiagodechile-k3-rakennuskivi-v1-80c759103074.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e13",
+        "city": "santiagodechile",
+        "slot": "K3",
+        "targetJsonPath": "$.kaupunkilehti[0].nostot[2]",
+        "verifiedAt": "2026-10-12T19:36:53.557022+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e13/santiagodechile/e13-santiagodechile-k3-rakennuskivi-v1-80c759103074.png",
+        "sha256": "aacec6f002191b217bfaa713f50436e101b670664ca5b5408dd0cbc52add212a",
+        "bytes": 3188340,
+        "SHAReadAt": "2026-10-12T19:36:49.283607+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "80c759103074b940c73369a1e0262ea70807135d1e504e66fccd08a8b3309105",
+        "rgbPixelSHA256": "4a0cc659a0ed174da10f16499969438fe612d0364de0f3a2e0a98ced1163e379",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "8056f9b84584c2a4a64d090771a2007208ed8bc3c9863a62f6fa97d43483d4d3",
+      "targetAfterSHA256": "4144a42a0c8cfe59c941d8996f7efdb036c8aa9d16a29b4b1900021845a1c0ea",
+      "contextAfterSHA256": "4144a42a0c8cfe59c941d8996f7efdb036c8aa9d16a29b4b1900021845a1c0ea"
+    },
+    {
+      "era": "e13",
+      "city": "santiagodechile",
+      "slot": "K4",
+      "type": "illustration",
+      "assetID": "e13-santiagodechile-k4-valurauta-v1",
+      "galleryImageID": "e13-santiagodechile-k4-valurauta-v1",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].nostot[3]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "nostot",
+        3
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/santiagodechile/e13-santiagodechile-k4-valurauta-v1-7f86390180e6.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Valurauta voi muodostaa rakennuksen tukirakenteita. Havainnekuva.",
+        "lyhyt": "Valurauta voi muodostaa rakennuksen tukirakenteita. Havainnekuva."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/santiagodechile/e13-santiagodechile-k4-valurauta-v1-7f86390180e6.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Valurauta voi muodostaa rakennuksen tukirakenteita. Havainnekuva.",
+        "lyhyt": "Valurauta voi muodostaa rakennuksen tukirakenteita. Havainnekuva."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "7f86390180e629b967c0e438c1607484a20b3871892db25c6f3952998fbc2e45",
+      "exportSHA256": "87eed50819c9d939592ecd2c6eb631167f226bd82427b815fcbc427750dec2a6",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/santiagodechile/e13-santiagodechile-k4-valurauta-v1-7f86390180e6.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/santiagodechile/e13-santiagodechile-k4-valurauta-v1-7f86390180e6.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e13/santiagodechile/e13-santiagodechile-k4-valurauta-v1-7f86390180e6.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e13/paakaupungit-pilvi/e13/santiagodechile/sisalto.json",
+      "sourceContentSHA256": "8056f9b84584c2a4a64d090771a2007208ed8bc3c9863a62f6fa97d43483d4d3",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "0a92267a534f06944983d186cc5dac5238e0deed032f4c7a7b167968394c3472",
+        "semanticContextSHA256": "0a92267a534f06944983d186cc5dac5238e0deed032f4c7a7b167968394c3472",
+        "subjectTitle": "Skotlantilainen katto Chilen torilla",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Plain functional material parts or natural snow/rock; no named protected architecture, design, artwork or person.",
+          "QA": {
+            "contentSHA256": "530fc708f19698a4d308ff74023b2c369f1e5ca5d78193b10c0b621724323ed0",
+            "visualObservationFi": "Paksu pystytuki ja kaksi sivupalkkia laippoineen, pultteja ja muttereita sekä epätasaista tummaa rautapintaa. Rakenne liittyy yhtenäisesti toisiinsa; ei leimoja, tekstiä, logoja, ihmisiä tai koristeellista nimettyä rakennetta.",
+            "topicMatchFi": "K4 käsittelee kauppahallin valurautaista tukirakennetta. Selite kertoo yleisestä rakennusmateriaalista havainnekuvana eikä kuvaa liitosta aidoksi Glasgow'ssa tehdyksi Santiago-osaksi tai historialliseksi sisätilaksi.",
+            "sourceEvidence": [
+              {
+                "url": "https://en.wikipedia.org/wiki/Mercado_Central_de_Santiago",
+                "nasSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/nopea-e13-santiagodechile/Mercado_Central-correct.txt",
+                "support": "The market has a cast-iron structural roof made in Glasgow; only generic cast-iron material illustrated."
+              }
+            ],
+            "rightsScopeFi": "Yleinen toiminnallinen materiaaliliitos.",
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/santiagodechile/assets/e13-santiagodechile-k4-valurauta-v1/original.png",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "nativeSHA256Verified": true,
+            "viewedByReviewer": true
+          },
+          "qaReason": "Tavallinen pultattu rautarakenteen liitos havainnollistaa K4:n materiaalia; pinta ja liitokset ovat uskottavat eikä Mercado Centralin kattoa jäljennetä."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Valurauta voi muodostaa rakennuksen tukirakenteita. Havainnekuva.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/santiagodechile/illustration-qa-extra.json",
+        "fileSHA256": "be15a28b6a9bc680560b546bc871d13c5af08776c609c61abefe8082aa20e820",
+        "item": {
+          "slot": "K4",
+          "targetJsonPath": "$.kaupunkilehti[0].nostot[3]",
+          "assetID": "e13-santiagodechile-k4-valurauta-v1",
+          "sha256": "7f86390180e629b967c0e438c1607484a20b3871892db25c6f3952998fbc2e45",
+          "verdict": "accepted",
+          "reason": "Tavallinen pultattu rautarakenteen liitos havainnollistaa K4:n materiaalia; pinta ja liitokset ovat uskottavat eikä Mercado Centralin kattoa jäljennetä.",
+          "evidence": {
+            "contentSHA256": "530fc708f19698a4d308ff74023b2c369f1e5ca5d78193b10c0b621724323ed0",
+            "visualObservationFi": "Paksu pystytuki ja kaksi sivupalkkia laippoineen, pultteja ja muttereita sekä epätasaista tummaa rautapintaa. Rakenne liittyy yhtenäisesti toisiinsa; ei leimoja, tekstiä, logoja, ihmisiä tai koristeellista nimettyä rakennetta.",
+            "topicMatchFi": "K4 käsittelee kauppahallin valurautaista tukirakennetta. Selite kertoo yleisestä rakennusmateriaalista havainnekuvana eikä kuvaa liitosta aidoksi Glasgow'ssa tehdyksi Santiago-osaksi tai historialliseksi sisätilaksi.",
+            "sourceEvidence": [
+              {
+                "url": "https://en.wikipedia.org/wiki/Mercado_Central_de_Santiago",
+                "nasSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/nopea-e13-santiagodechile/Mercado_Central-correct.txt",
+                "support": "The market has a cast-iron structural roof made in Glasgow; only generic cast-iron material illustrated."
+              }
+            ],
+            "rightsScopeFi": "Yleinen toiminnallinen materiaaliliitos.",
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/santiagodechile/assets/e13-santiagodechile-k4-valurauta-v1/original.png",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "nativeSHA256Verified": true,
+            "viewedByReviewer": true
+          },
+          "reviewedAt": "2026-10-12T18:40:13.655380+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/santiagodechile/qa.json",
+            "sha256": "326702e12d0706d2715e117a40e2b060bae3d3fd3ce10414241af164e37bd82e"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/santiagodechile/illustration-qa-extra.json",
+            "sha256": "be15a28b6a9bc680560b546bc871d13c5af08776c609c61abefe8082aa20e820"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/santiagodechile/e13-santiagodechile-k4-valurauta-v1-7f86390180e6.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/santiagodechile/e13-santiagodechile-k4-valurauta-v1-7f86390180e6.png?t=87eed50819c9d939",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/santiagodechile/e13-santiagodechile-k4-valurauta-v1-7f86390180e6.png",
+        "sha256": "87eed50819c9d939592ecd2c6eb631167f226bd82427b815fcbc427750dec2a6",
+        "bytes": 2504473,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e13-santiagodechile-k4-valurauta-v1",
+        "nativeSHA256": "7f86390180e629b967c0e438c1607484a20b3871892db25c6f3952998fbc2e45",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e13/santiagodechile/e13-santiagodechile-k4-valurauta-v1-7f86390180e6.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e13",
+        "city": "santiagodechile",
+        "slot": "K4",
+        "targetJsonPath": "$.kaupunkilehti[0].nostot[3]",
+        "verifiedAt": "2026-10-12T18:40:55.218961+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e13/santiagodechile/e13-santiagodechile-k4-valurauta-v1-7f86390180e6.png",
+        "sha256": "87eed50819c9d939592ecd2c6eb631167f226bd82427b815fcbc427750dec2a6",
+        "bytes": 2504473,
+        "SHAReadAt": "2026-10-12T18:40:29.628545+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "7f86390180e629b967c0e438c1607484a20b3871892db25c6f3952998fbc2e45",
+        "rgbPixelSHA256": "81028aaef303c8ea7d775f9d9ceeba87460531f0fe572ded161327cf1af9bafc",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "8056f9b84584c2a4a64d090771a2007208ed8bc3c9863a62f6fa97d43483d4d3",
+      "targetAfterSHA256": "0a92267a534f06944983d186cc5dac5238e0deed032f4c7a7b167968394c3472",
+      "contextAfterSHA256": "0a92267a534f06944983d186cc5dac5238e0deed032f4c7a7b167968394c3472"
+    },
+    {
+      "era": "e13",
+      "city": "santiagodechile",
+      "slot": "L1",
+      "type": "illustration",
+      "assetID": "e13-santiagodechile-l1-kiskot-v1",
+      "galleryImageID": "e13-santiagodechile-l1-kiskot-v1",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[1].nostot[0]",
+      "targetTokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        0
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/santiagodechile/e13-santiagodechile-l1-kiskot-v1-7a3db9e5bc38.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Rautatiekiskot havainnollistavat aseman alkuperäistä käyttöä. Havainnekuva.",
+        "lyhyt": "Rautatiekiskot havainnollistavat aseman alkuperäistä käyttöä. Havainnekuva."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/santiagodechile/e13-santiagodechile-l1-kiskot-v1-7a3db9e5bc38.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Rautatiekiskot havainnollistavat aseman alkuperäistä käyttöä. Havainnekuva.",
+        "lyhyt": "Rautatiekiskot havainnollistavat aseman alkuperäistä käyttöä. Havainnekuva."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "7a3db9e5bc38c4d877577a786965cd421bb160313a1ad78a6583f93acb792211",
+      "exportSHA256": "35839cefc760a6e0afc8e3e577b349f2ff3fad2cc284e6b6f9f6326374d675f5",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/santiagodechile/e13-santiagodechile-l1-kiskot-v1-7a3db9e5bc38.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/santiagodechile/e13-santiagodechile-l1-kiskot-v1-7a3db9e5bc38.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e13/santiagodechile/e13-santiagodechile-l1-kiskot-v1-7a3db9e5bc38.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e13/paakaupungit-pilvi/e13/santiagodechile/sisalto.json",
+      "sourceContentSHA256": "8056f9b84584c2a4a64d090771a2007208ed8bc3c9863a62f6fa97d43483d4d3",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "c0a3bb2a77cc6e97d138dc1e94d3ef9ee2dab917a819a860b5d80ad786d98d48",
+        "semanticContextSHA256": "c0a3bb2a77cc6e97d138dc1e94d3ef9ee2dab917a819a860b5d80ad786d98d48",
+        "subjectTitle": "Asemahalli ilman lähtevää junaa",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Ordinary functional rails/material or plain undecorated clay ware; no named architecture, railway layout, protected cultural pattern, identified person or museum artifact.",
+          "QA": {
+            "contentSHA256": "530fc708f19698a4d308ff74023b2c369f1e5ca5d78193b10c0b621724323ed0",
+            "visualObservationFi": "Kaksi yhtenäistä kiskoa puupölkyillä, metallikiinnikkeitä ja epäsäännöllistä sepeliä. Luonteva puunsyy ja kuluma; ei tekstiä, logoja tai ihmisiä.",
+            "topicMatchFi": "L1 käsittelee entistä rautatieasemaa. Selite on yleinen kiskohavainne, ei Estación Mapochon historiallinen ratakuva.",
+            "sourceEvidence": [
+              {
+                "url": "https://en.wikipedia.org/wiki/Estaci%C3%B3n_Mapocho",
+                "nasSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/nopea-e13-santiagodechile/Mapocho.txt",
+                "support": "A former railway station later used as cultural center; generic railway material only."
+              }
+            ],
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/santiagodechile/assets/e13-santiagodechile-l1-kiskot-v1/original.png",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "nativeSHA256Verified": true,
+            "viewedByReviewer": true
+          },
+          "qaReason": "Kiskot, kiinnikkeet ja pölkyt muodostavat uskottavan rautatierakenteen."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Rautatiekiskot havainnollistavat aseman alkuperäistä käyttöä. Havainnekuva.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/santiagodechile/illustration-qa-extra.json",
+        "fileSHA256": "be15a28b6a9bc680560b546bc871d13c5af08776c609c61abefe8082aa20e820",
+        "item": {
+          "slot": "L1",
+          "targetJsonPath": "$.kaupunkilehti[1].nostot[0]",
+          "assetID": "e13-santiagodechile-l1-kiskot-v1",
+          "sha256": "7a3db9e5bc38c4d877577a786965cd421bb160313a1ad78a6583f93acb792211",
+          "verdict": "accepted",
+          "reason": "Kiskot, kiinnikkeet ja pölkyt muodostavat uskottavan rautatierakenteen.",
+          "evidence": {
+            "contentSHA256": "530fc708f19698a4d308ff74023b2c369f1e5ca5d78193b10c0b621724323ed0",
+            "visualObservationFi": "Kaksi yhtenäistä kiskoa puupölkyillä, metallikiinnikkeitä ja epäsäännöllistä sepeliä. Luonteva puunsyy ja kuluma; ei tekstiä, logoja tai ihmisiä.",
+            "topicMatchFi": "L1 käsittelee entistä rautatieasemaa. Selite on yleinen kiskohavainne, ei Estación Mapochon historiallinen ratakuva.",
+            "sourceEvidence": [
+              {
+                "url": "https://en.wikipedia.org/wiki/Estaci%C3%B3n_Mapocho",
+                "nasSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/nopea-e13-santiagodechile/Mapocho.txt",
+                "support": "A former railway station later used as cultural center; generic railway material only."
+              }
+            ],
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/santiagodechile/assets/e13-santiagodechile-l1-kiskot-v1/original.png",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "nativeSHA256Verified": true,
+            "viewedByReviewer": true
+          },
+          "reviewedAt": "2026-10-12T19:41:46.493499+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/santiagodechile/qa.json",
+            "sha256": "326702e12d0706d2715e117a40e2b060bae3d3fd3ce10414241af164e37bd82e"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/santiagodechile/illustration-qa-extra.json",
+            "sha256": "be15a28b6a9bc680560b546bc871d13c5af08776c609c61abefe8082aa20e820"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/santiagodechile/e13-santiagodechile-l1-kiskot-v1-7a3db9e5bc38.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/santiagodechile/e13-santiagodechile-l1-kiskot-v1-7a3db9e5bc38.png?t=35839cefc760a6e0",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/santiagodechile/e13-santiagodechile-l1-kiskot-v1-7a3db9e5bc38.png",
+        "sha256": "35839cefc760a6e0afc8e3e577b349f2ff3fad2cc284e6b6f9f6326374d675f5",
+        "bytes": 2843081,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e13-santiagodechile-l1-kiskot-v1",
+        "nativeSHA256": "7a3db9e5bc38c4d877577a786965cd421bb160313a1ad78a6583f93acb792211",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e13/santiagodechile/e13-santiagodechile-l1-kiskot-v1-7a3db9e5bc38.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e13",
+        "city": "santiagodechile",
+        "slot": "L1",
+        "targetJsonPath": "$.kaupunkilehti[1].nostot[0]",
+        "verifiedAt": "2026-10-12T19:42:25.483977+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e13/santiagodechile/e13-santiagodechile-l1-kiskot-v1-7a3db9e5bc38.png",
+        "sha256": "35839cefc760a6e0afc8e3e577b349f2ff3fad2cc284e6b6f9f6326374d675f5",
+        "bytes": 2843081,
+        "SHAReadAt": "2026-10-12T19:42:03.241714+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "7a3db9e5bc38c4d877577a786965cd421bb160313a1ad78a6583f93acb792211",
+        "rgbPixelSHA256": "603293e52ef81a66997a7b79adc74ca9f522148dea21d5f0fdde565b80652325",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "8056f9b84584c2a4a64d090771a2007208ed8bc3c9863a62f6fa97d43483d4d3",
+      "targetAfterSHA256": "c0a3bb2a77cc6e97d138dc1e94d3ef9ee2dab917a819a860b5d80ad786d98d48",
+      "contextAfterSHA256": "c0a3bb2a77cc6e97d138dc1e94d3ef9ee2dab917a819a860b5d80ad786d98d48"
+    },
+    {
+      "era": "e13",
+      "city": "santiagodechile",
+      "slot": "L2",
+      "type": "illustration",
+      "assetID": "e13-santiagodechile-l2-taimet-v1",
+      "galleryImageID": "e13-santiagodechile-l2-taimet-v1",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[1].nostot[1]",
+      "targetTokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        1
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/santiagodechile/e13-santiagodechile-l2-taimet-v1-e7c668b5ed8a.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Taimien kasvatuksella tutkitaan kasvien viljelyä. Havainnekuva.",
+        "lyhyt": "Taimien kasvatuksella tutkitaan kasvien viljelyä. Havainnekuva."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/santiagodechile/e13-santiagodechile-l2-taimet-v1-e7c668b5ed8a.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Taimien kasvatuksella tutkitaan kasvien viljelyä. Havainnekuva.",
+        "lyhyt": "Taimien kasvatuksella tutkitaan kasvien viljelyä. Havainnekuva."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "e7c668b5ed8ab6c9856051bf1a4d413d007fe35340b5c3feccd098a7a06cdb87",
+      "exportSHA256": "1be724868e932307435f3e507614b264381304b328a0ad59065665ab545da44b",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/santiagodechile/e13-santiagodechile-l2-taimet-v1-e7c668b5ed8a.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/santiagodechile/e13-santiagodechile-l2-taimet-v1-e7c668b5ed8a.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e13/santiagodechile/e13-santiagodechile-l2-taimet-v1-e7c668b5ed8a.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e13/paakaupungit-pilvi/e13/santiagodechile/sisalto.json",
+      "sourceContentSHA256": "8056f9b84584c2a4a64d090771a2007208ed8bc3c9863a62f6fa97d43483d4d3",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "9d86cce90ec6374fc423afea94af84a715a46695cc7ee80f5fbd1e65ca0d3430",
+        "semanticContextSHA256": "9d86cce90ec6374fc423afea94af84a715a46695cc7ee80f5fbd1e65ca0d3430",
+        "subjectTitle": "Puisto, jossa opeteltiin viljelemään",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Plain ordinary textile tools or natural young plants. No copied ceremonial design, costume, garden layout or artwork. Generic illustration.",
+          "QA": {
+            "contentSHA256": "530fc708f19698a4d308ff74023b2c369f1e5ca5d78193b10c0b621724323ed0",
+            "visualObservationFi": "Viidessä merkitsemättömässä saviruukussa erimuotoisia nuoria kasveja, epätasaista multaa ja pieniä kulumia. Varret liittyvät multaan ja lehdet varsiin yhtenäisesti; ei kloonattuja taimia, lajikylttiä, rakennusta, logoa tai henkilöitä.",
+            "topicMatchFi": "L2 kertoo Quinta Normalin viljely- ja kasvikokeista. Selite on yleinen taimien kasvatuksen havainne, ei vanha valokuva tai puiston historiallinen rekonstruktio.",
+            "sourceEvidence": [
+              {
+                "url": "https://www.memoriachilena.gob.cl/602/w3-article-132542.html",
+                "nasSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/nopea-e13-santiagodechile/Quinta-Memoria.txt",
+                "support": "Quinta Normal originally studied agriculture and plant acclimatisation; generic cultivation illustration."
+              }
+            ],
+            "rightsScopeFi": "Yleinen kasviaihe.",
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/santiagodechile/assets/e13-santiagodechile-l2-taimet-v1/original.png",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "nativeSHA256Verified": true,
+            "viewedByReviewer": true
+          },
+          "qaReason": "Eri kokoiset tavalliset taimet havainnollistavat viljelykokeita; lehtien kiinnittyminen, maa ja ruukut ovat luontevat eikä puiston ulkonäköä keksitä."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Taimien kasvatuksella tutkitaan kasvien viljelyä. Havainnekuva.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/santiagodechile/illustration-qa-extra.json",
+        "fileSHA256": "be15a28b6a9bc680560b546bc871d13c5af08776c609c61abefe8082aa20e820",
+        "item": {
+          "slot": "L2",
+          "targetJsonPath": "$.kaupunkilehti[1].nostot[1]",
+          "assetID": "e13-santiagodechile-l2-taimet-v1",
+          "sha256": "e7c668b5ed8ab6c9856051bf1a4d413d007fe35340b5c3feccd098a7a06cdb87",
+          "verdict": "accepted",
+          "reason": "Eri kokoiset tavalliset taimet havainnollistavat viljelykokeita; lehtien kiinnittyminen, maa ja ruukut ovat luontevat eikä puiston ulkonäköä keksitä.",
+          "evidence": {
+            "contentSHA256": "530fc708f19698a4d308ff74023b2c369f1e5ca5d78193b10c0b621724323ed0",
+            "visualObservationFi": "Viidessä merkitsemättömässä saviruukussa erimuotoisia nuoria kasveja, epätasaista multaa ja pieniä kulumia. Varret liittyvät multaan ja lehdet varsiin yhtenäisesti; ei kloonattuja taimia, lajikylttiä, rakennusta, logoa tai henkilöitä.",
+            "topicMatchFi": "L2 kertoo Quinta Normalin viljely- ja kasvikokeista. Selite on yleinen taimien kasvatuksen havainne, ei vanha valokuva tai puiston historiallinen rekonstruktio.",
+            "sourceEvidence": [
+              {
+                "url": "https://www.memoriachilena.gob.cl/602/w3-article-132542.html",
+                "nasSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/nopea-e13-santiagodechile/Quinta-Memoria.txt",
+                "support": "Quinta Normal originally studied agriculture and plant acclimatisation; generic cultivation illustration."
+              }
+            ],
+            "rightsScopeFi": "Yleinen kasviaihe.",
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/santiagodechile/assets/e13-santiagodechile-l2-taimet-v1/original.png",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "nativeSHA256Verified": true,
+            "viewedByReviewer": true
+          },
+          "reviewedAt": "2026-10-12T18:32:06.642182+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/santiagodechile/qa.json",
+            "sha256": "326702e12d0706d2715e117a40e2b060bae3d3fd3ce10414241af164e37bd82e"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/santiagodechile/illustration-qa-extra.json",
+            "sha256": "be15a28b6a9bc680560b546bc871d13c5af08776c609c61abefe8082aa20e820"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/santiagodechile/e13-santiagodechile-l2-taimet-v1-e7c668b5ed8a.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/santiagodechile/e13-santiagodechile-l2-taimet-v1-e7c668b5ed8a.png?t=1be724868e932307",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/santiagodechile/e13-santiagodechile-l2-taimet-v1-e7c668b5ed8a.png",
+        "sha256": "1be724868e932307435f3e507614b264381304b328a0ad59065665ab545da44b",
+        "bytes": 2555924,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e13-santiagodechile-l2-taimet-v1",
+        "nativeSHA256": "e7c668b5ed8ab6c9856051bf1a4d413d007fe35340b5c3feccd098a7a06cdb87",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e13/santiagodechile/e13-santiagodechile-l2-taimet-v1-e7c668b5ed8a.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e13",
+        "city": "santiagodechile",
+        "slot": "L2",
+        "targetJsonPath": "$.kaupunkilehti[1].nostot[1]",
+        "verifiedAt": "2026-10-12T18:32:50.812025+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e13/santiagodechile/e13-santiagodechile-l2-taimet-v1-e7c668b5ed8a.png",
+        "sha256": "1be724868e932307435f3e507614b264381304b328a0ad59065665ab545da44b",
+        "bytes": 2555924,
+        "SHAReadAt": "2026-10-12T18:32:27.894453+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "e7c668b5ed8ab6c9856051bf1a4d413d007fe35340b5c3feccd098a7a06cdb87",
+        "rgbPixelSHA256": "c64e7eae810ff508b06292a0112a7a739433f9afae12f492eaae3d456f0ad0f0",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "8056f9b84584c2a4a64d090771a2007208ed8bc3c9863a62f6fa97d43483d4d3",
+      "targetAfterSHA256": "9d86cce90ec6374fc423afea94af84a715a46695cc7ee80f5fbd1e65ca0d3430",
+      "contextAfterSHA256": "9d86cce90ec6374fc423afea94af84a715a46695cc7ee80f5fbd1e65ca0d3430"
+    },
+    {
+      "era": "e13",
+      "city": "santiagodechile",
+      "slot": "L3",
+      "type": "illustration",
+      "assetID": "e13-santiagodechile-l3-keramiikka-v1",
+      "galleryImageID": "e13-santiagodechile-l3-keramiikka-v1",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[1].nostot[2]",
+      "targetTokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        2
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/santiagodechile/e13-santiagodechile-l3-keramiikka-v1-571cf4bf4f32.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Keramiikka on savesta valmistettua esineistöä. Havainnekuva.",
+        "lyhyt": "Keramiikka on savesta valmistettua esineistöä. Havainnekuva."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/santiagodechile/e13-santiagodechile-l3-keramiikka-v1-571cf4bf4f32.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Keramiikka on savesta valmistettua esineistöä. Havainnekuva.",
+        "lyhyt": "Keramiikka on savesta valmistettua esineistöä. Havainnekuva."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "571cf4bf4f3289ab4de677ad4fba563db7cdbbd848cf033513cc80e65a2a22b8",
+      "exportSHA256": "5f05fdef795349663b88a2d57f65b2da5d2bb851aca28a9180502d28d3191cd3",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/santiagodechile/e13-santiagodechile-l3-keramiikka-v1-571cf4bf4f32.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/santiagodechile/e13-santiagodechile-l3-keramiikka-v1-571cf4bf4f32.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e13/santiagodechile/e13-santiagodechile-l3-keramiikka-v1-571cf4bf4f32.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e13/paakaupungit-pilvi/e13/santiagodechile/sisalto.json",
+      "sourceContentSHA256": "8056f9b84584c2a4a64d090771a2007208ed8bc3c9863a62f6fa97d43483d4d3",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "999326673c6e0ef15d59ed0ae4f49ea40cd1b019b95539b3a10799058f0a1675",
+        "semanticContextSHA256": "999326673c6e0ef15d59ed0ae4f49ea40cd1b019b95539b3a10799058f0a1675",
+        "subjectTitle": "Tullitalosta Amerikan kulttuureihin",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Ordinary functional rails/material or plain undecorated clay ware; no named architecture, railway layout, protected cultural pattern, identified person or museum artifact.",
+          "QA": {
+            "contentSHA256": "530fc708f19698a4d308ff74023b2c369f1e5ca5d78193b10c0b621724323ed0",
+            "visualObservationFi": "Koristelematon punertava kulho ja epätasainen savikappale. Ehjä astia ja luonnolliset pinnat; ei tekstimerkintöjä, kopioitua kulttuuriteosta tai ihmisiä.",
+            "topicMatchFi": "L3 mainitsee keramiikan. Selite on yleinen materiaalihavainne, ei museon todellinen esine tai tietyn kulttuurin teos.",
+            "sourceEvidence": [
+              {
+                "url": "https://en.wikipedia.org/wiki/Chilean_Museum_of_Pre-Columbian_Art",
+                "nasSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/nopea-e13-santiagodechile/Precolombino.txt",
+                "support": "The collection contains ceramics; generic clay material and ordinary unornamented pottery, no copied cultural artifact."
+              }
+            ],
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/santiagodechile/assets/e13-santiagodechile-l3-keramiikka-v1/original.png",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "nativeSHA256Verified": true,
+            "viewedByReviewer": true
+          },
+          "qaReason": "Tavallinen savikulho ja savi havainnollistavat keramiikan materiaalia luontevasti."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Keramiikka on savesta valmistettua esineistöä. Havainnekuva.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/santiagodechile/illustration-qa-extra.json",
+        "fileSHA256": "be15a28b6a9bc680560b546bc871d13c5af08776c609c61abefe8082aa20e820",
+        "item": {
+          "slot": "L3",
+          "targetJsonPath": "$.kaupunkilehti[1].nostot[2]",
+          "assetID": "e13-santiagodechile-l3-keramiikka-v1",
+          "sha256": "571cf4bf4f3289ab4de677ad4fba563db7cdbbd848cf033513cc80e65a2a22b8",
+          "verdict": "accepted",
+          "reason": "Tavallinen savikulho ja savi havainnollistavat keramiikan materiaalia luontevasti.",
+          "evidence": {
+            "contentSHA256": "530fc708f19698a4d308ff74023b2c369f1e5ca5d78193b10c0b621724323ed0",
+            "visualObservationFi": "Koristelematon punertava kulho ja epätasainen savikappale. Ehjä astia ja luonnolliset pinnat; ei tekstimerkintöjä, kopioitua kulttuuriteosta tai ihmisiä.",
+            "topicMatchFi": "L3 mainitsee keramiikan. Selite on yleinen materiaalihavainne, ei museon todellinen esine tai tietyn kulttuurin teos.",
+            "sourceEvidence": [
+              {
+                "url": "https://en.wikipedia.org/wiki/Chilean_Museum_of_Pre-Columbian_Art",
+                "nasSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/nopea-e13-santiagodechile/Precolombino.txt",
+                "support": "The collection contains ceramics; generic clay material and ordinary unornamented pottery, no copied cultural artifact."
+              }
+            ],
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/santiagodechile/assets/e13-santiagodechile-l3-keramiikka-v1/original.png",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "nativeSHA256Verified": true,
+            "viewedByReviewer": true
+          },
+          "reviewedAt": "2026-10-12T19:42:51.224450+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/santiagodechile/qa.json",
+            "sha256": "326702e12d0706d2715e117a40e2b060bae3d3fd3ce10414241af164e37bd82e"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/santiagodechile/illustration-qa-extra.json",
+            "sha256": "be15a28b6a9bc680560b546bc871d13c5af08776c609c61abefe8082aa20e820"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/santiagodechile/e13-santiagodechile-l3-keramiikka-v1-571cf4bf4f32.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/santiagodechile/e13-santiagodechile-l3-keramiikka-v1-571cf4bf4f32.png?t=5f05fdef79534966",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/santiagodechile/e13-santiagodechile-l3-keramiikka-v1-571cf4bf4f32.png",
+        "sha256": "5f05fdef795349663b88a2d57f65b2da5d2bb851aca28a9180502d28d3191cd3",
+        "bytes": 2317245,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e13-santiagodechile-l3-keramiikka-v1",
+        "nativeSHA256": "571cf4bf4f3289ab4de677ad4fba563db7cdbbd848cf033513cc80e65a2a22b8",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e13/santiagodechile/e13-santiagodechile-l3-keramiikka-v1-571cf4bf4f32.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e13",
+        "city": "santiagodechile",
+        "slot": "L3",
+        "targetJsonPath": "$.kaupunkilehti[1].nostot[2]",
+        "verifiedAt": "2026-10-12T19:43:23.834422+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e13/santiagodechile/e13-santiagodechile-l3-keramiikka-v1-571cf4bf4f32.png",
+        "sha256": "5f05fdef795349663b88a2d57f65b2da5d2bb851aca28a9180502d28d3191cd3",
+        "bytes": 2317245,
+        "SHAReadAt": "2026-10-12T19:43:19.418813+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "571cf4bf4f3289ab4de677ad4fba563db7cdbbd848cf033513cc80e65a2a22b8",
+        "rgbPixelSHA256": "f994e1813fff6a7161512b538cda7f031b195607ddbfdd73a2b56ffd3cffbd48",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "8056f9b84584c2a4a64d090771a2007208ed8bc3c9863a62f6fa97d43483d4d3",
+      "targetAfterSHA256": "999326673c6e0ef15d59ed0ae4f49ea40cd1b019b95539b3a10799058f0a1675",
+      "contextAfterSHA256": "999326673c6e0ef15d59ed0ae4f49ea40cd1b019b95539b3a10799058f0a1675"
+    },
+    {
+      "era": "e13",
+      "city": "santiagodechile",
+      "slot": "L4",
+      "type": "illustration",
+      "assetID": "e13-santiagodechile-l4-kirjat-v1",
+      "galleryImageID": "e13-santiagodechile-l4-kirjat-v1",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
+      "targetTokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        3
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/santiagodechile/e13-santiagodechile-l4-kirjat-v1-856b8f8403bd.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Kirjoja säilytetään ja luetaan kirjastossa. Havainnekuva.",
+        "lyhyt": "Kirjoja säilytetään ja luetaan kirjastossa. Havainnekuva."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/santiagodechile/e13-santiagodechile-l4-kirjat-v1-856b8f8403bd.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Kirjoja säilytetään ja luetaan kirjastossa. Havainnekuva.",
+        "lyhyt": "Kirjoja säilytetään ja luetaan kirjastossa. Havainnekuva."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "856b8f8403bd4ff9d74a6f8e0e91c049d98bcb86ba3d53728da7615ac5cdaac8",
+      "exportSHA256": "569c13b545ce46d519c1a78ca7fe507d469157df23f507ffcaa2a05e3f9d064c",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/santiagodechile/e13-santiagodechile-l4-kirjat-v1-856b8f8403bd.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/santiagodechile/e13-santiagodechile-l4-kirjat-v1-856b8f8403bd.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e13/santiagodechile/e13-santiagodechile-l4-kirjat-v1-856b8f8403bd.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e13/paakaupungit-pilvi/e13/santiagodechile/sisalto.json",
+      "sourceContentSHA256": "8056f9b84584c2a4a64d090771a2007208ed8bc3c9863a62f6fa97d43483d4d3",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "a09cce02c60f73e3065adc98a77d4feac5809d765c90aa785e137b8b75ccf0f2",
+        "semanticContextSHA256": "a09cce02c60f73e3065adc98a77d4feac5809d765c90aa785e137b8b75ccf0f2",
+        "subjectTitle": "Kirjasto on rakennusta vanhempi",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Ordinary blank scale/food or unprinted closed books, no branded product, author likeness, cover artwork, measurement claim or protected room layout.",
+          "QA": {
+            "contentSHA256": "530fc708f19698a4d308ff74023b2c369f1e5ca5d78193b10c0b621724323ed0",
+            "visualObservationFi": "Neljä kirjaa kangas- ja nahkamaisin kansin, tavallinen pöytä, kuppi ja pehmeä tausta. Eri kulumat ja ehjät kirjan muodot; ei otsikkotekstiä, logoja, kansitaidetta tai ihmisiä.",
+            "topicMatchFi": "L4 käsittelee kirjastolaitoksia. Selite on yleinen kirjojen havainne, ei todellisen Santiagon kirjaston sisätila tai kokoelman esine.",
+            "sourceEvidence": [
+              {
+                "url": "https://en.wikipedia.org/wiki/Santiago",
+                "nasSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/nopea-e13-santiagodechile/Santiago.txt",
+                "support": "Museums and libraries: national library institution and its later building are distinct; generic books illustrate library context."
+              }
+            ],
+            "rightsScopeFi": "Yleiset arkiesineet.",
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/santiagodechile/assets/e13-santiagodechile-l4-kirjat-v1/original.png",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "nativeSHA256Verified": true,
+            "viewedByReviewer": true
+          },
+          "qaReason": "Merkitsemättömät kirjat havainnollistavat kirjaston yleisaihetta. Kansi- ja sivumateriaalit ovat luontevat."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Kirjoja säilytetään ja luetaan kirjastossa. Havainnekuva.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/santiagodechile/illustration-qa-extra.json",
+        "fileSHA256": "be15a28b6a9bc680560b546bc871d13c5af08776c609c61abefe8082aa20e820",
+        "item": {
+          "slot": "L4",
+          "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
+          "assetID": "e13-santiagodechile-l4-kirjat-v1",
+          "sha256": "856b8f8403bd4ff9d74a6f8e0e91c049d98bcb86ba3d53728da7615ac5cdaac8",
+          "verdict": "accepted",
+          "reason": "Merkitsemättömät kirjat havainnollistavat kirjaston yleisaihetta. Kansi- ja sivumateriaalit ovat luontevat.",
+          "evidence": {
+            "contentSHA256": "530fc708f19698a4d308ff74023b2c369f1e5ca5d78193b10c0b621724323ed0",
+            "visualObservationFi": "Neljä kirjaa kangas- ja nahkamaisin kansin, tavallinen pöytä, kuppi ja pehmeä tausta. Eri kulumat ja ehjät kirjan muodot; ei otsikkotekstiä, logoja, kansitaidetta tai ihmisiä.",
+            "topicMatchFi": "L4 käsittelee kirjastolaitoksia. Selite on yleinen kirjojen havainne, ei todellisen Santiagon kirjaston sisätila tai kokoelman esine.",
+            "sourceEvidence": [
+              {
+                "url": "https://en.wikipedia.org/wiki/Santiago",
+                "nasSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/nopea-e13-santiagodechile/Santiago.txt",
+                "support": "Museums and libraries: national library institution and its later building are distinct; generic books illustrate library context."
+              }
+            ],
+            "rightsScopeFi": "Yleiset arkiesineet.",
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/santiagodechile/assets/e13-santiagodechile-l4-kirjat-v1/original.png",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "nativeSHA256Verified": true,
+            "viewedByReviewer": true
+          },
+          "reviewedAt": "2026-10-12T19:13:43.154381+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/santiagodechile/qa.json",
+            "sha256": "326702e12d0706d2715e117a40e2b060bae3d3fd3ce10414241af164e37bd82e"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/santiagodechile/illustration-qa-extra.json",
+            "sha256": "be15a28b6a9bc680560b546bc871d13c5af08776c609c61abefe8082aa20e820"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/santiagodechile/e13-santiagodechile-l4-kirjat-v1-856b8f8403bd.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/santiagodechile/e13-santiagodechile-l4-kirjat-v1-856b8f8403bd.png?t=569c13b545ce46d5",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/santiagodechile/e13-santiagodechile-l4-kirjat-v1-856b8f8403bd.png",
+        "sha256": "569c13b545ce46d519c1a78ca7fe507d469157df23f507ffcaa2a05e3f9d064c",
+        "bytes": 2580482,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e13-santiagodechile-l4-kirjat-v1",
+        "nativeSHA256": "856b8f8403bd4ff9d74a6f8e0e91c049d98bcb86ba3d53728da7615ac5cdaac8",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e13/santiagodechile/e13-santiagodechile-l4-kirjat-v1-856b8f8403bd.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e13",
+        "city": "santiagodechile",
+        "slot": "L4",
+        "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
+        "verifiedAt": "2026-10-12T19:13:56.398864+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e13/santiagodechile/e13-santiagodechile-l4-kirjat-v1-856b8f8403bd.png",
+        "sha256": "569c13b545ce46d519c1a78ca7fe507d469157df23f507ffcaa2a05e3f9d064c",
+        "bytes": 2580482,
+        "SHAReadAt": "2026-10-12T19:32:12.760652+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "856b8f8403bd4ff9d74a6f8e0e91c049d98bcb86ba3d53728da7615ac5cdaac8",
+        "rgbPixelSHA256": "89d7a2d45c828c50174a022bf39a42ddf36e8d65277905143a4b82243f500f80",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "8056f9b84584c2a4a64d090771a2007208ed8bc3c9863a62f6fa97d43483d4d3",
+      "targetAfterSHA256": "a09cce02c60f73e3065adc98a77d4feac5809d765c90aa785e137b8b75ccf0f2",
+      "contextAfterSHA256": "a09cce02c60f73e3065adc98a77d4feac5809d765c90aa785e137b8b75ccf0f2"
+    },
+    {
+      "era": "e13",
+      "city": "santiagodechile",
+      "slot": "PHOTO",
+      "type": "commons",
+      "assetID": "capital-cc-e13-santiagodechile-photo-afcc89f35623f930",
+      "galleryImageID": "capital-cc-e13-santiagodechile-photo-afcc89f35623f930",
+      "commonsFile": "Around Santiago (16778744737).jpg",
+      "targetJsonPath": "$.valokuva",
+      "targetTokens": [
+        "valokuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e13/santiagodechile/photo-afcc89f35623f93067d7.jpg",
+        "suora": true,
+        "lahde": "She Paused 4 Thought, Commons (CC BY 2.0)",
+        "selite": "Santiagossa kuvattu puun rungon yksityiskohta, maaliskuu 2015.",
+        "lyhyt": "Santiagossa kuvattu puun rungon yksityiskohta, maaliskuu 2015.",
+        "tiedosto": "Around Santiago (16778744737).jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "She Paused 4 Thought, Commons (CC BY 2.0)",
+        "selite": "Santiagossa kuvattu puun rungon yksityiskohta, maaliskuu 2015.",
+        "lyhyt": "Santiagossa kuvattu puun rungon yksityiskohta, maaliskuu 2015.",
+        "tiedosto": "Around Santiago (16778744737).jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e13/santiagodechile/photo-afcc89f35623f93067d7.jpg",
+        "suora": true,
+        "lahde": "She Paused 4 Thought, Commons (CC BY 2.0)",
+        "selite": "Santiagossa kuvattu puun rungon yksityiskohta, maaliskuu 2015.",
+        "lyhyt": "Santiagossa kuvattu puun rungon yksityiskohta, maaliskuu 2015.",
+        "tiedosto": "Around Santiago (16778744737).jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "afcc89f35623f93067d7533794c9e0761a0213cb6f8c85559a18fd5401790daa",
+      "exportSHA256": "afcc89f35623f93067d7533794c9e0761a0213cb6f8c85559a18fd5401790daa",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e13/santiagodechile/photo-afcc89f35623f93067d7.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e13/santiagodechile/photo-afcc89f35623f93067d7.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/santiagodechile/cc-work/original-4.jpg",
+      "dimensions": [
+        1750,
+        1167
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e13/paakaupungit-pilvi/e13/santiagodechile/sisalto.json",
+      "sourceContentSHA256": "8056f9b84584c2a4a64d090771a2007208ed8bc3c9863a62f6fa97d43483d4d3",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "33faa09116a37fb56c591cb606f763920dd03559b3c15b5e1dcf4a7b7861f23d",
+        "semanticContextSHA256": "33faa09116a37fb56c591cb606f763920dd03559b3c15b5e1dcf4a7b7861f23d",
+        "subjectTitle": "santiagodechile — aito paikkavalokuva",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "She Paused 4 Thought",
+        "license": "CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0/deed.en",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Around_Santiago_(16778744737).jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/1/19/Around_Santiago_%2816778744737%29.jpg",
+        "rightsEvidence": {
+          "selection": "Commonsin Author She Paused 4 Thought, CC BY2.0 ja kuvan Source/Flickr-linkki sekä Description Santiago,Chile luettu alkuperäisestä File-sivusta. Capture12March2015,08:54. Aito valokuvattu luonnollinen puun pinta ei ole tekijäsuojattu rakennus-/taideteos. Paikkasidonnaisuus lähteen kuvauksesta, ei aiemmin generoidun puunkuoren nimeämistä Santiagoksi. Vanha LaMoneda/plaza-kuva säilyy exactQA blocked; tätä eri lähdekuvaa tarjotaan omassaPHOTO-varauksessa uudeksi QA-ehdokkaaksi.",
+          "QA": {
+            "rows": [
+              [
+                "Description Around Santiago (16778744737).jpg",
+                "Santiago, Chile"
+              ],
+              [
+                "Date",
+                "12 March 2015, 08:54"
+              ],
+              [
+                "Source",
+                "Around Santiago"
+              ],
+              [
+                "Author",
+                "She Paused 4 Thought"
+              ]
+            ],
+            "licenses": [
+              "CC BY 2.0"
+            ],
+            "pageDimensions": [
+              1750,
+              1167
+            ],
+            "actualDimensions": [
+              1750,
+              1167
+            ],
+            "pageSha256": "94ddd2c7d3311ba8648516c917e917f33811edce2b26bf65e3b5aafda242f9d3",
+            "nativeSha256": "afcc89f35623f93067d7533794c9e0761a0213cb6f8c85559a18fd5401790daa",
+            "cached": false,
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Around_Santiago_(16778744737).jpg",
+            "sourcePageEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/santiagodechile/qa-evidence/source-photo-17ef45a7249e.html",
+            "viewPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/santiagodechile/cc-work/original-4.jpg",
+            "localMatchesManifestSHA": true,
+            "personallyViewed": true,
+            "sourceMetadataProof": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/santiagodechile/qa-evidence/source-photo-17ef45a7249e.json",
+            "candidateSourceManifest": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/santiagodechile/cc-selection.json",
+            "author": "She Paused 4 Thought",
+            "authorFieldVerified": true,
+            "license": "CC BY 2.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by/2.0/deed.en",
+            "existingGameUseHits": [],
+            "reuseSearchScope": "All existing task clones e04-e14 game JS, sisalto.json and rooli-asset-liite.json; filename/original URL aliases",
+            "sameNativeFileElsewhereInCity": [],
+            "captionFi": "Santiagossa kuvattu puun rungon yksityiskohta, maaliskuu 2015.",
+            "sourceContentSHA256": "530fc708f19698a4d308ff74023b2c369f1e5ca5d78193b10c0b621724323ed0",
+            "rightsEvidence": "Luonnollinen puun pinta; ei ihmisteoskerrosta. Valokuvan kaupallinen CC BY2.0 lisenssi erikseen alkuperäisestä tiedostosivusta."
+          },
+          "qaReason": "Aito luonnollinen puun rungon ja oksan tyven valokuva. Alkuperäisen Description on Santiago, Chile; paikka ei perustu AI:n nimeämiseen tai pelkkään Chile-maaotsikkoon. Rungon keskiosa terävä, reunojen ja taustan syväterävyys luonnollinen. Ei kasvoja, tekstiä, logoja, rakennus-/aukiosuunnitelmaa tai taideteosta. Tekijä She Paused 4 Thought ja CC BY2.0 suoraan Author/Licensing-osasta. 1750×1167 täyttää vähimmäisleveyden. Caption puun rungon yksityiskohta, maaliskuu2015 on tosi; puulajia tai nimettyä puistoa ei arvata. PHOTO saa olla paikkaan sidottu luontoyksityiskohta. Tämä eri tiedoston/SHA:n hyväksyntä täyttää PHOTO-paikan; aiemman LaMoneda-kuvan oikeuseste säilyy sen omassa tietueessa."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Santiagossa kuvattu puun rungon yksityiskohta, maaliskuu 2015.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/santiagodechile/qa.json",
+        "fileSHA256": "326702e12d0706d2715e117a40e2b060bae3d3fd3ce10414241af164e37bd82e",
+        "item": {
+          "slot": "PHOTO",
+          "targetJsonPath": "$.valokuva",
+          "commonsFile": "Around Santiago (16778744737).jpg",
+          "sha256": "afcc89f35623f93067d7533794c9e0761a0213cb6f8c85559a18fd5401790daa",
+          "verdict": "accepted",
+          "reason": "Aito luonnollinen puun rungon ja oksan tyven valokuva. Alkuperäisen Description on Santiago, Chile; paikka ei perustu AI:n nimeämiseen tai pelkkään Chile-maaotsikkoon. Rungon keskiosa terävä, reunojen ja taustan syväterävyys luonnollinen. Ei kasvoja, tekstiä, logoja, rakennus-/aukiosuunnitelmaa tai taideteosta. Tekijä She Paused 4 Thought ja CC BY2.0 suoraan Author/Licensing-osasta. 1750×1167 täyttää vähimmäisleveyden. Caption puun rungon yksityiskohta, maaliskuu2015 on tosi; puulajia tai nimettyä puistoa ei arvata. PHOTO saa olla paikkaan sidottu luontoyksityiskohta. Tämä eri tiedoston/SHA:n hyväksyntä täyttää PHOTO-paikan; aiemman LaMoneda-kuvan oikeuseste säilyy sen omassa tietueessa.",
+          "required": true,
+          "reviewedAt": "2026-10-12T19:43:55.409254+00:00",
+          "evidence": {
+            "rows": [
+              [
+                "Description Around Santiago (16778744737).jpg",
+                "Santiago, Chile"
+              ],
+              [
+                "Date",
+                "12 March 2015, 08:54"
+              ],
+              [
+                "Source",
+                "Around Santiago"
+              ],
+              [
+                "Author",
+                "She Paused 4 Thought"
+              ]
+            ],
+            "licenses": [
+              "CC BY 2.0"
+            ],
+            "pageDimensions": [
+              1750,
+              1167
+            ],
+            "actualDimensions": [
+              1750,
+              1167
+            ],
+            "pageSha256": "94ddd2c7d3311ba8648516c917e917f33811edce2b26bf65e3b5aafda242f9d3",
+            "nativeSha256": "afcc89f35623f93067d7533794c9e0761a0213cb6f8c85559a18fd5401790daa",
+            "cached": false,
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Around_Santiago_(16778744737).jpg",
+            "sourcePageEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/santiagodechile/qa-evidence/source-photo-17ef45a7249e.html",
+            "viewPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/santiagodechile/cc-work/original-4.jpg",
+            "localMatchesManifestSHA": true,
+            "personallyViewed": true,
+            "sourceMetadataProof": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/santiagodechile/qa-evidence/source-photo-17ef45a7249e.json",
+            "candidateSourceManifest": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/santiagodechile/cc-selection.json",
+            "author": "She Paused 4 Thought",
+            "authorFieldVerified": true,
+            "license": "CC BY 2.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by/2.0/deed.en",
+            "existingGameUseHits": [],
+            "reuseSearchScope": "All existing task clones e04-e14 game JS, sisalto.json and rooli-asset-liite.json; filename/original URL aliases",
+            "sameNativeFileElsewhereInCity": [],
+            "captionFi": "Santiagossa kuvattu puun rungon yksityiskohta, maaliskuu 2015.",
+            "sourceContentSHA256": "530fc708f19698a4d308ff74023b2c369f1e5ca5d78193b10c0b621724323ed0",
+            "rightsEvidence": "Luonnollinen puun pinta; ei ihmisteoskerrosta. Valokuvan kaupallinen CC BY2.0 lisenssi erikseen alkuperäisestä tiedostosivusta."
+          }
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/santiagodechile/qa.json",
+            "sha256": "326702e12d0706d2715e117a40e2b060bae3d3fd3ce10414241af164e37bd82e"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/santiagodechile/illustration-qa-extra.json",
+            "sha256": "be15a28b6a9bc680560b546bc871d13c5af08776c609c61abefe8082aa20e820"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e13",
+        "city": "santiagodechile",
+        "slot": "PHOTO",
+        "targetJsonPath": "$.valokuva",
+        "commonsFile": "Around Santiago (16778744737).jpg",
+        "sha256": "afcc89f35623f93067d7533794c9e0761a0213cb6f8c85559a18fd5401790daa",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Around_Santiago_(16778744737).jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/1/19/Around_Santiago_%2816778744737%29.jpg",
+        "author": "She Paused 4 Thought",
+        "license": "CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0/deed.en",
+        "width": 1750,
+        "height": 1167,
+        "originalSHA256": "afcc89f35623f93067d7533794c9e0761a0213cb6f8c85559a18fd5401790daa",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e13/santiagodechile/photo-afcc89f35623f93067d7.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e13/santiagodechile/photo-afcc89f35623f93067d7.jpg",
+        "bytes": 2143706,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T19:44:26.729313+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "Around Santiago (16778744737).jpg",
+        "lahde": "She Paused 4 Thought, Commons (CC BY 2.0)",
+        "selite": "Santiagossa kuvattu puun rungon yksityiskohta, maaliskuu 2015.",
+        "lyhyt": "Santiagossa kuvattu puun rungon yksityiskohta, maaliskuu 2015."
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "She Paused 4 Thought, Commons (CC BY 2.0)",
+        "selite": "Santiagossa kuvattu puun rungon yksityiskohta, maaliskuu 2015.",
+        "lyhyt": "Santiagossa kuvattu puun rungon yksityiskohta, maaliskuu 2015.",
+        "tiedosto": "Around Santiago (16778744737).jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "8056f9b84584c2a4a64d090771a2007208ed8bc3c9863a62f6fa97d43483d4d3",
+      "targetAfterSHA256": "33faa09116a37fb56c591cb606f763920dd03559b3c15b5e1dcf4a7b7861f23d",
+      "contextAfterSHA256": "33faa09116a37fb56c591cb606f763920dd03559b3c15b5e1dcf4a7b7861f23d"
+    }
+  ],
+  "runtimeIntegrationPending": true,
+  "ownerAcceptedNotImpliedByAuthorization": true,
+  "gameIntegrated": false
+}

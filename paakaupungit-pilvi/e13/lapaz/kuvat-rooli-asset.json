@@ -1,0 +1,2555 @@
+{
+  "schemaVersion": "capital-city-role-assets/v1",
+  "era": "e13",
+  "city": "lapaz",
+  "authorization": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+  "sourceContentAfterSHA256": "ec7f6260ffc1e88359e114a885253fbf2b8fd03315253eb281964b5e7b701a1a",
+  "assets": [
+    {
+      "era": "e13",
+      "city": "lapaz",
+      "slot": "TRAVELER",
+      "type": "illustration",
+      "assetID": "e13-lapaz-traveler-api-morado-v1",
+      "galleryImageID": "e13-lapaz-traveler-api-morado-v1",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "matkailijalle",
+        "kuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/lapaz/e13-lapaz-traveler-api-morado-v1-07d83a4ec28d.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Api morado valmistetaan violetista maissista. Havainnekuva.",
+        "lyhyt": "Api morado valmistetaan violetista maissista. Havainnekuva."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/lapaz/e13-lapaz-traveler-api-morado-v1-07d83a4ec28d.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Api morado valmistetaan violetista maissista. Havainnekuva.",
+        "lyhyt": "Api morado valmistetaan violetista maissista. Havainnekuva."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "07d83a4ec28d6241225bd1a9cd85226bb4f6fa815cc2bf6aeefe442dfc6c57cf",
+      "exportSHA256": "e1ae3c23b36c393e531a93a2511044333a7c1242f9acc995690f0b593e3eb229",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/lapaz/e13-lapaz-traveler-api-morado-v1-07d83a4ec28d.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/lapaz/e13-lapaz-traveler-api-morado-v1-07d83a4ec28d.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e13/lapaz/e13-lapaz-traveler-api-morado-v1-07d83a4ec28d.png",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e13/paakaupungit-pilvi/e13/lapaz/sisalto.json",
+      "sourceContentSHA256": "ec7f6260ffc1e88359e114a885253fbf2b8fd03315253eb281964b5e7b701a1a",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "9c27b7801c0589f946f03b5806c1bb676657bff9ffba6b84d858c4ba3ad110a9",
+        "subjectTitle": "Matkailijalle",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Generic drink and ordinary unbranded cup/glass; no protected artwork, human likeness, logo or real place claim.",
+          "QA": {
+            "contentSHA256": "7360a6759c548c8ae04627c8190734ed1bd4746369769467032a64a63739d543",
+            "visualObservationFi": "Tavallinen vaalea keraaminen kuppi täynnä tummanviolettia hieman sakeaa juomaa, taustalla violettia maissia. Ehjä kahva, luonteva nestepinta ja pehmeä valo; ei koristeita, tekstiä, logoja, käsiä tai tunnistettavaa kahvilaa.",
+            "topicMatchFi": "La Pazin opasjakso ja faktapohja mainitsevat makean maissista valmistetun api-juoman. Manifestin tallennettu Api-lähde täsmentää api moradon violetin maissin. Selite nimeää havainnekuvan, ei todellista myyntipaikkaa.",
+            "sourceEvidence": [
+              {
+                "url": "https://en.wikipedia.org/wiki/Api_(beverage)",
+                "nasSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/lapaz/illustration-work/api-correct.txt",
+                "support": "Api morado made with purple corn and generally served hot; La Paz guide supports api drink topic."
+              }
+            ],
+            "sourceEvidenceVerified": [
+              "e13/paakaupungit-pilvi/e13/lapaz/faktapohja.md:45",
+              "valiaikainen/nopea-e13-lapaz/La_Paz-guide.txt:519"
+            ],
+            "aspectRatio": 0.6666666666666666,
+            "rightsScopeFi": "Yleinen ruoka ja astia.",
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/lapaz/assets/e13-lapaz-traveler-api-morado-v1/original.png",
+            "nativeDimensions": [
+              1024,
+              1536
+            ],
+            "nativeSHA256Verified": true,
+            "viewedByReviewer": true
+          },
+          "qaReason": "Api morado -pystykuva vastaa juoma-aihetta ja native-suhde 0,667 täyttää TRAVELER-vaatimuksen. Kuppi, juomapinta ja maissi näyttävät luontevilta."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Api morado valmistetaan violetista maissista. Havainnekuva.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/lapaz/illustration-qa-extra.json",
+        "fileSHA256": "61cbc9d085d93bcb312532248176f7e93ffc7aa30f632916320733170bf77d9f",
+        "item": {
+          "slot": "TRAVELER",
+          "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
+          "assetID": "e13-lapaz-traveler-api-morado-v1",
+          "sha256": "07d83a4ec28d6241225bd1a9cd85226bb4f6fa815cc2bf6aeefe442dfc6c57cf",
+          "verdict": "accepted",
+          "reason": "Api morado -pystykuva vastaa juoma-aihetta ja native-suhde 0,667 täyttää TRAVELER-vaatimuksen. Kuppi, juomapinta ja maissi näyttävät luontevilta.",
+          "evidence": {
+            "contentSHA256": "7360a6759c548c8ae04627c8190734ed1bd4746369769467032a64a63739d543",
+            "visualObservationFi": "Tavallinen vaalea keraaminen kuppi täynnä tummanviolettia hieman sakeaa juomaa, taustalla violettia maissia. Ehjä kahva, luonteva nestepinta ja pehmeä valo; ei koristeita, tekstiä, logoja, käsiä tai tunnistettavaa kahvilaa.",
+            "topicMatchFi": "La Pazin opasjakso ja faktapohja mainitsevat makean maissista valmistetun api-juoman. Manifestin tallennettu Api-lähde täsmentää api moradon violetin maissin. Selite nimeää havainnekuvan, ei todellista myyntipaikkaa.",
+            "sourceEvidence": [
+              {
+                "url": "https://en.wikipedia.org/wiki/Api_(beverage)",
+                "nasSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/lapaz/illustration-work/api-correct.txt",
+                "support": "Api morado made with purple corn and generally served hot; La Paz guide supports api drink topic."
+              }
+            ],
+            "sourceEvidenceVerified": [
+              "e13/paakaupungit-pilvi/e13/lapaz/faktapohja.md:45",
+              "valiaikainen/nopea-e13-lapaz/La_Paz-guide.txt:519"
+            ],
+            "aspectRatio": 0.6666666666666666,
+            "rightsScopeFi": "Yleinen ruoka ja astia.",
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/lapaz/assets/e13-lapaz-traveler-api-morado-v1/original.png",
+            "nativeDimensions": [
+              1024,
+              1536
+            ],
+            "nativeSHA256Verified": true,
+            "viewedByReviewer": true
+          },
+          "reviewedAt": "2026-10-12T18:44:23.582221+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/lapaz/qa.json",
+            "sha256": "8b2cf05fe6041e60da9cc4ab993d6f5575c390f95672f46319759f2edd41c960"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/lapaz/illustration-qa-extra.json",
+            "sha256": "61cbc9d085d93bcb312532248176f7e93ffc7aa30f632916320733170bf77d9f"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/lapaz/e13-lapaz-traveler-api-morado-v1-07d83a4ec28d.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/lapaz/e13-lapaz-traveler-api-morado-v1-07d83a4ec28d.png?t=e1ae3c23b36c393e",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/lapaz/e13-lapaz-traveler-api-morado-v1-07d83a4ec28d.png",
+        "sha256": "e1ae3c23b36c393e531a93a2511044333a7c1242f9acc995690f0b593e3eb229",
+        "bytes": 2293025,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e13-lapaz-traveler-api-morado-v1",
+        "nativeSHA256": "07d83a4ec28d6241225bd1a9cd85226bb4f6fa815cc2bf6aeefe442dfc6c57cf",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e13/lapaz/e13-lapaz-traveler-api-morado-v1-07d83a4ec28d.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e13",
+        "city": "lapaz",
+        "slot": "TRAVELER",
+        "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
+        "verifiedAt": "2026-10-12T18:44:33.889696+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e13/lapaz/e13-lapaz-traveler-api-morado-v1-07d83a4ec28d.png",
+        "sha256": "e1ae3c23b36c393e531a93a2511044333a7c1242f9acc995690f0b593e3eb229",
+        "bytes": 2293025,
+        "SHAReadAt": "2026-10-12T18:44:28.956387+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1024,
+        "height": 1536,
+        "pixelWidth": 1024,
+        "pixelHeight": 1536,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "07d83a4ec28d6241225bd1a9cd85226bb4f6fa815cc2bf6aeefe442dfc6c57cf",
+        "rgbPixelSHA256": "f535b3ff4e20c1a072c3155b2214a8537f80b074e5a585e5b69f4bbb5c8813be",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "ec7f6260ffc1e88359e114a885253fbf2b8fd03315253eb281964b5e7b701a1a",
+      "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+      "contextAfterSHA256": "9c27b7801c0589f946f03b5806c1bb676657bff9ffba6b84d858c4ba3ad110a9"
+    },
+    {
+      "era": "e13",
+      "city": "lapaz",
+      "slot": "O4",
+      "type": "illustration",
+      "assetID": "e13-lapaz-o4-avokadovoileipa-v1",
+      "galleryImageID": "e13-lapaz-o4-avokadovoileipa-v1",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "matkailijalle",
+        "artikkeli",
+        "jaksot",
+        3,
+        "kuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/lapaz/e13-lapaz-o4-avokadovoileipa-v1-9fd20ff1ad6e.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Avokadovoileipä kuuluu La Pazissa kuvattuun katuruokaan. Havainnekuva.",
+        "lyhyt": "Avokadovoileipä kuuluu La Pazissa kuvattuun katuruokaan. Havainnekuva."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/lapaz/e13-lapaz-o4-avokadovoileipa-v1-9fd20ff1ad6e.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Avokadovoileipä kuuluu La Pazissa kuvattuun katuruokaan. Havainnekuva.",
+        "lyhyt": "Avokadovoileipä kuuluu La Pazissa kuvattuun katuruokaan. Havainnekuva."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "9fd20ff1ad6e1c1ef364510791133ab0745b904c39fc042d8ef2e98667e8be0f",
+      "exportSHA256": "f726a6983810e690f62951f517471b2ab743db0610098e5adc1878f5c4f837f9",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/lapaz/e13-lapaz-o4-avokadovoileipa-v1-9fd20ff1ad6e.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/lapaz/e13-lapaz-o4-avokadovoileipa-v1-9fd20ff1ad6e.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e13/lapaz/e13-lapaz-o4-avokadovoileipa-v1-9fd20ff1ad6e.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e13/paakaupungit-pilvi/e13/lapaz/sisalto.json",
+      "sourceContentSHA256": "ec7f6260ffc1e88359e114a885253fbf2b8fd03315253eb281964b5e7b701a1a",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "4e23f02110d0ae23dd601968e6a1c9b36edf7c954f2bddb91b12878bb6e79caa",
+        "subjectTitle": "Mitä täällä syödään",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Generic natural subject/ordinary food without people, art, architecture, logos or protected designs; illustration, no real-place photograph or actual animal sighting claim.",
+          "QA": {
+            "contentSHA256": "7360a6759c548c8ae04627c8190734ed1bd4746369769467032a64a63739d543",
+            "visualObservationFi": "Kaksi leipäviipaletta ja epätasaisia vihreitä avokadoviipaleita keraamisella lautasella; uskottava leivän huokoinen muru, kuori ja avokadon pinta. Ei ihmisiä, käsiä, merkintöjä, logoja, kehystä tai tunnistettavaa paikkaa.",
+            "topicMatchFi": "Ajantasainen jakso 'Mitä täällä syödään' mainitsee La Pazin avokadovoileivät. Faktapohja ja manifestin Wikivoyage-lähde tukevat aihetta. Selite ei väitä kuvaa todelliseksi La Pazin katukojun valokuvaksi.",
+            "sourceEvidenceVerified": [
+              "e13/paakaupungit-pilvi/e13/lapaz/faktapohja.md",
+              "e13/paakaupungit-pilvi/e13/lapaz/sisalto.json"
+            ],
+            "rightsScopeFi": "Yleinen ruoka-aihe ilman nimettyä nykyteosta, rakennusta tai tunnistettavaa henkilöä.",
+            "colorMetadataFi": "Native PNG; ei erillistä ICC/sRGB-varmennusta tässä arvioinnissa.",
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/lapaz/assets/e13-lapaz-o4-avokadovoileipa-v1/original.png",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "nativeSHA256Verified": true,
+            "viewedByReviewer": true
+          },
+          "qaReason": "Avokadovoileipä vastaa nykyisen opasjakson aihetta, materiaalit ovat luonnolliset ja kuvateksti ilmoittaa havainnekuvan rehellisesti."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Avokadovoileipä kuuluu La Pazissa kuvattuun katuruokaan. Havainnekuva.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/lapaz/illustration-qa-extra.json",
+        "fileSHA256": "61cbc9d085d93bcb312532248176f7e93ffc7aa30f632916320733170bf77d9f",
+        "item": {
+          "slot": "O4",
+          "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+          "assetID": "e13-lapaz-o4-avokadovoileipa-v1",
+          "sha256": "9fd20ff1ad6e1c1ef364510791133ab0745b904c39fc042d8ef2e98667e8be0f",
+          "verdict": "accepted",
+          "reason": "Avokadovoileipä vastaa nykyisen opasjakson aihetta, materiaalit ovat luonnolliset ja kuvateksti ilmoittaa havainnekuvan rehellisesti.",
+          "evidence": {
+            "contentSHA256": "7360a6759c548c8ae04627c8190734ed1bd4746369769467032a64a63739d543",
+            "visualObservationFi": "Kaksi leipäviipaletta ja epätasaisia vihreitä avokadoviipaleita keraamisella lautasella; uskottava leivän huokoinen muru, kuori ja avokadon pinta. Ei ihmisiä, käsiä, merkintöjä, logoja, kehystä tai tunnistettavaa paikkaa.",
+            "topicMatchFi": "Ajantasainen jakso 'Mitä täällä syödään' mainitsee La Pazin avokadovoileivät. Faktapohja ja manifestin Wikivoyage-lähde tukevat aihetta. Selite ei väitä kuvaa todelliseksi La Pazin katukojun valokuvaksi.",
+            "sourceEvidenceVerified": [
+              "e13/paakaupungit-pilvi/e13/lapaz/faktapohja.md",
+              "e13/paakaupungit-pilvi/e13/lapaz/sisalto.json"
+            ],
+            "rightsScopeFi": "Yleinen ruoka-aihe ilman nimettyä nykyteosta, rakennusta tai tunnistettavaa henkilöä.",
+            "colorMetadataFi": "Native PNG; ei erillistä ICC/sRGB-varmennusta tässä arvioinnissa.",
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/lapaz/assets/e13-lapaz-o4-avokadovoileipa-v1/original.png",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "nativeSHA256Verified": true,
+            "viewedByReviewer": true
+          },
+          "reviewedAt": "2026-10-12T18:14:48.432360+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/lapaz/qa.json",
+            "sha256": "8b2cf05fe6041e60da9cc4ab993d6f5575c390f95672f46319759f2edd41c960"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/lapaz/illustration-qa-extra.json",
+            "sha256": "61cbc9d085d93bcb312532248176f7e93ffc7aa30f632916320733170bf77d9f"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/lapaz/e13-lapaz-o4-avokadovoileipa-v1-9fd20ff1ad6e.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/lapaz/e13-lapaz-o4-avokadovoileipa-v1-9fd20ff1ad6e.png?t=f726a6983810e690",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/lapaz/e13-lapaz-o4-avokadovoileipa-v1-9fd20ff1ad6e.png",
+        "sha256": "f726a6983810e690f62951f517471b2ab743db0610098e5adc1878f5c4f837f9",
+        "bytes": 2202718,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e13-lapaz-o4-avokadovoileipa-v1",
+        "nativeSHA256": "9fd20ff1ad6e1c1ef364510791133ab0745b904c39fc042d8ef2e98667e8be0f",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e13/lapaz/e13-lapaz-o4-avokadovoileipa-v1-9fd20ff1ad6e.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e13",
+        "city": "lapaz",
+        "slot": "O4",
+        "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+        "verifiedAt": "2026-10-12T18:16:34.769930+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e13/lapaz/e13-lapaz-o4-avokadovoileipa-v1-9fd20ff1ad6e.png",
+        "sha256": "f726a6983810e690f62951f517471b2ab743db0610098e5adc1878f5c4f837f9",
+        "bytes": 2202718,
+        "SHAReadAt": "2026-10-12T18:30:03.801617+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "9fd20ff1ad6e1c1ef364510791133ab0745b904c39fc042d8ef2e98667e8be0f",
+        "rgbPixelSHA256": "c521235d7f5625ffda7f58daa69c9d5268625e6e65c71f8142d1bbbf55f9b927",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "ec7f6260ffc1e88359e114a885253fbf2b8fd03315253eb281964b5e7b701a1a",
+      "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+      "contextAfterSHA256": "4e23f02110d0ae23dd601968e6a1c9b36edf7c954f2bddb91b12878bb6e79caa"
+    },
+    {
+      "era": "e13",
+      "city": "lapaz",
+      "slot": "K3",
+      "type": "illustration",
+      "assetID": "e13-lapaz-k3-lumikerros-v1",
+      "galleryImageID": "e13-lapaz-k3-lumikerros-v1",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].nostot[2]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "nostot",
+        2
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/lapaz/e13-lapaz-k3-lumikerros-v1-11c4452309a2.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Paksu lumikerros voi kuormittaa rakennuksia. Havainnekuva.",
+        "lyhyt": "Paksu lumikerros voi kuormittaa rakennuksia. Havainnekuva."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/lapaz/e13-lapaz-k3-lumikerros-v1-11c4452309a2.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Paksu lumikerros voi kuormittaa rakennuksia. Havainnekuva.",
+        "lyhyt": "Paksu lumikerros voi kuormittaa rakennuksia. Havainnekuva."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "11c4452309a2090aab78d6a33fc99ada5b775a9db84573b064a0f2be75911c2d",
+      "exportSHA256": "5442ad7ccbef6200aba51e4408f3c63b2fa74879ae4d09ce7a86fc55c1aa9c52",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/lapaz/e13-lapaz-k3-lumikerros-v1-11c4452309a2.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/lapaz/e13-lapaz-k3-lumikerros-v1-11c4452309a2.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e13/lapaz/e13-lapaz-k3-lumikerros-v1-11c4452309a2.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e13/paakaupungit-pilvi/e13/lapaz/sisalto.json",
+      "sourceContentSHA256": "ec7f6260ffc1e88359e114a885253fbf2b8fd03315253eb281964b5e7b701a1a",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "ff05a92e8a9708a58f6d0d4bd5c32f05be497f317f3133902bc4f26c4968c973",
+        "semanticContextSHA256": "ff05a92e8a9708a58f6d0d4bd5c32f05be497f317f3133902bc4f26c4968c973",
+        "subjectTitle": "Lumi kaatoi edellisen kirkon",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Plain functional material parts or natural snow/rock; no named protected architecture, design, artwork or person.",
+          "QA": {
+            "contentSHA256": "7360a6759c548c8ae04627c8190734ed1bd4746369769467032a64a63739d543",
+            "visualObservationFi": "Vaalea rakeinen lumikerros tumman kivireunan yllä, erikokoisia kasaumia, hienoja kiteitä ja vaihteleva reuna. Optisesti yhtenäinen päivänvalo, ei kopioiduksi tunnistettavaa pintakuviota, rakennusmaamerkkiä, henkilöitä tai tekstiä.",
+            "topicMatchFi": "K3 kertoo runsaasta lumesta edellisen kirkon sortuman taustalla. Selite on yleinen lumen kuorman havainne, ei La Pazin nykyilmasto, todellinen kirkon kuva tai vuoden 1873 näkymä.",
+            "sourceEvidence": [
+              {
+                "url": "https://en.wikipedia.org/wiki/Basilica_of_San_Francisco,_La_Paz",
+                "nasSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/nopea-e13-lapaz/San_Francisco.txt",
+                "support": "Earlier church collapsed after heavy snowfall; general snow illustration without recreating the church/event."
+              }
+            ],
+            "rightsScopeFi": "Yleinen luonnonmateriaali.",
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/lapaz/assets/e13-lapaz-k3-lumikerros-v1/original.png",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "nativeSHA256Verified": true,
+            "viewedByReviewer": true
+          },
+          "qaReason": "Paksu luonnollisesti epätasainen lumikerros havainnollistaa kuormittavaa materiaalia ilman San Franciscon kirkon tai historiallisen sortuman rekonstruktiota."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Paksu lumikerros voi kuormittaa rakennuksia. Havainnekuva.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/lapaz/illustration-qa-extra.json",
+        "fileSHA256": "61cbc9d085d93bcb312532248176f7e93ffc7aa30f632916320733170bf77d9f",
+        "item": {
+          "slot": "K3",
+          "targetJsonPath": "$.kaupunkilehti[0].nostot[2]",
+          "assetID": "e13-lapaz-k3-lumikerros-v1",
+          "sha256": "11c4452309a2090aab78d6a33fc99ada5b775a9db84573b064a0f2be75911c2d",
+          "verdict": "accepted",
+          "reason": "Paksu luonnollisesti epätasainen lumikerros havainnollistaa kuormittavaa materiaalia ilman San Franciscon kirkon tai historiallisen sortuman rekonstruktiota.",
+          "evidence": {
+            "contentSHA256": "7360a6759c548c8ae04627c8190734ed1bd4746369769467032a64a63739d543",
+            "visualObservationFi": "Vaalea rakeinen lumikerros tumman kivireunan yllä, erikokoisia kasaumia, hienoja kiteitä ja vaihteleva reuna. Optisesti yhtenäinen päivänvalo, ei kopioiduksi tunnistettavaa pintakuviota, rakennusmaamerkkiä, henkilöitä tai tekstiä.",
+            "topicMatchFi": "K3 kertoo runsaasta lumesta edellisen kirkon sortuman taustalla. Selite on yleinen lumen kuorman havainne, ei La Pazin nykyilmasto, todellinen kirkon kuva tai vuoden 1873 näkymä.",
+            "sourceEvidence": [
+              {
+                "url": "https://en.wikipedia.org/wiki/Basilica_of_San_Francisco,_La_Paz",
+                "nasSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/nopea-e13-lapaz/San_Francisco.txt",
+                "support": "Earlier church collapsed after heavy snowfall; general snow illustration without recreating the church/event."
+              }
+            ],
+            "rightsScopeFi": "Yleinen luonnonmateriaali.",
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/lapaz/assets/e13-lapaz-k3-lumikerros-v1/original.png",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "nativeSHA256Verified": true,
+            "viewedByReviewer": true
+          },
+          "reviewedAt": "2026-10-12T18:39:36.549032+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/lapaz/qa.json",
+            "sha256": "8b2cf05fe6041e60da9cc4ab993d6f5575c390f95672f46319759f2edd41c960"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/lapaz/illustration-qa-extra.json",
+            "sha256": "61cbc9d085d93bcb312532248176f7e93ffc7aa30f632916320733170bf77d9f"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/lapaz/e13-lapaz-k3-lumikerros-v1-11c4452309a2.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/lapaz/e13-lapaz-k3-lumikerros-v1-11c4452309a2.png?t=5442ad7ccbef6200",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/lapaz/e13-lapaz-k3-lumikerros-v1-11c4452309a2.png",
+        "sha256": "5442ad7ccbef6200aba51e4408f3c63b2fa74879ae4d09ce7a86fc55c1aa9c52",
+        "bytes": 2285442,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e13-lapaz-k3-lumikerros-v1",
+        "nativeSHA256": "11c4452309a2090aab78d6a33fc99ada5b775a9db84573b064a0f2be75911c2d",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e13/lapaz/e13-lapaz-k3-lumikerros-v1-11c4452309a2.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e13",
+        "city": "lapaz",
+        "slot": "K3",
+        "targetJsonPath": "$.kaupunkilehti[0].nostot[2]",
+        "verifiedAt": "2026-10-12T18:39:52.668792+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e13/lapaz/e13-lapaz-k3-lumikerros-v1-11c4452309a2.png",
+        "sha256": "5442ad7ccbef6200aba51e4408f3c63b2fa74879ae4d09ce7a86fc55c1aa9c52",
+        "bytes": 2285442,
+        "SHAReadAt": "2026-10-12T18:39:44.125293+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "11c4452309a2090aab78d6a33fc99ada5b775a9db84573b064a0f2be75911c2d",
+        "rgbPixelSHA256": "c7d3a4d2c85981c6bcdc7ac12bdb194e98cf89fe6926209dc369e619a172a215",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "ec7f6260ffc1e88359e114a885253fbf2b8fd03315253eb281964b5e7b701a1a",
+      "targetAfterSHA256": "ff05a92e8a9708a58f6d0d4bd5c32f05be497f317f3133902bc4f26c4968c973",
+      "contextAfterSHA256": "ff05a92e8a9708a58f6d0d4bd5c32f05be497f317f3133902bc4f26c4968c973"
+    },
+    {
+      "era": "e13",
+      "city": "lapaz",
+      "slot": "K4",
+      "type": "illustration",
+      "assetID": "e13-lapaz-k4-metallimateriaalit-v1",
+      "galleryImageID": "e13-lapaz-k4-metallimateriaalit-v1",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].nostot[3]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "nostot",
+        3
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/lapaz/e13-lapaz-k4-metallimateriaalit-v1-3f2be199838a.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Kulta ja hopea ovat metallityön materiaaleja. Havainnekuva.",
+        "lyhyt": "Kulta ja hopea ovat metallityön materiaaleja. Havainnekuva."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/lapaz/e13-lapaz-k4-metallimateriaalit-v1-3f2be199838a.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Kulta ja hopea ovat metallityön materiaaleja. Havainnekuva.",
+        "lyhyt": "Kulta ja hopea ovat metallityön materiaaleja. Havainnekuva."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "3f2be199838af0162b9b55863a68eeff80d1369cf35f7d3eea948441af426bf1",
+      "exportSHA256": "b90fd0010581f4209f8d6f0ee70427aee305f996aa1b09e0bb497f78b52e5781",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/lapaz/e13-lapaz-k4-metallimateriaalit-v1-3f2be199838a.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/lapaz/e13-lapaz-k4-metallimateriaalit-v1-3f2be199838a.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e13/lapaz/e13-lapaz-k4-metallimateriaalit-v1-3f2be199838a.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e13/paakaupungit-pilvi/e13/lapaz/sisalto.json",
+      "sourceContentSHA256": "ec7f6260ffc1e88359e114a885253fbf2b8fd03315253eb281964b5e7b701a1a",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "6147ecd59563a04238cbd99e162063063093e03885435196bb040de4515dd2fa",
+        "semanticContextSHA256": "6147ecd59563a04238cbd99e162063063093e03885435196bb040de4515dd2fa",
+        "subjectTitle": "Vanha katu, monta aikakautta",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Ordinary instrument functional strings and frets with unique body/headstock out of frame, or unornamented plain metal. No protected design, archaeological cultural motif, person or real museum object.",
+          "QA": {
+            "contentSHA256": "7360a6759c548c8ae04627c8190734ed1bd4746369769467032a64a63739d543",
+            "visualObservationFi": "Kaksi epäsäännöllistä metallikappaletta, yhtenäiset heijastukset ja varjot. Ei kaiverrusta, logoa, taideteosta tai ihmisiä.",
+            "topicMatchFi": "Selite kertoo metallimateriaalista havainnekuvana; kappaleita ei nimetä La Pazin museoesineiksi, mineraalinäytteiksi tai alkuperäisteoksiksi.",
+            "sourceEvidence": [
+              {
+                "url": "https://en.wikipedia.org/wiki/La_Paz",
+                "nasSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/nopea-e13-lapaz/La_Paz.txt",
+                "support": "Museo del Oro: pre-Conquest works made of gold, silver and copper; generic metal material rather than copying any museum work."
+              }
+            ],
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/lapaz/assets/e13-lapaz-k4-metallimateriaalit-v1/original.png",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "nativeSHA256Verified": true,
+            "viewedByReviewer": true
+          },
+          "qaReason": "Kullan- ja hopeanväriset metallikappaleet havainnollistavat K4:n materiaaleja luontevasti."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Kulta ja hopea ovat metallityön materiaaleja. Havainnekuva.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/lapaz/illustration-qa-extra.json",
+        "fileSHA256": "61cbc9d085d93bcb312532248176f7e93ffc7aa30f632916320733170bf77d9f",
+        "item": {
+          "slot": "K4",
+          "targetJsonPath": "$.kaupunkilehti[0].nostot[3]",
+          "assetID": "e13-lapaz-k4-metallimateriaalit-v1",
+          "sha256": "3f2be199838af0162b9b55863a68eeff80d1369cf35f7d3eea948441af426bf1",
+          "verdict": "accepted",
+          "reason": "Kullan- ja hopeanväriset metallikappaleet havainnollistavat K4:n materiaaleja luontevasti.",
+          "evidence": {
+            "contentSHA256": "7360a6759c548c8ae04627c8190734ed1bd4746369769467032a64a63739d543",
+            "visualObservationFi": "Kaksi epäsäännöllistä metallikappaletta, yhtenäiset heijastukset ja varjot. Ei kaiverrusta, logoa, taideteosta tai ihmisiä.",
+            "topicMatchFi": "Selite kertoo metallimateriaalista havainnekuvana; kappaleita ei nimetä La Pazin museoesineiksi, mineraalinäytteiksi tai alkuperäisteoksiksi.",
+            "sourceEvidence": [
+              {
+                "url": "https://en.wikipedia.org/wiki/La_Paz",
+                "nasSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/nopea-e13-lapaz/La_Paz.txt",
+                "support": "Museo del Oro: pre-Conquest works made of gold, silver and copper; generic metal material rather than copying any museum work."
+              }
+            ],
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/lapaz/assets/e13-lapaz-k4-metallimateriaalit-v1/original.png",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "nativeSHA256Verified": true,
+            "viewedByReviewer": true
+          },
+          "reviewedAt": "2026-10-12T19:48:49.437933+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/lapaz/qa.json",
+            "sha256": "8b2cf05fe6041e60da9cc4ab993d6f5575c390f95672f46319759f2edd41c960"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/lapaz/illustration-qa-extra.json",
+            "sha256": "61cbc9d085d93bcb312532248176f7e93ffc7aa30f632916320733170bf77d9f"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/lapaz/e13-lapaz-k4-metallimateriaalit-v1-3f2be199838a.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/lapaz/e13-lapaz-k4-metallimateriaalit-v1-3f2be199838a.png?t=b90fd0010581f420",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/lapaz/e13-lapaz-k4-metallimateriaalit-v1-3f2be199838a.png",
+        "sha256": "b90fd0010581f4209f8d6f0ee70427aee305f996aa1b09e0bb497f78b52e5781",
+        "bytes": 2257872,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e13-lapaz-k4-metallimateriaalit-v1",
+        "nativeSHA256": "3f2be199838af0162b9b55863a68eeff80d1369cf35f7d3eea948441af426bf1",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e13/lapaz/e13-lapaz-k4-metallimateriaalit-v1-3f2be199838a.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e13",
+        "city": "lapaz",
+        "slot": "K4",
+        "targetJsonPath": "$.kaupunkilehti[0].nostot[3]",
+        "verifiedAt": "2026-10-12T19:49:39.894298+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e13/lapaz/e13-lapaz-k4-metallimateriaalit-v1-3f2be199838a.png",
+        "sha256": "b90fd0010581f4209f8d6f0ee70427aee305f996aa1b09e0bb497f78b52e5781",
+        "bytes": 2257872,
+        "SHAReadAt": "2026-10-12T19:48:50.904431+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "3f2be199838af0162b9b55863a68eeff80d1369cf35f7d3eea948441af426bf1",
+        "rgbPixelSHA256": "cc17846d401ee21fafc60915bfa6c017c3d1076680e7d674f019ff40d5c7aab7",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "ec7f6260ffc1e88359e114a885253fbf2b8fd03315253eb281964b5e7b701a1a",
+      "targetAfterSHA256": "6147ecd59563a04238cbd99e162063063093e03885435196bb040de4515dd2fa",
+      "contextAfterSHA256": "6147ecd59563a04238cbd99e162063063093e03885435196bb040de4515dd2fa"
+    },
+    {
+      "era": "e13",
+      "city": "lapaz",
+      "slot": "L1",
+      "type": "illustration",
+      "assetID": "e13-lapaz-l1-pienoistalo-v1",
+      "galleryImageID": "e13-lapaz-l1-pienoistalo-v1",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[1].nostot[0]",
+      "targetTokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        0
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/lapaz/e13-lapaz-l1-pienoistalo-v1-f8d6da881aa2.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Pienoistalo voi kuvata toivetta omasta kodista. Havainnekuva.",
+        "lyhyt": "Pienoistalo voi kuvata toivetta omasta kodista. Havainnekuva."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/lapaz/e13-lapaz-l1-pienoistalo-v1-f8d6da881aa2.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Pienoistalo voi kuvata toivetta omasta kodista. Havainnekuva.",
+        "lyhyt": "Pienoistalo voi kuvata toivetta omasta kodista. Havainnekuva."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "f8d6da881aa2f86b284db90802a048e7ccea785ba83ebbc7e14c4955549078d9",
+      "exportSHA256": "be477c76f242770de972a6528906b63300cac4558a519291edf26a9a11142ce7",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/lapaz/e13-lapaz-l1-pienoistalo-v1-f8d6da881aa2.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/lapaz/e13-lapaz-l1-pienoistalo-v1-f8d6da881aa2.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e13/lapaz/e13-lapaz-l1-pienoistalo-v1-f8d6da881aa2.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e13/paakaupungit-pilvi/e13/lapaz/sisalto.json",
+      "sourceContentSHA256": "ec7f6260ffc1e88359e114a885253fbf2b8fd03315253eb281964b5e7b701a1a",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "d52c00e257f38b94d86b3aed159b145ec360cf0ad503c825602c3e9592bc5111",
+        "semanticContextSHA256": "d52c00e257f38b94d86b3aed159b145ec360cf0ad503c825602c3e9592bc5111",
+        "subjectTitle": "Toive, joka mahtuu kämmenelle",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Generic simple toy design or natural dried leaves, no named maker artifact, religious statuette, identifiable architecture, human likeness or logo.",
+          "QA": {
+            "contentSHA256": "7360a6759c548c8ae04627c8190734ed1bd4746369769467032a64a63739d543",
+            "visualObservationFi": "Pieni koristelematon puutalo, yksinkertainen harjakatto, ikkuna-aukot ja ovi, vieressä puulastuja. Ehjät liitokset, vaihteleva puunsyy ja luontevat varjot; ei tekstiä, logoa, ihmisiä tai uskonnollista figuuria.",
+            "topicMatchFi": "L1 mainitsee pienoistalon toive-esineenä. Selite sanoo talo voi kuvata kodin toivetta ja havainnekuva, eikä väitä tätä todelliseksi Alasita-markkinan käsityöksi.",
+            "sourceEvidence": [
+              {
+                "url": "https://ich.unesco.org/en/RL/ritual-journeys-in-la-paz-during-alasita-01182",
+                "nasSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/nopea-e13-lapaz/Alasita.txt",
+                "support": "Alasita miniatures represent wishes; house examples supported by stored Alasitas-WP."
+              }
+            ],
+            "rightsScopeFi": "Yleinen yksinkertainen pienoisesine.",
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/lapaz/assets/e13-lapaz-l1-pienoistalo-v1/original.png",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "nativeSHA256Verified": true,
+            "viewedByReviewer": true
+          },
+          "qaReason": "Tavallinen puinen pienoistalo kuvaa toivetta ilman nimetyn Alasita-esineen, nykyteoksen tai rakennuksen jäljennöstä. Materiaali ja mittakaava ovat luontevat."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Pienoistalo voi kuvata toivetta omasta kodista. Havainnekuva.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/lapaz/illustration-qa-extra.json",
+        "fileSHA256": "61cbc9d085d93bcb312532248176f7e93ffc7aa30f632916320733170bf77d9f",
+        "item": {
+          "slot": "L1",
+          "targetJsonPath": "$.kaupunkilehti[1].nostot[0]",
+          "assetID": "e13-lapaz-l1-pienoistalo-v1",
+          "sha256": "f8d6da881aa2f86b284db90802a048e7ccea785ba83ebbc7e14c4955549078d9",
+          "verdict": "accepted",
+          "reason": "Tavallinen puinen pienoistalo kuvaa toivetta ilman nimetyn Alasita-esineen, nykyteoksen tai rakennuksen jäljennöstä. Materiaali ja mittakaava ovat luontevat.",
+          "evidence": {
+            "contentSHA256": "7360a6759c548c8ae04627c8190734ed1bd4746369769467032a64a63739d543",
+            "visualObservationFi": "Pieni koristelematon puutalo, yksinkertainen harjakatto, ikkuna-aukot ja ovi, vieressä puulastuja. Ehjät liitokset, vaihteleva puunsyy ja luontevat varjot; ei tekstiä, logoa, ihmisiä tai uskonnollista figuuria.",
+            "topicMatchFi": "L1 mainitsee pienoistalon toive-esineenä. Selite sanoo talo voi kuvata kodin toivetta ja havainnekuva, eikä väitä tätä todelliseksi Alasita-markkinan käsityöksi.",
+            "sourceEvidence": [
+              {
+                "url": "https://ich.unesco.org/en/RL/ritual-journeys-in-la-paz-during-alasita-01182",
+                "nasSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/nopea-e13-lapaz/Alasita.txt",
+                "support": "Alasita miniatures represent wishes; house examples supported by stored Alasitas-WP."
+              }
+            ],
+            "rightsScopeFi": "Yleinen yksinkertainen pienoisesine.",
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/lapaz/assets/e13-lapaz-l1-pienoistalo-v1/original.png",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "nativeSHA256Verified": true,
+            "viewedByReviewer": true
+          },
+          "reviewedAt": "2026-10-12T18:29:05.104895+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/lapaz/qa.json",
+            "sha256": "8b2cf05fe6041e60da9cc4ab993d6f5575c390f95672f46319759f2edd41c960"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/lapaz/illustration-qa-extra.json",
+            "sha256": "61cbc9d085d93bcb312532248176f7e93ffc7aa30f632916320733170bf77d9f"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/lapaz/e13-lapaz-l1-pienoistalo-v1-f8d6da881aa2.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/lapaz/e13-lapaz-l1-pienoistalo-v1-f8d6da881aa2.png?t=be477c76f242770d",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/lapaz/e13-lapaz-l1-pienoistalo-v1-f8d6da881aa2.png",
+        "sha256": "be477c76f242770de972a6528906b63300cac4558a519291edf26a9a11142ce7",
+        "bytes": 1915420,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e13-lapaz-l1-pienoistalo-v1",
+        "nativeSHA256": "f8d6da881aa2f86b284db90802a048e7ccea785ba83ebbc7e14c4955549078d9",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e13/lapaz/e13-lapaz-l1-pienoistalo-v1-f8d6da881aa2.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e13",
+        "city": "lapaz",
+        "slot": "L1",
+        "targetJsonPath": "$.kaupunkilehti[1].nostot[0]",
+        "verifiedAt": "2026-10-12T18:31:31.237213+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e13/lapaz/e13-lapaz-l1-pienoistalo-v1-f8d6da881aa2.png",
+        "sha256": "be477c76f242770de972a6528906b63300cac4558a519291edf26a9a11142ce7",
+        "bytes": 1915420,
+        "SHAReadAt": "2026-10-12T18:30:03.899984+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "f8d6da881aa2f86b284db90802a048e7ccea785ba83ebbc7e14c4955549078d9",
+        "rgbPixelSHA256": "28588240b34af4519cf98f134058ee44c0c458e55d950d72a7d2fc8253bd4d8d",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "ec7f6260ffc1e88359e114a885253fbf2b8fd03315253eb281964b5e7b701a1a",
+      "targetAfterSHA256": "d52c00e257f38b94d86b3aed159b145ec360cf0ad503c825602c3e9592bc5111",
+      "contextAfterSHA256": "d52c00e257f38b94d86b3aed159b145ec360cf0ad503c825602c3e9592bc5111"
+    },
+    {
+      "era": "e13",
+      "city": "lapaz",
+      "slot": "L2",
+      "type": "illustration",
+      "assetID": "e13-lapaz-l2-kirjontalangat-v1",
+      "galleryImageID": "e13-lapaz-l2-kirjontalangat-v1",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[1].nostot[1]",
+      "targetTokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        1
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/lapaz/e13-lapaz-l2-kirjontalangat-v1-61bfdbcaf4ec.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Kirjontalangat kuuluvat juhlapukujen valmisteluun. Havainnekuva.",
+        "lyhyt": "Kirjontalangat kuuluvat juhlapukujen valmisteluun. Havainnekuva."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/lapaz/e13-lapaz-l2-kirjontalangat-v1-61bfdbcaf4ec.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Kirjontalangat kuuluvat juhlapukujen valmisteluun. Havainnekuva.",
+        "lyhyt": "Kirjontalangat kuuluvat juhlapukujen valmisteluun. Havainnekuva."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "61bfdbcaf4ecc5f72d3bbc39ff1f0df2b9646f17831eb135253ae46e555c0ea0",
+      "exportSHA256": "496c60e86c0b0ba42317d225474cadc7e1f3c147263f717ec5c8f90afb2c204d",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/lapaz/e13-lapaz-l2-kirjontalangat-v1-61bfdbcaf4ec.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/lapaz/e13-lapaz-l2-kirjontalangat-v1-61bfdbcaf4ec.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e13/lapaz/e13-lapaz-l2-kirjontalangat-v1-61bfdbcaf4ec.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e13/paakaupungit-pilvi/e13/lapaz/sisalto.json",
+      "sourceContentSHA256": "ec7f6260ffc1e88359e114a885253fbf2b8fd03315253eb281964b5e7b701a1a",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "45f496875a36b24b9036101cd4794ac980001f5b411e8f52b5fe11b6236856a5",
+        "semanticContextSHA256": "45f496875a36b24b9036101cd4794ac980001f5b411e8f52b5fe11b6236856a5",
+        "subjectTitle": "Juhla alkaa kauan ennen kulkuetta",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Plain ordinary textile tools or natural young plants. No copied ceremonial design, costume, garden layout or artwork. Generic illustration.",
+          "QA": {
+            "contentSHA256": "7360a6759c548c8ae04627c8190734ed1bd4746369769467032a64a63739d543",
+            "visualObservationFi": "Neljä tavallista lankarullaa, ohut ehjä neula silmäaukolla ja valkoinen kudottu kangas poimuineen. Luonteva kuitupinta, lankasäikeet ja varjot; ei kirjoitusta, logoa, valmista kirjontakuviota, käsiä tai ihmisiä.",
+            "topicMatchFi": "L2 kertoo Gran Poderin asujen kirjomisesta. Selite nimeää välineet havainnekuvana eikä tiettyä juhlapukua tai todellista valmistuspaikkaa.",
+            "sourceEvidence": [
+              {
+                "url": "https://ich.unesco.org/en/RL/the-festival-of-the-santisima-trinidad-del-senor-jesus-del-gran-poder-in-the-city-of-la-paz-01389",
+                "nasSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/nopea-e13-lapaz/Gran_Poder.txt",
+                "support": "Gran Poder preparation includes embroidery and costume work within families."
+              }
+            ],
+            "rightsScopeFi": "Yleiset käsityövälineet.",
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/lapaz/assets/e13-lapaz-l2-kirjontalangat-v1/original.png",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "nativeSHA256Verified": true,
+            "viewedByReviewer": true
+          },
+          "qaReason": "Kirjontalangat, neula ja koristelematon kangas havainnollistavat L2:n valmistautumista jäljentämättä juhlapuvun tai käsityöläisen suojattua kuviota."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Kirjontalangat kuuluvat juhlapukujen valmisteluun. Havainnekuva.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/lapaz/illustration-qa-extra.json",
+        "fileSHA256": "61cbc9d085d93bcb312532248176f7e93ffc7aa30f632916320733170bf77d9f",
+        "item": {
+          "slot": "L2",
+          "targetJsonPath": "$.kaupunkilehti[1].nostot[1]",
+          "assetID": "e13-lapaz-l2-kirjontalangat-v1",
+          "sha256": "61bfdbcaf4ecc5f72d3bbc39ff1f0df2b9646f17831eb135253ae46e555c0ea0",
+          "verdict": "accepted",
+          "reason": "Kirjontalangat, neula ja koristelematon kangas havainnollistavat L2:n valmistautumista jäljentämättä juhlapuvun tai käsityöläisen suojattua kuviota.",
+          "evidence": {
+            "contentSHA256": "7360a6759c548c8ae04627c8190734ed1bd4746369769467032a64a63739d543",
+            "visualObservationFi": "Neljä tavallista lankarullaa, ohut ehjä neula silmäaukolla ja valkoinen kudottu kangas poimuineen. Luonteva kuitupinta, lankasäikeet ja varjot; ei kirjoitusta, logoa, valmista kirjontakuviota, käsiä tai ihmisiä.",
+            "topicMatchFi": "L2 kertoo Gran Poderin asujen kirjomisesta. Selite nimeää välineet havainnekuvana eikä tiettyä juhlapukua tai todellista valmistuspaikkaa.",
+            "sourceEvidence": [
+              {
+                "url": "https://ich.unesco.org/en/RL/the-festival-of-the-santisima-trinidad-del-senor-jesus-del-gran-poder-in-the-city-of-la-paz-01389",
+                "nasSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/nopea-e13-lapaz/Gran_Poder.txt",
+                "support": "Gran Poder preparation includes embroidery and costume work within families."
+              }
+            ],
+            "rightsScopeFi": "Yleiset käsityövälineet.",
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/lapaz/assets/e13-lapaz-l2-kirjontalangat-v1/original.png",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "nativeSHA256Verified": true,
+            "viewedByReviewer": true
+          },
+          "reviewedAt": "2026-10-12T18:31:34.543626+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/lapaz/qa.json",
+            "sha256": "8b2cf05fe6041e60da9cc4ab993d6f5575c390f95672f46319759f2edd41c960"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/lapaz/illustration-qa-extra.json",
+            "sha256": "61cbc9d085d93bcb312532248176f7e93ffc7aa30f632916320733170bf77d9f"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/lapaz/e13-lapaz-l2-kirjontalangat-v1-61bfdbcaf4ec.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/lapaz/e13-lapaz-l2-kirjontalangat-v1-61bfdbcaf4ec.png?t=496c60e86c0b0ba4",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/lapaz/e13-lapaz-l2-kirjontalangat-v1-61bfdbcaf4ec.png",
+        "sha256": "496c60e86c0b0ba42317d225474cadc7e1f3c147263f717ec5c8f90afb2c204d",
+        "bytes": 2537731,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e13-lapaz-l2-kirjontalangat-v1",
+        "nativeSHA256": "61bfdbcaf4ecc5f72d3bbc39ff1f0df2b9646f17831eb135253ae46e555c0ea0",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e13/lapaz/e13-lapaz-l2-kirjontalangat-v1-61bfdbcaf4ec.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e13",
+        "city": "lapaz",
+        "slot": "L2",
+        "targetJsonPath": "$.kaupunkilehti[1].nostot[1]",
+        "verifiedAt": "2026-10-12T18:32:49.272894+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e13/lapaz/e13-lapaz-l2-kirjontalangat-v1-61bfdbcaf4ec.png",
+        "sha256": "496c60e86c0b0ba42317d225474cadc7e1f3c147263f717ec5c8f90afb2c204d",
+        "bytes": 2537731,
+        "SHAReadAt": "2026-10-12T18:31:36.981697+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "61bfdbcaf4ecc5f72d3bbc39ff1f0df2b9646f17831eb135253ae46e555c0ea0",
+        "rgbPixelSHA256": "ea9a10234357c5bf6281a57afd644ebf0e2dbc8e9b4e744b9a05098c4dff9752",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "ec7f6260ffc1e88359e114a885253fbf2b8fd03315253eb281964b5e7b701a1a",
+      "targetAfterSHA256": "45f496875a36b24b9036101cd4794ac980001f5b411e8f52b5fe11b6236856a5",
+      "contextAfterSHA256": "45f496875a36b24b9036101cd4794ac980001f5b411e8f52b5fe11b6236856a5"
+    },
+    {
+      "era": "e13",
+      "city": "lapaz",
+      "slot": "L3",
+      "type": "illustration",
+      "assetID": "e13-lapaz-l3-yrtit-v1",
+      "galleryImageID": "e13-lapaz-l3-yrtit-v1",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[1].nostot[2]",
+      "targetTokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        2
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/lapaz/e13-lapaz-l3-yrtit-v1-5f32119e2aa1.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Kuivattuja yrttejä myydään torien tavaroiden joukossa. Havainnekuva.",
+        "lyhyt": "Kuivattuja yrttejä myydään torien tavaroiden joukossa. Havainnekuva."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/lapaz/e13-lapaz-l3-yrtit-v1-5f32119e2aa1.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Kuivattuja yrttejä myydään torien tavaroiden joukossa. Havainnekuva.",
+        "lyhyt": "Kuivattuja yrttejä myydään torien tavaroiden joukossa. Havainnekuva."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "5f32119e2aa14188457efe1bcb7dca874552684217eb1aa668ed618ee41d06e4",
+      "exportSHA256": "f3c6ebfe06549395a4b7a37bd21352f3e60939dcc0e0e11eed912df329e0c3c2",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/lapaz/e13-lapaz-l3-yrtit-v1-5f32119e2aa1.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/lapaz/e13-lapaz-l3-yrtit-v1-5f32119e2aa1.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e13/lapaz/e13-lapaz-l3-yrtit-v1-5f32119e2aa1.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e13/paakaupungit-pilvi/e13/lapaz/sisalto.json",
+      "sourceContentSHA256": "ec7f6260ffc1e88359e114a885253fbf2b8fd03315253eb281964b5e7b701a1a",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "47c9423451c1cd1d6ebee36d4d2cb7f96e24b32459da391bde4d791ad1cbe697",
+        "semanticContextSHA256": "47c9423451c1cd1d6ebee36d4d2cb7f96e24b32459da391bde4d791ad1cbe697",
+        "subjectTitle": "Torin nimi kertoo vain osan",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Generic simple toy design or natural dried leaves, no named maker artifact, religious statuette, identifiable architecture, human likeness or logo.",
+          "QA": {
+            "contentSHA256": "7360a6759c548c8ae04627c8190734ed1bd4746369769467032a64a63739d543",
+            "visualObservationFi": "Eri kokoisia käpristyneitä vihreitä lehtiä ja ohuita varsia puukulhoissa ja painamattomissa paperipusseissa. Lehdet ja paperipoimut vaihtelevat; ei luettavaa tekstiä, logoa, tunnistettavaa henkilöä, eläinjäänteitä tai rituaaliesinettä.",
+            "topicMatchFi": "L3 mainitsee Mercado de Brujasin yrtit. Selite kuvaa yleisiä kuivattuja yrttejä havainnekuvana eikä rohdoslajia, käyttötapaa tai tiettyä myyntipaikkaa.",
+            "sourceEvidence": [
+              {
+                "url": "https://en.wikipedia.org/wiki/The_Witches%27_Market",
+                "nasSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/nopea-e13-lapaz/The_Witches_Market.txt",
+                "support": "The market sells herbs and ritual ingredients; only generic ordinary dried leaves depicted."
+              }
+            ],
+            "rightsScopeFi": "Yleinen kasvimateriaali.",
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/lapaz/assets/e13-lapaz-l3-yrtit-v1/original.png",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "nativeSHA256Verified": true,
+            "viewedByReviewer": true
+          },
+          "qaReason": "Kuivatut yleiset yrtit vastaavat L3:n toritavara-aihetta; lehtien, varsien ja paperin pinnat ovat luontevat. Ei lajia, rohdosvaikutusta tai todellista kojua koskevaa väitettä."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Kuivattuja yrttejä myydään torien tavaroiden joukossa. Havainnekuva.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/lapaz/illustration-qa-extra.json",
+        "fileSHA256": "61cbc9d085d93bcb312532248176f7e93ffc7aa30f632916320733170bf77d9f",
+        "item": {
+          "slot": "L3",
+          "targetJsonPath": "$.kaupunkilehti[1].nostot[2]",
+          "assetID": "e13-lapaz-l3-yrtit-v1",
+          "sha256": "5f32119e2aa14188457efe1bcb7dca874552684217eb1aa668ed618ee41d06e4",
+          "verdict": "accepted",
+          "reason": "Kuivatut yleiset yrtit vastaavat L3:n toritavara-aihetta; lehtien, varsien ja paperin pinnat ovat luontevat. Ei lajia, rohdosvaikutusta tai todellista kojua koskevaa väitettä.",
+          "evidence": {
+            "contentSHA256": "7360a6759c548c8ae04627c8190734ed1bd4746369769467032a64a63739d543",
+            "visualObservationFi": "Eri kokoisia käpristyneitä vihreitä lehtiä ja ohuita varsia puukulhoissa ja painamattomissa paperipusseissa. Lehdet ja paperipoimut vaihtelevat; ei luettavaa tekstiä, logoa, tunnistettavaa henkilöä, eläinjäänteitä tai rituaaliesinettä.",
+            "topicMatchFi": "L3 mainitsee Mercado de Brujasin yrtit. Selite kuvaa yleisiä kuivattuja yrttejä havainnekuvana eikä rohdoslajia, käyttötapaa tai tiettyä myyntipaikkaa.",
+            "sourceEvidence": [
+              {
+                "url": "https://en.wikipedia.org/wiki/The_Witches%27_Market",
+                "nasSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/nopea-e13-lapaz/The_Witches_Market.txt",
+                "support": "The market sells herbs and ritual ingredients; only generic ordinary dried leaves depicted."
+              }
+            ],
+            "rightsScopeFi": "Yleinen kasvimateriaali.",
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/lapaz/assets/e13-lapaz-l3-yrtit-v1/original.png",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "nativeSHA256Verified": true,
+            "viewedByReviewer": true
+          },
+          "reviewedAt": "2026-10-12T18:29:24.095968+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/lapaz/qa.json",
+            "sha256": "8b2cf05fe6041e60da9cc4ab993d6f5575c390f95672f46319759f2edd41c960"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/lapaz/illustration-qa-extra.json",
+            "sha256": "61cbc9d085d93bcb312532248176f7e93ffc7aa30f632916320733170bf77d9f"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/lapaz/e13-lapaz-l3-yrtit-v1-5f32119e2aa1.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/lapaz/e13-lapaz-l3-yrtit-v1-5f32119e2aa1.png?t=f3c6ebfe06549395",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/lapaz/e13-lapaz-l3-yrtit-v1-5f32119e2aa1.png",
+        "sha256": "f3c6ebfe06549395a4b7a37bd21352f3e60939dcc0e0e11eed912df329e0c3c2",
+        "bytes": 2528221,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e13-lapaz-l3-yrtit-v1",
+        "nativeSHA256": "5f32119e2aa14188457efe1bcb7dca874552684217eb1aa668ed618ee41d06e4",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e13/lapaz/e13-lapaz-l3-yrtit-v1-5f32119e2aa1.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e13",
+        "city": "lapaz",
+        "slot": "L3",
+        "targetJsonPath": "$.kaupunkilehti[1].nostot[2]",
+        "verifiedAt": "2026-10-12T18:31:33.011483+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e13/lapaz/e13-lapaz-l3-yrtit-v1-5f32119e2aa1.png",
+        "sha256": "f3c6ebfe06549395a4b7a37bd21352f3e60939dcc0e0e11eed912df329e0c3c2",
+        "bytes": 2528221,
+        "SHAReadAt": "2026-10-12T18:30:04.007193+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "5f32119e2aa14188457efe1bcb7dca874552684217eb1aa668ed618ee41d06e4",
+        "rgbPixelSHA256": "757e9f610bb6db1ea2b286e5d14e3ee7e316be7b23408d54dbb67791474f7725",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "ec7f6260ffc1e88359e114a885253fbf2b8fd03315253eb281964b5e7b701a1a",
+      "targetAfterSHA256": "47c9423451c1cd1d6ebee36d4d2cb7f96e24b32459da391bde4d791ad1cbe697",
+      "contextAfterSHA256": "47c9423451c1cd1d6ebee36d4d2cb7f96e24b32459da391bde4d791ad1cbe697"
+    },
+    {
+      "era": "e13",
+      "city": "lapaz",
+      "slot": "PHOTO",
+      "type": "commons",
+      "assetID": "capital-cc-e13-lapaz-photo-ef7b9c0e6a028321",
+      "galleryImageID": "capital-cc-e13-lapaz-photo-ef7b9c0e6a028321",
+      "commonsFile": "La Paz Panoramic View from Killi Killi Lookout.jpg",
+      "targetJsonPath": "$.valokuva",
+      "targetTokens": [
+        "valokuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e13/lapaz/photo-ef7b9c0e6a028321d01c.jpg",
+        "suora": true,
+        "lahde": "Edgar Claure, Commons (CC BY-SA 4.0)",
+        "selite": "La Paz levittäytyy Choqueyapu-joen laaksoon ja sen rinteille.",
+        "lyhyt": "La Paz levittäytyy Choqueyapu-joen laaksoon ja sen rinteille.",
+        "tiedosto": "La Paz Panoramic View from Killi Killi Lookout.jpg",
+        "vuosi": "2015"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Edgar Claure, Commons (CC BY-SA 4.0)",
+        "selite": "La Paz levittäytyy Choqueyapu-joen laaksoon ja sen rinteille.",
+        "lyhyt": "La Paz levittäytyy Choqueyapu-joen laaksoon ja sen rinteille.",
+        "tiedosto": "La Paz Panoramic View from Killi Killi Lookout.jpg",
+        "vuosi": "2015"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e13/lapaz/photo-ef7b9c0e6a028321d01c.jpg",
+        "suora": true,
+        "lahde": "Edgar Claure, Commons (CC BY-SA 4.0)",
+        "selite": "La Paz levittäytyy Choqueyapu-joen laaksoon ja sen rinteille.",
+        "lyhyt": "La Paz levittäytyy Choqueyapu-joen laaksoon ja sen rinteille.",
+        "tiedosto": "La Paz Panoramic View from Killi Killi Lookout.jpg",
+        "vuosi": "2015"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "ef7b9c0e6a028321d01ca01d4ef6ee42a2db44534ca43f2815994e01220bb015",
+      "exportSHA256": "ef7b9c0e6a028321d01ca01d4ef6ee42a2db44534ca43f2815994e01220bb015",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e13/lapaz/photo-ef7b9c0e6a028321d01c.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e13/lapaz/photo-ef7b9c0e6a028321d01c.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/lapaz/cc-work/original-2.jpg",
+      "dimensions": [
+        8630,
+        1782
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e13/paakaupungit-pilvi/e13/lapaz/sisalto.json",
+      "sourceContentSHA256": "ec7f6260ffc1e88359e114a885253fbf2b8fd03315253eb281964b5e7b701a1a",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "81e0ab7e854d99f528b0213eae7c4165ead9831651aa32f8ae0e1d4faea4b340",
+        "semanticContextSHA256": "81e0ab7e854d99f528b0213eae7c4165ead9831651aa32f8ae0e1d4faea4b340",
+        "subjectTitle": "lapaz — aito paikkavalokuva",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Edgar Claure",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:La_Paz_Panoramic_View_from_Killi_Killi_Lookout.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/5/5c/La_Paz_Panoramic_View_from_Killi_Killi_Lookout.jpg",
+        "rightsEvidence": {
+          "selection": "CAN:n alkuperäinen Decisión351 Art22(h), https://www.comunidadandina.org/StaticFiles/DocOf/DEC351.pdf, PDF sivut6–8 ja erityisesti7 luettu omasta tallennetusta tekstistä ja sivukuvasta; SHA3e4965bd0f129eb28b627b6018e26732c88918f3cc2930fece02aec3c8779e90. SENAPI:n viranomaislähde nimeää351:n ylikansalliseksi normiksi. Tämän laajan todellisen kaupunkinäkymän pääaihe on pysyvä ulkorakennettu ympäristö ja luonnolliset rinteet, ei eristetty nykyteos; Art21/ChV rajat säilyvät. Ei PD-/kuolinvuosioletusta tai blanketmaahyväksyntää. PHOTO/C2 QA hyväksytty tämän pykälän nojalla; uuden C3:n QA erikseen. Aiempi Law1322Art24 on sitaattikohta ja väärä FOP-viite; ei käytetä. Valokuvan erillinen CC BY-SA4.0 ja kuvasivun oma tekijä tarkistettu; QA exactSHA accepted.",
+          "QA": {
+            "reviewer": "job-25 independent-image-QA",
+            "reviewedAt": "2026-10-12T18:22:04.762123+00:00",
+            "visualTool": "view_image",
+            "visualDetail": "original",
+            "localOriginal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/lapaz/cc-work/original-2.jpg",
+            "actualWidth": 8630,
+            "actualHeight": 1782,
+            "actualFormat": "JPEG",
+            "nativePixelWidth": 8630,
+            "nativePixelHeight": 1782,
+            "exifOrientation": 1,
+            "dimensionsConvention": "actualWidth/Height are correctly oriented display dimensions; native stored pixel dimensions are separately recorded",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:La_Paz_Panoramic_View_from_Killi_Killi_Lookout.jpg",
+            "savedSourcePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/7564dcf0dbe3ed60490d3b4689817d634f2acca670e26859451cd9485e3632ab.html",
+            "savedSourceSHA256": "54bb8ca0593768b3f8262ed1b9ae8dd032df35d952f2a148f7bfcff4c173287e",
+            "authorVerified": "Edgar Claure",
+            "authorField": "Original Commons Author table, independently read; not inferred from uploader",
+            "licenseVerified": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+            "captureDate": "6 July 2015, 17:43:13",
+            "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e13/paakaupungit-pilvi/e13/lapaz/sisalto.json",
+            "sourceContentSHA256": "7360a6759c548c8ae04627c8190734ed1bd4746369769467032a64a63739d543",
+            "captionFi": "La Paz levittäytyy Choqueyapu-joen laaksoon ja sen rinteille.",
+            "depictedWorkLayer": "Tälle aidolle laajalle julkisen kaupungin pysyvän ulkorakennuskannan näkymälle sovellettu Andien päätöksen351 Art22(h). Ei teoksen PD-/ikäoletusta eikä blanket-maahyväksyntää.",
+            "duplicateInCity": false,
+            "primaryLawCheck": {
+              "requestedUrl": "https://www.wipo.int/edocs/lexdocs/laws/en/bo/bo005en.pdf",
+              "result": "Robots disallows /edocs/lexdocs/ for both approved user agents; no download or bypass performed",
+              "fetchHelper": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/sallittu_haku.py",
+              "secondaryRule": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/lapaz/cc-work/rights.txt",
+              "requiredEvidence": "Accessible original Law1322 Art24 text and case-specific applicability to the visible built/artistic environment.",
+              "supportHandoff": "Concrete file+slot+visible subject+missing evidence recorded in qa-feedback.md; no blanket country clearance requested."
+            },
+            "rightsReviewedAt": "2026-10-12T18:38:53.418630+00:00",
+            "primaryLaw": {
+              "url": "https://www.comunidadandina.org/StaticFiles/DocOf/DEC351.pdf",
+              "savedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/lahdevarasto/bf66e03c4c1e0dffd4d558850242ad4edecf3551f96fd3cc9879f0aab26d340e.body",
+              "sha256": "3e4965bd0f129eb28b627b6018e26732c88918f3cc2930fece02aec3c8779e90",
+              "title": "Decisión351",
+              "article": "22(h)",
+              "completePagesRead": [
+                6,
+                7,
+                8
+              ],
+              "extractionTool": "bundled pypdf",
+              "finding": "Pysyvästi yleisölle avoimessa paikassa olevan arkkitehtuuri-/taide-/soveltavan taiteen teoksen kuvan jäljentämis-/viestintäpoikkeus ilman tekijän lupaa tai korvausta; kohta22(h) ei sisällä ei-kaupallista ehtoa. Art21/ChV rajat säilyvät."
+            },
+            "sourceReferenceCorrection": {
+              "producerReference": "Law1322 Article24",
+              "finding": "SENAPI:n Law1322 alkutekstin sivu6 Art24 koskee sitaattia, eikä ole FOP-peruste. Aiempi QA toisti tuottajan väärän pykäläviitteen; se on nyt korjattu. Commons Bolivia myös nimeää oikeaksi perustaksi Andien päätöksen351.",
+              "law1322Source": {
+                "url": "https://www.senapi.gob.bo/sites/default/files/senapi/media/media-20190204220503-01-ley-1322.pdf",
+                "savedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/lahdevarasto/78e94b3dcbc9201420dc245714b8c8ffa278871b9ad0b540dcd461f9cb26a175.body",
+                "sha256": "60484c83d8a027c1935aa32567b26c334b143fa49f22bdd76a7d8eee576050fe",
+                "completePageRead": 6
+              },
+              "requestedProducerChange": "Korjaa näiden CC-assetien rightsEvidence Art22(h) ja tähän QA:ssa kirjattuun alkuperäiseen CAN-lähteeseen. Ei tarvetta uudelle kuvalle tai byte-muutokselle PHOTO/C2:ssa."
+            }
+          },
+          "qaReason": "Alkuperäisen Andien päätöksen351 Art22(h) lukeminen ratkaisi aiemman rakennuskerroksen lähdepuutteen. Tässä Killi Killi -panoraamassa on kaupungin pysyvää ulkorakennuskantaa yleisölle avoimesta näköalapaikasta nähtynä, ilman eristettyä nykytaideteosta pääaiheena. Kuvan laaja kokonaisuus ja kaupallinen CC BY-SA4.0 valokuvakerros ovat käyttökelpoiset. Sama alkuperäinen SHA on varmennettu; aiempi oma silmämääräinen arvio säilyy. QA accepted. Tuottajan Law1322 Art24 -viite korjattava tässä tallennettuun Art22(h)-näyttöön."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "La Paz levittäytyy Choqueyapu-joen laaksoon ja sen rinteille.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/lapaz/qa.json",
+        "fileSHA256": "8b2cf05fe6041e60da9cc4ab993d6f5575c390f95672f46319759f2edd41c960",
+        "item": {
+          "slot": "PHOTO",
+          "targetJsonPath": "$.valokuva",
+          "commonsFile": "La Paz Panoramic View from Killi Killi Lookout.jpg",
+          "sha256": "ef7b9c0e6a028321d01ca01d4ef6ee42a2db44534ca43f2815994e01220bb015",
+          "verdict": "accepted",
+          "reason": "Alkuperäisen Andien päätöksen351 Art22(h) lukeminen ratkaisi aiemman rakennuskerroksen lähdepuutteen. Tässä Killi Killi -panoraamassa on kaupungin pysyvää ulkorakennuskantaa yleisölle avoimesta näköalapaikasta nähtynä, ilman eristettyä nykytaideteosta pääaiheena. Kuvan laaja kokonaisuus ja kaupallinen CC BY-SA4.0 valokuvakerros ovat käyttökelpoiset. Sama alkuperäinen SHA on varmennettu; aiempi oma silmämääräinen arvio säilyy. QA accepted. Tuottajan Law1322 Art24 -viite korjattava tässä tallennettuun Art22(h)-näyttöön.",
+          "evidence": {
+            "reviewer": "job-25 independent-image-QA",
+            "reviewedAt": "2026-10-12T18:22:04.762123+00:00",
+            "visualTool": "view_image",
+            "visualDetail": "original",
+            "localOriginal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/lapaz/cc-work/original-2.jpg",
+            "actualWidth": 8630,
+            "actualHeight": 1782,
+            "actualFormat": "JPEG",
+            "nativePixelWidth": 8630,
+            "nativePixelHeight": 1782,
+            "exifOrientation": 1,
+            "dimensionsConvention": "actualWidth/Height are correctly oriented display dimensions; native stored pixel dimensions are separately recorded",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:La_Paz_Panoramic_View_from_Killi_Killi_Lookout.jpg",
+            "savedSourcePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/7564dcf0dbe3ed60490d3b4689817d634f2acca670e26859451cd9485e3632ab.html",
+            "savedSourceSHA256": "54bb8ca0593768b3f8262ed1b9ae8dd032df35d952f2a148f7bfcff4c173287e",
+            "authorVerified": "Edgar Claure",
+            "authorField": "Original Commons Author table, independently read; not inferred from uploader",
+            "licenseVerified": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+            "captureDate": "6 July 2015, 17:43:13",
+            "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e13/paakaupungit-pilvi/e13/lapaz/sisalto.json",
+            "sourceContentSHA256": "7360a6759c548c8ae04627c8190734ed1bd4746369769467032a64a63739d543",
+            "captionFi": "La Paz levittäytyy Choqueyapu-joen laaksoon ja sen rinteille.",
+            "depictedWorkLayer": "Tälle aidolle laajalle julkisen kaupungin pysyvän ulkorakennuskannan näkymälle sovellettu Andien päätöksen351 Art22(h). Ei teoksen PD-/ikäoletusta eikä blanket-maahyväksyntää.",
+            "duplicateInCity": false,
+            "primaryLawCheck": {
+              "requestedUrl": "https://www.wipo.int/edocs/lexdocs/laws/en/bo/bo005en.pdf",
+              "result": "Robots disallows /edocs/lexdocs/ for both approved user agents; no download or bypass performed",
+              "fetchHelper": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/sallittu_haku.py",
+              "secondaryRule": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/lapaz/cc-work/rights.txt",
+              "requiredEvidence": "Accessible original Law1322 Art24 text and case-specific applicability to the visible built/artistic environment.",
+              "supportHandoff": "Concrete file+slot+visible subject+missing evidence recorded in qa-feedback.md; no blanket country clearance requested."
+            },
+            "rightsReviewedAt": "2026-10-12T18:38:53.418630+00:00",
+            "primaryLaw": {
+              "url": "https://www.comunidadandina.org/StaticFiles/DocOf/DEC351.pdf",
+              "savedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/lahdevarasto/bf66e03c4c1e0dffd4d558850242ad4edecf3551f96fd3cc9879f0aab26d340e.body",
+              "sha256": "3e4965bd0f129eb28b627b6018e26732c88918f3cc2930fece02aec3c8779e90",
+              "title": "Decisión351",
+              "article": "22(h)",
+              "completePagesRead": [
+                6,
+                7,
+                8
+              ],
+              "extractionTool": "bundled pypdf",
+              "finding": "Pysyvästi yleisölle avoimessa paikassa olevan arkkitehtuuri-/taide-/soveltavan taiteen teoksen kuvan jäljentämis-/viestintäpoikkeus ilman tekijän lupaa tai korvausta; kohta22(h) ei sisällä ei-kaupallista ehtoa. Art21/ChV rajat säilyvät."
+            },
+            "sourceReferenceCorrection": {
+              "producerReference": "Law1322 Article24",
+              "finding": "SENAPI:n Law1322 alkutekstin sivu6 Art24 koskee sitaattia, eikä ole FOP-peruste. Aiempi QA toisti tuottajan väärän pykäläviitteen; se on nyt korjattu. Commons Bolivia myös nimeää oikeaksi perustaksi Andien päätöksen351.",
+              "law1322Source": {
+                "url": "https://www.senapi.gob.bo/sites/default/files/senapi/media/media-20190204220503-01-ley-1322.pdf",
+                "savedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/lahdevarasto/78e94b3dcbc9201420dc245714b8c8ffa278871b9ad0b540dcd461f9cb26a175.body",
+                "sha256": "60484c83d8a027c1935aa32567b26c334b143fa49f22bdd76a7d8eee576050fe",
+                "completePageRead": 6
+              },
+              "requestedProducerChange": "Korjaa näiden CC-assetien rightsEvidence Art22(h) ja tähän QA:ssa kirjattuun alkuperäiseen CAN-lähteeseen. Ei tarvetta uudelle kuvalle tai byte-muutokselle PHOTO/C2:ssa."
+            }
+          },
+          "reviewHistory": [
+            {
+              "slot": "PHOTO",
+              "targetJsonPath": "$.valokuva",
+              "commonsFile": "La Paz Panoramic View from Killi Killi Lookout.jpg",
+              "sha256": "ef7b9c0e6a028321d01ca01d4ef6ee42a2db44534ca43f2815994e01220bb015",
+              "verdict": "blocked",
+              "reason": "Killi Killi -paikka, Edgar Clauren tekijyys, CC BY-SA 4.0, päiväys6.7.2015 sekä kuvan todellisuus on luettu alkuperäiseltä Commons-sivulta ja kuva katsottu silmin. Laaja laakso-/rinnekaupunkinäkymä, ei kasvoja tai lisättyä tekstiä/vesileimaa. Panoraama8630×1782 ja lämmin sävykäsittely sopivat aiheeseen, kuvasuhde ei ole PHOTO-hylkäys. Avoin portti on valokuvan lisenssistä erillinen rakennusten oikeuskerros: tuottajan viittaama Law1322 Art24 on nyt vain Commonsin toissijaisessa ohjeessa. Siinä linkitetyn WIPO-alkuperäis-PDF:n reitin robots kieltää. Täsmäkuva jää blocked kunnes sallittua kautta tallennettu alkuperäislaki/tapausnäyttö on luettu; ei uuden kuvan generointia tämän esteen vuoksi.",
+              "evidence": {
+                "reviewer": "job-25 independent-image-QA",
+                "reviewedAt": "2026-10-12T18:22:04.762123+00:00",
+                "visualTool": "view_image",
+                "visualDetail": "original",
+                "localOriginal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/lapaz/cc-work/original-2.jpg",
+                "actualWidth": 8630,
+                "actualHeight": 1782,
+                "actualFormat": "JPEG",
+                "nativePixelWidth": 8630,
+                "nativePixelHeight": 1782,
+                "exifOrientation": 1,
+                "dimensionsConvention": "actualWidth/Height are correctly oriented display dimensions; native stored pixel dimensions are separately recorded",
+                "sourcePage": "https://commons.wikimedia.org/wiki/File:La_Paz_Panoramic_View_from_Killi_Killi_Lookout.jpg",
+                "savedSourcePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/7564dcf0dbe3ed60490d3b4689817d634f2acca670e26859451cd9485e3632ab.html",
+                "savedSourceSHA256": "54bb8ca0593768b3f8262ed1b9ae8dd032df35d952f2a148f7bfcff4c173287e",
+                "authorVerified": "Edgar Claure",
+                "authorField": "Original Commons Author table, independently read; not inferred from uploader",
+                "licenseVerified": "CC BY-SA 4.0",
+                "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+                "captureDate": "6 July 2015, 17:43:13",
+                "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e13/paakaupungit-pilvi/e13/lapaz/sisalto.json",
+                "sourceContentSHA256": "7360a6759c548c8ae04627c8190734ed1bd4746369769467032a64a63739d543",
+                "captionFi": "La Paz levittäytyy Choqueyapu-joen laaksoon ja sen rinteille.",
+                "depictedWorkLayer": "Tälle aidolle laajalle julkisen kaupungin pysyvän ulkorakennuskannan näkymälle sovellettu Andien päätöksen351 Art22(h). Ei teoksen PD-/ikäoletusta eikä blanket-maahyväksyntää.",
+                "duplicateInCity": false,
+                "primaryLawCheck": {
+                  "requestedUrl": "https://www.wipo.int/edocs/lexdocs/laws/en/bo/bo005en.pdf",
+                  "result": "Robots disallows /edocs/lexdocs/ for both approved user agents; no download or bypass performed",
+                  "fetchHelper": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/sallittu_haku.py",
+                  "secondaryRule": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/lapaz/cc-work/rights.txt",
+                  "requiredEvidence": "Accessible original Law1322 Art24 text and case-specific applicability to the visible built/artistic environment.",
+                  "supportHandoff": "Concrete file+slot+visible subject+missing evidence recorded in qa-feedback.md; no blanket country clearance requested."
+                },
+                "rightsReviewedAt": "2026-10-12T18:38:53.418630+00:00",
+                "primaryLaw": {
+                  "url": "https://www.comunidadandina.org/StaticFiles/DocOf/DEC351.pdf",
+                  "savedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/lahdevarasto/bf66e03c4c1e0dffd4d558850242ad4edecf3551f96fd3cc9879f0aab26d340e.body",
+                  "sha256": "3e4965bd0f129eb28b627b6018e26732c88918f3cc2930fece02aec3c8779e90",
+                  "title": "Decisión351",
+                  "article": "22(h)",
+                  "completePagesRead": [
+                    6,
+                    7,
+                    8
+                  ],
+                  "extractionTool": "bundled pypdf",
+                  "finding": "Pysyvästi yleisölle avoimessa paikassa olevan arkkitehtuuri-/taide-/soveltavan taiteen teoksen kuvan jäljentämis-/viestintäpoikkeus ilman tekijän lupaa tai korvausta; kohta22(h) ei sisällä ei-kaupallista ehtoa. Art21/ChV rajat säilyvät."
+                },
+                "sourceReferenceCorrection": {
+                  "producerReference": "Law1322 Article24",
+                  "finding": "SENAPI:n Law1322 alkutekstin sivu6 Art24 koskee sitaattia, eikä ole FOP-peruste. Aiempi QA toisti tuottajan väärän pykäläviitteen; se on nyt korjattu. Commons Bolivia myös nimeää oikeaksi perustaksi Andien päätöksen351.",
+                  "law1322Source": {
+                    "url": "https://www.senapi.gob.bo/sites/default/files/senapi/media/media-20190204220503-01-ley-1322.pdf",
+                    "savedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/lahdevarasto/78e94b3dcbc9201420dc245714b8c8ffa278871b9ad0b540dcd461f9cb26a175.body",
+                    "sha256": "60484c83d8a027c1935aa32567b26c334b143fa49f22bdd76a7d8eee576050fe",
+                    "completePageRead": 6
+                  },
+                  "requestedProducerChange": "Korjaa näiden CC-assetien rightsEvidence Art22(h) ja tähän QA:ssa kirjattuun alkuperäiseen CAN-lähteeseen. Ei tarvetta uudelle kuvalle tai byte-muutokselle PHOTO/C2:ssa."
+                }
+              }
+            }
+          ]
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/lapaz/qa.json",
+            "sha256": "8b2cf05fe6041e60da9cc4ab993d6f5575c390f95672f46319759f2edd41c960"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/lapaz/illustration-qa-extra.json",
+            "sha256": "61cbc9d085d93bcb312532248176f7e93ffc7aa30f632916320733170bf77d9f"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e13",
+        "city": "lapaz",
+        "slot": "PHOTO",
+        "targetJsonPath": "$.valokuva",
+        "commonsFile": "La Paz Panoramic View from Killi Killi Lookout.jpg",
+        "sha256": "ef7b9c0e6a028321d01ca01d4ef6ee42a2db44534ca43f2815994e01220bb015",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:La_Paz_Panoramic_View_from_Killi_Killi_Lookout.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/5/5c/La_Paz_Panoramic_View_from_Killi_Killi_Lookout.jpg",
+        "author": "Edgar Claure",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+        "width": 8630,
+        "height": 1782,
+        "originalSHA256": "ef7b9c0e6a028321d01ca01d4ef6ee42a2db44534ca43f2815994e01220bb015",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e13/lapaz/photo-ef7b9c0e6a028321d01c.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e13/lapaz/photo-ef7b9c0e6a028321d01c.jpg",
+        "bytes": 5360189,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T18:39:56.968634+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "La Paz Panoramic View from Killi Killi Lookout.jpg",
+        "lahde": "Edgar Claure, Commons (CC BY-SA 4.0)",
+        "selite": "La Paz levittäytyy Choqueyapu-joen laaksoon ja sen rinteille.",
+        "lyhyt": "La Paz levittäytyy Choqueyapu-joen laaksoon ja sen rinteille.",
+        "vuosi": "2015"
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Edgar Claure, Commons (CC BY-SA 4.0)",
+        "selite": "La Paz levittäytyy Choqueyapu-joen laaksoon ja sen rinteille.",
+        "lyhyt": "La Paz levittäytyy Choqueyapu-joen laaksoon ja sen rinteille.",
+        "tiedosto": "La Paz Panoramic View from Killi Killi Lookout.jpg",
+        "vuosi": "2015"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "ec7f6260ffc1e88359e114a885253fbf2b8fd03315253eb281964b5e7b701a1a",
+      "targetAfterSHA256": "81e0ab7e854d99f528b0213eae7c4165ead9831651aa32f8ae0e1d4faea4b340",
+      "contextAfterSHA256": "81e0ab7e854d99f528b0213eae7c4165ead9831651aa32f8ae0e1d4faea4b340"
+    },
+    {
+      "era": "e13",
+      "city": "lapaz",
+      "slot": "C2",
+      "type": "commons",
+      "assetID": "capital-cc-e13-lapaz-c2-3e6e68abbd5841da",
+      "galleryImageID": "capital-cc-e13-lapaz-c2-3e6e68abbd5841da",
+      "commonsFile": "City of La Paz, Bolivia2.jpg",
+      "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[1]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "kansikuvat",
+        1
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e13/lapaz/c2-3e6e68abbd5841da6fb8.jpg",
+        "suora": true,
+        "lahde": "Parallelepiped09, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "La Pazin kaupunkirakenne jatkuu keskustasta ympäröiville rinteille.",
+        "lyhyt": "La Pazin kaupunkirakenne jatkuu keskustasta ympäröiville rinteille.",
+        "tiedosto": "City of La Paz, Bolivia2.jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Parallelepiped09, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "La Pazin kaupunkirakenne jatkuu keskustasta ympäröiville rinteille.",
+        "lyhyt": "La Pazin kaupunkirakenne jatkuu keskustasta ympäröiville rinteille.",
+        "tiedosto": "City of La Paz, Bolivia2.jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e13/lapaz/c2-3e6e68abbd5841da6fb8.jpg",
+        "suora": true,
+        "lahde": "Parallelepiped09, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "La Pazin kaupunkirakenne jatkuu keskustasta ympäröiville rinteille.",
+        "lyhyt": "La Pazin kaupunkirakenne jatkuu keskustasta ympäröiville rinteille.",
+        "tiedosto": "City of La Paz, Bolivia2.jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "3e6e68abbd5841da6fb80c1b3fed270be210722a7bbf0188d7ef8776e042dfd5",
+      "exportSHA256": "3e6e68abbd5841da6fb80c1b3fed270be210722a7bbf0188d7ef8776e042dfd5",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e13/lapaz/c2-3e6e68abbd5841da6fb8.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e13/lapaz/c2-3e6e68abbd5841da6fb8.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/lapaz/cc-work/original-1.jpg",
+      "dimensions": [
+        4096,
+        2304
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e13/paakaupungit-pilvi/e13/lapaz/sisalto.json",
+      "sourceContentSHA256": "ec7f6260ffc1e88359e114a885253fbf2b8fd03315253eb281964b5e7b701a1a",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "8552d7d591a4a5904d2be646d7acecd61057536c9d693300862a657dd5405fc5",
+        "semanticContextSHA256": "8552d7d591a4a5904d2be646d7acecd61057536c9d693300862a657dd5405fc5",
+        "subjectTitle": "La Paz",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Parallelepiped09",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:City_of_La_Paz,_Bolivia2.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/8/8a/City_of_La_Paz%2C_Bolivia2.jpg",
+        "rightsEvidence": {
+          "selection": "CAN:n alkuperäinen Decisión351 Art22(h), https://www.comunidadandina.org/StaticFiles/DocOf/DEC351.pdf, PDF sivut6–8 ja erityisesti7 luettu omasta tallennetusta tekstistä ja sivukuvasta; SHA3e4965bd0f129eb28b627b6018e26732c88918f3cc2930fece02aec3c8779e90. SENAPI:n viranomaislähde nimeää351:n ylikansalliseksi normiksi. Tämän laajan todellisen kaupunkinäkymän pääaihe on pysyvä ulkorakennettu ympäristö ja luonnolliset rinteet, ei eristetty nykyteos; Art21/ChV rajat säilyvät. Ei PD-/kuolinvuosioletusta tai blanketmaahyväksyntää. PHOTO/C2 QA hyväksytty tämän pykälän nojalla; uuden C3:n QA erikseen. Aiempi Law1322Art24 on sitaattikohta ja väärä FOP-viite; ei käytetä. Valokuvan erillinen CC BY-SA4.0 ja kuvasivun oma tekijä tarkistettu; QA exactSHA accepted.",
+          "QA": {
+            "reviewer": "job-25 independent-image-QA",
+            "reviewedAt": "2026-10-12T18:22:05.257708+00:00",
+            "visualTool": "view_image",
+            "visualDetail": "original",
+            "localOriginal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/lapaz/cc-work/original-1.jpg",
+            "actualWidth": 4096,
+            "actualHeight": 2304,
+            "actualFormat": "JPEG",
+            "nativePixelWidth": 4096,
+            "nativePixelHeight": 2304,
+            "exifOrientation": 1,
+            "dimensionsConvention": "actualWidth/Height are correctly oriented display dimensions; native stored pixel dimensions are separately recorded",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:City_of_La_Paz,_Bolivia2.jpg",
+            "savedSourcePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/1864ffcab68edc54142231c4cfa682780afc0d4e9df1605fda2d86b498c918dd.html",
+            "savedSourceSHA256": "cea1a480b0aa3b557be21ba759e73d1bfb5b14e1767ffea622c84a1268ad8b77",
+            "authorVerified": "Parallelepiped09",
+            "authorField": "Original Commons Author table, independently read; not inferred from uploader",
+            "licenseVerified": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+            "captureDate": "6 October 2025 (according to Exif data)",
+            "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e13/paakaupungit-pilvi/e13/lapaz/sisalto.json",
+            "sourceContentSHA256": "7360a6759c548c8ae04627c8190734ed1bd4746369769467032a64a63739d543",
+            "captionFi": "La Pazin kaupunkirakenne jatkuu keskustasta ympäröiville rinteille.",
+            "depictedWorkLayer": "Tälle aidolle laajalle julkisen kaupungin pysyvän ulkorakennuskannan näkymälle sovellettu Andien päätöksen351 Art22(h). Ei teoksen PD-/ikäoletusta eikä blanket-maahyväksyntää.",
+            "duplicateInCity": false,
+            "primaryLawCheck": {
+              "requestedUrl": "https://www.wipo.int/edocs/lexdocs/laws/en/bo/bo005en.pdf",
+              "result": "Robots disallows /edocs/lexdocs/ for both approved user agents; no download or bypass performed",
+              "fetchHelper": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/sallittu_haku.py",
+              "secondaryRule": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/lapaz/cc-work/rights.txt",
+              "requiredEvidence": "Accessible original Law1322 Art24 text and case-specific applicability to the visible built/artistic environment.",
+              "supportHandoff": "Concrete file+slot+visible subject+missing evidence recorded in qa-feedback.md; no blanket country clearance requested."
+            },
+            "rightsReviewedAt": "2026-10-12T18:38:53.418630+00:00",
+            "primaryLaw": {
+              "url": "https://www.comunidadandina.org/StaticFiles/DocOf/DEC351.pdf",
+              "savedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/lahdevarasto/bf66e03c4c1e0dffd4d558850242ad4edecf3551f96fd3cc9879f0aab26d340e.body",
+              "sha256": "3e4965bd0f129eb28b627b6018e26732c88918f3cc2930fece02aec3c8779e90",
+              "title": "Decisión351",
+              "article": "22(h)",
+              "completePagesRead": [
+                6,
+                7,
+                8
+              ],
+              "extractionTool": "bundled pypdf",
+              "finding": "Pysyvästi yleisölle avoimessa paikassa olevan arkkitehtuuri-/taide-/soveltavan taiteen teoksen kuvan jäljentämis-/viestintäpoikkeus ilman tekijän lupaa tai korvausta; kohta22(h) ei sisällä ei-kaupallista ehtoa. Art21/ChV rajat säilyvät."
+            },
+            "sourceReferenceCorrection": {
+              "producerReference": "Law1322 Article24",
+              "finding": "SENAPI:n Law1322 alkutekstin sivu6 Art24 koskee sitaattia, eikä ole FOP-peruste. Aiempi QA toisti tuottajan väärän pykäläviitteen; se on nyt korjattu. Commons Bolivia myös nimeää oikeaksi perustaksi Andien päätöksen351.",
+              "law1322Source": {
+                "url": "https://www.senapi.gob.bo/sites/default/files/senapi/media/media-20190204220503-01-ley-1322.pdf",
+                "savedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/lahdevarasto/78e94b3dcbc9201420dc245714b8c8ffa278871b9ad0b540dcd461f9cb26a175.body",
+                "sha256": "60484c83d8a027c1935aa32567b26c334b143fa49f22bdd76a7d8eee576050fe",
+                "completePageRead": 6
+              },
+              "requestedProducerChange": "Korjaa näiden CC-assetien rightsEvidence Art22(h) ja tähän QA:ssa kirjattuun alkuperäiseen CAN-lähteeseen. Ei tarvetta uudelle kuvalle tai byte-muutokselle PHOTO/C2:ssa."
+            }
+          },
+          "qaReason": "Alkuperäinen Andien päätös351 Art22(h) ja sivut6–8 on luettu. Tämä laaja katu-/rakennuskannan ja rinnekaupungin yleisnäkymä kuvaa pysyvää ulkorakennettua ympäristöä; ei veistosta tai eristettyä taideteosta pääaiheena. Valokuvaajan Parallelepiped09:n CC BY-SA4.0 on erillisenä kerroksena varmennettu. Rakennuskerroksen aikaisempi lähdepuute ratkaistu tälle kuvalle. Sama native-SHA varmennettu, oma alkuperäiskuvan katselu säilyy. Tuottajan virheellinen Art24-viite korjattava."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "La Pazin kaupunkirakenne jatkuu keskustasta ympäröiville rinteille.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/lapaz/qa.json",
+        "fileSHA256": "8b2cf05fe6041e60da9cc4ab993d6f5575c390f95672f46319759f2edd41c960",
+        "item": {
+          "slot": "C2",
+          "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[1]",
+          "commonsFile": "City of La Paz, Bolivia2.jpg",
+          "sha256": "3e6e68abbd5841da6fb80c1b3fed270be210722a7bbf0188d7ef8776e042dfd5",
+          "verdict": "accepted",
+          "reason": "Alkuperäinen Andien päätös351 Art22(h) ja sivut6–8 on luettu. Tämä laaja katu-/rakennuskannan ja rinnekaupungin yleisnäkymä kuvaa pysyvää ulkorakennettua ympäristöä; ei veistosta tai eristettyä taideteosta pääaiheena. Valokuvaajan Parallelepiped09:n CC BY-SA4.0 on erillisenä kerroksena varmennettu. Rakennuskerroksen aikaisempi lähdepuute ratkaistu tälle kuvalle. Sama native-SHA varmennettu, oma alkuperäiskuvan katselu säilyy. Tuottajan virheellinen Art24-viite korjattava.",
+          "evidence": {
+            "reviewer": "job-25 independent-image-QA",
+            "reviewedAt": "2026-10-12T18:22:05.257708+00:00",
+            "visualTool": "view_image",
+            "visualDetail": "original",
+            "localOriginal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/lapaz/cc-work/original-1.jpg",
+            "actualWidth": 4096,
+            "actualHeight": 2304,
+            "actualFormat": "JPEG",
+            "nativePixelWidth": 4096,
+            "nativePixelHeight": 2304,
+            "exifOrientation": 1,
+            "dimensionsConvention": "actualWidth/Height are correctly oriented display dimensions; native stored pixel dimensions are separately recorded",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:City_of_La_Paz,_Bolivia2.jpg",
+            "savedSourcePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/1864ffcab68edc54142231c4cfa682780afc0d4e9df1605fda2d86b498c918dd.html",
+            "savedSourceSHA256": "cea1a480b0aa3b557be21ba759e73d1bfb5b14e1767ffea622c84a1268ad8b77",
+            "authorVerified": "Parallelepiped09",
+            "authorField": "Original Commons Author table, independently read; not inferred from uploader",
+            "licenseVerified": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+            "captureDate": "6 October 2025 (according to Exif data)",
+            "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e13/paakaupungit-pilvi/e13/lapaz/sisalto.json",
+            "sourceContentSHA256": "7360a6759c548c8ae04627c8190734ed1bd4746369769467032a64a63739d543",
+            "captionFi": "La Pazin kaupunkirakenne jatkuu keskustasta ympäröiville rinteille.",
+            "depictedWorkLayer": "Tälle aidolle laajalle julkisen kaupungin pysyvän ulkorakennuskannan näkymälle sovellettu Andien päätöksen351 Art22(h). Ei teoksen PD-/ikäoletusta eikä blanket-maahyväksyntää.",
+            "duplicateInCity": false,
+            "primaryLawCheck": {
+              "requestedUrl": "https://www.wipo.int/edocs/lexdocs/laws/en/bo/bo005en.pdf",
+              "result": "Robots disallows /edocs/lexdocs/ for both approved user agents; no download or bypass performed",
+              "fetchHelper": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/sallittu_haku.py",
+              "secondaryRule": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/lapaz/cc-work/rights.txt",
+              "requiredEvidence": "Accessible original Law1322 Art24 text and case-specific applicability to the visible built/artistic environment.",
+              "supportHandoff": "Concrete file+slot+visible subject+missing evidence recorded in qa-feedback.md; no blanket country clearance requested."
+            },
+            "rightsReviewedAt": "2026-10-12T18:38:53.418630+00:00",
+            "primaryLaw": {
+              "url": "https://www.comunidadandina.org/StaticFiles/DocOf/DEC351.pdf",
+              "savedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/lahdevarasto/bf66e03c4c1e0dffd4d558850242ad4edecf3551f96fd3cc9879f0aab26d340e.body",
+              "sha256": "3e4965bd0f129eb28b627b6018e26732c88918f3cc2930fece02aec3c8779e90",
+              "title": "Decisión351",
+              "article": "22(h)",
+              "completePagesRead": [
+                6,
+                7,
+                8
+              ],
+              "extractionTool": "bundled pypdf",
+              "finding": "Pysyvästi yleisölle avoimessa paikassa olevan arkkitehtuuri-/taide-/soveltavan taiteen teoksen kuvan jäljentämis-/viestintäpoikkeus ilman tekijän lupaa tai korvausta; kohta22(h) ei sisällä ei-kaupallista ehtoa. Art21/ChV rajat säilyvät."
+            },
+            "sourceReferenceCorrection": {
+              "producerReference": "Law1322 Article24",
+              "finding": "SENAPI:n Law1322 alkutekstin sivu6 Art24 koskee sitaattia, eikä ole FOP-peruste. Aiempi QA toisti tuottajan väärän pykäläviitteen; se on nyt korjattu. Commons Bolivia myös nimeää oikeaksi perustaksi Andien päätöksen351.",
+              "law1322Source": {
+                "url": "https://www.senapi.gob.bo/sites/default/files/senapi/media/media-20190204220503-01-ley-1322.pdf",
+                "savedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/lahdevarasto/78e94b3dcbc9201420dc245714b8c8ffa278871b9ad0b540dcd461f9cb26a175.body",
+                "sha256": "60484c83d8a027c1935aa32567b26c334b143fa49f22bdd76a7d8eee576050fe",
+                "completePageRead": 6
+              },
+              "requestedProducerChange": "Korjaa näiden CC-assetien rightsEvidence Art22(h) ja tähän QA:ssa kirjattuun alkuperäiseen CAN-lähteeseen. Ei tarvetta uudelle kuvalle tai byte-muutokselle PHOTO/C2:ssa."
+            }
+          },
+          "reviewHistory": [
+            {
+              "slot": "C2",
+              "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[1]",
+              "commonsFile": "City of La Paz, Bolivia2.jpg",
+              "sha256": "3e6e68abbd5841da6fb80c1b3fed270be210722a7bbf0188d7ef8776e042dfd5",
+              "verdict": "blocked",
+              "reason": "Aito laaja La Pazin rakennus- ja rinnekaupunginäkymä, tekijä Parallelepiped09 ja CC BY-SA 4.0 luettu Commonsin alkuperäissivulta. Oikea paikka vahvistuu kuvauksesta ja kamerakoordinaatista. Kuvassa ei kasvoja, vesileimaa, lisättyä tekstiä tai eristettyä taideteosta pääaiheena; kaupungin rakenne näkyy selkeänä. Sävykäsittely on voimakas mutta ei tässä erillinen hylkäys. Valokuvakerros on kunnossa; rakennuskerroksen perustana käytetty Law1322 Art24 tarvitsee sallitulla väylällä luetun alkuperäisnäytön. Linkitetty WIPO-PDF estyi robotsissa, joten C2 blocked kunnes tämä rajattu oikeuspuute ratkaistaan.",
+              "evidence": {
+                "reviewer": "job-25 independent-image-QA",
+                "reviewedAt": "2026-10-12T18:22:05.257708+00:00",
+                "visualTool": "view_image",
+                "visualDetail": "original",
+                "localOriginal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/lapaz/cc-work/original-1.jpg",
+                "actualWidth": 4096,
+                "actualHeight": 2304,
+                "actualFormat": "JPEG",
+                "nativePixelWidth": 4096,
+                "nativePixelHeight": 2304,
+                "exifOrientation": 1,
+                "dimensionsConvention": "actualWidth/Height are correctly oriented display dimensions; native stored pixel dimensions are separately recorded",
+                "sourcePage": "https://commons.wikimedia.org/wiki/File:City_of_La_Paz,_Bolivia2.jpg",
+                "savedSourcePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/1864ffcab68edc54142231c4cfa682780afc0d4e9df1605fda2d86b498c918dd.html",
+                "savedSourceSHA256": "cea1a480b0aa3b557be21ba759e73d1bfb5b14e1767ffea622c84a1268ad8b77",
+                "authorVerified": "Parallelepiped09",
+                "authorField": "Original Commons Author table, independently read; not inferred from uploader",
+                "licenseVerified": "CC BY-SA 4.0",
+                "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+                "captureDate": "6 October 2025 (according to Exif data)",
+                "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e13/paakaupungit-pilvi/e13/lapaz/sisalto.json",
+                "sourceContentSHA256": "7360a6759c548c8ae04627c8190734ed1bd4746369769467032a64a63739d543",
+                "captionFi": "La Pazin kaupunkirakenne jatkuu keskustasta ympäröiville rinteille.",
+                "depictedWorkLayer": "Tälle aidolle laajalle julkisen kaupungin pysyvän ulkorakennuskannan näkymälle sovellettu Andien päätöksen351 Art22(h). Ei teoksen PD-/ikäoletusta eikä blanket-maahyväksyntää.",
+                "duplicateInCity": false,
+                "primaryLawCheck": {
+                  "requestedUrl": "https://www.wipo.int/edocs/lexdocs/laws/en/bo/bo005en.pdf",
+                  "result": "Robots disallows /edocs/lexdocs/ for both approved user agents; no download or bypass performed",
+                  "fetchHelper": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/sallittu_haku.py",
+                  "secondaryRule": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/lapaz/cc-work/rights.txt",
+                  "requiredEvidence": "Accessible original Law1322 Art24 text and case-specific applicability to the visible built/artistic environment.",
+                  "supportHandoff": "Concrete file+slot+visible subject+missing evidence recorded in qa-feedback.md; no blanket country clearance requested."
+                },
+                "rightsReviewedAt": "2026-10-12T18:38:53.418630+00:00",
+                "primaryLaw": {
+                  "url": "https://www.comunidadandina.org/StaticFiles/DocOf/DEC351.pdf",
+                  "savedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/lahdevarasto/bf66e03c4c1e0dffd4d558850242ad4edecf3551f96fd3cc9879f0aab26d340e.body",
+                  "sha256": "3e4965bd0f129eb28b627b6018e26732c88918f3cc2930fece02aec3c8779e90",
+                  "title": "Decisión351",
+                  "article": "22(h)",
+                  "completePagesRead": [
+                    6,
+                    7,
+                    8
+                  ],
+                  "extractionTool": "bundled pypdf",
+                  "finding": "Pysyvästi yleisölle avoimessa paikassa olevan arkkitehtuuri-/taide-/soveltavan taiteen teoksen kuvan jäljentämis-/viestintäpoikkeus ilman tekijän lupaa tai korvausta; kohta22(h) ei sisällä ei-kaupallista ehtoa. Art21/ChV rajat säilyvät."
+                },
+                "sourceReferenceCorrection": {
+                  "producerReference": "Law1322 Article24",
+                  "finding": "SENAPI:n Law1322 alkutekstin sivu6 Art24 koskee sitaattia, eikä ole FOP-peruste. Aiempi QA toisti tuottajan väärän pykäläviitteen; se on nyt korjattu. Commons Bolivia myös nimeää oikeaksi perustaksi Andien päätöksen351.",
+                  "law1322Source": {
+                    "url": "https://www.senapi.gob.bo/sites/default/files/senapi/media/media-20190204220503-01-ley-1322.pdf",
+                    "savedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/lahdevarasto/78e94b3dcbc9201420dc245714b8c8ffa278871b9ad0b540dcd461f9cb26a175.body",
+                    "sha256": "60484c83d8a027c1935aa32567b26c334b143fa49f22bdd76a7d8eee576050fe",
+                    "completePageRead": 6
+                  },
+                  "requestedProducerChange": "Korjaa näiden CC-assetien rightsEvidence Art22(h) ja tähän QA:ssa kirjattuun alkuperäiseen CAN-lähteeseen. Ei tarvetta uudelle kuvalle tai byte-muutokselle PHOTO/C2:ssa."
+                }
+              }
+            }
+          ]
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/lapaz/qa.json",
+            "sha256": "8b2cf05fe6041e60da9cc4ab993d6f5575c390f95672f46319759f2edd41c960"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/lapaz/illustration-qa-extra.json",
+            "sha256": "61cbc9d085d93bcb312532248176f7e93ffc7aa30f632916320733170bf77d9f"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e13",
+        "city": "lapaz",
+        "slot": "C2",
+        "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[1]",
+        "commonsFile": "City of La Paz, Bolivia2.jpg",
+        "sha256": "3e6e68abbd5841da6fb80c1b3fed270be210722a7bbf0188d7ef8776e042dfd5",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:City_of_La_Paz,_Bolivia2.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/8/8a/City_of_La_Paz%2C_Bolivia2.jpg",
+        "author": "Parallelepiped09",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+        "width": 4096,
+        "height": 2304,
+        "originalSHA256": "3e6e68abbd5841da6fb80c1b3fed270be210722a7bbf0188d7ef8776e042dfd5",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e13/lapaz/c2-3e6e68abbd5841da6fb8.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e13/lapaz/c2-3e6e68abbd5841da6fb8.jpg",
+        "bytes": 6779380,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T18:39:59.765725+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "City of La Paz, Bolivia2.jpg",
+        "lahde": "Parallelepiped09, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "La Pazin kaupunkirakenne jatkuu keskustasta ympäröiville rinteille.",
+        "lyhyt": "La Pazin kaupunkirakenne jatkuu keskustasta ympäröiville rinteille."
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Parallelepiped09, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "La Pazin kaupunkirakenne jatkuu keskustasta ympäröiville rinteille.",
+        "lyhyt": "La Pazin kaupunkirakenne jatkuu keskustasta ympäröiville rinteille.",
+        "tiedosto": "City of La Paz, Bolivia2.jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "ec7f6260ffc1e88359e114a885253fbf2b8fd03315253eb281964b5e7b701a1a",
+      "targetAfterSHA256": "8552d7d591a4a5904d2be646d7acecd61057536c9d693300862a657dd5405fc5",
+      "contextAfterSHA256": "8552d7d591a4a5904d2be646d7acecd61057536c9d693300862a657dd5405fc5"
+    },
+    {
+      "era": "e13",
+      "city": "lapaz",
+      "slot": "C3",
+      "type": "commons",
+      "assetID": "capital-cc-e13-lapaz-c3-98db7bfbaa507e22",
+      "galleryImageID": "capital-cc-e13-lapaz-c3-98db7bfbaa507e22",
+      "commonsFile": "Vista Lejana de La Paz.jpg",
+      "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[2]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "kansikuvat",
+        2
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e13/lapaz/c3-98db7bfbaa507e22a022.jpg",
+        "suora": true,
+        "lahde": "Parallelepiped09, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "La Pazin asutus levittäytyy laaksoon ja vuorenrinteille.",
+        "lyhyt": "La Pazin asutus levittäytyy laaksoon ja vuorenrinteille.",
+        "tiedosto": "Vista Lejana de La Paz.jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Parallelepiped09, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "La Pazin asutus levittäytyy laaksoon ja vuorenrinteille.",
+        "lyhyt": "La Pazin asutus levittäytyy laaksoon ja vuorenrinteille.",
+        "tiedosto": "Vista Lejana de La Paz.jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e13/lapaz/c3-98db7bfbaa507e22a022.jpg",
+        "suora": true,
+        "lahde": "Parallelepiped09, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "La Pazin asutus levittäytyy laaksoon ja vuorenrinteille.",
+        "lyhyt": "La Pazin asutus levittäytyy laaksoon ja vuorenrinteille.",
+        "tiedosto": "Vista Lejana de La Paz.jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "98db7bfbaa507e22a0220a22dbc8e98bf2e859475f5f43f90181aa5faac193b5",
+      "exportSHA256": "98db7bfbaa507e22a0220a22dbc8e98bf2e859475f5f43f90181aa5faac193b5",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e13/lapaz/c3-98db7bfbaa507e22a022.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e13/lapaz/c3-98db7bfbaa507e22a022.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/lapaz/cc-work/extra-1.jpg",
+      "dimensions": [
+        4096,
+        2304
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e13/paakaupungit-pilvi/e13/lapaz/sisalto.json",
+      "sourceContentSHA256": "ec7f6260ffc1e88359e114a885253fbf2b8fd03315253eb281964b5e7b701a1a",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "ceabc5390303a4058a358cd8e55b35b002f7d293898c73727a70d411578ff4fc",
+        "semanticContextSHA256": "ceabc5390303a4058a358cd8e55b35b002f7d293898c73727a70d411578ff4fc",
+        "subjectTitle": "La Paz",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Parallelepiped09",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Vista_Lejana_de_La_Paz.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/1/13/Vista_Lejana_de_La_Paz.jpg",
+        "rightsEvidence": {
+          "selection": "CAN:n alkuperäinen Decisión351 Art22(h), https://www.comunidadandina.org/StaticFiles/DocOf/DEC351.pdf, PDF sivut6–8 ja erityisesti7 luettu omasta tallennetusta tekstistä ja sivukuvasta; SHA3e4965bd0f129eb28b627b6018e26732c88918f3cc2930fece02aec3c8779e90. SENAPI:n viranomaislähde nimeää351:n ylikansalliseksi normiksi. Tämän laajan todellisen kaupunkinäkymän pääaihe on pysyvä ulkorakennettu ympäristö ja luonnolliset rinteet, ei eristetty nykyteos; Art21/ChV rajat säilyvät. Ei PD-/kuolinvuosioletusta tai blanketmaahyväksyntää. PHOTO/C2 QA hyväksytty tämän pykälän nojalla; uuden C3:n QA erikseen. Aiempi Law1322Art24 on sitaattikohta ja väärä FOP-viite; ei käytetä. Parallelepiped09:n own-work CC BY-SA4.0, Exif3October2025 varmennettu.",
+          "QA": {
+            "reviewer": "job-25 independent-image-QA",
+            "reviewedAt": "2026-10-12T19:06:24.457782+00:00",
+            "visualTool": "view_image",
+            "visualDetail": "original",
+            "localOriginal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/lapaz/cc-work/extra-1.jpg",
+            "actualWidth": 4096,
+            "actualHeight": 2304,
+            "actualFormat": "JPEG",
+            "nativePixelWidth": 4096,
+            "nativePixelHeight": 2304,
+            "exifOrientation": 1,
+            "dimensionsConvention": "actualWidth/Height are correctly oriented display dimensions; native stored pixel dimensions are separately recorded",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Vista_Lejana_de_La_Paz.jpg",
+            "savedSourcePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/efee5101fc9e0ddd6546fad464c9b20e7fea83f65d7d5324a2079385f33b9cc8.html",
+            "savedSourceSHA256": "50367e9d431d5a68fcb4c6545b8dc9edb40d2230fef6dd94f33a724679b77c21",
+            "authorVerified": "Parallelepiped09",
+            "authorField": "Original Commons Author table, independently read; not inferred from uploader",
+            "licenseVerified": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+            "captureDate": "3 October 2025 (according to Exif data)",
+            "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e13/paakaupungit-pilvi/e13/lapaz/sisalto.json",
+            "sourceContentSHA256": "7360a6759c548c8ae04627c8190734ed1bd4746369769467032a64a63739d543",
+            "captionFi": "La Pazin asutus levittäytyy laaksoon ja vuorenrinteille.",
+            "depictedWorkLayer": "Valokuvan oikea tekijä Parallelepiped09 ja CC BY-SA4.0 varmennettu alkuperäisestä Author-taulukosta ja lisenssimallista. Kuvattu rakennuskerros on laaja julkinen kaupunkiympäristö: pysyvien ulkorakennusten kokonaisuus, ei eristetty tai pääaiheeksi nostettu yksilöity nykytaideteos/reliefi. Aiemmin itsenäisesti luettu CAN:n Decisión351 Art22(h) sallii julkiselle paikalle pysyvästi sijoitettujen rakennus-/teoskuvien toisintamisen; Art21/ChV-rajoitus säilyy. Ei rakennuksen iästä pääteltyä PD:tä, blanketmaahyväksyntää tai väärää Law1322Art24-FOP-viitettä. La Paz C1:n erillinen julkisivuteoseste ei siirry automaattisesti tähän eri kuvaan.",
+            "duplicateInCity": false,
+            "candidateCommonsFile": "Vista Lejana de La Paz.jpg",
+            "placeEvidence": {
+              "commonsDescription": "Español: Vista Lejana de La Paz",
+              "cameraLocation": [
+                -16.495178,
+                -68.130155
+              ]
+            },
+            "sourceSHA256Verified": "50367e9d431d5a68fcb4c6545b8dc9edb40d2230fef6dd94f33a724679b77c21",
+            "qualityNote": "Voimakas violetti/oranssi sävy, mutta laaja kaupunkiasettelu ja etu-/keskitason rakennusten piirteet erottuvat. Alkuperäinen kaupunkirakenne ei ole geneerinen AI-panoraama.",
+            "captureDateAsStated": "3 October 2025 (according to Exif data)",
+            "workLayerPrimary": {
+              "url": "https://www.comunidadandina.org/StaticFiles/DocOf/DEC351.pdf",
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/lahdevarasto/bf66e03c4c1e0dffd4d558850242ad4edecf3551f96fd3cc9879f0aab26d340e.body",
+              "sha256": "3e4965bd0f129eb28b627b6018e26732c88918f3cc2930fece02aec3c8779e90",
+              "readEvidence": "Aiemmin henkilökohtaisesti luettu alkuperäisen PDF:n sivut6–8, Art22(h) erityisesti sivu7; laaja pysyvä julkinen ulkorakennusten näkymä tarkistettu tämän täsmällisen kuvan perusteella."
+            }
+          },
+          "qaReason": "Silmin katsottu alkuperäinen: laaja todellinen kaupunkinäkymä, jossa rakennuskanta peittää laaksoa ja rinteitä ja lumihuippuinen vuori näkyy takana. Vastaa nykyistä La Paz -introa kaupungista Choqueyapun laaksossa/rinteillä ja Illimanista. Rakennusten muodot ja ikkunajaot erottuvat aiempaa hylättyä La Paz Skyline -kuvaa tarkemmin, vaikka kaukaisimmat talot ovat pieniä. Voimakas violetti/oranssi sävykäsittely kirjattu laatuhuomioksi; se ei estä kaupunkirakenteen lukemista. Ei tunnistettavia kasvoja, lisättyä tekstiä, logoja, vesileimaa tai kehystä. Commonsin Description ja kamerapaikka yksilöivät La Pazin, Source Own work ja kuvausajankohta 3.10.2025 Exif-tietona. Ei tämän päivän tuoreusväitettä. Aiempi hylätty C3 säilyy omalla täsmällisellä SHA:llaan."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "La Pazin asutus levittäytyy laaksoon ja vuorenrinteille.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/lapaz/qa.json",
+        "fileSHA256": "8b2cf05fe6041e60da9cc4ab993d6f5575c390f95672f46319759f2edd41c960",
+        "item": {
+          "slot": "C3",
+          "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[2]",
+          "commonsFile": "Vista Lejana de La Paz.jpg",
+          "sha256": "98db7bfbaa507e22a0220a22dbc8e98bf2e859475f5f43f90181aa5faac193b5",
+          "verdict": "accepted",
+          "reason": "Silmin katsottu alkuperäinen: laaja todellinen kaupunkinäkymä, jossa rakennuskanta peittää laaksoa ja rinteitä ja lumihuippuinen vuori näkyy takana. Vastaa nykyistä La Paz -introa kaupungista Choqueyapun laaksossa/rinteillä ja Illimanista. Rakennusten muodot ja ikkunajaot erottuvat aiempaa hylättyä La Paz Skyline -kuvaa tarkemmin, vaikka kaukaisimmat talot ovat pieniä. Voimakas violetti/oranssi sävykäsittely kirjattu laatuhuomioksi; se ei estä kaupunkirakenteen lukemista. Ei tunnistettavia kasvoja, lisättyä tekstiä, logoja, vesileimaa tai kehystä. Commonsin Description ja kamerapaikka yksilöivät La Pazin, Source Own work ja kuvausajankohta 3.10.2025 Exif-tietona. Ei tämän päivän tuoreusväitettä. Aiempi hylätty C3 säilyy omalla täsmällisellä SHA:llaan.",
+          "evidence": {
+            "reviewer": "job-25 independent-image-QA",
+            "reviewedAt": "2026-10-12T19:06:24.457782+00:00",
+            "visualTool": "view_image",
+            "visualDetail": "original",
+            "localOriginal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/lapaz/cc-work/extra-1.jpg",
+            "actualWidth": 4096,
+            "actualHeight": 2304,
+            "actualFormat": "JPEG",
+            "nativePixelWidth": 4096,
+            "nativePixelHeight": 2304,
+            "exifOrientation": 1,
+            "dimensionsConvention": "actualWidth/Height are correctly oriented display dimensions; native stored pixel dimensions are separately recorded",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Vista_Lejana_de_La_Paz.jpg",
+            "savedSourcePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/efee5101fc9e0ddd6546fad464c9b20e7fea83f65d7d5324a2079385f33b9cc8.html",
+            "savedSourceSHA256": "50367e9d431d5a68fcb4c6545b8dc9edb40d2230fef6dd94f33a724679b77c21",
+            "authorVerified": "Parallelepiped09",
+            "authorField": "Original Commons Author table, independently read; not inferred from uploader",
+            "licenseVerified": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+            "captureDate": "3 October 2025 (according to Exif data)",
+            "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e13/paakaupungit-pilvi/e13/lapaz/sisalto.json",
+            "sourceContentSHA256": "7360a6759c548c8ae04627c8190734ed1bd4746369769467032a64a63739d543",
+            "captionFi": "La Pazin asutus levittäytyy laaksoon ja vuorenrinteille.",
+            "depictedWorkLayer": "Valokuvan oikea tekijä Parallelepiped09 ja CC BY-SA4.0 varmennettu alkuperäisestä Author-taulukosta ja lisenssimallista. Kuvattu rakennuskerros on laaja julkinen kaupunkiympäristö: pysyvien ulkorakennusten kokonaisuus, ei eristetty tai pääaiheeksi nostettu yksilöity nykytaideteos/reliefi. Aiemmin itsenäisesti luettu CAN:n Decisión351 Art22(h) sallii julkiselle paikalle pysyvästi sijoitettujen rakennus-/teoskuvien toisintamisen; Art21/ChV-rajoitus säilyy. Ei rakennuksen iästä pääteltyä PD:tä, blanketmaahyväksyntää tai väärää Law1322Art24-FOP-viitettä. La Paz C1:n erillinen julkisivuteoseste ei siirry automaattisesti tähän eri kuvaan.",
+            "duplicateInCity": false,
+            "candidateCommonsFile": "Vista Lejana de La Paz.jpg",
+            "placeEvidence": {
+              "commonsDescription": "Español: Vista Lejana de La Paz",
+              "cameraLocation": [
+                -16.495178,
+                -68.130155
+              ]
+            },
+            "sourceSHA256Verified": "50367e9d431d5a68fcb4c6545b8dc9edb40d2230fef6dd94f33a724679b77c21",
+            "qualityNote": "Voimakas violetti/oranssi sävy, mutta laaja kaupunkiasettelu ja etu-/keskitason rakennusten piirteet erottuvat. Alkuperäinen kaupunkirakenne ei ole geneerinen AI-panoraama.",
+            "captureDateAsStated": "3 October 2025 (according to Exif data)",
+            "workLayerPrimary": {
+              "url": "https://www.comunidadandina.org/StaticFiles/DocOf/DEC351.pdf",
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/lahdevarasto/bf66e03c4c1e0dffd4d558850242ad4edecf3551f96fd3cc9879f0aab26d340e.body",
+              "sha256": "3e4965bd0f129eb28b627b6018e26732c88918f3cc2930fece02aec3c8779e90",
+              "readEvidence": "Aiemmin henkilökohtaisesti luettu alkuperäisen PDF:n sivut6–8, Art22(h) erityisesti sivu7; laaja pysyvä julkinen ulkorakennusten näkymä tarkistettu tämän täsmällisen kuvan perusteella."
+            }
+          }
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/lapaz/qa.json",
+            "sha256": "8b2cf05fe6041e60da9cc4ab993d6f5575c390f95672f46319759f2edd41c960"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/lapaz/illustration-qa-extra.json",
+            "sha256": "61cbc9d085d93bcb312532248176f7e93ffc7aa30f632916320733170bf77d9f"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e13",
+        "city": "lapaz",
+        "slot": "C3",
+        "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[2]",
+        "commonsFile": "Vista Lejana de La Paz.jpg",
+        "sha256": "98db7bfbaa507e22a0220a22dbc8e98bf2e859475f5f43f90181aa5faac193b5",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Vista_Lejana_de_La_Paz.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/1/13/Vista_Lejana_de_La_Paz.jpg",
+        "author": "Parallelepiped09",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+        "width": 4096,
+        "height": 2304,
+        "originalSHA256": "98db7bfbaa507e22a0220a22dbc8e98bf2e859475f5f43f90181aa5faac193b5",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e13/lapaz/c3-98db7bfbaa507e22a022.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e13/lapaz/c3-98db7bfbaa507e22a022.jpg",
+        "bytes": 5400095,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T19:06:37.336395+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "Vista Lejana de La Paz.jpg",
+        "lahde": "Parallelepiped09, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "La Pazin asutus levittäytyy laaksoon ja vuorenrinteille.",
+        "lyhyt": "La Pazin asutus levittäytyy laaksoon ja vuorenrinteille."
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Parallelepiped09, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "La Pazin asutus levittäytyy laaksoon ja vuorenrinteille.",
+        "lyhyt": "La Pazin asutus levittäytyy laaksoon ja vuorenrinteille.",
+        "tiedosto": "Vista Lejana de La Paz.jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "ec7f6260ffc1e88359e114a885253fbf2b8fd03315253eb281964b5e7b701a1a",
+      "targetAfterSHA256": "ceabc5390303a4058a358cd8e55b35b002f7d293898c73727a70d411578ff4fc",
+      "contextAfterSHA256": "ceabc5390303a4058a358cd8e55b35b002f7d293898c73727a70d411578ff4fc"
+    }
+  ],
+  "runtimeIntegrationPending": true,
+  "ownerAcceptedNotImpliedByAuthorization": true,
+  "gameIntegrated": false
+}

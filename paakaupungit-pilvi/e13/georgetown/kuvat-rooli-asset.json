@@ -1,0 +1,3337 @@
+{
+  "schemaVersion": "capital-city-role-assets/v1",
+  "era": "e13",
+  "city": "georgetown",
+  "authorization": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+  "sourceContentAfterSHA256": "379fe1d844d0f94761337315a7340d7e8291341f4e4c9177f885ba7823e2eef6",
+  "assets": [
+    {
+      "era": "e13",
+      "city": "georgetown",
+      "slot": "TRAVELER",
+      "type": "illustration",
+      "assetID": "e13-georgetown-traveler-manaatti-pysty-v1",
+      "galleryImageID": "e13-georgetown-traveler-manaatti-pysty-v1",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "matkailijalle",
+        "kuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/georgetown/e13-georgetown-traveler-manaatti-pysty-v1-735565d49c55.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Manaatin yleishavainnollistus. Havainnekuva.",
+        "lyhyt": "Manaatin yleishavainnollistus. Havainnekuva."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/georgetown/e13-georgetown-traveler-manaatti-pysty-v1-735565d49c55.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Manaatin yleishavainnollistus. Havainnekuva.",
+        "lyhyt": "Manaatin yleishavainnollistus. Havainnekuva."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "735565d49c55f462e0cbfd50ae7a7ff427626b713f37023a7301390035c5a2e5",
+      "exportSHA256": "268a85b4b5a809d3f8ee5927e7f995d0e1f72c94bbcaa7820613af0365e37ccc",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/georgetown/e13-georgetown-traveler-manaatti-pysty-v1-735565d49c55.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/georgetown/e13-georgetown-traveler-manaatti-pysty-v1-735565d49c55.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e13/georgetown/e13-georgetown-traveler-manaatti-pysty-v1-735565d49c55.png",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e13/paakaupungit-pilvi/e13/georgetown/sisalto.json",
+      "sourceContentSHA256": "379fe1d844d0f94761337315a7340d7e8291341f4e4c9177f885ba7823e2eef6",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "385ee5942a0dc772d849eb18ebf07e41df36c3e46325a5298301d8b92cb6e638",
+        "subjectTitle": "Matkailijalle",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Generic animal/trees and natural environment; no real named site reconstruction, protected artwork, architecture or identified person.",
+          "QA": {
+            "contentSHA256": "9753c3fd1ea3fc3d1919191f44883d2c9ffa1d99cf8b628f9dc729735ec55c56",
+            "visualObservationFi": "Yksi pyöreävartaloinen manaatti, kaksi eturäpylää, lyhyt viiksinen kuono ja alaspäin jatkuva melamainen pyrstö. Ihon hienot rypyt, laikkuisuus ja veden epäsäännöllinen valo ovat luontevia; ei lisäraajoja, selkäevää, logoa tai tekstiä.",
+            "topicMatchFi": "Matkailijaosio ohjaa kasvitieteelliseen puutarhaan ja kaupungin K2 kertoo manaateista. Selite ilmoittaa yleishavainnollistuksen. Kyseessä eri tiedosto ja tiivis pystylähikuva; K2:n koko eläimen vaakakuva palvelee erillistä eläinjuttua.",
+            "sourceEvidence": [
+              {
+                "url": "https://en.wikipedia.org/wiki/Manatee",
+                "nasSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/georgetown/illustration-work/manatee.txt",
+                "support": "Manatees have fore-flippers, a flexible upper lip and paddle tail; city guide includes botanical-garden manatees."
+              }
+            ],
+            "aspectRatio": 0.6666666666666666,
+            "rightsScopeFi": "Yleinen eläinaihe.",
+            "subjectReuseFi": "Sama eläinaihe kuin K2:ssa, mutta eri natiivitiedosto ja sommittelu; matkailijaosion tunnusaihe ja eläinnostossa anatomiaa näyttävä kuva.",
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/georgetown/assets/e13-georgetown-traveler-manaatti-pysty-v1/original.png",
+            "nativeDimensions": [
+              1024,
+              1536
+            ],
+            "nativeSHA256Verified": true,
+            "viewedByReviewer": true
+          },
+          "qaReason": "Manaatin lähikuva on anatomialtaan uskottava ja native-pysty 1024×1536 täyttää TRAVELER-suhteen 0,667. Ei väitettä todellisesta puutarhalammen kuvasta."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Manaatin yleishavainnollistus. Havainnekuva.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/georgetown/illustration-qa-extra.json",
+        "fileSHA256": "7d4e70ceb1958ab7d4bfed82f7680c20a107aa8df465ef16ae08b7249478b18b",
+        "item": {
+          "slot": "TRAVELER",
+          "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
+          "assetID": "e13-georgetown-traveler-manaatti-pysty-v1",
+          "sha256": "735565d49c55f462e0cbfd50ae7a7ff427626b713f37023a7301390035c5a2e5",
+          "verdict": "accepted",
+          "reason": "Manaatin lähikuva on anatomialtaan uskottava ja native-pysty 1024×1536 täyttää TRAVELER-suhteen 0,667. Ei väitettä todellisesta puutarhalammen kuvasta.",
+          "evidence": {
+            "contentSHA256": "9753c3fd1ea3fc3d1919191f44883d2c9ffa1d99cf8b628f9dc729735ec55c56",
+            "visualObservationFi": "Yksi pyöreävartaloinen manaatti, kaksi eturäpylää, lyhyt viiksinen kuono ja alaspäin jatkuva melamainen pyrstö. Ihon hienot rypyt, laikkuisuus ja veden epäsäännöllinen valo ovat luontevia; ei lisäraajoja, selkäevää, logoa tai tekstiä.",
+            "topicMatchFi": "Matkailijaosio ohjaa kasvitieteelliseen puutarhaan ja kaupungin K2 kertoo manaateista. Selite ilmoittaa yleishavainnollistuksen. Kyseessä eri tiedosto ja tiivis pystylähikuva; K2:n koko eläimen vaakakuva palvelee erillistä eläinjuttua.",
+            "sourceEvidence": [
+              {
+                "url": "https://en.wikipedia.org/wiki/Manatee",
+                "nasSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/georgetown/illustration-work/manatee.txt",
+                "support": "Manatees have fore-flippers, a flexible upper lip and paddle tail; city guide includes botanical-garden manatees."
+              }
+            ],
+            "aspectRatio": 0.6666666666666666,
+            "rightsScopeFi": "Yleinen eläinaihe.",
+            "subjectReuseFi": "Sama eläinaihe kuin K2:ssa, mutta eri natiivitiedosto ja sommittelu; matkailijaosion tunnusaihe ja eläinnostossa anatomiaa näyttävä kuva.",
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/georgetown/assets/e13-georgetown-traveler-manaatti-pysty-v1/original.png",
+            "nativeDimensions": [
+              1024,
+              1536
+            ],
+            "nativeSHA256Verified": true,
+            "viewedByReviewer": true
+          },
+          "reviewedAt": "2026-10-12T18:49:26.207569+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/georgetown/qa.json",
+            "sha256": "a4dc34ebef1c8ca5335d17ba1416814a611ed34c8c81d25c9280443e85ec25fc"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/georgetown/illustration-qa-extra.json",
+            "sha256": "7d4e70ceb1958ab7d4bfed82f7680c20a107aa8df465ef16ae08b7249478b18b"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/georgetown/e13-georgetown-traveler-manaatti-pysty-v1-735565d49c55.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/georgetown/e13-georgetown-traveler-manaatti-pysty-v1-735565d49c55.png?t=268a85b4b5a809d3",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/georgetown/e13-georgetown-traveler-manaatti-pysty-v1-735565d49c55.png",
+        "sha256": "268a85b4b5a809d3f8ee5927e7f995d0e1f72c94bbcaa7820613af0365e37ccc",
+        "bytes": 2458969,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e13-georgetown-traveler-manaatti-pysty-v1",
+        "nativeSHA256": "735565d49c55f462e0cbfd50ae7a7ff427626b713f37023a7301390035c5a2e5",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e13/georgetown/e13-georgetown-traveler-manaatti-pysty-v1-735565d49c55.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e13",
+        "city": "georgetown",
+        "slot": "TRAVELER",
+        "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
+        "verifiedAt": "2026-10-12T18:50:27.640527+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e13/georgetown/e13-georgetown-traveler-manaatti-pysty-v1-735565d49c55.png",
+        "sha256": "268a85b4b5a809d3f8ee5927e7f995d0e1f72c94bbcaa7820613af0365e37ccc",
+        "bytes": 2458969,
+        "SHAReadAt": "2026-10-12T19:03:42.510186+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1024,
+        "height": 1536,
+        "pixelWidth": 1024,
+        "pixelHeight": 1536,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "735565d49c55f462e0cbfd50ae7a7ff427626b713f37023a7301390035c5a2e5",
+        "rgbPixelSHA256": "c45e76d00b426b166d58d45f9de9e36387832038811c1143d47f891cefbc9f02",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "379fe1d844d0f94761337315a7340d7e8291341f4e4c9177f885ba7823e2eef6",
+      "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+      "contextAfterSHA256": "385ee5942a0dc772d849eb18ebf07e41df36c3e46325a5298301d8b92cb6e638"
+    },
+    {
+      "era": "e13",
+      "city": "georgetown",
+      "slot": "O3",
+      "type": "illustration",
+      "assetID": "e13-georgetown-o3-lumpeenlehdet-v1",
+      "galleryImageID": "e13-georgetown-o3-lumpeenlehdet-v1",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[2].kuva",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "matkailijalle",
+        "artikkeli",
+        "jaksot",
+        2,
+        "kuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/georgetown/e13-georgetown-o3-lumpeenlehdet-v1-4c969dadd9bd.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Vesikasvien lehtiä kelluu veden pinnalla. Havainnekuva.",
+        "lyhyt": "Vesikasvien lehtiä kelluu veden pinnalla. Havainnekuva."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/georgetown/e13-georgetown-o3-lumpeenlehdet-v1-4c969dadd9bd.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Vesikasvien lehtiä kelluu veden pinnalla. Havainnekuva.",
+        "lyhyt": "Vesikasvien lehtiä kelluu veden pinnalla. Havainnekuva."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "4c969dadd9bd08f5f6d36fe081a32b614883b4e7c25e93ef9e8e373e33989754",
+      "exportSHA256": "d7fd752972714a18e965031459393453854dbc0fc25e095ff9436182337fa36e",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/georgetown/e13-georgetown-o3-lumpeenlehdet-v1-4c969dadd9bd.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/georgetown/e13-georgetown-o3-lumpeenlehdet-v1-4c969dadd9bd.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e13/georgetown/e13-georgetown-o3-lumpeenlehdet-v1-4c969dadd9bd.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e13/paakaupungit-pilvi/e13/georgetown/sisalto.json",
+      "sourceContentSHA256": "379fe1d844d0f94761337315a7340d7e8291341f4e4c9177f885ba7823e2eef6",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "74e94e32c005f5394675e59a46931a232ccc26344ad72cb1234fd89220068595",
+        "subjectTitle": "Puutarhat ovat eri paikkoja",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Natural leaves/water or ordinary food/tableware, no actual protected garden design, eatery architecture, artwork, logo or human likeness.",
+          "QA": {
+            "contentSHA256": "9753c3fd1ea3fc3d1919191f44883d2c9ffa1d99cf8b628f9dc729735ec55c56",
+            "visualObservationFi": "Erikokoisia pyöreitä vihreitä lehtiä, taittuneita reunoja, eri kasvuvaiheita ja pieniä luonnollisia vaurioita veden pinnalla. Ei monistuvaa lehteä tai vesikuviota, tekstiä tai ihmisiä.",
+            "topicMatchFi": "O3 käsittelee kasvitieteellistä puutarhaa ja trooppisia kasveja, lähde suuria lumpeita. Selite ei nimeä kasvilajia tai kuvaa todelliseksi puutarhalammeksi.",
+            "sourceEvidence": [
+              {
+                "url": "https://en.wikivoyage.org/wiki/Georgetown_(Guyana)",
+                "nasSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/nopea-e13-georgetown/voyage.txt",
+                "support": "See Botanical Gardens: large lilies and palms; generic leaf illustration only."
+              }
+            ],
+            "rightsScopeFi": "Yleinen kasvi ja vesi.",
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/georgetown/assets/e13-georgetown-o3-lumpeenlehdet-v1/original.png",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "nativeSHA256Verified": true,
+            "viewedByReviewer": true
+          },
+          "qaReason": "Vaihtelevat kelluvat vesikasvien lehdet ja veden heijastukset ovat luonnolliset; yleisaihe sopii O3:n puutarhakasvillisuuteen."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Vesikasvien lehtiä kelluu veden pinnalla. Havainnekuva.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/georgetown/illustration-qa-extra.json",
+        "fileSHA256": "7d4e70ceb1958ab7d4bfed82f7680c20a107aa8df465ef16ae08b7249478b18b",
+        "item": {
+          "slot": "O3",
+          "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[2].kuva",
+          "assetID": "e13-georgetown-o3-lumpeenlehdet-v1",
+          "sha256": "4c969dadd9bd08f5f6d36fe081a32b614883b4e7c25e93ef9e8e373e33989754",
+          "verdict": "accepted",
+          "reason": "Vaihtelevat kelluvat vesikasvien lehdet ja veden heijastukset ovat luonnolliset; yleisaihe sopii O3:n puutarhakasvillisuuteen.",
+          "evidence": {
+            "contentSHA256": "9753c3fd1ea3fc3d1919191f44883d2c9ffa1d99cf8b628f9dc729735ec55c56",
+            "visualObservationFi": "Erikokoisia pyöreitä vihreitä lehtiä, taittuneita reunoja, eri kasvuvaiheita ja pieniä luonnollisia vaurioita veden pinnalla. Ei monistuvaa lehteä tai vesikuviota, tekstiä tai ihmisiä.",
+            "topicMatchFi": "O3 käsittelee kasvitieteellistä puutarhaa ja trooppisia kasveja, lähde suuria lumpeita. Selite ei nimeä kasvilajia tai kuvaa todelliseksi puutarhalammeksi.",
+            "sourceEvidence": [
+              {
+                "url": "https://en.wikivoyage.org/wiki/Georgetown_(Guyana)",
+                "nasSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/nopea-e13-georgetown/voyage.txt",
+                "support": "See Botanical Gardens: large lilies and palms; generic leaf illustration only."
+              }
+            ],
+            "rightsScopeFi": "Yleinen kasvi ja vesi.",
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/georgetown/assets/e13-georgetown-o3-lumpeenlehdet-v1/original.png",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "nativeSHA256Verified": true,
+            "viewedByReviewer": true
+          },
+          "reviewedAt": "2026-10-12T19:01:06.842699+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/georgetown/qa.json",
+            "sha256": "a4dc34ebef1c8ca5335d17ba1416814a611ed34c8c81d25c9280443e85ec25fc"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/georgetown/illustration-qa-extra.json",
+            "sha256": "7d4e70ceb1958ab7d4bfed82f7680c20a107aa8df465ef16ae08b7249478b18b"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/georgetown/e13-georgetown-o3-lumpeenlehdet-v1-4c969dadd9bd.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/georgetown/e13-georgetown-o3-lumpeenlehdet-v1-4c969dadd9bd.png?t=d7fd752972714a18",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/georgetown/e13-georgetown-o3-lumpeenlehdet-v1-4c969dadd9bd.png",
+        "sha256": "d7fd752972714a18e965031459393453854dbc0fc25e095ff9436182337fa36e",
+        "bytes": 2445571,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e13-georgetown-o3-lumpeenlehdet-v1",
+        "nativeSHA256": "4c969dadd9bd08f5f6d36fe081a32b614883b4e7c25e93ef9e8e373e33989754",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e13/georgetown/e13-georgetown-o3-lumpeenlehdet-v1-4c969dadd9bd.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e13",
+        "city": "georgetown",
+        "slot": "O3",
+        "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[2].kuva",
+        "verifiedAt": "2026-10-12T19:01:19.364957+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e13/georgetown/e13-georgetown-o3-lumpeenlehdet-v1-4c969dadd9bd.png",
+        "sha256": "d7fd752972714a18e965031459393453854dbc0fc25e095ff9436182337fa36e",
+        "bytes": 2445571,
+        "SHAReadAt": "2026-10-12T19:03:43.119853+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "4c969dadd9bd08f5f6d36fe081a32b614883b4e7c25e93ef9e8e373e33989754",
+        "rgbPixelSHA256": "a950310e15c08ec79b23f0e302b912faca609462728e4e2b635f9837bf45cc96",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "379fe1d844d0f94761337315a7340d7e8291341f4e4c9177f885ba7823e2eef6",
+      "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+      "contextAfterSHA256": "74e94e32c005f5394675e59a46931a232ccc26344ad72cb1234fd89220068595"
+    },
+    {
+      "era": "e13",
+      "city": "georgetown",
+      "slot": "O4",
+      "type": "illustration",
+      "assetID": "e13-georgetown-o4-dhalpuri-ja-curry-v1",
+      "galleryImageID": "e13-georgetown-o4-dhalpuri-ja-curry-v1",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "matkailijalle",
+        "artikkeli",
+        "jaksot",
+        3,
+        "kuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/georgetown/e13-georgetown-o4-dhalpuri-ja-curry-v1-5494e3502f06.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Roti ja curry kuuluvat Georgetownissa kuvattuun ruokatarjontaan. Havainnekuva.",
+        "lyhyt": "Roti ja curry kuuluvat Georgetownissa kuvattuun ruokatarjontaan. Havainnekuva."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/georgetown/e13-georgetown-o4-dhalpuri-ja-curry-v1-5494e3502f06.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Roti ja curry kuuluvat Georgetownissa kuvattuun ruokatarjontaan. Havainnekuva.",
+        "lyhyt": "Roti ja curry kuuluvat Georgetownissa kuvattuun ruokatarjontaan. Havainnekuva."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "5494e3502f060da6a2c8e002338bb2d2c4f1c6985c7c5f1a285b63040837c7eb",
+      "exportSHA256": "0ef232f302a0a1879e36957f11028669b32192de414f886f89b6148e47c32329",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/georgetown/e13-georgetown-o4-dhalpuri-ja-curry-v1-5494e3502f06.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/georgetown/e13-georgetown-o4-dhalpuri-ja-curry-v1-5494e3502f06.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e13/georgetown/e13-georgetown-o4-dhalpuri-ja-curry-v1-5494e3502f06.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e13/paakaupungit-pilvi/e13/georgetown/sisalto.json",
+      "sourceContentSHA256": "379fe1d844d0f94761337315a7340d7e8291341f4e4c9177f885ba7823e2eef6",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "c567bd8212f46f65512b3b39337fc0cca730ec13f0f9a18044fa2cc548e2230f",
+        "subjectTitle": "Mitä täällä syödään",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Ordinary food and plain tableware; no art, architecture, logos or identified people. Illustration, not an actual restaurant photo.",
+          "QA": {
+            "contentSHA256": "9753c3fd1ea3fc3d1919191f44883d2c9ffa1d99cf8b628f9dc729735ec55c56",
+            "visualObservationFi": "Taitettu litteä leipä ja kulhossa erikokoisia kypsiä vihanneksia curryssa, taustalla pieni kasvissalaatti. Paistolaikut, taitos, kastike ja astioiden muoto ovat yhtenäiset; ei käsiä, tekstiä, logoja tai nimetyn ravintolan tunnuksia.",
+            "topicMatchFi": "Nykyinen teksti mainitsee curryruoat, rotin, dhalpurin sekä kasvisvaihtoehdot. Selite puhuu rotista ja currysta havainnekuvana ilman väitettä tietystä aidosta reseptistä tai myyntipaikasta.",
+            "sourceEvidence": [
+              {
+                "url": "https://en.wikivoyage.org/wiki/Georgetown_(Guyana)",
+                "nasSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/nopea-e13-georgetown/voyage.txt",
+                "support": "Eat: curries, roti and dhalpuri in Georgetown. Generic folded roti with a cooked vegetable curry accompaniment; no unsourced filling displayed."
+              }
+            ],
+            "rightsScopeFi": "Yleinen ruoka-aihe ilman suojattua teosta.",
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/georgetown/assets/e13-georgetown-o4-dhalpuri-ja-curry-v1/original.png",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "nativeSHA256Verified": true,
+            "viewedByReviewer": true
+          },
+          "qaReason": "Roti ja kasviscurry vastaavat O4-ruokajaksoa; annos on luonnollinen yleiskuvitus ja selite erottaa sen todellisesta ravintolakuvasta."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Roti ja curry kuuluvat Georgetownissa kuvattuun ruokatarjontaan. Havainnekuva.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/georgetown/illustration-qa-extra.json",
+        "fileSHA256": "7d4e70ceb1958ab7d4bfed82f7680c20a107aa8df465ef16ae08b7249478b18b",
+        "item": {
+          "slot": "O4",
+          "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+          "assetID": "e13-georgetown-o4-dhalpuri-ja-curry-v1",
+          "sha256": "5494e3502f060da6a2c8e002338bb2d2c4f1c6985c7c5f1a285b63040837c7eb",
+          "verdict": "accepted",
+          "reason": "Roti ja kasviscurry vastaavat O4-ruokajaksoa; annos on luonnollinen yleiskuvitus ja selite erottaa sen todellisesta ravintolakuvasta.",
+          "evidence": {
+            "contentSHA256": "9753c3fd1ea3fc3d1919191f44883d2c9ffa1d99cf8b628f9dc729735ec55c56",
+            "visualObservationFi": "Taitettu litteä leipä ja kulhossa erikokoisia kypsiä vihanneksia curryssa, taustalla pieni kasvissalaatti. Paistolaikut, taitos, kastike ja astioiden muoto ovat yhtenäiset; ei käsiä, tekstiä, logoja tai nimetyn ravintolan tunnuksia.",
+            "topicMatchFi": "Nykyinen teksti mainitsee curryruoat, rotin, dhalpurin sekä kasvisvaihtoehdot. Selite puhuu rotista ja currysta havainnekuvana ilman väitettä tietystä aidosta reseptistä tai myyntipaikasta.",
+            "sourceEvidence": [
+              {
+                "url": "https://en.wikivoyage.org/wiki/Georgetown_(Guyana)",
+                "nasSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/nopea-e13-georgetown/voyage.txt",
+                "support": "Eat: curries, roti and dhalpuri in Georgetown. Generic folded roti with a cooked vegetable curry accompaniment; no unsourced filling displayed."
+              }
+            ],
+            "rightsScopeFi": "Yleinen ruoka-aihe ilman suojattua teosta.",
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/georgetown/assets/e13-georgetown-o4-dhalpuri-ja-curry-v1/original.png",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "nativeSHA256Verified": true,
+            "viewedByReviewer": true
+          },
+          "reviewedAt": "2026-10-12T18:15:40.896501+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/georgetown/qa.json",
+            "sha256": "a4dc34ebef1c8ca5335d17ba1416814a611ed34c8c81d25c9280443e85ec25fc"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/georgetown/illustration-qa-extra.json",
+            "sha256": "7d4e70ceb1958ab7d4bfed82f7680c20a107aa8df465ef16ae08b7249478b18b"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/georgetown/e13-georgetown-o4-dhalpuri-ja-curry-v1-5494e3502f06.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/georgetown/e13-georgetown-o4-dhalpuri-ja-curry-v1-5494e3502f06.png?t=0ef232f302a0a187",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/georgetown/e13-georgetown-o4-dhalpuri-ja-curry-v1-5494e3502f06.png",
+        "sha256": "0ef232f302a0a1879e36957f11028669b32192de414f886f89b6148e47c32329",
+        "bytes": 2529789,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e13-georgetown-o4-dhalpuri-ja-curry-v1",
+        "nativeSHA256": "5494e3502f060da6a2c8e002338bb2d2c4f1c6985c7c5f1a285b63040837c7eb",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e13/georgetown/e13-georgetown-o4-dhalpuri-ja-curry-v1-5494e3502f06.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e13",
+        "city": "georgetown",
+        "slot": "O4",
+        "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+        "verifiedAt": "2026-10-12T18:16:33.423648+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e13/georgetown/e13-georgetown-o4-dhalpuri-ja-curry-v1-5494e3502f06.png",
+        "sha256": "0ef232f302a0a1879e36957f11028669b32192de414f886f89b6148e47c32329",
+        "bytes": 2529789,
+        "SHAReadAt": "2026-10-12T18:30:03.449096+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "5494e3502f060da6a2c8e002338bb2d2c4f1c6985c7c5f1a285b63040837c7eb",
+        "rgbPixelSHA256": "dd54b9129bdb4a78199507af874f775bfc336ef41cb5628988ca43670350b877",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "379fe1d844d0f94761337315a7340d7e8291341f4e4c9177f885ba7823e2eef6",
+      "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+      "contextAfterSHA256": "c567bd8212f46f65512b3b39337fc0cca730ec13f0f9a18044fa2cc548e2230f"
+    },
+    {
+      "era": "e13",
+      "city": "georgetown",
+      "slot": "K1",
+      "type": "illustration",
+      "assetID": "e13-georgetown-k1-toritavarat-v1",
+      "galleryImageID": "e13-georgetown-k1-toritavarat-v1",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].nostot[0]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "nostot",
+        0
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/georgetown/e13-georgetown-k1-toritavarat-v1-c5113234477f.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Torikaupassa kohtaavat tuoretuotteet ja tavalliset arjen tavarat. Havainnekuva.",
+        "lyhyt": "Torikaupassa kohtaavat tuoretuotteet ja tavalliset arjen tavarat. Havainnekuva."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/georgetown/e13-georgetown-k1-toritavarat-v1-c5113234477f.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Torikaupassa kohtaavat tuoretuotteet ja tavalliset arjen tavarat. Havainnekuva.",
+        "lyhyt": "Torikaupassa kohtaavat tuoretuotteet ja tavalliset arjen tavarat. Havainnekuva."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "c5113234477f51409c20690a4bf5720c5bf0d1c9b495ef3784f0b1f916af2ef2",
+      "exportSHA256": "37ed02d84188adefd89f896152b923d0a9fd5fd86797602f61852dc83f34881e",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/georgetown/e13-georgetown-k1-toritavarat-v1-c5113234477f.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/georgetown/e13-georgetown-k1-toritavarat-v1-c5113234477f.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e13/georgetown/e13-georgetown-k1-toritavarat-v1-c5113234477f.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e13/paakaupungit-pilvi/e13/georgetown/sisalto.json",
+      "sourceContentSHA256": "379fe1d844d0f94761337315a7340d7e8291341f4e4c9177f885ba7823e2eef6",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "3fc85f9ace255de2bd9f76eb0e07811b62bc253e1b15335381b1ec3c33eda630",
+        "semanticContextSHA256": "3fc85f9ace255de2bd9f76eb0e07811b62bc253e1b15335381b1ec3c33eda630",
+        "subjectTitle": "Torilla vaihtuvat tavara ja kyyti",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Ordinary fruit/vegetable shapes, plain baskets and unbranded clothing; no protected architecture, art, identified person or logo. Generic illustration only.",
+          "QA": {
+            "contentSHA256": "9753c3fd1ea3fc3d1919191f44883d2c9ffa1d99cf8b628f9dc729735ec55c56",
+            "visualObservationFi": "Korillisia eri kokoisia sitruksia ja banaaneja, lehtivihanneksia ja kaalia sekä taiteltuja tavallisia vaatteita. Luontevat kuoret, lehtisuonet, punonta ja kangaspoimut; ei toistuvaa synteettistä kasvipintaa, pakkausta, logoa, tekstiä tai henkilöitä.",
+            "topicMatchFi": "K1 mainitsee Stabroekin kojut, vaatteet ja elintarvikkeet. Selite kertoo yleisesti kauppatavarasta ja havainnollistuksesta, ei todellisesta kojun kuvasta tai tietyn tuotteen paikallisesta alkuperästä.",
+            "sourceEvidence": [
+              {
+                "url": "https://en.wikipedia.org/wiki/Stabroek_Market",
+                "nasSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/nopea-e13-georgetown/stabroek.txt",
+                "section": "Market",
+                "support": "Stabroek Market sells clothing and produce; mixed role can use generic ordinary market goods without invented hall architecture."
+              }
+            ],
+            "rightsScopeFi": "Yleiset kasvit ja arkiesineet.",
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/georgetown/assets/e13-georgetown-k1-toritavarat-v1/original.png",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "nativeSHA256Verified": true,
+            "viewedByReviewer": true
+          },
+          "qaReason": "Tavalliset torituotteet ja vaatteet vastaavat K1:n kauppatavara-aihetta. Havannekuva ei keksi Stabroekin hallia tai tiettyä myyjää."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Torikaupassa kohtaavat tuoretuotteet ja tavalliset arjen tavarat. Havainnekuva.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/georgetown/illustration-qa-extra.json",
+        "fileSHA256": "7d4e70ceb1958ab7d4bfed82f7680c20a107aa8df465ef16ae08b7249478b18b",
+        "item": {
+          "slot": "K1",
+          "targetJsonPath": "$.kaupunkilehti[0].nostot[0]",
+          "assetID": "e13-georgetown-k1-toritavarat-v1",
+          "sha256": "c5113234477f51409c20690a4bf5720c5bf0d1c9b495ef3784f0b1f916af2ef2",
+          "verdict": "accepted",
+          "reason": "Tavalliset torituotteet ja vaatteet vastaavat K1:n kauppatavara-aihetta. Havannekuva ei keksi Stabroekin hallia tai tiettyä myyjää.",
+          "evidence": {
+            "contentSHA256": "9753c3fd1ea3fc3d1919191f44883d2c9ffa1d99cf8b628f9dc729735ec55c56",
+            "visualObservationFi": "Korillisia eri kokoisia sitruksia ja banaaneja, lehtivihanneksia ja kaalia sekä taiteltuja tavallisia vaatteita. Luontevat kuoret, lehtisuonet, punonta ja kangaspoimut; ei toistuvaa synteettistä kasvipintaa, pakkausta, logoa, tekstiä tai henkilöitä.",
+            "topicMatchFi": "K1 mainitsee Stabroekin kojut, vaatteet ja elintarvikkeet. Selite kertoo yleisesti kauppatavarasta ja havainnollistuksesta, ei todellisesta kojun kuvasta tai tietyn tuotteen paikallisesta alkuperästä.",
+            "sourceEvidence": [
+              {
+                "url": "https://en.wikipedia.org/wiki/Stabroek_Market",
+                "nasSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/nopea-e13-georgetown/stabroek.txt",
+                "section": "Market",
+                "support": "Stabroek Market sells clothing and produce; mixed role can use generic ordinary market goods without invented hall architecture."
+              }
+            ],
+            "rightsScopeFi": "Yleiset kasvit ja arkiesineet.",
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/georgetown/assets/e13-georgetown-k1-toritavarat-v1/original.png",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "nativeSHA256Verified": true,
+            "viewedByReviewer": true
+          },
+          "reviewedAt": "2026-10-12T18:25:04.479264+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/georgetown/qa.json",
+            "sha256": "a4dc34ebef1c8ca5335d17ba1416814a611ed34c8c81d25c9280443e85ec25fc"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/georgetown/illustration-qa-extra.json",
+            "sha256": "7d4e70ceb1958ab7d4bfed82f7680c20a107aa8df465ef16ae08b7249478b18b"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/georgetown/e13-georgetown-k1-toritavarat-v1-c5113234477f.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/georgetown/e13-georgetown-k1-toritavarat-v1-c5113234477f.png?t=37ed02d84188adef",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/georgetown/e13-georgetown-k1-toritavarat-v1-c5113234477f.png",
+        "sha256": "37ed02d84188adefd89f896152b923d0a9fd5fd86797602f61852dc83f34881e",
+        "bytes": 2613952,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e13-georgetown-k1-toritavarat-v1",
+        "nativeSHA256": "c5113234477f51409c20690a4bf5720c5bf0d1c9b495ef3784f0b1f916af2ef2",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e13/georgetown/e13-georgetown-k1-toritavarat-v1-c5113234477f.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e13",
+        "city": "georgetown",
+        "slot": "K1",
+        "targetJsonPath": "$.kaupunkilehti[0].nostot[0]",
+        "verifiedAt": "2026-10-12T18:28:26.352681+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e13/georgetown/e13-georgetown-k1-toritavarat-v1-c5113234477f.png",
+        "sha256": "37ed02d84188adefd89f896152b923d0a9fd5fd86797602f61852dc83f34881e",
+        "bytes": 2613952,
+        "SHAReadAt": "2026-10-12T18:30:03.689286+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "c5113234477f51409c20690a4bf5720c5bf0d1c9b495ef3784f0b1f916af2ef2",
+        "rgbPixelSHA256": "a594c4924eed0f7d57e8ca3c371076b3b7e9eeed6160da4e9ac2315c787d1085",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "379fe1d844d0f94761337315a7340d7e8291341f4e4c9177f885ba7823e2eef6",
+      "targetAfterSHA256": "3fc85f9ace255de2bd9f76eb0e07811b62bc253e1b15335381b1ec3c33eda630",
+      "contextAfterSHA256": "3fc85f9ace255de2bd9f76eb0e07811b62bc253e1b15335381b1ec3c33eda630"
+    },
+    {
+      "era": "e13",
+      "city": "georgetown",
+      "slot": "K2",
+      "type": "illustration",
+      "assetID": "e13-georgetown-k2-manaatti-v1",
+      "galleryImageID": "e13-georgetown-k2-manaatti-v1",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].nostot[1]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "nostot",
+        1
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/georgetown/e13-georgetown-k2-manaatti-v1-21f5ecd7c3ed.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Manaatti on vedessä elävä nisäkäs, jolla on leveä melamainen pyrstö. Havainnekuva.",
+        "lyhyt": "Manaatti on vedessä elävä nisäkäs, jolla on leveä melamainen pyrstö. Havainnekuva."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/georgetown/e13-georgetown-k2-manaatti-v1-21f5ecd7c3ed.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Manaatti on vedessä elävä nisäkäs, jolla on leveä melamainen pyrstö. Havainnekuva.",
+        "lyhyt": "Manaatti on vedessä elävä nisäkäs, jolla on leveä melamainen pyrstö. Havainnekuva."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "21f5ecd7c3ed8d85804ac1e1df47ee47545c1c27542a0dea1e891b1c39a91312",
+      "exportSHA256": "8e1ebe58710d0377c6cdff21e92a185ad1d957cfba1b5452aff0d810f42b6bd8",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/georgetown/e13-georgetown-k2-manaatti-v1-21f5ecd7c3ed.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/georgetown/e13-georgetown-k2-manaatti-v1-21f5ecd7c3ed.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e13/georgetown/e13-georgetown-k2-manaatti-v1-21f5ecd7c3ed.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e13/paakaupungit-pilvi/e13/georgetown/sisalto.json",
+      "sourceContentSHA256": "379fe1d844d0f94761337315a7340d7e8291341f4e4c9177f885ba7823e2eef6",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "bf3b95348610ec35cd6dedbcd3e036ccd5d7d718f43ed2c3498ac9c748cd2e2a",
+        "semanticContextSHA256": "bf3b95348610ec35cd6dedbcd3e036ccd5d7d718f43ed2c3498ac9c748cd2e2a",
+        "subjectTitle": "Puutarhan lammessa on manaatteja",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "A generic animal and natural water/foliage, no identified architectural work, artist design, branding or human likeness. Illustration only, no individual animal or actual Georgetown site claim.",
+          "QA": {
+            "contentSHA256": "9753c3fd1ea3fc3d1919191f44883d2c9ffa1d99cf8b628f9dc729735ec55c56",
+            "visualObservationFi": "Yksi harmaa manaatti veden alla, pieni silmä, pyöreä kuono, kaksi eturäpylää ja vaakasuora pyöreäreunainen pyrstö. Iho on hienosti epätasainen ja vedessä näkyy vaihtelevaa valoa; ei ylimääräisiä raajoja, selkäevää, turkkia, tekstiä tai ihmisiä.",
+            "topicMatchFi": "K2 kertoo puutarhan manaateista. Selite havainnollistaa eläinryhmää eikä väitä tunnistetun yksilön tai Georgetownin lammen dokumentaarista kuvaa.",
+            "sourceEvidence": [
+              {
+                "url": "https://en.wikipedia.org/wiki/Guyana_Botanical_Gardens",
+                "nasSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/nopea-e13-georgetown/gardens.txt",
+                "support": "Manatees live in a pond outside the zoo near the botanical garden; general animal illustration only."
+              },
+              {
+                "url": "https://en.wikipedia.org/wiki/Manatee",
+                "nasSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/georgetown/illustration-work/manatee.txt",
+                "section": "Description",
+                "support": "Large aquatic mammal, fore-flippers, flexible upper lip, paddle-shaped tail distinct from dugong flukes."
+              }
+            ],
+            "rightsScopeFi": "Yleinen eläin- ja vesiaihe.",
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/georgetown/assets/e13-georgetown-k2-manaatti-v1/original.png",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "nativeSHA256Verified": true,
+            "viewedByReviewer": true
+          },
+          "qaReason": "Manaatin anatomia on yhtenäinen: kaksi eturäpylää ja leveä pyöreä melapyrstö. Yleinen eläinkuva vastaa K2-aihetta ilman todellisen puutarhalammen valokuvaväitettä."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Manaatti on vedessä elävä nisäkäs, jolla on leveä melamainen pyrstö. Havainnekuva.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/georgetown/illustration-qa-extra.json",
+        "fileSHA256": "7d4e70ceb1958ab7d4bfed82f7680c20a107aa8df465ef16ae08b7249478b18b",
+        "item": {
+          "slot": "K2",
+          "targetJsonPath": "$.kaupunkilehti[0].nostot[1]",
+          "assetID": "e13-georgetown-k2-manaatti-v1",
+          "sha256": "21f5ecd7c3ed8d85804ac1e1df47ee47545c1c27542a0dea1e891b1c39a91312",
+          "verdict": "accepted",
+          "reason": "Manaatin anatomia on yhtenäinen: kaksi eturäpylää ja leveä pyöreä melapyrstö. Yleinen eläinkuva vastaa K2-aihetta ilman todellisen puutarhalammen valokuvaväitettä.",
+          "evidence": {
+            "contentSHA256": "9753c3fd1ea3fc3d1919191f44883d2c9ffa1d99cf8b628f9dc729735ec55c56",
+            "visualObservationFi": "Yksi harmaa manaatti veden alla, pieni silmä, pyöreä kuono, kaksi eturäpylää ja vaakasuora pyöreäreunainen pyrstö. Iho on hienosti epätasainen ja vedessä näkyy vaihtelevaa valoa; ei ylimääräisiä raajoja, selkäevää, turkkia, tekstiä tai ihmisiä.",
+            "topicMatchFi": "K2 kertoo puutarhan manaateista. Selite havainnollistaa eläinryhmää eikä väitä tunnistetun yksilön tai Georgetownin lammen dokumentaarista kuvaa.",
+            "sourceEvidence": [
+              {
+                "url": "https://en.wikipedia.org/wiki/Guyana_Botanical_Gardens",
+                "nasSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/nopea-e13-georgetown/gardens.txt",
+                "support": "Manatees live in a pond outside the zoo near the botanical garden; general animal illustration only."
+              },
+              {
+                "url": "https://en.wikipedia.org/wiki/Manatee",
+                "nasSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/georgetown/illustration-work/manatee.txt",
+                "section": "Description",
+                "support": "Large aquatic mammal, fore-flippers, flexible upper lip, paddle-shaped tail distinct from dugong flukes."
+              }
+            ],
+            "rightsScopeFi": "Yleinen eläin- ja vesiaihe.",
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/georgetown/assets/e13-georgetown-k2-manaatti-v1/original.png",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "nativeSHA256Verified": true,
+            "viewedByReviewer": true
+          },
+          "reviewedAt": "2026-10-12T18:16:07.529882+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/georgetown/qa.json",
+            "sha256": "a4dc34ebef1c8ca5335d17ba1416814a611ed34c8c81d25c9280443e85ec25fc"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/georgetown/illustration-qa-extra.json",
+            "sha256": "7d4e70ceb1958ab7d4bfed82f7680c20a107aa8df465ef16ae08b7249478b18b"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/georgetown/e13-georgetown-k2-manaatti-v1-21f5ecd7c3ed.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/georgetown/e13-georgetown-k2-manaatti-v1-21f5ecd7c3ed.png?t=8e1ebe58710d0377",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/georgetown/e13-georgetown-k2-manaatti-v1-21f5ecd7c3ed.png",
+        "sha256": "8e1ebe58710d0377c6cdff21e92a185ad1d957cfba1b5452aff0d810f42b6bd8",
+        "bytes": 2590730,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e13-georgetown-k2-manaatti-v1",
+        "nativeSHA256": "21f5ecd7c3ed8d85804ac1e1df47ee47545c1c27542a0dea1e891b1c39a91312",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e13/georgetown/e13-georgetown-k2-manaatti-v1-21f5ecd7c3ed.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e13",
+        "city": "georgetown",
+        "slot": "K2",
+        "targetJsonPath": "$.kaupunkilehti[0].nostot[1]",
+        "verifiedAt": "2026-10-12T18:19:54.951433+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e13/georgetown/e13-georgetown-k2-manaatti-v1-21f5ecd7c3ed.png",
+        "sha256": "8e1ebe58710d0377c6cdff21e92a185ad1d957cfba1b5452aff0d810f42b6bd8",
+        "bytes": 2590730,
+        "SHAReadAt": "2026-10-12T18:30:03.554174+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "21f5ecd7c3ed8d85804ac1e1df47ee47545c1c27542a0dea1e891b1c39a91312",
+        "rgbPixelSHA256": "fea74f01aea46a088c54484e012826222ce4ff06f82bfe5c0097a6e9c381725d",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "379fe1d844d0f94761337315a7340d7e8291341f4e4c9177f885ba7823e2eef6",
+      "targetAfterSHA256": "bf3b95348610ec35cd6dedbcd3e036ccd5d7d718f43ed2c3498ac9c748cd2e2a",
+      "contextAfterSHA256": "bf3b95348610ec35cd6dedbcd3e036ccd5d7d718f43ed2c3498ac9c748cd2e2a"
+    },
+    {
+      "era": "e13",
+      "city": "georgetown",
+      "slot": "K4",
+      "type": "illustration",
+      "assetID": "e13-georgetown-k4-matkalaukku-v1",
+      "galleryImageID": "e13-georgetown-k4-matkalaukku-v1",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].nostot[3]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "nostot",
+        3
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/georgetown/e13-georgetown-k4-matkalaukku-v1-6e9a1378d556.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Matkatavarat liittyvät lentomatkan valmisteluun. Havainnekuva.",
+        "lyhyt": "Matkatavarat liittyvät lentomatkan valmisteluun. Havainnekuva."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/georgetown/e13-georgetown-k4-matkalaukku-v1-6e9a1378d556.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Matkatavarat liittyvät lentomatkan valmisteluun. Havainnekuva.",
+        "lyhyt": "Matkatavarat liittyvät lentomatkan valmisteluun. Havainnekuva."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "6e9a1378d556fb85c02ac529041fe0812e28b69b514e8029aa0772ba66b1e542",
+      "exportSHA256": "bfb52268f901b11a6afe090db3c21b89353c002a7420d0cf6b1a9164f9fd0a24",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/georgetown/e13-georgetown-k4-matkalaukku-v1-6e9a1378d556.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/georgetown/e13-georgetown-k4-matkalaukku-v1-6e9a1378d556.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e13/georgetown/e13-georgetown-k4-matkalaukku-v1-6e9a1378d556.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e13/paakaupungit-pilvi/e13/georgetown/sisalto.json",
+      "sourceContentSHA256": "379fe1d844d0f94761337315a7340d7e8291341f4e4c9177f885ba7823e2eef6",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "9c9b704e820dd53c48e8c590ddd99ec3a89ac3407f07f395a41bc112b912441f",
+        "semanticContextSHA256": "9c9b704e820dd53c48e8c590ddd99ec3a89ac3407f07f395a41bc112b912441f",
+        "subjectTitle": "Lentoasemien vanhat nimet kulkevat mukana",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Plain utilitarian objects/material, no copied named architectural work, branded product design, identity document or person.",
+          "QA": {
+            "contentSHA256": "9753c3fd1ea3fc3d1919191f44883d2c9ffa1d99cf8b628f9dc729735ec55c56",
+            "visualObservationFi": "Musta pehmeä laukku ja vaalea reppu, ehjät hihnat, vetoketjut ja luonnollinen kangas. Ei logoja, kirjainkuvioita, ihmisiä tai lentokentän tunnuksia.",
+            "topicMatchFi": "K4 käsittelee lentoasemia ja lentomatkaa. Selite sanoo matkatavarat ja havainnekuva, ei tietyn lentoaseman valokuva tai palveluväite.",
+            "sourceEvidence": [
+              {
+                "url": "https://en.wikipedia.org/wiki/Georgetown,_Guyana",
+                "nasSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/nopea-e13-georgetown/georgetown.txt",
+                "support": "Air section names the two airports; generic travel object illustrates preparation, no new route/service or place claim."
+              }
+            ],
+            "rightsScopeFi": "Yleiset arkiesineet.",
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/georgetown/assets/e13-georgetown-k4-matkalaukku-v1/original.png",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "nativeSHA256Verified": true,
+            "viewedByReviewer": true
+          },
+          "qaReason": "Tavalliset merkitsemättömät matkalaukut ovat luonteva yleishavainnollistus lentomatkan valmistelulle."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Matkatavarat liittyvät lentomatkan valmisteluun. Havainnekuva.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/georgetown/illustration-qa-extra.json",
+        "fileSHA256": "7d4e70ceb1958ab7d4bfed82f7680c20a107aa8df465ef16ae08b7249478b18b",
+        "item": {
+          "slot": "K4",
+          "targetJsonPath": "$.kaupunkilehti[0].nostot[3]",
+          "assetID": "e13-georgetown-k4-matkalaukku-v1",
+          "sha256": "6e9a1378d556fb85c02ac529041fe0812e28b69b514e8029aa0772ba66b1e542",
+          "verdict": "accepted",
+          "reason": "Tavalliset merkitsemättömät matkalaukut ovat luonteva yleishavainnollistus lentomatkan valmistelulle.",
+          "evidence": {
+            "contentSHA256": "9753c3fd1ea3fc3d1919191f44883d2c9ffa1d99cf8b628f9dc729735ec55c56",
+            "visualObservationFi": "Musta pehmeä laukku ja vaalea reppu, ehjät hihnat, vetoketjut ja luonnollinen kangas. Ei logoja, kirjainkuvioita, ihmisiä tai lentokentän tunnuksia.",
+            "topicMatchFi": "K4 käsittelee lentoasemia ja lentomatkaa. Selite sanoo matkatavarat ja havainnekuva, ei tietyn lentoaseman valokuva tai palveluväite.",
+            "sourceEvidence": [
+              {
+                "url": "https://en.wikipedia.org/wiki/Georgetown,_Guyana",
+                "nasSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/nopea-e13-georgetown/georgetown.txt",
+                "support": "Air section names the two airports; generic travel object illustrates preparation, no new route/service or place claim."
+              }
+            ],
+            "rightsScopeFi": "Yleiset arkiesineet.",
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/georgetown/assets/e13-georgetown-k4-matkalaukku-v1/original.png",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "nativeSHA256Verified": true,
+            "viewedByReviewer": true
+          },
+          "reviewedAt": "2026-10-12T18:59:18.893616+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/georgetown/qa.json",
+            "sha256": "a4dc34ebef1c8ca5335d17ba1416814a611ed34c8c81d25c9280443e85ec25fc"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/georgetown/illustration-qa-extra.json",
+            "sha256": "7d4e70ceb1958ab7d4bfed82f7680c20a107aa8df465ef16ae08b7249478b18b"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/georgetown/e13-georgetown-k4-matkalaukku-v1-6e9a1378d556.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/georgetown/e13-georgetown-k4-matkalaukku-v1-6e9a1378d556.png?t=bfb52268f901b11a",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/georgetown/e13-georgetown-k4-matkalaukku-v1-6e9a1378d556.png",
+        "sha256": "bfb52268f901b11a6afe090db3c21b89353c002a7420d0cf6b1a9164f9fd0a24",
+        "bytes": 2145641,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e13-georgetown-k4-matkalaukku-v1",
+        "nativeSHA256": "6e9a1378d556fb85c02ac529041fe0812e28b69b514e8029aa0772ba66b1e542",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e13/georgetown/e13-georgetown-k4-matkalaukku-v1-6e9a1378d556.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e13",
+        "city": "georgetown",
+        "slot": "K4",
+        "targetJsonPath": "$.kaupunkilehti[0].nostot[3]",
+        "verifiedAt": "2026-10-12T19:00:21.073456+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e13/georgetown/e13-georgetown-k4-matkalaukku-v1-6e9a1378d556.png",
+        "sha256": "bfb52268f901b11a6afe090db3c21b89353c002a7420d0cf6b1a9164f9fd0a24",
+        "bytes": 2145641,
+        "SHAReadAt": "2026-10-12T19:03:42.895291+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "6e9a1378d556fb85c02ac529041fe0812e28b69b514e8029aa0772ba66b1e542",
+        "rgbPixelSHA256": "652b1efe23b3967ef494fafb7246362cfd0550d460ac61bb880172846f59197a",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "379fe1d844d0f94761337315a7340d7e8291341f4e4c9177f885ba7823e2eef6",
+      "targetAfterSHA256": "9c9b704e820dd53c48e8c590ddd99ec3a89ac3407f07f395a41bc112b912441f",
+      "contextAfterSHA256": "9c9b704e820dd53c48e8c590ddd99ec3a89ac3407f07f395a41bc112b912441f"
+    },
+    {
+      "era": "e13",
+      "city": "georgetown",
+      "slot": "L2",
+      "type": "illustration",
+      "assetID": "e13-georgetown-l2-sulkuportti-v1",
+      "galleryImageID": "e13-georgetown-l2-sulkuportti-v1",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[1].nostot[1]",
+      "targetTokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        1
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/georgetown/e13-georgetown-l2-sulkuportti-v1-fbbda4c5809c.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Kanavan sulkuportti auttaa säätelemään veden virtaamista. Havainnekuva.",
+        "lyhyt": "Kanavan sulkuportti auttaa säätelemään veden virtaamista. Havainnekuva."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/georgetown/e13-georgetown-l2-sulkuportti-v1-fbbda4c5809c.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Kanavan sulkuportti auttaa säätelemään veden virtaamista. Havainnekuva.",
+        "lyhyt": "Kanavan sulkuportti auttaa säätelemään veden virtaamista. Havainnekuva."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "fbbda4c5809c71ce867d0ad8f3da153efd10c6766d6da46fbe8d8442b4f3aa11",
+      "exportSHA256": "4c9273c41c1d145792882aefed84c993edfb2bd9a72c39c8ece54f67c1eefe96",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/georgetown/e13-georgetown-l2-sulkuportti-v1-fbbda4c5809c.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/georgetown/e13-georgetown-l2-sulkuportti-v1-fbbda4c5809c.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e13/georgetown/e13-georgetown-l2-sulkuportti-v1-fbbda4c5809c.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e13/paakaupungit-pilvi/e13/georgetown/sisalto.json",
+      "sourceContentSHA256": "379fe1d844d0f94761337315a7340d7e8291341f4e4c9177f885ba7823e2eef6",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "28dcb81d93386f786db83b00acd488b10c42490392d43b45cb70f550a74ecde9",
+        "semanticContextSHA256": "28dcb81d93386f786db83b00acd488b10c42490392d43b45cb70f550a74ecde9",
+        "subjectTitle": "Kokers-portit hoitavat vedenpoistoa",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "A generic functional drainage mechanism and natural water/grass, no copied named architectural work or artist design. No people, artwork or logos. Havainnekuva label, no real Georgetown location or historical-view claim.",
+          "QA": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/georgetown/assets/e13-georgetown-l2-sulkuportti-v1/original.png",
+            "width": 1536,
+            "height": 1024,
+            "visuallyInspected": true,
+            "inspectionDetail": "whole image; original detail",
+            "captionFi": "Kanavan sulkuportti auttaa säätelemään veden virtaamista. Havainnekuva.",
+            "sourceEvidence": [
+              {
+                "url": "https://en.wikipedia.org/wiki/Georgetown,_Guyana",
+                "section": "Geography / Points of interest",
+                "nasSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/nopea-e13-georgetown/georgetown.txt",
+                "support": "Canals with kokers sluices drain Georgetown of excess water; illustration is generic, not the actual appearance of a named local gate."
+              },
+              {
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/georgetown/cc-status.json",
+                "support": "L2 streaming release permits a generic functional sluice illustration; CC canal candidate was only 1024 pixels wide."
+              }
+            ],
+            "rightsEvidence": "A generic functional drainage mechanism and natural water/grass, no copied named architectural work or artist design. No people, artwork or logos. Havainnekuva label, no real Georgetown location or historical-view claim.",
+            "currentContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e13/paakaupungit-pilvi/e13/georgetown/sisalto.json",
+            "currentContentSHA256": "9753c3fd1ea3fc3d1919191f44883d2c9ffa1d99cf8b628f9dc729735ec55c56",
+            "colorProfile": "Native RGB PNG; embedded ICC/sRGB not independently verified, no profile claim",
+            "scope": "independent image QA; no owner acceptance/integration/publication"
+          },
+          "qaReason": "Katsottu valmis PNG: sulkupaneeli kattaa kanavan leveyden, rantojen tuet ja ohjaimet liittyvät toisiinsa ja ruuvinostin sopii levossa olevaan porttiin. Vesi/ruoho/puu vaihtelevat luontevasti, ei tekstiä, logoja, kasvoja tai tunnistettavaa teosta. Hyväksytty kanavan vedenpoiston yleishavainnollistuksena, ei todellisena Georgetownin koker-porttina tai vuoden 1873 kuvana."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Kanavan sulkuportti auttaa säätelemään veden virtaamista. Havainnekuva.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/georgetown/qa.json",
+        "fileSHA256": "a4dc34ebef1c8ca5335d17ba1416814a611ed34c8c81d25c9280443e85ec25fc",
+        "item": {
+          "slot": "L2",
+          "targetJsonPath": "$.kaupunkilehti[1].nostot[1]",
+          "assetID": "e13-georgetown-l2-sulkuportti-v1",
+          "sha256": "fbbda4c5809c71ce867d0ad8f3da153efd10c6766d6da46fbe8d8442b4f3aa11",
+          "verdict": "accepted",
+          "reason": "Katsottu valmis PNG: sulkupaneeli kattaa kanavan leveyden, rantojen tuet ja ohjaimet liittyvät toisiinsa ja ruuvinostin sopii levossa olevaan porttiin. Vesi/ruoho/puu vaihtelevat luontevasti, ei tekstiä, logoja, kasvoja tai tunnistettavaa teosta. Hyväksytty kanavan vedenpoiston yleishavainnollistuksena, ei todellisena Georgetownin koker-porttina tai vuoden 1873 kuvana.",
+          "evidence": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/georgetown/assets/e13-georgetown-l2-sulkuportti-v1/original.png",
+            "width": 1536,
+            "height": 1024,
+            "visuallyInspected": true,
+            "inspectionDetail": "whole image; original detail",
+            "captionFi": "Kanavan sulkuportti auttaa säätelemään veden virtaamista. Havainnekuva.",
+            "sourceEvidence": [
+              {
+                "url": "https://en.wikipedia.org/wiki/Georgetown,_Guyana",
+                "section": "Geography / Points of interest",
+                "nasSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/nopea-e13-georgetown/georgetown.txt",
+                "support": "Canals with kokers sluices drain Georgetown of excess water; illustration is generic, not the actual appearance of a named local gate."
+              },
+              {
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/georgetown/cc-status.json",
+                "support": "L2 streaming release permits a generic functional sluice illustration; CC canal candidate was only 1024 pixels wide."
+              }
+            ],
+            "rightsEvidence": "A generic functional drainage mechanism and natural water/grass, no copied named architectural work or artist design. No people, artwork or logos. Havainnekuva label, no real Georgetown location or historical-view claim.",
+            "currentContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e13/paakaupungit-pilvi/e13/georgetown/sisalto.json",
+            "currentContentSHA256": "9753c3fd1ea3fc3d1919191f44883d2c9ffa1d99cf8b628f9dc729735ec55c56",
+            "colorProfile": "Native RGB PNG; embedded ICC/sRGB not independently verified, no profile claim",
+            "scope": "independent image QA; no owner acceptance/integration/publication"
+          }
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/georgetown/qa.json",
+            "sha256": "a4dc34ebef1c8ca5335d17ba1416814a611ed34c8c81d25c9280443e85ec25fc"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/georgetown/illustration-qa-extra.json",
+            "sha256": "7d4e70ceb1958ab7d4bfed82f7680c20a107aa8df465ef16ae08b7249478b18b"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/georgetown/e13-georgetown-l2-sulkuportti-v1-fbbda4c5809c.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/georgetown/e13-georgetown-l2-sulkuportti-v1-fbbda4c5809c.png?t=4c9273c41c1d1457",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/georgetown/e13-georgetown-l2-sulkuportti-v1-fbbda4c5809c.png",
+        "sha256": "4c9273c41c1d145792882aefed84c993edfb2bd9a72c39c8ece54f67c1eefe96",
+        "bytes": 2989476,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e13-georgetown-l2-sulkuportti-v1",
+        "nativeSHA256": "fbbda4c5809c71ce867d0ad8f3da153efd10c6766d6da46fbe8d8442b4f3aa11",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e13/georgetown/e13-georgetown-l2-sulkuportti-v1-fbbda4c5809c.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e13",
+        "city": "georgetown",
+        "slot": "L2",
+        "targetJsonPath": "$.kaupunkilehti[1].nostot[1]",
+        "verifiedAt": "2026-10-12T18:04:51.505051+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e13/georgetown/e13-georgetown-l2-sulkuportti-v1-fbbda4c5809c.png",
+        "sha256": "4c9273c41c1d145792882aefed84c993edfb2bd9a72c39c8ece54f67c1eefe96",
+        "bytes": 2989476,
+        "SHAReadAt": "2026-10-12T18:30:03.330092+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "fbbda4c5809c71ce867d0ad8f3da153efd10c6766d6da46fbe8d8442b4f3aa11",
+        "rgbPixelSHA256": "ec35ff2f13ed9f28857af38ad32de4d5197a9662a074bfd2d9ecd4bcbfcc73f5",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "379fe1d844d0f94761337315a7340d7e8291341f4e4c9177f885ba7823e2eef6",
+      "targetAfterSHA256": "28dcb81d93386f786db83b00acd488b10c42490392d43b45cb70f550a74ecde9",
+      "contextAfterSHA256": "28dcb81d93386f786db83b00acd488b10c42490392d43b45cb70f550a74ecde9"
+    },
+    {
+      "era": "e13",
+      "city": "georgetown",
+      "slot": "L3",
+      "type": "illustration",
+      "assetID": "e13-georgetown-l3-puupaalut-v1",
+      "galleryImageID": "e13-georgetown-l3-puupaalut-v1",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[1].nostot[2]",
+      "targetTokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        2
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/georgetown/e13-georgetown-l3-puupaalut-v1-ecbce8501e08.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Puupaalu voi kuulua rakennuksen perustukseen. Havainnekuva.",
+        "lyhyt": "Puupaalu voi kuulua rakennuksen perustukseen. Havainnekuva."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/georgetown/e13-georgetown-l3-puupaalut-v1-ecbce8501e08.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Puupaalu voi kuulua rakennuksen perustukseen. Havainnekuva.",
+        "lyhyt": "Puupaalu voi kuulua rakennuksen perustukseen. Havainnekuva."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "ecbce8501e084fc2aab9d7addd18dd280a3a40f9b99338cccfdf87b358c73ba4",
+      "exportSHA256": "ef3338974fedd091cb7f8988176e993e1778f8657fdc55c1b146eb70be6c9906",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/georgetown/e13-georgetown-l3-puupaalut-v1-ecbce8501e08.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/georgetown/e13-georgetown-l3-puupaalut-v1-ecbce8501e08.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e13/georgetown/e13-georgetown-l3-puupaalut-v1-ecbce8501e08.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e13/paakaupungit-pilvi/e13/georgetown/sisalto.json",
+      "sourceContentSHA256": "379fe1d844d0f94761337315a7340d7e8291341f4e4c9177f885ba7823e2eef6",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "f7b9c8e5076f26bd5bce5f01eb66911fe0360882de4cf9815080a69958b62794",
+        "semanticContextSHA256": "f7b9c8e5076f26bd5bce5f01eb66911fe0360882de4cf9815080a69958b62794",
+        "subjectTitle": "Majakan alla on puupaaluja",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Plain utilitarian objects/material, no copied named architectural work, branded product design, identity document or person.",
+          "QA": {
+            "contentSHA256": "9753c3fd1ea3fc3d1919191f44883d2c9ffa1d99cf8b628f9dc729735ec55c56",
+            "visualObservationFi": "Kolme erikokoista puupaalua veden ja mudan rajassa, halkeamia, oksankohtia ja vaihtelevaa kulumaa. Ei toistuvaa puukuviota, tekstiä, logoa tai henkilöitä.",
+            "topicMatchFi": "L3 käsittelee majakan perustuksen puupaaluja. Selite ei nimeä paaluja todelliseksi Georgetownin perustukseksi tai varmennetuksi greenheart-puuksi.",
+            "sourceEvidence": [
+              {
+                "url": "https://en.wikipedia.org/wiki/Georgetown_Lighthouse,_Guyana",
+                "nasSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/nopea-e13-georgetown/lighthouse.txt",
+                "support": "The lighthouse foundation uses greenheart piles; only generic wooden pile material depicted."
+              }
+            ],
+            "rightsScopeFi": "Yleinen materiaali; ei nimetyn majakan rekonstruktiota.",
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/georgetown/assets/e13-georgetown-l3-puupaalut-v1/original.png",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "nativeSHA256Verified": true,
+            "viewedByReviewer": true
+          },
+          "qaReason": "Puupaalujen vaihteleva puunsyy, päätypinta ja vedenrajat ovat luonnolliset; yleinen materiaalihavainne sopii L3-aiheeseen."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Puupaalu voi kuulua rakennuksen perustukseen. Havainnekuva.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/georgetown/illustration-qa-extra.json",
+        "fileSHA256": "7d4e70ceb1958ab7d4bfed82f7680c20a107aa8df465ef16ae08b7249478b18b",
+        "item": {
+          "slot": "L3",
+          "targetJsonPath": "$.kaupunkilehti[1].nostot[2]",
+          "assetID": "e13-georgetown-l3-puupaalut-v1",
+          "sha256": "ecbce8501e084fc2aab9d7addd18dd280a3a40f9b99338cccfdf87b358c73ba4",
+          "verdict": "accepted",
+          "reason": "Puupaalujen vaihteleva puunsyy, päätypinta ja vedenrajat ovat luonnolliset; yleinen materiaalihavainne sopii L3-aiheeseen.",
+          "evidence": {
+            "contentSHA256": "9753c3fd1ea3fc3d1919191f44883d2c9ffa1d99cf8b628f9dc729735ec55c56",
+            "visualObservationFi": "Kolme erikokoista puupaalua veden ja mudan rajassa, halkeamia, oksankohtia ja vaihtelevaa kulumaa. Ei toistuvaa puukuviota, tekstiä, logoa tai henkilöitä.",
+            "topicMatchFi": "L3 käsittelee majakan perustuksen puupaaluja. Selite ei nimeä paaluja todelliseksi Georgetownin perustukseksi tai varmennetuksi greenheart-puuksi.",
+            "sourceEvidence": [
+              {
+                "url": "https://en.wikipedia.org/wiki/Georgetown_Lighthouse,_Guyana",
+                "nasSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/nopea-e13-georgetown/lighthouse.txt",
+                "support": "The lighthouse foundation uses greenheart piles; only generic wooden pile material depicted."
+              }
+            ],
+            "rightsScopeFi": "Yleinen materiaali; ei nimetyn majakan rekonstruktiota.",
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/georgetown/assets/e13-georgetown-l3-puupaalut-v1/original.png",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "nativeSHA256Verified": true,
+            "viewedByReviewer": true
+          },
+          "reviewedAt": "2026-10-12T18:58:45.741232+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/georgetown/qa.json",
+            "sha256": "a4dc34ebef1c8ca5335d17ba1416814a611ed34c8c81d25c9280443e85ec25fc"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/georgetown/illustration-qa-extra.json",
+            "sha256": "7d4e70ceb1958ab7d4bfed82f7680c20a107aa8df465ef16ae08b7249478b18b"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/georgetown/e13-georgetown-l3-puupaalut-v1-ecbce8501e08.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/georgetown/e13-georgetown-l3-puupaalut-v1-ecbce8501e08.png?t=ef3338974fedd091",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/georgetown/e13-georgetown-l3-puupaalut-v1-ecbce8501e08.png",
+        "sha256": "ef3338974fedd091cb7f8988176e993e1778f8657fdc55c1b146eb70be6c9906",
+        "bytes": 2796635,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e13-georgetown-l3-puupaalut-v1",
+        "nativeSHA256": "ecbce8501e084fc2aab9d7addd18dd280a3a40f9b99338cccfdf87b358c73ba4",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e13/georgetown/e13-georgetown-l3-puupaalut-v1-ecbce8501e08.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e13",
+        "city": "georgetown",
+        "slot": "L3",
+        "targetJsonPath": "$.kaupunkilehti[1].nostot[2]",
+        "verifiedAt": "2026-10-12T19:00:18.403608+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e13/georgetown/e13-georgetown-l3-puupaalut-v1-ecbce8501e08.png",
+        "sha256": "ef3338974fedd091cb7f8988176e993e1778f8657fdc55c1b146eb70be6c9906",
+        "bytes": 2796635,
+        "SHAReadAt": "2026-10-12T19:03:42.648970+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "ecbce8501e084fc2aab9d7addd18dd280a3a40f9b99338cccfdf87b358c73ba4",
+        "rgbPixelSHA256": "37170c1c32cafc554e47f7631f14987612208eee81aab02700881ee6a3a3097c",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "379fe1d844d0f94761337315a7340d7e8291341f4e4c9177f885ba7823e2eef6",
+      "targetAfterSHA256": "f7b9c8e5076f26bd5bce5f01eb66911fe0360882de4cf9815080a69958b62794",
+      "contextAfterSHA256": "f7b9c8e5076f26bd5bce5f01eb66911fe0360882de4cf9815080a69958b62794"
+    },
+    {
+      "era": "e13",
+      "city": "georgetown",
+      "slot": "L4",
+      "type": "illustration",
+      "assetID": "e13-georgetown-l4-koulutarvikkeet-v1",
+      "galleryImageID": "e13-georgetown-l4-koulutarvikkeet-v1",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
+      "targetTokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        3
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/georgetown/e13-georgetown-l4-koulutarvikkeet-v1-bc31b4b3be45.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Lukemisen ja kirjoittamisen välineitä. Havainnekuva.",
+        "lyhyt": "Lukemisen ja kirjoittamisen välineitä. Havainnekuva."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/georgetown/e13-georgetown-l4-koulutarvikkeet-v1-bc31b4b3be45.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Lukemisen ja kirjoittamisen välineitä. Havainnekuva.",
+        "lyhyt": "Lukemisen ja kirjoittamisen välineitä. Havainnekuva."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "bc31b4b3be45b9e66c0e21e1500dcac5b628d0390969ecf4f48782b2356a7a44",
+      "exportSHA256": "f9a7c56f3318c0a74cf0d6eddc6b2a24bdd9c20d9b987c06f880f3c2c200ee33",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/georgetown/e13-georgetown-l4-koulutarvikkeet-v1-bc31b4b3be45.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/georgetown/e13-georgetown-l4-koulutarvikkeet-v1-bc31b4b3be45.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e13/georgetown/e13-georgetown-l4-koulutarvikkeet-v1-bc31b4b3be45.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e13/paakaupungit-pilvi/e13/georgetown/sisalto.json",
+      "sourceContentSHA256": "379fe1d844d0f94761337315a7340d7e8291341f4e4c9177f885ba7823e2eef6",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "db4da18494bed3592e312942448825ccc284e3aa199f5ffce75ee6f8306e4653",
+        "semanticContextSHA256": "db4da18494bed3592e312942448825ccc284e3aa199f5ffce75ee6f8306e4653",
+        "subjectTitle": "Yksi kirkko, kaksi rakennuttajayhteisöä",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Unprinted ordinary school objects or natural food, no actual location, protected artwork, brand or identifiable person.",
+          "QA": {
+            "contentSHA256": "9753c3fd1ea3fc3d1919191f44883d2c9ffa1d99cf8b628f9dc729735ec55c56",
+            "visualObservationFi": "Tyhjä avoin vihko, suljettu kirja ja kaksi ehjää lyijykynää. Ei kirjaimia, logoja, kuvitettua kansiteosta tai ihmisiä.",
+            "topicMatchFi": "L4 kertoo koulusta. Selite on yleinen välinehavainne, ei historiallisen koulun tai kirkon sisätilan rekonstruktio.",
+            "sourceEvidence": [
+              {
+                "url": "https://en.wikipedia.org/wiki/St._Andrew%27s_Kirk,_Georgetown",
+                "nasSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/nopea-e13-georgetown/kirk.txt",
+                "support": "Church history includes a school and public concerts; generic educational objects only."
+              }
+            ],
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/georgetown/assets/e13-georgetown-l4-koulutarvikkeet-v1/original.png",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "nativeSHA256Verified": true,
+            "viewedByReviewer": true
+          },
+          "qaReason": "Kirjat ja merkitsemättömät lyijykynät sopivat opetuksen yleisaiheeseen luontevasti."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Lukemisen ja kirjoittamisen välineitä. Havainnekuva.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/georgetown/illustration-qa-extra.json",
+        "fileSHA256": "7d4e70ceb1958ab7d4bfed82f7680c20a107aa8df465ef16ae08b7249478b18b",
+        "item": {
+          "slot": "L4",
+          "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
+          "assetID": "e13-georgetown-l4-koulutarvikkeet-v1",
+          "sha256": "bc31b4b3be45b9e66c0e21e1500dcac5b628d0390969ecf4f48782b2356a7a44",
+          "verdict": "accepted",
+          "reason": "Kirjat ja merkitsemättömät lyijykynät sopivat opetuksen yleisaiheeseen luontevasti.",
+          "evidence": {
+            "contentSHA256": "9753c3fd1ea3fc3d1919191f44883d2c9ffa1d99cf8b628f9dc729735ec55c56",
+            "visualObservationFi": "Tyhjä avoin vihko, suljettu kirja ja kaksi ehjää lyijykynää. Ei kirjaimia, logoja, kuvitettua kansiteosta tai ihmisiä.",
+            "topicMatchFi": "L4 kertoo koulusta. Selite on yleinen välinehavainne, ei historiallisen koulun tai kirkon sisätilan rekonstruktio.",
+            "sourceEvidence": [
+              {
+                "url": "https://en.wikipedia.org/wiki/St._Andrew%27s_Kirk,_Georgetown",
+                "nasSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/nopea-e13-georgetown/kirk.txt",
+                "support": "Church history includes a school and public concerts; generic educational objects only."
+              }
+            ],
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/georgetown/assets/e13-georgetown-l4-koulutarvikkeet-v1/original.png",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "nativeSHA256Verified": true,
+            "viewedByReviewer": true
+          },
+          "reviewedAt": "2026-10-12T19:47:55.219189+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/georgetown/qa.json",
+            "sha256": "a4dc34ebef1c8ca5335d17ba1416814a611ed34c8c81d25c9280443e85ec25fc"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/georgetown/illustration-qa-extra.json",
+            "sha256": "7d4e70ceb1958ab7d4bfed82f7680c20a107aa8df465ef16ae08b7249478b18b"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/georgetown/e13-georgetown-l4-koulutarvikkeet-v1-bc31b4b3be45.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/georgetown/e13-georgetown-l4-koulutarvikkeet-v1-bc31b4b3be45.png?t=f9a7c56f3318c0a7",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/georgetown/e13-georgetown-l4-koulutarvikkeet-v1-bc31b4b3be45.png",
+        "sha256": "f9a7c56f3318c0a74cf0d6eddc6b2a24bdd9c20d9b987c06f880f3c2c200ee33",
+        "bytes": 2169732,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e13-georgetown-l4-koulutarvikkeet-v1",
+        "nativeSHA256": "bc31b4b3be45b9e66c0e21e1500dcac5b628d0390969ecf4f48782b2356a7a44",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e13/georgetown/e13-georgetown-l4-koulutarvikkeet-v1-bc31b4b3be45.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e13",
+        "city": "georgetown",
+        "slot": "L4",
+        "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
+        "verifiedAt": "2026-10-12T19:48:44.898152+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e13/georgetown/e13-georgetown-l4-koulutarvikkeet-v1-bc31b4b3be45.png",
+        "sha256": "f9a7c56f3318c0a74cf0d6eddc6b2a24bdd9c20d9b987c06f880f3c2c200ee33",
+        "bytes": 2169732,
+        "SHAReadAt": "2026-10-12T19:48:42.535164+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "bc31b4b3be45b9e66c0e21e1500dcac5b628d0390969ecf4f48782b2356a7a44",
+        "rgbPixelSHA256": "a9f44e115b5528c99cffbf029b86da78df755f7b54d41d8e1c1c7cee20b18baf",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "379fe1d844d0f94761337315a7340d7e8291341f4e4c9177f885ba7823e2eef6",
+      "targetAfterSHA256": "db4da18494bed3592e312942448825ccc284e3aa199f5ffce75ee6f8306e4653",
+      "contextAfterSHA256": "db4da18494bed3592e312942448825ccc284e3aa199f5ffce75ee6f8306e4653"
+    },
+    {
+      "era": "e13",
+      "city": "georgetown",
+      "slot": "N3",
+      "type": "illustration",
+      "assetID": "e13-georgetown-n3-palmulehdet-v1",
+      "galleryImageID": "e13-georgetown-n3-palmulehdet-v1",
+      "commonsFile": null,
+      "targetJsonPath": "$.nahtavyydet[\"Guyana Botanical Gardens\"].kuvat[0]",
+      "targetTokens": [
+        "nahtavyydet",
+        "Guyana Botanical Gardens",
+        "kuvat",
+        0
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/georgetown/e13-georgetown-n3-palmulehdet-v1-25f5069e0e63.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Sulkalehtisen palmun lehdet jakautuvat kapeisiin osiin. Havainnekuva.",
+        "lyhyt": "Sulkalehtisen palmun lehdet jakautuvat kapeisiin osiin. Havainnekuva."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/georgetown/e13-georgetown-n3-palmulehdet-v1-25f5069e0e63.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Sulkalehtisen palmun lehdet jakautuvat kapeisiin osiin. Havainnekuva.",
+        "lyhyt": "Sulkalehtisen palmun lehdet jakautuvat kapeisiin osiin. Havainnekuva."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "25f5069e0e63d989ee24bf971b746cc7410f5ba45b4d7fba87c07d57a279ab49",
+      "exportSHA256": "378567ddb6d7f736bcc16aa52e6be5f6d8f28ff7875523b77c4c77f6b2d26c29",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/georgetown/e13-georgetown-n3-palmulehdet-v1-25f5069e0e63.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/georgetown/e13-georgetown-n3-palmulehdet-v1-25f5069e0e63.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e13/georgetown/e13-georgetown-n3-palmulehdet-v1-25f5069e0e63.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e13/paakaupungit-pilvi/e13/georgetown/sisalto.json",
+      "sourceContentSHA256": "379fe1d844d0f94761337315a7340d7e8291341f4e4c9177f885ba7823e2eef6",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "0592eeb19c96c7f6fccffcedbae1d0ba896f69d9082513d7b7a8fa88d605bdba",
+        "subjectTitle": "Guyana Botanical Gardens",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "General plant foliage, no copyrighted garden arrangement, sculpture, pavilion, identity or real-place photograph claim.",
+          "QA": {
+            "contentSHA256": "9753c3fd1ea3fc3d1919191f44883d2c9ffa1d99cf8b628f9dc729735ec55c56",
+            "visualObservationFi": "Useita kaartuvia vihreitä sulkalehtiä, erisuuntaisia kapeita lehdyköitä ja pehmeää taustakasvillisuutta. Ei kopioiduksi tunnistettavaa tekstuuria, tekstiä, logoa, henkilöitä tai puistorakennetta.",
+            "topicMatchFi": "Guyana Botanical Gardens -kohde on olemassa ja mainitsee palmut. Selite havainnollistaa lehtimuotoa ilman lajia tai todellista puutarhan kasviyksilöä koskevaa väitettä.",
+            "sourceEvidence": [
+              {
+                "url": "https://en.wikivoyage.org/wiki/Georgetown_(Guyana)",
+                "nasSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/nopea-e13-georgetown/voyage.txt",
+                "support": "Botanical Gardens description includes palms; general palm-leaf form only."
+              }
+            ],
+            "targetObjectExists": true,
+            "rightsScopeFi": "Yleinen kasviaihe.",
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/georgetown/assets/e13-georgetown-n3-palmulehdet-v1/original.png",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "nativeSHA256Verified": true,
+            "viewedByReviewer": true
+          },
+          "qaReason": "Sulkalehtisen palmun kapeat lehdykät liittyvät yhtenäisesti ruotiin, ja valo sekä lehtikulmat vaihtelevat luontevasti."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Sulkalehtisen palmun lehdet jakautuvat kapeisiin osiin. Havainnekuva.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/georgetown/illustration-qa-extra.json",
+        "fileSHA256": "7d4e70ceb1958ab7d4bfed82f7680c20a107aa8df465ef16ae08b7249478b18b",
+        "item": {
+          "slot": "N3",
+          "targetJsonPath": "$.nahtavyydet[\"Guyana Botanical Gardens\"].kuvat[0]",
+          "assetID": "e13-georgetown-n3-palmulehdet-v1",
+          "sha256": "25f5069e0e63d989ee24bf971b746cc7410f5ba45b4d7fba87c07d57a279ab49",
+          "verdict": "accepted",
+          "reason": "Sulkalehtisen palmun kapeat lehdykät liittyvät yhtenäisesti ruotiin, ja valo sekä lehtikulmat vaihtelevat luontevasti.",
+          "evidence": {
+            "contentSHA256": "9753c3fd1ea3fc3d1919191f44883d2c9ffa1d99cf8b628f9dc729735ec55c56",
+            "visualObservationFi": "Useita kaartuvia vihreitä sulkalehtiä, erisuuntaisia kapeita lehdyköitä ja pehmeää taustakasvillisuutta. Ei kopioiduksi tunnistettavaa tekstuuria, tekstiä, logoa, henkilöitä tai puistorakennetta.",
+            "topicMatchFi": "Guyana Botanical Gardens -kohde on olemassa ja mainitsee palmut. Selite havainnollistaa lehtimuotoa ilman lajia tai todellista puutarhan kasviyksilöä koskevaa väitettä.",
+            "sourceEvidence": [
+              {
+                "url": "https://en.wikivoyage.org/wiki/Georgetown_(Guyana)",
+                "nasSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/nopea-e13-georgetown/voyage.txt",
+                "support": "Botanical Gardens description includes palms; general palm-leaf form only."
+              }
+            ],
+            "targetObjectExists": true,
+            "rightsScopeFi": "Yleinen kasviaihe.",
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/georgetown/assets/e13-georgetown-n3-palmulehdet-v1/original.png",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "nativeSHA256Verified": true,
+            "viewedByReviewer": true
+          },
+          "reviewedAt": "2026-10-12T19:13:09.176518+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/georgetown/qa.json",
+            "sha256": "a4dc34ebef1c8ca5335d17ba1416814a611ed34c8c81d25c9280443e85ec25fc"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/georgetown/illustration-qa-extra.json",
+            "sha256": "7d4e70ceb1958ab7d4bfed82f7680c20a107aa8df465ef16ae08b7249478b18b"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/georgetown/e13-georgetown-n3-palmulehdet-v1-25f5069e0e63.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/georgetown/e13-georgetown-n3-palmulehdet-v1-25f5069e0e63.png?t=378567ddb6d7f736",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/georgetown/e13-georgetown-n3-palmulehdet-v1-25f5069e0e63.png",
+        "sha256": "378567ddb6d7f736bcc16aa52e6be5f6d8f28ff7875523b77c4c77f6b2d26c29",
+        "bytes": 2609919,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e13-georgetown-n3-palmulehdet-v1",
+        "nativeSHA256": "25f5069e0e63d989ee24bf971b746cc7410f5ba45b4d7fba87c07d57a279ab49",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e13/georgetown/e13-georgetown-n3-palmulehdet-v1-25f5069e0e63.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e13",
+        "city": "georgetown",
+        "slot": "N3",
+        "targetJsonPath": "$.nahtavyydet[\"Guyana Botanical Gardens\"].kuvat[0]",
+        "verifiedAt": "2026-10-12T19:13:54.516254+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e13/georgetown/e13-georgetown-n3-palmulehdet-v1-25f5069e0e63.png",
+        "sha256": "378567ddb6d7f736bcc16aa52e6be5f6d8f28ff7875523b77c4c77f6b2d26c29",
+        "bytes": 2609919,
+        "SHAReadAt": "2026-10-12T19:32:12.220414+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "25f5069e0e63d989ee24bf971b746cc7410f5ba45b4d7fba87c07d57a279ab49",
+        "rgbPixelSHA256": "536103f1536ce10e9fd5d4f2c8c6bf4005f28ee9d9c1208ff5b60e3de664e12d",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "379fe1d844d0f94761337315a7340d7e8291341f4e4c9177f885ba7823e2eef6",
+      "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+      "contextAfterSHA256": "0592eeb19c96c7f6fccffcedbae1d0ba896f69d9082513d7b7a8fa88d605bdba"
+    },
+    {
+      "era": "e13",
+      "city": "georgetown",
+      "slot": "N2",
+      "type": "illustration",
+      "assetID": "e13-georgetown-n2-tropiikin-lehdisto-v1",
+      "galleryImageID": "e13-georgetown-n2-tropiikin-lehdisto-v1",
+      "commonsFile": null,
+      "targetJsonPath": "$.nahtavyydet[\"Promenade Gardens\"].kuvat[0]",
+      "targetTokens": [
+        "nahtavyydet",
+        "Promenade Gardens",
+        "kuvat",
+        0
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/georgetown/e13-georgetown-n2-tropiikin-lehdisto-v1-e6bf4c8676c0.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Trooppisissa puutarhoissa kasvaa monenlaisia lehtikasveja. Havainnekuva.",
+        "lyhyt": "Trooppisissa puutarhoissa kasvaa monenlaisia lehtikasveja. Havainnekuva."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/georgetown/e13-georgetown-n2-tropiikin-lehdisto-v1-e6bf4c8676c0.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Trooppisissa puutarhoissa kasvaa monenlaisia lehtikasveja. Havainnekuva.",
+        "lyhyt": "Trooppisissa puutarhoissa kasvaa monenlaisia lehtikasveja. Havainnekuva."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "e6bf4c8676c03f45de2728e430ed2dd2a2d3c640286ecb80714302496b823bf8",
+      "exportSHA256": "a8eeabfff64a733582ba64534932d16833e0ace4d05055a71b8e15283327e776",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/georgetown/e13-georgetown-n2-tropiikin-lehdisto-v1-e6bf4c8676c0.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/georgetown/e13-georgetown-n2-tropiikin-lehdisto-v1-e6bf4c8676c0.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e13/georgetown/e13-georgetown-n2-tropiikin-lehdisto-v1-e6bf4c8676c0.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e13/paakaupungit-pilvi/e13/georgetown/sisalto.json",
+      "sourceContentSHA256": "379fe1d844d0f94761337315a7340d7e8291341f4e4c9177f885ba7823e2eef6",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "a120c34622e85486201257052efb914faf7354379c64faf424df1e384b59786d",
+        "subjectTitle": "Promenade Gardens",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "General plant foliage, no copyrighted garden arrangement, sculpture, pavilion, identity or real-place photograph claim.",
+          "QA": {
+            "contentSHA256": "9753c3fd1ea3fc3d1919191f44883d2c9ffa1d99cf8b628f9dc729735ec55c56",
+            "visualObservationFi": "Eri kokoisia vihreitä lehtiä, vaihtelevia suonia, laikkuja ja lehtireunoja. Luonteva valo ja oksisto; ei puistopolkuja, rakennusta, tekstiä, logoa tai ihmisiä.",
+            "topicMatchFi": "Promenade Gardens -kohde on olemassa ja mainitsee trooppiset kasvit. Selite ei nimeä puiston todellista istutusta, yksittäistä lajia tai paikan asettelua.",
+            "sourceEvidence": [
+              {
+                "url": "https://en.wikivoyage.org/wiki/Georgetown_(Guyana)",
+                "nasSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/nopea-e13-georgetown/voyage.txt",
+                "support": "Promenade Gardens described as a garden with tropical plants; general foliage, not real layout."
+              }
+            ],
+            "targetObjectExists": true,
+            "rightsScopeFi": "Yleinen kasviaihe.",
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/georgetown/assets/e13-georgetown-n2-tropiikin-lehdisto-v1/original.png",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "nativeSHA256Verified": true,
+            "viewedByReviewer": true
+          },
+          "qaReason": "Trooppisten lehtikasvien pinnat, suonet ja kiinnittyminen ovat luontevat. Kuva pysyy kasvillisuuden yleishavainnollistuksena."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Trooppisissa puutarhoissa kasvaa monenlaisia lehtikasveja. Havainnekuva.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/georgetown/illustration-qa-extra.json",
+        "fileSHA256": "7d4e70ceb1958ab7d4bfed82f7680c20a107aa8df465ef16ae08b7249478b18b",
+        "item": {
+          "slot": "N2",
+          "targetJsonPath": "$.nahtavyydet[\"Promenade Gardens\"].kuvat[0]",
+          "assetID": "e13-georgetown-n2-tropiikin-lehdisto-v1",
+          "sha256": "e6bf4c8676c03f45de2728e430ed2dd2a2d3c640286ecb80714302496b823bf8",
+          "verdict": "accepted",
+          "reason": "Trooppisten lehtikasvien pinnat, suonet ja kiinnittyminen ovat luontevat. Kuva pysyy kasvillisuuden yleishavainnollistuksena.",
+          "evidence": {
+            "contentSHA256": "9753c3fd1ea3fc3d1919191f44883d2c9ffa1d99cf8b628f9dc729735ec55c56",
+            "visualObservationFi": "Eri kokoisia vihreitä lehtiä, vaihtelevia suonia, laikkuja ja lehtireunoja. Luonteva valo ja oksisto; ei puistopolkuja, rakennusta, tekstiä, logoa tai ihmisiä.",
+            "topicMatchFi": "Promenade Gardens -kohde on olemassa ja mainitsee trooppiset kasvit. Selite ei nimeä puiston todellista istutusta, yksittäistä lajia tai paikan asettelua.",
+            "sourceEvidence": [
+              {
+                "url": "https://en.wikivoyage.org/wiki/Georgetown_(Guyana)",
+                "nasSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/nopea-e13-georgetown/voyage.txt",
+                "support": "Promenade Gardens described as a garden with tropical plants; general foliage, not real layout."
+              }
+            ],
+            "targetObjectExists": true,
+            "rightsScopeFi": "Yleinen kasviaihe.",
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/georgetown/assets/e13-georgetown-n2-tropiikin-lehdisto-v1/original.png",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "nativeSHA256Verified": true,
+            "viewedByReviewer": true
+          },
+          "reviewedAt": "2026-10-12T19:12:36.406951+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/georgetown/qa.json",
+            "sha256": "a4dc34ebef1c8ca5335d17ba1416814a611ed34c8c81d25c9280443e85ec25fc"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/georgetown/illustration-qa-extra.json",
+            "sha256": "7d4e70ceb1958ab7d4bfed82f7680c20a107aa8df465ef16ae08b7249478b18b"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/georgetown/e13-georgetown-n2-tropiikin-lehdisto-v1-e6bf4c8676c0.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/georgetown/e13-georgetown-n2-tropiikin-lehdisto-v1-e6bf4c8676c0.png?t=a8eeabfff64a7335",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/georgetown/e13-georgetown-n2-tropiikin-lehdisto-v1-e6bf4c8676c0.png",
+        "sha256": "a8eeabfff64a733582ba64534932d16833e0ace4d05055a71b8e15283327e776",
+        "bytes": 2465448,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e13-georgetown-n2-tropiikin-lehdisto-v1",
+        "nativeSHA256": "e6bf4c8676c03f45de2728e430ed2dd2a2d3c640286ecb80714302496b823bf8",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e13/georgetown/e13-georgetown-n2-tropiikin-lehdisto-v1-e6bf4c8676c0.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e13",
+        "city": "georgetown",
+        "slot": "N2",
+        "targetJsonPath": "$.nahtavyydet[\"Promenade Gardens\"].kuvat[0]",
+        "verifiedAt": "2026-10-12T19:12:59.291647+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e13/georgetown/e13-georgetown-n2-tropiikin-lehdisto-v1-e6bf4c8676c0.png",
+        "sha256": "a8eeabfff64a733582ba64534932d16833e0ace4d05055a71b8e15283327e776",
+        "bytes": 2465448,
+        "SHAReadAt": "2026-10-12T19:32:12.060433+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "e6bf4c8676c03f45de2728e430ed2dd2a2d3c640286ecb80714302496b823bf8",
+        "rgbPixelSHA256": "161aa979bdc5cf7b45632dc52ee31a3c03928d2f39d6eff02cd2215cb2eb3ada",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "379fe1d844d0f94761337315a7340d7e8291341f4e4c9177f885ba7823e2eef6",
+      "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+      "contextAfterSHA256": "a120c34622e85486201257052efb914faf7354379c64faf424df1e384b59786d"
+    },
+    {
+      "era": "e13",
+      "city": "georgetown",
+      "slot": "PHOTO",
+      "type": "commons",
+      "assetID": "capital-cc-e13-georgetown-photo-48ba9b9f1f62fd4a",
+      "galleryImageID": "capital-cc-e13-georgetown-photo-48ba9b9f1f62fd4a",
+      "commonsFile": "Manatees - Guyana Botanical Gardens (23024335793).jpg",
+      "targetJsonPath": "$.valokuva",
+      "targetTokens": [
+        "valokuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e13/georgetown/photo-48ba9b9f1f62fd4ad9c6.jpg",
+        "suora": true,
+        "lahde": "Dan Sloan, Commons (CC BY-SA 2.0)",
+        "selite": "Georgetownin puistoissa pidetään manaatteja.",
+        "lyhyt": "Georgetownin puistoissa pidetään manaatteja.",
+        "tiedosto": "Manatees - Guyana Botanical Gardens (23024335793).jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Dan Sloan, Commons (CC BY-SA 2.0)",
+        "selite": "Georgetownin puistoissa pidetään manaatteja.",
+        "lyhyt": "Georgetownin puistoissa pidetään manaatteja.",
+        "tiedosto": "Manatees - Guyana Botanical Gardens (23024335793).jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e13/georgetown/photo-48ba9b9f1f62fd4ad9c6.jpg",
+        "suora": true,
+        "lahde": "Dan Sloan, Commons (CC BY-SA 2.0)",
+        "selite": "Georgetownin puistoissa pidetään manaatteja.",
+        "lyhyt": "Georgetownin puistoissa pidetään manaatteja.",
+        "tiedosto": "Manatees - Guyana Botanical Gardens (23024335793).jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "48ba9b9f1f62fd4ad9c6ad6c2013093d24299d05cb50d8ffb5f79d8e48a544ba",
+      "exportSHA256": "48ba9b9f1f62fd4ad9c6ad6c2013093d24299d05cb50d8ffb5f79d8e48a544ba",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e13/georgetown/photo-48ba9b9f1f62fd4ad9c6.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e13/georgetown/photo-48ba9b9f1f62fd4ad9c6.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/georgetown/cc-work/nature-0.jpg",
+      "dimensions": [
+        5472,
+        3648
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e13/paakaupungit-pilvi/e13/georgetown/sisalto.json",
+      "sourceContentSHA256": "379fe1d844d0f94761337315a7340d7e8291341f4e4c9177f885ba7823e2eef6",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "a796babc89f1400c48d1f3444b5b88088201c98051313e711e285c401ade879d",
+        "semanticContextSHA256": "a796babc89f1400c48d1f3444b5b88088201c98051313e711e285c401ade879d",
+        "subjectTitle": "georgetown — aito paikkavalokuva",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Dan Sloan",
+        "license": "CC BY-SA 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/deed.en",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Manatees_-_Guyana_Botanical_Gardens_(23024335793).jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/8/85/Manatees_-_Guyana_Botanical_Gardens_%2823024335793%29.jpg",
+        "rightsEvidence": {
+          "selection": "Eläin/vesi/lehdet eivät ole tekijäsuojattuja teoksia. Dan Sloan -valokuva, CC BY-SA2.0 ja 5472×3648 alkuperäiseltä File-sivulta. Kuvauspaikka original-sourcessa Guyana Botanical Gardens/Georgetown; caption rajautuu kaupungin manaatteihin. QA-hylätty rakeinen ilmakuvavalinta säilytetty rejected-tilassa.",
+          "QA": {
+            "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/georgetown/cc-work/nature-0.jpg",
+            "visuallyInspected": true,
+            "nativeDimensions": [
+              5472,
+              3648
+            ],
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Manatees_-_Guyana_Botanical_Gardens_(23024335793).jpg",
+            "sourceLocal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/daca4edd6e5104551301cd78825ee6dff90982dd13f806c7aca3763a1b1bb657.html",
+            "sourceSHA256": "9cd15a4635d41c4c92327e7d19686f19e36f32d92361a1d8d14d367eb69f0b8b",
+            "authorsFromSource": [
+              "Dan Sloan"
+            ],
+            "license": "CC BY-SA 2.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/deed.en",
+            "sourceFields": [
+              [
+                "Description Manatees - Guyana Botanical Gardens (23024335793).jpg",
+                "Manatees - Guyana Botanical Gardens"
+              ],
+              [
+                "Date",
+                "4 December 2015, 08:01"
+              ],
+              [
+                "Source",
+                "Manatees - Guyana Botanical Gardens"
+              ],
+              [
+                "Author",
+                "Dan Sloan"
+              ],
+              [
+                "Date and time of data generation",
+                "08:01, 4 December 2015"
+              ],
+              [
+                "Date and time of digitizing",
+                "08:01, 4 December 2015"
+              ],
+              [
+                "Date metadata was last modified",
+                "08:55, 4 December 2015"
+              ]
+            ],
+            "currentContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e13/paakaupungit-pilvi/e13/georgetown/sisalto.json",
+            "currentContentSHA256": "9753c3fd1ea3fc3d1919191f44883d2c9ffa1d99cf8b628f9dc729735ec55c56",
+            "sourceChecks": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/georgetown/qa-evidence/current-commons-source-checks.json",
+            "usedInGameCheck": "rg exact/underscored/originalUrl/decoded URL in own era js: no hits",
+            "scope": "independent QA only; no integration/publication/owner acceptance",
+            "placeSupport": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/rights-support/amerikat-oseania/rights-002.md",
+            "reviewedCandidateRecordSHA256": "f69ce14904506bcfe5979d5c39273ac7133dd3f0200f45ca86d09bb045ced323",
+            "candidateTrackingBaselineAt": "2026-10-12T19:10:14.289944+00:00"
+          },
+          "qaReason": "Aito manaatin pää ja luonnollinen vesi/lehdet katsottu; ei kasvoja, lisättyä tekstiä tai teospääaihetta. Source/Description nimeää Guyana Botanical Gardensin; erillinen virallinen puutarhalähde sitoo paikan Georgetowniin. PHOTO-yksityiskohta vastaa kaupungin manaattiaihetta. Rakeinen aiempi PHOTO-hylkäys säilytetään eri tiedoston arviona. Todellinen kuvaaja, kaupallinen CC-lisenssiversio ja alkuperäismitat varmennettu lähdesivusta."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Georgetownin puistoissa pidetään manaatteja.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/georgetown/qa.json",
+        "fileSHA256": "a4dc34ebef1c8ca5335d17ba1416814a611ed34c8c81d25c9280443e85ec25fc",
+        "item": {
+          "slot": "PHOTO",
+          "targetJsonPath": "$.valokuva",
+          "commonsFile": "Manatees - Guyana Botanical Gardens (23024335793).jpg",
+          "sha256": "48ba9b9f1f62fd4ad9c6ad6c2013093d24299d05cb50d8ffb5f79d8e48a544ba",
+          "verdict": "accepted",
+          "reason": "Aito manaatin pää ja luonnollinen vesi/lehdet katsottu; ei kasvoja, lisättyä tekstiä tai teospääaihetta. Source/Description nimeää Guyana Botanical Gardensin; erillinen virallinen puutarhalähde sitoo paikan Georgetowniin. PHOTO-yksityiskohta vastaa kaupungin manaattiaihetta. Rakeinen aiempi PHOTO-hylkäys säilytetään eri tiedoston arviona. Todellinen kuvaaja, kaupallinen CC-lisenssiversio ja alkuperäismitat varmennettu lähdesivusta.",
+          "evidence": {
+            "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/georgetown/cc-work/nature-0.jpg",
+            "visuallyInspected": true,
+            "nativeDimensions": [
+              5472,
+              3648
+            ],
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Manatees_-_Guyana_Botanical_Gardens_(23024335793).jpg",
+            "sourceLocal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/daca4edd6e5104551301cd78825ee6dff90982dd13f806c7aca3763a1b1bb657.html",
+            "sourceSHA256": "9cd15a4635d41c4c92327e7d19686f19e36f32d92361a1d8d14d367eb69f0b8b",
+            "authorsFromSource": [
+              "Dan Sloan"
+            ],
+            "license": "CC BY-SA 2.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/deed.en",
+            "sourceFields": [
+              [
+                "Description Manatees - Guyana Botanical Gardens (23024335793).jpg",
+                "Manatees - Guyana Botanical Gardens"
+              ],
+              [
+                "Date",
+                "4 December 2015, 08:01"
+              ],
+              [
+                "Source",
+                "Manatees - Guyana Botanical Gardens"
+              ],
+              [
+                "Author",
+                "Dan Sloan"
+              ],
+              [
+                "Date and time of data generation",
+                "08:01, 4 December 2015"
+              ],
+              [
+                "Date and time of digitizing",
+                "08:01, 4 December 2015"
+              ],
+              [
+                "Date metadata was last modified",
+                "08:55, 4 December 2015"
+              ]
+            ],
+            "currentContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e13/paakaupungit-pilvi/e13/georgetown/sisalto.json",
+            "currentContentSHA256": "9753c3fd1ea3fc3d1919191f44883d2c9ffa1d99cf8b628f9dc729735ec55c56",
+            "sourceChecks": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/georgetown/qa-evidence/current-commons-source-checks.json",
+            "usedInGameCheck": "rg exact/underscored/originalUrl/decoded URL in own era js: no hits",
+            "scope": "independent QA only; no integration/publication/owner acceptance",
+            "placeSupport": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/rights-support/amerikat-oseania/rights-002.md",
+            "reviewedCandidateRecordSHA256": "f69ce14904506bcfe5979d5c39273ac7133dd3f0200f45ca86d09bb045ced323",
+            "candidateTrackingBaselineAt": "2026-10-12T19:10:14.289944+00:00"
+          }
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/georgetown/qa.json",
+            "sha256": "a4dc34ebef1c8ca5335d17ba1416814a611ed34c8c81d25c9280443e85ec25fc"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/georgetown/illustration-qa-extra.json",
+            "sha256": "7d4e70ceb1958ab7d4bfed82f7680c20a107aa8df465ef16ae08b7249478b18b"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e13",
+        "city": "georgetown",
+        "slot": "PHOTO",
+        "targetJsonPath": "$.valokuva",
+        "commonsFile": "Manatees - Guyana Botanical Gardens (23024335793).jpg",
+        "sha256": "48ba9b9f1f62fd4ad9c6ad6c2013093d24299d05cb50d8ffb5f79d8e48a544ba",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Manatees_-_Guyana_Botanical_Gardens_(23024335793).jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/8/85/Manatees_-_Guyana_Botanical_Gardens_%2823024335793%29.jpg",
+        "author": "Dan Sloan",
+        "license": "CC BY-SA 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/deed.en",
+        "width": 5472,
+        "height": 3648,
+        "originalSHA256": "48ba9b9f1f62fd4ad9c6ad6c2013093d24299d05cb50d8ffb5f79d8e48a544ba",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e13/georgetown/photo-48ba9b9f1f62fd4ad9c6.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e13/georgetown/photo-48ba9b9f1f62fd4ad9c6.jpg",
+        "bytes": 12014354,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T18:54:23.366856+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "Manatees - Guyana Botanical Gardens (23024335793).jpg",
+        "lahde": "Dan Sloan, Commons (CC BY-SA 2.0)",
+        "selite": "Georgetownin puistoissa pidetään manaatteja.",
+        "lyhyt": "Georgetownin puistoissa pidetään manaatteja."
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Dan Sloan, Commons (CC BY-SA 2.0)",
+        "selite": "Georgetownin puistoissa pidetään manaatteja.",
+        "lyhyt": "Georgetownin puistoissa pidetään manaatteja.",
+        "tiedosto": "Manatees - Guyana Botanical Gardens (23024335793).jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "379fe1d844d0f94761337315a7340d7e8291341f4e4c9177f885ba7823e2eef6",
+      "targetAfterSHA256": "a796babc89f1400c48d1f3444b5b88088201c98051313e711e285c401ade879d",
+      "contextAfterSHA256": "a796babc89f1400c48d1f3444b5b88088201c98051313e711e285c401ade879d"
+    },
+    {
+      "era": "e13",
+      "city": "georgetown",
+      "slot": "K3",
+      "type": "commons",
+      "assetID": "capital-cc-e13-georgetown-k3-526d8ec8963db0f5",
+      "galleryImageID": "capital-cc-e13-georgetown-k3-526d8ec8963db0f5",
+      "commonsFile": "20191121 Guyana 0048 Georgetown sRGB (49295795336).jpg",
+      "targetJsonPath": "$.kaupunkilehti[0].nostot[2]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "nostot",
+        2
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e13/georgetown/k3-526d8ec8963db0f58d88.jpg",
+        "suora": true,
+        "lahde": "Dan Lundberg, Wikimedia Commons (CC BY-SA 2.0)",
+        "selite": "St. George’s Cathedral on Georgetownin puurakenteinen uusgoottilainen katedraali.",
+        "lyhyt": "St. George’s Cathedral on Georgetownin puurakenteinen uusgoottilainen katedraali.",
+        "tiedosto": "20191121 Guyana 0048 Georgetown sRGB (49295795336).jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Dan Lundberg, Wikimedia Commons (CC BY-SA 2.0)",
+        "selite": "St. George’s Cathedral on Georgetownin puurakenteinen uusgoottilainen katedraali.",
+        "lyhyt": "St. George’s Cathedral on Georgetownin puurakenteinen uusgoottilainen katedraali.",
+        "tiedosto": "20191121 Guyana 0048 Georgetown sRGB (49295795336).jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e13/georgetown/k3-526d8ec8963db0f58d88.jpg",
+        "suora": true,
+        "lahde": "Dan Lundberg, Wikimedia Commons (CC BY-SA 2.0)",
+        "selite": "St. George’s Cathedral on Georgetownin puurakenteinen uusgoottilainen katedraali.",
+        "lyhyt": "St. George’s Cathedral on Georgetownin puurakenteinen uusgoottilainen katedraali.",
+        "tiedosto": "20191121 Guyana 0048 Georgetown sRGB (49295795336).jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "526d8ec8963db0f58d8814deca0c75846afb32bc704842eb9eb5942964963d42",
+      "exportSHA256": "526d8ec8963db0f58d8814deca0c75846afb32bc704842eb9eb5942964963d42",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e13/georgetown/k3-526d8ec8963db0f58d88.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e13/georgetown/k3-526d8ec8963db0f58d88.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/georgetown/cc-work/original-4.jpg",
+      "dimensions": [
+        5472,
+        3648
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e13/paakaupungit-pilvi/e13/georgetown/sisalto.json",
+      "sourceContentSHA256": "379fe1d844d0f94761337315a7340d7e8291341f4e4c9177f885ba7823e2eef6",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "f249636d451ca6c71b2f23d7fe8da9d93e6aa1cc08e4f681343c409123ebf463",
+        "semanticContextSHA256": "f249636d451ca6c71b2f23d7fe8da9d93e6aa1cc08e4f681343c409123ebf463",
+        "subjectTitle": "Goottilainen kirkko on puuta",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Dan Lundberg",
+        "license": "CC BY-SA 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/deed.en",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:20191121_Guyana_0048_Georgetown_sRGB_(49295795336).jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/5/5c/20191121_Guyana_0048_Georgetown_sRGB_%2849295795336%29.jpg",
+        "rightsEvidence": {
+          "selection": "Nimetty rakennus: Arthur Blomfield (St George’s Cathedral, Georgetown -lähde), kuoli 30.10.1899 (luettu Arthur Blomfield -elämäkerta), yli 70 vuotta. Ei iästä arvattua tekijää. Kuvassa ei sisätaidetta, uutta veistosta tai valaistusta pääaiheena; valokuvan CC-lisenssi erikseen.",
+          "QA": {
+            "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/georgetown/cc-work/original-4.jpg",
+            "visuallyInspected": true,
+            "width": 5472,
+            "height": 3648,
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:20191121_Guyana_0048_Georgetown_sRGB_(49295795336).jpg",
+            "sourceLocal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/a69d1a47d6d1de461ee3f4df7ef3099402922107fd6d7194537024e48d01aa7f.html",
+            "sourceSHA256": "50de65b1d997e64a5ec59419f77a6bcb02e4a9c842e06d4fd8b391f40a863edf",
+            "authorsFromSource": [
+              "Dan Lundberg"
+            ],
+            "license": "CC BY-SA 2.0",
+            "licenseLinks": [
+              "//creativecommons.org/licenses/by-sa/2.0/deed.en",
+              "https://creativecommons.org/share-your-work/licensing-considerations/compatible-licenses",
+              "https://creativecommons.org/publicdomain/zero/1.0/",
+              "https://creativecommons.org/licenses/by-sa/4.0/"
+            ],
+            "sourceFields": [
+              [
+                "Description 20191121 Guyana 0048 Georgetown sRGB (49295795336).jpg",
+                "St. George's Cathedral, Georgetown in 2019"
+              ],
+              [
+                "Date",
+                "21 November 2019, 12:02"
+              ],
+              [
+                "Camera location",
+                "6° 48′ 44.85″ N, 58° 09′ 48.28″ W"
+              ],
+              [
+                "Date and time of data generation",
+                "12:02, 21 November 2019"
+              ],
+              [
+                "Date and time of digitizing",
+                "12:02, 21 November 2019"
+              ],
+              [
+                "DateTime subseconds",
+                "45"
+              ],
+              [
+                "DateTimeOriginal subseconds",
+                "45"
+              ],
+              [
+                "DateTimeDigitized subseconds",
+                "45"
+              ],
+              [
+                "Date metadata was last modified",
+                "09:42, 4 December 2019"
+              ]
+            ],
+            "currentContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e13/paakaupungit-pilvi/e13/georgetown/sisalto.json",
+            "currentContentSHA256": "9753c3fd1ea3fc3d1919191f44883d2c9ffa1d99cf8b628f9dc729735ec55c56",
+            "sourceChecks": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/georgetown/qa-evidence/commons-source-checks.json",
+            "architectDeathSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/georgetown/qa-evidence/blomfield-source.json",
+            "scope": "independent QA only; no publication/integration/owner acceptance",
+            "reviewedCandidateRecordSHA256": "36a0b3d03d09b794fc33cf9c920019ed437328e8ce28f04d04d548f9c49f8020",
+            "candidateTrackingBaselineAt": "2026-10-12T19:10:14.289887+00:00"
+          },
+          "qaReason": "Aito St. George’s Cathedralin ulkokuva katsottu. Kuvasivun Description nimeää Georgetownin katedraalin vuonna 2019; Dan Lundberg, CC BY-SA 2.0 ja 5472×3648 varmennettu. Cathedral-lähde nimeää Arthur Blomfieldin suunnittelijaksi ja hänen oma elämäkertansa vahvistaa kuoleman 1899. Kuvassa ei sisätaidetta tai uutta veistosta pääaiheena; luonnollinen rakennustyömaakyltti ja autot ovat ympäristöä, eivät kuvan päälle lisättyä tekstiä tai mainoskuvan pääaihe. Ei vuoden 2026 nykytilan väitettä."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "St. George’s Cathedral on Georgetownin puurakenteinen uusgoottilainen katedraali.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/georgetown/qa.json",
+        "fileSHA256": "a4dc34ebef1c8ca5335d17ba1416814a611ed34c8c81d25c9280443e85ec25fc",
+        "item": {
+          "slot": "K3",
+          "targetJsonPath": "$.kaupunkilehti[0].nostot[2]",
+          "commonsFile": "20191121 Guyana 0048 Georgetown sRGB (49295795336).jpg",
+          "sha256": "526d8ec8963db0f58d8814deca0c75846afb32bc704842eb9eb5942964963d42",
+          "verdict": "accepted",
+          "reason": "Aito St. George’s Cathedralin ulkokuva katsottu. Kuvasivun Description nimeää Georgetownin katedraalin vuonna 2019; Dan Lundberg, CC BY-SA 2.0 ja 5472×3648 varmennettu. Cathedral-lähde nimeää Arthur Blomfieldin suunnittelijaksi ja hänen oma elämäkertansa vahvistaa kuoleman 1899. Kuvassa ei sisätaidetta tai uutta veistosta pääaiheena; luonnollinen rakennustyömaakyltti ja autot ovat ympäristöä, eivät kuvan päälle lisättyä tekstiä tai mainoskuvan pääaihe. Ei vuoden 2026 nykytilan väitettä.",
+          "evidence": {
+            "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/georgetown/cc-work/original-4.jpg",
+            "visuallyInspected": true,
+            "width": 5472,
+            "height": 3648,
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:20191121_Guyana_0048_Georgetown_sRGB_(49295795336).jpg",
+            "sourceLocal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/a69d1a47d6d1de461ee3f4df7ef3099402922107fd6d7194537024e48d01aa7f.html",
+            "sourceSHA256": "50de65b1d997e64a5ec59419f77a6bcb02e4a9c842e06d4fd8b391f40a863edf",
+            "authorsFromSource": [
+              "Dan Lundberg"
+            ],
+            "license": "CC BY-SA 2.0",
+            "licenseLinks": [
+              "//creativecommons.org/licenses/by-sa/2.0/deed.en",
+              "https://creativecommons.org/share-your-work/licensing-considerations/compatible-licenses",
+              "https://creativecommons.org/publicdomain/zero/1.0/",
+              "https://creativecommons.org/licenses/by-sa/4.0/"
+            ],
+            "sourceFields": [
+              [
+                "Description 20191121 Guyana 0048 Georgetown sRGB (49295795336).jpg",
+                "St. George's Cathedral, Georgetown in 2019"
+              ],
+              [
+                "Date",
+                "21 November 2019, 12:02"
+              ],
+              [
+                "Camera location",
+                "6° 48′ 44.85″ N, 58° 09′ 48.28″ W"
+              ],
+              [
+                "Date and time of data generation",
+                "12:02, 21 November 2019"
+              ],
+              [
+                "Date and time of digitizing",
+                "12:02, 21 November 2019"
+              ],
+              [
+                "DateTime subseconds",
+                "45"
+              ],
+              [
+                "DateTimeOriginal subseconds",
+                "45"
+              ],
+              [
+                "DateTimeDigitized subseconds",
+                "45"
+              ],
+              [
+                "Date metadata was last modified",
+                "09:42, 4 December 2019"
+              ]
+            ],
+            "currentContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e13/paakaupungit-pilvi/e13/georgetown/sisalto.json",
+            "currentContentSHA256": "9753c3fd1ea3fc3d1919191f44883d2c9ffa1d99cf8b628f9dc729735ec55c56",
+            "sourceChecks": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/georgetown/qa-evidence/commons-source-checks.json",
+            "architectDeathSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/georgetown/qa-evidence/blomfield-source.json",
+            "scope": "independent QA only; no publication/integration/owner acceptance",
+            "reviewedCandidateRecordSHA256": "36a0b3d03d09b794fc33cf9c920019ed437328e8ce28f04d04d548f9c49f8020",
+            "candidateTrackingBaselineAt": "2026-10-12T19:10:14.289887+00:00"
+          }
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/georgetown/qa.json",
+            "sha256": "a4dc34ebef1c8ca5335d17ba1416814a611ed34c8c81d25c9280443e85ec25fc"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/georgetown/illustration-qa-extra.json",
+            "sha256": "7d4e70ceb1958ab7d4bfed82f7680c20a107aa8df465ef16ae08b7249478b18b"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e13",
+        "city": "georgetown",
+        "slot": "K3",
+        "targetJsonPath": "$.kaupunkilehti[0].nostot[2]",
+        "commonsFile": "20191121 Guyana 0048 Georgetown sRGB (49295795336).jpg",
+        "sha256": "526d8ec8963db0f58d8814deca0c75846afb32bc704842eb9eb5942964963d42",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:20191121_Guyana_0048_Georgetown_sRGB_(49295795336).jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/5/5c/20191121_Guyana_0048_Georgetown_sRGB_%2849295795336%29.jpg",
+        "author": "Dan Lundberg",
+        "license": "CC BY-SA 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/deed.en",
+        "width": 5472,
+        "height": 3648,
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e13/georgetown/k3-526d8ec8963db0f58d88.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e13/georgetown/k3-526d8ec8963db0f58d88.jpg",
+        "bytes": 5390991,
+        "http": 200,
+        "mime": "image/jpeg",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T18:04:44.871933+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "20191121 Guyana 0048 Georgetown sRGB (49295795336).jpg",
+        "lahde": "Dan Lundberg, Wikimedia Commons (CC BY-SA 2.0)",
+        "selite": "St. George’s Cathedral on Georgetownin puurakenteinen uusgoottilainen katedraali.",
+        "lyhyt": "St. George’s Cathedral on Georgetownin puurakenteinen uusgoottilainen katedraali."
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Dan Lundberg, Wikimedia Commons (CC BY-SA 2.0)",
+        "selite": "St. George’s Cathedral on Georgetownin puurakenteinen uusgoottilainen katedraali.",
+        "lyhyt": "St. George’s Cathedral on Georgetownin puurakenteinen uusgoottilainen katedraali.",
+        "tiedosto": "20191121 Guyana 0048 Georgetown sRGB (49295795336).jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "379fe1d844d0f94761337315a7340d7e8291341f4e4c9177f885ba7823e2eef6",
+      "targetAfterSHA256": "f249636d451ca6c71b2f23d7fe8da9d93e6aa1cc08e4f681343c409123ebf463",
+      "contextAfterSHA256": "f249636d451ca6c71b2f23d7fe8da9d93e6aa1cc08e4f681343c409123ebf463"
+    },
+    {
+      "era": "e13",
+      "city": "georgetown",
+      "slot": "L1",
+      "type": "commons",
+      "assetID": "capital-cc-e13-georgetown-l1-8c302efd60dff221",
+      "galleryImageID": "capital-cc-e13-georgetown-l1-8c302efd60dff221",
+      "commonsFile": "Georgetown from the air (23284743859).jpg",
+      "targetJsonPath": "$.kaupunkilehti[1].nostot[0]",
+      "targetTokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        0
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e13/georgetown/l1-8c302efd60dff221f0d7.jpg",
+        "suora": true,
+        "lahde": "Dan Sloan, Wikimedia Commons (CC BY-SA 2.0)",
+        "selite": "Georgetownin katuverkkoa ja Atlantin rannikkoa ilmasta 5.12.2015.",
+        "lyhyt": "Georgetownin katuverkkoa ja Atlantin rannikkoa ilmasta 5.12.2015.",
+        "tiedosto": "Georgetown from the air (23284743859).jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Dan Sloan, Wikimedia Commons (CC BY-SA 2.0)",
+        "selite": "Georgetownin katuverkkoa ja Atlantin rannikkoa ilmasta 5.12.2015.",
+        "lyhyt": "Georgetownin katuverkkoa ja Atlantin rannikkoa ilmasta 5.12.2015.",
+        "tiedosto": "Georgetown from the air (23284743859).jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e13/georgetown/l1-8c302efd60dff221f0d7.jpg",
+        "suora": true,
+        "lahde": "Dan Sloan, Wikimedia Commons (CC BY-SA 2.0)",
+        "selite": "Georgetownin katuverkkoa ja Atlantin rannikkoa ilmasta 5.12.2015.",
+        "lyhyt": "Georgetownin katuverkkoa ja Atlantin rannikkoa ilmasta 5.12.2015.",
+        "tiedosto": "Georgetown from the air (23284743859).jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "8c302efd60dff221f0d723fcef968e63ad6b18e8ae6dca40d815f5172386f043",
+      "exportSHA256": "8c302efd60dff221f0d723fcef968e63ad6b18e8ae6dca40d815f5172386f043",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e13/georgetown/l1-8c302efd60dff221f0d7.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e13/georgetown/l1-8c302efd60dff221f0d7.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/georgetown/cc-gap-job21-work/original-Georgetown-from-the-air--23284743859--jpg.jpg",
+      "dimensions": [
+        5283,
+        3522
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e13/paakaupungit-pilvi/e13/georgetown/sisalto.json",
+      "sourceContentSHA256": "379fe1d844d0f94761337315a7340d7e8291341f4e4c9177f885ba7823e2eef6",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "0f27d22253dd04f5acb06080ac1c4fda5b418068719c2a7957ef17eda39f1099",
+        "semanticContextSHA256": "0f27d22253dd04f5acb06080ac1c4fda5b418068719c2a7957ef17eda39f1099",
+        "subjectTitle": "Kaupunki ehti olla Longchamps ja Stabroek",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Dan Sloan",
+        "license": "CC BY-SA 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Georgetown_from_the_air_(23284743859).jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/6/65/Georgetown_from_the_air_%2823284743859%29.jpg",
+        "rightsEvidence": {
+          "selection": "CC BY-SA2.0 on alkuperäisen kuvasivun valokuvalisenssi. Laaja julkinen ulkokaupunkinäkymä: ei silmin erotettua yksilöityä nykyveistosta/muraalia tai teosta pääaiheena. Ei iästä johdettua PD:tä eikä jokaisen taustatalon suojaa oleteta. Georgetown-paikka on alkuperäisessä Description/Source-kentässä.",
+          "QA": {
+            "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/georgetown/cc-gap-job21-work/original-Georgetown-from-the-air--23284743859--jpg.jpg",
+            "visuallyInspected": true,
+            "nativeDimensions": [
+              5283,
+              3522
+            ],
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Georgetown_from_the_air_(23284743859).jpg",
+            "sourceLocal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/d587581b0ebc7c46200ebd52c85e8f1dd11e18fe727121ef3e713c35853b5a4a.html",
+            "sourceSHA256": "09c984a743f1cd183ebc5b3d5c3ecc81f52d138c9598069875412aefbc8dd526",
+            "authorsFromSource": [
+              "Dan Sloan"
+            ],
+            "license": "CC BY-SA 2.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+            "sourceFields": [
+              [
+                "Description Georgetown from the air (23284743859).jpg",
+                "Georgetown from the air"
+              ],
+              [
+                "Date",
+                "5 December 2015, 09:20"
+              ],
+              [
+                "Source",
+                "Georgetown from the air"
+              ],
+              [
+                "Author",
+                "Dan Sloan"
+              ],
+              [
+                "Date and time of data generation",
+                "09:20, 5 December 2015"
+              ],
+              [
+                "Date and time of digitizing",
+                "09:20, 5 December 2015"
+              ],
+              [
+                "Date metadata was last modified",
+                "09:33, 7 December 2015"
+              ]
+            ],
+            "currentContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e13/paakaupungit-pilvi/e13/georgetown/sisalto.json",
+            "currentContentSHA256": "9753c3fd1ea3fc3d1919191f44883d2c9ffa1d99cf8b628f9dc729735ec55c56",
+            "sourceChecks": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/georgetown/qa-evidence/current-commons-source-checks.json",
+            "usedInGameCheck": {
+              "status": "no hits",
+              "output": ""
+            },
+            "scope": "independent QA only; no integration/publication/owner acceptance",
+            "historyBoundary": "2015 modern city view accompanying naming history; no historical-layout reconstruction or historic photo claim.",
+            "reviewedCandidateRecordSHA256": "0f710442d6e300b055aec3406d0c9316469063547d36904d619ffff5869a4fa3",
+            "selectionFragment": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/georgetown/cc-gap-selection.json"
+          },
+          "qaReason": "Aito Georgetownin ilmakuva katsottu: katuverkko, kaupunkikorttelit, puut ja Atlantin rannikko erottuvat selvästi. Ikkunan/valon lievä värisävy ei hävitä pääaiheen yksityiskohtia eikä vastaa aiemmin hylätyn2019 PHOTO-kuvan voimakasta koko kuva-alan rakeisuutta. Rakennukset hajautuneina kaupunkimassassa; ei erillistä omaperäistä nykyteosta pääaiheena, kasvopiirteitä, lisättyä tekstiä, watermarkia tai kehystä. Source/Description Georgetown from the air sitoo kuvauspaikan kaupunkiin. Dan Sloan/CC BY-SA2.0,5283×3522 ja5.12.2015 varmennettu. L1 kertoo kaupungin nimihistoriasta, ja kuva näyttää rehellisesti nykyisemmän kaupungin kokonaisuuden päivättynä2015; ei Longchampsin/Stabroekin aikakauden tai1873 näkymä-/rekonstruktioväitettä. Hyväksytty koko laajana näkymänä, ei yksittäisen rakennuksen eristävää suurennusta."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Georgetownin katuverkkoa ja Atlantin rannikkoa ilmasta 5.12.2015.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/georgetown/qa.json",
+        "fileSHA256": "a4dc34ebef1c8ca5335d17ba1416814a611ed34c8c81d25c9280443e85ec25fc",
+        "item": {
+          "slot": "L1",
+          "targetJsonPath": "$.kaupunkilehti[1].nostot[0]",
+          "commonsFile": "Georgetown from the air (23284743859).jpg",
+          "sha256": "8c302efd60dff221f0d723fcef968e63ad6b18e8ae6dca40d815f5172386f043",
+          "verdict": "accepted",
+          "reason": "Aito Georgetownin ilmakuva katsottu: katuverkko, kaupunkikorttelit, puut ja Atlantin rannikko erottuvat selvästi. Ikkunan/valon lievä värisävy ei hävitä pääaiheen yksityiskohtia eikä vastaa aiemmin hylätyn2019 PHOTO-kuvan voimakasta koko kuva-alan rakeisuutta. Rakennukset hajautuneina kaupunkimassassa; ei erillistä omaperäistä nykyteosta pääaiheena, kasvopiirteitä, lisättyä tekstiä, watermarkia tai kehystä. Source/Description Georgetown from the air sitoo kuvauspaikan kaupunkiin. Dan Sloan/CC BY-SA2.0,5283×3522 ja5.12.2015 varmennettu. L1 kertoo kaupungin nimihistoriasta, ja kuva näyttää rehellisesti nykyisemmän kaupungin kokonaisuuden päivättynä2015; ei Longchampsin/Stabroekin aikakauden tai1873 näkymä-/rekonstruktioväitettä. Hyväksytty koko laajana näkymänä, ei yksittäisen rakennuksen eristävää suurennusta.",
+          "evidence": {
+            "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/georgetown/cc-gap-job21-work/original-Georgetown-from-the-air--23284743859--jpg.jpg",
+            "visuallyInspected": true,
+            "nativeDimensions": [
+              5283,
+              3522
+            ],
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Georgetown_from_the_air_(23284743859).jpg",
+            "sourceLocal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/d587581b0ebc7c46200ebd52c85e8f1dd11e18fe727121ef3e713c35853b5a4a.html",
+            "sourceSHA256": "09c984a743f1cd183ebc5b3d5c3ecc81f52d138c9598069875412aefbc8dd526",
+            "authorsFromSource": [
+              "Dan Sloan"
+            ],
+            "license": "CC BY-SA 2.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+            "sourceFields": [
+              [
+                "Description Georgetown from the air (23284743859).jpg",
+                "Georgetown from the air"
+              ],
+              [
+                "Date",
+                "5 December 2015, 09:20"
+              ],
+              [
+                "Source",
+                "Georgetown from the air"
+              ],
+              [
+                "Author",
+                "Dan Sloan"
+              ],
+              [
+                "Date and time of data generation",
+                "09:20, 5 December 2015"
+              ],
+              [
+                "Date and time of digitizing",
+                "09:20, 5 December 2015"
+              ],
+              [
+                "Date metadata was last modified",
+                "09:33, 7 December 2015"
+              ]
+            ],
+            "currentContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e13/paakaupungit-pilvi/e13/georgetown/sisalto.json",
+            "currentContentSHA256": "9753c3fd1ea3fc3d1919191f44883d2c9ffa1d99cf8b628f9dc729735ec55c56",
+            "sourceChecks": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/georgetown/qa-evidence/current-commons-source-checks.json",
+            "usedInGameCheck": {
+              "status": "no hits",
+              "output": ""
+            },
+            "scope": "independent QA only; no integration/publication/owner acceptance",
+            "historyBoundary": "2015 modern city view accompanying naming history; no historical-layout reconstruction or historic photo claim.",
+            "reviewedCandidateRecordSHA256": "0f710442d6e300b055aec3406d0c9316469063547d36904d619ffff5869a4fa3",
+            "selectionFragment": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/georgetown/cc-gap-selection.json"
+          },
+          "reviewedAt": "2026-10-12T20:08:28.771433+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/georgetown/qa.json",
+            "sha256": "a4dc34ebef1c8ca5335d17ba1416814a611ed34c8c81d25c9280443e85ec25fc"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/georgetown/illustration-qa-extra.json",
+            "sha256": "7d4e70ceb1958ab7d4bfed82f7680c20a107aa8df465ef16ae08b7249478b18b"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e13",
+        "city": "georgetown",
+        "slot": "L1",
+        "targetJsonPath": "$.kaupunkilehti[1].nostot[0]",
+        "commonsFile": "Georgetown from the air (23284743859).jpg",
+        "sha256": "8c302efd60dff221f0d723fcef968e63ad6b18e8ae6dca40d815f5172386f043",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Georgetown_from_the_air_(23284743859).jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/6/65/Georgetown_from_the_air_%2823284743859%29.jpg",
+        "author": "Dan Sloan",
+        "license": "CC BY-SA 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+        "width": 5283,
+        "height": 3522,
+        "originalSHA256": "8c302efd60dff221f0d723fcef968e63ad6b18e8ae6dca40d815f5172386f043",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e13/georgetown/l1-8c302efd60dff221f0d7.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e13/georgetown/l1-8c302efd60dff221f0d7.jpg",
+        "bytes": 17942621,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T20:09:18.534767+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "Georgetown from the air (23284743859).jpg",
+        "lahde": "Dan Sloan, Wikimedia Commons (CC BY-SA 2.0)",
+        "selite": "Georgetownin katuverkkoa ja Atlantin rannikkoa ilmasta 5.12.2015.",
+        "lyhyt": "Georgetownin katuverkkoa ja Atlantin rannikkoa ilmasta 5.12.2015."
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Dan Sloan, Wikimedia Commons (CC BY-SA 2.0)",
+        "selite": "Georgetownin katuverkkoa ja Atlantin rannikkoa ilmasta 5.12.2015.",
+        "lyhyt": "Georgetownin katuverkkoa ja Atlantin rannikkoa ilmasta 5.12.2015.",
+        "tiedosto": "Georgetown from the air (23284743859).jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "379fe1d844d0f94761337315a7340d7e8291341f4e4c9177f885ba7823e2eef6",
+      "targetAfterSHA256": "0f27d22253dd04f5acb06080ac1c4fda5b418068719c2a7957ef17eda39f1099",
+      "contextAfterSHA256": "0f27d22253dd04f5acb06080ac1c4fda5b418068719c2a7957ef17eda39f1099"
+    }
+  ],
+  "runtimeIntegrationPending": true,
+  "ownerAcceptedNotImpliedByAuthorization": true,
+  "gameIntegrated": false
+}
