@@ -1,34 +1,16 @@
 {
-  "updatedAt": "2026-10-12T22:26:02.724673+00:00",
+  "updatedAt": "2026-10-12T22:35:23.057401+00:00",
   "sourceSnapshot": "batch-0016",
   "sourceSnapshotRoleBindings": 829,
-  "releaseCount": 39,
+  "releaseCount": 46,
   "addedIDs": [
-    "capital-cc-e06-luanda-photo-4fa8574362464950",
-    "capital-cc-e08-harare-photo-e1b4c4940ca8fe21",
-    "capital-cc-e11-washington-photo-b94c1bf0f7141560",
-    "capital-cc-e04-bissau-c1-84eb5ebf09ad9e0a",
-    "capital-cc-e04-bissau-c2-ba3ecd502b78ebc6",
-    "capital-cc-e04-bissau-c3-62286fdbd315a826",
-    "capital-cc-e11-washington-c1-85de5491a45274d5",
-    "capital-cc-e04-bissau-traveler-82f1b07300b4d92b",
-    "capital-cc-e04-rabat-traveler-56c912742a31573e",
-    "capital-cc-e04-bissau-o3-b7a515bf6ff221f4",
-    "capital-cc-e04-bissau-o5-0f5329cdff1b4b83",
-    "capital-cc-e04-bissau-k2-c49ce81e6614a3bf",
-    "capital-cc-e04-bissau-k4-032bb056fc4b421d",
-    "capital-cc-e04-rabat-o2-e46be404382014ae",
-    "capital-cc-e04-rabat-k1-8fb29a17c4ab0a65",
-    "capital-cc-e04-rabat-k2-7d7a1f457e1bb467",
-    "capital-cc-e04-rabat-k3-c901643f787fcd3a",
-    "capital-cc-e04-rabat-l1-756be9a5dc78247e",
-    "capital-cc-e04-rabat-l2-d72f52c7a8f18646",
-    "capital-cc-e11-washington-n1-b3c814505039faf6",
-    "capital-cc-e06-luanda-c1-428585e2a5e35e7d",
-    "capital-cc-e04-bissau-l2-4b70bafa52e4b1ce",
-    "capital-cc-e04-bissau-l3-5b7407f7ddd0e00c",
-    "capital-cc-e04-rabat-l4-91bab45082a7110d",
-    "capital-cc-e04-rabat-n5-51a9dd0e4256f4cb"
+    "capital-cc-e04-bissau-l4-7213dccfd06facb4",
+    "capital-cc-e04-rabat-n7-d2117c6c38e7e5e9",
+    "capital-cc-e04-rabat-n6-24091cc6837de1b2",
+    "capital-cc-e06-luanda-o1-0fc0b3066150f68c",
+    "capital-cc-e06-luanda-o4-1ce5c211f5cae94b",
+    "capital-cc-e04-tunis-o4-84ad1a15512b344c",
+    "capital-cc-e06-luanda-k2-213f7b5fcfb4a330"
   ],
   "assets": [
     {
@@ -16989,10 +16971,2922 @@
         }
       ],
       "previousHoldCause": "Primary QA inspected only a preview; full original is now independently inspected."
+    },
+    {
+      "era": "e04",
+      "city": "bissau",
+      "slot": "L4",
+      "type": "commons",
+      "assetID": "capital-cc-e04-bissau-l4-7213dccfd06facb4",
+      "galleryImageID": "capital-cc-e04-bissau-l4-7213dccfd06facb4",
+      "commonsFile": "Porto de Bissau 06.jpg",
+      "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
+      "targetTokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        3
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/bissau/l4-7213dccfd06facb4f71f.jpg",
+        "suora": true,
+        "lahde": "Joehawkins, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Bissaun uudemman sataman alukset ja laiturit vuonna 2017 havainnollistavat satamakaupan ympäristöä.",
+        "lyhyt": "Bissaun uudempi satama havainnollistaa satamakauppaa.",
+        "tiedosto": "Porto de Bissau 06.jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Joehawkins, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Bissaun uudemman sataman alukset ja laiturit vuonna 2017 havainnollistavat satamakaupan ympäristöä.",
+        "lyhyt": "Bissaun uudempi satama havainnollistaa satamakauppaa.",
+        "tiedosto": "Porto de Bissau 06.jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/bissau/l4-7213dccfd06facb4f71f.jpg",
+        "suora": true,
+        "lahde": "Joehawkins, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Bissaun uudemman sataman alukset ja laiturit vuonna 2017 havainnollistavat satamakaupan ympäristöä.",
+        "lyhyt": "Bissaun uudempi satama havainnollistaa satamakauppaa.",
+        "tiedosto": "Porto de Bissau 06.jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "7213dccfd06facb4f71fcf711362c9f7c0e8ae5fed8702ccfec0d8a9181768b4",
+      "exportSHA256": "7213dccfd06facb4f71fcf711362c9f7c0e8ae5fed8702ccfec0d8a9181768b4",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/bissau/l4-7213dccfd06facb4f71f.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/bissau/l4-7213dccfd06facb4f71f.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/commons-originals/e04/bissau/ec9d4d867b4a186859ea570375deba95d857de3ceec518dbf6a2f98f011dbfda.org&utm_campaign=index&utm_content=original",
+      "dimensions": [
+        4608,
+        2592
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/bissau/sisalto.json",
+      "sourceContentSHA256": "048d429b138863c1d51150d22d37d24fee0a387cf28b42adec4ddff5fc1e02c5",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "1169a7a389752f9826b568db68dfd965a52e2f49cf3bff9f7b91cfee280242c8",
+        "semanticContextSHA256": "1169a7a389752f9826b568db68dfd965a52e2f49cf3bff9f7b91cfee280242c8",
+        "subjectTitle": "Tulli jäi aukion nimeen",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Joehawkins",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Porto_de_Bissau_06.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3a/Porto_de_Bissau_06.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+        "rightsEvidence": {
+          "selection": null,
+          "QA": {
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Porto_de_Bissau_06.jpg",
+            "sourceHTML": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/bissau-B/candidate-35.html",
+            "sourceSHA256": "c0210cd29e55a7f5689a3da85d38913e74b5c2c5fda7254419714c38c5c3e2e5",
+            "author": [
+              "Joehawkins"
+            ],
+            "availableLicenses": [
+              "CC BY-SA 4.0"
+            ],
+            "width": 4608,
+            "height": 2592,
+            "visualPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/bissau-B/preview-35.jpg",
+            "visualSHA256": "2e8ce80c80018425bfd20309505835049528fb55049db8826c9baea8721fd3fe",
+            "visuallyInspectedAt": "2026-10-12T17:46:26.847431+00:00",
+            "captionFi": "Bissaun uudemman sataman alukset ja laiturit vuonna 2017 havainnollistavat satamakaupan ympäristöä.",
+            "depictedRightsReview": "Bissaun käyttöaluksia ja teknistä satamaympäristöä vesimaisemana. Ei luettavia kasvoja tai suojattua teosta päämotiivina. Caption nimeää nykyisen sataman yleiseksi kauppanäkymäksi, ei Tulliaukioksi.",
+            "licenceLinksOnSourcePage": [
+              "https://creativecommons.org/publicdomain/zero/1.0/\\",
+              "https://creativecommons.org/licenses/by-sa/4.0/",
+              "https://creativecommons.org/licenses/by-sa/4.0",
+              "https://creativecommons.org/publicdomain/zero/1.0/"
+            ],
+            "currentContentSHA256": "ff73eae8b0f6479a92781bd5947b65cd9e5b1980b0c424d36c10a0613190e906",
+            "currentTargetContent": {
+              "otsikko": "Tulli jäi aukion nimeen",
+              "teksti": "Praça da Alfândega tarkoittaa Tulliaukiota, ja Bissaun aukion nimi viittaa paikalliseen tullitaloon. Aukio sijaitsee Amuran linnoituksen itäpuolella vanhan satamaytimen yhteydessä. Tullitalojen yleinen tehtävä on käsitellä maahan tulevia ja sieltä lähteviä tavaroita. Aukion nimi yhdistää siis kaupunkitilan sataman kautta kulkevaan kauppaan. Paikka on myös puutarhatilaa, mutta sen silloista asua vuonna 1873 ei tunneta riittävän tarkasti. Nimi kertoo toiminnan yhteydestä enemmän kuin aukion eri osien iästä.",
+              "wiki": "Custom house",
+              "tiedosto": "Porto de Bissau 06.jpg",
+              "lyhyt": "Bissaun uudempi satama havainnollistaa satamakauppaa.",
+              "selite": "Bissaun uudemman sataman alukset ja laiturit vuonna 2017 havainnollistavat satamakaupan ympäristöä.",
+              "lahde": "Joehawkins, Wikimedia Commons (CC BY-SA 4.0)"
+            }
+          },
+          "qaReason": "Bissaun käyttöaluksia ja teknistä satamaympäristöä vesimaisemana. Ei luettavia kasvoja tai suojattua teosta päämotiivina. Caption nimeää nykyisen sataman yleiseksi kauppanäkymäksi, ei Tulliaukioksi."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Bissaun uudemman sataman alukset ja laiturit vuonna 2017 havainnollistavat satamakaupan ympäristöä.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/bissau/qa.json",
+        "fileSHA256": "32967021f230c6b7b1992db76104fc65120895b1ff9e4b6cc8b6691bac8b19d6",
+        "item": {
+          "slot": "L4",
+          "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
+          "commonsFile": "Porto de Bissau 06.jpg",
+          "verdict": "accepted",
+          "reason": "Bissaun käyttöaluksia ja teknistä satamaympäristöä vesimaisemana. Ei luettavia kasvoja tai suojattua teosta päämotiivina. Caption nimeää nykyisen sataman yleiseksi kauppanäkymäksi, ei Tulliaukioksi.",
+          "evidence": {
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Porto_de_Bissau_06.jpg",
+            "sourceHTML": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/bissau-B/candidate-35.html",
+            "sourceSHA256": "c0210cd29e55a7f5689a3da85d38913e74b5c2c5fda7254419714c38c5c3e2e5",
+            "author": [
+              "Joehawkins"
+            ],
+            "availableLicenses": [
+              "CC BY-SA 4.0"
+            ],
+            "width": 4608,
+            "height": 2592,
+            "visualPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/bissau-B/preview-35.jpg",
+            "visualSHA256": "2e8ce80c80018425bfd20309505835049528fb55049db8826c9baea8721fd3fe",
+            "visuallyInspectedAt": "2026-10-12T17:46:26.847431+00:00",
+            "captionFi": "Bissaun uudemman sataman alukset ja laiturit vuonna 2017 havainnollistavat satamakaupan ympäristöä.",
+            "depictedRightsReview": "Bissaun käyttöaluksia ja teknistä satamaympäristöä vesimaisemana. Ei luettavia kasvoja tai suojattua teosta päämotiivina. Caption nimeää nykyisen sataman yleiseksi kauppanäkymäksi, ei Tulliaukioksi.",
+            "licenceLinksOnSourcePage": [
+              "https://creativecommons.org/publicdomain/zero/1.0/\\",
+              "https://creativecommons.org/licenses/by-sa/4.0/",
+              "https://creativecommons.org/licenses/by-sa/4.0",
+              "https://creativecommons.org/publicdomain/zero/1.0/"
+            ],
+            "currentContentSHA256": "ff73eae8b0f6479a92781bd5947b65cd9e5b1980b0c424d36c10a0613190e906",
+            "currentTargetContent": {
+              "otsikko": "Tulli jäi aukion nimeen",
+              "teksti": "Praça da Alfândega tarkoittaa Tulliaukiota, ja Bissaun aukion nimi viittaa paikalliseen tullitaloon. Aukio sijaitsee Amuran linnoituksen itäpuolella vanhan satamaytimen yhteydessä. Tullitalojen yleinen tehtävä on käsitellä maahan tulevia ja sieltä lähteviä tavaroita. Aukion nimi yhdistää siis kaupunkitilan sataman kautta kulkevaan kauppaan. Paikka on myös puutarhatilaa, mutta sen silloista asua vuonna 1873 ei tunneta riittävän tarkasti. Nimi kertoo toiminnan yhteydestä enemmän kuin aukion eri osien iästä.",
+              "wiki": "Custom house",
+              "tiedosto": "Porto de Bissau 06.jpg",
+              "lyhyt": "Bissaun uudempi satama havainnollistaa satamakauppaa.",
+              "selite": "Bissaun uudemman sataman alukset ja laiturit vuonna 2017 havainnollistavat satamakaupan ympäristöä.",
+              "lahde": "Joehawkins, Wikimedia Commons (CC BY-SA 4.0)"
+            }
+          }
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/bissau/qa.json",
+            "sha256": "32967021f230c6b7b1992db76104fc65120895b1ff9e4b6cc8b6691bac8b19d6"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e04",
+        "city": "bissau",
+        "slot": "L4",
+        "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
+        "commonsFile": "Porto de Bissau 06.jpg",
+        "sha256": "7213dccfd06facb4f71fcf711362c9f7c0e8ae5fed8702ccfec0d8a9181768b4",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Porto_de_Bissau_06.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3a/Porto_de_Bissau_06.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+        "author": "Joehawkins",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "width": 4608,
+        "height": 2592,
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/bissau/l4-7213dccfd06facb4f71f.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/bissau/l4-7213dccfd06facb4f71f.jpg",
+        "bytes": 2426950,
+        "http": 200,
+        "mime": "image/jpeg",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T18:05:28.127267+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "Porto de Bissau 06.jpg",
+        "lahde": "Joehawkins, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Bissaun uudemman sataman alukset ja laiturit vuonna 2017 havainnollistavat satamakaupan ympäristöä.",
+        "lyhyt": "Bissaun uudempi satama havainnollistaa satamakauppaa."
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Joehawkins, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Bissaun uudemman sataman alukset ja laiturit vuonna 2017 havainnollistavat satamakaupan ympäristöä.",
+        "lyhyt": "Bissaun uudempi satama havainnollistaa satamakauppaa.",
+        "tiedosto": "Porto de Bissau 06.jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "048d429b138863c1d51150d22d37d24fee0a387cf28b42adec4ddff5fc1e02c5",
+      "targetAfterSHA256": "1169a7a389752f9826b568db68dfd965a52e2f49cf3bff9f7b91cfee280242c8",
+      "contextAfterSHA256": "1169a7a389752f9826b568db68dfd965a52e2f49cf3bff9f7b91cfee280242c8",
+      "sourceCommit": "02a5f093c0a7497eb32614ad4be44f92a58b4f93",
+      "sourceBranch": "paakaupungit-e04-codex",
+      "supplementalNativeQA": {
+        "era": "e04",
+        "city": "bissau",
+        "slot": "L4",
+        "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
+        "commonsFile": "Porto de Bissau 06.jpg",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Porto_de_Bissau_06.jpg",
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/commons-originals/e04/bissau/ec9d4d867b4a186859ea570375deba95d857de3ceec518dbf6a2f98f011dbfda.org&utm_campaign=index&utm_content=original",
+        "sha256": "7213dccfd06facb4f71fcf711362c9f7c0e8ae5fed8702ccfec0d8a9181768b4",
+        "actualSHA256": "7213dccfd06facb4f71fcf711362c9f7c0e8ae5fed8702ccfec0d8a9181768b4",
+        "sha256CalculatedFromOriginalBytes": true,
+        "originalPixelsViewed": true,
+        "originalViewedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/commons-originals/e04/bissau/ec9d4d867b4a186859ea570375deba95d857de3ceec518dbf6a2f98f011dbfda.org&utm_campaign=index&utm_content=original",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "verdict": "accepted",
+        "approvedForDelivery": true,
+        "reason": "Alkuperäinen Bissaun uudemman sataman valokuva ja kolme natiivirajausta tarkastettu. SHA täsmää jonoon. Joehawkins, 9.11.2017 ja CC BY-SA 4.0 vastaavat File-sivua sekä nykyistä satamakaupan yleiskuvan selitettä. Veneen ja aluksen pienistä henkilöistä ei erotu luettavia yksilöiviä kasvonpiirteitä; ei itsenäistä teosaihetta.",
+        "observations": [
+          "Koko 4608×2592 NAS-JPEG katsottu tools.view_image detail original; koko kehys pieneni esityksessä 4256×2394 kokoon. Kolme natiivirajausta tarkistaa pienveneen ihmiset, rahtialuksen avoimen aukon hahmon ja laiturin kontti-/tekniset rakenteet.",
+          "Veneessä ihmisiä näkyy myös sivuttain ja osin eteenpäin; kaikkia ei väitetä selin oleviksi. Päät/kasvoalueet ovat hyvin pieniä, pehmeitä ja osin hatun/varjon peittämiä. Yksilöiviä silmän, nenän ja suun piirteitä ei voi lukea natiivirajauksesta. Rahtialuksen aukossa oleva henkilö jää tummaksi siluetiksi.",
+          "Aluksen ruostunut runko, tekniset kansirakenteet, pienveneen liike, veden pinta, kuorma-autot ja kontit ovat koherenttia todellista satamaympäristöä. Ei maalausta, julistetta, veistosta tai muuta itsenäistä teosaihetta pääkohteena.",
+          "MAERSK-merkinnät, pienveneen nimi ja muut kontti-/alusmerkit ovat valokuvatun ympäristön pieniä toiminnallisia tunnisteita. Luonnollinen teksti tai sivuosan logo ei yksin hylkää CC-paikkavalokuvaa, eikä kuva ole tuotemainossommitelma.",
+          "Tallennetun candidate-35.html:n Summary, Date, Author ja Licensing luettu: In the port of Bissau, 9 November 2017 16:47:24, Joehawkins, CC BY-SA 4.0. Commons-sivun Alfândega-annotaatio on sivun erillinen paikkahuomautus; se ei tee nykyisestä laajasta satamakuvasta Tulliaukion kuvaa eikä ole kuvan päälle poltettu selite.",
+          "Nykyinen selite kertoo satamakaupan ympäristöstä ja uudemmista laitureista vuonna 2017. Paikallisen kuvat.md:n teknisen sataman oikeus-/käyttörajaukset ja D:n H4/L4-arvio luettu. Kuvaajan CC-lupa ei ole kaikkien mahdollisten teoskerrosten blanket-PD-väite.",
+          "Valokuvassa on pehmeyttä, hieman kameran kallistumaa ja taivaalla pieniä tummia pisteitä. Satama ja alukset erottuvat dokumentaariseen verkkokäyttöön; ei olennaista rasteririkkoa tai lisättyä vesileimaa. Tämä tiedosto arvioitiin itsenäisesti PHOTO:n julistepitoversiosta."
+        ],
+        "nativeCrops": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/capital-native-qa/crops/e04-bissau/L4-small-boat-people.png",
+            "sha256": "c81494ae21321dad61b1a18ce02d9a53043d86680ad094bc2b464b126e96da4a",
+            "originalPixelBox": [
+              2800,
+              1660,
+              3510,
+              1860
+            ],
+            "coordinateSpace": "EXIF-oriented original pixels",
+            "resized": false,
+            "sharpened": false,
+            "pixelContentMatchesOriginalRegion": true,
+            "inspected": true
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/capital-native-qa/crops/e04-bissau/L4-ship-openings.png",
+            "sha256": "091b27f93eeb9f54970f49eb4959681dfef5707dcaf7eebb4a8b06f0df5904f4",
+            "originalPixelBox": [
+              4170,
+              1480,
+              4608,
+              1640
+            ],
+            "coordinateSpace": "EXIF-oriented original pixels",
+            "resized": false,
+            "sharpened": false,
+            "pixelContentMatchesOriginalRegion": true,
+            "inspected": true
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/capital-native-qa/crops/e04-bissau/L4-pier-containers.png",
+            "sha256": "73702a80f090ea8f3d04d8e46f881adb86b209626542c64723f30a351837b723",
+            "originalPixelBox": [
+              1020,
+              1440,
+              1750,
+              1710
+            ],
+            "coordinateSpace": "EXIF-oriented original pixels",
+            "resized": false,
+            "sharpened": false,
+            "pixelContentMatchesOriginalRegion": true,
+            "inspected": true
+          }
+        ],
+        "evidence": {
+          "sourceEvidenceRecords": [
+            {
+              "kind": "current-original-queue",
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/capital-native-qa/next-original-queue.json",
+              "sha256": "23e75af9446d42ffc07c4f38e77d069c6bc1d15432af6bc9b27f32ae936132f6",
+              "readLocally": true,
+              "expectedOriginalSHA256": "7213dccfd06facb4f71fcf711362c9f7c0e8ae5fed8702ccfec0d8a9181768b4"
+            },
+            {
+              "kind": "current-primary-QA",
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/bissau/qa.json",
+              "sha256": "c416e3473366264a4a6d4ff802fec1de815e32afc092ac4149af69d6757ce7f8",
+              "readLocally": true,
+              "verdict": "accepted",
+              "previousVisualPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/bissau-B/preview-35.jpg",
+              "previousOriginalInspectedPath": null,
+              "exactOriginalShaViewingBindingAbsentBeforeThisReview": true,
+              "selectedFileAndVerdictRecheckedAtFinalVerification": true
+            },
+            {
+              "kind": "saved-original-Commons-File-page",
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/bissau-B/candidate-35.html",
+              "sha256": "c0210cd29e55a7f5689a3da85d38913e74b5c2c5fda7254419714c38c5c3e2e5",
+              "readLocally": true,
+              "sourcePage": "https://commons.wikimedia.org/wiki/File:Porto_de_Bissau_06.jpg",
+              "summaryAndLicense": "Summary [ edit ] Description Porto de Bissau 06.jpg Português: No porto de Bissau. Deutsch: Im Hafen von Bissau. English: In the port of Bissau. Date 9 November 2017, 16:47:24 Source Own work Author Joehawkins Licensing [ edit ] I, the copyright holder of this work, hereby publish it under the following license: This file is licensed under the Creative Commons Attribution-Share Alike 4.0 International license. You are free: to share – to copy, distribute and transmit the work to remix – to adapt the work Under the following conditions: attribution – You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use. share alike – If you remix, transform, or build upon the material, you must distribute your contributions under the same or compatible license as the original. https://creativecommons.org/licenses/by-sa/4.0 CC BY-SA 4.0 Creative Commons Attribution-Share Alike 4.0 true true .mw-parser-output table.annotationboxforwikipedia{width:100%}.mw-parser-output table.annotationboxforwikipedia.annotationbox-demo{display:table!important}.mw-parser-output table.annotationboxforwikipedia th,.mw-parser-output table.annotationboxforwikipedia td{padding:2px}.mw-parser-output table.annotationboxforwikipedia .fileinfo-paramfield{font-weight:bold;width:15%} Annotations InfoField This image is annotated: View the annotations at Commons 749 141",
+              "author": "Joehawkins",
+              "license": "CC BY-SA 4.0",
+              "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+              "readMethod": "Summary/Date/Author/Licensing read from saved HTML; no live refetch or search"
+            },
+            {
+              "kind": "current-content-target",
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/bissau/sisalto.json",
+              "sha256": "048d429b138863c1d51150d22d37d24fee0a387cf28b42adec4ddff5fc1e02c5",
+              "readLocally": true,
+              "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
+              "currentTarget": {
+                "otsikko": "Tulli jäi aukion nimeen",
+                "teksti": "Praça da Alfândega tarkoittaa Tulliaukiota, ja Bissaun aukion nimi viittaa paikalliseen tullitaloon. Aukio sijaitsee Amuran linnoituksen itäpuolella vanhan satamaytimen yhteydessä. Tullitalojen yleinen tehtävä on käsitellä maahan tulevia ja sieltä lähteviä tavaroita. Aukion nimi yhdistää siis kaupunkitilan sataman kautta kulkevaan kauppaan. Paikka on myös puutarhatilaa, mutta sen silloista asua vuonna 1873 ei tunneta riittävän tarkasti. Nimi kertoo toiminnan yhteydestä enemmän kuin aukion eri osien iästä.",
+                "wiki": "Custom house",
+                "tiedosto": "Porto de Bissau 06.jpg",
+                "lyhyt": "Bissaun uudempi satama havainnollistaa satamakauppaa.",
+                "selite": "Bissaun uudemman sataman alukset ja laiturit vuonna 2017 havainnollistavat satamakaupan ympäristöä.",
+                "lahde": "Joehawkins, Wikimedia Commons (CC BY-SA 4.0)"
+              }
+            },
+            {
+              "kind": "saved-per-image-rights-background",
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/bissau/kuvat.md",
+              "sha256": "db9199438db2fa19a90ef67663e5ae5a3be66a7a22369ab4778132caf0aff11f",
+              "readLocally": true
+            },
+            {
+              "kind": "saved-independent-D-review",
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/bissau/tarkistus.md",
+              "sha256": "b5534a486bc407278fd6b1db886de175ed104d021f6247cfc5bece34a859550b",
+              "readLocally": true
+            }
+          ],
+          "originalPixelsViewed": true
+        },
+        "rightsAssessment": {
+          "photoLayer": "Saved original File-page Author and Licensing checked",
+          "subjectLayer": "Tekninen satama, rahtialus, pienvene, kontit, ajoneuvot ja vesi. Pienet rahtibrändit/aluksen nimi ovat ympäristön sivuosia; ei itsenäistä taideteos- tai mainospääaihetta.",
+          "personLayer": "Pienveneessä useita henkilöitä, osalla hattu/varjo ja osa sivuttain; natiivikoossa kasvot pehmeitä pieniä alueita ilman luettavia yksilöiviä piirteitä. Aluksen aukossa hahmo siluettina.",
+          "placeAndCaption": "Summary In the port of Bissau, Date 9 November 2017 16:47:24. Nykyinen caption nimeää uudemman sataman alukset ja laiturit satamakaupan yleiseksi ympäristöksi vuonna 2017, ei Tulliaukioksi tai kaikkien rakenteiden historialliseksi identiteetiksi.",
+          "attribution": {
+            "author": "Joehawkins",
+            "license": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Porto_de_Bissau_06.jpg"
+          },
+          "originalRasterChanged": false,
+          "acceptedScope": "Unchanged full original in its current specified content role; QA crops are evidence only"
+        },
+        "technicalDetails": {
+          "format": "JPEG",
+          "mode": "RGB",
+          "bytes": 2426950,
+          "encodedWidth": 4608,
+          "encodedHeight": 2592,
+          "exifOrientation": 1,
+          "displayWidth": 4608,
+          "displayHeight": 2592,
+          "originalByteSHA256MatchesQueue": true,
+          "decodedOrientedPixelSHA256": "94aa5b456d65ed3ee8e541bbded10ef71498f682dcf82d65c7fb3587e33191f3"
+        },
+        "reviewedAt": "2026-10-12T22:25:41.925674+00:00",
+        "R2IndependentlyRechecked": false,
+        "gameIntegrationRechecked": false,
+        "actualOriginalSHA256": "7213dccfd06facb4f71fcf711362c9f7c0e8ae5fed8702ccfec0d8a9181768b4",
+        "finalVerificationAt": "2026-10-12T22:26:00.974407+00:00",
+        "qaAssetSHA256CalculatedFromViewedBytes": true,
+        "supplementalQAPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/capital-native-qa/e04-bissau-L4.json"
+      },
+      "supplementalQAPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/capital-native-qa/e04-bissau-L4.json",
+      "supplementalQAFileSHA256": "3fafcec1f393f3e7ec618310b4002e72f3f55b101d73267fd071db1175225b52",
+      "nativeQAHashResolved": "7213dccfd06facb4f71fcf711362c9f7c0e8ae5fed8702ccfec0d8a9181768b4",
+      "deliveryR2Reads": [
+        {
+          "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/bissau/l4-7213dccfd06facb4f71f.jpg",
+          "http": 200,
+          "sha256": "7213dccfd06facb4f71fcf711362c9f7c0e8ae5fed8702ccfec0d8a9181768b4",
+          "bytes": 2426950,
+          "mime": "image/jpeg",
+          "requestOrigin": "https://matkakirja.app",
+          "byteExact": true
+        },
+        {
+          "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/bissau/l4-7213dccfd06facb4f71f.jpg?gallery-verify=7213dccfd06facb4-1791844154089270000",
+          "http": 200,
+          "sha256": "7213dccfd06facb4f71fcf711362c9f7c0e8ae5fed8702ccfec0d8a9181768b4",
+          "bytes": 2426950,
+          "mime": "image/jpeg",
+          "requestOrigin": "https://matkakirja.app",
+          "byteExact": true
+        }
+      ],
+      "previousHoldCause": "Primary QA inspected only a preview; full original is now independently inspected."
+    },
+    {
+      "era": "e04",
+      "city": "rabat",
+      "slot": "N7",
+      "type": "commons",
+      "assetID": "capital-cc-e04-rabat-n7-d2117c6c38e7e5e9",
+      "galleryImageID": "capital-cc-e04-rabat-n7-d2117c6c38e7e5e9",
+      "commonsFile": "Sidi Makhlouf 1.jpg",
+      "targetJsonPath": "$.nahtavyydet[\"Borj Sidi Makhlouf -linnake\"].kuvat[0]",
+      "targetTokens": [
+        "nahtavyydet",
+        "Borj Sidi Makhlouf -linnake",
+        "kuvat",
+        0
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/rabat/n7-d2117c6c38e7e5e9e66d.jpg",
+        "suora": true,
+        "lahde": "Omar-toons, Wikimedia Commons (CC BY-SA 3.0)",
+        "selite": "Borj Sidi Makhlouf on Andalusialaisen muurin jokipään linnake, jonka historiallinen tehtävä oli suojata läheistä satamaa.",
+        "lyhyt": "Borj Sidi Makhlouf rakennettiin sataman suojaksi.",
+        "tiedosto": "Sidi Makhlouf 1.jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Omar-toons, Wikimedia Commons (CC BY-SA 3.0)",
+        "selite": "Borj Sidi Makhlouf on Andalusialaisen muurin jokipään linnake, jonka historiallinen tehtävä oli suojata läheistä satamaa.",
+        "lyhyt": "Borj Sidi Makhlouf rakennettiin sataman suojaksi.",
+        "tiedosto": "Sidi Makhlouf 1.jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/rabat/n7-d2117c6c38e7e5e9e66d.jpg",
+        "suora": true,
+        "lahde": "Omar-toons, Wikimedia Commons (CC BY-SA 3.0)",
+        "selite": "Borj Sidi Makhlouf on Andalusialaisen muurin jokipään linnake, jonka historiallinen tehtävä oli suojata läheistä satamaa.",
+        "lyhyt": "Borj Sidi Makhlouf rakennettiin sataman suojaksi.",
+        "tiedosto": "Sidi Makhlouf 1.jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "d2117c6c38e7e5e9e66d2572636dcdba84d51713fc7bb70f1cdd640c6bfe49b9",
+      "exportSHA256": "d2117c6c38e7e5e9e66d2572636dcdba84d51713fc7bb70f1cdd640c6bfe49b9",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/rabat/n7-d2117c6c38e7e5e9e66d.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/rabat/n7-d2117c6c38e7e5e9e66d.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/commons-originals/e04/rabat/93b13a2316d484cfda2c35b85941c0ea96747d0a755d363899f63e60d4f60e05.org&utm_campaign=index&utm_content=original",
+      "dimensions": [
+        2592,
+        1944
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/rabat/sisalto.json",
+      "sourceContentSHA256": "e8cfe0f7c8812af898b31384847454b7c834f303ca358cb8b73b2abff43ea233",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "106b24f1f3fa68dbdcd64edf35a8fef20ecf44d411be576b200ad2c23aeef1d4",
+        "semanticContextSHA256": "36e439f0e7232d0976cd239895bcfbc5b6ca363e8bdbdd0029e2565c5876d9d5",
+        "subjectTitle": "Borj Sidi Makhlouf -linnake",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Omar-toons",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Sidi_Makhlouf_1.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/2/21/Sidi_Makhlouf_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+        "rightsEvidence": {
+          "selection": null,
+          "QA": {
+            "visualViewed": true,
+            "viewedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/rabat-B/preview-08.jpg",
+            "originalViewedPath": null,
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Sidi_Makhlouf_1.jpg",
+            "sourceHTML": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/rabat-B/candidate-08.html",
+            "sourceHTMLSHA256": "58f990157956f75a7865b6f4fb6c3146491f75fd83de7750b6ca3cb94fec145c",
+            "author": "Omar-toons",
+            "license": "CC BY-SA 3.0",
+            "licenseUrls": [
+              "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+              "https://creativecommons.org/licenses/by-sa/4.0/",
+              "https://creativecommons.org/publicdomain/zero/1.0/"
+            ],
+            "width": 2592,
+            "height": 1944,
+            "ratio": 1.3333333333333333,
+            "date": [
+              "16 October 2013, 10:05:57"
+            ],
+            "rightsSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/rabat/faktapohja.md",
+            "copyrightRuleSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/rabat-B/fop-morocco.html",
+            "reviewedAt": "2026-10-12T17:49:31.500544+00:00"
+          },
+          "qaReason": "Borj Sidi Makhloufin vanha linnaketorni, kasvoton ja selkeä rakenne. Ei modernia muuria naamioitu historialliseksi kohteeksi."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Borj Sidi Makhlouf on Andalusialaisen muurin jokipään linnake, jonka historiallinen tehtävä oli suojata läheistä satamaa.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/rabat/qa.json",
+        "fileSHA256": "d20f19d9af8eb32ebee6f8691c4099b2a9698842d8e77e5a93dc4f789ea00c8e",
+        "item": {
+          "slot": "N7",
+          "targetJsonPath": "$.nahtavyydet[\"Borj Sidi Makhlouf -linnake\"].kuvat[0]",
+          "commonsFile": "Sidi Makhlouf 1.jpg",
+          "verdict": "accepted",
+          "reason": "Borj Sidi Makhloufin vanha linnaketorni, kasvoton ja selkeä rakenne. Ei modernia muuria naamioitu historialliseksi kohteeksi.",
+          "evidence": {
+            "visualViewed": true,
+            "viewedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/rabat-B/preview-08.jpg",
+            "originalViewedPath": null,
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Sidi_Makhlouf_1.jpg",
+            "sourceHTML": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/rabat-B/candidate-08.html",
+            "sourceHTMLSHA256": "58f990157956f75a7865b6f4fb6c3146491f75fd83de7750b6ca3cb94fec145c",
+            "author": "Omar-toons",
+            "license": "CC BY-SA 3.0",
+            "licenseUrls": [
+              "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+              "https://creativecommons.org/licenses/by-sa/4.0/",
+              "https://creativecommons.org/publicdomain/zero/1.0/"
+            ],
+            "width": 2592,
+            "height": 1944,
+            "ratio": 1.3333333333333333,
+            "date": [
+              "16 October 2013, 10:05:57"
+            ],
+            "rightsSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/rabat/faktapohja.md",
+            "copyrightRuleSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/rabat-B/fop-morocco.html",
+            "reviewedAt": "2026-10-12T17:49:31.500544+00:00"
+          }
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/rabat/qa.json",
+            "sha256": "d20f19d9af8eb32ebee6f8691c4099b2a9698842d8e77e5a93dc4f789ea00c8e"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e04",
+        "city": "rabat",
+        "slot": "N7",
+        "targetJsonPath": "$.nahtavyydet[\"Borj Sidi Makhlouf -linnake\"].kuvat[0]",
+        "commonsFile": "Sidi Makhlouf 1.jpg",
+        "sha256": "d2117c6c38e7e5e9e66d2572636dcdba84d51713fc7bb70f1cdd640c6bfe49b9",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Sidi_Makhlouf_1.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/2/21/Sidi_Makhlouf_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+        "author": "Omar-toons",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+        "width": 2592,
+        "height": 1944,
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/rabat/n7-d2117c6c38e7e5e9e66d.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/rabat/n7-d2117c6c38e7e5e9e66d.jpg",
+        "bytes": 1244428,
+        "http": 200,
+        "mime": "image/jpeg",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T18:06:13.980056+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "Sidi Makhlouf 1.jpg",
+        "lahde": "Omar-toons, Wikimedia Commons (CC BY-SA 3.0)",
+        "selite": "Borj Sidi Makhlouf on Andalusialaisen muurin jokipään linnake, jonka historiallinen tehtävä oli suojata läheistä satamaa.",
+        "lyhyt": "Borj Sidi Makhlouf rakennettiin sataman suojaksi."
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Omar-toons, Wikimedia Commons (CC BY-SA 3.0)",
+        "selite": "Borj Sidi Makhlouf on Andalusialaisen muurin jokipään linnake, jonka historiallinen tehtävä oli suojata läheistä satamaa.",
+        "lyhyt": "Borj Sidi Makhlouf rakennettiin sataman suojaksi.",
+        "tiedosto": "Sidi Makhlouf 1.jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "e8cfe0f7c8812af898b31384847454b7c834f303ca358cb8b73b2abff43ea233",
+      "targetAfterSHA256": "106b24f1f3fa68dbdcd64edf35a8fef20ecf44d411be576b200ad2c23aeef1d4",
+      "contextAfterSHA256": "36e439f0e7232d0976cd239895bcfbc5b6ca363e8bdbdd0029e2565c5876d9d5",
+      "sourceCommit": "02a5f093c0a7497eb32614ad4be44f92a58b4f93",
+      "sourceBranch": "paakaupungit-e04-codex",
+      "supplementalNativeQA": {
+        "era": "e04",
+        "city": "rabat",
+        "slot": "N7",
+        "targetJsonPath": "$.nahtavyydet[\"Borj Sidi Makhlouf -linnake\"].kuvat[0]",
+        "commonsFile": "Sidi Makhlouf 1.jpg",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Sidi_Makhlouf_1.jpg",
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/commons-originals/e04/rabat/93b13a2316d484cfda2c35b85941c0ea96747d0a755d363899f63e60d4f60e05.org&utm_campaign=index&utm_content=original",
+        "sha256": "d2117c6c38e7e5e9e66d2572636dcdba84d51713fc7bb70f1cdd640c6bfe49b9",
+        "actualSHA256": "d2117c6c38e7e5e9e66d2572636dcdba84d51713fc7bb70f1cdd640c6bfe49b9",
+        "sha256CalculatedFromOriginalBytes": true,
+        "originalPixelsViewed": true,
+        "viewedOriginalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/commons-originals/e04/rabat/93b13a2316d484cfda2c35b85941c0ea96747d0a755d363899f63e60d4f60e05.org&utm_campaign=index&utm_content=original",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "verdict": "accepted",
+        "approvedForDelivery": true,
+        "reason": "Hyväksytty alkuperäinen2592×1944: Borj Sidi Makhloufin pyöreä linnaketorni ja siihen liittyvä muuri vastaavat N7-kohdetta. Koko kehys ja kaksi natiivirajausta katsottu; ei tunnistettavia ihmisiä/kasvoja tai erillistä nykyteosta. Omar-toons,2013 ja CC BY-SA3.0 varmistettu.",
+        "observations": [
+          "Koko NAS-original ja tornin sekä oikean jokisuu-/venealueen skaalaamattomat natiivirajaukset avattu detail original. Ei etualan ihmisiä tai tunnistettavia kasvonpiirteitä; kaukaiset veneet jäävät pieniksi.",
+          "SourceDescription borjSidiMakhlouf,Rabat,Maroc nimeää oikean linnakkeen. Pyöreä torni, ampuma-/ikkuna-aukot ja siihen liittyvä muuri vastaavat dokumentoitua historiallista kohdetta. Nykyinen selite on muurin jokipään linnakkeesta, ei toisesta saman alueen tornista tai modernista hotellista.",
+          "Pääaihe on pelkistetty historiallinen linnakerakenne. Katupinta, etualan kaide-/muuriosa, kukat, taustan kasbah ja veneet ovat ympäristöä; ei hallitsevaa nykyistä taideteosta tai omaa koriste-esineaihetta. Kaikkien nykyisten pintojen materiaalia ei väitetä1600–1700-luvulle.",
+          "Natiivissa on kompaktikameran pehmeyttä ja taivaan kohinaa, kova päivänvalo ja lievää haloa. Tornin aukot ja muoto erottuvat riittävästi dokumentaariseen verkkokohteeseen. Ei kuvarikkoa, virheellistä orientaatiota, vesileimaa tai kuvan päälle lisättyä tekstiä.",
+          "AuthorOmar-toons, SourceOwnwork, Date16October2013 ja kuvan varsinainen CC BY-SA3.0 Licensing luettu. Nykyinen lähderivi ja historiallinen kohdeselite vastaavat lähdettä. Kuva ei ole1873tarkka tilannekuva tai2026palvelu-/sisäänpääsylupaus."
+        ],
+        "nativeCrops": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/capital-native-qa/e04-rabat-N7-crops/tower-openings-and-masonry.png",
+            "sha256": "72b3b9bf27685332193a5ad2c1f61364a1e6c588116573a25767bc28b5e6d22f",
+            "originalPixelBox": [
+              870,
+              290,
+              1870,
+              800
+            ],
+            "coordinateSystem": "EXIF-oriented-original",
+            "resized": false,
+            "inspected": true
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/capital-native-qa/e04-rabat-N7-crops/right-estuary-and-boats.png",
+            "sha256": "886421e68a350a74958f29720447fcf955c341216300a866f1d51d153d051ab2",
+            "originalPixelBox": [
+              2200,
+              1090,
+              2592,
+              1660
+            ],
+            "coordinateSystem": "EXIF-oriented-original",
+            "resized": false,
+            "inspected": true
+          }
+        ],
+        "currentContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/rabat/sisalto.json",
+        "currentContentSHA256": "e8cfe0f7c8812af898b31384847454b7c834f303ca358cb8b73b2abff43ea233",
+        "currentTarget": {
+          "tiedosto": "Sidi Makhlouf 1.jpg",
+          "lyhyt": "Borj Sidi Makhlouf rakennettiin sataman suojaksi.",
+          "selite": "Borj Sidi Makhlouf on Andalusialaisen muurin jokipään linnake, jonka historiallinen tehtävä oli suojata läheistä satamaa.",
+          "lahde": "Omar-toons, Wikimedia Commons (CC BY-SA 3.0)"
+        },
+        "evidence": {
+          "originalSHA256": "d2117c6c38e7e5e9e66d2572636dcdba84d51713fc7bb70f1cdd640c6bfe49b9",
+          "originalViewedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/commons-originals/e04/rabat/93b13a2316d484cfda2c35b85941c0ea96747d0a755d363899f63e60d4f60e05.org&utm_campaign=index&utm_content=original",
+          "sourceEvidence": [
+            {
+              "kind": "current-original-queue",
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/capital-native-qa/next-original-queue.json",
+              "sha256": "23e75af9446d42ffc07c4f38e77d069c6bc1d15432af6bc9b27f32ae936132f6",
+              "sourceRoleID": "capital-cc-e04-rabat-n7-d2117c6c38e7e5e9",
+              "originalSHA256": "d2117c6c38e7e5e9e66d2572636dcdba84d51713fc7bb70f1cdd640c6bfe49b9"
+            },
+            {
+              "kind": "current-primary-QA",
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/rabat/qa.json",
+              "sha256": "d20f19d9af8eb32ebee6f8691c4099b2a9698842d8e77e5a93dc4f789ea00c8e",
+              "slot": "N7",
+              "verdict": "accepted",
+              "previewOnlyEvidenceBeforeThisReview": true,
+              "previousViewedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/rabat-B/preview-08.jpg"
+            },
+            {
+              "kind": "current-content-target",
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/rabat/sisalto.json",
+              "sha256": "e8cfe0f7c8812af898b31384847454b7c834f303ca358cb8b73b2abff43ea233",
+              "targetJsonPath": "$.nahtavyydet[\"Borj Sidi Makhlouf -linnake\"].kuvat[0]"
+            },
+            {
+              "kind": "saved-original-Commons-page",
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/rabat-B/candidate-08.html",
+              "sha256": "58f990157956f75a7865b6f4fb6c3146491f75fd83de7750b6ca3cb94fec145c",
+              "sourcePage": "https://commons.wikimedia.org/wiki/File:Sidi_Makhlouf_1.jpg",
+              "author": "Omar-toons",
+              "license": "CC BY-SA 3.0",
+              "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+              "date": [
+                "16 October 2013, 10:05:57"
+              ],
+              "readMethod": "Tallennettu paikallinen HTML; ei uutta hakua tai päivitystä."
+            },
+            {
+              "kind": "historical-identity-fact-sheet",
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/rabat/faktapohja.md",
+              "sha256": "73b493506ab9c0985354f5742a0556f3e84c80a872ba920d0cae34a68234fc31"
+            },
+            {
+              "kind": "saved-subject-specific-rights-review",
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/rabat/kuvat.md",
+              "sha256": "aabe7c7fcc42cf6792e0c0a19af3b283de1d1ef4e147fc41bab079a4fa7769ec",
+              "scope": "Kohde7 — Borj Sidi Makhloufin historiallinen pyöreä linnaketorni, sama N7-tiedosto kuin dokumentoitu arvio."
+            },
+            {
+              "kind": "Morocco-copyright-rule-snapshot",
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/rabat-B/fop-morocco.html",
+              "sha256": "632d315136b06f8bf0b32bb817860cba3e332b1290a51903f57abaafec7de289"
+            },
+            {
+              "kind": "Morocco-primary-law-English-snapshot",
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/rabat/cc-evidence/law-morocco.txt",
+              "sha256": "c72b96d2127c07df6d8c85f2a35d0d1fd2a33218f586fd9746957bb91e1455ee",
+              "sourcePage": "https://www.wipo.int/wipolex/en/legislation/details/2985"
+            },
+            {
+              "kind": "Morocco-primary-law-consolidated-snapshot",
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/rabat/cc-evidence/current-law-read.txt",
+              "sha256": "d88a09160d309507da97a1b9eaaba5fc0d6dd411bf1f03ae47db7409ec2b6ed6",
+              "sourcePage": "https://www.wipo.int/wipolex/en/legislation/details/19766"
+            }
+          ],
+          "sourceLicenseLayer": {
+            "author": "Omar-toons",
+            "license": "CC BY-SA 3.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Sidi_Makhlouf_1.jpg",
+            "fileLicenseRead": true,
+            "commonsFooterLicenseExcluded": true
+          },
+          "rightsAssessment": {
+            "photoLayer": "Tallennetun tiedostosivun varsinainen valokuvalisenssi, erillään kuvatun aiheen oikeuksista.",
+            "depictedWorkLayer": "Tunnistettu1600–1700-lukujen historiallinen linnakemuoto pääaiheena; tavanomainen ympäristö ja kaukaiset rakennukset sivuosina.",
+            "personLayer": "Ei etualan ihmisiä tai tunnistettavia kasvonpiirteitä.",
+            "basis": "Kohdekohtainen Borj Sidi Makhloufin vanhan rakenteellisen muodon tunnistus ja suoja-aikaperuste erillään2013valokuvan CC-luvasta. Tavallinen uudelleenpinnoitus tai katukaluste ei itsessään osoita uutta pääaiheista luovaa teosta; kaikkien nykyisten osien vapautta ei oleteta.",
+            "blanketFreedomOfPanoramaAssumed": false,
+            "photoCCUsedAsDepictedWorkPermission": false,
+            "originalRasterChanged": false
+          },
+          "technicalDetails": {
+            "width": 2592,
+            "height": 1944,
+            "rawWidth": 2592,
+            "rawHeight": 1944,
+            "bytes": 1244428,
+            "format": "JPEG",
+            "mode": "RGB",
+            "exifOrientation": 1,
+            "dateTimeOriginal": "2013:10:16 10:05:57",
+            "cameraMake": "NIKON",
+            "cameraModel": "COOLPIX L24",
+            "decodedSuccessfully": true,
+            "actualOriginalSHA1": "70bb120df4025eafe899ed342ffc34fe2d842fdc",
+            "savedSourceHTMLContainsActualOriginalSHA1": true,
+            "queueOriginalSHA256MatchesActual": true
+          },
+          "inspectionMethod": {
+            "tool": "tools.view_image",
+            "detail": "original",
+            "oneImagePerToolOutput": true,
+            "fullOriginalPathOpened": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/commons-originals/e04/rabat/93b13a2316d484cfda2c35b85941c0ea96747d0a755d363899f63e60d4f60e05.org&utm_campaign=index&utm_content=original",
+            "fullFrameDisplayPixels": [
+              2592,
+              1944
+            ],
+            "nativeCropsUnscaled": true,
+            "originalEXIFOrientationAppliedToQACropCoordinates": true,
+            "previewNotUsedForNewAcceptance": true
+          },
+          "primaryQAUnchangedSHA256": "d20f19d9af8eb32ebee6f8691c4099b2a9698842d8e77e5a93dc4f789ea00c8e",
+          "skippedCompleteRows": [],
+          "originalPixelsViewed": true
+        },
+        "reviewedAt": "2026-10-12T22:26:51.506179+00:00",
+        "qaAssetSHA256CalculatedFromViewedBytes": true,
+        "supplementalQAPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/capital-native-qa/e04-rabat-N7.json"
+      },
+      "supplementalQAPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/capital-native-qa/e04-rabat-N7.json",
+      "supplementalQAFileSHA256": "25ed005634ea06570c8a315433284c72904d0a8bbc882386fa108ebc187911dc",
+      "nativeQAHashResolved": "d2117c6c38e7e5e9e66d2572636dcdba84d51713fc7bb70f1cdd640c6bfe49b9",
+      "deliveryR2Reads": [
+        {
+          "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/rabat/n7-d2117c6c38e7e5e9e66d.jpg",
+          "http": 200,
+          "sha256": "d2117c6c38e7e5e9e66d2572636dcdba84d51713fc7bb70f1cdd640c6bfe49b9",
+          "bytes": 1244428,
+          "mime": "image/jpeg",
+          "requestOrigin": "https://matkakirja.app",
+          "byteExact": true
+        },
+        {
+          "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/rabat/n7-d2117c6c38e7e5e9e66d.jpg?gallery-verify=d2117c6c38e7e5e9-1791844154076402000",
+          "http": 200,
+          "sha256": "d2117c6c38e7e5e9e66d2572636dcdba84d51713fc7bb70f1cdd640c6bfe49b9",
+          "bytes": 1244428,
+          "mime": "image/jpeg",
+          "requestOrigin": "https://matkakirja.app",
+          "byteExact": true
+        }
+      ],
+      "previousHoldCause": "Primary QA inspected only a preview; full original is now independently inspected."
+    },
+    {
+      "era": "e04",
+      "city": "rabat",
+      "slot": "N6",
+      "type": "commons",
+      "assetID": "capital-cc-e04-rabat-n6-24091cc6837de1b2",
+      "galleryImageID": "capital-cc-e04-rabat-n6-24091cc6837de1b2",
+      "commonsFile": "Chellah interior hill.jpg",
+      "targetJsonPath": "$.nahtavyydet[\"Chellahin raunioalue\"].kuvat[0]",
+      "targetTokens": [
+        "nahtavyydet",
+        "Chellahin raunioalue",
+        "kuvat",
+        0
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/rabat/n6-24091cc6837de1b2ad17.jpg",
+        "suora": true,
+        "lahde": "Shazbot from San Francisco, California, Wikimedia Commons (CC BY 2.0)",
+        "selite": "Chellahin raunioalueella muinaisen Salan jäännökset ja marinidien keskiaikainen aitaus kuuluvat saman paikan pitkään historiaan.",
+        "lyhyt": "Chellah yhdistää antiikin ja keskiajan rakennusjäännökset.",
+        "tiedosto": "Chellah interior hill.jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Shazbot from San Francisco, California, Wikimedia Commons (CC BY 2.0)",
+        "selite": "Chellahin raunioalueella muinaisen Salan jäännökset ja marinidien keskiaikainen aitaus kuuluvat saman paikan pitkään historiaan.",
+        "lyhyt": "Chellah yhdistää antiikin ja keskiajan rakennusjäännökset.",
+        "tiedosto": "Chellah interior hill.jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/rabat/n6-24091cc6837de1b2ad17.jpg",
+        "suora": true,
+        "lahde": "Shazbot from San Francisco, California, Wikimedia Commons (CC BY 2.0)",
+        "selite": "Chellahin raunioalueella muinaisen Salan jäännökset ja marinidien keskiaikainen aitaus kuuluvat saman paikan pitkään historiaan.",
+        "lyhyt": "Chellah yhdistää antiikin ja keskiajan rakennusjäännökset.",
+        "tiedosto": "Chellah interior hill.jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "24091cc6837de1b2ad1733a2acb855c9ea631f1a0db3a1ec0b6c847c9cae0d13",
+      "exportSHA256": "24091cc6837de1b2ad1733a2acb855c9ea631f1a0db3a1ec0b6c847c9cae0d13",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/rabat/n6-24091cc6837de1b2ad17.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/rabat/n6-24091cc6837de1b2ad17.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/commons-originals/e04/rabat/153abb1ec0945811c3d7d4231f610030efafa81f2a563e72cc06e93caa3889c7.org&utm_campaign=index&utm_content=original",
+      "dimensions": [
+        3008,
+        2000
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/rabat/sisalto.json",
+      "sourceContentSHA256": "e8cfe0f7c8812af898b31384847454b7c834f303ca358cb8b73b2abff43ea233",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "5643b421bf0ee0890414b4cba29af1675b3226ab73f770f912241091b1611cd0",
+        "semanticContextSHA256": "1ac82498b3726c1c063b1d08ad447a7f7988cf7e1cf75024830d092d037b1907",
+        "subjectTitle": "Chellahin raunioalue",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Shazbot from San Francisco, California",
+        "license": "CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0/deed.en",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Chellah_interior_hill.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/1/13/Chellah_interior_hill.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+        "rightsEvidence": {
+          "selection": null,
+          "QA": {
+            "visualViewed": true,
+            "viewedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/rabat-B/preview-03.jpg",
+            "originalViewedPath": null,
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Chellah_interior_hill.jpg",
+            "sourceHTML": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/rabat-B/candidate-03.html",
+            "sourceHTMLSHA256": "51f3177023f16fbac12ca874b2fd783a2f9e00189dde7b22f94948e76a3b97ed",
+            "author": "Shazbot from San Francisco, California",
+            "license": "CC BY 2.0",
+            "licenseUrls": [
+              "https://creativecommons.org/licenses/by-sa/4.0/",
+              "https://creativecommons.org/licenses/by/2.0/deed.en",
+              "https://creativecommons.org/publicdomain/zero/1.0/"
+            ],
+            "width": 3008,
+            "height": 2000,
+            "ratio": 1.504,
+            "date": [
+              "4 April 2005"
+            ],
+            "rightsSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/rabat/faktapohja.md",
+            "copyrightRuleSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/rabat-B/fop-morocco.html",
+            "reviewedAt": "2026-10-12T17:49:31.500544+00:00"
+          },
+          "qaReason": "Chellahin vanhat kivirakenteet, maasto ja taustamuuri; kasvoton oikea raunioympäristö."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Chellahin raunioalueella muinaisen Salan jäännökset ja marinidien keskiaikainen aitaus kuuluvat saman paikan pitkään historiaan.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/rabat/qa.json",
+        "fileSHA256": "d20f19d9af8eb32ebee6f8691c4099b2a9698842d8e77e5a93dc4f789ea00c8e",
+        "item": {
+          "slot": "N6",
+          "targetJsonPath": "$.nahtavyydet[\"Chellahin raunioalue\"].kuvat[0]",
+          "commonsFile": "Chellah interior hill.jpg",
+          "verdict": "accepted",
+          "reason": "Chellahin vanhat kivirakenteet, maasto ja taustamuuri; kasvoton oikea raunioympäristö.",
+          "evidence": {
+            "visualViewed": true,
+            "viewedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/rabat-B/preview-03.jpg",
+            "originalViewedPath": null,
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Chellah_interior_hill.jpg",
+            "sourceHTML": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/rabat-B/candidate-03.html",
+            "sourceHTMLSHA256": "51f3177023f16fbac12ca874b2fd783a2f9e00189dde7b22f94948e76a3b97ed",
+            "author": "Shazbot from San Francisco, California",
+            "license": "CC BY 2.0",
+            "licenseUrls": [
+              "https://creativecommons.org/licenses/by-sa/4.0/",
+              "https://creativecommons.org/licenses/by/2.0/deed.en",
+              "https://creativecommons.org/publicdomain/zero/1.0/"
+            ],
+            "width": 3008,
+            "height": 2000,
+            "ratio": 1.504,
+            "date": [
+              "4 April 2005"
+            ],
+            "rightsSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/rabat/faktapohja.md",
+            "copyrightRuleSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/rabat-B/fop-morocco.html",
+            "reviewedAt": "2026-10-12T17:49:31.500544+00:00"
+          }
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/rabat/qa.json",
+            "sha256": "d20f19d9af8eb32ebee6f8691c4099b2a9698842d8e77e5a93dc4f789ea00c8e"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e04",
+        "city": "rabat",
+        "slot": "N6",
+        "targetJsonPath": "$.nahtavyydet[\"Chellahin raunioalue\"].kuvat[0]",
+        "commonsFile": "Chellah interior hill.jpg",
+        "sha256": "24091cc6837de1b2ad1733a2acb855c9ea631f1a0db3a1ec0b6c847c9cae0d13",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Chellah_interior_hill.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/1/13/Chellah_interior_hill.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+        "author": "Shazbot from San Francisco, California",
+        "license": "CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0/deed.en",
+        "width": 3008,
+        "height": 2000,
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/rabat/n6-24091cc6837de1b2ad17.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/rabat/n6-24091cc6837de1b2ad17.jpg",
+        "bytes": 3072011,
+        "http": 200,
+        "mime": "image/jpeg",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T18:06:12.658401+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "Chellah interior hill.jpg",
+        "lahde": "Shazbot from San Francisco, California, Wikimedia Commons (CC BY 2.0)",
+        "selite": "Chellahin raunioalueella muinaisen Salan jäännökset ja marinidien keskiaikainen aitaus kuuluvat saman paikan pitkään historiaan.",
+        "lyhyt": "Chellah yhdistää antiikin ja keskiajan rakennusjäännökset."
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Shazbot from San Francisco, California, Wikimedia Commons (CC BY 2.0)",
+        "selite": "Chellahin raunioalueella muinaisen Salan jäännökset ja marinidien keskiaikainen aitaus kuuluvat saman paikan pitkään historiaan.",
+        "lyhyt": "Chellah yhdistää antiikin ja keskiajan rakennusjäännökset.",
+        "tiedosto": "Chellah interior hill.jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "e8cfe0f7c8812af898b31384847454b7c834f303ca358cb8b73b2abff43ea233",
+      "targetAfterSHA256": "5643b421bf0ee0890414b4cba29af1675b3226ab73f770f912241091b1611cd0",
+      "contextAfterSHA256": "1ac82498b3726c1c063b1d08ad447a7f7988cf7e1cf75024830d092d037b1907",
+      "sourceCommit": "02a5f093c0a7497eb32614ad4be44f92a58b4f93",
+      "sourceBranch": "paakaupungit-e04-codex",
+      "supplementalNativeQA": {
+        "era": "e04",
+        "city": "rabat",
+        "slot": "N6",
+        "targetJsonPath": "$.nahtavyydet[\"Chellahin raunioalue\"].kuvat[0]",
+        "commonsFile": "Chellah interior hill.jpg",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Chellah_interior_hill.jpg",
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/commons-originals/e04/rabat/153abb1ec0945811c3d7d4231f610030efafa81f2a563e72cc06e93caa3889c7.org&utm_campaign=index&utm_content=original",
+        "sha256": "24091cc6837de1b2ad1733a2acb855c9ea631f1a0db3a1ec0b6c847c9cae0d13",
+        "actualSHA256": "24091cc6837de1b2ad1733a2acb855c9ea631f1a0db3a1ec0b6c847c9cae0d13",
+        "sha256CalculatedFromOriginalBytes": true,
+        "originalPixelsViewed": true,
+        "viewedOriginalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/commons-originals/e04/rabat/153abb1ec0945811c3d7d4231f610030efafa81f2a563e72cc06e93caa3889c7.org&utm_campaign=index&utm_content=original",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "verdict": "accepted",
+        "approvedForDelivery": true,
+        "reason": "Hyväksytty alkuperäinen3008×2000: Chellahin vanhat kivirakenteet, etualan pylväs-/kapiteelifragmentti, kasvillisuus ja taustamuuri tukevat N6:n raunioalueselitettä. Koko kehys ja kaksi natiivirajausta katsottu, ei ihmisiä/kasvoja tai erillistä nykyteosta. Shazbot from San Francisco, California,2005 ja CC BY2.0 varmistettu.",
+        "observations": [
+          "Koko NAS-original3008×2000 ja etualan kiven sekä taustamuurin skaalaamattomat natiivirajaukset avattu detail original. Kuvassa ei ole ihmisiä tai kasvoja.",
+          "Pääaihe on Chellahin vanha raunioympäristö: etualan rapautunut kivifragmentti ja muuri, maasto, kasvillisuus sekä taustalla historiallinen marinidien aitaus. Ei nykyaikaista veistosta, museovitrineissä olevaa esinettä tai hallitsevaa modernia arkkitehtuuria.",
+          "SourceDescription/SourceFlickr nimeävät In theChellah/Pillar ja tallennetun sivun lisäselite Interiorof theChellah inRabat,Morocco. Paikkasidos ei perustu vain tiedostonimeen. Nykyinen selite kertoo Salan jäännösten ja marinidien aitauksen samasta alueesta; yksittäistä temppeliä tai fragmentin täsmällistä funktiota ei nimetä kuvasta.",
+          "Kiven kulumat, jäkälä, lehdet ja ruoho luonnollisia. Kuva on tummahko/sävyiltään voimakas päivänvalokuva, mutta pääaihe ja rakenneyksityiskohdat erottuvat hyvin kohteen dokumentaariseen verkkokäyttöön. Ei kuvarikkoa, väärää kääntöä tai vesileimaa.",
+          "Date4April2005 kirjattu lähteen kuvausvuotena. Nykyinen yleinen historiallinen kohdeselite ei esitä2005kuvaa1873kaivaustilanteeksi tai2026palvelu-/sisäänpääsytodisteeksi.",
+          "AuthorShazbot fromSanFrancisco,California ja varsinaisen tiedoston CC BY2.0-grant luettu tiedostosivun tietotaulun yhteydestä; Licensing-otsikko puuttuu tästä vanhasta mallipohjasta mutta lupa näkyy itse tiedoston luvassa. Flickr17104965 ja20December2006FlickreviewR:n cc-by-2.0-tarkastus luettu. Nykyinen credit täsmää."
+        ],
+        "nativeCrops": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/capital-native-qa/e04-rabat-N6-crops/foreground-capital-and-stone.png",
+            "sha256": "ec510fd0302be0f7b1027ffa178f2ad9603f584cd192333f05d2562c614d97a0",
+            "originalPixelBox": [
+              2240,
+              500,
+              3008,
+              1540
+            ],
+            "coordinateSystem": "EXIF-oriented-original",
+            "resized": false,
+            "inspected": true
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/capital-native-qa/e04-rabat-N6-crops/distant-historic-wall.png",
+            "sha256": "13ff4843a6e90239b211da8cc2a355ebe92dddff8b54395510445c6de81d1623",
+            "originalPixelBox": [
+              1100,
+              870,
+              1890,
+              1240
+            ],
+            "coordinateSystem": "EXIF-oriented-original",
+            "resized": false,
+            "inspected": true
+          }
+        ],
+        "currentContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/rabat/sisalto.json",
+        "currentContentSHA256": "e8cfe0f7c8812af898b31384847454b7c834f303ca358cb8b73b2abff43ea233",
+        "currentTarget": {
+          "tiedosto": "Chellah interior hill.jpg",
+          "lyhyt": "Chellah yhdistää antiikin ja keskiajan rakennusjäännökset.",
+          "selite": "Chellahin raunioalueella muinaisen Salan jäännökset ja marinidien keskiaikainen aitaus kuuluvat saman paikan pitkään historiaan.",
+          "lahde": "Shazbot from San Francisco, California, Wikimedia Commons (CC BY 2.0)"
+        },
+        "evidence": {
+          "originalSHA256": "24091cc6837de1b2ad1733a2acb855c9ea631f1a0db3a1ec0b6c847c9cae0d13",
+          "originalViewedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/commons-originals/e04/rabat/153abb1ec0945811c3d7d4231f610030efafa81f2a563e72cc06e93caa3889c7.org&utm_campaign=index&utm_content=original",
+          "sourceEvidence": [
+            {
+              "kind": "current-original-queue",
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/capital-native-qa/next-original-queue.json",
+              "sha256": "23e75af9446d42ffc07c4f38e77d069c6bc1d15432af6bc9b27f32ae936132f6",
+              "sourceRoleID": "capital-cc-e04-rabat-n6-24091cc6837de1b2",
+              "originalSHA256": "24091cc6837de1b2ad1733a2acb855c9ea631f1a0db3a1ec0b6c847c9cae0d13"
+            },
+            {
+              "kind": "current-primary-QA",
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/rabat/qa.json",
+              "sha256": "d20f19d9af8eb32ebee6f8691c4099b2a9698842d8e77e5a93dc4f789ea00c8e",
+              "slot": "N6",
+              "verdict": "accepted",
+              "previewOnlyEvidenceBeforeThisReview": true,
+              "previousViewedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/rabat-B/preview-03.jpg"
+            },
+            {
+              "kind": "current-content-target",
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/rabat/sisalto.json",
+              "sha256": "e8cfe0f7c8812af898b31384847454b7c834f303ca358cb8b73b2abff43ea233",
+              "targetJsonPath": "$.nahtavyydet[\"Chellahin raunioalue\"].kuvat[0]"
+            },
+            {
+              "kind": "saved-original-Commons-page",
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/rabat-B/candidate-03.html",
+              "sha256": "51f3177023f16fbac12ca874b2fd783a2f9e00189dde7b22f94948e76a3b97ed",
+              "sourcePage": "https://commons.wikimedia.org/wiki/File:Chellah_interior_hill.jpg",
+              "author": "Shazbot from San Francisco, California",
+              "license": "CC BY 2.0",
+              "licenseUrl": "https://creativecommons.org/licenses/by/2.0/deed.en",
+              "date": [
+                "4 April 2005"
+              ],
+              "readMethod": "Tallennettu paikallinen HTML; ei uutta hakua tai päivitystä."
+            },
+            {
+              "kind": "historical-identity-fact-sheet",
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/rabat/faktapohja.md",
+              "sha256": "73b493506ab9c0985354f5742a0556f3e84c80a872ba920d0cae34a68234fc31"
+            },
+            {
+              "kind": "saved-subject-specific-rights-review",
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/rabat/kuvat.md",
+              "sha256": "aabe7c7fcc42cf6792e0c0a19af3b283de1d1ef4e147fc41bab079a4fa7769ec",
+              "scope": "Kohde6 — Chellahin historiallinen raunioympäristö; sama N6-tiedosto kuin dokumentoitu kohdearvio."
+            },
+            {
+              "kind": "Morocco-copyright-rule-snapshot",
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/rabat-B/fop-morocco.html",
+              "sha256": "632d315136b06f8bf0b32bb817860cba3e332b1290a51903f57abaafec7de289"
+            },
+            {
+              "kind": "Morocco-primary-law-English-snapshot",
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/rabat/cc-evidence/law-morocco.txt",
+              "sha256": "c72b96d2127c07df6d8c85f2a35d0d1fd2a33218f586fd9746957bb91e1455ee",
+              "sourcePage": "https://www.wipo.int/wipolex/en/legislation/details/2985"
+            },
+            {
+              "kind": "Morocco-primary-law-consolidated-snapshot",
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/rabat/cc-evidence/current-law-read.txt",
+              "sha256": "d88a09160d309507da97a1b9eaaba5fc0d6dd411bf1f03ae47db7409ec2b6ed6",
+              "sourcePage": "https://www.wipo.int/wipolex/en/legislation/details/19766"
+            },
+            {
+              "kind": "historical-Chellah-ruin-identity-snapshot",
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/rabat-A/Chellah.txt",
+              "sha256": "36c032ce4f925ba9eb30db7227110bbdcf517d8c49f31b8e774d0ca942b1ffbc",
+              "readScope": "Antiikin Sala Colonia ja marinidien keskiaikainen aitaus; myöhempi kaivaushistoria erotettu1873-kehyksestä."
+            }
+          ],
+          "sourceLicenseLayer": {
+            "author": "Shazbot from San Francisco, California",
+            "license": "CC BY 2.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by/2.0/deed.en",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Chellah_interior_hill.jpg",
+            "fileLicenseRead": true,
+            "commonsFooterLicenseExcluded": true
+          },
+          "rightsAssessment": {
+            "photoLayer": "Tallennetun tiedostosivun varsinainen valokuvalisenssi, erillään kuvatun aiheen oikeuksista.",
+            "depictedWorkLayer": "Tunnistetun vanhan Chellahin/Salan kivirakenteet ja marinidien historiallinen muuri; ei erillistä nykyteosta.",
+            "personLayer": "Ei ihmisiä tai kasvoja.",
+            "basis": "Kohdekohtainen antiikin/keskiajan jäännösten tunnistus ja vanhan julkisen muodon suoja-aikaperuste erillään2005valokuvan CC BY2.0-luvasta. Yksittäisen nykyisen luovan lisäosan vapautta tai kaikkien rakennusmateriaalien alkuperäisyyttä ei oleteta.",
+            "blanketFreedomOfPanoramaAssumed": false,
+            "photoCCUsedAsDepictedWorkPermission": false,
+            "originalRasterChanged": false
+          },
+          "technicalDetails": {
+            "width": 3008,
+            "height": 2000,
+            "rawWidth": 3008,
+            "rawHeight": 2000,
+            "bytes": 3072011,
+            "format": "JPEG",
+            "mode": "RGB",
+            "exifOrientation": 1,
+            "dateTimeOriginal": "2005:04:04 08:42:57",
+            "cameraMake": "NIKON CORPORATION",
+            "cameraModel": "NIKON D70",
+            "decodedSuccessfully": true,
+            "actualOriginalSHA1": "96bcb9fdd06b4f7b445de6605f34dda3c1d5f626",
+            "savedSourceHTMLContainsActualOriginalSHA1": true,
+            "queueOriginalSHA256MatchesActual": true
+          },
+          "inspectionMethod": {
+            "tool": "tools.view_image",
+            "detail": "original",
+            "oneImagePerToolOutput": true,
+            "fullOriginalPathOpened": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/commons-originals/e04/rabat/153abb1ec0945811c3d7d4231f610030efafa81f2a563e72cc06e93caa3889c7.org&utm_campaign=index&utm_content=original",
+            "fullFrameDisplayPixels": [
+              3008,
+              2000
+            ],
+            "nativeCropsUnscaled": true,
+            "originalEXIFOrientationAppliedToQACropCoordinates": true,
+            "previewNotUsedForNewAcceptance": true
+          },
+          "primaryQAUnchangedSHA256": "d20f19d9af8eb32ebee6f8691c4099b2a9698842d8e77e5a93dc4f789ea00c8e",
+          "skippedCompleteRows": [],
+          "originalPixelsViewed": true
+        },
+        "reviewedAt": "2026-10-12T22:24:57.355640+00:00",
+        "qaAssetSHA256CalculatedFromViewedBytes": true,
+        "supplementalQAPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/capital-native-qa/e04-rabat-N6.json"
+      },
+      "supplementalQAPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/capital-native-qa/e04-rabat-N6.json",
+      "supplementalQAFileSHA256": "de50c6450023b61275831d6d68b1dde540102d4c3847924ab8457c259558c02f",
+      "nativeQAHashResolved": "24091cc6837de1b2ad1733a2acb855c9ea631f1a0db3a1ec0b6c847c9cae0d13",
+      "deliveryR2Reads": [
+        {
+          "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/rabat/n6-24091cc6837de1b2ad17.jpg",
+          "http": 200,
+          "sha256": "24091cc6837de1b2ad1733a2acb855c9ea631f1a0db3a1ec0b6c847c9cae0d13",
+          "bytes": 3072011,
+          "mime": "image/jpeg",
+          "requestOrigin": "https://matkakirja.app",
+          "byteExact": true
+        },
+        {
+          "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/rabat/n6-24091cc6837de1b2ad17.jpg?gallery-verify=24091cc6837de1b2-1791844146190682000",
+          "http": 200,
+          "sha256": "24091cc6837de1b2ad1733a2acb855c9ea631f1a0db3a1ec0b6c847c9cae0d13",
+          "bytes": 3072011,
+          "mime": "image/jpeg",
+          "requestOrigin": "https://matkakirja.app",
+          "byteExact": true
+        }
+      ],
+      "previousHoldCause": "Primary QA inspected only a preview; full original is now independently inspected."
+    },
+    {
+      "era": "e06",
+      "city": "luanda",
+      "slot": "O1",
+      "type": "commons",
+      "assetID": "capital-cc-e06-luanda-o1-0fc0b3066150f68c",
+      "galleryImageID": "capital-cc-e06-luanda-o1-0fc0b3066150f68c",
+      "commonsFile": "NAIL Jetbridge.jpg",
+      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[0].kuva",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "matkailijalle",
+        "artikkeli",
+        "jaksot",
+        0,
+        "kuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e06/luanda/o1-0fc0b3066150f68cd547.jpg",
+        "suora": true,
+        "lahde": "Yezzispapi, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "NBJ-lentoaseman matkustajasilta on osa Luandan kansainvälisen lentoliikenteen ympäristöä.",
+        "lyhyt": "Matkustajasilta kuuluu NBJ-lentoaseman saapumisympäristöön.",
+        "tiedosto": "NAIL Jetbridge.jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Yezzispapi, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "NBJ-lentoaseman matkustajasilta on osa Luandan kansainvälisen lentoliikenteen ympäristöä.",
+        "lyhyt": "Matkustajasilta kuuluu NBJ-lentoaseman saapumisympäristöön.",
+        "tiedosto": "NAIL Jetbridge.jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e06/luanda/o1-0fc0b3066150f68cd547.jpg",
+        "suora": true,
+        "lahde": "Yezzispapi, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "NBJ-lentoaseman matkustajasilta on osa Luandan kansainvälisen lentoliikenteen ympäristöä.",
+        "lyhyt": "Matkustajasilta kuuluu NBJ-lentoaseman saapumisympäristöön.",
+        "tiedosto": "NAIL Jetbridge.jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "0fc0b3066150f68cd547a1ba9cd9760db88caee1ba1fb8c4fdfbb4a63645ea44",
+      "exportSHA256": "0fc0b3066150f68cd547a1ba9cd9760db88caee1ba1fb8c4fdfbb4a63645ea44",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e06/luanda/o1-0fc0b3066150f68cd547.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e06/luanda/o1-0fc0b3066150f68cd547.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/commons-originals/e06/luanda/91db4940ca2388f2cf08b160e0c06a1342dd136f4e301eeed367eb6d3c539c2b.org&utm_campaign=index&utm_content=original",
+      "dimensions": [
+        2089,
+        1179
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/luanda/sisalto.json",
+      "sourceContentSHA256": "9635dc22ba09cc53f45cc136595cd14f17f4fd7f9f81a30585dde8aabc233245",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "76955c7b2e795fde078a9694ddf4d74a0d1d1c1f3dca35cf62c579ed297e102f",
+        "semanticContextSHA256": "1dc9609cf2f58b7a5563abcf553a18f96aebc31129f594ff351c892e325ec3c9",
+        "subjectTitle": "Perille ja liikkeelle",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Yezzispapi",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:NAIL_Jetbridge.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/a/ad/NAIL_Jetbridge.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+        "rightsEvidence": {
+          "selection": null,
+          "QA": {
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:NAIL_Jetbridge.jpg",
+            "sourceLocal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/luanda-B/candidate-31.html",
+            "sourceSHA256": "1e91de60e6ed23bff22a02392573900cf3e8f7b6a0d2a420f748afb161c11be6",
+            "authorsFromSource": [
+              {
+                "label": "Author",
+                "text": "Yezzispapi"
+              }
+            ],
+            "license": "CC BY-SA 4.0",
+            "licenseLinks": [
+              "//creativecommons.org/licenses/by-sa/4.0/deed.en",
+              "https://creativecommons.org/share-your-work/licensing-considerations/compatible-licenses",
+              "https://creativecommons.org/publicdomain/zero/1.0/",
+              "https://creativecommons.org/licenses/by-sa/4.0/"
+            ],
+            "width": 2089,
+            "height": 1179,
+            "visuallyInspected": true,
+            "previewPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/luanda-B/preview-31.jpg",
+            "previewSHA256": "36b3422bbc75258f62988d4d70969f52bde5e1abbeecc1cd262d48a623cb23a1",
+            "capturedDate": "16 August 2023",
+            "currentContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/luanda/sisalto.json",
+            "currentContentSHA256": "898d0260525cbe666cd58427801a8d3ec6fe358f1fb7328e235ac06fcd51c544",
+            "sourceCheck": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/luanda/qa-evidence/existing-commons-source-checks.json",
+            "ccLayoutRule": "Only TRAVELER mandatory portrait; other CC orientation allowed",
+            "scope": "independent QA only; not owner acceptance/integration/publication"
+          },
+          "qaReason": "Katsottu tyhjä tavanomainen matkustajasilta ja sen tekniset liitokset. Lasin/metallin toiminnalliset vakiokomponentit, ei koko omaperäisen terminaalin arkkitehtuuriesittelyä tai sisätaidetta. Ei ihmiskasvoja, overlay-tekstiä tai mainospakkausta. NAIL/NBJ lähdesivulta, kuvausvuosi2023; ei väitettä tietystä nykyisestä porttipalvelusta."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "NBJ-lentoaseman matkustajasilta on osa Luandan kansainvälisen lentoliikenteen ympäristöä.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/luanda/qa.json",
+        "fileSHA256": "8c14481b8b23d041e6121f453b06db4d550b8a28d78986979bb56ff8c90714ba",
+        "item": {
+          "slot": "O1",
+          "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[0].kuva",
+          "commonsFile": "NAIL Jetbridge.jpg",
+          "verdict": "accepted",
+          "reason": "Katsottu tyhjä tavanomainen matkustajasilta ja sen tekniset liitokset. Lasin/metallin toiminnalliset vakiokomponentit, ei koko omaperäisen terminaalin arkkitehtuuriesittelyä tai sisätaidetta. Ei ihmiskasvoja, overlay-tekstiä tai mainospakkausta. NAIL/NBJ lähdesivulta, kuvausvuosi2023; ei väitettä tietystä nykyisestä porttipalvelusta.",
+          "evidence": {
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:NAIL_Jetbridge.jpg",
+            "sourceLocal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/luanda-B/candidate-31.html",
+            "sourceSHA256": "1e91de60e6ed23bff22a02392573900cf3e8f7b6a0d2a420f748afb161c11be6",
+            "authorsFromSource": [
+              {
+                "label": "Author",
+                "text": "Yezzispapi"
+              }
+            ],
+            "license": "CC BY-SA 4.0",
+            "licenseLinks": [
+              "//creativecommons.org/licenses/by-sa/4.0/deed.en",
+              "https://creativecommons.org/share-your-work/licensing-considerations/compatible-licenses",
+              "https://creativecommons.org/publicdomain/zero/1.0/",
+              "https://creativecommons.org/licenses/by-sa/4.0/"
+            ],
+            "width": 2089,
+            "height": 1179,
+            "visuallyInspected": true,
+            "previewPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/luanda-B/preview-31.jpg",
+            "previewSHA256": "36b3422bbc75258f62988d4d70969f52bde5e1abbeecc1cd262d48a623cb23a1",
+            "capturedDate": "16 August 2023",
+            "currentContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/luanda/sisalto.json",
+            "currentContentSHA256": "898d0260525cbe666cd58427801a8d3ec6fe358f1fb7328e235ac06fcd51c544",
+            "sourceCheck": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/luanda/qa-evidence/existing-commons-source-checks.json",
+            "ccLayoutRule": "Only TRAVELER mandatory portrait; other CC orientation allowed",
+            "scope": "independent QA only; not owner acceptance/integration/publication"
+          }
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/luanda/qa.json",
+            "sha256": "8c14481b8b23d041e6121f453b06db4d550b8a28d78986979bb56ff8c90714ba"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/luanda/illustration-qa-extra.json",
+            "sha256": "04afea2fb892b0ff9a48d7dbf4312b964db7950fb3e0d0d3c3e225103b1a7776"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e06",
+        "city": "luanda",
+        "slot": "O1",
+        "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[0].kuva",
+        "commonsFile": "NAIL Jetbridge.jpg",
+        "sha256": "0fc0b3066150f68cd547a1ba9cd9760db88caee1ba1fb8c4fdfbb4a63645ea44",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:NAIL_Jetbridge.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/a/ad/NAIL_Jetbridge.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+        "author": "Yezzispapi",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+        "width": 2089,
+        "height": 1179,
+        "originalSHA256": "0fc0b3066150f68cd547a1ba9cd9760db88caee1ba1fb8c4fdfbb4a63645ea44",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e06/luanda/o1-0fc0b3066150f68cd547.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e06/luanda/o1-0fc0b3066150f68cd547.jpg",
+        "bytes": 361930,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T18:25:16.688345+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "NAIL Jetbridge.jpg",
+        "lahde": "Yezzispapi, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "NBJ-lentoaseman matkustajasilta on osa Luandan kansainvälisen lentoliikenteen ympäristöä.",
+        "lyhyt": "Matkustajasilta kuuluu NBJ-lentoaseman saapumisympäristöön."
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Yezzispapi, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "NBJ-lentoaseman matkustajasilta on osa Luandan kansainvälisen lentoliikenteen ympäristöä.",
+        "lyhyt": "Matkustajasilta kuuluu NBJ-lentoaseman saapumisympäristöön.",
+        "tiedosto": "NAIL Jetbridge.jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "9635dc22ba09cc53f45cc136595cd14f17f4fd7f9f81a30585dde8aabc233245",
+      "targetAfterSHA256": "76955c7b2e795fde078a9694ddf4d74a0d1d1c1f3dca35cf62c579ed297e102f",
+      "contextAfterSHA256": "1dc9609cf2f58b7a5563abcf553a18f96aebc31129f594ff351c892e325ec3c9",
+      "sourceCommit": "a6d4240fcc770b675a988a424f0d5c402d210fa8",
+      "sourceBranch": "paakaupungit-e06-codex",
+      "supplementalNativeQA": {
+        "era": "e06",
+        "city": "luanda",
+        "slot": "O1",
+        "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[0].kuva",
+        "commonsFile": "NAIL Jetbridge.jpg",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:NAIL_Jetbridge.jpg",
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/commons-originals/e06/luanda/91db4940ca2388f2cf08b160e0c06a1342dd136f4e301eeed367eb6d3c539c2b.org&utm_campaign=index&utm_content=original",
+        "sha256": "0fc0b3066150f68cd547a1ba9cd9760db88caee1ba1fb8c4fdfbb4a63645ea44",
+        "sha256CalculatedFromOriginalBytes": true,
+        "originalPixelsViewed": true,
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "verdict": "accepted",
+        "reason": "Alkuperäinen2089×1179 matkustajasilta ja kolme skaalaamatonta natiivirajausta tarkastettu. Tyhjä, koherentti toiminnallinen lasi-/metallisilta, ei ihmisiä, sisätaidetta, vesileimaa tai itsenäistä omaperäistä rakennusteosta päämotiivina. Yezzispapi, tiedoston CC BY-SA4.0,16.8.2023 ja tallennetun tiedostosivun Angola International Airport -luokitus tukevat nykyistä NBJ-kohdetta. Pieni värillinen sivumerkki ei yksin hylkää CC-kuvaa.",
+        "evidence": {
+          "roleHandoffPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/role-asset-handoff.json",
+          "roleHandoffSHA256": "53466167bed4fab6dd14069583f2d65e19c1913a5db8692b9e26ca58c67129e4",
+          "roleAssetId": "capital-cc-e06-luanda-o1-0fc0b3066150f68c",
+          "expectedNativeSHA256": "0fc0b3066150f68cd547a1ba9cd9760db88caee1ba1fb8c4fdfbb4a63645ea44",
+          "actualNativeSHAMatchesHandoff": true,
+          "primaryQAPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/luanda/qa.json",
+          "primaryQASHA256": "beba8e9e064bea0e90959e28581fbf582c715787def5564df1336d940f65ec2e",
+          "sourceQASelectionBasis": "Current exact slot and commonsFile",
+          "previousPrimaryVerdict": "accepted",
+          "previousEvidenceWasPreviewOnly": true,
+          "originalSHA256": "0fc0b3066150f68cd547a1ba9cd9760db88caee1ba1fb8c4fdfbb4a63645ea44",
+          "originalViewedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/commons-originals/e06/luanda/91db4940ca2388f2cf08b160e0c06a1342dd136f4e301eeed367eb6d3c539c2b.org&utm_campaign=index&utm_content=original",
+          "sourceLocal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/luanda-B/candidate-31.html",
+          "sourceSHA256": "1e91de60e6ed23bff22a02392573900cf3e8f7b6a0d2a420f748afb161c11be6",
+          "sourcePageRead": true,
+          "sourceCheckPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/luanda/qa-evidence/existing-commons-source-checks.json",
+          "sourceCheckSHA256": "3439753c8fe6955de1ef4ce650c732888178397335af2381bf2f76d8aa5895e0",
+          "sourceCheckRowRead": {
+            "slot": "O1",
+            "index": 31,
+            "commonsFile": "NAIL Jetbridge.jpg",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:NAIL_Jetbridge.jpg",
+            "sourceLocal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/luanda-B/candidate-31.html",
+            "sourceSHA256": "1e91de60e6ed23bff22a02392573900cf3e8f7b6a0d2a420f748afb161c11be6",
+            "savedSourceHashMatches": true,
+            "authorsFromSource": [
+              {
+                "label": "Author",
+                "text": "Yezzispapi"
+              }
+            ],
+            "candidateAuthor": "Yezzispapi",
+            "authorMatches": true,
+            "licensesFromSource": [
+              "CC BY-SA 4.0"
+            ],
+            "candidateLicense": "CC BY-SA 4.0",
+            "dimensionsFromSource": [
+              2089,
+              1179
+            ],
+            "dimensionsMatch": true,
+            "licenseLinks": [
+              "//creativecommons.org/licenses/by-sa/4.0/deed.en",
+              "https://creativecommons.org/share-your-work/licensing-considerations/compatible-licenses",
+              "https://creativecommons.org/publicdomain/zero/1.0/",
+              "https://creativecommons.org/licenses/by-sa/4.0/"
+            ],
+            "preview": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/luanda-B/preview-31.jpg",
+            "previewSHA256": "36b3422bbc75258f62988d4d70969f52bde5e1abbeecc1cd262d48a623cb23a1",
+            "date": "16 August 2023",
+            "rightsClaimToVerify": "NAIL/Angola International Airport -luokitus paikantaa NBJ:lle. Tavallinen toiminnallinen matkustajasilta, ei koko uuden terminaalin erillinen arkkitehtuuriesittely. Ei tunnistettua omaperäistä teosta, nimeämätöntä monumenttia tai sisätaidetta päämotiivina. Valokuvan CC kattaa valokuvan; jos D toteaa tämän juuri itsenäiseksi suojatuksi rakennustaide-/designteokseksi, valinta poistetaan eikä luokittelua ratkaista vain FOP-merkinnällä. Kuvausvuosi2023 lähdemuistiin, ei matkailijalle lupaus käytetystä portista tai palvelusta."
+          },
+          "author": "Yezzispapi",
+          "license": "CC BY-SA 4.0",
+          "licenseURL": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+          "licenseScope": "Tiedoston oma luettu lisenssiosa; Commonsin alatunnisteen CC0/CC BY-SA ei ole valokuvan lisenssi.",
+          "rightsLayers": {
+            "photograph": "Yezzispapin oma työ ja tiedoston CC BY-SA4.0 International luettu.",
+            "depictedWorksAndInfrastructure": "Pääaiheena toiminnallinen matkustajasilta: lasi-/metallikehykset, paljeliitos, tukipylväs, kaapelit ja tekniset vakiokomponentit. Ei koko uuden terminaalin omaperäisen arkkitehtuurin esittelyä, nimettyä modernia taideteosta tai sisätaidetta. Arvio ei perustu kaiken modernin arkkitehtuurin blanket-FOP-lupaan.",
+            "peopleAndFaces": "Ei ihmisiä tai kasvoja koko ruudussa tai lasin läpi natiivikoossa.",
+            "textAndMarks": "Vasemmalla on pieni rajautunut punavihreä fyysinen sivumerkki/merkintä. Se ei ole kuvan pääaihe, eikä sen perusteella anneta brändiväitettä. Ei päälle lisättyä tekstiä tai vesileimaa."
+          },
+          "captionAssessment": "Nykyinen kuvateksti kertoo NBJ-lentoaseman matkustajasillasta yleisenä saapumisympäristön osana. NAIL-tiedosto ja Angola International Airport -luokitus on luettu; kuva ei lupaa tiettyä nykyistä porttia, lentoreittiä, käyttötilannetta tai palvelua.",
+          "currentContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/luanda/sisalto.json",
+          "currentContentSHA256": "9635dc22ba09cc53f45cc136595cd14f17f4fd7f9f81a30585dde8aabc233245",
+          "currentTarget": {
+            "tiedosto": "NAIL Jetbridge.jpg",
+            "lyhyt": "Matkustajasilta kuuluu NBJ-lentoaseman saapumisympäristöön.",
+            "selite": "NBJ-lentoaseman matkustajasilta on osa Luandan kansainvälisen lentoliikenteen ympäristöä.",
+            "lahde": "Yezzispapi, Wikimedia Commons (CC BY-SA 4.0)"
+          },
+          "capturedDate": "2023-08-16",
+          "sourceDescription": "single jetbridge",
+          "sourceOrigin": "Own work",
+          "sourceCategory": "Angola International Airport",
+          "sourceCategoryReadFromSavedHTML": true,
+          "originalPixelsViewed": true
+        },
+        "technical": {
+          "format": "JPEG",
+          "mode": "RGB",
+          "width": 2089,
+          "height": 1179,
+          "encodedWidth": 2089,
+          "encodedHeight": 1179,
+          "exifOrientation": 1,
+          "dimensionsBasis": "EXIF-oriented display",
+          "byteSize": 361930,
+          "originalUntouched": true
+        },
+        "nativeCrops": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/capital-native-qa/e06-luanda-O1-crops/left-junction-and-side-mark.png",
+            "box": [
+              180,
+              235,
+              760,
+              1179
+            ],
+            "coordinateSystem": "EXIF-oriented native pixels",
+            "sha256": "51720a3a8b65e63dce311b2ad8619485b50ddbe30c13d3c8a4bb0f35cf6fdeb3",
+            "resized": false,
+            "inspectedAtNativePixels": true
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/capital-native-qa/e06-luanda-O1-crops/glass-frames-and-interior.png",
+            "box": [
+              755,
+              375,
+              2089,
+              915
+            ],
+            "coordinateSystem": "EXIF-oriented native pixels",
+            "sha256": "f3c4cb6bb8c6f506edaa2ca89b70c23e3f5042bc183b35195cd25eaa2d295d3e",
+            "resized": false,
+            "inspectedAtNativePixels": true
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/capital-native-qa/e06-luanda-O1-crops/technical-supports-and-background.png",
+            "box": [
+              650,
+              765,
+              2089,
+              1179
+            ],
+            "coordinateSystem": "EXIF-oriented native pixels",
+            "sha256": "35868023517fa2d4897d381768913e041d3a9a15aa6ee295024dff2cc23ca6cc",
+            "resized": false,
+            "inspectedAtNativePixels": true
+          }
+        ],
+        "observations": [
+          "Lasin heijastukset, tekniset liitokset, tukirakenne ja varjot ovat koherentteja; ei näkyvää tekoälykuvan anatomia-/geometriavirhettä.",
+          "Kuva on hieman pehmeä ja pakattu, mutta tekninen aihe sekä tyhjä sisätila ovat arvioitavissa.",
+          "Opaskuvan CC-vaakaformaatti ei ole TRAVELER-pystykuvan sääntörikkomus."
+        ],
+        "reviewedAt": "2026-10-12T22:26:43.484595+00:00",
+        "gameIntegrated": false,
+        "qaAssetSHA256CalculatedFromViewedBytes": true,
+        "supplementalQAPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/capital-native-qa/e06-luanda-O1.json"
+      },
+      "supplementalQAPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/capital-native-qa/e06-luanda-O1.json",
+      "supplementalQAFileSHA256": "887c0ca2d1a04f20be5cecc0a8fe47dc1d1e5f929b5f9b71ea4dff58b4470591",
+      "nativeQAHashResolved": "0fc0b3066150f68cd547a1ba9cd9760db88caee1ba1fb8c4fdfbb4a63645ea44",
+      "deliveryR2Reads": [
+        {
+          "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e06/luanda/o1-0fc0b3066150f68cd547.jpg",
+          "http": 200,
+          "sha256": "0fc0b3066150f68cd547a1ba9cd9760db88caee1ba1fb8c4fdfbb4a63645ea44",
+          "bytes": 361930,
+          "mime": "image/jpeg",
+          "requestOrigin": "https://matkakirja.app",
+          "byteExact": true
+        },
+        {
+          "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e06/luanda/o1-0fc0b3066150f68cd547.jpg?gallery-verify=0fc0b3066150f68c-1791844146099592000",
+          "http": 200,
+          "sha256": "0fc0b3066150f68cd547a1ba9cd9760db88caee1ba1fb8c4fdfbb4a63645ea44",
+          "bytes": 361930,
+          "mime": "image/jpeg",
+          "requestOrigin": "https://matkakirja.app",
+          "byteExact": true
+        }
+      ],
+      "previousHoldCause": "Primary QA inspected only a preview; full original is now independently inspected."
+    },
+    {
+      "era": "e06",
+      "city": "luanda",
+      "slot": "O4",
+      "type": "commons",
+      "assetID": "capital-cc-e06-luanda-o4-1ce5c211f5cae94b",
+      "galleryImageID": "capital-cc-e06-luanda-o4-1ce5c211f5cae94b",
+      "commonsFile": "2021-10-10 08 12 00 A glass of orange juice at the Denny's in Kailua-Kona, Hawaii County, Hawaii.jpg",
+      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "matkailijalle",
+        "artikkeli",
+        "jaksot",
+        3,
+        "kuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e06/luanda/o4-1ce5c211f5cae94bc5aa.jpg",
+        "suora": true,
+        "lahde": "Famartin, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Appelsiinimehu on hedelmäjuoma.",
+        "lyhyt": "Appelsiinimehu on hedelmäjuoma.",
+        "tiedosto": "2021-10-10 08 12 00 A glass of orange juice at the Denny's in Kailua-Kona, Hawaii County, Hawaii.jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Famartin, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Appelsiinimehu on hedelmäjuoma.",
+        "lyhyt": "Appelsiinimehu on hedelmäjuoma.",
+        "tiedosto": "2021-10-10 08 12 00 A glass of orange juice at the Denny's in Kailua-Kona, Hawaii County, Hawaii.jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e06/luanda/o4-1ce5c211f5cae94bc5aa.jpg",
+        "suora": true,
+        "lahde": "Famartin, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Appelsiinimehu on hedelmäjuoma.",
+        "lyhyt": "Appelsiinimehu on hedelmäjuoma.",
+        "tiedosto": "2021-10-10 08 12 00 A glass of orange juice at the Denny's in Kailua-Kona, Hawaii County, Hawaii.jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "1ce5c211f5cae94bc5aaf61ebe43cc617016d33271267a130a526b765eda7910",
+      "exportSHA256": "1ce5c211f5cae94bc5aaf61ebe43cc617016d33271267a130a526b765eda7910",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e06/luanda/o4-1ce5c211f5cae94bc5aa.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e06/luanda/o4-1ce5c211f5cae94bc5aa.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/commons-originals/e06/luanda/cfb8d4cd1c50df123a256611dfd5288200386c44e42bbd8e77ccb8c9f2ffd3bb.org&utm_campaign=index&utm_content=original",
+      "dimensions": [
+        3024,
+        4032
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/luanda/sisalto.json",
+      "sourceContentSHA256": "9635dc22ba09cc53f45cc136595cd14f17f4fd7f9f81a30585dde8aabc233245",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "17a93baf43b93f1f7a4f15f9f48192a708aad1f1016da0d87d5bc076e64bd8c0",
+        "semanticContextSHA256": "c0b24e67bcea118d5cc750621b9369f93aa47d1d91e3b3202e013abf450c0f01",
+        "subjectTitle": "Mitä syödään",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Famartin",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:2021-10-10_08_12_00_A_glass_of_orange_juice_at_the_Denny%27s_in_Kailua-Kona,_Hawaii_County,_Hawaii.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/2/23/2021-10-10_08_12_00_A_glass_of_orange_juice_at_the_Denny%27s_in_Kailua-Kona%2C_Hawaii_County%2C_Hawaii.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+        "rightsEvidence": {
+          "selection": null,
+          "QA": {
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:2021-10-10_08_12_00_A_glass_of_orange_juice_at_the_Denny%27s_in_Kailua-Kona,_Hawaii_County,_Hawaii.jpg",
+            "sourceLocal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/luanda-B/candidate-59.html",
+            "sourceSHA256": "c7c09831169ce669bc332801fb2b0d01bdf270e83458acb467374d9c850b5a86",
+            "authorsFromSource": [
+              {
+                "label": "Author",
+                "text": "Famartin"
+              }
+            ],
+            "license": "CC BY-SA 4.0",
+            "licenseLinks": [
+              "//creativecommons.org/licenses/by-sa/4.0/deed.en",
+              "https://creativecommons.org/share-your-work/licensing-considerations/compatible-licenses",
+              "https://creativecommons.org/publicdomain/zero/1.0/",
+              "https://creativecommons.org/licenses/by-sa/4.0/"
+            ],
+            "width": 3024,
+            "height": 4032,
+            "visuallyInspected": true,
+            "previewPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/luanda-B/preview-59.jpg",
+            "previewSHA256": "31f18684a8453f7135ec21a9d776eb83ddcd3a45ee88345d1a7422b972213ee9",
+            "capturedDate": "10 October 2021, 08:12:00",
+            "currentContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/luanda/sisalto.json",
+            "currentContentSHA256": "898d0260525cbe666cd58427801a8d3ec6fe358f1fb7328e235ac06fcd51c544",
+            "sourceCheck": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/luanda/qa-evidence/existing-commons-source-checks.json",
+            "ccLayoutRule": "Only TRAVELER mandatory portrait; other CC orientation allowed",
+            "scope": "independent QA only; not owner acceptance/integration/publication"
+          },
+          "qaReason": "Katsottu appelsiinimehu tavallisessa käyttölasissa, ei logoa, pakkausta, ihmisiä tai suojattua teosta. CC BY-SA4.0/Famartin/3024×4032 varmennettu. Havaijin Denny’s-kuva on vain yleinen hedelmäjuoman esimerkki, ei Luandan ravintolan dokumenttikuva; nykyinen caption on paikkaneutraali, kuvauspäivä2021 metatiedossa."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Appelsiinimehu on hedelmäjuoma.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/luanda/qa.json",
+        "fileSHA256": "8c14481b8b23d041e6121f453b06db4d550b8a28d78986979bb56ff8c90714ba",
+        "item": {
+          "slot": "O4",
+          "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+          "commonsFile": "2021-10-10 08 12 00 A glass of orange juice at the Denny's in Kailua-Kona, Hawaii County, Hawaii.jpg",
+          "verdict": "accepted",
+          "reason": "Katsottu appelsiinimehu tavallisessa käyttölasissa, ei logoa, pakkausta, ihmisiä tai suojattua teosta. CC BY-SA4.0/Famartin/3024×4032 varmennettu. Havaijin Denny’s-kuva on vain yleinen hedelmäjuoman esimerkki, ei Luandan ravintolan dokumenttikuva; nykyinen caption on paikkaneutraali, kuvauspäivä2021 metatiedossa.",
+          "evidence": {
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:2021-10-10_08_12_00_A_glass_of_orange_juice_at_the_Denny%27s_in_Kailua-Kona,_Hawaii_County,_Hawaii.jpg",
+            "sourceLocal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/luanda-B/candidate-59.html",
+            "sourceSHA256": "c7c09831169ce669bc332801fb2b0d01bdf270e83458acb467374d9c850b5a86",
+            "authorsFromSource": [
+              {
+                "label": "Author",
+                "text": "Famartin"
+              }
+            ],
+            "license": "CC BY-SA 4.0",
+            "licenseLinks": [
+              "//creativecommons.org/licenses/by-sa/4.0/deed.en",
+              "https://creativecommons.org/share-your-work/licensing-considerations/compatible-licenses",
+              "https://creativecommons.org/publicdomain/zero/1.0/",
+              "https://creativecommons.org/licenses/by-sa/4.0/"
+            ],
+            "width": 3024,
+            "height": 4032,
+            "visuallyInspected": true,
+            "previewPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/luanda-B/preview-59.jpg",
+            "previewSHA256": "31f18684a8453f7135ec21a9d776eb83ddcd3a45ee88345d1a7422b972213ee9",
+            "capturedDate": "10 October 2021, 08:12:00",
+            "currentContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/luanda/sisalto.json",
+            "currentContentSHA256": "898d0260525cbe666cd58427801a8d3ec6fe358f1fb7328e235ac06fcd51c544",
+            "sourceCheck": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/luanda/qa-evidence/existing-commons-source-checks.json",
+            "ccLayoutRule": "Only TRAVELER mandatory portrait; other CC orientation allowed",
+            "scope": "independent QA only; not owner acceptance/integration/publication"
+          }
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/luanda/qa.json",
+            "sha256": "8c14481b8b23d041e6121f453b06db4d550b8a28d78986979bb56ff8c90714ba"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/luanda/illustration-qa-extra.json",
+            "sha256": "04afea2fb892b0ff9a48d7dbf4312b964db7950fb3e0d0d3c3e225103b1a7776"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e06",
+        "city": "luanda",
+        "slot": "O4",
+        "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+        "commonsFile": "2021-10-10 08 12 00 A glass of orange juice at the Denny's in Kailua-Kona, Hawaii County, Hawaii.jpg",
+        "sha256": "1ce5c211f5cae94bc5aaf61ebe43cc617016d33271267a130a526b765eda7910",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:2021-10-10_08_12_00_A_glass_of_orange_juice_at_the_Denny%27s_in_Kailua-Kona,_Hawaii_County,_Hawaii.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/2/23/2021-10-10_08_12_00_A_glass_of_orange_juice_at_the_Denny%27s_in_Kailua-Kona%2C_Hawaii_County%2C_Hawaii.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+        "author": "Famartin",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+        "width": 3024,
+        "height": 4032,
+        "originalSHA256": "1ce5c211f5cae94bc5aaf61ebe43cc617016d33271267a130a526b765eda7910",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e06/luanda/o4-1ce5c211f5cae94bc5aa.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e06/luanda/o4-1ce5c211f5cae94bc5aa.jpg",
+        "bytes": 1461959,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T18:25:17.897684+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "2021-10-10 08 12 00 A glass of orange juice at the Denny's in Kailua-Kona, Hawaii County, Hawaii.jpg",
+        "lahde": "Famartin, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Appelsiinimehu on hedelmäjuoma.",
+        "lyhyt": "Appelsiinimehu on hedelmäjuoma."
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Famartin, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Appelsiinimehu on hedelmäjuoma.",
+        "lyhyt": "Appelsiinimehu on hedelmäjuoma.",
+        "tiedosto": "2021-10-10 08 12 00 A glass of orange juice at the Denny's in Kailua-Kona, Hawaii County, Hawaii.jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "9635dc22ba09cc53f45cc136595cd14f17f4fd7f9f81a30585dde8aabc233245",
+      "targetAfterSHA256": "17a93baf43b93f1f7a4f15f9f48192a708aad1f1016da0d87d5bc076e64bd8c0",
+      "contextAfterSHA256": "c0b24e67bcea118d5cc750621b9369f93aa47d1d91e3b3202e013abf450c0f01",
+      "sourceCommit": "a6d4240fcc770b675a988a424f0d5c402d210fa8",
+      "sourceBranch": "paakaupungit-e06-codex",
+      "supplementalNativeQA": {
+        "era": "e06",
+        "city": "luanda",
+        "slot": "O4",
+        "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+        "commonsFile": "2021-10-10 08 12 00 A glass of orange juice at the Denny's in Kailua-Kona, Hawaii County, Hawaii.jpg",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:2021-10-10_08_12_00_A_glass_of_orange_juice_at_the_Denny%27s_in_Kailua-Kona,_Hawaii_County,_Hawaii.jpg",
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/commons-originals/e06/luanda/cfb8d4cd1c50df123a256611dfd5288200386c44e42bbd8e77ccb8c9f2ffd3bb.org&utm_campaign=index&utm_content=original",
+        "sha256": "1ce5c211f5cae94bc5aaf61ebe43cc617016d33271267a130a526b765eda7910",
+        "sha256CalculatedFromOriginalBytes": true,
+        "originalPixelsViewed": true,
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "verdict": "accepted",
+        "reason": "Alkuperäinen EXIF-suunnassa3024×4032 appelsiinimehukuva ja kaksi skaalaamatonta natiivirajausta tarkastettu. Tavallinen käyttölasillinen mehua, luonnolliset heijastukset/pisarat, ei ihmisiä, logoja, pakkausta, vesileimaa tai taideteosta. Famartinin CC BY-SA4.0 ja10.10.2021-päiväys luettu. Lähde nimeää Havaijin Denny'sin; nykyinen kuvateksti Appelsiinimehu on hedelmäjuoma on geneerinen eikä väitä Luandan paikkaa tai erityisreseptiä.",
+        "evidence": {
+          "roleHandoffPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/role-asset-handoff.json",
+          "roleHandoffSHA256": "53466167bed4fab6dd14069583f2d65e19c1913a5db8692b9e26ca58c67129e4",
+          "roleAssetId": "capital-cc-e06-luanda-o4-1ce5c211f5cae94b",
+          "expectedNativeSHA256": "1ce5c211f5cae94bc5aaf61ebe43cc617016d33271267a130a526b765eda7910",
+          "actualNativeSHAMatchesHandoff": true,
+          "primaryQAPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/luanda/qa.json",
+          "primaryQASHA256": "beba8e9e064bea0e90959e28581fbf582c715787def5564df1336d940f65ec2e",
+          "sourceQASelectionBasis": "Current exact slot and commonsFile",
+          "previousPrimaryVerdict": "accepted",
+          "previousEvidenceWasPreviewOnly": true,
+          "originalSHA256": "1ce5c211f5cae94bc5aaf61ebe43cc617016d33271267a130a526b765eda7910",
+          "originalViewedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/commons-originals/e06/luanda/cfb8d4cd1c50df123a256611dfd5288200386c44e42bbd8e77ccb8c9f2ffd3bb.org&utm_campaign=index&utm_content=original",
+          "sourceLocal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/luanda-B/candidate-59.html",
+          "sourceSHA256": "c7c09831169ce669bc332801fb2b0d01bdf270e83458acb467374d9c850b5a86",
+          "sourcePageRead": true,
+          "sourceCheckPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/luanda/qa-evidence/existing-commons-source-checks.json",
+          "sourceCheckSHA256": "3439753c8fe6955de1ef4ce650c732888178397335af2381bf2f76d8aa5895e0",
+          "sourceCheckRowRead": {
+            "slot": "O4",
+            "index": 59,
+            "commonsFile": "2021-10-10 08 12 00 A glass of orange juice at the Denny's in Kailua-Kona, Hawaii County, Hawaii.jpg",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:2021-10-10_08_12_00_A_glass_of_orange_juice_at_the_Denny%27s_in_Kailua-Kona,_Hawaii_County,_Hawaii.jpg",
+            "sourceLocal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/luanda-B/candidate-59.html",
+            "sourceSHA256": "c7c09831169ce669bc332801fb2b0d01bdf270e83458acb467374d9c850b5a86",
+            "savedSourceHashMatches": true,
+            "authorsFromSource": [
+              {
+                "label": "Author",
+                "text": "Famartin"
+              }
+            ],
+            "candidateAuthor": "Famartin",
+            "authorMatches": true,
+            "licensesFromSource": [
+              "CC BY-SA 4.0"
+            ],
+            "candidateLicense": "CC BY-SA 4.0",
+            "dimensionsFromSource": [
+              3024,
+              4032
+            ],
+            "dimensionsMatch": true,
+            "licenseLinks": [
+              "//creativecommons.org/licenses/by-sa/4.0/deed.en",
+              "https://creativecommons.org/share-your-work/licensing-considerations/compatible-licenses",
+              "https://creativecommons.org/publicdomain/zero/1.0/",
+              "https://creativecommons.org/licenses/by-sa/4.0/"
+            ],
+            "preview": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/luanda-B/preview-59.jpg",
+            "previewSHA256": "31f18684a8453f7135ec21a9d776eb83ddcd3a45ee88345d1a7422b972213ee9",
+            "date": "10 October 2021, 08:12:00",
+            "rightsClaimToVerify": "YLEISKUVA: tarkka tiedostosivu sanoo Denny’s, Kailua-Kona, Hawaii; kuvaa ei väitetä Luandassa tai Angolassa otetuksi. A:n mehutarjonnan havainnollistus, ei paikallisen ravintolan todiste. C saa nimetä näkyvän appelsiinimehun mutta ei päätellä tuorepuristamista tai valmistusmenetelmää. Tavallinen juoma, käyttölasin perusmuoto ja pöytä, ei erillistä suojattua teosta tai folkloren tallennetta. Kuvausvuosi2021."
+          },
+          "author": "Famartin",
+          "license": "CC BY-SA 4.0",
+          "licenseURL": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+          "licenseScope": "Tiedoston oma luettu lisenssiosa; Commonsin alatunnisteen CC0/CC BY-SA ei ole valokuvan lisenssi.",
+          "rightsLayers": {
+            "photograph": "Famartinin oma työ; tiedoston CC BY-SA4.0 International luettu.",
+            "depictedWorksAndObjects": "Pääaiheena tavallinen käyttölasillinen appelsiinimehua ja puinen pöytäpinta. Ei nimettyä muotoilu-/taideteosta päämotiivina, pakkauksia tai ravintolasisustuksen esittelyä.",
+            "peopleAndFaces": "Ei ihmisiä/kasvoja eikä lasin heijastuksista paljastuvia tunnistettavia kasvoja.",
+            "textAndMarks": "Ei näkyvää Denny's-logoa, pakkaustekstiä, brändiä tai päälle lisättyä vesileimaa. Denny's on lähdesivun paikkatieto, ei näkyvä kuvan päämotiivi."
+          },
+          "captionAssessment": "Sekä lyhyt että selite ovat täsmälleen Appelsiinimehu on hedelmäjuoma. Myös nykyinen Mitä syödään -jakso luettu: se käsittelee yleisiä Luandan ruokapaikkoja/hedelmämehuja, mutta ei nimeä kuvan ravintolaa Luandaksi, lupaa paikallista annosta eikä väitä erityisreseptiä. Tämä kuva hyväksytään vain yleisen appelsiinimehun kuvituksena.",
+          "currentContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/luanda/sisalto.json",
+          "currentContentSHA256": "9635dc22ba09cc53f45cc136595cd14f17f4fd7f9f81a30585dde8aabc233245",
+          "currentTarget": {
+            "tiedosto": "2021-10-10 08 12 00 A glass of orange juice at the Denny's in Kailua-Kona, Hawaii County, Hawaii.jpg",
+            "lyhyt": "Appelsiinimehu on hedelmäjuoma.",
+            "selite": "Appelsiinimehu on hedelmäjuoma.",
+            "lahde": "Famartin, Wikimedia Commons (CC BY-SA 4.0)"
+          },
+          "capturedDate": "2021-10-10T08:12:00",
+          "sourceDescription": "A glass of orange juice at the Denny's in Kailua-Kona,Hawaii County,Hawaii",
+          "sourceOrigin": "Own work",
+          "sourcePlaceDeclared": "Denny's,Kailua-Kona,Hawaii County,Hawaii",
+          "sourceCameraLocationDecimal": [
+            19.64585,
+            -155.989119
+          ],
+          "depictsLuanda": false,
+          "isGeneralIllustration": true,
+          "currentCaptionExact": "Appelsiinimehu on hedelmäjuoma.",
+          "currentO4SectionReviewed": true,
+          "currentSectionTitle": "Mitä syödään",
+          "specialRecipeClaim": false,
+          "currentCaptionFalselyClaimsLuanda": false,
+          "originalPixelsViewed": true
+        },
+        "technical": {
+          "format": "JPEG",
+          "mode": "RGB",
+          "width": 3024,
+          "height": 4032,
+          "encodedWidth": 4032,
+          "encodedHeight": 3024,
+          "exifOrientation": 6,
+          "dimensionsBasis": "EXIF-oriented display",
+          "byteSize": 1461959,
+          "originalUntouched": true
+        },
+        "nativeCrops": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/capital-native-qa/e06-luanda-O4-crops/rim-juice-surface-and-reflections.png",
+            "box": [
+              440,
+              150,
+              2620,
+              1510
+            ],
+            "coordinateSystem": "EXIF-oriented native pixels",
+            "sha256": "70665a722fc6545a13968ea4a43b2d76933f282441165665c44a950705f65d03",
+            "resized": false,
+            "inspectedAtNativePixels": true
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/capital-native-qa/e06-luanda-O4-crops/glass-side-base-and-table.png",
+            "box": [
+              640,
+              2420,
+              2670,
+              3920
+            ],
+            "coordinateSystem": "EXIF-oriented native pixels",
+            "sha256": "68a6bdda807cd9bb3750e6885cd017574bd58ba8c33df69d823a4d5ae6b820eb",
+            "resized": false,
+            "inspectedAtNativePixels": true
+          }
+        ],
+        "observations": [
+          "Rengasmainen lasin reuna, nesteen pinta, pisarat, lasin pohja ja puunsyyt ovat luonnollisia ja perspektiiviltään koherentteja.",
+          "Kuvassa on tavallista lähikuvan kohinaa/pehmeyttä. Mehulasin aihe ja merkittävät brändi-/kasvokerrokset ovat riittävästi arvioitavissa.",
+          "Raw4032×3024,EXIF Orientation6; näyttösuunta3024×4032. Rajaukset tehtiin EXIF-suunnan natiivipikseleistä, alkuperäistä muuttamatta."
+        ],
+        "reviewedAt": "2026-10-12T22:29:24.738145+00:00",
+        "gameIntegrated": false,
+        "qaAssetSHA256CalculatedFromViewedBytes": true,
+        "supplementalQAPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/capital-native-qa/e06-luanda-O4.json"
+      },
+      "supplementalQAPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/capital-native-qa/e06-luanda-O4.json",
+      "supplementalQAFileSHA256": "7287d514e72dba171152a4cf6d54a50a69f7024c6664013813d6d849b3e7af45",
+      "nativeQAHashResolved": "1ce5c211f5cae94bc5aaf61ebe43cc617016d33271267a130a526b765eda7910",
+      "deliveryR2Reads": [
+        {
+          "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e06/luanda/o4-1ce5c211f5cae94bc5aa.jpg",
+          "http": 200,
+          "sha256": "1ce5c211f5cae94bc5aaf61ebe43cc617016d33271267a130a526b765eda7910",
+          "bytes": 1461959,
+          "mime": "image/jpeg",
+          "requestOrigin": "https://matkakirja.app",
+          "byteExact": true
+        },
+        {
+          "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e06/luanda/o4-1ce5c211f5cae94bc5aa.jpg?gallery-verify=1ce5c211f5cae94b-1791844313384812000",
+          "http": 200,
+          "sha256": "1ce5c211f5cae94bc5aaf61ebe43cc617016d33271267a130a526b765eda7910",
+          "bytes": 1461959,
+          "mime": "image/jpeg",
+          "requestOrigin": "https://matkakirja.app",
+          "byteExact": true
+        }
+      ],
+      "previousHoldCause": "Primary QA inspected only a preview; full original is now independently inspected."
+    },
+    {
+      "era": "e04",
+      "city": "tunis",
+      "slot": "O4",
+      "type": "commons",
+      "assetID": "capital-cc-e04-tunis-o4-84ad1a15512b344c",
+      "galleryImageID": "capital-cc-e04-tunis-o4-84ad1a15512b344c",
+      "commonsFile": "Hiboun, Mahdia Governorate, Tunisia Feb 2024 - Croissant and Coffee.jpg",
+      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "matkailijalle",
+        "artikkeli",
+        "jaksot",
+        3,
+        "kuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/tunis/o4-84ad1a15512b344cd428.jpg",
+        "suora": true,
+        "lahde": "Sharon Hahn Darlin, Wikimedia Commons (CC BY 2.0)",
+        "selite": "Hibounissa Mahdian seudulla vuonna 2024 kuvattu kahvi ja croissant havainnollistavat kahvitaukoa yleisesti, eivät Tunisissa kuvattua annosta.",
+        "lyhyt": "Kahvi ja croissant Hibounissa Mahdian seudulla vuonna 2024.",
+        "tiedosto": "Hiboun, Mahdia Governorate, Tunisia Feb 2024 - Croissant and Coffee.jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Sharon Hahn Darlin, Wikimedia Commons (CC BY 2.0)",
+        "selite": "Hibounissa Mahdian seudulla vuonna 2024 kuvattu kahvi ja croissant havainnollistavat kahvitaukoa yleisesti, eivät Tunisissa kuvattua annosta.",
+        "lyhyt": "Kahvi ja croissant Hibounissa Mahdian seudulla vuonna 2024.",
+        "tiedosto": "Hiboun, Mahdia Governorate, Tunisia Feb 2024 - Croissant and Coffee.jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/tunis/o4-84ad1a15512b344cd428.jpg",
+        "suora": true,
+        "lahde": "Sharon Hahn Darlin, Wikimedia Commons (CC BY 2.0)",
+        "selite": "Hibounissa Mahdian seudulla vuonna 2024 kuvattu kahvi ja croissant havainnollistavat kahvitaukoa yleisesti, eivät Tunisissa kuvattua annosta.",
+        "lyhyt": "Kahvi ja croissant Hibounissa Mahdian seudulla vuonna 2024.",
+        "tiedosto": "Hiboun, Mahdia Governorate, Tunisia Feb 2024 - Croissant and Coffee.jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "84ad1a15512b344cd4282c048dbc1de94bd1c12ee444d97e047628e8a5674291",
+      "exportSHA256": "84ad1a15512b344cd4282c048dbc1de94bd1c12ee444d97e047628e8a5674291",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/tunis/o4-84ad1a15512b344cd428.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/tunis/o4-84ad1a15512b344cd428.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/commons-originals/e04/tunis/9492d0159af0b41d5cccd1cf419d59085e0edb8a62d012e639118c900466dc4a.org&utm_campaign=index&utm_content=original",
+      "dimensions": [
+        2938,
+        3918
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/tunis/sisalto.json",
+      "sourceContentSHA256": "d3a9f1f168a2da7dafea0141de96cd5aebb379ed6f2a37be40101ca1767d7f4e",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "166360aba610429ca264dc618eae31024f0a6570d29af7bdff0f776da6a2d445",
+        "semanticContextSHA256": "2015b3665501ca495d3b83ee5a99c84cc97650b488864244400940fb90196e69",
+        "subjectTitle": "Kahvitauko medinassa",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Sharon Hahn Darlin",
+        "license": "CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0/deed.en",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Hiboun,_Mahdia_Governorate,_Tunisia_Feb_2024_-_Croissant_and_Coffee.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e8/Hiboun%2C_Mahdia_Governorate%2C_Tunisia_Feb_2024_-_Croissant_and_Coffee.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+        "rightsEvidence": {
+          "selection": null,
+          "QA": {
+            "visualViewed": true,
+            "viewedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/tunis-B/preview-61.jpg",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Hiboun,_Mahdia_Governorate,_Tunisia_Feb_2024_-_Croissant_and_Coffee.jpg",
+            "sourceHTML": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/tunis-B/candidate-61.html",
+            "sourceHTMLSHA256": "8c8744ec0197f84216509c2b270a85020c1a6690bd4eeed5589f21cbedf6ac5f",
+            "author": "Sharon Hahn Darlin",
+            "license": "CC BY 2.0",
+            "licenseUrls": [
+              "https://creativecommons.org/licenses/by-sa/4.0/",
+              "https://creativecommons.org/licenses/by/2.0/deed.en",
+              "https://creativecommons.org/publicdomain/zero/1.0/"
+            ],
+            "width": 2938,
+            "height": 3918,
+            "ratio": 0.7498723838693211,
+            "date": [
+              "9 February 2024, 07:30:12"
+            ],
+            "rightsSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/tunis/faktapohja.md",
+            "rightsLayerReview": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/tunis/kuvat.md — erilliset vanhat rakennusosat, maasivun PD/FOP-polku ja WIPO/DCAF alkuperäislain tallenteet; ei blanket-lupaa nykytaiteelle",
+            "reviewedAt": "2026-10-12T17:59:55.961756+00:00"
+          },
+          "qaReason": "Aito vuoden 2024 Hibounissa/Mahdian seudulla kuvattu kahvi ja croissant; selite kertoo yleisestä kahvitauon havainnollistuksesta eikä väitä Tunisissa kuvatuksi. Ei kasvoja, mainos/pakkauskuvaa tai lisättyä tekstiä. Kupin Coffee-merkintä on tavallinen esineen luonnollinen merkintä; taustan näyttö on epäterävä sivuelementti, ei itsenäisen teoksen jäljennöksen kuva-aihe."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Hibounissa Mahdian seudulla vuonna 2024 kuvattu kahvi ja croissant havainnollistavat kahvitaukoa yleisesti, eivät Tunisissa kuvattua annosta.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/tunis/qa.json",
+        "fileSHA256": "98d1fc32f764942c9b9562b0279212c0a7f3d3f1480672cb4f63eca4fe330a85",
+        "item": {
+          "slot": "O4",
+          "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+          "commonsFile": "Hiboun, Mahdia Governorate, Tunisia Feb 2024 - Croissant and Coffee.jpg",
+          "verdict": "accepted",
+          "reason": "Aito vuoden 2024 Hibounissa/Mahdian seudulla kuvattu kahvi ja croissant; selite kertoo yleisestä kahvitauon havainnollistuksesta eikä väitä Tunisissa kuvatuksi. Ei kasvoja, mainos/pakkauskuvaa tai lisättyä tekstiä. Kupin Coffee-merkintä on tavallinen esineen luonnollinen merkintä; taustan näyttö on epäterävä sivuelementti, ei itsenäisen teoksen jäljennöksen kuva-aihe.",
+          "evidence": {
+            "visualViewed": true,
+            "viewedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/tunis-B/preview-61.jpg",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Hiboun,_Mahdia_Governorate,_Tunisia_Feb_2024_-_Croissant_and_Coffee.jpg",
+            "sourceHTML": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/tunis-B/candidate-61.html",
+            "sourceHTMLSHA256": "8c8744ec0197f84216509c2b270a85020c1a6690bd4eeed5589f21cbedf6ac5f",
+            "author": "Sharon Hahn Darlin",
+            "license": "CC BY 2.0",
+            "licenseUrls": [
+              "https://creativecommons.org/licenses/by-sa/4.0/",
+              "https://creativecommons.org/licenses/by/2.0/deed.en",
+              "https://creativecommons.org/publicdomain/zero/1.0/"
+            ],
+            "width": 2938,
+            "height": 3918,
+            "ratio": 0.7498723838693211,
+            "date": [
+              "9 February 2024, 07:30:12"
+            ],
+            "rightsSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/tunis/faktapohja.md",
+            "rightsLayerReview": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/tunis/kuvat.md — erilliset vanhat rakennusosat, maasivun PD/FOP-polku ja WIPO/DCAF alkuperäislain tallenteet; ei blanket-lupaa nykytaiteelle",
+            "reviewedAt": "2026-10-12T17:59:55.961756+00:00"
+          }
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/tunis/qa.json",
+            "sha256": "98d1fc32f764942c9b9562b0279212c0a7f3d3f1480672cb4f63eca4fe330a85"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e04",
+        "city": "tunis",
+        "slot": "O4",
+        "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+        "commonsFile": "Hiboun, Mahdia Governorate, Tunisia Feb 2024 - Croissant and Coffee.jpg",
+        "sha256": "84ad1a15512b344cd4282c048dbc1de94bd1c12ee444d97e047628e8a5674291",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Hiboun,_Mahdia_Governorate,_Tunisia_Feb_2024_-_Croissant_and_Coffee.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e8/Hiboun%2C_Mahdia_Governorate%2C_Tunisia_Feb_2024_-_Croissant_and_Coffee.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+        "author": "Sharon Hahn Darlin",
+        "license": "CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0/deed.en",
+        "width": 2938,
+        "height": 3918,
+        "originalSHA256": "84ad1a15512b344cd4282c048dbc1de94bd1c12ee444d97e047628e8a5674291",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/tunis/o4-84ad1a15512b344cd428.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/tunis/o4-84ad1a15512b344cd428.jpg",
+        "bytes": 1415243,
+        "http": 200,
+        "mime": "image/jpeg",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T18:12:11.847746+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "Hiboun, Mahdia Governorate, Tunisia Feb 2024 - Croissant and Coffee.jpg",
+        "lahde": "Sharon Hahn Darlin, Wikimedia Commons (CC BY 2.0)",
+        "selite": "Hibounissa Mahdian seudulla vuonna 2024 kuvattu kahvi ja croissant havainnollistavat kahvitaukoa yleisesti, eivät Tunisissa kuvattua annosta.",
+        "lyhyt": "Kahvi ja croissant Hibounissa Mahdian seudulla vuonna 2024."
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Sharon Hahn Darlin, Wikimedia Commons (CC BY 2.0)",
+        "selite": "Hibounissa Mahdian seudulla vuonna 2024 kuvattu kahvi ja croissant havainnollistavat kahvitaukoa yleisesti, eivät Tunisissa kuvattua annosta.",
+        "lyhyt": "Kahvi ja croissant Hibounissa Mahdian seudulla vuonna 2024.",
+        "tiedosto": "Hiboun, Mahdia Governorate, Tunisia Feb 2024 - Croissant and Coffee.jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "d3a9f1f168a2da7dafea0141de96cd5aebb379ed6f2a37be40101ca1767d7f4e",
+      "targetAfterSHA256": "166360aba610429ca264dc618eae31024f0a6570d29af7bdff0f776da6a2d445",
+      "contextAfterSHA256": "2015b3665501ca495d3b83ee5a99c84cc97650b488864244400940fb90196e69",
+      "sourceCommit": "02a5f093c0a7497eb32614ad4be44f92a58b4f93",
+      "sourceBranch": "paakaupungit-e04-codex",
+      "supplementalNativeQA": {
+        "era": "e04",
+        "city": "tunis",
+        "slot": "O4",
+        "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+        "commonsFile": "Hiboun, Mahdia Governorate, Tunisia Feb 2024 - Croissant and Coffee.jpg",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Hiboun,_Mahdia_Governorate,_Tunisia_Feb_2024_-_Croissant_and_Coffee.jpg",
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/commons-originals/e04/tunis/9492d0159af0b41d5cccd1cf419d59085e0edb8a62d012e639118c900466dc4a.org&utm_campaign=index&utm_content=original",
+        "sha256": "84ad1a15512b344cd4282c048dbc1de94bd1c12ee444d97e047628e8a5674291",
+        "actualSHA256": "84ad1a15512b344cd4282c048dbc1de94bd1c12ee444d97e047628e8a5674291",
+        "actualOriginalSHA256": "84ad1a15512b344cd4282c048dbc1de94bd1c12ee444d97e047628e8a5674291",
+        "sha256CalculatedFromOriginalBytes": true,
+        "originalPixelsViewed": true,
+        "originalViewedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/commons-originals/e04/tunis/9492d0159af0b41d5cccd1cf419d59085e0edb8a62d012e639118c900466dc4a.org&utm_campaign=index&utm_content=original",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "verdict": "accepted",
+        "approvedForDelivery": true,
+        "reason": "Alkuperäinen croissantin ja kahvikupin valokuva sekä kolme natiivirajausta tarkastettu. SHA täsmää jonoon. Hiboun/Mahdia, 9.2.2024, Sharon Hahn Darlin ja CC BY 2.0 vastaavat tallennettua File-sivua. Nykyinen caption nimeää oikean ruoan ja kuvauspaikan sekä yleisen kahvitauon kuvituksen; ei Tunisissa kuvatun annoksen väitettä.",
+        "observations": [
+          "Koko 2938×3918 NAS-JPEG katsottu tools.view_image detail original; työkalun esitys pieneni 2752×3669 kokoon. Croissantin kuori, kupin pinta/teksti ja taustan näyttö katsottu kolmesta natiivirajauksesta ilman koon muuttamista tai terävöitystä.",
+          "Croissantin kerroksellinen, paistunut pinta ja lasilautanen ovat luonnollisia. Kahvikupin sisältö ei tästä matalasta katselukulmasta yksilöidy; kuvausnimen ja nykyisen captionin kahvitauko sopii kuppiin ja leivonnaiseen. Kuvasta ei tehdä väitettä toisesta ruoasta.",
+          "Kuppiin painettu Coffee-teksti on alkuperäisen käyttöesineen sana, ei päälle lisätty vesileima. Astian kuvio on tavanomainen toistuva geometrinen koriste. Tämän ruokavalokuvan pääaihe ei ole kupin kuvion erillinen toisinto, mainospakkaus tai nimetty koristetaideteos.",
+          "Taustan suuri näyttö on kuvausetäisyyden/terävyysalueen vuoksi vahvasti sumea myös natiivissa. Sen yksilöllistä kuva-/tekstisisältöä tai kasvoja ei lueta; näkyvää terävää teosreproduktiota ei ole. Ei henkilöitä, luettavia kasvoja tai havaittua lisättyä leimaa.",
+          "Tallennetun File-sivun Date, Author ja Licensing luettu: 9.2.2024, Sharon Hahn Darlin, CC BY 2.0. Flickr-lähde sekä FlickreviewR2:n 18.2.2024 CC-BY2.0-varmennus näkyvät tallenteessa. Lataajaa Infrogmation ei sekoiteta tekijään, eikä sivun alaviitteen lisenssiä käytetä valokuvan lisenssinä.",
+          "Nykyinen oppaan jakso Kahvitauko medinassa käsittelee kahvia ja ranskalaistyylisiä leivonnaisia. Kuvaobjekti ilmoittaa nimenomaisesti Hiboun/Mahdia-kuvauspaikan ja yleishavainnollistuksen; se ei väitä paikallista Tunis-annosta. Vanhan kuvat.md:n ja D-tarkistuksen O4-käyttörajaukset luettu.",
+          "Kuvan lämmin värisävy ja kapea terävyysalue sopivat kahvitauon dokumentaariseen kuvaan. Croissant ja kuppi erottuvat; ei käyttöä estävää rasterivauriota. Hyväksyntä koskee nykyistä rajattua yleiskuvituksen captionia ja tätä SHA-versiota."
+        ],
+        "nativeCrops": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/capital-native-qa/crops/e04-tunis/O4-croissant-texture.png",
+            "sha256": "c87498b746c2741d2bfe0b39596ec2fa0d2e63b1e07f587f31cfc8bd27806870",
+            "originalPixelBox": [
+              450,
+              2350,
+              1650,
+              3300
+            ],
+            "coordinateSpace": "EXIF-oriented original pixels",
+            "resized": false,
+            "sharpened": false,
+            "pixelContentMatchesOriginalRegion": true,
+            "inspected": true
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/capital-native-qa/crops/e04-tunis/O4-cup-pattern-text.png",
+            "sha256": "e99e98a27e1c86e714d1c54fc9c1ed4b6529144e1e7d2136023a607b77907bfb",
+            "originalPixelBox": [
+              1740,
+              2040,
+              2450,
+              2730
+            ],
+            "coordinateSpace": "EXIF-oriented original pixels",
+            "resized": false,
+            "sharpened": false,
+            "pixelContentMatchesOriginalRegion": true,
+            "inspected": true
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/capital-native-qa/crops/e04-tunis/O4-background-screen.png",
+            "sha256": "717de0ef92d0315b8ff66bb02b627d1691acc81cd0c28ee4905287d200b8444f",
+            "originalPixelBox": [
+              1400,
+              200,
+              2550,
+              1580
+            ],
+            "coordinateSpace": "EXIF-oriented original pixels",
+            "resized": false,
+            "sharpened": false,
+            "pixelContentMatchesOriginalRegion": true,
+            "inspected": true
+          }
+        ],
+        "evidence": {
+          "sourceEvidenceRecords": [
+            {
+              "kind": "current-original-queue",
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/capital-native-qa/next-original-queue.json",
+              "sha256": "0d3ff87a18e31fdec6f36dae848b50be05ba0f462ba66febf0ec289acf061286",
+              "readLocally": true,
+              "expectedOriginalSHA256": "84ad1a15512b344cd4282c048dbc1de94bd1c12ee444d97e047628e8a5674291"
+            },
+            {
+              "kind": "current-primary-QA",
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/tunis/qa.json",
+              "sha256": "98d1fc32f764942c9b9562b0279212c0a7f3d3f1480672cb4f63eca4fe330a85",
+              "readLocally": true,
+              "verdict": "accepted",
+              "previousVisualPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/tunis-B/preview-61.jpg",
+              "previousOriginalInspectedPath": null,
+              "exactOriginalShaViewingBindingAbsentBeforeThisReview": true
+            },
+            {
+              "kind": "saved-original-Commons-File-page",
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/tunis-B/candidate-61.html",
+              "sha256": "8c8744ec0197f84216509c2b270a85020c1a6690bd4eeed5589f21cbedf6ac5f",
+              "readLocally": true,
+              "sourcePage": "https://commons.wikimedia.org/wiki/File:Hiboun,_Mahdia_Governorate,_Tunisia_Feb_2024_-_Croissant_and_Coffee.jpg",
+              "summaryAndLicense": "Summary [ edit ] Description Hiboun, Mahdia Governorate, Tunisia Feb 2024 - Croissant and Coffee.jpg English: Hiboun, Mahdia Governorate, Tunisia Feb 2024 Date 9 February 2024, 07:30:12 Source https://www.flickr.com/photos/sharonhahndarlin/53534488071/ Author Sharon Hahn Darlin Licensing [ edit ] This file is licensed under the Creative Commons Attribution 2.0 Generic license. You are free: to share – to copy, distribute and transmit the work to remix – to adapt the work Under the following conditions: attribution – You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use. https://creativecommons.org/licenses/by/2.0 CC BY 2.0 Creative Commons Attribution 2.0 true true This image was originally posted to Flickr by Sharon Hahn Darlin at https://flickr.com/photos/41980486@N07/53534488071 . It was reviewed on 18 February 2024 by FlickreviewR 2 and was confirmed to be licensed under the terms of the cc-by-2.0. 18 February 2024 File history Click on a date/time to view the file as it appeared at that time. Date/Time Thumbnail Dimensions User Comment current 17:12, 17 February 2024 2,938 × 3,918 (1.35 MB) Infrogmation ( talk | contribs ) Uploaded a work by Sharon Hahn Darlin from https://www.flickr.com/photos/sharonhahndarlin/53534488071/ with UploadWizard You cannot overwrite this file. File usage on Commons There are no pages tha",
+              "author": "Sharon Hahn Darlin",
+              "license": "CC BY 2.0",
+              "licenseUrl": "https://creativecommons.org/licenses/by/2.0/deed.en",
+              "readMethod": "Summary/Date/Author/Licensing read from saved HTML; no live refetch or search"
+            },
+            {
+              "kind": "current-content-target",
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/tunis/sisalto.json",
+              "sha256": "d3a9f1f168a2da7dafea0141de96cd5aebb379ed6f2a37be40101ca1767d7f4e",
+              "readLocally": true,
+              "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+              "currentTarget": {
+                "tiedosto": "Hiboun, Mahdia Governorate, Tunisia Feb 2024 - Croissant and Coffee.jpg",
+                "lyhyt": "Kahvi ja croissant Hibounissa Mahdian seudulla vuonna 2024.",
+                "selite": "Hibounissa Mahdian seudulla vuonna 2024 kuvattu kahvi ja croissant havainnollistavat kahvitaukoa yleisesti, eivät Tunisissa kuvattua annosta.",
+                "lahde": "Sharon Hahn Darlin, Wikimedia Commons (CC BY 2.0)"
+              }
+            },
+            {
+              "kind": "saved-per-image-rights-background",
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/tunis/kuvat.md",
+              "sha256": "f73a0c4f9e054eb54c2fb0ff50b7de5fad73819594e929e1cac6b257ef1b9bbb",
+              "readLocally": true
+            },
+            {
+              "kind": "saved-independent-D-review",
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/tunis/tarkistus.md",
+              "sha256": "e36a295980dbcddbf3e2e4c360a71df6a4417fe05357dd87f7a3066b83d3ed16",
+              "readLocally": true
+            }
+          ],
+          "originalPixelsViewed": true
+        },
+        "rightsAssessment": {
+          "photoLayer": "Saved original File-page Author and Licensing checked",
+          "subjectLayer": "Arkinen croissant, kahvikuppi, lasilautanen ja pöytä. Kupin Coffee-teksti ja tavanomainen toistuva geometrinen käyttöastiakuvio eivät ole erillinen taideteoskuva. Taustan näyttö on voimakkaasti epätarkka, eikä itsenäisen kuvan/tekstin sisältöä lueta siitä.",
+          "personLayer": "Ei ihmisiä tai kasvoja koko ruudussa tai natiivirajauksissa.",
+          "placeAndCaption": "Summary Hiboun, Mahdia Governorate, Tunisia Feb 2024; Date 9 February 2024 07:30:12. Nykyinen lyhyt/selite nimeää kahvin ja croissantin Hibounissa sekä kertoo yleisestä kahvitauon kuvituksesta, ei Tunisissa kuvatusta annoksesta.",
+          "attribution": {
+            "author": "Sharon Hahn Darlin",
+            "license": "CC BY 2.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by/2.0/deed.en",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Hiboun,_Mahdia_Governorate,_Tunisia_Feb_2024_-_Croissant_and_Coffee.jpg"
+          },
+          "originalRasterChanged": false,
+          "acceptedScope": "Unchanged full original in its current specified content role; QA crops are evidence only"
+        },
+        "technicalDetails": {
+          "format": "MPO",
+          "mode": "RGB",
+          "bytes": 1415243,
+          "encodedWidth": 2938,
+          "encodedHeight": 3918,
+          "exifOrientation": 1,
+          "displayWidth": 2938,
+          "displayHeight": 3918,
+          "originalByteSHA256MatchesQueue": true,
+          "decodedOrientedPixelSHA256": "dda4399b91de1a848d10569ffa24ea584933583930a44fbf163990d117621de1"
+        },
+        "reviewedAt": "2026-10-12T22:32:35.068298+00:00",
+        "R2IndependentlyRechecked": false,
+        "gameIntegrationRechecked": false,
+        "qaAssetSHA256CalculatedFromViewedBytes": true,
+        "supplementalQAPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/capital-native-qa/e04-tunis-O4.json"
+      },
+      "supplementalQAPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/capital-native-qa/e04-tunis-O4.json",
+      "supplementalQAFileSHA256": "a6527aa9b33fac6d439accb3f72905eda5aab43c347304ee5b73194e3b6111a5",
+      "nativeQAHashResolved": "84ad1a15512b344cd4282c048dbc1de94bd1c12ee444d97e047628e8a5674291",
+      "deliveryR2Reads": [
+        {
+          "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/tunis/o4-84ad1a15512b344cd428.jpg",
+          "http": 200,
+          "sha256": "84ad1a15512b344cd4282c048dbc1de94bd1c12ee444d97e047628e8a5674291",
+          "bytes": 1415243,
+          "mime": "image/jpeg",
+          "requestOrigin": "https://matkakirja.app",
+          "byteExact": true
+        },
+        {
+          "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/tunis/o4-84ad1a15512b344cd428.jpg?gallery-verify=84ad1a15512b344c-1791844475842111000",
+          "http": 200,
+          "sha256": "84ad1a15512b344cd4282c048dbc1de94bd1c12ee444d97e047628e8a5674291",
+          "bytes": 1415243,
+          "mime": "image/jpeg",
+          "requestOrigin": "https://matkakirja.app",
+          "byteExact": true
+        }
+      ],
+      "previousHoldCause": "Primary QA inspected only a preview; full original is now independently inspected."
+    },
+    {
+      "era": "e06",
+      "city": "luanda",
+      "slot": "K2",
+      "type": "commons",
+      "assetID": "capital-cc-e06-luanda-k2-213f7b5fcfb4a330",
+      "galleryImageID": "capital-cc-e06-luanda-k2-213f7b5fcfb4a330",
+      "commonsFile": "Luanda 13.23266E 8.80761S.jpg",
+      "targetJsonPath": "$.kaupunkilehti[0].nostot[1]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "nostot",
+        1
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e06/luanda/k2-213f7b5fcfb4a330fb68.jpg",
+        "suora": true,
+        "lahde": "Photograph: NASA, Wikimedia Commons (PD)",
+        "selite": "Luandan satelliittikartassa erottuvat rannikon hiekkakaistaleet, ja paikannimet ovat alkuperäisen kartan merkintöjä.",
+        "lyhyt": "Ilha do Cabo on Luandan edustan kapea hiekkaniemi.",
+        "tiedosto": "Luanda 13.23266E 8.80761S.jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Photograph: NASA, Wikimedia Commons (PD)",
+        "selite": "Luandan satelliittikartassa erottuvat rannikon hiekkakaistaleet, ja paikannimet ovat alkuperäisen kartan merkintöjä.",
+        "lyhyt": "Ilha do Cabo on Luandan edustan kapea hiekkaniemi.",
+        "tiedosto": "Luanda 13.23266E 8.80761S.jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e06/luanda/k2-213f7b5fcfb4a330fb68.jpg",
+        "suora": true,
+        "lahde": "Photograph: NASA, Wikimedia Commons (PD)",
+        "selite": "Luandan satelliittikartassa erottuvat rannikon hiekkakaistaleet, ja paikannimet ovat alkuperäisen kartan merkintöjä.",
+        "lyhyt": "Ilha do Cabo on Luandan edustan kapea hiekkaniemi.",
+        "tiedosto": "Luanda 13.23266E 8.80761S.jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "213f7b5fcfb4a330fb68270357c1a20ac01a1de5627fc74ac519e87d26e4e206",
+      "exportSHA256": "213f7b5fcfb4a330fb68270357c1a20ac01a1de5627fc74ac519e87d26e4e206",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e06/luanda/k2-213f7b5fcfb4a330fb68.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e06/luanda/k2-213f7b5fcfb4a330fb68.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/commons-originals/e06/luanda/b36fd09f1c860c28ee2313baecff6da5f82f2752e5c947042d33e6f699acfa9f.org&utm_campaign=index&utm_content=original",
+      "dimensions": [
+        1280,
+        958
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/luanda/sisalto.json",
+      "sourceContentSHA256": "9635dc22ba09cc53f45cc136595cd14f17f4fd7f9f81a30585dde8aabc233245",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "87684545b35d29ddc8d9b47c56bb74297c7f440a45daf32d7cf32589c5fd3864",
+        "semanticContextSHA256": "87684545b35d29ddc8d9b47c56bb74297c7f440a45daf32d7cf32589c5fd3864",
+        "subjectTitle": "Saari nimessä, niemi maastossa",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Photograph: NASA",
+        "license": "PD",
+        "licenseUrl": "https://commons.wikimedia.org/wiki/File:Luanda_13.23266E_8.80761S.jpg#Licensing",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Luanda_13.23266E_8.80761S.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/6/65/Luanda_13.23266E_8.80761S.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+        "rightsEvidence": {
+          "selection": null,
+          "QA": {
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Luanda_13.23266E_8.80761S.jpg",
+            "sourceLocal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/luanda-B/candidate-47.html",
+            "sourceSHA256": "da7732fd1c818f58cfdf7caae9aefd41f26b260366209da125c7ca9eb5e04ae6",
+            "authorsFromSource": [
+              {
+                "label": "Author",
+                "text": "Photograph: NASA"
+              }
+            ],
+            "license": "PD",
+            "licenseLinks": [
+              "https://creativecommons.org/publicdomain/zero/1.0/",
+              "https://creativecommons.org/licenses/by-sa/4.0/"
+            ],
+            "width": 1280,
+            "height": 958,
+            "visuallyInspected": true,
+            "previewPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/luanda-B/preview-47.jpg",
+            "previewSHA256": "cf2a3ed7dd81f918fb2ead8e12634d4501dc93fd6b0890785eb01a9c152c3f30",
+            "capturedDate": "before May 2005 date QS:P,+2005-05-00T00:00:00Z/7,P1326,+2005-05-00T00:00:00Z/10",
+            "currentContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/luanda/sisalto.json",
+            "currentContentSHA256": "898d0260525cbe666cd58427801a8d3ec6fe358f1fb7328e235ac06fcd51c544",
+            "sourceCheck": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/luanda/qa-evidence/existing-commons-source-checks.json",
+            "ccLayoutRule": "Only TRAVELER mandatory portrait; other CC orientation allowed",
+            "scope": "independent QA only; not owner acceptance/integration/publication"
+          },
+          "qaReason": "NASA World Wind -satelliittikartta katsottu. Public domain ja Photograph:NASA kuvasivulta. Kuvan alkuperäiset julkaisijan paikannimimerkinnät kuuluvat lehtireseptin sallittuun karttamerkintäpoikkeukseen; nykyinen caption kertoo satelliittikartasta, ei aitoa maanpintavalokuvaa. Ei lisättyä vesileimaa. Ilhan kaistale erotettu eteläisemmästä Mussulosta; ei kaikkien paikannimien kopiointia tai kuvauspäivän arvausta."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Luandan satelliittikartassa erottuvat rannikon hiekkakaistaleet, ja paikannimet ovat alkuperäisen kartan merkintöjä.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/luanda/qa.json",
+        "fileSHA256": "8c14481b8b23d041e6121f453b06db4d550b8a28d78986979bb56ff8c90714ba",
+        "item": {
+          "slot": "K2",
+          "targetJsonPath": "$.kaupunkilehti[0].nostot[1]",
+          "commonsFile": "Luanda 13.23266E 8.80761S.jpg",
+          "verdict": "accepted",
+          "reason": "NASA World Wind -satelliittikartta katsottu. Public domain ja Photograph:NASA kuvasivulta. Kuvan alkuperäiset julkaisijan paikannimimerkinnät kuuluvat lehtireseptin sallittuun karttamerkintäpoikkeukseen; nykyinen caption kertoo satelliittikartasta, ei aitoa maanpintavalokuvaa. Ei lisättyä vesileimaa. Ilhan kaistale erotettu eteläisemmästä Mussulosta; ei kaikkien paikannimien kopiointia tai kuvauspäivän arvausta.",
+          "evidence": {
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Luanda_13.23266E_8.80761S.jpg",
+            "sourceLocal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/luanda-B/candidate-47.html",
+            "sourceSHA256": "da7732fd1c818f58cfdf7caae9aefd41f26b260366209da125c7ca9eb5e04ae6",
+            "authorsFromSource": [
+              {
+                "label": "Author",
+                "text": "Photograph: NASA"
+              }
+            ],
+            "license": "PD",
+            "licenseLinks": [
+              "https://creativecommons.org/publicdomain/zero/1.0/",
+              "https://creativecommons.org/licenses/by-sa/4.0/"
+            ],
+            "width": 1280,
+            "height": 958,
+            "visuallyInspected": true,
+            "previewPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/luanda-B/preview-47.jpg",
+            "previewSHA256": "cf2a3ed7dd81f918fb2ead8e12634d4501dc93fd6b0890785eb01a9c152c3f30",
+            "capturedDate": "before May 2005 date QS:P,+2005-05-00T00:00:00Z/7,P1326,+2005-05-00T00:00:00Z/10",
+            "currentContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/luanda/sisalto.json",
+            "currentContentSHA256": "898d0260525cbe666cd58427801a8d3ec6fe358f1fb7328e235ac06fcd51c544",
+            "sourceCheck": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/luanda/qa-evidence/existing-commons-source-checks.json",
+            "ccLayoutRule": "Only TRAVELER mandatory portrait; other CC orientation allowed",
+            "scope": "independent QA only; not owner acceptance/integration/publication"
+          }
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/luanda/qa.json",
+            "sha256": "8c14481b8b23d041e6121f453b06db4d550b8a28d78986979bb56ff8c90714ba"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/luanda/illustration-qa-extra.json",
+            "sha256": "04afea2fb892b0ff9a48d7dbf4312b964db7950fb3e0d0d3c3e225103b1a7776"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e06",
+        "city": "luanda",
+        "slot": "K2",
+        "targetJsonPath": "$.kaupunkilehti[0].nostot[1]",
+        "commonsFile": "Luanda 13.23266E 8.80761S.jpg",
+        "sha256": "213f7b5fcfb4a330fb68270357c1a20ac01a1de5627fc74ac519e87d26e4e206",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Luanda_13.23266E_8.80761S.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/6/65/Luanda_13.23266E_8.80761S.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+        "author": "Photograph: NASA",
+        "license": "PD",
+        "licenseUrl": "https://commons.wikimedia.org/wiki/File:Luanda_13.23266E_8.80761S.jpg#Licensing",
+        "width": 1280,
+        "height": 958,
+        "originalSHA256": "213f7b5fcfb4a330fb68270357c1a20ac01a1de5627fc74ac519e87d26e4e206",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e06/luanda/k2-213f7b5fcfb4a330fb68.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e06/luanda/k2-213f7b5fcfb4a330fb68.jpg",
+        "bytes": 132032,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T18:25:13.606217+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "Luanda 13.23266E 8.80761S.jpg",
+        "lahde": "Photograph: NASA, Wikimedia Commons (PD)",
+        "selite": "Luandan satelliittikartassa erottuvat rannikon hiekkakaistaleet, ja paikannimet ovat alkuperäisen kartan merkintöjä.",
+        "lyhyt": "Ilha do Cabo on Luandan edustan kapea hiekkaniemi."
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Photograph: NASA, Wikimedia Commons (PD)",
+        "selite": "Luandan satelliittikartassa erottuvat rannikon hiekkakaistaleet, ja paikannimet ovat alkuperäisen kartan merkintöjä.",
+        "lyhyt": "Ilha do Cabo on Luandan edustan kapea hiekkaniemi.",
+        "tiedosto": "Luanda 13.23266E 8.80761S.jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "9635dc22ba09cc53f45cc136595cd14f17f4fd7f9f81a30585dde8aabc233245",
+      "targetAfterSHA256": "87684545b35d29ddc8d9b47c56bb74297c7f440a45daf32d7cf32589c5fd3864",
+      "contextAfterSHA256": "87684545b35d29ddc8d9b47c56bb74297c7f440a45daf32d7cf32589c5fd3864",
+      "sourceCommit": "a6d4240fcc770b675a988a424f0d5c402d210fa8",
+      "sourceBranch": "paakaupungit-e06-codex",
+      "supplementalNativeQA": {
+        "era": "e06",
+        "city": "luanda",
+        "slot": "K2",
+        "targetJsonPath": "$.kaupunkilehti[0].nostot[1]",
+        "commonsFile": "Luanda 13.23266E 8.80761S.jpg",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Luanda_13.23266E_8.80761S.jpg",
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/commons-originals/e06/luanda/b36fd09f1c860c28ee2313baecff6da5f82f2752e5c947042d33e6f699acfa9f.org&utm_campaign=index&utm_content=original",
+        "sha256": "213f7b5fcfb4a330fb68270357c1a20ac01a1de5627fc74ac519e87d26e4e206",
+        "sha256CalculatedFromOriginalBytes": true,
+        "originalPixelsViewed": true,
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "verdict": "accepted",
+        "reason": "Alkuperäinen1280×958 NASA World Wind -satelliittikartta ja kaksi skaalaamatonta natiivirajausta tarkastettu. Luandan rannikko, pohjoinen kapea Ilha-kaistale ja lahti erottuvat; ei kasvoja tai teosta päämotiivina. Tiedoston oma public-domain-layer/World Wind -peruste luettu. Nykyinen selite nimeää kuvan satelliittikartaksi ja paikannimet alkuperäisiksi karttamerkinnöiksi; kuvaa ei esitetä PHOTO-roolin maanpintavalokuvana.",
+        "evidence": {
+          "roleHandoffPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/role-asset-handoff.json",
+          "roleHandoffSHA256": "53466167bed4fab6dd14069583f2d65e19c1913a5db8692b9e26ca58c67129e4",
+          "roleAssetId": "capital-cc-e06-luanda-k2-213f7b5fcfb4a330",
+          "expectedNativeSHA256": "213f7b5fcfb4a330fb68270357c1a20ac01a1de5627fc74ac519e87d26e4e206",
+          "actualNativeSHAMatchesHandoff": true,
+          "primaryQAPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/luanda/qa.json",
+          "primaryQASHA256": "beba8e9e064bea0e90959e28581fbf582c715787def5564df1336d940f65ec2e",
+          "sourceQASelectionBasis": "Current exact slot and commonsFile",
+          "previousPrimaryVerdict": "accepted",
+          "previousEvidenceWasPreviewOnly": true,
+          "originalSHA256": "213f7b5fcfb4a330fb68270357c1a20ac01a1de5627fc74ac519e87d26e4e206",
+          "originalViewedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/commons-originals/e06/luanda/b36fd09f1c860c28ee2313baecff6da5f82f2752e5c947042d33e6f699acfa9f.org&utm_campaign=index&utm_content=original",
+          "sourceLocal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/luanda-B/candidate-47.html",
+          "sourceSHA256": "da7732fd1c818f58cfdf7caae9aefd41f26b260366209da125c7ca9eb5e04ae6",
+          "sourcePageRead": true,
+          "sourceCheckPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/luanda/qa-evidence/existing-commons-source-checks.json",
+          "sourceCheckSHA256": "3439753c8fe6955de1ef4ce650c732888178397335af2381bf2f76d8aa5895e0",
+          "sourceCheckRowRead": {
+            "slot": "K2",
+            "index": 47,
+            "commonsFile": "Luanda 13.23266E 8.80761S.jpg",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Luanda_13.23266E_8.80761S.jpg",
+            "sourceLocal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/luanda-B/candidate-47.html",
+            "sourceSHA256": "da7732fd1c818f58cfdf7caae9aefd41f26b260366209da125c7ca9eb5e04ae6",
+            "savedSourceHashMatches": true,
+            "authorsFromSource": [
+              {
+                "label": "Author",
+                "text": "Photograph: NASA"
+              }
+            ],
+            "candidateAuthor": "Photograph: NASA",
+            "authorMatches": true,
+            "licensesFromSource": [
+              "Public domain"
+            ],
+            "candidateLicense": "PD",
+            "dimensionsFromSource": [
+              1280,
+              958
+            ],
+            "dimensionsMatch": true,
+            "licenseLinks": [
+              "https://creativecommons.org/publicdomain/zero/1.0/",
+              "https://creativecommons.org/licenses/by-sa/4.0/"
+            ],
+            "preview": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/luanda-B/preview-47.jpg",
+            "previewSHA256": "cf2a3ed7dd81f918fb2ead8e12634d4501dc93fd6b0890785eb01a9c152c3f30",
+            "date": "before May 2005 date QS:P,+2005-05-00T00:00:00Z/7,P1326,+2005-05-00T00:00:00Z/10",
+            "rightsClaimToVerify": "NASA World Wind -lähteen PD-karttakuvitus. Julkaisijan omat paikannimimerkinnät ovat kartan selitteitä, eivät ulkopuolisen lisäämä vesileima tai mainos. Reseptin oman literan/karttamerkinnän poikkeus dokumentoidaan: C selittää kuvan satelliittikartaksi ja nimeää vain A:n tukeman Ilha do Cabon kaistaleen, eikä nimeä eteläistä Mussuloa samaksi niemeksi. Kartan pienten paikannimien kaikkia väitteitä ei kopioida pelaajalle. Luonnon maastomuoto, ei yksilöidyn suojatun rakennuksen lähikuva. Date vain before May2005; ei keksittyä täsmällistä kuvausvuotta tai nykyisen maankäytön väitettä."
+          },
+          "author": "Photograph: NASA",
+          "license": "PD",
+          "licenseURL": "https://commons.wikimedia.org/wiki/File:Luanda_13.23266E_8.80761S.jpg#Licensing",
+          "licenseScope": "Tiedoston oma PD-WorldWind/public-domain-layer-lisenssi, luettu nykyisestä tallennetusta tiedostosivusta.",
+          "rightsLayers": {
+            "image": "Tiedostosivu nimeää Photograph:NASA ja lähteen NASA World Wind. Oma lisenssitemplate sanoo screenshot from World Wind using a public domain layer; PD ei ole Google Earth -kuvasta arvattu eikä johdu Commonsin alatunnisteesta.",
+            "depictedWorksAndArchitecture": "Satelliittikartan mittakaava: meri, maasto, rannikko ja yleinen kaupungin/rakennusten kudos. Ei yksittäistä nykyistä suojattua rakennus-/veistosteosta päämotiivina.",
+            "peopleAndFaces": "Ei ihmisiä tai kasvoja tässä mittakaavassa.",
+            "textAndMarks": "Näkyvät Luanda/Chicala/Salinas da Samba/Cazenga/Golfe ym. ovat juuri tämän alkuperäisen julkaisijan karttamerkintöjä. Ne kuuluvat tässä kartta-aiheeseen eikä niitä ole lisätty QA:ssa. Ei erillistä vesileimaa tai mainostekstiä."
+          },
+          "captionAssessment": "Nykyinen nosto kertoo Ilha de Luandan/Ilha do Cabon kapeasta niemestä. Selite sanoo nimenomaisesti Luandan satelliittikartta ja alkuperäisen kartan paikannimet. Pohjoinen kapea kaistale näkyy lahden edustalla; etelän eri maastomuotoja ei nimetä samaksi niemeksi. Ei keksittyä yksittäistä kuvauspäivää tai väitettä nykyhetken maankäytöstä.",
+          "currentContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/luanda/sisalto.json",
+          "currentContentSHA256": "9635dc22ba09cc53f45cc136595cd14f17f4fd7f9f81a30585dde8aabc233245",
+          "currentTarget": {
+            "otsikko": "Saari nimessä, niemi maastossa",
+            "teksti": "Ilha de Luanda tunnetaan myös nimellä Ilha do Cabo. Ilha tarkoittaa saarta, mutta maastossa paikka on matala hiekkaniemi, joka liittyy kaupunkiin kapean yhteyden kautta. Sedimentistä muodostunut kaistale ulottuu Luandan edustalle ja rajaa lahden ympäristöä. Siellä asui paikallisia Axi-lwanda-yhteisön ihmisiä jo ennen portugalilaisten kaupungin syntyä mantereelle. Nykyisin Ilhalla on rantoja, ravintoloita ja veneilyä. Paikannimi jää elämään, vaikka se ei yksin kerro, miten maa liittyy mantereeseen.",
+            "tiedosto": "Luanda 13.23266E 8.80761S.jpg",
+            "lyhyt": "Ilha do Cabo on Luandan edustan kapea hiekkaniemi.",
+            "selite": "Luandan satelliittikartassa erottuvat rannikon hiekkakaistaleet, ja paikannimet ovat alkuperäisen kartan merkintöjä.",
+            "lahde": "Photograph: NASA, Wikimedia Commons (PD)",
+            "wiki": "Ilha de Luanda"
+          },
+          "capturedDate": null,
+          "sourceDateStatement": "before May2005",
+          "sourceDateUpperBound": "2005-05",
+          "sourceDescription": "Luanda",
+          "sourceOrigin": "NASA World Wind",
+          "sourceImageType": "NASA World Wind screenshot using public domain imagery layer",
+          "roleDistinction": "K2 satellite-map illustration; not PHOTO ground/astronaut camera photograph and not TRAVELER portrait.",
+          "publisherMapLabelsPreserved": true,
+          "originalPixelsViewed": true
+        },
+        "technical": {
+          "format": "JPEG",
+          "mode": "RGB",
+          "width": 1280,
+          "height": 958,
+          "encodedWidth": 1280,
+          "encodedHeight": 958,
+          "exifOrientation": null,
+          "dimensionsBasis": "EXIF-oriented display",
+          "byteSize": 132032,
+          "originalUntouched": true
+        },
+        "nativeCrops": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/capital-native-qa/e06-luanda-K2-crops/northern-peninsula-and-bay.png",
+            "box": [
+              430,
+              100,
+              930,
+              720
+            ],
+            "coordinateSystem": "EXIF-oriented native pixels",
+            "sha256": "93ef3c957074d696bfb159c1dce71e9861d0ac71a9024a90eed3e454499f1d45",
+            "resized": false,
+            "inspectedAtNativePixels": true
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/capital-native-qa/e06-luanda-K2-crops/city-airport-and-map-labels.png",
+            "box": [
+              530,
+              540,
+              1280,
+              958
+            ],
+            "coordinateSystem": "EXIF-oriented native pixels",
+            "sha256": "f2910c970c81e66a4a6874ac9b9d2fe8b31db0b0f6762010d098d06f84aae891",
+            "resized": false,
+            "inspectedAtNativePixels": true
+          }
+        ],
+        "observations": [
+          "Geografinen rannikko/niemi/lahti ja kaupungin suhteellinen sijainti ovat koherentteja; etikettien sijoitus sopii kartta-aiheeseen.",
+          "Satelliittirasterin pakkauksen ja värierojen vuoksi yksittäisiä maankäyttöyksityiskohtia ei tulkita varmoiksi. Päämaantiede on luettavaa.",
+          "Karttaa ei muokattu, paikannimiä ei poistettu eikä uusia merkintöjä lisätty."
+        ],
+        "reviewedAt": "2026-10-12T22:33:02.210402+00:00",
+        "gameIntegrated": false,
+        "qaAssetSHA256CalculatedFromViewedBytes": true,
+        "supplementalQAPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/capital-native-qa/e06-luanda-K2.json"
+      },
+      "supplementalQAPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/capital-native-qa/e06-luanda-K2.json",
+      "supplementalQAFileSHA256": "d5f346068ec468497a8a87a84063e6c0871848e10f8f9ad926401dae76d45431",
+      "nativeQAHashResolved": "213f7b5fcfb4a330fb68270357c1a20ac01a1de5627fc74ac519e87d26e4e206",
+      "deliveryR2Reads": [
+        {
+          "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e06/luanda/k2-213f7b5fcfb4a330fb68.jpg",
+          "http": 200,
+          "sha256": "213f7b5fcfb4a330fb68270357c1a20ac01a1de5627fc74ac519e87d26e4e206",
+          "bytes": 132032,
+          "mime": "image/jpeg",
+          "requestOrigin": "https://matkakirja.app",
+          "byteExact": true
+        },
+        {
+          "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e06/luanda/k2-213f7b5fcfb4a330fb68.jpg?gallery-verify=213f7b5fcfb4a330-1791844475779171000",
+          "http": 200,
+          "sha256": "213f7b5fcfb4a330fb68270357c1a20ac01a1de5627fc74ac519e87d26e4e206",
+          "bytes": 132032,
+          "mime": "image/jpeg",
+          "requestOrigin": "https://matkakirja.app",
+          "byteExact": true
+        }
+      ],
+      "previousHoldCause": "Primary QA inspected only a preview; full original is now independently inspected."
     }
   ],
-  "effectiveQualifiedOriginalSnapshotBindings": 800,
-  "effectiveRemainingOriginalSnapshotHolds": 29,
+  "effectiveQualifiedOriginalSnapshotBindings": 810,
+  "effectiveRemainingOriginalSnapshotHolds": 19,
   "instructions": [
     "Add these exact-version originals to the previously qualified755 handoff and current-primary-original QA releases. Use their embedded full-native QA; do not infer approval for other preview-only images.",
     "The exact Bissau PHOTO rights hold remains active. Preserve captions, text, maps and all other images."
