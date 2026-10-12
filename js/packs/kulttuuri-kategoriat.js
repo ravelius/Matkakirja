@@ -11212,6 +11212,28 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Wikimedia Commons (CC BY 4.0)',
         },
         {
+          /*
+           * SAAPUMISINTRON KUVA 6 (12.10.2026, Codex-toimitus 8a39d5cc5,
+           * omistaja hyväksyy Codexissa): nuoria aikuisia katujuhlassa.
+           */
+          ampari: 'saapumisintro/lisbon/20261012-full/lisbon-6-santos-populares-intro-v1.png',
+          lyhyt: 'Kesäkuun Santo António -juhlassa Alfaman kujat täyttyvät katujuhlista ja värikkäistä köynnöksistä.',
+          selite: 'Lissabonin Pyhän Antoniuksen juhla huipentuu yöhön 12.–13. '
+            + 'kesäkuuta, ja vanhojen kortteleiden kujilla pidetään katujuhlia.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          /*
+           * SAAPUMISINTRON KUVA 7 (12.10.2026, Codex-toimitus 8a39d5cc5,
+           * omistaja hyväksyy Codexissa): asuinkuja iltavalossa.
+           */
+          ampari: 'saapumisintro/lisbon/20261012-full/lisbon-7-bairro-alto-ilta-intro-v1.png',
+          lyhyt: 'Bairro Alto rakennettiin 1500-luvulla ruudukkoon, ja se tunnetaan ilta-elämästään.',
+          selite: 'Bairro Alto rakennettiin 1500-luvulla kapeiden katujen ruudukoksi, '
+            + 'ja siitä on tullut Lissabonin tunnetuin ilta-elämän alue.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
           tiedosto: 'Lisbon Cityscape with 25 de Abril Bridge (55260752373).jpg',
           lyhyt: 'Lissabonin metro avattiin 1959 Portugalin ensimmäisenä, nyt neljä linjaa ja 56 asemaa.',
           selite: 'Lissabonin metro avattiin joulukuussa 1959 Portugalin '
