@@ -1,0 +1,349 @@
+{
+  "$skeema": "matkakirja-paakaupunki/1",
+  "id": "portauprince",
+  "maa": "HTI",
+  "era": "e11",
+  "kaupunki": {
+    "id": "portauprince",
+    "name": "Port-au-Prince",
+    "wiki": "Port-au-Prince",
+    "ambience": "kaupunki",
+    "pallo": {
+      "lat": 18.5469,
+      "lon": -72.3403
+    }
+  },
+  "artikkeli": {
+    "intro": "Port-au-Prince on Haitin pääkaupunki Gonâvenlahden äärellä, Hispaniolan saaren länsiosassa. Kaupankäynti keskittyy lähelle vettä, kun taas asuinalueet nousevat sataman takaisille kukkuloille. Ranskalaisten 1700-luvulla perustama kaupunki oli jo isoisän matkavuonna 1873 itsenäisen Haitin pääkaupunki. Sen historiaa voi lukea myös rakennustavoista: **rautatukien torihallit ja puukoristeiset talot** kertovat hyvin erilaisista ratkaisuista.\n\nMarché en Fer eli Rautatori koostuu metallirunkoisista halleista, joita yhdistää tornillinen portti. Piparkakkutaloiksi kutsutuissa vanhoissa asuintaloissa koristeellisuus yhdistyy korkeisiin huoneisiin ja ilmanvaihtoon. Kaupungin joukkoliikenteeseen kuuluvat tap-tapit, pienet yhteiskäyttöiset kulkuneuvot. **Haitilainen keittiö** tuo pöytään esimerkiksi paistettuja ruokia ja tulista pikliz-lisuketta. Kaupunki on samalla kansallisten museoiden, kirjaston ja taidegallerioiden paikka.",
+    "teksti": "Port-au-Princen satamalahtea suojaava sijainti kuuluu kaupungin pitkään kaupankäynnin historiaan. Kaupunki perustettiin Ranskan siirtomaavallan aikana 1700-luvulla, ja pääkaupungin asema jatkui Haitin itsenäistyttyä. Isoisän matkavuonna 1873 pääkaupunki oli siis jo olemassa; myöhempää Rautatorin rakennusta täällä ei vielä ollut.\n\nRautatorin metalli tuotiin Ranskasta, kun taas piparkakkutalojen rakentamisessa yhdistettiin ulkomaisia vaikutteita haitilaiseen käsityöhön ja paikalliseen ilmastoon. Talojen suuret ovet, korkeat katot ja säleikkunat ovat osa tätä rakennusperinnettä.\n\nHaitin historiaa ja kulttuuria esittelee Musée du Panthéon National Haïtien, MUPANAH. Kaupungissa toimivat myös kansalliskirjasto ja taidegalleriat. Port-au-Princen kulttuuri ei mahdu yhteen monumenttiin: sitä välittävät yhtä lailla rakentajat, kauppiaat ja kokit."
+  },
+  "kysymykset": [
+    {
+      "q": "Minkä maan pääkaupunki Port-au-Prince on?",
+      "options": [
+        "Haitin",
+        "Jamaikan",
+        "Barbadoksen",
+        "Dominican"
+      ],
+      "correct": 0,
+      "level": 1,
+      "hint": "Maa jakaa Hispaniolan saaren Dominikaanisen tasavallan kanssa.",
+      "fact": "Port-au-Prince on Haitin pääkaupunki ja sijaitsee Hispaniolan saaren länsiosassa.",
+      "source": "https://en.wikipedia.org/wiki/Port-au-Prince"
+    },
+    {
+      "q": "Mikä rakennusmateriaali antaa Marché en Fer -torille sen nimen?",
+      "options": [
+        "Rauta",
+        "Tiili",
+        "Marmori",
+        "Graniitti"
+      ],
+      "correct": 0,
+      "level": 1,
+      "hint": "Nimi viittaa torihallien runkoon.",
+      "fact": "Marché en Fer tarkoittaa Rautatoria; sen hallit ovat metallirunkoisia.",
+      "source": "https://en.wikipedia.org/wiki/Iron_Market"
+    },
+    {
+      "q": "Mitä tap-tapit ovat?",
+      "options": [
+        "Yhteiskyytejä",
+        "Kalastusveneitä",
+        "Torikojuja",
+        "Tanssiryhmiä"
+      ],
+      "correct": 0,
+      "level": 2,
+      "hint": "Nimi liittyy kaupungissa liikkumiseen.",
+      "fact": "Tap-tapit ovat yhteiskäyttöisiä kulkuneuvoja, joita käytetään Haitin paikallisliikenteessä.",
+      "source": "https://en.wikipedia.org/wiki/Tap_tap"
+    },
+    {
+      "q": "Mihin haitilaisten piparkakkutalojen korkeat huoneet ja säleikkunat liittyvät?",
+      "options": [
+        "Ilmanvaihtoon",
+        "Sähkön tuotantoon",
+        "Jäävarastointiin",
+        "Äänen eristykseen"
+      ],
+      "correct": 0,
+      "level": 3,
+      "hint": "Ratkaisuissa huomioidaan lämmin ilmasto.",
+      "fact": "Korkeat huoneet ja eri sivuilla olevat säleikkunat kuuluvat lämpimään ilmastoon sovitettuun rakennustapaan.",
+      "source": "https://en.wikipedia.org/wiki/Gingerbread_house_(architecture)"
+    },
+    {
+      "q": "Mikä näistä on haitilainen tulinen vihanneslisuke?",
+      "options": [
+        "Pikliz",
+        "Risotto",
+        "Polenta",
+        "Gazpacho"
+      ],
+      "correct": 0,
+      "level": 2,
+      "hint": "Lisuke tehdään muun muassa kaalista ja porkkanasta.",
+      "fact": "Pikliz on etikkaan säilötty, chilillä maustettu haitilainen vihanneslisuke.",
+      "source": "https://en.wikipedia.org/wiki/Pikliz"
+    }
+  ],
+  "tiedot": [
+    "Port-au-Princen kauppa-alueet sijaitsevat lähellä vettä, ja asuinalueet nousevat niitä ympäröiville kukkuloille.",
+    "Haitilaisissa piparkakkutaloissa puiset koristekuviot yhdistyvät suuriin oviin, korkeisiin huoneisiin ja syviin verantoihin.",
+    "MUPANAHin koko nimi on Musée du Panthéon National Haïtien, ja museo käsittelee Haitin historiaa ja kulttuuria."
+  ],
+  "valokuva": {
+    "tiedosto": "",
+    "lyhyt": "",
+    "selite": "",
+    "lahde": ""
+  },
+  "kaupunkilehti": [
+    {
+      "id": "kaupunki",
+      "nimi": "Port-au-Prince",
+      "johdanto": "Sataman, rinteiden ja rakentajien kaupungissa yhden talon puukoristeet ja toisen rautarunko kertovat eri tarinoita.",
+      "kansikuvat": [
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        }
+      ],
+      "nostot": [
+        {
+          "otsikko": "Pääkaupunki ennen isoisän matkaa",
+          "teksti": "Port-au-Prince perustettiin Ranskan siirtomaavallan aikana 1700-luvulla. Se korvasi Cap-Français’n siirtomaan pääkaupunkina ja säilytti aseman Haitin itsenäistyttyä. Isoisän matkavuonna 1873 täällä oli siis jo pääkaupunki, ei vasta myöhempää kaupunkia odottava paikka. Satamalahti oli kaupankäynnin keskus, ja kaupungin merkitys ulottui myös hallintoon ja kulttuuriin. Perustamisen, pääkaupungiksi nousun ja itsenäisyyden vaiheet ovat eri tapahtumia; niitä ei pidä niputtaa samaksi syntymäpäiväksi.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "Port-au-Prince"
+        },
+        {
+          "otsikko": "Aseman ainekset päätyivät toriksi",
+          "teksti": "Rautatorin rakennus valmistettiin Pariisissa alun perin Kairon rautatieasemaa varten. Suunnitelman peruunnuttua metallirakennus ostettiin Haitiin, missä siitä tuli Marché en Fer. Torihallit yhdistää portti, jonka yllä ovat kupolikattoiset tornit ja kello. Tämä 1800-luvun lopun rakennus ei vielä kuulunut isoisän matkavuoden kaupunkiin. Myöhemmissä korjauksissa on käytetty maanjäristyksessä vaurioituneista rakennuksista talteen otettuja tiiliä: myös korjausmateriaali kantaa kaupungin historiaa.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "Marché en Fer"
+        },
+        {
+          "otsikko": "Piparkakku ei ole tässä leivonnainen",
+          "teksti": "Port-au-Princen piparkakkutalojen nimi viittaa koristeellisiin puuosiin, ei keittiöön. Suuria taloja rakennettiin muun muassa Pacotin, Turgeaun ja Bois-Vernan kaupunginosiin 1800-luvun lopulla ja 1900-luvun alussa. Ulkomaiset rakennustyylit kohtasivat haitilaisten arkkitehtien ja puuseppien taidot. Talojen tunnusmerkkejä ovat pitsimäiset puukuviot, suuret ovet, korkeat huoneet ja syvät verannat. Koristeellisen julkisivun takana on myös ilmastoon sovitettua tekniikkaa: säleikkunat päästävät ilmaa kulkemaan.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "Gingerbread house (architecture)"
+        },
+        {
+          "otsikko": "Yhteiskyydillä on oma ilme",
+          "teksti": "Tap-tapit ovat Haitin yksityisiä yhteiskyytejä: pieniä busseja tai katettuja lava-autoja, jotka kulkevat määrättyjä reittejä. Niiden maalaaminen on oma näkyvä perinteensä. Ajoneuvoissa voi olla voimakkaita värejä, henkilöhahmoja, uskonnollisia nimiä ja tunnuslauseita; ikkunoiden suojissa käytetään myös leikattua puuta tai metallia. Kulkuneuvo on samalla omistajansa koristama käyttöesine. Perinteen tunteminen ei kuitenkaan ole matkustussuositus: nykyinen turvallisuustilanne tekee paikallisliikenteen käytöstä vaarallista.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "Tap tap"
+        }
+      ],
+      "matkailijalle": {
+        "kuva": {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        "kappale": "Port-au-Princeen matkustaminen on tällä hetkellä erittäin vaarallista. Tavallista omatoimista kaupunkilomaa ei voi suositella. Jos matka on välttämätön, kuljetukset ja majoitus on järjestettävä etukäteen luotettavan paikallisen toimijan kanssa. Historiallinen nähtävyysluettelo ei kerro, mihin voi tänään turvallisesti päästä. Kaupungin rakennusperintöön ja ruokakulttuuriin voi tutustua myös etäältä.",
+        "artikkeli": {
+          "nimi": "Matkailijan Port-au-Prince",
+          "taitto": "opas",
+          "teksti": "Tutustu satamakaupungin rakennusperintöön ja haitilaisen pöydän makuihin.",
+          "nosto": "Matkustaminen kaupunkiin on tällä hetkellä erittäin vaarallista; kulttuuriaiheet eivät ole käyntisuosituksia.",
+          "jaksot": [
+            {
+              "otsikko": "Perille ja liikkeelle",
+              "teksti": "Kaupungin kansainvälinen lentoasema on Toussaint Louverture International Airport. Port-au-Princen paikallisliikenteeseen kuuluvat tap-tapit, mutta niiden käyttöä ei nykyisessä turvallisuustilanteessa voi suositella. Välttämättömän matkan kuljetukset on järjestettävä etukäteen luotettavan paikallisen toimijan kanssa; saapumista ei pidä rakentaa tavallisen omatoimisen kaupunkimatkan varaan.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            },
+            {
+              "otsikko": "Koristeellisen talon tekniikka",
+              "teksti": "Pacot, Turgeau ja Bois-Verna kuuluvat Port-au-Princen piparkakkutalojen kaupunginosiin. Vanhojen talojen koristekuvioiden rinnalla kannattaa huomata rakennustavan periaate: korkeat huoneet ja säleikkunat liittyvät ilman kulkuun. Talojen historiaan voi perehtyä myös valokuvien ja rakennusperinnön esittelyjen avulla. Nykyinen käyntimahdollisuus on selvitettävä erikseen.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            },
+            {
+              "otsikko": "Tori ja kulttuurin muisti",
+              "teksti": "Marché en Fer kertoo metallirakentamisesta ja kaupankäynnistä, MUPANAH puolestaan Haitin historiasta ja kulttuurista. Molemmat ovat kaupungin tunnettuja paikkoja, mutta kohdeluettelosta ei voi päätellä niiden nykyistä saavutettavuutta. Erityisesti vanhoissa matkaoppaissa mainittu rakennus saattaa olla vaurioitunut tai sen käyttö muuttunut.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            },
+            {
+              "otsikko": "Mitä täällä syödään",
+              "teksti": "Fritay tarkoittaa monenlaisten paistettujen ruokien joukkoa. Griot on sianliharuoka, ja sen kanssa tarjotaan usein pikliziä, chilillä maustettua vihanneslisuketta. Keittobanaanista valmistetaan paistettuja paloja, ja joumou-keitto liittyy yhteiseen itsenäisyyspäivän ateriaan. Näihin makuihin voi tutustua haitilaisessa ravintolassa tai kotikeittiössä myös ilman matkaa kaupunkiin.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            },
+            {
+              "otsikko": "Sää ja matkustusajankohta",
+              "teksti": "Port-au-Princen ilmasto on trooppinen. Pelkkä vuodenaika ei kuitenkaan tee matkasta tällä hetkellä turvallista: kulkuyhteydet ja mahdollisuus järjestää turvallinen liikkuminen ratkaisevat matkan toteuttamisen. Matkustusajankohtaa ei siksi voi suositella tavallisen kaupunkiloman tapaan.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            }
+          ],
+          "matkailu": {
+            "parasta": [
+              {
+                "mita": "Piparkakkutalojen rakennusperintö",
+                "tahdet": 3,
+                "selite": "Puurakentamisessa kohtaavat koristeellinen käsityö ja lämpimän ilmaston ratkaisut."
+              },
+              {
+                "mita": "Rautatorin historia",
+                "tahdet": 3,
+                "selite": "Pariisissa valmistetun metallirakennuksen vaiheisiin kuuluu monta uutta alkua."
+              },
+              {
+                "mita": "MUPANAHin kulttuurihistoria",
+                "tahdet": 2,
+                "selite": "Museon aiheina ovat Haitin historia ja kulttuuri."
+              },
+              {
+                "mita": "Haitilainen keittiö",
+                "tahdet": 3,
+                "selite": "Paistetut ruoat, tuliset lisukkeet ja keittoperinteet tarjoavat erilaisia makuja."
+              },
+              {
+                "mita": "Tap-tapien perinne",
+                "tahdet": 2,
+                "selite": "Paikallinen yhteiskyyti kuuluu kaupungin liikenteeseen."
+              }
+            ],
+            "hyvaTietaa": [
+              {
+                "otsikko": "Matkustaminen on erittäin vaarallista",
+                "teksti": "Port-au-Princeen ei pidä suunnitella tavallista omatoimista lomaa; mahdollinen välttämätön matka vaatii erilliset turvallisuusjärjestelyt."
+              },
+              {
+                "otsikko": "Vanha kohdetieto ei riitä",
+                "teksti": "Museon tai historiallisen rakennuksen maininta ei takaa käyntimahdollisuutta; kohteen saavutettavuus on selvitettävä erikseen."
+              },
+              {
+                "otsikko": "Kielet ja raha",
+                "teksti": "Haitinkreoli ja ranska ovat Haitin virallisia kieliä, ja maan valuutta on gourde."
+              }
+            ]
+          },
+          "lahde": "Wikipedia"
+        }
+      }
+    },
+    {
+      "id": "ruoka",
+      "nimi": "Rapea, tulinen ja yhteinen pöytä",
+      "johdanto": "Haitilaisessa keittiössä paistetut ruoat saavat rinnalleen tulisia vihanneksia, ja keittokattila voi kantaa yhteistä muistoa.",
+      "tehtava": {
+        "kysymys": "Mihin juhlapäivään joumou-keiton perinne erityisesti liittyy?",
+        "vaihtoehdot": [
+          "Itsenäisyyspäivään",
+          "Sadonkorjuujuhlaan",
+          "Juhannukseen",
+          "Pyhäinpäivään"
+        ],
+        "oikea": 0,
+        "fakta": "Joumou kuuluu Haitin itsenäisyyden juhlintaan ja yhteiseen ateriaan."
+      },
+      "nostot": [
+        {
+          "otsikko": "Fritay on ruokien perhe",
+          "teksti": "Fritay ei tarkoita yhtä ainoaa ruokalajia vaan haitilaiseen kulttuuriin liittyvää katuruokien joukkoa. Siihen kuuluu esimerkiksi paistettua lihaa, kanaa, taikinapaloja ja keittobanaania. Ruokia tarjoillaan toreilla, juhlissa ja festivaaleilla, joten sama sana kattaa sekä arkisia aterioita että yhteisiä juhlapöytiä. Keittobanaanista valmistetaan niin makeita kuin vihreästä banaanista tehtyjä paistettuja paloja. Fritayn rinnalle voidaan tarjota pikliziä: saman aterian paistetut ruoat ja vihanneslisuke ovat eri asioita.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "Fritay"
+        },
+        {
+          "otsikko": "Pikliz antaa aterialle potkun",
+          "teksti": "Pikliz on haitilainen vihanneslisuke, jonka pohjana käytetään kaalia, porkkanaa, sipulia ja paprikaa. Mukaan lisätään valkosipulia ja tulisia Scotch bonnet -chilejä, ja vihannekset säilötään etikkaan tai sitrusmehuun. Lisuketta syödään esimerkiksi paistetun sianlihan, naudanlihan ja keittobanaanin kanssa, mutta myös riisi ja pavut saavat siitä maustetta. Pikliz valmistetaan perinteisesti kotona, vaikka sitä tuotetaan myös teollisesti. Purkkiin ei siis kätkeydy yksi tarkka resepti: koostumuksessa on myös paikallista vaihtelua.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "Pikliz"
+        },
+        {
+          "otsikko": "Griot saa seurakseen piklizin",
+          "teksti": "Griot on haitilainen sianliharuoka, jota tarjotaan usein juhlissa. Liha maustetaan sitrusmehulla ja mausteilla ennen kypsentämistä ja paistamista. Rapeaksi valmistetut palat saavat tavallisesti seurakseen riisiä ja papuja, paistettua keittobanaania sekä pikliz-vihanneslisuketta. Annoksessa griot on lihaa ja pikliz sen mausteinen kumppani, joten nimet eivät tarkoita samaa ruokalajia. Griotia voidaan tarjota myös Fèt Gede -juhlassa, jossa muistetaan edesmenneitä. Ruoka yhdistää näin arkisen keittiötaidon ja yhteisen juhlan.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "Griot (food)"
+        },
+        {
+          "otsikko": "Keittokattila muistuttaa vapaudesta",
+          "teksti": "Joumou on kurpitsasta, vihanneksista, lihasta, pastasta ja mausteista valmistettu haitilainen keitto. Siirtomaakaudella keitto oli varattu orjanomistajille. Haitin itsenäistyttyä siitä tuli vapauden ja ihmisarvon symboli. Keitto kuuluu erityisesti itsenäisyyspäivän yhteiseen ateriaan, mutta sitä valmistetaan myös sunnuntaiaamuisin. Sen tekemiseen osallistutaan perheissä eri tavoin, raaka-aineiden hankinnasta ruoan valmistamiseen. Yhden kattilan äärelle mahtuu sekä historia että yhdessä tekeminen.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "Soup joumou"
+        }
+      ]
+    }
+  ],
+  "kohdekartta": {
+    "numeroympyrat": true,
+    "esittely": "Port-au-Princen rakennusperintö liittyy satamaan, kaupankäyntiin ja rinteiden asuintaloihin.",
+    "rajat": null,
+    "kohteet": []
+  },
+  "nahtavyydet": {},
+  "saatiedot": null,
+  "ehdotukset": {
+    "lentoasema": "Toussaint Louverture International Airport (PAP)",
+    "huomiot": [
+      "C on tekstiluonnos. B-kuvat, kartan kohdekohtaiset pisteet ja suojattujen teosten tarkistus sekä sääaineiston 48/48-primäärivarmennus ovat avoinna. D/E/F eivät ole tehtyjä.",
+      "Matkailuoppaan nostot ovat kulttuuriaiheita, eivät tämänhetkisiä käyntisuosituksia.",
+      "Väestölukua ei käytetä: kontekstin 2015 arvio koskee Port-au-Princen kuntaa, ei koko kaupunkiseutua."
+    ]
+  }
+}

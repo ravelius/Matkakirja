@@ -1,0 +1,350 @@
+{
+  "$skeema": "matkakirja-paakaupunki/1",
+  "id": "sanjose",
+  "maa": "CRI",
+  "era": "e11",
+  "kaupunki": {
+    "id": "sanjose",
+    "name": "San José",
+    "wiki": "San José",
+    "ambience": "kaupunki",
+    "pallo": {
+      "lat": 9.9327,
+      "lon": -84.0796
+    }
+  },
+  "artikkeli": {
+    "intro": "San José on **Costa Rican pääkaupunki**, jonka keskusta kasvoi ylängön kappelin ympärille. Se sijaitsee Keskilaaksossa, jossa lähikaupunkien ja pääkaupungin arki liittyvät toisiinsa. Kaupungin nimi viittaa pyhään Joosefiin, mutta sen myöhempää kasvua vauhdittivat myös tupakka ja kahvi. Kahvikaupasta kertovat Barrio Amónin vanhat asuintalot ja kansallisteatterin koristeellinen sisustus.\n\nKeskustassa ruokaostokset johdattavat Mercado Centralin kapeille käytäville, joilla kahvi, kukat ja valmiit ateriat ovat saman katon alla. Paikallisen pienen ruokapaikan nimi on soda, vaikka siellä syödään muutakin kuin juodaan. **Kaupungin historia vaihtaa rakennusta**: kansallismuseo toimii entisissä sotilaskasarmeissa, ja esikolumbiaaninen kultamuseo sijaitsee aukion alla. San Joséssa menneisyys löytyy sekä julkisivusta että katutason alapuolelta.",
+    "teksti": "San Josén varhainen asutus järjestyi kappelin ympärille 1700-luvulla. Kaupungin nimi tuli seurakunnan suojeluspyhimyksestä, Joosefista. Tupakkatehtaan ja viljelmien tuoma pääoma vahvisti paikkakunnan taloutta, ja 1800-luvun alkupuolella San Josésta tuli Costa Rican pääkaupunki.\n\nKahvitalouden vaurastuminen jätti kaupunkiin näkyvän jäljen. Barrio Amónin asuinalue sai nimensä ranskalaiselta kahviyrittäjältä, ja kansallisteatteri valmistui saman vuosisadan lopulla. Isoisän matkavuonna 1873 San José oli siis jo pääkaupunki, mutta nykyinen kansallisteatteri ei vielä ollut avannut oviaan.\n\nNykykeskustan museoissa kaupungin aikajana ulottuu sen omia katuja kauemmas. Kultamuseo esittelee esikolumbiaanista metallityötä, kun taas kansallismuseon entinen kasarmi kertoo myös rakennusten muuttuvista tehtävistä. Mercado Centralissa historia jatkuu käytännöllisemmin: halli on yhä ruokaostosten ja aterioiden paikka."
+  },
+  "kysymykset": [
+    {
+      "q": "Minkä maan pääkaupunki San José on?",
+      "options": [
+        "Costa Rican",
+        "Guatemalan",
+        "El Salvadorin",
+        "Hondurasin"
+      ],
+      "correct": 0,
+      "level": 1,
+      "hint": "Maan nimi tarkoittaa espanjaksi rikasta rannikkoa.",
+      "fact": "San José on Costa Rican pääkaupunki.",
+      "source": "https://en.wikipedia.org/wiki/San_Jos%C3%A9,_Costa_Rica"
+    },
+    {
+      "q": "Mitä San Josén keskustorin soda yleensä tarkoittaa?",
+      "options": [
+        "Pientä ruokapaikkaa",
+        "Kahvinpaahtimoa",
+        "Juomatehdasta",
+        "Kukkakauppaa"
+      ],
+      "correct": 0,
+      "level": 2,
+      "hint": "Kyltin takana voi odottaa kokonainen ateria.",
+      "fact": "Soda on Costa Ricassa pieni, perinteisiä aterioita tarjoava ruokapaikka.",
+      "source": "https://en.wikipedia.org/wiki/San_Jos%C3%A9_Central_Market"
+    },
+    {
+      "q": "Missä Buenaventura Corralesin metallikoulun osat valmistettiin?",
+      "options": [
+        "Belgiassa",
+        "Portugalissa",
+        "Espanjassa",
+        "Britanniassa"
+      ],
+      "correct": 0,
+      "level": 3,
+      "hint": "Koulu saapui osina Euroopasta.",
+      "fact": "Koulun metallirakenteet valmistettiin Belgiassa ja koottiin San Joséssa.",
+      "source": "https://es.wikipedia.org/wiki/Edificio_Met%C3%A1lico"
+    },
+    {
+      "q": "Mikä vientituote osallistui San Josén kansallisteatterin rahoitukseen?",
+      "options": [
+        "Kahvi",
+        "Puuvilla",
+        "Kaakao",
+        "Sokeri"
+      ],
+      "correct": 0,
+      "level": 2,
+      "hint": "Sama viljelykasvi liittyy Barrio Amónin vauraisiin taloihin.",
+      "fact": "Kansallisteatterin rakentamiseen kerättiin rahaa kahvin vientiverolla.",
+      "source": "https://en.wikipedia.org/wiki/National_Theatre_of_Costa_Rica"
+    },
+    {
+      "q": "Missä San Josén esikolumbiaaninen kultamuseo sijaitsee?",
+      "options": [
+        "Aukion alla",
+        "Kirkontornissa",
+        "Rautatieasemalla",
+        "Vuorenhuipulla"
+      ],
+      "correct": 0,
+      "level": 2,
+      "hint": "Näyttelyyn kuljetaan katutason alapuolelle.",
+      "fact": "Kultamuseo sijaitsee Plaza de la Culturan alla.",
+      "source": "https://en.wikipedia.org/wiki/Pre-Columbian_Gold_Museum"
+    }
+  ],
+  "tiedot": [
+    "Barrio Amón on saanut nimensä ranskalaiselta kahviyrittäjältä, joka kehitti kaupunginosaa.",
+    "San Josén kultamuseo toimii aukion alla, joten kaupungin menneisyyttä etsitään siellä myös katutason alapuolelta.",
+    "Costa Ricassa casado tarkoittaa sekä naimisissa olevaa ihmistä että riisiä, papuja ja lisukkeita sisältävää ateriaa."
+  ],
+  "valokuva": {
+    "tiedosto": "",
+    "lyhyt": "",
+    "selite": "",
+    "lahde": ""
+  },
+  "kaupunkilehti": [
+    {
+      "id": "kaupunki",
+      "nimi": "San José",
+      "johdanto": "Kahvikauppa jätti San Joséen teatterin ja asuintaloja, tupakka auttoi kaupunkia kasvuun. Keskustassa historia kulkee myös torikäytävillä ja aukion alla.",
+      "kansikuvat": [
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        }
+      ],
+      "nostot": [
+        {
+          "otsikko": "Joosefin kylästä pääkaupungiksi",
+          "teksti": "San Josén nimi tarkoittaa pyhää Joosefia, joka valittiin paikallisen seurakunnan suojeluspyhimykseksi. Asutus kasvoi 1700-luvulla pienen kappelin ympärille. Myöhemmin vesihuollon parantaminen sekä tupakkatehdas ja viljely vahvistivat kaupungin taloutta. Pääkaupungiksi San José nousi 1800-luvun alkupuolella. Nimen taustalla on siis seurakunta, mutta kaupungin nousu ei mahdu pelkkään kirkonhistoriaan: myös tuotanto ja kaupankäynti muovasivat paikkakuntaa.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "San José, Costa Rica"
+        },
+        {
+          "otsikko": "Tori on kokonainen kortteli",
+          "teksti": "Mercado Central on katettu kauppahalli Avenida Centralin varrella. Se levittäytyy kokonaisen korttelin alueelle, ja sisällä kulku jatkuu kapeiden käytävien verkostona. Myynnissä on lihaa, kalaa, kasviksia, kahvia ja kukkia, mutta myös satuloita ja käsitöitä. Samaan halliin kuuluvat pienet ruokapaikat, sodas, joissa ostoskierros voi vaihtua ateriaksi. Keskustori perustettiin 1800-luvun loppupuolella: isoisän matkavuoden 1873 kaupunki oli vielä ilman tätä nykyistä hallia.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "San José Central Market"
+        },
+        {
+          "otsikko": "Kahvikauppa näkyy taloissa",
+          "teksti": "Barrio Amón syntyi Costa Rican pääkaupungin San Josén koillisosaan 1800-luvun lopulla. Nimi tulee ranskalaisesta kahviyrittäjästä Amón Fasileau-Duplantierista, joka kehitti aluetta. Kahvikaupasta vaurastuneiden asukkaiden taloissa näkyy uusklassismia ja viktoriaanisia piirteitä. Julkisivut erottuivat vanhoista saviseinätaloista, mutta niiden takana säilyi usein siirtomaa-ajan huonejärjestys. Uusi tyyli tuli siis toisinaan ennen uutta pohjapiirrosta.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "San José, Costa Rica"
+        },
+        {
+          "otsikko": "Juna ylittää kaupunginrajoja",
+          "teksti": "Costa Rican rautatieliikenteessä San José on Keskilaakson lähijunaverkon solmukohta. Radat yhdistävät sitä ympäristön kaupunkeihin, joten raiteilla kulkeminen ei rajoitu pääkaupungin omaan hallintoalueeseen. Rautateillä on ollut maassa myös pidempi tehtävä: ne yhdistivät sisämaan tuotantoa rannikoiden satamiin. Nykyistä lähijunaverkkoa on palautettu käyttöön vanhoja ratoja kunnostamalla. Paikoin junat kulkevat katuja pitkin: rautatie on osa kaupunkitilaa, ei pelkkä erillinen väylä sen ulkopuolella.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "Rail transport in Costa Rica"
+        }
+      ],
+      "matkailijalle": {
+        "kuva": {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        "kappale": "San Josén keskustassa teatteri, museot ja kauppahalli mahtuvat samaan kaupunkikävelyyn. Mercado Central tarjoaa ruokapaikkoja sekä kahvia ja muita ostoksia. Barrio Amónissa nähtävää ovat vanhat asuintalot. Kaupunkiseudun bussit ja lähijunat jatkavat keskustan ulkopuolelle. La Sabanan puisto on vaihtoehto sisätiloissa vietetyn museopäivän jälkeen.",
+        "artikkeli": {
+          "nimi": "Matkailijan San José",
+          "taitto": "opas",
+          "teksti": "Kulje San Joséssa torin, teatterin ja vanhojen asuintalojen kautta.",
+          "nosto": "Keskustan kohteet avaavat sekä kaupungin omaa historiaa että sitä paljon vanhempia kulttuureja.",
+          "jaksot": [
+            {
+              "otsikko": "Perille ja liikkeelle",
+              "teksti": "Juan Santamarían kansainvälinen lentoasema sijaitsee Alajuelassa pääkaupungin ulkopuolella. Sieltä pääsee San Joséen bussilla tai taksilla. Keskustan nähtävyyksien välillä voi kävellä, ja kauemmas liikutaan busseilla tai lähijunalla. Kaupunkiseudun useat bussiterminaalit palvelevat eri suuntia, joten oikea lähtöpaikka kannattaa tarkistaa erikseen.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            },
+            {
+              "otsikko": "Teatterin ympärillä",
+              "teksti": "Kansallisteatteri ja Plaza de la Cultura ovat keskustassa. Teatteriin voi tutustua myös vierailukohteena, ja aukion alla toimii esikolumbiaaninen kultamuseo. Näin samaan kävelyyn mahtuu kaksi eri aikajanaa: kahvitalouden rakennuttama kulttuuritalo ja paljon kaupunkia vanhempia esineitä. Näyttelykäynnin ja esityksen saatavuus kannattaa tarkistaa suoraan kohteesta.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            },
+            {
+              "otsikko": "Taloja ja kokoelmia",
+              "teksti": "Barrio Amónin vanhat asuintalot tarjoavat kävelyaiheen keskustan pohjoispuolella. Kansallismuseo puolestaan toimii Bellavistan entisessä kasarmissa. Museon rakennus ja sen esikolumbiaaniset kokoelmat kertovat eri ajanjaksoista. Kaupungin länsipuolella La Sabanan puisto antaa tilaa ulkoilulle, jos museokierroksen jälkeen kaipaa toisenlaista ympäristöä.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            },
+            {
+              "otsikko": "Mitä täällä syödään",
+              "teksti": "Mercado Centralin sodas-ruokapaikoissa voi tutustua perinteisiin aterioihin. Gallo pinto yhdistää riisin ja mustat pavut; sitä syödään usein aamiaisella. Casado-annokseen kuuluu tavallisesti riisiä, papuja, lihaa ja lisukkeita. Casado tarkoittaa espanjaksi naimisissa olevaa. Kahvi kuuluu torin myytäviin tuotteisiin.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            },
+            {
+              "otsikko": "Milloin kannattaa tulla",
+              "teksti": "San Josén ilmastossa erottuvat kuivempi ja sateisempi kausi. Illat voivat tuntua viileiltä, vaikka päivä olisi lämmin. Sadekaudella museot ja teatteri tarjoavat sisätiloissa nähtävää, mutta päivän kävelysää kannattaa tarkistaa erikseen.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            }
+          ],
+          "matkailu": {
+            "parasta": [
+              {
+                "mita": "Mercado Central",
+                "tahdet": 3,
+                "selite": "Kauppahallin käytävillä yhdistyvät ruokaostokset ja pienet ruokapaikat."
+              },
+              {
+                "mita": "Kansallisteatteri",
+                "tahdet": 3,
+                "selite": "Kahvitalouden aikakauden kulttuuritalo toimii edelleen teatterina."
+              },
+              {
+                "mita": "Kultamuseo",
+                "tahdet": 3,
+                "selite": "Aukion alla esitellään esikolumbiaanisia kultaesineitä."
+              },
+              {
+                "mita": "Barrio Amón",
+                "tahdet": 2,
+                "selite": "Vanhoissa asuintaloissa näkyy kahviyrittäjien vauraus."
+              },
+              {
+                "mita": "La Sabana",
+                "tahdet": 2,
+                "selite": "Keskustan länsipuolella sijaitseva puisto sopii ulkoiluun."
+              }
+            ],
+            "hyvaTietaa": [
+              {
+                "otsikko": "Lentoasema on Alajuelassa",
+                "teksti": "Juan Santamarían lentoasema sijaitsee eri kaupungissa kuin San Josén keskusta."
+              },
+              {
+                "otsikko": "Terminaali riippuu suunnasta",
+                "teksti": "San Joséssa eri bussiyhtiöillä ja reiteillä on eri lähtöpaikkoja."
+              },
+              {
+                "otsikko": "Soda on ruokapaikka",
+                "teksti": "Perinteistä ateriaa etsivä voi suunnata sodan pöytään."
+              }
+            ]
+          },
+          "lahde": "Wikipedia"
+        }
+      }
+    },
+    {
+      "id": "historia",
+      "nimi": "Kaupunki vaihtaa muotoa",
+      "johdanto": "San Joséssa koulu tuli osina merentakaa ja kasarmi vaihtui museoksi. Rakennuksen käyttötarkoitus ei aina pysy samana kuin sen valmistuessa.",
+      "tehtava": {
+        "kysymys": "Mikä nykyinen kulttuuripaikka palveli alun perin sotilaiden majoitusta?",
+        "vaihtoehdot": [
+          "Kansallismuseo",
+          "Kansallisteatteri",
+          "Metallikoulu",
+          "Keskustori"
+        ],
+        "oikea": 0,
+        "fakta": "Bellavistan rakennuksessa oli ensin kasarmi; museotoiminta tuli tiloihin myöhemmin."
+      },
+      "nostot": [
+        {
+          "otsikko": "Koulu tuli Belgiasta",
+          "teksti": "Buenaventura Corralesin koulu tunnetaan San Joséssa metallirakennuksena. Sen rakenneosat valmistettiin Belgiassa ja tuotiin Costa Ricaan koottaviksi 1800-luvun lopulla. Kyseessä on koulurakennus, vaikka tuontiosista ja näyttävästä ulkoasusta voisi odottaa jotain aivan muuta. Valmis talo yhdisti kaukaisen teollisen valmistuksen paikalliseen opetukseen. Metallikoulu on konkreettinen muistutus siitä, että rakennus voi matkustaa ensin osina ja saada vasta perillä oman osoitteensa.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "San José, Costa Rica"
+        },
+        {
+          "otsikko": "Kahvi muuttui näyttämöksi",
+          "teksti": "Kansallisteatteri valmistui San Josén keskustaan 1800-luvun lopulla. Sen rahoitukseen käytettiin kahvin vientiveroa, joten ulkomaille lähtevä maataloustuote osallistui kotikaupungin kulttuuritalon rakentamiseen. Teatterin sisällä Aleardo Villan maalaus yhdistää kahvin ja banaanit samaan allegoriaan. Rakennus palvelee yhä esityksiä, eikä sen tarina pääty vihkiäisiin. Kaupungin kahvitaloudesta jäänyt jälki on täällä katsomo, näyttämö ja kansallisen kulttuurielämän tila.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "National Theatre of Costa Rica"
+        },
+        {
+          "otsikko": "Kasarmi vaihtoi tehtävää",
+          "teksti": "Costa Rican kansallismuseo sijaitsee Bellavistan entisessä kasarmissa San Josén keskustassa. Rakennus oli alun perin sotilaiden majoituspaikka, ja se valmistui 1900-luvun alkupuolella. Museokäyttöön se siirtyi myöhemmin samalla vuosisadalla. Kokoelmiin kuuluu esikolumbiaanisia esineitä sekä maan historiaan liittyvää aineistoa. Rakennuksen oma historia ei siis ole sama asia kuin näyttelyiden aikajana: kasarmi on huomattavasti nuorempi kuin moni sen sisällä säilytettävä esine.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "Museo Nacional de Costa Rica"
+        },
+        {
+          "otsikko": "Aukion alla on kultaa",
+          "teksti": "Esikolumbiaaninen kultamuseo sijaitsee Plaza de la Culturan alla San Josén keskustassa. Museon kokoelmaan kuuluu ennen eurooppalaisten tuloa valmistettuja kultaisia esineitä, kuten eläinhahmoja ja ihmisfiguureja. Museo on Costa Rican keskuspankin hallinnoima. Kulta oli myös vallan tunnus, ja kokoelmassa esitellään aikakauden metallityötä. Katutason alapuolella avautuu näkymä esineisiin, joissa käsityö, eläinaiheet ja eri yhteisöjen elämä kohtaavat.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "Pre-Columbian Gold Museum"
+        }
+      ]
+    }
+  ],
+  "kohdekartta": {
+    "numeroympyrat": true,
+    "esittely": "San Josén historiallinen keskusta ulottuu kauppahallista teatterin ympäristöön ja Barrio Amónin asuintaloihin. Museoiden kokoelmat vievät ajassa kaupungin perustamista kauemmas.",
+    "rajat": {},
+    "kohteet": []
+  },
+  "nahtavyydet": {},
+  "saatiedot": null,
+  "ehdotukset": {
+    "lentoasema": "Juan Santamaría (SJO)",
+    "huomiot": [
+      "C-tekstiluonnos; kuvaroolit odottavat erillistä kuvaputkea.",
+      "Kartta partial: kohdekohtainen koordinaatti- ja tekosuoja-auditointi avoinna; karttarajaus tyhjä, nähtävyysjuttuja ei lisätty arvaamalla.",
+      "Saatiedot null: sääaseman 48/48 primäärivarmennus puuttuu.",
+      "Riippumaton D/E/F-tarkistus sekä hyväksyntä, pelikytkentä ja julkaisu tekemättä."
+    ]
+  }
+}

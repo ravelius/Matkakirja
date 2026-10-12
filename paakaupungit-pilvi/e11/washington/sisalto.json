@@ -1,0 +1,469 @@
+{
+  "$skeema": "matkakirja-paakaupunki/1",
+  "id": "washington",
+  "maa": "USA",
+  "era": "e11",
+  "kaupunki": {
+    "id": "washington",
+    "name": "Washington",
+    "wiki": "Washington",
+    "ambience": "kaupunki",
+    "pallo": {
+      "lat": 38.895,
+      "lon": -77.0367
+    }
+  },
+  "artikkeli": {
+    "intro": "Washington on Yhdysvaltain pääkaupunki Potomac-joen rannalla, omassa liittovaltiopiirissään. Sen keskusta hahmoteltiin paperille ennen kuin leveät kadut rakennettiin. Pierre Charles L’Enfantin suunnitelmassa **ruutukaavan päälle vedettiin viistokatuja**, jotka yhdistivät tärkeitä paikkoja. Niiden väliin jäi aukioita ja tilaa puistoille. Georgetownin vanha satamakaupunginosa oli olemassa jo ennen uutta pääkaupunkia.\n\nIsoisän matkavuonna 1873 Washington oli jo kasvanut hallinnon ja tutkimuksen kaupungiksi. Smithsonianin punainen linnarakennus oli käytössä, mutta **Washington-monumentti oli vielä kesken**. Nykyään National Mallin ympärillä voi siirtyä museosta toiseen ja poiketa kasvitieteelliseen puutarhaan. Kaupungin arki löytyy myös näyttävien rakennusten ulkopuolelta: Georgetownin kanavarannasta, rivitalokaduilta ja paikallista half-smoke-makkaraa tarjoilevista ruokapaikoista.",
+    "teksti": "Washingtonin katuverkko yhdistää kaksi erilaista ajatusta. Numero- ja kirjainkadut muodostavat ruudukon, mutta leveät, osavaltioiden mukaan nimetyt väylät leikkaavat sitä vinosti. Katuosoitteen lopun ilmansuuntalyhenne kertoo, mihin Kapitolista lähtevään kaupunginosaan osoite kuuluu.\n\nGeorgetownissa pääkaupungin suora viiva väistyy vanhan sataman historian tieltä. Old Stone House on 1700-luvun koti- ja työtilojen yhdistelmä. C&O-kanavan reitti puolestaan kertoo ajasta, jolloin tavara kulki veden päällä ja vetovoima saattoi kulkea viereisellä polulla.\n\nKaupungin museoita yhdistää tiedon kerääminen, mutta niiden aiheet eroavat toisistaan. Smithsonianin linnassa museon ja tutkimuksen tilat yhdistyivät, kasvitieteellisessä puutarhassa kokoelma elää ja kongressin kirjastossa kirjat saivat oman näyttävän rakennuksensa. Näitä paikkoja voi lukea myös pääkaupungin erilaisina käsityksinä siitä, mitä kannattaa säilyttää."
+  },
+  "kysymykset": [
+    {
+      "q": "Minkä joen rannalla Washington sijaitsee?",
+      "options": [
+        "Potomacin",
+        "Delawaren",
+        "Hudsonin",
+        "Mississippin"
+      ],
+      "correct": 0,
+      "level": 1,
+      "hint": "Joki erottaa kaupungin Virginian puoleisesta rannasta.",
+      "fact": "Washington rakennettiin Potomac-joen pohjoisrannalle.",
+      "source": "https://en.wikipedia.org/wiki/Washington,_D.C."
+    },
+    {
+      "q": "Mihin ilmansuuntaan Washingtonin osoitteen NE viittaa?",
+      "options": [
+        "Koilliseen",
+        "Luoteeseen",
+        "Kaakkoon",
+        "Lounaaseen"
+      ],
+      "correct": 0,
+      "level": 2,
+      "hint": "Lyhenne kuuluu osoitteeseen yhtä olennaisesti kuin kadunnimi.",
+      "fact": "Kaupungin osoitteiden ilmansuunnat hahmotetaan Kapitolin ympärille.",
+      "source": "https://en.wikipedia.org/wiki/L%27Enfant_Plan"
+    },
+    {
+      "q": "Mistä C&O-kanavan alukset saivat vetovoimaa?",
+      "options": [
+        "Muulien vedosta",
+        "Purjeiden vedosta",
+        "Sähkömoottoreista",
+        "Vesiturbiineista"
+      ],
+      "correct": 0,
+      "level": 3,
+      "hint": "Vetovoima kulki veden vieressä.",
+      "fact": "Muulit vetivät aluksia rantaa pitkin kulkevalla vetotiellä.",
+      "source": "https://en.wikipedia.org/wiki/Chesapeake_and_Ohio_Canal"
+    },
+    {
+      "q": "Mitä Washingtonissa kutsutaan half-smokeksi?",
+      "options": [
+        "Maustettua makkaraa",
+        "Paahdettua leipää",
+        "Paksua tomaattikeittoa",
+        "Savustettua juustoa"
+      ],
+      "correct": 0,
+      "level": 1,
+      "hint": "Annokseen liittyvät sämpylä ja usein chilikastike.",
+      "fact": "Half-smoke on Washingtoniin liittyvä makkara-annos, jota tarjoillaan usein sämpylässä.",
+      "source": "https://en.wikipedia.org/wiki/Half-smoke"
+    },
+    {
+      "q": "Mitä kirjaston ja Kapitolin välisessä tunnelissa kuljetettiin?",
+      "options": [
+        "Kirjoja",
+        "Ruokalähetyksiä",
+        "Puutarhamultaa",
+        "Rakennustiiliä"
+      ],
+      "correct": 0,
+      "level": 3,
+      "hint": "Tunneli palveli rakennusten välistä aineistoliikennettä.",
+      "fact": "Sähköinen kuljetin siirsi niteitä kongressin kirjaston ja Kapitolin välillä.",
+      "source": "https://en.wikipedia.org/wiki/Thomas_Jefferson_Building"
+    }
+  ],
+  "tiedot": [
+    "Old Stone Housea ei tehnyt arvokkaaksi kuuluisa kokous: taloon liitetty tarina Washingtonin tapaamisesta osoittautui vääräksi, mutta vanha koti- ja työtila säilyi.",
+    "Smithsonianin linnan punainen hiekkakivi tuli Marylandin Senecasta. Rakennuksen romaaniset ja goottilaiset muodot erottuvat keskustan pylväikköjen joukosta.",
+    "Kanava-aluksessa saattoi matkustaa myös piano. C&O-kanavan tavaraluettelo ulottuu hiilestä ja jauhoista huonekaluihin ja soittimiin."
+  ],
+  "valokuva": {
+    "tiedosto": "",
+    "lyhyt": "",
+    "selite": "",
+    "lahde": ""
+  },
+  "kaupunkilehti": [
+    {
+      "id": "kaupunki",
+      "nimi": "Washington",
+      "johdanto": "Viistokadut ja puistot tekevät pääkaupungista suunnitellun näyttämön. Georgetownin kanava ja vanha kivitalo kertovat sen rinnalla työn ja asumisen historiasta.",
+      "kansikuvat": [
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        }
+      ],
+      "nostot": [
+        {
+          "otsikko": "Ruutuja ja viistoja viivoja",
+          "teksti": "Washingtonin keskustassa katu voi kulkea pitkään suoraan ja kohdata sitten leveän väylän oudossa kulmassa. Se kuuluu suunnitelmaan. Pierre Charles L’Enfant yhdisti ruudukon viistoihin puistokatuihin, joiden risteyksiin jäi aukioita. Numeroiden mukaan nimetyt kadut kulkevat pohjois–eteläsuunnassa, kirjainkadut itä–länsisuunnassa ja monet viistoväylät kantavat osavaltioiden nimiä. Kapitoli ankkuroi kaupungin suunnat. Osoitteen lopun NW tai SE on siksi olennainen osa osoitetta: pelkkä kadunnimi voi johtaa väärälle puolelle kaupunkia.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "L'Enfant Plan"
+        },
+        {
+          "otsikko": "Talo, jonka väärä tarina pelasti",
+          "teksti": "Georgetownin Old Stone House säilyi osittain siksi, että siihen liitettiin väärä muisto. Paikalliset uskoivat George Washingtonin ja kaupunkisuunnittelija L’Enfantin kokoustaneen talossa, ja oveen ripustettiin päämajaan viittaava kyltti. Todellinen tapaamispaikka oli muualla sijainnut Suterin majatalo. Kansallispuistopalvelun tutkimus oikaisi tarinan, mutta talo oli jo suojassa. Sen arvo ei kadonnut: 1700-luvun kivirakennuksessa yhdistyivät koti ja työnteko, ja myöhemmät asukkaat kasvattivat sitä vaiheittain.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "Old Stone House (Washington, D.C.)"
+        },
+        {
+          "otsikko": "Kiven väri kertoo keskeytyksestä",
+          "teksti": "Washington-monumentin kyljessä erottuva sävyraja on rakennushistoriaa. Obeliskia alettiin tehdä 1800-luvun puolivälissä, mutta rahat loppuivat ja työ pysähtyi pitkäksi aikaa. Isoisän matkavuonna 1873 paikalla seisoi vielä keskeneräinen kivitorni. Kun rakentaminen jatkui, käytettävissä ollut marmori ei ollut aivan saman sävyistä kuin alussa. Alkuperäiseen suunnitelmaan kuului myös pylväikkö, joka jäi toteuttamatta. Nykyisen yksinkertaisen hahmon takana on siis sekä katkennut työmaa että suunnitelma, jota karsittiin matkan varrella.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "Washington Monument"
+        },
+        {
+          "otsikko": "Vetovoima käveli veden vieressä",
+          "teksti": "Georgetownin C&O-kanavan vierellä kulkeva polku on entinen vetotie. Muulit kävelivät rantaa pitkin ja vetivät kanava-aluksia, jotka kuljettivat muun muassa hiiltä Marylandin Cumberlandista kohti Washingtonia. Lasti ei rajoittunut teollisuuden raaka-aineisiin: veneissä matkasi myös huonekaluja, jauhoja ja toisinaan pianoja. Kanava oli siten sekä tavarareitti että työympäristö. Sen vanha vetotie kuuluu nykyään historialliseen kansallispuistoon. Kävelijä seuraa samaa linjaa, jolla vetoeläimet tekivät pitkää kuljetustyötään.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "Chesapeake and Ohio Canal"
+        }
+      ],
+      "matkailijalle": {
+        "kuva": {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        "kappale": "Aloita National Mallin museoista ja varaa Georgetownille oma kävelynsä. Metro auttaa siirtymissä, mutta leveiden puistojen ja katujen äärellä kaupunkia oppii myös kulkemalla jalan. Museoiden kokoelmat ovat hyvin erilaisia, joten valitse omaan kiinnostukseesi sopivat kohteet. Kasvitieteellinen puutarha tarjoaa elävän kokoelman kirjojen ja esineiden rinnalle. U Streetillä paikallinen half-smoke tuo ruokaperinteen mukaan päivään. Smithsonianin linnarakennus on suljettu peruskorjauksen ajaksi.",
+        "artikkeli": {
+          "nimi": "Matkailijan Washington",
+          "taitto": "opas",
+          "teksti": "Yhdistä museopäivään kanavaranta ja tutki, miten erilaiset kaupungit mahtuvat saman pääkaupungin sisään.",
+          "nosto": "National Mall on hyvä lähtökohta museoille, Georgetown vanhan sataman ja kanavan historialle.",
+          "jaksot": [
+            {
+              "otsikko": "Perille ja liikkeelle",
+              "teksti": "Kansainvälisillä lennoilla käytetään Washington Dullesin lentoasemaa, jolta Silver Line -metro jatkaa kaupunkiin. Ronald Reagan Washington National sijaitsee Potomacin vastarannalla Virginiassa ja palvelee pääosin kotimaan liikennettä. Union Station on junamatkan solmukohta. Kaupungissa metro ja kävely täydentävät toisiaan. Tarkista osoitteesta myös ilmansuuntalyhenne: NW ja SE voivat erottaa samannimiset katuosuudet toisistaan.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            },
+            {
+              "otsikko": "Museoita puiston ympärillä",
+              "teksti": "National Mallin laidalla on Smithsonianin museoita, joissa aihe vaihtuu luonnonhistoriasta ilmailuun ja taiteeseen. Perusvierailu Smithsonianin museoihin on maksuton, mutta käyntijärjestelyt ja mahdollinen ennakkovaraus kannattaa tarkistaa valitulta museolta. Smithsonianin linnarakennus on suljettu peruskorjauksen ajaksi. Kasvitieteellinen puutarha Kapitolin lähellä tarjoaa erilaisen kokoelman: siellä näyttelyesineet kasvavat.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            },
+            {
+              "otsikko": "Georgetownin toinen mittakaava",
+              "teksti": "Georgetownissa vanhat talot, kaupat ja ravintolat muodostavat toisenlaisen ympäristön kuin National Mallin leveät näkymät. Old Stone House kertoo 1700-luvun asumisesta ja työnteosta. C&O-kanavan rantareitti puolestaan seuraa entistä vetotietä. Tutki niiden avulla kaupunkia, joka oli olemassa ennen liittovaltion pääkaupunkia. Kanava yhdistää kävelyn tavaraliikenteen historiaan ilman, että jokaisen rakennuksen tarvitsee olla suuri muistomerkki.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            },
+            {
+              "otsikko": "Mitä täällä syödään",
+              "teksti": "Washingtonin oma klassikko on half-smoke, mausteinen ja melko karkeaksi jauhettu makkara, jota tarjoillaan usein sämpylässä sipulin ja chilikastikkeen kanssa. Resepti vaihtelee tekijän mukaan, eikä nimi takaa yhtä lihasekoitusta. U Street tunnetaan Ben’s Chili Bowlista ja paikallisesta ruokahistoriasta. Shaw’n alueella on lisäksi etiopialaisia ravintoloita. Ruokakierroksella pääkaupunki saa aivan eri mittakaavan kuin museosalissa.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            },
+            {
+              "otsikko": "Milloin kannattaa tulla",
+              "teksti": "Kevät ja syksy sopivat pitkiin kävelyihin. Kevään kirsikankukat vetävät kävijöitä Tidal Basinin ympärille, joten vilkkaus kuuluu kukinta-aikaan. Kesä voi olla kuuma ja kostea; museovierailu ja ulkokävely kannattaa lomittaa. Talvella sää on viileä ja lunta voi esiintyä. Kukintaa ei kannata sitoa matkan suunnittelussa yhteen varmaan päivään, sillä ajankohta vaihtelee.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            }
+          ],
+          "matkailu": {
+            "parasta": [
+              {
+                "mita": "National Mallin museot",
+                "tahdet": 3,
+                "selite": "Kokoelmien aihe vaihtuu lyhyen kävelyn aikana luonnontieteestä kulttuuriin."
+              },
+              {
+                "mita": "Georgetown ja C&O-kanava",
+                "tahdet": 3,
+                "selite": "Vanha satamakaupunginosa ja vetotie avaavat tavaraliikenteen historian."
+              },
+              {
+                "mita": "Kasvitieteellinen puutarha",
+                "tahdet": 2,
+                "selite": "Konservatorion kokoelmaa katsotaan elävien kasvien kautta."
+              },
+              {
+                "mita": "Thomas Jefferson -kirjastotalo",
+                "tahdet": 3,
+                "selite": "Kirjastorakennus kertoo tiedon säilyttämisestä ja sen näyttävästä kehyksestä."
+              },
+              {
+                "mita": "U Streetin ruokapaikat",
+                "tahdet": 2,
+                "selite": "Half-smoke tuo kaupungin oman ruokatavan museopäivän rinnalle."
+              }
+            ],
+            "hyvaTietaa": [
+              {
+                "otsikko": "Katuosoitteen loppu ratkaisee",
+                "teksti": "Pidä NW-, NE-, SW- tai SE-lyhenne mukana osoitteessa ja karttahaussa."
+              },
+              {
+                "otsikko": "Maksuttomuus ja varaus",
+                "teksti": "Smithsonianin perusvierailut ovat maksuttomia, mutta tarkista museokohtaiset käyntijärjestelyt."
+              },
+              {
+                "otsikko": "Linnan peruskorjaus",
+                "teksti": "Smithsonianin linnan sisätiloihin ei pääse peruskorjauksen aikana."
+              },
+              {
+                "otsikko": "Lentoasema voi olla osavaltion puolella",
+                "teksti": "Dulles ja Reagan National sijaitsevat Virginiassa, eivät Washingtonin liittovaltiopiirissä."
+              }
+            ]
+          },
+          "lahde": "Wikipedia"
+        }
+      }
+    },
+    {
+      "id": "tiede",
+      "nimi": "Kaupunki, joka kerää tietoa",
+      "johdanto": "Tieto tarvitsee tiloja, kuljetusta ja joskus sopivan kasvihuoneen. Washingtonin museoiden ja kirjaston historia näkyy myös niiden käytännön ratkaisuissa.",
+      "tehtava": {
+        "kysymys": "Mitä National Building Museumin marmorin näköisten salipylväiden sisällä on?",
+        "vaihtoehdot": [
+          "Tiiltä",
+          "Graniittia",
+          "Rautalevyjä",
+          "Puuta"
+        ],
+        "oikea": 0,
+        "fakta": "Suuren salin pylväät saavat marmorimaisen ilmeensä maalista; niiden rakennusmateriaalina on tiili."
+      },
+      "nostot": [
+        {
+          "otsikko": "Linna, jota varten ei tarvittu kuningasta",
+          "teksti": "Smithsonianin punainen linnarakennus syntyi museon ja tutkimuksen käyttöön. James Renwick nuorempi yhdisti siihen romaanisen ja goottilaisen rakentamisen piirteitä, ja kiveksi valittiin Marylandin Senecan punaista hiekkakiveä. Talossa oli myös tutkimuslaitoksen sihteerin perheen asunto. Rakennusta on muutettu monta kertaa: suuri tulipalo tuhosi kirjastoja ja tutkimuspapereita, minkä jälkeen paloturvallisuutta parannettiin. Linnamainen ulkoasu kätkee siis aivan muuta kuin kuninkaallisen palatsin: kokoelmia, työtä ja tiedon haurautta.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "Smithsonian Institution Building"
+        },
+        {
+          "otsikko": "Kasvinäyte saattoi palata mereltä elävänä",
+          "teksti": "Kasvitieteellisen puutarhan historiaan kuuluu Charles Wilkesin 1800-luvun tutkimusmatka Tyynellemerelle. Retkikunta toi Washingtoniin sekä kuivattuja näytteitä että eläviä kasveja. Pitkillä merimatkoilla käytettiin Wardin lasisia kasvatuslaatikoita, joissa kasvit pysyivät elossa kuljetuksen aikana. Nykyisen konservatorion huoneissa jäljitellään erilaisia elinympäristöjä. Viidakkohuoneessa kulkusilta antaa mahdollisuuden katsoa kasvillisuutta myös ylhäältä. Elävä kokoelma tarvitsee siis sekä alkuperän tuntemusta että sille sopivan ympäristön.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "United States Botanic Garden"
+        },
+        {
+          "otsikko": "Kirjat kulkivat omassa tunnelissaan",
+          "teksti": "Kongressin kirjasto sai 1800-luvun lopulla oman suuren rakennuksensa Kapitolin viereen. Niiden välille tehtiin kirjoja varten tunneli, jossa sähköinen kuljetin siirsi niteitä rakennuksesta toiseen. Lukija saattoi siis odottaa teosta, joka oli matkalla maan alla. Thomas Jeffersonin mukaan nimetty kirjastotalo tunnetaan myös koristeellisista julkisivuistaan ja lukusalinsa kupolista. Kirjan matkaan kuului kuitenkin muutakin kuin näyttävä sali: kokoelma tarvitsi arkisen koneiston, joka sai oikean niteen oikeaan paikkaan.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "Thomas Jefferson Building"
+        },
+        {
+          "otsikko": "Marmoria vain pinnalta",
+          "teksti": "National Building Museumin suuren salin pylväät näyttävät marmorilta, mutta ne on tehty tiilestä ja maalattu. Rakennus suunniteltiin alun perin eläkevirastolle, joka hoiti veteraanien ja heidän perheidensä etuuksia. Suunnittelija Montgomery C. Meigs kiinnitti huomiota myös työntekijöiden ja kävijöiden tarpeisiin. Matalat portaat helpottivat ikääntyvien ja vammautuneiden veteraanien kulkua. Sisäpihan kautta johdettiin viileää ilmaa sisään ja lämmintä ulos katon tasalta. Näyttävään taloon sisältyi näin hyvin käytännöllisiä ratkaisuja.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "National Building Museum"
+        }
+      ]
+    }
+  ],
+  "kohdekartta": {
+    "numeroympyrat": true,
+    "esittely": "Washingtonin historia näkyy sekä suurissa kokoelmataloissa että pienessä kanavanvartijan kodissa. Georgetownin vanha kivitalo vie pääkaupunkia edeltävään aikaan, ja National Mallin ympäristö näyttää, miten tietoa ja muistia varten rakennettiin.",
+    "rajat": {
+      "pohjoinen": 38.90856,
+      "etela": 38.8857,
+      "lansi": -77.06456,
+      "ita": -77.0006
+    },
+    "kohteet": [
+      {
+        "nimi": "Georgetownin vanha kivitalo",
+        "lat": 38.90556,
+        "lon": -77.06056
+      },
+      {
+        "nimi": "Smithsonianin linna",
+        "lat": 38.88875,
+        "lon": -77.026
+      },
+      {
+        "nimi": "Washington-monumentti",
+        "lat": 38.88944,
+        "lon": -77.03528
+      },
+      {
+        "nimi": "National Building Museum",
+        "lat": 38.8975,
+        "lon": -77.0181
+      },
+      {
+        "nimi": "Thomas Jefferson -kirjastotalo",
+        "lat": 38.8887,
+        "lon": -77.0046
+      },
+      {
+        "nimi": "Kanavanvartijan talo",
+        "lat": 38.89193,
+        "lon": -77.03975
+      }
+    ]
+  },
+  "nahtavyydet": {
+    "Georgetownin vanha kivitalo": {
+      "aika": "1700-luku",
+      "teksti": "Old Stone House seisoo Georgetownin M Streetillä, liikkeiden ja ravintoloiden keskellä. Sen rakentaminen alkoi vaatimattomasta kodista 1700-luvulla. Rakennusta kasvatettiin vaiheittain: siihen lisättiin keittiö ja ylempiä kerroksia, ja eri aikoina siinä sekä asuttiin että harjoitettiin liiketoimintaa. Pieni talo näyttää näin pääkaupungin historiasta puolen, jota suuret hallintorakennukset eivät tavoita. Isoisän matkavuonna 1873 se oli jo vanha rakennus.\n\nTaloon liitettiin pitkään väärä tarina George Washingtonin ja L’Enfantin tapaamisesta. Kansallispuistopalvelun tutkimus osoitti kokousten tapahtuneen muualla. Talo kuitenkin säilyi, ja se kunnostettiin kotimuseoksi. Sen historiallinen arvo on tavallisen asumisen ja työnteon tiloissa, vaikka kuuluisan tapaamisen osoite osoittautui toiseksi.",
+      "kuvat": [
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        }
+      ],
+      "lahde": "Wikipedia"
+    },
+    "Smithsonianin linna": {
+      "aika": "1800-luvun puoliväli",
+      "teksti": "Smithsonianin linnarakennus on punaisesta hiekkakivestä rakennettu museon ja tutkimuslaitoksen talo National Mallin laidalla. Sen suunnitteli James Renwick nuorempi, joka käytti romaanisen ja goottilaisen rakentamisen muotoja. Kivi saatiin Marylandin Senecasta. Alun perin taloon sijoittui myös laitoksen sihteerin perheen asunto: tiedon kerääminen, hallinto ja koti elivät saman katon alla.\n\nLinna oli valmis jo ennen isoisän matkavuotta 1873. Sitä oli myös ehditty korjata suuren tulipalon jälkeen; palo tuhosi muun muassa kirjastoja ja tutkimuspapereita. Rakennuksen historia ei siis ole vain julkisivun historiaa, vaan myös kertomus kokoelmien suojaamisesta. Nykyinen peruskorjaus pitää sisätilat suljettuina, joten museokierrosta ei pidä rakentaa linnassa käymisen varaan.",
+      "kuvat": [
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        }
+      ],
+      "lahde": "Wikipedia"
+    },
+    "Washington-monumentti": {
+      "aika": "1800-luvun jälkipuoli",
+      "teksti": "Washington-monumentti on George Washingtonin muistoksi tehty kivinen obeliski National Mallilla. Robert Millsin alkuperäisessä suunnitelmassa tornin ympärille kuului pylväikkö, mutta sitä ei toteutettu. Rakentaminen alkoi yksityisen muistomerkkiyhdistyksen hankkeena, ja työn loppuvaiheista vastasivat liittovaltio ja armeijan insinöörit.\n\nIsoisän matkavuonna 1873 torni oli vielä kesken. Työ oli pysähtynyt rahoitusvaikeuksiin, ja pitkä tauko näkyy edelleen kivien sävyissä. Uutta marmoria haettiin eri louhoksista, eikä se sopinut täysin yhteen vanhan kanssa. Myös perustuksia vahvistettiin ennen korkeuden kasvattamista. Nykyisen selkeän hahmon sisään mahtuu siten monta rakennusvaihetta: ensin kunnianhimoinen suunnitelma, sitten keskeytys ja lopulta pelkistetty toteutus.",
+      "kuvat": [
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        }
+      ],
+      "lahde": "Wikipedia"
+    },
+    "National Building Museum": {
+      "aika": "1800-luvun loppupuoli",
+      "teksti": "National Building Museum toimii entisessä eläkeviraston talossa Judiciary Squaren lähellä. Montgomery C. Meigs suunnitteli punatiilisen rakennuksen, joka ottaa mallia Italian renessanssipalatsien arkkitehtuurista. Suuri keskushalli ja sen korkeat pylväät tekevät sisätilasta näyttävän, mutta pylväiden marmorilta näyttävä pinta on maalausta: niiden sisällä on tiiltä.\n\nVirastossa hoidettiin veteraanien ja heidän perheidensä etuuksia, ja käytännön tarpeet näkyivät rakennuksessa. Portaista tehtiin matalia kulkemisen helpottamiseksi. Viileää ilmaa otettiin sisään sisäpihan alatasolta, ja lämmintä johdettiin ulos katon kautta. Nykyinen museo käsittelee rakentamista ja suunnittelua tilassa, joka on itsekin niiden historian esimerkki. Talo kuuluu 1800-luvun loppupuolen kaupungin kasvuun.",
+      "kuvat": [
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        }
+      ],
+      "lahde": "Wikipedia"
+    },
+    "Thomas Jefferson -kirjastotalo": {
+      "aika": "1800-luvun loppupuoli",
+      "teksti": "Kongressin kirjaston Thomas Jefferson -rakennus sijaitsee Kapitolin vieressä. Kirjaston kasvavat kokoelmat saivat siinä oman talonsa 1800-luvun lopulla. Julkisivu ja koristeelliset sisätilat kuuluvat Beaux-Arts- ja klassistiseen arkkitehtuuriin. Suunnittelutyöhön osallistui useita arkkitehtejä; Paul J. Pelz oli keskeinen rakennuksen hahmon kehittäjä.\n\nKirjastotaloa ei rakennettu vain katsottavaksi. Se yhdistettiin Kapitoliin kirjatunnelilla, jossa sähköinen kuljetin siirsi niteitä. Pinnan alla oli siis aineiston kuljetusjärjestelmä, jonka tehtävä oli saada tarvittava kirja lukijan luo. Kupolillinen lukusali ja näyttävä sisäänkäynti kertovat tiedolle annetusta arvosta, mutta tunnelin historia muistuttaa myös kirjaston arkisesta toiminnasta. Rakennuksen nykyinen nimi kunnioittaa Thomas Jeffersonia.",
+      "kuvat": [
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        }
+      ],
+      "lahde": "Wikipedia"
+    },
+    "Kanavanvartijan talo": {
+      "aika": "1800-luku",
+      "teksti": "Kanavanvartijan talo on National Mallin länsilaidan pieni rakennus Constitution Avenuen ja 17th Streetin kulmassa. Se kuului C&O-kanavan Washingtonin haaraan. Georgetownista jatkettu kanava liittyi Tiber Creekin suunnalla Washington City Canaliin, joka kulki nykyisen National Mallin alueen läpi kohti Kapitolia. Talo auttaa paikantamaan vesireitin maisemassa, jossa kanava ei enää muodosta kaupungin näkyvää selkärankaa.\n\nC&O-kanavan alukset kuljettivat hiiltä ja monenlaisia muita tavaroita Cumberlandin ja Washingtonin välillä. Niitä vedettiin muuleilla rantapolkua pitkin, ja sulut rytmittivät kulkua eri vedenkorkeuksien välillä. Kanavanvartijan taloa voi näin lukea osana kuljetusjärjestelmää, johon kuuluivat veden lisäksi myös reitti, eläimet ja ihmisten työ. Se on suuren pääkaupungin pieni muistuma tavaraliikenteen ajasta.",
+      "kuvat": [
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        }
+      ],
+      "lahde": "Wikipedia"
+    }
+  },
+  "saatiedot": null,
+  "ehdotukset": {
+    "lentoasema": "Washington Dulles International Airport (IAD)",
+    "huomiot": [
+      "C-tekstiluonnos. Kuvat odottavat erillistä kuvaputkea; kaikkien kuvaroolien tiedosto, lyhyt, selite ja lahde ovat tyhjiä.",
+      "Sääauditoinnin 48/48 primäärivarmennus on avoin; saatiedot:null eikä ilmastolukuja.",
+      "Kohdekartta sisältää vain omasta paikka-artikkelista varmennetut pisteet. D/E/F ja pelikytkentä ovat avoinna.",
+      "Kapitoli jätetty kartalta pois: myöhempien rakennusosien suojattujen teosten rajaus avoin. Kirjastotalon, rakennusmuseon ja kanavanvartijan talon tarkka 1873-aikataso tarvitsee toisen riippumattoman lähteen; kohdejutut käyttävät vuosisatailmaisua."
+    ]
+  }
+}

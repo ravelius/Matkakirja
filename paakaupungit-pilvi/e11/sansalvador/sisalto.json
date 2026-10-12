@@ -1,0 +1,381 @@
+{
+  "$skeema": "matkakirja-paakaupunki/1",
+  "id": "sansalvador",
+  "maa": "SLV",
+  "era": "e11",
+  "kaupunki": {
+    "id": "sansalvador",
+    "name": "San Salvador",
+    "wiki": "San Salvador",
+    "ambience": "kaupunki",
+    "pallo": {
+      "lat": 13.6976,
+      "lon": -89.1912
+    }
+  },
+  "artikkeli": {
+    "intro": "San Salvador on El Salvadorin pääkaupunki, jonka laidalta alkaa **tulivuoren rinne**. Sen länsiosat ulottuvat San Salvadorin tulivuorelle, kun taas idässä avautuu Ilopangon kalderajärvi. Laaksossa on aukioita ja hallintotaloja, mutta myös museoita ja yliopiston pääkampus. Espanjalaiskauden kaupunki vaihtoi sijaintia ennen asettumistaan nykyiseen historialliseen ytimeen.\n\n**Keskustan ikää ei voi lukea pelkästä julkisivusta**, sillä maanjäristysten jälkeen samoille paikoille on rakennettu uudelleen. Isoisän matkavuoden 1873 kaupunkia on siksi etsittävä myös paikkojen historiasta. Nykyinen kansallispalatsi on 1900-luvun alusta, ja sen rakentamista rahoitettiin vientikahvista kerätyllä verolla. Pupuseríassa taas maissitaikinan sisään suljettu täyte kertoo kaupungista aivan toisella tavalla. Elokuun Fiestas Agostinas tuo keskustan julkisiin tiloihin kaupungin omat juhlat.",
+    "teksti": "San Salvadorin historia ulottuu espanjalaiskauden kaupunkia kauemmas: lähistöllä oli pipilien Cuzcatlán. Espanjalaisten perustama kaupunki siirrettiin ennen nykyistä sijaintiaan. Historiallinen keskusta on näin vanha paikka, jonka rakennuskanta on muuttunut moneen kertaan.\n\nKansallispalatsin nykyinen rakennus korvasi tulipalossa tuhoutuneen edeltäjän. Sen rakentamisessa käytettiin vientikahvista kerättyä veroa ja Euroopasta tuotuja aineksia. Värien mukaan nimetyt salit ovat palvelleet eri hallinnollisia tehtäviä, sininen sali parlamentin kokouspaikkana.\n\nKaupungin ympärillä luonto kertoo toisenlaisesta muutoksesta. Boquerónin kraatterijärvi katosi 1900-luvun alun purkauksessa, ja pohjalle syntyi Boqueroncito-kartio. Idän Ilopangossa taas tuliperäinen allas on järvi. Maisemaan kuuluvat sekä vesi että sitä edeltäneet ja seuranneet purkaukset."
+  },
+  "kysymykset": [
+    {
+      "q": "Minkä maan pääkaupunki San Salvador on?",
+      "options": [
+        "El Salvadorin",
+        "Hondurasin",
+        "Nicaraguan",
+        "Guatemalan"
+      ],
+      "correct": 0,
+      "level": 1,
+      "hint": "Maan nimi muistuttaa kaupungin nimeä.",
+      "fact": "San Salvador on El Salvadorin pääkaupunki.",
+      "source": "https://en.wikipedia.org/wiki/San_Salvador"
+    },
+    {
+      "q": "Missä pupusan täyte on ennen paistamista?",
+      "options": [
+        "Taikinan sisällä",
+        "Taikinan pinnalla",
+        "Kastikkeen seassa",
+        "Erillisessä kulhossa"
+      ],
+      "correct": 0,
+      "level": 1,
+      "hint": "Valmis pupusa näyttää paksulta pieneltä leivältä.",
+      "fact": "Pupusassa esimerkiksi juusto tai pavut suljetaan taikinan sisään.",
+      "source": "https://en.wikipedia.org/wiki/Pupusa"
+    },
+    {
+      "q": "Minkä vientituotteen verolla kansallispalatsia rahoitettiin?",
+      "options": [
+        "Kahvin",
+        "Kaakaon",
+        "Banaanien",
+        "Puuvillan"
+      ],
+      "correct": 0,
+      "level": 2,
+      "hint": "Kasvia viljellään myös El Salvadorin ylängöillä.",
+      "fact": "Palatsin rakentamista varten kerättiin vientikahvista veroa.",
+      "source": "https://en.wikipedia.org/wiki/National_Palace_(El_Salvador)"
+    },
+    {
+      "q": "Millaiseen altaaseen Ilopangon järvi on muodostunut?",
+      "options": [
+        "Tulivuoren kalderaan",
+        "Jäätikön kuluttamaan",
+        "Joen vanhaan uomaan",
+        "Ihmisen patoamaan"
+      ],
+      "correct": 0,
+      "level": 3,
+      "hint": "Altaan sisälle on muodostunut myöhemmin laavakupoleita.",
+      "fact": "Ilopango on tuliperäisen kalderan täyttävä järvi San Salvadorin itäpuolella.",
+      "source": "https://en.wikipedia.org/wiki/Lake_Ilopango"
+    },
+    {
+      "q": "Mikä Boqueroncito on?",
+      "options": [
+        "Pieni tuliperäinen kartio",
+        "Vanha vedenalainen kaupunki",
+        "Suuri vuoristojäätikkö",
+        "Korkea keinotekoinen pato"
+      ],
+      "correct": 0,
+      "level": 3,
+      "hint": "Se syntyi Boquerónin sisälle purkauksen yhteydessä.",
+      "fact": "Boqueroncito on pieni kartio suuremman Boquerón-kraatterin pohjalla.",
+      "source": "https://en.wikipedia.org/wiki/San_Salvador_(volcano)"
+    }
+  ],
+  "tiedot": [
+    "Kansallispalatsin sininen sali palveli aikanaan parlamentin kokouspaikkana.",
+    "Pupusan taikina voi olla riisijauhoa, vaikka maissitaikina on tavallinen.",
+    "Saburo Hirao -puiston luonnonhistorialliseen museoon kuuluu mastodontin ja jättiläislaiskiaisen fossiileja."
+  ],
+  "valokuva": {
+    "tiedosto": "",
+    "lyhyt": "",
+    "selite": "",
+    "lahde": ""
+  },
+  "kaupunkilehti": [
+    {
+      "id": "kaupunki",
+      "nimi": "San Salvador",
+      "johdanto": "Kahvilla rahoitettu palatsi ja paistolevyllä kypsyvä pupusa kertovat samasta pääkaupungista eri mittakaavoissa.",
+      "kansikuvat": [
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        }
+      ],
+      "nostot": [
+        {
+          "otsikko": "Kaupunki vaihtoi paikkaa",
+          "teksti": "San Salvadorin nimi on kulkenut paikasta toiseen. Espanjalaiskauden kaupunki ei aluksi sijainnut nykyisessä keskustassa, vaan asutus siirrettiin ennen kuin se vakiintui tähän laaksoon. Lähistöllä oli jo pipilien Cuzcatlán, joten alueen historia ei ala espanjalaisten tulosta. Nykyinen historiallinen ydin on ollut kaupungin paikkana 1500-luvulta asti, mutta sen rakennukset eivät ole kaikki samalta ajalta. Maanjäristykset ovat tuhonneet vanhaa rakennuskantaa, ja samoille seuduille on rakennettu uudelleen.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "San Salvador"
+        },
+        {
+          "otsikko": "Kahvi muuttui palatsiksi",
+          "teksti": "Kansallispalatsin rakentamiseen osallistui myös vientikahvi: sen viennistä perittiin hanketta varten veroa. Rakennusaineita tuotiin muun muassa Saksasta, Italiasta ja Belgiasta, joten pääkaupungin hallintotaloon liittyi sekä paikallista viljelyä että eurooppalaista teollisuutta. Palatsin pääsaleja kutsutaan värien mukaan. Sinisessä salissa kokoontui aikanaan maan parlamentti; punaisessa järjestettiin vastaanottoja. Nykyinen 1900-luvun alun palatsi korvasi tulipalossa tuhoutuneen vanhemman rakennuksen.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "National Palace (El Salvador)"
+        },
+        {
+          "otsikko": "Täyte pysyy piilossa",
+          "teksti": "Pupusa näyttää paksulta pieneltä leivältä, mutta juusto, pavut tai chicharrón-lihatäyte suljetaan taikinan sisään ennen paistamista. Maissitaikina on tavallinen, mutta myös riisijauhoista tehdään pupusia. Paistopintana toimii comal, tasainen levy tai pannu. Lisukkeiksi tuodaan curtido-kaalisalaattia ja tomaattikastiketta. Taikinan sisältä voi löytyä myös lorocon kukannuppuja. San Salvadorin pupuseríassa ruoan nimi antaa samalla paikan nimen: kyse on juuri pupusien valmistukseen erikoistuneesta ruokapaikasta.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "Pupusa"
+        },
+        {
+          "otsikko": "Elokuu kuuluu kaupungin nimelle",
+          "teksti": "Fiestas Agostinas, elokuun juhlat, yhdistää San Salvadorin nimen sen omaan juhlakalenteriin. Juhlaa vietetään Kristuksen, kaupungin uskonnollisen nimikkohahmon kunniaksi. Kulkueet kulkevat kaupungissa, ja Plaza Gerardo Barrios kuuluu niiden kokoontumispaikkoihin. Sama aukio on tavallisena päivänä osa historiallista keskustaa; juhlan aikaan siitä tulee yhteisen tapahtuman paikka. Kaupungin tuntemiseen kuuluu siis muutakin kuin rakennusten ikä: myös se, milloin asukkaat täyttävät niiden väliset julkiset tilat.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "San Salvador"
+        }
+      ],
+      "matkailijalle": {
+        "kuva": {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        "kappale": "San Salvadorin päivä voi alkaa historiallisen keskustan aukioilta ja jatkua museoon. Kansallispalatsissa paikan historia ulottuu nykyistä rakennusta kauemmas. Zona Rosan MUNA esittelee asutuksen ja työn historiaa. Ruokatauolla pupusería tarjoaa taikinan sisään täytetyn pupusan. Tulivuori ja Ilopango sopivat erillisiksi seudun retkiksi. Matkailu vaatii varovaisuutta: käytä ennalta varattuja luotettavia kuljetuksia.",
+        "artikkeli": {
+          "nimi": "Matkailijan San Salvador",
+          "taitto": "opas",
+          "teksti": "Tutustu pääkaupunkiin aukioiden, museon ja pupuserían kautta.",
+          "nosto": "Historiallinen keskusta ja lähiseudun tulivuorimaisema ansaitsevat omat retkensä.",
+          "jaksot": [
+            {
+              "otsikko": "Perille ja liikkeelle",
+              "teksti": "San Óscar Arnulfo Romero y Galdámezin kansainvälinen lentoasema, SAL, sijaitsee San Luis Talpassa pääkaupungin eteläpuolella. Varaa kuljetus etukäteen luotettavalta yritykseltä. Myös kaupunkisiirtymiin kannattaa käyttää ennalta varattua taksia; paikallisbussien käytössä on turvallisuusriskejä. Sovi taksimatkan hinta ennen kyytiin nousemista. Keskustan kohteet ja Zona Rosan museot ovat eri alueilla, joten suunnittele siirtymät nähtävyyksien mukaan.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            },
+            {
+              "otsikko": "Aukioilta palatsiin",
+              "teksti": "Aloita historiallisesta keskustasta, jossa Plaza Gerardo Barrios ja kansallispalatsi kertovat kaupungin hallinnollisesta historiasta. Palatsin nykyinen rakennus on 1900-luvun alusta. Sen värien mukaan nimetyillä saleilla oli eri tehtäviä; sinisessä kokoontui parlamentti. Kun katsot vanhaa keskustaa, erota toisistaan paikan pitkä historia ja siinä nyt seisovan rakennuksen ikä.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            },
+            {
+              "otsikko": "Ihmiset ja menneet eläimet",
+              "teksti": "MUNA, Museo Nacional de Antropología David J. Guzmán, käsittelee asutusta, maanviljelyä, käsitöitä, kauppaa ja uskontoa. Se sopii kaupungin ympärillä olevan maan historiaan tutustumiseen. Saburo Hirao -puiston luonnonhistoriallinen museo vaihtaa näkökulman eläimiin: sen kokoelmissa on nisäkäsfossiileja, muun muassa mastodontti ja jättiläislaiskiainen. Tarkista käyntimahdollisuus ennen lähtöä.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            },
+            {
+              "otsikko": "Mitä täällä syödään",
+              "teksti": "Tilaa pupuseríassa pupusa ja valitse täyte: esimerkiksi juustoa, papuja tai chicharrónia. Taikina voi olla maissia tai riisiä, ja täyte suljetaan sen sisään. Curtido-kaalisalaatti ja tomaattikastike tulevat rinnalle. Los Planes de Renderos on seudullinen retkikohde, jossa voi yhdistää ruokailun San Salvadorin näkymiin; se ei ole keskustan kävelyreitin jatke.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            },
+            {
+              "otsikko": "Milloin kannattaa tulla",
+              "teksti": "San Salvadorin trooppisessa ilmastossa on kuiva ja sateinen kausi. Varaa ulkona liikkumiseen sadevaruste ja seuraa matkan ajankohdan paikallista ennustetta. Elokuun Fiestas Agostinas on kaupungin oma juhla-aika: keskustaan liittyy silloin kulkueita ja yhteisiä tapahtumia. Tulivuorelle tai Ilopangon suuntaan tehty retki kannattaa suunnitella omana päivänään kaupunkikierroksen rinnalle.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            }
+          ],
+          "matkailu": {
+            "parasta": [
+              {
+                "mita": "Historiallinen keskusta",
+                "tahdet": 3,
+                "selite": "Aukioiden ja palatsin historia kertoo uudelleen rakennetusta pääkaupungista."
+              },
+              {
+                "mita": "Kansallispalatsi",
+                "tahdet": 2,
+                "selite": "Vientikahvi oli osa hallintotalon rahoitusta."
+              },
+              {
+                "mita": "Pupusería",
+                "tahdet": 3,
+                "selite": "Täytetty maissi- tai riisitaikinalettu on paikallinen ruokaelämys."
+              },
+              {
+                "mita": "MUNA",
+                "tahdet": 2,
+                "selite": "Antropologinen museo avaa asutuksen, työn ja käsityön historiaa."
+              },
+              {
+                "mita": "San Salvadorin tulivuori",
+                "tahdet": 2,
+                "selite": "Boquerónin sisällä on pienempi Boqueroncito-kartio."
+              }
+            ],
+            "hyvaTietaa": [
+              {
+                "otsikko": "Siirtymät",
+                "teksti": "Suunnittele kuljetus eri museoalueiden ja keskustan välille."
+              },
+              {
+                "otsikko": "Taksimatka",
+                "teksti": "Sovi hinta ennen kyytiin nousemista."
+              },
+              {
+                "otsikko": "Retkikohteet",
+                "teksti": "Los Planes de Renderos ja Ilopango ovat pääkaupunkiseudun retkiä."
+              },
+              {
+                "otsikko": "Turvallisuus",
+                "teksti": "Matkailu vaatii varovaisuutta; käytä ennalta varattua, luotettavan yrityksen taksia."
+              }
+            ]
+          },
+          "lahde": "Wikipedia"
+        }
+      }
+    },
+    {
+      "id": "tiede",
+      "nimi": "Kraatterista kampukselle",
+      "johdanto": "Tulivuori, järvi, fossiilit ja yliopisto avaavat pääkaupungin ympäriltä erilaisia aikajänteitä.",
+      "tehtava": {
+        "kysymys": "Mihin eläinryhmään museon mastodontti ja jättiläislaiskiainen kuuluvat?",
+        "vaihtoehdot": [
+          "Nisäkkäisiin",
+          "Matelijoihin",
+          "Niveljalkaisiin",
+          "Sammakkoeläimiin"
+        ],
+        "oikea": 0,
+        "fakta": "Molemmat ovat nisäkkäitä, joiden fossiileja kuuluu museon kokoelmiin."
+      },
+      "nostot": [
+        {
+          "otsikko": "Suuren suun sisällä pieni kartio",
+          "teksti": "Boquerón tarkoittaa suurta suuta, ja tulivuoren kraatterin pohjalla on vielä pienempi nimi: Boqueroncito. Tämä pieni kartio syntyi 1900-luvun alun purkauksessa. Samalla kraatterissa aiemmin ollut järvi katosi. Tulivuori ei siis ole yksi muuttumaton maiseman muoto, vaan samalla paikalla voi olla vuorotellen vettä ja uutta tuliperäistä ainesta. San Salvador levittäytyy sen rinteille, ja El Picacho kuuluu saman tulivuorikokonaisuuden huippuihin. Kaupungin vieressä voi lukea luonnonhistoriaa päällekkäisistä muodoista.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "San Salvador (volcano)"
+        },
+        {
+          "otsikko": "Järven pohjalta nousi saaria",
+          "teksti": "San Salvadorin itäpuolella Ilopangon järvi täyttää tuliperäisen kalderan. Laaja vesiallas on osa tulivuoren rakennetta. Myöhemmissä purkauksissa järven sisälle ja rannoille on muodostunut laavakupoleita. Yksi niistä nousi 1800-luvun lopulla vedenpintaan ja muodosti Islas Quemadas -saaret. Järven mahdollinen ylimääräinen vesi pääsee Jiboa-joen kautta Tyynellemerelle. Täällä sama paikka kuuluu sekä veden että tulivuorten maantieteeseen: pinnalla on järvi, mutta sen altaan ja saarten historia on tuliperäinen.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "Lake Ilopango"
+        },
+        {
+          "otsikko": "Laiskiainen toisesta mittakaavasta",
+          "teksti": "Saburo Hirao -puiston luonnonhistoriallisessa museossa kaupungin lähimaisema saa pitkän aikajänteen. Kokoelmiin kuuluu nisäkäsfossiileja, muun muassa mastodontti ja jättiläislaiskiainen. Molemmat ovat nisäkkäitä, vaikka nimet voivat kuulostaa sadun eläimiltä. Museo esittelee nisäkkäiden fossiileja, ja jättiläislaiskiainen tuo tutun eläinnimen aivan toiseen mittakaavaan. Puistoon tehty retki voi siis vaihtaa aihetta elävistä puista menneisiin eläimiin ilman että tarvitsee lähteä pääkaupungista.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "San Salvador"
+        },
+        {
+          "otsikko": "Kampus kokoaa monta tapaa kysyä",
+          "teksti": "Universidad de El Salvador, maan kansallinen yliopisto, pitää pääkampustaan San Salvadorissa. Sen juuret ovat 1800-luvulla, mutta se ei ole vain menneisyyden laitos. Kampuksella opetetaan muun muassa luonnontieteitä ja matematiikkaa, maataloustiedettä, lääketiedettä sekä kemiaa ja farmasiaa. Saman yliopiston aluekampuksia on myös muualla maassa. Pääkaupungin yhteys ympäröivään El Salvadoriin näkyy näin tutkimuksen ja opetuksen verkostona: kaupunkia voi katsoa myös tiedon kokoontumispaikkana.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "University of El Salvador"
+        }
+      ]
+    }
+  ],
+  "kohdekartta": {
+    "numeroympyrat": true,
+    "esittely": "San Salvador ulottuu luoteessa tulivuoren rinteille. Boquerónin suuren kraatterin sisällä on pienempi Boqueroncito-kartio.",
+    "rajat": {
+      "pohjoinen": 13.738,
+      "etela": 13.73,
+      "lansi": -89.298,
+      "ita": -89.29
+    },
+    "kohteet": [
+      {
+        "nimi": "San Salvadorin tulivuori",
+        "tyyppi": "luonto",
+        "lat": 13.734,
+        "lon": -89.294
+      }
+    ]
+  },
+  "nahtavyydet": {
+    "San Salvadorin tulivuori": {
+      "aika": "Tuliperäinen maisema",
+      "teksti": "San Salvadorin tulivuori kohoaa kaupungin luoteispuolella, ja pääkaupungin länsiosat levittäytyvät sen rinteille. Samaan tulivuorikokonaisuuteen kuuluu El Picachon huippu. Boquerón on suuren kraatterin nimi; se tarkoittaa suurta suuta. Kraatterin pohjalla näkyvä pienempi kartio tunnetaan nimellä Boqueroncito.\n\nIsoisän matkavuonna 1873 nykyistä pientä kartiota ei vielä ollut. Se syntyi vasta 1900-luvun alun purkauksessa, jolloin aiempi kraatterijärvi katosi. Nykyinen kraatterimaisema ei siis ole sellaisenaan sama kuin 1800-luvun maisema, vaikka tulivuori on sama paikka.\n\nBoquerónin ympäristöön pääsee El Boquerónin tietä ja kansallispuiston kautta. Retkellä kraatteri ja rinteet ovat eri osia samasta tulivuoresta. Tarkista puiston paikalliset käyntiohjeet ennen lähtöä.",
+      "kuvat": [
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        }
+      ],
+      "lahde": "Wikipedia"
+    }
+  },
+  "saatiedot": null,
+  "ehdotukset": {
+    "lentoasema": "San Óscar Arnulfo Romero y Galdámez (SAL)",
+    "huomiot": [
+      "C-tekstiluonnos: A-karttapohja partial, B-kuvat puuttuvat ja kaikki kuvakentät tyhjiä.",
+      "Kartan yksi varmennettu luontokohde ei saavuta historiallisen keskustan 6–8 kohteen porttia.",
+      "saatiedot:null; 48/48 primäärivarmennus ja sääauditointi avoinna.",
+      "Väestöluku jätetty pois eri aluejakojen vuoksi.",
+      "D/E/F, rakennuskohteiden tekijäportti, käyntitietojen ja turvallisuuden lopputarkistus avoinna."
+    ]
+  }
+}
