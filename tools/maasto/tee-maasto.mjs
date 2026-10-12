@@ -7,7 +7,13 @@
  *   node tools/maasto/tee-maasto.mjs [--dem <glo30>] [--dem90 <glo90>] --ulos <kansio>
  *        [--alue -6,41,10,52] [--tasot 0-11] [--ruudukko 65] [--osa i/n]
  *        [--maailma 6] [--vain-maa-alkaen 7] [--glo30-kynnys 0.001]
- *        [--luettelo] [--lista]
+ *        [--luettelo] [--lista] [--mapterhorn <raakakansio>] [--vanhempi <url>]
+ *
+ * VUORISTOKERROS (Karttaseppä 12.10.2026, PT erä 184): `--mapterhorn` lukee
+ * Mapterhornin laserkeilatun maanpinnan raakalaatoista (mapterhorn.mjs) ja
+ * käyttää Copernicusta varalla. `--vanhempi ../2026-09-24-maailma/` kirjoittaa
+ * layer.jsoniin parentUrl:n, jolloin kerros sisältää vain syvät tasot
+ * (esim. --tasot 13-15) ja Cesium hakee matalammat maailmanmaastosta.
  *
  * --maailma Z (korjaus 23.9.2026): tasot 0…Z tehdään koko maailmalle
  * (DEM:n ulkopuolella 0 m), jotta Cesium ei ylinäytteistä alueen
@@ -56,6 +62,7 @@ import { gzipSync } from 'node:zlib';
 import { avaaGeotiff } from './geotiff.mjs';
 import { rtinVerkko, rtinVirheet } from './rtin.mjs';
 import { koodaaLaatta } from './quantized-mesh.mjs';
+import { mapterhornLahde, MAPTERHORN_MAININTA } from './mapterhorn.mjs';
 
 export const CESIUM_TASO0_VIRHE = (6378137 * 2 * Math.PI * 0.25) / (65 * 2);
 const MAAN_SADE = 6371008.8;
@@ -356,7 +363,7 @@ export function tasonSaatavuus(suunnitelma, onRuutu) {
 }
 
 export function kerroksenKuvaus({
-  tasot, alue, versio, maailma = -1, vainMaaAlkaen = Infinity, onRuutu = null, n = 65, maininta = LAHDEMAININTA,
+  tasot, alue, versio, maailma = -1, vainMaaAlkaen = Infinity, onRuutu = null, n = 65, maininta = LAHDEMAININTA, vanhempi = null,
 }) {
   const available = [];
   for (let z = 0; z <= tasot[1]; z += 1) {
@@ -370,6 +377,12 @@ export function kerroksenKuvaus({
     scheme: 'tms', tiles: [`{z}/{x}/{y}.terrain?v=${versio}`], projection: 'EPSG:4326',
     bounds: [-180, -90, 180, 90], minzoom: 0, maxzoom: tasot[1], extensions: ['octvertexnormals'],
     attribution: maininta, available,
+    /*
+     * VANHEMPI KERROS (vuoristokerros 12.10.2026): tasot alle tasot[0] ovat
+     * tyhjiä, ja Cesium (cesium-native LayerJsonTerrainLoader) hakee ne
+     * parentUrl-kerroksesta. Polku suhteellisena layer.jsoniin nähden.
+     */
+    ...(vanhempi ? { parentUrl: vanhempi } : {}),
   };
 }
 
@@ -397,6 +410,8 @@ export function lueAsetukset(argv) {
     maailma: Number(arvo('maailma', -1)),
     vainMaaAlkaen: Number(arvo('vain-maa-alkaen', Infinity)),
     kynnys: Number(arvo('glo30-kynnys', GLO30_KYNNYS)),
+    mapterhornKansio: arvo('mapterhorn'),
+    vanhempi: arvo('vanhempi', null),
     luettelo: argv.includes('--luettelo'),
     lista: argv.includes('--lista'),
   };
@@ -406,14 +421,20 @@ export function lueAsetukset(argv) {
  * DEM-lähde asetuksista. Ilman --dem90:tä pelkkä GLO-30-hakemisto kuten
  * Ranska-ajossa (sama koodipolku, tavu tavulta sama tulos).
  */
-export function avaaLahteet({ demKansio, dem90Kansio, kynnys }) {
+export function avaaLahteet({ demKansio, dem90Kansio, kynnys, mapterhornKansio }) {
   const glo30 = demKansio ? demHakemisto(demKansio, avaaGeotiff, { tunnus: '10' }) : null;
-  if (!dem90Kansio) return { dem: glo30, maininta: LAHDEMAININTA };
-  const glo90 = demHakemisto(dem90Kansio, avaaGeotiff, { tunnus: '30' });
-  return {
-    dem: kaksiLahdetta({ glo30, glo90, kynnys }),
-    maininta: glo30 ? `${LAHDEMAININTA} ${LAHDEMAININTA_90}` : LAHDEMAININTA_90,
-  };
+  let tulos;
+  if (!dem90Kansio) tulos = { dem: glo30, maininta: LAHDEMAININTA };
+  else {
+    const glo90 = demHakemisto(dem90Kansio, avaaGeotiff, { tunnus: '30' });
+    tulos = {
+      dem: kaksiLahdetta({ glo30, glo90, kynnys }),
+      maininta: glo30 ? `${LAHDEMAININTA} ${LAHDEMAININTA_90}` : LAHDEMAININTA_90,
+    };
+  }
+  // Mapterhorn ensin, Copernicus varalla (mapterhorn.mjs).
+  if (mapterhornKansio) tulos = { dem: mapterhornLahde(mapterhornKansio, { vara: tulos.dem }), maininta: `${MAPTERHORN_MAININTA} ${tulos.maininta}` };
+  return tulos;
 }
 
 /** Koko ajo (komentorivi ja testit). Palauttaa tehtyjen laattojen määrät tasoittain. */
@@ -421,7 +442,7 @@ export async function aja(argv, loki = console.log) {
   const a = lueAsetukset(argv);
   const { tasot, alue, n, osa, osia, versio, maailma, vainMaaAlkaen, kynnys } = a;
   if ((!a.demKansio && !a.dem90Kansio) || (!a.ulos && !a.lista)) {
-    throw new Error('käyttö: [--dem <glo30>] [--dem90 <glo90>] --ulos <kansio> [--alue] [--tasot 0-11] [--osa i/n] [--maailma Z] [--vain-maa-alkaen Z] [--luettelo | --lista]');
+    throw new Error('käyttö: [--dem <glo30>] [--dem90 <glo90>] [--mapterhorn <raakakansio>] --ulos <kansio> [--alue] [--tasot 0-11] [--osa i/n] [--maailma Z] [--vain-maa-alkaen Z] [--vanhempi <url>] [--luettelo | --lista]');
   }
   const { dem, maininta } = avaaLahteet(a);
   const suunnitelmat = [];
@@ -453,7 +474,7 @@ export async function aja(argv, loki = console.log) {
 
   mkdirSync(a.ulos, { recursive: true });
   if (a.luettelo) {
-    const k = kerroksenKuvaus({ tasot, alue, versio, maailma, vainMaaAlkaen, onRuutu: dem.onRuutu, n, maininta });
+    const k = kerroksenKuvaus({ tasot, alue, versio, maailma, vainMaaAlkaen, onRuutu: dem.onRuutu, n, maininta, vanhempi: a.vanhempi });
     writeFileSync(join(a.ulos, 'layer.json'), kerrosTekstiksi(k));
     loki(`layer.json: tasot ${tasot.join('–')}, alue ${alue.join(',')}`);
     dem.sulje();
