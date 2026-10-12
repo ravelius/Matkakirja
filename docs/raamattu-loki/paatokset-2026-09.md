@@ -13972,3 +13972,9 @@ Omistaja kortilla: tilin samireivinen@gmail.com (koodaustili, Max; viikko nollau
 ## JUNA 184 JULKAISTAAN HETI, KUN KIPIN PALLOKISA TOIMII JA PULUN RAKETTI ON MUKANA (omistaja 12.10.2026 klo 19.4x) (12.10.2026 klo 19.43)
 
 Omistaja sanatarkasti: "184 voi julkaista heti kun kipin kilpailu on toiminnassa". Heti perään sanatarkasti: "Tai pulun raketti täytyy saada mukaan myös". Tämä on junan 184 julkaisupyyntö ehdolla: kun kipin pallokisa toimii JA Pulun raketin 184-työt ovat mukana (kumpikin Laitetestaajan ajo läpi ja Päätoimittajan kuittaus), Natiiviseppä lukitsee junan 184 → muistiportti → BUILD → TF, ja Julkaisija tekee junan web-merget; mikä ei silloin ole kuitattu, jää junaan 185. Pallokisan ja raketin erät (Pelikoodari, Natiivi-UI, Linssiseppä, Linssiseppä 2) nostettiin käännös- ja simujonon kärkeen. PT välitti ehdon sanatarkasti Natiivisepälle ja Julkaisijalle 19.4x.
+
+## ASEMATAULU: AJAN TASALLA KAIKISSA TILANTEISSA (omistaja 12.10.2026 klo 21.4x) (12.10.2026 klo 21.41)
+
+Omistaja kuvakaappauksella työlistasta: "onko tämä ajantasalla?" (työlista oli iltapäivän tilassa, koska edellinen Päätoimittaja ei päivittänyt sitä kiireen keskellä, ja jonokierroksen ajastus ei laukea, kun sessio on koko ajan työssä) → sanatarkasti: "tee korjaus joka pitää huolen että työlista ja asemataulu pysyy päivitettynä kaikissa tilanteissa".
+
+Korjaus kolmessa osassa: 1) totuus tiedostoissa data/talo/*.json ja Postivahti vie muuttuneet tauluun joka kierroksella (tools/asemataulu/synkka.py) sekä ilmoittaa "ASEMATAULU VANHA" Päätoimittajalle, 2) Päätoimittajan hook (tools/hooks/pt-taulu-muistutus.py) muistuttaa kuittauksen ja omistajan viestin jälkeen, 3) taulu näyttää junien ja työlistan päivitysajan punaisena, kun ne vanhenevat (junat 2 h, työlista 3 h). Toimii myös nollauksen ja tilinvaihdon yli, koska tiedostot ja hook ovat Macilla.
