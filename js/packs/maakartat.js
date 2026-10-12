@@ -19757,6 +19757,31 @@ export const KAUPUNKIKARTAT = {
       },
     ],
   },
+  sisilia: {
+    /*
+     * Palermo, pelin kaupunki "Sisilia" (Karttaseppä 12.10.2026, PT: aarretehtävien erä 3 tarvitsee
+     * kohdekartan). Kohteet: tehtävän paikat (Teatro Massimo, Quattro Canti, Piazza Marina) ja
+     * vanhankaupungin päänähtävyydet. Wiki-otsikot englanniksi, koska suomenkielisiä artikkeleita ei ole (js/wiki.js kokeilee fi:n ensin); tekstit ja nostot täydentää Sisältökirjuri.
+     */
+    polku: 'assets/kartat/sisilia-keskusta.png',
+    varikartta: 'assets/kartat/sisilia-varikartta.png',
+    numeroympyrat: true,
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 38.1255, etela: 38.1075, lansi: 13.3495, ita: 13.3755 },
+    piirtoRajat: { pohjoinen: 38.1309, etela: 38.1021, lansi: 13.3417, ita: 13.3833 }, // reunus 1,6 (Karttaseppä 12.10.2026)
+    esittely: 'Kartan alue on Palermon vanhakaupunki Sisilian pohjoisrannalla. '
+      + 'Keskellä kaksi pääkatua, Corso Vittorio Emanuele ja Via Maqueda, '
+      + 'risteävät Quattro Cantin aukiolla. Lännessä ovat katedraali ja '
+      + 'Normannien palatsi, pohjoisessa Teatro Massimo ja idässä meren '
+      + 'rannalla Piazza Marina. Kartan kohteista pääsee lukemaan lisää napauttamalla.',
+    kohteet: [
+      { nimi: 'Teatro Massimo', lat: 38.12028, lon: 13.35722, wiki: 'Teatro Massimo' },
+      { nimi: 'Quattro Canti', tyyppi: 'aukio', lat: 38.11556, lon: 13.36139, wiki: 'Quattro Canti' },
+      { nimi: 'Palermon katedraali', lat: 38.11417, lon: 13.35611, wiki: 'Palermo Cathedral' },
+      { nimi: 'Normannien palatsi', lat: 38.11083, lon: 13.35306, wiki: 'Palazzo dei Normanni' },
+      { nimi: 'Piazza Marina', tyyppi: 'aukio', lat: 38.1176, lon: 13.3708, wiki: 'Piazza Marina' },
+    ],
+  },
 };
 
 /*

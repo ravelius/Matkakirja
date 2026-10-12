@@ -726,6 +726,17 @@ const KAUPUNGIT = {
     rajat: { pohjoinen: 50.851, etela: 50.8335, lansi: 4.342, ita: 4.376 },
     laajennus: 1.6,
   },
+  sisilia: {
+    /*
+     * Palermon vanhakaupunki (Karttaseppä 12.10.2026, PT: aarretehtävien erä 3, pelin kaupunki "Sisilia").
+     * Quattro Canti keskellä, katedraali ja Normannien palatsi lännessä, Teatro Massimo pohjoisessa,
+     * Piazza Marina ja La Kalsa idässä meren rannalla. 2,3 × 2,0 km; meri (Palermonlahti) itälaidalla.
+     */
+    rajat: { pohjoinen: 38.1255, etela: 38.1075, lansi: 13.3495, ita: 13.3755 },
+    laajennus: 1.6,
+    meri: true,
+    meriHaku: 0.05,
+  },
   valletta: {
     /*
      * Vallettan koko ydinniemi (21.9.2026; omistajan päätös
