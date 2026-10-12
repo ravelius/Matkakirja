@@ -1,0 +1,1423 @@
+{
+  "schemaVersion": "capital-city-role-assets/v1",
+  "era": "e10",
+  "city": "phnompenh",
+  "authorization": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+  "sourceContentAfterSHA256": "d46531ba7dd07230562e30f0543c5db1fdc117a9164d029b9d83714e659141a7",
+  "assets": [
+    {
+      "era": "e10",
+      "city": "phnompenh",
+      "slot": "O4",
+      "type": "illustration",
+      "assetID": "e10-phnompenh-O4-extra-v1-20261012",
+      "galleryImageID": "e10-phnompenh-O4-extra-v1-20261012",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "matkailijalle",
+        "artikkeli",
+        "jaksot",
+        3,
+        "kuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/phnompenh/e10-phnompenh-O4-extra-v1-20261012-e0db2c9bb0ce.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Kuy teav -aamiaiseen kuuluvat riisinuudelit ja lihaliemi. Havainnekuva.",
+        "lyhyt": "Kuy teav -aamiaiseen kuuluvat riisinuudelit ja lihaliemi. Havainnekuva."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/phnompenh/e10-phnompenh-O4-extra-v1-20261012-e0db2c9bb0ce.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Kuy teav -aamiaiseen kuuluvat riisinuudelit ja lihaliemi. Havainnekuva.",
+        "lyhyt": "Kuy teav -aamiaiseen kuuluvat riisinuudelit ja lihaliemi. Havainnekuva."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "e0db2c9bb0cee86192de09ab254877f3b11350184a8ecd903e78b652b19ee286",
+      "exportSHA256": "a221355fa547ba909bc24cd2850674ba3f17758e7ded7410a59b00d42a0727b4",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/phnompenh/e10-phnompenh-O4-extra-v1-20261012-e0db2c9bb0ce.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/phnompenh/e10-phnompenh-O4-extra-v1-20261012-e0db2c9bb0ce.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e10/phnompenh/e10-phnompenh-O4-extra-v1-20261012-e0db2c9bb0ce.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/phnompenh/sisalto.json",
+      "sourceContentSHA256": "d46531ba7dd07230562e30f0543c5db1fdc117a9164d029b9d83714e659141a7",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "85508f3ef33eade1d4c0986d926008b748a536b0321d53b186cb70bc45e0bd33",
+        "subjectTitle": "Aamiainen nuudelikulhosta",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Generalized ordinary food in an unbranded plain bowl on an ordinary table. No protected artwork, architecture, identifiable person, named restaurant or documentary Phnom Penh location. Newly AI-generated illustration, not a photograph; source recipe facts only, no source image reproduction.",
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/phnompenh/assets/e10-phnompenh-O4-extra-v1-20261012/native.png",
+            "nativeSHA256": "e0db2c9bb0cee86192de09ab254877f3b11350184a8ecd903e78b652b19ee286",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "pngChunks": [
+              "IHDR",
+              "caBX",
+              "IDAT",
+              "IEND"
+            ],
+            "manifestMatch": true,
+            "captionFi": "Kuy teav -aamiaiseen kuuluvat riisinuudelit ja lihaliemi. Havainnekuva.",
+            "sourceEvidence": [
+              {
+                "url": "https://en.wikipedia.org/wiki/Kuyteav",
+                "title": "Kuyteav",
+                "section": "Introduction; Preparation; Consumption and culture",
+                "retrievedVia": "shared sallittu_haku.py, robots+redirect checks+1 request/sec+cache",
+                "localHtml": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/extra-production/phnompenh/assets/e10-phnompenh-O4-extra-v1-20261012/sources/kuyteav-wikipedia.html",
+                "htmlSHA256": "3e55e33a8b54da6d5bc6882cd58e02dfb6bbbe5063a66a32d2b3a4703bace24a",
+                "localText": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/extra-production/phnompenh/assets/e10-phnompenh-O4-extra-v1-20261012/sources/kuyteav-wikipedia.txt",
+                "supportingTextLines": [
+                  169,
+                  187
+                ],
+                "supportedClaims": [
+                  "Kuyteav is rice-noodle soup with pork stock and toppings.",
+                  "It is a breakfast food.",
+                  "The broth is clear."
+                ],
+                "caveat": "Preparation/Consumption have additional-reference and citation-needed notices. Only the narrow basic dish subject is used, with the authored recipe corroboration below."
+              },
+              {
+                "url": "https://grantourismotravels.com/phnom-penh-noodle-soup-recipe/",
+                "title": "Phnom Penh Noodle Soup Recipe for Kuy Teav Phnom Penh or Hu Tieu Nam Vang",
+                "author": "Lara Dunston",
+                "sourceKind": "Authored recipe creator primary source",
+                "section": "Introduction; recipe and method",
+                "retrievedVia": "shared sallittu_haku.py, robots+redirect checks+1 request/sec+cache",
+                "localHtml": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/extra-production/phnompenh/assets/e10-phnompenh-O4-extra-v1-20261012/sources/grantourismo-kuyteav-recipe.html",
+                "htmlSHA256": "4eda233c5f8facd46f068a12abeb732e51d8556d25b1c0291352886b63b4a214",
+                "localText": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/extra-production/phnompenh/assets/e10-phnompenh-O4-extra-v1-20261012/sources/grantourismo-kuyteav-recipe.txt",
+                "supportingTextLines": [
+                  224,
+                  235,
+                  377,
+                  392
+                ],
+                "supportedClaims": [
+                  "A breakfast soup based on rice noodles and pork stock.",
+                  "Pork loin is among possible additions.",
+                  "Fresh coriander and other garnishes accompany the soup."
+                ],
+                "usageScope": "Facts only; the recipe photograph is not copied, referenced or used as image input."
+              },
+              {
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/phnompenh/faktapohja.md",
+                "sha256": "fea3891f3fd53c3ff86ee9abc65498a0aa8e035ac9ce1f06543079dd521f19f5",
+                "section": "K / kuyteav; section 4 guide; section 9 source caveat"
+              },
+              {
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/phnompenh/tarkistus.md",
+                "sha256": "c84451654ff83be07723b40e4034bceaf3a06bc442ce40d58ed1cfbeab828065",
+                "section": "Food guide basic claims and source reservations"
+              },
+              {
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/phnompenh/cc-status.json",
+                "sha256": "b233230ae8944bb17fbcdcb37dd68f6fbf5f552a98cd1825547ca78842abbc64",
+                "topicExcerpt": "K3/O4 yleistä nuudeliateriaa; kuvitus ei ole paikan todistusaineistoa.",
+                "illustrationReadySlot": "O4"
+              }
+            ],
+            "rightsEvidence": "Generalized ordinary food in an unbranded plain bowl on an ordinary table. No protected artwork, architecture, identifiable person, named restaurant or documentary Phnom Penh location. Newly AI-generated illustration, not a photograph; source recipe facts only, no source image reproduction.",
+            "prompt": "Use case: photorealistic-natural.\nAsset type: landscape editorial food illustration for a travel-guide section, \"Aamiainen nuudelikulhosta\".\nPrimary request: one NEW original camera-looking image of a modest kuy teav breakfast SOUP bowl in one coherent ordinary kitchen preparation scene. Generalized food illustration rather than documentation of any restaurant or city location.\nScene/backdrop: a continuous ordinary breakfast-stall preparation counter, a simple plain wall, and a softly out-of-focus plain stock pot with a plain ladle nearby, all in the same gentle morning window daylight. The soup bowl rests naturally on the same counter with an honest contact shadow; the counter continues toward the stock pot. No city view or identifiable interior. A close everyday kitchen scene, no isolated studio setup or composite appearance.\nSubject: one plain unbranded ceramic serving bowl containing fine pale rice noodles visibly sitting in a generous amount of clear, light meat broth, a few naturally cooked pork slices and restrained fresh herbs. The liquid is plainly visible around the noodles; this is the wet soup version. No separate serving bowl of broth.\nStyle/medium: believable natural editorial food photography; physically convincing moist noodles, irregular cooked meat texture, thin translucent broth and simple ceramic texture. An everyday breakfast preparation setting, modest and plausible.\nComposition/framing: landscape 3:2, close three-quarter view with the whole serving-bowl rim visible; the soup bowl dominates the foreground while the connected preparation counter and softly blurred pot form a small contextual background. Prefer native 1536x1024 PNG, opaque RGB sRGB.\nLighting/mood: gentle diffused natural morning light, mild shadows consistent across bowl/counter/pot/wall, quiet colors, restrained highlights.\nConstraints: a fully new image. No people, hands, faces, writing, lettering, numbers, labels, menus, logos, brands, flags, watermark, border or frame. No ramen egg, creamy coconut soup, spicy red oil, separate serving broth dish or extra plated meal. No studio advertising arrangement, HDR, plastic food textures, excessive steam, synthetic repetitive noodle patterns, protected artwork or historical scene. Do not claim this is an actual photograph made in Phnom Penh.",
+            "content": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/phnompenh/sisalto.json",
+              "contentSHA256": "9ecb09d5d3d9eb697da13948244f137f08a8b4c436f348079e498364cd24d0cb",
+              "targetObjectExists": true,
+              "targetContainer": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3]",
+              "targetText": {
+                "otsikko": "Aamiainen nuudelikulhosta",
+                "teksti": "Kuy teav on Phnom Penhin luonteva aamiaisruoka: riisinuudeleita, lihalientä ja lisukkeita. Phnom Penhin versioon voidaan lisätä monenlaisia lihoja ja mereneläviä. Kuivassa annoksessa liemi tuodaan erikseen, joten nimi ei tarkoita lientä vailla olevaa ateriaa. Ruokatoreilla on myös muita paikallisia ruokia; maistelukierrosta voi rakentaa oman ruokavalion mukaan.",
+                "kuva": {
+                  "tiedosto": "",
+                  "lyhyt": "",
+                  "selite": "",
+                  "lahde": ""
+                }
+              },
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/phnompenh/faktapohja.md",
+              "factSheetExists": true
+            },
+            "otherReviewerVerdicts": [],
+            "visualInspection": {
+              "tool": "view_image",
+              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/phnompenh/assets/e10-phnompenh-O4-extra-v1-20261012/native.png",
+              "detail": "original",
+              "observations": "Kulhossa riisinuudeleita, lihasiivuja ja yrttejä kirkkaassa liemessä, taustalla liemikattila. Neste, kypsä liha, nuudelit ja astiat luontevia. Ei ihmisiä, tekstiä tai logoja.",
+              "inspectedBy": "kuvitus-3"
+            },
+            "openConflict": false
+          },
+          "qaReason": "Kuy teav -keitto vastaa O4:n riisinuudeli-, liemi- ja lisukeaihetta. Kuvateksti on yleishavainne; SHA koskee katsottua native.png:tä. Mitat täsmäävät."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Kuy teav -aamiaiseen kuuluvat riisinuudelit ja lihaliemi. Havainnekuva.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/phnompenh/illustration-qa-extra.json",
+        "fileSHA256": "711178e0e8d4b6dd354a73515de9f474f462f4fafe0e986aa98cc172d865ced4",
+        "item": {
+          "slot": "O4",
+          "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+          "assetID": "e10-phnompenh-O4-extra-v1-20261012",
+          "sha256": "e0db2c9bb0cee86192de09ab254877f3b11350184a8ecd903e78b652b19ee286",
+          "verdict": "accepted",
+          "reason": "Kuy teav -keitto vastaa O4:n riisinuudeli-, liemi- ja lisukeaihetta. Kuvateksti on yleishavainne; SHA koskee katsottua native.png:tä. Mitat täsmäävät.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/phnompenh/assets/e10-phnompenh-O4-extra-v1-20261012/native.png",
+            "nativeSHA256": "e0db2c9bb0cee86192de09ab254877f3b11350184a8ecd903e78b652b19ee286",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "pngChunks": [
+              "IHDR",
+              "caBX",
+              "IDAT",
+              "IEND"
+            ],
+            "manifestMatch": true,
+            "captionFi": "Kuy teav -aamiaiseen kuuluvat riisinuudelit ja lihaliemi. Havainnekuva.",
+            "sourceEvidence": [
+              {
+                "url": "https://en.wikipedia.org/wiki/Kuyteav",
+                "title": "Kuyteav",
+                "section": "Introduction; Preparation; Consumption and culture",
+                "retrievedVia": "shared sallittu_haku.py, robots+redirect checks+1 request/sec+cache",
+                "localHtml": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/extra-production/phnompenh/assets/e10-phnompenh-O4-extra-v1-20261012/sources/kuyteav-wikipedia.html",
+                "htmlSHA256": "3e55e33a8b54da6d5bc6882cd58e02dfb6bbbe5063a66a32d2b3a4703bace24a",
+                "localText": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/extra-production/phnompenh/assets/e10-phnompenh-O4-extra-v1-20261012/sources/kuyteav-wikipedia.txt",
+                "supportingTextLines": [
+                  169,
+                  187
+                ],
+                "supportedClaims": [
+                  "Kuyteav is rice-noodle soup with pork stock and toppings.",
+                  "It is a breakfast food.",
+                  "The broth is clear."
+                ],
+                "caveat": "Preparation/Consumption have additional-reference and citation-needed notices. Only the narrow basic dish subject is used, with the authored recipe corroboration below."
+              },
+              {
+                "url": "https://grantourismotravels.com/phnom-penh-noodle-soup-recipe/",
+                "title": "Phnom Penh Noodle Soup Recipe for Kuy Teav Phnom Penh or Hu Tieu Nam Vang",
+                "author": "Lara Dunston",
+                "sourceKind": "Authored recipe creator primary source",
+                "section": "Introduction; recipe and method",
+                "retrievedVia": "shared sallittu_haku.py, robots+redirect checks+1 request/sec+cache",
+                "localHtml": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/extra-production/phnompenh/assets/e10-phnompenh-O4-extra-v1-20261012/sources/grantourismo-kuyteav-recipe.html",
+                "htmlSHA256": "4eda233c5f8facd46f068a12abeb732e51d8556d25b1c0291352886b63b4a214",
+                "localText": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/extra-production/phnompenh/assets/e10-phnompenh-O4-extra-v1-20261012/sources/grantourismo-kuyteav-recipe.txt",
+                "supportingTextLines": [
+                  224,
+                  235,
+                  377,
+                  392
+                ],
+                "supportedClaims": [
+                  "A breakfast soup based on rice noodles and pork stock.",
+                  "Pork loin is among possible additions.",
+                  "Fresh coriander and other garnishes accompany the soup."
+                ],
+                "usageScope": "Facts only; the recipe photograph is not copied, referenced or used as image input."
+              },
+              {
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/phnompenh/faktapohja.md",
+                "sha256": "fea3891f3fd53c3ff86ee9abc65498a0aa8e035ac9ce1f06543079dd521f19f5",
+                "section": "K / kuyteav; section 4 guide; section 9 source caveat"
+              },
+              {
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/phnompenh/tarkistus.md",
+                "sha256": "c84451654ff83be07723b40e4034bceaf3a06bc442ce40d58ed1cfbeab828065",
+                "section": "Food guide basic claims and source reservations"
+              },
+              {
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/phnompenh/cc-status.json",
+                "sha256": "b233230ae8944bb17fbcdcb37dd68f6fbf5f552a98cd1825547ca78842abbc64",
+                "topicExcerpt": "K3/O4 yleistä nuudeliateriaa; kuvitus ei ole paikan todistusaineistoa.",
+                "illustrationReadySlot": "O4"
+              }
+            ],
+            "rightsEvidence": "Generalized ordinary food in an unbranded plain bowl on an ordinary table. No protected artwork, architecture, identifiable person, named restaurant or documentary Phnom Penh location. Newly AI-generated illustration, not a photograph; source recipe facts only, no source image reproduction.",
+            "prompt": "Use case: photorealistic-natural.\nAsset type: landscape editorial food illustration for a travel-guide section, \"Aamiainen nuudelikulhosta\".\nPrimary request: one NEW original camera-looking image of a modest kuy teav breakfast SOUP bowl in one coherent ordinary kitchen preparation scene. Generalized food illustration rather than documentation of any restaurant or city location.\nScene/backdrop: a continuous ordinary breakfast-stall preparation counter, a simple plain wall, and a softly out-of-focus plain stock pot with a plain ladle nearby, all in the same gentle morning window daylight. The soup bowl rests naturally on the same counter with an honest contact shadow; the counter continues toward the stock pot. No city view or identifiable interior. A close everyday kitchen scene, no isolated studio setup or composite appearance.\nSubject: one plain unbranded ceramic serving bowl containing fine pale rice noodles visibly sitting in a generous amount of clear, light meat broth, a few naturally cooked pork slices and restrained fresh herbs. The liquid is plainly visible around the noodles; this is the wet soup version. No separate serving bowl of broth.\nStyle/medium: believable natural editorial food photography; physically convincing moist noodles, irregular cooked meat texture, thin translucent broth and simple ceramic texture. An everyday breakfast preparation setting, modest and plausible.\nComposition/framing: landscape 3:2, close three-quarter view with the whole serving-bowl rim visible; the soup bowl dominates the foreground while the connected preparation counter and softly blurred pot form a small contextual background. Prefer native 1536x1024 PNG, opaque RGB sRGB.\nLighting/mood: gentle diffused natural morning light, mild shadows consistent across bowl/counter/pot/wall, quiet colors, restrained highlights.\nConstraints: a fully new image. No people, hands, faces, writing, lettering, numbers, labels, menus, logos, brands, flags, watermark, border or frame. No ramen egg, creamy coconut soup, spicy red oil, separate serving broth dish or extra plated meal. No studio advertising arrangement, HDR, plastic food textures, excessive steam, synthetic repetitive noodle patterns, protected artwork or historical scene. Do not claim this is an actual photograph made in Phnom Penh.",
+            "content": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/phnompenh/sisalto.json",
+              "contentSHA256": "9ecb09d5d3d9eb697da13948244f137f08a8b4c436f348079e498364cd24d0cb",
+              "targetObjectExists": true,
+              "targetContainer": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3]",
+              "targetText": {
+                "otsikko": "Aamiainen nuudelikulhosta",
+                "teksti": "Kuy teav on Phnom Penhin luonteva aamiaisruoka: riisinuudeleita, lihalientä ja lisukkeita. Phnom Penhin versioon voidaan lisätä monenlaisia lihoja ja mereneläviä. Kuivassa annoksessa liemi tuodaan erikseen, joten nimi ei tarkoita lientä vailla olevaa ateriaa. Ruokatoreilla on myös muita paikallisia ruokia; maistelukierrosta voi rakentaa oman ruokavalion mukaan.",
+                "kuva": {
+                  "tiedosto": "",
+                  "lyhyt": "",
+                  "selite": "",
+                  "lahde": ""
+                }
+              },
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/phnompenh/faktapohja.md",
+              "factSheetExists": true
+            },
+            "otherReviewerVerdicts": [],
+            "visualInspection": {
+              "tool": "view_image",
+              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/phnompenh/assets/e10-phnompenh-O4-extra-v1-20261012/native.png",
+              "detail": "original",
+              "observations": "Kulhossa riisinuudeleita, lihasiivuja ja yrttejä kirkkaassa liemessä, taustalla liemikattila. Neste, kypsä liha, nuudelit ja astiat luontevia. Ei ihmisiä, tekstiä tai logoja.",
+              "inspectedBy": "kuvitus-3"
+            },
+            "openConflict": false
+          },
+          "reviewedAt": "2026-10-12T19:00:09.185933+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/phnompenh/qa.json",
+            "sha256": "f0c594331149eddbce5558a90bcc1bf957de9f2baacf354dbaad3c5abcbab849"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/phnompenh/illustration-qa-extra.json",
+            "sha256": "711178e0e8d4b6dd354a73515de9f474f462f4fafe0e986aa98cc172d865ced4"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/phnompenh/e10-phnompenh-O4-extra-v1-20261012-e0db2c9bb0ce.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/phnompenh/e10-phnompenh-O4-extra-v1-20261012-e0db2c9bb0ce.png?t=a221355fa547ba90",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/phnompenh/e10-phnompenh-O4-extra-v1-20261012-e0db2c9bb0ce.png",
+        "sha256": "a221355fa547ba909bc24cd2850674ba3f17758e7ded7410a59b00d42a0727b4",
+        "bytes": 2193355,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e10-phnompenh-O4-extra-v1-20261012",
+        "nativeSHA256": "e0db2c9bb0cee86192de09ab254877f3b11350184a8ecd903e78b652b19ee286",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e10/phnompenh/e10-phnompenh-O4-extra-v1-20261012-e0db2c9bb0ce.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e10",
+        "city": "phnompenh",
+        "slot": "O4",
+        "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+        "verifiedAt": "2026-10-12T19:01:15.555128+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e10/phnompenh/e10-phnompenh-O4-extra-v1-20261012-e0db2c9bb0ce.png",
+        "sha256": "a221355fa547ba909bc24cd2850674ba3f17758e7ded7410a59b00d42a0727b4",
+        "bytes": 2193355,
+        "SHAReadAt": "2026-10-12T19:03:41.569602+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "e0db2c9bb0cee86192de09ab254877f3b11350184a8ecd903e78b652b19ee286",
+        "rgbPixelSHA256": "babafa8763f427480d319269fcc16c18317cc02456880fcc22ccd664c7e18c49",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "d46531ba7dd07230562e30f0543c5db1fdc117a9164d029b9d83714e659141a7",
+      "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+      "contextAfterSHA256": "85508f3ef33eade1d4c0986d926008b748a536b0321d53b186cb70bc45e0bd33"
+    },
+    {
+      "era": "e10",
+      "city": "phnompenh",
+      "slot": "K3",
+      "type": "illustration",
+      "assetID": "e10-phnompenh-K3-v1-20261012",
+      "galleryImageID": "e10-phnompenh-K3-v1-20261012",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].nostot[2]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "nostot",
+        2
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/phnompenh/e10-phnompenh-K3-v1-20261012-b5d05d2feb51.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva: kuivan kuy teav -annoksen liemi tarjotaan erillisessä kulhossa.",
+        "lyhyt": "Havainnekuva: kuivan kuy teav -annoksen liemi tarjotaan erillisessä kulhossa."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/phnompenh/e10-phnompenh-K3-v1-20261012-b5d05d2feb51.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva: kuivan kuy teav -annoksen liemi tarjotaan erillisessä kulhossa.",
+        "lyhyt": "Havainnekuva: kuivan kuy teav -annoksen liemi tarjotaan erillisessä kulhossa."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "b5d05d2feb519c6b1735f27b082463ebfd4b91d8e106c9107cf3ec6a62ef0136",
+      "exportSHA256": "1552ac6ef0cf9c7e8b3091948baf3fa9cf0a125630c794261a9b67f2bcf305b7",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/phnompenh/e10-phnompenh-K3-v1-20261012-b5d05d2feb51.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/phnompenh/e10-phnompenh-K3-v1-20261012-b5d05d2feb51.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e10/phnompenh/e10-phnompenh-K3-v1-20261012-b5d05d2feb51.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/phnompenh/sisalto.json",
+      "sourceContentSHA256": "d46531ba7dd07230562e30f0543c5db1fdc117a9164d029b9d83714e659141a7",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "589ab8a73fff40371ba78f2e0022b034e8b33d97499347eef2aa470150fe0e57",
+        "semanticContextSHA256": "589ab8a73fff40371ba78f2e0022b034e8b33d97499347eef2aa470150fe0e57",
+        "subjectTitle": "Liemi saa oman kulhonsa",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Yleistetty ruoka ja tavalliset astiat; ei nimetyn ravintolan, paikan, henkilön tai nykyteoksen jäljennöstä.",
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/phnompenh/assets/e10-phnompenh-K3-v1-20261012/image.png",
+            "nativeSHA256": "b5d05d2feb519c6b1735f27b082463ebfd4b91d8e106c9107cf3ec6a62ef0136",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "pngChunks": [
+              "IHDR",
+              "caBX",
+              "IDAT",
+              "IEND"
+            ],
+            "manifestMatch": true,
+            "captionFi": "Havainnekuva: kuivan kuy teav -annoksen liemi tarjotaan erillisessä kulhossa.",
+            "sourceEvidence": [
+              {
+                "url": "https://en.wikipedia.org/wiki/Kuy_teav",
+                "section": "Phnom Penh variation/dry version"
+              },
+              {
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/phnompenh/faktapohja.md",
+                "section": "Kuy teav"
+              },
+              {
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/phnompenh/sisalto.json",
+                "jsonPath": "$.kaupunkilehti[0].nostot[2]",
+                "claim": "Kuy teav on riisinuudeleista ja lihaliemestä tehtävä annos, jota syödään Phnom Penhissä erityisesti aamiaisella. Kaupungin nimellä tunnetussa versiossa on runsaasti lisukkeita, kuten lihaa ja mereneläviä. Annoksen voi saada myös kuivana: nuudelit ja lisukkeet ovat yhdessä astiassa, liemi toisessa. Kuiva ei siis tarkoita, että keitto olisi unohtunut keittiöön. Syöjä voi nauttia liemen erikseen tai lisätä sitä nuudeleihin. Sama ruokalaji muuttaa muotoaan ilman, että sen tärkeä liemi katoaa."
+              }
+            ],
+            "rightsEvidence": "Yleistetty ruoka ja tavalliset astiat; ei nimetyn ravintolan, paikan, henkilön tai nykyteoksen jäljennöstä.",
+            "prompt": "Use case: photorealistic-natural. Landscape editorial food illustration for the topic of dry kuy teav. A modest plain bowl contains fine pale rice noodles with a few pieces of cooked pork, a couple of cooked shrimp and restrained herbs. A separate small plain bowl beside it contains clear meat broth. The noodles are visibly a dry version, not submerged in soup; both bowls form the meal. Plain unbranded tableware, natural morning window light, physically convincing noodle strands and shrimp anatomy. No identifiable person, signs, logos, writing, collage or restaurant facade. A generalized illustration of Phnom Penh style kuy teav, not a documentary image of a particular restaurant. Prefer 1536x1024 PNG.",
+            "content": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/phnompenh/sisalto.json",
+              "contentSHA256": "9ecb09d5d3d9eb697da13948244f137f08a8b4c436f348079e498364cd24d0cb",
+              "targetObjectExists": true,
+              "targetContainer": "$.kaupunkilehti[0].nostot[2]",
+              "targetText": {
+                "otsikko": "Liemi saa oman kulhonsa",
+                "teksti": "Kuy teav on riisinuudeleista ja lihaliemestä tehtävä annos, jota syödään Phnom Penhissä erityisesti aamiaisella. Kaupungin nimellä tunnetussa versiossa on runsaasti lisukkeita, kuten lihaa ja mereneläviä. Annoksen voi saada myös kuivana: nuudelit ja lisukkeet ovat yhdessä astiassa, liemi toisessa. Kuiva ei siis tarkoita, että keitto olisi unohtunut keittiöön. Syöjä voi nauttia liemen erikseen tai lisätä sitä nuudeleihin. Sama ruokalaji muuttaa muotoaan ilman, että sen tärkeä liemi katoaa.",
+                "wiki": "Kuyteav",
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              },
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/phnompenh/faktapohja.md",
+              "factSheetExists": true
+            },
+            "otherReviewerVerdicts": [],
+            "visualInspection": {
+              "tool": "view_image",
+              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/phnompenh/assets/e10-phnompenh-K3-v1-20261012/image.png",
+              "detail": "original",
+              "observations": "Riisinuudeleita, lihasiivuja, katkarapuja, ituja ja yrttejä etualan kulhossa; kirkas liemi omassa kulhossaan. Ruoan rakenteet, katkarapujen muodot ja astiat uskottavia. Ei ihmisiä, tekstiä, logoja, vesileimaa tai kehystä.",
+              "inspectedBy": "kuvitus-3"
+            },
+            "openConflict": false
+          },
+          "qaReason": "Kuiva kuy teav ja erillinen liemikulho havainnollistavat K3-noston ydinkohtaa. Annos on merkitty havainnekuvaksi; kuva ei esitä tiettyä ravintolaa. Native-SHA ja mitat vastaavat manifestia."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva: kuivan kuy teav -annoksen liemi tarjotaan erillisessä kulhossa.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/phnompenh/illustration-qa-extra.json",
+        "fileSHA256": "711178e0e8d4b6dd354a73515de9f474f462f4fafe0e986aa98cc172d865ced4",
+        "item": {
+          "slot": "K3",
+          "targetJsonPath": "$.kaupunkilehti[0].nostot[2]",
+          "assetID": "e10-phnompenh-K3-v1-20261012",
+          "sha256": "b5d05d2feb519c6b1735f27b082463ebfd4b91d8e106c9107cf3ec6a62ef0136",
+          "verdict": "accepted",
+          "reason": "Kuiva kuy teav ja erillinen liemikulho havainnollistavat K3-noston ydinkohtaa. Annos on merkitty havainnekuvaksi; kuva ei esitä tiettyä ravintolaa. Native-SHA ja mitat vastaavat manifestia.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/phnompenh/assets/e10-phnompenh-K3-v1-20261012/image.png",
+            "nativeSHA256": "b5d05d2feb519c6b1735f27b082463ebfd4b91d8e106c9107cf3ec6a62ef0136",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "pngChunks": [
+              "IHDR",
+              "caBX",
+              "IDAT",
+              "IEND"
+            ],
+            "manifestMatch": true,
+            "captionFi": "Havainnekuva: kuivan kuy teav -annoksen liemi tarjotaan erillisessä kulhossa.",
+            "sourceEvidence": [
+              {
+                "url": "https://en.wikipedia.org/wiki/Kuy_teav",
+                "section": "Phnom Penh variation/dry version"
+              },
+              {
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/phnompenh/faktapohja.md",
+                "section": "Kuy teav"
+              },
+              {
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/phnompenh/sisalto.json",
+                "jsonPath": "$.kaupunkilehti[0].nostot[2]",
+                "claim": "Kuy teav on riisinuudeleista ja lihaliemestä tehtävä annos, jota syödään Phnom Penhissä erityisesti aamiaisella. Kaupungin nimellä tunnetussa versiossa on runsaasti lisukkeita, kuten lihaa ja mereneläviä. Annoksen voi saada myös kuivana: nuudelit ja lisukkeet ovat yhdessä astiassa, liemi toisessa. Kuiva ei siis tarkoita, että keitto olisi unohtunut keittiöön. Syöjä voi nauttia liemen erikseen tai lisätä sitä nuudeleihin. Sama ruokalaji muuttaa muotoaan ilman, että sen tärkeä liemi katoaa."
+              }
+            ],
+            "rightsEvidence": "Yleistetty ruoka ja tavalliset astiat; ei nimetyn ravintolan, paikan, henkilön tai nykyteoksen jäljennöstä.",
+            "prompt": "Use case: photorealistic-natural. Landscape editorial food illustration for the topic of dry kuy teav. A modest plain bowl contains fine pale rice noodles with a few pieces of cooked pork, a couple of cooked shrimp and restrained herbs. A separate small plain bowl beside it contains clear meat broth. The noodles are visibly a dry version, not submerged in soup; both bowls form the meal. Plain unbranded tableware, natural morning window light, physically convincing noodle strands and shrimp anatomy. No identifiable person, signs, logos, writing, collage or restaurant facade. A generalized illustration of Phnom Penh style kuy teav, not a documentary image of a particular restaurant. Prefer 1536x1024 PNG.",
+            "content": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/phnompenh/sisalto.json",
+              "contentSHA256": "9ecb09d5d3d9eb697da13948244f137f08a8b4c436f348079e498364cd24d0cb",
+              "targetObjectExists": true,
+              "targetContainer": "$.kaupunkilehti[0].nostot[2]",
+              "targetText": {
+                "otsikko": "Liemi saa oman kulhonsa",
+                "teksti": "Kuy teav on riisinuudeleista ja lihaliemestä tehtävä annos, jota syödään Phnom Penhissä erityisesti aamiaisella. Kaupungin nimellä tunnetussa versiossa on runsaasti lisukkeita, kuten lihaa ja mereneläviä. Annoksen voi saada myös kuivana: nuudelit ja lisukkeet ovat yhdessä astiassa, liemi toisessa. Kuiva ei siis tarkoita, että keitto olisi unohtunut keittiöön. Syöjä voi nauttia liemen erikseen tai lisätä sitä nuudeleihin. Sama ruokalaji muuttaa muotoaan ilman, että sen tärkeä liemi katoaa.",
+                "wiki": "Kuyteav",
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              },
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/phnompenh/faktapohja.md",
+              "factSheetExists": true
+            },
+            "otherReviewerVerdicts": [],
+            "visualInspection": {
+              "tool": "view_image",
+              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/phnompenh/assets/e10-phnompenh-K3-v1-20261012/image.png",
+              "detail": "original",
+              "observations": "Riisinuudeleita, lihasiivuja, katkarapuja, ituja ja yrttejä etualan kulhossa; kirkas liemi omassa kulhossaan. Ruoan rakenteet, katkarapujen muodot ja astiat uskottavia. Ei ihmisiä, tekstiä, logoja, vesileimaa tai kehystä.",
+              "inspectedBy": "kuvitus-3"
+            },
+            "openConflict": false
+          },
+          "reviewedAt": "2026-10-12T18:15:51.932533+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/phnompenh/qa.json",
+            "sha256": "f0c594331149eddbce5558a90bcc1bf957de9f2baacf354dbaad3c5abcbab849"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/phnompenh/illustration-qa-extra.json",
+            "sha256": "711178e0e8d4b6dd354a73515de9f474f462f4fafe0e986aa98cc172d865ced4"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/phnompenh/e10-phnompenh-K3-v1-20261012-b5d05d2feb51.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/phnompenh/e10-phnompenh-K3-v1-20261012-b5d05d2feb51.png?t=1552ac6ef0cf9c7e",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/phnompenh/e10-phnompenh-K3-v1-20261012-b5d05d2feb51.png",
+        "sha256": "1552ac6ef0cf9c7e8b3091948baf3fa9cf0a125630c794261a9b67f2bcf305b7",
+        "bytes": 2284387,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e10-phnompenh-K3-v1-20261012",
+        "nativeSHA256": "b5d05d2feb519c6b1735f27b082463ebfd4b91d8e106c9107cf3ec6a62ef0136",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e10/phnompenh/e10-phnompenh-K3-v1-20261012-b5d05d2feb51.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e10",
+        "city": "phnompenh",
+        "slot": "K3",
+        "targetJsonPath": "$.kaupunkilehti[0].nostot[2]",
+        "verifiedAt": "2026-10-12T18:16:31.822022+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e10/phnompenh/e10-phnompenh-K3-v1-20261012-b5d05d2feb51.png",
+        "sha256": "1552ac6ef0cf9c7e8b3091948baf3fa9cf0a125630c794261a9b67f2bcf305b7",
+        "bytes": 2284387,
+        "SHAReadAt": "2026-10-12T18:29:57.396665+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "b5d05d2feb519c6b1735f27b082463ebfd4b91d8e106c9107cf3ec6a62ef0136",
+        "rgbPixelSHA256": "701f6c5d6585315915dbf03c182e68087bec6aa630e1d21684cb6f98b1a7fc43",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "d46531ba7dd07230562e30f0543c5db1fdc117a9164d029b9d83714e659141a7",
+      "targetAfterSHA256": "589ab8a73fff40371ba78f2e0022b034e8b33d97499347eef2aa470150fe0e57",
+      "contextAfterSHA256": "589ab8a73fff40371ba78f2e0022b034e8b33d97499347eef2aa470150fe0e57"
+    },
+    {
+      "era": "e10",
+      "city": "phnompenh",
+      "slot": "K4",
+      "type": "illustration",
+      "assetID": "e10-phnompenh-K4-v1-20261012",
+      "galleryImageID": "e10-phnompenh-K4-v1-20261012",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].nostot[3]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "nostot",
+        3
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/phnompenh/e10-phnompenh-K4-v1-20261012-93ea351eac13.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Yleistetty havainnekuva vesiverkon hävikistä, ei Phnom Penhin todellinen putkisto.",
+        "lyhyt": "Yleistetty havainnekuva vesiverkon hävikistä, ei Phnom Penhin todellinen putkisto."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/phnompenh/e10-phnompenh-K4-v1-20261012-93ea351eac13.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Yleistetty havainnekuva vesiverkon hävikistä, ei Phnom Penhin todellinen putkisto.",
+        "lyhyt": "Yleistetty havainnekuva vesiverkon hävikistä, ei Phnom Penhin todellinen putkisto."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "93ea351eac13af3f01ac329f8c450f8eb83349ced37e4b11743d412f77dd2146",
+      "exportSHA256": "bf9d14c236df748411d6abefd1478032b9620fed8e46fcd43805385288ba8c33",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/phnompenh/e10-phnompenh-K4-v1-20261012-93ea351eac13.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/phnompenh/e10-phnompenh-K4-v1-20261012-93ea351eac13.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e10/phnompenh/e10-phnompenh-K4-v1-20261012-93ea351eac13.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/phnompenh/sisalto.json",
+      "sourceContentSHA256": "d46531ba7dd07230562e30f0543c5db1fdc117a9164d029b9d83714e659141a7",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "4cfc151476a6779fca27511db81a420ca0523fe72790533a6ef12744f65100d0",
+        "semanticContextSHA256": "4cfc151476a6779fca27511db81a420ca0523fe72790533a6ef12744f65100d0",
+        "subjectTitle": "Vesilaitos löysi hukkaan valuvan veden",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Turvallinen yleinen ruoka, materiaali tai arkiesine. Ei nykyteoksen, todellisen rakennusasettelun, tunnistettavan henkilön tai nimetyn näyttelyesineen jäljennöstä.",
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/phnompenh/assets/e10-phnompenh-K4-v1-20261012/image.png",
+            "nativeSHA256": "93ea351eac13af3f01ac329f8c450f8eb83349ced37e4b11743d412f77dd2146",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "pngChunks": [
+              "IHDR",
+              "caBX",
+              "IDAT",
+              "IEND"
+            ],
+            "manifestMatch": true,
+            "captionFi": "Yleistetty havainnekuva vesiverkon hävikistä, ei Phnom Penhin todellinen putkisto.",
+            "sourceEvidence": [
+              {
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/phnompenh/faktapohja.md",
+                "section": "Nimetty ruoka/materiaali/tekniikka, lähdeviitteet A-koosteessa"
+              },
+              {
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/phnompenh/sisalto.json",
+                "jsonPath": "$.kaupunkilehti[0].nostot[3]",
+                "claim": "Vesilaitos löysi hukkaan valuvan veden"
+              },
+              {
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/phnompenh/tarkistus.md",
+                "section": "Aiheen D-havainnot luettava ennen kutsua"
+              }
+            ],
+            "rightsEvidence": "Turvallinen yleinen ruoka, materiaali tai arkiesine. Ei nykyteoksen, todellisen rakennusasettelun, tunnistettavan henkilön tai nimetyn näyttelyesineen jäljennöstä.",
+            "prompt": "Close-up of one plain unbranded metal water-pipe joint with a small realistic drip leaking beneath the threaded connection. Simple functional plumbing, believable metal patina, diffuse natural daylight and plain background, no identifiable waterworks or city street. Illustrates a possible network water loss, not proof of a specific Phnom Penh pipe. Use case: photorealistic-natural. Believable natural editorial photography with physically accurate materials and irregular everyday texture. No people or recognizable faces, no lettering, logos, watermarks, frames, collage or designed modern art. This is a generalized illustration of the text topic, not a documentary photograph of a named vendor, museum object, city layout, historical event or building. Prefer landscape PNG 1536x1024 sRGB, opaque background.",
+            "content": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/phnompenh/sisalto.json",
+              "contentSHA256": "9ecb09d5d3d9eb697da13948244f137f08a8b4c436f348079e498364cd24d0cb",
+              "targetObjectExists": true,
+              "targetContainer": "$.kaupunkilehti[0].nostot[3]",
+              "targetText": {
+                "otsikko": "Vesilaitos löysi hukkaan valuvan veden",
+                "teksti": "Phnom Penhin vesihuollon uudistuksessa huomio kohdistui myös veteen, joka katosi ennen asiakkaan hanaa. Verkoston hävikkiä vähennettiin, asiakasmäärä kasvoi ja ajoittaisesta jakelusta siirryttiin jatkuvaan vesipalveluun. Samalla vesilaitoksen talous muuttui alijäämäisestä kannattavaksi. Vesihuolto ei ole vain uusien putkien rakentamista: olemassa olevan verkoston toiminta ratkaisee, kuinka paljon puhdistettua vettä todella päätyy käyttöön. Tämä kaupunkitarina löytyy maamerkkien sijasta katujen alta.",
+                "wiki": "Phnom Penh",
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              },
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/phnompenh/faktapohja.md",
+              "factSheetExists": true
+            },
+            "otherReviewerVerdicts": [],
+            "visualInspection": {
+              "tool": "view_image",
+              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/phnompenh/assets/e10-phnompenh-K4-v1-20261012/image.png",
+              "detail": "original",
+              "observations": "Metallinen putken mutka ja kierreliitos; liitoksen alareunassa vesipisara. Metallin hapettumat, kierre, pisaran heijastus ja taustan syväterävyys uskottavia. Ei toistuvaa vesipintaa, ihmisiä, tekstiä tai logoja.",
+              "inspectedBy": "kuvitus-3"
+            },
+            "openConflict": false
+          },
+          "qaReason": "Vuotava putkiliitos havainnollistaa K4-noston vesiverkon hävikkiä. Kuvateksti rajaa pois Phnom Penhin todellisen putkiston. Native-SHA ja mitat täsmäävät."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Yleistetty havainnekuva vesiverkon hävikistä, ei Phnom Penhin todellinen putkisto.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/phnompenh/illustration-qa-extra.json",
+        "fileSHA256": "711178e0e8d4b6dd354a73515de9f474f462f4fafe0e986aa98cc172d865ced4",
+        "item": {
+          "slot": "K4",
+          "targetJsonPath": "$.kaupunkilehti[0].nostot[3]",
+          "assetID": "e10-phnompenh-K4-v1-20261012",
+          "sha256": "93ea351eac13af3f01ac329f8c450f8eb83349ced37e4b11743d412f77dd2146",
+          "verdict": "accepted",
+          "reason": "Vuotava putkiliitos havainnollistaa K4-noston vesiverkon hävikkiä. Kuvateksti rajaa pois Phnom Penhin todellisen putkiston. Native-SHA ja mitat täsmäävät.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/phnompenh/assets/e10-phnompenh-K4-v1-20261012/image.png",
+            "nativeSHA256": "93ea351eac13af3f01ac329f8c450f8eb83349ced37e4b11743d412f77dd2146",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "pngChunks": [
+              "IHDR",
+              "caBX",
+              "IDAT",
+              "IEND"
+            ],
+            "manifestMatch": true,
+            "captionFi": "Yleistetty havainnekuva vesiverkon hävikistä, ei Phnom Penhin todellinen putkisto.",
+            "sourceEvidence": [
+              {
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/phnompenh/faktapohja.md",
+                "section": "Nimetty ruoka/materiaali/tekniikka, lähdeviitteet A-koosteessa"
+              },
+              {
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/phnompenh/sisalto.json",
+                "jsonPath": "$.kaupunkilehti[0].nostot[3]",
+                "claim": "Vesilaitos löysi hukkaan valuvan veden"
+              },
+              {
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/phnompenh/tarkistus.md",
+                "section": "Aiheen D-havainnot luettava ennen kutsua"
+              }
+            ],
+            "rightsEvidence": "Turvallinen yleinen ruoka, materiaali tai arkiesine. Ei nykyteoksen, todellisen rakennusasettelun, tunnistettavan henkilön tai nimetyn näyttelyesineen jäljennöstä.",
+            "prompt": "Close-up of one plain unbranded metal water-pipe joint with a small realistic drip leaking beneath the threaded connection. Simple functional plumbing, believable metal patina, diffuse natural daylight and plain background, no identifiable waterworks or city street. Illustrates a possible network water loss, not proof of a specific Phnom Penh pipe. Use case: photorealistic-natural. Believable natural editorial photography with physically accurate materials and irregular everyday texture. No people or recognizable faces, no lettering, logos, watermarks, frames, collage or designed modern art. This is a generalized illustration of the text topic, not a documentary photograph of a named vendor, museum object, city layout, historical event or building. Prefer landscape PNG 1536x1024 sRGB, opaque background.",
+            "content": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/phnompenh/sisalto.json",
+              "contentSHA256": "9ecb09d5d3d9eb697da13948244f137f08a8b4c436f348079e498364cd24d0cb",
+              "targetObjectExists": true,
+              "targetContainer": "$.kaupunkilehti[0].nostot[3]",
+              "targetText": {
+                "otsikko": "Vesilaitos löysi hukkaan valuvan veden",
+                "teksti": "Phnom Penhin vesihuollon uudistuksessa huomio kohdistui myös veteen, joka katosi ennen asiakkaan hanaa. Verkoston hävikkiä vähennettiin, asiakasmäärä kasvoi ja ajoittaisesta jakelusta siirryttiin jatkuvaan vesipalveluun. Samalla vesilaitoksen talous muuttui alijäämäisestä kannattavaksi. Vesihuolto ei ole vain uusien putkien rakentamista: olemassa olevan verkoston toiminta ratkaisee, kuinka paljon puhdistettua vettä todella päätyy käyttöön. Tämä kaupunkitarina löytyy maamerkkien sijasta katujen alta.",
+                "wiki": "Phnom Penh",
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              },
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/phnompenh/faktapohja.md",
+              "factSheetExists": true
+            },
+            "otherReviewerVerdicts": [],
+            "visualInspection": {
+              "tool": "view_image",
+              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/phnompenh/assets/e10-phnompenh-K4-v1-20261012/image.png",
+              "detail": "original",
+              "observations": "Metallinen putken mutka ja kierreliitos; liitoksen alareunassa vesipisara. Metallin hapettumat, kierre, pisaran heijastus ja taustan syväterävyys uskottavia. Ei toistuvaa vesipintaa, ihmisiä, tekstiä tai logoja.",
+              "inspectedBy": "kuvitus-3"
+            },
+            "openConflict": false
+          },
+          "reviewedAt": "2026-10-12T18:29:04.113719+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/phnompenh/qa.json",
+            "sha256": "f0c594331149eddbce5558a90bcc1bf957de9f2baacf354dbaad3c5abcbab849"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/phnompenh/illustration-qa-extra.json",
+            "sha256": "711178e0e8d4b6dd354a73515de9f474f462f4fafe0e986aa98cc172d865ced4"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/phnompenh/e10-phnompenh-K4-v1-20261012-93ea351eac13.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/phnompenh/e10-phnompenh-K4-v1-20261012-93ea351eac13.png?t=bf9d14c236df7484",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/phnompenh/e10-phnompenh-K4-v1-20261012-93ea351eac13.png",
+        "sha256": "bf9d14c236df748411d6abefd1478032b9620fed8e46fcd43805385288ba8c33",
+        "bytes": 2251792,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e10-phnompenh-K4-v1-20261012",
+        "nativeSHA256": "93ea351eac13af3f01ac329f8c450f8eb83349ced37e4b11743d412f77dd2146",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e10/phnompenh/e10-phnompenh-K4-v1-20261012-93ea351eac13.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e10",
+        "city": "phnompenh",
+        "slot": "K4",
+        "targetJsonPath": "$.kaupunkilehti[0].nostot[3]",
+        "verifiedAt": "2026-10-12T18:31:21.667949+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e10/phnompenh/e10-phnompenh-K4-v1-20261012-93ea351eac13.png",
+        "sha256": "bf9d14c236df748411d6abefd1478032b9620fed8e46fcd43805385288ba8c33",
+        "bytes": 2251792,
+        "SHAReadAt": "2026-10-12T18:29:57.501216+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "93ea351eac13af3f01ac329f8c450f8eb83349ced37e4b11743d412f77dd2146",
+        "rgbPixelSHA256": "af92e08034ba151c2e9c550e3ee29bbea4b55935dfd7c577d14ca5c05e55a460",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "d46531ba7dd07230562e30f0543c5db1fdc117a9164d029b9d83714e659141a7",
+      "targetAfterSHA256": "4cfc151476a6779fca27511db81a420ca0523fe72790533a6ef12744f65100d0",
+      "contextAfterSHA256": "4cfc151476a6779fca27511db81a420ca0523fe72790533a6ef12744f65100d0"
+    },
+    {
+      "era": "e10",
+      "city": "phnompenh",
+      "slot": "PHOTO",
+      "type": "commons",
+      "assetID": "capital-cc-e10-phnompenh-photo-1b7c8438b7ec333b",
+      "galleryImageID": "capital-cc-e10-phnompenh-photo-1b7c8438b7ec333b",
+      "commonsFile": "2016 Phnom Penh, Promenada przy rzece w centrum miasta.jpg",
+      "targetJsonPath": "$.valokuva",
+      "targetTokens": [
+        "valokuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e10/phnompenh/photo-1b7c8438b7ec333b74ba.jpg",
+        "suora": true,
+        "lahde": "Marcin Konsek, Commons (CC BY-SA 4.0)",
+        "selite": "Phnom Penhin jokiranta kuuluu kaupungin käveltävään julkiseen ympäristöön.",
+        "lyhyt": "Phnom Penhin jokiranta kuuluu kaupungin käveltävään julkiseen ympäristöön.",
+        "tiedosto": "2016 Phnom Penh, Promenada przy rzece w centrum miasta.jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Marcin Konsek, Commons (CC BY-SA 4.0)",
+        "selite": "Phnom Penhin jokiranta kuuluu kaupungin käveltävään julkiseen ympäristöön.",
+        "lyhyt": "Phnom Penhin jokiranta kuuluu kaupungin käveltävään julkiseen ympäristöön.",
+        "tiedosto": "2016 Phnom Penh, Promenada przy rzece w centrum miasta.jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e10/phnompenh/photo-1b7c8438b7ec333b74ba.jpg",
+        "suora": true,
+        "lahde": "Marcin Konsek, Commons (CC BY-SA 4.0)",
+        "selite": "Phnom Penhin jokiranta kuuluu kaupungin käveltävään julkiseen ympäristöön.",
+        "lyhyt": "Phnom Penhin jokiranta kuuluu kaupungin käveltävään julkiseen ympäristöön.",
+        "tiedosto": "2016 Phnom Penh, Promenada przy rzece w centrum miasta.jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "1b7c8438b7ec333b74ba24c9fbb1281305299069a1055fb27f7e57f68d702466",
+      "exportSHA256": "1b7c8438b7ec333b74ba24c9fbb1281305299069a1055fb27f7e57f68d702466",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e10/phnompenh/photo-1b7c8438b7ec333b74ba.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e10/phnompenh/photo-1b7c8438b7ec333b74ba.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/phnompenh/cc-evidence/0acde96366b8-original.jpg",
+      "dimensions": [
+        3271,
+        4907
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/phnompenh/sisalto.json",
+      "sourceContentSHA256": "d46531ba7dd07230562e30f0543c5db1fdc117a9164d029b9d83714e659141a7",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "214d16423a47f24e64e4f484da110d15888e55ea9257149c3f7774c3f556c24f",
+        "semanticContextSHA256": "214d16423a47f24e64e4f484da110d15888e55ea9257149c3f7774c3f556c24f",
+        "subjectTitle": "phnompenh — aito paikkavalokuva",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Marcin Konsek",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:2016_Phnom_Penh,_Promenada_przy_rzece_w_centrum_miasta.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/5/50/2016_Phnom_Penh%2C_Promenada_przy_rzece_w_centrum_miasta.jpg",
+        "rightsEvidence": {
+          "selection": "Itse katsottu aito Phnom Penhin promenadi; lähdesivu nimeää kaupungin ja rannan. Ihmiset kuvassa pääosin selin, etäisten kasvojen piirteet eivät luettavissa. Ei päälle lisättyä tekstiä/vesileimaa. Joki, palmut ja tavanomainen katuympäristö pääaihe, taustan rakennukset pienessä sivuroolissa eikä yksilöityä modernia taideteosta päämotiivina. Eksplisiittinen Author Marcin Konsek ja CC BY-SA 4.0. Kuva vuodelta 2016, ei TRAVELERin tuoreena kuvana.",
+          "QA": {
+            "visualViewed": true,
+            "viewedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/phnompenh/qa-evidence/cc-fc68a4162d8b97e9/original.jpg",
+            "sourceHTML": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/phnompenh/qa-evidence/cc-fc68a4162d8b97e9/source.html",
+            "sourceHTMLSHA256": "59dc4b60a5f7be8d29ec4d3ee4e4885e3ae9afeb6455928d3f5f13e89f6605e6",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:2016_Phnom_Penh,_Promenada_przy_rzece_w_centrum_miasta.jpg",
+            "sourceDescription": "Polski: Promenada przy rzece w centrum miasta. Phnom Penh , Kambodża. English: Promenade by the river in the city center. Phnom Penh , Cambodia.",
+            "sourceDate": "16 February 2016, 09:28",
+            "author": "Marcin Konsek",
+            "license": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "width": 3271,
+            "height": 4907,
+            "rightsEvidence": "Itse katsottu aito Phnom Penhin promenadi; lähdesivu nimeää kaupungin ja rannan. Ihmiset kuvassa pääosin selin, etäisten kasvojen piirteet eivät luettavissa. Ei päälle lisättyä tekstiä/vesileimaa. Joki, palmut ja tavanomainen katuympäristö pääaihe, taustan rakennukset pienessä sivuroolissa eikä yksilöityä modernia taideteosta päämotiivina. Eksplisiittinen Author Marcin Konsek ja CC BY-SA 4.0. Kuva vuodelta 2016, ei TRAVELERin tuoreena kuvana.",
+            "sourceContentSHA256": "9ecb09d5d3d9eb697da13948244f137f08a8b4c436f348079e498364cd24d0cb",
+            "reviewedAt": "2026-10-12T18:53:01.154713+00:00",
+            "pixelInspection": {
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/phnompenh/qa-evidence/PHOTO-face-pixel-proof.png",
+              "sourceSHA256": "1b7c8438b7ec333b74ba24c9fbb1281305299069a1055fb27f7e57f68d702466",
+              "cropHeight": 1000,
+              "cropWidth": 1500,
+              "cropOffsetY": 2600,
+              "cropOffsetX": 700,
+              "method": "native sips, PNG katseluote; lähdeassetia ei muokattu"
+            }
+          },
+          "qaReason": "Aito lähteellä Phnom Penhiin sidottu jokipromenadi ja palmut; lähimmät ihmiset selin. Epävarma keskiosa tarkistettu alkuperäispikseleistä tehdyllä PNG-katseluotteella: myös kaksi kävelijää ovat selin, kaukaisten henkilöiden kasvot eivät luettavia. Vuosi2016 ei PHOTO-tuoreuseste. Kaupunkiranta pääaihe, taustan historiallinen paviljonki on kaupunkimaiseman sivussa, ei modernin veistoksen/taiteellisen pintateoksen jäljennös."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Phnom Penhin jokiranta kuuluu kaupungin käveltävään julkiseen ympäristöön.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/phnompenh/qa.json",
+        "fileSHA256": "f0c594331149eddbce5558a90bcc1bf957de9f2baacf354dbaad3c5abcbab849",
+        "item": {
+          "slot": "PHOTO",
+          "targetJsonPath": "$.valokuva",
+          "commonsFile": "2016 Phnom Penh, Promenada przy rzece w centrum miasta.jpg",
+          "sha256": "1b7c8438b7ec333b74ba24c9fbb1281305299069a1055fb27f7e57f68d702466",
+          "verdict": "accepted",
+          "reason": "Aito lähteellä Phnom Penhiin sidottu jokipromenadi ja palmut; lähimmät ihmiset selin. Epävarma keskiosa tarkistettu alkuperäispikseleistä tehdyllä PNG-katseluotteella: myös kaksi kävelijää ovat selin, kaukaisten henkilöiden kasvot eivät luettavia. Vuosi2016 ei PHOTO-tuoreuseste. Kaupunkiranta pääaihe, taustan historiallinen paviljonki on kaupunkimaiseman sivussa, ei modernin veistoksen/taiteellisen pintateoksen jäljennös.",
+          "evidence": {
+            "visualViewed": true,
+            "viewedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/phnompenh/qa-evidence/cc-fc68a4162d8b97e9/original.jpg",
+            "sourceHTML": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/phnompenh/qa-evidence/cc-fc68a4162d8b97e9/source.html",
+            "sourceHTMLSHA256": "59dc4b60a5f7be8d29ec4d3ee4e4885e3ae9afeb6455928d3f5f13e89f6605e6",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:2016_Phnom_Penh,_Promenada_przy_rzece_w_centrum_miasta.jpg",
+            "sourceDescription": "Polski: Promenada przy rzece w centrum miasta. Phnom Penh , Kambodża. English: Promenade by the river in the city center. Phnom Penh , Cambodia.",
+            "sourceDate": "16 February 2016, 09:28",
+            "author": "Marcin Konsek",
+            "license": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "width": 3271,
+            "height": 4907,
+            "rightsEvidence": "Itse katsottu aito Phnom Penhin promenadi; lähdesivu nimeää kaupungin ja rannan. Ihmiset kuvassa pääosin selin, etäisten kasvojen piirteet eivät luettavissa. Ei päälle lisättyä tekstiä/vesileimaa. Joki, palmut ja tavanomainen katuympäristö pääaihe, taustan rakennukset pienessä sivuroolissa eikä yksilöityä modernia taideteosta päämotiivina. Eksplisiittinen Author Marcin Konsek ja CC BY-SA 4.0. Kuva vuodelta 2016, ei TRAVELERin tuoreena kuvana.",
+            "sourceContentSHA256": "9ecb09d5d3d9eb697da13948244f137f08a8b4c436f348079e498364cd24d0cb",
+            "reviewedAt": "2026-10-12T18:53:01.154713+00:00",
+            "pixelInspection": {
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/phnompenh/qa-evidence/PHOTO-face-pixel-proof.png",
+              "sourceSHA256": "1b7c8438b7ec333b74ba24c9fbb1281305299069a1055fb27f7e57f68d702466",
+              "cropHeight": 1000,
+              "cropWidth": 1500,
+              "cropOffsetY": 2600,
+              "cropOffsetX": 700,
+              "method": "native sips, PNG katseluote; lähdeassetia ei muokattu"
+            }
+          }
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/phnompenh/qa.json",
+            "sha256": "f0c594331149eddbce5558a90bcc1bf957de9f2baacf354dbaad3c5abcbab849"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/phnompenh/illustration-qa-extra.json",
+            "sha256": "711178e0e8d4b6dd354a73515de9f474f462f4fafe0e986aa98cc172d865ced4"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e10",
+        "city": "phnompenh",
+        "slot": "PHOTO",
+        "targetJsonPath": "$.valokuva",
+        "commonsFile": "2016 Phnom Penh, Promenada przy rzece w centrum miasta.jpg",
+        "sha256": "1b7c8438b7ec333b74ba24c9fbb1281305299069a1055fb27f7e57f68d702466",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:2016_Phnom_Penh,_Promenada_przy_rzece_w_centrum_miasta.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/5/50/2016_Phnom_Penh%2C_Promenada_przy_rzece_w_centrum_miasta.jpg",
+        "author": "Marcin Konsek",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "width": 3271,
+        "height": 4907,
+        "originalSHA256": "1b7c8438b7ec333b74ba24c9fbb1281305299069a1055fb27f7e57f68d702466",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e10/phnompenh/photo-1b7c8438b7ec333b74ba.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e10/phnompenh/photo-1b7c8438b7ec333b74ba.jpg",
+        "bytes": 11785660,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T18:54:16.686576+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "2016 Phnom Penh, Promenada przy rzece w centrum miasta.jpg",
+        "lahde": "Marcin Konsek, Commons (CC BY-SA 4.0)",
+        "selite": "Phnom Penhin jokiranta kuuluu kaupungin käveltävään julkiseen ympäristöön.",
+        "lyhyt": "Phnom Penhin jokiranta kuuluu kaupungin käveltävään julkiseen ympäristöön."
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Marcin Konsek, Commons (CC BY-SA 4.0)",
+        "selite": "Phnom Penhin jokiranta kuuluu kaupungin käveltävään julkiseen ympäristöön.",
+        "lyhyt": "Phnom Penhin jokiranta kuuluu kaupungin käveltävään julkiseen ympäristöön.",
+        "tiedosto": "2016 Phnom Penh, Promenada przy rzece w centrum miasta.jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "d46531ba7dd07230562e30f0543c5db1fdc117a9164d029b9d83714e659141a7",
+      "targetAfterSHA256": "214d16423a47f24e64e4f484da110d15888e55ea9257149c3f7774c3f556c24f",
+      "contextAfterSHA256": "214d16423a47f24e64e4f484da110d15888e55ea9257149c3f7774c3f556c24f"
+    },
+    {
+      "era": "e10",
+      "city": "phnompenh",
+      "slot": "C1",
+      "type": "commons",
+      "assetID": "capital-cc-e10-phnompenh-c1-d02fd8997df314a7",
+      "galleryImageID": "capital-cc-e10-phnompenh-c1-d02fd8997df314a7",
+      "commonsFile": "2016 Phnom Penh, Rzeka w centrum miasta.jpg",
+      "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "kansikuvat",
+        0
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e10/phnompenh/c1-d02fd8997df314a73cb8.jpg",
+        "suora": true,
+        "lahde": "Marcin Konsek, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Phnom Penhin jokiranta liittää kaupungin jokiliikenteeseen.",
+        "lyhyt": "Phnom Penhin jokiranta liittää kaupungin jokiliikenteeseen.",
+        "tiedosto": "2016 Phnom Penh, Rzeka w centrum miasta.jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Marcin Konsek, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Phnom Penhin jokiranta liittää kaupungin jokiliikenteeseen.",
+        "lyhyt": "Phnom Penhin jokiranta liittää kaupungin jokiliikenteeseen.",
+        "tiedosto": "2016 Phnom Penh, Rzeka w centrum miasta.jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e10/phnompenh/c1-d02fd8997df314a73cb8.jpg",
+        "suora": true,
+        "lahde": "Marcin Konsek, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Phnom Penhin jokiranta liittää kaupungin jokiliikenteeseen.",
+        "lyhyt": "Phnom Penhin jokiranta liittää kaupungin jokiliikenteeseen.",
+        "tiedosto": "2016 Phnom Penh, Rzeka w centrum miasta.jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "d02fd8997df314a73cb8999a87b10a5886c8d5e82ef8cadecb2b44d9f5c2289b",
+      "exportSHA256": "d02fd8997df314a73cb8999a87b10a5886c8d5e82ef8cadecb2b44d9f5c2289b",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e10/phnompenh/c1-d02fd8997df314a73cb8.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e10/phnompenh/c1-d02fd8997df314a73cb8.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/phnompenh/cc-evidence/ca4a9a7ee508-original.jpg",
+      "dimensions": [
+        5207,
+        2929
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/phnompenh/sisalto.json",
+      "sourceContentSHA256": "d46531ba7dd07230562e30f0543c5db1fdc117a9164d029b9d83714e659141a7",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "2820adde17363252c7e4173360c25cd107908ad91a6c301da9da42212cef9f5e",
+        "semanticContextSHA256": "2820adde17363252c7e4173360c25cd107908ad91a6c301da9da42212cef9f5e",
+        "subjectTitle": "Phnom Penh",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Marcin Konsek",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:2016_Phnom_Penh,_Rzeka_w_centrum_miasta.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b4/2016_Phnom_Penh%2C_Rzeka_w_centrum_miasta.jpg",
+        "rightsEvidence": {
+          "selection": "Silmin katsottu laaja todellinen jokiranta ja kaupunkireuna; tavallinen alus/vesi, ei tunnistettavia kasvoja tai suojattua monumenttia pääaiheena. Rakennusten yhteinen taustasiluetti sivuosassa, ei nimetyn uuden arkkitehtuuriteoksen jäljennös. Lähdesivu yksilöi Phnom Penh, kuvaus 2016. Author Marcin Konsek, CC BY-SA 4.0 lähteen eksplisiittisistä kentistä.",
+          "QA": {
+            "visualViewed": true,
+            "viewedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/phnompenh/qa-evidence/cc-17c398c43edb092d/original.jpg",
+            "sourceHTML": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/phnompenh/qa-evidence/cc-17c398c43edb092d/source.html",
+            "sourceHTMLSHA256": "7d40507e13b751a2a732f767c9637a15cd3db6b7ed154de1dce1a5b533442305",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:2016_Phnom_Penh,_Rzeka_w_centrum_miasta.jpg",
+            "sourceDescription": "Polski: Rzeka w centrum miasta. Phnom Penh , Kambodża. English: River in the city center. Phnom Penh , Cambodia.",
+            "sourceDate": "16 February 2016, 09:28",
+            "author": "Marcin Konsek",
+            "license": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "width": 5207,
+            "height": 2929,
+            "rightsEvidence": "Silmin katsottu laaja todellinen jokiranta ja kaupunkireuna; tavallinen alus/vesi, ei tunnistettavia kasvoja tai suojattua monumenttia pääaiheena. Rakennusten yhteinen taustasiluetti sivuosassa, ei nimetyn uuden arkkitehtuuriteoksen jäljennös. Lähdesivu yksilöi Phnom Penh, kuvaus 2016. Author Marcin Konsek, CC BY-SA 4.0 lähteen eksplisiittisistä kentistä.",
+            "sourceContentSHA256": "9ecb09d5d3d9eb697da13948244f137f08a8b4c436f348079e498364cd24d0cb",
+            "reviewedAt": "2026-10-12T18:53:01.154713+00:00"
+          },
+          "qaReason": "Aito laaja Phnom Penhin jokirannan kaupunkinäkymä ja vene; lähde yksilöi kaupungin/joen, Date2016 säilytetään metadatassa. Ei kasvoja eikä yhtä yksilöityä modernia teosta kuvauksen pääaiheena. Ei nimetä taustan rakennustyömaita nykyvuoden palvelutilanteeksi. No-fixed-aspect-ratio ei ole uusi lisäportti."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Phnom Penhin jokiranta liittää kaupungin jokiliikenteeseen.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/phnompenh/qa.json",
+        "fileSHA256": "f0c594331149eddbce5558a90bcc1bf957de9f2baacf354dbaad3c5abcbab849",
+        "item": {
+          "slot": "C1",
+          "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
+          "commonsFile": "2016 Phnom Penh, Rzeka w centrum miasta.jpg",
+          "sha256": "d02fd8997df314a73cb8999a87b10a5886c8d5e82ef8cadecb2b44d9f5c2289b",
+          "verdict": "accepted",
+          "reason": "Aito laaja Phnom Penhin jokirannan kaupunkinäkymä ja vene; lähde yksilöi kaupungin/joen, Date2016 säilytetään metadatassa. Ei kasvoja eikä yhtä yksilöityä modernia teosta kuvauksen pääaiheena. Ei nimetä taustan rakennustyömaita nykyvuoden palvelutilanteeksi. No-fixed-aspect-ratio ei ole uusi lisäportti.",
+          "evidence": {
+            "visualViewed": true,
+            "viewedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/phnompenh/qa-evidence/cc-17c398c43edb092d/original.jpg",
+            "sourceHTML": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/phnompenh/qa-evidence/cc-17c398c43edb092d/source.html",
+            "sourceHTMLSHA256": "7d40507e13b751a2a732f767c9637a15cd3db6b7ed154de1dce1a5b533442305",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:2016_Phnom_Penh,_Rzeka_w_centrum_miasta.jpg",
+            "sourceDescription": "Polski: Rzeka w centrum miasta. Phnom Penh , Kambodża. English: River in the city center. Phnom Penh , Cambodia.",
+            "sourceDate": "16 February 2016, 09:28",
+            "author": "Marcin Konsek",
+            "license": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "width": 5207,
+            "height": 2929,
+            "rightsEvidence": "Silmin katsottu laaja todellinen jokiranta ja kaupunkireuna; tavallinen alus/vesi, ei tunnistettavia kasvoja tai suojattua monumenttia pääaiheena. Rakennusten yhteinen taustasiluetti sivuosassa, ei nimetyn uuden arkkitehtuuriteoksen jäljennös. Lähdesivu yksilöi Phnom Penh, kuvaus 2016. Author Marcin Konsek, CC BY-SA 4.0 lähteen eksplisiittisistä kentistä.",
+            "sourceContentSHA256": "9ecb09d5d3d9eb697da13948244f137f08a8b4c436f348079e498364cd24d0cb",
+            "reviewedAt": "2026-10-12T18:53:01.154713+00:00"
+          }
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/phnompenh/qa.json",
+            "sha256": "f0c594331149eddbce5558a90bcc1bf957de9f2baacf354dbaad3c5abcbab849"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/phnompenh/illustration-qa-extra.json",
+            "sha256": "711178e0e8d4b6dd354a73515de9f474f462f4fafe0e986aa98cc172d865ced4"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e10",
+        "city": "phnompenh",
+        "slot": "C1",
+        "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
+        "commonsFile": "2016 Phnom Penh, Rzeka w centrum miasta.jpg",
+        "sha256": "d02fd8997df314a73cb8999a87b10a5886c8d5e82ef8cadecb2b44d9f5c2289b",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:2016_Phnom_Penh,_Rzeka_w_centrum_miasta.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b4/2016_Phnom_Penh%2C_Rzeka_w_centrum_miasta.jpg",
+        "author": "Marcin Konsek",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "width": 5207,
+        "height": 2929,
+        "originalSHA256": "d02fd8997df314a73cb8999a87b10a5886c8d5e82ef8cadecb2b44d9f5c2289b",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e10/phnompenh/c1-d02fd8997df314a73cb8.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e10/phnompenh/c1-d02fd8997df314a73cb8.jpg",
+        "bytes": 10033764,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T18:54:19.291947+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "2016 Phnom Penh, Rzeka w centrum miasta.jpg",
+        "lahde": "Marcin Konsek, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Phnom Penhin jokiranta liittää kaupungin jokiliikenteeseen.",
+        "lyhyt": "Phnom Penhin jokiranta liittää kaupungin jokiliikenteeseen."
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Marcin Konsek, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Phnom Penhin jokiranta liittää kaupungin jokiliikenteeseen.",
+        "lyhyt": "Phnom Penhin jokiranta liittää kaupungin jokiliikenteeseen.",
+        "tiedosto": "2016 Phnom Penh, Rzeka w centrum miasta.jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "d46531ba7dd07230562e30f0543c5db1fdc117a9164d029b9d83714e659141a7",
+      "targetAfterSHA256": "2820adde17363252c7e4173360c25cd107908ad91a6c301da9da42212cef9f5e",
+      "contextAfterSHA256": "2820adde17363252c7e4173360c25cd107908ad91a6c301da9da42212cef9f5e"
+    }
+  ],
+  "runtimeIntegrationPending": true,
+  "ownerAcceptedNotImpliedByAuthorization": true,
+  "gameIntegrated": false
+}

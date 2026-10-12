@@ -1,0 +1,3180 @@
+{
+  "schemaVersion": "capital-city-role-assets/v1",
+  "era": "e10",
+  "city": "naypyidaw",
+  "authorization": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+  "sourceContentAfterSHA256": "787887ff4046c0376929fdc73d10bf7218f256fad90212e2b8ac0f336cdba275",
+  "assets": [
+    {
+      "era": "e10",
+      "city": "naypyidaw",
+      "slot": "TRAVELER",
+      "type": "illustration",
+      "assetID": "e10-naypyidaw-TRAVELER-v1-20261012",
+      "galleryImageID": "e10-naypyidaw-TRAVELER-v1-20261012",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "matkailijalle",
+        "kuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/naypyidaw/e10-naypyidaw-TRAVELER-v1-20261012-c5951029c08c.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva kivettyneestä puusta; ei kansallismuseon nimetty näyte.",
+        "lyhyt": "Havainnekuva kivettyneestä puusta; ei kansallismuseon nimetty näyte."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/naypyidaw/e10-naypyidaw-TRAVELER-v1-20261012-c5951029c08c.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva kivettyneestä puusta; ei kansallismuseon nimetty näyte.",
+        "lyhyt": "Havainnekuva kivettyneestä puusta; ei kansallismuseon nimetty näyte."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "c5951029c08c85402754f52ce45c13c8a764e193d0b504ac97f0260002b9698d",
+      "exportSHA256": "554a418fcd3467b74d939d9b6af568d9dc371e6fd90a687df4229dafa3791c68",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/naypyidaw/e10-naypyidaw-TRAVELER-v1-20261012-c5951029c08c.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/naypyidaw/e10-naypyidaw-TRAVELER-v1-20261012-c5951029c08c.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e10/naypyidaw/e10-naypyidaw-TRAVELER-v1-20261012-c5951029c08c.png",
+      "dimensions": [
+        1086,
+        1448
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/naypyidaw/sisalto.json",
+      "sourceContentSHA256": "787887ff4046c0376929fdc73d10bf7218f256fad90212e2b8ac0f336cdba275",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "ab6cb460dc48b19ccbe803133c2c90cf53704503604ccc3fe126c56f76d9877f",
+        "subjectTitle": "Matkailijalle",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Yleistetty luonnonmateriaali, kasvi tai ruoka; ei nimetyn teoksen, nykyisen museoartefaktin, rakennuksen, tapahtuman tai henkilön jäljennös.",
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/naypyidaw/assets/e10-naypyidaw-TRAVELER-v1-20261012/image.png",
+            "nativeSHA256": "c5951029c08c85402754f52ce45c13c8a764e193d0b504ac97f0260002b9698d",
+            "nativeWidth": 1086,
+            "nativeHeight": 1448,
+            "format": "PNG",
+            "pngChunks": [
+              "IHDR",
+              "caBX",
+              "IDAT",
+              "IEND"
+            ],
+            "manifestMatch": true,
+            "captionFi": "Havainnekuva kivettyneestä puusta; ei kansallismuseon nimetty näyte.",
+            "sourceEvidence": [
+              {
+                "url": "https://en.wikipedia.org/wiki/National_Museum_(Naypyidaw)",
+                "claim": "Primates/Fossils: petrified plants; original museum-wp.txt825"
+              },
+              {
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/naypyidaw/faktapohja.md",
+                "section": "Noston ja oppaan lahdeketju"
+              },
+              {
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/naypyidaw/tarkistus.md",
+                "section": "Aiheen D-tarkistus luettu"
+              },
+              {
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/naypyidaw/sisalto.json",
+                "jsonPath": "$.kaupunkilehti[0].matkailijalle.kuva"
+              }
+            ],
+            "rightsEvidence": "Yleistetty luonnonmateriaali, kasvi tai ruoka; ei nimetyn teoksen, nykyisen museoartefaktin, rakennuksen, tapahtuman tai henkilön jäljennös.",
+            "prompt": "Create a NATIVE PORTRAIT PNG aspect0.75 preferably1536x2048. A single irregular natural piece of petrified wood on a plain neutral surface in soft daylight. Stone-like mineral grain and preserved uneven woody growth texture; no repetitive swirl pattern. Whole fragment readable, restrained editorial photo perspective. No museum case, label, ruler, replica, identified Pondaung or Irrawaddy specimen, people, lettering, logos, watermark or frame. Generalized natural-history illustration of fossilized plant material.",
+            "content": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/naypyidaw/sisalto.json",
+              "contentSHA256": "6cc2cf9d1a2d3452148806a873c72c50b135f683add8ca152a89082b8c440d62",
+              "targetObjectExists": true,
+              "targetContainer": "$.kaupunkilehti[0].matkailijalle",
+              "targetText": {
+                "kuva": {
+                  "tiedosto": "",
+                  "lyhyt": "",
+                  "selite": "",
+                  "lahde": ""
+                },
+                "kappale": "Matkailu Myanmariin ei ole tällä hetkellä turvallista, joten siirrä vapaa-ajan matka myöhemmäksi. Naypyidawissa välimatkat ovat pitkiä ja kuljetus pitää suunnitella kohteiden mukaan. Kaupungin kansallismuseo ja lääkekasvipuisto kertovat sen kokoelmista eri tavoin. Museon vierailutiedot ja liikenteen toimivuus on tarkistettava ajantasaisesti. Vanha matka-aika tai aikataulu ei takaa nykyistä yhteyttä.",
+                "artikkeli": {
+                  "nimi": "Matkailijan Naypyidaw",
+                  "taitto": "opas",
+                  "teksti": "Tutustu Naypyidawin alueisiin ja kokoelmiin kaupungin kartan kautta.",
+                  "nosto": "Kaupunki on hajallaan, ja sen kohteet vaativat kuljetussuunnitelman. Matkailu Myanmariin ei ole tällä hetkellä turvallista.",
+                  "jaksot": [
+                    {
+                      "otsikko": "Perille ja liikkeelle",
+                      "teksti": "Naypyidawilla on lentoasema, rautatieasema ja bussiyhteyksien infrastruktuuria. Palvelujen tämänhetkinen toiminta pitää tarkistaa erikseen. Asema, majoitus ja nähtäväksi ajateltu kohde voivat sijaita kaukana toisistaan, joten suunnittele koko siirtymäketju. Matkailu Myanmariin ei ole tällä hetkellä turvallista, ja vapaa-ajan matka kannattaa siirtää myöhemmäksi.",
+                      "kuva": {
+                        "tiedosto": "",
+                        "lyhyt": "",
+                        "selite": "",
+                        "lahde": ""
+                      }
+                    },
+                    {
+                      "otsikko": "Hahmota alueet ennen matkaa",
+                      "teksti": "Naypyidawin suunniteltu rakenne erottaa muun muassa asuin- ja hotellialueita. Yksi kaupungin karttapiste ei kerro, missä oma määränpää sijaitsee. Pyinmana ja Lewe kuuluvat alueen vanhempaan asutukseen, ja liittoalue on suunniteltua keskustaa laajempi kokonaisuus. Tarkastele etäisyyksiä kohteiden osoitteista, älä pelkästään kaupunginnimestä.",
+                      "kuva": {
+                        "tiedosto": "",
+                        "lyhyt": "",
+                        "selite": "",
+                        "lahde": ""
+                      }
+                    },
+                    {
+                      "otsikko": "Museon pitkä aika ja puiston kasvit",
+                      "teksti": "Kansallismuseon näyttelyaiheisiin kuuluvat fossiilit, esihistoria ja vanhat kaupunkikulttuurit. National Herbal Park puolestaan kokoaa perinteiseen lääkekasvien käyttöön liittyviä kasveja eri puolilta maata. Museossa on tehty maanjäristyskorjauksia ja saleja on avattu uudelleen, mutta vierailutiedot täytyy tarkistaa ennen käyntiä. Puiston kokoelmaa katsotaan kasvien ja kulttuurihistorian näkökulmasta.",
+                      "kuva": {
+                        "tiedosto": "",
+                        "lyhyt": "",
+                        "selite": "",
+                        "lahde": ""
+                      }
+                    },
+                    {
+                      "otsikko": "Mitä täällä syödään",
+                      "teksti": "Kaupungin ostoskeskuksissa on ravintoloita, ja myös hotellien yhteydessä on ruokailupalveluja. Pitkien välimatkojen vuoksi ruokailupaikka kannattaa sovittaa muun asioinnin yhteyteen. Tarkista majoituksesta, mitä lähellä on tällä hetkellä tarjolla.",
+                      "kuva": {
+                        "tiedosto": "",
+                        "lyhyt": "",
+                        "selite": "",
+                        "lahde": ""
+                      }
+                    },
+                    {
+                      "otsikko": "Milloin kannattaa tulla",
+                      "teksti": "Naypyidawin trooppisessa ilmastossa on märkä ja kuiva jakso. Kuivan jakson loppupuolella iltapäivät voivat olla hyvin kuumia, ja sateisena aikana kosteus lisää kuumuuden tuntua. Ulkona liikkumiseen tarvitaan varjoa, juomavettä ja säätilaan sopiva suunnitelma. Turvallisuustilanne ratkaisee matkan ajankohdan ennen ilmastomieltymyksiä; vapaa-ajan matka on nyt syytä siirtää.",
+                      "kuva": {
+                        "tiedosto": "",
+                        "lyhyt": "",
+                        "selite": "",
+                        "lahde": ""
+                      }
+                    }
+                  ],
+                  "matkailu": {
+                    "parasta": [
+                      {
+                        "mita": "Kansallismuseon fossiiliaineisto",
+                        "tahdet": 3,
+                        "selite": "Kokoelma tuo pääkaupunkiin sen omaa historiaa vanhempaa aineistoa."
+                      },
+                      {
+                        "mita": "National Herbal Park",
+                        "tahdet": 3,
+                        "selite": "Puiston kasvit kertovat perinteisistä käyttötavoista ja alueellisesta kirjosta."
+                      },
+                      {
+                        "mita": "Esihistorian työkalut",
+                        "tahdet": 2,
+                        "selite": "Museossa materiaali avaa eri aikakausien työmenetelmiä."
+                      },
+                      {
+                        "mita": "Pyu-kaupunkien näyttely",
+                        "tahdet": 2,
+                        "selite": "Vanhojen kaupunkien rakenne tulee osaksi nuoren kaupungin kokoelmia."
+                      },
+                      {
+                        "mita": "Pyinmanan ja uuden kaupungin suhde",
+                        "tahdet": 2,
+                        "selite": "Kartan tutkiminen erottaa vanhan asutuksen uudesta pääkaupungista."
+                      }
+                    ],
+                    "hyvaTietaa": [
+                      {
+                        "otsikko": "Matkan turvallisuus",
+                        "teksti": "Matkailu Myanmariin ei ole tällä hetkellä turvallista; siirrä vapaa-ajan matka myöhemmäksi."
+                      },
+                      {
+                        "otsikko": "Välimatkat",
+                        "teksti": "Kohteita ei kannata olettaa kävelymatkan päähän toisistaan."
+                      },
+                      {
+                        "otsikko": "Liikenteen toimivuus",
+                        "teksti": "Tarkista nykyiset yhteydet ja järjestä jatkokuljetus määränpäähän."
+                      },
+                      {
+                        "otsikko": "Museovierailu",
+                        "teksti": "Korjausten jälkeinen ajantasainen vierailutilanne on tarkistettava erikseen."
+                      }
+                    ]
+                  },
+                  "lahde": "Wikipedia"
+                }
+              },
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/naypyidaw/faktapohja.md",
+              "factSheetExists": true
+            },
+            "otherReviewerVerdicts": [],
+            "visualInspection": {
+              "tool": "view_image",
+              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/naypyidaw/assets/e10-naypyidaw-TRAVELER-v1-20261012/image.png",
+              "detail": "original",
+              "observations": "Pystyasentoinen mineraalistunut puukappale, pitkittäistä syyrakennetta, murtumia ja eri sävyjä. Kivimäiset heijastukset ja paino uskottavia; ei toistuvaa pintakuorta. Ei ihmisiä, tekstiä tai logoja.",
+              "inspectedBy": "kuvitus-3"
+            },
+            "openConflict": false
+          },
+          "qaReason": "Kivettyneen puun yleishavainne liittyy Naypyidawin oppaan fossiiliaiheeseen. Kuvateksti rajaa pois kansallismuseon nimetyn näytteen. Native pysty 1086×1448, suhde 0,75; SHA täsmää."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva kivettyneestä puusta; ei kansallismuseon nimetty näyte.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/naypyidaw/illustration-qa-extra.json",
+        "fileSHA256": "3c7413623c054717bffe209cb4510e500523ff6a95d59b5e65aa97d04ef25ad9",
+        "item": {
+          "slot": "TRAVELER",
+          "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
+          "assetID": "e10-naypyidaw-TRAVELER-v1-20261012",
+          "sha256": "c5951029c08c85402754f52ce45c13c8a764e193d0b504ac97f0260002b9698d",
+          "verdict": "accepted",
+          "reason": "Kivettyneen puun yleishavainne liittyy Naypyidawin oppaan fossiiliaiheeseen. Kuvateksti rajaa pois kansallismuseon nimetyn näytteen. Native pysty 1086×1448, suhde 0,75; SHA täsmää.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/naypyidaw/assets/e10-naypyidaw-TRAVELER-v1-20261012/image.png",
+            "nativeSHA256": "c5951029c08c85402754f52ce45c13c8a764e193d0b504ac97f0260002b9698d",
+            "nativeWidth": 1086,
+            "nativeHeight": 1448,
+            "format": "PNG",
+            "pngChunks": [
+              "IHDR",
+              "caBX",
+              "IDAT",
+              "IEND"
+            ],
+            "manifestMatch": true,
+            "captionFi": "Havainnekuva kivettyneestä puusta; ei kansallismuseon nimetty näyte.",
+            "sourceEvidence": [
+              {
+                "url": "https://en.wikipedia.org/wiki/National_Museum_(Naypyidaw)",
+                "claim": "Primates/Fossils: petrified plants; original museum-wp.txt825"
+              },
+              {
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/naypyidaw/faktapohja.md",
+                "section": "Noston ja oppaan lahdeketju"
+              },
+              {
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/naypyidaw/tarkistus.md",
+                "section": "Aiheen D-tarkistus luettu"
+              },
+              {
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/naypyidaw/sisalto.json",
+                "jsonPath": "$.kaupunkilehti[0].matkailijalle.kuva"
+              }
+            ],
+            "rightsEvidence": "Yleistetty luonnonmateriaali, kasvi tai ruoka; ei nimetyn teoksen, nykyisen museoartefaktin, rakennuksen, tapahtuman tai henkilön jäljennös.",
+            "prompt": "Create a NATIVE PORTRAIT PNG aspect0.75 preferably1536x2048. A single irregular natural piece of petrified wood on a plain neutral surface in soft daylight. Stone-like mineral grain and preserved uneven woody growth texture; no repetitive swirl pattern. Whole fragment readable, restrained editorial photo perspective. No museum case, label, ruler, replica, identified Pondaung or Irrawaddy specimen, people, lettering, logos, watermark or frame. Generalized natural-history illustration of fossilized plant material.",
+            "content": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/naypyidaw/sisalto.json",
+              "contentSHA256": "6cc2cf9d1a2d3452148806a873c72c50b135f683add8ca152a89082b8c440d62",
+              "targetObjectExists": true,
+              "targetContainer": "$.kaupunkilehti[0].matkailijalle",
+              "targetText": {
+                "kuva": {
+                  "tiedosto": "",
+                  "lyhyt": "",
+                  "selite": "",
+                  "lahde": ""
+                },
+                "kappale": "Matkailu Myanmariin ei ole tällä hetkellä turvallista, joten siirrä vapaa-ajan matka myöhemmäksi. Naypyidawissa välimatkat ovat pitkiä ja kuljetus pitää suunnitella kohteiden mukaan. Kaupungin kansallismuseo ja lääkekasvipuisto kertovat sen kokoelmista eri tavoin. Museon vierailutiedot ja liikenteen toimivuus on tarkistettava ajantasaisesti. Vanha matka-aika tai aikataulu ei takaa nykyistä yhteyttä.",
+                "artikkeli": {
+                  "nimi": "Matkailijan Naypyidaw",
+                  "taitto": "opas",
+                  "teksti": "Tutustu Naypyidawin alueisiin ja kokoelmiin kaupungin kartan kautta.",
+                  "nosto": "Kaupunki on hajallaan, ja sen kohteet vaativat kuljetussuunnitelman. Matkailu Myanmariin ei ole tällä hetkellä turvallista.",
+                  "jaksot": [
+                    {
+                      "otsikko": "Perille ja liikkeelle",
+                      "teksti": "Naypyidawilla on lentoasema, rautatieasema ja bussiyhteyksien infrastruktuuria. Palvelujen tämänhetkinen toiminta pitää tarkistaa erikseen. Asema, majoitus ja nähtäväksi ajateltu kohde voivat sijaita kaukana toisistaan, joten suunnittele koko siirtymäketju. Matkailu Myanmariin ei ole tällä hetkellä turvallista, ja vapaa-ajan matka kannattaa siirtää myöhemmäksi.",
+                      "kuva": {
+                        "tiedosto": "",
+                        "lyhyt": "",
+                        "selite": "",
+                        "lahde": ""
+                      }
+                    },
+                    {
+                      "otsikko": "Hahmota alueet ennen matkaa",
+                      "teksti": "Naypyidawin suunniteltu rakenne erottaa muun muassa asuin- ja hotellialueita. Yksi kaupungin karttapiste ei kerro, missä oma määränpää sijaitsee. Pyinmana ja Lewe kuuluvat alueen vanhempaan asutukseen, ja liittoalue on suunniteltua keskustaa laajempi kokonaisuus. Tarkastele etäisyyksiä kohteiden osoitteista, älä pelkästään kaupunginnimestä.",
+                      "kuva": {
+                        "tiedosto": "",
+                        "lyhyt": "",
+                        "selite": "",
+                        "lahde": ""
+                      }
+                    },
+                    {
+                      "otsikko": "Museon pitkä aika ja puiston kasvit",
+                      "teksti": "Kansallismuseon näyttelyaiheisiin kuuluvat fossiilit, esihistoria ja vanhat kaupunkikulttuurit. National Herbal Park puolestaan kokoaa perinteiseen lääkekasvien käyttöön liittyviä kasveja eri puolilta maata. Museossa on tehty maanjäristyskorjauksia ja saleja on avattu uudelleen, mutta vierailutiedot täytyy tarkistaa ennen käyntiä. Puiston kokoelmaa katsotaan kasvien ja kulttuurihistorian näkökulmasta.",
+                      "kuva": {
+                        "tiedosto": "",
+                        "lyhyt": "",
+                        "selite": "",
+                        "lahde": ""
+                      }
+                    },
+                    {
+                      "otsikko": "Mitä täällä syödään",
+                      "teksti": "Kaupungin ostoskeskuksissa on ravintoloita, ja myös hotellien yhteydessä on ruokailupalveluja. Pitkien välimatkojen vuoksi ruokailupaikka kannattaa sovittaa muun asioinnin yhteyteen. Tarkista majoituksesta, mitä lähellä on tällä hetkellä tarjolla.",
+                      "kuva": {
+                        "tiedosto": "",
+                        "lyhyt": "",
+                        "selite": "",
+                        "lahde": ""
+                      }
+                    },
+                    {
+                      "otsikko": "Milloin kannattaa tulla",
+                      "teksti": "Naypyidawin trooppisessa ilmastossa on märkä ja kuiva jakso. Kuivan jakson loppupuolella iltapäivät voivat olla hyvin kuumia, ja sateisena aikana kosteus lisää kuumuuden tuntua. Ulkona liikkumiseen tarvitaan varjoa, juomavettä ja säätilaan sopiva suunnitelma. Turvallisuustilanne ratkaisee matkan ajankohdan ennen ilmastomieltymyksiä; vapaa-ajan matka on nyt syytä siirtää.",
+                      "kuva": {
+                        "tiedosto": "",
+                        "lyhyt": "",
+                        "selite": "",
+                        "lahde": ""
+                      }
+                    }
+                  ],
+                  "matkailu": {
+                    "parasta": [
+                      {
+                        "mita": "Kansallismuseon fossiiliaineisto",
+                        "tahdet": 3,
+                        "selite": "Kokoelma tuo pääkaupunkiin sen omaa historiaa vanhempaa aineistoa."
+                      },
+                      {
+                        "mita": "National Herbal Park",
+                        "tahdet": 3,
+                        "selite": "Puiston kasvit kertovat perinteisistä käyttötavoista ja alueellisesta kirjosta."
+                      },
+                      {
+                        "mita": "Esihistorian työkalut",
+                        "tahdet": 2,
+                        "selite": "Museossa materiaali avaa eri aikakausien työmenetelmiä."
+                      },
+                      {
+                        "mita": "Pyu-kaupunkien näyttely",
+                        "tahdet": 2,
+                        "selite": "Vanhojen kaupunkien rakenne tulee osaksi nuoren kaupungin kokoelmia."
+                      },
+                      {
+                        "mita": "Pyinmanan ja uuden kaupungin suhde",
+                        "tahdet": 2,
+                        "selite": "Kartan tutkiminen erottaa vanhan asutuksen uudesta pääkaupungista."
+                      }
+                    ],
+                    "hyvaTietaa": [
+                      {
+                        "otsikko": "Matkan turvallisuus",
+                        "teksti": "Matkailu Myanmariin ei ole tällä hetkellä turvallista; siirrä vapaa-ajan matka myöhemmäksi."
+                      },
+                      {
+                        "otsikko": "Välimatkat",
+                        "teksti": "Kohteita ei kannata olettaa kävelymatkan päähän toisistaan."
+                      },
+                      {
+                        "otsikko": "Liikenteen toimivuus",
+                        "teksti": "Tarkista nykyiset yhteydet ja järjestä jatkokuljetus määränpäähän."
+                      },
+                      {
+                        "otsikko": "Museovierailu",
+                        "teksti": "Korjausten jälkeinen ajantasainen vierailutilanne on tarkistettava erikseen."
+                      }
+                    ]
+                  },
+                  "lahde": "Wikipedia"
+                }
+              },
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/naypyidaw/faktapohja.md",
+              "factSheetExists": true
+            },
+            "otherReviewerVerdicts": [],
+            "visualInspection": {
+              "tool": "view_image",
+              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/naypyidaw/assets/e10-naypyidaw-TRAVELER-v1-20261012/image.png",
+              "detail": "original",
+              "observations": "Pystyasentoinen mineraalistunut puukappale, pitkittäistä syyrakennetta, murtumia ja eri sävyjä. Kivimäiset heijastukset ja paino uskottavia; ei toistuvaa pintakuorta. Ei ihmisiä, tekstiä tai logoja.",
+              "inspectedBy": "kuvitus-3"
+            },
+            "openConflict": false
+          },
+          "reviewedAt": "2026-10-12T19:02:00.866957+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/naypyidaw/qa.json",
+            "sha256": "5098ad6dfb33b09f540a8ecad5dc969f42984593feb64ee5c1f6c2d16c9faa95"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/naypyidaw/illustration-qa-extra.json",
+            "sha256": "3c7413623c054717bffe209cb4510e500523ff6a95d59b5e65aa97d04ef25ad9"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/naypyidaw/e10-naypyidaw-TRAVELER-v1-20261012-c5951029c08c.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/naypyidaw/e10-naypyidaw-TRAVELER-v1-20261012-c5951029c08c.png?t=554a418fcd3467b7",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/naypyidaw/e10-naypyidaw-TRAVELER-v1-20261012-c5951029c08c.png",
+        "sha256": "554a418fcd3467b74d939d9b6af568d9dc371e6fd90a687df4229dafa3791c68",
+        "bytes": 2610047,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e10-naypyidaw-TRAVELER-v1-20261012",
+        "nativeSHA256": "c5951029c08c85402754f52ce45c13c8a764e193d0b504ac97f0260002b9698d",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e10/naypyidaw/e10-naypyidaw-TRAVELER-v1-20261012-c5951029c08c.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e10",
+        "city": "naypyidaw",
+        "slot": "TRAVELER",
+        "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
+        "verifiedAt": "2026-10-12T19:02:26.656767+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e10/naypyidaw/e10-naypyidaw-TRAVELER-v1-20261012-c5951029c08c.png",
+        "sha256": "554a418fcd3467b74d939d9b6af568d9dc371e6fd90a687df4229dafa3791c68",
+        "bytes": 2610047,
+        "SHAReadAt": "2026-10-12T19:03:41.079693+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1086,
+        "height": 1448,
+        "pixelWidth": 1086,
+        "pixelHeight": 1448,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "c5951029c08c85402754f52ce45c13c8a764e193d0b504ac97f0260002b9698d",
+        "rgbPixelSHA256": "4569db592293ed9fba8802d041a19402314825c556494fef23cdce107a718a00",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "787887ff4046c0376929fdc73d10bf7218f256fad90212e2b8ac0f336cdba275",
+      "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+      "contextAfterSHA256": "ab6cb460dc48b19ccbe803133c2c90cf53704503604ccc3fe126c56f76d9877f"
+    },
+    {
+      "era": "e10",
+      "city": "naypyidaw",
+      "slot": "O3",
+      "type": "illustration",
+      "assetID": "e10-naypyidaw-O3-v1-20261012",
+      "galleryImageID": "e10-naypyidaw-O3-v1-20261012",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[2].kuva",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "matkailijalle",
+        "artikkeli",
+        "jaksot",
+        2,
+        "kuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/naypyidaw/e10-naypyidaw-O3-v1-20261012-665123fe5c73.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva hoidettavasta elävästä kasvista; ei puiston tietty laji tai asettelu.",
+        "lyhyt": "Havainnekuva hoidettavasta elävästä kasvista; ei puiston tietty laji tai asettelu."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/naypyidaw/e10-naypyidaw-O3-v1-20261012-665123fe5c73.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva hoidettavasta elävästä kasvista; ei puiston tietty laji tai asettelu.",
+        "lyhyt": "Havainnekuva hoidettavasta elävästä kasvista; ei puiston tietty laji tai asettelu."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "665123fe5c73b7e8f871d4325c13e3b5b6d5bc0f6d3ecbb09e7ec7a527b78e1d",
+      "exportSHA256": "a5ef13d670497c4970e4ebef211437c2132238411f09840db03673ba3bce3604",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/naypyidaw/e10-naypyidaw-O3-v1-20261012-665123fe5c73.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/naypyidaw/e10-naypyidaw-O3-v1-20261012-665123fe5c73.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e10/naypyidaw/e10-naypyidaw-O3-v1-20261012-665123fe5c73.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/naypyidaw/sisalto.json",
+      "sourceContentSHA256": "787887ff4046c0376929fdc73d10bf7218f256fad90212e2b8ac0f336cdba275",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "0e42ca8728fbe448989183809b455d83210f5c6751ec61d764c96ec0e518dd13",
+        "subjectTitle": "Museon pitkä aika ja puiston kasvit",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Yleistetty luonnonmateriaali, kasvi tai ruoka; ei nimetyn teoksen, nykyisen museoartefaktin, rakennuksen, tapahtuman tai henkilön jäljennös.",
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/naypyidaw/assets/e10-naypyidaw-O3-v1-20261012/image.png",
+            "nativeSHA256": "665123fe5c73b7e8f871d4325c13e3b5b6d5bc0f6d3ecbb09e7ec7a527b78e1d",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "pngChunks": [
+              "IHDR",
+              "caBX",
+              "IDAT",
+              "IEND"
+            ],
+            "manifestMatch": true,
+            "captionFi": "Havainnekuva hoidettavasta elävästä kasvista; ei puiston tietty laji tai asettelu.",
+            "sourceEvidence": [
+              {
+                "url": "https://en.wikipedia.org/wiki/National_Herbal_Park",
+                "claim": "Plant collection and conservation; guide O3 discusses plants"
+              },
+              {
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/naypyidaw/faktapohja.md",
+                "section": "Noston ja oppaan lahdeketju"
+              },
+              {
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/naypyidaw/tarkistus.md",
+                "section": "Aiheen D-tarkistus luettu"
+              },
+              {
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/naypyidaw/sisalto.json",
+                "jsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[2].kuva"
+              }
+            ],
+            "rightsEvidence": "Yleistetty luonnonmateriaali, kasvi tai ruoka; ei nimetyn teoksen, nykyisen museoartefaktin, rakennuksen, tapahtuman tai henkilön jäljennös.",
+            "prompt": "Close-up of a single simple leafy plant in ordinary dark soil in a plain unmarked pot, a tiny new leaf next to larger mature leaves, natural small imperfections and soft daylight. No named species, medicinal product, garden layout, architecture or treatment claim. Photorealistic-natural editorial illustration with natural light, physically credible materials and irregular textures. No people, faces, lettering, labels, logos, watermarks, frames or designed art. Generalized illustration of the text topic, not a documentary image of a named place, vendor, event, historical exhibit or museum specimen. Landscape PNG preferably1536x1024, opaque.",
+            "content": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/naypyidaw/sisalto.json",
+              "contentSHA256": "6cc2cf9d1a2d3452148806a873c72c50b135f683add8ca152a89082b8c440d62",
+              "targetObjectExists": true,
+              "targetContainer": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[2]",
+              "targetText": {
+                "otsikko": "Museon pitkä aika ja puiston kasvit",
+                "teksti": "Kansallismuseon näyttelyaiheisiin kuuluvat fossiilit, esihistoria ja vanhat kaupunkikulttuurit. National Herbal Park puolestaan kokoaa perinteiseen lääkekasvien käyttöön liittyviä kasveja eri puolilta maata. Museossa on tehty maanjäristyskorjauksia ja saleja on avattu uudelleen, mutta vierailutiedot täytyy tarkistaa ennen käyntiä. Puiston kokoelmaa katsotaan kasvien ja kulttuurihistorian näkökulmasta.",
+                "kuva": {
+                  "tiedosto": "",
+                  "lyhyt": "",
+                  "selite": "",
+                  "lahde": ""
+                }
+              },
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/naypyidaw/faktapohja.md",
+              "factSheetExists": true
+            },
+            "otherReviewerVerdicts": [],
+            "visualInspection": {
+              "tool": "view_image",
+              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/naypyidaw/assets/e10-naypyidaw-O3-v1-20261012/image.png",
+              "detail": "original",
+              "observations": "Ruukussa vihreä taimi, kolme suurta lehteä ja pieni uusi lehti. Lehden suonitus, vähäiset reiät ja kosteuden heijastukset sekä multa uskottavia. Ei ihmisiä, tekstiä, logoja tai lääkeväitettä.",
+              "inspectedBy": "kuvitus-3"
+            },
+            "openConflict": false
+          },
+          "qaReason": "Hoidettava elävä kasvi havainnollistaa O3-jakson kasvikokoelmaa. Kuvateksti ei nimeä lajia tai puiston asettelua. Native-SHA ja mitat täsmäävät."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva hoidettavasta elävästä kasvista; ei puiston tietty laji tai asettelu.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/naypyidaw/illustration-qa-extra.json",
+        "fileSHA256": "3c7413623c054717bffe209cb4510e500523ff6a95d59b5e65aa97d04ef25ad9",
+        "item": {
+          "slot": "O3",
+          "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[2].kuva",
+          "assetID": "e10-naypyidaw-O3-v1-20261012",
+          "sha256": "665123fe5c73b7e8f871d4325c13e3b5b6d5bc0f6d3ecbb09e7ec7a527b78e1d",
+          "verdict": "accepted",
+          "reason": "Hoidettava elävä kasvi havainnollistaa O3-jakson kasvikokoelmaa. Kuvateksti ei nimeä lajia tai puiston asettelua. Native-SHA ja mitat täsmäävät.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/naypyidaw/assets/e10-naypyidaw-O3-v1-20261012/image.png",
+            "nativeSHA256": "665123fe5c73b7e8f871d4325c13e3b5b6d5bc0f6d3ecbb09e7ec7a527b78e1d",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "pngChunks": [
+              "IHDR",
+              "caBX",
+              "IDAT",
+              "IEND"
+            ],
+            "manifestMatch": true,
+            "captionFi": "Havainnekuva hoidettavasta elävästä kasvista; ei puiston tietty laji tai asettelu.",
+            "sourceEvidence": [
+              {
+                "url": "https://en.wikipedia.org/wiki/National_Herbal_Park",
+                "claim": "Plant collection and conservation; guide O3 discusses plants"
+              },
+              {
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/naypyidaw/faktapohja.md",
+                "section": "Noston ja oppaan lahdeketju"
+              },
+              {
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/naypyidaw/tarkistus.md",
+                "section": "Aiheen D-tarkistus luettu"
+              },
+              {
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/naypyidaw/sisalto.json",
+                "jsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[2].kuva"
+              }
+            ],
+            "rightsEvidence": "Yleistetty luonnonmateriaali, kasvi tai ruoka; ei nimetyn teoksen, nykyisen museoartefaktin, rakennuksen, tapahtuman tai henkilön jäljennös.",
+            "prompt": "Close-up of a single simple leafy plant in ordinary dark soil in a plain unmarked pot, a tiny new leaf next to larger mature leaves, natural small imperfections and soft daylight. No named species, medicinal product, garden layout, architecture or treatment claim. Photorealistic-natural editorial illustration with natural light, physically credible materials and irregular textures. No people, faces, lettering, labels, logos, watermarks, frames or designed art. Generalized illustration of the text topic, not a documentary image of a named place, vendor, event, historical exhibit or museum specimen. Landscape PNG preferably1536x1024, opaque.",
+            "content": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/naypyidaw/sisalto.json",
+              "contentSHA256": "6cc2cf9d1a2d3452148806a873c72c50b135f683add8ca152a89082b8c440d62",
+              "targetObjectExists": true,
+              "targetContainer": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[2]",
+              "targetText": {
+                "otsikko": "Museon pitkä aika ja puiston kasvit",
+                "teksti": "Kansallismuseon näyttelyaiheisiin kuuluvat fossiilit, esihistoria ja vanhat kaupunkikulttuurit. National Herbal Park puolestaan kokoaa perinteiseen lääkekasvien käyttöön liittyviä kasveja eri puolilta maata. Museossa on tehty maanjäristyskorjauksia ja saleja on avattu uudelleen, mutta vierailutiedot täytyy tarkistaa ennen käyntiä. Puiston kokoelmaa katsotaan kasvien ja kulttuurihistorian näkökulmasta.",
+                "kuva": {
+                  "tiedosto": "",
+                  "lyhyt": "",
+                  "selite": "",
+                  "lahde": ""
+                }
+              },
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/naypyidaw/faktapohja.md",
+              "factSheetExists": true
+            },
+            "otherReviewerVerdicts": [],
+            "visualInspection": {
+              "tool": "view_image",
+              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/naypyidaw/assets/e10-naypyidaw-O3-v1-20261012/image.png",
+              "detail": "original",
+              "observations": "Ruukussa vihreä taimi, kolme suurta lehteä ja pieni uusi lehti. Lehden suonitus, vähäiset reiät ja kosteuden heijastukset sekä multa uskottavia. Ei ihmisiä, tekstiä, logoja tai lääkeväitettä.",
+              "inspectedBy": "kuvitus-3"
+            },
+            "openConflict": false
+          },
+          "reviewedAt": "2026-10-12T18:59:28.596202+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/naypyidaw/qa.json",
+            "sha256": "5098ad6dfb33b09f540a8ecad5dc969f42984593feb64ee5c1f6c2d16c9faa95"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/naypyidaw/illustration-qa-extra.json",
+            "sha256": "3c7413623c054717bffe209cb4510e500523ff6a95d59b5e65aa97d04ef25ad9"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/naypyidaw/e10-naypyidaw-O3-v1-20261012-665123fe5c73.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/naypyidaw/e10-naypyidaw-O3-v1-20261012-665123fe5c73.png?t=a5ef13d670497c49",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/naypyidaw/e10-naypyidaw-O3-v1-20261012-665123fe5c73.png",
+        "sha256": "a5ef13d670497c4970e4ebef211437c2132238411f09840db03673ba3bce3604",
+        "bytes": 2254952,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e10-naypyidaw-O3-v1-20261012",
+        "nativeSHA256": "665123fe5c73b7e8f871d4325c13e3b5b6d5bc0f6d3ecbb09e7ec7a527b78e1d",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e10/naypyidaw/e10-naypyidaw-O3-v1-20261012-665123fe5c73.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e10",
+        "city": "naypyidaw",
+        "slot": "O3",
+        "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[2].kuva",
+        "verifiedAt": "2026-10-12T19:00:16.801465+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e10/naypyidaw/e10-naypyidaw-O3-v1-20261012-665123fe5c73.png",
+        "sha256": "a5ef13d670497c4970e4ebef211437c2132238411f09840db03673ba3bce3604",
+        "bytes": 2254952,
+        "SHAReadAt": "2026-10-12T19:03:40.943397+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "665123fe5c73b7e8f871d4325c13e3b5b6d5bc0f6d3ecbb09e7ec7a527b78e1d",
+        "rgbPixelSHA256": "004723ea8be9ccbae52eadf8156caa3da46aefe56b8c389b9135dd746de8c6dd",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "787887ff4046c0376929fdc73d10bf7218f256fad90212e2b8ac0f336cdba275",
+      "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+      "contextAfterSHA256": "0e42ca8728fbe448989183809b455d83210f5c6751ec61d764c96ec0e518dd13"
+    },
+    {
+      "era": "e10",
+      "city": "naypyidaw",
+      "slot": "K4",
+      "type": "illustration",
+      "assetID": "e10-naypyidaw-K4-v1-20261012",
+      "galleryImageID": "e10-naypyidaw-K4-v1-20261012",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].nostot[3]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "nostot",
+        3
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/naypyidaw/e10-naypyidaw-K4-v1-20261012-ec0f73c93cc1.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva rautatien rakenteesta; ei Naypyidawin asema tai tietty rata.",
+        "lyhyt": "Havainnekuva rautatien rakenteesta; ei Naypyidawin asema tai tietty rata."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/naypyidaw/e10-naypyidaw-K4-v1-20261012-ec0f73c93cc1.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva rautatien rakenteesta; ei Naypyidawin asema tai tietty rata.",
+        "lyhyt": "Havainnekuva rautatien rakenteesta; ei Naypyidawin asema tai tietty rata."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "ec0f73c93cc11d751d62943dcfdbfcf1aef86d8b51377e14cc50f02b790073c8",
+      "exportSHA256": "9998e74eba792acc4baa01879e19f0d82a6409f9235c1df74521eb7ab224a4f1",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/naypyidaw/e10-naypyidaw-K4-v1-20261012-ec0f73c93cc1.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/naypyidaw/e10-naypyidaw-K4-v1-20261012-ec0f73c93cc1.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e10/naypyidaw/e10-naypyidaw-K4-v1-20261012-ec0f73c93cc1.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/naypyidaw/sisalto.json",
+      "sourceContentSHA256": "787887ff4046c0376929fdc73d10bf7218f256fad90212e2b8ac0f336cdba275",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "bcf664f5d3bfec82c2a57afeffee97c68eaf36efe3d6b49bf249abd775834ba5",
+        "semanticContextSHA256": "bcf664f5d3bfec82c2a57afeffee97c68eaf36efe3d6b49bf249abd775834ba5",
+        "subjectTitle": "Rata oli olemassa ennen uutta asemaa",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Yleistetty luonnonmateriaali, kasvi tai ruoka; ei nimetyn teoksen, nykyisen museoartefaktin, rakennuksen, tapahtuman tai henkilön jäljennös.",
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/naypyidaw/assets/e10-naypyidaw-K4-v1-20261012/image.png",
+            "nativeSHA256": "ec0f73c93cc11d751d62943dcfdbfcf1aef86d8b51377e14cc50f02b790073c8",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "pngChunks": [
+              "IHDR",
+              "caBX",
+              "IDAT",
+              "IEND"
+            ],
+            "manifestMatch": true,
+            "captionFi": "Havainnekuva rautatien rakenteesta; ei Naypyidawin asema tai tietty rata.",
+            "sourceEvidence": [
+              {
+                "url": "https://en.wikipedia.org/wiki/Naypyidaw",
+                "claim": "Railways: old route versus new station"
+              },
+              {
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/naypyidaw/faktapohja.md",
+                "section": "Noston ja oppaan lahdeketju"
+              },
+              {
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/naypyidaw/tarkistus.md",
+                "section": "Aiheen D-tarkistus luettu"
+              },
+              {
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/naypyidaw/sisalto.json",
+                "jsonPath": "$.kaupunkilehti[0].nostot[3]"
+              }
+            ],
+            "rightsEvidence": "Yleistetty luonnonmateriaali, kasvi tai ruoka; ei nimetyn teoksen, nykyisen museoartefaktin, rakennuksen, tapahtuman tai henkilön jäljennös.",
+            "prompt": "A close side-on material study of a short ordinary railway section: two steel rails, a few simple sleepers and natural stone ballast with coherent attachment points. No station, trains, signs, buildings or surrounding scenery. Do not recreate the Yangon-Mandalay line or Naypyidaw station. Photorealistic-natural editorial illustration with natural light, physically credible materials and irregular textures. No people, faces, lettering, labels, logos, watermarks, frames or designed art. Generalized illustration of the text topic, not a documentary image of a named place, vendor, event, historical exhibit or museum specimen. Landscape PNG preferably1536x1024, opaque.",
+            "content": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/naypyidaw/sisalto.json",
+              "contentSHA256": "6cc2cf9d1a2d3452148806a873c72c50b135f683add8ca152a89082b8c440d62",
+              "targetObjectExists": true,
+              "targetContainer": "$.kaupunkilehti[0].nostot[3]",
+              "targetText": {
+                "otsikko": "Rata oli olemassa ennen uutta asemaa",
+                "teksti": "Naypyidawin keskusasema rakennettiin uuden pääkaupungin aikana, mutta Yangon–Mandalay-rautatie ei ole saman rakennushankkeen tuote. Ennen uuden aseman valmistumista aluetta palvelivat Pyinmanan ja Lewen asemat, joista Pyinmana oli pääradan varrella. Uusi nimi ratakartassa ei siis tarkoita kokonaan uutta rautatiehistoriaa. Tässäkin kaupungin kerrokset menevät ristiin: pääkaupunkia varten rakennettiin uusi asema, mutta yhteys liittyi vanhempaan liikenneverkkoon. Aseman ikä ja radan ikä ovat kaksi eri kysymystä.",
+                "wiki": "Naypyidaw",
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              },
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/naypyidaw/faktapohja.md",
+              "factSheetExists": true
+            },
+            "otherReviewerVerdicts": [],
+            "visualInspection": {
+              "tool": "view_image",
+              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/naypyidaw/assets/e10-naypyidaw-K4-v1-20261012/image.png",
+              "detail": "original",
+              "observations": "Kaksi yhdensuuntaista kiskoa, poikittaiset pölkyt, kiinnitykset ja vaihteleva sepeli. Metallin kuluma, pölkyt ja kivimateriaali uskottavia. Ei rakennuksia, kasvoja, tekstiä tai logoja.",
+              "inspectedBy": "kuvitus-3"
+            },
+            "openConflict": false
+          },
+          "qaReason": "Rautatien rakenne liittyy K4:n radan ja aseman eri historiaan. Kuvateksti erottaa havainteen Naypyidawin tietystä asemasta tai radasta. Native-SHA ja mitat täsmäävät."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva rautatien rakenteesta; ei Naypyidawin asema tai tietty rata.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/naypyidaw/illustration-qa-extra.json",
+        "fileSHA256": "3c7413623c054717bffe209cb4510e500523ff6a95d59b5e65aa97d04ef25ad9",
+        "item": {
+          "slot": "K4",
+          "targetJsonPath": "$.kaupunkilehti[0].nostot[3]",
+          "assetID": "e10-naypyidaw-K4-v1-20261012",
+          "sha256": "ec0f73c93cc11d751d62943dcfdbfcf1aef86d8b51377e14cc50f02b790073c8",
+          "verdict": "accepted",
+          "reason": "Rautatien rakenne liittyy K4:n radan ja aseman eri historiaan. Kuvateksti erottaa havainteen Naypyidawin tietystä asemasta tai radasta. Native-SHA ja mitat täsmäävät.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/naypyidaw/assets/e10-naypyidaw-K4-v1-20261012/image.png",
+            "nativeSHA256": "ec0f73c93cc11d751d62943dcfdbfcf1aef86d8b51377e14cc50f02b790073c8",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "pngChunks": [
+              "IHDR",
+              "caBX",
+              "IDAT",
+              "IEND"
+            ],
+            "manifestMatch": true,
+            "captionFi": "Havainnekuva rautatien rakenteesta; ei Naypyidawin asema tai tietty rata.",
+            "sourceEvidence": [
+              {
+                "url": "https://en.wikipedia.org/wiki/Naypyidaw",
+                "claim": "Railways: old route versus new station"
+              },
+              {
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/naypyidaw/faktapohja.md",
+                "section": "Noston ja oppaan lahdeketju"
+              },
+              {
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/naypyidaw/tarkistus.md",
+                "section": "Aiheen D-tarkistus luettu"
+              },
+              {
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/naypyidaw/sisalto.json",
+                "jsonPath": "$.kaupunkilehti[0].nostot[3]"
+              }
+            ],
+            "rightsEvidence": "Yleistetty luonnonmateriaali, kasvi tai ruoka; ei nimetyn teoksen, nykyisen museoartefaktin, rakennuksen, tapahtuman tai henkilön jäljennös.",
+            "prompt": "A close side-on material study of a short ordinary railway section: two steel rails, a few simple sleepers and natural stone ballast with coherent attachment points. No station, trains, signs, buildings or surrounding scenery. Do not recreate the Yangon-Mandalay line or Naypyidaw station. Photorealistic-natural editorial illustration with natural light, physically credible materials and irregular textures. No people, faces, lettering, labels, logos, watermarks, frames or designed art. Generalized illustration of the text topic, not a documentary image of a named place, vendor, event, historical exhibit or museum specimen. Landscape PNG preferably1536x1024, opaque.",
+            "content": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/naypyidaw/sisalto.json",
+              "contentSHA256": "6cc2cf9d1a2d3452148806a873c72c50b135f683add8ca152a89082b8c440d62",
+              "targetObjectExists": true,
+              "targetContainer": "$.kaupunkilehti[0].nostot[3]",
+              "targetText": {
+                "otsikko": "Rata oli olemassa ennen uutta asemaa",
+                "teksti": "Naypyidawin keskusasema rakennettiin uuden pääkaupungin aikana, mutta Yangon–Mandalay-rautatie ei ole saman rakennushankkeen tuote. Ennen uuden aseman valmistumista aluetta palvelivat Pyinmanan ja Lewen asemat, joista Pyinmana oli pääradan varrella. Uusi nimi ratakartassa ei siis tarkoita kokonaan uutta rautatiehistoriaa. Tässäkin kaupungin kerrokset menevät ristiin: pääkaupunkia varten rakennettiin uusi asema, mutta yhteys liittyi vanhempaan liikenneverkkoon. Aseman ikä ja radan ikä ovat kaksi eri kysymystä.",
+                "wiki": "Naypyidaw",
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              },
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/naypyidaw/faktapohja.md",
+              "factSheetExists": true
+            },
+            "otherReviewerVerdicts": [],
+            "visualInspection": {
+              "tool": "view_image",
+              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/naypyidaw/assets/e10-naypyidaw-K4-v1-20261012/image.png",
+              "detail": "original",
+              "observations": "Kaksi yhdensuuntaista kiskoa, poikittaiset pölkyt, kiinnitykset ja vaihteleva sepeli. Metallin kuluma, pölkyt ja kivimateriaali uskottavia. Ei rakennuksia, kasvoja, tekstiä tai logoja.",
+              "inspectedBy": "kuvitus-3"
+            },
+            "openConflict": false
+          },
+          "reviewedAt": "2026-10-12T19:11:43.959176+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/naypyidaw/qa.json",
+            "sha256": "5098ad6dfb33b09f540a8ecad5dc969f42984593feb64ee5c1f6c2d16c9faa95"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/naypyidaw/illustration-qa-extra.json",
+            "sha256": "3c7413623c054717bffe209cb4510e500523ff6a95d59b5e65aa97d04ef25ad9"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/naypyidaw/e10-naypyidaw-K4-v1-20261012-ec0f73c93cc1.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/naypyidaw/e10-naypyidaw-K4-v1-20261012-ec0f73c93cc1.png?t=9998e74eba792acc",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/naypyidaw/e10-naypyidaw-K4-v1-20261012-ec0f73c93cc1.png",
+        "sha256": "9998e74eba792acc4baa01879e19f0d82a6409f9235c1df74521eb7ab224a4f1",
+        "bytes": 3090143,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e10-naypyidaw-K4-v1-20261012",
+        "nativeSHA256": "ec0f73c93cc11d751d62943dcfdbfcf1aef86d8b51377e14cc50f02b790073c8",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e10/naypyidaw/e10-naypyidaw-K4-v1-20261012-ec0f73c93cc1.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e10",
+        "city": "naypyidaw",
+        "slot": "K4",
+        "targetJsonPath": "$.kaupunkilehti[0].nostot[3]",
+        "verifiedAt": "2026-10-12T19:12:05.372405+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e10/naypyidaw/e10-naypyidaw-K4-v1-20261012-ec0f73c93cc1.png",
+        "sha256": "9998e74eba792acc4baa01879e19f0d82a6409f9235c1df74521eb7ab224a4f1",
+        "bytes": 3090143,
+        "SHAReadAt": "2026-10-12T19:32:08.326844+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "ec0f73c93cc11d751d62943dcfdbfcf1aef86d8b51377e14cc50f02b790073c8",
+        "rgbPixelSHA256": "7fa7df8e00d9cafe772f68a17c2a9d68da428f0079a45564233a5a2dd920e463",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "787887ff4046c0376929fdc73d10bf7218f256fad90212e2b8ac0f336cdba275",
+      "targetAfterSHA256": "bcf664f5d3bfec82c2a57afeffee97c68eaf36efe3d6b49bf249abd775834ba5",
+      "contextAfterSHA256": "bcf664f5d3bfec82c2a57afeffee97c68eaf36efe3d6b49bf249abd775834ba5"
+    },
+    {
+      "era": "e10",
+      "city": "naypyidaw",
+      "slot": "L1",
+      "type": "illustration",
+      "assetID": "e10-naypyidaw-L1-v1-20261012",
+      "galleryImageID": "e10-naypyidaw-L1-v1-20261012",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[1].nostot[0]",
+      "targetTokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        0
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/naypyidaw/e10-naypyidaw-L1-v1-20261012-d4b4dc29e6ff.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva elävien kasvien säilyttämisestä; ei National Herbal Parkin nimetty kasvi tai näkymä.",
+        "lyhyt": "Havainnekuva elävien kasvien säilyttämisestä; ei National Herbal Parkin nimetty kasvi tai näkymä."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/naypyidaw/e10-naypyidaw-L1-v1-20261012-d4b4dc29e6ff.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva elävien kasvien säilyttämisestä; ei National Herbal Parkin nimetty kasvi tai näkymä.",
+        "lyhyt": "Havainnekuva elävien kasvien säilyttämisestä; ei National Herbal Parkin nimetty kasvi tai näkymä."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "d4b4dc29e6ff18e7ede0efa69634304e446e93b9b302d12087489ca736e0162e",
+      "exportSHA256": "718ade5bbf3bdd2d46eb13657737e9693853b7da171822a5a6489d1d6c5b637a",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/naypyidaw/e10-naypyidaw-L1-v1-20261012-d4b4dc29e6ff.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/naypyidaw/e10-naypyidaw-L1-v1-20261012-d4b4dc29e6ff.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e10/naypyidaw/e10-naypyidaw-L1-v1-20261012-d4b4dc29e6ff.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/naypyidaw/sisalto.json",
+      "sourceContentSHA256": "787887ff4046c0376929fdc73d10bf7218f256fad90212e2b8ac0f336cdba275",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "7a18ddc5ac9d65dcae4b65992890bec229ea7c30930e788eb61ba63c3d22d73f",
+        "semanticContextSHA256": "7a18ddc5ac9d65dcae4b65992890bec229ea7c30930e788eb61ba63c3d22d73f",
+        "subjectTitle": "Kasvikokoelma kasvaa saman taivaan alla",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Yleistetty luonnonmateriaali, kasvi tai ruoka; ei nimetyn teoksen, nykyisen museoartefaktin, rakennuksen, tapahtuman tai henkilön jäljennös.",
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/naypyidaw/assets/e10-naypyidaw-L1-v1-20261012/image.png",
+            "nativeSHA256": "d4b4dc29e6ff18e7ede0efa69634304e446e93b9b302d12087489ca736e0162e",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "pngChunks": [
+              "IHDR",
+              "caBX",
+              "IDAT",
+              "IEND"
+            ],
+            "manifestMatch": true,
+            "captionFi": "Havainnekuva elävien kasvien säilyttämisestä; ei National Herbal Parkin nimetty kasvi tai näkymä.",
+            "sourceEvidence": [
+              {
+                "url": "https://en.wikipedia.org/wiki/National_Herbal_Park",
+                "claim": "Introduction: conservation and collection of plants from Myanmar regions"
+              },
+              {
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/naypyidaw/faktapohja.md",
+                "section": "Noston ja oppaan lahdeketju"
+              },
+              {
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/naypyidaw/tarkistus.md",
+                "section": "Aiheen D-tarkistus luettu"
+              },
+              {
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/naypyidaw/sisalto.json",
+                "jsonPath": "$.kaupunkilehti[1].nostot[0]"
+              }
+            ],
+            "rightsEvidence": "Yleistetty luonnonmateriaali, kasvi tai ruoka; ei nimetyn teoksen, nykyisen museoartefaktin, rakennuksen, tapahtuman tai henkilön jäljennös.",
+            "prompt": "A modest group of three small living leafy seedlings in plain unmarked nursery pots, different simple leaf shapes, ordinary soil and naturally irregular stems in soft daylight. Focus on conserving living plants. No garden layout, named medicinal species, flowers, medical tools or claims of treatment. Photorealistic-natural editorial illustration with natural light, physically credible materials and irregular textures. No people, faces, lettering, labels, logos, watermarks, frames or designed art. Generalized illustration of the text topic, not a documentary image of a named place, vendor, event, historical exhibit or museum specimen. Landscape PNG preferably1536x1024, opaque.",
+            "content": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/naypyidaw/sisalto.json",
+              "contentSHA256": "6cc2cf9d1a2d3452148806a873c72c50b135f683add8ca152a89082b8c440d62",
+              "targetObjectExists": true,
+              "targetContainer": "$.kaupunkilehti[1].nostot[0]",
+              "targetText": {
+                "otsikko": "Kasvikokoelma kasvaa saman taivaan alla",
+                "teksti": "National Herbal Park tuo Naypyidawiin perinteisessä lääkekasvien käytössä tunnettuja kasveja eri puolilta Myanmaria. Puiston tarkoitus liittyy niiden säilyttämiseen ja perinteisten käyttötapojen ylläpitämiseen. Kokoelma on siksi muutakin kuin kaupunkia koristava viheralue: kasvien alkuperä ja käyttö kuuluvat sen aiheeseen. Eri alueilta tuodut kasvit kasvavat nyt samassa puistossa. Niiden kulttuurihistoriaa voi tarkastella kasvavasta kokoelmasta, jonka kohteet eivät ole kiveen veistettyjä vaan hoidettavia eläviä kasveja.",
+                "wiki": "National Herbal Park",
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              },
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/naypyidaw/faktapohja.md",
+              "factSheetExists": true
+            },
+            "otherReviewerVerdicts": [],
+            "visualInspection": {
+              "tool": "view_image",
+              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/naypyidaw/assets/e10-naypyidaw-L1-v1-20261012/image.png",
+              "detail": "original",
+              "observations": "Kolme vihreää tainta tavallisissa ruukuissa. Lehdet liittyvät varsiin uskottavasti, suonet ja kasvumuodot vaihtelevat; multa, ruukut ja puupinta luontevia. Ei kylttejä, lääkinnällistä väitettä, kasvoja, tekstiä tai logoja.",
+              "inspectedBy": "kuvitus-3"
+            },
+            "openConflict": false
+          },
+          "qaReason": "Elävien kasvien hoito havainnollistaa L1:n kasvikokoelman säilyttämistä. Kuvateksti ei nimeä kasveja puiston lajeiksi tai esitä National Herbal Parkin näkymää. Native-SHA ja mitat täsmäävät."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva elävien kasvien säilyttämisestä; ei National Herbal Parkin nimetty kasvi tai näkymä.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/naypyidaw/illustration-qa-extra.json",
+        "fileSHA256": "3c7413623c054717bffe209cb4510e500523ff6a95d59b5e65aa97d04ef25ad9",
+        "item": {
+          "slot": "L1",
+          "targetJsonPath": "$.kaupunkilehti[1].nostot[0]",
+          "assetID": "e10-naypyidaw-L1-v1-20261012",
+          "sha256": "d4b4dc29e6ff18e7ede0efa69634304e446e93b9b302d12087489ca736e0162e",
+          "verdict": "accepted",
+          "reason": "Elävien kasvien hoito havainnollistaa L1:n kasvikokoelman säilyttämistä. Kuvateksti ei nimeä kasveja puiston lajeiksi tai esitä National Herbal Parkin näkymää. Native-SHA ja mitat täsmäävät.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/naypyidaw/assets/e10-naypyidaw-L1-v1-20261012/image.png",
+            "nativeSHA256": "d4b4dc29e6ff18e7ede0efa69634304e446e93b9b302d12087489ca736e0162e",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "pngChunks": [
+              "IHDR",
+              "caBX",
+              "IDAT",
+              "IEND"
+            ],
+            "manifestMatch": true,
+            "captionFi": "Havainnekuva elävien kasvien säilyttämisestä; ei National Herbal Parkin nimetty kasvi tai näkymä.",
+            "sourceEvidence": [
+              {
+                "url": "https://en.wikipedia.org/wiki/National_Herbal_Park",
+                "claim": "Introduction: conservation and collection of plants from Myanmar regions"
+              },
+              {
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/naypyidaw/faktapohja.md",
+                "section": "Noston ja oppaan lahdeketju"
+              },
+              {
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/naypyidaw/tarkistus.md",
+                "section": "Aiheen D-tarkistus luettu"
+              },
+              {
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/naypyidaw/sisalto.json",
+                "jsonPath": "$.kaupunkilehti[1].nostot[0]"
+              }
+            ],
+            "rightsEvidence": "Yleistetty luonnonmateriaali, kasvi tai ruoka; ei nimetyn teoksen, nykyisen museoartefaktin, rakennuksen, tapahtuman tai henkilön jäljennös.",
+            "prompt": "A modest group of three small living leafy seedlings in plain unmarked nursery pots, different simple leaf shapes, ordinary soil and naturally irregular stems in soft daylight. Focus on conserving living plants. No garden layout, named medicinal species, flowers, medical tools or claims of treatment. Photorealistic-natural editorial illustration with natural light, physically credible materials and irregular textures. No people, faces, lettering, labels, logos, watermarks, frames or designed art. Generalized illustration of the text topic, not a documentary image of a named place, vendor, event, historical exhibit or museum specimen. Landscape PNG preferably1536x1024, opaque.",
+            "content": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/naypyidaw/sisalto.json",
+              "contentSHA256": "6cc2cf9d1a2d3452148806a873c72c50b135f683add8ca152a89082b8c440d62",
+              "targetObjectExists": true,
+              "targetContainer": "$.kaupunkilehti[1].nostot[0]",
+              "targetText": {
+                "otsikko": "Kasvikokoelma kasvaa saman taivaan alla",
+                "teksti": "National Herbal Park tuo Naypyidawiin perinteisessä lääkekasvien käytössä tunnettuja kasveja eri puolilta Myanmaria. Puiston tarkoitus liittyy niiden säilyttämiseen ja perinteisten käyttötapojen ylläpitämiseen. Kokoelma on siksi muutakin kuin kaupunkia koristava viheralue: kasvien alkuperä ja käyttö kuuluvat sen aiheeseen. Eri alueilta tuodut kasvit kasvavat nyt samassa puistossa. Niiden kulttuurihistoriaa voi tarkastella kasvavasta kokoelmasta, jonka kohteet eivät ole kiveen veistettyjä vaan hoidettavia eläviä kasveja.",
+                "wiki": "National Herbal Park",
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              },
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/naypyidaw/faktapohja.md",
+              "factSheetExists": true
+            },
+            "otherReviewerVerdicts": [],
+            "visualInspection": {
+              "tool": "view_image",
+              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/naypyidaw/assets/e10-naypyidaw-L1-v1-20261012/image.png",
+              "detail": "original",
+              "observations": "Kolme vihreää tainta tavallisissa ruukuissa. Lehdet liittyvät varsiin uskottavasti, suonet ja kasvumuodot vaihtelevat; multa, ruukut ja puupinta luontevia. Ei kylttejä, lääkinnällistä väitettä, kasvoja, tekstiä tai logoja.",
+              "inspectedBy": "kuvitus-3"
+            },
+            "openConflict": false
+          },
+          "reviewedAt": "2026-10-12T18:59:03.649051+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/naypyidaw/qa.json",
+            "sha256": "5098ad6dfb33b09f540a8ecad5dc969f42984593feb64ee5c1f6c2d16c9faa95"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/naypyidaw/illustration-qa-extra.json",
+            "sha256": "3c7413623c054717bffe209cb4510e500523ff6a95d59b5e65aa97d04ef25ad9"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/naypyidaw/e10-naypyidaw-L1-v1-20261012-d4b4dc29e6ff.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/naypyidaw/e10-naypyidaw-L1-v1-20261012-d4b4dc29e6ff.png?t=718ade5bbf3bdd2d",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/naypyidaw/e10-naypyidaw-L1-v1-20261012-d4b4dc29e6ff.png",
+        "sha256": "718ade5bbf3bdd2d46eb13657737e9693853b7da171822a5a6489d1d6c5b637a",
+        "bytes": 2357717,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e10-naypyidaw-L1-v1-20261012",
+        "nativeSHA256": "d4b4dc29e6ff18e7ede0efa69634304e446e93b9b302d12087489ca736e0162e",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e10/naypyidaw/e10-naypyidaw-L1-v1-20261012-d4b4dc29e6ff.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e10",
+        "city": "naypyidaw",
+        "slot": "L1",
+        "targetJsonPath": "$.kaupunkilehti[1].nostot[0]",
+        "verifiedAt": "2026-10-12T19:00:15.223303+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e10/naypyidaw/e10-naypyidaw-L1-v1-20261012-d4b4dc29e6ff.png",
+        "sha256": "718ade5bbf3bdd2d46eb13657737e9693853b7da171822a5a6489d1d6c5b637a",
+        "bytes": 2357717,
+        "SHAReadAt": "2026-10-12T19:03:40.548886+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "d4b4dc29e6ff18e7ede0efa69634304e446e93b9b302d12087489ca736e0162e",
+        "rgbPixelSHA256": "e15390ca5ad99e7d148827f54a96b76a4522011f20630c0689705034374e7eaf",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "787887ff4046c0376929fdc73d10bf7218f256fad90212e2b8ac0f336cdba275",
+      "targetAfterSHA256": "7a18ddc5ac9d65dcae4b65992890bec229ea7c30930e788eb61ba63c3d22d73f",
+      "contextAfterSHA256": "7a18ddc5ac9d65dcae4b65992890bec229ea7c30930e788eb61ba63c3d22d73f"
+    },
+    {
+      "era": "e10",
+      "city": "naypyidaw",
+      "slot": "L2",
+      "type": "illustration",
+      "assetID": "e10-naypyidaw-L2-v1-20261012",
+      "galleryImageID": "e10-naypyidaw-L2-v1-20261012",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[1].nostot[1]",
+      "targetTokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        1
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/naypyidaw/e10-naypyidaw-L2-v1-20261012-7155f83f0fbc.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva kivettyneestä puusta; ei nimetty museoesine tai löytöpaikka.",
+        "lyhyt": "Havainnekuva kivettyneestä puusta; ei nimetty museoesine tai löytöpaikka."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/naypyidaw/e10-naypyidaw-L2-v1-20261012-7155f83f0fbc.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva kivettyneestä puusta; ei nimetty museoesine tai löytöpaikka.",
+        "lyhyt": "Havainnekuva kivettyneestä puusta; ei nimetty museoesine tai löytöpaikka."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "7155f83f0fbcd9a7ddf6d32f9b15557da116a945e49d3496dfb8bb0debc94a3b",
+      "exportSHA256": "dc327263007a0805f4bcaa768104d2aa5c8dadc18f3d44615a6e9f1411906ee0",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/naypyidaw/e10-naypyidaw-L2-v1-20261012-7155f83f0fbc.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/naypyidaw/e10-naypyidaw-L2-v1-20261012-7155f83f0fbc.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e10/naypyidaw/e10-naypyidaw-L2-v1-20261012-7155f83f0fbc.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/naypyidaw/sisalto.json",
+      "sourceContentSHA256": "787887ff4046c0376929fdc73d10bf7218f256fad90212e2b8ac0f336cdba275",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "95c86050fe7efdb65ecce9ef0f87d1f7ccd1b719e877595529ac736823fb3e5e",
+        "semanticContextSHA256": "95c86050fe7efdb65ecce9ef0f87d1f7ccd1b719e877595529ac736823fb3e5e",
+        "subjectTitle": "Museon vanhimmat asukkaat ovat fossiileja",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Yleistetty luonnonmateriaali tai ruoka, ei nimetty näyttelyesine/rakennus/paikka/nykyteos tai tunnistettava henkilö.",
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/naypyidaw/assets/e10-naypyidaw-L2-v1-20261012/image.png",
+            "nativeSHA256": "7155f83f0fbcd9a7ddf6d32f9b15557da116a945e49d3496dfb8bb0debc94a3b",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "pngChunks": [
+              "IHDR",
+              "caBX",
+              "IDAT",
+              "IEND"
+            ],
+            "manifestMatch": true,
+            "captionFi": "Havainnekuva kivettyneestä puusta; ei nimetty museoesine tai löytöpaikka.",
+            "sourceEvidence": [
+              {
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/naypyidaw/faktapohja.md",
+                "section": "noston lähde/alkuperäinen museo tai ruokaperinne"
+              },
+              {
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/naypyidaw/sisalto.json",
+                "jsonPath": "$.kaupunkilehti[1].nostot[1]",
+                "claim": "Museon vanhimmat asukkaat ovat fossiileja"
+              }
+            ],
+            "rightsEvidence": "Yleistetty luonnonmateriaali tai ruoka, ei nimetty näyttelyesine/rakennus/paikka/nykyteos tai tunnistettava henkilö.",
+            "prompt": "Use case: photorealistic-natural. Landscape educational editorial illustration of petrified wood. A small irregular natural fragment of mineralized wood on a plain neutral work surface, with convincing preserved growth texture, weathered broken edges and realistic stone-like mineral grain. Keep the individual rings and fibers irregular rather than repeating synthetic swirls. Quiet soft natural side light, close camera perspective, no museum display, label, ruler, writing, artist-made replica, reconstruction of a specific fossil find or location. This is a generalized illustration of fossilized plant material, not an image of an identified Pondaung or Irrawaddy specimen in the Naypyidaw museum. No person, face, logo, watermark or frame. Prefer 1536x1024 PNG.",
+            "content": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/naypyidaw/sisalto.json",
+              "contentSHA256": "6cc2cf9d1a2d3452148806a873c72c50b135f683add8ca152a89082b8c440d62",
+              "targetObjectExists": true,
+              "targetContainer": "$.kaupunkilehti[1].nostot[1]",
+              "targetText": {
+                "otsikko": "Museon vanhimmat asukkaat ovat fossiileja",
+                "teksti": "Naypyidawin kansallismuseon fossiilinäyttely vie aikaan ennen Myanmarin kaupunkeja. Siinä esitellään Pondaungin muodostuman fossiileja sekä kivettyneitä kasveja Pondaungin ja Irrawaddyn sedimenttikerrostumista. Aineisto on tuotu museoon eri löytöpaikoilta, joten fossiilien sijainti näyttelyssä ei tarkoita, että ne olisi kaivettu esiin pääkaupungin alta. Nuoren kaupungin museo voi säilyttää hyvin vanhaa luonnonhistoriaa. Fossiilin löytöympäristö ja sen nykyinen säilytyspaikka kertovat kaksi erilaista osaa samasta tarinasta.",
+                "wiki": "National Museum of Myanmar (Naypyidaw)",
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              },
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/naypyidaw/faktapohja.md",
+              "factSheetExists": true
+            },
+            "otherReviewerVerdicts": [],
+            "visualInspection": {
+              "tool": "view_image",
+              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/naypyidaw/assets/e10-naypyidaw-L2-v1-20261012/image.png",
+              "detail": "original",
+              "observations": "Kivilohkossa puun vuosikasvua muistuttavia vyöhykkeitä ja mineraalipintoja, karhea ulkoreuna. Halkeamat, sävyt ja puumainen rakenne vaihtelevat luontevasti. Ei ihmisiä, tekstiä, logoja tai suojattua teosta.",
+              "inspectedBy": "kuvitus-3"
+            },
+            "openConflict": false
+          },
+          "qaReason": "Kivettynyt puu vastaa L2:n fossiilinäyttelyn kasviaihetta. Kuvateksti rajaa pois nimetyn museoesineen ja löytöpaikan. Native-SHA ja mitat täsmäävät."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva kivettyneestä puusta; ei nimetty museoesine tai löytöpaikka.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/naypyidaw/illustration-qa-extra.json",
+        "fileSHA256": "3c7413623c054717bffe209cb4510e500523ff6a95d59b5e65aa97d04ef25ad9",
+        "item": {
+          "slot": "L2",
+          "targetJsonPath": "$.kaupunkilehti[1].nostot[1]",
+          "assetID": "e10-naypyidaw-L2-v1-20261012",
+          "sha256": "7155f83f0fbcd9a7ddf6d32f9b15557da116a945e49d3496dfb8bb0debc94a3b",
+          "verdict": "accepted",
+          "reason": "Kivettynyt puu vastaa L2:n fossiilinäyttelyn kasviaihetta. Kuvateksti rajaa pois nimetyn museoesineen ja löytöpaikan. Native-SHA ja mitat täsmäävät.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/naypyidaw/assets/e10-naypyidaw-L2-v1-20261012/image.png",
+            "nativeSHA256": "7155f83f0fbcd9a7ddf6d32f9b15557da116a945e49d3496dfb8bb0debc94a3b",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "pngChunks": [
+              "IHDR",
+              "caBX",
+              "IDAT",
+              "IEND"
+            ],
+            "manifestMatch": true,
+            "captionFi": "Havainnekuva kivettyneestä puusta; ei nimetty museoesine tai löytöpaikka.",
+            "sourceEvidence": [
+              {
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/naypyidaw/faktapohja.md",
+                "section": "noston lähde/alkuperäinen museo tai ruokaperinne"
+              },
+              {
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/naypyidaw/sisalto.json",
+                "jsonPath": "$.kaupunkilehti[1].nostot[1]",
+                "claim": "Museon vanhimmat asukkaat ovat fossiileja"
+              }
+            ],
+            "rightsEvidence": "Yleistetty luonnonmateriaali tai ruoka, ei nimetty näyttelyesine/rakennus/paikka/nykyteos tai tunnistettava henkilö.",
+            "prompt": "Use case: photorealistic-natural. Landscape educational editorial illustration of petrified wood. A small irregular natural fragment of mineralized wood on a plain neutral work surface, with convincing preserved growth texture, weathered broken edges and realistic stone-like mineral grain. Keep the individual rings and fibers irregular rather than repeating synthetic swirls. Quiet soft natural side light, close camera perspective, no museum display, label, ruler, writing, artist-made replica, reconstruction of a specific fossil find or location. This is a generalized illustration of fossilized plant material, not an image of an identified Pondaung or Irrawaddy specimen in the Naypyidaw museum. No person, face, logo, watermark or frame. Prefer 1536x1024 PNG.",
+            "content": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/naypyidaw/sisalto.json",
+              "contentSHA256": "6cc2cf9d1a2d3452148806a873c72c50b135f683add8ca152a89082b8c440d62",
+              "targetObjectExists": true,
+              "targetContainer": "$.kaupunkilehti[1].nostot[1]",
+              "targetText": {
+                "otsikko": "Museon vanhimmat asukkaat ovat fossiileja",
+                "teksti": "Naypyidawin kansallismuseon fossiilinäyttely vie aikaan ennen Myanmarin kaupunkeja. Siinä esitellään Pondaungin muodostuman fossiileja sekä kivettyneitä kasveja Pondaungin ja Irrawaddyn sedimenttikerrostumista. Aineisto on tuotu museoon eri löytöpaikoilta, joten fossiilien sijainti näyttelyssä ei tarkoita, että ne olisi kaivettu esiin pääkaupungin alta. Nuoren kaupungin museo voi säilyttää hyvin vanhaa luonnonhistoriaa. Fossiilin löytöympäristö ja sen nykyinen säilytyspaikka kertovat kaksi erilaista osaa samasta tarinasta.",
+                "wiki": "National Museum of Myanmar (Naypyidaw)",
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              },
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/naypyidaw/faktapohja.md",
+              "factSheetExists": true
+            },
+            "otherReviewerVerdicts": [],
+            "visualInspection": {
+              "tool": "view_image",
+              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/naypyidaw/assets/e10-naypyidaw-L2-v1-20261012/image.png",
+              "detail": "original",
+              "observations": "Kivilohkossa puun vuosikasvua muistuttavia vyöhykkeitä ja mineraalipintoja, karhea ulkoreuna. Halkeamat, sävyt ja puumainen rakenne vaihtelevat luontevasti. Ei ihmisiä, tekstiä, logoja tai suojattua teosta.",
+              "inspectedBy": "kuvitus-3"
+            },
+            "openConflict": false
+          },
+          "reviewedAt": "2026-10-12T18:55:51.294009+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/naypyidaw/qa.json",
+            "sha256": "5098ad6dfb33b09f540a8ecad5dc969f42984593feb64ee5c1f6c2d16c9faa95"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/naypyidaw/illustration-qa-extra.json",
+            "sha256": "3c7413623c054717bffe209cb4510e500523ff6a95d59b5e65aa97d04ef25ad9"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/naypyidaw/e10-naypyidaw-L2-v1-20261012-7155f83f0fbc.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/naypyidaw/e10-naypyidaw-L2-v1-20261012-7155f83f0fbc.png?t=dc327263007a0805",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/naypyidaw/e10-naypyidaw-L2-v1-20261012-7155f83f0fbc.png",
+        "sha256": "dc327263007a0805f4bcaa768104d2aa5c8dadc18f3d44615a6e9f1411906ee0",
+        "bytes": 2763435,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e10-naypyidaw-L2-v1-20261012",
+        "nativeSHA256": "7155f83f0fbcd9a7ddf6d32f9b15557da116a945e49d3496dfb8bb0debc94a3b",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e10/naypyidaw/e10-naypyidaw-L2-v1-20261012-7155f83f0fbc.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e10",
+        "city": "naypyidaw",
+        "slot": "L2",
+        "targetJsonPath": "$.kaupunkilehti[1].nostot[1]",
+        "verifiedAt": "2026-10-12T18:57:07.955923+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e10/naypyidaw/e10-naypyidaw-L2-v1-20261012-7155f83f0fbc.png",
+        "sha256": "dc327263007a0805f4bcaa768104d2aa5c8dadc18f3d44615a6e9f1411906ee0",
+        "bytes": 2763435,
+        "SHAReadAt": "2026-10-12T19:03:40.080625+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "7155f83f0fbcd9a7ddf6d32f9b15557da116a945e49d3496dfb8bb0debc94a3b",
+        "rgbPixelSHA256": "935f2dd243568cd9cda56937ec5f66c57bcb51999ff9871c16f5429800050988",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "787887ff4046c0376929fdc73d10bf7218f256fad90212e2b8ac0f336cdba275",
+      "targetAfterSHA256": "95c86050fe7efdb65ecce9ef0f87d1f7ccd1b719e877595529ac736823fb3e5e",
+      "contextAfterSHA256": "95c86050fe7efdb65ecce9ef0f87d1f7ccd1b719e877595529ac736823fb3e5e"
+    },
+    {
+      "era": "e10",
+      "city": "naypyidaw",
+      "slot": "L3",
+      "type": "illustration",
+      "assetID": "e10-naypyidaw-L3-v1-20261012",
+      "galleryImageID": "e10-naypyidaw-L3-v1-20261012",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[1].nostot[2]",
+      "targetTokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        2
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/naypyidaw/e10-naypyidaw-L3-v1-20261012-5f0c65f2ecfe.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva kivestä, pronssista ja raudasta; ei museon työkaluja tai esinejäljennöksiä.",
+        "lyhyt": "Havainnekuva kivestä, pronssista ja raudasta; ei museon työkaluja tai esinejäljennöksiä."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/naypyidaw/e10-naypyidaw-L3-v1-20261012-5f0c65f2ecfe.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva kivestä, pronssista ja raudasta; ei museon työkaluja tai esinejäljennöksiä.",
+        "lyhyt": "Havainnekuva kivestä, pronssista ja raudasta; ei museon työkaluja tai esinejäljennöksiä."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "5f0c65f2ecfe1869a13b9b03edaff4c3ca206eba50694771fb77cfe7ce2e7f68",
+      "exportSHA256": "b5d95b2b3ba111c573ffeb3d7fac04ae6eacbae1fbb179fb333e13e92ef97de2",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/naypyidaw/e10-naypyidaw-L3-v1-20261012-5f0c65f2ecfe.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/naypyidaw/e10-naypyidaw-L3-v1-20261012-5f0c65f2ecfe.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e10/naypyidaw/e10-naypyidaw-L3-v1-20261012-5f0c65f2ecfe.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/naypyidaw/sisalto.json",
+      "sourceContentSHA256": "787887ff4046c0376929fdc73d10bf7218f256fad90212e2b8ac0f336cdba275",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "d4abc32da8923a9fe8c59d307e73ada9e6f26869532aa3c6e92d9b531b2e4b41",
+        "semanticContextSHA256": "d4abc32da8923a9fe8c59d307e73ada9e6f26869532aa3c6e92d9b531b2e4b41",
+        "subjectTitle": "Työkalu tekee aikakauden näkyväksi",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Yleistetty luonnonmateriaali, kasvi tai ruoka; ei nimetyn teoksen, nykyisen museoartefaktin, rakennuksen, tapahtuman tai henkilön jäljennös.",
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/naypyidaw/assets/e10-naypyidaw-L3-v1-20261012/image.png",
+            "nativeSHA256": "5f0c65f2ecfe1869a13b9b03edaff4c3ca206eba50694771fb77cfe7ce2e7f68",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "pngChunks": [
+              "IHDR",
+              "caBX",
+              "IDAT",
+              "IEND"
+            ],
+            "manifestMatch": true,
+            "captionFi": "Havainnekuva kivestä, pronssista ja raudasta; ei museon työkaluja tai esinejäljennöksiä.",
+            "sourceEvidence": [
+              {
+                "url": "https://en.wikipedia.org/wiki/National_Museum_(Naypyidaw)",
+                "claim": "Prehistoric exhibition: stone/bronze/iron materials, cached museum-wp.txt830"
+              },
+              {
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/naypyidaw/faktapohja.md",
+                "section": "Noston ja oppaan lahdeketju"
+              },
+              {
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/naypyidaw/tarkistus.md",
+                "section": "Aiheen D-tarkistus luettu"
+              },
+              {
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/naypyidaw/sisalto.json",
+                "jsonPath": "$.kaupunkilehti[1].nostot[2]"
+              }
+            ],
+            "rightsEvidence": "Yleistetty luonnonmateriaali, kasvi tai ruoka; ei nimetyn teoksen, nykyisen museoartefaktin, rakennuksen, tapahtuman tai henkilön jäljennös.",
+            "prompt": "Three small unworked material samples on a quiet pale surface: one rough natural stone, one plain bronze piece with muted warm brown metallic color, and one plain iron bar with subtle natural wear. Separate clearly readable materials; no axes, weapons, carved objects, labels or invented prehistoric artifacts. Photorealistic-natural editorial illustration with natural light, physically credible materials and irregular textures. No people, faces, lettering, labels, logos, watermarks, frames or designed art. Generalized illustration of the text topic, not a documentary image of a named place, vendor, event, historical exhibit or museum specimen. Landscape PNG preferably1536x1024, opaque.",
+            "content": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/naypyidaw/sisalto.json",
+              "contentSHA256": "6cc2cf9d1a2d3452148806a873c72c50b135f683add8ca152a89082b8c440d62",
+              "targetObjectExists": true,
+              "targetContainer": "$.kaupunkilehti[1].nostot[2]",
+              "targetText": {
+                "otsikko": "Työkalu tekee aikakauden näkyväksi",
+                "teksti": "Kansallismuseon esihistorian näyttely esittelee kivikauden, pronssikauden ja rautakauden työkaluja, aseita ja käyttöesineitä. Näyttelyyn kuuluu myös luolaympäristöä ja kaivauskohdetta havainnollistavia pienoismalleja. Esineiden rinnalla voi siis tarkastella niiden löytämisen ympäristöä. Aikakauden nimi ei jää vain vuosiluvuksi seinälle: kivi, pronssi ja rauta ovat konkreettisia materiaaleja, joista erilaisia välineitä tehtiin. Kokoelma kertoo ihmisten käytännön työstä paljon ennen nykyisen pääkaupungin rakentamista.",
+                "wiki": "National Museum of Myanmar (Naypyidaw)",
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              },
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/naypyidaw/faktapohja.md",
+              "factSheetExists": true
+            },
+            "otherReviewerVerdicts": [],
+            "visualInspection": {
+              "tool": "view_image",
+              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/naypyidaw/assets/e10-naypyidaw-L3-v1-20261012/image.png",
+              "detail": "original",
+              "observations": "Neutraalilla pinnalla karhea kivi, ruskeankultainen metallikappale ja tummempi hapettunut rautatanko. Pintojen mineraalisuus, metalliheijastus ja kuluma erottuvat luontevasti. Ei asejäljennöstä, ihmisiä, tekstiä tai logoja.",
+              "inspectedBy": "kuvitus-3"
+            },
+            "openConflict": false
+          },
+          "qaReason": "Kivi, pronssi ja rauta ovat L3-nostossa nimetyt materiaalit. Kuvateksti ei väitä kappaleita museon työkaluiksi tai esinejäljennöksiksi. Native-SHA ja mitat täsmäävät."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva kivestä, pronssista ja raudasta; ei museon työkaluja tai esinejäljennöksiä.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/naypyidaw/illustration-qa-extra.json",
+        "fileSHA256": "3c7413623c054717bffe209cb4510e500523ff6a95d59b5e65aa97d04ef25ad9",
+        "item": {
+          "slot": "L3",
+          "targetJsonPath": "$.kaupunkilehti[1].nostot[2]",
+          "assetID": "e10-naypyidaw-L3-v1-20261012",
+          "sha256": "5f0c65f2ecfe1869a13b9b03edaff4c3ca206eba50694771fb77cfe7ce2e7f68",
+          "verdict": "accepted",
+          "reason": "Kivi, pronssi ja rauta ovat L3-nostossa nimetyt materiaalit. Kuvateksti ei väitä kappaleita museon työkaluiksi tai esinejäljennöksiksi. Native-SHA ja mitat täsmäävät.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/naypyidaw/assets/e10-naypyidaw-L3-v1-20261012/image.png",
+            "nativeSHA256": "5f0c65f2ecfe1869a13b9b03edaff4c3ca206eba50694771fb77cfe7ce2e7f68",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "pngChunks": [
+              "IHDR",
+              "caBX",
+              "IDAT",
+              "IEND"
+            ],
+            "manifestMatch": true,
+            "captionFi": "Havainnekuva kivestä, pronssista ja raudasta; ei museon työkaluja tai esinejäljennöksiä.",
+            "sourceEvidence": [
+              {
+                "url": "https://en.wikipedia.org/wiki/National_Museum_(Naypyidaw)",
+                "claim": "Prehistoric exhibition: stone/bronze/iron materials, cached museum-wp.txt830"
+              },
+              {
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/naypyidaw/faktapohja.md",
+                "section": "Noston ja oppaan lahdeketju"
+              },
+              {
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/naypyidaw/tarkistus.md",
+                "section": "Aiheen D-tarkistus luettu"
+              },
+              {
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/naypyidaw/sisalto.json",
+                "jsonPath": "$.kaupunkilehti[1].nostot[2]"
+              }
+            ],
+            "rightsEvidence": "Yleistetty luonnonmateriaali, kasvi tai ruoka; ei nimetyn teoksen, nykyisen museoartefaktin, rakennuksen, tapahtuman tai henkilön jäljennös.",
+            "prompt": "Three small unworked material samples on a quiet pale surface: one rough natural stone, one plain bronze piece with muted warm brown metallic color, and one plain iron bar with subtle natural wear. Separate clearly readable materials; no axes, weapons, carved objects, labels or invented prehistoric artifacts. Photorealistic-natural editorial illustration with natural light, physically credible materials and irregular textures. No people, faces, lettering, labels, logos, watermarks, frames or designed art. Generalized illustration of the text topic, not a documentary image of a named place, vendor, event, historical exhibit or museum specimen. Landscape PNG preferably1536x1024, opaque.",
+            "content": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/naypyidaw/sisalto.json",
+              "contentSHA256": "6cc2cf9d1a2d3452148806a873c72c50b135f683add8ca152a89082b8c440d62",
+              "targetObjectExists": true,
+              "targetContainer": "$.kaupunkilehti[1].nostot[2]",
+              "targetText": {
+                "otsikko": "Työkalu tekee aikakauden näkyväksi",
+                "teksti": "Kansallismuseon esihistorian näyttely esittelee kivikauden, pronssikauden ja rautakauden työkaluja, aseita ja käyttöesineitä. Näyttelyyn kuuluu myös luolaympäristöä ja kaivauskohdetta havainnollistavia pienoismalleja. Esineiden rinnalla voi siis tarkastella niiden löytämisen ympäristöä. Aikakauden nimi ei jää vain vuosiluvuksi seinälle: kivi, pronssi ja rauta ovat konkreettisia materiaaleja, joista erilaisia välineitä tehtiin. Kokoelma kertoo ihmisten käytännön työstä paljon ennen nykyisen pääkaupungin rakentamista.",
+                "wiki": "National Museum of Myanmar (Naypyidaw)",
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              },
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/naypyidaw/faktapohja.md",
+              "factSheetExists": true
+            },
+            "otherReviewerVerdicts": [],
+            "visualInspection": {
+              "tool": "view_image",
+              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/naypyidaw/assets/e10-naypyidaw-L3-v1-20261012/image.png",
+              "detail": "original",
+              "observations": "Neutraalilla pinnalla karhea kivi, ruskeankultainen metallikappale ja tummempi hapettunut rautatanko. Pintojen mineraalisuus, metalliheijastus ja kuluma erottuvat luontevasti. Ei asejäljennöstä, ihmisiä, tekstiä tai logoja.",
+              "inspectedBy": "kuvitus-3"
+            },
+            "openConflict": false
+          },
+          "reviewedAt": "2026-10-12T18:58:19.685172+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/naypyidaw/qa.json",
+            "sha256": "5098ad6dfb33b09f540a8ecad5dc969f42984593feb64ee5c1f6c2d16c9faa95"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/naypyidaw/illustration-qa-extra.json",
+            "sha256": "3c7413623c054717bffe209cb4510e500523ff6a95d59b5e65aa97d04ef25ad9"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/naypyidaw/e10-naypyidaw-L3-v1-20261012-5f0c65f2ecfe.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/naypyidaw/e10-naypyidaw-L3-v1-20261012-5f0c65f2ecfe.png?t=b5d95b2b3ba111c5",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/naypyidaw/e10-naypyidaw-L3-v1-20261012-5f0c65f2ecfe.png",
+        "sha256": "b5d95b2b3ba111c573ffeb3d7fac04ae6eacbae1fbb179fb333e13e92ef97de2",
+        "bytes": 2444164,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e10-naypyidaw-L3-v1-20261012",
+        "nativeSHA256": "5f0c65f2ecfe1869a13b9b03edaff4c3ca206eba50694771fb77cfe7ce2e7f68",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e10/naypyidaw/e10-naypyidaw-L3-v1-20261012-5f0c65f2ecfe.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e10",
+        "city": "naypyidaw",
+        "slot": "L3",
+        "targetJsonPath": "$.kaupunkilehti[1].nostot[2]",
+        "verifiedAt": "2026-10-12T19:00:12.989188+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e10/naypyidaw/e10-naypyidaw-L3-v1-20261012-5f0c65f2ecfe.png",
+        "sha256": "b5d95b2b3ba111c573ffeb3d7fac04ae6eacbae1fbb179fb333e13e92ef97de2",
+        "bytes": 2444164,
+        "SHAReadAt": "2026-10-12T19:03:40.385118+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "5f0c65f2ecfe1869a13b9b03edaff4c3ca206eba50694771fb77cfe7ce2e7f68",
+        "rgbPixelSHA256": "ab7073907c8526f2d8bf9a8ec16a49032fac00bfde2b1f8441648a57dc821ee6",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "787887ff4046c0376929fdc73d10bf7218f256fad90212e2b8ac0f336cdba275",
+      "targetAfterSHA256": "d4abc32da8923a9fe8c59d307e73ada9e6f26869532aa3c6e92d9b531b2e4b41",
+      "contextAfterSHA256": "d4abc32da8923a9fe8c59d307e73ada9e6f26869532aa3c6e92d9b531b2e4b41"
+    },
+    {
+      "era": "e10",
+      "city": "naypyidaw",
+      "slot": "L4",
+      "type": "illustration",
+      "assetID": "e10-naypyidaw-L4-v1-20261012",
+      "galleryImageID": "e10-naypyidaw-L4-v1-20261012",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
+      "targetTokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        3
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/naypyidaw/e10-naypyidaw-L4-v1-20261012-117c1471862a.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva tiilirakentamisen materiaalista; ei Pyu-kaupungin rakenne tai museon pienoismalli.",
+        "lyhyt": "Havainnekuva tiilirakentamisen materiaalista; ei Pyu-kaupungin rakenne tai museon pienoismalli."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/naypyidaw/e10-naypyidaw-L4-v1-20261012-117c1471862a.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva tiilirakentamisen materiaalista; ei Pyu-kaupungin rakenne tai museon pienoismalli.",
+        "lyhyt": "Havainnekuva tiilirakentamisen materiaalista; ei Pyu-kaupungin rakenne tai museon pienoismalli."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "117c1471862aa025c1807c5718b506833a544f3b3f27e6422efb7ad807f3bdc6",
+      "exportSHA256": "612f11de473bb3ea1e4901f81e0966b4a4b8a8e6b9cf0b63b89e5274c609bad2",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/naypyidaw/e10-naypyidaw-L4-v1-20261012-117c1471862a.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/naypyidaw/e10-naypyidaw-L4-v1-20261012-117c1471862a.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e10/naypyidaw/e10-naypyidaw-L4-v1-20261012-117c1471862a.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/naypyidaw/sisalto.json",
+      "sourceContentSHA256": "787887ff4046c0376929fdc73d10bf7218f256fad90212e2b8ac0f336cdba275",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e22262132610556e138ffef25e19bcfabc94bb13408eaba219ba2f71cab0a276",
+        "semanticContextSHA256": "e22262132610556e138ffef25e19bcfabc94bb13408eaba219ba2f71cab0a276",
+        "subjectTitle": "Muinaiskaupungit mahtuvat museoon",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Yleistetty luonnonmateriaali, kasvi tai ruoka; ei nimetyn teoksen, nykyisen museoartefaktin, rakennuksen, tapahtuman tai henkilön jäljennös.",
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/naypyidaw/assets/e10-naypyidaw-L4-v1-20261012/image.png",
+            "nativeSHA256": "117c1471862aa025c1807c5718b506833a544f3b3f27e6422efb7ad807f3bdc6",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "pngChunks": [
+              "IHDR",
+              "caBX",
+              "IDAT",
+              "IEND"
+            ],
+            "manifestMatch": true,
+            "captionFi": "Havainnekuva tiilirakentamisen materiaalista; ei Pyu-kaupungin rakenne tai museon pienoismalli.",
+            "sourceEvidence": [
+              {
+                "url": "https://whc.unesco.org/en/list/1444/",
+                "claim": "Description: brick walled Pyu cities; museum Protohistoric exhibition elsewhere in Myanmar"
+              },
+              {
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/naypyidaw/faktapohja.md",
+                "section": "Noston ja oppaan lahdeketju"
+              },
+              {
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/naypyidaw/tarkistus.md",
+                "section": "Aiheen D-tarkistus luettu"
+              },
+              {
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/naypyidaw/sisalto.json",
+                "jsonPath": "$.kaupunkilehti[1].nostot[3]"
+              }
+            ],
+            "rightsEvidence": "Yleistetty luonnonmateriaali, kasvi tai ruoka; ei nimetyn teoksen, nykyisen museoartefaktin, rakennuksen, tapahtuman tai henkilön jäljennös.",
+            "prompt": "Two plain fired clay building bricks on an undecorated pale surface, slightly irregular edges, varied earthy red and brown texture in gentle daylight. Ordinary building material, no carvings, maker names, miniature cities, walls, ruins or invented Pyu artifact. Photorealistic-natural editorial illustration with natural light, physically credible materials and irregular textures. No people, faces, lettering, labels, logos, watermarks, frames or designed art. Generalized illustration of the text topic, not a documentary image of a named place, vendor, event, historical exhibit or museum specimen. Landscape PNG preferably1536x1024, opaque.",
+            "content": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/naypyidaw/sisalto.json",
+              "contentSHA256": "6cc2cf9d1a2d3452148806a873c72c50b135f683add8ca152a89082b8c440d62",
+              "targetObjectExists": true,
+              "targetContainer": "$.kaupunkilehti[1].nostot[3]",
+              "targetText": {
+                "otsikko": "Muinaiskaupungit mahtuvat museoon",
+                "teksti": "Kansallismuseossa esitellään Pyu-kaupunkien rakennusosia ja pienoismalleja. Halin, Beikthano ja Sri Ksetra sijaitsevat muualla Myanmarissa ja muodostavat yhteisen maailmanperintökohteen. Niiden tiilirakenteiset kaupungit olivat muurien ja vallihautojen ympäröimiä, ja ympäröivään maisemaan kuului kastelujärjestelmiä. Naypyidawin kokoelma tuo vanhan kaupunkirakentamisen uuden pääkaupungin sisälle. Näyttelyesine ja alkuperäinen kaupunki ovat eri paikoissa, mutta niiden avulla voi ajatella, miten kaupunki järjestää tilaa ja vettä.",
+                "wiki": "National Museum of Myanmar (Naypyidaw)",
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              },
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/naypyidaw/faktapohja.md",
+              "factSheetExists": true
+            },
+            "otherReviewerVerdicts": [],
+            "visualInspection": {
+              "tool": "view_image",
+              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/naypyidaw/assets/e10-naypyidaw-L4-v1-20261012/image.png",
+              "detail": "original",
+              "observations": "Kaksi punaista tiiltä vaalealla alustalla. Särmien kuluma, huokoset, raeaines ja sävyt vaihtelevat luontevasti. Ei ihmisiä, tekstiä, logoja tai nimettyä arkkitehtuuria.",
+              "inspectedBy": "kuvitus-3"
+            },
+            "openConflict": false
+          },
+          "qaReason": "Tiilet havainnollistavat L4:n tiilirakentamisen materiaalia. Kuvateksti erottaa ne Pyu-kaupungin todellisesta rakenteesta ja museon pienoismallista. Native-SHA ja mitat täsmäävät."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva tiilirakentamisen materiaalista; ei Pyu-kaupungin rakenne tai museon pienoismalli.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/naypyidaw/illustration-qa-extra.json",
+        "fileSHA256": "3c7413623c054717bffe209cb4510e500523ff6a95d59b5e65aa97d04ef25ad9",
+        "item": {
+          "slot": "L4",
+          "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
+          "assetID": "e10-naypyidaw-L4-v1-20261012",
+          "sha256": "117c1471862aa025c1807c5718b506833a544f3b3f27e6422efb7ad807f3bdc6",
+          "verdict": "accepted",
+          "reason": "Tiilet havainnollistavat L4:n tiilirakentamisen materiaalia. Kuvateksti erottaa ne Pyu-kaupungin todellisesta rakenteesta ja museon pienoismallista. Native-SHA ja mitat täsmäävät.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/naypyidaw/assets/e10-naypyidaw-L4-v1-20261012/image.png",
+            "nativeSHA256": "117c1471862aa025c1807c5718b506833a544f3b3f27e6422efb7ad807f3bdc6",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "pngChunks": [
+              "IHDR",
+              "caBX",
+              "IDAT",
+              "IEND"
+            ],
+            "manifestMatch": true,
+            "captionFi": "Havainnekuva tiilirakentamisen materiaalista; ei Pyu-kaupungin rakenne tai museon pienoismalli.",
+            "sourceEvidence": [
+              {
+                "url": "https://whc.unesco.org/en/list/1444/",
+                "claim": "Description: brick walled Pyu cities; museum Protohistoric exhibition elsewhere in Myanmar"
+              },
+              {
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/naypyidaw/faktapohja.md",
+                "section": "Noston ja oppaan lahdeketju"
+              },
+              {
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/naypyidaw/tarkistus.md",
+                "section": "Aiheen D-tarkistus luettu"
+              },
+              {
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/naypyidaw/sisalto.json",
+                "jsonPath": "$.kaupunkilehti[1].nostot[3]"
+              }
+            ],
+            "rightsEvidence": "Yleistetty luonnonmateriaali, kasvi tai ruoka; ei nimetyn teoksen, nykyisen museoartefaktin, rakennuksen, tapahtuman tai henkilön jäljennös.",
+            "prompt": "Two plain fired clay building bricks on an undecorated pale surface, slightly irregular edges, varied earthy red and brown texture in gentle daylight. Ordinary building material, no carvings, maker names, miniature cities, walls, ruins or invented Pyu artifact. Photorealistic-natural editorial illustration with natural light, physically credible materials and irregular textures. No people, faces, lettering, labels, logos, watermarks, frames or designed art. Generalized illustration of the text topic, not a documentary image of a named place, vendor, event, historical exhibit or museum specimen. Landscape PNG preferably1536x1024, opaque.",
+            "content": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/naypyidaw/sisalto.json",
+              "contentSHA256": "6cc2cf9d1a2d3452148806a873c72c50b135f683add8ca152a89082b8c440d62",
+              "targetObjectExists": true,
+              "targetContainer": "$.kaupunkilehti[1].nostot[3]",
+              "targetText": {
+                "otsikko": "Muinaiskaupungit mahtuvat museoon",
+                "teksti": "Kansallismuseossa esitellään Pyu-kaupunkien rakennusosia ja pienoismalleja. Halin, Beikthano ja Sri Ksetra sijaitsevat muualla Myanmarissa ja muodostavat yhteisen maailmanperintökohteen. Niiden tiilirakenteiset kaupungit olivat muurien ja vallihautojen ympäröimiä, ja ympäröivään maisemaan kuului kastelujärjestelmiä. Naypyidawin kokoelma tuo vanhan kaupunkirakentamisen uuden pääkaupungin sisälle. Näyttelyesine ja alkuperäinen kaupunki ovat eri paikoissa, mutta niiden avulla voi ajatella, miten kaupunki järjestää tilaa ja vettä.",
+                "wiki": "National Museum of Myanmar (Naypyidaw)",
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              },
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/naypyidaw/faktapohja.md",
+              "factSheetExists": true
+            },
+            "otherReviewerVerdicts": [],
+            "visualInspection": {
+              "tool": "view_image",
+              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/naypyidaw/assets/e10-naypyidaw-L4-v1-20261012/image.png",
+              "detail": "original",
+              "observations": "Kaksi punaista tiiltä vaalealla alustalla. Särmien kuluma, huokoset, raeaines ja sävyt vaihtelevat luontevasti. Ei ihmisiä, tekstiä, logoja tai nimettyä arkkitehtuuria.",
+              "inspectedBy": "kuvitus-3"
+            },
+            "openConflict": false
+          },
+          "reviewedAt": "2026-10-12T19:02:26.630858+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/naypyidaw/qa.json",
+            "sha256": "5098ad6dfb33b09f540a8ecad5dc969f42984593feb64ee5c1f6c2d16c9faa95"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/naypyidaw/illustration-qa-extra.json",
+            "sha256": "3c7413623c054717bffe209cb4510e500523ff6a95d59b5e65aa97d04ef25ad9"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/naypyidaw/e10-naypyidaw-L4-v1-20261012-117c1471862a.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/naypyidaw/e10-naypyidaw-L4-v1-20261012-117c1471862a.png?t=612f11de473bb3ea",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/naypyidaw/e10-naypyidaw-L4-v1-20261012-117c1471862a.png",
+        "sha256": "612f11de473bb3ea1e4901f81e0966b4a4b8a8e6b9cf0b63b89e5274c609bad2",
+        "bytes": 2579103,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e10-naypyidaw-L4-v1-20261012",
+        "nativeSHA256": "117c1471862aa025c1807c5718b506833a544f3b3f27e6422efb7ad807f3bdc6",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e10/naypyidaw/e10-naypyidaw-L4-v1-20261012-117c1471862a.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e10",
+        "city": "naypyidaw",
+        "slot": "L4",
+        "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
+        "verifiedAt": "2026-10-12T19:03:31.797388+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e10/naypyidaw/e10-naypyidaw-L4-v1-20261012-117c1471862a.png",
+        "sha256": "612f11de473bb3ea1e4901f81e0966b4a4b8a8e6b9cf0b63b89e5274c609bad2",
+        "bytes": 2579103,
+        "SHAReadAt": "2026-10-12T19:03:41.325465+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "117c1471862aa025c1807c5718b506833a544f3b3f27e6422efb7ad807f3bdc6",
+        "rgbPixelSHA256": "030948fd7c151dbd95df46b235de012cd707a38ba1b821378e6ea72cf601f210",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "787887ff4046c0376929fdc73d10bf7218f256fad90212e2b8ac0f336cdba275",
+      "targetAfterSHA256": "e22262132610556e138ffef25e19bcfabc94bb13408eaba219ba2f71cab0a276",
+      "contextAfterSHA256": "e22262132610556e138ffef25e19bcfabc94bb13408eaba219ba2f71cab0a276"
+    },
+    {
+      "era": "e10",
+      "city": "naypyidaw",
+      "slot": "PHOTO",
+      "type": "commons",
+      "assetID": "capital-cc-e10-naypyidaw-photo-e2e84afe03bee395",
+      "galleryImageID": "capital-cc-e10-naypyidaw-photo-e2e84afe03bee395",
+      "commonsFile": "Junger Papayabaum (Carica papaya).jpg",
+      "targetJsonPath": "$.valokuva",
+      "targetTokens": [
+        "valokuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e10/naypyidaw/photo-e2e84afe03bee395b9d3.jpg",
+        "suora": true,
+        "lahde": "Myrmux, Commons (CC BY-SA 4.0)",
+        "selite": "Papayapuu Naypyidawin National Herbal Parkissa tammikuussa 2018.",
+        "lyhyt": "Papayapuu Naypyidawin National Herbal Parkissa tammikuussa 2018.",
+        "tiedosto": "Junger Papayabaum (Carica papaya).jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Myrmux, Commons (CC BY-SA 4.0)",
+        "selite": "Papayapuu Naypyidawin National Herbal Parkissa tammikuussa 2018.",
+        "lyhyt": "Papayapuu Naypyidawin National Herbal Parkissa tammikuussa 2018.",
+        "tiedosto": "Junger Papayabaum (Carica papaya).jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e10/naypyidaw/photo-e2e84afe03bee395b9d3.jpg",
+        "suora": true,
+        "lahde": "Myrmux, Commons (CC BY-SA 4.0)",
+        "selite": "Papayapuu Naypyidawin National Herbal Parkissa tammikuussa 2018.",
+        "lyhyt": "Papayapuu Naypyidawin National Herbal Parkissa tammikuussa 2018.",
+        "tiedosto": "Junger Papayabaum (Carica papaya).jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "e2e84afe03bee395b9d3864f50e8f62418733049fd8ba8336c7bea681ed20c82",
+      "exportSHA256": "e2e84afe03bee395b9d3864f50e8f62418733049fd8ba8336c7bea681ed20c82",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e10/naypyidaw/photo-e2e84afe03bee395b9d3.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e10/naypyidaw/photo-e2e84afe03bee395b9d3.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/naypyidaw/cc-evidence/2b2c08f5574f-original.jpg",
+      "dimensions": [
+        3456,
+        4608
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/naypyidaw/sisalto.json",
+      "sourceContentSHA256": "787887ff4046c0376929fdc73d10bf7218f256fad90212e2b8ac0f336cdba275",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "2aecfbf572e21560f32d8639a217504fd5124eec737c915f2c60d726c0dc88d0",
+        "semanticContextSHA256": "2aecfbf572e21560f32d8639a217504fd5124eec737c915f2c60d726c0dc88d0",
+        "subjectTitle": "naypyidaw — aito paikkavalokuva",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Myrmux",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Junger_Papayabaum_(Carica_papaya).jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/2/24/Junger_Papayabaum_%28Carica_papaya%29.jpg",
+        "rightsEvidence": {
+          "selection": "Myrmux ja CC BY-SA 4.0 luettu Commonsin Author- ja lisenssitaulukosta. Description yksilöi National Herbal Parkin Naypyidawissa; oma alkuperäiskatselu näyttää yhden papayapuun ja kasvillisuutta. Ei ihmisiä, lisättyä tekstiä tai erillistä suojattua teosta pääaiheena. Ei väitettä puun lääkinnällisestä vaikutuksesta.",
+          "QA": {
+            "rows": [
+              [
+                "Description Junger Papayabaum (Carica papaya).jpg",
+                "English: Single Papayatree in the National Herbal Park, Naypidaw, Myanmar Deutsch: Ein einzelner Papayabaum im National Herbal Park in Naypidaw, Myanmar."
+              ],
+              [
+                "Date",
+                "26 January 2018"
+              ],
+              [
+                "Source",
+                "Own work"
+              ],
+              [
+                "Author",
+                "Myrmux"
+              ]
+            ],
+            "licenses": [
+              "CC BY-SA 4.0"
+            ],
+            "pageDimensions": [
+              3456,
+              4608
+            ],
+            "actualDimensions": [
+              3456,
+              4608
+            ],
+            "pageSha256": "99f57b186b94dba5c113cde3ec7b5862f7854adeb54997bc146571495fba8b6c",
+            "nativeSha256": "e2e84afe03bee395b9d3864f50e8f62418733049fd8ba8336c7bea681ed20c82",
+            "cached": true,
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Junger_Papayabaum_(Carica_papaya).jpg",
+            "sourcePageEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/naypyidaw/qa-evidence/source-photo-2289402f5760.html",
+            "viewPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/naypyidaw/cc-evidence/2b2c08f5574f-original.jpg",
+            "localMatchesManifestSHA": true,
+            "personallyViewed": true,
+            "sourceMetadataProof": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/naypyidaw/qa-evidence/source-photo-2289402f5760.json",
+            "author": "Myrmux",
+            "authorFieldVerified": true,
+            "license": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "explicitPDRelease": null,
+            "existingGameUseHits": [],
+            "reuseSearchScope": "e04-e14 game JS, sisalto.json and rooli-asset-liite.json; filename/underscores/encoded name/original URL",
+            "captionFi": "Papayapuu Naypyidawin National Herbal Parkissa tammikuussa 2018.",
+            "sourceContentSHA256": "6cc2cf9d1a2d3452148806a873c72c50b135f683add8ca152a89082b8c440d62",
+            "targetParentExists": true,
+            "imageLeafMayBeEmpty": true,
+            "rightsScope": "Täsmäkuvan näkyvä pääaihe ja taustan osien arvio kuvattu reason-kentässä. Valokuvan lupa on erillinen; ei lupa irrottaa kuvan sivuosan rakennusta/taidetta omaksi kohdekuvaksi."
+          },
+          "qaReason": "Lähde nimeää papajapuun National Herbal Parkissa Naypyidawissa, ei vain Myanmaria yleisesti. Aito terävä kasvi, hedelmät ja lehdet luontevat. Ei ihmisiä, rakennuksia, veistoksia tai lisättyjä merkintöjä. Pysty3456×4608 on PHOTO-paikassa sallittu; vuosi2018 kirjataan, ei nykyhetkiväitettä."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Papayapuu Naypyidawin National Herbal Parkissa tammikuussa 2018.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/naypyidaw/qa.json",
+        "fileSHA256": "5098ad6dfb33b09f540a8ecad5dc969f42984593feb64ee5c1f6c2d16c9faa95",
+        "item": {
+          "slot": "PHOTO",
+          "targetJsonPath": "$.valokuva",
+          "commonsFile": "Junger Papayabaum (Carica papaya).jpg",
+          "sha256": "e2e84afe03bee395b9d3864f50e8f62418733049fd8ba8336c7bea681ed20c82",
+          "verdict": "accepted",
+          "reason": "Lähde nimeää papajapuun National Herbal Parkissa Naypyidawissa, ei vain Myanmaria yleisesti. Aito terävä kasvi, hedelmät ja lehdet luontevat. Ei ihmisiä, rakennuksia, veistoksia tai lisättyjä merkintöjä. Pysty3456×4608 on PHOTO-paikassa sallittu; vuosi2018 kirjataan, ei nykyhetkiväitettä.",
+          "required": true,
+          "reviewedAt": "2026-10-12T19:19:54.340351+00:00",
+          "evidence": {
+            "rows": [
+              [
+                "Description Junger Papayabaum (Carica papaya).jpg",
+                "English: Single Papayatree in the National Herbal Park, Naypidaw, Myanmar Deutsch: Ein einzelner Papayabaum im National Herbal Park in Naypidaw, Myanmar."
+              ],
+              [
+                "Date",
+                "26 January 2018"
+              ],
+              [
+                "Source",
+                "Own work"
+              ],
+              [
+                "Author",
+                "Myrmux"
+              ]
+            ],
+            "licenses": [
+              "CC BY-SA 4.0"
+            ],
+            "pageDimensions": [
+              3456,
+              4608
+            ],
+            "actualDimensions": [
+              3456,
+              4608
+            ],
+            "pageSha256": "99f57b186b94dba5c113cde3ec7b5862f7854adeb54997bc146571495fba8b6c",
+            "nativeSha256": "e2e84afe03bee395b9d3864f50e8f62418733049fd8ba8336c7bea681ed20c82",
+            "cached": true,
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Junger_Papayabaum_(Carica_papaya).jpg",
+            "sourcePageEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/naypyidaw/qa-evidence/source-photo-2289402f5760.html",
+            "viewPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/naypyidaw/cc-evidence/2b2c08f5574f-original.jpg",
+            "localMatchesManifestSHA": true,
+            "personallyViewed": true,
+            "sourceMetadataProof": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/naypyidaw/qa-evidence/source-photo-2289402f5760.json",
+            "author": "Myrmux",
+            "authorFieldVerified": true,
+            "license": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "explicitPDRelease": null,
+            "existingGameUseHits": [],
+            "reuseSearchScope": "e04-e14 game JS, sisalto.json and rooli-asset-liite.json; filename/underscores/encoded name/original URL",
+            "captionFi": "Papayapuu Naypyidawin National Herbal Parkissa tammikuussa 2018.",
+            "sourceContentSHA256": "6cc2cf9d1a2d3452148806a873c72c50b135f683add8ca152a89082b8c440d62",
+            "targetParentExists": true,
+            "imageLeafMayBeEmpty": true,
+            "rightsScope": "Täsmäkuvan näkyvä pääaihe ja taustan osien arvio kuvattu reason-kentässä. Valokuvan lupa on erillinen; ei lupa irrottaa kuvan sivuosan rakennusta/taidetta omaksi kohdekuvaksi."
+          }
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/naypyidaw/qa.json",
+            "sha256": "5098ad6dfb33b09f540a8ecad5dc969f42984593feb64ee5c1f6c2d16c9faa95"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/naypyidaw/illustration-qa-extra.json",
+            "sha256": "3c7413623c054717bffe209cb4510e500523ff6a95d59b5e65aa97d04ef25ad9"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e10",
+        "city": "naypyidaw",
+        "slot": "PHOTO",
+        "targetJsonPath": "$.valokuva",
+        "commonsFile": "Junger Papayabaum (Carica papaya).jpg",
+        "sha256": "e2e84afe03bee395b9d3864f50e8f62418733049fd8ba8336c7bea681ed20c82",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Junger_Papayabaum_(Carica_papaya).jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/2/24/Junger_Papayabaum_%28Carica_papaya%29.jpg",
+        "author": "Myrmux",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "width": 3456,
+        "height": 4608,
+        "originalSHA256": "e2e84afe03bee395b9d3864f50e8f62418733049fd8ba8336c7bea681ed20c82",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e10/naypyidaw/photo-e2e84afe03bee395b9d3.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e10/naypyidaw/photo-e2e84afe03bee395b9d3.jpg",
+        "bytes": 12148805,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T19:20:13.000970+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "Junger Papayabaum (Carica papaya).jpg",
+        "lahde": "Myrmux, Commons (CC BY-SA 4.0)",
+        "selite": "Papayapuu Naypyidawin National Herbal Parkissa tammikuussa 2018.",
+        "lyhyt": "Papayapuu Naypyidawin National Herbal Parkissa tammikuussa 2018."
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Myrmux, Commons (CC BY-SA 4.0)",
+        "selite": "Papayapuu Naypyidawin National Herbal Parkissa tammikuussa 2018.",
+        "lyhyt": "Papayapuu Naypyidawin National Herbal Parkissa tammikuussa 2018.",
+        "tiedosto": "Junger Papayabaum (Carica papaya).jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "787887ff4046c0376929fdc73d10bf7218f256fad90212e2b8ac0f336cdba275",
+      "targetAfterSHA256": "2aecfbf572e21560f32d8639a217504fd5124eec737c915f2c60d726c0dc88d0",
+      "contextAfterSHA256": "2aecfbf572e21560f32d8639a217504fd5124eec737c915f2c60d726c0dc88d0"
+    },
+    {
+      "era": "e10",
+      "city": "naypyidaw",
+      "slot": "C1",
+      "type": "commons",
+      "assetID": "capital-cc-e10-naypyidaw-c1-a0a1310e5bab80b7",
+      "galleryImageID": "capital-cc-e10-naypyidaw-c1-a0a1310e5bab80b7",
+      "commonsFile": "Naypyidaw -- Wide Boulevard.JPG",
+      "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "kansikuvat",
+        0
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e10/naypyidaw/c1-a0a1310e5bab80b7b071.jpg",
+        "suora": true,
+        "lahde": "Hybernator, Wikimedia Commons (CC BY-SA 3.0)",
+        "selite": "Naypyidawin leveää bulevardia joulukuussa 2011.",
+        "lyhyt": "Naypyidawin leveää bulevardia joulukuussa 2011.",
+        "tiedosto": "Naypyidaw -- Wide Boulevard.JPG"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Hybernator, Wikimedia Commons (CC BY-SA 3.0)",
+        "selite": "Naypyidawin leveää bulevardia joulukuussa 2011.",
+        "lyhyt": "Naypyidawin leveää bulevardia joulukuussa 2011.",
+        "tiedosto": "Naypyidaw -- Wide Boulevard.JPG"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e10/naypyidaw/c1-a0a1310e5bab80b7b071.jpg",
+        "suora": true,
+        "lahde": "Hybernator, Wikimedia Commons (CC BY-SA 3.0)",
+        "selite": "Naypyidawin leveää bulevardia joulukuussa 2011.",
+        "lyhyt": "Naypyidawin leveää bulevardia joulukuussa 2011.",
+        "tiedosto": "Naypyidaw -- Wide Boulevard.JPG"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "a0a1310e5bab80b7b0712b15289ea71ee57ec8b4b6387388e3369c4afdc34a92",
+      "exportSHA256": "a0a1310e5bab80b7b0712b15289ea71ee57ec8b4b6387388e3369c4afdc34a92",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e10/naypyidaw/c1-a0a1310e5bab80b7b071.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e10/naypyidaw/c1-a0a1310e5bab80b7b071.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/naypyidaw/cc-evidence/1eb2b3157c1e-original.jpg",
+      "dimensions": [
+        3072,
+        2304
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/naypyidaw/sisalto.json",
+      "sourceContentSHA256": "787887ff4046c0376929fdc73d10bf7218f256fad90212e2b8ac0f336cdba275",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "96fdb89522ed08fe5415696f2a518de63fae139e06656d29f2437a3214ffa6f5",
+        "semanticContextSHA256": "96fdb89522ed08fe5415696f2a518de63fae139e06656d29f2437a3214ffa6f5",
+        "subjectTitle": "Naypyidaw",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Hybernator",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Naypyidaw_--_Wide_Boulevard.JPG",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f8/Naypyidaw_--_Wide_Boulevard.JPG",
+        "rightsEvidence": {
+          "selection": "Hybernator ja CC BY-SA 3.0 luettu Commonsin Author- ja lisenssitaulukosta. Description nimeää bulevardin Naypyidawissa. Oma alkuperäiskatselu: laaja todellinen katu-/maisemanäkymä, asfaltti, toiminnalliset valaisimet, kasvillisuus ja tavanomaisia ajoneuvoja. Kaukaiset pienet rakennukset eivät tuo kuvaan yksilöityä koristeellista teosta; veistosta tai monumenttia ei havaittu. Kasvot eivät erotu. Liikkuva oikean reunan bussi lievästi epäterävä; muu kuva ja kansiroolin laajuus QA:lle.",
+          "QA": {
+            "rows": [
+              [
+                "Description Naypyidaw -- Wide Boulevard.JPG",
+                "English: One half of a wide boulevard at Naypyidaw"
+              ],
+              [
+                "Date",
+                "5 December 2011"
+              ],
+              [
+                "Source",
+                "Own work"
+              ],
+              [
+                "Author",
+                "Hybernator"
+              ]
+            ],
+            "licenses": [
+              "CC BY-SA 3.0"
+            ],
+            "pageDimensions": [
+              3072,
+              2304
+            ],
+            "actualDimensions": [
+              3072,
+              2304
+            ],
+            "pageSha256": "61c082309969b21078fc1f796c2665f32bdf133520d5eaea6bcbc3bd008271cd",
+            "nativeSha256": "a0a1310e5bab80b7b0712b15289ea71ee57ec8b4b6387388e3369c4afdc34a92",
+            "cached": true,
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Naypyidaw_--_Wide_Boulevard.JPG",
+            "sourcePageEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/naypyidaw/qa-evidence/source-c1-b2f0e7834784.html",
+            "viewPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/naypyidaw/cc-evidence/1eb2b3157c1e-original.jpg",
+            "localMatchesManifestSHA": true,
+            "personallyViewed": true,
+            "sourceMetadataProof": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/naypyidaw/qa-evidence/source-c1-b2f0e7834784.json",
+            "author": "Hybernator",
+            "authorFieldVerified": true,
+            "license": "CC BY-SA 3.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+            "explicitPDRelease": null,
+            "existingGameUseHits": [],
+            "reuseSearchScope": "e04-e14 game JS, sisalto.json and rooli-asset-liite.json; filename/underscores/encoded name/original URL",
+            "captionFi": "Naypyidawin leveää bulevardia joulukuussa 2011.",
+            "sourceContentSHA256": "6cc2cf9d1a2d3452148806a873c72c50b135f683add8ca152a89082b8c440d62",
+            "targetParentExists": true,
+            "imageLeafMayBeEmpty": true,
+            "rightsScope": "Täsmäkuvan näkyvä pääaihe ja taustan osien arvio kuvattu reason-kentässä. Valokuvan lupa on erillinen; ei lupa irrottaa kuvan sivuosan rakennusta/taidetta omaksi kohdekuvaksi."
+          },
+          "qaReason": "Lähteen Description yksilöi Naypyidawin leveän bulevardin toisen ajoradan. Aito laaja katunäkymä näyttää todellisen tien asettelun. Hämärä valaistus ja liikkuvan sivubussin liikepehmeys kirjataan; tien linjat, katuvalot ja maiseman perusrakenne erottuvat. Ei tunnistettavia kasvoja, overlay-tekstiä tai poliittista nykykonfliktiaihetta. Tavallinen tieinfra ei ole nimetty suojattu taideteos. Vuosi2011, ei vuoden1873 tai nykyhetken väitettä."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Naypyidawin leveää bulevardia joulukuussa 2011.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/naypyidaw/qa.json",
+        "fileSHA256": "5098ad6dfb33b09f540a8ecad5dc969f42984593feb64ee5c1f6c2d16c9faa95",
+        "item": {
+          "slot": "C1",
+          "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
+          "commonsFile": "Naypyidaw -- Wide Boulevard.JPG",
+          "sha256": "a0a1310e5bab80b7b0712b15289ea71ee57ec8b4b6387388e3369c4afdc34a92",
+          "verdict": "accepted",
+          "reason": "Lähteen Description yksilöi Naypyidawin leveän bulevardin toisen ajoradan. Aito laaja katunäkymä näyttää todellisen tien asettelun. Hämärä valaistus ja liikkuvan sivubussin liikepehmeys kirjataan; tien linjat, katuvalot ja maiseman perusrakenne erottuvat. Ei tunnistettavia kasvoja, overlay-tekstiä tai poliittista nykykonfliktiaihetta. Tavallinen tieinfra ei ole nimetty suojattu taideteos. Vuosi2011, ei vuoden1873 tai nykyhetken väitettä.",
+          "required": true,
+          "reviewedAt": "2026-10-12T19:19:54.340351+00:00",
+          "evidence": {
+            "rows": [
+              [
+                "Description Naypyidaw -- Wide Boulevard.JPG",
+                "English: One half of a wide boulevard at Naypyidaw"
+              ],
+              [
+                "Date",
+                "5 December 2011"
+              ],
+              [
+                "Source",
+                "Own work"
+              ],
+              [
+                "Author",
+                "Hybernator"
+              ]
+            ],
+            "licenses": [
+              "CC BY-SA 3.0"
+            ],
+            "pageDimensions": [
+              3072,
+              2304
+            ],
+            "actualDimensions": [
+              3072,
+              2304
+            ],
+            "pageSha256": "61c082309969b21078fc1f796c2665f32bdf133520d5eaea6bcbc3bd008271cd",
+            "nativeSha256": "a0a1310e5bab80b7b0712b15289ea71ee57ec8b4b6387388e3369c4afdc34a92",
+            "cached": true,
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Naypyidaw_--_Wide_Boulevard.JPG",
+            "sourcePageEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/naypyidaw/qa-evidence/source-c1-b2f0e7834784.html",
+            "viewPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/naypyidaw/cc-evidence/1eb2b3157c1e-original.jpg",
+            "localMatchesManifestSHA": true,
+            "personallyViewed": true,
+            "sourceMetadataProof": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/naypyidaw/qa-evidence/source-c1-b2f0e7834784.json",
+            "author": "Hybernator",
+            "authorFieldVerified": true,
+            "license": "CC BY-SA 3.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+            "explicitPDRelease": null,
+            "existingGameUseHits": [],
+            "reuseSearchScope": "e04-e14 game JS, sisalto.json and rooli-asset-liite.json; filename/underscores/encoded name/original URL",
+            "captionFi": "Naypyidawin leveää bulevardia joulukuussa 2011.",
+            "sourceContentSHA256": "6cc2cf9d1a2d3452148806a873c72c50b135f683add8ca152a89082b8c440d62",
+            "targetParentExists": true,
+            "imageLeafMayBeEmpty": true,
+            "rightsScope": "Täsmäkuvan näkyvä pääaihe ja taustan osien arvio kuvattu reason-kentässä. Valokuvan lupa on erillinen; ei lupa irrottaa kuvan sivuosan rakennusta/taidetta omaksi kohdekuvaksi."
+          }
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/naypyidaw/qa.json",
+            "sha256": "5098ad6dfb33b09f540a8ecad5dc969f42984593feb64ee5c1f6c2d16c9faa95"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/naypyidaw/illustration-qa-extra.json",
+            "sha256": "3c7413623c054717bffe209cb4510e500523ff6a95d59b5e65aa97d04ef25ad9"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e10",
+        "city": "naypyidaw",
+        "slot": "C1",
+        "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
+        "commonsFile": "Naypyidaw -- Wide Boulevard.JPG",
+        "sha256": "a0a1310e5bab80b7b0712b15289ea71ee57ec8b4b6387388e3369c4afdc34a92",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Naypyidaw_--_Wide_Boulevard.JPG",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f8/Naypyidaw_--_Wide_Boulevard.JPG",
+        "author": "Hybernator",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "width": 3072,
+        "height": 2304,
+        "originalSHA256": "a0a1310e5bab80b7b0712b15289ea71ee57ec8b4b6387388e3369c4afdc34a92",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e10/naypyidaw/c1-a0a1310e5bab80b7b071.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e10/naypyidaw/c1-a0a1310e5bab80b7b071.jpg",
+        "bytes": 3166720,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T19:20:14.484438+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "Naypyidaw -- Wide Boulevard.JPG",
+        "lahde": "Hybernator, Wikimedia Commons (CC BY-SA 3.0)",
+        "selite": "Naypyidawin leveää bulevardia joulukuussa 2011.",
+        "lyhyt": "Naypyidawin leveää bulevardia joulukuussa 2011."
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Hybernator, Wikimedia Commons (CC BY-SA 3.0)",
+        "selite": "Naypyidawin leveää bulevardia joulukuussa 2011.",
+        "lyhyt": "Naypyidawin leveää bulevardia joulukuussa 2011.",
+        "tiedosto": "Naypyidaw -- Wide Boulevard.JPG"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "787887ff4046c0376929fdc73d10bf7218f256fad90212e2b8ac0f336cdba275",
+      "targetAfterSHA256": "96fdb89522ed08fe5415696f2a518de63fae139e06656d29f2437a3214ffa6f5",
+      "contextAfterSHA256": "96fdb89522ed08fe5415696f2a518de63fae139e06656d29f2437a3214ffa6f5"
+    },
+    {
+      "era": "e10",
+      "city": "naypyidaw",
+      "slot": "K1",
+      "type": "commons",
+      "assetID": "capital-cc-e10-naypyidaw-k1-e3a08f5d09888e60",
+      "galleryImageID": "capital-cc-e10-naypyidaw-k1-e3a08f5d09888e60",
+      "commonsFile": "Jogging trails - panoramio.jpg",
+      "targetJsonPath": "$.kaupunkilehti[0].nostot[0]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "nostot",
+        0
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e10/naypyidaw/k1-e3a08f5d09888e605c18.jpg",
+        "suora": true,
+        "lahde": "mohigan, Wikimedia Commons (CC BY-SA 3.0)",
+        "selite": "Ulkoilureittiä Naypyidawissa marraskuussa 2015.",
+        "lyhyt": "Ulkoilureittiä Naypyidawissa marraskuussa 2015.",
+        "tiedosto": "Jogging trails - panoramio.jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "mohigan, Wikimedia Commons (CC BY-SA 3.0)",
+        "selite": "Ulkoilureittiä Naypyidawissa marraskuussa 2015.",
+        "lyhyt": "Ulkoilureittiä Naypyidawissa marraskuussa 2015.",
+        "tiedosto": "Jogging trails - panoramio.jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e10/naypyidaw/k1-e3a08f5d09888e605c18.jpg",
+        "suora": true,
+        "lahde": "mohigan, Wikimedia Commons (CC BY-SA 3.0)",
+        "selite": "Ulkoilureittiä Naypyidawissa marraskuussa 2015.",
+        "lyhyt": "Ulkoilureittiä Naypyidawissa marraskuussa 2015.",
+        "tiedosto": "Jogging trails - panoramio.jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "e3a08f5d09888e605c18364efc97b34c121d10aac3d56d59acfa682dc5ad5640",
+      "exportSHA256": "e3a08f5d09888e605c18364efc97b34c121d10aac3d56d59acfa682dc5ad5640",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e10/naypyidaw/k1-e3a08f5d09888e605c18.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e10/naypyidaw/k1-e3a08f5d09888e605c18.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/naypyidaw/cc-evidence/abb2823577b9-original.jpg",
+      "dimensions": [
+        4608,
+        3456
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/naypyidaw/sisalto.json",
+      "sourceContentSHA256": "787887ff4046c0376929fdc73d10bf7218f256fad90212e2b8ac0f336cdba275",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "bd29164ff40ed2807a735979ee49aa380fd30d92d3b72b5ec046756f8c145004",
+        "semanticContextSHA256": "bd29164ff40ed2807a735979ee49aa380fd30d92d3b72b5ec046756f8c145004",
+        "subjectTitle": "Kaupunki on jaettu käyttötarkoituksiin",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "mohigan",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Jogging_trails_-_panoramio.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/d/de/Jogging_trails_-_panoramio.jpg",
+        "rightsEvidence": {
+          "selection": "Commonsin Author-taulukko nimeää mohiganin, CC BY-SA3.0 ja alkuperäinen Panoramio-lähdelinkki kirjattu. Paikka: alkuperäiset Panoramio Tags Dekkhina Thiri Township, Naypyidaw sekä Camera location19.698669N,96.097181E näkyvät tallennetussa kuvasivussa. Oma alkuperäiskatselu näyttää ulkoilupolkua, kasvillisuutta, vettä ja tavallisia toiminnallisia valaisimia. Ei ihmisiä/kasvoja, lisättyä tekstiä tai monumenttia/veistosta. Pieni etäinen tavanomainen rakennus jää polku-/kasvillisuuspäämotiivin taustalle; ei yksilöityä koristeellista nykyteosta pääaiheena. Kuva on yhden kaupunkiympäristön näyte, ei koko kaupungin vyöhykekartta eikä lupaus eri kohteiden kävelyetäisyyksistä.",
+          "QA": {
+            "rows": [
+              [
+                "Description Jogging trails - panoramio.jpg",
+                "Jogging trails"
+              ],
+              [
+                "Date",
+                "Taken on 16 November 2015"
+              ],
+              [
+                "Source",
+                "https://web.archive.org/web/20161102202559/http://www.panoramio.com/photo/125756841"
+              ],
+              [
+                "Author",
+                "mohigan"
+              ]
+            ],
+            "licenses": [
+              "CC BY-SA 3.0"
+            ],
+            "pageDimensions": [
+              4608,
+              3456
+            ],
+            "actualDimensions": [
+              4608,
+              3456
+            ],
+            "pageSha256": "7edf3207d59faa720afeabcec95b008832e6aa5690b07593a7691da6efe99338",
+            "nativeSha256": "e3a08f5d09888e605c18364efc97b34c121d10aac3d56d59acfa682dc5ad5640",
+            "cached": true,
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Jogging_trails_-_panoramio.jpg",
+            "sourcePageEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/naypyidaw/qa-evidence/source-k1-128689b964f3.html",
+            "viewPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/naypyidaw/cc-evidence/abb2823577b9-original.jpg",
+            "localMatchesManifestSHA": true,
+            "personallyViewed": true,
+            "sourceMetadataProof": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/naypyidaw/qa-evidence/source-k1-128689b964f3.json",
+            "candidateSourceManifest": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/naypyidaw/cc-selection.json",
+            "author": "mohigan",
+            "authorFieldVerified": true,
+            "license": "CC BY-SA 3.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+            "sourcePlaceProof": {
+              "panoramioTags": [
+                "Dekkhina Thiri Township",
+                "Naypyidaw"
+              ],
+              "cameraLatitude": 19.698669,
+              "cameraLongitude": 96.097181,
+              "readFromOriginalHTML": true
+            },
+            "existingGameUseHits": [],
+            "reuseSearchScope": "All existing task clones e04-e14 game JS, sisalto.json and rooli-asset-liite.json; filename/original URL aliases",
+            "sameNativeFileElsewhereInCity": [],
+            "captionFi": "Ulkoilureittiä Naypyidawissa marraskuussa 2015.",
+            "sourceContentSHA256": "6cc2cf9d1a2d3452148806a873c72c50b135f683add8ca152a89082b8c440d62",
+            "rightsScope": "Kasvillisuus ja tavallinen polku pääaihe; toiminnalliset valot ja matala tavanomainen rakennus taustalla. Ei maakohtaista blanket-lupaa, rakennusikään nojaavaa PD:tä tai suojatun nykyteoksen pääkuvaa."
+          },
+          "qaReason": "Aito ulkoilureitti Naypyidawissa: paikan todentavat Panoramion alkuperäiset Tags Dekkhina Thiri Township/Naypyidaw ja kamera19.698669N,96.097181E, eivät pelkkä Jogging trails -nimi. Alkuperäinen4608×3456 katsottu: lautapolku, puut, ruoho ja vesi luonnollisia, ei ihmisiä tai lisättyjä merkintöjä. Taustan tavallinen matala kattorivi jää kävelyreitti-/kasvillisuuskuvan sivuosaksi; ei yksilöityä koristeellista arkkitehtuuria tai veistosta pääaiheena. K1:n kaupungin toimintovyöhyketekstiä havainnollistaa yksi todellinen kaupunkiympäristön näyte. Kuva2015 ei esitä koko vyöhykekarttaa tai kohteiden keskinäisiä kävelyetäisyyksiä. Ei nimetä puistoa/majoituspaikkaa, jota lähde ei yksilöi. Caption säilyy yleisenä ulkoilureittinä."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Ulkoilureittiä Naypyidawissa marraskuussa 2015.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/naypyidaw/qa.json",
+        "fileSHA256": "5098ad6dfb33b09f540a8ecad5dc969f42984593feb64ee5c1f6c2d16c9faa95",
+        "item": {
+          "slot": "K1",
+          "targetJsonPath": "$.kaupunkilehti[0].nostot[0]",
+          "commonsFile": "Jogging trails - panoramio.jpg",
+          "sha256": "e3a08f5d09888e605c18364efc97b34c121d10aac3d56d59acfa682dc5ad5640",
+          "verdict": "accepted",
+          "reason": "Aito ulkoilureitti Naypyidawissa: paikan todentavat Panoramion alkuperäiset Tags Dekkhina Thiri Township/Naypyidaw ja kamera19.698669N,96.097181E, eivät pelkkä Jogging trails -nimi. Alkuperäinen4608×3456 katsottu: lautapolku, puut, ruoho ja vesi luonnollisia, ei ihmisiä tai lisättyjä merkintöjä. Taustan tavallinen matala kattorivi jää kävelyreitti-/kasvillisuuskuvan sivuosaksi; ei yksilöityä koristeellista arkkitehtuuria tai veistosta pääaiheena. K1:n kaupungin toimintovyöhyketekstiä havainnollistaa yksi todellinen kaupunkiympäristön näyte. Kuva2015 ei esitä koko vyöhykekarttaa tai kohteiden keskinäisiä kävelyetäisyyksiä. Ei nimetä puistoa/majoituspaikkaa, jota lähde ei yksilöi. Caption säilyy yleisenä ulkoilureittinä.",
+          "required": true,
+          "reviewedAt": "2026-10-12T19:46:48.366470+00:00",
+          "evidence": {
+            "rows": [
+              [
+                "Description Jogging trails - panoramio.jpg",
+                "Jogging trails"
+              ],
+              [
+                "Date",
+                "Taken on 16 November 2015"
+              ],
+              [
+                "Source",
+                "https://web.archive.org/web/20161102202559/http://www.panoramio.com/photo/125756841"
+              ],
+              [
+                "Author",
+                "mohigan"
+              ]
+            ],
+            "licenses": [
+              "CC BY-SA 3.0"
+            ],
+            "pageDimensions": [
+              4608,
+              3456
+            ],
+            "actualDimensions": [
+              4608,
+              3456
+            ],
+            "pageSha256": "7edf3207d59faa720afeabcec95b008832e6aa5690b07593a7691da6efe99338",
+            "nativeSha256": "e3a08f5d09888e605c18364efc97b34c121d10aac3d56d59acfa682dc5ad5640",
+            "cached": true,
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Jogging_trails_-_panoramio.jpg",
+            "sourcePageEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/naypyidaw/qa-evidence/source-k1-128689b964f3.html",
+            "viewPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/naypyidaw/cc-evidence/abb2823577b9-original.jpg",
+            "localMatchesManifestSHA": true,
+            "personallyViewed": true,
+            "sourceMetadataProof": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/naypyidaw/qa-evidence/source-k1-128689b964f3.json",
+            "candidateSourceManifest": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/naypyidaw/cc-selection.json",
+            "author": "mohigan",
+            "authorFieldVerified": true,
+            "license": "CC BY-SA 3.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+            "sourcePlaceProof": {
+              "panoramioTags": [
+                "Dekkhina Thiri Township",
+                "Naypyidaw"
+              ],
+              "cameraLatitude": 19.698669,
+              "cameraLongitude": 96.097181,
+              "readFromOriginalHTML": true
+            },
+            "existingGameUseHits": [],
+            "reuseSearchScope": "All existing task clones e04-e14 game JS, sisalto.json and rooli-asset-liite.json; filename/original URL aliases",
+            "sameNativeFileElsewhereInCity": [],
+            "captionFi": "Ulkoilureittiä Naypyidawissa marraskuussa 2015.",
+            "sourceContentSHA256": "6cc2cf9d1a2d3452148806a873c72c50b135f683add8ca152a89082b8c440d62",
+            "rightsScope": "Kasvillisuus ja tavallinen polku pääaihe; toiminnalliset valot ja matala tavanomainen rakennus taustalla. Ei maakohtaista blanket-lupaa, rakennusikään nojaavaa PD:tä tai suojatun nykyteoksen pääkuvaa."
+          }
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/naypyidaw/qa.json",
+            "sha256": "5098ad6dfb33b09f540a8ecad5dc969f42984593feb64ee5c1f6c2d16c9faa95"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/naypyidaw/illustration-qa-extra.json",
+            "sha256": "3c7413623c054717bffe209cb4510e500523ff6a95d59b5e65aa97d04ef25ad9"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e10",
+        "city": "naypyidaw",
+        "slot": "K1",
+        "targetJsonPath": "$.kaupunkilehti[0].nostot[0]",
+        "commonsFile": "Jogging trails - panoramio.jpg",
+        "sha256": "e3a08f5d09888e605c18364efc97b34c121d10aac3d56d59acfa682dc5ad5640",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Jogging_trails_-_panoramio.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/d/de/Jogging_trails_-_panoramio.jpg",
+        "author": "mohigan",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "width": 4608,
+        "height": 3456,
+        "originalSHA256": "e3a08f5d09888e605c18364efc97b34c121d10aac3d56d59acfa682dc5ad5640",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e10/naypyidaw/k1-e3a08f5d09888e605c18.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e10/naypyidaw/k1-e3a08f5d09888e605c18.jpg",
+        "bytes": 3980874,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T19:46:54.168521+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "Jogging trails - panoramio.jpg",
+        "lahde": "mohigan, Wikimedia Commons (CC BY-SA 3.0)",
+        "selite": "Ulkoilureittiä Naypyidawissa marraskuussa 2015.",
+        "lyhyt": "Ulkoilureittiä Naypyidawissa marraskuussa 2015."
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "mohigan, Wikimedia Commons (CC BY-SA 3.0)",
+        "selite": "Ulkoilureittiä Naypyidawissa marraskuussa 2015.",
+        "lyhyt": "Ulkoilureittiä Naypyidawissa marraskuussa 2015.",
+        "tiedosto": "Jogging trails - panoramio.jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "787887ff4046c0376929fdc73d10bf7218f256fad90212e2b8ac0f336cdba275",
+      "targetAfterSHA256": "bd29164ff40ed2807a735979ee49aa380fd30d92d3b72b5ec046756f8c145004",
+      "contextAfterSHA256": "bd29164ff40ed2807a735979ee49aa380fd30d92d3b72b5ec046756f8c145004"
+    }
+  ],
+  "runtimeIntegrationPending": true,
+  "ownerAcceptedNotImpliedByAuthorization": true,
+  "gameIntegrated": false
+}

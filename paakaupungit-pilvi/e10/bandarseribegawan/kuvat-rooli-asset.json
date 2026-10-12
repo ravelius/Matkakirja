@@ -1,0 +1,2551 @@
+{
+  "schemaVersion": "capital-city-role-assets/v1",
+  "era": "e10",
+  "city": "bandarseribegawan",
+  "authorization": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+  "sourceContentAfterSHA256": "ff17248106009a5fb46d53cd8d8ea260be13e6d8786cab64d969ab17df969314",
+  "assets": [
+    {
+      "era": "e10",
+      "city": "bandarseribegawan",
+      "slot": "TRAVELER",
+      "type": "illustration",
+      "assetID": "e10-bandarseribegawan-TRAVELER-v2-20261012",
+      "galleryImageID": "e10-bandarseribegawan-TRAVELER-v2-20261012",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "matkailijalle",
+        "kuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/bandarseribegawan/e10-bandarseribegawan-TRAVELER-v2-20261012-262d3e8bc496.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva: ambuyat-saagotärkkelysannos ja dippikastike.",
+        "lyhyt": "Havainnekuva: ambuyat-saagotärkkelysannos ja dippikastike."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/bandarseribegawan/e10-bandarseribegawan-TRAVELER-v2-20261012-262d3e8bc496.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva: ambuyat-saagotärkkelysannos ja dippikastike.",
+        "lyhyt": "Havainnekuva: ambuyat-saagotärkkelysannos ja dippikastike."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "262d3e8bc496cb4faedcec906d386075757dba394d8f1d4288b6b02d0792a363",
+      "exportSHA256": "c832cab61364280e00ae396a510da6a778a5fd7ee671ae8a6ea4d51d951983df",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/bandarseribegawan/e10-bandarseribegawan-TRAVELER-v2-20261012-262d3e8bc496.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/bandarseribegawan/e10-bandarseribegawan-TRAVELER-v2-20261012-262d3e8bc496.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e10/bandarseribegawan/e10-bandarseribegawan-TRAVELER-v2-20261012-262d3e8bc496.png",
+      "dimensions": [
+        1086,
+        1448
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/bandarseribegawan/sisalto.json",
+      "sourceContentSHA256": "ff17248106009a5fb46d53cd8d8ea260be13e6d8786cab64d969ab17df969314",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "f93a07e86a2e235bdb841bb208c5afd099aa1cc33170bb203feae6319c0d51d6",
+        "subjectTitle": "Matkailijalle",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Yleinen ruoka, kasvi, materiaali tai arkiesine; ei nimetyn paikan rakenteen, suojatun teoksen tai henkilön jäljennöstä.",
+          "QA": {
+            "reviewer": "job-25 independent-image-QA",
+            "reviewedAt": "2026-10-12T18:57:42.505024+00:00",
+            "visualTool": "view_image",
+            "visualDetail": "original",
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/bandarseribegawan/assets/e10-bandarseribegawan-TRAVELER-v2-20261012/image.png",
+            "actualWidth": 1086,
+            "actualHeight": 1448,
+            "actualFormat": "PNG",
+            "actualColorMode": "8-bit RGB",
+            "colorProfile": "Ei sRGB/iCCP/gAMA-chunkkia; upotettua sRGB-profiilia ei väitetä varmennetuksi.",
+            "subjectSource": {
+              "url": "https://en.wikipedia.org/wiki/Ambuyat",
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/bandarseribegawan/assets/e10-bandarseribegawan-TRAVELER-v1-20261012/ambuyat-source.html",
+              "sha256": "21332c53cd82f7f5b722a1fbae1189b6e650aa4b01b9d938a177c73c9ffb6bd5",
+              "readEvidence": "Johdanto: sago palm interior trunk starch; linked pair of bamboo chopsticks called chandas; sauce. Välinettä ei tarvita tässä rajatussa annoskuvassa eikä kuvateksti lupaa sitä."
+            },
+            "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/bandarseribegawan/sisalto.json",
+            "sourceContentSHA256": "f426a6470c585d461a553262280e38d0f2dbf7cf6cb833286edfb53ef4efa9f8",
+            "captionFi": "Havainnekuva: ambuyat-saagotärkkelysannos ja dippikastike.",
+            "duplicateInCity": false,
+            "depictedWorkLayer": "Yleinen ruoka ja tavalliset toiminnalliset kulhot; ei nimettyä nykytaideteosta, suunniteltua yksilöityä design-esinettä tai nimettyä rakennelmaa.",
+            "pngIHDR": {
+              "bitDepth": 8,
+              "colorType": 2,
+              "interlace": 0
+            },
+            "pngChunks": [
+              "IHDR",
+              "caBX",
+              "IDAT",
+              "IEND"
+            ],
+            "ratio": 0.75,
+            "reviewContext": "Job25:n henkilökohtainen vahvistus aiemmin raportoituun korjauspyyntöön. Kuvitus-3:n oma hyväksyntä on erillinen, samalle assetID+SHA-versiolle. Muut uudet kuvitukset pysyvät OHJEET:n lisätarkistajien jonossa.",
+            "retryOf": "e10-bandarseribegawan-TRAVELER-v1-20261012",
+            "previousRejectedVersionSHA256": "6d444521fe04c7e1d022cfff0d8177db53416612a5591f247b3554deaac3b182"
+          },
+          "qaReason": "Korjattu v2 katsottu itse alkuperäisin pikselein: vaalea läpikuultava ambuyat-massa ja dippikastike tavallisissa kulhoissa. Massan kosteuden heijastukset, epäsäännölliset poimut ja kulhojen materiaalit ovat luontevat. Virheellistä candas-välinettä ei ole; nykyinen kuvateksti ei myöskään väitä sitä kuvaan. Ei kasvoja, ihmisiä, tekstiä, logoja, vesileimaa tai kehystä. Nykyinen opas mainitsee ambuyatin kaupungin ravintoloiden ruoka-aiheena. Luettu alkuperäislähde nimeää saagopalmun sisuksesta tehdyn tärkkelysruoan ja kastikkeeseen dippaamisen. TRAVELER-pysty 1086×1448, suhde 0.75. Ei nimetyn ravintolan dokumenttikuva."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva: ambuyat-saagotärkkelysannos ja dippikastike.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/bandarseribegawan/qa.json",
+        "fileSHA256": "8491a41ea1365533f4fa87e57e5cb26ae34149fe9740c4c3863bbfaf6c187d6b",
+        "item": {
+          "slot": "TRAVELER",
+          "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
+          "assetID": "e10-bandarseribegawan-TRAVELER-v2-20261012",
+          "sha256": "262d3e8bc496cb4faedcec906d386075757dba394d8f1d4288b6b02d0792a363",
+          "verdict": "accepted",
+          "reason": "Korjattu v2 katsottu itse alkuperäisin pikselein: vaalea läpikuultava ambuyat-massa ja dippikastike tavallisissa kulhoissa. Massan kosteuden heijastukset, epäsäännölliset poimut ja kulhojen materiaalit ovat luontevat. Virheellistä candas-välinettä ei ole; nykyinen kuvateksti ei myöskään väitä sitä kuvaan. Ei kasvoja, ihmisiä, tekstiä, logoja, vesileimaa tai kehystä. Nykyinen opas mainitsee ambuyatin kaupungin ravintoloiden ruoka-aiheena. Luettu alkuperäislähde nimeää saagopalmun sisuksesta tehdyn tärkkelysruoan ja kastikkeeseen dippaamisen. TRAVELER-pysty 1086×1448, suhde 0.75. Ei nimetyn ravintolan dokumenttikuva.",
+          "evidence": {
+            "reviewer": "job-25 independent-image-QA",
+            "reviewedAt": "2026-10-12T18:57:42.505024+00:00",
+            "visualTool": "view_image",
+            "visualDetail": "original",
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/bandarseribegawan/assets/e10-bandarseribegawan-TRAVELER-v2-20261012/image.png",
+            "actualWidth": 1086,
+            "actualHeight": 1448,
+            "actualFormat": "PNG",
+            "actualColorMode": "8-bit RGB",
+            "colorProfile": "Ei sRGB/iCCP/gAMA-chunkkia; upotettua sRGB-profiilia ei väitetä varmennetuksi.",
+            "subjectSource": {
+              "url": "https://en.wikipedia.org/wiki/Ambuyat",
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/bandarseribegawan/assets/e10-bandarseribegawan-TRAVELER-v1-20261012/ambuyat-source.html",
+              "sha256": "21332c53cd82f7f5b722a1fbae1189b6e650aa4b01b9d938a177c73c9ffb6bd5",
+              "readEvidence": "Johdanto: sago palm interior trunk starch; linked pair of bamboo chopsticks called chandas; sauce. Välinettä ei tarvita tässä rajatussa annoskuvassa eikä kuvateksti lupaa sitä."
+            },
+            "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/bandarseribegawan/sisalto.json",
+            "sourceContentSHA256": "f426a6470c585d461a553262280e38d0f2dbf7cf6cb833286edfb53ef4efa9f8",
+            "captionFi": "Havainnekuva: ambuyat-saagotärkkelysannos ja dippikastike.",
+            "duplicateInCity": false,
+            "depictedWorkLayer": "Yleinen ruoka ja tavalliset toiminnalliset kulhot; ei nimettyä nykytaideteosta, suunniteltua yksilöityä design-esinettä tai nimettyä rakennelmaa.",
+            "pngIHDR": {
+              "bitDepth": 8,
+              "colorType": 2,
+              "interlace": 0
+            },
+            "pngChunks": [
+              "IHDR",
+              "caBX",
+              "IDAT",
+              "IEND"
+            ],
+            "ratio": 0.75,
+            "reviewContext": "Job25:n henkilökohtainen vahvistus aiemmin raportoituun korjauspyyntöön. Kuvitus-3:n oma hyväksyntä on erillinen, samalle assetID+SHA-versiolle. Muut uudet kuvitukset pysyvät OHJEET:n lisätarkistajien jonossa.",
+            "retryOf": "e10-bandarseribegawan-TRAVELER-v1-20261012",
+            "previousRejectedVersionSHA256": "6d444521fe04c7e1d022cfff0d8177db53416612a5591f247b3554deaac3b182"
+          }
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/bandarseribegawan/qa.json",
+            "sha256": "8491a41ea1365533f4fa87e57e5cb26ae34149fe9740c4c3863bbfaf6c187d6b"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/bandarseribegawan/illustration-qa-extra.json",
+            "sha256": "1552a32833576e78bdcab9a36c5306d605052e951f60a8ca9adaf628b9993fd3"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/bandarseribegawan/e10-bandarseribegawan-TRAVELER-v2-20261012-262d3e8bc496.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/bandarseribegawan/e10-bandarseribegawan-TRAVELER-v2-20261012-262d3e8bc496.png?t=c832cab61364280e",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/bandarseribegawan/e10-bandarseribegawan-TRAVELER-v2-20261012-262d3e8bc496.png",
+        "sha256": "c832cab61364280e00ae396a510da6a778a5fd7ee671ae8a6ea4d51d951983df",
+        "bytes": 2150134,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e10-bandarseribegawan-TRAVELER-v2-20261012",
+        "nativeSHA256": "262d3e8bc496cb4faedcec906d386075757dba394d8f1d4288b6b02d0792a363",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e10/bandarseribegawan/e10-bandarseribegawan-TRAVELER-v2-20261012-262d3e8bc496.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e10",
+        "city": "bandarseribegawan",
+        "slot": "TRAVELER",
+        "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
+        "verifiedAt": "2026-10-12T18:52:54.015632+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e10/bandarseribegawan/e10-bandarseribegawan-TRAVELER-v2-20261012-262d3e8bc496.png",
+        "sha256": "c832cab61364280e00ae396a510da6a778a5fd7ee671ae8a6ea4d51d951983df",
+        "bytes": 2150134,
+        "SHAReadAt": "2026-10-12T19:03:37.875542+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1086,
+        "height": 1448,
+        "pixelWidth": 1086,
+        "pixelHeight": 1448,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "262d3e8bc496cb4faedcec906d386075757dba394d8f1d4288b6b02d0792a363",
+        "rgbPixelSHA256": "bb53d23cc33578d4f6db89074d618ab68599f7b05508de4eb29df3fb8fd24564",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "ff17248106009a5fb46d53cd8d8ea260be13e6d8786cab64d969ab17df969314",
+      "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+      "contextAfterSHA256": "f93a07e86a2e235bdb841bb208c5afd099aa1cc33170bb203feae6319c0d51d6"
+    },
+    {
+      "era": "e10",
+      "city": "bandarseribegawan",
+      "slot": "O4",
+      "type": "illustration",
+      "assetID": "e10-bandarseribegawan-O4-v1-20261012",
+      "galleryImageID": "e10-bandarseribegawan-O4-v1-20261012",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "matkailijalle",
+        "artikkeli",
+        "jaksot",
+        3,
+        "kuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/bandarseribegawan/e10-bandarseribegawan-O4-v1-20261012-d290fcab39a3.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva: satay-vartaat kuuluvat kaupungin yötorin ruoka-aiheisiin.",
+        "lyhyt": "Havainnekuva: satay-vartaat kuuluvat kaupungin yötorin ruoka-aiheisiin."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/bandarseribegawan/e10-bandarseribegawan-O4-v1-20261012-d290fcab39a3.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva: satay-vartaat kuuluvat kaupungin yötorin ruoka-aiheisiin.",
+        "lyhyt": "Havainnekuva: satay-vartaat kuuluvat kaupungin yötorin ruoka-aiheisiin."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "d290fcab39a3f39eb30eb47fb02865aacb94987f31894ed678565bc478f962ed",
+      "exportSHA256": "e757fbb7602f5d4d0fc862d2d3f1bb12fe8c47013ef27bde354c5928b1bb6723",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/bandarseribegawan/e10-bandarseribegawan-O4-v1-20261012-d290fcab39a3.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/bandarseribegawan/e10-bandarseribegawan-O4-v1-20261012-d290fcab39a3.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e10/bandarseribegawan/e10-bandarseribegawan-O4-v1-20261012-d290fcab39a3.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/bandarseribegawan/sisalto.json",
+      "sourceContentSHA256": "ff17248106009a5fb46d53cd8d8ea260be13e6d8786cab64d969ab17df969314",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "82c85d9ade58f16cf65b574710d02a37645fdba541f0d89767c5fda3226cca7b",
+        "subjectTitle": "Mitä täällä syödään",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Yleistetty ruokakuva tai toiminnallinen astia, ei nimettyä rakennusta, nykyteosta tai tunnistettavaa henkilöä. Lähteen anatomia ja tekniikka tarkistetaan ennen kutsua.",
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/bandarseribegawan/assets/e10-bandarseribegawan-O4-v1-20261012/image.png",
+            "nativeSHA256": "d290fcab39a3f39eb30eb47fb02865aacb94987f31894ed678565bc478f962ed",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "pngChunks": [
+              "IHDR",
+              "caBX",
+              "IDAT",
+              "IEND"
+            ],
+            "manifestMatch": true,
+            "captionFi": "Havainnekuva: satay-vartaat kuuluvat kaupungin yötorin ruoka-aiheisiin.",
+            "sourceEvidence": [
+              {
+                "url": "https://en.wikivoyage.org/wiki/Bandar_Seri_Begawan",
+                "claim": "Mitä täällä syödään"
+              },
+              {
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/bandarseribegawan/faktapohja.md",
+                "section": "ruoka/noston ja oppaan aineisto"
+              },
+              {
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/bandarseribegawan/tarkistus.md",
+                "section": "tarkistettava ennen issued-varausta"
+              }
+            ],
+            "rightsEvidence": "Yleistetty ruokakuva tai toiminnallinen astia, ei nimettyä rakennusta, nykyteosta tai tunnistettavaa henkilöä. Lähteen anatomia ja tekniikka tarkistetaan ennen kutsua.",
+            "prompt": "Use case: photorealistic-natural. Landscape editorial food illustration of a few satay skewers on a plain plate. Small pieces of grilled chicken on simple unmarked wooden skewers, a little natural char and varied surface texture, modest unbranded table and soft daylight. Keep the scene simple and food focused. No visible person, face, letters, logos, signs or invented food market architecture. A generalized illustration of satay as offered among the Bandar Seri Begawan night-market foods, not a photo of a particular vendor. Prefer 1536x1024 PNG.",
+            "content": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/bandarseribegawan/sisalto.json",
+              "contentSHA256": "f426a6470c585d461a553262280e38d0f2dbf7cf6cb833286edfb53ef4efa9f8",
+              "targetObjectExists": true,
+              "targetContainer": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3]",
+              "targetText": {
+                "otsikko": "Mitä täällä syödään",
+                "teksti": "Kianggehin torilla voit yhdistää ruokaostokset ja valmiin aterian. Gadongin yötorin ruokakojut sopivat erilaisten annosten maisteluun: tarjolla on muun muassa satayvartaita ja roti john -leipiä. Ambuyat on bruneilainen erikoisuus, jota kaupungin ravintolat tarjoavat. Ruokakojuissa käteinen on hyödyksi; tarkista maksutapa ennen tilaamista.",
+                "kuva": {
+                  "tiedosto": "",
+                  "lyhyt": "",
+                  "selite": "",
+                  "lahde": ""
+                }
+              },
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/bandarseribegawan/faktapohja.md",
+              "factSheetExists": true
+            },
+            "otherReviewerVerdicts": [],
+            "visualInspection": {
+              "tool": "view_image",
+              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/bandarseribegawan/assets/e10-bandarseribegawan-O4-v1-20261012/image.png",
+              "detail": "original",
+              "observations": "Kolme bambuvartaaseen pujotettua kypsää lihavarrasta vaalealla lautasella, kulhossa kastiketta ja taustalla kurkkua sekä sipulia. Epäsäännölliset grillijäljet, lihapalat, puu ja keramiikka luontevia. Ei ihmisiä, kirjoitusta tai tunnuksia.",
+              "inspectedBy": "kuvitus-3"
+            },
+            "openConflict": false
+          },
+          "qaReason": "Satay-vartaat vastaavat oppaan ruokajakson nimenomaista aihetta. Yleistetty annos on merkitty havainnekuvaksi eikä väitä olevansa tietyn yötorikojun valokuva. PNG-mitat ja SHA täsmäävät."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva: satay-vartaat kuuluvat kaupungin yötorin ruoka-aiheisiin.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/bandarseribegawan/illustration-qa-extra.json",
+        "fileSHA256": "1552a32833576e78bdcab9a36c5306d605052e951f60a8ca9adaf628b9993fd3",
+        "item": {
+          "slot": "O4",
+          "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+          "assetID": "e10-bandarseribegawan-O4-v1-20261012",
+          "sha256": "d290fcab39a3f39eb30eb47fb02865aacb94987f31894ed678565bc478f962ed",
+          "verdict": "accepted",
+          "reason": "Satay-vartaat vastaavat oppaan ruokajakson nimenomaista aihetta. Yleistetty annos on merkitty havainnekuvaksi eikä väitä olevansa tietyn yötorikojun valokuva. PNG-mitat ja SHA täsmäävät.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/bandarseribegawan/assets/e10-bandarseribegawan-O4-v1-20261012/image.png",
+            "nativeSHA256": "d290fcab39a3f39eb30eb47fb02865aacb94987f31894ed678565bc478f962ed",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "pngChunks": [
+              "IHDR",
+              "caBX",
+              "IDAT",
+              "IEND"
+            ],
+            "manifestMatch": true,
+            "captionFi": "Havainnekuva: satay-vartaat kuuluvat kaupungin yötorin ruoka-aiheisiin.",
+            "sourceEvidence": [
+              {
+                "url": "https://en.wikivoyage.org/wiki/Bandar_Seri_Begawan",
+                "claim": "Mitä täällä syödään"
+              },
+              {
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/bandarseribegawan/faktapohja.md",
+                "section": "ruoka/noston ja oppaan aineisto"
+              },
+              {
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/bandarseribegawan/tarkistus.md",
+                "section": "tarkistettava ennen issued-varausta"
+              }
+            ],
+            "rightsEvidence": "Yleistetty ruokakuva tai toiminnallinen astia, ei nimettyä rakennusta, nykyteosta tai tunnistettavaa henkilöä. Lähteen anatomia ja tekniikka tarkistetaan ennen kutsua.",
+            "prompt": "Use case: photorealistic-natural. Landscape editorial food illustration of a few satay skewers on a plain plate. Small pieces of grilled chicken on simple unmarked wooden skewers, a little natural char and varied surface texture, modest unbranded table and soft daylight. Keep the scene simple and food focused. No visible person, face, letters, logos, signs or invented food market architecture. A generalized illustration of satay as offered among the Bandar Seri Begawan night-market foods, not a photo of a particular vendor. Prefer 1536x1024 PNG.",
+            "content": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/bandarseribegawan/sisalto.json",
+              "contentSHA256": "f426a6470c585d461a553262280e38d0f2dbf7cf6cb833286edfb53ef4efa9f8",
+              "targetObjectExists": true,
+              "targetContainer": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3]",
+              "targetText": {
+                "otsikko": "Mitä täällä syödään",
+                "teksti": "Kianggehin torilla voit yhdistää ruokaostokset ja valmiin aterian. Gadongin yötorin ruokakojut sopivat erilaisten annosten maisteluun: tarjolla on muun muassa satayvartaita ja roti john -leipiä. Ambuyat on bruneilainen erikoisuus, jota kaupungin ravintolat tarjoavat. Ruokakojuissa käteinen on hyödyksi; tarkista maksutapa ennen tilaamista.",
+                "kuva": {
+                  "tiedosto": "",
+                  "lyhyt": "",
+                  "selite": "",
+                  "lahde": ""
+                }
+              },
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/bandarseribegawan/faktapohja.md",
+              "factSheetExists": true
+            },
+            "otherReviewerVerdicts": [],
+            "visualInspection": {
+              "tool": "view_image",
+              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/bandarseribegawan/assets/e10-bandarseribegawan-O4-v1-20261012/image.png",
+              "detail": "original",
+              "observations": "Kolme bambuvartaaseen pujotettua kypsää lihavarrasta vaalealla lautasella, kulhossa kastiketta ja taustalla kurkkua sekä sipulia. Epäsäännölliset grillijäljet, lihapalat, puu ja keramiikka luontevia. Ei ihmisiä, kirjoitusta tai tunnuksia.",
+              "inspectedBy": "kuvitus-3"
+            },
+            "openConflict": false
+          },
+          "reviewedAt": "2026-10-12T18:15:29.952961+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/bandarseribegawan/qa.json",
+            "sha256": "8491a41ea1365533f4fa87e57e5cb26ae34149fe9740c4c3863bbfaf6c187d6b"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/bandarseribegawan/illustration-qa-extra.json",
+            "sha256": "1552a32833576e78bdcab9a36c5306d605052e951f60a8ca9adaf628b9993fd3"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/bandarseribegawan/e10-bandarseribegawan-O4-v1-20261012-d290fcab39a3.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/bandarseribegawan/e10-bandarseribegawan-O4-v1-20261012-d290fcab39a3.png?t=e757fbb7602f5d4d",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/bandarseribegawan/e10-bandarseribegawan-O4-v1-20261012-d290fcab39a3.png",
+        "sha256": "e757fbb7602f5d4d0fc862d2d3f1bb12fe8c47013ef27bde354c5928b1bb6723",
+        "bytes": 2448239,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e10-bandarseribegawan-O4-v1-20261012",
+        "nativeSHA256": "d290fcab39a3f39eb30eb47fb02865aacb94987f31894ed678565bc478f962ed",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e10/bandarseribegawan/e10-bandarseribegawan-O4-v1-20261012-d290fcab39a3.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e10",
+        "city": "bandarseribegawan",
+        "slot": "O4",
+        "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+        "verifiedAt": "2026-10-12T18:16:30.130750+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e10/bandarseribegawan/e10-bandarseribegawan-O4-v1-20261012-d290fcab39a3.png",
+        "sha256": "e757fbb7602f5d4d0fc862d2d3f1bb12fe8c47013ef27bde354c5928b1bb6723",
+        "bytes": 2448239,
+        "SHAReadAt": "2026-10-12T18:29:56.615719+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "d290fcab39a3f39eb30eb47fb02865aacb94987f31894ed678565bc478f962ed",
+        "rgbPixelSHA256": "6bfc07548422d9ca1c5afaf5efc2cc2782ad4fe2d33b98364bc3f40eb22fd09d",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "ff17248106009a5fb46d53cd8d8ea260be13e6d8786cab64d969ab17df969314",
+      "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+      "contextAfterSHA256": "82c85d9ade58f16cf65b574710d02a37645fdba541f0d89767c5fda3226cca7b"
+    },
+    {
+      "era": "e10",
+      "city": "bandarseribegawan",
+      "slot": "K3",
+      "type": "illustration",
+      "assetID": "e10-bandarseribegawan-K3-v1-20261012",
+      "galleryImageID": "e10-bandarseribegawan-K3-v1-20261012",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].nostot[2]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "nostot",
+        2
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/bandarseribegawan/e10-bandarseribegawan-K3-v1-20261012-ad18ad9379b7.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva: durian ja jakkihedelmä kuuluvat yötorin hedelmäaiheisiin.",
+        "lyhyt": "Havainnekuva: durian ja jakkihedelmä kuuluvat yötorin hedelmäaiheisiin."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/bandarseribegawan/e10-bandarseribegawan-K3-v1-20261012-ad18ad9379b7.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva: durian ja jakkihedelmä kuuluvat yötorin hedelmäaiheisiin.",
+        "lyhyt": "Havainnekuva: durian ja jakkihedelmä kuuluvat yötorin hedelmäaiheisiin."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "ad18ad9379b78d3953cd869417daebc879915050aefbdcb9d01f21eef0e65d65",
+      "exportSHA256": "c04d10989ff569008978ddefe693c4400c46917f066214baf9fa5bbe009ec6a5",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/bandarseribegawan/e10-bandarseribegawan-K3-v1-20261012-ad18ad9379b7.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/bandarseribegawan/e10-bandarseribegawan-K3-v1-20261012-ad18ad9379b7.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e10/bandarseribegawan/e10-bandarseribegawan-K3-v1-20261012-ad18ad9379b7.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/bandarseribegawan/sisalto.json",
+      "sourceContentSHA256": "ff17248106009a5fb46d53cd8d8ea260be13e6d8786cab64d969ab17df969314",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "0dd10a5fe1236469653d556d7a0b73e975e6aede860354a838c9f789730b89b7",
+        "semanticContextSHA256": "0dd10a5fe1236469653d556d7a0b73e975e6aede860354a838c9f789730b89b7",
+        "subjectTitle": "Kaksi toria, kaksi erilaista ostosretkeä",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Yleinen ruoka, kasvi, materiaali tai arkiesine; ei nimetyn paikan rakenteen, suojatun teoksen tai henkilön jäljennöstä.",
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/bandarseribegawan/assets/e10-bandarseribegawan-K3-v1-20261012/image.png",
+            "nativeSHA256": "ad18ad9379b78d3953cd869417daebc879915050aefbdcb9d01f21eef0e65d65",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "pngChunks": [
+              "IHDR",
+              "caBX",
+              "IDAT",
+              "IEND"
+            ],
+            "manifestMatch": true,
+            "captionFi": "Havainnekuva: durian ja jakkihedelmä kuuluvat yötorin hedelmäaiheisiin.",
+            "sourceEvidence": [
+              {
+                "url": "https://en.wikipedia.org/wiki/Bandar_Seri_Begawan",
+                "claim": "Economy: Gadong fruit durian/jackfruit; cached bandar-wp.txt line1334"
+              },
+              {
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/bandarseribegawan/faktapohja.md",
+                "section": "Noston ja oppaan aihe/lahdeketju"
+              },
+              {
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/bandarseribegawan/sisalto.json",
+                "jsonPath": "$.kaupunkilehti[0].nostot[2]"
+              }
+            ],
+            "rightsEvidence": "Yleinen ruoka, kasvi, materiaali tai arkiesine; ei nimetyn paikan rakenteen, suojatun teoksen tai henkilön jäljennöstä.",
+            "prompt": "A simple food still life with one naturally irregular durian segment with cream-yellow flesh in a small section of its spiky rind, and a few distinct golden jackfruit pods beside it. No market stall, placard or invented local vendor. Soft natural daylight, physically credible fruit anatomy, restrained neutral background. Use case: photorealistic-natural. Believable natural editorial photography, physically consistent shapes and irregular material textures. No people, recognizable faces, lettering, logos, watermarks, frames or artwork. Generalized subject illustration, not a documentary photo of a named city place, museum object, historical event or building. Landscape PNG preferably1536x1024, opaque.",
+            "content": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/bandarseribegawan/sisalto.json",
+              "contentSHA256": "f426a6470c585d461a553262280e38d0f2dbf7cf6cb833286edfb53ef4efa9f8",
+              "targetObjectExists": true,
+              "targetContainer": "$.kaupunkilehti[0].nostot[2]",
+              "targetText": {
+                "otsikko": "Kaksi toria, kaksi erilaista ostosretkeä",
+                "teksti": "Kianggehin torilta löytyy keskustan arkinen ruokakaappi: vihanneksia, hedelmiä ja syötävää mukaan otettavaksi. Gadongin yötorilla huomio siirtyy valmiisiin aterioihin ja ruokakojuihin. Kumpikin on osa pääkaupungin elämää, mutta sama torikäynti ei kerro molemmista kaikkea. Gadongissa tarjontaan kuuluu esimerkiksi satayvartaita, roti john -leipiä ja paikallisia hedelmiä. Kianggeh puolestaan yhdistää ruokaostokset ja keskustan jokivarren. Molemmilta saa myös valmista ruokaa, joten toriretkeen voi yhdistää aterian.",
+                "wiki": "Bandar Seri Begawan",
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              },
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/bandarseribegawan/faktapohja.md",
+              "factSheetExists": true
+            },
+            "otherReviewerVerdicts": [],
+            "visualInspection": {
+              "tool": "view_image",
+              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/bandarseribegawan/assets/e10-bandarseribegawan-K3-v1-20261012/image.png",
+              "detail": "original",
+              "observations": "Avattu piikikäs durian vaaleine pehmeine hedelmälohkoineen ja erillisiä keltaisia jakkihedelmän lohkoja lehden päällä. Durianin kuori ja valkoinen sisärakenne sekä hedelmien pinnat vaihtelevat uskottavasti. Ei kasvoja, tekstiä tai logoja.",
+              "inspectedBy": "kuvitus-3"
+            },
+            "openConflict": false
+          },
+          "qaReason": "Durian ja jakkihedelmä liittyvät K3:n paikallisiin hedelmiin; alkuperäisen lähteen paikallinen bandar-wp.txt, rivi 1334, nimeää molemmat Gadongin yötorin tarjonnassa. Rehellinen havainne, native-SHA ja mitat täsmäävät."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva: durian ja jakkihedelmä kuuluvat yötorin hedelmäaiheisiin.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/bandarseribegawan/illustration-qa-extra.json",
+        "fileSHA256": "1552a32833576e78bdcab9a36c5306d605052e951f60a8ca9adaf628b9993fd3",
+        "item": {
+          "slot": "K3",
+          "targetJsonPath": "$.kaupunkilehti[0].nostot[2]",
+          "assetID": "e10-bandarseribegawan-K3-v1-20261012",
+          "sha256": "ad18ad9379b78d3953cd869417daebc879915050aefbdcb9d01f21eef0e65d65",
+          "verdict": "accepted",
+          "reason": "Durian ja jakkihedelmä liittyvät K3:n paikallisiin hedelmiin; alkuperäisen lähteen paikallinen bandar-wp.txt, rivi 1334, nimeää molemmat Gadongin yötorin tarjonnassa. Rehellinen havainne, native-SHA ja mitat täsmäävät.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/bandarseribegawan/assets/e10-bandarseribegawan-K3-v1-20261012/image.png",
+            "nativeSHA256": "ad18ad9379b78d3953cd869417daebc879915050aefbdcb9d01f21eef0e65d65",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "pngChunks": [
+              "IHDR",
+              "caBX",
+              "IDAT",
+              "IEND"
+            ],
+            "manifestMatch": true,
+            "captionFi": "Havainnekuva: durian ja jakkihedelmä kuuluvat yötorin hedelmäaiheisiin.",
+            "sourceEvidence": [
+              {
+                "url": "https://en.wikipedia.org/wiki/Bandar_Seri_Begawan",
+                "claim": "Economy: Gadong fruit durian/jackfruit; cached bandar-wp.txt line1334"
+              },
+              {
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/bandarseribegawan/faktapohja.md",
+                "section": "Noston ja oppaan aihe/lahdeketju"
+              },
+              {
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/bandarseribegawan/sisalto.json",
+                "jsonPath": "$.kaupunkilehti[0].nostot[2]"
+              }
+            ],
+            "rightsEvidence": "Yleinen ruoka, kasvi, materiaali tai arkiesine; ei nimetyn paikan rakenteen, suojatun teoksen tai henkilön jäljennöstä.",
+            "prompt": "A simple food still life with one naturally irregular durian segment with cream-yellow flesh in a small section of its spiky rind, and a few distinct golden jackfruit pods beside it. No market stall, placard or invented local vendor. Soft natural daylight, physically credible fruit anatomy, restrained neutral background. Use case: photorealistic-natural. Believable natural editorial photography, physically consistent shapes and irregular material textures. No people, recognizable faces, lettering, logos, watermarks, frames or artwork. Generalized subject illustration, not a documentary photo of a named city place, museum object, historical event or building. Landscape PNG preferably1536x1024, opaque.",
+            "content": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/bandarseribegawan/sisalto.json",
+              "contentSHA256": "f426a6470c585d461a553262280e38d0f2dbf7cf6cb833286edfb53ef4efa9f8",
+              "targetObjectExists": true,
+              "targetContainer": "$.kaupunkilehti[0].nostot[2]",
+              "targetText": {
+                "otsikko": "Kaksi toria, kaksi erilaista ostosretkeä",
+                "teksti": "Kianggehin torilta löytyy keskustan arkinen ruokakaappi: vihanneksia, hedelmiä ja syötävää mukaan otettavaksi. Gadongin yötorilla huomio siirtyy valmiisiin aterioihin ja ruokakojuihin. Kumpikin on osa pääkaupungin elämää, mutta sama torikäynti ei kerro molemmista kaikkea. Gadongissa tarjontaan kuuluu esimerkiksi satayvartaita, roti john -leipiä ja paikallisia hedelmiä. Kianggeh puolestaan yhdistää ruokaostokset ja keskustan jokivarren. Molemmilta saa myös valmista ruokaa, joten toriretkeen voi yhdistää aterian.",
+                "wiki": "Bandar Seri Begawan",
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              },
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/bandarseribegawan/faktapohja.md",
+              "factSheetExists": true
+            },
+            "otherReviewerVerdicts": [],
+            "visualInspection": {
+              "tool": "view_image",
+              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/bandarseribegawan/assets/e10-bandarseribegawan-K3-v1-20261012/image.png",
+              "detail": "original",
+              "observations": "Avattu piikikäs durian vaaleine pehmeine hedelmälohkoineen ja erillisiä keltaisia jakkihedelmän lohkoja lehden päällä. Durianin kuori ja valkoinen sisärakenne sekä hedelmien pinnat vaihtelevat uskottavasti. Ei kasvoja, tekstiä tai logoja.",
+              "inspectedBy": "kuvitus-3"
+            },
+            "openConflict": false
+          },
+          "reviewedAt": "2026-10-12T18:49:16.978440+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/bandarseribegawan/qa.json",
+            "sha256": "8491a41ea1365533f4fa87e57e5cb26ae34149fe9740c4c3863bbfaf6c187d6b"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/bandarseribegawan/illustration-qa-extra.json",
+            "sha256": "1552a32833576e78bdcab9a36c5306d605052e951f60a8ca9adaf628b9993fd3"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/bandarseribegawan/e10-bandarseribegawan-K3-v1-20261012-ad18ad9379b7.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/bandarseribegawan/e10-bandarseribegawan-K3-v1-20261012-ad18ad9379b7.png?t=c04d10989ff56900",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/bandarseribegawan/e10-bandarseribegawan-K3-v1-20261012-ad18ad9379b7.png",
+        "sha256": "c04d10989ff569008978ddefe693c4400c46917f066214baf9fa5bbe009ec6a5",
+        "bytes": 2240525,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e10-bandarseribegawan-K3-v1-20261012",
+        "nativeSHA256": "ad18ad9379b78d3953cd869417daebc879915050aefbdcb9d01f21eef0e65d65",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e10/bandarseribegawan/e10-bandarseribegawan-K3-v1-20261012-ad18ad9379b7.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e10",
+        "city": "bandarseribegawan",
+        "slot": "K3",
+        "targetJsonPath": "$.kaupunkilehti[0].nostot[2]",
+        "verifiedAt": "2026-10-12T18:50:23.617732+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e10/bandarseribegawan/e10-bandarseribegawan-K3-v1-20261012-ad18ad9379b7.png",
+        "sha256": "c04d10989ff569008978ddefe693c4400c46917f066214baf9fa5bbe009ec6a5",
+        "bytes": 2240525,
+        "SHAReadAt": "2026-10-12T19:03:38.145636+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "ad18ad9379b78d3953cd869417daebc879915050aefbdcb9d01f21eef0e65d65",
+        "rgbPixelSHA256": "77d6c28d7fbe4e56d9358848fe49bc7368b70117907f81bde563bc38c082f23b",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "ff17248106009a5fb46d53cd8d8ea260be13e6d8786cab64d969ab17df969314",
+      "targetAfterSHA256": "0dd10a5fe1236469653d556d7a0b73e975e6aede860354a838c9f789730b89b7",
+      "contextAfterSHA256": "0dd10a5fe1236469653d556d7a0b73e975e6aede860354a838c9f789730b89b7"
+    },
+    {
+      "era": "e10",
+      "city": "bandarseribegawan",
+      "slot": "L1",
+      "type": "illustration",
+      "assetID": "e10-bandarseribegawan-L1-v1-20261012",
+      "galleryImageID": "e10-bandarseribegawan-L1-v1-20261012",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[1].nostot[0]",
+      "targetTokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        0
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/bandarseribegawan/e10-bandarseribegawan-L1-v1-20261012-22ddfca227e6.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva vesijohdon välineestä; ei tietty Kampong Ayerin koti tai palveluverkon rakenne.",
+        "lyhyt": "Havainnekuva vesijohdon välineestä; ei tietty Kampong Ayerin koti tai palveluverkon rakenne."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/bandarseribegawan/e10-bandarseribegawan-L1-v1-20261012-22ddfca227e6.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva vesijohdon välineestä; ei tietty Kampong Ayerin koti tai palveluverkon rakenne.",
+        "lyhyt": "Havainnekuva vesijohdon välineestä; ei tietty Kampong Ayerin koti tai palveluverkon rakenne."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "22ddfca227e636d70355493921ae35b22c131e1a61868731d98921064edee670",
+      "exportSHA256": "6fd086c60d925f1e825b73e2476ba275cd4d6f4bf38fd9e76dc57ac1e09773cf",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/bandarseribegawan/e10-bandarseribegawan-L1-v1-20261012-22ddfca227e6.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/bandarseribegawan/e10-bandarseribegawan-L1-v1-20261012-22ddfca227e6.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e10/bandarseribegawan/e10-bandarseribegawan-L1-v1-20261012-22ddfca227e6.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/bandarseribegawan/sisalto.json",
+      "sourceContentSHA256": "ff17248106009a5fb46d53cd8d8ea260be13e6d8786cab64d969ab17df969314",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "30de6e39dd3499765b3c34bf364e8a7809e164b4ec52d714faead4bf69508eb9",
+        "semanticContextSHA256": "30de6e39dd3499765b3c34bf364e8a7809e164b4ec52d714faead4bf69508eb9",
+        "subjectTitle": "Vesikylällä on oma palveluverkko",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Yleinen ruoka, kasvi, materiaali tai arkiesine; ei nimetyn paikan rakenteen, suojatun teoksen tai henkilön jäljennöstä.",
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/bandarseribegawan/assets/e10-bandarseribegawan-L1-v1-20261012/image.png",
+            "nativeSHA256": "22ddfca227e636d70355493921ae35b22c131e1a61868731d98921064edee670",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "pngChunks": [
+              "IHDR",
+              "caBX",
+              "IDAT",
+              "IEND"
+            ],
+            "manifestMatch": true,
+            "captionFi": "Havainnekuva vesijohdon välineestä; ei tietty Kampong Ayerin koti tai palveluverkon rakenne.",
+            "sourceEvidence": [
+              {
+                "url": "https://en.wikipedia.org/wiki/Kampong_Ayer",
+                "claim": "Infrastructure: piped water"
+              },
+              {
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/bandarseribegawan/faktapohja.md",
+                "section": "Noston ja oppaan aihe/lahdeketju"
+              },
+              {
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/bandarseribegawan/sisalto.json",
+                "jsonPath": "$.kaupunkilehti[1].nostot[0]"
+              }
+            ],
+            "rightsEvidence": "Yleinen ruoka, kasvi, materiaali tai arkiesine; ei nimetyn paikan rakenteen, suojatun teoksen tai henkilön jäljennöstä.",
+            "prompt": "A generic unbranded household water tap attached to one short piece of plain water pipe against a simple neutral surface. Entire functional fitting visible, physically credible connection and natural metal wear. No architecture, water village house, electric wires, labels or museum exhibit. Use case: photorealistic-natural. Believable natural editorial photography, physically consistent shapes and irregular material textures. No people, recognizable faces, lettering, logos, watermarks, frames or artwork. Generalized subject illustration, not a documentary photo of a named city place, museum object, historical event or building. Landscape PNG preferably1536x1024, opaque.",
+            "content": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/bandarseribegawan/sisalto.json",
+              "contentSHA256": "f426a6470c585d461a553262280e38d0f2dbf7cf6cb833286edfb53ef4efa9f8",
+              "targetObjectExists": true,
+              "targetContainer": "$.kaupunkilehti[1].nostot[0]",
+              "targetText": {
+                "otsikko": "Vesikylällä on oma palveluverkko",
+                "teksti": "Kampong Ayerin nimi tarkoittaa vesikylää, mutta nimitys voi johtaa kuvittelemaan liian pientä paikkaa. Asutukseen kuuluu useita alueita, talojen välisiä kävelysiltoja ja omia julkisia palveluja. Paalujen päällä toimii asuntojen lisäksi kouluja ja moskeijoita. Moniin koteihin tulee sähkö ja vesijohtovesi, ja käytössä on myös puhelin- ja verkkoyhteyksiä. Perinteinen sijoittuminen veden päälle ei siis tarkoita, että kaikki muu olisi pysähtynyt menneisyyteen. Vanha rakennustapa kantaa nykyistä arkea.",
+                "wiki": "Kampong Ayer",
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              },
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/bandarseribegawan/faktapohja.md",
+              "factSheetExists": true
+            },
+            "otherReviewerVerdicts": [],
+            "visualInspection": {
+              "tool": "view_image",
+              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/bandarseribegawan/assets/e10-bandarseribegawan-L1-v1-20261012/image.png",
+              "detail": "original",
+              "observations": "Seinään liittyvä putki ja kulunut messinkinen vesihana. Venttiilin varsi, kahva ja ulostulon kierre uskottavia; metalli ja seinäpinta luonnollisia. Ei ihmisiä, tekstiä, logoja tai kehystä.",
+              "inspectedBy": "kuvitus-3"
+            },
+            "openConflict": false
+          },
+          "qaReason": "Tavallinen vesihana havainnollistaa L1-noston vesijohtopalvelua. Kuvateksti rajaa pois tietyn Kampong Ayerin kodin tai verkon rakenteen. Native-SHA ja mitat täsmäävät."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva vesijohdon välineestä; ei tietty Kampong Ayerin koti tai palveluverkon rakenne.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/bandarseribegawan/illustration-qa-extra.json",
+        "fileSHA256": "1552a32833576e78bdcab9a36c5306d605052e951f60a8ca9adaf628b9993fd3",
+        "item": {
+          "slot": "L1",
+          "targetJsonPath": "$.kaupunkilehti[1].nostot[0]",
+          "assetID": "e10-bandarseribegawan-L1-v1-20261012",
+          "sha256": "22ddfca227e636d70355493921ae35b22c131e1a61868731d98921064edee670",
+          "verdict": "accepted",
+          "reason": "Tavallinen vesihana havainnollistaa L1-noston vesijohtopalvelua. Kuvateksti rajaa pois tietyn Kampong Ayerin kodin tai verkon rakenteen. Native-SHA ja mitat täsmäävät.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/bandarseribegawan/assets/e10-bandarseribegawan-L1-v1-20261012/image.png",
+            "nativeSHA256": "22ddfca227e636d70355493921ae35b22c131e1a61868731d98921064edee670",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "pngChunks": [
+              "IHDR",
+              "caBX",
+              "IDAT",
+              "IEND"
+            ],
+            "manifestMatch": true,
+            "captionFi": "Havainnekuva vesijohdon välineestä; ei tietty Kampong Ayerin koti tai palveluverkon rakenne.",
+            "sourceEvidence": [
+              {
+                "url": "https://en.wikipedia.org/wiki/Kampong_Ayer",
+                "claim": "Infrastructure: piped water"
+              },
+              {
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/bandarseribegawan/faktapohja.md",
+                "section": "Noston ja oppaan aihe/lahdeketju"
+              },
+              {
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/bandarseribegawan/sisalto.json",
+                "jsonPath": "$.kaupunkilehti[1].nostot[0]"
+              }
+            ],
+            "rightsEvidence": "Yleinen ruoka, kasvi, materiaali tai arkiesine; ei nimetyn paikan rakenteen, suojatun teoksen tai henkilön jäljennöstä.",
+            "prompt": "A generic unbranded household water tap attached to one short piece of plain water pipe against a simple neutral surface. Entire functional fitting visible, physically credible connection and natural metal wear. No architecture, water village house, electric wires, labels or museum exhibit. Use case: photorealistic-natural. Believable natural editorial photography, physically consistent shapes and irregular material textures. No people, recognizable faces, lettering, logos, watermarks, frames or artwork. Generalized subject illustration, not a documentary photo of a named city place, museum object, historical event or building. Landscape PNG preferably1536x1024, opaque.",
+            "content": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/bandarseribegawan/sisalto.json",
+              "contentSHA256": "f426a6470c585d461a553262280e38d0f2dbf7cf6cb833286edfb53ef4efa9f8",
+              "targetObjectExists": true,
+              "targetContainer": "$.kaupunkilehti[1].nostot[0]",
+              "targetText": {
+                "otsikko": "Vesikylällä on oma palveluverkko",
+                "teksti": "Kampong Ayerin nimi tarkoittaa vesikylää, mutta nimitys voi johtaa kuvittelemaan liian pientä paikkaa. Asutukseen kuuluu useita alueita, talojen välisiä kävelysiltoja ja omia julkisia palveluja. Paalujen päällä toimii asuntojen lisäksi kouluja ja moskeijoita. Moniin koteihin tulee sähkö ja vesijohtovesi, ja käytössä on myös puhelin- ja verkkoyhteyksiä. Perinteinen sijoittuminen veden päälle ei siis tarkoita, että kaikki muu olisi pysähtynyt menneisyyteen. Vanha rakennustapa kantaa nykyistä arkea.",
+                "wiki": "Kampong Ayer",
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              },
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/bandarseribegawan/faktapohja.md",
+              "factSheetExists": true
+            },
+            "otherReviewerVerdicts": [],
+            "visualInspection": {
+              "tool": "view_image",
+              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/bandarseribegawan/assets/e10-bandarseribegawan-L1-v1-20261012/image.png",
+              "detail": "original",
+              "observations": "Seinään liittyvä putki ja kulunut messinkinen vesihana. Venttiilin varsi, kahva ja ulostulon kierre uskottavia; metalli ja seinäpinta luonnollisia. Ei ihmisiä, tekstiä, logoja tai kehystä.",
+              "inspectedBy": "kuvitus-3"
+            },
+            "openConflict": false
+          },
+          "reviewedAt": "2026-10-12T18:50:44.369767+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/bandarseribegawan/qa.json",
+            "sha256": "8491a41ea1365533f4fa87e57e5cb26ae34149fe9740c4c3863bbfaf6c187d6b"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/bandarseribegawan/illustration-qa-extra.json",
+            "sha256": "1552a32833576e78bdcab9a36c5306d605052e951f60a8ca9adaf628b9993fd3"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/bandarseribegawan/e10-bandarseribegawan-L1-v1-20261012-22ddfca227e6.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/bandarseribegawan/e10-bandarseribegawan-L1-v1-20261012-22ddfca227e6.png?t=6fd086c60d925f1e",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/bandarseribegawan/e10-bandarseribegawan-L1-v1-20261012-22ddfca227e6.png",
+        "sha256": "6fd086c60d925f1e825b73e2476ba275cd4d6f4bf38fd9e76dc57ac1e09773cf",
+        "bytes": 2118949,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e10-bandarseribegawan-L1-v1-20261012",
+        "nativeSHA256": "22ddfca227e636d70355493921ae35b22c131e1a61868731d98921064edee670",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e10/bandarseribegawan/e10-bandarseribegawan-L1-v1-20261012-22ddfca227e6.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e10",
+        "city": "bandarseribegawan",
+        "slot": "L1",
+        "targetJsonPath": "$.kaupunkilehti[1].nostot[0]",
+        "verifiedAt": "2026-10-12T18:51:26.202081+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e10/bandarseribegawan/e10-bandarseribegawan-L1-v1-20261012-22ddfca227e6.png",
+        "sha256": "6fd086c60d925f1e825b73e2476ba275cd4d6f4bf38fd9e76dc57ac1e09773cf",
+        "bytes": 2118949,
+        "SHAReadAt": "2026-10-12T19:03:38.409351+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "22ddfca227e636d70355493921ae35b22c131e1a61868731d98921064edee670",
+        "rgbPixelSHA256": "2e187817df53d8736707839dea41760bf3bbf3900119e5c975bd87565dec89f5",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "ff17248106009a5fb46d53cd8d8ea260be13e6d8786cab64d969ab17df969314",
+      "targetAfterSHA256": "30de6e39dd3499765b3c34bf364e8a7809e164b4ec52d714faead4bf69508eb9",
+      "contextAfterSHA256": "30de6e39dd3499765b3c34bf364e8a7809e164b4ec52d714faead4bf69508eb9"
+    },
+    {
+      "era": "e10",
+      "city": "bandarseribegawan",
+      "slot": "L2",
+      "type": "illustration",
+      "assetID": "e10-bandarseribegawan-L2-v1-20261012",
+      "galleryImageID": "e10-bandarseribegawan-L2-v1-20261012",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[1].nostot[1]",
+      "targetTokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        1
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/bandarseribegawan/e10-bandarseribegawan-L2-v1-20261012-4cb098964b76.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva kudonnasta; ei tietty vesikylän ullakko tai museon näyttelymalli.",
+        "lyhyt": "Havainnekuva kudonnasta; ei tietty vesikylän ullakko tai museon näyttelymalli."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/bandarseribegawan/e10-bandarseribegawan-L2-v1-20261012-4cb098964b76.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva kudonnasta; ei tietty vesikylän ullakko tai museon näyttelymalli.",
+        "lyhyt": "Havainnekuva kudonnasta; ei tietty vesikylän ullakko tai museon näyttelymalli."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "4cb098964b76550ce93f82338b3aa91ccb4a745a078168837027ab45e3e555c9",
+      "exportSHA256": "a0edf91a60d6740786ebf3880cba09ba150f4134cfd25813c90af11b74daffdd",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/bandarseribegawan/e10-bandarseribegawan-L2-v1-20261012-4cb098964b76.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/bandarseribegawan/e10-bandarseribegawan-L2-v1-20261012-4cb098964b76.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e10/bandarseribegawan/e10-bandarseribegawan-L2-v1-20261012-4cb098964b76.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/bandarseribegawan/sisalto.json",
+      "sourceContentSHA256": "ff17248106009a5fb46d53cd8d8ea260be13e6d8786cab64d969ab17df969314",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "1279871c8f716091461f0360628792119757a0a78f5d029bad82d08977457ffb",
+        "semanticContextSHA256": "1279871c8f716091461f0360628792119757a0a78f5d029bad82d08977457ffb",
+        "subjectTitle": "Ullakolla oli työpäivä",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Turvallinen yleinen ruoka, materiaali tai arkiesine. Ei nykyteoksen, todellisen rakennusasettelun, tunnistettavan henkilön tai nimetyn näyttelyesineen jäljennöstä.",
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/bandarseribegawan/assets/e10-bandarseribegawan-L2-v1-20261012/image.png",
+            "nativeSHA256": "4cb098964b76550ce93f82338b3aa91ccb4a745a078168837027ab45e3e555c9",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "pngChunks": [
+              "IHDR",
+              "caBX",
+              "IDAT",
+              "IEND"
+            ],
+            "manifestMatch": true,
+            "captionFi": "Havainnekuva kudonnasta; ei tietty vesikylän ullakko tai museon näyttelymalli.",
+            "sourceEvidence": [
+              {
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/bandarseribegawan/faktapohja.md",
+                "section": "Nimetty ruoka/materiaali/tekniikka, lähdeviitteet A-koosteessa"
+              },
+              {
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/bandarseribegawan/sisalto.json",
+                "jsonPath": "$.kaupunkilehti[1].nostot[1]",
+                "claim": "Ullakolla oli työpäivä"
+              },
+              {
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/bandarseribegawan/tarkistus.md",
+                "section": "Aiheen D-havainnot luettava ennen kutsua"
+              }
+            ],
+            "rightsEvidence": "Turvallinen yleinen ruoka, materiaali tai arkiesine. Ei nykyteoksen, todellisen rakennusasettelun, tunnistettavan henkilön tai nimetyn näyttelyesineen jäljennöstä.",
+            "prompt": "Close-up of a generic simple functional handloom: plain undyed threads run as warp across a small undecorated wooden frame, with visible plain weave and a simple shuttle. No woven ornamental pattern, branded machine, text, people or reconstructed attic/house/museum display. Natural light, physical thread paths and wood, not decorative tangled string. Use case: photorealistic-natural. Believable natural editorial photography with physically accurate materials and irregular everyday texture. No people or recognizable faces, no lettering, logos, watermarks, frames, collage or designed modern art. This is a generalized illustration of the text topic, not a documentary photograph of a named vendor, museum object, city layout, historical event or building. Prefer landscape PNG 1536x1024 sRGB, opaque background.",
+            "content": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/bandarseribegawan/sisalto.json",
+              "contentSHA256": "f426a6470c585d461a553262280e38d0f2dbf7cf6cb833286edfb53ef4efa9f8",
+              "targetObjectExists": true,
+              "targetContainer": "$.kaupunkilehti[1].nostot[1]",
+              "targetText": {
+                "otsikko": "Ullakolla oli työpäivä",
+                "teksti": "Vesikylän talot eivät olleet kaikki samanlaisia. Rumah belah bumbung -tyypissä oli harjakatto, kun taas rumah tungkup -talon katto kiersi rakennusta sen eri puolilla. Kaksikerroksiseen rumah loteng -taloon kuului ullakko, jota käytettiin kutomiseen, käsitöihin ja varastointiin. Talon ylin tila saattoi siis olla työhuone yhtä hyvin kuin tavaroiden säilytyspaikka. Perinteisiä malleja esittelee myös Malay Technology Museum. Talojen muodot kertovat vesiasutuksesta tarkemmin kuin yksi yleiskuva paalutalojen rivistä.",
+                "wiki": "Kampong Ayer",
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              },
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/bandarseribegawan/faktapohja.md",
+              "factSheetExists": true
+            },
+            "otherReviewerVerdicts": [],
+            "visualInspection": {
+              "tool": "view_image",
+              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/bandarseribegawan/assets/e10-bandarseribegawan-L2-v1-20261012/image.png",
+              "detail": "original",
+              "observations": "Puinen kangaspuurakenne, loimilangat, kudottu vaalea kangas ja sukkula. Langat liittyvät kankaan reunaan ja kudos näyttää punoutuneelta; puun kuluma sekä langan kuitu uskottavia. Ei käsiä, kasvoja, tekstiä tai logoja.",
+              "inspectedBy": "kuvitus-3"
+            },
+            "openConflict": false
+          },
+          "qaReason": "Kudonta liittyy L2-noston ullakolla tehtyyn käsityöhön. Kuvateksti rajaa pois vesikylän tietyn ullakon ja museon näyttelymallin. Native-SHA ja mitat täsmäävät."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva kudonnasta; ei tietty vesikylän ullakko tai museon näyttelymalli.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/bandarseribegawan/illustration-qa-extra.json",
+        "fileSHA256": "1552a32833576e78bdcab9a36c5306d605052e951f60a8ca9adaf628b9993fd3",
+        "item": {
+          "slot": "L2",
+          "targetJsonPath": "$.kaupunkilehti[1].nostot[1]",
+          "assetID": "e10-bandarseribegawan-L2-v1-20261012",
+          "sha256": "4cb098964b76550ce93f82338b3aa91ccb4a745a078168837027ab45e3e555c9",
+          "verdict": "accepted",
+          "reason": "Kudonta liittyy L2-noston ullakolla tehtyyn käsityöhön. Kuvateksti rajaa pois vesikylän tietyn ullakon ja museon näyttelymallin. Native-SHA ja mitat täsmäävät.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/bandarseribegawan/assets/e10-bandarseribegawan-L2-v1-20261012/image.png",
+            "nativeSHA256": "4cb098964b76550ce93f82338b3aa91ccb4a745a078168837027ab45e3e555c9",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "pngChunks": [
+              "IHDR",
+              "caBX",
+              "IDAT",
+              "IEND"
+            ],
+            "manifestMatch": true,
+            "captionFi": "Havainnekuva kudonnasta; ei tietty vesikylän ullakko tai museon näyttelymalli.",
+            "sourceEvidence": [
+              {
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/bandarseribegawan/faktapohja.md",
+                "section": "Nimetty ruoka/materiaali/tekniikka, lähdeviitteet A-koosteessa"
+              },
+              {
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/bandarseribegawan/sisalto.json",
+                "jsonPath": "$.kaupunkilehti[1].nostot[1]",
+                "claim": "Ullakolla oli työpäivä"
+              },
+              {
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/bandarseribegawan/tarkistus.md",
+                "section": "Aiheen D-havainnot luettava ennen kutsua"
+              }
+            ],
+            "rightsEvidence": "Turvallinen yleinen ruoka, materiaali tai arkiesine. Ei nykyteoksen, todellisen rakennusasettelun, tunnistettavan henkilön tai nimetyn näyttelyesineen jäljennöstä.",
+            "prompt": "Close-up of a generic simple functional handloom: plain undyed threads run as warp across a small undecorated wooden frame, with visible plain weave and a simple shuttle. No woven ornamental pattern, branded machine, text, people or reconstructed attic/house/museum display. Natural light, physical thread paths and wood, not decorative tangled string. Use case: photorealistic-natural. Believable natural editorial photography with physically accurate materials and irregular everyday texture. No people or recognizable faces, no lettering, logos, watermarks, frames, collage or designed modern art. This is a generalized illustration of the text topic, not a documentary photograph of a named vendor, museum object, city layout, historical event or building. Prefer landscape PNG 1536x1024 sRGB, opaque background.",
+            "content": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/bandarseribegawan/sisalto.json",
+              "contentSHA256": "f426a6470c585d461a553262280e38d0f2dbf7cf6cb833286edfb53ef4efa9f8",
+              "targetObjectExists": true,
+              "targetContainer": "$.kaupunkilehti[1].nostot[1]",
+              "targetText": {
+                "otsikko": "Ullakolla oli työpäivä",
+                "teksti": "Vesikylän talot eivät olleet kaikki samanlaisia. Rumah belah bumbung -tyypissä oli harjakatto, kun taas rumah tungkup -talon katto kiersi rakennusta sen eri puolilla. Kaksikerroksiseen rumah loteng -taloon kuului ullakko, jota käytettiin kutomiseen, käsitöihin ja varastointiin. Talon ylin tila saattoi siis olla työhuone yhtä hyvin kuin tavaroiden säilytyspaikka. Perinteisiä malleja esittelee myös Malay Technology Museum. Talojen muodot kertovat vesiasutuksesta tarkemmin kuin yksi yleiskuva paalutalojen rivistä.",
+                "wiki": "Kampong Ayer",
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              },
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/bandarseribegawan/faktapohja.md",
+              "factSheetExists": true
+            },
+            "otherReviewerVerdicts": [],
+            "visualInspection": {
+              "tool": "view_image",
+              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/bandarseribegawan/assets/e10-bandarseribegawan-L2-v1-20261012/image.png",
+              "detail": "original",
+              "observations": "Puinen kangaspuurakenne, loimilangat, kudottu vaalea kangas ja sukkula. Langat liittyvät kankaan reunaan ja kudos näyttää punoutuneelta; puun kuluma sekä langan kuitu uskottavia. Ei käsiä, kasvoja, tekstiä tai logoja.",
+              "inspectedBy": "kuvitus-3"
+            },
+            "openConflict": false
+          },
+          "reviewedAt": "2026-10-12T18:30:51.527132+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/bandarseribegawan/qa.json",
+            "sha256": "8491a41ea1365533f4fa87e57e5cb26ae34149fe9740c4c3863bbfaf6c187d6b"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/bandarseribegawan/illustration-qa-extra.json",
+            "sha256": "1552a32833576e78bdcab9a36c5306d605052e951f60a8ca9adaf628b9993fd3"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/bandarseribegawan/e10-bandarseribegawan-L2-v1-20261012-4cb098964b76.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/bandarseribegawan/e10-bandarseribegawan-L2-v1-20261012-4cb098964b76.png?t=a0edf91a60d67407",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/bandarseribegawan/e10-bandarseribegawan-L2-v1-20261012-4cb098964b76.png",
+        "sha256": "a0edf91a60d6740786ebf3880cba09ba150f4134cfd25813c90af11b74daffdd",
+        "bytes": 2719859,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e10-bandarseribegawan-L2-v1-20261012",
+        "nativeSHA256": "4cb098964b76550ce93f82338b3aa91ccb4a745a078168837027ab45e3e555c9",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e10/bandarseribegawan/e10-bandarseribegawan-L2-v1-20261012-4cb098964b76.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e10",
+        "city": "bandarseribegawan",
+        "slot": "L2",
+        "targetJsonPath": "$.kaupunkilehti[1].nostot[1]",
+        "verifiedAt": "2026-10-12T18:31:18.723040+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e10/bandarseribegawan/e10-bandarseribegawan-L2-v1-20261012-4cb098964b76.png",
+        "sha256": "a0edf91a60d6740786ebf3880cba09ba150f4134cfd25813c90af11b74daffdd",
+        "bytes": 2719859,
+        "SHAReadAt": "2026-10-12T18:30:56.262349+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "4cb098964b76550ce93f82338b3aa91ccb4a745a078168837027ab45e3e555c9",
+        "rgbPixelSHA256": "4fd49f722a45a095d0bdd4847b5c175e158ca2d9b59b0bc4bf4f79361e78a28b",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "ff17248106009a5fb46d53cd8d8ea260be13e6d8786cab64d969ab17df969314",
+      "targetAfterSHA256": "1279871c8f716091461f0360628792119757a0a78f5d029bad82d08977457ffb",
+      "contextAfterSHA256": "1279871c8f716091461f0360628792119757a0a78f5d029bad82d08977457ffb"
+    },
+    {
+      "era": "e10",
+      "city": "bandarseribegawan",
+      "slot": "L3",
+      "type": "illustration",
+      "assetID": "e10-bandarseribegawan-L3-v1-20261012",
+      "galleryImageID": "e10-bandarseribegawan-L3-v1-20261012",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[1].nostot[2]",
+      "targetTokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        2
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/bandarseribegawan/e10-bandarseribegawan-L3-v1-20261012-83fe7be6da4e.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva metallityön välineistä; ei nimetty museoesine tai Kampong Ayerin työpaja.",
+        "lyhyt": "Havainnekuva metallityön välineistä; ei nimetty museoesine tai Kampong Ayerin työpaja."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/bandarseribegawan/e10-bandarseribegawan-L3-v1-20261012-83fe7be6da4e.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva metallityön välineistä; ei nimetty museoesine tai Kampong Ayerin työpaja.",
+        "lyhyt": "Havainnekuva metallityön välineistä; ei nimetty museoesine tai Kampong Ayerin työpaja."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "83fe7be6da4ef20f1346e4fd371e918c6928a2383e1bb7d3027da05bb7c24117",
+      "exportSHA256": "59a17ba0fa5ea6b70ca918b2a1ac6d13efc9426da6220a21bd3e3b2c81ff6cd7",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/bandarseribegawan/e10-bandarseribegawan-L3-v1-20261012-83fe7be6da4e.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/bandarseribegawan/e10-bandarseribegawan-L3-v1-20261012-83fe7be6da4e.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e10/bandarseribegawan/e10-bandarseribegawan-L3-v1-20261012-83fe7be6da4e.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/bandarseribegawan/sisalto.json",
+      "sourceContentSHA256": "ff17248106009a5fb46d53cd8d8ea260be13e6d8786cab64d969ab17df969314",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "de4ddcb6af9a88cdd7d38aeb041b0db042101f3948887f9d5f2685e0823a8eb0",
+        "semanticContextSHA256": "de4ddcb6af9a88cdd7d38aeb041b0db042101f3948887f9d5f2685e0823a8eb0",
+        "subjectTitle": "Vanha nimi muistaa ammatin",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Turvallinen yleinen ruoka, materiaali tai arkiesine. Ei nykyteoksen, todellisen rakennusasettelun, tunnistettavan henkilön tai nimetyn näyttelyesineen jäljennöstä.",
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/bandarseribegawan/assets/e10-bandarseribegawan-L3-v1-20261012/image.png",
+            "nativeSHA256": "83fe7be6da4ef20f1346e4fd371e918c6928a2383e1bb7d3027da05bb7c24117",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "pngChunks": [
+              "IHDR",
+              "caBX",
+              "IDAT",
+              "IEND"
+            ],
+            "manifestMatch": true,
+            "captionFi": "Havainnekuva metallityön välineistä; ei nimetty museoesine tai Kampong Ayerin työpaja.",
+            "sourceEvidence": [
+              {
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/bandarseribegawan/faktapohja.md",
+                "section": "Nimetty ruoka/materiaali/tekniikka, lähdeviitteet A-koosteessa"
+              },
+              {
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/bandarseribegawan/sisalto.json",
+                "jsonPath": "$.kaupunkilehti[1].nostot[2]",
+                "claim": "Vanha nimi muistaa ammatin"
+              },
+              {
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/bandarseribegawan/tarkistus.md",
+                "section": "Aiheen D-havainnot luettava ennen kutsua"
+              }
+            ],
+            "rightsEvidence": "Turvallinen yleinen ruoka, materiaali tai arkiesine. Ei nykyteoksen, todellisen rakennusasettelun, tunnistettavan henkilön tai nimetyn näyttelyesineen jäljennöstä.",
+            "prompt": "A generic blacksmith work surface with one plain worn iron hammer and a short undecorated iron bar. Simple functional handtools with real metal wear, natural light, quiet background. No weapons, brand lettering, modern sculpture, royal symbol or invented Kampong Ayer workshop. Use case: photorealistic-natural. Believable natural editorial photography with physically accurate materials and irregular everyday texture. No people or recognizable faces, no lettering, logos, watermarks, frames, collage or designed modern art. This is a generalized illustration of the text topic, not a documentary photograph of a named vendor, museum object, city layout, historical event or building. Prefer landscape PNG 1536x1024 sRGB, opaque background.",
+            "content": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/bandarseribegawan/sisalto.json",
+              "contentSHA256": "f426a6470c585d461a553262280e38d0f2dbf7cf6cb833286edfb53ef4efa9f8",
+              "targetObjectExists": true,
+              "targetContainer": "$.kaupunkilehti[1].nostot[2]",
+              "targetText": {
+                "otsikko": "Vanha nimi muistaa ammatin",
+                "teksti": "Kampong Ayer ei ole vain yksi paikannimi. Sen kylien nimissä esiintyy jokia, arvonimiä ja vanhoja ammatteja. Kampong Pandai Besi liittyy seppiin ja raudan työstämiseen; myös muiden kylien nimet voivat säilyttää muiston käsityöläisistä. Nimeä ei tarvitse muuttaa, vaikka asukkaiden ammatit myöhemmin vaihtuisivat. Siksi kaupungin kartassa kulkee mukana vanhaa työelämää. Teknologiamuseon näyttelyt täydentävät tätä nimien kertomaa historiaa esittelemällä vesikylän metallityötä, kudontaa ja veneenrakennusta.",
+                "wiki": "Kampong Ayer",
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              },
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/bandarseribegawan/faktapohja.md",
+              "factSheetExists": true
+            },
+            "otherReviewerVerdicts": [],
+            "visualInspection": {
+              "tool": "view_image",
+              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/bandarseribegawan/assets/e10-bandarseribegawan-L3-v1-20261012/image.png",
+              "detail": "original",
+              "observations": "Alasimella kulunut vasara ja rautatanko, taustalla hiiliä sekä työkaluja. Vasarapään ja varren kiinnitys, metallin kuluma ja pinnat uskottavia. Ei ihmisiä, tekstiä, logoja tai nimettyä taideteosta.",
+              "inspectedBy": "kuvitus-3"
+            },
+            "openConflict": false
+          },
+          "qaReason": "Metallityön välineet vastaavat L3-noston seppäaihetta. Kuvateksti erottaa havainteen Kampong Ayerin tietystä työpajasta tai museoesineestä. Native-SHA ja mitat täsmäävät."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva metallityön välineistä; ei nimetty museoesine tai Kampong Ayerin työpaja.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/bandarseribegawan/illustration-qa-extra.json",
+        "fileSHA256": "1552a32833576e78bdcab9a36c5306d605052e951f60a8ca9adaf628b9993fd3",
+        "item": {
+          "slot": "L3",
+          "targetJsonPath": "$.kaupunkilehti[1].nostot[2]",
+          "assetID": "e10-bandarseribegawan-L3-v1-20261012",
+          "sha256": "83fe7be6da4ef20f1346e4fd371e918c6928a2383e1bb7d3027da05bb7c24117",
+          "verdict": "accepted",
+          "reason": "Metallityön välineet vastaavat L3-noston seppäaihetta. Kuvateksti erottaa havainteen Kampong Ayerin tietystä työpajasta tai museoesineestä. Native-SHA ja mitat täsmäävät.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/bandarseribegawan/assets/e10-bandarseribegawan-L3-v1-20261012/image.png",
+            "nativeSHA256": "83fe7be6da4ef20f1346e4fd371e918c6928a2383e1bb7d3027da05bb7c24117",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "pngChunks": [
+              "IHDR",
+              "caBX",
+              "IDAT",
+              "IEND"
+            ],
+            "manifestMatch": true,
+            "captionFi": "Havainnekuva metallityön välineistä; ei nimetty museoesine tai Kampong Ayerin työpaja.",
+            "sourceEvidence": [
+              {
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/bandarseribegawan/faktapohja.md",
+                "section": "Nimetty ruoka/materiaali/tekniikka, lähdeviitteet A-koosteessa"
+              },
+              {
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/bandarseribegawan/sisalto.json",
+                "jsonPath": "$.kaupunkilehti[1].nostot[2]",
+                "claim": "Vanha nimi muistaa ammatin"
+              },
+              {
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/bandarseribegawan/tarkistus.md",
+                "section": "Aiheen D-havainnot luettava ennen kutsua"
+              }
+            ],
+            "rightsEvidence": "Turvallinen yleinen ruoka, materiaali tai arkiesine. Ei nykyteoksen, todellisen rakennusasettelun, tunnistettavan henkilön tai nimetyn näyttelyesineen jäljennöstä.",
+            "prompt": "A generic blacksmith work surface with one plain worn iron hammer and a short undecorated iron bar. Simple functional handtools with real metal wear, natural light, quiet background. No weapons, brand lettering, modern sculpture, royal symbol or invented Kampong Ayer workshop. Use case: photorealistic-natural. Believable natural editorial photography with physically accurate materials and irregular everyday texture. No people or recognizable faces, no lettering, logos, watermarks, frames, collage or designed modern art. This is a generalized illustration of the text topic, not a documentary photograph of a named vendor, museum object, city layout, historical event or building. Prefer landscape PNG 1536x1024 sRGB, opaque background.",
+            "content": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/bandarseribegawan/sisalto.json",
+              "contentSHA256": "f426a6470c585d461a553262280e38d0f2dbf7cf6cb833286edfb53ef4efa9f8",
+              "targetObjectExists": true,
+              "targetContainer": "$.kaupunkilehti[1].nostot[2]",
+              "targetText": {
+                "otsikko": "Vanha nimi muistaa ammatin",
+                "teksti": "Kampong Ayer ei ole vain yksi paikannimi. Sen kylien nimissä esiintyy jokia, arvonimiä ja vanhoja ammatteja. Kampong Pandai Besi liittyy seppiin ja raudan työstämiseen; myös muiden kylien nimet voivat säilyttää muiston käsityöläisistä. Nimeä ei tarvitse muuttaa, vaikka asukkaiden ammatit myöhemmin vaihtuisivat. Siksi kaupungin kartassa kulkee mukana vanhaa työelämää. Teknologiamuseon näyttelyt täydentävät tätä nimien kertomaa historiaa esittelemällä vesikylän metallityötä, kudontaa ja veneenrakennusta.",
+                "wiki": "Kampong Ayer",
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              },
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/bandarseribegawan/faktapohja.md",
+              "factSheetExists": true
+            },
+            "otherReviewerVerdicts": [],
+            "visualInspection": {
+              "tool": "view_image",
+              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/bandarseribegawan/assets/e10-bandarseribegawan-L3-v1-20261012/image.png",
+              "detail": "original",
+              "observations": "Alasimella kulunut vasara ja rautatanko, taustalla hiiliä sekä työkaluja. Vasarapään ja varren kiinnitys, metallin kuluma ja pinnat uskottavia. Ei ihmisiä, tekstiä, logoja tai nimettyä taideteosta.",
+              "inspectedBy": "kuvitus-3"
+            },
+            "openConflict": false
+          },
+          "reviewedAt": "2026-10-12T18:47:11.471083+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/bandarseribegawan/qa.json",
+            "sha256": "8491a41ea1365533f4fa87e57e5cb26ae34149fe9740c4c3863bbfaf6c187d6b"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/bandarseribegawan/illustration-qa-extra.json",
+            "sha256": "1552a32833576e78bdcab9a36c5306d605052e951f60a8ca9adaf628b9993fd3"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/bandarseribegawan/e10-bandarseribegawan-L3-v1-20261012-83fe7be6da4e.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/bandarseribegawan/e10-bandarseribegawan-L3-v1-20261012-83fe7be6da4e.png?t=59a17ba0fa5ea6b7",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/bandarseribegawan/e10-bandarseribegawan-L3-v1-20261012-83fe7be6da4e.png",
+        "sha256": "59a17ba0fa5ea6b70ca918b2a1ac6d13efc9426da6220a21bd3e3b2c81ff6cd7",
+        "bytes": 2537384,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e10-bandarseribegawan-L3-v1-20261012",
+        "nativeSHA256": "83fe7be6da4ef20f1346e4fd371e918c6928a2383e1bb7d3027da05bb7c24117",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e10/bandarseribegawan/e10-bandarseribegawan-L3-v1-20261012-83fe7be6da4e.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e10",
+        "city": "bandarseribegawan",
+        "slot": "L3",
+        "targetJsonPath": "$.kaupunkilehti[1].nostot[2]",
+        "verifiedAt": "2026-10-12T18:47:29.549788+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e10/bandarseribegawan/e10-bandarseribegawan-L3-v1-20261012-83fe7be6da4e.png",
+        "sha256": "59a17ba0fa5ea6b70ca918b2a1ac6d13efc9426da6220a21bd3e3b2c81ff6cd7",
+        "bytes": 2537384,
+        "SHAReadAt": "2026-10-12T19:03:37.998866+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "83fe7be6da4ef20f1346e4fd371e918c6928a2383e1bb7d3027da05bb7c24117",
+        "rgbPixelSHA256": "a43bc2cd49e901f1f9ed477e2cf952621d5e012d56d9e6206527e80c476aaf0f",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "ff17248106009a5fb46d53cd8d8ea260be13e6d8786cab64d969ab17df969314",
+      "targetAfterSHA256": "de4ddcb6af9a88cdd7d38aeb041b0db042101f3948887f9d5f2685e0823a8eb0",
+      "contextAfterSHA256": "de4ddcb6af9a88cdd7d38aeb041b0db042101f3948887f9d5f2685e0823a8eb0"
+    },
+    {
+      "era": "e10",
+      "city": "bandarseribegawan",
+      "slot": "L4",
+      "type": "illustration",
+      "assetID": "e10-bandarseribegawan-L4-v1-20261012",
+      "galleryImageID": "e10-bandarseribegawan-L4-v1-20261012",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
+      "targetTokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        3
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/bandarseribegawan/e10-bandarseribegawan-L4-v1-20261012-4930baba14b5.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva puutyön välineistä ja materiaalista, ei museon näyttelyesine.",
+        "lyhyt": "Havainnekuva puutyön välineistä ja materiaalista, ei museon näyttelyesine."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/bandarseribegawan/e10-bandarseribegawan-L4-v1-20261012-4930baba14b5.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva puutyön välineistä ja materiaalista, ei museon näyttelyesine.",
+        "lyhyt": "Havainnekuva puutyön välineistä ja materiaalista, ei museon näyttelyesine."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "4930baba14b5ad45d67d3dde3f9564bec314ab682ed53e3227c10e5e34073ff4",
+      "exportSHA256": "dab7911866b030c73ff714e2d7a81cfd46683eb30c2e36c3317336d00e4ed434",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/bandarseribegawan/e10-bandarseribegawan-L4-v1-20261012-4930baba14b5.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/bandarseribegawan/e10-bandarseribegawan-L4-v1-20261012-4930baba14b5.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e10/bandarseribegawan/e10-bandarseribegawan-L4-v1-20261012-4930baba14b5.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/bandarseribegawan/sisalto.json",
+      "sourceContentSHA256": "ff17248106009a5fb46d53cd8d8ea260be13e6d8786cab64d969ab17df969314",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "9e1ed73e62fb76f40bf9f97d21fe044f33c6c0f940a6bf6631d1feb4ffa19bf2",
+        "semanticContextSHA256": "9e1ed73e62fb76f40bf9f97d21fe044f33c6c0f940a6bf6631d1feb4ffa19bf2",
+        "subjectTitle": "Teknologiaa ilman näyttöruutua",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Turvallinen yleinen ruoka, materiaali tai arkiesine. Ei nykyteoksen, todellisen rakennusasettelun, tunnistettavan henkilön tai nimetyn näyttelyesineen jäljennöstä.",
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/bandarseribegawan/assets/e10-bandarseribegawan-L4-v1-20261012/image.png",
+            "nativeSHA256": "4930baba14b5ad45d67d3dde3f9564bec314ab682ed53e3227c10e5e34073ff4",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "pngChunks": [
+              "IHDR",
+              "caBX",
+              "IDAT",
+              "IEND"
+            ],
+            "manifestMatch": true,
+            "captionFi": "Havainnekuva puutyön välineistä ja materiaalista, ei museon näyttelyesine.",
+            "sourceEvidence": [
+              {
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/bandarseribegawan/faktapohja.md",
+                "section": "Nimetty ruoka/materiaali/tekniikka, lähdeviitteet A-koosteessa"
+              },
+              {
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/bandarseribegawan/sisalto.json",
+                "jsonPath": "$.kaupunkilehti[1].nostot[3]",
+                "claim": "Teknologiaa ilman näyttöruutua"
+              },
+              {
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/bandarseribegawan/tarkistus.md",
+                "section": "Aiheen D-havainnot luettava ennen kutsua"
+              }
+            ],
+            "rightsEvidence": "Turvallinen yleinen ruoka, materiaali tai arkiesine. Ei nykyteoksen, todellisen rakennusasettelun, tunnistettavan henkilön tai nimetyn näyttelyesineen jäljennöstä.",
+            "prompt": "A generic woodworking material study: a plain unbranded hand plane, a short timber piece and a few naturally curled wood shavings on a neutral bench. No decorative carvings, text, person, boat model or invented Malay Technology Museum exhibit. Real wood grain and tool geometry, diffuse daylight. Use case: photorealistic-natural. Believable natural editorial photography with physically accurate materials and irregular everyday texture. No people or recognizable faces, no lettering, logos, watermarks, frames, collage or designed modern art. This is a generalized illustration of the text topic, not a documentary photograph of a named vendor, museum object, city layout, historical event or building. Prefer landscape PNG 1536x1024 sRGB, opaque background.",
+            "content": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/bandarseribegawan/sisalto.json",
+              "contentSHA256": "f426a6470c585d461a553262280e38d0f2dbf7cf6cb833286edfb53ef4efa9f8",
+              "targetObjectExists": true,
+              "targetContainer": "$.kaupunkilehti[1].nostot[3]",
+              "targetText": {
+                "otsikko": "Teknologiaa ilman näyttöruutua",
+                "teksti": "Malay Technology Museumin nimi voi herättää odotuksen uusista laitteista. Kota Batun museo katsoo kuitenkin aikaisempien sukupolvien käytännön osaamista: miten talo tehtiin, vene rakennettiin ja kangas kudottiin. Vesikylän talot ja työmenetelmät ovat omia näyttelyaiheitaan, ja rinnalla esitellään sisämaan yhteisöjen välineitä ja asumista. Tekniikka on tässä käsien, materiaalien ja työkalujen yhteistyötä. Näkökulma tuo pääkaupungin historiaan tavallisen työn, joka jää helposti juhlaesineiden ja suurten rakennusten taakse.",
+                "wiki": "Malay Technology Museum",
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              },
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/bandarseribegawan/faktapohja.md",
+              "factSheetExists": true
+            },
+            "otherReviewerVerdicts": [],
+            "visualInspection": {
+              "tool": "view_image",
+              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/bandarseribegawan/assets/e10-bandarseribegawan-L4-v1-20261012/image.png",
+              "detail": "original",
+              "observations": "Puinen käsihöylä, metalliterä ja puukiila, vieressä puupalikka ja lastuja. Puunsyyt, terän liittyminen runkoon ja lastujen kaareutuminen uskottavia. Ei käsiä, kasvoja, tekstiä tai logoja.",
+              "inspectedBy": "kuvitus-3"
+            },
+            "openConflict": false
+          },
+          "qaReason": "Puutyön väline ja puumateriaali liittyvät L4-noston käytännön tekniikkaan. Kuvateksti rajaa pois museon todellisen näyttelyesineen. Native-SHA ja mitat täsmäävät."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva puutyön välineistä ja materiaalista, ei museon näyttelyesine.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/bandarseribegawan/illustration-qa-extra.json",
+        "fileSHA256": "1552a32833576e78bdcab9a36c5306d605052e951f60a8ca9adaf628b9993fd3",
+        "item": {
+          "slot": "L4",
+          "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
+          "assetID": "e10-bandarseribegawan-L4-v1-20261012",
+          "sha256": "4930baba14b5ad45d67d3dde3f9564bec314ab682ed53e3227c10e5e34073ff4",
+          "verdict": "accepted",
+          "reason": "Puutyön väline ja puumateriaali liittyvät L4-noston käytännön tekniikkaan. Kuvateksti rajaa pois museon todellisen näyttelyesineen. Native-SHA ja mitat täsmäävät.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/bandarseribegawan/assets/e10-bandarseribegawan-L4-v1-20261012/image.png",
+            "nativeSHA256": "4930baba14b5ad45d67d3dde3f9564bec314ab682ed53e3227c10e5e34073ff4",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "pngChunks": [
+              "IHDR",
+              "caBX",
+              "IDAT",
+              "IEND"
+            ],
+            "manifestMatch": true,
+            "captionFi": "Havainnekuva puutyön välineistä ja materiaalista, ei museon näyttelyesine.",
+            "sourceEvidence": [
+              {
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/bandarseribegawan/faktapohja.md",
+                "section": "Nimetty ruoka/materiaali/tekniikka, lähdeviitteet A-koosteessa"
+              },
+              {
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/bandarseribegawan/sisalto.json",
+                "jsonPath": "$.kaupunkilehti[1].nostot[3]",
+                "claim": "Teknologiaa ilman näyttöruutua"
+              },
+              {
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/bandarseribegawan/tarkistus.md",
+                "section": "Aiheen D-havainnot luettava ennen kutsua"
+              }
+            ],
+            "rightsEvidence": "Turvallinen yleinen ruoka, materiaali tai arkiesine. Ei nykyteoksen, todellisen rakennusasettelun, tunnistettavan henkilön tai nimetyn näyttelyesineen jäljennöstä.",
+            "prompt": "A generic woodworking material study: a plain unbranded hand plane, a short timber piece and a few naturally curled wood shavings on a neutral bench. No decorative carvings, text, person, boat model or invented Malay Technology Museum exhibit. Real wood grain and tool geometry, diffuse daylight. Use case: photorealistic-natural. Believable natural editorial photography with physically accurate materials and irregular everyday texture. No people or recognizable faces, no lettering, logos, watermarks, frames, collage or designed modern art. This is a generalized illustration of the text topic, not a documentary photograph of a named vendor, museum object, city layout, historical event or building. Prefer landscape PNG 1536x1024 sRGB, opaque background.",
+            "content": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/bandarseribegawan/sisalto.json",
+              "contentSHA256": "f426a6470c585d461a553262280e38d0f2dbf7cf6cb833286edfb53ef4efa9f8",
+              "targetObjectExists": true,
+              "targetContainer": "$.kaupunkilehti[1].nostot[3]",
+              "targetText": {
+                "otsikko": "Teknologiaa ilman näyttöruutua",
+                "teksti": "Malay Technology Museumin nimi voi herättää odotuksen uusista laitteista. Kota Batun museo katsoo kuitenkin aikaisempien sukupolvien käytännön osaamista: miten talo tehtiin, vene rakennettiin ja kangas kudottiin. Vesikylän talot ja työmenetelmät ovat omia näyttelyaiheitaan, ja rinnalla esitellään sisämaan yhteisöjen välineitä ja asumista. Tekniikka on tässä käsien, materiaalien ja työkalujen yhteistyötä. Näkökulma tuo pääkaupungin historiaan tavallisen työn, joka jää helposti juhlaesineiden ja suurten rakennusten taakse.",
+                "wiki": "Malay Technology Museum",
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              },
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/bandarseribegawan/faktapohja.md",
+              "factSheetExists": true
+            },
+            "otherReviewerVerdicts": [],
+            "visualInspection": {
+              "tool": "view_image",
+              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/bandarseribegawan/assets/e10-bandarseribegawan-L4-v1-20261012/image.png",
+              "detail": "original",
+              "observations": "Puinen käsihöylä, metalliterä ja puukiila, vieressä puupalikka ja lastuja. Puunsyyt, terän liittyminen runkoon ja lastujen kaareutuminen uskottavia. Ei käsiä, kasvoja, tekstiä tai logoja.",
+              "inspectedBy": "kuvitus-3"
+            },
+            "openConflict": false
+          },
+          "reviewedAt": "2026-10-12T18:44:04.224200+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/bandarseribegawan/qa.json",
+            "sha256": "8491a41ea1365533f4fa87e57e5cb26ae34149fe9740c4c3863bbfaf6c187d6b"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/bandarseribegawan/illustration-qa-extra.json",
+            "sha256": "1552a32833576e78bdcab9a36c5306d605052e951f60a8ca9adaf628b9993fd3"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/bandarseribegawan/e10-bandarseribegawan-L4-v1-20261012-4930baba14b5.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/bandarseribegawan/e10-bandarseribegawan-L4-v1-20261012-4930baba14b5.png?t=dab7911866b030c7",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/bandarseribegawan/e10-bandarseribegawan-L4-v1-20261012-4930baba14b5.png",
+        "sha256": "dab7911866b030c73ff714e2d7a81cfd46683eb30c2e36c3317336d00e4ed434",
+        "bytes": 2542419,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e10-bandarseribegawan-L4-v1-20261012",
+        "nativeSHA256": "4930baba14b5ad45d67d3dde3f9564bec314ab682ed53e3227c10e5e34073ff4",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e10/bandarseribegawan/e10-bandarseribegawan-L4-v1-20261012-4930baba14b5.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e10",
+        "city": "bandarseribegawan",
+        "slot": "L4",
+        "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
+        "verifiedAt": "2026-10-12T18:44:32.479577+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e10/bandarseribegawan/e10-bandarseribegawan-L4-v1-20261012-4930baba14b5.png",
+        "sha256": "dab7911866b030c73ff714e2d7a81cfd46683eb30c2e36c3317336d00e4ed434",
+        "bytes": 2542419,
+        "SHAReadAt": "2026-10-12T18:44:28.593826+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "4930baba14b5ad45d67d3dde3f9564bec314ab682ed53e3227c10e5e34073ff4",
+        "rgbPixelSHA256": "3453ce21f118b570ad64d9477d4683ebee5c10bf3bdf2252e78c4c407146606e",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "ff17248106009a5fb46d53cd8d8ea260be13e6d8786cab64d969ab17df969314",
+      "targetAfterSHA256": "9e1ed73e62fb76f40bf9f97d21fe044f33c6c0f940a6bf6631d1feb4ffa19bf2",
+      "contextAfterSHA256": "9e1ed73e62fb76f40bf9f97d21fe044f33c6c0f940a6bf6631d1feb4ffa19bf2"
+    },
+    {
+      "era": "e10",
+      "city": "bandarseribegawan",
+      "slot": "PHOTO",
+      "type": "commons",
+      "assetID": "capital-cc-e10-bandarseribegawan-photo-11565ef2c616a133",
+      "galleryImageID": "capital-cc-e10-bandarseribegawan-photo-11565ef2c616a133",
+      "commonsFile": "Tasek Lama Recreational Park.jpg",
+      "targetJsonPath": "$.valokuva",
+      "targetTokens": [
+        "valokuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e10/bandarseribegawan/photo-11565ef2c616a1338c89.jpg",
+        "suora": true,
+        "lahde": "Uhooep, Commons (CC BY-SA 4.0)",
+        "selite": "Tasek Laman vesiputous kuuluu Bandar Seri Begawanin virkistysympäristöön.",
+        "lyhyt": "Tasek Laman vesiputous kuuluu Bandar Seri Begawanin virkistysympäristöön.",
+        "tiedosto": "Tasek Lama Recreational Park.jpg",
+        "vuosi": "2017"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Uhooep, Commons (CC BY-SA 4.0)",
+        "selite": "Tasek Laman vesiputous kuuluu Bandar Seri Begawanin virkistysympäristöön.",
+        "lyhyt": "Tasek Laman vesiputous kuuluu Bandar Seri Begawanin virkistysympäristöön.",
+        "tiedosto": "Tasek Lama Recreational Park.jpg",
+        "vuosi": "2017"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e10/bandarseribegawan/photo-11565ef2c616a1338c89.jpg",
+        "suora": true,
+        "lahde": "Uhooep, Commons (CC BY-SA 4.0)",
+        "selite": "Tasek Laman vesiputous kuuluu Bandar Seri Begawanin virkistysympäristöön.",
+        "lyhyt": "Tasek Laman vesiputous kuuluu Bandar Seri Begawanin virkistysympäristöön.",
+        "tiedosto": "Tasek Lama Recreational Park.jpg",
+        "vuosi": "2017"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "11565ef2c616a1338c89e1089dbbc932f42f7a34f3147019fb7fce4cb126ff79",
+      "exportSHA256": "11565ef2c616a1338c89e1089dbbc932f42f7a34f3147019fb7fce4cb126ff79",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e10/bandarseribegawan/photo-11565ef2c616a1338c89.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e10/bandarseribegawan/photo-11565ef2c616a1338c89.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/bandarseribegawan/cc-evidence/9f0f0f9e5956-original.jpg",
+      "dimensions": [
+        5184,
+        3456
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/bandarseribegawan/sisalto.json",
+      "sourceContentSHA256": "ff17248106009a5fb46d53cd8d8ea260be13e6d8786cab64d969ab17df969314",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "945c94e6037f02559b372077629a82b0bd020754c2645d25071e9fd80cd5f6f0",
+        "semanticContextSHA256": "945c94e6037f02559b372077629a82b0bd020754c2645d25071e9fd80cd5f6f0",
+        "subjectTitle": "bandarseribegawan — aito paikkavalokuva",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Uhooep",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Tasek_Lama_Recreational_Park.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d1/Tasek_Lama_Recreational_Park.jpg",
+        "rightsEvidence": {
+          "selection": "Katsottu itse muuttamaton vesiputous, kivi ja kasvillisuus; ei ihmisiä, rakennusteosta, veistosta tai logoa/tekstiä. Paikka nimetyn Tasek Lama Recreational Park -lähdesivun Description/Title-riveistä, puiston kaupunkiyhteys voimassa olevasta faktapohjasta ja sisällöstä. Photo Author Uhooep/CC BY-SA 4.0 eksplisiittisesti Commonsista. Luonnollinen vesiputous ja kasvillisuus eivät kuvattuna pääaiheena jäljennä nimetyn suojatun teoksen ilmaisua. Ei keksitty havainnekuva eikä muusta maasta siirretty luonto.",
+          "QA": {
+            "reviewer": "job-25 independent-image-QA",
+            "reviewedAt": "2026-10-12T18:51:13.762288+00:00",
+            "visualTool": "view_image",
+            "visualDetail": "original",
+            "localOriginal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/bandarseribegawan/cc-evidence/9f0f0f9e5956-original.jpg",
+            "actualWidth": 5184,
+            "actualHeight": 3456,
+            "actualFormat": "JPEG",
+            "nativePixelWidth": 5184,
+            "nativePixelHeight": 3456,
+            "exifOrientation": 1,
+            "dimensionsConvention": "actualWidth/Height are correctly oriented display dimensions; native stored pixel dimensions are separately recorded",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Tasek_Lama_Recreational_Park.jpg",
+            "savedSourcePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/bandarseribegawan/cc-evidence/verkkovarmennus/ec94f82fd0cf5bbf041fd352d5e45e4cdc41230b8acfb68a0572cc79a3568070.html",
+            "savedSourceSHA256": "a39658cdd955e832fa20d5286c17a8c1fc16fa25d61f3998d4e2b5f12e68845e",
+            "authorVerified": "Uhooep",
+            "authorField": "Original Commons Author table, independently read; not inferred from uploader",
+            "licenseVerified": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "captureDate": "2017-06-11",
+            "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/bandarseribegawan/sisalto.json",
+            "sourceContentSHA256": "f426a6470c585d461a553262280e38d0f2dbf7cf6cb833286edfb53ef4efa9f8",
+            "captionFi": "Tasek Laman vesiputous kuuluu Bandar Seri Begawanin virkistysympäristöön.",
+            "depictedWorkLayer": "Pääaiheina vesi, kallio ja kasvillisuus. Kuvassa ei erotu rakennuksen, veistoksen tai muun yksilöidyn nykyteoksen pääaihetta. Puiston rakennusvuoden perusteella ei päätellä mitään teoskerroksen oikeuksista eikä vesiputouksen luonnollisuudesta.",
+            "duplicateInCity": false,
+            "placeEvidence": {
+              "commonsDescription": "English: Tasek Lama Recreational Park",
+              "citySourceURL": "https://en.wikipedia.org/wiki/Tasek_Lama_Recreational_Park",
+              "citySourcePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/lahdevarasto/79033f5359f27cd5532eb34dc672ee7dd9f9f71736aefa9d216722f6cf909ace.body",
+              "citySourceSHA256": "1fc814da99329b1aecba60a9a16a029a4a6d24a27cc3d5fa9f75c0bee662d69e",
+              "citySourceEvidence": "Infobox Location Tasek Lama, Bandar Seri Begawan, Brunei; johdanto Jalan Tasek Lama / Kampong Tasek Lama, in the heart of Bandar Seri Begawan. Nykyinen kohdejuttu ja karttakohde ovat olemassa."
+            },
+            "commonsSourceSHA256Verified": "a39658cdd955e832fa20d5286c17a8c1fc16fa25d61f3998d4e2b5f12e68845e",
+            "captureDateAsStated": "11 June 2017, 05:07:54"
+          },
+          "qaReason": "Silmin katsottu alkuperäinen: vesiputous, kallio, vihreä allas ja runsas kasvillisuus vastaavat nykyisen Tasek Lama -kohdejutun aihetta. Kallio ja lehdet erottuvat terävinä; veden liike-epäterävyys on luonnollista. Ei kasvoja, henkilöitä, lisättyä tekstiä, logoa, vesileimaa tai kehystä. Commonsin Description nimeää Tasek Lama Recreational Parkin, ja erikseen luettu paikkalähde sitoo puiston Bandar Seri Begawaniin. Kuva on vuodelta 2017 eikä sitä väitetä tuoreeksi."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Tasek Laman vesiputous kuuluu Bandar Seri Begawanin virkistysympäristöön.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/bandarseribegawan/qa.json",
+        "fileSHA256": "8491a41ea1365533f4fa87e57e5cb26ae34149fe9740c4c3863bbfaf6c187d6b",
+        "item": {
+          "slot": "PHOTO",
+          "targetJsonPath": "$.valokuva",
+          "commonsFile": "Tasek Lama Recreational Park.jpg",
+          "sha256": "11565ef2c616a1338c89e1089dbbc932f42f7a34f3147019fb7fce4cb126ff79",
+          "verdict": "accepted",
+          "reason": "Silmin katsottu alkuperäinen: vesiputous, kallio, vihreä allas ja runsas kasvillisuus vastaavat nykyisen Tasek Lama -kohdejutun aihetta. Kallio ja lehdet erottuvat terävinä; veden liike-epäterävyys on luonnollista. Ei kasvoja, henkilöitä, lisättyä tekstiä, logoa, vesileimaa tai kehystä. Commonsin Description nimeää Tasek Lama Recreational Parkin, ja erikseen luettu paikkalähde sitoo puiston Bandar Seri Begawaniin. Kuva on vuodelta 2017 eikä sitä väitetä tuoreeksi.",
+          "evidence": {
+            "reviewer": "job-25 independent-image-QA",
+            "reviewedAt": "2026-10-12T18:51:13.762288+00:00",
+            "visualTool": "view_image",
+            "visualDetail": "original",
+            "localOriginal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/bandarseribegawan/cc-evidence/9f0f0f9e5956-original.jpg",
+            "actualWidth": 5184,
+            "actualHeight": 3456,
+            "actualFormat": "JPEG",
+            "nativePixelWidth": 5184,
+            "nativePixelHeight": 3456,
+            "exifOrientation": 1,
+            "dimensionsConvention": "actualWidth/Height are correctly oriented display dimensions; native stored pixel dimensions are separately recorded",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Tasek_Lama_Recreational_Park.jpg",
+            "savedSourcePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/bandarseribegawan/cc-evidence/verkkovarmennus/ec94f82fd0cf5bbf041fd352d5e45e4cdc41230b8acfb68a0572cc79a3568070.html",
+            "savedSourceSHA256": "a39658cdd955e832fa20d5286c17a8c1fc16fa25d61f3998d4e2b5f12e68845e",
+            "authorVerified": "Uhooep",
+            "authorField": "Original Commons Author table, independently read; not inferred from uploader",
+            "licenseVerified": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "captureDate": "2017-06-11",
+            "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/bandarseribegawan/sisalto.json",
+            "sourceContentSHA256": "f426a6470c585d461a553262280e38d0f2dbf7cf6cb833286edfb53ef4efa9f8",
+            "captionFi": "Tasek Laman vesiputous kuuluu Bandar Seri Begawanin virkistysympäristöön.",
+            "depictedWorkLayer": "Pääaiheina vesi, kallio ja kasvillisuus. Kuvassa ei erotu rakennuksen, veistoksen tai muun yksilöidyn nykyteoksen pääaihetta. Puiston rakennusvuoden perusteella ei päätellä mitään teoskerroksen oikeuksista eikä vesiputouksen luonnollisuudesta.",
+            "duplicateInCity": false,
+            "placeEvidence": {
+              "commonsDescription": "English: Tasek Lama Recreational Park",
+              "citySourceURL": "https://en.wikipedia.org/wiki/Tasek_Lama_Recreational_Park",
+              "citySourcePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/lahdevarasto/79033f5359f27cd5532eb34dc672ee7dd9f9f71736aefa9d216722f6cf909ace.body",
+              "citySourceSHA256": "1fc814da99329b1aecba60a9a16a029a4a6d24a27cc3d5fa9f75c0bee662d69e",
+              "citySourceEvidence": "Infobox Location Tasek Lama, Bandar Seri Begawan, Brunei; johdanto Jalan Tasek Lama / Kampong Tasek Lama, in the heart of Bandar Seri Begawan. Nykyinen kohdejuttu ja karttakohde ovat olemassa."
+            },
+            "commonsSourceSHA256Verified": "a39658cdd955e832fa20d5286c17a8c1fc16fa25d61f3998d4e2b5f12e68845e",
+            "captureDateAsStated": "11 June 2017, 05:07:54"
+          }
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/bandarseribegawan/qa.json",
+            "sha256": "8491a41ea1365533f4fa87e57e5cb26ae34149fe9740c4c3863bbfaf6c187d6b"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/bandarseribegawan/illustration-qa-extra.json",
+            "sha256": "1552a32833576e78bdcab9a36c5306d605052e951f60a8ca9adaf628b9993fd3"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e10",
+        "city": "bandarseribegawan",
+        "slot": "PHOTO",
+        "targetJsonPath": "$.valokuva",
+        "commonsFile": "Tasek Lama Recreational Park.jpg",
+        "sha256": "11565ef2c616a1338c89e1089dbbc932f42f7a34f3147019fb7fce4cb126ff79",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Tasek_Lama_Recreational_Park.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d1/Tasek_Lama_Recreational_Park.jpg",
+        "author": "Uhooep",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "width": 5184,
+        "height": 3456,
+        "originalSHA256": "11565ef2c616a1338c89e1089dbbc932f42f7a34f3147019fb7fce4cb126ff79",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e10/bandarseribegawan/photo-11565ef2c616a1338c89.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e10/bandarseribegawan/photo-11565ef2c616a1338c89.jpg",
+        "bytes": 11099930,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T18:51:42.504458+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "Tasek Lama Recreational Park.jpg",
+        "lahde": "Uhooep, Commons (CC BY-SA 4.0)",
+        "selite": "Tasek Laman vesiputous kuuluu Bandar Seri Begawanin virkistysympäristöön.",
+        "lyhyt": "Tasek Laman vesiputous kuuluu Bandar Seri Begawanin virkistysympäristöön.",
+        "vuosi": "2017"
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Uhooep, Commons (CC BY-SA 4.0)",
+        "selite": "Tasek Laman vesiputous kuuluu Bandar Seri Begawanin virkistysympäristöön.",
+        "lyhyt": "Tasek Laman vesiputous kuuluu Bandar Seri Begawanin virkistysympäristöön.",
+        "tiedosto": "Tasek Lama Recreational Park.jpg",
+        "vuosi": "2017"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "ff17248106009a5fb46d53cd8d8ea260be13e6d8786cab64d969ab17df969314",
+      "targetAfterSHA256": "945c94e6037f02559b372077629a82b0bd020754c2645d25071e9fd80cd5f6f0",
+      "contextAfterSHA256": "945c94e6037f02559b372077629a82b0bd020754c2645d25071e9fd80cd5f6f0"
+    },
+    {
+      "era": "e10",
+      "city": "bandarseribegawan",
+      "slot": "C1",
+      "type": "commons",
+      "assetID": "capital-cc-e10-bandarseribegawan-c1-e72b0fb1a9eb8d84",
+      "galleryImageID": "capital-cc-e10-bandarseribegawan-c1-e72b0fb1a9eb8d84",
+      "commonsFile": "Kampong Setia 'B' seen from Kampong Pintu Malim.jpg",
+      "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "kansikuvat",
+        0
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e10/bandarseribegawan/c1-e72b0fb1a9eb8d84c260.jpg",
+        "suora": true,
+        "lahde": "Pangalau, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Kampong Ayerin rantataloja ja jokimaisemaa tammikuussa 2025.",
+        "lyhyt": "Kampong Ayerin rantataloja ja jokimaisemaa tammikuussa 2025.",
+        "tiedosto": "Kampong Setia 'B' seen from Kampong Pintu Malim.jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Pangalau, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Kampong Ayerin rantataloja ja jokimaisemaa tammikuussa 2025.",
+        "lyhyt": "Kampong Ayerin rantataloja ja jokimaisemaa tammikuussa 2025.",
+        "tiedosto": "Kampong Setia 'B' seen from Kampong Pintu Malim.jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e10/bandarseribegawan/c1-e72b0fb1a9eb8d84c260.jpg",
+        "suora": true,
+        "lahde": "Pangalau, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Kampong Ayerin rantataloja ja jokimaisemaa tammikuussa 2025.",
+        "lyhyt": "Kampong Ayerin rantataloja ja jokimaisemaa tammikuussa 2025.",
+        "tiedosto": "Kampong Setia 'B' seen from Kampong Pintu Malim.jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "e72b0fb1a9eb8d84c26007af2c7d26420c452ddc15a19b500acf4805d740ef89",
+      "exportSHA256": "e72b0fb1a9eb8d84c26007af2c7d26420c452ddc15a19b500acf4805d740ef89",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e10/bandarseribegawan/c1-e72b0fb1a9eb8d84c260.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e10/bandarseribegawan/c1-e72b0fb1a9eb8d84c260.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/bandarseribegawan/cc-evidence/6753dd8374b5-original.jpg",
+      "dimensions": [
+        6960,
+        4640
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/bandarseribegawan/sisalto.json",
+      "sourceContentSHA256": "ff17248106009a5fb46d53cd8d8ea260be13e6d8786cab64d969ab17df969314",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "f0f8986516c3557d8eb48457c1d5b84fb03b10e3cc3caec3641b908ff320a338",
+        "semanticContextSHA256": "f0f8986516c3557d8eb48457c1d5b84fb03b10e3cc3caec3641b908ff320a338",
+        "subjectTitle": "Bandar Seri Begawan",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Pangalau",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Kampong_Setia_%27B%27_seen_from_Kampong_Pintu_Malim.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e0/Kampong_Setia_%27B%27_seen_from_Kampong_Pintu_Malim.jpg",
+        "rightsEvidence": {
+          "selection": "Pangalau / CC BY-SA4.0 suoraan Commonsin Author/lisenssitaulukosta, Source Own work, 6960x4640. Oma alkuperäiskatselu: laaja todellinen joen, pitkän paalutalorivin ja metsäisten kukkuloiden asettelu; tavallisia tasaisia/harjakattoisia lauta- ja peltipintaisia taloja. Ei hallitsevaa moskeijaa, palatsia, veistosta tai erikseen yksilöityä modernia luovaa teosta; ei kasvoja, overlaytekstiä tai vesileimaa. Tavanomaista vernaculaarista rakennusmassaa ei automaattisesti julisteta suojatuksi tai vapaaksi iän perusteella, arvio on juuri tämän kuvan näkyvästä ilmaisusta. Filenimen Setia B/Pintu Malim ja Descriptionin Setia A/Sungai Lampai välillä ristiriita; siksi kuvateksti käyttää vain molemmat käsittävää lähteen Kampong Ayer -kategoriatasoa, ei tarkempaa naapurustoa tai kuvauspaikkaa. Nykyinen faktapohja/sisalto sitoo Kampong Ayerin Bandar Seri Begawaniin.",
+          "QA": {
+            "inputManifest": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/bandarseribegawan/cc-selection.json",
+            "reviewer": "job-25 independent-image-QA",
+            "reviewedAt": "2026-10-12T20:08:47.113629+00:00",
+            "visualTool": "view_image",
+            "visualDetail": "original",
+            "localOriginal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/bandarseribegawan/cc-evidence/6753dd8374b5-original.jpg",
+            "actualWidth": 6960,
+            "actualHeight": 4640,
+            "actualFormat": "JPEG",
+            "nativePixelWidth": 6960,
+            "nativePixelHeight": 4640,
+            "exifOrientation": 1,
+            "dimensionsConvention": "actualWidth/Height are correctly oriented display dimensions; native stored pixel dimensions are separately recorded",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Kampong_Setia_%27B%27_seen_from_Kampong_Pintu_Malim.jpg",
+            "savedSourcePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/lahdevarasto/2a0829dd981d96af3f87c68cc3a8a82bd6d41743fd79d573f7e752afbb4255e9.body",
+            "savedSourceSHA256": "81a62ab7b17ad76b43277d10e95c6d38b9051a5f5b8f604c4d1c4d32849c851c",
+            "authorVerified": "Pangalau",
+            "authorField": "Original Commons Author table, independently read; not inferred from uploader",
+            "licenseVerified": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "captureDate": "16 January 2025, 14:51:20",
+            "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/bandarseribegawan/sisalto.json",
+            "sourceContentSHA256": "f426a6470c585d461a553262280e38d0f2dbf7cf6cb833286edfb53ef4efa9f8",
+            "captionFi": "Kampong Ayerin rantataloja ja jokimaisemaa tammikuussa 2025.",
+            "depictedWorkLayer": "Valokuvakerros: Pangalau / CC BY-SA 4.0, Source Own work sekä alkuperäinen Author/Licensing-taulukko luettu itse. Erillinen teoskerros: joen äärellä tavallista paalutaloasutusta, käyttöön liittyviä suorakulmaisia lauta-/peltipintoja, kattoja, tukipylväitä ja kulkuväyliä; ei hallitsevaa moskeijaa, palatsia, muistomerkkiä tai erikseen tunnistettua omaperäistä julkisivuteosta. Metsä ja vesi luontoelementtejä. Arvio rajautuu tämän kuvan näkyvään ilmaisuun; rakennusten ikä tai koko kaupungin yleinen panoraamaoikeus ei ole vapautusperuste.",
+            "duplicateInCity": false,
+            "sourceRevision": 1185219456,
+            "locationEvidenceVerified": "Commons categories Kampong Ayer and Brunei River; current content explicitly places Kampong Ayer in Bandar Seri Begawan. Filename/Description sub-neighbourhood contradiction unresolved, no narrow place claim.",
+            "nativePixelViewport": {
+              "bounds": [
+                2500,
+                2450,
+                4200,
+                2850
+              ],
+              "tool": "node_repl emitImage using PIL crop in memory",
+              "purpose": "Native building/face/detail inspection only; original bytes unchanged and no crop asset saved",
+              "observation": "Actual posts, walls, roof and footways coherent; distant soft details, no clearly identifiable human facial features or independent mural/advertisement"
+            },
+            "sourceSnapshotManifestSHA": "f426a6470c585d461a553262280e38d0f2dbf7cf6cb833286edfb53ef4efa9f8",
+            "sourceSnapshotNote": "Independently read allowed-helper cached HTML has another byte SHA; actual savedSourceSHA256 recorded. Author, license and file identity independently verified."
+          },
+          "qaReason": "Laaja todellinen Kampong Ayerin rantatalorivi, joki ja metsäiset kukkulat vastaavat lehden johdantoa ja nykyistä kaupunkitekstiä. Talojen ja kulkuväylien asettelu on luettavissa myös alkuperäisistä pikseleistä. Ei tunnistettavia kasvoja, päälle lisättyä tekstiä, vesileimaa tai kehystä. Filenimen SetiaB/PintuMalim ja Descriptionin SetiaA/SungaiLampai ristiriita säilyy tiedossa: hyväksytty kuvateksti käyttää vain Commonsin Kampong Ayer -kategoriaan sidottua yleisempää paikannimeä."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Kampong Ayerin rantataloja ja jokimaisemaa tammikuussa 2025.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/bandarseribegawan/qa.json",
+        "fileSHA256": "8491a41ea1365533f4fa87e57e5cb26ae34149fe9740c4c3863bbfaf6c187d6b",
+        "item": {
+          "slot": "C1",
+          "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
+          "commonsFile": "Kampong Setia 'B' seen from Kampong Pintu Malim.jpg",
+          "sha256": "e72b0fb1a9eb8d84c26007af2c7d26420c452ddc15a19b500acf4805d740ef89",
+          "verdict": "accepted",
+          "reason": "Laaja todellinen Kampong Ayerin rantatalorivi, joki ja metsäiset kukkulat vastaavat lehden johdantoa ja nykyistä kaupunkitekstiä. Talojen ja kulkuväylien asettelu on luettavissa myös alkuperäisistä pikseleistä. Ei tunnistettavia kasvoja, päälle lisättyä tekstiä, vesileimaa tai kehystä. Filenimen SetiaB/PintuMalim ja Descriptionin SetiaA/SungaiLampai ristiriita säilyy tiedossa: hyväksytty kuvateksti käyttää vain Commonsin Kampong Ayer -kategoriaan sidottua yleisempää paikannimeä.",
+          "evidence": {
+            "inputManifest": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/bandarseribegawan/cc-selection.json",
+            "reviewer": "job-25 independent-image-QA",
+            "reviewedAt": "2026-10-12T20:08:47.113629+00:00",
+            "visualTool": "view_image",
+            "visualDetail": "original",
+            "localOriginal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/bandarseribegawan/cc-evidence/6753dd8374b5-original.jpg",
+            "actualWidth": 6960,
+            "actualHeight": 4640,
+            "actualFormat": "JPEG",
+            "nativePixelWidth": 6960,
+            "nativePixelHeight": 4640,
+            "exifOrientation": 1,
+            "dimensionsConvention": "actualWidth/Height are correctly oriented display dimensions; native stored pixel dimensions are separately recorded",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Kampong_Setia_%27B%27_seen_from_Kampong_Pintu_Malim.jpg",
+            "savedSourcePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/lahdevarasto/2a0829dd981d96af3f87c68cc3a8a82bd6d41743fd79d573f7e752afbb4255e9.body",
+            "savedSourceSHA256": "81a62ab7b17ad76b43277d10e95c6d38b9051a5f5b8f604c4d1c4d32849c851c",
+            "authorVerified": "Pangalau",
+            "authorField": "Original Commons Author table, independently read; not inferred from uploader",
+            "licenseVerified": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "captureDate": "16 January 2025, 14:51:20",
+            "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/bandarseribegawan/sisalto.json",
+            "sourceContentSHA256": "f426a6470c585d461a553262280e38d0f2dbf7cf6cb833286edfb53ef4efa9f8",
+            "captionFi": "Kampong Ayerin rantataloja ja jokimaisemaa tammikuussa 2025.",
+            "depictedWorkLayer": "Valokuvakerros: Pangalau / CC BY-SA 4.0, Source Own work sekä alkuperäinen Author/Licensing-taulukko luettu itse. Erillinen teoskerros: joen äärellä tavallista paalutaloasutusta, käyttöön liittyviä suorakulmaisia lauta-/peltipintoja, kattoja, tukipylväitä ja kulkuväyliä; ei hallitsevaa moskeijaa, palatsia, muistomerkkiä tai erikseen tunnistettua omaperäistä julkisivuteosta. Metsä ja vesi luontoelementtejä. Arvio rajautuu tämän kuvan näkyvään ilmaisuun; rakennusten ikä tai koko kaupungin yleinen panoraamaoikeus ei ole vapautusperuste.",
+            "duplicateInCity": false,
+            "sourceRevision": 1185219456,
+            "locationEvidenceVerified": "Commons categories Kampong Ayer and Brunei River; current content explicitly places Kampong Ayer in Bandar Seri Begawan. Filename/Description sub-neighbourhood contradiction unresolved, no narrow place claim.",
+            "nativePixelViewport": {
+              "bounds": [
+                2500,
+                2450,
+                4200,
+                2850
+              ],
+              "tool": "node_repl emitImage using PIL crop in memory",
+              "purpose": "Native building/face/detail inspection only; original bytes unchanged and no crop asset saved",
+              "observation": "Actual posts, walls, roof and footways coherent; distant soft details, no clearly identifiable human facial features or independent mural/advertisement"
+            },
+            "sourceSnapshotManifestSHA": "f426a6470c585d461a553262280e38d0f2dbf7cf6cb833286edfb53ef4efa9f8",
+            "sourceSnapshotNote": "Independently read allowed-helper cached HTML has another byte SHA; actual savedSourceSHA256 recorded. Author, license and file identity independently verified."
+          }
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/bandarseribegawan/qa.json",
+            "sha256": "8491a41ea1365533f4fa87e57e5cb26ae34149fe9740c4c3863bbfaf6c187d6b"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/bandarseribegawan/illustration-qa-extra.json",
+            "sha256": "1552a32833576e78bdcab9a36c5306d605052e951f60a8ca9adaf628b9993fd3"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e10",
+        "city": "bandarseribegawan",
+        "slot": "C1",
+        "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
+        "commonsFile": "Kampong Setia 'B' seen from Kampong Pintu Malim.jpg",
+        "sha256": "e72b0fb1a9eb8d84c26007af2c7d26420c452ddc15a19b500acf4805d740ef89",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Kampong_Setia_%27B%27_seen_from_Kampong_Pintu_Malim.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e0/Kampong_Setia_%27B%27_seen_from_Kampong_Pintu_Malim.jpg",
+        "author": "Pangalau",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "width": 6960,
+        "height": 4640,
+        "originalSHA256": "e72b0fb1a9eb8d84c26007af2c7d26420c452ddc15a19b500acf4805d740ef89",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e10/bandarseribegawan/c1-e72b0fb1a9eb8d84c260.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e10/bandarseribegawan/c1-e72b0fb1a9eb8d84c260.jpg",
+        "bytes": 9611145,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T20:09:11.131420+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "Kampong Setia 'B' seen from Kampong Pintu Malim.jpg",
+        "lahde": "Pangalau, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Kampong Ayerin rantataloja ja jokimaisemaa tammikuussa 2025.",
+        "lyhyt": "Kampong Ayerin rantataloja ja jokimaisemaa tammikuussa 2025."
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Pangalau, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Kampong Ayerin rantataloja ja jokimaisemaa tammikuussa 2025.",
+        "lyhyt": "Kampong Ayerin rantataloja ja jokimaisemaa tammikuussa 2025.",
+        "tiedosto": "Kampong Setia 'B' seen from Kampong Pintu Malim.jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "ff17248106009a5fb46d53cd8d8ea260be13e6d8786cab64d969ab17df969314",
+      "targetAfterSHA256": "f0f8986516c3557d8eb48457c1d5b84fb03b10e3cc3caec3641b908ff320a338",
+      "contextAfterSHA256": "f0f8986516c3557d8eb48457c1d5b84fb03b10e3cc3caec3641b908ff320a338"
+    }
+  ],
+  "runtimeIntegrationPending": true,
+  "ownerAcceptedNotImpliedByAuthorization": true,
+  "gameIntegrated": false
+}
