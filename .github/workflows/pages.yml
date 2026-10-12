@@ -60,6 +60,8 @@ jobs:
           # tarvitaan projektisivulle.
           cp -r css js assets docs projekti _site/
           cp dist/matkakirja.html _site/dist/
+          # Beta-testaajien linkki matkakirja.app/beta (natiivi juna 184, omistaja 12.10.): ohjaa matkakirja://beta-skeemaan.
+          mkdir -p _site/beta && cp beta/index.html _site/beta/
 
       - uses: actions/upload-pages-artifact@v3
         with:
