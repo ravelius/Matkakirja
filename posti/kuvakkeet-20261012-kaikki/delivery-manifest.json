@@ -1,0 +1,394 @@
+{
+  "taskNumber": 92,
+  "taskId": "kaikki-kuvakkeet-20261012",
+  "sourceCommit": "68bdcb0ed570b9ff81140fcf3c842acf4172e815",
+  "sourceBlob": "2044a869494ab6e409d6be90183da4517e422acb",
+  "sourceReadInFull": true,
+  "requestedIcons": 64,
+  "deliveredCandidateCount": 27,
+  "completedBatchNumbers": [
+    1,
+    2
+  ],
+  "names": [
+    "ratas",
+    "valikko",
+    "mikseri",
+    "kulma-oikea",
+    "kulma-vasen",
+    "kulma-alas",
+    "kulma-ylos",
+    "nuoli-oikea",
+    "nuoli-vasen",
+    "nuoli-ylos",
+    "vakaset-ylos",
+    "kokoruutu",
+    "tauko",
+    "toista",
+    "lopeta",
+    "seuraava-kohde",
+    "lisaa",
+    "vahenna",
+    "tieto",
+    "plus-ympyra",
+    "tahtain",
+    "tavara",
+    "matkamuisto",
+    "tallenna",
+    "lataa",
+    "laajenna-kolmio",
+    "kausi-piste"
+  ],
+  "rootIndependentVisualQAComplete": true,
+  "technicalQAComplete": true,
+  "ownerApprovalRequired": false,
+  "originalSelfAuthoredVectors": true,
+  "externalIconLibrariesUsed": false,
+  "ImageGenCalls": 0,
+  "preservePrior24AndOld42": true,
+  "files": [
+    {
+      "path": "._bodies.json",
+      "bytes": 4096,
+      "sha256": "78fee7a91b5e89ae2a0a644f4ba09dd0a51a1ee3faa354e1d376ca16ed42a05f"
+    },
+    {
+      "path": "._ikonit-viiva-sisallot.cs.txt",
+      "bytes": 4096,
+      "sha256": "78fee7a91b5e89ae2a0a644f4ba09dd0a51a1ee3faa354e1d376ca16ed42a05f"
+    },
+    {
+      "path": "._kausi-piste.svg",
+      "bytes": 4096,
+      "sha256": "78fee7a91b5e89ae2a0a644f4ba09dd0a51a1ee3faa354e1d376ca16ed42a05f"
+    },
+    {
+      "path": "._kokoruutu.svg",
+      "bytes": 4096,
+      "sha256": "78fee7a91b5e89ae2a0a644f4ba09dd0a51a1ee3faa354e1d376ca16ed42a05f"
+    },
+    {
+      "path": "._kulma-alas.svg",
+      "bytes": 4096,
+      "sha256": "78fee7a91b5e89ae2a0a644f4ba09dd0a51a1ee3faa354e1d376ca16ed42a05f"
+    },
+    {
+      "path": "._kulma-oikea.svg",
+      "bytes": 4096,
+      "sha256": "78fee7a91b5e89ae2a0a644f4ba09dd0a51a1ee3faa354e1d376ca16ed42a05f"
+    },
+    {
+      "path": "._kulma-vasen.svg",
+      "bytes": 4096,
+      "sha256": "78fee7a91b5e89ae2a0a644f4ba09dd0a51a1ee3faa354e1d376ca16ed42a05f"
+    },
+    {
+      "path": "._kulma-ylos.svg",
+      "bytes": 4096,
+      "sha256": "78fee7a91b5e89ae2a0a644f4ba09dd0a51a1ee3faa354e1d376ca16ed42a05f"
+    },
+    {
+      "path": "._laajenna-kolmio.svg",
+      "bytes": 4096,
+      "sha256": "78fee7a91b5e89ae2a0a644f4ba09dd0a51a1ee3faa354e1d376ca16ed42a05f"
+    },
+    {
+      "path": "._lataa.svg",
+      "bytes": 4096,
+      "sha256": "78fee7a91b5e89ae2a0a644f4ba09dd0a51a1ee3faa354e1d376ca16ed42a05f"
+    },
+    {
+      "path": "._lisaa.svg",
+      "bytes": 4096,
+      "sha256": "78fee7a91b5e89ae2a0a644f4ba09dd0a51a1ee3faa354e1d376ca16ed42a05f"
+    },
+    {
+      "path": "._lopeta.svg",
+      "bytes": 4096,
+      "sha256": "78fee7a91b5e89ae2a0a644f4ba09dd0a51a1ee3faa354e1d376ca16ed42a05f"
+    },
+    {
+      "path": "._matkamuisto.svg",
+      "bytes": 4096,
+      "sha256": "78fee7a91b5e89ae2a0a644f4ba09dd0a51a1ee3faa354e1d376ca16ed42a05f"
+    },
+    {
+      "path": "._mikseri.svg",
+      "bytes": 4096,
+      "sha256": "78fee7a91b5e89ae2a0a644f4ba09dd0a51a1ee3faa354e1d376ca16ed42a05f"
+    },
+    {
+      "path": "._nuoli-oikea.svg",
+      "bytes": 4096,
+      "sha256": "78fee7a91b5e89ae2a0a644f4ba09dd0a51a1ee3faa354e1d376ca16ed42a05f"
+    },
+    {
+      "path": "._nuoli-vasen.svg",
+      "bytes": 4096,
+      "sha256": "78fee7a91b5e89ae2a0a644f4ba09dd0a51a1ee3faa354e1d376ca16ed42a05f"
+    },
+    {
+      "path": "._nuoli-ylos.svg",
+      "bytes": 4096,
+      "sha256": "78fee7a91b5e89ae2a0a644f4ba09dd0a51a1ee3faa354e1d376ca16ed42a05f"
+    },
+    {
+      "path": "._order.json",
+      "bytes": 4096,
+      "sha256": "78fee7a91b5e89ae2a0a644f4ba09dd0a51a1ee3faa354e1d376ca16ed42a05f"
+    },
+    {
+      "path": "._plus-ympyra.svg",
+      "bytes": 4096,
+      "sha256": "78fee7a91b5e89ae2a0a644f4ba09dd0a51a1ee3faa354e1d376ca16ed42a05f"
+    },
+    {
+      "path": "._preview-dark.png",
+      "bytes": 4096,
+      "sha256": "78fee7a91b5e89ae2a0a644f4ba09dd0a51a1ee3faa354e1d376ca16ed42a05f"
+    },
+    {
+      "path": "._preview-light.png",
+      "bytes": 4096,
+      "sha256": "78fee7a91b5e89ae2a0a644f4ba09dd0a51a1ee3faa354e1d376ca16ed42a05f"
+    },
+    {
+      "path": "._qa.json",
+      "bytes": 4096,
+      "sha256": "78fee7a91b5e89ae2a0a644f4ba09dd0a51a1ee3faa354e1d376ca16ed42a05f"
+    },
+    {
+      "path": "._raster-qa.json",
+      "bytes": 4096,
+      "sha256": "78fee7a91b5e89ae2a0a644f4ba09dd0a51a1ee3faa354e1d376ca16ed42a05f"
+    },
+    {
+      "path": "._ratas.svg",
+      "bytes": 4096,
+      "sha256": "78fee7a91b5e89ae2a0a644f4ba09dd0a51a1ee3faa354e1d376ca16ed42a05f"
+    },
+    {
+      "path": "._seuraava-kohde.svg",
+      "bytes": 4096,
+      "sha256": "78fee7a91b5e89ae2a0a644f4ba09dd0a51a1ee3faa354e1d376ca16ed42a05f"
+    },
+    {
+      "path": "._tahtain.svg",
+      "bytes": 4096,
+      "sha256": "78fee7a91b5e89ae2a0a644f4ba09dd0a51a1ee3faa354e1d376ca16ed42a05f"
+    },
+    {
+      "path": "._tallenna.svg",
+      "bytes": 4096,
+      "sha256": "78fee7a91b5e89ae2a0a644f4ba09dd0a51a1ee3faa354e1d376ca16ed42a05f"
+    },
+    {
+      "path": "._tauko.svg",
+      "bytes": 4096,
+      "sha256": "78fee7a91b5e89ae2a0a644f4ba09dd0a51a1ee3faa354e1d376ca16ed42a05f"
+    },
+    {
+      "path": "._tavara.svg",
+      "bytes": 4096,
+      "sha256": "78fee7a91b5e89ae2a0a644f4ba09dd0a51a1ee3faa354e1d376ca16ed42a05f"
+    },
+    {
+      "path": "._tieto.svg",
+      "bytes": 4096,
+      "sha256": "78fee7a91b5e89ae2a0a644f4ba09dd0a51a1ee3faa354e1d376ca16ed42a05f"
+    },
+    {
+      "path": "._toista.svg",
+      "bytes": 4096,
+      "sha256": "78fee7a91b5e89ae2a0a644f4ba09dd0a51a1ee3faa354e1d376ca16ed42a05f"
+    },
+    {
+      "path": "._vahenna.svg",
+      "bytes": 4096,
+      "sha256": "78fee7a91b5e89ae2a0a644f4ba09dd0a51a1ee3faa354e1d376ca16ed42a05f"
+    },
+    {
+      "path": "._vakaset-ylos.svg",
+      "bytes": 4096,
+      "sha256": "78fee7a91b5e89ae2a0a644f4ba09dd0a51a1ee3faa354e1d376ca16ed42a05f"
+    },
+    {
+      "path": "._valikko.svg",
+      "bytes": 4096,
+      "sha256": "78fee7a91b5e89ae2a0a644f4ba09dd0a51a1ee3faa354e1d376ca16ed42a05f"
+    },
+    {
+      "path": "bodies.json",
+      "bytes": 2833,
+      "sha256": "79327b394454e768412b98180a93c9ef91b8e13424a0c80fc49fe962e57fc7a7"
+    },
+    {
+      "path": "ikonit-viiva-sisallot.cs.txt",
+      "bytes": 2992,
+      "sha256": "915203a39363905b75689dfcca31c727ae191fb813516de693f3afdbd0a4df59"
+    },
+    {
+      "path": "kausi-piste.svg",
+      "bytes": 216,
+      "sha256": "f2c848da8f925551c5a5edb2ef4c7083b117a619696130a6ca70813d8382e8fc"
+    },
+    {
+      "path": "kokoruutu.svg",
+      "bytes": 241,
+      "sha256": "5486598e80c0af2bc6c0f2165a0fa36ad37b1e6373965dbe2c87855c4e3c3874"
+    },
+    {
+      "path": "kulma-alas.svg",
+      "bytes": 203,
+      "sha256": "5b119246aef6e85d9e8e516f9a3df20c5a208e6258af1f7a6af34c99f09bc473"
+    },
+    {
+      "path": "kulma-oikea.svg",
+      "bytes": 207,
+      "sha256": "a55c53dc5f0107adec954ee3ea909f1237011f33168ab3e441fdd23138d11e00"
+    },
+    {
+      "path": "kulma-vasen.svg",
+      "bytes": 206,
+      "sha256": "8e52785fbddfbbc5aca09b0e3f1e8c68f946a32e16329b9521d48811beb55be3"
+    },
+    {
+      "path": "kulma-ylos.svg",
+      "bytes": 204,
+      "sha256": "2f0a559b0687bd32e1b546ec82bdb61e379b76b148132047c9dcb41ccdffcfab"
+    },
+    {
+      "path": "laajenna-kolmio.svg",
+      "bytes": 202,
+      "sha256": "48bc1ce757b4e2cd71c48a5404551b3a3f1af852cc412d94e177d5e5022dbffc"
+    },
+    {
+      "path": "lataa.svg",
+      "bytes": 225,
+      "sha256": "ffb890b1bb2f2b8a99663731df5cbea59af7312c429e53e9a0c01996300fbb2a"
+    },
+    {
+      "path": "lisaa.svg",
+      "bytes": 200,
+      "sha256": "34202d19d33542f0d7c684b01ef45199eb338b8ffeb3af98ba9d50d1223ab893"
+    },
+    {
+      "path": "lopeta.svg",
+      "bytes": 229,
+      "sha256": "8cb971d6fe5ff1f6e45250b6d22150776c4794cd5eafc25882f2f5f61361cd68"
+    },
+    {
+      "path": "matkamuisto.svg",
+      "bytes": 334,
+      "sha256": "cf758bc27eece28c3f72afe78ada8d1ea838934f84f69a144f3d5077d7bfdbc0"
+    },
+    {
+      "path": "mikseri.svg",
+      "bytes": 340,
+      "sha256": "34673d4ad07395396389eaf34f773b1cedc994e9bb185d9a00d00ae4b860fd22"
+    },
+    {
+      "path": "nuoli-oikea.svg",
+      "bytes": 220,
+      "sha256": "e23313b344a777d1f5d2ee4cea2de2367505686e940cd5072228773cf2d6ce06"
+    },
+    {
+      "path": "nuoli-vasen.svg",
+      "bytes": 220,
+      "sha256": "03efb1a7fca275d0d5fa2063cc3c29141da4644729c2d34eb08dde0904bb6f7b"
+    },
+    {
+      "path": "nuoli-ylos.svg",
+      "bytes": 220,
+      "sha256": "e11cf98fade4c313aceb47a37d26eaab4e0b687862447b62005f49786659cca8"
+    },
+    {
+      "path": "order.json",
+      "bytes": 401,
+      "sha256": "0ad19f09f8811c4c4d0870bb55e590ff7151f6e6176ae4ae801ec528c5deb7a4"
+    },
+    {
+      "path": "plus-ympyra.svg",
+      "bytes": 227,
+      "sha256": "efc54b7143913728e6ca0c187a75124617a9750d5dda7eed9751f06c2d0b4170"
+    },
+    {
+      "path": "preview-dark.png",
+      "bytes": 68082,
+      "sha256": "d479059531c173643bf4c53675219025c70e8a09a189d501ede6e74e693ec5e5"
+    },
+    {
+      "path": "preview-light.png",
+      "bytes": 68272,
+      "sha256": "7592a9774c9efc411a17748514bcbaee3bbc5267dd42b861fc4106e897e2f0f3"
+    },
+    {
+      "path": "qa.json",
+      "bytes": 6496,
+      "sha256": "81a4e92d0040c1dc4e2b7b2d1ac1f7d9c59d935f29a94c9f2a8938658dba33a2"
+    },
+    {
+      "path": "raster-qa.json",
+      "bytes": 42786,
+      "sha256": "7b93b25179e847f49d9f81c2de22eb06623e345ace46518ad7ab04f6056b9222"
+    },
+    {
+      "path": "ratas.svg",
+      "bytes": 710,
+      "sha256": "75060b798b97e5c0abe39eea33a24115d0837315de4abe339aa5cc532947caa1"
+    },
+    {
+      "path": "seuraava-kohde.svg",
+      "bytes": 213,
+      "sha256": "c687352accf9b369033992ec71e447238958265533b1c192cdbc4636a7a478c4"
+    },
+    {
+      "path": "tahtain.svg",
+      "bytes": 259,
+      "sha256": "c1cb4a0c56949c267bb82c5c47a2d319c00896c7d64e76d2df7f798deb96b818"
+    },
+    {
+      "path": "tallenna.svg",
+      "bytes": 243,
+      "sha256": "88cb407d795072347aac2252fbb4262a76d205d9fec5b641a9a80db550f4e11f"
+    },
+    {
+      "path": "tauko.svg",
+      "bytes": 201,
+      "sha256": "95b0312e0d21a1002f044e4080ccf2aad6103620a4b206f5b2d0c992d03c8844"
+    },
+    {
+      "path": "tavara.svg",
+      "bytes": 259,
+      "sha256": "eceeedec38401465ef6a2c17c8ef081522732234701278f9f7beb380e65297fa"
+    },
+    {
+      "path": "tieto.svg",
+      "bytes": 303,
+      "sha256": "2005b9324f2f9433d304d25f7a6b717c220b9497d0c35c0c4790c5d11d8aa264"
+    },
+    {
+      "path": "toista.svg",
+      "bytes": 205,
+      "sha256": "cf609aad31fca16597c94963e0921a47e6c5962d9c0cdf7eb1c3fadf734d14e7"
+    },
+    {
+      "path": "vahenna.svg",
+      "bytes": 190,
+      "sha256": "84332d18631f13c9bb8c75f2cc92c14f38d24bd2cd9e2e98580c7291f3c724af"
+    },
+    {
+      "path": "vakaset-ylos.svg",
+      "bytes": 232,
+      "sha256": "947c3aa69e87082fa4ed10ee6dccd5529e61b202a65112bbcd3b680d05df4c2b"
+    },
+    {
+      "path": "valikko.svg",
+      "bytes": 209,
+      "sha256": "47485d1fcb40dc88aebd0d06fa3df6f84d7e9b70adc9db3cd58b93132a688026"
+    }
+  ],
+  "author": "Codex; original vector worker-navigation/worker-details; independent QA and assembly root",
+  "gameIntegrated": false,
+  "published": false
+}

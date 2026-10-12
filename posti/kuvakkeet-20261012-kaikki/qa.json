@@ -1,0 +1,212 @@
+{
+  "checkedAt": "2026-10-12T21:02:59.808561+00:00",
+  "iconCount": 27,
+  "allPassed": true,
+  "rootIndependentVisualQAComplete": true,
+  "sizes": [
+    48,
+    24,
+    20,
+    22,
+    28
+  ],
+  "themes": [
+    "light",
+    "dark"
+  ],
+  "checks": [
+    {
+      "name": "ratas",
+      "wrapperAndElementsPassed": true,
+      "excludedOldKeys": false,
+      "bodySingleLine": true,
+      "rootVisualQA": "accepted-navigation-and-D-B-sheets-light-dark-48-24-20-22-28"
+    },
+    {
+      "name": "valikko",
+      "wrapperAndElementsPassed": true,
+      "excludedOldKeys": false,
+      "bodySingleLine": true,
+      "rootVisualQA": "accepted-navigation-and-D-B-sheets-light-dark-48-24-20-22-28"
+    },
+    {
+      "name": "mikseri",
+      "wrapperAndElementsPassed": true,
+      "excludedOldKeys": false,
+      "bodySingleLine": true,
+      "rootVisualQA": "accepted-navigation-and-D-B-sheets-light-dark-48-24-20-22-28"
+    },
+    {
+      "name": "kulma-oikea",
+      "wrapperAndElementsPassed": true,
+      "excludedOldKeys": false,
+      "bodySingleLine": true,
+      "rootVisualQA": "accepted-navigation-and-D-B-sheets-light-dark-48-24-20-22-28"
+    },
+    {
+      "name": "kulma-vasen",
+      "wrapperAndElementsPassed": true,
+      "excludedOldKeys": false,
+      "bodySingleLine": true,
+      "rootVisualQA": "accepted-navigation-and-D-B-sheets-light-dark-48-24-20-22-28"
+    },
+    {
+      "name": "kulma-alas",
+      "wrapperAndElementsPassed": true,
+      "excludedOldKeys": false,
+      "bodySingleLine": true,
+      "rootVisualQA": "accepted-navigation-and-D-B-sheets-light-dark-48-24-20-22-28"
+    },
+    {
+      "name": "kulma-ylos",
+      "wrapperAndElementsPassed": true,
+      "excludedOldKeys": false,
+      "bodySingleLine": true,
+      "rootVisualQA": "accepted-navigation-and-D-B-sheets-light-dark-48-24-20-22-28"
+    },
+    {
+      "name": "nuoli-oikea",
+      "wrapperAndElementsPassed": true,
+      "excludedOldKeys": false,
+      "bodySingleLine": true,
+      "rootVisualQA": "accepted-navigation-and-D-B-sheets-light-dark-48-24-20-22-28"
+    },
+    {
+      "name": "nuoli-vasen",
+      "wrapperAndElementsPassed": true,
+      "excludedOldKeys": false,
+      "bodySingleLine": true,
+      "rootVisualQA": "accepted-navigation-and-D-B-sheets-light-dark-48-24-20-22-28"
+    },
+    {
+      "name": "nuoli-ylos",
+      "wrapperAndElementsPassed": true,
+      "excludedOldKeys": false,
+      "bodySingleLine": true,
+      "rootVisualQA": "accepted-navigation-and-D-B-sheets-light-dark-48-24-20-22-28"
+    },
+    {
+      "name": "vakaset-ylos",
+      "wrapperAndElementsPassed": true,
+      "excludedOldKeys": false,
+      "bodySingleLine": true,
+      "rootVisualQA": "accepted-navigation-and-D-B-sheets-light-dark-48-24-20-22-28"
+    },
+    {
+      "name": "kokoruutu",
+      "wrapperAndElementsPassed": true,
+      "excludedOldKeys": false,
+      "bodySingleLine": true,
+      "rootVisualQA": "accepted-navigation-and-D-B-sheets-light-dark-48-24-20-22-28"
+    },
+    {
+      "name": "tauko",
+      "wrapperAndElementsPassed": true,
+      "excludedOldKeys": false,
+      "bodySingleLine": true,
+      "rootVisualQA": "accepted-navigation-and-D-B-sheets-light-dark-48-24-20-22-28"
+    },
+    {
+      "name": "toista",
+      "wrapperAndElementsPassed": true,
+      "excludedOldKeys": false,
+      "bodySingleLine": true,
+      "rootVisualQA": "accepted-navigation-and-D-B-sheets-light-dark-48-24-20-22-28"
+    },
+    {
+      "name": "lopeta",
+      "wrapperAndElementsPassed": true,
+      "excludedOldKeys": false,
+      "bodySingleLine": true,
+      "rootVisualQA": "accepted-navigation-and-D-B-sheets-light-dark-48-24-20-22-28"
+    },
+    {
+      "name": "seuraava-kohde",
+      "wrapperAndElementsPassed": true,
+      "excludedOldKeys": false,
+      "bodySingleLine": true,
+      "rootVisualQA": "accepted-navigation-and-D-B-sheets-light-dark-48-24-20-22-28"
+    },
+    {
+      "name": "lisaa",
+      "wrapperAndElementsPassed": true,
+      "excludedOldKeys": false,
+      "bodySingleLine": true,
+      "rootVisualQA": "accepted-navigation-and-D-B-sheets-light-dark-48-24-20-22-28"
+    },
+    {
+      "name": "vahenna",
+      "wrapperAndElementsPassed": true,
+      "excludedOldKeys": false,
+      "bodySingleLine": true,
+      "rootVisualQA": "accepted-navigation-and-D-B-sheets-light-dark-48-24-20-22-28"
+    },
+    {
+      "name": "tieto",
+      "wrapperAndElementsPassed": true,
+      "excludedOldKeys": false,
+      "bodySingleLine": true,
+      "rootVisualQA": "accepted-navigation-and-D-B-sheets-light-dark-48-24-20-22-28"
+    },
+    {
+      "name": "plus-ympyra",
+      "wrapperAndElementsPassed": true,
+      "excludedOldKeys": false,
+      "bodySingleLine": true,
+      "rootVisualQA": "accepted-navigation-and-D-B-sheets-light-dark-48-24-20-22-28"
+    },
+    {
+      "name": "tahtain",
+      "wrapperAndElementsPassed": true,
+      "excludedOldKeys": false,
+      "bodySingleLine": true,
+      "rootVisualQA": "accepted-navigation-and-D-B-sheets-light-dark-48-24-20-22-28"
+    },
+    {
+      "name": "tavara",
+      "wrapperAndElementsPassed": true,
+      "excludedOldKeys": false,
+      "bodySingleLine": true,
+      "rootVisualQA": "accepted-navigation-and-D-B-sheets-light-dark-48-24-20-22-28"
+    },
+    {
+      "name": "matkamuisto",
+      "wrapperAndElementsPassed": true,
+      "excludedOldKeys": false,
+      "bodySingleLine": true,
+      "rootVisualQA": "accepted-navigation-and-D-B-sheets-light-dark-48-24-20-22-28"
+    },
+    {
+      "name": "tallenna",
+      "wrapperAndElementsPassed": true,
+      "excludedOldKeys": false,
+      "bodySingleLine": true,
+      "rootVisualQA": "accepted-navigation-and-D-B-sheets-light-dark-48-24-20-22-28"
+    },
+    {
+      "name": "lataa",
+      "wrapperAndElementsPassed": true,
+      "excludedOldKeys": false,
+      "bodySingleLine": true,
+      "rootVisualQA": "accepted-navigation-and-D-B-sheets-light-dark-48-24-20-22-28"
+    },
+    {
+      "name": "laajenna-kolmio",
+      "wrapperAndElementsPassed": true,
+      "excludedOldKeys": false,
+      "bodySingleLine": true,
+      "rootVisualQA": "accepted-navigation-and-D-B-sheets-light-dark-48-24-20-22-28"
+    },
+    {
+      "name": "kausi-piste",
+      "wrapperAndElementsPassed": true,
+      "excludedOldKeys": false,
+      "bodySingleLine": true,
+      "rootVisualQA": "accepted-navigation-and-D-B-sheets-light-dark-48-24-20-22-28"
+    }
+  ],
+  "externalLibrariesCopied": false,
+  "ImageGenCalls": 0,
+  "ownerApprovalRequired": false,
+  "gameIntegrated": false
+}

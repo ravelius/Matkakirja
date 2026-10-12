@@ -1,0 +1,2177 @@
+{
+  "icons": 27,
+  "sizes": [
+    48,
+    24,
+    20,
+    22,
+    28
+  ],
+  "themes": [
+    "light",
+    "dark"
+  ],
+  "allPassed": true,
+  "checks": [
+    {
+      "name": "ratas",
+      "theme": "light",
+      "size": 48,
+      "nonzeroAlphaPixels": 780,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "ratas",
+      "theme": "light",
+      "size": 24,
+      "nonzeroAlphaPixels": 240,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "ratas",
+      "theme": "light",
+      "size": 20,
+      "nonzeroAlphaPixels": 176,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "ratas",
+      "theme": "light",
+      "size": 22,
+      "nonzeroAlphaPixels": 216,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "ratas",
+      "theme": "light",
+      "size": 28,
+      "nonzeroAlphaPixels": 316,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "valikko",
+      "theme": "light",
+      "size": 48,
+      "nonzeroAlphaPixels": 408,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "valikko",
+      "theme": "light",
+      "size": 24,
+      "nonzeroAlphaPixels": 108,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "valikko",
+      "theme": "light",
+      "size": 20,
+      "nonzeroAlphaPixels": 84,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "valikko",
+      "theme": "light",
+      "size": 22,
+      "nonzeroAlphaPixels": 128,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "valikko",
+      "theme": "light",
+      "size": 28,
+      "nonzeroAlphaPixels": 120,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "mikseri",
+      "theme": "light",
+      "size": 48,
+      "nonzeroAlphaPixels": 582,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "mikseri",
+      "theme": "light",
+      "size": 24,
+      "nonzeroAlphaPixels": 164,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "mikseri",
+      "theme": "light",
+      "size": 20,
+      "nonzeroAlphaPixels": 132,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "mikseri",
+      "theme": "light",
+      "size": 22,
+      "nonzeroAlphaPixels": 168,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "mikseri",
+      "theme": "light",
+      "size": 28,
+      "nonzeroAlphaPixels": 282,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "kulma-oikea",
+      "theme": "light",
+      "size": 48,
+      "nonzeroAlphaPixels": 208,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "kulma-oikea",
+      "theme": "light",
+      "size": 24,
+      "nonzeroAlphaPixels": 72,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "kulma-oikea",
+      "theme": "light",
+      "size": 20,
+      "nonzeroAlphaPixels": 50,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "kulma-oikea",
+      "theme": "light",
+      "size": 22,
+      "nonzeroAlphaPixels": 57,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "kulma-oikea",
+      "theme": "light",
+      "size": 28,
+      "nonzeroAlphaPixels": 80,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "kulma-vasen",
+      "theme": "light",
+      "size": 48,
+      "nonzeroAlphaPixels": 208,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "kulma-vasen",
+      "theme": "light",
+      "size": 24,
+      "nonzeroAlphaPixels": 72,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "kulma-vasen",
+      "theme": "light",
+      "size": 20,
+      "nonzeroAlphaPixels": 50,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "kulma-vasen",
+      "theme": "light",
+      "size": 22,
+      "nonzeroAlphaPixels": 56,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "kulma-vasen",
+      "theme": "light",
+      "size": 28,
+      "nonzeroAlphaPixels": 80,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "kulma-alas",
+      "theme": "light",
+      "size": 48,
+      "nonzeroAlphaPixels": 202,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "kulma-alas",
+      "theme": "light",
+      "size": 24,
+      "nonzeroAlphaPixels": 62,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "kulma-alas",
+      "theme": "light",
+      "size": 20,
+      "nonzeroAlphaPixels": 50,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "kulma-alas",
+      "theme": "light",
+      "size": 22,
+      "nonzeroAlphaPixels": 56,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "kulma-alas",
+      "theme": "light",
+      "size": 28,
+      "nonzeroAlphaPixels": 88,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "kulma-ylos",
+      "theme": "light",
+      "size": 48,
+      "nonzeroAlphaPixels": 202,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "kulma-ylos",
+      "theme": "light",
+      "size": 24,
+      "nonzeroAlphaPixels": 62,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "kulma-ylos",
+      "theme": "light",
+      "size": 20,
+      "nonzeroAlphaPixels": 50,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "kulma-ylos",
+      "theme": "light",
+      "size": 22,
+      "nonzeroAlphaPixels": 56,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "kulma-ylos",
+      "theme": "light",
+      "size": 28,
+      "nonzeroAlphaPixels": 88,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "nuoli-oikea",
+      "theme": "light",
+      "size": 48,
+      "nonzeroAlphaPixels": 304,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "nuoli-oikea",
+      "theme": "light",
+      "size": 24,
+      "nonzeroAlphaPixels": 86,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "nuoli-oikea",
+      "theme": "light",
+      "size": 20,
+      "nonzeroAlphaPixels": 66,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "nuoli-oikea",
+      "theme": "light",
+      "size": 22,
+      "nonzeroAlphaPixels": 74,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "nuoli-oikea",
+      "theme": "light",
+      "size": 28,
+      "nonzeroAlphaPixels": 114,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "nuoli-vasen",
+      "theme": "light",
+      "size": 48,
+      "nonzeroAlphaPixels": 304,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "nuoli-vasen",
+      "theme": "light",
+      "size": 24,
+      "nonzeroAlphaPixels": 86,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "nuoli-vasen",
+      "theme": "light",
+      "size": 20,
+      "nonzeroAlphaPixels": 66,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "nuoli-vasen",
+      "theme": "light",
+      "size": 22,
+      "nonzeroAlphaPixels": 74,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "nuoli-vasen",
+      "theme": "light",
+      "size": 28,
+      "nonzeroAlphaPixels": 114,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "nuoli-ylos",
+      "theme": "light",
+      "size": 48,
+      "nonzeroAlphaPixels": 304,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "nuoli-ylos",
+      "theme": "light",
+      "size": 24,
+      "nonzeroAlphaPixels": 86,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "nuoli-ylos",
+      "theme": "light",
+      "size": 20,
+      "nonzeroAlphaPixels": 66,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "nuoli-ylos",
+      "theme": "light",
+      "size": 22,
+      "nonzeroAlphaPixels": 74,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "nuoli-ylos",
+      "theme": "light",
+      "size": 28,
+      "nonzeroAlphaPixels": 142,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "vakaset-ylos",
+      "theme": "light",
+      "size": 48,
+      "nonzeroAlphaPixels": 344,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "vakaset-ylos",
+      "theme": "light",
+      "size": 24,
+      "nonzeroAlphaPixels": 120,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "vakaset-ylos",
+      "theme": "light",
+      "size": 20,
+      "nonzeroAlphaPixels": 98,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "vakaset-ylos",
+      "theme": "light",
+      "size": 22,
+      "nonzeroAlphaPixels": 108,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "vakaset-ylos",
+      "theme": "light",
+      "size": 28,
+      "nonzeroAlphaPixels": 152,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "kokoruutu",
+      "theme": "light",
+      "size": 48,
+      "nonzeroAlphaPixels": 366,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "kokoruutu",
+      "theme": "light",
+      "size": 24,
+      "nonzeroAlphaPixels": 114,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "kokoruutu",
+      "theme": "light",
+      "size": 20,
+      "nonzeroAlphaPixels": 90,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "kokoruutu",
+      "theme": "light",
+      "size": 22,
+      "nonzeroAlphaPixels": 124,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "kokoruutu",
+      "theme": "light",
+      "size": 28,
+      "nonzeroAlphaPixels": 160,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "tauko",
+      "theme": "light",
+      "size": 48,
+      "nonzeroAlphaPixels": 312,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "tauko",
+      "theme": "light",
+      "size": 24,
+      "nonzeroAlphaPixels": 96,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "tauko",
+      "theme": "light",
+      "size": 20,
+      "nonzeroAlphaPixels": 56,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "tauko",
+      "theme": "light",
+      "size": 22,
+      "nonzeroAlphaPixels": 92,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "tauko",
+      "theme": "light",
+      "size": 28,
+      "nonzeroAlphaPixels": 116,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "toista",
+      "theme": "light",
+      "size": 48,
+      "nonzeroAlphaPixels": 378,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "toista",
+      "theme": "light",
+      "size": 24,
+      "nonzeroAlphaPixels": 116,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "toista",
+      "theme": "light",
+      "size": 20,
+      "nonzeroAlphaPixels": 84,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "toista",
+      "theme": "light",
+      "size": 22,
+      "nonzeroAlphaPixels": 110,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "toista",
+      "theme": "light",
+      "size": 28,
+      "nonzeroAlphaPixels": 154,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "lopeta",
+      "theme": "light",
+      "size": 48,
+      "nonzeroAlphaPixels": 508,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "lopeta",
+      "theme": "light",
+      "size": 24,
+      "nonzeroAlphaPixels": 152,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "lopeta",
+      "theme": "light",
+      "size": 20,
+      "nonzeroAlphaPixels": 128,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "lopeta",
+      "theme": "light",
+      "size": 22,
+      "nonzeroAlphaPixels": 96,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "lopeta",
+      "theme": "light",
+      "size": 28,
+      "nonzeroAlphaPixels": 180,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "seuraava-kohde",
+      "theme": "light",
+      "size": 48,
+      "nonzeroAlphaPixels": 492,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "seuraava-kohde",
+      "theme": "light",
+      "size": 24,
+      "nonzeroAlphaPixels": 142,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "seuraava-kohde",
+      "theme": "light",
+      "size": 20,
+      "nonzeroAlphaPixels": 114,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "seuraava-kohde",
+      "theme": "light",
+      "size": 22,
+      "nonzeroAlphaPixels": 134,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "seuraava-kohde",
+      "theme": "light",
+      "size": 28,
+      "nonzeroAlphaPixels": 198,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "lisaa",
+      "theme": "light",
+      "size": 48,
+      "nonzeroAlphaPixels": 256,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "lisaa",
+      "theme": "light",
+      "size": 24,
+      "nonzeroAlphaPixels": 68,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "lisaa",
+      "theme": "light",
+      "size": 20,
+      "nonzeroAlphaPixels": 52,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "lisaa",
+      "theme": "light",
+      "size": 22,
+      "nonzeroAlphaPixels": 60,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "lisaa",
+      "theme": "light",
+      "size": 28,
+      "nonzeroAlphaPixels": 108,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "vahenna",
+      "theme": "light",
+      "size": 48,
+      "nonzeroAlphaPixels": 136,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "vahenna",
+      "theme": "light",
+      "size": 24,
+      "nonzeroAlphaPixels": 36,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "vahenna",
+      "theme": "light",
+      "size": 20,
+      "nonzeroAlphaPixels": 28,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "vahenna",
+      "theme": "light",
+      "size": 22,
+      "nonzeroAlphaPixels": 32,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "vahenna",
+      "theme": "light",
+      "size": 28,
+      "nonzeroAlphaPixels": 40,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "tieto",
+      "theme": "light",
+      "size": 48,
+      "nonzeroAlphaPixels": 628,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "tieto",
+      "theme": "light",
+      "size": 24,
+      "nonzeroAlphaPixels": 198,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "tieto",
+      "theme": "light",
+      "size": 20,
+      "nonzeroAlphaPixels": 136,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "tieto",
+      "theme": "light",
+      "size": 22,
+      "nonzeroAlphaPixels": 179,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "tieto",
+      "theme": "light",
+      "size": 28,
+      "nonzeroAlphaPixels": 266,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "plus-ympyra",
+      "theme": "light",
+      "size": 48,
+      "nonzeroAlphaPixels": 648,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "plus-ympyra",
+      "theme": "light",
+      "size": 24,
+      "nonzeroAlphaPixels": 196,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "plus-ympyra",
+      "theme": "light",
+      "size": 20,
+      "nonzeroAlphaPixels": 148,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "plus-ympyra",
+      "theme": "light",
+      "size": 22,
+      "nonzeroAlphaPixels": 181,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "plus-ympyra",
+      "theme": "light",
+      "size": 28,
+      "nonzeroAlphaPixels": 268,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "tahtain",
+      "theme": "light",
+      "size": 48,
+      "nonzeroAlphaPixels": 416,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "tahtain",
+      "theme": "light",
+      "size": 24,
+      "nonzeroAlphaPixels": 132,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "tahtain",
+      "theme": "light",
+      "size": 20,
+      "nonzeroAlphaPixels": 96,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "tahtain",
+      "theme": "light",
+      "size": 22,
+      "nonzeroAlphaPixels": 112,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "tahtain",
+      "theme": "light",
+      "size": 28,
+      "nonzeroAlphaPixels": 164,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "tavara",
+      "theme": "light",
+      "size": 48,
+      "nonzeroAlphaPixels": 700,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "tavara",
+      "theme": "light",
+      "size": 24,
+      "nonzeroAlphaPixels": 222,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "tavara",
+      "theme": "light",
+      "size": 20,
+      "nonzeroAlphaPixels": 152,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "tavara",
+      "theme": "light",
+      "size": 22,
+      "nonzeroAlphaPixels": 188,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "tavara",
+      "theme": "light",
+      "size": 28,
+      "nonzeroAlphaPixels": 290,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "matkamuisto",
+      "theme": "light",
+      "size": 48,
+      "nonzeroAlphaPixels": 740,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "matkamuisto",
+      "theme": "light",
+      "size": 24,
+      "nonzeroAlphaPixels": 254,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "matkamuisto",
+      "theme": "light",
+      "size": 20,
+      "nonzeroAlphaPixels": 196,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "matkamuisto",
+      "theme": "light",
+      "size": 22,
+      "nonzeroAlphaPixels": 192,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "matkamuisto",
+      "theme": "light",
+      "size": 28,
+      "nonzeroAlphaPixels": 310,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "tallenna",
+      "theme": "light",
+      "size": 48,
+      "nonzeroAlphaPixels": 756,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "tallenna",
+      "theme": "light",
+      "size": 24,
+      "nonzeroAlphaPixels": 226,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "tallenna",
+      "theme": "light",
+      "size": 20,
+      "nonzeroAlphaPixels": 192,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "tallenna",
+      "theme": "light",
+      "size": 22,
+      "nonzeroAlphaPixels": 219,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "tallenna",
+      "theme": "light",
+      "size": 28,
+      "nonzeroAlphaPixels": 324,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "lataa",
+      "theme": "light",
+      "size": 48,
+      "nonzeroAlphaPixels": 412,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "lataa",
+      "theme": "light",
+      "size": 24,
+      "nonzeroAlphaPixels": 124,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "lataa",
+      "theme": "light",
+      "size": 20,
+      "nonzeroAlphaPixels": 100,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "lataa",
+      "theme": "light",
+      "size": 22,
+      "nonzeroAlphaPixels": 120,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "lataa",
+      "theme": "light",
+      "size": 28,
+      "nonzeroAlphaPixels": 182,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "laajenna-kolmio",
+      "theme": "light",
+      "size": 48,
+      "nonzeroAlphaPixels": 304,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "laajenna-kolmio",
+      "theme": "light",
+      "size": 24,
+      "nonzeroAlphaPixels": 92,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "laajenna-kolmio",
+      "theme": "light",
+      "size": 20,
+      "nonzeroAlphaPixels": 64,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "laajenna-kolmio",
+      "theme": "light",
+      "size": 22,
+      "nonzeroAlphaPixels": 82,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "laajenna-kolmio",
+      "theme": "light",
+      "size": 28,
+      "nonzeroAlphaPixels": 116,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "kausi-piste",
+      "theme": "light",
+      "size": 48,
+      "nonzeroAlphaPixels": 120,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "kausi-piste",
+      "theme": "light",
+      "size": 24,
+      "nonzeroAlphaPixels": 32,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "kausi-piste",
+      "theme": "light",
+      "size": 20,
+      "nonzeroAlphaPixels": 32,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "kausi-piste",
+      "theme": "light",
+      "size": 22,
+      "nonzeroAlphaPixels": 32,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "kausi-piste",
+      "theme": "light",
+      "size": 28,
+      "nonzeroAlphaPixels": 49,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "ratas",
+      "theme": "dark",
+      "size": 48,
+      "nonzeroAlphaPixels": 780,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "ratas",
+      "theme": "dark",
+      "size": 24,
+      "nonzeroAlphaPixels": 240,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "ratas",
+      "theme": "dark",
+      "size": 20,
+      "nonzeroAlphaPixels": 176,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "ratas",
+      "theme": "dark",
+      "size": 22,
+      "nonzeroAlphaPixels": 216,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "ratas",
+      "theme": "dark",
+      "size": 28,
+      "nonzeroAlphaPixels": 316,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "valikko",
+      "theme": "dark",
+      "size": 48,
+      "nonzeroAlphaPixels": 408,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "valikko",
+      "theme": "dark",
+      "size": 24,
+      "nonzeroAlphaPixels": 108,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "valikko",
+      "theme": "dark",
+      "size": 20,
+      "nonzeroAlphaPixels": 84,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "valikko",
+      "theme": "dark",
+      "size": 22,
+      "nonzeroAlphaPixels": 128,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "valikko",
+      "theme": "dark",
+      "size": 28,
+      "nonzeroAlphaPixels": 120,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "mikseri",
+      "theme": "dark",
+      "size": 48,
+      "nonzeroAlphaPixels": 582,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "mikseri",
+      "theme": "dark",
+      "size": 24,
+      "nonzeroAlphaPixels": 164,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "mikseri",
+      "theme": "dark",
+      "size": 20,
+      "nonzeroAlphaPixels": 132,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "mikseri",
+      "theme": "dark",
+      "size": 22,
+      "nonzeroAlphaPixels": 168,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "mikseri",
+      "theme": "dark",
+      "size": 28,
+      "nonzeroAlphaPixels": 282,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "kulma-oikea",
+      "theme": "dark",
+      "size": 48,
+      "nonzeroAlphaPixels": 208,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "kulma-oikea",
+      "theme": "dark",
+      "size": 24,
+      "nonzeroAlphaPixels": 72,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "kulma-oikea",
+      "theme": "dark",
+      "size": 20,
+      "nonzeroAlphaPixels": 50,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "kulma-oikea",
+      "theme": "dark",
+      "size": 22,
+      "nonzeroAlphaPixels": 57,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "kulma-oikea",
+      "theme": "dark",
+      "size": 28,
+      "nonzeroAlphaPixels": 80,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "kulma-vasen",
+      "theme": "dark",
+      "size": 48,
+      "nonzeroAlphaPixels": 208,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "kulma-vasen",
+      "theme": "dark",
+      "size": 24,
+      "nonzeroAlphaPixels": 72,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "kulma-vasen",
+      "theme": "dark",
+      "size": 20,
+      "nonzeroAlphaPixels": 50,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "kulma-vasen",
+      "theme": "dark",
+      "size": 22,
+      "nonzeroAlphaPixels": 56,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "kulma-vasen",
+      "theme": "dark",
+      "size": 28,
+      "nonzeroAlphaPixels": 80,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "kulma-alas",
+      "theme": "dark",
+      "size": 48,
+      "nonzeroAlphaPixels": 202,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "kulma-alas",
+      "theme": "dark",
+      "size": 24,
+      "nonzeroAlphaPixels": 62,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "kulma-alas",
+      "theme": "dark",
+      "size": 20,
+      "nonzeroAlphaPixels": 50,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "kulma-alas",
+      "theme": "dark",
+      "size": 22,
+      "nonzeroAlphaPixels": 56,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "kulma-alas",
+      "theme": "dark",
+      "size": 28,
+      "nonzeroAlphaPixels": 88,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "kulma-ylos",
+      "theme": "dark",
+      "size": 48,
+      "nonzeroAlphaPixels": 202,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "kulma-ylos",
+      "theme": "dark",
+      "size": 24,
+      "nonzeroAlphaPixels": 62,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "kulma-ylos",
+      "theme": "dark",
+      "size": 20,
+      "nonzeroAlphaPixels": 50,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "kulma-ylos",
+      "theme": "dark",
+      "size": 22,
+      "nonzeroAlphaPixels": 56,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "kulma-ylos",
+      "theme": "dark",
+      "size": 28,
+      "nonzeroAlphaPixels": 88,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "nuoli-oikea",
+      "theme": "dark",
+      "size": 48,
+      "nonzeroAlphaPixels": 304,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "nuoli-oikea",
+      "theme": "dark",
+      "size": 24,
+      "nonzeroAlphaPixels": 86,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "nuoli-oikea",
+      "theme": "dark",
+      "size": 20,
+      "nonzeroAlphaPixels": 66,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "nuoli-oikea",
+      "theme": "dark",
+      "size": 22,
+      "nonzeroAlphaPixels": 74,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "nuoli-oikea",
+      "theme": "dark",
+      "size": 28,
+      "nonzeroAlphaPixels": 114,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "nuoli-vasen",
+      "theme": "dark",
+      "size": 48,
+      "nonzeroAlphaPixels": 304,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "nuoli-vasen",
+      "theme": "dark",
+      "size": 24,
+      "nonzeroAlphaPixels": 86,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "nuoli-vasen",
+      "theme": "dark",
+      "size": 20,
+      "nonzeroAlphaPixels": 66,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "nuoli-vasen",
+      "theme": "dark",
+      "size": 22,
+      "nonzeroAlphaPixels": 74,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "nuoli-vasen",
+      "theme": "dark",
+      "size": 28,
+      "nonzeroAlphaPixels": 114,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "nuoli-ylos",
+      "theme": "dark",
+      "size": 48,
+      "nonzeroAlphaPixels": 304,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "nuoli-ylos",
+      "theme": "dark",
+      "size": 24,
+      "nonzeroAlphaPixels": 86,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "nuoli-ylos",
+      "theme": "dark",
+      "size": 20,
+      "nonzeroAlphaPixels": 66,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "nuoli-ylos",
+      "theme": "dark",
+      "size": 22,
+      "nonzeroAlphaPixels": 74,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "nuoli-ylos",
+      "theme": "dark",
+      "size": 28,
+      "nonzeroAlphaPixels": 142,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "vakaset-ylos",
+      "theme": "dark",
+      "size": 48,
+      "nonzeroAlphaPixels": 344,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "vakaset-ylos",
+      "theme": "dark",
+      "size": 24,
+      "nonzeroAlphaPixels": 120,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "vakaset-ylos",
+      "theme": "dark",
+      "size": 20,
+      "nonzeroAlphaPixels": 98,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "vakaset-ylos",
+      "theme": "dark",
+      "size": 22,
+      "nonzeroAlphaPixels": 108,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "vakaset-ylos",
+      "theme": "dark",
+      "size": 28,
+      "nonzeroAlphaPixels": 152,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "kokoruutu",
+      "theme": "dark",
+      "size": 48,
+      "nonzeroAlphaPixels": 366,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "kokoruutu",
+      "theme": "dark",
+      "size": 24,
+      "nonzeroAlphaPixels": 114,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "kokoruutu",
+      "theme": "dark",
+      "size": 20,
+      "nonzeroAlphaPixels": 90,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "kokoruutu",
+      "theme": "dark",
+      "size": 22,
+      "nonzeroAlphaPixels": 124,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "kokoruutu",
+      "theme": "dark",
+      "size": 28,
+      "nonzeroAlphaPixels": 160,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "tauko",
+      "theme": "dark",
+      "size": 48,
+      "nonzeroAlphaPixels": 312,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "tauko",
+      "theme": "dark",
+      "size": 24,
+      "nonzeroAlphaPixels": 96,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "tauko",
+      "theme": "dark",
+      "size": 20,
+      "nonzeroAlphaPixels": 56,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "tauko",
+      "theme": "dark",
+      "size": 22,
+      "nonzeroAlphaPixels": 92,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "tauko",
+      "theme": "dark",
+      "size": 28,
+      "nonzeroAlphaPixels": 116,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "toista",
+      "theme": "dark",
+      "size": 48,
+      "nonzeroAlphaPixels": 378,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "toista",
+      "theme": "dark",
+      "size": 24,
+      "nonzeroAlphaPixels": 116,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "toista",
+      "theme": "dark",
+      "size": 20,
+      "nonzeroAlphaPixels": 84,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "toista",
+      "theme": "dark",
+      "size": 22,
+      "nonzeroAlphaPixels": 110,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "toista",
+      "theme": "dark",
+      "size": 28,
+      "nonzeroAlphaPixels": 154,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "lopeta",
+      "theme": "dark",
+      "size": 48,
+      "nonzeroAlphaPixels": 508,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "lopeta",
+      "theme": "dark",
+      "size": 24,
+      "nonzeroAlphaPixels": 152,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "lopeta",
+      "theme": "dark",
+      "size": 20,
+      "nonzeroAlphaPixels": 128,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "lopeta",
+      "theme": "dark",
+      "size": 22,
+      "nonzeroAlphaPixels": 96,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "lopeta",
+      "theme": "dark",
+      "size": 28,
+      "nonzeroAlphaPixels": 180,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "seuraava-kohde",
+      "theme": "dark",
+      "size": 48,
+      "nonzeroAlphaPixels": 492,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "seuraava-kohde",
+      "theme": "dark",
+      "size": 24,
+      "nonzeroAlphaPixels": 142,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "seuraava-kohde",
+      "theme": "dark",
+      "size": 20,
+      "nonzeroAlphaPixels": 114,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "seuraava-kohde",
+      "theme": "dark",
+      "size": 22,
+      "nonzeroAlphaPixels": 134,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "seuraava-kohde",
+      "theme": "dark",
+      "size": 28,
+      "nonzeroAlphaPixels": 198,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "lisaa",
+      "theme": "dark",
+      "size": 48,
+      "nonzeroAlphaPixels": 256,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "lisaa",
+      "theme": "dark",
+      "size": 24,
+      "nonzeroAlphaPixels": 68,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "lisaa",
+      "theme": "dark",
+      "size": 20,
+      "nonzeroAlphaPixels": 52,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "lisaa",
+      "theme": "dark",
+      "size": 22,
+      "nonzeroAlphaPixels": 60,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "lisaa",
+      "theme": "dark",
+      "size": 28,
+      "nonzeroAlphaPixels": 108,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "vahenna",
+      "theme": "dark",
+      "size": 48,
+      "nonzeroAlphaPixels": 136,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "vahenna",
+      "theme": "dark",
+      "size": 24,
+      "nonzeroAlphaPixels": 36,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "vahenna",
+      "theme": "dark",
+      "size": 20,
+      "nonzeroAlphaPixels": 28,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "vahenna",
+      "theme": "dark",
+      "size": 22,
+      "nonzeroAlphaPixels": 32,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "vahenna",
+      "theme": "dark",
+      "size": 28,
+      "nonzeroAlphaPixels": 40,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "tieto",
+      "theme": "dark",
+      "size": 48,
+      "nonzeroAlphaPixels": 628,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "tieto",
+      "theme": "dark",
+      "size": 24,
+      "nonzeroAlphaPixels": 198,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "tieto",
+      "theme": "dark",
+      "size": 20,
+      "nonzeroAlphaPixels": 136,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "tieto",
+      "theme": "dark",
+      "size": 22,
+      "nonzeroAlphaPixels": 179,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "tieto",
+      "theme": "dark",
+      "size": 28,
+      "nonzeroAlphaPixels": 266,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "plus-ympyra",
+      "theme": "dark",
+      "size": 48,
+      "nonzeroAlphaPixels": 648,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "plus-ympyra",
+      "theme": "dark",
+      "size": 24,
+      "nonzeroAlphaPixels": 196,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "plus-ympyra",
+      "theme": "dark",
+      "size": 20,
+      "nonzeroAlphaPixels": 148,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "plus-ympyra",
+      "theme": "dark",
+      "size": 22,
+      "nonzeroAlphaPixels": 181,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "plus-ympyra",
+      "theme": "dark",
+      "size": 28,
+      "nonzeroAlphaPixels": 268,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "tahtain",
+      "theme": "dark",
+      "size": 48,
+      "nonzeroAlphaPixels": 416,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "tahtain",
+      "theme": "dark",
+      "size": 24,
+      "nonzeroAlphaPixels": 132,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "tahtain",
+      "theme": "dark",
+      "size": 20,
+      "nonzeroAlphaPixels": 96,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "tahtain",
+      "theme": "dark",
+      "size": 22,
+      "nonzeroAlphaPixels": 112,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "tahtain",
+      "theme": "dark",
+      "size": 28,
+      "nonzeroAlphaPixels": 164,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "tavara",
+      "theme": "dark",
+      "size": 48,
+      "nonzeroAlphaPixels": 700,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "tavara",
+      "theme": "dark",
+      "size": 24,
+      "nonzeroAlphaPixels": 222,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "tavara",
+      "theme": "dark",
+      "size": 20,
+      "nonzeroAlphaPixels": 152,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "tavara",
+      "theme": "dark",
+      "size": 22,
+      "nonzeroAlphaPixels": 188,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "tavara",
+      "theme": "dark",
+      "size": 28,
+      "nonzeroAlphaPixels": 290,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "matkamuisto",
+      "theme": "dark",
+      "size": 48,
+      "nonzeroAlphaPixels": 740,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "matkamuisto",
+      "theme": "dark",
+      "size": 24,
+      "nonzeroAlphaPixels": 254,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "matkamuisto",
+      "theme": "dark",
+      "size": 20,
+      "nonzeroAlphaPixels": 196,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "matkamuisto",
+      "theme": "dark",
+      "size": 22,
+      "nonzeroAlphaPixels": 192,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "matkamuisto",
+      "theme": "dark",
+      "size": 28,
+      "nonzeroAlphaPixels": 310,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "tallenna",
+      "theme": "dark",
+      "size": 48,
+      "nonzeroAlphaPixels": 756,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "tallenna",
+      "theme": "dark",
+      "size": 24,
+      "nonzeroAlphaPixels": 226,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "tallenna",
+      "theme": "dark",
+      "size": 20,
+      "nonzeroAlphaPixels": 192,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "tallenna",
+      "theme": "dark",
+      "size": 22,
+      "nonzeroAlphaPixels": 219,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "tallenna",
+      "theme": "dark",
+      "size": 28,
+      "nonzeroAlphaPixels": 324,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "lataa",
+      "theme": "dark",
+      "size": 48,
+      "nonzeroAlphaPixels": 412,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "lataa",
+      "theme": "dark",
+      "size": 24,
+      "nonzeroAlphaPixels": 124,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "lataa",
+      "theme": "dark",
+      "size": 20,
+      "nonzeroAlphaPixels": 100,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "lataa",
+      "theme": "dark",
+      "size": 22,
+      "nonzeroAlphaPixels": 120,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "lataa",
+      "theme": "dark",
+      "size": 28,
+      "nonzeroAlphaPixels": 182,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "laajenna-kolmio",
+      "theme": "dark",
+      "size": 48,
+      "nonzeroAlphaPixels": 304,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "laajenna-kolmio",
+      "theme": "dark",
+      "size": 24,
+      "nonzeroAlphaPixels": 92,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "laajenna-kolmio",
+      "theme": "dark",
+      "size": 20,
+      "nonzeroAlphaPixels": 64,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "laajenna-kolmio",
+      "theme": "dark",
+      "size": 22,
+      "nonzeroAlphaPixels": 82,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "laajenna-kolmio",
+      "theme": "dark",
+      "size": 28,
+      "nonzeroAlphaPixels": 116,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "kausi-piste",
+      "theme": "dark",
+      "size": 48,
+      "nonzeroAlphaPixels": 120,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "kausi-piste",
+      "theme": "dark",
+      "size": 24,
+      "nonzeroAlphaPixels": 32,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "kausi-piste",
+      "theme": "dark",
+      "size": 20,
+      "nonzeroAlphaPixels": 32,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "kausi-piste",
+      "theme": "dark",
+      "size": 22,
+      "nonzeroAlphaPixels": 32,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "kausi-piste",
+      "theme": "dark",
+      "size": 28,
+      "nonzeroAlphaPixels": 49,
+      "edgePixels": 0,
+      "passed": true
+    }
+  ]
+}
