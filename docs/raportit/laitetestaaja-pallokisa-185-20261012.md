@@ -37,5 +37,13 @@ Lisää: iPadin ilmapallo lentää kaupunkikierrosta itse (nouti pallon 1 ilman 
 
 Ei vielä testattu: raketin hintalappu "ISS £500" kun pelaaja EI ole Tromssassa; "ei aukkoja kipistä palatessa" muissa kaupungeissa; kisan kuvakkeet erikseen (pallot näkyvät pistetaulun lukuina 0/8, ei erillistä katselukuvaa); kehittäjätilan kohdekaupungit kaikissa näkymissä; Olavinlinna 5 (odottaa PT:n askel 0 -kuittausta).
 
+## Kehittäjätilan kohdekaupunkien pallot + raketin hintalappu (iPad, 185)
+
+| # | Näkymä | Tulos |
+|---|---|---|
+| D1 | Ranska (korkeus 1389 km), Iso-Britannia (1576 km), Kreikka (989 km), Norja (1935 km): `ui kaupunkipallot` | **OK**: pallot päällä, 41 kohdekaupunkia, jokaisen näkyvän kohdekaupungin pallo listassa (FRA 7, GBR 6, GRC 3, NOR 7 kpl, mukana iss-raketti ja olavinlinna); ruudun ulkopuolinen (Sofia) ei näy. Ei puuttuvaa palloa ruutukuvissa. MERKITTY-10 |
+| D2 | Eri zoom-tasot (kaukaa/lähelle) | **EI TESTATTU**: simulaattorityökalu ei näe T7-sarjaa eikä `.simkosketus` osaa nipistystä |
+| H1 | Pelaaja Bergenissä, napautus raketti-nappiin | **OK**: hintalappu "ISS £500" + "Lähtö Andøyasta, Tromssan läheltä", ei veloitusta (£300 ennallaan). Huom: alarivin kulta-teksti himmeällä taustalla, matala kontrasti. MERKITTY-9 |
+
 ## Ei vielä testattu 185:ssä (jäljellä)
 Olavinlinna 5; yllä mainitut. Jatkan ohjeen mukaan.
