@@ -427,7 +427,7 @@ test('skeema 1.9: luennat valmiilla ääniosoitteella', async () => {
   assert.match(rivit.get('intro').url, /\?v=2$/);
   const pariisi = rivit.get('matkakirja:pariisi');
   assert.ok(pariisi && /^https:\/\//.test(pariisi.url) && pariisi.teksti && pariisi.paikkarivi);
-  assert.equal(rivit.size, 47);
+  assert.equal(rivit.size, 52); // 47 + Bryssel, Košice, Ljubljana, Luxemburg, Valletta (11.10.2026)
   assert.ok([...rivit.values()].filter((r) => r.kesto).length >= 40, 'kestot Horatio-kuiteista');
 });
 

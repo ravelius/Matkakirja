@@ -135,8 +135,13 @@ test('YDINSETILLÄ EI OLE POIKKEUSTA: tehoste ja huudahdus tulevat ämpäristä'
 });
 
 test('hyväksytyt 45 Horatio-luentaa käyttävät muuttumattomia tuotantoavaimia', () => {
-  assert.equal(Object.keys(VERSIOIDUT_HORATIO_AANET).length, 45);
-  for (const [nimi, polku] of Object.entries(VERSIOIDUT_HORATIO_AANET)) {
+  // Versioimattomat rivit (11.10.2026: bryssel, kosice, ljubljana, luxemburg,
+  // valletta) ovat suoraan audio/-juuressa; ne tarkistetaan horatio-runtime-audio.test.mjs:ssä.
+  const versioidut = Object.entries(VERSIOIDUT_HORATIO_AANET)
+    .filter(([, polku]) => polku.startsWith('audio/versions/'));
+  assert.equal(versioidut.length, 45);
+  assert.equal(Object.keys(VERSIOIDUT_HORATIO_AANET).length, 50);
+  for (const [nimi, polku] of versioidut) {
     assert.equal(aaniUrl(`assets/audio/${nimi}`), `${AANI_JUURI}${polku}`, nimi);
     assert.match(polku,
       /^audio\/versions\/horatio\/[0-9a-f]{12}\/horatio-[0-9a-f]{20}\/puhe-fokus-matkakirja-.+\.mp3$/);
