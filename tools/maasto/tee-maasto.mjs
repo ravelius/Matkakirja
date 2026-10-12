@@ -7,7 +7,7 @@
  *   node tools/maasto/tee-maasto.mjs [--dem <glo30>] [--dem90 <glo90>] --ulos <kansio>
  *        [--alue -6,41,10,52] [--tasot 0-11] [--ruudukko 65] [--osa i/n]
  *        [--maailma 6] [--vain-maa-alkaen 7] [--glo30-kynnys 0.001]
- *        [--luettelo] [--lista] [--mapterhorn <raakakansio>] [--vanhempi <url>]
+ *        [--luettelo] [--lista] [--mapterhorn <raakakansio>] [--vanhempi <url>] [--laatat <lista>]
  *
  * VUORISTOKERROS (Karttaseppä 12.10.2026, PT erä 184): `--mapterhorn` lukee
  * Mapterhornin laserkeilatun maanpinnan raakalaatoista (mapterhorn.mjs) ja
@@ -55,7 +55,7 @@
  * Tulos: <ulos>/<z>/<x>/<y>.terrain (gzip) ja <ulos>/layer.json.
  * Ämpäriin: Content-Type application/vnd.quantized-mesh, Content-Encoding gzip.
  */
-import { existsSync, mkdirSync, readdirSync, writeFileSync } from 'node:fs';
+import { existsSync, mkdirSync, readdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { gzipSync } from 'node:zlib';
 
@@ -329,6 +329,14 @@ export function* tasonLaatatJarjestyksessa(suunnitelma, onRuutu, osa = 0, osia =
   }
 }
 
+/** Listan laatat samassa järjestyksessä ja osajaossa kuin tasonLaatatJarjestyksessa. */
+export function* listanLaatatJarjestyksessa(laatat, z, osa = 0, osia = 1) {
+  const r = sarakeRyhma(z);
+  const valitut = laatat.filter(([x]) => osia <= 1 || Math.floor(x / r) % osia === osa);
+  valitut.sort((p, q) => Math.floor(p[0] / r) - Math.floor(q[0] / r) || p[1] - q[1] || p[0] - q[0]);
+  yield* valitut;
+}
+
 /**
  * Tason `available`-suorakulmiot. Vain-maa-tasolla rivin maalaattojen
  * ajot yhdistetään pystysuunnassa: ajo [a, b] jatkaa edellisen rivin
@@ -362,12 +370,50 @@ export function tasonSaatavuus(suunnitelma, onRuutu) {
   return valmiit.sort((p, q) => p.startY - q.startY || p.startX - q.startX);
 }
 
+/**
+ * LAATTALISTA (vuoristokerros 12.10.2026): `--laatat <tiedosto>` rivit "z x y".
+ * Harvennettu poltto: z13 koko alueelle, z14 vain jyrkkään maastoon, z15 vain
+ * kohokohtiin (T7 vesimaski/vuoristo-suunnitelma.py). Palauttaa Map z → [[x, y]].
+ */
+export function lueLaattalista(teksti) {
+  const m = new Map();
+  for (const rivi of teksti.split('\n')) {
+    const t = rivi.trim().split(/\s+/).map(Number);
+    if (t.length !== 3 || t.some(Number.isNaN)) continue;
+    if (!m.has(t[0])) m.set(t[0], []);
+    m.get(t[0]).push([t[1], t[2]]);
+  }
+  return m;
+}
+
+/** Listan laatat `available`-suorakulmioiksi (rivin ajot, pystysuunnassa yhdistetyt). */
+export function saatavuusListasta(laatat) {
+  const rivit = new Map();
+  for (const [x, y] of laatat) { if (!rivit.has(y)) rivit.set(y, []); rivit.get(y).push(x); }
+  const valmiit = []; let auki = new Map(); let edellinen = null;
+  for (const y of [...rivit.keys()].sort((a, b) => a - b)) {
+    if (edellinen !== null && y !== edellinen + 1) { valmiit.push(...auki.values()); auki = new Map(); }
+    const xs = [...new Set(rivit.get(y))].sort((a, b) => a - b);
+    const uudet = new Map();
+    for (let i = 0; i < xs.length;) {
+      let j = i; while (j + 1 < xs.length && xs[j + 1] === xs[j] + 1) j += 1;
+      const avain = `${xs[i]},${xs[j]}`; const r = auki.get(avain);
+      if (r) { r.endY = y; auki.delete(avain); uudet.set(avain, r); } else uudet.set(avain, { startX: xs[i], startY: y, endX: xs[j], endY: y });
+      i = j + 1;
+    }
+    valmiit.push(...auki.values()); auki = uudet; edellinen = y;
+  }
+  valmiit.push(...auki.values());
+  return valmiit.sort((p, q) => p.startY - q.startY || p.startX - q.startX);
+}
+
 export function kerroksenKuvaus({
-  tasot, alue, versio, maailma = -1, vainMaaAlkaen = Infinity, onRuutu = null, n = 65, maininta = LAHDEMAININTA, vanhempi = null,
+  tasot, alue, versio, maailma = -1, vainMaaAlkaen = Infinity, onRuutu = null, n = 65, maininta = LAHDEMAININTA, vanhempi = null, lista = null,
 }) {
   const available = [];
   for (let z = 0; z <= tasot[1]; z += 1) {
     if (z < tasot[0]) { available.push([]); continue; }
+    if (lista) { available.push(saatavuusListasta(lista.get(z) ?? [])); continue; }
     const s = tasonSuunnitelma(z, { alue, maailma, vainMaaAlkaen, n });
     if (s.vainMaa && !onRuutu) throw new Error('vain-maa-luettelo tarvitsee DEM-ruudut (--dem/--dem90)');
     available.push(tasonSaatavuus(s, onRuutu));
@@ -411,6 +457,7 @@ export function lueAsetukset(argv) {
     vainMaaAlkaen: Number(arvo('vain-maa-alkaen', Infinity)),
     kynnys: Number(arvo('glo30-kynnys', GLO30_KYNNYS)),
     mapterhornKansio: arvo('mapterhorn'),
+    laatat: arvo('laatat'),
     vanhempi: arvo('vanhempi', null),
     luettelo: argv.includes('--luettelo'),
     lista: argv.includes('--lista'),
@@ -432,8 +479,18 @@ export function avaaLahteet({ demKansio, dem90Kansio, kynnys, mapterhornKansio }
       maininta: glo30 ? `${LAHDEMAININTA} ${LAHDEMAININTA_90}` : LAHDEMAININTA_90,
     };
   }
-  // Mapterhorn ensin, Copernicus varalla (mapterhorn.mjs).
-  if (mapterhornKansio) tulos = { dem: mapterhornLahde(mapterhornKansio, { vara: tulos.dem }), maininta: `${MAPTERHORN_MAININTA} ${tulos.maininta}` };
+  /*
+   * Mapterhorn ensin, Copernicus varalla (mapterhorn.mjs). Kansiossa voi olla
+   * useita tasoja (13/, 14/): tarkin taso ensin, sitten karkeampi, sitten
+   * Copernicus. Harvennetussa poltossa z13-raakadata kattaa koko alueen ja
+   * z14 vain jyrkän maaston, joten sama koordinaatti saa aina saman lähteen.
+   */
+  if (mapterhornKansio) {
+    const tasot = readdirSync(mapterhornKansio).filter((d) => /^\d+$/.test(d)).map(Number).sort((p, q) => p - q);
+    let dem = tulos.dem;
+    for (const z of tasot) dem = mapterhornLahde(mapterhornKansio, { z, vara: dem });
+    tulos = { dem, maininta: `${MAPTERHORN_MAININTA} ${tulos.maininta}` };
+  }
   return tulos;
 }
 
@@ -442,9 +499,10 @@ export async function aja(argv, loki = console.log) {
   const a = lueAsetukset(argv);
   const { tasot, alue, n, osa, osia, versio, maailma, vainMaaAlkaen, kynnys } = a;
   if ((!a.demKansio && !a.dem90Kansio) || (!a.ulos && !a.lista)) {
-    throw new Error('käyttö: [--dem <glo30>] [--dem90 <glo90>] [--mapterhorn <raakakansio>] --ulos <kansio> [--alue] [--tasot 0-11] [--osa i/n] [--maailma Z] [--vain-maa-alkaen Z] [--vanhempi <url>] [--luettelo | --lista]');
+    throw new Error('käyttö: [--dem <glo30>] [--dem90 <glo90>] [--mapterhorn <raakakansio>] --ulos <kansio> [--alue] [--tasot 0-11] [--osa i/n] [--maailma Z] [--vain-maa-alkaen Z] [--vanhempi <url>] [--laatat <lista>] [--luettelo | --lista]');
   }
   const { dem, maininta } = avaaLahteet(a);
+  const lista = a.laatat ? lueLaattalista(readFileSync(a.laatat, 'utf8')) : null;
   const suunnitelmat = [];
   for (let z = tasot[0]; z <= tasot[1]; z += 1) suunnitelmat.push(tasonSuunnitelma(z, { alue, maailma, vainMaaAlkaen, n, kynnys }));
   const maarat = {};
@@ -474,7 +532,7 @@ export async function aja(argv, loki = console.log) {
 
   mkdirSync(a.ulos, { recursive: true });
   if (a.luettelo) {
-    const k = kerroksenKuvaus({ tasot, alue, versio, maailma, vainMaaAlkaen, onRuutu: dem.onRuutu, n, maininta, vanhempi: a.vanhempi });
+    const k = kerroksenKuvaus({ tasot, alue, versio, maailma, vainMaaAlkaen, onRuutu: dem.onRuutu, n, maininta, vanhempi: a.vanhempi, lista });
     writeFileSync(join(a.ulos, 'layer.json'), kerrosTekstiksi(k));
     loki(`layer.json: tasot ${tasot.join('–')}, alue ${alue.join(',')}`);
     dem.sulje();
@@ -488,7 +546,7 @@ export async function aja(argv, loki = console.log) {
     dem.asetaLru(s.z <= 6 ? 96 : 12);
     const tz = Date.now(); let tasolla = 0;
     const kansiot = new Set();
-    for (const [x, y] of tasonLaatatJarjestyksessa(s, dem.onRuutu, osa, osia)) {
+    for (const [x, y] of lista ? listanLaatatJarjestyksessa(lista.get(s.z) ?? [], s.z, osa, osia) : tasonLaatatJarjestyksessa(s, dem.onRuutu, osa, osia)) {
       if (!kansiot.has(x)) { mkdirSync(join(a.ulos, String(s.z), String(x)), { recursive: true }); kansiot.add(x); }
       const l = teeLaatta(dem, s.z, x, y, n);
       writeFileSync(join(a.ulos, String(s.z), String(x), `${y}.terrain`), l.tavut);
