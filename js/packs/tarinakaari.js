@@ -77,6 +77,38 @@ export function kaariLuentaSoi(kohde, osa) {
 }
 
 /*
+ * KAARILUENTOJEN TALLENTEET NATIIVILLE (PT 12.10.2026 klo 03.4x, juna 184;
+ * docs/moduulit/tarinakaari.md: saapuminen, kohtaaminen ja aarre luetaan
+ * ääneen). Vienti (tools/vienti/kokoelmat.mjs, skeema 1.65) antaa
+ * tarinakaari-riville äänikentän { kohtaaminen, aarre } = { url, kesto } vain
+ * generoiduille (TARINAKAARI = luennat !== false) ja mykistämättömille
+ * osille; natiivi soittaa ne saapumisen tallenteen tavoin, lukijaääni jää
+ * varapoluksi. Webin oma soitto ei muutu (natiivi on malli).
+ *
+ * -v2: Äänittäjän korjatut luennat (−14,4…−14,9 LUFS) uusilla nimillä
+ * puhe-kaari-<osa>-<id>-v2.mp3; vanhat −17,1 LUFS -tiedostot jäävät
+ * käyttämättä. Kesto sekunteina (afinfo ämpärin tiedostosta 12.10.2026).
+ */
+export const KAARI_AANITTEET_V2 = Object.freeze({
+  bryssel: { kohtaaminen: 22.126, aarre: 17.711 },
+  kosice: { kohtaaminen: 20.506, aarre: 15.308 },
+  ljubljana: { kohtaaminen: 18.599, aarre: 16.431 },
+  luxemburg: { kohtaaminen: 23.327, aarre: 20.193 },
+  valletta: { kohtaaminen: 19.148, aarre: 17.006 },
+  bergen: { kohtaaminen: 16.039, aarre: 18.442 },
+  firenze: { kohtaaminen: 19.487, aarre: 14.916 },
+  sevilla: { kohtaaminen: 19.409, aarre: 17.398 },
+  tampere: { kohtaaminen: 17.241, aarre: 16.509 },
+});
+
+/** Kaaren osan ('kohtaaminen' | 'aarre') tallenne { polku, kesto } tai null (mykistetty tai ei generoitu). */
+export function kaariAanite(kohde, osa) {
+  if (!kohde || kohde.luennat === false || !kaariLuentaSoi(kohde, osa)) return null;
+  const v2 = KAARI_AANITTEET_V2[kohde.id]?.[osa];
+  return { polku: `assets/audio/puhe-kaari-${osa}-${kohde.id}${v2 ? '-v2' : ''}.mp3`, kesto: v2 ?? null };
+}
+
+/*
  * Kaari koskee Euroopan lautaa ja maailmankarttaa, jolla samat
  * kaupungit ovat samoilla tunnuksilla. Muiden lautojen samannimiset
  * tunnukset (esim. Suomi-laudan helsinki) eivät kuulu kaareen — siellä

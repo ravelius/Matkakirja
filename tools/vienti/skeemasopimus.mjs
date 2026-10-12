@@ -51,6 +51,8 @@ export const VAATIMUKSET = {
   '1.63': ['maamerkit.aina'],
   // Sisältökirjuri 11.10.2026: aarremerkinnät pois pelistä (omistaja), fokusvirrat ei enää kanna aarremerkinta-kenttää.
   '1.64': ['!fokusvirrat.aarremerkinta'],
+  // Pelikoodari 12.10.2026 (PT, juna 184): kaaren kohtaamis- ja aarreluennan tallenteet natiiville.
+  '1.65': ['tarinakaari.aanet'],
   '1.9': ['kokoelma:kuvakysymykset', 'kokoelma:lippumaat', 'kokoelma:pulmaaineisto', 'kokoelma:luennat',
     'kokoelma:livianpuhe', 'kokoelma:maat', 'manifest.offline'],
   '1.10': ['kokoelma:karttamerkit', 'kokoelma:karttavalot', 'kokoelma:maastonimet', 'kokoelma:maarajat',
