@@ -1,7 +1,7 @@
 {
   "versio": 2,
   "laatija": "Sisältökirjuri 12.10.2026",
-  "huomio": "Kokoelma \"alueellisetpiilotukset\": Kreikan valtion muistomerkkien kuvat, havainnekuvat ja 3D-opas piilotetaan vain Kreikan App Storessa (GRC), PT/omistaja 12.10.2026, Raamattu #4493. Päälista (laajennettu 12.10.: fokuskohteet-grc, europe-puzzles, maa-kategoriat, maakartat, kohtaamiset/ihmeet, karttanostot GRC, intron Ateena). Harkinnanvaraiset kohteet erillisessä tiedostossa ja raportissa. PT 12.10.: laki koskee kuvia, ei tekstiä, joten tehtävä ateena:aikajana (ei kuvia) ei ole listalla ja Kolme veljestä valmistuu GRC:ssäkin. PÄIVITYS 12.10. 17.5x (PT): 12 kansi- ja avauskuvaa saa korvaavan monumentittoman Commons-kuvan ({\"tunnus\",\"korvaava\"}), ja Ateenan 8 monumenttia esittävää karttaminiatyyriä (kuva:kartat/miniatyyrit/ateena-…) lisättiin listalle.",
+  "huomio": "Kokoelma \"alueellisetpiilotukset\": Kreikan valtion muistomerkkien kuvat, havainnekuvat ja 3D-opas piilotetaan vain Kreikan App Storessa (GRC), PT/omistaja 12.10.2026, Raamattu #4493. Päälista (laajennettu 12.10.: fokuskohteet-grc, europe-puzzles, maa-kategoriat, maakartat, kohtaamiset/ihmeet, karttanostot GRC, intron Ateena). Harkinnanvaraiset kohteet erillisessä tiedostossa ja raportissa. PT 12.10.: laki koskee kuvia, ei tekstiä, joten tehtävä ateena:aikajana (ei kuvia) ei ole listalla ja Kolme veljestä valmistuu GRC:ssäkin. PÄIVITYS 12.10. 17.5x (PT): 12 kansi- ja avauskuvaa saa korvaavan monumentittoman Commons-kuvan ({\"tunnus\",\"korvaava\"}), ja Ateenan 8 monumenttia esittävää karttaminiatyyriä (kuva:miniatyyrit/ateena-…) lisättiin listalle.",
   "alkiot": [
     {
       "maa": "GRC",
@@ -153,14 +153,14 @@
         "kuva:karttanostot/20260920/grc-nosto-navarino",
         "kuva:karttanostot/20260921/grc-nosto-korintin-apollon-temppeli",
         "kuva:saapumisintro/ateena/",
-        "kuva:kartat/miniatyyrit/ateena-antiikin-agora",
-        "kuva:kartat/miniatyyrit/ateena-akropolis",
-        "kuva:kartat/miniatyyrit/ateena-zeuksen-temppeli",
-        "kuva:kartat/miniatyyrit/ateena-kallimarmaro",
-        "kuva:kartat/miniatyyrit/ateena-akropolis-museo",
-        "kuva:kartat/miniatyyrit/ateena-niken-temppeli",
-        "kuva:kartat/miniatyyrit/ateena-iliou-melathron",
-        "kuva:kartat/miniatyyrit/ateena-elginin-marmorit"
+        "kuva:miniatyyrit/ateena-antiikin-agora",
+        "kuva:miniatyyrit/ateena-akropolis",
+        "kuva:miniatyyrit/ateena-zeuksen-temppeli",
+        "kuva:miniatyyrit/ateena-kallimarmaro",
+        "kuva:miniatyyrit/ateena-akropolis-museo",
+        "kuva:miniatyyrit/ateena-niken-temppeli",
+        "kuva:miniatyyrit/ateena-iliou-melathron",
+        "kuva:miniatyyrit/ateena-elginin-marmorit"
       ]
     }
   ]
