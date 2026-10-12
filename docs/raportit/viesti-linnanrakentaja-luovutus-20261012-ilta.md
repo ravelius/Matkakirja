@@ -48,3 +48,32 @@ Vientiketju: worktree `/Users/Shared/Claude/wt/linnanrakentaja-linna-v45k` (haar
 1. v48s-tunnukset Siirtosepälle ja PT:lle (ja kappalaisen kuvaushetki), sitten omistajan pelikuvat PT:n kautta.
 2. PT:n/omistajan palaute asuista → v48t tarvittaessa.
 3. LS1:n museopilotin mallinnusapu (holvikatto, Cuypersin listat), SK:n sisätilojen totuuskorjaukset (#4417), Pariisi v3c/v3d LS2:lla.
+
+## JATKO 19.5x–21.5x (sama tili)
+- v48s VIETY: 1499 c68f0392dff4ea5d, NYKY 6a73746cefcb1d22 (haara v45k 3d6e47e6d). Tunnukset Siirtosepälle (botti + pelikuvat, kappalainen
+  v48o:n hetkeltä) ja PT:lle. v48t vasta omistajan palautteesta (PT 20.0x).
+- LS1: Yövartion salin pylväs + kullattu naisfiguuri `_valmiit/taidemuseo-yv-pylvas-v1/` (lahde/pylvas.py; figuuri = apulaisen MH-runko
+  kullattuna; 7 452 kolmiota, 3 materiaalia). LS1 vei v6-saliin.
+- LS2: keittiön v3c-esineistö (`koehuone-v1/v3c/ajo3`, LUEMINUT-v3c.md) ja tulisija v3d (tuhka koko pedin yli, uudet halot, hiilet) =
+  YKSI v3kansio `v3d/ajo2/`, liite v3d (LUEMINUT-v3d.md). Ketjut `lahde-v3c/aja-v3c.zsh` ja `aja-v3d.zsh`. Kolmiot huippu 149 489 / 150 k
+  (ei enää tilaa: seuraava lisäys vaatii kevennyksiä), kevyt 35 413 / 40 k. LS2 kääntää v9c:n ja kuvaa.
+- Avoinna: #4417:n järjestys PT:ltä; Pariisi v3c/v3d odottaa LS2:n kuvia.
+
+## JATKO 21.5x–23.0x (sama tili)
+- **#4417 (PT 21.4x: raportin luku 6 järjestyksessä, erät Siirtosepälle → juna 185):**
+  - **v48t VIETY** (kohdat 1–2): 1499 5b4fd306e6cab22c, NYKY eb72af39ec51de63 (v45k b879e9e6b…; lähde 4de68dd3a). Kappeli kalkki
+    (uusi pinta kalkki = white_rough_plaster PH-kansiossa), 12 pientä himmeää ristiä (okramaali/harmaavihrea), 322° sivualttarin syvennys,
+    Codex-alttarikaappi pois; fatabuuri/keskushalli/kierreportaat soihdut → resepti ihralamppu (liekki kynttila), trimmaukset uudelleen.
+    Tunnukset Siirtosepälle lähetetty. Työkalut tyokalut-lr/: leivo_kappeli_v48t.zsh, leivo_soihdut_v48t.zsh, sovita_kirkkaus.py, kytke_v48t.py, vie_v48t.zsh.
+  - **v48u VIENNISSÄ** (kohta 3): Kuninkaansali = voudin-sali: GothicCabinet + Sturen lippu pois, lattia kivilattia, linnantuvan + salin
+    soihdut ihralampuiksi, keittokulhon palat (salin "juustoastia") liemen alle, esinetörmäykset uudelleen (esine_tormays.py ennen-v48m:stä;
+    VALIDOITU tavulleen). Loki scratchpad/vie_v48u.log → tunnukset Siirtosepälle + PT. kytke_v48u.py, leivo_v48u.zsh, vie_v48u.zsh. Lähde e05c32ad6.
+  - SEURAAVAT: kohta 4 Tott-kammio (takka kilpineen, neljä ovea, ampuma-aukot), 5 muurikäytävät (8 aukkoa + tykinalustat), 6 tyrmä,
+    7 porttikäytävä, 8 keittiö, 9 seinät, 10 laituri. Rakennusketju: js/dioraama/rakennukset/olavinlinna/<tila>.js → rakenna.mjs →
+    leivo_tila.py --iso 8192 (+ --hamara) → sovita_kirkkaus → astc (swift 4x4, astc.py 6x6) → jälkikäsittelyt (MUUTOKSET) → kytke → vie.
+    HUOM: kavely-osien (kavely.py) muutokset vaativat jumi-ajot (botti) — kohdat 4–7 todennäköisesti.
+- **ASUT v48v (omistaja 22.4x valitsi uudet asut, PT):** Opus-ali-agentti työssä vaatteet-v1:ssä (kankaiden rakenne + u-sauma putki(),
+  kokin olkapää, vesipojan rintaraita, kappalaisen kaulan tumma läikkä = epäilty niskan hiuskortit). Agentti EI paketoi: paketointi
+  mh_kevenna.py + vie_v48s.zsh-mallilla (MH-silmukka) → Siirtoseppä kuvaa v48s | v48v (myös soutaja, vartija2) → PT → juna 186.
+- **Koehuone LS2:lle:** v3d/ajo2 (pelissä hyvä), v3e/ajo1 (tuhka tummaksi, hehkusaumat ohuiksi; liite v3d). LUEMINUT-v3e.md.
+- **LS1:** YV-pylväs v1 viety v6-saliin.

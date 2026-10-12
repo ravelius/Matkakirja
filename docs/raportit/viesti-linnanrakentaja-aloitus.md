@@ -8,7 +8,7 @@ Checkout: `/Users/Shared/Claude/Matkakirja-linnanrakentaja`, haara `linnanrakent
 ## Lue ensin (vain nämä)
 
 1. CLAUDE.md ja Raamatun Ydinajatus kohta 2 (`grep -n "TYÖTAPA JA SESSIOT" js/tyohuone-raamattu.js`, toinen osuma, noin 45 riviä).
-1. **NYT (12.10. 19.3x, tilinvaihto):** lue `docs/raportit/viesti-linnanrakentaja-luovutus-20261012-ilta.md` KOKONAAN: pysyvät säännöt
+1. **NYT (12.10. 23.0x):** lue luovutuksen loppu "JATKO 21.5x–23.0x" ensin (v48t viety, v48u viennissä, v48v asut agentilla, #4417 kohdat 4–10). **(19.3x, tilinvaihto):** lue `docs/raportit/viesti-linnanrakentaja-luovutus-20261012-ilta.md` KOKONAAN: pysyvät säännöt
    (Asemataulu VAATII TOIMIA, kuvat omistajalle täysikokoisina pelikuvina, agenttien komentosäännöt), Olavinlinna v48m–s tunnuksineen
    (v48s-vienti kesken → tunnukset Siirtosepälle ja PT:lle), asut vaatteet-v1/, raketti- ja karttamallit, koehuone, jono.
 1p. **(vanha) 11.10. 16.1x, nollaus:** lue `docs/raportit/viesti-linnanrakentaja-luovutus-20261011-ilta.md` KOKONAAN: vientijono v47r→s→t
