@@ -57,3 +57,15 @@ Olavinlinna junaan 183 (PT): **BOTTI 17/17 v48k:lla** (koostettu: täysi ajo 15/
 - natiiviseppa/msaa-183 vahdissa → kehittäjäkonsolin MSAA-rivit 0.
 - **LT-appi** lokit/olavinlinna-auto-1012-1346 → Julkaisija järjestää hiljaisen ikkunan. LT:n jälkeen tunnus NS:lle **junaan 184** (183 lähti ilman linnaa).
 - PT: köysilaskun valovihje riittää, ei tekstikehotetta.
+
+## PÄIVITYS 12.10. 18.3x (KÄYTTÖRAJA — seuraaja jatkaa tästä)
+
+- Linnahaara kärki **21822a7ea** (kavely seis -testikomento, pään luu). Worktreessä **staged, EI committia**: ampumakäytävän kohteen
+  näkyvyystarkistus, hahmot rajaavat näkymän syvyyttä (keittiön vartija), alaviistot säteet esineille (tott-kammion pöytä). Tarkistettu
+  puhtaalla kopiolla (tarkista.sh 0, Linssit 1540/1540). Commit VASTA kun Julkaisija ilmoittaa MH-käännökset (21822a7ea + v48r ja + v48o) valmiiksi.
+- MH-ajo odottaa: lokit/siirtoseppa-mh-omistaja/aja2.sh (irrallaan); käynnistyy, kun molemmat käännökset valmiit JA `touch lokit/siirtoseppa-mh-omistaja/lupa`
+  (Julkaisijan SIMU NYT 2). Parit: scratchpad-skripti mh-parit.py (kopioi) → natiivikorkeus, JPEG 90 → itsetarkistus → PT/omistaja.
+- Botti aeb2108de + v48r 16/17 (ampumakäytävä; korjaus staged). Askel 0 -arkki PT:llä (8/10 ok); uusi arkki commitin + botin jälkeen → PT kuittaa LT 5:n.
+- Lyhty (4eccb3a27): varoitus 2,5 s + askeleet/narina + valopiiri + epäily 1,5 s + liiketapin korostus. Äänittäjältä tulossa lyhty-lahestyy.
+- v48p fb151114c, v48r 78f2f37d3 kiinnitetty (vahdissa v48r). NUI:n kuulto-napit yhdistetty (3f178beb2).
+- Botin askel kompensoi kuorman (DtMax 0,05 s, aeb2108de).
