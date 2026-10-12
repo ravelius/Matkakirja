@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-12T22:35:18.419926+00:00",
+  "updatedAt": "2026-10-12T22:40:32.202207+00:00",
   "sourceSnapshot": "batch-0016",
   "sourceSnapshotRoleBindings": 829,
   "releaseCount": 9,
@@ -753,7 +753,7 @@
           "currentContentVersionCheck": {
             "reviewedContentSHA256": "6c7a6db25c3a5cff60d90fa6f815a39dd91d9f08365e69ef1e6cc252f6e1cd2a",
             "currentContentSHA256": "694327f8f2a92f6482801ede431650ac3b7bfb7a51998418ad38cfb78d37ac95",
-            "checkedAt": "2026-10-12T22:30:13.644059+00:00",
+            "checkedAt": "2026-10-12T22:35:16.054970+00:00",
             "personallyViewedAgain": false,
             "reviewedSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/c-integration/history/e11/washington/6c7a6db25c3a5cff60d90fa6f815a39dd91d9f08365e69ef1e6cc252f6e1cd2a-sisalto.json",
             "reviewedSnapshotSHA256": "6c7a6db25c3a5cff60d90fa6f815a39dd91d9f08365e69ef1e6cc252f6e1cd2a",
@@ -764,7 +764,7 @@
             "imageFieldsExcludedOnlyAtInventoriedSlots": true
           },
           "currentBindingMetadataCheck": {
-            "checkedAt": "2026-10-12T22:30:13.674085+00:00",
+            "checkedAt": "2026-10-12T22:35:16.083207+00:00",
             "contentSHA256": "694327f8f2a92f6482801ede431650ac3b7bfb7a51998418ad38cfb78d37ac95",
             "commonsFile": "C&O Canal in Georgetown in Spring 2019.jpg",
             "captionFi": "Georgetownin C&O-kanava liittyy Washingtonin vanhan satamakaupunginosan historiaan.",
@@ -3746,7 +3746,7 @@
           "currentContentVersionCheck": {
             "reviewedContentSHA256": "6c7a6db25c3a5cff60d90fa6f815a39dd91d9f08365e69ef1e6cc252f6e1cd2a",
             "currentContentSHA256": "694327f8f2a92f6482801ede431650ac3b7bfb7a51998418ad38cfb78d37ac95",
-            "checkedAt": "2026-10-12T22:30:13.644059+00:00",
+            "checkedAt": "2026-10-12T22:35:16.054970+00:00",
             "personallyViewedAgain": false,
             "reviewedSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/c-integration/history/e11/washington/6c7a6db25c3a5cff60d90fa6f815a39dd91d9f08365e69ef1e6cc252f6e1cd2a-sisalto.json",
             "reviewedSnapshotSHA256": "6c7a6db25c3a5cff60d90fa6f815a39dd91d9f08365e69ef1e6cc252f6e1cd2a",
@@ -3757,7 +3757,7 @@
             "imageFieldsExcludedOnlyAtInventoriedSlots": true
           },
           "currentBindingMetadataCheck": {
-            "checkedAt": "2026-10-12T22:30:13.711343+00:00",
+            "checkedAt": "2026-10-12T22:35:16.120968+00:00",
             "contentSHA256": "694327f8f2a92f6482801ede431650ac3b7bfb7a51998418ad38cfb78d37ac95",
             "commonsFile": "Smithsonian Institution Building (53831938398).jpg",
             "captionFi": "Smithsonianin linna on James Renwick nuoremman suunnittelema historiallinen museorakennus.",
@@ -3824,8 +3824,8 @@
       "previousHoldCause": "Exact original QA proof was recorded under a different field or completed after the immutable snapshot."
     }
   ],
-  "effectiveQualifiedOriginalSnapshotBindings": 803,
-  "effectiveRemainingOriginalSnapshotHolds": 26,
+  "effectiveQualifiedOriginalSnapshotBindings": 810,
+  "effectiveRemainingOriginalSnapshotHolds": 19,
   "instructions": [
     "Add only these exact-version runtime bindings to the previously qualified755 snapshot handoff and independently inspected supplemental releases.",
     "This reuses existing full-original QA evidence and corrects a schema join; it does not approve preview-only QA.",
