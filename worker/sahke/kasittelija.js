@@ -33,6 +33,7 @@
  *   POST /sahke             {koodi, jasenId, avain, pohjaId, paikkaId}
  *   POST /apu/kysy          {koodi, jasenId, avain, apuId, kysymys, vaihtoehdot}
  *   POST /apu/vastaa        {koodi, jasenId, avain, apuId, veikkaus}
+ *   POST /retkikunta/eroa   {koodi, jasenId, avain} — paikka ja nimimerkki vapaiksi, tyhjä retkikunta pois
  *
  * TURVA: jokainen kirjoitus (ja tilannekuvan luku) vaatii kolmikon
  * koodi + jasenId + avain. Avain on jäsenkohtainen salaisuus, joka
@@ -572,6 +573,27 @@ async function avaaKirjoitus(pyynto, varasto, kors, nyt, sallitutKentat) {
   return { runko, jasen: loyto.jasen };
 }
 
+/**
+ * POST /retkikunta/eroa (Julkaisijan löydös 12.10., PT): ennen tätä ero tapahtui vain asiakkaassa, joten paikka ja
+ * nimimerkki jäivät varatuiksi ja kahdeksan liittymis–eroamiskerran jälkeen retkikunta oli pysyvästi täynnä (409).
+ * Jäsenen rivi poistetaan; jos ketään ei jää, retkikunta sisältöineen poistetaan. Vanhat asiakkaat (TF 183) eivät
+ * kutsu reittiä, joten muutos on yhteensopiva; hiljentynyt retkikunta poistuu edelleen siivouksessa (30 vrk).
+ * Ei kirjoitusrajoitinta: ero on kertaluonteinen, ja sen jälkeen tunnukset eivät enää kelpaa.
+ */
+async function eroa(pyynto, varasto, kors) {
+  let runko;
+  try { runko = await pyynto.json(); } catch { return vastaa({ virhe: 'Runko ei jäsenny' }, { status: 400, ...kors }); }
+  const ylimaarainen = ylimaarainenKentta(runko, ['koodi', 'jasenId', 'avain']);
+  if (ylimaarainen) return vastaa({ virhe: `Tuntematon kenttä: ${ylimaarainen}` }, { status: 400, ...kors });
+  const loyto = await tunnista(varasto, runko);
+  if (!loyto) return vastaa({ virhe: 'Tunnukset eivät täsmää.' }, { status: 401, ...kors });
+  const { koodi, jasenId } = loyto.jasen;
+  await varasto.poistaJasen(koodi, jasenId);
+  const jaljella = await varasto.haeJasenet(koodi);
+  if (jaljella.length === 0) await varasto.poistaRetkikunta(koodi);
+  return vastaa({ ok: true, jaljella: jaljella.length }, kors);
+}
+
 /** POST /sahke — valkolistattu pohja ja pelin kaupunkitunnus, ei muuta. */
 async function sahke(pyynto, varasto, kors, nyt) {
   const avattu = await avaaKirjoitus(pyynto, varasto, kors, nyt,
@@ -772,6 +794,8 @@ export async function kasittele(pyynto, env, apurit = {}) {
       return pyynto.method === 'POST' ? luo(pyynto, varasto, kors, nyt) : vain('POST');
     case '/retkikunta/liity':
       return pyynto.method === 'POST' ? liity(pyynto, varasto, kors, nyt) : vain('POST');
+    case '/retkikunta/eroa':
+      return pyynto.method === 'POST' ? eroa(pyynto, varasto, kors) : vain('POST');
     case '/retkikunta/tila':
       return pyynto.method === 'GET' ? tila(pyynto, url, varasto, kors, nyt) : vain('GET');
     case '/sahke':
