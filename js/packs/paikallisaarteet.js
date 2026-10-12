@@ -979,7 +979,7 @@ export const PAIKALLISAARTEET = {
   },
   MNE: {
     pieniAarre: {
-      name: 'Kori vranac-rypäleitä',
+      name: 'Terttu vranac-rypäleitä',
       kuva: 'assets/aarteet/paikallis/mne-pieni.jpg',
       fakta: 'Vranac on Montenegron istutetuin viinirypälelajike, ja sen tummat '
         + 'marjat poimitaan käsin yleensä syys–lokakuussa. Podgorican '
