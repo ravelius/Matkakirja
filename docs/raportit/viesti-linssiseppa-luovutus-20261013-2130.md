@@ -24,6 +24,12 @@ Toteutettu (testit 1744/1744, unity 0):
    (MuseoKohdat.NapinYla/NapinVasen, sivuun otsikon/☰:n kohdalla, lähikuvassa piilossa).
 6. Astu sisään: tk-teema-harmaa-kuulto + `.mk-museo-astu` (Linssit.uss: nappi-reunus, kuvakeväri), teksti keskellä.
 7. Näyttely ovelta ULKOA: MuseoKierros.Ovensuu `Ulko` (OviUlosM 3,5 m oven ulkopuolelta, kävely KavelyMs ovelle + liuku, ~5–7 s).
+**SIMU 21.43 (iPad vaaka OK, lokit/todistus-palaute188-ipad-*; kuva-arkki lokit/palaute188-pt/):** 1 Vermeer ei puhki, museo 0/+0,6 EV: teos sama ✓;
+3 rinkula → luenta alkoi ilman lappua ✓; 4 himmeät ✓; 5 i-nappi kankaan yläpuolella ✓; 6 Astu sisään läpinäkyvä, keskellä ✓; 7 ruutusarja ovelta ✓.
+2 KERTOJA: yv-salin teoksilla (mauritshuis-840/-670) EI äänitettä (manifest taidemuseo-kertoja-v2: 33 id:tä, vain SK-C-5 tästä salista) →
+kertoja ei ala, eikä uusi syyrivi tulostu (kertoja.On false). Ehdotus PT:lle: äänitteettömälle teokselle esittelyn luenta kertojan äänellä
+(KortinLukija) tai lisää äänitteitä. iPhone-ajo epäonnistui skenaariovirheen takia (Kunniagalleria listan alla) → uusinta palaute188b
+(ajo-palaute188b.zsh odottaa simu-palaute188b.nyt, sk-palaute188-iphoneb.txt: Grafiikka-rivi).
 Seuraava: katso kuvat → korjaa → kuva-arkki PT:lle (iPhone pysty + iPad vaaka: Vermeer ennen|jälkeen, Yövartio i + rinkulat, Astu sisään, ruutusarja o1–o4).
 HUOM: uudet USS-luokat (.mk-ohjausnappi__kirjain, .mk-museo-astu) mainitse PT:lle (UI-pohjasääntö: pieni laajennus olemassa oleviin pohjiin).
 
