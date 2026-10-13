@@ -3,8 +3,252 @@
   "era": "e06",
   "city": "kigali",
   "authorization": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
-  "sourceContentAfterSHA256": "10a4627f848ee909e0943abdad45c7d1299726980c7feeaa0a074df585e7efb1",
+  "sourceContentAfterSHA256": "a7e19a171c76c618edaf01e768995ba20744fa0a05badc079632eee7c7caaf24",
   "assets": [
+    {
+      "era": "e06",
+      "city": "kigali",
+      "slot": "O3",
+      "type": "illustration",
+      "assetID": "job14-e06-kigali-o3-v01",
+      "galleryImageID": "job14-e06-kigali-o3-v01",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[2].kuva",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "matkailijalle",
+        "artikkeli",
+        "jaksot",
+        2,
+        "kuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/kigali/job14-e06-kigali-o3-v01-c936be9d2322.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva harmaakruunukurjen tuntomerkeistä.",
+        "lyhyt": "Havainnekuva harmaakruunukurjen tuntomerkeistä."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/kigali/job14-e06-kigali-o3-v01-c936be9d2322.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva harmaakruunukurjen tuntomerkeistä.",
+        "lyhyt": "Havainnekuva harmaakruunukurjen tuntomerkeistä."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "c936be9d2322206af242226b0c2779f699478a3f1385cde728dadbaa5ab155af",
+      "exportSHA256": "82fa9f3cd709a27bfdf7867c39f4e8651c6f787881ddfa9e6c86cd6a47d4eb0d",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/kigali/job14-e06-kigali-o3-v01-c936be9d2322.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/kigali/job14-e06-kigali-o3-v01-c936be9d2322.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e06/kigali/job14-e06-kigali-o3-v01-c936be9d2322.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/kigali/sisalto.json",
+      "sourceContentSHA256": "10a4627f848ee909e0943abdad45c7d1299726980c7feeaa0a074df585e7efb1",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "f65332c820a361dfa10703640bbde24bd863940acc6fbcb9adb04f4a2933bb38",
+        "subjectTitle": "Kosteikot ja kukkulat",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Yleistetty luonto-/materiaalin/tavanomaisen välineen havainnollistus. Ei kuva-inputtia, suojatun teoksen/kansi-/kaupunkikaavan jäljennöstä, kasvoja tai todellisen paikan tarkkaa asettelua. Drum-model kuvaa vain lähteen yleistä järjestysperiaatetta, ei nimettyä rituaaliesineistöä.",
+          "QA": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kigali/assets/job14-e06-kigali-o3-v01/image.png",
+            "nativeSHA256": "c936be9d2322206af242226b0c2779f699478a3f1385cde728dadbaa5ab155af",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "manifestHashMatches": true,
+            "personallyViewed": true,
+            "viewTool": "view_image",
+            "visualFindingsFi": "Linnun pää/kaula: kultainen kruunu, tumma päälaki, vaalea poski punaisella alueella ja punainen kurkkapussi. Nokka/silmä/höyhenet luonnolliset; ei ihmisia tai merkintöjä.",
+            "captionFi": "Havainnekuva harmaakruunukurjen tuntomerkeistä.",
+            "sourceAndTargetCheckFi": "O3/faktapohjan harmaakruunukurki luettu. CaptionFi havainne, ei Umusambin tietty yksilö/paikkavalokuva. L3:n koko lintu ja tämä tuntomerkkilähikuva ovat eri näkökulmat/native-kuvat.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/kigali/sisalto.json",
+            "sourceEvidence": [
+              {
+                "type": "currentContent",
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/kigali/sisalto.json",
+                "sha256": "43dee916a07cd182e6bef00caae0e1c53f3ac54797198ccc934ef6c4c992a84c",
+                "jsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[2]",
+                "text": "Nyandungu kertoo vesilaakson ja metsän palauttamisesta, Umusambi harmaakruunukurjista ja kosteikon kunnostuksesta. Käyntijärjestelyt sovitaan kohteiden kanssa. Kigali- ja Jali-kukkuloiden maastokuvaukset eivät yksin vahvista merkittyä reittiä tai vapaata pääsyä."
+              },
+              {
+                "type": "factSheet",
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/kigali/faktapohja.md",
+                "sha256": "b5662ad3dd769f6e70e15b1c45da1b6bf2db8bdea9283894efe0d69005c3feed",
+                "sourceUrl": "https://umusambivillage.org/"
+              }
+            ]
+          },
+          "qaReason": "Harmaakruunukurjen tuntomerkkihavainne vastaa O3:n lajiaihetta."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva harmaakruunukurjen tuntomerkeistä.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kigali/illustration-qa-extra.json",
+        "fileSHA256": "7c5e5fb82fb3b57726e44d81a00f4fe0be12eeb0a0a00d889b36a061c9baf07b",
+        "item": {
+          "slot": "O3",
+          "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[2].kuva",
+          "assetID": "job14-e06-kigali-o3-v01",
+          "sha256": "c936be9d2322206af242226b0c2779f699478a3f1385cde728dadbaa5ab155af",
+          "verdict": "accepted",
+          "reason": "Harmaakruunukurjen tuntomerkkihavainne vastaa O3:n lajiaihetta.",
+          "evidence": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kigali/assets/job14-e06-kigali-o3-v01/image.png",
+            "nativeSHA256": "c936be9d2322206af242226b0c2779f699478a3f1385cde728dadbaa5ab155af",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "manifestHashMatches": true,
+            "personallyViewed": true,
+            "viewTool": "view_image",
+            "visualFindingsFi": "Linnun pää/kaula: kultainen kruunu, tumma päälaki, vaalea poski punaisella alueella ja punainen kurkkapussi. Nokka/silmä/höyhenet luonnolliset; ei ihmisia tai merkintöjä.",
+            "captionFi": "Havainnekuva harmaakruunukurjen tuntomerkeistä.",
+            "sourceAndTargetCheckFi": "O3/faktapohjan harmaakruunukurki luettu. CaptionFi havainne, ei Umusambin tietty yksilö/paikkavalokuva. L3:n koko lintu ja tämä tuntomerkkilähikuva ovat eri näkökulmat/native-kuvat.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/kigali/sisalto.json",
+            "sourceEvidence": [
+              {
+                "type": "currentContent",
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/kigali/sisalto.json",
+                "sha256": "43dee916a07cd182e6bef00caae0e1c53f3ac54797198ccc934ef6c4c992a84c",
+                "jsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[2]",
+                "text": "Nyandungu kertoo vesilaakson ja metsän palauttamisesta, Umusambi harmaakruunukurjista ja kosteikon kunnostuksesta. Käyntijärjestelyt sovitaan kohteiden kanssa. Kigali- ja Jali-kukkuloiden maastokuvaukset eivät yksin vahvista merkittyä reittiä tai vapaata pääsyä."
+              },
+              {
+                "type": "factSheet",
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/kigali/faktapohja.md",
+                "sha256": "b5662ad3dd769f6e70e15b1c45da1b6bf2db8bdea9283894efe0d69005c3feed",
+                "sourceUrl": "https://umusambivillage.org/"
+              }
+            ]
+          },
+          "reviewedAt": "2026-10-12T20:24:57.426318+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kigali/qa.json",
+            "sha256": "0e3417bba988a255df336827fc77d0598a9b83c30b3e6b504938c3c2173f85ff"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kigali/illustration-qa-extra.json",
+            "sha256": "7c5e5fb82fb3b57726e44d81a00f4fe0be12eeb0a0a00d889b36a061c9baf07b"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/kigali/job14-e06-kigali-o3-v01-c936be9d2322.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/kigali/job14-e06-kigali-o3-v01-c936be9d2322.png?t=82fa9f3cd709a27b",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/kigali/job14-e06-kigali-o3-v01-c936be9d2322.png",
+        "sha256": "82fa9f3cd709a27bfdf7867c39f4e8651c6f787881ddfa9e6c86cd6a47d4eb0d",
+        "bytes": 2299609,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "job14-e06-kigali-o3-v01",
+        "nativeSHA256": "c936be9d2322206af242226b0c2779f699478a3f1385cde728dadbaa5ab155af",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e06/kigali/job14-e06-kigali-o3-v01-c936be9d2322.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e06",
+        "city": "kigali",
+        "slot": "O3",
+        "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[2].kuva",
+        "verifiedAt": "2026-10-12T20:25:15.877258+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e06/kigali/job14-e06-kigali-o3-v01-c936be9d2322.png",
+        "sha256": "82fa9f3cd709a27bfdf7867c39f4e8651c6f787881ddfa9e6c86cd6a47d4eb0d",
+        "bytes": 2299609,
+        "SHAReadAt": "2026-10-12T20:25:11.023034+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "c936be9d2322206af242226b0c2779f699478a3f1385cde728dadbaa5ab155af",
+        "rgbPixelSHA256": "ae5ce59e29c496b5e93598b30d8d9cf863a513bcc9718ec92cc809439c99fcae",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "a7e19a171c76c618edaf01e768995ba20744fa0a05badc079632eee7c7caaf24",
+      "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+      "contextAfterSHA256": "f65332c820a361dfa10703640bbde24bd863940acc6fbcb9adb04f4a2933bb38"
+    },
     {
       "era": "e06",
       "city": "kigali",
@@ -115,7 +359,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kigali/illustration-qa-extra.json",
-        "fileSHA256": "51cf798ebfa84363b6bcd0842cdf34c56b520b125181ab29a162f46d8fbd9baa",
+        "fileSHA256": "7c5e5fb82fb3b57726e44d81a00f4fe0be12eeb0a0a00d889b36a061c9baf07b",
         "item": {
           "slot": "O4",
           "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
@@ -158,11 +402,11 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kigali/qa.json",
-            "sha256": "319a6bfa21ffe7908b063a520b136fcc3118ec3af74899f1e4a72cbe354bc4ee"
+            "sha256": "0e3417bba988a255df336827fc77d0598a9b83c30b3e6b504938c3c2173f85ff"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kigali/illustration-qa-extra.json",
-            "sha256": "51cf798ebfa84363b6bcd0842cdf34c56b520b125181ab29a162f46d8fbd9baa"
+            "sha256": "7c5e5fb82fb3b57726e44d81a00f4fe0be12eeb0a0a00d889b36a061c9baf07b"
           }
         ]
       },
@@ -245,7 +489,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "10a4627f848ee909e0943abdad45c7d1299726980c7feeaa0a074df585e7efb1",
+      "sourceContentAfterSHA256": "a7e19a171c76c618edaf01e768995ba20744fa0a05badc079632eee7c7caaf24",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
       "contextAfterSHA256": "0c8ec1832d7afaa210486abecd3f963c9d3edffc87c173995119d9b695238200"
     },
@@ -356,7 +600,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kigali/illustration-qa-extra.json",
-        "fileSHA256": "51cf798ebfa84363b6bcd0842cdf34c56b520b125181ab29a162f46d8fbd9baa",
+        "fileSHA256": "7c5e5fb82fb3b57726e44d81a00f4fe0be12eeb0a0a00d889b36a061c9baf07b",
         "item": {
           "slot": "L1",
           "targetJsonPath": "$.kaupunkilehti[1].nostot[0]",
@@ -399,11 +643,11 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kigali/qa.json",
-            "sha256": "319a6bfa21ffe7908b063a520b136fcc3118ec3af74899f1e4a72cbe354bc4ee"
+            "sha256": "0e3417bba988a255df336827fc77d0598a9b83c30b3e6b504938c3c2173f85ff"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kigali/illustration-qa-extra.json",
-            "sha256": "51cf798ebfa84363b6bcd0842cdf34c56b520b125181ab29a162f46d8fbd9baa"
+            "sha256": "7c5e5fb82fb3b57726e44d81a00f4fe0be12eeb0a0a00d889b36a061c9baf07b"
           }
         ]
       },
@@ -486,7 +730,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "10a4627f848ee909e0943abdad45c7d1299726980c7feeaa0a074df585e7efb1",
+      "sourceContentAfterSHA256": "a7e19a171c76c618edaf01e768995ba20744fa0a05badc079632eee7c7caaf24",
       "targetAfterSHA256": "d879eed4f6b59513ec2a48f1cecb835cbc62750ea99821a6f29bc73fca0f7b8e",
       "contextAfterSHA256": "d879eed4f6b59513ec2a48f1cecb835cbc62750ea99821a6f29bc73fca0f7b8e"
     },
@@ -597,7 +841,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kigali/illustration-qa-extra.json",
-        "fileSHA256": "51cf798ebfa84363b6bcd0842cdf34c56b520b125181ab29a162f46d8fbd9baa",
+        "fileSHA256": "7c5e5fb82fb3b57726e44d81a00f4fe0be12eeb0a0a00d889b36a061c9baf07b",
         "item": {
           "slot": "L2",
           "targetJsonPath": "$.kaupunkilehti[1].nostot[1]",
@@ -640,11 +884,11 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kigali/qa.json",
-            "sha256": "319a6bfa21ffe7908b063a520b136fcc3118ec3af74899f1e4a72cbe354bc4ee"
+            "sha256": "0e3417bba988a255df336827fc77d0598a9b83c30b3e6b504938c3c2173f85ff"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kigali/illustration-qa-extra.json",
-            "sha256": "51cf798ebfa84363b6bcd0842cdf34c56b520b125181ab29a162f46d8fbd9baa"
+            "sha256": "7c5e5fb82fb3b57726e44d81a00f4fe0be12eeb0a0a00d889b36a061c9baf07b"
           }
         ]
       },
@@ -727,7 +971,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "10a4627f848ee909e0943abdad45c7d1299726980c7feeaa0a074df585e7efb1",
+      "sourceContentAfterSHA256": "a7e19a171c76c618edaf01e768995ba20744fa0a05badc079632eee7c7caaf24",
       "targetAfterSHA256": "3e615a3eabeb02694d24240c54d10a19d3b0935173c849981b66cb4766631b6a",
       "contextAfterSHA256": "3e615a3eabeb02694d24240c54d10a19d3b0935173c849981b66cb4766631b6a"
     },
@@ -839,7 +1083,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kigali/qa.json",
-        "fileSHA256": "319a6bfa21ffe7908b063a520b136fcc3118ec3af74899f1e4a72cbe354bc4ee",
+        "fileSHA256": "0e3417bba988a255df336827fc77d0598a9b83c30b3e6b504938c3c2173f85ff",
         "item": {
           "slot": "L3",
           "targetJsonPath": "$.kaupunkilehti[1].nostot[2]",
@@ -882,11 +1126,11 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kigali/qa.json",
-            "sha256": "319a6bfa21ffe7908b063a520b136fcc3118ec3af74899f1e4a72cbe354bc4ee"
+            "sha256": "0e3417bba988a255df336827fc77d0598a9b83c30b3e6b504938c3c2173f85ff"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kigali/illustration-qa-extra.json",
-            "sha256": "51cf798ebfa84363b6bcd0842cdf34c56b520b125181ab29a162f46d8fbd9baa"
+            "sha256": "7c5e5fb82fb3b57726e44d81a00f4fe0be12eeb0a0a00d889b36a061c9baf07b"
           }
         ]
       },
@@ -969,7 +1213,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "10a4627f848ee909e0943abdad45c7d1299726980c7feeaa0a074df585e7efb1",
+      "sourceContentAfterSHA256": "a7e19a171c76c618edaf01e768995ba20744fa0a05badc079632eee7c7caaf24",
       "targetAfterSHA256": "5990f9dda5fb6e5a4c14cafa818f03649b2c306cbce89d4a06ee408d85ae5111",
       "contextAfterSHA256": "5990f9dda5fb6e5a4c14cafa818f03649b2c306cbce89d4a06ee408d85ae5111"
     },
@@ -1080,7 +1324,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kigali/illustration-qa-extra.json",
-        "fileSHA256": "51cf798ebfa84363b6bcd0842cdf34c56b520b125181ab29a162f46d8fbd9baa",
+        "fileSHA256": "7c5e5fb82fb3b57726e44d81a00f4fe0be12eeb0a0a00d889b36a061c9baf07b",
         "item": {
           "slot": "L4",
           "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
@@ -1123,11 +1367,11 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kigali/qa.json",
-            "sha256": "319a6bfa21ffe7908b063a520b136fcc3118ec3af74899f1e4a72cbe354bc4ee"
+            "sha256": "0e3417bba988a255df336827fc77d0598a9b83c30b3e6b504938c3c2173f85ff"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kigali/illustration-qa-extra.json",
-            "sha256": "51cf798ebfa84363b6bcd0842cdf34c56b520b125181ab29a162f46d8fbd9baa"
+            "sha256": "7c5e5fb82fb3b57726e44d81a00f4fe0be12eeb0a0a00d889b36a061c9baf07b"
           }
         ]
       },
@@ -1210,9 +1454,250 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "10a4627f848ee909e0943abdad45c7d1299726980c7feeaa0a074df585e7efb1",
+      "sourceContentAfterSHA256": "a7e19a171c76c618edaf01e768995ba20744fa0a05badc079632eee7c7caaf24",
       "targetAfterSHA256": "5a8200e621b5f2f6e6f02bc49de81dce5d39b3209434fdcc5d3b431de675e3c4",
       "contextAfterSHA256": "5a8200e621b5f2f6e6f02bc49de81dce5d39b3209434fdcc5d3b431de675e3c4"
+    },
+    {
+      "era": "e06",
+      "city": "kigali",
+      "slot": "N4",
+      "type": "illustration",
+      "assetID": "job14-e06-kigali-n4-v01",
+      "galleryImageID": "job14-e06-kigali-n4-v01",
+      "commonsFile": null,
+      "targetJsonPath": "$.nahtavyydet[\"Nyandungun kosteikko\"].kuvat[0]",
+      "targetTokens": [
+        "nahtavyydet",
+        "Nyandungun kosteikko",
+        "kuvat",
+        0
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/kigali/job14-e06-kigali-n4-v01-18600fa6ae66.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva kosteikon kasvillisuudesta.",
+        "lyhyt": "Havainnekuva kosteikon kasvillisuudesta."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/kigali/job14-e06-kigali-n4-v01-18600fa6ae66.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva kosteikon kasvillisuudesta.",
+        "lyhyt": "Havainnekuva kosteikon kasvillisuudesta."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "18600fa6ae66099d8a18cbc4498b10727daa3cdc6a90a9fdd7daf5c74f6419c8",
+      "exportSHA256": "13c6246b1cac0e89bf321dcbaa844f58fc3f701ba73ab44ed45efe7971a46e88",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/kigali/job14-e06-kigali-n4-v01-18600fa6ae66.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/kigali/job14-e06-kigali-n4-v01-18600fa6ae66.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e06/kigali/job14-e06-kigali-n4-v01-18600fa6ae66.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/kigali/sisalto.json",
+      "sourceContentSHA256": "10a4627f848ee909e0943abdad45c7d1299726980c7feeaa0a074df585e7efb1",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "f002e7c8a6f5e4298eb52b0072159f0629cf23679ae884537a5a724a3ca261df",
+        "subjectTitle": "Nyandungun kosteikko",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Yleistetty kasvi-, ruoka-, luonnonmateriaali- tai tavallisen funktionaalisen esineen havainnollistus. Ei kuva-inputtia, nimettyä kaupunkiasettelua, arkeologista esinerekonstruktiota tai suojattua teosta. Ei todellinen paikkavalokuva.",
+          "QA": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kigali/assets/job14-e06-kigali-n4-v01/image.png",
+            "nativeSHA256": "18600fa6ae66099d8a18cbc4498b10727daa3cdc6a90a9fdd7daf5c74f6419c8",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "manifestHashMatches": true,
+            "personallyViewed": true,
+            "viewTool": "view_image",
+            "visualFindingsFi": "Kasvien varsia/lehtiä matalassa vedessä. Kasvirakenteet ja veden heijastukset luonnollisia; ei pintatoistoa, tekstiä tai ihmisiä.",
+            "captionFi": "Havainnekuva kosteikon kasvillisuudesta.",
+            "sourceAndTargetCheckFi": "Nyandungun kosteikko -objekti ja kuvat[0] olemassa; teksti/faktapohjan kosteikkokasvillisuus luettu. CaptionFi havainne, ei paikallinen lajisto, veden puhtaus tai täsmäpaikkakuva. L2:n yleisuoma ja tämän kasvirakenteen lähikuva ovat eri tiedostot/näkökulmat.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/kigali/sisalto.json",
+            "sourceEvidence": [
+              {
+                "type": "currentContent",
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/kigali/sisalto.json",
+                "sha256": "43dee916a07cd182e6bef00caae0e1c53f3ac54797198ccc934ef6c4c992a84c",
+                "jsonPath": "$.nahtavyydet[\"Nyandungun kosteikko\"]",
+                "text": "Nyandungu on kosteikkolaakso Gasabon ja Kicukiron välissä. Aiemmin heikentynyttä ympäristöä on kunnostettu palauttamalla paikallista kasvillisuutta, viikunametsää ja vesiuomia. Alueelle on istutettu paikallisia puita, ja kokonaisuuteen kuuluu puroja, altaita ja ruovikkoja. Näiden rinnalla paikka palvelee luontokasvatusta.\n\nNykyinen kunnostus ja puistokäyttö kuuluvat 2000-luvulle. Isoisän matkavuonna 1873 tätä ohjelmaa ja sen rakenteita ei ollut, eikä nykyistä palautettua ympäristöä voi kuvata tuon ajan tarkaksi kasvillisuudeksi. Kohteena on kosteikon ja metsän luonnonympäristö. Kulkureitit sekä käynnin nykyiset järjestelyt ovat erillisiä siitä, että laakso on tunnistettu kartalle omalla paikkapisteellään."
+              },
+              {
+                "type": "factSheet",
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/kigali/faktapohja.md",
+                "sha256": "b5662ad3dd769f6e70e15b1c45da1b6bf2db8bdea9283894efe0d69005c3feed",
+                "sourceUrl": "https://en.wikipedia.org/wiki/Nyandungu_Urban_Wetland_Eco-Tourism_Park"
+              }
+            ]
+          },
+          "qaReason": "Kosteikkokasvillisuuden havainne sopii olemassa olevan N4:n aiheeseen."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva kosteikon kasvillisuudesta.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kigali/illustration-qa-extra.json",
+        "fileSHA256": "7c5e5fb82fb3b57726e44d81a00f4fe0be12eeb0a0a00d889b36a061c9baf07b",
+        "item": {
+          "slot": "N4",
+          "targetJsonPath": "$.nahtavyydet[\"Nyandungun kosteikko\"].kuvat[0]",
+          "assetID": "job14-e06-kigali-n4-v01",
+          "sha256": "18600fa6ae66099d8a18cbc4498b10727daa3cdc6a90a9fdd7daf5c74f6419c8",
+          "verdict": "accepted",
+          "reason": "Kosteikkokasvillisuuden havainne sopii olemassa olevan N4:n aiheeseen.",
+          "evidence": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kigali/assets/job14-e06-kigali-n4-v01/image.png",
+            "nativeSHA256": "18600fa6ae66099d8a18cbc4498b10727daa3cdc6a90a9fdd7daf5c74f6419c8",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "manifestHashMatches": true,
+            "personallyViewed": true,
+            "viewTool": "view_image",
+            "visualFindingsFi": "Kasvien varsia/lehtiä matalassa vedessä. Kasvirakenteet ja veden heijastukset luonnollisia; ei pintatoistoa, tekstiä tai ihmisiä.",
+            "captionFi": "Havainnekuva kosteikon kasvillisuudesta.",
+            "sourceAndTargetCheckFi": "Nyandungun kosteikko -objekti ja kuvat[0] olemassa; teksti/faktapohjan kosteikkokasvillisuus luettu. CaptionFi havainne, ei paikallinen lajisto, veden puhtaus tai täsmäpaikkakuva. L2:n yleisuoma ja tämän kasvirakenteen lähikuva ovat eri tiedostot/näkökulmat.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/kigali/sisalto.json",
+            "sourceEvidence": [
+              {
+                "type": "currentContent",
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/kigali/sisalto.json",
+                "sha256": "43dee916a07cd182e6bef00caae0e1c53f3ac54797198ccc934ef6c4c992a84c",
+                "jsonPath": "$.nahtavyydet[\"Nyandungun kosteikko\"]",
+                "text": "Nyandungu on kosteikkolaakso Gasabon ja Kicukiron välissä. Aiemmin heikentynyttä ympäristöä on kunnostettu palauttamalla paikallista kasvillisuutta, viikunametsää ja vesiuomia. Alueelle on istutettu paikallisia puita, ja kokonaisuuteen kuuluu puroja, altaita ja ruovikkoja. Näiden rinnalla paikka palvelee luontokasvatusta.\n\nNykyinen kunnostus ja puistokäyttö kuuluvat 2000-luvulle. Isoisän matkavuonna 1873 tätä ohjelmaa ja sen rakenteita ei ollut, eikä nykyistä palautettua ympäristöä voi kuvata tuon ajan tarkaksi kasvillisuudeksi. Kohteena on kosteikon ja metsän luonnonympäristö. Kulkureitit sekä käynnin nykyiset järjestelyt ovat erillisiä siitä, että laakso on tunnistettu kartalle omalla paikkapisteellään."
+              },
+              {
+                "type": "factSheet",
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/kigali/faktapohja.md",
+                "sha256": "b5662ad3dd769f6e70e15b1c45da1b6bf2db8bdea9283894efe0d69005c3feed",
+                "sourceUrl": "https://en.wikipedia.org/wiki/Nyandungu_Urban_Wetland_Eco-Tourism_Park"
+              }
+            ]
+          },
+          "reviewedAt": "2026-10-12T20:21:40.350291+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kigali/qa.json",
+            "sha256": "0e3417bba988a255df336827fc77d0598a9b83c30b3e6b504938c3c2173f85ff"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kigali/illustration-qa-extra.json",
+            "sha256": "7c5e5fb82fb3b57726e44d81a00f4fe0be12eeb0a0a00d889b36a061c9baf07b"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/kigali/job14-e06-kigali-n4-v01-18600fa6ae66.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/kigali/job14-e06-kigali-n4-v01-18600fa6ae66.png?t=13c6246b1cac0e89",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/kigali/job14-e06-kigali-n4-v01-18600fa6ae66.png",
+        "sha256": "13c6246b1cac0e89bf321dcbaa844f58fc3f701ba73ab44ed45efe7971a46e88",
+        "bytes": 2459127,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "job14-e06-kigali-n4-v01",
+        "nativeSHA256": "18600fa6ae66099d8a18cbc4498b10727daa3cdc6a90a9fdd7daf5c74f6419c8",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e06/kigali/job14-e06-kigali-n4-v01-18600fa6ae66.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e06",
+        "city": "kigali",
+        "slot": "N4",
+        "targetJsonPath": "$.nahtavyydet[\"Nyandungun kosteikko\"].kuvat[0]",
+        "verifiedAt": "2026-10-12T20:22:10.804847+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e06/kigali/job14-e06-kigali-n4-v01-18600fa6ae66.png",
+        "sha256": "13c6246b1cac0e89bf321dcbaa844f58fc3f701ba73ab44ed45efe7971a46e88",
+        "bytes": 2459127,
+        "SHAReadAt": "2026-10-12T20:22:04.655118+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "18600fa6ae66099d8a18cbc4498b10727daa3cdc6a90a9fdd7daf5c74f6419c8",
+        "rgbPixelSHA256": "563c40d7fde653bfca2d87b42e36d336076fbb9c5f7519de1df56053ea1d1aff",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "a7e19a171c76c618edaf01e768995ba20744fa0a05badc079632eee7c7caaf24",
+      "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+      "contextAfterSHA256": "f002e7c8a6f5e4298eb52b0072159f0629cf23679ae884537a5a724a3ca261df"
     },
     {
       "era": "e06",
@@ -1337,7 +1822,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kigali/qa.json",
-        "fileSHA256": "319a6bfa21ffe7908b063a520b136fcc3118ec3af74899f1e4a72cbe354bc4ee",
+        "fileSHA256": "0e3417bba988a255df336827fc77d0598a9b83c30b3e6b504938c3c2173f85ff",
         "item": {
           "slot": "PHOTO",
           "targetJsonPath": "$.valokuva",
@@ -1392,11 +1877,11 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kigali/qa.json",
-            "sha256": "319a6bfa21ffe7908b063a520b136fcc3118ec3af74899f1e4a72cbe354bc4ee"
+            "sha256": "0e3417bba988a255df336827fc77d0598a9b83c30b3e6b504938c3c2173f85ff"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kigali/illustration-qa-extra.json",
-            "sha256": "51cf798ebfa84363b6bcd0842cdf34c56b520b125181ab29a162f46d8fbd9baa"
+            "sha256": "7c5e5fb82fb3b57726e44d81a00f4fe0be12eeb0a0a00d889b36a061c9baf07b"
           }
         ]
       },
@@ -1469,7 +1954,7 @@
         "vuosi": "2012"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "10a4627f848ee909e0943abdad45c7d1299726980c7feeaa0a074df585e7efb1",
+      "sourceContentAfterSHA256": "a7e19a171c76c618edaf01e768995ba20744fa0a05badc079632eee7c7caaf24",
       "targetAfterSHA256": "f60bac2f4a66783d34a03cd8d8e54abf9dd6e90ccfdae4a871289f2aafe5d9cd",
       "contextAfterSHA256": "f60bac2f4a66783d34a03cd8d8e54abf9dd6e90ccfdae4a871289f2aafe5d9cd"
     },
@@ -1585,7 +2070,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kigali/qa.json",
-        "fileSHA256": "319a6bfa21ffe7908b063a520b136fcc3118ec3af74899f1e4a72cbe354bc4ee",
+        "fileSHA256": "0e3417bba988a255df336827fc77d0598a9b83c30b3e6b504938c3c2173f85ff",
         "item": {
           "slot": "C1",
           "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
@@ -1629,11 +2114,11 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kigali/qa.json",
-            "sha256": "319a6bfa21ffe7908b063a520b136fcc3118ec3af74899f1e4a72cbe354bc4ee"
+            "sha256": "0e3417bba988a255df336827fc77d0598a9b83c30b3e6b504938c3c2173f85ff"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kigali/illustration-qa-extra.json",
-            "sha256": "51cf798ebfa84363b6bcd0842cdf34c56b520b125181ab29a162f46d8fbd9baa"
+            "sha256": "7c5e5fb82fb3b57726e44d81a00f4fe0be12eeb0a0a00d889b36a061c9baf07b"
           }
         ]
       },
@@ -1704,9 +2189,483 @@
         "tiedosto": "Mount Kigali.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "10a4627f848ee909e0943abdad45c7d1299726980c7feeaa0a074df585e7efb1",
+      "sourceContentAfterSHA256": "a7e19a171c76c618edaf01e768995ba20744fa0a05badc079632eee7c7caaf24",
       "targetAfterSHA256": "666bd715aaa4a914b6698ff6f8c680003adb2b3e67fbc5518ffa454ae0e83b9f",
       "contextAfterSHA256": "666bd715aaa4a914b6698ff6f8c680003adb2b3e67fbc5518ffa454ae0e83b9f"
+    },
+    {
+      "era": "e06",
+      "city": "kigali",
+      "slot": "C2",
+      "type": "commons",
+      "assetID": "capital-cc-e06-kigali-c2-b7251b6ed390c092",
+      "galleryImageID": "capital-cc-e06-kigali-c2-b7251b6ed390c092",
+      "commonsFile": "Panoramique kigali.jpg",
+      "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[1]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "kansikuvat",
+        1
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e06/kigali/c2-b7251b6ed390c092f5f5.jpg",
+        "suora": true,
+        "lahde": "Jonathan Serex, Wikimedia Commons (CC BY-SA 3.0)",
+        "selite": "Kigalin kukkuloiden asutusta panoraamassa vuodelta 2003.",
+        "lyhyt": "Kigalin kukkuloiden asutusta panoraamassa vuodelta 2003.",
+        "tiedosto": "Panoramique kigali.jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Jonathan Serex, Wikimedia Commons (CC BY-SA 3.0)",
+        "selite": "Kigalin kukkuloiden asutusta panoraamassa vuodelta 2003.",
+        "lyhyt": "Kigalin kukkuloiden asutusta panoraamassa vuodelta 2003.",
+        "tiedosto": "Panoramique kigali.jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e06/kigali/c2-b7251b6ed390c092f5f5.jpg",
+        "suora": true,
+        "lahde": "Jonathan Serex, Wikimedia Commons (CC BY-SA 3.0)",
+        "selite": "Kigalin kukkuloiden asutusta panoraamassa vuodelta 2003.",
+        "lyhyt": "Kigalin kukkuloiden asutusta panoraamassa vuodelta 2003.",
+        "tiedosto": "Panoramique kigali.jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "b7251b6ed390c092f5f54eda133031f30d4c8d6b1b063ffe90d279f3435bab8f",
+      "exportSHA256": "b7251b6ed390c092f5f54eda133031f30d4c8d6b1b063ffe90d279f3435bab8f",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e06/kigali/c2-b7251b6ed390c092f5f5.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e06/kigali/c2-b7251b6ed390c092f5f5.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kigali/cc-work/9e3e33cbed0d4b7a-preview.jpg",
+      "dimensions": [
+        3618,
+        700
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/kigali/sisalto.json",
+      "sourceContentSHA256": "10a4627f848ee909e0943abdad45c7d1299726980c7feeaa0a074df585e7efb1",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "subjectTitle": "Kigali",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Jonathan Serex",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Panoramique_kigali.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/7/76/Panoramique_kigali.jpg",
+        "rightsEvidence": {
+          "selection": "Author Jonathan Serex ja CC BY-SA3.0 luettu tiedostosivulta. Description La ville de Kigali (Rwanda), kuvausvuosi2003. Aito laaja monen korttelin/kukkulan kaupungin asettelu. Tavalliset kaukaiset talot osana laajaa massaa, ei yksittäisen nimetyn suojatun julkisivun tai teoksen lähiesittelyä. Alkuperäinen kangaslippu ei päälle lisätty logo eikä mainos.",
+          "QA": {
+            "inputManifest": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kigali/cc-selection.json",
+            "reviewer": "job-25 independent-image-QA",
+            "reviewedAt": "2026-10-12T20:33:19.287600+00:00",
+            "visualTool": "view_image",
+            "visualDetail": "original",
+            "localOriginal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kigali/cc-work/9e3e33cbed0d4b7a-preview.jpg",
+            "actualWidth": 3618,
+            "actualHeight": 700,
+            "actualFormat": "JPEG",
+            "nativePixelWidth": 3618,
+            "nativePixelHeight": 700,
+            "exifOrientation": 1,
+            "dimensionsConvention": "actualWidth/Height are correctly oriented display dimensions; native stored pixel dimensions are separately recorded",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Panoramique_kigali.jpg",
+            "savedSourcePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kigali/cc-work/9e3e33cbed0d4b7a.html",
+            "savedSourceSHA256": "3d1a910cc1a4b2dc8e9a0ea3a784cf001d2747f86e7132a258efc26a3ead30e7",
+            "authorVerified": "Jonathan Serex",
+            "authorField": "Original Commons Author table, independently read; not inferred from uploader",
+            "licenseVerified": "CC BY-SA 3.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+            "captureDate": "2003",
+            "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/kigali/sisalto.json",
+            "sourceContentSHA256": "10a4627f848ee909e0943abdad45c7d1299726980c7feeaa0a074df585e7efb1",
+            "captionFi": "Kigalin kukkuloiden asutusta panoraamassa vuodelta 2003.",
+            "depictedWorkLayer": "Valokuvakerros: alkuperäinen Author Jonathan Serex ja Source Own work luettu itse; monilisenssistä valitaan nimenomaisestiCC BY-SA3.0Unported. Kalgath on lataushistorian tilinimi, kuvaajaa ei korvata sillä. Erillinen teoskerros: laaja tavallisten seinä-/kattotasojen asutus ja luontomaasto, ei eristettyä nimettyä julkisivu-/taideteosta. Fyysisessä Ruandan valtiolipussa ei tämän valokuvan päälle lisättyä merkintää; sitä ei käytetä erillisenä uutena logoassetina. Ei yleistä Ruandan panoraamaoikeus- tai rakennusikäväitettä.",
+            "duplicateInCity": false,
+            "sourceRevision": 1281028292,
+            "selectedLicenseVersion": "CC BY-SA3.0Unported from available multilicenses",
+            "creditForPublication": "Jonathan Serex / CC BY-SA3.0",
+            "layoutObservation": "3618×700 native wide panorama; no invented minimum height or traveler ratio applied"
+          },
+          "qaReason": "Aito laaja Kigalin kukkula- ja kortteliasettelu vuoden2003panoraamassa. Alkuperäinen Description La ville de Kigali ja nykyisen lehden kukkula-/laaksoteksti vastaavat toisiaan. Matala3618×700panoraama sisältää luettavan talorakenteen useilla rinteillä; C2:lle ei sovelleta TRAVELERin kuvasuhdetta. Etäisten jalankulkijoiden kasvonpiirteet eivät erotu. Ei päälle lisättyä tekstiä, vesileimaa tai kehystä. Vasemmalla näkyvä lippu on kuvatun ympäristön fyysinen lippu, ei lisätty logo. Vuosi2003 on oikein selitteessä."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Kigalin kukkuloiden asutusta panoraamassa vuodelta 2003.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kigali/qa.json",
+        "fileSHA256": "0e3417bba988a255df336827fc77d0598a9b83c30b3e6b504938c3c2173f85ff",
+        "item": {
+          "slot": "C2",
+          "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[1]",
+          "commonsFile": "Panoramique kigali.jpg",
+          "sha256": "b7251b6ed390c092f5f54eda133031f30d4c8d6b1b063ffe90d279f3435bab8f",
+          "verdict": "accepted",
+          "reason": "Aito laaja Kigalin kukkula- ja kortteliasettelu vuoden2003panoraamassa. Alkuperäinen Description La ville de Kigali ja nykyisen lehden kukkula-/laaksoteksti vastaavat toisiaan. Matala3618×700panoraama sisältää luettavan talorakenteen useilla rinteillä; C2:lle ei sovelleta TRAVELERin kuvasuhdetta. Etäisten jalankulkijoiden kasvonpiirteet eivät erotu. Ei päälle lisättyä tekstiä, vesileimaa tai kehystä. Vasemmalla näkyvä lippu on kuvatun ympäristön fyysinen lippu, ei lisätty logo. Vuosi2003 on oikein selitteessä.",
+          "evidence": {
+            "inputManifest": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kigali/cc-selection.json",
+            "reviewer": "job-25 independent-image-QA",
+            "reviewedAt": "2026-10-12T20:33:19.287600+00:00",
+            "visualTool": "view_image",
+            "visualDetail": "original",
+            "localOriginal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kigali/cc-work/9e3e33cbed0d4b7a-preview.jpg",
+            "actualWidth": 3618,
+            "actualHeight": 700,
+            "actualFormat": "JPEG",
+            "nativePixelWidth": 3618,
+            "nativePixelHeight": 700,
+            "exifOrientation": 1,
+            "dimensionsConvention": "actualWidth/Height are correctly oriented display dimensions; native stored pixel dimensions are separately recorded",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Panoramique_kigali.jpg",
+            "savedSourcePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kigali/cc-work/9e3e33cbed0d4b7a.html",
+            "savedSourceSHA256": "3d1a910cc1a4b2dc8e9a0ea3a784cf001d2747f86e7132a258efc26a3ead30e7",
+            "authorVerified": "Jonathan Serex",
+            "authorField": "Original Commons Author table, independently read; not inferred from uploader",
+            "licenseVerified": "CC BY-SA 3.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+            "captureDate": "2003",
+            "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/kigali/sisalto.json",
+            "sourceContentSHA256": "10a4627f848ee909e0943abdad45c7d1299726980c7feeaa0a074df585e7efb1",
+            "captionFi": "Kigalin kukkuloiden asutusta panoraamassa vuodelta 2003.",
+            "depictedWorkLayer": "Valokuvakerros: alkuperäinen Author Jonathan Serex ja Source Own work luettu itse; monilisenssistä valitaan nimenomaisestiCC BY-SA3.0Unported. Kalgath on lataushistorian tilinimi, kuvaajaa ei korvata sillä. Erillinen teoskerros: laaja tavallisten seinä-/kattotasojen asutus ja luontomaasto, ei eristettyä nimettyä julkisivu-/taideteosta. Fyysisessä Ruandan valtiolipussa ei tämän valokuvan päälle lisättyä merkintää; sitä ei käytetä erillisenä uutena logoassetina. Ei yleistä Ruandan panoraamaoikeus- tai rakennusikäväitettä.",
+            "duplicateInCity": false,
+            "sourceRevision": 1281028292,
+            "selectedLicenseVersion": "CC BY-SA3.0Unported from available multilicenses",
+            "creditForPublication": "Jonathan Serex / CC BY-SA3.0",
+            "layoutObservation": "3618×700 native wide panorama; no invented minimum height or traveler ratio applied"
+          }
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kigali/qa.json",
+            "sha256": "0e3417bba988a255df336827fc77d0598a9b83c30b3e6b504938c3c2173f85ff"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kigali/illustration-qa-extra.json",
+            "sha256": "7c5e5fb82fb3b57726e44d81a00f4fe0be12eeb0a0a00d889b36a061c9baf07b"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e06",
+        "city": "kigali",
+        "slot": "C2",
+        "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[1]",
+        "commonsFile": "Panoramique kigali.jpg",
+        "sha256": "b7251b6ed390c092f5f54eda133031f30d4c8d6b1b063ffe90d279f3435bab8f",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Panoramique_kigali.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/7/76/Panoramique_kigali.jpg",
+        "author": "Jonathan Serex",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+        "width": 3618,
+        "height": 700,
+        "originalSHA256": "b7251b6ed390c092f5f54eda133031f30d4c8d6b1b063ffe90d279f3435bab8f",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e06/kigali/c2-b7251b6ed390c092f5f5.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e06/kigali/c2-b7251b6ed390c092f5f5.jpg",
+        "bytes": 294395,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T20:33:46.918588+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Jonathan Serex, Wikimedia Commons (CC BY-SA 3.0)",
+        "selite": "Kigalin kukkuloiden asutusta panoraamassa vuodelta 2003.",
+        "lyhyt": "Kigalin kukkuloiden asutusta panoraamassa vuodelta 2003.",
+        "tiedosto": "Panoramique kigali.jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "a7e19a171c76c618edaf01e768995ba20744fa0a05badc079632eee7c7caaf24",
+      "targetAfterSHA256": "5071c7c9f7d3bdb6e3affb2a04399fb79034128d45133306a2b3f39ada6c6367",
+      "contextAfterSHA256": "5071c7c9f7d3bdb6e3affb2a04399fb79034128d45133306a2b3f39ada6c6367"
+    },
+    {
+      "era": "e06",
+      "city": "kigali",
+      "slot": "TRAVELER",
+      "type": "commons",
+      "assetID": "capital-cc-e06-kigali-traveler-4ff1d2270a32e4fe",
+      "galleryImageID": "capital-cc-e06-kigali-traveler-4ff1d2270a32e4fe",
+      "commonsFile": "Fleur mauve de Kigali.jpg",
+      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "matkailijalle",
+        "kuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e06/kigali/traveler-4ff1d2270a32e4fe87ac.jpg",
+        "suora": true,
+        "lahde": "IGANZE, Wikimedia Commons (CC0)",
+        "selite": "Violetteja kukkia Kigalissa huhtikuussa 2025.",
+        "lyhyt": "Violetteja kukkia Kigalissa huhtikuussa 2025.",
+        "tiedosto": "Fleur mauve de Kigali.jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "IGANZE, Wikimedia Commons (CC0)",
+        "selite": "Violetteja kukkia Kigalissa huhtikuussa 2025.",
+        "lyhyt": "Violetteja kukkia Kigalissa huhtikuussa 2025.",
+        "tiedosto": "Fleur mauve de Kigali.jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e06/kigali/traveler-4ff1d2270a32e4fe87ac.jpg",
+        "suora": true,
+        "lahde": "IGANZE, Wikimedia Commons (CC0)",
+        "selite": "Violetteja kukkia Kigalissa huhtikuussa 2025.",
+        "lyhyt": "Violetteja kukkia Kigalissa huhtikuussa 2025.",
+        "tiedosto": "Fleur mauve de Kigali.jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "4ff1d2270a32e4fe87ac8c0ef06141c082630e8d18a6c538a4dd5dd3a4f690f5",
+      "exportSHA256": "4ff1d2270a32e4fe87ac8c0ef06141c082630e8d18a6c538a4dd5dd3a4f690f5",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e06/kigali/traveler-4ff1d2270a32e4fe87ac.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e06/kigali/traveler-4ff1d2270a32e4fe87ac.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kigali/cc-work/6702211edc8b2535-preview.jpg",
+      "dimensions": [
+        3792,
+        5056
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/kigali/sisalto.json",
+      "sourceContentSHA256": "10a4627f848ee909e0943abdad45c7d1299726980c7feeaa0a074df585e7efb1",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "bdd670843a66436fabce716704329deba9bea9f680c650b991c8c6c2371159e1",
+        "subjectTitle": "Matkailijalle",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "IGANZE",
+        "license": "CC0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Fleur_mauve_de_Kigali.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/9/90/Fleur_mauve_de_Kigali.jpg",
+        "rightsEvidence": {
+          "selection": "Author IGANZE, Own work ja CC0 -linkki luettu tiedostosivulta. Description fleur mauve de Kigali au Rwanda sitoo valokuvan Kigalin paikalliseen kasvillisuuteen. Elävä puu/kukat ja tavallinen kivimuuri, ei taideteosta, arkkitehtuuriesittelyä tai nimettyä suojattua maisemasuunnittelua. Lajia ei arvata, ei väitetä Nyandungun/Umusambin kohdekuvaksi.",
+          "QA": {
+            "inputManifest": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kigali/cc-selection.json",
+            "producerCandidateMetadataSHA256": "64dfe07d86a6a2a86482f21b90de6299a9d350e5fd4cc5daae9e6d03b0a98cc7",
+            "reviewer": "job-25 independent-image-QA",
+            "reviewedAt": "2026-10-12T20:46:01.771749+00:00",
+            "visualTool": "view_image",
+            "visualDetail": "original",
+            "localOriginal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kigali/cc-work/6702211edc8b2535-preview.jpg",
+            "actualWidth": 3792,
+            "actualHeight": 5056,
+            "actualFormat": "JPEG",
+            "nativePixelWidth": 5056,
+            "nativePixelHeight": 3792,
+            "exifOrientation": 6,
+            "dimensionsConvention": "actualWidth/Height are correctly oriented display dimensions; native stored pixel dimensions are separately recorded",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Fleur_mauve_de_Kigali.jpg",
+            "savedSourcePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kigali/cc-work/6702211edc8b2535.html",
+            "savedSourceSHA256": "f6f5b09573e1152b08f64778c32d6106e99edd2da1fe532cebb1d14b39ca68a2",
+            "authorVerified": "IGANZE",
+            "authorField": "Original Commons Author table, independently read; not inferred from uploader",
+            "licenseVerified": "CC0",
+            "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+            "captureDate": "24 April 2025",
+            "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/kigali/sisalto.json",
+            "sourceContentSHA256": "10a4627f848ee909e0943abdad45c7d1299726980c7feeaa0a074df585e7efb1",
+            "captionFi": "Violetteja kukkia Kigalissa huhtikuussa 2025.",
+            "depictedWorkLayer": "Valokuvakerros: IGANZE, Source Own work jaCC0 1.0Universal Public Domain Dedication luettu itse alkuperäisestä Commons-sivusta, ei vain uploader-nimestä. Erillinen teoskerros: elävät kukat, lehdet, oksat, ruoho ja tavallinen kivimuuri; ei yksilöityä suojattua taidetta tai arkkitehtuuriteosta pääaiheena. Ei lisättyjä tunnuksia tai AI-generoitua tekstiä. Vuoden2025kuvaa ei kutsuta vuoden2026kuvaushetkeksi tai1873näkymäksi.",
+            "duplicateInCity": false,
+            "sourceRevision": 1254510326,
+            "ratioVerified": 0.75,
+            "captureDateAsStated": "Commons Date24April2025; EXIFDateTimeOriginal23April2025,13:32",
+            "captureDateConflict": "One-day difference retained; caption uses April2025, not a asserted exact day",
+            "creditForPublication": "IGANZE / CC0 1.0"
+          },
+          "qaReason": "Aito Kigalissa kuvattu violetin kukinnan yksityiskohta vastaa matkailijaosan paikallisen luonnon aihetta. Alkuperäinen Description fleur mauve de Kigali ja Nature of Kigali -kategoria sitovat paikan; ei lajia, Nyandungun/Umusambin paikkaa tai suojeltua puutarhasuunnitelmaa koskevaa väitettä. Pystyformaatti toteutuu oikein esitettynä3792×5056, suhde0.75; JPEG-rasteri5056×3792 jaEXIF6 on kirjattu erikseen. Lievä alareunan ylivalotus ei estä kukkien/lehtien lukemista. Ei kasvoja, tekstiä, vesileimaa tai kehystä. Huhtikuu2025 on rehellinen selite; SourceDate24.4 jaExif23.4 ristiriita kirjattu eikä täsmäpäivää väitetä varmasti."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Violetteja kukkia Kigalissa huhtikuussa 2025.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kigali/qa.json",
+        "fileSHA256": "0e3417bba988a255df336827fc77d0598a9b83c30b3e6b504938c3c2173f85ff",
+        "item": {
+          "slot": "TRAVELER",
+          "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
+          "commonsFile": "Fleur mauve de Kigali.jpg",
+          "sha256": "4ff1d2270a32e4fe87ac8c0ef06141c082630e8d18a6c538a4dd5dd3a4f690f5",
+          "verdict": "accepted",
+          "reason": "Aito Kigalissa kuvattu violetin kukinnan yksityiskohta vastaa matkailijaosan paikallisen luonnon aihetta. Alkuperäinen Description fleur mauve de Kigali ja Nature of Kigali -kategoria sitovat paikan; ei lajia, Nyandungun/Umusambin paikkaa tai suojeltua puutarhasuunnitelmaa koskevaa väitettä. Pystyformaatti toteutuu oikein esitettynä3792×5056, suhde0.75; JPEG-rasteri5056×3792 jaEXIF6 on kirjattu erikseen. Lievä alareunan ylivalotus ei estä kukkien/lehtien lukemista. Ei kasvoja, tekstiä, vesileimaa tai kehystä. Huhtikuu2025 on rehellinen selite; SourceDate24.4 jaExif23.4 ristiriita kirjattu eikä täsmäpäivää väitetä varmasti.",
+          "evidence": {
+            "inputManifest": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kigali/cc-selection.json",
+            "producerCandidateMetadataSHA256": "64dfe07d86a6a2a86482f21b90de6299a9d350e5fd4cc5daae9e6d03b0a98cc7",
+            "reviewer": "job-25 independent-image-QA",
+            "reviewedAt": "2026-10-12T20:46:01.771749+00:00",
+            "visualTool": "view_image",
+            "visualDetail": "original",
+            "localOriginal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kigali/cc-work/6702211edc8b2535-preview.jpg",
+            "actualWidth": 3792,
+            "actualHeight": 5056,
+            "actualFormat": "JPEG",
+            "nativePixelWidth": 5056,
+            "nativePixelHeight": 3792,
+            "exifOrientation": 6,
+            "dimensionsConvention": "actualWidth/Height are correctly oriented display dimensions; native stored pixel dimensions are separately recorded",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Fleur_mauve_de_Kigali.jpg",
+            "savedSourcePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kigali/cc-work/6702211edc8b2535.html",
+            "savedSourceSHA256": "f6f5b09573e1152b08f64778c32d6106e99edd2da1fe532cebb1d14b39ca68a2",
+            "authorVerified": "IGANZE",
+            "authorField": "Original Commons Author table, independently read; not inferred from uploader",
+            "licenseVerified": "CC0",
+            "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+            "captureDate": "24 April 2025",
+            "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/kigali/sisalto.json",
+            "sourceContentSHA256": "10a4627f848ee909e0943abdad45c7d1299726980c7feeaa0a074df585e7efb1",
+            "captionFi": "Violetteja kukkia Kigalissa huhtikuussa 2025.",
+            "depictedWorkLayer": "Valokuvakerros: IGANZE, Source Own work jaCC0 1.0Universal Public Domain Dedication luettu itse alkuperäisestä Commons-sivusta, ei vain uploader-nimestä. Erillinen teoskerros: elävät kukat, lehdet, oksat, ruoho ja tavallinen kivimuuri; ei yksilöityä suojattua taidetta tai arkkitehtuuriteosta pääaiheena. Ei lisättyjä tunnuksia tai AI-generoitua tekstiä. Vuoden2025kuvaa ei kutsuta vuoden2026kuvaushetkeksi tai1873näkymäksi.",
+            "duplicateInCity": false,
+            "sourceRevision": 1254510326,
+            "ratioVerified": 0.75,
+            "captureDateAsStated": "Commons Date24April2025; EXIFDateTimeOriginal23April2025,13:32",
+            "captureDateConflict": "One-day difference retained; caption uses April2025, not a asserted exact day",
+            "creditForPublication": "IGANZE / CC0 1.0"
+          }
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kigali/qa.json",
+            "sha256": "0e3417bba988a255df336827fc77d0598a9b83c30b3e6b504938c3c2173f85ff"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kigali/illustration-qa-extra.json",
+            "sha256": "7c5e5fb82fb3b57726e44d81a00f4fe0be12eeb0a0a00d889b36a061c9baf07b"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e06",
+        "city": "kigali",
+        "slot": "TRAVELER",
+        "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
+        "commonsFile": "Fleur mauve de Kigali.jpg",
+        "sha256": "4ff1d2270a32e4fe87ac8c0ef06141c082630e8d18a6c538a4dd5dd3a4f690f5",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Fleur_mauve_de_Kigali.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/9/90/Fleur_mauve_de_Kigali.jpg",
+        "author": "IGANZE",
+        "license": "CC0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "width": 3792,
+        "height": 5056,
+        "originalSHA256": "4ff1d2270a32e4fe87ac8c0ef06141c082630e8d18a6c538a4dd5dd3a4f690f5",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e06/kigali/traveler-4ff1d2270a32e4fe87ac.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e06/kigali/traveler-4ff1d2270a32e4fe87ac.jpg",
+        "bytes": 11060448,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T20:47:40.957806+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "IGANZE, Wikimedia Commons (CC0)",
+        "selite": "Violetteja kukkia Kigalissa huhtikuussa 2025.",
+        "lyhyt": "Violetteja kukkia Kigalissa huhtikuussa 2025.",
+        "tiedosto": "Fleur mauve de Kigali.jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "a7e19a171c76c618edaf01e768995ba20744fa0a05badc079632eee7c7caaf24",
+      "targetAfterSHA256": "a7a1256d5e4f11016cc886661c8444967cb1fb813938f3c9f7424b19b9440c46",
+      "contextAfterSHA256": "aec7c28e4b9575b3ea72ccd339fbedff9f8e4cad52697a9cf883aa5ee4582579"
     }
   ],
   "runtimeIntegrationPending": true,

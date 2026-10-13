@@ -3,8 +3,280 @@
   "era": "e06",
   "city": "kinshasa",
   "authorization": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
-  "sourceContentAfterSHA256": "e91814769945f919b97e5540ad6133387684d3a71a150588e315e5feac9c4b79",
+  "sourceContentAfterSHA256": "327687c9d21178eb71790d386c675ca6ab86916fd7f70d37c90fb77fd4cca508",
   "assets": [
+    {
+      "era": "e06",
+      "city": "kinshasa",
+      "slot": "O4",
+      "type": "illustration",
+      "assetID": "job14-e06-kinshasa-o4-v01",
+      "galleryImageID": "job14-e06-kinshasa-o4-v01",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "matkailijalle",
+        "artikkeli",
+        "jaksot",
+        3,
+        "kuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/kinshasa/job14-e06-kinshasa-o4-v01-b04735b32c86.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva ruokailun välineistä.",
+        "lyhyt": "Havainnekuva ruokailun välineistä."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/kinshasa/job14-e06-kinshasa-o4-v01-b04735b32c86.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva ruokailun välineistä.",
+        "lyhyt": "Havainnekuva ruokailun välineistä."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "b04735b32c865eb1f44fc1332fd30b6335b85d5743485ca70be74cbd03889aca",
+      "exportSHA256": "562d9bfe24adcd6f5b8fb22ec3d82339e307e1669e24f608f6824acc3cb89dc8",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/kinshasa/job14-e06-kinshasa-o4-v01-b04735b32c86.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/kinshasa/job14-e06-kinshasa-o4-v01-b04735b32c86.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e06/kinshasa/job14-e06-kinshasa-o4-v01-b04735b32c86.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/kinshasa/sisalto.json",
+      "sourceContentSHA256": "e91814769945f919b97e5540ad6133387684d3a71a150588e315e5feac9c4b79",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "4949101a0d98cd8b7b95cedce9d26a2d8a1daa629079159c58a3e99736546815",
+        "subjectTitle": "Kaupungin ruokapaikat",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Yleistetty lähteistetty materiaali tai tavallinen funktionaalinen esine. Ei kuva-inputtia, arkkitehtuurin/asettelun, suojatun laattakuvion/rituaaliesineen tai nykyteoksen jäljennöstä. Ei named-place documentary claim.",
+          "QA": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kinshasa/assets/job14-e06-kinshasa-o4-v01/image.png",
+            "nativeSHA256": "b04735b32c865eb1f44fc1332fd30b6335b85d5743485ca70be74cbd03889aca",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "nativeRatio": 1.5,
+            "manifestHashMatches": true,
+            "personallyViewed": true,
+            "viewTool": "view_image",
+            "viewedAt": "2026-10-12T20:41:12.985Z",
+            "visualFindingsFi": "Tyhjä valkoinen lautanen, nelipiikkinen haarukka, lusikka ja vesilasi sekä taustakasvi. Astioiden muodot, metallin heijastukset ja veden pinta uskottavat. Ei ruokaväitteitä, tekstiä, logoja tai ihmisiä.",
+            "captionFi": "Havainnekuva ruokailun välineistä.",
+            "sourceAndTargetCheckFi": "Ajantasainen O4 ja faktapohjan K12/Eat käsittelevät paikallisia ruokapaikkoja ja kansainvälisiä keittiöitä. Yleinen kuvateksti ei nimeä annosta, ravintolaa tai todellista Kinshasan kattausta.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/kinshasa/sisalto.json",
+            "contentSHA256": "e91814769945f919b97e5540ad6133387684d3a71a150588e315e5feac9c4b79",
+            "textJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3]",
+            "currentText": "Kinshasassa on paikallisia ruokapaikkoja ja myös kansainvälisiä keittiöitä. Kongon ruoka-aiheiden rinnalle tulee täällä suurkaupungin ruokapaikkojen valikoima. Nimetyn ravintolan nykyinen toiminta varmistetaan ennen käyntiä.",
+            "factPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/kinshasa/faktapohja.md",
+            "factSHA256": "ff86b3dfd30551b653a3f829cff42c462798c82412394696038c623fa340006b",
+            "sourceEvidence": [
+              {
+                "type": "currentContent",
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/kinshasa/sisalto.json",
+                "sha256": "e88d5eedad9cce664e6a7a0e0d0a0e0ec12c7c44741f0a8f27022a3801070ef9",
+                "jsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3]",
+                "text": "Kinshasassa on paikallisia ruokapaikkoja ja myös kansainvälisiä keittiöitä. Kongon ruoka-aiheiden rinnalle tulee täällä suurkaupungin ruokapaikkojen valikoima. Nimetyn ravintolan nykyinen toiminta varmistetaan ennen käyntiä."
+              },
+              {
+                "type": "factSheet",
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/kinshasa/faktapohja.md",
+                "sha256": "ff86b3dfd30551b653a3f829cff42c462798c82412394696038c623fa340006b",
+                "sourceUrl": "https://en.wikivoyage.org/wiki/Kinshasa"
+              }
+            ],
+            "rightsCheckFi": "Yleishavainne, ei nimettyä suojattua teosta tai arkkitehtuurin/asettelun jäljennöstä.",
+            "formatCheck": {
+              "format": "PNG",
+              "manifestDimensionsMatch": true,
+              "embeddedICCProfile": false,
+              "nativeMetadataExportSeparate": true
+            }
+          },
+          "qaReason": "Ruokailuvälineiden yleishavainne sopii O4:n ruokapaikka-aiheeseen."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva ruokailun välineistä.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kinshasa/illustration-qa-extra.json",
+        "fileSHA256": "a39daf92b5fafa41be9c522174ace6e13b6091486eed6c531d5fafa83aacab36",
+        "item": {
+          "slot": "O4",
+          "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+          "assetID": "job14-e06-kinshasa-o4-v01",
+          "sha256": "b04735b32c865eb1f44fc1332fd30b6335b85d5743485ca70be74cbd03889aca",
+          "verdict": "accepted",
+          "reason": "Ruokailuvälineiden yleishavainne sopii O4:n ruokapaikka-aiheeseen.",
+          "evidence": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kinshasa/assets/job14-e06-kinshasa-o4-v01/image.png",
+            "nativeSHA256": "b04735b32c865eb1f44fc1332fd30b6335b85d5743485ca70be74cbd03889aca",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "nativeRatio": 1.5,
+            "manifestHashMatches": true,
+            "personallyViewed": true,
+            "viewTool": "view_image",
+            "viewedAt": "2026-10-12T20:41:12.985Z",
+            "visualFindingsFi": "Tyhjä valkoinen lautanen, nelipiikkinen haarukka, lusikka ja vesilasi sekä taustakasvi. Astioiden muodot, metallin heijastukset ja veden pinta uskottavat. Ei ruokaväitteitä, tekstiä, logoja tai ihmisiä.",
+            "captionFi": "Havainnekuva ruokailun välineistä.",
+            "sourceAndTargetCheckFi": "Ajantasainen O4 ja faktapohjan K12/Eat käsittelevät paikallisia ruokapaikkoja ja kansainvälisiä keittiöitä. Yleinen kuvateksti ei nimeä annosta, ravintolaa tai todellista Kinshasan kattausta.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/kinshasa/sisalto.json",
+            "contentSHA256": "e91814769945f919b97e5540ad6133387684d3a71a150588e315e5feac9c4b79",
+            "textJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3]",
+            "currentText": "Kinshasassa on paikallisia ruokapaikkoja ja myös kansainvälisiä keittiöitä. Kongon ruoka-aiheiden rinnalle tulee täällä suurkaupungin ruokapaikkojen valikoima. Nimetyn ravintolan nykyinen toiminta varmistetaan ennen käyntiä.",
+            "factPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/kinshasa/faktapohja.md",
+            "factSHA256": "ff86b3dfd30551b653a3f829cff42c462798c82412394696038c623fa340006b",
+            "sourceEvidence": [
+              {
+                "type": "currentContent",
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/kinshasa/sisalto.json",
+                "sha256": "e88d5eedad9cce664e6a7a0e0d0a0e0ec12c7c44741f0a8f27022a3801070ef9",
+                "jsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3]",
+                "text": "Kinshasassa on paikallisia ruokapaikkoja ja myös kansainvälisiä keittiöitä. Kongon ruoka-aiheiden rinnalle tulee täällä suurkaupungin ruokapaikkojen valikoima. Nimetyn ravintolan nykyinen toiminta varmistetaan ennen käyntiä."
+              },
+              {
+                "type": "factSheet",
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/kinshasa/faktapohja.md",
+                "sha256": "ff86b3dfd30551b653a3f829cff42c462798c82412394696038c623fa340006b",
+                "sourceUrl": "https://en.wikivoyage.org/wiki/Kinshasa"
+              }
+            ],
+            "rightsCheckFi": "Yleishavainne, ei nimettyä suojattua teosta tai arkkitehtuurin/asettelun jäljennöstä.",
+            "formatCheck": {
+              "format": "PNG",
+              "manifestDimensionsMatch": true,
+              "embeddedICCProfile": false,
+              "nativeMetadataExportSeparate": true
+            }
+          },
+          "reviewedAt": "2026-10-12T20:45:26.005855+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kinshasa/qa.json",
+            "sha256": "9ca58c05ac590a392f77d4ab433e2fb24b66bd7c8355535e9d38c01892051859"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kinshasa/illustration-qa-extra.json",
+            "sha256": "a39daf92b5fafa41be9c522174ace6e13b6091486eed6c531d5fafa83aacab36"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/kinshasa/job14-e06-kinshasa-o4-v01-b04735b32c86.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/kinshasa/job14-e06-kinshasa-o4-v01-b04735b32c86.png?t=562d9bfe24adcd6f",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/kinshasa/job14-e06-kinshasa-o4-v01-b04735b32c86.png",
+        "sha256": "562d9bfe24adcd6f5b8fb22ec3d82339e307e1669e24f608f6824acc3cb89dc8",
+        "bytes": 1988449,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "job14-e06-kinshasa-o4-v01",
+        "nativeSHA256": "b04735b32c865eb1f44fc1332fd30b6335b85d5743485ca70be74cbd03889aca",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e06/kinshasa/job14-e06-kinshasa-o4-v01-b04735b32c86.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e06",
+        "city": "kinshasa",
+        "slot": "O4",
+        "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+        "verifiedAt": "2026-10-12T20:47:01.153308+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e06/kinshasa/job14-e06-kinshasa-o4-v01-b04735b32c86.png",
+        "sha256": "562d9bfe24adcd6f5b8fb22ec3d82339e307e1669e24f608f6824acc3cb89dc8",
+        "bytes": 1988449,
+        "SHAReadAt": "2026-10-12T20:45:31.457217+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "b04735b32c865eb1f44fc1332fd30b6335b85d5743485ca70be74cbd03889aca",
+        "rgbPixelSHA256": "26dcb781892cae500609436c3850ecf3bdd91e631808c697306f38fb820f94a3",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "327687c9d21178eb71790d386c675ca6ab86916fd7f70d37c90fb77fd4cca508",
+      "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+      "contextAfterSHA256": "4949101a0d98cd8b7b95cedce9d26a2d8a1daa629079159c58a3e99736546815"
+    },
     {
       "era": "e06",
       "city": "kinshasa",
@@ -136,7 +408,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kinshasa/qa.json",
-        "fileSHA256": "9bea9f478db2b316504abd22018dc10f3a763b9910364aeac83740531e5625cd",
+        "fileSHA256": "9ca58c05ac590a392f77d4ab433e2fb24b66bd7c8355535e9d38c01892051859",
         "item": {
           "slot": "K4",
           "targetJsonPath": "$.kaupunkilehti[0].nostot[3]",
@@ -205,11 +477,11 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kinshasa/qa.json",
-            "sha256": "9bea9f478db2b316504abd22018dc10f3a763b9910364aeac83740531e5625cd"
+            "sha256": "9ca58c05ac590a392f77d4ab433e2fb24b66bd7c8355535e9d38c01892051859"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kinshasa/illustration-qa-extra.json",
-            "sha256": "84a38b923607a518dc18903be8cedde1de968f3bef51c069a3854b87b7c3dbad"
+            "sha256": "a39daf92b5fafa41be9c522174ace6e13b6091486eed6c531d5fafa83aacab36"
           }
         ]
       },
@@ -292,7 +564,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "e91814769945f919b97e5540ad6133387684d3a71a150588e315e5feac9c4b79",
+      "sourceContentAfterSHA256": "327687c9d21178eb71790d386c675ca6ab86916fd7f70d37c90fb77fd4cca508",
       "targetAfterSHA256": "8875adf7955cf6b01b93493e38a75c571204afdc79ba4e24a23211c72ac68b57",
       "contextAfterSHA256": "8875adf7955cf6b01b93493e38a75c571204afdc79ba4e24a23211c72ac68b57"
     },
@@ -427,7 +699,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kinshasa/qa.json",
-        "fileSHA256": "9bea9f478db2b316504abd22018dc10f3a763b9910364aeac83740531e5625cd",
+        "fileSHA256": "9ca58c05ac590a392f77d4ab433e2fb24b66bd7c8355535e9d38c01892051859",
         "item": {
           "slot": "L1",
           "targetJsonPath": "$.kaupunkilehti[1].nostot[0]",
@@ -496,11 +768,11 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kinshasa/qa.json",
-            "sha256": "9bea9f478db2b316504abd22018dc10f3a763b9910364aeac83740531e5625cd"
+            "sha256": "9ca58c05ac590a392f77d4ab433e2fb24b66bd7c8355535e9d38c01892051859"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kinshasa/illustration-qa-extra.json",
-            "sha256": "84a38b923607a518dc18903be8cedde1de968f3bef51c069a3854b87b7c3dbad"
+            "sha256": "a39daf92b5fafa41be9c522174ace6e13b6091486eed6c531d5fafa83aacab36"
           }
         ]
       },
@@ -583,7 +855,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "e91814769945f919b97e5540ad6133387684d3a71a150588e315e5feac9c4b79",
+      "sourceContentAfterSHA256": "327687c9d21178eb71790d386c675ca6ab86916fd7f70d37c90fb77fd4cca508",
       "targetAfterSHA256": "5e3469eb500a800f4631c8cf481b26761b5cd6c1ec0b5160e0bda9ca1e9689c0",
       "contextAfterSHA256": "5e3469eb500a800f4631c8cf481b26761b5cd6c1ec0b5160e0bda9ca1e9689c0"
     },
@@ -702,7 +974,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kinshasa/qa.json",
-        "fileSHA256": "9bea9f478db2b316504abd22018dc10f3a763b9910364aeac83740531e5625cd",
+        "fileSHA256": "9ca58c05ac590a392f77d4ab433e2fb24b66bd7c8355535e9d38c01892051859",
         "item": {
           "slot": "L2",
           "targetJsonPath": "$.kaupunkilehti[1].nostot[1]",
@@ -801,11 +1073,11 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kinshasa/qa.json",
-            "sha256": "9bea9f478db2b316504abd22018dc10f3a763b9910364aeac83740531e5625cd"
+            "sha256": "9ca58c05ac590a392f77d4ab433e2fb24b66bd7c8355535e9d38c01892051859"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kinshasa/illustration-qa-extra.json",
-            "sha256": "84a38b923607a518dc18903be8cedde1de968f3bef51c069a3854b87b7c3dbad"
+            "sha256": "a39daf92b5fafa41be9c522174ace6e13b6091486eed6c531d5fafa83aacab36"
           }
         ]
       },
@@ -888,7 +1160,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "e91814769945f919b97e5540ad6133387684d3a71a150588e315e5feac9c4b79",
+      "sourceContentAfterSHA256": "327687c9d21178eb71790d386c675ca6ab86916fd7f70d37c90fb77fd4cca508",
       "targetAfterSHA256": "54d252263d587106c59ea600ce608a520077203db506609fd98c66336e722682",
       "contextAfterSHA256": "54d252263d587106c59ea600ce608a520077203db506609fd98c66336e722682"
     },
@@ -1023,7 +1295,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kinshasa/qa.json",
-        "fileSHA256": "9bea9f478db2b316504abd22018dc10f3a763b9910364aeac83740531e5625cd",
+        "fileSHA256": "9ca58c05ac590a392f77d4ab433e2fb24b66bd7c8355535e9d38c01892051859",
         "item": {
           "slot": "L3",
           "targetJsonPath": "$.kaupunkilehti[1].nostot[2]",
@@ -1092,11 +1364,11 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kinshasa/qa.json",
-            "sha256": "9bea9f478db2b316504abd22018dc10f3a763b9910364aeac83740531e5625cd"
+            "sha256": "9ca58c05ac590a392f77d4ab433e2fb24b66bd7c8355535e9d38c01892051859"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kinshasa/illustration-qa-extra.json",
-            "sha256": "84a38b923607a518dc18903be8cedde1de968f3bef51c069a3854b87b7c3dbad"
+            "sha256": "a39daf92b5fafa41be9c522174ace6e13b6091486eed6c531d5fafa83aacab36"
           }
         ]
       },
@@ -1179,7 +1451,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "e91814769945f919b97e5540ad6133387684d3a71a150588e315e5feac9c4b79",
+      "sourceContentAfterSHA256": "327687c9d21178eb71790d386c675ca6ab86916fd7f70d37c90fb77fd4cca508",
       "targetAfterSHA256": "6b252719d936f808c17c9a3a160e08ee7d94a65b6570b4c3f0058d05fd9ec171",
       "contextAfterSHA256": "6b252719d936f808c17c9a3a160e08ee7d94a65b6570b4c3f0058d05fd9ec171"
     },
@@ -1314,7 +1586,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kinshasa/qa.json",
-        "fileSHA256": "9bea9f478db2b316504abd22018dc10f3a763b9910364aeac83740531e5625cd",
+        "fileSHA256": "9ca58c05ac590a392f77d4ab433e2fb24b66bd7c8355535e9d38c01892051859",
         "item": {
           "slot": "L4",
           "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
@@ -1383,11 +1655,11 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kinshasa/qa.json",
-            "sha256": "9bea9f478db2b316504abd22018dc10f3a763b9910364aeac83740531e5625cd"
+            "sha256": "9ca58c05ac590a392f77d4ab433e2fb24b66bd7c8355535e9d38c01892051859"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kinshasa/illustration-qa-extra.json",
-            "sha256": "84a38b923607a518dc18903be8cedde1de968f3bef51c069a3854b87b7c3dbad"
+            "sha256": "a39daf92b5fafa41be9c522174ace6e13b6091486eed6c531d5fafa83aacab36"
           }
         ]
       },
@@ -1470,7 +1742,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "e91814769945f919b97e5540ad6133387684d3a71a150588e315e5feac9c4b79",
+      "sourceContentAfterSHA256": "327687c9d21178eb71790d386c675ca6ab86916fd7f70d37c90fb77fd4cca508",
       "targetAfterSHA256": "b88669f3d19b34efbc6b53bb6b1e64424020abd23193a91b2ff4c7ff36793f7a",
       "contextAfterSHA256": "b88669f3d19b34efbc6b53bb6b1e64424020abd23193a91b2ff4c7ff36793f7a"
     },
@@ -1605,7 +1877,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kinshasa/qa.json",
-        "fileSHA256": "9bea9f478db2b316504abd22018dc10f3a763b9910364aeac83740531e5625cd",
+        "fileSHA256": "9ca58c05ac590a392f77d4ab433e2fb24b66bd7c8355535e9d38c01892051859",
         "item": {
           "slot": "N2",
           "targetJsonPath": "$.nahtavyydet[\"Kinshasan kasvitieteellinen puutarha\"].kuvat[0]",
@@ -1674,11 +1946,11 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kinshasa/qa.json",
-            "sha256": "9bea9f478db2b316504abd22018dc10f3a763b9910364aeac83740531e5625cd"
+            "sha256": "9ca58c05ac590a392f77d4ab433e2fb24b66bd7c8355535e9d38c01892051859"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kinshasa/illustration-qa-extra.json",
-            "sha256": "84a38b923607a518dc18903be8cedde1de968f3bef51c069a3854b87b7c3dbad"
+            "sha256": "a39daf92b5fafa41be9c522174ace6e13b6091486eed6c531d5fafa83aacab36"
           }
         ]
       },
@@ -1761,7 +2033,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "e91814769945f919b97e5540ad6133387684d3a71a150588e315e5feac9c4b79",
+      "sourceContentAfterSHA256": "327687c9d21178eb71790d386c675ca6ab86916fd7f70d37c90fb77fd4cca508",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
       "contextAfterSHA256": "bbf91c8f5b4f081969792caf7d486981f5b788935bbfd8bdc18ce035b9de181c"
     },
@@ -1912,7 +2184,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kinshasa/qa.json",
-        "fileSHA256": "9bea9f478db2b316504abd22018dc10f3a763b9910364aeac83740531e5625cd",
+        "fileSHA256": "9ca58c05ac590a392f77d4ab433e2fb24b66bd7c8355535e9d38c01892051859",
         "item": {
           "slot": "PHOTO",
           "targetJsonPath": "$.valokuva",
@@ -2118,11 +2390,11 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kinshasa/qa.json",
-            "sha256": "9bea9f478db2b316504abd22018dc10f3a763b9910364aeac83740531e5625cd"
+            "sha256": "9ca58c05ac590a392f77d4ab433e2fb24b66bd7c8355535e9d38c01892051859"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kinshasa/illustration-qa-extra.json",
-            "sha256": "84a38b923607a518dc18903be8cedde1de968f3bef51c069a3854b87b7c3dbad"
+            "sha256": "a39daf92b5fafa41be9c522174ace6e13b6091486eed6c531d5fafa83aacab36"
           }
         ]
       },
@@ -2195,9 +2467,311 @@
         "vuosi": "2012"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "e91814769945f919b97e5540ad6133387684d3a71a150588e315e5feac9c4b79",
+      "sourceContentAfterSHA256": "327687c9d21178eb71790d386c675ca6ab86916fd7f70d37c90fb77fd4cca508",
       "targetAfterSHA256": "d16ba80da1c27b4e416e9f773b68f5d6ac139dd4e27623cea6b6eda0ab352e41",
       "contextAfterSHA256": "d16ba80da1c27b4e416e9f773b68f5d6ac139dd4e27623cea6b6eda0ab352e41"
+    },
+    {
+      "era": "e06",
+      "city": "kinshasa",
+      "slot": "C1",
+      "type": "commons",
+      "assetID": "capital-cc-e06-kinshasa-c1-72f70a3aed6ccfc6",
+      "galleryImageID": "capital-cc-e06-kinshasa-c1-72f70a3aed6ccfc6",
+      "commonsFile": "Kinshasa 15.32343E 4.32974S.jpg",
+      "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "kansikuvat",
+        0
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e06/kinshasa/c1-72f70a3aed6ccfc6512c.jpg",
+        "suora": true,
+        "lahde": "NASA, Wikimedia Commons (PD)",
+        "selite": "Kinshasa sijaitsee Kongojoen etelärannalla Pool Malebon vieressä.",
+        "lyhyt": "Kinshasa sijaitsee Kongojoen etelärannalla Pool Malebon vieressä.",
+        "tiedosto": "Kinshasa 15.32343E 4.32974S.jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "NASA, Wikimedia Commons (PD)",
+        "selite": "Kinshasa sijaitsee Kongojoen etelärannalla Pool Malebon vieressä.",
+        "lyhyt": "Kinshasa sijaitsee Kongojoen etelärannalla Pool Malebon vieressä.",
+        "tiedosto": "Kinshasa 15.32343E 4.32974S.jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e06/kinshasa/c1-72f70a3aed6ccfc6512c.jpg",
+        "suora": true,
+        "lahde": "NASA, Wikimedia Commons (PD)",
+        "selite": "Kinshasa sijaitsee Kongojoen etelärannalla Pool Malebon vieressä.",
+        "lyhyt": "Kinshasa sijaitsee Kongojoen etelärannalla Pool Malebon vieressä.",
+        "tiedosto": "Kinshasa 15.32343E 4.32974S.jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "72f70a3aed6ccfc6512c7f793d455cf2ebd11ce59ef524801ec48213c1ca8a5e",
+      "exportSHA256": "72f70a3aed6ccfc6512c7f793d455cf2ebd11ce59ef524801ec48213c1ca8a5e",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e06/kinshasa/c1-72f70a3aed6ccfc6512c.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e06/kinshasa/c1-72f70a3aed6ccfc6512c.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kinshasa/cc-work/f87f1f1edd8d9fb0-preview.jpg",
+      "dimensions": [
+        1280,
+        958
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/kinshasa/sisalto.json",
+      "sourceContentSHA256": "e91814769945f919b97e5540ad6133387684d3a71a150588e315e5feac9c4b79",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "subjectTitle": "Kinshasa",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "NASA",
+        "license": "PD",
+        "licenseUrl": "https://commons.wikimedia.org/wiki/File:Kinshasa_15.32343E_4.32974S.jpg#Licensing",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Kinshasa_15.32343E_4.32974S.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3b/Kinshasa_15.32343E_4.32974S.jpg",
+        "rightsEvidence": {
+          "selection": "Author NASA ja NASA/US-government-PD tiedostosivulta; Source NASA World Wind -satelliittiaineisto. Description Kinshasa ja tiedoston kaupunkikoordinaatit15.32343E4.32974S paikantavat todellisen kaupungin, eivät koko valtiota. Laaja rakennettu kaupunkiala näkyy joen etelärannalla; yksittäiset suojatut rakennukset/teokset eivät erotu.",
+          "QA": {
+            "author": "NASA",
+            "license": "PD",
+            "width": 1280,
+            "height": 958,
+            "localOriginal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kinshasa/cc-work/f87f1f1edd8d9fb0-preview.jpg",
+            "nativeSHA256": "72f70a3aed6ccfc6512c7f793d455cf2ebd11ce59ef524801ec48213c1ca8a5e",
+            "sourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kinshasa/qa-evidence/781342f52d93246b5c472f6299f1288b663bf0d69c36471215a7b47cbdb88284.html",
+            "sourceSnapshotSHA256": "781342f52d93246b5c472f6299f1288b663bf0d69c36471215a7b47cbdb88284",
+            "sourceRowsRead": {
+              "Description Kinshasa 15.32343E 4.32974S.jpg": "English: Kinshasa",
+              "Date": "16 May 2005 (upload date)",
+              "Source": "Screenshot from NASA World Wind software",
+              "Author": "NASA"
+            },
+            "authorRowsIncludingExif": [
+              {
+                "label": "Author",
+                "value": "NASA",
+                "rowAttributes": {}
+              }
+            ],
+            "licenseTemplatesRead": [
+              "Public domain"
+            ],
+            "sourceOriginalFileDimensions": [
+              "1,280",
+              "958"
+            ],
+            "nativeDimensionsOutput": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kinshasa/cc-work/f87f1f1edd8d9fb0-preview.jpg\n  pixelWidth: 1280\n  pixelHeight: 958\n  format: jpeg\n  profile: sRGB IEC61966-2.1\n",
+            "nativeEncodedDimensions": [
+              1280,
+              958
+            ],
+            "exifOrientation": null,
+            "orientationAppliedDimensions": [
+              1280,
+              958
+            ],
+            "sourceDateRaw": "16 May 2005 (upload date)",
+            "gameReuseIndependentlyChecked": true,
+            "gameReuseSearchRoot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/js/packs",
+            "gameReuseFilesRead": 373,
+            "gameReuseMatches": [],
+            "duplicateCitySlots": [],
+            "visualReview": "Oma natiivin silmätarkistus: aito satelliittiaineiston näkymä Kinshasasta Kongojoen eteläpuolella ja Pool Malebon alueesta; kaupungin katu-/asutusalan alueellinen asettelu erottuu. Värit tummat ja osa pilvien peitossa, mutta kokonaismaantiede luettavissaC1-aluekuvana. Ei kasvoja, nimilappuja, käyttöliittymätekstejä, overlayta tai vesileimaa. Yksittäisen suojatun rakennus-/taideteoksen ilmaisua ei eroteta. Description Kinshasa ja Object location4°19′47.06″S15°19′24.35″E luettu itse. Author NASA ja tämän kuvan PD-WorldWind-lisenssimalli nimenomaisesti kertoo public domain -tietokerroksesta (Blue Marble/MODIS/Landsat/SRTM/USGS/GLOBE); ei kaikkienWorldWind-tasojen vapausoletus. Native1280×958 ja SHA tarkistettu. Kuvausajankohta tuntematon:16.5.2005 on lähteen mukaan upload date, ei kuvausvuosi eikä2026-tilanteen väite.",
+            "depictedWorkLayerIndependentlyReviewed": true,
+            "photoDateUnknown": true,
+            "sourceDateIsUploadDate": true,
+            "mediaTypeDisclosure": "Todellisen PD-satelliittiaineiston kuvakaappaus NASAWorldWindistä, ei AI-kaupunki.",
+            "fileSpecificLicenseModel": "PD-WorldWind public-domain data layer",
+            "visuallyReviewed": true,
+            "originalPixelsViewed": true,
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Kinshasa_15.32343E_4.32974S.jpg",
+            "sourceManifest": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kinshasa/cc-selection.json",
+            "currentContentSHA256": "e91814769945f919b97e5540ad6133387684d3a71a150588e315e5feac9c4b79",
+            "photoDate": null,
+            "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3b/Kinshasa_15.32343E_4.32974S.jpg",
+            "captionFi": "Kinshasa sijaitsee Kongojoen etelärannalla Pool Malebon vieressä.",
+            "checkedAt": "2026-10-12T20:27:32.391720+00:00",
+            "published": false,
+            "gameIntegrated": false,
+            "ownerAcceptance": false
+          },
+          "qaReason": "Oma natiivin silmätarkistus: aito satelliittiaineiston näkymä Kinshasasta Kongojoen eteläpuolella ja Pool Malebon alueesta; kaupungin katu-/asutusalan alueellinen asettelu erottuu. Värit tummat ja osa pilvien peitossa, mutta kokonaismaantiede luettavissaC1-aluekuvana. Ei kasvoja, nimilappuja, käyttöliittymätekstejä, overlayta tai vesileimaa. Yksittäisen suojatun rakennus-/taideteoksen ilmaisua ei eroteta. Description Kinshasa ja Object location4°19′47.06″S15°19′24.35″E luettu itse. Author NASA ja tämän kuvan PD-WorldWind-lisenssimalli nimenomaisesti kertoo public domain -tietokerroksesta (Blue Marble/MODIS/Landsat/SRTM/USGS/GLOBE); ei kaikkienWorldWind-tasojen vapausoletus. Native1280×958 ja SHA tarkistettu. Kuvausajankohta tuntematon:16.5.2005 on lähteen mukaan upload date, ei kuvausvuosi eikä2026-tilanteen väite."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Kinshasa sijaitsee Kongojoen etelärannalla Pool Malebon vieressä.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kinshasa/qa.json",
+        "fileSHA256": "9ca58c05ac590a392f77d4ab433e2fb24b66bd7c8355535e9d38c01892051859",
+        "item": {
+          "slot": "C1",
+          "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
+          "assetID": null,
+          "commonsFile": "Kinshasa 15.32343E 4.32974S.jpg",
+          "sha256": "72f70a3aed6ccfc6512c7f793d455cf2ebd11ce59ef524801ec48213c1ca8a5e",
+          "verdict": "accepted",
+          "reason": "Oma natiivin silmätarkistus: aito satelliittiaineiston näkymä Kinshasasta Kongojoen eteläpuolella ja Pool Malebon alueesta; kaupungin katu-/asutusalan alueellinen asettelu erottuu. Värit tummat ja osa pilvien peitossa, mutta kokonaismaantiede luettavissaC1-aluekuvana. Ei kasvoja, nimilappuja, käyttöliittymätekstejä, overlayta tai vesileimaa. Yksittäisen suojatun rakennus-/taideteoksen ilmaisua ei eroteta. Description Kinshasa ja Object location4°19′47.06″S15°19′24.35″E luettu itse. Author NASA ja tämän kuvan PD-WorldWind-lisenssimalli nimenomaisesti kertoo public domain -tietokerroksesta (Blue Marble/MODIS/Landsat/SRTM/USGS/GLOBE); ei kaikkienWorldWind-tasojen vapausoletus. Native1280×958 ja SHA tarkistettu. Kuvausajankohta tuntematon:16.5.2005 on lähteen mukaan upload date, ei kuvausvuosi eikä2026-tilanteen väite.",
+          "required": true,
+          "status": "reviewed",
+          "evidence": {
+            "author": "NASA",
+            "license": "PD",
+            "width": 1280,
+            "height": 958,
+            "localOriginal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kinshasa/cc-work/f87f1f1edd8d9fb0-preview.jpg",
+            "nativeSHA256": "72f70a3aed6ccfc6512c7f793d455cf2ebd11ce59ef524801ec48213c1ca8a5e",
+            "sourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kinshasa/qa-evidence/781342f52d93246b5c472f6299f1288b663bf0d69c36471215a7b47cbdb88284.html",
+            "sourceSnapshotSHA256": "781342f52d93246b5c472f6299f1288b663bf0d69c36471215a7b47cbdb88284",
+            "sourceRowsRead": {
+              "Description Kinshasa 15.32343E 4.32974S.jpg": "English: Kinshasa",
+              "Date": "16 May 2005 (upload date)",
+              "Source": "Screenshot from NASA World Wind software",
+              "Author": "NASA"
+            },
+            "authorRowsIncludingExif": [
+              {
+                "label": "Author",
+                "value": "NASA",
+                "rowAttributes": {}
+              }
+            ],
+            "licenseTemplatesRead": [
+              "Public domain"
+            ],
+            "sourceOriginalFileDimensions": [
+              "1,280",
+              "958"
+            ],
+            "nativeDimensionsOutput": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kinshasa/cc-work/f87f1f1edd8d9fb0-preview.jpg\n  pixelWidth: 1280\n  pixelHeight: 958\n  format: jpeg\n  profile: sRGB IEC61966-2.1\n",
+            "nativeEncodedDimensions": [
+              1280,
+              958
+            ],
+            "exifOrientation": null,
+            "orientationAppliedDimensions": [
+              1280,
+              958
+            ],
+            "sourceDateRaw": "16 May 2005 (upload date)",
+            "gameReuseIndependentlyChecked": true,
+            "gameReuseSearchRoot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/js/packs",
+            "gameReuseFilesRead": 373,
+            "gameReuseMatches": [],
+            "duplicateCitySlots": [],
+            "visualReview": "Oma natiivin silmätarkistus: aito satelliittiaineiston näkymä Kinshasasta Kongojoen eteläpuolella ja Pool Malebon alueesta; kaupungin katu-/asutusalan alueellinen asettelu erottuu. Värit tummat ja osa pilvien peitossa, mutta kokonaismaantiede luettavissaC1-aluekuvana. Ei kasvoja, nimilappuja, käyttöliittymätekstejä, overlayta tai vesileimaa. Yksittäisen suojatun rakennus-/taideteoksen ilmaisua ei eroteta. Description Kinshasa ja Object location4°19′47.06″S15°19′24.35″E luettu itse. Author NASA ja tämän kuvan PD-WorldWind-lisenssimalli nimenomaisesti kertoo public domain -tietokerroksesta (Blue Marble/MODIS/Landsat/SRTM/USGS/GLOBE); ei kaikkienWorldWind-tasojen vapausoletus. Native1280×958 ja SHA tarkistettu. Kuvausajankohta tuntematon:16.5.2005 on lähteen mukaan upload date, ei kuvausvuosi eikä2026-tilanteen väite.",
+            "depictedWorkLayerIndependentlyReviewed": true,
+            "photoDateUnknown": true,
+            "sourceDateIsUploadDate": true,
+            "mediaTypeDisclosure": "Todellisen PD-satelliittiaineiston kuvakaappaus NASAWorldWindistä, ei AI-kaupunki.",
+            "fileSpecificLicenseModel": "PD-WorldWind public-domain data layer",
+            "visuallyReviewed": true,
+            "originalPixelsViewed": true,
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Kinshasa_15.32343E_4.32974S.jpg",
+            "sourceManifest": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kinshasa/cc-selection.json",
+            "currentContentSHA256": "e91814769945f919b97e5540ad6133387684d3a71a150588e315e5feac9c4b79",
+            "photoDate": null,
+            "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3b/Kinshasa_15.32343E_4.32974S.jpg",
+            "captionFi": "Kinshasa sijaitsee Kongojoen etelärannalla Pool Malebon vieressä.",
+            "checkedAt": "2026-10-12T20:27:32.391720+00:00",
+            "published": false,
+            "gameIntegrated": false,
+            "ownerAcceptance": false
+          }
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kinshasa/qa.json",
+            "sha256": "9ca58c05ac590a392f77d4ab433e2fb24b66bd7c8355535e9d38c01892051859"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kinshasa/illustration-qa-extra.json",
+            "sha256": "a39daf92b5fafa41be9c522174ace6e13b6091486eed6c531d5fafa83aacab36"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e06",
+        "city": "kinshasa",
+        "slot": "C1",
+        "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
+        "commonsFile": "Kinshasa 15.32343E 4.32974S.jpg",
+        "sha256": "72f70a3aed6ccfc6512c7f793d455cf2ebd11ce59ef524801ec48213c1ca8a5e",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Kinshasa_15.32343E_4.32974S.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3b/Kinshasa_15.32343E_4.32974S.jpg",
+        "author": "NASA",
+        "license": "PD",
+        "licenseUrl": "https://commons.wikimedia.org/wiki/File:Kinshasa_15.32343E_4.32974S.jpg#Licensing",
+        "width": 1280,
+        "height": 958,
+        "originalSHA256": "72f70a3aed6ccfc6512c7f793d455cf2ebd11ce59ef524801ec48213c1ca8a5e",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e06/kinshasa/c1-72f70a3aed6ccfc6512c.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e06/kinshasa/c1-72f70a3aed6ccfc6512c.jpg",
+        "bytes": 183575,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T20:28:29.958481+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "NASA, Wikimedia Commons (PD)",
+        "selite": "Kinshasa sijaitsee Kongojoen etelärannalla Pool Malebon vieressä.",
+        "lyhyt": "Kinshasa sijaitsee Kongojoen etelärannalla Pool Malebon vieressä.",
+        "tiedosto": "Kinshasa 15.32343E 4.32974S.jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "327687c9d21178eb71790d386c675ca6ab86916fd7f70d37c90fb77fd4cca508",
+      "targetAfterSHA256": "98a5514b233ae2b0868d673c4b6df829d5dba954158edd56a0a707778eb2bc91",
+      "contextAfterSHA256": "98a5514b233ae2b0868d673c4b6df829d5dba954158edd56a0a707778eb2bc91"
     },
     {
       "era": "e06",
@@ -2339,7 +2913,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kinshasa/qa.json",
-        "fileSHA256": "9bea9f478db2b316504abd22018dc10f3a763b9910364aeac83740531e5625cd",
+        "fileSHA256": "9ca58c05ac590a392f77d4ab433e2fb24b66bd7c8355535e9d38c01892051859",
         "item": {
           "slot": "K2",
           "targetJsonPath": "$.kaupunkilehti[0].nostot[1]",
@@ -2414,11 +2988,11 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kinshasa/qa.json",
-            "sha256": "9bea9f478db2b316504abd22018dc10f3a763b9910364aeac83740531e5625cd"
+            "sha256": "9ca58c05ac590a392f77d4ab433e2fb24b66bd7c8355535e9d38c01892051859"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kinshasa/illustration-qa-extra.json",
-            "sha256": "84a38b923607a518dc18903be8cedde1de968f3bef51c069a3854b87b7c3dbad"
+            "sha256": "a39daf92b5fafa41be9c522174ace6e13b6091486eed6c531d5fafa83aacab36"
           }
         ]
       },
@@ -2489,7 +3063,7 @@
         "tiedosto": "Manguier kinshasa.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "e91814769945f919b97e5540ad6133387684d3a71a150588e315e5feac9c4b79",
+      "sourceContentAfterSHA256": "327687c9d21178eb71790d386c675ca6ab86916fd7f70d37c90fb77fd4cca508",
       "targetAfterSHA256": "3d6ecbfd91225bfa9a7d0bd021c60df201fe993cdc7838374b1de513656338b9",
       "contextAfterSHA256": "3d6ecbfd91225bfa9a7d0bd021c60df201fe993cdc7838374b1de513656338b9"
     }

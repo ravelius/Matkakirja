@@ -8,6 +8,1053 @@
     {
       "era": "e06",
       "city": "bangui",
+      "slot": "O3",
+      "type": "illustration",
+      "assetID": "job14-e06-bangui-o3-v01",
+      "galleryImageID": "job14-e06-bangui-o3-v01",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[2].kuva",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "matkailijalle",
+        "artikkeli",
+        "jaksot",
+        2,
+        "kuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/bangui/job14-e06-bangui-o3-v01-c3676fdf98af.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva keramiikan materiaalista.",
+        "lyhyt": "Havainnekuva keramiikan materiaalista."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/bangui/job14-e06-bangui-o3-v01-c3676fdf98af.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva keramiikan materiaalista.",
+        "lyhyt": "Havainnekuva keramiikan materiaalista."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "c3676fdf98afb16ada4dce8567e8db95c1a86b9261c18558d579007ba04e1101",
+      "exportSHA256": "efec4bf19918b45aa550dffa05d6c70febe331c135de4a64dcd36347383cd1aa",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/bangui/job14-e06-bangui-o3-v01-c3676fdf98af.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/bangui/job14-e06-bangui-o3-v01-c3676fdf98af.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e06/bangui/job14-e06-bangui-o3-v01-c3676fdf98af.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/bangui/sisalto.json",
+      "sourceContentSHA256": "c724bb2a9ad27bfe133e8e4d525c09d347cdb3c9f1649c6fa9cdcc15bb417a96",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "a6c1e6023476f44df37926b83b6a7d5741dd2c297f868c164515cdefc430280a",
+        "subjectTitle": "Raudanvalmistus ja museo",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Yleistetty kasvi-, ruoka-, luonnonmateriaali- tai tavallisen funktionaalisen esineen havainnollistus. Ei kuva-inputtia, nimettyä kaupunkiasettelua, arkeologista esinerekonstruktiota tai suojattua teosta. Ei todellinen paikkavalokuva.",
+          "QA": {
+            "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/bangui/assets/job14-e06-bangui-o3-v01/image.png",
+            "width": 1536,
+            "height": 1024,
+            "sha256": "c3676fdf98afb16ada4dce8567e8db95c1a86b9261c18558d579007ba04e1101",
+            "nativeGeometry": {
+              "rawWidth": 1536,
+              "rawHeight": 1024,
+              "exifOrientation": 1,
+              "width": 1536,
+              "height": 1024
+            },
+            "auditEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/bangui/qa-evidence/bd18d9a0cdbf-technical-source.json",
+            "visualViewedByThisSession": false,
+            "visualReviewSource": "independent extra reviewer; not personally viewed here",
+            "independentReview": {
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/bangui/illustration-qa-extra.json",
+              "sha256": "1899b7529a49806e861076e6bb3d3ef61b21c95ce098e8386642e06fb4004d42",
+              "reviewerGroup": "kuvitus-1",
+              "assetID": "job14-e06-bangui-o3-v01",
+              "nativeSHA256": "c3676fdf98afb16ada4dce8567e8db95c1a86b9261c18558d579007ba04e1101",
+              "verdict": "accepted",
+              "reason": "Keramiikan materiaalihavainne vastaa O3:n aihetta.",
+              "evidence": {
+                "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/bangui/assets/job14-e06-bangui-o3-v01/image.png",
+                "nativeSHA256": "c3676fdf98afb16ada4dce8567e8db95c1a86b9261c18558d579007ba04e1101",
+                "nativeDimensions": [
+                  1536,
+                  1024
+                ],
+                "manifestHashMatches": true,
+                "personallyViewed": true,
+                "viewTool": "view_image",
+                "visualFindingsFi": "Koristeeton savikulhon muoto ja keramiikkapala. Murtuma, seinämä ja matta savipinta uskottavat; ei ihmisia tai merkintöjä.",
+                "captionFi": "Havainnekuva keramiikan materiaalista.",
+                "sourceAndTargetCheckFi": "O3/faktapohjan keramiikka ja arkeologia luettu. CaptionFi havainne, ei Boganda-museon esine tai tunnistettu kaivauslöytö.",
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/bangui/sisalto.json",
+                "sourceEvidence": [
+                  {
+                    "type": "currentContent",
+                    "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/bangui/sisalto.json",
+                    "sha256": "ce6a95860c8fb62e17c174743d849333ba06c5bdbb6a2e26ce9500cc6c73d437",
+                    "jsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[2]",
+                    "text": "Metallurgiset jäänteet kertovat Banguin ympäristön kaupunkia vanhemmasta historiasta. Boganda-museon kokoelmissa on arkeologiaa, etnografiaa, luonnonhistoriaa, soittimia ja keramiikkaa. Museota kuvataan suljetuksi, joten sille ei voi suunnitella varmaa yleisökäyntiä."
+                  },
+                  {
+                    "type": "factSheet",
+                    "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/bangui/faktapohja.md",
+                    "sha256": "cff6b785eb34ffc5030d49fd61429eb299344580b2a76ba69b1689ceb8542be5",
+                    "sourceUrl": "https://en.wikipedia.org/wiki/Bangui"
+                  }
+                ]
+              },
+              "opinionSHA256": "4b24aa523c02b426ce9ea0e06fad55c92cf8c8a722da706a642657e45f1938ca",
+              "capturedSourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/bangui/qa-evidence/extra-review-snapshots/1899b7529a49806e861076e6bb3d3ef61b21c95ce098e8386642e06fb4004d42.json"
+            },
+            "imageType": "illustration",
+            "captionFi": "Havainnekuva keramiikan materiaalista.",
+            "realPlacePhotograph": false
+          },
+          "qaReason": "Lisätarkistajan kuvitus-1 dokumentoitu arvio täsmälleen samasta assetID/nativeSHA-versiosta: Keramiikan materiaalihavainne vastaa O3:n aihetta."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva keramiikan materiaalista.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/bangui/qa.json",
+        "fileSHA256": "71b3e869ece5f9f39a7011b5838102f0ae8acefd43ec7349bb521e315b1927da",
+        "item": {
+          "slot": "O3",
+          "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[2].kuva",
+          "assetID": "job14-e06-bangui-o3-v01",
+          "sha256": "c3676fdf98afb16ada4dce8567e8db95c1a86b9261c18558d579007ba04e1101",
+          "verdict": "accepted",
+          "reason": "Lisätarkistajan kuvitus-1 dokumentoitu arvio täsmälleen samasta assetID/nativeSHA-versiosta: Keramiikan materiaalihavainne vastaa O3:n aihetta.",
+          "evidence": {
+            "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/bangui/assets/job14-e06-bangui-o3-v01/image.png",
+            "width": 1536,
+            "height": 1024,
+            "sha256": "c3676fdf98afb16ada4dce8567e8db95c1a86b9261c18558d579007ba04e1101",
+            "nativeGeometry": {
+              "rawWidth": 1536,
+              "rawHeight": 1024,
+              "exifOrientation": 1,
+              "width": 1536,
+              "height": 1024
+            },
+            "auditEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/bangui/qa-evidence/bd18d9a0cdbf-technical-source.json",
+            "visualViewedByThisSession": false,
+            "visualReviewSource": "independent extra reviewer; not personally viewed here",
+            "independentReview": {
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/bangui/illustration-qa-extra.json",
+              "sha256": "1899b7529a49806e861076e6bb3d3ef61b21c95ce098e8386642e06fb4004d42",
+              "reviewerGroup": "kuvitus-1",
+              "assetID": "job14-e06-bangui-o3-v01",
+              "nativeSHA256": "c3676fdf98afb16ada4dce8567e8db95c1a86b9261c18558d579007ba04e1101",
+              "verdict": "accepted",
+              "reason": "Keramiikan materiaalihavainne vastaa O3:n aihetta.",
+              "evidence": {
+                "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/bangui/assets/job14-e06-bangui-o3-v01/image.png",
+                "nativeSHA256": "c3676fdf98afb16ada4dce8567e8db95c1a86b9261c18558d579007ba04e1101",
+                "nativeDimensions": [
+                  1536,
+                  1024
+                ],
+                "manifestHashMatches": true,
+                "personallyViewed": true,
+                "viewTool": "view_image",
+                "visualFindingsFi": "Koristeeton savikulhon muoto ja keramiikkapala. Murtuma, seinämä ja matta savipinta uskottavat; ei ihmisia tai merkintöjä.",
+                "captionFi": "Havainnekuva keramiikan materiaalista.",
+                "sourceAndTargetCheckFi": "O3/faktapohjan keramiikka ja arkeologia luettu. CaptionFi havainne, ei Boganda-museon esine tai tunnistettu kaivauslöytö.",
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/bangui/sisalto.json",
+                "sourceEvidence": [
+                  {
+                    "type": "currentContent",
+                    "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/bangui/sisalto.json",
+                    "sha256": "ce6a95860c8fb62e17c174743d849333ba06c5bdbb6a2e26ce9500cc6c73d437",
+                    "jsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[2]",
+                    "text": "Metallurgiset jäänteet kertovat Banguin ympäristön kaupunkia vanhemmasta historiasta. Boganda-museon kokoelmissa on arkeologiaa, etnografiaa, luonnonhistoriaa, soittimia ja keramiikkaa. Museota kuvataan suljetuksi, joten sille ei voi suunnitella varmaa yleisökäyntiä."
+                  },
+                  {
+                    "type": "factSheet",
+                    "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/bangui/faktapohja.md",
+                    "sha256": "cff6b785eb34ffc5030d49fd61429eb299344580b2a76ba69b1689ceb8542be5",
+                    "sourceUrl": "https://en.wikipedia.org/wiki/Bangui"
+                  }
+                ]
+              },
+              "opinionSHA256": "4b24aa523c02b426ce9ea0e06fad55c92cf8c8a722da706a642657e45f1938ca",
+              "capturedSourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/bangui/qa-evidence/extra-review-snapshots/1899b7529a49806e861076e6bb3d3ef61b21c95ce098e8386642e06fb4004d42.json"
+            },
+            "imageType": "illustration",
+            "captionFi": "Havainnekuva keramiikan materiaalista.",
+            "realPlacePhotograph": false
+          },
+          "importedIndependentReview": true,
+          "independentReviews": [
+            {
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/bangui/illustration-qa-extra.json",
+              "sha256": "1899b7529a49806e861076e6bb3d3ef61b21c95ce098e8386642e06fb4004d42",
+              "reviewerGroup": "kuvitus-1",
+              "assetID": "job14-e06-bangui-o3-v01",
+              "nativeSHA256": "c3676fdf98afb16ada4dce8567e8db95c1a86b9261c18558d579007ba04e1101",
+              "verdict": "accepted",
+              "reason": "Keramiikan materiaalihavainne vastaa O3:n aihetta.",
+              "evidence": {
+                "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/bangui/assets/job14-e06-bangui-o3-v01/image.png",
+                "nativeSHA256": "c3676fdf98afb16ada4dce8567e8db95c1a86b9261c18558d579007ba04e1101",
+                "nativeDimensions": [
+                  1536,
+                  1024
+                ],
+                "manifestHashMatches": true,
+                "personallyViewed": true,
+                "viewTool": "view_image",
+                "visualFindingsFi": "Koristeeton savikulhon muoto ja keramiikkapala. Murtuma, seinämä ja matta savipinta uskottavat; ei ihmisia tai merkintöjä.",
+                "captionFi": "Havainnekuva keramiikan materiaalista.",
+                "sourceAndTargetCheckFi": "O3/faktapohjan keramiikka ja arkeologia luettu. CaptionFi havainne, ei Boganda-museon esine tai tunnistettu kaivauslöytö.",
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/bangui/sisalto.json",
+                "sourceEvidence": [
+                  {
+                    "type": "currentContent",
+                    "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/bangui/sisalto.json",
+                    "sha256": "ce6a95860c8fb62e17c174743d849333ba06c5bdbb6a2e26ce9500cc6c73d437",
+                    "jsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[2]",
+                    "text": "Metallurgiset jäänteet kertovat Banguin ympäristön kaupunkia vanhemmasta historiasta. Boganda-museon kokoelmissa on arkeologiaa, etnografiaa, luonnonhistoriaa, soittimia ja keramiikkaa. Museota kuvataan suljetuksi, joten sille ei voi suunnitella varmaa yleisökäyntiä."
+                  },
+                  {
+                    "type": "factSheet",
+                    "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/bangui/faktapohja.md",
+                    "sha256": "cff6b785eb34ffc5030d49fd61429eb299344580b2a76ba69b1689ceb8542be5",
+                    "sourceUrl": "https://en.wikipedia.org/wiki/Bangui"
+                  }
+                ]
+              },
+              "opinionSHA256": "4b24aa523c02b426ce9ea0e06fad55c92cf8c8a722da706a642657e45f1938ca",
+              "capturedSourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/bangui/qa-evidence/extra-review-snapshots/1899b7529a49806e861076e6bb3d3ef61b21c95ce098e8386642e06fb4004d42.json"
+            }
+          ],
+          "checkedAt": "2026-10-12T20:01:10.971271+00:00",
+          "contentSHA256": "ce6a95860c8fb62e17c174743d849333ba06c5bdbb6a2e26ce9500cc6c73d437",
+          "targetSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/bangui/qa.json",
+            "sha256": "71b3e869ece5f9f39a7011b5838102f0ae8acefd43ec7349bb521e315b1927da"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/bangui/illustration-qa-extra.json",
+            "sha256": "1899b7529a49806e861076e6bb3d3ef61b21c95ce098e8386642e06fb4004d42"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/bangui/job14-e06-bangui-o3-v01-c3676fdf98af.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/bangui/job14-e06-bangui-o3-v01-c3676fdf98af.png?t=efec4bf19918b45a",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/bangui/job14-e06-bangui-o3-v01-c3676fdf98af.png",
+        "sha256": "efec4bf19918b45aa550dffa05d6c70febe331c135de4a64dcd36347383cd1aa",
+        "bytes": 2235367,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "job14-e06-bangui-o3-v01",
+        "nativeSHA256": "c3676fdf98afb16ada4dce8567e8db95c1a86b9261c18558d579007ba04e1101",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e06/bangui/job14-e06-bangui-o3-v01-c3676fdf98af.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e06",
+        "city": "bangui",
+        "slot": "O3",
+        "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[2].kuva",
+        "verifiedAt": "2026-10-12T19:59:32.066051+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e06/bangui/job14-e06-bangui-o3-v01-c3676fdf98af.png",
+        "sha256": "efec4bf19918b45aa550dffa05d6c70febe331c135de4a64dcd36347383cd1aa",
+        "bytes": 2235367,
+        "SHAReadAt": "2026-10-12T19:59:27.928107+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "c3676fdf98afb16ada4dce8567e8db95c1a86b9261c18558d579007ba04e1101",
+        "rgbPixelSHA256": "2b0b1fb13d0a643b897ca0fdbc83b85dfc8edb06eea808adc3e316322c5729e4",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "c724bb2a9ad27bfe133e8e4d525c09d347cdb3c9f1649c6fa9cdcc15bb417a96",
+      "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+      "contextAfterSHA256": "a6c1e6023476f44df37926b83b6a7d5741dd2c297f868c164515cdefc430280a"
+    },
+    {
+      "era": "e06",
+      "city": "bangui",
+      "slot": "O4",
+      "type": "illustration",
+      "assetID": "job14-e06-bangui-o4-v01",
+      "galleryImageID": "job14-e06-bangui-o4-v01",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "matkailijalle",
+        "artikkeli",
+        "jaksot",
+        3,
+        "kuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/bangui/job14-e06-bangui-o4-v01-372fd227e43e.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva riisistä ja okrasta.",
+        "lyhyt": "Havainnekuva riisistä ja okrasta."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/bangui/job14-e06-bangui-o4-v01-372fd227e43e.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva riisistä ja okrasta.",
+        "lyhyt": "Havainnekuva riisistä ja okrasta."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "372fd227e43e6f1faf8999c8301cc221b47289550f177d32c4c03fa7baa5cd37",
+      "exportSHA256": "947920d946aa5325588505e70c63135b18253ab7c0e2f08755dd7dd2acf6b550",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/bangui/job14-e06-bangui-o4-v01-372fd227e43e.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/bangui/job14-e06-bangui-o4-v01-372fd227e43e.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e06/bangui/job14-e06-bangui-o4-v01-372fd227e43e.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/bangui/sisalto.json",
+      "sourceContentSHA256": "c724bb2a9ad27bfe133e8e4d525c09d347cdb3c9f1649c6fa9cdcc15bb417a96",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "c7319b2573b20214793e788f562b6832e4774e805300d2a3b64f6d15888e7a20",
+        "subjectTitle": "Ruoka kaupungissa",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Yleistetty kasvi-, ruoka-, luonnonmateriaali- tai tavallisen funktionaalisen esineen havainnollistus. Ei kuva-inputtia, nimettyä kaupunkiasettelua, arkeologista esinerekonstruktiota tai suojattua teosta. Ei todellinen paikkavalokuva.",
+          "QA": {
+            "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/bangui/assets/job14-e06-bangui-o4-v01/image.png",
+            "width": 1536,
+            "height": 1024,
+            "sha256": "372fd227e43e6f1faf8999c8301cc221b47289550f177d32c4c03fa7baa5cd37",
+            "nativeGeometry": {
+              "rawWidth": 1536,
+              "rawHeight": 1024,
+              "exifOrientation": 1,
+              "width": 1536,
+              "height": 1024
+            },
+            "auditEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/bangui/qa-evidence/72680ced6f2b-technical-source.json",
+            "visualViewedByThisSession": false,
+            "visualReviewSource": "independent extra reviewer; not personally viewed here",
+            "independentReview": {
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/bangui/illustration-qa-extra.json",
+              "sha256": "1899b7529a49806e861076e6bb3d3ef61b21c95ce098e8386642e06fb4004d42",
+              "reviewerGroup": "kuvitus-1",
+              "assetID": "job14-e06-bangui-o4-v01",
+              "nativeSHA256": "372fd227e43e6f1faf8999c8301cc221b47289550f177d32c4c03fa7baa5cd37",
+              "verdict": "accepted",
+              "reason": "Riisin ja okran yleishavainne vastaa O4:n aineksia.",
+              "evidence": {
+                "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/bangui/assets/job14-e06-bangui-o4-v01/image.png",
+                "nativeSHA256": "372fd227e43e6f1faf8999c8301cc221b47289550f177d32c4c03fa7baa5cd37",
+                "nativeDimensions": [
+                  1536,
+                  1024
+                ],
+                "manifestHashMatches": true,
+                "personallyViewed": true,
+                "viewTool": "view_image",
+                "visualFindingsFi": "Kypsää riisiä kulhossa ja okran palkoja lautasella. Jyvät, palkorakenne, astiat ja valo luontevat; ei tekstiä tai ihmisiä.",
+                "captionFi": "Havainnekuva riisistä ja okrasta.",
+                "sourceAndTargetCheckFi": "O4/faktapohjan riisi/okra luettu. CaptionFi havainne, ei valmis nimetty annos, resepti tai tietyn ravintolan tarjonta.",
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/bangui/sisalto.json",
+                "sourceEvidence": [
+                  {
+                    "type": "currentContent",
+                    "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/bangui/sisalto.json",
+                    "sha256": "ce6a95860c8fb62e17c174743d849333ba06c5bdbb6a2e26ce9500cc6c73d437",
+                    "jsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3]",
+                    "text": "Maniokki, riisi, kurpitsat ja keittobanaanit kuuluvat kaupungin ruokakuvaukseen. Kastikkeissa esiintyy okraa ja maapähkinää; maboké ja soussou ovat kalaruokia. Näiden nimien kautta voi tutustua ruokaperinteeseen ilman vanhoihin ravintolaluetteloihin tai hintoihin nojaavaa käyntisuunnitelmaa."
+                  },
+                  {
+                    "type": "factSheet",
+                    "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/bangui/faktapohja.md",
+                    "sha256": "cff6b785eb34ffc5030d49fd61429eb299344580b2a76ba69b1689ceb8542be5",
+                    "sourceUrl": "https://en.wikipedia.org/wiki/Bangui"
+                  }
+                ]
+              },
+              "opinionSHA256": "5221f1f5a450f02688a2d5e1e52834c3895d00fe2b91a1a2d7b5c53aa3ddf2cb",
+              "capturedSourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/bangui/qa-evidence/extra-review-snapshots/1899b7529a49806e861076e6bb3d3ef61b21c95ce098e8386642e06fb4004d42.json"
+            },
+            "imageType": "illustration",
+            "captionFi": "Havainnekuva riisistä ja okrasta.",
+            "realPlacePhotograph": false
+          },
+          "qaReason": "Lisätarkistajan kuvitus-1 dokumentoitu arvio täsmälleen samasta assetID/nativeSHA-versiosta: Riisin ja okran yleishavainne vastaa O4:n aineksia."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva riisistä ja okrasta.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/bangui/qa.json",
+        "fileSHA256": "71b3e869ece5f9f39a7011b5838102f0ae8acefd43ec7349bb521e315b1927da",
+        "item": {
+          "slot": "O4",
+          "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+          "assetID": "job14-e06-bangui-o4-v01",
+          "sha256": "372fd227e43e6f1faf8999c8301cc221b47289550f177d32c4c03fa7baa5cd37",
+          "verdict": "accepted",
+          "reason": "Lisätarkistajan kuvitus-1 dokumentoitu arvio täsmälleen samasta assetID/nativeSHA-versiosta: Riisin ja okran yleishavainne vastaa O4:n aineksia.",
+          "evidence": {
+            "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/bangui/assets/job14-e06-bangui-o4-v01/image.png",
+            "width": 1536,
+            "height": 1024,
+            "sha256": "372fd227e43e6f1faf8999c8301cc221b47289550f177d32c4c03fa7baa5cd37",
+            "nativeGeometry": {
+              "rawWidth": 1536,
+              "rawHeight": 1024,
+              "exifOrientation": 1,
+              "width": 1536,
+              "height": 1024
+            },
+            "auditEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/bangui/qa-evidence/72680ced6f2b-technical-source.json",
+            "visualViewedByThisSession": false,
+            "visualReviewSource": "independent extra reviewer; not personally viewed here",
+            "independentReview": {
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/bangui/illustration-qa-extra.json",
+              "sha256": "1899b7529a49806e861076e6bb3d3ef61b21c95ce098e8386642e06fb4004d42",
+              "reviewerGroup": "kuvitus-1",
+              "assetID": "job14-e06-bangui-o4-v01",
+              "nativeSHA256": "372fd227e43e6f1faf8999c8301cc221b47289550f177d32c4c03fa7baa5cd37",
+              "verdict": "accepted",
+              "reason": "Riisin ja okran yleishavainne vastaa O4:n aineksia.",
+              "evidence": {
+                "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/bangui/assets/job14-e06-bangui-o4-v01/image.png",
+                "nativeSHA256": "372fd227e43e6f1faf8999c8301cc221b47289550f177d32c4c03fa7baa5cd37",
+                "nativeDimensions": [
+                  1536,
+                  1024
+                ],
+                "manifestHashMatches": true,
+                "personallyViewed": true,
+                "viewTool": "view_image",
+                "visualFindingsFi": "Kypsää riisiä kulhossa ja okran palkoja lautasella. Jyvät, palkorakenne, astiat ja valo luontevat; ei tekstiä tai ihmisiä.",
+                "captionFi": "Havainnekuva riisistä ja okrasta.",
+                "sourceAndTargetCheckFi": "O4/faktapohjan riisi/okra luettu. CaptionFi havainne, ei valmis nimetty annos, resepti tai tietyn ravintolan tarjonta.",
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/bangui/sisalto.json",
+                "sourceEvidence": [
+                  {
+                    "type": "currentContent",
+                    "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/bangui/sisalto.json",
+                    "sha256": "ce6a95860c8fb62e17c174743d849333ba06c5bdbb6a2e26ce9500cc6c73d437",
+                    "jsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3]",
+                    "text": "Maniokki, riisi, kurpitsat ja keittobanaanit kuuluvat kaupungin ruokakuvaukseen. Kastikkeissa esiintyy okraa ja maapähkinää; maboké ja soussou ovat kalaruokia. Näiden nimien kautta voi tutustua ruokaperinteeseen ilman vanhoihin ravintolaluetteloihin tai hintoihin nojaavaa käyntisuunnitelmaa."
+                  },
+                  {
+                    "type": "factSheet",
+                    "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/bangui/faktapohja.md",
+                    "sha256": "cff6b785eb34ffc5030d49fd61429eb299344580b2a76ba69b1689ceb8542be5",
+                    "sourceUrl": "https://en.wikipedia.org/wiki/Bangui"
+                  }
+                ]
+              },
+              "opinionSHA256": "5221f1f5a450f02688a2d5e1e52834c3895d00fe2b91a1a2d7b5c53aa3ddf2cb",
+              "capturedSourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/bangui/qa-evidence/extra-review-snapshots/1899b7529a49806e861076e6bb3d3ef61b21c95ce098e8386642e06fb4004d42.json"
+            },
+            "imageType": "illustration",
+            "captionFi": "Havainnekuva riisistä ja okrasta.",
+            "realPlacePhotograph": false
+          },
+          "importedIndependentReview": true,
+          "independentReviews": [
+            {
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/bangui/illustration-qa-extra.json",
+              "sha256": "1899b7529a49806e861076e6bb3d3ef61b21c95ce098e8386642e06fb4004d42",
+              "reviewerGroup": "kuvitus-1",
+              "assetID": "job14-e06-bangui-o4-v01",
+              "nativeSHA256": "372fd227e43e6f1faf8999c8301cc221b47289550f177d32c4c03fa7baa5cd37",
+              "verdict": "accepted",
+              "reason": "Riisin ja okran yleishavainne vastaa O4:n aineksia.",
+              "evidence": {
+                "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/bangui/assets/job14-e06-bangui-o4-v01/image.png",
+                "nativeSHA256": "372fd227e43e6f1faf8999c8301cc221b47289550f177d32c4c03fa7baa5cd37",
+                "nativeDimensions": [
+                  1536,
+                  1024
+                ],
+                "manifestHashMatches": true,
+                "personallyViewed": true,
+                "viewTool": "view_image",
+                "visualFindingsFi": "Kypsää riisiä kulhossa ja okran palkoja lautasella. Jyvät, palkorakenne, astiat ja valo luontevat; ei tekstiä tai ihmisiä.",
+                "captionFi": "Havainnekuva riisistä ja okrasta.",
+                "sourceAndTargetCheckFi": "O4/faktapohjan riisi/okra luettu. CaptionFi havainne, ei valmis nimetty annos, resepti tai tietyn ravintolan tarjonta.",
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/bangui/sisalto.json",
+                "sourceEvidence": [
+                  {
+                    "type": "currentContent",
+                    "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/bangui/sisalto.json",
+                    "sha256": "ce6a95860c8fb62e17c174743d849333ba06c5bdbb6a2e26ce9500cc6c73d437",
+                    "jsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3]",
+                    "text": "Maniokki, riisi, kurpitsat ja keittobanaanit kuuluvat kaupungin ruokakuvaukseen. Kastikkeissa esiintyy okraa ja maapähkinää; maboké ja soussou ovat kalaruokia. Näiden nimien kautta voi tutustua ruokaperinteeseen ilman vanhoihin ravintolaluetteloihin tai hintoihin nojaavaa käyntisuunnitelmaa."
+                  },
+                  {
+                    "type": "factSheet",
+                    "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/bangui/faktapohja.md",
+                    "sha256": "cff6b785eb34ffc5030d49fd61429eb299344580b2a76ba69b1689ceb8542be5",
+                    "sourceUrl": "https://en.wikipedia.org/wiki/Bangui"
+                  }
+                ]
+              },
+              "opinionSHA256": "5221f1f5a450f02688a2d5e1e52834c3895d00fe2b91a1a2d7b5c53aa3ddf2cb",
+              "capturedSourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/bangui/qa-evidence/extra-review-snapshots/1899b7529a49806e861076e6bb3d3ef61b21c95ce098e8386642e06fb4004d42.json"
+            }
+          ],
+          "checkedAt": "2026-10-12T20:01:10.971259+00:00",
+          "contentSHA256": "ce6a95860c8fb62e17c174743d849333ba06c5bdbb6a2e26ce9500cc6c73d437",
+          "targetSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/bangui/qa.json",
+            "sha256": "71b3e869ece5f9f39a7011b5838102f0ae8acefd43ec7349bb521e315b1927da"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/bangui/illustration-qa-extra.json",
+            "sha256": "1899b7529a49806e861076e6bb3d3ef61b21c95ce098e8386642e06fb4004d42"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/bangui/job14-e06-bangui-o4-v01-372fd227e43e.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/bangui/job14-e06-bangui-o4-v01-372fd227e43e.png?t=947920d946aa5325",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/bangui/job14-e06-bangui-o4-v01-372fd227e43e.png",
+        "sha256": "947920d946aa5325588505e70c63135b18253ab7c0e2f08755dd7dd2acf6b550",
+        "bytes": 2235957,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "job14-e06-bangui-o4-v01",
+        "nativeSHA256": "372fd227e43e6f1faf8999c8301cc221b47289550f177d32c4c03fa7baa5cd37",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e06/bangui/job14-e06-bangui-o4-v01-372fd227e43e.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e06",
+        "city": "bangui",
+        "slot": "O4",
+        "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+        "verifiedAt": "2026-10-12T19:59:33.782505+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e06/bangui/job14-e06-bangui-o4-v01-372fd227e43e.png",
+        "sha256": "947920d946aa5325588505e70c63135b18253ab7c0e2f08755dd7dd2acf6b550",
+        "bytes": 2235957,
+        "SHAReadAt": "2026-10-12T19:58:40.064822+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "372fd227e43e6f1faf8999c8301cc221b47289550f177d32c4c03fa7baa5cd37",
+        "rgbPixelSHA256": "405500778bafeca10cbd93817d210bb8b9133aa33803638a82b6a2631254b473",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "c724bb2a9ad27bfe133e8e4d525c09d347cdb3c9f1649c6fa9cdcc15bb417a96",
+      "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+      "contextAfterSHA256": "c7319b2573b20214793e788f562b6832e4774e805300d2a3b64f6d15888e7a20"
+    },
+    {
+      "era": "e06",
+      "city": "bangui",
+      "slot": "K1",
+      "type": "illustration",
+      "assetID": "job14-e06-bangui-k1-v01",
+      "galleryImageID": "job14-e06-bangui-k1-v01",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].nostot[0]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "nostot",
+        0
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/bangui/job14-e06-bangui-k1-v01-353ee58346bd.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva raudanvalmistuksen materiaalijäänteistä.",
+        "lyhyt": "Havainnekuva raudanvalmistuksen materiaalijäänteistä."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/bangui/job14-e06-bangui-k1-v01-353ee58346bd.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva raudanvalmistuksen materiaalijäänteistä.",
+        "lyhyt": "Havainnekuva raudanvalmistuksen materiaalijäänteistä."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "353ee58346bddceb077ac79e42f87dc10c05120d38e0a40c65ec83acb054fee5",
+      "exportSHA256": "d282c56e45a02822ca8d50be57d2554346d554263094bc3541abb12bb71cefb9",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/bangui/job14-e06-bangui-k1-v01-353ee58346bd.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/bangui/job14-e06-bangui-k1-v01-353ee58346bd.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e06/bangui/job14-e06-bangui-k1-v01-353ee58346bd.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/bangui/sisalto.json",
+      "sourceContentSHA256": "c724bb2a9ad27bfe133e8e4d525c09d347cdb3c9f1649c6fa9cdcc15bb417a96",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "c2809b769ee787261cb0dac0caf91e0bbfa26378c6b939a01bd61c75a416e7b7",
+        "semanticContextSHA256": "c2809b769ee787261cb0dac0caf91e0bbfa26378c6b939a01bd61c75a416e7b7",
+        "subjectTitle": "Raudan jäljet ovat kaupunkia vanhempia",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Yleistetty kasvi-, ruoka-, luonnonmateriaali- tai tavallisen funktionaalisen esineen havainnollistus. Ei kuva-inputtia, nimettyä kaupunkiasettelua, arkeologista esinerekonstruktiota tai suojattua teosta. Ei todellinen paikkavalokuva.",
+          "QA": {
+            "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/bangui/assets/job14-e06-bangui-k1-v01/image.png",
+            "width": 1536,
+            "height": 1024,
+            "sha256": "353ee58346bddceb077ac79e42f87dc10c05120d38e0a40c65ec83acb054fee5",
+            "nativeGeometry": {
+              "rawWidth": 1536,
+              "rawHeight": 1024,
+              "exifOrientation": 1,
+              "width": 1536,
+              "height": 1024
+            },
+            "auditEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/bangui/qa-evidence/d7075e458f8f-technical-source.json",
+            "visualViewedByThisSession": false,
+            "visualReviewSource": "independent extra reviewer; not personally viewed here",
+            "independentReview": {
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/bangui/illustration-qa-extra.json",
+              "sha256": "1899b7529a49806e861076e6bb3d3ef61b21c95ce098e8386642e06fb4004d42",
+              "reviewerGroup": "kuvitus-1",
+              "assetID": "job14-e06-bangui-k1-v01",
+              "nativeSHA256": "353ee58346bddceb077ac79e42f87dc10c05120d38e0a40c65ec83acb054fee5",
+              "verdict": "accepted",
+              "reason": "Yleiset materiaalijäänteet havainnollistavat K1:n raudanvalmistuksen aihetta.",
+              "evidence": {
+                "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/bangui/assets/job14-e06-bangui-k1-v01/image.png",
+                "nativeSHA256": "353ee58346bddceb077ac79e42f87dc10c05120d38e0a40c65ec83acb054fee5",
+                "nativeDimensions": [
+                  1536,
+                  1024
+                ],
+                "manifestHashMatches": true,
+                "personallyViewed": true,
+                "viewTool": "view_image",
+                "visualFindingsFi": "Tummia huokoisia kuonamaisia paloja ja koristeettomia keramiikkakatkelmia. Pinta/murtumat epäsäännöllisiä, maa uskottava; ei tekstiä tai ihmisia.",
+                "captionFi": "Havainnekuva raudanvalmistuksen materiaalijäänteistä.",
+                "sourceAndTargetCheckFi": "K1/faktapohjan kuona ja keramiikkajäänteet luettu. CaptionFi havainne, ei Pendèrè-Senguèn todellisia löytöesineitä, kaivausasetelmaa tai ajoitusta.",
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/bangui/sisalto.json",
+                "sourceEvidence": [
+                  {
+                    "type": "currentContent",
+                    "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/bangui/sisalto.json",
+                    "sha256": "ce6a95860c8fb62e17c174743d849333ba06c5bdbb6a2e26ce9500cc6c73d437",
+                    "jsonPath": "$.kaupunkilehti[0].nostot[0]",
+                    "text": "Banguin ympäristössä arkeologia kertoo ajasta ennen nykyistä kaupunkia. Metallurgisilla paikoilla, kuten Pendèrè-Senguèssä, on löytynyt kuonaa, puhallusputkien katkelmia, saviastioiden sirpaleita ja metalliesineitä. Jäänteet liittyvät raudanvalmistuksen eri vaiheisiin. Paikallinen ACSAPS-yhdistys on tehnyt työtä tämän perinnön säilyttämiseksi. Kun nykykaupungin historia alkaa 1800-luvun lopun asemasta, maasta löytyvät työn jäljet avaavat sitä vanhemman paikallisen aikakerroksen."
+                  },
+                  {
+                    "type": "factSheet",
+                    "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/bangui/faktapohja.md",
+                    "sha256": "cff6b785eb34ffc5030d49fd61429eb299344580b2a76ba69b1689ceb8542be5",
+                    "sourceUrl": "https://en.wikipedia.org/wiki/Bangui"
+                  }
+                ]
+              },
+              "opinionSHA256": "cb92ffe7af6edfd98bbc4fddd1d0726daa22f4e2f8ec56ad56874d55fa489585",
+              "capturedSourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/bangui/qa-evidence/extra-review-snapshots/1899b7529a49806e861076e6bb3d3ef61b21c95ce098e8386642e06fb4004d42.json"
+            },
+            "imageType": "illustration",
+            "captionFi": "Havainnekuva raudanvalmistuksen materiaalijäänteistä.",
+            "realPlacePhotograph": false
+          },
+          "qaReason": "Lisätarkistajan kuvitus-1 dokumentoitu arvio täsmälleen samasta assetID/nativeSHA-versiosta: Yleiset materiaalijäänteet havainnollistavat K1:n raudanvalmistuksen aihetta."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva raudanvalmistuksen materiaalijäänteistä.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/bangui/qa.json",
+        "fileSHA256": "71b3e869ece5f9f39a7011b5838102f0ae8acefd43ec7349bb521e315b1927da",
+        "item": {
+          "slot": "K1",
+          "targetJsonPath": "$.kaupunkilehti[0].nostot[0]",
+          "assetID": "job14-e06-bangui-k1-v01",
+          "sha256": "353ee58346bddceb077ac79e42f87dc10c05120d38e0a40c65ec83acb054fee5",
+          "verdict": "accepted",
+          "reason": "Lisätarkistajan kuvitus-1 dokumentoitu arvio täsmälleen samasta assetID/nativeSHA-versiosta: Yleiset materiaalijäänteet havainnollistavat K1:n raudanvalmistuksen aihetta.",
+          "evidence": {
+            "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/bangui/assets/job14-e06-bangui-k1-v01/image.png",
+            "width": 1536,
+            "height": 1024,
+            "sha256": "353ee58346bddceb077ac79e42f87dc10c05120d38e0a40c65ec83acb054fee5",
+            "nativeGeometry": {
+              "rawWidth": 1536,
+              "rawHeight": 1024,
+              "exifOrientation": 1,
+              "width": 1536,
+              "height": 1024
+            },
+            "auditEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/bangui/qa-evidence/d7075e458f8f-technical-source.json",
+            "visualViewedByThisSession": false,
+            "visualReviewSource": "independent extra reviewer; not personally viewed here",
+            "independentReview": {
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/bangui/illustration-qa-extra.json",
+              "sha256": "1899b7529a49806e861076e6bb3d3ef61b21c95ce098e8386642e06fb4004d42",
+              "reviewerGroup": "kuvitus-1",
+              "assetID": "job14-e06-bangui-k1-v01",
+              "nativeSHA256": "353ee58346bddceb077ac79e42f87dc10c05120d38e0a40c65ec83acb054fee5",
+              "verdict": "accepted",
+              "reason": "Yleiset materiaalijäänteet havainnollistavat K1:n raudanvalmistuksen aihetta.",
+              "evidence": {
+                "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/bangui/assets/job14-e06-bangui-k1-v01/image.png",
+                "nativeSHA256": "353ee58346bddceb077ac79e42f87dc10c05120d38e0a40c65ec83acb054fee5",
+                "nativeDimensions": [
+                  1536,
+                  1024
+                ],
+                "manifestHashMatches": true,
+                "personallyViewed": true,
+                "viewTool": "view_image",
+                "visualFindingsFi": "Tummia huokoisia kuonamaisia paloja ja koristeettomia keramiikkakatkelmia. Pinta/murtumat epäsäännöllisiä, maa uskottava; ei tekstiä tai ihmisia.",
+                "captionFi": "Havainnekuva raudanvalmistuksen materiaalijäänteistä.",
+                "sourceAndTargetCheckFi": "K1/faktapohjan kuona ja keramiikkajäänteet luettu. CaptionFi havainne, ei Pendèrè-Senguèn todellisia löytöesineitä, kaivausasetelmaa tai ajoitusta.",
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/bangui/sisalto.json",
+                "sourceEvidence": [
+                  {
+                    "type": "currentContent",
+                    "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/bangui/sisalto.json",
+                    "sha256": "ce6a95860c8fb62e17c174743d849333ba06c5bdbb6a2e26ce9500cc6c73d437",
+                    "jsonPath": "$.kaupunkilehti[0].nostot[0]",
+                    "text": "Banguin ympäristössä arkeologia kertoo ajasta ennen nykyistä kaupunkia. Metallurgisilla paikoilla, kuten Pendèrè-Senguèssä, on löytynyt kuonaa, puhallusputkien katkelmia, saviastioiden sirpaleita ja metalliesineitä. Jäänteet liittyvät raudanvalmistuksen eri vaiheisiin. Paikallinen ACSAPS-yhdistys on tehnyt työtä tämän perinnön säilyttämiseksi. Kun nykykaupungin historia alkaa 1800-luvun lopun asemasta, maasta löytyvät työn jäljet avaavat sitä vanhemman paikallisen aikakerroksen."
+                  },
+                  {
+                    "type": "factSheet",
+                    "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/bangui/faktapohja.md",
+                    "sha256": "cff6b785eb34ffc5030d49fd61429eb299344580b2a76ba69b1689ceb8542be5",
+                    "sourceUrl": "https://en.wikipedia.org/wiki/Bangui"
+                  }
+                ]
+              },
+              "opinionSHA256": "cb92ffe7af6edfd98bbc4fddd1d0726daa22f4e2f8ec56ad56874d55fa489585",
+              "capturedSourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/bangui/qa-evidence/extra-review-snapshots/1899b7529a49806e861076e6bb3d3ef61b21c95ce098e8386642e06fb4004d42.json"
+            },
+            "imageType": "illustration",
+            "captionFi": "Havainnekuva raudanvalmistuksen materiaalijäänteistä.",
+            "realPlacePhotograph": false
+          },
+          "importedIndependentReview": true,
+          "independentReviews": [
+            {
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/bangui/illustration-qa-extra.json",
+              "sha256": "1899b7529a49806e861076e6bb3d3ef61b21c95ce098e8386642e06fb4004d42",
+              "reviewerGroup": "kuvitus-1",
+              "assetID": "job14-e06-bangui-k1-v01",
+              "nativeSHA256": "353ee58346bddceb077ac79e42f87dc10c05120d38e0a40c65ec83acb054fee5",
+              "verdict": "accepted",
+              "reason": "Yleiset materiaalijäänteet havainnollistavat K1:n raudanvalmistuksen aihetta.",
+              "evidence": {
+                "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/bangui/assets/job14-e06-bangui-k1-v01/image.png",
+                "nativeSHA256": "353ee58346bddceb077ac79e42f87dc10c05120d38e0a40c65ec83acb054fee5",
+                "nativeDimensions": [
+                  1536,
+                  1024
+                ],
+                "manifestHashMatches": true,
+                "personallyViewed": true,
+                "viewTool": "view_image",
+                "visualFindingsFi": "Tummia huokoisia kuonamaisia paloja ja koristeettomia keramiikkakatkelmia. Pinta/murtumat epäsäännöllisiä, maa uskottava; ei tekstiä tai ihmisia.",
+                "captionFi": "Havainnekuva raudanvalmistuksen materiaalijäänteistä.",
+                "sourceAndTargetCheckFi": "K1/faktapohjan kuona ja keramiikkajäänteet luettu. CaptionFi havainne, ei Pendèrè-Senguèn todellisia löytöesineitä, kaivausasetelmaa tai ajoitusta.",
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/bangui/sisalto.json",
+                "sourceEvidence": [
+                  {
+                    "type": "currentContent",
+                    "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/bangui/sisalto.json",
+                    "sha256": "ce6a95860c8fb62e17c174743d849333ba06c5bdbb6a2e26ce9500cc6c73d437",
+                    "jsonPath": "$.kaupunkilehti[0].nostot[0]",
+                    "text": "Banguin ympäristössä arkeologia kertoo ajasta ennen nykyistä kaupunkia. Metallurgisilla paikoilla, kuten Pendèrè-Senguèssä, on löytynyt kuonaa, puhallusputkien katkelmia, saviastioiden sirpaleita ja metalliesineitä. Jäänteet liittyvät raudanvalmistuksen eri vaiheisiin. Paikallinen ACSAPS-yhdistys on tehnyt työtä tämän perinnön säilyttämiseksi. Kun nykykaupungin historia alkaa 1800-luvun lopun asemasta, maasta löytyvät työn jäljet avaavat sitä vanhemman paikallisen aikakerroksen."
+                  },
+                  {
+                    "type": "factSheet",
+                    "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/bangui/faktapohja.md",
+                    "sha256": "cff6b785eb34ffc5030d49fd61429eb299344580b2a76ba69b1689ceb8542be5",
+                    "sourceUrl": "https://en.wikipedia.org/wiki/Bangui"
+                  }
+                ]
+              },
+              "opinionSHA256": "cb92ffe7af6edfd98bbc4fddd1d0726daa22f4e2f8ec56ad56874d55fa489585",
+              "capturedSourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/bangui/qa-evidence/extra-review-snapshots/1899b7529a49806e861076e6bb3d3ef61b21c95ce098e8386642e06fb4004d42.json"
+            }
+          ],
+          "checkedAt": "2026-10-12T20:01:10.971102+00:00",
+          "contentSHA256": "ce6a95860c8fb62e17c174743d849333ba06c5bdbb6a2e26ce9500cc6c73d437",
+          "targetSHA256": "c2809b769ee787261cb0dac0caf91e0bbfa26378c6b939a01bd61c75a416e7b7"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/bangui/qa.json",
+            "sha256": "71b3e869ece5f9f39a7011b5838102f0ae8acefd43ec7349bb521e315b1927da"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/bangui/illustration-qa-extra.json",
+            "sha256": "1899b7529a49806e861076e6bb3d3ef61b21c95ce098e8386642e06fb4004d42"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/bangui/job14-e06-bangui-k1-v01-353ee58346bd.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/bangui/job14-e06-bangui-k1-v01-353ee58346bd.png?t=d282c56e45a02822",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/bangui/job14-e06-bangui-k1-v01-353ee58346bd.png",
+        "sha256": "d282c56e45a02822ca8d50be57d2554346d554263094bc3541abb12bb71cefb9",
+        "bytes": 3078598,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "job14-e06-bangui-k1-v01",
+        "nativeSHA256": "353ee58346bddceb077ac79e42f87dc10c05120d38e0a40c65ec83acb054fee5",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e06/bangui/job14-e06-bangui-k1-v01-353ee58346bd.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e06",
+        "city": "bangui",
+        "slot": "K1",
+        "targetJsonPath": "$.kaupunkilehti[0].nostot[0]",
+        "verifiedAt": "2026-10-12T19:58:05.556427+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e06/bangui/job14-e06-bangui-k1-v01-353ee58346bd.png",
+        "sha256": "d282c56e45a02822ca8d50be57d2554346d554263094bc3541abb12bb71cefb9",
+        "bytes": 3078598,
+        "SHAReadAt": "2026-10-12T19:57:58.870639+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "353ee58346bddceb077ac79e42f87dc10c05120d38e0a40c65ec83acb054fee5",
+        "rgbPixelSHA256": "2f3156d81da5a6e6e97f7b1171c1a8b5150163775e6d9a960b1014b98a5f0d3b",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "c724bb2a9ad27bfe133e8e4d525c09d347cdb3c9f1649c6fa9cdcc15bb417a96",
+      "targetAfterSHA256": "c2809b769ee787261cb0dac0caf91e0bbfa26378c6b939a01bd61c75a416e7b7",
+      "contextAfterSHA256": "c2809b769ee787261cb0dac0caf91e0bbfa26378c6b939a01bd61c75a416e7b7"
+    },
+    {
+      "era": "e06",
+      "city": "bangui",
       "slot": "K4",
       "type": "illustration",
       "assetID": "job14-e06-bangui-k4-v01",
@@ -1860,1053 +2907,6 @@
       "sourceContentAfterSHA256": "c724bb2a9ad27bfe133e8e4d525c09d347cdb3c9f1649c6fa9cdcc15bb417a96",
       "targetAfterSHA256": "55712ccb12511db8600b1169569c9197a13b9282a0e9638f6afbca24ea228407",
       "contextAfterSHA256": "55712ccb12511db8600b1169569c9197a13b9282a0e9638f6afbca24ea228407"
-    },
-    {
-      "era": "e06",
-      "city": "bangui",
-      "slot": "O3",
-      "type": "illustration",
-      "assetID": "job14-e06-bangui-o3-v01",
-      "galleryImageID": "job14-e06-bangui-o3-v01",
-      "commonsFile": null,
-      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[2].kuva",
-      "targetTokens": [
-        "kaupunkilehti",
-        0,
-        "matkailijalle",
-        "artikkeli",
-        "jaksot",
-        2,
-        "kuva"
-      ],
-      "operation": "merge-media-fields-preserve-other-content",
-      "CmediaFieldPayload": {
-        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/bangui/job14-e06-bangui-o3-v01-c3676fdf98af.png",
-        "suora": true,
-        "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva keramiikan materiaalista.",
-        "lyhyt": "Havainnekuva keramiikan materiaalista."
-      },
-      "removeMediaKeys": [
-        "tiedosto"
-      ],
-      "CvalidatorCompatiblePayload": {},
-      "runtimeMediaFieldPayload": {
-        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/bangui/job14-e06-bangui-o3-v01-c3676fdf98af.png",
-        "suora": true,
-        "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva keramiikan materiaalista.",
-        "lyhyt": "Havainnekuva keramiikan materiaalista."
-      },
-      "runtimeRemoveMediaKeys": [
-        "tiedosto"
-      ],
-      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
-      "nativeSHA256": "c3676fdf98afb16ada4dce8567e8db95c1a86b9261c18558d579007ba04e1101",
-      "exportSHA256": "efec4bf19918b45aa550dffa05d6c70febe331c135de4a64dcd36347383cd1aa",
-      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/bangui/job14-e06-bangui-o3-v01-c3676fdf98af.png",
-      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/bangui/job14-e06-bangui-o3-v01-c3676fdf98af.png",
-      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e06/bangui/job14-e06-bangui-o3-v01-c3676fdf98af.png",
-      "dimensions": [
-        1536,
-        1024
-      ],
-      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/bangui/sisalto.json",
-      "sourceContentSHA256": "c724bb2a9ad27bfe133e8e4d525c09d347cdb3c9f1649c6fa9cdcc15bb417a96",
-      "semanticSourceBind": {
-        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "a6c1e6023476f44df37926b83b6a7d5741dd2c297f868c164515cdefc430280a",
-        "subjectTitle": "Raudanvalmistus ja museo",
-        "targetState": "existing-target"
-      },
-      "attribution": {
-        "author": null,
-        "license": null,
-        "licenseUrl": null,
-        "sourcePage": null,
-        "originalUrl": null,
-        "rightsEvidence": {
-          "production": "Yleistetty kasvi-, ruoka-, luonnonmateriaali- tai tavallisen funktionaalisen esineen havainnollistus. Ei kuva-inputtia, nimettyä kaupunkiasettelua, arkeologista esinerekonstruktiota tai suojattua teosta. Ei todellinen paikkavalokuva.",
-          "QA": {
-            "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/bangui/assets/job14-e06-bangui-o3-v01/image.png",
-            "width": 1536,
-            "height": 1024,
-            "sha256": "c3676fdf98afb16ada4dce8567e8db95c1a86b9261c18558d579007ba04e1101",
-            "nativeGeometry": {
-              "rawWidth": 1536,
-              "rawHeight": 1024,
-              "exifOrientation": 1,
-              "width": 1536,
-              "height": 1024
-            },
-            "auditEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/bangui/qa-evidence/bd18d9a0cdbf-technical-source.json",
-            "visualViewedByThisSession": false,
-            "visualReviewSource": "independent extra reviewer; not personally viewed here",
-            "independentReview": {
-              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/bangui/illustration-qa-extra.json",
-              "sha256": "1899b7529a49806e861076e6bb3d3ef61b21c95ce098e8386642e06fb4004d42",
-              "reviewerGroup": "kuvitus-1",
-              "assetID": "job14-e06-bangui-o3-v01",
-              "nativeSHA256": "c3676fdf98afb16ada4dce8567e8db95c1a86b9261c18558d579007ba04e1101",
-              "verdict": "accepted",
-              "reason": "Keramiikan materiaalihavainne vastaa O3:n aihetta.",
-              "evidence": {
-                "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/bangui/assets/job14-e06-bangui-o3-v01/image.png",
-                "nativeSHA256": "c3676fdf98afb16ada4dce8567e8db95c1a86b9261c18558d579007ba04e1101",
-                "nativeDimensions": [
-                  1536,
-                  1024
-                ],
-                "manifestHashMatches": true,
-                "personallyViewed": true,
-                "viewTool": "view_image",
-                "visualFindingsFi": "Koristeeton savikulhon muoto ja keramiikkapala. Murtuma, seinämä ja matta savipinta uskottavat; ei ihmisia tai merkintöjä.",
-                "captionFi": "Havainnekuva keramiikan materiaalista.",
-                "sourceAndTargetCheckFi": "O3/faktapohjan keramiikka ja arkeologia luettu. CaptionFi havainne, ei Boganda-museon esine tai tunnistettu kaivauslöytö.",
-                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/bangui/sisalto.json",
-                "sourceEvidence": [
-                  {
-                    "type": "currentContent",
-                    "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/bangui/sisalto.json",
-                    "sha256": "ce6a95860c8fb62e17c174743d849333ba06c5bdbb6a2e26ce9500cc6c73d437",
-                    "jsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[2]",
-                    "text": "Metallurgiset jäänteet kertovat Banguin ympäristön kaupunkia vanhemmasta historiasta. Boganda-museon kokoelmissa on arkeologiaa, etnografiaa, luonnonhistoriaa, soittimia ja keramiikkaa. Museota kuvataan suljetuksi, joten sille ei voi suunnitella varmaa yleisökäyntiä."
-                  },
-                  {
-                    "type": "factSheet",
-                    "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/bangui/faktapohja.md",
-                    "sha256": "cff6b785eb34ffc5030d49fd61429eb299344580b2a76ba69b1689ceb8542be5",
-                    "sourceUrl": "https://en.wikipedia.org/wiki/Bangui"
-                  }
-                ]
-              },
-              "opinionSHA256": "4b24aa523c02b426ce9ea0e06fad55c92cf8c8a722da706a642657e45f1938ca",
-              "capturedSourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/bangui/qa-evidence/extra-review-snapshots/1899b7529a49806e861076e6bb3d3ef61b21c95ce098e8386642e06fb4004d42.json"
-            },
-            "imageType": "illustration",
-            "captionFi": "Havainnekuva keramiikan materiaalista.",
-            "realPlacePhotograph": false
-          },
-          "qaReason": "Lisätarkistajan kuvitus-1 dokumentoitu arvio täsmälleen samasta assetID/nativeSHA-versiosta: Keramiikan materiaalihavainne vastaa O3:n aihetta."
-        }
-      },
-      "luentaMetadata": {
-        "existingImageLuenta": null,
-        "captionReadingText": "Havainnekuva keramiikan materiaalista.",
-        "existingArticleAndSectionLuentaPreserved": true,
-        "audioGenerated": false,
-        "audioURL": null,
-        "imageSpecificAudioProvided": false,
-        "reuseAudioAllowedByThisPacket": false
-      },
-      "qaEvidence": {
-        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/bangui/qa.json",
-        "fileSHA256": "71b3e869ece5f9f39a7011b5838102f0ae8acefd43ec7349bb521e315b1927da",
-        "item": {
-          "slot": "O3",
-          "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[2].kuva",
-          "assetID": "job14-e06-bangui-o3-v01",
-          "sha256": "c3676fdf98afb16ada4dce8567e8db95c1a86b9261c18558d579007ba04e1101",
-          "verdict": "accepted",
-          "reason": "Lisätarkistajan kuvitus-1 dokumentoitu arvio täsmälleen samasta assetID/nativeSHA-versiosta: Keramiikan materiaalihavainne vastaa O3:n aihetta.",
-          "evidence": {
-            "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/bangui/assets/job14-e06-bangui-o3-v01/image.png",
-            "width": 1536,
-            "height": 1024,
-            "sha256": "c3676fdf98afb16ada4dce8567e8db95c1a86b9261c18558d579007ba04e1101",
-            "nativeGeometry": {
-              "rawWidth": 1536,
-              "rawHeight": 1024,
-              "exifOrientation": 1,
-              "width": 1536,
-              "height": 1024
-            },
-            "auditEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/bangui/qa-evidence/bd18d9a0cdbf-technical-source.json",
-            "visualViewedByThisSession": false,
-            "visualReviewSource": "independent extra reviewer; not personally viewed here",
-            "independentReview": {
-              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/bangui/illustration-qa-extra.json",
-              "sha256": "1899b7529a49806e861076e6bb3d3ef61b21c95ce098e8386642e06fb4004d42",
-              "reviewerGroup": "kuvitus-1",
-              "assetID": "job14-e06-bangui-o3-v01",
-              "nativeSHA256": "c3676fdf98afb16ada4dce8567e8db95c1a86b9261c18558d579007ba04e1101",
-              "verdict": "accepted",
-              "reason": "Keramiikan materiaalihavainne vastaa O3:n aihetta.",
-              "evidence": {
-                "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/bangui/assets/job14-e06-bangui-o3-v01/image.png",
-                "nativeSHA256": "c3676fdf98afb16ada4dce8567e8db95c1a86b9261c18558d579007ba04e1101",
-                "nativeDimensions": [
-                  1536,
-                  1024
-                ],
-                "manifestHashMatches": true,
-                "personallyViewed": true,
-                "viewTool": "view_image",
-                "visualFindingsFi": "Koristeeton savikulhon muoto ja keramiikkapala. Murtuma, seinämä ja matta savipinta uskottavat; ei ihmisia tai merkintöjä.",
-                "captionFi": "Havainnekuva keramiikan materiaalista.",
-                "sourceAndTargetCheckFi": "O3/faktapohjan keramiikka ja arkeologia luettu. CaptionFi havainne, ei Boganda-museon esine tai tunnistettu kaivauslöytö.",
-                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/bangui/sisalto.json",
-                "sourceEvidence": [
-                  {
-                    "type": "currentContent",
-                    "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/bangui/sisalto.json",
-                    "sha256": "ce6a95860c8fb62e17c174743d849333ba06c5bdbb6a2e26ce9500cc6c73d437",
-                    "jsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[2]",
-                    "text": "Metallurgiset jäänteet kertovat Banguin ympäristön kaupunkia vanhemmasta historiasta. Boganda-museon kokoelmissa on arkeologiaa, etnografiaa, luonnonhistoriaa, soittimia ja keramiikkaa. Museota kuvataan suljetuksi, joten sille ei voi suunnitella varmaa yleisökäyntiä."
-                  },
-                  {
-                    "type": "factSheet",
-                    "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/bangui/faktapohja.md",
-                    "sha256": "cff6b785eb34ffc5030d49fd61429eb299344580b2a76ba69b1689ceb8542be5",
-                    "sourceUrl": "https://en.wikipedia.org/wiki/Bangui"
-                  }
-                ]
-              },
-              "opinionSHA256": "4b24aa523c02b426ce9ea0e06fad55c92cf8c8a722da706a642657e45f1938ca",
-              "capturedSourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/bangui/qa-evidence/extra-review-snapshots/1899b7529a49806e861076e6bb3d3ef61b21c95ce098e8386642e06fb4004d42.json"
-            },
-            "imageType": "illustration",
-            "captionFi": "Havainnekuva keramiikan materiaalista.",
-            "realPlacePhotograph": false
-          },
-          "importedIndependentReview": true,
-          "independentReviews": [
-            {
-              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/bangui/illustration-qa-extra.json",
-              "sha256": "1899b7529a49806e861076e6bb3d3ef61b21c95ce098e8386642e06fb4004d42",
-              "reviewerGroup": "kuvitus-1",
-              "assetID": "job14-e06-bangui-o3-v01",
-              "nativeSHA256": "c3676fdf98afb16ada4dce8567e8db95c1a86b9261c18558d579007ba04e1101",
-              "verdict": "accepted",
-              "reason": "Keramiikan materiaalihavainne vastaa O3:n aihetta.",
-              "evidence": {
-                "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/bangui/assets/job14-e06-bangui-o3-v01/image.png",
-                "nativeSHA256": "c3676fdf98afb16ada4dce8567e8db95c1a86b9261c18558d579007ba04e1101",
-                "nativeDimensions": [
-                  1536,
-                  1024
-                ],
-                "manifestHashMatches": true,
-                "personallyViewed": true,
-                "viewTool": "view_image",
-                "visualFindingsFi": "Koristeeton savikulhon muoto ja keramiikkapala. Murtuma, seinämä ja matta savipinta uskottavat; ei ihmisia tai merkintöjä.",
-                "captionFi": "Havainnekuva keramiikan materiaalista.",
-                "sourceAndTargetCheckFi": "O3/faktapohjan keramiikka ja arkeologia luettu. CaptionFi havainne, ei Boganda-museon esine tai tunnistettu kaivauslöytö.",
-                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/bangui/sisalto.json",
-                "sourceEvidence": [
-                  {
-                    "type": "currentContent",
-                    "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/bangui/sisalto.json",
-                    "sha256": "ce6a95860c8fb62e17c174743d849333ba06c5bdbb6a2e26ce9500cc6c73d437",
-                    "jsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[2]",
-                    "text": "Metallurgiset jäänteet kertovat Banguin ympäristön kaupunkia vanhemmasta historiasta. Boganda-museon kokoelmissa on arkeologiaa, etnografiaa, luonnonhistoriaa, soittimia ja keramiikkaa. Museota kuvataan suljetuksi, joten sille ei voi suunnitella varmaa yleisökäyntiä."
-                  },
-                  {
-                    "type": "factSheet",
-                    "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/bangui/faktapohja.md",
-                    "sha256": "cff6b785eb34ffc5030d49fd61429eb299344580b2a76ba69b1689ceb8542be5",
-                    "sourceUrl": "https://en.wikipedia.org/wiki/Bangui"
-                  }
-                ]
-              },
-              "opinionSHA256": "4b24aa523c02b426ce9ea0e06fad55c92cf8c8a722da706a642657e45f1938ca",
-              "capturedSourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/bangui/qa-evidence/extra-review-snapshots/1899b7529a49806e861076e6bb3d3ef61b21c95ce098e8386642e06fb4004d42.json"
-            }
-          ],
-          "checkedAt": "2026-10-12T20:01:10.971271+00:00",
-          "contentSHA256": "ce6a95860c8fb62e17c174743d849333ba06c5bdbb6a2e26ce9500cc6c73d437",
-          "targetSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab"
-        },
-        "allSources": [
-          {
-            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/bangui/qa.json",
-            "sha256": "71b3e869ece5f9f39a7011b5838102f0ae8acefd43ec7349bb521e315b1927da"
-          },
-          {
-            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/bangui/illustration-qa-extra.json",
-            "sha256": "1899b7529a49806e861076e6bb3d3ef61b21c95ce098e8386642e06fb4004d42"
-          }
-        ]
-      },
-      "R2ByteVerification": {
-        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/bangui/job14-e06-bangui-o3-v01-c3676fdf98af.png",
-        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/bangui/job14-e06-bangui-o3-v01-c3676fdf98af.png?t=efec4bf19918b45a",
-        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/bangui/job14-e06-bangui-o3-v01-c3676fdf98af.png",
-        "sha256": "efec4bf19918b45aa550dffa05d6c70febe331c135de4a64dcd36347383cd1aa",
-        "bytes": 2235367,
-        "http": 200,
-        "mime": "image/png",
-        "cors": "https://matkakirja.app",
-        "cacheBustedPreflightHttp": 404,
-        "cacheBustedReadback": true,
-        "byteExactReadback": true,
-        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
-        "conditionalIfNoneMatch": "*",
-        "s3PutHttp": 200,
-        "assetID": "job14-e06-bangui-o3-v01",
-        "nativeSHA256": "c3676fdf98afb16ada4dce8567e8db95c1a86b9261c18558d579007ba04e1101",
-        "canonicalReadbackByteExact": true,
-        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e06/bangui/job14-e06-bangui-o3-v01-c3676fdf98af.png",
-        "pixelIdenticalToQAAcceptedNative": true,
-        "era": "e06",
-        "city": "bangui",
-        "slot": "O3",
-        "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[2].kuva",
-        "verifiedAt": "2026-10-12T19:59:32.066051+00:00",
-        "ownerAcceptanceVerified": false,
-        "gameIntegrated": false,
-        "galleryVisibleVerified": false
-      },
-      "producerExportProof": null,
-      "technicalExportProof": {
-        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e06/bangui/job14-e06-bangui-o3-v01-c3676fdf98af.png",
-        "sha256": "efec4bf19918b45aa550dffa05d6c70febe331c135de4a64dcd36347383cd1aa",
-        "bytes": 2235367,
-        "SHAReadAt": "2026-10-12T19:59:27.928107+00:00",
-        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
-        "width": 1536,
-        "height": 1024,
-        "pixelWidth": 1536,
-        "pixelHeight": 1024,
-        "exifOrientation": 1,
-        "dimensionsBasis": "EXIF-oriented-display",
-        "format": "PNG",
-        "largeOriginalHeaderOnlyRead": false,
-        "nativeSHA256": "c3676fdf98afb16ada4dce8567e8db95c1a86b9261c18558d579007ba04e1101",
-        "rgbPixelSHA256": "2b0b1fb13d0a643b897ca0fdbc83b85dfc8edb06eea808adc3e316322c5729e4",
-        "pixelIdenticalToQAAcceptedNative": true,
-        "sRGBProfileEmbedded": true,
-        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
-      },
-      "priorMediaFields": {
-        "tiedosto": "",
-        "lahde": "",
-        "selite": "",
-        "lyhyt": ""
-      },
-      "preservePreviousMediaObjects": true,
-      "authorization": {
-        "status": "waived-owner-review",
-        "authorizedByOwner": true,
-        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
-        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
-        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
-        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
-        "ownerAcceptanceImplied": false,
-        "QARequired": true,
-        "R2ByteVerificationRequired": true,
-        "galleryBeforeGameRequired": false,
-        "verifiedHumanMessageSource": {
-          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
-          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
-        }
-      },
-      "ownerAcceptanceVerified": false,
-      "gameIntegrated": false,
-      "gamePublicationVerified": false,
-      "inMemoryMergeVerified": true,
-      "CcommonsMetadataBound": false,
-      "roleManifestBound": true,
-      "sourceContentAfterSHA256": "c724bb2a9ad27bfe133e8e4d525c09d347cdb3c9f1649c6fa9cdcc15bb417a96",
-      "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "a6c1e6023476f44df37926b83b6a7d5741dd2c297f868c164515cdefc430280a"
-    },
-    {
-      "era": "e06",
-      "city": "bangui",
-      "slot": "O4",
-      "type": "illustration",
-      "assetID": "job14-e06-bangui-o4-v01",
-      "galleryImageID": "job14-e06-bangui-o4-v01",
-      "commonsFile": null,
-      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
-      "targetTokens": [
-        "kaupunkilehti",
-        0,
-        "matkailijalle",
-        "artikkeli",
-        "jaksot",
-        3,
-        "kuva"
-      ],
-      "operation": "merge-media-fields-preserve-other-content",
-      "CmediaFieldPayload": {
-        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/bangui/job14-e06-bangui-o4-v01-372fd227e43e.png",
-        "suora": true,
-        "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva riisistä ja okrasta.",
-        "lyhyt": "Havainnekuva riisistä ja okrasta."
-      },
-      "removeMediaKeys": [
-        "tiedosto"
-      ],
-      "CvalidatorCompatiblePayload": {},
-      "runtimeMediaFieldPayload": {
-        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/bangui/job14-e06-bangui-o4-v01-372fd227e43e.png",
-        "suora": true,
-        "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva riisistä ja okrasta.",
-        "lyhyt": "Havainnekuva riisistä ja okrasta."
-      },
-      "runtimeRemoveMediaKeys": [
-        "tiedosto"
-      ],
-      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
-      "nativeSHA256": "372fd227e43e6f1faf8999c8301cc221b47289550f177d32c4c03fa7baa5cd37",
-      "exportSHA256": "947920d946aa5325588505e70c63135b18253ab7c0e2f08755dd7dd2acf6b550",
-      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/bangui/job14-e06-bangui-o4-v01-372fd227e43e.png",
-      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/bangui/job14-e06-bangui-o4-v01-372fd227e43e.png",
-      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e06/bangui/job14-e06-bangui-o4-v01-372fd227e43e.png",
-      "dimensions": [
-        1536,
-        1024
-      ],
-      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/bangui/sisalto.json",
-      "sourceContentSHA256": "c724bb2a9ad27bfe133e8e4d525c09d347cdb3c9f1649c6fa9cdcc15bb417a96",
-      "semanticSourceBind": {
-        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "c7319b2573b20214793e788f562b6832e4774e805300d2a3b64f6d15888e7a20",
-        "subjectTitle": "Ruoka kaupungissa",
-        "targetState": "existing-target"
-      },
-      "attribution": {
-        "author": null,
-        "license": null,
-        "licenseUrl": null,
-        "sourcePage": null,
-        "originalUrl": null,
-        "rightsEvidence": {
-          "production": "Yleistetty kasvi-, ruoka-, luonnonmateriaali- tai tavallisen funktionaalisen esineen havainnollistus. Ei kuva-inputtia, nimettyä kaupunkiasettelua, arkeologista esinerekonstruktiota tai suojattua teosta. Ei todellinen paikkavalokuva.",
-          "QA": {
-            "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/bangui/assets/job14-e06-bangui-o4-v01/image.png",
-            "width": 1536,
-            "height": 1024,
-            "sha256": "372fd227e43e6f1faf8999c8301cc221b47289550f177d32c4c03fa7baa5cd37",
-            "nativeGeometry": {
-              "rawWidth": 1536,
-              "rawHeight": 1024,
-              "exifOrientation": 1,
-              "width": 1536,
-              "height": 1024
-            },
-            "auditEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/bangui/qa-evidence/72680ced6f2b-technical-source.json",
-            "visualViewedByThisSession": false,
-            "visualReviewSource": "independent extra reviewer; not personally viewed here",
-            "independentReview": {
-              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/bangui/illustration-qa-extra.json",
-              "sha256": "1899b7529a49806e861076e6bb3d3ef61b21c95ce098e8386642e06fb4004d42",
-              "reviewerGroup": "kuvitus-1",
-              "assetID": "job14-e06-bangui-o4-v01",
-              "nativeSHA256": "372fd227e43e6f1faf8999c8301cc221b47289550f177d32c4c03fa7baa5cd37",
-              "verdict": "accepted",
-              "reason": "Riisin ja okran yleishavainne vastaa O4:n aineksia.",
-              "evidence": {
-                "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/bangui/assets/job14-e06-bangui-o4-v01/image.png",
-                "nativeSHA256": "372fd227e43e6f1faf8999c8301cc221b47289550f177d32c4c03fa7baa5cd37",
-                "nativeDimensions": [
-                  1536,
-                  1024
-                ],
-                "manifestHashMatches": true,
-                "personallyViewed": true,
-                "viewTool": "view_image",
-                "visualFindingsFi": "Kypsää riisiä kulhossa ja okran palkoja lautasella. Jyvät, palkorakenne, astiat ja valo luontevat; ei tekstiä tai ihmisiä.",
-                "captionFi": "Havainnekuva riisistä ja okrasta.",
-                "sourceAndTargetCheckFi": "O4/faktapohjan riisi/okra luettu. CaptionFi havainne, ei valmis nimetty annos, resepti tai tietyn ravintolan tarjonta.",
-                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/bangui/sisalto.json",
-                "sourceEvidence": [
-                  {
-                    "type": "currentContent",
-                    "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/bangui/sisalto.json",
-                    "sha256": "ce6a95860c8fb62e17c174743d849333ba06c5bdbb6a2e26ce9500cc6c73d437",
-                    "jsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3]",
-                    "text": "Maniokki, riisi, kurpitsat ja keittobanaanit kuuluvat kaupungin ruokakuvaukseen. Kastikkeissa esiintyy okraa ja maapähkinää; maboké ja soussou ovat kalaruokia. Näiden nimien kautta voi tutustua ruokaperinteeseen ilman vanhoihin ravintolaluetteloihin tai hintoihin nojaavaa käyntisuunnitelmaa."
-                  },
-                  {
-                    "type": "factSheet",
-                    "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/bangui/faktapohja.md",
-                    "sha256": "cff6b785eb34ffc5030d49fd61429eb299344580b2a76ba69b1689ceb8542be5",
-                    "sourceUrl": "https://en.wikipedia.org/wiki/Bangui"
-                  }
-                ]
-              },
-              "opinionSHA256": "5221f1f5a450f02688a2d5e1e52834c3895d00fe2b91a1a2d7b5c53aa3ddf2cb",
-              "capturedSourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/bangui/qa-evidence/extra-review-snapshots/1899b7529a49806e861076e6bb3d3ef61b21c95ce098e8386642e06fb4004d42.json"
-            },
-            "imageType": "illustration",
-            "captionFi": "Havainnekuva riisistä ja okrasta.",
-            "realPlacePhotograph": false
-          },
-          "qaReason": "Lisätarkistajan kuvitus-1 dokumentoitu arvio täsmälleen samasta assetID/nativeSHA-versiosta: Riisin ja okran yleishavainne vastaa O4:n aineksia."
-        }
-      },
-      "luentaMetadata": {
-        "existingImageLuenta": null,
-        "captionReadingText": "Havainnekuva riisistä ja okrasta.",
-        "existingArticleAndSectionLuentaPreserved": true,
-        "audioGenerated": false,
-        "audioURL": null,
-        "imageSpecificAudioProvided": false,
-        "reuseAudioAllowedByThisPacket": false
-      },
-      "qaEvidence": {
-        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/bangui/qa.json",
-        "fileSHA256": "71b3e869ece5f9f39a7011b5838102f0ae8acefd43ec7349bb521e315b1927da",
-        "item": {
-          "slot": "O4",
-          "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
-          "assetID": "job14-e06-bangui-o4-v01",
-          "sha256": "372fd227e43e6f1faf8999c8301cc221b47289550f177d32c4c03fa7baa5cd37",
-          "verdict": "accepted",
-          "reason": "Lisätarkistajan kuvitus-1 dokumentoitu arvio täsmälleen samasta assetID/nativeSHA-versiosta: Riisin ja okran yleishavainne vastaa O4:n aineksia.",
-          "evidence": {
-            "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/bangui/assets/job14-e06-bangui-o4-v01/image.png",
-            "width": 1536,
-            "height": 1024,
-            "sha256": "372fd227e43e6f1faf8999c8301cc221b47289550f177d32c4c03fa7baa5cd37",
-            "nativeGeometry": {
-              "rawWidth": 1536,
-              "rawHeight": 1024,
-              "exifOrientation": 1,
-              "width": 1536,
-              "height": 1024
-            },
-            "auditEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/bangui/qa-evidence/72680ced6f2b-technical-source.json",
-            "visualViewedByThisSession": false,
-            "visualReviewSource": "independent extra reviewer; not personally viewed here",
-            "independentReview": {
-              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/bangui/illustration-qa-extra.json",
-              "sha256": "1899b7529a49806e861076e6bb3d3ef61b21c95ce098e8386642e06fb4004d42",
-              "reviewerGroup": "kuvitus-1",
-              "assetID": "job14-e06-bangui-o4-v01",
-              "nativeSHA256": "372fd227e43e6f1faf8999c8301cc221b47289550f177d32c4c03fa7baa5cd37",
-              "verdict": "accepted",
-              "reason": "Riisin ja okran yleishavainne vastaa O4:n aineksia.",
-              "evidence": {
-                "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/bangui/assets/job14-e06-bangui-o4-v01/image.png",
-                "nativeSHA256": "372fd227e43e6f1faf8999c8301cc221b47289550f177d32c4c03fa7baa5cd37",
-                "nativeDimensions": [
-                  1536,
-                  1024
-                ],
-                "manifestHashMatches": true,
-                "personallyViewed": true,
-                "viewTool": "view_image",
-                "visualFindingsFi": "Kypsää riisiä kulhossa ja okran palkoja lautasella. Jyvät, palkorakenne, astiat ja valo luontevat; ei tekstiä tai ihmisiä.",
-                "captionFi": "Havainnekuva riisistä ja okrasta.",
-                "sourceAndTargetCheckFi": "O4/faktapohjan riisi/okra luettu. CaptionFi havainne, ei valmis nimetty annos, resepti tai tietyn ravintolan tarjonta.",
-                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/bangui/sisalto.json",
-                "sourceEvidence": [
-                  {
-                    "type": "currentContent",
-                    "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/bangui/sisalto.json",
-                    "sha256": "ce6a95860c8fb62e17c174743d849333ba06c5bdbb6a2e26ce9500cc6c73d437",
-                    "jsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3]",
-                    "text": "Maniokki, riisi, kurpitsat ja keittobanaanit kuuluvat kaupungin ruokakuvaukseen. Kastikkeissa esiintyy okraa ja maapähkinää; maboké ja soussou ovat kalaruokia. Näiden nimien kautta voi tutustua ruokaperinteeseen ilman vanhoihin ravintolaluetteloihin tai hintoihin nojaavaa käyntisuunnitelmaa."
-                  },
-                  {
-                    "type": "factSheet",
-                    "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/bangui/faktapohja.md",
-                    "sha256": "cff6b785eb34ffc5030d49fd61429eb299344580b2a76ba69b1689ceb8542be5",
-                    "sourceUrl": "https://en.wikipedia.org/wiki/Bangui"
-                  }
-                ]
-              },
-              "opinionSHA256": "5221f1f5a450f02688a2d5e1e52834c3895d00fe2b91a1a2d7b5c53aa3ddf2cb",
-              "capturedSourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/bangui/qa-evidence/extra-review-snapshots/1899b7529a49806e861076e6bb3d3ef61b21c95ce098e8386642e06fb4004d42.json"
-            },
-            "imageType": "illustration",
-            "captionFi": "Havainnekuva riisistä ja okrasta.",
-            "realPlacePhotograph": false
-          },
-          "importedIndependentReview": true,
-          "independentReviews": [
-            {
-              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/bangui/illustration-qa-extra.json",
-              "sha256": "1899b7529a49806e861076e6bb3d3ef61b21c95ce098e8386642e06fb4004d42",
-              "reviewerGroup": "kuvitus-1",
-              "assetID": "job14-e06-bangui-o4-v01",
-              "nativeSHA256": "372fd227e43e6f1faf8999c8301cc221b47289550f177d32c4c03fa7baa5cd37",
-              "verdict": "accepted",
-              "reason": "Riisin ja okran yleishavainne vastaa O4:n aineksia.",
-              "evidence": {
-                "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/bangui/assets/job14-e06-bangui-o4-v01/image.png",
-                "nativeSHA256": "372fd227e43e6f1faf8999c8301cc221b47289550f177d32c4c03fa7baa5cd37",
-                "nativeDimensions": [
-                  1536,
-                  1024
-                ],
-                "manifestHashMatches": true,
-                "personallyViewed": true,
-                "viewTool": "view_image",
-                "visualFindingsFi": "Kypsää riisiä kulhossa ja okran palkoja lautasella. Jyvät, palkorakenne, astiat ja valo luontevat; ei tekstiä tai ihmisiä.",
-                "captionFi": "Havainnekuva riisistä ja okrasta.",
-                "sourceAndTargetCheckFi": "O4/faktapohjan riisi/okra luettu. CaptionFi havainne, ei valmis nimetty annos, resepti tai tietyn ravintolan tarjonta.",
-                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/bangui/sisalto.json",
-                "sourceEvidence": [
-                  {
-                    "type": "currentContent",
-                    "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/bangui/sisalto.json",
-                    "sha256": "ce6a95860c8fb62e17c174743d849333ba06c5bdbb6a2e26ce9500cc6c73d437",
-                    "jsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3]",
-                    "text": "Maniokki, riisi, kurpitsat ja keittobanaanit kuuluvat kaupungin ruokakuvaukseen. Kastikkeissa esiintyy okraa ja maapähkinää; maboké ja soussou ovat kalaruokia. Näiden nimien kautta voi tutustua ruokaperinteeseen ilman vanhoihin ravintolaluetteloihin tai hintoihin nojaavaa käyntisuunnitelmaa."
-                  },
-                  {
-                    "type": "factSheet",
-                    "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/bangui/faktapohja.md",
-                    "sha256": "cff6b785eb34ffc5030d49fd61429eb299344580b2a76ba69b1689ceb8542be5",
-                    "sourceUrl": "https://en.wikipedia.org/wiki/Bangui"
-                  }
-                ]
-              },
-              "opinionSHA256": "5221f1f5a450f02688a2d5e1e52834c3895d00fe2b91a1a2d7b5c53aa3ddf2cb",
-              "capturedSourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/bangui/qa-evidence/extra-review-snapshots/1899b7529a49806e861076e6bb3d3ef61b21c95ce098e8386642e06fb4004d42.json"
-            }
-          ],
-          "checkedAt": "2026-10-12T20:01:10.971259+00:00",
-          "contentSHA256": "ce6a95860c8fb62e17c174743d849333ba06c5bdbb6a2e26ce9500cc6c73d437",
-          "targetSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab"
-        },
-        "allSources": [
-          {
-            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/bangui/qa.json",
-            "sha256": "71b3e869ece5f9f39a7011b5838102f0ae8acefd43ec7349bb521e315b1927da"
-          },
-          {
-            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/bangui/illustration-qa-extra.json",
-            "sha256": "1899b7529a49806e861076e6bb3d3ef61b21c95ce098e8386642e06fb4004d42"
-          }
-        ]
-      },
-      "R2ByteVerification": {
-        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/bangui/job14-e06-bangui-o4-v01-372fd227e43e.png",
-        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/bangui/job14-e06-bangui-o4-v01-372fd227e43e.png?t=947920d946aa5325",
-        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/bangui/job14-e06-bangui-o4-v01-372fd227e43e.png",
-        "sha256": "947920d946aa5325588505e70c63135b18253ab7c0e2f08755dd7dd2acf6b550",
-        "bytes": 2235957,
-        "http": 200,
-        "mime": "image/png",
-        "cors": "https://matkakirja.app",
-        "cacheBustedPreflightHttp": 404,
-        "cacheBustedReadback": true,
-        "byteExactReadback": true,
-        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
-        "conditionalIfNoneMatch": "*",
-        "s3PutHttp": 200,
-        "assetID": "job14-e06-bangui-o4-v01",
-        "nativeSHA256": "372fd227e43e6f1faf8999c8301cc221b47289550f177d32c4c03fa7baa5cd37",
-        "canonicalReadbackByteExact": true,
-        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e06/bangui/job14-e06-bangui-o4-v01-372fd227e43e.png",
-        "pixelIdenticalToQAAcceptedNative": true,
-        "era": "e06",
-        "city": "bangui",
-        "slot": "O4",
-        "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
-        "verifiedAt": "2026-10-12T19:59:33.782505+00:00",
-        "ownerAcceptanceVerified": false,
-        "gameIntegrated": false,
-        "galleryVisibleVerified": false
-      },
-      "producerExportProof": null,
-      "technicalExportProof": {
-        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e06/bangui/job14-e06-bangui-o4-v01-372fd227e43e.png",
-        "sha256": "947920d946aa5325588505e70c63135b18253ab7c0e2f08755dd7dd2acf6b550",
-        "bytes": 2235957,
-        "SHAReadAt": "2026-10-12T19:58:40.064822+00:00",
-        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
-        "width": 1536,
-        "height": 1024,
-        "pixelWidth": 1536,
-        "pixelHeight": 1024,
-        "exifOrientation": 1,
-        "dimensionsBasis": "EXIF-oriented-display",
-        "format": "PNG",
-        "largeOriginalHeaderOnlyRead": false,
-        "nativeSHA256": "372fd227e43e6f1faf8999c8301cc221b47289550f177d32c4c03fa7baa5cd37",
-        "rgbPixelSHA256": "405500778bafeca10cbd93817d210bb8b9133aa33803638a82b6a2631254b473",
-        "pixelIdenticalToQAAcceptedNative": true,
-        "sRGBProfileEmbedded": true,
-        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
-      },
-      "priorMediaFields": {
-        "tiedosto": "",
-        "lahde": "",
-        "selite": "",
-        "lyhyt": ""
-      },
-      "preservePreviousMediaObjects": true,
-      "authorization": {
-        "status": "waived-owner-review",
-        "authorizedByOwner": true,
-        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
-        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
-        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
-        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
-        "ownerAcceptanceImplied": false,
-        "QARequired": true,
-        "R2ByteVerificationRequired": true,
-        "galleryBeforeGameRequired": false,
-        "verifiedHumanMessageSource": {
-          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
-          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
-        }
-      },
-      "ownerAcceptanceVerified": false,
-      "gameIntegrated": false,
-      "gamePublicationVerified": false,
-      "inMemoryMergeVerified": true,
-      "CcommonsMetadataBound": false,
-      "roleManifestBound": true,
-      "sourceContentAfterSHA256": "c724bb2a9ad27bfe133e8e4d525c09d347cdb3c9f1649c6fa9cdcc15bb417a96",
-      "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "c7319b2573b20214793e788f562b6832e4774e805300d2a3b64f6d15888e7a20"
-    },
-    {
-      "era": "e06",
-      "city": "bangui",
-      "slot": "K1",
-      "type": "illustration",
-      "assetID": "job14-e06-bangui-k1-v01",
-      "galleryImageID": "job14-e06-bangui-k1-v01",
-      "commonsFile": null,
-      "targetJsonPath": "$.kaupunkilehti[0].nostot[0]",
-      "targetTokens": [
-        "kaupunkilehti",
-        0,
-        "nostot",
-        0
-      ],
-      "operation": "merge-media-fields-preserve-other-content",
-      "CmediaFieldPayload": {
-        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/bangui/job14-e06-bangui-k1-v01-353ee58346bd.png",
-        "suora": true,
-        "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva raudanvalmistuksen materiaalijäänteistä.",
-        "lyhyt": "Havainnekuva raudanvalmistuksen materiaalijäänteistä."
-      },
-      "removeMediaKeys": [
-        "tiedosto"
-      ],
-      "CvalidatorCompatiblePayload": {},
-      "runtimeMediaFieldPayload": {
-        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/bangui/job14-e06-bangui-k1-v01-353ee58346bd.png",
-        "suora": true,
-        "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva raudanvalmistuksen materiaalijäänteistä.",
-        "lyhyt": "Havainnekuva raudanvalmistuksen materiaalijäänteistä."
-      },
-      "runtimeRemoveMediaKeys": [
-        "tiedosto"
-      ],
-      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
-      "nativeSHA256": "353ee58346bddceb077ac79e42f87dc10c05120d38e0a40c65ec83acb054fee5",
-      "exportSHA256": "d282c56e45a02822ca8d50be57d2554346d554263094bc3541abb12bb71cefb9",
-      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/bangui/job14-e06-bangui-k1-v01-353ee58346bd.png",
-      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/bangui/job14-e06-bangui-k1-v01-353ee58346bd.png",
-      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e06/bangui/job14-e06-bangui-k1-v01-353ee58346bd.png",
-      "dimensions": [
-        1536,
-        1024
-      ],
-      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/bangui/sisalto.json",
-      "sourceContentSHA256": "c724bb2a9ad27bfe133e8e4d525c09d347cdb3c9f1649c6fa9cdcc15bb417a96",
-      "semanticSourceBind": {
-        "targetBeforeSHA256": "c2809b769ee787261cb0dac0caf91e0bbfa26378c6b939a01bd61c75a416e7b7",
-        "semanticContextSHA256": "c2809b769ee787261cb0dac0caf91e0bbfa26378c6b939a01bd61c75a416e7b7",
-        "subjectTitle": "Raudan jäljet ovat kaupunkia vanhempia",
-        "targetState": "existing-target"
-      },
-      "attribution": {
-        "author": null,
-        "license": null,
-        "licenseUrl": null,
-        "sourcePage": null,
-        "originalUrl": null,
-        "rightsEvidence": {
-          "production": "Yleistetty kasvi-, ruoka-, luonnonmateriaali- tai tavallisen funktionaalisen esineen havainnollistus. Ei kuva-inputtia, nimettyä kaupunkiasettelua, arkeologista esinerekonstruktiota tai suojattua teosta. Ei todellinen paikkavalokuva.",
-          "QA": {
-            "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/bangui/assets/job14-e06-bangui-k1-v01/image.png",
-            "width": 1536,
-            "height": 1024,
-            "sha256": "353ee58346bddceb077ac79e42f87dc10c05120d38e0a40c65ec83acb054fee5",
-            "nativeGeometry": {
-              "rawWidth": 1536,
-              "rawHeight": 1024,
-              "exifOrientation": 1,
-              "width": 1536,
-              "height": 1024
-            },
-            "auditEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/bangui/qa-evidence/d7075e458f8f-technical-source.json",
-            "visualViewedByThisSession": false,
-            "visualReviewSource": "independent extra reviewer; not personally viewed here",
-            "independentReview": {
-              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/bangui/illustration-qa-extra.json",
-              "sha256": "1899b7529a49806e861076e6bb3d3ef61b21c95ce098e8386642e06fb4004d42",
-              "reviewerGroup": "kuvitus-1",
-              "assetID": "job14-e06-bangui-k1-v01",
-              "nativeSHA256": "353ee58346bddceb077ac79e42f87dc10c05120d38e0a40c65ec83acb054fee5",
-              "verdict": "accepted",
-              "reason": "Yleiset materiaalijäänteet havainnollistavat K1:n raudanvalmistuksen aihetta.",
-              "evidence": {
-                "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/bangui/assets/job14-e06-bangui-k1-v01/image.png",
-                "nativeSHA256": "353ee58346bddceb077ac79e42f87dc10c05120d38e0a40c65ec83acb054fee5",
-                "nativeDimensions": [
-                  1536,
-                  1024
-                ],
-                "manifestHashMatches": true,
-                "personallyViewed": true,
-                "viewTool": "view_image",
-                "visualFindingsFi": "Tummia huokoisia kuonamaisia paloja ja koristeettomia keramiikkakatkelmia. Pinta/murtumat epäsäännöllisiä, maa uskottava; ei tekstiä tai ihmisia.",
-                "captionFi": "Havainnekuva raudanvalmistuksen materiaalijäänteistä.",
-                "sourceAndTargetCheckFi": "K1/faktapohjan kuona ja keramiikkajäänteet luettu. CaptionFi havainne, ei Pendèrè-Senguèn todellisia löytöesineitä, kaivausasetelmaa tai ajoitusta.",
-                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/bangui/sisalto.json",
-                "sourceEvidence": [
-                  {
-                    "type": "currentContent",
-                    "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/bangui/sisalto.json",
-                    "sha256": "ce6a95860c8fb62e17c174743d849333ba06c5bdbb6a2e26ce9500cc6c73d437",
-                    "jsonPath": "$.kaupunkilehti[0].nostot[0]",
-                    "text": "Banguin ympäristössä arkeologia kertoo ajasta ennen nykyistä kaupunkia. Metallurgisilla paikoilla, kuten Pendèrè-Senguèssä, on löytynyt kuonaa, puhallusputkien katkelmia, saviastioiden sirpaleita ja metalliesineitä. Jäänteet liittyvät raudanvalmistuksen eri vaiheisiin. Paikallinen ACSAPS-yhdistys on tehnyt työtä tämän perinnön säilyttämiseksi. Kun nykykaupungin historia alkaa 1800-luvun lopun asemasta, maasta löytyvät työn jäljet avaavat sitä vanhemman paikallisen aikakerroksen."
-                  },
-                  {
-                    "type": "factSheet",
-                    "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/bangui/faktapohja.md",
-                    "sha256": "cff6b785eb34ffc5030d49fd61429eb299344580b2a76ba69b1689ceb8542be5",
-                    "sourceUrl": "https://en.wikipedia.org/wiki/Bangui"
-                  }
-                ]
-              },
-              "opinionSHA256": "cb92ffe7af6edfd98bbc4fddd1d0726daa22f4e2f8ec56ad56874d55fa489585",
-              "capturedSourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/bangui/qa-evidence/extra-review-snapshots/1899b7529a49806e861076e6bb3d3ef61b21c95ce098e8386642e06fb4004d42.json"
-            },
-            "imageType": "illustration",
-            "captionFi": "Havainnekuva raudanvalmistuksen materiaalijäänteistä.",
-            "realPlacePhotograph": false
-          },
-          "qaReason": "Lisätarkistajan kuvitus-1 dokumentoitu arvio täsmälleen samasta assetID/nativeSHA-versiosta: Yleiset materiaalijäänteet havainnollistavat K1:n raudanvalmistuksen aihetta."
-        }
-      },
-      "luentaMetadata": {
-        "existingImageLuenta": null,
-        "captionReadingText": "Havainnekuva raudanvalmistuksen materiaalijäänteistä.",
-        "existingArticleAndSectionLuentaPreserved": true,
-        "audioGenerated": false,
-        "audioURL": null,
-        "imageSpecificAudioProvided": false,
-        "reuseAudioAllowedByThisPacket": false
-      },
-      "qaEvidence": {
-        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/bangui/qa.json",
-        "fileSHA256": "71b3e869ece5f9f39a7011b5838102f0ae8acefd43ec7349bb521e315b1927da",
-        "item": {
-          "slot": "K1",
-          "targetJsonPath": "$.kaupunkilehti[0].nostot[0]",
-          "assetID": "job14-e06-bangui-k1-v01",
-          "sha256": "353ee58346bddceb077ac79e42f87dc10c05120d38e0a40c65ec83acb054fee5",
-          "verdict": "accepted",
-          "reason": "Lisätarkistajan kuvitus-1 dokumentoitu arvio täsmälleen samasta assetID/nativeSHA-versiosta: Yleiset materiaalijäänteet havainnollistavat K1:n raudanvalmistuksen aihetta.",
-          "evidence": {
-            "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/bangui/assets/job14-e06-bangui-k1-v01/image.png",
-            "width": 1536,
-            "height": 1024,
-            "sha256": "353ee58346bddceb077ac79e42f87dc10c05120d38e0a40c65ec83acb054fee5",
-            "nativeGeometry": {
-              "rawWidth": 1536,
-              "rawHeight": 1024,
-              "exifOrientation": 1,
-              "width": 1536,
-              "height": 1024
-            },
-            "auditEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/bangui/qa-evidence/d7075e458f8f-technical-source.json",
-            "visualViewedByThisSession": false,
-            "visualReviewSource": "independent extra reviewer; not personally viewed here",
-            "independentReview": {
-              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/bangui/illustration-qa-extra.json",
-              "sha256": "1899b7529a49806e861076e6bb3d3ef61b21c95ce098e8386642e06fb4004d42",
-              "reviewerGroup": "kuvitus-1",
-              "assetID": "job14-e06-bangui-k1-v01",
-              "nativeSHA256": "353ee58346bddceb077ac79e42f87dc10c05120d38e0a40c65ec83acb054fee5",
-              "verdict": "accepted",
-              "reason": "Yleiset materiaalijäänteet havainnollistavat K1:n raudanvalmistuksen aihetta.",
-              "evidence": {
-                "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/bangui/assets/job14-e06-bangui-k1-v01/image.png",
-                "nativeSHA256": "353ee58346bddceb077ac79e42f87dc10c05120d38e0a40c65ec83acb054fee5",
-                "nativeDimensions": [
-                  1536,
-                  1024
-                ],
-                "manifestHashMatches": true,
-                "personallyViewed": true,
-                "viewTool": "view_image",
-                "visualFindingsFi": "Tummia huokoisia kuonamaisia paloja ja koristeettomia keramiikkakatkelmia. Pinta/murtumat epäsäännöllisiä, maa uskottava; ei tekstiä tai ihmisia.",
-                "captionFi": "Havainnekuva raudanvalmistuksen materiaalijäänteistä.",
-                "sourceAndTargetCheckFi": "K1/faktapohjan kuona ja keramiikkajäänteet luettu. CaptionFi havainne, ei Pendèrè-Senguèn todellisia löytöesineitä, kaivausasetelmaa tai ajoitusta.",
-                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/bangui/sisalto.json",
-                "sourceEvidence": [
-                  {
-                    "type": "currentContent",
-                    "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/bangui/sisalto.json",
-                    "sha256": "ce6a95860c8fb62e17c174743d849333ba06c5bdbb6a2e26ce9500cc6c73d437",
-                    "jsonPath": "$.kaupunkilehti[0].nostot[0]",
-                    "text": "Banguin ympäristössä arkeologia kertoo ajasta ennen nykyistä kaupunkia. Metallurgisilla paikoilla, kuten Pendèrè-Senguèssä, on löytynyt kuonaa, puhallusputkien katkelmia, saviastioiden sirpaleita ja metalliesineitä. Jäänteet liittyvät raudanvalmistuksen eri vaiheisiin. Paikallinen ACSAPS-yhdistys on tehnyt työtä tämän perinnön säilyttämiseksi. Kun nykykaupungin historia alkaa 1800-luvun lopun asemasta, maasta löytyvät työn jäljet avaavat sitä vanhemman paikallisen aikakerroksen."
-                  },
-                  {
-                    "type": "factSheet",
-                    "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/bangui/faktapohja.md",
-                    "sha256": "cff6b785eb34ffc5030d49fd61429eb299344580b2a76ba69b1689ceb8542be5",
-                    "sourceUrl": "https://en.wikipedia.org/wiki/Bangui"
-                  }
-                ]
-              },
-              "opinionSHA256": "cb92ffe7af6edfd98bbc4fddd1d0726daa22f4e2f8ec56ad56874d55fa489585",
-              "capturedSourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/bangui/qa-evidence/extra-review-snapshots/1899b7529a49806e861076e6bb3d3ef61b21c95ce098e8386642e06fb4004d42.json"
-            },
-            "imageType": "illustration",
-            "captionFi": "Havainnekuva raudanvalmistuksen materiaalijäänteistä.",
-            "realPlacePhotograph": false
-          },
-          "importedIndependentReview": true,
-          "independentReviews": [
-            {
-              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/bangui/illustration-qa-extra.json",
-              "sha256": "1899b7529a49806e861076e6bb3d3ef61b21c95ce098e8386642e06fb4004d42",
-              "reviewerGroup": "kuvitus-1",
-              "assetID": "job14-e06-bangui-k1-v01",
-              "nativeSHA256": "353ee58346bddceb077ac79e42f87dc10c05120d38e0a40c65ec83acb054fee5",
-              "verdict": "accepted",
-              "reason": "Yleiset materiaalijäänteet havainnollistavat K1:n raudanvalmistuksen aihetta.",
-              "evidence": {
-                "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/bangui/assets/job14-e06-bangui-k1-v01/image.png",
-                "nativeSHA256": "353ee58346bddceb077ac79e42f87dc10c05120d38e0a40c65ec83acb054fee5",
-                "nativeDimensions": [
-                  1536,
-                  1024
-                ],
-                "manifestHashMatches": true,
-                "personallyViewed": true,
-                "viewTool": "view_image",
-                "visualFindingsFi": "Tummia huokoisia kuonamaisia paloja ja koristeettomia keramiikkakatkelmia. Pinta/murtumat epäsäännöllisiä, maa uskottava; ei tekstiä tai ihmisia.",
-                "captionFi": "Havainnekuva raudanvalmistuksen materiaalijäänteistä.",
-                "sourceAndTargetCheckFi": "K1/faktapohjan kuona ja keramiikkajäänteet luettu. CaptionFi havainne, ei Pendèrè-Senguèn todellisia löytöesineitä, kaivausasetelmaa tai ajoitusta.",
-                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/bangui/sisalto.json",
-                "sourceEvidence": [
-                  {
-                    "type": "currentContent",
-                    "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/bangui/sisalto.json",
-                    "sha256": "ce6a95860c8fb62e17c174743d849333ba06c5bdbb6a2e26ce9500cc6c73d437",
-                    "jsonPath": "$.kaupunkilehti[0].nostot[0]",
-                    "text": "Banguin ympäristössä arkeologia kertoo ajasta ennen nykyistä kaupunkia. Metallurgisilla paikoilla, kuten Pendèrè-Senguèssä, on löytynyt kuonaa, puhallusputkien katkelmia, saviastioiden sirpaleita ja metalliesineitä. Jäänteet liittyvät raudanvalmistuksen eri vaiheisiin. Paikallinen ACSAPS-yhdistys on tehnyt työtä tämän perinnön säilyttämiseksi. Kun nykykaupungin historia alkaa 1800-luvun lopun asemasta, maasta löytyvät työn jäljet avaavat sitä vanhemman paikallisen aikakerroksen."
-                  },
-                  {
-                    "type": "factSheet",
-                    "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/bangui/faktapohja.md",
-                    "sha256": "cff6b785eb34ffc5030d49fd61429eb299344580b2a76ba69b1689ceb8542be5",
-                    "sourceUrl": "https://en.wikipedia.org/wiki/Bangui"
-                  }
-                ]
-              },
-              "opinionSHA256": "cb92ffe7af6edfd98bbc4fddd1d0726daa22f4e2f8ec56ad56874d55fa489585",
-              "capturedSourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/bangui/qa-evidence/extra-review-snapshots/1899b7529a49806e861076e6bb3d3ef61b21c95ce098e8386642e06fb4004d42.json"
-            }
-          ],
-          "checkedAt": "2026-10-12T20:01:10.971102+00:00",
-          "contentSHA256": "ce6a95860c8fb62e17c174743d849333ba06c5bdbb6a2e26ce9500cc6c73d437",
-          "targetSHA256": "c2809b769ee787261cb0dac0caf91e0bbfa26378c6b939a01bd61c75a416e7b7"
-        },
-        "allSources": [
-          {
-            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/bangui/qa.json",
-            "sha256": "71b3e869ece5f9f39a7011b5838102f0ae8acefd43ec7349bb521e315b1927da"
-          },
-          {
-            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/bangui/illustration-qa-extra.json",
-            "sha256": "1899b7529a49806e861076e6bb3d3ef61b21c95ce098e8386642e06fb4004d42"
-          }
-        ]
-      },
-      "R2ByteVerification": {
-        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/bangui/job14-e06-bangui-k1-v01-353ee58346bd.png",
-        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/bangui/job14-e06-bangui-k1-v01-353ee58346bd.png?t=d282c56e45a02822",
-        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/bangui/job14-e06-bangui-k1-v01-353ee58346bd.png",
-        "sha256": "d282c56e45a02822ca8d50be57d2554346d554263094bc3541abb12bb71cefb9",
-        "bytes": 3078598,
-        "http": 200,
-        "mime": "image/png",
-        "cors": "https://matkakirja.app",
-        "cacheBustedPreflightHttp": 404,
-        "cacheBustedReadback": true,
-        "byteExactReadback": true,
-        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
-        "conditionalIfNoneMatch": "*",
-        "s3PutHttp": 200,
-        "assetID": "job14-e06-bangui-k1-v01",
-        "nativeSHA256": "353ee58346bddceb077ac79e42f87dc10c05120d38e0a40c65ec83acb054fee5",
-        "canonicalReadbackByteExact": true,
-        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e06/bangui/job14-e06-bangui-k1-v01-353ee58346bd.png",
-        "pixelIdenticalToQAAcceptedNative": true,
-        "era": "e06",
-        "city": "bangui",
-        "slot": "K1",
-        "targetJsonPath": "$.kaupunkilehti[0].nostot[0]",
-        "verifiedAt": "2026-10-12T19:58:05.556427+00:00",
-        "ownerAcceptanceVerified": false,
-        "gameIntegrated": false,
-        "galleryVisibleVerified": false
-      },
-      "producerExportProof": null,
-      "technicalExportProof": {
-        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e06/bangui/job14-e06-bangui-k1-v01-353ee58346bd.png",
-        "sha256": "d282c56e45a02822ca8d50be57d2554346d554263094bc3541abb12bb71cefb9",
-        "bytes": 3078598,
-        "SHAReadAt": "2026-10-12T19:57:58.870639+00:00",
-        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
-        "width": 1536,
-        "height": 1024,
-        "pixelWidth": 1536,
-        "pixelHeight": 1024,
-        "exifOrientation": 1,
-        "dimensionsBasis": "EXIF-oriented-display",
-        "format": "PNG",
-        "largeOriginalHeaderOnlyRead": false,
-        "nativeSHA256": "353ee58346bddceb077ac79e42f87dc10c05120d38e0a40c65ec83acb054fee5",
-        "rgbPixelSHA256": "2f3156d81da5a6e6e97f7b1171c1a8b5150163775e6d9a960b1014b98a5f0d3b",
-        "pixelIdenticalToQAAcceptedNative": true,
-        "sRGBProfileEmbedded": true,
-        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
-      },
-      "priorMediaFields": {
-        "tiedosto": "",
-        "lahde": "",
-        "selite": "",
-        "lyhyt": ""
-      },
-      "preservePreviousMediaObjects": true,
-      "authorization": {
-        "status": "waived-owner-review",
-        "authorizedByOwner": true,
-        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
-        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
-        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
-        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
-        "ownerAcceptanceImplied": false,
-        "QARequired": true,
-        "R2ByteVerificationRequired": true,
-        "galleryBeforeGameRequired": false,
-        "verifiedHumanMessageSource": {
-          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
-          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
-        }
-      },
-      "ownerAcceptanceVerified": false,
-      "gameIntegrated": false,
-      "gamePublicationVerified": false,
-      "inMemoryMergeVerified": true,
-      "CcommonsMetadataBound": false,
-      "roleManifestBound": true,
-      "sourceContentAfterSHA256": "c724bb2a9ad27bfe133e8e4d525c09d347cdb3c9f1649c6fa9cdcc15bb417a96",
-      "targetAfterSHA256": "c2809b769ee787261cb0dac0caf91e0bbfa26378c6b939a01bd61c75a416e7b7",
-      "contextAfterSHA256": "c2809b769ee787261cb0dac0caf91e0bbfa26378c6b939a01bd61c75a416e7b7"
     },
     {
       "era": "e06",

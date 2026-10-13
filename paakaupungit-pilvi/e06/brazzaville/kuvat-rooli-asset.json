@@ -3,8 +3,280 @@
   "era": "e06",
   "city": "brazzaville",
   "authorization": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
-  "sourceContentAfterSHA256": "bd0245ae8a12a16830a6990d0535aec731f9675a71bbb96c65c1434b471f2e4f",
+  "sourceContentAfterSHA256": "4e7ad548d0ca7db52da4421613300af076e2e595f54395a937f4faf1246cf358",
   "assets": [
+    {
+      "era": "e06",
+      "city": "brazzaville",
+      "slot": "O3",
+      "type": "illustration",
+      "assetID": "job14-e06-brazzaville-o3-v01",
+      "galleryImageID": "job14-e06-brazzaville-o3-v01",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[2].kuva",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "matkailijalle",
+        "artikkeli",
+        "jaksot",
+        2,
+        "kuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/brazzaville/job14-e06-brazzaville-o3-v01-fc93ef5338dd.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva kosteikon kasvillisuudesta.",
+        "lyhyt": "Havainnekuva kosteikon kasvillisuudesta."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/brazzaville/job14-e06-brazzaville-o3-v01-fc93ef5338dd.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva kosteikon kasvillisuudesta.",
+        "lyhyt": "Havainnekuva kosteikon kasvillisuudesta."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "fc93ef5338dd3bf5ab2d6dff4289e5c7ad98a32fa31ff0982d02170ffbb59e63",
+      "exportSHA256": "9075c69bf9a9da7093ab4ab4cfd64a3af6cef9d09c31f08f161401303ecdc29b",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/brazzaville/job14-e06-brazzaville-o3-v01-fc93ef5338dd.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/brazzaville/job14-e06-brazzaville-o3-v01-fc93ef5338dd.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e06/brazzaville/job14-e06-brazzaville-o3-v01-fc93ef5338dd.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/brazzaville/sisalto.json",
+      "sourceContentSHA256": "bd0245ae8a12a16830a6990d0535aec731f9675a71bbb96c65c1434b471f2e4f",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "b9e042a9f74e86f3ee8f5e4ef2a5cba901031b6e299bd2642d5917996caa9050",
+        "subjectTitle": "Djoué ja koskien maisema",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Yleistetty lähteistetty materiaali tai tavallinen funktionaalinen esine. Ei kuva-inputtia, arkkitehtuurin/asettelun, suojatun laattakuvion/rituaaliesineen tai nykyteoksen jäljennöstä. Ei named-place documentary claim.",
+          "QA": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/brazzaville/assets/job14-e06-brazzaville-o3-v01/image.png",
+            "nativeSHA256": "fc93ef5338dd3bf5ab2d6dff4289e5c7ad98a32fa31ff0982d02170ffbb59e63",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "nativeRatio": 1.5,
+            "manifestHashMatches": true,
+            "personallyViewed": true,
+            "viewTool": "view_image",
+            "viewedAt": "2026-10-12T20:41:12.985Z",
+            "visualFindingsFi": "Veden pinnan tasolta kuvattuja ruohomaisia varsia ja leveitä kosteikkolehtiä, pisaroita ja heijastuksia. Lehdet liittyvät varsiin uskottavasti; veden pinta ja kasvien vaihtelu luontevia. Ei tunnistettavia ihmisiä, merkintöjä tai rakennuksia.",
+            "captionFi": "Havainnekuva kosteikon kasvillisuudesta.",
+            "sourceAndTargetCheckFi": "Ajantasainen O3 käsittelee Djoué-joen suuta sekä kosteikko- ja saariympäristöä; faktapohjan R5/R9 tukevat kosteikkoaihetta. Havainnekuvateksti ei nimeä lajia, Djouén tiettyä paikkaa tai väitä kuvaa aidoksi koskinäkymäksi.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/brazzaville/sisalto.json",
+            "contentSHA256": "bd0245ae8a12a16830a6990d0535aec731f9675a71bbb96c65c1434b471f2e4f",
+            "textJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[2]",
+            "currentText": "Djoué-joen suu ja Kongon koskien alku kuuluvat Brazzavillen läntiseen luontoympäristöön. Alueen vesistöt liittyvät kosteikkoihin ja saariin. Luvallinen kulku ja paikallinen opastus varmistetaan ennen retkeä; Mbamu-saarelle ei oleteta valmista veneyhteyttä.",
+            "factPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/brazzaville/faktapohja.md",
+            "factSHA256": "bc85d0ce8955dcfc5aab6b224055b8aa471c0ffe5e51ef3d03a83c7459ce79b8",
+            "sourceEvidence": [
+              {
+                "type": "currentContent",
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/brazzaville/sisalto.json",
+                "sha256": "6718e06a2b7a4034c315617a6cbe6ab039dfd293ad6c138dfddf7e65302776ce",
+                "jsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[2]",
+                "text": "Djoué-joen suu ja Kongon koskien alku kuuluvat Brazzavillen läntiseen luontoympäristöön. Alueen vesistöt liittyvät kosteikkoihin ja saariin. Luvallinen kulku ja paikallinen opastus varmistetaan ennen retkeä; Mbamu-saarelle ei oleteta valmista veneyhteyttä."
+              },
+              {
+                "type": "factSheet",
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/brazzaville/faktapohja.md",
+                "sha256": "bc85d0ce8955dcfc5aab6b224055b8aa471c0ffe5e51ef3d03a83c7459ce79b8",
+                "sourceUrl": "https://en.wikipedia.org/wiki/Djou%C3%A9_River"
+              }
+            ],
+            "rightsCheckFi": "Yleishavainne, ei nimettyä suojattua teosta tai arkkitehtuurin/asettelun jäljennöstä.",
+            "formatCheck": {
+              "format": "PNG",
+              "manifestDimensionsMatch": true,
+              "embeddedICCProfile": false,
+              "nativeMetadataExportSeparate": true
+            }
+          },
+          "qaReason": "Kosteikkokasvillisuuden yleishavainne vastaa O3:n tekstiaihetta."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva kosteikon kasvillisuudesta.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/brazzaville/illustration-qa-extra.json",
+        "fileSHA256": "6e1863b3367e0025534f0c5cee8a36f4c83f3ccc2a1c3c2b1668a20b44be021c",
+        "item": {
+          "slot": "O3",
+          "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[2].kuva",
+          "assetID": "job14-e06-brazzaville-o3-v01",
+          "sha256": "fc93ef5338dd3bf5ab2d6dff4289e5c7ad98a32fa31ff0982d02170ffbb59e63",
+          "verdict": "accepted",
+          "reason": "Kosteikkokasvillisuuden yleishavainne vastaa O3:n tekstiaihetta.",
+          "evidence": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/brazzaville/assets/job14-e06-brazzaville-o3-v01/image.png",
+            "nativeSHA256": "fc93ef5338dd3bf5ab2d6dff4289e5c7ad98a32fa31ff0982d02170ffbb59e63",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "nativeRatio": 1.5,
+            "manifestHashMatches": true,
+            "personallyViewed": true,
+            "viewTool": "view_image",
+            "viewedAt": "2026-10-12T20:41:12.985Z",
+            "visualFindingsFi": "Veden pinnan tasolta kuvattuja ruohomaisia varsia ja leveitä kosteikkolehtiä, pisaroita ja heijastuksia. Lehdet liittyvät varsiin uskottavasti; veden pinta ja kasvien vaihtelu luontevia. Ei tunnistettavia ihmisiä, merkintöjä tai rakennuksia.",
+            "captionFi": "Havainnekuva kosteikon kasvillisuudesta.",
+            "sourceAndTargetCheckFi": "Ajantasainen O3 käsittelee Djoué-joen suuta sekä kosteikko- ja saariympäristöä; faktapohjan R5/R9 tukevat kosteikkoaihetta. Havainnekuvateksti ei nimeä lajia, Djouén tiettyä paikkaa tai väitä kuvaa aidoksi koskinäkymäksi.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/brazzaville/sisalto.json",
+            "contentSHA256": "bd0245ae8a12a16830a6990d0535aec731f9675a71bbb96c65c1434b471f2e4f",
+            "textJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[2]",
+            "currentText": "Djoué-joen suu ja Kongon koskien alku kuuluvat Brazzavillen läntiseen luontoympäristöön. Alueen vesistöt liittyvät kosteikkoihin ja saariin. Luvallinen kulku ja paikallinen opastus varmistetaan ennen retkeä; Mbamu-saarelle ei oleteta valmista veneyhteyttä.",
+            "factPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/brazzaville/faktapohja.md",
+            "factSHA256": "bc85d0ce8955dcfc5aab6b224055b8aa471c0ffe5e51ef3d03a83c7459ce79b8",
+            "sourceEvidence": [
+              {
+                "type": "currentContent",
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/brazzaville/sisalto.json",
+                "sha256": "6718e06a2b7a4034c315617a6cbe6ab039dfd293ad6c138dfddf7e65302776ce",
+                "jsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[2]",
+                "text": "Djoué-joen suu ja Kongon koskien alku kuuluvat Brazzavillen läntiseen luontoympäristöön. Alueen vesistöt liittyvät kosteikkoihin ja saariin. Luvallinen kulku ja paikallinen opastus varmistetaan ennen retkeä; Mbamu-saarelle ei oleteta valmista veneyhteyttä."
+              },
+              {
+                "type": "factSheet",
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/brazzaville/faktapohja.md",
+                "sha256": "bc85d0ce8955dcfc5aab6b224055b8aa471c0ffe5e51ef3d03a83c7459ce79b8",
+                "sourceUrl": "https://en.wikipedia.org/wiki/Djou%C3%A9_River"
+              }
+            ],
+            "rightsCheckFi": "Yleishavainne, ei nimettyä suojattua teosta tai arkkitehtuurin/asettelun jäljennöstä.",
+            "formatCheck": {
+              "format": "PNG",
+              "manifestDimensionsMatch": true,
+              "embeddedICCProfile": false,
+              "nativeMetadataExportSeparate": true
+            }
+          },
+          "reviewedAt": "2026-10-12T20:45:26.005855+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/brazzaville/qa.json",
+            "sha256": "7d739da61c29dca32a98085b6a453e06f67dc2a4c5c9c23b72e6e255eedd301b"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/brazzaville/illustration-qa-extra.json",
+            "sha256": "6e1863b3367e0025534f0c5cee8a36f4c83f3ccc2a1c3c2b1668a20b44be021c"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/brazzaville/job14-e06-brazzaville-o3-v01-fc93ef5338dd.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/brazzaville/job14-e06-brazzaville-o3-v01-fc93ef5338dd.png?t=9075c69bf9a9da70",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/brazzaville/job14-e06-brazzaville-o3-v01-fc93ef5338dd.png",
+        "sha256": "9075c69bf9a9da7093ab4ab4cfd64a3af6cef9d09c31f08f161401303ecdc29b",
+        "bytes": 2581892,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "job14-e06-brazzaville-o3-v01",
+        "nativeSHA256": "fc93ef5338dd3bf5ab2d6dff4289e5c7ad98a32fa31ff0982d02170ffbb59e63",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e06/brazzaville/job14-e06-brazzaville-o3-v01-fc93ef5338dd.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e06",
+        "city": "brazzaville",
+        "slot": "O3",
+        "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[2].kuva",
+        "verifiedAt": "2026-10-12T20:46:53.169578+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e06/brazzaville/job14-e06-brazzaville-o3-v01-fc93ef5338dd.png",
+        "sha256": "9075c69bf9a9da7093ab4ab4cfd64a3af6cef9d09c31f08f161401303ecdc29b",
+        "bytes": 2581892,
+        "SHAReadAt": "2026-10-12T20:45:30.553241+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "fc93ef5338dd3bf5ab2d6dff4289e5c7ad98a32fa31ff0982d02170ffbb59e63",
+        "rgbPixelSHA256": "224a356e31b7f22fedb3c385696c0d7d3368dd79cad809888938649563f6fb9a",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "4e7ad548d0ca7db52da4421613300af076e2e595f54395a937f4faf1246cf358",
+      "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+      "contextAfterSHA256": "b9e042a9f74e86f3ee8f5e4ef2a5cba901031b6e299bd2642d5917996caa9050"
+    },
     {
       "era": "e06",
       "city": "brazzaville",
@@ -115,7 +387,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/brazzaville/illustration-qa-extra.json",
-        "fileSHA256": "dabbab27fcd56f6fde46607d95cbe14b392225e7ca1fd87f762f1e44f7dd5909",
+        "fileSHA256": "6e1863b3367e0025534f0c5cee8a36f4c83f3ccc2a1c3c2b1668a20b44be021c",
         "item": {
           "slot": "O4",
           "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
@@ -158,11 +430,11 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/brazzaville/qa.json",
-            "sha256": "08aec39a64a0fa5cf90920feda46bc5c7c7b684d29ae1838a71f9b3a05869f9a"
+            "sha256": "7d739da61c29dca32a98085b6a453e06f67dc2a4c5c9c23b72e6e255eedd301b"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/brazzaville/illustration-qa-extra.json",
-            "sha256": "dabbab27fcd56f6fde46607d95cbe14b392225e7ca1fd87f762f1e44f7dd5909"
+            "sha256": "6e1863b3367e0025534f0c5cee8a36f4c83f3ccc2a1c3c2b1668a20b44be021c"
           }
         ]
       },
@@ -245,9 +517,250 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "bd0245ae8a12a16830a6990d0535aec731f9675a71bbb96c65c1434b471f2e4f",
+      "sourceContentAfterSHA256": "4e7ad548d0ca7db52da4421613300af076e2e595f54395a937f4faf1246cf358",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
       "contextAfterSHA256": "ea3adb9af3738cea79336c3fe73f4e1e08d251ad34fcdc743aad912bc4b26071"
+    },
+    {
+      "era": "e06",
+      "city": "brazzaville",
+      "slot": "K3",
+      "type": "illustration",
+      "assetID": "job14-e06-brazzaville-k3-v01",
+      "galleryImageID": "job14-e06-brazzaville-k3-v01",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].nostot[2]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "nostot",
+        2
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/brazzaville/job14-e06-brazzaville-k3-v01-17a480f5d60c.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva rautatiekiskon materiaalista.",
+        "lyhyt": "Havainnekuva rautatiekiskon materiaalista."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/brazzaville/job14-e06-brazzaville-k3-v01-17a480f5d60c.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva rautatiekiskon materiaalista.",
+        "lyhyt": "Havainnekuva rautatiekiskon materiaalista."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "17a480f5d60c03dd8abb89bd51a59aec1c6cac0e974fccd68a5cf87a04e994a2",
+      "exportSHA256": "666a48fcd21baaf424e847a08384761947083930b0fac51d32742e49de113bb9",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/brazzaville/job14-e06-brazzaville-k3-v01-17a480f5d60c.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/brazzaville/job14-e06-brazzaville-k3-v01-17a480f5d60c.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e06/brazzaville/job14-e06-brazzaville-k3-v01-17a480f5d60c.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/brazzaville/sisalto.json",
+      "sourceContentSHA256": "bd0245ae8a12a16830a6990d0535aec731f9675a71bbb96c65c1434b471f2e4f",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "6e31f6d43c24b7ce4d74fcaa1882ede9e22f6ebd646e70a5b3822087446e8aa7",
+        "semanticContextSHA256": "6e31f6d43c24b7ce4d74fcaa1882ede9e22f6ebd646e70a5b3822087446e8aa7",
+        "subjectTitle": "Kosket kierretään rautatiellä",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Yleistetty kasvi-, ruoka-, luonnonmateriaali- tai tavallisen funktionaalisen esineen havainnollistus. Ei kuva-inputtia, nimettyä kaupunkiasettelua, arkeologista esinerekonstruktiota tai suojattua teosta. Ei todellinen paikkavalokuva.",
+          "QA": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/brazzaville/assets/job14-e06-brazzaville-k3-v01/image.png",
+            "nativeSHA256": "17a480f5d60c03dd8abb89bd51a59aec1c6cac0e974fccd68a5cf87a04e994a2",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "manifestHashMatches": true,
+            "personallyViewed": true,
+            "viewTool": "view_image",
+            "visualFindingsFi": "Lyhyt kiskonpala puulla; poikkileikkaus, kulunut metalli ja puunsyyt luontevat. Ei logoa, tekstiä tai ihmisiä.",
+            "captionFi": "Havainnekuva rautatiekiskon materiaalista.",
+            "sourceAndTargetCheckFi": "K3/faktapohjan Congo–Ocean-radan aihe luettu. CaptionFi havainne, ei tämän radan todellinen kisko, rakennustapahtuma tai 1873-kuva.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/brazzaville/sisalto.json",
+            "sourceEvidence": [
+              {
+                "type": "currentContent",
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/brazzaville/sisalto.json",
+                "sha256": "6718e06a2b7a4034c315617a6cbe6ab039dfd293ad6c138dfddf7e65302776ce",
+                "jsonPath": "$.kaupunkilehti[0].nostot[2]",
+                "text": "Congo–Ocean-rautatie yhdistää Brazzavillen Atlantin rannikon Pointe-Noiren satamaan. Se toimii alajuoksun koskijakson kiertoyhteytenä, kun Brazzavillestä jokireitit jatkuvat ylävirtaan. Rata rakennettiin 1900-luvun alkupuolella, joten sitä ei ollut isoisän matkavuonna 1873. Rakentamisessa käytettiin pakkotyötä, ja siihen liittyi vakavaa inhimillistä kärsimystä. Kuljetusyhteyden historia sisältää siksi sekä joen maantieteen ratkaisemisen että niiden ihmisten työn, joiden varaan rata syntyi."
+              },
+              {
+                "type": "factSheet",
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/brazzaville/faktapohja.md",
+                "sha256": "bc85d0ce8955dcfc5aab6b224055b8aa471c0ffe5e51ef3d03a83c7459ce79b8",
+                "sourceUrl": "https://en.wikipedia.org/wiki/Congo%E2%80%93Ocean_Railway"
+              }
+            ]
+          },
+          "qaReason": "Kiskomateriaalin havainne vastaa K3:n rautatieaihetta."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva rautatiekiskon materiaalista.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/brazzaville/illustration-qa-extra.json",
+        "fileSHA256": "6e1863b3367e0025534f0c5cee8a36f4c83f3ccc2a1c3c2b1668a20b44be021c",
+        "item": {
+          "slot": "K3",
+          "targetJsonPath": "$.kaupunkilehti[0].nostot[2]",
+          "assetID": "job14-e06-brazzaville-k3-v01",
+          "sha256": "17a480f5d60c03dd8abb89bd51a59aec1c6cac0e974fccd68a5cf87a04e994a2",
+          "verdict": "accepted",
+          "reason": "Kiskomateriaalin havainne vastaa K3:n rautatieaihetta.",
+          "evidence": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/brazzaville/assets/job14-e06-brazzaville-k3-v01/image.png",
+            "nativeSHA256": "17a480f5d60c03dd8abb89bd51a59aec1c6cac0e974fccd68a5cf87a04e994a2",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "manifestHashMatches": true,
+            "personallyViewed": true,
+            "viewTool": "view_image",
+            "visualFindingsFi": "Lyhyt kiskonpala puulla; poikkileikkaus, kulunut metalli ja puunsyyt luontevat. Ei logoa, tekstiä tai ihmisiä.",
+            "captionFi": "Havainnekuva rautatiekiskon materiaalista.",
+            "sourceAndTargetCheckFi": "K3/faktapohjan Congo–Ocean-radan aihe luettu. CaptionFi havainne, ei tämän radan todellinen kisko, rakennustapahtuma tai 1873-kuva.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/brazzaville/sisalto.json",
+            "sourceEvidence": [
+              {
+                "type": "currentContent",
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/brazzaville/sisalto.json",
+                "sha256": "6718e06a2b7a4034c315617a6cbe6ab039dfd293ad6c138dfddf7e65302776ce",
+                "jsonPath": "$.kaupunkilehti[0].nostot[2]",
+                "text": "Congo–Ocean-rautatie yhdistää Brazzavillen Atlantin rannikon Pointe-Noiren satamaan. Se toimii alajuoksun koskijakson kiertoyhteytenä, kun Brazzavillestä jokireitit jatkuvat ylävirtaan. Rata rakennettiin 1900-luvun alkupuolella, joten sitä ei ollut isoisän matkavuonna 1873. Rakentamisessa käytettiin pakkotyötä, ja siihen liittyi vakavaa inhimillistä kärsimystä. Kuljetusyhteyden historia sisältää siksi sekä joen maantieteen ratkaisemisen että niiden ihmisten työn, joiden varaan rata syntyi."
+              },
+              {
+                "type": "factSheet",
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/brazzaville/faktapohja.md",
+                "sha256": "bc85d0ce8955dcfc5aab6b224055b8aa471c0ffe5e51ef3d03a83c7459ce79b8",
+                "sourceUrl": "https://en.wikipedia.org/wiki/Congo%E2%80%93Ocean_Railway"
+              }
+            ]
+          },
+          "reviewedAt": "2026-10-12T20:00:56.566650+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/brazzaville/qa.json",
+            "sha256": "7d739da61c29dca32a98085b6a453e06f67dc2a4c5c9c23b72e6e255eedd301b"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/brazzaville/illustration-qa-extra.json",
+            "sha256": "6e1863b3367e0025534f0c5cee8a36f4c83f3ccc2a1c3c2b1668a20b44be021c"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/brazzaville/job14-e06-brazzaville-k3-v01-17a480f5d60c.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/brazzaville/job14-e06-brazzaville-k3-v01-17a480f5d60c.png?t=666a48fcd21baaf4",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/brazzaville/job14-e06-brazzaville-k3-v01-17a480f5d60c.png",
+        "sha256": "666a48fcd21baaf424e847a08384761947083930b0fac51d32742e49de113bb9",
+        "bytes": 2432270,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "job14-e06-brazzaville-k3-v01",
+        "nativeSHA256": "17a480f5d60c03dd8abb89bd51a59aec1c6cac0e974fccd68a5cf87a04e994a2",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e06/brazzaville/job14-e06-brazzaville-k3-v01-17a480f5d60c.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e06",
+        "city": "brazzaville",
+        "slot": "K3",
+        "targetJsonPath": "$.kaupunkilehti[0].nostot[2]",
+        "verifiedAt": "2026-10-12T20:01:52.502719+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e06/brazzaville/job14-e06-brazzaville-k3-v01-17a480f5d60c.png",
+        "sha256": "666a48fcd21baaf424e847a08384761947083930b0fac51d32742e49de113bb9",
+        "bytes": 2432270,
+        "SHAReadAt": "2026-10-12T20:00:59.289296+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "17a480f5d60c03dd8abb89bd51a59aec1c6cac0e974fccd68a5cf87a04e994a2",
+        "rgbPixelSHA256": "dcf9e700cbe29111ff63652615e63069677bed1b61e68abb3d62e2cb09601f2d",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "4e7ad548d0ca7db52da4421613300af076e2e595f54395a937f4faf1246cf358",
+      "targetAfterSHA256": "6e31f6d43c24b7ce4d74fcaa1882ede9e22f6ebd646e70a5b3822087446e8aa7",
+      "contextAfterSHA256": "6e31f6d43c24b7ce4d74fcaa1882ede9e22f6ebd646e70a5b3822087446e8aa7"
     },
     {
       "era": "e06",
@@ -356,7 +869,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/brazzaville/illustration-qa-extra.json",
-        "fileSHA256": "dabbab27fcd56f6fde46607d95cbe14b392225e7ca1fd87f762f1e44f7dd5909",
+        "fileSHA256": "6e1863b3367e0025534f0c5cee8a36f4c83f3ccc2a1c3c2b1668a20b44be021c",
         "item": {
           "slot": "K4",
           "targetJsonPath": "$.kaupunkilehti[0].nostot[3]",
@@ -399,11 +912,11 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/brazzaville/qa.json",
-            "sha256": "08aec39a64a0fa5cf90920feda46bc5c7c7b684d29ae1838a71f9b3a05869f9a"
+            "sha256": "7d739da61c29dca32a98085b6a453e06f67dc2a4c5c9c23b72e6e255eedd301b"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/brazzaville/illustration-qa-extra.json",
-            "sha256": "dabbab27fcd56f6fde46607d95cbe14b392225e7ca1fd87f762f1e44f7dd5909"
+            "sha256": "6e1863b3367e0025534f0c5cee8a36f4c83f3ccc2a1c3c2b1668a20b44be021c"
           }
         ]
       },
@@ -486,7 +999,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "bd0245ae8a12a16830a6990d0535aec731f9675a71bbb96c65c1434b471f2e4f",
+      "sourceContentAfterSHA256": "4e7ad548d0ca7db52da4421613300af076e2e595f54395a937f4faf1246cf358",
       "targetAfterSHA256": "54fa72dc00b85bf7ff54620637caa578c5aa1799aee617bbb870d1ad7dd2552f",
       "contextAfterSHA256": "54fa72dc00b85bf7ff54620637caa578c5aa1799aee617bbb870d1ad7dd2552f"
     },
@@ -597,7 +1110,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/brazzaville/illustration-qa-extra.json",
-        "fileSHA256": "dabbab27fcd56f6fde46607d95cbe14b392225e7ca1fd87f762f1e44f7dd5909",
+        "fileSHA256": "6e1863b3367e0025534f0c5cee8a36f4c83f3ccc2a1c3c2b1668a20b44be021c",
         "item": {
           "slot": "L1",
           "targetJsonPath": "$.kaupunkilehti[1].nostot[0]",
@@ -640,11 +1153,11 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/brazzaville/qa.json",
-            "sha256": "08aec39a64a0fa5cf90920feda46bc5c7c7b684d29ae1838a71f9b3a05869f9a"
+            "sha256": "7d739da61c29dca32a98085b6a453e06f67dc2a4c5c9c23b72e6e255eedd301b"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/brazzaville/illustration-qa-extra.json",
-            "sha256": "dabbab27fcd56f6fde46607d95cbe14b392225e7ca1fd87f762f1e44f7dd5909"
+            "sha256": "6e1863b3367e0025534f0c5cee8a36f4c83f3ccc2a1c3c2b1668a20b44be021c"
           }
         ]
       },
@@ -727,7 +1240,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "bd0245ae8a12a16830a6990d0535aec731f9675a71bbb96c65c1434b471f2e4f",
+      "sourceContentAfterSHA256": "4e7ad548d0ca7db52da4421613300af076e2e595f54395a937f4faf1246cf358",
       "targetAfterSHA256": "1087ea3ba8e67d74571110f222c374ccd1713c8cb15d3da51a1c69d3d4ad8a60",
       "contextAfterSHA256": "1087ea3ba8e67d74571110f222c374ccd1713c8cb15d3da51a1c69d3d4ad8a60"
     },
@@ -838,7 +1351,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/brazzaville/illustration-qa-extra.json",
-        "fileSHA256": "dabbab27fcd56f6fde46607d95cbe14b392225e7ca1fd87f762f1e44f7dd5909",
+        "fileSHA256": "6e1863b3367e0025534f0c5cee8a36f4c83f3ccc2a1c3c2b1668a20b44be021c",
         "item": {
           "slot": "L2",
           "targetJsonPath": "$.kaupunkilehti[1].nostot[1]",
@@ -881,11 +1394,11 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/brazzaville/qa.json",
-            "sha256": "08aec39a64a0fa5cf90920feda46bc5c7c7b684d29ae1838a71f9b3a05869f9a"
+            "sha256": "7d739da61c29dca32a98085b6a453e06f67dc2a4c5c9c23b72e6e255eedd301b"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/brazzaville/illustration-qa-extra.json",
-            "sha256": "dabbab27fcd56f6fde46607d95cbe14b392225e7ca1fd87f762f1e44f7dd5909"
+            "sha256": "6e1863b3367e0025534f0c5cee8a36f4c83f3ccc2a1c3c2b1668a20b44be021c"
           }
         ]
       },
@@ -968,491 +1481,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "bd0245ae8a12a16830a6990d0535aec731f9675a71bbb96c65c1434b471f2e4f",
+      "sourceContentAfterSHA256": "4e7ad548d0ca7db52da4421613300af076e2e595f54395a937f4faf1246cf358",
       "targetAfterSHA256": "f8e3d29a58ad0008992644d72aedad40b4e6b92d3414910c9a2f33895680cd21",
       "contextAfterSHA256": "f8e3d29a58ad0008992644d72aedad40b4e6b92d3414910c9a2f33895680cd21"
-    },
-    {
-      "era": "e06",
-      "city": "brazzaville",
-      "slot": "L4",
-      "type": "illustration",
-      "assetID": "job14-e06-brazzaville-l4-v01",
-      "galleryImageID": "job14-e06-brazzaville-l4-v01",
-      "commonsFile": null,
-      "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
-      "targetTokens": [
-        "kaupunkilehti",
-        1,
-        "nostot",
-        3
-      ],
-      "operation": "merge-media-fields-preserve-other-content",
-      "CmediaFieldPayload": {
-        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/brazzaville/job14-e06-brazzaville-l4-v01-e5bb8bf69adb.png",
-        "suora": true,
-        "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva puisen soitinosan valmistuksesta.",
-        "lyhyt": "Havainnekuva puisen soitinosan valmistuksesta."
-      },
-      "removeMediaKeys": [
-        "tiedosto"
-      ],
-      "CvalidatorCompatiblePayload": {},
-      "runtimeMediaFieldPayload": {
-        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/brazzaville/job14-e06-brazzaville-l4-v01-e5bb8bf69adb.png",
-        "suora": true,
-        "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva puisen soitinosan valmistuksesta.",
-        "lyhyt": "Havainnekuva puisen soitinosan valmistuksesta."
-      },
-      "runtimeRemoveMediaKeys": [
-        "tiedosto"
-      ],
-      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
-      "nativeSHA256": "e5bb8bf69adb053b50d698c4575e2a4b753e1bf914eceb03d0575439bd65a605",
-      "exportSHA256": "ce99d1aa7f26b5c41c58c0d8232fea25af37852e1d328d11d4ecfb71f67f0ef6",
-      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/brazzaville/job14-e06-brazzaville-l4-v01-e5bb8bf69adb.png",
-      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/brazzaville/job14-e06-brazzaville-l4-v01-e5bb8bf69adb.png",
-      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e06/brazzaville/job14-e06-brazzaville-l4-v01-e5bb8bf69adb.png",
-      "dimensions": [
-        1536,
-        1024
-      ],
-      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/brazzaville/sisalto.json",
-      "sourceContentSHA256": "bd0245ae8a12a16830a6990d0535aec731f9675a71bbb96c65c1434b471f2e4f",
-      "semanticSourceBind": {
-        "targetBeforeSHA256": "0e67250c53f386587f4fe1feb33f6e0c01c64abaae9330e6455c7e1634a67816",
-        "semanticContextSHA256": "0e67250c53f386587f4fe1feb33f6e0c01c64abaae9330e6455c7e1634a67816",
-        "subjectTitle": "Perinne kulkee naapurustossa",
-        "targetState": "existing-target"
-      },
-      "attribution": {
-        "author": null,
-        "license": null,
-        "licenseUrl": null,
-        "sourcePage": null,
-        "originalUrl": null,
-        "rightsEvidence": {
-          "production": "Yleistetty ruoka-, kasvi-, materiaali- tai tavallisen käyttöesineen havainnollistus. Ei visuaalista kuva-inputtia, tunnistettavaa nykyteosta, koristetta, kasvoja tai nimettyä rakennusta/asettelua. Ei tietyn paikan autenttisen ulkonäön väitettä.",
-          "QA": {
-            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/brazzaville/assets/job14-e06-brazzaville-l4-v01/image.png",
-            "nativeSHA256": "e5bb8bf69adb053b50d698c4575e2a4b753e1bf914eceb03d0575439bd65a605",
-            "nativeDimensions": [
-              1536,
-              1024
-            ],
-            "manifestHashMatches": true,
-            "personallyViewed": true,
-            "viewTool": "view_image",
-            "visualFindingsFi": "Keskeneräinen kuusikielisen soittimen kaula, työpöytä, taltta ja lastuja. Kaulassa ei vielä kieliä/virityskoneistoa; puu/metalli ja työvaihe uskottavat. Ei logoa, tekstiä tai käsiä.",
-            "captionFi": "Havainnekuva puisen soitinosan valmistuksesta.",
-            "sourceAndTargetCheckFi": "L4 ja faktapohjan T4/R19 nimeävät soittimien valmistuksen. CaptionFi havainne, ei nimetty soitinmerkki, tekijän työpaja tai Brazzavillen todellinen valmistustilanne.",
-            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/brazzaville/sisalto.json",
-            "sourceEvidence": [
-              {
-                "type": "currentContent",
-                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/brazzaville/sisalto.json",
-                "sha256": "6718e06a2b7a4034c315617a6cbe6ab039dfd293ad6c138dfddf7e65302776ce",
-                "jsonPath": "$.kaupunkilehti[1].nostot[3]",
-                "text": "Rumbaperinnettä välitetään nuoremmille sukupolville naapuruston musiikkiklubeissa, koulutuslaitoksissa ja yhteisöjärjestöissä. Muusikoiden oppilassuhteet ovat yksi oppimisen tapa, ja myös soittimien valmistus kuuluu käytäntöön. Perinne on tärkeä diasporassa, joten sen yhteydet jatkuvat kahden Kongon ulkopuolelle. Musiikin säilyminen ei tarkoita vain vanhan tallenteen kuuntelemista. Se tarvitsee ihmisiä, jotka oppivat taitoja toisiltaan ja tekevät niitä uudelleen omassa ympäristössään."
-              },
-              {
-                "type": "factSheet",
-                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/brazzaville/faktapohja.md",
-                "sha256": "bc85d0ce8955dcfc5aab6b224055b8aa471c0ffe5e51ef3d03a83c7459ce79b8",
-                "sourceUrl": "https://ich.unesco.org/en/RL/congolese-rumba-01711"
-              }
-            ]
-          },
-          "qaReason": "Soittimen puuosan valmistushavainne vastaa L4:n käsityöaihetta."
-        }
-      },
-      "luentaMetadata": {
-        "existingImageLuenta": null,
-        "captionReadingText": "Havainnekuva puisen soitinosan valmistuksesta.",
-        "existingArticleAndSectionLuentaPreserved": true,
-        "audioGenerated": false,
-        "audioURL": null,
-        "imageSpecificAudioProvided": false,
-        "reuseAudioAllowedByThisPacket": false
-      },
-      "qaEvidence": {
-        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/brazzaville/illustration-qa-extra.json",
-        "fileSHA256": "dabbab27fcd56f6fde46607d95cbe14b392225e7ca1fd87f762f1e44f7dd5909",
-        "item": {
-          "slot": "L4",
-          "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
-          "assetID": "job14-e06-brazzaville-l4-v01",
-          "sha256": "e5bb8bf69adb053b50d698c4575e2a4b753e1bf914eceb03d0575439bd65a605",
-          "verdict": "accepted",
-          "reason": "Soittimen puuosan valmistushavainne vastaa L4:n käsityöaihetta.",
-          "evidence": {
-            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/brazzaville/assets/job14-e06-brazzaville-l4-v01/image.png",
-            "nativeSHA256": "e5bb8bf69adb053b50d698c4575e2a4b753e1bf914eceb03d0575439bd65a605",
-            "nativeDimensions": [
-              1536,
-              1024
-            ],
-            "manifestHashMatches": true,
-            "personallyViewed": true,
-            "viewTool": "view_image",
-            "visualFindingsFi": "Keskeneräinen kuusikielisen soittimen kaula, työpöytä, taltta ja lastuja. Kaulassa ei vielä kieliä/virityskoneistoa; puu/metalli ja työvaihe uskottavat. Ei logoa, tekstiä tai käsiä.",
-            "captionFi": "Havainnekuva puisen soitinosan valmistuksesta.",
-            "sourceAndTargetCheckFi": "L4 ja faktapohjan T4/R19 nimeävät soittimien valmistuksen. CaptionFi havainne, ei nimetty soitinmerkki, tekijän työpaja tai Brazzavillen todellinen valmistustilanne.",
-            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/brazzaville/sisalto.json",
-            "sourceEvidence": [
-              {
-                "type": "currentContent",
-                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/brazzaville/sisalto.json",
-                "sha256": "6718e06a2b7a4034c315617a6cbe6ab039dfd293ad6c138dfddf7e65302776ce",
-                "jsonPath": "$.kaupunkilehti[1].nostot[3]",
-                "text": "Rumbaperinnettä välitetään nuoremmille sukupolville naapuruston musiikkiklubeissa, koulutuslaitoksissa ja yhteisöjärjestöissä. Muusikoiden oppilassuhteet ovat yksi oppimisen tapa, ja myös soittimien valmistus kuuluu käytäntöön. Perinne on tärkeä diasporassa, joten sen yhteydet jatkuvat kahden Kongon ulkopuolelle. Musiikin säilyminen ei tarkoita vain vanhan tallenteen kuuntelemista. Se tarvitsee ihmisiä, jotka oppivat taitoja toisiltaan ja tekevät niitä uudelleen omassa ympäristössään."
-              },
-              {
-                "type": "factSheet",
-                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/brazzaville/faktapohja.md",
-                "sha256": "bc85d0ce8955dcfc5aab6b224055b8aa471c0ffe5e51ef3d03a83c7459ce79b8",
-                "sourceUrl": "https://ich.unesco.org/en/RL/congolese-rumba-01711"
-              }
-            ]
-          },
-          "reviewedAt": "2026-10-12T19:11:53.785701+00:00"
-        },
-        "allSources": [
-          {
-            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/brazzaville/qa.json",
-            "sha256": "08aec39a64a0fa5cf90920feda46bc5c7c7b684d29ae1838a71f9b3a05869f9a"
-          },
-          {
-            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/brazzaville/illustration-qa-extra.json",
-            "sha256": "dabbab27fcd56f6fde46607d95cbe14b392225e7ca1fd87f762f1e44f7dd5909"
-          }
-        ]
-      },
-      "R2ByteVerification": {
-        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/brazzaville/job14-e06-brazzaville-l4-v01-e5bb8bf69adb.png",
-        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/brazzaville/job14-e06-brazzaville-l4-v01-e5bb8bf69adb.png?t=ce99d1aa7f26b5c4",
-        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/brazzaville/job14-e06-brazzaville-l4-v01-e5bb8bf69adb.png",
-        "sha256": "ce99d1aa7f26b5c41c58c0d8232fea25af37852e1d328d11d4ecfb71f67f0ef6",
-        "bytes": 2492663,
-        "http": 200,
-        "mime": "image/png",
-        "cors": "https://matkakirja.app",
-        "cacheBustedPreflightHttp": 404,
-        "cacheBustedReadback": true,
-        "byteExactReadback": true,
-        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
-        "conditionalIfNoneMatch": "*",
-        "s3PutHttp": 200,
-        "assetID": "job14-e06-brazzaville-l4-v01",
-        "nativeSHA256": "e5bb8bf69adb053b50d698c4575e2a4b753e1bf914eceb03d0575439bd65a605",
-        "canonicalReadbackByteExact": true,
-        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e06/brazzaville/job14-e06-brazzaville-l4-v01-e5bb8bf69adb.png",
-        "pixelIdenticalToQAAcceptedNative": true,
-        "era": "e06",
-        "city": "brazzaville",
-        "slot": "L4",
-        "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
-        "verifiedAt": "2026-10-12T19:12:03.884248+00:00",
-        "ownerAcceptanceVerified": false,
-        "gameIntegrated": false,
-        "galleryVisibleVerified": false
-      },
-      "producerExportProof": null,
-      "technicalExportProof": {
-        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e06/brazzaville/job14-e06-brazzaville-l4-v01-e5bb8bf69adb.png",
-        "sha256": "ce99d1aa7f26b5c41c58c0d8232fea25af37852e1d328d11d4ecfb71f67f0ef6",
-        "bytes": 2492663,
-        "SHAReadAt": "2026-10-12T19:32:03.274312+00:00",
-        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
-        "width": 1536,
-        "height": 1024,
-        "pixelWidth": 1536,
-        "pixelHeight": 1024,
-        "exifOrientation": 1,
-        "dimensionsBasis": "EXIF-oriented-display",
-        "format": "PNG",
-        "largeOriginalHeaderOnlyRead": false,
-        "nativeSHA256": "e5bb8bf69adb053b50d698c4575e2a4b753e1bf914eceb03d0575439bd65a605",
-        "rgbPixelSHA256": "e3f3989908194e86f88b823dc214d6bfd8af189cc0de77ff14ebed4dbbbb6fef",
-        "pixelIdenticalToQAAcceptedNative": true,
-        "sRGBProfileEmbedded": true,
-        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
-      },
-      "priorMediaFields": {
-        "tiedosto": "",
-        "lahde": "",
-        "selite": "",
-        "lyhyt": ""
-      },
-      "preservePreviousMediaObjects": true,
-      "authorization": {
-        "status": "waived-owner-review",
-        "authorizedByOwner": true,
-        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
-        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
-        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
-        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
-        "ownerAcceptanceImplied": false,
-        "QARequired": true,
-        "R2ByteVerificationRequired": true,
-        "galleryBeforeGameRequired": false,
-        "verifiedHumanMessageSource": {
-          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
-          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
-        }
-      },
-      "ownerAcceptanceVerified": false,
-      "gameIntegrated": false,
-      "gamePublicationVerified": false,
-      "inMemoryMergeVerified": true,
-      "CcommonsMetadataBound": false,
-      "roleManifestBound": true,
-      "sourceContentAfterSHA256": "bd0245ae8a12a16830a6990d0535aec731f9675a71bbb96c65c1434b471f2e4f",
-      "targetAfterSHA256": "0e67250c53f386587f4fe1feb33f6e0c01c64abaae9330e6455c7e1634a67816",
-      "contextAfterSHA256": "0e67250c53f386587f4fe1feb33f6e0c01c64abaae9330e6455c7e1634a67816"
-    },
-    {
-      "era": "e06",
-      "city": "brazzaville",
-      "slot": "K3",
-      "type": "illustration",
-      "assetID": "job14-e06-brazzaville-k3-v01",
-      "galleryImageID": "job14-e06-brazzaville-k3-v01",
-      "commonsFile": null,
-      "targetJsonPath": "$.kaupunkilehti[0].nostot[2]",
-      "targetTokens": [
-        "kaupunkilehti",
-        0,
-        "nostot",
-        2
-      ],
-      "operation": "merge-media-fields-preserve-other-content",
-      "CmediaFieldPayload": {
-        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/brazzaville/job14-e06-brazzaville-k3-v01-17a480f5d60c.png",
-        "suora": true,
-        "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva rautatiekiskon materiaalista.",
-        "lyhyt": "Havainnekuva rautatiekiskon materiaalista."
-      },
-      "removeMediaKeys": [
-        "tiedosto"
-      ],
-      "CvalidatorCompatiblePayload": {},
-      "runtimeMediaFieldPayload": {
-        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/brazzaville/job14-e06-brazzaville-k3-v01-17a480f5d60c.png",
-        "suora": true,
-        "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva rautatiekiskon materiaalista.",
-        "lyhyt": "Havainnekuva rautatiekiskon materiaalista."
-      },
-      "runtimeRemoveMediaKeys": [
-        "tiedosto"
-      ],
-      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
-      "nativeSHA256": "17a480f5d60c03dd8abb89bd51a59aec1c6cac0e974fccd68a5cf87a04e994a2",
-      "exportSHA256": "666a48fcd21baaf424e847a08384761947083930b0fac51d32742e49de113bb9",
-      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/brazzaville/job14-e06-brazzaville-k3-v01-17a480f5d60c.png",
-      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/brazzaville/job14-e06-brazzaville-k3-v01-17a480f5d60c.png",
-      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e06/brazzaville/job14-e06-brazzaville-k3-v01-17a480f5d60c.png",
-      "dimensions": [
-        1536,
-        1024
-      ],
-      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/brazzaville/sisalto.json",
-      "sourceContentSHA256": "bd0245ae8a12a16830a6990d0535aec731f9675a71bbb96c65c1434b471f2e4f",
-      "semanticSourceBind": {
-        "targetBeforeSHA256": "6e31f6d43c24b7ce4d74fcaa1882ede9e22f6ebd646e70a5b3822087446e8aa7",
-        "semanticContextSHA256": "6e31f6d43c24b7ce4d74fcaa1882ede9e22f6ebd646e70a5b3822087446e8aa7",
-        "subjectTitle": "Kosket kierretään rautatiellä",
-        "targetState": "existing-target"
-      },
-      "attribution": {
-        "author": null,
-        "license": null,
-        "licenseUrl": null,
-        "sourcePage": null,
-        "originalUrl": null,
-        "rightsEvidence": {
-          "production": "Yleistetty kasvi-, ruoka-, luonnonmateriaali- tai tavallisen funktionaalisen esineen havainnollistus. Ei kuva-inputtia, nimettyä kaupunkiasettelua, arkeologista esinerekonstruktiota tai suojattua teosta. Ei todellinen paikkavalokuva.",
-          "QA": {
-            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/brazzaville/assets/job14-e06-brazzaville-k3-v01/image.png",
-            "nativeSHA256": "17a480f5d60c03dd8abb89bd51a59aec1c6cac0e974fccd68a5cf87a04e994a2",
-            "nativeDimensions": [
-              1536,
-              1024
-            ],
-            "manifestHashMatches": true,
-            "personallyViewed": true,
-            "viewTool": "view_image",
-            "visualFindingsFi": "Lyhyt kiskonpala puulla; poikkileikkaus, kulunut metalli ja puunsyyt luontevat. Ei logoa, tekstiä tai ihmisiä.",
-            "captionFi": "Havainnekuva rautatiekiskon materiaalista.",
-            "sourceAndTargetCheckFi": "K3/faktapohjan Congo–Ocean-radan aihe luettu. CaptionFi havainne, ei tämän radan todellinen kisko, rakennustapahtuma tai 1873-kuva.",
-            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/brazzaville/sisalto.json",
-            "sourceEvidence": [
-              {
-                "type": "currentContent",
-                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/brazzaville/sisalto.json",
-                "sha256": "6718e06a2b7a4034c315617a6cbe6ab039dfd293ad6c138dfddf7e65302776ce",
-                "jsonPath": "$.kaupunkilehti[0].nostot[2]",
-                "text": "Congo–Ocean-rautatie yhdistää Brazzavillen Atlantin rannikon Pointe-Noiren satamaan. Se toimii alajuoksun koskijakson kiertoyhteytenä, kun Brazzavillestä jokireitit jatkuvat ylävirtaan. Rata rakennettiin 1900-luvun alkupuolella, joten sitä ei ollut isoisän matkavuonna 1873. Rakentamisessa käytettiin pakkotyötä, ja siihen liittyi vakavaa inhimillistä kärsimystä. Kuljetusyhteyden historia sisältää siksi sekä joen maantieteen ratkaisemisen että niiden ihmisten työn, joiden varaan rata syntyi."
-              },
-              {
-                "type": "factSheet",
-                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/brazzaville/faktapohja.md",
-                "sha256": "bc85d0ce8955dcfc5aab6b224055b8aa471c0ffe5e51ef3d03a83c7459ce79b8",
-                "sourceUrl": "https://en.wikipedia.org/wiki/Congo%E2%80%93Ocean_Railway"
-              }
-            ]
-          },
-          "qaReason": "Kiskomateriaalin havainne vastaa K3:n rautatieaihetta."
-        }
-      },
-      "luentaMetadata": {
-        "existingImageLuenta": null,
-        "captionReadingText": "Havainnekuva rautatiekiskon materiaalista.",
-        "existingArticleAndSectionLuentaPreserved": true,
-        "audioGenerated": false,
-        "audioURL": null,
-        "imageSpecificAudioProvided": false,
-        "reuseAudioAllowedByThisPacket": false
-      },
-      "qaEvidence": {
-        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/brazzaville/illustration-qa-extra.json",
-        "fileSHA256": "dabbab27fcd56f6fde46607d95cbe14b392225e7ca1fd87f762f1e44f7dd5909",
-        "item": {
-          "slot": "K3",
-          "targetJsonPath": "$.kaupunkilehti[0].nostot[2]",
-          "assetID": "job14-e06-brazzaville-k3-v01",
-          "sha256": "17a480f5d60c03dd8abb89bd51a59aec1c6cac0e974fccd68a5cf87a04e994a2",
-          "verdict": "accepted",
-          "reason": "Kiskomateriaalin havainne vastaa K3:n rautatieaihetta.",
-          "evidence": {
-            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/brazzaville/assets/job14-e06-brazzaville-k3-v01/image.png",
-            "nativeSHA256": "17a480f5d60c03dd8abb89bd51a59aec1c6cac0e974fccd68a5cf87a04e994a2",
-            "nativeDimensions": [
-              1536,
-              1024
-            ],
-            "manifestHashMatches": true,
-            "personallyViewed": true,
-            "viewTool": "view_image",
-            "visualFindingsFi": "Lyhyt kiskonpala puulla; poikkileikkaus, kulunut metalli ja puunsyyt luontevat. Ei logoa, tekstiä tai ihmisiä.",
-            "captionFi": "Havainnekuva rautatiekiskon materiaalista.",
-            "sourceAndTargetCheckFi": "K3/faktapohjan Congo–Ocean-radan aihe luettu. CaptionFi havainne, ei tämän radan todellinen kisko, rakennustapahtuma tai 1873-kuva.",
-            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/brazzaville/sisalto.json",
-            "sourceEvidence": [
-              {
-                "type": "currentContent",
-                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/brazzaville/sisalto.json",
-                "sha256": "6718e06a2b7a4034c315617a6cbe6ab039dfd293ad6c138dfddf7e65302776ce",
-                "jsonPath": "$.kaupunkilehti[0].nostot[2]",
-                "text": "Congo–Ocean-rautatie yhdistää Brazzavillen Atlantin rannikon Pointe-Noiren satamaan. Se toimii alajuoksun koskijakson kiertoyhteytenä, kun Brazzavillestä jokireitit jatkuvat ylävirtaan. Rata rakennettiin 1900-luvun alkupuolella, joten sitä ei ollut isoisän matkavuonna 1873. Rakentamisessa käytettiin pakkotyötä, ja siihen liittyi vakavaa inhimillistä kärsimystä. Kuljetusyhteyden historia sisältää siksi sekä joen maantieteen ratkaisemisen että niiden ihmisten työn, joiden varaan rata syntyi."
-              },
-              {
-                "type": "factSheet",
-                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/brazzaville/faktapohja.md",
-                "sha256": "bc85d0ce8955dcfc5aab6b224055b8aa471c0ffe5e51ef3d03a83c7459ce79b8",
-                "sourceUrl": "https://en.wikipedia.org/wiki/Congo%E2%80%93Ocean_Railway"
-              }
-            ]
-          },
-          "reviewedAt": "2026-10-12T20:00:56.566650+00:00"
-        },
-        "allSources": [
-          {
-            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/brazzaville/qa.json",
-            "sha256": "08aec39a64a0fa5cf90920feda46bc5c7c7b684d29ae1838a71f9b3a05869f9a"
-          },
-          {
-            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/brazzaville/illustration-qa-extra.json",
-            "sha256": "dabbab27fcd56f6fde46607d95cbe14b392225e7ca1fd87f762f1e44f7dd5909"
-          }
-        ]
-      },
-      "R2ByteVerification": {
-        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/brazzaville/job14-e06-brazzaville-k3-v01-17a480f5d60c.png",
-        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/brazzaville/job14-e06-brazzaville-k3-v01-17a480f5d60c.png?t=666a48fcd21baaf4",
-        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/brazzaville/job14-e06-brazzaville-k3-v01-17a480f5d60c.png",
-        "sha256": "666a48fcd21baaf424e847a08384761947083930b0fac51d32742e49de113bb9",
-        "bytes": 2432270,
-        "http": 200,
-        "mime": "image/png",
-        "cors": "https://matkakirja.app",
-        "cacheBustedPreflightHttp": 404,
-        "cacheBustedReadback": true,
-        "byteExactReadback": true,
-        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
-        "conditionalIfNoneMatch": "*",
-        "s3PutHttp": 200,
-        "assetID": "job14-e06-brazzaville-k3-v01",
-        "nativeSHA256": "17a480f5d60c03dd8abb89bd51a59aec1c6cac0e974fccd68a5cf87a04e994a2",
-        "canonicalReadbackByteExact": true,
-        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e06/brazzaville/job14-e06-brazzaville-k3-v01-17a480f5d60c.png",
-        "pixelIdenticalToQAAcceptedNative": true,
-        "era": "e06",
-        "city": "brazzaville",
-        "slot": "K3",
-        "targetJsonPath": "$.kaupunkilehti[0].nostot[2]",
-        "verifiedAt": "2026-10-12T20:01:52.502719+00:00",
-        "ownerAcceptanceVerified": false,
-        "gameIntegrated": false,
-        "galleryVisibleVerified": false
-      },
-      "producerExportProof": null,
-      "technicalExportProof": {
-        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e06/brazzaville/job14-e06-brazzaville-k3-v01-17a480f5d60c.png",
-        "sha256": "666a48fcd21baaf424e847a08384761947083930b0fac51d32742e49de113bb9",
-        "bytes": 2432270,
-        "SHAReadAt": "2026-10-12T20:00:59.289296+00:00",
-        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
-        "width": 1536,
-        "height": 1024,
-        "pixelWidth": 1536,
-        "pixelHeight": 1024,
-        "exifOrientation": 1,
-        "dimensionsBasis": "EXIF-oriented-display",
-        "format": "PNG",
-        "largeOriginalHeaderOnlyRead": false,
-        "nativeSHA256": "17a480f5d60c03dd8abb89bd51a59aec1c6cac0e974fccd68a5cf87a04e994a2",
-        "rgbPixelSHA256": "dcf9e700cbe29111ff63652615e63069677bed1b61e68abb3d62e2cb09601f2d",
-        "pixelIdenticalToQAAcceptedNative": true,
-        "sRGBProfileEmbedded": true,
-        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
-      },
-      "priorMediaFields": {
-        "tiedosto": "",
-        "lahde": "",
-        "selite": "",
-        "lyhyt": ""
-      },
-      "preservePreviousMediaObjects": true,
-      "authorization": {
-        "status": "waived-owner-review",
-        "authorizedByOwner": true,
-        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
-        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
-        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
-        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
-        "ownerAcceptanceImplied": false,
-        "QARequired": true,
-        "R2ByteVerificationRequired": true,
-        "galleryBeforeGameRequired": false,
-        "verifiedHumanMessageSource": {
-          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
-          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
-        }
-      },
-      "ownerAcceptanceVerified": false,
-      "gameIntegrated": false,
-      "gamePublicationVerified": false,
-      "inMemoryMergeVerified": true,
-      "CcommonsMetadataBound": false,
-      "roleManifestBound": true,
-      "sourceContentAfterSHA256": "bd0245ae8a12a16830a6990d0535aec731f9675a71bbb96c65c1434b471f2e4f",
-      "targetAfterSHA256": "6e31f6d43c24b7ce4d74fcaa1882ede9e22f6ebd646e70a5b3822087446e8aa7",
-      "contextAfterSHA256": "6e31f6d43c24b7ce4d74fcaa1882ede9e22f6ebd646e70a5b3822087446e8aa7"
     },
     {
       "era": "e06",
@@ -1561,7 +1592,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/brazzaville/illustration-qa-extra.json",
-        "fileSHA256": "dabbab27fcd56f6fde46607d95cbe14b392225e7ca1fd87f762f1e44f7dd5909",
+        "fileSHA256": "6e1863b3367e0025534f0c5cee8a36f4c83f3ccc2a1c3c2b1668a20b44be021c",
         "item": {
           "slot": "L3",
           "targetJsonPath": "$.kaupunkilehti[1].nostot[2]",
@@ -1604,11 +1635,11 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/brazzaville/qa.json",
-            "sha256": "08aec39a64a0fa5cf90920feda46bc5c7c7b684d29ae1838a71f9b3a05869f9a"
+            "sha256": "7d739da61c29dca32a98085b6a453e06f67dc2a4c5c9c23b72e6e255eedd301b"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/brazzaville/illustration-qa-extra.json",
-            "sha256": "dabbab27fcd56f6fde46607d95cbe14b392225e7ca1fd87f762f1e44f7dd5909"
+            "sha256": "6e1863b3367e0025534f0c5cee8a36f4c83f3ccc2a1c3c2b1668a20b44be021c"
           }
         ]
       },
@@ -1691,9 +1722,250 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "bd0245ae8a12a16830a6990d0535aec731f9675a71bbb96c65c1434b471f2e4f",
+      "sourceContentAfterSHA256": "4e7ad548d0ca7db52da4421613300af076e2e595f54395a937f4faf1246cf358",
       "targetAfterSHA256": "12218460488c8280e6a899d876cac298dc5feeba335dd93aeb54d8756a196531",
       "contextAfterSHA256": "12218460488c8280e6a899d876cac298dc5feeba335dd93aeb54d8756a196531"
+    },
+    {
+      "era": "e06",
+      "city": "brazzaville",
+      "slot": "L4",
+      "type": "illustration",
+      "assetID": "job14-e06-brazzaville-l4-v01",
+      "galleryImageID": "job14-e06-brazzaville-l4-v01",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
+      "targetTokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        3
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/brazzaville/job14-e06-brazzaville-l4-v01-e5bb8bf69adb.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva puisen soitinosan valmistuksesta.",
+        "lyhyt": "Havainnekuva puisen soitinosan valmistuksesta."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/brazzaville/job14-e06-brazzaville-l4-v01-e5bb8bf69adb.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva puisen soitinosan valmistuksesta.",
+        "lyhyt": "Havainnekuva puisen soitinosan valmistuksesta."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "e5bb8bf69adb053b50d698c4575e2a4b753e1bf914eceb03d0575439bd65a605",
+      "exportSHA256": "ce99d1aa7f26b5c41c58c0d8232fea25af37852e1d328d11d4ecfb71f67f0ef6",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/brazzaville/job14-e06-brazzaville-l4-v01-e5bb8bf69adb.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/brazzaville/job14-e06-brazzaville-l4-v01-e5bb8bf69adb.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e06/brazzaville/job14-e06-brazzaville-l4-v01-e5bb8bf69adb.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/brazzaville/sisalto.json",
+      "sourceContentSHA256": "bd0245ae8a12a16830a6990d0535aec731f9675a71bbb96c65c1434b471f2e4f",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "0e67250c53f386587f4fe1feb33f6e0c01c64abaae9330e6455c7e1634a67816",
+        "semanticContextSHA256": "0e67250c53f386587f4fe1feb33f6e0c01c64abaae9330e6455c7e1634a67816",
+        "subjectTitle": "Perinne kulkee naapurustossa",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Yleistetty ruoka-, kasvi-, materiaali- tai tavallisen käyttöesineen havainnollistus. Ei visuaalista kuva-inputtia, tunnistettavaa nykyteosta, koristetta, kasvoja tai nimettyä rakennusta/asettelua. Ei tietyn paikan autenttisen ulkonäön väitettä.",
+          "QA": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/brazzaville/assets/job14-e06-brazzaville-l4-v01/image.png",
+            "nativeSHA256": "e5bb8bf69adb053b50d698c4575e2a4b753e1bf914eceb03d0575439bd65a605",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "manifestHashMatches": true,
+            "personallyViewed": true,
+            "viewTool": "view_image",
+            "visualFindingsFi": "Keskeneräinen kuusikielisen soittimen kaula, työpöytä, taltta ja lastuja. Kaulassa ei vielä kieliä/virityskoneistoa; puu/metalli ja työvaihe uskottavat. Ei logoa, tekstiä tai käsiä.",
+            "captionFi": "Havainnekuva puisen soitinosan valmistuksesta.",
+            "sourceAndTargetCheckFi": "L4 ja faktapohjan T4/R19 nimeävät soittimien valmistuksen. CaptionFi havainne, ei nimetty soitinmerkki, tekijän työpaja tai Brazzavillen todellinen valmistustilanne.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/brazzaville/sisalto.json",
+            "sourceEvidence": [
+              {
+                "type": "currentContent",
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/brazzaville/sisalto.json",
+                "sha256": "6718e06a2b7a4034c315617a6cbe6ab039dfd293ad6c138dfddf7e65302776ce",
+                "jsonPath": "$.kaupunkilehti[1].nostot[3]",
+                "text": "Rumbaperinnettä välitetään nuoremmille sukupolville naapuruston musiikkiklubeissa, koulutuslaitoksissa ja yhteisöjärjestöissä. Muusikoiden oppilassuhteet ovat yksi oppimisen tapa, ja myös soittimien valmistus kuuluu käytäntöön. Perinne on tärkeä diasporassa, joten sen yhteydet jatkuvat kahden Kongon ulkopuolelle. Musiikin säilyminen ei tarkoita vain vanhan tallenteen kuuntelemista. Se tarvitsee ihmisiä, jotka oppivat taitoja toisiltaan ja tekevät niitä uudelleen omassa ympäristössään."
+              },
+              {
+                "type": "factSheet",
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/brazzaville/faktapohja.md",
+                "sha256": "bc85d0ce8955dcfc5aab6b224055b8aa471c0ffe5e51ef3d03a83c7459ce79b8",
+                "sourceUrl": "https://ich.unesco.org/en/RL/congolese-rumba-01711"
+              }
+            ]
+          },
+          "qaReason": "Soittimen puuosan valmistushavainne vastaa L4:n käsityöaihetta."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva puisen soitinosan valmistuksesta.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/brazzaville/illustration-qa-extra.json",
+        "fileSHA256": "6e1863b3367e0025534f0c5cee8a36f4c83f3ccc2a1c3c2b1668a20b44be021c",
+        "item": {
+          "slot": "L4",
+          "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
+          "assetID": "job14-e06-brazzaville-l4-v01",
+          "sha256": "e5bb8bf69adb053b50d698c4575e2a4b753e1bf914eceb03d0575439bd65a605",
+          "verdict": "accepted",
+          "reason": "Soittimen puuosan valmistushavainne vastaa L4:n käsityöaihetta.",
+          "evidence": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/brazzaville/assets/job14-e06-brazzaville-l4-v01/image.png",
+            "nativeSHA256": "e5bb8bf69adb053b50d698c4575e2a4b753e1bf914eceb03d0575439bd65a605",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "manifestHashMatches": true,
+            "personallyViewed": true,
+            "viewTool": "view_image",
+            "visualFindingsFi": "Keskeneräinen kuusikielisen soittimen kaula, työpöytä, taltta ja lastuja. Kaulassa ei vielä kieliä/virityskoneistoa; puu/metalli ja työvaihe uskottavat. Ei logoa, tekstiä tai käsiä.",
+            "captionFi": "Havainnekuva puisen soitinosan valmistuksesta.",
+            "sourceAndTargetCheckFi": "L4 ja faktapohjan T4/R19 nimeävät soittimien valmistuksen. CaptionFi havainne, ei nimetty soitinmerkki, tekijän työpaja tai Brazzavillen todellinen valmistustilanne.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/brazzaville/sisalto.json",
+            "sourceEvidence": [
+              {
+                "type": "currentContent",
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/brazzaville/sisalto.json",
+                "sha256": "6718e06a2b7a4034c315617a6cbe6ab039dfd293ad6c138dfddf7e65302776ce",
+                "jsonPath": "$.kaupunkilehti[1].nostot[3]",
+                "text": "Rumbaperinnettä välitetään nuoremmille sukupolville naapuruston musiikkiklubeissa, koulutuslaitoksissa ja yhteisöjärjestöissä. Muusikoiden oppilassuhteet ovat yksi oppimisen tapa, ja myös soittimien valmistus kuuluu käytäntöön. Perinne on tärkeä diasporassa, joten sen yhteydet jatkuvat kahden Kongon ulkopuolelle. Musiikin säilyminen ei tarkoita vain vanhan tallenteen kuuntelemista. Se tarvitsee ihmisiä, jotka oppivat taitoja toisiltaan ja tekevät niitä uudelleen omassa ympäristössään."
+              },
+              {
+                "type": "factSheet",
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/brazzaville/faktapohja.md",
+                "sha256": "bc85d0ce8955dcfc5aab6b224055b8aa471c0ffe5e51ef3d03a83c7459ce79b8",
+                "sourceUrl": "https://ich.unesco.org/en/RL/congolese-rumba-01711"
+              }
+            ]
+          },
+          "reviewedAt": "2026-10-12T19:11:53.785701+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/brazzaville/qa.json",
+            "sha256": "7d739da61c29dca32a98085b6a453e06f67dc2a4c5c9c23b72e6e255eedd301b"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/brazzaville/illustration-qa-extra.json",
+            "sha256": "6e1863b3367e0025534f0c5cee8a36f4c83f3ccc2a1c3c2b1668a20b44be021c"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/brazzaville/job14-e06-brazzaville-l4-v01-e5bb8bf69adb.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/brazzaville/job14-e06-brazzaville-l4-v01-e5bb8bf69adb.png?t=ce99d1aa7f26b5c4",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/brazzaville/job14-e06-brazzaville-l4-v01-e5bb8bf69adb.png",
+        "sha256": "ce99d1aa7f26b5c41c58c0d8232fea25af37852e1d328d11d4ecfb71f67f0ef6",
+        "bytes": 2492663,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "job14-e06-brazzaville-l4-v01",
+        "nativeSHA256": "e5bb8bf69adb053b50d698c4575e2a4b753e1bf914eceb03d0575439bd65a605",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e06/brazzaville/job14-e06-brazzaville-l4-v01-e5bb8bf69adb.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e06",
+        "city": "brazzaville",
+        "slot": "L4",
+        "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
+        "verifiedAt": "2026-10-12T19:12:03.884248+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e06/brazzaville/job14-e06-brazzaville-l4-v01-e5bb8bf69adb.png",
+        "sha256": "ce99d1aa7f26b5c41c58c0d8232fea25af37852e1d328d11d4ecfb71f67f0ef6",
+        "bytes": 2492663,
+        "SHAReadAt": "2026-10-12T19:32:03.274312+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "e5bb8bf69adb053b50d698c4575e2a4b753e1bf914eceb03d0575439bd65a605",
+        "rgbPixelSHA256": "e3f3989908194e86f88b823dc214d6bfd8af189cc0de77ff14ebed4dbbbb6fef",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "4e7ad548d0ca7db52da4421613300af076e2e595f54395a937f4faf1246cf358",
+      "targetAfterSHA256": "0e67250c53f386587f4fe1feb33f6e0c01c64abaae9330e6455c7e1634a67816",
+      "contextAfterSHA256": "0e67250c53f386587f4fe1feb33f6e0c01c64abaae9330e6455c7e1634a67816"
     },
     {
       "era": "e06",
@@ -1802,7 +2074,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/brazzaville/illustration-qa-extra.json",
-        "fileSHA256": "dabbab27fcd56f6fde46607d95cbe14b392225e7ca1fd87f762f1e44f7dd5909",
+        "fileSHA256": "6e1863b3367e0025534f0c5cee8a36f4c83f3ccc2a1c3c2b1668a20b44be021c",
         "item": {
           "slot": "N1",
           "targetJsonPath": "$.nahtavyydet[\"Djoué-joen suu\"].kuvat[0]",
@@ -1845,11 +2117,11 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/brazzaville/qa.json",
-            "sha256": "08aec39a64a0fa5cf90920feda46bc5c7c7b684d29ae1838a71f9b3a05869f9a"
+            "sha256": "7d739da61c29dca32a98085b6a453e06f67dc2a4c5c9c23b72e6e255eedd301b"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/brazzaville/illustration-qa-extra.json",
-            "sha256": "dabbab27fcd56f6fde46607d95cbe14b392225e7ca1fd87f762f1e44f7dd5909"
+            "sha256": "6e1863b3367e0025534f0c5cee8a36f4c83f3ccc2a1c3c2b1668a20b44be021c"
           }
         ]
       },
@@ -1932,7 +2204,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "bd0245ae8a12a16830a6990d0535aec731f9675a71bbb96c65c1434b471f2e4f",
+      "sourceContentAfterSHA256": "4e7ad548d0ca7db52da4421613300af076e2e595f54395a937f4faf1246cf358",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
       "contextAfterSHA256": "38df6ff0379940b9b0e8db7b3834ed3392f85b2d54e885ad2d938e117898f864"
     },
@@ -2030,7 +2302,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/brazzaville/qa.json",
-        "fileSHA256": "08aec39a64a0fa5cf90920feda46bc5c7c7b684d29ae1838a71f9b3a05869f9a",
+        "fileSHA256": "7d739da61c29dca32a98085b6a453e06f67dc2a4c5c9c23b72e6e255eedd301b",
         "item": {
           "slot": "PHOTO",
           "targetJsonPath": "$.valokuva",
@@ -2059,11 +2331,11 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/brazzaville/qa.json",
-            "sha256": "08aec39a64a0fa5cf90920feda46bc5c7c7b684d29ae1838a71f9b3a05869f9a"
+            "sha256": "7d739da61c29dca32a98085b6a453e06f67dc2a4c5c9c23b72e6e255eedd301b"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/brazzaville/illustration-qa-extra.json",
-            "sha256": "dabbab27fcd56f6fde46607d95cbe14b392225e7ca1fd87f762f1e44f7dd5909"
+            "sha256": "6e1863b3367e0025534f0c5cee8a36f4c83f3ccc2a1c3c2b1668a20b44be021c"
           }
         ]
       },
@@ -2134,7 +2406,7 @@
         "tiedosto": "Chutes de Djoué.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "bd0245ae8a12a16830a6990d0535aec731f9675a71bbb96c65c1434b471f2e4f",
+      "sourceContentAfterSHA256": "4e7ad548d0ca7db52da4421613300af076e2e595f54395a937f4faf1246cf358",
       "targetAfterSHA256": "49dc12be82f25f592ff3ab53c2cefcd958c968af6df79af551636a2839e4542d",
       "contextAfterSHA256": "49dc12be82f25f592ff3ab53c2cefcd958c968af6df79af551636a2839e4542d"
     },
@@ -2242,7 +2514,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/brazzaville/qa.json",
-        "fileSHA256": "08aec39a64a0fa5cf90920feda46bc5c7c7b684d29ae1838a71f9b3a05869f9a",
+        "fileSHA256": "7d739da61c29dca32a98085b6a453e06f67dc2a4c5c9c23b72e6e255eedd301b",
         "item": {
           "slot": "C1",
           "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
@@ -2278,11 +2550,11 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/brazzaville/qa.json",
-            "sha256": "08aec39a64a0fa5cf90920feda46bc5c7c7b684d29ae1838a71f9b3a05869f9a"
+            "sha256": "7d739da61c29dca32a98085b6a453e06f67dc2a4c5c9c23b72e6e255eedd301b"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/brazzaville/illustration-qa-extra.json",
-            "sha256": "dabbab27fcd56f6fde46607d95cbe14b392225e7ca1fd87f762f1e44f7dd5909"
+            "sha256": "6e1863b3367e0025534f0c5cee8a36f4c83f3ccc2a1c3c2b1668a20b44be021c"
           }
         ]
       },
@@ -2353,9 +2625,238 @@
         "tiedosto": "Brazzaville, Republic of the Congo.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "bd0245ae8a12a16830a6990d0535aec731f9675a71bbb96c65c1434b471f2e4f",
+      "sourceContentAfterSHA256": "4e7ad548d0ca7db52da4421613300af076e2e595f54395a937f4faf1246cf358",
       "targetAfterSHA256": "8ba36dd79b003ababac3a19e63c78cf3ecd748471e763ba888a13db5cf93176d",
       "contextAfterSHA256": "8ba36dd79b003ababac3a19e63c78cf3ecd748471e763ba888a13db5cf93176d"
+    },
+    {
+      "era": "e06",
+      "city": "brazzaville",
+      "slot": "C2",
+      "type": "commons",
+      "assetID": "capital-cc-e06-brazzaville-c2-2290b92628b0f880",
+      "galleryImageID": "capital-cc-e06-brazzaville-c2-2290b92628b0f880",
+      "commonsFile": "Brazzaville vu par un drone 01.jpg",
+      "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[1]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "kansikuvat",
+        1
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e06/brazzaville/c2-2290b92628b0f88073c3.jpg",
+        "suora": true,
+        "lahde": "Nzinga11, Wikimedia Commons (CC0)",
+        "selite": "Brazzavillen asutusta ja vihannesviljelmiä ilmasta vuonna 2025.",
+        "lyhyt": "Brazzavillen asutusta ja vihannesviljelmiä ilmasta vuonna 2025.",
+        "tiedosto": "Brazzaville vu par un drone 01.jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Nzinga11, Wikimedia Commons (CC0)",
+        "selite": "Brazzavillen asutusta ja vihannesviljelmiä ilmasta vuonna 2025.",
+        "lyhyt": "Brazzavillen asutusta ja vihannesviljelmiä ilmasta vuonna 2025.",
+        "tiedosto": "Brazzaville vu par un drone 01.jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e06/brazzaville/c2-2290b92628b0f88073c3.jpg",
+        "suora": true,
+        "lahde": "Nzinga11, Wikimedia Commons (CC0)",
+        "selite": "Brazzavillen asutusta ja vihannesviljelmiä ilmasta vuonna 2025.",
+        "lyhyt": "Brazzavillen asutusta ja vihannesviljelmiä ilmasta vuonna 2025.",
+        "tiedosto": "Brazzaville vu par un drone 01.jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "2290b92628b0f88073c3c1dad6188b5dbf2d38b0419a35d6d6def3b7de89adfb",
+      "exportSHA256": "2290b92628b0f88073c3c1dad6188b5dbf2d38b0419a35d6d6def3b7de89adfb",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e06/brazzaville/c2-2290b92628b0f88073c3.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e06/brazzaville/c2-2290b92628b0f88073c3.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/brazzaville/cc-work/29c9f751c8e497e5-preview.jpg",
+      "dimensions": [
+        8064,
+        4536
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/brazzaville/sisalto.json",
+      "sourceContentSHA256": "bd0245ae8a12a16830a6990d0535aec731f9675a71bbb96c65c1434b471f2e4f",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "subjectTitle": "Brazzaville",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Nzinga11",
+        "license": "CC0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Brazzaville_vu_par_un_drone_01.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9d/Brazzaville_vu_par_un_drone_01.jpg",
+        "rightsEvidence": {
+          "selection": "Author Nzinga11, Own work ja CC0 -linkki luettu tiedostosivulta. Description Brazzaville vu par un drone, kuvaus22.8.2025. Laaja todellinen monen kadun, pihan, tavallisen peltikaton ja puuston asettelu. Ei nimettyä tai yksilöityä modernia arkkitehtuuriteosta/veistosta esittelynä; kuvan vakiomaiset talot ja toiminnalliset rakenteet osana koko näkymää, ei blanketFOP-oletusta.",
+          "QA": {
+            "visualViewed": true,
+            "viewedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/brazzaville/qa-evidence/cc-29c9f751c8e497e5/original-2290b92628b0f88073c3c1dad6188b5dbf2d38b0419a35d6d6def3b7de89adfb.jpg",
+            "sourceHTML": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/brazzaville/qa-evidence/cc-29c9f751c8e497e5/source-d2d36e37d90d94cb2b10630154e501f43e8d3152c3209a75daeda7f6e2fa3d80.html",
+            "sourceHTMLSHA256": "d2d36e37d90d94cb2b10630154e501f43e8d3152c3209a75daeda7f6e2fa3d80",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Brazzaville_vu_par_un_drone_01.jpg",
+            "sourceDescription": "Français : Brazzaville vu par un drone",
+            "sourceDate": "22 August 2025, 05:20:46",
+            "author": "Nzinga11",
+            "license": "CC0",
+            "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+            "width": 8064,
+            "height": 4536,
+            "rightsEvidence": "Author Nzinga11, Own work ja CC0 -linkki luettu tiedostosivulta. Description Brazzaville vu par un drone, kuvaus22.8.2025. Laaja todellinen monen kadun, pihan, tavallisen peltikaton ja puuston asettelu. Ei nimettyä tai yksilöityä modernia arkkitehtuuriteosta/veistosta esittelynä; kuvan vakiomaiset talot ja toiminnalliset rakenteet osana koko näkymää, ei blanketFOP-oletusta.",
+            "sourceContentSHA256": "bd0245ae8a12a16830a6990d0535aec731f9675a71bbb96c65c1434b471f2e4f",
+            "reviewedAt": "2026-10-12T20:28:31.213870+00:00",
+            "inputFragment": "cc-selection.json",
+            "selectionPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/brazzaville/cc-selection.json",
+            "selectionSHA256": "f6ab1a0c61c14a4b0d1ab7d44c850c6fb9179f30cbd7260d2fb22cadc8303db6",
+            "pixelInspection": {
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/brazzaville/qa-evidence/C2-people-2290b92628b0f880.png",
+              "sourceSHA256": "2290b92628b0f88073c3c1dad6188b5dbf2d38b0419a35d6d6def3b7de89adfb",
+              "cropHeight": 900,
+              "cropWidth": 2000,
+              "cropOffsetY": 2900,
+              "cropOffsetX": 3400,
+              "method": "native sips PNG-katseluote alkuperäispikseleistä; lähdeassetia ei muokattu"
+            }
+          },
+          "qaReason": "Oma alkuperäiskatselu8064×4536 ja lähimpien viljelypalstan ihmisten natiivipikseliote: aito laaja Brazzavillen katu-/piha-/asutus-/viljelyalueen asettelu. Lähteen Description nimeää Brazzavillen, ei keksittyä aluetta tai toiseen maahan siirrettyä valokuvaa. Lähimmät viljelijät ovat ylhäältä/sivusta tai kumartuneina, pehmeissä päissä ei luettavia kasvonpiirteitä; muut jalankulkijat vielä pienempiä. Ei lisättyä tekstiä/kehystä/vesileimaa tai yhden nykytaide-/arkkitehtuuriteoksen detaljia pääaiheena. Tavalliset asuintalot ja toiminnalliset kasvatuspalstat ovat kaupunkikokonaisuutta, ei blanket-oikeusväitettä kaikista Kongon teoksista. Nzinga11/CC0 ja Date22.8.2025 Author/Licensing-kentistä; nativeSHA/mitat varmistettu. Denoise-/tarkennuspehmeys on kirjattu havaintona mutta laajan rakenteen luettavuus säilyy. Sama tiedosto ei täytä kaupungin muita paikkoja."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Brazzavillen asutusta ja vihannesviljelmiä ilmasta vuonna 2025.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/brazzaville/qa.json",
+        "fileSHA256": "7d739da61c29dca32a98085b6a453e06f67dc2a4c5c9c23b72e6e255eedd301b",
+        "item": {
+          "slot": "C2",
+          "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[1]",
+          "commonsFile": "Brazzaville vu par un drone 01.jpg",
+          "sha256": "2290b92628b0f88073c3c1dad6188b5dbf2d38b0419a35d6d6def3b7de89adfb",
+          "verdict": "accepted",
+          "reason": "Oma alkuperäiskatselu8064×4536 ja lähimpien viljelypalstan ihmisten natiivipikseliote: aito laaja Brazzavillen katu-/piha-/asutus-/viljelyalueen asettelu. Lähteen Description nimeää Brazzavillen, ei keksittyä aluetta tai toiseen maahan siirrettyä valokuvaa. Lähimmät viljelijät ovat ylhäältä/sivusta tai kumartuneina, pehmeissä päissä ei luettavia kasvonpiirteitä; muut jalankulkijat vielä pienempiä. Ei lisättyä tekstiä/kehystä/vesileimaa tai yhden nykytaide-/arkkitehtuuriteoksen detaljia pääaiheena. Tavalliset asuintalot ja toiminnalliset kasvatuspalstat ovat kaupunkikokonaisuutta, ei blanket-oikeusväitettä kaikista Kongon teoksista. Nzinga11/CC0 ja Date22.8.2025 Author/Licensing-kentistä; nativeSHA/mitat varmistettu. Denoise-/tarkennuspehmeys on kirjattu havaintona mutta laajan rakenteen luettavuus säilyy. Sama tiedosto ei täytä kaupungin muita paikkoja.",
+          "evidence": {
+            "visualViewed": true,
+            "viewedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/brazzaville/qa-evidence/cc-29c9f751c8e497e5/original-2290b92628b0f88073c3c1dad6188b5dbf2d38b0419a35d6d6def3b7de89adfb.jpg",
+            "sourceHTML": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/brazzaville/qa-evidence/cc-29c9f751c8e497e5/source-d2d36e37d90d94cb2b10630154e501f43e8d3152c3209a75daeda7f6e2fa3d80.html",
+            "sourceHTMLSHA256": "d2d36e37d90d94cb2b10630154e501f43e8d3152c3209a75daeda7f6e2fa3d80",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Brazzaville_vu_par_un_drone_01.jpg",
+            "sourceDescription": "Français : Brazzaville vu par un drone",
+            "sourceDate": "22 August 2025, 05:20:46",
+            "author": "Nzinga11",
+            "license": "CC0",
+            "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+            "width": 8064,
+            "height": 4536,
+            "rightsEvidence": "Author Nzinga11, Own work ja CC0 -linkki luettu tiedostosivulta. Description Brazzaville vu par un drone, kuvaus22.8.2025. Laaja todellinen monen kadun, pihan, tavallisen peltikaton ja puuston asettelu. Ei nimettyä tai yksilöityä modernia arkkitehtuuriteosta/veistosta esittelynä; kuvan vakiomaiset talot ja toiminnalliset rakenteet osana koko näkymää, ei blanketFOP-oletusta.",
+            "sourceContentSHA256": "bd0245ae8a12a16830a6990d0535aec731f9675a71bbb96c65c1434b471f2e4f",
+            "reviewedAt": "2026-10-12T20:28:31.213870+00:00",
+            "inputFragment": "cc-selection.json",
+            "selectionPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/brazzaville/cc-selection.json",
+            "selectionSHA256": "f6ab1a0c61c14a4b0d1ab7d44c850c6fb9179f30cbd7260d2fb22cadc8303db6",
+            "pixelInspection": {
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/brazzaville/qa-evidence/C2-people-2290b92628b0f880.png",
+              "sourceSHA256": "2290b92628b0f88073c3c1dad6188b5dbf2d38b0419a35d6d6def3b7de89adfb",
+              "cropHeight": 900,
+              "cropWidth": 2000,
+              "cropOffsetY": 2900,
+              "cropOffsetX": 3400,
+              "method": "native sips PNG-katseluote alkuperäispikseleistä; lähdeassetia ei muokattu"
+            }
+          }
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/brazzaville/qa.json",
+            "sha256": "7d739da61c29dca32a98085b6a453e06f67dc2a4c5c9c23b72e6e255eedd301b"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/brazzaville/illustration-qa-extra.json",
+            "sha256": "6e1863b3367e0025534f0c5cee8a36f4c83f3ccc2a1c3c2b1668a20b44be021c"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e06",
+        "city": "brazzaville",
+        "slot": "C2",
+        "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[1]",
+        "commonsFile": "Brazzaville vu par un drone 01.jpg",
+        "sha256": "2290b92628b0f88073c3c1dad6188b5dbf2d38b0419a35d6d6def3b7de89adfb",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Brazzaville_vu_par_un_drone_01.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9d/Brazzaville_vu_par_un_drone_01.jpg",
+        "author": "Nzinga11",
+        "license": "CC0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "width": 8064,
+        "height": 4536,
+        "originalSHA256": "2290b92628b0f88073c3c1dad6188b5dbf2d38b0419a35d6d6def3b7de89adfb",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e06/brazzaville/c2-2290b92628b0f88073c3.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e06/brazzaville/c2-2290b92628b0f88073c3.jpg",
+        "bytes": 27070464,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T20:30:01.476596+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Nzinga11, Wikimedia Commons (CC0)",
+        "selite": "Brazzavillen asutusta ja vihannesviljelmiä ilmasta vuonna 2025.",
+        "lyhyt": "Brazzavillen asutusta ja vihannesviljelmiä ilmasta vuonna 2025.",
+        "tiedosto": "Brazzaville vu par un drone 01.jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "4e7ad548d0ca7db52da4421613300af076e2e595f54395a937f4faf1246cf358",
+      "targetAfterSHA256": "18a8ce6239f726cb6f549b3086fac46c42fee712be226114d6b1b26df8b57e11",
+      "contextAfterSHA256": "18a8ce6239f726cb6f549b3086fac46c42fee712be226114d6b1b26df8b57e11"
     }
   ],
   "runtimeIntegrationPending": true,

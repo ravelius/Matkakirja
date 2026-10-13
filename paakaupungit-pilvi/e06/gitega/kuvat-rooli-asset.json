@@ -8,6 +8,278 @@
     {
       "era": "e06",
       "city": "gitega",
+      "slot": "O2",
+      "type": "illustration",
+      "assetID": "job14-e06-gitega-o2-v01",
+      "galleryImageID": "job14-e06-gitega-o2-v01",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[1].kuva",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "matkailijalle",
+        "artikkeli",
+        "jaksot",
+        1,
+        "kuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/gitega/job14-e06-gitega-o2-v01-967a3a9e2127.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva rumpuperinteen materiaaleista.",
+        "lyhyt": "Havainnekuva rumpuperinteen materiaaleista."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/gitega/job14-e06-gitega-o2-v01-967a3a9e2127.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva rumpuperinteen materiaaleista.",
+        "lyhyt": "Havainnekuva rumpuperinteen materiaaleista."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "967a3a9e2127434fad8dcea61c96f3ec25aa91c5704f06586e476c79042a80d1",
+      "exportSHA256": "d7a7e48b46bdb386a1418ca21ff13c60d325b0ab367d4966dc39584ea4003574",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/gitega/job14-e06-gitega-o2-v01-967a3a9e2127.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/gitega/job14-e06-gitega-o2-v01-967a3a9e2127.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e06/gitega/job14-e06-gitega-o2-v01-967a3a9e2127.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/gitega/sisalto.json",
+      "sourceContentSHA256": "7b788bcb85e86c8dd4cd4c786b46c05e0c89f772e394b443ea6391ae3411dfc9",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "04bc65c35c39af26c664a0dce245beb1653fb129a2938b236aff06e84cd20544",
+        "subjectTitle": "Kuninkaallisten paikkojen historia",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Yleistetty lähteistetty materiaali tai tavallinen funktionaalinen esine. Ei kuva-inputtia, arkkitehtuurin/asettelun, suojatun laattakuvion/rituaaliesineen tai nykyteoksen jäljennöstä. Ei named-place documentary claim.",
+          "QA": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/gitega/assets/job14-e06-gitega-o2-v01/image.png",
+            "nativeSHA256": "967a3a9e2127434fad8dcea61c96f3ec25aa91c5704f06586e476c79042a80d1",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "nativeRatio": 1.5,
+            "manifestHashMatches": true,
+            "personallyViewed": true,
+            "viewTool": "view_image",
+            "viewedAt": "2026-10-12T20:40:53.845Z",
+            "visualFindingsFi": "Ontoksi työstetty puusylinteri ja irrallinen eläinnahka työpinnalla. Sylinterin sisä-/ulkoreuna, puunsyyt ja nahan taipuminen/sileän ja karvaisen reunan vaihtelu luontevia. Ei kuvioita, tekstiä tai ihmisiä.",
+            "captionFi": "Havainnekuva rumpuperinteen materiaaleista.",
+            "sourceAndTargetCheckFi": "Ajantasainen O2 käsittelee Gishoran ja museon historiaa; faktapohjan H6/T3 lähteistää rumpujen puun ja eläinnahan. Kuvateksti Havainnekuva rumpuperinteen materiaaleista ei väitä museoesinettä, kuninkaallista rumpua tai Gishoran oikeaa tilaa.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/gitega/sisalto.json",
+            "contentSHA256": "7b788bcb85e86c8dd4cd4c786b46c05e0c89f772e394b443ea6391ae3411dfc9",
+            "textJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[1]",
+            "currentText": "Gishoran vastaanotto- ja pihapaikat liittyvät rumpuperinteen historiaan. Gitegan kansallismuseo säilyttää arjen sekä hovin aineistoa. Museon nykyinen toiminta ja Gishoran käyntijärjestelyt varmistetaan paikallisesti.",
+            "factPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/gitega/faktapohja.md",
+            "factSHA256": "cf5f7aea275aae978ca52e7a166c46b0276fd1c093a4ad36c01d0056ddaa4c85",
+            "sourceEvidence": [
+              {
+                "type": "currentContent",
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/gitega/sisalto.json",
+                "sha256": "28e4b2576af2048a97c0f43f1f7863361a7060218b7aa5f44c9e69dbffc0e340",
+                "jsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[1]",
+                "text": "Gishoran vastaanotto- ja pihapaikat liittyvät rumpuperinteen historiaan. Gitegan kansallismuseo säilyttää arjen sekä hovin aineistoa. Museon nykyinen toiminta ja Gishoran käyntijärjestelyt varmistetaan paikallisesti."
+              },
+              {
+                "type": "factSheet",
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/gitega/faktapohja.md",
+                "sha256": "cf5f7aea275aae978ca52e7a166c46b0276fd1c093a4ad36c01d0056ddaa4c85",
+                "sourceUrl": "https://en.wikipedia.org/wiki/Royal_Drummers_of_Burundi"
+              }
+            ],
+            "rightsCheckFi": "Yleishavainne, ei nimettyä suojattua teosta tai arkkitehtuurin/asettelun jäljennöstä.",
+            "formatCheck": {
+              "format": "PNG",
+              "manifestDimensionsMatch": true,
+              "embeddedICCProfile": false,
+              "nativeMetadataExportSeparate": true
+            }
+          },
+          "qaReason": "Puupohjan ja nahan yleishavainne tukee O2:n rumpuperinneaihetta."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva rumpuperinteen materiaaleista.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/gitega/illustration-qa-extra.json",
+        "fileSHA256": "4c0e30c6a646104d78ec9030b888160bcbc3b8bfcc969a7e01cb3ab8d163b1c6",
+        "item": {
+          "slot": "O2",
+          "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[1].kuva",
+          "assetID": "job14-e06-gitega-o2-v01",
+          "sha256": "967a3a9e2127434fad8dcea61c96f3ec25aa91c5704f06586e476c79042a80d1",
+          "verdict": "accepted",
+          "reason": "Puupohjan ja nahan yleishavainne tukee O2:n rumpuperinneaihetta.",
+          "evidence": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/gitega/assets/job14-e06-gitega-o2-v01/image.png",
+            "nativeSHA256": "967a3a9e2127434fad8dcea61c96f3ec25aa91c5704f06586e476c79042a80d1",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "nativeRatio": 1.5,
+            "manifestHashMatches": true,
+            "personallyViewed": true,
+            "viewTool": "view_image",
+            "viewedAt": "2026-10-12T20:40:53.845Z",
+            "visualFindingsFi": "Ontoksi työstetty puusylinteri ja irrallinen eläinnahka työpinnalla. Sylinterin sisä-/ulkoreuna, puunsyyt ja nahan taipuminen/sileän ja karvaisen reunan vaihtelu luontevia. Ei kuvioita, tekstiä tai ihmisiä.",
+            "captionFi": "Havainnekuva rumpuperinteen materiaaleista.",
+            "sourceAndTargetCheckFi": "Ajantasainen O2 käsittelee Gishoran ja museon historiaa; faktapohjan H6/T3 lähteistää rumpujen puun ja eläinnahan. Kuvateksti Havainnekuva rumpuperinteen materiaaleista ei väitä museoesinettä, kuninkaallista rumpua tai Gishoran oikeaa tilaa.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/gitega/sisalto.json",
+            "contentSHA256": "7b788bcb85e86c8dd4cd4c786b46c05e0c89f772e394b443ea6391ae3411dfc9",
+            "textJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[1]",
+            "currentText": "Gishoran vastaanotto- ja pihapaikat liittyvät rumpuperinteen historiaan. Gitegan kansallismuseo säilyttää arjen sekä hovin aineistoa. Museon nykyinen toiminta ja Gishoran käyntijärjestelyt varmistetaan paikallisesti.",
+            "factPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/gitega/faktapohja.md",
+            "factSHA256": "cf5f7aea275aae978ca52e7a166c46b0276fd1c093a4ad36c01d0056ddaa4c85",
+            "sourceEvidence": [
+              {
+                "type": "currentContent",
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/gitega/sisalto.json",
+                "sha256": "28e4b2576af2048a97c0f43f1f7863361a7060218b7aa5f44c9e69dbffc0e340",
+                "jsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[1]",
+                "text": "Gishoran vastaanotto- ja pihapaikat liittyvät rumpuperinteen historiaan. Gitegan kansallismuseo säilyttää arjen sekä hovin aineistoa. Museon nykyinen toiminta ja Gishoran käyntijärjestelyt varmistetaan paikallisesti."
+              },
+              {
+                "type": "factSheet",
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/gitega/faktapohja.md",
+                "sha256": "cf5f7aea275aae978ca52e7a166c46b0276fd1c093a4ad36c01d0056ddaa4c85",
+                "sourceUrl": "https://en.wikipedia.org/wiki/Royal_Drummers_of_Burundi"
+              }
+            ],
+            "rightsCheckFi": "Yleishavainne, ei nimettyä suojattua teosta tai arkkitehtuurin/asettelun jäljennöstä.",
+            "formatCheck": {
+              "format": "PNG",
+              "manifestDimensionsMatch": true,
+              "embeddedICCProfile": false,
+              "nativeMetadataExportSeparate": true
+            }
+          },
+          "reviewedAt": "2026-10-12T20:45:26.005855+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/gitega/qa.json",
+            "sha256": "3edb39646e9a18d3e65e17429cb4e460f8ec1ca7975670134044a668b8af34f3"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/gitega/illustration-qa-extra.json",
+            "sha256": "4c0e30c6a646104d78ec9030b888160bcbc3b8bfcc969a7e01cb3ab8d163b1c6"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/gitega/job14-e06-gitega-o2-v01-967a3a9e2127.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/gitega/job14-e06-gitega-o2-v01-967a3a9e2127.png?t=d7a7e48b46bdb386",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/gitega/job14-e06-gitega-o2-v01-967a3a9e2127.png",
+        "sha256": "d7a7e48b46bdb386a1418ca21ff13c60d325b0ab367d4966dc39584ea4003574",
+        "bytes": 2425204,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "job14-e06-gitega-o2-v01",
+        "nativeSHA256": "967a3a9e2127434fad8dcea61c96f3ec25aa91c5704f06586e476c79042a80d1",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e06/gitega/job14-e06-gitega-o2-v01-967a3a9e2127.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e06",
+        "city": "gitega",
+        "slot": "O2",
+        "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[1].kuva",
+        "verifiedAt": "2026-10-12T20:46:56.678476+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e06/gitega/job14-e06-gitega-o2-v01-967a3a9e2127.png",
+        "sha256": "d7a7e48b46bdb386a1418ca21ff13c60d325b0ab367d4966dc39584ea4003574",
+        "bytes": 2425204,
+        "SHAReadAt": "2026-10-12T20:45:31.215996+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "967a3a9e2127434fad8dcea61c96f3ec25aa91c5704f06586e476c79042a80d1",
+        "rgbPixelSHA256": "0a8ad99aa81e7b54870946156c514ef6c294de19fd5a8135fa654bf506c266cc",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "7b788bcb85e86c8dd4cd4c786b46c05e0c89f772e394b443ea6391ae3411dfc9",
+      "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+      "contextAfterSHA256": "04bc65c35c39af26c664a0dce245beb1653fb129a2938b236aff06e84cd20544"
+    },
+    {
+      "era": "e06",
+      "city": "gitega",
       "slot": "O4",
       "type": "illustration",
       "assetID": "job14-e06-gitega-o4-v01",
@@ -115,7 +387,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/gitega/illustration-qa-extra.json",
-        "fileSHA256": "301703af2156e5a69dd198c4aae96db4e77f97874f14d480f417ae6fe70543f2",
+        "fileSHA256": "4c0e30c6a646104d78ec9030b888160bcbc3b8bfcc969a7e01cb3ab8d163b1c6",
         "item": {
           "slot": "O4",
           "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
@@ -162,7 +434,7 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/gitega/illustration-qa-extra.json",
-            "sha256": "301703af2156e5a69dd198c4aae96db4e77f97874f14d480f417ae6fe70543f2"
+            "sha256": "4c0e30c6a646104d78ec9030b888160bcbc3b8bfcc969a7e01cb3ab8d163b1c6"
           }
         ]
       },
@@ -252,46 +524,46 @@
     {
       "era": "e06",
       "city": "gitega",
-      "slot": "L3",
+      "slot": "K2",
       "type": "illustration",
-      "assetID": "job14-e06-gitega-l3-v01",
-      "galleryImageID": "job14-e06-gitega-l3-v01",
+      "assetID": "job14-e06-gitega-k2-v02",
+      "galleryImageID": "job14-e06-gitega-k2-v02",
       "commonsFile": null,
-      "targetJsonPath": "$.kaupunkilehti[1].nostot[2]",
+      "targetJsonPath": "$.kaupunkilehti[0].nostot[1]",
       "targetTokens": [
         "kaupunkilehti",
-        1,
+        0,
         "nostot",
-        2
+        1
       ],
       "operation": "merge-media-fields-preserve-other-content",
       "CmediaFieldPayload": {
-        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/gitega/job14-e06-gitega-l3-v01-2b2ebda07012.png",
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/gitega/job14-e06-gitega-k2-v02-a1d1504ab606.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva puurummun rungosta ja nahkakalvosta.",
-        "lyhyt": "Havainnekuva puurummun rungosta ja nahkakalvosta."
+        "selite": "Havainnekuva kaupunkisuunnittelun välineistä.",
+        "lyhyt": "Havainnekuva kaupunkisuunnittelun välineistä."
       },
       "removeMediaKeys": [
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
       "runtimeMediaFieldPayload": {
-        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/gitega/job14-e06-gitega-l3-v01-2b2ebda07012.png",
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/gitega/job14-e06-gitega-k2-v02-a1d1504ab606.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva puurummun rungosta ja nahkakalvosta.",
-        "lyhyt": "Havainnekuva puurummun rungosta ja nahkakalvosta."
+        "selite": "Havainnekuva kaupunkisuunnittelun välineistä.",
+        "lyhyt": "Havainnekuva kaupunkisuunnittelun välineistä."
       },
       "runtimeRemoveMediaKeys": [
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
-      "nativeSHA256": "2b2ebda07012a83d4d627984dd058c0641657dc89cf26899d67aef6972b75a79",
-      "exportSHA256": "2a8ece634ab7b0f3b3a6d4b7652085e701703941f87eb2aa33c4d76cff891690",
-      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/gitega/job14-e06-gitega-l3-v01-2b2ebda07012.png",
-      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/gitega/job14-e06-gitega-l3-v01-2b2ebda07012.png",
-      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e06/gitega/job14-e06-gitega-l3-v01-2b2ebda07012.png",
+      "nativeSHA256": "a1d1504ab6066357764cf2e9e67068193767b966cc9d20b53e753927f0d09273",
+      "exportSHA256": "98ab3b762f8ca370ba778c0809e5f0756215928b89dd598f7030481e45824777",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/gitega/job14-e06-gitega-k2-v02-a1d1504ab606.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/gitega/job14-e06-gitega-k2-v02-a1d1504ab606.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e06/gitega/job14-e06-gitega-k2-v02-a1d1504ab606.png",
       "dimensions": [
         1536,
         1024
@@ -299,9 +571,9 @@
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/gitega/sisalto.json",
       "sourceContentSHA256": "7b788bcb85e86c8dd4cd4c786b46c05e0c89f772e394b443ea6391ae3411dfc9",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "28b213030f6409d6e146ae3257fa18c01c5a3f4cbe914dd09acab054aa562698",
-        "semanticContextSHA256": "28b213030f6409d6e146ae3257fa18c01c5a3f4cbe914dd09acab054aa562698",
-        "subjectTitle": "Taito ei säily pelkässä esineessä",
+        "targetBeforeSHA256": "e46d438259076d86927af802b9362a2bcf1e6e6216a8c5d3dda058abce547e7d",
+        "semanticContextSHA256": "e46d438259076d86927af802b9362a2bcf1e6e6216a8c5d3dda058abce547e7d",
+        "subjectTitle": "Asemakaava ei ajoita kuningaskuntaa",
         "targetState": "existing-target"
       },
       "attribution": {
@@ -311,43 +583,57 @@
         "sourcePage": null,
         "originalUrl": null,
         "rightsEvidence": {
-          "production": "Yleistetty luonnon/ruoan/materiaalin/tavanomaisen esineen aihe. Ei kuva-inputtia, nimettyä arkkitehtuuria, suojattua nykyteosta, tunnistettavaa ihmistä, modernia koristetta tai logoa. Ei todistus tietyn paikan todellisesta ulkonäöstä.",
+          "production": "Yleistetty lähteistetty materiaali tai tavallinen funktionaalinen esine. Ei kuva-inputtia, arkkitehtuurin/asettelun, suojatun laattakuvion/rituaaliesineen tai nykyteoksen jäljennöstä. Ei named-place documentary claim.",
           "QA": {
-            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/gitega/assets/job14-e06-gitega-l3-v01/image.png",
-            "nativeSHA256": "2b2ebda07012a83d4d627984dd058c0641657dc89cf26899d67aef6972b75a79",
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/gitega/assets/job14-e06-gitega-k2-v02/image.png",
+            "nativeSHA256": "a1d1504ab6066357764cf2e9e67068193767b966cc9d20b53e753927f0d09273",
             "nativeDimensions": [
               1536,
               1024
             ],
+            "nativeRatio": 1.5,
             "manifestHashMatches": true,
             "personallyViewed": true,
             "viewTool": "view_image",
-            "visualFindingsFi": "Yksinkertainen koristeeton puurunko, nahkakalvo ja kiristysnarut. Kalvon karva/epäsäännöllinen reuna, puun syyt ja naru luontevat, ei synteettisesti toistuvaa turkkia. Ei ihmisiä, logoja, tekstiä tai nimetyn nykyesineen koristelun kopioita.",
-            "captionFi": "Havainnekuva puurummun rungosta ja nahkakalvosta.",
-            "sourceAndTargetCheckFi": "Luettu L3 Taito ei säily pelkässä esineessä ja faktapohjan T3/H5-H6 puurunko-/eläinnahkamateriaali. CaptionFi Havainnekuva puurummun rungosta ja nahkakalvosta ei nimeä tiettyä Gishoran rumpua tai väitä Burundin yksilöidyn soittimen dokumentiksi.",
+            "viewedAt": "2026-10-12T20:40:53.845Z",
+            "visualFindingsFi": "Vain puinen kynä, suljettu ruskea luonnoskirja ja tyhjä paperirulla harmaalla pinnalla. Paperin kerrokset, kirjan sidos, kynän kärki ja varjot uskottavat; ei numeroita, logoja, kirjoitusta, suunnitelmaa tai ihmisiä.",
+            "captionFi": "Havainnekuva kaupunkisuunnittelun välineistä.",
+            "sourceAndTargetCheckFi": "Ajantasainen K2 erottaa modernin asemakaavan vanhemmasta kuninkaallisesta paikkahistoriasta. Faktapohjan H1/H2/K2 tukee suunnittelun yleisaihetta. Kuva ei keksi Gitegan asemakaavaa eikä vuoden 1873 näkymää; eri assetID ja SHA kuin hylätty v01.",
             "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/gitega/sisalto.json",
+            "contentSHA256": "7b788bcb85e86c8dd4cd4c786b46c05e0c89f772e394b443ea6391ae3411dfc9",
+            "textJsonPath": "$.kaupunkilehti[0].nostot[1]",
+            "currentText": "Nykyinen Gitegan kaupunkisuunnitelma kuuluu saksalaisajan 1900-luvun alkuun. Seudun kuninkaalliset paikat ovat toinen historiallinen kerros; Gishora sijaitsee kaupungin pohjoispuolella. Myös nimimuodot Kitega ja Gitega kertovat kaupungin myöhemmästä nimihistoriasta. Isoisän matkavuotta 1873 ei voi siksi kuvata nykyisen katuverkon kautta. Vanha kuningaskunnan paikkahistoria ja moderni hallintokaupunki liittyvät samaan seutuun, mutta ne eivät tarkoita samaa rakennettua keskustaa.",
+            "factPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/gitega/faktapohja.md",
+            "factSHA256": "cf5f7aea275aae978ca52e7a166c46b0276fd1c093a4ad36c01d0056ddaa4c85",
             "sourceEvidence": [
               {
                 "type": "currentContent",
                 "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/gitega/sisalto.json",
                 "sha256": "28e4b2576af2048a97c0f43f1f7863361a7060218b7aa5f44c9e69dbffc0e340",
-                "jsonPath": "$.kaupunkilehti[1].nostot[2]",
-                "text": "Rumpuperinteen kantajiin kuuluu suojapaikkojen vartijasukujen jälkeläisiä. Taitoja opitaan harjoittelemalla ja myös muodollisessa opetuksessa; soittimien valmistustaito on osa samaa perinnettä. Puurungot ja eläinnahka liittyvät rumpujen materiaaleihin. Esineen säilyttäminen ei yksin jatka soiton taitoa, sillä siihen tarvitaan ihmisiä, jotka osaavat tehdä, soittaa ja opettaa. Sukupolvet kohtaavat käytännön työssä, jossa vanha osaaminen siirtyy uudelle tekijälle ja uuteen esitystilanteeseen."
+                "jsonPath": "$.kaupunkilehti[0].nostot[1]",
+                "text": "Nykyinen Gitegan kaupunkisuunnitelma kuuluu saksalaisajan 1900-luvun alkuun. Seudun kuninkaalliset paikat ovat toinen historiallinen kerros; Gishora sijaitsee kaupungin pohjoispuolella. Myös nimimuodot Kitega ja Gitega kertovat kaupungin myöhemmästä nimihistoriasta. Isoisän matkavuotta 1873 ei voi siksi kuvata nykyisen katuverkon kautta. Vanha kuningaskunnan paikkahistoria ja moderni hallintokaupunki liittyvät samaan seutuun, mutta ne eivät tarkoita samaa rakennettua keskustaa."
               },
               {
                 "type": "factSheet",
                 "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/gitega/faktapohja.md",
                 "sha256": "cf5f7aea275aae978ca52e7a166c46b0276fd1c093a4ad36c01d0056ddaa4c85",
-                "sourceUrl": "https://en.wikipedia.org/wiki/Royal_Drummers_of_Burundi"
+                "sourceUrl": "https://en.wikipedia.org/wiki/Gitega"
               }
-            ]
+            ],
+            "rightsCheckFi": "Yleishavainne, ei nimettyä suojattua teosta tai arkkitehtuurin/asettelun jäljennöstä.",
+            "formatCheck": {
+              "format": "PNG",
+              "manifestDimensionsMatch": true,
+              "embeddedICCProfile": false,
+              "nativeMetadataExportSeparate": true
+            }
           },
-          "qaReason": "Puurummun ja eläinnahkakalvon materiaalihavainne vastaa L3:n soittimen valmistustaitoa."
+          "qaReason": "Uusi merkinnätön suunnitteluvälineiden havainne korvaa v01:n tekstivirheen."
         }
       },
       "luentaMetadata": {
         "existingImageLuenta": null,
-        "captionReadingText": "Havainnekuva puurummun rungosta ja nahkakalvosta.",
+        "captionReadingText": "Havainnekuva kaupunkisuunnittelun välineistä.",
         "existingArticleAndSectionLuentaPreserved": true,
         "audioGenerated": false,
         "audioURL": null,
@@ -356,45 +642,59 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/gitega/illustration-qa-extra.json",
-        "fileSHA256": "301703af2156e5a69dd198c4aae96db4e77f97874f14d480f417ae6fe70543f2",
+        "fileSHA256": "4c0e30c6a646104d78ec9030b888160bcbc3b8bfcc969a7e01cb3ab8d163b1c6",
         "item": {
-          "slot": "L3",
-          "targetJsonPath": "$.kaupunkilehti[1].nostot[2]",
-          "assetID": "job14-e06-gitega-l3-v01",
-          "sha256": "2b2ebda07012a83d4d627984dd058c0641657dc89cf26899d67aef6972b75a79",
+          "slot": "K2",
+          "targetJsonPath": "$.kaupunkilehti[0].nostot[1]",
+          "assetID": "job14-e06-gitega-k2-v02",
+          "sha256": "a1d1504ab6066357764cf2e9e67068193767b966cc9d20b53e753927f0d09273",
           "verdict": "accepted",
-          "reason": "Puurummun ja eläinnahkakalvon materiaalihavainne vastaa L3:n soittimen valmistustaitoa.",
+          "reason": "Uusi merkinnätön suunnitteluvälineiden havainne korvaa v01:n tekstivirheen.",
           "evidence": {
-            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/gitega/assets/job14-e06-gitega-l3-v01/image.png",
-            "nativeSHA256": "2b2ebda07012a83d4d627984dd058c0641657dc89cf26899d67aef6972b75a79",
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/gitega/assets/job14-e06-gitega-k2-v02/image.png",
+            "nativeSHA256": "a1d1504ab6066357764cf2e9e67068193767b966cc9d20b53e753927f0d09273",
             "nativeDimensions": [
               1536,
               1024
             ],
+            "nativeRatio": 1.5,
             "manifestHashMatches": true,
             "personallyViewed": true,
             "viewTool": "view_image",
-            "visualFindingsFi": "Yksinkertainen koristeeton puurunko, nahkakalvo ja kiristysnarut. Kalvon karva/epäsäännöllinen reuna, puun syyt ja naru luontevat, ei synteettisesti toistuvaa turkkia. Ei ihmisiä, logoja, tekstiä tai nimetyn nykyesineen koristelun kopioita.",
-            "captionFi": "Havainnekuva puurummun rungosta ja nahkakalvosta.",
-            "sourceAndTargetCheckFi": "Luettu L3 Taito ei säily pelkässä esineessä ja faktapohjan T3/H5-H6 puurunko-/eläinnahkamateriaali. CaptionFi Havainnekuva puurummun rungosta ja nahkakalvosta ei nimeä tiettyä Gishoran rumpua tai väitä Burundin yksilöidyn soittimen dokumentiksi.",
+            "viewedAt": "2026-10-12T20:40:53.845Z",
+            "visualFindingsFi": "Vain puinen kynä, suljettu ruskea luonnoskirja ja tyhjä paperirulla harmaalla pinnalla. Paperin kerrokset, kirjan sidos, kynän kärki ja varjot uskottavat; ei numeroita, logoja, kirjoitusta, suunnitelmaa tai ihmisiä.",
+            "captionFi": "Havainnekuva kaupunkisuunnittelun välineistä.",
+            "sourceAndTargetCheckFi": "Ajantasainen K2 erottaa modernin asemakaavan vanhemmasta kuninkaallisesta paikkahistoriasta. Faktapohjan H1/H2/K2 tukee suunnittelun yleisaihetta. Kuva ei keksi Gitegan asemakaavaa eikä vuoden 1873 näkymää; eri assetID ja SHA kuin hylätty v01.",
             "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/gitega/sisalto.json",
+            "contentSHA256": "7b788bcb85e86c8dd4cd4c786b46c05e0c89f772e394b443ea6391ae3411dfc9",
+            "textJsonPath": "$.kaupunkilehti[0].nostot[1]",
+            "currentText": "Nykyinen Gitegan kaupunkisuunnitelma kuuluu saksalaisajan 1900-luvun alkuun. Seudun kuninkaalliset paikat ovat toinen historiallinen kerros; Gishora sijaitsee kaupungin pohjoispuolella. Myös nimimuodot Kitega ja Gitega kertovat kaupungin myöhemmästä nimihistoriasta. Isoisän matkavuotta 1873 ei voi siksi kuvata nykyisen katuverkon kautta. Vanha kuningaskunnan paikkahistoria ja moderni hallintokaupunki liittyvät samaan seutuun, mutta ne eivät tarkoita samaa rakennettua keskustaa.",
+            "factPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/gitega/faktapohja.md",
+            "factSHA256": "cf5f7aea275aae978ca52e7a166c46b0276fd1c093a4ad36c01d0056ddaa4c85",
             "sourceEvidence": [
               {
                 "type": "currentContent",
                 "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/gitega/sisalto.json",
                 "sha256": "28e4b2576af2048a97c0f43f1f7863361a7060218b7aa5f44c9e69dbffc0e340",
-                "jsonPath": "$.kaupunkilehti[1].nostot[2]",
-                "text": "Rumpuperinteen kantajiin kuuluu suojapaikkojen vartijasukujen jälkeläisiä. Taitoja opitaan harjoittelemalla ja myös muodollisessa opetuksessa; soittimien valmistustaito on osa samaa perinnettä. Puurungot ja eläinnahka liittyvät rumpujen materiaaleihin. Esineen säilyttäminen ei yksin jatka soiton taitoa, sillä siihen tarvitaan ihmisiä, jotka osaavat tehdä, soittaa ja opettaa. Sukupolvet kohtaavat käytännön työssä, jossa vanha osaaminen siirtyy uudelle tekijälle ja uuteen esitystilanteeseen."
+                "jsonPath": "$.kaupunkilehti[0].nostot[1]",
+                "text": "Nykyinen Gitegan kaupunkisuunnitelma kuuluu saksalaisajan 1900-luvun alkuun. Seudun kuninkaalliset paikat ovat toinen historiallinen kerros; Gishora sijaitsee kaupungin pohjoispuolella. Myös nimimuodot Kitega ja Gitega kertovat kaupungin myöhemmästä nimihistoriasta. Isoisän matkavuotta 1873 ei voi siksi kuvata nykyisen katuverkon kautta. Vanha kuningaskunnan paikkahistoria ja moderni hallintokaupunki liittyvät samaan seutuun, mutta ne eivät tarkoita samaa rakennettua keskustaa."
               },
               {
                 "type": "factSheet",
                 "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/gitega/faktapohja.md",
                 "sha256": "cf5f7aea275aae978ca52e7a166c46b0276fd1c093a4ad36c01d0056ddaa4c85",
-                "sourceUrl": "https://en.wikipedia.org/wiki/Royal_Drummers_of_Burundi"
+                "sourceUrl": "https://en.wikipedia.org/wiki/Gitega"
               }
-            ]
+            ],
+            "rightsCheckFi": "Yleishavainne, ei nimettyä suojattua teosta tai arkkitehtuurin/asettelun jäljennöstä.",
+            "formatCheck": {
+              "format": "PNG",
+              "manifestDimensionsMatch": true,
+              "embeddedICCProfile": false,
+              "nativeMetadataExportSeparate": true
+            }
           },
-          "reviewedAt": "2026-10-12T18:21:34.204643+00:00"
+          "reviewedAt": "2026-10-12T20:45:26.005855+00:00"
         },
         "allSources": [
           {
@@ -403,16 +703,16 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/gitega/illustration-qa-extra.json",
-            "sha256": "301703af2156e5a69dd198c4aae96db4e77f97874f14d480f417ae6fe70543f2"
+            "sha256": "4c0e30c6a646104d78ec9030b888160bcbc3b8bfcc969a7e01cb3ab8d163b1c6"
           }
         ]
       },
       "R2ByteVerification": {
-        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/gitega/job14-e06-gitega-l3-v01-2b2ebda07012.png",
-        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/gitega/job14-e06-gitega-l3-v01-2b2ebda07012.png?t=2a8ece634ab7b0f3",
-        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/gitega/job14-e06-gitega-l3-v01-2b2ebda07012.png",
-        "sha256": "2a8ece634ab7b0f3b3a6d4b7652085e701703941f87eb2aa33c4d76cff891690",
-        "bytes": 2426582,
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/gitega/job14-e06-gitega-k2-v02-a1d1504ab606.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/gitega/job14-e06-gitega-k2-v02-a1d1504ab606.png?t=98ab3b762f8ca370",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/gitega/job14-e06-gitega-k2-v02-a1d1504ab606.png",
+        "sha256": "98ab3b762f8ca370ba778c0809e5f0756215928b89dd598f7030481e45824777",
+        "bytes": 1856729,
         "http": 200,
         "mime": "image/png",
         "cors": "https://matkakirja.app",
@@ -422,26 +722,26 @@
         "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
         "conditionalIfNoneMatch": "*",
         "s3PutHttp": 200,
-        "assetID": "job14-e06-gitega-l3-v01",
-        "nativeSHA256": "2b2ebda07012a83d4d627984dd058c0641657dc89cf26899d67aef6972b75a79",
+        "assetID": "job14-e06-gitega-k2-v02",
+        "nativeSHA256": "a1d1504ab6066357764cf2e9e67068193767b966cc9d20b53e753927f0d09273",
         "canonicalReadbackByteExact": true,
-        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e06/gitega/job14-e06-gitega-l3-v01-2b2ebda07012.png",
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e06/gitega/job14-e06-gitega-k2-v02-a1d1504ab606.png",
         "pixelIdenticalToQAAcceptedNative": true,
         "era": "e06",
         "city": "gitega",
-        "slot": "L3",
-        "targetJsonPath": "$.kaupunkilehti[1].nostot[2]",
-        "verifiedAt": "2026-10-12T18:22:42.671822+00:00",
+        "slot": "K2",
+        "targetJsonPath": "$.kaupunkilehti[0].nostot[1]",
+        "verifiedAt": "2026-10-12T20:46:58.118884+00:00",
         "ownerAcceptanceVerified": false,
         "gameIntegrated": false,
         "galleryVisibleVerified": false
       },
       "producerExportProof": null,
       "technicalExportProof": {
-        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e06/gitega/job14-e06-gitega-l3-v01-2b2ebda07012.png",
-        "sha256": "2a8ece634ab7b0f3b3a6d4b7652085e701703941f87eb2aa33c4d76cff891690",
-        "bytes": 2426582,
-        "SHAReadAt": "2026-10-12T18:29:47.422406+00:00",
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e06/gitega/job14-e06-gitega-k2-v02-a1d1504ab606.png",
+        "sha256": "98ab3b762f8ca370ba778c0809e5f0756215928b89dd598f7030481e45824777",
+        "bytes": 1856729,
+        "SHAReadAt": "2026-10-12T20:45:31.013258+00:00",
         "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
         "width": 1536,
         "height": 1024,
@@ -451,8 +751,8 @@
         "dimensionsBasis": "EXIF-oriented-display",
         "format": "PNG",
         "largeOriginalHeaderOnlyRead": false,
-        "nativeSHA256": "2b2ebda07012a83d4d627984dd058c0641657dc89cf26899d67aef6972b75a79",
-        "rgbPixelSHA256": "799f08fb60ab236561d8ac37c8d78df964581e692bf98128c98e530781be1da7",
+        "nativeSHA256": "a1d1504ab6066357764cf2e9e67068193767b966cc9d20b53e753927f0d09273",
+        "rgbPixelSHA256": "9051c6412809661357009c50c874dd38db95f002012685fa686630c7815b4112",
         "pixelIdenticalToQAAcceptedNative": true,
         "sRGBProfileEmbedded": true,
         "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
@@ -487,8 +787,8 @@
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "7b788bcb85e86c8dd4cd4c786b46c05e0c89f772e394b443ea6391ae3411dfc9",
-      "targetAfterSHA256": "28b213030f6409d6e146ae3257fa18c01c5a3f4cbe914dd09acab054aa562698",
-      "contextAfterSHA256": "28b213030f6409d6e146ae3257fa18c01c5a3f4cbe914dd09acab054aa562698"
+      "targetAfterSHA256": "e46d438259076d86927af802b9362a2bcf1e6e6216a8c5d3dda058abce547e7d",
+      "contextAfterSHA256": "e46d438259076d86927af802b9362a2bcf1e6e6216a8c5d3dda058abce547e7d"
     },
     {
       "era": "e06",
@@ -597,7 +897,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/gitega/illustration-qa-extra.json",
-        "fileSHA256": "301703af2156e5a69dd198c4aae96db4e77f97874f14d480f417ae6fe70543f2",
+        "fileSHA256": "4c0e30c6a646104d78ec9030b888160bcbc3b8bfcc969a7e01cb3ab8d163b1c6",
         "item": {
           "slot": "K3",
           "targetJsonPath": "$.kaupunkilehti[0].nostot[2]",
@@ -644,7 +944,7 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/gitega/illustration-qa-extra.json",
-            "sha256": "301703af2156e5a69dd198c4aae96db4e77f97874f14d480f417ae6fe70543f2"
+            "sha256": "4c0e30c6a646104d78ec9030b888160bcbc3b8bfcc969a7e01cb3ab8d163b1c6"
           }
         ]
       },
@@ -730,6 +1030,757 @@
       "sourceContentAfterSHA256": "7b788bcb85e86c8dd4cd4c786b46c05e0c89f772e394b443ea6391ae3411dfc9",
       "targetAfterSHA256": "b0066c1f4e36fd112047cb861da7a00d5fece08f5929eb4e953cfe0cbde9ec53",
       "contextAfterSHA256": "b0066c1f4e36fd112047cb861da7a00d5fece08f5929eb4e953cfe0cbde9ec53"
+    },
+    {
+      "era": "e06",
+      "city": "gitega",
+      "slot": "L1",
+      "type": "illustration",
+      "assetID": "job14-e06-gitega-l1-v01",
+      "galleryImageID": "job14-e06-gitega-l1-v01",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[1].nostot[0]",
+      "targetTokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        0
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/gitega/job14-e06-gitega-l1-v01-fa155747ddec.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva rummun kalvosta.",
+        "lyhyt": "Havainnekuva rummun kalvosta."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/gitega/job14-e06-gitega-l1-v01-fa155747ddec.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva rummun kalvosta.",
+        "lyhyt": "Havainnekuva rummun kalvosta."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "fa155747ddec37ff1340b3308d3f127259c786923b38630877a580484c8c0e75",
+      "exportSHA256": "64401d7f1b7403013b4b049c3490e3aaa30bb56d3869a9a04ba11e3e0c46278e",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/gitega/job14-e06-gitega-l1-v01-fa155747ddec.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/gitega/job14-e06-gitega-l1-v01-fa155747ddec.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e06/gitega/job14-e06-gitega-l1-v01-fa155747ddec.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/gitega/sisalto.json",
+      "sourceContentSHA256": "7b788bcb85e86c8dd4cd4c786b46c05e0c89f772e394b443ea6391ae3411dfc9",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "2483c1c9aa5a90f0f54e50adc30dadaf5c24a05016ea65aca7c8bfe02c688175",
+        "semanticContextSHA256": "2483c1c9aa5a90f0f54e50adc30dadaf5c24a05016ea65aca7c8bfe02c688175",
+        "subjectTitle": "Soitto on myös liikettä ja sanoja",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Yleistetty lähteistetty materiaali tai tavallinen funktionaalinen esine. Ei kuva-inputtia, arkkitehtuurin/asettelun, suojatun laattakuvion/rituaaliesineen tai nykyteoksen jäljennöstä. Ei named-place documentary claim.",
+          "QA": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/gitega/assets/job14-e06-gitega-l1-v01/image.png",
+            "nativeSHA256": "fa155747ddec37ff1340b3308d3f127259c786923b38630877a580484c8c0e75",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "nativeRatio": 1.5,
+            "manifestHashMatches": true,
+            "personallyViewed": true,
+            "viewTool": "view_image",
+            "viewedAt": "2026-10-12T20:40:53.845Z",
+            "visualFindingsFi": "Lähikuva puisen rummun eläinnahkaisesta kalvosta ja sen reunan nahkalenkeistä/puutapeista. Puu, nahan epätasaisuus ja kiinnitysten liittymät luontevia. Ei koristeita, rituaalitunnuksia, tekstejä tai ihmisiä.",
+            "captionFi": "Havainnekuva rummun kalvosta.",
+            "sourceAndTargetCheckFi": "Ajantasainen L1 käsittelee kuninkaallisen rummun perinteen yhteissoittoa. Faktapohjan T3/H6 tukee puurunkoa ja eläinnahkaa. Havainnekuva ei väitä Gishoran autenttista esinettä tai dokumentoi tiettyä esitystä.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/gitega/sisalto.json",
+            "contentSHA256": "7b788bcb85e86c8dd4cd4c786b46c05e0c89f772e394b443ea6391ae3411dfc9",
+            "textJsonPath": "$.kaupunkilehti[1].nostot[0]",
+            "currentText": "Burundin kuninkaallisen rummun perinteessä rytmi liittyy tanssiin, lauluun ja runolliseen ilmaisuun. Esitys on yhteissoittoa, jota käytetään paikallisten juhlien yhteydessä ja vierailijoiden vastaanotossa. Rumpua ei siis kuunnella vain erillisenä soittimena: ääni liittyy ihmisten liikkeeseen ja yhteiseen tilanteeseen. Eri ilmaisutavat muodostavat saman perinteen osia. Sen merkitystä voi ymmärtää tarkastelemalla, miten soittajat, tanssijat ja laulajat toimivat yhdessä oman yhteisönsä ympäristössä.",
+            "factPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/gitega/faktapohja.md",
+            "factSHA256": "cf5f7aea275aae978ca52e7a166c46b0276fd1c093a4ad36c01d0056ddaa4c85",
+            "sourceEvidence": [
+              {
+                "type": "currentContent",
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/gitega/sisalto.json",
+                "sha256": "28e4b2576af2048a97c0f43f1f7863361a7060218b7aa5f44c9e69dbffc0e340",
+                "jsonPath": "$.kaupunkilehti[1].nostot[0]",
+                "text": "Burundin kuninkaallisen rummun perinteessä rytmi liittyy tanssiin, lauluun ja runolliseen ilmaisuun. Esitys on yhteissoittoa, jota käytetään paikallisten juhlien yhteydessä ja vierailijoiden vastaanotossa. Rumpua ei siis kuunnella vain erillisenä soittimena: ääni liittyy ihmisten liikkeeseen ja yhteiseen tilanteeseen. Eri ilmaisutavat muodostavat saman perinteen osia. Sen merkitystä voi ymmärtää tarkastelemalla, miten soittajat, tanssijat ja laulajat toimivat yhdessä oman yhteisönsä ympäristössä."
+              },
+              {
+                "type": "factSheet",
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/gitega/faktapohja.md",
+                "sha256": "cf5f7aea275aae978ca52e7a166c46b0276fd1c093a4ad36c01d0056ddaa4c85",
+                "sourceUrl": "https://en.wikipedia.org/wiki/Royal_Drummers_of_Burundi"
+              }
+            ],
+            "rightsCheckFi": "Yleishavainne, ei nimettyä suojattua teosta tai arkkitehtuurin/asettelun jäljennöstä.",
+            "formatCheck": {
+              "format": "PNG",
+              "manifestDimensionsMatch": true,
+              "embeddedICCProfile": false,
+              "nativeMetadataExportSeparate": true
+            }
+          },
+          "qaReason": "Rummun kalvon materiaalihavainne sopii L1:n rumpuperinteeseen."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva rummun kalvosta.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/gitega/illustration-qa-extra.json",
+        "fileSHA256": "4c0e30c6a646104d78ec9030b888160bcbc3b8bfcc969a7e01cb3ab8d163b1c6",
+        "item": {
+          "slot": "L1",
+          "targetJsonPath": "$.kaupunkilehti[1].nostot[0]",
+          "assetID": "job14-e06-gitega-l1-v01",
+          "sha256": "fa155747ddec37ff1340b3308d3f127259c786923b38630877a580484c8c0e75",
+          "verdict": "accepted",
+          "reason": "Rummun kalvon materiaalihavainne sopii L1:n rumpuperinteeseen.",
+          "evidence": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/gitega/assets/job14-e06-gitega-l1-v01/image.png",
+            "nativeSHA256": "fa155747ddec37ff1340b3308d3f127259c786923b38630877a580484c8c0e75",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "nativeRatio": 1.5,
+            "manifestHashMatches": true,
+            "personallyViewed": true,
+            "viewTool": "view_image",
+            "viewedAt": "2026-10-12T20:40:53.845Z",
+            "visualFindingsFi": "Lähikuva puisen rummun eläinnahkaisesta kalvosta ja sen reunan nahkalenkeistä/puutapeista. Puu, nahan epätasaisuus ja kiinnitysten liittymät luontevia. Ei koristeita, rituaalitunnuksia, tekstejä tai ihmisiä.",
+            "captionFi": "Havainnekuva rummun kalvosta.",
+            "sourceAndTargetCheckFi": "Ajantasainen L1 käsittelee kuninkaallisen rummun perinteen yhteissoittoa. Faktapohjan T3/H6 tukee puurunkoa ja eläinnahkaa. Havainnekuva ei väitä Gishoran autenttista esinettä tai dokumentoi tiettyä esitystä.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/gitega/sisalto.json",
+            "contentSHA256": "7b788bcb85e86c8dd4cd4c786b46c05e0c89f772e394b443ea6391ae3411dfc9",
+            "textJsonPath": "$.kaupunkilehti[1].nostot[0]",
+            "currentText": "Burundin kuninkaallisen rummun perinteessä rytmi liittyy tanssiin, lauluun ja runolliseen ilmaisuun. Esitys on yhteissoittoa, jota käytetään paikallisten juhlien yhteydessä ja vierailijoiden vastaanotossa. Rumpua ei siis kuunnella vain erillisenä soittimena: ääni liittyy ihmisten liikkeeseen ja yhteiseen tilanteeseen. Eri ilmaisutavat muodostavat saman perinteen osia. Sen merkitystä voi ymmärtää tarkastelemalla, miten soittajat, tanssijat ja laulajat toimivat yhdessä oman yhteisönsä ympäristössä.",
+            "factPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/gitega/faktapohja.md",
+            "factSHA256": "cf5f7aea275aae978ca52e7a166c46b0276fd1c093a4ad36c01d0056ddaa4c85",
+            "sourceEvidence": [
+              {
+                "type": "currentContent",
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/gitega/sisalto.json",
+                "sha256": "28e4b2576af2048a97c0f43f1f7863361a7060218b7aa5f44c9e69dbffc0e340",
+                "jsonPath": "$.kaupunkilehti[1].nostot[0]",
+                "text": "Burundin kuninkaallisen rummun perinteessä rytmi liittyy tanssiin, lauluun ja runolliseen ilmaisuun. Esitys on yhteissoittoa, jota käytetään paikallisten juhlien yhteydessä ja vierailijoiden vastaanotossa. Rumpua ei siis kuunnella vain erillisenä soittimena: ääni liittyy ihmisten liikkeeseen ja yhteiseen tilanteeseen. Eri ilmaisutavat muodostavat saman perinteen osia. Sen merkitystä voi ymmärtää tarkastelemalla, miten soittajat, tanssijat ja laulajat toimivat yhdessä oman yhteisönsä ympäristössä."
+              },
+              {
+                "type": "factSheet",
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/gitega/faktapohja.md",
+                "sha256": "cf5f7aea275aae978ca52e7a166c46b0276fd1c093a4ad36c01d0056ddaa4c85",
+                "sourceUrl": "https://en.wikipedia.org/wiki/Royal_Drummers_of_Burundi"
+              }
+            ],
+            "rightsCheckFi": "Yleishavainne, ei nimettyä suojattua teosta tai arkkitehtuurin/asettelun jäljennöstä.",
+            "formatCheck": {
+              "format": "PNG",
+              "manifestDimensionsMatch": true,
+              "embeddedICCProfile": false,
+              "nativeMetadataExportSeparate": true
+            }
+          },
+          "reviewedAt": "2026-10-12T20:45:26.005855+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/gitega/qa.json",
+            "sha256": "3edb39646e9a18d3e65e17429cb4e460f8ec1ca7975670134044a668b8af34f3"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/gitega/illustration-qa-extra.json",
+            "sha256": "4c0e30c6a646104d78ec9030b888160bcbc3b8bfcc969a7e01cb3ab8d163b1c6"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/gitega/job14-e06-gitega-l1-v01-fa155747ddec.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/gitega/job14-e06-gitega-l1-v01-fa155747ddec.png?t=64401d7f1b740301",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/gitega/job14-e06-gitega-l1-v01-fa155747ddec.png",
+        "sha256": "64401d7f1b7403013b4b049c3490e3aaa30bb56d3869a9a04ba11e3e0c46278e",
+        "bytes": 2551032,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "job14-e06-gitega-l1-v01",
+        "nativeSHA256": "fa155747ddec37ff1340b3308d3f127259c786923b38630877a580484c8c0e75",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e06/gitega/job14-e06-gitega-l1-v01-fa155747ddec.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e06",
+        "city": "gitega",
+        "slot": "L1",
+        "targetJsonPath": "$.kaupunkilehti[1].nostot[0]",
+        "verifiedAt": "2026-10-12T20:46:59.313739+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e06/gitega/job14-e06-gitega-l1-v01-fa155747ddec.png",
+        "sha256": "64401d7f1b7403013b4b049c3490e3aaa30bb56d3869a9a04ba11e3e0c46278e",
+        "bytes": 2551032,
+        "SHAReadAt": "2026-10-12T20:45:30.791753+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "fa155747ddec37ff1340b3308d3f127259c786923b38630877a580484c8c0e75",
+        "rgbPixelSHA256": "cdd478d805032923f699d9191b7b57d0523c2d3675ea404b08a61b5f55a9de8f",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "7b788bcb85e86c8dd4cd4c786b46c05e0c89f772e394b443ea6391ae3411dfc9",
+      "targetAfterSHA256": "2483c1c9aa5a90f0f54e50adc30dadaf5c24a05016ea65aca7c8bfe02c688175",
+      "contextAfterSHA256": "2483c1c9aa5a90f0f54e50adc30dadaf5c24a05016ea65aca7c8bfe02c688175"
+    },
+    {
+      "era": "e06",
+      "city": "gitega",
+      "slot": "L2",
+      "type": "illustration",
+      "assetID": "job14-e06-gitega-l2-v02",
+      "galleryImageID": "job14-e06-gitega-l2-v02",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[1].nostot[1]",
+      "targetTokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        1
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/gitega/job14-e06-gitega-l2-v02-daeead5adfa2.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva rumpujen puolikaarijärjestyksestä pienoismallina.",
+        "lyhyt": "Havainnekuva rumpujen puolikaarijärjestyksestä pienoismallina."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/gitega/job14-e06-gitega-l2-v02-daeead5adfa2.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva rumpujen puolikaarijärjestyksestä pienoismallina.",
+        "lyhyt": "Havainnekuva rumpujen puolikaarijärjestyksestä pienoismallina."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "daeead5adfa2066790c25f83fbf14037cb81daa146d8bc6e2e239a8a47ac7122",
+      "exportSHA256": "60fb0d5e5bf94e55000909cee00a0ece61dd1db0788b4561e9cbbc58dd75851f",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/gitega/job14-e06-gitega-l2-v02-daeead5adfa2.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/gitega/job14-e06-gitega-l2-v02-daeead5adfa2.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e06/gitega/job14-e06-gitega-l2-v02-daeead5adfa2.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/gitega/sisalto.json",
+      "sourceContentSHA256": "7b788bcb85e86c8dd4cd4c786b46c05e0c89f772e394b443ea6391ae3411dfc9",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "3c0ca4279c52a66f9ea6817cc324dcf10456a673ebda0a6dede3fb75ab7f4b03",
+        "semanticContextSHA256": "3c0ca4279c52a66f9ea6817cc324dcf10456a673ebda0a6dede3fb75ab7f4b03",
+        "subjectTitle": "Keskusrumpu kokoaa puolikaaren",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Yleistetty luonto-/materiaalin/tavanomaisen välineen havainnollistus. Ei kuva-inputtia, suojatun teoksen/kansi-/kaupunkikaavan jäljennöstä, kasvoja tai todellisen paikan tarkkaa asettelua. Drum-model kuvaa vain lähteen yleistä järjestysperiaatetta, ei nimettyä rituaaliesineistöä.",
+          "QA": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/gitega/assets/job14-e06-gitega-l2-v02/image.png",
+            "nativeSHA256": "daeead5adfa2066790c25f83fbf14037cb81daa146d8bc6e2e239a8a47ac7122",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "manifestHashMatches": true,
+            "personallyViewed": true,
+            "viewTool": "view_image",
+            "visualFindingsFi": "12 pientä rumpua puolikaarella ja yksi keskusrumpu pöydällä. Puu/nahka/narut ja geometria uskottavat, ei tekstiä tai ihmisiä.",
+            "captionFi": "Havainnekuva rumpujen puolikaarijärjestyksestä pienoismallina.",
+            "sourceAndTargetCheckFi": "L2/faktapohjan H5 ja UNESCO 00989 rivi 384 luettu. Toteutunut 13 on pariton ja yli tusinan. CaptionFi havainne pienoismallina, ei Gishoran esineistö, rituaalin autenttinen kuva tai tietty rummutusryhmä.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/gitega/sisalto.json",
+            "sourceEvidence": [
+              {
+                "type": "currentContent",
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/gitega/sisalto.json",
+                "sha256": "28e4b2576af2048a97c0f43f1f7863361a7060218b7aa5f44c9e69dbffc0e340",
+                "jsonPath": "$.kaupunkilehti[1].nostot[1]",
+                "text": "Kuninkaallisen rumpuperinteen kuvauksessa muut rummut muodostavat puolikaaren keskeisen rummun ympärille. Osa soittimista pitää jatkuvaa rytmiä, kun taas toiset seuraavat keskusrummun rytmiä. Mukana ovat soittajat ja tanssijat, joiden toimintaa yhteinen rytmi jäsentää. Ryhmän järjestys on siis myös musiikin rakennetta. Pelkkä rumpujen luettelo ei kerro samaa kuin niiden tehtävien ja sijainnin hahmottaminen: keskusrumpu ja sitä ympäröivät osat muodostavat yhdessä esityksen rytmisen kokonaisuuden."
+              },
+              {
+                "type": "factSheet",
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/gitega/faktapohja.md",
+                "sha256": "cf5f7aea275aae978ca52e7a166c46b0276fd1c093a4ad36c01d0056ddaa4c85",
+                "sourceUrl": "https://ich.unesco.org/en/RL/ritual-dance-of-the-royal-drum-00989"
+              }
+            ]
+          },
+          "qaReason": "Pienoismallin 13 rumpua ja puolikaari vastaavat lähdeperiaatetta; kuittaus vain tälle v2-SHA:lle."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva rumpujen puolikaarijärjestyksestä pienoismallina.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/gitega/illustration-qa-extra.json",
+        "fileSHA256": "4c0e30c6a646104d78ec9030b888160bcbc3b8bfcc969a7e01cb3ab8d163b1c6",
+        "item": {
+          "slot": "L2",
+          "targetJsonPath": "$.kaupunkilehti[1].nostot[1]",
+          "assetID": "job14-e06-gitega-l2-v02",
+          "sha256": "daeead5adfa2066790c25f83fbf14037cb81daa146d8bc6e2e239a8a47ac7122",
+          "verdict": "accepted",
+          "reason": "Pienoismallin 13 rumpua ja puolikaari vastaavat lähdeperiaatetta; kuittaus vain tälle v2-SHA:lle.",
+          "evidence": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/gitega/assets/job14-e06-gitega-l2-v02/image.png",
+            "nativeSHA256": "daeead5adfa2066790c25f83fbf14037cb81daa146d8bc6e2e239a8a47ac7122",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "manifestHashMatches": true,
+            "personallyViewed": true,
+            "viewTool": "view_image",
+            "visualFindingsFi": "12 pientä rumpua puolikaarella ja yksi keskusrumpu pöydällä. Puu/nahka/narut ja geometria uskottavat, ei tekstiä tai ihmisiä.",
+            "captionFi": "Havainnekuva rumpujen puolikaarijärjestyksestä pienoismallina.",
+            "sourceAndTargetCheckFi": "L2/faktapohjan H5 ja UNESCO 00989 rivi 384 luettu. Toteutunut 13 on pariton ja yli tusinan. CaptionFi havainne pienoismallina, ei Gishoran esineistö, rituaalin autenttinen kuva tai tietty rummutusryhmä.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/gitega/sisalto.json",
+            "sourceEvidence": [
+              {
+                "type": "currentContent",
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/gitega/sisalto.json",
+                "sha256": "28e4b2576af2048a97c0f43f1f7863361a7060218b7aa5f44c9e69dbffc0e340",
+                "jsonPath": "$.kaupunkilehti[1].nostot[1]",
+                "text": "Kuninkaallisen rumpuperinteen kuvauksessa muut rummut muodostavat puolikaaren keskeisen rummun ympärille. Osa soittimista pitää jatkuvaa rytmiä, kun taas toiset seuraavat keskusrummun rytmiä. Mukana ovat soittajat ja tanssijat, joiden toimintaa yhteinen rytmi jäsentää. Ryhmän järjestys on siis myös musiikin rakennetta. Pelkkä rumpujen luettelo ei kerro samaa kuin niiden tehtävien ja sijainnin hahmottaminen: keskusrumpu ja sitä ympäröivät osat muodostavat yhdessä esityksen rytmisen kokonaisuuden."
+              },
+              {
+                "type": "factSheet",
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/gitega/faktapohja.md",
+                "sha256": "cf5f7aea275aae978ca52e7a166c46b0276fd1c093a4ad36c01d0056ddaa4c85",
+                "sourceUrl": "https://ich.unesco.org/en/RL/ritual-dance-of-the-royal-drum-00989"
+              }
+            ]
+          },
+          "reviewedAt": "2026-10-12T20:19:44.934341+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/gitega/qa.json",
+            "sha256": "3edb39646e9a18d3e65e17429cb4e460f8ec1ca7975670134044a668b8af34f3"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/gitega/illustration-qa-extra.json",
+            "sha256": "4c0e30c6a646104d78ec9030b888160bcbc3b8bfcc969a7e01cb3ab8d163b1c6"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/gitega/job14-e06-gitega-l2-v02-daeead5adfa2.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/gitega/job14-e06-gitega-l2-v02-daeead5adfa2.png?t=60fb0d5e5bf94e55",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/gitega/job14-e06-gitega-l2-v02-daeead5adfa2.png",
+        "sha256": "60fb0d5e5bf94e55000909cee00a0ece61dd1db0788b4561e9cbbc58dd75851f",
+        "bytes": 2561919,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "job14-e06-gitega-l2-v02",
+        "nativeSHA256": "daeead5adfa2066790c25f83fbf14037cb81daa146d8bc6e2e239a8a47ac7122",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e06/gitega/job14-e06-gitega-l2-v02-daeead5adfa2.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e06",
+        "city": "gitega",
+        "slot": "L2",
+        "targetJsonPath": "$.kaupunkilehti[1].nostot[1]",
+        "verifiedAt": "2026-10-12T20:20:09.055362+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e06/gitega/job14-e06-gitega-l2-v02-daeead5adfa2.png",
+        "sha256": "60fb0d5e5bf94e55000909cee00a0ece61dd1db0788b4561e9cbbc58dd75851f",
+        "bytes": 2561919,
+        "SHAReadAt": "2026-10-12T20:20:04.243974+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "daeead5adfa2066790c25f83fbf14037cb81daa146d8bc6e2e239a8a47ac7122",
+        "rgbPixelSHA256": "731d6351364bb83ef2e5473e533db84f09c94e27ea26651c7a084ca2cfee8f7e",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "7b788bcb85e86c8dd4cd4c786b46c05e0c89f772e394b443ea6391ae3411dfc9",
+      "targetAfterSHA256": "3c0ca4279c52a66f9ea6817cc324dcf10456a673ebda0a6dede3fb75ab7f4b03",
+      "contextAfterSHA256": "3c0ca4279c52a66f9ea6817cc324dcf10456a673ebda0a6dede3fb75ab7f4b03"
+    },
+    {
+      "era": "e06",
+      "city": "gitega",
+      "slot": "L3",
+      "type": "illustration",
+      "assetID": "job14-e06-gitega-l3-v01",
+      "galleryImageID": "job14-e06-gitega-l3-v01",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[1].nostot[2]",
+      "targetTokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        2
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/gitega/job14-e06-gitega-l3-v01-2b2ebda07012.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva puurummun rungosta ja nahkakalvosta.",
+        "lyhyt": "Havainnekuva puurummun rungosta ja nahkakalvosta."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/gitega/job14-e06-gitega-l3-v01-2b2ebda07012.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva puurummun rungosta ja nahkakalvosta.",
+        "lyhyt": "Havainnekuva puurummun rungosta ja nahkakalvosta."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "2b2ebda07012a83d4d627984dd058c0641657dc89cf26899d67aef6972b75a79",
+      "exportSHA256": "2a8ece634ab7b0f3b3a6d4b7652085e701703941f87eb2aa33c4d76cff891690",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/gitega/job14-e06-gitega-l3-v01-2b2ebda07012.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/gitega/job14-e06-gitega-l3-v01-2b2ebda07012.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e06/gitega/job14-e06-gitega-l3-v01-2b2ebda07012.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/gitega/sisalto.json",
+      "sourceContentSHA256": "7b788bcb85e86c8dd4cd4c786b46c05e0c89f772e394b443ea6391ae3411dfc9",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "28b213030f6409d6e146ae3257fa18c01c5a3f4cbe914dd09acab054aa562698",
+        "semanticContextSHA256": "28b213030f6409d6e146ae3257fa18c01c5a3f4cbe914dd09acab054aa562698",
+        "subjectTitle": "Taito ei säily pelkässä esineessä",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Yleistetty luonnon/ruoan/materiaalin/tavanomaisen esineen aihe. Ei kuva-inputtia, nimettyä arkkitehtuuria, suojattua nykyteosta, tunnistettavaa ihmistä, modernia koristetta tai logoa. Ei todistus tietyn paikan todellisesta ulkonäöstä.",
+          "QA": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/gitega/assets/job14-e06-gitega-l3-v01/image.png",
+            "nativeSHA256": "2b2ebda07012a83d4d627984dd058c0641657dc89cf26899d67aef6972b75a79",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "manifestHashMatches": true,
+            "personallyViewed": true,
+            "viewTool": "view_image",
+            "visualFindingsFi": "Yksinkertainen koristeeton puurunko, nahkakalvo ja kiristysnarut. Kalvon karva/epäsäännöllinen reuna, puun syyt ja naru luontevat, ei synteettisesti toistuvaa turkkia. Ei ihmisiä, logoja, tekstiä tai nimetyn nykyesineen koristelun kopioita.",
+            "captionFi": "Havainnekuva puurummun rungosta ja nahkakalvosta.",
+            "sourceAndTargetCheckFi": "Luettu L3 Taito ei säily pelkässä esineessä ja faktapohjan T3/H5-H6 puurunko-/eläinnahkamateriaali. CaptionFi Havainnekuva puurummun rungosta ja nahkakalvosta ei nimeä tiettyä Gishoran rumpua tai väitä Burundin yksilöidyn soittimen dokumentiksi.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/gitega/sisalto.json",
+            "sourceEvidence": [
+              {
+                "type": "currentContent",
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/gitega/sisalto.json",
+                "sha256": "28e4b2576af2048a97c0f43f1f7863361a7060218b7aa5f44c9e69dbffc0e340",
+                "jsonPath": "$.kaupunkilehti[1].nostot[2]",
+                "text": "Rumpuperinteen kantajiin kuuluu suojapaikkojen vartijasukujen jälkeläisiä. Taitoja opitaan harjoittelemalla ja myös muodollisessa opetuksessa; soittimien valmistustaito on osa samaa perinnettä. Puurungot ja eläinnahka liittyvät rumpujen materiaaleihin. Esineen säilyttäminen ei yksin jatka soiton taitoa, sillä siihen tarvitaan ihmisiä, jotka osaavat tehdä, soittaa ja opettaa. Sukupolvet kohtaavat käytännön työssä, jossa vanha osaaminen siirtyy uudelle tekijälle ja uuteen esitystilanteeseen."
+              },
+              {
+                "type": "factSheet",
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/gitega/faktapohja.md",
+                "sha256": "cf5f7aea275aae978ca52e7a166c46b0276fd1c093a4ad36c01d0056ddaa4c85",
+                "sourceUrl": "https://en.wikipedia.org/wiki/Royal_Drummers_of_Burundi"
+              }
+            ]
+          },
+          "qaReason": "Puurummun ja eläinnahkakalvon materiaalihavainne vastaa L3:n soittimen valmistustaitoa."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva puurummun rungosta ja nahkakalvosta.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/gitega/illustration-qa-extra.json",
+        "fileSHA256": "4c0e30c6a646104d78ec9030b888160bcbc3b8bfcc969a7e01cb3ab8d163b1c6",
+        "item": {
+          "slot": "L3",
+          "targetJsonPath": "$.kaupunkilehti[1].nostot[2]",
+          "assetID": "job14-e06-gitega-l3-v01",
+          "sha256": "2b2ebda07012a83d4d627984dd058c0641657dc89cf26899d67aef6972b75a79",
+          "verdict": "accepted",
+          "reason": "Puurummun ja eläinnahkakalvon materiaalihavainne vastaa L3:n soittimen valmistustaitoa.",
+          "evidence": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/gitega/assets/job14-e06-gitega-l3-v01/image.png",
+            "nativeSHA256": "2b2ebda07012a83d4d627984dd058c0641657dc89cf26899d67aef6972b75a79",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "manifestHashMatches": true,
+            "personallyViewed": true,
+            "viewTool": "view_image",
+            "visualFindingsFi": "Yksinkertainen koristeeton puurunko, nahkakalvo ja kiristysnarut. Kalvon karva/epäsäännöllinen reuna, puun syyt ja naru luontevat, ei synteettisesti toistuvaa turkkia. Ei ihmisiä, logoja, tekstiä tai nimetyn nykyesineen koristelun kopioita.",
+            "captionFi": "Havainnekuva puurummun rungosta ja nahkakalvosta.",
+            "sourceAndTargetCheckFi": "Luettu L3 Taito ei säily pelkässä esineessä ja faktapohjan T3/H5-H6 puurunko-/eläinnahkamateriaali. CaptionFi Havainnekuva puurummun rungosta ja nahkakalvosta ei nimeä tiettyä Gishoran rumpua tai väitä Burundin yksilöidyn soittimen dokumentiksi.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/gitega/sisalto.json",
+            "sourceEvidence": [
+              {
+                "type": "currentContent",
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/gitega/sisalto.json",
+                "sha256": "28e4b2576af2048a97c0f43f1f7863361a7060218b7aa5f44c9e69dbffc0e340",
+                "jsonPath": "$.kaupunkilehti[1].nostot[2]",
+                "text": "Rumpuperinteen kantajiin kuuluu suojapaikkojen vartijasukujen jälkeläisiä. Taitoja opitaan harjoittelemalla ja myös muodollisessa opetuksessa; soittimien valmistustaito on osa samaa perinnettä. Puurungot ja eläinnahka liittyvät rumpujen materiaaleihin. Esineen säilyttäminen ei yksin jatka soiton taitoa, sillä siihen tarvitaan ihmisiä, jotka osaavat tehdä, soittaa ja opettaa. Sukupolvet kohtaavat käytännön työssä, jossa vanha osaaminen siirtyy uudelle tekijälle ja uuteen esitystilanteeseen."
+              },
+              {
+                "type": "factSheet",
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/gitega/faktapohja.md",
+                "sha256": "cf5f7aea275aae978ca52e7a166c46b0276fd1c093a4ad36c01d0056ddaa4c85",
+                "sourceUrl": "https://en.wikipedia.org/wiki/Royal_Drummers_of_Burundi"
+              }
+            ]
+          },
+          "reviewedAt": "2026-10-12T18:21:34.204643+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/gitega/qa.json",
+            "sha256": "3edb39646e9a18d3e65e17429cb4e460f8ec1ca7975670134044a668b8af34f3"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/gitega/illustration-qa-extra.json",
+            "sha256": "4c0e30c6a646104d78ec9030b888160bcbc3b8bfcc969a7e01cb3ab8d163b1c6"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/gitega/job14-e06-gitega-l3-v01-2b2ebda07012.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/gitega/job14-e06-gitega-l3-v01-2b2ebda07012.png?t=2a8ece634ab7b0f3",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/gitega/job14-e06-gitega-l3-v01-2b2ebda07012.png",
+        "sha256": "2a8ece634ab7b0f3b3a6d4b7652085e701703941f87eb2aa33c4d76cff891690",
+        "bytes": 2426582,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "job14-e06-gitega-l3-v01",
+        "nativeSHA256": "2b2ebda07012a83d4d627984dd058c0641657dc89cf26899d67aef6972b75a79",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e06/gitega/job14-e06-gitega-l3-v01-2b2ebda07012.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e06",
+        "city": "gitega",
+        "slot": "L3",
+        "targetJsonPath": "$.kaupunkilehti[1].nostot[2]",
+        "verifiedAt": "2026-10-12T18:22:42.671822+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e06/gitega/job14-e06-gitega-l3-v01-2b2ebda07012.png",
+        "sha256": "2a8ece634ab7b0f3b3a6d4b7652085e701703941f87eb2aa33c4d76cff891690",
+        "bytes": 2426582,
+        "SHAReadAt": "2026-10-12T18:29:47.422406+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "2b2ebda07012a83d4d627984dd058c0641657dc89cf26899d67aef6972b75a79",
+        "rgbPixelSHA256": "799f08fb60ab236561d8ac37c8d78df964581e692bf98128c98e530781be1da7",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "7b788bcb85e86c8dd4cd4c786b46c05e0c89f772e394b443ea6391ae3411dfc9",
+      "targetAfterSHA256": "28b213030f6409d6e146ae3257fa18c01c5a3f4cbe914dd09acab054aa562698",
+      "contextAfterSHA256": "28b213030f6409d6e146ae3257fa18c01c5a3f4cbe914dd09acab054aa562698"
     },
     {
       "era": "e06",
@@ -909,7 +1960,7 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/gitega/illustration-qa-extra.json",
-            "sha256": "301703af2156e5a69dd198c4aae96db4e77f97874f14d480f417ae6fe70543f2"
+            "sha256": "4c0e30c6a646104d78ec9030b888160bcbc3b8bfcc969a7e01cb3ab8d163b1c6"
           }
         ]
       },

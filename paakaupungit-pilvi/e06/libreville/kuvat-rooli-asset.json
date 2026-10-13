@@ -8,6 +8,356 @@
     {
       "era": "e06",
       "city": "libreville",
+      "slot": "O3",
+      "type": "illustration",
+      "assetID": "job14-e06-libreville-o3-v01",
+      "galleryImageID": "job14-e06-libreville-o3-v01",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[2].kuva",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "matkailijalle",
+        "artikkeli",
+        "jaksot",
+        2,
+        "kuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/libreville/job14-e06-libreville-o3-v01-1459743d0dfc.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva päiväntasaajan metsän puista.",
+        "lyhyt": "Havainnekuva päiväntasaajan metsän puista."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/libreville/job14-e06-libreville-o3-v01-1459743d0dfc.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva päiväntasaajan metsän puista.",
+        "lyhyt": "Havainnekuva päiväntasaajan metsän puista."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "1459743d0dfc71a84d4597c812f7cb74783ea7c20e16a819596b4df1eeff4e5c",
+      "exportSHA256": "b5267afe7e14d6a739a461710b54872ff40e8733061843b800bb37ed24f2bc3e",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/libreville/job14-e06-libreville-o3-v01-1459743d0dfc.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/libreville/job14-e06-libreville-o3-v01-1459743d0dfc.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e06/libreville/job14-e06-libreville-o3-v01-1459743d0dfc.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/libreville/sisalto.json",
+      "sourceContentSHA256": "483e3ccbf6a4a92090687cfcda319d4dc1a1dc3f81bd514e13a8e7d511343752",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "ba9e33c473bbe528a9c596bb80dc3fa2bf90c2e44f2a2f429b2708ad7811d45a",
+        "subjectTitle": "Puiden kaupunki",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Yleistetty kasvi-, ruoka-, luonnonmateriaali- tai tavallisen funktionaalisen esineen havainnollistus. Ei kuva-inputtia, nimettyä kaupunkiasettelua, arkeologista esinerekonstruktiota tai suojattua teosta. Ei todellinen paikkavalokuva.",
+          "QA": {
+            "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/libreville/assets/job14-e06-libreville-o3-v01/image.png",
+            "width": 1536,
+            "height": 1024,
+            "sha256": "1459743d0dfc71a84d4597c812f7cb74783ea7c20e16a819596b4df1eeff4e5c",
+            "nativeGeometry": {
+              "rawWidth": 1536,
+              "rawHeight": 1024,
+              "exifOrientation": 1,
+              "width": 1536,
+              "height": 1024
+            },
+            "auditEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/libreville/qa-evidence/76c80195a37b-technical-source.json",
+            "visualViewedByThisSession": false,
+            "visualReviewSource": "independent extra reviewer; not personally viewed here",
+            "independentReview": {
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/libreville/illustration-qa-extra.json",
+              "sha256": "cb3a50523c1988af0f7da958376a0a741760b13a31214ebe0b869dab93c0971e",
+              "reviewerGroup": "kuvitus-1",
+              "assetID": "job14-e06-libreville-o3-v01",
+              "nativeSHA256": "1459743d0dfc71a84d4597c812f7cb74783ea7c20e16a819596b4df1eeff4e5c",
+              "verdict": "accepted",
+              "reason": "Puuston yleishavainne vastaa O3:n aihetta.",
+              "evidence": {
+                "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/libreville/assets/job14-e06-libreville-o3-v01/image.png",
+                "nativeSHA256": "1459743d0dfc71a84d4597c812f7cb74783ea7c20e16a819596b4df1eeff4e5c",
+                "nativeDimensions": [
+                  1536,
+                  1024
+                ],
+                "manifestHashMatches": true,
+                "personallyViewed": true,
+                "viewTool": "view_image",
+                "visualFindingsFi": "Metsän runkoja ja köynnöksiä läheltä. Kuori, lehtiruodit ja valo luonnollisia, ei toistopintaa tai merkintöjä.",
+                "captionFi": "Havainnekuva päiväntasaajan metsän puista.",
+                "sourceAndTargetCheckFi": "O3/faktapohjan päiväntasaajan metsä/Sibang luettu. CaptionFi havainne, ei paikallinen lajiluettelo tai täsmäpaikka. K3:n laajemman metsän ja N2:n lehden rinnalla tämä kuva painottaa runkoja/köynnöksiä; eri native-tiedosto.",
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/libreville/sisalto.json",
+                "sourceEvidence": [
+                  {
+                    "type": "currentContent",
+                    "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/libreville/sisalto.json",
+                    "sha256": "5882f74d38eb31a2dbb4c4c7031a43db987f5f71ab3401e776a9ba117d7591b0",
+                    "jsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[2]",
+                    "text": "Sibangin arboretumissa päiväntasaajan metsän puita säilytetään tutkimusta varten. Opastettu käynti sovitaan ennakkoon. Librevillen pohjoispuolinen Akanda ja estuaarin etelärannan Pongara ovat laajoja luontokohteita, joiden kulkujärjestelyt tehdään erikseen."
+                  },
+                  {
+                    "type": "factSheet",
+                    "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/libreville/faktapohja.md",
+                    "sha256": "e89f00286d3b16a46bcabff7c595b16a0ffe3d3e3522a760121a5e1e4ca1ee7f",
+                    "sourceUrl": "https://fr.wikipedia.org/wiki/Arboretum_de_Sibang"
+                  }
+                ]
+              },
+              "opinionSHA256": "bca055ade521dd85108d1f5d20d32c507fbe02e985896d2aa2fe194576323952",
+              "capturedSourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/libreville/qa-evidence/extra-review-snapshots/cb3a50523c1988af0f7da958376a0a741760b13a31214ebe0b869dab93c0971e.json"
+            },
+            "imageType": "illustration",
+            "captionFi": "Havainnekuva päiväntasaajan metsän puista.",
+            "realPlacePhotograph": false
+          },
+          "qaReason": "Lisätarkistajan kuvitus-1 dokumentoitu arvio täsmälleen samasta assetID/nativeSHA-versiosta: Puuston yleishavainne vastaa O3:n aihetta."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva päiväntasaajan metsän puista.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/libreville/qa.json",
+        "fileSHA256": "b5ac415e2d5a6def3e37d3c9b9e1a2cb0e3744a2ff94bb678ce97ff73b7b5ca2",
+        "item": {
+          "slot": "O3",
+          "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[2].kuva",
+          "assetID": "job14-e06-libreville-o3-v01",
+          "sha256": "1459743d0dfc71a84d4597c812f7cb74783ea7c20e16a819596b4df1eeff4e5c",
+          "verdict": "accepted",
+          "reason": "Lisätarkistajan kuvitus-1 dokumentoitu arvio täsmälleen samasta assetID/nativeSHA-versiosta: Puuston yleishavainne vastaa O3:n aihetta.",
+          "evidence": {
+            "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/libreville/assets/job14-e06-libreville-o3-v01/image.png",
+            "width": 1536,
+            "height": 1024,
+            "sha256": "1459743d0dfc71a84d4597c812f7cb74783ea7c20e16a819596b4df1eeff4e5c",
+            "nativeGeometry": {
+              "rawWidth": 1536,
+              "rawHeight": 1024,
+              "exifOrientation": 1,
+              "width": 1536,
+              "height": 1024
+            },
+            "auditEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/libreville/qa-evidence/76c80195a37b-technical-source.json",
+            "visualViewedByThisSession": false,
+            "visualReviewSource": "independent extra reviewer; not personally viewed here",
+            "independentReview": {
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/libreville/illustration-qa-extra.json",
+              "sha256": "cb3a50523c1988af0f7da958376a0a741760b13a31214ebe0b869dab93c0971e",
+              "reviewerGroup": "kuvitus-1",
+              "assetID": "job14-e06-libreville-o3-v01",
+              "nativeSHA256": "1459743d0dfc71a84d4597c812f7cb74783ea7c20e16a819596b4df1eeff4e5c",
+              "verdict": "accepted",
+              "reason": "Puuston yleishavainne vastaa O3:n aihetta.",
+              "evidence": {
+                "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/libreville/assets/job14-e06-libreville-o3-v01/image.png",
+                "nativeSHA256": "1459743d0dfc71a84d4597c812f7cb74783ea7c20e16a819596b4df1eeff4e5c",
+                "nativeDimensions": [
+                  1536,
+                  1024
+                ],
+                "manifestHashMatches": true,
+                "personallyViewed": true,
+                "viewTool": "view_image",
+                "visualFindingsFi": "Metsän runkoja ja köynnöksiä läheltä. Kuori, lehtiruodit ja valo luonnollisia, ei toistopintaa tai merkintöjä.",
+                "captionFi": "Havainnekuva päiväntasaajan metsän puista.",
+                "sourceAndTargetCheckFi": "O3/faktapohjan päiväntasaajan metsä/Sibang luettu. CaptionFi havainne, ei paikallinen lajiluettelo tai täsmäpaikka. K3:n laajemman metsän ja N2:n lehden rinnalla tämä kuva painottaa runkoja/köynnöksiä; eri native-tiedosto.",
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/libreville/sisalto.json",
+                "sourceEvidence": [
+                  {
+                    "type": "currentContent",
+                    "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/libreville/sisalto.json",
+                    "sha256": "5882f74d38eb31a2dbb4c4c7031a43db987f5f71ab3401e776a9ba117d7591b0",
+                    "jsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[2]",
+                    "text": "Sibangin arboretumissa päiväntasaajan metsän puita säilytetään tutkimusta varten. Opastettu käynti sovitaan ennakkoon. Librevillen pohjoispuolinen Akanda ja estuaarin etelärannan Pongara ovat laajoja luontokohteita, joiden kulkujärjestelyt tehdään erikseen."
+                  },
+                  {
+                    "type": "factSheet",
+                    "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/libreville/faktapohja.md",
+                    "sha256": "e89f00286d3b16a46bcabff7c595b16a0ffe3d3e3522a760121a5e1e4ca1ee7f",
+                    "sourceUrl": "https://fr.wikipedia.org/wiki/Arboretum_de_Sibang"
+                  }
+                ]
+              },
+              "opinionSHA256": "bca055ade521dd85108d1f5d20d32c507fbe02e985896d2aa2fe194576323952",
+              "capturedSourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/libreville/qa-evidence/extra-review-snapshots/cb3a50523c1988af0f7da958376a0a741760b13a31214ebe0b869dab93c0971e.json"
+            },
+            "imageType": "illustration",
+            "captionFi": "Havainnekuva päiväntasaajan metsän puista.",
+            "realPlacePhotograph": false
+          },
+          "importedIndependentReview": true,
+          "independentReviews": [
+            {
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/libreville/illustration-qa-extra.json",
+              "sha256": "cb3a50523c1988af0f7da958376a0a741760b13a31214ebe0b869dab93c0971e",
+              "reviewerGroup": "kuvitus-1",
+              "assetID": "job14-e06-libreville-o3-v01",
+              "nativeSHA256": "1459743d0dfc71a84d4597c812f7cb74783ea7c20e16a819596b4df1eeff4e5c",
+              "verdict": "accepted",
+              "reason": "Puuston yleishavainne vastaa O3:n aihetta.",
+              "evidence": {
+                "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/libreville/assets/job14-e06-libreville-o3-v01/image.png",
+                "nativeSHA256": "1459743d0dfc71a84d4597c812f7cb74783ea7c20e16a819596b4df1eeff4e5c",
+                "nativeDimensions": [
+                  1536,
+                  1024
+                ],
+                "manifestHashMatches": true,
+                "personallyViewed": true,
+                "viewTool": "view_image",
+                "visualFindingsFi": "Metsän runkoja ja köynnöksiä läheltä. Kuori, lehtiruodit ja valo luonnollisia, ei toistopintaa tai merkintöjä.",
+                "captionFi": "Havainnekuva päiväntasaajan metsän puista.",
+                "sourceAndTargetCheckFi": "O3/faktapohjan päiväntasaajan metsä/Sibang luettu. CaptionFi havainne, ei paikallinen lajiluettelo tai täsmäpaikka. K3:n laajemman metsän ja N2:n lehden rinnalla tämä kuva painottaa runkoja/köynnöksiä; eri native-tiedosto.",
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/libreville/sisalto.json",
+                "sourceEvidence": [
+                  {
+                    "type": "currentContent",
+                    "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/libreville/sisalto.json",
+                    "sha256": "5882f74d38eb31a2dbb4c4c7031a43db987f5f71ab3401e776a9ba117d7591b0",
+                    "jsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[2]",
+                    "text": "Sibangin arboretumissa päiväntasaajan metsän puita säilytetään tutkimusta varten. Opastettu käynti sovitaan ennakkoon. Librevillen pohjoispuolinen Akanda ja estuaarin etelärannan Pongara ovat laajoja luontokohteita, joiden kulkujärjestelyt tehdään erikseen."
+                  },
+                  {
+                    "type": "factSheet",
+                    "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/libreville/faktapohja.md",
+                    "sha256": "e89f00286d3b16a46bcabff7c595b16a0ffe3d3e3522a760121a5e1e4ca1ee7f",
+                    "sourceUrl": "https://fr.wikipedia.org/wiki/Arboretum_de_Sibang"
+                  }
+                ]
+              },
+              "opinionSHA256": "bca055ade521dd85108d1f5d20d32c507fbe02e985896d2aa2fe194576323952",
+              "capturedSourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/libreville/qa-evidence/extra-review-snapshots/cb3a50523c1988af0f7da958376a0a741760b13a31214ebe0b869dab93c0971e.json"
+            }
+          ],
+          "checkedAt": "2026-10-12T20:30:46.364880+00:00",
+          "contentSHA256": "483e3ccbf6a4a92090687cfcda319d4dc1a1dc3f81bd514e13a8e7d511343752",
+          "targetSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/libreville/qa.json",
+            "sha256": "b5ac415e2d5a6def3e37d3c9b9e1a2cb0e3744a2ff94bb678ce97ff73b7b5ca2"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/libreville/illustration-qa-extra.json",
+            "sha256": "cb3a50523c1988af0f7da958376a0a741760b13a31214ebe0b869dab93c0971e"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/libreville/job14-e06-libreville-o3-v01-1459743d0dfc.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/libreville/job14-e06-libreville-o3-v01-1459743d0dfc.png?t=b5267afe7e14d6a7",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/libreville/job14-e06-libreville-o3-v01-1459743d0dfc.png",
+        "sha256": "b5267afe7e14d6a739a461710b54872ff40e8733061843b800bb37ed24f2bc3e",
+        "bytes": 3249321,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "job14-e06-libreville-o3-v01",
+        "nativeSHA256": "1459743d0dfc71a84d4597c812f7cb74783ea7c20e16a819596b4df1eeff4e5c",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e06/libreville/job14-e06-libreville-o3-v01-1459743d0dfc.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e06",
+        "city": "libreville",
+        "slot": "O3",
+        "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[2].kuva",
+        "verifiedAt": "2026-10-12T20:31:07.194307+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e06/libreville/job14-e06-libreville-o3-v01-1459743d0dfc.png",
+        "sha256": "b5267afe7e14d6a739a461710b54872ff40e8733061843b800bb37ed24f2bc3e",
+        "bytes": 3249321,
+        "SHAReadAt": "2026-10-12T20:30:06.322399+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "1459743d0dfc71a84d4597c812f7cb74783ea7c20e16a819596b4df1eeff4e5c",
+        "rgbPixelSHA256": "9dbfe9e2a76c734e9c5767d3c5efbdd56eacf36a1aa4f57f2eb0469bdc1459c0",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "483e3ccbf6a4a92090687cfcda319d4dc1a1dc3f81bd514e13a8e7d511343752",
+      "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+      "contextAfterSHA256": "ba9e33c473bbe528a9c596bb80dc3fa2bf90c2e44f2a2f429b2708ad7811d45a"
+    },
+    {
+      "era": "e06",
+      "city": "libreville",
       "slot": "O4",
       "type": "illustration",
       "assetID": "job14-e06-libreville-o4-v01",
@@ -145,7 +495,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/libreville/qa.json",
-        "fileSHA256": "fc0d689d592e1d22ab4dfc7513773bee76370aa5419a0e07908c365c738ffafe",
+        "fileSHA256": "b5ac415e2d5a6def3e37d3c9b9e1a2cb0e3744a2ff94bb678ce97ff73b7b5ca2",
         "item": {
           "slot": "O4",
           "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
@@ -264,11 +614,11 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/libreville/qa.json",
-            "sha256": "fc0d689d592e1d22ab4dfc7513773bee76370aa5419a0e07908c365c738ffafe"
+            "sha256": "b5ac415e2d5a6def3e37d3c9b9e1a2cb0e3744a2ff94bb678ce97ff73b7b5ca2"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/libreville/illustration-qa-extra.json",
-            "sha256": "3d589792602388f1c3101442add852cfe2563c7056bd7cf1af76d92ecaaf3a14"
+            "sha256": "cb3a50523c1988af0f7da958376a0a741760b13a31214ebe0b869dab93c0971e"
           }
         ]
       },
@@ -490,7 +840,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/libreville/qa.json",
-        "fileSHA256": "fc0d689d592e1d22ab4dfc7513773bee76370aa5419a0e07908c365c738ffafe",
+        "fileSHA256": "b5ac415e2d5a6def3e37d3c9b9e1a2cb0e3744a2ff94bb678ce97ff73b7b5ca2",
         "item": {
           "slot": "K3",
           "targetJsonPath": "$.kaupunkilehti[0].nostot[2]",
@@ -646,11 +996,11 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/libreville/qa.json",
-            "sha256": "fc0d689d592e1d22ab4dfc7513773bee76370aa5419a0e07908c365c738ffafe"
+            "sha256": "b5ac415e2d5a6def3e37d3c9b9e1a2cb0e3744a2ff94bb678ce97ff73b7b5ca2"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/libreville/illustration-qa-extra.json",
-            "sha256": "3d589792602388f1c3101442add852cfe2563c7056bd7cf1af76d92ecaaf3a14"
+            "sha256": "cb3a50523c1988af0f7da958376a0a741760b13a31214ebe0b869dab93c0971e"
           }
         ]
       },
@@ -874,7 +1224,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/libreville/qa.json",
-        "fileSHA256": "fc0d689d592e1d22ab4dfc7513773bee76370aa5419a0e07908c365c738ffafe",
+        "fileSHA256": "b5ac415e2d5a6def3e37d3c9b9e1a2cb0e3744a2ff94bb678ce97ff73b7b5ca2",
         "item": {
           "slot": "K4",
           "targetJsonPath": "$.kaupunkilehti[0].nostot[3]",
@@ -993,11 +1343,11 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/libreville/qa.json",
-            "sha256": "fc0d689d592e1d22ab4dfc7513773bee76370aa5419a0e07908c365c738ffafe"
+            "sha256": "b5ac415e2d5a6def3e37d3c9b9e1a2cb0e3744a2ff94bb678ce97ff73b7b5ca2"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/libreville/illustration-qa-extra.json",
-            "sha256": "3d589792602388f1c3101442add852cfe2563c7056bd7cf1af76d92ecaaf3a14"
+            "sha256": "cb3a50523c1988af0f7da958376a0a741760b13a31214ebe0b869dab93c0971e"
           }
         ]
       },
@@ -1212,7 +1562,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/libreville/qa.json",
-        "fileSHA256": "fc0d689d592e1d22ab4dfc7513773bee76370aa5419a0e07908c365c738ffafe",
+        "fileSHA256": "b5ac415e2d5a6def3e37d3c9b9e1a2cb0e3744a2ff94bb678ce97ff73b7b5ca2",
         "item": {
           "slot": "L1",
           "targetJsonPath": "$.kaupunkilehti[1].nostot[0]",
@@ -1400,11 +1750,11 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/libreville/qa.json",
-            "sha256": "fc0d689d592e1d22ab4dfc7513773bee76370aa5419a0e07908c365c738ffafe"
+            "sha256": "b5ac415e2d5a6def3e37d3c9b9e1a2cb0e3744a2ff94bb678ce97ff73b7b5ca2"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/libreville/illustration-qa-extra.json",
-            "sha256": "3d589792602388f1c3101442add852cfe2563c7056bd7cf1af76d92ecaaf3a14"
+            "sha256": "cb3a50523c1988af0f7da958376a0a741760b13a31214ebe0b869dab93c0971e"
           }
         ]
       },
@@ -1582,7 +1932,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/libreville/qa.json",
-        "fileSHA256": "fc0d689d592e1d22ab4dfc7513773bee76370aa5419a0e07908c365c738ffafe",
+        "fileSHA256": "b5ac415e2d5a6def3e37d3c9b9e1a2cb0e3744a2ff94bb678ce97ff73b7b5ca2",
         "item": {
           "slot": "L2",
           "targetJsonPath": "$.kaupunkilehti[1].nostot[1]",
@@ -1771,11 +2121,11 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/libreville/qa.json",
-            "sha256": "fc0d689d592e1d22ab4dfc7513773bee76370aa5419a0e07908c365c738ffafe"
+            "sha256": "b5ac415e2d5a6def3e37d3c9b9e1a2cb0e3744a2ff94bb678ce97ff73b7b5ca2"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/libreville/illustration-qa-extra.json",
-            "sha256": "3d589792602388f1c3101442add852cfe2563c7056bd7cf1af76d92ecaaf3a14"
+            "sha256": "cb3a50523c1988af0f7da958376a0a741760b13a31214ebe0b869dab93c0971e"
           }
         ]
       },
@@ -1999,7 +2349,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/libreville/qa.json",
-        "fileSHA256": "fc0d689d592e1d22ab4dfc7513773bee76370aa5419a0e07908c365c738ffafe",
+        "fileSHA256": "b5ac415e2d5a6def3e37d3c9b9e1a2cb0e3744a2ff94bb678ce97ff73b7b5ca2",
         "item": {
           "slot": "L3",
           "targetJsonPath": "$.kaupunkilehti[1].nostot[2]",
@@ -2118,11 +2468,11 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/libreville/qa.json",
-            "sha256": "fc0d689d592e1d22ab4dfc7513773bee76370aa5419a0e07908c365c738ffafe"
+            "sha256": "b5ac415e2d5a6def3e37d3c9b9e1a2cb0e3744a2ff94bb678ce97ff73b7b5ca2"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/libreville/illustration-qa-extra.json",
-            "sha256": "3d589792602388f1c3101442add852cfe2563c7056bd7cf1af76d92ecaaf3a14"
+            "sha256": "cb3a50523c1988af0f7da958376a0a741760b13a31214ebe0b869dab93c0971e"
           }
         ]
       },
@@ -2346,7 +2696,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/libreville/qa.json",
-        "fileSHA256": "fc0d689d592e1d22ab4dfc7513773bee76370aa5419a0e07908c365c738ffafe",
+        "fileSHA256": "b5ac415e2d5a6def3e37d3c9b9e1a2cb0e3744a2ff94bb678ce97ff73b7b5ca2",
         "item": {
           "slot": "L4",
           "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
@@ -2465,11 +2815,11 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/libreville/qa.json",
-            "sha256": "fc0d689d592e1d22ab4dfc7513773bee76370aa5419a0e07908c365c738ffafe"
+            "sha256": "b5ac415e2d5a6def3e37d3c9b9e1a2cb0e3744a2ff94bb678ce97ff73b7b5ca2"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/libreville/illustration-qa-extra.json",
-            "sha256": "3d589792602388f1c3101442add852cfe2563c7056bd7cf1af76d92ecaaf3a14"
+            "sha256": "cb3a50523c1988af0f7da958376a0a741760b13a31214ebe0b869dab93c0971e"
           }
         ]
       },
@@ -2693,7 +3043,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/libreville/qa.json",
-        "fileSHA256": "fc0d689d592e1d22ab4dfc7513773bee76370aa5419a0e07908c365c738ffafe",
+        "fileSHA256": "b5ac415e2d5a6def3e37d3c9b9e1a2cb0e3744a2ff94bb678ce97ff73b7b5ca2",
         "item": {
           "slot": "N1",
           "targetJsonPath": "$.nahtavyydet[\"Mont-Bouët'n tori\"].kuvat[0]",
@@ -2812,11 +3162,11 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/libreville/qa.json",
-            "sha256": "fc0d689d592e1d22ab4dfc7513773bee76370aa5419a0e07908c365c738ffafe"
+            "sha256": "b5ac415e2d5a6def3e37d3c9b9e1a2cb0e3744a2ff94bb678ce97ff73b7b5ca2"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/libreville/illustration-qa-extra.json",
-            "sha256": "3d589792602388f1c3101442add852cfe2563c7056bd7cf1af76d92ecaaf3a14"
+            "sha256": "cb3a50523c1988af0f7da958376a0a741760b13a31214ebe0b869dab93c0971e"
           }
         ]
       },
@@ -3040,7 +3390,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/libreville/qa.json",
-        "fileSHA256": "fc0d689d592e1d22ab4dfc7513773bee76370aa5419a0e07908c365c738ffafe",
+        "fileSHA256": "b5ac415e2d5a6def3e37d3c9b9e1a2cb0e3744a2ff94bb678ce97ff73b7b5ca2",
         "item": {
           "slot": "N2",
           "targetJsonPath": "$.nahtavyydet[\"Sibangin arboretum\"].kuvat[0]",
@@ -3159,11 +3509,11 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/libreville/qa.json",
-            "sha256": "fc0d689d592e1d22ab4dfc7513773bee76370aa5419a0e07908c365c738ffafe"
+            "sha256": "b5ac415e2d5a6def3e37d3c9b9e1a2cb0e3744a2ff94bb678ce97ff73b7b5ca2"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/libreville/illustration-qa-extra.json",
-            "sha256": "3d589792602388f1c3101442add852cfe2563c7056bd7cf1af76d92ecaaf3a14"
+            "sha256": "cb3a50523c1988af0f7da958376a0a741760b13a31214ebe0b869dab93c0971e"
           }
         ]
       },
@@ -3360,7 +3710,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/libreville/qa.json",
-        "fileSHA256": "fc0d689d592e1d22ab4dfc7513773bee76370aa5419a0e07908c365c738ffafe",
+        "fileSHA256": "b5ac415e2d5a6def3e37d3c9b9e1a2cb0e3744a2ff94bb678ce97ff73b7b5ca2",
         "item": {
           "slot": "PHOTO",
           "targetJsonPath": "$.valokuva",
@@ -3408,11 +3758,11 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/libreville/qa.json",
-            "sha256": "fc0d689d592e1d22ab4dfc7513773bee76370aa5419a0e07908c365c738ffafe"
+            "sha256": "b5ac415e2d5a6def3e37d3c9b9e1a2cb0e3744a2ff94bb678ce97ff73b7b5ca2"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/libreville/illustration-qa-extra.json",
-            "sha256": "3d589792602388f1c3101442add852cfe2563c7056bd7cf1af76d92ecaaf3a14"
+            "sha256": "cb3a50523c1988af0f7da958376a0a741760b13a31214ebe0b869dab93c0971e"
           }
         ]
       },
@@ -3598,7 +3948,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/libreville/qa.json",
-        "fileSHA256": "fc0d689d592e1d22ab4dfc7513773bee76370aa5419a0e07908c365c738ffafe",
+        "fileSHA256": "b5ac415e2d5a6def3e37d3c9b9e1a2cb0e3744a2ff94bb678ce97ff73b7b5ca2",
         "item": {
           "slot": "C1",
           "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
@@ -3646,11 +3996,11 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/libreville/qa.json",
-            "sha256": "fc0d689d592e1d22ab4dfc7513773bee76370aa5419a0e07908c365c738ffafe"
+            "sha256": "b5ac415e2d5a6def3e37d3c9b9e1a2cb0e3744a2ff94bb678ce97ff73b7b5ca2"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/libreville/illustration-qa-extra.json",
-            "sha256": "3d589792602388f1c3101442add852cfe2563c7056bd7cf1af76d92ecaaf3a14"
+            "sha256": "cb3a50523c1988af0f7da958376a0a741760b13a31214ebe0b869dab93c0971e"
           }
         ]
       },
@@ -3722,244 +4072,6 @@
       "sourceContentAfterSHA256": "483e3ccbf6a4a92090687cfcda319d4dc1a1dc3f81bd514e13a8e7d511343752",
       "targetAfterSHA256": "d5aeeda4a3e14878009f77e41d560c7331cac72b33c3c132505478b16863c972",
       "contextAfterSHA256": "d5aeeda4a3e14878009f77e41d560c7331cac72b33c3c132505478b16863c972"
-    },
-    {
-      "era": "e06",
-      "city": "libreville",
-      "slot": "K2",
-      "type": "commons",
-      "assetID": "capital-cc-e06-libreville-k2-dff7864de15c4199",
-      "galleryImageID": "capital-cc-e06-libreville-k2-dff7864de15c4199",
-      "commonsFile": "Le Komo 1.JPG",
-      "targetJsonPath": "$.kaupunkilehti[0].nostot[1]",
-      "targetTokens": [
-        "kaupunkilehti",
-        0,
-        "nostot",
-        1
-      ],
-      "operation": "merge-media-fields-preserve-other-content",
-      "CmediaFieldPayload": {
-        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e06/libreville/k2-dff7864de15c41995ef2.jpg",
-        "suora": true,
-        "lahde": "Ballot 2, Wikimedia Commons (CC0)",
-        "selite": "Komojoen vesi liittyy Gabonin estuaariin.",
-        "lyhyt": "Komojoen vesi liittyy Gabonin estuaariin.",
-        "tiedosto": "Le Komo 1.JPG"
-      },
-      "removeMediaKeys": [],
-      "CvalidatorCompatiblePayload": {
-        "lahde": "Ballot 2, Wikimedia Commons (CC0)",
-        "selite": "Komojoen vesi liittyy Gabonin estuaariin.",
-        "lyhyt": "Komojoen vesi liittyy Gabonin estuaariin.",
-        "tiedosto": "Le Komo 1.JPG"
-      },
-      "runtimeMediaFieldPayload": {
-        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e06/libreville/k2-dff7864de15c41995ef2.jpg",
-        "suora": true,
-        "lahde": "Ballot 2, Wikimedia Commons (CC0)",
-        "selite": "Komojoen vesi liittyy Gabonin estuaariin.",
-        "lyhyt": "Komojoen vesi liittyy Gabonin estuaariin.",
-        "tiedosto": "Le Komo 1.JPG"
-      },
-      "runtimeRemoveMediaKeys": [],
-      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
-      "nativeSHA256": "dff7864de15c41995ef2c345425ea087d056f8d42a39906f31b9be7bc56e13a2",
-      "exportSHA256": "dff7864de15c41995ef2c345425ea087d056f8d42a39906f31b9be7bc56e13a2",
-      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e06/libreville/k2-dff7864de15c41995ef2.jpg",
-      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e06/libreville/k2-dff7864de15c41995ef2.jpg",
-      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/libreville/cc-work/8676d8010b4d39bc-original.jpg",
-      "dimensions": [
-        2048,
-        1536
-      ],
-      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/libreville/sisalto.json",
-      "sourceContentSHA256": "483e3ccbf6a4a92090687cfcda319d4dc1a1dc3f81bd514e13a8e7d511343752",
-      "semanticSourceBind": {
-        "targetBeforeSHA256": "7a3d986ef3713c80b82121a4aed100bd308bfd2f7be4328ce8e410ce17b73290",
-        "semanticContextSHA256": "7a3d986ef3713c80b82121a4aed100bd308bfd2f7be4328ce8e410ce17b73290",
-        "subjectTitle": "Veden äärellä on monta rantaa",
-        "targetState": "existing-target"
-      },
-      "attribution": {
-        "author": "Ballot 2",
-        "license": "CC0",
-        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
-        "sourcePage": "https://commons.wikimedia.org/wiki/File:Le_Komo_1.JPG",
-        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/6/67/Le_Komo_1.JPG",
-        "rightsEvidence": {
-          "selection": "Author Ballot 2 tiedostosivulta; CC0 1.0. Description: Le fleuve sous la route de Libreville à Lambaréné. Näyttää tekstissä nimetyn Komo-joen, ei väitä tätä Librevillen Bord de meriksi. Luonnonvesi ja metsä, tavallinen kaide ei nimetty taideteos.",
-          "QA": {
-            "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/libreville/cc-work/8676d8010b4d39bc-original.jpg",
-            "width": 2048,
-            "height": 1536,
-            "sha256": "dff7864de15c41995ef2c345425ea087d056f8d42a39906f31b9be7bc56e13a2",
-            "sourcePage": "https://commons.wikimedia.org/wiki/File:Le_Komo_1.JPG",
-            "sourcePagePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/libreville/qa-evidence/cc-source-snapshots/ddd2925630eea71e517c0abfd0068b62baee2ac1f0a8efd5a578c13c26fd4e30.html",
-            "sourcePageSHA256": "ddd2925630eea71e517c0abfd0068b62baee2ac1f0a8efd5a578c13c26fd4e30",
-            "sourceFields": {
-              "Date": "December 2009",
-              "Source": "Own work",
-              "Author": "Ballot 2"
-            },
-            "authors": [
-              "Ballot 2"
-            ],
-            "authorOrigin": "Author table",
-            "licenseChoices": [
-              "CC0"
-            ],
-            "license": "CC0",
-            "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
-            "existingGameUse": [],
-            "auditEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/libreville/qa-evidence/8676d8010b4d-technical-source.json",
-            "visualViewed": true,
-            "visualNotes": "Komojoen vesi ja metsäranta, etualalla tavanomainen tekninen kaide. Source Description sijoittaa kuvan joelle Libreville–Lambaréné-tien kohdalle. Kuvateksti nimeää Komon eikä väitä kuvaa Librevillen Bord de meriksi; nostossa joen yhteys estuaariin. Ei kasvoja, lisättyä tekstiä tai taideteosta.",
-            "captionFi": "Komojoen vesi liittyy Gabonin estuaariin.",
-            "rightsLayer": "Elävä luonto/yleinen kaupunkialue tai tavallinen tekninen kaide, ei luovan teoksen pääaihetta",
-            "captureDate": null,
-            "formatRule": "TRAVELER only portrait .60–.85; PHOTO/nostot no panorama/landscape requirement",
-            "upstreamSourcePagePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/lahdevarasto/ff48c6035cc4bfd5c685cfa8da910cfe7a22cc4dbf67ae895e0ae3f702ea7dec.body",
-            "immutableSourceSnapshot": true
-          },
-          "qaReason": "Komojoen vesi ja metsäranta, etualalla tavanomainen tekninen kaide. Source Description sijoittaa kuvan joelle Libreville–Lambaréné-tien kohdalle. Kuvateksti nimeää Komon eikä väitä kuvaa Librevillen Bord de meriksi; nostossa joen yhteys estuaariin. Ei kasvoja, lisättyä tekstiä tai taideteosta."
-        }
-      },
-      "luentaMetadata": {
-        "existingImageLuenta": null,
-        "captionReadingText": "Komojoen vesi liittyy Gabonin estuaariin.",
-        "existingArticleAndSectionLuentaPreserved": true,
-        "audioGenerated": false,
-        "audioURL": null,
-        "imageSpecificAudioProvided": false,
-        "reuseAudioAllowedByThisPacket": false
-      },
-      "qaEvidence": {
-        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/libreville/qa.json",
-        "fileSHA256": "fc0d689d592e1d22ab4dfc7513773bee76370aa5419a0e07908c365c738ffafe",
-        "item": {
-          "slot": "K2",
-          "targetJsonPath": "$.kaupunkilehti[0].nostot[1]",
-          "commonsFile": "Le Komo 1.JPG",
-          "sha256": "dff7864de15c41995ef2c345425ea087d056f8d42a39906f31b9be7bc56e13a2",
-          "verdict": "accepted",
-          "reason": "Komojoen vesi ja metsäranta, etualalla tavanomainen tekninen kaide. Source Description sijoittaa kuvan joelle Libreville–Lambaréné-tien kohdalle. Kuvateksti nimeää Komon eikä väitä kuvaa Librevillen Bord de meriksi; nostossa joen yhteys estuaariin. Ei kasvoja, lisättyä tekstiä tai taideteosta.",
-          "evidence": {
-            "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/libreville/cc-work/8676d8010b4d39bc-original.jpg",
-            "width": 2048,
-            "height": 1536,
-            "sha256": "dff7864de15c41995ef2c345425ea087d056f8d42a39906f31b9be7bc56e13a2",
-            "sourcePage": "https://commons.wikimedia.org/wiki/File:Le_Komo_1.JPG",
-            "sourcePagePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/libreville/qa-evidence/cc-source-snapshots/ddd2925630eea71e517c0abfd0068b62baee2ac1f0a8efd5a578c13c26fd4e30.html",
-            "sourcePageSHA256": "ddd2925630eea71e517c0abfd0068b62baee2ac1f0a8efd5a578c13c26fd4e30",
-            "sourceFields": {
-              "Date": "December 2009",
-              "Source": "Own work",
-              "Author": "Ballot 2"
-            },
-            "authors": [
-              "Ballot 2"
-            ],
-            "authorOrigin": "Author table",
-            "licenseChoices": [
-              "CC0"
-            ],
-            "license": "CC0",
-            "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
-            "existingGameUse": [],
-            "auditEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/libreville/qa-evidence/8676d8010b4d-technical-source.json",
-            "visualViewed": true,
-            "visualNotes": "Komojoen vesi ja metsäranta, etualalla tavanomainen tekninen kaide. Source Description sijoittaa kuvan joelle Libreville–Lambaréné-tien kohdalle. Kuvateksti nimeää Komon eikä väitä kuvaa Librevillen Bord de meriksi; nostossa joen yhteys estuaariin. Ei kasvoja, lisättyä tekstiä tai taideteosta.",
-            "captionFi": "Komojoen vesi liittyy Gabonin estuaariin.",
-            "rightsLayer": "Elävä luonto/yleinen kaupunkialue tai tavallinen tekninen kaide, ei luovan teoksen pääaihetta",
-            "captureDate": null,
-            "formatRule": "TRAVELER only portrait .60–.85; PHOTO/nostot no panorama/landscape requirement",
-            "upstreamSourcePagePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/lahdevarasto/ff48c6035cc4bfd5c685cfa8da910cfe7a22cc4dbf67ae895e0ae3f702ea7dec.body",
-            "immutableSourceSnapshot": true
-          },
-          "checkedAt": "2026-10-12T19:08:39.407453+00:00",
-          "contentSHA256": "5882f74d38eb31a2dbb4c4c7031a43db987f5f71ab3401e776a9ba117d7591b0",
-          "targetSHA256": "0d6e27c9f560095128bb4e24155eeb78332490c5ae1d9002caed8ca5467cfff2"
-        },
-        "allSources": [
-          {
-            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/libreville/qa.json",
-            "sha256": "fc0d689d592e1d22ab4dfc7513773bee76370aa5419a0e07908c365c738ffafe"
-          },
-          {
-            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/libreville/illustration-qa-extra.json",
-            "sha256": "3d589792602388f1c3101442add852cfe2563c7056bd7cf1af76d92ecaaf3a14"
-          }
-        ]
-      },
-      "R2ByteVerification": {
-        "era": "e06",
-        "city": "libreville",
-        "slot": "K2",
-        "targetJsonPath": "$.kaupunkilehti[0].nostot[1]",
-        "commonsFile": "Le Komo 1.JPG",
-        "sha256": "dff7864de15c41995ef2c345425ea087d056f8d42a39906f31b9be7bc56e13a2",
-        "sourcePage": "https://commons.wikimedia.org/wiki/File:Le_Komo_1.JPG",
-        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/6/67/Le_Komo_1.JPG",
-        "author": "Ballot 2",
-        "license": "CC0",
-        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
-        "width": 2048,
-        "height": 1536,
-        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e06/libreville/k2-dff7864de15c41995ef2.jpg",
-        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e06/libreville/k2-dff7864de15c41995ef2.jpg",
-        "bytes": 1961382,
-        "http": 200,
-        "mime": "image/jpeg",
-        "byteExactReadback": true,
-        "canonicalReadbackByteExact": true,
-        "conditionalIfNoneMatch": "*",
-        "s3PutHttp": 200,
-        "verifiedAt": "2026-10-12T18:04:40.885154+00:00",
-        "ownerAcceptanceVerified": false,
-        "gameIntegrated": false,
-        "attributionSource": "current-exact-QA-and-source-manifest"
-      },
-      "producerExportProof": null,
-      "technicalExportProof": null,
-      "priorMediaFields": {
-        "tiedosto": "Le Komo 1.JPG",
-        "lahde": "Ballot 2, Wikimedia Commons (CC0)",
-        "selite": "Komojoen vesi liittyy Gabonin estuaariin.",
-        "lyhyt": "Komojoen vesi liittyy Gabonin estuaariin."
-      },
-      "preservePreviousMediaObjects": true,
-      "authorization": {
-        "status": "waived-owner-review",
-        "authorizedByOwner": true,
-        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
-        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
-        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
-        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
-        "ownerAcceptanceImplied": false,
-        "QARequired": true,
-        "R2ByteVerificationRequired": true,
-        "galleryBeforeGameRequired": false,
-        "verifiedHumanMessageSource": {
-          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
-          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
-        }
-      },
-      "ownerAcceptanceVerified": false,
-      "gameIntegrated": false,
-      "gamePublicationVerified": false,
-      "inMemoryMergeVerified": true,
-      "CcommonsMetadataBound": true,
-      "CcommonsFieldPayload": {
-        "lahde": "Ballot 2, Wikimedia Commons (CC0)",
-        "selite": "Komojoen vesi liittyy Gabonin estuaariin.",
-        "lyhyt": "Komojoen vesi liittyy Gabonin estuaariin.",
-        "tiedosto": "Le Komo 1.JPG"
-      },
-      "roleManifestBound": true,
-      "sourceContentAfterSHA256": "483e3ccbf6a4a92090687cfcda319d4dc1a1dc3f81bd514e13a8e7d511343752",
-      "targetAfterSHA256": "7a3d986ef3713c80b82121a4aed100bd308bfd2f7be4328ce8e410ce17b73290",
-      "contextAfterSHA256": "7a3d986ef3713c80b82121a4aed100bd308bfd2f7be4328ce8e410ce17b73290"
     },
     {
       "era": "e06",
@@ -4082,7 +4194,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/libreville/qa.json",
-        "fileSHA256": "fc0d689d592e1d22ab4dfc7513773bee76370aa5419a0e07908c365c738ffafe",
+        "fileSHA256": "b5ac415e2d5a6def3e37d3c9b9e1a2cb0e3744a2ff94bb678ce97ff73b7b5ca2",
         "item": {
           "slot": "TRAVELER",
           "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
@@ -4141,11 +4253,11 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/libreville/qa.json",
-            "sha256": "fc0d689d592e1d22ab4dfc7513773bee76370aa5419a0e07908c365c738ffafe"
+            "sha256": "b5ac415e2d5a6def3e37d3c9b9e1a2cb0e3744a2ff94bb678ce97ff73b7b5ca2"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/libreville/illustration-qa-extra.json",
-            "sha256": "3d589792602388f1c3101442add852cfe2563c7056bd7cf1af76d92ecaaf3a14"
+            "sha256": "cb3a50523c1988af0f7da958376a0a741760b13a31214ebe0b869dab93c0971e"
           }
         ]
       },
@@ -4219,6 +4331,244 @@
       "sourceContentAfterSHA256": "483e3ccbf6a4a92090687cfcda319d4dc1a1dc3f81bd514e13a8e7d511343752",
       "targetAfterSHA256": "ca9a6f23deee05d2110662c3d73ccab90b6b154b3e9f124fd1a06655d3fb6a4b",
       "contextAfterSHA256": "80441aec049174a7667bdd525063f0949d49bac74857a137e933467728ec734c"
+    },
+    {
+      "era": "e06",
+      "city": "libreville",
+      "slot": "K2",
+      "type": "commons",
+      "assetID": "capital-cc-e06-libreville-k2-dff7864de15c4199",
+      "galleryImageID": "capital-cc-e06-libreville-k2-dff7864de15c4199",
+      "commonsFile": "Le Komo 1.JPG",
+      "targetJsonPath": "$.kaupunkilehti[0].nostot[1]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "nostot",
+        1
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e06/libreville/k2-dff7864de15c41995ef2.jpg",
+        "suora": true,
+        "lahde": "Ballot 2, Wikimedia Commons (CC0)",
+        "selite": "Komojoen vesi liittyy Gabonin estuaariin.",
+        "lyhyt": "Komojoen vesi liittyy Gabonin estuaariin.",
+        "tiedosto": "Le Komo 1.JPG"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Ballot 2, Wikimedia Commons (CC0)",
+        "selite": "Komojoen vesi liittyy Gabonin estuaariin.",
+        "lyhyt": "Komojoen vesi liittyy Gabonin estuaariin.",
+        "tiedosto": "Le Komo 1.JPG"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e06/libreville/k2-dff7864de15c41995ef2.jpg",
+        "suora": true,
+        "lahde": "Ballot 2, Wikimedia Commons (CC0)",
+        "selite": "Komojoen vesi liittyy Gabonin estuaariin.",
+        "lyhyt": "Komojoen vesi liittyy Gabonin estuaariin.",
+        "tiedosto": "Le Komo 1.JPG"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "dff7864de15c41995ef2c345425ea087d056f8d42a39906f31b9be7bc56e13a2",
+      "exportSHA256": "dff7864de15c41995ef2c345425ea087d056f8d42a39906f31b9be7bc56e13a2",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e06/libreville/k2-dff7864de15c41995ef2.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e06/libreville/k2-dff7864de15c41995ef2.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/libreville/cc-work/8676d8010b4d39bc-original.jpg",
+      "dimensions": [
+        2048,
+        1536
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/libreville/sisalto.json",
+      "sourceContentSHA256": "483e3ccbf6a4a92090687cfcda319d4dc1a1dc3f81bd514e13a8e7d511343752",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "7a3d986ef3713c80b82121a4aed100bd308bfd2f7be4328ce8e410ce17b73290",
+        "semanticContextSHA256": "7a3d986ef3713c80b82121a4aed100bd308bfd2f7be4328ce8e410ce17b73290",
+        "subjectTitle": "Veden äärellä on monta rantaa",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Ballot 2",
+        "license": "CC0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Le_Komo_1.JPG",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/6/67/Le_Komo_1.JPG",
+        "rightsEvidence": {
+          "selection": "Author Ballot 2 tiedostosivulta; CC0 1.0. Description: Le fleuve sous la route de Libreville à Lambaréné. Näyttää tekstissä nimetyn Komo-joen, ei väitä tätä Librevillen Bord de meriksi. Luonnonvesi ja metsä, tavallinen kaide ei nimetty taideteos.",
+          "QA": {
+            "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/libreville/cc-work/8676d8010b4d39bc-original.jpg",
+            "width": 2048,
+            "height": 1536,
+            "sha256": "dff7864de15c41995ef2c345425ea087d056f8d42a39906f31b9be7bc56e13a2",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Le_Komo_1.JPG",
+            "sourcePagePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/libreville/qa-evidence/cc-source-snapshots/ddd2925630eea71e517c0abfd0068b62baee2ac1f0a8efd5a578c13c26fd4e30.html",
+            "sourcePageSHA256": "ddd2925630eea71e517c0abfd0068b62baee2ac1f0a8efd5a578c13c26fd4e30",
+            "sourceFields": {
+              "Date": "December 2009",
+              "Source": "Own work",
+              "Author": "Ballot 2"
+            },
+            "authors": [
+              "Ballot 2"
+            ],
+            "authorOrigin": "Author table",
+            "licenseChoices": [
+              "CC0"
+            ],
+            "license": "CC0",
+            "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+            "existingGameUse": [],
+            "auditEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/libreville/qa-evidence/8676d8010b4d-technical-source.json",
+            "visualViewed": true,
+            "visualNotes": "Komojoen vesi ja metsäranta, etualalla tavanomainen tekninen kaide. Source Description sijoittaa kuvan joelle Libreville–Lambaréné-tien kohdalle. Kuvateksti nimeää Komon eikä väitä kuvaa Librevillen Bord de meriksi; nostossa joen yhteys estuaariin. Ei kasvoja, lisättyä tekstiä tai taideteosta.",
+            "captionFi": "Komojoen vesi liittyy Gabonin estuaariin.",
+            "rightsLayer": "Elävä luonto/yleinen kaupunkialue tai tavallinen tekninen kaide, ei luovan teoksen pääaihetta",
+            "captureDate": null,
+            "formatRule": "TRAVELER only portrait .60–.85; PHOTO/nostot no panorama/landscape requirement",
+            "upstreamSourcePagePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/lahdevarasto/ff48c6035cc4bfd5c685cfa8da910cfe7a22cc4dbf67ae895e0ae3f702ea7dec.body",
+            "immutableSourceSnapshot": true
+          },
+          "qaReason": "Komojoen vesi ja metsäranta, etualalla tavanomainen tekninen kaide. Source Description sijoittaa kuvan joelle Libreville–Lambaréné-tien kohdalle. Kuvateksti nimeää Komon eikä väitä kuvaa Librevillen Bord de meriksi; nostossa joen yhteys estuaariin. Ei kasvoja, lisättyä tekstiä tai taideteosta."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Komojoen vesi liittyy Gabonin estuaariin.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/libreville/qa.json",
+        "fileSHA256": "b5ac415e2d5a6def3e37d3c9b9e1a2cb0e3744a2ff94bb678ce97ff73b7b5ca2",
+        "item": {
+          "slot": "K2",
+          "targetJsonPath": "$.kaupunkilehti[0].nostot[1]",
+          "commonsFile": "Le Komo 1.JPG",
+          "sha256": "dff7864de15c41995ef2c345425ea087d056f8d42a39906f31b9be7bc56e13a2",
+          "verdict": "accepted",
+          "reason": "Komojoen vesi ja metsäranta, etualalla tavanomainen tekninen kaide. Source Description sijoittaa kuvan joelle Libreville–Lambaréné-tien kohdalle. Kuvateksti nimeää Komon eikä väitä kuvaa Librevillen Bord de meriksi; nostossa joen yhteys estuaariin. Ei kasvoja, lisättyä tekstiä tai taideteosta.",
+          "evidence": {
+            "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/libreville/cc-work/8676d8010b4d39bc-original.jpg",
+            "width": 2048,
+            "height": 1536,
+            "sha256": "dff7864de15c41995ef2c345425ea087d056f8d42a39906f31b9be7bc56e13a2",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Le_Komo_1.JPG",
+            "sourcePagePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/libreville/qa-evidence/cc-source-snapshots/ddd2925630eea71e517c0abfd0068b62baee2ac1f0a8efd5a578c13c26fd4e30.html",
+            "sourcePageSHA256": "ddd2925630eea71e517c0abfd0068b62baee2ac1f0a8efd5a578c13c26fd4e30",
+            "sourceFields": {
+              "Date": "December 2009",
+              "Source": "Own work",
+              "Author": "Ballot 2"
+            },
+            "authors": [
+              "Ballot 2"
+            ],
+            "authorOrigin": "Author table",
+            "licenseChoices": [
+              "CC0"
+            ],
+            "license": "CC0",
+            "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+            "existingGameUse": [],
+            "auditEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/libreville/qa-evidence/8676d8010b4d-technical-source.json",
+            "visualViewed": true,
+            "visualNotes": "Komojoen vesi ja metsäranta, etualalla tavanomainen tekninen kaide. Source Description sijoittaa kuvan joelle Libreville–Lambaréné-tien kohdalle. Kuvateksti nimeää Komon eikä väitä kuvaa Librevillen Bord de meriksi; nostossa joen yhteys estuaariin. Ei kasvoja, lisättyä tekstiä tai taideteosta.",
+            "captionFi": "Komojoen vesi liittyy Gabonin estuaariin.",
+            "rightsLayer": "Elävä luonto/yleinen kaupunkialue tai tavallinen tekninen kaide, ei luovan teoksen pääaihetta",
+            "captureDate": null,
+            "formatRule": "TRAVELER only portrait .60–.85; PHOTO/nostot no panorama/landscape requirement",
+            "upstreamSourcePagePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/lahdevarasto/ff48c6035cc4bfd5c685cfa8da910cfe7a22cc4dbf67ae895e0ae3f702ea7dec.body",
+            "immutableSourceSnapshot": true
+          },
+          "checkedAt": "2026-10-12T19:08:39.407453+00:00",
+          "contentSHA256": "5882f74d38eb31a2dbb4c4c7031a43db987f5f71ab3401e776a9ba117d7591b0",
+          "targetSHA256": "0d6e27c9f560095128bb4e24155eeb78332490c5ae1d9002caed8ca5467cfff2"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/libreville/qa.json",
+            "sha256": "b5ac415e2d5a6def3e37d3c9b9e1a2cb0e3744a2ff94bb678ce97ff73b7b5ca2"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/libreville/illustration-qa-extra.json",
+            "sha256": "cb3a50523c1988af0f7da958376a0a741760b13a31214ebe0b869dab93c0971e"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e06",
+        "city": "libreville",
+        "slot": "K2",
+        "targetJsonPath": "$.kaupunkilehti[0].nostot[1]",
+        "commonsFile": "Le Komo 1.JPG",
+        "sha256": "dff7864de15c41995ef2c345425ea087d056f8d42a39906f31b9be7bc56e13a2",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Le_Komo_1.JPG",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/6/67/Le_Komo_1.JPG",
+        "author": "Ballot 2",
+        "license": "CC0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "width": 2048,
+        "height": 1536,
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e06/libreville/k2-dff7864de15c41995ef2.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e06/libreville/k2-dff7864de15c41995ef2.jpg",
+        "bytes": 1961382,
+        "http": 200,
+        "mime": "image/jpeg",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T18:04:40.885154+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "Le Komo 1.JPG",
+        "lahde": "Ballot 2, Wikimedia Commons (CC0)",
+        "selite": "Komojoen vesi liittyy Gabonin estuaariin.",
+        "lyhyt": "Komojoen vesi liittyy Gabonin estuaariin."
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Ballot 2, Wikimedia Commons (CC0)",
+        "selite": "Komojoen vesi liittyy Gabonin estuaariin.",
+        "lyhyt": "Komojoen vesi liittyy Gabonin estuaariin.",
+        "tiedosto": "Le Komo 1.JPG"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "483e3ccbf6a4a92090687cfcda319d4dc1a1dc3f81bd514e13a8e7d511343752",
+      "targetAfterSHA256": "7a3d986ef3713c80b82121a4aed100bd308bfd2f7be4328ce8e410ce17b73290",
+      "contextAfterSHA256": "7a3d986ef3713c80b82121a4aed100bd308bfd2f7be4328ce8e410ce17b73290"
     }
   ],
   "runtimeIntegrationPending": true,
