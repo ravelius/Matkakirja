@@ -73,6 +73,20 @@ muste 56×30 = ohjausnappi--iso, "⟨Linssit⟩" 3×5) ja lähetä PT:lle löyd�
 - Ajo 3 linjalla 2 (Julkaisijan LUKKO NYT 22.00): `keskitys188c.sh` → keskitys188c-<osa>-<koko>.log; lopuksi LUKKO VAPAA Julkaisijalle.
   SEURAAVAKSI: lue VIKA- ja ??-rivit, katso kuvat, sitten PT:n kuittauksen jälkeen A-korjaukset luokittain.
 
+## PÄIVITYS 22.3x
+- PT KUITTASI suunnitelman 22.0x (B testiin, A vain tyylikirjan arvoilla, kuva-arkki ennen/jälkeen iPhone + iPad ennen junaan 188
+  kuittausta, Astu sisään = LS1). Ajot 3 (22.00, L2) ja 4 (22.15, L1) tehty, LUKKO VAPAA ilmoitettu. Kuvat
+  lokit/natiivi-ui-keskitys188c-kuvat ja -188d-kuvat (vasen sisällön kanssa | ilman | erotus); vikariveillä nyt "osat <tyyppi> <laatikko>".
+- Testi: a53cc2f78 (peitto vain sanoille), 6aaf6dc59 + 10b4e302b (peitetty nappi ohitetaan, kun päällä näkyvästi piirtävä osa;
+  PickAll + näkyvyys). A1-korjaukset 49a687747: pelkän kuvakkeen napit (⏸ pulu.uss, mikserin ‹ .mk-pikkunappi, mikserin avausnappi
+  MikseriPaneeli.cs) kuvakkeen margin-right 0; .mk-linssivalikko__kohta flex-shrink 0.
+- JUURISYYT (ajo 4, lähetetty PT:lle 22.3x, ODOTTAA PÄÄTÖSTÄ): (2) kuvake+teksti-napit 0,7–1,5 pt = kuvakkeen oma 1/12-reunus,
+  asettelu tarkalleen keskellä → suositus: testi mittaa SvgIkonin laatikosta; (3) tekstin pysty 1,0–1,8 pt = kirjasimen ylä-/alatila
+  → suositus: uusi tyylikirja-arvo (kirjasinkohtainen optinen siirto napin tekstille), vaatii PT:n/omistajan luvan.
+- Avoimet: Ohita opastus iPad shakki −6,5 pt (Label alkaa 1 pt napin reunasta, padding 7,2 ei näy; selvittämättä), Pro-rivin ⓘ
+  (ajossa 4 "toinen osa päällä"; katso uudessa ajossa), mylly-napit/LAAJA/TELE peittona ajossa 4 → 10b4e302b korjaa todennäköisesti.
+  Peli-asettelutestin omat viat (aarretehtävä ei avautunut ×2, metrolinja päällekkäin iPhone vaaka) eivät ole keskitystä.
+
 ## Opetukset
 - Taulu sijoittuu PulunTauluNakyma.PulunLaatikko → Pulu.TaulunAnkkuri; liikkuva Pulu siirsi taulua.
 - Simulaattorin iPad-video tallentuu pystyyn; kuvaruudut (c1–c3) ovat oikein päin.
