@@ -4534,7 +4534,7 @@
         "sameImageExportSHA256": "36cd7b44ba0e6d5efc4e0659fef1a1d54ebe13a1289fc5d0a2b46f6ce325e3c3",
         "independentNativeQAEvidencePreserved": true,
         "independentTextResamplePending": true,
-        "captionChanged": true
+        "captionChanged": false
       }
     },
     {
@@ -4876,9 +4876,9 @@
   "task118TextRevision": true,
   "independentTextResamplePending": true,
   "textAcceptanceVerified": false,
-  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task228/immutable-media-history/e10/kualalumpur/83f3b95da4ecf2b56facc810b50569a02951bd276f37eb26c23882c0f10cf30b.json",
+  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task228/immutable-media-history/e10/kualalumpur/2b25f364f87d1cfd969c200273c4dff64ea76f85dfe71b169a45863a6d2fde25.json",
   "task118ReboundAt": "2026-10-13T16:31:25.790820+00:00",
   "task228ExcludedAssets": [],
   "task228TextRevision": true,
-  "task228ReboundAt": "2026-10-13T18:32:12.435294+00:00"
+  "task228ReboundAt": "2026-10-13T19:32:48.097415+00:00"
 }
