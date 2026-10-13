@@ -3,7 +3,7 @@
   "era": "e14",
   "city": "southtarawa",
   "authorization": "hyväksyn kaikki tekemäsi kuvat. toimita ne claudelle. claudelta saat uusia ohjeita jatkoa varten",
-  "sourceContentAfterSHA256": "aed2b0e3f5915a1a6e3907e9fb4e3a847d8f807f1e596ccc1df1cbb4b01fb684",
+  "sourceContentAfterSHA256": "6605c03ef9f4f50d43ad58c3611c79d39075ec317b59d8e196bb1b556ce2bcca",
   "assets": [
     {
       "era": "e14",
@@ -25,10 +25,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/southtarawa/e14-southtarawa-traveler-v1-20261012-121a10c83cfc.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Mangroven juuret veden rajassa; yleinen havainnekuva.",
-        "lyhyt": "Mangroven juuret veden rajassa; yleinen havainnekuva."
+        "selite": "Mangroven juuret veden rajassa; yleinen havainnekuva."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -36,10 +36,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/southtarawa/e14-southtarawa-traveler-v1-20261012-121a10c83cfc.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Mangroven juuret veden rajassa; yleinen havainnekuva.",
-        "lyhyt": "Mangroven juuret veden rajassa; yleinen havainnekuva."
+        "selite": "Mangroven juuret veden rajassa; yleinen havainnekuva."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -53,10 +53,10 @@
         1536
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/southtarawa/sisalto.json",
-      "sourceContentSHA256": "aed2b0e3f5915a1a6e3907e9fb4e3a847d8f807f1e596ccc1df1cbb4b01fb684",
+      "sourceContentSHA256": "6605c03ef9f4f50d43ad58c3611c79d39075ec317b59d8e196bb1b556ce2bcca",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "741c2b69810dcc4c92fdc28108776df201912383b846499aff157c04b22d9fba",
+        "semanticContextSHA256": "07e5d9be5d195baa6aa26b85b923f339cc249573519947c4460127dac52e264e",
         "subjectTitle": "Matkailijalle",
         "targetState": "existing-target"
       },
@@ -191,9 +191,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -212,17 +212,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "aed2b0e3f5915a1a6e3907e9fb4e3a847d8f807f1e596ccc1df1cbb4b01fb684",
+      "sourceContentAfterSHA256": "6605c03ef9f4f50d43ad58c3611c79d39075ec317b59d8e196bb1b556ce2bcca",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "741c2b69810dcc4c92fdc28108776df201912383b846499aff157c04b22d9fba",
+      "contextAfterSHA256": "07e5d9be5d195baa6aa26b85b923f339cc249573519947c4460127dac52e264e",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "aed2b0e3f5915a1a6e3907e9fb4e3a847d8f807f1e596ccc1df1cbb4b01fb684",
+        "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "contextAfterSHA256": "741c2b69810dcc4c92fdc28108776df201912383b846499aff157c04b22d9fba",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+          "semanticContextSHA256": "741c2b69810dcc4c92fdc28108776df201912383b846499aff157c04b22d9fba",
+          "subjectTitle": "Matkailijalle",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "6605c03ef9f4f50d43ad58c3611c79d39075ec317b59d8e196bb1b556ce2bcca",
+        "sameImageNativeSHA256": "121a10c83cfc5cd359e88e2f96262d402f50fb14ee22d8d6ce21a4a68ee4a5d3",
+        "sameImageExportSHA256": "d877cd385a77b821634bb430fed925feccd3e2748eeac7a05c9e8ecdd7dfa450",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e14",
@@ -247,10 +268,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/southtarawa/e14-southtarawa-o2-v1-20261012-2ec26d7be9ad.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Pandanus ja kookoskuitu havainnollistavat maneaban rakennusmateriaaleja; yleinen havainnekuva.",
-        "lyhyt": "Pandanus ja kookoskuitu havainnollistavat maneaban rakennusmateriaaleja; yleinen havainnekuva."
+        "selite": "Pandanus ja kookoskuitu havainnollistavat maneaban rakennusmateriaaleja; yleinen havainnekuva."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -258,10 +279,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/southtarawa/e14-southtarawa-o2-v1-20261012-2ec26d7be9ad.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Pandanus ja kookoskuitu havainnollistavat maneaban rakennusmateriaaleja; yleinen havainnekuva.",
-        "lyhyt": "Pandanus ja kookoskuitu havainnollistavat maneaban rakennusmateriaaleja; yleinen havainnekuva."
+        "selite": "Pandanus ja kookoskuitu havainnollistavat maneaban rakennusmateriaaleja; yleinen havainnekuva."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -275,10 +296,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/southtarawa/sisalto.json",
-      "sourceContentSHA256": "aed2b0e3f5915a1a6e3907e9fb4e3a847d8f807f1e596ccc1df1cbb4b01fb684",
+      "sourceContentSHA256": "6605c03ef9f4f50d43ad58c3611c79d39075ec317b59d8e196bb1b556ce2bcca",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "54c9b804f24c16d7e164ef427d82c1efec31e3e8e194c13cc9709537f31cd463",
+        "semanticContextSHA256": "bf277fd60acd7a2dc418af8b41c8ae23ca48ede57e7f15fa271bf406c122acda",
         "subjectTitle": "Yhteisöjen kokoontumistalot",
         "targetState": "existing-target"
       },
@@ -409,9 +430,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -430,17 +451,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "aed2b0e3f5915a1a6e3907e9fb4e3a847d8f807f1e596ccc1df1cbb4b01fb684",
+      "sourceContentAfterSHA256": "6605c03ef9f4f50d43ad58c3611c79d39075ec317b59d8e196bb1b556ce2bcca",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "54c9b804f24c16d7e164ef427d82c1efec31e3e8e194c13cc9709537f31cd463",
+      "contextAfterSHA256": "bf277fd60acd7a2dc418af8b41c8ae23ca48ede57e7f15fa271bf406c122acda",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "aed2b0e3f5915a1a6e3907e9fb4e3a847d8f807f1e596ccc1df1cbb4b01fb684",
+        "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "contextAfterSHA256": "54c9b804f24c16d7e164ef427d82c1efec31e3e8e194c13cc9709537f31cd463",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+          "semanticContextSHA256": "54c9b804f24c16d7e164ef427d82c1efec31e3e8e194c13cc9709537f31cd463",
+          "subjectTitle": "Yhteisöjen kokoontumistalot",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "6605c03ef9f4f50d43ad58c3611c79d39075ec317b59d8e196bb1b556ce2bcca",
+        "sameImageNativeSHA256": "2ec26d7be9adf9e5c07898be6b2148788e039b4666e32f26da1e0316ea1593b0",
+        "sameImageExportSHA256": "2a75162a0ecb90b7beeacffbcf43567dad7e6ab884128b3e4984544d3a5d96b6",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e14",
@@ -465,10 +507,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/southtarawa/e14-southtarawa-o3-v1-20261012-c33a0325766a.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Kopra ja kookosöljy jalostusaiheen havainnollistuksena; yleinen havainnekuva.",
-        "lyhyt": "Kopra ja kookosöljy jalostusaiheen havainnollistuksena; yleinen havainnekuva."
+        "selite": "Kopra ja kookosöljy jalostusaiheen havainnollistuksena; yleinen havainnekuva."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -476,10 +518,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/southtarawa/e14-southtarawa-o3-v1-20261012-c33a0325766a.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Kopra ja kookosöljy jalostusaiheen havainnollistuksena; yleinen havainnekuva.",
-        "lyhyt": "Kopra ja kookosöljy jalostusaiheen havainnollistuksena; yleinen havainnekuva."
+        "selite": "Kopra ja kookosöljy jalostusaiheen havainnollistuksena; yleinen havainnekuva."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -493,10 +535,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/southtarawa/sisalto.json",
-      "sourceContentSHA256": "aed2b0e3f5915a1a6e3907e9fb4e3a847d8f807f1e596ccc1df1cbb4b01fb684",
+      "sourceContentSHA256": "6605c03ef9f4f50d43ad58c3611c79d39075ec317b59d8e196bb1b556ce2bcca",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "2de1ca7b7ff72f3eea1e6a31d8585dd6deb5dfdca7328dc8aba94a6982118486",
+        "semanticContextSHA256": "7cb01743b21953e024f146efead5e92d43d302711c2b1a5948762660ec554061",
         "subjectTitle": "Betion työn jäljillä",
         "targetState": "existing-target"
       },
@@ -629,9 +671,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -650,17 +692,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "aed2b0e3f5915a1a6e3907e9fb4e3a847d8f807f1e596ccc1df1cbb4b01fb684",
+      "sourceContentAfterSHA256": "6605c03ef9f4f50d43ad58c3611c79d39075ec317b59d8e196bb1b556ce2bcca",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "2de1ca7b7ff72f3eea1e6a31d8585dd6deb5dfdca7328dc8aba94a6982118486",
+      "contextAfterSHA256": "7cb01743b21953e024f146efead5e92d43d302711c2b1a5948762660ec554061",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "aed2b0e3f5915a1a6e3907e9fb4e3a847d8f807f1e596ccc1df1cbb4b01fb684",
+        "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "contextAfterSHA256": "2de1ca7b7ff72f3eea1e6a31d8585dd6deb5dfdca7328dc8aba94a6982118486",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+          "semanticContextSHA256": "2de1ca7b7ff72f3eea1e6a31d8585dd6deb5dfdca7328dc8aba94a6982118486",
+          "subjectTitle": "Betion työn jäljillä",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "6605c03ef9f4f50d43ad58c3611c79d39075ec317b59d8e196bb1b556ce2bcca",
+        "sameImageNativeSHA256": "c33a0325766a616df0b5bb3d7c0dbafd26526bfaf8675e5a0ef11168a80e74c2",
+        "sameImageExportSHA256": "bc2c197873b1b256c4c5ccdff050a01ba47a3ce2cbc5941ff0566a4aace67f63",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e14",
@@ -685,10 +748,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/southtarawa/e14-southtarawa-o4-v1-20261012-f7edcdfc6690.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Kookos, papaija, leipäpuun hedelmä ja banaani kuuluvat saaren kasveihin; havainnekuva.",
-        "lyhyt": "Kookos, papaija, leipäpuun hedelmä ja banaani kuuluvat saaren kasveihin; havainnekuva."
+        "selite": "Kookos, papaija, leipäpuun hedelmä ja banaani kuuluvat saaren kasveihin; havainnekuva."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -696,10 +759,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/southtarawa/e14-southtarawa-o4-v1-20261012-f7edcdfc6690.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Kookos, papaija, leipäpuun hedelmä ja banaani kuuluvat saaren kasveihin; havainnekuva.",
-        "lyhyt": "Kookos, papaija, leipäpuun hedelmä ja banaani kuuluvat saaren kasveihin; havainnekuva."
+        "selite": "Kookos, papaija, leipäpuun hedelmä ja banaani kuuluvat saaren kasveihin; havainnekuva."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -713,10 +776,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/southtarawa/sisalto.json",
-      "sourceContentSHA256": "aed2b0e3f5915a1a6e3907e9fb4e3a847d8f807f1e596ccc1df1cbb4b01fb684",
+      "sourceContentSHA256": "6605c03ef9f4f50d43ad58c3611c79d39075ec317b59d8e196bb1b556ce2bcca",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "0321ccf2adeb00a4a22ecbe3c82baa87e70c90eea58565e5112cc5d516670a11",
+        "semanticContextSHA256": "6ad2e683ce8c46f908eb075ef6d2b0fdda3b41c64c32e07384cd08fe7578ed52",
         "subjectTitle": "Mitä täällä syödään",
         "targetState": "existing-target"
       },
@@ -847,9 +910,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -868,17 +931,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "aed2b0e3f5915a1a6e3907e9fb4e3a847d8f807f1e596ccc1df1cbb4b01fb684",
+      "sourceContentAfterSHA256": "6605c03ef9f4f50d43ad58c3611c79d39075ec317b59d8e196bb1b556ce2bcca",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "0321ccf2adeb00a4a22ecbe3c82baa87e70c90eea58565e5112cc5d516670a11",
+      "contextAfterSHA256": "6ad2e683ce8c46f908eb075ef6d2b0fdda3b41c64c32e07384cd08fe7578ed52",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "aed2b0e3f5915a1a6e3907e9fb4e3a847d8f807f1e596ccc1df1cbb4b01fb684",
+        "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "contextAfterSHA256": "0321ccf2adeb00a4a22ecbe3c82baa87e70c90eea58565e5112cc5d516670a11",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+          "semanticContextSHA256": "0321ccf2adeb00a4a22ecbe3c82baa87e70c90eea58565e5112cc5d516670a11",
+          "subjectTitle": "Mitä täällä syödään",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "6605c03ef9f4f50d43ad58c3611c79d39075ec317b59d8e196bb1b556ce2bcca",
+        "sameImageNativeSHA256": "f7edcdfc6690e2a915e8b38066e21e1614e6e0588055533415160c354c0c8d0a",
+        "sameImageExportSHA256": "b6e2c39be490c7d7d0ea496ab240e2c7faac521af8e7f6ce8b7ce321d9895e3d",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e14",
@@ -900,10 +984,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/southtarawa/e14-southtarawa-k2-v1-20261012-299d4b13027a.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Kuivattu kookosydin eli kopra on kookosöljyn raaka-ainetta; yleinen havainnekuva.",
-        "lyhyt": "Kuivattu kookosydin eli kopra on kookosöljyn raaka-ainetta; yleinen havainnekuva."
+        "selite": "Kuivattu kookosydin eli kopra on kookosöljyn raaka-ainetta; yleinen havainnekuva."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -911,10 +995,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/southtarawa/e14-southtarawa-k2-v1-20261012-299d4b13027a.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Kuivattu kookosydin eli kopra on kookosöljyn raaka-ainetta; yleinen havainnekuva.",
-        "lyhyt": "Kuivattu kookosydin eli kopra on kookosöljyn raaka-ainetta; yleinen havainnekuva."
+        "selite": "Kuivattu kookosydin eli kopra on kookosöljyn raaka-ainetta; yleinen havainnekuva."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -928,7 +1012,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/southtarawa/sisalto.json",
-      "sourceContentSHA256": "aed2b0e3f5915a1a6e3907e9fb4e3a847d8f807f1e596ccc1df1cbb4b01fb684",
+      "sourceContentSHA256": "6605c03ef9f4f50d43ad58c3611c79d39075ec317b59d8e196bb1b556ce2bcca",
       "semanticSourceBind": {
         "targetBeforeSHA256": "b251f37d94dfd058993274f68e49478c72aaba94626172d6aa0549b54ca9ad53",
         "semanticContextSHA256": "b251f37d94dfd058993274f68e49478c72aaba94626172d6aa0549b54ca9ad53",
@@ -1064,9 +1148,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -1085,17 +1169,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "aed2b0e3f5915a1a6e3907e9fb4e3a847d8f807f1e596ccc1df1cbb4b01fb684",
+      "sourceContentAfterSHA256": "6605c03ef9f4f50d43ad58c3611c79d39075ec317b59d8e196bb1b556ce2bcca",
       "targetAfterSHA256": "b251f37d94dfd058993274f68e49478c72aaba94626172d6aa0549b54ca9ad53",
       "contextAfterSHA256": "b251f37d94dfd058993274f68e49478c72aaba94626172d6aa0549b54ca9ad53",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "aed2b0e3f5915a1a6e3907e9fb4e3a847d8f807f1e596ccc1df1cbb4b01fb684",
+        "targetAfterSHA256": "b251f37d94dfd058993274f68e49478c72aaba94626172d6aa0549b54ca9ad53",
+        "contextAfterSHA256": "b251f37d94dfd058993274f68e49478c72aaba94626172d6aa0549b54ca9ad53",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "b251f37d94dfd058993274f68e49478c72aaba94626172d6aa0549b54ca9ad53",
+          "semanticContextSHA256": "b251f37d94dfd058993274f68e49478c72aaba94626172d6aa0549b54ca9ad53",
+          "subjectTitle": "Kookoksen merimatka",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "6605c03ef9f4f50d43ad58c3611c79d39075ec317b59d8e196bb1b556ce2bcca",
+        "sameImageNativeSHA256": "299d4b13027ae8cb43a5dbf0bf20263ee5c29118d2f82edd37ca352fb7934d9a",
+        "sameImageExportSHA256": "0848a8d22b2440951bff2851d916581a8195460b4ed7cd9432061b13ac825324",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e14",
@@ -1117,10 +1222,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/southtarawa/e14-southtarawa-k3-v1-20261012-63c330c7372d.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Mangroven juuret ovat osa rannikon kasvillisuutta; yleinen havainnekuva.",
-        "lyhyt": "Mangroven juuret ovat osa rannikon kasvillisuutta; yleinen havainnekuva."
+        "selite": "Mangroven juuret ovat osa rannikon kasvillisuutta; yleinen havainnekuva."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -1128,10 +1233,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/southtarawa/e14-southtarawa-k3-v1-20261012-63c330c7372d.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Mangroven juuret ovat osa rannikon kasvillisuutta; yleinen havainnekuva.",
-        "lyhyt": "Mangroven juuret ovat osa rannikon kasvillisuutta; yleinen havainnekuva."
+        "selite": "Mangroven juuret ovat osa rannikon kasvillisuutta; yleinen havainnekuva."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -1145,7 +1250,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/southtarawa/sisalto.json",
-      "sourceContentSHA256": "aed2b0e3f5915a1a6e3907e9fb4e3a847d8f807f1e596ccc1df1cbb4b01fb684",
+      "sourceContentSHA256": "6605c03ef9f4f50d43ad58c3611c79d39075ec317b59d8e196bb1b556ce2bcca",
       "semanticSourceBind": {
         "targetBeforeSHA256": "b60de10c5b19cb2a5c4084f8e5acbbc3f90aee86a089ca23e32689d037ea1443",
         "semanticContextSHA256": "b60de10c5b19cb2a5c4084f8e5acbbc3f90aee86a089ca23e32689d037ea1443",
@@ -1279,9 +1384,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -1300,17 +1405,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "aed2b0e3f5915a1a6e3907e9fb4e3a847d8f807f1e596ccc1df1cbb4b01fb684",
+      "sourceContentAfterSHA256": "6605c03ef9f4f50d43ad58c3611c79d39075ec317b59d8e196bb1b556ce2bcca",
       "targetAfterSHA256": "b60de10c5b19cb2a5c4084f8e5acbbc3f90aee86a089ca23e32689d037ea1443",
       "contextAfterSHA256": "b60de10c5b19cb2a5c4084f8e5acbbc3f90aee86a089ca23e32689d037ea1443",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "aed2b0e3f5915a1a6e3907e9fb4e3a847d8f807f1e596ccc1df1cbb4b01fb684",
+        "targetAfterSHA256": "b60de10c5b19cb2a5c4084f8e5acbbc3f90aee86a089ca23e32689d037ea1443",
+        "contextAfterSHA256": "b60de10c5b19cb2a5c4084f8e5acbbc3f90aee86a089ca23e32689d037ea1443",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "b60de10c5b19cb2a5c4084f8e5acbbc3f90aee86a089ca23e32689d037ea1443",
+          "semanticContextSHA256": "b60de10c5b19cb2a5c4084f8e5acbbc3f90aee86a089ca23e32689d037ea1443",
+          "subjectTitle": "Ranta tarvitsee juuria",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "6605c03ef9f4f50d43ad58c3611c79d39075ec317b59d8e196bb1b556ce2bcca",
+        "sameImageNativeSHA256": "63c330c7372d812a73dff12b1e3c172153dc903b51235b1f9f204a469154c33a",
+        "sameImageExportSHA256": "3c3dd1cf41601dd161b7d3e56c6ddfade4a40c2654811747f12ba41d3ce762f5",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e14",
@@ -1332,10 +1458,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/southtarawa/e14-southtarawa-l1-v1-20261012-f4c15e4c6bb1.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Kookoskuituiset sidokset ja pandanuslehdet rakennusmateriaalien havainnekuvana.",
-        "lyhyt": "Kookoskuituiset sidokset ja pandanuslehdet rakennusmateriaalien havainnekuvana."
+        "selite": "Kookoskuituiset sidokset ja pandanuslehdet rakennusmateriaalien havainnekuvana."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -1343,10 +1469,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/southtarawa/e14-southtarawa-l1-v1-20261012-f4c15e4c6bb1.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Kookoskuituiset sidokset ja pandanuslehdet rakennusmateriaalien havainnekuvana.",
-        "lyhyt": "Kookoskuituiset sidokset ja pandanuslehdet rakennusmateriaalien havainnekuvana."
+        "selite": "Kookoskuituiset sidokset ja pandanuslehdet rakennusmateriaalien havainnekuvana."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -1360,7 +1486,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/southtarawa/sisalto.json",
-      "sourceContentSHA256": "aed2b0e3f5915a1a6e3907e9fb4e3a847d8f807f1e596ccc1df1cbb4b01fb684",
+      "sourceContentSHA256": "6605c03ef9f4f50d43ad58c3611c79d39075ec317b59d8e196bb1b556ce2bcca",
       "semanticSourceBind": {
         "targetBeforeSHA256": "bff3bab88a3861fee7bb162c1d8c3afa04f7b5195772bc104bfdd34371e2b228",
         "semanticContextSHA256": "bff3bab88a3861fee7bb162c1d8c3afa04f7b5195772bc104bfdd34371e2b228",
@@ -1496,9 +1622,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -1517,17 +1643,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "aed2b0e3f5915a1a6e3907e9fb4e3a847d8f807f1e596ccc1df1cbb4b01fb684",
+      "sourceContentAfterSHA256": "6605c03ef9f4f50d43ad58c3611c79d39075ec317b59d8e196bb1b556ce2bcca",
       "targetAfterSHA256": "bff3bab88a3861fee7bb162c1d8c3afa04f7b5195772bc104bfdd34371e2b228",
       "contextAfterSHA256": "bff3bab88a3861fee7bb162c1d8c3afa04f7b5195772bc104bfdd34371e2b228",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "aed2b0e3f5915a1a6e3907e9fb4e3a847d8f807f1e596ccc1df1cbb4b01fb684",
+        "targetAfterSHA256": "bff3bab88a3861fee7bb162c1d8c3afa04f7b5195772bc104bfdd34371e2b228",
+        "contextAfterSHA256": "bff3bab88a3861fee7bb162c1d8c3afa04f7b5195772bc104bfdd34371e2b228",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "bff3bab88a3861fee7bb162c1d8c3afa04f7b5195772bc104bfdd34371e2b228",
+          "semanticContextSHA256": "bff3bab88a3861fee7bb162c1d8c3afa04f7b5195772bc104bfdd34371e2b228",
+          "subjectTitle": "Talo, jonka rakentaa yhteisö",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "6605c03ef9f4f50d43ad58c3611c79d39075ec317b59d8e196bb1b556ce2bcca",
+        "sameImageNativeSHA256": "f4c15e4c6bb1acea23cc47a53ddad22a0fad0a012c385a741fdf77c66422d60d",
+        "sameImageExportSHA256": "a3c86f5ae14ff68c30c283a07cee530ead6b96b0b33d1747ae522abafa694cbc",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e14",
@@ -1577,10 +1724,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/southtarawa/sisalto.json",
-      "sourceContentSHA256": "aed2b0e3f5915a1a6e3907e9fb4e3a847d8f807f1e596ccc1df1cbb4b01fb684",
+      "sourceContentSHA256": "6605c03ef9f4f50d43ad58c3611c79d39075ec317b59d8e196bb1b556ce2bcca",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "9b3f9a232881686b3ecb04cdff81d89e1487c244e5a277d5f8ff19700cd1944c",
-        "semanticContextSHA256": "9b3f9a232881686b3ecb04cdff81d89e1487c244e5a277d5f8ff19700cd1944c",
+        "targetBeforeSHA256": "8967434e7d16594356b2013fbe1f68e2bc0fc30ec141fe91b1a2c7da8275619a",
+        "semanticContextSHA256": "8967434e7d16594356b2013fbe1f68e2bc0fc30ec141fe91b1a2c7da8275619a",
         "subjectTitle": "Betion toinen muisti",
         "targetState": "existing-target"
       },
@@ -1733,9 +1880,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -1754,22 +1901,49 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "aed2b0e3f5915a1a6e3907e9fb4e3a847d8f807f1e596ccc1df1cbb4b01fb684",
-      "targetAfterSHA256": "9b3f9a232881686b3ecb04cdff81d89e1487c244e5a277d5f8ff19700cd1944c",
-      "contextAfterSHA256": "9b3f9a232881686b3ecb04cdff81d89e1487c244e5a277d5f8ff19700cd1944c",
+      "sourceContentAfterSHA256": "6605c03ef9f4f50d43ad58c3611c79d39075ec317b59d8e196bb1b556ce2bcca",
+      "targetAfterSHA256": "8967434e7d16594356b2013fbe1f68e2bc0fc30ec141fe91b1a2c7da8275619a",
+      "contextAfterSHA256": "8967434e7d16594356b2013fbe1f68e2bc0fc30ec141fe91b1a2c7da8275619a",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "aed2b0e3f5915a1a6e3907e9fb4e3a847d8f807f1e596ccc1df1cbb4b01fb684",
+        "targetAfterSHA256": "9b3f9a232881686b3ecb04cdff81d89e1487c244e5a277d5f8ff19700cd1944c",
+        "contextAfterSHA256": "9b3f9a232881686b3ecb04cdff81d89e1487c244e5a277d5f8ff19700cd1944c",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "9b3f9a232881686b3ecb04cdff81d89e1487c244e5a277d5f8ff19700cd1944c",
+          "semanticContextSHA256": "9b3f9a232881686b3ecb04cdff81d89e1487c244e5a277d5f8ff19700cd1944c",
+          "subjectTitle": "Betion toinen muisti",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "6605c03ef9f4f50d43ad58c3611c79d39075ec317b59d8e196bb1b556ce2bcca",
+        "sameImageNativeSHA256": "1de3241c0d6a31ceefbad2afd2d6d7e5f3c9272f5dd3e57eb9d887d8a5d43545",
+        "sameImageExportSHA256": "3377a95de0f95ff7a784b301d5e995cd38e88146d7a2e3be6048d267a7a2d6a8",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     }
   ],
   "runtimeIntegrationPending": true,
   "ownerAcceptedNotImpliedByAuthorization": false,
   "gameIntegrated": false,
   "allAssetsExplicitlyOwnerApproved": true,
-  "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+  "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+  "task118ExcludedAssets": [],
+  "task118TextRevision": true,
+  "independentTextResamplePending": true,
+  "textAcceptanceVerified": false,
+  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task118/immutable-media-history/e14/southtarawa/fee5f37fcd75629e05dc735cb0aaf95d5a42300c7f2b64bb4ded254380028092.json",
+  "task118ReboundAt": "2026-10-13T16:31:26.817524+00:00"
 }

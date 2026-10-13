@@ -1,356 +1,356 @@
 {
-  "$skeema": "matkakirja-paakaupunki/1",
+ "$skeema": "matkakirja-paakaupunki/1",
+ "id": "nukualofa",
+ "maa": "TON",
+ "era": "e14",
+ "kaupunki": {
   "id": "nukualofa",
-  "maa": "TON",
-  "era": "e14",
-  "kaupunki": {
-    "id": "nukualofa",
-    "name": "Nukuʻalofa",
-    "wiki": "Nukuʻalofa",
-    "ambience": "meri",
-    "pallo": {
-      "lat": -21.1343,
-      "lon": -175.2018
-    }
-  },
-  "artikkeli": {
-    "intro": "**Nukuʻalofa** on Tongan pääkaupunki Tongatapun pohjoisrannalla, ja sen satamasta lähdetään valtakunnan muille saarille. Rantaa seuraavan Vuna Roadin tuntumassa kohtaavat meriliikenne ja kaupungin bussit. Kuninkaallinen palatsi kuuluu tähän samaan rantakaupunkiin. Keskustan Talamahun markkinoilla ostetaan sekä tuoretuotteita että paikallisten tekijöiden käsitöitä.\n\nKaupunginosien nimet kertovat kasvun vaiheista: Kolomotuʻa on vanha asutus ja **Kolofoʻou uusi asutus**. Idässä sijaitseva Maʻufanga oli aikaisemmin oma kylänsä. Nukuʻalofan kehitys kuninkaan hallinnon ja kirkkojen ympärille kuuluu 1800-luvun historiaan. Nykyinen kaupunki ei kuitenkaan avaudu pelkillä hallintorakennuksilla: kuorikankaat, vyötärömatot ja markkinakauppa näyttävät, miten käsityö liittyy myös juhliin ja arkeen. Sunnuntaisin moni palvelu sulkeutuu ja kirkkojen laulu kuuluu kaupungin viikkoon.",
-    "teksti": "Nukuʻalofan vanhat nimet ja kartat kertovat meren merkityksestä. James Cook piirsi lahden 1700-luvulla ja mainitsi lähistön Pangaimotun saaren. Myöhemmissä matkateksteissä kaupungin nimi sai erilaisia kirjoitusasuja ennen tongan oikeinkirjoituksen vakiintumista.\n\nIsoisän matkavuosi 1873 kuuluu kaupungin 1800-luvun kasvun aikakauteen. Kolomotuʻan vanhan asutuksen rinnalle kehittynyt Kolofoʻou sisältää palatsin ja hallintopaikkoja. Nykyiset kaupunginosat säilyttävät näiden eri taustojen nimet.\n\nKäsityöt tuovat kaupunkikuvaan toisen kerroksen. Talamahussa ja Langafonuan käsityökeskuksessa voi tutustua punontaan ja kuorikankaaseen. Ngatun kuvioihin kuuluu jopa palatsilta kuninkaalliselle hautausmaalle johtavan tien aihe: kaupungin paikka voi näkyä sekä katuverkossa että lahjaksi annettavassa käsityössä."
-  },
-  "kysymykset": [
-    {
-      "q": "Millä saarella Nukuʻalofa sijaitsee?",
-      "options": [
-        "Tongatapu",
-        "Vavaʻu",
-        "Haʻapai",
-        "ʻEua"
-      ],
-      "correct": 0,
-      "level": 1,
-      "hint": "Etsi kaupungin paikka Tongan eteläisestä saariryhmästä.",
-      "fact": "Nukuʻalofa sijaitsee Tongatapun saaren pohjoisrannalla.",
-      "source": "https://en.wikipedia.org/wiki/Nuku%CA%BBalofa"
-    },
-    {
-      "q": "Mitä kaupunginosan nimi Kolomotuʻa tarkoittaa?",
-      "options": [
-        "Vanhaa asutusta",
-        "Uutta asutusta",
-        "Syvää satamaa",
-        "Korkeaa kukkulaa"
-      ],
-      "correct": 0,
-      "level": 2,
-      "hint": "Nimi viittaa kaupunginosan asemaan kaupungin kasvun historiassa.",
-      "fact": "Kolomotuʻa yhdistää asutusta tarkoittavan kolo-sanan vanhaa tarkoittavaan motuʻa-sanaan.",
-      "source": "https://en.wikipedia.org/wiki/Nuku%CA%BBalofa"
-    },
-    {
-      "q": "Mistä perinteisen ngatun pohja valmistetaan?",
-      "options": [
-        "Puun sisäkuoresta",
-        "Lampaan villasta",
-        "Puuvillalangasta",
-        "Kuivatusta levästä"
-      ],
-      "correct": 0,
-      "level": 1,
-      "hint": "Materiaalia hakataan puualustalla leveämmäksi.",
-      "fact": "Tongalaisen ngatun pohjaksi käytetään paperimulperin sisäkuorta.",
-      "source": "https://en.wikipedia.org/wiki/Tapa_cloth"
-    },
-    {
-      "q": "Kenen mukaan Queen Sālote Wharf on nimetty?",
-      "options": [
-        "Kuningatar Sāloten",
-        "Kapteeni Cookin",
-        "George Vasonin",
-        "Kuningas Josiahin"
-      ],
-      "correct": 0,
-      "level": 2,
-      "hint": "Laiturin englanninkielinen nimi kertoo henkilön aseman.",
-      "fact": "Maʻufangan suuntaan rakennettu satamalaituri sai kuningatar Sāloten nimen.",
-      "source": "https://en.wikipedia.org/wiki/Nuku%CA%BBalofa"
-    },
-    {
-      "q": "Mihin Nukuʻalofan Railway Roadin nimi viittaa?",
-      "options": [
-        "Entiseen satamarataan",
-        "Nykyiseen metroon",
-        "Tulevaan luotijunaan",
-        "Vanhaan ratsutiehen"
-      ],
-      "correct": 0,
-      "level": 3,
-      "hint": "Katunimi muistaa kuljetustavan, joka on jo poistunut käytöstä.",
-      "fact": "Kaupungissa oli kapearaiteinen rata laguunin ja laiturin välillä, vaikka toimivaa rautatietä ei nykyisin ole.",
-      "source": "https://en.wikipedia.org/wiki/Nuku%CA%BBalofa"
-    }
-  ],
-  "tiedot": [
-    "Kolomotuʻa ja Kolofoʻou tarkoittavat vanhaa ja uutta asutusta: kaupungin kasvun vaiheita voi lukea kaupunginosien nimistä.",
-    "Railway Road säilyttää entisen satamaradan muiston, vaikka Nukuʻalofassa ei ole toimivaa rautatietä.",
-    "Yksi ngatun perinteisistä kuvioaiheista on palatsin ja kuninkaallisen hautausmaan välinen tie Nukuʻalofassa."
-  ],
-  "valokuva": {
-    "tiedosto": "Nuku'alofa harbor, north coast of Tongatapu island, Kingdom of Tonga - panoramio (3).jpg",
-    "lyhyt": "Nukuʻalofan satamaa Tongatapun pohjoisrannikolla lokakuussa 2014.",
-    "selite": "Nukuʻalofan satamaa Tongatapun pohjoisrannikolla lokakuussa 2014.",
-    "lahde": "David Broad, Commons (CC BY 3.0)"
-  },
-  "kaupunkilehti": [
-    {
-      "id": "kaupunki",
-      "nimi": "Nukuʻalofa",
-      "johdanto": "Satamalaiturit, kaupunginosien nimet ja käsityöpaikat avaavat Tongan pääkaupungin historiaa ja arkea.",
-      "kansikuvat": [
-        {
-          "tiedosto": "Nuku'alofa harbor, north coast of Tongatapu island, Kingdom of Tonga - panoramio (1).jpg",
-          "lyhyt": "Nukuʻalofan satama, pienalusten laitureita ja rantakaupungin ympäristöä vuonna 2014.",
-          "selite": "Nukuʻalofan satama, pienalusten laitureita ja rantakaupungin ympäristöä vuonna 2014.",
-          "lahde": "David Broad, Wikimedia Commons (CC BY 3.0)"
-        },
-        {
-          "tiedosto": "",
-          "lyhyt": "",
-          "selite": "",
-          "lahde": ""
-        },
-        {
-          "tiedosto": "Nuku'alofa satellite view.png",
-          "lyhyt": "Nukuʻalofan kaupunkialue ja laguuni vuoden 2013 satelliittiaineistossa.",
-          "selite": "Nukuʻalofan kaupunkialue ja laguuni vuoden 2013 satelliittiaineistossa.",
-          "lahde": "Landsat 8 and UGS (NASA) - derivative work: Skimel, Wikimedia Commons (CC BY-SA 4.0)"
-        }
-      ],
-      "nostot": [
-        {
-          "otsikko": "Vanha ja uusi samassa kaupungissa",
-          "teksti": "Nukuʻalofan kaupunginosien nimet kantavat muistia sen kasvusta. Kolomotuʻa tarkoittaa vanhaa asutusta, Kolofoʻou uutta. Kolomotuʻa liittyy alkuperäisen linnoituksen ympärille syntyneeseen asutukseen; Kolofoʻouhun sijoittuivat kuninkaan palatsi ja hallinto. Idässä Maʻufanga oli oma kylänsä. Kaupunkia voi siis lukea nimien avulla: sama pääkaupunki sisältää vanhan ytimen, uuden hallintokeskuksen ja aikaisemman kylän. Nimet säilyttävät eroja, jotka pelkkä kaupungin yhteinen nimi peittää.",
-          "wiki": "Nukuʻalofa",
-          "tiedosto": "",
-          "lyhyt": "",
-          "selite": "",
-          "lahde": ""
-        },
-        {
-          "otsikko": "Satamaa vaihdetaan, meri pysyy",
-          "teksti": "Nukuʻalofan satama yhdistää Tongatapun muihin Tongan saariin. Vuna Wharf palveli aikanaan kansainvälistä laivaliikennettä, ja myöhemmin suurempi laituri rakennettiin idemmäs Maʻufangan suuntaan. Se sai nimekseen Queen Sālote Wharf. Rannassa on myös kalastajien ja saarten välisen liikenteen käyttämä laituri. Kaupungin rantaviiva kokoaa näin eri tehtäviä: tavara, matkustajat ja kalastus tarvitsevat kukin yhteytensä mereen. Satama on samalla paikallista arkea ja lähtöpaikka kauemmas saaristoon.",
-          "wiki": "Nukuʻalofa",
-          "tiedosto": "",
-          "lyhyt": "",
-          "selite": "",
-          "lahde": ""
-        },
-        {
-          "otsikko": "Katu muistaa kadonneet kiskot",
-          "teksti": "Nukuʻalofassa on Railway Road, Rautatiekatu, vaikka kaupungissa ei ole toimivaa rautatietä eikä raitiovaunuja. Nimen taustalla on vanha kapearaiteinen rata laguunin ja laiturin välillä. Muisto teollisesta kuljetusreitistä elää siis katukyltissä. Nykyinen joukkoliikenne kulkee busseilla, joiden lähtöpaikka on rantaa seuraavan Vuna Roadin tuntumassa. Pieni nimiyksityiskohta yhdistää kaksi liikenteen vaihetta: aiemman tavararadan ja nykyisen kaupungin, jossa liikutaan teitä ja merireittejä pitkin.",
-          "wiki": "Nukuʻalofa",
-          "tiedosto": "",
-          "lyhyt": "",
-          "selite": "",
-          "lahde": ""
-        },
-        {
-          "otsikko": "Lahti ennen yhtenäistä kirjoitusasua",
-          "teksti": "Nukuʻalofan lahti näkyy James Cookin 1700-luvulla piirtämässä kartassa, vaikka hänen matkakertomuksensa ei käytä kaupungin nykyistä nimeä. Hän mainitsee läheisen Pangaimotun saaren. Myöhemmät vierailijat kirjoittivat paikan nimeä omilla tavoillaan, esimerkiksi Noogollefa ja Noukou-Alofa. Äänteitä siirrettiin paperille ennen kuin tongan kirjoitusasu vakiintui. Vaihtuvat kirjainjonot kertovat samasta rannikosta, eivät eri kaupungeista. Vanhaa matkatekstiä lukiessa tuttu paikka voi siksi piiloutua oudolta näyttävään nimeen.",
-          "wiki": "Nukuʻalofa",
-          "tiedosto": "",
-          "lyhyt": "",
-          "selite": "",
-          "lahde": ""
-        }
-      ],
-      "matkailijalle": {
-        "kuva": {
-          "tiedosto": "",
-          "lyhyt": "",
-          "selite": "",
-          "lahde": ""
-        },
-        "kappale": "Aloita Nukuʻalofaan tutustuminen rantatieltä ja keskustan Talamahun markkinoilta. Jätä myös aikaa Langafonuan käsityökeskukselle. Tongatapun muiden nähtävyyksien kiertäminen on eri retki kuin keskustan kävely. Sovi lentokenttäkuljetus ja mahdollinen saarten välinen jatkomatka etukäteen. Sunnuntai hiljentää monet palvelut, joten ostokset kannattaa sijoittaa toiselle päivälle.",
-        "artikkeli": {
-          "nimi": "Matkailijan Nukuʻalofa",
-          "taitto": "opas",
-          "teksti": "Lähde rantakadulta käsityöpaikkoihin ja anna kaupunginosien nimien kertoa historiasta.",
-          "nosto": "Talamahun markkinoilla kaupungin ruoka ja käsityö kohtaavat; sunnuntaille tarvitaan toisenlainen päiväohjelma.",
-          "jaksot": [
-            {
-              "otsikko": "Perille ja liikkeelle",
-              "teksti": "Tongatapun Fuaʻamotun lentoasema palvelee Nukuʻalofaa. Sovi kuljetus lentoasemalta majoitukseen etukäteen. Keskustan ja saaren muiden osien välillä voi liikkua taksilla tai paikallisbusseilla; bussien lähtöpaikkoja on Vuna Roadin tuntumassa. Selvitä määränpää ja paluu paikan päällä, sillä liikenne ei perustu tiukkaan julkaistuun aikatauluun. Muille saarille jatketaan laivalla tai lentäen, joten erota keskustakävely ja saarten välinen matka toisistaan jo suunnitelmassa.",
-              "kuva": {
-                "tiedosto": "",
-                "lyhyt": "",
-                "selite": "",
-                "lahde": ""
-              }
-            },
-            {
-              "otsikko": "Ranta ja kaupunginosien nimet",
-              "teksti": "Aloita rannasta Vuna Roadin ympäristöstä ja tutustu keskustaan jalan. Rannalla sijaitseva kuninkaallinen palatsi ja sataman laiturit auttavat hahmottamaan hallinnon ja meriliikenteen yhteyttä. Kolomotuʻa ja Kolofoʻou tarkoittavat vanhaa ja uutta asutusta; nimet kertovat kaupungin kasvusta. Rannan ulkopuolelle suuntautuvalla saarikierroksella nähtävät Haʻamonga ʻa Maui ja Muʻan hautapaikat ovat Tongatapun muita kohteita, eivät Nukuʻalofan keskustan rakennuksia.",
-              "kuva": {
-                "tiedosto": "",
-                "lyhyt": "",
-                "selite": "",
-                "lahde": ""
-              }
-            },
-            {
-              "otsikko": "Käsityön tekijän jäljille",
-              "teksti": "Talamahun markkinoilla myydään sekä tuoretuotteita että tongalaisia käsitöitä. Langafonua Gallery & Handicrafts Centre on toinen kaupungin käsityöpaikka. Kysy ngatun valmistustavasta ja punotun maton materiaalista: samannäköiset pinnat voivat syntyä eri tekniikoilla. Fangalotossa toimiva Ancient Tonga tarjoaa myös kuorikankaan tekemiseen ja punontaan liittyvää toimintaa. Selvitä vierailun sisältö järjestäjältä ja pyydä lupa ennen ihmisten tai heidän työskentelynsä kuvaamista.",
-              "kuva": {
-                "tiedosto": "",
-                "lyhyt": "",
-                "selite": "",
-                "lahde": ""
-              }
-            },
-            {
-              "otsikko": "Mitä täällä syödään",
-              "teksti": "Kokeile ʻota ʻikaa: raakaa kalaa, joka marinoidaan sitruunalla ja kookoskermalla. Lu pulu yhdistää säilykelihaa ja kookosmaitoa taronlehtiin käärittynä. Umu tarkoittaa maauunia, jossa valmistetaan esimerkiksi lihaa ja kasviksia. Nukuʻalofassa on kahviloita ja ravintoloita; tongalaiseen juhla-ateriaan voi liittyä myös musiikkia ja tanssia. Talamahun tuoretuotteiden äärellä näkyy ruokakulttuurin toinen puoli, paikallisten arjen ostokset.",
-              "kuva": {
-                "tiedosto": "",
-                "lyhyt": "",
-                "selite": "",
-                "lahde": ""
-              }
-            },
-            {
-              "otsikko": "Milloin kannattaa tulla",
-              "teksti": "Jätä markkinoille ja ostoksille arkipäivä. Sunnuntai on Tongalla lepopäivä, jolloin moni palvelu sulkeutuu, vaikka osa hotelleista ja ravintoloista palvelee. Kirkoissa kuulee sunnuntaisin yhteislaulua; sovi mahdollinen osallistuminen paikallisten kanssa ja pukeudu peittävästi. Meriretken ajankohta vaatii oman harkintansa: tarkista sääennuste, kuljetuksen toteutuminen ja paluu järjestäjältä. Kaupungin palvelupäivä ja veneilyyn sopiva päivä eivät aina ole sama asia.",
-              "kuva": {
-                "tiedosto": "",
-                "lyhyt": "",
-                "selite": "",
-                "lahde": ""
-              }
-            }
-          ],
-          "matkailu": {
-            "parasta": [
-              {
-                "mita": "Talamahun markkinat",
-                "tahdet": 3,
-                "selite": "Tutustu tuoretuotteisiin ja paikallisiin käsitöihin."
-              },
-              {
-                "mita": "Vuna Roadin ranta",
-                "tahdet": 3,
-                "selite": "Sataman ja palatsin ympäristö näyttää meren yhteyden kaupunkiin."
-              },
-              {
-                "mita": "Langafonuan käsityökeskus",
-                "tahdet": 2,
-                "selite": "Kysy punonnan ja kuorikankaan valmistuksesta."
-              },
-              {
-                "mita": "Tongalainen ateria",
-                "tahdet": 2,
-                "selite": "Kokeile taronlehtiin käärittyä lu pulua."
-              },
-              {
-                "mita": "Kaupunginosien nimet",
-                "tahdet": 2,
-                "selite": "Vanhan ja uuden asutuksen nimet säilyttävät kasvun historiaa."
-              }
-            ],
-            "hyvaTietaa": [
-              {
-                "otsikko": "Sunnuntai",
-                "teksti": "Moni palvelu sulkeutuu lepopäivänä; varmista tarvitsemasi kuljetukset etukäteen."
-              },
-              {
-                "otsikko": "Bussit",
-                "teksti": "Selvitä lähtö ja paluu paikan päällä, sillä liikenne ei noudata tiukkaa julkaistua aikataulua."
-              },
-              {
-                "otsikko": "Pukeutuminen",
-                "teksti": "Peittävä vaatetus sopii kaupunkiin ja erityisesti kirkossa vierailuun."
-              },
-              {
-                "otsikko": "Käsityöostokset",
-                "teksti": "Kysy tekijästä ja materiaalista; pyydä lupa ihmisten kuvaamiseen."
-              }
-            ]
-          },
-          "lahde": "Wikipedia"
-        }
-      }
-    },
-    {
-      "id": "kuvataide",
-      "nimi": "Kuituja kaupungin arjessa",
-      "johdanto": "Nukuʻalofan käsityöpaikat näyttävät, miten puunkuori ja punotut matot liittyvät juhliin, pukeutumiseen ja kaupungin maisemaan.",
-      "tehtava": {
-        "kysymys": "Millä työvälineellä ngatun toistuvan kuvion pohja siirretään pinnalle?",
-        "vaihtoehdot": [
-          "Kohokuvioisella laudalla",
-          "Kirjontaneulalla",
-          "Kangaspuilla",
-          "Savimuotilla"
-        ],
-        "oikea": 0,
-        "fakta": "Kupesi toimii kuvion pohjana, jonka muodot erottuvat kuorikangasta värillä hangattaessa."
-      },
-      "nostot": [
-        {
-          "otsikko": "Puun kuoresta lahjaksi",
-          "teksti": "Nukuʻalofan käsityömyymälöissä ja Talamahun markkinoilla myytävä ngatu on koristeltua kuorikangasta. Sen pohjaksi valmistellaan paperimulperin sisäkuorta, joka pehmennetään ja hakataan leveäksi puualustalla. Kaistaleita yhdistetään suuremmaksi pinnaksi ja koristellaan. Kangasmaiselta näyttävä materiaali syntyy siis eri tavalla kuin kudottu tekstiili. Ngatua annetaan myös lahjaksi häissä ja muissa tärkeissä elämäntapahtumissa. Markkinoilla nähty kappale kuuluu sekä käsityöhön että perheiden lahjojen maailmaan.",
-          "wiki": "Tapa cloth",
-          "tiedosto": "",
-          "lyhyt": "",
-          "selite": "",
-          "lahde": ""
-        },
-        {
-          "otsikko": "Kaupungin katu kuorikankaassa",
-          "teksti": "Ngatun kuvioihin kuuluu myös Nukuʻalofan omaa maisemaa. Yksi perinteisistä aiheista on palatsin ja kuninkaallisen hautausmaan välinen tie. Kuvion pohja tehdään kupesi-kuviolaudalla: sen koholla olevat muodot tulevat näkyviin, kun pinnan yli levitettyä kuorikangasta hangataan värillä. Sen jälkeen kuvioita vahvistetaan käsin. Koristeessa voi siten kulkea oikea kaupunkireitti. Katsottava yksityiskohta ei ole vain toistuva muoto, vaan yhteys rakennusten, katujen ja valmistajan työn välillä.",
-          "wiki": "Tapa cloth",
-          "tiedosto": "",
-          "lyhyt": "",
-          "selite": "",
-          "lahde": ""
-        },
-        {
-          "otsikko": "Matto kuuluu juhlapukuun",
-          "teksti": "Taʻovala on vyötärölle kiedottava matto, jota käytetään tongalaisessa muodollisessa pukeutumisessa. Se puetaan muun vaatetuksen päälle ja sidotaan kafa-nauhalla. Tavallinen versio on lyhyt, mutta häihin ja hautajaisiin kuuluu erilaisia, suurempia mattoja. Hieno kudontatyö voi säilyä suvun arvokkaana perintönä. Nukuʻalofan hallintokaupungissa vaatteen yhteys virallisiin tilanteisiin on luonteva: kuningatar Sālote määräsi taʻovalan myös virkamiesten asuun. Matto ei siis kuulu vain lattialle tai seinälle.",
-          "wiki": "Taʻovala",
-          "tiedosto": "",
-          "lyhyt": "",
-          "selite": "",
-          "lahde": ""
-        },
-        {
-          "otsikko": "Jauhosäkille uusi tehtävä",
-          "teksti": "Taʻovala voidaan punoa pandanuksen lehtisuikaleista tai hibiskuksen kuorikuidusta, mutta myös vanhojen jauhosäkkien muovia on käytetty materiaalina. Perinteinen vaatekappale sallii siis eri raaka-aineita. Hienon maton käsin kutominen vaatii paljon työtä; valmiista säkistä saatavan materiaalin valmistelu on toisenlaista. Nukuʻalofan Talamahu ja Langafonuan käsityökeskus ovat paikkoja tutustua paikallisiin punonta- ja tekstiilitöihin. Tekijältä voi kysyä, mistä materiaali on peräisin ja miten se on työstetty.",
-          "wiki": "Taʻovala",
-          "tiedosto": "",
-          "lyhyt": "",
-          "selite": "",
-          "lahde": ""
-        }
-      ]
-    }
-  ],
-  "kohdekartta": {
-    "numeroympyrat": true,
-    "esittely": "Nukuʻalofan ranta, markkinat ja eri-ikäiset kaupunginosat kertovat sataman, hallinnon ja käsityön yhteyksistä.",
-    "rajat": {},
-    "kohteet": []
-  },
-  "nahtavyydet": {},
-  "saatiedot": null,
-  "ehdotukset": {
-    "lentoasema": "Fuaʻamotu International Airport (TBU)",
-    "huomiot": [
-      "Tekstiluonnos; kuva-, kartta-, sää- ja riippumattoman tarkistuksen portit avoinna.",
-      "Kaikkien kuvaroolien tiedosto, lyhyt, selite ja lahde ovat tyhjiä odottaessaan erillistä kuvaputkea.",
-      "Karttakohteita ei siirretty: paikan oma koordinaatti ja rakennuskohteiden tekijänoikeusportti varmistamatta. Rajat jätetty tyhjäksi ilman arvattua rajausta.",
-      "Kontekstin väkilukua ei käytetty: sen oma lähdemerkintä kertoo hakutuloskatkelman käytöstä; kaupunginosien väestöalue vaatii erillisen tarkistuksen.",
-      "saatiedot:null: 48/48 primäärivarmennus avoin, saa.json jätetty ennalleen.",
-      "1873 on tarinakaanonin matkavuosi; uusia tarkkoja tapahtuma- tai rakennusvuosia ei anneta."
-    ]
+  "name": "Nukuʻalofa",
+  "wiki": "Nukuʻalofa",
+  "ambience": "meri",
+  "pallo": {
+   "lat": -21.1343,
+   "lon": -175.2018
   }
+ },
+ "artikkeli": {
+  "intro": "**Nukuʻalofa** on Tongan pääkaupunki Tongatapun pohjoisrannalla, ja sen satamasta lähdetään valtakunnan muille saarille. Rantaa seuraavan Vuna Roadin tuntumassa kohtaavat meriliikenne ja kaupungin bussit. Kuninkaallinen palatsi kuuluu tähän samaan rantakaupunkiin. Keskustan Talamahun markkinoilla ostetaan sekä tuoretuotteita että paikallisten tekijöiden käsitöitä.\n\nKaupunginosien nimet kertovat kasvun vaiheista: Kolomotuʻa on vanha asutus ja **Kolofoʻou uusi asutus**. Idässä sijaitseva Maʻufanga oli aikaisemmin oma kylänsä. Nukuʻalofan kehitys kuninkaan hallinnon ja kirkkojen ympärille kuuluu 1800-luvun historiaan. Nykyinen kaupunki ei kuitenkaan avaudu pelkillä hallintorakennuksilla: kuorikankaat, vyötärömatot ja markkinakauppa näyttävät, miten käsityö liittyy myös juhliin ja arkeen. Sunnuntaisin moni palvelu sulkeutuu ja kirkkojen laulu kuuluu kaupungin viikkoon.",
+  "teksti": "Nukuʻalofan vanhat nimet ja kartat kertovat meren merkityksestä. James Cook piirsi lahden 1700-luvulla ja mainitsi lähistön Pangaimotun saaren. Myöhemmissä matkateksteissä kaupungin nimi sai erilaisia kirjoitusasuja ennen tongan oikeinkirjoituksen vakiintumista.\n\nIsoisän matkavuosi 1873 kuuluu kaupungin 1800-luvun kasvun aikakauteen. Kolomotuʻan vanhan asutuksen rinnalle kehittynyt Kolofoʻou sisältää palatsin ja hallintopaikkoja. Nykyiset kaupunginosat säilyttävät näiden eri taustojen nimet.\n\nKäsityöt tuovat kaupunkikuvaan toisen kerroksen. Talamahussa ja Langafonuan käsityökeskuksessa voi tutustua punontaan ja kuorikankaaseen. Ngatun kuvioihin kuuluu jopa palatsilta kuninkaalliselle hautausmaalle johtavan tien aihe: kaupungin paikka voi näkyä sekä katuverkossa että lahjaksi annettavassa käsityössä."
+ },
+ "kysymykset": [
+  {
+   "q": "Millä saarella Nukuʻalofa sijaitsee?",
+   "options": [
+    "Tongatapu",
+    "Vavaʻu",
+    "Haʻapai",
+    "ʻEua"
+   ],
+   "correct": 0,
+   "level": 1,
+   "hint": "Etsi kaupungin paikka Tongan eteläisestä saariryhmästä.",
+   "fact": "Nukuʻalofa sijaitsee Tongatapun saaren pohjoisrannalla.",
+   "source": "https://en.wikipedia.org/wiki/Nuku%CA%BBalofa"
+  },
+  {
+   "q": "Mitä kaupunginosan nimi Kolomotuʻa tarkoittaa?",
+   "options": [
+    "Vanhaa asutusta",
+    "Uutta asutusta",
+    "Syvää satamaa",
+    "Korkeaa kukkulaa"
+   ],
+   "correct": 0,
+   "level": 2,
+   "hint": "Nimi viittaa kaupunginosan asemaan kaupungin kasvun historiassa.",
+   "fact": "Kolomotuʻa yhdistää asutusta tarkoittavan kolo-sanan vanhaa tarkoittavaan motuʻa-sanaan.",
+   "source": "https://en.wikipedia.org/wiki/Nuku%CA%BBalofa"
+  },
+  {
+   "q": "Mistä perinteisen ngatun pohja valmistetaan?",
+   "options": [
+    "Puun sisäkuoresta",
+    "Lampaan villasta",
+    "Puuvillalangasta",
+    "Kuivatusta levästä"
+   ],
+   "correct": 0,
+   "level": 1,
+   "hint": "Materiaalia hakataan puualustalla leveämmäksi.",
+   "fact": "Tongalaisen ngatun pohjaksi käytetään paperimulperin sisäkuorta.",
+   "source": "https://en.wikipedia.org/wiki/Tapa_cloth"
+  },
+  {
+   "q": "Minkä hallitsijan mukaan Maʻufangan suuntaan rakennettu satamalaituri nimettiin?",
+   "options": [
+    "Sālote Tupou III:n",
+    "George Tupou I:n",
+    "George Tupou II:n",
+    "Tāufaʻāhau Tupou IV:n"
+   ],
+   "correct": 0,
+   "level": 2,
+   "hint": "Laituri rakennettiin vanhaa Vuna Wharfia suuremmaksi.",
+   "fact": "Maʻufangan suuntaan rakennettu satamalaituri sai kuningatar Sāloten nimen.",
+   "source": "https://en.wikipedia.org/wiki/Nuku%CA%BBalofa"
+  },
+  {
+   "q": "Mihin Nukuʻalofan Railway Roadin nimi viittaa?",
+   "options": [
+    "Entiseen satamarataan",
+    "Aiemman laiturin nimeen",
+    "Rautaa kuljettaneeseen laivaan",
+    "Ratakiskoista tehtyyn rantatiehen"
+   ],
+   "correct": 0,
+   "level": 3,
+   "hint": "Katunimi muistaa kuljetustavan, joka on jo poistunut käytöstä.",
+   "fact": "Kaupungissa oli kapearaiteinen rata laguunin ja laiturin välillä, vaikka toimivaa rautatietä ei nykyisin ole.",
+   "source": "https://en.wikipedia.org/wiki/Nuku%CA%BBalofa"
+  }
+ ],
+ "tiedot": [
+  "Kolomotuʻa ja Kolofoʻou tarkoittavat vanhaa ja uutta asutusta: kaupungin kasvun vaiheita voi lukea kaupunginosien nimistä.",
+  "Railway Road säilyttää entisen satamaradan muiston, vaikka Nukuʻalofassa ei ole toimivaa rautatietä.",
+  "Yksi ngatun perinteisistä kuvioaiheista on palatsin ja kuninkaallisen hautausmaan välinen tie Nukuʻalofassa."
+ ],
+ "valokuva": {
+  "tiedosto": "Nuku'alofa harbor, north coast of Tongatapu island, Kingdom of Tonga - panoramio (3).jpg",
+  "lyhyt": "Veneitä ja laivoja Nukuʻalofan satamassa.",
+  "selite": "Purjeveneiden ja kalastusalusten takana näkyy satamalaituri sekä punainen työalus.",
+  "lahde": "David Broad, Commons (CC BY 3.0)"
+ },
+ "kaupunkilehti": [
+  {
+   "id": "kaupunki",
+   "nimi": "Nukuʻalofa",
+   "johdanto": "Satamalaiturit, kaupunginosien nimet ja käsityöpaikat avaavat Tongan pääkaupungin historiaa ja arkea.",
+   "kansikuvat": [
+    {
+     "tiedosto": "Nuku'alofa harbor, north coast of Tongatapu island, Kingdom of Tonga - panoramio (1).jpg",
+     "lyhyt": "Nukuʻalofan satamalaitureita ja veneitä.",
+     "selite": "Laitureiden välissä näkyy purjeveneitä, venevajoja ja matalia satamarakennuksia.",
+     "lahde": "David Broad, Wikimedia Commons (CC BY 3.0)"
+    },
+    {
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": ""
+    },
+    {
+     "tiedosto": "Nuku'alofa satellite view.png",
+     "lyhyt": "Nukuʻalofan rannikkoa satelliittikuvassa.",
+     "selite": "Rakennettu rannikko ja katuverkko erottuvat Tongatapun laguunin, pienten saarten ja pilvien vierellä.",
+     "lahde": "Landsat 8 and UGS (NASA) - derivative work: Skimel, Wikimedia Commons (CC BY-SA 4.0)"
+    }
+   ],
+   "nostot": [
+    {
+     "otsikko": "Vanha ja uusi samassa kaupungissa",
+     "teksti": "Nukuʻalofan kaupunginosien nimet kantavat muistia sen kasvusta. Kolomotuʻa tarkoittaa vanhaa asutusta, Kolofoʻou uutta. Kolomotuʻa liittyy alkuperäisen linnoituksen ympärille syntyneeseen asutukseen; Kolofoʻouhun sijoittuivat kuninkaan palatsi ja hallinto. Idässä Maʻufanga oli oma kylänsä. Kaupunkia voi siis lukea nimien avulla: sama pääkaupunki sisältää vanhan ytimen, uuden hallintokeskuksen ja aikaisemman kylän. Nimet säilyttävät eroja, jotka pelkkä kaupungin yhteinen nimi peittää.",
+     "wiki": "Nukuʻalofa",
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": ""
+    },
+    {
+     "otsikko": "Satamaa vaihdetaan, meri pysyy",
+     "teksti": "Nukuʻalofan satama yhdistää Tongatapun muihin Tongan saariin. Vuna Wharf palveli aikanaan kansainvälistä laivaliikennettä, ja myöhemmin suurempi laituri rakennettiin idemmäs Maʻufangan suuntaan. Se sai nimekseen Queen Sālote Wharf. Rannassa on myös kalastajien ja saarten välisen liikenteen käyttämä laituri. Kaupungin rantaviiva kokoaa näin eri tehtäviä: tavara, matkustajat ja kalastus tarvitsevat kukin yhteytensä mereen. Satama on samalla paikallista arkea ja lähtöpaikka kauemmas saaristoon.",
+     "wiki": "Nukuʻalofa",
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": ""
+    },
+    {
+     "otsikko": "Katu muistaa kadonneet kiskot",
+     "teksti": "Nukuʻalofassa on Railway Road, Rautatiekatu, vaikka kaupungissa ei ole toimivaa rautatietä eikä raitiovaunuja. Nimen taustalla on vanha kapearaiteinen rata laguunin ja laiturin välillä. Muisto teollisesta kuljetusreitistä elää siis katukyltissä. Nykyinen joukkoliikenne kulkee busseilla, joiden lähtöpaikka on rantaa seuraavan Vuna Roadin tuntumassa. Pieni nimiyksityiskohta yhdistää kaksi liikenteen vaihetta: aiemman tavararadan ja nykyisen kaupungin, jossa liikutaan teitä ja merireittejä pitkin.",
+     "wiki": "Nukuʻalofa",
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": ""
+    },
+    {
+     "otsikko": "Lahti ennen yhtenäistä kirjoitusasua",
+     "teksti": "Nukuʻalofan lahti näkyy James Cookin 1700-luvulla piirtämässä kartassa, vaikka hänen matkakertomuksensa ei käytä kaupungin nykyistä nimeä. Hän mainitsee läheisen Pangaimotun saaren. Myöhemmät vierailijat kirjoittivat paikan nimeä omilla tavoillaan, esimerkiksi Noogollefa ja Noukou-Alofa. Äänteitä siirrettiin paperille ennen kuin tongan kirjoitusasu vakiintui. Vaihtuvat kirjainjonot kertovat samasta rannikosta, eivät eri kaupungeista. Cookin kartassa mainittu Pangaimotu sijaitsee edelleen Nukuʻalofan lahden edustalla.",
+     "wiki": "Nukuʻalofa",
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": ""
+    }
+   ],
+   "matkailijalle": {
+    "kuva": {
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": ""
+    },
+    "kappale": "Aloita Nukuʻalofaan tutustuminen rantatieltä ja keskustan Talamahun markkinoilta. Jätä myös aikaa Langafonuan käsityökeskukselle. Tongatapun muiden nähtävyyksien kiertäminen on eri retki kuin keskustan kävely. Sunnuntai hiljentää monet palvelut, joten ostokset kannattaa sijoittaa toiselle päivälle.",
+    "artikkeli": {
+     "nimi": "Matkailijan Nukuʻalofa",
+     "taitto": "opas",
+     "teksti": "Lähde rantakadulta käsityöpaikkoihin ja anna kaupunginosien nimien kertoa historiasta.",
+     "nosto": "Talamahun markkinoilla kaupungin ruoka ja käsityö kohtaavat; sunnuntaille tarvitaan toisenlainen päiväohjelma.",
+     "jaksot": [
+      {
+       "otsikko": "Perille ja liikkeelle",
+       "teksti": "Tongatapun Fuaʻamotun lentoasema palvelee Nukuʻalofaa. Keskustan ja saaren muiden osien välillä voi liikkua taksilla tai paikallisbusseilla; bussien lähtöpaikkoja on Vuna Roadin tuntumassa. Paikallisbussit kulkevat saaren eri puolille, mutta eivät noudata tiukkaa julkaistua aikataulua. Muille saarille jatketaan laivalla tai lentäen, joten erota keskustakävely ja saarten välinen matka toisistaan jo suunnitelmassa.",
+       "kuva": {
+        "tiedosto": "",
+        "lyhyt": "",
+        "selite": "",
+        "lahde": ""
+       }
+      },
+      {
+       "otsikko": "Ranta ja kaupunginosien nimet",
+       "teksti": "Aloita rannasta Vuna Roadin ympäristöstä ja tutustu keskustaan jalan. Rannalla sijaitseva kuninkaallinen palatsi ja sataman laiturit auttavat hahmottamaan hallinnon ja meriliikenteen yhteyttä. Kolomotuʻa ja Kolofoʻou tarkoittavat vanhaa ja uutta asutusta; nimet kertovat kaupungin kasvusta. Rannan ulkopuolelle suuntautuvalla saarikierroksella nähtävät Haʻamonga ʻa Maui ja Muʻan hautapaikat ovat Tongatapun muita kohteita, eivät Nukuʻalofan keskustan rakennuksia.",
+       "kuva": {
+        "tiedosto": "",
+        "lyhyt": "",
+        "selite": "",
+        "lahde": ""
+       }
+      },
+      {
+       "otsikko": "Käsityön tekijän jäljille",
+       "teksti": "Talamahun markkinoilla myydään sekä tuoretuotteita että tongalaisia käsitöitä. Langafonua Gallery & Handicrafts Centre on toinen kaupungin käsityöpaikka. Kysy ngatun valmistustavasta ja punotun maton materiaalista: samannäköiset pinnat voivat syntyä eri tekniikoilla. Fangalotossa toimiva Ancient Tonga tarjoaa myös kuorikankaan tekemiseen ja punontaan liittyvää toimintaa. Selvitä vierailun sisältö järjestäjältä ja pyydä lupa ennen ihmisten tai heidän työskentelynsä kuvaamista.",
+       "kuva": {
+        "tiedosto": "",
+        "lyhyt": "",
+        "selite": "",
+        "lahde": ""
+       }
+      },
+      {
+       "otsikko": "Mitä täällä syödään",
+       "teksti": "Kokeile ʻota ʻikaa: raakaa kalaa, joka marinoidaan sitruunalla ja kookoskermalla. Lu pulu yhdistää säilykelihaa ja kookosmaitoa taronlehtiin käärittynä. Umu tarkoittaa maauunia, jossa valmistetaan esimerkiksi lihaa ja kasviksia. Nukuʻalofassa on kahviloita ja ravintoloita; tongalaiseen juhla-ateriaan voi liittyä myös musiikkia ja tanssia. Talamahun tuoretuotteiden äärellä näkyy ruokakulttuurin toinen puoli, paikallisten arjen ostokset.",
+       "kuva": {
+        "tiedosto": "",
+        "lyhyt": "",
+        "selite": "",
+        "lahde": ""
+       }
+      },
+      {
+       "otsikko": "Milloin kannattaa tulla",
+       "teksti": "Jätä markkinoille ja ostoksille arkipäivä. Sunnuntai on Tongalla lepopäivä, jolloin moni palvelu sulkeutuu, vaikka osa hotelleista ja ravintoloista palvelee. Kirkoissa kuulee sunnuntaisin yhteislaulua; sovi mahdollinen osallistuminen paikallisten kanssa ja pukeudu peittävästi. Nukuʻalofan satamasta lähtevät saariston meriyhteydet, ja sää vaikuttaa merellä kulkemiseen. Kaupungin palvelupäivä ja veneilyyn sopiva päivä eivät aina ole sama asia.",
+       "kuva": {
+        "tiedosto": "",
+        "lyhyt": "",
+        "selite": "",
+        "lahde": ""
+       }
+      }
+     ],
+     "matkailu": {
+      "parasta": [
+       {
+        "mita": "Talamahun markkinat",
+        "tahdet": 3,
+        "selite": "Tutustu tuoretuotteisiin ja paikallisiin käsitöihin."
+       },
+       {
+        "mita": "Vuna Roadin ranta",
+        "tahdet": 3,
+        "selite": "Sataman ja palatsin ympäristö näyttää meren yhteyden kaupunkiin."
+       },
+       {
+        "mita": "Langafonuan käsityökeskus",
+        "tahdet": 2,
+        "selite": "Kysy punonnan ja kuorikankaan valmistuksesta."
+       },
+       {
+        "mita": "Tongalainen ateria",
+        "tahdet": 2,
+        "selite": "Kokeile taronlehtiin käärittyä lu pulua."
+       },
+       {
+        "mita": "Kaupunginosien nimet",
+        "tahdet": 2,
+        "selite": "Vanhan ja uuden asutuksen nimet säilyttävät kasvun historiaa."
+       }
+      ],
+      "hyvaTietaa": [
+       {
+        "otsikko": "Sunnuntai",
+        "teksti": "Varmista ennen matkaa lentoasemakuljetus, bussin määränpää ja paluu, sunnuntain palvelut sekä meri- ja saariretkien toteutuminen ja sääolot."
+       },
+       {
+        "otsikko": "Bussit",
+        "teksti": "Paikallisbussit eivät noudata tiukkaa julkaistua aikataulua."
+       },
+       {
+        "otsikko": "Pukeutuminen",
+        "teksti": "Peittävä vaatetus sopii kaupunkiin ja erityisesti kirkossa vierailuun."
+       },
+       {
+        "otsikko": "Käsityöostokset",
+        "teksti": "Kysy tekijästä ja materiaalista; pyydä lupa ihmisten kuvaamiseen."
+       }
+      ]
+     },
+     "lahde": "Wikipedia"
+    }
+   }
+  },
+  {
+   "id": "kuvataide",
+   "nimi": "Kuituja kaupungin arjessa",
+   "johdanto": "Nukuʻalofan käsityöpaikat näyttävät, miten puunkuori ja punotut matot liittyvät juhliin, pukeutumiseen ja kaupungin maisemaan.",
+   "tehtava": {
+    "kysymys": "Millä työvälineellä ngatun toistuvan kuvion pohja siirretään pinnalle?",
+    "vaihtoehdot": [
+     "Kohokuvioisella laudalla",
+     "Kirjontaneulalla",
+     "Kangaspuilla",
+     "Savimuotilla"
+    ],
+    "oikea": 0,
+    "fakta": "Kupesi toimii kuvion pohjana, jonka muodot erottuvat kuorikangasta värillä hangattaessa."
+   },
+   "nostot": [
+    {
+     "otsikko": "Puun kuoresta lahjaksi",
+     "teksti": "Nukuʻalofan käsityömyymälöissä ja Talamahun markkinoilla myytävä ngatu on koristeltua kuorikangasta. Sen pohjaksi valmistellaan paperimulperin sisäkuorta, joka pehmennetään ja hakataan leveäksi puualustalla. Kaistaleita yhdistetään suuremmaksi pinnaksi ja koristellaan. Kangasmaiselta näyttävä materiaali syntyy siis eri tavalla kuin kudottu tekstiili. Ngatua annetaan myös lahjaksi häissä ja muissa tärkeissä elämäntapahtumissa. Markkinoilla nähty kappale kuuluu sekä käsityöhön että perheiden lahjojen maailmaan.",
+     "wiki": "Tapa cloth",
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": ""
+    },
+    {
+     "otsikko": "Kaupungin katu kuorikankaassa",
+     "teksti": "Ngatun kuvioihin kuuluu myös Nukuʻalofan omaa maisemaa. Yksi perinteisistä aiheista on palatsin ja kuninkaallisen hautausmaan välinen tie. Kuvion pohja tehdään kupesi-kuviolaudalla: sen koholla olevat muodot tulevat näkyviin, kun pinnan yli levitettyä kuorikangasta hangataan värillä. Sen jälkeen kuvioita vahvistetaan käsin. Koristeessa voi siten kulkea oikea kaupunkireitti. Katsottava yksityiskohta ei ole vain toistuva muoto, vaan yhteys rakennusten, katujen ja valmistajan työn välillä.",
+     "wiki": "Tapa cloth",
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": ""
+    },
+    {
+     "otsikko": "Matto kuuluu juhlapukuun",
+     "teksti": "Taʻovala on vyötärölle kiedottava matto, jota käytetään tongalaisessa muodollisessa pukeutumisessa. Se puetaan muun vaatetuksen päälle ja sidotaan kafa-nauhalla. Tavallinen versio on lyhyt, mutta häihin ja hautajaisiin kuuluu erilaisia, suurempia mattoja. Hieno kudontatyö voi säilyä suvun arvokkaana perintönä. Nukuʻalofan hallintokaupungissa vaatteen yhteys virallisiin tilanteisiin on luonteva: kuningatar Sālote määräsi taʻovalan myös virkamiesten asuun. Taʻovala puetaan muun vaatetuksen päälle ja kiinnitetään nauhalla vyötärölle.",
+     "wiki": "Taʻovala",
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": ""
+    },
+    {
+     "otsikko": "Jauhosäkille uusi tehtävä",
+     "teksti": "Taʻovala voidaan punoa pandanuksen lehtisuikaleista tai hibiskuksen kuorikuidusta, mutta myös vanhojen jauhosäkkien muovia on käytetty materiaalina. Perinteinen vaatekappale sallii siis eri raaka-aineita. Hienon maton käsin kutominen vaatii paljon työtä; valmiista säkistä saatavan materiaalin valmistelu on toisenlaista. Nukuʻalofan Talamahu ja Langafonuan käsityökeskus ovat paikkoja tutustua paikallisiin punonta- ja tekstiilitöihin. Tekijältä voi kysyä, mistä materiaali on peräisin ja miten se on työstetty.",
+     "wiki": "Taʻovala",
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": ""
+    }
+   ]
+  }
+ ],
+ "kohdekartta": {
+  "numeroympyrat": true,
+  "esittely": "Nukuʻalofan ranta, markkinat ja eri-ikäiset kaupunginosat kertovat sataman, hallinnon ja käsityön yhteyksistä.",
+  "rajat": {},
+  "kohteet": []
+ },
+ "nahtavyydet": {},
+ "saatiedot": null,
+ "ehdotukset": {
+  "lentoasema": "Fuaʻamotu International Airport (TBU)",
+  "huomiot": [
+   "Tekstiluonnos; kuva-, kartta-, sää- ja riippumattoman tarkistuksen portit avoinna.",
+   "Kaikkien kuvaroolien tiedosto, lyhyt, selite ja lahde ovat tyhjiä odottaessaan erillistä kuvaputkea.",
+   "Karttakohteita ei siirretty: paikan oma koordinaatti ja rakennuskohteiden tekijänoikeusportti varmistamatta. Rajat jätetty tyhjäksi ilman arvattua rajausta.",
+   "Kontekstin väkilukua ei käytetty: sen oma lähdemerkintä kertoo hakutuloskatkelman käytöstä; kaupunginosien väestöalue vaatii erillisen tarkistuksen.",
+   "saatiedot:null: 48/48 primäärivarmennus avoin, saa.json jätetty ennalleen.",
+   "1873 on tarinakaanonin matkavuosi; uusia tarkkoja tapahtuma- tai rakennusvuosia ei anneta."
+  ]
+ }
 }

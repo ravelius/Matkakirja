@@ -1,358 +1,358 @@
 {
-  "$skeema": "matkakirja-paakaupunki/1",
+ "$skeema": "matkakirja-paakaupunki/1",
+ "id": "funafuti",
+ "maa": "TUV",
+ "era": "e14",
+ "kaupunki": {
   "id": "funafuti",
-  "maa": "TUV",
-  "era": "e14",
-  "kaupunki": {
-    "id": "funafuti",
-    "name": "Funafuti",
-    "wiki": "Funafuti",
-    "ambience": "meri",
-    "pallo": {
-      "lat": -8.5048,
-      "lon": 179.1174
-    }
-  },
-  "artikkeli": {
-    "intro": "**Funafuti** on Tuvalun pääkaupunki, joka käsittää kokonaisen koralliatollin. Sen pääsaarella Fongafalella sijaitsee Vaiaku, maan hallinnon paikka. Näiden nimien erottaminen auttaa ymmärtämään, miksi kaupunkimatkaan voi kuulua myös veneilyä. Fongafalen ulkopuolella on muita atollin saaria, ja niiden väliin jää **Te Namo -laguuni**.\n\nPääkaupungin arjessa kohtaavat perinteinen kokoushalli, kansalliskirjasto ja postimerkkejä julkaiseva filateelinen toimisto. Lentokentän kiitorata palvelee lentojen välissä myös yhteistä liikuntaa. Funafutin historiaan kuuluu lisäksi 1800-luvun lopun porauskoe, jossa testattiin Darwinin selitystä koralliatollien synnylle. Onkaloinen kivi ja irtohiekka vaikeuttivat tutkimusta, eikä pora tavoittanut atollin alla olevaa vulkaanista kallioperää. Nykyinen merensuojelualue atollin länsipuolella näyttää puolestaan, kuinka riutta, laguuni ja pesimäsaaret kuuluvat samaan elävään ympäristöön.",
-    "teksti": "Funafutin paikallisen kokoushallin nimi Tausoalima tarkoittaa ystävyyden kättä. Hallinto, yhteisön kokoontuminen ja kirjallisen muistin säilyttäminen sijaitsevat samalla pääsaarella, mutta avaavat eri puolia pääkaupungin elämästä. Kansalliskirjasto toimii myös Tuvalun arkistona.\n\nIsoisän matkavuonna 1873 myöhempi atollin poraushanke ei ollut vielä alkanut. Royal Societyn retkikunnat tulivat tutkimaan korallikerrostumia 1800-luvun lopulla. Te Vili O Tavita eli Davidin pora muistuttaa Sydneyn yliopiston geologi Edgeworth Davidista; itse kokeen vaiheisiin kuului myös paikallisen asukkaan säilyttämän varaosan hyödyntäminen.\n\nAtollin koko maisema ei mahdu Fongafalen rantatielle. Te Namon toisella puolella suojelualueeseen kuuluu riuttoja ja saaria, joilla pesivät merikilpikonnat ja merilinnut. Keskustan tutustumiskävely ja venematka laguuniin täydentävät toisiaan, mutta niillä on erilaiset kuljetus- ja aikataulutarpeet."
-  },
-  "kysymykset": [
-    {
-      "q": "Millainen maantieteellinen kokonaisuus Tuvalun pääkaupunki Funafuti on?",
-      "options": [
-        "Koralliatolli",
-        "Vuoristolaakso",
-        "Jokisuiston kaupunki",
-        "Sisämaan niemimaa"
-      ],
-      "correct": 0,
-      "level": 1,
-      "hint": "Pääkaupunki käsittää useita saaria ja niiden välisen vesialueen.",
-      "fact": "Funafutin pääkaupunkiasema koskee koko atollia. Fongafale on sen pääsaari ja Vaiaku hallintopaikka.",
-      "source": "https://en.wikipedia.org/wiki/Funafuti"
-    },
-    {
-      "q": "Mikä on Funafutin laguunin tuvalunkielinen nimi?",
-      "options": [
-        "Te Namo",
-        "Tausoalima",
-        "Fongafale",
-        "Funafala"
-      ],
-      "correct": 0,
-      "level": 2,
-      "hint": "Erota vesialueen nimi saarten ja kokoontumistilan nimistä.",
-      "fact": "Funafutin laguunia kutsutaan nimellä Te Namo.",
-      "source": "https://en.wikipedia.org/wiki/Funafuti"
-    },
-    {
-      "q": "Kuka Sydneyn yliopiston geologi johti Funafutin porausretkikuntaa?",
-      "options": [
-        "Edgeworth David",
-        "Charles Darwin",
-        "William Sollas",
-        "Charles Wilkes"
-      ],
-      "correct": 0,
-      "level": 2,
-      "hint": "Hänen nimensä säilyy tutkimuspaikan paikallisessa nimessä.",
-      "fact": "Edgeworth David oli Sydneyn yliopiston geologi, joka johti Funafutin poraushankkeen retkikuntaa.",
-      "source": "https://en.wikipedia.org/wiki/Funafuti"
-    },
-    {
-      "q": "Mitä Funafutin kokoushallin nimen Tausoalima sanotaan tarkoittavan?",
-      "options": [
-        "Ystävyyden kättä",
-        "Meren syvyyttä",
-        "Auringon nousua",
-        "Saaren suojaa"
-      ],
-      "correct": 0,
-      "level": 1,
-      "hint": "Nimen merkitys liittyy ihmisten väliseen yhteyteen.",
-      "fact": "Tausoalima tarkoittaa ystävyyden kättä, ja falekaupule perinteistä saaren kokoushallia.",
-      "source": "https://en.wikipedia.org/wiki/Funafuti"
-    },
-    {
-      "q": "Mitä jälkiä Funafutin porausnäytteistä etsittiin Darwinin teorian testaamiseksi?",
-      "options": [
-        "Matalan veden eliöitä",
-        "Vuoriston graniittia",
-        "Järvien savikerroksia",
-        "Maanpäällisiä kasveja"
-      ],
-      "correct": 0,
-      "level": 3,
-      "hint": "Teoria yhdisti saaren vajoamisen ja koralliriutan kasvun.",
-      "fact": "Tutkijat etsivät matalan veden eliöiden jälkiä syvistä korallikerrostumista.",
-      "source": "https://en.wikipedia.org/wiki/Funafuti"
-    }
-  ],
-  "tiedot": [
-    "Funafutin kansalliskirjaston arkistoaineistoa on mikrofilmattu ja digitoitu British Libraryn ja Australian National Universityn hankkeissa.",
-    "Paikallisen asukkaan säilyttämä porakoneen varaosa auttoi jatkamaan Funafutin atollin tutkimusta.",
-    "Funafuti tarkoittaa pääkaupunkina koko atollia, Fongafale pääsaarta ja Vaiaku hallinnon paikkaa sillä."
-  ],
-  "valokuva": {
-    "tiedosto": "Northern Funafuti.jpg",
-    "lyhyt": "Funafutin pohjoisosan kapea maakaistale laguunin ja avomeren välissä vuonna 2011.",
-    "selite": "Funafutin pohjoisosan kapea maakaistale laguunin ja avomeren välissä vuonna 2011.",
-    "lahde": "Davidarfonjones, Commons (CC BY-SA 3.0)"
-  },
-  "kaupunkilehti": [
-    {
-      "id": "kaupunki",
-      "nimi": "Funafuti",
-      "johdanto": "Kokoontumistila, kirjallinen muisti ja postimerkit avaavat arkea pääkaupungissa, jonka nimi kuuluu koko atollille.",
-      "kansikuvat": [
-        {
-          "tiedosto": "Ocean side Funafuti.jpg",
-          "lyhyt": "Funafutin avomeren puoleinen kivinen ranta heinäkuussa 2011.",
-          "selite": "Funafutin avomeren puoleinen kivinen ranta heinäkuussa 2011.",
-          "lahde": "Davidarfonjones, Wikimedia Commons (CC BY-SA 3.0)"
-        },
-        {
-          "tiedosto": "",
-          "lyhyt": "",
-          "selite": "",
-          "lahde": ""
-        },
-        {
-          "tiedosto": "Landscape, Tuvalu, 2011. Photo- DFAT (12779525995).jpg",
-          "lyhyt": "Funafutin kapea rantakaistale ja tie kahden merenpuolen välissä vuonna 2011.",
-          "selite": "Funafutin kapea rantakaistale ja tie kahden merenpuolen välissä vuonna 2011.",
-          "lahde": "Department of Foreign Affairs and Trade, Wikimedia Commons (CC BY 2.0)"
-        }
-      ],
-      "nostot": [
-        {
-          "otsikko": "Atolli, saari ja kylä",
-          "teksti": "Funafuti, Fongafale ja Vaiaku ovat nimiä, jotka liittyvät Tuvalun pääkaupunkiin mutta tarkoittavat eri alueita. Funafuti on koko atolli, Fongafale sen pääsaari ja Vaiaku saarella sijaitseva hallintopaikka. Laguunin tuvalunkielinen nimi on Te Namo. Atolliin kuuluu myös muita saaria, kuten Funafala ja Amatuku. Pääkaupungin hahmottamiseen tarvitaan siis useita mittakaavoja. Yhden kylän, yhden saaren ja kokonaisen atollin nimet eivät ole vaihdettavissa toisiinsa, vaikka matkailija kohtaa ne saman matkan aikana.",
-          "wiki": "Funafuti",
-          "tiedosto": "",
-          "lyhyt": "",
-          "selite": "",
-          "lahde": ""
-        },
-        {
-          "otsikko": "Ystävyyden käsi",
-          "teksti": "Funafutissa on perinteinen kokoushalli nimeltä Tausoa Lima Falekaupule. Tausoalima tarkoittaa ystävyyden kättä, ja falekaupule perinteistä saaren kokoushallia. Rakennuksen nimessä yhdistyvät näin yhdessäolo ja kokoontumispaikka. Samalla Fongafalen saarella sijaitsevat parlamentti ja valtion virastoja. Pääkaupungin hallinnon rinnalla on siis myös paikallinen perinteinen tila yhteisön kokoontumiselle. Kun paikan nimen merkityksen tuntee, pitkältä näyttävä kirjainjono avaa yhden puolen saaren elämästä.",
-          "wiki": "Funafuti",
-          "tiedosto": "",
-          "lyhyt": "",
-          "selite": "",
-          "lahde": ""
-        },
-        {
-          "otsikko": "Kirjat ja arkistot saman katon alla",
-          "teksti": "Funafutin kansalliskirjasto on myös Tuvalun arkisto. Sen kokoelmiin kuuluu siirtomaahallinnon säilyneitä asiakirjoja ja Tuvalun hallinnon dokumentteja. Arkiston perustamisen yhteydessä koottiin myös Tuvalun kirkon julkaisuja ja rakennettiin yleistä kirjastoa. Aineistoa on suojattu mikrofilmaamalla ja digitoimalla British Libraryn ja Australian National Universityn hankkeissa. Täällä luettava kirja ja säilytettävä asiakirja kuuluvat samaan laitokseen: toinen palvelee lukijaa, toinen auttaa säilyttämään yhteistä muistia.",
-          "wiki": "Tuvalu National Library and Archives",
-          "tiedosto": "",
-          "lyhyt": "",
-          "selite": "",
-          "lahde": ""
-        },
-        {
-          "otsikko": "Postimerkki kulkee kokoelmaan",
-          "teksti": "Funafutissa toimiva filateelinen toimisto julkaisee Tuvalun postimerkkejä ja ensipäiväkuoria keräilijöille eri puolille maailmaa. Sen työstä on kerrottu myös tiedotuslehdessä: julkaisun alkuperäinen nimi oli News and Views, ja myöhemmin siitä tuli Tuvalu Philatelic Bureau Newsletter. Lehti esittelee uusia merkkijulkaisuja ja Tuvalua käsitteleviä artikkeleita. Pieni painettu merkki voi siten kuulua kirjeen lisäksi keräilijän kokoelmaan, ja sitä seuraava julkaisu antaa lukijalle tietoa maasta.",
-          "wiki": "Tuvalu Philatelic Bureau",
-          "tiedosto": "",
-          "lyhyt": "",
-          "selite": "",
-          "lahde": ""
-        }
-      ],
-      "matkailijalle": {
-        "kuva": {
-          "tiedosto": "",
-          "lyhyt": "",
-          "selite": "",
-          "lahde": ""
-        },
-        "kappale": "Aloita Funafutin matka erottamalla Fongafalen tutustumiskävely ja laguunille suuntautuva veneretki. Kysy myös kirjastossa ja arkistossa vierailusta. Postimerkkitoimisto ja käsityökeskus ovat toisenlaisia pysähdyksiä. Vahvista lentoyhteydet ja paluu ennen matkaa. Kiitoradan yhteisökäyttöä katsellessasi seuraa alueen ohjeita, sillä lentoliikenne menee aina edelle.",
-        "artikkeli": {
-          "nimi": "Matkailijan Funafuti",
-          "taitto": "opas",
-          "teksti": "Tutustu Fongafalen yhteisöpaikkoihin ja lähde sovitulla venekuljetuksella Te Namolle.",
-          "nosto": "Kirjasto ja postimerkit johdattavat paikalliseen muistiin; laguunin toisella puolella odottaa suojeltu meriympäristö.",
-          "jaksot": [
-            {
-              "otsikko": "Perille ja liikkeelle",
-              "teksti": "Funafuti International Airport (FUN) sijaitsee Fongafalella. Kansainvälisiä lentoyhteyksiä on vähän, joten tarkista toteutuva reitti ja paluulento ennen matkan rakentamista niiden varaan. Pyydä majoitusta järjestämään nouto tarvittaessa. Fongafalea voi tutkia jalan tai pyörällä; saaren ulkopuolinen retki vaatii oman venekuljetuksensa. Muille Tuvalun atolleille jatkaminen on eri matka kuin liikkuminen pääkaupungin sisällä.",
-              "kuva": {
-                "tiedosto": "",
-                "lyhyt": "",
-                "selite": "",
-                "lahde": ""
-              }
-            },
-            {
-              "otsikko": "Te Namo ja suojellut saaret",
-              "teksti": "Laguunin nimi on Te Namo, ja Funafuti Conservation Area sijaitsee atollin länsipuolella. Suojelualue sisältää sekä meriympäristöä että pieniä saaria. Sovi venematka, paluu ja snorklauksen järjestelyt paikan päällä retken toteuttajan kanssa. Pysy järjestäjän osoittamilla alueilla ja seuraa suojelualueen sääntöjä. Fongafalen rantakävelyä ja laguunin ylittävää retkeä ei kannata käsitellä samanlaisena pikaisena siirtymänä.",
-              "kuva": {
-                "tiedosto": "",
-                "lyhyt": "",
-                "selite": "",
-                "lahde": ""
-              }
-            },
-            {
-              "otsikko": "Kirjastoon, käsityöpaikkaan ja postimerkkien luo",
-              "teksti": "Kansalliskirjasto ja arkisto, filateelinen toimisto sekä Women’s Handicraft Centre tuovat Funafutiin erilaisia tutustumiskohteita. Kirjastossa säilytetään Tuvalun kirjallista muistia, postimerkkitoimistossa julkaisuja keräilijöille. Kysy suoraan, milloin vierailu tai kokoelmien esittely onnistuu. Myös perinteisen kokoushallin nimi Tausoa Lima Falekaupule kertoo paikallisesta yhteisöelämästä; selvitä mahdollinen vierailu paikan käyttäjiltä.",
-              "kuva": {
-                "tiedosto": "",
-                "lyhyt": "",
-                "selite": "",
-                "lahde": ""
-              }
-            },
-            {
-              "otsikko": "Mitä täällä syödään",
-              "teksti": "Funafutin majoituspaikoilla on ravintoloita, joissa voi syödä kalaa ja erilaisia kansainvälisiä ruokia. Ruokailun vaihtoehtoja ovat myös esimerkiksi kiinalainen, intialainen ja italialainen keittiö. Kysy oman majoituksen ruokailujärjestelyistä ja päivän annoksista. Näin ateria sopii päivän kuljetuksiin: laguunille lähtevän kannattaa selvittää jo ennen lähtöä, sisältyykö retkeen ruokailu vai otetaanko omat eväät mukaan.",
-              "kuva": {
-                "tiedosto": "",
-                "lyhyt": "",
-                "selite": "",
-                "lahde": ""
-              }
-            },
-            {
-              "otsikko": "Milloin kannattaa tulla",
-              "teksti": "Rakenna matka vahvistettujen lentoyhteyksien ja majoituksen varaan. Yhteyksien vähäinen määrä tekee myös paluun varmistamisesta tärkeää. Jätä veneilylle joustoa ja tarkista päivän olosuhteet retken järjestäjältä. Kiitorata toimii toisinaan yhteisenä liikuntatilana, mutta lentoliikenne menee edelle: noudata alueen ohjeita ja poistu koneen lähestyessä. Kokoelmavierailu ja venepäivä tarvitsevat kumpikin oman sovitun ajankohtansa.",
-              "kuva": {
-                "tiedosto": "",
-                "lyhyt": "",
-                "selite": "",
-                "lahde": ""
-              }
-            }
-          ],
-          "matkailu": {
-            "parasta": [
-              {
-                "mita": "Te Namo",
-                "tahdet": 3,
-                "selite": "Laguuni on pääkaupunkina toimivan atollin vesialue."
-              },
-              {
-                "mita": "Funafuti Conservation Area",
-                "tahdet": 3,
-                "selite": "Tutustu sovitulla retkellä riuttojen ja saarten kokonaisuuteen."
-              },
-              {
-                "mita": "Kansalliskirjasto ja arkisto",
-                "tahdet": 2,
-                "selite": "Kysy Tuvalun kirjallisen muistin säilyttämisestä."
-              },
-              {
-                "mita": "Filateelinen toimisto",
-                "tahdet": 2,
-                "selite": "Tutustu Tuvalun postimerkkeihin."
-              },
-              {
-                "mita": "Fongafalen paikallinen arki",
-                "tahdet": 2,
-                "selite": "Kokoushallin nimi kertoo yhteisön kokoontumisesta."
-              }
-            ],
-            "hyvaTietaa": [
-              {
-                "otsikko": "Lentoyhteydet",
-                "teksti": "Vahvista toteutuva reitti ja paluulento; yhteyksien määrä on vähäinen."
-              },
-              {
-                "otsikko": "Venematka",
-                "teksti": "Sovi sekä lähtö että paluu ja seuraa järjestäjän ohjeita."
-              },
-              {
-                "otsikko": "Kiitorata",
-                "teksti": "Lentoliikenne menee yhteisökäytön edelle; noudata alueen ohjeita."
-              },
-              {
-                "otsikko": "Kokoelmavierailut",
-                "teksti": "Selvitä suoraan paikan henkilökunnalta, milloin vierailu onnistuu."
-              }
-            ]
-          },
-          "lahde": "Wikipedia"
-        }
-      }
-    },
-    {
-      "id": "tiede",
-      "nimi": "Atolli tutkittavana",
-      "johdanto": "Funafutissa tutkimus kulkee porausreiästä elävään riuttaan: pinnan alta löytyvät näytteet ja pesimäsaaret kertovat eri asioita atollista.",
-      "tehtava": {
-        "kysymys": "Miksi kovaankin kiveen sopiva pora joutui vaikeuksiin Funafutissa?",
-        "vaihtoehdot": [
-          "Korallikivi oli onkaloista",
-          "Saarella oli jääpeite",
-          "Laguuni oli kuivunut",
-          "Pora oli tehty puusta"
-        ],
-        "oikea": 0,
-        "fakta": "Atollin kiven kolot siirsivät poraa pois paikaltaan, ja reikään valui myös irtohiekkaa."
-      },
-      "nostot": [
-        {
-          "otsikko": "Teoria vajonneesta saaresta",
-          "teksti": "Miten koralliatolli voi olla keskellä syvää merta? Charles Darwin esitti selityksen, jossa tuliperäinen saari vajoaa vähitellen ja sitä reunustava koralliriutta kasvaa ylöspäin. Lopulta saaren paikalle jää laguuni riutan sisään. Funafutissa teoriaa ryhdyttiin testaamaan poraamalla atollin sisään 1800-luvun lopulla. Näytteistä etsittiin matalassa vedessä eläneiden eliöiden jälkiä syvällä korallikerrostumissa. Rannan muodon katsominen oli lähtökohta; koetta varten piti päästä myös pinnan alle.",
-          "wiki": "Funafuti",
-          "tiedosto": "",
-          "lyhyt": "",
-          "selite": "",
-          "lahde": ""
-        },
-        {
-          "otsikko": "Pora vastaan korallikivi",
-          "teksti": "Funafutin ensimmäinen porausretkikunta toi mukanaan timanttiporan, joka sopi kovaan ja tiiviiseen kiveen. Atollin onkaloinen korallikivi teki työn vaikeaksi: pora siirtyi pois paikaltaan ja irtohiekka täytti reikää. Työ keskeytettiin, ja seuraavaan yritykseen tarvittiin parempaa kalustoa sekä materiaalia reiän vuoraukseen. Myöhemmät poraukset toivat syvältä korallinäytteitä, mutta eivät tavoittaneet alla olevaa vulkaanista kallioperää. Näytteet antoivat tietoa riutasta, vaikka koko rakenneketju jäi osoittamatta.",
-          "wiki": "Funafuti",
-          "tiedosto": "",
-          "lyhyt": "",
-          "selite": "",
-          "lahde": ""
-        },
-        {
-          "otsikko": "Varaosa saarelta",
-          "teksti": "Funafutin porauskokeessa rikkoutui tärkeä hammasratas, ja työ joutui pysähdyksiin. Ratkaisu löytyi paikalliselta asukkaalta, joka oli säilyttänyt edellisen retkikunnan jättämän varaosan. Se auttoi jatkamaan koetta. Porauspaikasta käytetään myös nimeä Te Vili O Tavita, Davidin pora, tutkimusjohtaja Edgeworth Davidin mukaan. Paikan nimessä muistetaan siis tutkija, mutta kokeen historiassa on myös nimettömäksi jääneen saarelaisen käytännöllinen osuus. Varaosan säilyttäminen osoittautui merkittäväksi teoksi.",
-          "wiki": "Funafuti",
-          "tiedosto": "",
-          "lyhyt": "",
-          "selite": "",
-          "lahde": ""
-        },
-        {
-          "otsikko": "Mereen kuuluu kuivaakin maata",
-          "teksti": "Funafutin länsipuolen suojelualue kokoaa yhteen koralliriuttaa, laguunia, merikanavia ja pieniä motu-saaria. Saarilla pesivät merikilpikonnat, ja Fualopassa on merilintujen pesimäyhdyskunta. Suojelu ei siten koske vain veden alla näkyviä koralleja ja kaloja. Myös kuivan maan pesäpaikat kuuluvat samaan kokonaisuuteen. Vierailija kulkee suojelualueelle veneellä Fongafalelta, joten keskustan rannalta nähty laguuni ja sen toisella puolella olevat suojellut saaret vaativat erilaisen retken.",
-          "wiki": "Funafuti Conservation Area",
-          "tiedosto": "",
-          "lyhyt": "",
-          "selite": "",
-          "lahde": ""
-        }
-      ]
-    }
-  ],
-  "kohdekartta": {
-    "numeroympyrat": true,
-    "esittely": "Funafutin yhteisöpaikat ovat Fongafalella, kun taas laguunin länsipuolen suojellut saaret kuuluvat laajempaan atollimaisemaan.",
-    "rajat": {},
-    "kohteet": []
-  },
-  "nahtavyydet": {},
-  "saatiedot": null,
-  "ehdotukset": {
-    "lentoasema": "Funafuti International Airport (FUN)",
-    "huomiot": [
-      "C-tekstiluonnos; täyden A:n, B:n, D/E/F:n ja toimituksen portit avoinna.",
-      "Kaikki 18 kuvaroolia tyhjin tiedosto/lyhyt/selite/lahde-kentin; kuvat tulevat erillisestä kuvaputkesta.",
-      "Karttakohteet ja rajat jätetty tyhjiksi, koska kohteiden omia WP/WD-pisteitä ja rakennusten tekijänoikeusporttia ei ole varmennettu.",
-      "Kirjaston Wikipedia-piste näyttää samalta kuin läntisen suojelualueen piste, joten se ei kelpaa kirjaston sijainniksi ilman tarkistusta.",
-      "saatiedot:null, sääaseman 48/48 primääriauditointi avoin; saa.json ennallaan.",
-      "Kontekstin väkiluku on koko atollin luku, ei Vaiakun kylän tai Fongafalen luku; tarkkoja väestö-, maa-ala- tai laguunimittoja ei käytetty.",
-      "IUGS:n ja Royal Societyn eri painotukset porauksen tuloksesta erotettu: näytteet tukivat tutkimusta, mutta poraus ei tavoittanut vulkaanista kallioperää.",
-      "Lentolähteiden Nadi/Suva-reittiero jätetty avoimeksi; C ei lupaa nykyistä lentoreittiä tai aikataulua."
-    ]
+  "name": "Funafuti",
+  "wiki": "Funafuti",
+  "ambience": "meri",
+  "pallo": {
+   "lat": -8.5048,
+   "lon": 179.1174
   }
+ },
+ "artikkeli": {
+  "intro": "**Funafuti** on Tuvalun pääkaupunki, joka käsittää kokonaisen koralliatollin. Sen pääsaarella Fongafalella sijaitsee Vaiaku, maan hallinnon paikka. Näiden nimien erottaminen auttaa ymmärtämään, miksi kaupunkimatkaan voi kuulua myös veneilyä. Fongafalen ulkopuolella on muita atollin saaria, ja niiden väliin jää **Te Namo -laguuni**.\n\nPääkaupungin arjessa kohtaavat perinteinen kokoushalli, kansalliskirjasto ja postimerkkejä julkaiseva filateelinen toimisto. Lentokentän kiitorata palvelee lentojen välissä myös yhteistä liikuntaa. Funafutin historiaan kuuluu lisäksi 1800-luvun lopun porauskoe, jossa testattiin Darwinin selitystä koralliatollien synnylle. Onkaloinen kivi ja irtohiekka vaikeuttivat tutkimusta, eikä pora tavoittanut atollin alla olevaa vulkaanista kallioperää. Nykyinen merensuojelualue atollin länsipuolella näyttää puolestaan, kuinka riutta, laguuni ja pesimäsaaret kuuluvat samaan elävään ympäristöön.",
+  "teksti": "Funafutin paikallisen kokoushallin nimi Tausoalima tarkoittaa ystävyyden kättä. Hallinto, yhteisön kokoontuminen ja kirjallisen muistin säilyttäminen sijaitsevat samalla pääsaarella, mutta avaavat eri puolia pääkaupungin elämästä. Kansalliskirjasto toimii myös Tuvalun arkistona.\n\nIsoisän matkavuonna 1873 myöhempi atollin poraushanke ei ollut vielä alkanut. Royal Societyn retkikunnat tulivat tutkimaan korallikerrostumia 1800-luvun lopulla. Te Vili O Tavita eli Davidin pora muistuttaa Sydneyn yliopiston geologi Edgeworth Davidista; itse kokeen vaiheisiin kuului myös paikallisen asukkaan säilyttämän varaosan hyödyntäminen.\n\nAtollin koko maisema ei mahdu Fongafalen rantatielle. Te Namon toisella puolella suojelualueeseen kuuluu riuttoja ja saaria, joilla pesivät merikilpikonnat ja merilinnut. Keskustan tutustumiskävely ja venematka laguuniin täydentävät toisiaan, mutta niillä on erilaiset kuljetus- ja aikataulutarpeet."
+ },
+ "kysymykset": [
+  {
+   "q": "Millainen maantieteellinen kokonaisuus Tuvalun pääkaupunki Funafuti on?",
+   "options": [
+    "Koralliatolli",
+    "Vuoristolaakso",
+    "Jokisuiston kaupunki",
+    "Sisämaan niemimaa"
+   ],
+   "correct": 0,
+   "level": 1,
+   "hint": "Pääkaupunki käsittää useita saaria ja niiden välisen vesialueen.",
+   "fact": "Funafutin pääkaupunkiasema koskee koko atollia. Fongafale on sen pääsaari ja Vaiaku hallintopaikka.",
+   "source": "https://en.wikipedia.org/wiki/Funafuti"
+  },
+  {
+   "q": "Mikä on Funafutin laguunin tuvalunkielinen nimi?",
+   "options": [
+    "Te Namo",
+    "Tausoalima",
+    "Fongafale",
+    "Funafala"
+   ],
+   "correct": 0,
+   "level": 2,
+   "hint": "Erota vesialueen nimi saarten ja kokoontumistilan nimistä.",
+   "fact": "Funafutin laguunia kutsutaan nimellä Te Namo.",
+   "source": "https://en.wikipedia.org/wiki/Funafuti"
+  },
+  {
+   "q": "Kuka Sydneyn yliopiston geologi johti Funafutin porausretkikuntaa?",
+   "options": [
+    "Edgeworth David",
+    "Charles Darwin",
+    "William Sollas",
+    "Charles Wilkes"
+   ],
+   "correct": 0,
+   "level": 2,
+   "hint": "Hänen nimensä säilyy tutkimuspaikan paikallisessa nimessä.",
+   "fact": "Edgeworth David oli Sydneyn yliopiston geologi, joka johti Funafutin poraushankkeen retkikuntaa.",
+   "source": "https://en.wikipedia.org/wiki/Funafuti"
+  },
+  {
+   "q": "Mitä Funafutin kokoushallin nimen Tausoalima sanotaan tarkoittavan?",
+   "options": [
+    "Ystävyyden kättä",
+    "Meren syvyyttä",
+    "Auringon nousua",
+    "Saaren suojaa"
+   ],
+   "correct": 0,
+   "level": 1,
+   "hint": "Nimen merkitys liittyy ihmisten väliseen yhteyteen.",
+   "fact": "Tausoalima tarkoittaa ystävyyden kättä, ja falekaupule perinteistä saaren kokoushallia.",
+   "source": "https://en.wikipedia.org/wiki/Funafuti"
+  },
+  {
+   "q": "Mitä jälkiä Funafutin porausnäytteistä etsittiin Darwinin teorian testaamiseksi?",
+   "options": [
+    "Matalan veden eliöitä",
+    "Vuoriston graniittia",
+    "Järvien savikerroksia",
+    "Maanpäällisiä kasveja"
+   ],
+   "correct": 0,
+   "level": 3,
+   "hint": "Teoria yhdisti saaren vajoamisen ja koralliriutan kasvun.",
+   "fact": "Tutkijat etsivät matalan veden eliöiden jälkiä syvistä korallikerrostumista.",
+   "source": "https://en.wikipedia.org/wiki/Funafuti"
+  }
+ ],
+ "tiedot": [
+  "Funafutin kansalliskirjaston arkistoaineistoa on mikrofilmattu ja digitoitu British Libraryn ja Australian National Universityn hankkeissa.",
+  "Paikallisen asukkaan säilyttämä porakoneen varaosa auttoi jatkamaan Funafutin atollin tutkimusta.",
+  "Funafuti tarkoittaa pääkaupunkina koko atollia, Fongafale pääsaarta ja Vaiaku hallinnon paikkaa sillä."
+ ],
+ "valokuva": {
+  "tiedosto": "Northern Funafuti.jpg",
+  "lyhyt": "Funafutin pohjoisosan kapea rantatie.",
+  "selite": "Tie kulkee palmujen lomaan, ja sen molemmin puolin näkyy vettä sekä kivikkoista rantaa.",
+  "lahde": "Davidarfonjones, Commons (CC BY-SA 3.0)"
+ },
+ "kaupunkilehti": [
+  {
+   "id": "kaupunki",
+   "nimi": "Funafuti",
+   "johdanto": "Kokoontumistila, kirjallinen muisti ja postimerkit avaavat arkea pääkaupungissa, jonka nimi kuuluu koko atollille.",
+   "kansikuvat": [
+    {
+     "tiedosto": "Ocean side Funafuti.jpg",
+     "lyhyt": "Funafutin merenpuoleinen kivikkoranta.",
+     "selite": "Aallot murtuvat kivikkoon; rantakasvillisuus kasvaa kuvan oikeassa reunassa.",
+     "lahde": "Davidarfonjones, Wikimedia Commons (CC BY-SA 3.0)"
+    },
+    {
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": ""
+    },
+    {
+     "tiedosto": "Landscape, Tuvalu, 2011. Photo- DFAT (12779525995).jpg",
+     "lyhyt": "Rantatie Funafutilla vuonna 2011.",
+     "selite": "Päällystetty tie ja palmut jatkuvat kapealla saarella, jonka molemmin puolin näkyy vettä.",
+     "lahde": "Department of Foreign Affairs and Trade, Wikimedia Commons (CC BY 2.0)"
+    }
+   ],
+   "nostot": [
+    {
+     "otsikko": "Atolli, saari ja kylä",
+     "teksti": "Funafuti, Fongafale ja Vaiaku ovat nimiä, jotka liittyvät Tuvalun pääkaupunkiin mutta tarkoittavat eri alueita. Funafuti on koko atolli, Fongafale sen pääsaari ja Vaiaku saarella sijaitseva hallintopaikka. Laguunin tuvalunkielinen nimi on Te Namo. Atolliin kuuluu myös muita saaria, kuten Funafala ja Amatuku. Pääkaupungin hahmottamiseen tarvitaan siis useita mittakaavoja. Vaiaku sijaitsee Fongafalella, ja Fongafale kuuluu Funafutin atolliin.",
+     "wiki": "Funafuti",
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": ""
+    },
+    {
+     "otsikko": "Ystävyyden käsi",
+     "teksti": "Funafutissa on perinteinen kokoushalli nimeltä Tausoa Lima Falekaupule. Tausoalima tarkoittaa ystävyyden kättä, ja falekaupule perinteistä saaren kokoushallia. Rakennuksen nimessä yhdistyvät näin yhdessäolo ja kokoontumispaikka. Samalla Fongafalen saarella sijaitsevat parlamentti ja valtion virastoja. Pääkaupungin hallinnon rinnalla on siis myös paikallinen perinteinen tila yhteisön kokoontumiselle. Tausoalima tuo yhteisön kokoukset samaan pääkaupunkiin valtion virastojen kanssa.",
+     "wiki": "Funafuti",
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": ""
+    },
+    {
+     "otsikko": "Kirjat ja arkistot saman katon alla",
+     "teksti": "Funafutin kansalliskirjasto on myös Tuvalun arkisto. Sen kokoelmiin kuuluu siirtomaahallinnon säilyneitä asiakirjoja ja Tuvalun hallinnon dokumentteja. Arkiston perustamisen yhteydessä koottiin myös Tuvalun kirkon julkaisuja ja rakennettiin yleistä kirjastoa. Aineistoa on suojattu mikrofilmaamalla ja digitoimalla British Libraryn ja Australian National Universityn hankkeissa. Täällä luettava kirja ja säilytettävä asiakirja kuuluvat samaan laitokseen: toinen palvelee lukijaa, toinen auttaa säilyttämään yhteistä muistia.",
+     "wiki": "Tuvalu National Library and Archives",
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": ""
+    },
+    {
+     "otsikko": "Postimerkki kulkee kokoelmaan",
+     "teksti": "Funafutissa toimiva filateelinen toimisto julkaisee Tuvalun postimerkkejä ja ensipäiväkuoria keräilijöille eri puolille maailmaa. Sen työstä on kerrottu myös tiedotuslehdessä: julkaisun alkuperäinen nimi oli News and Views, ja myöhemmin siitä tuli Tuvalu Philatelic Bureau Newsletter. Lehti esittelee uusia merkkijulkaisuja ja Tuvalua käsitteleviä artikkeleita. Pieni painettu merkki voi siten kuulua kirjeen lisäksi keräilijän kokoelmaan, ja sitä seuraava julkaisu antaa lukijalle tietoa maasta.",
+     "wiki": "Tuvalu Philatelic Bureau",
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": ""
+    }
+   ],
+   "matkailijalle": {
+    "kuva": {
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": ""
+    },
+    "kappale": "Aloita Funafutin matka erottamalla Fongafalen tutustumiskävely ja laguunille suuntautuva veneretki. Kysy myös kirjastossa ja arkistossa vierailusta. Postimerkkitoimisto ja käsityökeskus ovat toisenlaisia pysähdyksiä. Kiitoradan yhteisökäyttöä katsellessasi seuraa alueen ohjeita, sillä lentoliikenne menee aina edelle.",
+    "artikkeli": {
+     "nimi": "Matkailijan Funafuti",
+     "taitto": "opas",
+     "teksti": "Tutustu Fongafalen yhteisöpaikkoihin ja lähde sovitulla venekuljetuksella Te Namolle.",
+     "nosto": "Kirjasto ja postimerkit johdattavat paikalliseen muistiin; laguunin toisella puolella odottaa suojeltu meriympäristö.",
+     "jaksot": [
+      {
+       "otsikko": "Perille ja liikkeelle",
+       "teksti": "Funafuti International Airport (FUN) sijaitsee Fongafalella. Kansainvälisiä lentoyhteyksiä on vähän. Pyydä majoitusta järjestämään nouto tarvittaessa. Fongafalea voi tutkia jalan tai pyörällä; saaren ulkopuolinen retki vaatii oman venekuljetuksensa. Muille Tuvalun atolleille jatkaminen on eri matka kuin liikkuminen pääkaupungin sisällä.",
+       "kuva": {
+        "tiedosto": "",
+        "lyhyt": "",
+        "selite": "",
+        "lahde": ""
+       }
+      },
+      {
+       "otsikko": "Te Namo ja suojellut saaret",
+       "teksti": "Laguunin nimi on Te Namo, ja Funafuti Conservation Area sijaitsee atollin länsipuolella. Suojelualue sisältää sekä meriympäristöä että pieniä saaria. Sovi venematka, paluu ja snorklauksen järjestelyt paikan päällä retken toteuttajan kanssa. Pysy järjestäjän osoittamilla alueilla ja seuraa suojelualueen sääntöjä. Fongafalen rantakävelyä ja laguunin ylittävää retkeä ei kannata käsitellä samanlaisena pikaisena siirtymänä.",
+       "kuva": {
+        "tiedosto": "",
+        "lyhyt": "",
+        "selite": "",
+        "lahde": ""
+       }
+      },
+      {
+       "otsikko": "Kirjastoon, käsityöpaikkaan ja postimerkkien luo",
+       "teksti": "Kansalliskirjasto ja arkisto, filateelinen toimisto sekä Women’s Handicraft Centre tuovat Funafutiin erilaisia tutustumiskohteita. Kirjastossa säilytetään Tuvalun kirjallista muistia, postimerkkitoimistossa julkaisuja keräilijöille. Tausoa Lima Falekaupule on perinteinen kokoushalli.",
+       "kuva": {
+        "tiedosto": "",
+        "lyhyt": "",
+        "selite": "",
+        "lahde": ""
+       }
+      },
+      {
+       "otsikko": "Mitä täällä syödään",
+       "teksti": "Funafutin majoituspaikoilla on ravintoloita, joissa voi syödä kalaa ja erilaisia kansainvälisiä ruokia. Ruokailun vaihtoehtoja ovat myös esimerkiksi kiinalainen, intialainen ja italialainen keittiö. Kysy oman majoituksen ruokailujärjestelyistä ja päivän annoksista. Näin ateria sopii päivän kuljetuksiin: laguunille lähtevän kannattaa selvittää jo ennen lähtöä, sisältyykö retkeen ruokailu vai otetaanko omat eväät mukaan.",
+       "kuva": {
+        "tiedosto": "",
+        "lyhyt": "",
+        "selite": "",
+        "lahde": ""
+       }
+      },
+      {
+       "otsikko": "Vene- ja kävelypäivä",
+       "teksti": "Fongafalen kapea saari on Funafutin kävely- ja pyöräilyalue, kun taas atollin länsipuolen suojelualueelle mennään veneellä. Kiitorata toimii lentojen välillä yhteisenä liikuntatilana. Lentoliikenne menee kuitenkin edelle: noudata alueen ohjeita ja poistu koneen lähestyessä. Kansalliskirjasto, postimerkkitoimisto ja käsityökeskus sijoittuvat Fongafalen palvelujen yhteyteen; Te Namon laguuni avautuu saaren toisella puolella.",
+       "kuva": {
+        "tiedosto": "",
+        "lyhyt": "",
+        "selite": "",
+        "lahde": ""
+       }
+      }
+     ],
+     "matkailu": {
+      "parasta": [
+       {
+        "mita": "Te Namo",
+        "tahdet": 3,
+        "selite": "Laguuni on pääkaupunkina toimivan atollin vesialue."
+       },
+       {
+        "mita": "Funafuti Conservation Area",
+        "tahdet": 3,
+        "selite": "Tutustu sovitulla retkellä riuttojen ja saarten kokonaisuuteen."
+       },
+       {
+        "mita": "Kansalliskirjasto ja arkisto",
+        "tahdet": 2,
+        "selite": "Kysy Tuvalun kirjallisen muistin säilyttämisestä."
+       },
+       {
+        "mita": "Filateelinen toimisto",
+        "tahdet": 2,
+        "selite": "Tutustu Tuvalun postimerkkeihin."
+       },
+       {
+        "mita": "Fongafalen paikallinen arki",
+        "tahdet": 2,
+        "selite": "Kokoushallin nimi kertoo yhteisön kokoontumisesta."
+       }
+      ],
+      "hyvaTietaa": [
+       {
+        "otsikko": "Lentoyhteydet",
+        "teksti": "Vahvista ennen matkaa lento ja paluulento, majoitus, veneretken toteutuminen ja paluu sekä kokoelmavierailujen ajankohta."
+       },
+       {
+        "otsikko": "Venematka",
+        "teksti": "Laguunin suojelualue on atollin länsipuolella; Fongafalelta kuljetaan sinne veneellä."
+       },
+       {
+        "otsikko": "Kiitorata",
+        "teksti": "Lentoliikenne menee yhteisökäytön edelle; noudata alueen ohjeita."
+       },
+       {
+        "otsikko": "Kokoelmavierailut",
+        "teksti": "Kansalliskirjasto ja arkisto säilyttävät Tuvalun kirjallista historiaa, filateelinen toimisto postimerkkejä."
+       }
+      ]
+     },
+     "lahde": "Wikipedia"
+    }
+   }
+  },
+  {
+   "id": "tiede",
+   "nimi": "Atolli tutkittavana",
+   "johdanto": "Funafutissa tutkimus kulkee porausreiästä elävään riuttaan: pinnan alta löytyvät näytteet ja pesimäsaaret kertovat eri asioita atollista.",
+   "tehtava": {
+    "kysymys": "Miksi kovaankin kiveen sopiva pora joutui vaikeuksiin Funafutissa?",
+    "vaihtoehdot": [
+     "Korallikivi oli onkaloista",
+     "Korallikivi oli liian pehmeää",
+     "Poranterä kului tiiviiseen basalttiin",
+     "Merivesi syövytti porakoneen"
+    ],
+    "oikea": 0,
+    "fakta": "Atollin kiven kolot siirsivät poraa pois paikaltaan, ja reikään valui myös irtohiekkaa."
+   },
+   "nostot": [
+    {
+     "otsikko": "Teoria vajonneesta saaresta",
+     "teksti": "Miten koralliatolli voi olla keskellä syvää merta? Charles Darwin esitti selityksen, jossa tuliperäinen saari vajoaa vähitellen ja sitä reunustava koralliriutta kasvaa ylöspäin. Lopulta saaren paikalle jää laguuni riutan sisään. Funafutissa teoriaa ryhdyttiin testaamaan poraamalla atollin sisään 1800-luvun lopulla. Näytteistä etsittiin matalassa vedessä eläneiden eliöiden jälkiä syvällä korallikerrostumissa. Rannan muodon katsominen oli lähtökohta; koetta varten piti päästä myös pinnan alle.",
+     "wiki": "Funafuti",
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": ""
+    },
+    {
+     "otsikko": "Pora vastaan korallikivi",
+     "teksti": "Funafutin ensimmäinen porausretkikunta toi mukanaan timanttiporan, joka sopi kovaan ja tiiviiseen kiveen. Atollin onkaloinen korallikivi teki työn vaikeaksi: pora siirtyi pois paikaltaan ja irtohiekka täytti reikää. Työ keskeytettiin, ja seuraavaan yritykseen tarvittiin parempaa kalustoa sekä materiaalia reiän vuoraukseen. Myöhemmät poraukset toivat syvältä korallinäytteitä, mutta eivät tavoittaneet alla olevaa vulkaanista kallioperää. Näytteet antoivat tietoa riutasta, vaikka koko rakenneketju jäi osoittamatta.",
+     "wiki": "Funafuti",
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": ""
+    },
+    {
+     "otsikko": "Varaosa saarelta",
+     "teksti": "Funafutin porauskokeessa rikkoutui tärkeä hammasratas, ja työ joutui pysähdyksiin. Ratkaisu löytyi paikalliselta asukkaalta, joka oli säilyttänyt edellisen retkikunnan jättämän varaosan. Se auttoi jatkamaan koetta. Porauspaikasta käytetään myös nimeä Te Vili O Tavita, Davidin pora, tutkimusjohtaja Edgeworth Davidin mukaan. Paikan nimessä muistetaan siis tutkija, mutta kokeen historiassa on myös nimettömäksi jääneen saarelaisen käytännöllinen osuus. Varaosan säilyttäminen osoittautui merkittäväksi teoksi.",
+     "wiki": "Funafuti",
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": ""
+    },
+    {
+     "otsikko": "Mereen kuuluu kuivaakin maata",
+     "teksti": "Funafutin länsipuolen suojelualue kokoaa yhteen koralliriuttaa, laguunia, merikanavia ja pieniä motu-saaria. Saarilla pesivät merikilpikonnat, ja Fualopassa on merilintujen pesimäyhdyskunta. Suojelu ei siten koske vain veden alla näkyviä koralleja ja kaloja. Myös kuivan maan pesäpaikat kuuluvat samaan kokonaisuuteen. Vierailija kulkee suojelualueelle veneellä Fongafalelta, joten keskustan rannalta nähty laguuni ja sen toisella puolella olevat suojellut saaret vaativat erilaisen retken.",
+     "wiki": "Funafuti Conservation Area",
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": ""
+    }
+   ]
+  }
+ ],
+ "kohdekartta": {
+  "numeroympyrat": true,
+  "esittely": "Funafutin yhteisöpaikat ovat Fongafalella, kun taas laguunin länsipuolen suojellut saaret kuuluvat laajempaan atollimaisemaan.",
+  "rajat": {},
+  "kohteet": []
+ },
+ "nahtavyydet": {},
+ "saatiedot": null,
+ "ehdotukset": {
+  "lentoasema": "Funafuti International Airport (FUN)",
+  "huomiot": [
+   "C-tekstiluonnos; täyden A:n, B:n, D/E/F:n ja toimituksen portit avoinna.",
+   "Kaikki 18 kuvaroolia tyhjin tiedosto/lyhyt/selite/lahde-kentin; kuvat tulevat erillisestä kuvaputkesta.",
+   "Karttakohteet ja rajat jätetty tyhjiksi, koska kohteiden omia WP/WD-pisteitä ja rakennusten tekijänoikeusporttia ei ole varmennettu.",
+   "Kirjaston Wikipedia-piste näyttää samalta kuin läntisen suojelualueen piste, joten se ei kelpaa kirjaston sijainniksi ilman tarkistusta.",
+   "saatiedot:null, sääaseman 48/48 primääriauditointi avoin; saa.json ennallaan.",
+   "Kontekstin väkiluku on koko atollin luku, ei Vaiakun kylän tai Fongafalen luku; tarkkoja väestö-, maa-ala- tai laguunimittoja ei käytetty.",
+   "IUGS:n ja Royal Societyn eri painotukset porauksen tuloksesta erotettu: näytteet tukivat tutkimusta, mutta poraus ei tavoittanut vulkaanista kallioperää.",
+   "Lentolähteiden Nadi/Suva-reittiero jätetty avoimeksi; C ei lupaa nykyistä lentoreittiä tai aikataulua."
+  ]
+ }
 }

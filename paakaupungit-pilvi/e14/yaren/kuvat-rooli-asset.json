@@ -3,7 +3,7 @@
   "era": "e14",
   "city": "yaren",
   "authorization": "hyväksyn kaikki tekemäsi kuvat. toimita ne claudelle. claudelta saat uusia ohjeita jatkoa varten",
-  "sourceContentAfterSHA256": "fda860a4062220e17a1b43bdb96aee87faff7928952526a64335d91a6c4399a2",
+  "sourceContentAfterSHA256": "ec8f1985f77c4c9b6debac09d048f03bf33f1829dd9e4b34f5576a0f72877a3d",
   "assets": [
     {
       "era": "e14",
@@ -25,10 +25,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/yaren/e14-yaren-traveler-v1-20261012-5d003a9244d5.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Milkfish-kala havainnollistaa ravintohistoriaa; yleinen havainnekuva.",
-        "lyhyt": "Milkfish-kala havainnollistaa ravintohistoriaa; yleinen havainnekuva."
+        "selite": "Milkfish-kala havainnollistaa ravintohistoriaa; yleinen havainnekuva."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -36,10 +36,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/yaren/e14-yaren-traveler-v1-20261012-5d003a9244d5.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Milkfish-kala havainnollistaa ravintohistoriaa; yleinen havainnekuva.",
-        "lyhyt": "Milkfish-kala havainnollistaa ravintohistoriaa; yleinen havainnekuva."
+        "selite": "Milkfish-kala havainnollistaa ravintohistoriaa; yleinen havainnekuva."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -53,10 +53,10 @@
         1536
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/yaren/sisalto.json",
-      "sourceContentSHA256": "fda860a4062220e17a1b43bdb96aee87faff7928952526a64335d91a6c4399a2",
+      "sourceContentSHA256": "ec8f1985f77c4c9b6debac09d048f03bf33f1829dd9e4b34f5576a0f72877a3d",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "7932c16731d96f519220bfeaca027ecb47307ef51079118dbd23501e37e2a76b",
+        "semanticContextSHA256": "46f6715eed7304af8d10035eab878ef75f6db43f2b867479bf372d8f3682e78e",
         "subjectTitle": "Matkailijalle",
         "targetState": "existing-target"
       },
@@ -197,9 +197,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -218,17 +218,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "fda860a4062220e17a1b43bdb96aee87faff7928952526a64335d91a6c4399a2",
+      "sourceContentAfterSHA256": "ec8f1985f77c4c9b6debac09d048f03bf33f1829dd9e4b34f5576a0f72877a3d",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "7932c16731d96f519220bfeaca027ecb47307ef51079118dbd23501e37e2a76b",
+      "contextAfterSHA256": "46f6715eed7304af8d10035eab878ef75f6db43f2b867479bf372d8f3682e78e",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "fda860a4062220e17a1b43bdb96aee87faff7928952526a64335d91a6c4399a2",
+        "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "contextAfterSHA256": "7932c16731d96f519220bfeaca027ecb47307ef51079118dbd23501e37e2a76b",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+          "semanticContextSHA256": "7932c16731d96f519220bfeaca027ecb47307ef51079118dbd23501e37e2a76b",
+          "subjectTitle": "Matkailijalle",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "ec8f1985f77c4c9b6debac09d048f03bf33f1829dd9e4b34f5576a0f72877a3d",
+        "sameImageNativeSHA256": "5d003a9244d5b9275579256631af66e4113abd667980f141795ad97b33f60114",
+        "sameImageExportSHA256": "491cf84b60572b6c3ef154847c287c7a6a8930aec07a1ab163aae01b5132531d",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e14",
@@ -253,10 +274,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/yaren/e14-yaren-o4-v1-20261012-d51cd1bf6ddd.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Kala ja riisi havainnollistavat tavallista ateriaa; yleinen havainnekuva.",
-        "lyhyt": "Kala ja riisi havainnollistavat tavallista ateriaa; yleinen havainnekuva."
+        "selite": "Kala ja riisi havainnollistavat tavallista ateriaa; yleinen havainnekuva."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -264,10 +285,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/yaren/e14-yaren-o4-v1-20261012-d51cd1bf6ddd.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Kala ja riisi havainnollistavat tavallista ateriaa; yleinen havainnekuva.",
-        "lyhyt": "Kala ja riisi havainnollistavat tavallista ateriaa; yleinen havainnekuva."
+        "selite": "Kala ja riisi havainnollistavat tavallista ateriaa; yleinen havainnekuva."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -281,10 +302,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/yaren/sisalto.json",
-      "sourceContentSHA256": "fda860a4062220e17a1b43bdb96aee87faff7928952526a64335d91a6c4399a2",
+      "sourceContentSHA256": "ec8f1985f77c4c9b6debac09d048f03bf33f1829dd9e4b34f5576a0f72877a3d",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "d090d47428af38fadc9cba5e3ba9dd8c3c795ff549598fa88015af9898ff717f",
+        "semanticContextSHA256": "6e31186bf308ffb12f10092a15ecbf03a76789736e505ce7fee253569280b12c",
         "subjectTitle": "Mitä täällä syödään",
         "targetState": "existing-target"
       },
@@ -415,9 +436,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -436,17 +457,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "fda860a4062220e17a1b43bdb96aee87faff7928952526a64335d91a6c4399a2",
+      "sourceContentAfterSHA256": "ec8f1985f77c4c9b6debac09d048f03bf33f1829dd9e4b34f5576a0f72877a3d",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "d090d47428af38fadc9cba5e3ba9dd8c3c795ff549598fa88015af9898ff717f",
+      "contextAfterSHA256": "6e31186bf308ffb12f10092a15ecbf03a76789736e505ce7fee253569280b12c",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "fda860a4062220e17a1b43bdb96aee87faff7928952526a64335d91a6c4399a2",
+        "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "contextAfterSHA256": "d090d47428af38fadc9cba5e3ba9dd8c3c795ff549598fa88015af9898ff717f",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+          "semanticContextSHA256": "d090d47428af38fadc9cba5e3ba9dd8c3c795ff549598fa88015af9898ff717f",
+          "subjectTitle": "Mitä täällä syödään",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "ec8f1985f77c4c9b6debac09d048f03bf33f1829dd9e4b34f5576a0f72877a3d",
+        "sameImageNativeSHA256": "d51cd1bf6ddde9ceeae9594d5d90035201468eb432bca3b72c2e3e7d3b68dad3",
+        "sameImageExportSHA256": "8d7278f540213568323d065abc9595ef36468b60333c7a7eda8604f62d66962c",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e14",
@@ -468,10 +510,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/yaren/e14-yaren-k3-v1-20261012-4838a034b231.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Opiskeluvälineet oppimiskylän aihetta havainnollistamassa; yleinen havainnekuva.",
-        "lyhyt": "Opiskeluvälineet oppimiskylän aihetta havainnollistamassa; yleinen havainnekuva."
+        "selite": "Opiskeluvälineet oppimiskylän aihetta havainnollistamassa; yleinen havainnekuva."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -479,10 +521,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/yaren/e14-yaren-k3-v1-20261012-4838a034b231.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Opiskeluvälineet oppimiskylän aihetta havainnollistamassa; yleinen havainnekuva.",
-        "lyhyt": "Opiskeluvälineet oppimiskylän aihetta havainnollistamassa; yleinen havainnekuva."
+        "selite": "Opiskeluvälineet oppimiskylän aihetta havainnollistamassa; yleinen havainnekuva."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -496,10 +538,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/yaren/sisalto.json",
-      "sourceContentSHA256": "fda860a4062220e17a1b43bdb96aee87faff7928952526a64335d91a6c4399a2",
+      "sourceContentSHA256": "ec8f1985f77c4c9b6debac09d048f03bf33f1829dd9e4b34f5576a0f72877a3d",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "cf23eb30adcc32f557d2b30f8dddb2bddb46e30fbc7cc1f727d46aec48602a51",
-        "semanticContextSHA256": "cf23eb30adcc32f557d2b30f8dddb2bddb46e30fbc7cc1f727d46aec48602a51",
+        "targetBeforeSHA256": "00ab3be76db88b9f5c8011004e7c5dda717fea2313c1e7c9583d7069a6ab54de",
+        "semanticContextSHA256": "00ab3be76db88b9f5c8011004e7c5dda717fea2313c1e7c9583d7069a6ab54de",
         "subjectTitle": "Oppimiskylä samassa osoitteessa",
         "targetState": "existing-target"
       },
@@ -628,9 +670,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -649,17 +691,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "fda860a4062220e17a1b43bdb96aee87faff7928952526a64335d91a6c4399a2",
-      "targetAfterSHA256": "cf23eb30adcc32f557d2b30f8dddb2bddb46e30fbc7cc1f727d46aec48602a51",
-      "contextAfterSHA256": "cf23eb30adcc32f557d2b30f8dddb2bddb46e30fbc7cc1f727d46aec48602a51",
+      "sourceContentAfterSHA256": "ec8f1985f77c4c9b6debac09d048f03bf33f1829dd9e4b34f5576a0f72877a3d",
+      "targetAfterSHA256": "00ab3be76db88b9f5c8011004e7c5dda717fea2313c1e7c9583d7069a6ab54de",
+      "contextAfterSHA256": "00ab3be76db88b9f5c8011004e7c5dda717fea2313c1e7c9583d7069a6ab54de",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "fda860a4062220e17a1b43bdb96aee87faff7928952526a64335d91a6c4399a2",
+        "targetAfterSHA256": "cf23eb30adcc32f557d2b30f8dddb2bddb46e30fbc7cc1f727d46aec48602a51",
+        "contextAfterSHA256": "cf23eb30adcc32f557d2b30f8dddb2bddb46e30fbc7cc1f727d46aec48602a51",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "cf23eb30adcc32f557d2b30f8dddb2bddb46e30fbc7cc1f727d46aec48602a51",
+          "semanticContextSHA256": "cf23eb30adcc32f557d2b30f8dddb2bddb46e30fbc7cc1f727d46aec48602a51",
+          "subjectTitle": "Oppimiskylä samassa osoitteessa",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "ec8f1985f77c4c9b6debac09d048f03bf33f1829dd9e4b34f5576a0f72877a3d",
+        "sameImageNativeSHA256": "4838a034b2318adb3412c81a36ec5de88d4ee38e2a1c1285f0cdc4a4eabd6add",
+        "sameImageExportSHA256": "c55b213622e17d48af20395d01540d5c6ba968911c53d932929e8ecac062a995",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e14",
@@ -681,10 +744,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/yaren/e14-yaren-k4-v1-20261012-668d630843ed.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Radiovastaanotin museoaiheen havainnollistuksena; yleinen havainnekuva.",
-        "lyhyt": "Radiovastaanotin museoaiheen havainnollistuksena; yleinen havainnekuva."
+        "selite": "Radiovastaanotin museoaiheen havainnollistuksena; yleinen havainnekuva."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -692,10 +755,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/yaren/e14-yaren-k4-v1-20261012-668d630843ed.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Radiovastaanotin museoaiheen havainnollistuksena; yleinen havainnekuva.",
-        "lyhyt": "Radiovastaanotin museoaiheen havainnollistuksena; yleinen havainnekuva."
+        "selite": "Radiovastaanotin museoaiheen havainnollistuksena; yleinen havainnekuva."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -709,7 +772,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/yaren/sisalto.json",
-      "sourceContentSHA256": "fda860a4062220e17a1b43bdb96aee87faff7928952526a64335d91a6c4399a2",
+      "sourceContentSHA256": "ec8f1985f77c4c9b6debac09d048f03bf33f1829dd9e4b34f5576a0f72877a3d",
       "semanticSourceBind": {
         "targetBeforeSHA256": "7504137afb0617c63536c4469c016e3556de17da68f0c0610698e92bd0ff65c0",
         "semanticContextSHA256": "7504137afb0617c63536c4469c016e3556de17da68f0c0610698e92bd0ff65c0",
@@ -841,9 +904,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -862,17 +925,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "fda860a4062220e17a1b43bdb96aee87faff7928952526a64335d91a6c4399a2",
+      "sourceContentAfterSHA256": "ec8f1985f77c4c9b6debac09d048f03bf33f1829dd9e4b34f5576a0f72877a3d",
       "targetAfterSHA256": "7504137afb0617c63536c4469c016e3556de17da68f0c0610698e92bd0ff65c0",
       "contextAfterSHA256": "7504137afb0617c63536c4469c016e3556de17da68f0c0610698e92bd0ff65c0",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "fda860a4062220e17a1b43bdb96aee87faff7928952526a64335d91a6c4399a2",
+        "targetAfterSHA256": "7504137afb0617c63536c4469c016e3556de17da68f0c0610698e92bd0ff65c0",
+        "contextAfterSHA256": "7504137afb0617c63536c4469c016e3556de17da68f0c0610698e92bd0ff65c0",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "7504137afb0617c63536c4469c016e3556de17da68f0c0610698e92bd0ff65c0",
+          "semanticContextSHA256": "7504137afb0617c63536c4469c016e3556de17da68f0c0610698e92bd0ff65c0",
+          "subjectTitle": "Naoero kertoo omasta historiasta",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "ec8f1985f77c4c9b6debac09d048f03bf33f1829dd9e4b34f5576a0f72877a3d",
+        "sameImageNativeSHA256": "668d630843edb4fa34ec35a2f385c76baf070a1247fabe406568e690cd8f97d5",
+        "sameImageExportSHA256": "b37070c9293fa898f504fe76ce4f9d97e56043d7d34284e2ae7cc418ae697b06",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e14",
@@ -894,10 +978,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/yaren/e14-yaren-l2-v2-20261012-9e69d1cff598.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Katon sadevesi voidaan johtaa säiliöön; yleinen havainnekuva.",
-        "lyhyt": "Katon sadevesi voidaan johtaa säiliöön; yleinen havainnekuva."
+        "selite": "Katon sadevesi voidaan johtaa säiliöön; yleinen havainnekuva."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -905,10 +989,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/yaren/e14-yaren-l2-v2-20261012-9e69d1cff598.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Katon sadevesi voidaan johtaa säiliöön; yleinen havainnekuva.",
-        "lyhyt": "Katon sadevesi voidaan johtaa säiliöön; yleinen havainnekuva."
+        "selite": "Katon sadevesi voidaan johtaa säiliöön; yleinen havainnekuva."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -922,10 +1006,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/yaren/sisalto.json",
-      "sourceContentSHA256": "fda860a4062220e17a1b43bdb96aee87faff7928952526a64335d91a6c4399a2",
+      "sourceContentSHA256": "ec8f1985f77c4c9b6debac09d048f03bf33f1829dd9e4b34f5576a0f72877a3d",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "d274616d4c8f18549241c392320962d1d6dd2aeddb1b8640aaa71c39297128db",
-        "semanticContextSHA256": "d274616d4c8f18549241c392320962d1d6dd2aeddb1b8640aaa71c39297128db",
+        "targetBeforeSHA256": "5f9031c3a2f1a07db8eb09be2bf9a1d8d2c2f66e250a3165c1dec218b2e6cb8c",
+        "semanticContextSHA256": "5f9031c3a2f1a07db8eb09be2bf9a1d8d2c2f66e250a3165c1dec218b2e6cb8c",
         "subjectTitle": "Vettä katolta, vettä merestä",
         "targetState": "existing-target"
       },
@@ -1058,9 +1142,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -1079,17 +1163,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "fda860a4062220e17a1b43bdb96aee87faff7928952526a64335d91a6c4399a2",
-      "targetAfterSHA256": "d274616d4c8f18549241c392320962d1d6dd2aeddb1b8640aaa71c39297128db",
-      "contextAfterSHA256": "d274616d4c8f18549241c392320962d1d6dd2aeddb1b8640aaa71c39297128db",
+      "sourceContentAfterSHA256": "ec8f1985f77c4c9b6debac09d048f03bf33f1829dd9e4b34f5576a0f72877a3d",
+      "targetAfterSHA256": "5f9031c3a2f1a07db8eb09be2bf9a1d8d2c2f66e250a3165c1dec218b2e6cb8c",
+      "contextAfterSHA256": "5f9031c3a2f1a07db8eb09be2bf9a1d8d2c2f66e250a3165c1dec218b2e6cb8c",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "fda860a4062220e17a1b43bdb96aee87faff7928952526a64335d91a6c4399a2",
+        "targetAfterSHA256": "d274616d4c8f18549241c392320962d1d6dd2aeddb1b8640aaa71c39297128db",
+        "contextAfterSHA256": "d274616d4c8f18549241c392320962d1d6dd2aeddb1b8640aaa71c39297128db",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "d274616d4c8f18549241c392320962d1d6dd2aeddb1b8640aaa71c39297128db",
+          "semanticContextSHA256": "d274616d4c8f18549241c392320962d1d6dd2aeddb1b8640aaa71c39297128db",
+          "subjectTitle": "Vettä katolta, vettä merestä",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "ec8f1985f77c4c9b6debac09d048f03bf33f1829dd9e4b34f5576a0f72877a3d",
+        "sameImageNativeSHA256": "9e69d1cff5986ec361138b50781a9062f779ca9407c1ca1bcfa6b163fd3e5c79",
+        "sameImageExportSHA256": "2f711bebabd2216f08079618661f7e330710edca3000c2a179afda7544ec26c4",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e14",
@@ -1111,10 +1216,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/yaren/e14-yaren-l3-v1-20261012-5306ade70a0a.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Banaani, mango ja leipäpuun hedelmä puutarhakasvien havainnekuvana.",
-        "lyhyt": "Banaani, mango ja leipäpuun hedelmä puutarhakasvien havainnekuvana."
+        "selite": "Banaani, mango ja leipäpuun hedelmä puutarhakasvien havainnekuvana."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -1122,10 +1227,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/yaren/e14-yaren-l3-v1-20261012-5306ade70a0a.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Banaani, mango ja leipäpuun hedelmä puutarhakasvien havainnekuvana.",
-        "lyhyt": "Banaani, mango ja leipäpuun hedelmä puutarhakasvien havainnekuvana."
+        "selite": "Banaani, mango ja leipäpuun hedelmä puutarhakasvien havainnekuvana."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -1139,7 +1244,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/yaren/sisalto.json",
-      "sourceContentSHA256": "fda860a4062220e17a1b43bdb96aee87faff7928952526a64335d91a6c4399a2",
+      "sourceContentSHA256": "ec8f1985f77c4c9b6debac09d048f03bf33f1829dd9e4b34f5576a0f72877a3d",
       "semanticSourceBind": {
         "targetBeforeSHA256": "de9bb99b5e36cb862095e0c25625dd8bce2bc49da4e522ef05b4ad299c798b35",
         "semanticContextSHA256": "de9bb99b5e36cb862095e0c25625dd8bce2bc49da4e522ef05b4ad299c798b35",
@@ -1271,9 +1376,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -1292,17 +1397,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "fda860a4062220e17a1b43bdb96aee87faff7928952526a64335d91a6c4399a2",
+      "sourceContentAfterSHA256": "ec8f1985f77c4c9b6debac09d048f03bf33f1829dd9e4b34f5576a0f72877a3d",
       "targetAfterSHA256": "de9bb99b5e36cb862095e0c25625dd8bce2bc49da4e522ef05b4ad299c798b35",
       "contextAfterSHA256": "de9bb99b5e36cb862095e0c25625dd8bce2bc49da4e522ef05b4ad299c798b35",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "fda860a4062220e17a1b43bdb96aee87faff7928952526a64335d91a6c4399a2",
+        "targetAfterSHA256": "de9bb99b5e36cb862095e0c25625dd8bce2bc49da4e522ef05b4ad299c798b35",
+        "contextAfterSHA256": "de9bb99b5e36cb862095e0c25625dd8bce2bc49da4e522ef05b4ad299c798b35",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "de9bb99b5e36cb862095e0c25625dd8bce2bc49da4e522ef05b4ad299c798b35",
+          "semanticContextSHA256": "de9bb99b5e36cb862095e0c25625dd8bce2bc49da4e522ef05b4ad299c798b35",
+          "subjectTitle": "Laguuni ilman meriyhteyttä",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "ec8f1985f77c4c9b6debac09d048f03bf33f1829dd9e4b34f5576a0f72877a3d",
+        "sameImageNativeSHA256": "5306ade70a0a82732e0c4a1fd80172fb57a09fe597ba5b52367ce26d0830177b",
+        "sameImageExportSHA256": "cbd6634522268887d4e124d6b9d9522a1b6c7bdb6d685d48b6fd92b887fefd1a",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e14",
@@ -1324,10 +1450,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/yaren/e14-yaren-l4-v1-20261012-245577037631.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Milkfish-kalaa on kasvatettu sisämaan vedessä; yleinen havainnekuva.",
-        "lyhyt": "Milkfish-kalaa on kasvatettu sisämaan vedessä; yleinen havainnekuva."
+        "selite": "Milkfish-kalaa on kasvatettu sisämaan vedessä; yleinen havainnekuva."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -1335,10 +1461,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/yaren/e14-yaren-l4-v1-20261012-245577037631.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Milkfish-kalaa on kasvatettu sisämaan vedessä; yleinen havainnekuva.",
-        "lyhyt": "Milkfish-kalaa on kasvatettu sisämaan vedessä; yleinen havainnekuva."
+        "selite": "Milkfish-kalaa on kasvatettu sisämaan vedessä; yleinen havainnekuva."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -1352,10 +1478,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/yaren/sisalto.json",
-      "sourceContentSHA256": "fda860a4062220e17a1b43bdb96aee87faff7928952526a64335d91a6c4399a2",
+      "sourceContentSHA256": "ec8f1985f77c4c9b6debac09d048f03bf33f1829dd9e4b34f5576a0f72877a3d",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "7a59ab9c1fb96d332c4af4bd12713fa47d9b03333e72623857054665121a8198",
-        "semanticContextSHA256": "7a59ab9c1fb96d332c4af4bd12713fa47d9b03333e72623857054665121a8198",
+        "targetBeforeSHA256": "768499fb6d6b19ce6e3d5012ab8ca790693f6ca7b8d06f98db80ce5128f0014b",
+        "semanticContextSHA256": "768499fb6d6b19ce6e3d5012ab8ca790693f6ca7b8d06f98db80ce5128f0014b",
         "subjectTitle": "Kalalle toinen kasvupaikka",
         "targetState": "existing-target"
       },
@@ -1486,9 +1612,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -1507,17 +1633,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "fda860a4062220e17a1b43bdb96aee87faff7928952526a64335d91a6c4399a2",
-      "targetAfterSHA256": "7a59ab9c1fb96d332c4af4bd12713fa47d9b03333e72623857054665121a8198",
-      "contextAfterSHA256": "7a59ab9c1fb96d332c4af4bd12713fa47d9b03333e72623857054665121a8198",
+      "sourceContentAfterSHA256": "ec8f1985f77c4c9b6debac09d048f03bf33f1829dd9e4b34f5576a0f72877a3d",
+      "targetAfterSHA256": "768499fb6d6b19ce6e3d5012ab8ca790693f6ca7b8d06f98db80ce5128f0014b",
+      "contextAfterSHA256": "768499fb6d6b19ce6e3d5012ab8ca790693f6ca7b8d06f98db80ce5128f0014b",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "fda860a4062220e17a1b43bdb96aee87faff7928952526a64335d91a6c4399a2",
+        "targetAfterSHA256": "7a59ab9c1fb96d332c4af4bd12713fa47d9b03333e72623857054665121a8198",
+        "contextAfterSHA256": "7a59ab9c1fb96d332c4af4bd12713fa47d9b03333e72623857054665121a8198",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "7a59ab9c1fb96d332c4af4bd12713fa47d9b03333e72623857054665121a8198",
+          "semanticContextSHA256": "7a59ab9c1fb96d332c4af4bd12713fa47d9b03333e72623857054665121a8198",
+          "subjectTitle": "Kalalle toinen kasvupaikka",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "ec8f1985f77c4c9b6debac09d048f03bf33f1829dd9e4b34f5576a0f72877a3d",
+        "sameImageNativeSHA256": "245577037631f06581c68e31d19fdf04662499ea3ef4df295b6221e8d6d90d22",
+        "sameImageExportSHA256": "6a7a959e5ef586adc4598bf735a365c327926d3178dd7a309b8611e9a857aa29",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e14",
@@ -1536,23 +1683,23 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e14/yaren/photo-e50906e443d4cd1faa68.jpg",
         "suora": true,
         "lahde": "Department of Foreign Affairs and Trade, Commons (CC BY 2.0)",
-        "selite": "Aallot Naurun lentoaseman rantamuurilla Yarenin lähialueella kesäkuussa 2013.",
-        "lyhyt": "Aallot Naurun lentoaseman rantamuurilla Yarenin lähialueella kesäkuussa 2013.",
+        "selite": "Vaahtoava aallokko osuu kiitotien päässä olevaan betonimuuriin; sen vierellä näkyy tie ja tuulipussi.",
+        "lyhyt": "Aallot Naurun lentoaseman rantamuurilla kesäkuussa 2013.",
         "tiedosto": "Waves crash against the wall at the end of Nauru International Airprot's runway. Rising sea levels pose a serious risk coastal erosion for small Pacific island countries, 4 June 2013. Photo- Matt Robertson - DFAT (12045534665).jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Department of Foreign Affairs and Trade, Commons (CC BY 2.0)",
-        "selite": "Aallot Naurun lentoaseman rantamuurilla Yarenin lähialueella kesäkuussa 2013.",
-        "lyhyt": "Aallot Naurun lentoaseman rantamuurilla Yarenin lähialueella kesäkuussa 2013.",
+        "selite": "Vaahtoava aallokko osuu kiitotien päässä olevaan betonimuuriin; sen vierellä näkyy tie ja tuulipussi.",
+        "lyhyt": "Aallot Naurun lentoaseman rantamuurilla kesäkuussa 2013.",
         "tiedosto": "Waves crash against the wall at the end of Nauru International Airprot's runway. Rising sea levels pose a serious risk coastal erosion for small Pacific island countries, 4 June 2013. Photo- Matt Robertson - DFAT (12045534665).jpg"
       },
       "runtimeMediaFieldPayload": {
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e14/yaren/photo-e50906e443d4cd1faa68.jpg",
         "suora": true,
         "lahde": "Department of Foreign Affairs and Trade, Commons (CC BY 2.0)",
-        "selite": "Aallot Naurun lentoaseman rantamuurilla Yarenin lähialueella kesäkuussa 2013.",
-        "lyhyt": "Aallot Naurun lentoaseman rantamuurilla Yarenin lähialueella kesäkuussa 2013.",
+        "selite": "Vaahtoava aallokko osuu kiitotien päässä olevaan betonimuuriin; sen vierellä näkyy tie ja tuulipussi.",
+        "lyhyt": "Aallot Naurun lentoaseman rantamuurilla kesäkuussa 2013.",
         "tiedosto": "Waves crash against the wall at the end of Nauru International Airprot's runway. Rising sea levels pose a serious risk coastal erosion for small Pacific island countries, 4 June 2013. Photo- Matt Robertson - DFAT (12045534665).jpg"
       },
       "runtimeRemoveMediaKeys": [],
@@ -1567,10 +1714,10 @@
         3456
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/yaren/sisalto.json",
-      "sourceContentSHA256": "fda860a4062220e17a1b43bdb96aee87faff7928952526a64335d91a6c4399a2",
+      "sourceContentSHA256": "ec8f1985f77c4c9b6debac09d048f03bf33f1829dd9e4b34f5576a0f72877a3d",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "a62b7c2829c15724925a4b56a3419543781394c42cab8dfb79a782bab9395944",
-        "semanticContextSHA256": "a62b7c2829c15724925a4b56a3419543781394c42cab8dfb79a782bab9395944",
+        "targetBeforeSHA256": "d12e842cf7906190f853ea624af15167a35c87532ac59a596ae59182cfd45e4c",
+        "semanticContextSHA256": "d12e842cf7906190f853ea624af15167a35c87532ac59a596ae59182cfd45e4c",
         "subjectTitle": "yaren — aito paikkavalokuva",
         "targetState": "existing-target"
       },
@@ -1786,9 +1933,9 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "Waves crash against the wall at the end of Nauru International Airprot's runway. Rising sea levels pose a serious risk coastal erosion for small Pacific island countries, 4 June 2013. Photo- Matt Robertson - DFAT (12045534665).jpg",
-        "lahde": "Department of Foreign Affairs and Trade, Commons (CC BY 2.0)",
-        "selite": "Aallot Naurun lentoaseman rantamuurilla Yarenin lähialueella kesäkuussa 2013.",
-        "lyhyt": "Aallot Naurun lentoaseman rantamuurilla Yarenin lähialueella kesäkuussa 2013."
+        "lyhyt": "Aallot Naurun lentoaseman rantamuurilla kesäkuussa 2013.",
+        "selite": "Vaahtoava aallokko osuu kiitotien päässä olevaan betonimuuriin; sen vierellä näkyy tie ja tuulipussi.",
+        "lahde": "Department of Foreign Affairs and Trade, Commons (CC BY 2.0)"
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -1807,28 +1954,55 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Department of Foreign Affairs and Trade, Commons (CC BY 2.0)",
-        "selite": "Aallot Naurun lentoaseman rantamuurilla Yarenin lähialueella kesäkuussa 2013.",
-        "lyhyt": "Aallot Naurun lentoaseman rantamuurilla Yarenin lähialueella kesäkuussa 2013.",
+        "selite": "Vaahtoava aallokko osuu kiitotien päässä olevaan betonimuuriin; sen vierellä näkyy tie ja tuulipussi.",
+        "lyhyt": "Aallot Naurun lentoaseman rantamuurilla kesäkuussa 2013.",
         "tiedosto": "Waves crash against the wall at the end of Nauru International Airprot's runway. Rising sea levels pose a serious risk coastal erosion for small Pacific island countries, 4 June 2013. Photo- Matt Robertson - DFAT (12045534665).jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "fda860a4062220e17a1b43bdb96aee87faff7928952526a64335d91a6c4399a2",
-      "targetAfterSHA256": "a62b7c2829c15724925a4b56a3419543781394c42cab8dfb79a782bab9395944",
-      "contextAfterSHA256": "a62b7c2829c15724925a4b56a3419543781394c42cab8dfb79a782bab9395944",
+      "sourceContentAfterSHA256": "ec8f1985f77c4c9b6debac09d048f03bf33f1829dd9e4b34f5576a0f72877a3d",
+      "targetAfterSHA256": "d12e842cf7906190f853ea624af15167a35c87532ac59a596ae59182cfd45e4c",
+      "contextAfterSHA256": "d12e842cf7906190f853ea624af15167a35c87532ac59a596ae59182cfd45e4c",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "fda860a4062220e17a1b43bdb96aee87faff7928952526a64335d91a6c4399a2",
+        "targetAfterSHA256": "a62b7c2829c15724925a4b56a3419543781394c42cab8dfb79a782bab9395944",
+        "contextAfterSHA256": "a62b7c2829c15724925a4b56a3419543781394c42cab8dfb79a782bab9395944",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "a62b7c2829c15724925a4b56a3419543781394c42cab8dfb79a782bab9395944",
+          "semanticContextSHA256": "a62b7c2829c15724925a4b56a3419543781394c42cab8dfb79a782bab9395944",
+          "subjectTitle": "yaren — aito paikkavalokuva",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "ec8f1985f77c4c9b6debac09d048f03bf33f1829dd9e4b34f5576a0f72877a3d",
+        "sameImageNativeSHA256": "e50906e443d4cd1faa68a78a9f7c413f167000be521bbc0e9652e4f427393722",
+        "sameImageExportSHA256": "e50906e443d4cd1faa68a78a9f7c413f167000be521bbc0e9652e4f427393722",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     }
   ],
   "runtimeIntegrationPending": true,
   "ownerAcceptedNotImpliedByAuthorization": false,
   "gameIntegrated": false,
   "allAssetsExplicitlyOwnerApproved": true,
-  "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+  "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+  "task118ExcludedAssets": [],
+  "task118TextRevision": true,
+  "independentTextResamplePending": true,
+  "textAcceptanceVerified": false,
+  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task118/immutable-media-history/e14/yaren/fe6e4016762904adeec0f53fba415be9d9e3aead6faa5a9c4437a074e1c88df6.json",
+  "task118ReboundAt": "2026-10-13T16:31:26.844334+00:00"
 }
