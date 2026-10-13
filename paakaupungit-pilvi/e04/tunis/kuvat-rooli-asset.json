@@ -2,243 +2,9 @@
   "schemaVersion": "capital-city-role-assets/v1",
   "era": "e04",
   "city": "tunis",
-  "authorization": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+  "authorization": "hyväksyn kaikki tekemäsi kuvat. toimita ne claudelle. claudelta saat uusia ohjeita jatkoa varten",
   "sourceContentAfterSHA256": "d3a9f1f168a2da7dafea0141de96cd5aebb379ed6f2a37be40101ca1767d7f4e",
   "assets": [
-    {
-      "era": "e04",
-      "city": "tunis",
-      "slot": "O3",
-      "type": "illustration",
-      "assetID": "tunis-o3-havainne-v1",
-      "galleryImageID": "tunis-o3-havainne-v1",
-      "commonsFile": null,
-      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[2].kuva",
-      "targetTokens": [
-        "kaupunkilehti",
-        0,
-        "matkailijalle",
-        "artikkeli",
-        "jaksot",
-        2,
-        "kuva"
-      ],
-      "operation": "merge-media-fields-preserve-other-content",
-      "CmediaFieldPayload": {
-        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-e04-e14/tunis-o3-havainne-v1.png",
-        "suora": true,
-        "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Sisäpihan mittakaava palatsitarinoiden yleiskuvituksena. Havainnekuva.",
-        "lyhyt": "Sisäpihan mittakaava palatsitarinoiden yleiskuvituksena. Havainnekuva."
-      },
-      "removeMediaKeys": [
-        "tiedosto"
-      ],
-      "CvalidatorCompatiblePayload": {},
-      "runtimeMediaFieldPayload": {
-        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-e04-e14/tunis-o3-havainne-v1.png",
-        "suora": true,
-        "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Sisäpihan mittakaava palatsitarinoiden yleiskuvituksena. Havainnekuva.",
-        "lyhyt": "Sisäpihan mittakaava palatsitarinoiden yleiskuvituksena. Havainnekuva."
-      },
-      "runtimeRemoveMediaKeys": [
-        "tiedosto"
-      ],
-      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
-      "nativeSHA256": "928405fcd6a0b8cc70315b8647c464b3d34358aaee8765cb3d8a50d208eca44b",
-      "exportSHA256": "928405fcd6a0b8cc70315b8647c464b3d34358aaee8765cb3d8a50d208eca44b",
-      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-e04-e14/tunis-o3-havainne-v1.png",
-      "r2Key": null,
-      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvaputki/production/paakaupungit-havainnekuvat-erä2-20261012/worker-a/items/tunis-o3-havainne-v1/final/tunis-o3-havainne-v1.png",
-      "dimensions": [
-        1536,
-        1024
-      ],
-      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/tunis/sisalto.json",
-      "sourceContentSHA256": "d3a9f1f168a2da7dafea0141de96cd5aebb379ed6f2a37be40101ca1767d7f4e",
-      "semanticSourceBind": {
-        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "b7f32319e6d7b59f7255593796c29a93ae578d95028aca0e03933f73a4960b52",
-        "subjectTitle": "Pihapalatsien kaupungissa",
-        "targetState": "existing-target"
-      },
-      "attribution": {
-        "author": null,
-        "license": null,
-        "licenseUrl": null,
-        "sourcePage": null,
-        "originalUrl": null,
-        "rightsEvidence": {
-          "production": null,
-          "QA": {
-            "visualViewed": true,
-            "viewedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvaputki/production/paakaupungit-havainnekuvat-erä2-20261012/worker-a/items/tunis-o3-havainne-v1/final/tunis-o3-havainne-v1.png",
-            "width": 1536,
-            "height": 1024,
-            "prompt": "Fotorealistinen kameran kuvaa muistuttava alkuperäinen havainnekuva; ei maalaus, piirros, dioraama tai CGI.\nSisäpihan ja arkadin tilallinen idea Tunisin palatsikertomusten yleishavainnollistuksena: pieni avoin piha ja yksi tavallinen kaarigalleria.\nLaaja 28–35 mm ihmissilmän korkeudelta, valoisa avoin piha ja varjoisa arkadi; yksinkertaiset pylväät, rappaus ja kivipinta ilman koristeita.\nNykyajan hajavalo; yleinen tilallinen havainnollistus, ei nimetty palatsi tai nykyinen sisustus.\nTämä on yleishavainnollistus; älä tee jäljitelmää nimetyn paikan täsmällisestä rakennuksesta, maisemasta tai nykytilasta.\nEi Dar Husseinin, Dar Lasramin, Dar Othmanin tai Dar Ben Abdallahin tarkan pihan, kaarimäärän tai pohjapiirroksen kuvaa.\nEi kaakelikuviota, stukkoteosta, maalattua kattoa, korinttilaista kapiteelia tai vanhan hylätyn kuvan koristeiden uusintaa.\nYleishavainnollistus ei todista käyntimahdollisuutta tai nykytilaa.\nEi tekstiä, logoa, vesileimaa, kehystä, luettavia kasvoja, tunnistettavaa nykyistä yksityishenkilöä, modernia suojattua teosta tai tunnetun koristepinnan jäljennöstä. Luonnolliset aineet ja liitokset, ei toistuvia muovipintoja.\nVaakakuva 1536×1024.\nPNG, sRGB, RGB, täysin peittävä; koko generointialue säilytetään.",
-            "captionFi": "Sisäpihan mittakaava palatsitarinoiden yleiskuvituksena. Havainnekuva.",
-            "sourceEvidence": [
-              {
-                "heading": "### T2. Dar Lasram jakoi talon tehtäviin",
-                "lineStart": 141,
-                "lineEnd": 153,
-                "text": "### T2. Dar Lasram jakoi talon tehtäviin\n\nWiki `Dar Lasram`.\n\n1. Palatsi sijaitsee medinassa Tribunal-kadulla. [L, johdanto]\n2. Sen rakennuttaja oli Hamouda Lasram, varakas maanomistaja ja hallinnollinen kirjuri. [L, History]\n3. Tontti koottiin hankkimalla ja purkamalla viereisiä rakennuksia. Tämä on lähteen nimenomainen tapahtumakuvaus. [L]\n4. Rakentaminen ajoittuu 1800-luvun alkupuolelle. [L; tarkka 1812–1819-väli jää pois leipätekstistä]\n5. L:n Architecture erottaa varasto-/palvelutilat, perheen tilat ja vieraille tarkoitetun ylemmän kerroksen. [L]\n6. Palatsi on artikkelin mukaan medinan suojeluyhdistyksen ja Tahar Haddad -klubin käytössä. [L; ei aukiolo-/yleisötilapromisea]\n7. Sisäpihan kaaret, pylväät, stukkokoristelu ja maalatut katot on dokumentoitu artikkelissa. [L, Architecture/kuvatekstit]\n\nMaan musiikkilehden Rachidiaa, nawba-sarjoja tai paroni Erlangeria ei lisätä tähän palatsin tarinaksi."
-              },
-              {
-                "heading": "### T3. Palatsi, jonka arki päätyi museoon",
-                "lineStart": 155,
-                "lineEnd": 168,
-                "text": "### T3. Palatsi, jonka arki päätyi museoon\n\nWiki `Dar Ben Abdallah`.\n\n1. Dar Ben Abdallah on 1700-luvun palatsi medinan eteläisessä osassa. [D/DF]\n2. Se on Tourbet El Beyn naapurustossa. [D, Localization; DF]\n3. Rakennus sai nimensä myöhemmältä omistajalta, silkkikauppias Mohamed Tahar Ben Abdallahilta. [D/DF]\n4. Rakennukseen liittyy ylellisiä vastaanottotiloja ja piha, jonka ympärillä on arkadeja. [DF, Architecture]\n5. Sisäänkäynnin peräkkäiset mutkat suojasivat lähteen mukaan pihan yksityisyyttä. Syy-yhteys vain näin rajattuna. [DF]\n6. Rakennus muuttui 1900-luvulla kansanperinnettä esitteleväksi museoksi. [D/DF; 1964/1978-vaihe-ero kohta 8]\n7. Museokuvauksen aiheet ovat perhe-elämä ja kaupungin julkinen elämä, muun muassa soukit, moskeijat ja kahvilat. [D, Museum]\n8. Vanhojen näyttelyiden esineistöä ja nykyistä pääsyä ei luvata samaksi vuonna 2026. [V:n museo-osan päivitys 2018; D:n kuvaus ei ajantasainen palvelutiedote]\n\nPalatsi jää nosto/opas-aiheeksi eikä saa tämän työn karttapistettä: WP/WD ja V antavat eri paikannuksen, jota ei ratkaista arvaamalla. Kohta 8 kertoo myös fr-Wikipedian tukevan WD-pistettä; WD:tä ei julisteta vääräksi."
-              },
-              {
-                "heading": "### O3. Pihapalatsit",
-                "lineStart": 205,
-                "lineEnd": 210,
-                "text": "### O3. Pihapalatsit\n\n- Dar Lasram, Dar Othman ja Dar Hussein ovat medinan palatseja; niiden oma historia on kohdassa 5. [L/O/Y]\n- Dar Ben Abdallah esittelee lähdekuvauksissa perhe-elämän ja kaupungin elämän perinnettä. [D]\n- Rakennuksissa on sisäpihoja, arkadeja, koristeellisia kattoja ja vastaanottotiloja. Ominaisuus liitetään oikeaan palatsiin, ei kaikkia koteja koskevaksi yleistykseksi. [L/O/DF/YF]\n- Suojeluinstituution toimisto ei automaattisesti ole vapaasti kuljettava nähtävyys: käyntimahdollisuus varmistetaan erikseen. Tämä on toimituksellinen varaus, ei sulkemisväite."
-              }
-            ],
-            "provenanceLabel": "Tekoälyllä tuotettu havainnekuva. Lähteisiin perustuva yleishavainnollistus, ei aito paikkavalokuva eikä nimetyn paikan tarkan nykyulkoasun todiste.",
-            "originalPreserved": true,
-            "reviewedAt": "2026-10-12T17:49:31.500544+00:00"
-          },
-          "qaReason": "Katsottu silmin: luonteva yksinkertainen sisäpihan ja arkadin yleishavainnollistus, ei kasvoja, tekstiä, modernia erillistaidetta tai nimetyn palatsin täsmällistä jäljennöstä. Hyväksyntä edellyttää nykyisen rehellisen havainnekuvatekstin/provenienssin säilymistä."
-        }
-      },
-      "luentaMetadata": {
-        "existingImageLuenta": null,
-        "captionReadingText": "Sisäpihan mittakaava palatsitarinoiden yleiskuvituksena. Havainnekuva.",
-        "existingArticleAndSectionLuentaPreserved": true,
-        "audioGenerated": false,
-        "audioURL": null,
-        "imageSpecificAudioProvided": false,
-        "reuseAudioAllowedByThisPacket": false
-      },
-      "qaEvidence": {
-        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/tunis/qa.json",
-        "fileSHA256": "98d1fc32f764942c9b9562b0279212c0a7f3d3f1480672cb4f63eca4fe330a85",
-        "item": {
-          "slot": "O3",
-          "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[2].kuva",
-          "assetID": "tunis-o3-havainne-v1",
-          "sha256": "928405fcd6a0b8cc70315b8647c464b3d34358aaee8765cb3d8a50d208eca44b",
-          "verdict": "accepted",
-          "reason": "Katsottu silmin: luonteva yksinkertainen sisäpihan ja arkadin yleishavainnollistus, ei kasvoja, tekstiä, modernia erillistaidetta tai nimetyn palatsin täsmällistä jäljennöstä. Hyväksyntä edellyttää nykyisen rehellisen havainnekuvatekstin/provenienssin säilymistä.",
-          "evidence": {
-            "visualViewed": true,
-            "viewedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvaputki/production/paakaupungit-havainnekuvat-erä2-20261012/worker-a/items/tunis-o3-havainne-v1/final/tunis-o3-havainne-v1.png",
-            "width": 1536,
-            "height": 1024,
-            "prompt": "Fotorealistinen kameran kuvaa muistuttava alkuperäinen havainnekuva; ei maalaus, piirros, dioraama tai CGI.\nSisäpihan ja arkadin tilallinen idea Tunisin palatsikertomusten yleishavainnollistuksena: pieni avoin piha ja yksi tavallinen kaarigalleria.\nLaaja 28–35 mm ihmissilmän korkeudelta, valoisa avoin piha ja varjoisa arkadi; yksinkertaiset pylväät, rappaus ja kivipinta ilman koristeita.\nNykyajan hajavalo; yleinen tilallinen havainnollistus, ei nimetty palatsi tai nykyinen sisustus.\nTämä on yleishavainnollistus; älä tee jäljitelmää nimetyn paikan täsmällisestä rakennuksesta, maisemasta tai nykytilasta.\nEi Dar Husseinin, Dar Lasramin, Dar Othmanin tai Dar Ben Abdallahin tarkan pihan, kaarimäärän tai pohjapiirroksen kuvaa.\nEi kaakelikuviota, stukkoteosta, maalattua kattoa, korinttilaista kapiteelia tai vanhan hylätyn kuvan koristeiden uusintaa.\nYleishavainnollistus ei todista käyntimahdollisuutta tai nykytilaa.\nEi tekstiä, logoa, vesileimaa, kehystä, luettavia kasvoja, tunnistettavaa nykyistä yksityishenkilöä, modernia suojattua teosta tai tunnetun koristepinnan jäljennöstä. Luonnolliset aineet ja liitokset, ei toistuvia muovipintoja.\nVaakakuva 1536×1024.\nPNG, sRGB, RGB, täysin peittävä; koko generointialue säilytetään.",
-            "captionFi": "Sisäpihan mittakaava palatsitarinoiden yleiskuvituksena. Havainnekuva.",
-            "sourceEvidence": [
-              {
-                "heading": "### T2. Dar Lasram jakoi talon tehtäviin",
-                "lineStart": 141,
-                "lineEnd": 153,
-                "text": "### T2. Dar Lasram jakoi talon tehtäviin\n\nWiki `Dar Lasram`.\n\n1. Palatsi sijaitsee medinassa Tribunal-kadulla. [L, johdanto]\n2. Sen rakennuttaja oli Hamouda Lasram, varakas maanomistaja ja hallinnollinen kirjuri. [L, History]\n3. Tontti koottiin hankkimalla ja purkamalla viereisiä rakennuksia. Tämä on lähteen nimenomainen tapahtumakuvaus. [L]\n4. Rakentaminen ajoittuu 1800-luvun alkupuolelle. [L; tarkka 1812–1819-väli jää pois leipätekstistä]\n5. L:n Architecture erottaa varasto-/palvelutilat, perheen tilat ja vieraille tarkoitetun ylemmän kerroksen. [L]\n6. Palatsi on artikkelin mukaan medinan suojeluyhdistyksen ja Tahar Haddad -klubin käytössä. [L; ei aukiolo-/yleisötilapromisea]\n7. Sisäpihan kaaret, pylväät, stukkokoristelu ja maalatut katot on dokumentoitu artikkelissa. [L, Architecture/kuvatekstit]\n\nMaan musiikkilehden Rachidiaa, nawba-sarjoja tai paroni Erlangeria ei lisätä tähän palatsin tarinaksi."
-              },
-              {
-                "heading": "### T3. Palatsi, jonka arki päätyi museoon",
-                "lineStart": 155,
-                "lineEnd": 168,
-                "text": "### T3. Palatsi, jonka arki päätyi museoon\n\nWiki `Dar Ben Abdallah`.\n\n1. Dar Ben Abdallah on 1700-luvun palatsi medinan eteläisessä osassa. [D/DF]\n2. Se on Tourbet El Beyn naapurustossa. [D, Localization; DF]\n3. Rakennus sai nimensä myöhemmältä omistajalta, silkkikauppias Mohamed Tahar Ben Abdallahilta. [D/DF]\n4. Rakennukseen liittyy ylellisiä vastaanottotiloja ja piha, jonka ympärillä on arkadeja. [DF, Architecture]\n5. Sisäänkäynnin peräkkäiset mutkat suojasivat lähteen mukaan pihan yksityisyyttä. Syy-yhteys vain näin rajattuna. [DF]\n6. Rakennus muuttui 1900-luvulla kansanperinnettä esitteleväksi museoksi. [D/DF; 1964/1978-vaihe-ero kohta 8]\n7. Museokuvauksen aiheet ovat perhe-elämä ja kaupungin julkinen elämä, muun muassa soukit, moskeijat ja kahvilat. [D, Museum]\n8. Vanhojen näyttelyiden esineistöä ja nykyistä pääsyä ei luvata samaksi vuonna 2026. [V:n museo-osan päivitys 2018; D:n kuvaus ei ajantasainen palvelutiedote]\n\nPalatsi jää nosto/opas-aiheeksi eikä saa tämän työn karttapistettä: WP/WD ja V antavat eri paikannuksen, jota ei ratkaista arvaamalla. Kohta 8 kertoo myös fr-Wikipedian tukevan WD-pistettä; WD:tä ei julisteta vääräksi."
-              },
-              {
-                "heading": "### O3. Pihapalatsit",
-                "lineStart": 205,
-                "lineEnd": 210,
-                "text": "### O3. Pihapalatsit\n\n- Dar Lasram, Dar Othman ja Dar Hussein ovat medinan palatseja; niiden oma historia on kohdassa 5. [L/O/Y]\n- Dar Ben Abdallah esittelee lähdekuvauksissa perhe-elämän ja kaupungin elämän perinnettä. [D]\n- Rakennuksissa on sisäpihoja, arkadeja, koristeellisia kattoja ja vastaanottotiloja. Ominaisuus liitetään oikeaan palatsiin, ei kaikkia koteja koskevaksi yleistykseksi. [L/O/DF/YF]\n- Suojeluinstituution toimisto ei automaattisesti ole vapaasti kuljettava nähtävyys: käyntimahdollisuus varmistetaan erikseen. Tämä on toimituksellinen varaus, ei sulkemisväite."
-              }
-            ],
-            "provenanceLabel": "Tekoälyllä tuotettu havainnekuva. Lähteisiin perustuva yleishavainnollistus, ei aito paikkavalokuva eikä nimetyn paikan tarkan nykyulkoasun todiste.",
-            "originalPreserved": true,
-            "reviewedAt": "2026-10-12T17:49:31.500544+00:00"
-          }
-        },
-        "allSources": [
-          {
-            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/tunis/qa.json",
-            "sha256": "98d1fc32f764942c9b9562b0279212c0a7f3d3f1480672cb4f63eca4fe330a85"
-          },
-          {
-            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/tunis/illustration-qa-extra.json",
-            "sha256": "132c91c370c7dc3af6bb863ba5bb0aa96f75193f8433c1190e7f6afd73efecb8"
-          }
-        ]
-      },
-      "R2ByteVerification": {
-        "assetID": "tunis-o3-havainne-v1",
-        "nativeSHA256": "928405fcd6a0b8cc70315b8647c464b3d34358aaee8765cb3d8a50d208eca44b",
-        "sha256": "928405fcd6a0b8cc70315b8647c464b3d34358aaee8765cb3d8a50d208eca44b",
-        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-e04-e14/tunis-o3-havainne-v1.png",
-        "http": 200,
-        "bytes": 2604588,
-        "byteExactReadback": true,
-        "preservedExistingObject": true,
-        "era": "e04",
-        "city": "tunis",
-        "slot": "O3",
-        "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[2].kuva",
-        "verifiedAt": "2026-10-12T17:55:58.785535+00:00",
-        "ownerAcceptanceVerified": false,
-        "gameIntegrated": false,
-        "galleryVisibleVerified": false
-      },
-      "producerExportProof": null,
-      "technicalExportProof": {
-        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e04/tunis/tunis-o3-havainne-v1-928405fcd6a0.png",
-        "sha256": "7b58c53bdfa866a43e9020fe51082fa391a9df23a5f0fe28ba5947a130eb28e4",
-        "bytes": 2643652,
-        "SHAReadAt": "2026-10-12T18:29:43.216401+00:00",
-        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
-        "width": 1536,
-        "height": 1024,
-        "pixelWidth": 1536,
-        "pixelHeight": 1024,
-        "exifOrientation": 1,
-        "dimensionsBasis": "EXIF-oriented-display",
-        "format": "PNG",
-        "largeOriginalHeaderOnlyRead": false,
-        "nativeSHA256": "928405fcd6a0b8cc70315b8647c464b3d34358aaee8765cb3d8a50d208eca44b",
-        "rgbPixelSHA256": "88097b3b6c5f4f33b49893f9385bbc5cebbaff2d1f9c652b9587442c53adfd27",
-        "pixelIdenticalToQAAcceptedNative": true,
-        "sRGBProfileEmbedded": true,
-        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
-      },
-      "priorMediaFields": {
-        "tiedosto": "",
-        "lahde": "",
-        "selite": "",
-        "lyhyt": ""
-      },
-      "preservePreviousMediaObjects": true,
-      "authorization": {
-        "status": "waived-owner-review",
-        "authorizedByOwner": true,
-        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
-        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
-        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
-        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
-        "ownerAcceptanceImplied": false,
-        "QARequired": true,
-        "R2ByteVerificationRequired": true,
-        "galleryBeforeGameRequired": false,
-        "verifiedHumanMessageSource": {
-          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
-          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
-        }
-      },
-      "ownerAcceptanceVerified": false,
-      "gameIntegrated": false,
-      "gamePublicationVerified": false,
-      "inMemoryMergeVerified": true,
-      "CcommonsMetadataBound": false,
-      "roleManifestBound": true,
-      "sourceContentAfterSHA256": "d3a9f1f168a2da7dafea0141de96cd5aebb379ed6f2a37be40101ca1767d7f4e",
-      "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "b7f32319e6d7b59f7255593796c29a93ae578d95028aca0e03933f73a4960b52"
-    },
     {
       "era": "e04",
       "city": "tunis",
@@ -470,7 +236,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "d3a9f1f168a2da7dafea0141de96cd5aebb379ed6f2a37be40101ca1767d7f4e",
       "targetAfterSHA256": "8ab6617058894157e4ea9bdda6bc33b5bda024bd12b73d45804819e82217bce3",
-      "contextAfterSHA256": "8ab6617058894157e4ea9bdda6bc33b5bda024bd12b73d45804819e82217bce3"
+      "contextAfterSHA256": "8ab6617058894157e4ea9bdda6bc33b5bda024bd12b73d45804819e82217bce3",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e04",
@@ -703,7 +471,245 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "d3a9f1f168a2da7dafea0141de96cd5aebb379ed6f2a37be40101ca1767d7f4e",
       "targetAfterSHA256": "6f8be4dda071ada347871530f3bf1cc34c937e252eb6b2ad51dacc9732f46ba7",
-      "contextAfterSHA256": "6f8be4dda071ada347871530f3bf1cc34c937e252eb6b2ad51dacc9732f46ba7"
+      "contextAfterSHA256": "6f8be4dda071ada347871530f3bf1cc34c937e252eb6b2ad51dacc9732f46ba7",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+    },
+    {
+      "era": "e04",
+      "city": "tunis",
+      "slot": "O3",
+      "type": "illustration",
+      "assetID": "tunis-o3-havainne-v1",
+      "galleryImageID": "tunis-o3-havainne-v1",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[2].kuva",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "matkailijalle",
+        "artikkeli",
+        "jaksot",
+        2,
+        "kuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-e04-e14/tunis-o3-havainne-v1.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Sisäpihan mittakaava palatsitarinoiden yleiskuvituksena. Havainnekuva.",
+        "lyhyt": "Sisäpihan mittakaava palatsitarinoiden yleiskuvituksena. Havainnekuva."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-e04-e14/tunis-o3-havainne-v1.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Sisäpihan mittakaava palatsitarinoiden yleiskuvituksena. Havainnekuva.",
+        "lyhyt": "Sisäpihan mittakaava palatsitarinoiden yleiskuvituksena. Havainnekuva."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "928405fcd6a0b8cc70315b8647c464b3d34358aaee8765cb3d8a50d208eca44b",
+      "exportSHA256": "928405fcd6a0b8cc70315b8647c464b3d34358aaee8765cb3d8a50d208eca44b",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-e04-e14/tunis-o3-havainne-v1.png",
+      "r2Key": null,
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvaputki/production/paakaupungit-havainnekuvat-erä2-20261012/worker-a/items/tunis-o3-havainne-v1/final/tunis-o3-havainne-v1.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/tunis/sisalto.json",
+      "sourceContentSHA256": "d3a9f1f168a2da7dafea0141de96cd5aebb379ed6f2a37be40101ca1767d7f4e",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "b7f32319e6d7b59f7255593796c29a93ae578d95028aca0e03933f73a4960b52",
+        "subjectTitle": "Pihapalatsien kaupungissa",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": null,
+          "QA": {
+            "visualViewed": true,
+            "viewedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvaputki/production/paakaupungit-havainnekuvat-erä2-20261012/worker-a/items/tunis-o3-havainne-v1/final/tunis-o3-havainne-v1.png",
+            "width": 1536,
+            "height": 1024,
+            "prompt": "Fotorealistinen kameran kuvaa muistuttava alkuperäinen havainnekuva; ei maalaus, piirros, dioraama tai CGI.\nSisäpihan ja arkadin tilallinen idea Tunisin palatsikertomusten yleishavainnollistuksena: pieni avoin piha ja yksi tavallinen kaarigalleria.\nLaaja 28–35 mm ihmissilmän korkeudelta, valoisa avoin piha ja varjoisa arkadi; yksinkertaiset pylväät, rappaus ja kivipinta ilman koristeita.\nNykyajan hajavalo; yleinen tilallinen havainnollistus, ei nimetty palatsi tai nykyinen sisustus.\nTämä on yleishavainnollistus; älä tee jäljitelmää nimetyn paikan täsmällisestä rakennuksesta, maisemasta tai nykytilasta.\nEi Dar Husseinin, Dar Lasramin, Dar Othmanin tai Dar Ben Abdallahin tarkan pihan, kaarimäärän tai pohjapiirroksen kuvaa.\nEi kaakelikuviota, stukkoteosta, maalattua kattoa, korinttilaista kapiteelia tai vanhan hylätyn kuvan koristeiden uusintaa.\nYleishavainnollistus ei todista käyntimahdollisuutta tai nykytilaa.\nEi tekstiä, logoa, vesileimaa, kehystä, luettavia kasvoja, tunnistettavaa nykyistä yksityishenkilöä, modernia suojattua teosta tai tunnetun koristepinnan jäljennöstä. Luonnolliset aineet ja liitokset, ei toistuvia muovipintoja.\nVaakakuva 1536×1024.\nPNG, sRGB, RGB, täysin peittävä; koko generointialue säilytetään.",
+            "captionFi": "Sisäpihan mittakaava palatsitarinoiden yleiskuvituksena. Havainnekuva.",
+            "sourceEvidence": [
+              {
+                "heading": "### T2. Dar Lasram jakoi talon tehtäviin",
+                "lineStart": 141,
+                "lineEnd": 153,
+                "text": "### T2. Dar Lasram jakoi talon tehtäviin\n\nWiki `Dar Lasram`.\n\n1. Palatsi sijaitsee medinassa Tribunal-kadulla. [L, johdanto]\n2. Sen rakennuttaja oli Hamouda Lasram, varakas maanomistaja ja hallinnollinen kirjuri. [L, History]\n3. Tontti koottiin hankkimalla ja purkamalla viereisiä rakennuksia. Tämä on lähteen nimenomainen tapahtumakuvaus. [L]\n4. Rakentaminen ajoittuu 1800-luvun alkupuolelle. [L; tarkka 1812–1819-väli jää pois leipätekstistä]\n5. L:n Architecture erottaa varasto-/palvelutilat, perheen tilat ja vieraille tarkoitetun ylemmän kerroksen. [L]\n6. Palatsi on artikkelin mukaan medinan suojeluyhdistyksen ja Tahar Haddad -klubin käytössä. [L; ei aukiolo-/yleisötilapromisea]\n7. Sisäpihan kaaret, pylväät, stukkokoristelu ja maalatut katot on dokumentoitu artikkelissa. [L, Architecture/kuvatekstit]\n\nMaan musiikkilehden Rachidiaa, nawba-sarjoja tai paroni Erlangeria ei lisätä tähän palatsin tarinaksi."
+              },
+              {
+                "heading": "### T3. Palatsi, jonka arki päätyi museoon",
+                "lineStart": 155,
+                "lineEnd": 168,
+                "text": "### T3. Palatsi, jonka arki päätyi museoon\n\nWiki `Dar Ben Abdallah`.\n\n1. Dar Ben Abdallah on 1700-luvun palatsi medinan eteläisessä osassa. [D/DF]\n2. Se on Tourbet El Beyn naapurustossa. [D, Localization; DF]\n3. Rakennus sai nimensä myöhemmältä omistajalta, silkkikauppias Mohamed Tahar Ben Abdallahilta. [D/DF]\n4. Rakennukseen liittyy ylellisiä vastaanottotiloja ja piha, jonka ympärillä on arkadeja. [DF, Architecture]\n5. Sisäänkäynnin peräkkäiset mutkat suojasivat lähteen mukaan pihan yksityisyyttä. Syy-yhteys vain näin rajattuna. [DF]\n6. Rakennus muuttui 1900-luvulla kansanperinnettä esitteleväksi museoksi. [D/DF; 1964/1978-vaihe-ero kohta 8]\n7. Museokuvauksen aiheet ovat perhe-elämä ja kaupungin julkinen elämä, muun muassa soukit, moskeijat ja kahvilat. [D, Museum]\n8. Vanhojen näyttelyiden esineistöä ja nykyistä pääsyä ei luvata samaksi vuonna 2026. [V:n museo-osan päivitys 2018; D:n kuvaus ei ajantasainen palvelutiedote]\n\nPalatsi jää nosto/opas-aiheeksi eikä saa tämän työn karttapistettä: WP/WD ja V antavat eri paikannuksen, jota ei ratkaista arvaamalla. Kohta 8 kertoo myös fr-Wikipedian tukevan WD-pistettä; WD:tä ei julisteta vääräksi."
+              },
+              {
+                "heading": "### O3. Pihapalatsit",
+                "lineStart": 205,
+                "lineEnd": 210,
+                "text": "### O3. Pihapalatsit\n\n- Dar Lasram, Dar Othman ja Dar Hussein ovat medinan palatseja; niiden oma historia on kohdassa 5. [L/O/Y]\n- Dar Ben Abdallah esittelee lähdekuvauksissa perhe-elämän ja kaupungin elämän perinnettä. [D]\n- Rakennuksissa on sisäpihoja, arkadeja, koristeellisia kattoja ja vastaanottotiloja. Ominaisuus liitetään oikeaan palatsiin, ei kaikkia koteja koskevaksi yleistykseksi. [L/O/DF/YF]\n- Suojeluinstituution toimisto ei automaattisesti ole vapaasti kuljettava nähtävyys: käyntimahdollisuus varmistetaan erikseen. Tämä on toimituksellinen varaus, ei sulkemisväite."
+              }
+            ],
+            "provenanceLabel": "Tekoälyllä tuotettu havainnekuva. Lähteisiin perustuva yleishavainnollistus, ei aito paikkavalokuva eikä nimetyn paikan tarkan nykyulkoasun todiste.",
+            "originalPreserved": true,
+            "reviewedAt": "2026-10-12T17:49:31.500544+00:00"
+          },
+          "qaReason": "Katsottu silmin: luonteva yksinkertainen sisäpihan ja arkadin yleishavainnollistus, ei kasvoja, tekstiä, modernia erillistaidetta tai nimetyn palatsin täsmällistä jäljennöstä. Hyväksyntä edellyttää nykyisen rehellisen havainnekuvatekstin/provenienssin säilymistä."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Sisäpihan mittakaava palatsitarinoiden yleiskuvituksena. Havainnekuva.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/tunis/qa.json",
+        "fileSHA256": "98d1fc32f764942c9b9562b0279212c0a7f3d3f1480672cb4f63eca4fe330a85",
+        "item": {
+          "slot": "O3",
+          "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[2].kuva",
+          "assetID": "tunis-o3-havainne-v1",
+          "sha256": "928405fcd6a0b8cc70315b8647c464b3d34358aaee8765cb3d8a50d208eca44b",
+          "verdict": "accepted",
+          "reason": "Katsottu silmin: luonteva yksinkertainen sisäpihan ja arkadin yleishavainnollistus, ei kasvoja, tekstiä, modernia erillistaidetta tai nimetyn palatsin täsmällistä jäljennöstä. Hyväksyntä edellyttää nykyisen rehellisen havainnekuvatekstin/provenienssin säilymistä.",
+          "evidence": {
+            "visualViewed": true,
+            "viewedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvaputki/production/paakaupungit-havainnekuvat-erä2-20261012/worker-a/items/tunis-o3-havainne-v1/final/tunis-o3-havainne-v1.png",
+            "width": 1536,
+            "height": 1024,
+            "prompt": "Fotorealistinen kameran kuvaa muistuttava alkuperäinen havainnekuva; ei maalaus, piirros, dioraama tai CGI.\nSisäpihan ja arkadin tilallinen idea Tunisin palatsikertomusten yleishavainnollistuksena: pieni avoin piha ja yksi tavallinen kaarigalleria.\nLaaja 28–35 mm ihmissilmän korkeudelta, valoisa avoin piha ja varjoisa arkadi; yksinkertaiset pylväät, rappaus ja kivipinta ilman koristeita.\nNykyajan hajavalo; yleinen tilallinen havainnollistus, ei nimetty palatsi tai nykyinen sisustus.\nTämä on yleishavainnollistus; älä tee jäljitelmää nimetyn paikan täsmällisestä rakennuksesta, maisemasta tai nykytilasta.\nEi Dar Husseinin, Dar Lasramin, Dar Othmanin tai Dar Ben Abdallahin tarkan pihan, kaarimäärän tai pohjapiirroksen kuvaa.\nEi kaakelikuviota, stukkoteosta, maalattua kattoa, korinttilaista kapiteelia tai vanhan hylätyn kuvan koristeiden uusintaa.\nYleishavainnollistus ei todista käyntimahdollisuutta tai nykytilaa.\nEi tekstiä, logoa, vesileimaa, kehystä, luettavia kasvoja, tunnistettavaa nykyistä yksityishenkilöä, modernia suojattua teosta tai tunnetun koristepinnan jäljennöstä. Luonnolliset aineet ja liitokset, ei toistuvia muovipintoja.\nVaakakuva 1536×1024.\nPNG, sRGB, RGB, täysin peittävä; koko generointialue säilytetään.",
+            "captionFi": "Sisäpihan mittakaava palatsitarinoiden yleiskuvituksena. Havainnekuva.",
+            "sourceEvidence": [
+              {
+                "heading": "### T2. Dar Lasram jakoi talon tehtäviin",
+                "lineStart": 141,
+                "lineEnd": 153,
+                "text": "### T2. Dar Lasram jakoi talon tehtäviin\n\nWiki `Dar Lasram`.\n\n1. Palatsi sijaitsee medinassa Tribunal-kadulla. [L, johdanto]\n2. Sen rakennuttaja oli Hamouda Lasram, varakas maanomistaja ja hallinnollinen kirjuri. [L, History]\n3. Tontti koottiin hankkimalla ja purkamalla viereisiä rakennuksia. Tämä on lähteen nimenomainen tapahtumakuvaus. [L]\n4. Rakentaminen ajoittuu 1800-luvun alkupuolelle. [L; tarkka 1812–1819-väli jää pois leipätekstistä]\n5. L:n Architecture erottaa varasto-/palvelutilat, perheen tilat ja vieraille tarkoitetun ylemmän kerroksen. [L]\n6. Palatsi on artikkelin mukaan medinan suojeluyhdistyksen ja Tahar Haddad -klubin käytössä. [L; ei aukiolo-/yleisötilapromisea]\n7. Sisäpihan kaaret, pylväät, stukkokoristelu ja maalatut katot on dokumentoitu artikkelissa. [L, Architecture/kuvatekstit]\n\nMaan musiikkilehden Rachidiaa, nawba-sarjoja tai paroni Erlangeria ei lisätä tähän palatsin tarinaksi."
+              },
+              {
+                "heading": "### T3. Palatsi, jonka arki päätyi museoon",
+                "lineStart": 155,
+                "lineEnd": 168,
+                "text": "### T3. Palatsi, jonka arki päätyi museoon\n\nWiki `Dar Ben Abdallah`.\n\n1. Dar Ben Abdallah on 1700-luvun palatsi medinan eteläisessä osassa. [D/DF]\n2. Se on Tourbet El Beyn naapurustossa. [D, Localization; DF]\n3. Rakennus sai nimensä myöhemmältä omistajalta, silkkikauppias Mohamed Tahar Ben Abdallahilta. [D/DF]\n4. Rakennukseen liittyy ylellisiä vastaanottotiloja ja piha, jonka ympärillä on arkadeja. [DF, Architecture]\n5. Sisäänkäynnin peräkkäiset mutkat suojasivat lähteen mukaan pihan yksityisyyttä. Syy-yhteys vain näin rajattuna. [DF]\n6. Rakennus muuttui 1900-luvulla kansanperinnettä esitteleväksi museoksi. [D/DF; 1964/1978-vaihe-ero kohta 8]\n7. Museokuvauksen aiheet ovat perhe-elämä ja kaupungin julkinen elämä, muun muassa soukit, moskeijat ja kahvilat. [D, Museum]\n8. Vanhojen näyttelyiden esineistöä ja nykyistä pääsyä ei luvata samaksi vuonna 2026. [V:n museo-osan päivitys 2018; D:n kuvaus ei ajantasainen palvelutiedote]\n\nPalatsi jää nosto/opas-aiheeksi eikä saa tämän työn karttapistettä: WP/WD ja V antavat eri paikannuksen, jota ei ratkaista arvaamalla. Kohta 8 kertoo myös fr-Wikipedian tukevan WD-pistettä; WD:tä ei julisteta vääräksi."
+              },
+              {
+                "heading": "### O3. Pihapalatsit",
+                "lineStart": 205,
+                "lineEnd": 210,
+                "text": "### O3. Pihapalatsit\n\n- Dar Lasram, Dar Othman ja Dar Hussein ovat medinan palatseja; niiden oma historia on kohdassa 5. [L/O/Y]\n- Dar Ben Abdallah esittelee lähdekuvauksissa perhe-elämän ja kaupungin elämän perinnettä. [D]\n- Rakennuksissa on sisäpihoja, arkadeja, koristeellisia kattoja ja vastaanottotiloja. Ominaisuus liitetään oikeaan palatsiin, ei kaikkia koteja koskevaksi yleistykseksi. [L/O/DF/YF]\n- Suojeluinstituution toimisto ei automaattisesti ole vapaasti kuljettava nähtävyys: käyntimahdollisuus varmistetaan erikseen. Tämä on toimituksellinen varaus, ei sulkemisväite."
+              }
+            ],
+            "provenanceLabel": "Tekoälyllä tuotettu havainnekuva. Lähteisiin perustuva yleishavainnollistus, ei aito paikkavalokuva eikä nimetyn paikan tarkan nykyulkoasun todiste.",
+            "originalPreserved": true,
+            "reviewedAt": "2026-10-12T17:49:31.500544+00:00"
+          }
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/tunis/qa.json",
+            "sha256": "98d1fc32f764942c9b9562b0279212c0a7f3d3f1480672cb4f63eca4fe330a85"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/tunis/illustration-qa-extra.json",
+            "sha256": "132c91c370c7dc3af6bb863ba5bb0aa96f75193f8433c1190e7f6afd73efecb8"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "assetID": "tunis-o3-havainne-v1",
+        "nativeSHA256": "928405fcd6a0b8cc70315b8647c464b3d34358aaee8765cb3d8a50d208eca44b",
+        "sha256": "928405fcd6a0b8cc70315b8647c464b3d34358aaee8765cb3d8a50d208eca44b",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-e04-e14/tunis-o3-havainne-v1.png",
+        "http": 200,
+        "bytes": 2604588,
+        "byteExactReadback": true,
+        "preservedExistingObject": true,
+        "era": "e04",
+        "city": "tunis",
+        "slot": "O3",
+        "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[2].kuva",
+        "verifiedAt": "2026-10-12T17:55:58.785535+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e04/tunis/tunis-o3-havainne-v1-928405fcd6a0.png",
+        "sha256": "7b58c53bdfa866a43e9020fe51082fa391a9df23a5f0fe28ba5947a130eb28e4",
+        "bytes": 2643652,
+        "SHAReadAt": "2026-10-12T18:29:43.216401+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "928405fcd6a0b8cc70315b8647c464b3d34358aaee8765cb3d8a50d208eca44b",
+        "rgbPixelSHA256": "88097b3b6c5f4f33b49893f9385bbc5cebbaff2d1f9c652b9587442c53adfd27",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "d3a9f1f168a2da7dafea0141de96cd5aebb379ed6f2a37be40101ca1767d7f4e",
+      "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+      "contextAfterSHA256": "b7f32319e6d7b59f7255593796c29a93ae578d95028aca0e03933f73a4960b52",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e04",
@@ -920,7 +926,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "d3a9f1f168a2da7dafea0141de96cd5aebb379ed6f2a37be40101ca1767d7f4e",
       "targetAfterSHA256": "807c493c0b050c4312a05189c883b0673a552269ea74801073f9ab9986330d9c",
-      "contextAfterSHA256": "807c493c0b050c4312a05189c883b0673a552269ea74801073f9ab9986330d9c"
+      "contextAfterSHA256": "807c493c0b050c4312a05189c883b0673a552269ea74801073f9ab9986330d9c",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e04",
@@ -1135,7 +1143,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "d3a9f1f168a2da7dafea0141de96cd5aebb379ed6f2a37be40101ca1767d7f4e",
       "targetAfterSHA256": "59cc394367d144d80d9d74644987994e89d767a2be94859d37051303aa0da45f",
-      "contextAfterSHA256": "59cc394367d144d80d9d74644987994e89d767a2be94859d37051303aa0da45f"
+      "contextAfterSHA256": "59cc394367d144d80d9d74644987994e89d767a2be94859d37051303aa0da45f",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e04",
@@ -1350,7 +1360,228 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "d3a9f1f168a2da7dafea0141de96cd5aebb379ed6f2a37be40101ca1767d7f4e",
       "targetAfterSHA256": "018d87afe66b8189bbdcbe5345d106f9e76114cf21e5818f66bd923dad08b331",
-      "contextAfterSHA256": "018d87afe66b8189bbdcbe5345d106f9e76114cf21e5818f66bd923dad08b331"
+      "contextAfterSHA256": "018d87afe66b8189bbdcbe5345d106f9e76114cf21e5818f66bd923dad08b331",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+    },
+    {
+      "era": "e04",
+      "city": "tunis",
+      "slot": "C3",
+      "type": "commons",
+      "assetID": "capital-cc-e04-tunis-c3-6caecc2563f929b9",
+      "galleryImageID": "capital-cc-e04-tunis-c3-6caecc2563f929b9",
+      "commonsFile": "Panoramique du centre de Tunis (3197369985) (cropped).jpg",
+      "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[2]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "kansikuvat",
+        2
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/tunis/c3-6caecc2563f929b9551d.jpg",
+        "suora": true,
+        "lahde": "Citizen59 from Tunis, Tunisie, Wikimedia Commons (CC BY-SA 2.0)",
+        "selite": "Tunisin keskustan ja katuverkon laaja ilmakuva vuodelta2008.",
+        "lyhyt": "Tunisin keskustan ja katuverkon laaja ilmakuva vuodelta2008.",
+        "tiedosto": "Panoramique du centre de Tunis (3197369985) (cropped).jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Citizen59 from Tunis, Tunisie, Wikimedia Commons (CC BY-SA 2.0)",
+        "selite": "Tunisin keskustan ja katuverkon laaja ilmakuva vuodelta2008.",
+        "lyhyt": "Tunisin keskustan ja katuverkon laaja ilmakuva vuodelta2008.",
+        "tiedosto": "Panoramique du centre de Tunis (3197369985) (cropped).jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/tunis/c3-6caecc2563f929b9551d.jpg",
+        "suora": true,
+        "lahde": "Citizen59 from Tunis, Tunisie, Wikimedia Commons (CC BY-SA 2.0)",
+        "selite": "Tunisin keskustan ja katuverkon laaja ilmakuva vuodelta2008.",
+        "lyhyt": "Tunisin keskustan ja katuverkon laaja ilmakuva vuodelta2008.",
+        "tiedosto": "Panoramique du centre de Tunis (3197369985) (cropped).jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "6caecc2563f929b9551d3177a238167b64eb0a5a12cd88205afc35e8dfe86a07",
+      "exportSHA256": "6caecc2563f929b9551d3177a238167b64eb0a5a12cd88205afc35e8dfe86a07",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/tunis/c3-6caecc2563f929b9551d.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/tunis/c3-6caecc2563f929b9551d.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/commons-originals/e04/tunis/7c563419b1b90933296979f2e81248bd30c6a03b75ca8d5892c3a9628d109961.jpg",
+      "dimensions": [
+        4288,
+        2496
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/tunis/sisalto.json",
+      "sourceContentSHA256": "d3a9f1f168a2da7dafea0141de96cd5aebb379ed6f2a37be40101ca1767d7f4e",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "b695f7c4ec9afeb86a608ffcd9dac86e5194efa3632694032a8f234654083b34",
+        "semanticContextSHA256": "b695f7c4ec9afeb86a608ffcd9dac86e5194efa3632694032a8f234654083b34",
+        "subjectTitle": "Tunis",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Citizen59 from Tunis, Tunisie",
+        "license": "CC BY-SA 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/deed.en",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Panoramique_du_centre_de_Tunis_(3197369985)_(cropped).jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7e/Panoramique_du_centre_de_Tunis_%283197369985%29_%28cropped%29.jpg",
+        "rightsEvidence": {
+          "selection": {
+            "primaryLawUrl": "https://legislation-securite.tn/latest-laws/loi-n-94-36-du-24-fevrier-1994-relative-a-la-propriete-litteraire-et-artistique/",
+            "primaryLawSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/tunis-D/LAW-artiklat.txt",
+            "basis": "Tunisin lain art10(g) luettu itse alkuperäistekstistä. Tavallisen julkisen kaupungin arkkitehtuurin kokonaisnäkymä; ei galleria-, museo- tai perityn taideperinnön yksilöidyn teoksen kuva. Mikään palatsi-/ornamentti-/taiteellinen pintateos ei erotu pääaiheena laajassa ilmakuvassa. Vanhojen palatsien ornamenttien oikeutta ei tähän johdeta. ValokuvaajaCitizen59 / CC BY-SA2.0 ja johdettu rajaus alkuperäisiltä lähdesivuilta."
+          },
+          "QA": {
+            "visualViewed": true,
+            "viewedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/tunis/qa-evidence/cc-52f3f4010ab16b27/original.jpg",
+            "sourceHTML": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/0166dad91ccdcc731f7d709752495bf825b66d60ac03ddebd34f09e5d1b96ec4.html",
+            "sourceHTMLSHA256": "84a3a18fe5641be8e06f354bbff30baeb00d8c6fa14a24fc6a2ec8d6a1e80571",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Panoramique_du_centre_de_Tunis_(3197369985)_(cropped).jpg",
+            "sourceDescription": "A gauche, on voit l'avenue Habib Bourguiba.",
+            "sourceDate": "10 December 2008, 16:41",
+            "author": "Citizen59 from Tunis, Tunisie",
+            "license": "CC BY-SA 2.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/deed.en",
+            "width": 4288,
+            "height": 2496,
+            "rightsEvidence": {
+              "primaryLawUrl": "https://legislation-securite.tn/latest-laws/loi-n-94-36-du-24-fevrier-1994-relative-a-la-propriete-litteraire-et-artistique/",
+              "primaryLawSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/tunis-D/LAW-artiklat.txt",
+              "basis": "Tunisin lain art10(g) luettu itse alkuperäistekstistä. Tavallisen julkisen kaupungin arkkitehtuurin kokonaisnäkymä; ei galleria-, museo- tai perityn taideperinnön yksilöidyn teoksen kuva. Mikään palatsi-/ornamentti-/taiteellinen pintateos ei erotu pääaiheena laajassa ilmakuvassa. Vanhojen palatsien ornamenttien oikeutta ei tähän johdeta. ValokuvaajaCitizen59 / CC BY-SA2.0 ja johdettu rajaus alkuperäisiltä lähdesivuilta."
+            },
+            "sourceContentSHA256": "d03d6b38151957de95ab53603680bb414a3d9dd4925f5ea9baf71c79c306748f",
+            "reviewedAt": "2026-10-12T18:53:01.154713+00:00"
+          },
+          "qaReason": "Aito laaja ilmakuva Tunisin keskustasta ja katuverkosta, ei keksittyä asettelua. Lähde nimeää Avenue Habib Bourguiban ja Date 10.12.2008; caption säilyttää 2008-vuoden, eikä tätä väitetä nykyvuoden palvelutilanteeksi. Ei tunnistettavia kasvoja tai yksittäistä modernia teosta pääaiheena. Valokuvatekijä Citizen59 from Tunis, Tunisie sekä CC BY-SA2.0 todennettu tiedostosivun Author/License-kentistä; ei rajauksen tekijää sekoitettu alkuperäiseen kuvaajaan."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Tunisin keskustan ja katuverkon laaja ilmakuva vuodelta2008.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/tunis/qa.json",
+        "fileSHA256": "98d1fc32f764942c9b9562b0279212c0a7f3d3f1480672cb4f63eca4fe330a85",
+        "item": {
+          "slot": "C3",
+          "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[2]",
+          "commonsFile": "Panoramique du centre de Tunis (3197369985) (cropped).jpg",
+          "sha256": "6caecc2563f929b9551d3177a238167b64eb0a5a12cd88205afc35e8dfe86a07",
+          "verdict": "accepted",
+          "reason": "Aito laaja ilmakuva Tunisin keskustasta ja katuverkosta, ei keksittyä asettelua. Lähde nimeää Avenue Habib Bourguiban ja Date 10.12.2008; caption säilyttää 2008-vuoden, eikä tätä väitetä nykyvuoden palvelutilanteeksi. Ei tunnistettavia kasvoja tai yksittäistä modernia teosta pääaiheena. Valokuvatekijä Citizen59 from Tunis, Tunisie sekä CC BY-SA2.0 todennettu tiedostosivun Author/License-kentistä; ei rajauksen tekijää sekoitettu alkuperäiseen kuvaajaan.",
+          "evidence": {
+            "visualViewed": true,
+            "viewedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/tunis/qa-evidence/cc-52f3f4010ab16b27/original.jpg",
+            "sourceHTML": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/0166dad91ccdcc731f7d709752495bf825b66d60ac03ddebd34f09e5d1b96ec4.html",
+            "sourceHTMLSHA256": "84a3a18fe5641be8e06f354bbff30baeb00d8c6fa14a24fc6a2ec8d6a1e80571",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Panoramique_du_centre_de_Tunis_(3197369985)_(cropped).jpg",
+            "sourceDescription": "A gauche, on voit l'avenue Habib Bourguiba.",
+            "sourceDate": "10 December 2008, 16:41",
+            "author": "Citizen59 from Tunis, Tunisie",
+            "license": "CC BY-SA 2.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/deed.en",
+            "width": 4288,
+            "height": 2496,
+            "rightsEvidence": {
+              "primaryLawUrl": "https://legislation-securite.tn/latest-laws/loi-n-94-36-du-24-fevrier-1994-relative-a-la-propriete-litteraire-et-artistique/",
+              "primaryLawSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/tunis-D/LAW-artiklat.txt",
+              "basis": "Tunisin lain art10(g) luettu itse alkuperäistekstistä. Tavallisen julkisen kaupungin arkkitehtuurin kokonaisnäkymä; ei galleria-, museo- tai perityn taideperinnön yksilöidyn teoksen kuva. Mikään palatsi-/ornamentti-/taiteellinen pintateos ei erotu pääaiheena laajassa ilmakuvassa. Vanhojen palatsien ornamenttien oikeutta ei tähän johdeta. ValokuvaajaCitizen59 / CC BY-SA2.0 ja johdettu rajaus alkuperäisiltä lähdesivuilta."
+            },
+            "sourceContentSHA256": "d03d6b38151957de95ab53603680bb414a3d9dd4925f5ea9baf71c79c306748f",
+            "reviewedAt": "2026-10-12T18:53:01.154713+00:00"
+          }
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/tunis/qa.json",
+            "sha256": "98d1fc32f764942c9b9562b0279212c0a7f3d3f1480672cb4f63eca4fe330a85"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/tunis/illustration-qa-extra.json",
+            "sha256": "132c91c370c7dc3af6bb863ba5bb0aa96f75193f8433c1190e7f6afd73efecb8"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e04",
+        "city": "tunis",
+        "slot": "C3",
+        "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[2]",
+        "commonsFile": "Panoramique du centre de Tunis (3197369985) (cropped).jpg",
+        "sha256": "6caecc2563f929b9551d3177a238167b64eb0a5a12cd88205afc35e8dfe86a07",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Panoramique_du_centre_de_Tunis_(3197369985)_(cropped).jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7e/Panoramique_du_centre_de_Tunis_%283197369985%29_%28cropped%29.jpg",
+        "author": "Citizen59 from Tunis, Tunisie",
+        "license": "CC BY-SA 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/deed.en",
+        "width": 4288,
+        "height": 2496,
+        "originalSHA256": "6caecc2563f929b9551d3177a238167b64eb0a5a12cd88205afc35e8dfe86a07",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/tunis/c3-6caecc2563f929b9551d.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/tunis/c3-6caecc2563f929b9551d.jpg",
+        "bytes": 3272000,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T18:54:07.847381+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "Panoramique du centre de Tunis (3197369985) (cropped).jpg",
+        "lahde": "Citizen59 from Tunis, Tunisie, Wikimedia Commons (CC BY-SA 2.0)",
+        "selite": "Tunisin keskustan ja katuverkon laaja ilmakuva vuodelta2008.",
+        "lyhyt": "Tunisin keskustan ja katuverkon laaja ilmakuva vuodelta2008."
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Citizen59 from Tunis, Tunisie, Wikimedia Commons (CC BY-SA 2.0)",
+        "selite": "Tunisin keskustan ja katuverkon laaja ilmakuva vuodelta2008.",
+        "lyhyt": "Tunisin keskustan ja katuverkon laaja ilmakuva vuodelta2008.",
+        "tiedosto": "Panoramique du centre de Tunis (3197369985) (cropped).jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "d3a9f1f168a2da7dafea0141de96cd5aebb379ed6f2a37be40101ca1767d7f4e",
+      "targetAfterSHA256": "b695f7c4ec9afeb86a608ffcd9dac86e5194efa3632694032a8f234654083b34",
+      "contextAfterSHA256": "b695f7c4ec9afeb86a608ffcd9dac86e5194efa3632694032a8f234654083b34",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e04",
@@ -1568,7 +1799,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "d3a9f1f168a2da7dafea0141de96cd5aebb379ed6f2a37be40101ca1767d7f4e",
       "targetAfterSHA256": "166360aba610429ca264dc618eae31024f0a6570d29af7bdff0f776da6a2d445",
-      "contextAfterSHA256": "2015b3665501ca495d3b83ee5a99c84cc97650b488864244400940fb90196e69"
+      "contextAfterSHA256": "2015b3665501ca495d3b83ee5a99c84cc97650b488864244400940fb90196e69",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e04",
@@ -1783,7 +2016,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "d3a9f1f168a2da7dafea0141de96cd5aebb379ed6f2a37be40101ca1767d7f4e",
       "targetAfterSHA256": "d495b81c5f15744a55cda9cc7cb2d7d5ce33a66eaba0a34f8b695a99c0ed7bed",
-      "contextAfterSHA256": "d495b81c5f15744a55cda9cc7cb2d7d5ce33a66eaba0a34f8b695a99c0ed7bed"
+      "contextAfterSHA256": "d495b81c5f15744a55cda9cc7cb2d7d5ce33a66eaba0a34f8b695a99c0ed7bed",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e04",
@@ -1998,7 +2233,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "d3a9f1f168a2da7dafea0141de96cd5aebb379ed6f2a37be40101ca1767d7f4e",
       "targetAfterSHA256": "dff9f9540c5a3253f07ee8f16f4dbe06d20bb757261922e55b72c4b0f7d1d31c",
-      "contextAfterSHA256": "dff9f9540c5a3253f07ee8f16f4dbe06d20bb757261922e55b72c4b0f7d1d31c"
+      "contextAfterSHA256": "dff9f9540c5a3253f07ee8f16f4dbe06d20bb757261922e55b72c4b0f7d1d31c",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e04",
@@ -2213,7 +2450,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "d3a9f1f168a2da7dafea0141de96cd5aebb379ed6f2a37be40101ca1767d7f4e",
       "targetAfterSHA256": "203ce83580f297a00460c1feeb675951a2191191151f7e2e5dd89a50f04fcc09",
-      "contextAfterSHA256": "203ce83580f297a00460c1feeb675951a2191191151f7e2e5dd89a50f04fcc09"
+      "contextAfterSHA256": "203ce83580f297a00460c1feeb675951a2191191151f7e2e5dd89a50f04fcc09",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e04",
@@ -2480,7 +2719,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "d3a9f1f168a2da7dafea0141de96cd5aebb379ed6f2a37be40101ca1767d7f4e",
       "targetAfterSHA256": "f5bcf73408ae65a7994d5337dcc080d33c429a609dbfefc01cd76edabdf071fe",
-      "contextAfterSHA256": "f5bcf73408ae65a7994d5337dcc080d33c429a609dbfefc01cd76edabdf071fe"
+      "contextAfterSHA256": "f5bcf73408ae65a7994d5337dcc080d33c429a609dbfefc01cd76edabdf071fe",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e04",
@@ -2695,7 +2936,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "d3a9f1f168a2da7dafea0141de96cd5aebb379ed6f2a37be40101ca1767d7f4e",
       "targetAfterSHA256": "15a65042274a76604496cf2df2474a19e6fb24abae73baefffb56a0b24f5e490",
-      "contextAfterSHA256": "15a65042274a76604496cf2df2474a19e6fb24abae73baefffb56a0b24f5e490"
+      "contextAfterSHA256": "15a65042274a76604496cf2df2474a19e6fb24abae73baefffb56a0b24f5e490",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e04",
@@ -2910,7 +3153,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "d3a9f1f168a2da7dafea0141de96cd5aebb379ed6f2a37be40101ca1767d7f4e",
       "targetAfterSHA256": "4a5ce49763864ea29162f41f011493cbf5793fce310e7662146c44b6b76b30fb",
-      "contextAfterSHA256": "9f21474aa4b91c3a918421534df0f8f70db145b5ad6f5a8069baa714abf25b51"
+      "contextAfterSHA256": "9f21474aa4b91c3a918421534df0f8f70db145b5ad6f5a8069baa714abf25b51",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e04",
@@ -3125,7 +3370,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "d3a9f1f168a2da7dafea0141de96cd5aebb379ed6f2a37be40101ca1767d7f4e",
       "targetAfterSHA256": "0cdc794de8b82847eb8d481d209a4189251012db74d64fd021725533889fbbd6",
-      "contextAfterSHA256": "b6aaa6cb6c9254865d5cb83be62ad84cccc67a180e3189142debea26b559f400"
+      "contextAfterSHA256": "b6aaa6cb6c9254865d5cb83be62ad84cccc67a180e3189142debea26b559f400",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e04",
@@ -3338,7 +3585,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "d3a9f1f168a2da7dafea0141de96cd5aebb379ed6f2a37be40101ca1767d7f4e",
       "targetAfterSHA256": "8e64d3bde842ea488bca183dc885954635af6b8915a3582b85d05fec5deced0b",
-      "contextAfterSHA256": "432c2070109e021918840560428137b6521efb4e73ed7a7d1491df727cf71f22"
+      "contextAfterSHA256": "432c2070109e021918840560428137b6521efb4e73ed7a7d1491df727cf71f22",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e04",
@@ -3553,227 +3802,14 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "d3a9f1f168a2da7dafea0141de96cd5aebb379ed6f2a37be40101ca1767d7f4e",
       "targetAfterSHA256": "e42ac317b95b1ef3e94110cab1b8746d86a53ba4e8bec04bbb21166856c18625",
-      "contextAfterSHA256": "33cf3c63e6e8852702857b1bedc6422568f96a024ee30d2328dbf651e41232f2"
-    },
-    {
-      "era": "e04",
-      "city": "tunis",
-      "slot": "C3",
-      "type": "commons",
-      "assetID": "capital-cc-e04-tunis-c3-6caecc2563f929b9",
-      "galleryImageID": "capital-cc-e04-tunis-c3-6caecc2563f929b9",
-      "commonsFile": "Panoramique du centre de Tunis (3197369985) (cropped).jpg",
-      "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[2]",
-      "targetTokens": [
-        "kaupunkilehti",
-        0,
-        "kansikuvat",
-        2
-      ],
-      "operation": "merge-media-fields-preserve-other-content",
-      "CmediaFieldPayload": {
-        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/tunis/c3-6caecc2563f929b9551d.jpg",
-        "suora": true,
-        "lahde": "Citizen59 from Tunis, Tunisie, Wikimedia Commons (CC BY-SA 2.0)",
-        "selite": "Tunisin keskustan ja katuverkon laaja ilmakuva vuodelta2008.",
-        "lyhyt": "Tunisin keskustan ja katuverkon laaja ilmakuva vuodelta2008.",
-        "tiedosto": "Panoramique du centre de Tunis (3197369985) (cropped).jpg"
-      },
-      "removeMediaKeys": [],
-      "CvalidatorCompatiblePayload": {
-        "lahde": "Citizen59 from Tunis, Tunisie, Wikimedia Commons (CC BY-SA 2.0)",
-        "selite": "Tunisin keskustan ja katuverkon laaja ilmakuva vuodelta2008.",
-        "lyhyt": "Tunisin keskustan ja katuverkon laaja ilmakuva vuodelta2008.",
-        "tiedosto": "Panoramique du centre de Tunis (3197369985) (cropped).jpg"
-      },
-      "runtimeMediaFieldPayload": {
-        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/tunis/c3-6caecc2563f929b9551d.jpg",
-        "suora": true,
-        "lahde": "Citizen59 from Tunis, Tunisie, Wikimedia Commons (CC BY-SA 2.0)",
-        "selite": "Tunisin keskustan ja katuverkon laaja ilmakuva vuodelta2008.",
-        "lyhyt": "Tunisin keskustan ja katuverkon laaja ilmakuva vuodelta2008.",
-        "tiedosto": "Panoramique du centre de Tunis (3197369985) (cropped).jpg"
-      },
-      "runtimeRemoveMediaKeys": [],
-      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
-      "nativeSHA256": "6caecc2563f929b9551d3177a238167b64eb0a5a12cd88205afc35e8dfe86a07",
-      "exportSHA256": "6caecc2563f929b9551d3177a238167b64eb0a5a12cd88205afc35e8dfe86a07",
-      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/tunis/c3-6caecc2563f929b9551d.jpg",
-      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/tunis/c3-6caecc2563f929b9551d.jpg",
-      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/commons-originals/e04/tunis/7c563419b1b90933296979f2e81248bd30c6a03b75ca8d5892c3a9628d109961.jpg",
-      "dimensions": [
-        4288,
-        2496
-      ],
-      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/tunis/sisalto.json",
-      "sourceContentSHA256": "d3a9f1f168a2da7dafea0141de96cd5aebb379ed6f2a37be40101ca1767d7f4e",
-      "semanticSourceBind": {
-        "targetBeforeSHA256": "b695f7c4ec9afeb86a608ffcd9dac86e5194efa3632694032a8f234654083b34",
-        "semanticContextSHA256": "b695f7c4ec9afeb86a608ffcd9dac86e5194efa3632694032a8f234654083b34",
-        "subjectTitle": "Tunis",
-        "targetState": "existing-target"
-      },
-      "attribution": {
-        "author": "Citizen59 from Tunis, Tunisie",
-        "license": "CC BY-SA 2.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/deed.en",
-        "sourcePage": "https://commons.wikimedia.org/wiki/File:Panoramique_du_centre_de_Tunis_(3197369985)_(cropped).jpg",
-        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7e/Panoramique_du_centre_de_Tunis_%283197369985%29_%28cropped%29.jpg",
-        "rightsEvidence": {
-          "selection": {
-            "primaryLawUrl": "https://legislation-securite.tn/latest-laws/loi-n-94-36-du-24-fevrier-1994-relative-a-la-propriete-litteraire-et-artistique/",
-            "primaryLawSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/tunis-D/LAW-artiklat.txt",
-            "basis": "Tunisin lain art10(g) luettu itse alkuperäistekstistä. Tavallisen julkisen kaupungin arkkitehtuurin kokonaisnäkymä; ei galleria-, museo- tai perityn taideperinnön yksilöidyn teoksen kuva. Mikään palatsi-/ornamentti-/taiteellinen pintateos ei erotu pääaiheena laajassa ilmakuvassa. Vanhojen palatsien ornamenttien oikeutta ei tähän johdeta. ValokuvaajaCitizen59 / CC BY-SA2.0 ja johdettu rajaus alkuperäisiltä lähdesivuilta."
-          },
-          "QA": {
-            "visualViewed": true,
-            "viewedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/tunis/qa-evidence/cc-52f3f4010ab16b27/original.jpg",
-            "sourceHTML": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/0166dad91ccdcc731f7d709752495bf825b66d60ac03ddebd34f09e5d1b96ec4.html",
-            "sourceHTMLSHA256": "84a3a18fe5641be8e06f354bbff30baeb00d8c6fa14a24fc6a2ec8d6a1e80571",
-            "sourcePage": "https://commons.wikimedia.org/wiki/File:Panoramique_du_centre_de_Tunis_(3197369985)_(cropped).jpg",
-            "sourceDescription": "A gauche, on voit l'avenue Habib Bourguiba.",
-            "sourceDate": "10 December 2008, 16:41",
-            "author": "Citizen59 from Tunis, Tunisie",
-            "license": "CC BY-SA 2.0",
-            "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/deed.en",
-            "width": 4288,
-            "height": 2496,
-            "rightsEvidence": {
-              "primaryLawUrl": "https://legislation-securite.tn/latest-laws/loi-n-94-36-du-24-fevrier-1994-relative-a-la-propriete-litteraire-et-artistique/",
-              "primaryLawSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/tunis-D/LAW-artiklat.txt",
-              "basis": "Tunisin lain art10(g) luettu itse alkuperäistekstistä. Tavallisen julkisen kaupungin arkkitehtuurin kokonaisnäkymä; ei galleria-, museo- tai perityn taideperinnön yksilöidyn teoksen kuva. Mikään palatsi-/ornamentti-/taiteellinen pintateos ei erotu pääaiheena laajassa ilmakuvassa. Vanhojen palatsien ornamenttien oikeutta ei tähän johdeta. ValokuvaajaCitizen59 / CC BY-SA2.0 ja johdettu rajaus alkuperäisiltä lähdesivuilta."
-            },
-            "sourceContentSHA256": "d03d6b38151957de95ab53603680bb414a3d9dd4925f5ea9baf71c79c306748f",
-            "reviewedAt": "2026-10-12T18:53:01.154713+00:00"
-          },
-          "qaReason": "Aito laaja ilmakuva Tunisin keskustasta ja katuverkosta, ei keksittyä asettelua. Lähde nimeää Avenue Habib Bourguiban ja Date 10.12.2008; caption säilyttää 2008-vuoden, eikä tätä väitetä nykyvuoden palvelutilanteeksi. Ei tunnistettavia kasvoja tai yksittäistä modernia teosta pääaiheena. Valokuvatekijä Citizen59 from Tunis, Tunisie sekä CC BY-SA2.0 todennettu tiedostosivun Author/License-kentistä; ei rajauksen tekijää sekoitettu alkuperäiseen kuvaajaan."
-        }
-      },
-      "luentaMetadata": {
-        "existingImageLuenta": null,
-        "captionReadingText": "Tunisin keskustan ja katuverkon laaja ilmakuva vuodelta2008.",
-        "existingArticleAndSectionLuentaPreserved": true,
-        "audioGenerated": false,
-        "audioURL": null,
-        "imageSpecificAudioProvided": false,
-        "reuseAudioAllowedByThisPacket": false
-      },
-      "qaEvidence": {
-        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/tunis/qa.json",
-        "fileSHA256": "98d1fc32f764942c9b9562b0279212c0a7f3d3f1480672cb4f63eca4fe330a85",
-        "item": {
-          "slot": "C3",
-          "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[2]",
-          "commonsFile": "Panoramique du centre de Tunis (3197369985) (cropped).jpg",
-          "sha256": "6caecc2563f929b9551d3177a238167b64eb0a5a12cd88205afc35e8dfe86a07",
-          "verdict": "accepted",
-          "reason": "Aito laaja ilmakuva Tunisin keskustasta ja katuverkosta, ei keksittyä asettelua. Lähde nimeää Avenue Habib Bourguiban ja Date 10.12.2008; caption säilyttää 2008-vuoden, eikä tätä väitetä nykyvuoden palvelutilanteeksi. Ei tunnistettavia kasvoja tai yksittäistä modernia teosta pääaiheena. Valokuvatekijä Citizen59 from Tunis, Tunisie sekä CC BY-SA2.0 todennettu tiedostosivun Author/License-kentistä; ei rajauksen tekijää sekoitettu alkuperäiseen kuvaajaan.",
-          "evidence": {
-            "visualViewed": true,
-            "viewedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/tunis/qa-evidence/cc-52f3f4010ab16b27/original.jpg",
-            "sourceHTML": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/0166dad91ccdcc731f7d709752495bf825b66d60ac03ddebd34f09e5d1b96ec4.html",
-            "sourceHTMLSHA256": "84a3a18fe5641be8e06f354bbff30baeb00d8c6fa14a24fc6a2ec8d6a1e80571",
-            "sourcePage": "https://commons.wikimedia.org/wiki/File:Panoramique_du_centre_de_Tunis_(3197369985)_(cropped).jpg",
-            "sourceDescription": "A gauche, on voit l'avenue Habib Bourguiba.",
-            "sourceDate": "10 December 2008, 16:41",
-            "author": "Citizen59 from Tunis, Tunisie",
-            "license": "CC BY-SA 2.0",
-            "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/deed.en",
-            "width": 4288,
-            "height": 2496,
-            "rightsEvidence": {
-              "primaryLawUrl": "https://legislation-securite.tn/latest-laws/loi-n-94-36-du-24-fevrier-1994-relative-a-la-propriete-litteraire-et-artistique/",
-              "primaryLawSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/tunis-D/LAW-artiklat.txt",
-              "basis": "Tunisin lain art10(g) luettu itse alkuperäistekstistä. Tavallisen julkisen kaupungin arkkitehtuurin kokonaisnäkymä; ei galleria-, museo- tai perityn taideperinnön yksilöidyn teoksen kuva. Mikään palatsi-/ornamentti-/taiteellinen pintateos ei erotu pääaiheena laajassa ilmakuvassa. Vanhojen palatsien ornamenttien oikeutta ei tähän johdeta. ValokuvaajaCitizen59 / CC BY-SA2.0 ja johdettu rajaus alkuperäisiltä lähdesivuilta."
-            },
-            "sourceContentSHA256": "d03d6b38151957de95ab53603680bb414a3d9dd4925f5ea9baf71c79c306748f",
-            "reviewedAt": "2026-10-12T18:53:01.154713+00:00"
-          }
-        },
-        "allSources": [
-          {
-            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/tunis/qa.json",
-            "sha256": "98d1fc32f764942c9b9562b0279212c0a7f3d3f1480672cb4f63eca4fe330a85"
-          },
-          {
-            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/tunis/illustration-qa-extra.json",
-            "sha256": "132c91c370c7dc3af6bb863ba5bb0aa96f75193f8433c1190e7f6afd73efecb8"
-          }
-        ]
-      },
-      "R2ByteVerification": {
-        "era": "e04",
-        "city": "tunis",
-        "slot": "C3",
-        "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[2]",
-        "commonsFile": "Panoramique du centre de Tunis (3197369985) (cropped).jpg",
-        "sha256": "6caecc2563f929b9551d3177a238167b64eb0a5a12cd88205afc35e8dfe86a07",
-        "sourcePage": "https://commons.wikimedia.org/wiki/File:Panoramique_du_centre_de_Tunis_(3197369985)_(cropped).jpg",
-        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7e/Panoramique_du_centre_de_Tunis_%283197369985%29_%28cropped%29.jpg",
-        "author": "Citizen59 from Tunis, Tunisie",
-        "license": "CC BY-SA 2.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/deed.en",
-        "width": 4288,
-        "height": 2496,
-        "originalSHA256": "6caecc2563f929b9551d3177a238167b64eb0a5a12cd88205afc35e8dfe86a07",
-        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/tunis/c3-6caecc2563f929b9551d.jpg",
-        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/tunis/c3-6caecc2563f929b9551d.jpg",
-        "bytes": 3272000,
-        "http": 200,
-        "mime": "image/jpeg",
-        "cors": "https://matkakirja.app",
-        "byteExactReadback": true,
-        "canonicalReadbackByteExact": true,
-        "conditionalIfNoneMatch": "*",
-        "s3PutHttp": 200,
-        "verifiedAt": "2026-10-12T18:54:07.847381+00:00",
-        "ownerAcceptanceVerified": false,
-        "gameIntegrated": false,
-        "attributionSource": "current-exact-QA-and-source-manifest"
-      },
-      "producerExportProof": null,
-      "technicalExportProof": null,
-      "priorMediaFields": {
-        "tiedosto": "Panoramique du centre de Tunis (3197369985) (cropped).jpg",
-        "lahde": "Citizen59 from Tunis, Tunisie, Wikimedia Commons (CC BY-SA 2.0)",
-        "selite": "Tunisin keskustan ja katuverkon laaja ilmakuva vuodelta2008.",
-        "lyhyt": "Tunisin keskustan ja katuverkon laaja ilmakuva vuodelta2008."
-      },
-      "preservePreviousMediaObjects": true,
-      "authorization": {
-        "status": "waived-owner-review",
-        "authorizedByOwner": true,
-        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
-        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
-        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
-        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
-        "ownerAcceptanceImplied": false,
-        "QARequired": true,
-        "R2ByteVerificationRequired": true,
-        "galleryBeforeGameRequired": false,
-        "verifiedHumanMessageSource": {
-          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
-          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
-        }
-      },
-      "ownerAcceptanceVerified": false,
-      "gameIntegrated": false,
-      "gamePublicationVerified": false,
-      "inMemoryMergeVerified": true,
-      "CcommonsMetadataBound": true,
-      "CcommonsFieldPayload": {
-        "lahde": "Citizen59 from Tunis, Tunisie, Wikimedia Commons (CC BY-SA 2.0)",
-        "selite": "Tunisin keskustan ja katuverkon laaja ilmakuva vuodelta2008.",
-        "lyhyt": "Tunisin keskustan ja katuverkon laaja ilmakuva vuodelta2008.",
-        "tiedosto": "Panoramique du centre de Tunis (3197369985) (cropped).jpg"
-      },
-      "roleManifestBound": true,
-      "sourceContentAfterSHA256": "d3a9f1f168a2da7dafea0141de96cd5aebb379ed6f2a37be40101ca1767d7f4e",
-      "targetAfterSHA256": "b695f7c4ec9afeb86a608ffcd9dac86e5194efa3632694032a8f234654083b34",
-      "contextAfterSHA256": "b695f7c4ec9afeb86a608ffcd9dac86e5194efa3632694032a8f234654083b34"
+      "contextAfterSHA256": "33cf3c63e6e8852702857b1bedc6422568f96a024ee30d2328dbf651e41232f2",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     }
   ],
   "runtimeIntegrationPending": true,
-  "ownerAcceptedNotImpliedByAuthorization": true,
-  "gameIntegrated": false
+  "ownerAcceptedNotImpliedByAuthorization": false,
+  "gameIntegrated": false,
+  "allAssetsExplicitlyOwnerApproved": true,
+  "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
 }

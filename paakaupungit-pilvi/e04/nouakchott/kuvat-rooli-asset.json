@@ -2,1172 +2,9 @@
   "schemaVersion": "capital-city-role-assets/v1",
   "era": "e04",
   "city": "nouakchott",
-  "authorization": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+  "authorization": "hyväksyn kaikki tekemäsi kuvat. toimita ne claudelle. claudelta saat uusia ohjeita jatkoa varten",
   "sourceContentAfterSHA256": "3425b41b5887f72b7e43a9d4034504e208fb758f38cd83d70f721826272972e2",
   "assets": [
-    {
-      "era": "e04",
-      "city": "nouakchott",
-      "slot": "O4",
-      "type": "illustration",
-      "assetID": "nouakchott-o4-kala-riisi-20261012-v1",
-      "galleryImageID": "nouakchott-o4-kala-riisi-20261012-v1",
-      "commonsFile": null,
-      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
-      "targetTokens": [
-        "kaupunkilehti",
-        0,
-        "matkailijalle",
-        "artikkeli",
-        "jaksot",
-        3,
-        "kuva"
-      ],
-      "operation": "merge-media-fields-preserve-other-content",
-      "CmediaFieldPayload": {
-        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/nouakchott/nouakchott-o4-kala-riisi-20261012-v1-8e290047c2da.png",
-        "suora": true,
-        "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva kala-riisiruoasta; ei tietyn Nouakchottin ravintolan annoksesta.",
-        "lyhyt": "Havainnekuva kala-riisiruoasta; ei tietyn Nouakchottin ravintolan annoksesta."
-      },
-      "removeMediaKeys": [
-        "tiedosto"
-      ],
-      "CvalidatorCompatiblePayload": {},
-      "runtimeMediaFieldPayload": {
-        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/nouakchott/nouakchott-o4-kala-riisi-20261012-v1-8e290047c2da.png",
-        "suora": true,
-        "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva kala-riisiruoasta; ei tietyn Nouakchottin ravintolan annoksesta.",
-        "lyhyt": "Havainnekuva kala-riisiruoasta; ei tietyn Nouakchottin ravintolan annoksesta."
-      },
-      "runtimeRemoveMediaKeys": [
-        "tiedosto"
-      ],
-      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
-      "nativeSHA256": "8e290047c2dae4729f4ee9c24cb633e84e76a6fbbd8af57d7be4601f3d7b1fb4",
-      "exportSHA256": "55b300cc4f10ec3182948008b1bf7b737bf60d690a1306d9084733c01b24140c",
-      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/nouakchott/nouakchott-o4-kala-riisi-20261012-v1-8e290047c2da.png",
-      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/nouakchott/nouakchott-o4-kala-riisi-20261012-v1-8e290047c2da.png",
-      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e04/nouakchott/nouakchott-o4-kala-riisi-20261012-v1-8e290047c2da.png",
-      "dimensions": [
-        1536,
-        1024
-      ],
-      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/nouakchott/sisalto.json",
-      "sourceContentSHA256": "d0bdd61b0553a51f33fef44dcdb477a39cafa981e6df497e72de7698d03d7904",
-      "semanticSourceBind": {
-        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "ab67097a6d8db3d130ff7afd39702f01c6fdc77a6e6900c5508bfbdda0060856",
-        "subjectTitle": "Kala, riisi ja tee",
-        "targetState": "existing-target"
-      },
-      "attribution": {
-        "author": null,
-        "license": null,
-        "licenseUrl": null,
-        "sourcePage": null,
-        "originalUrl": null,
-        "rightsEvidence": {
-          "production": "Alkuperäinen yleinen ruoka- ja materiaali-aihe tavallisella koristeettomalla astialla. Ei tietyn annoksen/valokuvan, tekijän taideteoksen, rakennuksen tai henkilön jäljennöstä.",
-          "QA": {
-            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/nouakchott/assets/nouakchott-o4-kala-riisi-20261012-v1/image.png",
-            "nativeSHA256": "8e290047c2dae4729f4ee9c24cb633e84e76a6fbbd8af57d7be4601f3d7b1fb4",
-            "nativeDimensions": [
-              1536,
-              1024
-            ],
-            "manifestHashMatches": true,
-            "personallyViewed": true,
-            "viewTool": "view_image",
-            "visualFindingsFi": "Lautasella punaista riisiä, kypsennetty kalapala ja tomaattipohjainen kastike. Jyvät, kalan säikeet/nahka, kastike ja astia uskottavat; ei ihmisiä, lisättyä tekstiä, logoja tai kehystä.",
-            "captionFi": "Havainnekuva kala-riisiruoasta; ei tietyn Nouakchottin ravintolan annoksesta.",
-            "sourceAndTargetCheckFi": "Luettu O4 Kala, riisi ja tee sekä Mauritanian_cuisine.txt:n kala-riisiruoan ja tomaattikastikkeen kuvaus. CaptionFi Havainnekuva kala-riisiruoasta; ei tietyn Nouakchottin ravintolan annoksesta. Ei nimettyä kalalajia, täsmäreseptiä tai autenttista valokuvaa.",
-            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/nouakchott/sisalto.json",
-            "sourceEvidence": [
-              {
-                "url": "https://en.wikipedia.org/wiki/Mauritanian_cuisine",
-                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/nouakchott-A/Mauritanian_cuisine.txt",
-                "facts": "Thieboudienne rannikon kala-riisiruoan esimerkkinä, valkoinen tai punainen tavallisesti tomaatista tehty kastike; ei yksittäinen resepti."
-              },
-              {
-                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/nouakchott/sisalto.json",
-                "facts": "O4 kala, riisi ja tee kuuluvat rannikon/maan ruokataustaan, eivät kaupungin yksinoikeudella luotuja ruokia."
-              }
-            ]
-          },
-          "qaReason": "Kala-riisiruoan yleishavainne vastaa O4:n rannikon ruokataustaa ilman yksilöityä annos-/reseptiväitettä."
-        }
-      },
-      "luentaMetadata": {
-        "existingImageLuenta": null,
-        "captionReadingText": "Havainnekuva kala-riisiruoasta; ei tietyn Nouakchottin ravintolan annoksesta.",
-        "existingArticleAndSectionLuentaPreserved": true,
-        "audioGenerated": false,
-        "audioURL": null,
-        "imageSpecificAudioProvided": false,
-        "reuseAudioAllowedByThisPacket": false
-      },
-      "qaEvidence": {
-        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/nouakchott/illustration-qa-extra.json",
-        "fileSHA256": "bd75a82892d31a720b72351f7ad876d7df0f171d29293695fbca0ddddc0e32ec",
-        "item": {
-          "slot": "O4",
-          "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
-          "assetID": "nouakchott-o4-kala-riisi-20261012-v1",
-          "sha256": "8e290047c2dae4729f4ee9c24cb633e84e76a6fbbd8af57d7be4601f3d7b1fb4",
-          "verdict": "accepted",
-          "reason": "Kala-riisiruoan yleishavainne vastaa O4:n rannikon ruokataustaa ilman yksilöityä annos-/reseptiväitettä.",
-          "evidence": {
-            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/nouakchott/assets/nouakchott-o4-kala-riisi-20261012-v1/image.png",
-            "nativeSHA256": "8e290047c2dae4729f4ee9c24cb633e84e76a6fbbd8af57d7be4601f3d7b1fb4",
-            "nativeDimensions": [
-              1536,
-              1024
-            ],
-            "manifestHashMatches": true,
-            "personallyViewed": true,
-            "viewTool": "view_image",
-            "visualFindingsFi": "Lautasella punaista riisiä, kypsennetty kalapala ja tomaattipohjainen kastike. Jyvät, kalan säikeet/nahka, kastike ja astia uskottavat; ei ihmisiä, lisättyä tekstiä, logoja tai kehystä.",
-            "captionFi": "Havainnekuva kala-riisiruoasta; ei tietyn Nouakchottin ravintolan annoksesta.",
-            "sourceAndTargetCheckFi": "Luettu O4 Kala, riisi ja tee sekä Mauritanian_cuisine.txt:n kala-riisiruoan ja tomaattikastikkeen kuvaus. CaptionFi Havainnekuva kala-riisiruoasta; ei tietyn Nouakchottin ravintolan annoksesta. Ei nimettyä kalalajia, täsmäreseptiä tai autenttista valokuvaa.",
-            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/nouakchott/sisalto.json",
-            "sourceEvidence": [
-              {
-                "url": "https://en.wikipedia.org/wiki/Mauritanian_cuisine",
-                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/nouakchott-A/Mauritanian_cuisine.txt",
-                "facts": "Thieboudienne rannikon kala-riisiruoan esimerkkinä, valkoinen tai punainen tavallisesti tomaatista tehty kastike; ei yksittäinen resepti."
-              },
-              {
-                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/nouakchott/sisalto.json",
-                "facts": "O4 kala, riisi ja tee kuuluvat rannikon/maan ruokataustaan, eivät kaupungin yksinoikeudella luotuja ruokia."
-              }
-            ]
-          },
-          "reviewedAt": "2026-10-12T19:06:34.644319+00:00"
-        },
-        "allSources": [
-          {
-            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/nouakchott/qa.json",
-            "sha256": "9511bc35e7357716792f2425442b52c29b39bb017bb4671bbe019f733a0ff30e"
-          },
-          {
-            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/nouakchott/illustration-qa-extra.json",
-            "sha256": "bd75a82892d31a720b72351f7ad876d7df0f171d29293695fbca0ddddc0e32ec"
-          }
-        ]
-      },
-      "R2ByteVerification": {
-        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/nouakchott/nouakchott-o4-kala-riisi-20261012-v1-8e290047c2da.png",
-        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/nouakchott/nouakchott-o4-kala-riisi-20261012-v1-8e290047c2da.png?t=55b300cc4f10ec31",
-        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/nouakchott/nouakchott-o4-kala-riisi-20261012-v1-8e290047c2da.png",
-        "sha256": "55b300cc4f10ec3182948008b1bf7b737bf60d690a1306d9084733c01b24140c",
-        "bytes": 2359527,
-        "http": 200,
-        "mime": "image/png",
-        "cors": "https://matkakirja.app",
-        "cacheBustedPreflightHttp": 404,
-        "cacheBustedReadback": true,
-        "byteExactReadback": true,
-        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
-        "conditionalIfNoneMatch": "*",
-        "s3PutHttp": 200,
-        "assetID": "nouakchott-o4-kala-riisi-20261012-v1",
-        "nativeSHA256": "8e290047c2dae4729f4ee9c24cb633e84e76a6fbbd8af57d7be4601f3d7b1fb4",
-        "canonicalReadbackByteExact": true,
-        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e04/nouakchott/nouakchott-o4-kala-riisi-20261012-v1-8e290047c2da.png",
-        "pixelIdenticalToQAAcceptedNative": true,
-        "era": "e04",
-        "city": "nouakchott",
-        "slot": "O4",
-        "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
-        "verifiedAt": "2026-10-12T19:07:28.084425+00:00",
-        "ownerAcceptanceVerified": false,
-        "gameIntegrated": false,
-        "galleryVisibleVerified": false
-      },
-      "producerExportProof": null,
-      "technicalExportProof": {
-        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e04/nouakchott/nouakchott-o4-kala-riisi-20261012-v1-8e290047c2da.png",
-        "sha256": "55b300cc4f10ec3182948008b1bf7b737bf60d690a1306d9084733c01b24140c",
-        "bytes": 2359527,
-        "SHAReadAt": "2026-10-12T19:32:01.237880+00:00",
-        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
-        "width": 1536,
-        "height": 1024,
-        "pixelWidth": 1536,
-        "pixelHeight": 1024,
-        "exifOrientation": 1,
-        "dimensionsBasis": "EXIF-oriented-display",
-        "format": "PNG",
-        "largeOriginalHeaderOnlyRead": false,
-        "nativeSHA256": "8e290047c2dae4729f4ee9c24cb633e84e76a6fbbd8af57d7be4601f3d7b1fb4",
-        "rgbPixelSHA256": "ad8e80b4bfaf32126e9b3356884ed804e43349385c98137dd78d421e30c019f6",
-        "pixelIdenticalToQAAcceptedNative": true,
-        "sRGBProfileEmbedded": true,
-        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
-      },
-      "priorMediaFields": {
-        "tiedosto": "",
-        "lahde": "",
-        "selite": "",
-        "lyhyt": ""
-      },
-      "preservePreviousMediaObjects": true,
-      "authorization": {
-        "status": "waived-owner-review",
-        "authorizedByOwner": true,
-        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
-        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
-        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
-        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
-        "ownerAcceptanceImplied": false,
-        "QARequired": true,
-        "R2ByteVerificationRequired": true,
-        "galleryBeforeGameRequired": false,
-        "verifiedHumanMessageSource": {
-          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
-          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
-        }
-      },
-      "ownerAcceptanceVerified": false,
-      "gameIntegrated": false,
-      "gamePublicationVerified": false,
-      "inMemoryMergeVerified": true,
-      "CcommonsMetadataBound": false,
-      "roleManifestBound": true,
-      "sourceContentAfterSHA256": "3425b41b5887f72b7e43a9d4034504e208fb758f38cd83d70f721826272972e2",
-      "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "ab67097a6d8db3d130ff7afd39702f01c6fdc77a6e6900c5508bfbdda0060856"
-    },
-    {
-      "era": "e04",
-      "city": "nouakchott",
-      "slot": "K4",
-      "type": "illustration",
-      "assetID": "nouakchott-k4-minttutee-20261012-v1",
-      "galleryImageID": "nouakchott-k4-minttutee-20261012-v1",
-      "commonsFile": null,
-      "targetJsonPath": "$.kaupunkilehti[0].nostot[3]",
-      "targetTokens": [
-        "kaupunkilehti",
-        0,
-        "nostot",
-        3
-      ],
-      "operation": "merge-media-fields-preserve-other-content",
-      "CmediaFieldPayload": {
-        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/nouakchott/nouakchott-k4-minttutee-20261012-v1-180aafbda6d0.png",
-        "suora": true,
-        "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva minttuteen korkeasta kaadosta ja lasiin syntyvästä vaahdosta; ei tietyn Nouakchottin teehetken dokumentti.",
-        "lyhyt": "Teen vaahto tehdään kaatamalla."
-      },
-      "removeMediaKeys": [
-        "tiedosto"
-      ],
-      "CvalidatorCompatiblePayload": {},
-      "runtimeMediaFieldPayload": {
-        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/nouakchott/nouakchott-k4-minttutee-20261012-v1-180aafbda6d0.png",
-        "suora": true,
-        "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva minttuteen korkeasta kaadosta ja lasiin syntyvästä vaahdosta; ei tietyn Nouakchottin teehetken dokumentti.",
-        "lyhyt": "Teen vaahto tehdään kaatamalla."
-      },
-      "runtimeRemoveMediaKeys": [
-        "tiedosto"
-      ],
-      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
-      "nativeSHA256": "180aafbda6d04a38e8aeff937d1cbb84bc1b79904df45d6f6bc5f2218bfc0e72",
-      "exportSHA256": "2cbb7c263b9897ebefe6fc5327669f89805afc24fd5c1cb30ebb61bc24489ef2",
-      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/nouakchott/nouakchott-k4-minttutee-20261012-v1-180aafbda6d0.png",
-      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/nouakchott/nouakchott-k4-minttutee-20261012-v1-180aafbda6d0.png",
-      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e04/nouakchott/nouakchott-k4-minttutee-20261012-v1-180aafbda6d0.png",
-      "dimensions": [
-        1536,
-        1024
-      ],
-      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/nouakchott/sisalto.json",
-      "sourceContentSHA256": "d0bdd61b0553a51f33fef44dcdb477a39cafa981e6df497e72de7698d03d7904",
-      "semanticSourceBind": {
-        "targetBeforeSHA256": "8ca65e7317759f436daa5cd6de769ee1f90adb213f86aaa1933b454fe22671cf",
-        "semanticContextSHA256": "8ca65e7317759f436daa5cd6de769ee1f90adb213f86aaa1933b454fe22671cf",
-        "subjectTitle": "Teen vaahto tehdään kaatamalla",
-        "targetState": "existing-target"
-      },
-      "attribution": {
-        "author": null,
-        "license": null,
-        "licenseUrl": null,
-        "sourcePage": null,
-        "originalUrl": null,
-        "rightsEvidence": {
-          "production": "Alkuperäinen yleinen tee- ja kaatotekniikan kuva tavallisilla koristeettomilla astioilla. Ei nimetyn palvelun, henkilön, kuvataiteen, valokuvan tai rakennuksen jäljennöstä.",
-          "QA": {
-            "reviewer": "job-25 independent-image-QA",
-            "reviewedAt": "2026-10-12T18:05:38.140736+00:00",
-            "visualTool": "view_image",
-            "visualDetail": "original",
-            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/nouakchott/assets/nouakchott-k4-minttutee-20261012-v1/image.png",
-            "actualWidth": 1536,
-            "actualHeight": 1024,
-            "actualFormat": "PNG",
-            "actualColorMode": "8-bit RGB",
-            "colorProfile": "Ei sRGB/iCCP/gAMA-chunkkia; upotettua sRGB-profiilia ei väitetä varmennetuksi.",
-            "subjectSource": {
-              "url": "https://en.wikipedia.org/wiki/Mauritanian_cuisine",
-              "savedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/nouakchott-A/Mauritanian_cuisine.txt",
-              "savedSHA256": "1db9c15006d9ac3203e119220d96c8d6bd3f96d75d881d2f99e7a218c60f47a7",
-              "line": 5,
-              "finding": "Minttuteen korkealta kaataminen tuottaa vaahtoa."
-            },
-            "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/nouakchott/sisalto.json",
-            "sourceContentSHA256": "9f2c17ce7423d20f50781d4073988cd03d10983b1908e377a87e4958a4ca852e",
-            "captionFi": "Havainnekuva minttuteen korkeasta kaadosta ja lasiin syntyvästä vaahdosta; ei tietyn Nouakchottin teehetken dokumentti.",
-            "duplicateInCity": false,
-            "rights": "Yleistetty ruoka-/tekniikkakuva tavallisilla koristeettomilla astioilla; ei nimettyä teosta tai paikkaa."
-          },
-          "qaReason": "K4:n korkealta kaadettavan minttuteen havainne on silmin tarkistettu. Yhtenäinen teevana tulee kannun nokasta lasin pinnalle, kannu jatkuu kuvan ulkopuolelle eikä leiju irrallisena kokonaisena esineenä. Lasin reuna ja pohja, nesteen pinta, maltillinen pienten kuplien vaahto, mintunlehdet ja koristeeton tarjotin ovat fyysisesti luontevia. Ei kasvoja, käsiä, tekstiä, logoja, vesileimaa, kehystä tai mainospakkausta. Kuvateksti ilmoittaa yleisen tekniikan havainnekuvan eikä tiettyä Nouakchottin teehetkeä."
-        }
-      },
-      "luentaMetadata": {
-        "existingImageLuenta": null,
-        "captionReadingText": "Havainnekuva minttuteen korkeasta kaadosta ja lasiin syntyvästä vaahdosta; ei tietyn Nouakchottin teehetken dokumentti.",
-        "existingArticleAndSectionLuentaPreserved": true,
-        "audioGenerated": false,
-        "audioURL": null,
-        "imageSpecificAudioProvided": false,
-        "reuseAudioAllowedByThisPacket": false
-      },
-      "qaEvidence": {
-        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/nouakchott/qa.json",
-        "fileSHA256": "9511bc35e7357716792f2425442b52c29b39bb017bb4671bbe019f733a0ff30e",
-        "item": {
-          "slot": "K4",
-          "targetJsonPath": "$.kaupunkilehti[0].nostot[3]",
-          "assetID": "nouakchott-k4-minttutee-20261012-v1",
-          "sha256": "180aafbda6d04a38e8aeff937d1cbb84bc1b79904df45d6f6bc5f2218bfc0e72",
-          "verdict": "accepted",
-          "reason": "K4:n korkealta kaadettavan minttuteen havainne on silmin tarkistettu. Yhtenäinen teevana tulee kannun nokasta lasin pinnalle, kannu jatkuu kuvan ulkopuolelle eikä leiju irrallisena kokonaisena esineenä. Lasin reuna ja pohja, nesteen pinta, maltillinen pienten kuplien vaahto, mintunlehdet ja koristeeton tarjotin ovat fyysisesti luontevia. Ei kasvoja, käsiä, tekstiä, logoja, vesileimaa, kehystä tai mainospakkausta. Kuvateksti ilmoittaa yleisen tekniikan havainnekuvan eikä tiettyä Nouakchottin teehetkeä.",
-          "evidence": {
-            "reviewer": "job-25 independent-image-QA",
-            "reviewedAt": "2026-10-12T18:05:38.140736+00:00",
-            "visualTool": "view_image",
-            "visualDetail": "original",
-            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/nouakchott/assets/nouakchott-k4-minttutee-20261012-v1/image.png",
-            "actualWidth": 1536,
-            "actualHeight": 1024,
-            "actualFormat": "PNG",
-            "actualColorMode": "8-bit RGB",
-            "colorProfile": "Ei sRGB/iCCP/gAMA-chunkkia; upotettua sRGB-profiilia ei väitetä varmennetuksi.",
-            "subjectSource": {
-              "url": "https://en.wikipedia.org/wiki/Mauritanian_cuisine",
-              "savedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/nouakchott-A/Mauritanian_cuisine.txt",
-              "savedSHA256": "1db9c15006d9ac3203e119220d96c8d6bd3f96d75d881d2f99e7a218c60f47a7",
-              "line": 5,
-              "finding": "Minttuteen korkealta kaataminen tuottaa vaahtoa."
-            },
-            "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/nouakchott/sisalto.json",
-            "sourceContentSHA256": "9f2c17ce7423d20f50781d4073988cd03d10983b1908e377a87e4958a4ca852e",
-            "captionFi": "Havainnekuva minttuteen korkeasta kaadosta ja lasiin syntyvästä vaahdosta; ei tietyn Nouakchottin teehetken dokumentti.",
-            "duplicateInCity": false,
-            "rights": "Yleistetty ruoka-/tekniikkakuva tavallisilla koristeettomilla astioilla; ei nimettyä teosta tai paikkaa."
-          }
-        },
-        "allSources": [
-          {
-            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/nouakchott/qa.json",
-            "sha256": "9511bc35e7357716792f2425442b52c29b39bb017bb4671bbe019f733a0ff30e"
-          },
-          {
-            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/nouakchott/illustration-qa-extra.json",
-            "sha256": "bd75a82892d31a720b72351f7ad876d7df0f171d29293695fbca0ddddc0e32ec"
-          }
-        ]
-      },
-      "R2ByteVerification": {
-        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/nouakchott/nouakchott-k4-minttutee-20261012-v1-180aafbda6d0.png",
-        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/nouakchott/nouakchott-k4-minttutee-20261012-v1-180aafbda6d0.png?t=2cbb7c263b9897eb",
-        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/nouakchott/nouakchott-k4-minttutee-20261012-v1-180aafbda6d0.png",
-        "sha256": "2cbb7c263b9897ebefe6fc5327669f89805afc24fd5c1cb30ebb61bc24489ef2",
-        "bytes": 1911223,
-        "http": 200,
-        "mime": "image/png",
-        "cors": "https://matkakirja.app",
-        "cacheBustedPreflightHttp": 404,
-        "cacheBustedReadback": true,
-        "byteExactReadback": true,
-        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
-        "conditionalIfNoneMatch": "*",
-        "s3PutHttp": 200,
-        "assetID": "nouakchott-k4-minttutee-20261012-v1",
-        "nativeSHA256": "180aafbda6d04a38e8aeff937d1cbb84bc1b79904df45d6f6bc5f2218bfc0e72",
-        "canonicalReadbackByteExact": true,
-        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e04/nouakchott/nouakchott-k4-minttutee-20261012-v1-180aafbda6d0.png",
-        "pixelIdenticalToQAAcceptedNative": true,
-        "era": "e04",
-        "city": "nouakchott",
-        "slot": "K4",
-        "targetJsonPath": "$.kaupunkilehti[0].nostot[3]",
-        "verifiedAt": "2026-10-12T18:10:43.330774+00:00",
-        "ownerAcceptanceVerified": false,
-        "gameIntegrated": false,
-        "galleryVisibleVerified": false
-      },
-      "producerExportProof": null,
-      "technicalExportProof": {
-        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e04/nouakchott/nouakchott-k4-minttutee-20261012-v1-180aafbda6d0.png",
-        "sha256": "2cbb7c263b9897ebefe6fc5327669f89805afc24fd5c1cb30ebb61bc24489ef2",
-        "bytes": 1911223,
-        "SHAReadAt": "2026-10-12T18:29:42.237776+00:00",
-        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
-        "width": 1536,
-        "height": 1024,
-        "pixelWidth": 1536,
-        "pixelHeight": 1024,
-        "exifOrientation": 1,
-        "dimensionsBasis": "EXIF-oriented-display",
-        "format": "PNG",
-        "largeOriginalHeaderOnlyRead": false,
-        "nativeSHA256": "180aafbda6d04a38e8aeff937d1cbb84bc1b79904df45d6f6bc5f2218bfc0e72",
-        "rgbPixelSHA256": "722bf594de526f03b392796973b6d73a748551ddf071ba9920e0a153a5d62293",
-        "pixelIdenticalToQAAcceptedNative": true,
-        "sRGBProfileEmbedded": true,
-        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
-      },
-      "priorMediaFields": {
-        "tiedosto": "",
-        "lahde": "",
-        "selite": "",
-        "lyhyt": ""
-      },
-      "preservePreviousMediaObjects": true,
-      "authorization": {
-        "status": "waived-owner-review",
-        "authorizedByOwner": true,
-        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
-        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
-        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
-        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
-        "ownerAcceptanceImplied": false,
-        "QARequired": true,
-        "R2ByteVerificationRequired": true,
-        "galleryBeforeGameRequired": false,
-        "verifiedHumanMessageSource": {
-          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
-          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
-        }
-      },
-      "ownerAcceptanceVerified": false,
-      "gameIntegrated": false,
-      "gamePublicationVerified": false,
-      "inMemoryMergeVerified": true,
-      "CcommonsMetadataBound": false,
-      "roleManifestBound": true,
-      "sourceContentAfterSHA256": "3425b41b5887f72b7e43a9d4034504e208fb758f38cd83d70f721826272972e2",
-      "targetAfterSHA256": "8ca65e7317759f436daa5cd6de769ee1f90adb213f86aaa1933b454fe22671cf",
-      "contextAfterSHA256": "8ca65e7317759f436daa5cd6de769ee1f90adb213f86aaa1933b454fe22671cf"
-    },
-    {
-      "era": "e04",
-      "city": "nouakchott",
-      "slot": "L1",
-      "type": "illustration",
-      "assetID": "nouakchott-l1-hiekkajyvat-20261012-v1",
-      "galleryImageID": "nouakchott-l1-hiekkajyvat-20261012-v1",
-      "commonsFile": null,
-      "targetJsonPath": "$.kaupunkilehti[1].nostot[0]",
-      "targetTokens": [
-        "kaupunkilehti",
-        1,
-        "nostot",
-        0
-      ],
-      "operation": "merge-media-fields-preserve-other-content",
-      "CmediaFieldPayload": {
-        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/nouakchott/nouakchott-l1-hiekkajyvat-20261012-v1-6fc38700ca44.png",
-        "suora": true,
-        "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva hiekkamateriaalista ja maanpinnan lähellä kulkevista jyvistä, ei nimetystä dyynistä.",
-        "lyhyt": "Havainnekuva hiekkamateriaalista ja maanpinnan lähellä kulkevista jyvistä, ei nimetystä dyynistä."
-      },
-      "removeMediaKeys": [
-        "tiedosto"
-      ],
-      "CvalidatorCompatiblePayload": {},
-      "runtimeMediaFieldPayload": {
-        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/nouakchott/nouakchott-l1-hiekkajyvat-20261012-v1-6fc38700ca44.png",
-        "suora": true,
-        "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva hiekkamateriaalista ja maanpinnan lähellä kulkevista jyvistä, ei nimetystä dyynistä.",
-        "lyhyt": "Havainnekuva hiekkamateriaalista ja maanpinnan lähellä kulkevista jyvistä, ei nimetystä dyynistä."
-      },
-      "runtimeRemoveMediaKeys": [
-        "tiedosto"
-      ],
-      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
-      "nativeSHA256": "6fc38700ca446e9afdf59e14730c4abaf6bfb231886a3bd179a5809b30f330d0",
-      "exportSHA256": "fadecb0e3428d7c1dcf43a922e684e33d10460ab189bb4fdc28768c3658e8cdf",
-      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/nouakchott/nouakchott-l1-hiekkajyvat-20261012-v1-6fc38700ca44.png",
-      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/nouakchott/nouakchott-l1-hiekkajyvat-20261012-v1-6fc38700ca44.png",
-      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e04/nouakchott/nouakchott-l1-hiekkajyvat-20261012-v1-6fc38700ca44.png",
-      "dimensions": [
-        1536,
-        1024
-      ],
-      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/nouakchott/sisalto.json",
-      "sourceContentSHA256": "d0bdd61b0553a51f33fef44dcdb477a39cafa981e6df497e72de7698d03d7904",
-      "semanticSourceBind": {
-        "targetBeforeSHA256": "187561bc9fd51a11fc4d3346dd308f599a20e3185e16a01b150b3b7775227daa",
-        "semanticContextSHA256": "187561bc9fd51a11fc4d3346dd308f599a20e3185e16a01b150b3b7775227daa",
-        "subjectTitle": "Hiekanjyvä voi hypätä",
-        "targetState": "existing-target"
-      },
-      "attribution": {
-        "author": null,
-        "license": null,
-        "licenseUrl": null,
-        "sourcePage": null,
-        "originalUrl": null,
-        "rightsEvidence": {
-          "production": "Luonnollisen hiekan alkuperäinen yleishavainnollistus, ei FAO:n valokuvan tai diagrammin jäljennös eikä nimetty maasto.",
-          "QA": {
-            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/nouakchott/assets/nouakchott-l1-hiekkajyvat-20261012-v1/image.png",
-            "nativeSHA256": "6fc38700ca446e9afdf59e14730c4abaf6bfb231886a3bd179a5809b30f330d0",
-            "nativeDimensions": [
-              1536,
-              1024
-            ],
-            "manifestHashMatches": true,
-            "personallyViewed": true,
-            "viewTool": "view_image",
-            "visualFindingsFi": "Pieni matala hiekkakumpu lähietäisyydeltä ja irrallisia jyviä sen yläpuolella. Jyvien väri/koko/paikka vaihtelee, valaisu ja terävyys uskottavat, ei toistuvaa rakeisuusmattoa tai nimettyä dyyninäkymää. Ei tekstiä/logoja tai ihmisiä.",
-            "captionFi": "Havainnekuva hiekkamateriaalista ja maanpinnan lähellä kulkevista jyvistä, ei nimetystä dyynistä.",
-            "sourceAndTargetCheckFi": "Luettu L1 Hiekanjyvä voi hypätä ja FAO-manuaalin grain/saltation-osa paikallisesta tekstiotteesta. CaptionFi Havainnekuva hiekkamateriaalista ja maanpinnan lähellä kulkevista jyvistä, ei nimetystä dyynistä; kuva ei ole FAO-kaavion kopio.",
-            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/nouakchott/sisalto.json",
-            "sourceEvidence": [
-              {
-                "url": "https://www.fao.org/4/i1488e/i1488e.pdf",
-                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/nouakchott-A/fao-manual.txt",
-                "facts": "Hiekan kulkeutumista kuvataan vierimisenä, hypyin etenemisenä ja hienon aineksen ilmakuljetuksena; kuvassa yleinen materiaaliesimerkki, ei kirjan kuvan kopio."
-              },
-              {
-                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/nouakchott/sisalto.json",
-                "facts": "L1 kuvaa eri kokoisten hiekkajyvien liikkumista."
-              }
-            ]
-          },
-          "qaReason": "Hiekan materiaalihavainne ja lähellä pintaa lentävät jyvät vastaavat L1:n tuulikuljetusaihetta."
-        }
-      },
-      "luentaMetadata": {
-        "existingImageLuenta": null,
-        "captionReadingText": "Havainnekuva hiekkamateriaalista ja maanpinnan lähellä kulkevista jyvistä, ei nimetystä dyynistä.",
-        "existingArticleAndSectionLuentaPreserved": true,
-        "audioGenerated": false,
-        "audioURL": null,
-        "imageSpecificAudioProvided": false,
-        "reuseAudioAllowedByThisPacket": false
-      },
-      "qaEvidence": {
-        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/nouakchott/illustration-qa-extra.json",
-        "fileSHA256": "bd75a82892d31a720b72351f7ad876d7df0f171d29293695fbca0ddddc0e32ec",
-        "item": {
-          "slot": "L1",
-          "targetJsonPath": "$.kaupunkilehti[1].nostot[0]",
-          "assetID": "nouakchott-l1-hiekkajyvat-20261012-v1",
-          "sha256": "6fc38700ca446e9afdf59e14730c4abaf6bfb231886a3bd179a5809b30f330d0",
-          "verdict": "accepted",
-          "reason": "Hiekan materiaalihavainne ja lähellä pintaa lentävät jyvät vastaavat L1:n tuulikuljetusaihetta.",
-          "evidence": {
-            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/nouakchott/assets/nouakchott-l1-hiekkajyvat-20261012-v1/image.png",
-            "nativeSHA256": "6fc38700ca446e9afdf59e14730c4abaf6bfb231886a3bd179a5809b30f330d0",
-            "nativeDimensions": [
-              1536,
-              1024
-            ],
-            "manifestHashMatches": true,
-            "personallyViewed": true,
-            "viewTool": "view_image",
-            "visualFindingsFi": "Pieni matala hiekkakumpu lähietäisyydeltä ja irrallisia jyviä sen yläpuolella. Jyvien väri/koko/paikka vaihtelee, valaisu ja terävyys uskottavat, ei toistuvaa rakeisuusmattoa tai nimettyä dyyninäkymää. Ei tekstiä/logoja tai ihmisiä.",
-            "captionFi": "Havainnekuva hiekkamateriaalista ja maanpinnan lähellä kulkevista jyvistä, ei nimetystä dyynistä.",
-            "sourceAndTargetCheckFi": "Luettu L1 Hiekanjyvä voi hypätä ja FAO-manuaalin grain/saltation-osa paikallisesta tekstiotteesta. CaptionFi Havainnekuva hiekkamateriaalista ja maanpinnan lähellä kulkevista jyvistä, ei nimetystä dyynistä; kuva ei ole FAO-kaavion kopio.",
-            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/nouakchott/sisalto.json",
-            "sourceEvidence": [
-              {
-                "url": "https://www.fao.org/4/i1488e/i1488e.pdf",
-                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/nouakchott-A/fao-manual.txt",
-                "facts": "Hiekan kulkeutumista kuvataan vierimisenä, hypyin etenemisenä ja hienon aineksen ilmakuljetuksena; kuvassa yleinen materiaaliesimerkki, ei kirjan kuvan kopio."
-              },
-              {
-                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/nouakchott/sisalto.json",
-                "facts": "L1 kuvaa eri kokoisten hiekkajyvien liikkumista."
-              }
-            ]
-          },
-          "reviewedAt": "2026-10-12T18:20:27.012765+00:00"
-        },
-        "allSources": [
-          {
-            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/nouakchott/qa.json",
-            "sha256": "9511bc35e7357716792f2425442b52c29b39bb017bb4671bbe019f733a0ff30e"
-          },
-          {
-            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/nouakchott/illustration-qa-extra.json",
-            "sha256": "bd75a82892d31a720b72351f7ad876d7df0f171d29293695fbca0ddddc0e32ec"
-          }
-        ]
-      },
-      "R2ByteVerification": {
-        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/nouakchott/nouakchott-l1-hiekkajyvat-20261012-v1-6fc38700ca44.png",
-        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/nouakchott/nouakchott-l1-hiekkajyvat-20261012-v1-6fc38700ca44.png?t=fadecb0e3428d7c1",
-        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/nouakchott/nouakchott-l1-hiekkajyvat-20261012-v1-6fc38700ca44.png",
-        "sha256": "fadecb0e3428d7c1dcf43a922e684e33d10460ab189bb4fdc28768c3658e8cdf",
-        "bytes": 2700815,
-        "http": 200,
-        "mime": "image/png",
-        "cors": "https://matkakirja.app",
-        "cacheBustedPreflightHttp": 404,
-        "cacheBustedReadback": true,
-        "byteExactReadback": true,
-        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
-        "conditionalIfNoneMatch": "*",
-        "s3PutHttp": 200,
-        "assetID": "nouakchott-l1-hiekkajyvat-20261012-v1",
-        "nativeSHA256": "6fc38700ca446e9afdf59e14730c4abaf6bfb231886a3bd179a5809b30f330d0",
-        "canonicalReadbackByteExact": true,
-        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e04/nouakchott/nouakchott-l1-hiekkajyvat-20261012-v1-6fc38700ca44.png",
-        "pixelIdenticalToQAAcceptedNative": true,
-        "era": "e04",
-        "city": "nouakchott",
-        "slot": "L1",
-        "targetJsonPath": "$.kaupunkilehti[1].nostot[0]",
-        "verifiedAt": "2026-10-12T18:22:34.022150+00:00",
-        "ownerAcceptanceVerified": false,
-        "gameIntegrated": false,
-        "galleryVisibleVerified": false
-      },
-      "producerExportProof": null,
-      "technicalExportProof": {
-        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e04/nouakchott/nouakchott-l1-hiekkajyvat-20261012-v1-6fc38700ca44.png",
-        "sha256": "fadecb0e3428d7c1dcf43a922e684e33d10460ab189bb4fdc28768c3658e8cdf",
-        "bytes": 2700815,
-        "SHAReadAt": "2026-10-12T18:29:42.373283+00:00",
-        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
-        "width": 1536,
-        "height": 1024,
-        "pixelWidth": 1536,
-        "pixelHeight": 1024,
-        "exifOrientation": 1,
-        "dimensionsBasis": "EXIF-oriented-display",
-        "format": "PNG",
-        "largeOriginalHeaderOnlyRead": false,
-        "nativeSHA256": "6fc38700ca446e9afdf59e14730c4abaf6bfb231886a3bd179a5809b30f330d0",
-        "rgbPixelSHA256": "6c17594a3cf70e79b91d4ef7e25d22dbafc82923f76b25554d5d135d600f3dee",
-        "pixelIdenticalToQAAcceptedNative": true,
-        "sRGBProfileEmbedded": true,
-        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
-      },
-      "priorMediaFields": {
-        "tiedosto": "",
-        "lahde": "",
-        "selite": "",
-        "lyhyt": ""
-      },
-      "preservePreviousMediaObjects": true,
-      "authorization": {
-        "status": "waived-owner-review",
-        "authorizedByOwner": true,
-        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
-        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
-        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
-        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
-        "ownerAcceptanceImplied": false,
-        "QARequired": true,
-        "R2ByteVerificationRequired": true,
-        "galleryBeforeGameRequired": false,
-        "verifiedHumanMessageSource": {
-          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
-          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
-        }
-      },
-      "ownerAcceptanceVerified": false,
-      "gameIntegrated": false,
-      "gamePublicationVerified": false,
-      "inMemoryMergeVerified": true,
-      "CcommonsMetadataBound": false,
-      "roleManifestBound": true,
-      "sourceContentAfterSHA256": "3425b41b5887f72b7e43a9d4034504e208fb758f38cd83d70f721826272972e2",
-      "targetAfterSHA256": "187561bc9fd51a11fc4d3346dd308f599a20e3185e16a01b150b3b7775227daa",
-      "contextAfterSHA256": "187561bc9fd51a11fc4d3346dd308f599a20e3185e16a01b150b3b7775227daa"
-    },
-    {
-      "era": "e04",
-      "city": "nouakchott",
-      "slot": "L2",
-      "type": "illustration",
-      "assetID": "nouakchott-l2-oksa-aita-20261012-v1",
-      "galleryImageID": "nouakchott-l2-oksa-aita-20261012-v1",
-      "commonsFile": null,
-      "targetJsonPath": "$.kaupunkilehti[1].nostot[1]",
-      "targetTokens": [
-        "kaupunkilehti",
-        1,
-        "nostot",
-        1
-      ],
-      "operation": "merge-media-fields-preserve-other-content",
-      "CmediaFieldPayload": {
-        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/nouakchott/nouakchott-l2-oksa-aita-20261012-v1-3be9b40573b1.png",
-        "suora": true,
-        "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva ilmaa läpäisevästä oksa-aidasta ja sen juurelle kertyvästä hiekasta.",
-        "lyhyt": "Havainnekuva ilmaa läpäisevästä oksa-aidasta ja sen juurelle kertyvästä hiekasta."
-      },
-      "removeMediaKeys": [
-        "tiedosto"
-      ],
-      "CvalidatorCompatiblePayload": {},
-      "runtimeMediaFieldPayload": {
-        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/nouakchott/nouakchott-l2-oksa-aita-20261012-v1-3be9b40573b1.png",
-        "suora": true,
-        "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva ilmaa läpäisevästä oksa-aidasta ja sen juurelle kertyvästä hiekasta.",
-        "lyhyt": "Havainnekuva ilmaa läpäisevästä oksa-aidasta ja sen juurelle kertyvästä hiekasta."
-      },
-      "runtimeRemoveMediaKeys": [
-        "tiedosto"
-      ],
-      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
-      "nativeSHA256": "3be9b40573b1e134ee4be5b80d4a2caa0433545ef75a98e5eaf501e5d73acea8",
-      "exportSHA256": "c6a67c28848fde2b5dd28b157600eb8c835b1ff468b810d3808e4cdec281beca",
-      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/nouakchott/nouakchott-l2-oksa-aita-20261012-v1-3be9b40573b1.png",
-      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/nouakchott/nouakchott-l2-oksa-aita-20261012-v1-3be9b40573b1.png",
-      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e04/nouakchott/nouakchott-l2-oksa-aita-20261012-v1-3be9b40573b1.png",
-      "dimensions": [
-        1536,
-        1024
-      ],
-      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/nouakchott/sisalto.json",
-      "sourceContentSHA256": "d0bdd61b0553a51f33fef44dcdb477a39cafa981e6df497e72de7698d03d7904",
-      "semanticSourceBind": {
-        "targetBeforeSHA256": "0c15b22506829a0802337d0a08a565ab510758b8f1bf890243bc91267997e79f",
-        "semanticContextSHA256": "0c15b22506829a0802337d0a08a565ab510758b8f1bf890243bc91267997e79f",
-        "subjectTitle": "Aita, jonka läpi tuuli kulkee",
-        "targetState": "existing-target"
-      },
-      "attribution": {
-        "author": null,
-        "license": null,
-        "licenseUrl": null,
-        "sourcePage": null,
-        "originalUrl": null,
-        "rightsEvidence": {
-          "production": "Itse muodostettu yleinen toiminnallisen oksa-aidan ja luonnollisen hiekan havainne; ei nimetyn projektin asettelun, kuvan tai diagrammin kopiota.",
-          "QA": {
-            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/nouakchott/assets/nouakchott-l2-oksa-aita-20261012-v1/image.png",
-            "nativeSHA256": "3be9b40573b1e134ee4be5b80d4a2caa0433545ef75a98e5eaf501e5d73acea8",
-            "nativeDimensions": [
-              1536,
-              1024
-            ],
-            "manifestHashMatches": true,
-            "personallyViewed": true,
-            "viewTool": "view_image",
-            "visualFindingsFi": "Epäsäännöllisiä oksia sidottuna puupaaluihin, pieni kulma aidassa ja hiekkaa tyvellä. Aidan raoista näkyy läpi, oksien/paalujen liittymät ja hiekka/varjot uskottavat; ei synteettistä kuoripintaa, ihmisiä tai tekstiä.",
-            "captionFi": "Havainnekuva ilmaa läpäisevästä oksa-aidasta ja sen juurelle kertyvästä hiekasta.",
-            "sourceAndTargetCheckFi": "Luettu L2 Aita, jonka läpi tuuli kulkee sekä FAO-manuaalin mechanical dune stabilization/fences/hiekkakertymä. CaptionFi Havainnekuva ilmaa läpäisevästä oksa-aidasta ja sen juurelle kertyvästä hiekasta ei väitä nimetyn projektin paikkavalokuvaksi tai FAO-kuvan jäljennökseksi.",
-            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/nouakchott/sisalto.json",
-            "sourceEvidence": [
-              {
-                "url": "https://www.fao.org/4/i1488e/i1488e.pdf",
-                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/nouakchott-A/fao-manual.txt",
-                "facts": "Mekaaninen hiekan vakauttaminen: aidat hidastavat tuulta, läpäisevyys, hiekankertymä ja myöhempi istutus; ei kirjan kuvan jäljennöstä."
-              },
-              {
-                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/nouakchott/sisalto.json",
-                "facts": "L2 oksa-aidat asetettiin ruudukoksi ja korotettiin hiekan kertyessä."
-              }
-            ]
-          },
-          "qaReason": "Ilmaa läpäisevä oksa-aita ja hiekankertymä havainnollistavat L2:n mekaanista vakauttamista."
-        }
-      },
-      "luentaMetadata": {
-        "existingImageLuenta": null,
-        "captionReadingText": "Havainnekuva ilmaa läpäisevästä oksa-aidasta ja sen juurelle kertyvästä hiekasta.",
-        "existingArticleAndSectionLuentaPreserved": true,
-        "audioGenerated": false,
-        "audioURL": null,
-        "imageSpecificAudioProvided": false,
-        "reuseAudioAllowedByThisPacket": false
-      },
-      "qaEvidence": {
-        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/nouakchott/illustration-qa-extra.json",
-        "fileSHA256": "bd75a82892d31a720b72351f7ad876d7df0f171d29293695fbca0ddddc0e32ec",
-        "item": {
-          "slot": "L2",
-          "targetJsonPath": "$.kaupunkilehti[1].nostot[1]",
-          "assetID": "nouakchott-l2-oksa-aita-20261012-v1",
-          "sha256": "3be9b40573b1e134ee4be5b80d4a2caa0433545ef75a98e5eaf501e5d73acea8",
-          "verdict": "accepted",
-          "reason": "Ilmaa läpäisevä oksa-aita ja hiekankertymä havainnollistavat L2:n mekaanista vakauttamista.",
-          "evidence": {
-            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/nouakchott/assets/nouakchott-l2-oksa-aita-20261012-v1/image.png",
-            "nativeSHA256": "3be9b40573b1e134ee4be5b80d4a2caa0433545ef75a98e5eaf501e5d73acea8",
-            "nativeDimensions": [
-              1536,
-              1024
-            ],
-            "manifestHashMatches": true,
-            "personallyViewed": true,
-            "viewTool": "view_image",
-            "visualFindingsFi": "Epäsäännöllisiä oksia sidottuna puupaaluihin, pieni kulma aidassa ja hiekkaa tyvellä. Aidan raoista näkyy läpi, oksien/paalujen liittymät ja hiekka/varjot uskottavat; ei synteettistä kuoripintaa, ihmisiä tai tekstiä.",
-            "captionFi": "Havainnekuva ilmaa läpäisevästä oksa-aidasta ja sen juurelle kertyvästä hiekasta.",
-            "sourceAndTargetCheckFi": "Luettu L2 Aita, jonka läpi tuuli kulkee sekä FAO-manuaalin mechanical dune stabilization/fences/hiekkakertymä. CaptionFi Havainnekuva ilmaa läpäisevästä oksa-aidasta ja sen juurelle kertyvästä hiekasta ei väitä nimetyn projektin paikkavalokuvaksi tai FAO-kuvan jäljennökseksi.",
-            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/nouakchott/sisalto.json",
-            "sourceEvidence": [
-              {
-                "url": "https://www.fao.org/4/i1488e/i1488e.pdf",
-                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/nouakchott-A/fao-manual.txt",
-                "facts": "Mekaaninen hiekan vakauttaminen: aidat hidastavat tuulta, läpäisevyys, hiekankertymä ja myöhempi istutus; ei kirjan kuvan jäljennöstä."
-              },
-              {
-                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/nouakchott/sisalto.json",
-                "facts": "L2 oksa-aidat asetettiin ruudukoksi ja korotettiin hiekan kertyessä."
-              }
-            ]
-          },
-          "reviewedAt": "2026-10-12T18:27:03.168824+00:00"
-        },
-        "allSources": [
-          {
-            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/nouakchott/qa.json",
-            "sha256": "9511bc35e7357716792f2425442b52c29b39bb017bb4671bbe019f733a0ff30e"
-          },
-          {
-            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/nouakchott/illustration-qa-extra.json",
-            "sha256": "bd75a82892d31a720b72351f7ad876d7df0f171d29293695fbca0ddddc0e32ec"
-          }
-        ]
-      },
-      "R2ByteVerification": {
-        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/nouakchott/nouakchott-l2-oksa-aita-20261012-v1-3be9b40573b1.png",
-        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/nouakchott/nouakchott-l2-oksa-aita-20261012-v1-3be9b40573b1.png?t=c6a67c28848fde2b",
-        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/nouakchott/nouakchott-l2-oksa-aita-20261012-v1-3be9b40573b1.png",
-        "sha256": "c6a67c28848fde2b5dd28b157600eb8c835b1ff468b810d3808e4cdec281beca",
-        "bytes": 2779401,
-        "http": 200,
-        "mime": "image/png",
-        "cors": "https://matkakirja.app",
-        "cacheBustedPreflightHttp": 404,
-        "cacheBustedReadback": true,
-        "byteExactReadback": true,
-        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
-        "conditionalIfNoneMatch": "*",
-        "s3PutHttp": 200,
-        "assetID": "nouakchott-l2-oksa-aita-20261012-v1",
-        "nativeSHA256": "3be9b40573b1e134ee4be5b80d4a2caa0433545ef75a98e5eaf501e5d73acea8",
-        "canonicalReadbackByteExact": true,
-        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e04/nouakchott/nouakchott-l2-oksa-aita-20261012-v1-3be9b40573b1.png",
-        "pixelIdenticalToQAAcceptedNative": true,
-        "era": "e04",
-        "city": "nouakchott",
-        "slot": "L2",
-        "targetJsonPath": "$.kaupunkilehti[1].nostot[1]",
-        "verifiedAt": "2026-10-12T18:27:43.037417+00:00",
-        "ownerAcceptanceVerified": false,
-        "gameIntegrated": false,
-        "galleryVisibleVerified": false
-      },
-      "producerExportProof": null,
-      "technicalExportProof": {
-        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e04/nouakchott/nouakchott-l2-oksa-aita-20261012-v1-3be9b40573b1.png",
-        "sha256": "c6a67c28848fde2b5dd28b157600eb8c835b1ff468b810d3808e4cdec281beca",
-        "bytes": 2779401,
-        "SHAReadAt": "2026-10-12T18:29:42.500887+00:00",
-        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
-        "width": 1536,
-        "height": 1024,
-        "pixelWidth": 1536,
-        "pixelHeight": 1024,
-        "exifOrientation": 1,
-        "dimensionsBasis": "EXIF-oriented-display",
-        "format": "PNG",
-        "largeOriginalHeaderOnlyRead": false,
-        "nativeSHA256": "3be9b40573b1e134ee4be5b80d4a2caa0433545ef75a98e5eaf501e5d73acea8",
-        "rgbPixelSHA256": "9a31f8d5324ac0f7dcc18f23867ca6cbf8a0c924068a05ed504f59b60cf8ce95",
-        "pixelIdenticalToQAAcceptedNative": true,
-        "sRGBProfileEmbedded": true,
-        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
-      },
-      "priorMediaFields": {
-        "tiedosto": "",
-        "lahde": "",
-        "selite": "",
-        "lyhyt": ""
-      },
-      "preservePreviousMediaObjects": true,
-      "authorization": {
-        "status": "waived-owner-review",
-        "authorizedByOwner": true,
-        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
-        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
-        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
-        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
-        "ownerAcceptanceImplied": false,
-        "QARequired": true,
-        "R2ByteVerificationRequired": true,
-        "galleryBeforeGameRequired": false,
-        "verifiedHumanMessageSource": {
-          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
-          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
-        }
-      },
-      "ownerAcceptanceVerified": false,
-      "gameIntegrated": false,
-      "gamePublicationVerified": false,
-      "inMemoryMergeVerified": true,
-      "CcommonsMetadataBound": false,
-      "roleManifestBound": true,
-      "sourceContentAfterSHA256": "3425b41b5887f72b7e43a9d4034504e208fb758f38cd83d70f721826272972e2",
-      "targetAfterSHA256": "0c15b22506829a0802337d0a08a565ab510758b8f1bf890243bc91267997e79f",
-      "contextAfterSHA256": "0c15b22506829a0802337d0a08a565ab510758b8f1bf890243bc91267997e79f"
-    },
-    {
-      "era": "e04",
-      "city": "nouakchott",
-      "slot": "L3",
-      "type": "illustration",
-      "assetID": "nouakchott-l3-suojatut-taimet-20261012-v1",
-      "galleryImageID": "nouakchott-l3-suojatut-taimet-20261012-v1",
-      "commonsFile": null,
-      "targetJsonPath": "$.kaupunkilehti[1].nostot[2]",
-      "targetTokens": [
-        "kaupunkilehti",
-        1,
-        "nostot",
-        2
-      ],
-      "operation": "merge-media-fields-preserve-other-content",
-      "CmediaFieldPayload": {
-        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/nouakchott/nouakchott-l3-suojatut-taimet-20261012-v1-178d8fe1686c.png",
-        "suora": true,
-        "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva nuorten taimien hoidosta ja suojaamisesta, ei nimetyn vihervyön nykytilanteesta.",
-        "lyhyt": "Havainnekuva nuorten taimien hoidosta ja suojaamisesta, ei nimetyn vihervyön nykytilanteesta."
-      },
-      "removeMediaKeys": [
-        "tiedosto"
-      ],
-      "CvalidatorCompatiblePayload": {},
-      "runtimeMediaFieldPayload": {
-        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/nouakchott/nouakchott-l3-suojatut-taimet-20261012-v1-178d8fe1686c.png",
-        "suora": true,
-        "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva nuorten taimien hoidosta ja suojaamisesta, ei nimetyn vihervyön nykytilanteesta.",
-        "lyhyt": "Havainnekuva nuorten taimien hoidosta ja suojaamisesta, ei nimetyn vihervyön nykytilanteesta."
-      },
-      "runtimeRemoveMediaKeys": [
-        "tiedosto"
-      ],
-      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
-      "nativeSHA256": "178d8fe1686c161da788cf0ca498521391598ff7668848a8868db30d67f95506",
-      "exportSHA256": "938883d8e7b34371b6f2ea6d4ed5d1bbd010d1003f19614dea5a8f3553e8288c",
-      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/nouakchott/nouakchott-l3-suojatut-taimet-20261012-v1-178d8fe1686c.png",
-      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/nouakchott/nouakchott-l3-suojatut-taimet-20261012-v1-178d8fe1686c.png",
-      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e04/nouakchott/nouakchott-l3-suojatut-taimet-20261012-v1-178d8fe1686c.png",
-      "dimensions": [
-        1536,
-        1024
-      ],
-      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/nouakchott/sisalto.json",
-      "sourceContentSHA256": "d0bdd61b0553a51f33fef44dcdb477a39cafa981e6df497e72de7698d03d7904",
-      "semanticSourceBind": {
-        "targetBeforeSHA256": "f00875b6dfcbb7eb3f54c39aed0769e834525903d2071c8a8e4e35f87ebcaadf",
-        "semanticContextSHA256": "f00875b6dfcbb7eb3f54c39aed0769e834525903d2071c8a8e4e35f87ebcaadf",
-        "subjectTitle": "Vihervyö tarvitsee hoitajia",
-        "targetState": "existing-target"
-      },
-      "attribution": {
-        "author": null,
-        "license": null,
-        "licenseUrl": null,
-        "sourcePage": null,
-        "originalUrl": null,
-        "rightsEvidence": {
-          "production": "Alkuperäinen yleinen kasvien ja tavallisen funktionaalisen suojaverkon havainnollistus; ei nimetyn kohteen kuvaa, valokuvan kopiota tai koristeteosta.",
-          "QA": {
-            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/nouakchott/assets/nouakchott-l3-suojatut-taimet-20261012-v1/image.png",
-            "nativeSHA256": "178d8fe1686c161da788cf0ca498521391598ff7668848a8868db30d67f95506",
-            "nativeDimensions": [
-              1536,
-              1024
-            ],
-            "manifestHashMatches": true,
-            "personallyViewed": true,
-            "viewTool": "view_image",
-            "visualFindingsFi": "Nuoria taimia tavallisten pyöreiden verkkosuojien sisällä, tumma kasteltu maa niiden tyvellä. Taimien varret/lehtiruodit, verkon tuet ja maa uskottavat. Verkon valmistettu ruudukko luonteva; ei synteettistä kuori-/hiekkatoistoa, henkilöitä tai tekstiä.",
-            "captionFi": "Havainnekuva nuorten taimien hoidosta ja suojaamisesta, ei nimetyn vihervyön nykytilanteesta.",
-            "sourceAndTargetCheckFi": "Luettu L3 Vihervyö tarvitsee hoitajia ja FAO-manuaalin taimien hoito/istutus/suojaus. CaptionFi Havainnekuva nuorten taimien hoidosta ja suojaamisesta, ei nimetyn vihervyön nykytilanteesta; ei väitettä hankkeen lajeista tai täsmälleen käytetystä verkkotyypistä.",
-            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/nouakchott/sisalto.json",
-            "sourceEvidence": [
-              {
-                "url": "https://www.fao.org/4/i1488e/i1488e.pdf",
-                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/nouakchott-A/fao-manual.txt",
-                "facts": "Nouakchottin hankkeen istutus, taimien hoito ja suojaaminen; kuva ei väitä hankkeen tarkkaa lajistoa tai nykyistä laajuutta."
-              },
-              {
-                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/nouakchott/sisalto.json",
-                "facts": "L3 kuvaa nuorten istutusten suojaamista laidunnukselta ja paikallisten hoitoa."
-              }
-            ]
-          },
-          "qaReason": "Taimien ja funktionaalisen suojaverkon yleishavainne vastaa L3:n hoito-/suojausaihetta."
-        }
-      },
-      "luentaMetadata": {
-        "existingImageLuenta": null,
-        "captionReadingText": "Havainnekuva nuorten taimien hoidosta ja suojaamisesta, ei nimetyn vihervyön nykytilanteesta.",
-        "existingArticleAndSectionLuentaPreserved": true,
-        "audioGenerated": false,
-        "audioURL": null,
-        "imageSpecificAudioProvided": false,
-        "reuseAudioAllowedByThisPacket": false
-      },
-      "qaEvidence": {
-        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/nouakchott/illustration-qa-extra.json",
-        "fileSHA256": "bd75a82892d31a720b72351f7ad876d7df0f171d29293695fbca0ddddc0e32ec",
-        "item": {
-          "slot": "L3",
-          "targetJsonPath": "$.kaupunkilehti[1].nostot[2]",
-          "assetID": "nouakchott-l3-suojatut-taimet-20261012-v1",
-          "sha256": "178d8fe1686c161da788cf0ca498521391598ff7668848a8868db30d67f95506",
-          "verdict": "accepted",
-          "reason": "Taimien ja funktionaalisen suojaverkon yleishavainne vastaa L3:n hoito-/suojausaihetta.",
-          "evidence": {
-            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/nouakchott/assets/nouakchott-l3-suojatut-taimet-20261012-v1/image.png",
-            "nativeSHA256": "178d8fe1686c161da788cf0ca498521391598ff7668848a8868db30d67f95506",
-            "nativeDimensions": [
-              1536,
-              1024
-            ],
-            "manifestHashMatches": true,
-            "personallyViewed": true,
-            "viewTool": "view_image",
-            "visualFindingsFi": "Nuoria taimia tavallisten pyöreiden verkkosuojien sisällä, tumma kasteltu maa niiden tyvellä. Taimien varret/lehtiruodit, verkon tuet ja maa uskottavat. Verkon valmistettu ruudukko luonteva; ei synteettistä kuori-/hiekkatoistoa, henkilöitä tai tekstiä.",
-            "captionFi": "Havainnekuva nuorten taimien hoidosta ja suojaamisesta, ei nimetyn vihervyön nykytilanteesta.",
-            "sourceAndTargetCheckFi": "Luettu L3 Vihervyö tarvitsee hoitajia ja FAO-manuaalin taimien hoito/istutus/suojaus. CaptionFi Havainnekuva nuorten taimien hoidosta ja suojaamisesta, ei nimetyn vihervyön nykytilanteesta; ei väitettä hankkeen lajeista tai täsmälleen käytetystä verkkotyypistä.",
-            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/nouakchott/sisalto.json",
-            "sourceEvidence": [
-              {
-                "url": "https://www.fao.org/4/i1488e/i1488e.pdf",
-                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/nouakchott-A/fao-manual.txt",
-                "facts": "Nouakchottin hankkeen istutus, taimien hoito ja suojaaminen; kuva ei väitä hankkeen tarkkaa lajistoa tai nykyistä laajuutta."
-              },
-              {
-                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/nouakchott/sisalto.json",
-                "facts": "L3 kuvaa nuorten istutusten suojaamista laidunnukselta ja paikallisten hoitoa."
-              }
-            ]
-          },
-          "reviewedAt": "2026-10-12T18:30:07.972319+00:00"
-        },
-        "allSources": [
-          {
-            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/nouakchott/qa.json",
-            "sha256": "9511bc35e7357716792f2425442b52c29b39bb017bb4671bbe019f733a0ff30e"
-          },
-          {
-            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/nouakchott/illustration-qa-extra.json",
-            "sha256": "bd75a82892d31a720b72351f7ad876d7df0f171d29293695fbca0ddddc0e32ec"
-          }
-        ]
-      },
-      "R2ByteVerification": {
-        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/nouakchott/nouakchott-l3-suojatut-taimet-20261012-v1-178d8fe1686c.png",
-        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/nouakchott/nouakchott-l3-suojatut-taimet-20261012-v1-178d8fe1686c.png?t=938883d8e7b34371",
-        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/nouakchott/nouakchott-l3-suojatut-taimet-20261012-v1-178d8fe1686c.png",
-        "sha256": "938883d8e7b34371b6f2ea6d4ed5d1bbd010d1003f19614dea5a8f3553e8288c",
-        "bytes": 2898094,
-        "http": 200,
-        "mime": "image/png",
-        "cors": "https://matkakirja.app",
-        "cacheBustedPreflightHttp": 404,
-        "cacheBustedReadback": true,
-        "byteExactReadback": true,
-        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
-        "conditionalIfNoneMatch": "*",
-        "s3PutHttp": 200,
-        "assetID": "nouakchott-l3-suojatut-taimet-20261012-v1",
-        "nativeSHA256": "178d8fe1686c161da788cf0ca498521391598ff7668848a8868db30d67f95506",
-        "canonicalReadbackByteExact": true,
-        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e04/nouakchott/nouakchott-l3-suojatut-taimet-20261012-v1-178d8fe1686c.png",
-        "pixelIdenticalToQAAcceptedNative": true,
-        "era": "e04",
-        "city": "nouakchott",
-        "slot": "L3",
-        "targetJsonPath": "$.kaupunkilehti[1].nostot[2]",
-        "verifiedAt": "2026-10-12T18:30:59.978654+00:00",
-        "ownerAcceptanceVerified": false,
-        "gameIntegrated": false,
-        "galleryVisibleVerified": false
-      },
-      "producerExportProof": null,
-      "technicalExportProof": {
-        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e04/nouakchott/nouakchott-l3-suojatut-taimet-20261012-v1-178d8fe1686c.png",
-        "sha256": "938883d8e7b34371b6f2ea6d4ed5d1bbd010d1003f19614dea5a8f3553e8288c",
-        "bytes": 2898094,
-        "SHAReadAt": "2026-10-12T18:30:08.729672+00:00",
-        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
-        "width": 1536,
-        "height": 1024,
-        "pixelWidth": 1536,
-        "pixelHeight": 1024,
-        "exifOrientation": 1,
-        "dimensionsBasis": "EXIF-oriented-display",
-        "format": "PNG",
-        "largeOriginalHeaderOnlyRead": false,
-        "nativeSHA256": "178d8fe1686c161da788cf0ca498521391598ff7668848a8868db30d67f95506",
-        "rgbPixelSHA256": "211c859761a622aad93cd6af6d281d4297f9ff5f8d56eff1ee44cfc6292b1d99",
-        "pixelIdenticalToQAAcceptedNative": true,
-        "sRGBProfileEmbedded": true,
-        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
-      },
-      "priorMediaFields": {
-        "tiedosto": "",
-        "lahde": "",
-        "selite": "",
-        "lyhyt": ""
-      },
-      "preservePreviousMediaObjects": true,
-      "authorization": {
-        "status": "waived-owner-review",
-        "authorizedByOwner": true,
-        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
-        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
-        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
-        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
-        "ownerAcceptanceImplied": false,
-        "QARequired": true,
-        "R2ByteVerificationRequired": true,
-        "galleryBeforeGameRequired": false,
-        "verifiedHumanMessageSource": {
-          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
-          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
-        }
-      },
-      "ownerAcceptanceVerified": false,
-      "gameIntegrated": false,
-      "gamePublicationVerified": false,
-      "inMemoryMergeVerified": true,
-      "CcommonsMetadataBound": false,
-      "roleManifestBound": true,
-      "sourceContentAfterSHA256": "3425b41b5887f72b7e43a9d4034504e208fb758f38cd83d70f721826272972e2",
-      "targetAfterSHA256": "f00875b6dfcbb7eb3f54c39aed0769e834525903d2071c8a8e4e35f87ebcaadf",
-      "contextAfterSHA256": "f00875b6dfcbb7eb3f54c39aed0769e834525903d2071c8a8e4e35f87ebcaadf"
-    },
     {
       "era": "e04",
       "city": "nouakchott",
@@ -1216,7 +53,7 @@
         1536
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/nouakchott/sisalto.json",
-      "sourceContentSHA256": "d0bdd61b0553a51f33fef44dcdb477a39cafa981e6df497e72de7698d03d7904",
+      "sourceContentSHA256": "3425b41b5887f72b7e43a9d4034504e208fb758f38cd83d70f721826272972e2",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
         "semanticContextSHA256": "f63b22855d5d1144628b0ae9c4a898652a9c13fcbc0f349911f6b82bb2d01ee4",
@@ -1310,7 +147,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/nouakchott/qa.json",
-            "sha256": "9511bc35e7357716792f2425442b52c29b39bb017bb4671bbe019f733a0ff30e"
+            "sha256": "f373a0e2664e7420b9c20b33a1f49e512d3754119e3e37a74b0e64742b378e11"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/nouakchott/illustration-qa-extra.json",
@@ -1399,7 +236,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "3425b41b5887f72b7e43a9d4034504e208fb758f38cd83d70f721826272972e2",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "f63b22855d5d1144628b0ae9c4a898652a9c13fcbc0f349911f6b82bb2d01ee4"
+      "contextAfterSHA256": "f63b22855d5d1144628b0ae9c4a898652a9c13fcbc0f349911f6b82bb2d01ee4",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e04",
@@ -1452,7 +291,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/nouakchott/sisalto.json",
-      "sourceContentSHA256": "d0bdd61b0553a51f33fef44dcdb477a39cafa981e6df497e72de7698d03d7904",
+      "sourceContentSHA256": "3425b41b5887f72b7e43a9d4034504e208fb758f38cd83d70f721826272972e2",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
         "semanticContextSHA256": "aa8ed9fd70efe8df5248922f2192e1e83e185b316b35d5fd26a29e2e200629fc",
@@ -1548,7 +387,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/nouakchott/qa.json",
-            "sha256": "9511bc35e7357716792f2425442b52c29b39bb017bb4671bbe019f733a0ff30e"
+            "sha256": "f373a0e2664e7420b9c20b33a1f49e512d3754119e3e37a74b0e64742b378e11"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/nouakchott/illustration-qa-extra.json",
@@ -1637,7 +476,247 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "3425b41b5887f72b7e43a9d4034504e208fb758f38cd83d70f721826272972e2",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "aa8ed9fd70efe8df5248922f2192e1e83e185b316b35d5fd26a29e2e200629fc"
+      "contextAfterSHA256": "aa8ed9fd70efe8df5248922f2192e1e83e185b316b35d5fd26a29e2e200629fc",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+    },
+    {
+      "era": "e04",
+      "city": "nouakchott",
+      "slot": "O4",
+      "type": "illustration",
+      "assetID": "nouakchott-o4-kala-riisi-20261012-v1",
+      "galleryImageID": "nouakchott-o4-kala-riisi-20261012-v1",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "matkailijalle",
+        "artikkeli",
+        "jaksot",
+        3,
+        "kuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/nouakchott/nouakchott-o4-kala-riisi-20261012-v1-8e290047c2da.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva kala-riisiruoasta; ei tietyn Nouakchottin ravintolan annoksesta.",
+        "lyhyt": "Havainnekuva kala-riisiruoasta; ei tietyn Nouakchottin ravintolan annoksesta."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/nouakchott/nouakchott-o4-kala-riisi-20261012-v1-8e290047c2da.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva kala-riisiruoasta; ei tietyn Nouakchottin ravintolan annoksesta.",
+        "lyhyt": "Havainnekuva kala-riisiruoasta; ei tietyn Nouakchottin ravintolan annoksesta."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "8e290047c2dae4729f4ee9c24cb633e84e76a6fbbd8af57d7be4601f3d7b1fb4",
+      "exportSHA256": "55b300cc4f10ec3182948008b1bf7b737bf60d690a1306d9084733c01b24140c",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/nouakchott/nouakchott-o4-kala-riisi-20261012-v1-8e290047c2da.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/nouakchott/nouakchott-o4-kala-riisi-20261012-v1-8e290047c2da.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e04/nouakchott/nouakchott-o4-kala-riisi-20261012-v1-8e290047c2da.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/nouakchott/sisalto.json",
+      "sourceContentSHA256": "3425b41b5887f72b7e43a9d4034504e208fb758f38cd83d70f721826272972e2",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "ab67097a6d8db3d130ff7afd39702f01c6fdc77a6e6900c5508bfbdda0060856",
+        "subjectTitle": "Kala, riisi ja tee",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Alkuperäinen yleinen ruoka- ja materiaali-aihe tavallisella koristeettomalla astialla. Ei tietyn annoksen/valokuvan, tekijän taideteoksen, rakennuksen tai henkilön jäljennöstä.",
+          "QA": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/nouakchott/assets/nouakchott-o4-kala-riisi-20261012-v1/image.png",
+            "nativeSHA256": "8e290047c2dae4729f4ee9c24cb633e84e76a6fbbd8af57d7be4601f3d7b1fb4",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "manifestHashMatches": true,
+            "personallyViewed": true,
+            "viewTool": "view_image",
+            "visualFindingsFi": "Lautasella punaista riisiä, kypsennetty kalapala ja tomaattipohjainen kastike. Jyvät, kalan säikeet/nahka, kastike ja astia uskottavat; ei ihmisiä, lisättyä tekstiä, logoja tai kehystä.",
+            "captionFi": "Havainnekuva kala-riisiruoasta; ei tietyn Nouakchottin ravintolan annoksesta.",
+            "sourceAndTargetCheckFi": "Luettu O4 Kala, riisi ja tee sekä Mauritanian_cuisine.txt:n kala-riisiruoan ja tomaattikastikkeen kuvaus. CaptionFi Havainnekuva kala-riisiruoasta; ei tietyn Nouakchottin ravintolan annoksesta. Ei nimettyä kalalajia, täsmäreseptiä tai autenttista valokuvaa.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/nouakchott/sisalto.json",
+            "sourceEvidence": [
+              {
+                "url": "https://en.wikipedia.org/wiki/Mauritanian_cuisine",
+                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/nouakchott-A/Mauritanian_cuisine.txt",
+                "facts": "Thieboudienne rannikon kala-riisiruoan esimerkkinä, valkoinen tai punainen tavallisesti tomaatista tehty kastike; ei yksittäinen resepti."
+              },
+              {
+                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/nouakchott/sisalto.json",
+                "facts": "O4 kala, riisi ja tee kuuluvat rannikon/maan ruokataustaan, eivät kaupungin yksinoikeudella luotuja ruokia."
+              }
+            ]
+          },
+          "qaReason": "Kala-riisiruoan yleishavainne vastaa O4:n rannikon ruokataustaa ilman yksilöityä annos-/reseptiväitettä."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva kala-riisiruoasta; ei tietyn Nouakchottin ravintolan annoksesta.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/nouakchott/illustration-qa-extra.json",
+        "fileSHA256": "bd75a82892d31a720b72351f7ad876d7df0f171d29293695fbca0ddddc0e32ec",
+        "item": {
+          "slot": "O4",
+          "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+          "assetID": "nouakchott-o4-kala-riisi-20261012-v1",
+          "sha256": "8e290047c2dae4729f4ee9c24cb633e84e76a6fbbd8af57d7be4601f3d7b1fb4",
+          "verdict": "accepted",
+          "reason": "Kala-riisiruoan yleishavainne vastaa O4:n rannikon ruokataustaa ilman yksilöityä annos-/reseptiväitettä.",
+          "evidence": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/nouakchott/assets/nouakchott-o4-kala-riisi-20261012-v1/image.png",
+            "nativeSHA256": "8e290047c2dae4729f4ee9c24cb633e84e76a6fbbd8af57d7be4601f3d7b1fb4",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "manifestHashMatches": true,
+            "personallyViewed": true,
+            "viewTool": "view_image",
+            "visualFindingsFi": "Lautasella punaista riisiä, kypsennetty kalapala ja tomaattipohjainen kastike. Jyvät, kalan säikeet/nahka, kastike ja astia uskottavat; ei ihmisiä, lisättyä tekstiä, logoja tai kehystä.",
+            "captionFi": "Havainnekuva kala-riisiruoasta; ei tietyn Nouakchottin ravintolan annoksesta.",
+            "sourceAndTargetCheckFi": "Luettu O4 Kala, riisi ja tee sekä Mauritanian_cuisine.txt:n kala-riisiruoan ja tomaattikastikkeen kuvaus. CaptionFi Havainnekuva kala-riisiruoasta; ei tietyn Nouakchottin ravintolan annoksesta. Ei nimettyä kalalajia, täsmäreseptiä tai autenttista valokuvaa.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/nouakchott/sisalto.json",
+            "sourceEvidence": [
+              {
+                "url": "https://en.wikipedia.org/wiki/Mauritanian_cuisine",
+                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/nouakchott-A/Mauritanian_cuisine.txt",
+                "facts": "Thieboudienne rannikon kala-riisiruoan esimerkkinä, valkoinen tai punainen tavallisesti tomaatista tehty kastike; ei yksittäinen resepti."
+              },
+              {
+                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/nouakchott/sisalto.json",
+                "facts": "O4 kala, riisi ja tee kuuluvat rannikon/maan ruokataustaan, eivät kaupungin yksinoikeudella luotuja ruokia."
+              }
+            ]
+          },
+          "reviewedAt": "2026-10-12T19:06:34.644319+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/nouakchott/qa.json",
+            "sha256": "f373a0e2664e7420b9c20b33a1f49e512d3754119e3e37a74b0e64742b378e11"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/nouakchott/illustration-qa-extra.json",
+            "sha256": "bd75a82892d31a720b72351f7ad876d7df0f171d29293695fbca0ddddc0e32ec"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/nouakchott/nouakchott-o4-kala-riisi-20261012-v1-8e290047c2da.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/nouakchott/nouakchott-o4-kala-riisi-20261012-v1-8e290047c2da.png?t=55b300cc4f10ec31",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/nouakchott/nouakchott-o4-kala-riisi-20261012-v1-8e290047c2da.png",
+        "sha256": "55b300cc4f10ec3182948008b1bf7b737bf60d690a1306d9084733c01b24140c",
+        "bytes": 2359527,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "nouakchott-o4-kala-riisi-20261012-v1",
+        "nativeSHA256": "8e290047c2dae4729f4ee9c24cb633e84e76a6fbbd8af57d7be4601f3d7b1fb4",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e04/nouakchott/nouakchott-o4-kala-riisi-20261012-v1-8e290047c2da.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e04",
+        "city": "nouakchott",
+        "slot": "O4",
+        "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+        "verifiedAt": "2026-10-12T19:07:28.084425+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e04/nouakchott/nouakchott-o4-kala-riisi-20261012-v1-8e290047c2da.png",
+        "sha256": "55b300cc4f10ec3182948008b1bf7b737bf60d690a1306d9084733c01b24140c",
+        "bytes": 2359527,
+        "SHAReadAt": "2026-10-12T19:32:01.237880+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "8e290047c2dae4729f4ee9c24cb633e84e76a6fbbd8af57d7be4601f3d7b1fb4",
+        "rgbPixelSHA256": "ad8e80b4bfaf32126e9b3356884ed804e43349385c98137dd78d421e30c019f6",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "3425b41b5887f72b7e43a9d4034504e208fb758f38cd83d70f721826272972e2",
+      "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+      "contextAfterSHA256": "ab67097a6d8db3d130ff7afd39702f01c6fdc77a6e6900c5508bfbdda0060856",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e04",
@@ -1687,7 +766,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/nouakchott/sisalto.json",
-      "sourceContentSHA256": "d0bdd61b0553a51f33fef44dcdb477a39cafa981e6df497e72de7698d03d7904",
+      "sourceContentSHA256": "3425b41b5887f72b7e43a9d4034504e208fb758f38cd83d70f721826272972e2",
       "semanticSourceBind": {
         "targetBeforeSHA256": "12c6cce03a07d17bba4e8a0f5f203d3b5f2c1ed9a3edc1db05c460fedb50b3c3",
         "semanticContextSHA256": "12c6cce03a07d17bba4e8a0f5f203d3b5f2c1ed9a3edc1db05c460fedb50b3c3",
@@ -1783,7 +862,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/nouakchott/qa.json",
-            "sha256": "9511bc35e7357716792f2425442b52c29b39bb017bb4671bbe019f733a0ff30e"
+            "sha256": "f373a0e2664e7420b9c20b33a1f49e512d3754119e3e37a74b0e64742b378e11"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/nouakchott/illustration-qa-extra.json",
@@ -1872,7 +951,944 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "3425b41b5887f72b7e43a9d4034504e208fb758f38cd83d70f721826272972e2",
       "targetAfterSHA256": "12c6cce03a07d17bba4e8a0f5f203d3b5f2c1ed9a3edc1db05c460fedb50b3c3",
-      "contextAfterSHA256": "12c6cce03a07d17bba4e8a0f5f203d3b5f2c1ed9a3edc1db05c460fedb50b3c3"
+      "contextAfterSHA256": "12c6cce03a07d17bba4e8a0f5f203d3b5f2c1ed9a3edc1db05c460fedb50b3c3",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+    },
+    {
+      "era": "e04",
+      "city": "nouakchott",
+      "slot": "K4",
+      "type": "illustration",
+      "assetID": "nouakchott-k4-minttutee-20261012-v1",
+      "galleryImageID": "nouakchott-k4-minttutee-20261012-v1",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].nostot[3]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "nostot",
+        3
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/nouakchott/nouakchott-k4-minttutee-20261012-v1-180aafbda6d0.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva minttuteen korkeasta kaadosta ja lasiin syntyvästä vaahdosta; ei tietyn Nouakchottin teehetken dokumentti.",
+        "lyhyt": "Teen vaahto tehdään kaatamalla."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/nouakchott/nouakchott-k4-minttutee-20261012-v1-180aafbda6d0.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva minttuteen korkeasta kaadosta ja lasiin syntyvästä vaahdosta; ei tietyn Nouakchottin teehetken dokumentti.",
+        "lyhyt": "Teen vaahto tehdään kaatamalla."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "180aafbda6d04a38e8aeff937d1cbb84bc1b79904df45d6f6bc5f2218bfc0e72",
+      "exportSHA256": "2cbb7c263b9897ebefe6fc5327669f89805afc24fd5c1cb30ebb61bc24489ef2",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/nouakchott/nouakchott-k4-minttutee-20261012-v1-180aafbda6d0.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/nouakchott/nouakchott-k4-minttutee-20261012-v1-180aafbda6d0.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e04/nouakchott/nouakchott-k4-minttutee-20261012-v1-180aafbda6d0.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/nouakchott/sisalto.json",
+      "sourceContentSHA256": "3425b41b5887f72b7e43a9d4034504e208fb758f38cd83d70f721826272972e2",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "8ca65e7317759f436daa5cd6de769ee1f90adb213f86aaa1933b454fe22671cf",
+        "semanticContextSHA256": "8ca65e7317759f436daa5cd6de769ee1f90adb213f86aaa1933b454fe22671cf",
+        "subjectTitle": "Teen vaahto tehdään kaatamalla",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Alkuperäinen yleinen tee- ja kaatotekniikan kuva tavallisilla koristeettomilla astioilla. Ei nimetyn palvelun, henkilön, kuvataiteen, valokuvan tai rakennuksen jäljennöstä.",
+          "QA": {
+            "reviewer": "job-25 independent-image-QA",
+            "reviewedAt": "2026-10-12T18:05:38.140736+00:00",
+            "visualTool": "view_image",
+            "visualDetail": "original",
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/nouakchott/assets/nouakchott-k4-minttutee-20261012-v1/image.png",
+            "actualWidth": 1536,
+            "actualHeight": 1024,
+            "actualFormat": "PNG",
+            "actualColorMode": "8-bit RGB",
+            "colorProfile": "Ei sRGB/iCCP/gAMA-chunkkia; upotettua sRGB-profiilia ei väitetä varmennetuksi.",
+            "subjectSource": {
+              "url": "https://en.wikipedia.org/wiki/Mauritanian_cuisine",
+              "savedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/nouakchott-A/Mauritanian_cuisine.txt",
+              "savedSHA256": "1db9c15006d9ac3203e119220d96c8d6bd3f96d75d881d2f99e7a218c60f47a7",
+              "line": 5,
+              "finding": "Minttuteen korkealta kaataminen tuottaa vaahtoa."
+            },
+            "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/nouakchott/sisalto.json",
+            "sourceContentSHA256": "9f2c17ce7423d20f50781d4073988cd03d10983b1908e377a87e4958a4ca852e",
+            "captionFi": "Havainnekuva minttuteen korkeasta kaadosta ja lasiin syntyvästä vaahdosta; ei tietyn Nouakchottin teehetken dokumentti.",
+            "duplicateInCity": false,
+            "rights": "Yleistetty ruoka-/tekniikkakuva tavallisilla koristeettomilla astioilla; ei nimettyä teosta tai paikkaa."
+          },
+          "qaReason": "K4:n korkealta kaadettavan minttuteen havainne on silmin tarkistettu. Yhtenäinen teevana tulee kannun nokasta lasin pinnalle, kannu jatkuu kuvan ulkopuolelle eikä leiju irrallisena kokonaisena esineenä. Lasin reuna ja pohja, nesteen pinta, maltillinen pienten kuplien vaahto, mintunlehdet ja koristeeton tarjotin ovat fyysisesti luontevia. Ei kasvoja, käsiä, tekstiä, logoja, vesileimaa, kehystä tai mainospakkausta. Kuvateksti ilmoittaa yleisen tekniikan havainnekuvan eikä tiettyä Nouakchottin teehetkeä."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva minttuteen korkeasta kaadosta ja lasiin syntyvästä vaahdosta; ei tietyn Nouakchottin teehetken dokumentti.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/nouakchott/qa.json",
+        "fileSHA256": "f373a0e2664e7420b9c20b33a1f49e512d3754119e3e37a74b0e64742b378e11",
+        "item": {
+          "slot": "K4",
+          "targetJsonPath": "$.kaupunkilehti[0].nostot[3]",
+          "assetID": "nouakchott-k4-minttutee-20261012-v1",
+          "sha256": "180aafbda6d04a38e8aeff937d1cbb84bc1b79904df45d6f6bc5f2218bfc0e72",
+          "verdict": "accepted",
+          "reason": "K4:n korkealta kaadettavan minttuteen havainne on silmin tarkistettu. Yhtenäinen teevana tulee kannun nokasta lasin pinnalle, kannu jatkuu kuvan ulkopuolelle eikä leiju irrallisena kokonaisena esineenä. Lasin reuna ja pohja, nesteen pinta, maltillinen pienten kuplien vaahto, mintunlehdet ja koristeeton tarjotin ovat fyysisesti luontevia. Ei kasvoja, käsiä, tekstiä, logoja, vesileimaa, kehystä tai mainospakkausta. Kuvateksti ilmoittaa yleisen tekniikan havainnekuvan eikä tiettyä Nouakchottin teehetkeä.",
+          "evidence": {
+            "reviewer": "job-25 independent-image-QA",
+            "reviewedAt": "2026-10-12T18:05:38.140736+00:00",
+            "visualTool": "view_image",
+            "visualDetail": "original",
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/nouakchott/assets/nouakchott-k4-minttutee-20261012-v1/image.png",
+            "actualWidth": 1536,
+            "actualHeight": 1024,
+            "actualFormat": "PNG",
+            "actualColorMode": "8-bit RGB",
+            "colorProfile": "Ei sRGB/iCCP/gAMA-chunkkia; upotettua sRGB-profiilia ei väitetä varmennetuksi.",
+            "subjectSource": {
+              "url": "https://en.wikipedia.org/wiki/Mauritanian_cuisine",
+              "savedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/nouakchott-A/Mauritanian_cuisine.txt",
+              "savedSHA256": "1db9c15006d9ac3203e119220d96c8d6bd3f96d75d881d2f99e7a218c60f47a7",
+              "line": 5,
+              "finding": "Minttuteen korkealta kaataminen tuottaa vaahtoa."
+            },
+            "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/nouakchott/sisalto.json",
+            "sourceContentSHA256": "9f2c17ce7423d20f50781d4073988cd03d10983b1908e377a87e4958a4ca852e",
+            "captionFi": "Havainnekuva minttuteen korkeasta kaadosta ja lasiin syntyvästä vaahdosta; ei tietyn Nouakchottin teehetken dokumentti.",
+            "duplicateInCity": false,
+            "rights": "Yleistetty ruoka-/tekniikkakuva tavallisilla koristeettomilla astioilla; ei nimettyä teosta tai paikkaa."
+          }
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/nouakchott/qa.json",
+            "sha256": "f373a0e2664e7420b9c20b33a1f49e512d3754119e3e37a74b0e64742b378e11"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/nouakchott/illustration-qa-extra.json",
+            "sha256": "bd75a82892d31a720b72351f7ad876d7df0f171d29293695fbca0ddddc0e32ec"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/nouakchott/nouakchott-k4-minttutee-20261012-v1-180aafbda6d0.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/nouakchott/nouakchott-k4-minttutee-20261012-v1-180aafbda6d0.png?t=2cbb7c263b9897eb",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/nouakchott/nouakchott-k4-minttutee-20261012-v1-180aafbda6d0.png",
+        "sha256": "2cbb7c263b9897ebefe6fc5327669f89805afc24fd5c1cb30ebb61bc24489ef2",
+        "bytes": 1911223,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "nouakchott-k4-minttutee-20261012-v1",
+        "nativeSHA256": "180aafbda6d04a38e8aeff937d1cbb84bc1b79904df45d6f6bc5f2218bfc0e72",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e04/nouakchott/nouakchott-k4-minttutee-20261012-v1-180aafbda6d0.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e04",
+        "city": "nouakchott",
+        "slot": "K4",
+        "targetJsonPath": "$.kaupunkilehti[0].nostot[3]",
+        "verifiedAt": "2026-10-12T18:10:43.330774+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e04/nouakchott/nouakchott-k4-minttutee-20261012-v1-180aafbda6d0.png",
+        "sha256": "2cbb7c263b9897ebefe6fc5327669f89805afc24fd5c1cb30ebb61bc24489ef2",
+        "bytes": 1911223,
+        "SHAReadAt": "2026-10-12T18:29:42.237776+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "180aafbda6d04a38e8aeff937d1cbb84bc1b79904df45d6f6bc5f2218bfc0e72",
+        "rgbPixelSHA256": "722bf594de526f03b392796973b6d73a748551ddf071ba9920e0a153a5d62293",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "3425b41b5887f72b7e43a9d4034504e208fb758f38cd83d70f721826272972e2",
+      "targetAfterSHA256": "8ca65e7317759f436daa5cd6de769ee1f90adb213f86aaa1933b454fe22671cf",
+      "contextAfterSHA256": "8ca65e7317759f436daa5cd6de769ee1f90adb213f86aaa1933b454fe22671cf",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+    },
+    {
+      "era": "e04",
+      "city": "nouakchott",
+      "slot": "L1",
+      "type": "illustration",
+      "assetID": "nouakchott-l1-hiekkajyvat-20261012-v1",
+      "galleryImageID": "nouakchott-l1-hiekkajyvat-20261012-v1",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[1].nostot[0]",
+      "targetTokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        0
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/nouakchott/nouakchott-l1-hiekkajyvat-20261012-v1-6fc38700ca44.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva hiekkamateriaalista ja maanpinnan lähellä kulkevista jyvistä, ei nimetystä dyynistä.",
+        "lyhyt": "Havainnekuva hiekkamateriaalista ja maanpinnan lähellä kulkevista jyvistä, ei nimetystä dyynistä."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/nouakchott/nouakchott-l1-hiekkajyvat-20261012-v1-6fc38700ca44.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva hiekkamateriaalista ja maanpinnan lähellä kulkevista jyvistä, ei nimetystä dyynistä.",
+        "lyhyt": "Havainnekuva hiekkamateriaalista ja maanpinnan lähellä kulkevista jyvistä, ei nimetystä dyynistä."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "6fc38700ca446e9afdf59e14730c4abaf6bfb231886a3bd179a5809b30f330d0",
+      "exportSHA256": "fadecb0e3428d7c1dcf43a922e684e33d10460ab189bb4fdc28768c3658e8cdf",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/nouakchott/nouakchott-l1-hiekkajyvat-20261012-v1-6fc38700ca44.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/nouakchott/nouakchott-l1-hiekkajyvat-20261012-v1-6fc38700ca44.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e04/nouakchott/nouakchott-l1-hiekkajyvat-20261012-v1-6fc38700ca44.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/nouakchott/sisalto.json",
+      "sourceContentSHA256": "3425b41b5887f72b7e43a9d4034504e208fb758f38cd83d70f721826272972e2",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "187561bc9fd51a11fc4d3346dd308f599a20e3185e16a01b150b3b7775227daa",
+        "semanticContextSHA256": "187561bc9fd51a11fc4d3346dd308f599a20e3185e16a01b150b3b7775227daa",
+        "subjectTitle": "Hiekanjyvä voi hypätä",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Luonnollisen hiekan alkuperäinen yleishavainnollistus, ei FAO:n valokuvan tai diagrammin jäljennös eikä nimetty maasto.",
+          "QA": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/nouakchott/assets/nouakchott-l1-hiekkajyvat-20261012-v1/image.png",
+            "nativeSHA256": "6fc38700ca446e9afdf59e14730c4abaf6bfb231886a3bd179a5809b30f330d0",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "manifestHashMatches": true,
+            "personallyViewed": true,
+            "viewTool": "view_image",
+            "visualFindingsFi": "Pieni matala hiekkakumpu lähietäisyydeltä ja irrallisia jyviä sen yläpuolella. Jyvien väri/koko/paikka vaihtelee, valaisu ja terävyys uskottavat, ei toistuvaa rakeisuusmattoa tai nimettyä dyyninäkymää. Ei tekstiä/logoja tai ihmisiä.",
+            "captionFi": "Havainnekuva hiekkamateriaalista ja maanpinnan lähellä kulkevista jyvistä, ei nimetystä dyynistä.",
+            "sourceAndTargetCheckFi": "Luettu L1 Hiekanjyvä voi hypätä ja FAO-manuaalin grain/saltation-osa paikallisesta tekstiotteesta. CaptionFi Havainnekuva hiekkamateriaalista ja maanpinnan lähellä kulkevista jyvistä, ei nimetystä dyynistä; kuva ei ole FAO-kaavion kopio.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/nouakchott/sisalto.json",
+            "sourceEvidence": [
+              {
+                "url": "https://www.fao.org/4/i1488e/i1488e.pdf",
+                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/nouakchott-A/fao-manual.txt",
+                "facts": "Hiekan kulkeutumista kuvataan vierimisenä, hypyin etenemisenä ja hienon aineksen ilmakuljetuksena; kuvassa yleinen materiaaliesimerkki, ei kirjan kuvan kopio."
+              },
+              {
+                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/nouakchott/sisalto.json",
+                "facts": "L1 kuvaa eri kokoisten hiekkajyvien liikkumista."
+              }
+            ]
+          },
+          "qaReason": "Hiekan materiaalihavainne ja lähellä pintaa lentävät jyvät vastaavat L1:n tuulikuljetusaihetta."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva hiekkamateriaalista ja maanpinnan lähellä kulkevista jyvistä, ei nimetystä dyynistä.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/nouakchott/illustration-qa-extra.json",
+        "fileSHA256": "bd75a82892d31a720b72351f7ad876d7df0f171d29293695fbca0ddddc0e32ec",
+        "item": {
+          "slot": "L1",
+          "targetJsonPath": "$.kaupunkilehti[1].nostot[0]",
+          "assetID": "nouakchott-l1-hiekkajyvat-20261012-v1",
+          "sha256": "6fc38700ca446e9afdf59e14730c4abaf6bfb231886a3bd179a5809b30f330d0",
+          "verdict": "accepted",
+          "reason": "Hiekan materiaalihavainne ja lähellä pintaa lentävät jyvät vastaavat L1:n tuulikuljetusaihetta.",
+          "evidence": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/nouakchott/assets/nouakchott-l1-hiekkajyvat-20261012-v1/image.png",
+            "nativeSHA256": "6fc38700ca446e9afdf59e14730c4abaf6bfb231886a3bd179a5809b30f330d0",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "manifestHashMatches": true,
+            "personallyViewed": true,
+            "viewTool": "view_image",
+            "visualFindingsFi": "Pieni matala hiekkakumpu lähietäisyydeltä ja irrallisia jyviä sen yläpuolella. Jyvien väri/koko/paikka vaihtelee, valaisu ja terävyys uskottavat, ei toistuvaa rakeisuusmattoa tai nimettyä dyyninäkymää. Ei tekstiä/logoja tai ihmisiä.",
+            "captionFi": "Havainnekuva hiekkamateriaalista ja maanpinnan lähellä kulkevista jyvistä, ei nimetystä dyynistä.",
+            "sourceAndTargetCheckFi": "Luettu L1 Hiekanjyvä voi hypätä ja FAO-manuaalin grain/saltation-osa paikallisesta tekstiotteesta. CaptionFi Havainnekuva hiekkamateriaalista ja maanpinnan lähellä kulkevista jyvistä, ei nimetystä dyynistä; kuva ei ole FAO-kaavion kopio.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/nouakchott/sisalto.json",
+            "sourceEvidence": [
+              {
+                "url": "https://www.fao.org/4/i1488e/i1488e.pdf",
+                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/nouakchott-A/fao-manual.txt",
+                "facts": "Hiekan kulkeutumista kuvataan vierimisenä, hypyin etenemisenä ja hienon aineksen ilmakuljetuksena; kuvassa yleinen materiaaliesimerkki, ei kirjan kuvan kopio."
+              },
+              {
+                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/nouakchott/sisalto.json",
+                "facts": "L1 kuvaa eri kokoisten hiekkajyvien liikkumista."
+              }
+            ]
+          },
+          "reviewedAt": "2026-10-12T18:20:27.012765+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/nouakchott/qa.json",
+            "sha256": "f373a0e2664e7420b9c20b33a1f49e512d3754119e3e37a74b0e64742b378e11"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/nouakchott/illustration-qa-extra.json",
+            "sha256": "bd75a82892d31a720b72351f7ad876d7df0f171d29293695fbca0ddddc0e32ec"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/nouakchott/nouakchott-l1-hiekkajyvat-20261012-v1-6fc38700ca44.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/nouakchott/nouakchott-l1-hiekkajyvat-20261012-v1-6fc38700ca44.png?t=fadecb0e3428d7c1",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/nouakchott/nouakchott-l1-hiekkajyvat-20261012-v1-6fc38700ca44.png",
+        "sha256": "fadecb0e3428d7c1dcf43a922e684e33d10460ab189bb4fdc28768c3658e8cdf",
+        "bytes": 2700815,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "nouakchott-l1-hiekkajyvat-20261012-v1",
+        "nativeSHA256": "6fc38700ca446e9afdf59e14730c4abaf6bfb231886a3bd179a5809b30f330d0",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e04/nouakchott/nouakchott-l1-hiekkajyvat-20261012-v1-6fc38700ca44.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e04",
+        "city": "nouakchott",
+        "slot": "L1",
+        "targetJsonPath": "$.kaupunkilehti[1].nostot[0]",
+        "verifiedAt": "2026-10-12T18:22:34.022150+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e04/nouakchott/nouakchott-l1-hiekkajyvat-20261012-v1-6fc38700ca44.png",
+        "sha256": "fadecb0e3428d7c1dcf43a922e684e33d10460ab189bb4fdc28768c3658e8cdf",
+        "bytes": 2700815,
+        "SHAReadAt": "2026-10-12T18:29:42.373283+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "6fc38700ca446e9afdf59e14730c4abaf6bfb231886a3bd179a5809b30f330d0",
+        "rgbPixelSHA256": "6c17594a3cf70e79b91d4ef7e25d22dbafc82923f76b25554d5d135d600f3dee",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "3425b41b5887f72b7e43a9d4034504e208fb758f38cd83d70f721826272972e2",
+      "targetAfterSHA256": "187561bc9fd51a11fc4d3346dd308f599a20e3185e16a01b150b3b7775227daa",
+      "contextAfterSHA256": "187561bc9fd51a11fc4d3346dd308f599a20e3185e16a01b150b3b7775227daa",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+    },
+    {
+      "era": "e04",
+      "city": "nouakchott",
+      "slot": "L2",
+      "type": "illustration",
+      "assetID": "nouakchott-l2-oksa-aita-20261012-v1",
+      "galleryImageID": "nouakchott-l2-oksa-aita-20261012-v1",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[1].nostot[1]",
+      "targetTokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        1
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/nouakchott/nouakchott-l2-oksa-aita-20261012-v1-3be9b40573b1.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva ilmaa läpäisevästä oksa-aidasta ja sen juurelle kertyvästä hiekasta.",
+        "lyhyt": "Havainnekuva ilmaa läpäisevästä oksa-aidasta ja sen juurelle kertyvästä hiekasta."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/nouakchott/nouakchott-l2-oksa-aita-20261012-v1-3be9b40573b1.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva ilmaa läpäisevästä oksa-aidasta ja sen juurelle kertyvästä hiekasta.",
+        "lyhyt": "Havainnekuva ilmaa läpäisevästä oksa-aidasta ja sen juurelle kertyvästä hiekasta."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "3be9b40573b1e134ee4be5b80d4a2caa0433545ef75a98e5eaf501e5d73acea8",
+      "exportSHA256": "c6a67c28848fde2b5dd28b157600eb8c835b1ff468b810d3808e4cdec281beca",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/nouakchott/nouakchott-l2-oksa-aita-20261012-v1-3be9b40573b1.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/nouakchott/nouakchott-l2-oksa-aita-20261012-v1-3be9b40573b1.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e04/nouakchott/nouakchott-l2-oksa-aita-20261012-v1-3be9b40573b1.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/nouakchott/sisalto.json",
+      "sourceContentSHA256": "3425b41b5887f72b7e43a9d4034504e208fb758f38cd83d70f721826272972e2",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "0c15b22506829a0802337d0a08a565ab510758b8f1bf890243bc91267997e79f",
+        "semanticContextSHA256": "0c15b22506829a0802337d0a08a565ab510758b8f1bf890243bc91267997e79f",
+        "subjectTitle": "Aita, jonka läpi tuuli kulkee",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Itse muodostettu yleinen toiminnallisen oksa-aidan ja luonnollisen hiekan havainne; ei nimetyn projektin asettelun, kuvan tai diagrammin kopiota.",
+          "QA": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/nouakchott/assets/nouakchott-l2-oksa-aita-20261012-v1/image.png",
+            "nativeSHA256": "3be9b40573b1e134ee4be5b80d4a2caa0433545ef75a98e5eaf501e5d73acea8",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "manifestHashMatches": true,
+            "personallyViewed": true,
+            "viewTool": "view_image",
+            "visualFindingsFi": "Epäsäännöllisiä oksia sidottuna puupaaluihin, pieni kulma aidassa ja hiekkaa tyvellä. Aidan raoista näkyy läpi, oksien/paalujen liittymät ja hiekka/varjot uskottavat; ei synteettistä kuoripintaa, ihmisiä tai tekstiä.",
+            "captionFi": "Havainnekuva ilmaa läpäisevästä oksa-aidasta ja sen juurelle kertyvästä hiekasta.",
+            "sourceAndTargetCheckFi": "Luettu L2 Aita, jonka läpi tuuli kulkee sekä FAO-manuaalin mechanical dune stabilization/fences/hiekkakertymä. CaptionFi Havainnekuva ilmaa läpäisevästä oksa-aidasta ja sen juurelle kertyvästä hiekasta ei väitä nimetyn projektin paikkavalokuvaksi tai FAO-kuvan jäljennökseksi.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/nouakchott/sisalto.json",
+            "sourceEvidence": [
+              {
+                "url": "https://www.fao.org/4/i1488e/i1488e.pdf",
+                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/nouakchott-A/fao-manual.txt",
+                "facts": "Mekaaninen hiekan vakauttaminen: aidat hidastavat tuulta, läpäisevyys, hiekankertymä ja myöhempi istutus; ei kirjan kuvan jäljennöstä."
+              },
+              {
+                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/nouakchott/sisalto.json",
+                "facts": "L2 oksa-aidat asetettiin ruudukoksi ja korotettiin hiekan kertyessä."
+              }
+            ]
+          },
+          "qaReason": "Ilmaa läpäisevä oksa-aita ja hiekankertymä havainnollistavat L2:n mekaanista vakauttamista."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva ilmaa läpäisevästä oksa-aidasta ja sen juurelle kertyvästä hiekasta.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/nouakchott/illustration-qa-extra.json",
+        "fileSHA256": "bd75a82892d31a720b72351f7ad876d7df0f171d29293695fbca0ddddc0e32ec",
+        "item": {
+          "slot": "L2",
+          "targetJsonPath": "$.kaupunkilehti[1].nostot[1]",
+          "assetID": "nouakchott-l2-oksa-aita-20261012-v1",
+          "sha256": "3be9b40573b1e134ee4be5b80d4a2caa0433545ef75a98e5eaf501e5d73acea8",
+          "verdict": "accepted",
+          "reason": "Ilmaa läpäisevä oksa-aita ja hiekankertymä havainnollistavat L2:n mekaanista vakauttamista.",
+          "evidence": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/nouakchott/assets/nouakchott-l2-oksa-aita-20261012-v1/image.png",
+            "nativeSHA256": "3be9b40573b1e134ee4be5b80d4a2caa0433545ef75a98e5eaf501e5d73acea8",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "manifestHashMatches": true,
+            "personallyViewed": true,
+            "viewTool": "view_image",
+            "visualFindingsFi": "Epäsäännöllisiä oksia sidottuna puupaaluihin, pieni kulma aidassa ja hiekkaa tyvellä. Aidan raoista näkyy läpi, oksien/paalujen liittymät ja hiekka/varjot uskottavat; ei synteettistä kuoripintaa, ihmisiä tai tekstiä.",
+            "captionFi": "Havainnekuva ilmaa läpäisevästä oksa-aidasta ja sen juurelle kertyvästä hiekasta.",
+            "sourceAndTargetCheckFi": "Luettu L2 Aita, jonka läpi tuuli kulkee sekä FAO-manuaalin mechanical dune stabilization/fences/hiekkakertymä. CaptionFi Havainnekuva ilmaa läpäisevästä oksa-aidasta ja sen juurelle kertyvästä hiekasta ei väitä nimetyn projektin paikkavalokuvaksi tai FAO-kuvan jäljennökseksi.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/nouakchott/sisalto.json",
+            "sourceEvidence": [
+              {
+                "url": "https://www.fao.org/4/i1488e/i1488e.pdf",
+                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/nouakchott-A/fao-manual.txt",
+                "facts": "Mekaaninen hiekan vakauttaminen: aidat hidastavat tuulta, läpäisevyys, hiekankertymä ja myöhempi istutus; ei kirjan kuvan jäljennöstä."
+              },
+              {
+                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/nouakchott/sisalto.json",
+                "facts": "L2 oksa-aidat asetettiin ruudukoksi ja korotettiin hiekan kertyessä."
+              }
+            ]
+          },
+          "reviewedAt": "2026-10-12T18:27:03.168824+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/nouakchott/qa.json",
+            "sha256": "f373a0e2664e7420b9c20b33a1f49e512d3754119e3e37a74b0e64742b378e11"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/nouakchott/illustration-qa-extra.json",
+            "sha256": "bd75a82892d31a720b72351f7ad876d7df0f171d29293695fbca0ddddc0e32ec"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/nouakchott/nouakchott-l2-oksa-aita-20261012-v1-3be9b40573b1.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/nouakchott/nouakchott-l2-oksa-aita-20261012-v1-3be9b40573b1.png?t=c6a67c28848fde2b",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/nouakchott/nouakchott-l2-oksa-aita-20261012-v1-3be9b40573b1.png",
+        "sha256": "c6a67c28848fde2b5dd28b157600eb8c835b1ff468b810d3808e4cdec281beca",
+        "bytes": 2779401,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "nouakchott-l2-oksa-aita-20261012-v1",
+        "nativeSHA256": "3be9b40573b1e134ee4be5b80d4a2caa0433545ef75a98e5eaf501e5d73acea8",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e04/nouakchott/nouakchott-l2-oksa-aita-20261012-v1-3be9b40573b1.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e04",
+        "city": "nouakchott",
+        "slot": "L2",
+        "targetJsonPath": "$.kaupunkilehti[1].nostot[1]",
+        "verifiedAt": "2026-10-12T18:27:43.037417+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e04/nouakchott/nouakchott-l2-oksa-aita-20261012-v1-3be9b40573b1.png",
+        "sha256": "c6a67c28848fde2b5dd28b157600eb8c835b1ff468b810d3808e4cdec281beca",
+        "bytes": 2779401,
+        "SHAReadAt": "2026-10-12T18:29:42.500887+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "3be9b40573b1e134ee4be5b80d4a2caa0433545ef75a98e5eaf501e5d73acea8",
+        "rgbPixelSHA256": "9a31f8d5324ac0f7dcc18f23867ca6cbf8a0c924068a05ed504f59b60cf8ce95",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "3425b41b5887f72b7e43a9d4034504e208fb758f38cd83d70f721826272972e2",
+      "targetAfterSHA256": "0c15b22506829a0802337d0a08a565ab510758b8f1bf890243bc91267997e79f",
+      "contextAfterSHA256": "0c15b22506829a0802337d0a08a565ab510758b8f1bf890243bc91267997e79f",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+    },
+    {
+      "era": "e04",
+      "city": "nouakchott",
+      "slot": "L3",
+      "type": "illustration",
+      "assetID": "nouakchott-l3-suojatut-taimet-20261012-v1",
+      "galleryImageID": "nouakchott-l3-suojatut-taimet-20261012-v1",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[1].nostot[2]",
+      "targetTokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        2
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/nouakchott/nouakchott-l3-suojatut-taimet-20261012-v1-178d8fe1686c.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva nuorten taimien hoidosta ja suojaamisesta, ei nimetyn vihervyön nykytilanteesta.",
+        "lyhyt": "Havainnekuva nuorten taimien hoidosta ja suojaamisesta, ei nimetyn vihervyön nykytilanteesta."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/nouakchott/nouakchott-l3-suojatut-taimet-20261012-v1-178d8fe1686c.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva nuorten taimien hoidosta ja suojaamisesta, ei nimetyn vihervyön nykytilanteesta.",
+        "lyhyt": "Havainnekuva nuorten taimien hoidosta ja suojaamisesta, ei nimetyn vihervyön nykytilanteesta."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "178d8fe1686c161da788cf0ca498521391598ff7668848a8868db30d67f95506",
+      "exportSHA256": "938883d8e7b34371b6f2ea6d4ed5d1bbd010d1003f19614dea5a8f3553e8288c",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/nouakchott/nouakchott-l3-suojatut-taimet-20261012-v1-178d8fe1686c.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/nouakchott/nouakchott-l3-suojatut-taimet-20261012-v1-178d8fe1686c.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e04/nouakchott/nouakchott-l3-suojatut-taimet-20261012-v1-178d8fe1686c.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/nouakchott/sisalto.json",
+      "sourceContentSHA256": "3425b41b5887f72b7e43a9d4034504e208fb758f38cd83d70f721826272972e2",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "f00875b6dfcbb7eb3f54c39aed0769e834525903d2071c8a8e4e35f87ebcaadf",
+        "semanticContextSHA256": "f00875b6dfcbb7eb3f54c39aed0769e834525903d2071c8a8e4e35f87ebcaadf",
+        "subjectTitle": "Vihervyö tarvitsee hoitajia",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Alkuperäinen yleinen kasvien ja tavallisen funktionaalisen suojaverkon havainnollistus; ei nimetyn kohteen kuvaa, valokuvan kopiota tai koristeteosta.",
+          "QA": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/nouakchott/assets/nouakchott-l3-suojatut-taimet-20261012-v1/image.png",
+            "nativeSHA256": "178d8fe1686c161da788cf0ca498521391598ff7668848a8868db30d67f95506",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "manifestHashMatches": true,
+            "personallyViewed": true,
+            "viewTool": "view_image",
+            "visualFindingsFi": "Nuoria taimia tavallisten pyöreiden verkkosuojien sisällä, tumma kasteltu maa niiden tyvellä. Taimien varret/lehtiruodit, verkon tuet ja maa uskottavat. Verkon valmistettu ruudukko luonteva; ei synteettistä kuori-/hiekkatoistoa, henkilöitä tai tekstiä.",
+            "captionFi": "Havainnekuva nuorten taimien hoidosta ja suojaamisesta, ei nimetyn vihervyön nykytilanteesta.",
+            "sourceAndTargetCheckFi": "Luettu L3 Vihervyö tarvitsee hoitajia ja FAO-manuaalin taimien hoito/istutus/suojaus. CaptionFi Havainnekuva nuorten taimien hoidosta ja suojaamisesta, ei nimetyn vihervyön nykytilanteesta; ei väitettä hankkeen lajeista tai täsmälleen käytetystä verkkotyypistä.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/nouakchott/sisalto.json",
+            "sourceEvidence": [
+              {
+                "url": "https://www.fao.org/4/i1488e/i1488e.pdf",
+                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/nouakchott-A/fao-manual.txt",
+                "facts": "Nouakchottin hankkeen istutus, taimien hoito ja suojaaminen; kuva ei väitä hankkeen tarkkaa lajistoa tai nykyistä laajuutta."
+              },
+              {
+                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/nouakchott/sisalto.json",
+                "facts": "L3 kuvaa nuorten istutusten suojaamista laidunnukselta ja paikallisten hoitoa."
+              }
+            ]
+          },
+          "qaReason": "Taimien ja funktionaalisen suojaverkon yleishavainne vastaa L3:n hoito-/suojausaihetta."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva nuorten taimien hoidosta ja suojaamisesta, ei nimetyn vihervyön nykytilanteesta.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/nouakchott/illustration-qa-extra.json",
+        "fileSHA256": "bd75a82892d31a720b72351f7ad876d7df0f171d29293695fbca0ddddc0e32ec",
+        "item": {
+          "slot": "L3",
+          "targetJsonPath": "$.kaupunkilehti[1].nostot[2]",
+          "assetID": "nouakchott-l3-suojatut-taimet-20261012-v1",
+          "sha256": "178d8fe1686c161da788cf0ca498521391598ff7668848a8868db30d67f95506",
+          "verdict": "accepted",
+          "reason": "Taimien ja funktionaalisen suojaverkon yleishavainne vastaa L3:n hoito-/suojausaihetta.",
+          "evidence": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/nouakchott/assets/nouakchott-l3-suojatut-taimet-20261012-v1/image.png",
+            "nativeSHA256": "178d8fe1686c161da788cf0ca498521391598ff7668848a8868db30d67f95506",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "manifestHashMatches": true,
+            "personallyViewed": true,
+            "viewTool": "view_image",
+            "visualFindingsFi": "Nuoria taimia tavallisten pyöreiden verkkosuojien sisällä, tumma kasteltu maa niiden tyvellä. Taimien varret/lehtiruodit, verkon tuet ja maa uskottavat. Verkon valmistettu ruudukko luonteva; ei synteettistä kuori-/hiekkatoistoa, henkilöitä tai tekstiä.",
+            "captionFi": "Havainnekuva nuorten taimien hoidosta ja suojaamisesta, ei nimetyn vihervyön nykytilanteesta.",
+            "sourceAndTargetCheckFi": "Luettu L3 Vihervyö tarvitsee hoitajia ja FAO-manuaalin taimien hoito/istutus/suojaus. CaptionFi Havainnekuva nuorten taimien hoidosta ja suojaamisesta, ei nimetyn vihervyön nykytilanteesta; ei väitettä hankkeen lajeista tai täsmälleen käytetystä verkkotyypistä.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/nouakchott/sisalto.json",
+            "sourceEvidence": [
+              {
+                "url": "https://www.fao.org/4/i1488e/i1488e.pdf",
+                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/nouakchott-A/fao-manual.txt",
+                "facts": "Nouakchottin hankkeen istutus, taimien hoito ja suojaaminen; kuva ei väitä hankkeen tarkkaa lajistoa tai nykyistä laajuutta."
+              },
+              {
+                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/nouakchott/sisalto.json",
+                "facts": "L3 kuvaa nuorten istutusten suojaamista laidunnukselta ja paikallisten hoitoa."
+              }
+            ]
+          },
+          "reviewedAt": "2026-10-12T18:30:07.972319+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/nouakchott/qa.json",
+            "sha256": "f373a0e2664e7420b9c20b33a1f49e512d3754119e3e37a74b0e64742b378e11"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/nouakchott/illustration-qa-extra.json",
+            "sha256": "bd75a82892d31a720b72351f7ad876d7df0f171d29293695fbca0ddddc0e32ec"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/nouakchott/nouakchott-l3-suojatut-taimet-20261012-v1-178d8fe1686c.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/nouakchott/nouakchott-l3-suojatut-taimet-20261012-v1-178d8fe1686c.png?t=938883d8e7b34371",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/nouakchott/nouakchott-l3-suojatut-taimet-20261012-v1-178d8fe1686c.png",
+        "sha256": "938883d8e7b34371b6f2ea6d4ed5d1bbd010d1003f19614dea5a8f3553e8288c",
+        "bytes": 2898094,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "nouakchott-l3-suojatut-taimet-20261012-v1",
+        "nativeSHA256": "178d8fe1686c161da788cf0ca498521391598ff7668848a8868db30d67f95506",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e04/nouakchott/nouakchott-l3-suojatut-taimet-20261012-v1-178d8fe1686c.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e04",
+        "city": "nouakchott",
+        "slot": "L3",
+        "targetJsonPath": "$.kaupunkilehti[1].nostot[2]",
+        "verifiedAt": "2026-10-12T18:30:59.978654+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e04/nouakchott/nouakchott-l3-suojatut-taimet-20261012-v1-178d8fe1686c.png",
+        "sha256": "938883d8e7b34371b6f2ea6d4ed5d1bbd010d1003f19614dea5a8f3553e8288c",
+        "bytes": 2898094,
+        "SHAReadAt": "2026-10-12T18:30:08.729672+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "178d8fe1686c161da788cf0ca498521391598ff7668848a8868db30d67f95506",
+        "rgbPixelSHA256": "211c859761a622aad93cd6af6d281d4297f9ff5f8d56eff1ee44cfc6292b1d99",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "3425b41b5887f72b7e43a9d4034504e208fb758f38cd83d70f721826272972e2",
+      "targetAfterSHA256": "f00875b6dfcbb7eb3f54c39aed0769e834525903d2071c8a8e4e35f87ebcaadf",
+      "contextAfterSHA256": "f00875b6dfcbb7eb3f54c39aed0769e834525903d2071c8a8e4e35f87ebcaadf",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e04",
@@ -1925,7 +1941,7 @@
         3096
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/nouakchott/sisalto.json",
-      "sourceContentSHA256": "d0bdd61b0553a51f33fef44dcdb477a39cafa981e6df497e72de7698d03d7904",
+      "sourceContentSHA256": "3425b41b5887f72b7e43a9d4034504e208fb758f38cd83d70f721826272972e2",
       "semanticSourceBind": {
         "targetBeforeSHA256": "6003d665c358b4661e7370f8e7d5badc577f02429c74bfa8e42b6fbac35b6d24",
         "semanticContextSHA256": "6003d665c358b4661e7370f8e7d5badc577f02429c74bfa8e42b6fbac35b6d24",
@@ -1990,7 +2006,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/nouakchott/qa.json",
-        "fileSHA256": "9511bc35e7357716792f2425442b52c29b39bb017bb4671bbe019f733a0ff30e",
+        "fileSHA256": "f373a0e2664e7420b9c20b33a1f49e512d3754119e3e37a74b0e64742b378e11",
         "item": {
           "slot": "PHOTO",
           "targetJsonPath": "$.valokuva",
@@ -2034,7 +2050,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/nouakchott/qa.json",
-            "sha256": "9511bc35e7357716792f2425442b52c29b39bb017bb4671bbe019f733a0ff30e"
+            "sha256": "f373a0e2664e7420b9c20b33a1f49e512d3754119e3e37a74b0e64742b378e11"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/nouakchott/illustration-qa-extra.json",
@@ -2113,7 +2129,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "3425b41b5887f72b7e43a9d4034504e208fb758f38cd83d70f721826272972e2",
       "targetAfterSHA256": "6003d665c358b4661e7370f8e7d5badc577f02429c74bfa8e42b6fbac35b6d24",
-      "contextAfterSHA256": "6003d665c358b4661e7370f8e7d5badc577f02429c74bfa8e42b6fbac35b6d24"
+      "contextAfterSHA256": "6003d665c358b4661e7370f8e7d5badc577f02429c74bfa8e42b6fbac35b6d24",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e04",
@@ -2166,7 +2184,7 @@
         960
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/nouakchott/sisalto.json",
-      "sourceContentSHA256": "d0bdd61b0553a51f33fef44dcdb477a39cafa981e6df497e72de7698d03d7904",
+      "sourceContentSHA256": "3425b41b5887f72b7e43a9d4034504e208fb758f38cd83d70f721826272972e2",
       "semanticSourceBind": {
         "targetBeforeSHA256": "073a5e5d8f83133f22f4e28185b30059fed9fbb6bc1f00e4840882e2ca794706",
         "semanticContextSHA256": "073a5e5d8f83133f22f4e28185b30059fed9fbb6bc1f00e4840882e2ca794706",
@@ -2231,7 +2249,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/nouakchott/qa.json",
-        "fileSHA256": "9511bc35e7357716792f2425442b52c29b39bb017bb4671bbe019f733a0ff30e",
+        "fileSHA256": "f373a0e2664e7420b9c20b33a1f49e512d3754119e3e37a74b0e64742b378e11",
         "item": {
           "slot": "C1",
           "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
@@ -2275,7 +2293,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/nouakchott/qa.json",
-            "sha256": "9511bc35e7357716792f2425442b52c29b39bb017bb4671bbe019f733a0ff30e"
+            "sha256": "f373a0e2664e7420b9c20b33a1f49e512d3754119e3e37a74b0e64742b378e11"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/nouakchott/illustration-qa-extra.json",
@@ -2352,7 +2370,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "3425b41b5887f72b7e43a9d4034504e208fb758f38cd83d70f721826272972e2",
       "targetAfterSHA256": "073a5e5d8f83133f22f4e28185b30059fed9fbb6bc1f00e4840882e2ca794706",
-      "contextAfterSHA256": "073a5e5d8f83133f22f4e28185b30059fed9fbb6bc1f00e4840882e2ca794706"
+      "contextAfterSHA256": "073a5e5d8f83133f22f4e28185b30059fed9fbb6bc1f00e4840882e2ca794706",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e04",
@@ -2405,7 +2425,7 @@
         960
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/nouakchott/sisalto.json",
-      "sourceContentSHA256": "d0bdd61b0553a51f33fef44dcdb477a39cafa981e6df497e72de7698d03d7904",
+      "sourceContentSHA256": "3425b41b5887f72b7e43a9d4034504e208fb758f38cd83d70f721826272972e2",
       "semanticSourceBind": {
         "targetBeforeSHA256": "ecc9f706d9e1a0c5d163e951f93341448d4ef6c888d3083b5db1dbaf7a926829",
         "semanticContextSHA256": "ecc9f706d9e1a0c5d163e951f93341448d4ef6c888d3083b5db1dbaf7a926829",
@@ -2470,7 +2490,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/nouakchott/qa.json",
-        "fileSHA256": "9511bc35e7357716792f2425442b52c29b39bb017bb4671bbe019f733a0ff30e",
+        "fileSHA256": "f373a0e2664e7420b9c20b33a1f49e512d3754119e3e37a74b0e64742b378e11",
         "item": {
           "slot": "C2",
           "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[1]",
@@ -2514,7 +2534,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/nouakchott/qa.json",
-            "sha256": "9511bc35e7357716792f2425442b52c29b39bb017bb4671bbe019f733a0ff30e"
+            "sha256": "f373a0e2664e7420b9c20b33a1f49e512d3754119e3e37a74b0e64742b378e11"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/nouakchott/illustration-qa-extra.json",
@@ -2591,7 +2611,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "3425b41b5887f72b7e43a9d4034504e208fb758f38cd83d70f721826272972e2",
       "targetAfterSHA256": "ecc9f706d9e1a0c5d163e951f93341448d4ef6c888d3083b5db1dbaf7a926829",
-      "contextAfterSHA256": "ecc9f706d9e1a0c5d163e951f93341448d4ef6c888d3083b5db1dbaf7a926829"
+      "contextAfterSHA256": "ecc9f706d9e1a0c5d163e951f93341448d4ef6c888d3083b5db1dbaf7a926829",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e04",
@@ -2644,10 +2666,10 @@
         3712
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/nouakchott/sisalto.json",
-      "sourceContentSHA256": "d0bdd61b0553a51f33fef44dcdb477a39cafa981e6df497e72de7698d03d7904",
+      "sourceContentSHA256": "3425b41b5887f72b7e43a9d4034504e208fb758f38cd83d70f721826272972e2",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "targetBeforeSHA256": "81e8c370373d701b9acc6210a28138820fb0faaa8cbac60cd69ed8bd21a5afaa",
+        "semanticContextSHA256": "81e8c370373d701b9acc6210a28138820fb0faaa8cbac60cd69ed8bd21a5afaa",
         "subjectTitle": "Nouakchott",
         "targetState": "existing-target"
       },
@@ -2738,7 +2760,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/nouakchott/qa.json",
-        "fileSHA256": "9511bc35e7357716792f2425442b52c29b39bb017bb4671bbe019f733a0ff30e",
+        "fileSHA256": "f373a0e2664e7420b9c20b33a1f49e512d3754119e3e37a74b0e64742b378e11",
         "item": {
           "slot": "C3",
           "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[2]",
@@ -2801,7 +2823,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/nouakchott/qa.json",
-            "sha256": "9511bc35e7357716792f2425442b52c29b39bb017bb4671bbe019f733a0ff30e"
+            "sha256": "f373a0e2664e7420b9c20b33a1f49e512d3754119e3e37a74b0e64742b378e11"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/nouakchott/illustration-qa-extra.json",
@@ -2842,10 +2864,10 @@
       "producerExportProof": null,
       "technicalExportProof": null,
       "priorMediaFields": {
-        "tiedosto": "",
-        "lahde": "",
-        "selite": "",
-        "lyhyt": ""
+        "tiedosto": "ISS062-E-81454 - View of Mauritania.jpg",
+        "lahde": "Earth Science and Remote Sensing Unit, NASA Johnson Space Center, Wikimedia Commons (PD)",
+        "selite": "Nouakchottin rannikko ja katuverkko ISS-asemalta otetussa valokuvassa5.3.2020.",
+        "lyhyt": "Nouakchottin rannikko ja katuverkko ISS-asemalta otetussa valokuvassa5.3.2020."
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -2878,7 +2900,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "3425b41b5887f72b7e43a9d4034504e208fb758f38cd83d70f721826272972e2",
       "targetAfterSHA256": "81e8c370373d701b9acc6210a28138820fb0faaa8cbac60cd69ed8bd21a5afaa",
-      "contextAfterSHA256": "81e8c370373d701b9acc6210a28138820fb0faaa8cbac60cd69ed8bd21a5afaa"
+      "contextAfterSHA256": "81e8c370373d701b9acc6210a28138820fb0faaa8cbac60cd69ed8bd21a5afaa",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e04",
@@ -2931,10 +2955,10 @@
         3712
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/nouakchott/sisalto.json",
-      "sourceContentSHA256": "d0bdd61b0553a51f33fef44dcdb477a39cafa981e6df497e72de7698d03d7904",
+      "sourceContentSHA256": "3425b41b5887f72b7e43a9d4034504e208fb758f38cd83d70f721826272972e2",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "577cc9340112109ecfa9a7dc241ae577daad6dd899f600de81f4e27cfe3a1a19",
-        "semanticContextSHA256": "577cc9340112109ecfa9a7dc241ae577daad6dd899f600de81f4e27cfe3a1a19",
+        "targetBeforeSHA256": "87ece8ea9f0ab3ead33b3c6afe2025ce6418474a07fdcbb52957b14edb575c80",
+        "semanticContextSHA256": "87ece8ea9f0ab3ead33b3c6afe2025ce6418474a07fdcbb52957b14edb575c80",
         "subjectTitle": "Ruudukko täyttyi kaupasta",
         "targetState": "existing-target"
       },
@@ -3001,7 +3025,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/nouakchott/qa.json",
-        "fileSHA256": "9511bc35e7357716792f2425442b52c29b39bb017bb4671bbe019f733a0ff30e",
+        "fileSHA256": "f373a0e2664e7420b9c20b33a1f49e512d3754119e3e37a74b0e64742b378e11",
         "item": {
           "slot": "K1",
           "targetJsonPath": "$.kaupunkilehti[0].nostot[0]",
@@ -3046,7 +3070,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/nouakchott/qa.json",
-            "sha256": "9511bc35e7357716792f2425442b52c29b39bb017bb4671bbe019f733a0ff30e"
+            "sha256": "f373a0e2664e7420b9c20b33a1f49e512d3754119e3e37a74b0e64742b378e11"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/nouakchott/illustration-qa-extra.json",
@@ -3087,10 +3111,10 @@
       "producerExportProof": null,
       "technicalExportProof": null,
       "priorMediaFields": {
-        "tiedosto": "",
-        "lahde": "",
-        "selite": "",
-        "lyhyt": ""
+        "tiedosto": "ISS062-E-255 - View of Earth.jpg",
+        "lahde": "Earth Science and Remote Sensing Unit, NASA Johnson Space Center, Wikimedia Commons (PD)",
+        "selite": "Nouakchottin katuverkko ja rannikko ISS-avaruusasemalta otetussa valokuvassa 6.2.2020.",
+        "lyhyt": "Nouakchottin katuverkko ja rannikko ISS-avaruusasemalta otetussa valokuvassa 6.2.2020."
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -3123,7 +3147,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "3425b41b5887f72b7e43a9d4034504e208fb758f38cd83d70f721826272972e2",
       "targetAfterSHA256": "87ece8ea9f0ab3ead33b3c6afe2025ce6418474a07fdcbb52957b14edb575c80",
-      "contextAfterSHA256": "87ece8ea9f0ab3ead33b3c6afe2025ce6418474a07fdcbb52957b14edb575c80"
+      "contextAfterSHA256": "87ece8ea9f0ab3ead33b3c6afe2025ce6418474a07fdcbb52957b14edb575c80",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e04",
@@ -3176,7 +3202,7 @@
         1128
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/nouakchott/sisalto.json",
-      "sourceContentSHA256": "d0bdd61b0553a51f33fef44dcdb477a39cafa981e6df497e72de7698d03d7904",
+      "sourceContentSHA256": "3425b41b5887f72b7e43a9d4034504e208fb758f38cd83d70f721826272972e2",
       "semanticSourceBind": {
         "targetBeforeSHA256": "3be877578b3eb94c2aa0b68ad26fd99aa488b26cf0160b7cfa6c028de4314b5a",
         "semanticContextSHA256": "3be877578b3eb94c2aa0b68ad26fd99aa488b26cf0160b7cfa6c028de4314b5a",
@@ -3237,7 +3263,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/nouakchott/qa.json",
-        "fileSHA256": "9511bc35e7357716792f2425442b52c29b39bb017bb4671bbe019f733a0ff30e",
+        "fileSHA256": "f373a0e2664e7420b9c20b33a1f49e512d3754119e3e37a74b0e64742b378e11",
         "item": {
           "slot": "K3",
           "targetJsonPath": "$.kaupunkilehti[0].nostot[2]",
@@ -3279,7 +3305,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/nouakchott/qa.json",
-            "sha256": "9511bc35e7357716792f2425442b52c29b39bb017bb4671bbe019f733a0ff30e"
+            "sha256": "f373a0e2664e7420b9c20b33a1f49e512d3754119e3e37a74b0e64742b378e11"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/nouakchott/illustration-qa-extra.json",
@@ -3356,7 +3382,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "3425b41b5887f72b7e43a9d4034504e208fb758f38cd83d70f721826272972e2",
       "targetAfterSHA256": "3be877578b3eb94c2aa0b68ad26fd99aa488b26cf0160b7cfa6c028de4314b5a",
-      "contextAfterSHA256": "3be877578b3eb94c2aa0b68ad26fd99aa488b26cf0160b7cfa6c028de4314b5a"
+      "contextAfterSHA256": "3be877578b3eb94c2aa0b68ad26fd99aa488b26cf0160b7cfa6c028de4314b5a",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e04",
@@ -3409,7 +3437,7 @@
         2592
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/nouakchott/sisalto.json",
-      "sourceContentSHA256": "d0bdd61b0553a51f33fef44dcdb477a39cafa981e6df497e72de7698d03d7904",
+      "sourceContentSHA256": "3425b41b5887f72b7e43a9d4034504e208fb758f38cd83d70f721826272972e2",
       "semanticSourceBind": {
         "targetBeforeSHA256": "89c478cd2e5d477a64452c16ce10ae99e7a9d1e3c9330ff3716e754002b55c5e",
         "semanticContextSHA256": "89c478cd2e5d477a64452c16ce10ae99e7a9d1e3c9330ff3716e754002b55c5e",
@@ -3474,7 +3502,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/nouakchott/qa.json",
-        "fileSHA256": "9511bc35e7357716792f2425442b52c29b39bb017bb4671bbe019f733a0ff30e",
+        "fileSHA256": "f373a0e2664e7420b9c20b33a1f49e512d3754119e3e37a74b0e64742b378e11",
         "item": {
           "slot": "L4",
           "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
@@ -3520,7 +3548,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/nouakchott/qa.json",
-            "sha256": "9511bc35e7357716792f2425442b52c29b39bb017bb4671bbe019f733a0ff30e"
+            "sha256": "f373a0e2664e7420b9c20b33a1f49e512d3754119e3e37a74b0e64742b378e11"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/nouakchott/illustration-qa-extra.json",
@@ -3597,10 +3625,14 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "3425b41b5887f72b7e43a9d4034504e208fb758f38cd83d70f721826272972e2",
       "targetAfterSHA256": "89c478cd2e5d477a64452c16ce10ae99e7a9d1e3c9330ff3716e754002b55c5e",
-      "contextAfterSHA256": "89c478cd2e5d477a64452c16ce10ae99e7a9d1e3c9330ff3716e754002b55c5e"
+      "contextAfterSHA256": "89c478cd2e5d477a64452c16ce10ae99e7a9d1e3c9330ff3716e754002b55c5e",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     }
   ],
   "runtimeIntegrationPending": true,
-  "ownerAcceptedNotImpliedByAuthorization": true,
-  "gameIntegrated": false
+  "ownerAcceptedNotImpliedByAuthorization": false,
+  "gameIntegrated": false,
+  "allAssetsExplicitlyOwnerApproved": true,
+  "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
 }

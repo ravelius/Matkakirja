@@ -2,9 +2,244 @@
   "schemaVersion": "capital-city-role-assets/v1",
   "era": "e04",
   "city": "praia",
-  "authorization": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+  "authorization": "hyväksyn kaikki tekemäsi kuvat. toimita ne claudelle. claudelta saat uusia ohjeita jatkoa varten",
   "sourceContentAfterSHA256": "3be82f396feb437f6b25eb02a8f2e11d6acc7c77c14a9cf5c4e3225170146976",
   "assets": [
+    {
+      "era": "e04",
+      "city": "praia",
+      "slot": "TRAVELER",
+      "type": "illustration",
+      "assetID": "praia-traveler-cachupa-20261012-v1",
+      "galleryImageID": "praia-traveler-cachupa-20261012-v1",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "matkailijalle",
+        "kuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/praia/praia-traveler-cachupa-20261012-v1-b69cda023176.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Cachupan yleinen pystyhavainne, ei nimetyn Praian ravintolan annos tai paikkavalokuva.",
+        "lyhyt": "Cachupan yleinen pystyhavainne, ei nimetyn Praian ravintolan annos tai paikkavalokuva."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/praia/praia-traveler-cachupa-20261012-v1-b69cda023176.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Cachupan yleinen pystyhavainne, ei nimetyn Praian ravintolan annos tai paikkavalokuva.",
+        "lyhyt": "Cachupan yleinen pystyhavainne, ei nimetyn Praian ravintolan annos tai paikkavalokuva."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "b69cda02317624dd64fb670ee1c615019545e081a37e06fc02215de78f15e376",
+      "exportSHA256": "290024372612e3a3fab7dd64eeda5ab3565038a050f8dd059e2b857de517fbfc",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/praia/praia-traveler-cachupa-20261012-v1-b69cda023176.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/praia/praia-traveler-cachupa-20261012-v1-b69cda023176.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e04/praia/praia-traveler-cachupa-20261012-v1-b69cda023176.png",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/praia/sisalto.json",
+      "sourceContentSHA256": "3be82f396feb437f6b25eb02a8f2e11d6acc7c77c14a9cf5c4e3225170146976",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "6cb6a934ec6b10a486a54ceeb3fcd5211098aa33105f98dd8a0e6a320e596ce9",
+        "subjectTitle": "Matkailijalle",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Alkuperäinen tavallisen ruoan ja koristeettoman astian havainne; ei todellinen museoesine, artistin koriste, valokuvakopio, henkilö tai rakennus.",
+          "QA": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/praia/assets/praia-traveler-cachupa-20261012-v1/image.png",
+            "nativeSHA256": "b69cda02317624dd64fb670ee1c615019545e081a37e06fc02215de78f15e376",
+            "nativeDimensions": [
+              1024,
+              1536
+            ],
+            "manifestHashMatches": true,
+            "personallyViewed": true,
+            "viewTool": "view_image",
+            "visualFindingsFi": "Alkuperäisessä 1024×1536 PNG:ssä on maissia, papuja ja kasviksia sisältävä paksu pataruoka tavallisessa kulhossa. Ainekset erottuvat ja ruoan, kastikkeen sekä astian pinnat ovat uskottavia. Ei ihmisiä, tekstikoristelua, logoja, vesileimaa tai paikkaan viittaavaa rakennusta.",
+            "captionFi": "Cachupan yleinen pystyhavainne, ei nimetyn Praian ravintolan annos tai paikkavalokuva.",
+            "sourceAndTargetCheckFi": "Paikallinen Cape_Verdean_cuisine.txt tukee maissin ja papujen merkitystä sekä cachupaa pataruokana. Nykyisen oppaan ruokajaksossa käsitellään samoja aineksia. TRAVELER-kohde on olemassa tyhjällä kuvaoliolla. Kuvateksti nimeää maan ruoan yleisen havainteen eikä tietyn Praian ravintolan annosta tai paikkavalokuvaa.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/praia/sisalto.json",
+            "sourceEvidence": [
+              {
+                "url": "https://en.wikipedia.org/wiki/Cape_Verdean_cuisine",
+                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/praia-A/Cape_Verdean_cuisine.txt",
+                "facts": "Maissi ja pavut perusaineita; cachupa maissipohjainen pataruoka, eri versioita."
+              },
+              {
+                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/praia/sisalto.json",
+                "facts": "Oppaan maissi/pavut/kala ovat maan ruokataustaa; ei kaupungin yksinoikeutta tai nimetyn annoksen claimia."
+              }
+            ]
+          },
+          "qaReason": "Hyväksytty cachupan yleiseksi pystyhavainnekuvaksi; natiivin kuvan sivusuhde 0,667 täyttää TRAVELER-vaatimuksen."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Cachupan yleinen pystyhavainne, ei nimetyn Praian ravintolan annos tai paikkavalokuva.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/praia/illustration-qa-extra.json",
+        "fileSHA256": "c05b0e6792d60193f27b5c34c8efd92b622f99d42f03854d057c671ed0b6332d",
+        "item": {
+          "slot": "TRAVELER",
+          "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
+          "assetID": "praia-traveler-cachupa-20261012-v1",
+          "sha256": "b69cda02317624dd64fb670ee1c615019545e081a37e06fc02215de78f15e376",
+          "verdict": "accepted",
+          "reason": "Hyväksytty cachupan yleiseksi pystyhavainnekuvaksi; natiivin kuvan sivusuhde 0,667 täyttää TRAVELER-vaatimuksen.",
+          "evidence": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/praia/assets/praia-traveler-cachupa-20261012-v1/image.png",
+            "nativeSHA256": "b69cda02317624dd64fb670ee1c615019545e081a37e06fc02215de78f15e376",
+            "nativeDimensions": [
+              1024,
+              1536
+            ],
+            "manifestHashMatches": true,
+            "personallyViewed": true,
+            "viewTool": "view_image",
+            "visualFindingsFi": "Alkuperäisessä 1024×1536 PNG:ssä on maissia, papuja ja kasviksia sisältävä paksu pataruoka tavallisessa kulhossa. Ainekset erottuvat ja ruoan, kastikkeen sekä astian pinnat ovat uskottavia. Ei ihmisiä, tekstikoristelua, logoja, vesileimaa tai paikkaan viittaavaa rakennusta.",
+            "captionFi": "Cachupan yleinen pystyhavainne, ei nimetyn Praian ravintolan annos tai paikkavalokuva.",
+            "sourceAndTargetCheckFi": "Paikallinen Cape_Verdean_cuisine.txt tukee maissin ja papujen merkitystä sekä cachupaa pataruokana. Nykyisen oppaan ruokajaksossa käsitellään samoja aineksia. TRAVELER-kohde on olemassa tyhjällä kuvaoliolla. Kuvateksti nimeää maan ruoan yleisen havainteen eikä tietyn Praian ravintolan annosta tai paikkavalokuvaa.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/praia/sisalto.json",
+            "sourceEvidence": [
+              {
+                "url": "https://en.wikipedia.org/wiki/Cape_Verdean_cuisine",
+                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/praia-A/Cape_Verdean_cuisine.txt",
+                "facts": "Maissi ja pavut perusaineita; cachupa maissipohjainen pataruoka, eri versioita."
+              },
+              {
+                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/praia/sisalto.json",
+                "facts": "Oppaan maissi/pavut/kala ovat maan ruokataustaa; ei kaupungin yksinoikeutta tai nimetyn annoksen claimia."
+              }
+            ]
+          },
+          "reviewedAt": "2026-10-12T20:50:08.015379+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/praia/qa.json",
+            "sha256": "cdb7e1c8c880cfea21494f9a9f2da2bbed301e4cf6948dd9c75b682ff77182c1"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/praia/illustration-qa-extra.json",
+            "sha256": "c05b0e6792d60193f27b5c34c8efd92b622f99d42f03854d057c671ed0b6332d"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/praia/praia-traveler-cachupa-20261012-v1-b69cda023176.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/praia/praia-traveler-cachupa-20261012-v1-b69cda023176.png?t=290024372612e3a3",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/praia/praia-traveler-cachupa-20261012-v1-b69cda023176.png",
+        "sha256": "290024372612e3a3fab7dd64eeda5ab3565038a050f8dd059e2b857de517fbfc",
+        "bytes": 2334700,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "praia-traveler-cachupa-20261012-v1",
+        "nativeSHA256": "b69cda02317624dd64fb670ee1c615019545e081a37e06fc02215de78f15e376",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e04/praia/praia-traveler-cachupa-20261012-v1-b69cda023176.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e04",
+        "city": "praia",
+        "slot": "TRAVELER",
+        "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
+        "verifiedAt": "2026-10-13T05:53:33.561404+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e04/praia/praia-traveler-cachupa-20261012-v1-b69cda023176.png",
+        "sha256": "290024372612e3a3fab7dd64eeda5ab3565038a050f8dd059e2b857de517fbfc",
+        "bytes": 2334700,
+        "SHAReadAt": "2026-10-12T20:50:39.000159+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1024,
+        "height": 1536,
+        "pixelWidth": 1024,
+        "pixelHeight": 1536,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "b69cda02317624dd64fb670ee1c615019545e081a37e06fc02215de78f15e376",
+        "rgbPixelSHA256": "7f0b05c39e3af7f9b2bdb103745b39e0d0d7ec04be07050558a191e83c46ce90",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "3be82f396feb437f6b25eb02a8f2e11d6acc7c77c14a9cf5c4e3225170146976",
+      "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+      "contextAfterSHA256": "6cb6a934ec6b10a486a54ceeb3fcd5211098aa33105f98dd8a0e6a320e596ce9",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+    },
     {
       "era": "e04",
       "city": "praia",
@@ -268,7 +503,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "3be82f396feb437f6b25eb02a8f2e11d6acc7c77c14a9cf5c4e3225170146976",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "f870baeb5ba16f6cf2da2c720d2a17df59cb15a5a2b3d2b1949936d3236d19a9"
+      "contextAfterSHA256": "f870baeb5ba16f6cf2da2c720d2a17df59cb15a5a2b3d2b1949936d3236d19a9",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e04",
@@ -526,240 +763,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "3be82f396feb437f6b25eb02a8f2e11d6acc7c77c14a9cf5c4e3225170146976",
       "targetAfterSHA256": "06b0e9e6b119c459ca9146b4b26c1a1f681159556b219d544cb39506d1dcccdd",
-      "contextAfterSHA256": "06b0e9e6b119c459ca9146b4b26c1a1f681159556b219d544cb39506d1dcccdd"
-    },
-    {
-      "era": "e04",
-      "city": "praia",
-      "slot": "TRAVELER",
-      "type": "illustration",
-      "assetID": "praia-traveler-cachupa-20261012-v1",
-      "galleryImageID": "praia-traveler-cachupa-20261012-v1",
-      "commonsFile": null,
-      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
-      "targetTokens": [
-        "kaupunkilehti",
-        0,
-        "matkailijalle",
-        "kuva"
-      ],
-      "operation": "merge-media-fields-preserve-other-content",
-      "CmediaFieldPayload": {
-        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/praia/praia-traveler-cachupa-20261012-v1-b69cda023176.png",
-        "suora": true,
-        "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Cachupan yleinen pystyhavainne, ei nimetyn Praian ravintolan annos tai paikkavalokuva.",
-        "lyhyt": "Cachupan yleinen pystyhavainne, ei nimetyn Praian ravintolan annos tai paikkavalokuva."
-      },
-      "removeMediaKeys": [
-        "tiedosto"
-      ],
-      "CvalidatorCompatiblePayload": {},
-      "runtimeMediaFieldPayload": {
-        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/praia/praia-traveler-cachupa-20261012-v1-b69cda023176.png",
-        "suora": true,
-        "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Cachupan yleinen pystyhavainne, ei nimetyn Praian ravintolan annos tai paikkavalokuva.",
-        "lyhyt": "Cachupan yleinen pystyhavainne, ei nimetyn Praian ravintolan annos tai paikkavalokuva."
-      },
-      "runtimeRemoveMediaKeys": [
-        "tiedosto"
-      ],
-      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
-      "nativeSHA256": "b69cda02317624dd64fb670ee1c615019545e081a37e06fc02215de78f15e376",
-      "exportSHA256": "290024372612e3a3fab7dd64eeda5ab3565038a050f8dd059e2b857de517fbfc",
-      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/praia/praia-traveler-cachupa-20261012-v1-b69cda023176.png",
-      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/praia/praia-traveler-cachupa-20261012-v1-b69cda023176.png",
-      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e04/praia/praia-traveler-cachupa-20261012-v1-b69cda023176.png",
-      "dimensions": [
-        1024,
-        1536
-      ],
-      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/praia/sisalto.json",
-      "sourceContentSHA256": "3be82f396feb437f6b25eb02a8f2e11d6acc7c77c14a9cf5c4e3225170146976",
-      "semanticSourceBind": {
-        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "6cb6a934ec6b10a486a54ceeb3fcd5211098aa33105f98dd8a0e6a320e596ce9",
-        "subjectTitle": "Matkailijalle",
-        "targetState": "existing-target"
-      },
-      "attribution": {
-        "author": null,
-        "license": null,
-        "licenseUrl": null,
-        "sourcePage": null,
-        "originalUrl": null,
-        "rightsEvidence": {
-          "production": "Alkuperäinen tavallisen ruoan ja koristeettoman astian havainne; ei todellinen museoesine, artistin koriste, valokuvakopio, henkilö tai rakennus.",
-          "QA": {
-            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/praia/assets/praia-traveler-cachupa-20261012-v1/image.png",
-            "nativeSHA256": "b69cda02317624dd64fb670ee1c615019545e081a37e06fc02215de78f15e376",
-            "nativeDimensions": [
-              1024,
-              1536
-            ],
-            "manifestHashMatches": true,
-            "personallyViewed": true,
-            "viewTool": "view_image",
-            "visualFindingsFi": "Alkuperäisessä 1024×1536 PNG:ssä on maissia, papuja ja kasviksia sisältävä paksu pataruoka tavallisessa kulhossa. Ainekset erottuvat ja ruoan, kastikkeen sekä astian pinnat ovat uskottavia. Ei ihmisiä, tekstikoristelua, logoja, vesileimaa tai paikkaan viittaavaa rakennusta.",
-            "captionFi": "Cachupan yleinen pystyhavainne, ei nimetyn Praian ravintolan annos tai paikkavalokuva.",
-            "sourceAndTargetCheckFi": "Paikallinen Cape_Verdean_cuisine.txt tukee maissin ja papujen merkitystä sekä cachupaa pataruokana. Nykyisen oppaan ruokajaksossa käsitellään samoja aineksia. TRAVELER-kohde on olemassa tyhjällä kuvaoliolla. Kuvateksti nimeää maan ruoan yleisen havainteen eikä tietyn Praian ravintolan annosta tai paikkavalokuvaa.",
-            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/praia/sisalto.json",
-            "sourceEvidence": [
-              {
-                "url": "https://en.wikipedia.org/wiki/Cape_Verdean_cuisine",
-                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/praia-A/Cape_Verdean_cuisine.txt",
-                "facts": "Maissi ja pavut perusaineita; cachupa maissipohjainen pataruoka, eri versioita."
-              },
-              {
-                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/praia/sisalto.json",
-                "facts": "Oppaan maissi/pavut/kala ovat maan ruokataustaa; ei kaupungin yksinoikeutta tai nimetyn annoksen claimia."
-              }
-            ]
-          },
-          "qaReason": "Hyväksytty cachupan yleiseksi pystyhavainnekuvaksi; natiivin kuvan sivusuhde 0,667 täyttää TRAVELER-vaatimuksen."
-        }
-      },
-      "luentaMetadata": {
-        "existingImageLuenta": null,
-        "captionReadingText": "Cachupan yleinen pystyhavainne, ei nimetyn Praian ravintolan annos tai paikkavalokuva.",
-        "existingArticleAndSectionLuentaPreserved": true,
-        "audioGenerated": false,
-        "audioURL": null,
-        "imageSpecificAudioProvided": false,
-        "reuseAudioAllowedByThisPacket": false
-      },
-      "qaEvidence": {
-        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/praia/illustration-qa-extra.json",
-        "fileSHA256": "c05b0e6792d60193f27b5c34c8efd92b622f99d42f03854d057c671ed0b6332d",
-        "item": {
-          "slot": "TRAVELER",
-          "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
-          "assetID": "praia-traveler-cachupa-20261012-v1",
-          "sha256": "b69cda02317624dd64fb670ee1c615019545e081a37e06fc02215de78f15e376",
-          "verdict": "accepted",
-          "reason": "Hyväksytty cachupan yleiseksi pystyhavainnekuvaksi; natiivin kuvan sivusuhde 0,667 täyttää TRAVELER-vaatimuksen.",
-          "evidence": {
-            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/praia/assets/praia-traveler-cachupa-20261012-v1/image.png",
-            "nativeSHA256": "b69cda02317624dd64fb670ee1c615019545e081a37e06fc02215de78f15e376",
-            "nativeDimensions": [
-              1024,
-              1536
-            ],
-            "manifestHashMatches": true,
-            "personallyViewed": true,
-            "viewTool": "view_image",
-            "visualFindingsFi": "Alkuperäisessä 1024×1536 PNG:ssä on maissia, papuja ja kasviksia sisältävä paksu pataruoka tavallisessa kulhossa. Ainekset erottuvat ja ruoan, kastikkeen sekä astian pinnat ovat uskottavia. Ei ihmisiä, tekstikoristelua, logoja, vesileimaa tai paikkaan viittaavaa rakennusta.",
-            "captionFi": "Cachupan yleinen pystyhavainne, ei nimetyn Praian ravintolan annos tai paikkavalokuva.",
-            "sourceAndTargetCheckFi": "Paikallinen Cape_Verdean_cuisine.txt tukee maissin ja papujen merkitystä sekä cachupaa pataruokana. Nykyisen oppaan ruokajaksossa käsitellään samoja aineksia. TRAVELER-kohde on olemassa tyhjällä kuvaoliolla. Kuvateksti nimeää maan ruoan yleisen havainteen eikä tietyn Praian ravintolan annosta tai paikkavalokuvaa.",
-            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/praia/sisalto.json",
-            "sourceEvidence": [
-              {
-                "url": "https://en.wikipedia.org/wiki/Cape_Verdean_cuisine",
-                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/praia-A/Cape_Verdean_cuisine.txt",
-                "facts": "Maissi ja pavut perusaineita; cachupa maissipohjainen pataruoka, eri versioita."
-              },
-              {
-                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/praia/sisalto.json",
-                "facts": "Oppaan maissi/pavut/kala ovat maan ruokataustaa; ei kaupungin yksinoikeutta tai nimetyn annoksen claimia."
-              }
-            ]
-          },
-          "reviewedAt": "2026-10-12T20:50:08.015379+00:00"
-        },
-        "allSources": [
-          {
-            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/praia/qa.json",
-            "sha256": "cdb7e1c8c880cfea21494f9a9f2da2bbed301e4cf6948dd9c75b682ff77182c1"
-          },
-          {
-            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/praia/illustration-qa-extra.json",
-            "sha256": "c05b0e6792d60193f27b5c34c8efd92b622f99d42f03854d057c671ed0b6332d"
-          }
-        ]
-      },
-      "R2ByteVerification": {
-        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/praia/praia-traveler-cachupa-20261012-v1-b69cda023176.png",
-        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/praia/praia-traveler-cachupa-20261012-v1-b69cda023176.png?t=290024372612e3a3",
-        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/praia/praia-traveler-cachupa-20261012-v1-b69cda023176.png",
-        "sha256": "290024372612e3a3fab7dd64eeda5ab3565038a050f8dd059e2b857de517fbfc",
-        "bytes": 2334700,
-        "http": 200,
-        "mime": "image/png",
-        "cors": "https://matkakirja.app",
-        "cacheBustedPreflightHttp": 404,
-        "cacheBustedReadback": true,
-        "byteExactReadback": true,
-        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
-        "conditionalIfNoneMatch": "*",
-        "s3PutHttp": 200,
-        "assetID": "praia-traveler-cachupa-20261012-v1",
-        "nativeSHA256": "b69cda02317624dd64fb670ee1c615019545e081a37e06fc02215de78f15e376",
-        "canonicalReadbackByteExact": true,
-        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e04/praia/praia-traveler-cachupa-20261012-v1-b69cda023176.png",
-        "pixelIdenticalToQAAcceptedNative": true,
-        "era": "e04",
-        "city": "praia",
-        "slot": "TRAVELER",
-        "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
-        "verifiedAt": "2026-10-13T05:53:33.561404+00:00",
-        "ownerAcceptanceVerified": false,
-        "gameIntegrated": false,
-        "galleryVisibleVerified": false
-      },
-      "producerExportProof": null,
-      "technicalExportProof": {
-        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e04/praia/praia-traveler-cachupa-20261012-v1-b69cda023176.png",
-        "sha256": "290024372612e3a3fab7dd64eeda5ab3565038a050f8dd059e2b857de517fbfc",
-        "bytes": 2334700,
-        "SHAReadAt": "2026-10-12T20:50:39.000159+00:00",
-        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
-        "width": 1024,
-        "height": 1536,
-        "pixelWidth": 1024,
-        "pixelHeight": 1536,
-        "exifOrientation": 1,
-        "dimensionsBasis": "EXIF-oriented-display",
-        "format": "PNG",
-        "largeOriginalHeaderOnlyRead": false,
-        "nativeSHA256": "b69cda02317624dd64fb670ee1c615019545e081a37e06fc02215de78f15e376",
-        "rgbPixelSHA256": "7f0b05c39e3af7f9b2bdb103745b39e0d0d7ec04be07050558a191e83c46ce90",
-        "pixelIdenticalToQAAcceptedNative": true,
-        "sRGBProfileEmbedded": true,
-        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
-      },
-      "priorMediaFields": {
-        "tiedosto": "",
-        "lahde": "",
-        "selite": "",
-        "lyhyt": ""
-      },
-      "preservePreviousMediaObjects": true,
-      "authorization": {
-        "status": "waived-owner-review",
-        "authorizedByOwner": true,
-        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
-        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
-        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
-        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
-        "ownerAcceptanceImplied": false,
-        "QARequired": true,
-        "R2ByteVerificationRequired": true,
-        "galleryBeforeGameRequired": false,
-        "verifiedHumanMessageSource": {
-          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
-          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
-        }
-      },
-      "ownerAcceptanceVerified": false,
-      "gameIntegrated": false,
-      "gamePublicationVerified": false,
-      "inMemoryMergeVerified": true,
-      "CcommonsMetadataBound": false,
-      "roleManifestBound": true,
-      "sourceContentAfterSHA256": "3be82f396feb437f6b25eb02a8f2e11d6acc7c77c14a9cf5c4e3225170146976",
-      "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "6cb6a934ec6b10a486a54ceeb3fcd5211098aa33105f98dd8a0e6a320e596ce9"
+      "contextAfterSHA256": "06b0e9e6b119c459ca9146b4b26c1a1f681159556b219d544cb39506d1dcccdd",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e04",
@@ -992,7 +998,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "3be82f396feb437f6b25eb02a8f2e11d6acc7c77c14a9cf5c4e3225170146976",
       "targetAfterSHA256": "1d3ba4523fc9b72a03e4e187011ebf32a87b29c02a337b8bf3db74cee1785e02",
-      "contextAfterSHA256": "1d3ba4523fc9b72a03e4e187011ebf32a87b29c02a337b8bf3db74cee1785e02"
+      "contextAfterSHA256": "1d3ba4523fc9b72a03e4e187011ebf32a87b29c02a337b8bf3db74cee1785e02",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e04",
@@ -1244,7 +1252,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "3be82f396feb437f6b25eb02a8f2e11d6acc7c77c14a9cf5c4e3225170146976",
       "targetAfterSHA256": "2ac0c5dbd82a98a4cad9e5022a4a0f21cf336102b06acc9b740e3aa44638baf9",
-      "contextAfterSHA256": "2ac0c5dbd82a98a4cad9e5022a4a0f21cf336102b06acc9b740e3aa44638baf9"
+      "contextAfterSHA256": "2ac0c5dbd82a98a4cad9e5022a4a0f21cf336102b06acc9b740e3aa44638baf9",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e04",
@@ -1494,7 +1504,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "3be82f396feb437f6b25eb02a8f2e11d6acc7c77c14a9cf5c4e3225170146976",
       "targetAfterSHA256": "89052c2a24131816ce9ed54fa2f33026cfac34f03d784c453a67de76a95d4523",
-      "contextAfterSHA256": "89052c2a24131816ce9ed54fa2f33026cfac34f03d784c453a67de76a95d4523"
+      "contextAfterSHA256": "89052c2a24131816ce9ed54fa2f33026cfac34f03d784c453a67de76a95d4523",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e04",
@@ -1745,7 +1757,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "3be82f396feb437f6b25eb02a8f2e11d6acc7c77c14a9cf5c4e3225170146976",
       "targetAfterSHA256": "8d1b640c68a423f33aa596cee24ec7e87af140acab4c331bb79e964623993434",
-      "contextAfterSHA256": "8d1b640c68a423f33aa596cee24ec7e87af140acab4c331bb79e964623993434"
+      "contextAfterSHA256": "8d1b640c68a423f33aa596cee24ec7e87af140acab4c331bb79e964623993434",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e04",
@@ -1996,7 +2010,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "3be82f396feb437f6b25eb02a8f2e11d6acc7c77c14a9cf5c4e3225170146976",
       "targetAfterSHA256": "59481e2335026ebc3360695f57bf82a43de2b21df6dfbd55f98f78ef511a5a87",
-      "contextAfterSHA256": "59481e2335026ebc3360695f57bf82a43de2b21df6dfbd55f98f78ef511a5a87"
+      "contextAfterSHA256": "59481e2335026ebc3360695f57bf82a43de2b21df6dfbd55f98f78ef511a5a87",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e04",
@@ -2246,7 +2262,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "3be82f396feb437f6b25eb02a8f2e11d6acc7c77c14a9cf5c4e3225170146976",
       "targetAfterSHA256": "4a537bb305fdeffdb9a4a412d510d072cb7790918cc7a3926d737f4960907a29",
-      "contextAfterSHA256": "4a537bb305fdeffdb9a4a412d510d072cb7790918cc7a3926d737f4960907a29"
+      "contextAfterSHA256": "4a537bb305fdeffdb9a4a412d510d072cb7790918cc7a3926d737f4960907a29",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e04",
@@ -2479,7 +2497,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "3be82f396feb437f6b25eb02a8f2e11d6acc7c77c14a9cf5c4e3225170146976",
       "targetAfterSHA256": "076900cf10a36ca1000dfc0aca497b45291b9b36fc19f26b566aa6b1812f6720",
-      "contextAfterSHA256": "076900cf10a36ca1000dfc0aca497b45291b9b36fc19f26b566aa6b1812f6720"
+      "contextAfterSHA256": "076900cf10a36ca1000dfc0aca497b45291b9b36fc19f26b566aa6b1812f6720",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e04",
@@ -2730,10 +2750,14 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "3be82f396feb437f6b25eb02a8f2e11d6acc7c77c14a9cf5c4e3225170146976",
       "targetAfterSHA256": "136a7037b1be20bd9fdce9c3d78e6dd283fd4c2f6f7e594de889d5b6c53a41e1",
-      "contextAfterSHA256": "011a13f16071363346e85de33e2a3dda229a2c3dca391a1e4b703663a435ef8a"
+      "contextAfterSHA256": "011a13f16071363346e85de33e2a3dda229a2c3dca391a1e4b703663a435ef8a",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     }
   ],
   "runtimeIntegrationPending": true,
-  "ownerAcceptedNotImpliedByAuthorization": true,
-  "gameIntegrated": false
+  "ownerAcceptedNotImpliedByAuthorization": false,
+  "gameIntegrated": false,
+  "allAssetsExplicitlyOwnerApproved": true,
+  "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
 }
