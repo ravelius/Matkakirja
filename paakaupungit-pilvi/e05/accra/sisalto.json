@@ -14,8 +14,8 @@
     }
   },
   "artikkeli": {
-    "intro": "Accra kasvoi **Guineanlahden rannalle**, vanhojen Ga-yhteisöjen asutusten ympärille. Nykyinen Ghanan pääkaupunki yhdistää markkinakortteleita, opiskelupaikkoja ja meren äärellä eläviä kaupunginosia. Sen vanhaan ytimeen kuuluvat Jamestown ja Usshertown, joissa asuminen, kauppa ja kalastus jatkuvat rinnakkain.\n\nVuonna 1873 rannikon eurooppalaiset kauppalinnoitukset olivat jo olemassa. Accrasta tuli Kultarannikon hallintopääkaupunki vasta myöhemmin 1800-luvulla. Myös nykyinen Holy Trinity -katedraali kuuluu sitä myöhempään rakennuskerrokseen.\n\nKaupungin arkeen pääsee käsiksi **Makolan markkinoilla**: samalta kauppa-alueelta voi etsiä ruokaa ja sen valmistamiseen tarvittavan kattilan. Tro tro -pikkubussit kuljettavat yhteistä kyytiä tarvitsevia, ja Legonissa opiskellaan Ghanan yliopistossa. Accra avautuu parhaiten useasta suunnasta, sillä rannikon historia, tämän päivän työ ja kaupungin vihreät paikat elävät lähekkäin.",
-    "teksti": "Accran vanhat rannikkokaupunginosat ovat myös nykyisiä asuin- ja työympäristöjä. Jamestownin ja Usshertownin Ga-yhteisöissä kalastus ja kaupankäynti kuuluvat kaupungin pitkään historiaan. Linnoitukset kertovat eurooppalaisesta vallankäytöstä, mutta niiden ulkopuolella historia jatkuu tavallisena kaupunkielämänä.\n\nMakola tekee kaupasta konkreettista. Keskustan kauppa-alueella myydään tuoreiden elintarvikkeiden rinnalla vaatteita, työkaluja ja kattiloita. Tro tro -pikkubussit puolestaan yhdistävät liikenneterminaaleja ja ottavat matkustajia myös reittien varrelta. Pieni ajoneuvo on osa laajaa arkista verkkoa.\n\nRannikon vesi näyttää erilaiselta eri paikoissa. Korlen laguuni liittyy Jamestownin asutushistoriaan ja kaupungin muutoksiin; Labadi on merellinen vapaa-ajan ympäristö. Kasvitieteelliseen puutarhaan vie retki Aburiin, omalle ylängön paikkakunnalleen Accran ulkopuolelle."
+    "intro": "Accra kasvoi **Guineanlahden rannalle**, vanhojen Ga-yhteisöjen asutusten ympärille. Nykyinen Ghanan pääkaupunki yhdistää markkinakortteleita, opiskelupaikkoja ja meren äärellä eläviä kaupunginosia. Sen vanhaan ytimeen kuuluvat Jamestown ja Usshertown, joissa asuminen, kauppa ja kalastus jatkuvat rinnakkain.\n\nVuonna 1873 rannikon eurooppalaiset kauppalinnoitukset olivat jo olemassa. Accrasta tuli Kultarannikon hallintopääkaupunki vasta myöhemmin 1800-luvulla. Myös nykyinen Holy Trinity -katedraali kuuluu sitä myöhempään rakennuskerrokseen.\n\nKaupungin arkeen pääsee käsiksi **Makolan markkinoilla**: samalta kauppa-alueelta voi etsiä ruokaa ja sen valmistamiseen tarvittavan kattilan. Tro tro -pikkubussit kuljettavat yhteistä kyytiä tarvitsevia, ja Legonissa opiskellaan Ghanan yliopistossa.",
+    "teksti": "Accran vanhat rannikkokaupunginosat ovat myös nykyisiä asuin- ja työympäristöjä. Jamestownin ja Usshertownin Ga-yhteisöissä kalastus ja kaupankäynti kuuluvat kaupungin pitkään historiaan. Linnoitukset kertovat eurooppalaisesta vallankäytöstä, mutta niiden ulkopuolella historia jatkuu tavallisena kaupunkielämänä.\n\nMakola tekee kaupasta konkreettista. Keskustan kauppa-alueella myydään tuoreiden elintarvikkeiden rinnalla vaatteita, työkaluja ja kattiloita. Tro tro -pikkubussit puolestaan yhdistävät liikenneterminaaleja ja ottavat matkustajia myös reittien varrelta. \n\nRannikon vesi näyttää erilaiselta eri paikoissa. Korlen laguuni liittyy Jamestownin asutushistoriaan ja kaupungin muutoksiin; Labadi on merellinen vapaa-ajan ympäristö. Kasvitieteelliseen puutarhaan vie retki Aburiin, omalle ylängön paikkakunnalleen Accran ulkopuolelle."
   },
   "kysymykset": [
     {
@@ -42,7 +42,7 @@
       ],
       "correct": 0,
       "level": 1,
-      "hint": "Rannikon meri kuuluu Atlanttiin.",
+      "hint": "Kaupunki sijaitsee Afrikan läntisellä rannikolla.",
       "fact": "Guineanlahti on Atlantin osa Länsi-Afrikan etelärannikolla.",
       "source": "https://en.wikipedia.org/wiki/Accra"
     },
@@ -56,22 +56,22 @@
       ],
       "correct": 0,
       "level": 2,
-      "hint": "Kyyti kulkee vakiintunutta reittiä liikenneterminaalien välillä.",
+      "hint": "Ajoneuvo tarjoaa yhteistä kyytiä.",
       "fact": "Tro trot tarjoavat yhteistä kyytiä ja ottavat matkustajia myös reitin varrelta.",
       "source": "https://en.wikipedia.org/wiki/Accra"
     },
     {
-      "q": "Keitä suuri osa Makolan kauppiaista on?",
+      "q": "Mitä Makolan kauppa-alueella myydään elintarvikkeiden lisäksi?",
       "options": [
-        "Naisia",
-        "Miehiä",
-        "Sotilaita",
-        "Matkailijoita"
+        "Kattiloita ja työkaluja",
+        "Pelkästään rakennustarvikkeita",
+        "Ainoastaan polttoaineita",
+        "Vain autonosia"
       ],
       "correct": 0,
       "level": 2,
-      "hint": "Kauppa-alueella myydään ruoan lisäksi vaatteita ja keittoastioita.",
-      "fact": "Naiskauppiailla on näkyvä rooli Makolan markkinoiden kaupankäynnissä.",
+      "hint": "Valikoima palvelee kodin arkea.",
+      "fact": "Makolassa myydään muun muassa vaatteita, työkaluja, kattiloita ja keittoastioita.",
       "source": "https://en.wikipedia.org/wiki/Makola_Market"
     },
     {
@@ -129,7 +129,7 @@
       "nostot": [
         {
           "otsikko": "Vanha kaupunki ei ole kulissi",
-          "teksti": "Jamestown ja Usshertown sijaitsevat Korlen laguunin itäpuolella. Ne kuuluvat Ga-Mashieen, Accran vanhaan rannikkoytimeen, jossa Ga-yhteisöjen asutus kasvoi eurooppalaisten kauppalinnoitusten ympärillä. Linnoitusten historiaa voi lukea seinistä, mutta kaupunginosien elämä jatkuu niiden ulkopuolella: alueilla asutaan, käydään kauppaa ja kalastetaan. Bukomin nyrkkeilysalit tuovat vanhoihin kortteleihin vielä yhden rytmin. Rannikon historia ei siis pääty siihen, missä linnoituksen portti sulkeutuu.",
+          "teksti": "Jamestown ja Usshertown sijaitsevat Korlen laguunin itäpuolella. Ne kuuluvat Ga-Mashieen, Accran vanhaan rannikkoytimeen, jossa Ga-yhteisöjen asutus kasvoi eurooppalaisten kauppalinnoitusten ympärillä. Linnoitusten historiaa voi lukea seinistä, mutta kaupunginosien elämä jatkuu niiden ulkopuolella: alueilla asutaan, käydään kauppaa ja kalastetaan. Bukomin nyrkkeilysalit tuovat vanhoihin kortteleihin vielä yhden rytmin.",
           "tiedosto": "",
           "lyhyt": "",
           "selite": "",
@@ -138,7 +138,7 @@
         },
         {
           "otsikko": "Torilta löytyy myös kattila",
-          "teksti": "Makola on sekä markkinapaikka että kauppa-alue Accran keskustassa. Kauppiaista suuri osa on naisia, ja tavaravalikoima ulottuu tuoreista elintarvikkeista vaatteisiin, kenkiin ja työkaluihin. Kattilat ja käyttöastiat ovat yhtä lailla toritavaraa kuin ruoka, jota niissä valmistetaan. Myynnissä on myös paikallisista käsintehdyistä helmistä tehtyjä koruja. Tukku- ja vähittäiskauppa ovat molemmat kuuluneet Makolan historiaan. Ostosretkellä ei siis tarvitse päättää etukäteen, etsiikö illallista vai sen keittovälineet.",
+          "teksti": "Makola on sekä markkinapaikka että kauppa-alue Accran keskustassa. Kauppiaista suuri osa on naisia, ja tavaravalikoima ulottuu tuoreista elintarvikkeista vaatteisiin, kenkiin ja työkaluihin. Kattilat ja käyttöastiat ovat yhtä lailla toritavaraa kuin ruoka, jota niissä valmistetaan. Myynnissä on myös paikallisista käsintehdyistä helmistä tehtyjä koruja. Tukku- ja vähittäiskauppa ovat molemmat kuuluneet Makolan historiaan.",
           "tiedosto": "Snails, Makola Market, Accra, Ghana.JPG",
           "lyhyt": "Makolan torilla myydään myös maakotiloita.",
           "selite": "Maakotilot kuuluvat Makolan monipuoliseen elintarvikekauppaan.",
@@ -147,7 +147,7 @@
         },
         {
           "otsikko": "Pikkubussilla on oma reitti",
-          "teksti": "Accran tro trot ovat matkustajakäyttöön otettuja pikkubusseja ja pakettiautoja. Ne kulkevat vakiintuneilla reiteillä liikenneterminaalien välillä ja poimivat matkustajia myös matkan varrelta. Kyse on yhteisestä kyydistä, joten auton löytäminen ei vielä kerro, viekö se oikeaan suuntaan. Reitti ja määränpää kannattaa selvittää ennen nousua. Ajoneuvojen kyljissä näkyy usein sanontoja, mutta niiden tärkein tehtävä on arkinen: kuljettaa ihmisiä kaupungin läpi. Tro tro on pieni auto osana suurta liikenneverkkoa.",
+          "teksti": "Accran tro trot ovat matkustajakäyttöön otettuja pikkubusseja ja pakettiautoja. Ne kulkevat vakiintuneilla reiteillä liikenneterminaalien välillä ja poimivat matkustajia myös matkan varrelta. Ajoneuvojen kyljissä näkyy usein sanontoja, mutta niiden tärkein tehtävä on arkinen: kuljettaa ihmisiä kaupungin läpi.",
           "tiedosto": "'trotro' in Ghana.jpg",
           "lyhyt": "Tro tro -pikkubussi Ghanassa.",
           "selite": "Tro tro on Ghanassa käytetty yhteinen pikkubussikyyti.",
@@ -156,7 +156,7 @@
         },
         {
           "otsikko": "Yliopisto ulottuu Legonia pidemmälle",
-          "teksti": "Ghanan yliopiston pääkampus on Legonissa, Accran keskustan koillispuolella. Julkinen yliopisto aloitti nimellä University College of the Gold Coast, ja sen opetusta sekä tutkintoja valvoi aluksi Lontoon yliopisto. Nykyisiin aloihin kuuluvat muun muassa humanistiset ja yhteiskuntatieteet, luonnontieteet, maataloustieteet ja lääketiede. Kaikki opetus ei mahdu yhdelle kampukselle: lääketieteen ja hammaslääketieteen opetusta on myös Korle-Bussa. Yliopiston lääketieteen opetusta järjestetään sairaalan yhteydessä Korle-Bussa.",
+          "teksti": "Ghanan yliopiston pääkampus on Legonissa, Accran keskustan koillispuolella. Julkinen yliopisto aloitti nimellä University College of the Gold Coast, ja sen opetusta sekä tutkintoja valvoi aluksi Lontoon yliopisto. Nykyisiin aloihin kuuluvat muun muassa humanistiset ja yhteiskuntatieteet, luonnontieteet, maataloustieteet ja lääketiede. Kaikki opetus ei mahdu yhdelle kampukselle: lääketieteen ja hammaslääketieteen opetusta on myös Korle-Bussa.",
           "tiedosto": "Pen-writing-notes-studying.jpg",
           "lyhyt": "Muistiinpanojen kirjoittaminen on opiskelun arkea.",
           "selite": "Muistiinpanojen kirjoittaminen kuuluu opiskelun arkeen.",
@@ -171,7 +171,7 @@
           "selite": "Labadin meriranta on yksi tapa tutustua Accran rannikkoympäristöön.",
           "lahde": "Tahiru Rajab, Wikimedia Commons (CC BY-SA 4.0)"
         },
-        "kappale": "Accran matkassa yhdistyvät vanha rannikko ja tämän päivän pääkaupunki. Jamestownin ja Usshertownin alueilla näkyy kaupunkihistoriaa, Makolassa arkista kaupankäyntiä. Tro trot kulkevat vakiintuneita reittejä, joten määränpään selvittäminen auttaa liikkeelle. Merimaisemaa löytyy Labadista. Kasvien äärelle vie myös retki Aburin omaan paikkakuntaan kaupungin ulkopuolelle.",
+        "kappale": "Accran matkassa yhdistyvät vanha rannikko ja tämän päivän pääkaupunki. Jamestownin ja Usshertownin alueilla näkyy kaupunkihistoriaa, Makolassa arkista kaupankäyntiä. Tro trot kulkevat vakiintuneita reittejä. Merimaisemaa löytyy Labadista. Kasvien äärelle vie myös retki Aburin omaan paikkakuntaan kaupungin ulkopuolelle.",
         "artikkeli": {
           "nimi": "Matkailijan Accra",
           "taitto": "opas",
@@ -180,7 +180,7 @@
           "jaksot": [
             {
               "otsikko": "Perille ja liikkeelle",
-              "teksti": "Kaupungin lentoaseman nykyinen nimi on Accra International Airport, ja sen tunnus on ACC. Lentoasema tunnettiin aiemmin nimellä Kotoka International Airport. Kaupungissa voi liikkua taksilla tai yhteistä kyytiä tarjoavalla tro trolla. Taksin hinta kannattaa sopia ennen lähtöä, jos mittaria ei käytetä. Tro trohon noustessa kysy määränpää ja varmista, että ajoneuvon reitti sopii omaan matkaasi.",
+              "teksti": "Kaupungin lentoaseman nykyinen nimi on Accra International Airport, ja sen tunnus on ACC. Lentoasema tunnettiin aiemmin nimellä Kotoka International Airport. Kaupungissa voi liikkua taksilla tai yhteistä kyytiä tarjoavalla tro trolla.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -190,7 +190,7 @@
             },
             {
               "otsikko": "Vanhan rannikon paikat",
-              "teksti": "Jamestownin ja Usshertownin suunnalla pääset Accran vanhan rannikkokaupungin äärelle. Jamesin ja Ussherin linnoitukset sekä High Streetin Holy Trinity -katedraali edustavat eri vaiheita sen historiassa. Osun linna sijaitsee idempänä omassa kaupunginosassaan. Selvitä linnoitusten vierailukäytännöt ennen lähtöä; Osuun ei voi olettaa pääsevänsä sisään ilman ennakkosopimusta.",
+              "teksti": "Jamestownin ja Usshertownin suunnalla pääset Accran vanhan rannikkokaupungin äärelle. Jamesin ja Ussherin linnoitukset sekä High Streetin Holy Trinity -katedraali edustavat eri vaiheita sen historiassa. Osun linna sijaitsee idempänä omassa kaupunginosassaan.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -200,7 +200,7 @@
             },
             {
               "otsikko": "Rannat ja retki Aburiin",
-              "teksti": "Labadissa meri on osa kaupungin vapaa-aikaa, kun taas Korlen laguuni kertoo asutuksen ja vesistön yhteisestä historiasta. Laguuniin kannattaa tutustua rannalta. Jos kaipaat kasvitieteellistä puutarhaa, suuntaa Aburiin: ylängön paikkakunta sijaitsee pääkaupungin ulkopuolella. Varaa retkelle oma osuutensa päivästä. Aburin vanhassa puutarhassa kasveja esitellään, tutkitaan ja kasvatetaan myös niiden säilyttämiseksi.",
+              "teksti": "Labadissa meri on osa kaupungin vapaa-aikaa, kun taas Korlen laguuni kertoo asutuksen ja vesistön yhteisestä historiasta. Jos kaipaat kasvitieteellistä puutarhaa, suuntaa Aburiin: ylängön paikkakunta sijaitsee pääkaupungin ulkopuolella. Aburin vanhassa puutarhassa kasveja esitellään, tutkitaan ja kasvatetaan myös niiden säilyttämiseksi.",
               "kuva": {
                 "tiedosto": "Aburi Botanical Gardens Feb 2024 11.jpg",
                 "lyhyt": "Aburin puutarhassa on myös ontto puunrunko.",
@@ -210,7 +210,7 @@
             },
             {
               "otsikko": "Mitä syödään",
-              "teksti": "Osun ravintoloista löytyy sekä ghanalaista että kansainvälistä ruokaa. Makolan markkinoilla puolestaan näet ruoan raaka-aineita osana kaupungin tavallista kaupankäyntiä. Torikierroksen ja ravintola-aterian voi yhdistää samaan päivään, mutta ne näyttävät ruoasta eri puolen. Jos annoksen sisältö on epäselvä, kysy ennen tilaamista. Riisin ja papupadan kaltaiset ateriat muistuttavat, että tutustuminen voi alkaa arkiselta lautaselta.",
+              "teksti": "Osun ravintoloista löytyy sekä ghanalaista että kansainvälistä ruokaa. Makolan markkinoilla puolestaan näet ruoan raaka-aineita osana kaupungin tavallista kaupankäyntiä.",
               "kuva": {
                 "tiedosto": "Rice and beans stew in bowl.jpg",
                 "lyhyt": "Riisiä ja papupataa kulhossa.",
@@ -220,7 +220,7 @@
             },
             {
               "otsikko": "Milloin ja mitä varata",
-              "teksti": "Accrassa on lämmintä vuoden ympäri, mutta sateet vaihtelevat paljon. Kesäkuu on kuukausista sateisin ja tammikuu kuivin. Elokuun keskilämpö on vuoden matalin, vaikka sekin on noin 26 astetta. Varaa kävelypäiviin taukoja ja sadepäiviin joustoa. Selvitä rantojen pääsykäytännöt sekä linnoitusten vierailumahdollisuudet etukäteen; rannalla oleskelu ja uiminen ovat eri päätöksiä.",
+              "teksti": "Accrassa on lämmintä vuoden ympäri, mutta sateet vaihtelevat paljon. Kesäkuu on kuukausista sateisin ja tammikuu kuivin. Elokuun keskilämpö on vuoden matalin, vaikka sekin on noin 26 astetta.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -263,16 +263,8 @@
                 "teksti": "Nykyinen nimi on Accra International Airport, mutta vanha Kotoka-nimi voi esiintyä matkakirjoissa; tunnus on ACC."
               },
               {
-                "otsikko": "Selvitä kyyti ennen lähtöä",
-                "teksti": "Varmista tro tron määränpää ja sovi tarvittaessa taksin hinta ennen matkaa."
-              },
-              {
                 "otsikko": "Linnoituskäynti kannattaa sopia",
                 "teksti": "Tarkista kohteen vierailukäytännöt etukäteen, etenkin Osun linnan pääsyrajoitukset."
-              },
-              {
-                "otsikko": "Rannalla on omat käytäntönsä",
-                "teksti": "Labadin sisäänpääsyyn voi liittyä maksu; uimista varten selvitä paikalliset olosuhteet ja ohjeet erikseen."
               }
             ]
           },
@@ -298,7 +290,7 @@
       "nostot": [
         {
           "otsikko": "Laguunin historia kulkee kaupungin mukana",
-          "teksti": "Korlen laguuni sijaitsee heti Accran keskustan länsipuolella ja liittyy Guineanlahteen. Sen rannoille kasvanut asutus kuuluu Jamestownin historiaan, ja laguuni oli aikanaan tärkeä kalan lähde. Kaupunki muutti myös vesistöä: rantoja muokattiin rakentamista varten, ja Odaw-joen mukana kulkeutui valumavesiä sekä jätettä. Kunnostushankkeissa on tavoiteltu parempaa vedenlaatua ja virtausta. Korle muistuttaa, että kaupungin luonto voi olla samalla elinkeinojen, rakentamisen ja vesihuollon historiaa.",
+          "teksti": "Korlen laguuni sijaitsee heti Accran keskustan länsipuolella ja liittyy Guineanlahteen. Sen rannoille kasvanut asutus kuuluu Jamestownin historiaan, ja laguuni oli aikanaan tärkeä kalan lähde. Kaupunki muutti myös vesistöä: rantoja muokattiin rakentamista varten, ja Odaw-joen mukana kulkeutui valumavesiä sekä jätettä. Kunnostushankkeissa on tavoiteltu parempaa vedenlaatua ja virtausta.",
           "tiedosto": "Korle Lagoon 2.jpg",
           "lyhyt": "Korlen laguuni kuuluu Accran vanhaan asutusympäristöön.",
           "selite": "Korlen laguuni liittyy Jamestownin asutushistoriaan ja oli aikanaan tärkeä kalan lähde.",
@@ -307,7 +299,7 @@
         },
         {
           "otsikko": "Labadissa kaupunki tulee meren äärelle",
-          "teksti": "Labadin ranta tunnetaan myös nimellä La Pleasure Beach. Se sijaitsee La-nimisellä alueella, jota kutsutaan usein Labadiksi, Teshien lähellä. Hotellit ylläpitävät ranta-aluetta, ja käyttöön voi liittyä pääsymaksu. Musiikki ja rummutus kuuluvat rannan tapahtumiin; aamuisin siellä käy myös liikkujia. Labadi näyttää yhden puolen Accran rannikosta: meri on yhtä aikaa maisema ja vapaa-ajan ympäristö. Rantapäivän käytännöt kannattaa selvittää paikan päällä, sillä pelkkä rantaviiva ei kerro sisäänpääsystä.",
+          "teksti": "Labadin ranta tunnetaan myös nimellä La Pleasure Beach. Se sijaitsee La-nimisellä alueella, jota kutsutaan usein Labadiksi, Teshien lähellä. Hotellit ylläpitävät ranta-aluetta, ja käyttöön voi liittyä pääsymaksu. Musiikki ja rummutus kuuluvat rannan tapahtumiin; aamuisin siellä käy myös liikkujia.",
           "tiedosto": "",
           "lyhyt": "",
           "selite": "",
@@ -316,7 +308,7 @@
         },
         {
           "otsikko": "Kalastuskaupunginosassa myös asutaan",
-          "teksti": "Jamestown ja Usshertown ovat Accran rannikon kalastusyhteisöjä ja osa Ga-asukkaiden vanhaa kaupunkia. Asuminen, kaupankäynti ja kalastus sijaitsevat samalla rannikkovyöhykkeellä. Vanhat eurooppalaiset linnoitukset kuuluvat maiseman historiaan, mutta niiden ympäristö on myös ihmisten kotiseutua ja työpaikkoja. Nykyinen kalasatama edustaa uudempaa rakentamista. Jamestownin kalastusyhteisöjen työ jatkuu nykyisessä kalasatamassa, joka on rannikon uusia rakennushankkeita.",
+          "teksti": "Jamestown ja Usshertown ovat Accran rannikon kalastusyhteisöjä ja osa Ga-asukkaiden vanhaa kaupunkia. Asuminen, kaupankäynti ja kalastus sijaitsevat samalla rannikkovyöhykkeellä. Vanhat eurooppalaiset linnoitukset kuuluvat maiseman historiaan, mutta niiden ympäristö on myös ihmisten kotiseutua ja työpaikkoja. Nykyinen kalasatama edustaa uudempaa rakentamista.",
           "tiedosto": "",
           "lyhyt": "",
           "selite": "",
@@ -325,7 +317,7 @@
         },
         {
           "otsikko": "Aburi on retki toiseen paikkakuntaan",
-          "teksti": "Aburin kasvitieteellinen puutarha on ylängöllä Ghanan Eastern Regionissä, Accran pohjoispuolella. Se sijaitsee Aburin omalla paikkakunnalla, joten retki vie pois pääkaupungista. Puutarha perustettiin 1800-luvun loppupuolella, ja sen työ on kasvien esittelyä laajempaa: siellä tutkitaan monimuotoisuutta, kasvatetaan uhanalaisia kasveja ja opetetaan puutarhanhoitoa sekä ympäristötietoa. Puulajeihin kuuluvat muun muassa mahonki ja setri. Puutarhassa virkistyskävely ja kasvien tulevaisuutta turvaava työ kulkevat rinnakkain.",
+          "teksti": "Aburin kasvitieteellinen puutarha on ylängöllä Ghanan Eastern Regionissä, Accran pohjoispuolella. Se sijaitsee Aburin omalla paikkakunnalla, joten retki vie pois pääkaupungista. Puutarha perustettiin 1800-luvun loppupuolella, ja sen työ on kasvien esittelyä laajempaa: siellä tutkitaan monimuotoisuutta, kasvatetaan uhanalaisia kasveja ja opetetaan puutarhanhoitoa sekä ympäristötietoa. Puulajeihin kuuluvat muun muassa mahonki ja setri.",
           "tiedosto": "Aburi garden 10.jpg",
           "lyhyt": "Aburin kasvitieteellinen puutarha sijaitsee omalla paikkakunnallaan.",
           "selite": "Aburin puutarhan kukkivat kasvit kuuluvat pääkaupungin ulkopuoliseen retkikohteeseen.",
@@ -388,25 +380,25 @@
     },
     "Ussherin linnoitus": {
       "aika": "1600-luku, uudistuksia 1800-luvulla",
-      "teksti": "Ussherin linnoitus sai alkunsa hollantilaisena rannikon kauppapaikkana. Sen alkuperäinen nimi oli Fort Crèvecœur, ja kauppavarastoa laajennettiin linnoitukseksi. Se kuului Hollannin Kultarannikon toimipaikkoihin, joissa Euroopan kauppayhtiöt tavoittelivat rannikkokaupan tuottoja. Paikka sijaitsee vanhan Accran rannikkoytimessä, lähellä Jamesin linnoitusta.\n\nRakennuksen historiaan kuuluu tuhoutumista ja jälleenrakentamista. Hollantilainen rakennusmestari Hubertus Varlet johti sen uudelleen rakentamista 1800-luvulla. Linnoitus oli olemassa vuonna 1873, mutta sen varhaisin kauppapaikka ja myöhempi rakennus eivät olleet täsmälleen sama asia. Paikka siirtyi brittien hallintaan, ja Ussher-nimi muistuttaa siirtomaahallinnon nimikerroksesta. Nykyinen historiallinen kohde kuuluu Unescon Ghanan rannikon linnoitusten ja linnojen kokonaisuuteen.",
+      "teksti": "Ussherin linnoitus sai alkunsa hollantilaisena rannikon kauppapaikkana. Sen alkuperäinen nimi oli Fort Crèvecœur, ja kauppavarastoa laajennettiin linnoitukseksi. Se kuului Hollannin Kultarannikon toimipaikkoihin, joissa Euroopan kauppayhtiöt tavoittelivat rannikkokaupan tuottoja. Paikka sijaitsee vanhan Accran rannikkoytimessä, lähellä Jamesin linnoitusta.\n\nRakennuksen historiaan kuuluu tuhoutumista ja jälleenrakentamista. Hollantilainen rakennusmestari Hubertus Varlet johti sen uudelleen rakentamista 1800-luvulla. Paikka siirtyi brittien hallintaan, ja Ussher-nimi muistuttaa siirtomaahallinnon nimikerroksesta. Nykyinen historiallinen kohde kuuluu Unescon Ghanan rannikon linnoitusten ja linnojen kokonaisuuteen.",
       "kuvat": [],
       "lahde": "Wikipedia"
     },
     "Osun linna": {
       "aika": "1600-luku, myöhempiä rakennuskerroksia",
-      "teksti": "Osun linna seisoo Guineanlahden rannalla Osun kaupunginosassa. Christiansborg-nimelläkin tunnetun rakennuksen kehitys liittyy rannikon kauppaan: varastotiloja ja puolustusvarustuksia laajennettiin, kun alkuperäisen kauppapaikan tila ei enää riittänyt. Kullan ja norsunluun rinnalla kaupattiin orjuutettuja ihmisiä. Kaupankäynnin ja puolustuksen tarpeet muokkasivat siten samaa rakennusta.\n\nVuonna 1873 paikalla oli jo linna, mutta nykyiseen kokonaisuuteen kuuluu myös myöhempien aikojen muutoksia. Yhtenäinen julkisivu ei kerro kaikkien huoneiden samaa ikää. Linnan ympäristössä on lisäksi puutarha, jossa kasvaa sekä paikallisia että muualta tuotuja kasveja. Osu kuuluu Unescon Ghanan rannikon linnojen ja linnoitusten maailmanperintökokonaisuuteen. Linna on ollut sekä kauppapaikka että valtion hallinnon käytössä.",
+      "teksti": "Osun linna seisoo Guineanlahden rannalla Osun kaupunginosassa. Christiansborg-nimelläkin tunnetun rakennuksen kehitys liittyy rannikon kauppaan: varastotiloja ja puolustusvarustuksia laajennettiin, kun alkuperäisen kauppapaikan tila ei enää riittänyt. Kullan ja norsunluun rinnalla kaupattiin orjuutettuja ihmisiä. Kaupankäynnin ja puolustuksen tarpeet muokkasivat siten samaa rakennusta.\n\nVuonna 1873 paikalla oli jo linna, mutta nykyiseen kokonaisuuteen kuuluu myös myöhempien aikojen muutoksia. Linnan ympäristössä on lisäksi puutarha, jossa kasvaa sekä paikallisia että muualta tuotuja kasveja. Osu kuuluu Unescon Ghanan rannikon linnojen ja linnoitusten maailmanperintökokonaisuuteen. Linna on ollut sekä kauppapaikka että valtion hallinnon käytössä.",
       "kuvat": [],
       "lahde": "Wikipedia"
     },
     "Holy Trinity -katedraali": {
       "aika": "1800-luvun loppupuoli",
-      "teksti": "Holy Trinity on anglikaaninen kirkko Accran High Streetillä. Sen virallinen nimi on Cathedral Church of the Most Holy Trinity. Tiilisen, romaaniseen tyyliin suunnitellun rakennuksen arkkitehti oli Aston Webb. Rahoitus tuli Britannian siirtomaahallinnolta, ja alkuaikojen kävijöihin kuului kaupungissa asuvia siirtomaavirkamiehiä. Kirkon historia kertoo näin myös siitä, millaisia laitoksia rannikkokaupungin hallinnon ympärille rakennettiin.\n\nNykyinen kirkko valmistui 1800-luvun loppupuolella, joten vuonna 1873 sitä ei vielä ollut. Katedraaliksi se nimettiin vasta myöhemmin Accran hiippakunnan perustamisen yhteydessä. Rakennuksen valmistuminen ja sen asema katedraalina ovat siis kaksi eri tapahtumaa. Vanhalla rannikkoalueella kirkko edustaa linnoituksia nuorempaa kerrosta: samasta kaupunginosasta löytyy useiden vuosisatojen rakennushistoriaa.",
+      "teksti": "Holy Trinity on anglikaaninen kirkko Accran High Streetillä. Sen virallinen nimi on Cathedral Church of the Most Holy Trinity. Tiilisen, romaaniseen tyyliin suunnitellun rakennuksen arkkitehti oli Aston Webb. Rahoitus tuli Britannian siirtomaahallinnolta, ja alkuaikojen kävijöihin kuului kaupungissa asuvia siirtomaavirkamiehiä. Kirkon historia kertoo näin myös siitä, millaisia laitoksia rannikkokaupungin hallinnon ympärille rakennettiin.\n\nNykyinen kirkko valmistui 1800-luvun loppupuolella, joten vuonna 1873 sitä ei vielä ollut. Katedraaliksi se nimettiin vasta myöhemmin Accran hiippakunnan perustamisen yhteydessä. Vanhalla rannikkoalueella kirkko edustaa linnoituksia nuorempaa kerrosta: samasta kaupunginosasta löytyy useiden vuosisatojen rakennushistoriaa.",
       "kuvat": [],
       "lahde": "Wikipedia"
     },
     "Korlen laguuni": {
       "aika": "Luonnonvesistö ja vanha asutusympäristö",
-      "teksti": "Korlen laguuni on Accran keskustan länsipuolinen vesistö, jolla on yhteys Guineanlahteen. Sen rantojen asutushistoria liittyy Jamestownin kasvuun. Laguuni oli aikanaan tärkeä kalan lähde, joten vesi kuului sekä asuinympäristöön että elinkeinoon. Vanhan rannikkokaupungin historia ei koostu pelkästään linnoituksista: myös laguunin ympärille kasvanut asutus oli osa sitä jo vuoden 1873 maailmassa.\n\nMyöhempi kaupunki muutti rantoja. Maata kuivattiin ja muokattiin rakentamista varten, ja Odaw-joen mukana kulkeutui valumavesiä ja jätettä. Veden laatu heikkeni, ja kunnostushankkeissa on pyritty vähentämään saastumista sekä parantamaan virtausta. Nykyisessä rannassa näkyy pitkä yhteys luonnonvesistön ja kaupungin tarpeiden välillä. Korleen voi tutustua kaupunkihistorian paikkana rannalta; laguunin merkitys entisenä kalavesistönä ei tee siitä uimapaikkaa.",
+      "teksti": "Korlen laguuni on Accran keskustan länsipuolinen vesistö, jolla on yhteys Guineanlahteen. Sen rantojen asutushistoria liittyy Jamestownin kasvuun. Laguuni oli aikanaan tärkeä kalan lähde, joten vesi kuului sekä asuinympäristöön että elinkeinoon. Vanhan rannikkokaupungin historia ei koostu pelkästään linnoituksista: myös laguunin ympärille kasvanut asutus oli osa sitä jo vuoden 1873 maailmassa.\n\nMyöhempi kaupunki muutti rantoja. Maata kuivattiin ja muokattiin rakentamista varten, ja Odaw-joen mukana kulkeutui valumavesiä ja jätettä. Veden laatu heikkeni, ja kunnostushankkeissa on pyritty vähentämään saastumista sekä parantamaan virtausta.",
       "kuvat": [
         {
           "tiedosto": "Korle Lagoon 4.jpg",
@@ -419,7 +411,7 @@
     },
     "Labadin ranta": {
       "aika": "Luonnonranta, nykyinen vapaa-ajan ympäristö",
-      "teksti": "Labadin ranta on Accran meriranta La-nimisellä alueella, Teshien lähellä. La tunnetaan usein nimellä Labadi, ja rannasta käytetään myös nimeä La Pleasure Beach. Se kuuluu Guineanlahden rannikkoympäristöön. Vuonna 1873 tälläkin suunnalla oli luonnonrannikkoa; nykyiset hotellien ylläpitämät ranta-alueet ja niiden vapaa-ajan palvelut kuuluvat myöhempään kaupunkiin.\n\nNykyisin rannalla järjestetään musiikki- ja rumputapahtumia, ja aamuisin siellä käy myös liikkujia. Hotellit osallistuvat rannan ylläpitoon, ja muilta kuin hotellivierailta voidaan periä pääsymaksu. Käynti kannattaa suunnitella näiden käytäntöjen mukaan. Labadi on siten yhtä aikaa luonnon paikka ja kaupungin vapaa-ajan ympäristö. Meren äärellä voi viettää aikaa myös rannalla; uimista varten olosuhteet ja paikalliset ohjeet on selvitettävä erikseen.",
+      "teksti": "Labadin ranta on Accran meriranta La-nimisellä alueella, Teshien lähellä. La tunnetaan usein nimellä Labadi, ja rannasta käytetään myös nimeä La Pleasure Beach. Se kuuluu Guineanlahden rannikkoympäristöön. Vuonna 1873 tälläkin suunnalla oli luonnonrannikkoa; nykyiset hotellien ylläpitämät ranta-alueet ja niiden vapaa-ajan palvelut kuuluvat myöhempään kaupunkiin.\n\nNykyisin rannalla järjestetään musiikki- ja rumputapahtumia, ja aamuisin siellä käy myös liikkujia. Hotellit osallistuvat rannan ylläpitoon, ja muilta kuin hotellivierailta voidaan periä pääsymaksu.",
       "kuvat": [],
       "lahde": "Wikipedia"
     }
@@ -491,11 +483,6 @@
   },
   "ehdotukset": {
     "lentoasema": "Accra International Airport (ACC)",
-    "huomiot": [
-      "C-luonnos: 10 hyväksyttävää B:n valittua kuvaa käytössä, 14 kuvapaikkaa avoinna; C3 ja L2 jätetty tyhjiksi C:n alkuperäispikseleissä havaittujen luettavien kasvojen vuoksi.",
-      "Rakennuskuvien Ghanan §38 PD -maksu/lupa-kysymystä ei ratkaistu; N1/N2/N3/N4 jäävät ilman kuvaa.",
-      "Korlen laguunin L1 ja N5 ovat saman paikan eri tiedostot ja kuvakulmat; eivät erillisiä nähtävyyksiä.",
-      "C-vaihe ei ole riippumaton D-tarkistus eikä valmis-F. Kuva-aukot estävät valmistumisen."
-    ]
+    "huomiot": []
   }
 }

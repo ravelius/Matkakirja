@@ -14,17 +14,17 @@
     }
   },
   "artikkeli": {
-    "intro": "Yamoussoukro on **Norsunluurannikon virallinen pääkaupunki** maan keskiosassa. Sen taustalla on baoulé-yhteisöjen asutusta ja vanha N’Gokron kylä. Kaupungin nykyinen nimi liittyy paikalliseen kuningattareen Yamoussoon. Nimen kro-pääte tarkoittaa kylää tai paikkaa.\n\nPääkaupunkiasema tuli 1900-luvun loppupuolella, ja Abidjan säilyi talouden sekä monien hallintotoimintojen keskuksena. Yamoussoukron kaupunkikuvaan kuuluvat laajat bulevardit, puukujanteet ja yhteispihojen ympärille järjestetty asutus. **Polyteknillisessä korkeakoulussa** opiskellaan muun muassa agronomiaa, tekniikkaa ja rakentamista. Markkinoille saapuu lähikylien tuotantoa, ja seudulla kasvatetaan maniokkia, jamssia sekä ruokabanaania. Pääkaupungin yhteys ympäristöönsä näkyy siten sekä koulutuksen aloissa että päivittäisessä kaupankäynnissä.",
-    "teksti": "Yamoussoukron nimessä säilyy vanhan paikallisen asutuksen muisto. N’Gokro oli kaupungin aiempi nimi, ja nykyinen nimi liittyy Yamoussoon. Seudun baoulé-historia edeltää siirtomaa-aikaa; nykyisen suunnitellun pääkaupungin rakennukset tulivat myöhemmin.\n\nLaajat puukujanteet ja bulevardit ovat osa uudempaa kaupunkisuunnittelua. Niiden rinnalla on asuinalueita, joissa talot järjestyvät yhteisten pihojen ympärille. Bussiaseman ja markkinoiden ympäristöt kuuluvat kaupungin arkisiin kohtaamispaikkoihin.\n\nLähiseudun viljelijät tuovat tuotteitaan markkinoille ja ostavat samalla kaupungista tarvitsemiaan tavaroita. Polyteknillisen korkeakoulun aloihin kuuluu agronomia sekä rakentamisen ja infrastruktuurin koulutus. Kaupungin tarina jatkuu näin maatiloilta torille ja luokkahuoneista käytännön ammatteihin."
+    "intro": "Yamoussoukro on **Norsunluurannikon virallinen pääkaupunki** maan keskiosassa. Sen taustalla on baoulé-yhteisöjen asutusta ja vanha N’Gokron kylä. Kaupungin nykyinen nimi liittyy paikalliseen kuningattareen Yamoussoon. Nimen kro-pääte tarkoittaa kylää tai paikkaa.\n\nPääkaupunkiasema tuli 1900-luvun loppupuolella, ja Abidjan säilyi talouden sekä monien hallintotoimintojen keskuksena. Yamoussoukron kaupunkikuvaan kuuluvat laajat bulevardit, puukujanteet ja yhteispihojen ympärille järjestetty asutus. **Polyteknillisessä korkeakoulussa** opiskellaan muun muassa agronomiaa, tekniikkaa ja rakentamista. Markkinoille saapuu lähikylien tuotantoa, ja seudulla kasvatetaan maniokkia, jamssia sekä ruokabanaania.",
+    "teksti": "Yamoussoukron nimessä säilyy vanhan paikallisen asutuksen muisto. N’Gokro oli kaupunkia edeltäneen kylän nimi, ja nykyinen nimi liittyy Yamoussoon. Seudun baoulé-historia edeltää siirtomaa-aikaa; nykyisen suunnitellun pääkaupungin rakennukset tulivat myöhemmin.\n\nLaajat puukujanteet ja bulevardit ovat osa uudempaa kaupunkisuunnittelua. Niiden rinnalla on asuinalueita, joissa talot järjestyvät yhteisten pihojen ympärille. Bussiaseman ja markkinoiden ympäristöt kuuluvat kaupungin arkisiin kohtaamispaikkoihin.\n\nLähiseudun viljelijät tuovat tuotteitaan markkinoille ja ostavat samalla kaupungista tarvitsemiaan tavaroita. Polyteknillisen korkeakoulun aloihin kuuluu agronomia sekä rakentamisen ja infrastruktuurin koulutus."
   },
   "kysymykset": [
     {
       "q": "Minkä maan virallinen pääkaupunki Yamoussoukro on?",
       "options": [
         "Norsunluurannikon",
-        "Päiväntasaajan Guinean",
-        "Keski-Afrikan tasavallan",
-        "Etelä-Afrikan tasavallan"
+        "Senegalin",
+        "Ghanan",
+        "Guinean"
       ],
       "correct": 0,
       "level": 1,
@@ -42,7 +42,7 @@
       ],
       "correct": 0,
       "level": 1,
-      "hint": "Pääte liittyy asutuksen nimittämiseen.",
+      "hint": "Pääte esiintyy useissa Norsunluurannikon paikannimissä.",
       "fact": "Kro on baoulén kylää tai paikkaa tarkoittava pääte.",
       "source": "https://fr.wikipedia.org/wiki/Yamoussoukro"
     },
@@ -56,7 +56,7 @@
       ],
       "correct": 0,
       "level": 2,
-      "hint": "Raaka-aineen syötävä osa kasvaa maan alla.",
+      "hint": "Valmis ruoka on rakeista ja höyrytettyä.",
       "fact": "Attiéké valmistetaan maniokista.",
       "source": "https://en.wikipedia.org/wiki/Attiéké"
     },
@@ -64,9 +64,9 @@
       "q": "Mikä ala kuuluu kaupungin polyteknillisen korkeakoulun koulutukseen?",
       "options": [
         "Agronomia",
-        "Arkeologia",
-        "Teologia",
-        "Koreografia"
+        "Lääketiede",
+        "Journalismi",
+        "Arkeologia"
       ],
       "correct": 0,
       "level": 2,
@@ -84,7 +84,7 @@
       ],
       "correct": 0,
       "level": 3,
-      "hint": "Joki kulkee Norsunluurannikossa.",
+      "hint": "Allas sijaitsee Yamoussoukron lähialueella.",
       "fact": "Kossoun tekojärvi kuuluu Bandamajoen vesistöön.",
       "source": "https://en.wikipedia.org/wiki/Lake_Kossou"
     }
@@ -128,7 +128,7 @@
       "nostot": [
         {
           "otsikko": "Kylä jäi nimeen",
-          "teksti": "Yamoussoukron nimi kantaa mukanaan paikallista historiaa. Kaupungin aiempi nimi oli N’Gokro, ja nykyinen nimi liittyy baoulé-kuningattareen Yamoussoon. Kro on kylää tai paikkaa tarkoittava pääte. Seudun baoulé-asutus ja vanha maatalouskaupunki edelsivät nykyistä pääkaupunkirakentamista. Nimessä näkyy siis vanhempi kerros kuin laajojen bulevardien kaupunkikuvassa. Kuningattaren nimi ja paikallinen paikkapääte muistuttavat asutuksen omasta historiasta myös silloin, kun kaupunkia katsotaan hallintokeskuksena.",
+          "teksti": "Yamoussoukron nimi kantaa mukanaan paikallista historiaa. Kaupunkia edeltäneen kylän nimi oli N’Gokro, ja nykyinen nimi liittyy baoulé-kuningattareen Yamoussoon. Kro on kylää tai paikkaa tarkoittava pääte. Seudun baoulé-asutus ja vanha maatalouskylä edelsivät nykyistä pääkaupunkirakentamista.",
           "wiki": "Yamoussoukro",
           "tiedosto": "",
           "lyhyt": "",
@@ -137,7 +137,7 @@
         },
         {
           "otsikko": "Pääkaupungilla on monta keskusta",
-          "teksti": "Yamoussoukro sai virallisen pääkaupungin aseman 1900-luvun loppupuolella, mutta Abidjan säilyi talouden ja monien hallintotoimintojen keskuksena. Kaupungin uuteen ilmeeseen kuuluvat leveät bulevardit ja istutetut puukujanteet. Vanhemmissa asuinalueissa elämä järjestyy myös yhteispihojen ympärille. Bussiasema on puolestaan arkisen liikkumisen ja kohtaamisen paikka. Pääkaupungin karttaa voi siten lukea eri mittakaavoissa: suunniteltuina pääkatuina, asuntojen pihoina ja paikkoina, joissa matkustajat vaihtavat kyytiä.",
+          "teksti": "Yamoussoukro sai virallisen pääkaupungin aseman 1900-luvun loppupuolella, mutta Abidjan säilyi talouden ja monien hallintotoimintojen keskuksena. Kaupungin uuteen ilmeeseen kuuluvat leveät bulevardit ja istutetut puukujanteet. Vanhemmissa asuinalueissa elämä järjestyy myös yhteispihojen ympärille. Bussiasema on puolestaan arkisen liikkumisen ja kohtaamisen paikka.",
           "wiki": "Yamoussoukro",
           "tiedosto": "",
           "lyhyt": "",
@@ -146,7 +146,7 @@
         },
         {
           "otsikko": "Korkeakoulu yhdistää ammattialat",
-          "teksti": "Institut National Polytechnique Félix Houphouët-Boigny muodostui aiempien korkeakoulujen yhdistymisestä. Sen aloihin kuuluvat agronomia ja agroteollisuus, tekniikka ja tietotekniikka sekä kaivokset ja geologia. Lisäksi siellä koulutetaan rakentamisen, infrastruktuurin, kaupan ja yrityshallinnon osaajia. Mukana on jatko- ja täydennyskoulutusta. Yamoussoukron koulutustarina ulottuu siis pellolta tietokoneelle ja kallioperästä rakennustyömaalle: saman korkeakoulun piirissä tarkastellaan monia käytännön ammatteja.",
+          "teksti": "Institut National Polytechnique Félix Houphouët-Boigny muodostui aiempien korkeakoulujen yhdistymisestä. Sen aloihin kuuluvat agronomia ja agroteollisuus, tekniikka ja tietotekniikka sekä kaivokset ja geologia. Lisäksi siellä koulutetaan rakentamisen, infrastruktuurin, kaupan ja yrityshallinnon osaajia. Mukana on jatko- ja täydennyskoulutusta.",
           "wiki": "Institut National Polytechnique Félix Houphouët-Boigny",
           "tiedosto": "Biology microscope.jpg",
           "lyhyt": "Laboratorion valomikroskooppi.",
@@ -155,7 +155,7 @@
         },
         {
           "otsikko": "Torimatka kulkee kahteen suuntaan",
-          "teksti": "Yamoussoukron markkinoilla käydään päivittäin kauppaa. Lähikylien ihmiset tuovat sinne tuotantoaan myyntiin ja hankkivat samalla kaupungista tavaroita itselleen. Kaupungin pohjoispuolella on myös hedelmämarkkina, ja maatalouden yhteys kauppaan näkyy viljelytuotteiden myyjissä sekä maatalouskoneiden liikkeissä. Paikallista ruokaa tarjotaan ravintoloissa ja katumyynnissä. Torimatka on siten sekä myynti- että ostosmatka: kaupungin ja ympäröivien kylien välinen tavaravirta kulkee molempiin suuntiin.",
+          "teksti": "Yamoussoukron markkinoilla käydään päivittäin kauppaa. Lähikylien ihmiset tuovat sinne tuotantoaan myyntiin ja hankkivat samalla kaupungista tavaroita itselleen. Kaupungin pohjoispuolella on myös hedelmämarkkina, ja maatalouden yhteys kauppaan näkyy viljelytuotteiden myyjissä sekä maatalouskoneiden liikkeissä. Paikallista ruokaa tarjotaan ravintoloissa ja katumyynnissä.",
           "wiki": "Yamoussoukro",
           "tiedosto": "",
           "lyhyt": "",
@@ -179,7 +179,7 @@
           "jaksot": [
             {
               "otsikko": "Perille ja liikkeelle",
-              "teksti": "Yamoussoukrolla on oma lentoasema; Abidjanista kaupunkiin pääsee maanteitse. Abidjanista on tieyhteys kaupunkiin. Bussiaseman ympäristö kuuluu kaupunkielämän keskeisiin paikkoihin.",
+              "teksti": "Yamoussoukrolla on oma lentoasema; Abidjanista kaupunkiin pääsee maanteitse. Bussiaseman ympäristö kuuluu kaupunkielämän keskeisiin paikkoihin.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -199,7 +199,7 @@
             },
             {
               "otsikko": "Koulutus ja kulttuuri",
-              "teksti": "Polyteknillisessä korkeakoulussa opiskellaan muun muassa agronomiaa, rakentamista ja tekniikkaa. Kaupungissa on myös Centre culturel Yaouré. Kulttuuripaikkojen vierailumahdollisuudet ja ohjelma kannattaa selvittää matkan ajankohtana.",
+              "teksti": "Polyteknillisessä korkeakoulussa opiskellaan muun muassa agronomiaa, rakentamista ja tekniikkaa. Kaupungissa on myös Centre culturel Yaouré.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -219,7 +219,7 @@
             },
             {
               "otsikko": "Kaupungin nimet",
-              "teksti": "Yamoussoukron vanha nimi oli N’Gokro. Nykyinen nimi yhdistää kuningatar Yamousson nimen baoulén kylää tarkoittavaan kro-päätteeseen. Paikallinen historia säilyy näin suunnitellun pääkaupungin nimessä.",
+              "teksti": "Yamoussoukro kasvoi N’Gokron kylästä. Nykyinen nimi yhdistää kuningatar Yamousson nimen baoulén kylää tarkoittavaan kro-päätteeseen.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -231,9 +231,9 @@
           "matkailu": {
             "parasta": [
               {
-                "mita": "Paikannimen historia",
-                "tahdet": 3,
-                "selite": "Kro-pääte ja Yamousson nimi säilyttävät paikallista historiaa."
+                "mita": "Bulevardit",
+                "tahdet": 2,
+                "selite": "Leveät kadut kuuluvat suunnitellun pääkaupungin kaupunkikuvaan."
               },
               {
                 "mita": "Markkinat",
@@ -242,12 +242,12 @@
               },
               {
                 "mita": "Koulutuksen kirjo",
-                "tahdet": 3,
+                "tahdet": 2,
                 "selite": "Polyteknillinen korkeakoulu yhdistää monia ammattialoja."
               },
               {
                 "mita": "Ruokakasvit",
-                "tahdet": 3,
+                "tahdet": 2,
                 "selite": "Maniokki, jamssi ja ruokabanaani kuuluvat seudun viljelyyn."
               },
               {
@@ -264,10 +264,6 @@
               {
                 "otsikko": "Koulutus",
                 "teksti": "Kaupungin polyteknillinen korkeakoulu kouluttaa muun muassa agronomian, rakentamisen ja tekniikan aloille."
-              },
-              {
-                "otsikko": "Alue-erot",
-                "teksti": "Maan eri alueilla on erilaisia matkustamisen varauksia."
               }
             ]
           },
@@ -280,20 +276,20 @@
       "nimi": "Seudun sato lautasella",
       "johdanto": "Maniokki, ruokabanaani, jamssi ja kala yhdistävät Yamoussoukron lähiseudun tuotantoon ja maan ruokaperinteeseen.",
       "tehtava": {
-        "kysymys": "Mikä näistä kuuluu eri kasvisukuun kuin jamssi?",
+        "kysymys": "Miten rakeiksi muotoiltu attiéké kypsennetään?",
         "vaihtoehdot": [
-          "Bataatti",
-          "Dioscorea-jamssi",
-          "Vesijamssi",
-          "Valkojamssi"
+          "Höyryttämällä",
+          "Paistamalla pannulla",
+          "Keittämällä vedessä",
+          "Paahtamalla uunissa"
         ],
         "oikea": 0,
-        "fakta": "Samantapainen maanalainen sato ei tee bataatista jamssin sukulaista: kasvit kuuluvat eri sukuihin."
+        "fakta": "Fermentoidusta maniokkimassasta tehdyt rakeet kypsennetään höyryssä."
       },
       "nostot": [
         {
           "otsikko": "Maniokki muuttuu rakeiksi",
-          "teksti": "Attiéké kuuluu Norsunluurannikon ruokaperinteeseen. Maniokista valmistettava massa fermentoidaan, muotoillaan rakeiseksi ja höyrytetään; valmis ruoka voidaan tarjota kalan kanssa. Valmistustaidot siirtyvät perheissä suullisesti ja tekemistä seuraamalla. Sama taito elää myös ravintoloissa ja yhteisillä aterioilla. Yamoussoukron seudulla kasvatetaan maniokkia, mutta attiéké on laajempi kansallinen perinne. Annoksen taustalla on siis raaka-aineen lisäksi opittujen työvaiheiden ketju ja ihmisiä, jotka välittävät osaamista eteenpäin.",
+          "teksti": "Attiéké kuuluu Norsunluurannikon ruokaperinteeseen. Maniokista valmistettava massa fermentoidaan, muotoillaan rakeiseksi ja höyrytetään; valmis ruoka voidaan tarjota kalan kanssa. Valmistustaidot siirtyvät perheissä suullisesti ja tekemistä seuraamalla. Sama taito elää myös ravintoloissa ja yhteisillä aterioilla. Yamoussoukron seudulla kasvatetaan maniokkia, mutta attiéké on laajempi kansallinen perinne.",
           "wiki": "Attiéké",
           "tiedosto": "",
           "lyhyt": "",
@@ -302,7 +298,7 @@
         },
         {
           "otsikko": "Banaani kuuluu myös kattilaan",
-          "teksti": "Yamoussoukron seudulla viljellään ruokabanaania. Tärkkelyspitoisia banaanilajikkeita käytetään kypsennettyinä, esimerkiksi keitettyinä tai paistettuina. Kypsyminen muuttaa hedelmän rakennetta ja makua: kypsä banaani on vihreää pehmeämpi ja makeampi. Ruokabanaani tai plantain ei kuitenkaan tarkoita yhtä ainoaa kasvitieteellistä lajia, vaan erilaisia Musa-ryhmän lajikkeita. Banaanista puhuttaessa on siksi hyvä muistaa myös sen käyttö ruokakasvina; tuttu hedelmän muoto voi päätyä hyvin erilaisiin ruokiin.",
+          "teksti": "Yamoussoukron seudulla viljellään ruokabanaania. Tärkkelyspitoisia banaanilajikkeita käytetään kypsennettyinä, esimerkiksi keitettyinä tai paistettuina. Kypsyminen muuttaa hedelmän rakennetta ja makua: kypsä banaani on vihreää pehmeämpi ja makeampi. Ruokabanaani tai plantain tarkoittaa erilaisia Musa-ryhmän lajikkeita.",
           "wiki": "Cooking banana",
           "tiedosto": "",
           "lyhyt": "",
@@ -311,7 +307,7 @@
         },
         {
           "otsikko": "Jamssi kasvaa maan alla",
-          "teksti": "Jamssi kuuluu Yamoussoukron seudun viljelykasveihin. Nimi viittaa Dioscorea-suvun kasveihin, joiden syötävä osa on maanalainen mukula. Kasvit itse ovat kiipeäviä köynnöksiä, ja niitä viljellään tropiikissa. Jamssi ja bataatti sekoitetaan joskus nimissä, mutta bataatti kuuluu toiseen kasvisukuun. Torilla saman oloinen mukula ei siis vielä kerro kasvien sukulaisuudesta. Jamssin tarinassa maanpäällinen köynnös ja maan alla kehittyvä sato kuuluvat yhteen, vaikka ruokaostoksissa tavallisesti nähdään vain mukula.",
+          "teksti": "Jamssi kuuluu Yamoussoukron seudun viljelykasveihin. Nimi viittaa Dioscorea-suvun kasveihin, joiden syötävä osa on maanalainen mukula. Kasvit itse ovat kiipeäviä köynnöksiä, ja niitä viljellään tropiikissa. Jamssi ja bataatti sekoitetaan joskus nimissä, mutta bataatti kuuluu toiseen kasvisukuun.",
           "wiki": "Yam (vegetable)",
           "tiedosto": "",
           "lyhyt": "",
@@ -320,7 +316,7 @@
         },
         {
           "otsikko": "Kala tulee myös tekojärvestä",
-          "teksti": "Kossoun järvi kuuluu Bandamajoen vesistöön Yamoussoukron lähialueella. Se on padon synnyttämä allas, jonka hyötyihin liitettiin myös kalastus. Seudun kalankulutuksessa mainitaan karpit ja capitaine-nimellä tunnettu kala. Kossoun tekojärvi sijaitsee kaupungin keskustan ulkopuolella Bandamajoen vesistössä. Kun Yamoussoukron ruokaa tarkastellaan, katse ulottuu näin peltojen lisäksi vesille: kaupungin ja sen ympäristön ruokatalouteen kuuluu myös kalastajien työ.",
+          "teksti": "Kossoun järvi kuuluu Bandamajoen vesistöön Yamoussoukron lähialueella. Se on padon synnyttämä allas, jonka hyötyihin liitettiin myös kalastus. Seudun kalankulutuksessa mainitaan karpit ja capitaine-nimellä tunnettu kala.",
           "wiki": "Lake Kossou",
           "tiedosto": "",
           "lyhyt": "",
@@ -330,27 +326,11 @@
       ]
     }
   ],
-  "kohdekartta": {
-    "numeroympyrat": true,
-    "esittely": "Yamoussoukron paikalliset kohteet tarvitsevat vielä varmennetut sijainnit ja historiat.",
-    "rajat": {
-      "pohjoinen": 6.8191,
-      "etela": 6.8130999999999995,
-      "lansi": -5.2774,
-      "ita": -5.271000000000001
-    },
-    "kohteet": []
-  },
+  "kohdekartta": null,
   "nahtavyydet": {},
   "saatiedot": null,
   "ehdotukset": {
     "lentoasema": "Yamoussoukro Airport (ASK)",
-    "huomiot": [
-      "Kartta ja kohdejutut partial: A:ssa ei ole hyväksyttyä paikallista pistettä; 0 kohdetta, ei keksittyjä pisteitä.",
-      "Nimetyn N’Gokron kylän tarkka 1873-tilanne on A:ssa vahvistamatta; sitä ei väitetä pelaajalle.",
-      "Basilika, palatsit ja kampusrakennukset jätetty suojattuina modernina teoksina kartasta ja kuvatilauksista.",
-      "Säätaustan nimetyt Source 1/Source 2 -lähteet puuttuvat; numeroita ei käytetty.",
-      "Turvallisuus- ja vierailutietojen ajantasaisuus avoin D/F:ssä; koko maan vaarallisuutta ei yleistetty."
-    ]
+    "huomiot": []
   }
 }

@@ -14,8 +14,8 @@
     }
   },
   "artikkeli": {
-    "intro": "Bamako on **Nigerjoen kaupunki** Malin lounaisosassa. Joki, tasainen rantamaa ja pohjoisen kallioinen reuna antavat pääkaupungille erilaiset maisemat. Vuonna 1873 täällä oli pieni jokivarren asutus, ennen rautatietä ja siirtomaakauden hallintokeskusta. Paikalliseen perustamisperinteeseen kuuluu Niaré-suku, ja vanhaa hallintoyhteisöä kutsuttiin kafuksi.\n\nAluksi kaupunki kasvoi joen pohjoisrannalla, mutta myöhempi Bamako ulottuu myös etelään. Siltojen ja sotrama-pikkubussien avulla yhdistyvät rannat ja kaupunginosat. Toreilla ruoan rinnalla myydään käyttöesineitä, nahkatöitä ja soittimia, kun taas kansallismuseo kokoaa esineiden kautta maan historiaa.\n\n**Rautatie muutti Bamakon yhteyksiä**, vaikka yhteys Kayesin ja Dakarin suuntaan kuuluu sen myöhempään kasvuun. Nigerin rannalla kalastus ja pienet viljelypalstat tuovat elinkeinot lähelle kaupunkimaisemaa. Pohjoisen ylängön, puutarhojen ja jokitasangon ero auttaa ymmärtämään, miksi kaupunki näyttää eri suunnista erilaiselta.",
-    "teksti": "Bamakon paikallinen historia ulottuu kauas aikaan ennen siirtomaahallintoa. Vuonna 1873 täällä oli pieni jokivarren asutus ja paikallisen kafun eli hallintoyhteisön keskus. Niaré-suvun perustamisperinne säilyy myös Niarélan kaupunginosan nimessä.\n\nNigerjoen tasangolla maasto on pääosin tasaista, pohjoisessa se nousee kallioiseksi. Asutus kasvoi ensin pohjoisrannalla ja laajeni myöhemmin joen yli. Rantoja yhdistävät sillat; kalastus, viljelypalstat ja veneiden vesillelaskupaikat kuuluvat joen arkeen.\n\nBamako-Couran käsityömarkkinoilla ostetaan hopeakoruja, nahkatöitä, soittimia ja puuesineitä. Keskustan Grand Marché tunnetaan myös nimellä Marché Rose. Kansallismuseon kokoelmissa puolestaan säilytetään Malin eri yhteisöjen soittimia, vaatteita ja rituaaliesineitä."
+    "intro": "Bamako on **Nigerjoen kaupunki** Malin lounaisosassa. Joki, tasainen rantamaa ja pohjoisen kallioinen reuna antavat pääkaupungille erilaiset maisemat. Vuonna 1873 täällä oli pieni jokivarren asutus, ennen rautatietä ja siirtomaakauden hallintokeskusta. \n\nAluksi kaupunki kasvoi joen pohjoisrannalla, mutta myöhempi Bamako ulottuu myös etelään. Siltojen ja sotrama-pikkubussien avulla yhdistyvät rannat ja kaupunginosat. Toreilla ruoan rinnalla myydään käyttöesineitä, nahkatöitä ja soittimia, kun taas kansallismuseo kokoaa esineiden kautta maan historiaa.\n\n**Rautatie Kayesiin muutti Bamakon yhteyksiä** 1900-luvun alussa; Dakar-yhteys valmistui myöhemmin. Nigerin rannalla kalastus ja pienet viljelypalstat tuovat elinkeinot lähelle kaupunkimaisemaa.",
+    "teksti": "Bamakon paikallinen historia ulottuu kauas aikaan ennen siirtomaahallintoa. Vuonna 1873 täällä oli pieni jokivarren asutus.\n\nNigerjoen tasangolla maasto on pääosin tasaista, pohjoisessa se nousee kallioiseksi. Asutus kasvoi ensin pohjoisrannalla ja laajeni myöhemmin joen yli. Rantoja yhdistävät sillat; kalastus, viljelypalstat ja veneiden vesillelaskupaikat kuuluvat joen arkeen.\n\nBamako-Couran käsityömarkkinoilla ostetaan hopeakoruja, nahkatöitä, soittimia ja puuesineitä. Keskustan Grand Marché tunnetaan myös nimellä Marché Rose. Kansallismuseon kokoelmissa puolestaan säilytetään Malin eri yhteisöjen soittimia, vaatteita ja rituaaliesineitä."
   },
   "kysymykset": [
     {
@@ -50,54 +50,54 @@
       "q": "Mihin tarkoitukseen sotramaa käytetään Bamakossa?",
       "options": [
         "Joukkoliikenteeseen",
-        "Kalankuljetukseen",
-        "Peltoviljelyyn",
-        "Radanrakennukseen"
+        "Tavarajakeluun",
+        "Koulukuljetuksiin",
+        "Yksityiseen taksiliikenteeseen"
       ],
       "correct": 0,
       "level": 2,
-      "hint": "Nimitys liittyy kaupunginosien väliseen arkiseen palveluun.",
+      "hint": "Nimitys liittyy kaupungissa liikkuviin pakettiautoihin.",
       "fact": "Sotrama tarjoaa kaupungissa yhteistä matkustajakyytiä.",
       "source": "https://en.wikipedia.org/wiki/Bamako"
     },
     {
-      "q": "Millä nimellä Bamakon vanhaa paikallista hallintoyhteisöä kutsuttiin?",
+      "q": "Minkä niminen museo edelsi Malin kansallismuseota?",
       "options": [
-        "Kafu",
-        "Emiraatti",
-        "Prefektuuri",
-        "Kalifaatti"
+        "Sudanin museo",
+        "Nigerin museo",
+        "Ségoun museo",
+        "Kayesin museo"
       ],
       "correct": 0,
       "level": 2,
-      "hint": "Nimitys kuuluu kaupungin paikalliseen historiaan ennen siirtomaahallintoa.",
-      "fact": "Kafu tarkoittaa tässä vanhaa paikallista hallintoyhteisöä.",
-      "source": "https://en.wikipedia.org/wiki/Bamako"
+      "hint": "Museon nimi vaihtui Malin itsenäistymisen yhteydessä.",
+      "fact": "Malin kansallismuseo aloitti Sudanin museona osana IFAN-tutkimuslaitosta.",
+      "source": "https://en.wikipedia.org/wiki/National_Museum_of_Mali"
     },
     {
-      "q": "Minkä suvun nimi säilyy Bamakon Niarélan kaupunginosan nimessä?",
+      "q": "Missä Bamakon seudun pitkän jokireitin satama sijaitsee?",
       "options": [
-        "Niaré",
-        "Keïta",
-        "Kanté",
-        "Traoré"
+        "Koulikorossa",
+        "Katissa",
+        "Kitassa",
+        "Sikassossa"
       ],
       "correct": 0,
       "level": 3,
-      "hint": "Kyse on paikalliseen perustamisperinteeseen liittyvästä suvusta.",
-      "fact": "Niaré-suvun historia liittyy myös vanhaan Niarélan kaupunginosaan.",
+      "hint": "Paikka sijaitsee pääkaupungin koillispuolella.",
+      "fact": "Nigerin pidemmän jokiliikenteen satama on Koulikorossa, josta vesireitti jatkuu Moptiin ja Gaohon.",
       "source": "https://en.wikipedia.org/wiki/Bamako"
     }
   ],
   "tiedot": [
     "Bamako kasvoi aluksi Nigerin pohjoisrannalla ja ulottui myöhemmin myös etelään.",
     "Nigerin rannalla on kalastuksen lisäksi pieniä viljelypalstoja ja veneiden vesillelaskupaikkoja.",
-    "Niarélan nimi liittyy Niaré-sukuun, jolla on keskeinen osa Bamakon paikallisessa perustamisperinteessä."
+    "Bamako sai ensin ratayhteyden Kayesiin; yhteys Atlantin rannikolla sijaitsevaan Dakariin valmistui myöhemmin."
   ],
   "valokuva": {
     "tiedosto": "Bamako night hills may 2007.jpg",
     "lyhyt": "Bamakon yömaisema.",
-    "selite": "Bamako yömaisemassa vuonna 2007.",
+    "selite": "Bamako ympäröiviltä kukkuloilta nähtynä toukokuussa 2007.",
     "lahde": "https://www.flickr.com/photos/gigawebs/, Commons (CC BY 2.0)",
     "vuosi": "2007"
   },
@@ -109,7 +109,7 @@
       "kansikuvat": [
         {
           "tiedosto": "Dan Flore Bamako-Mali-Boat-on-the-Niger-River-and-King-Fahd-Bridge.jpg",
-          "lyhyt": "Vene Nigerjoen rannalla Bamakossa.",
+          "lyhyt": "Vene Nigerjoella Bamakossa.",
           "selite": "Nigerjoen rantamaisemaa ja vene Bamakossa toukokuussa 2009.",
           "lahde": "Dan Flore, Wikimedia Commons (CC BY-SA 4.0)"
         },
@@ -128,8 +128,8 @@
       ],
       "nostot": [
         {
-          "otsikko": "Esineessä säilyy muutakin kuin muoto",
-          "teksti": "Malin kansallismuseo Bamakossa esittelee maan arkeologiaa ja eri yhteisöjen esineperinteitä. Kokoelmiin kuuluu soittimia, vaatteita ja rituaaliesineitä. Näyttelyissä menneisyys näkyy sekä kaivauksissa löytyneenä aineistona että ihmisten valmistamina ja käyttäminä tavaroina. Museon taustalla on Ranskan Länsi-Afrikan tutkimusinstituutin työ; itsenäistymisen jälkeen siitä tuli Malin kansallismuseo. Kokoelma tekee näkyväksi useita kulttuuriperinteitä saman valtion sisällä.",
+          "otsikko": "Malin kansallismuseon kokoelmat",
+          "teksti": "Malin kansallismuseo Bamakossa esittelee maan arkeologiaa ja eri yhteisöjen esineperinteitä. Kokoelmiin kuuluu soittimia, vaatteita ja rituaaliesineitä. Museo aloitti Sudanin museona osana siirtomaa-ajan Institut français d’Afrique noire -tutkimuslaitosta (IFAN). Malin itsenäistyttyä siitä tuli kansallismuseo. Esineiden lisäksi museon kokoelmissa säilytetään valokuvia sekä ääni- ja videotallenteita.",
           "tiedosto": "",
           "lyhyt": "",
           "selite": "",
@@ -138,7 +138,7 @@
         },
         {
           "otsikko": "Kiskot saapuivat vanhaan asutukseen",
-          "teksti": "Bamakon jokivarren asutus ja paikallinen kafu olivat olemassa jo ennen rautatietä. Yhteys Kayesiin ja edelleen Dakarin suuntaan liitti paikan 1900-luvun alussa uuteen liikenneverkkoon. Dakar–Niger-radan varrella ovat myös Kati, Négala ja Kita. Rautatien myötä Bamako kasvoi ja sen asema hallintokeskuksena vahvistui. Aikaisempi paikallinen historia näkyy Niarélassa, jonka nimi liittyy perustamisperinteeseen kuuluvaan Niaré-sukuun. Vanha kyläasutus muuttui näin osaksi laajempaa kaupunkia.",
+          "teksti": "Bamakon jokivarren asutus oli olemassa jo ennen rautatietä. Kaupunki sai 1900-luvun alussa ratayhteyden Kayesiin, ja yhteys Dakariin valmistui myöhemmin. Dakar–Niger-radan varrella ovat myös Kati, Négala ja Kita. Rautatie ja siirtomaahallinnon pääkaupunkiasema kuuluivat Bamakon kasvuun. Malin kansallismuseon lähellä sijaitsevat kasvitieteellinen puutarha ja eläintarha kuuluvat puolestaan kaupungin puistoalueeseen.",
           "tiedosto": "",
           "lyhyt": "",
           "selite": "",
@@ -147,7 +147,7 @@
         },
         {
           "otsikko": "Torilta lähtee myös soitin",
-          "teksti": "Bamako-Couran käsityömarkkinoilla myydään hopeakoruja, nahkatöitä, soittimia ja puuesineitä. Keskustan suuri tori, Grand Marché eli Marché Rose, kuuluu samaan kauppaverkkoon. Marché Rose rakennettiin siirtomaakaudella, ja se on myöhemmin palanut ja rakennettu uudelleen. Médinen suuri tori on toinen kaupungin keskeinen kauppapaikka. Torien kautta tavara kulkee kaupunginosiin: samalta kauppamatkalta voi löytyä sekä jokapäiväisiä tarvikkeita että käsityöläisen valmistama soitin.",
+          "teksti": "Bamako-Couran käsityömarkkinoilla myydään hopeakoruja, nahkatöitä, soittimia ja puuesineitä. Keskustan suuri tori, Grand Marché eli Marché Rose, kuuluu samaan kauppaverkkoon. Marché Rose rakennettiin siirtomaakaudella, ja se on myöhemmin palanut ja rakennettu uudelleen. Médinen suuri tori on toinen kaupungin keskeinen kauppapaikka.",
           "tiedosto": "",
           "lyhyt": "",
           "selite": "",
@@ -156,7 +156,7 @@
         },
         {
           "otsikko": "Sotrama yhdistää kaupunginosia",
-          "teksti": "Sotrama on Bamakon joukkoliikenteessä käytetty pakettiauto tai pikkubussi; monet ajoneuvoista ovat yksityisessä omistuksessa. Siltojen kautta kyydit yhdistävät Nigerin eri puolilla sijaitsevia kaupunginosia. Maantieyhteydet jatkuvat muun muassa Katiin, Koulikoroon ja Ségouhun. Pidemmän jokiliikenteen satama on Bamakon sijaan Koulikorossa, josta reitti jatkuu Moptiin ja Gaohon. Pääkaupungin paikalliskyyti, maantie ja jokivarren satama muodostavat erilaisia yhteyksiä saman seudun sisällä.",
+          "teksti": "Sotrama on Bamakon joukkoliikenteessä käytetty pakettiauto tai pikkubussi; monet ajoneuvoista ovat yksityisessä omistuksessa. Siltojen kautta kyydit yhdistävät Nigerin eri puolilla sijaitsevia kaupunginosia. Maantieyhteydet jatkuvat muun muassa Katiin, Koulikoroon ja Ségouhun. Pidemmän jokiliikenteen satama on Bamakon sijaan Koulikorossa, josta reitti jatkuu Moptiin ja Gaohon.",
           "tiedosto": "",
           "lyhyt": "",
           "selite": "",
@@ -288,17 +288,17 @@
         "kysymys": "Mikä maaston ominaisuus tekee Bamakon jokirannan rakentamisesta hankalaa?",
         "vaihtoehdot": [
           "Tulvatasanko",
-          "Hiekkadyynit",
-          "Jäätikkölaakso",
-          "Koralliriutta"
+          "Jyrkkä jokitörmä",
+          "Kallioinen selänne",
+          "Hiekkainen ylänkö"
         ],
         "oikea": 0,
         "fakta": "Joen rantamaa kuuluu veden vaikutuksesta muuttuvaan tasankoon, joten rakentaminen joutuu ottamaan vesistön huomioon."
       },
       "nostot": [
         {
-          "otsikko": "Jokitasanko ei ole tyhjä rakennusmaa",
-          "teksti": "Bamako sijaitsee Nigerjoen tulvatasangolla, mikä vaikeuttaa rakentamista rantamaalle. Asutus kasvoi aluksi pohjoisrannalla ja laajeni myöhemmin siltojen kautta myös etelään. Pohjoisessa tasainen maa vaihtuu kohoavaksi kallioiseksi reunaksi. Kaupungin laidalla on siis sekä matalaa jokimaata että ylänköä. Rannan pienet viljelypalstat ja veneiden vesillelaskupaikat käyttävät tasankoa toisin kuin tiheä kaupunkirakenne. Niger on Bamakossa samalla sekä kulkuväylä että kalastuksen ja viljelyn ympäristö.",
+          "otsikko": "Rakentamista tulvatasangolla",
+          "teksti": "Bamako sijaitsee Nigerjoen tulvatasangolla, mikä vaikeuttaa rakentamista rantamaalle. Asutus kasvoi aluksi pohjoisrannalla ja laajeni myöhemmin siltojen kautta myös etelään. Pohjoisessa tasainen maa vaihtuu kohoavaksi kallioiseksi reunaksi. Rannan pienet viljelypalstat ja veneiden vesillelaskupaikat käyttävät tasankoa toisin kuin tiheä kaupunkirakenne. Niger on Bamakossa samalla sekä kulkuväylä että kalastuksen ja viljelyn ympäristö.",
           "tiedosto": "Cité du Niger.jpg",
           "lyhyt": "Vesikasvillisuutta Bamakossa.",
           "selite": "Vesikasvillisuuden peittämää vettä Bamakossa vuonna 2017.",
@@ -307,7 +307,7 @@
         },
         {
           "otsikko": "Point G avaa näkymän alaspäin",
-          "teksti": "Point G:n kukkulalta avautuu näkymä Bamakoon. Kukkula kuuluu pohjoiseen ylänköreunaan, joka kohoaa Nigerin tasaisen jokimaan ylle. Sen luolat sijaitsevat kasvitieteellisen puutarhan ja eläintarhan yläpuolella, ja luolissa on myös kalliomaalauksia. Näkymässä yhdistyvät kaksi maastonmuotoa: kukkulat kaupungin pohjoispuolella ja alava joenranta etelämpänä. Asutus kasvoi ensin Nigerin pohjoisrannalle, joten ylhäältä nähtävä vanhempi kaupunkialue on joen ja ylängön välissä.",
+          "teksti": "Point G:n kukkulalta avautuu näkymä Bamakoon. Kukkula kuuluu pohjoiseen ylänköreunaan, joka kohoaa Nigerin tasaisen jokimaan ylle. Sen luolat sijaitsevat kasvitieteellisen puutarhan ja eläintarhan yläpuolella, ja luolissa on myös kalliomaalauksia.",
           "tiedosto": "",
           "lyhyt": "",
           "selite": "",
@@ -316,7 +316,7 @@
         },
         {
           "otsikko": "Puutarhassa katsotaan lähelle",
-          "teksti": "Bamakon kasvitieteellinen puutarha sijaitsee kansallismuseon lähellä ja eläintarhan vieressä. Puutarhassa esitellään Malille tyypillistä kasvillisuutta. Se kuuluu vihreään puistoalueeseen pohjoisen ylänköreunan alapuolella, ja alueella kulkee kävelypolkuja. Puutarhan yläpuolella kohoaa Point G:n kukkula luolineen. Museon, puutarhan ja eläintarhan naapurusto kokoaa lähelle toisiaan maan esinehistoriaa sekä eläviä kasveja ja eläimiä; taustalla kohoava kallioinen maasto rajaa tämän osan kaupunkia.",
+          "teksti": "Bamakon kasvitieteellinen puutarha sijaitsee kansallismuseon lähellä ja eläintarhan vieressä. Puutarhassa esitellään Malille tyypillistä kasvillisuutta. Se kuuluu vihreään puistoalueeseen pohjoisen ylänköreunan alapuolella, ja alueella kulkee kävelypolkuja. Puutarhan yläpuolella kohoaa Point G:n kukkula luolineen.",
           "tiedosto": "",
           "lyhyt": "",
           "selite": "",
@@ -325,7 +325,7 @@
         },
         {
           "otsikko": "Niger on myös työpaikka",
-          "teksti": "Nigerissä harjoitetaan kaupallista kalastusta Bamakon kohdalla. Joen varressa on pieniä viljelypalstoja ja veneiden vesillelaskupaikkoja, joten rantamaisema kuuluu myös kaupungin työhön ja ruokaan. Paikallisista ruokapaikoista kerrotaan grillattua kalaa ja capitaine-nimellä tarjottua jokikalaa. Kalastus ja pienviljely tuovat rantaan elinkeinoja myös siellä, missä kasvava pääkaupunki täyttää ympäröivää tasankoa. Kaupunkijoki on yhtä aikaa maisema, kulkemisen ympäristö ja elannon lähde.",
+          "teksti": "Nigerissä harjoitetaan kaupallista kalastusta Bamakon kohdalla. Joen varressa on pieniä viljelypalstoja ja veneiden vesillelaskupaikkoja, joten rantamaisema kuuluu myös kaupungin työhön ja ruokaan. Paikallisissa ruokapaikoissa tarjotaan grillattua kalaa sekä capitaine-nimellä tunnettua jokikalaa.",
           "tiedosto": "Bamako Garden (31115610468).jpg",
           "lyhyt": "Bamakon viljelypalstoja.",
           "selite": "Pieniä viljelypalstoja Bamakossa.",
@@ -340,11 +340,6 @@
   "saatiedot": null,
   "ehdotukset": {
     "lentoasema": "Modibo Keita International Airport (BKO)",
-    "huomiot": [
-      "Omistajan 12.10.2026 ohjaama C ennen erillisen kuvaputken valmistumista. Kuvat ovat avoimia kenttiä, eivät valintoja.",
-      "Kirjoitusluonnos ei ole kuva-, kartta-, D/E/F- tai julkaisuhyväksyntä.",
-      "A:n kaksi luontopistettä ovat vain Wikivoyagen tutkimuskoordinaatteja. Hyväksyttyjä oman WP/WD:n vapaita karttakohteita ei ole: kohdekartta:null ja nahtavyydet:{}; ei pistearvausta tai suojatun museon/katedraalin korviketta. Kartan lähdeportti ja kaikki kuvaroolit ovat avoimia.",
-      "Saatiedot:null: valmista 48/48 alkuperäistä asema-/kausivarmennusta ei ole käytettävissä. Auditointi erilliseen jonoon; saa.json ennallaan."
-    ]
+    "huomiot": []
   }
 }

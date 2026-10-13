@@ -3,7 +3,7 @@
   "era": "e05",
   "city": "yamoussoukro",
   "authorization": "hyväksyn kaikki tekemäsi kuvat. toimita ne claudelle. claudelta saat uusia ohjeita jatkoa varten",
-  "sourceContentAfterSHA256": "acb8eef0954ad2bbbc9c952985d4bd6441e8a323ede101667fb35c0fb09585f3",
+  "sourceContentAfterSHA256": "6b9915cada90c360df926e44bc34a6e24fb5b46fb462c68965918b748c5c8761",
   "assets": [
     {
       "era": "e05",
@@ -53,10 +53,10 @@
         1536
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/yamoussoukro/sisalto.json",
-      "sourceContentSHA256": "acb8eef0954ad2bbbc9c952985d4bd6441e8a323ede101667fb35c0fb09585f3",
+      "sourceContentSHA256": "6b9915cada90c360df926e44bc34a6e24fb5b46fb462c68965918b748c5c8761",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "eb685b67fea9f28f7465b14357a2e80426f7bdbe4497a4e21354be213554ec8f",
+        "semanticContextSHA256": "c7514ed7dac4080d2ef8e9cf0bc13d49e9729ab7d3396998d2b26424e3e277fa",
         "subjectTitle": "Matkailijalle",
         "targetState": "existing-target"
       },
@@ -232,9 +232,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "acb8eef0954ad2bbbc9c952985d4bd6441e8a323ede101667fb35c0fb09585f3",
+      "sourceContentAfterSHA256": "6b9915cada90c360df926e44bc34a6e24fb5b46fb462c68965918b748c5c8761",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "eb685b67fea9f28f7465b14357a2e80426f7bdbe4497a4e21354be213554ec8f",
+      "contextAfterSHA256": "c7514ed7dac4080d2ef8e9cf0bc13d49e9729ab7d3396998d2b26424e3e277fa",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -257,7 +257,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "6b9915cada90c360df926e44bc34a6e24fb5b46fb462c68965918b748c5c8761",
+        "sameImageNativeSHA256": "3f4237f9a7f505f2a80a77cf6d0bc49da1665cd6bd51f1f4ad37067834f1d98d",
+        "sameImageExportSHA256": "90dc1a089f1fc36be33b5a689e3d11ec947580f8f2f0327d9cb89dd1ed9b40dd",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e05",
@@ -310,7 +318,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/yamoussoukro/sisalto.json",
-      "sourceContentSHA256": "acb8eef0954ad2bbbc9c952985d4bd6441e8a323ede101667fb35c0fb09585f3",
+      "sourceContentSHA256": "6b9915cada90c360df926e44bc34a6e24fb5b46fb462c68965918b748c5c8761",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
         "semanticContextSHA256": "8c8cead08ed686405cb7b82720cc5b4bd2f073d81b874259247e3e389d80f20c",
@@ -517,7 +525,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "acb8eef0954ad2bbbc9c952985d4bd6441e8a323ede101667fb35c0fb09585f3",
+      "sourceContentAfterSHA256": "6b9915cada90c360df926e44bc34a6e24fb5b46fb462c68965918b748c5c8761",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
       "contextAfterSHA256": "8c8cead08ed686405cb7b82720cc5b4bd2f073d81b874259247e3e389d80f20c",
       "ownerApproved": true,
@@ -542,7 +550,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "6b9915cada90c360df926e44bc34a6e24fb5b46fb462c68965918b748c5c8761",
+        "sameImageNativeSHA256": "2fae412ea12a0f71cc3b18ae0501ce2e914474b389077ef2f17ddaae79378587",
+        "sameImageExportSHA256": "ea38242573a693dca23666d6f30b917ff18404c7176a0e99a879b00ba895f840",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e05",
@@ -592,10 +608,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/yamoussoukro/sisalto.json",
-      "sourceContentSHA256": "acb8eef0954ad2bbbc9c952985d4bd6441e8a323ede101667fb35c0fb09585f3",
+      "sourceContentSHA256": "6b9915cada90c360df926e44bc34a6e24fb5b46fb462c68965918b748c5c8761",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "681b18084408b18b9032eac3dd4213580fa460d60b2d4361d2a8f14c437ec1ea",
-        "semanticContextSHA256": "681b18084408b18b9032eac3dd4213580fa460d60b2d4361d2a8f14c437ec1ea",
+        "targetBeforeSHA256": "a2bb80473ad918cb7177b74724c6d04b3d509cfdf21735912cccb00c74ac2486",
+        "semanticContextSHA256": "a2bb80473ad918cb7177b74724c6d04b3d509cfdf21735912cccb00c74ac2486",
         "subjectTitle": "Torimatka kulkee kahteen suuntaan",
         "targetState": "existing-target"
       },
@@ -814,9 +830,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "acb8eef0954ad2bbbc9c952985d4bd6441e8a323ede101667fb35c0fb09585f3",
-      "targetAfterSHA256": "681b18084408b18b9032eac3dd4213580fa460d60b2d4361d2a8f14c437ec1ea",
-      "contextAfterSHA256": "681b18084408b18b9032eac3dd4213580fa460d60b2d4361d2a8f14c437ec1ea",
+      "sourceContentAfterSHA256": "6b9915cada90c360df926e44bc34a6e24fb5b46fb462c68965918b748c5c8761",
+      "targetAfterSHA256": "a2bb80473ad918cb7177b74724c6d04b3d509cfdf21735912cccb00c74ac2486",
+      "contextAfterSHA256": "a2bb80473ad918cb7177b74724c6d04b3d509cfdf21735912cccb00c74ac2486",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -839,7 +855,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "6b9915cada90c360df926e44bc34a6e24fb5b46fb462c68965918b748c5c8761",
+        "sameImageNativeSHA256": "370925b26c8e4828709743a51002c0870e6fe9fe22e898685975418097b8f154",
+        "sameImageExportSHA256": "0e2302275eaabf17b4d6b36371f062c7a264f360db823d4bdaa92d62f564349f",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e05",
@@ -889,10 +913,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/yamoussoukro/sisalto.json",
-      "sourceContentSHA256": "acb8eef0954ad2bbbc9c952985d4bd6441e8a323ede101667fb35c0fb09585f3",
+      "sourceContentSHA256": "6b9915cada90c360df926e44bc34a6e24fb5b46fb462c68965918b748c5c8761",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "8b638e308d4e694e840332f8a1344db0e14169d0f8427d226439de3fe2052d63",
-        "semanticContextSHA256": "8b638e308d4e694e840332f8a1344db0e14169d0f8427d226439de3fe2052d63",
+        "targetBeforeSHA256": "7ea18270de20536b112870480bc3d4a935c6991dbd334e69ef420d646727f2eb",
+        "semanticContextSHA256": "7ea18270de20536b112870480bc3d4a935c6991dbd334e69ef420d646727f2eb",
         "subjectTitle": "Maniokki muuttuu rakeiksi",
         "targetState": "existing-target"
       },
@@ -1070,9 +1094,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "acb8eef0954ad2bbbc9c952985d4bd6441e8a323ede101667fb35c0fb09585f3",
-      "targetAfterSHA256": "8b638e308d4e694e840332f8a1344db0e14169d0f8427d226439de3fe2052d63",
-      "contextAfterSHA256": "8b638e308d4e694e840332f8a1344db0e14169d0f8427d226439de3fe2052d63",
+      "sourceContentAfterSHA256": "6b9915cada90c360df926e44bc34a6e24fb5b46fb462c68965918b748c5c8761",
+      "targetAfterSHA256": "7ea18270de20536b112870480bc3d4a935c6991dbd334e69ef420d646727f2eb",
+      "contextAfterSHA256": "7ea18270de20536b112870480bc3d4a935c6991dbd334e69ef420d646727f2eb",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -1095,7 +1119,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "6b9915cada90c360df926e44bc34a6e24fb5b46fb462c68965918b748c5c8761",
+        "sameImageNativeSHA256": "8397f97d9b4fe7d135128abf7c0d82295e1f3e5d89da8b720e322f4c83ad3770",
+        "sameImageExportSHA256": "d0f205be5ebe22fb3fe266954409cf0a8e593192b5877ee2aaa00a76a20a8346",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e05",
@@ -1145,10 +1177,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/yamoussoukro/sisalto.json",
-      "sourceContentSHA256": "acb8eef0954ad2bbbc9c952985d4bd6441e8a323ede101667fb35c0fb09585f3",
+      "sourceContentSHA256": "6b9915cada90c360df926e44bc34a6e24fb5b46fb462c68965918b748c5c8761",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "ff0b78abedfc69d47ce9c8d0f6983e8e03ae733c1a345841fd6c12c1d8cbb2d4",
-        "semanticContextSHA256": "ff0b78abedfc69d47ce9c8d0f6983e8e03ae733c1a345841fd6c12c1d8cbb2d4",
+        "targetBeforeSHA256": "2c8421dc7e94f9578941994c80beffcbaad0331afbe5db41b3ba377cb87a7e3c",
+        "semanticContextSHA256": "2c8421dc7e94f9578941994c80beffcbaad0331afbe5db41b3ba377cb87a7e3c",
         "subjectTitle": "Banaani kuuluu myös kattilaan",
         "targetState": "existing-target"
       },
@@ -1322,9 +1354,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "acb8eef0954ad2bbbc9c952985d4bd6441e8a323ede101667fb35c0fb09585f3",
-      "targetAfterSHA256": "ff0b78abedfc69d47ce9c8d0f6983e8e03ae733c1a345841fd6c12c1d8cbb2d4",
-      "contextAfterSHA256": "ff0b78abedfc69d47ce9c8d0f6983e8e03ae733c1a345841fd6c12c1d8cbb2d4",
+      "sourceContentAfterSHA256": "6b9915cada90c360df926e44bc34a6e24fb5b46fb462c68965918b748c5c8761",
+      "targetAfterSHA256": "2c8421dc7e94f9578941994c80beffcbaad0331afbe5db41b3ba377cb87a7e3c",
+      "contextAfterSHA256": "2c8421dc7e94f9578941994c80beffcbaad0331afbe5db41b3ba377cb87a7e3c",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -1347,7 +1379,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "6b9915cada90c360df926e44bc34a6e24fb5b46fb462c68965918b748c5c8761",
+        "sameImageNativeSHA256": "390be92759b1f1662f3d0d52b04c6bf891a44d7250af6145ba883f6538addb5b",
+        "sameImageExportSHA256": "fd6894aa234b23a4b76acd8de94a1c7df8b8e1490a32955a32652c912f0294ba",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e05",
@@ -1397,10 +1437,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/yamoussoukro/sisalto.json",
-      "sourceContentSHA256": "acb8eef0954ad2bbbc9c952985d4bd6441e8a323ede101667fb35c0fb09585f3",
+      "sourceContentSHA256": "6b9915cada90c360df926e44bc34a6e24fb5b46fb462c68965918b748c5c8761",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "10da48efa16e29670cc62a93f7736dfcfb729c655137f42bd1c72c9ca85b62ec",
-        "semanticContextSHA256": "10da48efa16e29670cc62a93f7736dfcfb729c655137f42bd1c72c9ca85b62ec",
+        "targetBeforeSHA256": "9276f7eacc4ae28dabc820ba1712089961285cbdece4876e82cc3fe98ec50ac1",
+        "semanticContextSHA256": "9276f7eacc4ae28dabc820ba1712089961285cbdece4876e82cc3fe98ec50ac1",
         "subjectTitle": "Jamssi kasvaa maan alla",
         "targetState": "existing-target"
       },
@@ -1574,9 +1614,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "acb8eef0954ad2bbbc9c952985d4bd6441e8a323ede101667fb35c0fb09585f3",
-      "targetAfterSHA256": "10da48efa16e29670cc62a93f7736dfcfb729c655137f42bd1c72c9ca85b62ec",
-      "contextAfterSHA256": "10da48efa16e29670cc62a93f7736dfcfb729c655137f42bd1c72c9ca85b62ec",
+      "sourceContentAfterSHA256": "6b9915cada90c360df926e44bc34a6e24fb5b46fb462c68965918b748c5c8761",
+      "targetAfterSHA256": "9276f7eacc4ae28dabc820ba1712089961285cbdece4876e82cc3fe98ec50ac1",
+      "contextAfterSHA256": "9276f7eacc4ae28dabc820ba1712089961285cbdece4876e82cc3fe98ec50ac1",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -1599,7 +1639,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "6b9915cada90c360df926e44bc34a6e24fb5b46fb462c68965918b748c5c8761",
+        "sameImageNativeSHA256": "18662bfb65dcdbf2918297b89119e32b54dc1e0c999df0ad579bebd8db538e42",
+        "sameImageExportSHA256": "fe5030a14bc308982e3a277af9f8d0f8be0dff5be3f9e22b8d935b5f5d1432f7",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e05",
@@ -1649,10 +1697,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/yamoussoukro/sisalto.json",
-      "sourceContentSHA256": "acb8eef0954ad2bbbc9c952985d4bd6441e8a323ede101667fb35c0fb09585f3",
+      "sourceContentSHA256": "6b9915cada90c360df926e44bc34a6e24fb5b46fb462c68965918b748c5c8761",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "68e4b9117d081aebde1a1f39dd412f01b13652771ca135994b40a4eb30e8412c",
-        "semanticContextSHA256": "68e4b9117d081aebde1a1f39dd412f01b13652771ca135994b40a4eb30e8412c",
+        "targetBeforeSHA256": "e86e71e7ace14013e7a82c8ff5a5755008da24339e80e926aed1111250f4f4c5",
+        "semanticContextSHA256": "e86e71e7ace14013e7a82c8ff5a5755008da24339e80e926aed1111250f4f4c5",
         "subjectTitle": "Kala tulee myös tekojärvestä",
         "targetState": "existing-target"
       },
@@ -1883,9 +1931,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "acb8eef0954ad2bbbc9c952985d4bd6441e8a323ede101667fb35c0fb09585f3",
-      "targetAfterSHA256": "68e4b9117d081aebde1a1f39dd412f01b13652771ca135994b40a4eb30e8412c",
-      "contextAfterSHA256": "68e4b9117d081aebde1a1f39dd412f01b13652771ca135994b40a4eb30e8412c",
+      "sourceContentAfterSHA256": "6b9915cada90c360df926e44bc34a6e24fb5b46fb462c68965918b748c5c8761",
+      "targetAfterSHA256": "e86e71e7ace14013e7a82c8ff5a5755008da24339e80e926aed1111250f4f4c5",
+      "contextAfterSHA256": "e86e71e7ace14013e7a82c8ff5a5755008da24339e80e926aed1111250f4f4c5",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -1908,7 +1956,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "6b9915cada90c360df926e44bc34a6e24fb5b46fb462c68965918b748c5c8761",
+        "sameImageNativeSHA256": "8a24c49f248ea748250777852e8d987b8065c48a7557ec1288aeea084316f49c",
+        "sameImageExportSHA256": "e01e8141bb642cedfc8d86d45559bfc1a1fcc42c20b2e6877ff33ffdf3256ed7",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e05",
@@ -1958,7 +2014,7 @@
         3888
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/yamoussoukro/sisalto.json",
-      "sourceContentSHA256": "acb8eef0954ad2bbbc9c952985d4bd6441e8a323ede101667fb35c0fb09585f3",
+      "sourceContentSHA256": "6b9915cada90c360df926e44bc34a6e24fb5b46fb462c68965918b748c5c8761",
       "semanticSourceBind": {
         "targetBeforeSHA256": "02937f2e15473046a06ba649d606b43fb42a85abdf42e84eba962040b866589e",
         "semanticContextSHA256": "02937f2e15473046a06ba649d606b43fb42a85abdf42e84eba962040b866589e",
@@ -2164,7 +2220,7 @@
         "tiedosto": "20240521 - Agama agama.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "acb8eef0954ad2bbbc9c952985d4bd6441e8a323ede101667fb35c0fb09585f3",
+      "sourceContentAfterSHA256": "6b9915cada90c360df926e44bc34a6e24fb5b46fb462c68965918b748c5c8761",
       "targetAfterSHA256": "02937f2e15473046a06ba649d606b43fb42a85abdf42e84eba962040b866589e",
       "contextAfterSHA256": "02937f2e15473046a06ba649d606b43fb42a85abdf42e84eba962040b866589e",
       "ownerApproved": true,
@@ -2189,7 +2245,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "6b9915cada90c360df926e44bc34a6e24fb5b46fb462c68965918b748c5c8761",
+        "sameImageNativeSHA256": "fd0034461890b1eefb392929043ea9650651752aa643672f548786ebe2e58711",
+        "sameImageExportSHA256": "fd0034461890b1eefb392929043ea9650651752aa643672f548786ebe2e58711",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e05",
@@ -2242,7 +2306,7 @@
         3000
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/yamoussoukro/sisalto.json",
-      "sourceContentSHA256": "acb8eef0954ad2bbbc9c952985d4bd6441e8a323ede101667fb35c0fb09585f3",
+      "sourceContentSHA256": "6b9915cada90c360df926e44bc34a6e24fb5b46fb462c68965918b748c5c8761",
       "semanticSourceBind": {
         "targetBeforeSHA256": "4bea3dbd8422990185852ac95b83f2bd5bf7dcc8b65b0286f37ef678aea17c78",
         "semanticContextSHA256": "4bea3dbd8422990185852ac95b83f2bd5bf7dcc8b65b0286f37ef678aea17c78",
@@ -2448,7 +2512,7 @@
         "tiedosto": "20240521 - Yamoussoukro - Golf.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "acb8eef0954ad2bbbc9c952985d4bd6441e8a323ede101667fb35c0fb09585f3",
+      "sourceContentAfterSHA256": "6b9915cada90c360df926e44bc34a6e24fb5b46fb462c68965918b748c5c8761",
       "targetAfterSHA256": "4bea3dbd8422990185852ac95b83f2bd5bf7dcc8b65b0286f37ef678aea17c78",
       "contextAfterSHA256": "4bea3dbd8422990185852ac95b83f2bd5bf7dcc8b65b0286f37ef678aea17c78",
       "ownerApproved": true,
@@ -2473,7 +2537,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "6b9915cada90c360df926e44bc34a6e24fb5b46fb462c68965918b748c5c8761",
+        "sameImageNativeSHA256": "e82d57b26856a9e02ca81ed19ad66d601a534d4f01aa77f0ac74c0e8b21af09c",
+        "sameImageExportSHA256": "e82d57b26856a9e02ca81ed19ad66d601a534d4f01aa77f0ac74c0e8b21af09c",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e05",
@@ -2526,7 +2598,7 @@
         2048
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/yamoussoukro/sisalto.json",
-      "sourceContentSHA256": "acb8eef0954ad2bbbc9c952985d4bd6441e8a323ede101667fb35c0fb09585f3",
+      "sourceContentSHA256": "6b9915cada90c360df926e44bc34a6e24fb5b46fb462c68965918b748c5c8761",
       "semanticSourceBind": {
         "targetBeforeSHA256": "1dae157e383432c5d1da832d8ee0dbc4e7876b43c0f7917d1126046b548ad03b",
         "semanticContextSHA256": "1dae157e383432c5d1da832d8ee0dbc4e7876b43c0f7917d1126046b548ad03b",
@@ -2728,7 +2800,7 @@
         "tiedosto": "Yamoussoukro panorama.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "acb8eef0954ad2bbbc9c952985d4bd6441e8a323ede101667fb35c0fb09585f3",
+      "sourceContentAfterSHA256": "6b9915cada90c360df926e44bc34a6e24fb5b46fb462c68965918b748c5c8761",
       "targetAfterSHA256": "1dae157e383432c5d1da832d8ee0dbc4e7876b43c0f7917d1126046b548ad03b",
       "contextAfterSHA256": "1dae157e383432c5d1da832d8ee0dbc4e7876b43c0f7917d1126046b548ad03b",
       "ownerApproved": true,
@@ -2753,7 +2825,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "6b9915cada90c360df926e44bc34a6e24fb5b46fb462c68965918b748c5c8761",
+        "sameImageNativeSHA256": "3d781414bd19dadb9c382f99b635c68e746081e0e7901aa7acd357dedb0bb0d8",
+        "sameImageExportSHA256": "3d781414bd19dadb9c382f99b635c68e746081e0e7901aa7acd357dedb0bb0d8",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e05",
@@ -2806,7 +2886,7 @@
         4223
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/yamoussoukro/sisalto.json",
-      "sourceContentSHA256": "acb8eef0954ad2bbbc9c952985d4bd6441e8a323ede101667fb35c0fb09585f3",
+      "sourceContentSHA256": "6b9915cada90c360df926e44bc34a6e24fb5b46fb462c68965918b748c5c8761",
       "semanticSourceBind": {
         "targetBeforeSHA256": "82e0017685bb1d16a30e5f52ba1280553237ac71a065be41c0db30d327481311",
         "semanticContextSHA256": "82e0017685bb1d16a30e5f52ba1280553237ac71a065be41c0db30d327481311",
@@ -3062,7 +3142,7 @@
         "tiedosto": "Earth from Space- Côte d'Ivoire ESA25482285.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "acb8eef0954ad2bbbc9c952985d4bd6441e8a323ede101667fb35c0fb09585f3",
+      "sourceContentAfterSHA256": "6b9915cada90c360df926e44bc34a6e24fb5b46fb462c68965918b748c5c8761",
       "targetAfterSHA256": "82e0017685bb1d16a30e5f52ba1280553237ac71a065be41c0db30d327481311",
       "contextAfterSHA256": "82e0017685bb1d16a30e5f52ba1280553237ac71a065be41c0db30d327481311",
       "ownerApproved": true,
@@ -3087,7 +3167,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "6b9915cada90c360df926e44bc34a6e24fb5b46fb462c68965918b748c5c8761",
+        "sameImageNativeSHA256": "d4f228a437c89a068fc7a6d842f23bd0b7cd0fb83fc06186a9595313fcb651ef",
+        "sameImageExportSHA256": "d4f228a437c89a068fc7a6d842f23bd0b7cd0fb83fc06186a9595313fcb651ef",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e05",
@@ -3140,10 +3228,10 @@
         4284
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/yamoussoukro/sisalto.json",
-      "sourceContentSHA256": "acb8eef0954ad2bbbc9c952985d4bd6441e8a323ede101667fb35c0fb09585f3",
+      "sourceContentSHA256": "6b9915cada90c360df926e44bc34a6e24fb5b46fb462c68965918b748c5c8761",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "8275784964cf386869d5b88fe6b507c1d59cd3391eccc61e4150d8ac3b37f981",
-        "semanticContextSHA256": "8275784964cf386869d5b88fe6b507c1d59cd3391eccc61e4150d8ac3b37f981",
+        "targetBeforeSHA256": "80b27daa33916383e4f7040df777f54c6400ee5d8c7d685feb12dc7ec75c10de",
+        "semanticContextSHA256": "80b27daa33916383e4f7040df777f54c6400ee5d8c7d685feb12dc7ec75c10de",
         "subjectTitle": "Korkeakoulu yhdistää ammattialat",
         "targetState": "existing-target"
       },
@@ -3334,9 +3422,9 @@
         "tiedosto": "Biology microscope.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "acb8eef0954ad2bbbc9c952985d4bd6441e8a323ede101667fb35c0fb09585f3",
-      "targetAfterSHA256": "8275784964cf386869d5b88fe6b507c1d59cd3391eccc61e4150d8ac3b37f981",
-      "contextAfterSHA256": "8275784964cf386869d5b88fe6b507c1d59cd3391eccc61e4150d8ac3b37f981",
+      "sourceContentAfterSHA256": "6b9915cada90c360df926e44bc34a6e24fb5b46fb462c68965918b748c5c8761",
+      "targetAfterSHA256": "80b27daa33916383e4f7040df777f54c6400ee5d8c7d685feb12dc7ec75c10de",
+      "contextAfterSHA256": "80b27daa33916383e4f7040df777f54c6400ee5d8c7d685feb12dc7ec75c10de",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -3359,7 +3447,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "6b9915cada90c360df926e44bc34a6e24fb5b46fb462c68965918b748c5c8761",
+        "sameImageNativeSHA256": "6e1ff96202ac698db4ebb8bd0dd1a01111c4b708a7fb8007f086d327ae180022",
+        "sameImageExportSHA256": "6e1ff96202ac698db4ebb8bd0dd1a01111c4b708a7fb8007f086d327ae180022",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     }
   ],
   "runtimeIntegrationPending": true,
@@ -3371,6 +3467,9 @@
   "task118TextRevision": true,
   "independentTextResamplePending": true,
   "textAcceptanceVerified": false,
-  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task118/immutable-media-history/e05/yamoussoukro/75f831b711034ba02193bb3081366d198c04d0c25185fca4d18130164fd83008.json",
-  "task118ReboundAt": "2026-10-13T16:31:24.767025+00:00"
+  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task228/immutable-media-history/e05/yamoussoukro/568caf3ef9b1c951fc415d98aeb109bbc711fcd1bcaeb68a49b27d477a693667.json",
+  "task118ReboundAt": "2026-10-13T16:31:24.767025+00:00",
+  "task228ExcludedAssets": [],
+  "task228TextRevision": true,
+  "task228ReboundAt": "2026-10-13T17:52:01.804205+00:00"
 }

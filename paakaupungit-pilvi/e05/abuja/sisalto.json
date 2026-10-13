@@ -15,7 +15,7 @@
   },
   "artikkeli": {
     "intro": "Abuja on Nigerian suunniteltu pääkaupunki maan keskiosassa. Sen maisemassa kohoaa **Aso-kallio**, suuri graniittinen luonnonmuodostuma. Kaupungin sisäiset alueet levittäytyvät kallion etelä- ja länsipuolelle. Nykyisen pääkaupungin rakentaminen alkoi 1900-luvun loppupuoliskolla.\n\nVuonna 1873 tätä suunniteltua kaupunkia ei vielä ollut, mutta alueella eli paikallisia yhteisöjä, kuten gbagyita, basoja ja gwandaroja. Uutta kaupunkia toteutettiin vaiheittain kansainvälisten suunnitteluryhmien työn pohjalta. **Wusen markkinoilla** myydään tuoretta ruokaa, vaatteita ja elektroniikkaa. Jabin tekojärvi puolestaan on palvellut vedenhankintaa ja kuuluu myös virkistyskäyttöön. Pääkaupungin ympärillä sijaitseva Federal Capital Territory ulottuu kaupunkikatuja laajemmalle metsän ja savannin mosaiikkiin.",
-    "teksti": "Abujan uusi pääkaupunki rakennettiin alueelle, jonka yhteisöillä oli jo oma historiansa. Gbagyit eli gwarit, basat ja gwandarat kuuluvat paikallisiin kansoihin. Kaupungin suunnittelu ja toteutus ovat tämän asutushistorian myöhempi kerros.\n\nAso on graniittinen monoliitti kaupungin reunassa. Luonnonkallio ja sen läheiset valtion rakennukset ovat eri kohteita, vaikka niiden nimet toisinaan sekoittuvat. Jabin vesialue taas on maapadon synnyttämä tekojärvi, jonka alkuperäinen tehtävä liittyi vedenhankintaan.\n\nKaupunginosien nimet Wuse, Garki ja Jabi auttavat hahmottamaan Abujan arkea. Wusen markkinoilla ostetaan muun muassa ruokaa ja vaatteita, ja katujen liikkumiseen kuuluvat taksit. Lentoasema ja tieverkko yhdistävät kaupungin ympäröivään seutuun sekä kauemmas Nigeriaan."
+    "teksti": "Abujan uusi pääkaupunki rakennettiin alueelle, jonka yhteisöillä oli jo oma historiansa. Gbagyit eli gwarit, basat ja gwandarat kuuluvat paikallisiin kansoihin. Kaupungin suunnittelu ja toteutus ovat tämän asutushistorian myöhempi kerros.\n\nAso on graniittinen monoliitti kaupungin reunassa. Jabin vesialue taas on maapadon synnyttämä tekojärvi, jonka alkuperäinen tehtävä liittyi vedenhankintaan.\n\nKaupunginosien nimet Wuse, Garki ja Jabi auttavat hahmottamaan Abujan arkea. Wusen markkinoilla ostetaan muun muassa ruokaa ja vaatteita, ja katujen liikkumiseen kuuluvat taksit. Lentoasema ja tieverkko yhdistävät kaupungin ympäröivään seutuun sekä kauemmas Nigeriaan."
   },
   "kysymykset": [
     {
@@ -33,7 +33,7 @@
       "source": "https://en.wikipedia.org/wiki/Abuja"
     },
     {
-      "q": "Mikä graniittikallio kohoaa Abujan rakennetun keskustan pohjoispuolella?",
+      "q": "Mikä kallio kohoaa Abujan rakennetun keskustan pohjoispuolella?",
       "options": [
         "Aso",
         "Idanre",
@@ -50,9 +50,9 @@
       "q": "Mikä on Aso-kallion kivilaji?",
       "options": [
         "Graniitti",
-        "Kalkkikivi",
-        "Marmori",
-        "Hiekkakivi"
+        "Basaltti",
+        "Dioriitti",
+        "Ryoliitti"
       ],
       "correct": 0,
       "level": 2,
@@ -75,16 +75,16 @@
       "source": "https://en.wikipedia.org/wiki/Jabi_Lake"
     },
     {
-      "q": "Mikä lyhenne tarkoittaa Abujaa ympäröivää liittovaltion pääkaupunkialuetta?",
+      "q": "Mitä Abujaa ympäröivän alueen FCT-lyhenne tarkoittaa?",
       "options": [
-        "FCT",
-        "AMAC",
-        "ECOWAS",
-        "UNESCO"
+        "Federal Capital Territory",
+        "Federal Central Township",
+        "Federal Council Township",
+        "Federal City Transport"
       ],
       "correct": 0,
       "level": 3,
-      "hint": "Englanninkielinen nimitys sisältää sanat capital ja territory.",
+      "hint": "Kaupungin keskusta muodostaa vain osan tästä hallintoalueesta.",
       "fact": "Federal Capital Territory eli FCT on kaupunkia laajempi hallintoalue.",
       "source": "https://en.wikipedia.org/wiki/Abuja"
     }
@@ -96,8 +96,8 @@
   ],
   "valokuva": {
     "tiedosto": "Abuja landscape view.jpg",
-    "lyhyt": "Vehreitä kumpuja ja maantie Abujan seudulla.",
-    "selite": "Abujan seudun kasvillisuuden peittämiä kumpuja ja monikaistainen maantie vuonna 2023.",
+    "lyhyt": "Abujan seudun maisemaa.",
+    "selite": "Maisemanäkymä Abujan seudulta vuonna 2023.",
     "lahde": "Umasoyee, Commons (CC BY-SA 4.0)",
     "vuosi": "2023"
   },
@@ -109,27 +109,27 @@
       "kansikuvat": [
         {
           "tiedosto": "Aso Rock view.jpg",
-          "lyhyt": "Aso-kallio ja kaupunkiväylä.",
-          "selite": "Aso-kallio ja sen edustan kaupunkiväylä Abujassa vuonna 2017.",
+          "lyhyt": "Aso-kallio Abujassa.",
+          "selite": "Näkymä Aso-kalliolle vuonna 2017.",
           "lahde": "Uzoma Ozurumba, Wikimedia Commons (CC BY-SA 4.0)"
         },
         {
           "tiedosto": "An aerial view of Jabi Lake Abuja Nigeria.jpg",
-          "lyhyt": "Jabin järven ranta ilmasta.",
-          "selite": "Jabin järven puistomaista ranta-aluetta Abujassa ilmasta vuonna 2021.",
+          "lyhyt": "Jabin järvi ilmasta.",
+          "selite": "Ilmakuva Jabin järvestä Abujassa vuonna 2021.",
           "lahde": "David Nkwa (Nkwafilms), Wikimedia Commons (CC BY-SA 4.0)"
         },
         {
           "tiedosto": "Beautiful scapes, Jabi lake - Abuja.jpg",
-          "lyhyt": "Jabin järven ranta ja kävelyväylä.",
-          "selite": "Jabin järven ranta ja kävelyväylä Abujassa vuonna 2019.",
+          "lyhyt": "Jabin järvi Abujassa.",
+          "selite": "Jabin järven maisemaa vuonna 2019.",
           "lahde": "Turizimpressions, Wikimedia Commons (CC BY-SA 4.0)"
         }
       ],
       "nostot": [
         {
           "otsikko": "Pääkaupunki rakennettiin vaiheittain",
-          "teksti": "Abujan pääkaupunkiprojektin suunnitteluun osallistui International Planning Associates -konsortio. Pääsuunnitelman rinnalla tehtiin alueiden tarkempaa suunnittelua, ja Kenzo Tangen ryhmä kehitti kaupungin keskustaa. Toteutus eteni vaiheittain eri kaupunginosissa. Kaupungin kartassa näkyy siten monen suunnittelijan ja rakentamisvaiheen työ. Nykyinen Abuja syntyi 1900-luvun loppupuoliskolla, mutta sitä ympäröivä maasto ja paikalliset yhteisöt edeltävät pääkaupungin suunnitelmaa.",
+          "teksti": "Abujan pääkaupunkiprojektin suunnitteluun osallistui International Planning Associates -konsortio. Pääsuunnitelman rinnalla tehtiin alueiden tarkempaa suunnittelua, ja Kenzo Tangen ryhmä kehitti kaupungin keskustaa. Toteutus eteni vaiheittain eri kaupunginosissa. Nykyinen Abuja syntyi 1900-luvun loppupuoliskolla, mutta sitä ympäröivä maasto ja paikalliset yhteisöt edeltävät pääkaupungin suunnitelmaa.",
           "wiki": "Abuja",
           "tiedosto": "",
           "lyhyt": "",
@@ -138,7 +138,7 @@
         },
         {
           "otsikko": "Alueella oli jo asukkaita",
-          "teksti": "Abujan seudulla asui useita paikallisia yhteisöjä jo ennen pääkaupungin rakentamista. Abujan seudun paikallisiin yhteisöihin kuuluvat gbagyit eli gwarit sekä basat, gwandarat ja muut ryhmät. Kylät ja asutuspaikat edelsivät suunniteltua kaupunkia, ja paikalliset yhteisöt ovat edelleen olemassa. Kaupungin nimissäkin säilyy vanhempia paikannimiä. Vuonna 1873 nykyistä pääkaupunkia ei ollut, mutta seudulla oli asukkaiden oma elämä ja historia. Pääkaupunkiprojekti on yksi kerros tämän paikan pidemmässä menneisyydessä.",
+          "teksti": "Abujan seudulla asui useita paikallisia yhteisöjä jo ennen pääkaupungin rakentamista. Abujan seudun paikallisiin yhteisöihin kuuluvat gbagyit eli gwarit sekä basat, gwandarat ja muut ryhmät. Kylät ja asutuspaikat edelsivät suunniteltua kaupunkia, ja paikalliset yhteisöt ovat edelleen olemassa. Kaupungin nimissäkin säilyy vanhempia paikannimiä. Vuonna 1873 nykyistä pääkaupunkia ei ollut, mutta seudulla oli asukkaiden oma elämä ja historia.",
           "wiki": "Abuja",
           "tiedosto": "",
           "lyhyt": "",
@@ -147,7 +147,7 @@
         },
         {
           "otsikko": "Wusen markkina palvelee arkea",
-          "teksti": "Wuse on Abujan luoteinen kaupunginosa ja keskeisen markkinapaikan sijainti. Siellä myydään tuoretta ruokaa, vaatteita, elektroniikkaa ja muita tavaroita. Kaupungin eri alueilla on lisäksi omia markkinoitaan. Wusen kaupassa kohtaavat näin hyvin erilaiset hankinnat: päivittäinen ruoka ja harvemmin ostettavat tavarat kuuluvat samaan ympäristöön. Wuse on keskustan pohjoispuolella, Garki sen eteläpuolella. Kaupunki jakautuu asuin- ja kauppa-alueisiin, joilla on omat paikannimensä.",
+          "teksti": "Wuse on Abujan luoteinen kaupunginosa ja keskeisen markkinapaikan sijainti. Siellä myydään tuoretta ruokaa, vaatteita, elektroniikkaa ja muita tavaroita. Kaupungin eri alueilla on lisäksi omia markkinoitaan. Wuse on keskustan pohjoispuolella, Garki sen eteläpuolella. Kaupunki jakautuu asuin- ja kauppa-alueisiin, joilla on omat paikannimensä.",
           "wiki": "Abuja",
           "tiedosto": "",
           "lyhyt": "",
@@ -156,7 +156,7 @@
         },
         {
           "otsikko": "Kaupunginosien välillä ja kauemmas",
-          "teksti": "Abujan Nnamdi Azikiwe -lentoasema yhdistää pääkaupungin kaukaisempiin paikkoihin. Tieverkko ulottuu seudun muihin osavaltioihin, ja Idussa sijaitsee rautatien asemapaikka. Kaupungin sisällä kuljetaan takseilla, ja nimet kuten Jabi, Wuse ja Garki jäsentävät liikkumista eri alueiden välillä. Liikenteen historiaan kuuluu myös Abuja–Kaduna-ratayhteys. Lentoaseman, aseman ja paikallisten kyytien kuvaukset kertovat kaupungin verkostosta; ajantasaiset vuorot ja kulkureitit selvitetään matkan ajankohtana.",
+          "teksti": "Abujan Nnamdi Azikiwe -lentoasema yhdistää pääkaupungin kaukaisempiin paikkoihin. Tieverkko ulottuu seudun muihin osavaltioihin, ja Idussa sijaitsee rautatien asemapaikka. Kaupungin sisällä kuljetaan takseilla, ja nimet kuten Jabi, Wuse ja Garki jäsentävät liikkumista eri alueiden välillä. Liikenteen historiaan kuuluu myös Abuja–Kaduna-ratayhteys.",
           "wiki": "Abuja",
           "tiedosto": "",
           "lyhyt": "",
@@ -171,7 +171,7 @@
           "selite": "",
           "lahde": ""
         },
-        "kappale": "Aso-kallio ja Jabin vesialue jäsentävät Abujan maisemaa. Wusen markkinoilla näkyvät kaupungin arjen ostokset. Eri kaupunginosien nimet ovat myös suunnistuksen apuna. Kallion, vesialueen ja virallisten rakennusten pääsymahdollisuudet selvitetään erikseen.",
+        "kappale": "Aso-kallio ja Jabin vesialue jäsentävät Abujan maisemaa. Wusen markkinoilla näkyvät kaupungin arjen ostokset. Eri kaupunginosien nimet ovat myös suunnistuksen apuna.",
         "artikkeli": {
           "nimi": "Matkailijan Abuja",
           "taitto": "opas",
@@ -180,7 +180,7 @@
           "jaksot": [
             {
               "otsikko": "Perille ja liikkeelle",
-              "teksti": "Abujan lentoasema on Nnamdi Azikiwen kansainvälinen lentoasema. Kaupungissa kuljetaan takseilla, ja Idun asemalta rata jatkuu Kadunaan. Tarkista käytettävän yhteyden ajantasainen aikataulu liikennöitsijältä.",
+              "teksti": "Abujan lentoasema on Nnamdi Azikiwen kansainvälinen lentoasema. Kaupungissa kuljetaan takseilla, ja Idun asemalta rata jatkuu Kadunaan.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -190,7 +190,7 @@
             },
             {
               "otsikko": "Kallion kaupunki",
-              "teksti": "Aso on luonnonkallio kaupungin reunassa. Se on eri kohde kuin Aso Villa ja läheiset valtion rakennukset. Pääsyä kallion luo tai virallisten rakennusten alueelle ei voi olettaa.",
+              "teksti": "Aso on luonnonkallio kaupungin reunassa. Se on eri kohde kuin Aso Villa ja läheiset valtion rakennukset.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -200,7 +200,7 @@
             },
             {
               "otsikko": "Jabin rantamaisema",
-              "teksti": "Jabin järvi on alkujaan vedenhankintaa palvellut allas, jolla on myös kalastus- ja virkistyskäyttöä. Rannalla vietetään vapaa-aikaa. Nykyiset veneily- ja vierailumahdollisuudet selvitetään erikseen.",
+              "teksti": "Jabin järvi on alkujaan vedenhankintaa palvellut allas, jolla on myös kalastus- ja virkistyskäyttöä. Rannalla vietetään vapaa-aikaa.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -210,7 +210,7 @@
             },
             {
               "otsikko": "Mitä täällä syödään",
-              "teksti": "Wusen markkinoilla myydään tuoretta ruokaa. Paikallisten ruokapaikkojen valikoimaan kuuluu riisiä, kalaa, vuohenlihaa, kanaa ja erilaisia keittoja. Yksittäisten paikkojen tämänhetkinen tarjonta tarkistetaan paikan päällä.",
+              "teksti": "Wusen markkinoilla myydään tuoretta ruokaa. Paikallisten ruokapaikkojen valikoimaan kuuluu riisiä, kalaa, vuohenlihaa, kanaa ja erilaisia keittoja.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -220,7 +220,7 @@
             },
             {
               "otsikko": "Ennen lähtöä",
-              "teksti": "Abuja kuuluu liittovaltion pääkaupunkialueeseen, Federal Capital Territoryyn. Kaupunki ja ympäröivä hallintoalue ovat eri kokoisia kokonaisuuksia. Tarkista Nigerian ajantasainen matkustustiedote Suomen ulkoministeriöstä ennen matkapäätöstä.",
+              "teksti": "Abuja kuuluu liittovaltion pääkaupunkialueeseen, Federal Capital Territoryyn. Kaupunki ja ympäröivä hallintoalue ovat eri kokoisia kokonaisuuksia.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -263,12 +263,8 @@
                 "teksti": "Aso Rock ja Aso Villa ovat eri kohteet."
               },
               {
-                "otsikko": "Vierailut",
-                "teksti": "Kallion ja järven pääsy- sekä veneilymahdollisuudet selvitetään erikseen."
-              },
-              {
-                "otsikko": "Junayhteydet",
-                "teksti": "Tarkista Idusta lähtevän junan aikataulu liikennöitsijältä."
+                "otsikko": "Ennen matkapäätöstä",
+                "teksti": "Tarkista Nigerian ajantasainen matkustustiedote Suomen ulkoministeriöstä ennen matkapäätöstä."
               }
             ]
           },
@@ -294,7 +290,7 @@
       "nostot": [
         {
           "otsikko": "Aso on kallio",
-          "teksti": "Aso Rock on suuri graniittinen paljastuma Abujan reunassa. Monoliitti kuuluu paikan luontoon, ja kaupungin rakennettu keskusta sijaitsee pääosin sen eteläpuolella. Lähellä on valtion rakennuksia, mutta Aso-kallio ja Aso Villa -palatsi ovat eri kohteet. Luonnonmaamerkki edeltää pääkaupunkiprojektia ja liittyy myös alueen Asokoro-paikannimeen. Kaupungin maisemassa kallio auttaa hahmottamaan maaston ja rakentamisen suhdetta: sen juurella kasvava Abuja on paljon nuorempi kuin ympäristönsä graniittinen muoto.",
+          "teksti": "Aso Rock on suuri graniittinen paljastuma Abujan reunassa. Monoliitti kuuluu paikan luontoon, ja kaupungin rakennettu keskusta sijaitsee pääosin sen eteläpuolella. Lähellä on valtion rakennuksia, mutta Aso-kallio ja Aso Villa -palatsi ovat eri kohteet. Luonnonmaamerkki edeltää pääkaupunkiprojektia ja liittyy myös alueen Asokoro-paikannimeen.",
           "wiki": "Aso Rock",
           "tiedosto": "",
           "lyhyt": "",
@@ -303,7 +299,7 @@
         },
         {
           "otsikko": "Jabi aloitti vesivarastona",
-          "teksti": "Jabin järvi on maapadon synnyttämä tekojärvi Abujassa. Sen alkuperäinen tehtävä oli vedenhankinta, ja myöhemmin suurempi Usuma-järjestelmä muutti sen roolia kaupungin vesihuollossa. Jabin vesialuetta käytetään myös kalastukseen ja virkistykseen, ja rannalla on ulkoilu- sekä kohtaamispaikkoja. Järvellä myös veneillään. Vesialueen historia kulkee siten varastosta monenlaiseen käyttöön: sama järvi liittyy kaupungin perustarpeisiin, kalastajien työhön ja rannalla vietettävään vapaa-aikaan.",
+          "teksti": "Jabin järvi on maapadon synnyttämä tekojärvi Abujassa. Sen alkuperäinen tehtävä oli vedenhankinta, ja myöhemmin suurempi Usuma-järjestelmä muutti sen roolia kaupungin vesihuollossa. Jabin vesialuetta käytetään myös kalastukseen ja virkistykseen, ja rannalla on ulkoilu- sekä kohtaamispaikkoja. Järvellä myös veneillään.",
           "wiki": "Jabi Lake",
           "tiedosto": "",
           "lyhyt": "",
@@ -312,16 +308,16 @@
         },
         {
           "otsikko": "Kaupungin ympärillä on mosaiikki",
-          "teksti": "Abujaa ympäröivä Federal Capital Territory kuuluu guinealaisen metsän ja savannin mosaiikkivyöhykkeeseen. Alue ei siis ole yhtä yhtenäistä sademetsää. Gwagwan tasangolla ja alueen kaakkoisosan karummassa maastossa on metsälaikkuja; ympäristöön kuuluu myös laaksoja ja epätasaista maata. Tämä kuvaus koskee pääkaupunkialuetta laajempana kokonaisuutena. Abujan katujen viheralue ja seudun metsäkasvillisuus ovat eri mittakaavoja, vaikka molemmat kuuluvat saman hallintoalueen maisemiin.",
+          "teksti": "Abujaa ympäröivä Federal Capital Territory kuuluu guinealaisen metsän ja savannin mosaiikkivyöhykkeeseen. Gwagwan tasangolla ja alueen kaakkoisosan karummassa maastossa on metsälaikkuja; ympäristöön kuuluu myös laaksoja ja epätasaista maata.",
           "wiki": "Abuja",
           "tiedosto": "A view of a Stream and forest in Karu.jpg",
-          "lyhyt": "Kasvillisuuden peittämää rinnettä Karussa.",
-          "selite": "Karu Abujan lähellä: pensaikkoista rinnettä ja kallioinen laikku vuonna 2020.",
+          "lyhyt": "Karu Abujan lähellä.",
+          "selite": "Maisemaa Karussa vuonna 2020.",
           "lahde": "Hamzabash, Wikimedia Commons (CC BY-SA 4.0)"
         },
         {
           "otsikko": "Puisto on myös pelipaikka",
-          "teksti": "Abujan avoimiin virkistysalueisiin kuuluu puistoja, joissa urheillaan. Lifecamp Gwarinpan puisto sijaitsee hieman kohoavalla kukkulalla, ja sen liikuntapaikkoihin kuuluu koripallo- ja sulkapallokenttiä. Wuse 2:n City Parkissa puolestaan on esimerkiksi tenniskenttä, tekonurmi ja paintball-alue sekä sisäaktiviteetteja. Puiston käyttö voi siis tarkoittaa hyvin erilaista vapaa-aikaa kuin järven rannalla oleskelu. Kaupungin ulkotiloissa yhdistyvät maasto, liikuntapaikat ja ihmiset, jotka kokoontuvat niihin pelaamaan tai tapaamaan toisiaan.",
+          "teksti": "Abujan avoimiin virkistysalueisiin kuuluu puistoja, joissa urheillaan. Lifecamp Gwarinpan puisto sijaitsee hieman kohoavalla kukkulalla, ja sen liikuntapaikkoihin kuuluu koripallo- ja sulkapallokenttiä. Wuse 2:n City Parkissa puolestaan on esimerkiksi tenniskenttä, tekonurmi ja paintball-alue sekä sisäaktiviteetteja.",
           "wiki": "Abuja",
           "tiedosto": "",
           "lyhyt": "",
@@ -371,7 +367,7 @@
     },
     "Jabin järvi": {
       "aika": "Tekojärvi",
-      "teksti": "Jabin järvi sijaitsee Abujan Jabin alueella. Se on maapadon synnyttämä vesialue, jonka alkuperäinen käyttötarkoitus liittyi kaupungin vedenhankintaan. Suurempi Usuma-järjestelmä muutti myöhemmin sen vesihuollollista roolia. Järvellä harjoitetaan myös kalastusta, ja rantaan liittyy virkistyskäyttöä.\n\nRantapuisto toimii ulkoilun ja sosiaalisten tapahtumien paikkana. Vesialueella on myös veneilykäyttöä. Nykyisten palvelujen saatavuus täytyy kuitenkin selvittää erikseen. Vuonna 1873 alueella ei vielä ollut nykyistä suunniteltua pääkaupunkia. Jabi kertoo rakennetun pääkaupungin suhteesta veteen: sen historiaan kuuluvat sekä vesivaraston tehtävä että myöhemmät vapaa-ajan käyttötavat.",
+      "teksti": "Jabin järvi sijaitsee Abujan Jabin alueella. Se on maapadon synnyttämä vesialue, jonka alkuperäinen käyttötarkoitus liittyi kaupungin vedenhankintaan. Suurempi Usuma-järjestelmä muutti myöhemmin sen vesihuollollista roolia. Järvellä harjoitetaan myös kalastusta, ja rantaan liittyy virkistyskäyttöä.\n\nRantapuisto toimii ulkoilun ja sosiaalisten tapahtumien paikkana. Vesialueella on myös veneilykäyttöä. Vuonna 1873 alueella ei vielä ollut nykyistä suunniteltua pääkaupunkia.",
       "kuvat": [
         {
           "tiedosto": "",
@@ -386,12 +382,6 @@
   "saatiedot": null,
   "ehdotukset": {
     "lentoasema": "Nnamdi Azikiwe International Airport (ABV)",
-    "huomiot": [
-      "Kartta partial: kaksi A:ssa varmennettua luontopistettä; 6–8 kohteen määräportti avoin.",
-      "Eläintarhan vanhaa lajiluetteloa ei käytetty nykytilaväitteenä. Luonnon sivun neljäs nosto käsittelee A:n alkuperäisessä Parks and open areas -tallenteessa nimettyjä urheilupaikkoja.",
-      "Millennium Park, nykyiset moskeija/kristillinen keskus/palatsit jätetty suojattuina teoksina kartasta.",
-      "Nigerian maalehden ruoka-, valtakunta-, musiikki- ja taideaiheita sekä Zuma Rock -fokusnostoa ei toistettu.",
-      "AMAC-ennustetta ei käytetty väestöväitteenä. Ajantasaiset yhteydet ja vierailumahdollisuudet avoin D/F-portti."
-    ]
+    "huomiot": []
   }
 }

@@ -3,7 +3,7 @@
   "era": "e05",
   "city": "abuja",
   "authorization": "hyväksyn kaikki tekemäsi kuvat. toimita ne claudelle. claudelta saat uusia ohjeita jatkoa varten",
-  "sourceContentAfterSHA256": "664ef9109f312526e3c34a2f5d329e1121eee1a3cd4956cba43ff3a9d4f29970",
+  "sourceContentAfterSHA256": "6f6cd72dcd5ea75b11ad2e69b09b44d6225cb4beec5d2eb89580140adeb40132",
   "assets": [
     {
       "era": "e05",
@@ -53,10 +53,10 @@
         1536
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/abuja/sisalto.json",
-      "sourceContentSHA256": "664ef9109f312526e3c34a2f5d329e1121eee1a3cd4956cba43ff3a9d4f29970",
+      "sourceContentSHA256": "6f6cd72dcd5ea75b11ad2e69b09b44d6225cb4beec5d2eb89580140adeb40132",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "29addb0bf3672a6855ab078a7b013e83d757e930695e24cf7d95f19ad314201d",
+        "semanticContextSHA256": "4d129fe135172503784edc5cb59a8e26ad89c373c9c2332523f63563c4dada32",
         "subjectTitle": "Matkailijalle",
         "targetState": "existing-target"
       },
@@ -282,9 +282,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "664ef9109f312526e3c34a2f5d329e1121eee1a3cd4956cba43ff3a9d4f29970",
+      "sourceContentAfterSHA256": "6f6cd72dcd5ea75b11ad2e69b09b44d6225cb4beec5d2eb89580140adeb40132",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "29addb0bf3672a6855ab078a7b013e83d757e930695e24cf7d95f19ad314201d",
+      "contextAfterSHA256": "4d129fe135172503784edc5cb59a8e26ad89c373c9c2332523f63563c4dada32",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -307,7 +307,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "6f6cd72dcd5ea75b11ad2e69b09b44d6225cb4beec5d2eb89580140adeb40132",
+        "sameImageNativeSHA256": "3d1c5968a2c11fe43b7a9825cc8e531288fe1b84c135c349d10aa288d296ff76",
+        "sameImageExportSHA256": "906dc4b9346c5a9cd7923561e35d3fe87864e18c8370c5ba726727114b5ed73e",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e05",
@@ -360,10 +368,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/abuja/sisalto.json",
-      "sourceContentSHA256": "664ef9109f312526e3c34a2f5d329e1121eee1a3cd4956cba43ff3a9d4f29970",
+      "sourceContentSHA256": "6f6cd72dcd5ea75b11ad2e69b09b44d6225cb4beec5d2eb89580140adeb40132",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "d51fa92efe5e1c73a377d5344adbba6e1b9d280e01917abc5a972b48980c17bc",
+        "semanticContextSHA256": "06a5e4dc7d284c5306fc26cbbc8a0333a57a71035075766cfc232d3516769f21",
         "subjectTitle": "Mitä täällä syödään",
         "targetState": "existing-target"
       },
@@ -647,9 +655,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "664ef9109f312526e3c34a2f5d329e1121eee1a3cd4956cba43ff3a9d4f29970",
+      "sourceContentAfterSHA256": "6f6cd72dcd5ea75b11ad2e69b09b44d6225cb4beec5d2eb89580140adeb40132",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "d51fa92efe5e1c73a377d5344adbba6e1b9d280e01917abc5a972b48980c17bc",
+      "contextAfterSHA256": "06a5e4dc7d284c5306fc26cbbc8a0333a57a71035075766cfc232d3516769f21",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -672,7 +680,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "6f6cd72dcd5ea75b11ad2e69b09b44d6225cb4beec5d2eb89580140adeb40132",
+        "sameImageNativeSHA256": "614ed212b0762a555abf2a6ca64386375797d90c004439351e4fa8d020c0fd97",
+        "sameImageExportSHA256": "d7a492bf8f39543180ebb7fdf0bc5ec1ed613e3dc0909cab157fb51c50fae977",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e05",
@@ -722,10 +738,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/abuja/sisalto.json",
-      "sourceContentSHA256": "664ef9109f312526e3c34a2f5d329e1121eee1a3cd4956cba43ff3a9d4f29970",
+      "sourceContentSHA256": "6f6cd72dcd5ea75b11ad2e69b09b44d6225cb4beec5d2eb89580140adeb40132",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "e4afaf6d690794834fc9e5faae44469ed267a6532ba4a2fb6e4f55917003e428",
-        "semanticContextSHA256": "e4afaf6d690794834fc9e5faae44469ed267a6532ba4a2fb6e4f55917003e428",
+        "targetBeforeSHA256": "d57d7b5fdddc764abe5deaee387765884d1731c4137db07fb73fdb1196c4f70f",
+        "semanticContextSHA256": "d57d7b5fdddc764abe5deaee387765884d1731c4137db07fb73fdb1196c4f70f",
         "subjectTitle": "Wusen markkina palvelee arkea",
         "targetState": "existing-target"
       },
@@ -949,9 +965,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "664ef9109f312526e3c34a2f5d329e1121eee1a3cd4956cba43ff3a9d4f29970",
-      "targetAfterSHA256": "e4afaf6d690794834fc9e5faae44469ed267a6532ba4a2fb6e4f55917003e428",
-      "contextAfterSHA256": "e4afaf6d690794834fc9e5faae44469ed267a6532ba4a2fb6e4f55917003e428",
+      "sourceContentAfterSHA256": "6f6cd72dcd5ea75b11ad2e69b09b44d6225cb4beec5d2eb89580140adeb40132",
+      "targetAfterSHA256": "d57d7b5fdddc764abe5deaee387765884d1731c4137db07fb73fdb1196c4f70f",
+      "contextAfterSHA256": "d57d7b5fdddc764abe5deaee387765884d1731c4137db07fb73fdb1196c4f70f",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -974,7 +990,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "6f6cd72dcd5ea75b11ad2e69b09b44d6225cb4beec5d2eb89580140adeb40132",
+        "sameImageNativeSHA256": "2c7ea7a28e41c61855c69473c0d9d930c1b6999c2c69f389c3da691529843256",
+        "sameImageExportSHA256": "2b7c14cc9c637012a6ae6397b4689fb413959bb02258a08584ec8661f3f7a05d",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e05",
@@ -1024,10 +1048,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/abuja/sisalto.json",
-      "sourceContentSHA256": "664ef9109f312526e3c34a2f5d329e1121eee1a3cd4956cba43ff3a9d4f29970",
+      "sourceContentSHA256": "6f6cd72dcd5ea75b11ad2e69b09b44d6225cb4beec5d2eb89580140adeb40132",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "197c7d0530cef2aa4775e1f5badd21c67cb1e2d3a18b742892d846596a0303bd",
-        "semanticContextSHA256": "197c7d0530cef2aa4775e1f5badd21c67cb1e2d3a18b742892d846596a0303bd",
+        "targetBeforeSHA256": "bb5a03d8bc84148983d0cbe817df1dc9bd8972d21dfe472c6505ae6fbf9a4d8e",
+        "semanticContextSHA256": "bb5a03d8bc84148983d0cbe817df1dc9bd8972d21dfe472c6505ae6fbf9a4d8e",
         "subjectTitle": "Aso on kallio",
         "targetState": "existing-target"
       },
@@ -1255,9 +1279,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "664ef9109f312526e3c34a2f5d329e1121eee1a3cd4956cba43ff3a9d4f29970",
-      "targetAfterSHA256": "197c7d0530cef2aa4775e1f5badd21c67cb1e2d3a18b742892d846596a0303bd",
-      "contextAfterSHA256": "197c7d0530cef2aa4775e1f5badd21c67cb1e2d3a18b742892d846596a0303bd",
+      "sourceContentAfterSHA256": "6f6cd72dcd5ea75b11ad2e69b09b44d6225cb4beec5d2eb89580140adeb40132",
+      "targetAfterSHA256": "bb5a03d8bc84148983d0cbe817df1dc9bd8972d21dfe472c6505ae6fbf9a4d8e",
+      "contextAfterSHA256": "bb5a03d8bc84148983d0cbe817df1dc9bd8972d21dfe472c6505ae6fbf9a4d8e",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -1280,7 +1304,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "6f6cd72dcd5ea75b11ad2e69b09b44d6225cb4beec5d2eb89580140adeb40132",
+        "sameImageNativeSHA256": "e90fb86cc2ae2e25ce1e1692c21f865db1980db1eb570afd608459f169e2eae4",
+        "sameImageExportSHA256": "a902c43d8ea50d8f84a3340da8931e2a318627c85554e6f45c87d1e6981cc5e8",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e05",
@@ -1330,10 +1362,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/abuja/sisalto.json",
-      "sourceContentSHA256": "664ef9109f312526e3c34a2f5d329e1121eee1a3cd4956cba43ff3a9d4f29970",
+      "sourceContentSHA256": "6f6cd72dcd5ea75b11ad2e69b09b44d6225cb4beec5d2eb89580140adeb40132",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "433dd23afea4c1d4ef39dad6f3419709dabf6863c1f5a7e0b2a37ad915e053fa",
-        "semanticContextSHA256": "433dd23afea4c1d4ef39dad6f3419709dabf6863c1f5a7e0b2a37ad915e053fa",
+        "targetBeforeSHA256": "5264ac3b5d1d9d2763ebc40a2fc602b2ba6b2b3d6185f5075778de8992e828af",
+        "semanticContextSHA256": "5264ac3b5d1d9d2763ebc40a2fc602b2ba6b2b3d6185f5075778de8992e828af",
         "subjectTitle": "Puisto on myös pelipaikka",
         "targetState": "existing-target"
       },
@@ -1557,9 +1589,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "664ef9109f312526e3c34a2f5d329e1121eee1a3cd4956cba43ff3a9d4f29970",
-      "targetAfterSHA256": "433dd23afea4c1d4ef39dad6f3419709dabf6863c1f5a7e0b2a37ad915e053fa",
-      "contextAfterSHA256": "433dd23afea4c1d4ef39dad6f3419709dabf6863c1f5a7e0b2a37ad915e053fa",
+      "sourceContentAfterSHA256": "6f6cd72dcd5ea75b11ad2e69b09b44d6225cb4beec5d2eb89580140adeb40132",
+      "targetAfterSHA256": "5264ac3b5d1d9d2763ebc40a2fc602b2ba6b2b3d6185f5075778de8992e828af",
+      "contextAfterSHA256": "5264ac3b5d1d9d2763ebc40a2fc602b2ba6b2b3d6185f5075778de8992e828af",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -1582,7 +1614,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "6f6cd72dcd5ea75b11ad2e69b09b44d6225cb4beec5d2eb89580140adeb40132",
+        "sameImageNativeSHA256": "595d65fb192f0a3da255df73b0905c0bebe0f357b5c4f893bb6469ad8926e40f",
+        "sameImageExportSHA256": "3669cba6622dbbacd08b5778be15cb3ffb7b612100982b59b26ca82970f0a9ae",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e05",
@@ -1601,16 +1641,16 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/abuja/photo-89d3b11177592bb5b491.jpg",
         "suora": true,
         "lahde": "Umasoyee, Commons (CC BY-SA 4.0)",
-        "selite": "Abujan seudun kasvillisuuden peittämiä kumpuja ja monikaistainen maantie vuonna 2023.",
-        "lyhyt": "Vehreitä kumpuja ja maantie Abujan seudulla.",
+        "selite": "Maisemanäkymä Abujan seudulta vuonna 2023.",
+        "lyhyt": "Abujan seudun maisemaa.",
         "tiedosto": "Abuja landscape view.jpg",
         "vuosi": "2023"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Umasoyee, Commons (CC BY-SA 4.0)",
-        "selite": "Abujan seudun kasvillisuuden peittämiä kumpuja ja monikaistainen maantie vuonna 2023.",
-        "lyhyt": "Vehreitä kumpuja ja maantie Abujan seudulla.",
+        "selite": "Maisemanäkymä Abujan seudulta vuonna 2023.",
+        "lyhyt": "Abujan seudun maisemaa.",
         "tiedosto": "Abuja landscape view.jpg",
         "vuosi": "2023"
       },
@@ -1618,8 +1658,8 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/abuja/photo-89d3b11177592bb5b491.jpg",
         "suora": true,
         "lahde": "Umasoyee, Commons (CC BY-SA 4.0)",
-        "selite": "Abujan seudun kasvillisuuden peittämiä kumpuja ja monikaistainen maantie vuonna 2023.",
-        "lyhyt": "Vehreitä kumpuja ja maantie Abujan seudulla.",
+        "selite": "Maisemanäkymä Abujan seudulta vuonna 2023.",
+        "lyhyt": "Abujan seudun maisemaa.",
         "tiedosto": "Abuja landscape view.jpg",
         "vuosi": "2023"
       },
@@ -1635,10 +1675,10 @@
         3024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/abuja/sisalto.json",
-      "sourceContentSHA256": "664ef9109f312526e3c34a2f5d329e1121eee1a3cd4956cba43ff3a9d4f29970",
+      "sourceContentSHA256": "6f6cd72dcd5ea75b11ad2e69b09b44d6225cb4beec5d2eb89580140adeb40132",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "f219e83f2de8aa054b838f08a50c75c99f72c417415e3c4bff45f52dd3fb0bff",
-        "semanticContextSHA256": "f219e83f2de8aa054b838f08a50c75c99f72c417415e3c4bff45f52dd3fb0bff",
+        "targetBeforeSHA256": "ac2cfa74e0d1c9d48883ba61f2319cbe9b54103fb74aef2b00e764d643418df4",
+        "semanticContextSHA256": "ac2cfa74e0d1c9d48883ba61f2319cbe9b54103fb74aef2b00e764d643418df4",
         "subjectTitle": "abuja — aito paikkavalokuva",
         "targetState": "existing-target"
       },
@@ -1885,8 +1925,8 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "Abuja landscape view.jpg",
-        "lyhyt": "Vehreitä kumpuja ja maantie Abujan seudulla.",
-        "selite": "Abujan seudun kasvillisuuden peittämiä kumpuja ja monikaistainen maantie vuonna 2023.",
+        "lyhyt": "Abujan seudun maisemaa.",
+        "selite": "Maisemanäkymä Abujan seudulta vuonna 2023.",
         "lahde": "Umasoyee, Commons (CC BY-SA 4.0)",
         "vuosi": "2023"
       },
@@ -1914,15 +1954,15 @@
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Umasoyee, Commons (CC BY-SA 4.0)",
-        "selite": "Abujan seudun kasvillisuuden peittämiä kumpuja ja monikaistainen maantie vuonna 2023.",
-        "lyhyt": "Vehreitä kumpuja ja maantie Abujan seudulla.",
+        "selite": "Maisemanäkymä Abujan seudulta vuonna 2023.",
+        "lyhyt": "Abujan seudun maisemaa.",
         "tiedosto": "Abuja landscape view.jpg",
         "vuosi": "2023"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "664ef9109f312526e3c34a2f5d329e1121eee1a3cd4956cba43ff3a9d4f29970",
-      "targetAfterSHA256": "f219e83f2de8aa054b838f08a50c75c99f72c417415e3c4bff45f52dd3fb0bff",
-      "contextAfterSHA256": "f219e83f2de8aa054b838f08a50c75c99f72c417415e3c4bff45f52dd3fb0bff",
+      "sourceContentAfterSHA256": "6f6cd72dcd5ea75b11ad2e69b09b44d6225cb4beec5d2eb89580140adeb40132",
+      "targetAfterSHA256": "ac2cfa74e0d1c9d48883ba61f2319cbe9b54103fb74aef2b00e764d643418df4",
+      "contextAfterSHA256": "ac2cfa74e0d1c9d48883ba61f2319cbe9b54103fb74aef2b00e764d643418df4",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -1945,7 +1985,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "6f6cd72dcd5ea75b11ad2e69b09b44d6225cb4beec5d2eb89580140adeb40132",
+        "sameImageNativeSHA256": "89d3b11177592bb5b491cbfdf7e73df1c4c9f4bf1782940881e8172ab3c7975a",
+        "sameImageExportSHA256": "89d3b11177592bb5b491cbfdf7e73df1c4c9f4bf1782940881e8172ab3c7975a",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": true
+      }
     },
     {
       "era": "e05",
@@ -1967,23 +2015,23 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/abuja/c1-49dfc2746397ae36bb37.jpg",
         "suora": true,
         "lahde": "Uzoma Ozurumba, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Aso-kallio ja sen edustan kaupunkiväylä Abujassa vuonna 2017.",
-        "lyhyt": "Aso-kallio ja kaupunkiväylä.",
+        "selite": "Näkymä Aso-kalliolle vuonna 2017.",
+        "lyhyt": "Aso-kallio Abujassa.",
         "tiedosto": "Aso Rock view.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Uzoma Ozurumba, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Aso-kallio ja sen edustan kaupunkiväylä Abujassa vuonna 2017.",
-        "lyhyt": "Aso-kallio ja kaupunkiväylä.",
+        "selite": "Näkymä Aso-kalliolle vuonna 2017.",
+        "lyhyt": "Aso-kallio Abujassa.",
         "tiedosto": "Aso Rock view.jpg"
       },
       "runtimeMediaFieldPayload": {
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/abuja/c1-49dfc2746397ae36bb37.jpg",
         "suora": true,
         "lahde": "Uzoma Ozurumba, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Aso-kallio ja sen edustan kaupunkiväylä Abujassa vuonna 2017.",
-        "lyhyt": "Aso-kallio ja kaupunkiväylä.",
+        "selite": "Näkymä Aso-kalliolle vuonna 2017.",
+        "lyhyt": "Aso-kallio Abujassa.",
         "tiedosto": "Aso Rock view.jpg"
       },
       "runtimeRemoveMediaKeys": [],
@@ -1998,10 +2046,10 @@
         4000
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/abuja/sisalto.json",
-      "sourceContentSHA256": "664ef9109f312526e3c34a2f5d329e1121eee1a3cd4956cba43ff3a9d4f29970",
+      "sourceContentSHA256": "6f6cd72dcd5ea75b11ad2e69b09b44d6225cb4beec5d2eb89580140adeb40132",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "5f6e91fa8b877b3835bca3fef72a5ff550df088cc633bc769285d45ce9f98253",
-        "semanticContextSHA256": "5f6e91fa8b877b3835bca3fef72a5ff550df088cc633bc769285d45ce9f98253",
+        "targetBeforeSHA256": "d6ffb1a509964111f08dea867500c902ed3d76ad887a156bf6a7e44429485fd1",
+        "semanticContextSHA256": "d6ffb1a509964111f08dea867500c902ed3d76ad887a156bf6a7e44429485fd1",
         "subjectTitle": "Abuja",
         "targetState": "existing-target"
       },
@@ -2211,8 +2259,8 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "Aso Rock view.jpg",
-        "lyhyt": "Aso-kallio ja kaupunkiväylä.",
-        "selite": "Aso-kallio ja sen edustan kaupunkiväylä Abujassa vuonna 2017.",
+        "lyhyt": "Aso-kallio Abujassa.",
+        "selite": "Näkymä Aso-kalliolle vuonna 2017.",
         "lahde": "Uzoma Ozurumba, Wikimedia Commons (CC BY-SA 4.0)"
       },
       "preservePreviousMediaObjects": true,
@@ -2239,14 +2287,14 @@
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Uzoma Ozurumba, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Aso-kallio ja sen edustan kaupunkiväylä Abujassa vuonna 2017.",
-        "lyhyt": "Aso-kallio ja kaupunkiväylä.",
+        "selite": "Näkymä Aso-kalliolle vuonna 2017.",
+        "lyhyt": "Aso-kallio Abujassa.",
         "tiedosto": "Aso Rock view.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "664ef9109f312526e3c34a2f5d329e1121eee1a3cd4956cba43ff3a9d4f29970",
-      "targetAfterSHA256": "5f6e91fa8b877b3835bca3fef72a5ff550df088cc633bc769285d45ce9f98253",
-      "contextAfterSHA256": "5f6e91fa8b877b3835bca3fef72a5ff550df088cc633bc769285d45ce9f98253",
+      "sourceContentAfterSHA256": "6f6cd72dcd5ea75b11ad2e69b09b44d6225cb4beec5d2eb89580140adeb40132",
+      "targetAfterSHA256": "d6ffb1a509964111f08dea867500c902ed3d76ad887a156bf6a7e44429485fd1",
+      "contextAfterSHA256": "d6ffb1a509964111f08dea867500c902ed3d76ad887a156bf6a7e44429485fd1",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -2269,7 +2317,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "6f6cd72dcd5ea75b11ad2e69b09b44d6225cb4beec5d2eb89580140adeb40132",
+        "sameImageNativeSHA256": "49dfc2746397ae36bb373f4a9c8620ab4890295ae0b7910c26acf4cf892eb2e0",
+        "sameImageExportSHA256": "49dfc2746397ae36bb373f4a9c8620ab4890295ae0b7910c26acf4cf892eb2e0",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": true
+      }
     },
     {
       "era": "e05",
@@ -2291,23 +2347,23 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/abuja/c2-b049f268e4a9877cb064.jpg",
         "suora": true,
         "lahde": "David Nkwa (Nkwafilms), Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Jabin järven puistomaista ranta-aluetta Abujassa ilmasta vuonna 2021.",
-        "lyhyt": "Jabin järven ranta ilmasta.",
+        "selite": "Ilmakuva Jabin järvestä Abujassa vuonna 2021.",
+        "lyhyt": "Jabin järvi ilmasta.",
         "tiedosto": "An aerial view of Jabi Lake Abuja Nigeria.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "David Nkwa (Nkwafilms), Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Jabin järven puistomaista ranta-aluetta Abujassa ilmasta vuonna 2021.",
-        "lyhyt": "Jabin järven ranta ilmasta.",
+        "selite": "Ilmakuva Jabin järvestä Abujassa vuonna 2021.",
+        "lyhyt": "Jabin järvi ilmasta.",
         "tiedosto": "An aerial view of Jabi Lake Abuja Nigeria.jpg"
       },
       "runtimeMediaFieldPayload": {
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/abuja/c2-b049f268e4a9877cb064.jpg",
         "suora": true,
         "lahde": "David Nkwa (Nkwafilms), Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Jabin järven puistomaista ranta-aluetta Abujassa ilmasta vuonna 2021.",
-        "lyhyt": "Jabin järven ranta ilmasta.",
+        "selite": "Ilmakuva Jabin järvestä Abujassa vuonna 2021.",
+        "lyhyt": "Jabin järvi ilmasta.",
         "tiedosto": "An aerial view of Jabi Lake Abuja Nigeria.jpg"
       },
       "runtimeRemoveMediaKeys": [],
@@ -2322,10 +2378,10 @@
         1536
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/abuja/sisalto.json",
-      "sourceContentSHA256": "664ef9109f312526e3c34a2f5d329e1121eee1a3cd4956cba43ff3a9d4f29970",
+      "sourceContentSHA256": "6f6cd72dcd5ea75b11ad2e69b09b44d6225cb4beec5d2eb89580140adeb40132",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "d7d66fd7390a673aa09a7075052b278d89fcf312830b77027bd6b79e017d19a5",
-        "semanticContextSHA256": "d7d66fd7390a673aa09a7075052b278d89fcf312830b77027bd6b79e017d19a5",
+        "targetBeforeSHA256": "89fee9ef0101fda5d4cc6b2804ef7c286d9ec8ac1ae42aa2d3e891b1e5106ba4",
+        "semanticContextSHA256": "89fee9ef0101fda5d4cc6b2804ef7c286d9ec8ac1ae42aa2d3e891b1e5106ba4",
         "subjectTitle": "Abuja",
         "targetState": "existing-target"
       },
@@ -2497,8 +2553,8 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "An aerial view of Jabi Lake Abuja Nigeria.jpg",
-        "lyhyt": "Jabin järven ranta ilmasta.",
-        "selite": "Jabin järven puistomaista ranta-aluetta Abujassa ilmasta vuonna 2021.",
+        "lyhyt": "Jabin järvi ilmasta.",
+        "selite": "Ilmakuva Jabin järvestä Abujassa vuonna 2021.",
         "lahde": "David Nkwa (Nkwafilms), Wikimedia Commons (CC BY-SA 4.0)"
       },
       "preservePreviousMediaObjects": true,
@@ -2525,14 +2581,14 @@
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "David Nkwa (Nkwafilms), Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Jabin järven puistomaista ranta-aluetta Abujassa ilmasta vuonna 2021.",
-        "lyhyt": "Jabin järven ranta ilmasta.",
+        "selite": "Ilmakuva Jabin järvestä Abujassa vuonna 2021.",
+        "lyhyt": "Jabin järvi ilmasta.",
         "tiedosto": "An aerial view of Jabi Lake Abuja Nigeria.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "664ef9109f312526e3c34a2f5d329e1121eee1a3cd4956cba43ff3a9d4f29970",
-      "targetAfterSHA256": "d7d66fd7390a673aa09a7075052b278d89fcf312830b77027bd6b79e017d19a5",
-      "contextAfterSHA256": "d7d66fd7390a673aa09a7075052b278d89fcf312830b77027bd6b79e017d19a5",
+      "sourceContentAfterSHA256": "6f6cd72dcd5ea75b11ad2e69b09b44d6225cb4beec5d2eb89580140adeb40132",
+      "targetAfterSHA256": "89fee9ef0101fda5d4cc6b2804ef7c286d9ec8ac1ae42aa2d3e891b1e5106ba4",
+      "contextAfterSHA256": "89fee9ef0101fda5d4cc6b2804ef7c286d9ec8ac1ae42aa2d3e891b1e5106ba4",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -2555,7 +2611,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "6f6cd72dcd5ea75b11ad2e69b09b44d6225cb4beec5d2eb89580140adeb40132",
+        "sameImageNativeSHA256": "b049f268e4a9877cb064eae4fe120fd106b88e90cdae316f42f0d821bfbf9fa0",
+        "sameImageExportSHA256": "b049f268e4a9877cb064eae4fe120fd106b88e90cdae316f42f0d821bfbf9fa0",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": true
+      }
     },
     {
       "era": "e05",
@@ -2577,23 +2641,23 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/abuja/c3-e2c169b693ba98f424a3.jpg",
         "suora": true,
         "lahde": "Turizimpressions, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Jabin järven ranta ja kävelyväylä Abujassa vuonna 2019.",
-        "lyhyt": "Jabin järven ranta ja kävelyväylä.",
+        "selite": "Jabin järven maisemaa vuonna 2019.",
+        "lyhyt": "Jabin järvi Abujassa.",
         "tiedosto": "Beautiful scapes, Jabi lake - Abuja.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Turizimpressions, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Jabin järven ranta ja kävelyväylä Abujassa vuonna 2019.",
-        "lyhyt": "Jabin järven ranta ja kävelyväylä.",
+        "selite": "Jabin järven maisemaa vuonna 2019.",
+        "lyhyt": "Jabin järvi Abujassa.",
         "tiedosto": "Beautiful scapes, Jabi lake - Abuja.jpg"
       },
       "runtimeMediaFieldPayload": {
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/abuja/c3-e2c169b693ba98f424a3.jpg",
         "suora": true,
         "lahde": "Turizimpressions, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Jabin järven ranta ja kävelyväylä Abujassa vuonna 2019.",
-        "lyhyt": "Jabin järven ranta ja kävelyväylä.",
+        "selite": "Jabin järven maisemaa vuonna 2019.",
+        "lyhyt": "Jabin järvi Abujassa.",
         "tiedosto": "Beautiful scapes, Jabi lake - Abuja.jpg"
       },
       "runtimeRemoveMediaKeys": [],
@@ -2608,10 +2672,10 @@
         3008
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/abuja/sisalto.json",
-      "sourceContentSHA256": "664ef9109f312526e3c34a2f5d329e1121eee1a3cd4956cba43ff3a9d4f29970",
+      "sourceContentSHA256": "6f6cd72dcd5ea75b11ad2e69b09b44d6225cb4beec5d2eb89580140adeb40132",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "2df7f8d63bb0ff491dd781c7b52234e700f47950826c48ab8a99c58f73109176",
-        "semanticContextSHA256": "2df7f8d63bb0ff491dd781c7b52234e700f47950826c48ab8a99c58f73109176",
+        "targetBeforeSHA256": "ec65d7e779c2c5de887769f72a4d708d8ade075681555a9bb2be6b5032b4dbd8",
+        "semanticContextSHA256": "ec65d7e779c2c5de887769f72a4d708d8ade075681555a9bb2be6b5032b4dbd8",
         "subjectTitle": "Abuja",
         "targetState": "existing-target"
       },
@@ -2783,8 +2847,8 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "Beautiful scapes, Jabi lake - Abuja.jpg",
-        "lyhyt": "Jabin järven ranta ja kävelyväylä.",
-        "selite": "Jabin järven ranta ja kävelyväylä Abujassa vuonna 2019.",
+        "lyhyt": "Jabin järvi Abujassa.",
+        "selite": "Jabin järven maisemaa vuonna 2019.",
         "lahde": "Turizimpressions, Wikimedia Commons (CC BY-SA 4.0)"
       },
       "preservePreviousMediaObjects": true,
@@ -2811,14 +2875,14 @@
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Turizimpressions, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Jabin järven ranta ja kävelyväylä Abujassa vuonna 2019.",
-        "lyhyt": "Jabin järven ranta ja kävelyväylä.",
+        "selite": "Jabin järven maisemaa vuonna 2019.",
+        "lyhyt": "Jabin järvi Abujassa.",
         "tiedosto": "Beautiful scapes, Jabi lake - Abuja.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "664ef9109f312526e3c34a2f5d329e1121eee1a3cd4956cba43ff3a9d4f29970",
-      "targetAfterSHA256": "2df7f8d63bb0ff491dd781c7b52234e700f47950826c48ab8a99c58f73109176",
-      "contextAfterSHA256": "2df7f8d63bb0ff491dd781c7b52234e700f47950826c48ab8a99c58f73109176",
+      "sourceContentAfterSHA256": "6f6cd72dcd5ea75b11ad2e69b09b44d6225cb4beec5d2eb89580140adeb40132",
+      "targetAfterSHA256": "ec65d7e779c2c5de887769f72a4d708d8ade075681555a9bb2be6b5032b4dbd8",
+      "contextAfterSHA256": "ec65d7e779c2c5de887769f72a4d708d8ade075681555a9bb2be6b5032b4dbd8",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -2841,7 +2905,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "6f6cd72dcd5ea75b11ad2e69b09b44d6225cb4beec5d2eb89580140adeb40132",
+        "sameImageNativeSHA256": "e2c169b693ba98f424a30747f438fe84ce6172546a6586f0efb2d35c595d4ea4",
+        "sameImageExportSHA256": "e2c169b693ba98f424a30747f438fe84ce6172546a6586f0efb2d35c595d4ea4",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": true
+      }
     },
     {
       "era": "e05",
@@ -2863,23 +2935,23 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/abuja/l3-0d72678fe9bc9fe06b16.jpg",
         "suora": true,
         "lahde": "Hamzabash, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Karu Abujan lähellä: pensaikkoista rinnettä ja kallioinen laikku vuonna 2020.",
-        "lyhyt": "Kasvillisuuden peittämää rinnettä Karussa.",
+        "selite": "Maisemaa Karussa vuonna 2020.",
+        "lyhyt": "Karu Abujan lähellä.",
         "tiedosto": "A view of a Stream and forest in Karu.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Hamzabash, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Karu Abujan lähellä: pensaikkoista rinnettä ja kallioinen laikku vuonna 2020.",
-        "lyhyt": "Kasvillisuuden peittämää rinnettä Karussa.",
+        "selite": "Maisemaa Karussa vuonna 2020.",
+        "lyhyt": "Karu Abujan lähellä.",
         "tiedosto": "A view of a Stream and forest in Karu.jpg"
       },
       "runtimeMediaFieldPayload": {
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/abuja/l3-0d72678fe9bc9fe06b16.jpg",
         "suora": true,
         "lahde": "Hamzabash, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Karu Abujan lähellä: pensaikkoista rinnettä ja kallioinen laikku vuonna 2020.",
-        "lyhyt": "Kasvillisuuden peittämää rinnettä Karussa.",
+        "selite": "Maisemaa Karussa vuonna 2020.",
+        "lyhyt": "Karu Abujan lähellä.",
         "tiedosto": "A view of a Stream and forest in Karu.jpg"
       },
       "runtimeRemoveMediaKeys": [],
@@ -2894,10 +2966,10 @@
         8000
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/abuja/sisalto.json",
-      "sourceContentSHA256": "664ef9109f312526e3c34a2f5d329e1121eee1a3cd4956cba43ff3a9d4f29970",
+      "sourceContentSHA256": "6f6cd72dcd5ea75b11ad2e69b09b44d6225cb4beec5d2eb89580140adeb40132",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "58d1d5681fd8bfb00e4de479749f7bf27a71388e44716be24399539c0eec6732",
-        "semanticContextSHA256": "58d1d5681fd8bfb00e4de479749f7bf27a71388e44716be24399539c0eec6732",
+        "targetBeforeSHA256": "852005a360ddc2ee0531d85088ee43eb596bb3bffbec5f81036520a343221eef",
+        "semanticContextSHA256": "852005a360ddc2ee0531d85088ee43eb596bb3bffbec5f81036520a343221eef",
         "subjectTitle": "Kaupungin ympärillä on mosaiikki",
         "targetState": "existing-target"
       },
@@ -3111,8 +3183,8 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "A view of a Stream and forest in Karu.jpg",
-        "lyhyt": "Kasvillisuuden peittämää rinnettä Karussa.",
-        "selite": "Karu Abujan lähellä: pensaikkoista rinnettä ja kallioinen laikku vuonna 2020.",
+        "lyhyt": "Karu Abujan lähellä.",
+        "selite": "Maisemaa Karussa vuonna 2020.",
         "lahde": "Hamzabash, Wikimedia Commons (CC BY-SA 4.0)"
       },
       "preservePreviousMediaObjects": true,
@@ -3139,14 +3211,14 @@
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Hamzabash, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Karu Abujan lähellä: pensaikkoista rinnettä ja kallioinen laikku vuonna 2020.",
-        "lyhyt": "Kasvillisuuden peittämää rinnettä Karussa.",
+        "selite": "Maisemaa Karussa vuonna 2020.",
+        "lyhyt": "Karu Abujan lähellä.",
         "tiedosto": "A view of a Stream and forest in Karu.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "664ef9109f312526e3c34a2f5d329e1121eee1a3cd4956cba43ff3a9d4f29970",
-      "targetAfterSHA256": "58d1d5681fd8bfb00e4de479749f7bf27a71388e44716be24399539c0eec6732",
-      "contextAfterSHA256": "58d1d5681fd8bfb00e4de479749f7bf27a71388e44716be24399539c0eec6732",
+      "sourceContentAfterSHA256": "6f6cd72dcd5ea75b11ad2e69b09b44d6225cb4beec5d2eb89580140adeb40132",
+      "targetAfterSHA256": "852005a360ddc2ee0531d85088ee43eb596bb3bffbec5f81036520a343221eef",
+      "contextAfterSHA256": "852005a360ddc2ee0531d85088ee43eb596bb3bffbec5f81036520a343221eef",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -3169,7 +3241,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "6f6cd72dcd5ea75b11ad2e69b09b44d6225cb4beec5d2eb89580140adeb40132",
+        "sameImageNativeSHA256": "0d72678fe9bc9fe06b16fd5f8a6373a9fcafb6461741fa5e76abbb71c5237a2d",
+        "sameImageExportSHA256": "0d72678fe9bc9fe06b16fd5f8a6373a9fcafb6461741fa5e76abbb71c5237a2d",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": true
+      }
     },
     {
       "era": "e05",
@@ -3222,7 +3302,7 @@
         4480
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/abuja/sisalto.json",
-      "sourceContentSHA256": "664ef9109f312526e3c34a2f5d329e1121eee1a3cd4956cba43ff3a9d4f29970",
+      "sourceContentSHA256": "6f6cd72dcd5ea75b11ad2e69b09b44d6225cb4beec5d2eb89580140adeb40132",
       "semanticSourceBind": {
         "targetBeforeSHA256": "42949310cae067dcbe593db6a13c6c6fd579bccce6e5f78180cc7363296b1269",
         "semanticContextSHA256": "38d27187d71cbcdaaded7863b5fcad225eb2e0d247a0b55f6519ebc7365d304f",
@@ -3462,7 +3542,7 @@
         "tiedosto": "Aso Rock Nigeria.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "664ef9109f312526e3c34a2f5d329e1121eee1a3cd4956cba43ff3a9d4f29970",
+      "sourceContentAfterSHA256": "6f6cd72dcd5ea75b11ad2e69b09b44d6225cb4beec5d2eb89580140adeb40132",
       "targetAfterSHA256": "42949310cae067dcbe593db6a13c6c6fd579bccce6e5f78180cc7363296b1269",
       "contextAfterSHA256": "38d27187d71cbcdaaded7863b5fcad225eb2e0d247a0b55f6519ebc7365d304f",
       "ownerApproved": true,
@@ -3487,7 +3567,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "6f6cd72dcd5ea75b11ad2e69b09b44d6225cb4beec5d2eb89580140adeb40132",
+        "sameImageNativeSHA256": "9f1ebdd2512951a610028ad06f1231616651173703e222df4c7f03c397d1e850",
+        "sameImageExportSHA256": "9f1ebdd2512951a610028ad06f1231616651173703e222df4c7f03c397d1e850",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     }
   ],
   "runtimeIntegrationPending": true,
@@ -3499,6 +3587,9 @@
   "task118TextRevision": true,
   "independentTextResamplePending": true,
   "textAcceptanceVerified": false,
-  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task118/immutable-media-history/e05/abuja/cd6a57b1435140d1c4ee7d26877d9ea6fbded884c0de1adadd0874f15b713728.json",
-  "task118ReboundAt": "2026-10-13T16:31:24.562122+00:00"
+  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task228/immutable-media-history/e05/abuja/643aaf84455c34dba69534d8c062b6cedcee374e3ab513c557bd7bc3c015147f.json",
+  "task118ReboundAt": "2026-10-13T16:31:24.562122+00:00",
+  "task228ExcludedAssets": [],
+  "task228TextRevision": true,
+  "task228ReboundAt": "2026-10-13T17:52:01.730076+00:00"
 }

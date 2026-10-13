@@ -3,7 +3,7 @@
   "era": "e05",
   "city": "bamako",
   "authorization": "hyväksyn kaikki tekemäsi kuvat. toimita ne claudelle. claudelta saat uusia ohjeita jatkoa varten",
-  "sourceContentAfterSHA256": "89128d0109c59a9282f45217471f4774f83fc6c47eb70343ce0df9efac559323",
+  "sourceContentAfterSHA256": "ff4a989780173af0c0cb1700310693ee58e45d521de8dee7273f94e84a73b0bb",
   "assets": [
     {
       "era": "e05",
@@ -53,7 +53,7 @@
         1536
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/bamako/sisalto.json",
-      "sourceContentSHA256": "89128d0109c59a9282f45217471f4774f83fc6c47eb70343ce0df9efac559323",
+      "sourceContentSHA256": "ff4a989780173af0c0cb1700310693ee58e45d521de8dee7273f94e84a73b0bb",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
         "semanticContextSHA256": "7d8bd4a1bdceab1eb7990ea58ce6119a77390e9ab47088c1d2642529be01fe1a",
@@ -297,7 +297,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "89128d0109c59a9282f45217471f4774f83fc6c47eb70343ce0df9efac559323",
+      "sourceContentAfterSHA256": "ff4a989780173af0c0cb1700310693ee58e45d521de8dee7273f94e84a73b0bb",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
       "contextAfterSHA256": "7d8bd4a1bdceab1eb7990ea58ce6119a77390e9ab47088c1d2642529be01fe1a",
       "ownerApproved": true,
@@ -322,7 +322,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "ff4a989780173af0c0cb1700310693ee58e45d521de8dee7273f94e84a73b0bb",
+        "sameImageNativeSHA256": "045361f4c4643b1315684bb6cd3531ce445596d83ab1fc1fd718ab05de6db05e",
+        "sameImageExportSHA256": "f5de771e122e13203c1f3942c23b01fc15ac830aefb41ea7167316c47900e023",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e05",
@@ -375,7 +383,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/bamako/sisalto.json",
-      "sourceContentSHA256": "89128d0109c59a9282f45217471f4774f83fc6c47eb70343ce0df9efac559323",
+      "sourceContentSHA256": "ff4a989780173af0c0cb1700310693ee58e45d521de8dee7273f94e84a73b0bb",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
         "semanticContextSHA256": "0789444dd34e8a299e4f8732ac8efa21234cd5e5efd4ee9cb4503e18a257b381",
@@ -612,7 +620,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "89128d0109c59a9282f45217471f4774f83fc6c47eb70343ce0df9efac559323",
+      "sourceContentAfterSHA256": "ff4a989780173af0c0cb1700310693ee58e45d521de8dee7273f94e84a73b0bb",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
       "contextAfterSHA256": "0789444dd34e8a299e4f8732ac8efa21234cd5e5efd4ee9cb4503e18a257b381",
       "ownerApproved": true,
@@ -637,7 +645,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "ff4a989780173af0c0cb1700310693ee58e45d521de8dee7273f94e84a73b0bb",
+        "sameImageNativeSHA256": "162523fa8de29ca897c8bef6a03d9c20ae131ecec673b63310cbfe923769b6d9",
+        "sameImageExportSHA256": "83d4f4c50edeec090f7a01a0974af377fb622c3ef3a68e84b47f1a2e930ebbb5",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e05",
@@ -690,7 +706,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/bamako/sisalto.json",
-      "sourceContentSHA256": "89128d0109c59a9282f45217471f4774f83fc6c47eb70343ce0df9efac559323",
+      "sourceContentSHA256": "ff4a989780173af0c0cb1700310693ee58e45d521de8dee7273f94e84a73b0bb",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
         "semanticContextSHA256": "9f3557978f618c4943bcf29b0c6b99a2e1ea0ca1fbc44c8800914740a52883b8",
@@ -972,7 +988,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "89128d0109c59a9282f45217471f4774f83fc6c47eb70343ce0df9efac559323",
+      "sourceContentAfterSHA256": "ff4a989780173af0c0cb1700310693ee58e45d521de8dee7273f94e84a73b0bb",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
       "contextAfterSHA256": "9f3557978f618c4943bcf29b0c6b99a2e1ea0ca1fbc44c8800914740a52883b8",
       "ownerApproved": true,
@@ -997,7 +1013,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "ff4a989780173af0c0cb1700310693ee58e45d521de8dee7273f94e84a73b0bb",
+        "sameImageNativeSHA256": "72c6c4577b184f63f3208a0909c4b14527e2a9ab14193a33c082c746b2e40449",
+        "sameImageExportSHA256": "d3f9c2020e17759198c3455b0bae04065a572a24528c9135d5328a0dd37f1ff3",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e05",
@@ -1047,10 +1071,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/bamako/sisalto.json",
-      "sourceContentSHA256": "89128d0109c59a9282f45217471f4774f83fc6c47eb70343ce0df9efac559323",
+      "sourceContentSHA256": "ff4a989780173af0c0cb1700310693ee58e45d521de8dee7273f94e84a73b0bb",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "b40b64588a9c96d45bf0ab292ccf7c3ffb1c89bdb05b398bb7a8868a634f4063",
-        "semanticContextSHA256": "b40b64588a9c96d45bf0ab292ccf7c3ffb1c89bdb05b398bb7a8868a634f4063",
+        "targetBeforeSHA256": "a21cdeb64f43a1a918790cb432653b1d4dee5483ec9a136db2d238703b848339",
+        "semanticContextSHA256": "a21cdeb64f43a1a918790cb432653b1d4dee5483ec9a136db2d238703b848339",
         "subjectTitle": "Kiskot saapuivat valmiiseen kaupunkiin",
         "targetState": "existing-target"
       },
@@ -1278,9 +1302,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "89128d0109c59a9282f45217471f4774f83fc6c47eb70343ce0df9efac559323",
-      "targetAfterSHA256": "b40b64588a9c96d45bf0ab292ccf7c3ffb1c89bdb05b398bb7a8868a634f4063",
-      "contextAfterSHA256": "b40b64588a9c96d45bf0ab292ccf7c3ffb1c89bdb05b398bb7a8868a634f4063",
+      "sourceContentAfterSHA256": "ff4a989780173af0c0cb1700310693ee58e45d521de8dee7273f94e84a73b0bb",
+      "targetAfterSHA256": "a21cdeb64f43a1a918790cb432653b1d4dee5483ec9a136db2d238703b848339",
+      "contextAfterSHA256": "a21cdeb64f43a1a918790cb432653b1d4dee5483ec9a136db2d238703b848339",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -1303,7 +1327,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "ff4a989780173af0c0cb1700310693ee58e45d521de8dee7273f94e84a73b0bb",
+        "sameImageNativeSHA256": "7118e605fe4865325b835bae727768b0ecca1e9f50904e464f8a170403e88599",
+        "sameImageExportSHA256": "15fcdf83dc68481b8c12395b2e84d8f174fcfbba0a469290f3a4d8a33f9d7e21",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e05",
@@ -1353,10 +1385,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/bamako/sisalto.json",
-      "sourceContentSHA256": "89128d0109c59a9282f45217471f4774f83fc6c47eb70343ce0df9efac559323",
+      "sourceContentSHA256": "ff4a989780173af0c0cb1700310693ee58e45d521de8dee7273f94e84a73b0bb",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "4564e0e5f774170778e1cd18b7079d7ac30527fdf15d30914630a8a44f20a623",
-        "semanticContextSHA256": "4564e0e5f774170778e1cd18b7079d7ac30527fdf15d30914630a8a44f20a623",
+        "targetBeforeSHA256": "058105b8b511fa22451535d62c9d4ddbc818f66095cc8d73df13b51848c3001d",
+        "semanticContextSHA256": "058105b8b511fa22451535d62c9d4ddbc818f66095cc8d73df13b51848c3001d",
         "subjectTitle": "Torilta lähtee myös soitin",
         "targetState": "existing-target"
       },
@@ -1596,9 +1628,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "89128d0109c59a9282f45217471f4774f83fc6c47eb70343ce0df9efac559323",
-      "targetAfterSHA256": "4564e0e5f774170778e1cd18b7079d7ac30527fdf15d30914630a8a44f20a623",
-      "contextAfterSHA256": "4564e0e5f774170778e1cd18b7079d7ac30527fdf15d30914630a8a44f20a623",
+      "sourceContentAfterSHA256": "ff4a989780173af0c0cb1700310693ee58e45d521de8dee7273f94e84a73b0bb",
+      "targetAfterSHA256": "058105b8b511fa22451535d62c9d4ddbc818f66095cc8d73df13b51848c3001d",
+      "contextAfterSHA256": "058105b8b511fa22451535d62c9d4ddbc818f66095cc8d73df13b51848c3001d",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -1621,7 +1653,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "ff4a989780173af0c0cb1700310693ee58e45d521de8dee7273f94e84a73b0bb",
+        "sameImageNativeSHA256": "d3f64cb5fb114ab612ef23244f65b8ad294f53e639ccb565ba436d30caf65a27",
+        "sameImageExportSHA256": "b15d05b3d930349dcf81dc0960cfda00bd8577e44a0dd6806097dc3a7635263c",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e05",
@@ -1671,10 +1711,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/bamako/sisalto.json",
-      "sourceContentSHA256": "89128d0109c59a9282f45217471f4774f83fc6c47eb70343ce0df9efac559323",
+      "sourceContentSHA256": "ff4a989780173af0c0cb1700310693ee58e45d521de8dee7273f94e84a73b0bb",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "b9795e277413e336183acdf51c405bd2e7fc6e34b1b143279610037d6f0d1468",
-        "semanticContextSHA256": "b9795e277413e336183acdf51c405bd2e7fc6e34b1b143279610037d6f0d1468",
+        "targetBeforeSHA256": "4954986483c03580c292b292a7b2a2c5965baf2ce5172cb334208c06e936e6a6",
+        "semanticContextSHA256": "4954986483c03580c292b292a7b2a2c5965baf2ce5172cb334208c06e936e6a6",
         "subjectTitle": "Sotrama yhdistää kaupunginosia",
         "targetState": "existing-target"
       },
@@ -1902,9 +1942,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "89128d0109c59a9282f45217471f4774f83fc6c47eb70343ce0df9efac559323",
-      "targetAfterSHA256": "b9795e277413e336183acdf51c405bd2e7fc6e34b1b143279610037d6f0d1468",
-      "contextAfterSHA256": "b9795e277413e336183acdf51c405bd2e7fc6e34b1b143279610037d6f0d1468",
+      "sourceContentAfterSHA256": "ff4a989780173af0c0cb1700310693ee58e45d521de8dee7273f94e84a73b0bb",
+      "targetAfterSHA256": "4954986483c03580c292b292a7b2a2c5965baf2ce5172cb334208c06e936e6a6",
+      "contextAfterSHA256": "4954986483c03580c292b292a7b2a2c5965baf2ce5172cb334208c06e936e6a6",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -1927,7 +1967,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "ff4a989780173af0c0cb1700310693ee58e45d521de8dee7273f94e84a73b0bb",
+        "sameImageNativeSHA256": "8d3e4d3505fba707087aab190f993b0fcaf1d1838e1b4e9990342460dd6d4f70",
+        "sameImageExportSHA256": "673b59ed38831c71499e6dd5c14d6374245ac50d63252b34dfacd1de56653f6b",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e05",
@@ -1977,10 +2025,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/bamako/sisalto.json",
-      "sourceContentSHA256": "89128d0109c59a9282f45217471f4774f83fc6c47eb70343ce0df9efac559323",
+      "sourceContentSHA256": "ff4a989780173af0c0cb1700310693ee58e45d521de8dee7273f94e84a73b0bb",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "2bee83147341c44da45b76e83e504b66a362403b005400979cfb98e846d04ab5",
-        "semanticContextSHA256": "2bee83147341c44da45b76e83e504b66a362403b005400979cfb98e846d04ab5",
+        "targetBeforeSHA256": "a29cce17c4d4231663f60f4d0567f99042b61d7bd4cc28179f9237aa5038d9dd",
+        "semanticContextSHA256": "a29cce17c4d4231663f60f4d0567f99042b61d7bd4cc28179f9237aa5038d9dd",
         "subjectTitle": "Puutarhassa katsotaan lähelle",
         "targetState": "existing-target"
       },
@@ -2208,9 +2256,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "89128d0109c59a9282f45217471f4774f83fc6c47eb70343ce0df9efac559323",
-      "targetAfterSHA256": "2bee83147341c44da45b76e83e504b66a362403b005400979cfb98e846d04ab5",
-      "contextAfterSHA256": "2bee83147341c44da45b76e83e504b66a362403b005400979cfb98e846d04ab5",
+      "sourceContentAfterSHA256": "ff4a989780173af0c0cb1700310693ee58e45d521de8dee7273f94e84a73b0bb",
+      "targetAfterSHA256": "a29cce17c4d4231663f60f4d0567f99042b61d7bd4cc28179f9237aa5038d9dd",
+      "contextAfterSHA256": "a29cce17c4d4231663f60f4d0567f99042b61d7bd4cc28179f9237aa5038d9dd",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -2233,7 +2281,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "ff4a989780173af0c0cb1700310693ee58e45d521de8dee7273f94e84a73b0bb",
+        "sameImageNativeSHA256": "686e822b9d238319c7bec61c80a2252e5a3b180498125dbc0db94eb228aa14fd",
+        "sameImageExportSHA256": "3f8c294268a490189b32fa6f19b95c3716d94f7ba0b1ad2e0670908d11b29705",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e05",
@@ -2252,7 +2308,7 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/bamako/photo-9ad63c42d2d2461e0811.jpg",
         "suora": true,
         "lahde": "https://www.flickr.com/photos/gigawebs/, Commons (CC BY 2.0)",
-        "selite": "Bamako yömaisemassa vuonna 2007.",
+        "selite": "Bamako ympäröiviltä kukkuloilta nähtynä toukokuussa 2007.",
         "lyhyt": "Bamakon yömaisema.",
         "tiedosto": "Bamako night hills may 2007.jpg",
         "vuosi": "2007"
@@ -2260,7 +2316,7 @@
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "https://www.flickr.com/photos/gigawebs/, Commons (CC BY 2.0)",
-        "selite": "Bamako yömaisemassa vuonna 2007.",
+        "selite": "Bamako ympäröiviltä kukkuloilta nähtynä toukokuussa 2007.",
         "lyhyt": "Bamakon yömaisema.",
         "tiedosto": "Bamako night hills may 2007.jpg",
         "vuosi": "2007"
@@ -2269,7 +2325,7 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/bamako/photo-9ad63c42d2d2461e0811.jpg",
         "suora": true,
         "lahde": "https://www.flickr.com/photos/gigawebs/, Commons (CC BY 2.0)",
-        "selite": "Bamako yömaisemassa vuonna 2007.",
+        "selite": "Bamako ympäröiviltä kukkuloilta nähtynä toukokuussa 2007.",
         "lyhyt": "Bamakon yömaisema.",
         "tiedosto": "Bamako night hills may 2007.jpg",
         "vuosi": "2007"
@@ -2286,10 +2342,10 @@
         2040
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/bamako/sisalto.json",
-      "sourceContentSHA256": "89128d0109c59a9282f45217471f4774f83fc6c47eb70343ce0df9efac559323",
+      "sourceContentSHA256": "ff4a989780173af0c0cb1700310693ee58e45d521de8dee7273f94e84a73b0bb",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "0de0af2c0b26c705b4e9acc671c88701a30ebbffa5b59bea666ae926a2af8cc3",
-        "semanticContextSHA256": "0de0af2c0b26c705b4e9acc671c88701a30ebbffa5b59bea666ae926a2af8cc3",
+        "targetBeforeSHA256": "49d805f806ac0c0c5a86c490d913b398dbd7ab535d5cca911a2ca8d4bf6c49a0",
+        "semanticContextSHA256": "49d805f806ac0c0c5a86c490d913b398dbd7ab535d5cca911a2ca8d4bf6c49a0",
         "subjectTitle": "bamako — aito paikkavalokuva",
         "targetState": "existing-target"
       },
@@ -2451,7 +2507,7 @@
       "priorMediaFields": {
         "tiedosto": "Bamako night hills may 2007.jpg",
         "lyhyt": "Bamakon yömaisema.",
-        "selite": "Bamako yömaisemassa vuonna 2007.",
+        "selite": "Bamako ympäröiviltä kukkuloilta nähtynä toukokuussa 2007.",
         "lahde": "https://www.flickr.com/photos/gigawebs/, Commons (CC BY 2.0)",
         "vuosi": "2007"
       },
@@ -2479,15 +2535,15 @@
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "https://www.flickr.com/photos/gigawebs/, Commons (CC BY 2.0)",
-        "selite": "Bamako yömaisemassa vuonna 2007.",
+        "selite": "Bamako ympäröiviltä kukkuloilta nähtynä toukokuussa 2007.",
         "lyhyt": "Bamakon yömaisema.",
         "tiedosto": "Bamako night hills may 2007.jpg",
         "vuosi": "2007"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "89128d0109c59a9282f45217471f4774f83fc6c47eb70343ce0df9efac559323",
-      "targetAfterSHA256": "0de0af2c0b26c705b4e9acc671c88701a30ebbffa5b59bea666ae926a2af8cc3",
-      "contextAfterSHA256": "0de0af2c0b26c705b4e9acc671c88701a30ebbffa5b59bea666ae926a2af8cc3",
+      "sourceContentAfterSHA256": "ff4a989780173af0c0cb1700310693ee58e45d521de8dee7273f94e84a73b0bb",
+      "targetAfterSHA256": "49d805f806ac0c0c5a86c490d913b398dbd7ab535d5cca911a2ca8d4bf6c49a0",
+      "contextAfterSHA256": "49d805f806ac0c0c5a86c490d913b398dbd7ab535d5cca911a2ca8d4bf6c49a0",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -2510,7 +2566,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "ff4a989780173af0c0cb1700310693ee58e45d521de8dee7273f94e84a73b0bb",
+        "sameImageNativeSHA256": "9ad63c42d2d2461e08113f8cd9ab5ff3766a44bd517902a9c102ee26dc90fba4",
+        "sameImageExportSHA256": "9ad63c42d2d2461e08113f8cd9ab5ff3766a44bd517902a9c102ee26dc90fba4",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": true
+      }
     },
     {
       "era": "e05",
@@ -2533,14 +2597,14 @@
         "suora": true,
         "lahde": "Dan Flore, Wikimedia Commons (CC BY-SA 4.0)",
         "selite": "Nigerjoen rantamaisemaa ja vene Bamakossa toukokuussa 2009.",
-        "lyhyt": "Vene Nigerjoen rannalla Bamakossa.",
+        "lyhyt": "Vene Nigerjoella Bamakossa.",
         "tiedosto": "Dan Flore Bamako-Mali-Boat-on-the-Niger-River-and-King-Fahd-Bridge.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Dan Flore, Wikimedia Commons (CC BY-SA 4.0)",
         "selite": "Nigerjoen rantamaisemaa ja vene Bamakossa toukokuussa 2009.",
-        "lyhyt": "Vene Nigerjoen rannalla Bamakossa.",
+        "lyhyt": "Vene Nigerjoella Bamakossa.",
         "tiedosto": "Dan Flore Bamako-Mali-Boat-on-the-Niger-River-and-King-Fahd-Bridge.jpg"
       },
       "runtimeMediaFieldPayload": {
@@ -2548,7 +2612,7 @@
         "suora": true,
         "lahde": "Dan Flore, Wikimedia Commons (CC BY-SA 4.0)",
         "selite": "Nigerjoen rantamaisemaa ja vene Bamakossa toukokuussa 2009.",
-        "lyhyt": "Vene Nigerjoen rannalla Bamakossa.",
+        "lyhyt": "Vene Nigerjoella Bamakossa.",
         "tiedosto": "Dan Flore Bamako-Mali-Boat-on-the-Niger-River-and-King-Fahd-Bridge.jpg"
       },
       "runtimeRemoveMediaKeys": [],
@@ -2563,10 +2627,10 @@
         1992
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/bamako/sisalto.json",
-      "sourceContentSHA256": "89128d0109c59a9282f45217471f4774f83fc6c47eb70343ce0df9efac559323",
+      "sourceContentSHA256": "ff4a989780173af0c0cb1700310693ee58e45d521de8dee7273f94e84a73b0bb",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "1e38d1eec97a88c6dd5b0f5645dcb31f29e78256ffd5a17e83bf36fcb07371f9",
-        "semanticContextSHA256": "1e38d1eec97a88c6dd5b0f5645dcb31f29e78256ffd5a17e83bf36fcb07371f9",
+        "targetBeforeSHA256": "257d63616adf5b9bca8cbb332450b82b199de87d903c6ad0c28cc39f76025565",
+        "semanticContextSHA256": "257d63616adf5b9bca8cbb332450b82b199de87d903c6ad0c28cc39f76025565",
         "subjectTitle": "Bamako",
         "targetState": "existing-target"
       },
@@ -2772,7 +2836,7 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "Dan Flore Bamako-Mali-Boat-on-the-Niger-River-and-King-Fahd-Bridge.jpg",
-        "lyhyt": "Vene Nigerjoen rannalla Bamakossa.",
+        "lyhyt": "Vene Nigerjoella Bamakossa.",
         "selite": "Nigerjoen rantamaisemaa ja vene Bamakossa toukokuussa 2009.",
         "lahde": "Dan Flore, Wikimedia Commons (CC BY-SA 4.0)"
       },
@@ -2801,13 +2865,13 @@
       "CcommonsFieldPayload": {
         "lahde": "Dan Flore, Wikimedia Commons (CC BY-SA 4.0)",
         "selite": "Nigerjoen rantamaisemaa ja vene Bamakossa toukokuussa 2009.",
-        "lyhyt": "Vene Nigerjoen rannalla Bamakossa.",
+        "lyhyt": "Vene Nigerjoella Bamakossa.",
         "tiedosto": "Dan Flore Bamako-Mali-Boat-on-the-Niger-River-and-King-Fahd-Bridge.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "89128d0109c59a9282f45217471f4774f83fc6c47eb70343ce0df9efac559323",
-      "targetAfterSHA256": "1e38d1eec97a88c6dd5b0f5645dcb31f29e78256ffd5a17e83bf36fcb07371f9",
-      "contextAfterSHA256": "1e38d1eec97a88c6dd5b0f5645dcb31f29e78256ffd5a17e83bf36fcb07371f9",
+      "sourceContentAfterSHA256": "ff4a989780173af0c0cb1700310693ee58e45d521de8dee7273f94e84a73b0bb",
+      "targetAfterSHA256": "257d63616adf5b9bca8cbb332450b82b199de87d903c6ad0c28cc39f76025565",
+      "contextAfterSHA256": "257d63616adf5b9bca8cbb332450b82b199de87d903c6ad0c28cc39f76025565",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -2830,7 +2894,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "ff4a989780173af0c0cb1700310693ee58e45d521de8dee7273f94e84a73b0bb",
+        "sameImageNativeSHA256": "0b2102bd95c698c32c9d3b5c8481d3c1de8784d233767ecef3555f9e9e742469",
+        "sameImageExportSHA256": "0b2102bd95c698c32c9d3b5c8481d3c1de8784d233767ecef3555f9e9e742469",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": true
+      }
     },
     {
       "era": "e05",
@@ -2883,10 +2955,10 @@
         4000
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/bamako/sisalto.json",
-      "sourceContentSHA256": "89128d0109c59a9282f45217471f4774f83fc6c47eb70343ce0df9efac559323",
+      "sourceContentSHA256": "ff4a989780173af0c0cb1700310693ee58e45d521de8dee7273f94e84a73b0bb",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "978adb740b2371c4abec517ca2fc885c8b609ed9f830f3e544823736f82ab156",
-        "semanticContextSHA256": "978adb740b2371c4abec517ca2fc885c8b609ed9f830f3e544823736f82ab156",
+        "targetBeforeSHA256": "cdf59d9d355b138fd6d0be6eed8e24e5da9e9d5fb8f7e4b6dd4d12aded3468ab",
+        "semanticContextSHA256": "cdf59d9d355b138fd6d0be6eed8e24e5da9e9d5fb8f7e4b6dd4d12aded3468ab",
         "subjectTitle": "Jokitasanko ei ole tyhjä rakennusmaa",
         "targetState": "existing-target"
       },
@@ -3116,9 +3188,9 @@
         "tiedosto": "Cité du Niger.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "89128d0109c59a9282f45217471f4774f83fc6c47eb70343ce0df9efac559323",
-      "targetAfterSHA256": "978adb740b2371c4abec517ca2fc885c8b609ed9f830f3e544823736f82ab156",
-      "contextAfterSHA256": "978adb740b2371c4abec517ca2fc885c8b609ed9f830f3e544823736f82ab156",
+      "sourceContentAfterSHA256": "ff4a989780173af0c0cb1700310693ee58e45d521de8dee7273f94e84a73b0bb",
+      "targetAfterSHA256": "cdf59d9d355b138fd6d0be6eed8e24e5da9e9d5fb8f7e4b6dd4d12aded3468ab",
+      "contextAfterSHA256": "cdf59d9d355b138fd6d0be6eed8e24e5da9e9d5fb8f7e4b6dd4d12aded3468ab",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -3141,7 +3213,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "ff4a989780173af0c0cb1700310693ee58e45d521de8dee7273f94e84a73b0bb",
+        "sameImageNativeSHA256": "329d4b7c37017b1538cb32134dc25c1f0dccd66d5ed9fc3814d71173db7284bb",
+        "sameImageExportSHA256": "329d4b7c37017b1538cb32134dc25c1f0dccd66d5ed9fc3814d71173db7284bb",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e05",
@@ -3194,10 +3274,10 @@
         2244
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/bamako/sisalto.json",
-      "sourceContentSHA256": "89128d0109c59a9282f45217471f4774f83fc6c47eb70343ce0df9efac559323",
+      "sourceContentSHA256": "ff4a989780173af0c0cb1700310693ee58e45d521de8dee7273f94e84a73b0bb",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "91e496236a1b1a6d7a442f61f3615177438353bd3b3d88b45fb80ceb015bcb72",
-        "semanticContextSHA256": "91e496236a1b1a6d7a442f61f3615177438353bd3b3d88b45fb80ceb015bcb72",
+        "targetBeforeSHA256": "c31553804e9de940bb8ee2a62f367edf3357e967e3bc38a8c4e5a484736e804b",
+        "semanticContextSHA256": "c31553804e9de940bb8ee2a62f367edf3357e967e3bc38a8c4e5a484736e804b",
         "subjectTitle": "Niger on myös työpaikka",
         "targetState": "existing-target"
       },
@@ -3391,9 +3471,9 @@
         "tiedosto": "Bamako Garden (31115610468).jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "89128d0109c59a9282f45217471f4774f83fc6c47eb70343ce0df9efac559323",
-      "targetAfterSHA256": "91e496236a1b1a6d7a442f61f3615177438353bd3b3d88b45fb80ceb015bcb72",
-      "contextAfterSHA256": "91e496236a1b1a6d7a442f61f3615177438353bd3b3d88b45fb80ceb015bcb72",
+      "sourceContentAfterSHA256": "ff4a989780173af0c0cb1700310693ee58e45d521de8dee7273f94e84a73b0bb",
+      "targetAfterSHA256": "c31553804e9de940bb8ee2a62f367edf3357e967e3bc38a8c4e5a484736e804b",
+      "contextAfterSHA256": "c31553804e9de940bb8ee2a62f367edf3357e967e3bc38a8c4e5a484736e804b",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -3416,7 +3496,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "ff4a989780173af0c0cb1700310693ee58e45d521de8dee7273f94e84a73b0bb",
+        "sameImageNativeSHA256": "ebb580fe9d0fe97fa6ff6916b972807ee9f9fa1e4db16b180eb97dfd1805cdab",
+        "sameImageExportSHA256": "ebb580fe9d0fe97fa6ff6916b972807ee9f9fa1e4db16b180eb97dfd1805cdab",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     }
   ],
   "runtimeIntegrationPending": true,
@@ -3769,6 +3857,350 @@
   "task118TextRevision": true,
   "independentTextResamplePending": true,
   "textAcceptanceVerified": false,
-  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task118/immutable-media-history/e05/bamako/4db77f7cac16b8b2341e6629abf6598463d88fbd5da1573535199a9ed3192a39.json",
-  "task118ReboundAt": "2026-10-13T16:31:24.614575+00:00"
+  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task228/immutable-media-history/e05/bamako/899cfe16e111fa7355aa5d633a853c24330b82e6969306c0846657385d569dcc.json",
+  "task118ReboundAt": "2026-10-13T16:31:24.614575+00:00",
+  "task228ExcludedAssets": [
+    {
+      "era": "e05",
+      "city": "bamako",
+      "slot": "K1",
+      "type": "commons",
+      "assetID": "capital-cc-e05-bamako-k1-9647ac8d9a8c55df",
+      "galleryImageID": "capital-cc-e05-bamako-k1-9647ac8d9a8c55df",
+      "commonsFile": "Strings of a 21 string Kora harp-lute, Rome - 3497.jpg",
+      "targetJsonPath": "$.kaupunkilehti[0].nostot[0]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "nostot",
+        0
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/bamako/k1-9647ac8d9a8c55df4664.jpg",
+        "suora": true,
+        "lahde": "Jorge Royan, Wikimedia Commons (CC BY-SA 3.0)",
+        "selite": "Korasoittimen kielet soittajan käsissä.",
+        "lyhyt": "Korasoittimen kielet soittajan käsissä.",
+        "tiedosto": "Strings of a 21 string Kora harp-lute, Rome - 3497.jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Jorge Royan, Wikimedia Commons (CC BY-SA 3.0)",
+        "selite": "Korasoittimen kielet soittajan käsissä.",
+        "lyhyt": "Korasoittimen kielet soittajan käsissä.",
+        "tiedosto": "Strings of a 21 string Kora harp-lute, Rome - 3497.jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/bamako/k1-9647ac8d9a8c55df4664.jpg",
+        "suora": true,
+        "lahde": "Jorge Royan, Wikimedia Commons (CC BY-SA 3.0)",
+        "selite": "Korasoittimen kielet soittajan käsissä.",
+        "lyhyt": "Korasoittimen kielet soittajan käsissä.",
+        "tiedosto": "Strings of a 21 string Kora harp-lute, Rome - 3497.jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "9647ac8d9a8c55df46646ecd78c19981aee4df2385bbc04c795371fd69b7850c",
+      "exportSHA256": "9647ac8d9a8c55df46646ecd78c19981aee4df2385bbc04c795371fd69b7850c",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/bamako/k1-9647ac8d9a8c55df4664.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/bamako/k1-9647ac8d9a8c55df4664.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/bamako/cc-evidence/candidate-ee66e76f828b7b.jpg",
+      "dimensions": [
+        2912,
+        4368
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/bamako/sisalto.json",
+      "sourceContentSHA256": "bb4a779d974ea7887e3b1d030eaa3f49a3885ea8acebc428a2c83a04c23cc627",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "543af2e1cd00606b6f985699b3e00805a14fe43773511137b686fe808e92ffc6",
+        "semanticContextSHA256": "543af2e1cd00606b6f985699b3e00805a14fe43773511137b686fe808e92ffc6",
+        "subjectTitle": "Esineessä säilyy muutakin kuin muoto",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Jorge Royan",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Strings_of_a_21_string_Kora_harp-lute,_Rome_-_3497.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9d/Strings_of_a_21_string_Kora_harp-lute%2C_Rome_-_3497.jpg",
+        "rightsEvidence": {
+          "selection": {
+            "photoLicenseSource": "https://commons.wikimedia.org/wiki/File:Strings_of_a_21_string_Kora_harp-lute,_Rome_-_3497.jpg",
+            "artistFieldSource": "Author table",
+            "explicitCreditFromSource": "Jorge Royan",
+            "licenseSourceSha256": "bba6c86ef681c69ac71d38d3f50474c1025d1f39255d2495961e25a631003dc0",
+            "depictedWorkLayer": "Valokuva Jorge Royan, oma valokuva ja CC BY-SA 3.0 alkuperäissivulta. Pääaihe tavanomaisen toiminnallisen kielisoittimen kielet, kiinnitykset ja käyttö kädellä, ei itsenäinen figuratiivinen koristelu, rituaaliteos tai museorakennus. Pienet luonnolliset asusteet ja kellon/bag-kuvion sivuosat eivät itsenäisen taideteoksen jäljennöspääaiheita. Ei museokokoelman käyttöluvan, folklore-lain, iän tai FOP:n oletusta; kohdekuva rajautuu yleiseen soittimen käyttöön.",
+            "sourcePlaceDescription": "English: Black hands playing the strings of a 21 string Kora harp-lute, an African musical instrument, Rome, Italy",
+            "sourcePlaceGeo": [],
+            "noFopOrBuildingAgeAssumption": true
+          },
+          "QA": {
+            "author": "Jorge Royan",
+            "license": "CC BY-SA 3.0",
+            "width": 2912,
+            "height": 4368,
+            "localOriginal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/bamako/cc-evidence/candidate-ee66e76f828b7b.jpg",
+            "nativeSHA256": "9647ac8d9a8c55df46646ecd78c19981aee4df2385bbc04c795371fd69b7850c",
+            "sourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/bamako/qa-evidence/bba6c86ef681c69ac71d38d3f50474c1025d1f39255d2495961e25a631003dc0.html",
+            "sourceSnapshotSHA256": "bba6c86ef681c69ac71d38d3f50474c1025d1f39255d2495961e25a631003dc0",
+            "sourceRowsRead": {
+              "Description Strings of a 21 string Kora harp-lute, Rome - 3497.jpg": "English: Black hands playing the strings of a 21 string Kora harp-lute, an African musical instrument, Rome, Italy",
+              "Date": "2006",
+              "Source": "Own work",
+              "Author": "Jorge Royan"
+            },
+            "authorRowsIncludingExif": [
+              {
+                "label": "Author",
+                "value": "Jorge Royan",
+                "rowAttributes": {}
+              },
+              {
+                "label": "Author",
+                "value": "Jorge Royan",
+                "rowAttributes": {
+                  "class": "exif-artist"
+                }
+              }
+            ],
+            "licenseTemplatesRead": [
+              "CC BY-SA 3.0"
+            ],
+            "sourceOriginalFileDimensions": [
+              "2,912",
+              "4,368"
+            ],
+            "nativeDimensionsOutput": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/bamako/cc-evidence/candidate-ee66e76f828b7b.jpg\n  pixelWidth: 2912\n  pixelHeight: 4368\n  format: jpeg\n  profile: Adobe RGB (1998)\n",
+            "nativeEncodedDimensions": [
+              2912,
+              4368
+            ],
+            "exifOrientation": 1,
+            "orientationAppliedDimensions": [
+              2912,
+              4368
+            ],
+            "sourceDateRaw": "2006",
+            "gameReuseIndependentlyChecked": true,
+            "gameReuseSearchRoot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/js/packs",
+            "gameReuseFilesRead": 373,
+            "gameReuseMatches": [],
+            "duplicateCitySlots": [],
+            "visualReview": "Oma natiivin silmätarkistus: tavanomaisen toiminnallisen koran kielet/kiinnitykset ja soittajan kädet, ei kasvoja. Ei itsenäistä figuratiivista ornamenttia, ritualistista kuvateosta tai nimetyn museoesineen pääaiheista jäljentämistä; pienet arkiset asusteet jäävät sivuosiksi. Jorge Royan/Own work/CC BY-SA3.0 Author/licensetpl luettu itse. Nykyisen K1-museonoston soitinaiheeseen soveltuva YLEINEN soitinvalokuva: alkuperäislähde ilmoittaa Rome,Italy ja2006. Tätä ei saa esittää Bamakossa tai Malin kansallismuseossa otettuna kuvana eikä kyseisen museon kokoelmaesineenä. Selite Korasoittimen kielet soittajan käsissä vastaa itse aihetta; toimitukseen suositus Yleinen korasoittimen kielten valokuva, Rooma2006. Valokuvan käyttöluvan peruste ei museo-/folklore-FOP-oletus tai esineen ikä. Native2912×4368, pysty sallittuK-roolissa, alkuperäinen AdobeRGB-profiili kirjattu ja säilyy.",
+            "depictedWorkLayerIndependentlyReviewed": true,
+            "genericObjectPhotoOnly": true,
+            "actualPhotoPlace": "Rome, Italy",
+            "notDocumentaryPhotoOfBamakoOrMuseum": true,
+            "currentTopic": "Museon instrumenttikokoelmien yleinen soitinaihe",
+            "deliveryCaptionSuggestion": "Yleinen korasoittimen kielten valokuva, Rooma 2006.",
+            "deliveryProvenanceMustRetain": "Rooma,2006; ei Malin kansallismuseon dokumenttikuva.",
+            "visuallyReviewed": true,
+            "originalPixelsViewed": true,
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Strings_of_a_21_string_Kora_harp-lute,_Rome_-_3497.jpg",
+            "sourceManifest": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/bamako/cc-selection.json",
+            "currentContentSHA256": "3f44fdb00fbdaa6154ada806602e2f0b4ed47e62685d1a9b071f3bb70b4cea8e",
+            "photoDate": "2006",
+            "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9d/Strings_of_a_21_string_Kora_harp-lute%2C_Rome_-_3497.jpg",
+            "captionFi": "Korasoittimen kielet soittajan käsissä.",
+            "checkedAt": "2026-10-12T19:59:01.054818+00:00",
+            "published": false,
+            "gameIntegrated": false,
+            "ownerAcceptance": false,
+            "sourceTitlePersonallyRead": "Strings of a 21 string Kora harp-lute, Rome - 3497.jpg",
+            "sourceOriginalMediaUrlPersonallyRead": "https://upload.wikimedia.org/wikipedia/commons/9/9d/Strings_of_a_21_string_Kora_harp-lute%2C_Rome_-_3497.jpg",
+            "exactCommonsFileSourcePointerVerified": true
+          },
+          "qaReason": "Oma natiivin silmätarkistus: tavanomaisen toiminnallisen koran kielet/kiinnitykset ja soittajan kädet, ei kasvoja. Ei itsenäistä figuratiivista ornamenttia, ritualistista kuvateosta tai nimetyn museoesineen pääaiheista jäljentämistä; pienet arkiset asusteet jäävät sivuosiksi. Jorge Royan/Own work/CC BY-SA3.0 Author/licensetpl luettu itse. Nykyisen K1-museonoston soitinaiheeseen soveltuva YLEINEN soitinvalokuva: alkuperäislähde ilmoittaa Rome,Italy ja2006. Tätä ei saa esittää Bamakossa tai Malin kansallismuseossa otettuna kuvana eikä kyseisen museon kokoelmaesineenä. Selite Korasoittimen kielet soittajan käsissä vastaa itse aihetta; toimitukseen suositus Yleinen korasoittimen kielten valokuva, Rooma2006. Valokuvan käyttöluvan peruste ei museo-/folklore-FOP-oletus tai esineen ikä. Native2912×4368, pysty sallittuK-roolissa, alkuperäinen AdobeRGB-profiili kirjattu ja säilyy."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Korasoittimen kielet soittajan käsissä.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/bamako/qa.json",
+        "fileSHA256": "ba4632fe2160eeb34ea579cb5ceb05cb947e1753b87d2df7e2b50885e3892344",
+        "item": {
+          "slot": "K1",
+          "targetJsonPath": "$.kaupunkilehti[0].nostot[0]",
+          "assetID": null,
+          "commonsFile": "Strings of a 21 string Kora harp-lute, Rome - 3497.jpg",
+          "sha256": "9647ac8d9a8c55df46646ecd78c19981aee4df2385bbc04c795371fd69b7850c",
+          "verdict": "accepted",
+          "reason": "Oma natiivin silmätarkistus: tavanomaisen toiminnallisen koran kielet/kiinnitykset ja soittajan kädet, ei kasvoja. Ei itsenäistä figuratiivista ornamenttia, ritualistista kuvateosta tai nimetyn museoesineen pääaiheista jäljentämistä; pienet arkiset asusteet jäävät sivuosiksi. Jorge Royan/Own work/CC BY-SA3.0 Author/licensetpl luettu itse. Nykyisen K1-museonoston soitinaiheeseen soveltuva YLEINEN soitinvalokuva: alkuperäislähde ilmoittaa Rome,Italy ja2006. Tätä ei saa esittää Bamakossa tai Malin kansallismuseossa otettuna kuvana eikä kyseisen museon kokoelmaesineenä. Selite Korasoittimen kielet soittajan käsissä vastaa itse aihetta; toimitukseen suositus Yleinen korasoittimen kielten valokuva, Rooma2006. Valokuvan käyttöluvan peruste ei museo-/folklore-FOP-oletus tai esineen ikä. Native2912×4368, pysty sallittuK-roolissa, alkuperäinen AdobeRGB-profiili kirjattu ja säilyy.",
+          "required": true,
+          "status": "reviewed",
+          "evidence": {
+            "author": "Jorge Royan",
+            "license": "CC BY-SA 3.0",
+            "width": 2912,
+            "height": 4368,
+            "localOriginal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/bamako/cc-evidence/candidate-ee66e76f828b7b.jpg",
+            "nativeSHA256": "9647ac8d9a8c55df46646ecd78c19981aee4df2385bbc04c795371fd69b7850c",
+            "sourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/bamako/qa-evidence/bba6c86ef681c69ac71d38d3f50474c1025d1f39255d2495961e25a631003dc0.html",
+            "sourceSnapshotSHA256": "bba6c86ef681c69ac71d38d3f50474c1025d1f39255d2495961e25a631003dc0",
+            "sourceRowsRead": {
+              "Description Strings of a 21 string Kora harp-lute, Rome - 3497.jpg": "English: Black hands playing the strings of a 21 string Kora harp-lute, an African musical instrument, Rome, Italy",
+              "Date": "2006",
+              "Source": "Own work",
+              "Author": "Jorge Royan"
+            },
+            "authorRowsIncludingExif": [
+              {
+                "label": "Author",
+                "value": "Jorge Royan",
+                "rowAttributes": {}
+              },
+              {
+                "label": "Author",
+                "value": "Jorge Royan",
+                "rowAttributes": {
+                  "class": "exif-artist"
+                }
+              }
+            ],
+            "licenseTemplatesRead": [
+              "CC BY-SA 3.0"
+            ],
+            "sourceOriginalFileDimensions": [
+              "2,912",
+              "4,368"
+            ],
+            "nativeDimensionsOutput": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/bamako/cc-evidence/candidate-ee66e76f828b7b.jpg\n  pixelWidth: 2912\n  pixelHeight: 4368\n  format: jpeg\n  profile: Adobe RGB (1998)\n",
+            "nativeEncodedDimensions": [
+              2912,
+              4368
+            ],
+            "exifOrientation": 1,
+            "orientationAppliedDimensions": [
+              2912,
+              4368
+            ],
+            "sourceDateRaw": "2006",
+            "gameReuseIndependentlyChecked": true,
+            "gameReuseSearchRoot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/js/packs",
+            "gameReuseFilesRead": 373,
+            "gameReuseMatches": [],
+            "duplicateCitySlots": [],
+            "visualReview": "Oma natiivin silmätarkistus: tavanomaisen toiminnallisen koran kielet/kiinnitykset ja soittajan kädet, ei kasvoja. Ei itsenäistä figuratiivista ornamenttia, ritualistista kuvateosta tai nimetyn museoesineen pääaiheista jäljentämistä; pienet arkiset asusteet jäävät sivuosiksi. Jorge Royan/Own work/CC BY-SA3.0 Author/licensetpl luettu itse. Nykyisen K1-museonoston soitinaiheeseen soveltuva YLEINEN soitinvalokuva: alkuperäislähde ilmoittaa Rome,Italy ja2006. Tätä ei saa esittää Bamakossa tai Malin kansallismuseossa otettuna kuvana eikä kyseisen museon kokoelmaesineenä. Selite Korasoittimen kielet soittajan käsissä vastaa itse aihetta; toimitukseen suositus Yleinen korasoittimen kielten valokuva, Rooma2006. Valokuvan käyttöluvan peruste ei museo-/folklore-FOP-oletus tai esineen ikä. Native2912×4368, pysty sallittuK-roolissa, alkuperäinen AdobeRGB-profiili kirjattu ja säilyy.",
+            "depictedWorkLayerIndependentlyReviewed": true,
+            "genericObjectPhotoOnly": true,
+            "actualPhotoPlace": "Rome, Italy",
+            "notDocumentaryPhotoOfBamakoOrMuseum": true,
+            "currentTopic": "Museon instrumenttikokoelmien yleinen soitinaihe",
+            "deliveryCaptionSuggestion": "Yleinen korasoittimen kielten valokuva, Rooma 2006.",
+            "deliveryProvenanceMustRetain": "Rooma,2006; ei Malin kansallismuseon dokumenttikuva.",
+            "visuallyReviewed": true,
+            "originalPixelsViewed": true,
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Strings_of_a_21_string_Kora_harp-lute,_Rome_-_3497.jpg",
+            "sourceManifest": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/bamako/cc-selection.json",
+            "currentContentSHA256": "3f44fdb00fbdaa6154ada806602e2f0b4ed47e62685d1a9b071f3bb70b4cea8e",
+            "photoDate": "2006",
+            "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9d/Strings_of_a_21_string_Kora_harp-lute%2C_Rome_-_3497.jpg",
+            "captionFi": "Korasoittimen kielet soittajan käsissä.",
+            "checkedAt": "2026-10-12T19:59:01.054818+00:00",
+            "published": false,
+            "gameIntegrated": false,
+            "ownerAcceptance": false,
+            "sourceTitlePersonallyRead": "Strings of a 21 string Kora harp-lute, Rome - 3497.jpg",
+            "sourceOriginalMediaUrlPersonallyRead": "https://upload.wikimedia.org/wikipedia/commons/9/9d/Strings_of_a_21_string_Kora_harp-lute%2C_Rome_-_3497.jpg",
+            "exactCommonsFileSourcePointerVerified": true
+          }
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/bamako/qa.json",
+            "sha256": "ba4632fe2160eeb34ea579cb5ceb05cb947e1753b87d2df7e2b50885e3892344"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/bamako/illustration-qa-extra.json",
+            "sha256": "da13c93affa40963faf666b336682427a4971c29529a0b699728b2db0f813c9a"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e05",
+        "city": "bamako",
+        "slot": "K1",
+        "targetJsonPath": "$.kaupunkilehti[0].nostot[0]",
+        "commonsFile": "Strings of a 21 string Kora harp-lute, Rome - 3497.jpg",
+        "sha256": "9647ac8d9a8c55df46646ecd78c19981aee4df2385bbc04c795371fd69b7850c",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Strings_of_a_21_string_Kora_harp-lute,_Rome_-_3497.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9d/Strings_of_a_21_string_Kora_harp-lute%2C_Rome_-_3497.jpg",
+        "author": "Jorge Royan",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "width": 2912,
+        "height": 4368,
+        "originalSHA256": "9647ac8d9a8c55df46646ecd78c19981aee4df2385bbc04c795371fd69b7850c",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/bamako/k1-9647ac8d9a8c55df4664.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/bamako/k1-9647ac8d9a8c55df4664.jpg",
+        "bytes": 2910949,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T19:59:41.862325+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "Strings of a 21 string Kora harp-lute, Rome - 3497.jpg",
+        "lahde": "Jorge Royan, Wikimedia Commons (CC BY-SA 3.0)",
+        "selite": "Korasoittimen kielet soittajan käsissä.",
+        "lyhyt": "Korasoittimen kielet soittajan käsissä."
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Jorge Royan, Wikimedia Commons (CC BY-SA 3.0)",
+        "selite": "Korasoittimen kielet soittajan käsissä.",
+        "lyhyt": "Korasoittimen kielet soittajan käsissä.",
+        "tiedosto": "Strings of a 21 string Kora harp-lute, Rome - 3497.jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "bb4a779d974ea7887e3b1d030eaa3f49a3885ea8acebc428a2c83a04c23cc627",
+      "targetAfterSHA256": "543af2e1cd00606b6f985699b3e00805a14fe43773511137b686fe808e92ffc6",
+      "contextAfterSHA256": "543af2e1cd00606b6f985699b3e00805a14fe43773511137b686fe808e92ffc6",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "task118ExclusionReason": "old-CC-image-cleared-or-replaced-by-task118",
+      "runtimeUseAllowed": false,
+      "originalBinaryPreserved": true
+    }
+  ],
+  "task228TextRevision": true,
+  "task228ReboundAt": "2026-10-13T17:52:01.780167+00:00"
 }
