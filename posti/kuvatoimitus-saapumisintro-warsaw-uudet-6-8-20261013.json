@@ -1,0 +1,352 @@
+{
+  "schemaVersion": 1,
+  "cityName": "VARSOVA",
+  "gameCityId": "varsova",
+  "mediaSlug": "warsaw",
+  "taskNumbers": [
+    211,
+    212
+  ],
+  "updatedAt": "2026-10-13T18:10:40.057964+00:00",
+  "sourcePath": "posti/fable-codex-saapumisintro-uudet-6-8-loput-2-20261013.md",
+  "sourceCommit": "dbdaff9a39fa0e5052f176c890c85836e1a69a1f",
+  "sourceBlob": "2e5adc4cb04a23fcb4cd8fdd75426ac78afdcc9d",
+  "sourceReadInFull": true,
+  "sourceReadBy": "/root/intro_owner_rejection_inventory",
+  "sourceReadReceiptPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/source-read-receipt.json",
+  "assets": [
+    {
+      "taskNumber": 211,
+      "mediaSlug": "warsaw",
+      "slot": 6,
+      "filename": "warsaw-6-nakoala-intro-v1.png",
+      "title": "koko kaupunki tunnetulta näköalapaikalta päivällä — Varsova Kulttuuri- ja tiedepalatsin 30. kerroksen terassilta pohjoiseen päivällä: Vanhankaupungin katot ja Veikseli kaukana.",
+      "fullDeliveryRequirement": "**6 / koko kaupunki tunnetulta näköalapaikalta päivällä — Varsova Kulttuuri- ja tiedepalatsin 30. kerroksen terassilta pohjoiseen päivällä: Vanhankaupungin katot ja Veikseli kaukana.** Tiedosto `warsaw-6-nakoala-intro-v1.png`.\nMitä kuvataan: Varsovan panoraama kirkkaana päivänä (nykyaikainen värivalokuva) korkealta, noin 114 metrin korkeudelta kaupungin keskustasta. Etualalla kuvan alareunassa vain kapea kaistale vaaleaa kivikaidetta, ei ihmisiä lähellä. Alhaalla laaja kattomeri: 1900-luvun alun ja sodanjälkeisiä vaaleita ja okranvärisiä kerrostaloja, tummia tasakattoja, tiivistä puistoa ja puiden latvoja, leveitä katuja pieninä harmaina nauhoina. Kuvan keskellä ja hieman oikealla kaukana (noin kaksi kilometriä) Vanhankaupungin tiivis, punertavakattoinen kortteli ja sen reunalla Kuninkaanlinnan pitkä, matala, punatiilinen ja okranvärinen rakennus vihreäkattoisine kellotorneineen, kaukana pienenä mutta tunnistettavana. Oikealla taustalla Veikseli leveänä vihertävänä nauhana ja sen toisella puolella matala vihreä ranta. Kuvan vasemmassa laidassa matalampia kortteleita ja puiden vihreää; horisontissa tasainen vaalea kaupunkiutu. Autot ja kävelijät vain pieninä pisteinä kaukana. Kulma: vaakakuva, katse pohjoiseen-koilliseen (suunta noin 5-20 astetta, näkökenttä noin 60 astetta), kamera kaiteen takana silmänkorkeudelta, hieman alaspäin. Valo: kirkas mutta pehmeä aamupäivän valo, vaimeat värit, ei HDR:ää. Ei saa näkyä: ihmisiä lähellä tai tunnistettavia kasvoja, ikkunalasin heijastuksia tai teräsritilää (vain ohut metallikehys alareunassa on sallittu), tekstiä, kylttejä, mainoksia, logoja, lippuja, PGE Narodowy -stadionia tai muita moderneja stadioneja, pilvenpiirtäjiä (Varso Tower, Warsaw Spire, Złota 44) erottuvina, Kulttuuri- ja tiedepalatsia itseään (se jää kameran taakse), Zygmuntin kolonnia tai muistomerkkejä erottuvina, sotamuistomerkkejä, ilotulitusta, drooneja. Fotorealistinen havainnekuva, vaimeat värit, 1536 x 1024.\nKuvateksti-ehdotus (loppuu sanaan Havainnekuva.): Varsova Kulttuuri- ja tiedepalatsin 30. kerroksen terassilta pohjoiseen päivällä: Vanhankaupungin katot ja Veikseli kaukana. Havainnekuva.\n\n",
+      "sourceVersions": [
+        {
+          "path": "posti/fable-codex-saapumisintro-uudet-6-8-loput-2-20261013.md",
+          "commit": "dbdaff9a39fa0e5052f176c890c85836e1a69a1f",
+          "blob": "2e5adc4cb04a23fcb4cd8fdd75426ac78afdcc9d",
+          "readInFull": true
+        }
+      ],
+      "ownerThreadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+      "hostId": "local",
+      "generationCap": 1,
+      "status": "QA-R2-delivered-for-PT-review",
+      "productionStarted": false,
+      "delivered": true,
+      "city": "VARSOVA",
+      "gameID": "varsova",
+      "part": 2,
+      "sourceBlob": "2e5adc4cb04a23fcb4cd8fdd75426ac78afdcc9d",
+      "sourceCommit": "dbdaff9a39fa0e5052f176c890c85836e1a69a1f",
+      "sourcePath": "posti/fable-codex-saapumisintro-uudet-6-8-loput-2-20261013.md",
+      "sourceNasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/sources/fable-codex-saapumisintro-uudet-6-8-loput-2-20261013.md",
+      "sourceCharacterSpan": [
+        69490,
+        71635
+      ],
+      "sourceByteSpan": [
+        72129,
+        74351
+      ],
+      "fullDeliveryRequirementSHA256": "5e1732a7600815e178ac24d0de2e1ff7112215a5e4fa73652c0063e24fc55940",
+      "fullDirective": "Varsovan panoraama kirkkaana päivänä (nykyaikainen värivalokuva) korkealta, noin 114 metrin korkeudelta kaupungin keskustasta. Etualalla kuvan alareunassa vain kapea kaistale vaaleaa kivikaidetta, ei ihmisiä lähellä. Alhaalla laaja kattomeri: 1900-luvun alun ja sodanjälkeisiä vaaleita ja okranvärisiä kerrostaloja, tummia tasakattoja, tiivistä puistoa ja puiden latvoja, leveitä katuja pieninä harmaina nauhoina. Kuvan keskellä ja hieman oikealla kaukana (noin kaksi kilometriä) Vanhankaupungin tiivis, punertavakattoinen kortteli ja sen reunalla Kuninkaanlinnan pitkä, matala, punatiilinen ja okranvärinen rakennus vihreäkattoisine kellotorneineen, kaukana pienenä mutta tunnistettavana. Oikealla taustalla Veikseli leveänä vihertävänä nauhana ja sen toisella puolella matala vihreä ranta. Kuvan vasemmassa laidassa matalampia kortteleita ja puiden vihreää; horisontissa tasainen vaalea kaupunkiutu. Autot ja kävelijät vain pieninä pisteinä kaukana. Kulma: vaakakuva, katse pohjoiseen-koilliseen (suunta noin 5-20 astetta, näkökenttä noin 60 astetta), kamera kaiteen takana silmänkorkeudelta, hieman alaspäin. Valo: kirkas mutta pehmeä aamupäivän valo, vaimeat värit, ei HDR:ää. Ei saa näkyä: ihmisiä lähellä tai tunnistettavia kasvoja, ikkunalasin heijastuksia tai teräsritilää (vain ohut metallikehys alareunassa on sallittu), tekstiä, kylttejä, mainoksia, logoja, lippuja, PGE Narodowy -stadionia tai muita moderneja stadioneja, pilvenpiirtäjiä (Varso Tower, Warsaw Spire, Złota 44) erottuvina, Kulttuuri- ja tiedepalatsia itseään (se jää kameran taakse), Zygmuntin kolonnia tai muistomerkkejä erottuvina, sotamuistomerkkejä, ilotulitusta, drooneja. Fotorealistinen havainnekuva, vaimeat värit, 1536 x 1024.",
+      "caption": "Varsova Kulttuuri- ja tiedepalatsin 30. kerroksen terassilta pohjoiseen päivällä: Vanhankaupungin katot ja Veikseli kaukana. Havainnekuva.",
+      "sourceReadInFullVerified": true,
+      "mappingBlockExactSourceMatch": true,
+      "r2Prefix": "julisteet/saapumisintro/warsaw/20261013-uudet-6-8/",
+      "deliveryManifestPath": "posti/kuvatoimitus-saapumisintro-warsaw-uudet-6-8-20261013.json",
+      "partDeliveryReportPath": "posti/codex-fable-saapumisintro-uudet-6-8-loput-2-20261013.md",
+      "generationCallsRecorded": 0,
+      "qaAcceptedVerified": true,
+      "r2BytesVerified": true,
+      "mailboxDeliveryVerified": false,
+      "ownerAcceptanceVerified": false,
+      "acceptanceRoute": "PT acts for owner; source authorizes direct delivery. Actual PT acceptance remains evidence-dependent.",
+      "gameIntegrated": false,
+      "published": false,
+      "r2Key": "julisteet/saapumisintro/warsaw/20261013-uudet-6-8/warsaw-6-nakoala-intro-v1.png",
+      "historical": false,
+      "id": "warsaw-6-nakoala-intro-v1",
+      "sourceReadInFull": true,
+      "cityName": "VARSOVA",
+      "gameCityId": "varsova",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/warsaw/native-6.png",
+      "nativeSHA256": "4d5f12e0cc2fe7f9349d83f80c1b2784464bc5a483da9b4d6bd33b1ce1097885",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/warsaw/warsaw-6-nakoala-intro-v1.png",
+      "workspacePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/eurooppa-introt-uudet68-loput-20261013/warsaw/warsaw-6-nakoala-intro-v1.png",
+      "sha256": "5c2b085beb641e6c11387d9be9f9a29ca358c61d412bd5c7e6469aaec6378307",
+      "width": 1536,
+      "height": 1024,
+      "opaque": true,
+      "sRGB": true,
+      "neutralGrayscale": false,
+      "pixelIdentityAfterMetadataExport": true,
+      "pixelIdentityToNative": true,
+      "historicalGrayscaleEncodingNormalized": false,
+      "exportProcessing": "Metadata/sRGB only; pixels unchanged",
+      "generationPrompt": "Create exactly one original, contemporary COLOR photographic-looking illustrative image. Output a single landscape PNG at exactly 1536x1024, opaque RGB, natural camera perspective. No collage, borders or text overlays. The scene must follow ALL of the following exact Finnish scene instructions, including direction, geometry, exclusions, scale, vehicle movement and materials:\n\nVarsovan panoraama kirkkaana päivänä (nykyaikainen värivalokuva) korkealta, noin 114 metrin korkeudelta kaupungin keskustasta. Etualalla kuvan alareunassa vain kapea kaistale vaaleaa kivikaidetta, ei ihmisiä lähellä. Alhaalla laaja kattomeri: 1900-luvun alun ja sodanjälkeisiä vaaleita ja okranvärisiä kerrostaloja, tummia tasakattoja, tiivistä puistoa ja puiden latvoja, leveitä katuja pieninä harmaina nauhoina. Kuvan keskellä ja hieman oikealla kaukana (noin kaksi kilometriä) Vanhankaupungin tiivis, punertavakattoinen kortteli ja sen reunalla Kuninkaanlinnan pitkä, matala, punatiilinen ja okranvärinen rakennus vihreäkattoisine kellotorneineen, kaukana pienenä mutta tunnistettavana. Oikealla taustalla Veikseli leveänä vihertävänä nauhana ja sen toisella puolella matala vihreä ranta. Kuvan vasemmassa laidassa matalampia kortteleita ja puiden vihreää; horisontissa tasainen vaalea kaupunkiutu. Autot ja kävelijät vain pieninä pisteinä kaukana. Kulma: vaakakuva, katse pohjoiseen-koilliseen (suunta noin 5-20 astetta, näkökenttä noin 60 astetta), kamera kaiteen takana silmänkorkeudelta, hieman alaspäin. Valo: kirkas mutta pehmeä aamupäivän valo, vaimeat värit, ei HDR:ää. Ei saa näkyä: ihmisiä lähellä tai tunnistettavia kasvoja, ikkunalasin heijastuksia tai teräsritilää (vain ohut metallikehys alareunassa on sallittu), tekstiä, kylttejä, mainoksia, logoja, lippuja, PGE Narodowy -stadionia tai muita moderneja stadioneja, pilvenpiirtäjiä (Varso Tower, Warsaw Spire, Złota 44) erottuvina, Kulttuuri- ja tiedepalatsia itseään (se jää kameran taakse), Zygmuntin kolonnia tai muistomerkkejä erottuvina, sotamuistomerkkejä, ilotulitusta, drooneja. Fotorealistinen havainnekuva, vaimeat värit, 1536 x 1024.\n\nThis is present-day life, not a historical reconstruction. Use restrained realistic natural light and subtle natural colour, genuine irregular surfaces and vegetation, no CGI/render/painting/HDR look. Do not invent extra landmarks or recognizable buildings outside the requested view; prohibited background features are equally prohibited. No legible text or numbers anywhere, no vehicle emblems/branding/flags, advertisements or identifiable close faces. Keep the whole requested scene in one coherent physical camera frame. Do not write the caption inside the image. No additional variants or edits.\n\nFraming priority: elevated eye-level panorama from the114m Palace terrace facing NORTH-NORTHEAST5–20 degrees with60-degree field, slight downward view. Only a thin pale stone/metal lower-edge rail, no mesh/large terrace/window/glass. Broad ordinary pale/ochre low roofscape dominates, distant small red-roof Old Town and long low Royal Castle with green clock roofs CENTER-RIGHT about2km away, green Vistula RIGHT beyond. Palace on which camera stands is entirely BEHIND camera. Absolutely no stadium, distinct skyscraper, Varso/Warsaw Spire/Zlota44, Sigismund column or war monument, flags/signs/text/nearby people. Castle is small contextual architecture, not a closeup landmark collage.\n",
+      "sourceReadReceiptPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/source-read-receipt.json",
+      "references": [
+        {
+          "kind": "exact-production-brief",
+          "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/sources/fable-codex-saapumisintro-uudet-6-8-loput-2-20261013.md",
+          "gitPath": "posti/fable-codex-saapumisintro-uudet-6-8-loput-2-20261013.md",
+          "commit": "dbdaff9a39fa0e5052f176c890c85836e1a69a1f",
+          "blob": "2e5adc4cb04a23fcb4cd8fdd75426ac78afdcc9d",
+          "sourceByteSpan": [
+            72129,
+            74351
+          ],
+          "fullRequirementSHA256": "5e1732a7600815e178ac24d0de2e1ff7112215a5e4fa73652c0063e24fc55940",
+          "use": "Text scene constraint, not a copyright photograph or image passed to generator."
+        },
+        {
+          "kind": "own-architectural-geographic-knowledge",
+          "use": "New image from scratch; no external visual reference supplied, no Google data used.",
+          "independentSurveyClaim": false
+        }
+      ],
+      "qaPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/warsaw/qa-6.json",
+      "producerPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/warsaw/producer-6.json",
+      "producerQAAccepted": true,
+      "producerQAVerdict": "accepted",
+      "actualGenerationCalls": 1,
+      "url": "https://media.matkakirja.app/julisteet/saapumisintro/warsaw/20261013-uudet-6-8/warsaw-6-nakoala-intro-v1.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/warsaw/20261013-uudet-6-8/warsaw-6-nakoala-intro-v1.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "QA": {
+        "slot": 6,
+        "taskNumber": 211,
+        "assetID": "warsaw-6-nakoala-intro-v1",
+        "targetJsonPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/warsaw/asset-6.json",
+        "nativeSHA256": "4d5f12e0cc2fe7f9349d83f80c1b2784464bc5a483da9b4d6bd33b1ce1097885",
+        "finalSHA256": "5c2b085beb641e6c11387d9be9f9a29ca358c61d412bd5c7e6469aaec6378307",
+        "verdict": "accepted",
+        "reason": "Matala kattomeri, pieni vanhakaupunki ja kuninkaanlinna keskioikealla sekä Veikseli oikealla näkyvät. Ei erottuvaa stadionia, Zygmuntin pylvästä, Kulttuuripalatsia tai korkeaa liikekeskustaa.",
+        "reviewer": "/root",
+        "reviewedAt": "2026-10-13T18:10:08.748084+00:00",
+        "nativeViewedInFull": true,
+        "assignedSourceCardReadInFull": true,
+        "nativePixelsEqualFinalVerified": true,
+        "technicalPassed": true,
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "published": false
+      },
+      "R2Proof": {
+        "slot": 6,
+        "r2Key": "julisteet/saapumisintro/warsaw/20261013-uudet-6-8/warsaw-6-nakoala-intro-v1.png",
+        "url": "https://media.matkakirja.app/julisteet/saapumisintro/warsaw/20261013-uudet-6-8/warsaw-6-nakoala-intro-v1.png",
+        "sha256": "5c2b085beb641e6c11387d9be9f9a29ca358c61d412bd5c7e6469aaec6378307",
+        "nativeSHA256": "4d5f12e0cc2fe7f9349d83f80c1b2784464bc5a483da9b4d6bd33b1ce1097885",
+        "bytes": 2853981,
+        "readbacks": [
+          {
+            "http": 200,
+            "byteExact": true,
+            "sha256": "5c2b085beb641e6c11387d9be9f9a29ca358c61d412bd5c7e6469aaec6378307",
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "cacheBusted": false
+          },
+          {
+            "http": 200,
+            "byteExact": true,
+            "sha256": "5c2b085beb641e6c11387d9be9f9a29ca358c61d412bd5c7e6469aaec6378307",
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "cacheBusted": true
+          }
+        ],
+        "byteExactReadback": true,
+        "verifiedAt": "2026-10-13T18:10:37.260292+00:00"
+      },
+      "FableReceiptVerified": false
+    },
+    {
+      "taskNumber": 212,
+      "mediaSlug": "warsaw",
+      "slot": 8,
+      "filename": "warsaw-8-kulkuneuvo-intro-v1.png",
+      "title": "kaupungin oma kulkuneuvo liikkeessä — Varsovan raitiovaunu keskustan kaupunkikadulla päivällä.",
+      "fullDeliveryRequirement": "**8 / kaupungin oma kulkuneuvo liikkeessä — Varsovan raitiovaunu keskustan kaupunkikadulla päivällä.** Tiedosto `warsaw-8-kulkuneuvo-intro-v1.png`.\nMitä kuvataan: nykyaikainen matalalattiainen nivelraitiovaunu (useampiosainen, yleisilmeeltään tavallinen eurooppalainen kaupunkiraitiovaunu) liikkeessä leveällä, puiden reunustamalla kaupunkikadulla Varsovan keskustassa päivällä. Vaunun runko on yksivärinen vaalea harmaa-valkoinen, ei raitoja, ei brändimaalauksia, ei mainoksia, ei logoja; vaunun otsassa ja kyljessä ei numeroita, reittinäyttöjä, kylttejä eikä mitään tekstiä (otsanäytöt sammutettu, ikkunoissa ei tarroja). Raiteet kulkevat kadun pinnassa omalla kaistallaan, ajojohdot vaunun yläpuolella; kadun molemmilla puolilla 1900-luvun alun ja sodanjälkeisiä vaaleita ja okranvärisiä kolmi- ja viisikerroksisia kerrostaloja sekä lehtipuita syksyn väreissä. Ihmiset vain pieninä (muutama kävelijä jalkakäytävällä kaukana tai selin, ei tunnistettavia kasvoja). Muu liikenne vain kaukana ja merkittömänä. Kulma: vaakakuva, kameran korkeus noin 1,5-2 m, kolmen neljänneksen kuva edestä vasemmalta, vaunu kulkee kuvassa oikealle ja hieman kohti kameraa, kevyt liikesumennus pyörissä ja taustassa, vaunu itse terävä; vaunu täyttää noin kolmanneksen kuvan leveydestä. Valo: pehmeä iltapäivän valo, vaimeat värit, ei HDR:ää. Ei saa näkyä: tekstiä, katukylttejä, pysäkkikylttejä, mainoksia, logoja, numeroita, lippuja, Kulttuuri- ja tiedepalatsia, pilvenpiirtäjiä, stadioneja, siltoja, tunnistettavia yksittäisiä maamerkkirakennuksia, erottuvia kirkkoja, patsaita tai muistomerkkejä, sotilaita, auton rekisterikilpiä. Fotorealistinen havainnekuva, vaimeat värit, 1536 x 1024.\nKuvateksti-ehdotus (loppuu sanaan Havainnekuva.): Varsovan raitiovaunu keskustan kaupunkikadulla päivällä. Havainnekuva.\n\n",
+      "sourceVersions": [
+        {
+          "path": "posti/fable-codex-saapumisintro-uudet-6-8-loput-2-20261013.md",
+          "commit": "dbdaff9a39fa0e5052f176c890c85836e1a69a1f",
+          "blob": "2e5adc4cb04a23fcb4cd8fdd75426ac78afdcc9d",
+          "readInFull": true
+        }
+      ],
+      "ownerThreadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+      "hostId": "local",
+      "generationCap": 1,
+      "status": "QA-R2-delivered-for-PT-review",
+      "productionStarted": false,
+      "delivered": true,
+      "city": "VARSOVA",
+      "gameID": "varsova",
+      "part": 2,
+      "sourceBlob": "2e5adc4cb04a23fcb4cd8fdd75426ac78afdcc9d",
+      "sourceCommit": "dbdaff9a39fa0e5052f176c890c85836e1a69a1f",
+      "sourcePath": "posti/fable-codex-saapumisintro-uudet-6-8-loput-2-20261013.md",
+      "sourceNasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/sources/fable-codex-saapumisintro-uudet-6-8-loput-2-20261013.md",
+      "sourceCharacterSpan": [
+        71635,
+        73431
+      ],
+      "sourceByteSpan": [
+        74351,
+        76225
+      ],
+      "fullDeliveryRequirementSHA256": "15ee54f86a53d5bc4c2bd616ec8f77e63e4d59c8cb0dd3bae1ed2e5cc588c5c9",
+      "fullDirective": "nykyaikainen matalalattiainen nivelraitiovaunu (useampiosainen, yleisilmeeltään tavallinen eurooppalainen kaupunkiraitiovaunu) liikkeessä leveällä, puiden reunustamalla kaupunkikadulla Varsovan keskustassa päivällä. Vaunun runko on yksivärinen vaalea harmaa-valkoinen, ei raitoja, ei brändimaalauksia, ei mainoksia, ei logoja; vaunun otsassa ja kyljessä ei numeroita, reittinäyttöjä, kylttejä eikä mitään tekstiä (otsanäytöt sammutettu, ikkunoissa ei tarroja). Raiteet kulkevat kadun pinnassa omalla kaistallaan, ajojohdot vaunun yläpuolella; kadun molemmilla puolilla 1900-luvun alun ja sodanjälkeisiä vaaleita ja okranvärisiä kolmi- ja viisikerroksisia kerrostaloja sekä lehtipuita syksyn väreissä. Ihmiset vain pieninä (muutama kävelijä jalkakäytävällä kaukana tai selin, ei tunnistettavia kasvoja). Muu liikenne vain kaukana ja merkittömänä. Kulma: vaakakuva, kameran korkeus noin 1,5-2 m, kolmen neljänneksen kuva edestä vasemmalta, vaunu kulkee kuvassa oikealle ja hieman kohti kameraa, kevyt liikesumennus pyörissä ja taustassa, vaunu itse terävä; vaunu täyttää noin kolmanneksen kuvan leveydestä. Valo: pehmeä iltapäivän valo, vaimeat värit, ei HDR:ää. Ei saa näkyä: tekstiä, katukylttejä, pysäkkikylttejä, mainoksia, logoja, numeroita, lippuja, Kulttuuri- ja tiedepalatsia, pilvenpiirtäjiä, stadioneja, siltoja, tunnistettavia yksittäisiä maamerkkirakennuksia, erottuvia kirkkoja, patsaita tai muistomerkkejä, sotilaita, auton rekisterikilpiä. Fotorealistinen havainnekuva, vaimeat värit, 1536 x 1024.",
+      "caption": "Varsovan raitiovaunu keskustan kaupunkikadulla päivällä. Havainnekuva.",
+      "sourceReadInFullVerified": true,
+      "mappingBlockExactSourceMatch": true,
+      "r2Prefix": "julisteet/saapumisintro/warsaw/20261013-uudet-6-8/",
+      "deliveryManifestPath": "posti/kuvatoimitus-saapumisintro-warsaw-uudet-6-8-20261013.json",
+      "partDeliveryReportPath": "posti/codex-fable-saapumisintro-uudet-6-8-loput-2-20261013.md",
+      "generationCallsRecorded": 0,
+      "qaAcceptedVerified": true,
+      "r2BytesVerified": true,
+      "mailboxDeliveryVerified": false,
+      "ownerAcceptanceVerified": false,
+      "acceptanceRoute": "PT acts for owner; source authorizes direct delivery. Actual PT acceptance remains evidence-dependent.",
+      "gameIntegrated": false,
+      "published": false,
+      "r2Key": "julisteet/saapumisintro/warsaw/20261013-uudet-6-8/warsaw-8-kulkuneuvo-intro-v1.png",
+      "historical": false,
+      "id": "warsaw-8-kulkuneuvo-intro-v1",
+      "sourceReadInFull": true,
+      "cityName": "VARSOVA",
+      "gameCityId": "varsova",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/warsaw/native-8.png",
+      "nativeSHA256": "74425de4eef52d38444fbea8240033af7b64e65631bf14a33d58d0f094c088a5",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/warsaw/warsaw-8-kulkuneuvo-intro-v1.png",
+      "workspacePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/eurooppa-introt-uudet68-loput-20261013/warsaw/warsaw-8-kulkuneuvo-intro-v1.png",
+      "sha256": "5aa6f0eab66f2b9f2aec2a1f0e6c59b03f1af5628da73d3812cd88a5d49d6fdf",
+      "width": 1536,
+      "height": 1024,
+      "opaque": true,
+      "sRGB": true,
+      "neutralGrayscale": false,
+      "pixelIdentityAfterMetadataExport": true,
+      "pixelIdentityToNative": true,
+      "historicalGrayscaleEncodingNormalized": false,
+      "exportProcessing": "Metadata/sRGB only; pixels unchanged",
+      "generationPrompt": "Create exactly one original, contemporary COLOR photographic-looking illustrative image. Output a single landscape PNG at exactly 1536x1024, opaque RGB, natural camera perspective. No collage, borders or text overlays. The scene must follow ALL of the following exact Finnish scene instructions, including direction, geometry, exclusions, scale, vehicle movement and materials:\n\nnykyaikainen matalalattiainen nivelraitiovaunu (useampiosainen, yleisilmeeltään tavallinen eurooppalainen kaupunkiraitiovaunu) liikkeessä leveällä, puiden reunustamalla kaupunkikadulla Varsovan keskustassa päivällä. Vaunun runko on yksivärinen vaalea harmaa-valkoinen, ei raitoja, ei brändimaalauksia, ei mainoksia, ei logoja; vaunun otsassa ja kyljessä ei numeroita, reittinäyttöjä, kylttejä eikä mitään tekstiä (otsanäytöt sammutettu, ikkunoissa ei tarroja). Raiteet kulkevat kadun pinnassa omalla kaistallaan, ajojohdot vaunun yläpuolella; kadun molemmilla puolilla 1900-luvun alun ja sodanjälkeisiä vaaleita ja okranvärisiä kolmi- ja viisikerroksisia kerrostaloja sekä lehtipuita syksyn väreissä. Ihmiset vain pieninä (muutama kävelijä jalkakäytävällä kaukana tai selin, ei tunnistettavia kasvoja). Muu liikenne vain kaukana ja merkittömänä. Kulma: vaakakuva, kameran korkeus noin 1,5-2 m, kolmen neljänneksen kuva edestä vasemmalta, vaunu kulkee kuvassa oikealle ja hieman kohti kameraa, kevyt liikesumennus pyörissä ja taustassa, vaunu itse terävä; vaunu täyttää noin kolmanneksen kuvan leveydestä. Valo: pehmeä iltapäivän valo, vaimeat värit, ei HDR:ää. Ei saa näkyä: tekstiä, katukylttejä, pysäkkikylttejä, mainoksia, logoja, numeroita, lippuja, Kulttuuri- ja tiedepalatsia, pilvenpiirtäjiä, stadioneja, siltoja, tunnistettavia yksittäisiä maamerkkirakennuksia, erottuvia kirkkoja, patsaita tai muistomerkkejä, sotilaita, auton rekisterikilpiä. Fotorealistinen havainnekuva, vaimeat värit, 1536 x 1024.\n\nThis is present-day life, not a historical reconstruction. Use restrained realistic natural light and subtle natural colour, genuine irregular surfaces and vegetation, no CGI/render/painting/HDR look. Do not invent extra landmarks or recognizable buildings outside the requested view; prohibited background features are equally prohibited. No legible text or numbers anywhere, no vehicle emblems/branding/flags, advertisements or identifiable close faces. Keep the whole requested scene in one coherent physical camera frame. Do not write the caption inside the image. No additional variants or edits.\n\nPriority: an environmental street photograph from a fair distance, not a close vehicle portrait. Whole plain light-grey multi-section low-floor tram occupies about ONE THIRD of image width, broad street and3–5-storey anonymous pale/ochre blocks plus autumn trees dominate surrounding frame. Leading nose/headlights at RIGHT end, rear trailing LEFT; moving RIGHT and toward camera. Camera1.5–2m eye height from front-left three-quarter, natural slight motion blur. Every destination display, storefront and wall/pole has NO signage whatsoever, no advertising board, letter, number, badge, flag or plate. Few tiny pedestrians far away, no cropped foreground person or near face. No recognizable palace/church/monument/high-rise/stadium/bridge.\n",
+      "sourceReadReceiptPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/source-read-receipt.json",
+      "references": [
+        {
+          "kind": "exact-production-brief",
+          "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/sources/fable-codex-saapumisintro-uudet-6-8-loput-2-20261013.md",
+          "gitPath": "posti/fable-codex-saapumisintro-uudet-6-8-loput-2-20261013.md",
+          "commit": "dbdaff9a39fa0e5052f176c890c85836e1a69a1f",
+          "blob": "2e5adc4cb04a23fcb4cd8fdd75426ac78afdcc9d",
+          "sourceByteSpan": [
+            74351,
+            76225
+          ],
+          "fullRequirementSHA256": "15ee54f86a53d5bc4c2bd616ec8f77e63e4d59c8cb0dd3bae1ed2e5cc588c5c9",
+          "use": "Text scene constraint, not a copyright photograph or image passed to generator."
+        },
+        {
+          "kind": "own-architectural-geographic-knowledge",
+          "use": "New image from scratch; no external visual reference supplied, no Google data used.",
+          "independentSurveyClaim": false
+        }
+      ],
+      "qaPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/warsaw/qa-8.json",
+      "producerPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/warsaw/producer-8.json",
+      "producerQAAccepted": true,
+      "producerQAVerdict": "accepted",
+      "actualGenerationCalls": 1,
+      "url": "https://media.matkakirja.app/julisteet/saapumisintro/warsaw/20261013-uudet-6-8/warsaw-8-kulkuneuvo-intro-v1.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/warsaw/20261013-uudet-6-8/warsaw-8-kulkuneuvo-intro-v1.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "QA": {
+        "slot": 8,
+        "taskNumber": 212,
+        "assetID": "warsaw-8-kulkuneuvo-intro-v1",
+        "targetJsonPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/warsaw/asset-8.json",
+        "nativeSHA256": "74425de4eef52d38444fbea8240033af7b64e65631bf14a33d58d0f094c088a5",
+        "finalSHA256": "5aa6f0eab66f2b9f2aec2a1f0e6c59b03f1af5628da73d3812cd88a5d49d6fdf",
+        "verdict": "accepted",
+        "reason": "Oikealle suuntautuva merkitön nivelvaunu, syksyiset puut ja matalat kerrostalot näkyvät. Ei luettavaa tekstiä, tunnettuja maamerkkejä tai tunnistettavia lähikasvoja. Vaunu on noin49% leveydestä; hyväksyn sommittelun rajatapauksena, jossa leveä katu ja kokonainen ympäristö säilyvät. Likimääräisen kolmanneksen poikkeama ilmoitetaan PT:lle.",
+        "reviewer": "/root",
+        "reviewedAt": "2026-10-13T18:10:08.748084+00:00",
+        "nativeViewedInFull": true,
+        "assignedSourceCardReadInFull": true,
+        "nativePixelsEqualFinalVerified": true,
+        "technicalPassed": true,
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "published": false
+      },
+      "R2Proof": {
+        "slot": 8,
+        "r2Key": "julisteet/saapumisintro/warsaw/20261013-uudet-6-8/warsaw-8-kulkuneuvo-intro-v1.png",
+        "url": "https://media.matkakirja.app/julisteet/saapumisintro/warsaw/20261013-uudet-6-8/warsaw-8-kulkuneuvo-intro-v1.png",
+        "sha256": "5aa6f0eab66f2b9f2aec2a1f0e6c59b03f1af5628da73d3812cd88a5d49d6fdf",
+        "nativeSHA256": "74425de4eef52d38444fbea8240033af7b64e65631bf14a33d58d0f094c088a5",
+        "bytes": 2454730,
+        "readbacks": [
+          {
+            "http": 200,
+            "byteExact": true,
+            "sha256": "5aa6f0eab66f2b9f2aec2a1f0e6c59b03f1af5628da73d3812cd88a5d49d6fdf",
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "cacheBusted": false
+          },
+          {
+            "http": 200,
+            "byteExact": true,
+            "sha256": "5aa6f0eab66f2b9f2aec2a1f0e6c59b03f1af5628da73d3812cd88a5d49d6fdf",
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "cacheBusted": true
+          }
+        ],
+        "byteExactReadback": true,
+        "verifiedAt": "2026-10-13T18:10:39.978891+00:00"
+      },
+      "FableReceiptVerified": false
+    }
+  ],
+  "omittedItems": [],
+  "actualCalls": 2,
+  "maximumGenerationCalls": 2,
+  "allRequestedItemsHandled": true,
+  "allRequestedImagesDelivered": true,
+  "productionCompleteWithinSourceLimit": true,
+  "directMailboxDeliveryAuthorized": true,
+  "acceptanceRoute": "Päätoimittaja reviews on the owner authority in the exact source. This authorization is not yet an actual acceptance receipt.",
+  "ownerAcceptanceVerified": false,
+  "FableReceiptVerified": false,
+  "gameIntegrated": false,
+  "published": false,
+  "oldFiveApprovedPilotImagesPreserved": true,
+  "oldCelebrationAnd1873TopicsRemainWithdrawn": true,
+  "existingHeroSlotsPreserved": [
+    1,
+    2,
+    3
+  ],
+  "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+  "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+  "newTopics": {
+    "6": "daytime-city-panorama",
+    "8": "local-transport-in-motion"
+  }
+}

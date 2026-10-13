@@ -1,6 +1,6 @@
 # Euroopan uudet saapumisintroaiheet — osa 2/2, 13.10.2026
 
-10 QA/R2-varmennettua kuvaa toimitettu, 4 perusteltua lopullista poisjättöä. Käsitelty 14/47 tämän osan nimetyistä kuvista; 14 generointikutsua. Tilaus on kesken, kun kaikki nimetyt kohteet eivät vielä ole käsitelty.
+12 QA/R2-varmennettua kuvaa toimitettu, 4 perusteltua lopullista poisjättöä. Käsitelty 16/47 tämän osan nimetyistä kuvista; 16 generointikutsua. Tilaus on kesken, kun kaikki nimetyt kohteet eivät vielä ole käsitelty.
 
 Koko laajennus käsittää 95 nimettyä kuvaa (#133–227): osa 1 sisältää 48 ja osa 2 47 kuvaa. Aiempi 88+1 arvio ei korvaa lähteiden nimettyä inventaariota. Yksi uusi sisäänrakennettu generointi per kuva; ei uusintoja, vertailuottoja, inpaintingia tai rajauksia.
 
@@ -52,6 +52,13 @@ Manifesti: `posti/kuvatoimitus-saapumisintro-sofia-uudet-6-8-20261013.json`. Toi
 
 - #209, slot 6: Sofia Kopitoton näköalapaikalta Vitosha-vuorelta pohjoiseen päivällä: koko kaupunki laaksossa, Aleksanteri Nevskin kupoli kaukana. Havainnekuva.
 - #210, slot 8: Sofian raitiovaunu keskustan kadulla Graf Ignatievin kadun tapaan päivällä. Havainnekuva.
+
+## VARSOVA
+
+Manifesti: `posti/kuvatoimitus-saapumisintro-warsaw-uudet-6-8-20261013.json`. Toimitettu 2/2; kutsuja 2.
+
+- #211, slot 6: Varsova Kulttuuri- ja tiedepalatsin 30. kerroksen terassilta pohjoiseen päivällä: Vanhankaupungin katot ja Veikseli kaukana. Havainnekuva.
+- #212, slot 8: Varsovan raitiovaunu keskustan kaupunkikadulla päivällä. Havainnekuva.
 
 Kuvat toimitetaan suoraan lähteen mukaisesti Päätoimittajan arvioitaviksi omistajan valtuutuksella. Todellista PT/omistajahyväksyntää, Fable-vastaanottokuittausta, runtime-kytkentää tai pelijulkaisua ei väitetä varmennetuiksi. Jokaisen toimitetun kuvan natiivi on rootin tarkastama, ja R2 on luettu takaisin kahdesti (kanoninen ja välimuistin ohittava URL), tavut, PNG-MIME ja CORS varmennettu. PNG 1536×1024, sRGB, läpinäkymätön; vain ICC/metadata lisätty, pikselit säilytetty. Promptit, viitteet sekä natiivi- ja vienti-SHA ovat manifesteissa.
 
