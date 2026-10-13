@@ -113,7 +113,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/dodoma/illustration-qa-extra.json",
-        "fileSHA256": "a336221d37eddc427ea65a6024f6c7653b6707059cd8f0e3c093017a11bdec60",
+        "fileSHA256": "623b91d6ac29539dbfc1f366e8b3c20285409e05215e9d75f40e04ce186d4f75",
         "item": {
           "slot": "K2",
           "targetJsonPath": "$.kaupunkilehti[0].nostot[1]",
@@ -154,11 +154,11 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/dodoma/qa.json",
-            "sha256": "f7c4d6b861e51944ef27e2522655d0469721e9df16adc8b83e4b82cb9cdafc3f"
+            "sha256": "98498026820ec5514cade3942ab28697e0696ff68ffc7b9ff9c9b9959b045af9"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/dodoma/illustration-qa-extra.json",
-            "sha256": "a336221d37eddc427ea65a6024f6c7653b6707059cd8f0e3c093017a11bdec60"
+            "sha256": "623b91d6ac29539dbfc1f366e8b3c20285409e05215e9d75f40e04ce186d4f75"
           }
         ]
       },
@@ -353,7 +353,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/dodoma/illustration-qa-extra.json",
-        "fileSHA256": "a336221d37eddc427ea65a6024f6c7653b6707059cd8f0e3c093017a11bdec60",
+        "fileSHA256": "623b91d6ac29539dbfc1f366e8b3c20285409e05215e9d75f40e04ce186d4f75",
         "item": {
           "slot": "L1",
           "targetJsonPath": "$.kaupunkilehti[1].nostot[0]",
@@ -394,11 +394,11 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/dodoma/qa.json",
-            "sha256": "f7c4d6b861e51944ef27e2522655d0469721e9df16adc8b83e4b82cb9cdafc3f"
+            "sha256": "98498026820ec5514cade3942ab28697e0696ff68ffc7b9ff9c9b9959b045af9"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/dodoma/illustration-qa-extra.json",
-            "sha256": "a336221d37eddc427ea65a6024f6c7653b6707059cd8f0e3c093017a11bdec60"
+            "sha256": "623b91d6ac29539dbfc1f366e8b3c20285409e05215e9d75f40e04ce186d4f75"
           }
         ]
       },
@@ -484,6 +484,1450 @@
       "sourceContentAfterSHA256": "ac8585b55a7571f1718a0bb244e0f57781ef0863438f537f3ba91baf325b7ffa",
       "targetAfterSHA256": "8910ceb4f61f00e7137253200059d3f7d5a9030c0166016aef5533bfc44bc482",
       "contextAfterSHA256": "8910ceb4f61f00e7137253200059d3f7d5a9030c0166016aef5533bfc44bc482"
+    },
+    {
+      "era": "e07",
+      "city": "dodoma",
+      "slot": "O3",
+      "type": "illustration",
+      "assetID": "e07-dodoma-O3-v1-20261012",
+      "galleryImageID": "e07-dodoma-O3-v1-20261012",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[2].kuva",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "matkailijalle",
+        "artikkeli",
+        "jaksot",
+        2,
+        "kuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/dodoma/e07-dodoma-O3-v1-20261012-be64d5d4d49f.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Rypäleenkasvatuksen havainnekuva; ei nimetyn lajikkeen tai tilan valokuva.",
+        "lyhyt": "Rypäleenkasvatuksen havainnekuva; ei nimetyn lajikkeen tai tilan valokuva."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/dodoma/e07-dodoma-O3-v1-20261012-be64d5d4d49f.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Rypäleenkasvatuksen havainnekuva; ei nimetyn lajikkeen tai tilan valokuva.",
+        "lyhyt": "Rypäleenkasvatuksen havainnekuva; ei nimetyn lajikkeen tai tilan valokuva."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "be64d5d4d49fecc37ff236bdd1b73ff292cdc5876aa4a7048e10d3b5135be51f",
+      "exportSHA256": "fd1987be78b9fbe2645a0a34d3be06db7198af23089e8ed46bd4b81ac43da3e4",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/dodoma/e07-dodoma-O3-v1-20261012-be64d5d4d49f.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/dodoma/e07-dodoma-O3-v1-20261012-be64d5d4d49f.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/dodoma/e07-dodoma-O3-v1-20261012-be64d5d4d49f.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/dodoma/sisalto.json",
+      "sourceContentSHA256": "ac8585b55a7571f1718a0bb244e0f57781ef0863438f537f3ba91baf325b7ffa",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "14f5a799f47c6ba32744b226bdfd16ce63e0752c80b20221b1ec0f39133ccb07",
+        "subjectTitle": "Seudun viiniköynnökset",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": [
+            "New image of ordinary functional material, natural plant or food; no identified person, artwork, branded design, building or collection object reproduced."
+          ],
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/dodoma/assets/e07-dodoma-O3-v1-20261012/kuva.png",
+            "nativeSha256Verified": "be64d5d4d49fecc37ff236bdd1b73ff292cdc5876aa4a7048e10d3b5135be51f",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "visualInspection": "Personally viewed native NAS PNG with view_image: Yksi erivärisistä kypsyvistä rypäleistä muodostuva terttu ja viiniköynnöksen lehti. Vaihtelevat kuoripinnat ja varret luonnollisia, ei merkintöjä.",
+            "captionFi": "Rypäleenkasvatuksen havainnekuva; ei nimetyn lajikkeen tai tilan valokuva.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/dodoma/sisalto.json",
+            "contentSha256": "ac8585b55a7571f1718a0bb244e0f57781ef0863438f537f3ba91baf325b7ffa",
+            "targetCurrentlyPresent": true,
+            "targetText": "Dodoman ympäristön rypäleenkasvatus on oma alueellinen aiheensa. Viljelmä ja viininvalmistuspaikka eivät välttämättä ole sama kohde, ja tilat voivat sijaita kaupungin ulkopuolella. Mahdollinen käynti järjestetään paikan kanssa; lajikkeen nimi ei ole vierailuohjelma.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/dodoma/faktapohja.md",
+            "factSheetSha256": "06a6cc9c4b0469dba2587d554a01324624c413b36642ee31c3f96c6ba683f814",
+            "topicEvidence": "O3 kertoo rypäleenkasvatuksesta yleisesti.",
+            "sourceEvidence": [
+              {
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/dodoma/sisalto.json",
+                "contentSha256": "7be5b0b461ee1f1ea88fd0ac8243a48d5b45015684a52e9c963f5f84debfdc82",
+                "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[2].kuva",
+                "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/dodoma/faktapohja.md",
+                "evidenceMode": "Directly documented textual material or utility subject, generic representation only",
+                "targetTextAtIssue": "Dodoman ympäristön rypäleenkasvatus on oma alueellinen aiheensa. Viljelmä ja viininvalmistuspaikka eivät välttämättä ole sama kohde, ja tilat voivat sijaita kaupungin ulkopuolella. Mahdollinen käynti järjestetään paikan kanssa; lajikkeen nimi ei ole vierailuohjelma."
+              }
+            ],
+            "rightsAssessment": "Generalized subject; inspected faces, added text/logo/watermark/frame, named modern artwork and invented city panorama. No adverse observation except those explicitly in verdict.",
+            "scope": "Independent native-image QA only; delivery/R2/export/publication unverified."
+          },
+          "qaReason": "Rypäleterttu sopii seudun viljelyaiheeseen. Selite ei nimeä todellista tilaa tai lajiketta."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Rypäleenkasvatuksen havainnekuva; ei nimetyn lajikkeen tai tilan valokuva.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/dodoma/illustration-qa-extra.json",
+        "fileSHA256": "623b91d6ac29539dbfc1f366e8b3c20285409e05215e9d75f40e04ce186d4f75",
+        "item": {
+          "slot": "O3",
+          "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[2].kuva",
+          "assetID": "e07-dodoma-O3-v1-20261012",
+          "sha256": "be64d5d4d49fecc37ff236bdd1b73ff292cdc5876aa4a7048e10d3b5135be51f",
+          "verdict": "accepted",
+          "reason": "Rypäleterttu sopii seudun viljelyaiheeseen. Selite ei nimeä todellista tilaa tai lajiketta.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/dodoma/assets/e07-dodoma-O3-v1-20261012/kuva.png",
+            "nativeSha256Verified": "be64d5d4d49fecc37ff236bdd1b73ff292cdc5876aa4a7048e10d3b5135be51f",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "visualInspection": "Personally viewed native NAS PNG with view_image: Yksi erivärisistä kypsyvistä rypäleistä muodostuva terttu ja viiniköynnöksen lehti. Vaihtelevat kuoripinnat ja varret luonnollisia, ei merkintöjä.",
+            "captionFi": "Rypäleenkasvatuksen havainnekuva; ei nimetyn lajikkeen tai tilan valokuva.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/dodoma/sisalto.json",
+            "contentSha256": "ac8585b55a7571f1718a0bb244e0f57781ef0863438f537f3ba91baf325b7ffa",
+            "targetCurrentlyPresent": true,
+            "targetText": "Dodoman ympäristön rypäleenkasvatus on oma alueellinen aiheensa. Viljelmä ja viininvalmistuspaikka eivät välttämättä ole sama kohde, ja tilat voivat sijaita kaupungin ulkopuolella. Mahdollinen käynti järjestetään paikan kanssa; lajikkeen nimi ei ole vierailuohjelma.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/dodoma/faktapohja.md",
+            "factSheetSha256": "06a6cc9c4b0469dba2587d554a01324624c413b36642ee31c3f96c6ba683f814",
+            "topicEvidence": "O3 kertoo rypäleenkasvatuksesta yleisesti.",
+            "sourceEvidence": [
+              {
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/dodoma/sisalto.json",
+                "contentSha256": "7be5b0b461ee1f1ea88fd0ac8243a48d5b45015684a52e9c963f5f84debfdc82",
+                "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[2].kuva",
+                "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/dodoma/faktapohja.md",
+                "evidenceMode": "Directly documented textual material or utility subject, generic representation only",
+                "targetTextAtIssue": "Dodoman ympäristön rypäleenkasvatus on oma alueellinen aiheensa. Viljelmä ja viininvalmistuspaikka eivät välttämättä ole sama kohde, ja tilat voivat sijaita kaupungin ulkopuolella. Mahdollinen käynti järjestetään paikan kanssa; lajikkeen nimi ei ole vierailuohjelma."
+              }
+            ],
+            "rightsAssessment": "Generalized subject; inspected faces, added text/logo/watermark/frame, named modern artwork and invented city panorama. No adverse observation except those explicitly in verdict.",
+            "scope": "Independent native-image QA only; delivery/R2/export/publication unverified."
+          },
+          "reviewedAt": "2026-10-13T06:11:06.654214+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/dodoma/qa.json",
+            "sha256": "98498026820ec5514cade3942ab28697e0696ff68ffc7b9ff9c9b9959b045af9"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/dodoma/illustration-qa-extra.json",
+            "sha256": "623b91d6ac29539dbfc1f366e8b3c20285409e05215e9d75f40e04ce186d4f75"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/dodoma/e07-dodoma-O3-v1-20261012-be64d5d4d49f.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/dodoma/e07-dodoma-O3-v1-20261012-be64d5d4d49f.png?t=fd1987be78b9fbe2",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/dodoma/e07-dodoma-O3-v1-20261012-be64d5d4d49f.png",
+        "sha256": "fd1987be78b9fbe2645a0a34d3be06db7198af23089e8ed46bd4b81ac43da3e4",
+        "bytes": 2323440,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e07-dodoma-O3-v1-20261012",
+        "nativeSHA256": "be64d5d4d49fecc37ff236bdd1b73ff292cdc5876aa4a7048e10d3b5135be51f",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/dodoma/e07-dodoma-O3-v1-20261012-be64d5d4d49f.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e07",
+        "city": "dodoma",
+        "slot": "O3",
+        "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[2].kuva",
+        "verifiedAt": "2026-10-13T06:11:39.971949+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/dodoma/e07-dodoma-O3-v1-20261012-be64d5d4d49f.png",
+        "sha256": "fd1987be78b9fbe2645a0a34d3be06db7198af23089e8ed46bd4b81ac43da3e4",
+        "bytes": 2323440,
+        "SHAReadAt": "2026-10-13T06:11:33.538792+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "be64d5d4d49fecc37ff236bdd1b73ff292cdc5876aa4a7048e10d3b5135be51f",
+        "rgbPixelSHA256": "688bdab22763f60df95a231a031356d866f12d2400f3e7070e531ea26d1471f8",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "ac8585b55a7571f1718a0bb244e0f57781ef0863438f537f3ba91baf325b7ffa",
+      "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+      "contextAfterSHA256": "14f5a799f47c6ba32744b226bdfd16ce63e0752c80b20221b1ec0f39133ccb07"
+    },
+    {
+      "era": "e07",
+      "city": "dodoma",
+      "slot": "O4",
+      "type": "illustration",
+      "assetID": "e07-dodoma-O4-v1-20261012",
+      "galleryImageID": "e07-dodoma-O4-v1-20261012",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "matkailijalle",
+        "artikkeli",
+        "jaksot",
+        3,
+        "kuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/dodoma/e07-dodoma-O4-v1-20261012-1d549bca190f.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Kairausnäytteiden havainnekuva; ei GST:n museon tai varaston todellinen aineisto.",
+        "lyhyt": "Kairausnäytteiden havainnekuva; ei GST:n museon tai varaston todellinen aineisto."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/dodoma/e07-dodoma-O4-v1-20261012-1d549bca190f.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Kairausnäytteiden havainnekuva; ei GST:n museon tai varaston todellinen aineisto.",
+        "lyhyt": "Kairausnäytteiden havainnekuva; ei GST:n museon tai varaston todellinen aineisto."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "1d549bca190fc90d68ace96985e7efe36c44b7137b2ac7cee6e78836459b1245",
+      "exportSHA256": "e5db1660d76a2630b0dec1342f127c2ead56dc8ed0a7ae03f9f05543bd39d34a",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/dodoma/e07-dodoma-O4-v1-20261012-1d549bca190f.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/dodoma/e07-dodoma-O4-v1-20261012-1d549bca190f.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/dodoma/e07-dodoma-O4-v1-20261012-1d549bca190f.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/dodoma/sisalto.json",
+      "sourceContentSHA256": "ac8585b55a7571f1718a0bb244e0f57781ef0863438f537f3ba91baf325b7ffa",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "32582269e55d91b7fcf41fd89d20a0d5f324c349d9a6632bd0f1ed8bd4b59216",
+        "subjectTitle": "Kiviä ja oppimisen paikkoja",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": [
+            "New image of ordinary functional material, natural plant or food; no identified person, artwork, branded design, building or collection object reproduced."
+          ],
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/dodoma/assets/e07-dodoma-O4-v1-20261012/kuva.png",
+            "nativeSha256Verified": "1d549bca190fc90d68ace96985e7efe36c44b7137b2ac7cee6e78836459b1245",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "visualInspection": "Personally viewed native NAS PNG with view_image: Kuusi erilaista kivistä kairausnäytettä alustalla. Luontevat mineraalijuovat ja murtopäät, ei etikettejä tai henkilöitä.",
+            "captionFi": "Kairausnäytteiden havainnekuva; ei GST:n museon tai varaston todellinen aineisto.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/dodoma/sisalto.json",
+            "contentSha256": "ac8585b55a7571f1718a0bb244e0f57781ef0863438f537f3ba91baf325b7ffa",
+            "targetCurrentlyPresent": true,
+            "targetText": "GST:n museopalvelu liittyy kiviin ja mineraaleihin, mutta kairausnäytevarasto on erillinen tutkimusaineisto. Museon käynti ja näyttelyn nykyinen toiminta varmistetaan. UDOMin Chimwaga-alue ja St. John’sin kampus ovat eri korkeakoulupaikkoja.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/dodoma/faktapohja.md",
+            "factSheetSha256": "06a6cc9c4b0469dba2587d554a01324624c413b36642ee31c3f96c6ba683f814",
+            "topicEvidence": "O4 erottaa kairausnäytevaraston museoaineistosta.",
+            "sourceEvidence": [
+              {
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/dodoma/sisalto.json",
+                "contentSha256": "7be5b0b461ee1f1ea88fd0ac8243a48d5b45015684a52e9c963f5f84debfdc82",
+                "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+                "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/dodoma/faktapohja.md",
+                "evidenceMode": "Directly documented textual material or utility subject, generic representation only",
+                "targetTextAtIssue": "GST:n museopalvelu liittyy kiviin ja mineraaleihin, mutta kairausnäytevarasto on erillinen tutkimusaineisto. Museon käynti ja näyttelyn nykyinen toiminta varmistetaan. UDOMin Chimwaga-alue ja St. John’sin kampus ovat eri korkeakoulupaikkoja."
+              }
+            ],
+            "rightsAssessment": "Generalized subject; inspected faces, added text/logo/watermark/frame, named modern artwork and invented city panorama. No adverse observation except those explicitly in verdict.",
+            "scope": "Independent native-image QA only; delivery/R2/export/publication unverified."
+          },
+          "qaReason": "Sylinterimäiset kivinäytteet vastaavat kairausnäyteaihetta. Selite erottaa ne GST:n todellisesta kokoelmasta."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Kairausnäytteiden havainnekuva; ei GST:n museon tai varaston todellinen aineisto.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/dodoma/illustration-qa-extra.json",
+        "fileSHA256": "623b91d6ac29539dbfc1f366e8b3c20285409e05215e9d75f40e04ce186d4f75",
+        "item": {
+          "slot": "O4",
+          "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+          "assetID": "e07-dodoma-O4-v1-20261012",
+          "sha256": "1d549bca190fc90d68ace96985e7efe36c44b7137b2ac7cee6e78836459b1245",
+          "verdict": "accepted",
+          "reason": "Sylinterimäiset kivinäytteet vastaavat kairausnäyteaihetta. Selite erottaa ne GST:n todellisesta kokoelmasta.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/dodoma/assets/e07-dodoma-O4-v1-20261012/kuva.png",
+            "nativeSha256Verified": "1d549bca190fc90d68ace96985e7efe36c44b7137b2ac7cee6e78836459b1245",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "visualInspection": "Personally viewed native NAS PNG with view_image: Kuusi erilaista kivistä kairausnäytettä alustalla. Luontevat mineraalijuovat ja murtopäät, ei etikettejä tai henkilöitä.",
+            "captionFi": "Kairausnäytteiden havainnekuva; ei GST:n museon tai varaston todellinen aineisto.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/dodoma/sisalto.json",
+            "contentSha256": "ac8585b55a7571f1718a0bb244e0f57781ef0863438f537f3ba91baf325b7ffa",
+            "targetCurrentlyPresent": true,
+            "targetText": "GST:n museopalvelu liittyy kiviin ja mineraaleihin, mutta kairausnäytevarasto on erillinen tutkimusaineisto. Museon käynti ja näyttelyn nykyinen toiminta varmistetaan. UDOMin Chimwaga-alue ja St. John’sin kampus ovat eri korkeakoulupaikkoja.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/dodoma/faktapohja.md",
+            "factSheetSha256": "06a6cc9c4b0469dba2587d554a01324624c413b36642ee31c3f96c6ba683f814",
+            "topicEvidence": "O4 erottaa kairausnäytevaraston museoaineistosta.",
+            "sourceEvidence": [
+              {
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/dodoma/sisalto.json",
+                "contentSha256": "7be5b0b461ee1f1ea88fd0ac8243a48d5b45015684a52e9c963f5f84debfdc82",
+                "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+                "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/dodoma/faktapohja.md",
+                "evidenceMode": "Directly documented textual material or utility subject, generic representation only",
+                "targetTextAtIssue": "GST:n museopalvelu liittyy kiviin ja mineraaleihin, mutta kairausnäytevarasto on erillinen tutkimusaineisto. Museon käynti ja näyttelyn nykyinen toiminta varmistetaan. UDOMin Chimwaga-alue ja St. John’sin kampus ovat eri korkeakoulupaikkoja."
+              }
+            ],
+            "rightsAssessment": "Generalized subject; inspected faces, added text/logo/watermark/frame, named modern artwork and invented city panorama. No adverse observation except those explicitly in verdict.",
+            "scope": "Independent native-image QA only; delivery/R2/export/publication unverified."
+          },
+          "reviewedAt": "2026-10-13T06:11:06.756869+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/dodoma/qa.json",
+            "sha256": "98498026820ec5514cade3942ab28697e0696ff68ffc7b9ff9c9b9959b045af9"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/dodoma/illustration-qa-extra.json",
+            "sha256": "623b91d6ac29539dbfc1f366e8b3c20285409e05215e9d75f40e04ce186d4f75"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/dodoma/e07-dodoma-O4-v1-20261012-1d549bca190f.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/dodoma/e07-dodoma-O4-v1-20261012-1d549bca190f.png?t=e5db1660d76a2630",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/dodoma/e07-dodoma-O4-v1-20261012-1d549bca190f.png",
+        "sha256": "e5db1660d76a2630b0dec1342f127c2ead56dc8ed0a7ae03f9f05543bd39d34a",
+        "bytes": 2631532,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e07-dodoma-O4-v1-20261012",
+        "nativeSHA256": "1d549bca190fc90d68ace96985e7efe36c44b7137b2ac7cee6e78836459b1245",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/dodoma/e07-dodoma-O4-v1-20261012-1d549bca190f.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e07",
+        "city": "dodoma",
+        "slot": "O4",
+        "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+        "verifiedAt": "2026-10-13T06:11:41.284516+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/dodoma/e07-dodoma-O4-v1-20261012-1d549bca190f.png",
+        "sha256": "e5db1660d76a2630b0dec1342f127c2ead56dc8ed0a7ae03f9f05543bd39d34a",
+        "bytes": 2631532,
+        "SHAReadAt": "2026-10-13T06:11:33.767705+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "1d549bca190fc90d68ace96985e7efe36c44b7137b2ac7cee6e78836459b1245",
+        "rgbPixelSHA256": "797b4a864a3907bdcf64dcfb756a6bdb0e843c2d7b7f6dbbe53e67909298e48f",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "ac8585b55a7571f1718a0bb244e0f57781ef0863438f537f3ba91baf325b7ffa",
+      "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+      "contextAfterSHA256": "32582269e55d91b7fcf41fd89d20a0d5f324c349d9a6632bd0f1ed8bd4b59216"
+    },
+    {
+      "era": "e07",
+      "city": "dodoma",
+      "slot": "K1",
+      "type": "illustration",
+      "assetID": "e07-dodoma-K1-v1-20261012",
+      "galleryImageID": "e07-dodoma-K1-v1-20261012",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].nostot[0]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "nostot",
+        0
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/dodoma/e07-dodoma-K1-v1-20261012-72de6631cecb.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Maataloustuotteiden kuljetusmateriaalien havainnekuva; ei Idodomyan historiallinen torinäkymä.",
+        "lyhyt": "Maataloustuotteiden kuljetusmateriaalien havainnekuva; ei Idodomyan historiallinen torinäkymä."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/dodoma/e07-dodoma-K1-v1-20261012-72de6631cecb.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Maataloustuotteiden kuljetusmateriaalien havainnekuva; ei Idodomyan historiallinen torinäkymä.",
+        "lyhyt": "Maataloustuotteiden kuljetusmateriaalien havainnekuva; ei Idodomyan historiallinen torinäkymä."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "72de6631cecb18c47e2121a8351ca24d7a3429c75f617b39044049042953c99b",
+      "exportSHA256": "23b8406d4f6f792df0968c67991baa25e2317c11826b8c05b09bfbd81225778c",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/dodoma/e07-dodoma-K1-v1-20261012-72de6631cecb.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/dodoma/e07-dodoma-K1-v1-20261012-72de6631cecb.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/dodoma/e07-dodoma-K1-v1-20261012-72de6631cecb.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/dodoma/sisalto.json",
+      "sourceContentSHA256": "ac8585b55a7571f1718a0bb244e0f57781ef0863438f537f3ba91baf325b7ffa",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "8d799063886a43146eaaaa2fb649598423e0543630a08bfa6f4daf720e05db96",
+        "semanticContextSHA256": "8d799063886a43146eaaaa2fb649598423e0543630a08bfa6f4daf720e05db96",
+        "subjectTitle": "Markkinapaikka ennen rautatiekaupunkia",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": [
+            "New depiction of common functional woven sacks; no identified protected work, person, building, brand or historical reconstruction."
+          ],
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/dodoma/assets/e07-dodoma-K1-v1-20261012/kuva.png",
+            "nativeSha256Verified": "72de6631cecb18c47e2121a8351ca24d7a3429c75f617b39044049042953c99b",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "visualInspection": "Personally viewed native NAS PNG with view_image: Kaksi sidottua säkkikangassäkkiä neutraalilla alustalla. Luontevat laskokset ja kuidut, ei tekstiä tai ihmisiä.",
+            "captionFi": "Maataloustuotteiden kuljetusmateriaalien havainnekuva; ei Idodomyan historiallinen torinäkymä.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/dodoma/sisalto.json",
+            "contentSha256": "ac8585b55a7571f1718a0bb244e0f57781ef0863438f537f3ba91baf325b7ffa",
+            "targetCurrentlyPresent": true,
+            "targetText": "Dodoman nykykaupunkia edelsi Idodomya-niminen pieni markkinapaikka. Ugogon alue kuului jo aikaisemmin karavaanireittien maailmaan, ja Gogo-yhteisöjen historia jatkui siellä ennen siirtomaaradan rakentamista. Nykyinen rautatiekaupunki syntyi 1900-luvun alkupuolella. Radan kautta maataloustuotteita vietiin rannikon suuntaan. Myöhempi pääkaupunkihanke oli jälleen uusi vaihe: se ei aloittanut alueen historiaa, vaan tuli vanhan kaupankäynnin ja rautatiekaupungin päälle.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/dodoma/faktapohja.md",
+            "factSheetSha256": "06a6cc9c4b0469dba2587d554a01324624c413b36642ee31c3f96c6ba683f814",
+            "topicEvidence": "K1 kertoo maataloustuotteiden kuljetuksesta ja markkinahistoriasta.",
+            "sourceEvidence": [
+              {
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/dodoma/sisalto.json",
+                "contentSha256": "7be5b0b461ee1f1ea88fd0ac8243a48d5b45015684a52e9c963f5f84debfdc82",
+                "targetJsonPath": "$.kaupunkilehti[0].nostot[0]",
+                "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/dodoma/faktapohja.md",
+                "targetTextAtIssue": "Dodoman nykykaupunkia edelsi Idodomya-niminen pieni markkinapaikka. Ugogon alue kuului jo aikaisemmin karavaanireittien maailmaan, ja Gogo-yhteisöjen historia jatkui siellä ennen siirtomaaradan rakentamista. Nykyinen rautatiekaupunki syntyi 1900-luvun alkupuolella. Radan kautta maataloustuotteita vietiin rannikon suuntaan. Myöhempi pääkaupunkihanke oli jälleen uusi vaihe: se ei aloittanut alueen historiaa, vaan tuli vanhan kaupankäynnin ja rautatiekaupungin päälle.",
+                "evidenceMode": "Documented agricultural-product transport; common functional sacks, contents not identified",
+                "ccReleaseEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/dodoma/cc-status.json",
+                "ccReleaseDetail": "Tavalliset markkinatavarat lähdetekstin mukaisesti, ei keksitty vuoden1873Idodomya-näkymä."
+              }
+            ],
+            "rightsAssessment": "Generalized subject; inspected faces, added text/logo/watermark/frame, named modern artwork and invented city panorama. No adverse observation except those explicitly in verdict.",
+            "scope": "Independent native-image QA only; delivery/R2/export/publication unverified."
+          },
+          "qaReason": "Kuljetussäkit sopivat maataloustuotteiden kauppa-aiheeseen. Selite sulkee pois historiallisen Idodomyan torinäkymän."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Maataloustuotteiden kuljetusmateriaalien havainnekuva; ei Idodomyan historiallinen torinäkymä.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/dodoma/illustration-qa-extra.json",
+        "fileSHA256": "623b91d6ac29539dbfc1f366e8b3c20285409e05215e9d75f40e04ce186d4f75",
+        "item": {
+          "slot": "K1",
+          "targetJsonPath": "$.kaupunkilehti[0].nostot[0]",
+          "assetID": "e07-dodoma-K1-v1-20261012",
+          "sha256": "72de6631cecb18c47e2121a8351ca24d7a3429c75f617b39044049042953c99b",
+          "verdict": "accepted",
+          "reason": "Kuljetussäkit sopivat maataloustuotteiden kauppa-aiheeseen. Selite sulkee pois historiallisen Idodomyan torinäkymän.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/dodoma/assets/e07-dodoma-K1-v1-20261012/kuva.png",
+            "nativeSha256Verified": "72de6631cecb18c47e2121a8351ca24d7a3429c75f617b39044049042953c99b",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "visualInspection": "Personally viewed native NAS PNG with view_image: Kaksi sidottua säkkikangassäkkiä neutraalilla alustalla. Luontevat laskokset ja kuidut, ei tekstiä tai ihmisiä.",
+            "captionFi": "Maataloustuotteiden kuljetusmateriaalien havainnekuva; ei Idodomyan historiallinen torinäkymä.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/dodoma/sisalto.json",
+            "contentSha256": "ac8585b55a7571f1718a0bb244e0f57781ef0863438f537f3ba91baf325b7ffa",
+            "targetCurrentlyPresent": true,
+            "targetText": "Dodoman nykykaupunkia edelsi Idodomya-niminen pieni markkinapaikka. Ugogon alue kuului jo aikaisemmin karavaanireittien maailmaan, ja Gogo-yhteisöjen historia jatkui siellä ennen siirtomaaradan rakentamista. Nykyinen rautatiekaupunki syntyi 1900-luvun alkupuolella. Radan kautta maataloustuotteita vietiin rannikon suuntaan. Myöhempi pääkaupunkihanke oli jälleen uusi vaihe: se ei aloittanut alueen historiaa, vaan tuli vanhan kaupankäynnin ja rautatiekaupungin päälle.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/dodoma/faktapohja.md",
+            "factSheetSha256": "06a6cc9c4b0469dba2587d554a01324624c413b36642ee31c3f96c6ba683f814",
+            "topicEvidence": "K1 kertoo maataloustuotteiden kuljetuksesta ja markkinahistoriasta.",
+            "sourceEvidence": [
+              {
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/dodoma/sisalto.json",
+                "contentSha256": "7be5b0b461ee1f1ea88fd0ac8243a48d5b45015684a52e9c963f5f84debfdc82",
+                "targetJsonPath": "$.kaupunkilehti[0].nostot[0]",
+                "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/dodoma/faktapohja.md",
+                "targetTextAtIssue": "Dodoman nykykaupunkia edelsi Idodomya-niminen pieni markkinapaikka. Ugogon alue kuului jo aikaisemmin karavaanireittien maailmaan, ja Gogo-yhteisöjen historia jatkui siellä ennen siirtomaaradan rakentamista. Nykyinen rautatiekaupunki syntyi 1900-luvun alkupuolella. Radan kautta maataloustuotteita vietiin rannikon suuntaan. Myöhempi pääkaupunkihanke oli jälleen uusi vaihe: se ei aloittanut alueen historiaa, vaan tuli vanhan kaupankäynnin ja rautatiekaupungin päälle.",
+                "evidenceMode": "Documented agricultural-product transport; common functional sacks, contents not identified",
+                "ccReleaseEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/dodoma/cc-status.json",
+                "ccReleaseDetail": "Tavalliset markkinatavarat lähdetekstin mukaisesti, ei keksitty vuoden1873Idodomya-näkymä."
+              }
+            ],
+            "rightsAssessment": "Generalized subject; inspected faces, added text/logo/watermark/frame, named modern artwork and invented city panorama. No adverse observation except those explicitly in verdict.",
+            "scope": "Independent native-image QA only; delivery/R2/export/publication unverified."
+          },
+          "reviewedAt": "2026-10-13T06:14:43.590315+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/dodoma/qa.json",
+            "sha256": "98498026820ec5514cade3942ab28697e0696ff68ffc7b9ff9c9b9959b045af9"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/dodoma/illustration-qa-extra.json",
+            "sha256": "623b91d6ac29539dbfc1f366e8b3c20285409e05215e9d75f40e04ce186d4f75"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/dodoma/e07-dodoma-K1-v1-20261012-72de6631cecb.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/dodoma/e07-dodoma-K1-v1-20261012-72de6631cecb.png?t=23b8406d4f6f792d",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/dodoma/e07-dodoma-K1-v1-20261012-72de6631cecb.png",
+        "sha256": "23b8406d4f6f792df0968c67991baa25e2317c11826b8c05b09bfbd81225778c",
+        "bytes": 2695261,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e07-dodoma-K1-v1-20261012",
+        "nativeSHA256": "72de6631cecb18c47e2121a8351ca24d7a3429c75f617b39044049042953c99b",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/dodoma/e07-dodoma-K1-v1-20261012-72de6631cecb.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e07",
+        "city": "dodoma",
+        "slot": "K1",
+        "targetJsonPath": "$.kaupunkilehti[0].nostot[0]",
+        "verifiedAt": "2026-10-13T06:15:46.865702+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/dodoma/e07-dodoma-K1-v1-20261012-72de6631cecb.png",
+        "sha256": "23b8406d4f6f792df0968c67991baa25e2317c11826b8c05b09bfbd81225778c",
+        "bytes": 2695261,
+        "SHAReadAt": "2026-10-13T06:14:47.282793+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "72de6631cecb18c47e2121a8351ca24d7a3429c75f617b39044049042953c99b",
+        "rgbPixelSHA256": "672292cee20c81f5f6e1bc84f64550640827602203e6681212d5ecf2cc46a0b2",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "ac8585b55a7571f1718a0bb244e0f57781ef0863438f537f3ba91baf325b7ffa",
+      "targetAfterSHA256": "8d799063886a43146eaaaa2fb649598423e0543630a08bfa6f4daf720e05db96",
+      "contextAfterSHA256": "8d799063886a43146eaaaa2fb649598423e0543630a08bfa6f4daf720e05db96"
+    },
+    {
+      "era": "e07",
+      "city": "dodoma",
+      "slot": "L2",
+      "type": "illustration",
+      "assetID": "e07-dodoma-L2-v1-20261012",
+      "galleryImageID": "e07-dodoma-L2-v1-20261012",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[1].nostot[1]",
+      "targetTokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        1
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/dodoma/e07-dodoma-L2-v1-20261012-0e3a29a5c5ff.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Korkeakouluoppimisen välineiden havainnekuva; ei UDOMin tai St. John’sin tilakuva.",
+        "lyhyt": "Korkeakouluoppimisen välineiden havainnekuva; ei UDOMin tai St. John’sin tilakuva."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/dodoma/e07-dodoma-L2-v1-20261012-0e3a29a5c5ff.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Korkeakouluoppimisen välineiden havainnekuva; ei UDOMin tai St. John’sin tilakuva.",
+        "lyhyt": "Korkeakouluoppimisen välineiden havainnekuva; ei UDOMin tai St. John’sin tilakuva."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "0e3a29a5c5ff199d6a6d63014c3cd235769ec6452d7308e597e0ae8961fc4e21",
+      "exportSHA256": "e2e70da10f22d5d2ea8134dc8ab8e6014e45d87d68b2b93314ed89bf8f20fdf7",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/dodoma/e07-dodoma-L2-v1-20261012-0e3a29a5c5ff.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/dodoma/e07-dodoma-L2-v1-20261012-0e3a29a5c5ff.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/dodoma/e07-dodoma-L2-v1-20261012-0e3a29a5c5ff.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/dodoma/sisalto.json",
+      "sourceContentSHA256": "ac8585b55a7571f1718a0bb244e0f57781ef0863438f537f3ba91baf325b7ffa",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "b9e71b84eb940b0704ce6253b66c31f49cfe8e7d3daa5232d00afd0fff0c1510",
+        "semanticContextSHA256": "b9e71b84eb940b0704ce6253b66c31f49cfe8e7d3daa5232d00afd0fff0c1510",
+        "subjectTitle": "Korkeakoulut ovat eri paikoissa",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": [
+            "New image of ordinary functional material, natural plant or food; no identified person, artwork, branded design, building or collection object reproduced."
+          ],
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/dodoma/assets/e07-dodoma-L2-v1-20261012/kuva.png",
+            "nativeSha256Verified": "0e3a29a5c5ff199d6a6d63014c3cd235769ec6452d7308e597e0ae8961fc4e21",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "visualInspection": "Personally viewed native NAS PNG with view_image: Vihko, kirjat ja kynät pöydällä. Uskottavat kansi-, paperi- ja puupinnat; ei tekstiä tai ihmisiä.",
+            "captionFi": "Korkeakouluoppimisen välineiden havainnekuva; ei UDOMin tai St. John’sin tilakuva.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/dodoma/sisalto.json",
+            "contentSha256": "ac8585b55a7571f1718a0bb244e0f57781ef0863438f537f3ba91baf325b7ffa",
+            "targetCurrentlyPresent": true,
+            "targetText": "University of Dodoma eli UDOM on julkinen yliopisto, joka sijaitsee mäkisellä Chimwaga-alueella keskustan ulkopuolella. St. John’s University on puolestaan yksityinen yliopisto, jolla on anglikaaninen institutionaalinen yhteys. UDOMissa opetetaan esimerkiksi kasvatustiedettä, luonnontiedettä ja maantiedettä; St. John’sin opintosuuntiin kuuluvat koulutus, hoito- ja farmasia-ala sekä yhteisökehitys. Sama kaupunki sisältää siis erilaisia oppimisen ympäristöjä eri paikoissa.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/dodoma/faktapohja.md",
+            "factSheetSha256": "06a6cc9c4b0469dba2587d554a01324624c413b36642ee31c3f96c6ba683f814",
+            "topicEvidence": "L2 käsittelee korkeakoulujen oppimisympäristöjä.",
+            "sourceEvidence": [
+              {
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/dodoma/sisalto.json",
+                "contentSha256": "7be5b0b461ee1f1ea88fd0ac8243a48d5b45015684a52e9c963f5f84debfdc82",
+                "targetJsonPath": "$.kaupunkilehti[1].nostot[1]",
+                "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/dodoma/faktapohja.md",
+                "evidenceMode": "Directly documented textual material or utility subject, generic representation only",
+                "targetTextAtIssue": "University of Dodoma eli UDOM on julkinen yliopisto, joka sijaitsee mäkisellä Chimwaga-alueella keskustan ulkopuolella. St. John’s University on puolestaan yksityinen yliopisto, jolla on anglikaaninen institutionaalinen yhteys. UDOMissa opetetaan esimerkiksi kasvatustiedettä, luonnontiedettä ja maantiedettä; St. John’sin opintosuuntiin kuuluvat koulutus, hoito- ja farmasia-ala sekä yhteisökehitys. Sama kaupunki sisältää siis erilaisia oppimisen ympäristöjä eri paikoissa."
+              }
+            ],
+            "rightsAssessment": "Generalized subject; inspected faces, added text/logo/watermark/frame, named modern artwork and invented city panorama. No adverse observation except those explicitly in verdict.",
+            "scope": "Independent native-image QA only; delivery/R2/export/publication unverified."
+          },
+          "qaReason": "Oppimisvälineet sopivat korkeakouluaiheeseen. Selite ei väitä todellista UDOMin tai St. John’sin tilaa."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Korkeakouluoppimisen välineiden havainnekuva; ei UDOMin tai St. John’sin tilakuva.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/dodoma/illustration-qa-extra.json",
+        "fileSHA256": "623b91d6ac29539dbfc1f366e8b3c20285409e05215e9d75f40e04ce186d4f75",
+        "item": {
+          "slot": "L2",
+          "targetJsonPath": "$.kaupunkilehti[1].nostot[1]",
+          "assetID": "e07-dodoma-L2-v1-20261012",
+          "sha256": "0e3a29a5c5ff199d6a6d63014c3cd235769ec6452d7308e597e0ae8961fc4e21",
+          "verdict": "accepted",
+          "reason": "Oppimisvälineet sopivat korkeakouluaiheeseen. Selite ei väitä todellista UDOMin tai St. John’sin tilaa.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/dodoma/assets/e07-dodoma-L2-v1-20261012/kuva.png",
+            "nativeSha256Verified": "0e3a29a5c5ff199d6a6d63014c3cd235769ec6452d7308e597e0ae8961fc4e21",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "visualInspection": "Personally viewed native NAS PNG with view_image: Vihko, kirjat ja kynät pöydällä. Uskottavat kansi-, paperi- ja puupinnat; ei tekstiä tai ihmisiä.",
+            "captionFi": "Korkeakouluoppimisen välineiden havainnekuva; ei UDOMin tai St. John’sin tilakuva.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/dodoma/sisalto.json",
+            "contentSha256": "ac8585b55a7571f1718a0bb244e0f57781ef0863438f537f3ba91baf325b7ffa",
+            "targetCurrentlyPresent": true,
+            "targetText": "University of Dodoma eli UDOM on julkinen yliopisto, joka sijaitsee mäkisellä Chimwaga-alueella keskustan ulkopuolella. St. John’s University on puolestaan yksityinen yliopisto, jolla on anglikaaninen institutionaalinen yhteys. UDOMissa opetetaan esimerkiksi kasvatustiedettä, luonnontiedettä ja maantiedettä; St. John’sin opintosuuntiin kuuluvat koulutus, hoito- ja farmasia-ala sekä yhteisökehitys. Sama kaupunki sisältää siis erilaisia oppimisen ympäristöjä eri paikoissa.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/dodoma/faktapohja.md",
+            "factSheetSha256": "06a6cc9c4b0469dba2587d554a01324624c413b36642ee31c3f96c6ba683f814",
+            "topicEvidence": "L2 käsittelee korkeakoulujen oppimisympäristöjä.",
+            "sourceEvidence": [
+              {
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/dodoma/sisalto.json",
+                "contentSha256": "7be5b0b461ee1f1ea88fd0ac8243a48d5b45015684a52e9c963f5f84debfdc82",
+                "targetJsonPath": "$.kaupunkilehti[1].nostot[1]",
+                "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/dodoma/faktapohja.md",
+                "evidenceMode": "Directly documented textual material or utility subject, generic representation only",
+                "targetTextAtIssue": "University of Dodoma eli UDOM on julkinen yliopisto, joka sijaitsee mäkisellä Chimwaga-alueella keskustan ulkopuolella. St. John’s University on puolestaan yksityinen yliopisto, jolla on anglikaaninen institutionaalinen yhteys. UDOMissa opetetaan esimerkiksi kasvatustiedettä, luonnontiedettä ja maantiedettä; St. John’sin opintosuuntiin kuuluvat koulutus, hoito- ja farmasia-ala sekä yhteisökehitys. Sama kaupunki sisältää siis erilaisia oppimisen ympäristöjä eri paikoissa."
+              }
+            ],
+            "rightsAssessment": "Generalized subject; inspected faces, added text/logo/watermark/frame, named modern artwork and invented city panorama. No adverse observation except those explicitly in verdict.",
+            "scope": "Independent native-image QA only; delivery/R2/export/publication unverified."
+          },
+          "reviewedAt": "2026-10-13T06:14:43.396477+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/dodoma/qa.json",
+            "sha256": "98498026820ec5514cade3942ab28697e0696ff68ffc7b9ff9c9b9959b045af9"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/dodoma/illustration-qa-extra.json",
+            "sha256": "623b91d6ac29539dbfc1f366e8b3c20285409e05215e9d75f40e04ce186d4f75"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/dodoma/e07-dodoma-L2-v1-20261012-0e3a29a5c5ff.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/dodoma/e07-dodoma-L2-v1-20261012-0e3a29a5c5ff.png?t=e2e70da10f22d5d2",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/dodoma/e07-dodoma-L2-v1-20261012-0e3a29a5c5ff.png",
+        "sha256": "e2e70da10f22d5d2ea8134dc8ab8e6014e45d87d68b2b93314ed89bf8f20fdf7",
+        "bytes": 2027033,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e07-dodoma-L2-v1-20261012",
+        "nativeSHA256": "0e3a29a5c5ff199d6a6d63014c3cd235769ec6452d7308e597e0ae8961fc4e21",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/dodoma/e07-dodoma-L2-v1-20261012-0e3a29a5c5ff.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e07",
+        "city": "dodoma",
+        "slot": "L2",
+        "targetJsonPath": "$.kaupunkilehti[1].nostot[1]",
+        "verifiedAt": "2026-10-13T06:15:47.871623+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/dodoma/e07-dodoma-L2-v1-20261012-0e3a29a5c5ff.png",
+        "sha256": "e2e70da10f22d5d2ea8134dc8ab8e6014e45d87d68b2b93314ed89bf8f20fdf7",
+        "bytes": 2027033,
+        "SHAReadAt": "2026-10-13T06:14:47.088464+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "0e3a29a5c5ff199d6a6d63014c3cd235769ec6452d7308e597e0ae8961fc4e21",
+        "rgbPixelSHA256": "f9121f7a3f02d1b90e19fcc152cfcac857f87952a8d02def10234d4ceea61649",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "ac8585b55a7571f1718a0bb244e0f57781ef0863438f537f3ba91baf325b7ffa",
+      "targetAfterSHA256": "b9e71b84eb940b0704ce6253b66c31f49cfe8e7d3daa5232d00afd0fff0c1510",
+      "contextAfterSHA256": "b9e71b84eb940b0704ce6253b66c31f49cfe8e7d3daa5232d00afd0fff0c1510"
+    },
+    {
+      "era": "e07",
+      "city": "dodoma",
+      "slot": "L3",
+      "type": "illustration",
+      "assetID": "e07-dodoma-L3-v1-20261012",
+      "galleryImageID": "e07-dodoma-L3-v1-20261012",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[1].nostot[2]",
+      "targetTokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        2
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/dodoma/e07-dodoma-L3-v1-20261012-16265dbfe50f.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Rautatien materiaalien havainnekuva; ei nimetty Dodoman asema tai raideleveyden mittaus.",
+        "lyhyt": "Rautatien materiaalien havainnekuva; ei nimetty Dodoman asema tai raideleveyden mittaus."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/dodoma/e07-dodoma-L3-v1-20261012-16265dbfe50f.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Rautatien materiaalien havainnekuva; ei nimetty Dodoman asema tai raideleveyden mittaus.",
+        "lyhyt": "Rautatien materiaalien havainnekuva; ei nimetty Dodoman asema tai raideleveyden mittaus."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "16265dbfe50f3eb1f2320469f4909817369351d7e07b64ec409f0d78c346e5e3",
+      "exportSHA256": "ec3d214fb16d39dc130899a83baad457b50d17407a599ed860cf64ed8a9cd31d",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/dodoma/e07-dodoma-L3-v1-20261012-16265dbfe50f.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/dodoma/e07-dodoma-L3-v1-20261012-16265dbfe50f.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/dodoma/e07-dodoma-L3-v1-20261012-16265dbfe50f.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/dodoma/sisalto.json",
+      "sourceContentSHA256": "ac8585b55a7571f1718a0bb244e0f57781ef0863438f537f3ba91baf325b7ffa",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "3691274946c18793cd17532bf304b3035c0b021de066c22e6ce91293826c619f",
+        "semanticContextSHA256": "3691274946c18793cd17532bf304b3035c0b021de066c22e6ce91293826c619f",
+        "subjectTitle": "Uusi rata käyttää eri raideleveyttä",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": [
+            "New depiction of common functional shapes or natural materials; no identified artwork, brand design, person or building reproduced."
+          ],
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/dodoma/assets/e07-dodoma-L3-v1-20261012/kuva.png",
+            "nativeSha256Verified": "16265dbfe50f3eb1f2320469f4909817369351d7e07b64ec409f0d78c346e5e3",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "visualInspection": "Personally viewed native NAS PNG with view_image: Raidepyörä kiskolla, metallisia kiinnikkeitä, ratapölkky ja sora. Luonteva ruoste ja vierintäpinta, ei tekstiä, logoja tai henkilöitä.",
+            "captionFi": "Rautatien materiaalien havainnekuva; ei nimetty Dodoman asema tai raideleveyden mittaus.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/dodoma/sisalto.json",
+            "contentSha256": "ac8585b55a7571f1718a0bb244e0f57781ef0863438f537f3ba91baf325b7ffa",
+            "targetCurrentlyPresent": true,
+            "targetText": "Vanha Central Line kulkee Dar es Salaamin rannikolta Dodoman kautta sisämaahan. Se on metriraiteinen, kun uusi SGR on normaaliraiteinen ja osin vanhan linjan rinnalla kulkeva rata. Uudempi verkko on rakentunut vaiheittain. Myös Dodoman asemat ovat eri paikkoja: vanha asema on keskustassa, uusi SGR-asema pohjoisempana. Junaan lähtijälle radan ja aseman nimi kuuluu samaan suunnitelmaan. Koko maan reittikartta ei silti kerro, että kaikki sen osat olisivat yhtä aikaa valmiita matkustajayhteyksiä.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/dodoma/faktapohja.md",
+            "factSheetSha256": "06a6cc9c4b0469dba2587d554a01324624c413b36642ee31c3f96c6ba683f814",
+            "topicEvidence": "L3 vertailee kahta ratateknistä vaihetta; kuva ei väitä niiden mittoja tai sijaintia.",
+            "sourceEvidence": [
+              {
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/dodoma/sisalto.json",
+                "contentSha256": "7be5b0b461ee1f1ea88fd0ac8243a48d5b45015684a52e9c963f5f84debfdc82",
+                "targetJsonPath": "$.kaupunkilehti[1].nostot[2]",
+                "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/dodoma/faktapohja.md",
+                "evidenceMode": "Common material/utility object for a source-backed textual subject; no claim about the real named place, item or event",
+                "targetTextAtIssue": "Vanha Central Line kulkee Dar es Salaamin rannikolta Dodoman kautta sisämaahan. Se on metriraiteinen, kun uusi SGR on normaaliraiteinen ja osin vanhan linjan rinnalla kulkeva rata. Uudempi verkko on rakentunut vaiheittain. Myös Dodoman asemat ovat eri paikkoja: vanha asema on keskustassa, uusi SGR-asema pohjoisempana. Junaan lähtijälle radan ja aseman nimi kuuluu samaan suunnitelmaan. Koko maan reittikartta ei silti kerro, että kaikki sen osat olisivat yhtä aikaa valmiita matkustajayhteyksiä."
+              }
+            ],
+            "rightsAssessment": "Generalized subject; inspected faces, added text/logo/watermark/frame, named modern artwork and invented city panorama. No adverse observation except those explicitly in verdict.",
+            "scope": "Independent native-image QA only; delivery/R2/export/publication unverified."
+          },
+          "qaReason": "Pyörän ja kiskon yleinen materiaali sopii rautatieaiheeseen. Selite erottaa sen Dodoman asemasta ja raideleveyden mittauksesta."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Rautatien materiaalien havainnekuva; ei nimetty Dodoman asema tai raideleveyden mittaus.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/dodoma/illustration-qa-extra.json",
+        "fileSHA256": "623b91d6ac29539dbfc1f366e8b3c20285409e05215e9d75f40e04ce186d4f75",
+        "item": {
+          "slot": "L3",
+          "targetJsonPath": "$.kaupunkilehti[1].nostot[2]",
+          "assetID": "e07-dodoma-L3-v1-20261012",
+          "sha256": "16265dbfe50f3eb1f2320469f4909817369351d7e07b64ec409f0d78c346e5e3",
+          "verdict": "accepted",
+          "reason": "Pyörän ja kiskon yleinen materiaali sopii rautatieaiheeseen. Selite erottaa sen Dodoman asemasta ja raideleveyden mittauksesta.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/dodoma/assets/e07-dodoma-L3-v1-20261012/kuva.png",
+            "nativeSha256Verified": "16265dbfe50f3eb1f2320469f4909817369351d7e07b64ec409f0d78c346e5e3",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "visualInspection": "Personally viewed native NAS PNG with view_image: Raidepyörä kiskolla, metallisia kiinnikkeitä, ratapölkky ja sora. Luonteva ruoste ja vierintäpinta, ei tekstiä, logoja tai henkilöitä.",
+            "captionFi": "Rautatien materiaalien havainnekuva; ei nimetty Dodoman asema tai raideleveyden mittaus.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/dodoma/sisalto.json",
+            "contentSha256": "ac8585b55a7571f1718a0bb244e0f57781ef0863438f537f3ba91baf325b7ffa",
+            "targetCurrentlyPresent": true,
+            "targetText": "Vanha Central Line kulkee Dar es Salaamin rannikolta Dodoman kautta sisämaahan. Se on metriraiteinen, kun uusi SGR on normaaliraiteinen ja osin vanhan linjan rinnalla kulkeva rata. Uudempi verkko on rakentunut vaiheittain. Myös Dodoman asemat ovat eri paikkoja: vanha asema on keskustassa, uusi SGR-asema pohjoisempana. Junaan lähtijälle radan ja aseman nimi kuuluu samaan suunnitelmaan. Koko maan reittikartta ei silti kerro, että kaikki sen osat olisivat yhtä aikaa valmiita matkustajayhteyksiä.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/dodoma/faktapohja.md",
+            "factSheetSha256": "06a6cc9c4b0469dba2587d554a01324624c413b36642ee31c3f96c6ba683f814",
+            "topicEvidence": "L3 vertailee kahta ratateknistä vaihetta; kuva ei väitä niiden mittoja tai sijaintia.",
+            "sourceEvidence": [
+              {
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/dodoma/sisalto.json",
+                "contentSha256": "7be5b0b461ee1f1ea88fd0ac8243a48d5b45015684a52e9c963f5f84debfdc82",
+                "targetJsonPath": "$.kaupunkilehti[1].nostot[2]",
+                "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/dodoma/faktapohja.md",
+                "evidenceMode": "Common material/utility object for a source-backed textual subject; no claim about the real named place, item or event",
+                "targetTextAtIssue": "Vanha Central Line kulkee Dar es Salaamin rannikolta Dodoman kautta sisämaahan. Se on metriraiteinen, kun uusi SGR on normaaliraiteinen ja osin vanhan linjan rinnalla kulkeva rata. Uudempi verkko on rakentunut vaiheittain. Myös Dodoman asemat ovat eri paikkoja: vanha asema on keskustassa, uusi SGR-asema pohjoisempana. Junaan lähtijälle radan ja aseman nimi kuuluu samaan suunnitelmaan. Koko maan reittikartta ei silti kerro, että kaikki sen osat olisivat yhtä aikaa valmiita matkustajayhteyksiä."
+              }
+            ],
+            "rightsAssessment": "Generalized subject; inspected faces, added text/logo/watermark/frame, named modern artwork and invented city panorama. No adverse observation except those explicitly in verdict.",
+            "scope": "Independent native-image QA only; delivery/R2/export/publication unverified."
+          },
+          "reviewedAt": "2026-10-13T06:05:21.831060+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/dodoma/qa.json",
+            "sha256": "98498026820ec5514cade3942ab28697e0696ff68ffc7b9ff9c9b9959b045af9"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/dodoma/illustration-qa-extra.json",
+            "sha256": "623b91d6ac29539dbfc1f366e8b3c20285409e05215e9d75f40e04ce186d4f75"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/dodoma/e07-dodoma-L3-v1-20261012-16265dbfe50f.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/dodoma/e07-dodoma-L3-v1-20261012-16265dbfe50f.png?t=ec3d214fb16d39dc",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/dodoma/e07-dodoma-L3-v1-20261012-16265dbfe50f.png",
+        "sha256": "ec3d214fb16d39dc130899a83baad457b50d17407a599ed860cf64ed8a9cd31d",
+        "bytes": 2430137,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e07-dodoma-L3-v1-20261012",
+        "nativeSHA256": "16265dbfe50f3eb1f2320469f4909817369351d7e07b64ec409f0d78c346e5e3",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/dodoma/e07-dodoma-L3-v1-20261012-16265dbfe50f.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e07",
+        "city": "dodoma",
+        "slot": "L3",
+        "targetJsonPath": "$.kaupunkilehti[1].nostot[2]",
+        "verifiedAt": "2026-10-13T06:06:20.418737+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/dodoma/e07-dodoma-L3-v1-20261012-16265dbfe50f.png",
+        "sha256": "ec3d214fb16d39dc130899a83baad457b50d17407a599ed860cf64ed8a9cd31d",
+        "bytes": 2430137,
+        "SHAReadAt": "2026-10-13T06:05:22.591619+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "16265dbfe50f3eb1f2320469f4909817369351d7e07b64ec409f0d78c346e5e3",
+        "rgbPixelSHA256": "2de6c3b21853aa8f5c50f313f0b76cb0ac264bbc5df069ae5f66857605b8f384",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "ac8585b55a7571f1718a0bb244e0f57781ef0863438f537f3ba91baf325b7ffa",
+      "targetAfterSHA256": "3691274946c18793cd17532bf304b3035c0b021de066c22e6ce91293826c619f",
+      "contextAfterSHA256": "3691274946c18793cd17532bf304b3035c0b021de066c22e6ce91293826c619f"
+    },
+    {
+      "era": "e07",
+      "city": "dodoma",
+      "slot": "L4",
+      "type": "illustration",
+      "assetID": "e07-dodoma-L4-v1-20261012",
+      "galleryImageID": "e07-dodoma-L4-v1-20261012",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
+      "targetTokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        3
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/dodoma/e07-dodoma-L4-v1-20261012-2a380367f6d4.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Jalkapalloaiheen havainnekuva; ei Jamhuri Stadiumin valokuva.",
+        "lyhyt": "Jalkapalloaiheen havainnekuva; ei Jamhuri Stadiumin valokuva."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/dodoma/e07-dodoma-L4-v1-20261012-2a380367f6d4.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Jalkapalloaiheen havainnekuva; ei Jamhuri Stadiumin valokuva.",
+        "lyhyt": "Jalkapalloaiheen havainnekuva; ei Jamhuri Stadiumin valokuva."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "2a380367f6d48dc81d3b02e19164c18ccea5322bdcdfe777b6de6509b68ea590",
+      "exportSHA256": "e0babb2fdf8c8063548bb9b550c9d2db05480845db8ae889e6fb1c9c63eaa7c8",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/dodoma/e07-dodoma-L4-v1-20261012-2a380367f6d4.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/dodoma/e07-dodoma-L4-v1-20261012-2a380367f6d4.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/dodoma/e07-dodoma-L4-v1-20261012-2a380367f6d4.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/dodoma/sisalto.json",
+      "sourceContentSHA256": "ac8585b55a7571f1718a0bb244e0f57781ef0863438f537f3ba91baf325b7ffa",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "034e445822e0f2a8eab0571b41dae9f16a0258f77b1b456dc2439105d5c40d5c",
+        "semanticContextSHA256": "034e445822e0f2a8eab0571b41dae9f16a0258f77b1b456dc2439105d5c40d5c",
+        "subjectTitle": "Jamhuri ei tarkoita yhtä stadionia",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": [
+            "New depiction of common functional shapes or natural materials; no identified artwork, brand design, person or building reproduced."
+          ],
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/dodoma/assets/e07-dodoma-L4-v1-20261012/kuva.png",
+            "nativeSha256Verified": "2a380367f6d48dc81d3b02e19164c18ccea5322bdcdfe777b6de6509b68ea590",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "visualInspection": "Personally viewed native NAS PNG with view_image: Yksi mustavalkoinen pallo ruoholla, luontevat saumat, kuluminen ja kontaktivarjo. Ei merkintöjä tai henkilöitä.",
+            "captionFi": "Jalkapalloaiheen havainnekuva; ei Jamhuri Stadiumin valokuva.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/dodoma/sisalto.json",
+            "contentSha256": "ac8585b55a7571f1718a0bb244e0f57781ef0863438f537f3ba91baf325b7ffa",
+            "targetCurrentlyPresent": true,
+            "targetText": "Dodoman Jamhuri Stadium on monikäyttöinen urheilupaikka, jonka pääkäyttö liittyy jalkapalloon. Kaupungin Dodoma Jiji FC käyttää sitä kotikenttänään. Morogorossa on kuitenkin samanniminen eri stadion. Sama rakennusnimi ei siksi yksin paikanna kenttää. Kaupungin seura ja urheilupaikka liittyvät toisiinsa, mutta yksi nimi voi esiintyä useamman kaupungin urheilussa. Dodoman Jamhuri kuuluu tämän kaupungin arkeen; Morogoron kenttää ei tarvitse siirtää paikasta toiseen nimen samankaltaisuuden vuoksi.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/dodoma/faktapohja.md",
+            "factSheetSha256": "06a6cc9c4b0469dba2587d554a01324624c413b36642ee31c3f96c6ba683f814",
+            "topicEvidence": "L4 kertoo stadionin jalkapallokäytöstä.",
+            "sourceEvidence": [
+              {
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/dodoma/sisalto.json",
+                "contentSha256": "7be5b0b461ee1f1ea88fd0ac8243a48d5b45015684a52e9c963f5f84debfdc82",
+                "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
+                "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/dodoma/faktapohja.md",
+                "evidenceMode": "Common material/utility object for a source-backed textual subject; no claim about the real named place, item or event",
+                "targetTextAtIssue": "Dodoman Jamhuri Stadium on monikäyttöinen urheilupaikka, jonka pääkäyttö liittyy jalkapalloon. Kaupungin Dodoma Jiji FC käyttää sitä kotikenttänään. Morogorossa on kuitenkin samanniminen eri stadion. Sama rakennusnimi ei siksi yksin paikanna kenttää. Kaupungin seura ja urheilupaikka liittyvät toisiinsa, mutta yksi nimi voi esiintyä useamman kaupungin urheilussa. Dodoman Jamhuri kuuluu tämän kaupungin arkeen; Morogoron kenttää ei tarvitse siirtää paikasta toiseen nimen samankaltaisuuden vuoksi."
+              }
+            ],
+            "rightsAssessment": "Generalized subject; inspected faces, added text/logo/watermark/frame, named modern artwork and invented city panorama. No adverse observation except those explicitly in verdict.",
+            "scope": "Independent native-image QA only; delivery/R2/export/publication unverified."
+          },
+          "qaReason": "Yleinen jalkapallo vastaa urheilupaikan pääkäyttöä. Selite sulkee pois Jamhuri Stadiumin todellisen valokuvan."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Jalkapalloaiheen havainnekuva; ei Jamhuri Stadiumin valokuva.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/dodoma/illustration-qa-extra.json",
+        "fileSHA256": "623b91d6ac29539dbfc1f366e8b3c20285409e05215e9d75f40e04ce186d4f75",
+        "item": {
+          "slot": "L4",
+          "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
+          "assetID": "e07-dodoma-L4-v1-20261012",
+          "sha256": "2a380367f6d48dc81d3b02e19164c18ccea5322bdcdfe777b6de6509b68ea590",
+          "verdict": "accepted",
+          "reason": "Yleinen jalkapallo vastaa urheilupaikan pääkäyttöä. Selite sulkee pois Jamhuri Stadiumin todellisen valokuvan.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/dodoma/assets/e07-dodoma-L4-v1-20261012/kuva.png",
+            "nativeSha256Verified": "2a380367f6d48dc81d3b02e19164c18ccea5322bdcdfe777b6de6509b68ea590",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "visualInspection": "Personally viewed native NAS PNG with view_image: Yksi mustavalkoinen pallo ruoholla, luontevat saumat, kuluminen ja kontaktivarjo. Ei merkintöjä tai henkilöitä.",
+            "captionFi": "Jalkapalloaiheen havainnekuva; ei Jamhuri Stadiumin valokuva.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/dodoma/sisalto.json",
+            "contentSha256": "ac8585b55a7571f1718a0bb244e0f57781ef0863438f537f3ba91baf325b7ffa",
+            "targetCurrentlyPresent": true,
+            "targetText": "Dodoman Jamhuri Stadium on monikäyttöinen urheilupaikka, jonka pääkäyttö liittyy jalkapalloon. Kaupungin Dodoma Jiji FC käyttää sitä kotikenttänään. Morogorossa on kuitenkin samanniminen eri stadion. Sama rakennusnimi ei siksi yksin paikanna kenttää. Kaupungin seura ja urheilupaikka liittyvät toisiinsa, mutta yksi nimi voi esiintyä useamman kaupungin urheilussa. Dodoman Jamhuri kuuluu tämän kaupungin arkeen; Morogoron kenttää ei tarvitse siirtää paikasta toiseen nimen samankaltaisuuden vuoksi.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/dodoma/faktapohja.md",
+            "factSheetSha256": "06a6cc9c4b0469dba2587d554a01324624c413b36642ee31c3f96c6ba683f814",
+            "topicEvidence": "L4 kertoo stadionin jalkapallokäytöstä.",
+            "sourceEvidence": [
+              {
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/dodoma/sisalto.json",
+                "contentSha256": "7be5b0b461ee1f1ea88fd0ac8243a48d5b45015684a52e9c963f5f84debfdc82",
+                "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
+                "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/dodoma/faktapohja.md",
+                "evidenceMode": "Common material/utility object for a source-backed textual subject; no claim about the real named place, item or event",
+                "targetTextAtIssue": "Dodoman Jamhuri Stadium on monikäyttöinen urheilupaikka, jonka pääkäyttö liittyy jalkapalloon. Kaupungin Dodoma Jiji FC käyttää sitä kotikenttänään. Morogorossa on kuitenkin samanniminen eri stadion. Sama rakennusnimi ei siksi yksin paikanna kenttää. Kaupungin seura ja urheilupaikka liittyvät toisiinsa, mutta yksi nimi voi esiintyä useamman kaupungin urheilussa. Dodoman Jamhuri kuuluu tämän kaupungin arkeen; Morogoron kenttää ei tarvitse siirtää paikasta toiseen nimen samankaltaisuuden vuoksi."
+              }
+            ],
+            "rightsAssessment": "Generalized subject; inspected faces, added text/logo/watermark/frame, named modern artwork and invented city panorama. No adverse observation except those explicitly in verdict.",
+            "scope": "Independent native-image QA only; delivery/R2/export/publication unverified."
+          },
+          "reviewedAt": "2026-10-13T06:05:21.962865+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/dodoma/qa.json",
+            "sha256": "98498026820ec5514cade3942ab28697e0696ff68ffc7b9ff9c9b9959b045af9"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/dodoma/illustration-qa-extra.json",
+            "sha256": "623b91d6ac29539dbfc1f366e8b3c20285409e05215e9d75f40e04ce186d4f75"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/dodoma/e07-dodoma-L4-v1-20261012-2a380367f6d4.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/dodoma/e07-dodoma-L4-v1-20261012-2a380367f6d4.png?t=e0babb2fdf8c8063",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/dodoma/e07-dodoma-L4-v1-20261012-2a380367f6d4.png",
+        "sha256": "e0babb2fdf8c8063548bb9b550c9d2db05480845db8ae889e6fb1c9c63eaa7c8",
+        "bytes": 2378288,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e07-dodoma-L4-v1-20261012",
+        "nativeSHA256": "2a380367f6d48dc81d3b02e19164c18ccea5322bdcdfe777b6de6509b68ea590",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/dodoma/e07-dodoma-L4-v1-20261012-2a380367f6d4.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e07",
+        "city": "dodoma",
+        "slot": "L4",
+        "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
+        "verifiedAt": "2026-10-13T06:06:21.593085+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/dodoma/e07-dodoma-L4-v1-20261012-2a380367f6d4.png",
+        "sha256": "e0babb2fdf8c8063548bb9b550c9d2db05480845db8ae889e6fb1c9c63eaa7c8",
+        "bytes": 2378288,
+        "SHAReadAt": "2026-10-13T06:05:22.833811+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "2a380367f6d48dc81d3b02e19164c18ccea5322bdcdfe777b6de6509b68ea590",
+        "rgbPixelSHA256": "e3447e56bec1b26b83fa35b02c771c9fb0500bff841bf1460bd1a91760956a34",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "ac8585b55a7571f1718a0bb244e0f57781ef0863438f537f3ba91baf325b7ffa",
+      "targetAfterSHA256": "034e445822e0f2a8eab0571b41dae9f16a0258f77b1b456dc2439105d5c40d5c",
+      "contextAfterSHA256": "034e445822e0f2a8eab0571b41dae9f16a0258f77b1b456dc2439105d5c40d5c"
     },
     {
       "era": "e07",
@@ -630,7 +2074,29 @@
             ],
             "photographedAt": "2022-07-12",
             "placeEvidence": "Commons Summary: Dodoma City Council, Dodoma Region, Tanzania; file title Iyumbu ward landscape; camera -6.216828, 35.802369.",
-            "roleBoundary": "Accepted only for PHOTO. Prior C1 rejection for insufficient urban arrangement remains unchanged."
+            "roleBoundary": "Accepted only for PHOTO. Prior C1 rejection for insufficient urban arrangement remains unchanged.",
+            "currentContentVersionCheck": {
+              "reviewedContentSHA256": "7be5b0b461ee1f1ea88fd0ac8243a48d5b45015684a52e9c963f5f84debfdc82",
+              "currentContentSHA256": "ac8585b55a7571f1718a0bb244e0f57781ef0863438f537f3ba91baf325b7ffa",
+              "checkedAt": "2026-10-13T06:15:35.617226+00:00",
+              "personallyViewedAgain": false,
+              "reviewedSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/c-integration/history/e07/dodoma/7be5b0b461ee1f1ea88fd0ac8243a48d5b45015684a52e9c963f5f84debfdc82-sisalto.json",
+              "reviewedSnapshotSHA256": "7be5b0b461ee1f1ea88fd0ac8243a48d5b45015684a52e9c963f5f84debfdc82",
+              "matches": true,
+              "method": "exact archived content SHA and full nonmedia comparison",
+              "reviewedNonmediaSHA256": "a776286af68193242d7c9f619e7a7d323b3fc138a11be2ac0c060e9af4f39863",
+              "currentNonmediaSHA256": "a776286af68193242d7c9f619e7a7d323b3fc138a11be2ac0c060e9af4f39863",
+              "imageFieldsExcludedOnlyAtInventoriedSlots": true
+            },
+            "currentBindingMetadataCheck": {
+              "checkedAt": "2026-10-13T06:15:35.624300+00:00",
+              "contentSHA256": "ac8585b55a7571f1718a0bb244e0f57781ef0863438f537f3ba91baf325b7ffa",
+              "commonsFile": "Iyumbu ward landscape, Dodoma City.jpg",
+              "captionFi": "Maastoa Iyumbun alueella Dodomassa.",
+              "credit": "Mangapwani, Commons (CC BY-SA 4.0)",
+              "captionMatchesReviewed": true,
+              "personallyViewedAgain": false
+            }
           },
           "qaReason": "Hyväksytty PHOTO-paikkaan: aito Dodoman Iyumbun luonnonmaaston valokuva, tekijä Mangapwani ja CC BY-SA 4.0 alkuperäislähteessä. Todelliset mitat 3489×1635 ja alkuperäinen SHA varmennettu. Kuvateksti rajaa aiheen maastoksi; ei tunnistettavia kasvoja tai teospääaihetta. Aiempi saman kuvan C1-hylkäys säilyy, koska PHOTO sallii paikallisen luontokuvan eikä edellytä rakennettua kaupunkinäkymää."
         }
@@ -646,7 +2112,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/dodoma/qa.json",
-        "fileSHA256": "f7c4d6b861e51944ef27e2522655d0469721e9df16adc8b83e4b82cb9cdafc3f",
+        "fileSHA256": "98498026820ec5514cade3942ab28697e0696ff68ffc7b9ff9c9b9959b045af9",
         "item": {
           "slot": "PHOTO",
           "targetJsonPath": "$.valokuva",
@@ -728,7 +2194,29 @@
             ],
             "photographedAt": "2022-07-12",
             "placeEvidence": "Commons Summary: Dodoma City Council, Dodoma Region, Tanzania; file title Iyumbu ward landscape; camera -6.216828, 35.802369.",
-            "roleBoundary": "Accepted only for PHOTO. Prior C1 rejection for insufficient urban arrangement remains unchanged."
+            "roleBoundary": "Accepted only for PHOTO. Prior C1 rejection for insufficient urban arrangement remains unchanged.",
+            "currentContentVersionCheck": {
+              "reviewedContentSHA256": "7be5b0b461ee1f1ea88fd0ac8243a48d5b45015684a52e9c963f5f84debfdc82",
+              "currentContentSHA256": "ac8585b55a7571f1718a0bb244e0f57781ef0863438f537f3ba91baf325b7ffa",
+              "checkedAt": "2026-10-13T06:15:35.617226+00:00",
+              "personallyViewedAgain": false,
+              "reviewedSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/c-integration/history/e07/dodoma/7be5b0b461ee1f1ea88fd0ac8243a48d5b45015684a52e9c963f5f84debfdc82-sisalto.json",
+              "reviewedSnapshotSHA256": "7be5b0b461ee1f1ea88fd0ac8243a48d5b45015684a52e9c963f5f84debfdc82",
+              "matches": true,
+              "method": "exact archived content SHA and full nonmedia comparison",
+              "reviewedNonmediaSHA256": "a776286af68193242d7c9f619e7a7d323b3fc138a11be2ac0c060e9af4f39863",
+              "currentNonmediaSHA256": "a776286af68193242d7c9f619e7a7d323b3fc138a11be2ac0c060e9af4f39863",
+              "imageFieldsExcludedOnlyAtInventoriedSlots": true
+            },
+            "currentBindingMetadataCheck": {
+              "checkedAt": "2026-10-13T06:15:35.624300+00:00",
+              "contentSHA256": "ac8585b55a7571f1718a0bb244e0f57781ef0863438f537f3ba91baf325b7ffa",
+              "commonsFile": "Iyumbu ward landscape, Dodoma City.jpg",
+              "captionFi": "Maastoa Iyumbun alueella Dodomassa.",
+              "credit": "Mangapwani, Commons (CC BY-SA 4.0)",
+              "captionMatchesReviewed": true,
+              "personallyViewedAgain": false
+            }
           },
           "reviewedAt": "2026-10-12T19:16:47.249653+00:00",
           "sha256": "126aeef047cb02de4476bd7150f834a03109688de446aa4d06a1b317f566a30e"
@@ -736,11 +2224,11 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/dodoma/qa.json",
-            "sha256": "f7c4d6b861e51944ef27e2522655d0469721e9df16adc8b83e4b82cb9cdafc3f"
+            "sha256": "98498026820ec5514cade3942ab28697e0696ff68ffc7b9ff9c9b9959b045af9"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/dodoma/illustration-qa-extra.json",
-            "sha256": "a336221d37eddc427ea65a6024f6c7653b6707059cd8f0e3c093017a11bdec60"
+            "sha256": "623b91d6ac29539dbfc1f366e8b3c20285409e05215e9d75f40e04ce186d4f75"
           }
         ]
       },
@@ -962,7 +2450,29 @@
             ],
             "photographedAt": "2022-07-12",
             "placeEvidence": "Commons title Makulu from Udom, Dodoma City; Summary Dodoma City Council, Dodoma Region, Tanzania; camera -6.199714, 35.793722.",
-            "depictedWorkAssessment": "Kaupunkirakenne laajana kokonaisympäristönä, tavalliset talot ja kadut eivät muodosta yksittäisen teoksen julkisivututkielmaa. Ei rakennusten ikään tai yleiseen FOP-oletukseen perustuvaa vapautusta."
+            "depictedWorkAssessment": "Kaupunkirakenne laajana kokonaisympäristönä, tavalliset talot ja kadut eivät muodosta yksittäisen teoksen julkisivututkielmaa. Ei rakennusten ikään tai yleiseen FOP-oletukseen perustuvaa vapautusta.",
+            "currentContentVersionCheck": {
+              "reviewedContentSHA256": "7be5b0b461ee1f1ea88fd0ac8243a48d5b45015684a52e9c963f5f84debfdc82",
+              "currentContentSHA256": "ac8585b55a7571f1718a0bb244e0f57781ef0863438f537f3ba91baf325b7ffa",
+              "checkedAt": "2026-10-13T06:15:35.617226+00:00",
+              "personallyViewedAgain": false,
+              "reviewedSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/c-integration/history/e07/dodoma/7be5b0b461ee1f1ea88fd0ac8243a48d5b45015684a52e9c963f5f84debfdc82-sisalto.json",
+              "reviewedSnapshotSHA256": "7be5b0b461ee1f1ea88fd0ac8243a48d5b45015684a52e9c963f5f84debfdc82",
+              "matches": true,
+              "method": "exact archived content SHA and full nonmedia comparison",
+              "reviewedNonmediaSHA256": "a776286af68193242d7c9f619e7a7d323b3fc138a11be2ac0c060e9af4f39863",
+              "currentNonmediaSHA256": "a776286af68193242d7c9f619e7a7d323b3fc138a11be2ac0c060e9af4f39863",
+              "imageFieldsExcludedOnlyAtInventoriedSlots": true
+            },
+            "currentBindingMetadataCheck": {
+              "checkedAt": "2026-10-13T06:15:35.634175+00:00",
+              "contentSHA256": "ac8585b55a7571f1718a0bb244e0f57781ef0863438f537f3ba91baf325b7ffa",
+              "commonsFile": "Makulu from Udom, Dodoma City.jpg",
+              "captionFi": "Makulu Dodomassa yliopiston suunnasta nähtynä, 2022.",
+              "credit": "Mangapwani, Wikimedia Commons (CC BY-SA 4.0)",
+              "captionMatchesReviewed": true,
+              "personallyViewedAgain": false
+            }
           },
           "qaReason": "Aito laaja Dodoman Makulun rakennettu kaupunkinäkymä korjaa C1-paikan puutteen: kadut, asuintalot ja kaupunkialue erottuvat. Mangapwani ja CC BY-SA 4.0 varmennettu alkuperäiseltä Commons-sivulta. Vuoden 2022 selite, alkuperäisen 3979×2139 mitat ja SHA vastaavat lähdettä. Ei tunnistettavia kasvoja tai erillistä teospääaihetta."
         }
@@ -978,7 +2488,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/dodoma/qa.json",
-        "fileSHA256": "f7c4d6b861e51944ef27e2522655d0469721e9df16adc8b83e4b82cb9cdafc3f",
+        "fileSHA256": "98498026820ec5514cade3942ab28697e0696ff68ffc7b9ff9c9b9959b045af9",
         "item": {
           "slot": "C1",
           "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
@@ -1060,7 +2570,29 @@
             ],
             "photographedAt": "2022-07-12",
             "placeEvidence": "Commons title Makulu from Udom, Dodoma City; Summary Dodoma City Council, Dodoma Region, Tanzania; camera -6.199714, 35.793722.",
-            "depictedWorkAssessment": "Kaupunkirakenne laajana kokonaisympäristönä, tavalliset talot ja kadut eivät muodosta yksittäisen teoksen julkisivututkielmaa. Ei rakennusten ikään tai yleiseen FOP-oletukseen perustuvaa vapautusta."
+            "depictedWorkAssessment": "Kaupunkirakenne laajana kokonaisympäristönä, tavalliset talot ja kadut eivät muodosta yksittäisen teoksen julkisivututkielmaa. Ei rakennusten ikään tai yleiseen FOP-oletukseen perustuvaa vapautusta.",
+            "currentContentVersionCheck": {
+              "reviewedContentSHA256": "7be5b0b461ee1f1ea88fd0ac8243a48d5b45015684a52e9c963f5f84debfdc82",
+              "currentContentSHA256": "ac8585b55a7571f1718a0bb244e0f57781ef0863438f537f3ba91baf325b7ffa",
+              "checkedAt": "2026-10-13T06:15:35.617226+00:00",
+              "personallyViewedAgain": false,
+              "reviewedSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/c-integration/history/e07/dodoma/7be5b0b461ee1f1ea88fd0ac8243a48d5b45015684a52e9c963f5f84debfdc82-sisalto.json",
+              "reviewedSnapshotSHA256": "7be5b0b461ee1f1ea88fd0ac8243a48d5b45015684a52e9c963f5f84debfdc82",
+              "matches": true,
+              "method": "exact archived content SHA and full nonmedia comparison",
+              "reviewedNonmediaSHA256": "a776286af68193242d7c9f619e7a7d323b3fc138a11be2ac0c060e9af4f39863",
+              "currentNonmediaSHA256": "a776286af68193242d7c9f619e7a7d323b3fc138a11be2ac0c060e9af4f39863",
+              "imageFieldsExcludedOnlyAtInventoriedSlots": true
+            },
+            "currentBindingMetadataCheck": {
+              "checkedAt": "2026-10-13T06:15:35.634175+00:00",
+              "contentSHA256": "ac8585b55a7571f1718a0bb244e0f57781ef0863438f537f3ba91baf325b7ffa",
+              "commonsFile": "Makulu from Udom, Dodoma City.jpg",
+              "captionFi": "Makulu Dodomassa yliopiston suunnasta nähtynä, 2022.",
+              "credit": "Mangapwani, Wikimedia Commons (CC BY-SA 4.0)",
+              "captionMatchesReviewed": true,
+              "personallyViewedAgain": false
+            }
           },
           "reviewedAt": "2026-10-12T19:18:56.071727+00:00",
           "sha256": "022c2e2a083d2848eb2a07ec7381bcea8143ed9b8e8af31309a1af3c0a3125e4"
@@ -1068,11 +2600,11 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/dodoma/qa.json",
-            "sha256": "f7c4d6b861e51944ef27e2522655d0469721e9df16adc8b83e4b82cb9cdafc3f"
+            "sha256": "98498026820ec5514cade3942ab28697e0696ff68ffc7b9ff9c9b9959b045af9"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/dodoma/illustration-qa-extra.json",
-            "sha256": "a336221d37eddc427ea65a6024f6c7653b6707059cd8f0e3c093017a11bdec60"
+            "sha256": "623b91d6ac29539dbfc1f366e8b3c20285409e05215e9d75f40e04ce186d4f75"
           }
         ]
       },

@@ -3,7 +3,7 @@
   "era": "e07",
   "city": "lusaka",
   "authorization": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
-  "sourceContentAfterSHA256": "b1b740a6eb3da1781346a1286ae4f6fc14cbacf7fdcce07bb9db8ab8a4752ec7",
+  "sourceContentAfterSHA256": "aefa89d9096207ae06b19d800b31df3fcf9ae2d15bdf8e8711d9533923d2d6af",
   "assets": [
     {
       "era": "e07",
@@ -115,7 +115,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lusaka/illustration-qa-extra.json",
-        "fileSHA256": "2c27665ee3e24368834d9433c4e37a42b45d5af9eaff7f0f8a4815a2909c0ac0",
+        "fileSHA256": "8c8a46b1b02dccc5b16fee155e18be8bd8eaaa3502774dbf1e1b9bc7c5f839df",
         "item": {
           "slot": "O4",
           "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
@@ -156,11 +156,11 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lusaka/qa.json",
-            "sha256": "12d947e165ee2ec42c9a50a863239e7d213c64f260b6da547fc998c5b14b7d2e"
+            "sha256": "54cac9b96ee47f661ad3c5febcd2a6edf22bee9fb9e171a7e654a479ccc8d6ce"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lusaka/illustration-qa-extra.json",
-            "sha256": "2c27665ee3e24368834d9433c4e37a42b45d5af9eaff7f0f8a4815a2909c0ac0"
+            "sha256": "8c8a46b1b02dccc5b16fee155e18be8bd8eaaa3502774dbf1e1b9bc7c5f839df"
           }
         ]
       },
@@ -243,7 +243,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "b1b740a6eb3da1781346a1286ae4f6fc14cbacf7fdcce07bb9db8ab8a4752ec7",
+      "sourceContentAfterSHA256": "aefa89d9096207ae06b19d800b31df3fcf9ae2d15bdf8e8711d9533923d2d6af",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
       "contextAfterSHA256": "062fb62b46d813e9d3b08d5626453ffe0918e05ef7151dd427430af6986693b9"
     },
@@ -355,7 +355,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lusaka/illustration-qa-extra.json",
-        "fileSHA256": "2c27665ee3e24368834d9433c4e37a42b45d5af9eaff7f0f8a4815a2909c0ac0",
+        "fileSHA256": "8c8a46b1b02dccc5b16fee155e18be8bd8eaaa3502774dbf1e1b9bc7c5f839df",
         "item": {
           "slot": "K3",
           "targetJsonPath": "$.kaupunkilehti[0].nostot[2]",
@@ -396,11 +396,11 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lusaka/qa.json",
-            "sha256": "12d947e165ee2ec42c9a50a863239e7d213c64f260b6da547fc998c5b14b7d2e"
+            "sha256": "54cac9b96ee47f661ad3c5febcd2a6edf22bee9fb9e171a7e654a479ccc8d6ce"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lusaka/illustration-qa-extra.json",
-            "sha256": "2c27665ee3e24368834d9433c4e37a42b45d5af9eaff7f0f8a4815a2909c0ac0"
+            "sha256": "8c8a46b1b02dccc5b16fee155e18be8bd8eaaa3502774dbf1e1b9bc7c5f839df"
           }
         ]
       },
@@ -483,7 +483,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "b1b740a6eb3da1781346a1286ae4f6fc14cbacf7fdcce07bb9db8ab8a4752ec7",
+      "sourceContentAfterSHA256": "aefa89d9096207ae06b19d800b31df3fcf9ae2d15bdf8e8711d9533923d2d6af",
       "targetAfterSHA256": "dad21dfb179d09dc39a1d2449eb8bf9a9a457cf5bc59fc0659bca590739cb762",
       "contextAfterSHA256": "dad21dfb179d09dc39a1d2449eb8bf9a9a457cf5bc59fc0659bca590739cb762"
     },
@@ -595,7 +595,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lusaka/illustration-qa-extra.json",
-        "fileSHA256": "2c27665ee3e24368834d9433c4e37a42b45d5af9eaff7f0f8a4815a2909c0ac0",
+        "fileSHA256": "8c8a46b1b02dccc5b16fee155e18be8bd8eaaa3502774dbf1e1b9bc7c5f839df",
         "item": {
           "slot": "L1",
           "targetJsonPath": "$.kaupunkilehti[1].nostot[0]",
@@ -636,11 +636,11 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lusaka/qa.json",
-            "sha256": "12d947e165ee2ec42c9a50a863239e7d213c64f260b6da547fc998c5b14b7d2e"
+            "sha256": "54cac9b96ee47f661ad3c5febcd2a6edf22bee9fb9e171a7e654a479ccc8d6ce"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lusaka/illustration-qa-extra.json",
-            "sha256": "2c27665ee3e24368834d9433c4e37a42b45d5af9eaff7f0f8a4815a2909c0ac0"
+            "sha256": "8c8a46b1b02dccc5b16fee155e18be8bd8eaaa3502774dbf1e1b9bc7c5f839df"
           }
         ]
       },
@@ -723,7 +723,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "b1b740a6eb3da1781346a1286ae4f6fc14cbacf7fdcce07bb9db8ab8a4752ec7",
+      "sourceContentAfterSHA256": "aefa89d9096207ae06b19d800b31df3fcf9ae2d15bdf8e8711d9533923d2d6af",
       "targetAfterSHA256": "54f9bbad5d5fab683e354fdec17e27f7f012ded3d469895e77533ba11ba02931",
       "contextAfterSHA256": "54f9bbad5d5fab683e354fdec17e27f7f012ded3d469895e77533ba11ba02931"
     },
@@ -835,7 +835,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lusaka/illustration-qa-extra.json",
-        "fileSHA256": "2c27665ee3e24368834d9433c4e37a42b45d5af9eaff7f0f8a4815a2909c0ac0",
+        "fileSHA256": "8c8a46b1b02dccc5b16fee155e18be8bd8eaaa3502774dbf1e1b9bc7c5f839df",
         "item": {
           "slot": "L3",
           "targetJsonPath": "$.kaupunkilehti[1].nostot[2]",
@@ -876,11 +876,11 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lusaka/qa.json",
-            "sha256": "12d947e165ee2ec42c9a50a863239e7d213c64f260b6da547fc998c5b14b7d2e"
+            "sha256": "54cac9b96ee47f661ad3c5febcd2a6edf22bee9fb9e171a7e654a479ccc8d6ce"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lusaka/illustration-qa-extra.json",
-            "sha256": "2c27665ee3e24368834d9433c4e37a42b45d5af9eaff7f0f8a4815a2909c0ac0"
+            "sha256": "8c8a46b1b02dccc5b16fee155e18be8bd8eaaa3502774dbf1e1b9bc7c5f839df"
           }
         ]
       },
@@ -963,7 +963,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "b1b740a6eb3da1781346a1286ae4f6fc14cbacf7fdcce07bb9db8ab8a4752ec7",
+      "sourceContentAfterSHA256": "aefa89d9096207ae06b19d800b31df3fcf9ae2d15bdf8e8711d9533923d2d6af",
       "targetAfterSHA256": "321090eafa8ff8cbd7281f78d9a49919ba057476f401cf443851c86cd3d14967",
       "contextAfterSHA256": "321090eafa8ff8cbd7281f78d9a49919ba057476f401cf443851c86cd3d14967"
     },
@@ -1075,7 +1075,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lusaka/illustration-qa-extra.json",
-        "fileSHA256": "2c27665ee3e24368834d9433c4e37a42b45d5af9eaff7f0f8a4815a2909c0ac0",
+        "fileSHA256": "8c8a46b1b02dccc5b16fee155e18be8bd8eaaa3502774dbf1e1b9bc7c5f839df",
         "item": {
           "slot": "L4",
           "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
@@ -1116,11 +1116,11 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lusaka/qa.json",
-            "sha256": "12d947e165ee2ec42c9a50a863239e7d213c64f260b6da547fc998c5b14b7d2e"
+            "sha256": "54cac9b96ee47f661ad3c5febcd2a6edf22bee9fb9e171a7e654a479ccc8d6ce"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lusaka/illustration-qa-extra.json",
-            "sha256": "2c27665ee3e24368834d9433c4e37a42b45d5af9eaff7f0f8a4815a2909c0ac0"
+            "sha256": "8c8a46b1b02dccc5b16fee155e18be8bd8eaaa3502774dbf1e1b9bc7c5f839df"
           }
         ]
       },
@@ -1203,9 +1203,487 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "b1b740a6eb3da1781346a1286ae4f6fc14cbacf7fdcce07bb9db8ab8a4752ec7",
+      "sourceContentAfterSHA256": "aefa89d9096207ae06b19d800b31df3fcf9ae2d15bdf8e8711d9533923d2d6af",
       "targetAfterSHA256": "2649ad0289b85d5955181172e35cf9c2400c313fff70ad9fa7b159682183a9d7",
       "contextAfterSHA256": "2649ad0289b85d5955181172e35cf9c2400c313fff70ad9fa7b159682183a9d7"
+    },
+    {
+      "era": "e07",
+      "city": "lusaka",
+      "slot": "K2",
+      "type": "illustration",
+      "assetID": "e07-lusaka-K2-v1-20261012",
+      "galleryImageID": "e07-lusaka-K2-v1-20261012",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].nostot[1]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "nostot",
+        1
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/lusaka/e07-lusaka-K2-v1-20261012-e8d20deda017.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Jalkapalloaiheen havainnekuva; ei Barbra Bandan muotokuva tai tietyn ottelun kuva.",
+        "lyhyt": "Jalkapalloaiheen havainnekuva; ei Barbra Bandan muotokuva tai tietyn ottelun kuva."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/lusaka/e07-lusaka-K2-v1-20261012-e8d20deda017.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Jalkapalloaiheen havainnekuva; ei Barbra Bandan muotokuva tai tietyn ottelun kuva.",
+        "lyhyt": "Jalkapalloaiheen havainnekuva; ei Barbra Bandan muotokuva tai tietyn ottelun kuva."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "e8d20deda0172ea80905ea42beef47ac1d51725aee8abe7b7df580849bd3e881",
+      "exportSHA256": "b90f56bcf0abcbe5bad18db958a4b588f9e5ba257296d37e079d1e6cc4f2dd9c",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/lusaka/e07-lusaka-K2-v1-20261012-e8d20deda017.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/lusaka/e07-lusaka-K2-v1-20261012-e8d20deda017.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/lusaka/e07-lusaka-K2-v1-20261012-e8d20deda017.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lusaka/sisalto.json",
+      "sourceContentSHA256": "b1b740a6eb3da1781346a1286ae4f6fc14cbacf7fdcce07bb9db8ab8a4752ec7",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "be93924af9bde6136dadf8a27c34ba551d0b2fffafc7d379c4f27861c750f1d2",
+        "semanticContextSHA256": "be93924af9bde6136dadf8a27c34ba551d0b2fffafc7d379c4f27861c750f1d2",
+        "subjectTitle": "Hattutemppu kahdesti peräkkäin",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": [
+            "New depiction of common functional shapes or natural materials; no identified artwork, brand design, person or building reproduced."
+          ],
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lusaka/assets/e07-lusaka-K2-v1-20261012/kuva.png",
+            "nativeSha256Verified": "e8d20deda0172ea80905ea42beef47ac1d51725aee8abe7b7df580849bd3e881",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "visualInspection": "Personally viewed native NAS PNG with view_image: Yksi nimetön mustavalkoinen pallo ruoholla, uskottavat saumat ja huopamainen nahkapinta. Ei ihmisiä, logoja tai tekstiä.",
+            "captionFi": "Jalkapalloaiheen havainnekuva; ei Barbra Bandan muotokuva tai tietyn ottelun kuva.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lusaka/sisalto.json",
+            "contentSha256": "b1b740a6eb3da1781346a1286ae4f6fc14cbacf7fdcce07bb9db8ab8a4752ec7",
+            "targetCurrentlyPresent": true,
+            "targetText": "Lusakassa syntynyt Barbra Banda on Sambian jalkapallohyökkääjä. Lapsena hän pelasi myös poikien kanssa ja kilpaili myöhemmin nyrkkeilyssä ennen keskittymistä jalkapalloon. Tokion olympiaturnauksessa hän teki hattutempun Alankomaita vastaan ja toisen Kiinaa vastaan: kolme maalia kummassakin ottelussa. Uransa aikana hän on pelannut Espanjassa, Kiinassa ja Yhdysvalloissa. Lusakan kaupunkisidos näkyy näin urheilijan omassa toiminnassa, joka on jatkunut paikallisilta kentiltä kansainvälisiin turnauksiin.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lusaka/faktapohja.md",
+            "factSheetSha256": "ff5a2ba51da3755e09695f74f6045eda1212fe08ebbd4190ddca114d14508350",
+            "topicEvidence": "K2 kertoo Barbra Bandan jalkapallourasta; selite erottaa kuvan henkilöstä ja tapahtumasta.",
+            "sourceEvidence": [
+              {
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lusaka/sisalto.json",
+                "contentSha256": "21f4eb010c31afc76b8f137e649fce7dbcd77707d3a0418635f0cfd81ae84257",
+                "targetJsonPath": "$.kaupunkilehti[0].nostot[1]",
+                "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lusaka/faktapohja.md",
+                "evidenceMode": "Common material/utility object for a source-backed textual subject; no claim about the real named place, item or event",
+                "targetTextAtIssue": "Lusakassa syntynyt Barbra Banda on Sambian jalkapallohyökkääjä. Lapsena hän pelasi myös poikien kanssa ja kilpaili myöhemmin nyrkkeilyssä ennen keskittymistä jalkapalloon. Tokion olympiaturnauksessa hän teki hattutempun Alankomaita vastaan ja toisen Kiinaa vastaan: kolme maalia kummassakin ottelussa. Uransa aikana hän on pelannut Espanjassa, Kiinassa ja Yhdysvalloissa. Lusakan kaupunkisidos näkyy näin urheilijan omassa toiminnassa, joka on jatkunut paikallisilta kentiltä kansainvälisiin turnauksiin."
+              }
+            ],
+            "rightsAssessment": "Generalized subject; inspected faces, added text/logo/watermark/frame, named modern artwork and invented city panorama. No adverse observation except those explicitly in verdict.",
+            "scope": "Independent native-image QA only; delivery/R2/export/publication unverified."
+          },
+          "qaReason": "Yleinen jalkapallo havainnollistaa urheilulajia ilman tekaistua Barbra Bandan muotokuvaa tai ottelutilannetta."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Jalkapalloaiheen havainnekuva; ei Barbra Bandan muotokuva tai tietyn ottelun kuva.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lusaka/illustration-qa-extra.json",
+        "fileSHA256": "8c8a46b1b02dccc5b16fee155e18be8bd8eaaa3502774dbf1e1b9bc7c5f839df",
+        "item": {
+          "slot": "K2",
+          "targetJsonPath": "$.kaupunkilehti[0].nostot[1]",
+          "assetID": "e07-lusaka-K2-v1-20261012",
+          "sha256": "e8d20deda0172ea80905ea42beef47ac1d51725aee8abe7b7df580849bd3e881",
+          "verdict": "accepted",
+          "reason": "Yleinen jalkapallo havainnollistaa urheilulajia ilman tekaistua Barbra Bandan muotokuvaa tai ottelutilannetta.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lusaka/assets/e07-lusaka-K2-v1-20261012/kuva.png",
+            "nativeSha256Verified": "e8d20deda0172ea80905ea42beef47ac1d51725aee8abe7b7df580849bd3e881",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "visualInspection": "Personally viewed native NAS PNG with view_image: Yksi nimetön mustavalkoinen pallo ruoholla, uskottavat saumat ja huopamainen nahkapinta. Ei ihmisiä, logoja tai tekstiä.",
+            "captionFi": "Jalkapalloaiheen havainnekuva; ei Barbra Bandan muotokuva tai tietyn ottelun kuva.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lusaka/sisalto.json",
+            "contentSha256": "b1b740a6eb3da1781346a1286ae4f6fc14cbacf7fdcce07bb9db8ab8a4752ec7",
+            "targetCurrentlyPresent": true,
+            "targetText": "Lusakassa syntynyt Barbra Banda on Sambian jalkapallohyökkääjä. Lapsena hän pelasi myös poikien kanssa ja kilpaili myöhemmin nyrkkeilyssä ennen keskittymistä jalkapalloon. Tokion olympiaturnauksessa hän teki hattutempun Alankomaita vastaan ja toisen Kiinaa vastaan: kolme maalia kummassakin ottelussa. Uransa aikana hän on pelannut Espanjassa, Kiinassa ja Yhdysvalloissa. Lusakan kaupunkisidos näkyy näin urheilijan omassa toiminnassa, joka on jatkunut paikallisilta kentiltä kansainvälisiin turnauksiin.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lusaka/faktapohja.md",
+            "factSheetSha256": "ff5a2ba51da3755e09695f74f6045eda1212fe08ebbd4190ddca114d14508350",
+            "topicEvidence": "K2 kertoo Barbra Bandan jalkapallourasta; selite erottaa kuvan henkilöstä ja tapahtumasta.",
+            "sourceEvidence": [
+              {
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lusaka/sisalto.json",
+                "contentSha256": "21f4eb010c31afc76b8f137e649fce7dbcd77707d3a0418635f0cfd81ae84257",
+                "targetJsonPath": "$.kaupunkilehti[0].nostot[1]",
+                "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lusaka/faktapohja.md",
+                "evidenceMode": "Common material/utility object for a source-backed textual subject; no claim about the real named place, item or event",
+                "targetTextAtIssue": "Lusakassa syntynyt Barbra Banda on Sambian jalkapallohyökkääjä. Lapsena hän pelasi myös poikien kanssa ja kilpaili myöhemmin nyrkkeilyssä ennen keskittymistä jalkapalloon. Tokion olympiaturnauksessa hän teki hattutempun Alankomaita vastaan ja toisen Kiinaa vastaan: kolme maalia kummassakin ottelussa. Uransa aikana hän on pelannut Espanjassa, Kiinassa ja Yhdysvalloissa. Lusakan kaupunkisidos näkyy näin urheilijan omassa toiminnassa, joka on jatkunut paikallisilta kentiltä kansainvälisiin turnauksiin."
+              }
+            ],
+            "rightsAssessment": "Generalized subject; inspected faces, added text/logo/watermark/frame, named modern artwork and invented city panorama. No adverse observation except those explicitly in verdict.",
+            "scope": "Independent native-image QA only; delivery/R2/export/publication unverified."
+          },
+          "reviewedAt": "2026-10-13T06:05:22.115406+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lusaka/qa.json",
+            "sha256": "54cac9b96ee47f661ad3c5febcd2a6edf22bee9fb9e171a7e654a479ccc8d6ce"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lusaka/illustration-qa-extra.json",
+            "sha256": "8c8a46b1b02dccc5b16fee155e18be8bd8eaaa3502774dbf1e1b9bc7c5f839df"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/lusaka/e07-lusaka-K2-v1-20261012-e8d20deda017.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/lusaka/e07-lusaka-K2-v1-20261012-e8d20deda017.png?t=b90f56bcf0abcbe5",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/lusaka/e07-lusaka-K2-v1-20261012-e8d20deda017.png",
+        "sha256": "b90f56bcf0abcbe5bad18db958a4b588f9e5ba257296d37e079d1e6cc4f2dd9c",
+        "bytes": 2460895,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e07-lusaka-K2-v1-20261012",
+        "nativeSHA256": "e8d20deda0172ea80905ea42beef47ac1d51725aee8abe7b7df580849bd3e881",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/lusaka/e07-lusaka-K2-v1-20261012-e8d20deda017.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e07",
+        "city": "lusaka",
+        "slot": "K2",
+        "targetJsonPath": "$.kaupunkilehti[0].nostot[1]",
+        "verifiedAt": "2026-10-13T06:06:24.427520+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/lusaka/e07-lusaka-K2-v1-20261012-e8d20deda017.png",
+        "sha256": "b90f56bcf0abcbe5bad18db958a4b588f9e5ba257296d37e079d1e6cc4f2dd9c",
+        "bytes": 2460895,
+        "SHAReadAt": "2026-10-13T06:05:23.289999+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "e8d20deda0172ea80905ea42beef47ac1d51725aee8abe7b7df580849bd3e881",
+        "rgbPixelSHA256": "c594d0418306920b8a017cf7b77bd39522b1d1cef442d1b76de5b184c2bc2d90",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "aefa89d9096207ae06b19d800b31df3fcf9ae2d15bdf8e8711d9533923d2d6af",
+      "targetAfterSHA256": "be93924af9bde6136dadf8a27c34ba551d0b2fffafc7d379c4f27861c750f1d2",
+      "contextAfterSHA256": "be93924af9bde6136dadf8a27c34ba551d0b2fffafc7d379c4f27861c750f1d2"
+    },
+    {
+      "era": "e07",
+      "city": "lusaka",
+      "slot": "L2",
+      "type": "illustration",
+      "assetID": "e07-lusaka-L2-v1-20261012",
+      "galleryImageID": "e07-lusaka-L2-v1-20261012",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[1].nostot[1]",
+      "targetTokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        1
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/lusaka/e07-lusaka-L2-v1-20261012-ba0b57374400.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Raidekaluston alustan havainnekuva; ei Njanji-kaluston rekonstruktio.",
+        "lyhyt": "Raidekaluston alustan havainnekuva; ei Njanji-kaluston rekonstruktio."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/lusaka/e07-lusaka-L2-v1-20261012-ba0b57374400.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Raidekaluston alustan havainnekuva; ei Njanji-kaluston rekonstruktio.",
+        "lyhyt": "Raidekaluston alustan havainnekuva; ei Njanji-kaluston rekonstruktio."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "ba0b573744006ae6eb5ed90fc3c0a4f71871d696a2e544b8acde8a7a6a45d8f2",
+      "exportSHA256": "e2ce78a1192c09867fd64b5b5128c428bb33e43d8f212221db9a6f01d079147a",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/lusaka/e07-lusaka-L2-v1-20261012-ba0b57374400.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/lusaka/e07-lusaka-L2-v1-20261012-ba0b57374400.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/lusaka/e07-lusaka-L2-v1-20261012-ba0b57374400.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lusaka/sisalto.json",
+      "sourceContentSHA256": "b1b740a6eb3da1781346a1286ae4f6fc14cbacf7fdcce07bb9db8ab8a4752ec7",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "b99a930eadb3600afb54f7645a2cc2a031f8f350028f10a3930ddaab9bc0d573",
+        "semanticContextSHA256": "b99a930eadb3600afb54f7645a2cc2a031f8f350028f10a3930ddaab9bc0d573",
+        "subjectTitle": "Bussin kori päätyi kiskoille",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": [
+            "New depiction of common functional shapes or natural materials; no identified artwork, brand design, person or building reproduced."
+          ],
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lusaka/assets/e07-lusaka-L2-v1-20261012/kuva.png",
+            "nativeSha256Verified": "ba0b573744006ae6eb5ed90fc3c0a4f71871d696a2e544b8acde8a7a6a45d8f2",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "visualInspection": "Personally viewed native NAS PNG with view_image: Kaksi teräspyörää yhdistävä akseli, alustarakenne ja kiskot. Luontevat metallipinnat ja sora; ei tunnuksia, tekstiä tai ihmisiä.",
+            "captionFi": "Raidekaluston alustan havainnekuva; ei Njanji-kaluston rekonstruktio.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lusaka/sisalto.json",
+            "contentSha256": "b1b740a6eb3da1781346a1286ae4f6fc14cbacf7fdcce07bb9db8ab8a4752ec7",
+            "targetCurrentlyPresent": true,
+            "targetText": "Lusakassa kokeiltiin 1990-luvulla Njanji-lähijunayhteyttä, jonka historiaan kuuluu myös Mulungushi Railway -nimi. Yhteys kulki Chilenjen suunnalta päärautatieaseman kautta George Townshipin ja teollisuusalueen suuntaan. Kalustoa tehtiin liittämällä Tata-bussien koreja kaivosvaunujen alustoihin. Kokonainen bussi ei siis vain kääntynyt tieltä radalle: kori ja sen alla oleva alusta olivat eri osia. Kokeilu päättyi saman vuosikymmenen lopulla, ja myöhemmät elvytyssuunnitelmat ovat erillinen vaihe sen historiassa.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lusaka/faktapohja.md",
+            "factSheetSha256": "ff5a2ba51da3755e09695f74f6045eda1212fe08ebbd4190ddca114d14508350",
+            "topicEvidence": "L2 erottaa bussikorin ja kaivosvaunun alustan.",
+            "sourceEvidence": [
+              {
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lusaka/sisalto.json",
+                "contentSha256": "21f4eb010c31afc76b8f137e649fce7dbcd77707d3a0418635f0cfd81ae84257",
+                "targetJsonPath": "$.kaupunkilehti[1].nostot[1]",
+                "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lusaka/faktapohja.md",
+                "evidenceMode": "Common material/utility object for a source-backed textual subject; no claim about the real named place, item or event",
+                "targetTextAtIssue": "Lusakassa kokeiltiin 1990-luvulla Njanji-lähijunayhteyttä, jonka historiaan kuuluu myös Mulungushi Railway -nimi. Yhteys kulki Chilenjen suunnalta päärautatieaseman kautta George Townshipin ja teollisuusalueen suuntaan. Kalustoa tehtiin liittämällä Tata-bussien koreja kaivosvaunujen alustoihin. Kokonainen bussi ei siis vain kääntynyt tieltä radalle: kori ja sen alla oleva alusta olivat eri osia. Kokeilu päättyi saman vuosikymmenen lopulla, ja myöhemmät elvytyssuunnitelmat ovat erillinen vaihe sen historiassa."
+              }
+            ],
+            "rightsAssessment": "Generalized subject; inspected faces, added text/logo/watermark/frame, named modern artwork and invented city panorama. No adverse observation except those explicitly in verdict.",
+            "scope": "Independent native-image QA only; delivery/R2/export/publication unverified."
+          },
+          "qaReason": "Raidekaluston alusta sopii kaluston osia käsittelevään nostoon. Selite ei rekonstruoi Njanji-vaunua tai liitä siihen keksittyä bussikoria."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Raidekaluston alustan havainnekuva; ei Njanji-kaluston rekonstruktio.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lusaka/illustration-qa-extra.json",
+        "fileSHA256": "8c8a46b1b02dccc5b16fee155e18be8bd8eaaa3502774dbf1e1b9bc7c5f839df",
+        "item": {
+          "slot": "L2",
+          "targetJsonPath": "$.kaupunkilehti[1].nostot[1]",
+          "assetID": "e07-lusaka-L2-v1-20261012",
+          "sha256": "ba0b573744006ae6eb5ed90fc3c0a4f71871d696a2e544b8acde8a7a6a45d8f2",
+          "verdict": "accepted",
+          "reason": "Raidekaluston alusta sopii kaluston osia käsittelevään nostoon. Selite ei rekonstruoi Njanji-vaunua tai liitä siihen keksittyä bussikoria.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lusaka/assets/e07-lusaka-L2-v1-20261012/kuva.png",
+            "nativeSha256Verified": "ba0b573744006ae6eb5ed90fc3c0a4f71871d696a2e544b8acde8a7a6a45d8f2",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "visualInspection": "Personally viewed native NAS PNG with view_image: Kaksi teräspyörää yhdistävä akseli, alustarakenne ja kiskot. Luontevat metallipinnat ja sora; ei tunnuksia, tekstiä tai ihmisiä.",
+            "captionFi": "Raidekaluston alustan havainnekuva; ei Njanji-kaluston rekonstruktio.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lusaka/sisalto.json",
+            "contentSha256": "b1b740a6eb3da1781346a1286ae4f6fc14cbacf7fdcce07bb9db8ab8a4752ec7",
+            "targetCurrentlyPresent": true,
+            "targetText": "Lusakassa kokeiltiin 1990-luvulla Njanji-lähijunayhteyttä, jonka historiaan kuuluu myös Mulungushi Railway -nimi. Yhteys kulki Chilenjen suunnalta päärautatieaseman kautta George Townshipin ja teollisuusalueen suuntaan. Kalustoa tehtiin liittämällä Tata-bussien koreja kaivosvaunujen alustoihin. Kokonainen bussi ei siis vain kääntynyt tieltä radalle: kori ja sen alla oleva alusta olivat eri osia. Kokeilu päättyi saman vuosikymmenen lopulla, ja myöhemmät elvytyssuunnitelmat ovat erillinen vaihe sen historiassa.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lusaka/faktapohja.md",
+            "factSheetSha256": "ff5a2ba51da3755e09695f74f6045eda1212fe08ebbd4190ddca114d14508350",
+            "topicEvidence": "L2 erottaa bussikorin ja kaivosvaunun alustan.",
+            "sourceEvidence": [
+              {
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lusaka/sisalto.json",
+                "contentSha256": "21f4eb010c31afc76b8f137e649fce7dbcd77707d3a0418635f0cfd81ae84257",
+                "targetJsonPath": "$.kaupunkilehti[1].nostot[1]",
+                "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lusaka/faktapohja.md",
+                "evidenceMode": "Common material/utility object for a source-backed textual subject; no claim about the real named place, item or event",
+                "targetTextAtIssue": "Lusakassa kokeiltiin 1990-luvulla Njanji-lähijunayhteyttä, jonka historiaan kuuluu myös Mulungushi Railway -nimi. Yhteys kulki Chilenjen suunnalta päärautatieaseman kautta George Townshipin ja teollisuusalueen suuntaan. Kalustoa tehtiin liittämällä Tata-bussien koreja kaivosvaunujen alustoihin. Kokonainen bussi ei siis vain kääntynyt tieltä radalle: kori ja sen alla oleva alusta olivat eri osia. Kokeilu päättyi saman vuosikymmenen lopulla, ja myöhemmät elvytyssuunnitelmat ovat erillinen vaihe sen historiassa."
+              }
+            ],
+            "rightsAssessment": "Generalized subject; inspected faces, added text/logo/watermark/frame, named modern artwork and invented city panorama. No adverse observation except those explicitly in verdict.",
+            "scope": "Independent native-image QA only; delivery/R2/export/publication unverified."
+          },
+          "reviewedAt": "2026-10-13T06:07:22.931432+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lusaka/qa.json",
+            "sha256": "54cac9b96ee47f661ad3c5febcd2a6edf22bee9fb9e171a7e654a479ccc8d6ce"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lusaka/illustration-qa-extra.json",
+            "sha256": "8c8a46b1b02dccc5b16fee155e18be8bd8eaaa3502774dbf1e1b9bc7c5f839df"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/lusaka/e07-lusaka-L2-v1-20261012-ba0b57374400.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/lusaka/e07-lusaka-L2-v1-20261012-ba0b57374400.png?t=e2ce78a1192c0986",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/lusaka/e07-lusaka-L2-v1-20261012-ba0b57374400.png",
+        "sha256": "e2ce78a1192c09867fd64b5b5128c428bb33e43d8f212221db9a6f01d079147a",
+        "bytes": 2474831,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e07-lusaka-L2-v1-20261012",
+        "nativeSHA256": "ba0b573744006ae6eb5ed90fc3c0a4f71871d696a2e544b8acde8a7a6a45d8f2",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/lusaka/e07-lusaka-L2-v1-20261012-ba0b57374400.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e07",
+        "city": "lusaka",
+        "slot": "L2",
+        "targetJsonPath": "$.kaupunkilehti[1].nostot[1]",
+        "verifiedAt": "2026-10-13T06:08:27.710062+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/lusaka/e07-lusaka-L2-v1-20261012-ba0b57374400.png",
+        "sha256": "e2ce78a1192c09867fd64b5b5128c428bb33e43d8f212221db9a6f01d079147a",
+        "bytes": 2474831,
+        "SHAReadAt": "2026-10-13T06:07:26.187700+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "ba0b573744006ae6eb5ed90fc3c0a4f71871d696a2e544b8acde8a7a6a45d8f2",
+        "rgbPixelSHA256": "a5993a461885d83f6afd4fc8823e666275273e8f316862fe5674c2674d42c0f5",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "aefa89d9096207ae06b19d800b31df3fcf9ae2d15bdf8e8711d9533923d2d6af",
+      "targetAfterSHA256": "b99a930eadb3600afb54f7645a2cc2a031f8f350028f10a3930ddaab9bc0d573",
+      "contextAfterSHA256": "b99a930eadb3600afb54f7645a2cc2a031f8f350028f10a3930ddaab9bc0d573"
     },
     {
       "era": "e07",
@@ -1332,7 +1810,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lusaka/qa.json",
-        "fileSHA256": "12d947e165ee2ec42c9a50a863239e7d213c64f260b6da547fc998c5b14b7d2e",
+        "fileSHA256": "54cac9b96ee47f661ad3c5febcd2a6edf22bee9fb9e171a7e654a479ccc8d6ce",
         "item": {
           "slot": "PHOTO",
           "targetJsonPath": "$.valokuva",
@@ -1389,11 +1867,11 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lusaka/qa.json",
-            "sha256": "12d947e165ee2ec42c9a50a863239e7d213c64f260b6da547fc998c5b14b7d2e"
+            "sha256": "54cac9b96ee47f661ad3c5febcd2a6edf22bee9fb9e171a7e654a479ccc8d6ce"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lusaka/illustration-qa-extra.json",
-            "sha256": "2c27665ee3e24368834d9433c4e37a42b45d5af9eaff7f0f8a4815a2909c0ac0"
+            "sha256": "8c8a46b1b02dccc5b16fee155e18be8bd8eaaa3502774dbf1e1b9bc7c5f839df"
           }
         ]
       },
@@ -1464,7 +1942,7 @@
         "tiedosto": "Lusaka Jun 1 2023 001.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "b1b740a6eb3da1781346a1286ae4f6fc14cbacf7fdcce07bb9db8ab8a4752ec7",
+      "sourceContentAfterSHA256": "aefa89d9096207ae06b19d800b31df3fcf9ae2d15bdf8e8711d9533923d2d6af",
       "targetAfterSHA256": "36bd9afa9477fc13c8ff505c3822f88db2990cc2d390a45b6e3789677d46e380",
       "contextAfterSHA256": "36bd9afa9477fc13c8ff505c3822f88db2990cc2d390a45b6e3789677d46e380"
     },
@@ -1591,7 +2069,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lusaka/qa.json",
-        "fileSHA256": "12d947e165ee2ec42c9a50a863239e7d213c64f260b6da547fc998c5b14b7d2e",
+        "fileSHA256": "54cac9b96ee47f661ad3c5febcd2a6edf22bee9fb9e171a7e654a479ccc8d6ce",
         "item": {
           "slot": "C1",
           "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
@@ -1643,11 +2121,11 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lusaka/qa.json",
-            "sha256": "12d947e165ee2ec42c9a50a863239e7d213c64f260b6da547fc998c5b14b7d2e"
+            "sha256": "54cac9b96ee47f661ad3c5febcd2a6edf22bee9fb9e171a7e654a479ccc8d6ce"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lusaka/illustration-qa-extra.json",
-            "sha256": "2c27665ee3e24368834d9433c4e37a42b45d5af9eaff7f0f8a4815a2909c0ac0"
+            "sha256": "8c8a46b1b02dccc5b16fee155e18be8bd8eaaa3502774dbf1e1b9bc7c5f839df"
           }
         ]
       },
@@ -1718,9 +2196,353 @@
         "tiedosto": "Taking off from bauleni.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "b1b740a6eb3da1781346a1286ae4f6fc14cbacf7fdcce07bb9db8ab8a4752ec7",
+      "sourceContentAfterSHA256": "aefa89d9096207ae06b19d800b31df3fcf9ae2d15bdf8e8711d9533923d2d6af",
       "targetAfterSHA256": "07f789dac06ff1ce84d28474073535b0958783d643d8a82e5ad1160261722be4",
       "contextAfterSHA256": "07f789dac06ff1ce84d28474073535b0958783d643d8a82e5ad1160261722be4"
+    },
+    {
+      "era": "e07",
+      "city": "lusaka",
+      "slot": "C2",
+      "type": "commons",
+      "assetID": "capital-cc-e07-lusaka-c2-d24f631ace7494d4",
+      "galleryImageID": "capital-cc-e07-lusaka-c2-d24f631ace7494d4",
+      "commonsFile": "Lusaka, capital city of Zambia.jpg",
+      "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[1]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "kansikuvat",
+        1
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e07/lusaka/c2-d24f631ace7494d4064b.jpg",
+        "suora": true,
+        "lahde": "Alex Mukuka, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Lusakan kaupunkikeskustan laaja näkymä vuonna 2008.",
+        "lyhyt": "Lusakan kaupunkikeskustan laaja näkymä vuonna 2008.",
+        "tiedosto": "Lusaka, capital city of Zambia.jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Alex Mukuka, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Lusakan kaupunkikeskustan laaja näkymä vuonna 2008.",
+        "lyhyt": "Lusakan kaupunkikeskustan laaja näkymä vuonna 2008.",
+        "tiedosto": "Lusaka, capital city of Zambia.jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e07/lusaka/c2-d24f631ace7494d4064b.jpg",
+        "suora": true,
+        "lahde": "Alex Mukuka, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Lusakan kaupunkikeskustan laaja näkymä vuonna 2008.",
+        "lyhyt": "Lusakan kaupunkikeskustan laaja näkymä vuonna 2008.",
+        "tiedosto": "Lusaka, capital city of Zambia.jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "d24f631ace7494d4064b2cebb7f35b420de1a7ee7362ddf1b919ec3563a99a1e",
+      "exportSHA256": "d24f631ace7494d4064b2cebb7f35b420de1a7ee7362ddf1b919ec3563a99a1e",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e07/lusaka/c2-d24f631ace7494d4064b.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e07/lusaka/c2-d24f631ace7494d4064b.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/commons-originals/e07/lusaka/c6ca86d220e9ad88bf83dc71d0a1e9281ebbc5551a9f47597d9cc98eb780de42.jpg",
+      "dimensions": [
+        1536,
+        1020
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lusaka/sisalto.json",
+      "sourceContentSHA256": "b1b740a6eb3da1781346a1286ae4f6fc14cbacf7fdcce07bb9db8ab8a4752ec7",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "subjectTitle": "Lusaka",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Alex Mukuka",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Lusaka,_capital_city_of_Zambia.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Lusaka%2C_capital_city_of_Zambia.jpg",
+        "rightsEvidence": {
+          "selection": [
+            "Kuvan Author/Artist-kenttä ja valokuvan oma lisenssimalli tarkistettu tallennetusta Commons-lähteestä; upload-historian nimeä ei käytetä tekijänä. Lisenssiversion linkki on valokuvan lisenssiosassa, ei Commons-sivun yleinen alatunnistelupa.",
+            "Pääaihe on Lusakan laaja katuverkko ja kaupunkikudos. Useat tavalliset toimistorakennukset ovat osia kokonaisnäkymässä, eivät yhden nimetyn rakennuksen tai taideteoksen esittely. Valokuvan kaupallinen CC BY-SA 4.0 -lupa on oma oikeuskerroksensa; taustarakennusten erillistä vapautta ei oleteta. Alkuperäisen tekijän Description nimeää Lusakan; päivämäärä 2.2.2008 säilyy eikä kuvaa kutsuta tuoreeksi.",
+            "Silmin katsottu alkuperäinen: Todellinen laaja korkean kuvauspisteen kaupunkinäkymä: katuja, kattomaisemaa ja useita rakennuksia. Ei tunnistettavia kasvoja, lisättyä kehystä, tekstiä tai vesileimaa. Ei edellisessä Downtown-kuvassa nähtyä erillistä kotkaveistosta pääaiheena."
+          ],
+          "QA": {
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Lusaka,_capital_city_of_Zambia.jpg",
+            "savedSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/6ead6094415e6c2bcc0683ee2569863ca08cc0b72a7bffede4c4c264fa2afe7a.html",
+            "sourceSHA256": "355791e660efc417ff94dd70892a39dec7ee39da2a8f508d95a06f09cd0937d3",
+            "directAuthors": [
+              "Alex Mukuka"
+            ],
+            "directLicenses": [
+              "CC BY-SA 4.0"
+            ],
+            "directRows": {
+              "Date": "2 February 2008, 10:13:15"
+            },
+            "sourceOriginalDimensions": [
+              1536,
+              1020
+            ],
+            "localDimensions": [
+              1536,
+              1020
+            ],
+            "mediaPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lusaka/cc-evidence/meta-06.jpg",
+            "mediaSHA256": "d24f631ace7494d4064b2cebb7f35b420de1a7ee7362ddf1b919ec3563a99a1e",
+            "authorMatches": true,
+            "licenseMatches": true,
+            "dimensionsMatch": true,
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "fullImageViewed": true,
+            "fullNativeImageViewed": true,
+            "personallyViewedByJob27": true,
+            "viewMethod": "view_image original native 1536x1020 plus exact 740x640 nearest-neighbour diagnostic from rect [1260,685,1445,845]",
+            "diagnosticCheckPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lusaka/qa-evidence/C2-targeted-rereview.json",
+            "diagnosticCheckSHA256": "12f804ae991a0f0d7d3ecc933a2493fe798eb2f4c4ba88b696fa35e7589e7d77",
+            "allDiagnosticPixelsMatchOriginal": true,
+            "auditReadByReference": {
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/rights-support/extra-audit/lusaka-c2-audit.json",
+              "sha256": "4121ce562ac7c9f8222b6f31e6b584e15b27dd5f2c51325e5d9a9fa1d7c53826",
+              "scope": "observations only; scout did not approve"
+            },
+            "specificCreativeArtworkIdentified": false,
+            "surfaceMaterialAndFunctionStillUndetermined": true,
+            "previousArtworkHypothesisWithdrawn": true,
+            "legalFopExceptionNotInvoked": true,
+            "previousRightsSupportReference": {
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/rights-support/afrikka/afrikka-rights-lusaka.json",
+              "sha256": "4a84df0515598bd41587402ea83918d3bde0a418782ee718f14008a00584d59d",
+              "viewedImageSHA256": "d24f631ace7494d4064b2cebb7f35b420de1a7ee7362ddf1b919ec3563a99a1e",
+              "conclusion": "unresolved",
+              "readAt": "2026-10-12T20:16:34.165669+00:00",
+              "notNewPersonalImageReview": true,
+              "scope": "same exact photo and specific green framed surface; original-law evidence still in progress"
+            },
+            "currentContentSHA256": "b1b740a6eb3da1781346a1286ae4f6fc14cbacf7fdcce07bb9db8ab8a4752ec7",
+            "targetStillExists": true
+          },
+          "qaReason": "Kohdennettu oma uudelleenkatselu: koko alkuperäinen 1536×1020 ja oikean alakulman alkuperäisiin pikseleihin täsmälleen perustuva 4× lähisuurennos katsottu. Valkoisissa reunoissa näkyy syvyys, varjostus ja liittyminen viereisiin rakennusosiin; vihertävä vino taso on rakennuskokonaisuuden osa. Pinnassa näkyy epäsäännöllisiä laikkuja mutta ei luettavaa tekstiä, logoa, esittävää kuva-aihetta tai yksilöitävää luovaa kuviota. Materiaalia/käyttötarkoitusta ei nimetä varmaksi, eikä väitetä varmaa rapautumista. Aiempi kuvapinta-nimitys ja siihen perustunut erillisen tekijä-/lupaketjun vaatimus olivat liian pitkälle menevä hypoteesi. Hyväksyntä perustuu tämän sijaan kuvan todelliseen laajaan Lusakan katu-/kortteliasetteluun, kuvaajan alkuperäisestä lähteestä varmennettuun Alex Mukuka / CC BY-SA 4.0 -lupaan, todettuihin mittoihin/SHA:han ja omaan havaintoon: ei tunnistettavia kasvoja, lisättyjä tekstejä/vesileimoja/kehyksiä eikä kuvassa erikseen yksilöityä luovaa nykyteosta pääaiheena. Rakennuksen fyysinen 89.5 FM -merkintä on tavallisen kaupunkinäkymän osa, ei mainoskuva/overlay. Vuosi 2008 säilyy kuvatekstissä. Ei uutta blanket-FOP-, PD- tai kaikkia rakennuksia koskevaa oikeusväitettä."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Lusakan kaupunkikeskustan laaja näkymä vuonna 2008.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lusaka/qa.json",
+        "fileSHA256": "54cac9b96ee47f661ad3c5febcd2a6edf22bee9fb9e171a7e654a479ccc8d6ce",
+        "item": {
+          "slot": "C2",
+          "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[1]",
+          "verdict": "accepted",
+          "reason": "Kohdennettu oma uudelleenkatselu: koko alkuperäinen 1536×1020 ja oikean alakulman alkuperäisiin pikseleihin täsmälleen perustuva 4× lähisuurennos katsottu. Valkoisissa reunoissa näkyy syvyys, varjostus ja liittyminen viereisiin rakennusosiin; vihertävä vino taso on rakennuskokonaisuuden osa. Pinnassa näkyy epäsäännöllisiä laikkuja mutta ei luettavaa tekstiä, logoa, esittävää kuva-aihetta tai yksilöitävää luovaa kuviota. Materiaalia/käyttötarkoitusta ei nimetä varmaksi, eikä väitetä varmaa rapautumista. Aiempi kuvapinta-nimitys ja siihen perustunut erillisen tekijä-/lupaketjun vaatimus olivat liian pitkälle menevä hypoteesi. Hyväksyntä perustuu tämän sijaan kuvan todelliseen laajaan Lusakan katu-/kortteliasetteluun, kuvaajan alkuperäisestä lähteestä varmennettuun Alex Mukuka / CC BY-SA 4.0 -lupaan, todettuihin mittoihin/SHA:han ja omaan havaintoon: ei tunnistettavia kasvoja, lisättyjä tekstejä/vesileimoja/kehyksiä eikä kuvassa erikseen yksilöityä luovaa nykyteosta pääaiheena. Rakennuksen fyysinen 89.5 FM -merkintä on tavallisen kaupunkinäkymän osa, ei mainoskuva/overlay. Vuosi 2008 säilyy kuvatekstissä. Ei uutta blanket-FOP-, PD- tai kaikkia rakennuksia koskevaa oikeusväitettä.",
+          "evidence": {
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Lusaka,_capital_city_of_Zambia.jpg",
+            "savedSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/6ead6094415e6c2bcc0683ee2569863ca08cc0b72a7bffede4c4c264fa2afe7a.html",
+            "sourceSHA256": "355791e660efc417ff94dd70892a39dec7ee39da2a8f508d95a06f09cd0937d3",
+            "directAuthors": [
+              "Alex Mukuka"
+            ],
+            "directLicenses": [
+              "CC BY-SA 4.0"
+            ],
+            "directRows": {
+              "Date": "2 February 2008, 10:13:15"
+            },
+            "sourceOriginalDimensions": [
+              1536,
+              1020
+            ],
+            "localDimensions": [
+              1536,
+              1020
+            ],
+            "mediaPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lusaka/cc-evidence/meta-06.jpg",
+            "mediaSHA256": "d24f631ace7494d4064b2cebb7f35b420de1a7ee7362ddf1b919ec3563a99a1e",
+            "authorMatches": true,
+            "licenseMatches": true,
+            "dimensionsMatch": true,
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "fullImageViewed": true,
+            "fullNativeImageViewed": true,
+            "personallyViewedByJob27": true,
+            "viewMethod": "view_image original native 1536x1020 plus exact 740x640 nearest-neighbour diagnostic from rect [1260,685,1445,845]",
+            "diagnosticCheckPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lusaka/qa-evidence/C2-targeted-rereview.json",
+            "diagnosticCheckSHA256": "12f804ae991a0f0d7d3ecc933a2493fe798eb2f4c4ba88b696fa35e7589e7d77",
+            "allDiagnosticPixelsMatchOriginal": true,
+            "auditReadByReference": {
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/rights-support/extra-audit/lusaka-c2-audit.json",
+              "sha256": "4121ce562ac7c9f8222b6f31e6b584e15b27dd5f2c51325e5d9a9fa1d7c53826",
+              "scope": "observations only; scout did not approve"
+            },
+            "specificCreativeArtworkIdentified": false,
+            "surfaceMaterialAndFunctionStillUndetermined": true,
+            "previousArtworkHypothesisWithdrawn": true,
+            "legalFopExceptionNotInvoked": true,
+            "previousRightsSupportReference": {
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/rights-support/afrikka/afrikka-rights-lusaka.json",
+              "sha256": "4a84df0515598bd41587402ea83918d3bde0a418782ee718f14008a00584d59d",
+              "viewedImageSHA256": "d24f631ace7494d4064b2cebb7f35b420de1a7ee7362ddf1b919ec3563a99a1e",
+              "conclusion": "unresolved",
+              "readAt": "2026-10-12T20:16:34.165669+00:00",
+              "notNewPersonalImageReview": true,
+              "scope": "same exact photo and specific green framed surface; original-law evidence still in progress"
+            },
+            "currentContentSHA256": "b1b740a6eb3da1781346a1286ae4f6fc14cbacf7fdcce07bb9db8ab8a4752ec7",
+            "targetStillExists": true
+          },
+          "reviewedAt": "2026-10-12T20:42:36.693500+00:00",
+          "commonsFile": "Lusaka, capital city of Zambia.jpg",
+          "sha256": "d24f631ace7494d4064b2cebb7f35b420de1a7ee7362ddf1b919ec3563a99a1e",
+          "decisionHistory": [
+            {
+              "verdict": "blocked",
+              "reason": "Aito laaja Lusakan kaupunkinäkymä, oikea Alex Mukuka / CC BY-SA 4.0, 1536×1020, vuosi 2008 ja SHA varmennettu. Oma alkuperäiskatselu havaitsee oikeassa alakulmassa lähellä suuren rakennusosan ja sen yläreunassa valkoisella reunuksella ympäröidyn vinoasentoisen vihreän kuvapinnan. Tämän näkyvän pinnan luonne ja teosketju eivät selviä lähdekuvauksesta: ei väitetä varmana suojattua teosta, mutta mahdollista koristelu-/kuva-aihetta ei voi vapauttaa valokuvaajan CC-luvalla. Tarvitaan kyseisen pinnan tunnistus ja soveltuva kaupallinen oikeusnäyttö/projektirajaus, tai toinen aito laaja kaupungin kuva ilman tätä epäselvää lähellä näkyvää pintaa. Muita taustakattoja/toimistorakennuksia ei oleteta automaattisesti suojatuiksi.",
+              "reviewedAt": "2026-10-12T19:22:34.375441+00:00",
+              "sha256": "d24f631ace7494d4064b2cebb7f35b420de1a7ee7362ddf1b919ec3563a99a1e",
+              "evidence": {
+                "sourcePage": "https://commons.wikimedia.org/wiki/File:Lusaka,_capital_city_of_Zambia.jpg",
+                "savedSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/6ead6094415e6c2bcc0683ee2569863ca08cc0b72a7bffede4c4c264fa2afe7a.html",
+                "sourceSHA256": "355791e660efc417ff94dd70892a39dec7ee39da2a8f508d95a06f09cd0937d3",
+                "directAuthors": [
+                  "Alex Mukuka"
+                ],
+                "directLicenses": [
+                  "CC BY-SA 4.0"
+                ],
+                "directRows": {
+                  "Date": "2 February 2008, 10:13:15"
+                },
+                "sourceOriginalDimensions": [
+                  1536,
+                  1020
+                ],
+                "localDimensions": [
+                  1536,
+                  1020
+                ],
+                "mediaPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lusaka/cc-evidence/meta-06.jpg",
+                "mediaSHA256": "d24f631ace7494d4064b2cebb7f35b420de1a7ee7362ddf1b919ec3563a99a1e",
+                "authorMatches": true,
+                "licenseMatches": true,
+                "dimensionsMatch": true,
+                "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+                "sourceDescriptions": [
+                  "English: Zambia's capital, Lusaka town was established in 1935",
+                  "I, the copyright holder of this work, hereby publish it under the following license:"
+                ],
+                "fullImageViewed": true,
+                "fullNativeImageViewed": true,
+                "personallyViewedByJob27": true,
+                "viewMethod": "view_image original; whole frame 1536x1020",
+                "visibleUnresolvedSurface": "bottom-right near building, white-bordered sloping green picture-like surface; source does not identify material/design",
+                "protectedWorkNotEstablished": true,
+                "photoLicenseVerified": true,
+                "currentContentSHA256": "21f4eb010c31afc76b8f137e649fce7dbcd77707d3a0418635f0cfd81ae84257",
+                "targetStillExists": true,
+                "rightsSupportReadByReference": {
+                  "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/rights-support/afrikka/afrikka-rights-lusaka.json",
+                  "sha256": "4a84df0515598bd41587402ea83918d3bde0a418782ee718f14008a00584d59d",
+                  "viewedImageSHA256": "d24f631ace7494d4064b2cebb7f35b420de1a7ee7362ddf1b919ec3563a99a1e",
+                  "conclusion": "unresolved",
+                  "readAt": "2026-10-12T20:16:34.165669+00:00",
+                  "notNewPersonalImageReview": true,
+                  "scope": "same exact photo and specific green framed surface; original-law evidence still in progress"
+                }
+              }
+            }
+          ]
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lusaka/qa.json",
+            "sha256": "54cac9b96ee47f661ad3c5febcd2a6edf22bee9fb9e171a7e654a479ccc8d6ce"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lusaka/illustration-qa-extra.json",
+            "sha256": "8c8a46b1b02dccc5b16fee155e18be8bd8eaaa3502774dbf1e1b9bc7c5f839df"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e07",
+        "city": "lusaka",
+        "slot": "C2",
+        "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[1]",
+        "commonsFile": "Lusaka, capital city of Zambia.jpg",
+        "sha256": "d24f631ace7494d4064b2cebb7f35b420de1a7ee7362ddf1b919ec3563a99a1e",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Lusaka,_capital_city_of_Zambia.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Lusaka%2C_capital_city_of_Zambia.jpg",
+        "author": "Alex Mukuka",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "width": 1536,
+        "height": 1020,
+        "originalSHA256": "d24f631ace7494d4064b2cebb7f35b420de1a7ee7362ddf1b919ec3563a99a1e",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e07/lusaka/c2-d24f631ace7494d4064b.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e07/lusaka/c2-d24f631ace7494d4064b.jpg",
+        "bytes": 325239,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T20:43:15.011205+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Alex Mukuka, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Lusakan kaupunkikeskustan laaja näkymä vuonna 2008.",
+        "lyhyt": "Lusakan kaupunkikeskustan laaja näkymä vuonna 2008.",
+        "tiedosto": "Lusaka, capital city of Zambia.jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "aefa89d9096207ae06b19d800b31df3fcf9ae2d15bdf8e8711d9533923d2d6af",
+      "targetAfterSHA256": "295fcdd25ae1c98971c134f4ebc5b305ec368308cf73b07ea69a88f93640dea1",
+      "contextAfterSHA256": "295fcdd25ae1c98971c134f4ebc5b305ec368308cf73b07ea69a88f93640dea1"
     }
   ],
   "runtimeIntegrationPending": true,

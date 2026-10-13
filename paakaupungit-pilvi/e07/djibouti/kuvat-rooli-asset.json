@@ -8,6 +8,248 @@
     {
       "era": "e07",
       "city": "djibouti",
+      "slot": "O2",
+      "type": "illustration",
+      "assetID": "e07-djibouti-O2-v1-20261012",
+      "galleryImageID": "e07-djibouti-O2-v1-20261012",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[1].kuva",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "matkailijalle",
+        "artikkeli",
+        "jaksot",
+        1,
+        "kuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/djibouti/e07-djibouti-O2-v1-20261012-0c27cf8a08b6.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Paahdetun kalan havainnekuva; ei tietyn ravintolan annos tai saviuunin dokumentointi.",
+        "lyhyt": "Paahdetun kalan havainnekuva; ei tietyn ravintolan annos tai saviuunin dokumentointi."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/djibouti/e07-djibouti-O2-v1-20261012-0c27cf8a08b6.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Paahdetun kalan havainnekuva; ei tietyn ravintolan annos tai saviuunin dokumentointi.",
+        "lyhyt": "Paahdetun kalan havainnekuva; ei tietyn ravintolan annos tai saviuunin dokumentointi."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "0c27cf8a08b6412f352dab20cd6f5f2979b55269fd6f32857e2448afd142f1f8",
+      "exportSHA256": "bd066951fadc27d9c1aebb345181ded5f3434996f1b8b9dafa9b1deb6dd969c6",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/djibouti/e07-djibouti-O2-v1-20261012-0c27cf8a08b6.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/djibouti/e07-djibouti-O2-v1-20261012-0c27cf8a08b6.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/djibouti/e07-djibouti-O2-v1-20261012-0c27cf8a08b6.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/djibouti/sisalto.json",
+      "sourceContentSHA256": "a10e042854b961b11e5672baea00c3cb10a0145958df7f3c58c2cd0ab1ba3840",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "9ff14ee0cb3299f32a1a21e3b29f55ead193e2bf206ada92bde1cd53b5a30358",
+        "subjectTitle": "Ruokapöydässä",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": [
+            "New image of ordinary functional material, natural plant or food; no identified person, artwork, branded design, building or collection object reproduced."
+          ],
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/djibouti/assets/e07-djibouti-O2-v1-20261012/kuva.png",
+            "nativeSha256Verified": "0c27cf8a08b6412f352dab20cd6f5f2979b55269fd6f32857e2448afd142f1f8",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Yksi paistettu kalafilee lautasella, luontevat lihassyyt, paistopinta ja varjot. Ei henkilöitä tai merkintöjä.",
+            "captionFi": "Paahdetun kalan havainnekuva; ei tietyn ravintolan annos tai saviuunin dokumentointi.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/djibouti/sisalto.json",
+            "contentSha256": "36d8c4f2b95860ab922f74635cbe401ba61c0db949586137ce75d2fc89bcd87a",
+            "targetCurrentlyPresent": true,
+            "targetText": "Paahdettu kala kuuluu jemeniittiläiseen ruokaperinteeseen. Kaupungissa on kuvattu saviuunissa valmistamista, mutta menetelmät vaihtelevat. Lahoh on pannukakkua muistuttava leipä, jota syödään myös keittojen ja patojen kanssa. Julkisilla paikoilla pukeudutaan hillitysti.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/djibouti/faktapohja.md",
+            "factSheetSha256": "74a81dbbd2201f08a0b60ffca5bf859978f3db7fb604733904aeca8f8d84db69",
+            "topicEvidence": "O2 mainitsee paahdetun kalan ja menetelmien vaihtelun.",
+            "sourceEvidence": [
+              {
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/djibouti/sisalto.json",
+                "contentSha256": "36d8c4f2b95860ab922f74635cbe401ba61c0db949586137ce75d2fc89bcd87a",
+                "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[1].kuva",
+                "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/djibouti/faktapohja.md",
+                "evidenceMode": "Directly documented textual material or utility subject, generic representation only",
+                "targetTextAtIssue": "Paahdettu kala kuuluu jemeniittiläiseen ruokaperinteeseen. Kaupungissa on kuvattu saviuunissa valmistamista, mutta menetelmät vaihtelevat. Lahoh on pannukakkua muistuttava leipä, jota syödään myös keittojen ja patojen kanssa. Julkisilla paikoilla pukeudutaan hillitysti."
+              }
+            ],
+            "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+            "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+          },
+          "qaReason": "Paistettu kalafilee sopii oppaan kala-aiheeseen. Selite erottaa sen nimetystä ravintola-annoksesta ja saviuunin todistamisesta."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Paahdetun kalan havainnekuva; ei tietyn ravintolan annos tai saviuunin dokumentointi.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/djibouti/illustration-qa-extra.json",
+        "fileSHA256": "f408c6b6f4e996bf31b955bde1b5cc143e55d367f0c00c7670ed1dd783502418",
+        "item": {
+          "slot": "O2",
+          "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[1].kuva",
+          "assetID": "e07-djibouti-O2-v1-20261012",
+          "sha256": "0c27cf8a08b6412f352dab20cd6f5f2979b55269fd6f32857e2448afd142f1f8",
+          "verdict": "accepted",
+          "reason": "Paistettu kalafilee sopii oppaan kala-aiheeseen. Selite erottaa sen nimetystä ravintola-annoksesta ja saviuunin todistamisesta.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/djibouti/assets/e07-djibouti-O2-v1-20261012/kuva.png",
+            "nativeSha256Verified": "0c27cf8a08b6412f352dab20cd6f5f2979b55269fd6f32857e2448afd142f1f8",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Yksi paistettu kalafilee lautasella, luontevat lihassyyt, paistopinta ja varjot. Ei henkilöitä tai merkintöjä.",
+            "captionFi": "Paahdetun kalan havainnekuva; ei tietyn ravintolan annos tai saviuunin dokumentointi.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/djibouti/sisalto.json",
+            "contentSha256": "36d8c4f2b95860ab922f74635cbe401ba61c0db949586137ce75d2fc89bcd87a",
+            "targetCurrentlyPresent": true,
+            "targetText": "Paahdettu kala kuuluu jemeniittiläiseen ruokaperinteeseen. Kaupungissa on kuvattu saviuunissa valmistamista, mutta menetelmät vaihtelevat. Lahoh on pannukakkua muistuttava leipä, jota syödään myös keittojen ja patojen kanssa. Julkisilla paikoilla pukeudutaan hillitysti.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/djibouti/faktapohja.md",
+            "factSheetSha256": "74a81dbbd2201f08a0b60ffca5bf859978f3db7fb604733904aeca8f8d84db69",
+            "topicEvidence": "O2 mainitsee paahdetun kalan ja menetelmien vaihtelun.",
+            "sourceEvidence": [
+              {
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/djibouti/sisalto.json",
+                "contentSha256": "36d8c4f2b95860ab922f74635cbe401ba61c0db949586137ce75d2fc89bcd87a",
+                "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[1].kuva",
+                "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/djibouti/faktapohja.md",
+                "evidenceMode": "Directly documented textual material or utility subject, generic representation only",
+                "targetTextAtIssue": "Paahdettu kala kuuluu jemeniittiläiseen ruokaperinteeseen. Kaupungissa on kuvattu saviuunissa valmistamista, mutta menetelmät vaihtelevat. Lahoh on pannukakkua muistuttava leipä, jota syödään myös keittojen ja patojen kanssa. Julkisilla paikoilla pukeudutaan hillitysti."
+              }
+            ],
+            "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+            "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+          },
+          "reviewedAt": "2026-10-12T19:59:15.546410+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/djibouti/qa.json",
+            "sha256": "144516a327db8f50f6efb62270403e4e8aa7d39d96d77d31279db4913289e5aa"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/djibouti/illustration-qa-extra.json",
+            "sha256": "f408c6b6f4e996bf31b955bde1b5cc143e55d367f0c00c7670ed1dd783502418"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/djibouti/e07-djibouti-O2-v1-20261012-0c27cf8a08b6.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/djibouti/e07-djibouti-O2-v1-20261012-0c27cf8a08b6.png?t=bd066951fadc27d9",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/djibouti/e07-djibouti-O2-v1-20261012-0c27cf8a08b6.png",
+        "sha256": "bd066951fadc27d9c1aebb345181ded5f3434996f1b8b9dafa9b1deb6dd969c6",
+        "bytes": 2169269,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e07-djibouti-O2-v1-20261012",
+        "nativeSHA256": "0c27cf8a08b6412f352dab20cd6f5f2979b55269fd6f32857e2448afd142f1f8",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/djibouti/e07-djibouti-O2-v1-20261012-0c27cf8a08b6.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e07",
+        "city": "djibouti",
+        "slot": "O2",
+        "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[1].kuva",
+        "verifiedAt": "2026-10-12T19:59:35.732733+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/djibouti/e07-djibouti-O2-v1-20261012-0c27cf8a08b6.png",
+        "sha256": "bd066951fadc27d9c1aebb345181ded5f3434996f1b8b9dafa9b1deb6dd969c6",
+        "bytes": 2169269,
+        "SHAReadAt": "2026-10-12T19:59:28.259470+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "0c27cf8a08b6412f352dab20cd6f5f2979b55269fd6f32857e2448afd142f1f8",
+        "rgbPixelSHA256": "20df04c461d664e2a25453d55b32014b8a956c6e80f3835b0359edee117f8272",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "a10e042854b961b11e5672baea00c3cb10a0145958df7f3c58c2cd0ab1ba3840",
+      "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+      "contextAfterSHA256": "9ff14ee0cb3299f32a1a21e3b29f55ead193e2bf206ada92bde1cd53b5a30358"
+    },
+    {
+      "era": "e07",
+      "city": "djibouti",
       "slot": "O3",
       "type": "illustration",
       "assetID": "e07-djibouti-O3-v1-20261012",
@@ -1475,487 +1717,6 @@
     {
       "era": "e07",
       "city": "djibouti",
-      "slot": "L4",
-      "type": "illustration",
-      "assetID": "e07-djibouti-L4-v1-20261012",
-      "galleryImageID": "e07-djibouti-L4-v1-20261012",
-      "commonsFile": null,
-      "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
-      "targetTokens": [
-        "kaupunkilehti",
-        1,
-        "nostot",
-        3
-      ],
-      "operation": "merge-media-fields-preserve-other-content",
-      "CmediaFieldPayload": {
-        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/djibouti/e07-djibouti-L4-v1-20261012-3d24c047812b.png",
-        "suora": true,
-        "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Höyrylaivojen polttoaineena käytetyn hiilen havainnekuva.",
-        "lyhyt": "Höyrylaivojen polttoaineena käytetyn hiilen havainnekuva."
-      },
-      "removeMediaKeys": [
-        "tiedosto"
-      ],
-      "CvalidatorCompatiblePayload": {},
-      "runtimeMediaFieldPayload": {
-        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/djibouti/e07-djibouti-L4-v1-20261012-3d24c047812b.png",
-        "suora": true,
-        "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Höyrylaivojen polttoaineena käytetyn hiilen havainnekuva.",
-        "lyhyt": "Höyrylaivojen polttoaineena käytetyn hiilen havainnekuva."
-      },
-      "runtimeRemoveMediaKeys": [
-        "tiedosto"
-      ],
-      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
-      "nativeSHA256": "3d24c047812bff1c8330243636cdeea524161cd4bbdbf9722b97cce121e72262",
-      "exportSHA256": "46356d03df02755cd5daba0333b881b1af9c04d190c9c3aa18bc89693490a23d",
-      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/djibouti/e07-djibouti-L4-v1-20261012-3d24c047812b.png",
-      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/djibouti/e07-djibouti-L4-v1-20261012-3d24c047812b.png",
-      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/djibouti/e07-djibouti-L4-v1-20261012-3d24c047812b.png",
-      "dimensions": [
-        1536,
-        1024
-      ],
-      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/djibouti/sisalto.json",
-      "sourceContentSHA256": "a10e042854b961b11e5672baea00c3cb10a0145958df7f3c58c2cd0ab1ba3840",
-      "semanticSourceBind": {
-        "targetBeforeSHA256": "5a767c40a7d4173db954923758aae4d727a5397d6809b359d135a56ffccc92ef",
-        "semanticContextSHA256": "5a767c40a7d4173db954923758aae4d727a5397d6809b359d135a56ffccc92ef",
-        "subjectTitle": "Höyrylaivojen hiilestä kontteihin",
-        "targetState": "existing-target"
-      },
-      "attribution": {
-        "author": null,
-        "license": null,
-        "licenseUrl": null,
-        "sourcePage": null,
-        "originalUrl": null,
-        "rightsEvidence": {
-          "production": [
-            "New depiction of common functional shapes or natural materials; no identified artwork, brand design, person or building reproduced."
-          ],
-          "QA": {
-            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/djibouti/assets/e07-djibouti-L4-v1-20261012/kuva.png",
-            "nativeSha256Verified": "3d24c047812bff1c8330243636cdeea524161cd4bbdbf9722b97cce121e72262",
-            "nativeWidth": 1536,
-            "nativeHeight": 1024,
-            "format": "PNG",
-            "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Erikokoisia mustia kiiltäviä hiilikappaleita ja murusia. Luontevat murtopinnat ja kerroksellisuus; ei laivoja, henkilöitä tai tekstiä.",
-            "captionFi": "Höyrylaivojen polttoaineena käytetyn hiilen havainnekuva.",
-            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/djibouti/sisalto.json",
-            "contentSha256": "36d8c4f2b95860ab922f74635cbe401ba61c0db949586137ce75d2fc89bcd87a",
-            "targetCurrentlyPresent": true,
-            "targetText": "Djiboutin suojaisa satama palveli valtamerihöyrylaivoja, jotka täydensivät siellä hiiltä. Yhteys Etiopian sisämaahan oli kaupalle tärkeä, ja radan valmistuminen kasvatti sataman toimintaa. Polttoainetäydennykset lisääntyivät myöhemmin 1900-luvun puolivälissä. Vuosisadan loppupuolella konttiliikenne toi satamaan uuden toimintavaiheen. Nykyinen Doraleh ja vanha Djiboutin satama ovat eri paikkoja. Sataman pitkä käyttö ei siis tarkoita yhtä muuttumatonta laituria: lasti, kuljetustekniikka ja alueen tehtävät ovat vaihtuneet.",
-            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/djibouti/faktapohja.md",
-            "factSheetSha256": "74a81dbbd2201f08a0b60ffca5bf859978f3db7fb604733904aeca8f8d84db69",
-            "topicEvidence": "L4 kertoo höyrylaivojen hiilitäydennyksistä.",
-            "sourceEvidence": [
-              {
-                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/djibouti/sisalto.json",
-                "contentSha256": "36d8c4f2b95860ab922f74635cbe401ba61c0db949586137ce75d2fc89bcd87a",
-                "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
-                "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/djibouti/faktapohja.md",
-                "evidenceMode": "Common material/utility object for a source-backed textual subject; no claim about the real named place, item or event",
-                "targetTextAtIssue": "Djiboutin suojaisa satama palveli valtamerihöyrylaivoja, jotka täydensivät siellä hiiltä. Yhteys Etiopian sisämaahan oli kaupalle tärkeä, ja radan valmistuminen kasvatti sataman toimintaa. Polttoainetäydennykset lisääntyivät myöhemmin 1900-luvun puolivälissä. Vuosisadan loppupuolella konttiliikenne toi satamaan uuden toimintavaiheen. Nykyinen Doraleh ja vanha Djiboutin satama ovat eri paikkoja. Sataman pitkä käyttö ei siis tarkoita yhtä muuttumatonta laituria: lasti, kuljetustekniikka ja alueen tehtävät ovat vaihtuneet."
-              }
-            ],
-            "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
-            "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
-          },
-          "qaReason": "Kivihiilen materiaalikuva vastaa sataman hiilitäydennysaihetta. Selite ei nimeä sitä sataman todelliseksi hiililastiksi."
-        }
-      },
-      "luentaMetadata": {
-        "existingImageLuenta": null,
-        "captionReadingText": "Höyrylaivojen polttoaineena käytetyn hiilen havainnekuva.",
-        "existingArticleAndSectionLuentaPreserved": true,
-        "audioGenerated": false,
-        "audioURL": null,
-        "imageSpecificAudioProvided": false,
-        "reuseAudioAllowedByThisPacket": false
-      },
-      "qaEvidence": {
-        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/djibouti/illustration-qa-extra.json",
-        "fileSHA256": "f408c6b6f4e996bf31b955bde1b5cc143e55d367f0c00c7670ed1dd783502418",
-        "item": {
-          "slot": "L4",
-          "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
-          "assetID": "e07-djibouti-L4-v1-20261012",
-          "sha256": "3d24c047812bff1c8330243636cdeea524161cd4bbdbf9722b97cce121e72262",
-          "verdict": "accepted",
-          "reason": "Kivihiilen materiaalikuva vastaa sataman hiilitäydennysaihetta. Selite ei nimeä sitä sataman todelliseksi hiililastiksi.",
-          "evidence": {
-            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/djibouti/assets/e07-djibouti-L4-v1-20261012/kuva.png",
-            "nativeSha256Verified": "3d24c047812bff1c8330243636cdeea524161cd4bbdbf9722b97cce121e72262",
-            "nativeWidth": 1536,
-            "nativeHeight": 1024,
-            "format": "PNG",
-            "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Erikokoisia mustia kiiltäviä hiilikappaleita ja murusia. Luontevat murtopinnat ja kerroksellisuus; ei laivoja, henkilöitä tai tekstiä.",
-            "captionFi": "Höyrylaivojen polttoaineena käytetyn hiilen havainnekuva.",
-            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/djibouti/sisalto.json",
-            "contentSha256": "36d8c4f2b95860ab922f74635cbe401ba61c0db949586137ce75d2fc89bcd87a",
-            "targetCurrentlyPresent": true,
-            "targetText": "Djiboutin suojaisa satama palveli valtamerihöyrylaivoja, jotka täydensivät siellä hiiltä. Yhteys Etiopian sisämaahan oli kaupalle tärkeä, ja radan valmistuminen kasvatti sataman toimintaa. Polttoainetäydennykset lisääntyivät myöhemmin 1900-luvun puolivälissä. Vuosisadan loppupuolella konttiliikenne toi satamaan uuden toimintavaiheen. Nykyinen Doraleh ja vanha Djiboutin satama ovat eri paikkoja. Sataman pitkä käyttö ei siis tarkoita yhtä muuttumatonta laituria: lasti, kuljetustekniikka ja alueen tehtävät ovat vaihtuneet.",
-            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/djibouti/faktapohja.md",
-            "factSheetSha256": "74a81dbbd2201f08a0b60ffca5bf859978f3db7fb604733904aeca8f8d84db69",
-            "topicEvidence": "L4 kertoo höyrylaivojen hiilitäydennyksistä.",
-            "sourceEvidence": [
-              {
-                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/djibouti/sisalto.json",
-                "contentSha256": "36d8c4f2b95860ab922f74635cbe401ba61c0db949586137ce75d2fc89bcd87a",
-                "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
-                "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/djibouti/faktapohja.md",
-                "evidenceMode": "Common material/utility object for a source-backed textual subject; no claim about the real named place, item or event",
-                "targetTextAtIssue": "Djiboutin suojaisa satama palveli valtamerihöyrylaivoja, jotka täydensivät siellä hiiltä. Yhteys Etiopian sisämaahan oli kaupalle tärkeä, ja radan valmistuminen kasvatti sataman toimintaa. Polttoainetäydennykset lisääntyivät myöhemmin 1900-luvun puolivälissä. Vuosisadan loppupuolella konttiliikenne toi satamaan uuden toimintavaiheen. Nykyinen Doraleh ja vanha Djiboutin satama ovat eri paikkoja. Sataman pitkä käyttö ei siis tarkoita yhtä muuttumatonta laituria: lasti, kuljetustekniikka ja alueen tehtävät ovat vaihtuneet."
-              }
-            ],
-            "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
-            "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
-          },
-          "reviewedAt": "2026-10-12T19:38:52.922906+00:00"
-        },
-        "allSources": [
-          {
-            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/djibouti/qa.json",
-            "sha256": "144516a327db8f50f6efb62270403e4e8aa7d39d96d77d31279db4913289e5aa"
-          },
-          {
-            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/djibouti/illustration-qa-extra.json",
-            "sha256": "f408c6b6f4e996bf31b955bde1b5cc143e55d367f0c00c7670ed1dd783502418"
-          }
-        ]
-      },
-      "R2ByteVerification": {
-        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/djibouti/e07-djibouti-L4-v1-20261012-3d24c047812b.png",
-        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/djibouti/e07-djibouti-L4-v1-20261012-3d24c047812b.png?t=46356d03df02755c",
-        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/djibouti/e07-djibouti-L4-v1-20261012-3d24c047812b.png",
-        "sha256": "46356d03df02755cd5daba0333b881b1af9c04d190c9c3aa18bc89693490a23d",
-        "bytes": 2957445,
-        "http": 200,
-        "mime": "image/png",
-        "cors": "https://matkakirja.app",
-        "cacheBustedPreflightHttp": 404,
-        "cacheBustedReadback": true,
-        "byteExactReadback": true,
-        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
-        "conditionalIfNoneMatch": "*",
-        "s3PutHttp": 200,
-        "assetID": "e07-djibouti-L4-v1-20261012",
-        "nativeSHA256": "3d24c047812bff1c8330243636cdeea524161cd4bbdbf9722b97cce121e72262",
-        "canonicalReadbackByteExact": true,
-        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/djibouti/e07-djibouti-L4-v1-20261012-3d24c047812b.png",
-        "pixelIdenticalToQAAcceptedNative": true,
-        "era": "e07",
-        "city": "djibouti",
-        "slot": "L4",
-        "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
-        "verifiedAt": "2026-10-12T19:39:37.095758+00:00",
-        "ownerAcceptanceVerified": false,
-        "gameIntegrated": false,
-        "galleryVisibleVerified": false
-      },
-      "producerExportProof": null,
-      "technicalExportProof": {
-        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/djibouti/e07-djibouti-L4-v1-20261012-3d24c047812b.png",
-        "sha256": "46356d03df02755cd5daba0333b881b1af9c04d190c9c3aa18bc89693490a23d",
-        "bytes": 2957445,
-        "SHAReadAt": "2026-10-12T19:39:08.438320+00:00",
-        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
-        "width": 1536,
-        "height": 1024,
-        "pixelWidth": 1536,
-        "pixelHeight": 1024,
-        "exifOrientation": 1,
-        "dimensionsBasis": "EXIF-oriented-display",
-        "format": "PNG",
-        "largeOriginalHeaderOnlyRead": false,
-        "nativeSHA256": "3d24c047812bff1c8330243636cdeea524161cd4bbdbf9722b97cce121e72262",
-        "rgbPixelSHA256": "f5f1721b6e94cc2a09cea8477c699bfbe99cc5382671b7a23db75e69bb9b762a",
-        "pixelIdenticalToQAAcceptedNative": true,
-        "sRGBProfileEmbedded": true,
-        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
-      },
-      "priorMediaFields": {
-        "tiedosto": "",
-        "lahde": "",
-        "selite": "",
-        "lyhyt": ""
-      },
-      "preservePreviousMediaObjects": true,
-      "authorization": {
-        "status": "waived-owner-review",
-        "authorizedByOwner": true,
-        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
-        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
-        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
-        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
-        "ownerAcceptanceImplied": false,
-        "QARequired": true,
-        "R2ByteVerificationRequired": true,
-        "galleryBeforeGameRequired": false,
-        "verifiedHumanMessageSource": {
-          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
-          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
-        }
-      },
-      "ownerAcceptanceVerified": false,
-      "gameIntegrated": false,
-      "gamePublicationVerified": false,
-      "inMemoryMergeVerified": true,
-      "CcommonsMetadataBound": false,
-      "roleManifestBound": true,
-      "sourceContentAfterSHA256": "a10e042854b961b11e5672baea00c3cb10a0145958df7f3c58c2cd0ab1ba3840",
-      "targetAfterSHA256": "5a767c40a7d4173db954923758aae4d727a5397d6809b359d135a56ffccc92ef",
-      "contextAfterSHA256": "5a767c40a7d4173db954923758aae4d727a5397d6809b359d135a56ffccc92ef"
-    },
-    {
-      "era": "e07",
-      "city": "djibouti",
-      "slot": "O2",
-      "type": "illustration",
-      "assetID": "e07-djibouti-O2-v1-20261012",
-      "galleryImageID": "e07-djibouti-O2-v1-20261012",
-      "commonsFile": null,
-      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[1].kuva",
-      "targetTokens": [
-        "kaupunkilehti",
-        0,
-        "matkailijalle",
-        "artikkeli",
-        "jaksot",
-        1,
-        "kuva"
-      ],
-      "operation": "merge-media-fields-preserve-other-content",
-      "CmediaFieldPayload": {
-        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/djibouti/e07-djibouti-O2-v1-20261012-0c27cf8a08b6.png",
-        "suora": true,
-        "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Paahdetun kalan havainnekuva; ei tietyn ravintolan annos tai saviuunin dokumentointi.",
-        "lyhyt": "Paahdetun kalan havainnekuva; ei tietyn ravintolan annos tai saviuunin dokumentointi."
-      },
-      "removeMediaKeys": [
-        "tiedosto"
-      ],
-      "CvalidatorCompatiblePayload": {},
-      "runtimeMediaFieldPayload": {
-        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/djibouti/e07-djibouti-O2-v1-20261012-0c27cf8a08b6.png",
-        "suora": true,
-        "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Paahdetun kalan havainnekuva; ei tietyn ravintolan annos tai saviuunin dokumentointi.",
-        "lyhyt": "Paahdetun kalan havainnekuva; ei tietyn ravintolan annos tai saviuunin dokumentointi."
-      },
-      "runtimeRemoveMediaKeys": [
-        "tiedosto"
-      ],
-      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
-      "nativeSHA256": "0c27cf8a08b6412f352dab20cd6f5f2979b55269fd6f32857e2448afd142f1f8",
-      "exportSHA256": "bd066951fadc27d9c1aebb345181ded5f3434996f1b8b9dafa9b1deb6dd969c6",
-      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/djibouti/e07-djibouti-O2-v1-20261012-0c27cf8a08b6.png",
-      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/djibouti/e07-djibouti-O2-v1-20261012-0c27cf8a08b6.png",
-      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/djibouti/e07-djibouti-O2-v1-20261012-0c27cf8a08b6.png",
-      "dimensions": [
-        1536,
-        1024
-      ],
-      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/djibouti/sisalto.json",
-      "sourceContentSHA256": "a10e042854b961b11e5672baea00c3cb10a0145958df7f3c58c2cd0ab1ba3840",
-      "semanticSourceBind": {
-        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "9ff14ee0cb3299f32a1a21e3b29f55ead193e2bf206ada92bde1cd53b5a30358",
-        "subjectTitle": "Ruokapöydässä",
-        "targetState": "existing-target"
-      },
-      "attribution": {
-        "author": null,
-        "license": null,
-        "licenseUrl": null,
-        "sourcePage": null,
-        "originalUrl": null,
-        "rightsEvidence": {
-          "production": [
-            "New image of ordinary functional material, natural plant or food; no identified person, artwork, branded design, building or collection object reproduced."
-          ],
-          "QA": {
-            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/djibouti/assets/e07-djibouti-O2-v1-20261012/kuva.png",
-            "nativeSha256Verified": "0c27cf8a08b6412f352dab20cd6f5f2979b55269fd6f32857e2448afd142f1f8",
-            "nativeWidth": 1536,
-            "nativeHeight": 1024,
-            "format": "PNG",
-            "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Yksi paistettu kalafilee lautasella, luontevat lihassyyt, paistopinta ja varjot. Ei henkilöitä tai merkintöjä.",
-            "captionFi": "Paahdetun kalan havainnekuva; ei tietyn ravintolan annos tai saviuunin dokumentointi.",
-            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/djibouti/sisalto.json",
-            "contentSha256": "36d8c4f2b95860ab922f74635cbe401ba61c0db949586137ce75d2fc89bcd87a",
-            "targetCurrentlyPresent": true,
-            "targetText": "Paahdettu kala kuuluu jemeniittiläiseen ruokaperinteeseen. Kaupungissa on kuvattu saviuunissa valmistamista, mutta menetelmät vaihtelevat. Lahoh on pannukakkua muistuttava leipä, jota syödään myös keittojen ja patojen kanssa. Julkisilla paikoilla pukeudutaan hillitysti.",
-            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/djibouti/faktapohja.md",
-            "factSheetSha256": "74a81dbbd2201f08a0b60ffca5bf859978f3db7fb604733904aeca8f8d84db69",
-            "topicEvidence": "O2 mainitsee paahdetun kalan ja menetelmien vaihtelun.",
-            "sourceEvidence": [
-              {
-                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/djibouti/sisalto.json",
-                "contentSha256": "36d8c4f2b95860ab922f74635cbe401ba61c0db949586137ce75d2fc89bcd87a",
-                "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[1].kuva",
-                "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/djibouti/faktapohja.md",
-                "evidenceMode": "Directly documented textual material or utility subject, generic representation only",
-                "targetTextAtIssue": "Paahdettu kala kuuluu jemeniittiläiseen ruokaperinteeseen. Kaupungissa on kuvattu saviuunissa valmistamista, mutta menetelmät vaihtelevat. Lahoh on pannukakkua muistuttava leipä, jota syödään myös keittojen ja patojen kanssa. Julkisilla paikoilla pukeudutaan hillitysti."
-              }
-            ],
-            "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
-            "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
-          },
-          "qaReason": "Paistettu kalafilee sopii oppaan kala-aiheeseen. Selite erottaa sen nimetystä ravintola-annoksesta ja saviuunin todistamisesta."
-        }
-      },
-      "luentaMetadata": {
-        "existingImageLuenta": null,
-        "captionReadingText": "Paahdetun kalan havainnekuva; ei tietyn ravintolan annos tai saviuunin dokumentointi.",
-        "existingArticleAndSectionLuentaPreserved": true,
-        "audioGenerated": false,
-        "audioURL": null,
-        "imageSpecificAudioProvided": false,
-        "reuseAudioAllowedByThisPacket": false
-      },
-      "qaEvidence": {
-        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/djibouti/illustration-qa-extra.json",
-        "fileSHA256": "f408c6b6f4e996bf31b955bde1b5cc143e55d367f0c00c7670ed1dd783502418",
-        "item": {
-          "slot": "O2",
-          "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[1].kuva",
-          "assetID": "e07-djibouti-O2-v1-20261012",
-          "sha256": "0c27cf8a08b6412f352dab20cd6f5f2979b55269fd6f32857e2448afd142f1f8",
-          "verdict": "accepted",
-          "reason": "Paistettu kalafilee sopii oppaan kala-aiheeseen. Selite erottaa sen nimetystä ravintola-annoksesta ja saviuunin todistamisesta.",
-          "evidence": {
-            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/djibouti/assets/e07-djibouti-O2-v1-20261012/kuva.png",
-            "nativeSha256Verified": "0c27cf8a08b6412f352dab20cd6f5f2979b55269fd6f32857e2448afd142f1f8",
-            "nativeWidth": 1536,
-            "nativeHeight": 1024,
-            "format": "PNG",
-            "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Yksi paistettu kalafilee lautasella, luontevat lihassyyt, paistopinta ja varjot. Ei henkilöitä tai merkintöjä.",
-            "captionFi": "Paahdetun kalan havainnekuva; ei tietyn ravintolan annos tai saviuunin dokumentointi.",
-            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/djibouti/sisalto.json",
-            "contentSha256": "36d8c4f2b95860ab922f74635cbe401ba61c0db949586137ce75d2fc89bcd87a",
-            "targetCurrentlyPresent": true,
-            "targetText": "Paahdettu kala kuuluu jemeniittiläiseen ruokaperinteeseen. Kaupungissa on kuvattu saviuunissa valmistamista, mutta menetelmät vaihtelevat. Lahoh on pannukakkua muistuttava leipä, jota syödään myös keittojen ja patojen kanssa. Julkisilla paikoilla pukeudutaan hillitysti.",
-            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/djibouti/faktapohja.md",
-            "factSheetSha256": "74a81dbbd2201f08a0b60ffca5bf859978f3db7fb604733904aeca8f8d84db69",
-            "topicEvidence": "O2 mainitsee paahdetun kalan ja menetelmien vaihtelun.",
-            "sourceEvidence": [
-              {
-                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/djibouti/sisalto.json",
-                "contentSha256": "36d8c4f2b95860ab922f74635cbe401ba61c0db949586137ce75d2fc89bcd87a",
-                "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[1].kuva",
-                "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/djibouti/faktapohja.md",
-                "evidenceMode": "Directly documented textual material or utility subject, generic representation only",
-                "targetTextAtIssue": "Paahdettu kala kuuluu jemeniittiläiseen ruokaperinteeseen. Kaupungissa on kuvattu saviuunissa valmistamista, mutta menetelmät vaihtelevat. Lahoh on pannukakkua muistuttava leipä, jota syödään myös keittojen ja patojen kanssa. Julkisilla paikoilla pukeudutaan hillitysti."
-              }
-            ],
-            "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
-            "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
-          },
-          "reviewedAt": "2026-10-12T19:59:15.546410+00:00"
-        },
-        "allSources": [
-          {
-            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/djibouti/qa.json",
-            "sha256": "144516a327db8f50f6efb62270403e4e8aa7d39d96d77d31279db4913289e5aa"
-          },
-          {
-            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/djibouti/illustration-qa-extra.json",
-            "sha256": "f408c6b6f4e996bf31b955bde1b5cc143e55d367f0c00c7670ed1dd783502418"
-          }
-        ]
-      },
-      "R2ByteVerification": {
-        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/djibouti/e07-djibouti-O2-v1-20261012-0c27cf8a08b6.png",
-        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/djibouti/e07-djibouti-O2-v1-20261012-0c27cf8a08b6.png?t=bd066951fadc27d9",
-        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/djibouti/e07-djibouti-O2-v1-20261012-0c27cf8a08b6.png",
-        "sha256": "bd066951fadc27d9c1aebb345181ded5f3434996f1b8b9dafa9b1deb6dd969c6",
-        "bytes": 2169269,
-        "http": 200,
-        "mime": "image/png",
-        "cors": "https://matkakirja.app",
-        "cacheBustedPreflightHttp": 404,
-        "cacheBustedReadback": true,
-        "byteExactReadback": true,
-        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
-        "conditionalIfNoneMatch": "*",
-        "s3PutHttp": 200,
-        "assetID": "e07-djibouti-O2-v1-20261012",
-        "nativeSHA256": "0c27cf8a08b6412f352dab20cd6f5f2979b55269fd6f32857e2448afd142f1f8",
-        "canonicalReadbackByteExact": true,
-        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/djibouti/e07-djibouti-O2-v1-20261012-0c27cf8a08b6.png",
-        "pixelIdenticalToQAAcceptedNative": true,
-        "era": "e07",
-        "city": "djibouti",
-        "slot": "O2",
-        "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[1].kuva",
-        "verifiedAt": "2026-10-12T19:59:35.732733+00:00",
-        "ownerAcceptanceVerified": false,
-        "gameIntegrated": false,
-        "galleryVisibleVerified": false
-      },
-      "producerExportProof": null,
-      "technicalExportProof": {
-        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/djibouti/e07-djibouti-O2-v1-20261012-0c27cf8a08b6.png",
-        "sha256": "bd066951fadc27d9c1aebb345181ded5f3434996f1b8b9dafa9b1deb6dd969c6",
-        "bytes": 2169269,
-        "SHAReadAt": "2026-10-12T19:59:28.259470+00:00",
-        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
-        "width": 1536,
-        "height": 1024,
-        "pixelWidth": 1536,
-        "pixelHeight": 1024,
-        "exifOrientation": 1,
-        "dimensionsBasis": "EXIF-oriented-display",
-        "format": "PNG",
-        "largeOriginalHeaderOnlyRead": false,
-        "nativeSHA256": "0c27cf8a08b6412f352dab20cd6f5f2979b55269fd6f32857e2448afd142f1f8",
-        "rgbPixelSHA256": "20df04c461d664e2a25453d55b32014b8a956c6e80f3835b0359edee117f8272",
-        "pixelIdenticalToQAAcceptedNative": true,
-        "sRGBProfileEmbedded": true,
-        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
-      },
-      "priorMediaFields": {
-        "tiedosto": "",
-        "lahde": "",
-        "selite": "",
-        "lyhyt": ""
-      },
-      "preservePreviousMediaObjects": true,
-      "authorization": {
-        "status": "waived-owner-review",
-        "authorizedByOwner": true,
-        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
-        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
-        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
-        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
-        "ownerAcceptanceImplied": false,
-        "QARequired": true,
-        "R2ByteVerificationRequired": true,
-        "galleryBeforeGameRequired": false,
-        "verifiedHumanMessageSource": {
-          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
-          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
-        }
-      },
-      "ownerAcceptanceVerified": false,
-      "gameIntegrated": false,
-      "gamePublicationVerified": false,
-      "inMemoryMergeVerified": true,
-      "CcommonsMetadataBound": false,
-      "roleManifestBound": true,
-      "sourceContentAfterSHA256": "a10e042854b961b11e5672baea00c3cb10a0145958df7f3c58c2cd0ab1ba3840",
-      "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "9ff14ee0cb3299f32a1a21e3b29f55ead193e2bf206ada92bde1cd53b5a30358"
-    },
-    {
-      "era": "e07",
-      "city": "djibouti",
       "slot": "L3",
       "type": "illustration",
       "assetID": "e07-djibouti-L3-v1-20261012",
@@ -2191,6 +1952,245 @@
       "sourceContentAfterSHA256": "a10e042854b961b11e5672baea00c3cb10a0145958df7f3c58c2cd0ab1ba3840",
       "targetAfterSHA256": "7582dfd410ed859d126ddc7b3a5fa99d8d0909611157899db1b372e9d35caf8a",
       "contextAfterSHA256": "7582dfd410ed859d126ddc7b3a5fa99d8d0909611157899db1b372e9d35caf8a"
+    },
+    {
+      "era": "e07",
+      "city": "djibouti",
+      "slot": "L4",
+      "type": "illustration",
+      "assetID": "e07-djibouti-L4-v1-20261012",
+      "galleryImageID": "e07-djibouti-L4-v1-20261012",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
+      "targetTokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        3
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/djibouti/e07-djibouti-L4-v1-20261012-3d24c047812b.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Höyrylaivojen polttoaineena käytetyn hiilen havainnekuva.",
+        "lyhyt": "Höyrylaivojen polttoaineena käytetyn hiilen havainnekuva."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/djibouti/e07-djibouti-L4-v1-20261012-3d24c047812b.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Höyrylaivojen polttoaineena käytetyn hiilen havainnekuva.",
+        "lyhyt": "Höyrylaivojen polttoaineena käytetyn hiilen havainnekuva."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "3d24c047812bff1c8330243636cdeea524161cd4bbdbf9722b97cce121e72262",
+      "exportSHA256": "46356d03df02755cd5daba0333b881b1af9c04d190c9c3aa18bc89693490a23d",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/djibouti/e07-djibouti-L4-v1-20261012-3d24c047812b.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/djibouti/e07-djibouti-L4-v1-20261012-3d24c047812b.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/djibouti/e07-djibouti-L4-v1-20261012-3d24c047812b.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/djibouti/sisalto.json",
+      "sourceContentSHA256": "a10e042854b961b11e5672baea00c3cb10a0145958df7f3c58c2cd0ab1ba3840",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "5a767c40a7d4173db954923758aae4d727a5397d6809b359d135a56ffccc92ef",
+        "semanticContextSHA256": "5a767c40a7d4173db954923758aae4d727a5397d6809b359d135a56ffccc92ef",
+        "subjectTitle": "Höyrylaivojen hiilestä kontteihin",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": [
+            "New depiction of common functional shapes or natural materials; no identified artwork, brand design, person or building reproduced."
+          ],
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/djibouti/assets/e07-djibouti-L4-v1-20261012/kuva.png",
+            "nativeSha256Verified": "3d24c047812bff1c8330243636cdeea524161cd4bbdbf9722b97cce121e72262",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Erikokoisia mustia kiiltäviä hiilikappaleita ja murusia. Luontevat murtopinnat ja kerroksellisuus; ei laivoja, henkilöitä tai tekstiä.",
+            "captionFi": "Höyrylaivojen polttoaineena käytetyn hiilen havainnekuva.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/djibouti/sisalto.json",
+            "contentSha256": "36d8c4f2b95860ab922f74635cbe401ba61c0db949586137ce75d2fc89bcd87a",
+            "targetCurrentlyPresent": true,
+            "targetText": "Djiboutin suojaisa satama palveli valtamerihöyrylaivoja, jotka täydensivät siellä hiiltä. Yhteys Etiopian sisämaahan oli kaupalle tärkeä, ja radan valmistuminen kasvatti sataman toimintaa. Polttoainetäydennykset lisääntyivät myöhemmin 1900-luvun puolivälissä. Vuosisadan loppupuolella konttiliikenne toi satamaan uuden toimintavaiheen. Nykyinen Doraleh ja vanha Djiboutin satama ovat eri paikkoja. Sataman pitkä käyttö ei siis tarkoita yhtä muuttumatonta laituria: lasti, kuljetustekniikka ja alueen tehtävät ovat vaihtuneet.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/djibouti/faktapohja.md",
+            "factSheetSha256": "74a81dbbd2201f08a0b60ffca5bf859978f3db7fb604733904aeca8f8d84db69",
+            "topicEvidence": "L4 kertoo höyrylaivojen hiilitäydennyksistä.",
+            "sourceEvidence": [
+              {
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/djibouti/sisalto.json",
+                "contentSha256": "36d8c4f2b95860ab922f74635cbe401ba61c0db949586137ce75d2fc89bcd87a",
+                "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
+                "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/djibouti/faktapohja.md",
+                "evidenceMode": "Common material/utility object for a source-backed textual subject; no claim about the real named place, item or event",
+                "targetTextAtIssue": "Djiboutin suojaisa satama palveli valtamerihöyrylaivoja, jotka täydensivät siellä hiiltä. Yhteys Etiopian sisämaahan oli kaupalle tärkeä, ja radan valmistuminen kasvatti sataman toimintaa. Polttoainetäydennykset lisääntyivät myöhemmin 1900-luvun puolivälissä. Vuosisadan loppupuolella konttiliikenne toi satamaan uuden toimintavaiheen. Nykyinen Doraleh ja vanha Djiboutin satama ovat eri paikkoja. Sataman pitkä käyttö ei siis tarkoita yhtä muuttumatonta laituria: lasti, kuljetustekniikka ja alueen tehtävät ovat vaihtuneet."
+              }
+            ],
+            "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+            "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+          },
+          "qaReason": "Kivihiilen materiaalikuva vastaa sataman hiilitäydennysaihetta. Selite ei nimeä sitä sataman todelliseksi hiililastiksi."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Höyrylaivojen polttoaineena käytetyn hiilen havainnekuva.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/djibouti/illustration-qa-extra.json",
+        "fileSHA256": "f408c6b6f4e996bf31b955bde1b5cc143e55d367f0c00c7670ed1dd783502418",
+        "item": {
+          "slot": "L4",
+          "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
+          "assetID": "e07-djibouti-L4-v1-20261012",
+          "sha256": "3d24c047812bff1c8330243636cdeea524161cd4bbdbf9722b97cce121e72262",
+          "verdict": "accepted",
+          "reason": "Kivihiilen materiaalikuva vastaa sataman hiilitäydennysaihetta. Selite ei nimeä sitä sataman todelliseksi hiililastiksi.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/djibouti/assets/e07-djibouti-L4-v1-20261012/kuva.png",
+            "nativeSha256Verified": "3d24c047812bff1c8330243636cdeea524161cd4bbdbf9722b97cce121e72262",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Erikokoisia mustia kiiltäviä hiilikappaleita ja murusia. Luontevat murtopinnat ja kerroksellisuus; ei laivoja, henkilöitä tai tekstiä.",
+            "captionFi": "Höyrylaivojen polttoaineena käytetyn hiilen havainnekuva.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/djibouti/sisalto.json",
+            "contentSha256": "36d8c4f2b95860ab922f74635cbe401ba61c0db949586137ce75d2fc89bcd87a",
+            "targetCurrentlyPresent": true,
+            "targetText": "Djiboutin suojaisa satama palveli valtamerihöyrylaivoja, jotka täydensivät siellä hiiltä. Yhteys Etiopian sisämaahan oli kaupalle tärkeä, ja radan valmistuminen kasvatti sataman toimintaa. Polttoainetäydennykset lisääntyivät myöhemmin 1900-luvun puolivälissä. Vuosisadan loppupuolella konttiliikenne toi satamaan uuden toimintavaiheen. Nykyinen Doraleh ja vanha Djiboutin satama ovat eri paikkoja. Sataman pitkä käyttö ei siis tarkoita yhtä muuttumatonta laituria: lasti, kuljetustekniikka ja alueen tehtävät ovat vaihtuneet.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/djibouti/faktapohja.md",
+            "factSheetSha256": "74a81dbbd2201f08a0b60ffca5bf859978f3db7fb604733904aeca8f8d84db69",
+            "topicEvidence": "L4 kertoo höyrylaivojen hiilitäydennyksistä.",
+            "sourceEvidence": [
+              {
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/djibouti/sisalto.json",
+                "contentSha256": "36d8c4f2b95860ab922f74635cbe401ba61c0db949586137ce75d2fc89bcd87a",
+                "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
+                "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/djibouti/faktapohja.md",
+                "evidenceMode": "Common material/utility object for a source-backed textual subject; no claim about the real named place, item or event",
+                "targetTextAtIssue": "Djiboutin suojaisa satama palveli valtamerihöyrylaivoja, jotka täydensivät siellä hiiltä. Yhteys Etiopian sisämaahan oli kaupalle tärkeä, ja radan valmistuminen kasvatti sataman toimintaa. Polttoainetäydennykset lisääntyivät myöhemmin 1900-luvun puolivälissä. Vuosisadan loppupuolella konttiliikenne toi satamaan uuden toimintavaiheen. Nykyinen Doraleh ja vanha Djiboutin satama ovat eri paikkoja. Sataman pitkä käyttö ei siis tarkoita yhtä muuttumatonta laituria: lasti, kuljetustekniikka ja alueen tehtävät ovat vaihtuneet."
+              }
+            ],
+            "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+            "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+          },
+          "reviewedAt": "2026-10-12T19:38:52.922906+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/djibouti/qa.json",
+            "sha256": "144516a327db8f50f6efb62270403e4e8aa7d39d96d77d31279db4913289e5aa"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/djibouti/illustration-qa-extra.json",
+            "sha256": "f408c6b6f4e996bf31b955bde1b5cc143e55d367f0c00c7670ed1dd783502418"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/djibouti/e07-djibouti-L4-v1-20261012-3d24c047812b.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/djibouti/e07-djibouti-L4-v1-20261012-3d24c047812b.png?t=46356d03df02755c",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/djibouti/e07-djibouti-L4-v1-20261012-3d24c047812b.png",
+        "sha256": "46356d03df02755cd5daba0333b881b1af9c04d190c9c3aa18bc89693490a23d",
+        "bytes": 2957445,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e07-djibouti-L4-v1-20261012",
+        "nativeSHA256": "3d24c047812bff1c8330243636cdeea524161cd4bbdbf9722b97cce121e72262",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/djibouti/e07-djibouti-L4-v1-20261012-3d24c047812b.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e07",
+        "city": "djibouti",
+        "slot": "L4",
+        "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
+        "verifiedAt": "2026-10-12T19:39:37.095758+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/djibouti/e07-djibouti-L4-v1-20261012-3d24c047812b.png",
+        "sha256": "46356d03df02755cd5daba0333b881b1af9c04d190c9c3aa18bc89693490a23d",
+        "bytes": 2957445,
+        "SHAReadAt": "2026-10-12T19:39:08.438320+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "3d24c047812bff1c8330243636cdeea524161cd4bbdbf9722b97cce121e72262",
+        "rgbPixelSHA256": "f5f1721b6e94cc2a09cea8477c699bfbe99cc5382671b7a23db75e69bb9b762a",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "a10e042854b961b11e5672baea00c3cb10a0145958df7f3c58c2cd0ab1ba3840",
+      "targetAfterSHA256": "5a767c40a7d4173db954923758aae4d727a5397d6809b359d135a56ffccc92ef",
+      "contextAfterSHA256": "5a767c40a7d4173db954923758aae4d727a5397d6809b359d135a56ffccc92ef"
     },
     {
       "era": "e07",

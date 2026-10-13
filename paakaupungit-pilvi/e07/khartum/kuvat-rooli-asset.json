@@ -146,7 +146,7 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/khartum/illustration-qa-extra.json",
-            "sha256": "d6cb0f264fed57c081d58d5703785299fb2a12d44105c1c0997e94f8a37b0622"
+            "sha256": "2e1b93dd3b614e18186e427388a7b758269e2127ce58062d55151fda7e661241"
           }
         ]
       },
@@ -370,7 +370,7 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/khartum/illustration-qa-extra.json",
-            "sha256": "d6cb0f264fed57c081d58d5703785299fb2a12d44105c1c0997e94f8a37b0622"
+            "sha256": "2e1b93dd3b614e18186e427388a7b758269e2127ce58062d55151fda7e661241"
           }
         ]
       },
@@ -564,7 +564,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/khartum/illustration-qa-extra.json",
-        "fileSHA256": "d6cb0f264fed57c081d58d5703785299fb2a12d44105c1c0997e94f8a37b0622",
+        "fileSHA256": "2e1b93dd3b614e18186e427388a7b758269e2127ce58062d55151fda7e661241",
         "item": {
           "slot": "K3",
           "targetJsonPath": "$.kaupunkilehti[0].nostot[2]",
@@ -609,7 +609,7 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/khartum/illustration-qa-extra.json",
-            "sha256": "d6cb0f264fed57c081d58d5703785299fb2a12d44105c1c0997e94f8a37b0622"
+            "sha256": "2e1b93dd3b614e18186e427388a7b758269e2127ce58062d55151fda7e661241"
           }
         ]
       },
@@ -840,7 +840,7 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/khartum/illustration-qa-extra.json",
-            "sha256": "d6cb0f264fed57c081d58d5703785299fb2a12d44105c1c0997e94f8a37b0622"
+            "sha256": "2e1b93dd3b614e18186e427388a7b758269e2127ce58062d55151fda7e661241"
           }
         ]
       },
@@ -1065,7 +1065,7 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/khartum/illustration-qa-extra.json",
-            "sha256": "d6cb0f264fed57c081d58d5703785299fb2a12d44105c1c0997e94f8a37b0622"
+            "sha256": "2e1b93dd3b614e18186e427388a7b758269e2127ce58062d55151fda7e661241"
           }
         ]
       },
@@ -1303,7 +1303,7 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/khartum/illustration-qa-extra.json",
-            "sha256": "d6cb0f264fed57c081d58d5703785299fb2a12d44105c1c0997e94f8a37b0622"
+            "sha256": "2e1b93dd3b614e18186e427388a7b758269e2127ce58062d55151fda7e661241"
           }
         ]
       },
@@ -1389,6 +1389,248 @@
       "sourceContentAfterSHA256": "f8f52cd4508afc665d78e8c25994c6041a919a3e5f7312f0dd6c5c728e412a8d",
       "targetAfterSHA256": "1dbc84c2e5d9459355cc2f7c3a99f57ec86b19ae026ab51e99038605954a760a",
       "contextAfterSHA256": "1dbc84c2e5d9459355cc2f7c3a99f57ec86b19ae026ab51e99038605954a760a"
+    },
+    {
+      "era": "e07",
+      "city": "khartum",
+      "slot": "O3",
+      "type": "illustration",
+      "assetID": "e07-khartum-O3-v1-20261012",
+      "galleryImageID": "e07-khartum-O3-v1-20261012",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[2].kuva",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "matkailijalle",
+        "artikkeli",
+        "jaksot",
+        2,
+        "kuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/khartum/e07-khartum-O3-v1-20261012-06c5ffc6a0bf.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Kasvikokoelman valmistelun havainnekuva; ei Khartumin kasvitieteellisen puutarhan näyte.",
+        "lyhyt": "Kasvikokoelman valmistelun havainnekuva; ei Khartumin kasvitieteellisen puutarhan näyte."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/khartum/e07-khartum-O3-v1-20261012-06c5ffc6a0bf.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Kasvikokoelman valmistelun havainnekuva; ei Khartumin kasvitieteellisen puutarhan näyte.",
+        "lyhyt": "Kasvikokoelman valmistelun havainnekuva; ei Khartumin kasvitieteellisen puutarhan näyte."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "06c5ffc6a0bfa20222b20cae2dc75e7d24b493e6189bf32d9621e2926ddd1627",
+      "exportSHA256": "9c1b6f126f55fc2566d7aeac254b2a1fd8895b582c8f3e18b627d7a6b7f29578",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/khartum/e07-khartum-O3-v1-20261012-06c5ffc6a0bf.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/khartum/e07-khartum-O3-v1-20261012-06c5ffc6a0bf.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/khartum/e07-khartum-O3-v1-20261012-06c5ffc6a0bf.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/khartum/sisalto.json",
+      "sourceContentSHA256": "f8f52cd4508afc665d78e8c25994c6041a919a3e5f7312f0dd6c5c728e412a8d",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "7721b46010605111abdf659f9d59aeaeccee08848def3d4f5f350e453d6c5af5",
+        "subjectTitle": "Saari, kasvit ja arkeologinen muisti",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": [
+            "New image of ordinary functional material, natural plant or food; no identified person, artwork, branded design, building or collection object reproduced."
+          ],
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/khartum/assets/e07-khartum-O3-v1-20261012/kuva.png",
+            "nativeSha256Verified": "06c5ffc6a0bfa20222b20cae2dc75e7d24b493e6189bf32d9621e2926ddd1627",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "visualInspection": "Personally viewed native NAS PNG with view_image: Paperilla kuivattu lehtevä verso ja kukintomaisia osia. Lehtisuonet ja haurastuneet reunat luonnollisia, ei etikettejä tai henkilöitä.",
+            "captionFi": "Kasvikokoelman valmistelun havainnekuva; ei Khartumin kasvitieteellisen puutarhan näyte.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/khartum/sisalto.json",
+            "contentSha256": "f8f52cd4508afc665d78e8c25994c6041a919a3e5f7312f0dd6c5c728e412a8d",
+            "targetCurrentlyPresent": true,
+            "targetText": "Tutin aiempi viljelyhistoria kertoo ruoantuotannosta kaupunkien välissä. Kasvitieteellinen puutarha yhdisti kasvikokoelman tutkimukseen. Kansallismuseon puutarhaan siirrettiin muinaisia rakennuksia. Nykyinen matkustusrajoitus estää niiden suosittelemisen retkikohteiksi.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/khartum/faktapohja.md",
+            "factSheetSha256": "faf18807de5816ebc74b76fb1f4dcce0d7b0c490fb28aa7763edfea393626ce0",
+            "topicEvidence": "O3 kertoo kasvikokoelman ja tutkimuksen yhteydestä.",
+            "sourceEvidence": [
+              {
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/khartum/sisalto.json",
+                "contentSha256": "ab8c22ac5d61b12a81dd05c3565ec3fd5796eb7bf9144cf3432f302c4eb146e9",
+                "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[2].kuva",
+                "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/khartum/faktapohja.md",
+                "evidenceMode": "Directly documented textual material or utility subject, generic representation only",
+                "targetTextAtIssue": "Tutin aiempi viljelyhistoria kertoo ruoantuotannosta kaupunkien välissä. Kasvitieteellinen puutarha yhdisti kasvikokoelman tutkimukseen. Kansallismuseon puutarhaan siirrettiin muinaisia rakennuksia. Nykyinen matkustusrajoitus estää niiden suosittelemisen retkikohteiksi."
+              }
+            ],
+            "rightsAssessment": "Generalized subject; inspected faces, added text/logo/watermark/frame, named modern artwork and invented city panorama. No adverse observation except those explicitly in verdict.",
+            "scope": "Independent native-image QA only; delivery/R2/export/publication unverified."
+          },
+          "qaReason": "Kuivattu kasviaineisto sopii kasvikokoelman tutkimusaiheeseen. Selite erottaa sen Khartumin todellisesta puutarhanäytteestä."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Kasvikokoelman valmistelun havainnekuva; ei Khartumin kasvitieteellisen puutarhan näyte.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/khartum/illustration-qa-extra.json",
+        "fileSHA256": "2e1b93dd3b614e18186e427388a7b758269e2127ce58062d55151fda7e661241",
+        "item": {
+          "slot": "O3",
+          "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[2].kuva",
+          "assetID": "e07-khartum-O3-v1-20261012",
+          "sha256": "06c5ffc6a0bfa20222b20cae2dc75e7d24b493e6189bf32d9621e2926ddd1627",
+          "verdict": "accepted",
+          "reason": "Kuivattu kasviaineisto sopii kasvikokoelman tutkimusaiheeseen. Selite erottaa sen Khartumin todellisesta puutarhanäytteestä.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/khartum/assets/e07-khartum-O3-v1-20261012/kuva.png",
+            "nativeSha256Verified": "06c5ffc6a0bfa20222b20cae2dc75e7d24b493e6189bf32d9621e2926ddd1627",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "visualInspection": "Personally viewed native NAS PNG with view_image: Paperilla kuivattu lehtevä verso ja kukintomaisia osia. Lehtisuonet ja haurastuneet reunat luonnollisia, ei etikettejä tai henkilöitä.",
+            "captionFi": "Kasvikokoelman valmistelun havainnekuva; ei Khartumin kasvitieteellisen puutarhan näyte.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/khartum/sisalto.json",
+            "contentSha256": "f8f52cd4508afc665d78e8c25994c6041a919a3e5f7312f0dd6c5c728e412a8d",
+            "targetCurrentlyPresent": true,
+            "targetText": "Tutin aiempi viljelyhistoria kertoo ruoantuotannosta kaupunkien välissä. Kasvitieteellinen puutarha yhdisti kasvikokoelman tutkimukseen. Kansallismuseon puutarhaan siirrettiin muinaisia rakennuksia. Nykyinen matkustusrajoitus estää niiden suosittelemisen retkikohteiksi.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/khartum/faktapohja.md",
+            "factSheetSha256": "faf18807de5816ebc74b76fb1f4dcce0d7b0c490fb28aa7763edfea393626ce0",
+            "topicEvidence": "O3 kertoo kasvikokoelman ja tutkimuksen yhteydestä.",
+            "sourceEvidence": [
+              {
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/khartum/sisalto.json",
+                "contentSha256": "ab8c22ac5d61b12a81dd05c3565ec3fd5796eb7bf9144cf3432f302c4eb146e9",
+                "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[2].kuva",
+                "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/khartum/faktapohja.md",
+                "evidenceMode": "Directly documented textual material or utility subject, generic representation only",
+                "targetTextAtIssue": "Tutin aiempi viljelyhistoria kertoo ruoantuotannosta kaupunkien välissä. Kasvitieteellinen puutarha yhdisti kasvikokoelman tutkimukseen. Kansallismuseon puutarhaan siirrettiin muinaisia rakennuksia. Nykyinen matkustusrajoitus estää niiden suosittelemisen retkikohteiksi."
+              }
+            ],
+            "rightsAssessment": "Generalized subject; inspected faces, added text/logo/watermark/frame, named modern artwork and invented city panorama. No adverse observation except those explicitly in verdict.",
+            "scope": "Independent native-image QA only; delivery/R2/export/publication unverified."
+          },
+          "reviewedAt": "2026-10-13T06:07:23.037484+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/khartum/qa.json",
+            "sha256": "28fba4cfbb9fd72fdac1f8730a89ae13a815de9f99f0f97bf6781719b09fe4b5"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/khartum/illustration-qa-extra.json",
+            "sha256": "2e1b93dd3b614e18186e427388a7b758269e2127ce58062d55151fda7e661241"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/khartum/e07-khartum-O3-v1-20261012-06c5ffc6a0bf.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/khartum/e07-khartum-O3-v1-20261012-06c5ffc6a0bf.png?t=9c1b6f126f55fc25",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/khartum/e07-khartum-O3-v1-20261012-06c5ffc6a0bf.png",
+        "sha256": "9c1b6f126f55fc2566d7aeac254b2a1fd8895b582c8f3e18b627d7a6b7f29578",
+        "bytes": 2423862,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e07-khartum-O3-v1-20261012",
+        "nativeSHA256": "06c5ffc6a0bfa20222b20cae2dc75e7d24b493e6189bf32d9621e2926ddd1627",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/khartum/e07-khartum-O3-v1-20261012-06c5ffc6a0bf.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e07",
+        "city": "khartum",
+        "slot": "O3",
+        "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[2].kuva",
+        "verifiedAt": "2026-10-13T06:08:26.450683+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/khartum/e07-khartum-O3-v1-20261012-06c5ffc6a0bf.png",
+        "sha256": "9c1b6f126f55fc2566d7aeac254b2a1fd8895b582c8f3e18b627d7a6b7f29578",
+        "bytes": 2423862,
+        "SHAReadAt": "2026-10-13T06:07:25.991113+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "06c5ffc6a0bfa20222b20cae2dc75e7d24b493e6189bf32d9621e2926ddd1627",
+        "rgbPixelSHA256": "55993042f6a4547fb7b5fbec254a1c4debd8b5e68874a05d5e8f816d55288381",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "f8f52cd4508afc665d78e8c25994c6041a919a3e5f7312f0dd6c5c728e412a8d",
+      "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+      "contextAfterSHA256": "7721b46010605111abdf659f9d59aeaeccee08848def3d4f5f350e453d6c5af5"
     },
     {
       "era": "e07",
@@ -1522,7 +1764,7 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/khartum/illustration-qa-extra.json",
-            "sha256": "d6cb0f264fed57c081d58d5703785299fb2a12d44105c1c0997e94f8a37b0622"
+            "sha256": "2e1b93dd3b614e18186e427388a7b758269e2127ce58062d55151fda7e661241"
           }
         ]
       },
@@ -1773,7 +2015,7 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/khartum/illustration-qa-extra.json",
-            "sha256": "d6cb0f264fed57c081d58d5703785299fb2a12d44105c1c0997e94f8a37b0622"
+            "sha256": "2e1b93dd3b614e18186e427388a7b758269e2127ce58062d55151fda7e661241"
           }
         ]
       },
@@ -2021,7 +2263,7 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/khartum/illustration-qa-extra.json",
-            "sha256": "d6cb0f264fed57c081d58d5703785299fb2a12d44105c1c0997e94f8a37b0622"
+            "sha256": "2e1b93dd3b614e18186e427388a7b758269e2127ce58062d55151fda7e661241"
           }
         ]
       },
@@ -2269,7 +2511,7 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/khartum/illustration-qa-extra.json",
-            "sha256": "d6cb0f264fed57c081d58d5703785299fb2a12d44105c1c0997e94f8a37b0622"
+            "sha256": "2e1b93dd3b614e18186e427388a7b758269e2127ce58062d55151fda7e661241"
           }
         ]
       },
@@ -2529,7 +2771,7 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/khartum/illustration-qa-extra.json",
-            "sha256": "d6cb0f264fed57c081d58d5703785299fb2a12d44105c1c0997e94f8a37b0622"
+            "sha256": "2e1b93dd3b614e18186e427388a7b758269e2127ce58062d55151fda7e661241"
           }
         ]
       },
@@ -2789,7 +3031,7 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/khartum/illustration-qa-extra.json",
-            "sha256": "d6cb0f264fed57c081d58d5703785299fb2a12d44105c1c0997e94f8a37b0622"
+            "sha256": "2e1b93dd3b614e18186e427388a7b758269e2127ce58062d55151fda7e661241"
           }
         ]
       },

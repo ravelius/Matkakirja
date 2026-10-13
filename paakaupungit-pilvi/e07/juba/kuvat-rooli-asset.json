@@ -3,7 +3,7 @@
   "era": "e07",
   "city": "juba",
   "authorization": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
-  "sourceContentAfterSHA256": "7af8736d59562bc3eb4c569bdf734e3a011f2cfa23e213f02cd7d029d5c5b136",
+  "sourceContentAfterSHA256": "b23087ff109766a2fefda2b16d6437404d3d0c0886ec7b6e4a0ccd69c2cd8a73",
   "assets": [
     {
       "era": "e07",
@@ -100,7 +100,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/juba/qa.json",
-        "fileSHA256": "e468dcf42bc80f02f7dd18637edca1ef9526d6113d945b3639fb3a5222e3e05d",
+        "fileSHA256": "f64da8959d7909cee05c3a1ee152c33a9008212eb4d41308769ce2e259edae90",
         "item": {
           "slot": "O4",
           "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
@@ -206,11 +206,11 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/juba/qa.json",
-            "sha256": "e468dcf42bc80f02f7dd18637edca1ef9526d6113d945b3639fb3a5222e3e05d"
+            "sha256": "f64da8959d7909cee05c3a1ee152c33a9008212eb4d41308769ce2e259edae90"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/juba/illustration-qa-extra.json",
-            "sha256": "77718d2368a0bb747ba10c14e4100bc3493f82d759efc5eebbe504bd4743da30"
+            "sha256": "c58671f3c1d1451dc4a48cdfb07fae93d83f30a5a5eaec65f6a99bcc6eba5dbd"
           }
         ]
       },
@@ -293,7 +293,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "7af8736d59562bc3eb4c569bdf734e3a011f2cfa23e213f02cd7d029d5c5b136",
+      "sourceContentAfterSHA256": "b23087ff109766a2fefda2b16d6437404d3d0c0886ec7b6e4a0ccd69c2cd8a73",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
       "contextAfterSHA256": "64f26854fef7bcadaf90717fa753e3308382d13ad9ef69aa7543cecd21001ee5"
     },
@@ -434,7 +434,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/juba/qa.json",
-        "fileSHA256": "e468dcf42bc80f02f7dd18637edca1ef9526d6113d945b3639fb3a5222e3e05d",
+        "fileSHA256": "f64da8959d7909cee05c3a1ee152c33a9008212eb4d41308769ce2e259edae90",
         "item": {
           "slot": "K1",
           "targetJsonPath": "$.kaupunkilehti[0].nostot[0]",
@@ -549,11 +549,11 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/juba/qa.json",
-            "sha256": "e468dcf42bc80f02f7dd18637edca1ef9526d6113d945b3639fb3a5222e3e05d"
+            "sha256": "f64da8959d7909cee05c3a1ee152c33a9008212eb4d41308769ce2e259edae90"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/juba/illustration-qa-extra.json",
-            "sha256": "77718d2368a0bb747ba10c14e4100bc3493f82d759efc5eebbe504bd4743da30"
+            "sha256": "c58671f3c1d1451dc4a48cdfb07fae93d83f30a5a5eaec65f6a99bcc6eba5dbd"
           }
         ]
       },
@@ -636,7 +636,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "7af8736d59562bc3eb4c569bdf734e3a011f2cfa23e213f02cd7d029d5c5b136",
+      "sourceContentAfterSHA256": "b23087ff109766a2fefda2b16d6437404d3d0c0886ec7b6e4a0ccd69c2cd8a73",
       "targetAfterSHA256": "7d918d8f0e817757ad4eecc173476b3042910b735b8f0a270a26dbed6c81b871",
       "contextAfterSHA256": "7d918d8f0e817757ad4eecc173476b3042910b735b8f0a270a26dbed6c81b871"
     },
@@ -734,7 +734,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/juba/qa.json",
-        "fileSHA256": "e468dcf42bc80f02f7dd18637edca1ef9526d6113d945b3639fb3a5222e3e05d",
+        "fileSHA256": "f64da8959d7909cee05c3a1ee152c33a9008212eb4d41308769ce2e259edae90",
         "item": {
           "slot": "K2",
           "targetJsonPath": "$.kaupunkilehti[0].nostot[1]",
@@ -841,11 +841,11 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/juba/qa.json",
-            "sha256": "e468dcf42bc80f02f7dd18637edca1ef9526d6113d945b3639fb3a5222e3e05d"
+            "sha256": "f64da8959d7909cee05c3a1ee152c33a9008212eb4d41308769ce2e259edae90"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/juba/illustration-qa-extra.json",
-            "sha256": "77718d2368a0bb747ba10c14e4100bc3493f82d759efc5eebbe504bd4743da30"
+            "sha256": "c58671f3c1d1451dc4a48cdfb07fae93d83f30a5a5eaec65f6a99bcc6eba5dbd"
           }
         ]
       },
@@ -928,7 +928,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "7af8736d59562bc3eb4c569bdf734e3a011f2cfa23e213f02cd7d029d5c5b136",
+      "sourceContentAfterSHA256": "b23087ff109766a2fefda2b16d6437404d3d0c0886ec7b6e4a0ccd69c2cd8a73",
       "targetAfterSHA256": "ebef1e11dc5e5f0457f415172869be0f94d73355b3630fde4f177ab546ac6908",
       "contextAfterSHA256": "ebef1e11dc5e5f0457f415172869be0f94d73355b3630fde4f177ab546ac6908"
     },
@@ -1026,7 +1026,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/juba/qa.json",
-        "fileSHA256": "e468dcf42bc80f02f7dd18637edca1ef9526d6113d945b3639fb3a5222e3e05d",
+        "fileSHA256": "f64da8959d7909cee05c3a1ee152c33a9008212eb4d41308769ce2e259edae90",
         "item": {
           "slot": "K3",
           "targetJsonPath": "$.kaupunkilehti[0].nostot[2]",
@@ -1133,11 +1133,11 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/juba/qa.json",
-            "sha256": "e468dcf42bc80f02f7dd18637edca1ef9526d6113d945b3639fb3a5222e3e05d"
+            "sha256": "f64da8959d7909cee05c3a1ee152c33a9008212eb4d41308769ce2e259edae90"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/juba/illustration-qa-extra.json",
-            "sha256": "77718d2368a0bb747ba10c14e4100bc3493f82d759efc5eebbe504bd4743da30"
+            "sha256": "c58671f3c1d1451dc4a48cdfb07fae93d83f30a5a5eaec65f6a99bcc6eba5dbd"
           }
         ]
       },
@@ -1220,7 +1220,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "7af8736d59562bc3eb4c569bdf734e3a011f2cfa23e213f02cd7d029d5c5b136",
+      "sourceContentAfterSHA256": "b23087ff109766a2fefda2b16d6437404d3d0c0886ec7b6e4a0ccd69c2cd8a73",
       "targetAfterSHA256": "25f1769b4b40ad154d8d7a0d795e915a061988aa5ba1a3d7b3e7481e5837c28a",
       "contextAfterSHA256": "25f1769b4b40ad154d8d7a0d795e915a061988aa5ba1a3d7b3e7481e5837c28a"
     },
@@ -1317,7 +1317,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/juba/qa.json",
-        "fileSHA256": "e468dcf42bc80f02f7dd18637edca1ef9526d6113d945b3639fb3a5222e3e05d",
+        "fileSHA256": "f64da8959d7909cee05c3a1ee152c33a9008212eb4d41308769ce2e259edae90",
         "item": {
           "slot": "K4",
           "targetJsonPath": "$.kaupunkilehti[0].nostot[3]",
@@ -1423,11 +1423,11 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/juba/qa.json",
-            "sha256": "e468dcf42bc80f02f7dd18637edca1ef9526d6113d945b3639fb3a5222e3e05d"
+            "sha256": "f64da8959d7909cee05c3a1ee152c33a9008212eb4d41308769ce2e259edae90"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/juba/illustration-qa-extra.json",
-            "sha256": "77718d2368a0bb747ba10c14e4100bc3493f82d759efc5eebbe504bd4743da30"
+            "sha256": "c58671f3c1d1451dc4a48cdfb07fae93d83f30a5a5eaec65f6a99bcc6eba5dbd"
           }
         ]
       },
@@ -1510,7 +1510,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "7af8736d59562bc3eb4c569bdf734e3a011f2cfa23e213f02cd7d029d5c5b136",
+      "sourceContentAfterSHA256": "b23087ff109766a2fefda2b16d6437404d3d0c0886ec7b6e4a0ccd69c2cd8a73",
       "targetAfterSHA256": "b67fc720f7407985daeef82c31131830440d1bddbd6a4561b7ad4086612c8aa4",
       "contextAfterSHA256": "b67fc720f7407985daeef82c31131830440d1bddbd6a4561b7ad4086612c8aa4"
     },
@@ -1651,7 +1651,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/juba/qa.json",
-        "fileSHA256": "e468dcf42bc80f02f7dd18637edca1ef9526d6113d945b3639fb3a5222e3e05d",
+        "fileSHA256": "f64da8959d7909cee05c3a1ee152c33a9008212eb4d41308769ce2e259edae90",
         "item": {
           "slot": "L2",
           "targetJsonPath": "$.kaupunkilehti[1].nostot[1]",
@@ -1766,11 +1766,11 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/juba/qa.json",
-            "sha256": "e468dcf42bc80f02f7dd18637edca1ef9526d6113d945b3639fb3a5222e3e05d"
+            "sha256": "f64da8959d7909cee05c3a1ee152c33a9008212eb4d41308769ce2e259edae90"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/juba/illustration-qa-extra.json",
-            "sha256": "77718d2368a0bb747ba10c14e4100bc3493f82d759efc5eebbe504bd4743da30"
+            "sha256": "c58671f3c1d1451dc4a48cdfb07fae93d83f30a5a5eaec65f6a99bcc6eba5dbd"
           }
         ]
       },
@@ -1853,7 +1853,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "7af8736d59562bc3eb4c569bdf734e3a011f2cfa23e213f02cd7d029d5c5b136",
+      "sourceContentAfterSHA256": "b23087ff109766a2fefda2b16d6437404d3d0c0886ec7b6e4a0ccd69c2cd8a73",
       "targetAfterSHA256": "1ebc6d576ffa28ba4ac15f61f031f537a7a2f27a37f316bc9ae26d48ec832734",
       "contextAfterSHA256": "1ebc6d576ffa28ba4ac15f61f031f537a7a2f27a37f316bc9ae26d48ec832734"
     },
@@ -1950,7 +1950,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/juba/qa.json",
-        "fileSHA256": "e468dcf42bc80f02f7dd18637edca1ef9526d6113d945b3639fb3a5222e3e05d",
+        "fileSHA256": "f64da8959d7909cee05c3a1ee152c33a9008212eb4d41308769ce2e259edae90",
         "item": {
           "slot": "L4",
           "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
@@ -2056,11 +2056,11 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/juba/qa.json",
-            "sha256": "e468dcf42bc80f02f7dd18637edca1ef9526d6113d945b3639fb3a5222e3e05d"
+            "sha256": "f64da8959d7909cee05c3a1ee152c33a9008212eb4d41308769ce2e259edae90"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/juba/illustration-qa-extra.json",
-            "sha256": "77718d2368a0bb747ba10c14e4100bc3493f82d759efc5eebbe504bd4743da30"
+            "sha256": "c58671f3c1d1451dc4a48cdfb07fae93d83f30a5a5eaec65f6a99bcc6eba5dbd"
           }
         ]
       },
@@ -2143,9 +2143,251 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "7af8736d59562bc3eb4c569bdf734e3a011f2cfa23e213f02cd7d029d5c5b136",
+      "sourceContentAfterSHA256": "b23087ff109766a2fefda2b16d6437404d3d0c0886ec7b6e4a0ccd69c2cd8a73",
       "targetAfterSHA256": "7ac3823125e650c6349c71e8625d1ddae801c06279a776cca2df3bbcbe0a4bf2",
       "contextAfterSHA256": "7ac3823125e650c6349c71e8625d1ddae801c06279a776cca2df3bbcbe0a4bf2"
+    },
+    {
+      "era": "e07",
+      "city": "juba",
+      "slot": "O3",
+      "type": "illustration",
+      "assetID": "e07-juba-O3-v1-20261012",
+      "galleryImageID": "e07-juba-O3-v1-20261012",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[2].kuva",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "matkailijalle",
+        "artikkeli",
+        "jaksot",
+        2,
+        "kuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/juba/e07-juba-O3-v1-20261012-5c1880b0ee50.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Kirjaston ja oppimisen havainnekuva; ei Juba Peace Libraryn tilakuva.",
+        "lyhyt": "Kirjaston ja oppimisen havainnekuva; ei Juba Peace Libraryn tilakuva."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/juba/e07-juba-O3-v1-20261012-5c1880b0ee50.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Kirjaston ja oppimisen havainnekuva; ei Juba Peace Libraryn tilakuva.",
+        "lyhyt": "Kirjaston ja oppimisen havainnekuva; ei Juba Peace Libraryn tilakuva."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "5c1880b0ee50539dcb93571f45adeb017cc7f4636d80c60c40601ebb9ab5f922",
+      "exportSHA256": "85c3d55d3f09b98a47b76875f02a42d1cb88c181c55c2782d01f4ffbf0733a47",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/juba/e07-juba-O3-v1-20261012-5c1880b0ee50.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/juba/e07-juba-O3-v1-20261012-5c1880b0ee50.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/juba/e07-juba-O3-v1-20261012-5c1880b0ee50.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/juba/sisalto.json",
+      "sourceContentSHA256": "7af8736d59562bc3eb4c569bdf734e3a011f2cfa23e213f02cd7d029d5c5b136",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "fe4fe6bacbdb24c609a19d70bc69319c9df422ef9cbaf54be272c55ef1c78584",
+        "subjectTitle": "Kukkula ja oppiminen",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": [
+            "New image of ordinary functional material, natural plant or food; no identified person, artwork, branded design, building or collection object reproduced."
+          ],
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/juba/assets/e07-juba-O3-v1-20261012/kuva.png",
+            "nativeSha256Verified": "5c1880b0ee50539dcb93571f45adeb017cc7f4636d80c60c40601ebb9ab5f922",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "visualInspection": "Personally viewed native NAS PNG with view_image: Tyhjäkantisia kirjoja, yksi avoin ilman tekstiä. Luontevat paperireunat ja kansirakenteet; ei suojattua kansitaidetta tai henkilöitä.",
+            "captionFi": "Kirjaston ja oppimisen havainnekuva; ei Juba Peace Libraryn tilakuva.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/juba/sisalto.json",
+            "contentSha256": "7af8736d59562bc3eb4c569bdf734e3a011f2cfa23e213f02cd7d029d5c5b136",
+            "targetCurrentlyPresent": true,
+            "targetText": "Jebel Kujur on paikallinen luonnonmuoto ja rakennuskivimateriaalin lähde. Juban yliopisto on julkinen oppilaitos, Juba Peace Library yleinen kirjasto. Koulupaikan, nykyisen yliopiston ja kirjaston historia kuuluvat eri vaiheisiin. Matkustusrajoituksen aikana ne eivät ole tämän oppaan vierailureitti.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/juba/faktapohja.md",
+            "factSheetSha256": "ae67c119b1c67d52be4beefef5b2f73253eda4e6f1d03e9e62bbe648f3b6d718",
+            "topicEvidence": "O3 mainitsee yliopiston ja yleisen kirjaston.",
+            "sourceEvidence": [
+              {
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/juba/sisalto.json",
+                "contentSha256": "0fb60dfba3ce5b20a3d1c75c1b64306c6995c563f34d9f75d6120544bd10eefa",
+                "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[2].kuva",
+                "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/juba/faktapohja.md",
+                "evidenceMode": "Directly documented textual material or utility subject, generic representation only",
+                "targetTextAtIssue": "Jebel Kujur on paikallinen luonnonmuoto ja rakennuskivimateriaalin lähde. Juban yliopisto on julkinen oppilaitos, Juba Peace Library yleinen kirjasto. Koulupaikan, nykyisen yliopiston ja kirjaston historia kuuluvat eri vaiheisiin. Matkustusrajoituksen aikana ne eivät ole tämän oppaan vierailureitti."
+              }
+            ],
+            "rightsAssessment": "Generalized subject; inspected faces, added text/logo/watermark/frame, named modern artwork and invented city panorama. No adverse observation except those explicitly in verdict.",
+            "scope": "Independent native-image QA only; delivery/R2/export/publication unverified."
+          },
+          "qaReason": "Kirjat havainnollistavat kirjastoa ja oppimista. Selite ei väitä kuvaa Juba Peace Libraryn sisätilaksi."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Kirjaston ja oppimisen havainnekuva; ei Juba Peace Libraryn tilakuva.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/juba/illustration-qa-extra.json",
+        "fileSHA256": "c58671f3c1d1451dc4a48cdfb07fae93d83f30a5a5eaec65f6a99bcc6eba5dbd",
+        "item": {
+          "slot": "O3",
+          "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[2].kuva",
+          "assetID": "e07-juba-O3-v1-20261012",
+          "sha256": "5c1880b0ee50539dcb93571f45adeb017cc7f4636d80c60c40601ebb9ab5f922",
+          "verdict": "accepted",
+          "reason": "Kirjat havainnollistavat kirjastoa ja oppimista. Selite ei väitä kuvaa Juba Peace Libraryn sisätilaksi.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/juba/assets/e07-juba-O3-v1-20261012/kuva.png",
+            "nativeSha256Verified": "5c1880b0ee50539dcb93571f45adeb017cc7f4636d80c60c40601ebb9ab5f922",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "visualInspection": "Personally viewed native NAS PNG with view_image: Tyhjäkantisia kirjoja, yksi avoin ilman tekstiä. Luontevat paperireunat ja kansirakenteet; ei suojattua kansitaidetta tai henkilöitä.",
+            "captionFi": "Kirjaston ja oppimisen havainnekuva; ei Juba Peace Libraryn tilakuva.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/juba/sisalto.json",
+            "contentSha256": "7af8736d59562bc3eb4c569bdf734e3a011f2cfa23e213f02cd7d029d5c5b136",
+            "targetCurrentlyPresent": true,
+            "targetText": "Jebel Kujur on paikallinen luonnonmuoto ja rakennuskivimateriaalin lähde. Juban yliopisto on julkinen oppilaitos, Juba Peace Library yleinen kirjasto. Koulupaikan, nykyisen yliopiston ja kirjaston historia kuuluvat eri vaiheisiin. Matkustusrajoituksen aikana ne eivät ole tämän oppaan vierailureitti.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/juba/faktapohja.md",
+            "factSheetSha256": "ae67c119b1c67d52be4beefef5b2f73253eda4e6f1d03e9e62bbe648f3b6d718",
+            "topicEvidence": "O3 mainitsee yliopiston ja yleisen kirjaston.",
+            "sourceEvidence": [
+              {
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/juba/sisalto.json",
+                "contentSha256": "0fb60dfba3ce5b20a3d1c75c1b64306c6995c563f34d9f75d6120544bd10eefa",
+                "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[2].kuva",
+                "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/juba/faktapohja.md",
+                "evidenceMode": "Directly documented textual material or utility subject, generic representation only",
+                "targetTextAtIssue": "Jebel Kujur on paikallinen luonnonmuoto ja rakennuskivimateriaalin lähde. Juban yliopisto on julkinen oppilaitos, Juba Peace Library yleinen kirjasto. Koulupaikan, nykyisen yliopiston ja kirjaston historia kuuluvat eri vaiheisiin. Matkustusrajoituksen aikana ne eivät ole tämän oppaan vierailureitti."
+              }
+            ],
+            "rightsAssessment": "Generalized subject; inspected faces, added text/logo/watermark/frame, named modern artwork and invented city panorama. No adverse observation except those explicitly in verdict.",
+            "scope": "Independent native-image QA only; delivery/R2/export/publication unverified."
+          },
+          "reviewedAt": "2026-10-13T06:07:23.124009+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/juba/qa.json",
+            "sha256": "f64da8959d7909cee05c3a1ee152c33a9008212eb4d41308769ce2e259edae90"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/juba/illustration-qa-extra.json",
+            "sha256": "c58671f3c1d1451dc4a48cdfb07fae93d83f30a5a5eaec65f6a99bcc6eba5dbd"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/juba/e07-juba-O3-v1-20261012-5c1880b0ee50.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/juba/e07-juba-O3-v1-20261012-5c1880b0ee50.png?t=85c3d55d3f09b98a",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/juba/e07-juba-O3-v1-20261012-5c1880b0ee50.png",
+        "sha256": "85c3d55d3f09b98a47b76875f02a42d1cb88c181c55c2782d01f4ffbf0733a47",
+        "bytes": 2005718,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e07-juba-O3-v1-20261012",
+        "nativeSHA256": "5c1880b0ee50539dcb93571f45adeb017cc7f4636d80c60c40601ebb9ab5f922",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/juba/e07-juba-O3-v1-20261012-5c1880b0ee50.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e07",
+        "city": "juba",
+        "slot": "O3",
+        "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[2].kuva",
+        "verifiedAt": "2026-10-13T06:08:23.784182+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/juba/e07-juba-O3-v1-20261012-5c1880b0ee50.png",
+        "sha256": "85c3d55d3f09b98a47b76875f02a42d1cb88c181c55c2782d01f4ffbf0733a47",
+        "bytes": 2005718,
+        "SHAReadAt": "2026-10-13T06:07:25.805455+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "5c1880b0ee50539dcb93571f45adeb017cc7f4636d80c60c40601ebb9ab5f922",
+        "rgbPixelSHA256": "1a6ae6ece5028467e24d082926d11c2be80798ffc6a3fb642aa91f5233fc7824",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "b23087ff109766a2fefda2b16d6437404d3d0c0886ec7b6e4a0ccd69c2cd8a73",
+      "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+      "contextAfterSHA256": "fe4fe6bacbdb24c609a19d70bc69319c9df422ef9cbaf54be272c55ef1c78584"
     },
     {
       "era": "e07",
@@ -2261,7 +2503,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/juba/qa.json",
-        "fileSHA256": "e468dcf42bc80f02f7dd18637edca1ef9526d6113d945b3639fb3a5222e3e05d",
+        "fileSHA256": "f64da8959d7909cee05c3a1ee152c33a9008212eb4d41308769ce2e259edae90",
         "item": {
           "slot": "PHOTO",
           "targetJsonPath": "$.valokuva",
@@ -2309,11 +2551,11 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/juba/qa.json",
-            "sha256": "e468dcf42bc80f02f7dd18637edca1ef9526d6113d945b3639fb3a5222e3e05d"
+            "sha256": "f64da8959d7909cee05c3a1ee152c33a9008212eb4d41308769ce2e259edae90"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/juba/illustration-qa-extra.json",
-            "sha256": "77718d2368a0bb747ba10c14e4100bc3493f82d759efc5eebbe504bd4743da30"
+            "sha256": "c58671f3c1d1451dc4a48cdfb07fae93d83f30a5a5eaec65f6a99bcc6eba5dbd"
           }
         ]
       },
@@ -2384,9 +2626,832 @@
         "tiedosto": "ISS-30 Juba - South Sudan.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "7af8736d59562bc3eb4c569bdf734e3a011f2cfa23e213f02cd7d029d5c5b136",
+      "sourceContentAfterSHA256": "b23087ff109766a2fefda2b16d6437404d3d0c0886ec7b6e4a0ccd69c2cd8a73",
       "targetAfterSHA256": "1b582b3ed0ff8f0adbc51ddc30cd0c42268226a20e0f2113132f0dad3d8065ae",
       "contextAfterSHA256": "1b582b3ed0ff8f0adbc51ddc30cd0c42268226a20e0f2113132f0dad3d8065ae"
+    },
+    {
+      "era": "e07",
+      "city": "juba",
+      "slot": "C1",
+      "type": "commons",
+      "assetID": "capital-cc-e07-juba-c1-052f7e0449cb1dfe",
+      "galleryImageID": "capital-cc-e07-juba-c1-052f7e0449cb1dfe",
+      "commonsFile": "Juba (8184843425).jpg",
+      "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "kansikuvat",
+        0
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e07/juba/c1-052f7e0449cb1dfe8359.jpg",
+        "suora": true,
+        "lahde": "Flavio Alagia, Wikimedia Commons (CC BY 2.0)",
+        "selite": "Juban asutusta, katuverkkoa ja kallioista maastoa korkealta nähtynä.",
+        "lyhyt": "Juban asutusta, katuverkkoa ja kallioista maastoa korkealta nähtynä.",
+        "tiedosto": "Juba (8184843425).jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Flavio Alagia, Wikimedia Commons (CC BY 2.0)",
+        "selite": "Juban asutusta, katuverkkoa ja kallioista maastoa korkealta nähtynä.",
+        "lyhyt": "Juban asutusta, katuverkkoa ja kallioista maastoa korkealta nähtynä.",
+        "tiedosto": "Juba (8184843425).jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e07/juba/c1-052f7e0449cb1dfe8359.jpg",
+        "suora": true,
+        "lahde": "Flavio Alagia, Wikimedia Commons (CC BY 2.0)",
+        "selite": "Juban asutusta, katuverkkoa ja kallioista maastoa korkealta nähtynä.",
+        "lyhyt": "Juban asutusta, katuverkkoa ja kallioista maastoa korkealta nähtynä.",
+        "tiedosto": "Juba (8184843425).jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "052f7e0449cb1dfe83597f2403b4c507fd09b75d2a98bd7f2d784cbaffcd6a62",
+      "exportSHA256": "052f7e0449cb1dfe83597f2403b4c507fd09b75d2a98bd7f2d784cbaffcd6a62",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e07/juba/c1-052f7e0449cb1dfe8359.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e07/juba/c1-052f7e0449cb1dfe8359.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/commons-originals/e07/juba/64c2ce57d63d8b27d9ec0e7e573730b3e326d4d2291395cf61726ec3f95b03b6.jpg",
+      "dimensions": [
+        2896,
+        1944
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/juba/sisalto.json",
+      "sourceContentSHA256": "7af8736d59562bc3eb4c569bdf734e3a011f2cfa23e213f02cd7d029d5c5b136",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "subjectTitle": "Juba",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Flavio Alagia",
+        "license": "CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Juba_(8184843425).jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/2/23/Juba_%288184843425%29.jpg",
+        "rightsEvidence": {
+          "selection": [
+            "Kuvan Author/Artist-kenttä ja valokuvan oma lisenssimalli tarkistettu tallennetusta Commons-lähteestä; upload-historian nimeä ei käytetä tekijänä. Lisenssiversion linkki on valokuvan lisenssiosassa, ei Commons-sivun yleinen alatunnistelupa.",
+            "Pääaihe on laaja asutus ja luonnonmaasto, ei yksittäinen taideteos tai arkkitehtoninen pääteos. Useat pienet asuinrakennukset ovat osia kokonaisnäkymässä; kaikkien rakennusten teosvapautta ei oleteta. Kuvaajan alkuperäinen Source-nimi Juba ja South Sudan -Description sitovat paikan; valokuvan tekijä Flavio Alagia ja CC BY2.0 varmennettu Commonsin Author-/Licensing-osasta.",
+            "Silmin katsottu alkuperäinen: Alkuperäinen2896×1944 nähty: laaja kaupunki, maasto ja useat kadut. Ihmiset ovat kaukana, kasvonpiirteitä ei voi lukea. Ei nykykonfliktin/aseistetun joukon kuvausta, lisättyä tekstiä, watermarkia tai kehystä."
+          ],
+          "QA": {
+            "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/juba/qa-evidence/12a7810327cd-original.jpg",
+            "width": 2896,
+            "height": 1944,
+            "sha256": "052f7e0449cb1dfe83597f2403b4c507fd09b75d2a98bd7f2d784cbaffcd6a62",
+            "nativeGeometry": {
+              "rawWidth": 2896,
+              "rawHeight": 1944,
+              "exifOrientation": 1,
+              "width": 2896,
+              "height": 1944
+            },
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Juba_(8184843425).jpg",
+            "sourcePagePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/juba/qa-evidence/cc-source-snapshots/5e9ec92afb496bec9f7ebc2630e82a72438c36f4ce8da7e2cbf81efbeaed105a.html",
+            "sourcePageSHA256": "5e9ec92afb496bec9f7ebc2630e82a72438c36f4ce8da7e2cbf81efbeaed105a",
+            "upstreamSourcePagePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/lahdevarasto/4c5fecd95e4204f7642bc71d300e2942a30fa6a6188bbead0fb4405da11d5c6f.body",
+            "sourceFields": {
+              "Date": "26 August 2010, 09:26",
+              "Source": "Juba",
+              "Author": "Flavio Alagia"
+            },
+            "authors": [
+              "Flavio Alagia"
+            ],
+            "authorOrigin": "Author table",
+            "licenseChoices": [
+              "CC BY 2.0"
+            ],
+            "license": "CC BY 2.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+            "existingGameUse": [],
+            "sameCityOtherSlots": [],
+            "sameCityAcceptedQASlots": [],
+            "sameCityAcceptedNativeSHASlots": [],
+            "auditEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/juba/qa-evidence/12a7810327cd-technical-source.json",
+            "visualViewedByThisSession": true,
+            "nativeOriginalViewed": true,
+            "visualObservation": "Alkuperäinen 2896×1944 itse katsottu: Juban laaja asutus/katuverkko ja kallioinen maasto korkealta. Etualalla on pieniä ihmisiä, mutta heidän kasvonpiirteensä eivät erotu; ei aseita, sotilasjoukkoa tai konfliktikuvausta. Useat talot ovat kaupunkimassan osia, eivät yhden suojatun teoksen pääaihe. Ei lisättyä tekstiä, vesileimaa tai kehystä. Flavio Alagia, CC BY 2.0 ja 26.8.2010 alkuperäislähteestä; Source/Description nimeää Juba/South Sudan. Ei tarkkaa kaupunginosaa tai nykytilannetta lähteettömästi.",
+            "workLayerAssessment": "Alkuperäinen 2896×1944 itse katsottu: Juban laaja asutus/katuverkko ja kallioinen maasto korkealta. Etualalla on pieniä ihmisiä, mutta heidän kasvonpiirteensä eivät erotu; ei aseita, sotilasjoukkoa tai konfliktikuvausta. Useat talot ovat kaupunkimassan osia, eivät yhden suojatun teoksen pääaihe. Ei lisättyä tekstiä, vesileimaa tai kehystä. Flavio Alagia, CC BY 2.0 ja 26.8.2010 alkuperäislähteestä; Source/Description nimeää Juba/South Sudan. Ei tarkkaa kaupunginosaa tai nykytilannetta lähteettömästi.",
+            "ccFragment": "cc-selection.json",
+            "coverLayoutAssessment": {
+              "passes": true,
+              "required": "broad real city/place view",
+              "observed": "Alkuperäinen 2896×1944 itse katsottu: Juban laaja asutus/katuverkko ja kallioinen maasto korkealta. Etualalla on pieniä ihmisiä, mutta heidän kasvonpiirteensä eivät erotu; ei aseita, sotilasjoukkoa tai konfliktikuvausta. Useat talot ovat kaupunkimassan osia, eivät yhden suojatun teoksen pääaihe. Ei lisättyä tekstiä, vesileimaa tai kehystä. Flavio Alagia, CC BY 2.0 ja 26.8.2010 alkuperäislähteestä; Source/Description nimeää Juba/South Sudan. Ei tarkkaa kaupunginosaa tai nykytilannetta lähteettömästi."
+            }
+          },
+          "qaReason": "Alkuperäinen 2896×1944 itse katsottu: Juban laaja asutus/katuverkko ja kallioinen maasto korkealta. Etualalla on pieniä ihmisiä, mutta heidän kasvonpiirteensä eivät erotu; ei aseita, sotilasjoukkoa tai konfliktikuvausta. Useat talot ovat kaupunkimassan osia, eivät yhden suojatun teoksen pääaihe. Ei lisättyä tekstiä, vesileimaa tai kehystä. Flavio Alagia, CC BY 2.0 ja 26.8.2010 alkuperäislähteestä; Source/Description nimeää Juba/South Sudan. Ei tarkkaa kaupunginosaa tai nykytilannetta lähteettömästi."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Juban asutusta, katuverkkoa ja kallioista maastoa korkealta nähtynä.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/juba/qa.json",
+        "fileSHA256": "f64da8959d7909cee05c3a1ee152c33a9008212eb4d41308769ce2e259edae90",
+        "item": {
+          "slot": "C1",
+          "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
+          "type": "commons",
+          "commonsFile": "Juba (8184843425).jpg",
+          "sha256": "052f7e0449cb1dfe83597f2403b4c507fd09b75d2a98bd7f2d784cbaffcd6a62",
+          "nativeSHA256": "052f7e0449cb1dfe83597f2403b4c507fd09b75d2a98bd7f2d784cbaffcd6a62",
+          "nativeOriginalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/juba/qa-evidence/12a7810327cd-original.jpg",
+          "verdict": "accepted",
+          "reason": "Alkuperäinen 2896×1944 itse katsottu: Juban laaja asutus/katuverkko ja kallioinen maasto korkealta. Etualalla on pieniä ihmisiä, mutta heidän kasvonpiirteensä eivät erotu; ei aseita, sotilasjoukkoa tai konfliktikuvausta. Useat talot ovat kaupunkimassan osia, eivät yhden suojatun teoksen pääaihe. Ei lisättyä tekstiä, vesileimaa tai kehystä. Flavio Alagia, CC BY 2.0 ja 26.8.2010 alkuperäislähteestä; Source/Description nimeää Juba/South Sudan. Ei tarkkaa kaupunginosaa tai nykytilannetta lähteettömästi.",
+          "evidence": {
+            "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/juba/qa-evidence/12a7810327cd-original.jpg",
+            "width": 2896,
+            "height": 1944,
+            "sha256": "052f7e0449cb1dfe83597f2403b4c507fd09b75d2a98bd7f2d784cbaffcd6a62",
+            "nativeGeometry": {
+              "rawWidth": 2896,
+              "rawHeight": 1944,
+              "exifOrientation": 1,
+              "width": 2896,
+              "height": 1944
+            },
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Juba_(8184843425).jpg",
+            "sourcePagePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/juba/qa-evidence/cc-source-snapshots/5e9ec92afb496bec9f7ebc2630e82a72438c36f4ce8da7e2cbf81efbeaed105a.html",
+            "sourcePageSHA256": "5e9ec92afb496bec9f7ebc2630e82a72438c36f4ce8da7e2cbf81efbeaed105a",
+            "upstreamSourcePagePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/lahdevarasto/4c5fecd95e4204f7642bc71d300e2942a30fa6a6188bbead0fb4405da11d5c6f.body",
+            "sourceFields": {
+              "Date": "26 August 2010, 09:26",
+              "Source": "Juba",
+              "Author": "Flavio Alagia"
+            },
+            "authors": [
+              "Flavio Alagia"
+            ],
+            "authorOrigin": "Author table",
+            "licenseChoices": [
+              "CC BY 2.0"
+            ],
+            "license": "CC BY 2.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+            "existingGameUse": [],
+            "sameCityOtherSlots": [],
+            "sameCityAcceptedQASlots": [],
+            "sameCityAcceptedNativeSHASlots": [],
+            "auditEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/juba/qa-evidence/12a7810327cd-technical-source.json",
+            "visualViewedByThisSession": true,
+            "nativeOriginalViewed": true,
+            "visualObservation": "Alkuperäinen 2896×1944 itse katsottu: Juban laaja asutus/katuverkko ja kallioinen maasto korkealta. Etualalla on pieniä ihmisiä, mutta heidän kasvonpiirteensä eivät erotu; ei aseita, sotilasjoukkoa tai konfliktikuvausta. Useat talot ovat kaupunkimassan osia, eivät yhden suojatun teoksen pääaihe. Ei lisättyä tekstiä, vesileimaa tai kehystä. Flavio Alagia, CC BY 2.0 ja 26.8.2010 alkuperäislähteestä; Source/Description nimeää Juba/South Sudan. Ei tarkkaa kaupunginosaa tai nykytilannetta lähteettömästi.",
+            "workLayerAssessment": "Alkuperäinen 2896×1944 itse katsottu: Juban laaja asutus/katuverkko ja kallioinen maasto korkealta. Etualalla on pieniä ihmisiä, mutta heidän kasvonpiirteensä eivät erotu; ei aseita, sotilasjoukkoa tai konfliktikuvausta. Useat talot ovat kaupunkimassan osia, eivät yhden suojatun teoksen pääaihe. Ei lisättyä tekstiä, vesileimaa tai kehystä. Flavio Alagia, CC BY 2.0 ja 26.8.2010 alkuperäislähteestä; Source/Description nimeää Juba/South Sudan. Ei tarkkaa kaupunginosaa tai nykytilannetta lähteettömästi.",
+            "ccFragment": "cc-selection.json",
+            "coverLayoutAssessment": {
+              "passes": true,
+              "required": "broad real city/place view",
+              "observed": "Alkuperäinen 2896×1944 itse katsottu: Juban laaja asutus/katuverkko ja kallioinen maasto korkealta. Etualalla on pieniä ihmisiä, mutta heidän kasvonpiirteensä eivät erotu; ei aseita, sotilasjoukkoa tai konfliktikuvausta. Useat talot ovat kaupunkimassan osia, eivät yhden suojatun teoksen pääaihe. Ei lisättyä tekstiä, vesileimaa tai kehystä. Flavio Alagia, CC BY 2.0 ja 26.8.2010 alkuperäislähteestä; Source/Description nimeää Juba/South Sudan. Ei tarkkaa kaupunginosaa tai nykytilannetta lähteettömästi."
+            }
+          },
+          "checkedAt": "2026-10-12T20:28:02.618301+00:00",
+          "contentSHA256": "7af8736d59562bc3eb4c569bdf734e3a011f2cfa23e213f02cd7d029d5c5b136",
+          "targetSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/juba/qa.json",
+            "sha256": "f64da8959d7909cee05c3a1ee152c33a9008212eb4d41308769ce2e259edae90"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/juba/illustration-qa-extra.json",
+            "sha256": "c58671f3c1d1451dc4a48cdfb07fae93d83f30a5a5eaec65f6a99bcc6eba5dbd"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e07",
+        "city": "juba",
+        "slot": "C1",
+        "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
+        "commonsFile": "Juba (8184843425).jpg",
+        "sha256": "052f7e0449cb1dfe83597f2403b4c507fd09b75d2a98bd7f2d784cbaffcd6a62",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Juba_(8184843425).jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/2/23/Juba_%288184843425%29.jpg",
+        "author": "Flavio Alagia",
+        "license": "CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+        "width": 2896,
+        "height": 1944,
+        "originalSHA256": "052f7e0449cb1dfe83597f2403b4c507fd09b75d2a98bd7f2d784cbaffcd6a62",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e07/juba/c1-052f7e0449cb1dfe8359.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e07/juba/c1-052f7e0449cb1dfe8359.jpg",
+        "bytes": 2695972,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T20:28:31.442532+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Flavio Alagia, Wikimedia Commons (CC BY 2.0)",
+        "selite": "Juban asutusta, katuverkkoa ja kallioista maastoa korkealta nähtynä.",
+        "lyhyt": "Juban asutusta, katuverkkoa ja kallioista maastoa korkealta nähtynä.",
+        "tiedosto": "Juba (8184843425).jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "b23087ff109766a2fefda2b16d6437404d3d0c0886ec7b6e4a0ccd69c2cd8a73",
+      "targetAfterSHA256": "efc5f4edc2d054c942de15d1dab59dead7d8524d8407edb15e04ece62168ec8b",
+      "contextAfterSHA256": "efc5f4edc2d054c942de15d1dab59dead7d8524d8407edb15e04ece62168ec8b"
+    },
+    {
+      "era": "e07",
+      "city": "juba",
+      "slot": "C2",
+      "type": "commons",
+      "assetID": "capital-cc-e07-juba-c2-17874192123f8324",
+      "galleryImageID": "capital-cc-e07-juba-c2-17874192123f8324",
+      "commonsFile": "Blick auf Juba im Landeanflug (2018).jpg",
+      "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[1]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "kansikuvat",
+        1
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e07/juba/c2-17874192123f8324e23e.jpg",
+        "suora": true,
+        "lahde": "Besserwisser123, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Juban laajaa asutusta ja taustalla kohoavaa kallioista maastoa lentokoneesta nähtynä, 2018.",
+        "lyhyt": "Juban laajaa asutusta ja taustalla kohoavaa kallioista maastoa lentokoneesta nähtynä, 2018.",
+        "tiedosto": "Blick auf Juba im Landeanflug (2018).jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Besserwisser123, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Juban laajaa asutusta ja taustalla kohoavaa kallioista maastoa lentokoneesta nähtynä, 2018.",
+        "lyhyt": "Juban laajaa asutusta ja taustalla kohoavaa kallioista maastoa lentokoneesta nähtynä, 2018.",
+        "tiedosto": "Blick auf Juba im Landeanflug (2018).jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e07/juba/c2-17874192123f8324e23e.jpg",
+        "suora": true,
+        "lahde": "Besserwisser123, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Juban laajaa asutusta ja taustalla kohoavaa kallioista maastoa lentokoneesta nähtynä, 2018.",
+        "lyhyt": "Juban laajaa asutusta ja taustalla kohoavaa kallioista maastoa lentokoneesta nähtynä, 2018.",
+        "tiedosto": "Blick auf Juba im Landeanflug (2018).jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "17874192123f8324e23e405d7eb1212e33e148dea8190043bbd7caf1eb6cd244",
+      "exportSHA256": "17874192123f8324e23e405d7eb1212e33e148dea8190043bbd7caf1eb6cd244",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e07/juba/c2-17874192123f8324e23e.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e07/juba/c2-17874192123f8324e23e.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/commons-originals/e07/juba/1d8932dac3a802a4267a7870aeed5e0fce2adf487f97d8973f7cb848463b8fa6.jpg",
+      "dimensions": [
+        3536,
+        1974
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/juba/sisalto.json",
+      "sourceContentSHA256": "7af8736d59562bc3eb4c569bdf734e3a011f2cfa23e213f02cd7d029d5c5b136",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "subjectTitle": "Juba",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Besserwisser123",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Blick_auf_Juba_im_Landeanflug_(2018).jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7f/Blick_auf_Juba_im_Landeanflug_%282018%29.jpg",
+        "rightsEvidence": {
+          "selection": [
+            "Kuvan Author/Artist-kenttä ja valokuvan oma lisenssimalli tarkistettu tallennetusta Commons-lähteestä; upload-historian nimeä ei käytetä tekijänä. Lisenssiversion linkki on valokuvan lisenssiosassa, ei Commons-sivun yleinen alatunnistelupa.",
+            "Description nimeää Juba im Landeanflug(2018), Source Own work, Author Besserwisser123 ja kuvauspäivä14.8.2018. Pääaihe on asutuksen ja luonnonmaaston laaja todellinen asettelu. Yksittäistä modernia rakennus- tai taideteosta ei esitellä pääteoksena; talot ovat pieniä osia kaupunkikudosta. Valokuvan kaupallinen CC BY-SA4.0 tarkistettu erikseen. Kukkulan tarkkaa nimeä ei päätellä pelkästä profiilista eikä kuvaa kutsuta tuoreeksi.",
+            "Silmin katsottu alkuperäinen: Alkuperäinen3536×1974 nähty: laaja todellinen kaupunginasettelu, lukuisat pienet katot, tieverkko ja luonnollinen kalliomaasto. Ei kasvoja, lisättyä tekstiä, logoja, vesileimaa tai kehystä; lentokoneen matkustusvaihe on lähteen tiedossa, lentokonetta tai aseistettua joukkoa ei kuvassa näy."
+          ],
+          "QA": {
+            "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/juba/qa-evidence/2344a1881f3c-original.jpg",
+            "width": 3536,
+            "height": 1974,
+            "sha256": "17874192123f8324e23e405d7eb1212e33e148dea8190043bbd7caf1eb6cd244",
+            "nativeGeometry": {
+              "rawWidth": 3536,
+              "rawHeight": 1974,
+              "exifOrientation": 1,
+              "width": 3536,
+              "height": 1974
+            },
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Blick_auf_Juba_im_Landeanflug_(2018).jpg",
+            "sourcePagePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/juba/qa-evidence/cc-source-snapshots/b287fc6c8a304eb01a3724c24d4f95e1c963fa4a455479793b5482da992aeab9.html",
+            "sourcePageSHA256": "b287fc6c8a304eb01a3724c24d4f95e1c963fa4a455479793b5482da992aeab9",
+            "upstreamSourcePagePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/lahdevarasto/0c6f510bcc84c96d40a8402cbbcce0650b454393eba00409258c0c64d02b47b7.body",
+            "sourceFields": {
+              "Date": "14 August 2018",
+              "Source": "Own work",
+              "Author": "Besserwisser123"
+            },
+            "authors": [
+              "Besserwisser123"
+            ],
+            "authorOrigin": "Author table",
+            "licenseChoices": [
+              "CC BY-SA 4.0"
+            ],
+            "license": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "existingGameUse": [],
+            "sameCityOtherSlots": [],
+            "sameCityAcceptedQASlots": [],
+            "sameCityAcceptedNativeSHASlots": [],
+            "auditEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/juba/qa-evidence/2344a1881f3c-technical-source.json",
+            "visualViewedByThisSession": true,
+            "nativeOriginalViewed": true,
+            "visualObservation": "Alkuperäinen 3536×1974 itse katsottu: Juban laaja katto-, katu- ja pihaverkosto sekä kallioinen taustamaasto. Katsoja näkee todellisen kaupunginasettelun; yksittäinen talo ei ole pääteos. Ihmiset pieniä pisteitä, ei erotettavia kasvonpiirteitä, aseistusta, konfliktikuvausta, lisättyä tekstiä tai vesileimaa. Description nimeää Juba; tekijä Besserwisser123, Own work, CC BY-SA 4.0 ja 14.8.2018 suoraan lähdesivusta. Kukkulaa ei nimetä lähteettömästi eikä kuvaa kuvata nykytilaksi.",
+            "workLayerAssessment": "Alkuperäinen 3536×1974 itse katsottu: Juban laaja katto-, katu- ja pihaverkosto sekä kallioinen taustamaasto. Katsoja näkee todellisen kaupunginasettelun; yksittäinen talo ei ole pääteos. Ihmiset pieniä pisteitä, ei erotettavia kasvonpiirteitä, aseistusta, konfliktikuvausta, lisättyä tekstiä tai vesileimaa. Description nimeää Juba; tekijä Besserwisser123, Own work, CC BY-SA 4.0 ja 14.8.2018 suoraan lähdesivusta. Kukkulaa ei nimetä lähteettömästi eikä kuvaa kuvata nykytilaksi.",
+            "ccFragment": "cc-selection.json",
+            "canonicalCaptureDate": "14 August 2018",
+            "coverLayoutAssessment": {
+              "passes": true,
+              "required": "broad real city/place view",
+              "observed": "Alkuperäinen 3536×1974 itse katsottu: Juban laaja katto-, katu- ja pihaverkosto sekä kallioinen taustamaasto. Katsoja näkee todellisen kaupunginasettelun; yksittäinen talo ei ole pääteos. Ihmiset pieniä pisteitä, ei erotettavia kasvonpiirteitä, aseistusta, konfliktikuvausta, lisättyä tekstiä tai vesileimaa. Description nimeää Juba; tekijä Besserwisser123, Own work, CC BY-SA 4.0 ja 14.8.2018 suoraan lähdesivusta. Kukkulaa ei nimetä lähteettömästi eikä kuvaa kuvata nykytilaksi."
+            }
+          },
+          "qaReason": "Alkuperäinen 3536×1974 itse katsottu: Juban laaja katto-, katu- ja pihaverkosto sekä kallioinen taustamaasto. Katsoja näkee todellisen kaupunginasettelun; yksittäinen talo ei ole pääteos. Ihmiset pieniä pisteitä, ei erotettavia kasvonpiirteitä, aseistusta, konfliktikuvausta, lisättyä tekstiä tai vesileimaa. Description nimeää Juba; tekijä Besserwisser123, Own work, CC BY-SA 4.0 ja 14.8.2018 suoraan lähdesivusta. Kukkulaa ei nimetä lähteettömästi eikä kuvaa kuvata nykytilaksi."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Juban laajaa asutusta ja taustalla kohoavaa kallioista maastoa lentokoneesta nähtynä, 2018.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/juba/qa.json",
+        "fileSHA256": "f64da8959d7909cee05c3a1ee152c33a9008212eb4d41308769ce2e259edae90",
+        "item": {
+          "slot": "C2",
+          "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[1]",
+          "commonsFile": "Blick auf Juba im Landeanflug (2018).jpg",
+          "type": "commons",
+          "sha256": "17874192123f8324e23e405d7eb1212e33e148dea8190043bbd7caf1eb6cd244",
+          "nativeSHA256": "17874192123f8324e23e405d7eb1212e33e148dea8190043bbd7caf1eb6cd244",
+          "nativeOriginalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/juba/qa-evidence/2344a1881f3c-original.jpg",
+          "verdict": "accepted",
+          "reason": "Alkuperäinen 3536×1974 itse katsottu: Juban laaja katto-, katu- ja pihaverkosto sekä kallioinen taustamaasto. Katsoja näkee todellisen kaupunginasettelun; yksittäinen talo ei ole pääteos. Ihmiset pieniä pisteitä, ei erotettavia kasvonpiirteitä, aseistusta, konfliktikuvausta, lisättyä tekstiä tai vesileimaa. Description nimeää Juba; tekijä Besserwisser123, Own work, CC BY-SA 4.0 ja 14.8.2018 suoraan lähdesivusta. Kukkulaa ei nimetä lähteettömästi eikä kuvaa kuvata nykytilaksi.",
+          "evidence": {
+            "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/juba/qa-evidence/2344a1881f3c-original.jpg",
+            "width": 3536,
+            "height": 1974,
+            "sha256": "17874192123f8324e23e405d7eb1212e33e148dea8190043bbd7caf1eb6cd244",
+            "nativeGeometry": {
+              "rawWidth": 3536,
+              "rawHeight": 1974,
+              "exifOrientation": 1,
+              "width": 3536,
+              "height": 1974
+            },
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Blick_auf_Juba_im_Landeanflug_(2018).jpg",
+            "sourcePagePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/juba/qa-evidence/cc-source-snapshots/b287fc6c8a304eb01a3724c24d4f95e1c963fa4a455479793b5482da992aeab9.html",
+            "sourcePageSHA256": "b287fc6c8a304eb01a3724c24d4f95e1c963fa4a455479793b5482da992aeab9",
+            "upstreamSourcePagePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/lahdevarasto/0c6f510bcc84c96d40a8402cbbcce0650b454393eba00409258c0c64d02b47b7.body",
+            "sourceFields": {
+              "Date": "14 August 2018",
+              "Source": "Own work",
+              "Author": "Besserwisser123"
+            },
+            "authors": [
+              "Besserwisser123"
+            ],
+            "authorOrigin": "Author table",
+            "licenseChoices": [
+              "CC BY-SA 4.0"
+            ],
+            "license": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "existingGameUse": [],
+            "sameCityOtherSlots": [],
+            "sameCityAcceptedQASlots": [],
+            "sameCityAcceptedNativeSHASlots": [],
+            "auditEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/juba/qa-evidence/2344a1881f3c-technical-source.json",
+            "visualViewedByThisSession": true,
+            "nativeOriginalViewed": true,
+            "visualObservation": "Alkuperäinen 3536×1974 itse katsottu: Juban laaja katto-, katu- ja pihaverkosto sekä kallioinen taustamaasto. Katsoja näkee todellisen kaupunginasettelun; yksittäinen talo ei ole pääteos. Ihmiset pieniä pisteitä, ei erotettavia kasvonpiirteitä, aseistusta, konfliktikuvausta, lisättyä tekstiä tai vesileimaa. Description nimeää Juba; tekijä Besserwisser123, Own work, CC BY-SA 4.0 ja 14.8.2018 suoraan lähdesivusta. Kukkulaa ei nimetä lähteettömästi eikä kuvaa kuvata nykytilaksi.",
+            "workLayerAssessment": "Alkuperäinen 3536×1974 itse katsottu: Juban laaja katto-, katu- ja pihaverkosto sekä kallioinen taustamaasto. Katsoja näkee todellisen kaupunginasettelun; yksittäinen talo ei ole pääteos. Ihmiset pieniä pisteitä, ei erotettavia kasvonpiirteitä, aseistusta, konfliktikuvausta, lisättyä tekstiä tai vesileimaa. Description nimeää Juba; tekijä Besserwisser123, Own work, CC BY-SA 4.0 ja 14.8.2018 suoraan lähdesivusta. Kukkulaa ei nimetä lähteettömästi eikä kuvaa kuvata nykytilaksi.",
+            "ccFragment": "cc-selection.json",
+            "canonicalCaptureDate": "14 August 2018",
+            "coverLayoutAssessment": {
+              "passes": true,
+              "required": "broad real city/place view",
+              "observed": "Alkuperäinen 3536×1974 itse katsottu: Juban laaja katto-, katu- ja pihaverkosto sekä kallioinen taustamaasto. Katsoja näkee todellisen kaupunginasettelun; yksittäinen talo ei ole pääteos. Ihmiset pieniä pisteitä, ei erotettavia kasvonpiirteitä, aseistusta, konfliktikuvausta, lisättyä tekstiä tai vesileimaa. Description nimeää Juba; tekijä Besserwisser123, Own work, CC BY-SA 4.0 ja 14.8.2018 suoraan lähdesivusta. Kukkulaa ei nimetä lähteettömästi eikä kuvaa kuvata nykytilaksi."
+            }
+          },
+          "checkedAt": "2026-10-12T20:44:59.326937+00:00",
+          "contentSHA256": "7af8736d59562bc3eb4c569bdf734e3a011f2cfa23e213f02cd7d029d5c5b136",
+          "targetSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/juba/qa.json",
+            "sha256": "f64da8959d7909cee05c3a1ee152c33a9008212eb4d41308769ce2e259edae90"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/juba/illustration-qa-extra.json",
+            "sha256": "c58671f3c1d1451dc4a48cdfb07fae93d83f30a5a5eaec65f6a99bcc6eba5dbd"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e07",
+        "city": "juba",
+        "slot": "C2",
+        "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[1]",
+        "commonsFile": "Blick auf Juba im Landeanflug (2018).jpg",
+        "sha256": "17874192123f8324e23e405d7eb1212e33e148dea8190043bbd7caf1eb6cd244",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Blick_auf_Juba_im_Landeanflug_(2018).jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7f/Blick_auf_Juba_im_Landeanflug_%282018%29.jpg",
+        "author": "Besserwisser123",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "width": 3536,
+        "height": 1974,
+        "originalSHA256": "17874192123f8324e23e405d7eb1212e33e148dea8190043bbd7caf1eb6cd244",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e07/juba/c2-17874192123f8324e23e.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e07/juba/c2-17874192123f8324e23e.jpg",
+        "bytes": 2652850,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T20:45:40.233980+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Besserwisser123, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Juban laajaa asutusta ja taustalla kohoavaa kallioista maastoa lentokoneesta nähtynä, 2018.",
+        "lyhyt": "Juban laajaa asutusta ja taustalla kohoavaa kallioista maastoa lentokoneesta nähtynä, 2018.",
+        "tiedosto": "Blick auf Juba im Landeanflug (2018).jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "b23087ff109766a2fefda2b16d6437404d3d0c0886ec7b6e4a0ccd69c2cd8a73",
+      "targetAfterSHA256": "1fc9e9435fd167328bda08fcb3afacee5f54eca08b31cb7cc2549cc64f1f2ef7",
+      "contextAfterSHA256": "1fc9e9435fd167328bda08fcb3afacee5f54eca08b31cb7cc2549cc64f1f2ef7"
+    },
+    {
+      "era": "e07",
+      "city": "juba",
+      "slot": "C3",
+      "type": "commons",
+      "assetID": "capital-cc-e07-juba-c3-1fcc9addf7c58127",
+      "galleryImageID": "capital-cc-e07-juba-c3-1fcc9addf7c58127",
+      "commonsFile": "AERIAL VIEW OF JUBA, SOUTH SUDAN.jpg",
+      "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[2]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "kansikuvat",
+        2
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e07/juba/c3-1fcc9addf7c581278e2f.jpg",
+        "suora": true,
+        "lahde": "Umar sheriff habibullah, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Juban rakennuksia ja avointa lentopaikkamaastoa laajassa näkymässä joulukuussa 2018.",
+        "lyhyt": "Juban rakennuksia ja avointa lentopaikkamaastoa laajassa näkymässä joulukuussa 2018.",
+        "tiedosto": "AERIAL VIEW OF JUBA, SOUTH SUDAN.jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Umar sheriff habibullah, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Juban rakennuksia ja avointa lentopaikkamaastoa laajassa näkymässä joulukuussa 2018.",
+        "lyhyt": "Juban rakennuksia ja avointa lentopaikkamaastoa laajassa näkymässä joulukuussa 2018.",
+        "tiedosto": "AERIAL VIEW OF JUBA, SOUTH SUDAN.jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e07/juba/c3-1fcc9addf7c581278e2f.jpg",
+        "suora": true,
+        "lahde": "Umar sheriff habibullah, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Juban rakennuksia ja avointa lentopaikkamaastoa laajassa näkymässä joulukuussa 2018.",
+        "lyhyt": "Juban rakennuksia ja avointa lentopaikkamaastoa laajassa näkymässä joulukuussa 2018.",
+        "tiedosto": "AERIAL VIEW OF JUBA, SOUTH SUDAN.jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "1fcc9addf7c581278e2f734a32b3c0839d66a29329e2fd579747c875330c42e0",
+      "exportSHA256": "1fcc9addf7c581278e2f734a32b3c0839d66a29329e2fd579747c875330c42e0",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e07/juba/c3-1fcc9addf7c581278e2f.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e07/juba/c3-1fcc9addf7c581278e2f.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/commons-originals/e07/juba/86ca0f04eae3fd1c02076f7fb0e116d216eac88cc5d3d62f80dbc5410527fff1.jpg",
+      "dimensions": [
+        3880,
+        2819
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/juba/sisalto.json",
+      "sourceContentSHA256": "7af8736d59562bc3eb4c569bdf734e3a011f2cfa23e213f02cd7d029d5c5b136",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "subjectTitle": "Juba",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Umar sheriff habibullah",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:AERIAL_VIEW_OF_JUBA,_SOUTH_SUDAN.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/1/12/AERIAL_VIEW_OF_JUBA%2C_SOUTH_SUDAN.jpg",
+        "rightsEvidence": {
+          "selection": [
+            "Kuvan Author/Artist-kenttä ja valokuvan oma lisenssimalli tarkistettu tallennetusta Commons-lähteestä; upload-historian nimeä ei käytetä tekijänä. Lisenssiversion linkki on valokuvan lisenssiosassa, ei Commons-sivun yleinen alatunnistelupa.",
+            "Kuvaajan alkuperäinen nimi ja Description ovat AERIAL VIEW OF JUBA,SOUTH SUDAN; Date18.12.2018, Own work ja Author Umar sheriff habibullah tarkistettu. Pääaihe on laaja tavallisen asutuksen ja avoimen lentopaikan maantiede; ei yksittäistä suojattua taideteosta tai arkkitehtuurin pääteosta. Kaukaiset esine-/kyltimerkinnät ovat ympäristön osia, eivät kuvan päälle lisättyjä logoja. CC BY-SA4.0 on valokuvan oma lupa. Kuvateksti ei anna vuoden2026 lentoasema- tai matkapalvelulupausta.",
+            "Silmin katsottu alkuperäinen: Alkuperäinen3880×2819 nähty: laaja todellinen asuinalue ja takana lentopaikkamaasto. Taivasta paljon, mutta rakennusten, pihojen ja lentopaikan keskinäinen asettelu näkyy. Ihmiset hyvin kaukana, ei kasvonpiirteitä. Ei lisättyä tekstisuikaletta, vesileimaa tai kehystä. Kuvassa ei ole taistelua, aseistettuja joukkoja tai nykyisen politiikan kuva-aihetta."
+          ],
+          "QA": {
+            "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/juba/qa-evidence/62546e98a359-original.jpg",
+            "width": 3880,
+            "height": 2819,
+            "sha256": "1fcc9addf7c581278e2f734a32b3c0839d66a29329e2fd579747c875330c42e0",
+            "nativeGeometry": {
+              "rawWidth": 3880,
+              "rawHeight": 2819,
+              "exifOrientation": 1,
+              "width": 3880,
+              "height": 2819
+            },
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:AERIAL_VIEW_OF_JUBA,_SOUTH_SUDAN.jpg",
+            "sourcePagePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/juba/qa-evidence/cc-source-snapshots/b7f45c79e144225c76126b6a68aee1262476247ab0b489ae3367fbc0d63de0dd.html",
+            "sourcePageSHA256": "b7f45c79e144225c76126b6a68aee1262476247ab0b489ae3367fbc0d63de0dd",
+            "upstreamSourcePagePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/lahdevarasto/2eb2d7eae27a274772919ddc37181db66dcf6201b504730972bffa052748f2b3.body",
+            "sourceFields": {
+              "Date": "18 December 2018, 18:25:50",
+              "Source": "Own work",
+              "Author": "Umar sheriff habibullah"
+            },
+            "authors": [
+              "Umar sheriff habibullah"
+            ],
+            "authorOrigin": "Author table",
+            "licenseChoices": [
+              "CC BY-SA 4.0"
+            ],
+            "license": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "existingGameUse": [],
+            "sameCityOtherSlots": [],
+            "sameCityAcceptedQASlots": [],
+            "sameCityAcceptedNativeSHASlots": [],
+            "auditEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/juba/qa-evidence/62546e98a359-technical-source.json",
+            "visualViewedByThisSession": true,
+            "nativeOriginalViewed": true,
+            "visualObservation": "Alkuperäinen 3880×2819 itse katsottu: Juban asutuksen piha-, katu- ja kattomassa sekä takana lentopaikkamaasto. Taivas vie suuren osan kuvasta, mutta todellisen alueen keskinäinen asettelu näkyy laajana ja tunnistettavana. Useat pienet talot ja tavanomaiset lentopaikkarakenteet, ei yksittäinen arkkitehtuurin pääteos. Ihmiset niin pieniä ettei kasvonpiirteitä erotu. Luonnolliset kaukaiset ympäristömerkinnät eivät ole overlayta/mainoskuvan pääaihe; ei lisättyä tekstiä, vesileimaa tai taistelukuvausta. Description nimeää Juba; Umar sheriff habibullah, Own work, CC BY-SA 4.0 ja 18.12.2018 tarkistettu lähdesivusta.",
+            "workLayerAssessment": "Alkuperäinen 3880×2819 itse katsottu: Juban asutuksen piha-, katu- ja kattomassa sekä takana lentopaikkamaasto. Taivas vie suuren osan kuvasta, mutta todellisen alueen keskinäinen asettelu näkyy laajana ja tunnistettavana. Useat pienet talot ja tavanomaiset lentopaikkarakenteet, ei yksittäinen arkkitehtuurin pääteos. Ihmiset niin pieniä ettei kasvonpiirteitä erotu. Luonnolliset kaukaiset ympäristömerkinnät eivät ole overlayta/mainoskuvan pääaihe; ei lisättyä tekstiä, vesileimaa tai taistelukuvausta. Description nimeää Juba; Umar sheriff habibullah, Own work, CC BY-SA 4.0 ja 18.12.2018 tarkistettu lähdesivusta.",
+            "ccFragment": "cc-selection.json",
+            "canonicalCaptureDate": "18 December 2018, 18:25:50",
+            "coverLayoutAssessment": {
+              "passes": true,
+              "required": "broad real city/place view",
+              "observed": "Alkuperäinen 3880×2819 itse katsottu: Juban asutuksen piha-, katu- ja kattomassa sekä takana lentopaikkamaasto. Taivas vie suuren osan kuvasta, mutta todellisen alueen keskinäinen asettelu näkyy laajana ja tunnistettavana. Useat pienet talot ja tavanomaiset lentopaikkarakenteet, ei yksittäinen arkkitehtuurin pääteos. Ihmiset niin pieniä ettei kasvonpiirteitä erotu. Luonnolliset kaukaiset ympäristömerkinnät eivät ole overlayta/mainoskuvan pääaihe; ei lisättyä tekstiä, vesileimaa tai taistelukuvausta. Description nimeää Juba; Umar sheriff habibullah, Own work, CC BY-SA 4.0 ja 18.12.2018 tarkistettu lähdesivusta."
+            }
+          },
+          "qaReason": "Alkuperäinen 3880×2819 itse katsottu: Juban asutuksen piha-, katu- ja kattomassa sekä takana lentopaikkamaasto. Taivas vie suuren osan kuvasta, mutta todellisen alueen keskinäinen asettelu näkyy laajana ja tunnistettavana. Useat pienet talot ja tavanomaiset lentopaikkarakenteet, ei yksittäinen arkkitehtuurin pääteos. Ihmiset niin pieniä ettei kasvonpiirteitä erotu. Luonnolliset kaukaiset ympäristömerkinnät eivät ole overlayta/mainoskuvan pääaihe; ei lisättyä tekstiä, vesileimaa tai taistelukuvausta. Description nimeää Juba; Umar sheriff habibullah, Own work, CC BY-SA 4.0 ja 18.12.2018 tarkistettu lähdesivusta."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Juban rakennuksia ja avointa lentopaikkamaastoa laajassa näkymässä joulukuussa 2018.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/juba/qa.json",
+        "fileSHA256": "f64da8959d7909cee05c3a1ee152c33a9008212eb4d41308769ce2e259edae90",
+        "item": {
+          "slot": "C3",
+          "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[2]",
+          "commonsFile": "AERIAL VIEW OF JUBA, SOUTH SUDAN.jpg",
+          "type": "commons",
+          "sha256": "1fcc9addf7c581278e2f734a32b3c0839d66a29329e2fd579747c875330c42e0",
+          "nativeSHA256": "1fcc9addf7c581278e2f734a32b3c0839d66a29329e2fd579747c875330c42e0",
+          "nativeOriginalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/juba/qa-evidence/62546e98a359-original.jpg",
+          "verdict": "accepted",
+          "reason": "Alkuperäinen 3880×2819 itse katsottu: Juban asutuksen piha-, katu- ja kattomassa sekä takana lentopaikkamaasto. Taivas vie suuren osan kuvasta, mutta todellisen alueen keskinäinen asettelu näkyy laajana ja tunnistettavana. Useat pienet talot ja tavanomaiset lentopaikkarakenteet, ei yksittäinen arkkitehtuurin pääteos. Ihmiset niin pieniä ettei kasvonpiirteitä erotu. Luonnolliset kaukaiset ympäristömerkinnät eivät ole overlayta/mainoskuvan pääaihe; ei lisättyä tekstiä, vesileimaa tai taistelukuvausta. Description nimeää Juba; Umar sheriff habibullah, Own work, CC BY-SA 4.0 ja 18.12.2018 tarkistettu lähdesivusta.",
+          "evidence": {
+            "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/juba/qa-evidence/62546e98a359-original.jpg",
+            "width": 3880,
+            "height": 2819,
+            "sha256": "1fcc9addf7c581278e2f734a32b3c0839d66a29329e2fd579747c875330c42e0",
+            "nativeGeometry": {
+              "rawWidth": 3880,
+              "rawHeight": 2819,
+              "exifOrientation": 1,
+              "width": 3880,
+              "height": 2819
+            },
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:AERIAL_VIEW_OF_JUBA,_SOUTH_SUDAN.jpg",
+            "sourcePagePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/juba/qa-evidence/cc-source-snapshots/b7f45c79e144225c76126b6a68aee1262476247ab0b489ae3367fbc0d63de0dd.html",
+            "sourcePageSHA256": "b7f45c79e144225c76126b6a68aee1262476247ab0b489ae3367fbc0d63de0dd",
+            "upstreamSourcePagePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/lahdevarasto/2eb2d7eae27a274772919ddc37181db66dcf6201b504730972bffa052748f2b3.body",
+            "sourceFields": {
+              "Date": "18 December 2018, 18:25:50",
+              "Source": "Own work",
+              "Author": "Umar sheriff habibullah"
+            },
+            "authors": [
+              "Umar sheriff habibullah"
+            ],
+            "authorOrigin": "Author table",
+            "licenseChoices": [
+              "CC BY-SA 4.0"
+            ],
+            "license": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "existingGameUse": [],
+            "sameCityOtherSlots": [],
+            "sameCityAcceptedQASlots": [],
+            "sameCityAcceptedNativeSHASlots": [],
+            "auditEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/juba/qa-evidence/62546e98a359-technical-source.json",
+            "visualViewedByThisSession": true,
+            "nativeOriginalViewed": true,
+            "visualObservation": "Alkuperäinen 3880×2819 itse katsottu: Juban asutuksen piha-, katu- ja kattomassa sekä takana lentopaikkamaasto. Taivas vie suuren osan kuvasta, mutta todellisen alueen keskinäinen asettelu näkyy laajana ja tunnistettavana. Useat pienet talot ja tavanomaiset lentopaikkarakenteet, ei yksittäinen arkkitehtuurin pääteos. Ihmiset niin pieniä ettei kasvonpiirteitä erotu. Luonnolliset kaukaiset ympäristömerkinnät eivät ole overlayta/mainoskuvan pääaihe; ei lisättyä tekstiä, vesileimaa tai taistelukuvausta. Description nimeää Juba; Umar sheriff habibullah, Own work, CC BY-SA 4.0 ja 18.12.2018 tarkistettu lähdesivusta.",
+            "workLayerAssessment": "Alkuperäinen 3880×2819 itse katsottu: Juban asutuksen piha-, katu- ja kattomassa sekä takana lentopaikkamaasto. Taivas vie suuren osan kuvasta, mutta todellisen alueen keskinäinen asettelu näkyy laajana ja tunnistettavana. Useat pienet talot ja tavanomaiset lentopaikkarakenteet, ei yksittäinen arkkitehtuurin pääteos. Ihmiset niin pieniä ettei kasvonpiirteitä erotu. Luonnolliset kaukaiset ympäristömerkinnät eivät ole overlayta/mainoskuvan pääaihe; ei lisättyä tekstiä, vesileimaa tai taistelukuvausta. Description nimeää Juba; Umar sheriff habibullah, Own work, CC BY-SA 4.0 ja 18.12.2018 tarkistettu lähdesivusta.",
+            "ccFragment": "cc-selection.json",
+            "canonicalCaptureDate": "18 December 2018, 18:25:50",
+            "coverLayoutAssessment": {
+              "passes": true,
+              "required": "broad real city/place view",
+              "observed": "Alkuperäinen 3880×2819 itse katsottu: Juban asutuksen piha-, katu- ja kattomassa sekä takana lentopaikkamaasto. Taivas vie suuren osan kuvasta, mutta todellisen alueen keskinäinen asettelu näkyy laajana ja tunnistettavana. Useat pienet talot ja tavanomaiset lentopaikkarakenteet, ei yksittäinen arkkitehtuurin pääteos. Ihmiset niin pieniä ettei kasvonpiirteitä erotu. Luonnolliset kaukaiset ympäristömerkinnät eivät ole overlayta/mainoskuvan pääaihe; ei lisättyä tekstiä, vesileimaa tai taistelukuvausta. Description nimeää Juba; Umar sheriff habibullah, Own work, CC BY-SA 4.0 ja 18.12.2018 tarkistettu lähdesivusta."
+            }
+          },
+          "checkedAt": "2026-10-12T20:44:59.427395+00:00",
+          "contentSHA256": "7af8736d59562bc3eb4c569bdf734e3a011f2cfa23e213f02cd7d029d5c5b136",
+          "targetSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/juba/qa.json",
+            "sha256": "f64da8959d7909cee05c3a1ee152c33a9008212eb4d41308769ce2e259edae90"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/juba/illustration-qa-extra.json",
+            "sha256": "c58671f3c1d1451dc4a48cdfb07fae93d83f30a5a5eaec65f6a99bcc6eba5dbd"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e07",
+        "city": "juba",
+        "slot": "C3",
+        "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[2]",
+        "commonsFile": "AERIAL VIEW OF JUBA, SOUTH SUDAN.jpg",
+        "sha256": "1fcc9addf7c581278e2f734a32b3c0839d66a29329e2fd579747c875330c42e0",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:AERIAL_VIEW_OF_JUBA,_SOUTH_SUDAN.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/1/12/AERIAL_VIEW_OF_JUBA%2C_SOUTH_SUDAN.jpg",
+        "author": "Umar sheriff habibullah",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "width": 3880,
+        "height": 2819,
+        "originalSHA256": "1fcc9addf7c581278e2f734a32b3c0839d66a29329e2fd579747c875330c42e0",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e07/juba/c3-1fcc9addf7c581278e2f.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e07/juba/c3-1fcc9addf7c581278e2f.jpg",
+        "bytes": 3190140,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T20:45:41.719763+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Umar sheriff habibullah, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Juban rakennuksia ja avointa lentopaikkamaastoa laajassa näkymässä joulukuussa 2018.",
+        "lyhyt": "Juban rakennuksia ja avointa lentopaikkamaastoa laajassa näkymässä joulukuussa 2018.",
+        "tiedosto": "AERIAL VIEW OF JUBA, SOUTH SUDAN.jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "b23087ff109766a2fefda2b16d6437404d3d0c0886ec7b6e4a0ccd69c2cd8a73",
+      "targetAfterSHA256": "bf7b58285fa659b91e6d5c4001a2b9766a97f9c6a5f8d1e77ae1348663abec3d",
+      "contextAfterSHA256": "bf7b58285fa659b91e6d5c4001a2b9766a97f9c6a5f8d1e77ae1348663abec3d"
     }
   ],
   "runtimeIntegrationPending": true,
