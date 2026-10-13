@@ -14,8 +14,8 @@
     }
   },
   "artikkeli": {
-    "intro": "Brazzaville on **Kongon tasavallan pääkaupunki** Kongojoen rannalla. Se kasvoi Tio- eli Téké-valtakunnan vanhojen kauppapaikkojen, Mfwan ja Mpilan, ympärille. Brazzaville-nimi ja siirtomaakaupunki tulivat 1880-luvulla. Vuonna 1873 paikalliset kauppayhteisöt olivat siis jo olemassa.\n\nCongo–Ocean-rautatie yhdistää jokikaupungin Atlantin satamaan Pointe-Noireen. Radan rakentamiseen käytettiin pakkotyötä, ja tuhannet työntekijät kuolivat. Nykykaupungin arkea voi nähdä Poto-Poton, Moungalin ja Bacongon eri markkinoilla. Poto-Poto tunnetaan länsiafrikkalaisena kaupunginosana.\n\n**Musiikki kuuluu myös kaduille** ja kansainvälisiin yhteyksiin. Panafrikkalainen FESPAM-festivaali kokoaa esiintyjiä Brazzavilleen, kun taas Feux de Brazza keskittyy perinteiseen ja nykyperinteiseen musiikkiin. Kaupunki on UNESCOn luovien kaupunkien verkoston musiikkikaupunki, jossa toimii myös Afrikan musiikkineuvosto.",
-    "teksti": "Ennen Brazzaville-nimeä alueella olivat Mfwan ja Mpilan kauppapaikat. Ne kuuluivat Tio- eli Téké-valtakuntaan. Nykyinen siirtomaanimi tuli Pierre Savorgnan de Brazzan mukaan 1880-luvulla.\n\nCongo–Ocean-rautatie rakennettiin 1900-luvun alkupuolella Brazzavillestä Pointe-Noireen. Rakentamisessa käytettiin pakkotyötä ja tuhansia ihmisiä kuoli. Rata yhdisti jokisataman Atlantin rannikkoon.\n\nPoto-Poton, Moungalin ja Bacongon markkinat palvelevat eri kaupunginosia. Musiikin yhteyksiä kokoaa puolestaan Afrikan musiikkineuvosto CAM, Kansainvälisen musiikkineuvoston alueellinen haara. FESPAM tuo kaupunkiin eri Afrikan maiden musiikkia ja Feux de Brazza perinteistä sekä nykyperinteistä ohjelmaa."
+    "intro": "Brazzaville on **Kongon tasavallan pääkaupunki** Kongojoen rannalla. Se kasvoi Tio- eli Téké-valtakunnan vanhojen kauppapaikkojen, Mfwan ja Mpilan, ympärille. Brazzaville-nimi ja siirtomaakaupunki tulivat 1880-luvulla. Vuonna 1873 paikalliset kauppayhteisöt olivat jo olemassa.\n\nCongo–Ocean-rautatie yhdistää jokikaupungin Atlantin satamaan Pointe-Noireen. Radan rakentamiseen käytettiin pakkotyötä, ja tuhannet työntekijät kuolivat. Kaupunginosien toreilla myydään hedelmiä, vihanneksia ja tekstiilejä.\n\n**Musiikki kuuluu myös kaduille** ja kansainvälisiin yhteyksiin. Kaupunki on UNESCOn luovien kaupunkien verkoston musiikkikaupunki. Musiikin jakamiselle ja esittämiselle on tiloja myös kaduilla.",
+    "teksti": "Ennen Brazzaville-nimeä alueella olivat Mfwan ja Mpilan kauppapaikat. Ne kuuluivat Tio- eli Téké-valtakuntaan. Nykyinen siirtomaanimi tuli Pierre Savorgnan de Brazzan mukaan 1880-luvulla.\n\nCongo–Ocean-rautatie rakennettiin 1900-luvun alkupuolella Brazzavillestä Pointe-Noireen. Rakentamisessa käytettiin pakkotyötä ja tuhansia ihmisiä kuoli. Rata yhdisti jokisataman Atlantin rannikkoon.\n\nBacongon Total Marketissa on kiinteät, näkyviin merkityt hinnat. Kaupungin katukaupassa myydään maniokkia, beignet-munkkeja ja lihavartaita. Kongojoen rantaa seuraava Corniche on kävelyalue, jolta avautuu näkymä vastarannan Kinshasaan."
   },
   "kysymykset": [
     {
@@ -42,21 +42,21 @@
       ],
       "correct": 0,
       "level": 1,
-      "hint": "Valtakunta tunnetaan myös Téké-nimellä.",
+      "hint": "Kauppapaikat olivat olemassa ennen siirtomaakaupungin perustamista.",
       "fact": "Mfwa ja Mpila olivat Tio- eli Téké-valtakunnan kauppapaikkoja ennen Brazzavillen perustamista.",
       "source": "https://en.wikipedia.org/wiki/Brazzaville"
     },
     {
       "q": "Mikä on Bacongon Total Marketin hinnoittelutapa?",
       "options": [
-        "Hinnat merkitään näkyviin",
-        "Hinta päätetään huutokaupassa",
-        "Kaikki tuotteet maksavat saman",
-        "Tuotteet vaihdetaan ilman rahaa"
+        "Hinnat on merkitty tuotteisiin",
+        "Hinnoista tingitään aina",
+        "Hinnat riippuvat ostajan kansalaisuudesta",
+        "Hinnat ilmoitetaan vain suullisesti"
       ],
       "correct": 0,
       "level": 2,
-      "hint": "Torin ostotapa poikkeaa vapaasta tinkimisestä.",
+      "hint": "Kysymys koskee Bacongon kaupunginosan kauppapaikkaa.",
       "fact": "Total Marketissa on kiinteät, näkyviin merkityt hinnat.",
       "source": "https://en.wikivoyage.org/wiki/Brazzaville"
     },
@@ -70,7 +70,7 @@
       ],
       "correct": 0,
       "level": 2,
-      "hint": "Suuri alus ei pysty kulkemaan kaikkialla alajuoksulla.",
+      "hint": "Rata yhdistää jokikaupungin Atlantin satamaan.",
       "fact": "Rata yhdistää Brazzavillen Atlantin satamaan koskien ohi.",
       "source": "https://en.wikipedia.org/wiki/Congo%E2%80%93Ocean_Railway"
     },
@@ -84,7 +84,7 @@
       ],
       "correct": 0,
       "level": 3,
-      "hint": "Brazzavillessä toimiva neuvosto yhdistää musiikkialan kansainvälisiä toimijoita.",
+      "hint": "Neuvosto toimii kaupungissa alueellisena haarana.",
       "fact": "Afrikan musiikkineuvosto toimii Brazzavillessä Kansainvälisen musiikkineuvoston alueellisena haarana.",
       "source": "https://www.unesco.org/en/creative-cities/brazzaville"
     }
@@ -92,19 +92,19 @@
   "tiedot": [
     "Mfwan ja Mpilan kauppapaikat olivat olemassa ennen Brazzaville-nimistä siirtomaakaupunkia.",
     "Poto-Poto tunnetaan länsiafrikkalaisena kaupunginosana; Bacongon Total Marketissa tuotteiden hinnat on merkitty näkyviin.",
-    "Rumbaperinnettä välitetään myös naapuruston musiikkiklubeissa ja muusikoiden oppilassuhteissa."
+    "Congo-Djouén kosteikkoalueella kalastetaan, viljellään puutarhoja ja kerätään palmuöljyä."
   ],
   "valokuva": {
     "tiedosto": "Chutes de Djoué.jpg",
-    "lyhyt": "Vettä ja puustoa Djouén seudulla Brazzavillessä.",
-    "selite": "Puu ja ylivuotorakenteen yli virtaava vesi Djouén seudulla Brazzavillessä vuonna 2025.",
+    "lyhyt": "Djouén seutu Brazzavillessä.",
+    "selite": "Näkymä Djouén seudulta lokakuussa 2025.",
     "lahde": "Detsed1, Commons (CC BY-SA 4.0)"
   },
   "kaupunkilehti": [
     {
       "id": "kaupunki",
       "nimi": "Brazzaville",
-      "johdanto": "Jokikaupunki yhdistää vanhat kauppapaikat, Atlantille johtavan radan ja joen yli kulkevan musiikkiperinteen.",
+      "johdanto": "Brazzavillen historiaan kuuluvat paikalliset kauppapaikat ja Atlantille johtava rata. Kaupungin musiikkielämä ulottuu kaduilta kansainvälisiin tapahtumiin.",
       "kansikuvat": [
         {
           "tiedosto": "Brazzaville, Republic of the Congo.jpg",
@@ -114,8 +114,8 @@
         },
         {
           "tiedosto": "Brazzaville vu par un drone 01.jpg",
-          "lyhyt": "Brazzavillen asutusta ja viljelypalstoja ilmasta.",
-          "selite": "Brazzavillen taloja, puustoa ja pieniä viljelypalstoja ilmasta vuonna 2025.",
+          "lyhyt": "Brazzaville ilmasta.",
+          "selite": "Brazzavillen asutusta ilmasta vuonna 2025.",
           "lahde": "Nzinga11, Wikimedia Commons (CC0)"
         },
         {
@@ -128,7 +128,7 @@
       "nostot": [
         {
           "otsikko": "Mfwa oli paikalla ennen nimeä",
-          "teksti": "Ennen Brazzaville-nimistä siirtomaakaupunkia samalla alueella olivat Mfwan ja Mpilan kauppapaikat. Ne kuuluivat Tio- eli Téké-valtakunnan ympäristöön, ja paikallisiin nimimuotoihin liittyvät myös Mfa ja Ntamo. Nykyinen kaupunki sai 1880-luvulla nimen Pierre Savorgnan de Brazzan mukaan. Isoisän matkavuonna 1873 tuo myöhempi nimi ei vielä määrittänyt paikkaa. Kauppapaikkojen historia muistuttaa, että eurooppalainen perustamiskertomus kuvaa yhtä vaihetta, ei alueen ihmisten historian alkua.",
+          "teksti": "Ennen Brazzaville-nimistä siirtomaakaupunkia samalla alueella olivat Mfwan ja Mpilan kauppapaikat. Ne kuuluivat Tio- eli Téké-valtakunnan ympäristöön,. Nykyinen kaupunki sai 1880-luvulla nimen Pierre Savorgnan de Brazzan mukaan. Brazza-sukunimi puolestaan viittaa Brazzaccon kylään Italiassa, Moruzzon kunnassa. Tékénkielisissä paikannimissä esiintyvät myös muodot M’fa, Mfa ja Mfoa.",
           "tiedosto": "",
           "lyhyt": "",
           "selite": "",
@@ -137,16 +137,16 @@
         },
         {
           "otsikko": "Djoué liittyy Kongojoen rantaan",
-          "teksti": "Brazzavillen länsiosassa Djoué laskee Kongojokeen Kintamon koskien luona. Jokisuun ympäristö kuuluu Congo-Djouén kosteikkoalueeseen. Siihen sisältyy pysyviä ja tilapäisiä vesiuomia, soita ja metsäisiä saaria. Luonto on myös paikallisten elinkeinojen ympäristö: alueella kalastetaan, viljellään puutarhoja ja kerätään palmuöljyä. Veden ja metsäsaarten mosaiikki tarjoaa kaloille lisääntymispaikkoja. Djouén seutu näyttää pääkaupungin lähellä joen, kosteikon ja viljelyn yhteyden.",
+          "teksti": "Brazzavillen länsiosassa Djoué laskee Kongojokeen Kintamon koskien luona. Jokisuun ympäristö kuuluu Congo-Djouén kosteikkoalueeseen. Siihen sisältyy pysyviä ja tilapäisiä vesiuomia, soita ja metsäisiä saaria. Luonto on myös paikallisten elinkeinojen ympäristö: alueella kalastetaan, viljellään puutarhoja ja kerätään palmuöljyä. Veden ja metsäsaarten mosaiikki tarjoaa kaloille lisääntymispaikkoja.",
           "tiedosto": "",
           "lyhyt": "",
           "selite": "",
           "lahde": "",
-          "wiki": "Pool Malebo"
+          "wiki": "Djoué River"
         },
         {
           "otsikko": "Kosket kierretään rautatiellä",
-          "teksti": "Congo–Ocean-rautatie yhdistää Brazzavillen Atlantin rannikon Pointe-Noiren satamaan. Se toimii alajuoksun koskijakson kiertoyhteytenä, kun Brazzavillestä jokireitit jatkuvat ylävirtaan. Rata rakennettiin 1900-luvun alkupuolella, joten sitä ei ollut isoisän matkavuonna 1873. Rakentamisessa käytettiin pakkotyötä, ja tuhansia afrikkalaisia työntekijöitä kuoli. Rata avattiin 1930-luvulla; sen kustannus ei ollut vain rahaa ja kiskoa, vaan myös rakentamiseen pakotettujen ihmisten elämä.",
+          "teksti": "Congo–Ocean-rautatie yhdistää Brazzavillen Atlantin rannikon Pointe-Noiren satamaan. Se toimii alajuoksun koskijakson kiertoyhteytenä, kun Brazzavillestä jokireitit jatkuvat ylävirtaan. Rata rakennettiin 1900-luvun alkupuolella. Rakentamisessa käytettiin pakkotyötä, ja tuhansia afrikkalaisia työntekijöitä kuoli. Rata avattiin 1930-luvulla. Sen rannikon päätepiste oli Pointe-Noire, kun Brazzavillessä kuljetukset liittyivät Kongojoen ylävirran vesireitteihin.",
           "tiedosto": "",
           "lyhyt": "",
           "selite": "",
@@ -155,7 +155,7 @@
         },
         {
           "otsikko": "Kolme kaupunginosaa, eri torit",
-          "teksti": "Poto-Poton, Moungalin ja Bacongon markkinat palvelevat Brazzavillen eri kaupunginosia. Poto-Poto tunnetaan länsiafrikkalaisena korttelina. Bacongossa sijaitsee Total Market, jossa tuotteiden hinnat on merkitty näkyviin. Kaupassa on hedelmiä, vihanneksia ja tekstiilejä. Bacongon kaduilla on myös pieniä ruokapaikkoja ja baareja. Näiden nimien kautta Brazzaville avautuu kaupunginosina: keskustan jokirannan lisäksi arkisia hankintoja tehdään oman asuinalueen markkinapaikoilla.",
+          "teksti": "Poto-Poton, Moungalin ja Bacongon markkinat palvelevat Brazzavillen eri kaupunginosia. Poto-Poto tunnetaan länsiafrikkalaisena korttelina. Bacongossa sijaitsee Total Market, jossa tuotteiden hinnat on merkitty näkyviin. Kaupassa on hedelmiä, vihanneksia ja tekstiilejä. Bacongon kaduilla on myös pieniä ruokapaikkoja ja baareja. Brazzavillessä toimii myös Poto-Poton maalauskoulu.",
           "tiedosto": "",
           "lyhyt": "",
           "selite": "",
@@ -170,7 +170,7 @@
           "selite": "",
           "lahde": ""
         },
-        "kappale": "Brazzavillen jokirantaa voi hahmottaa Cornichen kävelyalueen kautta. Poto-Poton ja Moungalin markkinat tuovat esiin eri kaupunginosien arkea. Luontokohteiden kulkujärjestelyt sovitaan paikallisesti. Juna- ja veneyhteyksien nykyinen toiminta varmistetaan erikseen. Musiikkitapahtuman ajankohta selvitetään ennen käyntiä.",
+        "kappale": "Brazzavillen jokirantaa voi hahmottaa Cornichen kävelyalueen kautta. Kaupunginosien markkinoilla myydään hedelmiä, vihanneksia ja tekstiilejä. Djouén jokisuu kuuluu koskien ja kosteikkojen ympäristöön.",
         "artikkeli": {
           "nimi": "Matkailijan Brazzaville",
           "taitto": "opas",
@@ -179,7 +179,7 @@
           "jaksot": [
             {
               "otsikko": "Perille ja liikkeelle",
-              "teksti": "Maya-Mayan lentoaseman tunnus on BZV. Kaupungissa liikutaan takseilla. Rautatie yhdistää Brazzavillen Atlantin rannikon Pointe-Noireen; varmista käytettävän yhteyden aikataulu liikennöitsijältä.",
+              "teksti": "Maya-Mayan lentoaseman tunnus on BZV. Kaupungissa liikutaan takseilla. Rautatie yhdistää Brazzavillen Atlantin rannikon Pointe-Noireen.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -209,7 +209,7 @@
             },
             {
               "otsikko": "Ruokaa ja markkinoita",
-              "teksti": "Katukaupassa myydään beignet-munkkeja ja maniokkia. Munavoileipiä voi löytää satunnaisesti, ja iltaisin valmistetaan lihavartaita. Kaupungissa on myös libanonilaisia ja muita kansainvälisiä ruokapaikkoja. Poto-Poto, Moungali ja Bacongo ovat eri kaupunginosien markkinapaikkoja.",
+              "teksti": "Katukaupassa myydään beignet-munkkeja ja maniokkia. Munavoileipiä voi löytää satunnaisesti, ja iltaisin valmistetaan lihavartaita. Kaupungissa on myös libanonilaisia ja muita kansainvälisiä ruokapaikkoja.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -218,8 +218,8 @@
               }
             },
             {
-              "otsikko": "Musiikin ajankohta",
-              "teksti": "FESPAM on panafrikkalainen musiikkifestivaali. Feux de Brazza keskittyy perinteiseen ja nykyperinteiseen musiikkiin. Tarkista esityksen ajankohta järjestäjältä; kaupungin musiikkia kuullaan myös pienemmissä paikallisissa ympäristöissä.",
+              "otsikko": "Musiikkifestivaalit",
+              "teksti": "FESPAM on panafrikkalainen musiikkifestivaali, joka järjestetään joka toinen vuosi. Feux de Brazza keskittyy perinteiseen ja nykyperinteiseen musiikkiin.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -248,30 +248,22 @@
               {
                 "mita": "Djouén luontomaisema",
                 "tahdet": 3,
-                "selite": "Paikallisesti järjestetty retki tutustuttaa jokisuun ympäristöön."
+                "selite": "Jokisuun ympäristöön kuuluu koskia, vesiuomia ja metsäisiä saaria."
               },
               {
-                "mita": "Musiikkitapahtuma",
-                "tahdet": 3,
-                "selite": "Vahvistettu tapahtuma tuo rumbaperinteen elävään tilanteeseen."
+                "mita": "Musiikki kaduilla",
+                "tahdet": 2,
+                "selite": "Musiikille on jakamisen ja esittämisen tiloja myös katuympäristössä."
               }
             ],
             "hyvaTietaa": [
               {
+                "otsikko": "Ennen matkapäätöstä",
+                "teksti": "Tarkista Kongon tasavallan ajantasainen matkustustiedote Suomen ulkoministeriöstä."
+              },
+              {
                 "otsikko": "Kaksi Kongoa",
                 "teksti": "Brazzaville ja Kinshasa ovat eri valtioiden pääkaupunkeja."
-              },
-              {
-                "otsikko": "Yhteydet varmistetaan",
-                "teksti": "Juna- ja venematkan nykyinen toiminta selvitetään erikseen."
-              },
-              {
-                "otsikko": "Saari ei ole laituri",
-                "teksti": "Mbamu-saarelle kuljetus järjestetään erikseen; saaren nimi ei tarkoita valmista veneyhteyttä."
-              },
-              {
-                "otsikko": "Ennen matkapäätöstä",
-                "teksti": "Tarkista Kongon tasavallan ajantasainen matkustustiedote Suomen ulkoministeriöstä; arvioi siinä nimetty alue suhteessa omaan reittiin."
               }
             ]
           },
@@ -281,23 +273,23 @@
     },
     {
       "id": "musiikki",
-      "nimi": "Rumba kulkee joen yli",
-      "johdanto": "Brazzavillen musiikkikulttuuri kuuluu sekä kaupungin omaan arkeen että kahden Kongon yhteiseen perinteeseen.",
+      "nimi": "Musiikkikaupunki Brazzaville",
+      "johdanto": "Musiikin esityspaikat, festivaalit ja kansainväliset yhteydet kuuluvat Brazzavillen kaupunkikulttuuriin.",
       "tehtava": {
-        "kysymys": "Mihin Feux de Brazza -festivaali keskittyy?",
+        "kysymys": "Millainen musiikki on Feux de Brazza -festivaalin painopiste?",
         "vaihtoehdot": [
-          "Perinteiseen ja nykyperinteiseen musiikkiin",
-          "Klassiseen orkesterimusiikkiin",
-          "Elokuvien ääniraitakilpailuun",
-          "Lasten kuoromusiikkiin"
+          "Perinteeseen pohjaava musiikki",
+          "Länsimainen orkesterimusiikki",
+          "Ranskalainen kuoromusiikki",
+          "Elektroninen tanssimusiikki"
         ],
         "oikea": 0,
-        "fakta": "Festivaali antaa tilaa perinnemusiikille ja siitä kasvaneille nykyisille muodoille."
+        "fakta": "Feux de Brazza tuo esiin perinteistä ja siitä kasvavaa nykyperinteistä musiikkia."
       },
       "nostot": [
         {
-          "otsikko": "Musiikki on kaupungin toimintaa",
-          "teksti": "Brazzaville kuuluu UNESCOn luovien kaupunkien verkostoon musiikkikaupunkina. Musiikkia jaetaan ja esitetään myös kaupungin kaduilla konserttisalien rinnalla. Afrikan musiikkineuvosto eli CAM toimii kaupungissa Kansainvälisen musiikkineuvoston alueellisena haarana. FESPAM on panafrikkalainen musiikkifestivaali, kun taas Feux de Brazza liittyy perinteiseen ja nykyperinteiseen musiikkiin. Eri toimijat ja tapahtumat tekevät musiikista kaupungin toimintaa, eivät pelkkää yhtä tunnuslaulua tai esiintyjän nimeä.",
+          "otsikko": "Kadut ovat myös esityspaikkoja",
+          "teksti": "Brazzaville kuuluu UNESCOn luovien kaupunkien verkostoon musiikkikaupunkina. Kaupunki liittyi verkostoon vuonna 2013. Musiikin esittämiselle ja jakamiselle on tiloja kaduilla, joten kaupungin musiikkielämä ulottuu konserttisalien ulkopuolelle. Verkoston jäsenenä Brazzaville tukee myös muita jäsenyyttä hakevia kaupunkeja. Jäsenyys koskee kaupungin luovista aloista juuri musiikkia.",
           "tiedosto": "",
           "lyhyt": "",
           "selite": "",
@@ -305,8 +297,8 @@
           "wiki": "Brazzaville"
         },
         {
-          "otsikko": "FESPAM tuo Afrikan musiikkia kaupunkiin",
-          "teksti": "FESPAM on Brazzavillessä järjestettävä panafrikkalainen musiikkifestivaali. Esiintyjiä ja muita musiikkialan toimijoita kokoava tapahtuma on rakentunut kahden vuoden rytmiin. Sen nimessä panafrikkalaisuus tarkoittaa koko Afrikkaan ulottuvaa näkökulmaa. Brazzavillen kaduilla ja esityspaikoissa kuultava musiikki saa festivaalin aikana myös kansainvälisiä yhteyksiä. Samassa kaupungissa toimii Afrikan musiikkineuvosto, ja Feux de Brazza -festivaali tuo esiin perinteistä sekä nykyperinteistä musiikkia.",
+          "otsikko": "Kaksi festivaalia, eri painotus",
+          "teksti": "FESPAM kokoaa Brazzavilleen eri Afrikan maiden musiikkia joka toinen vuosi. Feux de Brazza painottuu puolestaan perinteiseen ja nykyperinteiseen musiikkiin. Nykyperinteinen musiikki rakentuu vanhemman perinteen pohjalle. Tapahtumien painotukset eroavat toisistaan, vaikka molemmat kuuluvat kaupungin festivaalielämään. FESPAMin aikana ohjelmaa järjestetään usean päivän ajan.",
           "tiedosto": "",
           "lyhyt": "",
           "selite": "",
@@ -314,8 +306,8 @@
           "wiki": "Brazzaville"
         },
         {
-          "otsikko": "Feux de Brazza antaa perinteelle näyttämön",
-          "teksti": "Feux de Brazza on Brazzavillen musiikkitapahtuma, jonka painopiste on perinteisessä ja nykyperinteisessä musiikissa. Nykyperinteinen tarkoittaa perinteeseen pohjaavaa nykymusiikkia. Festivaali kuuluu kaupungin musiikkitoimintaan panafrikkalaisen FESPAMin rinnalla. Brazzavillen musiikkielämään kuuluu siis useita tapahtumia eri painotuksin: yksi kokoaa laajasti Afrikan musiikkia, toinen nostaa esiin perinteen ja sen nykyiset muodot. Kummassakin esiintyjät saavat yhteisen tilan kuulijoiden kanssa.",
+          "otsikko": "Afrikan musiikkineuvoston kotipaikka",
+          "teksti": "Brazzavillessä toimii Afrikan musiikkineuvosto CAM. Se on Kansainvälisen musiikkineuvoston alueellinen haara. Neuvosto kuuluu kaupungin musiikkialan kansainvälisiin yhteyksiin. Kaupungin kulttuurisuunnitelmiin sisältyy musiikkikirjasto, jota on tarkoitus rakentaa yhteistyössä neuvoston kanssa. CAM-nimestä käytetään myös englanninkielistä muotoa African Music Council.",
           "tiedosto": "",
           "lyhyt": "",
           "selite": "",
@@ -323,20 +315,20 @@
           "wiki": "Brazzaville"
         },
         {
-          "otsikko": "Musiikkiklubi on myös oppimispaikka",
-          "teksti": "Rumbaperinnettä välitetään nuoremmille sukupolville naapuruston musiikkiklubeissa, koulutuslaitoksissa ja yhteisöjärjestöissä. Muusikoiden oppilassuhteet ovat yksi oppimisen tapa, ja myös soittimien valmistus kuuluu käytäntöön. Perinne on tärkeä diasporassa, joten sen yhteydet jatkuvat kahden Kongon ulkopuolelle. Oppiminen tapahtuu sekä harjoittelemalla että kuuntelemalla kokeneempia muusikoita. Se tarvitsee ihmisiä, jotka oppivat taitoja toisiltaan ja tekevät niitä uudelleen omassa ympäristössään.",
+          "otsikko": "Tilaa muusikoiden työlle",
+          "teksti": "Brazzavillen kulttuurisuunnitelmiin kuuluu työskentelyresidenssejä paikallisille ja kansainvälisille taiteilijoille. Erillisen residenssin tavoitteena on tukea näkövammaisten muusikoiden luovaa työtä. Suunnitelmassa ovat mukana myös muusikoiden tuotannon ja esiintymiskiertueiden tukeminen sekä kaupungin kulttuuritoiminnan tarvitsemien tilojen ja palvelujen kehittäminen.",
           "tiedosto": "",
           "lyhyt": "",
           "selite": "",
           "lahde": "",
-          "wiki": "Congolese rumba"
+          "wiki": "Brazzaville"
         }
       ]
     }
   ],
   "kohdekartta": {
     "numeroympyrat": true,
-    "esittely": "Djouén jokisuu liittyy Kongon kosteikkoihin. Sen lähellä alkaa pitkä alajuoksun koskijakso.",
+    "esittely": "Djouén jokisuu kuuluu Kongojoen koskien ja kosteikkojen ympäristöön.",
     "rajat": {
       "pohjoinen": -4.30751,
       "etela": -4.32494,
@@ -349,19 +341,13 @@
         "lat": -4.31051,
         "lon": 15.2282,
         "tyyppi": "luonto"
-      },
-      {
-        "nimi": "Livingstonen koskijakson alku",
-        "lat": -4.32194,
-        "lon": 15.20778,
-        "tyyppi": "luonto"
       }
     ]
   },
   "nahtavyydet": {
     "Djoué-joen suu": {
       "aika": "Luonnonympäristö",
-      "teksti": "Djoué on Kongojoen oikeanpuoleinen sivujoki, joka kulkee Brazzavillen länsiosassa. Se laskee Kongoon Pool Malebon ulosvirtauksen ympäristössä. Suun yhteydessä ovat Kintamon kosket, ja vesimaisema liittyy Congo-Djouén kosteikkoalueeseen. \n\nJokien ja kosteikkojen kokonaisuus tarjoaa lisääntymisympäristöjä kaloille ja selkärangattomille. Luonnonalue on eri aikakerros kuin 1900-luvun voimala ja muut myöhemmät rakenteet. Vuonna 1873 luonnonvesistöt olivat osa Tio-valtakunnan kauppapaikkojen ympäristöä. Jokisuun ympäristö kuuluu Congo-Djouén Ramsar-alueeseen.",
+      "teksti": "Djoué on Kongojoen oikeanpuoleinen sivujoki, joka kulkee Brazzavillen länsiosassa. Se laskee Kongoon Kintamon koskien luona. Jokisuun ympäristö kuuluu Congo-Djouén kosteikkoalueeseen.\n\nKosteikkoihin kuuluu pysyviä ja tilapäisiä vesiuomia, soita ja metsäisiä saaria. Ne tarjoavat lisääntymisympäristöjä kaloille ja selkärangattomille. Alueella kalastetaan, viljellään puutarhoja ja kerätään palmuöljyä.",
       "kuvat": [
         {
           "tiedosto": "",
@@ -370,30 +356,12 @@
           "lahde": ""
         }
       ],
-      "lahde": "Wikipedia"
-    },
-    "Livingstonen koskijakson alku": {
-      "aika": "Luonnonmuodostuma",
-      "teksti": "Livingstonen kosket ovat Kongojoen alajuoksun pitkä koskien sarja. Jakso alkaa Pool Malebon alapuolelta ja jatkuu laajasti Matadin suuntaan. Brazzavillen lähellä oleva piste tarkoittaa sarjan alkua, ei kaikkia koskia eikä kaukaista Ingan voimala-aluetta. Kosket haittaavat laivaliikennettä, ja niiden ohittamiseen rakennettu rautatie yhdistää jokikaupungin Atlantin satamaan.\n\nKoskien nimi viittaa David Livingstoneen, vaikka hän ei itse käynyt tällä alajuoksuosalla. Nimi ja matkustajan todellinen reitti ovat siten eri asioita. Luonnonmuodostuma oli osa joen ympäristöä jo isoisän matkavuonna 1873, mutta nykyinen Congo–Ocean-rata syntyi vasta myöhemmin. Congo-Djouén kosteikkoalueella jokivarsiin liittyy myös soita ja metsäisiä saaria sekä kalastusta ja puutarhaviljelyä.",
-      "kuvat": [
-        {
-          "tiedosto": "",
-          "lyhyt": "",
-          "selite": "",
-          "lahde": ""
-        }
-      ],
-      "lahde": "Wikipedia"
+      "lahde": "Wikipedia; Ramsar"
     }
   },
   "saatiedot": null,
   "ehdotukset": {
     "lentoasema": "Maya-Maya Airport (BZV)",
-    "huomiot": [
-      "8 nostoa, 5 opasjaksoa, 5 kysymystä ja 3 tietoa. Rumba kuuluu tälle kaupungille; Kinshasan maalehden aiheita ei kopioitu.",
-      "Kartta partial 2: Djouén suu ja Livingstonen koskien alku. Pool Malebon ja Mbamun laajat pisteet eivät ole keskustaa; Ramsar-piste vain R9, joten ei WP/WD-vaatimuksen ohitusta. Katedraalin suojattuja myöhempiä rakennusosia ei lisätty.",
-      "Kuvaputki avoin, kaikki kuvakentät tyhjiä. Ei nykyisiä rumbatallenteita, suojattuja sanoituksia tai nykyteoksia.",
-      "Saatiedot null: 48/48 primäärivarmennus puuttuu. Perustamisvuosien ristiriita yleistetty 1880-luvuksi, väestöluku jätetty pois."
-    ]
+    "huomiot": []
   }
 }

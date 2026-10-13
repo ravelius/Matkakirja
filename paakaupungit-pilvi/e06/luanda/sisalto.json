@@ -15,7 +15,7 @@
   },
   "artikkeli": {
     "intro": "Luanda on Angolan pääkaupunki ja vanha satamakaupunki **Atlantin rannalla**. Lahden edustalle ulottuu Ilha de Luandan hiekkaniemi, jonka nimi viittaa saareen mutta maasto liittyy mantereeseen. Paikalliset yhteisöt elivät sen rannalla jo ennen portugalilaisten kaupungin syntyä 1500-luvun lopulla.\n\nVuonna 1873 Luanda oli jo vanha kauppapaikka. Sen aiempaan satamahistoriaan kuului orjuutettujen ihmisten kuljettaminen Brasiliaan, ja 1800-luvun vientiin kuuluivat myös puu, kahvi ja kasviöljyt. Kaupungin historia näkyy rannan Baixassa ja ylempänä sijaitsevassa Cidade Altassa.\n\n**Kirkkojen historia näkyy korjauksissa**, sillä rakennuksia on kunnostettu ja käytetty uudelleen eri aikoina. Remédiosin julkisivu sai nykyisen perusmuotonsa vasta 1800-luvun lopun kunnostuksessa. Nykyinen Luanda ulottuu vanhojen kaupunginosien ulkopuolelle, ja sen rannoilla, kaduilla sekä ravintoloissa elää tämän päivän pääkaupunki.",
-    "teksti": "Luandan rannikon muodot ovat osa kaupungin historiaa. Ilha de Luandan matala hiekkaniemi liittyy mantereeseen kapean yhteyden kautta, ja sen ympärillä ovat merenlahti sekä kaupungin rannat. Luonto ja kaupunkielämä kohtaavat samalla kaistaleella, jolla myös paikalliset yhteisöt ovat pitkään asuneet.\n\nRannan alakaupunki Baixa liittyy satamaan ja kaupankäyntiin. Ylempänä sijaitseva Cidade Alta ei kuitenkaan ole pelkästään nuori osa kaupunkia: siellä on myös vanha jesuiittojen kirkonpaikka. Luandan maaston korkeuserot ja rakennusten eri-ikäisyys ovat kaksi erillistä tapaa lukea kaupunkia.\n\nVanhojen kirkkojen historiaan kuuluu kunnostuksia, käyttötarkoitusten muutoksia ja jälleenrakentamista. Remédios, Carmo, Nazaré ja Cabo kertovat näistä vaiheista omilla tavoillaan. Rannalla taas nykyiset ravintolat ja vapaa-ajan paikat liittyvät elävään kaupunkiin, jonka tarina jatkuu vanhojen rakennusten ulkopuolella."
+    "teksti": "Luandan rannikon muodot ovat osa kaupungin historiaa. Sataman 1800-luvun vientituotteisiin kuuluivat puu, kahvi ja kasviöljyt. Ilha de Luandan matala hiekkaniemi liittyy mantereeseen kapean yhteyden kautta, ja sen ympärillä ovat merenlahti sekä kaupungin rannat.\n\nRannan alakaupunki Baixa liittyy satamaan ja kaupankäyntiin. Ylempänä sijaitseva Cidade Alta ei kuitenkaan ole pelkästään nuori osa kaupunkia: siellä on myös vanha jesuiittojen kirkonpaikka.\n\nVanhojen kirkkojen historiaan kuuluu kunnostuksia, käyttötarkoitusten muutoksia ja jälleenrakentamista. Remédios, Carmo, Nazaré ja Cabo kertovat näistä vaiheista omilla tavoillaan."
   },
   "kysymykset": [
     {
@@ -28,7 +28,7 @@
       ],
       "correct": 0,
       "level": 1,
-      "hint": "Kaupunki sijaitsee Afrikan länsirannikolla.",
+      "hint": "Kaupunki sijaitsee Afrikan eteläosassa.",
       "fact": "Luanda on Angolan pääkaupunki ja Atlantin satamakaupunki.",
       "source": "https://en.wikipedia.org/wiki/Luanda"
     },
@@ -50,13 +50,13 @@
       "q": "Mikä Ilha de Luanda on maaston kannalta?",
       "options": [
         "Hiekkaniemi",
-        "Koralliatolli",
-        "Tulivuorisaari",
-        "Vuoristolaakso"
+        "Luonnollinen jokisaari",
+        "Kallioniemi",
+        "Jokisuisto"
       ],
       "correct": 0,
       "level": 2,
-      "hint": "Paikka muodostui sedimentin kerrostumisesta.",
+      "hint": "Paikka tunnetaan myös nimellä Ilha do Cabo.",
       "fact": "Ilha tarkoittaa saarta, mutta Ilha de Luanda liittyy mantereeseen kapean yhteyden kautta.",
       "source": "https://en.wikipedia.org/wiki/Ilha_de_Luanda"
     },
@@ -124,7 +124,7 @@
       "nostot": [
         {
           "otsikko": "Kaupungilla on kaksi korkeutta",
-          "teksti": "Baixa on Luandan alakaupunki sataman vierellä. Sen kapeat kadut ja vanhat rakennukset kuuluvat kaupungin pitkään kauppahistoriaan. Ylempänä sijaitsee Cidade Alta, jonka nimi tarkoittaa yläkaupunkia. Nimet kertovat maastosta, mutta niitä ei kannata tulkita koko kaupungin ikäjärjestykseksi: myös Altassa on vanhoja paikkoja, kuten jesuiittojen Jesus-kirkko. Nykyinen Luanda on kasvanut näiden perinteisten alueiden ulkopuolelle. Alhaalta ylös kulkeminen voi siis vaihtaa näkökulmaa ilman, että vanha kaupunki jää taakse.",
+          "teksti": "Baixa on Luandan alakaupunki sataman vierellä. Sen kapeat kadut ja vanhat rakennukset kuuluvat kaupungin pitkään kauppahistoriaan. Ylempänä sijaitsee Cidade Alta, jonka nimi tarkoittaa yläkaupunkia. Nimet kertovat maastosta, mutta niitä ei kannata tulkita koko kaupungin ikäjärjestykseksi: myös Altassa on vanhoja paikkoja, kuten jesuiittojen Jesus-kirkko. Nykyinen Luanda on kasvanut näiden perinteisten alueiden ulkopuolelle.",
           "tiedosto": "Rua D. Franc do Sover Luanda 01.JPG",
           "lyhyt": "Luandan katumaisemassa näkyvät kaupungin korkeuserot.",
           "selite": "Luandan viettävä katu havainnollistaa rannikkokaupungin maaston korkeuseroja.",
@@ -142,7 +142,7 @@
         },
         {
           "otsikko": "Sataman lasti kertoo muutoksesta",
-          "teksti": "Luanda oli vuonna 1873 jo vanha Atlantin satamakaupunki. Sen aiempaan historiaan kuului keskeinen asema orjuutettujen ihmisten kuljetuksissa Brasiliaan. Sataman historiaa ei voi erottaa tästä kaupasta. Se ei kuitenkaan ollut kaupungin ainoa kaupan vaihe: 1800-luvulla ulkomainen merenkulku laajeni ja Luandassa toimi kauppayhtiöitä. Vientiin kuuluivat muun muassa kasviöljyt, puu ja kahvi. Rannan Baixa oli kaupungin kaupallista aluetta. Samasta satamasta kulkenut lasti kertoo näin eri aikojen taloudesta.",
+          "teksti": "Luanda oli vuonna 1873 jo vanha Atlantin satamakaupunki. Sen aiempaan historiaan kuului keskeinen asema orjuutettujen ihmisten kuljetuksissa Brasiliaan. Se ei kuitenkaan ollut kaupungin ainoa kaupan vaihe: 1800-luvulla ulkomainen merenkulku laajeni ja Luandassa toimi kauppayhtiöitä. Vientiin kuuluivat muun muassa kasviöljyt, puu ja kahvi. Rannan Baixa oli kaupungin kaupallista aluetta. Samasta satamasta kulkenut lasti kertoo näin eri aikojen taloudesta.",
           "tiedosto": "",
           "lyhyt": "",
           "selite": "",
@@ -150,8 +150,8 @@
           "wiki": "Luanda"
         },
         {
-          "otsikko": "Lentolipussa kannattaa katsoa kenttätunnus",
-          "teksti": "Luandan kansainvälinen saapumispaikka on muuttunut. Dr. António Agostinho Neto International Airport käyttää tunnusta NBJ, kun vanhan Quatro de Fevereiro -kentän tunnus oli LDA. Uusi lentoasema sijaitsee Bom Jesusin alueella Icolo e Bengon maakunnassa, kaupungin kaakkoispuolella. Airlink on vahvistanut omien Luandan lentojensa siirron uudelle kentälle. Lentoasemalta on maantieyhteys kaupunkiin, mutta jatkokuljetus kannattaa sopia oman toimijan kanssa. Pelkkä Luanda lentolipussa ei siis korvaa kenttätunnuksen tarkistamista.",
+          "otsikko": "Luandan kaksi lentoasemaa",
+          "teksti": "Luandan kansainvälinen saapumispaikka on muuttunut. Dr. António Agostinho Neto International Airport käyttää tunnusta NBJ, kun vanhan Quatro de Fevereiro -kentän tunnus oli LDA. Uusi lentoasema sijaitsee Bom Jesusin alueella Icolo e Bengon maakunnassa, kaupungin kaakkoispuolella. Lentoasemalta on maantieyhteys kaupunkiin, mutta jatkokuljetus kannattaa sopia oman toimijan kanssa.",
           "tiedosto": "NAIL 24L Runway.jpg",
           "lyhyt": "NBJ-lentoasema palvelee Luandan kansainvälistä liikennettä.",
           "selite": "Luandan uuden NBJ-lentoaseman kiitorata kuuluu kaupungin kansainväliseen saapumisympäristöön.",
@@ -166,7 +166,7 @@
           "selite": "",
           "lahde": ""
         },
-        "kappale": "Luandassa vanha kaupunki ja Atlantin rannikko ovat lähekkäin. Baixan katuihin ja kirkkojen ulkopuoliseen ympäristöön voi tutustua samassa kaupunkikäynnissä. Ilhan hiekkaniemi tuo mukaan rantoja ja ravintoloita. Tarkista lentoaseman tunnus NBJ ja sovi kuljetukset etukäteen. Suunnittele liikkuminen päiväsaikaan ja selvitä vierailu- sekä kuvauskäytännöt erikseen.",
+        "kappale": "Luandassa vanha kaupunki ja Atlantin rannikko ovat lähekkäin. Baixan katuihin ja kirkkojen ulkopuoliseen ympäristöön voi tutustua samassa kaupunkikäynnissä. Ilhan hiekkaniemi tuo mukaan rantoja ja ravintoloita.",
         "artikkeli": {
           "nimi": "Matkailijan Luanda",
           "taitto": "opas",
@@ -175,7 +175,7 @@
           "jaksot": [
             {
               "otsikko": "Perille ja liikkeelle",
-              "teksti": "Tarkista lipusta Dr. António Agostinho Neto International Airport ja tunnus NBJ. Vanha Quatro de Fevereiro tunnetaan tunnuksella LDA, joka voi näkyä vanhemmissa matkakuvauksissa. Sovi jatkokuljetus keskustaan ennen saapumista ja varmista kohtaamispaikka omalta toimijaltasi. Varaa matkan jatkoon joustoa ja pidä kenttätunnus mukana kuljetusta järjestäessäsi.",
+              "teksti": "Luandan Dr. António Agostinho Neto -lentoaseman tunnus on NBJ. Vanhan Quatro de Fevereiro -kentän tunnus on LDA. NBJ-lentoasema sijaitsee Bom Jesusin alueella kaupungin kaakkoispuolella.",
               "kuva": {
                 "tiedosto": "NAIL Jetbridge.jpg",
                 "lyhyt": "Matkustajasilta kuuluu NBJ-lentoaseman saapumisympäristöön.",
@@ -185,26 +185,26 @@
             },
             {
               "otsikko": "Vanhan Luandan paikat",
-              "teksti": "Baixan katutila ja vanhat kirkot näyttävät eri puolia Luandan historiasta. Remédios, Carmo ja Nazaré ovat vanhoja rakennuspaikkoja, mutta niiden nykyasuun kuuluu myös korjauksia ja muutoksia. Kirkkoihin voi tutustua ulkoa ilman oletusta sisäänpääsystä. Selvitä vierailu- ja kuvauskäytännöt paikan päällä, ja kunnioita tilojen uskonnollista käyttöä."
+              "teksti": "Baixan katutila ja vanhat kirkot näyttävät eri puolia Luandan historiasta. Remédios, Carmo ja Nazaré ovat vanhoja rakennuspaikkoja, mutta niiden nykyasuun kuuluu myös korjauksia ja muutoksia."
             },
             {
               "otsikko": "Rannan suuntaan",
-              "teksti": "Ilha de Luandan hiekkaniemi ja Marginalin lahdenranta tuovat Atlantin osaksi kaupunkikäyntiä. Ilhalla on rantoja ja ravintoloita, ja alueella käy myös kaupungin asukkaita. Rannalla oleskelu on yksi tapa tutustua paikkaan; uimista varten olosuhteet ja paikalliset ohjeet on selvitettävä erikseen. Sovi myös paluukuljetus, jotta rantaretki ei riipu viime hetkellä löytyvästä kyydistä.",
+              "teksti": "Ilha de Luandan hiekkaniemi ja Marginalin lahdenranta tuovat Atlantin osaksi kaupunkikäyntiä. Ilhalla on rantoja ja ravintoloita, ja alueella käy myös kaupungin asukkaita.",
               "kuva": {}
             },
             {
               "otsikko": "Mitä syödään",
-              "teksti": "Ilha ja Marginal ovat Luandan ravintola-alueita. Kaupungin ruokapaikoista löytyy paikallisia aterioita, ja tarjolla on myös hedelmämehuja. Ruokailu voi olla oma osansa rantapäivää tai keskustan kävelyä. Kysy annoksen sisällöstä ennen tilaamista, jos jokin on epäselvää. Ilhan rantapaikat ja Marginalin ravintolat sijoittuvat lahden eri puolille.",
+              "teksti": "Ilha ja Marginal ovat Luandan ravintola-alueita. Kaupungin ruokapaikoista löytyy paikallisia aterioita, ja tarjolla on myös hedelmämehuja. Ruokailu voi olla oma osansa rantapäivää tai keskustan kävelyä. Ilhan rantapaikat ja Marginalin ravintolat sijoittuvat lahden eri puolille.",
               "kuva": {
                 "tiedosto": "2021-10-10 08 12 00 A glass of orange juice at the Denny's in Kailua-Kona, Hawaii County, Hawaii.jpg",
                 "lyhyt": "Appelsiinimehua Havaijilla.",
-                "selite": "Appelsiinimehulasi on kuvattu Kailua-Konassa Havaijilla; kuva havainnollistaa juomaa, ei Luandan ravintolaa.",
+                "selite": "Appelsiinimehua Kailua-Konassa Havaijilla.",
                 "lahde": "Famartin, Wikimedia Commons (CC BY-SA 4.0)"
               }
             },
             {
-              "otsikko": "Kirkkojen vierailut",
-              "teksti": "Remédios, Carmo, Nazaré ja Jesus-kirkon historiallinen paikka kertovat Luandan eri rakennusvaiheista. Selvitä vierailu- ja kuvauskäytännöt kohteesta, ja kunnioita kirkkojen uskonnollista käyttöä. Baixa ja Cidade Alta näyttävät kaupunkia eri korkeuksilta."
+              "otsikko": "Jesus-kirkko ja opetus",
+              "teksti": "Jesus-kirkko kuului alun perin jesuiittakollegioon Cidade Altassa. Paikka tunnettiin nimellä Praça da Feira. Rakennusta kunnostettiin 1900-luvun puolivälissä arkkitehti Humberto Reisin suunnitelmien mukaan."
             }
           ],
           "matkailu": {
@@ -243,14 +243,6 @@
               {
                 "otsikko": "Ilha on yhteydessä mantereeseen",
                 "teksti": "Ilha de Luanda ja Ilha do Cabo tarkoittavat samaa hiekkaniemeä, vaikka ilha viittaa saareen."
-              },
-              {
-                "otsikko": "Kirkko on myös käytössä oleva tila",
-                "teksti": "Selvitä vierailu- ja kuvauskäytännöt erikseen, äläkä oleta vapaata sisäänpääsyä."
-              },
-              {
-                "otsikko": "Suunnittele kulkeminen päiväsaikaan",
-                "teksti": "Vältä liikkumista pimeällä ja varmista paikalliset kuvausrajoitukset ennen kuvaamista."
               }
             ]
           },
@@ -303,7 +295,7 @@
         },
         {
           "otsikko": "Jesus-kirkon vierellä opittiin",
-          "teksti": "Luandan Jesus-kirkko oli alun perin jesuiittakollegion kirkko. Kokonaisuus syntyi 1600-luvun alussa Cidade Altan alueelle, paikalle joka tunnettiin nimellä Praça da Feira. Kirkon julkisivussa on barokkimuotoja. Jesuiittojen toiminnan päätyttyä rakennus rapistui, ja se kunnostettiin vasta myöhemmin. Nykyiseen kokonaisuuteen kuuluu myös 1900-luvun puolivälin ja sitä myöhempien korjausten vaiheita. Vuonna 1873 paikalla oli siis vanha kirkonpaikka, mutta tämän päivän rakennus kertoo myös myöhemmästä käytöstä ja kunnostuksesta.",
+          "teksti": "Luandan Jesus-kirkko oli alun perin jesuiittakollegion kirkko. Kokonaisuus syntyi 1600-luvun alussa Cidade Altan alueelle, paikalle joka tunnettiin nimellä Praça da Feira. Kirkon julkisivussa on barokkimuotoja. Jesuiittojen toiminnan päätyttyä rakennus rapistui, ja se kunnostettiin vasta myöhemmin. Nykyiseen kokonaisuuteen kuuluu myös 1900-luvun puolivälin ja sitä myöhempien korjausten vaiheita.",
           "tiedosto": "",
           "lyhyt": "",
           "selite": "",
@@ -359,37 +351,37 @@
   "nahtavyydet": {
     "Nossa Senhora dos Remédiosin katedraali": {
       "aika": "1600-luku, myöhempiä kunnostuksia",
-      "teksti": "Nossa Senhora dos Remédios on Luandan roomalaiskatolinen katedraali ja arkkipiispan pääkirkko. Sen rakennushistoria alkaa 1600-luvulta. Kun Angolan ja Kongon hiippakunnan pääpaikka siirtyi Luandaan, kirkon tehtävä muuttui myöhemmin katedraalin tehtäväksi. Rakennuksen alku ja sen kirkollinen asema ovat siten eri vaiheita samassa historiassa.\n\nKirkko oli olemassa vuonna 1873, mutta sen nykyinen julkisivun perusmuoto syntyi myöhemmässä kunnostuksessa. Rakennus rapistui 1800-luvulla, ja vuosisadan lopun korjauksissa se sai oviaukot ja kaarevan päädyn nykyiseen järjestykseensä. Paikka kertoo sekä vanhan kirkon jatkuvuudesta että korjausten vaikutuksesta. Sen myöhempi suojelu tunnustaa historiallista merkitystä, mutta rakennusta katsellessa kannattaa muistaa, että vanha ikä ja muuttumaton ulkoasu eivät ole sama asia.",
+      "teksti": "Nossa Senhora dos Remédios on Luandan roomalaiskatolinen katedraali ja arkkipiispan pääkirkko. Sen rakennushistoria alkaa 1600-luvulta. Kun Angolan ja Kongon hiippakunnan pääpaikka siirtyi Luandaan, kirkon tehtävä muuttui myöhemmin katedraalin tehtäväksi.\n\nKirkko oli olemassa vuonna 1873, mutta sen nykyinen julkisivun perusmuoto syntyi myöhemmässä kunnostuksessa. Rakennus rapistui 1800-luvulla, ja vuosisadan lopun korjauksissa se sai oviaukot ja kaarevan päädyn nykyiseen järjestykseensä.",
       "kuvat": [],
       "lahde": "Wikipedia"
     },
     "Carmon kirkko ja luostari": {
       "aika": "1600-luku, kunnostuksia 1800-luvulla",
-      "teksti": "Nossa Senhora do Carmo on Luandan kirkon ja luostarin kokonaisuus. Sen synty liittyy karmeliitteihin, jotka rakensivat kirkon 1600-luvulla. Julkisivu on yksinkertainen, ja sen yläosa päättyy kolmionmuotoiseen päätyyn. Rakennuksen ulkoinen muoto ja luostarin yhteys kertovat saman paikan eri tehtävistä: täällä oli kirkollisen toiminnan lisäksi uskonnollisen yhteisön tiloja.\n\nKokonaisuus oli olemassa vuonna 1873. Se oli ehtinyt rapistua 1800-luvun alkupuolella, ja dominikaanipapit kunnostivat rakennusta. Carmon historia ei siis pääty ensimmäiseen rakennusvaiheeseen. Sisätilaan kuuluu muun muassa veistettyjä alttareita, veistoksia, seinämaalauksia ja laattakoristelua, jotka ovat omia osiaan kirkon kokonaisuudessa. Nykyinen kirkonpaikka yhdistää vanhaa rakennushistoriaa, käyttöä ja myöhempää huolenpitoa.",
+      "teksti": "Nossa Senhora do Carmo on Luandan kirkon ja luostarin kokonaisuus. Sen synty liittyy karmeliitteihin, jotka rakensivat kirkon 1600-luvulla. Julkisivu on yksinkertainen, ja sen yläosa päättyy kolmionmuotoiseen päätyyn.\n\nKokonaisuus oli olemassa vuonna 1873. Se oli ehtinyt rapistua 1800-luvun alkupuolella, ja dominikaanipapit kunnostivat rakennusta. Sisätilaan kuuluu muun muassa veistettyjä alttareita, veistoksia, seinämaalauksia ja laattakoristelua, jotka ovat omia osiaan kirkon kokonaisuudessa.",
       "kuvat": [],
       "lahde": "Wikipedia"
     },
     "Nazarén kirkko": {
       "aika": "1600-luku",
-      "teksti": "Nossa Senhora da Nazarén kirkko sijaitsee Luandan lahden rannalla Marginalin rantatietä vastapäätä. Sen rakennushistoria alkaa 1600-luvulta, joten kirkko kuului kaupungin vanhoihin paikkoihin jo vuonna 1873. Sijainti liittää sen satamakaupungin rannikkoympäristöön: merenlahti ja vanha kirkko ovat samassa kaupunkitilassa.\n\nKirkon arkkitehtuurissa näkyy barokkiperinne, mutta sen julkisivun perusmuoto on selkeä. Sisäänkäynnin yläosa on suora, sen yläpuolella on kolmionmuotoinen pääty ja pyöreä aukko. Pieni kellotorni kohoaa sivussa, ja rakennukseen kuuluvat myös sivuarkadit. Nazarén yksinkertainen pääty ja pieni kellotorni kuuluvat vanhan lahdenrannan rakennusperintöön. Rakennuksen merkityksen ymmärtämiseen ei tarvita suurta kokoa: vanha kirkonpaikka kertoo Luandan historian pitkästä jatkumosta lahden äärellä.",
+      "teksti": "Nossa Senhora da Nazarén kirkko sijaitsee Luandan lahden rannalla Marginalin rantatietä vastapäätä. Sen rakennushistoria alkaa 1600-luvulta, joten kirkko kuului kaupungin vanhoihin paikkoihin jo vuonna 1873. Sijainti liittää sen satamakaupungin rannikkoympäristöön: merenlahti ja vanha kirkko ovat samassa kaupunkitilassa.\n\nKirkon arkkitehtuurissa näkyy barokkiperinne, mutta sen julkisivun perusmuoto on selkeä. Sisäänkäynnin yläosa on suora, sen yläpuolella on kolmionmuotoinen pääty ja pyöreä aukko. Pieni kellotorni kohoaa sivussa, ja rakennukseen kuuluvat myös sivuarkadit.",
       "kuvat": [],
       "lahde": "Wikipedia"
     },
     "Jesuiittojen Jesus-kirkon historiallinen paikka": {
       "aika": "1600-luku, myöhempiä muutoksia",
-      "teksti": "Jesus-kirkon historiallinen paikka sijaitsee Luandan Cidade Altassa, Ingombotan alueella. Kirkko kuului alun perin jesuiittakollegioon, joka perustettiin kaupunkiin 1600-luvun alussa. Paikka tunnettiin aiemmin nimellä Praça da Feira. Kirkon barokkijulkisivu liittyy näin alueeseen, jossa uskonnollinen toiminta ja opetus olivat lähekkäin.\n\nVuonna 1873 paikalla oli jo vanha kirkko, mutta sen nykyasu ei ole muuttumaton näkymä tuohon aikaan. Jesuiittojen toiminnan päätyttyä rakennus rapistui. Sitä kunnostettiin 1900-luvun puolivälissä arkkitehti Humberto Reisin suunnitelmien mukaan, ja myöhempiäkin muutoksia tehtiin. Historiallinen kirkonpaikka ja sen eri-ikäiset rakennusosat on siksi erotettava toisistaan. Alta ei tässä tarkoita vain uutta kaupunkia: yläkaupunki säilyttää myös varhaiseen Luandaan kuuluvia paikkoja.",
+      "teksti": "Jesus-kirkon historiallinen paikka sijaitsee Luandan Cidade Altassa, Ingombotan alueella. Kirkko kuului alun perin jesuiittakollegioon, joka perustettiin kaupunkiin 1600-luvun alussa. Paikka tunnettiin aiemmin nimellä Praça da Feira. Kirkon barokkijulkisivu liittyy näin alueeseen, jossa uskonnollinen toiminta ja opetus olivat lähekkäin.\n\nJesuiittojen toiminnan päätyttyä rakennus rapistui. Sitä kunnostettiin 1900-luvun puolivälissä arkkitehti Humberto Reisin suunnitelmien mukaan, ja myöhempiäkin muutoksia tehtiin.",
       "kuvat": [],
       "lahde": "Wikipedia"
     },
     "Nossa Senhora do Cabon kirkko": {
       "aika": "1500-luku, jälleenrakennus 1600-luvulla",
-      "teksti": "Nossa Senhora do Cabon kirkko sijaitsee Ilha de Luandan alueella. Sen alku liittyy portugalilaisten kauppiaiden asutukseen 1500-luvun loppupuolella. Kirkko omistettiin aluksi Nossa Senhora da Conceiçãolle. Myöhemmän jälleenrakennuksen yhteydessä se sai nykyisen Cabo-nimensä, joka liittää sen niemen paikkaan.\n\nKirkkoa rakennettiin uudelleen 1600-luvulla, ja se oli olemassa vuonna 1873. Kivirakennuksen tuntomerkkeihin kuuluu sivutorni. Se sai myöhemmin myös seurakuntakirkon tehtävän. Cabon pitkä historia sijoittuu samaan rannikkoympäristöön kuin Ilhan paikallisten yhteisöjen asutus ja kaupungin laajeneminen mantereelle. Nimen vaihtuminen, jälleenrakentaminen ja myöhempi käyttö ovat eri vaiheita: yhden vanhan kirkon historia ei ole vain sen alkuvuosi.",
+      "teksti": "Nossa Senhora do Cabon kirkko sijaitsee Ilha de Luandan alueella. Sen alku liittyy portugalilaisten kauppiaiden asutukseen 1500-luvun loppupuolella. Kirkko omistettiin aluksi Nossa Senhora da Conceiçãolle. Myöhemmän jälleenrakennuksen yhteydessä se sai nykyisen Cabo-nimensä, joka liittää sen niemen paikkaan.\n\nKirkkoa rakennettiin uudelleen 1600-luvulla, ja se oli olemassa vuonna 1873. Kivirakennuksen tuntomerkkeihin kuuluu sivutorni. Se sai myöhemmin myös seurakuntakirkon tehtävän.",
       "kuvat": [],
       "lahde": "Wikipedia"
     },
     "Ilha de Luandan hiekkaniemi": {
       "aika": "Luonnonmuodostuma ja vanha asutusympäristö",
-      "teksti": "Ilha de Luanda eli Ilha do Cabo on matala hiekkaniemi Luandan edustalla. Se muodostui sedimentin kerrostumisesta ja liittyy kaupunkiin kapean yhteyden kautta. Saareen viittaava paikannimi ei siis yksin kerro maastomuotoa. Niemi rajaa Luandan lahden ympäristöä ja kuuluu kaupungin rannikkomaantieteeseen.\n\nPaikalla eli Axi-lwanda-yhteisön asukkaita ennen portugalilaisten asettumista mantereelle. Myös Nossa Senhora do Cabon kirkon historia liittyy Ilhaan. Vuonna 1873 luonnonpaikka ja vanha asutusympäristö olivat jo olemassa, mutta nykyiset palvelut kuuluvat myöhempään kaupunkiin. Nykyisin Ilhalla on rantoja, ravintoloita ja veneilyä, ja alueella viettävät aikaa myös Luandan asukkaat. Ilhan historiaan tutustuminen tarkoittaa näin sekä luonnonmuodon että elävän kaupunkiympäristön katsomista.",
+      "teksti": "Ilha de Luanda eli Ilha do Cabo on matala hiekkaniemi Luandan edustalla. Se muodostui sedimentin kerrostumisesta ja liittyy kaupunkiin kapean yhteyden kautta. Niemi rajaa Luandan lahden ympäristöä ja kuuluu kaupungin rannikkomaantieteeseen.\n\nPaikalla eli Axi-lwanda-yhteisön asukkaita ennen portugalilaisten asettumista mantereelle. Myös Nossa Senhora do Cabon kirkon historia liittyy Ilhaan. Vuonna 1873 luonnonpaikka ja vanha asutusympäristö olivat jo olemassa, mutta nykyiset palvelut kuuluvat myöhempään kaupunkiin. Nykyisin Ilhalla on rantoja, ravintoloita ja veneilyä, ja alueella viettävät aikaa myös Luandan asukkaat.",
       "kuvat": [
         {
           "tiedosto": "海滩beach - panoramio.jpg",
@@ -404,12 +396,6 @@
   "saatiedot": null,
   "ehdotukset": {
     "lentoasema": "Dr. António Agostinho Neto International Airport (NBJ)",
-    "huomiot": [
-      "C-luonnos: 10 B-kuvaa käytössä, 12 pakollista kuvapaikkaa avoinna sekä oppaan sallitut kaksi kuvattomuutta.",
-      "Matkailijan tuore pysty puuttuu. Vuoden 2010 N6-kuvaa ei siirretty matkailijalle eikä vanhaa tuoreuspoikkeusta hyväksytty.",
-      "Sää null: 2001–2025-otsikko ja DWD-sade 1961–1990 ristiriidassa; ei numeerisia ilmastoväitteitä.",
-      "N1–N5 ilman kohdekuvaa. Jesusin myöhempien osien sekä muiden kirkkojen koriste-/tekijäketjujen portit avoinna; ei F-valmis.",
-      "Kontekstin Sé/Nossa Senhora da Conceição -nimi ei sekoitu Remédiosin katedraaliin. Väestöluku on maakuntaa ja jätettiin leipätekstistä pois."
-    ]
+    "huomiot": []
   }
 }

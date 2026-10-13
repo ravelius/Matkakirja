@@ -3,7 +3,7 @@
   "era": "e06",
   "city": "brazzaville",
   "authorization": "hyväksyn kaikki tekemäsi kuvat. toimita ne claudelle. claudelta saat uusia ohjeita jatkoa varten",
-  "sourceContentAfterSHA256": "cbd047508d12d5e44e1e6a184d73d796d236b5f77598741fe937f95d58869aad",
+  "sourceContentAfterSHA256": "1554fcb08e80cb8802989782df4675e799dc0ea6797a3c9639ed8d972e36b75c",
   "assets": [
     {
       "era": "e06",
@@ -56,7 +56,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/brazzaville/sisalto.json",
-      "sourceContentSHA256": "cbd047508d12d5e44e1e6a184d73d796d236b5f77598741fe937f95d58869aad",
+      "sourceContentSHA256": "1554fcb08e80cb8802989782df4675e799dc0ea6797a3c9639ed8d972e36b75c",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
         "semanticContextSHA256": "88e22f8e9a28cc697205a10e892b1efa880ccd7bd7732a17d8659fdd3bc75404",
@@ -273,7 +273,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "cbd047508d12d5e44e1e6a184d73d796d236b5f77598741fe937f95d58869aad",
+      "sourceContentAfterSHA256": "1554fcb08e80cb8802989782df4675e799dc0ea6797a3c9639ed8d972e36b75c",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
       "contextAfterSHA256": "88e22f8e9a28cc697205a10e892b1efa880ccd7bd7732a17d8659fdd3bc75404",
       "ownerApproved": true,
@@ -298,7 +298,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "1554fcb08e80cb8802989782df4675e799dc0ea6797a3c9639ed8d972e36b75c",
+        "sameImageNativeSHA256": "fc93ef5338dd3bf5ab2d6dff4289e5c7ad98a32fa31ff0982d02170ffbb59e63",
+        "sameImageExportSHA256": "9075c69bf9a9da7093ab4ab4cfd64a3af6cef9d09c31f08f161401303ecdc29b",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e06",
@@ -351,10 +359,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/brazzaville/sisalto.json",
-      "sourceContentSHA256": "cbd047508d12d5e44e1e6a184d73d796d236b5f77598741fe937f95d58869aad",
+      "sourceContentSHA256": "1554fcb08e80cb8802989782df4675e799dc0ea6797a3c9639ed8d972e36b75c",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "6644342ded49959211a648e9f625dff437c0dd0a1cf542dd8d17799b05034be5",
+        "semanticContextSHA256": "a2c0136886649ef56662fc25da2a51c3edcd6270b091f7017828dce263733181",
         "subjectTitle": "Ruokaa ja markkinoita",
         "targetState": "existing-target"
       },
@@ -540,9 +548,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "cbd047508d12d5e44e1e6a184d73d796d236b5f77598741fe937f95d58869aad",
+      "sourceContentAfterSHA256": "1554fcb08e80cb8802989782df4675e799dc0ea6797a3c9639ed8d972e36b75c",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "6644342ded49959211a648e9f625dff437c0dd0a1cf542dd8d17799b05034be5",
+      "contextAfterSHA256": "a2c0136886649ef56662fc25da2a51c3edcd6270b091f7017828dce263733181",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -565,7 +573,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "1554fcb08e80cb8802989782df4675e799dc0ea6797a3c9639ed8d972e36b75c",
+        "sameImageNativeSHA256": "e7b7094f128f352f6e8591c20d802220af7a904efcdb8b8655741107cb480ab7",
+        "sameImageExportSHA256": "4e2048d4bcb8c671a8fa7cb4011cb3c80da6768a793759b4ad60317aad4b136a",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e06",
@@ -615,10 +631,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/brazzaville/sisalto.json",
-      "sourceContentSHA256": "cbd047508d12d5e44e1e6a184d73d796d236b5f77598741fe937f95d58869aad",
+      "sourceContentSHA256": "1554fcb08e80cb8802989782df4675e799dc0ea6797a3c9639ed8d972e36b75c",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "4fd1441ebda7bcd83445ad8171ffa3fffe269649a90ffe41fde6457a6851c3fd",
-        "semanticContextSHA256": "4fd1441ebda7bcd83445ad8171ffa3fffe269649a90ffe41fde6457a6851c3fd",
+        "targetBeforeSHA256": "b0340a6fb1a84ea5393bd2ec58e77cb97cfb6ba5add27be056b5fd94fb20e29a",
+        "semanticContextSHA256": "b0340a6fb1a84ea5393bd2ec58e77cb97cfb6ba5add27be056b5fd94fb20e29a",
         "subjectTitle": "Kosket kierretään rautatiellä",
         "targetState": "existing-target"
       },
@@ -804,9 +820,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "cbd047508d12d5e44e1e6a184d73d796d236b5f77598741fe937f95d58869aad",
-      "targetAfterSHA256": "4fd1441ebda7bcd83445ad8171ffa3fffe269649a90ffe41fde6457a6851c3fd",
-      "contextAfterSHA256": "4fd1441ebda7bcd83445ad8171ffa3fffe269649a90ffe41fde6457a6851c3fd",
+      "sourceContentAfterSHA256": "1554fcb08e80cb8802989782df4675e799dc0ea6797a3c9639ed8d972e36b75c",
+      "targetAfterSHA256": "b0340a6fb1a84ea5393bd2ec58e77cb97cfb6ba5add27be056b5fd94fb20e29a",
+      "contextAfterSHA256": "b0340a6fb1a84ea5393bd2ec58e77cb97cfb6ba5add27be056b5fd94fb20e29a",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -829,7 +845,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "1554fcb08e80cb8802989782df4675e799dc0ea6797a3c9639ed8d972e36b75c",
+        "sameImageNativeSHA256": "17a480f5d60c03dd8abb89bd51a59aec1c6cac0e974fccd68a5cf87a04e994a2",
+        "sameImageExportSHA256": "666a48fcd21baaf424e847a08384761947083930b0fac51d32742e49de113bb9",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e06",
@@ -879,10 +903,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/brazzaville/sisalto.json",
-      "sourceContentSHA256": "cbd047508d12d5e44e1e6a184d73d796d236b5f77598741fe937f95d58869aad",
+      "sourceContentSHA256": "1554fcb08e80cb8802989782df4675e799dc0ea6797a3c9639ed8d972e36b75c",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "450a946fcd0b016808f7468a551a8327cbdd534fd57d33362c4c909d5f8dfd2c",
-        "semanticContextSHA256": "450a946fcd0b016808f7468a551a8327cbdd534fd57d33362c4c909d5f8dfd2c",
+        "targetBeforeSHA256": "df3bd9fc45adc31ca05217acc03a487e74fff32f941c85dbdea17799ac5c2def",
+        "semanticContextSHA256": "df3bd9fc45adc31ca05217acc03a487e74fff32f941c85dbdea17799ac5c2def",
         "subjectTitle": "Kolme kaupunginosaa, eri torit",
         "targetState": "existing-target"
       },
@@ -1068,9 +1092,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "cbd047508d12d5e44e1e6a184d73d796d236b5f77598741fe937f95d58869aad",
-      "targetAfterSHA256": "450a946fcd0b016808f7468a551a8327cbdd534fd57d33362c4c909d5f8dfd2c",
-      "contextAfterSHA256": "450a946fcd0b016808f7468a551a8327cbdd534fd57d33362c4c909d5f8dfd2c",
+      "sourceContentAfterSHA256": "1554fcb08e80cb8802989782df4675e799dc0ea6797a3c9639ed8d972e36b75c",
+      "targetAfterSHA256": "df3bd9fc45adc31ca05217acc03a487e74fff32f941c85dbdea17799ac5c2def",
+      "contextAfterSHA256": "df3bd9fc45adc31ca05217acc03a487e74fff32f941c85dbdea17799ac5c2def",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -1093,7 +1117,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "1554fcb08e80cb8802989782df4675e799dc0ea6797a3c9639ed8d972e36b75c",
+        "sameImageNativeSHA256": "8945f678c6aa823697d84ca1c7cbc63e220fb219f9478e5f96cb6ddd777f256b",
+        "sameImageExportSHA256": "a73a5714f7eac243a581cd2b89e77b5d38821372d325e7f140870594101c80c1",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e06",
@@ -1143,10 +1175,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/brazzaville/sisalto.json",
-      "sourceContentSHA256": "cbd047508d12d5e44e1e6a184d73d796d236b5f77598741fe937f95d58869aad",
+      "sourceContentSHA256": "1554fcb08e80cb8802989782df4675e799dc0ea6797a3c9639ed8d972e36b75c",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "a85c8fdbe7220398699e11bcc4a56d442f78333837bee8286fc037144d1cfd63",
-        "semanticContextSHA256": "a85c8fdbe7220398699e11bcc4a56d442f78333837bee8286fc037144d1cfd63",
+        "targetBeforeSHA256": "5a77e72318b8bbf70893930737a058d45394b04aa676c8ad19a782a0fc8d4780",
+        "semanticContextSHA256": "5a77e72318b8bbf70893930737a058d45394b04aa676c8ad19a782a0fc8d4780",
         "subjectTitle": "Musiikki on kaupungin toimintaa",
         "targetState": "existing-target"
       },
@@ -1332,9 +1364,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "cbd047508d12d5e44e1e6a184d73d796d236b5f77598741fe937f95d58869aad",
-      "targetAfterSHA256": "a85c8fdbe7220398699e11bcc4a56d442f78333837bee8286fc037144d1cfd63",
-      "contextAfterSHA256": "a85c8fdbe7220398699e11bcc4a56d442f78333837bee8286fc037144d1cfd63",
+      "sourceContentAfterSHA256": "1554fcb08e80cb8802989782df4675e799dc0ea6797a3c9639ed8d972e36b75c",
+      "targetAfterSHA256": "5a77e72318b8bbf70893930737a058d45394b04aa676c8ad19a782a0fc8d4780",
+      "contextAfterSHA256": "5a77e72318b8bbf70893930737a058d45394b04aa676c8ad19a782a0fc8d4780",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -1357,7 +1389,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "1554fcb08e80cb8802989782df4675e799dc0ea6797a3c9639ed8d972e36b75c",
+        "sameImageNativeSHA256": "7536105e4cc3f468cd64f8eee96783a8f373794cb314b18c0a1e21e95f6b7724",
+        "sameImageExportSHA256": "d068de61f17cf5c02c8bb44e59d377dc69b715513ec4b175f117d729fcf7eea7",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e06",
@@ -1407,10 +1447,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/brazzaville/sisalto.json",
-      "sourceContentSHA256": "cbd047508d12d5e44e1e6a184d73d796d236b5f77598741fe937f95d58869aad",
+      "sourceContentSHA256": "1554fcb08e80cb8802989782df4675e799dc0ea6797a3c9639ed8d972e36b75c",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "cdc4961f9bfaa520c97fb979184c6d77b96197f101982d89b7e7d19528801bad",
-        "semanticContextSHA256": "cdc4961f9bfaa520c97fb979184c6d77b96197f101982d89b7e7d19528801bad",
+        "targetBeforeSHA256": "23235095e0afa9224f220cef772f44b5ac39286dcc6944bc4bcfcb120eaa5f95",
+        "semanticContextSHA256": "23235095e0afa9224f220cef772f44b5ac39286dcc6944bc4bcfcb120eaa5f95",
         "subjectTitle": "Kitaroilla on eri tehtäviä",
         "targetState": "existing-target"
       },
@@ -1596,9 +1636,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "cbd047508d12d5e44e1e6a184d73d796d236b5f77598741fe937f95d58869aad",
-      "targetAfterSHA256": "cdc4961f9bfaa520c97fb979184c6d77b96197f101982d89b7e7d19528801bad",
-      "contextAfterSHA256": "cdc4961f9bfaa520c97fb979184c6d77b96197f101982d89b7e7d19528801bad",
+      "sourceContentAfterSHA256": "1554fcb08e80cb8802989782df4675e799dc0ea6797a3c9639ed8d972e36b75c",
+      "targetAfterSHA256": "23235095e0afa9224f220cef772f44b5ac39286dcc6944bc4bcfcb120eaa5f95",
+      "contextAfterSHA256": "23235095e0afa9224f220cef772f44b5ac39286dcc6944bc4bcfcb120eaa5f95",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -1621,7 +1661,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "1554fcb08e80cb8802989782df4675e799dc0ea6797a3c9639ed8d972e36b75c",
+        "sameImageNativeSHA256": "8395b3e91932e751afd13a9c7f50e2d8bcc310101be28cce7d3cb126a16d2b03",
+        "sameImageExportSHA256": "472264093ba45013ac1a8635608f698433904784671807438d857d7c906990f4",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e06",
@@ -1671,10 +1719,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/brazzaville/sisalto.json",
-      "sourceContentSHA256": "cbd047508d12d5e44e1e6a184d73d796d236b5f77598741fe937f95d58869aad",
+      "sourceContentSHA256": "1554fcb08e80cb8802989782df4675e799dc0ea6797a3c9639ed8d972e36b75c",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "c27961071274a5bc8aa079068a42593c308bfad8af8913c59fd08b23d71e6d1f",
-        "semanticContextSHA256": "c27961071274a5bc8aa079068a42593c308bfad8af8913c59fd08b23d71e6d1f",
+        "targetBeforeSHA256": "a99e27eefaa7c6e7d4644a77c31616b25591183fa7637c22b6ff782958e79146",
+        "semanticContextSHA256": "a99e27eefaa7c6e7d4644a77c31616b25591183fa7637c22b6ff782958e79146",
         "subjectTitle": "Rumba mahtuu juhlaan ja suruun",
         "targetState": "existing-target"
       },
@@ -1860,9 +1908,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "cbd047508d12d5e44e1e6a184d73d796d236b5f77598741fe937f95d58869aad",
-      "targetAfterSHA256": "c27961071274a5bc8aa079068a42593c308bfad8af8913c59fd08b23d71e6d1f",
-      "contextAfterSHA256": "c27961071274a5bc8aa079068a42593c308bfad8af8913c59fd08b23d71e6d1f",
+      "sourceContentAfterSHA256": "1554fcb08e80cb8802989782df4675e799dc0ea6797a3c9639ed8d972e36b75c",
+      "targetAfterSHA256": "a99e27eefaa7c6e7d4644a77c31616b25591183fa7637c22b6ff782958e79146",
+      "contextAfterSHA256": "a99e27eefaa7c6e7d4644a77c31616b25591183fa7637c22b6ff782958e79146",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -1885,7 +1933,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "1554fcb08e80cb8802989782df4675e799dc0ea6797a3c9639ed8d972e36b75c",
+        "sameImageNativeSHA256": "ce4c2d8c89d80bc0d0d0e88cc36f1ca2ba5ac332e944246e7330d31511b7aae0",
+        "sameImageExportSHA256": "2cc2e17cc26e87f9ef5432c38b7ebef5e33884ae012a10105c43b1f7112b594a",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e06",
@@ -1935,10 +1991,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/brazzaville/sisalto.json",
-      "sourceContentSHA256": "cbd047508d12d5e44e1e6a184d73d796d236b5f77598741fe937f95d58869aad",
+      "sourceContentSHA256": "1554fcb08e80cb8802989782df4675e799dc0ea6797a3c9639ed8d972e36b75c",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "63318e9fa79ed8f78d1e792df873797cc9cc635118e209c54bcb81140670c034",
-        "semanticContextSHA256": "63318e9fa79ed8f78d1e792df873797cc9cc635118e209c54bcb81140670c034",
+        "targetBeforeSHA256": "35f21219ca8c1e9f029cf24400d5fdc92134f9117d80b7197381597912ad4812",
+        "semanticContextSHA256": "35f21219ca8c1e9f029cf24400d5fdc92134f9117d80b7197381597912ad4812",
         "subjectTitle": "Perinne kulkee naapurustossa",
         "targetState": "existing-target"
       },
@@ -2124,9 +2180,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "cbd047508d12d5e44e1e6a184d73d796d236b5f77598741fe937f95d58869aad",
-      "targetAfterSHA256": "63318e9fa79ed8f78d1e792df873797cc9cc635118e209c54bcb81140670c034",
-      "contextAfterSHA256": "63318e9fa79ed8f78d1e792df873797cc9cc635118e209c54bcb81140670c034",
+      "sourceContentAfterSHA256": "1554fcb08e80cb8802989782df4675e799dc0ea6797a3c9639ed8d972e36b75c",
+      "targetAfterSHA256": "35f21219ca8c1e9f029cf24400d5fdc92134f9117d80b7197381597912ad4812",
+      "contextAfterSHA256": "35f21219ca8c1e9f029cf24400d5fdc92134f9117d80b7197381597912ad4812",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -2149,7 +2205,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "1554fcb08e80cb8802989782df4675e799dc0ea6797a3c9639ed8d972e36b75c",
+        "sameImageNativeSHA256": "e5bb8bf69adb053b50d698c4575e2a4b753e1bf914eceb03d0575439bd65a605",
+        "sameImageExportSHA256": "ce99d1aa7f26b5c41c58c0d8232fea25af37852e1d328d11d4ecfb71f67f0ef6",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e06",
@@ -2199,10 +2263,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/brazzaville/sisalto.json",
-      "sourceContentSHA256": "cbd047508d12d5e44e1e6a184d73d796d236b5f77598741fe937f95d58869aad",
+      "sourceContentSHA256": "1554fcb08e80cb8802989782df4675e799dc0ea6797a3c9639ed8d972e36b75c",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "b041e69049aa0a12c8bdb2d4f9ee758b433ed96ab4b29d928a113118b13b336d",
+        "semanticContextSHA256": "888155fc5212b29a6dab25c23072a8c898eec8b45cd306aa018e2bce77d2b0d3",
         "subjectTitle": "Djoué-joen suu",
         "targetState": "existing-target"
       },
@@ -2388,9 +2452,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "cbd047508d12d5e44e1e6a184d73d796d236b5f77598741fe937f95d58869aad",
+      "sourceContentAfterSHA256": "1554fcb08e80cb8802989782df4675e799dc0ea6797a3c9639ed8d972e36b75c",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "b041e69049aa0a12c8bdb2d4f9ee758b433ed96ab4b29d928a113118b13b336d",
+      "contextAfterSHA256": "888155fc5212b29a6dab25c23072a8c898eec8b45cd306aa018e2bce77d2b0d3",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -2413,7 +2477,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "1554fcb08e80cb8802989782df4675e799dc0ea6797a3c9639ed8d972e36b75c",
+        "sameImageNativeSHA256": "59000b325254540edce91ff004c13d728e2e7d760f1e1ef26117a49753fac928",
+        "sameImageExportSHA256": "684394a5d8eee426c6fcb7ddbe3ef72d6ef4e5945686311e52174166e4b4533a",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e06",
@@ -2463,10 +2535,10 @@
         1536
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/brazzaville/sisalto.json",
-      "sourceContentSHA256": "cbd047508d12d5e44e1e6a184d73d796d236b5f77598741fe937f95d58869aad",
+      "sourceContentSHA256": "1554fcb08e80cb8802989782df4675e799dc0ea6797a3c9639ed8d972e36b75c",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "e2d3e040ce0634bcc6bf16789f389daf5b13d9e8a671dc9443f613fe2b3ff9e9",
+        "semanticContextSHA256": "11ccf12d82b967ae0d53ae4e1a934bb0545be4e7f6666750f942a6134cf57de6",
         "subjectTitle": "Matkailijalle",
         "targetState": "existing-target"
       },
@@ -2920,9 +2992,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "cbd047508d12d5e44e1e6a184d73d796d236b5f77598741fe937f95d58869aad",
+      "sourceContentAfterSHA256": "1554fcb08e80cb8802989782df4675e799dc0ea6797a3c9639ed8d972e36b75c",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "e2d3e040ce0634bcc6bf16789f389daf5b13d9e8a671dc9443f613fe2b3ff9e9",
+      "contextAfterSHA256": "11ccf12d82b967ae0d53ae4e1a934bb0545be4e7f6666750f942a6134cf57de6",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -2945,7 +3017,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "1554fcb08e80cb8802989782df4675e799dc0ea6797a3c9639ed8d972e36b75c",
+        "sameImageNativeSHA256": "77252504330445d58d715efd5680dfa0c5b77f5fe2b9e47c43a622869732efc1",
+        "sameImageExportSHA256": "7548a215e5c4e98ef28e282ba86b4a5bbe4390e5b412af267c6a0d210a7dbe89",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e06",
@@ -2964,23 +3044,23 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e06/brazzaville/photo-8a10347ba8a3cdbe9f59.jpg",
         "suora": true,
         "lahde": "Detsed1, Commons (CC BY-SA 4.0)",
-        "selite": "Puu ja ylivuotorakenteen yli virtaava vesi Djouén seudulla Brazzavillessä vuonna 2025.",
-        "lyhyt": "Vettä ja puustoa Djouén seudulla Brazzavillessä.",
+        "selite": "Näkymä Djouén seudulta lokakuussa 2025.",
+        "lyhyt": "Djouén seutu Brazzavillessä.",
         "tiedosto": "Chutes de Djoué.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Detsed1, Commons (CC BY-SA 4.0)",
-        "selite": "Puu ja ylivuotorakenteen yli virtaava vesi Djouén seudulla Brazzavillessä vuonna 2025.",
-        "lyhyt": "Vettä ja puustoa Djouén seudulla Brazzavillessä.",
+        "selite": "Näkymä Djouén seudulta lokakuussa 2025.",
+        "lyhyt": "Djouén seutu Brazzavillessä.",
         "tiedosto": "Chutes de Djoué.jpg"
       },
       "runtimeMediaFieldPayload": {
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e06/brazzaville/photo-8a10347ba8a3cdbe9f59.jpg",
         "suora": true,
         "lahde": "Detsed1, Commons (CC BY-SA 4.0)",
-        "selite": "Puu ja ylivuotorakenteen yli virtaava vesi Djouén seudulla Brazzavillessä vuonna 2025.",
-        "lyhyt": "Vettä ja puustoa Djouén seudulla Brazzavillessä.",
+        "selite": "Näkymä Djouén seudulta lokakuussa 2025.",
+        "lyhyt": "Djouén seutu Brazzavillessä.",
         "tiedosto": "Chutes de Djoué.jpg"
       },
       "runtimeRemoveMediaKeys": [],
@@ -2995,10 +3075,10 @@
         960
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/brazzaville/sisalto.json",
-      "sourceContentSHA256": "cbd047508d12d5e44e1e6a184d73d796d236b5f77598741fe937f95d58869aad",
+      "sourceContentSHA256": "1554fcb08e80cb8802989782df4675e799dc0ea6797a3c9639ed8d972e36b75c",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "88ced43b78ab3f6d720c9a03408b52cbba6cfc92d75601ac3346e154a764d3bd",
-        "semanticContextSHA256": "88ced43b78ab3f6d720c9a03408b52cbba6cfc92d75601ac3346e154a764d3bd",
+        "targetBeforeSHA256": "cf0ba8018fef1f98854a94cdbeb53241846c3c31a8bfc84132bdbf054fef9a1a",
+        "semanticContextSHA256": "cf0ba8018fef1f98854a94cdbeb53241846c3c31a8bfc84132bdbf054fef9a1a",
         "subjectTitle": "brazzaville — aito paikkavalokuva",
         "targetState": "existing-target"
       },
@@ -3112,8 +3192,8 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "Chutes de Djoué.jpg",
-        "lyhyt": "Vettä ja puustoa Djouén seudulla Brazzavillessä.",
-        "selite": "Puu ja ylivuotorakenteen yli virtaava vesi Djouén seudulla Brazzavillessä vuonna 2025.",
+        "lyhyt": "Djouén seutu Brazzavillessä.",
+        "selite": "Näkymä Djouén seudulta lokakuussa 2025.",
         "lahde": "Detsed1, Commons (CC BY-SA 4.0)"
       },
       "preservePreviousMediaObjects": true,
@@ -3140,14 +3220,14 @@
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Detsed1, Commons (CC BY-SA 4.0)",
-        "selite": "Puu ja ylivuotorakenteen yli virtaava vesi Djouén seudulla Brazzavillessä vuonna 2025.",
-        "lyhyt": "Vettä ja puustoa Djouén seudulla Brazzavillessä.",
+        "selite": "Näkymä Djouén seudulta lokakuussa 2025.",
+        "lyhyt": "Djouén seutu Brazzavillessä.",
         "tiedosto": "Chutes de Djoué.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "cbd047508d12d5e44e1e6a184d73d796d236b5f77598741fe937f95d58869aad",
-      "targetAfterSHA256": "88ced43b78ab3f6d720c9a03408b52cbba6cfc92d75601ac3346e154a764d3bd",
-      "contextAfterSHA256": "88ced43b78ab3f6d720c9a03408b52cbba6cfc92d75601ac3346e154a764d3bd",
+      "sourceContentAfterSHA256": "1554fcb08e80cb8802989782df4675e799dc0ea6797a3c9639ed8d972e36b75c",
+      "targetAfterSHA256": "cf0ba8018fef1f98854a94cdbeb53241846c3c31a8bfc84132bdbf054fef9a1a",
+      "contextAfterSHA256": "cf0ba8018fef1f98854a94cdbeb53241846c3c31a8bfc84132bdbf054fef9a1a",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -3170,7 +3250,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "1554fcb08e80cb8802989782df4675e799dc0ea6797a3c9639ed8d972e36b75c",
+        "sameImageNativeSHA256": "8a10347ba8a3cdbe9f59be09227f6ad93dfbe9c17264c33d11be886b493f921b",
+        "sameImageExportSHA256": "8a10347ba8a3cdbe9f59be09227f6ad93dfbe9c17264c33d11be886b493f921b",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": true
+      }
     },
     {
       "era": "e06",
@@ -3223,7 +3311,7 @@
         2008
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/brazzaville/sisalto.json",
-      "sourceContentSHA256": "cbd047508d12d5e44e1e6a184d73d796d236b5f77598741fe937f95d58869aad",
+      "sourceContentSHA256": "1554fcb08e80cb8802989782df4675e799dc0ea6797a3c9639ed8d972e36b75c",
       "semanticSourceBind": {
         "targetBeforeSHA256": "03019173d0ec1d4044f63c44e1cc4d6a9da8fcbf1f08143a027b659c806e2001",
         "semanticContextSHA256": "03019173d0ec1d4044f63c44e1cc4d6a9da8fcbf1f08143a027b659c806e2001",
@@ -3387,7 +3475,7 @@
         "tiedosto": "Brazzaville, Republic of the Congo.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "cbd047508d12d5e44e1e6a184d73d796d236b5f77598741fe937f95d58869aad",
+      "sourceContentAfterSHA256": "1554fcb08e80cb8802989782df4675e799dc0ea6797a3c9639ed8d972e36b75c",
       "targetAfterSHA256": "03019173d0ec1d4044f63c44e1cc4d6a9da8fcbf1f08143a027b659c806e2001",
       "contextAfterSHA256": "03019173d0ec1d4044f63c44e1cc4d6a9da8fcbf1f08143a027b659c806e2001",
       "ownerApproved": true,
@@ -3412,7 +3500,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "1554fcb08e80cb8802989782df4675e799dc0ea6797a3c9639ed8d972e36b75c",
+        "sameImageNativeSHA256": "9e1b3a6a80b756174a41150f01f46de8d50047559dafb8a9abba06e0a4ee5e35",
+        "sameImageExportSHA256": "9e1b3a6a80b756174a41150f01f46de8d50047559dafb8a9abba06e0a4ee5e35",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e06",
@@ -3434,23 +3530,23 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e06/brazzaville/c2-2290b92628b0f88073c3.jpg",
         "suora": true,
         "lahde": "Nzinga11, Wikimedia Commons (CC0)",
-        "selite": "Brazzavillen taloja, puustoa ja pieniä viljelypalstoja ilmasta vuonna 2025.",
-        "lyhyt": "Brazzavillen asutusta ja viljelypalstoja ilmasta.",
+        "selite": "Brazzavillen asutusta ilmasta vuonna 2025.",
+        "lyhyt": "Brazzaville ilmasta.",
         "tiedosto": "Brazzaville vu par un drone 01.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Nzinga11, Wikimedia Commons (CC0)",
-        "selite": "Brazzavillen taloja, puustoa ja pieniä viljelypalstoja ilmasta vuonna 2025.",
-        "lyhyt": "Brazzavillen asutusta ja viljelypalstoja ilmasta.",
+        "selite": "Brazzavillen asutusta ilmasta vuonna 2025.",
+        "lyhyt": "Brazzaville ilmasta.",
         "tiedosto": "Brazzaville vu par un drone 01.jpg"
       },
       "runtimeMediaFieldPayload": {
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e06/brazzaville/c2-2290b92628b0f88073c3.jpg",
         "suora": true,
         "lahde": "Nzinga11, Wikimedia Commons (CC0)",
-        "selite": "Brazzavillen taloja, puustoa ja pieniä viljelypalstoja ilmasta vuonna 2025.",
-        "lyhyt": "Brazzavillen asutusta ja viljelypalstoja ilmasta.",
+        "selite": "Brazzavillen asutusta ilmasta vuonna 2025.",
+        "lyhyt": "Brazzaville ilmasta.",
         "tiedosto": "Brazzaville vu par un drone 01.jpg"
       },
       "runtimeRemoveMediaKeys": [],
@@ -3465,10 +3561,10 @@
         4536
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/brazzaville/sisalto.json",
-      "sourceContentSHA256": "cbd047508d12d5e44e1e6a184d73d796d236b5f77598741fe937f95d58869aad",
+      "sourceContentSHA256": "1554fcb08e80cb8802989782df4675e799dc0ea6797a3c9639ed8d972e36b75c",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "6463473c8bb530b5763b957f93aee56c534df3fac80371f1ecf560a32db25798",
-        "semanticContextSHA256": "6463473c8bb530b5763b957f93aee56c534df3fac80371f1ecf560a32db25798",
+        "targetBeforeSHA256": "be313146b14847cf872d3e9e877edaaa389e7d2555eb2fa4f5a881e9d7776e97",
+        "semanticContextSHA256": "be313146b14847cf872d3e9e877edaaa389e7d2555eb2fa4f5a881e9d7776e97",
         "subjectTitle": "Brazzaville",
         "targetState": "existing-target"
       },
@@ -3606,8 +3702,8 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "Brazzaville vu par un drone 01.jpg",
-        "lyhyt": "Brazzavillen asutusta ja viljelypalstoja ilmasta.",
-        "selite": "Brazzavillen taloja, puustoa ja pieniä viljelypalstoja ilmasta vuonna 2025.",
+        "lyhyt": "Brazzaville ilmasta.",
+        "selite": "Brazzavillen asutusta ilmasta vuonna 2025.",
         "lahde": "Nzinga11, Wikimedia Commons (CC0)"
       },
       "preservePreviousMediaObjects": true,
@@ -3634,14 +3730,14 @@
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Nzinga11, Wikimedia Commons (CC0)",
-        "selite": "Brazzavillen taloja, puustoa ja pieniä viljelypalstoja ilmasta vuonna 2025.",
-        "lyhyt": "Brazzavillen asutusta ja viljelypalstoja ilmasta.",
+        "selite": "Brazzavillen asutusta ilmasta vuonna 2025.",
+        "lyhyt": "Brazzaville ilmasta.",
         "tiedosto": "Brazzaville vu par un drone 01.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "cbd047508d12d5e44e1e6a184d73d796d236b5f77598741fe937f95d58869aad",
-      "targetAfterSHA256": "6463473c8bb530b5763b957f93aee56c534df3fac80371f1ecf560a32db25798",
-      "contextAfterSHA256": "6463473c8bb530b5763b957f93aee56c534df3fac80371f1ecf560a32db25798",
+      "sourceContentAfterSHA256": "1554fcb08e80cb8802989782df4675e799dc0ea6797a3c9639ed8d972e36b75c",
+      "targetAfterSHA256": "be313146b14847cf872d3e9e877edaaa389e7d2555eb2fa4f5a881e9d7776e97",
+      "contextAfterSHA256": "be313146b14847cf872d3e9e877edaaa389e7d2555eb2fa4f5a881e9d7776e97",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -3664,7 +3760,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "1554fcb08e80cb8802989782df4675e799dc0ea6797a3c9639ed8d972e36b75c",
+        "sameImageNativeSHA256": "2290b92628b0f88073c3c1dad6188b5dbf2d38b0419a35d6d6def3b7de89adfb",
+        "sameImageExportSHA256": "2290b92628b0f88073c3c1dad6188b5dbf2d38b0419a35d6d6def3b7de89adfb",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": true
+      }
     }
   ],
   "runtimeIntegrationPending": true,
@@ -3676,6 +3780,9 @@
   "task118TextRevision": true,
   "independentTextResamplePending": true,
   "textAcceptanceVerified": false,
-  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task118/immutable-media-history/e06/brazzaville/d9f211eab1a012025d48819b4b2c759f1e95a1cbcef3d0e617f89aef9a7f56c0.json",
-  "task118ReboundAt": "2026-10-13T16:31:24.850807+00:00"
+  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task228/immutable-media-history/e06/brazzaville/e7fa568921ca84af12b4e3a1405e433848dd8aa843d01ec65db2b017ce9b0197.json",
+  "task118ReboundAt": "2026-10-13T16:31:24.850807+00:00",
+  "task228ExcludedAssets": [],
+  "task228TextRevision": true,
+  "task228ReboundAt": "2026-10-13T18:31:09.815841+00:00"
 }

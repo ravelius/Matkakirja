@@ -3,7 +3,7 @@
   "era": "e06",
   "city": "luanda",
   "authorization": "hyväksyn kaikki tekemäsi kuvat. toimita ne claudelle. claudelta saat uusia ohjeita jatkoa varten",
-  "sourceContentAfterSHA256": "cdeeb23c95c9187fe66b072c06a1fc338b60969abf2ae067f2cc12644e0b83b7",
+  "sourceContentAfterSHA256": "725bc69b403e26f7f11d28cdfb32e98d4e8405eaa8a492d25809751523453bbc",
   "assets": [
     {
       "era": "e06",
@@ -53,10 +53,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/luanda/sisalto.json",
-      "sourceContentSHA256": "cdeeb23c95c9187fe66b072c06a1fc338b60969abf2ae067f2cc12644e0b83b7",
+      "sourceContentSHA256": "725bc69b403e26f7f11d28cdfb32e98d4e8405eaa8a492d25809751523453bbc",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "9633da5a63ec8a417832ee1e407e52fabdc965f2785fcd7b67e91331d0d622ee",
-        "semanticContextSHA256": "9633da5a63ec8a417832ee1e407e52fabdc965f2785fcd7b67e91331d0d622ee",
+        "targetBeforeSHA256": "d6027617f2f56c9102b963d4173c91a61a47119155a18e3bccf743af9c249655",
+        "semanticContextSHA256": "d6027617f2f56c9102b963d4173c91a61a47119155a18e3bccf743af9c249655",
         "subjectTitle": "Sataman lasti kertoo muutoksesta",
         "targetState": "existing-target"
       },
@@ -242,9 +242,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "cdeeb23c95c9187fe66b072c06a1fc338b60969abf2ae067f2cc12644e0b83b7",
-      "targetAfterSHA256": "9633da5a63ec8a417832ee1e407e52fabdc965f2785fcd7b67e91331d0d622ee",
-      "contextAfterSHA256": "9633da5a63ec8a417832ee1e407e52fabdc965f2785fcd7b67e91331d0d622ee",
+      "sourceContentAfterSHA256": "725bc69b403e26f7f11d28cdfb32e98d4e8405eaa8a492d25809751523453bbc",
+      "targetAfterSHA256": "d6027617f2f56c9102b963d4173c91a61a47119155a18e3bccf743af9c249655",
+      "contextAfterSHA256": "d6027617f2f56c9102b963d4173c91a61a47119155a18e3bccf743af9c249655",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -267,7 +267,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "725bc69b403e26f7f11d28cdfb32e98d4e8405eaa8a492d25809751523453bbc",
+        "sameImageNativeSHA256": "f9ec46cb83342244d225e1a392a7d6ac811adbb4bc6c5670f3311850c6826ef7",
+        "sameImageExportSHA256": "eb9bb806b7b7cbe799a73a5b764824fc89b4bbb49057937a7ec6f284d5cc078a",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e06",
@@ -317,7 +325,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/luanda/sisalto.json",
-      "sourceContentSHA256": "cdeeb23c95c9187fe66b072c06a1fc338b60969abf2ae067f2cc12644e0b83b7",
+      "sourceContentSHA256": "725bc69b403e26f7f11d28cdfb32e98d4e8405eaa8a492d25809751523453bbc",
       "semanticSourceBind": {
         "targetBeforeSHA256": "b8c028b0631cf4e58ea764c43162e2cb26c199207b6852342ded13c73f6b05da",
         "semanticContextSHA256": "b8c028b0631cf4e58ea764c43162e2cb26c199207b6852342ded13c73f6b05da",
@@ -534,7 +542,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "cdeeb23c95c9187fe66b072c06a1fc338b60969abf2ae067f2cc12644e0b83b7",
+      "sourceContentAfterSHA256": "725bc69b403e26f7f11d28cdfb32e98d4e8405eaa8a492d25809751523453bbc",
       "targetAfterSHA256": "b8c028b0631cf4e58ea764c43162e2cb26c199207b6852342ded13c73f6b05da",
       "contextAfterSHA256": "b8c028b0631cf4e58ea764c43162e2cb26c199207b6852342ded13c73f6b05da",
       "ownerApproved": true,
@@ -559,7 +567,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "725bc69b403e26f7f11d28cdfb32e98d4e8405eaa8a492d25809751523453bbc",
+        "sameImageNativeSHA256": "bc6b89a88583fc5930ead6bda2b1c3957efb2bc7a8309aecb6fdc234b3db3cba",
+        "sameImageExportSHA256": "40433458a7236a2330015c4a6ff6d2b8df7d2fa3923e85bd74b6f987dc873657",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e06",
@@ -612,7 +628,7 @@
         3024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/luanda/sisalto.json",
-      "sourceContentSHA256": "cdeeb23c95c9187fe66b072c06a1fc338b60969abf2ae067f2cc12644e0b83b7",
+      "sourceContentSHA256": "725bc69b403e26f7f11d28cdfb32e98d4e8405eaa8a492d25809751523453bbc",
       "semanticSourceBind": {
         "targetBeforeSHA256": "f94193333c6a4aa5fba7ab751e459fdeeafa0b3fc1d4e3f9222b17835d140e05",
         "semanticContextSHA256": "f94193333c6a4aa5fba7ab751e459fdeeafa0b3fc1d4e3f9222b17835d140e05",
@@ -801,7 +817,7 @@
         "vuosi": "2000-luku"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "cdeeb23c95c9187fe66b072c06a1fc338b60969abf2ae067f2cc12644e0b83b7",
+      "sourceContentAfterSHA256": "725bc69b403e26f7f11d28cdfb32e98d4e8405eaa8a492d25809751523453bbc",
       "targetAfterSHA256": "f94193333c6a4aa5fba7ab751e459fdeeafa0b3fc1d4e3f9222b17835d140e05",
       "contextAfterSHA256": "f94193333c6a4aa5fba7ab751e459fdeeafa0b3fc1d4e3f9222b17835d140e05",
       "ownerApproved": true,
@@ -826,7 +842,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "725bc69b403e26f7f11d28cdfb32e98d4e8405eaa8a492d25809751523453bbc",
+        "sameImageNativeSHA256": "4fa85743624649509c92207baab9e3c5f3cd3279f5b72f7ca7774f462ad7070a",
+        "sameImageExportSHA256": "4fa85743624649509c92207baab9e3c5f3cd3279f5b72f7ca7774f462ad7070a",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e06",
@@ -879,7 +903,7 @@
         374
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/luanda/sisalto.json",
-      "sourceContentSHA256": "cdeeb23c95c9187fe66b072c06a1fc338b60969abf2ae067f2cc12644e0b83b7",
+      "sourceContentSHA256": "725bc69b403e26f7f11d28cdfb32e98d4e8405eaa8a492d25809751523453bbc",
       "semanticSourceBind": {
         "targetBeforeSHA256": "97f626f284d51dc25e36c9b959e0643f1a4baee0b9e71e430d8b7555b23266d0",
         "semanticContextSHA256": "97f626f284d51dc25e36c9b959e0643f1a4baee0b9e71e430d8b7555b23266d0",
@@ -1068,7 +1092,7 @@
         "tiedosto": "Bahia de Luanda - panorama.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "cdeeb23c95c9187fe66b072c06a1fc338b60969abf2ae067f2cc12644e0b83b7",
+      "sourceContentAfterSHA256": "725bc69b403e26f7f11d28cdfb32e98d4e8405eaa8a492d25809751523453bbc",
       "targetAfterSHA256": "97f626f284d51dc25e36c9b959e0643f1a4baee0b9e71e430d8b7555b23266d0",
       "contextAfterSHA256": "97f626f284d51dc25e36c9b959e0643f1a4baee0b9e71e430d8b7555b23266d0",
       "ownerApproved": true,
@@ -1093,7 +1117,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "725bc69b403e26f7f11d28cdfb32e98d4e8405eaa8a492d25809751523453bbc",
+        "sameImageNativeSHA256": "428585e2a5e35e7db6e07e35e28b8652386e4a0de2e918922a6b11e4216faa41",
+        "sameImageExportSHA256": "428585e2a5e35e7db6e07e35e28b8652386e4a0de2e918922a6b11e4216faa41",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e06",
@@ -1146,7 +1178,7 @@
         1496
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/luanda/sisalto.json",
-      "sourceContentSHA256": "cdeeb23c95c9187fe66b072c06a1fc338b60969abf2ae067f2cc12644e0b83b7",
+      "sourceContentSHA256": "725bc69b403e26f7f11d28cdfb32e98d4e8405eaa8a492d25809751523453bbc",
       "semanticSourceBind": {
         "targetBeforeSHA256": "4a8717d35257085a08ab7a6a9b36b394079363a57289a36c441603e0bc0c343b",
         "semanticContextSHA256": "4a8717d35257085a08ab7a6a9b36b394079363a57289a36c441603e0bc0c343b",
@@ -1402,7 +1434,7 @@
         "tiedosto": "Luanda feb09 ost01.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "cdeeb23c95c9187fe66b072c06a1fc338b60969abf2ae067f2cc12644e0b83b7",
+      "sourceContentAfterSHA256": "725bc69b403e26f7f11d28cdfb32e98d4e8405eaa8a492d25809751523453bbc",
       "targetAfterSHA256": "4a8717d35257085a08ab7a6a9b36b394079363a57289a36c441603e0bc0c343b",
       "contextAfterSHA256": "4a8717d35257085a08ab7a6a9b36b394079363a57289a36c441603e0bc0c343b",
       "ownerApproved": true,
@@ -1427,7 +1459,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "725bc69b403e26f7f11d28cdfb32e98d4e8405eaa8a492d25809751523453bbc",
+        "sameImageNativeSHA256": "47d00bba5645fda68965c9f338551580daa246de2964ba2cac63f88c90ddbc68",
+        "sameImageExportSHA256": "47d00bba5645fda68965c9f338551580daa246de2964ba2cac63f88c90ddbc68",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e06",
@@ -1483,10 +1523,10 @@
         1179
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/luanda/sisalto.json",
-      "sourceContentSHA256": "cdeeb23c95c9187fe66b072c06a1fc338b60969abf2ae067f2cc12644e0b83b7",
+      "sourceContentSHA256": "725bc69b403e26f7f11d28cdfb32e98d4e8405eaa8a492d25809751523453bbc",
       "semanticSourceBind": {
         "targetBeforeSHA256": "76955c7b2e795fde078a9694ddf4d74a0d1d1c1f3dca35cf62c579ed297e102f",
-        "semanticContextSHA256": "1dc9609cf2f58b7a5563abcf553a18f96aebc31129f594ff351c892e325ec3c9",
+        "semanticContextSHA256": "b862044dd737b6d2e6645f8ca8c5c99d694472074f91cd9ad4def8de3cbf2dae",
         "subjectTitle": "Perille ja liikkeelle",
         "targetState": "existing-target"
       },
@@ -1674,9 +1714,9 @@
         "tiedosto": "NAIL Jetbridge.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "cdeeb23c95c9187fe66b072c06a1fc338b60969abf2ae067f2cc12644e0b83b7",
+      "sourceContentAfterSHA256": "725bc69b403e26f7f11d28cdfb32e98d4e8405eaa8a492d25809751523453bbc",
       "targetAfterSHA256": "76955c7b2e795fde078a9694ddf4d74a0d1d1c1f3dca35cf62c579ed297e102f",
-      "contextAfterSHA256": "1dc9609cf2f58b7a5563abcf553a18f96aebc31129f594ff351c892e325ec3c9",
+      "contextAfterSHA256": "b862044dd737b6d2e6645f8ca8c5c99d694472074f91cd9ad4def8de3cbf2dae",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -1699,7 +1739,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "725bc69b403e26f7f11d28cdfb32e98d4e8405eaa8a492d25809751523453bbc",
+        "sameImageNativeSHA256": "0fc0b3066150f68cd547a1ba9cd9760db88caee1ba1fb8c4fdfbb4a63645ea44",
+        "sameImageExportSHA256": "0fc0b3066150f68cd547a1ba9cd9760db88caee1ba1fb8c4fdfbb4a63645ea44",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e06",
@@ -1724,14 +1772,14 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e06/luanda/o4-1ce5c211f5cae94bc5aa.jpg",
         "suora": true,
         "lahde": "Famartin, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Appelsiinimehulasi on kuvattu Kailua-Konassa Havaijilla; kuva havainnollistaa juomaa, ei Luandan ravintolaa.",
+        "selite": "Appelsiinimehua Kailua-Konassa Havaijilla.",
         "lyhyt": "Appelsiinimehua Havaijilla.",
         "tiedosto": "2021-10-10 08 12 00 A glass of orange juice at the Denny's in Kailua-Kona, Hawaii County, Hawaii.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Famartin, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Appelsiinimehulasi on kuvattu Kailua-Konassa Havaijilla; kuva havainnollistaa juomaa, ei Luandan ravintolaa.",
+        "selite": "Appelsiinimehua Kailua-Konassa Havaijilla.",
         "lyhyt": "Appelsiinimehua Havaijilla.",
         "tiedosto": "2021-10-10 08 12 00 A glass of orange juice at the Denny's in Kailua-Kona, Hawaii County, Hawaii.jpg"
       },
@@ -1739,7 +1787,7 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e06/luanda/o4-1ce5c211f5cae94bc5aa.jpg",
         "suora": true,
         "lahde": "Famartin, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Appelsiinimehulasi on kuvattu Kailua-Konassa Havaijilla; kuva havainnollistaa juomaa, ei Luandan ravintolaa.",
+        "selite": "Appelsiinimehua Kailua-Konassa Havaijilla.",
         "lyhyt": "Appelsiinimehua Havaijilla.",
         "tiedosto": "2021-10-10 08 12 00 A glass of orange juice at the Denny's in Kailua-Kona, Hawaii County, Hawaii.jpg"
       },
@@ -1755,10 +1803,10 @@
         4032
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/luanda/sisalto.json",
-      "sourceContentSHA256": "cdeeb23c95c9187fe66b072c06a1fc338b60969abf2ae067f2cc12644e0b83b7",
+      "sourceContentSHA256": "725bc69b403e26f7f11d28cdfb32e98d4e8405eaa8a492d25809751523453bbc",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "50f5ac29b6f4785044c27ede799fe19b9c92acbf79821a791f78215ea724c1d0",
-        "semanticContextSHA256": "6b3c93a8d90acf6ac640c4810e8e7fb4d5a5f889607a06bca86fc62d7c69231b",
+        "targetBeforeSHA256": "a36629b3f42c93c15dfe41155d21ec3472f6f003164b2704590e593625311797",
+        "semanticContextSHA256": "32a9d16c4ff75b98ed877834c97ee2adaa2a9a0431b4c721634088302956dd1a",
         "subjectTitle": "Mitä syödään",
         "targetState": "existing-target"
       },
@@ -1914,7 +1962,7 @@
       "priorMediaFields": {
         "tiedosto": "2021-10-10 08 12 00 A glass of orange juice at the Denny's in Kailua-Kona, Hawaii County, Hawaii.jpg",
         "lyhyt": "Appelsiinimehua Havaijilla.",
-        "selite": "Appelsiinimehulasi on kuvattu Kailua-Konassa Havaijilla; kuva havainnollistaa juomaa, ei Luandan ravintolaa.",
+        "selite": "Appelsiinimehua Kailua-Konassa Havaijilla.",
         "lahde": "Famartin, Wikimedia Commons (CC BY-SA 4.0)"
       },
       "preservePreviousMediaObjects": true,
@@ -1941,14 +1989,14 @@
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Famartin, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Appelsiinimehulasi on kuvattu Kailua-Konassa Havaijilla; kuva havainnollistaa juomaa, ei Luandan ravintolaa.",
+        "selite": "Appelsiinimehua Kailua-Konassa Havaijilla.",
         "lyhyt": "Appelsiinimehua Havaijilla.",
         "tiedosto": "2021-10-10 08 12 00 A glass of orange juice at the Denny's in Kailua-Kona, Hawaii County, Hawaii.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "cdeeb23c95c9187fe66b072c06a1fc338b60969abf2ae067f2cc12644e0b83b7",
-      "targetAfterSHA256": "50f5ac29b6f4785044c27ede799fe19b9c92acbf79821a791f78215ea724c1d0",
-      "contextAfterSHA256": "6b3c93a8d90acf6ac640c4810e8e7fb4d5a5f889607a06bca86fc62d7c69231b",
+      "sourceContentAfterSHA256": "725bc69b403e26f7f11d28cdfb32e98d4e8405eaa8a492d25809751523453bbc",
+      "targetAfterSHA256": "a36629b3f42c93c15dfe41155d21ec3472f6f003164b2704590e593625311797",
+      "contextAfterSHA256": "32a9d16c4ff75b98ed877834c97ee2adaa2a9a0431b4c721634088302956dd1a",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -1971,7 +2019,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "725bc69b403e26f7f11d28cdfb32e98d4e8405eaa8a492d25809751523453bbc",
+        "sameImageNativeSHA256": "1ce5c211f5cae94bc5aaf61ebe43cc617016d33271267a130a526b765eda7910",
+        "sameImageExportSHA256": "1ce5c211f5cae94bc5aaf61ebe43cc617016d33271267a130a526b765eda7910",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": true
+      }
     },
     {
       "era": "e06",
@@ -2024,10 +2080,10 @@
         2432
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/luanda/sisalto.json",
-      "sourceContentSHA256": "cdeeb23c95c9187fe66b072c06a1fc338b60969abf2ae067f2cc12644e0b83b7",
+      "sourceContentSHA256": "725bc69b403e26f7f11d28cdfb32e98d4e8405eaa8a492d25809751523453bbc",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "39beaba0341403ce9ead96d17db6264bd797a3645a6e8424ad1c1d65d9ed5773",
-        "semanticContextSHA256": "39beaba0341403ce9ead96d17db6264bd797a3645a6e8424ad1c1d65d9ed5773",
+        "targetBeforeSHA256": "ba5d2fa856616f26ec70146629275f45f422866a483b3a1f862462e24ab3597e",
+        "semanticContextSHA256": "ba5d2fa856616f26ec70146629275f45f422866a483b3a1f862462e24ab3597e",
         "subjectTitle": "Kaupungilla on kaksi korkeutta",
         "targetState": "existing-target"
       },
@@ -2219,9 +2275,9 @@
         "tiedosto": "Rua D. Franc do Sover Luanda 01.JPG"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "cdeeb23c95c9187fe66b072c06a1fc338b60969abf2ae067f2cc12644e0b83b7",
-      "targetAfterSHA256": "39beaba0341403ce9ead96d17db6264bd797a3645a6e8424ad1c1d65d9ed5773",
-      "contextAfterSHA256": "39beaba0341403ce9ead96d17db6264bd797a3645a6e8424ad1c1d65d9ed5773",
+      "sourceContentAfterSHA256": "725bc69b403e26f7f11d28cdfb32e98d4e8405eaa8a492d25809751523453bbc",
+      "targetAfterSHA256": "ba5d2fa856616f26ec70146629275f45f422866a483b3a1f862462e24ab3597e",
+      "contextAfterSHA256": "ba5d2fa856616f26ec70146629275f45f422866a483b3a1f862462e24ab3597e",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -2244,7 +2300,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "725bc69b403e26f7f11d28cdfb32e98d4e8405eaa8a492d25809751523453bbc",
+        "sameImageNativeSHA256": "befde111ed9ebade6efa5e5b3f2cbcb9b120b5371ddd618020c4ac75492eadc6",
+        "sameImageExportSHA256": "befde111ed9ebade6efa5e5b3f2cbcb9b120b5371ddd618020c4ac75492eadc6",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e06",
@@ -2297,7 +2361,7 @@
         958
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/luanda/sisalto.json",
-      "sourceContentSHA256": "cdeeb23c95c9187fe66b072c06a1fc338b60969abf2ae067f2cc12644e0b83b7",
+      "sourceContentSHA256": "725bc69b403e26f7f11d28cdfb32e98d4e8405eaa8a492d25809751523453bbc",
       "semanticSourceBind": {
         "targetBeforeSHA256": "87684545b35d29ddc8d9b47c56bb74297c7f440a45daf32d7cf32589c5fd3864",
         "semanticContextSHA256": "87684545b35d29ddc8d9b47c56bb74297c7f440a45daf32d7cf32589c5fd3864",
@@ -2484,7 +2548,7 @@
         "tiedosto": "Luanda 13.23266E 8.80761S.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "cdeeb23c95c9187fe66b072c06a1fc338b60969abf2ae067f2cc12644e0b83b7",
+      "sourceContentAfterSHA256": "725bc69b403e26f7f11d28cdfb32e98d4e8405eaa8a492d25809751523453bbc",
       "targetAfterSHA256": "87684545b35d29ddc8d9b47c56bb74297c7f440a45daf32d7cf32589c5fd3864",
       "contextAfterSHA256": "87684545b35d29ddc8d9b47c56bb74297c7f440a45daf32d7cf32589c5fd3864",
       "ownerApproved": true,
@@ -2509,7 +2573,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "725bc69b403e26f7f11d28cdfb32e98d4e8405eaa8a492d25809751523453bbc",
+        "sameImageNativeSHA256": "213f7b5fcfb4a330fb68270357c1a20ac01a1de5627fc74ac519e87d26e4e206",
+        "sameImageExportSHA256": "213f7b5fcfb4a330fb68270357c1a20ac01a1de5627fc74ac519e87d26e4e206",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e06",
@@ -2562,10 +2634,10 @@
         1179
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/luanda/sisalto.json",
-      "sourceContentSHA256": "cdeeb23c95c9187fe66b072c06a1fc338b60969abf2ae067f2cc12644e0b83b7",
+      "sourceContentSHA256": "725bc69b403e26f7f11d28cdfb32e98d4e8405eaa8a492d25809751523453bbc",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "002d3c5c1238ee938f253536150a30e5028ce9a0e2f2f42fac024d817c3d155a",
-        "semanticContextSHA256": "002d3c5c1238ee938f253536150a30e5028ce9a0e2f2f42fac024d817c3d155a",
+        "targetBeforeSHA256": "30379246aa45e154be9961c1eec4d26fa5ce40caa35a6d8a86b926bc8d1bf6aa",
+        "semanticContextSHA256": "30379246aa45e154be9961c1eec4d26fa5ce40caa35a6d8a86b926bc8d1bf6aa",
         "subjectTitle": "Lentolipussa kannattaa katsoa kenttätunnus",
         "targetState": "existing-target"
       },
@@ -2753,9 +2825,9 @@
         "tiedosto": "NAIL 24L Runway.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "cdeeb23c95c9187fe66b072c06a1fc338b60969abf2ae067f2cc12644e0b83b7",
-      "targetAfterSHA256": "002d3c5c1238ee938f253536150a30e5028ce9a0e2f2f42fac024d817c3d155a",
-      "contextAfterSHA256": "002d3c5c1238ee938f253536150a30e5028ce9a0e2f2f42fac024d817c3d155a",
+      "sourceContentAfterSHA256": "725bc69b403e26f7f11d28cdfb32e98d4e8405eaa8a492d25809751523453bbc",
+      "targetAfterSHA256": "30379246aa45e154be9961c1eec4d26fa5ce40caa35a6d8a86b926bc8d1bf6aa",
+      "contextAfterSHA256": "30379246aa45e154be9961c1eec4d26fa5ce40caa35a6d8a86b926bc8d1bf6aa",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -2778,7 +2850,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "725bc69b403e26f7f11d28cdfb32e98d4e8405eaa8a492d25809751523453bbc",
+        "sameImageNativeSHA256": "8db53c0b49f2836df33536afeb6961f4610904b2a03a4b2a650f8620b108d7a6",
+        "sameImageExportSHA256": "8db53c0b49f2836df33536afeb6961f4610904b2a03a4b2a650f8620b108d7a6",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e06",
@@ -2831,10 +2911,10 @@
         2592
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/luanda/sisalto.json",
-      "sourceContentSHA256": "cdeeb23c95c9187fe66b072c06a1fc338b60969abf2ae067f2cc12644e0b83b7",
+      "sourceContentSHA256": "725bc69b403e26f7f11d28cdfb32e98d4e8405eaa8a492d25809751523453bbc",
       "semanticSourceBind": {
         "targetBeforeSHA256": "9977cdae02253263a62870c9dd144a5fa11642b1f38af4c8ebe6dc672aa811d2",
-        "semanticContextSHA256": "313e4c338a0648b6ab648ee3c2bf3ace4c7751232f1b3c4daf547dd609d59464",
+        "semanticContextSHA256": "244d1e5f0fedcc992a594b7c4623d426af95f3302579f05ced132ed9740abe2f",
         "subjectTitle": "Ilha de Luandan hiekkaniemi",
         "targetState": "existing-target"
       },
@@ -3020,9 +3100,9 @@
         "tiedosto": "海滩beach - panoramio.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "cdeeb23c95c9187fe66b072c06a1fc338b60969abf2ae067f2cc12644e0b83b7",
+      "sourceContentAfterSHA256": "725bc69b403e26f7f11d28cdfb32e98d4e8405eaa8a492d25809751523453bbc",
       "targetAfterSHA256": "9977cdae02253263a62870c9dd144a5fa11642b1f38af4c8ebe6dc672aa811d2",
-      "contextAfterSHA256": "313e4c338a0648b6ab648ee3c2bf3ace4c7751232f1b3c4daf547dd609d59464",
+      "contextAfterSHA256": "244d1e5f0fedcc992a594b7c4623d426af95f3302579f05ced132ed9740abe2f",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -3045,7 +3125,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "725bc69b403e26f7f11d28cdfb32e98d4e8405eaa8a492d25809751523453bbc",
+        "sameImageNativeSHA256": "ed92867125868253d8c814a78686c23cdc25945892a8a0142bc920e8580cd125",
+        "sameImageExportSHA256": "ed92867125868253d8c814a78686c23cdc25945892a8a0142bc920e8580cd125",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     }
   ],
   "runtimeIntegrationPending": true,
@@ -3327,6 +3415,279 @@
   "task118TextRevision": true,
   "independentTextResamplePending": true,
   "textAcceptanceVerified": false,
-  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task118/immutable-media-history/e06/luanda/7c6fe28edce607df3fbad0375edae2daa5150576999d8de55192f3eac1b4abb5.json",
-  "task118ReboundAt": "2026-10-13T16:31:24.997450+00:00"
+  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task228/immutable-media-history/e06/luanda/8103dd05cec85fc3000ebcd3264fba40ce0a17f8693ad03f30e9339479fdaad1.json",
+  "task118ReboundAt": "2026-10-13T16:31:24.997450+00:00",
+  "task228ExcludedAssets": [
+    {
+      "era": "e06",
+      "city": "luanda",
+      "slot": "N2",
+      "type": "illustration",
+      "assetID": "job14-e06-luanda-n2-v01",
+      "galleryImageID": "job14-e06-luanda-n2-v01",
+      "commonsFile": null,
+      "targetJsonPath": "$.nahtavyydet[\"Carmon kirkko ja luostari\"].kuvat[0]",
+      "targetTokens": [
+        "nahtavyydet",
+        "Carmon kirkko ja luostari",
+        "kuvat",
+        0
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/luanda/job14-e06-luanda-n2-v01-349c20ccc5e5.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva koristeettomien laattojen pinnasta.",
+        "lyhyt": "Havainnekuva koristeettomien laattojen pinnasta."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/luanda/job14-e06-luanda-n2-v01-349c20ccc5e5.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva koristeettomien laattojen pinnasta.",
+        "lyhyt": "Havainnekuva koristeettomien laattojen pinnasta."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "349c20ccc5e5505240569176b81825bad367ddd0b53527842d6fe6d62f7b9cf6",
+      "exportSHA256": "f1a34a6c91796835e4a6afc5877696f09d23e157bf2777ecf0df9ee032fa3017",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/luanda/job14-e06-luanda-n2-v01-349c20ccc5e5.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/luanda/job14-e06-luanda-n2-v01-349c20ccc5e5.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e06/luanda/job14-e06-luanda-n2-v01-349c20ccc5e5.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/luanda/sisalto.json",
+      "sourceContentSHA256": "9635dc22ba09cc53f45cc136595cd14f17f4fd7f9f81a30585dde8aabc233245",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "semanticContextSHA256": "95133effc8b4ec20d7152cf67941e9d35a09c04a2f4dba6738af27f681ed8385",
+        "subjectTitle": "Carmon kirkko ja luostari",
+        "targetState": "fillable-empty-first-image-array"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Yleistetty lähteistetty materiaali tai tavallinen funktionaalinen esine. Ei kuva-inputtia, arkkitehtuurin/asettelun, suojatun laattakuvion/rituaaliesineen tai nykyteoksen jäljennöstä. Ei named-place documentary claim.",
+          "QA": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/luanda/assets/job14-e06-luanda-n2-v01/image.png",
+            "nativeSHA256": "349c20ccc5e5505240569176b81825bad367ddd0b53527842d6fe6d62f7b9cf6",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "nativeRatio": 1.5,
+            "manifestHashMatches": true,
+            "personallyViewed": true,
+            "viewTool": "view_image",
+            "viewedAt": "2026-10-12T20:41:12.985Z",
+            "visualFindingsFi": "Kaksi vaaleaa koristeetonta lasitettua laattaa harmaalla pinnalla, toinen toisen päällä. Reunojen paksuus, huokoinen keramiikka ja lasitteen heijastukset uskottavia. Ei kuvioita, tekstiä tai ihmisiä.",
+            "captionFi": "Havainnekuva koristeettomien laattojen pinnasta.",
+            "sourceAndTargetCheckFi": "Ajantasainen Carmon kirkko ja luostari -objekti on olemassa; tyhjä kuvat[0] on suunniteltu täytettävä lehti. Kohteen teksti ja faktapohjan U6/U19 mainitsevat laattakoristelun. Havainnekuvateksti ei väitä Carmon autenttista laattaa tai seinää; eri natiivitiedosto kuin L2.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/luanda/sisalto.json",
+            "contentSHA256": "9635dc22ba09cc53f45cc136595cd14f17f4fd7f9f81a30585dde8aabc233245",
+            "textJsonPath": "$.nahtavyydet[\"Carmon kirkko ja luostari\"]",
+            "currentText": "Nossa Senhora do Carmo on Luandan kirkon ja luostarin kokonaisuus. Sen synty liittyy karmeliitteihin, jotka rakensivat kirkon 1600-luvulla. Julkisivu on yksinkertainen, ja sen yläosa päättyy kolmionmuotoiseen päätyyn. Rakennuksen ulkoinen muoto ja luostarin yhteys kertovat saman paikan eri tehtävistä: täällä oli kirkollisen toiminnan lisäksi uskonnollisen yhteisön tiloja.\n\nKokonaisuus oli olemassa vuonna 1873. Se oli ehtinyt rapistua 1800-luvun alkupuolella, ja dominikaanipapit kunnostivat rakennusta. Carmon historia ei siis pääty ensimmäiseen rakennusvaiheeseen. Sisätilaan kuuluu muun muassa veistettyjä alttareita, veistoksia, seinämaalauksia ja laattakoristelua, jotka ovat omia osiaan kirkon kokonaisuudessa. Nykyinen kirkonpaikka yhdistää vanhaa rakennushistoriaa, käyttöä ja myöhempää huolenpitoa.",
+            "factPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/luanda/faktapohja.md",
+            "factSHA256": "6560730caed0b5cb5929792d6f7e948b21c034ad9b36e71d133953a9e8aba4b2",
+            "sourceEvidence": [
+              {
+                "type": "currentContent",
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/luanda/sisalto.json",
+                "sha256": "898d0260525cbe666cd58427801a8d3ec6fe358f1fb7328e235ac06fcd51c544",
+                "jsonPath": "$.nahtavyydet[\"Carmon kirkko ja luostari\"]",
+                "text": "Nossa Senhora do Carmo on Luandan kirkon ja luostarin kokonaisuus. Sen synty liittyy karmeliitteihin, jotka rakensivat kirkon 1600-luvulla. Julkisivu on yksinkertainen, ja sen yläosa päättyy kolmionmuotoiseen päätyyn. Rakennuksen ulkoinen muoto ja luostarin yhteys kertovat saman paikan eri tehtävistä: täällä oli kirkollisen toiminnan lisäksi uskonnollisen yhteisön tiloja.\n\nKokonaisuus oli olemassa vuonna 1873. Se oli ehtinyt rapistua 1800-luvun alkupuolella, ja dominikaanipapit kunnostivat rakennusta. Carmon historia ei siis pääty ensimmäiseen rakennusvaiheeseen. Sisätilaan kuuluu muun muassa veistettyjä alttareita, veistoksia, seinämaalauksia ja laattakoristelua, jotka ovat omia osiaan kirkon kokonaisuudessa. Nykyinen kirkonpaikka yhdistää vanhaa rakennushistoriaa, käyttöä ja myöhempää huolenpitoa."
+              },
+              {
+                "type": "factSheet",
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/luanda/faktapohja.md",
+                "sha256": "6560730caed0b5cb5929792d6f7e948b21c034ad9b36e71d133953a9e8aba4b2",
+                "sourceUrl": "https://en.wikipedia.org/wiki/Nossa_Senhora_do_Carmo"
+              }
+            ],
+            "rightsCheckFi": "Yleishavainne, ei nimettyä suojattua teosta tai arkkitehtuurin/asettelun jäljennöstä.",
+            "formatCheck": {
+              "format": "PNG",
+              "manifestDimensionsMatch": true,
+              "embeddedICCProfile": false,
+              "nativeMetadataExportSeparate": true
+            }
+          },
+          "qaReason": "Koristeettoman laatan pintahavainne sopii olemassa olevan Carmon kohteen materiaalitekstiin."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva koristeettomien laattojen pinnasta.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/luanda/illustration-qa-extra.json",
+        "fileSHA256": "c13b51d244a87a68053e614b96024996fb8c65a13ca29f657e482d173b0b3918",
+        "item": {
+          "slot": "N2",
+          "targetJsonPath": "$.nahtavyydet[\"Carmon kirkko ja luostari\"].kuvat[0]",
+          "assetID": "job14-e06-luanda-n2-v01",
+          "sha256": "349c20ccc5e5505240569176b81825bad367ddd0b53527842d6fe6d62f7b9cf6",
+          "verdict": "accepted",
+          "reason": "Koristeettoman laatan pintahavainne sopii olemassa olevan Carmon kohteen materiaalitekstiin.",
+          "evidence": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/luanda/assets/job14-e06-luanda-n2-v01/image.png",
+            "nativeSHA256": "349c20ccc5e5505240569176b81825bad367ddd0b53527842d6fe6d62f7b9cf6",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "nativeRatio": 1.5,
+            "manifestHashMatches": true,
+            "personallyViewed": true,
+            "viewTool": "view_image",
+            "viewedAt": "2026-10-12T20:41:12.985Z",
+            "visualFindingsFi": "Kaksi vaaleaa koristeetonta lasitettua laattaa harmaalla pinnalla, toinen toisen päällä. Reunojen paksuus, huokoinen keramiikka ja lasitteen heijastukset uskottavia. Ei kuvioita, tekstiä tai ihmisiä.",
+            "captionFi": "Havainnekuva koristeettomien laattojen pinnasta.",
+            "sourceAndTargetCheckFi": "Ajantasainen Carmon kirkko ja luostari -objekti on olemassa; tyhjä kuvat[0] on suunniteltu täytettävä lehti. Kohteen teksti ja faktapohjan U6/U19 mainitsevat laattakoristelun. Havainnekuvateksti ei väitä Carmon autenttista laattaa tai seinää; eri natiivitiedosto kuin L2.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/luanda/sisalto.json",
+            "contentSHA256": "9635dc22ba09cc53f45cc136595cd14f17f4fd7f9f81a30585dde8aabc233245",
+            "textJsonPath": "$.nahtavyydet[\"Carmon kirkko ja luostari\"]",
+            "currentText": "Nossa Senhora do Carmo on Luandan kirkon ja luostarin kokonaisuus. Sen synty liittyy karmeliitteihin, jotka rakensivat kirkon 1600-luvulla. Julkisivu on yksinkertainen, ja sen yläosa päättyy kolmionmuotoiseen päätyyn. Rakennuksen ulkoinen muoto ja luostarin yhteys kertovat saman paikan eri tehtävistä: täällä oli kirkollisen toiminnan lisäksi uskonnollisen yhteisön tiloja.\n\nKokonaisuus oli olemassa vuonna 1873. Se oli ehtinyt rapistua 1800-luvun alkupuolella, ja dominikaanipapit kunnostivat rakennusta. Carmon historia ei siis pääty ensimmäiseen rakennusvaiheeseen. Sisätilaan kuuluu muun muassa veistettyjä alttareita, veistoksia, seinämaalauksia ja laattakoristelua, jotka ovat omia osiaan kirkon kokonaisuudessa. Nykyinen kirkonpaikka yhdistää vanhaa rakennushistoriaa, käyttöä ja myöhempää huolenpitoa.",
+            "factPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/luanda/faktapohja.md",
+            "factSHA256": "6560730caed0b5cb5929792d6f7e948b21c034ad9b36e71d133953a9e8aba4b2",
+            "sourceEvidence": [
+              {
+                "type": "currentContent",
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/luanda/sisalto.json",
+                "sha256": "898d0260525cbe666cd58427801a8d3ec6fe358f1fb7328e235ac06fcd51c544",
+                "jsonPath": "$.nahtavyydet[\"Carmon kirkko ja luostari\"]",
+                "text": "Nossa Senhora do Carmo on Luandan kirkon ja luostarin kokonaisuus. Sen synty liittyy karmeliitteihin, jotka rakensivat kirkon 1600-luvulla. Julkisivu on yksinkertainen, ja sen yläosa päättyy kolmionmuotoiseen päätyyn. Rakennuksen ulkoinen muoto ja luostarin yhteys kertovat saman paikan eri tehtävistä: täällä oli kirkollisen toiminnan lisäksi uskonnollisen yhteisön tiloja.\n\nKokonaisuus oli olemassa vuonna 1873. Se oli ehtinyt rapistua 1800-luvun alkupuolella, ja dominikaanipapit kunnostivat rakennusta. Carmon historia ei siis pääty ensimmäiseen rakennusvaiheeseen. Sisätilaan kuuluu muun muassa veistettyjä alttareita, veistoksia, seinämaalauksia ja laattakoristelua, jotka ovat omia osiaan kirkon kokonaisuudessa. Nykyinen kirkonpaikka yhdistää vanhaa rakennushistoriaa, käyttöä ja myöhempää huolenpitoa."
+              },
+              {
+                "type": "factSheet",
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/luanda/faktapohja.md",
+                "sha256": "6560730caed0b5cb5929792d6f7e948b21c034ad9b36e71d133953a9e8aba4b2",
+                "sourceUrl": "https://en.wikipedia.org/wiki/Nossa_Senhora_do_Carmo"
+              }
+            ],
+            "rightsCheckFi": "Yleishavainne, ei nimettyä suojattua teosta tai arkkitehtuurin/asettelun jäljennöstä.",
+            "formatCheck": {
+              "format": "PNG",
+              "manifestDimensionsMatch": true,
+              "embeddedICCProfile": false,
+              "nativeMetadataExportSeparate": true
+            }
+          },
+          "reviewedAt": "2026-10-12T20:45:26.005855+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/luanda/qa.json",
+            "sha256": "beba8e9e064bea0e90959e28581fbf582c715787def5564df1336d940f65ec2e"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/luanda/illustration-qa-extra.json",
+            "sha256": "c13b51d244a87a68053e614b96024996fb8c65a13ca29f657e482d173b0b3918"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/luanda/job14-e06-luanda-n2-v01-349c20ccc5e5.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/luanda/job14-e06-luanda-n2-v01-349c20ccc5e5.png?t=f1a34a6c91796835",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/luanda/job14-e06-luanda-n2-v01-349c20ccc5e5.png",
+        "sha256": "f1a34a6c91796835e4a6afc5877696f09d23e157bf2777ecf0df9ee032fa3017",
+        "bytes": 2110622,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "job14-e06-luanda-n2-v01",
+        "nativeSHA256": "349c20ccc5e5505240569176b81825bad367ddd0b53527842d6fe6d62f7b9cf6",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e06/luanda/job14-e06-luanda-n2-v01-349c20ccc5e5.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e06",
+        "city": "luanda",
+        "slot": "N2",
+        "targetJsonPath": "$.nahtavyydet[\"Carmon kirkko ja luostari\"].kuvat[0]",
+        "verifiedAt": "2026-10-12T20:47:03.665444+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e06/luanda/job14-e06-luanda-n2-v01-349c20ccc5e5.png",
+        "sha256": "f1a34a6c91796835e4a6afc5877696f09d23e157bf2777ecf0df9ee032fa3017",
+        "bytes": 2110622,
+        "SHAReadAt": "2026-10-12T20:45:31.920887+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "349c20ccc5e5505240569176b81825bad367ddd0b53527842d6fe6d62f7b9cf6",
+        "rgbPixelSHA256": "b6cc575f6379c52260798e994147a18141e5ac45ce435d5accc88d67591fb246",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {},
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "9635dc22ba09cc53f45cc136595cd14f17f4fd7f9f81a30585dde8aabc233245",
+      "targetAfterSHA256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "contextAfterSHA256": "95133effc8b4ec20d7152cf67941e9d35a09c04a2f4dba6738af27f681ed8385",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "task118ExclusionReason": "target-no-longer-in-corrected-C",
+      "runtimeUseAllowed": false,
+      "originalBinaryPreserved": true
+    }
+  ],
+  "task228TextRevision": true,
+  "task228ReboundAt": "2026-10-13T18:31:09.992139+00:00"
 }

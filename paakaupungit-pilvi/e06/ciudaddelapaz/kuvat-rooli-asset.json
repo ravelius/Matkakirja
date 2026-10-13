@@ -3,7 +3,7 @@
   "era": "e06",
   "city": "ciudaddelapaz",
   "authorization": "hyväksyn kaikki tekemäsi kuvat. toimita ne claudelle. claudelta saat uusia ohjeita jatkoa varten",
-  "sourceContentAfterSHA256": "c9a4dd024f9abdf32790bcfe4606f46605411d6601a85ced30419e71d790f0c9",
+  "sourceContentAfterSHA256": "5d8d9a7ca5229c767f74dc5aaaafabceba13d95aba0c38c147a5acc42ee728cc",
   "assets": [
     {
       "era": "e06",
@@ -56,7 +56,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/ciudaddelapaz/sisalto.json",
-      "sourceContentSHA256": "c9a4dd024f9abdf32790bcfe4606f46605411d6601a85ced30419e71d790f0c9",
+      "sourceContentSHA256": "5d8d9a7ca5229c767f74dc5aaaafabceba13d95aba0c38c147a5acc42ee728cc",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
         "semanticContextSHA256": "9a03c3637b12f11100dba24a65e2d61dfa120c3a575b19f0ed830b2b373bc28b",
@@ -245,7 +245,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "c9a4dd024f9abdf32790bcfe4606f46605411d6601a85ced30419e71d790f0c9",
+      "sourceContentAfterSHA256": "5d8d9a7ca5229c767f74dc5aaaafabceba13d95aba0c38c147a5acc42ee728cc",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
       "contextAfterSHA256": "9a03c3637b12f11100dba24a65e2d61dfa120c3a575b19f0ed830b2b373bc28b",
       "ownerApproved": true,
@@ -270,7 +270,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "5d8d9a7ca5229c767f74dc5aaaafabceba13d95aba0c38c147a5acc42ee728cc",
+        "sameImageNativeSHA256": "0c50d5ffa9babff8d0c554116041abadcbf829a45515bf6a19c11b18c10080a9",
+        "sameImageExportSHA256": "4a7c230776d65051f132f1e28e9c3676677c3b29e7c289678660acc2af419bce",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e06",
@@ -323,10 +331,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/ciudaddelapaz/sisalto.json",
-      "sourceContentSHA256": "c9a4dd024f9abdf32790bcfe4606f46605411d6601a85ced30419e71d790f0c9",
+      "sourceContentSHA256": "5d8d9a7ca5229c767f74dc5aaaafabceba13d95aba0c38c147a5acc42ee728cc",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "1da4e67b83fa2bf620bbb3679a41375cd0d8800c5ae8ca27fe4b05be2abd707e",
+        "semanticContextSHA256": "54f9e665007626e8528ea9fb4ba5a95f856d68cc4f26531af59c6b0872eda22c",
         "subjectTitle": "Mitä täällä syödään",
         "targetState": "existing-target"
       },
@@ -502,9 +510,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "c9a4dd024f9abdf32790bcfe4606f46605411d6601a85ced30419e71d790f0c9",
+      "sourceContentAfterSHA256": "5d8d9a7ca5229c767f74dc5aaaafabceba13d95aba0c38c147a5acc42ee728cc",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "1da4e67b83fa2bf620bbb3679a41375cd0d8800c5ae8ca27fe4b05be2abd707e",
+      "contextAfterSHA256": "54f9e665007626e8528ea9fb4ba5a95f856d68cc4f26531af59c6b0872eda22c",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -527,7 +535,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "5d8d9a7ca5229c767f74dc5aaaafabceba13d95aba0c38c147a5acc42ee728cc",
+        "sameImageNativeSHA256": "aaebe2360baacadeec00ed812faeee3f5baa8076ee50d677ec4bd10b45867a02",
+        "sameImageExportSHA256": "a7568abf4922d5571483643562bcefa0da992e7ad4e147ec4187dec4a3701197",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e06",
@@ -577,10 +593,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/ciudaddelapaz/sisalto.json",
-      "sourceContentSHA256": "c9a4dd024f9abdf32790bcfe4606f46605411d6601a85ced30419e71d790f0c9",
+      "sourceContentSHA256": "5d8d9a7ca5229c767f74dc5aaaafabceba13d95aba0c38c147a5acc42ee728cc",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "e90d2a3256de4050c736dcaf47dea4981ad8ad1af6d6b988dd5bd1bbfe9521f0",
-        "semanticContextSHA256": "e90d2a3256de4050c736dcaf47dea4981ad8ad1af6d6b988dd5bd1bbfe9521f0",
+        "targetBeforeSHA256": "8135129de902614b6f81e8d13a793710c698e89f3033d28142111a2962dbd650",
+        "semanticContextSHA256": "8135129de902614b6f81e8d13a793710c698e89f3033d28142111a2962dbd650",
         "subjectTitle": "Pääkaupunki vaihtoi maisemaa",
         "targetState": "existing-target"
       },
@@ -766,9 +782,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "c9a4dd024f9abdf32790bcfe4606f46605411d6601a85ced30419e71d790f0c9",
-      "targetAfterSHA256": "e90d2a3256de4050c736dcaf47dea4981ad8ad1af6d6b988dd5bd1bbfe9521f0",
-      "contextAfterSHA256": "e90d2a3256de4050c736dcaf47dea4981ad8ad1af6d6b988dd5bd1bbfe9521f0",
+      "sourceContentAfterSHA256": "5d8d9a7ca5229c767f74dc5aaaafabceba13d95aba0c38c147a5acc42ee728cc",
+      "targetAfterSHA256": "8135129de902614b6f81e8d13a793710c698e89f3033d28142111a2962dbd650",
+      "contextAfterSHA256": "8135129de902614b6f81e8d13a793710c698e89f3033d28142111a2962dbd650",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -791,7 +807,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "5d8d9a7ca5229c767f74dc5aaaafabceba13d95aba0c38c147a5acc42ee728cc",
+        "sameImageNativeSHA256": "919cf3712da3ebcc62a01bbae0e38475759b5a925a708ffa329742fc644c4188",
+        "sameImageExportSHA256": "c1d84714ea303ba20be77303fae9f97f5d057f0224e07447f4a9a58b7027e443",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e06",
@@ -841,10 +865,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/ciudaddelapaz/sisalto.json",
-      "sourceContentSHA256": "c9a4dd024f9abdf32790bcfe4606f46605411d6601a85ced30419e71d790f0c9",
+      "sourceContentSHA256": "5d8d9a7ca5229c767f74dc5aaaafabceba13d95aba0c38c147a5acc42ee728cc",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "93059022bd4da652cc24f2306a41f02a51b3635dd0fa28d314651c6a054a0d09",
-        "semanticContextSHA256": "93059022bd4da652cc24f2306a41f02a51b3635dd0fa28d314651c6a054a0d09",
+        "targetBeforeSHA256": "a508cc8d4d99f17f196bfaa43836c111243ea7c5ec7418917abcb6f9e027f2c3",
+        "semanticContextSHA256": "a508cc8d4d99f17f196bfaa43836c111243ea7c5ec7418917abcb6f9e027f2c3",
         "subjectTitle": "Kaava ennen kaupunkia",
         "targetState": "existing-target"
       },
@@ -1030,9 +1054,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "c9a4dd024f9abdf32790bcfe4606f46605411d6601a85ced30419e71d790f0c9",
-      "targetAfterSHA256": "93059022bd4da652cc24f2306a41f02a51b3635dd0fa28d314651c6a054a0d09",
-      "contextAfterSHA256": "93059022bd4da652cc24f2306a41f02a51b3635dd0fa28d314651c6a054a0d09",
+      "sourceContentAfterSHA256": "5d8d9a7ca5229c767f74dc5aaaafabceba13d95aba0c38c147a5acc42ee728cc",
+      "targetAfterSHA256": "a508cc8d4d99f17f196bfaa43836c111243ea7c5ec7418917abcb6f9e027f2c3",
+      "contextAfterSHA256": "a508cc8d4d99f17f196bfaa43836c111243ea7c5ec7418917abcb6f9e027f2c3",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -1055,7 +1079,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "5d8d9a7ca5229c767f74dc5aaaafabceba13d95aba0c38c147a5acc42ee728cc",
+        "sameImageNativeSHA256": "03f6df201ae17dcfddad09d41cd3a5e2d822074647aa21f610b2cf6c161fc8bc",
+        "sameImageExportSHA256": "da9a93c38bbb3dc1355feb1b291b34077f8e2e5ffe15c5b9943ea6f4296e04a3",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e06",
@@ -1105,10 +1137,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/ciudaddelapaz/sisalto.json",
-      "sourceContentSHA256": "c9a4dd024f9abdf32790bcfe4606f46605411d6601a85ced30419e71d790f0c9",
+      "sourceContentSHA256": "5d8d9a7ca5229c767f74dc5aaaafabceba13d95aba0c38c147a5acc42ee728cc",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "010ee4d053e4bacd61df8aff75263f969c8b8ad6452a252e1a7f6c560545e180",
-        "semanticContextSHA256": "010ee4d053e4bacd61df8aff75263f969c8b8ad6452a252e1a7f6c560545e180",
+        "targetBeforeSHA256": "d3c8168d87afa4b24a197b0858ef5f5f05b2a7722b7eb37b5781b13fea2e3ba6",
+        "semanticContextSHA256": "d3c8168d87afa4b24a197b0858ef5f5f05b2a7722b7eb37b5781b13fea2e3ba6",
         "subjectTitle": "Lentokentän nimi on vihje",
         "targetState": "existing-target"
       },
@@ -1294,9 +1326,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "c9a4dd024f9abdf32790bcfe4606f46605411d6601a85ced30419e71d790f0c9",
-      "targetAfterSHA256": "010ee4d053e4bacd61df8aff75263f969c8b8ad6452a252e1a7f6c560545e180",
-      "contextAfterSHA256": "010ee4d053e4bacd61df8aff75263f969c8b8ad6452a252e1a7f6c560545e180",
+      "sourceContentAfterSHA256": "5d8d9a7ca5229c767f74dc5aaaafabceba13d95aba0c38c147a5acc42ee728cc",
+      "targetAfterSHA256": "d3c8168d87afa4b24a197b0858ef5f5f05b2a7722b7eb37b5781b13fea2e3ba6",
+      "contextAfterSHA256": "d3c8168d87afa4b24a197b0858ef5f5f05b2a7722b7eb37b5781b13fea2e3ba6",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -1319,7 +1351,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "5d8d9a7ca5229c767f74dc5aaaafabceba13d95aba0c38c147a5acc42ee728cc",
+        "sameImageNativeSHA256": "d68626b920d86b7826aad3c9925c3e00f3c975787f92654a2cbd6c7b84cdc5fa",
+        "sameImageExportSHA256": "999af32772716419ed6bdf60d774986ba5a709c72226bf304d2d540f6fdf7399",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e06",
@@ -1369,10 +1409,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/ciudaddelapaz/sisalto.json",
-      "sourceContentSHA256": "c9a4dd024f9abdf32790bcfe4606f46605411d6601a85ced30419e71d790f0c9",
+      "sourceContentSHA256": "5d8d9a7ca5229c767f74dc5aaaafabceba13d95aba0c38c147a5acc42ee728cc",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "a50b52cca40c1dd33e48fdaaaf5b3e934699e290710d1e445cba06a09acf62a3",
-        "semanticContextSHA256": "a50b52cca40c1dd33e48fdaaaf5b3e934699e290710d1e445cba06a09acf62a3",
+        "targetBeforeSHA256": "82d1f37d27548d65c2349c43f703bcb991f1d9f5fd96346d9377f730b4005f85",
+        "semanticContextSHA256": "82d1f37d27548d65c2349c43f703bcb991f1d9f5fd96346d9377f730b4005f85",
         "subjectTitle": "Nuori kaupunki saa myös yliopiston",
         "targetState": "existing-target"
       },
@@ -1558,9 +1598,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "c9a4dd024f9abdf32790bcfe4606f46605411d6601a85ced30419e71d790f0c9",
-      "targetAfterSHA256": "a50b52cca40c1dd33e48fdaaaf5b3e934699e290710d1e445cba06a09acf62a3",
-      "contextAfterSHA256": "a50b52cca40c1dd33e48fdaaaf5b3e934699e290710d1e445cba06a09acf62a3",
+      "sourceContentAfterSHA256": "5d8d9a7ca5229c767f74dc5aaaafabceba13d95aba0c38c147a5acc42ee728cc",
+      "targetAfterSHA256": "82d1f37d27548d65c2349c43f703bcb991f1d9f5fd96346d9377f730b4005f85",
+      "contextAfterSHA256": "82d1f37d27548d65c2349c43f703bcb991f1d9f5fd96346d9377f730b4005f85",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -1583,7 +1623,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "5d8d9a7ca5229c767f74dc5aaaafabceba13d95aba0c38c147a5acc42ee728cc",
+        "sameImageNativeSHA256": "04040d557fd6c1dbc4d997e08d284ac0287fe7e2702e8bbc2815803f10bf7f31",
+        "sameImageExportSHA256": "774ed94c60c094787297add806d7ebb3b507573aa9a500c2e74632d0c8043316",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e06",
@@ -1633,7 +1681,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/ciudaddelapaz/sisalto.json",
-      "sourceContentSHA256": "c9a4dd024f9abdf32790bcfe4606f46605411d6601a85ced30419e71d790f0c9",
+      "sourceContentSHA256": "5d8d9a7ca5229c767f74dc5aaaafabceba13d95aba0c38c147a5acc42ee728cc",
       "semanticSourceBind": {
         "targetBeforeSHA256": "c642de40a894b064ec498cdfe446a776508dab0b63c7920f6ba2ec99c2e2883c",
         "semanticContextSHA256": "c642de40a894b064ec498cdfe446a776508dab0b63c7920f6ba2ec99c2e2883c",
@@ -1822,7 +1870,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "c9a4dd024f9abdf32790bcfe4606f46605411d6601a85ced30419e71d790f0c9",
+      "sourceContentAfterSHA256": "5d8d9a7ca5229c767f74dc5aaaafabceba13d95aba0c38c147a5acc42ee728cc",
       "targetAfterSHA256": "c642de40a894b064ec498cdfe446a776508dab0b63c7920f6ba2ec99c2e2883c",
       "contextAfterSHA256": "c642de40a894b064ec498cdfe446a776508dab0b63c7920f6ba2ec99c2e2883c",
       "ownerApproved": true,
@@ -1847,7 +1895,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "5d8d9a7ca5229c767f74dc5aaaafabceba13d95aba0c38c147a5acc42ee728cc",
+        "sameImageNativeSHA256": "ea171bc9679fcc92a9414adbb290d141a4f286f4193096fb41236a5304d2d4da",
+        "sameImageExportSHA256": "69702169b9f3f82e3ac5022a8022b110674d1ce61f0b5e1515c95c442e2e8966",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e06",
@@ -1897,10 +1953,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/ciudaddelapaz/sisalto.json",
-      "sourceContentSHA256": "c9a4dd024f9abdf32790bcfe4606f46605411d6601a85ced30419e71d790f0c9",
+      "sourceContentSHA256": "5d8d9a7ca5229c767f74dc5aaaafabceba13d95aba0c38c147a5acc42ee728cc",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "5dcc38e9df328c9cecf5a425bd52f60a9cbc257e0e9227320e69e8c90c70a3fe",
-        "semanticContextSHA256": "5dcc38e9df328c9cecf5a425bd52f60a9cbc257e0e9227320e69e8c90c70a3fe",
+        "targetBeforeSHA256": "512180e139d448a6a058d2681dce07e777a0dd053a99c16da3b8466cf8e8c67d",
+        "semanticContextSHA256": "512180e139d448a6a058d2681dce07e777a0dd053a99c16da3b8466cf8e8c67d",
         "subjectTitle": "Asukkaat eivät asu tavoitteessa",
         "targetState": "existing-target"
       },
@@ -2104,9 +2160,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "c9a4dd024f9abdf32790bcfe4606f46605411d6601a85ced30419e71d790f0c9",
-      "targetAfterSHA256": "5dcc38e9df328c9cecf5a425bd52f60a9cbc257e0e9227320e69e8c90c70a3fe",
-      "contextAfterSHA256": "5dcc38e9df328c9cecf5a425bd52f60a9cbc257e0e9227320e69e8c90c70a3fe",
+      "sourceContentAfterSHA256": "5d8d9a7ca5229c767f74dc5aaaafabceba13d95aba0c38c147a5acc42ee728cc",
+      "targetAfterSHA256": "512180e139d448a6a058d2681dce07e777a0dd053a99c16da3b8466cf8e8c67d",
+      "contextAfterSHA256": "512180e139d448a6a058d2681dce07e777a0dd053a99c16da3b8466cf8e8c67d",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -2129,7 +2185,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "5d8d9a7ca5229c767f74dc5aaaafabceba13d95aba0c38c147a5acc42ee728cc",
+        "sameImageNativeSHA256": "d52fb8917fd8368bb29869ed49c6bde43aaef74999fb93edcdf918a15f7e40de",
+        "sameImageExportSHA256": "c27fb8b9b74139fb8d82e40395b11899474d2c38c2067b648274b16252705db1",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e06",
@@ -2148,23 +2212,23 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e06/ciudaddelapaz/photo-81779b596e9efa426b6c.jpg",
         "suora": true,
         "lahde": "Mehlauge, Commons (CC BY-SA 3.0)",
-        "selite": "Ciudad de la Pazin ympäristöön kuuluu trooppista kasvillisuutta.",
-        "lyhyt": "Ciudad de la Pazin ympäristöön.",
+        "selite": "Trooppista metsää Ciudad de la Pazin eli entisen Oyalan ympäristössä.",
+        "lyhyt": "Trooppista metsää Oyalan lähistöllä.",
         "tiedosto": "Dschungel bei Oyala.JPG"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Mehlauge, Commons (CC BY-SA 3.0)",
-        "selite": "Ciudad de la Pazin ympäristöön kuuluu trooppista kasvillisuutta.",
-        "lyhyt": "Ciudad de la Pazin ympäristöön.",
+        "selite": "Trooppista metsää Ciudad de la Pazin eli entisen Oyalan ympäristössä.",
+        "lyhyt": "Trooppista metsää Oyalan lähistöllä.",
         "tiedosto": "Dschungel bei Oyala.JPG"
       },
       "runtimeMediaFieldPayload": {
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e06/ciudaddelapaz/photo-81779b596e9efa426b6c.jpg",
         "suora": true,
         "lahde": "Mehlauge, Commons (CC BY-SA 3.0)",
-        "selite": "Ciudad de la Pazin ympäristöön kuuluu trooppista kasvillisuutta.",
-        "lyhyt": "Ciudad de la Pazin ympäristöön.",
+        "selite": "Trooppista metsää Ciudad de la Pazin eli entisen Oyalan ympäristössä.",
+        "lyhyt": "Trooppista metsää Oyalan lähistöllä.",
         "tiedosto": "Dschungel bei Oyala.JPG"
       },
       "runtimeRemoveMediaKeys": [],
@@ -2179,10 +2243,10 @@
         3000
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/ciudaddelapaz/sisalto.json",
-      "sourceContentSHA256": "c9a4dd024f9abdf32790bcfe4606f46605411d6601a85ced30419e71d790f0c9",
+      "sourceContentSHA256": "5d8d9a7ca5229c767f74dc5aaaafabceba13d95aba0c38c147a5acc42ee728cc",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "56d757d8643222a7635df09c471ba26a5e4fd3f8a045e672d82225d7206d3d06",
-        "semanticContextSHA256": "56d757d8643222a7635df09c471ba26a5e4fd3f8a045e672d82225d7206d3d06",
+        "targetBeforeSHA256": "8808efe226f545aded9956a5c36756de9d0fbee8e9eb34a67c7f8cdfacf8eb9b",
+        "semanticContextSHA256": "8808efe226f545aded9956a5c36756de9d0fbee8e9eb34a67c7f8cdfacf8eb9b",
         "subjectTitle": "ciudaddelapaz — aito paikkavalokuva",
         "targetState": "existing-target"
       },
@@ -2349,8 +2413,8 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "Dschungel bei Oyala.JPG",
-        "lyhyt": "Ciudad de la Pazin ympäristöön.",
-        "selite": "Ciudad de la Pazin ympäristöön kuuluu trooppista kasvillisuutta.",
+        "lyhyt": "Trooppista metsää Oyalan lähistöllä.",
+        "selite": "Trooppista metsää Ciudad de la Pazin eli entisen Oyalan ympäristössä.",
         "lahde": "Mehlauge, Commons (CC BY-SA 3.0)"
       },
       "preservePreviousMediaObjects": true,
@@ -2377,14 +2441,14 @@
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Mehlauge, Commons (CC BY-SA 3.0)",
-        "selite": "Ciudad de la Pazin ympäristöön kuuluu trooppista kasvillisuutta.",
-        "lyhyt": "Ciudad de la Pazin ympäristöön.",
+        "selite": "Trooppista metsää Ciudad de la Pazin eli entisen Oyalan ympäristössä.",
+        "lyhyt": "Trooppista metsää Oyalan lähistöllä.",
         "tiedosto": "Dschungel bei Oyala.JPG"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "c9a4dd024f9abdf32790bcfe4606f46605411d6601a85ced30419e71d790f0c9",
-      "targetAfterSHA256": "56d757d8643222a7635df09c471ba26a5e4fd3f8a045e672d82225d7206d3d06",
-      "contextAfterSHA256": "56d757d8643222a7635df09c471ba26a5e4fd3f8a045e672d82225d7206d3d06",
+      "sourceContentAfterSHA256": "5d8d9a7ca5229c767f74dc5aaaafabceba13d95aba0c38c147a5acc42ee728cc",
+      "targetAfterSHA256": "8808efe226f545aded9956a5c36756de9d0fbee8e9eb34a67c7f8cdfacf8eb9b",
+      "contextAfterSHA256": "8808efe226f545aded9956a5c36756de9d0fbee8e9eb34a67c7f8cdfacf8eb9b",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -2407,7 +2471,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "5d8d9a7ca5229c767f74dc5aaaafabceba13d95aba0c38c147a5acc42ee728cc",
+        "sameImageNativeSHA256": "81779b596e9efa426b6c8307b6c48ae3e8696b747c536f6a478846ee0af2581e",
+        "sameImageExportSHA256": "81779b596e9efa426b6c8307b6c48ae3e8696b747c536f6a478846ee0af2581e",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": true
+      }
     }
   ],
   "runtimeIntegrationPending": true,
@@ -2419,6 +2491,9 @@
   "task118TextRevision": true,
   "independentTextResamplePending": true,
   "textAcceptanceVerified": false,
-  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task118/immutable-media-history/e06/ciudaddelapaz/9f7a44c6ae4c93c68fe6831e0653c6c3bc5f8741695f41109edeab00113a43f1.json",
-  "task118ReboundAt": "2026-10-13T16:31:24.874908+00:00"
+  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task228/immutable-media-history/e06/ciudaddelapaz/9b5cae26f11a7d7f8728db5f8340047c0cfbf37eaef1702ca5a097278bebb012.json",
+  "task118ReboundAt": "2026-10-13T16:31:24.874908+00:00",
+  "task228ExcludedAssets": [],
+  "task228TextRevision": true,
+  "task228ReboundAt": "2026-10-13T18:31:09.848977+00:00"
 }

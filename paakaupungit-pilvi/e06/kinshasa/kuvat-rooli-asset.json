@@ -3,7 +3,7 @@
   "era": "e06",
   "city": "kinshasa",
   "authorization": "hyväksyn kaikki tekemäsi kuvat. toimita ne claudelle. claudelta saat uusia ohjeita jatkoa varten",
-  "sourceContentAfterSHA256": "345a41c7badcd99b22d14246f1ca55cdf7b60ca99635f4628424f8273c40fd81",
+  "sourceContentAfterSHA256": "762fbbb2f0be9b3d63df4902c35fafab402a9dea9bb2d8ca004de879055f4edf",
   "assets": [
     {
       "era": "e06",
@@ -56,10 +56,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/kinshasa/sisalto.json",
-      "sourceContentSHA256": "345a41c7badcd99b22d14246f1ca55cdf7b60ca99635f4628424f8273c40fd81",
+      "sourceContentSHA256": "762fbbb2f0be9b3d63df4902c35fafab402a9dea9bb2d8ca004de879055f4edf",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "4949101a0d98cd8b7b95cedce9d26a2d8a1daa629079159c58a3e99736546815",
+        "semanticContextSHA256": "f2713f47557991021fa1b2ed782798b944fb918322e06cadbd865a8cb7d42137",
         "subjectTitle": "Kaupungin ruokapaikat",
         "targetState": "existing-target"
       },
@@ -273,9 +273,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "345a41c7badcd99b22d14246f1ca55cdf7b60ca99635f4628424f8273c40fd81",
+      "sourceContentAfterSHA256": "762fbbb2f0be9b3d63df4902c35fafab402a9dea9bb2d8ca004de879055f4edf",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "4949101a0d98cd8b7b95cedce9d26a2d8a1daa629079159c58a3e99736546815",
+      "contextAfterSHA256": "f2713f47557991021fa1b2ed782798b944fb918322e06cadbd865a8cb7d42137",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -298,7 +298,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "762fbbb2f0be9b3d63df4902c35fafab402a9dea9bb2d8ca004de879055f4edf",
+        "sameImageNativeSHA256": "b04735b32c865eb1f44fc1332fd30b6335b85d5743485ca70be74cbd03889aca",
+        "sameImageExportSHA256": "562d9bfe24adcd6f5b8fb22ec3d82339e307e1669e24f608f6824acc3cb89dc8",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e06",
@@ -348,10 +356,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/kinshasa/sisalto.json",
-      "sourceContentSHA256": "345a41c7badcd99b22d14246f1ca55cdf7b60ca99635f4628424f8273c40fd81",
+      "sourceContentSHA256": "762fbbb2f0be9b3d63df4902c35fafab402a9dea9bb2d8ca004de879055f4edf",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "40b8c200e8a455d3e55abb63e0a8cd683eaca88a115e8d4ef31977308bb97adb",
-        "semanticContextSHA256": "40b8c200e8a455d3e55abb63e0a8cd683eaca88a115e8d4ef31977308bb97adb",
+        "targetBeforeSHA256": "9c6f7bca822efb551cd9a08cdf85f063be446adc159517a49605578027633870",
+        "semanticContextSHA256": "9c6f7bca822efb551cd9a08cdf85f063be446adc159517a49605578027633870",
         "subjectTitle": "Puutarha tekee tiedettä",
         "targetState": "existing-target"
       },
@@ -587,9 +595,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "345a41c7badcd99b22d14246f1ca55cdf7b60ca99635f4628424f8273c40fd81",
-      "targetAfterSHA256": "40b8c200e8a455d3e55abb63e0a8cd683eaca88a115e8d4ef31977308bb97adb",
-      "contextAfterSHA256": "40b8c200e8a455d3e55abb63e0a8cd683eaca88a115e8d4ef31977308bb97adb",
+      "sourceContentAfterSHA256": "762fbbb2f0be9b3d63df4902c35fafab402a9dea9bb2d8ca004de879055f4edf",
+      "targetAfterSHA256": "9c6f7bca822efb551cd9a08cdf85f063be446adc159517a49605578027633870",
+      "contextAfterSHA256": "9c6f7bca822efb551cd9a08cdf85f063be446adc159517a49605578027633870",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -612,7 +620,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "762fbbb2f0be9b3d63df4902c35fafab402a9dea9bb2d8ca004de879055f4edf",
+        "sameImageNativeSHA256": "4df5092b76dccf01b4fa7243a01b5c104f78f5e94571844a3bec0b7b8e6a177c",
+        "sameImageExportSHA256": "eb3fadfb455c7adf2db7ceb6efbdb136e93f740b73cdda892117253ef813fcf8",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e06",
@@ -662,10 +678,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/kinshasa/sisalto.json",
-      "sourceContentSHA256": "345a41c7badcd99b22d14246f1ca55cdf7b60ca99635f4628424f8273c40fd81",
+      "sourceContentSHA256": "762fbbb2f0be9b3d63df4902c35fafab402a9dea9bb2d8ca004de879055f4edf",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "5e3469eb500a800f4631c8cf481b26761b5cd6c1ec0b5160e0bda9ca1e9689c0",
-        "semanticContextSHA256": "5e3469eb500a800f4631c8cf481b26761b5cd6c1ec0b5160e0bda9ca1e9689c0",
+        "targetBeforeSHA256": "03e6ec990476259cb4c958bfa907eb1ea4b072d019e1893013631a3c7f8f0e87",
+        "semanticContextSHA256": "03e6ec990476259cb4c958bfa907eb1ea4b072d019e1893013631a3c7f8f0e87",
         "subjectTitle": "Taimisto kasvattaa kaupunkia vihreäksi",
         "targetState": "existing-target"
       },
@@ -901,9 +917,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "345a41c7badcd99b22d14246f1ca55cdf7b60ca99635f4628424f8273c40fd81",
-      "targetAfterSHA256": "5e3469eb500a800f4631c8cf481b26761b5cd6c1ec0b5160e0bda9ca1e9689c0",
-      "contextAfterSHA256": "5e3469eb500a800f4631c8cf481b26761b5cd6c1ec0b5160e0bda9ca1e9689c0",
+      "sourceContentAfterSHA256": "762fbbb2f0be9b3d63df4902c35fafab402a9dea9bb2d8ca004de879055f4edf",
+      "targetAfterSHA256": "03e6ec990476259cb4c958bfa907eb1ea4b072d019e1893013631a3c7f8f0e87",
+      "contextAfterSHA256": "03e6ec990476259cb4c958bfa907eb1ea4b072d019e1893013631a3c7f8f0e87",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -926,7 +942,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "762fbbb2f0be9b3d63df4902c35fafab402a9dea9bb2d8ca004de879055f4edf",
+        "sameImageNativeSHA256": "aab35c6663a8aa78b677b0d338dff33690ac68ecb769173d9c0959fb1867efc1",
+        "sameImageExportSHA256": "8f123cb18a3b742934aee28f63f0f7c76ec3d58f416e51a207ea00d2ac5e7f3b",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e06",
@@ -976,10 +1000,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/kinshasa/sisalto.json",
-      "sourceContentSHA256": "345a41c7badcd99b22d14246f1ca55cdf7b60ca99635f4628424f8273c40fd81",
+      "sourceContentSHA256": "762fbbb2f0be9b3d63df4902c35fafab402a9dea9bb2d8ca004de879055f4edf",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "54d252263d587106c59ea600ce608a520077203db506609fd98c66336e722682",
-        "semanticContextSHA256": "54d252263d587106c59ea600ce608a520077203db506609fd98c66336e722682",
+        "targetBeforeSHA256": "4ad98262f4c9ce327881a34220d3c84fefef6e23e6b03f6bbddb05e80a6b75df",
+        "semanticContextSHA256": "4ad98262f4c9ce327881a34220d3c84fefef6e23e6b03f6bbddb05e80a6b75df",
         "subjectTitle": "Kaikki kasvitieto ei ole vihreää",
         "targetState": "existing-target"
       },
@@ -1229,9 +1253,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "345a41c7badcd99b22d14246f1ca55cdf7b60ca99635f4628424f8273c40fd81",
-      "targetAfterSHA256": "54d252263d587106c59ea600ce608a520077203db506609fd98c66336e722682",
-      "contextAfterSHA256": "54d252263d587106c59ea600ce608a520077203db506609fd98c66336e722682",
+      "sourceContentAfterSHA256": "762fbbb2f0be9b3d63df4902c35fafab402a9dea9bb2d8ca004de879055f4edf",
+      "targetAfterSHA256": "4ad98262f4c9ce327881a34220d3c84fefef6e23e6b03f6bbddb05e80a6b75df",
+      "contextAfterSHA256": "4ad98262f4c9ce327881a34220d3c84fefef6e23e6b03f6bbddb05e80a6b75df",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -1254,7 +1278,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "762fbbb2f0be9b3d63df4902c35fafab402a9dea9bb2d8ca004de879055f4edf",
+        "sameImageNativeSHA256": "d4bca0ebf02cd415bfefda4a6df4b5f8746bc5deb7030a538cbba9d5e7f6ab60",
+        "sameImageExportSHA256": "aa8b305158c635fcebb6496d8bf5d725b8288db131d5d12c12bb602549b01949",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e06",
@@ -1304,10 +1336,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/kinshasa/sisalto.json",
-      "sourceContentSHA256": "345a41c7badcd99b22d14246f1ca55cdf7b60ca99635f4628424f8273c40fd81",
+      "sourceContentSHA256": "762fbbb2f0be9b3d63df4902c35fafab402a9dea9bb2d8ca004de879055f4edf",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "dd73b1c8e8a75f25c6f44778abbff6ab67705797f56a1a9cda7c9639d101c1e8",
-        "semanticContextSHA256": "dd73b1c8e8a75f25c6f44778abbff6ab67705797f56a1a9cda7c9639d101c1e8",
+        "targetBeforeSHA256": "8d171d0b8835c8f34b872b3fcf0aa529bf35573204cd0e2ab73781b7b2ce3fa2",
+        "semanticContextSHA256": "8d171d0b8835c8f34b872b3fcf0aa529bf35573204cd0e2ab73781b7b2ce3fa2",
         "subjectTitle": "Metsä on hoidettu suojapaikka",
         "targetState": "existing-target"
       },
@@ -1543,9 +1575,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "345a41c7badcd99b22d14246f1ca55cdf7b60ca99635f4628424f8273c40fd81",
-      "targetAfterSHA256": "dd73b1c8e8a75f25c6f44778abbff6ab67705797f56a1a9cda7c9639d101c1e8",
-      "contextAfterSHA256": "dd73b1c8e8a75f25c6f44778abbff6ab67705797f56a1a9cda7c9639d101c1e8",
+      "sourceContentAfterSHA256": "762fbbb2f0be9b3d63df4902c35fafab402a9dea9bb2d8ca004de879055f4edf",
+      "targetAfterSHA256": "8d171d0b8835c8f34b872b3fcf0aa529bf35573204cd0e2ab73781b7b2ce3fa2",
+      "contextAfterSHA256": "8d171d0b8835c8f34b872b3fcf0aa529bf35573204cd0e2ab73781b7b2ce3fa2",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -1568,7 +1600,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "762fbbb2f0be9b3d63df4902c35fafab402a9dea9bb2d8ca004de879055f4edf",
+        "sameImageNativeSHA256": "70761f8fe5061ddee79bcd78cb732e82c221a73b51a3a40815bbea2dd7ffc7a3",
+        "sameImageExportSHA256": "a3c3e7d0d1f868588490410076a865f19c06eb9f115a1955a50c02b85592d184",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e06",
@@ -1618,10 +1658,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/kinshasa/sisalto.json",
-      "sourceContentSHA256": "345a41c7badcd99b22d14246f1ca55cdf7b60ca99635f4628424f8273c40fd81",
+      "sourceContentSHA256": "762fbbb2f0be9b3d63df4902c35fafab402a9dea9bb2d8ca004de879055f4edf",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "b88669f3d19b34efbc6b53bb6b1e64424020abd23193a91b2ff4c7ff36793f7a",
-        "semanticContextSHA256": "b88669f3d19b34efbc6b53bb6b1e64424020abd23193a91b2ff4c7ff36793f7a",
+        "targetBeforeSHA256": "e485e85b112e8e7acc13c44e7d9840a89a40e519d18967c1b189515cff511efa",
+        "semanticContextSHA256": "e485e85b112e8e7acc13c44e7d9840a89a40e519d18967c1b189515cff511efa",
         "subjectTitle": "Suojelu tarvitsee myös kuulijoita",
         "targetState": "existing-target"
       },
@@ -1857,9 +1897,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "345a41c7badcd99b22d14246f1ca55cdf7b60ca99635f4628424f8273c40fd81",
-      "targetAfterSHA256": "b88669f3d19b34efbc6b53bb6b1e64424020abd23193a91b2ff4c7ff36793f7a",
-      "contextAfterSHA256": "b88669f3d19b34efbc6b53bb6b1e64424020abd23193a91b2ff4c7ff36793f7a",
+      "sourceContentAfterSHA256": "762fbbb2f0be9b3d63df4902c35fafab402a9dea9bb2d8ca004de879055f4edf",
+      "targetAfterSHA256": "e485e85b112e8e7acc13c44e7d9840a89a40e519d18967c1b189515cff511efa",
+      "contextAfterSHA256": "e485e85b112e8e7acc13c44e7d9840a89a40e519d18967c1b189515cff511efa",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -1882,7 +1922,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "762fbbb2f0be9b3d63df4902c35fafab402a9dea9bb2d8ca004de879055f4edf",
+        "sameImageNativeSHA256": "12d9cbe02f28e5c56aaf38f4b4260317724f7a4f225bba2cec588cf3a48f82c3",
+        "sameImageExportSHA256": "4a9f9ed066782407916c292dc9b1c3e259692636feac09381365a262626b483b",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e06",
@@ -1932,10 +1980,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/kinshasa/sisalto.json",
-      "sourceContentSHA256": "345a41c7badcd99b22d14246f1ca55cdf7b60ca99635f4628424f8273c40fd81",
+      "sourceContentSHA256": "762fbbb2f0be9b3d63df4902c35fafab402a9dea9bb2d8ca004de879055f4edf",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "bbf91c8f5b4f081969792caf7d486981f5b788935bbfd8bdc18ce035b9de181c",
+        "semanticContextSHA256": "59908fec526c3a5db90fc68f30acb43e118699485354ec3d6dfa6683957f2da6",
         "subjectTitle": "Kinshasan kasvitieteellinen puutarha",
         "targetState": "existing-target"
       },
@@ -2171,9 +2219,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "345a41c7badcd99b22d14246f1ca55cdf7b60ca99635f4628424f8273c40fd81",
+      "sourceContentAfterSHA256": "762fbbb2f0be9b3d63df4902c35fafab402a9dea9bb2d8ca004de879055f4edf",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "bbf91c8f5b4f081969792caf7d486981f5b788935bbfd8bdc18ce035b9de181c",
+      "contextAfterSHA256": "59908fec526c3a5db90fc68f30acb43e118699485354ec3d6dfa6683957f2da6",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -2196,7 +2244,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "762fbbb2f0be9b3d63df4902c35fafab402a9dea9bb2d8ca004de879055f4edf",
+        "sameImageNativeSHA256": "b5a8c01434270056b35273035de5e1872cd0651796f2bafa3f4cbf5e350095e6",
+        "sameImageExportSHA256": "4a0b041e0199d65dd780b71db70e000194c040f2334b0d96975ef8acd8725c2c",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e06",
@@ -2215,16 +2271,16 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e06/kinshasa/photo-d5ff66f962055c9aa088.jpg",
         "suora": true,
         "lahde": "David Tansey, Commons (CC BY 2.0)",
-        "selite": "Metsää ja vettä Kinshasan lähistöllä.",
-        "lyhyt": "Metsää.",
+        "selite": "Kinshasan lähistön metsää vuonna 2012.",
+        "lyhyt": "Metsää Kinshasan lähistöllä.",
         "tiedosto": "Forest near Kinshasa.jpg",
         "vuosi": "2012"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "David Tansey, Commons (CC BY 2.0)",
-        "selite": "Metsää ja vettä Kinshasan lähistöllä.",
-        "lyhyt": "Metsää.",
+        "selite": "Kinshasan lähistön metsää vuonna 2012.",
+        "lyhyt": "Metsää Kinshasan lähistöllä.",
         "tiedosto": "Forest near Kinshasa.jpg",
         "vuosi": "2012"
       },
@@ -2232,8 +2288,8 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e06/kinshasa/photo-d5ff66f962055c9aa088.jpg",
         "suora": true,
         "lahde": "David Tansey, Commons (CC BY 2.0)",
-        "selite": "Metsää ja vettä Kinshasan lähistöllä.",
-        "lyhyt": "Metsää.",
+        "selite": "Kinshasan lähistön metsää vuonna 2012.",
+        "lyhyt": "Metsää Kinshasan lähistöllä.",
         "tiedosto": "Forest near Kinshasa.jpg",
         "vuosi": "2012"
       },
@@ -2249,10 +2305,10 @@
         2848
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/kinshasa/sisalto.json",
-      "sourceContentSHA256": "345a41c7badcd99b22d14246f1ca55cdf7b60ca99635f4628424f8273c40fd81",
+      "sourceContentSHA256": "762fbbb2f0be9b3d63df4902c35fafab402a9dea9bb2d8ca004de879055f4edf",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "e6b5a37f262567f9203af722ed3679a3702f17abd25618d7232ed3e39cf5fb14",
-        "semanticContextSHA256": "e6b5a37f262567f9203af722ed3679a3702f17abd25618d7232ed3e39cf5fb14",
+        "targetBeforeSHA256": "946720b42eb585dc63a8c4ae31b4b79dd79fb60a61bfaff473b4827a69423648",
+        "semanticContextSHA256": "946720b42eb585dc63a8c4ae31b4b79dd79fb60a61bfaff473b4827a69423648",
         "subjectTitle": "kinshasa — aito paikkavalokuva",
         "targetState": "existing-target"
       },
@@ -2593,8 +2649,8 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "Forest near Kinshasa.jpg",
-        "lyhyt": "Metsää.",
-        "selite": "Metsää ja vettä Kinshasan lähistöllä.",
+        "lyhyt": "Metsää Kinshasan lähistöllä.",
+        "selite": "Kinshasan lähistön metsää vuonna 2012.",
         "lahde": "David Tansey, Commons (CC BY 2.0)",
         "vuosi": "2012"
       },
@@ -2622,15 +2678,15 @@
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "David Tansey, Commons (CC BY 2.0)",
-        "selite": "Metsää ja vettä Kinshasan lähistöllä.",
-        "lyhyt": "Metsää.",
+        "selite": "Kinshasan lähistön metsää vuonna 2012.",
+        "lyhyt": "Metsää Kinshasan lähistöllä.",
         "tiedosto": "Forest near Kinshasa.jpg",
         "vuosi": "2012"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "345a41c7badcd99b22d14246f1ca55cdf7b60ca99635f4628424f8273c40fd81",
-      "targetAfterSHA256": "e6b5a37f262567f9203af722ed3679a3702f17abd25618d7232ed3e39cf5fb14",
-      "contextAfterSHA256": "e6b5a37f262567f9203af722ed3679a3702f17abd25618d7232ed3e39cf5fb14",
+      "sourceContentAfterSHA256": "762fbbb2f0be9b3d63df4902c35fafab402a9dea9bb2d8ca004de879055f4edf",
+      "targetAfterSHA256": "946720b42eb585dc63a8c4ae31b4b79dd79fb60a61bfaff473b4827a69423648",
+      "contextAfterSHA256": "946720b42eb585dc63a8c4ae31b4b79dd79fb60a61bfaff473b4827a69423648",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -2653,7 +2709,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "762fbbb2f0be9b3d63df4902c35fafab402a9dea9bb2d8ca004de879055f4edf",
+        "sameImageNativeSHA256": "d5ff66f962055c9aa088c1834770f7e5c072ae6831e563f340793461323302b2",
+        "sameImageExportSHA256": "d5ff66f962055c9aa088c1834770f7e5c072ae6831e563f340793461323302b2",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": true
+      }
     },
     {
       "era": "e06",
@@ -2675,23 +2739,23 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e06/kinshasa/c1-72f70a3aed6ccfc6512c.jpg",
         "suora": true,
         "lahde": "NASA, Wikimedia Commons (PD)",
-        "selite": "Kinshasa sijaitsee Kongojoen etelärannalla Pool Malebon vieressä.",
-        "lyhyt": "Kinshasa.",
+        "selite": "Kinshasan näkymä NASA World Wind -ohjelmasta.",
+        "lyhyt": "Kinshasa satelliittikuvassa.",
         "tiedosto": "Kinshasa 15.32343E 4.32974S.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "NASA, Wikimedia Commons (PD)",
-        "selite": "Kinshasa sijaitsee Kongojoen etelärannalla Pool Malebon vieressä.",
-        "lyhyt": "Kinshasa.",
+        "selite": "Kinshasan näkymä NASA World Wind -ohjelmasta.",
+        "lyhyt": "Kinshasa satelliittikuvassa.",
         "tiedosto": "Kinshasa 15.32343E 4.32974S.jpg"
       },
       "runtimeMediaFieldPayload": {
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e06/kinshasa/c1-72f70a3aed6ccfc6512c.jpg",
         "suora": true,
         "lahde": "NASA, Wikimedia Commons (PD)",
-        "selite": "Kinshasa sijaitsee Kongojoen etelärannalla Pool Malebon vieressä.",
-        "lyhyt": "Kinshasa.",
+        "selite": "Kinshasan näkymä NASA World Wind -ohjelmasta.",
+        "lyhyt": "Kinshasa satelliittikuvassa.",
         "tiedosto": "Kinshasa 15.32343E 4.32974S.jpg"
       },
       "runtimeRemoveMediaKeys": [],
@@ -2706,10 +2770,10 @@
         958
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/kinshasa/sisalto.json",
-      "sourceContentSHA256": "345a41c7badcd99b22d14246f1ca55cdf7b60ca99635f4628424f8273c40fd81",
+      "sourceContentSHA256": "762fbbb2f0be9b3d63df4902c35fafab402a9dea9bb2d8ca004de879055f4edf",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "325e857f4f3cf3b622fbdc5acc7dc3409e5acf0b0841fe494432ec1a25e9a585",
-        "semanticContextSHA256": "325e857f4f3cf3b622fbdc5acc7dc3409e5acf0b0841fe494432ec1a25e9a585",
+        "targetBeforeSHA256": "3bafb3ee761f923db16782ea7037f24300664cc897dd65e164de0c11f8f1f832",
+        "semanticContextSHA256": "3bafb3ee761f923db16782ea7037f24300664cc897dd65e164de0c11f8f1f832",
         "subjectTitle": "Kinshasa",
         "targetState": "existing-target"
       },
@@ -2920,8 +2984,8 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "Kinshasa 15.32343E 4.32974S.jpg",
-        "lyhyt": "Kinshasa.",
-        "selite": "Kinshasa sijaitsee Kongojoen etelärannalla Pool Malebon vieressä.",
+        "lyhyt": "Kinshasa satelliittikuvassa.",
+        "selite": "Kinshasan näkymä NASA World Wind -ohjelmasta.",
         "lahde": "NASA, Wikimedia Commons (PD)"
       },
       "preservePreviousMediaObjects": true,
@@ -2948,14 +3012,14 @@
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "NASA, Wikimedia Commons (PD)",
-        "selite": "Kinshasa sijaitsee Kongojoen etelärannalla Pool Malebon vieressä.",
-        "lyhyt": "Kinshasa.",
+        "selite": "Kinshasan näkymä NASA World Wind -ohjelmasta.",
+        "lyhyt": "Kinshasa satelliittikuvassa.",
         "tiedosto": "Kinshasa 15.32343E 4.32974S.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "345a41c7badcd99b22d14246f1ca55cdf7b60ca99635f4628424f8273c40fd81",
-      "targetAfterSHA256": "325e857f4f3cf3b622fbdc5acc7dc3409e5acf0b0841fe494432ec1a25e9a585",
-      "contextAfterSHA256": "325e857f4f3cf3b622fbdc5acc7dc3409e5acf0b0841fe494432ec1a25e9a585",
+      "sourceContentAfterSHA256": "762fbbb2f0be9b3d63df4902c35fafab402a9dea9bb2d8ca004de879055f4edf",
+      "targetAfterSHA256": "3bafb3ee761f923db16782ea7037f24300664cc897dd65e164de0c11f8f1f832",
+      "contextAfterSHA256": "3bafb3ee761f923db16782ea7037f24300664cc897dd65e164de0c11f8f1f832",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -2978,7 +3042,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "762fbbb2f0be9b3d63df4902c35fafab402a9dea9bb2d8ca004de879055f4edf",
+        "sameImageNativeSHA256": "72f70a3aed6ccfc6512c7f793d455cf2ebd11ce59ef524801ec48213c1ca8a5e",
+        "sameImageExportSHA256": "72f70a3aed6ccfc6512c7f793d455cf2ebd11ce59ef524801ec48213c1ca8a5e",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": true
+      }
     },
     {
       "era": "e06",
@@ -3000,23 +3072,23 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e06/kinshasa/k2-03b52939e928b3d45de4.jpg",
         "suora": true,
         "lahde": "Max.kit, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Puustoa ja polku Kinshasassa.",
-        "lyhyt": "Puustoa.",
+        "selite": "Kinshasassa kasvava mangopuu.",
+        "lyhyt": "Mangopuu Kinshasassa.",
         "tiedosto": "Manguier kinshasa.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Max.kit, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Puustoa ja polku Kinshasassa.",
-        "lyhyt": "Puustoa.",
+        "selite": "Kinshasassa kasvava mangopuu.",
+        "lyhyt": "Mangopuu Kinshasassa.",
         "tiedosto": "Manguier kinshasa.jpg"
       },
       "runtimeMediaFieldPayload": {
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e06/kinshasa/k2-03b52939e928b3d45de4.jpg",
         "suora": true,
         "lahde": "Max.kit, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Puustoa ja polku Kinshasassa.",
-        "lyhyt": "Puustoa.",
+        "selite": "Kinshasassa kasvava mangopuu.",
+        "lyhyt": "Mangopuu Kinshasassa.",
         "tiedosto": "Manguier kinshasa.jpg"
       },
       "runtimeRemoveMediaKeys": [],
@@ -3031,10 +3103,10 @@
         1600
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/kinshasa/sisalto.json",
-      "sourceContentSHA256": "345a41c7badcd99b22d14246f1ca55cdf7b60ca99635f4628424f8273c40fd81",
+      "sourceContentSHA256": "762fbbb2f0be9b3d63df4902c35fafab402a9dea9bb2d8ca004de879055f4edf",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "efda00f29958f721e174d2ba17ed4aa9544f435ad4355c74ad5f0f16284844e8",
-        "semanticContextSHA256": "efda00f29958f721e174d2ba17ed4aa9544f435ad4355c74ad5f0f16284844e8",
+        "targetBeforeSHA256": "3ac7b978c17d40320210ce3738567b69a5e23797f21fe49238e39f1501049000",
+        "semanticContextSHA256": "3ac7b978c17d40320210ce3738567b69a5e23797f21fe49238e39f1501049000",
         "subjectTitle": "Kaupunki jatkuu maakuntana",
         "targetState": "existing-target"
       },
@@ -3237,8 +3309,8 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "Manguier kinshasa.jpg",
-        "lyhyt": "Puustoa.",
-        "selite": "Puustoa ja polku Kinshasassa.",
+        "lyhyt": "Mangopuu Kinshasassa.",
+        "selite": "Kinshasassa kasvava mangopuu.",
         "lahde": "Max.kit, Wikimedia Commons (CC BY-SA 4.0)"
       },
       "preservePreviousMediaObjects": true,
@@ -3265,14 +3337,14 @@
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Max.kit, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Puustoa ja polku Kinshasassa.",
-        "lyhyt": "Puustoa.",
+        "selite": "Kinshasassa kasvava mangopuu.",
+        "lyhyt": "Mangopuu Kinshasassa.",
         "tiedosto": "Manguier kinshasa.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "345a41c7badcd99b22d14246f1ca55cdf7b60ca99635f4628424f8273c40fd81",
-      "targetAfterSHA256": "efda00f29958f721e174d2ba17ed4aa9544f435ad4355c74ad5f0f16284844e8",
-      "contextAfterSHA256": "efda00f29958f721e174d2ba17ed4aa9544f435ad4355c74ad5f0f16284844e8",
+      "sourceContentAfterSHA256": "762fbbb2f0be9b3d63df4902c35fafab402a9dea9bb2d8ca004de879055f4edf",
+      "targetAfterSHA256": "3ac7b978c17d40320210ce3738567b69a5e23797f21fe49238e39f1501049000",
+      "contextAfterSHA256": "3ac7b978c17d40320210ce3738567b69a5e23797f21fe49238e39f1501049000",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -3295,7 +3367,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "762fbbb2f0be9b3d63df4902c35fafab402a9dea9bb2d8ca004de879055f4edf",
+        "sameImageNativeSHA256": "03b52939e928b3d45de44d3672ff7b865af4b978e45f27d927c77ada01ca6898",
+        "sameImageExportSHA256": "03b52939e928b3d45de44d3672ff7b865af4b978e45f27d927c77ada01ca6898",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": true
+      }
     }
   ],
   "runtimeIntegrationPending": true,
@@ -3307,6 +3387,9 @@
   "task118TextRevision": true,
   "independentTextResamplePending": true,
   "textAcceptanceVerified": false,
-  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task118/immutable-media-history/e06/kinshasa/5b4db74b59756e0404080d690f30b6bd97e8b69295b08c47894069003218e819.json",
-  "task118ReboundAt": "2026-10-13T16:31:24.947510+00:00"
+  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task228/immutable-media-history/e06/kinshasa/0c2c2d697c334cd684d6c71932e703405f51f662b1f318e48e69c7a7bc5f7570.json",
+  "task118ReboundAt": "2026-10-13T16:31:24.947510+00:00",
+  "task228ExcludedAssets": [],
+  "task228TextRevision": true,
+  "task228ReboundAt": "2026-10-13T18:31:09.932729+00:00"
 }

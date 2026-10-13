@@ -14,8 +14,8 @@
     }
   },
   "artikkeli": {
-    "intro": "Kigali on Ruandan pääkaupunki **kukkuloiden ja laaksojen maastossa**. Vanha keskusta sijaitsee Nyarugengen kukkulalla, mutta nykyinen kaupunki levittäytyy monille harjanteille ja niiden välisiin laaksoihin. Hallinnollisesti Kigali on provinssitason kaupunkialue, johon kuuluvat Gasabo, Kicukiro ja Nyarugenge. Keskustan kävelykierros kattaa siis vain pienen osan kaupungin kokonaisuudesta.\n\nNykyinen hallintokaupunki syntyi 1900-luvun alussa, isoisän matkavuoden 1873 jälkeen. Seudun aikaisempi historia kuului Ruandan kuningaskunnan elämään; uuden aseman perustaminen ei tarkoittanut asutuksen alkua tyhjästä. Richard Kandtin entinen asuintalo toimii nykyisin museona, jonka painotus on muuttunut luonnonhistoriasta kaupungin historiaan. Laaksoissa **kosteikkojen kunnostus** tuo esiin toisen paikallisen aikakerroksen: Nyandungussa palautetaan metsää ja Umusambissa tehdään lintusuojelutyötä.",
-    "teksti": "Nyarugengen kukkulalla sijaitseva alkuperäinen hallintoaseman alue on yksi Kigalin kaupunkihistorian kerroksista. Sen lounaispuolella Nyamirambo kehittyi varhaiseksi kaupunginosaksi, jossa asui virkamiehiä ja swahilinkielisiä kauppiaita. Kaupunginosaan liittyy myös islamilainen yhteisöhistoria.\n\nKaupungin vesiverkko jatkuu kukkuloiden välistä kauas. Muhazijärveltä alkava Nyabugogo laskee Nyabarongoon, ja nämä vedet kuuluvat Niilin valuma-alueeseen. Kosteikot ovat osa samaa laaksojen ympäristöä, vaikka bussiasema ja jokisuu voivat kantaa samaa paikannimeä eri paikkoina.\n\nNyandungu ja Umusambi näyttävät kosteikkojen kunnostusta eri tavoin. Nyandungussa palautetaan paikallista viikunametsää ja vesiuomia; Umusambin suojapaikka tarjoaa ympäristön harmaakruunukurjille, jotka eivät voi palata luontoon. Molempiin kuuluu myös luonto-opetusta."
+    "intro": "Kigali on Ruandan pääkaupunki **kukkuloiden ja laaksojen maastossa**. Vanha keskusta sijaitsee Nyarugengen kukkulalla, mutta nykyinen kaupunki levittäytyy monille harjanteille ja niiden välisiin laaksoihin. Hallinnollisesti Kigali on provinssitason kaupunkialue, johon kuuluvat Gasabo, Kicukiro ja Nyarugenge.\n\nNykyinen hallintokaupunki syntyi 1900-luvun alussa, isoisän matkavuoden 1873 jälkeen. Richard Kandtin entinen asuintalo toimii nykyisin museona, jonka painotus on muuttunut luonnonhistoriasta kaupungin historiaan. Laaksoissa **kosteikkojen kunnostus** tuo esiin toisen paikallisen aikakerroksen: Nyandungussa palautetaan metsää ja Umusambissa tehdään lintusuojelutyötä.",
+    "teksti": "Nyarugengen kukkulalla sijaitseva alkuperäinen hallintoaseman alue on yksi Kigalin kaupunkihistorian kerroksista. Sen lounaispuolella Nyamirambo kehittyi varhaiseksi kaupunginosaksi, jossa asui virkamiehiä ja swahilinkielisiä kauppiaita. Kaupunginosaan liittyy myös islamilainen yhteisöhistoria.\n\nKaupungin vesiverkko jatkuu kukkuloiden välistä kauas. Muhazijärveltä alkava Nyabugogo laskee Nyabarongoon, ja nämä vedet kuuluvat Niilin valuma-alueeseen.\n\nNyandungu ja Umusambi näyttävät kosteikkojen kunnostusta eri tavoin. Nyandungussa palautetaan paikallista viikunametsää ja vesiuomia; Umusambin suojapaikka tarjoaa ympäristön kurjille, jotka eivät voi palata luontoon. Molempiin kuuluu myös luonto-opetusta."
   },
   "kysymykset": [
     {
@@ -70,7 +70,7 @@
       ],
       "correct": 0,
       "level": 2,
-      "hint": "Nimi liittyy kaupungin varhaiseen hallintoaseman historiaan.",
+      "hint": "Talo sijaitsee Nyarugengen vanhalla kukkulakeskustalla.",
       "fact": "Rakennus oli Richard Kandtin asuintalo.",
       "source": "https://en.wikipedia.org/wiki/Kandt_House_Museum"
     },
@@ -78,9 +78,9 @@
       "q": "Millainen hallintoyksikkö nykyinen Kigali on?",
       "options": [
         "Provinssitason kaupunkialue",
-        "Yhden piirin kunta",
-        "Erillinen pääkaupunkiterritorio",
-        "Usean provinssin metropolialue"
+        "Provinssin alainen hallintopiiri",
+        "Usean provinssin yhteinen hallintokeskus",
+        "Hallinnollisesti kahteen provinssiin jaettu kaupunki"
       ],
       "correct": 0,
       "level": 3,
@@ -129,7 +129,7 @@
       "nostot": [
         {
           "otsikko": "Keskusta on yksi kukkula monista",
-          "teksti": "Kigalin vanha keskusta sijaitsee Nyarugengen kukkulalla, alkuperäisen hallintoaseman ympäristössä. Nykyinen kaupunki on levittäytynyt muillekin kukkuloille, ja sen maisemaa rytmittävät harjanteet, laaksot ja jyrkät rinteet. Kigali-kukkula sijaitsee keskustan länsipuolella, eikä se ole sama asia kuin keskustan Nyarugenge. Hallinnollinen kaupunkiprovinssi sisältää useita alueita. Yksi korkealta nähty keskusta ei siis kerro koko kaupungin mittakaavaa: Kigali jatkuu maaston mukana seuraaville rinteille.",
+          "teksti": "Kigalin vanha keskusta sijaitsee Nyarugengen kukkulalla, alkuperäisen hallintoaseman ympäristössä. Nykyinen kaupunki on levittäytynyt muillekin kukkuloille, ja sen maisemaa rytmittävät harjanteet, laaksot ja jyrkät rinteet. Kigali-kukkula sijaitsee keskustan länsipuolella, eikä se ole sama asia kuin keskustan Nyarugenge. Hallinnollinen kaupunkiprovinssi sisältää useita alueita.",
           "tiedosto": "",
           "lyhyt": "",
           "selite": "",
@@ -156,7 +156,7 @@
         },
         {
           "otsikko": "Laakson vesi jatkaa Niilin suuntaan",
-          "teksti": "Nyabugogo saa alkunsa Muhazijärveltä, kulkee Kigalin alueella ja laskee Nyabarongoon. Nyabarongo liittyy kaupungin hallintoalueen läntiseen ja eteläiseen reunaan. Kaupungin suunnalta tulevat sivu-uomat ja kosteikot ovat osa tätä vesiverkkoa, joka kuuluu Niilin valuma-alueeseen. Kukkulakaupungin laaksot eivät siis ole erillisiä painanteita. Niissä kulkeva vesi yhdistää paikallisen maaston paljon laajempaan jokijärjestelmään, vaikka kaupungin kadulta katsottuna näkyisi vain pieni uoma.",
+          "teksti": "Nyabugogo saa alkunsa Muhazijärveltä, kulkee Kigalin alueella ja laskee Nyabarongoon. Nyabarongo liittyy kaupungin hallintoalueen läntiseen ja eteläiseen reunaan. Kaupungin suunnalta tulevat sivu-uomat ja kosteikot ovat osa tätä vesiverkkoa, joka kuuluu Niilin valuma-alueeseen. Niissä kulkeva vesi yhdistää paikallisen maaston paljon laajempaan jokijärjestelmään, vaikka kaupungin kadulta katsottuna näkyisi vain pieni uoma.",
           "tiedosto": "",
           "lyhyt": "",
           "selite": "",
@@ -171,7 +171,7 @@
           "selite": "Violetteja kukkia Kigalissa huhtikuussa 2025.",
           "lahde": "IGANZE, Wikimedia Commons (CC0)"
         },
-        "kappale": "Kigalin kierros kannattaa hahmottaa kukkuloiden ja laaksojen kautta. Nyarugengen historiallinen keskusta ja Kandt-talon paikka ovat yksi kokonaisuus. Nyandungu ja Umusambi ovat erillisiä kosteikkokohteita, joiden käyntijärjestelyt varmistetaan paikkojen kanssa. Kukkulalle suunniteltavan reitin pääsy selvitetään etukäteen. Lentokenttä ja koko kaupunkiprovinssi ovat eri laajuuksia kuin keskustan kävelyalue.",
+        "kappale": "Kigalin kierros kannattaa hahmottaa kukkuloiden ja laaksojen kautta. Nyarugengen historiallinen keskusta ja Kandt-talon paikka ovat yksi kokonaisuus. Lentokenttä ja koko kaupunkiprovinssi ovat eri laajuuksia kuin keskustan kävelyalue.",
         "artikkeli": {
           "nimi": "Matkailijan Kigali",
           "taitto": "opas",
@@ -190,7 +190,7 @@
             },
             {
               "otsikko": "Nyarugengen vanha keskus",
-              "teksti": "Vanha keskusta liittyy Nyarugengen kukkulan hallintoaseman historiaan. Kandt-talo on säilynyt paikkahistorian kohde, jossa museon painotus on muuttunut luonnonhistoriasta historiaan. Näyttelyn nykyinen toiminta varmistetaan ennen käyntiä.",
+              "teksti": "Vanha keskusta liittyy Nyarugengen kukkulan hallintoaseman historiaan. Kandt-talo on säilynyt paikkahistorian kohde, jossa museon painotus on muuttunut luonnonhistoriasta historiaan.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -200,7 +200,7 @@
             },
             {
               "otsikko": "Kosteikot ja kukkulat",
-              "teksti": "Nyandungu kertoo vesilaakson ja metsän palauttamisesta, Umusambi harmaakruunukurjista ja kosteikon kunnostuksesta. Käyntijärjestelyt sovitaan kohteiden kanssa. Kigali- ja Jali-kukkuloiden maastokuvaukset eivät yksin vahvista merkittyä reittiä tai vapaata pääsyä.",
+              "teksti": "Nyandungu kertoo vesilaakson ja metsän palauttamisesta, Umusambi kurjista ja kosteikon kunnostuksesta.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -220,7 +220,7 @@
             },
             {
               "otsikko": "Nyamirambon yhteisötoiminta",
-              "teksti": "Nyamirambon monikulttuurinen historia liittyy muun muassa swahilinkielisiin kauppiaisiin ja islamilaiseen yhteisöön. Paikallisen naisten keskuksen kävely- ja opetustoiminta avaa kaupunginosaa asukkaiden työn kautta. Toiminnan tämänhetkiset järjestelyt sovitaan keskuksen kanssa.",
+              "teksti": "Nyamirambon monikulttuurinen historia liittyy muun muassa swahilinkielisiin kauppiaisiin ja islamilaiseen yhteisöön. Paikallisen naisten keskuksen kävely- ja opetustoiminta avaa kaupunginosaa asukkaiden työn kautta.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -265,14 +265,6 @@
               {
                 "otsikko": "Kaupungin laajuus",
                 "teksti": "Kigalin kaupunkiprovinssi sisältää Gasabon, Kicukiron ja Nyarugengen."
-              },
-              {
-                "otsikko": "Reitti varmistetaan",
-                "teksti": "Kukkuloiden luvalliset kulkureitit ja pääsy selvitetään paikallisesti."
-              },
-              {
-                "otsikko": "Käynti sovitaan paikan kanssa",
-                "teksti": "Kosteikkokohteen nykyiset järjestelyt selvitetään ennen retkeä."
               }
             ]
           },
@@ -285,15 +277,15 @@
       "nimi": "Kosteikko takaisin kaupunkiin",
       "johdanto": "Nyandungu ja Umusambi kertovat eri tavoilla siitä, miten kaupungin kosteikkoja palautetaan luonnon ja oppimisen paikoiksi.",
       "tehtava": {
-        "kysymys": "Mille linnulle Umusambin suojapaikka tarjoaa pysyvän ympäristön?",
+        "kysymys": "Miksi osa Umusambin suojapaikan linnuista jää pysyvästi sinne?",
         "vaihtoehdot": [
-          "Harmaakruunukurjelle",
-          "Afrikanmerikotkalle",
-          "Valkopelikaanille",
-          "Strutsille"
+          "Ne eivät vammojensa vuoksi voi palata luontoon",
+          "Niitä koulutetaan lintunäytöksiä varten",
+          "Ne odottavat vientiä eläintarhoihin",
+          "Ne on kasvatettu vain lisääntymisohjelmaan"
         ],
         "oikea": 0,
-        "fakta": "Paikan nimi on sen suojelemasta kurkilajista käytetty kinyarwandankielinen sana."
+        "fakta": "Vankeusoloista pelastetuille, vammoja saaneille linnuille tarjotaan pysyvä luonnonläheinen ympäristö."
       },
       "nostot": [
         {
@@ -307,7 +299,7 @@
         },
         {
           "otsikko": "Purossa ja ruovikossa on tehtävä",
-          "teksti": "Nyandungun kokonaisuuteen kuuluu puroja, altaita, ruovikkoa ja metsää. Palautetut vesiuomat ja altaat liittyvät tulvien hallintaan, ja ruovikkojen tehtäväksi kuvataan pilaantumisen vähentämistä. Luonnonympäristön rinnalla on luonto-opetusta palveleva infokeskus. Kaupunkikosteikkoa ei siis voi ymmärtää vain tyhjänä tilana rakennettujen alueiden välissä. Sen vesi ja kasvillisuus muodostavat oman kokonaisuutensa, jonka toimintaa kunnostustyössä pyritään palauttamaan.",
+          "teksti": "Nyandungun kokonaisuuteen kuuluu puroja, altaita, ruovikkoa ja metsää. Palautetut vesiuomat ja altaat liittyvät tulvien hallintaan, ja ruovikkojen tehtäväksi kuvataan pilaantumisen vähentämistä. Luonnonympäristön rinnalla on luonto-opetusta palveleva infokeskus. Sen vesi ja kasvillisuus muodostavat oman kokonaisuutensa, jonka toimintaa kunnostustyössä pyritään palauttamaan.",
           "tiedosto": "",
           "lyhyt": "",
           "selite": "",
@@ -316,7 +308,7 @@
         },
         {
           "otsikko": "Umusambi on myös linnun nimi",
-          "teksti": "Umusambi on harmaakruunukurjen kinyarwandankielinen nimi. Samanniminen Kigalin suojapaikka toimii kunnostetussa kosteikossa ja liittyy Ruandan luonnonsuojeluyhdistyksen työhön. Sinne tuodut linnut on pelastettu vankeusoloista, ja osa ei vammojensa vuoksi voi palata luontoon. Paikan tehtävä on tarjota niille pysyvä, luonnonläheinen ympäristö. Suojapaikkaa ei siksi pidä ajatella vain läpikulkuna takaisin vapauteen: joillekin linnuille se on jatkuva elinpaikka ja samalla lintusuojelun opetuskohde.",
+          "teksti": "Umusambi on kurjen kinyarwandankielinen nimi. Samanniminen Kigalin suojapaikka toimii kunnostetussa kosteikossa ja liittyy Ruandan luonnonsuojeluyhdistyksen työhön. Sinne tuodut linnut on pelastettu vankeusoloista, ja osa ei vammojensa vuoksi voi palata luontoon. Paikan tehtävä on tarjota niille pysyvä, luonnonläheinen ympäristö. Suojapaikkaa ei siksi pidä ajatella vain läpikulkuna takaisin vapauteen: joillekin linnuille se on jatkuva elinpaikka ja samalla lintusuojelun opetuskohde.",
           "tiedosto": "",
           "lyhyt": "",
           "selite": "",
@@ -325,7 +317,7 @@
         },
         {
           "otsikko": "Kosteikosta opitaan kävellessä",
-          "teksti": "Umusambin ympäristöä on kunnostettu poistamalla vieraslajeja ja palauttamalla paikallisia kasveja sekä puulajeja. Kasvitieteilijä valvoi työtä. Paikalla kuvataan sekä opastettuja että omatoimisia käyntejä, luontopolkuja ja perheiden sekä koulujen oppimistoimintaa. Lintujen lisäksi huomio kohdistuu siis niiden ympäristöön. Polulla kulkeva ihminen voi tutustua kosteikon merkitykseen ja kasveihin, joiden palauttaminen on ollut osa samaa suojelutyötä kuin eläimistä huolehtiminen.",
+          "teksti": "Umusambin ympäristöä on kunnostettu poistamalla vieraslajeja ja palauttamalla paikallisia kasveja sekä puulajeja. Kasvitieteilijä valvoi työtä. Paikalla kuvataan sekä opastettuja että omatoimisia käyntejä, luontopolkuja ja perheiden sekä koulujen oppimistoimintaa. Polulla kulkeva ihminen voi tutustua kosteikon merkitykseen ja kasveihin, joiden palauttaminen on ollut osa samaa suojelutyötä kuin eläimistä huolehtiminen.",
           "tiedosto": "",
           "lyhyt": "",
           "selite": "",
@@ -374,7 +366,7 @@
   "nahtavyydet": {
     "Kigali-kukkula": {
       "aika": "Luonnonmaasto",
-      "teksti": "Kigali-kukkula sijaitsee Nyarugengen alueella keskustan länsipuolella. Sen rinteillä on kaupunkialueita, ja länsirinne suuntautuu Nyabarongon laaksoon. Pohjoisessa on Jali-kukkula, joka on eri luonnonmuoto. Kukkula kuuluu harjanteiden ja laaksojen kokonaisuuteen, jonka mukana Kigali levittäytyy ympäristöönsä.\n\nKaupungin nimi liittyy Kigali-kukkulaan. Isoisän matkavuonna 1873 maasto oli olemassa, mutta nykyisen hallintokaupungin alku tuli myöhemmin.",
+      "teksti": "Kigali-kukkula sijaitsee Nyarugengen alueella keskustan länsipuolella. Sen rinteillä on kaupunkialueita, ja länsirinne suuntautuu Nyabarongon laaksoon. Pohjoisessa on Jali-kukkula, joka on eri luonnonmuoto. Kukkula kuuluu harjanteiden ja laaksojen kokonaisuuteen, jonka mukana Kigali levittäytyy ympäristöönsä.\n\nKaupungin nimi liittyy Kigali-kukkulaan. Vuonna 1873 maasto oli olemassa, mutta nykyisen hallintokaupungin alku tuli myöhemmin.",
       "kuvat": [
         {
           "tiedosto": "",
@@ -387,7 +379,7 @@
     },
     "Jali-kukkula": {
       "aika": "Luonnonmaasto",
-      "teksti": "Jali on Kigalin pohjoispuolinen kukkula Gasabon alueella. Nimestä käytetään myös muotoa Jari. Se kuuluu kaupungin harjanteiden ja laaksojen maastoon ja on eri paikka kuin keskustan länsipuolinen Kigali-kukkula. Kaupungista nähtävä maastonmuoto auttaa hahmottamaan Kigalin laajaa ympäristöä.\n\nKukkulalla on myös nykyistä radio- ja energiainfrastruktuuria. Vuonna 1873 nykyisiä radio- ja energiatoiminnan rakenteita ei vielä ollut kukkulalla. Kukkulan tunnistaminen kartalta ei myöskään vahvista kulkureittiä tai pääsyä sen kaikkiin osiin.",
+      "teksti": "Jali on Kigalin pohjoispuolinen kukkula Gasabon alueella. Nimestä käytetään myös muotoa Jari. Se kuuluu kaupungin harjanteiden ja laaksojen maastoon ja on eri paikka kuin keskustan länsipuolinen Kigali-kukkula.\n\nKukkulalla on myös nykyistä radio- ja energiainfrastruktuuria. Vuonna 1873 nykyisiä radio- ja energiatoiminnan rakenteita ei vielä ollut kukkulalla. Kukkulalla sijaitsee myös Kigali Solaire -aurinkovoimala.",
       "kuvat": [
         {
           "tiedosto": "",
@@ -400,7 +392,7 @@
     },
     "Nyabugogon jokisuu": {
       "aika": "Luonnonmuodostuma",
-      "teksti": "Nyabugogo saa alkunsa Muhazijärveltä ja kulkee Kigalin alueella ennen liittymistään Nyabarongoon. Jokisuu on tämän sivujoen ja suuremman joen kohtaamispaikka. Kaupungin sivu-uomat ja laaksojen kosteikot liittyvät samaan vesiverkkoon, joka kuuluu Niilin valuma-alueeseen. Paikallinen joki jatkaa siis osana paljon laajempaa kokonaisuutta.\n\nNyabugogo-nimi esiintyy myös liikenteen paikkana, mutta samanniminen bussiasema ei ole jokisuu. Luonnonmuoto oli osa alueen maantiedettä jo isoisän matkavuonna 1873; nykyistä liikenneasemaa tai siltoja ei siirretä tuon ajan maisemaan.",
+      "teksti": "Nyabugogo saa alkunsa Muhazijärveltä ja kulkee Kigalin alueella ennen liittymistään Nyabarongoon. Jokisuu on tämän sivujoen ja suuremman joen kohtaamispaikka. Kaupungin sivu-uomat ja laaksojen kosteikot liittyvät samaan vesiverkkoon, joka kuuluu Niilin valuma-alueeseen.\n\nNyabugogon sivujokiin kuuluvat muun muassa Kujevuba, Muyanza ja Yanze. Muhazijärvestä lähtevä joki virtaa länteen ja muodostaa osan Kigalin ja Pohjoisen provinssin rajasta.",
       "kuvat": [
         {
           "tiedosto": "",
@@ -413,7 +405,7 @@
     },
     "Nyandungun kosteikko": {
       "aika": "Vanha kosteikko; nykyinen kunnostus 2000-luvulla",
-      "teksti": "Nyandungu on kosteikkolaakso Gasabon ja Kicukiron välissä. Aiemmin heikentynyttä ympäristöä on kunnostettu palauttamalla paikallista kasvillisuutta, viikunametsää ja vesiuomia. Alueelle on istutettu paikallisia puita, ja kokonaisuuteen kuuluu puroja, altaita ja ruovikkoja. Näiden rinnalla paikka palvelee luontokasvatusta.\n\nNykyinen kunnostus ja puistokäyttö kuuluvat 2000-luvulle. Isoisän matkavuonna 1873 tätä ohjelmaa ja sen rakenteita ei ollut, eikä nykyistä palautettua ympäristöä voi kuvata tuon ajan tarkaksi kasvillisuudeksi. Kohteena on kosteikon ja metsän luonnonympäristö. Infokeskus ja luontopolut tukevat kosteikon käyttöä opetuspaikkana.",
+      "teksti": "Nyandungu on kosteikkolaakso Gasabon ja Kicukiron välissä. Aiemmin heikentynyttä ympäristöä on kunnostettu palauttamalla paikallista kasvillisuutta, viikunametsää ja vesiuomia. Alueelle on istutettu paikallisia puita, ja kokonaisuuteen kuuluu puroja, altaita ja ruovikkoja. Näiden rinnalla paikka palvelee luontokasvatusta.\n\nNykyinen kunnostus ja puistokäyttö kuuluvat 2000-luvulle. Kohteena on kosteikon ja metsän luonnonympäristö. Infokeskus ja luontopolut tukevat kosteikon käyttöä opetuspaikkana.",
       "kuvat": [
         {
           "tiedosto": "",
@@ -428,12 +420,6 @@
   "saatiedot": null,
   "ehdotukset": {
     "lentoasema": "Kigali International Airport (KGL)",
-    "huomiot": [
-      "8 nostoa, 5 opasjaksoa, 5 kysymystä ja 3 tietoa. Sääjakson sijalla lähteistetty Nyamirambon yhteisötoiminta.",
-      "Kartta partial 4 luonnonpaikkaa kaupungin ympäristössä, ei valmis historiallinen kävelykartta. Pääsession rajauspäätös avoin. Umusambi ulompi retkikohde oppaassa; Kandt-talo pois kartasta alkuperäisen rakennuksen oikeusnäytön avoimuuden vuoksi.",
-      "Kaikki kuvakentät tyhjiä. Luontopaikkaa ei käytetä nykyisen puistoarkkitehtuurin, voimalan tai suojatun rakennuksen kuvan kiertotienä.",
-      "Sää null: 48/48 primäärivarmennus puuttuu. Korkeus-, lajimäärä-, pinta-ala- ja väestötarkkuudet jätetty pois.",
-      "Luontojuttujen karttapiste-/tarkistusmetateksti poistettu pelaajatekstistä; osa jutuista on alle 700 merkin tavoitteen, mutta yli alkuperäisen tarkistimen 400 merkin rajan. Ei uutta lähteetöntä täytettä."
-    ]
+    "huomiot": []
   }
 }

@@ -3,7 +3,7 @@
   "era": "e06",
   "city": "kigali",
   "authorization": "hyväksyn kaikki tekemäsi kuvat. toimita ne claudelle. claudelta saat uusia ohjeita jatkoa varten",
-  "sourceContentAfterSHA256": "6a5badd6cc010d8799900a5ec970fe8457ec80e8161980d09415c81f0e53772d",
+  "sourceContentAfterSHA256": "2e1eb84e241088d3bc3c4bfad4dea22700a9aaee37950c185bb8dcfe00db4182",
   "assets": [
     {
       "era": "e06",
@@ -56,10 +56,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/kigali/sisalto.json",
-      "sourceContentSHA256": "6a5badd6cc010d8799900a5ec970fe8457ec80e8161980d09415c81f0e53772d",
+      "sourceContentSHA256": "2e1eb84e241088d3bc3c4bfad4dea22700a9aaee37950c185bb8dcfe00db4182",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "f65332c820a361dfa10703640bbde24bd863940acc6fbcb9adb04f4a2933bb38",
+        "semanticContextSHA256": "74d68e923f68cd888b0e0ede5a77ddf0a7c79b29b75c2df595838f1e72b3e5a7",
         "subjectTitle": "Kosteikot ja kukkulat",
         "targetState": "existing-target"
       },
@@ -245,9 +245,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "6a5badd6cc010d8799900a5ec970fe8457ec80e8161980d09415c81f0e53772d",
+      "sourceContentAfterSHA256": "2e1eb84e241088d3bc3c4bfad4dea22700a9aaee37950c185bb8dcfe00db4182",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "f65332c820a361dfa10703640bbde24bd863940acc6fbcb9adb04f4a2933bb38",
+      "contextAfterSHA256": "74d68e923f68cd888b0e0ede5a77ddf0a7c79b29b75c2df595838f1e72b3e5a7",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -270,7 +270,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "2e1eb84e241088d3bc3c4bfad4dea22700a9aaee37950c185bb8dcfe00db4182",
+        "sameImageNativeSHA256": "c936be9d2322206af242226b0c2779f699478a3f1385cde728dadbaa5ab155af",
+        "sameImageExportSHA256": "82fa9f3cd709a27bfdf7867c39f4e8651c6f787881ddfa9e6c86cd6a47d4eb0d",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e06",
@@ -323,7 +331,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/kigali/sisalto.json",
-      "sourceContentSHA256": "6a5badd6cc010d8799900a5ec970fe8457ec80e8161980d09415c81f0e53772d",
+      "sourceContentSHA256": "2e1eb84e241088d3bc3c4bfad4dea22700a9aaee37950c185bb8dcfe00db4182",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
         "semanticContextSHA256": "82fbea572037099831afc24e9f14f92d0dee35487aec53178d0c11436be6e9c2",
@@ -512,7 +520,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "6a5badd6cc010d8799900a5ec970fe8457ec80e8161980d09415c81f0e53772d",
+      "sourceContentAfterSHA256": "2e1eb84e241088d3bc3c4bfad4dea22700a9aaee37950c185bb8dcfe00db4182",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
       "contextAfterSHA256": "82fbea572037099831afc24e9f14f92d0dee35487aec53178d0c11436be6e9c2",
       "ownerApproved": true,
@@ -537,7 +545,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "2e1eb84e241088d3bc3c4bfad4dea22700a9aaee37950c185bb8dcfe00db4182",
+        "sameImageNativeSHA256": "d89c8b0d4a2c47895a2440d3458c7f42abd7f61f227bd20455a44d4ae6e046dd",
+        "sameImageExportSHA256": "85476c50ae7c304506d394954a18c27ddf13c9b94fb9b2001bf7b18db1d5d127",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e06",
@@ -587,7 +603,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/kigali/sisalto.json",
-      "sourceContentSHA256": "6a5badd6cc010d8799900a5ec970fe8457ec80e8161980d09415c81f0e53772d",
+      "sourceContentSHA256": "2e1eb84e241088d3bc3c4bfad4dea22700a9aaee37950c185bb8dcfe00db4182",
       "semanticSourceBind": {
         "targetBeforeSHA256": "0d915684495a0f81ff53816288681609d1d2060b077a35e565cfa16b5d962e80",
         "semanticContextSHA256": "0d915684495a0f81ff53816288681609d1d2060b077a35e565cfa16b5d962e80",
@@ -776,7 +792,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "6a5badd6cc010d8799900a5ec970fe8457ec80e8161980d09415c81f0e53772d",
+      "sourceContentAfterSHA256": "2e1eb84e241088d3bc3c4bfad4dea22700a9aaee37950c185bb8dcfe00db4182",
       "targetAfterSHA256": "0d915684495a0f81ff53816288681609d1d2060b077a35e565cfa16b5d962e80",
       "contextAfterSHA256": "0d915684495a0f81ff53816288681609d1d2060b077a35e565cfa16b5d962e80",
       "ownerApproved": true,
@@ -801,7 +817,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "2e1eb84e241088d3bc3c4bfad4dea22700a9aaee37950c185bb8dcfe00db4182",
+        "sameImageNativeSHA256": "0293a630e92079b16a353c3a30416ac7e7acc2d3d942006dd9ed49b5db6553b8",
+        "sameImageExportSHA256": "d7f523e6bfbf4d095e01a5cbd33d6f1cc51fe0adf0e9ece1531757e5611b2587",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e06",
@@ -851,10 +875,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/kigali/sisalto.json",
-      "sourceContentSHA256": "6a5badd6cc010d8799900a5ec970fe8457ec80e8161980d09415c81f0e53772d",
+      "sourceContentSHA256": "2e1eb84e241088d3bc3c4bfad4dea22700a9aaee37950c185bb8dcfe00db4182",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "3e615a3eabeb02694d24240c54d10a19d3b0935173c849981b66cb4766631b6a",
-        "semanticContextSHA256": "3e615a3eabeb02694d24240c54d10a19d3b0935173c849981b66cb4766631b6a",
+        "targetBeforeSHA256": "7bce2cc7b4d5ebf362e408837dc1a16a66e13e83dd9a7b4f69993936a5d39f0c",
+        "semanticContextSHA256": "7bce2cc7b4d5ebf362e408837dc1a16a66e13e83dd9a7b4f69993936a5d39f0c",
         "subjectTitle": "Purossa ja ruovikossa on tehtävä",
         "targetState": "existing-target"
       },
@@ -1040,9 +1064,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "6a5badd6cc010d8799900a5ec970fe8457ec80e8161980d09415c81f0e53772d",
-      "targetAfterSHA256": "3e615a3eabeb02694d24240c54d10a19d3b0935173c849981b66cb4766631b6a",
-      "contextAfterSHA256": "3e615a3eabeb02694d24240c54d10a19d3b0935173c849981b66cb4766631b6a",
+      "sourceContentAfterSHA256": "2e1eb84e241088d3bc3c4bfad4dea22700a9aaee37950c185bb8dcfe00db4182",
+      "targetAfterSHA256": "7bce2cc7b4d5ebf362e408837dc1a16a66e13e83dd9a7b4f69993936a5d39f0c",
+      "contextAfterSHA256": "7bce2cc7b4d5ebf362e408837dc1a16a66e13e83dd9a7b4f69993936a5d39f0c",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -1065,7 +1089,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "2e1eb84e241088d3bc3c4bfad4dea22700a9aaee37950c185bb8dcfe00db4182",
+        "sameImageNativeSHA256": "baa9f25a57e8a1632710e1839a6c6ca8718b1f3533e9ac231876d439073e9711",
+        "sameImageExportSHA256": "d00f56ec6b57fb1e61fd419767861b96728fc7d59858786f8f713df542176edd",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e06",
@@ -1115,10 +1147,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/kigali/sisalto.json",
-      "sourceContentSHA256": "6a5badd6cc010d8799900a5ec970fe8457ec80e8161980d09415c81f0e53772d",
+      "sourceContentSHA256": "2e1eb84e241088d3bc3c4bfad4dea22700a9aaee37950c185bb8dcfe00db4182",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "8b2de42127bb3ebc5b5280129f579c39d081b1786655f84ddb980ff5ffee9209",
-        "semanticContextSHA256": "8b2de42127bb3ebc5b5280129f579c39d081b1786655f84ddb980ff5ffee9209",
+        "targetBeforeSHA256": "1ae847f0ebcc5fbb0df08c99eb82cd9b8b6c5a72b7e4c512e5ba45c2afcfa69e",
+        "semanticContextSHA256": "1ae847f0ebcc5fbb0df08c99eb82cd9b8b6c5a72b7e4c512e5ba45c2afcfa69e",
         "subjectTitle": "Umusambi on myös linnun nimi",
         "targetState": "existing-target"
       },
@@ -1305,9 +1337,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "6a5badd6cc010d8799900a5ec970fe8457ec80e8161980d09415c81f0e53772d",
-      "targetAfterSHA256": "8b2de42127bb3ebc5b5280129f579c39d081b1786655f84ddb980ff5ffee9209",
-      "contextAfterSHA256": "8b2de42127bb3ebc5b5280129f579c39d081b1786655f84ddb980ff5ffee9209",
+      "sourceContentAfterSHA256": "2e1eb84e241088d3bc3c4bfad4dea22700a9aaee37950c185bb8dcfe00db4182",
+      "targetAfterSHA256": "1ae847f0ebcc5fbb0df08c99eb82cd9b8b6c5a72b7e4c512e5ba45c2afcfa69e",
+      "contextAfterSHA256": "1ae847f0ebcc5fbb0df08c99eb82cd9b8b6c5a72b7e4c512e5ba45c2afcfa69e",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -1330,7 +1362,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "2e1eb84e241088d3bc3c4bfad4dea22700a9aaee37950c185bb8dcfe00db4182",
+        "sameImageNativeSHA256": "495a0734c83cb8cb956245e7c20f34814956e46f18cde4aa24b9f4477886908b",
+        "sameImageExportSHA256": "7c51fa282dde592465b06815258bfa699b49be37c4c77eea9416cea68913a55b",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e06",
@@ -1380,10 +1420,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/kigali/sisalto.json",
-      "sourceContentSHA256": "6a5badd6cc010d8799900a5ec970fe8457ec80e8161980d09415c81f0e53772d",
+      "sourceContentSHA256": "2e1eb84e241088d3bc3c4bfad4dea22700a9aaee37950c185bb8dcfe00db4182",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "5a8200e621b5f2f6e6f02bc49de81dce5d39b3209434fdcc5d3b431de675e3c4",
-        "semanticContextSHA256": "5a8200e621b5f2f6e6f02bc49de81dce5d39b3209434fdcc5d3b431de675e3c4",
+        "targetBeforeSHA256": "ea04ec396aa23d89363e25cef1157690929254f68a0a3a6ba7c19e75a1478599",
+        "semanticContextSHA256": "ea04ec396aa23d89363e25cef1157690929254f68a0a3a6ba7c19e75a1478599",
         "subjectTitle": "Kosteikosta opitaan kävellessä",
         "targetState": "existing-target"
       },
@@ -1569,9 +1609,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "6a5badd6cc010d8799900a5ec970fe8457ec80e8161980d09415c81f0e53772d",
-      "targetAfterSHA256": "5a8200e621b5f2f6e6f02bc49de81dce5d39b3209434fdcc5d3b431de675e3c4",
-      "contextAfterSHA256": "5a8200e621b5f2f6e6f02bc49de81dce5d39b3209434fdcc5d3b431de675e3c4",
+      "sourceContentAfterSHA256": "2e1eb84e241088d3bc3c4bfad4dea22700a9aaee37950c185bb8dcfe00db4182",
+      "targetAfterSHA256": "ea04ec396aa23d89363e25cef1157690929254f68a0a3a6ba7c19e75a1478599",
+      "contextAfterSHA256": "ea04ec396aa23d89363e25cef1157690929254f68a0a3a6ba7c19e75a1478599",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -1594,7 +1634,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "2e1eb84e241088d3bc3c4bfad4dea22700a9aaee37950c185bb8dcfe00db4182",
+        "sameImageNativeSHA256": "785b0a81d897e9fec9ecd53f866e742d32d2c85edb2e40577e7a713c3e4477dc",
+        "sameImageExportSHA256": "e99ef0f5d4ea3f92de1a01ed2878980a35f902e3b4b3b7e0143adb1735b0f0c5",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e06",
@@ -1644,10 +1692,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/kigali/sisalto.json",
-      "sourceContentSHA256": "6a5badd6cc010d8799900a5ec970fe8457ec80e8161980d09415c81f0e53772d",
+      "sourceContentSHA256": "2e1eb84e241088d3bc3c4bfad4dea22700a9aaee37950c185bb8dcfe00db4182",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "7da465c83381246c11daced06faf7aaefcaa34f9e954a138bb6c4428a9b5bf4e",
+        "semanticContextSHA256": "6c43edeff4f2c7fbb610797103bbc149eda4a799fc17e0a7e19a5196890c2791",
         "subjectTitle": "Nyandungun kosteikko",
         "targetState": "existing-target"
       },
@@ -1833,9 +1881,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "6a5badd6cc010d8799900a5ec970fe8457ec80e8161980d09415c81f0e53772d",
+      "sourceContentAfterSHA256": "2e1eb84e241088d3bc3c4bfad4dea22700a9aaee37950c185bb8dcfe00db4182",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "7da465c83381246c11daced06faf7aaefcaa34f9e954a138bb6c4428a9b5bf4e",
+      "contextAfterSHA256": "6c43edeff4f2c7fbb610797103bbc149eda4a799fc17e0a7e19a5196890c2791",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -1858,7 +1906,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "2e1eb84e241088d3bc3c4bfad4dea22700a9aaee37950c185bb8dcfe00db4182",
+        "sameImageNativeSHA256": "18600fa6ae66099d8a18cbc4498b10727daa3cdc6a90a9fdd7daf5c74f6419c8",
+        "sameImageExportSHA256": "13c6246b1cac0e89bf321dcbaa844f58fc3f701ba73ab44ed45efe7971a46e88",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e06",
@@ -1911,7 +1967,7 @@
         2736
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/kigali/sisalto.json",
-      "sourceContentSHA256": "6a5badd6cc010d8799900a5ec970fe8457ec80e8161980d09415c81f0e53772d",
+      "sourceContentSHA256": "2e1eb84e241088d3bc3c4bfad4dea22700a9aaee37950c185bb8dcfe00db4182",
       "semanticSourceBind": {
         "targetBeforeSHA256": "8eb401668da66bad3fcf3e86646b1a9577c466960bb44d9c410cc6257359e7ac",
         "semanticContextSHA256": "8eb401668da66bad3fcf3e86646b1a9577c466960bb44d9c410cc6257359e7ac",
@@ -2115,7 +2171,7 @@
         "vuosi": "2012"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "6a5badd6cc010d8799900a5ec970fe8457ec80e8161980d09415c81f0e53772d",
+      "sourceContentAfterSHA256": "2e1eb84e241088d3bc3c4bfad4dea22700a9aaee37950c185bb8dcfe00db4182",
       "targetAfterSHA256": "8eb401668da66bad3fcf3e86646b1a9577c466960bb44d9c410cc6257359e7ac",
       "contextAfterSHA256": "8eb401668da66bad3fcf3e86646b1a9577c466960bb44d9c410cc6257359e7ac",
       "ownerApproved": true,
@@ -2140,7 +2196,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "2e1eb84e241088d3bc3c4bfad4dea22700a9aaee37950c185bb8dcfe00db4182",
+        "sameImageNativeSHA256": "559e05e942c3712bc464114641043de8dbb973423754994dda94df9846f3545d",
+        "sameImageExportSHA256": "559e05e942c3712bc464114641043de8dbb973423754994dda94df9846f3545d",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e06",
@@ -2193,7 +2257,7 @@
         1668
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/kigali/sisalto.json",
-      "sourceContentSHA256": "6a5badd6cc010d8799900a5ec970fe8457ec80e8161980d09415c81f0e53772d",
+      "sourceContentSHA256": "2e1eb84e241088d3bc3c4bfad4dea22700a9aaee37950c185bb8dcfe00db4182",
       "semanticSourceBind": {
         "targetBeforeSHA256": "31891b8490dbeb37f1e067a28ab201df2ff541429e6e60ed4ccc3973c3e95ba1",
         "semanticContextSHA256": "31891b8490dbeb37f1e067a28ab201df2ff541429e6e60ed4ccc3973c3e95ba1",
@@ -2373,7 +2437,7 @@
         "tiedosto": "Mount Kigali.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "6a5badd6cc010d8799900a5ec970fe8457ec80e8161980d09415c81f0e53772d",
+      "sourceContentAfterSHA256": "2e1eb84e241088d3bc3c4bfad4dea22700a9aaee37950c185bb8dcfe00db4182",
       "targetAfterSHA256": "31891b8490dbeb37f1e067a28ab201df2ff541429e6e60ed4ccc3973c3e95ba1",
       "contextAfterSHA256": "31891b8490dbeb37f1e067a28ab201df2ff541429e6e60ed4ccc3973c3e95ba1",
       "ownerApproved": true,
@@ -2398,7 +2462,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "2e1eb84e241088d3bc3c4bfad4dea22700a9aaee37950c185bb8dcfe00db4182",
+        "sameImageNativeSHA256": "5376732cf740d879bbaa24bc4b15f77be1ae795e8e6739129685a2be89a47f3f",
+        "sameImageExportSHA256": "5376732cf740d879bbaa24bc4b15f77be1ae795e8e6739129685a2be89a47f3f",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e06",
@@ -2451,7 +2523,7 @@
         700
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/kigali/sisalto.json",
-      "sourceContentSHA256": "6a5badd6cc010d8799900a5ec970fe8457ec80e8161980d09415c81f0e53772d",
+      "sourceContentSHA256": "2e1eb84e241088d3bc3c4bfad4dea22700a9aaee37950c185bb8dcfe00db4182",
       "semanticSourceBind": {
         "targetBeforeSHA256": "6d4e343a3793a9afde2c7ba572a4eee40be8a540e319ec8db5a6b9e23d4d5471",
         "semanticContextSHA256": "6d4e343a3793a9afde2c7ba572a4eee40be8a540e319ec8db5a6b9e23d4d5471",
@@ -2631,7 +2703,7 @@
         "tiedosto": "Panoramique kigali.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "6a5badd6cc010d8799900a5ec970fe8457ec80e8161980d09415c81f0e53772d",
+      "sourceContentAfterSHA256": "2e1eb84e241088d3bc3c4bfad4dea22700a9aaee37950c185bb8dcfe00db4182",
       "targetAfterSHA256": "6d4e343a3793a9afde2c7ba572a4eee40be8a540e319ec8db5a6b9e23d4d5471",
       "contextAfterSHA256": "6d4e343a3793a9afde2c7ba572a4eee40be8a540e319ec8db5a6b9e23d4d5471",
       "ownerApproved": true,
@@ -2656,7 +2728,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "2e1eb84e241088d3bc3c4bfad4dea22700a9aaee37950c185bb8dcfe00db4182",
+        "sameImageNativeSHA256": "b7251b6ed390c092f5f54eda133031f30d4c8d6b1b063ffe90d279f3435bab8f",
+        "sameImageExportSHA256": "b7251b6ed390c092f5f54eda133031f30d4c8d6b1b063ffe90d279f3435bab8f",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e06",
@@ -2709,10 +2789,10 @@
         5056
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/kigali/sisalto.json",
-      "sourceContentSHA256": "6a5badd6cc010d8799900a5ec970fe8457ec80e8161980d09415c81f0e53772d",
+      "sourceContentSHA256": "2e1eb84e241088d3bc3c4bfad4dea22700a9aaee37950c185bb8dcfe00db4182",
       "semanticSourceBind": {
         "targetBeforeSHA256": "9b19bd24ff3d40f0468d02cc9e0eb3811a0e4a6865991701708cc1819f589fb1",
-        "semanticContextSHA256": "ad92603f7e42b3892f038939253cecf9d3836ea0f51890b73d6b058497573744",
+        "semanticContextSHA256": "36490163e697faa3ac968719df71706e53af969fb78215cb0b2573ac081cc462",
         "subjectTitle": "Matkailijalle",
         "targetState": "existing-target"
       },
@@ -2893,9 +2973,9 @@
         "tiedosto": "Fleur mauve de Kigali.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "6a5badd6cc010d8799900a5ec970fe8457ec80e8161980d09415c81f0e53772d",
+      "sourceContentAfterSHA256": "2e1eb84e241088d3bc3c4bfad4dea22700a9aaee37950c185bb8dcfe00db4182",
       "targetAfterSHA256": "9b19bd24ff3d40f0468d02cc9e0eb3811a0e4a6865991701708cc1819f589fb1",
-      "contextAfterSHA256": "ad92603f7e42b3892f038939253cecf9d3836ea0f51890b73d6b058497573744",
+      "contextAfterSHA256": "36490163e697faa3ac968719df71706e53af969fb78215cb0b2573ac081cc462",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -2918,7 +2998,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "2e1eb84e241088d3bc3c4bfad4dea22700a9aaee37950c185bb8dcfe00db4182",
+        "sameImageNativeSHA256": "4ff1d2270a32e4fe87ac8c0ef06141c082630e8d18a6c538a4dd5dd3a4f690f5",
+        "sameImageExportSHA256": "4ff1d2270a32e4fe87ac8c0ef06141c082630e8d18a6c538a4dd5dd3a4f690f5",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     }
   ],
   "runtimeIntegrationPending": true,
@@ -2930,6 +3018,9 @@
   "task118TextRevision": true,
   "independentTextResamplePending": true,
   "textAcceptanceVerified": false,
-  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task118/immutable-media-history/e06/kigali/e52579e82c8bc9da24c1f75397014bb9fe8553e3989e92d02b0a40e4a425825a.json",
-  "task118ReboundAt": "2026-10-13T16:31:24.923266+00:00"
+  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task228/immutable-media-history/e06/kigali/0f890678571ab3c870717891556d2eb3355b9133f1ee53cd8e693f71391c4026.json",
+  "task118ReboundAt": "2026-10-13T16:31:24.923266+00:00",
+  "task228ExcludedAssets": [],
+  "task228TextRevision": true,
+  "task228ReboundAt": "2026-10-13T18:31:09.903457+00:00"
 }

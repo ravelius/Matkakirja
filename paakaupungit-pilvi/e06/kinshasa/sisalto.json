@@ -14,8 +14,8 @@
     }
   },
   "artikkeli": {
-    "intro": "Kinshasa kasvaa **Kongojoen etelärannalla**, vastapäätä toiseen valtioon kuuluvaa Brazzavilleä. Kongon demokraattisen tasavallan pääkaupunki on myös hallinnollinen maakunta. Sen alueella tiivis kaupunki vaihtuu paikoin maaseuduksi, joten keskustaa ja koko hallintoaluetta ei voi mitata samalla rajauksella. Joenrannan tasangon takana maasto muuttuu etelässä ja lännessä mäkiseksi.\n\nKinshasan historia alkoi ennen sen siirtomaanimeä Léopoldville. Isoisän matkavuonna 1873 alueella oli Teke- ja Humbu-yhteisöjä sekä paikallisia kalastus- ja kauppapaikkoja; myöhempi kauppa-asema syntyi 1800-luvun lopulla. Nykyinen nimi palauttaa mieleen vanhan Nshasa-paikannimen. Suurkaupungin keskellä toimii **kasvitieteellinen puutarha**, kun taas etelän metsäisellä retkialueella bonobojen suojelutyö avaa toisen näkökulman kaupungin ympäristöön.",
-    "teksti": "Kinshasan paikalliset kauppapaikat edelsivät Léopoldvillen siirtomaakaupunkia. Nshasa ja Ntamo liittyivät joenrannan kalastukseen ja kaupankäyntiin. Myöhemmän kauppa-aseman syntyä ei siksi voi kuvata kaupungin koko alueen historian alkuna.\n\nNgalieman lahti oli varhaisen kauppa-aseman satamapaikka Kintambon alueella. Lahti kuuluu Kongojoen vasempaan rantaan lähellä koskijaksoa. Sen luonnonmaantiede ja nykyiset satamarakenteet ovat eri aikakerroksia: tämän päivän laituria ei voi siirtää vanhaan matkavuoteen.\n\nKasvitieteellinen puutarha sijaitsee Gombessa ja palvelee tutkimusta sekä ympäristökasvatusta. Kaupungin eteläpuolella Lola ya Bonobon suojapaikka yhdistää eläinten hoidon ja opetustyön. Keskustan kokoelma ja metsäinen suojapaikka kertovat luonnosta eri tavoin, eikä jälkimmäinen ole keskustan kävelykohde."
+    "intro": "Kinshasa kasvaa **Kongojoen etelärannalla**, vastapäätä toiseen valtioon kuuluvaa Brazzavilleä. Kongon demokraattisen tasavallan pääkaupunki on myös hallinnollinen maakunta. Sen alueella tiivis kaupunki vaihtuu paikoin maaseuduksi, ja hallinnollinen alue on keskustan taajamaa laajempi. Joenrannan tasangon takana maasto muuttuu etelässä ja lännessä mäkiseksi.\n\nKinshasan historia alkoi ennen sen siirtomaanimeä Léopoldville. Vuonna 1873 alueella oli Teke- ja Humbu-yhteisöjä sekä paikallisia kalastus- ja kauppapaikkoja; myöhempi kauppa-asema syntyi 1800-luvun lopulla. Nykyinen nimi palauttaa mieleen vanhan Nshasa-paikannimen. Suurkaupungin keskellä toimii **kasvitieteellinen puutarha**, kun taas etelän metsäisellä retkialueella bonobojen suojelutyö avaa toisen näkökulman kaupungin ympäristöön.",
+    "teksti": "Kinshasan paikalliset kauppapaikat edelsivät Léopoldvillen siirtomaakaupunkia. Nshasa ja Ntamo liittyivät joenrannan kalastukseen ja kaupankäyntiin. Nykyinen kaupunginnimi palautuu Nshasa-nimeen.\n\nNgalieman lahti oli varhaisen kauppa-aseman satamapaikka Kintambon alueella. Lahti kuuluu Kongojoen vasempaan rantaan lähellä koskijaksoa. Se on saanut nimensä paikalliselta päälliköltä Ngaliemalta.\n\nGomben kasvitieteellinen puutarha palvelee tutkimusta sekä ympäristökasvatusta. Kaupungin eteläpuolella Lola ya Bonobon suojapaikka yhdistää eläinten hoidon ja opetustyön. Kuntoutettuja bonoboja palautetaan luontoon Ekolo ya Bonobon yhteisöreservaatissa Equateurin maakunnassa."
   },
   "kysymykset": [
     {
@@ -28,7 +28,7 @@
       ],
       "correct": 0,
       "level": 1,
-      "hint": "Vastarannan pääkaupunki kuuluu erilliseen Kongon tasavaltaan.",
+      "hint": "Kaupunki sijaitsee Keski-Afrikan suuressa jokilaaksossa.",
       "fact": "Kinshasa on Kongon demokraattisen tasavallan pääkaupunki.",
       "source": "https://en.wikipedia.org/wiki/Kinshasa"
     },
@@ -50,9 +50,9 @@
       "q": "Mikä Kinshasa on kaupungin lisäksi?",
       "options": [
         "Hallinnollinen maakunta",
-        "Yksi hallintopiiri",
-        "Erillinen pääkaupunkiterritorio",
-        "Usean maakunnan kuntaliitto"
+        "Maakunnan alainen hallintopiiri",
+        "Usean maakunnan yhteinen hallintokeskus",
+        "Hallinnollisesti kahteen maakuntaan jaettu kaupunki"
       ],
       "correct": 0,
       "level": 2,
@@ -65,8 +65,8 @@
       "options": [
         "Keinotekoinen järvi",
         "Vulkaaninen kraatterijärvi",
-        "Suolainen vuoristojärvi",
-        "Jääkauden synnyttämä järvi"
+        "Joesta irronnut juoluajärvi",
+        "Luonnollinen tulvajärvi"
       ],
       "correct": 0,
       "level": 2,
@@ -75,17 +75,17 @@
       "source": "https://fr.wikipedia.org/wiki/Lac_Ma_Vall%C3%A9e"
     },
     {
-      "q": "Mitä eläimiä Lola ya Bonobo suojelee?",
+      "q": "Missä kuntoutettuja bonoboja palautetaan luontoon?",
       "options": [
-        "Bonoboja",
-        "Simpansseja",
-        "Gorilloja",
-        "Mandrilleja"
+        "Ekolo ya Bonobon yhteisöreservaatissa",
+        "Kinshasan kasvitieteellisessä puutarhassa",
+        "Lukayan putousten retkialueella",
+        "Gomben kaupunkipuistossa"
       ],
       "correct": 0,
       "level": 3,
-      "hint": "Kyse on Kongon alueen ihmisapinoiden suojelusta.",
-      "fact": "Lola ya Bonobo on bonobojen metsäinen suojapaikka.",
+      "hint": "Alue sijaitsee Equateurin maakunnassa.",
+      "fact": "Lola ya Bonobossa kuntoutettuja eläimiä palautetaan luontoon Ekolo ya Bonobon yhteisöreservaatissa.",
       "source": "https://en.wikipedia.org/wiki/Lola_ya_Bonobo"
     }
   ],
@@ -96,8 +96,8 @@
   ],
   "valokuva": {
     "tiedosto": "Forest near Kinshasa.jpg",
-    "lyhyt": "Metsää.",
-    "selite": "Metsää ja vettä Kinshasan lähistöllä.",
+    "lyhyt": "Metsää Kinshasan lähistöllä.",
+    "selite": "Kinshasan lähistön metsää vuonna 2012.",
     "lahde": "David Tansey, Commons (CC BY 2.0)",
     "vuosi": "2012"
   },
@@ -109,8 +109,8 @@
       "kansikuvat": [
         {
           "tiedosto": "Kinshasa 15.32343E 4.32974S.jpg",
-          "lyhyt": "Kinshasa.",
-          "selite": "Kinshasa sijaitsee Kongojoen etelärannalla Pool Malebon vieressä.",
+          "lyhyt": "Kinshasa satelliittikuvassa.",
+          "selite": "Kinshasan näkymä NASA World Wind -ohjelmasta.",
           "lahde": "NASA, Wikimedia Commons (PD)"
         },
         {
@@ -129,7 +129,7 @@
       "nostot": [
         {
           "otsikko": "Ennen Léopoldvilleä oli Nshasa",
-          "teksti": "Kinshasan historia ei ala siirtomaanimestä. Nykyisen kaupungin alueella eli Teke- ja Humbu-yhteisöjä, ja Nshasa sekä Ntamo olivat paikallisia kalastuksen ja kaupankäynnin paikkoja. 1800-luvun lopulla syntynyt kauppa-asema sai nimekseen Léopoldville. Nykyinen Kinshasa-nimi muistaa vanhaa Nshasaa, vaikka sen etymologiasta on useita selityksiä. Isoisän matkavuonna 1873 myöhempää kaupunkia ei vielä ollut samassa muodossa, mutta joenrannan paikallinen historia oli jo olemassa.",
+          "teksti": "Kinshasan historia ei ala siirtomaanimestä. Nykyisen kaupungin alueella eli Teke- ja Humbu-yhteisöjä, ja Nshasa sekä Ntamo olivat paikallisia kalastuksen ja kaupankäynnin paikkoja. 1800-luvun lopulla syntynyt kauppa-asema sai nimekseen Léopoldville. Nykyinen Kinshasa-nimi muistaa vanhaa Nshasaa, vaikka sen etymologiasta on useita selityksiä. Léopoldville-nimi viittasi Belgian kuninkaaseen Leopold II:een.",
           "tiedosto": "",
           "lyhyt": "",
           "selite": "",
@@ -138,16 +138,16 @@
         },
         {
           "otsikko": "Kaupunki jatkuu maakuntana",
-          "teksti": "Kinshasa tarkoittaa sekä pääkaupunkia että hallinnollista maakuntaa. Maakunta sisältää tiiviisti rakennettuja alueita ja maaseutua, joten koko sen pinta-ala tai väestö ei kuvaa pelkkää keskustaa. Myös maasto vaihtuu: joenrannan alluviaalinen tasanko eroaa eteläisten ja läntisten alueiden mäkisyydestä. Kartan yksi paikannimi voi siis peittää useita maisemia. Hallinnollisen maakunnan sisällä kaupungin tiiviit korttelit vaihtuvat paikoin maaseuduksi; samaan kokonaisuuteen mahtuu eri elinkeinoja ja maastonmuotoja.",
+          "teksti": "Kinshasa tarkoittaa sekä pääkaupunkia että hallinnollista maakuntaa. Maakunta sisältää tiiviisti rakennettuja alueita ja maaseutua, joten koko sen pinta-ala tai väestö ei kuvaa pelkkää keskustaa. Myös maasto vaihtuu: joenrannan alluviaalinen tasanko eroaa eteläisten ja läntisten alueiden mäkisyydestä. Hallinnollinen alue jakautuu commune-kuntiin ja niiden kaupunginosiin.",
           "tiedosto": "Manguier kinshasa.jpg",
-          "lyhyt": "Puustoa.",
-          "selite": "Puustoa ja polku Kinshasassa.",
+          "lyhyt": "Mangopuu Kinshasassa.",
+          "selite": "Kinshasassa kasvava mangopuu.",
           "lahde": "Max.kit, Wikimedia Commons (CC BY-SA 4.0)",
           "wiki": "Kinshasa"
         },
         {
           "otsikko": "Lahti oli satama ennen suurkaupunkia",
-          "teksti": "Ngalieman lahti sijaitsee Kongojoen vasemmalla rannalla Kintambon alueella, lähellä koskijaksoa. Sen läheisyyteen syntyi varhainen Léopoldvillen kauppa-asema, ja lahtea käytettiin aseman satamana. Nimi liittyy paikalliseen Ngaliema-henkilöön, mutta rannan kauppahistoria on pelkkää nimeä vanhempi kokonaisuus. Paikkaa voi lukea sekä luonnonlahdeksi että kaupungin kehityksen vaiheeksi. Lahden kautta kulkenut tavara yhdisti paikallisen kaupan myöhempään siirtomaa-aseman jokiliikenteeseen.",
+          "teksti": "Ngalieman lahti sijaitsee Kongojoen vasemmalla rannalla Kintambon alueella, lähellä koskijaksoa. Sen läheisyyteen syntyi varhainen Léopoldvillen kauppa-asema, ja lahtea käytettiin aseman satamana. Lahti on saanut nimensä paikalliselta päälliköltä Ngaliemalta. Kauppa-aseman perusti Henry Morton Stanley, joka nimesi paikan retkikuntansa tukijan, Belgian kuninkaan Leopold II:n mukaan.",
           "tiedosto": "",
           "lyhyt": "",
           "selite": "",
@@ -156,7 +156,7 @@
         },
         {
           "otsikko": "Puutarha tekee tiedettä",
-          "teksti": "Kinshasan kasvitieteellinen puutarha sijaitsee Gombessa Kasa-Vubun varrella, eläintarhaa vastapäätä. 1900-luvun alkupuolella syntynyt puutarhaa hallinnoi Kongon luonnonsuojeluinstituutti. Sen tehtävä ei ole vain tarjota vihreää ympäristöä: kasvikokoelmia käytetään myös tieteessä ja opetuksessa. Puutarhaan kuuluu taimisto, siemenpankki ja herbaario. Samassa kaupungin paikassa voi siksi kohdata sekä eläviä kasveja että niiden tutkimusta varten säilytettävää aineistoa, kahdenlaista kasvien muistia.",
+          "teksti": "Kinshasan kasvitieteellinen puutarha sijaitsee Gombessa Kasa-Vubu-kadun varrella, eläintarhaa vastapäätä. Puutarha perustettiin vuonna 1933 nimellä Parc de Bock. Sitä hallinnoi Kongon luonnonsuojeluinstituutti ICCN. Kasvikokoelmia käytetään tieteessä ja opetuksessa. Puutarhaan kuuluu taimisto, siemenpankki, herbaario ja arboretum, jossa painottuu kotoperäinen kasvisto.",
           "tiedosto": "",
           "lyhyt": "",
           "selite": "",
@@ -171,16 +171,16 @@
           "selite": "",
           "lahde": ""
         },
-        "kappale": "Kinshasan kasvitieteellinen puutarha sijaitsee Gombessa keskustan tuntumassa. Ma Vallée, Lukayan pienet putoukset ja bonobojen suojapaikka ovat kaupungin eteläpuolisia kohteita. Järjestä niiden kuljetus erikseen. Puutarhan kasvikokoelmat ja Lola ya Bonobon opastus kertovat erilaisesta suojelutyöstä.",
+        "kappale": "Kinshasan kasvitieteellinen puutarha sijaitsee Gombessa keskustan tuntumassa. Ma Vallée, Lukayan pienet putoukset ja bonobojen suojapaikka ovat kaupungin eteläpuolisia kohteita. Puutarhan kasvikokoelmat ja Lola ya Bonobon opastus kertovat erilaisesta suojelutyöstä.",
         "artikkeli": {
           "nimi": "Matkailijan Kinshasa",
           "taitto": "opas",
           "teksti": "Tutustu jokikaupungin historiaan ja sen erilaisiin luontokokoelmiin.",
-          "nosto": "Keskustan kierros ja eteläinen retki ovat erilliset järjestelyt; matkan tarpeellisuus ja kuljetukset harkitaan etukäteen.",
+          "nosto": "Kasvitieteellinen puutarha sijaitsee Gombessa, bonobojen suojapaikka kaupungin eteläpuolella Lukayan lähellä.",
           "jaksot": [
             {
               "otsikko": "Perille ja liikkeelle",
-              "teksti": "Kinshasan N’Djilin kansainvälisen lentoaseman koodi on FIH. Luotettava kuljettaja järjestetään etukäteen. Suuren kaupunki-maakunnan sisällä keskustan kohde ja eteläinen retkipaikka voivat olla hyvin erilaisia matkoja.",
+              "teksti": "Kinshasan N’Djilin kansainvälisen lentoaseman koodi on FIH. Suuren kaupunki-maakunnan sisällä keskustan kohde ja eteläinen retkipaikka voivat olla hyvin erilaisia matkoja.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -190,7 +190,7 @@
             },
             {
               "otsikko": "Kintambon rannan historia",
-              "teksti": "Ngalieman lahti liittyy varhaisen kauppa-aseman satamatoimintaan. Kintambon paikallinen kaupankäynti edelsi myöhempää Léopoldvilleä. Rannan historiaa voi tarkastella ilman modernien hallintorakennusten tai muistomerkkien nostamista käyntikohteiksi.",
+              "teksti": "Ngalieman lahti liittyy varhaisen kauppa-aseman satamatoimintaan. Kintambon paikallinen kaupankäynti edelsi myöhempää Léopoldvilleä.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -200,7 +200,7 @@
             },
             {
               "otsikko": "Puutarha ja eteläinen retki",
-              "teksti": "Gomben kasvitieteellinen puutarha on keskustan kasvikokoelma. Ma Valléen järvi, Lukayan pienet putoukset ja Lola ya Bonobo kuuluvat erilliseen eteläiseen retkialueeseen. Käynti- ja kuljetusjärjestelyt sovitaan paikan kanssa; järvi- tai putousmaininta ei ole uimissuositus.",
+              "teksti": "Gomben kasvitieteellinen puutarha on keskustan kasvikokoelma. Etelämpänä Lukayan laaksossa sijaitsee Ma Valléen tekoallas. Samalla suunnalla ovat Lukayan pienet putoukset ja Lola ya Bonobon suojapaikka.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -209,8 +209,8 @@
               }
             },
             {
-              "otsikko": "Kaupungin ruokapaikat",
-              "teksti": "Kinshasassa on paikallisia ruokapaikkoja ja myös kansainvälisiä keittiöitä. Kongon ruoka-aiheiden rinnalle tulee täällä suurkaupungin ruokapaikkojen valikoima. Nimetyn ravintolan nykyinen toiminta varmistetaan ennen käyntiä.",
+              "otsikko": "Taimia kaupungille",
+              "teksti": "Kasvitieteellisen puutarhan taimistosta myydään kasveja kaupungin vihertämiseen. Taimia kasvatetaan siemenistä ja pistokkaista, ja puutarhan työssä käytetään muun muassa kastelukannuja, oksasaksia ja kottikärryjä.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -220,7 +220,7 @@
             },
             {
               "otsikko": "Bonobojen suojapaikka",
-              "teksti": "Lola ya Bonobo sijaitsee kaupungin eteläpuolella lähellä Lukayan pieniä putouksia. Paikassa kuntoutetaan bonoboja ja opetetaan luonnonsuojelua. Osa eläimistä voidaan palauttaa luontoon erilliselle alueelle. Sovi vierailu ja mahdollinen ammattilaiskuvaus järjestäjän kanssa.",
+              "teksti": "Lola ya Bonobo sijaitsee kaupungin eteläpuolella lähellä Lukayan pieniä putouksia. Paikassa kuntoutetaan bonoboja ja opetetaan luonnonsuojelua. Kuntoutettuja eläimiä palautetaan luontoon Ekolo ya Bonobon yhteisöreservaatissa.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -244,7 +244,7 @@
               {
                 "mita": "Ma Valléen vesimaisema",
                 "tahdet": 2,
-                "selite": "Tekoallas on erillinen eteläisen alueen retkipaikka."
+                "selite": "Lukayan laaksossa sijaitseva järvi kuuluu eteläiseen retkialueeseen."
               },
               {
                 "mita": "Lukayan pienet putoukset",
@@ -254,25 +254,13 @@
               {
                 "mita": "Bonobojen suojelutyö",
                 "tahdet": 3,
-                "selite": "Sovittu opastus tutustuttaa suojeluun ilman eläinkontaktia."
+                "selite": "Suojapaikassa bonoboja hoidetaan metsäisessä ympäristössä."
               }
             ],
             "hyvaTietaa": [
               {
                 "otsikko": "Ennen matkapäätöstä",
                 "teksti": "Tarkista Kongon demokraattisen tasavallan ajantasainen matkustustiedote Suomen ulkoministeriöstä ja noudata sen ohjeita."
-              },
-              {
-                "otsikko": "Kuljetus ennakkoon",
-                "teksti": "Luotettava kuljettaja järjestetään ennen matkaa."
-              },
-              {
-                "otsikko": "Eläimiin ei kosketa",
-                "teksti": "Lola ya Bonobon vierailuun ei kuulu kontaktia eläimiin."
-              },
-              {
-                "otsikko": "Kuvaamisesta sovitaan",
-                "teksti": "Suojapaikan ammattilaiskuvaus tarvitsee ennakkoluvan."
               }
             ]
           },
@@ -298,7 +286,7 @@
       "nostot": [
         {
           "otsikko": "Taimisto kasvattaa kaupunkia vihreäksi",
-          "teksti": "Kasvitieteellisen puutarhan taimisto huolehtii kasvien lisäämisestä ja kasvattamisesta. Työhön kuuluu kylvöä, pistokkaiden käyttöä, uudelleenistutusta, kastelua ja kompostin käsittelyä. Osa kasvatetuista kasveista päätyy myyntiin kaupungin vihertämistä varten. Puutarhan merkitys ei siis pysähdy sen aitaan: siellä kasvatettu taimi voi jatkaa elämäänsä muualla kaupungissa. Kasvikokoelman taustalla on päivittäistä työtä, jonka tarkoitus on pitää kasvit elävinä ja tuottaa uusia taimia.",
+          "teksti": "Kasvitieteellisen puutarhan taimisto huolehtii kasvien lisäämisestä ja kasvattamisesta. Työhön kuuluu kylvöä, pistokkaiden käyttöä, uudelleenistutusta, kastelua ja kompostin käsittelyä. Osa kasvatetuista kasveista päätyy myyntiin kaupungin vihertämistä varten. Taimiston itäosassa kasvatetaan koristekasveja. Kasvimaalla keskitytään syötävien viljelykasvien itämiseen ja varhaiseen kasvuun.",
           "tiedosto": "",
           "lyhyt": "",
           "selite": "",
@@ -306,8 +294,8 @@
           "wiki": "Kinshasa Botanical Garden"
         },
         {
-          "otsikko": "Kaikki kasvitieto ei ole vihreää",
-          "teksti": "Puutarhan kasvikokoelma ei koostu vain kasvavista puista. Siemenpankissa säilytetään siemeniä, herbaariossa kasvinäytteitä ja arboretumissa eläviä puita. Arboretumin painotus on kotoperäisessä kasvistossa, ja osassa kasveista on nimikilvet. Elävä kokoelma ja säilytetyt näytteet palvelevat kasvitiedettä sekä ympäristökasvatusta eri tavoin. Nimiä lukemalla puu muuttuu yksittäisestä vihreästä hahmosta tunnistettavaksi lajiksi, jonka voi liittää laajempaan kasvien maailmaan.",
+          "otsikko": "Siemeniä, näytteitä ja eläviä puita",
+          "teksti": "Puutarhan kasvikokoelma ei koostu vain kasvavista puista. Siemenpankissa säilytetään siemeniä, herbaariossa tutkimusta varten talletettuja kasvinäytteitä ja arboretumissa eläviä puita. Arboretumin painotus on kotoperäisessä kasvistossa, ja osassa kasveista on nimikilvet. Elävä kokoelma ja säilytetyt näytteet palvelevat kasvitiedettä sekä ympäristökasvatusta eri tavoin.",
           "tiedosto": "",
           "lyhyt": "",
           "selite": "",
@@ -316,7 +304,7 @@
         },
         {
           "otsikko": "Metsä on hoidettu suojapaikka",
-          "teksti": "Lola ya Bonobo sijaitsee Kinshasan eteläpuolella, lähellä Lukayan pieniä putouksia. Metsäisessä suojapaikassa hoidetaan bonoboja puoli-luonnollisessa ympäristössä. Eläimet elävät ryhmissä ja käyttävät metsää, mutta kyse ei ole vapaasti luonnossa elävästä populaatiosta. Osa kuntoutetuista bonoboista voidaan palauttaa toisaalla sijaitsevaan luonnonympäristöön. Bonobojen kuntoutus ja luontoon palauttaminen tapahtuvat eri paikoissa; hoitopaikan metsä on yksi vaihe eläinten suojelussa.",
+          "teksti": "Lola ya Bonobo sijaitsee Kinshasan eteläpuolella, lähellä Lukayan pieniä putouksia. Metsäisessä suojapaikassa hoidetaan bonoboja puoliluonnollisessa ympäristössä. Nuorimmat tulokkaat saavat aluksi hoitoa ihmishoitajilta, ja myöhemmin ne liittyvät vertaisryhmään. Kasvaessaan eläimet siirtyvät eri-ikäisten bonobojen ryhmiin. Kuntoutettuja eläimiä palautetaan luontoon Ekolo ya Bonobon yhteisöreservaatissa.",
           "tiedosto": "",
           "lyhyt": "",
           "selite": "",
@@ -325,7 +313,7 @@
         },
         {
           "otsikko": "Suojelu tarvitsee myös kuulijoita",
-          "teksti": "Lola ya Bonobon työhön kuuluu opetusta ja opastettuja vierailuja. Paikalliset kouluryhmät, lapset ja aikuiset tutustuvat bonoboihin sekä luonnonvarojen suojeluun. Henkilökunta ja oppaat tekevät eläinten hoidon rinnalla työtä sen eteen, että suojelun merkitys avautuu ihmisille. Vierailuun ei kuulu eläimiin koskemista. Myös kuvaamisella on omat sääntönsä: henkilökohtainen puhelinkuvaus ja ammattilaiskuvaus käsitellään eri tavoin, ja jälkimmäinen edellyttää paikan ennakkolupaa.",
+          "teksti": "Lola ya Bonobon työhön kuuluu opetusta ja opastettuja vierailuja. Paikalliset kouluryhmät, lapset ja aikuiset tutustuvat bonoboihin sekä luonnonvarojen suojeluun. Henkilökunta ja oppaat tekevät eläinten hoidon rinnalla ympäristökasvatusta. Ohjelmissa opetetaan bonobojen elinympäristöistä, niiden suojelua uhkaavista tekijöistä ja keinoista ehkäistä lajin häviämistä.",
           "tiedosto": "",
           "lyhyt": "",
           "selite": "",
@@ -362,7 +350,7 @@
   "nahtavyydet": {
     "Ngalieman lahti": {
       "aika": "Luonnonlahti; satamahistoria 1800-luvun lopulta",
-      "teksti": "Ngalieman lahti sijaitsee Kongojoen vasemmalla rannalla Kintambon alueella, lähellä joen koskijaksoa. Varhainen Léopoldvillen kauppa-asema syntyi sen läheisyyteen 1800-luvun lopulla, ja lahtea käytettiin aseman satamapaikkana. Nimi liittyy paikalliseen Ngaliemaan, mutta paikan merkitys sisältää myös laajemman joenrannan kauppahistorian.\n\nIsoisän matkavuonna 1873 nykyisen kaupungin alueella oli jo paikallisia kalastus- ja kauppapaikkoja. Myöhemmän aseman perustaminen ei siis aloittanut alueen ihmisten historiaa tyhjästä. Luonnonlahti ja siihen liittyneet sataman rakennusvaiheet on erotettava: nykyiset laiturit eivät kerro sellaisinaan vanhan matkavuoden näkymästä. Ngalieman lahti yhdistää saman paikan luonnonmaantieteen ja kaupungin kehityksen.",
+      "teksti": "Ngalieman lahti sijaitsee Kongojoen vasemmalla rannalla Kintambon alueella, lähellä joen koskijaksoa. Varhainen Léopoldvillen kauppa-asema syntyi sen läheisyyteen 1800-luvun lopulla, ja lahtea käytettiin aseman satamapaikkana.\n\nLahti on saanut nimensä paikalliselta päälliköltä Ngaliemalta. Joenrannan Nshasan ja Ntamon kalastus- ja kauppapaikat edelsivät siirtomaa-asemaa. Lahtea käytettiin kaupungin varhaisena satamapaikkana.",
       "kuvat": [
         {
           "tiedosto": "",
@@ -374,8 +362,8 @@
       "lahde": "Wikipedia"
     },
     "Kinshasan kasvitieteellinen puutarha": {
-      "aika": "1900-luvun alkupuoli",
-      "teksti": "Kinshasan kasvitieteellinen puutarha sijaitsee Gombessa, Kasa-Vubun varrella eläintarhaa vastapäätä. Puutarha syntyi 1900-luvun alkupuolella ja kuuluu ICCN:n hallintaan. Isoisän matkavuonna 1873 tätä nykyistä kokoelmaa ei siis ollut. Kohteen kiinnostus on kasvien kasvattamisessa, säilyttämisessä ja tutkimuksessa.\n\nTaimistossa kasveja lisätään esimerkiksi siemenistä ja pistokkaista, ja osa taimista kasvatetaan kaupungin vihertämistä varten. Kokoelmiin kuuluu myös siemenpankki, herbaario ja arboretum, jossa painottuu kotoperäinen kasvisto. Nimillä varustetut kasvit ja opetustoiminta yhdistävät puutarhan ympäristökasvatukseen. Paikka on samalla elävä kasvikokoelma ja tietoa säilyttävä tutkimusympäristö.",
+      "aika": "perustettu 1933",
+      "teksti": "Kinshasan kasvitieteellinen puutarha sijaitsee Gombessa, Kasa-Vubu-kadun varrella eläintarhaa vastapäätä. Puutarha perustettiin vuonna 1933 nimellä Parc de Bock. Sitä hallinnoi Kongon luonnonsuojeluinstituutti ICCN.\n\nTaimistossa kasveja lisätään esimerkiksi siemenistä ja pistokkaista, ja osa taimista kasvatetaan kaupungin vihertämistä varten. Kokoelmiin kuuluu myös siemenpankki, herbaario ja arboretum, jossa painottuu kotoperäinen kasvisto. Nimillä varustetut kasvit ja opetustoiminta yhdistävät puutarhan ympäristökasvatukseen. Paikka on samalla elävä kasvikokoelma ja tietoa säilyttävä tutkimusympäristö.",
       "kuvat": [
         {
           "tiedosto": "",
@@ -390,12 +378,6 @@
   "saatiedot": null,
   "ehdotukset": {
     "lentoasema": "N’Djili International Airport (FIH)",
-    "huomiot": [
-      "8 nostoa, 5 opasjaksoa, 5 kysymystä ja 3 tietoa. Maalehden ruoka-, rumba-, lingala-, lukasa- ja muut nimetyt aiheet vältetty.",
-      "Kartta partial 2: Ngalieman lahti ja kasvitieteellinen kasvikokoelma. Eteläiset retkipaikat oppaassa, ei keskustakartan venytystä. Zoo jätetty pois nykytilan/paikkaroolin avoimuuden vuoksi.",
-      "Kaikki kuvat odottavat kuvaputkea. Kasvipuutarhan suojatut rakenteet eivät ole kasvikokoelman kuvan pääaiheita; Lola ya Bonobon kaupallinen kuvankäyttö/paikkalupa avoin.",
-      "Sää null: lähdepaketti hylkäsi sadesarjan kausivarmennuksen. Ei käsin lukuja eikä vuodenaikasuositusta.",
-      "Matkustuskäytännöt perustuvat 11.10.2026 luettuun K13:een; D:n nykytilan tarkistus on erillinen portti."
-    ]
+    "huomiot": []
   }
 }
