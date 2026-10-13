@@ -8,104 +8,106 @@
     {
       "era": "e04",
       "city": "bissau",
-      "slot": "PHOTO",
-      "type": "commons",
-      "assetID": "capital-cc-e04-bissau-photo-daeed063f12e98b7",
-      "galleryImageID": "capital-cc-e04-bissau-photo-daeed063f12e98b7",
-      "commonsFile": "Bissau (19362097179).jpg",
-      "targetJsonPath": "$.valokuva",
+      "slot": "O4",
+      "type": "illustration",
+      "assetID": "e04-bissau-o4-job13-v1-20261012T195344Z",
+      "galleryImageID": "e04-bissau-o4-job13-v1-20261012T195344Z",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
       "targetTokens": [
-        "valokuva"
+        "kaupunkilehti",
+        0,
+        "matkailijalle",
+        "artikkeli",
+        "jaksot",
+        3,
+        "kuva"
       ],
       "operation": "merge-media-fields-preserve-other-content",
       "CmediaFieldPayload": {
-        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/bissau/photo-daeed063f12e98b73799.jpg",
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/bissau/e04-bissau-o4-job13-v1-20261012T195344Z-e972f0f3831c.png",
         "suora": true,
-        "lahde": "Barnabe Freixo, Commons (CC BY 2.0)",
-        "selite": "Bissaun talon seinustalla kuivuva pyykki kuuluu arkiseen katutilaan vuoden 2015 valokuvassa.",
-        "lyhyt": "Pyykkinaru kuuluu Bissaun katutilaan vuonna 2015.",
-        "tiedosto": "Bissau (19362097179).jpg"
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva: keitetty riisi ja vihanneskastike.",
+        "lyhyt": "Havainnekuva: keitetty riisi ja vihanneskastike."
       },
-      "removeMediaKeys": [],
-      "CvalidatorCompatiblePayload": {
-        "lahde": "Barnabe Freixo, Commons (CC BY 2.0)",
-        "selite": "Bissaun talon seinustalla kuivuva pyykki kuuluu arkiseen katutilaan vuoden 2015 valokuvassa.",
-        "lyhyt": "Pyykkinaru kuuluu Bissaun katutilaan vuonna 2015.",
-        "tiedosto": "Bissau (19362097179).jpg"
-      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
       "runtimeMediaFieldPayload": {
-        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/bissau/photo-daeed063f12e98b73799.jpg",
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/bissau/e04-bissau-o4-job13-v1-20261012T195344Z-e972f0f3831c.png",
         "suora": true,
-        "lahde": "Barnabe Freixo, Commons (CC BY 2.0)",
-        "selite": "Bissaun talon seinustalla kuivuva pyykki kuuluu arkiseen katutilaan vuoden 2015 valokuvassa.",
-        "lyhyt": "Pyykkinaru kuuluu Bissaun katutilaan vuonna 2015.",
-        "tiedosto": "Bissau (19362097179).jpg"
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva: keitetty riisi ja vihanneskastike.",
+        "lyhyt": "Havainnekuva: keitetty riisi ja vihanneskastike."
       },
-      "runtimeRemoveMediaKeys": [],
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
-      "nativeSHA256": "daeed063f12e98b7379934b8351f092644d3431ab716adf50cb9c20f4df372c8",
-      "exportSHA256": "daeed063f12e98b7379934b8351f092644d3431ab716adf50cb9c20f4df372c8",
-      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/bissau/photo-daeed063f12e98b73799.jpg",
-      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/bissau/photo-daeed063f12e98b73799.jpg",
-      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/commons-originals/e04/bissau/892f170dfebf3c93a947fb419d8b52b3e049ccef5ce1ae3dbce282b75a557d72.org&utm_campaign=index&utm_content=original",
+      "nativeSHA256": "e972f0f3831cf073872c6765b73d7231c75b2e03c053af40d3df1cd7f30e4987",
+      "exportSHA256": "c8b9efe0cc29c3db039d760354ff44baa94232b137a417ee728f9abb3621d272",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/bissau/e04-bissau-o4-job13-v1-20261012T195344Z-e972f0f3831c.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/bissau/e04-bissau-o4-job13-v1-20261012T195344Z-e972f0f3831c.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e04/bissau/e04-bissau-o4-job13-v1-20261012T195344Z-e972f0f3831c.png",
       "dimensions": [
-        5184,
-        3456
+        1536,
+        1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/bissau/sisalto.json",
       "sourceContentSHA256": "048d429b138863c1d51150d22d37d24fee0a387cf28b42adec4ddff5fc1e02c5",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "553176f995cc25c60813fb159a06cfc638ddba1b23afa36c8bea2c386f3b16ea",
-        "semanticContextSHA256": "553176f995cc25c60813fb159a06cfc638ddba1b23afa36c8bea2c386f3b16ea",
-        "subjectTitle": "bissau — aito paikkavalokuva",
+        "targetBeforeSHA256": "cb82965499504e3c8005b12ff75195d6a891a9be53f4e954428cc33299cd4c07",
+        "semanticContextSHA256": "cc7dd8b57941d9e0ed46316af24da24c4cf3fd2c4f791bf604498f6d63708fc0",
+        "subjectTitle": "Riisi saa rinnalleen kastikkeen",
         "targetState": "existing-target"
       },
       "attribution": {
-        "author": "Barnabe Freixo",
-        "license": "CC BY 2.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
-        "sourcePage": "https://commons.wikimedia.org/wiki/File:Bissau_(19362097179).jpg",
-        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b8/Bissau_%2819362097179%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
         "rightsEvidence": {
-          "selection": null,
+          "production": {
+            "kind": "generated-generalized-food-or-produce",
+            "noProtectedWorkDepicted": true,
+            "namedPlaceAppearanceClaimed": false
+          },
           "QA": {
-            "sourcePage": "https://commons.wikimedia.org/wiki/File:Bissau_(19362097179).jpg",
-            "sourceHTML": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/bissau-B/candidate-03.html",
-            "sourceSHA256": "fe910212d904c169488134cd753d70af49764837d8eace8f8fae43f49b7ec17a",
-            "author": [
-              "Barnabe Freixo"
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/bissau/assets/e04-bissau-o4-job13-v1-20261012T195344Z/image.png",
+            "nativeSHA256": "e972f0f3831cf073872c6765b73d7231c75b2e03c053af40d3df1cd7f30e4987",
+            "nativeDimensions": [
+              1536,
+              1024
             ],
-            "availableLicenses": [
-              "CC BY 2.0"
-            ],
-            "width": 5184,
-            "height": 3456,
-            "visualPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/bissau-B/preview-03.jpg",
-            "visualSHA256": "7d8436a284200baa819d695d9e48045281a63334035474d0b1c24ad146938c23",
-            "visuallyInspectedAt": "2026-10-12T17:46:26.849646+00:00",
-            "captionFi": "Bissaun talon seinustalla kuivuva pyykki kuuluu arkiseen katutilaan vuoden 2015 valokuvassa.",
-            "depictedRightsReview": "Aito mustavalkoinen Bissaun katutilan valokuva2015: puut/pyykki/tavallinen toiminnallinen tausta. Ei kasvoja, kuvajulistetta, logoa tai nimettyä suojattua teosta pääaiheena. Barnabe Freixo CC BY2.0 tarkistettu Author-taulukosta; PHOTO ei AI ja vanha kuvausvuosi näkyy captionissa.",
-            "licenceLinksOnSourcePage": [
-              "https://creativecommons.org/publicdomain/zero/1.0/\\",
-              "https://creativecommons.org/licenses/by-sa/4.0/",
-              "https://creativecommons.org/licenses/by/2.0",
-              "https://creativecommons.org/publicdomain/zero/1.0/"
-            ],
-            "currentContentSHA256": "ff73eae8b0f6479a92781bd5947b65cd9e5b1980b0c424d36c10a0613190e906",
-            "currentTargetContent": {
-              "tiedosto": "Bissau (19362097179).jpg",
-              "lyhyt": "Pyykkinaru kuuluu Bissaun katutilaan vuonna 2015.",
-              "selite": "Bissaun talon seinustalla kuivuva pyykki kuuluu arkiseen katutilaan vuoden 2015 valokuvassa.",
-              "lahde": "Barnabe Freixo, Commons (CC BY 2.0)",
-              "vuosi": "2015"
+            "manifestHashMatches": true,
+            "personallyViewed": true,
+            "viewTool": "view_image",
+            "visualFindingsFi": "Keitetty riisi ja tavallinen vihanneskastike erillisissä kulhoissa. Jyvät, kypsät kasvikset, kastike ja astiat luontevat; ei tekstiä/logoja tai ihmisiä.",
+            "captionFi": "Havainnekuva: keitetty riisi ja vihanneskastike.",
+            "sourceAndTargetCheckFi": "O4/faktapohjan riisi ja kasviskastikkeet luettu. CaptionFi havainne, ei paikallinen täsmäresepti tai tietyn Bissaun ravintolan annos.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/bissau/sisalto.json",
+            "sourceEvidence": {
+              "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/bissau/sisalto.json",
+              "sourceContentSHA256": "ff73eae8b0f6479a92781bd5947b65cd9e5b1980b0c424d36c10a0613190e906",
+              "sourceFactSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/bissau/faktapohja.md",
+              "sourceFactSheetSHA256": "f159cc837c81b814bebed381c270361a55c8834a60e52bd807411524b5a0a708",
+              "contentExcerpt": "Guinea-Bissaun ruokataustaan kuuluu riisi sekä kalaa, lihaa tai kasviksia sisältävät keitot ja kastikkeet. Rannikon ruokiin käytetään myös äyriäisiä. Riisin ja lisukkeiden yhdistelmä antaa hyvän lähtökohdan paikalliseen ateriaan tutustumiselle. Kysy päivän tarjonnasta paikan päällä: yksittäisen kojun valikoima ja käytetyt ainekset vaihtelevat.",
+              "supportsFi": "O4 nimeää riisin ja kasviksia sisältävät kastikkeet; K3 nimeää hedelmät, vihannekset ja viljan. Kuva ei nimeä reseptiä, tuottajaa, lajiketta tai todellista toria.",
+              "sourceURLs": [
+                "https://en.wikipedia.org/wiki/Guinea-Bissauan_cuisine"
+              ],
+              "authorization": "Coordinator specifically assigned Bissau O4 and K3 safe general illustration interlude during CC-gap search."
             }
           },
-          "qaReason": "Aito mustavalkoinen Bissaun katutilan valokuva2015: puut/pyykki/tavallinen toiminnallinen tausta. Ei kasvoja, kuvajulistetta, logoa tai nimettyä suojattua teosta pääaiheena. Barnabe Freixo CC BY2.0 tarkistettu Author-taulukosta; PHOTO ei AI ja vanha kuvausvuosi näkyy captionissa."
+          "qaReason": "Riisi-/vihanneskastikehavainne vastaa O4:n maan ruokataustaa."
         }
       },
       "luentaMetadata": {
         "existingImageLuenta": null,
-        "captionReadingText": "Bissaun talon seinustalla kuivuva pyykki kuuluu arkiseen katutilaan vuoden 2015 valokuvassa.",
+        "captionReadingText": "Havainnekuva: keitetty riisi ja vihanneskastike.",
         "existingArticleAndSectionLuentaPreserved": true,
         "audioGenerated": false,
         "audioURL": null,
@@ -113,90 +115,110 @@
         "reuseAudioAllowedByThisPacket": false
       },
       "qaEvidence": {
-        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/bissau/qa.json",
-        "fileSHA256": "32967021f230c6b7b1992db76104fc65120895b1ff9e4b6cc8b6691bac8b19d6",
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/bissau/illustration-qa-extra.json",
+        "fileSHA256": "50a93f231f9cf5abe5ece914be22849cd21786429f2b102c0f9e5549148204aa",
         "item": {
-          "slot": "PHOTO",
-          "targetJsonPath": "$.valokuva",
-          "commonsFile": "Bissau (19362097179).jpg",
+          "slot": "O4",
+          "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+          "assetID": "e04-bissau-o4-job13-v1-20261012T195344Z",
+          "sha256": "e972f0f3831cf073872c6765b73d7231c75b2e03c053af40d3df1cd7f30e4987",
           "verdict": "accepted",
-          "reason": "Aito mustavalkoinen Bissaun katutilan valokuva2015: puut/pyykki/tavallinen toiminnallinen tausta. Ei kasvoja, kuvajulistetta, logoa tai nimettyä suojattua teosta pääaiheena. Barnabe Freixo CC BY2.0 tarkistettu Author-taulukosta; PHOTO ei AI ja vanha kuvausvuosi näkyy captionissa.",
+          "reason": "Riisi-/vihanneskastikehavainne vastaa O4:n maan ruokataustaa.",
           "evidence": {
-            "sourcePage": "https://commons.wikimedia.org/wiki/File:Bissau_(19362097179).jpg",
-            "sourceHTML": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/bissau-B/candidate-03.html",
-            "sourceSHA256": "fe910212d904c169488134cd753d70af49764837d8eace8f8fae43f49b7ec17a",
-            "author": [
-              "Barnabe Freixo"
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/bissau/assets/e04-bissau-o4-job13-v1-20261012T195344Z/image.png",
+            "nativeSHA256": "e972f0f3831cf073872c6765b73d7231c75b2e03c053af40d3df1cd7f30e4987",
+            "nativeDimensions": [
+              1536,
+              1024
             ],
-            "availableLicenses": [
-              "CC BY 2.0"
-            ],
-            "width": 5184,
-            "height": 3456,
-            "visualPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/bissau-B/preview-03.jpg",
-            "visualSHA256": "7d8436a284200baa819d695d9e48045281a63334035474d0b1c24ad146938c23",
-            "visuallyInspectedAt": "2026-10-12T17:46:26.849646+00:00",
-            "captionFi": "Bissaun talon seinustalla kuivuva pyykki kuuluu arkiseen katutilaan vuoden 2015 valokuvassa.",
-            "depictedRightsReview": "Aito mustavalkoinen Bissaun katutilan valokuva2015: puut/pyykki/tavallinen toiminnallinen tausta. Ei kasvoja, kuvajulistetta, logoa tai nimettyä suojattua teosta pääaiheena. Barnabe Freixo CC BY2.0 tarkistettu Author-taulukosta; PHOTO ei AI ja vanha kuvausvuosi näkyy captionissa.",
-            "licenceLinksOnSourcePage": [
-              "https://creativecommons.org/publicdomain/zero/1.0/\\",
-              "https://creativecommons.org/licenses/by-sa/4.0/",
-              "https://creativecommons.org/licenses/by/2.0",
-              "https://creativecommons.org/publicdomain/zero/1.0/"
-            ],
-            "currentContentSHA256": "ff73eae8b0f6479a92781bd5947b65cd9e5b1980b0c424d36c10a0613190e906",
-            "currentTargetContent": {
-              "tiedosto": "Bissau (19362097179).jpg",
-              "lyhyt": "Pyykkinaru kuuluu Bissaun katutilaan vuonna 2015.",
-              "selite": "Bissaun talon seinustalla kuivuva pyykki kuuluu arkiseen katutilaan vuoden 2015 valokuvassa.",
-              "lahde": "Barnabe Freixo, Commons (CC BY 2.0)",
-              "vuosi": "2015"
+            "manifestHashMatches": true,
+            "personallyViewed": true,
+            "viewTool": "view_image",
+            "visualFindingsFi": "Keitetty riisi ja tavallinen vihanneskastike erillisissä kulhoissa. Jyvät, kypsät kasvikset, kastike ja astiat luontevat; ei tekstiä/logoja tai ihmisiä.",
+            "captionFi": "Havainnekuva: keitetty riisi ja vihanneskastike.",
+            "sourceAndTargetCheckFi": "O4/faktapohjan riisi ja kasviskastikkeet luettu. CaptionFi havainne, ei paikallinen täsmäresepti tai tietyn Bissaun ravintolan annos.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/bissau/sisalto.json",
+            "sourceEvidence": {
+              "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/bissau/sisalto.json",
+              "sourceContentSHA256": "ff73eae8b0f6479a92781bd5947b65cd9e5b1980b0c424d36c10a0613190e906",
+              "sourceFactSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/bissau/faktapohja.md",
+              "sourceFactSheetSHA256": "f159cc837c81b814bebed381c270361a55c8834a60e52bd807411524b5a0a708",
+              "contentExcerpt": "Guinea-Bissaun ruokataustaan kuuluu riisi sekä kalaa, lihaa tai kasviksia sisältävät keitot ja kastikkeet. Rannikon ruokiin käytetään myös äyriäisiä. Riisin ja lisukkeiden yhdistelmä antaa hyvän lähtökohdan paikalliseen ateriaan tutustumiselle. Kysy päivän tarjonnasta paikan päällä: yksittäisen kojun valikoima ja käytetyt ainekset vaihtelevat.",
+              "supportsFi": "O4 nimeää riisin ja kasviksia sisältävät kastikkeet; K3 nimeää hedelmät, vihannekset ja viljan. Kuva ei nimeä reseptiä, tuottajaa, lajiketta tai todellista toria.",
+              "sourceURLs": [
+                "https://en.wikipedia.org/wiki/Guinea-Bissauan_cuisine"
+              ],
+              "authorization": "Coordinator specifically assigned Bissau O4 and K3 safe general illustration interlude during CC-gap search."
             }
-          }
+          },
+          "reviewedAt": "2026-10-12T20:44:14.723281+00:00"
         },
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/bissau/qa.json",
-            "sha256": "32967021f230c6b7b1992db76104fc65120895b1ff9e4b6cc8b6691bac8b19d6"
+            "sha256": "1fcde7dda73c8602e6db03997a7d5a73217c086c6194a89be8880bd72817f8b1"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/bissau/illustration-qa-extra.json",
+            "sha256": "50a93f231f9cf5abe5ece914be22849cd21786429f2b102c0f9e5549148204aa"
           }
         ]
       },
       "R2ByteVerification": {
-        "era": "e04",
-        "city": "bissau",
-        "slot": "PHOTO",
-        "targetJsonPath": "$.valokuva",
-        "commonsFile": "Bissau (19362097179).jpg",
-        "sha256": "daeed063f12e98b7379934b8351f092644d3431ab716adf50cb9c20f4df372c8",
-        "sourcePage": "https://commons.wikimedia.org/wiki/File:Bissau_(19362097179).jpg",
-        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b8/Bissau_%2819362097179%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
-        "author": "Barnabe Freixo",
-        "license": "CC BY 2.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
-        "width": 5184,
-        "height": 3456,
-        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/bissau/photo-daeed063f12e98b73799.jpg",
-        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/bissau/photo-daeed063f12e98b73799.jpg",
-        "bytes": 7520281,
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/bissau/e04-bissau-o4-job13-v1-20261012T195344Z-e972f0f3831c.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/bissau/e04-bissau-o4-job13-v1-20261012T195344Z-e972f0f3831c.png?t=c8b9efe0cc29c3db",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/bissau/e04-bissau-o4-job13-v1-20261012T195344Z-e972f0f3831c.png",
+        "sha256": "c8b9efe0cc29c3db039d760354ff44baa94232b137a417ee728f9abb3621d272",
+        "bytes": 2210124,
         "http": 200,
-        "mime": "image/jpeg",
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
         "byteExactReadback": true,
-        "canonicalReadbackByteExact": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
         "conditionalIfNoneMatch": "*",
         "s3PutHttp": 200,
-        "verifiedAt": "2026-10-12T18:05:31.151625+00:00",
+        "assetID": "e04-bissau-o4-job13-v1-20261012T195344Z",
+        "nativeSHA256": "e972f0f3831cf073872c6765b73d7231c75b2e03c053af40d3df1cd7f30e4987",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e04/bissau/e04-bissau-o4-job13-v1-20261012T195344Z-e972f0f3831c.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e04",
+        "city": "bissau",
+        "slot": "O4",
+        "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+        "verifiedAt": "2026-10-12T20:45:17.864723+00:00",
         "ownerAcceptanceVerified": false,
         "gameIntegrated": false,
-        "attributionSource": "current-exact-QA-and-source-manifest"
+        "galleryVisibleVerified": false
       },
       "producerExportProof": null,
-      "technicalExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e04/bissau/e04-bissau-o4-job13-v1-20261012T195344Z-e972f0f3831c.png",
+        "sha256": "c8b9efe0cc29c3db039d760354ff44baa94232b137a417ee728f9abb3621d272",
+        "bytes": 2210124,
+        "SHAReadAt": "2026-10-12T20:44:17.044314+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "e972f0f3831cf073872c6765b73d7231c75b2e03c053af40d3df1cd7f30e4987",
+        "rgbPixelSHA256": "16c7ebdc2ccae49746603b729145ebbb5ec58a152f706b171cf18f80b15ff15c",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
       "priorMediaFields": {
-        "tiedosto": "Bissau (19362097179).jpg",
-        "lahde": "Barnabe Freixo, Commons (CC BY 2.0)",
-        "selite": "Bissaun talon seinustalla kuivuva pyykki kuuluu arkiseen katutilaan vuoden 2015 valokuvassa.",
-        "lyhyt": "Pyykkinaru kuuluu Bissaun katutilaan vuonna 2015.",
-        "vuosi": "2015"
+        "tiedosto": "Cooked Rice 2.jpg",
+        "lahde": "Gaurav Dhwaj Khadka, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Nepalissa vuonna 2022 kuvattu keitetty riisi havainnollistaa ruoka-ainetta, joka kuuluu myös Guinea-Bissaun ruokataustaan.",
+        "lyhyt": "Nepalissa kuvattu riisi on ruoka-aineen yleiskuva."
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -219,17 +241,476 @@
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
-      "CcommonsMetadataBound": true,
-      "CcommonsFieldPayload": {
-        "lahde": "Barnabe Freixo, Commons (CC BY 2.0)",
-        "selite": "Bissaun talon seinustalla kuivuva pyykki kuuluu arkiseen katutilaan vuoden 2015 valokuvassa.",
-        "lyhyt": "Pyykkinaru kuuluu Bissaun katutilaan vuonna 2015.",
-        "tiedosto": "Bissau (19362097179).jpg"
-      },
+      "CcommonsMetadataBound": false,
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "048d429b138863c1d51150d22d37d24fee0a387cf28b42adec4ddff5fc1e02c5",
-      "targetAfterSHA256": "553176f995cc25c60813fb159a06cfc638ddba1b23afa36c8bea2c386f3b16ea",
-      "contextAfterSHA256": "553176f995cc25c60813fb159a06cfc638ddba1b23afa36c8bea2c386f3b16ea"
+      "targetAfterSHA256": "cb82965499504e3c8005b12ff75195d6a891a9be53f4e954428cc33299cd4c07",
+      "contextAfterSHA256": "cc7dd8b57941d9e0ed46316af24da24c4cf3fd2c4f791bf604498f6d63708fc0"
+    },
+    {
+      "era": "e04",
+      "city": "bissau",
+      "slot": "K3",
+      "type": "illustration",
+      "assetID": "bissau-k3-tuoreet-tavarat-20261012-v1",
+      "galleryImageID": "bissau-k3-tuoreet-tavarat-20261012-v1",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].nostot[2]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "nostot",
+        2
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/bissau/bissau-k3-tuoreet-tavarat-20261012-v1-563d1d678c80.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Hedelmien, vihannesten ja irtojyvien yleishavainne, ei Bandimin markkinakojun kuva.",
+        "lyhyt": "Hedelmien, vihannesten ja irtojyvien yleishavainne, ei Bandimin markkinakojun kuva."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/bissau/bissau-k3-tuoreet-tavarat-20261012-v1-563d1d678c80.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Hedelmien, vihannesten ja irtojyvien yleishavainne, ei Bandimin markkinakojun kuva.",
+        "lyhyt": "Hedelmien, vihannesten ja irtojyvien yleishavainne, ei Bandimin markkinakojun kuva."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "563d1d678c805167bd6e489ddd7d966d1a002a044d7d131a0ba5d06c4b959c5d",
+      "exportSHA256": "2165eaeb2a22d4f5729cdd08db7400cc86ce5176591ddb24b8b672204668f21d",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/bissau/bissau-k3-tuoreet-tavarat-20261012-v1-563d1d678c80.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/bissau/bissau-k3-tuoreet-tavarat-20261012-v1-563d1d678c80.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e04/bissau/bissau-k3-tuoreet-tavarat-20261012-v1-563d1d678c80.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/bissau/sisalto.json",
+      "sourceContentSHA256": "048d429b138863c1d51150d22d37d24fee0a387cf28b42adec4ddff5fc1e02c5",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e193f7e9ed2e283da0b1656a41777e4a823cb1a7a9d0f4f1a27a4cbd9b04609a",
+        "semanticContextSHA256": "e193f7e9ed2e283da0b1656a41777e4a823cb1a7a9d0f4f1a27a4cbd9b04609a",
+        "subjectTitle": "Bandimissa ostetaan arkea",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Alkuperäinen luonnollisen ruokamateriaalin ja tavallisen koristeettoman astian havainnollistus, ei myyjä, valokuvasommittelu, suojattu tekstiili, taideteos tai kaupunkiasettelu.",
+          "QA": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/bissau/assets/bissau-k3-tuoreet-tavarat-20261012-v1/image.png",
+            "nativeSHA256": "563d1d678c805167bd6e489ddd7d966d1a002a044d7d131a0ba5d06c4b959c5d",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "manifestHashMatches": true,
+            "personallyViewed": true,
+            "viewTool": "view_image",
+            "visualFindingsFi": "Hedelmiä, vihanneksia ja irtoriisiä. Muodot, kuoret, jyvät ja valo luontevat; ei tekstiä, logoja tai ihmisiä.",
+            "captionFi": "Hedelmien, vihannesten ja irtojyvien yleishavainne, ei Bandimin markkinakojun kuva.",
+            "sourceAndTargetCheckFi": "K3/faktapohjan S6 hedelmä-/vihannes-/viljakauppa luettu. CaptionFi yleishavainne, ei Bandimin todellinen koju, valikoimalupaus tai paikallinen lajike.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/bissau/sisalto.json",
+            "sourceEvidence": [
+              {
+                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/bissau/sisalto.json",
+                "facts": "K3: hedelmät, vihannekset ja vilja kuuluvat Bandimin markkinan kuvattuihin tavaraluokkiin, ei yksittäisen kojun tarjontalupaus."
+              },
+              {
+                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/bissau/faktapohja.md",
+                "facts": "S6 mainitsee hedelmät, vihannekset ja viljat; kuva on yleinen ruokamateriaali eikä arkkitehtuurin jäljennös."
+              },
+              {
+                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/bissau/qa-feedback.md",
+                "facts": "Vanha katukuva QA rejected luettavien kasvojen takia; alkuperäinen säilyy."
+              }
+            ]
+          },
+          "qaReason": "Tavaraluokkien yleishavainne vastaa K3:n markkina-aihetta."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Hedelmien, vihannesten ja irtojyvien yleishavainne, ei Bandimin markkinakojun kuva.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/bissau/illustration-qa-extra.json",
+        "fileSHA256": "50a93f231f9cf5abe5ece914be22849cd21786429f2b102c0f9e5549148204aa",
+        "item": {
+          "slot": "K3",
+          "targetJsonPath": "$.kaupunkilehti[0].nostot[2]",
+          "assetID": "bissau-k3-tuoreet-tavarat-20261012-v1",
+          "sha256": "563d1d678c805167bd6e489ddd7d966d1a002a044d7d131a0ba5d06c4b959c5d",
+          "verdict": "accepted",
+          "reason": "Tavaraluokkien yleishavainne vastaa K3:n markkina-aihetta.",
+          "evidence": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/bissau/assets/bissau-k3-tuoreet-tavarat-20261012-v1/image.png",
+            "nativeSHA256": "563d1d678c805167bd6e489ddd7d966d1a002a044d7d131a0ba5d06c4b959c5d",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "manifestHashMatches": true,
+            "personallyViewed": true,
+            "viewTool": "view_image",
+            "visualFindingsFi": "Hedelmiä, vihanneksia ja irtoriisiä. Muodot, kuoret, jyvät ja valo luontevat; ei tekstiä, logoja tai ihmisiä.",
+            "captionFi": "Hedelmien, vihannesten ja irtojyvien yleishavainne, ei Bandimin markkinakojun kuva.",
+            "sourceAndTargetCheckFi": "K3/faktapohjan S6 hedelmä-/vihannes-/viljakauppa luettu. CaptionFi yleishavainne, ei Bandimin todellinen koju, valikoimalupaus tai paikallinen lajike.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/bissau/sisalto.json",
+            "sourceEvidence": [
+              {
+                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/bissau/sisalto.json",
+                "facts": "K3: hedelmät, vihannekset ja vilja kuuluvat Bandimin markkinan kuvattuihin tavaraluokkiin, ei yksittäisen kojun tarjontalupaus."
+              },
+              {
+                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/bissau/faktapohja.md",
+                "facts": "S6 mainitsee hedelmät, vihannekset ja viljat; kuva on yleinen ruokamateriaali eikä arkkitehtuurin jäljennös."
+              },
+              {
+                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/bissau/qa-feedback.md",
+                "facts": "Vanha katukuva QA rejected luettavien kasvojen takia; alkuperäinen säilyy."
+              }
+            ]
+          },
+          "reviewedAt": "2026-10-12T20:43:17.044304+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/bissau/qa.json",
+            "sha256": "1fcde7dda73c8602e6db03997a7d5a73217c086c6194a89be8880bd72817f8b1"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/bissau/illustration-qa-extra.json",
+            "sha256": "50a93f231f9cf5abe5ece914be22849cd21786429f2b102c0f9e5549148204aa"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/bissau/bissau-k3-tuoreet-tavarat-20261012-v1-563d1d678c80.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/bissau/bissau-k3-tuoreet-tavarat-20261012-v1-563d1d678c80.png?t=2165eaeb2a22d4f5",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/bissau/bissau-k3-tuoreet-tavarat-20261012-v1-563d1d678c80.png",
+        "sha256": "2165eaeb2a22d4f5729cdd08db7400cc86ce5176591ddb24b8b672204668f21d",
+        "bytes": 2421839,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "bissau-k3-tuoreet-tavarat-20261012-v1",
+        "nativeSHA256": "563d1d678c805167bd6e489ddd7d966d1a002a044d7d131a0ba5d06c4b959c5d",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e04/bissau/bissau-k3-tuoreet-tavarat-20261012-v1-563d1d678c80.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e04",
+        "city": "bissau",
+        "slot": "K3",
+        "targetJsonPath": "$.kaupunkilehti[0].nostot[2]",
+        "verifiedAt": "2026-10-12T20:44:11.575994+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e04/bissau/bissau-k3-tuoreet-tavarat-20261012-v1-563d1d678c80.png",
+        "sha256": "2165eaeb2a22d4f5729cdd08db7400cc86ce5176591ddb24b8b672204668f21d",
+        "bytes": 2421839,
+        "SHAReadAt": "2026-10-12T20:44:04.673121+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "563d1d678c805167bd6e489ddd7d966d1a002a044d7d131a0ba5d06c4b959c5d",
+        "rgbPixelSHA256": "1dcc5aa9518c2a3b24e532fcf83979b5fff02b6d88a1599dc2f1a0c3b07ada44",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "Avenida dos Combatentes da Liberdade da Pátria, Bissau (1).jpg",
+        "lahde": "Joehawkins, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Avenida dos Combatentes da Liberdade da Pátria kulkee Bandimin markkinan laidalla, tässä vuoden 2017 katunäkymässä.",
+        "lyhyt": "Avenue kulkee Bandimin markkinan laidalla vuonna 2017."
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "048d429b138863c1d51150d22d37d24fee0a387cf28b42adec4ddff5fc1e02c5",
+      "targetAfterSHA256": "e193f7e9ed2e283da0b1656a41777e4a823cb1a7a9d0f4f1a27a4cbd9b04609a",
+      "contextAfterSHA256": "e193f7e9ed2e283da0b1656a41777e4a823cb1a7a9d0f4f1a27a4cbd9b04609a"
+    },
+    {
+      "era": "e04",
+      "city": "bissau",
+      "slot": "N2",
+      "type": "illustration",
+      "assetID": "bissau-n2-puu-muuraus-20261012-v1",
+      "galleryImageID": "bissau-n2-puu-muuraus-20261012-v1",
+      "commonsFile": null,
+      "targetJsonPath": "$.nahtavyydet[\"Pidjiguitin laituri\"].kuvat[0]",
+      "targetTokens": [
+        "nahtavyydet",
+        "Pidjiguitin laituri",
+        "kuvat",
+        0
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/bissau/bissau-n2-puu-muuraus-20261012-v1-8d2b7b039b7d.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Puun ja muurauksen yleinen materiaalihavainne, ei Pidjiguitin laiturin näkymä tai rakenne.",
+        "lyhyt": "Puun ja muurauksen yleinen materiaalihavainne, ei Pidjiguitin laiturin näkymä tai rakenne."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/bissau/bissau-n2-puu-muuraus-20261012-v1-8d2b7b039b7d.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Puun ja muurauksen yleinen materiaalihavainne, ei Pidjiguitin laiturin näkymä tai rakenne.",
+        "lyhyt": "Puun ja muurauksen yleinen materiaalihavainne, ei Pidjiguitin laiturin näkymä tai rakenne."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "8d2b7b039b7d264fb615a1ea605fff39494ec1cd3e4b6d46d52bd48b1c0c7362",
+      "exportSHA256": "71526161e3ec9a2fd00971a9e652843269f5be765da3086e829d35ac52e144c5",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/bissau/bissau-n2-puu-muuraus-20261012-v1-8d2b7b039b7d.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/bissau/bissau-n2-puu-muuraus-20261012-v1-8d2b7b039b7d.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e04/bissau/bissau-n2-puu-muuraus-20261012-v1-8d2b7b039b7d.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/bissau/sisalto.json",
+      "sourceContentSHA256": "048d429b138863c1d51150d22d37d24fee0a387cf28b42adec4ddff5fc1e02c5",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "semanticContextSHA256": "82b05ca3e0f01b2f31859e0d2850e6132da7422ed3aefd38138ee3e9575fca23",
+        "subjectTitle": "Pidjiguitin laituri",
+        "targetState": "fillable-empty-first-image-array"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Alkuperäinen tavallisten materiaalinäytteiden havainne; ei tietyn laiturin arkkitehtuuri, historiallinen valokuva, taideteos, tunnistettava valmistaja tai koristeltu artefakti. Todellisen laiturikuvan paikkaportti jää erilliseksi.",
+          "QA": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/bissau/assets/bissau-n2-puu-muuraus-20261012-v1/image.png",
+            "nativeSHA256": "8d2b7b039b7d264fb615a1ea605fff39494ec1cd3e4b6d46d52bd48b1c0c7362",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "manifestHashMatches": true,
+            "personallyViewed": true,
+            "viewTool": "view_image",
+            "visualFindingsFi": "Puulankkuja ja tavallisia kivisiä muurausmateriaaleja; syyt, murtumat ja kivet luontevat. Ei rakennelman/asettelun rekonstruktiota tai merkintöjä.",
+            "captionFi": "Puun ja muurauksen yleinen materiaalihavainne, ei Pidjiguitin laiturin näkymä tai rakenne.",
+            "sourceAndTargetCheckFi": "Pidjiguitin laituri -objekti olemassa, kuvat:[] on täytettävä kuvat[0]-paikka. Teksti/faktapohja nimeävät puun/muurauksen. CaptionFi yleinen materiaalihavainne, ei laiturin näkymä/rakenne tai 1873-kuva.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/bissau/sisalto.json",
+            "sourceEvidence": [
+              {
+                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/bissau/sisalto.json",
+                "facts": "Pidjiguitin jutun varhaista rakennetta kuvataan puun ja muurauksen yhdistelmänä; kuvitetaan vain materiaaliluokat."
+              },
+              {
+                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/bissau/faktapohja.md",
+                "facts": "Historiallinen materiaalifakta erotettu nykyisestä laiturista, eikä vuotta1873 rekonstruoida."
+              }
+            ]
+          },
+          "qaReason": "Puun/muurauksen materiaalihavainne vastaa olemassa olevan N2:n materiaaleja."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Puun ja muurauksen yleinen materiaalihavainne, ei Pidjiguitin laiturin näkymä tai rakenne.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/bissau/illustration-qa-extra.json",
+        "fileSHA256": "50a93f231f9cf5abe5ece914be22849cd21786429f2b102c0f9e5549148204aa",
+        "item": {
+          "slot": "N2",
+          "targetJsonPath": "$.nahtavyydet[\"Pidjiguitin laituri\"].kuvat[0]",
+          "assetID": "bissau-n2-puu-muuraus-20261012-v1",
+          "sha256": "8d2b7b039b7d264fb615a1ea605fff39494ec1cd3e4b6d46d52bd48b1c0c7362",
+          "verdict": "accepted",
+          "reason": "Puun/muurauksen materiaalihavainne vastaa olemassa olevan N2:n materiaaleja.",
+          "evidence": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/bissau/assets/bissau-n2-puu-muuraus-20261012-v1/image.png",
+            "nativeSHA256": "8d2b7b039b7d264fb615a1ea605fff39494ec1cd3e4b6d46d52bd48b1c0c7362",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "manifestHashMatches": true,
+            "personallyViewed": true,
+            "viewTool": "view_image",
+            "visualFindingsFi": "Puulankkuja ja tavallisia kivisiä muurausmateriaaleja; syyt, murtumat ja kivet luontevat. Ei rakennelman/asettelun rekonstruktiota tai merkintöjä.",
+            "captionFi": "Puun ja muurauksen yleinen materiaalihavainne, ei Pidjiguitin laiturin näkymä tai rakenne.",
+            "sourceAndTargetCheckFi": "Pidjiguitin laituri -objekti olemassa, kuvat:[] on täytettävä kuvat[0]-paikka. Teksti/faktapohja nimeävät puun/muurauksen. CaptionFi yleinen materiaalihavainne, ei laiturin näkymä/rakenne tai 1873-kuva.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/bissau/sisalto.json",
+            "sourceEvidence": [
+              {
+                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/bissau/sisalto.json",
+                "facts": "Pidjiguitin jutun varhaista rakennetta kuvataan puun ja muurauksen yhdistelmänä; kuvitetaan vain materiaaliluokat."
+              },
+              {
+                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/bissau/faktapohja.md",
+                "facts": "Historiallinen materiaalifakta erotettu nykyisestä laiturista, eikä vuotta1873 rekonstruoida."
+              }
+            ]
+          },
+          "reviewedAt": "2026-10-12T20:36:36.478561+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/bissau/qa.json",
+            "sha256": "1fcde7dda73c8602e6db03997a7d5a73217c086c6194a89be8880bd72817f8b1"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/bissau/illustration-qa-extra.json",
+            "sha256": "50a93f231f9cf5abe5ece914be22849cd21786429f2b102c0f9e5549148204aa"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/bissau/bissau-n2-puu-muuraus-20261012-v1-8d2b7b039b7d.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/bissau/bissau-n2-puu-muuraus-20261012-v1-8d2b7b039b7d.png?t=71526161e3ec9a2f",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/bissau/bissau-n2-puu-muuraus-20261012-v1-8d2b7b039b7d.png",
+        "sha256": "71526161e3ec9a2fd00971a9e652843269f5be765da3086e829d35ac52e144c5",
+        "bytes": 3422315,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "bissau-n2-puu-muuraus-20261012-v1",
+        "nativeSHA256": "8d2b7b039b7d264fb615a1ea605fff39494ec1cd3e4b6d46d52bd48b1c0c7362",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e04/bissau/bissau-n2-puu-muuraus-20261012-v1-8d2b7b039b7d.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e04",
+        "city": "bissau",
+        "slot": "N2",
+        "targetJsonPath": "$.nahtavyydet[\"Pidjiguitin laituri\"].kuvat[0]",
+        "verifiedAt": "2026-10-12T20:37:16.845034+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e04/bissau/bissau-n2-puu-muuraus-20261012-v1-8d2b7b039b7d.png",
+        "sha256": "71526161e3ec9a2fd00971a9e652843269f5be765da3086e829d35ac52e144c5",
+        "bytes": 3422315,
+        "SHAReadAt": "2026-10-12T20:36:47.602571+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "8d2b7b039b7d264fb615a1ea605fff39494ec1cd3e4b6d46d52bd48b1c0c7362",
+        "rgbPixelSHA256": "fce267c119998e0cef080abd95daee5c8e1b0a8993fb82dd9a9bc7d9e988c57a",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {},
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "048d429b138863c1d51150d22d37d24fee0a387cf28b42adec4ddff5fc1e02c5",
+      "targetAfterSHA256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "contextAfterSHA256": "82b05ca3e0f01b2f31859e0d2850e6132da7422ed3aefd38138ee3e9575fca23"
     },
     {
       "era": "e04",
@@ -326,6 +807,28 @@
               "lyhyt": "Bissau Velhon kadut kuuluvat vanhaan keskustaan.",
               "selite": "Bissau Velhon katutila vuonna 2019 kuuluu kaupungin historialliseen ytimeen, jonka vanhat talot ovat edelleen asiointiympäristöä.",
               "lahde": "Jcornelius, Wikimedia Commons (CC BY-SA 4.0)"
+            },
+            "currentContentVersionCheck": {
+              "reviewedContentSHA256": "ff73eae8b0f6479a92781bd5947b65cd9e5b1980b0c424d36c10a0613190e906",
+              "currentContentSHA256": "048d429b138863c1d51150d22d37d24fee0a387cf28b42adec4ddff5fc1e02c5",
+              "checkedAt": "2026-10-13T05:48:16.653754+00:00",
+              "personallyViewedAgain": false,
+              "reviewedSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/c-integration/history/e04/bissau/ff73eae8b0f6479a92781bd5947b65cd9e5b1980b0c424d36c10a0613190e906-sisalto.json",
+              "reviewedSnapshotSHA256": "ff73eae8b0f6479a92781bd5947b65cd9e5b1980b0c424d36c10a0613190e906",
+              "matches": true,
+              "method": "exact archived content SHA and full nonmedia comparison",
+              "reviewedNonmediaSHA256": "4abacf653d73edb2b0e36fa6852a7a6e917247e10ba60eba4fe895b8118adf81",
+              "currentNonmediaSHA256": "4abacf653d73edb2b0e36fa6852a7a6e917247e10ba60eba4fe895b8118adf81",
+              "imageFieldsExcludedOnlyAtInventoriedSlots": true
+            },
+            "currentBindingMetadataCheck": {
+              "checkedAt": "2026-10-13T05:48:16.659734+00:00",
+              "contentSHA256": "048d429b138863c1d51150d22d37d24fee0a387cf28b42adec4ddff5fc1e02c5",
+              "commonsFile": "View of Bissau Velho, Bissau.jpg",
+              "captionFi": "Bissau Velhon katutila vuonna 2019 kuuluu kaupungin historialliseen ytimeen, jonka vanhat talot ovat edelleen asiointiympäristöä.",
+              "credit": "Jcornelius, Wikimedia Commons (CC BY-SA 4.0)",
+              "captionMatchesReviewed": true,
+              "personallyViewedAgain": false
             }
           },
           "qaReason": "Bissau Velhon aito laaja katuympäristö. Ei luettavia kasvoja tai lisättyä merkintää. Rakennuskanta kokonaismaisemana, ei nimettyä suojattua nykyteosta päämotiivina; valokuvan author/lisenssi lähdesivulta. Ei kaikkien julkisivujen PD-väitettä."
@@ -342,7 +845,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/bissau/qa.json",
-        "fileSHA256": "32967021f230c6b7b1992db76104fc65120895b1ff9e4b6cc8b6691bac8b19d6",
+        "fileSHA256": "1fcde7dda73c8602e6db03997a7d5a73217c086c6194a89be8880bd72817f8b1",
         "item": {
           "slot": "C1",
           "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
@@ -378,13 +881,39 @@
               "lyhyt": "Bissau Velhon kadut kuuluvat vanhaan keskustaan.",
               "selite": "Bissau Velhon katutila vuonna 2019 kuuluu kaupungin historialliseen ytimeen, jonka vanhat talot ovat edelleen asiointiympäristöä.",
               "lahde": "Jcornelius, Wikimedia Commons (CC BY-SA 4.0)"
+            },
+            "currentContentVersionCheck": {
+              "reviewedContentSHA256": "ff73eae8b0f6479a92781bd5947b65cd9e5b1980b0c424d36c10a0613190e906",
+              "currentContentSHA256": "048d429b138863c1d51150d22d37d24fee0a387cf28b42adec4ddff5fc1e02c5",
+              "checkedAt": "2026-10-13T05:48:16.653754+00:00",
+              "personallyViewedAgain": false,
+              "reviewedSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/c-integration/history/e04/bissau/ff73eae8b0f6479a92781bd5947b65cd9e5b1980b0c424d36c10a0613190e906-sisalto.json",
+              "reviewedSnapshotSHA256": "ff73eae8b0f6479a92781bd5947b65cd9e5b1980b0c424d36c10a0613190e906",
+              "matches": true,
+              "method": "exact archived content SHA and full nonmedia comparison",
+              "reviewedNonmediaSHA256": "4abacf653d73edb2b0e36fa6852a7a6e917247e10ba60eba4fe895b8118adf81",
+              "currentNonmediaSHA256": "4abacf653d73edb2b0e36fa6852a7a6e917247e10ba60eba4fe895b8118adf81",
+              "imageFieldsExcludedOnlyAtInventoriedSlots": true
+            },
+            "currentBindingMetadataCheck": {
+              "checkedAt": "2026-10-13T05:48:16.659734+00:00",
+              "contentSHA256": "048d429b138863c1d51150d22d37d24fee0a387cf28b42adec4ddff5fc1e02c5",
+              "commonsFile": "View of Bissau Velho, Bissau.jpg",
+              "captionFi": "Bissau Velhon katutila vuonna 2019 kuuluu kaupungin historialliseen ytimeen, jonka vanhat talot ovat edelleen asiointiympäristöä.",
+              "credit": "Jcornelius, Wikimedia Commons (CC BY-SA 4.0)",
+              "captionMatchesReviewed": true,
+              "personallyViewedAgain": false
             }
           }
         },
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/bissau/qa.json",
-            "sha256": "32967021f230c6b7b1992db76104fc65120895b1ff9e4b6cc8b6691bac8b19d6"
+            "sha256": "1fcde7dda73c8602e6db03997a7d5a73217c086c6194a89be8880bd72817f8b1"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/bissau/illustration-qa-extra.json",
+            "sha256": "50a93f231f9cf5abe5ece914be22849cd21786429f2b102c0f9e5549148204aa"
           }
         ]
       },
@@ -552,6 +1081,28 @@
               "lyhyt": "Bissaun uudemman sataman vesinäkymä vuonna 2017.",
               "selite": "Bissaun sataman yleisnäkymä vuodelta 2017 näyttää myöhempää laituriympäristöä Geban rannalla.",
               "lahde": "Joehawkins, Wikimedia Commons (CC BY-SA 4.0)"
+            },
+            "currentContentVersionCheck": {
+              "reviewedContentSHA256": "ff73eae8b0f6479a92781bd5947b65cd9e5b1980b0c424d36c10a0613190e906",
+              "currentContentSHA256": "048d429b138863c1d51150d22d37d24fee0a387cf28b42adec4ddff5fc1e02c5",
+              "checkedAt": "2026-10-13T05:48:16.653754+00:00",
+              "personallyViewedAgain": false,
+              "reviewedSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/c-integration/history/e04/bissau/ff73eae8b0f6479a92781bd5947b65cd9e5b1980b0c424d36c10a0613190e906-sisalto.json",
+              "reviewedSnapshotSHA256": "ff73eae8b0f6479a92781bd5947b65cd9e5b1980b0c424d36c10a0613190e906",
+              "matches": true,
+              "method": "exact archived content SHA and full nonmedia comparison",
+              "reviewedNonmediaSHA256": "4abacf653d73edb2b0e36fa6852a7a6e917247e10ba60eba4fe895b8118adf81",
+              "currentNonmediaSHA256": "4abacf653d73edb2b0e36fa6852a7a6e917247e10ba60eba4fe895b8118adf81",
+              "imageFieldsExcludedOnlyAtInventoriedSlots": true
+            },
+            "currentBindingMetadataCheck": {
+              "checkedAt": "2026-10-13T05:48:16.662175+00:00",
+              "contentSHA256": "048d429b138863c1d51150d22d37d24fee0a387cf28b42adec4ddff5fc1e02c5",
+              "commonsFile": "Porto de Bissau 03.jpg",
+              "captionFi": "Bissaun sataman yleisnäkymä vuodelta 2017 näyttää myöhempää laituriympäristöä Geban rannalla.",
+              "credit": "Joehawkins, Wikimedia Commons (CC BY-SA 4.0)",
+              "captionMatchesReviewed": true,
+              "personallyViewedAgain": false
             }
           },
           "qaReason": "Bissaun nykyisen sataman laaja vesinäkymä, laiturit ja käyttöalukset kaukana. Ei kasvoja tai taideteosta päämotiivina. Caption ei nimeä kuvaa Pidjiguitin vanhaksi laituriksi."
@@ -568,7 +1119,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/bissau/qa.json",
-        "fileSHA256": "32967021f230c6b7b1992db76104fc65120895b1ff9e4b6cc8b6691bac8b19d6",
+        "fileSHA256": "1fcde7dda73c8602e6db03997a7d5a73217c086c6194a89be8880bd72817f8b1",
         "item": {
           "slot": "C2",
           "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[1]",
@@ -604,13 +1155,39 @@
               "lyhyt": "Bissaun uudemman sataman vesinäkymä vuonna 2017.",
               "selite": "Bissaun sataman yleisnäkymä vuodelta 2017 näyttää myöhempää laituriympäristöä Geban rannalla.",
               "lahde": "Joehawkins, Wikimedia Commons (CC BY-SA 4.0)"
+            },
+            "currentContentVersionCheck": {
+              "reviewedContentSHA256": "ff73eae8b0f6479a92781bd5947b65cd9e5b1980b0c424d36c10a0613190e906",
+              "currentContentSHA256": "048d429b138863c1d51150d22d37d24fee0a387cf28b42adec4ddff5fc1e02c5",
+              "checkedAt": "2026-10-13T05:48:16.653754+00:00",
+              "personallyViewedAgain": false,
+              "reviewedSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/c-integration/history/e04/bissau/ff73eae8b0f6479a92781bd5947b65cd9e5b1980b0c424d36c10a0613190e906-sisalto.json",
+              "reviewedSnapshotSHA256": "ff73eae8b0f6479a92781bd5947b65cd9e5b1980b0c424d36c10a0613190e906",
+              "matches": true,
+              "method": "exact archived content SHA and full nonmedia comparison",
+              "reviewedNonmediaSHA256": "4abacf653d73edb2b0e36fa6852a7a6e917247e10ba60eba4fe895b8118adf81",
+              "currentNonmediaSHA256": "4abacf653d73edb2b0e36fa6852a7a6e917247e10ba60eba4fe895b8118adf81",
+              "imageFieldsExcludedOnlyAtInventoriedSlots": true
+            },
+            "currentBindingMetadataCheck": {
+              "checkedAt": "2026-10-13T05:48:16.662175+00:00",
+              "contentSHA256": "048d429b138863c1d51150d22d37d24fee0a387cf28b42adec4ddff5fc1e02c5",
+              "commonsFile": "Porto de Bissau 03.jpg",
+              "captionFi": "Bissaun sataman yleisnäkymä vuodelta 2017 näyttää myöhempää laituriympäristöä Geban rannalla.",
+              "credit": "Joehawkins, Wikimedia Commons (CC BY-SA 4.0)",
+              "captionMatchesReviewed": true,
+              "personallyViewedAgain": false
             }
           }
         },
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/bissau/qa.json",
-            "sha256": "32967021f230c6b7b1992db76104fc65120895b1ff9e4b6cc8b6691bac8b19d6"
+            "sha256": "1fcde7dda73c8602e6db03997a7d5a73217c086c6194a89be8880bd72817f8b1"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/bissau/illustration-qa-extra.json",
+            "sha256": "50a93f231f9cf5abe5ece914be22849cd21786429f2b102c0f9e5549148204aa"
           }
         ]
       },
@@ -779,6 +1356,28 @@
               "lyhyt": "Bissaun keskusta kattojen yli vuonna 2023.",
               "selite": "Bissaun keskustan kattomaisema vuonna 2023 näyttää kaupunkirakenteen laajemmin kuin yksittäisen vanhan rakennuksen.",
               "lahde": "Aboubacarkhoraa, Wikimedia Commons (CC0)"
+            },
+            "currentContentVersionCheck": {
+              "reviewedContentSHA256": "ff73eae8b0f6479a92781bd5947b65cd9e5b1980b0c424d36c10a0613190e906",
+              "currentContentSHA256": "048d429b138863c1d51150d22d37d24fee0a387cf28b42adec4ddff5fc1e02c5",
+              "checkedAt": "2026-10-13T05:48:16.653754+00:00",
+              "personallyViewedAgain": false,
+              "reviewedSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/c-integration/history/e04/bissau/ff73eae8b0f6479a92781bd5947b65cd9e5b1980b0c424d36c10a0613190e906-sisalto.json",
+              "reviewedSnapshotSHA256": "ff73eae8b0f6479a92781bd5947b65cd9e5b1980b0c424d36c10a0613190e906",
+              "matches": true,
+              "method": "exact archived content SHA and full nonmedia comparison",
+              "reviewedNonmediaSHA256": "4abacf653d73edb2b0e36fa6852a7a6e917247e10ba60eba4fe895b8118adf81",
+              "currentNonmediaSHA256": "4abacf653d73edb2b0e36fa6852a7a6e917247e10ba60eba4fe895b8118adf81",
+              "imageFieldsExcludedOnlyAtInventoriedSlots": true
+            },
+            "currentBindingMetadataCheck": {
+              "checkedAt": "2026-10-13T05:48:16.665063+00:00",
+              "contentSHA256": "048d429b138863c1d51150d22d37d24fee0a387cf28b42adec4ddff5fc1e02c5",
+              "commonsFile": "Vue du ciel de Bissau.jpg",
+              "captionFi": "Bissaun keskustan kattomaisema vuonna 2023 näyttää kaupunkirakenteen laajemmin kuin yksittäisen vanhan rakennuksen.",
+              "credit": "Aboubacarkhoraa, Wikimedia Commons (CC0)",
+              "captionMatchesReviewed": true,
+              "personallyViewedAgain": false
             }
           },
           "qaReason": "Aito Bissaun kattojen ja kortteleiden laaja panoraama, ei generoitu kaupunki. Ei kasvoja/tekstiä/teospintaa pääaiheena. Ei nimetyn yksittäisen modernin arkkitehtuuriteoksen esittelyä."
@@ -795,7 +1394,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/bissau/qa.json",
-        "fileSHA256": "32967021f230c6b7b1992db76104fc65120895b1ff9e4b6cc8b6691bac8b19d6",
+        "fileSHA256": "1fcde7dda73c8602e6db03997a7d5a73217c086c6194a89be8880bd72817f8b1",
         "item": {
           "slot": "C3",
           "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[2]",
@@ -832,13 +1431,39 @@
               "lyhyt": "Bissaun keskusta kattojen yli vuonna 2023.",
               "selite": "Bissaun keskustan kattomaisema vuonna 2023 näyttää kaupunkirakenteen laajemmin kuin yksittäisen vanhan rakennuksen.",
               "lahde": "Aboubacarkhoraa, Wikimedia Commons (CC0)"
+            },
+            "currentContentVersionCheck": {
+              "reviewedContentSHA256": "ff73eae8b0f6479a92781bd5947b65cd9e5b1980b0c424d36c10a0613190e906",
+              "currentContentSHA256": "048d429b138863c1d51150d22d37d24fee0a387cf28b42adec4ddff5fc1e02c5",
+              "checkedAt": "2026-10-13T05:48:16.653754+00:00",
+              "personallyViewedAgain": false,
+              "reviewedSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/c-integration/history/e04/bissau/ff73eae8b0f6479a92781bd5947b65cd9e5b1980b0c424d36c10a0613190e906-sisalto.json",
+              "reviewedSnapshotSHA256": "ff73eae8b0f6479a92781bd5947b65cd9e5b1980b0c424d36c10a0613190e906",
+              "matches": true,
+              "method": "exact archived content SHA and full nonmedia comparison",
+              "reviewedNonmediaSHA256": "4abacf653d73edb2b0e36fa6852a7a6e917247e10ba60eba4fe895b8118adf81",
+              "currentNonmediaSHA256": "4abacf653d73edb2b0e36fa6852a7a6e917247e10ba60eba4fe895b8118adf81",
+              "imageFieldsExcludedOnlyAtInventoriedSlots": true
+            },
+            "currentBindingMetadataCheck": {
+              "checkedAt": "2026-10-13T05:48:16.665063+00:00",
+              "contentSHA256": "048d429b138863c1d51150d22d37d24fee0a387cf28b42adec4ddff5fc1e02c5",
+              "commonsFile": "Vue du ciel de Bissau.jpg",
+              "captionFi": "Bissaun keskustan kattomaisema vuonna 2023 näyttää kaupunkirakenteen laajemmin kuin yksittäisen vanhan rakennuksen.",
+              "credit": "Aboubacarkhoraa, Wikimedia Commons (CC0)",
+              "captionMatchesReviewed": true,
+              "personallyViewedAgain": false
             }
           }
         },
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/bissau/qa.json",
-            "sha256": "32967021f230c6b7b1992db76104fc65120895b1ff9e4b6cc8b6691bac8b19d6"
+            "sha256": "1fcde7dda73c8602e6db03997a7d5a73217c086c6194a89be8880bd72817f8b1"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/bissau/illustration-qa-extra.json",
+            "sha256": "50a93f231f9cf5abe5ece914be22849cd21786429f2b102c0f9e5549148204aa"
           }
         ]
       },
@@ -1007,6 +1632,28 @@
               "lyhyt": "Bissau Velhon kuja avautuu Geban vedelle vuonna 2026.",
               "selite": "Bissau Velhon kujan päässä avautuva Geban vesi liittää vanhan keskustan satamamaisemaan elokuussa 2026.",
               "lahde": "Laércia Valeriana Insali, Wikimedia Commons (CC BY 4.0)"
+            },
+            "currentContentVersionCheck": {
+              "reviewedContentSHA256": "ff73eae8b0f6479a92781bd5947b65cd9e5b1980b0c424d36c10a0613190e906",
+              "currentContentSHA256": "048d429b138863c1d51150d22d37d24fee0a387cf28b42adec4ddff5fc1e02c5",
+              "checkedAt": "2026-10-13T05:48:16.653754+00:00",
+              "personallyViewedAgain": false,
+              "reviewedSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/c-integration/history/e04/bissau/ff73eae8b0f6479a92781bd5947b65cd9e5b1980b0c424d36c10a0613190e906-sisalto.json",
+              "reviewedSnapshotSHA256": "ff73eae8b0f6479a92781bd5947b65cd9e5b1980b0c424d36c10a0613190e906",
+              "matches": true,
+              "method": "exact archived content SHA and full nonmedia comparison",
+              "reviewedNonmediaSHA256": "4abacf653d73edb2b0e36fa6852a7a6e917247e10ba60eba4fe895b8118adf81",
+              "currentNonmediaSHA256": "4abacf653d73edb2b0e36fa6852a7a6e917247e10ba60eba4fe895b8118adf81",
+              "imageFieldsExcludedOnlyAtInventoriedSlots": true
+            },
+            "currentBindingMetadataCheck": {
+              "checkedAt": "2026-10-13T05:48:16.673905+00:00",
+              "contentSHA256": "048d429b138863c1d51150d22d37d24fee0a387cf28b42adec4ddff5fc1e02c5",
+              "commonsFile": "Bissau Velho- cidade de Bissau.jpg",
+              "captionFi": "Bissau Velhon kujan päässä avautuva Geban vesi liittää vanhan keskustan satamamaisemaan elokuussa 2026.",
+              "credit": "Laércia Valeriana Insali, Wikimedia Commons (CC BY 4.0)",
+              "captionMatchesReviewed": true,
+              "personallyViewedAgain": false
             }
           },
           "qaReason": "Oma alkuperäistiedosto tarkastettu: Bissau Velhon kuja ja meri, varjossa oleva hahmo ilman luettavia kasvonpiirteitä. Pysty0.75 EXIF-suunnan mukaisessa esityksessä, alkuperäiskoko3000×4000 lähdesivulta, vuosi2026. Ei nimettyä modernia teosta tai sisäänpääsylupausta."
@@ -1023,7 +1670,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/bissau/qa.json",
-        "fileSHA256": "32967021f230c6b7b1992db76104fc65120895b1ff9e4b6cc8b6691bac8b19d6",
+        "fileSHA256": "1fcde7dda73c8602e6db03997a7d5a73217c086c6194a89be8880bd72817f8b1",
         "item": {
           "slot": "TRAVELER",
           "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
@@ -1060,13 +1707,39 @@
               "lyhyt": "Bissau Velhon kuja avautuu Geban vedelle vuonna 2026.",
               "selite": "Bissau Velhon kujan päässä avautuva Geban vesi liittää vanhan keskustan satamamaisemaan elokuussa 2026.",
               "lahde": "Laércia Valeriana Insali, Wikimedia Commons (CC BY 4.0)"
+            },
+            "currentContentVersionCheck": {
+              "reviewedContentSHA256": "ff73eae8b0f6479a92781bd5947b65cd9e5b1980b0c424d36c10a0613190e906",
+              "currentContentSHA256": "048d429b138863c1d51150d22d37d24fee0a387cf28b42adec4ddff5fc1e02c5",
+              "checkedAt": "2026-10-13T05:48:16.653754+00:00",
+              "personallyViewedAgain": false,
+              "reviewedSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/c-integration/history/e04/bissau/ff73eae8b0f6479a92781bd5947b65cd9e5b1980b0c424d36c10a0613190e906-sisalto.json",
+              "reviewedSnapshotSHA256": "ff73eae8b0f6479a92781bd5947b65cd9e5b1980b0c424d36c10a0613190e906",
+              "matches": true,
+              "method": "exact archived content SHA and full nonmedia comparison",
+              "reviewedNonmediaSHA256": "4abacf653d73edb2b0e36fa6852a7a6e917247e10ba60eba4fe895b8118adf81",
+              "currentNonmediaSHA256": "4abacf653d73edb2b0e36fa6852a7a6e917247e10ba60eba4fe895b8118adf81",
+              "imageFieldsExcludedOnlyAtInventoriedSlots": true
+            },
+            "currentBindingMetadataCheck": {
+              "checkedAt": "2026-10-13T05:48:16.673905+00:00",
+              "contentSHA256": "048d429b138863c1d51150d22d37d24fee0a387cf28b42adec4ddff5fc1e02c5",
+              "commonsFile": "Bissau Velho- cidade de Bissau.jpg",
+              "captionFi": "Bissau Velhon kujan päässä avautuva Geban vesi liittää vanhan keskustan satamamaisemaan elokuussa 2026.",
+              "credit": "Laércia Valeriana Insali, Wikimedia Commons (CC BY 4.0)",
+              "captionMatchesReviewed": true,
+              "personallyViewedAgain": false
             }
           }
         },
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/bissau/qa.json",
-            "sha256": "32967021f230c6b7b1992db76104fc65120895b1ff9e4b6cc8b6691bac8b19d6"
+            "sha256": "1fcde7dda73c8602e6db03997a7d5a73217c086c6194a89be8880bd72817f8b1"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/bissau/illustration-qa-extra.json",
+            "sha256": "50a93f231f9cf5abe5ece914be22849cd21786429f2b102c0f9e5549148204aa"
           }
         ]
       },
@@ -1238,6 +1911,28 @@
               "lyhyt": "Tasoskanneri on yleinen digitoinnin havainnollistus.",
               "selite": "Vuonna 2023 kuvattu yleinen tasoskanneri havainnollistaa kuvien digitoinnin välinettä.",
               "lahde": "Bultro, Wikimedia Commons (CC BY-SA 4.0)"
+            },
+            "currentContentVersionCheck": {
+              "reviewedContentSHA256": "ff73eae8b0f6479a92781bd5947b65cd9e5b1980b0c424d36c10a0613190e906",
+              "currentContentSHA256": "048d429b138863c1d51150d22d37d24fee0a387cf28b42adec4ddff5fc1e02c5",
+              "checkedAt": "2026-10-13T05:48:16.653754+00:00",
+              "personallyViewedAgain": false,
+              "reviewedSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/c-integration/history/e04/bissau/ff73eae8b0f6479a92781bd5947b65cd9e5b1980b0c424d36c10a0613190e906-sisalto.json",
+              "reviewedSnapshotSHA256": "ff73eae8b0f6479a92781bd5947b65cd9e5b1980b0c424d36c10a0613190e906",
+              "matches": true,
+              "method": "exact archived content SHA and full nonmedia comparison",
+              "reviewedNonmediaSHA256": "4abacf653d73edb2b0e36fa6852a7a6e917247e10ba60eba4fe895b8118adf81",
+              "currentNonmediaSHA256": "4abacf653d73edb2b0e36fa6852a7a6e917247e10ba60eba4fe895b8118adf81",
+              "imageFieldsExcludedOnlyAtInventoriedSlots": true
+            },
+            "currentBindingMetadataCheck": {
+              "checkedAt": "2026-10-13T05:48:16.676738+00:00",
+              "contentSHA256": "048d429b138863c1d51150d22d37d24fee0a387cf28b42adec4ddff5fc1e02c5",
+              "commonsFile": "Trust Flat Scan USB 19200.jpg",
+              "captionFi": "Vuonna 2023 kuvattu yleinen tasoskanneri havainnollistaa kuvien digitoinnin välinettä.",
+              "credit": "Bultro, Wikimedia Commons (CC BY-SA 4.0)",
+              "captionMatchesReviewed": true,
+              "personallyViewedAgain": false
             }
           },
           "qaReason": "Avoin tyhjä tasoskanneri, tavallinen toiminnallinen hyötyesine ilman skannattavaa tekijäteosta tai mainossommittelua. Kuva2023, yleistetty digitointiväline captionissa. Pystyformaatti sallittu tämän päivän ohjetarkennuksen mukaan; ei museon laiteväitettä."
@@ -1254,7 +1949,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/bissau/qa.json",
-        "fileSHA256": "32967021f230c6b7b1992db76104fc65120895b1ff9e4b6cc8b6691bac8b19d6",
+        "fileSHA256": "1fcde7dda73c8602e6db03997a7d5a73217c086c6194a89be8880bd72817f8b1",
         "item": {
           "slot": "O3",
           "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[2].kuva",
@@ -1290,13 +1985,39 @@
               "lyhyt": "Tasoskanneri on yleinen digitoinnin havainnollistus.",
               "selite": "Vuonna 2023 kuvattu yleinen tasoskanneri havainnollistaa kuvien digitoinnin välinettä.",
               "lahde": "Bultro, Wikimedia Commons (CC BY-SA 4.0)"
+            },
+            "currentContentVersionCheck": {
+              "reviewedContentSHA256": "ff73eae8b0f6479a92781bd5947b65cd9e5b1980b0c424d36c10a0613190e906",
+              "currentContentSHA256": "048d429b138863c1d51150d22d37d24fee0a387cf28b42adec4ddff5fc1e02c5",
+              "checkedAt": "2026-10-13T05:48:16.653754+00:00",
+              "personallyViewedAgain": false,
+              "reviewedSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/c-integration/history/e04/bissau/ff73eae8b0f6479a92781bd5947b65cd9e5b1980b0c424d36c10a0613190e906-sisalto.json",
+              "reviewedSnapshotSHA256": "ff73eae8b0f6479a92781bd5947b65cd9e5b1980b0c424d36c10a0613190e906",
+              "matches": true,
+              "method": "exact archived content SHA and full nonmedia comparison",
+              "reviewedNonmediaSHA256": "4abacf653d73edb2b0e36fa6852a7a6e917247e10ba60eba4fe895b8118adf81",
+              "currentNonmediaSHA256": "4abacf653d73edb2b0e36fa6852a7a6e917247e10ba60eba4fe895b8118adf81",
+              "imageFieldsExcludedOnlyAtInventoriedSlots": true
+            },
+            "currentBindingMetadataCheck": {
+              "checkedAt": "2026-10-13T05:48:16.676738+00:00",
+              "contentSHA256": "048d429b138863c1d51150d22d37d24fee0a387cf28b42adec4ddff5fc1e02c5",
+              "commonsFile": "Trust Flat Scan USB 19200.jpg",
+              "captionFi": "Vuonna 2023 kuvattu yleinen tasoskanneri havainnollistaa kuvien digitoinnin välinettä.",
+              "credit": "Bultro, Wikimedia Commons (CC BY-SA 4.0)",
+              "captionMatchesReviewed": true,
+              "personallyViewedAgain": false
             }
           }
         },
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/bissau/qa.json",
-            "sha256": "32967021f230c6b7b1992db76104fc65120895b1ff9e4b6cc8b6691bac8b19d6"
+            "sha256": "1fcde7dda73c8602e6db03997a7d5a73217c086c6194a89be8880bd72817f8b1"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/bissau/illustration-qa-extra.json",
+            "sha256": "50a93f231f9cf5abe5ece914be22849cd21786429f2b102c0f9e5549148204aa"
           }
         ]
       },
@@ -1467,6 +2188,28 @@
               "lyhyt": "São Paulon kaupunginosan maisema Bissaussa vuonna 2025.",
               "selite": "Bissaun São Paulon kaupunginosan puustoinen maisema on kuvattu elokuussa 2025.",
               "lahde": "Bnhamadjo, Wikimedia Commons (CC BY-SA 3.0)"
+            },
+            "currentContentVersionCheck": {
+              "reviewedContentSHA256": "ff73eae8b0f6479a92781bd5947b65cd9e5b1980b0c424d36c10a0613190e906",
+              "currentContentSHA256": "048d429b138863c1d51150d22d37d24fee0a387cf28b42adec4ddff5fc1e02c5",
+              "checkedAt": "2026-10-13T05:48:16.653754+00:00",
+              "personallyViewedAgain": false,
+              "reviewedSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/c-integration/history/e04/bissau/ff73eae8b0f6479a92781bd5947b65cd9e5b1980b0c424d36c10a0613190e906-sisalto.json",
+              "reviewedSnapshotSHA256": "ff73eae8b0f6479a92781bd5947b65cd9e5b1980b0c424d36c10a0613190e906",
+              "matches": true,
+              "method": "exact archived content SHA and full nonmedia comparison",
+              "reviewedNonmediaSHA256": "4abacf653d73edb2b0e36fa6852a7a6e917247e10ba60eba4fe895b8118adf81",
+              "currentNonmediaSHA256": "4abacf653d73edb2b0e36fa6852a7a6e917247e10ba60eba4fe895b8118adf81",
+              "imageFieldsExcludedOnlyAtInventoriedSlots": true
+            },
+            "currentBindingMetadataCheck": {
+              "checkedAt": "2026-10-13T05:48:16.679588+00:00",
+              "contentSHA256": "048d429b138863c1d51150d22d37d24fee0a387cf28b42adec4ddff5fc1e02c5",
+              "commonsFile": "Paysagem de Bissau.jpg",
+              "captionFi": "Bissaun São Paulon kaupunginosan puustoinen maisema on kuvattu elokuussa 2025.",
+              "credit": "Bnhamadjo, Wikimedia Commons (CC BY-SA 3.0)",
+              "captionMatchesReviewed": true,
+              "personallyViewedAgain": false
             }
           },
           "qaReason": "São Paulon Bissaun-kaupunginosan luonnonpuusto laajana maisemana, ei kasvoja tai nimettyä teosta. CC BY-SA3.0 ja Bnhamadjo tiedostosivulta. Kuva ei todista sääasemaa tai ilmastolukuja."
@@ -1483,7 +2226,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/bissau/qa.json",
-        "fileSHA256": "32967021f230c6b7b1992db76104fc65120895b1ff9e4b6cc8b6691bac8b19d6",
+        "fileSHA256": "1fcde7dda73c8602e6db03997a7d5a73217c086c6194a89be8880bd72817f8b1",
         "item": {
           "slot": "O5",
           "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[4].kuva",
@@ -1519,13 +2262,39 @@
               "lyhyt": "São Paulon kaupunginosan maisema Bissaussa vuonna 2025.",
               "selite": "Bissaun São Paulon kaupunginosan puustoinen maisema on kuvattu elokuussa 2025.",
               "lahde": "Bnhamadjo, Wikimedia Commons (CC BY-SA 3.0)"
+            },
+            "currentContentVersionCheck": {
+              "reviewedContentSHA256": "ff73eae8b0f6479a92781bd5947b65cd9e5b1980b0c424d36c10a0613190e906",
+              "currentContentSHA256": "048d429b138863c1d51150d22d37d24fee0a387cf28b42adec4ddff5fc1e02c5",
+              "checkedAt": "2026-10-13T05:48:16.653754+00:00",
+              "personallyViewedAgain": false,
+              "reviewedSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/c-integration/history/e04/bissau/ff73eae8b0f6479a92781bd5947b65cd9e5b1980b0c424d36c10a0613190e906-sisalto.json",
+              "reviewedSnapshotSHA256": "ff73eae8b0f6479a92781bd5947b65cd9e5b1980b0c424d36c10a0613190e906",
+              "matches": true,
+              "method": "exact archived content SHA and full nonmedia comparison",
+              "reviewedNonmediaSHA256": "4abacf653d73edb2b0e36fa6852a7a6e917247e10ba60eba4fe895b8118adf81",
+              "currentNonmediaSHA256": "4abacf653d73edb2b0e36fa6852a7a6e917247e10ba60eba4fe895b8118adf81",
+              "imageFieldsExcludedOnlyAtInventoriedSlots": true
+            },
+            "currentBindingMetadataCheck": {
+              "checkedAt": "2026-10-13T05:48:16.679588+00:00",
+              "contentSHA256": "048d429b138863c1d51150d22d37d24fee0a387cf28b42adec4ddff5fc1e02c5",
+              "commonsFile": "Paysagem de Bissau.jpg",
+              "captionFi": "Bissaun São Paulon kaupunginosan puustoinen maisema on kuvattu elokuussa 2025.",
+              "credit": "Bnhamadjo, Wikimedia Commons (CC BY-SA 3.0)",
+              "captionMatchesReviewed": true,
+              "personallyViewedAgain": false
             }
           }
         },
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/bissau/qa.json",
-            "sha256": "32967021f230c6b7b1992db76104fc65120895b1ff9e4b6cc8b6691bac8b19d6"
+            "sha256": "1fcde7dda73c8602e6db03997a7d5a73217c086c6194a89be8880bd72817f8b1"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/bissau/illustration-qa-extra.json",
+            "sha256": "50a93f231f9cf5abe5ece914be22849cd21786429f2b102c0f9e5549148204aa"
           }
         ]
       },
@@ -1697,6 +2466,28 @@
               "lyhyt": "Geba ja Bissau optisessa satelliittikuvassa vuonna 2017.",
               "selite": "Hodoyoshi-1-satelliitin optinen kuva vuodelta 2017 näyttää Bissaun maantieteellisen paikan Geban suistoalueen rannalla.",
               "lahde": "Axelspace Corporation, Wikimedia Commons (CC BY-SA 4.0)"
+            },
+            "currentContentVersionCheck": {
+              "reviewedContentSHA256": "ff73eae8b0f6479a92781bd5947b65cd9e5b1980b0c424d36c10a0613190e906",
+              "currentContentSHA256": "048d429b138863c1d51150d22d37d24fee0a387cf28b42adec4ddff5fc1e02c5",
+              "checkedAt": "2026-10-13T05:48:16.653754+00:00",
+              "personallyViewedAgain": false,
+              "reviewedSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/c-integration/history/e04/bissau/ff73eae8b0f6479a92781bd5947b65cd9e5b1980b0c424d36c10a0613190e906-sisalto.json",
+              "reviewedSnapshotSHA256": "ff73eae8b0f6479a92781bd5947b65cd9e5b1980b0c424d36c10a0613190e906",
+              "matches": true,
+              "method": "exact archived content SHA and full nonmedia comparison",
+              "reviewedNonmediaSHA256": "4abacf653d73edb2b0e36fa6852a7a6e917247e10ba60eba4fe895b8118adf81",
+              "currentNonmediaSHA256": "4abacf653d73edb2b0e36fa6852a7a6e917247e10ba60eba4fe895b8118adf81",
+              "imageFieldsExcludedOnlyAtInventoriedSlots": true
+            },
+            "currentBindingMetadataCheck": {
+              "checkedAt": "2026-10-13T05:48:16.667961+00:00",
+              "contentSHA256": "048d429b138863c1d51150d22d37d24fee0a387cf28b42adec4ddff5fc1e02c5",
+              "commonsFile": "Bissau, Guinea-Bissau.jpg",
+              "captionFi": "Hodoyoshi-1-satelliitin optinen kuva vuodelta 2017 näyttää Bissaun maantieteellisen paikan Geban suistoalueen rannalla.",
+              "credit": "Axelspace Corporation; Axelspace Corp., Wikimedia Commons (CC BY-SA 4.0)",
+              "captionMatchesReviewed": true,
+              "personallyViewedAgain": false
             }
           },
           "qaReason": "Aito satellittikuva Bissausta/Geban ympäristöstä. Ei kasvoja, merkintöjä tai erillistä rakennusteosta. Nimetty moderniksi maantieteelliseksi kuvaksi, ei menneisyyden kauppatapahtumaksi. Author-taulukko Axelspace Corporation ja lisenssin lyhyempi Axelspace Corp. sama nimetty yhteisö; ei uploader-arvausta."
@@ -1713,7 +2504,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/bissau/qa.json",
-        "fileSHA256": "32967021f230c6b7b1992db76104fc65120895b1ff9e4b6cc8b6691bac8b19d6",
+        "fileSHA256": "1fcde7dda73c8602e6db03997a7d5a73217c086c6194a89be8880bd72817f8b1",
         "item": {
           "slot": "K2",
           "targetJsonPath": "$.kaupunkilehti[0].nostot[1]",
@@ -1753,13 +2544,39 @@
               "lyhyt": "Geba ja Bissau optisessa satelliittikuvassa vuonna 2017.",
               "selite": "Hodoyoshi-1-satelliitin optinen kuva vuodelta 2017 näyttää Bissaun maantieteellisen paikan Geban suistoalueen rannalla.",
               "lahde": "Axelspace Corporation, Wikimedia Commons (CC BY-SA 4.0)"
+            },
+            "currentContentVersionCheck": {
+              "reviewedContentSHA256": "ff73eae8b0f6479a92781bd5947b65cd9e5b1980b0c424d36c10a0613190e906",
+              "currentContentSHA256": "048d429b138863c1d51150d22d37d24fee0a387cf28b42adec4ddff5fc1e02c5",
+              "checkedAt": "2026-10-13T05:48:16.653754+00:00",
+              "personallyViewedAgain": false,
+              "reviewedSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/c-integration/history/e04/bissau/ff73eae8b0f6479a92781bd5947b65cd9e5b1980b0c424d36c10a0613190e906-sisalto.json",
+              "reviewedSnapshotSHA256": "ff73eae8b0f6479a92781bd5947b65cd9e5b1980b0c424d36c10a0613190e906",
+              "matches": true,
+              "method": "exact archived content SHA and full nonmedia comparison",
+              "reviewedNonmediaSHA256": "4abacf653d73edb2b0e36fa6852a7a6e917247e10ba60eba4fe895b8118adf81",
+              "currentNonmediaSHA256": "4abacf653d73edb2b0e36fa6852a7a6e917247e10ba60eba4fe895b8118adf81",
+              "imageFieldsExcludedOnlyAtInventoriedSlots": true
+            },
+            "currentBindingMetadataCheck": {
+              "checkedAt": "2026-10-13T05:48:16.667961+00:00",
+              "contentSHA256": "048d429b138863c1d51150d22d37d24fee0a387cf28b42adec4ddff5fc1e02c5",
+              "commonsFile": "Bissau, Guinea-Bissau.jpg",
+              "captionFi": "Hodoyoshi-1-satelliitin optinen kuva vuodelta 2017 näyttää Bissaun maantieteellisen paikan Geban suistoalueen rannalla.",
+              "credit": "Axelspace Corporation; Axelspace Corp., Wikimedia Commons (CC BY-SA 4.0)",
+              "captionMatchesReviewed": true,
+              "personallyViewedAgain": false
             }
           }
         },
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/bissau/qa.json",
-            "sha256": "32967021f230c6b7b1992db76104fc65120895b1ff9e4b6cc8b6691bac8b19d6"
+            "sha256": "1fcde7dda73c8602e6db03997a7d5a73217c086c6194a89be8880bd72817f8b1"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/bissau/illustration-qa-extra.json",
+            "sha256": "50a93f231f9cf5abe5ece914be22849cd21786429f2b102c0f9e5549148204aa"
           }
         ]
       },
@@ -1931,6 +2748,28 @@
               "lyhyt": "Avattu skanneri havainnollistaa digitoinnin välinettä.",
               "selite": "Yleinen tasoskannerin koneisto havainnollistaa kuvien digitointiin käytettävää välinettä vuoden 2007 valokuvassa.",
               "lahde": "Effib, Wikimedia Commons (CC BY-SA 4.0)"
+            },
+            "currentContentVersionCheck": {
+              "reviewedContentSHA256": "ff73eae8b0f6479a92781bd5947b65cd9e5b1980b0c424d36c10a0613190e906",
+              "currentContentSHA256": "048d429b138863c1d51150d22d37d24fee0a387cf28b42adec4ddff5fc1e02c5",
+              "checkedAt": "2026-10-13T05:48:16.653754+00:00",
+              "personallyViewedAgain": false,
+              "reviewedSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/c-integration/history/e04/bissau/ff73eae8b0f6479a92781bd5947b65cd9e5b1980b0c424d36c10a0613190e906-sisalto.json",
+              "reviewedSnapshotSHA256": "ff73eae8b0f6479a92781bd5947b65cd9e5b1980b0c424d36c10a0613190e906",
+              "matches": true,
+              "method": "exact archived content SHA and full nonmedia comparison",
+              "reviewedNonmediaSHA256": "4abacf653d73edb2b0e36fa6852a7a6e917247e10ba60eba4fe895b8118adf81",
+              "currentNonmediaSHA256": "4abacf653d73edb2b0e36fa6852a7a6e917247e10ba60eba4fe895b8118adf81",
+              "imageFieldsExcludedOnlyAtInventoriedSlots": true
+            },
+            "currentBindingMetadataCheck": {
+              "checkedAt": "2026-10-13T05:48:16.670793+00:00",
+              "contentSHA256": "048d429b138863c1d51150d22d37d24fee0a387cf28b42adec4ddff5fc1e02c5",
+              "commonsFile": "ScanerFromInside.jpg",
+              "captionFi": "Yleinen tasoskannerin koneisto havainnollistaa kuvien digitointiin käytettävää välinettä vuoden 2007 valokuvassa.",
+              "credit": "Effib, Wikimedia Commons (CC BY-SA 4.0)",
+              "captionMatchesReviewed": true,
+              "personallyViewedAgain": false
             }
           },
           "qaReason": "Avatun skannerin kisko/piirilevy/toiminnalliset osat, ei kasvoja tai toisinnettavaa kuvaa alustalla. Yleinen digitointimenetelmäkuva, ei Bissaun museon oma laite. Effib ja CC BY-SA4.0 alkuperäisestä tiedostosivusta."
@@ -1947,7 +2786,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/bissau/qa.json",
-        "fileSHA256": "32967021f230c6b7b1992db76104fc65120895b1ff9e4b6cc8b6691bac8b19d6",
+        "fileSHA256": "1fcde7dda73c8602e6db03997a7d5a73217c086c6194a89be8880bd72817f8b1",
         "item": {
           "slot": "K4",
           "targetJsonPath": "$.kaupunkilehti[0].nostot[3]",
@@ -1987,13 +2826,39 @@
               "lyhyt": "Avattu skanneri havainnollistaa digitoinnin välinettä.",
               "selite": "Yleinen tasoskannerin koneisto havainnollistaa kuvien digitointiin käytettävää välinettä vuoden 2007 valokuvassa.",
               "lahde": "Effib, Wikimedia Commons (CC BY-SA 4.0)"
+            },
+            "currentContentVersionCheck": {
+              "reviewedContentSHA256": "ff73eae8b0f6479a92781bd5947b65cd9e5b1980b0c424d36c10a0613190e906",
+              "currentContentSHA256": "048d429b138863c1d51150d22d37d24fee0a387cf28b42adec4ddff5fc1e02c5",
+              "checkedAt": "2026-10-13T05:48:16.653754+00:00",
+              "personallyViewedAgain": false,
+              "reviewedSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/c-integration/history/e04/bissau/ff73eae8b0f6479a92781bd5947b65cd9e5b1980b0c424d36c10a0613190e906-sisalto.json",
+              "reviewedSnapshotSHA256": "ff73eae8b0f6479a92781bd5947b65cd9e5b1980b0c424d36c10a0613190e906",
+              "matches": true,
+              "method": "exact archived content SHA and full nonmedia comparison",
+              "reviewedNonmediaSHA256": "4abacf653d73edb2b0e36fa6852a7a6e917247e10ba60eba4fe895b8118adf81",
+              "currentNonmediaSHA256": "4abacf653d73edb2b0e36fa6852a7a6e917247e10ba60eba4fe895b8118adf81",
+              "imageFieldsExcludedOnlyAtInventoriedSlots": true
+            },
+            "currentBindingMetadataCheck": {
+              "checkedAt": "2026-10-13T05:48:16.670793+00:00",
+              "contentSHA256": "048d429b138863c1d51150d22d37d24fee0a387cf28b42adec4ddff5fc1e02c5",
+              "commonsFile": "ScanerFromInside.jpg",
+              "captionFi": "Yleinen tasoskannerin koneisto havainnollistaa kuvien digitointiin käytettävää välinettä vuoden 2007 valokuvassa.",
+              "credit": "Effib, Wikimedia Commons (CC BY-SA 4.0)",
+              "captionMatchesReviewed": true,
+              "personallyViewedAgain": false
             }
           }
         },
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/bissau/qa.json",
-            "sha256": "32967021f230c6b7b1992db76104fc65120895b1ff9e4b6cc8b6691bac8b19d6"
+            "sha256": "1fcde7dda73c8602e6db03997a7d5a73217c086c6194a89be8880bd72817f8b1"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/bissau/illustration-qa-extra.json",
+            "sha256": "50a93f231f9cf5abe5ece914be22849cd21786429f2b102c0f9e5549148204aa"
           }
         ]
       },
@@ -2164,6 +3029,28 @@
               "lyhyt": "Yleinen bastionikaavio havainnollistaa linnoitustyyppiä.",
               "selite": "Vuonna 2019 laadittu yleinen Vauban-periaatteisiin perustuva bastionikaavio havainnollistaa ulkonevien kulmien linnoitustyyppiä.",
               "lahde": "Ludwig Dupas, Wikimedia Commons (CC BY-SA 4.0)"
+            },
+            "currentContentVersionCheck": {
+              "reviewedContentSHA256": "ff73eae8b0f6479a92781bd5947b65cd9e5b1980b0c424d36c10a0613190e906",
+              "currentContentSHA256": "048d429b138863c1d51150d22d37d24fee0a387cf28b42adec4ddff5fc1e02c5",
+              "checkedAt": "2026-10-13T05:48:16.653754+00:00",
+              "personallyViewedAgain": false,
+              "reviewedSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/c-integration/history/e04/bissau/ff73eae8b0f6479a92781bd5947b65cd9e5b1980b0c424d36c10a0613190e906-sisalto.json",
+              "reviewedSnapshotSHA256": "ff73eae8b0f6479a92781bd5947b65cd9e5b1980b0c424d36c10a0613190e906",
+              "matches": true,
+              "method": "exact archived content SHA and full nonmedia comparison",
+              "reviewedNonmediaSHA256": "4abacf653d73edb2b0e36fa6852a7a6e917247e10ba60eba4fe895b8118adf81",
+              "currentNonmediaSHA256": "4abacf653d73edb2b0e36fa6852a7a6e917247e10ba60eba4fe895b8118adf81",
+              "imageFieldsExcludedOnlyAtInventoriedSlots": true
+            },
+            "currentBindingMetadataCheck": {
+              "checkedAt": "2026-10-13T05:48:16.682178+00:00",
+              "contentSHA256": "048d429b138863c1d51150d22d37d24fee0a387cf28b42adec4ddff5fc1e02c5",
+              "commonsFile": "Plan type bastion Vauban.svg",
+              "captionFi": "Vuonna 2019 laadittu yleinen Vauban-periaatteisiin perustuva bastionikaavio havainnollistaa ulkonevien kulmien linnoitustyyppiä.",
+              "credit": "Ludwig Dupas, Wikimedia Commons (CC BY-SA 4.0)",
+              "captionMatchesReviewed": true,
+              "personallyViewedAgain": false
             }
           },
           "qaReason": "Selkeä yleinen bastionien toimintaperiaatekaavio, ei Amuran kohteen piirustus. Ei leimaa, kasvoja tai selittämätöntä tekstiä. Kaavion oma tekijä Ludwig Dupas on antanut CC BY-SA4.0-luvan; ei jäljennöstä modernista suojatusta muistoteoksesta."
@@ -2180,7 +3067,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/bissau/qa.json",
-        "fileSHA256": "32967021f230c6b7b1992db76104fc65120895b1ff9e4b6cc8b6691bac8b19d6",
+        "fileSHA256": "1fcde7dda73c8602e6db03997a7d5a73217c086c6194a89be8880bd72817f8b1",
         "item": {
           "slot": "L2",
           "targetJsonPath": "$.kaupunkilehti[1].nostot[1]",
@@ -2219,13 +3106,39 @@
               "lyhyt": "Yleinen bastionikaavio havainnollistaa linnoitustyyppiä.",
               "selite": "Vuonna 2019 laadittu yleinen Vauban-periaatteisiin perustuva bastionikaavio havainnollistaa ulkonevien kulmien linnoitustyyppiä.",
               "lahde": "Ludwig Dupas, Wikimedia Commons (CC BY-SA 4.0)"
+            },
+            "currentContentVersionCheck": {
+              "reviewedContentSHA256": "ff73eae8b0f6479a92781bd5947b65cd9e5b1980b0c424d36c10a0613190e906",
+              "currentContentSHA256": "048d429b138863c1d51150d22d37d24fee0a387cf28b42adec4ddff5fc1e02c5",
+              "checkedAt": "2026-10-13T05:48:16.653754+00:00",
+              "personallyViewedAgain": false,
+              "reviewedSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/c-integration/history/e04/bissau/ff73eae8b0f6479a92781bd5947b65cd9e5b1980b0c424d36c10a0613190e906-sisalto.json",
+              "reviewedSnapshotSHA256": "ff73eae8b0f6479a92781bd5947b65cd9e5b1980b0c424d36c10a0613190e906",
+              "matches": true,
+              "method": "exact archived content SHA and full nonmedia comparison",
+              "reviewedNonmediaSHA256": "4abacf653d73edb2b0e36fa6852a7a6e917247e10ba60eba4fe895b8118adf81",
+              "currentNonmediaSHA256": "4abacf653d73edb2b0e36fa6852a7a6e917247e10ba60eba4fe895b8118adf81",
+              "imageFieldsExcludedOnlyAtInventoriedSlots": true
+            },
+            "currentBindingMetadataCheck": {
+              "checkedAt": "2026-10-13T05:48:16.682178+00:00",
+              "contentSHA256": "048d429b138863c1d51150d22d37d24fee0a387cf28b42adec4ddff5fc1e02c5",
+              "commonsFile": "Plan type bastion Vauban.svg",
+              "captionFi": "Vuonna 2019 laadittu yleinen Vauban-periaatteisiin perustuva bastionikaavio havainnollistaa ulkonevien kulmien linnoitustyyppiä.",
+              "credit": "Ludwig Dupas, Wikimedia Commons (CC BY-SA 4.0)",
+              "captionMatchesReviewed": true,
+              "personallyViewedAgain": false
             }
           }
         },
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/bissau/qa.json",
-            "sha256": "32967021f230c6b7b1992db76104fc65120895b1ff9e4b6cc8b6691bac8b19d6"
+            "sha256": "1fcde7dda73c8602e6db03997a7d5a73217c086c6194a89be8880bd72817f8b1"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/bissau/illustration-qa-extra.json",
+            "sha256": "50a93f231f9cf5abe5ece914be22849cd21786429f2b102c0f9e5549148204aa"
           }
         ]
       },
@@ -2398,6 +3311,28 @@
               "lyhyt": "Pidjiguitin satamapaikka veneineen vuonna 2007.",
               "selite": "Pidjiguitin satamapaikan veneet vuonna 2007 kuuluvat vanhan laituriympäristön näkymään, jossa kauempana erottuu myös muita satamarakenteita.",
               "lahde": "(WT-en) Pis bus at English Wikivoyage, Wikimedia Commons (PD)"
+            },
+            "currentContentVersionCheck": {
+              "reviewedContentSHA256": "ff73eae8b0f6479a92781bd5947b65cd9e5b1980b0c424d36c10a0613190e906",
+              "currentContentSHA256": "048d429b138863c1d51150d22d37d24fee0a387cf28b42adec4ddff5fc1e02c5",
+              "checkedAt": "2026-10-13T05:48:16.653754+00:00",
+              "personallyViewedAgain": false,
+              "reviewedSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/c-integration/history/e04/bissau/ff73eae8b0f6479a92781bd5947b65cd9e5b1980b0c424d36c10a0613190e906-sisalto.json",
+              "reviewedSnapshotSHA256": "ff73eae8b0f6479a92781bd5947b65cd9e5b1980b0c424d36c10a0613190e906",
+              "matches": true,
+              "method": "exact archived content SHA and full nonmedia comparison",
+              "reviewedNonmediaSHA256": "4abacf653d73edb2b0e36fa6852a7a6e917247e10ba60eba4fe895b8118adf81",
+              "currentNonmediaSHA256": "4abacf653d73edb2b0e36fa6852a7a6e917247e10ba60eba4fe895b8118adf81",
+              "imageFieldsExcludedOnlyAtInventoriedSlots": true
+            },
+            "currentBindingMetadataCheck": {
+              "checkedAt": "2026-10-13T05:48:16.684854+00:00",
+              "contentSHA256": "048d429b138863c1d51150d22d37d24fee0a387cf28b42adec4ddff5fc1e02c5",
+              "commonsFile": "Pidjiguiti.jpg",
+              "captionFi": "Pidjiguitin satamapaikan veneet vuonna 2007 kuuluvat vanhan laituriympäristön näkymään, jossa kauempana erottuu myös muita satamarakenteita.",
+              "credit": "(WT-en) Pis bus at English Wikivoyage, Wikimedia Commons (PD)",
+              "captionMatchesReviewed": true,
+              "personallyViewedAgain": false
             }
           },
           "qaReason": "Oma2272×1704 alkuperäinen katsottu. Pidjiguitin aito käyttövene-/rantaympäristö, ihmiset kaukana/selin/varjossa ilman yksilöiviä kasvonpiirteitä. Ei taideteospääaihetta, ei nykypalvelulupausta. Valokuva PD kuvaajalta, ei koko laiturin PD-väitettä."
@@ -2414,7 +3349,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/bissau/qa.json",
-        "fileSHA256": "32967021f230c6b7b1992db76104fc65120895b1ff9e4b6cc8b6691bac8b19d6",
+        "fileSHA256": "1fcde7dda73c8602e6db03997a7d5a73217c086c6194a89be8880bd72817f8b1",
         "item": {
           "slot": "L3",
           "targetJsonPath": "$.kaupunkilehti[1].nostot[2]",
@@ -2454,13 +3389,39 @@
               "lyhyt": "Pidjiguitin satamapaikka veneineen vuonna 2007.",
               "selite": "Pidjiguitin satamapaikan veneet vuonna 2007 kuuluvat vanhan laituriympäristön näkymään, jossa kauempana erottuu myös muita satamarakenteita.",
               "lahde": "(WT-en) Pis bus at English Wikivoyage, Wikimedia Commons (PD)"
+            },
+            "currentContentVersionCheck": {
+              "reviewedContentSHA256": "ff73eae8b0f6479a92781bd5947b65cd9e5b1980b0c424d36c10a0613190e906",
+              "currentContentSHA256": "048d429b138863c1d51150d22d37d24fee0a387cf28b42adec4ddff5fc1e02c5",
+              "checkedAt": "2026-10-13T05:48:16.653754+00:00",
+              "personallyViewedAgain": false,
+              "reviewedSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/c-integration/history/e04/bissau/ff73eae8b0f6479a92781bd5947b65cd9e5b1980b0c424d36c10a0613190e906-sisalto.json",
+              "reviewedSnapshotSHA256": "ff73eae8b0f6479a92781bd5947b65cd9e5b1980b0c424d36c10a0613190e906",
+              "matches": true,
+              "method": "exact archived content SHA and full nonmedia comparison",
+              "reviewedNonmediaSHA256": "4abacf653d73edb2b0e36fa6852a7a6e917247e10ba60eba4fe895b8118adf81",
+              "currentNonmediaSHA256": "4abacf653d73edb2b0e36fa6852a7a6e917247e10ba60eba4fe895b8118adf81",
+              "imageFieldsExcludedOnlyAtInventoriedSlots": true
+            },
+            "currentBindingMetadataCheck": {
+              "checkedAt": "2026-10-13T05:48:16.684854+00:00",
+              "contentSHA256": "048d429b138863c1d51150d22d37d24fee0a387cf28b42adec4ddff5fc1e02c5",
+              "commonsFile": "Pidjiguiti.jpg",
+              "captionFi": "Pidjiguitin satamapaikan veneet vuonna 2007 kuuluvat vanhan laituriympäristön näkymään, jossa kauempana erottuu myös muita satamarakenteita.",
+              "credit": "(WT-en) Pis bus at English Wikivoyage, Wikimedia Commons (PD)",
+              "captionMatchesReviewed": true,
+              "personallyViewedAgain": false
             }
           }
         },
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/bissau/qa.json",
-            "sha256": "32967021f230c6b7b1992db76104fc65120895b1ff9e4b6cc8b6691bac8b19d6"
+            "sha256": "1fcde7dda73c8602e6db03997a7d5a73217c086c6194a89be8880bd72817f8b1"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/bissau/illustration-qa-extra.json",
+            "sha256": "50a93f231f9cf5abe5ece914be22849cd21786429f2b102c0f9e5549148204aa"
           }
         ]
       },
@@ -2631,6 +3592,28 @@
               "lyhyt": "Bissaun uudempi satama havainnollistaa satamakauppaa.",
               "selite": "Bissaun uudemman sataman alukset ja laiturit vuonna 2017 havainnollistavat satamakaupan ympäristöä.",
               "lahde": "Joehawkins, Wikimedia Commons (CC BY-SA 4.0)"
+            },
+            "currentContentVersionCheck": {
+              "reviewedContentSHA256": "ff73eae8b0f6479a92781bd5947b65cd9e5b1980b0c424d36c10a0613190e906",
+              "currentContentSHA256": "048d429b138863c1d51150d22d37d24fee0a387cf28b42adec4ddff5fc1e02c5",
+              "checkedAt": "2026-10-13T05:48:16.653754+00:00",
+              "personallyViewedAgain": false,
+              "reviewedSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/c-integration/history/e04/bissau/ff73eae8b0f6479a92781bd5947b65cd9e5b1980b0c424d36c10a0613190e906-sisalto.json",
+              "reviewedSnapshotSHA256": "ff73eae8b0f6479a92781bd5947b65cd9e5b1980b0c424d36c10a0613190e906",
+              "matches": true,
+              "method": "exact archived content SHA and full nonmedia comparison",
+              "reviewedNonmediaSHA256": "4abacf653d73edb2b0e36fa6852a7a6e917247e10ba60eba4fe895b8118adf81",
+              "currentNonmediaSHA256": "4abacf653d73edb2b0e36fa6852a7a6e917247e10ba60eba4fe895b8118adf81",
+              "imageFieldsExcludedOnlyAtInventoriedSlots": true
+            },
+            "currentBindingMetadataCheck": {
+              "checkedAt": "2026-10-13T05:48:16.687326+00:00",
+              "contentSHA256": "048d429b138863c1d51150d22d37d24fee0a387cf28b42adec4ddff5fc1e02c5",
+              "commonsFile": "Porto de Bissau 06.jpg",
+              "captionFi": "Bissaun uudemman sataman alukset ja laiturit vuonna 2017 havainnollistavat satamakaupan ympäristöä.",
+              "credit": "Joehawkins, Wikimedia Commons (CC BY-SA 4.0)",
+              "captionMatchesReviewed": true,
+              "personallyViewedAgain": false
             }
           },
           "qaReason": "Bissaun käyttöaluksia ja teknistä satamaympäristöä vesimaisemana. Ei luettavia kasvoja tai suojattua teosta päämotiivina. Caption nimeää nykyisen sataman yleiseksi kauppanäkymäksi, ei Tulliaukioksi."
@@ -2647,7 +3630,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/bissau/qa.json",
-        "fileSHA256": "32967021f230c6b7b1992db76104fc65120895b1ff9e4b6cc8b6691bac8b19d6",
+        "fileSHA256": "1fcde7dda73c8602e6db03997a7d5a73217c086c6194a89be8880bd72817f8b1",
         "item": {
           "slot": "L4",
           "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
@@ -2686,13 +3669,39 @@
               "lyhyt": "Bissaun uudempi satama havainnollistaa satamakauppaa.",
               "selite": "Bissaun uudemman sataman alukset ja laiturit vuonna 2017 havainnollistavat satamakaupan ympäristöä.",
               "lahde": "Joehawkins, Wikimedia Commons (CC BY-SA 4.0)"
+            },
+            "currentContentVersionCheck": {
+              "reviewedContentSHA256": "ff73eae8b0f6479a92781bd5947b65cd9e5b1980b0c424d36c10a0613190e906",
+              "currentContentSHA256": "048d429b138863c1d51150d22d37d24fee0a387cf28b42adec4ddff5fc1e02c5",
+              "checkedAt": "2026-10-13T05:48:16.653754+00:00",
+              "personallyViewedAgain": false,
+              "reviewedSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/c-integration/history/e04/bissau/ff73eae8b0f6479a92781bd5947b65cd9e5b1980b0c424d36c10a0613190e906-sisalto.json",
+              "reviewedSnapshotSHA256": "ff73eae8b0f6479a92781bd5947b65cd9e5b1980b0c424d36c10a0613190e906",
+              "matches": true,
+              "method": "exact archived content SHA and full nonmedia comparison",
+              "reviewedNonmediaSHA256": "4abacf653d73edb2b0e36fa6852a7a6e917247e10ba60eba4fe895b8118adf81",
+              "currentNonmediaSHA256": "4abacf653d73edb2b0e36fa6852a7a6e917247e10ba60eba4fe895b8118adf81",
+              "imageFieldsExcludedOnlyAtInventoriedSlots": true
+            },
+            "currentBindingMetadataCheck": {
+              "checkedAt": "2026-10-13T05:48:16.687326+00:00",
+              "contentSHA256": "048d429b138863c1d51150d22d37d24fee0a387cf28b42adec4ddff5fc1e02c5",
+              "commonsFile": "Porto de Bissau 06.jpg",
+              "captionFi": "Bissaun uudemman sataman alukset ja laiturit vuonna 2017 havainnollistavat satamakaupan ympäristöä.",
+              "credit": "Joehawkins, Wikimedia Commons (CC BY-SA 4.0)",
+              "captionMatchesReviewed": true,
+              "personallyViewedAgain": false
             }
           }
         },
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/bissau/qa.json",
-            "sha256": "32967021f230c6b7b1992db76104fc65120895b1ff9e4b6cc8b6691bac8b19d6"
+            "sha256": "1fcde7dda73c8602e6db03997a7d5a73217c086c6194a89be8880bd72817f8b1"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/bissau/illustration-qa-extra.json",
+            "sha256": "50a93f231f9cf5abe5ece914be22849cd21786429f2b102c0f9e5549148204aa"
           }
         ]
       },

@@ -8,669 +8,6 @@
     {
       "era": "e04",
       "city": "rabat",
-      "slot": "N3",
-      "type": "commons",
-      "assetID": "capital-cc-e04-rabat-n3-baaac7f30b68e5c6",
-      "galleryImageID": "capital-cc-e04-rabat-n3-baaac7f30b68e5c6",
-      "commonsFile": "Muraille des Andalous 2 - Rabat.JPG",
-      "targetJsonPath": "$.nahtavyydet[\"Andalusialainen muuri\"].kuvat[0]",
-      "targetTokens": [
-        "nahtavyydet",
-        "Andalusialainen muuri",
-        "kuvat",
-        0
-      ],
-      "operation": "merge-media-fields-preserve-other-content",
-      "CmediaFieldPayload": {
-        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/rabat/n3-baaac7f30b68e5c6563a.jpg",
-        "suora": true,
-        "lahde": "Omar-toons, Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "Andalusialainen muuri Rabatin medinan reunalla vuonna2013.",
-        "lyhyt": "Andalusialainen muuri Rabatin medinan reunalla vuonna2013.",
-        "tiedosto": "Muraille des Andalous 2 - Rabat.JPG"
-      },
-      "removeMediaKeys": [],
-      "CvalidatorCompatiblePayload": {
-        "lahde": "Omar-toons, Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "Andalusialainen muuri Rabatin medinan reunalla vuonna2013.",
-        "lyhyt": "Andalusialainen muuri Rabatin medinan reunalla vuonna2013.",
-        "tiedosto": "Muraille des Andalous 2 - Rabat.JPG"
-      },
-      "runtimeMediaFieldPayload": {
-        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/rabat/n3-baaac7f30b68e5c6563a.jpg",
-        "suora": true,
-        "lahde": "Omar-toons, Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "Andalusialainen muuri Rabatin medinan reunalla vuonna2013.",
-        "lyhyt": "Andalusialainen muuri Rabatin medinan reunalla vuonna2013.",
-        "tiedosto": "Muraille des Andalous 2 - Rabat.JPG"
-      },
-      "runtimeRemoveMediaKeys": [],
-      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
-      "nativeSHA256": "baaac7f30b68e5c6563aef44695d47713b10a78750c0a5490e50816f63005318",
-      "exportSHA256": "baaac7f30b68e5c6563aef44695d47713b10a78750c0a5490e50816f63005318",
-      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/rabat/n3-baaac7f30b68e5c6563a.jpg",
-      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/rabat/n3-baaac7f30b68e5c6563a.jpg",
-      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/commons-originals/e04/rabat/d68f793c48cae1446b144d9c7e9d7f97cbc3ed2d061609f0a08d8937d3b34905.jpg",
-      "dimensions": [
-        2501,
-        1901
-      ],
-      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/rabat/sisalto.json",
-      "sourceContentSHA256": "e8cfe0f7c8812af898b31384847454b7c834f303ca358cb8b73b2abff43ea233",
-      "semanticSourceBind": {
-        "targetBeforeSHA256": "d9a177ea37668f1880565f6038f7933f17db6d88bbc3a82b7eae39d39e696831",
-        "semanticContextSHA256": "c19aa1d37d2f931e1710949e8d619b4f21d913522ed8e58c98c97b9cd9279ad9",
-        "subjectTitle": "Andalusialainen muuri",
-        "targetState": "existing-target"
-      },
-      "attribution": {
-        "author": "Omar-toons",
-        "license": "CC BY-SA 3.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
-        "sourcePage": "https://commons.wikimedia.org/wiki/File:Muraille_des_Andalous_2_-_Rabat.JPG",
-        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d2/Muraille_des_Andalous_2_-_Rabat.JPG",
-        "rightsEvidence": {
-          "selection": {
-            "primaryLawUrl": "https://www.wipo.int/wipolex/en/legislation/details/2985",
-            "primaryLawSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/rabat/cc-evidence/law-morocco.txt",
-            "sameSubjectCaseSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/rabat/qa.json",
-            "historicalIdentitySource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/rabat/faktapohja.md",
-            "scope": "Art1/3,7,20,25/27/28,69 luettu alkuperäislain tekstistä; rakennuksen ikä ei yksin riitä. Sama tunnistettu vanha rakenteellinen muoto kuin nimetyssä aiemmin QA:ssa hyväksytyssä kohdekohtaisessa tapauksessa; kuva ei näytä erillistä yksilöityä uutta ornamentti-/taideteospintaa. Uusi valinta jää riippumattoman QA:n tarkistettavaksi.",
-            "acceptedSameSubjectCase": "L2:Muraille des Andalous1-Rabat.JPG, sama pelkistetty Andalusialainen muuri",
-            "basis": "Lähde ja kategoria nimeävät Andalusialaisen muurin. Sama historiallinen pelkistetty muurimuoto kuin aiemmin QA:ssa hyväksytyssä L2-kuvassa. Ei koristeporttia, veistosta tai nykyistä taidepintaa; vain yhtenäistä rappausta, tavallisia valaisimia ja kasvillisuutta. Art27/28 vanhan anonyymin/kollektiivisen julkiseksi tehdyn muodon termi; ei nykyornamentin vapautusta. Alkuperäisen muurin julkinen17-luvun rajaus lähdefaktapohjassa."
-          },
-          "QA": {
-            "visualViewed": true,
-            "viewedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/rabat/qa-evidence/cc-94e2e7badd9779c0/original.JPG",
-            "sourceHTML": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/4f570b0b1c70a68696f311f8356b73b3b4838736abd36eb1ae583b533d4292a6.html",
-            "sourceHTMLSHA256": "930f39c96dbde7d2c6030a800e659a33561439863244f9cd53957ccc339abd23",
-            "sourcePage": "https://commons.wikimedia.org/wiki/File:Muraille_des_Andalous_2_-_Rabat.JPG",
-            "sourceDescription": "Français : La muraille des Andalous, Rabat, Maroc",
-            "sourceDate": "16 October 2013, 14:53:38",
-            "author": "Omar-toons",
-            "license": "CC BY-SA 3.0",
-            "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
-            "width": 2501,
-            "height": 1901,
-            "rightsEvidence": {
-              "primaryLawUrl": "https://www.wipo.int/wipolex/en/legislation/details/2985",
-              "primaryLawSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/rabat/cc-evidence/law-morocco.txt",
-              "sameSubjectCaseSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/rabat/qa.json",
-              "historicalIdentitySource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/rabat/faktapohja.md",
-              "scope": "Art1/3,7,20,25/27/28,69 luettu alkuperäislain tekstistä; rakennuksen ikä ei yksin riitä. Sama tunnistettu vanha rakenteellinen muoto kuin nimetyssä aiemmin QA:ssa hyväksytyssä kohdekohtaisessa tapauksessa; kuva ei näytä erillistä yksilöityä uutta ornamentti-/taideteospintaa. Uusi valinta jää riippumattoman QA:n tarkistettavaksi.",
-              "acceptedSameSubjectCase": "L2:Muraille des Andalous1-Rabat.JPG, sama pelkistetty Andalusialainen muuri",
-              "basis": "Lähde ja kategoria nimeävät Andalusialaisen muurin. Sama historiallinen pelkistetty muurimuoto kuin aiemmin QA:ssa hyväksytyssä L2-kuvassa. Ei koristeporttia, veistosta tai nykyistä taidepintaa; vain yhtenäistä rappausta, tavallisia valaisimia ja kasvillisuutta. Art27/28 vanhan anonyymin/kollektiivisen julkiseksi tehdyn muodon termi; ei nykyornamentin vapautusta. Alkuperäisen muurin julkinen17-luvun rajaus lähdefaktapohjassa."
-            },
-            "sourceContentSHA256": "f8f838afc5472fcd842ffcd8b9960dab39b9c9659598ce897847ff44a7bc8c3e",
-            "reviewedAt": "2026-10-12T18:53:01.154713+00:00"
-          },
-          "qaReason": "Uusi alkuperäinen kuva katsottu: lähde nimeää Andalusialaisen muurin, pelkistetty vanha muurirakenne on sama kuin hyväksytyssä L2:ssa mutta eri kuva/näkökulma. Kaukaisten jalankulkijoiden kasvot eivät erotu tunnistettavasti. Ei koristeportin tai modernin taidepinnan lupaa muurin kautta."
-        }
-      },
-      "luentaMetadata": {
-        "existingImageLuenta": null,
-        "captionReadingText": "Andalusialainen muuri Rabatin medinan reunalla vuonna2013.",
-        "existingArticleAndSectionLuentaPreserved": true,
-        "audioGenerated": false,
-        "audioURL": null,
-        "imageSpecificAudioProvided": false,
-        "reuseAudioAllowedByThisPacket": false
-      },
-      "qaEvidence": {
-        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/rabat/qa.json",
-        "fileSHA256": "d20f19d9af8eb32ebee6f8691c4099b2a9698842d8e77e5a93dc4f789ea00c8e",
-        "item": {
-          "slot": "N3",
-          "targetJsonPath": "$.nahtavyydet[\"Andalusialainen muuri\"].kuvat[0]",
-          "commonsFile": "Muraille des Andalous 2 - Rabat.JPG",
-          "sha256": "baaac7f30b68e5c6563aef44695d47713b10a78750c0a5490e50816f63005318",
-          "verdict": "accepted",
-          "reason": "Uusi alkuperäinen kuva katsottu: lähde nimeää Andalusialaisen muurin, pelkistetty vanha muurirakenne on sama kuin hyväksytyssä L2:ssa mutta eri kuva/näkökulma. Kaukaisten jalankulkijoiden kasvot eivät erotu tunnistettavasti. Ei koristeportin tai modernin taidepinnan lupaa muurin kautta.",
-          "evidence": {
-            "visualViewed": true,
-            "viewedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/rabat/qa-evidence/cc-94e2e7badd9779c0/original.JPG",
-            "sourceHTML": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/4f570b0b1c70a68696f311f8356b73b3b4838736abd36eb1ae583b533d4292a6.html",
-            "sourceHTMLSHA256": "930f39c96dbde7d2c6030a800e659a33561439863244f9cd53957ccc339abd23",
-            "sourcePage": "https://commons.wikimedia.org/wiki/File:Muraille_des_Andalous_2_-_Rabat.JPG",
-            "sourceDescription": "Français : La muraille des Andalous, Rabat, Maroc",
-            "sourceDate": "16 October 2013, 14:53:38",
-            "author": "Omar-toons",
-            "license": "CC BY-SA 3.0",
-            "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
-            "width": 2501,
-            "height": 1901,
-            "rightsEvidence": {
-              "primaryLawUrl": "https://www.wipo.int/wipolex/en/legislation/details/2985",
-              "primaryLawSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/rabat/cc-evidence/law-morocco.txt",
-              "sameSubjectCaseSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/rabat/qa.json",
-              "historicalIdentitySource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/rabat/faktapohja.md",
-              "scope": "Art1/3,7,20,25/27/28,69 luettu alkuperäislain tekstistä; rakennuksen ikä ei yksin riitä. Sama tunnistettu vanha rakenteellinen muoto kuin nimetyssä aiemmin QA:ssa hyväksytyssä kohdekohtaisessa tapauksessa; kuva ei näytä erillistä yksilöityä uutta ornamentti-/taideteospintaa. Uusi valinta jää riippumattoman QA:n tarkistettavaksi.",
-              "acceptedSameSubjectCase": "L2:Muraille des Andalous1-Rabat.JPG, sama pelkistetty Andalusialainen muuri",
-              "basis": "Lähde ja kategoria nimeävät Andalusialaisen muurin. Sama historiallinen pelkistetty muurimuoto kuin aiemmin QA:ssa hyväksytyssä L2-kuvassa. Ei koristeporttia, veistosta tai nykyistä taidepintaa; vain yhtenäistä rappausta, tavallisia valaisimia ja kasvillisuutta. Art27/28 vanhan anonyymin/kollektiivisen julkiseksi tehdyn muodon termi; ei nykyornamentin vapautusta. Alkuperäisen muurin julkinen17-luvun rajaus lähdefaktapohjassa."
-            },
-            "sourceContentSHA256": "f8f838afc5472fcd842ffcd8b9960dab39b9c9659598ce897847ff44a7bc8c3e",
-            "reviewedAt": "2026-10-12T18:53:01.154713+00:00"
-          }
-        },
-        "allSources": [
-          {
-            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/rabat/qa.json",
-            "sha256": "d20f19d9af8eb32ebee6f8691c4099b2a9698842d8e77e5a93dc4f789ea00c8e"
-          }
-        ]
-      },
-      "R2ByteVerification": {
-        "era": "e04",
-        "city": "rabat",
-        "slot": "N3",
-        "targetJsonPath": "$.nahtavyydet[\"Andalusialainen muuri\"].kuvat[0]",
-        "commonsFile": "Muraille des Andalous 2 - Rabat.JPG",
-        "sha256": "baaac7f30b68e5c6563aef44695d47713b10a78750c0a5490e50816f63005318",
-        "sourcePage": "https://commons.wikimedia.org/wiki/File:Muraille_des_Andalous_2_-_Rabat.JPG",
-        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d2/Muraille_des_Andalous_2_-_Rabat.JPG",
-        "author": "Omar-toons",
-        "license": "CC BY-SA 3.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
-        "width": 2501,
-        "height": 1901,
-        "originalSHA256": "baaac7f30b68e5c6563aef44695d47713b10a78750c0a5490e50816f63005318",
-        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/rabat/n3-baaac7f30b68e5c6563a.jpg",
-        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/rabat/n3-baaac7f30b68e5c6563a.jpg",
-        "bytes": 1078781,
-        "http": 200,
-        "mime": "image/jpeg",
-        "cors": "https://matkakirja.app",
-        "byteExactReadback": true,
-        "canonicalReadbackByteExact": true,
-        "conditionalIfNoneMatch": "*",
-        "s3PutHttp": 200,
-        "verifiedAt": "2026-10-12T18:54:06.028179+00:00",
-        "ownerAcceptanceVerified": false,
-        "gameIntegrated": false,
-        "attributionSource": "current-exact-QA-and-source-manifest"
-      },
-      "producerExportProof": null,
-      "technicalExportProof": null,
-      "priorMediaFields": {
-        "tiedosto": "Muraille des Andalous 2 - Rabat.JPG",
-        "lahde": "Omar-toons, Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "Andalusialainen muuri Rabatin medinan reunalla vuonna2013.",
-        "lyhyt": "Andalusialainen muuri Rabatin medinan reunalla vuonna2013."
-      },
-      "preservePreviousMediaObjects": true,
-      "authorization": {
-        "status": "waived-owner-review",
-        "authorizedByOwner": true,
-        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
-        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
-        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
-        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
-        "ownerAcceptanceImplied": false,
-        "QARequired": true,
-        "R2ByteVerificationRequired": true,
-        "galleryBeforeGameRequired": false,
-        "verifiedHumanMessageSource": {
-          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
-          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
-        }
-      },
-      "ownerAcceptanceVerified": false,
-      "gameIntegrated": false,
-      "gamePublicationVerified": false,
-      "inMemoryMergeVerified": true,
-      "CcommonsMetadataBound": true,
-      "CcommonsFieldPayload": {
-        "lahde": "Omar-toons, Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "Andalusialainen muuri Rabatin medinan reunalla vuonna2013.",
-        "lyhyt": "Andalusialainen muuri Rabatin medinan reunalla vuonna2013.",
-        "tiedosto": "Muraille des Andalous 2 - Rabat.JPG"
-      },
-      "roleManifestBound": true,
-      "sourceContentAfterSHA256": "e8cfe0f7c8812af898b31384847454b7c834f303ca358cb8b73b2abff43ea233",
-      "targetAfterSHA256": "d9a177ea37668f1880565f6038f7933f17db6d88bbc3a82b7eae39d39e696831",
-      "contextAfterSHA256": "c19aa1d37d2f931e1710949e8d619b4f21d913522ed8e58c98c97b9cd9279ad9"
-    },
-    {
-      "era": "e04",
-      "city": "rabat",
-      "slot": "N4",
-      "type": "commons",
-      "assetID": "capital-cc-e04-rabat-n4-9d598a35fe3f75e4",
-      "galleryImageID": "capital-cc-e04-rabat-n4-9d598a35fe3f75e4",
-      "commonsFile": "Moulay Slimane Mosque.jpg",
-      "targetJsonPath": "$.nahtavyydet[\"Moulay Slimanen moskeija\"].kuvat[0]",
-      "targetTokens": [
-        "nahtavyydet",
-        "Moulay Slimanen moskeija",
-        "kuvat",
-        0
-      ],
-      "operation": "merge-media-fields-preserve-other-content",
-      "CmediaFieldPayload": {
-        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/rabat/n4-9d598a35fe3f75e4c980.jpg",
-        "suora": true,
-        "lahde": "Rachidourkia, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Moulay Slimanen moskeijan minareetti Rabatin medinassa vuonna2024.",
-        "lyhyt": "Moulay Slimanen moskeijan minareetti Rabatin medinassa vuonna2024.",
-        "tiedosto": "Moulay Slimane Mosque.jpg"
-      },
-      "removeMediaKeys": [],
-      "CvalidatorCompatiblePayload": {
-        "lahde": "Rachidourkia, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Moulay Slimanen moskeijan minareetti Rabatin medinassa vuonna2024.",
-        "lyhyt": "Moulay Slimanen moskeijan minareetti Rabatin medinassa vuonna2024.",
-        "tiedosto": "Moulay Slimane Mosque.jpg"
-      },
-      "runtimeMediaFieldPayload": {
-        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/rabat/n4-9d598a35fe3f75e4c980.jpg",
-        "suora": true,
-        "lahde": "Rachidourkia, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Moulay Slimanen moskeijan minareetti Rabatin medinassa vuonna2024.",
-        "lyhyt": "Moulay Slimanen moskeijan minareetti Rabatin medinassa vuonna2024.",
-        "tiedosto": "Moulay Slimane Mosque.jpg"
-      },
-      "runtimeRemoveMediaKeys": [],
-      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
-      "nativeSHA256": "9d598a35fe3f75e4c980907823460ee94713b72ae198e25f78de1fd1d2311e88",
-      "exportSHA256": "9d598a35fe3f75e4c980907823460ee94713b72ae198e25f78de1fd1d2311e88",
-      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/rabat/n4-9d598a35fe3f75e4c980.jpg",
-      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/rabat/n4-9d598a35fe3f75e4c980.jpg",
-      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/commons-originals/e04/rabat/2cf9c74d810654b3faeb571310c7029041dfc6d5fd52713e442319a76a9d4577.jpg",
-      "dimensions": [
-        6000,
-        8000
-      ],
-      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/rabat/sisalto.json",
-      "sourceContentSHA256": "e8cfe0f7c8812af898b31384847454b7c834f303ca358cb8b73b2abff43ea233",
-      "semanticSourceBind": {
-        "targetBeforeSHA256": "73d480510b353a4e1a309daa97dac49434727c140652b2f528e75d61d71b5c7f",
-        "semanticContextSHA256": "d2b81a93f0cf921339d7a5fdf58273ee4164ab990d20aecf82cc79741a6969b1",
-        "subjectTitle": "Moulay Slimanen moskeija",
-        "targetState": "existing-target"
-      },
-      "attribution": {
-        "author": "Rachidourkia",
-        "license": "CC BY-SA 4.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
-        "sourcePage": "https://commons.wikimedia.org/wiki/File:Moulay_Slimane_Mosque.jpg",
-        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/9/98/Moulay_Slimane_Mosque.jpg",
-        "rightsEvidence": {
-          "selection": {
-            "primaryLawUrl": "https://www.wipo.int/wipolex/en/legislation/details/2985",
-            "primaryLawSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/rabat/cc-evidence/law-morocco.txt",
-            "sameSubjectCaseSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/rabat/qa.json",
-            "historicalIdentitySource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/rabat/faktapohja.md",
-            "scope": "Art1/3,7,20,25/27/28,69 luettu alkuperäislain tekstistä; rakennuksen ikä ei yksin riitä. Sama tunnistettu vanha rakenteellinen muoto kuin nimetyssä aiemmin QA:ssa hyväksytyssä kohdekohtaisessa tapauksessa; kuva ei näytä erillistä yksilöityä uutta ornamentti-/taideteospintaa. Uusi valinta jää riippumattoman QA:n tarkistettavaksi.",
-            "acceptedSameSubjectCase": "TRAVELER:Moulay Slimane Mosque Rabat DSCF2465.jpg; sama vaalea minaretti",
-            "basis": "Moulay Slimanen moskeijan tunnistettu historiallinen perusmuoto/alkuperäinen minaretti, ei AsSunnan uudelleensiirretty torni. Pelkistetty muurattu pintamuoto, yhtenäinen maalaus ja tavanomaiset käyttövalaisimet; ei kuvassa näkyvää yksilöityä nykyteosta. A:n ajoitus1812 sekä alkuperäislain art27/28 vanhan anonyymin/kollektiivisen julkaistun tai julkiseksi tehdyn muodon termi ovat erillistä kuvaajan CC:stä; sama kohdekohtainen muoto hyväksytty2023 lähikuvassa. Tämä ei hyväksy mahdollista muuta kaiverrettua/mosaiikki/folk-pintaa."
-          },
-          "QA": {
-            "visualViewed": true,
-            "viewedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/rabat/qa-evidence/cc-9ba67197248d675f/original.jpg",
-            "sourceHTML": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/ee98a6dc63c695c9ec76fa021d7cb26f4b9cd9c0b4e4b3421ef3443aad80ab39.html",
-            "sourceHTMLSHA256": "f505278c6d1ac992b78095b9c17123aa3e78942ee9c437df4975eaa440827d15",
-            "sourcePage": "https://commons.wikimedia.org/wiki/File:Moulay_Slimane_Mosque.jpg",
-            "sourceDescription": "English: Moulay Slimane Mosque (Mosque in Historic City of Rabat) .mw-parser-output .messagebox{margin:4px 0;width:auto;border-collapse:collapse;border:2px solid var(--border-color-progressive,#6485d1);background-color:var(--background-color-neutral-subtle,#fbfcff);color:var(--color-base,#202122);box-sizing:border-box;border-inline-start-width:8px}.mw-parser-output .messagebox.mbox-small{font-size:88%;line-height:1.25em}.mw-parser-output .mbox-warning,.mw-parser-output .mbox-speedy{border:2px solid var(--border-color-error,#b22222);background:var(--background-color-error-subtle,#ffdbdb);border-inline-start-width:8px}.mw-parser-output .mbox-serious,.mw-parser-output .mbox-delete,.mw-parser-output .mbox-stop{border:2px solid var(--border-color-error,#b22222);border-inline-start-width:8px}.mw-parser-output .mbox-issue,.mw-parser-output .mbox-content{border:2px solid #f28500;background:var(--background-color-warning-subtle,#ffe);border-inline-start-width:8px}.mw-parser-output .mbox-query,.mw-parser-output .mbox-style{border:2px solid #f4c430;background:var(--background-color-warning-subtle,#ffe);border-inline-start-width:8px}.mw-parser-output .mbox-shit{border:2px solid #960;border-inline-start-width:8px}.mw-parser-output .mbox-license{border:2px solid #88a;border-inline-start-width:initial}.mw-parser-output .mbox-legal{border:2px solid var(--border-color-notice,#666);background:var(--background-color-base,#fff);border-inline-start-width:8px}.mw-parser-output .mbox-honor{border:2px solid #ca3;background:var(--background-color-warning-subtle,#fcf4db);border-inline-start-width:8px}.mw-parser-output .mbox-growth{border:2px solid #8d4;background:var(--background-color-success-subtle,#d5fdf4);border-inline-start-width:8px}.mw-parser-output .mbox-move{border:2px solid #93c;border-inline-start-width:8px}.mw-parser-output .mbox-protection,.mw-parser-output .mbox-message{border:2px solid var(--border-color-base,#aaa);border-inline-start-width:8px}.mw-parser-output .messagebox .mbox-text{border:none;padding:0.25em 0.9em;width:100%}.mw-parser-output .messagebox .mbox-image{border:none;padding-top:2px;padding-bottom:2px;padding-inline-start:0.9em;padding-inline-end:0;text-align:center}.mw-parser-output .messagebox .mbox-imageright{border:none;padding-top:2px;padding-bottom:2px;padding-inline-start:0;padding-inline-end:0.9em;text-align:center}.mw-parser-output .messagebox .mbox-empty-cell{border:none;padding:0;width:1px}.mw-parser-output .messagebox .mbox-invalid-type{text-align:center}@media(min-width:720px){.mw-parser-output .messagebox{margin:4px 10%}.mw-parser-output .messagebox.mbox-small{clear:right;float:right;margin:4px 0 4px 1em;width:238px}}body.skin--responsive .mw-parser-output table.messagebox img{max-width:none!important}",
-            "sourceDate": "15 September 2024 (according to Exif data)",
-            "author": "Rachidourkia",
-            "license": "CC BY-SA 4.0",
-            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
-            "width": 6000,
-            "height": 8000,
-            "rightsEvidence": {
-              "primaryLawUrl": "https://www.wipo.int/wipolex/en/legislation/details/2985",
-              "primaryLawSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/rabat/cc-evidence/law-morocco.txt",
-              "sameSubjectCaseSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/rabat/qa.json",
-              "historicalIdentitySource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/rabat/faktapohja.md",
-              "scope": "Art1/3,7,20,25/27/28,69 luettu alkuperäislain tekstistä; rakennuksen ikä ei yksin riitä. Sama tunnistettu vanha rakenteellinen muoto kuin nimetyssä aiemmin QA:ssa hyväksytyssä kohdekohtaisessa tapauksessa; kuva ei näytä erillistä yksilöityä uutta ornamentti-/taideteospintaa. Uusi valinta jää riippumattoman QA:n tarkistettavaksi.",
-              "acceptedSameSubjectCase": "TRAVELER:Moulay Slimane Mosque Rabat DSCF2465.jpg; sama vaalea minaretti",
-              "basis": "Moulay Slimanen moskeijan tunnistettu historiallinen perusmuoto/alkuperäinen minaretti, ei AsSunnan uudelleensiirretty torni. Pelkistetty muurattu pintamuoto, yhtenäinen maalaus ja tavanomaiset käyttövalaisimet; ei kuvassa näkyvää yksilöityä nykyteosta. A:n ajoitus1812 sekä alkuperäislain art27/28 vanhan anonyymin/kollektiivisen julkaistun tai julkiseksi tehdyn muodon termi ovat erillistä kuvaajan CC:stä; sama kohdekohtainen muoto hyväksytty2023 lähikuvassa. Tämä ei hyväksy mahdollista muuta kaiverrettua/mosaiikki/folk-pintaa."
-            },
-            "sourceContentSHA256": "f8f838afc5472fcd842ffcd8b9960dab39b9c9659598ce897847ff44a7bc8c3e",
-            "reviewedAt": "2026-10-12T18:53:01.154713+00:00"
-          },
-          "qaReason": "Alkuperäinen uusi kuva katsottu: sama tunnistettu Moulay Slimanen historiallinen vaalea minaretti tavallisten katu-/seinärakenteiden välissä, ei kasvoja tai erillistä modernia teos-/ornamenttiaihetta. Date 15.9.2024 ja paikkakuvaus vastaavat selitettä. Vanhan alkuperäisen julkiseksi tehdyn muodon tapauskohtainen art27/28-peruste tarkistettu ensilain tekstistä ja faktapohjasta; ei iästä yksin johdettua lupaa kaikille uudisosille. Pysty ei hylkäysperuste."
-        }
-      },
-      "luentaMetadata": {
-        "existingImageLuenta": null,
-        "captionReadingText": "Moulay Slimanen moskeijan minareetti Rabatin medinassa vuonna2024.",
-        "existingArticleAndSectionLuentaPreserved": true,
-        "audioGenerated": false,
-        "audioURL": null,
-        "imageSpecificAudioProvided": false,
-        "reuseAudioAllowedByThisPacket": false
-      },
-      "qaEvidence": {
-        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/rabat/qa.json",
-        "fileSHA256": "d20f19d9af8eb32ebee6f8691c4099b2a9698842d8e77e5a93dc4f789ea00c8e",
-        "item": {
-          "slot": "N4",
-          "targetJsonPath": "$.nahtavyydet[\"Moulay Slimanen moskeija\"].kuvat[0]",
-          "commonsFile": "Moulay Slimane Mosque.jpg",
-          "sha256": "9d598a35fe3f75e4c980907823460ee94713b72ae198e25f78de1fd1d2311e88",
-          "verdict": "accepted",
-          "reason": "Alkuperäinen uusi kuva katsottu: sama tunnistettu Moulay Slimanen historiallinen vaalea minaretti tavallisten katu-/seinärakenteiden välissä, ei kasvoja tai erillistä modernia teos-/ornamenttiaihetta. Date 15.9.2024 ja paikkakuvaus vastaavat selitettä. Vanhan alkuperäisen julkiseksi tehdyn muodon tapauskohtainen art27/28-peruste tarkistettu ensilain tekstistä ja faktapohjasta; ei iästä yksin johdettua lupaa kaikille uudisosille. Pysty ei hylkäysperuste.",
-          "evidence": {
-            "visualViewed": true,
-            "viewedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/rabat/qa-evidence/cc-9ba67197248d675f/original.jpg",
-            "sourceHTML": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/ee98a6dc63c695c9ec76fa021d7cb26f4b9cd9c0b4e4b3421ef3443aad80ab39.html",
-            "sourceHTMLSHA256": "f505278c6d1ac992b78095b9c17123aa3e78942ee9c437df4975eaa440827d15",
-            "sourcePage": "https://commons.wikimedia.org/wiki/File:Moulay_Slimane_Mosque.jpg",
-            "sourceDescription": "English: Moulay Slimane Mosque (Mosque in Historic City of Rabat) .mw-parser-output .messagebox{margin:4px 0;width:auto;border-collapse:collapse;border:2px solid var(--border-color-progressive,#6485d1);background-color:var(--background-color-neutral-subtle,#fbfcff);color:var(--color-base,#202122);box-sizing:border-box;border-inline-start-width:8px}.mw-parser-output .messagebox.mbox-small{font-size:88%;line-height:1.25em}.mw-parser-output .mbox-warning,.mw-parser-output .mbox-speedy{border:2px solid var(--border-color-error,#b22222);background:var(--background-color-error-subtle,#ffdbdb);border-inline-start-width:8px}.mw-parser-output .mbox-serious,.mw-parser-output .mbox-delete,.mw-parser-output .mbox-stop{border:2px solid var(--border-color-error,#b22222);border-inline-start-width:8px}.mw-parser-output .mbox-issue,.mw-parser-output .mbox-content{border:2px solid #f28500;background:var(--background-color-warning-subtle,#ffe);border-inline-start-width:8px}.mw-parser-output .mbox-query,.mw-parser-output .mbox-style{border:2px solid #f4c430;background:var(--background-color-warning-subtle,#ffe);border-inline-start-width:8px}.mw-parser-output .mbox-shit{border:2px solid #960;border-inline-start-width:8px}.mw-parser-output .mbox-license{border:2px solid #88a;border-inline-start-width:initial}.mw-parser-output .mbox-legal{border:2px solid var(--border-color-notice,#666);background:var(--background-color-base,#fff);border-inline-start-width:8px}.mw-parser-output .mbox-honor{border:2px solid #ca3;background:var(--background-color-warning-subtle,#fcf4db);border-inline-start-width:8px}.mw-parser-output .mbox-growth{border:2px solid #8d4;background:var(--background-color-success-subtle,#d5fdf4);border-inline-start-width:8px}.mw-parser-output .mbox-move{border:2px solid #93c;border-inline-start-width:8px}.mw-parser-output .mbox-protection,.mw-parser-output .mbox-message{border:2px solid var(--border-color-base,#aaa);border-inline-start-width:8px}.mw-parser-output .messagebox .mbox-text{border:none;padding:0.25em 0.9em;width:100%}.mw-parser-output .messagebox .mbox-image{border:none;padding-top:2px;padding-bottom:2px;padding-inline-start:0.9em;padding-inline-end:0;text-align:center}.mw-parser-output .messagebox .mbox-imageright{border:none;padding-top:2px;padding-bottom:2px;padding-inline-start:0;padding-inline-end:0.9em;text-align:center}.mw-parser-output .messagebox .mbox-empty-cell{border:none;padding:0;width:1px}.mw-parser-output .messagebox .mbox-invalid-type{text-align:center}@media(min-width:720px){.mw-parser-output .messagebox{margin:4px 10%}.mw-parser-output .messagebox.mbox-small{clear:right;float:right;margin:4px 0 4px 1em;width:238px}}body.skin--responsive .mw-parser-output table.messagebox img{max-width:none!important}",
-            "sourceDate": "15 September 2024 (according to Exif data)",
-            "author": "Rachidourkia",
-            "license": "CC BY-SA 4.0",
-            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
-            "width": 6000,
-            "height": 8000,
-            "rightsEvidence": {
-              "primaryLawUrl": "https://www.wipo.int/wipolex/en/legislation/details/2985",
-              "primaryLawSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/rabat/cc-evidence/law-morocco.txt",
-              "sameSubjectCaseSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/rabat/qa.json",
-              "historicalIdentitySource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/rabat/faktapohja.md",
-              "scope": "Art1/3,7,20,25/27/28,69 luettu alkuperäislain tekstistä; rakennuksen ikä ei yksin riitä. Sama tunnistettu vanha rakenteellinen muoto kuin nimetyssä aiemmin QA:ssa hyväksytyssä kohdekohtaisessa tapauksessa; kuva ei näytä erillistä yksilöityä uutta ornamentti-/taideteospintaa. Uusi valinta jää riippumattoman QA:n tarkistettavaksi.",
-              "acceptedSameSubjectCase": "TRAVELER:Moulay Slimane Mosque Rabat DSCF2465.jpg; sama vaalea minaretti",
-              "basis": "Moulay Slimanen moskeijan tunnistettu historiallinen perusmuoto/alkuperäinen minaretti, ei AsSunnan uudelleensiirretty torni. Pelkistetty muurattu pintamuoto, yhtenäinen maalaus ja tavanomaiset käyttövalaisimet; ei kuvassa näkyvää yksilöityä nykyteosta. A:n ajoitus1812 sekä alkuperäislain art27/28 vanhan anonyymin/kollektiivisen julkaistun tai julkiseksi tehdyn muodon termi ovat erillistä kuvaajan CC:stä; sama kohdekohtainen muoto hyväksytty2023 lähikuvassa. Tämä ei hyväksy mahdollista muuta kaiverrettua/mosaiikki/folk-pintaa."
-            },
-            "sourceContentSHA256": "f8f838afc5472fcd842ffcd8b9960dab39b9c9659598ce897847ff44a7bc8c3e",
-            "reviewedAt": "2026-10-12T18:53:01.154713+00:00"
-          }
-        },
-        "allSources": [
-          {
-            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/rabat/qa.json",
-            "sha256": "d20f19d9af8eb32ebee6f8691c4099b2a9698842d8e77e5a93dc4f789ea00c8e"
-          }
-        ]
-      },
-      "R2ByteVerification": {
-        "era": "e04",
-        "city": "rabat",
-        "slot": "N4",
-        "targetJsonPath": "$.nahtavyydet[\"Moulay Slimanen moskeija\"].kuvat[0]",
-        "commonsFile": "Moulay Slimane Mosque.jpg",
-        "sha256": "9d598a35fe3f75e4c980907823460ee94713b72ae198e25f78de1fd1d2311e88",
-        "sourcePage": "https://commons.wikimedia.org/wiki/File:Moulay_Slimane_Mosque.jpg",
-        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/9/98/Moulay_Slimane_Mosque.jpg",
-        "author": "Rachidourkia",
-        "license": "CC BY-SA 4.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
-        "width": 6000,
-        "height": 8000,
-        "originalSHA256": "9d598a35fe3f75e4c980907823460ee94713b72ae198e25f78de1fd1d2311e88",
-        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/rabat/n4-9d598a35fe3f75e4c980.jpg",
-        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/rabat/n4-9d598a35fe3f75e4c980.jpg",
-        "bytes": 6612335,
-        "http": 200,
-        "mime": "image/jpeg",
-        "cors": "https://matkakirja.app",
-        "byteExactReadback": true,
-        "canonicalReadbackByteExact": true,
-        "conditionalIfNoneMatch": "*",
-        "s3PutHttp": 200,
-        "verifiedAt": "2026-10-12T18:54:04.769201+00:00",
-        "ownerAcceptanceVerified": false,
-        "gameIntegrated": false,
-        "attributionSource": "current-exact-QA-and-source-manifest"
-      },
-      "producerExportProof": null,
-      "technicalExportProof": null,
-      "priorMediaFields": {
-        "tiedosto": "Moulay Slimane Mosque.jpg",
-        "lahde": "Rachidourkia, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Moulay Slimanen moskeijan minareetti Rabatin medinassa vuonna2024.",
-        "lyhyt": "Moulay Slimanen moskeijan minareetti Rabatin medinassa vuonna2024."
-      },
-      "preservePreviousMediaObjects": true,
-      "authorization": {
-        "status": "waived-owner-review",
-        "authorizedByOwner": true,
-        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
-        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
-        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
-        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
-        "ownerAcceptanceImplied": false,
-        "QARequired": true,
-        "R2ByteVerificationRequired": true,
-        "galleryBeforeGameRequired": false,
-        "verifiedHumanMessageSource": {
-          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
-          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
-        }
-      },
-      "ownerAcceptanceVerified": false,
-      "gameIntegrated": false,
-      "gamePublicationVerified": false,
-      "inMemoryMergeVerified": true,
-      "CcommonsMetadataBound": true,
-      "CcommonsFieldPayload": {
-        "lahde": "Rachidourkia, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Moulay Slimanen moskeijan minareetti Rabatin medinassa vuonna2024.",
-        "lyhyt": "Moulay Slimanen moskeijan minareetti Rabatin medinassa vuonna2024.",
-        "tiedosto": "Moulay Slimane Mosque.jpg"
-      },
-      "roleManifestBound": true,
-      "sourceContentAfterSHA256": "e8cfe0f7c8812af898b31384847454b7c834f303ca358cb8b73b2abff43ea233",
-      "targetAfterSHA256": "73d480510b353a4e1a309daa97dac49434727c140652b2f528e75d61d71b5c7f",
-      "contextAfterSHA256": "d2b81a93f0cf921339d7a5fdf58273ee4164ab990d20aecf82cc79741a6969b1"
-    },
-    {
-      "era": "e04",
-      "city": "rabat",
-      "slot": "N1",
-      "type": "commons",
-      "assetID": "capital-cc-e04-rabat-n1-5b76fc42301d3b99",
-      "galleryImageID": "capital-cc-e04-rabat-n1-5b76fc42301d3b99",
-      "commonsFile": "Kasbah des Oudaias P1060323.JPG",
-      "targetJsonPath": "$.nahtavyydet[\"Udayan kasbah\"].kuvat[0]",
-      "targetTokens": [
-        "nahtavyydet",
-        "Udayan kasbah",
-        "kuvat",
-        0
-      ],
-      "operation": "merge-media-fields-preserve-other-content",
-      "CmediaFieldPayload": {
-        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/rabat/n1-5b76fc42301d3b9908a6.jpg",
-        "suora": true,
-        "lahde": "Pline, Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "Udayan kasbah Bou Regregin jokisuun taustalla vuonna2009.",
-        "lyhyt": "Udayan kasbah Bou Regregin jokisuun taustalla vuonna2009.",
-        "tiedosto": "Kasbah des Oudaias P1060323.JPG"
-      },
-      "removeMediaKeys": [],
-      "CvalidatorCompatiblePayload": {
-        "lahde": "Pline, Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "Udayan kasbah Bou Regregin jokisuun taustalla vuonna2009.",
-        "lyhyt": "Udayan kasbah Bou Regregin jokisuun taustalla vuonna2009.",
-        "tiedosto": "Kasbah des Oudaias P1060323.JPG"
-      },
-      "runtimeMediaFieldPayload": {
-        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/rabat/n1-5b76fc42301d3b9908a6.jpg",
-        "suora": true,
-        "lahde": "Pline, Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "Udayan kasbah Bou Regregin jokisuun taustalla vuonna2009.",
-        "lyhyt": "Udayan kasbah Bou Regregin jokisuun taustalla vuonna2009.",
-        "tiedosto": "Kasbah des Oudaias P1060323.JPG"
-      },
-      "runtimeRemoveMediaKeys": [],
-      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
-      "nativeSHA256": "5b76fc42301d3b9908a645b8614bd72f54dae905649e4b71d75d8119776e96ed",
-      "exportSHA256": "5b76fc42301d3b9908a645b8614bd72f54dae905649e4b71d75d8119776e96ed",
-      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/rabat/n1-5b76fc42301d3b9908a6.jpg",
-      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/rabat/n1-5b76fc42301d3b9908a6.jpg",
-      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/commons-originals/e04/rabat/fa1ac42527cb262126458a2c995ec790c0924104c0c45964084cb657c32052bb.jpg",
-      "dimensions": [
-        3328,
-        1872
-      ],
-      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/rabat/sisalto.json",
-      "sourceContentSHA256": "e8cfe0f7c8812af898b31384847454b7c834f303ca358cb8b73b2abff43ea233",
-      "semanticSourceBind": {
-        "targetBeforeSHA256": "0898769113a3ae03afa06692900f23c2148e28b5bf4543c36f81f881fa26ddaa",
-        "semanticContextSHA256": "5e15f4799c107769b0035ec544d9666f71cc763cc2c5487d78ce2d494fe49f24",
-        "subjectTitle": "Udayan kasbah",
-        "targetState": "existing-target"
-      },
-      "attribution": {
-        "author": "Pline",
-        "license": "CC BY-SA 3.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
-        "sourcePage": "https://commons.wikimedia.org/wiki/File:Kasbah_des_Oudaias_P1060323.JPG",
-        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/0/07/Kasbah_des_Oudaias_P1060323.JPG",
-        "rightsEvidence": {
-          "selection": {
-            "primaryLawUrl": "https://www.wipo.int/wipolex/en/legislation/details/2985",
-            "primaryLawSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/rabat/cc-evidence/law-morocco.txt",
-            "basis": "Alkuperäislain art20 julkisessa paikassa pysyvien arkkitehtuuri-/taideteosten sivuosarajaus luettu. Laaja jokisuun, rantojen ja kasvillisuuden näkymä, jossa yksittäinen rakennus/arkkitehtiteos tai taidepinta ei pääaihe; historiallinen kasbah on maiseman taustan kokonaisuus. Ei portin reliefin, mosaiikin tai tietyn nykyteoksen erillistä kuvaa. Sama maisemakohteen tunnistettu kokonaisuus kuin nyky-CC:n hyväksytyssä Rabat-panoraamassa, valokuvan Pline / CC BY-SA3.0 eri oikeuskerros. Ei rakennusten kaikkien PD-väitettä, eikä väitettä että2009rannan asettelu olisi2026palvelutilanne."
-          },
-          "QA": {
-            "visualViewed": true,
-            "viewedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/rabat/qa-evidence/cc-e9a476e65efdc008/original.JPG",
-            "sourceHTML": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/61a94ef81d2f182a11257b40eaecd0ed6ae5c100b2c984bed554a13f2da986c9.html",
-            "sourceHTMLSHA256": "239e30f8b4c2a934ac40635c7371ef71b3a2c3eb34d72ffbdb290de7d46a6150",
-            "sourcePage": "https://commons.wikimedia.org/wiki/File:Kasbah_des_Oudaias_P1060323.JPG",
-            "sourceDescription": "Kasbah des Oudaias et Oued Bou Regreg (Rabat Maroc)",
-            "sourceDate": "November 2009",
-            "author": "Pline",
-            "license": "CC BY-SA 3.0",
-            "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
-            "width": 3328,
-            "height": 1872,
-            "rightsEvidence": {
-              "primaryLawUrl": "https://www.wipo.int/wipolex/en/legislation/details/2985",
-              "primaryLawSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/rabat/cc-evidence/law-morocco.txt",
-              "basis": "Alkuperäislain art20 julkisessa paikassa pysyvien arkkitehtuuri-/taideteosten sivuosarajaus luettu. Laaja jokisuun, rantojen ja kasvillisuuden näkymä, jossa yksittäinen rakennus/arkkitehtiteos tai taidepinta ei pääaihe; historiallinen kasbah on maiseman taustan kokonaisuus. Ei portin reliefin, mosaiikin tai tietyn nykyteoksen erillistä kuvaa. Sama maisemakohteen tunnistettu kokonaisuus kuin nyky-CC:n hyväksytyssä Rabat-panoraamassa, valokuvan Pline / CC BY-SA3.0 eri oikeuskerros. Ei rakennusten kaikkien PD-väitettä, eikä väitettä että2009rannan asettelu olisi2026palvelutilanne."
-            },
-            "sourceContentSHA256": "f8f838afc5472fcd842ffcd8b9960dab39b9c9659598ce897847ff44a7bc8c3e",
-            "reviewedAt": "2026-10-12T19:20:19.212415+00:00"
-          },
-          "qaReason": "Alkuperäinen kuva katsottu: Udayan kasbah koko jokisuumaiseman taustalla, Bou Regreg, veneet ja puusto näyttävät oikean paikan. Etualan lähimmät henkilöt selin; kaukaisten kasvojen piirteet eivät luettavia. Kyseessä laaja maisemakokonaisuus, ei yhden porttireliefin tai nykytaideteoksen toisinto. Art20:n sivuosarajaus tarkistettu samasta ensilain tekstistä; historiallisten yksittäisten uusien teoskerrosten vapautta ei oleteta. Pline / CC BY-SA3.0 tiedostosivulta. Vuosi2009 säilytetään, N1 ei O/TRAVELER-tuoreusrooli."
-        }
-      },
-      "luentaMetadata": {
-        "existingImageLuenta": null,
-        "captionReadingText": "Udayan kasbah Bou Regregin jokisuun taustalla vuonna2009.",
-        "existingArticleAndSectionLuentaPreserved": true,
-        "audioGenerated": false,
-        "audioURL": null,
-        "imageSpecificAudioProvided": false,
-        "reuseAudioAllowedByThisPacket": false
-      },
-      "qaEvidence": {
-        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/rabat/qa.json",
-        "fileSHA256": "d20f19d9af8eb32ebee6f8691c4099b2a9698842d8e77e5a93dc4f789ea00c8e",
-        "item": {
-          "slot": "N1",
-          "targetJsonPath": "$.nahtavyydet[\"Udayan kasbah\"].kuvat[0]",
-          "commonsFile": "Kasbah des Oudaias P1060323.JPG",
-          "sha256": "5b76fc42301d3b9908a645b8614bd72f54dae905649e4b71d75d8119776e96ed",
-          "verdict": "accepted",
-          "reason": "Alkuperäinen kuva katsottu: Udayan kasbah koko jokisuumaiseman taustalla, Bou Regreg, veneet ja puusto näyttävät oikean paikan. Etualan lähimmät henkilöt selin; kaukaisten kasvojen piirteet eivät luettavia. Kyseessä laaja maisemakokonaisuus, ei yhden porttireliefin tai nykytaideteoksen toisinto. Art20:n sivuosarajaus tarkistettu samasta ensilain tekstistä; historiallisten yksittäisten uusien teoskerrosten vapautta ei oleteta. Pline / CC BY-SA3.0 tiedostosivulta. Vuosi2009 säilytetään, N1 ei O/TRAVELER-tuoreusrooli.",
-          "evidence": {
-            "visualViewed": true,
-            "viewedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/rabat/qa-evidence/cc-e9a476e65efdc008/original.JPG",
-            "sourceHTML": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/61a94ef81d2f182a11257b40eaecd0ed6ae5c100b2c984bed554a13f2da986c9.html",
-            "sourceHTMLSHA256": "239e30f8b4c2a934ac40635c7371ef71b3a2c3eb34d72ffbdb290de7d46a6150",
-            "sourcePage": "https://commons.wikimedia.org/wiki/File:Kasbah_des_Oudaias_P1060323.JPG",
-            "sourceDescription": "Kasbah des Oudaias et Oued Bou Regreg (Rabat Maroc)",
-            "sourceDate": "November 2009",
-            "author": "Pline",
-            "license": "CC BY-SA 3.0",
-            "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
-            "width": 3328,
-            "height": 1872,
-            "rightsEvidence": {
-              "primaryLawUrl": "https://www.wipo.int/wipolex/en/legislation/details/2985",
-              "primaryLawSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/rabat/cc-evidence/law-morocco.txt",
-              "basis": "Alkuperäislain art20 julkisessa paikassa pysyvien arkkitehtuuri-/taideteosten sivuosarajaus luettu. Laaja jokisuun, rantojen ja kasvillisuuden näkymä, jossa yksittäinen rakennus/arkkitehtiteos tai taidepinta ei pääaihe; historiallinen kasbah on maiseman taustan kokonaisuus. Ei portin reliefin, mosaiikin tai tietyn nykyteoksen erillistä kuvaa. Sama maisemakohteen tunnistettu kokonaisuus kuin nyky-CC:n hyväksytyssä Rabat-panoraamassa, valokuvan Pline / CC BY-SA3.0 eri oikeuskerros. Ei rakennusten kaikkien PD-väitettä, eikä väitettä että2009rannan asettelu olisi2026palvelutilanne."
-            },
-            "sourceContentSHA256": "f8f838afc5472fcd842ffcd8b9960dab39b9c9659598ce897847ff44a7bc8c3e",
-            "reviewedAt": "2026-10-12T19:20:19.212415+00:00"
-          }
-        },
-        "allSources": [
-          {
-            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/rabat/qa.json",
-            "sha256": "d20f19d9af8eb32ebee6f8691c4099b2a9698842d8e77e5a93dc4f789ea00c8e"
-          }
-        ]
-      },
-      "R2ByteVerification": {
-        "era": "e04",
-        "city": "rabat",
-        "slot": "N1",
-        "targetJsonPath": "$.nahtavyydet[\"Udayan kasbah\"].kuvat[0]",
-        "commonsFile": "Kasbah des Oudaias P1060323.JPG",
-        "sha256": "5b76fc42301d3b9908a645b8614bd72f54dae905649e4b71d75d8119776e96ed",
-        "sourcePage": "https://commons.wikimedia.org/wiki/File:Kasbah_des_Oudaias_P1060323.JPG",
-        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/0/07/Kasbah_des_Oudaias_P1060323.JPG",
-        "author": "Pline",
-        "license": "CC BY-SA 3.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
-        "width": 3328,
-        "height": 1872,
-        "originalSHA256": "5b76fc42301d3b9908a645b8614bd72f54dae905649e4b71d75d8119776e96ed",
-        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/rabat/n1-5b76fc42301d3b9908a6.jpg",
-        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/rabat/n1-5b76fc42301d3b9908a6.jpg",
-        "bytes": 2028309,
-        "http": 200,
-        "mime": "image/jpeg",
-        "cors": "https://matkakirja.app",
-        "byteExactReadback": true,
-        "canonicalReadbackByteExact": true,
-        "conditionalIfNoneMatch": "*",
-        "s3PutHttp": 200,
-        "verifiedAt": "2026-10-12T19:21:35.579607+00:00",
-        "ownerAcceptanceVerified": false,
-        "gameIntegrated": false,
-        "attributionSource": "current-exact-QA-and-source-manifest"
-      },
-      "producerExportProof": null,
-      "technicalExportProof": null,
-      "priorMediaFields": {
-        "tiedosto": "Kasbah des Oudaias P1060323.JPG",
-        "lahde": "Pline, Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "Udayan kasbah Bou Regregin jokisuun taustalla vuonna2009.",
-        "lyhyt": "Udayan kasbah Bou Regregin jokisuun taustalla vuonna2009."
-      },
-      "preservePreviousMediaObjects": true,
-      "authorization": {
-        "status": "waived-owner-review",
-        "authorizedByOwner": true,
-        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
-        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
-        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
-        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
-        "ownerAcceptanceImplied": false,
-        "QARequired": true,
-        "R2ByteVerificationRequired": true,
-        "galleryBeforeGameRequired": false,
-        "verifiedHumanMessageSource": {
-          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
-          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
-        }
-      },
-      "ownerAcceptanceVerified": false,
-      "gameIntegrated": false,
-      "gamePublicationVerified": false,
-      "inMemoryMergeVerified": true,
-      "CcommonsMetadataBound": true,
-      "CcommonsFieldPayload": {
-        "lahde": "Pline, Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "Udayan kasbah Bou Regregin jokisuun taustalla vuonna2009.",
-        "lyhyt": "Udayan kasbah Bou Regregin jokisuun taustalla vuonna2009.",
-        "tiedosto": "Kasbah des Oudaias P1060323.JPG"
-      },
-      "roleManifestBound": true,
-      "sourceContentAfterSHA256": "e8cfe0f7c8812af898b31384847454b7c834f303ca358cb8b73b2abff43ea233",
-      "targetAfterSHA256": "0898769113a3ae03afa06692900f23c2148e28b5bf4543c36f81f881fa26ddaa",
-      "contextAfterSHA256": "5e15f4799c107769b0035ec544d9666f71cc763cc2c5487d78ce2d494fe49f24"
-    },
-    {
-      "era": "e04",
-      "city": "rabat",
       "slot": "PHOTO",
       "type": "commons",
       "assetID": "capital-cc-e04-rabat-photo-94f135d13d027ffb",
@@ -3716,6 +3053,231 @@
     {
       "era": "e04",
       "city": "rabat",
+      "slot": "N3",
+      "type": "commons",
+      "assetID": "capital-cc-e04-rabat-n3-baaac7f30b68e5c6",
+      "galleryImageID": "capital-cc-e04-rabat-n3-baaac7f30b68e5c6",
+      "commonsFile": "Muraille des Andalous 2 - Rabat.JPG",
+      "targetJsonPath": "$.nahtavyydet[\"Andalusialainen muuri\"].kuvat[0]",
+      "targetTokens": [
+        "nahtavyydet",
+        "Andalusialainen muuri",
+        "kuvat",
+        0
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/rabat/n3-baaac7f30b68e5c6563a.jpg",
+        "suora": true,
+        "lahde": "Omar-toons, Wikimedia Commons (CC BY-SA 3.0)",
+        "selite": "Andalusialainen muuri Rabatin medinan reunalla vuonna2013.",
+        "lyhyt": "Andalusialainen muuri Rabatin medinan reunalla vuonna2013.",
+        "tiedosto": "Muraille des Andalous 2 - Rabat.JPG"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Omar-toons, Wikimedia Commons (CC BY-SA 3.0)",
+        "selite": "Andalusialainen muuri Rabatin medinan reunalla vuonna2013.",
+        "lyhyt": "Andalusialainen muuri Rabatin medinan reunalla vuonna2013.",
+        "tiedosto": "Muraille des Andalous 2 - Rabat.JPG"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/rabat/n3-baaac7f30b68e5c6563a.jpg",
+        "suora": true,
+        "lahde": "Omar-toons, Wikimedia Commons (CC BY-SA 3.0)",
+        "selite": "Andalusialainen muuri Rabatin medinan reunalla vuonna2013.",
+        "lyhyt": "Andalusialainen muuri Rabatin medinan reunalla vuonna2013.",
+        "tiedosto": "Muraille des Andalous 2 - Rabat.JPG"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "baaac7f30b68e5c6563aef44695d47713b10a78750c0a5490e50816f63005318",
+      "exportSHA256": "baaac7f30b68e5c6563aef44695d47713b10a78750c0a5490e50816f63005318",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/rabat/n3-baaac7f30b68e5c6563a.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/rabat/n3-baaac7f30b68e5c6563a.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/commons-originals/e04/rabat/d68f793c48cae1446b144d9c7e9d7f97cbc3ed2d061609f0a08d8937d3b34905.jpg",
+      "dimensions": [
+        2501,
+        1901
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/rabat/sisalto.json",
+      "sourceContentSHA256": "e8cfe0f7c8812af898b31384847454b7c834f303ca358cb8b73b2abff43ea233",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "d9a177ea37668f1880565f6038f7933f17db6d88bbc3a82b7eae39d39e696831",
+        "semanticContextSHA256": "c19aa1d37d2f931e1710949e8d619b4f21d913522ed8e58c98c97b9cd9279ad9",
+        "subjectTitle": "Andalusialainen muuri",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Omar-toons",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Muraille_des_Andalous_2_-_Rabat.JPG",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d2/Muraille_des_Andalous_2_-_Rabat.JPG",
+        "rightsEvidence": {
+          "selection": {
+            "primaryLawUrl": "https://www.wipo.int/wipolex/en/legislation/details/2985",
+            "primaryLawSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/rabat/cc-evidence/law-morocco.txt",
+            "sameSubjectCaseSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/rabat/qa.json",
+            "historicalIdentitySource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/rabat/faktapohja.md",
+            "scope": "Art1/3,7,20,25/27/28,69 luettu alkuperäislain tekstistä; rakennuksen ikä ei yksin riitä. Sama tunnistettu vanha rakenteellinen muoto kuin nimetyssä aiemmin QA:ssa hyväksytyssä kohdekohtaisessa tapauksessa; kuva ei näytä erillistä yksilöityä uutta ornamentti-/taideteospintaa. Uusi valinta jää riippumattoman QA:n tarkistettavaksi.",
+            "acceptedSameSubjectCase": "L2:Muraille des Andalous1-Rabat.JPG, sama pelkistetty Andalusialainen muuri",
+            "basis": "Lähde ja kategoria nimeävät Andalusialaisen muurin. Sama historiallinen pelkistetty muurimuoto kuin aiemmin QA:ssa hyväksytyssä L2-kuvassa. Ei koristeporttia, veistosta tai nykyistä taidepintaa; vain yhtenäistä rappausta, tavallisia valaisimia ja kasvillisuutta. Art27/28 vanhan anonyymin/kollektiivisen julkiseksi tehdyn muodon termi; ei nykyornamentin vapautusta. Alkuperäisen muurin julkinen17-luvun rajaus lähdefaktapohjassa."
+          },
+          "QA": {
+            "visualViewed": true,
+            "viewedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/rabat/qa-evidence/cc-94e2e7badd9779c0/original.JPG",
+            "sourceHTML": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/4f570b0b1c70a68696f311f8356b73b3b4838736abd36eb1ae583b533d4292a6.html",
+            "sourceHTMLSHA256": "930f39c96dbde7d2c6030a800e659a33561439863244f9cd53957ccc339abd23",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Muraille_des_Andalous_2_-_Rabat.JPG",
+            "sourceDescription": "Français : La muraille des Andalous, Rabat, Maroc",
+            "sourceDate": "16 October 2013, 14:53:38",
+            "author": "Omar-toons",
+            "license": "CC BY-SA 3.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+            "width": 2501,
+            "height": 1901,
+            "rightsEvidence": {
+              "primaryLawUrl": "https://www.wipo.int/wipolex/en/legislation/details/2985",
+              "primaryLawSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/rabat/cc-evidence/law-morocco.txt",
+              "sameSubjectCaseSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/rabat/qa.json",
+              "historicalIdentitySource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/rabat/faktapohja.md",
+              "scope": "Art1/3,7,20,25/27/28,69 luettu alkuperäislain tekstistä; rakennuksen ikä ei yksin riitä. Sama tunnistettu vanha rakenteellinen muoto kuin nimetyssä aiemmin QA:ssa hyväksytyssä kohdekohtaisessa tapauksessa; kuva ei näytä erillistä yksilöityä uutta ornamentti-/taideteospintaa. Uusi valinta jää riippumattoman QA:n tarkistettavaksi.",
+              "acceptedSameSubjectCase": "L2:Muraille des Andalous1-Rabat.JPG, sama pelkistetty Andalusialainen muuri",
+              "basis": "Lähde ja kategoria nimeävät Andalusialaisen muurin. Sama historiallinen pelkistetty muurimuoto kuin aiemmin QA:ssa hyväksytyssä L2-kuvassa. Ei koristeporttia, veistosta tai nykyistä taidepintaa; vain yhtenäistä rappausta, tavallisia valaisimia ja kasvillisuutta. Art27/28 vanhan anonyymin/kollektiivisen julkiseksi tehdyn muodon termi; ei nykyornamentin vapautusta. Alkuperäisen muurin julkinen17-luvun rajaus lähdefaktapohjassa."
+            },
+            "sourceContentSHA256": "f8f838afc5472fcd842ffcd8b9960dab39b9c9659598ce897847ff44a7bc8c3e",
+            "reviewedAt": "2026-10-12T18:53:01.154713+00:00"
+          },
+          "qaReason": "Uusi alkuperäinen kuva katsottu: lähde nimeää Andalusialaisen muurin, pelkistetty vanha muurirakenne on sama kuin hyväksytyssä L2:ssa mutta eri kuva/näkökulma. Kaukaisten jalankulkijoiden kasvot eivät erotu tunnistettavasti. Ei koristeportin tai modernin taidepinnan lupaa muurin kautta."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Andalusialainen muuri Rabatin medinan reunalla vuonna2013.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/rabat/qa.json",
+        "fileSHA256": "d20f19d9af8eb32ebee6f8691c4099b2a9698842d8e77e5a93dc4f789ea00c8e",
+        "item": {
+          "slot": "N3",
+          "targetJsonPath": "$.nahtavyydet[\"Andalusialainen muuri\"].kuvat[0]",
+          "commonsFile": "Muraille des Andalous 2 - Rabat.JPG",
+          "sha256": "baaac7f30b68e5c6563aef44695d47713b10a78750c0a5490e50816f63005318",
+          "verdict": "accepted",
+          "reason": "Uusi alkuperäinen kuva katsottu: lähde nimeää Andalusialaisen muurin, pelkistetty vanha muurirakenne on sama kuin hyväksytyssä L2:ssa mutta eri kuva/näkökulma. Kaukaisten jalankulkijoiden kasvot eivät erotu tunnistettavasti. Ei koristeportin tai modernin taidepinnan lupaa muurin kautta.",
+          "evidence": {
+            "visualViewed": true,
+            "viewedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/rabat/qa-evidence/cc-94e2e7badd9779c0/original.JPG",
+            "sourceHTML": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/4f570b0b1c70a68696f311f8356b73b3b4838736abd36eb1ae583b533d4292a6.html",
+            "sourceHTMLSHA256": "930f39c96dbde7d2c6030a800e659a33561439863244f9cd53957ccc339abd23",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Muraille_des_Andalous_2_-_Rabat.JPG",
+            "sourceDescription": "Français : La muraille des Andalous, Rabat, Maroc",
+            "sourceDate": "16 October 2013, 14:53:38",
+            "author": "Omar-toons",
+            "license": "CC BY-SA 3.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+            "width": 2501,
+            "height": 1901,
+            "rightsEvidence": {
+              "primaryLawUrl": "https://www.wipo.int/wipolex/en/legislation/details/2985",
+              "primaryLawSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/rabat/cc-evidence/law-morocco.txt",
+              "sameSubjectCaseSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/rabat/qa.json",
+              "historicalIdentitySource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/rabat/faktapohja.md",
+              "scope": "Art1/3,7,20,25/27/28,69 luettu alkuperäislain tekstistä; rakennuksen ikä ei yksin riitä. Sama tunnistettu vanha rakenteellinen muoto kuin nimetyssä aiemmin QA:ssa hyväksytyssä kohdekohtaisessa tapauksessa; kuva ei näytä erillistä yksilöityä uutta ornamentti-/taideteospintaa. Uusi valinta jää riippumattoman QA:n tarkistettavaksi.",
+              "acceptedSameSubjectCase": "L2:Muraille des Andalous1-Rabat.JPG, sama pelkistetty Andalusialainen muuri",
+              "basis": "Lähde ja kategoria nimeävät Andalusialaisen muurin. Sama historiallinen pelkistetty muurimuoto kuin aiemmin QA:ssa hyväksytyssä L2-kuvassa. Ei koristeporttia, veistosta tai nykyistä taidepintaa; vain yhtenäistä rappausta, tavallisia valaisimia ja kasvillisuutta. Art27/28 vanhan anonyymin/kollektiivisen julkiseksi tehdyn muodon termi; ei nykyornamentin vapautusta. Alkuperäisen muurin julkinen17-luvun rajaus lähdefaktapohjassa."
+            },
+            "sourceContentSHA256": "f8f838afc5472fcd842ffcd8b9960dab39b9c9659598ce897847ff44a7bc8c3e",
+            "reviewedAt": "2026-10-12T18:53:01.154713+00:00"
+          }
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/rabat/qa.json",
+            "sha256": "d20f19d9af8eb32ebee6f8691c4099b2a9698842d8e77e5a93dc4f789ea00c8e"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e04",
+        "city": "rabat",
+        "slot": "N3",
+        "targetJsonPath": "$.nahtavyydet[\"Andalusialainen muuri\"].kuvat[0]",
+        "commonsFile": "Muraille des Andalous 2 - Rabat.JPG",
+        "sha256": "baaac7f30b68e5c6563aef44695d47713b10a78750c0a5490e50816f63005318",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Muraille_des_Andalous_2_-_Rabat.JPG",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d2/Muraille_des_Andalous_2_-_Rabat.JPG",
+        "author": "Omar-toons",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+        "width": 2501,
+        "height": 1901,
+        "originalSHA256": "baaac7f30b68e5c6563aef44695d47713b10a78750c0a5490e50816f63005318",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/rabat/n3-baaac7f30b68e5c6563a.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/rabat/n3-baaac7f30b68e5c6563a.jpg",
+        "bytes": 1078781,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T18:54:06.028179+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "Muraille des Andalous 2 - Rabat.JPG",
+        "lahde": "Omar-toons, Wikimedia Commons (CC BY-SA 3.0)",
+        "selite": "Andalusialainen muuri Rabatin medinan reunalla vuonna2013.",
+        "lyhyt": "Andalusialainen muuri Rabatin medinan reunalla vuonna2013."
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Omar-toons, Wikimedia Commons (CC BY-SA 3.0)",
+        "selite": "Andalusialainen muuri Rabatin medinan reunalla vuonna2013.",
+        "lyhyt": "Andalusialainen muuri Rabatin medinan reunalla vuonna2013.",
+        "tiedosto": "Muraille des Andalous 2 - Rabat.JPG"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "e8cfe0f7c8812af898b31384847454b7c834f303ca358cb8b73b2abff43ea233",
+      "targetAfterSHA256": "d9a177ea37668f1880565f6038f7933f17db6d88bbc3a82b7eae39d39e696831",
+      "contextAfterSHA256": "c19aa1d37d2f931e1710949e8d619b4f21d913522ed8e58c98c97b9cd9279ad9"
+    },
+    {
+      "era": "e04",
+      "city": "rabat",
       "slot": "N5",
       "type": "commons",
       "assetID": "capital-cc-e04-rabat-n5-51a9dd0e4256f4cb",
@@ -4570,6 +4132,444 @@
       "sourceContentAfterSHA256": "e8cfe0f7c8812af898b31384847454b7c834f303ca358cb8b73b2abff43ea233",
       "targetAfterSHA256": "5643b421bf0ee0890414b4cba29af1675b3226ab73f770f912241091b1611cd0",
       "contextAfterSHA256": "1ac82498b3726c1c063b1d08ad447a7f7988cf7e1cf75024830d092d037b1907"
+    },
+    {
+      "era": "e04",
+      "city": "rabat",
+      "slot": "N4",
+      "type": "commons",
+      "assetID": "capital-cc-e04-rabat-n4-9d598a35fe3f75e4",
+      "galleryImageID": "capital-cc-e04-rabat-n4-9d598a35fe3f75e4",
+      "commonsFile": "Moulay Slimane Mosque.jpg",
+      "targetJsonPath": "$.nahtavyydet[\"Moulay Slimanen moskeija\"].kuvat[0]",
+      "targetTokens": [
+        "nahtavyydet",
+        "Moulay Slimanen moskeija",
+        "kuvat",
+        0
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/rabat/n4-9d598a35fe3f75e4c980.jpg",
+        "suora": true,
+        "lahde": "Rachidourkia, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Moulay Slimanen moskeijan minareetti Rabatin medinassa vuonna2024.",
+        "lyhyt": "Moulay Slimanen moskeijan minareetti Rabatin medinassa vuonna2024.",
+        "tiedosto": "Moulay Slimane Mosque.jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Rachidourkia, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Moulay Slimanen moskeijan minareetti Rabatin medinassa vuonna2024.",
+        "lyhyt": "Moulay Slimanen moskeijan minareetti Rabatin medinassa vuonna2024.",
+        "tiedosto": "Moulay Slimane Mosque.jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/rabat/n4-9d598a35fe3f75e4c980.jpg",
+        "suora": true,
+        "lahde": "Rachidourkia, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Moulay Slimanen moskeijan minareetti Rabatin medinassa vuonna2024.",
+        "lyhyt": "Moulay Slimanen moskeijan minareetti Rabatin medinassa vuonna2024.",
+        "tiedosto": "Moulay Slimane Mosque.jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "9d598a35fe3f75e4c980907823460ee94713b72ae198e25f78de1fd1d2311e88",
+      "exportSHA256": "9d598a35fe3f75e4c980907823460ee94713b72ae198e25f78de1fd1d2311e88",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/rabat/n4-9d598a35fe3f75e4c980.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/rabat/n4-9d598a35fe3f75e4c980.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/commons-originals/e04/rabat/2cf9c74d810654b3faeb571310c7029041dfc6d5fd52713e442319a76a9d4577.jpg",
+      "dimensions": [
+        6000,
+        8000
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/rabat/sisalto.json",
+      "sourceContentSHA256": "e8cfe0f7c8812af898b31384847454b7c834f303ca358cb8b73b2abff43ea233",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "73d480510b353a4e1a309daa97dac49434727c140652b2f528e75d61d71b5c7f",
+        "semanticContextSHA256": "d2b81a93f0cf921339d7a5fdf58273ee4164ab990d20aecf82cc79741a6969b1",
+        "subjectTitle": "Moulay Slimanen moskeija",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Rachidourkia",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Moulay_Slimane_Mosque.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/9/98/Moulay_Slimane_Mosque.jpg",
+        "rightsEvidence": {
+          "selection": {
+            "primaryLawUrl": "https://www.wipo.int/wipolex/en/legislation/details/2985",
+            "primaryLawSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/rabat/cc-evidence/law-morocco.txt",
+            "sameSubjectCaseSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/rabat/qa.json",
+            "historicalIdentitySource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/rabat/faktapohja.md",
+            "scope": "Art1/3,7,20,25/27/28,69 luettu alkuperäislain tekstistä; rakennuksen ikä ei yksin riitä. Sama tunnistettu vanha rakenteellinen muoto kuin nimetyssä aiemmin QA:ssa hyväksytyssä kohdekohtaisessa tapauksessa; kuva ei näytä erillistä yksilöityä uutta ornamentti-/taideteospintaa. Uusi valinta jää riippumattoman QA:n tarkistettavaksi.",
+            "acceptedSameSubjectCase": "TRAVELER:Moulay Slimane Mosque Rabat DSCF2465.jpg; sama vaalea minaretti",
+            "basis": "Moulay Slimanen moskeijan tunnistettu historiallinen perusmuoto/alkuperäinen minaretti, ei AsSunnan uudelleensiirretty torni. Pelkistetty muurattu pintamuoto, yhtenäinen maalaus ja tavanomaiset käyttövalaisimet; ei kuvassa näkyvää yksilöityä nykyteosta. A:n ajoitus1812 sekä alkuperäislain art27/28 vanhan anonyymin/kollektiivisen julkaistun tai julkiseksi tehdyn muodon termi ovat erillistä kuvaajan CC:stä; sama kohdekohtainen muoto hyväksytty2023 lähikuvassa. Tämä ei hyväksy mahdollista muuta kaiverrettua/mosaiikki/folk-pintaa."
+          },
+          "QA": {
+            "visualViewed": true,
+            "viewedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/rabat/qa-evidence/cc-9ba67197248d675f/original.jpg",
+            "sourceHTML": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/ee98a6dc63c695c9ec76fa021d7cb26f4b9cd9c0b4e4b3421ef3443aad80ab39.html",
+            "sourceHTMLSHA256": "f505278c6d1ac992b78095b9c17123aa3e78942ee9c437df4975eaa440827d15",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Moulay_Slimane_Mosque.jpg",
+            "sourceDescription": "English: Moulay Slimane Mosque (Mosque in Historic City of Rabat) .mw-parser-output .messagebox{margin:4px 0;width:auto;border-collapse:collapse;border:2px solid var(--border-color-progressive,#6485d1);background-color:var(--background-color-neutral-subtle,#fbfcff);color:var(--color-base,#202122);box-sizing:border-box;border-inline-start-width:8px}.mw-parser-output .messagebox.mbox-small{font-size:88%;line-height:1.25em}.mw-parser-output .mbox-warning,.mw-parser-output .mbox-speedy{border:2px solid var(--border-color-error,#b22222);background:var(--background-color-error-subtle,#ffdbdb);border-inline-start-width:8px}.mw-parser-output .mbox-serious,.mw-parser-output .mbox-delete,.mw-parser-output .mbox-stop{border:2px solid var(--border-color-error,#b22222);border-inline-start-width:8px}.mw-parser-output .mbox-issue,.mw-parser-output .mbox-content{border:2px solid #f28500;background:var(--background-color-warning-subtle,#ffe);border-inline-start-width:8px}.mw-parser-output .mbox-query,.mw-parser-output .mbox-style{border:2px solid #f4c430;background:var(--background-color-warning-subtle,#ffe);border-inline-start-width:8px}.mw-parser-output .mbox-shit{border:2px solid #960;border-inline-start-width:8px}.mw-parser-output .mbox-license{border:2px solid #88a;border-inline-start-width:initial}.mw-parser-output .mbox-legal{border:2px solid var(--border-color-notice,#666);background:var(--background-color-base,#fff);border-inline-start-width:8px}.mw-parser-output .mbox-honor{border:2px solid #ca3;background:var(--background-color-warning-subtle,#fcf4db);border-inline-start-width:8px}.mw-parser-output .mbox-growth{border:2px solid #8d4;background:var(--background-color-success-subtle,#d5fdf4);border-inline-start-width:8px}.mw-parser-output .mbox-move{border:2px solid #93c;border-inline-start-width:8px}.mw-parser-output .mbox-protection,.mw-parser-output .mbox-message{border:2px solid var(--border-color-base,#aaa);border-inline-start-width:8px}.mw-parser-output .messagebox .mbox-text{border:none;padding:0.25em 0.9em;width:100%}.mw-parser-output .messagebox .mbox-image{border:none;padding-top:2px;padding-bottom:2px;padding-inline-start:0.9em;padding-inline-end:0;text-align:center}.mw-parser-output .messagebox .mbox-imageright{border:none;padding-top:2px;padding-bottom:2px;padding-inline-start:0;padding-inline-end:0.9em;text-align:center}.mw-parser-output .messagebox .mbox-empty-cell{border:none;padding:0;width:1px}.mw-parser-output .messagebox .mbox-invalid-type{text-align:center}@media(min-width:720px){.mw-parser-output .messagebox{margin:4px 10%}.mw-parser-output .messagebox.mbox-small{clear:right;float:right;margin:4px 0 4px 1em;width:238px}}body.skin--responsive .mw-parser-output table.messagebox img{max-width:none!important}",
+            "sourceDate": "15 September 2024 (according to Exif data)",
+            "author": "Rachidourkia",
+            "license": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+            "width": 6000,
+            "height": 8000,
+            "rightsEvidence": {
+              "primaryLawUrl": "https://www.wipo.int/wipolex/en/legislation/details/2985",
+              "primaryLawSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/rabat/cc-evidence/law-morocco.txt",
+              "sameSubjectCaseSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/rabat/qa.json",
+              "historicalIdentitySource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/rabat/faktapohja.md",
+              "scope": "Art1/3,7,20,25/27/28,69 luettu alkuperäislain tekstistä; rakennuksen ikä ei yksin riitä. Sama tunnistettu vanha rakenteellinen muoto kuin nimetyssä aiemmin QA:ssa hyväksytyssä kohdekohtaisessa tapauksessa; kuva ei näytä erillistä yksilöityä uutta ornamentti-/taideteospintaa. Uusi valinta jää riippumattoman QA:n tarkistettavaksi.",
+              "acceptedSameSubjectCase": "TRAVELER:Moulay Slimane Mosque Rabat DSCF2465.jpg; sama vaalea minaretti",
+              "basis": "Moulay Slimanen moskeijan tunnistettu historiallinen perusmuoto/alkuperäinen minaretti, ei AsSunnan uudelleensiirretty torni. Pelkistetty muurattu pintamuoto, yhtenäinen maalaus ja tavanomaiset käyttövalaisimet; ei kuvassa näkyvää yksilöityä nykyteosta. A:n ajoitus1812 sekä alkuperäislain art27/28 vanhan anonyymin/kollektiivisen julkaistun tai julkiseksi tehdyn muodon termi ovat erillistä kuvaajan CC:stä; sama kohdekohtainen muoto hyväksytty2023 lähikuvassa. Tämä ei hyväksy mahdollista muuta kaiverrettua/mosaiikki/folk-pintaa."
+            },
+            "sourceContentSHA256": "f8f838afc5472fcd842ffcd8b9960dab39b9c9659598ce897847ff44a7bc8c3e",
+            "reviewedAt": "2026-10-12T18:53:01.154713+00:00"
+          },
+          "qaReason": "Alkuperäinen uusi kuva katsottu: sama tunnistettu Moulay Slimanen historiallinen vaalea minaretti tavallisten katu-/seinärakenteiden välissä, ei kasvoja tai erillistä modernia teos-/ornamenttiaihetta. Date 15.9.2024 ja paikkakuvaus vastaavat selitettä. Vanhan alkuperäisen julkiseksi tehdyn muodon tapauskohtainen art27/28-peruste tarkistettu ensilain tekstistä ja faktapohjasta; ei iästä yksin johdettua lupaa kaikille uudisosille. Pysty ei hylkäysperuste."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Moulay Slimanen moskeijan minareetti Rabatin medinassa vuonna2024.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/rabat/qa.json",
+        "fileSHA256": "d20f19d9af8eb32ebee6f8691c4099b2a9698842d8e77e5a93dc4f789ea00c8e",
+        "item": {
+          "slot": "N4",
+          "targetJsonPath": "$.nahtavyydet[\"Moulay Slimanen moskeija\"].kuvat[0]",
+          "commonsFile": "Moulay Slimane Mosque.jpg",
+          "sha256": "9d598a35fe3f75e4c980907823460ee94713b72ae198e25f78de1fd1d2311e88",
+          "verdict": "accepted",
+          "reason": "Alkuperäinen uusi kuva katsottu: sama tunnistettu Moulay Slimanen historiallinen vaalea minaretti tavallisten katu-/seinärakenteiden välissä, ei kasvoja tai erillistä modernia teos-/ornamenttiaihetta. Date 15.9.2024 ja paikkakuvaus vastaavat selitettä. Vanhan alkuperäisen julkiseksi tehdyn muodon tapauskohtainen art27/28-peruste tarkistettu ensilain tekstistä ja faktapohjasta; ei iästä yksin johdettua lupaa kaikille uudisosille. Pysty ei hylkäysperuste.",
+          "evidence": {
+            "visualViewed": true,
+            "viewedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/rabat/qa-evidence/cc-9ba67197248d675f/original.jpg",
+            "sourceHTML": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/ee98a6dc63c695c9ec76fa021d7cb26f4b9cd9c0b4e4b3421ef3443aad80ab39.html",
+            "sourceHTMLSHA256": "f505278c6d1ac992b78095b9c17123aa3e78942ee9c437df4975eaa440827d15",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Moulay_Slimane_Mosque.jpg",
+            "sourceDescription": "English: Moulay Slimane Mosque (Mosque in Historic City of Rabat) .mw-parser-output .messagebox{margin:4px 0;width:auto;border-collapse:collapse;border:2px solid var(--border-color-progressive,#6485d1);background-color:var(--background-color-neutral-subtle,#fbfcff);color:var(--color-base,#202122);box-sizing:border-box;border-inline-start-width:8px}.mw-parser-output .messagebox.mbox-small{font-size:88%;line-height:1.25em}.mw-parser-output .mbox-warning,.mw-parser-output .mbox-speedy{border:2px solid var(--border-color-error,#b22222);background:var(--background-color-error-subtle,#ffdbdb);border-inline-start-width:8px}.mw-parser-output .mbox-serious,.mw-parser-output .mbox-delete,.mw-parser-output .mbox-stop{border:2px solid var(--border-color-error,#b22222);border-inline-start-width:8px}.mw-parser-output .mbox-issue,.mw-parser-output .mbox-content{border:2px solid #f28500;background:var(--background-color-warning-subtle,#ffe);border-inline-start-width:8px}.mw-parser-output .mbox-query,.mw-parser-output .mbox-style{border:2px solid #f4c430;background:var(--background-color-warning-subtle,#ffe);border-inline-start-width:8px}.mw-parser-output .mbox-shit{border:2px solid #960;border-inline-start-width:8px}.mw-parser-output .mbox-license{border:2px solid #88a;border-inline-start-width:initial}.mw-parser-output .mbox-legal{border:2px solid var(--border-color-notice,#666);background:var(--background-color-base,#fff);border-inline-start-width:8px}.mw-parser-output .mbox-honor{border:2px solid #ca3;background:var(--background-color-warning-subtle,#fcf4db);border-inline-start-width:8px}.mw-parser-output .mbox-growth{border:2px solid #8d4;background:var(--background-color-success-subtle,#d5fdf4);border-inline-start-width:8px}.mw-parser-output .mbox-move{border:2px solid #93c;border-inline-start-width:8px}.mw-parser-output .mbox-protection,.mw-parser-output .mbox-message{border:2px solid var(--border-color-base,#aaa);border-inline-start-width:8px}.mw-parser-output .messagebox .mbox-text{border:none;padding:0.25em 0.9em;width:100%}.mw-parser-output .messagebox .mbox-image{border:none;padding-top:2px;padding-bottom:2px;padding-inline-start:0.9em;padding-inline-end:0;text-align:center}.mw-parser-output .messagebox .mbox-imageright{border:none;padding-top:2px;padding-bottom:2px;padding-inline-start:0;padding-inline-end:0.9em;text-align:center}.mw-parser-output .messagebox .mbox-empty-cell{border:none;padding:0;width:1px}.mw-parser-output .messagebox .mbox-invalid-type{text-align:center}@media(min-width:720px){.mw-parser-output .messagebox{margin:4px 10%}.mw-parser-output .messagebox.mbox-small{clear:right;float:right;margin:4px 0 4px 1em;width:238px}}body.skin--responsive .mw-parser-output table.messagebox img{max-width:none!important}",
+            "sourceDate": "15 September 2024 (according to Exif data)",
+            "author": "Rachidourkia",
+            "license": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+            "width": 6000,
+            "height": 8000,
+            "rightsEvidence": {
+              "primaryLawUrl": "https://www.wipo.int/wipolex/en/legislation/details/2985",
+              "primaryLawSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/rabat/cc-evidence/law-morocco.txt",
+              "sameSubjectCaseSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/rabat/qa.json",
+              "historicalIdentitySource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/rabat/faktapohja.md",
+              "scope": "Art1/3,7,20,25/27/28,69 luettu alkuperäislain tekstistä; rakennuksen ikä ei yksin riitä. Sama tunnistettu vanha rakenteellinen muoto kuin nimetyssä aiemmin QA:ssa hyväksytyssä kohdekohtaisessa tapauksessa; kuva ei näytä erillistä yksilöityä uutta ornamentti-/taideteospintaa. Uusi valinta jää riippumattoman QA:n tarkistettavaksi.",
+              "acceptedSameSubjectCase": "TRAVELER:Moulay Slimane Mosque Rabat DSCF2465.jpg; sama vaalea minaretti",
+              "basis": "Moulay Slimanen moskeijan tunnistettu historiallinen perusmuoto/alkuperäinen minaretti, ei AsSunnan uudelleensiirretty torni. Pelkistetty muurattu pintamuoto, yhtenäinen maalaus ja tavanomaiset käyttövalaisimet; ei kuvassa näkyvää yksilöityä nykyteosta. A:n ajoitus1812 sekä alkuperäislain art27/28 vanhan anonyymin/kollektiivisen julkaistun tai julkiseksi tehdyn muodon termi ovat erillistä kuvaajan CC:stä; sama kohdekohtainen muoto hyväksytty2023 lähikuvassa. Tämä ei hyväksy mahdollista muuta kaiverrettua/mosaiikki/folk-pintaa."
+            },
+            "sourceContentSHA256": "f8f838afc5472fcd842ffcd8b9960dab39b9c9659598ce897847ff44a7bc8c3e",
+            "reviewedAt": "2026-10-12T18:53:01.154713+00:00"
+          }
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/rabat/qa.json",
+            "sha256": "d20f19d9af8eb32ebee6f8691c4099b2a9698842d8e77e5a93dc4f789ea00c8e"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e04",
+        "city": "rabat",
+        "slot": "N4",
+        "targetJsonPath": "$.nahtavyydet[\"Moulay Slimanen moskeija\"].kuvat[0]",
+        "commonsFile": "Moulay Slimane Mosque.jpg",
+        "sha256": "9d598a35fe3f75e4c980907823460ee94713b72ae198e25f78de1fd1d2311e88",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Moulay_Slimane_Mosque.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/9/98/Moulay_Slimane_Mosque.jpg",
+        "author": "Rachidourkia",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+        "width": 6000,
+        "height": 8000,
+        "originalSHA256": "9d598a35fe3f75e4c980907823460ee94713b72ae198e25f78de1fd1d2311e88",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/rabat/n4-9d598a35fe3f75e4c980.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/rabat/n4-9d598a35fe3f75e4c980.jpg",
+        "bytes": 6612335,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T18:54:04.769201+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "Moulay Slimane Mosque.jpg",
+        "lahde": "Rachidourkia, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Moulay Slimanen moskeijan minareetti Rabatin medinassa vuonna2024.",
+        "lyhyt": "Moulay Slimanen moskeijan minareetti Rabatin medinassa vuonna2024."
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Rachidourkia, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Moulay Slimanen moskeijan minareetti Rabatin medinassa vuonna2024.",
+        "lyhyt": "Moulay Slimanen moskeijan minareetti Rabatin medinassa vuonna2024.",
+        "tiedosto": "Moulay Slimane Mosque.jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "e8cfe0f7c8812af898b31384847454b7c834f303ca358cb8b73b2abff43ea233",
+      "targetAfterSHA256": "73d480510b353a4e1a309daa97dac49434727c140652b2f528e75d61d71b5c7f",
+      "contextAfterSHA256": "d2b81a93f0cf921339d7a5fdf58273ee4164ab990d20aecf82cc79741a6969b1"
+    },
+    {
+      "era": "e04",
+      "city": "rabat",
+      "slot": "N1",
+      "type": "commons",
+      "assetID": "capital-cc-e04-rabat-n1-5b76fc42301d3b99",
+      "galleryImageID": "capital-cc-e04-rabat-n1-5b76fc42301d3b99",
+      "commonsFile": "Kasbah des Oudaias P1060323.JPG",
+      "targetJsonPath": "$.nahtavyydet[\"Udayan kasbah\"].kuvat[0]",
+      "targetTokens": [
+        "nahtavyydet",
+        "Udayan kasbah",
+        "kuvat",
+        0
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/rabat/n1-5b76fc42301d3b9908a6.jpg",
+        "suora": true,
+        "lahde": "Pline, Wikimedia Commons (CC BY-SA 3.0)",
+        "selite": "Udayan kasbah Bou Regregin jokisuun taustalla vuonna2009.",
+        "lyhyt": "Udayan kasbah Bou Regregin jokisuun taustalla vuonna2009.",
+        "tiedosto": "Kasbah des Oudaias P1060323.JPG"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Pline, Wikimedia Commons (CC BY-SA 3.0)",
+        "selite": "Udayan kasbah Bou Regregin jokisuun taustalla vuonna2009.",
+        "lyhyt": "Udayan kasbah Bou Regregin jokisuun taustalla vuonna2009.",
+        "tiedosto": "Kasbah des Oudaias P1060323.JPG"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/rabat/n1-5b76fc42301d3b9908a6.jpg",
+        "suora": true,
+        "lahde": "Pline, Wikimedia Commons (CC BY-SA 3.0)",
+        "selite": "Udayan kasbah Bou Regregin jokisuun taustalla vuonna2009.",
+        "lyhyt": "Udayan kasbah Bou Regregin jokisuun taustalla vuonna2009.",
+        "tiedosto": "Kasbah des Oudaias P1060323.JPG"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "5b76fc42301d3b9908a645b8614bd72f54dae905649e4b71d75d8119776e96ed",
+      "exportSHA256": "5b76fc42301d3b9908a645b8614bd72f54dae905649e4b71d75d8119776e96ed",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/rabat/n1-5b76fc42301d3b9908a6.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/rabat/n1-5b76fc42301d3b9908a6.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/commons-originals/e04/rabat/fa1ac42527cb262126458a2c995ec790c0924104c0c45964084cb657c32052bb.jpg",
+      "dimensions": [
+        3328,
+        1872
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/rabat/sisalto.json",
+      "sourceContentSHA256": "e8cfe0f7c8812af898b31384847454b7c834f303ca358cb8b73b2abff43ea233",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "0898769113a3ae03afa06692900f23c2148e28b5bf4543c36f81f881fa26ddaa",
+        "semanticContextSHA256": "5e15f4799c107769b0035ec544d9666f71cc763cc2c5487d78ce2d494fe49f24",
+        "subjectTitle": "Udayan kasbah",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Pline",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Kasbah_des_Oudaias_P1060323.JPG",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/0/07/Kasbah_des_Oudaias_P1060323.JPG",
+        "rightsEvidence": {
+          "selection": {
+            "primaryLawUrl": "https://www.wipo.int/wipolex/en/legislation/details/2985",
+            "primaryLawSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/rabat/cc-evidence/law-morocco.txt",
+            "basis": "Alkuperäislain art20 julkisessa paikassa pysyvien arkkitehtuuri-/taideteosten sivuosarajaus luettu. Laaja jokisuun, rantojen ja kasvillisuuden näkymä, jossa yksittäinen rakennus/arkkitehtiteos tai taidepinta ei pääaihe; historiallinen kasbah on maiseman taustan kokonaisuus. Ei portin reliefin, mosaiikin tai tietyn nykyteoksen erillistä kuvaa. Sama maisemakohteen tunnistettu kokonaisuus kuin nyky-CC:n hyväksytyssä Rabat-panoraamassa, valokuvan Pline / CC BY-SA3.0 eri oikeuskerros. Ei rakennusten kaikkien PD-väitettä, eikä väitettä että2009rannan asettelu olisi2026palvelutilanne."
+          },
+          "QA": {
+            "visualViewed": true,
+            "viewedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/rabat/qa-evidence/cc-e9a476e65efdc008/original.JPG",
+            "sourceHTML": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/61a94ef81d2f182a11257b40eaecd0ed6ae5c100b2c984bed554a13f2da986c9.html",
+            "sourceHTMLSHA256": "239e30f8b4c2a934ac40635c7371ef71b3a2c3eb34d72ffbdb290de7d46a6150",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Kasbah_des_Oudaias_P1060323.JPG",
+            "sourceDescription": "Kasbah des Oudaias et Oued Bou Regreg (Rabat Maroc)",
+            "sourceDate": "November 2009",
+            "author": "Pline",
+            "license": "CC BY-SA 3.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+            "width": 3328,
+            "height": 1872,
+            "rightsEvidence": {
+              "primaryLawUrl": "https://www.wipo.int/wipolex/en/legislation/details/2985",
+              "primaryLawSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/rabat/cc-evidence/law-morocco.txt",
+              "basis": "Alkuperäislain art20 julkisessa paikassa pysyvien arkkitehtuuri-/taideteosten sivuosarajaus luettu. Laaja jokisuun, rantojen ja kasvillisuuden näkymä, jossa yksittäinen rakennus/arkkitehtiteos tai taidepinta ei pääaihe; historiallinen kasbah on maiseman taustan kokonaisuus. Ei portin reliefin, mosaiikin tai tietyn nykyteoksen erillistä kuvaa. Sama maisemakohteen tunnistettu kokonaisuus kuin nyky-CC:n hyväksytyssä Rabat-panoraamassa, valokuvan Pline / CC BY-SA3.0 eri oikeuskerros. Ei rakennusten kaikkien PD-väitettä, eikä väitettä että2009rannan asettelu olisi2026palvelutilanne."
+            },
+            "sourceContentSHA256": "f8f838afc5472fcd842ffcd8b9960dab39b9c9659598ce897847ff44a7bc8c3e",
+            "reviewedAt": "2026-10-12T19:20:19.212415+00:00"
+          },
+          "qaReason": "Alkuperäinen kuva katsottu: Udayan kasbah koko jokisuumaiseman taustalla, Bou Regreg, veneet ja puusto näyttävät oikean paikan. Etualan lähimmät henkilöt selin; kaukaisten kasvojen piirteet eivät luettavia. Kyseessä laaja maisemakokonaisuus, ei yhden porttireliefin tai nykytaideteoksen toisinto. Art20:n sivuosarajaus tarkistettu samasta ensilain tekstistä; historiallisten yksittäisten uusien teoskerrosten vapautta ei oleteta. Pline / CC BY-SA3.0 tiedostosivulta. Vuosi2009 säilytetään, N1 ei O/TRAVELER-tuoreusrooli."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Udayan kasbah Bou Regregin jokisuun taustalla vuonna2009.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/rabat/qa.json",
+        "fileSHA256": "d20f19d9af8eb32ebee6f8691c4099b2a9698842d8e77e5a93dc4f789ea00c8e",
+        "item": {
+          "slot": "N1",
+          "targetJsonPath": "$.nahtavyydet[\"Udayan kasbah\"].kuvat[0]",
+          "commonsFile": "Kasbah des Oudaias P1060323.JPG",
+          "sha256": "5b76fc42301d3b9908a645b8614bd72f54dae905649e4b71d75d8119776e96ed",
+          "verdict": "accepted",
+          "reason": "Alkuperäinen kuva katsottu: Udayan kasbah koko jokisuumaiseman taustalla, Bou Regreg, veneet ja puusto näyttävät oikean paikan. Etualan lähimmät henkilöt selin; kaukaisten kasvojen piirteet eivät luettavia. Kyseessä laaja maisemakokonaisuus, ei yhden porttireliefin tai nykytaideteoksen toisinto. Art20:n sivuosarajaus tarkistettu samasta ensilain tekstistä; historiallisten yksittäisten uusien teoskerrosten vapautta ei oleteta. Pline / CC BY-SA3.0 tiedostosivulta. Vuosi2009 säilytetään, N1 ei O/TRAVELER-tuoreusrooli.",
+          "evidence": {
+            "visualViewed": true,
+            "viewedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/rabat/qa-evidence/cc-e9a476e65efdc008/original.JPG",
+            "sourceHTML": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/61a94ef81d2f182a11257b40eaecd0ed6ae5c100b2c984bed554a13f2da986c9.html",
+            "sourceHTMLSHA256": "239e30f8b4c2a934ac40635c7371ef71b3a2c3eb34d72ffbdb290de7d46a6150",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Kasbah_des_Oudaias_P1060323.JPG",
+            "sourceDescription": "Kasbah des Oudaias et Oued Bou Regreg (Rabat Maroc)",
+            "sourceDate": "November 2009",
+            "author": "Pline",
+            "license": "CC BY-SA 3.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+            "width": 3328,
+            "height": 1872,
+            "rightsEvidence": {
+              "primaryLawUrl": "https://www.wipo.int/wipolex/en/legislation/details/2985",
+              "primaryLawSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/rabat/cc-evidence/law-morocco.txt",
+              "basis": "Alkuperäislain art20 julkisessa paikassa pysyvien arkkitehtuuri-/taideteosten sivuosarajaus luettu. Laaja jokisuun, rantojen ja kasvillisuuden näkymä, jossa yksittäinen rakennus/arkkitehtiteos tai taidepinta ei pääaihe; historiallinen kasbah on maiseman taustan kokonaisuus. Ei portin reliefin, mosaiikin tai tietyn nykyteoksen erillistä kuvaa. Sama maisemakohteen tunnistettu kokonaisuus kuin nyky-CC:n hyväksytyssä Rabat-panoraamassa, valokuvan Pline / CC BY-SA3.0 eri oikeuskerros. Ei rakennusten kaikkien PD-väitettä, eikä väitettä että2009rannan asettelu olisi2026palvelutilanne."
+            },
+            "sourceContentSHA256": "f8f838afc5472fcd842ffcd8b9960dab39b9c9659598ce897847ff44a7bc8c3e",
+            "reviewedAt": "2026-10-12T19:20:19.212415+00:00"
+          }
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/rabat/qa.json",
+            "sha256": "d20f19d9af8eb32ebee6f8691c4099b2a9698842d8e77e5a93dc4f789ea00c8e"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e04",
+        "city": "rabat",
+        "slot": "N1",
+        "targetJsonPath": "$.nahtavyydet[\"Udayan kasbah\"].kuvat[0]",
+        "commonsFile": "Kasbah des Oudaias P1060323.JPG",
+        "sha256": "5b76fc42301d3b9908a645b8614bd72f54dae905649e4b71d75d8119776e96ed",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Kasbah_des_Oudaias_P1060323.JPG",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/0/07/Kasbah_des_Oudaias_P1060323.JPG",
+        "author": "Pline",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+        "width": 3328,
+        "height": 1872,
+        "originalSHA256": "5b76fc42301d3b9908a645b8614bd72f54dae905649e4b71d75d8119776e96ed",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/rabat/n1-5b76fc42301d3b9908a6.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/rabat/n1-5b76fc42301d3b9908a6.jpg",
+        "bytes": 2028309,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T19:21:35.579607+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "Kasbah des Oudaias P1060323.JPG",
+        "lahde": "Pline, Wikimedia Commons (CC BY-SA 3.0)",
+        "selite": "Udayan kasbah Bou Regregin jokisuun taustalla vuonna2009.",
+        "lyhyt": "Udayan kasbah Bou Regregin jokisuun taustalla vuonna2009."
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Pline, Wikimedia Commons (CC BY-SA 3.0)",
+        "selite": "Udayan kasbah Bou Regregin jokisuun taustalla vuonna2009.",
+        "lyhyt": "Udayan kasbah Bou Regregin jokisuun taustalla vuonna2009.",
+        "tiedosto": "Kasbah des Oudaias P1060323.JPG"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "e8cfe0f7c8812af898b31384847454b7c834f303ca358cb8b73b2abff43ea233",
+      "targetAfterSHA256": "0898769113a3ae03afa06692900f23c2148e28b5bf4543c36f81f881fa26ddaa",
+      "contextAfterSHA256": "5e15f4799c107769b0035ec544d9666f71cc763cc2c5487d78ce2d494fe49f24"
     }
   ],
   "runtimeIntegrationPending": true,

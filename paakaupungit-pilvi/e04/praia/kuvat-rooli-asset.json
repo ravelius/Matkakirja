@@ -183,7 +183,7 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/praia/illustration-qa-extra.json",
-            "sha256": "b84565e6a03a5115f1dc501bd4943f3c6a7fb3e37207c880e3844f0bc2a7b899"
+            "sha256": "c05b0e6792d60193f27b5c34c8efd92b622f99d42f03854d057c671ed0b6332d"
           }
         ]
       },
@@ -441,7 +441,7 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/praia/illustration-qa-extra.json",
-            "sha256": "b84565e6a03a5115f1dc501bd4943f3c6a7fb3e37207c880e3844f0bc2a7b899"
+            "sha256": "c05b0e6792d60193f27b5c34c8efd92b622f99d42f03854d057c671ed0b6332d"
           }
         ]
       },
@@ -527,6 +527,472 @@
       "sourceContentAfterSHA256": "3be82f396feb437f6b25eb02a8f2e11d6acc7c77c14a9cf5c4e3225170146976",
       "targetAfterSHA256": "06b0e9e6b119c459ca9146b4b26c1a1f681159556b219d544cb39506d1dcccdd",
       "contextAfterSHA256": "06b0e9e6b119c459ca9146b4b26c1a1f681159556b219d544cb39506d1dcccdd"
+    },
+    {
+      "era": "e04",
+      "city": "praia",
+      "slot": "TRAVELER",
+      "type": "illustration",
+      "assetID": "praia-traveler-cachupa-20261012-v1",
+      "galleryImageID": "praia-traveler-cachupa-20261012-v1",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "matkailijalle",
+        "kuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/praia/praia-traveler-cachupa-20261012-v1-b69cda023176.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Cachupan yleinen pystyhavainne, ei nimetyn Praian ravintolan annos tai paikkavalokuva.",
+        "lyhyt": "Cachupan yleinen pystyhavainne, ei nimetyn Praian ravintolan annos tai paikkavalokuva."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/praia/praia-traveler-cachupa-20261012-v1-b69cda023176.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Cachupan yleinen pystyhavainne, ei nimetyn Praian ravintolan annos tai paikkavalokuva.",
+        "lyhyt": "Cachupan yleinen pystyhavainne, ei nimetyn Praian ravintolan annos tai paikkavalokuva."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "b69cda02317624dd64fb670ee1c615019545e081a37e06fc02215de78f15e376",
+      "exportSHA256": "290024372612e3a3fab7dd64eeda5ab3565038a050f8dd059e2b857de517fbfc",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/praia/praia-traveler-cachupa-20261012-v1-b69cda023176.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/praia/praia-traveler-cachupa-20261012-v1-b69cda023176.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e04/praia/praia-traveler-cachupa-20261012-v1-b69cda023176.png",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/praia/sisalto.json",
+      "sourceContentSHA256": "3be82f396feb437f6b25eb02a8f2e11d6acc7c77c14a9cf5c4e3225170146976",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "6cb6a934ec6b10a486a54ceeb3fcd5211098aa33105f98dd8a0e6a320e596ce9",
+        "subjectTitle": "Matkailijalle",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Alkuperäinen tavallisen ruoan ja koristeettoman astian havainne; ei todellinen museoesine, artistin koriste, valokuvakopio, henkilö tai rakennus.",
+          "QA": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/praia/assets/praia-traveler-cachupa-20261012-v1/image.png",
+            "nativeSHA256": "b69cda02317624dd64fb670ee1c615019545e081a37e06fc02215de78f15e376",
+            "nativeDimensions": [
+              1024,
+              1536
+            ],
+            "manifestHashMatches": true,
+            "personallyViewed": true,
+            "viewTool": "view_image",
+            "visualFindingsFi": "Alkuperäisessä 1024×1536 PNG:ssä on maissia, papuja ja kasviksia sisältävä paksu pataruoka tavallisessa kulhossa. Ainekset erottuvat ja ruoan, kastikkeen sekä astian pinnat ovat uskottavia. Ei ihmisiä, tekstikoristelua, logoja, vesileimaa tai paikkaan viittaavaa rakennusta.",
+            "captionFi": "Cachupan yleinen pystyhavainne, ei nimetyn Praian ravintolan annos tai paikkavalokuva.",
+            "sourceAndTargetCheckFi": "Paikallinen Cape_Verdean_cuisine.txt tukee maissin ja papujen merkitystä sekä cachupaa pataruokana. Nykyisen oppaan ruokajaksossa käsitellään samoja aineksia. TRAVELER-kohde on olemassa tyhjällä kuvaoliolla. Kuvateksti nimeää maan ruoan yleisen havainteen eikä tietyn Praian ravintolan annosta tai paikkavalokuvaa.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/praia/sisalto.json",
+            "sourceEvidence": [
+              {
+                "url": "https://en.wikipedia.org/wiki/Cape_Verdean_cuisine",
+                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/praia-A/Cape_Verdean_cuisine.txt",
+                "facts": "Maissi ja pavut perusaineita; cachupa maissipohjainen pataruoka, eri versioita."
+              },
+              {
+                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/praia/sisalto.json",
+                "facts": "Oppaan maissi/pavut/kala ovat maan ruokataustaa; ei kaupungin yksinoikeutta tai nimetyn annoksen claimia."
+              }
+            ]
+          },
+          "qaReason": "Hyväksytty cachupan yleiseksi pystyhavainnekuvaksi; natiivin kuvan sivusuhde 0,667 täyttää TRAVELER-vaatimuksen."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Cachupan yleinen pystyhavainne, ei nimetyn Praian ravintolan annos tai paikkavalokuva.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/praia/illustration-qa-extra.json",
+        "fileSHA256": "c05b0e6792d60193f27b5c34c8efd92b622f99d42f03854d057c671ed0b6332d",
+        "item": {
+          "slot": "TRAVELER",
+          "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
+          "assetID": "praia-traveler-cachupa-20261012-v1",
+          "sha256": "b69cda02317624dd64fb670ee1c615019545e081a37e06fc02215de78f15e376",
+          "verdict": "accepted",
+          "reason": "Hyväksytty cachupan yleiseksi pystyhavainnekuvaksi; natiivin kuvan sivusuhde 0,667 täyttää TRAVELER-vaatimuksen.",
+          "evidence": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/praia/assets/praia-traveler-cachupa-20261012-v1/image.png",
+            "nativeSHA256": "b69cda02317624dd64fb670ee1c615019545e081a37e06fc02215de78f15e376",
+            "nativeDimensions": [
+              1024,
+              1536
+            ],
+            "manifestHashMatches": true,
+            "personallyViewed": true,
+            "viewTool": "view_image",
+            "visualFindingsFi": "Alkuperäisessä 1024×1536 PNG:ssä on maissia, papuja ja kasviksia sisältävä paksu pataruoka tavallisessa kulhossa. Ainekset erottuvat ja ruoan, kastikkeen sekä astian pinnat ovat uskottavia. Ei ihmisiä, tekstikoristelua, logoja, vesileimaa tai paikkaan viittaavaa rakennusta.",
+            "captionFi": "Cachupan yleinen pystyhavainne, ei nimetyn Praian ravintolan annos tai paikkavalokuva.",
+            "sourceAndTargetCheckFi": "Paikallinen Cape_Verdean_cuisine.txt tukee maissin ja papujen merkitystä sekä cachupaa pataruokana. Nykyisen oppaan ruokajaksossa käsitellään samoja aineksia. TRAVELER-kohde on olemassa tyhjällä kuvaoliolla. Kuvateksti nimeää maan ruoan yleisen havainteen eikä tietyn Praian ravintolan annosta tai paikkavalokuvaa.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/praia/sisalto.json",
+            "sourceEvidence": [
+              {
+                "url": "https://en.wikipedia.org/wiki/Cape_Verdean_cuisine",
+                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/praia-A/Cape_Verdean_cuisine.txt",
+                "facts": "Maissi ja pavut perusaineita; cachupa maissipohjainen pataruoka, eri versioita."
+              },
+              {
+                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/praia/sisalto.json",
+                "facts": "Oppaan maissi/pavut/kala ovat maan ruokataustaa; ei kaupungin yksinoikeutta tai nimetyn annoksen claimia."
+              }
+            ]
+          },
+          "reviewedAt": "2026-10-12T20:50:08.015379+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/praia/qa.json",
+            "sha256": "cdb7e1c8c880cfea21494f9a9f2da2bbed301e4cf6948dd9c75b682ff77182c1"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/praia/illustration-qa-extra.json",
+            "sha256": "c05b0e6792d60193f27b5c34c8efd92b622f99d42f03854d057c671ed0b6332d"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/praia/praia-traveler-cachupa-20261012-v1-b69cda023176.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/praia/praia-traveler-cachupa-20261012-v1-b69cda023176.png?t=290024372612e3a3",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/praia/praia-traveler-cachupa-20261012-v1-b69cda023176.png",
+        "sha256": "290024372612e3a3fab7dd64eeda5ab3565038a050f8dd059e2b857de517fbfc",
+        "bytes": 2334700,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "praia-traveler-cachupa-20261012-v1",
+        "nativeSHA256": "b69cda02317624dd64fb670ee1c615019545e081a37e06fc02215de78f15e376",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e04/praia/praia-traveler-cachupa-20261012-v1-b69cda023176.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e04",
+        "city": "praia",
+        "slot": "TRAVELER",
+        "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
+        "verifiedAt": "2026-10-13T05:53:33.561404+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e04/praia/praia-traveler-cachupa-20261012-v1-b69cda023176.png",
+        "sha256": "290024372612e3a3fab7dd64eeda5ab3565038a050f8dd059e2b857de517fbfc",
+        "bytes": 2334700,
+        "SHAReadAt": "2026-10-12T20:50:39.000159+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1024,
+        "height": 1536,
+        "pixelWidth": 1024,
+        "pixelHeight": 1536,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "b69cda02317624dd64fb670ee1c615019545e081a37e06fc02215de78f15e376",
+        "rgbPixelSHA256": "7f0b05c39e3af7f9b2bdb103745b39e0d0d7ec04be07050558a191e83c46ce90",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "3be82f396feb437f6b25eb02a8f2e11d6acc7c77c14a9cf5c4e3225170146976",
+      "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+      "contextAfterSHA256": "6cb6a934ec6b10a486a54ceeb3fcd5211098aa33105f98dd8a0e6a320e596ce9"
+    },
+    {
+      "era": "e04",
+      "city": "praia",
+      "slot": "K3",
+      "type": "illustration",
+      "assetID": "praia-k3-soitintyypit-20261012-v1",
+      "galleryImageID": "praia-k3-soitintyypit-20261012-v1",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].nostot[2]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "nostot",
+        2
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/praia/praia-k3-soitintyypit-20261012-v1-0eca3154f395.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Rummun ja kotilokuoren yleishavainne, ei Tabanka-esityksen tai museoesineiden kuva.",
+        "lyhyt": "Rummun ja kotilokuoren yleishavainne, ei Tabanka-esityksen tai museoesineiden kuva."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/praia/praia-k3-soitintyypit-20261012-v1-0eca3154f395.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Rummun ja kotilokuoren yleishavainne, ei Tabanka-esityksen tai museoesineiden kuva.",
+        "lyhyt": "Rummun ja kotilokuoren yleishavainne, ei Tabanka-esityksen tai museoesineiden kuva."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "0eca3154f395276b71fe5d7148809bb66b387515ed2bb22d493919b3d815f53d",
+      "exportSHA256": "9237120c17a1055729efbe77bdd6940b724d8ec844e4e6ea8d79ead8bcde9805",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/praia/praia-k3-soitintyypit-20261012-v1-0eca3154f395.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/praia/praia-k3-soitintyypit-20261012-v1-0eca3154f395.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e04/praia/praia-k3-soitintyypit-20261012-v1-0eca3154f395.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/praia/sisalto.json",
+      "sourceContentSHA256": "3be82f396feb437f6b25eb02a8f2e11d6acc7c77c14a9cf5c4e3225170146976",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "1d3ba4523fc9b72a03e4e187011ebf32a87b29c02a337b8bf3db74cee1785e02",
+        "semanticContextSHA256": "1d3ba4523fc9b72a03e4e187011ebf32a87b29c02a337b8bf3db74cee1785e02",
+        "subjectTitle": "Laulu saa yhteisen vastauksen",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Alkuperäiset geneeriset koristelemattomat funktionaaliset soitinesimerkit ja luonnollinen kuori; ei todellisen kansanperinne-esineen, koristekuvion, esityksen, kuvan tai museon kopiota. CPV:n folkloren/PD-esineen käyttöporttia ei oleteta ratkaistuksi.",
+          "QA": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/praia/assets/praia-k3-soitintyypit-20261012-v1/image.png",
+            "nativeSHA256": "0eca3154f395276b71fe5d7148809bb66b387515ed2bb22d493919b3d815f53d",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "manifestHashMatches": true,
+            "personallyViewed": true,
+            "viewTool": "view_image",
+            "visualFindingsFi": "Alkuperäisessä 1536×1024 PNG:ssä on tavallinen koristelematon puurunkoisen rummun ja suuren kotilokuoren asetelma. Rummun kalvo, puu ja nyörikiinnitykset sekä kuoren kierteet ja aukko ovat uskottavia. Ei ihmisryhmää, tunnistettavaa kansantaideteosta, tekstiä, logoja tai vesileimaa.",
+            "captionFi": "Rummun ja kotilokuoren yleishavainne, ei Tabanka-esityksen tai museoesineiden kuva.",
+            "sourceAndTargetCheckFi": "Nykyinen K3 Laulu saa yhteisen vastauksen ja faktapohjan P14-osuus nimeävät rummut ja kotilotorvet Tabankan soitintyyppeinä. Kuva havainnollistaa yleisiä esinetyyppejä. Kuvateksti sanoo rummun ja kotilokuoren yleishavainne eikä esitä asetelmaa aitona Tabanka-esityksenä tai nimettyinä museoesineinä.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/praia/sisalto.json",
+            "sourceEvidence": [
+              {
+                "url": "https://en.wikipedia.org/wiki/Tabanka",
+                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/praia/faktapohja.md",
+                "facts": "P14 As general music: rummut ja kotilotorvet mainittuina soitintyyppeinä; ei kopioida kansanperinteen luovaa esitystä."
+              },
+              {
+                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/praia/sisalto.json",
+                "facts": "K3:n teksti nimeää rummut, kotilotorvet ja viheltimet."
+              }
+            ]
+          },
+          "qaReason": "Hyväksytty rummun ja kotilokuoren yleishavainnekuvaksi; ei väitettä tietyn Tabanka-esityksen tai museoesineen ulkonäöstä."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Rummun ja kotilokuoren yleishavainne, ei Tabanka-esityksen tai museoesineiden kuva.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/praia/illustration-qa-extra.json",
+        "fileSHA256": "c05b0e6792d60193f27b5c34c8efd92b622f99d42f03854d057c671ed0b6332d",
+        "item": {
+          "slot": "K3",
+          "targetJsonPath": "$.kaupunkilehti[0].nostot[2]",
+          "assetID": "praia-k3-soitintyypit-20261012-v1",
+          "sha256": "0eca3154f395276b71fe5d7148809bb66b387515ed2bb22d493919b3d815f53d",
+          "verdict": "accepted",
+          "reason": "Hyväksytty rummun ja kotilokuoren yleishavainnekuvaksi; ei väitettä tietyn Tabanka-esityksen tai museoesineen ulkonäöstä.",
+          "evidence": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/praia/assets/praia-k3-soitintyypit-20261012-v1/image.png",
+            "nativeSHA256": "0eca3154f395276b71fe5d7148809bb66b387515ed2bb22d493919b3d815f53d",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "manifestHashMatches": true,
+            "personallyViewed": true,
+            "viewTool": "view_image",
+            "visualFindingsFi": "Alkuperäisessä 1536×1024 PNG:ssä on tavallinen koristelematon puurunkoisen rummun ja suuren kotilokuoren asetelma. Rummun kalvo, puu ja nyörikiinnitykset sekä kuoren kierteet ja aukko ovat uskottavia. Ei ihmisryhmää, tunnistettavaa kansantaideteosta, tekstiä, logoja tai vesileimaa.",
+            "captionFi": "Rummun ja kotilokuoren yleishavainne, ei Tabanka-esityksen tai museoesineiden kuva.",
+            "sourceAndTargetCheckFi": "Nykyinen K3 Laulu saa yhteisen vastauksen ja faktapohjan P14-osuus nimeävät rummut ja kotilotorvet Tabankan soitintyyppeinä. Kuva havainnollistaa yleisiä esinetyyppejä. Kuvateksti sanoo rummun ja kotilokuoren yleishavainne eikä esitä asetelmaa aitona Tabanka-esityksenä tai nimettyinä museoesineinä.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/praia/sisalto.json",
+            "sourceEvidence": [
+              {
+                "url": "https://en.wikipedia.org/wiki/Tabanka",
+                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/praia/faktapohja.md",
+                "facts": "P14 As general music: rummut ja kotilotorvet mainittuina soitintyyppeinä; ei kopioida kansanperinteen luovaa esitystä."
+              },
+              {
+                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/praia/sisalto.json",
+                "facts": "K3:n teksti nimeää rummut, kotilotorvet ja viheltimet."
+              }
+            ]
+          },
+          "reviewedAt": "2026-10-12T20:50:07.907454+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/praia/qa.json",
+            "sha256": "cdb7e1c8c880cfea21494f9a9f2da2bbed301e4cf6948dd9c75b682ff77182c1"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/praia/illustration-qa-extra.json",
+            "sha256": "c05b0e6792d60193f27b5c34c8efd92b622f99d42f03854d057c671ed0b6332d"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/praia/praia-k3-soitintyypit-20261012-v1-0eca3154f395.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/praia/praia-k3-soitintyypit-20261012-v1-0eca3154f395.png?t=9237120c17a10557",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/praia/praia-k3-soitintyypit-20261012-v1-0eca3154f395.png",
+        "sha256": "9237120c17a1055729efbe77bdd6940b724d8ec844e4e6ea8d79ead8bcde9805",
+        "bytes": 2329404,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "praia-k3-soitintyypit-20261012-v1",
+        "nativeSHA256": "0eca3154f395276b71fe5d7148809bb66b387515ed2bb22d493919b3d815f53d",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e04/praia/praia-k3-soitintyypit-20261012-v1-0eca3154f395.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e04",
+        "city": "praia",
+        "slot": "K3",
+        "targetJsonPath": "$.kaupunkilehti[0].nostot[2]",
+        "verifiedAt": "2026-10-13T05:53:38.729005+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e04/praia/praia-k3-soitintyypit-20261012-v1-0eca3154f395.png",
+        "sha256": "9237120c17a1055729efbe77bdd6940b724d8ec844e4e6ea8d79ead8bcde9805",
+        "bytes": 2329404,
+        "SHAReadAt": "2026-10-12T20:50:38.771991+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "0eca3154f395276b71fe5d7148809bb66b387515ed2bb22d493919b3d815f53d",
+        "rgbPixelSHA256": "b4e9f6757b4bbd4c13a235a516f83c59ed777849459c8a16155e2ef2054ebf70",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "3be82f396feb437f6b25eb02a8f2e11d6acc7c77c14a9cf5c4e3225170146976",
+      "targetAfterSHA256": "1d3ba4523fc9b72a03e4e187011ebf32a87b29c02a337b8bf3db74cee1785e02",
+      "contextAfterSHA256": "1d3ba4523fc9b72a03e4e187011ebf32a87b29c02a337b8bf3db74cee1785e02"
     },
     {
       "era": "e04",
@@ -705,7 +1171,7 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/praia/illustration-qa-extra.json",
-            "sha256": "b84565e6a03a5115f1dc501bd4943f3c6a7fb3e37207c880e3844f0bc2a7b899"
+            "sha256": "c05b0e6792d60193f27b5c34c8efd92b622f99d42f03854d057c671ed0b6332d"
           }
         ]
       },
@@ -957,7 +1423,7 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/praia/illustration-qa-extra.json",
-            "sha256": "b84565e6a03a5115f1dc501bd4943f3c6a7fb3e37207c880e3844f0bc2a7b899"
+            "sha256": "c05b0e6792d60193f27b5c34c8efd92b622f99d42f03854d057c671ed0b6332d"
           }
         ]
       },
@@ -1207,7 +1673,7 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/praia/illustration-qa-extra.json",
-            "sha256": "b84565e6a03a5115f1dc501bd4943f3c6a7fb3e37207c880e3844f0bc2a7b899"
+            "sha256": "c05b0e6792d60193f27b5c34c8efd92b622f99d42f03854d057c671ed0b6332d"
           }
         ]
       },
@@ -1458,7 +1924,7 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/praia/illustration-qa-extra.json",
-            "sha256": "b84565e6a03a5115f1dc501bd4943f3c6a7fb3e37207c880e3844f0bc2a7b899"
+            "sha256": "c05b0e6792d60193f27b5c34c8efd92b622f99d42f03854d057c671ed0b6332d"
           }
         ]
       },
@@ -1709,7 +2175,7 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/praia/illustration-qa-extra.json",
-            "sha256": "b84565e6a03a5115f1dc501bd4943f3c6a7fb3e37207c880e3844f0bc2a7b899"
+            "sha256": "c05b0e6792d60193f27b5c34c8efd92b622f99d42f03854d057c671ed0b6332d"
           }
         ]
       },
@@ -1941,7 +2407,7 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/praia/illustration-qa-extra.json",
-            "sha256": "b84565e6a03a5115f1dc501bd4943f3c6a7fb3e37207c880e3844f0bc2a7b899"
+            "sha256": "c05b0e6792d60193f27b5c34c8efd92b622f99d42f03854d057c671ed0b6332d"
           }
         ]
       },
@@ -2192,7 +2658,7 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/praia/illustration-qa-extra.json",
-            "sha256": "b84565e6a03a5115f1dc501bd4943f3c6a7fb3e37207c880e3844f0bc2a7b899"
+            "sha256": "c05b0e6792d60193f27b5c34c8efd92b622f99d42f03854d057c671ed0b6332d"
           }
         ]
       },

@@ -165,7 +165,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/monrovia/qa.json",
-        "fileSHA256": "1cd9928a3ccb4b124b5062c402aa398c9793f1fc547462c87ffd3faed9413477",
+        "fileSHA256": "b9baf40765fb88df7008cb1ed56e0a29aae5e6db724871da765b794398180909",
         "item": {
           "slot": "O1",
           "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[0].kuva",
@@ -257,11 +257,11 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/monrovia/qa.json",
-            "sha256": "1cd9928a3ccb4b124b5062c402aa398c9793f1fc547462c87ffd3faed9413477"
+            "sha256": "b9baf40765fb88df7008cb1ed56e0a29aae5e6db724871da765b794398180909"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/monrovia/illustration-qa-extra.json",
-            "sha256": "3a0a53f06cfe290923773ecf0d952fdf9ea66624c2870783b27b5afe8106db4f"
+            "sha256": "ee33a2f61b2a36df70aa1d69fcc033048f3989c64d3b62e20fd21ba0b245074c"
           }
         ]
       },
@@ -457,7 +457,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/monrovia/illustration-qa-extra.json",
-        "fileSHA256": "3a0a53f06cfe290923773ecf0d952fdf9ea66624c2870783b27b5afe8106db4f",
+        "fileSHA256": "ee33a2f61b2a36df70aa1d69fcc033048f3989c64d3b62e20fd21ba0b245074c",
         "item": {
           "slot": "O4",
           "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
@@ -499,11 +499,11 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/monrovia/qa.json",
-            "sha256": "1cd9928a3ccb4b124b5062c402aa398c9793f1fc547462c87ffd3faed9413477"
+            "sha256": "b9baf40765fb88df7008cb1ed56e0a29aae5e6db724871da765b794398180909"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/monrovia/illustration-qa-extra.json",
-            "sha256": "3a0a53f06cfe290923773ecf0d952fdf9ea66624c2870783b27b5afe8106db4f"
+            "sha256": "ee33a2f61b2a36df70aa1d69fcc033048f3989c64d3b62e20fd21ba0b245074c"
           }
         ]
       },
@@ -682,7 +682,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/monrovia/qa.json",
-        "fileSHA256": "1cd9928a3ccb4b124b5062c402aa398c9793f1fc547462c87ffd3faed9413477",
+        "fileSHA256": "b9baf40765fb88df7008cb1ed56e0a29aae5e6db724871da765b794398180909",
         "item": {
           "slot": "TRAVELER",
           "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
@@ -709,11 +709,11 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/monrovia/qa.json",
-            "sha256": "1cd9928a3ccb4b124b5062c402aa398c9793f1fc547462c87ffd3faed9413477"
+            "sha256": "b9baf40765fb88df7008cb1ed56e0a29aae5e6db724871da765b794398180909"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/monrovia/illustration-qa-extra.json",
-            "sha256": "3a0a53f06cfe290923773ecf0d952fdf9ea66624c2870783b27b5afe8106db4f"
+            "sha256": "ee33a2f61b2a36df70aa1d69fcc033048f3989c64d3b62e20fd21ba0b245074c"
           }
         ]
       },
@@ -876,7 +876,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/monrovia/qa.json",
-        "fileSHA256": "1cd9928a3ccb4b124b5062c402aa398c9793f1fc547462c87ffd3faed9413477",
+        "fileSHA256": "b9baf40765fb88df7008cb1ed56e0a29aae5e6db724871da765b794398180909",
         "item": {
           "slot": "K2",
           "targetJsonPath": "$.kaupunkilehti[0].nostot[1]",
@@ -903,11 +903,11 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/monrovia/qa.json",
-            "sha256": "1cd9928a3ccb4b124b5062c402aa398c9793f1fc547462c87ffd3faed9413477"
+            "sha256": "b9baf40765fb88df7008cb1ed56e0a29aae5e6db724871da765b794398180909"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/monrovia/illustration-qa-extra.json",
-            "sha256": "3a0a53f06cfe290923773ecf0d952fdf9ea66624c2870783b27b5afe8106db4f"
+            "sha256": "ee33a2f61b2a36df70aa1d69fcc033048f3989c64d3b62e20fd21ba0b245074c"
           }
         ]
       },
@@ -1070,7 +1070,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/monrovia/qa.json",
-        "fileSHA256": "1cd9928a3ccb4b124b5062c402aa398c9793f1fc547462c87ffd3faed9413477",
+        "fileSHA256": "b9baf40765fb88df7008cb1ed56e0a29aae5e6db724871da765b794398180909",
         "item": {
           "slot": "K3",
           "targetJsonPath": "$.kaupunkilehti[0].nostot[2]",
@@ -1097,11 +1097,11 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/monrovia/qa.json",
-            "sha256": "1cd9928a3ccb4b124b5062c402aa398c9793f1fc547462c87ffd3faed9413477"
+            "sha256": "b9baf40765fb88df7008cb1ed56e0a29aae5e6db724871da765b794398180909"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/monrovia/illustration-qa-extra.json",
-            "sha256": "3a0a53f06cfe290923773ecf0d952fdf9ea66624c2870783b27b5afe8106db4f"
+            "sha256": "ee33a2f61b2a36df70aa1d69fcc033048f3989c64d3b62e20fd21ba0b245074c"
           }
         ]
       },
@@ -1171,6 +1171,232 @@
       "sourceContentAfterSHA256": "dee363cbca5a4cc7208c00e86338b155366a8dd02cb46241a521ce65a3ae2d31",
       "targetAfterSHA256": "d8668f6112e073ced4213a899326f3a4cc842792a5cd424cd43f86d2871a1e92",
       "contextAfterSHA256": "d8668f6112e073ced4213a899326f3a4cc842792a5cd424cd43f86d2871a1e92"
+    },
+    {
+      "era": "e04",
+      "city": "monrovia",
+      "slot": "N1",
+      "type": "illustration",
+      "assetID": "monrovia-n1-asiakirja-aineisto-20261012-v1",
+      "galleryImageID": "monrovia-n1-asiakirja-aineisto-20261012-v1",
+      "commonsFile": null,
+      "targetJsonPath": "$.nahtavyydet[\"Kansallismuseon vanha oikeustalo\"].kuvat[0]",
+      "targetTokens": [
+        "nahtavyydet",
+        "Kansallismuseon vanha oikeustalo",
+        "kuvat",
+        0
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/monrovia/monrovia-n1-asiakirja-aineisto-20261012-v1-f2c299f19de2.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Asiakirja-aineiston yleishavainne, ei kansallismuseon esineiden tai oikeustalon kuva.",
+        "lyhyt": "Asiakirja-aineiston yleishavainne, ei kansallismuseon esineiden tai oikeustalon kuva."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/monrovia/monrovia-n1-asiakirja-aineisto-20261012-v1-f2c299f19de2.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Asiakirja-aineiston yleishavainne, ei kansallismuseon esineiden tai oikeustalon kuva.",
+        "lyhyt": "Asiakirja-aineiston yleishavainne, ei kansallismuseon esineiden tai oikeustalon kuva."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "f2c299f19de2287542be3220bbf4640dde0b7b0fe4c6928f57655bde6469d545",
+      "exportSHA256": "3610463c11678f3bfdc807e7d793f40a4ff478a461f274524bd08910f3d17e5e",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/monrovia/monrovia-n1-asiakirja-aineisto-20261012-v1-f2c299f19de2.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/monrovia/monrovia-n1-asiakirja-aineisto-20261012-v1-f2c299f19de2.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e04/monrovia/monrovia-n1-asiakirja-aineisto-20261012-v1-f2c299f19de2.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/monrovia/sisalto.json",
+      "sourceContentSHA256": "dee363cbca5a4cc7208c00e86338b155366a8dd02cb46241a521ce65a3ae2d31",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "semanticContextSHA256": "4a50791a981c493afb0ce8ec7b1dc22461f9cf9575bad99ce6374d41209217d7",
+        "subjectTitle": "Kansallismuseon vanha oikeustalo",
+        "targetState": "fillable-empty-first-image-array"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Alkuperäiset tyhjät funktionaaliset arkistokansiot/paperit, ei todellisten asiakirjojen, karttojen, kuvien, kansien, rakennuksen tai museoesineiden jäljennös. Oikeustalon todellisen arkkitehtuurin kuva- ja teosportti säilyy erillisenä.",
+          "QA": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/monrovia/assets/monrovia-n1-asiakirja-aineisto-20261012-v1/image.png",
+            "nativeSHA256": "f2c299f19de2287542be3220bbf4640dde0b7b0fe4c6928f57655bde6469d545",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "manifestHashMatches": true,
+            "personallyViewed": true,
+            "viewTool": "view_image",
+            "visualFindingsFi": "Alkuperäisessä 1536×1024 PNG:ssä näkyy tavallisia kartonkikansioita, nauhoja ja tyhjiä paperiarkkeja. Paperin, kartongin ja kankaan pinnat sekä taitokset ovat uskottavia. Ei kirjaimia, logoja, vesileimaa, kasvoja tai kehystä.",
+            "captionFi": "Asiakirja-aineiston yleishavainne, ei kansallismuseon esineiden tai oikeustalon kuva.",
+            "sourceAndTargetCheckFi": "Nykyisen Kansallismuseon vanha oikeustalo -kohteen teksti ja faktapohja mainitsevat asiakirjat osana kulttuuri- ja historia-aineiston säilyttämistä. Kohde on olemassa ja kuvat-lista on tyhjä: suunniteltu kuva-aukko, ei poistettu kohde. Yleiset tyhjät kansiot eivät esitä tiettyä asiakirjaa tai museoesinettä.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/monrovia/sisalto.json",
+            "sourceEvidence": [
+              {
+                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/monrovia/sisalto.json",
+                "facts": "Kansallismuseon juttu mainitsee asiakirjat, kartat ja valokuvat aineistona; kuvitetaan vain yleinen asiakirjojen säilyttämisen materiaali."
+              },
+              {
+                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/monrovia/faktapohja.md",
+                "facts": "Museon tehtävä hankkia, säilyttää ja esitellä kulttuuri-/historia-aineistoa, ei väitetä tietyn paperin identiteettiä."
+              }
+            ]
+          },
+          "qaReason": "Hyväksytty yleiseksi asiakirjojen säilyttämisen havainnekuvaksi; kuvateksti rajaa sen erilleen kansallismuseon omista esineistä ja oikeustalon näkymästä."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Asiakirja-aineiston yleishavainne, ei kansallismuseon esineiden tai oikeustalon kuva.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/monrovia/illustration-qa-extra.json",
+        "fileSHA256": "ee33a2f61b2a36df70aa1d69fcc033048f3989c64d3b62e20fd21ba0b245074c",
+        "item": {
+          "slot": "N1",
+          "targetJsonPath": "$.nahtavyydet[\"Kansallismuseon vanha oikeustalo\"].kuvat[0]",
+          "assetID": "monrovia-n1-asiakirja-aineisto-20261012-v1",
+          "sha256": "f2c299f19de2287542be3220bbf4640dde0b7b0fe4c6928f57655bde6469d545",
+          "verdict": "accepted",
+          "reason": "Hyväksytty yleiseksi asiakirjojen säilyttämisen havainnekuvaksi; kuvateksti rajaa sen erilleen kansallismuseon omista esineistä ja oikeustalon näkymästä.",
+          "evidence": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/monrovia/assets/monrovia-n1-asiakirja-aineisto-20261012-v1/image.png",
+            "nativeSHA256": "f2c299f19de2287542be3220bbf4640dde0b7b0fe4c6928f57655bde6469d545",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "manifestHashMatches": true,
+            "personallyViewed": true,
+            "viewTool": "view_image",
+            "visualFindingsFi": "Alkuperäisessä 1536×1024 PNG:ssä näkyy tavallisia kartonkikansioita, nauhoja ja tyhjiä paperiarkkeja. Paperin, kartongin ja kankaan pinnat sekä taitokset ovat uskottavia. Ei kirjaimia, logoja, vesileimaa, kasvoja tai kehystä.",
+            "captionFi": "Asiakirja-aineiston yleishavainne, ei kansallismuseon esineiden tai oikeustalon kuva.",
+            "sourceAndTargetCheckFi": "Nykyisen Kansallismuseon vanha oikeustalo -kohteen teksti ja faktapohja mainitsevat asiakirjat osana kulttuuri- ja historia-aineiston säilyttämistä. Kohde on olemassa ja kuvat-lista on tyhjä: suunniteltu kuva-aukko, ei poistettu kohde. Yleiset tyhjät kansiot eivät esitä tiettyä asiakirjaa tai museoesinettä.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/monrovia/sisalto.json",
+            "sourceEvidence": [
+              {
+                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/monrovia/sisalto.json",
+                "facts": "Kansallismuseon juttu mainitsee asiakirjat, kartat ja valokuvat aineistona; kuvitetaan vain yleinen asiakirjojen säilyttämisen materiaali."
+              },
+              {
+                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/monrovia/faktapohja.md",
+                "facts": "Museon tehtävä hankkia, säilyttää ja esitellä kulttuuri-/historia-aineistoa, ei väitetä tietyn paperin identiteettiä."
+              }
+            ]
+          },
+          "reviewedAt": "2026-10-12T20:49:35.031297+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/monrovia/qa.json",
+            "sha256": "b9baf40765fb88df7008cb1ed56e0a29aae5e6db724871da765b794398180909"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/monrovia/illustration-qa-extra.json",
+            "sha256": "ee33a2f61b2a36df70aa1d69fcc033048f3989c64d3b62e20fd21ba0b245074c"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/monrovia/monrovia-n1-asiakirja-aineisto-20261012-v1-f2c299f19de2.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/monrovia/monrovia-n1-asiakirja-aineisto-20261012-v1-f2c299f19de2.png?t=3610463c11678f3b",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/monrovia/monrovia-n1-asiakirja-aineisto-20261012-v1-f2c299f19de2.png",
+        "sha256": "3610463c11678f3bfdc807e7d793f40a4ff478a461f274524bd08910f3d17e5e",
+        "bytes": 2048801,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "monrovia-n1-asiakirja-aineisto-20261012-v1",
+        "nativeSHA256": "f2c299f19de2287542be3220bbf4640dde0b7b0fe4c6928f57655bde6469d545",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e04/monrovia/monrovia-n1-asiakirja-aineisto-20261012-v1-f2c299f19de2.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e04",
+        "city": "monrovia",
+        "slot": "N1",
+        "targetJsonPath": "$.nahtavyydet[\"Kansallismuseon vanha oikeustalo\"].kuvat[0]",
+        "verifiedAt": "2026-10-13T05:53:34.953083+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e04/monrovia/monrovia-n1-asiakirja-aineisto-20261012-v1-f2c299f19de2.png",
+        "sha256": "3610463c11678f3bfdc807e7d793f40a4ff478a461f274524bd08910f3d17e5e",
+        "bytes": 2048801,
+        "SHAReadAt": "2026-10-12T20:49:39.288320+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "f2c299f19de2287542be3220bbf4640dde0b7b0fe4c6928f57655bde6469d545",
+        "rgbPixelSHA256": "3a3c022d86b67563b2552bc7c4641a65d4c8e97de8aa636113c58c10ed461cac",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {},
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "dee363cbca5a4cc7208c00e86338b155366a8dd02cb46241a521ce65a3ae2d31",
+      "targetAfterSHA256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "contextAfterSHA256": "4a50791a981c493afb0ce8ec7b1dc22461f9cf9575bad99ce6374d41209217d7"
     },
     {
       "era": "e04",
@@ -1278,7 +1504,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/monrovia/qa.json",
-        "fileSHA256": "1cd9928a3ccb4b124b5062c402aa398c9793f1fc547462c87ffd3faed9413477",
+        "fileSHA256": "b9baf40765fb88df7008cb1ed56e0a29aae5e6db724871da765b794398180909",
         "item": {
           "slot": "PHOTO",
           "targetJsonPath": "$.valokuva",
@@ -1318,11 +1544,11 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/monrovia/qa.json",
-            "sha256": "1cd9928a3ccb4b124b5062c402aa398c9793f1fc547462c87ffd3faed9413477"
+            "sha256": "b9baf40765fb88df7008cb1ed56e0a29aae5e6db724871da765b794398180909"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/monrovia/illustration-qa-extra.json",
-            "sha256": "3a0a53f06cfe290923773ecf0d952fdf9ea66624c2870783b27b5afe8106db4f"
+            "sha256": "ee33a2f61b2a36df70aa1d69fcc033048f3989c64d3b62e20fd21ba0b245074c"
           }
         ]
       },
@@ -1505,7 +1731,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/monrovia/qa.json",
-        "fileSHA256": "1cd9928a3ccb4b124b5062c402aa398c9793f1fc547462c87ffd3faed9413477",
+        "fileSHA256": "b9baf40765fb88df7008cb1ed56e0a29aae5e6db724871da765b794398180909",
         "item": {
           "slot": "K1",
           "targetJsonPath": "$.kaupunkilehti[0].nostot[0]",
@@ -1545,11 +1771,11 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/monrovia/qa.json",
-            "sha256": "1cd9928a3ccb4b124b5062c402aa398c9793f1fc547462c87ffd3faed9413477"
+            "sha256": "b9baf40765fb88df7008cb1ed56e0a29aae5e6db724871da765b794398180909"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/monrovia/illustration-qa-extra.json",
-            "sha256": "3a0a53f06cfe290923773ecf0d952fdf9ea66624c2870783b27b5afe8106db4f"
+            "sha256": "ee33a2f61b2a36df70aa1d69fcc033048f3989c64d3b62e20fd21ba0b245074c"
           }
         ]
       },
@@ -1736,7 +1962,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/monrovia/qa.json",
-        "fileSHA256": "1cd9928a3ccb4b124b5062c402aa398c9793f1fc547462c87ffd3faed9413477",
+        "fileSHA256": "b9baf40765fb88df7008cb1ed56e0a29aae5e6db724871da765b794398180909",
         "item": {
           "slot": "K4",
           "targetJsonPath": "$.kaupunkilehti[0].nostot[3]",
@@ -1781,11 +2007,11 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/monrovia/qa.json",
-            "sha256": "1cd9928a3ccb4b124b5062c402aa398c9793f1fc547462c87ffd3faed9413477"
+            "sha256": "b9baf40765fb88df7008cb1ed56e0a29aae5e6db724871da765b794398180909"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/monrovia/illustration-qa-extra.json",
-            "sha256": "3a0a53f06cfe290923773ecf0d952fdf9ea66624c2870783b27b5afe8106db4f"
+            "sha256": "ee33a2f61b2a36df70aa1d69fcc033048f3989c64d3b62e20fd21ba0b245074c"
           }
         ]
       },
@@ -1974,7 +2200,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/monrovia/qa.json",
-        "fileSHA256": "1cd9928a3ccb4b124b5062c402aa398c9793f1fc547462c87ffd3faed9413477",
+        "fileSHA256": "b9baf40765fb88df7008cb1ed56e0a29aae5e6db724871da765b794398180909",
         "item": {
           "slot": "L1",
           "targetJsonPath": "$.kaupunkilehti[1].nostot[0]",
@@ -2021,11 +2247,11 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/monrovia/qa.json",
-            "sha256": "1cd9928a3ccb4b124b5062c402aa398c9793f1fc547462c87ffd3faed9413477"
+            "sha256": "b9baf40765fb88df7008cb1ed56e0a29aae5e6db724871da765b794398180909"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/monrovia/illustration-qa-extra.json",
-            "sha256": "3a0a53f06cfe290923773ecf0d952fdf9ea66624c2870783b27b5afe8106db4f"
+            "sha256": "ee33a2f61b2a36df70aa1d69fcc033048f3989c64d3b62e20fd21ba0b245074c"
           }
         ]
       },
@@ -2208,7 +2434,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/monrovia/qa.json",
-        "fileSHA256": "1cd9928a3ccb4b124b5062c402aa398c9793f1fc547462c87ffd3faed9413477",
+        "fileSHA256": "b9baf40765fb88df7008cb1ed56e0a29aae5e6db724871da765b794398180909",
         "item": {
           "slot": "L2",
           "targetJsonPath": "$.kaupunkilehti[1].nostot[1]",
@@ -2249,11 +2475,11 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/monrovia/qa.json",
-            "sha256": "1cd9928a3ccb4b124b5062c402aa398c9793f1fc547462c87ffd3faed9413477"
+            "sha256": "b9baf40765fb88df7008cb1ed56e0a29aae5e6db724871da765b794398180909"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/monrovia/illustration-qa-extra.json",
-            "sha256": "3a0a53f06cfe290923773ecf0d952fdf9ea66624c2870783b27b5afe8106db4f"
+            "sha256": "ee33a2f61b2a36df70aa1d69fcc033048f3989c64d3b62e20fd21ba0b245074c"
           }
         ]
       },
@@ -2331,8 +2557,8 @@
       "city": "monrovia",
       "slot": "N6",
       "type": "commons",
-      "assetID": "capital-cc-e04-monrovia-n6-19150940222a598f",
-      "galleryImageID": "capital-cc-e04-monrovia-n6-19150940222a598f",
+      "assetID": "capital-cc-e04-monrovia-n6-589160cd108ec7cf",
+      "galleryImageID": "capital-cc-e04-monrovia-n6-589160cd108ec7cf",
       "commonsFile": "ASC Leiden - F. van der Kraaij Collection - 05 - 021 - Providence Island in the Mesurado river - Monrovia, Mamba Point, Montserrado, Liberia, 1975.tif",
       "targetJsonPath": "$.nahtavyydet[\"Mesuradon kosteikkoalue\"].kuvat[0]",
       "targetTokens": [
@@ -2436,7 +2662,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/monrovia/qa.json",
-        "fileSHA256": "1cd9928a3ccb4b124b5062c402aa398c9793f1fc547462c87ffd3faed9413477",
+        "fileSHA256": "b9baf40765fb88df7008cb1ed56e0a29aae5e6db724871da765b794398180909",
         "item": {
           "slot": "N6",
           "targetJsonPath": "$.nahtavyydet[\"Mesuradon kosteikkoalue\"].kuvat[0]",
@@ -2477,11 +2703,11 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/monrovia/qa.json",
-            "sha256": "1cd9928a3ccb4b124b5062c402aa398c9793f1fc547462c87ffd3faed9413477"
+            "sha256": "b9baf40765fb88df7008cb1ed56e0a29aae5e6db724871da765b794398180909"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/monrovia/illustration-qa-extra.json",
-            "sha256": "3a0a53f06cfe290923773ecf0d952fdf9ea66624c2870783b27b5afe8106db4f"
+            "sha256": "ee33a2f61b2a36df70aa1d69fcc033048f3989c64d3b62e20fd21ba0b245074c"
           }
         ]
       },
@@ -2570,8 +2796,8 @@
       "city": "monrovia",
       "slot": "N3",
       "type": "commons",
-      "assetID": "capital-cc-e04-monrovia-n3-7daa520de9c60448",
-      "galleryImageID": "capital-cc-e04-monrovia-n3-7daa520de9c60448",
+      "assetID": "capital-cc-e04-monrovia-n3-ff065f646d1eb2dc",
+      "galleryImageID": "capital-cc-e04-monrovia-n3-ff065f646d1eb2dc",
       "commonsFile": "ASC Leiden - F. van der Kraaij Collection - 05 - 022 - A close up of Providence Island in full, in the Mesurado river - Monrovia, Mamba Point, Montserrado, Liberia, 1975.tif",
       "targetJsonPath": "$.nahtavyydet[\"Providence Island\"].kuvat[0]",
       "targetTokens": [
@@ -2675,7 +2901,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/monrovia/qa.json",
-        "fileSHA256": "1cd9928a3ccb4b124b5062c402aa398c9793f1fc547462c87ffd3faed9413477",
+        "fileSHA256": "b9baf40765fb88df7008cb1ed56e0a29aae5e6db724871da765b794398180909",
         "item": {
           "slot": "N3",
           "targetJsonPath": "$.nahtavyydet[\"Providence Island\"].kuvat[0]",
@@ -2716,11 +2942,11 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/monrovia/qa.json",
-            "sha256": "1cd9928a3ccb4b124b5062c402aa398c9793f1fc547462c87ffd3faed9413477"
+            "sha256": "b9baf40765fb88df7008cb1ed56e0a29aae5e6db724871da765b794398180909"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/monrovia/illustration-qa-extra.json",
-            "sha256": "3a0a53f06cfe290923773ecf0d952fdf9ea66624c2870783b27b5afe8106db4f"
+            "sha256": "ee33a2f61b2a36df70aa1d69fcc033048f3989c64d3b62e20fd21ba0b245074c"
           }
         ]
       },
@@ -2920,7 +3146,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/monrovia/qa.json",
-        "fileSHA256": "1cd9928a3ccb4b124b5062c402aa398c9793f1fc547462c87ffd3faed9413477",
+        "fileSHA256": "b9baf40765fb88df7008cb1ed56e0a29aae5e6db724871da765b794398180909",
         "item": {
           "slot": "N5",
           "targetJsonPath": "$.nahtavyydet[\"West Point\"].kuvat[0]",
@@ -2967,11 +3193,11 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/monrovia/qa.json",
-            "sha256": "1cd9928a3ccb4b124b5062c402aa398c9793f1fc547462c87ffd3faed9413477"
+            "sha256": "b9baf40765fb88df7008cb1ed56e0a29aae5e6db724871da765b794398180909"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/monrovia/illustration-qa-extra.json",
-            "sha256": "3a0a53f06cfe290923773ecf0d952fdf9ea66624c2870783b27b5afe8106db4f"
+            "sha256": "ee33a2f61b2a36df70aa1d69fcc033048f3989c64d3b62e20fd21ba0b245074c"
           }
         ]
       },

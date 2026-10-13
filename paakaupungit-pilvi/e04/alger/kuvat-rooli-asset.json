@@ -111,7 +111,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/alger/qa.json",
-        "fileSHA256": "1ef1bce14924e5df204de5d5c72367d7f4d74413878341e9dea60bf4e763d853",
+        "fileSHA256": "688248360bbd73e12a9b4076e0f3a337f1291ac40278644c03689907a06cc2eb",
         "item": {
           "slot": "O4",
           "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
@@ -194,11 +194,11 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/alger/qa.json",
-            "sha256": "1ef1bce14924e5df204de5d5c72367d7f4d74413878341e9dea60bf4e763d853"
+            "sha256": "688248360bbd73e12a9b4076e0f3a337f1291ac40278644c03689907a06cc2eb"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/alger/illustration-qa-extra.json",
-            "sha256": "d88e23ff7a37fa6d3237c286a4b7f46a8f6f4ea8a01d95d9ba56c8d3bf1f56a9"
+            "sha256": "2509012a30a54440cd63f86ee52307534652353656a9b89d0d1575d27fca8479"
           }
         ]
       },
@@ -284,6 +284,241 @@
       "sourceContentAfterSHA256": "af96b94dcec78632321a487582bdb607158302d62cb5758c68319df8db0107a7",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
       "contextAfterSHA256": "6470869a793aadeae8559ca64d9b93c79153e1d39ee0a5365e80c2fe540214ca"
+    },
+    {
+      "era": "e04",
+      "city": "alger",
+      "slot": "K1",
+      "type": "illustration",
+      "assetID": "alger-k1-kalkkirappaus-20261012-v1",
+      "galleryImageID": "alger-k1-kalkkirappaus-20261012-v1",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].nostot[0]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "nostot",
+        0
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/alger/alger-k1-kalkkirappaus-20261012-v1-2bc5887f42ee.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva kalkkivalkoisesta rappauspinnasta.",
+        "lyhyt": "Havainnekuva kalkkivalkoisesta rappauspinnasta."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/alger/alger-k1-kalkkirappaus-20261012-v1-2bc5887f42ee.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva kalkkivalkoisesta rappauspinnasta.",
+        "lyhyt": "Havainnekuva kalkkivalkoisesta rappauspinnasta."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "2bc5887f42ee87462be54e4d97b5b76390164a55019a7b42989836087d4e17bd",
+      "exportSHA256": "d56cecaed5f8123a06ea264c0055d8949a46879cced44de3ce0a09ccfc5e2045",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/alger/alger-k1-kalkkirappaus-20261012-v1-2bc5887f42ee.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/alger/alger-k1-kalkkirappaus-20261012-v1-2bc5887f42ee.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e04/alger/alger-k1-kalkkirappaus-20261012-v1-2bc5887f42ee.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/alger/sisalto.json",
+      "sourceContentSHA256": "af96b94dcec78632321a487582bdb607158302d62cb5758c68319df8db0107a7",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "8c11570eb11c8e048c06a95253a28a5eba256a80ceb467b8cb967451df7f56d6",
+        "semanticContextSHA256": "8c11570eb11c8e048c06a95253a28a5eba256a80ceb467b8cb967451df7f56d6",
+        "subjectTitle": "Saaret jäivät nimeen",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Täysin uusi alkuperäinen yleinen materiaalin tai luonnollisen elintarvikkeen havainne. Ei nimettyä arkkitehtuuria, paikallista yksilöä, museoesinettä, valokuvasommittelua tai suojatun teoksen jäljennöstä.",
+          "QA": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/alger/assets/alger-k1-kalkkirappaus-20261012-v1/image.png",
+            "nativeSHA256": "2bc5887f42ee87462be54e4d97b5b76390164a55019a7b42989836087d4e17bd",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "manifestHashMatches": true,
+            "personallyViewed": true,
+            "viewTool": "view_image",
+            "visualFindingsFi": "Valkoisen rappauksen epätasainen luonnollinen pinta, ei toistuvaa kuviota, tekstiä tai logoja.",
+            "captionFi": "Havainnekuva kalkkivalkoisesta rappauspinnasta.",
+            "sourceAndTargetCheckFi": "K1 mainitsee kalkitut talot; faktapohja/aihe luettu. CaptionFi havainne, ei Algerin nimetyn talon julkisivu tai keksitty kaupunkinäkymä.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/alger/sisalto.json",
+            "sourceEvidence": [
+              {
+                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/alger/sisalto.json",
+                "sha256": "d16d4050829570795aa6d29cb77b75e03b3a986e839c8eb30c8db2af89acb9e2",
+                "facts": "K1 liittää Alger la Blanche -nimen valkoiseksi kalkittuihin taloihin. Kuvataan vain materiaali, ei nimetty talo."
+              },
+              {
+                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/alger/faktapohja.md",
+                "sha256": "acae33caac573262c655aec1882a43810b225f328e8f2c33f52c2816a4f50ab5",
+                "facts": "Luettu paikallinen faktapohja; yleinen lähdetekstin materiaalin tai kalan käsittelyn havainnollistus."
+              }
+            ]
+          },
+          "qaReason": "Kalkkivalkoisen pinnan havainne vastaa K1:n materiaaliviittausta."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva kalkkivalkoisesta rappauspinnasta.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/alger/illustration-qa-extra.json",
+        "fileSHA256": "2509012a30a54440cd63f86ee52307534652353656a9b89d0d1575d27fca8479",
+        "item": {
+          "slot": "K1",
+          "targetJsonPath": "$.kaupunkilehti[0].nostot[0]",
+          "assetID": "alger-k1-kalkkirappaus-20261012-v1",
+          "sha256": "2bc5887f42ee87462be54e4d97b5b76390164a55019a7b42989836087d4e17bd",
+          "verdict": "accepted",
+          "reason": "Kalkkivalkoisen pinnan havainne vastaa K1:n materiaaliviittausta.",
+          "evidence": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/alger/assets/alger-k1-kalkkirappaus-20261012-v1/image.png",
+            "nativeSHA256": "2bc5887f42ee87462be54e4d97b5b76390164a55019a7b42989836087d4e17bd",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "manifestHashMatches": true,
+            "personallyViewed": true,
+            "viewTool": "view_image",
+            "visualFindingsFi": "Valkoisen rappauksen epätasainen luonnollinen pinta, ei toistuvaa kuviota, tekstiä tai logoja.",
+            "captionFi": "Havainnekuva kalkkivalkoisesta rappauspinnasta.",
+            "sourceAndTargetCheckFi": "K1 mainitsee kalkitut talot; faktapohja/aihe luettu. CaptionFi havainne, ei Algerin nimetyn talon julkisivu tai keksitty kaupunkinäkymä.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/alger/sisalto.json",
+            "sourceEvidence": [
+              {
+                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/alger/sisalto.json",
+                "sha256": "d16d4050829570795aa6d29cb77b75e03b3a986e839c8eb30c8db2af89acb9e2",
+                "facts": "K1 liittää Alger la Blanche -nimen valkoiseksi kalkittuihin taloihin. Kuvataan vain materiaali, ei nimetty talo."
+              },
+              {
+                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/alger/faktapohja.md",
+                "sha256": "acae33caac573262c655aec1882a43810b225f328e8f2c33f52c2816a4f50ab5",
+                "facts": "Luettu paikallinen faktapohja; yleinen lähdetekstin materiaalin tai kalan käsittelyn havainnollistus."
+              }
+            ]
+          },
+          "reviewedAt": "2026-10-12T20:35:14.923300+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/alger/qa.json",
+            "sha256": "688248360bbd73e12a9b4076e0f3a337f1291ac40278644c03689907a06cc2eb"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/alger/illustration-qa-extra.json",
+            "sha256": "2509012a30a54440cd63f86ee52307534652353656a9b89d0d1575d27fca8479"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/alger/alger-k1-kalkkirappaus-20261012-v1-2bc5887f42ee.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/alger/alger-k1-kalkkirappaus-20261012-v1-2bc5887f42ee.png?t=d56cecaed5f8123a",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/alger/alger-k1-kalkkirappaus-20261012-v1-2bc5887f42ee.png",
+        "sha256": "d56cecaed5f8123a06ea264c0055d8949a46879cced44de3ce0a09ccfc5e2045",
+        "bytes": 2890180,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "alger-k1-kalkkirappaus-20261012-v1",
+        "nativeSHA256": "2bc5887f42ee87462be54e4d97b5b76390164a55019a7b42989836087d4e17bd",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e04/alger/alger-k1-kalkkirappaus-20261012-v1-2bc5887f42ee.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e04",
+        "city": "alger",
+        "slot": "K1",
+        "targetJsonPath": "$.kaupunkilehti[0].nostot[0]",
+        "verifiedAt": "2026-10-12T20:35:46.776558+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e04/alger/alger-k1-kalkkirappaus-20261012-v1-2bc5887f42ee.png",
+        "sha256": "d56cecaed5f8123a06ea264c0055d8949a46879cced44de3ce0a09ccfc5e2045",
+        "bytes": 2890180,
+        "SHAReadAt": "2026-10-12T20:35:18.272888+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "2bc5887f42ee87462be54e4d97b5b76390164a55019a7b42989836087d4e17bd",
+        "rgbPixelSHA256": "612cd392ee8f7b76173ab0856ca71b33e6844ce570ac10ef10006a2852a3cfdf",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "af96b94dcec78632321a487582bdb607158302d62cb5758c68319df8db0107a7",
+      "targetAfterSHA256": "8c11570eb11c8e048c06a95253a28a5eba256a80ceb467b8cb967451df7f56d6",
+      "contextAfterSHA256": "8c11570eb11c8e048c06a95253a28a5eba256a80ceb467b8cb967451df7f56d6"
     },
     {
       "era": "e04",
@@ -412,7 +647,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/alger/qa.json",
-        "fileSHA256": "1ef1bce14924e5df204de5d5c72367d7f4d74413878341e9dea60bf4e763d853",
+        "fileSHA256": "688248360bbd73e12a9b4076e0f3a337f1291ac40278644c03689907a06cc2eb",
         "item": {
           "slot": "K2",
           "targetJsonPath": "$.kaupunkilehti[0].nostot[1]",
@@ -477,11 +712,11 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/alger/qa.json",
-            "sha256": "1ef1bce14924e5df204de5d5c72367d7f4d74413878341e9dea60bf4e763d853"
+            "sha256": "688248360bbd73e12a9b4076e0f3a337f1291ac40278644c03689907a06cc2eb"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/alger/illustration-qa-extra.json",
-            "sha256": "d88e23ff7a37fa6d3237c286a4b7f46a8f6f4ea8a01d95d9ba56c8d3bf1f56a9"
+            "sha256": "2509012a30a54440cd63f86ee52307534652353656a9b89d0d1575d27fca8479"
           }
         ]
       },
@@ -694,7 +929,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/alger/qa.json",
-        "fileSHA256": "1ef1bce14924e5df204de5d5c72367d7f4d74413878341e9dea60bf4e763d853",
+        "fileSHA256": "688248360bbd73e12a9b4076e0f3a337f1291ac40278644c03689907a06cc2eb",
         "item": {
           "slot": "L1",
           "targetJsonPath": "$.kaupunkilehti[1].nostot[0]",
@@ -758,11 +993,11 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/alger/qa.json",
-            "sha256": "1ef1bce14924e5df204de5d5c72367d7f4d74413878341e9dea60bf4e763d853"
+            "sha256": "688248360bbd73e12a9b4076e0f3a337f1291ac40278644c03689907a06cc2eb"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/alger/illustration-qa-extra.json",
-            "sha256": "d88e23ff7a37fa6d3237c286a4b7f46a8f6f4ea8a01d95d9ba56c8d3bf1f56a9"
+            "sha256": "2509012a30a54440cd63f86ee52307534652353656a9b89d0d1575d27fca8479"
           }
         ]
       },
@@ -965,7 +1200,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/alger/qa.json",
-        "fileSHA256": "1ef1bce14924e5df204de5d5c72367d7f4d74413878341e9dea60bf4e763d853",
+        "fileSHA256": "688248360bbd73e12a9b4076e0f3a337f1291ac40278644c03689907a06cc2eb",
         "item": {
           "slot": "L4",
           "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
@@ -1066,11 +1301,11 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/alger/qa.json",
-            "sha256": "1ef1bce14924e5df204de5d5c72367d7f4d74413878341e9dea60bf4e763d853"
+            "sha256": "688248360bbd73e12a9b4076e0f3a337f1291ac40278644c03689907a06cc2eb"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/alger/illustration-qa-extra.json",
-            "sha256": "d88e23ff7a37fa6d3237c286a4b7f46a8f6f4ea8a01d95d9ba56c8d3bf1f56a9"
+            "sha256": "2509012a30a54440cd63f86ee52307534652353656a9b89d0d1575d27fca8479"
           }
         ]
       },
@@ -1293,7 +1528,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/alger/qa.json",
-        "fileSHA256": "1ef1bce14924e5df204de5d5c72367d7f4d74413878341e9dea60bf4e763d853",
+        "fileSHA256": "688248360bbd73e12a9b4076e0f3a337f1291ac40278644c03689907a06cc2eb",
         "item": {
           "slot": "PHOTO",
           "targetJsonPath": "$.valokuva",
@@ -1406,11 +1641,11 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/alger/qa.json",
-            "sha256": "1ef1bce14924e5df204de5d5c72367d7f4d74413878341e9dea60bf4e763d853"
+            "sha256": "688248360bbd73e12a9b4076e0f3a337f1291ac40278644c03689907a06cc2eb"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/alger/illustration-qa-extra.json",
-            "sha256": "d88e23ff7a37fa6d3237c286a4b7f46a8f6f4ea8a01d95d9ba56c8d3bf1f56a9"
+            "sha256": "2509012a30a54440cd63f86ee52307534652353656a9b89d0d1575d27fca8479"
           }
         ]
       },
@@ -1646,7 +1881,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/alger/qa.json",
-        "fileSHA256": "1ef1bce14924e5df204de5d5c72367d7f4d74413878341e9dea60bf4e763d853",
+        "fileSHA256": "688248360bbd73e12a9b4076e0f3a337f1291ac40278644c03689907a06cc2eb",
         "item": {
           "slot": "C1",
           "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
@@ -1731,11 +1966,11 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/alger/qa.json",
-            "sha256": "1ef1bce14924e5df204de5d5c72367d7f4d74413878341e9dea60bf4e763d853"
+            "sha256": "688248360bbd73e12a9b4076e0f3a337f1291ac40278644c03689907a06cc2eb"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/alger/illustration-qa-extra.json",
-            "sha256": "d88e23ff7a37fa6d3237c286a4b7f46a8f6f4ea8a01d95d9ba56c8d3bf1f56a9"
+            "sha256": "2509012a30a54440cd63f86ee52307534652353656a9b89d0d1575d27fca8479"
           }
         ]
       },
@@ -1947,7 +2182,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/alger/qa.json",
-        "fileSHA256": "1ef1bce14924e5df204de5d5c72367d7f4d74413878341e9dea60bf4e763d853",
+        "fileSHA256": "688248360bbd73e12a9b4076e0f3a337f1291ac40278644c03689907a06cc2eb",
         "item": {
           "slot": "TRAVELER",
           "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
@@ -2052,11 +2287,11 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/alger/qa.json",
-            "sha256": "1ef1bce14924e5df204de5d5c72367d7f4d74413878341e9dea60bf4e763d853"
+            "sha256": "688248360bbd73e12a9b4076e0f3a337f1291ac40278644c03689907a06cc2eb"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/alger/illustration-qa-extra.json",
-            "sha256": "d88e23ff7a37fa6d3237c286a4b7f46a8f6f4ea8a01d95d9ba56c8d3bf1f56a9"
+            "sha256": "2509012a30a54440cd63f86ee52307534652353656a9b89d0d1575d27fca8479"
           }
         ]
       },
@@ -2269,7 +2504,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/alger/qa.json",
-        "fileSHA256": "1ef1bce14924e5df204de5d5c72367d7f4d74413878341e9dea60bf4e763d853",
+        "fileSHA256": "688248360bbd73e12a9b4076e0f3a337f1291ac40278644c03689907a06cc2eb",
         "item": {
           "slot": "O3",
           "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[2].kuva",
@@ -2383,11 +2618,11 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/alger/qa.json",
-            "sha256": "1ef1bce14924e5df204de5d5c72367d7f4d74413878341e9dea60bf4e763d853"
+            "sha256": "688248360bbd73e12a9b4076e0f3a337f1291ac40278644c03689907a06cc2eb"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/alger/illustration-qa-extra.json",
-            "sha256": "d88e23ff7a37fa6d3237c286a4b7f46a8f6f4ea8a01d95d9ba56c8d3bf1f56a9"
+            "sha256": "2509012a30a54440cd63f86ee52307534652353656a9b89d0d1575d27fca8479"
           }
         ]
       },
@@ -2596,7 +2831,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/alger/qa.json",
-        "fileSHA256": "1ef1bce14924e5df204de5d5c72367d7f4d74413878341e9dea60bf4e763d853",
+        "fileSHA256": "688248360bbd73e12a9b4076e0f3a337f1291ac40278644c03689907a06cc2eb",
         "item": {
           "slot": "K4",
           "targetJsonPath": "$.kaupunkilehti[0].nostot[3]",
@@ -2700,11 +2935,11 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/alger/qa.json",
-            "sha256": "1ef1bce14924e5df204de5d5c72367d7f4d74413878341e9dea60bf4e763d853"
+            "sha256": "688248360bbd73e12a9b4076e0f3a337f1291ac40278644c03689907a06cc2eb"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/alger/illustration-qa-extra.json",
-            "sha256": "d88e23ff7a37fa6d3237c286a4b7f46a8f6f4ea8a01d95d9ba56c8d3bf1f56a9"
+            "sha256": "2509012a30a54440cd63f86ee52307534652353656a9b89d0d1575d27fca8479"
           }
         ]
       },
