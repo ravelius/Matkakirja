@@ -146,3 +146,19 @@ export function elaintakyNimioKylki(rivi, porras, esteet) {
   }
   return paras.puoli;
 }
+
+/**
+ * VAIN KARTAN MAAN ELÄINTÄKY (omistaja 12.10.2026 21.5x, TF 184: "kartalla
+ * näkyy … eläintäkyjä muista maista (tämä ongelma ollut jo aiemmin), ne
+ * voisi poistaa"). Pallolaudan nostokerros näyttää maakartalla vain sen
+ * maan täyn, jossa pelaaja on (kohteidenNykyinenIso); löydöksen 125 koko
+ * laudan täyt (naapurimaiden tassut) poistuvat. Sama sääntö kuin natiivin
+ * NostoSaannot.ElaintakyKartalla (LS2 719bd7dba, pariteetti).
+ *
+ * @param {string|null|undefined} takyIso   täyn maa (ISO3)
+ * @param {string|null|undefined} karttaIso kartan (pelaajan) maa (ISO3)
+ */
+export function elaintakyKartalla(takyIso, karttaIso) {
+  return Boolean(takyIso) && Boolean(karttaIso)
+    && String(takyIso).toUpperCase() === String(karttaIso).toUpperCase();
+}
