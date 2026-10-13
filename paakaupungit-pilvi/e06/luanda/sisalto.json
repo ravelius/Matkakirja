@@ -14,7 +14,7 @@
     }
   },
   "artikkeli": {
-    "intro": "Luanda on Angolan pääkaupunki ja vanha satamakaupunki **Atlantin rannalla**. Lahden edustalle ulottuu Ilha de Luandan hiekkaniemi, jonka nimi viittaa saareen mutta maasto liittyy mantereeseen. Paikalliset yhteisöt elivät sen rannalla jo ennen portugalilaisten kaupungin syntyä 1500-luvun lopulla.\n\nVuonna 1873 Luanda oli jo vanha kauppapaikka. Sen aiempaan satamahistoriaan kuului orjuutettujen ihmisten kuljettaminen Brasiliaan, ja 1800-luvun vientiin kuuluivat myös puu, kahvi ja kasviöljyt. Kaupungin historia näkyy rannan Baixassa ja ylempänä sijaitsevassa Cidade Altassa.\n\n**Vanhojen kirkkojen ikä ei tarkoita muuttumatonta ulkoasua**, sillä rakennuksia on korjattu ja käytetty uudelleen eri aikoina. Remédiosin julkisivu sai nykyisen perusmuotonsa vasta 1800-luvun lopun kunnostuksessa. Nykyinen Luanda ulottuu vanhojen kaupunginosien ulkopuolelle, ja sen rannoilla, kaduilla sekä ravintoloissa elää tämän päivän pääkaupunki.",
+    "intro": "Luanda on Angolan pääkaupunki ja vanha satamakaupunki **Atlantin rannalla**. Lahden edustalle ulottuu Ilha de Luandan hiekkaniemi, jonka nimi viittaa saareen mutta maasto liittyy mantereeseen. Paikalliset yhteisöt elivät sen rannalla jo ennen portugalilaisten kaupungin syntyä 1500-luvun lopulla.\n\nVuonna 1873 Luanda oli jo vanha kauppapaikka. Sen aiempaan satamahistoriaan kuului orjuutettujen ihmisten kuljettaminen Brasiliaan, ja 1800-luvun vientiin kuuluivat myös puu, kahvi ja kasviöljyt. Kaupungin historia näkyy rannan Baixassa ja ylempänä sijaitsevassa Cidade Altassa.\n\n**Kirkkojen historia näkyy korjauksissa**, sillä rakennuksia on kunnostettu ja käytetty uudelleen eri aikoina. Remédiosin julkisivu sai nykyisen perusmuotonsa vasta 1800-luvun lopun kunnostuksessa. Nykyinen Luanda ulottuu vanhojen kaupunginosien ulkopuolelle, ja sen rannoilla, kaduilla sekä ravintoloissa elää tämän päivän pääkaupunki.",
     "teksti": "Luandan rannikon muodot ovat osa kaupungin historiaa. Ilha de Luandan matala hiekkaniemi liittyy mantereeseen kapean yhteyden kautta, ja sen ympärillä ovat merenlahti sekä kaupungin rannat. Luonto ja kaupunkielämä kohtaavat samalla kaistaleella, jolla myös paikalliset yhteisöt ovat pitkään asuneet.\n\nRannan alakaupunki Baixa liittyy satamaan ja kaupankäyntiin. Ylempänä sijaitseva Cidade Alta ei kuitenkaan ole pelkästään nuori osa kaupunkia: siellä on myös vanha jesuiittojen kirkonpaikka. Luandan maaston korkeuserot ja rakennusten eri-ikäisyys ovat kaksi erillistä tapaa lukea kaupunkia.\n\nVanhojen kirkkojen historiaan kuuluu kunnostuksia, käyttötarkoitusten muutoksia ja jälleenrakentamista. Remédios, Carmo, Nazaré ja Cabo kertovat näistä vaiheista omilla tavoillaan. Rannalla taas nykyiset ravintolat ja vapaa-ajan paikat liittyvät elävään kaupunkiin, jonka tarina jatkuu vanhojen rakennusten ulkopuolella."
   },
   "kysymykset": [
@@ -113,16 +113,11 @@
           "selite": "Luandan lahden ympärille asettuvat kaupungin rannikko ja sen edustan matala Ilha de Luanda.",
           "lahde": "Bahia_de_Luanda.jpg : Erik Cleves Kristensen derivative work: Dr Brains ( talk ), Wikimedia Commons (CC BY 2.0)"
         },
-        {
-          "tiedosto": "Panorama baixa Luanda.JPG",
-          "lyhyt": "Baixa on Luandan alakaupunki sataman tuntumassa.",
-          "selite": "Baixa on Luandan sataman viereinen alakaupunki, johon kuuluu vanhaa katutilaa ja rakennuskantaa.",
-          "lahde": "Fabio Vanin, Wikimedia Commons (CC BY-SA 3.0)"
-        },
+        {},
         {
           "tiedosto": "Luanda feb09 ost01.jpg",
-          "lyhyt": "Luandan kaupunkialue koostuu monista kortteleista.",
-          "selite": "Luandan kaupunkialue koostuu monista kortteleista.",
+          "lyhyt": "Luandan kortteleita.",
+          "selite": "Luandan kaupunkikortteleita helmikuussa 2009.",
           "lahde": "Lars Rohwer, Wikimedia Commons (CC BY-SA 3.0)"
         }
       ],
@@ -195,26 +190,21 @@
             {
               "otsikko": "Rannan suuntaan",
               "teksti": "Ilha de Luandan hiekkaniemi ja Marginalin lahdenranta tuovat Atlantin osaksi kaupunkikäyntiä. Ilhalla on rantoja ja ravintoloita, ja alueella käy myös kaupungin asukkaita. Rannalla oleskelu on yksi tapa tutustua paikkaan; uimista varten olosuhteet ja paikalliset ohjeet on selvitettävä erikseen. Sovi myös paluukuljetus, jotta rantaretki ei riipu viime hetkellä löytyvästä kyydistä.",
-              "kuva": {
-                "tiedosto": "Luanda, Angola (Unsplash).jpg",
-                "lyhyt": "Luanda sijaitsee Atlantin rannalla.",
-                "selite": "Luandan rannikkoympäristö kuuluu Atlantin äärelle kasvaneeseen satamakaupunkiin.",
-                "lahde": "Jesus Kiteque jesuskiteque, Wikimedia Commons (CC0)"
-              }
+              "kuva": {}
             },
             {
               "otsikko": "Mitä syödään",
-              "teksti": "Ilha ja Marginal ovat Luandan ravintola-alueita. Kaupungin ruokapaikoista löytyy paikallisia aterioita, ja tarjolla on myös hedelmämehuja. Ruokailu voi olla oma osansa rantapäivää tai keskustan kävelyä. Kysy annoksen sisällöstä ennen tilaamista, jos jokin on epäselvää. Ravintoloiden toiminta ja valikoima kannattaa varmistaa paikan päällä; vanhan matkakuvauksen nimi ei takaa tämän päivän tarjontaa.",
+              "teksti": "Ilha ja Marginal ovat Luandan ravintola-alueita. Kaupungin ruokapaikoista löytyy paikallisia aterioita, ja tarjolla on myös hedelmämehuja. Ruokailu voi olla oma osansa rantapäivää tai keskustan kävelyä. Kysy annoksen sisällöstä ennen tilaamista, jos jokin on epäselvää. Ilhan rantapaikat ja Marginalin ravintolat sijoittuvat lahden eri puolille.",
               "kuva": {
                 "tiedosto": "2021-10-10 08 12 00 A glass of orange juice at the Denny's in Kailua-Kona, Hawaii County, Hawaii.jpg",
-                "lyhyt": "Appelsiinimehu on hedelmäjuoma.",
-                "selite": "Appelsiinimehu on hedelmäjuoma.",
+                "lyhyt": "Appelsiinimehua Havaijilla.",
+                "selite": "Appelsiinimehulasi on kuvattu Kailua-Konassa Havaijilla; kuva havainnollistaa juomaa, ei Luandan ravintolaa.",
                 "lahde": "Famartin, Wikimedia Commons (CC BY-SA 4.0)"
               }
             },
             {
-              "otsikko": "Suunnittele päivän kulku",
-              "teksti": "Luandassa kannattaa noudattaa tavanomaista varovaisuutta ja sopia liikkuminen paikallisolosuhteet tuntevan toimijan kanssa. Vältä liikkumista pimeällä. Tarkista myös kuvausrajoitukset, etenkin satamien, lentoasemien ja sotilaallisten alueiden lähellä. Kaupungin ulkopuolelle matkustaessa aluekohtaiset ohjeet on selvitettävä erikseen: muiden maakuntien rajoitukset eivät sellaisinaan kuvaa Luandan sijaintia."
+              "otsikko": "Kirkkojen vierailut",
+              "teksti": "Remédios, Carmo, Nazaré ja Jesus-kirkon historiallinen paikka kertovat Luandan eri rakennusvaiheista. Selvitä vierailu- ja kuvauskäytännöt kohteesta, ja kunnioita kirkkojen uskonnollista käyttöä. Baixa ja Cidade Alta näyttävät kaupunkia eri korkeuksilta."
             }
           ],
           "matkailu": {
@@ -247,8 +237,8 @@
             ],
             "hyvaTietaa": [
               {
-                "otsikko": "NBJ ja LDA ovat eri kentät",
-                "teksti": "Tarkista lentoaseman tunnus lentolipusta ja kuljetuksen kohtaamispaikka toimijaltasi."
+                "otsikko": "Ennen matkapäätöstä",
+                "teksti": "Tarkista Angolan ajantasainen matkustustiedote Suomen ulkoministeriöstä ja noudata sen ohjeita."
               },
               {
                 "otsikko": "Ilha on yhteydessä mantereeseen",
@@ -264,7 +254,7 @@
               }
             ]
           },
-          "lahde": "Wikipedia"
+          "lahde": "Wikipedia; Wikivoyage"
         }
       }
     },
@@ -286,7 +276,7 @@
       "nostot": [
         {
           "otsikko": "Vanha kirkko sai uuden julkisivun",
-          "teksti": "Nossa Senhora dos Remédios on Luandan katolinen katedraali, jonka rakennushistoria alkaa 1600-luvulta. Hiippakunnan pääpaikan siirtyminen Luandaan liittyy kirkon myöhempään katedraalitehtävään. Rakennus rapistui 1800-luvulla ja kunnostettiin vuosisadan loppupuolella. Korjauksissa se sai nykyisen julkisivunsa perusmuodon, johon kuuluvat oviaukot ja kaareva pääty. Vanha perustamisikä ei siis tarkoita, että jokainen näkyvä osa olisi yhtä vanha. Kirkon historia jatkui sen ensimmäisen rakennusvaiheen jälkeen.",
+          "teksti": "Nossa Senhora dos Remédios on Luandan katolinen katedraali, jonka rakennushistoria alkaa 1600-luvulta. Hiippakunnan pääpaikan siirtyminen Luandaan liittyy kirkon myöhempään katedraalitehtävään. Rakennus rapistui 1800-luvulla ja kunnostettiin vuosisadan loppupuolella. Korjauksissa se sai nykyisen julkisivunsa perusmuodon, johon kuuluvat oviaukot ja kaareva pääty. 1600-luvun kirkko sai näin uuden julkisivun 1800-luvulla. Kirkon historia jatkui sen ensimmäisen rakennusvaiheen jälkeen.",
           "tiedosto": "",
           "lyhyt": "",
           "selite": "",
@@ -381,7 +371,7 @@
     },
     "Nazarén kirkko": {
       "aika": "1600-luku",
-      "teksti": "Nossa Senhora da Nazarén kirkko sijaitsee Luandan lahden rannalla Marginalin rantatietä vastapäätä. Sen rakennushistoria alkaa 1600-luvulta, joten kirkko kuului kaupungin vanhoihin paikkoihin jo vuonna 1873. Sijainti liittää sen satamakaupungin rannikkoympäristöön: merenlahti ja vanha kirkko ovat samassa kaupunkitilassa.\n\nKirkon arkkitehtuurissa näkyy barokkiperinne, mutta sen julkisivun perusmuoto on selkeä. Sisäänkäynnin yläosa on suora, sen yläpuolella on kolmionmuotoinen pääty ja pyöreä aukko. Pieni kellotorni kohoaa sivussa, ja rakennukseen kuuluvat myös sivuarkadit. Nazaré säilyttää lähteen kuvaamia vanhoja linjoja osana muuttunutta rantakaupunkia. Rakennuksen merkityksen ymmärtämiseen ei tarvita suurta kokoa: vanha kirkonpaikka kertoo Luandan historian pitkästä jatkumosta lahden äärellä.",
+      "teksti": "Nossa Senhora da Nazarén kirkko sijaitsee Luandan lahden rannalla Marginalin rantatietä vastapäätä. Sen rakennushistoria alkaa 1600-luvulta, joten kirkko kuului kaupungin vanhoihin paikkoihin jo vuonna 1873. Sijainti liittää sen satamakaupungin rannikkoympäristöön: merenlahti ja vanha kirkko ovat samassa kaupunkitilassa.\n\nKirkon arkkitehtuurissa näkyy barokkiperinne, mutta sen julkisivun perusmuoto on selkeä. Sisäänkäynnin yläosa on suora, sen yläpuolella on kolmionmuotoinen pääty ja pyöreä aukko. Pieni kellotorni kohoaa sivussa, ja rakennukseen kuuluvat myös sivuarkadit. Nazarén yksinkertainen pääty ja pieni kellotorni kuuluvat vanhan lahdenrannan rakennusperintöön. Rakennuksen merkityksen ymmärtämiseen ei tarvita suurta kokoa: vanha kirkonpaikka kertoo Luandan historian pitkästä jatkumosta lahden äärellä.",
       "kuvat": [],
       "lahde": "Wikipedia"
     },

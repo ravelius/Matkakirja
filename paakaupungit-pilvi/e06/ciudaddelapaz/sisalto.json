@@ -14,7 +14,7 @@
     }
   },
   "artikkeli": {
-    "intro": "Ciudad de la Paz on pääkaupunki, jonka historiaa voi lukea myös rakennussuunnitelmana. Päiväntasaajan Guinean uusi hallintokaupunki sijaitsee **Río Munin sisämaassa**, nykyisen sademetsän ympäröimänä. Se on eri paikka kuin Bioko-saarella sijaitseva Malabo. Kaupunki tunnettiin aikaisemmin myös nimillä Oyala ja Djibloho.\n\nEspanjankielinen nykyinen nimi tarkoittaa **rauhan kaupunkia**. Hanke alkoi 2000-luvulla, ja sen suunnitelmissa yhdistyvät hallinnon tilat, asuinalueet ja niitä yhdistävä liikenneverkko. Rakentaminen on jatkunut vaiheittain: paperille hahmoteltu kaupunki ja jo rakennettu kaupunki eivät ole sama asia. Isoisän matkavuonna 1873 tätä nykyistä kaupunkia ei ollut, mutta se ei tee alueen aikaisemmista asukkaista ja historiasta olemattomia.",
+    "intro": "Ciudad de la Paz on pääkaupunki, jonka historiaa voi lukea myös rakennussuunnitelmana. Päiväntasaajan Guinean uusi hallintokaupunki sijaitsee **Río Munin sisämaassa**, nykyisen sademetsän ympäröimänä. Se on eri paikka kuin Bioko-saarella sijaitseva Malabo. Kaupunki tunnettiin aikaisemmin myös nimillä Oyala ja Djibloho.\n\nEspanjankielinen nykyinen nimi tarkoittaa **rauhan kaupunkia**. Hanke alkoi 2000-luvulla, ja sen suunnitelmissa yhdistyvät hallinnon tilat, asuinalueet ja niitä yhdistävä liikenneverkko. Rakentaminen on jatkunut vaiheittain: paperille hahmoteltu kaupunki ja jo rakennettu kaupunki eivät ole sama asia. Vuonna 1873 tätä kaupunkia ei vielä ollut; suunnitellun pääkaupungin rakentaminen alkoi vasta 2000-luvulla.",
     "teksti": "Päiväntasaajan Guinean maantiede selittää pääkaupunkien eron. Malabo sijaitsee Bioko-saarella, kun taas Ciudad de la Paz kuuluu Río Munin mantereen puoleiseen alueeseen. Kyse on hallinnon siirtymisestä toiseen paikkaan, ei vanhan saarikaupungin uudesta nimestä.\n\nCiudad de la Paz suunniteltiin kokonaisuutena. Kaavoihin kuuluu hallinnon ja asumisen alueita sekä liikennejärjestelyjä. Kaupunkisuunnitelmaa laati portugalilainen FAT-toimisto, jonka nimi avautuu sanoiksi Future Architecture Thinking.\n\nDjibloho-nimi vaatii pienen tarkennuksen: se voi tarkoittaa myös ympäröivää hallintoaluetta. Samoin suunnitelman väestökapasiteetti kertoo tavoitellusta koosta, ei nykyisestä asukasmäärästä. Nuoren kaupungin ymmärtämiseksi on erotettava toisistaan paikka, hallintoalue ja tulevaisuutta varten tehty suunnitelma."
   },
   "kysymykset": [
@@ -50,9 +50,9 @@
       "q": "Millaisessa paikassa Ciudad de la Paz sijaitsee?",
       "options": [
         "Mantereen sisämaassa",
-        "Meren pienellä saarella",
-        "Laajalla jokisuistolla",
-        "Vuoriston lumirajalla"
+        "Meren saarella",
+        "Jokisuiston rannalla",
+        "Rannikolla sataman äärellä"
       ],
       "correct": 0,
       "level": 2,
@@ -84,7 +84,7 @@
       ],
       "correct": 0,
       "level": 3,
-      "hint": "Etsi maan mantereen puoleinen alue.",
+      "hint": "Maan alueet jakautuvat saariin ja mantereeseen.",
       "fact": "Ciudad de la Paz sijaitsee Río Munin alueella.",
       "source": "https://en.wikipedia.org/wiki/Ciudad_de_la_Paz"
     }
@@ -96,7 +96,7 @@
   ],
   "valokuva": {
     "tiedosto": "Dschungel bei Oyala.JPG",
-    "lyhyt": "Ciudad de la Pazin ympäristöön kuuluu trooppista kasvillisuutta.",
+    "lyhyt": "Ciudad de la Pazin ympäristöön.",
     "selite": "Ciudad de la Pazin ympäristöön kuuluu trooppista kasvillisuutta.",
     "lahde": "Mehlauge, Commons (CC BY-SA 3.0)"
   },
@@ -128,7 +128,7 @@
       "nostot": [
         {
           "otsikko": "Nimi, joka lupaa rauhaa",
-          "teksti": "Ciudad de la Paz tarkoittaa espanjaksi rauhan kaupunkia. Oyala ja Djibloho ovat saman nuoren kaupunkihankkeen aikaisempia nimiä. Djibloho voi kuitenkin tarkoittaa myös ympäröivää hallintoaluetta. Siksi saman sanan näkeminen kahdessa kartassa ei vielä kerro, että kartat näyttävät saman rajauksen. Kaupungin nimiketjussa on yhtä aikaa kielen, paikannimen ja hallinnollisen aluejaon historiaa. Mengomeyén on lähiseudun toinen paikka, ei yksi kaupungin vanhoista nimistä.",
+          "teksti": "Ciudad de la Paz tarkoittaa espanjaksi rauhan kaupunkia. Oyala ja Djibloho ovat saman nuoren kaupunkihankkeen aikaisempia nimiä. Djibloho voi kuitenkin tarkoittaa myös ympäröivää hallintoaluetta. Kaupunki toimii myös Djiblohon maakunnan hallintokeskuksena. Kaupungin nimiketjussa on yhtä aikaa kielen, paikannimen ja hallinnollisen aluejaon historiaa. Mengomeyén on kaupungin lähistöllä sijaitseva toinen paikkakunta, jonka lähellä on sisämaan kansainvälinen lentoasema.",
           "tiedosto": "",
           "lyhyt": "",
           "selite": "",
@@ -146,7 +146,7 @@
         },
         {
           "otsikko": "Kaava ennen kaupunkia",
-          "teksti": "Ciudad de la Pazin kaupunginosia ei ole syntynyt vain talo kerrallaan vuosisatojen kuluessa. Nykyinen kaupunki on suunniteltu hallintokaupungiksi, ja suunnitelma kokoaa yhteen hallinnon tilat, asuinalueet sekä liikenneverkon. Kaupunkisuunnittelusta vastasi portugalilainen FAT eli Future Architecture Thinking. Rakentaminen on edennyt vaiheittain. Kaupungin tapauksessa kaava kertoo siksi myös tulevaisuudesta: jokainen piirretty alue ei tarkoita jo valmista kaupunginosaa.",
+          "teksti": "Ciudad de la Pazia alettiin rakentaa kokonaisena uutena kaupunkihankkeena 2000-luvulla. Nykyinen kaupunki on suunniteltu hallintokaupungiksi, ja suunnitelma kokoaa yhteen hallinnon tilat, asuinalueet sekä liikenneverkon. Kaupunkisuunnittelusta vastasi portugalilainen FAT eli Future Architecture Thinking. Rakentaminen on edennyt vaiheittain. Kaupungin tapauksessa kaava kertoo siksi myös tulevaisuudesta: jokainen piirretty alue ei tarkoita jo valmista kaupunginosaa.",
           "tiedosto": "",
           "lyhyt": "",
           "selite": "",
@@ -232,8 +232,8 @@
             "parasta": [],
             "hyvaTietaa": [
               {
-                "otsikko": "Saari ja manner",
-                "teksti": "Ciudad de la Paz on Río Munin sisämaassa, Malabo Bioko-saarella."
+                "otsikko": "Ennen matkapäätöstä",
+                "teksti": "Tarkista Päiväntasaajan Guinean ajantasainen matkustustiedote Suomen ulkoministeriöstä ja noudata sen ohjeita."
               },
               {
                 "otsikko": "Lentoasemakoodi",
@@ -245,7 +245,7 @@
               }
             ]
           },
-          "lahde": "Wikipedia"
+          "lahde": "Wikipedia; Wikivoyage"
         }
       }
     },
@@ -266,8 +266,8 @@
       },
       "nostot": [
         {
-          "otsikko": "Vuosi 1873 ilman tätä kaupunkia",
-          "teksti": "Isoisän matkavuonna 1873 nykyistä Ciudad de la Pazia ei vielä ollut. Kaupunkihanke kuuluu 2000-luvulle, joten sen hallintoalueita, katuverkkoa ja uutta nimeä ei voi siirtää sellaisinaan vanhaan matkavuoteen. Paikkaa ei silti pidä ajatella historiattomaksi. Kaupungin myöhempi suunnittelu kertoo nykyisen kaupunkirakenteen synnystä, ei siitä, millaista elämä samalla alueella oli aikaisemmin. Uuden kaupungin ikä ja alueen ihmisten historia ovat kaksi eri aikajanaa.",
+          "otsikko": "Pääkaupunki mantereen puolella",
+          "teksti": "Ciudad de la Paz sijaitsee Río Munissa, Päiväntasaajan Guinean mantereen puoleisella alueella. Malabo taas on Bioko-saarella. Uutta hallintokaupunkia ympäröi trooppinen metsä, ja sen lähistöllä on Mengomeyénin paikkakunta lentoasemineen. Vuonna 1873 nykyistä kaupunkia ei vielä ollut: sen rakentaminen alkoi 2000-luvulla. Maan pääkaupunki siirtyi näin saaren rannikkokaupungista sisämaan suunniteltuun keskukseen, jossa hallinnon tilat, asuminen ja liikenneverkko on suunniteltu kokonaisuutena.",
           "tiedosto": "",
           "lyhyt": "",
           "selite": "",
@@ -275,7 +275,7 @@
           "wiki": "Ciudad de la Paz"
         },
         {
-          "otsikko": "Asukkaat eivät asu tavoitteessa",
+          "otsikko": "Kaava varaa tilan asukkaille",
           "teksti": "Kaupunki voidaan suunnitella suurelle väestölle jo ennen kuin sen talot ovat valmiita. Ciudad de la Pazin suunnitelmissa on väestökapasiteetti, mutta kapasiteetti ei ole asukasluku: se kertoo, kuinka monelle ihmiselle tiloja on tarkoitus rakentaa. Nykyisten asukkaiden määrä on toinen kysymys. Samanlainen ero kulkee rakennettujen alueiden ja myöhempien rakennusvaiheiden välillä. Suunnittelukaupungista kertovaa karttaa lukee paremmin, kun erottaa tavoitteen toteutuneesta kaupungista.",
           "tiedosto": "",
           "lyhyt": "",

@@ -3,7 +3,7 @@
   "era": "e06",
   "city": "bangui",
   "authorization": "hyväksyn kaikki tekemäsi kuvat. toimita ne claudelle. claudelta saat uusia ohjeita jatkoa varten",
-  "sourceContentAfterSHA256": "c724bb2a9ad27bfe133e8e4d525c09d347cdb3c9f1649c6fa9cdcc15bb417a96",
+  "sourceContentAfterSHA256": "7e72bbd835979e2c194326f019bc707c8a55f9d091ad2f740a1f4c338d8283c5",
   "assets": [
     {
       "era": "e06",
@@ -28,10 +28,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/bangui/job14-e06-bangui-o3-v01-c3676fdf98af.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva keramiikan materiaalista.",
-        "lyhyt": "Havainnekuva keramiikan materiaalista."
+        "selite": "Havainnekuva keramiikan materiaalista."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -39,10 +39,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/bangui/job14-e06-bangui-o3-v01-c3676fdf98af.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva keramiikan materiaalista.",
-        "lyhyt": "Havainnekuva keramiikan materiaalista."
+        "selite": "Havainnekuva keramiikan materiaalista."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -56,10 +56,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/bangui/sisalto.json",
-      "sourceContentSHA256": "c724bb2a9ad27bfe133e8e4d525c09d347cdb3c9f1649c6fa9cdcc15bb417a96",
+      "sourceContentSHA256": "7e72bbd835979e2c194326f019bc707c8a55f9d091ad2f740a1f4c338d8283c5",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "a6c1e6023476f44df37926b83b6a7d5741dd2c297f868c164515cdefc430280a",
+        "semanticContextSHA256": "aa5503ca31c2c8367625a12e7931716f597e16a798580a95d34ca873aba057b5",
         "subjectTitle": "Raudanvalmistus ja museo",
         "targetState": "existing-target"
       },
@@ -324,9 +324,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -345,17 +345,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "c724bb2a9ad27bfe133e8e4d525c09d347cdb3c9f1649c6fa9cdcc15bb417a96",
+      "sourceContentAfterSHA256": "7e72bbd835979e2c194326f019bc707c8a55f9d091ad2f740a1f4c338d8283c5",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "a6c1e6023476f44df37926b83b6a7d5741dd2c297f868c164515cdefc430280a",
+      "contextAfterSHA256": "aa5503ca31c2c8367625a12e7931716f597e16a798580a95d34ca873aba057b5",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "c724bb2a9ad27bfe133e8e4d525c09d347cdb3c9f1649c6fa9cdcc15bb417a96",
+        "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "contextAfterSHA256": "a6c1e6023476f44df37926b83b6a7d5741dd2c297f868c164515cdefc430280a",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+          "semanticContextSHA256": "a6c1e6023476f44df37926b83b6a7d5741dd2c297f868c164515cdefc430280a",
+          "subjectTitle": "Raudanvalmistus ja museo",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "7e72bbd835979e2c194326f019bc707c8a55f9d091ad2f740a1f4c338d8283c5",
+        "sameImageNativeSHA256": "c3676fdf98afb16ada4dce8567e8db95c1a86b9261c18558d579007ba04e1101",
+        "sameImageExportSHA256": "efec4bf19918b45aa550dffa05d6c70febe331c135de4a64dcd36347383cd1aa",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e06",
@@ -380,10 +401,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/bangui/job14-e06-bangui-o4-v01-372fd227e43e.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva riisistä ja okrasta.",
-        "lyhyt": "Havainnekuva riisistä ja okrasta."
+        "selite": "Havainnekuva riisistä ja okrasta."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -391,10 +412,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/bangui/job14-e06-bangui-o4-v01-372fd227e43e.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva riisistä ja okrasta.",
-        "lyhyt": "Havainnekuva riisistä ja okrasta."
+        "selite": "Havainnekuva riisistä ja okrasta."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -408,10 +429,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/bangui/sisalto.json",
-      "sourceContentSHA256": "c724bb2a9ad27bfe133e8e4d525c09d347cdb3c9f1649c6fa9cdcc15bb417a96",
+      "sourceContentSHA256": "7e72bbd835979e2c194326f019bc707c8a55f9d091ad2f740a1f4c338d8283c5",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "c7319b2573b20214793e788f562b6832e4774e805300d2a3b64f6d15888e7a20",
+        "semanticContextSHA256": "4f193b07d5412e8733d86d6a57eefafd77cfa748662e85c7b8597c6a5440424a",
         "subjectTitle": "Ruoka kaupungissa",
         "targetState": "existing-target"
       },
@@ -676,9 +697,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -697,17 +718,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "c724bb2a9ad27bfe133e8e4d525c09d347cdb3c9f1649c6fa9cdcc15bb417a96",
+      "sourceContentAfterSHA256": "7e72bbd835979e2c194326f019bc707c8a55f9d091ad2f740a1f4c338d8283c5",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "c7319b2573b20214793e788f562b6832e4774e805300d2a3b64f6d15888e7a20",
+      "contextAfterSHA256": "4f193b07d5412e8733d86d6a57eefafd77cfa748662e85c7b8597c6a5440424a",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "c724bb2a9ad27bfe133e8e4d525c09d347cdb3c9f1649c6fa9cdcc15bb417a96",
+        "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "contextAfterSHA256": "c7319b2573b20214793e788f562b6832e4774e805300d2a3b64f6d15888e7a20",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+          "semanticContextSHA256": "c7319b2573b20214793e788f562b6832e4774e805300d2a3b64f6d15888e7a20",
+          "subjectTitle": "Ruoka kaupungissa",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "7e72bbd835979e2c194326f019bc707c8a55f9d091ad2f740a1f4c338d8283c5",
+        "sameImageNativeSHA256": "372fd227e43e6f1faf8999c8301cc221b47289550f177d32c4c03fa7baa5cd37",
+        "sameImageExportSHA256": "947920d946aa5325588505e70c63135b18253ab7c0e2f08755dd7dd2acf6b550",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e06",
@@ -729,10 +771,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/bangui/job14-e06-bangui-k1-v01-353ee58346bd.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva raudanvalmistuksen materiaalijäänteistä.",
-        "lyhyt": "Havainnekuva raudanvalmistuksen materiaalijäänteistä."
+        "selite": "Havainnekuva raudanvalmistuksen materiaalijäänteistä."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -740,10 +782,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/bangui/job14-e06-bangui-k1-v01-353ee58346bd.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva raudanvalmistuksen materiaalijäänteistä.",
-        "lyhyt": "Havainnekuva raudanvalmistuksen materiaalijäänteistä."
+        "selite": "Havainnekuva raudanvalmistuksen materiaalijäänteistä."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -757,10 +799,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/bangui/sisalto.json",
-      "sourceContentSHA256": "c724bb2a9ad27bfe133e8e4d525c09d347cdb3c9f1649c6fa9cdcc15bb417a96",
+      "sourceContentSHA256": "7e72bbd835979e2c194326f019bc707c8a55f9d091ad2f740a1f4c338d8283c5",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "c2809b769ee787261cb0dac0caf91e0bbfa26378c6b939a01bd61c75a416e7b7",
-        "semanticContextSHA256": "c2809b769ee787261cb0dac0caf91e0bbfa26378c6b939a01bd61c75a416e7b7",
+        "targetBeforeSHA256": "9e632e4fdacc308937ee6ab2af775c777edfeeb389bb58edc33b33562144e51f",
+        "semanticContextSHA256": "9e632e4fdacc308937ee6ab2af775c777edfeeb389bb58edc33b33562144e51f",
         "subjectTitle": "Raudan jäljet ovat kaupunkia vanhempia",
         "targetState": "existing-target"
       },
@@ -1025,9 +1067,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -1046,17 +1088,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "c724bb2a9ad27bfe133e8e4d525c09d347cdb3c9f1649c6fa9cdcc15bb417a96",
-      "targetAfterSHA256": "c2809b769ee787261cb0dac0caf91e0bbfa26378c6b939a01bd61c75a416e7b7",
-      "contextAfterSHA256": "c2809b769ee787261cb0dac0caf91e0bbfa26378c6b939a01bd61c75a416e7b7",
+      "sourceContentAfterSHA256": "7e72bbd835979e2c194326f019bc707c8a55f9d091ad2f740a1f4c338d8283c5",
+      "targetAfterSHA256": "9e632e4fdacc308937ee6ab2af775c777edfeeb389bb58edc33b33562144e51f",
+      "contextAfterSHA256": "9e632e4fdacc308937ee6ab2af775c777edfeeb389bb58edc33b33562144e51f",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "c724bb2a9ad27bfe133e8e4d525c09d347cdb3c9f1649c6fa9cdcc15bb417a96",
+        "targetAfterSHA256": "c2809b769ee787261cb0dac0caf91e0bbfa26378c6b939a01bd61c75a416e7b7",
+        "contextAfterSHA256": "c2809b769ee787261cb0dac0caf91e0bbfa26378c6b939a01bd61c75a416e7b7",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "c2809b769ee787261cb0dac0caf91e0bbfa26378c6b939a01bd61c75a416e7b7",
+          "semanticContextSHA256": "c2809b769ee787261cb0dac0caf91e0bbfa26378c6b939a01bd61c75a416e7b7",
+          "subjectTitle": "Raudan jäljet ovat kaupunkia vanhempia",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "7e72bbd835979e2c194326f019bc707c8a55f9d091ad2f740a1f4c338d8283c5",
+        "sameImageNativeSHA256": "353ee58346bddceb077ac79e42f87dc10c05120d38e0a40c65ec83acb054fee5",
+        "sameImageExportSHA256": "d282c56e45a02822ca8d50be57d2554346d554263094bc3541abb12bb71cefb9",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e06",
@@ -1078,10 +1141,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/bangui/job14-e06-bangui-k4-v01-7d07ab960c5e.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva punotusta korista ja saviastiasta.",
-        "lyhyt": "Havainnekuva punotusta korista ja saviastiasta."
+        "selite": "Havainnekuva punotusta korista ja saviastiasta."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -1089,10 +1152,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/bangui/job14-e06-bangui-k4-v01-7d07ab960c5e.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva punotusta korista ja saviastiasta.",
-        "lyhyt": "Havainnekuva punotusta korista ja saviastiasta."
+        "selite": "Havainnekuva punotusta korista ja saviastiasta."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -1106,10 +1169,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/bangui/sisalto.json",
-      "sourceContentSHA256": "c724bb2a9ad27bfe133e8e4d525c09d347cdb3c9f1649c6fa9cdcc15bb417a96",
+      "sourceContentSHA256": "7e72bbd835979e2c194326f019bc707c8a55f9d091ad2f740a1f4c338d8283c5",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "9d9b274b4370801f662eb2905fadfb76342504d0081be74d9648e48e34873578",
-        "semanticContextSHA256": "9d9b274b4370801f662eb2905fadfb76342504d0081be74d9648e48e34873578",
+        "targetBeforeSHA256": "7cb25b0ebcbed5a1d752b0a9609d5e137f32eb185b2b7c0345b33bf8b59b7d1b",
+        "semanticContextSHA256": "7cb25b0ebcbed5a1d752b0a9609d5e137f32eb185b2b7c0345b33bf8b59b7d1b",
         "subjectTitle": "Käyttöesine kertoo tekijän taidosta",
         "targetState": "existing-target"
       },
@@ -1409,9 +1472,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -1430,17 +1493,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "c724bb2a9ad27bfe133e8e4d525c09d347cdb3c9f1649c6fa9cdcc15bb417a96",
-      "targetAfterSHA256": "9d9b274b4370801f662eb2905fadfb76342504d0081be74d9648e48e34873578",
-      "contextAfterSHA256": "9d9b274b4370801f662eb2905fadfb76342504d0081be74d9648e48e34873578",
+      "sourceContentAfterSHA256": "7e72bbd835979e2c194326f019bc707c8a55f9d091ad2f740a1f4c338d8283c5",
+      "targetAfterSHA256": "7cb25b0ebcbed5a1d752b0a9609d5e137f32eb185b2b7c0345b33bf8b59b7d1b",
+      "contextAfterSHA256": "7cb25b0ebcbed5a1d752b0a9609d5e137f32eb185b2b7c0345b33bf8b59b7d1b",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "c724bb2a9ad27bfe133e8e4d525c09d347cdb3c9f1649c6fa9cdcc15bb417a96",
+        "targetAfterSHA256": "9d9b274b4370801f662eb2905fadfb76342504d0081be74d9648e48e34873578",
+        "contextAfterSHA256": "9d9b274b4370801f662eb2905fadfb76342504d0081be74d9648e48e34873578",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "9d9b274b4370801f662eb2905fadfb76342504d0081be74d9648e48e34873578",
+          "semanticContextSHA256": "9d9b274b4370801f662eb2905fadfb76342504d0081be74d9648e48e34873578",
+          "subjectTitle": "Käyttöesine kertoo tekijän taidosta",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "7e72bbd835979e2c194326f019bc707c8a55f9d091ad2f740a1f4c338d8283c5",
+        "sameImageNativeSHA256": "7d07ab960c5e5c089ff1aa8eba5aea2a769e54624df7397c36a1cf8b09a9af71",
+        "sameImageExportSHA256": "d79ea994c2b1e128f2a1f856767b3780368bcb6a114920ad1043bfd73da89bd0",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e06",
@@ -1462,10 +1546,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/bangui/job14-e06-bangui-l1-v01-c04c1d049dc2.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva maniokista, riisistä ja keittobanaaneista.",
-        "lyhyt": "Havainnekuva maniokista, riisistä ja keittobanaaneista."
+        "selite": "Havainnekuva maniokista, riisistä ja keittobanaaneista."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -1473,10 +1557,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/bangui/job14-e06-bangui-l1-v01-c04c1d049dc2.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva maniokista, riisistä ja keittobanaaneista.",
-        "lyhyt": "Havainnekuva maniokista, riisistä ja keittobanaaneista."
+        "selite": "Havainnekuva maniokista, riisistä ja keittobanaaneista."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -1490,10 +1574,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/bangui/sisalto.json",
-      "sourceContentSHA256": "c724bb2a9ad27bfe133e8e4d525c09d347cdb3c9f1649c6fa9cdcc15bb417a96",
+      "sourceContentSHA256": "7e72bbd835979e2c194326f019bc707c8a55f9d091ad2f740a1f4c338d8283c5",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "31b2885f71cde3cf6c1d53679a8f61686cb32100024f6f192a551415e9022af9",
-        "semanticContextSHA256": "31b2885f71cde3cf6c1d53679a8f61686cb32100024f6f192a551415e9022af9",
+        "targetBeforeSHA256": "8fee3b6526db0b2c5d4fd2b0746a42851987706450fef5f7a12778b9cf3817c3",
+        "semanticContextSHA256": "8fee3b6526db0b2c5d4fd2b0746a42851987706450fef5f7a12778b9cf3817c3",
         "subjectTitle": "Aterian perusta voi vaihtua",
         "targetState": "existing-target"
       },
@@ -1758,9 +1842,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -1779,17 +1863,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "c724bb2a9ad27bfe133e8e4d525c09d347cdb3c9f1649c6fa9cdcc15bb417a96",
-      "targetAfterSHA256": "31b2885f71cde3cf6c1d53679a8f61686cb32100024f6f192a551415e9022af9",
-      "contextAfterSHA256": "31b2885f71cde3cf6c1d53679a8f61686cb32100024f6f192a551415e9022af9",
+      "sourceContentAfterSHA256": "7e72bbd835979e2c194326f019bc707c8a55f9d091ad2f740a1f4c338d8283c5",
+      "targetAfterSHA256": "8fee3b6526db0b2c5d4fd2b0746a42851987706450fef5f7a12778b9cf3817c3",
+      "contextAfterSHA256": "8fee3b6526db0b2c5d4fd2b0746a42851987706450fef5f7a12778b9cf3817c3",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "c724bb2a9ad27bfe133e8e4d525c09d347cdb3c9f1649c6fa9cdcc15bb417a96",
+        "targetAfterSHA256": "31b2885f71cde3cf6c1d53679a8f61686cb32100024f6f192a551415e9022af9",
+        "contextAfterSHA256": "31b2885f71cde3cf6c1d53679a8f61686cb32100024f6f192a551415e9022af9",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "31b2885f71cde3cf6c1d53679a8f61686cb32100024f6f192a551415e9022af9",
+          "semanticContextSHA256": "31b2885f71cde3cf6c1d53679a8f61686cb32100024f6f192a551415e9022af9",
+          "subjectTitle": "Aterian perusta voi vaihtua",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "7e72bbd835979e2c194326f019bc707c8a55f9d091ad2f740a1f4c338d8283c5",
+        "sameImageNativeSHA256": "c04c1d049dc2faf5d86422f0a4aa4ddf36112823df9e2360d0016557585e39f0",
+        "sameImageExportSHA256": "9ceb17e5183dc80d87ab1f542834d81ed34294719ef7b3a085bd11639c1443b9",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e06",
@@ -1811,10 +1916,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/bangui/job14-e06-bangui-l2-v01-824170cb5274.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva okrasta ja maapähkinöistä.",
-        "lyhyt": "Havainnekuva okrasta ja maapähkinöistä."
+        "selite": "Havainnekuva okrasta ja maapähkinöistä."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -1822,10 +1927,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/bangui/job14-e06-bangui-l2-v01-824170cb5274.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva okrasta ja maapähkinöistä.",
-        "lyhyt": "Havainnekuva okrasta ja maapähkinöistä."
+        "selite": "Havainnekuva okrasta ja maapähkinöistä."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -1839,10 +1944,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/bangui/sisalto.json",
-      "sourceContentSHA256": "c724bb2a9ad27bfe133e8e4d525c09d347cdb3c9f1649c6fa9cdcc15bb417a96",
+      "sourceContentSHA256": "7e72bbd835979e2c194326f019bc707c8a55f9d091ad2f740a1f4c338d8283c5",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "455dd7266643de18ecd8c9b41cd6505192d62074fb898d6a23a50dfb1de66489",
-        "semanticContextSHA256": "455dd7266643de18ecd8c9b41cd6505192d62074fb898d6a23a50dfb1de66489",
+        "targetBeforeSHA256": "fa2a5bfa9aa437325945f78c0c151c5596bd57a8875834c66cccfe2ae873d4d2",
+        "semanticContextSHA256": "fa2a5bfa9aa437325945f78c0c151c5596bd57a8875834c66cccfe2ae873d4d2",
         "subjectTitle": "Okra ja maapähkinä kastikkeessa",
         "targetState": "existing-target"
       },
@@ -2133,9 +2238,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -2154,17 +2259,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "c724bb2a9ad27bfe133e8e4d525c09d347cdb3c9f1649c6fa9cdcc15bb417a96",
-      "targetAfterSHA256": "455dd7266643de18ecd8c9b41cd6505192d62074fb898d6a23a50dfb1de66489",
-      "contextAfterSHA256": "455dd7266643de18ecd8c9b41cd6505192d62074fb898d6a23a50dfb1de66489",
+      "sourceContentAfterSHA256": "7e72bbd835979e2c194326f019bc707c8a55f9d091ad2f740a1f4c338d8283c5",
+      "targetAfterSHA256": "fa2a5bfa9aa437325945f78c0c151c5596bd57a8875834c66cccfe2ae873d4d2",
+      "contextAfterSHA256": "fa2a5bfa9aa437325945f78c0c151c5596bd57a8875834c66cccfe2ae873d4d2",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "c724bb2a9ad27bfe133e8e4d525c09d347cdb3c9f1649c6fa9cdcc15bb417a96",
+        "targetAfterSHA256": "455dd7266643de18ecd8c9b41cd6505192d62074fb898d6a23a50dfb1de66489",
+        "contextAfterSHA256": "455dd7266643de18ecd8c9b41cd6505192d62074fb898d6a23a50dfb1de66489",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "455dd7266643de18ecd8c9b41cd6505192d62074fb898d6a23a50dfb1de66489",
+          "semanticContextSHA256": "455dd7266643de18ecd8c9b41cd6505192d62074fb898d6a23a50dfb1de66489",
+          "subjectTitle": "Okra ja maapähkinä kastikkeessa",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "7e72bbd835979e2c194326f019bc707c8a55f9d091ad2f740a1f4c338d8283c5",
+        "sameImageNativeSHA256": "824170cb5274205a83dd1eb9bf5043dbbfc5156fb7239161b545a0748ba1e178",
+        "sameImageExportSHA256": "de6396b122eae7194e3f8105ec48d05f365229eadb9ec8ef1f70315ef4dff4f9",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e06",
@@ -2186,10 +2312,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/bangui/job14-e06-bangui-l3-v01-43fa0b1f46c5.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva maniokkijauhosta ja kalasta.",
-        "lyhyt": "Havainnekuva maniokkijauhosta ja kalasta."
+        "selite": "Havainnekuva maniokkijauhosta ja kalasta."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -2197,10 +2323,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/bangui/job14-e06-bangui-l3-v01-43fa0b1f46c5.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva maniokkijauhosta ja kalasta.",
-        "lyhyt": "Havainnekuva maniokkijauhosta ja kalasta."
+        "selite": "Havainnekuva maniokkijauhosta ja kalasta."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -2214,10 +2340,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/bangui/sisalto.json",
-      "sourceContentSHA256": "c724bb2a9ad27bfe133e8e4d525c09d347cdb3c9f1649c6fa9cdcc15bb417a96",
+      "sourceContentSHA256": "7e72bbd835979e2c194326f019bc707c8a55f9d091ad2f740a1f4c338d8283c5",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "615f3e4e70aa3eafe4c33c8bee34ce7b2e8835aff9adcf6e4f20c602404b9cd5",
-        "semanticContextSHA256": "615f3e4e70aa3eafe4c33c8bee34ce7b2e8835aff9adcf6e4f20c602404b9cd5",
+        "targetBeforeSHA256": "ceac4fb7ab59c1626d018044f2b46d1061b93b231864b6e2ec6c970b082f5889",
+        "semanticContextSHA256": "ceac4fb7ab59c1626d018044f2b46d1061b93b231864b6e2ec6c970b082f5889",
         "subjectTitle": "Kala kohtaa tärkkelysjuuren",
         "targetState": "existing-target"
       },
@@ -2482,9 +2608,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -2503,17 +2629,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "c724bb2a9ad27bfe133e8e4d525c09d347cdb3c9f1649c6fa9cdcc15bb417a96",
-      "targetAfterSHA256": "615f3e4e70aa3eafe4c33c8bee34ce7b2e8835aff9adcf6e4f20c602404b9cd5",
-      "contextAfterSHA256": "615f3e4e70aa3eafe4c33c8bee34ce7b2e8835aff9adcf6e4f20c602404b9cd5",
+      "sourceContentAfterSHA256": "7e72bbd835979e2c194326f019bc707c8a55f9d091ad2f740a1f4c338d8283c5",
+      "targetAfterSHA256": "ceac4fb7ab59c1626d018044f2b46d1061b93b231864b6e2ec6c970b082f5889",
+      "contextAfterSHA256": "ceac4fb7ab59c1626d018044f2b46d1061b93b231864b6e2ec6c970b082f5889",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "c724bb2a9ad27bfe133e8e4d525c09d347cdb3c9f1649c6fa9cdcc15bb417a96",
+        "targetAfterSHA256": "615f3e4e70aa3eafe4c33c8bee34ce7b2e8835aff9adcf6e4f20c602404b9cd5",
+        "contextAfterSHA256": "615f3e4e70aa3eafe4c33c8bee34ce7b2e8835aff9adcf6e4f20c602404b9cd5",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "615f3e4e70aa3eafe4c33c8bee34ce7b2e8835aff9adcf6e4f20c602404b9cd5",
+          "semanticContextSHA256": "615f3e4e70aa3eafe4c33c8bee34ce7b2e8835aff9adcf6e4f20c602404b9cd5",
+          "subjectTitle": "Kala kohtaa tärkkelysjuuren",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "7e72bbd835979e2c194326f019bc707c8a55f9d091ad2f740a1f4c338d8283c5",
+        "sameImageNativeSHA256": "43fa0b1f46c59d898e1bb9c3fa0a6b8e45afbe0e5e4b84c3d7c913e1ee11d170",
+        "sameImageExportSHA256": "c36d44cf5a15d832aacd5fda0f0f2badb5fc82c744a475dc66757c7528deea6e",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e06",
@@ -2535,10 +2682,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/bangui/job14-e06-bangui-l4-v01-074f649e0716.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva inkivääristä ja alkoholittomasta juomasta.",
-        "lyhyt": "Havainnekuva inkivääristä ja alkoholittomasta juomasta."
+        "selite": "Havainnekuva inkivääristä ja alkoholittomasta juomasta."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -2546,10 +2693,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/bangui/job14-e06-bangui-l4-v01-074f649e0716.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva inkivääristä ja alkoholittomasta juomasta.",
-        "lyhyt": "Havainnekuva inkivääristä ja alkoholittomasta juomasta."
+        "selite": "Havainnekuva inkivääristä ja alkoholittomasta juomasta."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -2563,10 +2710,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/bangui/sisalto.json",
-      "sourceContentSHA256": "c724bb2a9ad27bfe133e8e4d525c09d347cdb3c9f1649c6fa9cdcc15bb417a96",
+      "sourceContentSHA256": "7e72bbd835979e2c194326f019bc707c8a55f9d091ad2f740a1f4c338d8283c5",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "55712ccb12511db8600b1169569c9197a13b9282a0e9638f6afbca24ea228407",
-        "semanticContextSHA256": "55712ccb12511db8600b1169569c9197a13b9282a0e9638f6afbca24ea228407",
+        "targetBeforeSHA256": "d0240d62d5aeb21cd49a55f49c0491d9f3b3e140f08cc56f882e646a5e5b2a0a",
+        "semanticContextSHA256": "d0240d62d5aeb21cd49a55f49c0491d9f3b3e140f08cc56f882e646a5e5b2a0a",
         "subjectTitle": "Inkiväärijuoma eri joukossa",
         "targetState": "existing-target"
       },
@@ -2891,9 +3038,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -2912,17 +3059,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "c724bb2a9ad27bfe133e8e4d525c09d347cdb3c9f1649c6fa9cdcc15bb417a96",
-      "targetAfterSHA256": "55712ccb12511db8600b1169569c9197a13b9282a0e9638f6afbca24ea228407",
-      "contextAfterSHA256": "55712ccb12511db8600b1169569c9197a13b9282a0e9638f6afbca24ea228407",
+      "sourceContentAfterSHA256": "7e72bbd835979e2c194326f019bc707c8a55f9d091ad2f740a1f4c338d8283c5",
+      "targetAfterSHA256": "d0240d62d5aeb21cd49a55f49c0491d9f3b3e140f08cc56f882e646a5e5b2a0a",
+      "contextAfterSHA256": "d0240d62d5aeb21cd49a55f49c0491d9f3b3e140f08cc56f882e646a5e5b2a0a",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "c724bb2a9ad27bfe133e8e4d525c09d347cdb3c9f1649c6fa9cdcc15bb417a96",
+        "targetAfterSHA256": "55712ccb12511db8600b1169569c9197a13b9282a0e9638f6afbca24ea228407",
+        "contextAfterSHA256": "55712ccb12511db8600b1169569c9197a13b9282a0e9638f6afbca24ea228407",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "55712ccb12511db8600b1169569c9197a13b9282a0e9638f6afbca24ea228407",
+          "semanticContextSHA256": "55712ccb12511db8600b1169569c9197a13b9282a0e9638f6afbca24ea228407",
+          "subjectTitle": "Inkiväärijuoma eri joukossa",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "7e72bbd835979e2c194326f019bc707c8a55f9d091ad2f740a1f4c338d8283c5",
+        "sameImageNativeSHA256": "074f649e0716846858a565d9d54b77e22fb94204803af32ba824011801873d5b",
+        "sameImageExportSHA256": "ac5ca885cc646528981f63c78a4b4855d8812329b856e9f18f977604dc6fbc35",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e06",
@@ -2944,10 +3112,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/bangui/job14-e06-bangui-traveler-v01-72036b5f7aaa.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva Banguin ruokakuvauksen raaka-aineista.",
-        "lyhyt": "Havainnekuva Banguin ruokakuvauksen raaka-aineista."
+        "selite": "Havainnekuva Banguin ruokakuvauksen raaka-aineista."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -2955,10 +3123,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/bangui/job14-e06-bangui-traveler-v01-72036b5f7aaa.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva Banguin ruokakuvauksen raaka-aineista.",
-        "lyhyt": "Havainnekuva Banguin ruokakuvauksen raaka-aineista."
+        "selite": "Havainnekuva Banguin ruokakuvauksen raaka-aineista."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -2972,10 +3140,10 @@
         1536
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/bangui/sisalto.json",
-      "sourceContentSHA256": "c724bb2a9ad27bfe133e8e4d525c09d347cdb3c9f1649c6fa9cdcc15bb417a96",
+      "sourceContentSHA256": "7e72bbd835979e2c194326f019bc707c8a55f9d091ad2f740a1f4c338d8283c5",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "c25e1c494cd7609eead3e9bb952e5462a92439378cce819ebe222b660478ba6f",
+        "semanticContextSHA256": "8531585211e0d11ec642863502021f75578a46fa1e09da59dd51c22d15afa6fd",
         "subjectTitle": "Matkailijalle",
         "targetState": "existing-target"
       },
@@ -3350,9 +3518,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -3371,17 +3539,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "c724bb2a9ad27bfe133e8e4d525c09d347cdb3c9f1649c6fa9cdcc15bb417a96",
+      "sourceContentAfterSHA256": "7e72bbd835979e2c194326f019bc707c8a55f9d091ad2f740a1f4c338d8283c5",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "c25e1c494cd7609eead3e9bb952e5462a92439378cce819ebe222b660478ba6f",
+      "contextAfterSHA256": "8531585211e0d11ec642863502021f75578a46fa1e09da59dd51c22d15afa6fd",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "c724bb2a9ad27bfe133e8e4d525c09d347cdb3c9f1649c6fa9cdcc15bb417a96",
+        "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "contextAfterSHA256": "c25e1c494cd7609eead3e9bb952e5462a92439378cce819ebe222b660478ba6f",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+          "semanticContextSHA256": "c25e1c494cd7609eead3e9bb952e5462a92439378cce819ebe222b660478ba6f",
+          "subjectTitle": "Matkailijalle",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "7e72bbd835979e2c194326f019bc707c8a55f9d091ad2f740a1f4c338d8283c5",
+        "sameImageNativeSHA256": "72036b5f7aaa71fbfd53ebd92a38904c38fef68bdd1d13817cbdaf3244823372",
+        "sameImageExportSHA256": "d9d69c40f78e5f98127f7097bd545c5b106beffacea624974c8ba77d8244a6cb",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e06",
@@ -3400,23 +3589,23 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e06/bangui/photo-5c1dd97d388c0f591c71.jpg",
         "suora": true,
         "lahde": "Imoini22, Commons (CC BY-SA 4.0)",
-        "selite": "Ubangi kuuluu Banguin jokimaisemaan.",
-        "lyhyt": "Ubangi kuuluu Banguin jokimaisemaan.",
+        "selite": "Zongon vihreä rantaviiva näkyy Ubangin yli Banguista kuvattuna vuonna 2022.",
+        "lyhyt": "Ubangin vastaranta Zongon puolella.",
         "tiedosto": "Berge Zongo vue de Bangui 02.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Imoini22, Commons (CC BY-SA 4.0)",
-        "selite": "Ubangi kuuluu Banguin jokimaisemaan.",
-        "lyhyt": "Ubangi kuuluu Banguin jokimaisemaan.",
+        "selite": "Zongon vihreä rantaviiva näkyy Ubangin yli Banguista kuvattuna vuonna 2022.",
+        "lyhyt": "Ubangin vastaranta Zongon puolella.",
         "tiedosto": "Berge Zongo vue de Bangui 02.jpg"
       },
       "runtimeMediaFieldPayload": {
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e06/bangui/photo-5c1dd97d388c0f591c71.jpg",
         "suora": true,
         "lahde": "Imoini22, Commons (CC BY-SA 4.0)",
-        "selite": "Ubangi kuuluu Banguin jokimaisemaan.",
-        "lyhyt": "Ubangi kuuluu Banguin jokimaisemaan.",
+        "selite": "Zongon vihreä rantaviiva näkyy Ubangin yli Banguista kuvattuna vuonna 2022.",
+        "lyhyt": "Ubangin vastaranta Zongon puolella.",
         "tiedosto": "Berge Zongo vue de Bangui 02.jpg"
       },
       "runtimeRemoveMediaKeys": [],
@@ -3431,10 +3620,10 @@
         3168
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/bangui/sisalto.json",
-      "sourceContentSHA256": "c724bb2a9ad27bfe133e8e4d525c09d347cdb3c9f1649c6fa9cdcc15bb417a96",
+      "sourceContentSHA256": "7e72bbd835979e2c194326f019bc707c8a55f9d091ad2f740a1f4c338d8283c5",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "ba204136ff02bdd677555a6a6d9218531d1dca52fca79906343a3b7ba0ae2e25",
-        "semanticContextSHA256": "ba204136ff02bdd677555a6a6d9218531d1dca52fca79906343a3b7ba0ae2e25",
+        "targetBeforeSHA256": "e8335b5a71a8c4ebfca3fb05f1cac37e897e72e0cdc64c317dd4b4f382bdae12",
+        "semanticContextSHA256": "e8335b5a71a8c4ebfca3fb05f1cac37e897e72e0cdc64c317dd4b4f382bdae12",
         "subjectTitle": "bangui — aito paikkavalokuva",
         "targetState": "existing-target"
       },
@@ -3582,9 +3771,9 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "Berge Zongo vue de Bangui 02.jpg",
-        "lahde": "Imoini22, Commons (CC BY-SA 4.0)",
-        "selite": "Ubangi kuuluu Banguin jokimaisemaan.",
-        "lyhyt": "Ubangi kuuluu Banguin jokimaisemaan."
+        "lyhyt": "Ubangin vastaranta Zongon puolella.",
+        "selite": "Zongon vihreä rantaviiva näkyy Ubangin yli Banguista kuvattuna vuonna 2022.",
+        "lahde": "Imoini22, Commons (CC BY-SA 4.0)"
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -3603,23 +3792,44 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Imoini22, Commons (CC BY-SA 4.0)",
-        "selite": "Ubangi kuuluu Banguin jokimaisemaan.",
-        "lyhyt": "Ubangi kuuluu Banguin jokimaisemaan.",
+        "selite": "Zongon vihreä rantaviiva näkyy Ubangin yli Banguista kuvattuna vuonna 2022.",
+        "lyhyt": "Ubangin vastaranta Zongon puolella.",
         "tiedosto": "Berge Zongo vue de Bangui 02.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "c724bb2a9ad27bfe133e8e4d525c09d347cdb3c9f1649c6fa9cdcc15bb417a96",
-      "targetAfterSHA256": "ba204136ff02bdd677555a6a6d9218531d1dca52fca79906343a3b7ba0ae2e25",
-      "contextAfterSHA256": "ba204136ff02bdd677555a6a6d9218531d1dca52fca79906343a3b7ba0ae2e25",
+      "sourceContentAfterSHA256": "7e72bbd835979e2c194326f019bc707c8a55f9d091ad2f740a1f4c338d8283c5",
+      "targetAfterSHA256": "e8335b5a71a8c4ebfca3fb05f1cac37e897e72e0cdc64c317dd4b4f382bdae12",
+      "contextAfterSHA256": "e8335b5a71a8c4ebfca3fb05f1cac37e897e72e0cdc64c317dd4b4f382bdae12",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "c724bb2a9ad27bfe133e8e4d525c09d347cdb3c9f1649c6fa9cdcc15bb417a96",
+        "targetAfterSHA256": "ba204136ff02bdd677555a6a6d9218531d1dca52fca79906343a3b7ba0ae2e25",
+        "contextAfterSHA256": "ba204136ff02bdd677555a6a6d9218531d1dca52fca79906343a3b7ba0ae2e25",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "ba204136ff02bdd677555a6a6d9218531d1dca52fca79906343a3b7ba0ae2e25",
+          "semanticContextSHA256": "ba204136ff02bdd677555a6a6d9218531d1dca52fca79906343a3b7ba0ae2e25",
+          "subjectTitle": "bangui — aito paikkavalokuva",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "7e72bbd835979e2c194326f019bc707c8a55f9d091ad2f740a1f4c338d8283c5",
+        "sameImageNativeSHA256": "5c1dd97d388c0f591c713966ef3ac871e6cc540dca2a0ec5a5bc9121efed462a",
+        "sameImageExportSHA256": "5c1dd97d388c0f591c713966ef3ac871e6cc540dca2a0ec5a5bc9121efed462a",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e06",
@@ -3641,23 +3851,23 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e06/bangui/c1-397691b090003525c4bd.jpg",
         "suora": true,
         "lahde": "NASA, Wikimedia Commons (PD)",
-        "selite": "Bangui sijaitsee Ubangin mutkan vieressä satelliittikuvassa.",
-        "lyhyt": "Bangui sijaitsee Ubangin mutkan vieressä satelliittikuvassa.",
+        "selite": "NASA World Wind -ohjelman näkymä Banguin seudulle ja Ubangin mutkaan.",
+        "lyhyt": "Banguin seutu NASA World Wind -näkymässä.",
         "tiedosto": "Bangui 18.45905E 4.41140N.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "NASA, Wikimedia Commons (PD)",
-        "selite": "Bangui sijaitsee Ubangin mutkan vieressä satelliittikuvassa.",
-        "lyhyt": "Bangui sijaitsee Ubangin mutkan vieressä satelliittikuvassa.",
+        "selite": "NASA World Wind -ohjelman näkymä Banguin seudulle ja Ubangin mutkaan.",
+        "lyhyt": "Banguin seutu NASA World Wind -näkymässä.",
         "tiedosto": "Bangui 18.45905E 4.41140N.jpg"
       },
       "runtimeMediaFieldPayload": {
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e06/bangui/c1-397691b090003525c4bd.jpg",
         "suora": true,
         "lahde": "NASA, Wikimedia Commons (PD)",
-        "selite": "Bangui sijaitsee Ubangin mutkan vieressä satelliittikuvassa.",
-        "lyhyt": "Bangui sijaitsee Ubangin mutkan vieressä satelliittikuvassa.",
+        "selite": "NASA World Wind -ohjelman näkymä Banguin seudulle ja Ubangin mutkaan.",
+        "lyhyt": "Banguin seutu NASA World Wind -näkymässä.",
         "tiedosto": "Bangui 18.45905E 4.41140N.jpg"
       },
       "runtimeRemoveMediaKeys": [],
@@ -3672,10 +3882,10 @@
         958
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/bangui/sisalto.json",
-      "sourceContentSHA256": "c724bb2a9ad27bfe133e8e4d525c09d347cdb3c9f1649c6fa9cdcc15bb417a96",
+      "sourceContentSHA256": "7e72bbd835979e2c194326f019bc707c8a55f9d091ad2f740a1f4c338d8283c5",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "62c1e4373f52b5b85aa47538f93a8b2deffbda37a77c9e254c2a1993d4783f15",
-        "semanticContextSHA256": "62c1e4373f52b5b85aa47538f93a8b2deffbda37a77c9e254c2a1993d4783f15",
+        "targetBeforeSHA256": "3f8ab543a098b36babb46031856108da9ee1e8133e14a054d6eb56decb0ff0b6",
+        "semanticContextSHA256": "3f8ab543a098b36babb46031856108da9ee1e8133e14a054d6eb56decb0ff0b6",
         "subjectTitle": "Bangui",
         "targetState": "existing-target"
       },
@@ -3859,9 +4069,9 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "Bangui 18.45905E 4.41140N.jpg",
-        "lahde": "NASA, Wikimedia Commons (PD)",
-        "selite": "Bangui sijaitsee Ubangin mutkan vieressä satelliittikuvassa.",
-        "lyhyt": "Bangui sijaitsee Ubangin mutkan vieressä satelliittikuvassa."
+        "lyhyt": "Banguin seutu NASA World Wind -näkymässä.",
+        "selite": "NASA World Wind -ohjelman näkymä Banguin seudulle ja Ubangin mutkaan.",
+        "lahde": "NASA, Wikimedia Commons (PD)"
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -3880,23 +4090,44 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "NASA, Wikimedia Commons (PD)",
-        "selite": "Bangui sijaitsee Ubangin mutkan vieressä satelliittikuvassa.",
-        "lyhyt": "Bangui sijaitsee Ubangin mutkan vieressä satelliittikuvassa.",
+        "selite": "NASA World Wind -ohjelman näkymä Banguin seudulle ja Ubangin mutkaan.",
+        "lyhyt": "Banguin seutu NASA World Wind -näkymässä.",
         "tiedosto": "Bangui 18.45905E 4.41140N.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "c724bb2a9ad27bfe133e8e4d525c09d347cdb3c9f1649c6fa9cdcc15bb417a96",
-      "targetAfterSHA256": "62c1e4373f52b5b85aa47538f93a8b2deffbda37a77c9e254c2a1993d4783f15",
-      "contextAfterSHA256": "62c1e4373f52b5b85aa47538f93a8b2deffbda37a77c9e254c2a1993d4783f15",
+      "sourceContentAfterSHA256": "7e72bbd835979e2c194326f019bc707c8a55f9d091ad2f740a1f4c338d8283c5",
+      "targetAfterSHA256": "3f8ab543a098b36babb46031856108da9ee1e8133e14a054d6eb56decb0ff0b6",
+      "contextAfterSHA256": "3f8ab543a098b36babb46031856108da9ee1e8133e14a054d6eb56decb0ff0b6",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "c724bb2a9ad27bfe133e8e4d525c09d347cdb3c9f1649c6fa9cdcc15bb417a96",
+        "targetAfterSHA256": "62c1e4373f52b5b85aa47538f93a8b2deffbda37a77c9e254c2a1993d4783f15",
+        "contextAfterSHA256": "62c1e4373f52b5b85aa47538f93a8b2deffbda37a77c9e254c2a1993d4783f15",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "62c1e4373f52b5b85aa47538f93a8b2deffbda37a77c9e254c2a1993d4783f15",
+          "semanticContextSHA256": "62c1e4373f52b5b85aa47538f93a8b2deffbda37a77c9e254c2a1993d4783f15",
+          "subjectTitle": "Bangui",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "7e72bbd835979e2c194326f019bc707c8a55f9d091ad2f740a1f4c338d8283c5",
+        "sameImageNativeSHA256": "397691b090003525c4bd67f701e885f5c6266e46fc6d1edbb13c91ef69e1316a",
+        "sameImageExportSHA256": "397691b090003525c4bd67f701e885f5c6266e46fc6d1edbb13c91ef69e1316a",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e06",
@@ -3918,23 +4149,23 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e06/bangui/c2-1cee539b11957394858e.jpg",
         "suora": true,
         "lahde": "NASA Astronauts, Wikimedia Commons (PD)",
-        "selite": "Bangui levittäytyy Ubangin mutkan pohjoispuolelle astronauttikuvassa.",
-        "lyhyt": "Bangui levittäytyy Ubangin mutkan pohjoispuolelle astronauttikuvassa.",
+        "selite": "Banguin kaupunkialue ja Ubangin jokimutka avaruudesta vuonna 2005.",
+        "lyhyt": "Bangui ja Ubangi astronautin kuvassa.",
         "tiedosto": "Bangui, Central African Republic.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "NASA Astronauts, Wikimedia Commons (PD)",
-        "selite": "Bangui levittäytyy Ubangin mutkan pohjoispuolelle astronauttikuvassa.",
-        "lyhyt": "Bangui levittäytyy Ubangin mutkan pohjoispuolelle astronauttikuvassa.",
+        "selite": "Banguin kaupunkialue ja Ubangin jokimutka avaruudesta vuonna 2005.",
+        "lyhyt": "Bangui ja Ubangi astronautin kuvassa.",
         "tiedosto": "Bangui, Central African Republic.jpg"
       },
       "runtimeMediaFieldPayload": {
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e06/bangui/c2-1cee539b11957394858e.jpg",
         "suora": true,
         "lahde": "NASA Astronauts, Wikimedia Commons (PD)",
-        "selite": "Bangui levittäytyy Ubangin mutkan pohjoispuolelle astronauttikuvassa.",
-        "lyhyt": "Bangui levittäytyy Ubangin mutkan pohjoispuolelle astronauttikuvassa.",
+        "selite": "Banguin kaupunkialue ja Ubangin jokimutka avaruudesta vuonna 2005.",
+        "lyhyt": "Bangui ja Ubangi astronautin kuvassa.",
         "tiedosto": "Bangui, Central African Republic.jpg"
       },
       "runtimeRemoveMediaKeys": [],
@@ -3949,10 +4180,10 @@
         1999
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/bangui/sisalto.json",
-      "sourceContentSHA256": "c724bb2a9ad27bfe133e8e4d525c09d347cdb3c9f1649c6fa9cdcc15bb417a96",
+      "sourceContentSHA256": "7e72bbd835979e2c194326f019bc707c8a55f9d091ad2f740a1f4c338d8283c5",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "4be611dd2055aad86e081289051f8dc9d5a3d92f24ed726f84f85badeb86a8e7",
-        "semanticContextSHA256": "4be611dd2055aad86e081289051f8dc9d5a3d92f24ed726f84f85badeb86a8e7",
+        "targetBeforeSHA256": "fc46b1a2b0705563849875ebaaae0056b579f002051655ab96918109b610f63b",
+        "semanticContextSHA256": "fc46b1a2b0705563849875ebaaae0056b579f002051655ab96918109b610f63b",
         "subjectTitle": "Bangui",
         "targetState": "existing-target"
       },
@@ -4130,9 +4361,9 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "Bangui, Central African Republic.jpg",
-        "lahde": "NASA Astronauts, Wikimedia Commons (PD)",
-        "selite": "Bangui levittäytyy Ubangin mutkan pohjoispuolelle astronauttikuvassa.",
-        "lyhyt": "Bangui levittäytyy Ubangin mutkan pohjoispuolelle astronauttikuvassa."
+        "lyhyt": "Bangui ja Ubangi astronautin kuvassa.",
+        "selite": "Banguin kaupunkialue ja Ubangin jokimutka avaruudesta vuonna 2005.",
+        "lahde": "NASA Astronauts, Wikimedia Commons (PD)"
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -4151,23 +4382,44 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "NASA Astronauts, Wikimedia Commons (PD)",
-        "selite": "Bangui levittäytyy Ubangin mutkan pohjoispuolelle astronauttikuvassa.",
-        "lyhyt": "Bangui levittäytyy Ubangin mutkan pohjoispuolelle astronauttikuvassa.",
+        "selite": "Banguin kaupunkialue ja Ubangin jokimutka avaruudesta vuonna 2005.",
+        "lyhyt": "Bangui ja Ubangi astronautin kuvassa.",
         "tiedosto": "Bangui, Central African Republic.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "c724bb2a9ad27bfe133e8e4d525c09d347cdb3c9f1649c6fa9cdcc15bb417a96",
-      "targetAfterSHA256": "4be611dd2055aad86e081289051f8dc9d5a3d92f24ed726f84f85badeb86a8e7",
-      "contextAfterSHA256": "4be611dd2055aad86e081289051f8dc9d5a3d92f24ed726f84f85badeb86a8e7",
+      "sourceContentAfterSHA256": "7e72bbd835979e2c194326f019bc707c8a55f9d091ad2f740a1f4c338d8283c5",
+      "targetAfterSHA256": "fc46b1a2b0705563849875ebaaae0056b579f002051655ab96918109b610f63b",
+      "contextAfterSHA256": "fc46b1a2b0705563849875ebaaae0056b579f002051655ab96918109b610f63b",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "c724bb2a9ad27bfe133e8e4d525c09d347cdb3c9f1649c6fa9cdcc15bb417a96",
+        "targetAfterSHA256": "4be611dd2055aad86e081289051f8dc9d5a3d92f24ed726f84f85badeb86a8e7",
+        "contextAfterSHA256": "4be611dd2055aad86e081289051f8dc9d5a3d92f24ed726f84f85badeb86a8e7",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "4be611dd2055aad86e081289051f8dc9d5a3d92f24ed726f84f85badeb86a8e7",
+          "semanticContextSHA256": "4be611dd2055aad86e081289051f8dc9d5a3d92f24ed726f84f85badeb86a8e7",
+          "subjectTitle": "Bangui",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "7e72bbd835979e2c194326f019bc707c8a55f9d091ad2f740a1f4c338d8283c5",
+        "sameImageNativeSHA256": "1cee539b11957394858ea7814b82228072854474e6d1bc87a46a6b83a17b7a0c",
+        "sameImageExportSHA256": "1cee539b11957394858ea7814b82228072854474e6d1bc87a46a6b83a17b7a0c",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e06",
@@ -4189,23 +4441,23 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e06/bangui/c3-79ed2edefdd5bd458991.jpg",
         "suora": true,
         "lahde": "SSgt Ryan Crane, Wikimedia Commons (PD)",
-        "selite": "Banguin lentokentän lähistön asutusta vuonna 2014.",
-        "lyhyt": "Banguin lentokentän lähistön asutusta vuonna 2014.",
+        "selite": "Banguin lentoaseman lähistön asutusta kuvattuna laskeutuvasta Yhdysvaltain ilmavoimien koneesta vuonna 2014.",
+        "lyhyt": "Asutusta Banguin M’Pokon lentoaseman lähistöllä.",
         "tiedosto": "A village in Bangui, Central African Republic, can be seen as a U.S. Air Force C-17 Globemaster III aircraft prepares to land at Bangui M'Poko International Airport Jan. 19, 2014 140119-F-RN211-543.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "SSgt Ryan Crane, Wikimedia Commons (PD)",
-        "selite": "Banguin lentokentän lähistön asutusta vuonna 2014.",
-        "lyhyt": "Banguin lentokentän lähistön asutusta vuonna 2014.",
+        "selite": "Banguin lentoaseman lähistön asutusta kuvattuna laskeutuvasta Yhdysvaltain ilmavoimien koneesta vuonna 2014.",
+        "lyhyt": "Asutusta Banguin M’Pokon lentoaseman lähistöllä.",
         "tiedosto": "A village in Bangui, Central African Republic, can be seen as a U.S. Air Force C-17 Globemaster III aircraft prepares to land at Bangui M'Poko International Airport Jan. 19, 2014 140119-F-RN211-543.jpg"
       },
       "runtimeMediaFieldPayload": {
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e06/bangui/c3-79ed2edefdd5bd458991.jpg",
         "suora": true,
         "lahde": "SSgt Ryan Crane, Wikimedia Commons (PD)",
-        "selite": "Banguin lentokentän lähistön asutusta vuonna 2014.",
-        "lyhyt": "Banguin lentokentän lähistön asutusta vuonna 2014.",
+        "selite": "Banguin lentoaseman lähistön asutusta kuvattuna laskeutuvasta Yhdysvaltain ilmavoimien koneesta vuonna 2014.",
+        "lyhyt": "Asutusta Banguin M’Pokon lentoaseman lähistöllä.",
         "tiedosto": "A village in Bangui, Central African Republic, can be seen as a U.S. Air Force C-17 Globemaster III aircraft prepares to land at Bangui M'Poko International Airport Jan. 19, 2014 140119-F-RN211-543.jpg"
       },
       "runtimeRemoveMediaKeys": [],
@@ -4220,10 +4472,10 @@
         4016
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/bangui/sisalto.json",
-      "sourceContentSHA256": "c724bb2a9ad27bfe133e8e4d525c09d347cdb3c9f1649c6fa9cdcc15bb417a96",
+      "sourceContentSHA256": "7e72bbd835979e2c194326f019bc707c8a55f9d091ad2f740a1f4c338d8283c5",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "346fb646ea1fc9e2d8d3fc46c2ebba308f1d002c02cb5e17ed1e63766ee656c0",
-        "semanticContextSHA256": "346fb646ea1fc9e2d8d3fc46c2ebba308f1d002c02cb5e17ed1e63766ee656c0",
+        "targetBeforeSHA256": "0e2fcfc1721b941cbc0904958103270aaa90a120699f0348653999211a09cc4d",
+        "semanticContextSHA256": "0e2fcfc1721b941cbc0904958103270aaa90a120699f0348653999211a09cc4d",
         "subjectTitle": "Bangui",
         "targetState": "existing-target"
       },
@@ -4403,9 +4655,9 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "A village in Bangui, Central African Republic, can be seen as a U.S. Air Force C-17 Globemaster III aircraft prepares to land at Bangui M'Poko International Airport Jan. 19, 2014 140119-F-RN211-543.jpg",
-        "lahde": "SSgt Ryan Crane, Wikimedia Commons (PD)",
-        "selite": "Banguin lentokentän lähistön asutusta vuonna 2014.",
-        "lyhyt": "Banguin lentokentän lähistön asutusta vuonna 2014."
+        "lyhyt": "Asutusta Banguin M’Pokon lentoaseman lähistöllä.",
+        "selite": "Banguin lentoaseman lähistön asutusta kuvattuna laskeutuvasta Yhdysvaltain ilmavoimien koneesta vuonna 2014.",
+        "lahde": "SSgt Ryan Crane, Wikimedia Commons (PD)"
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -4424,28 +4676,55 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "SSgt Ryan Crane, Wikimedia Commons (PD)",
-        "selite": "Banguin lentokentän lähistön asutusta vuonna 2014.",
-        "lyhyt": "Banguin lentokentän lähistön asutusta vuonna 2014.",
+        "selite": "Banguin lentoaseman lähistön asutusta kuvattuna laskeutuvasta Yhdysvaltain ilmavoimien koneesta vuonna 2014.",
+        "lyhyt": "Asutusta Banguin M’Pokon lentoaseman lähistöllä.",
         "tiedosto": "A village in Bangui, Central African Republic, can be seen as a U.S. Air Force C-17 Globemaster III aircraft prepares to land at Bangui M'Poko International Airport Jan. 19, 2014 140119-F-RN211-543.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "c724bb2a9ad27bfe133e8e4d525c09d347cdb3c9f1649c6fa9cdcc15bb417a96",
-      "targetAfterSHA256": "346fb646ea1fc9e2d8d3fc46c2ebba308f1d002c02cb5e17ed1e63766ee656c0",
-      "contextAfterSHA256": "346fb646ea1fc9e2d8d3fc46c2ebba308f1d002c02cb5e17ed1e63766ee656c0",
+      "sourceContentAfterSHA256": "7e72bbd835979e2c194326f019bc707c8a55f9d091ad2f740a1f4c338d8283c5",
+      "targetAfterSHA256": "0e2fcfc1721b941cbc0904958103270aaa90a120699f0348653999211a09cc4d",
+      "contextAfterSHA256": "0e2fcfc1721b941cbc0904958103270aaa90a120699f0348653999211a09cc4d",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "c724bb2a9ad27bfe133e8e4d525c09d347cdb3c9f1649c6fa9cdcc15bb417a96",
+        "targetAfterSHA256": "346fb646ea1fc9e2d8d3fc46c2ebba308f1d002c02cb5e17ed1e63766ee656c0",
+        "contextAfterSHA256": "346fb646ea1fc9e2d8d3fc46c2ebba308f1d002c02cb5e17ed1e63766ee656c0",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "346fb646ea1fc9e2d8d3fc46c2ebba308f1d002c02cb5e17ed1e63766ee656c0",
+          "semanticContextSHA256": "346fb646ea1fc9e2d8d3fc46c2ebba308f1d002c02cb5e17ed1e63766ee656c0",
+          "subjectTitle": "Bangui",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "7e72bbd835979e2c194326f019bc707c8a55f9d091ad2f740a1f4c338d8283c5",
+        "sameImageNativeSHA256": "79ed2edefdd5bd4589913512878b60eab658f1f3ef287981023f9a328ff09731",
+        "sameImageExportSHA256": "79ed2edefdd5bd4589913512878b60eab658f1f3ef287981023f9a328ff09731",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     }
   ],
   "runtimeIntegrationPending": true,
   "ownerAcceptedNotImpliedByAuthorization": false,
   "gameIntegrated": false,
   "allAssetsExplicitlyOwnerApproved": true,
-  "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+  "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+  "task118ExcludedAssets": [],
+  "task118TextRevision": true,
+  "independentTextResamplePending": true,
+  "textAcceptanceVerified": false,
+  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task118/immutable-media-history/e06/bangui/c457c5a73567edde6e345702710c78be7a3863f4171f5c0d68184eeda1bd688a.json",
+  "task118ReboundAt": "2026-10-13T16:31:24.824844+00:00"
 }

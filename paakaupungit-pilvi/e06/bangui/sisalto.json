@@ -15,7 +15,7 @@
   },
   "artikkeli": {
     "intro": "Bangui sijaitsee **Ubangi-joen pohjoisrannalla**, kahden valtion rajalla. Keski-Afrikan tasavallan pääkaupungin vastarannalla on Kongon demokraattisen tasavallan Zongo. Kaupungin yläpuoliset kosket rajoittavat suurten alusten kulkua, mutta alavirtaan joki liittyy Kongon laajaan vesiverkkoon. Rantakeskustan leveät kadut johtavat keskusmarkkinapaikalle.\n\nNykyinen kaupunki syntyi ranskalaisena asemana **vuonna 1889**, joten sitä ei vielä ollut isoisän matkavuonna 1873. Ympäristön historia on paljon kaupungin katuverkkoa vanhempi: arkeologiset löydöt kertovat aikaisemmasta raudanvalmistuksesta. Kuona, saviastiat ja puhallusputkien jäänteet tuovat näkyviin paikallista työtä ja osaamista. Ruoka-arjessa puolestaan kohtaavat maniokki, kasvikset, kastikkeet ja kala, joten jokikaupungin tarinaa voi lähestyä sekä maan alta että ruokapöydästä.",
-    "teksti": "Ubangi yhdistää Banguin laajempaan jokiverkkoon ja erottaa sen samalla vastarannan valtiosta. Kaupungin kohdalla joen pohjoispuoli kuuluu Keski-Afrikan tasavaltaan, eteläpuoli Kongon demokraattiseen tasavaltaan. Kaupungin yläpuoliset kosket ovat suurten alusten kululle maantieteellinen raja.\n\nBanguin ympäristön metallurgisilla paikoilla on säilynyt kuonaa, puhallusputkien katkelmia, saviastioita ja metalliesineitä. Jäänteet kertovat raudanvalmistuksen eri työvaiheista. Nykykaupungin perustamisvuosi ei siten ajoita koko alueen ihmisten historiaa.\n\nVanha rantakeskusta yhdistyy markkinapaikkoihin leveiden katujen kautta. Kauppa näkyy myös käyttöesineiden käsityössä: koreissa, matoissa, puisissa tavaroissa ja keramiikassa. Pääkaupunki kokoaa hallinnon, palvelut ja kaupankäynnin samaan joenrannan kaupunkiympäristöön."
+    "teksti": "Ubangi yhdistää Banguin laajempaan jokiverkkoon ja erottaa sen samalla vastarannan valtiosta. Kaupungin kohdalla joen pohjoispuoli kuuluu Keski-Afrikan tasavaltaan, eteläpuoli Kongon demokraattiseen tasavaltaan. Kaupungin yläpuoliset kosket ovat suurten alusten kululle maantieteellinen raja.\n\nBanguin ympäristön metallurgisilla paikoilla on säilynyt kuonaa, puhallusputkien katkelmia, saviastioita ja metalliesineitä. Jäänteet kertovat raudanvalmistuksen eri työvaiheista. Pendèrè-Senguèn raudanvalmistuspaikka on lähellä nykyisen kaupungin Independence Avenue -katua.\n\nVanha rantakeskusta yhdistyy markkinapaikkoihin leveiden katujen kautta. Kauppa näkyy myös käyttöesineiden käsityössä: koreissa, matoissa, puisissa tavaroissa ja keramiikassa. Kaupungissa valmistetaan myös tekstiilejä, elintarvikkeita, kenkiä ja saippuaa."
   },
   "kysymykset": [
     {
@@ -28,7 +28,7 @@
       ],
       "correct": 0,
       "level": 1,
-      "hint": "Maan nimi viittaa sijaintiin Afrikan keskiosissa.",
+      "hint": "Kaupunki on Ubangin varrella sisämaassa.",
       "fact": "Bangui on Keski-Afrikan tasavallan pääkaupunki.",
       "source": "https://en.wikipedia.org/wiki/Bangui"
     },
@@ -78,9 +78,9 @@
       "q": "Mikä rajoittaa suurten alusten kulkua Banguin yläpuolella?",
       "options": [
         "Joen kosket",
-        "Meren vuorovesi",
-        "Jokilaakson jäätikkö",
-        "Joen suolapitoisuus"
+        "Matalat hiekkasärkät",
+        "Kapea jokiuoma",
+        "Vedenpinnan vuodenaikainen lasku"
       ],
       "correct": 0,
       "level": 3,
@@ -96,39 +96,39 @@
   ],
   "valokuva": {
     "tiedosto": "Berge Zongo vue de Bangui 02.jpg",
-    "lyhyt": "Ubangi kuuluu Banguin jokimaisemaan.",
-    "selite": "Ubangi kuuluu Banguin jokimaisemaan.",
+    "lyhyt": "Ubangin vastaranta Zongon puolella.",
+    "selite": "Zongon vihreä rantaviiva näkyy Ubangin yli Banguista kuvattuna vuonna 2022.",
     "lahde": "Imoini22, Commons (CC BY-SA 4.0)"
   },
   "kaupunkilehti": [
     {
       "id": "kaupunki",
       "nimi": "Bangui",
-      "johdanto": "Koskien jokikaupunki on nuorempi kuin ympäristön raudanvalmistuksen historia.",
+      "johdanto": "Ubangi ja sen kosket määrittävät Banguin jokisijaintia. Vanha raudanvalmistus ja kaupungin käsityökauppa kertovat paikallisesta osaamisesta eri aikoina.",
       "kansikuvat": [
         {
           "tiedosto": "Bangui 18.45905E 4.41140N.jpg",
-          "lyhyt": "Bangui sijaitsee Ubangin mutkan vieressä satelliittikuvassa.",
-          "selite": "Bangui sijaitsee Ubangin mutkan vieressä satelliittikuvassa.",
+          "lyhyt": "Banguin seutu NASA World Wind -näkymässä.",
+          "selite": "NASA World Wind -ohjelman näkymä Banguin seudulle ja Ubangin mutkaan.",
           "lahde": "NASA, Wikimedia Commons (PD)"
         },
         {
           "tiedosto": "Bangui, Central African Republic.jpg",
-          "lyhyt": "Bangui levittäytyy Ubangin mutkan pohjoispuolelle astronauttikuvassa.",
-          "selite": "Bangui levittäytyy Ubangin mutkan pohjoispuolelle astronauttikuvassa.",
+          "lyhyt": "Bangui ja Ubangi astronautin kuvassa.",
+          "selite": "Banguin kaupunkialue ja Ubangin jokimutka avaruudesta vuonna 2005.",
           "lahde": "NASA Astronauts, Wikimedia Commons (PD)"
         },
         {
           "tiedosto": "A village in Bangui, Central African Republic, can be seen as a U.S. Air Force C-17 Globemaster III aircraft prepares to land at Bangui M'Poko International Airport Jan. 19, 2014 140119-F-RN211-543.jpg",
-          "lyhyt": "Banguin lentokentän lähistön asutusta vuonna 2014.",
-          "selite": "Banguin lentokentän lähistön asutusta vuonna 2014.",
+          "lyhyt": "Asutusta Banguin M’Pokon lentoaseman lähistöllä.",
+          "selite": "Banguin lentoaseman lähistön asutusta kuvattuna laskeutuvasta Yhdysvaltain ilmavoimien koneesta vuonna 2014.",
           "lahde": "SSgt Ryan Crane, Wikimedia Commons (PD)"
         }
       ],
       "nostot": [
         {
           "otsikko": "Raudan jäljet ovat kaupunkia vanhempia",
-          "teksti": "Banguin ympäristössä arkeologia kertoo ajasta ennen nykyistä kaupunkia. Metallurgisilla paikoilla, kuten Pendèrè-Senguèssä, on löytynyt kuonaa, puhallusputkien katkelmia, saviastioiden sirpaleita ja metalliesineitä. Jäänteet liittyvät raudanvalmistuksen eri vaiheisiin. Paikallinen ACSAPS-yhdistys on tehnyt työtä tämän perinnön säilyttämiseksi. Kun nykykaupungin historia alkaa 1800-luvun lopun asemasta, maasta löytyvät työn jäljet avaavat sitä vanhemman paikallisen aikakerroksen.",
+          "teksti": "Banguin ympäristössä arkeologia kertoo ajasta ennen nykyistä kaupunkia. Metallurgisilla paikoilla, kuten Pendèrè-Senguèssä, on löytynyt kuonaa, puhallusputkien katkelmia, saviastioiden sirpaleita ja metalliesineitä. Jäänteet liittyvät raudanvalmistuksen eri vaiheisiin. Paikallinen arkeologisen ja paleontologisen perinnön suojeluyhdistys ACSAPS on tehnyt työtä tämän perinnön säilyttämiseksi. Kun nykykaupungin historia alkaa 1800-luvun lopun asemasta, maasta löytyvät työn jäljet avaavat sitä vanhemman paikallisen aikakerroksen.",
           "tiedosto": "",
           "lyhyt": "",
           "selite": "",
@@ -137,7 +137,7 @@
         },
         {
           "otsikko": "Suuri laiva kohtaa kosket",
-          "teksti": "Bangui sijaitsee Ubangin pohjoisrannalla, ja kaupungin yläpuoliset kosket rajoittavat suurten alusten etenemistä. Alavirtaan Ubangi liittyy Kongo-jokeen, ja vesireitti yhdistää kaupungin Brazzavillen suuntaan. Sama joki on myös valtioiden raja: vastarannan Zongo kuuluu Kongon demokraattiseen tasavaltaan. Joella on siis kaksi samanaikaista roolia, yhteys ja raja. Koskien sijainti kertoo lisäksi, miksi jokiliikenteen reittiä ei voi ajatella kaikkialla samanlaisena vapaana vesiväylänä.",
+          "teksti": "Bangui sijaitsee Ubangin pohjoisrannalla, ja kaupungin yläpuoliset kosket rajoittavat suurten alusten etenemistä. Alavirtaan Ubangi liittyy Kongo-jokeen, ja vesireitti yhdistää kaupungin Brazzavillen suuntaan. Sama joki on myös valtioiden raja: vastarannan Zongo kuuluu Kongon demokraattiseen tasavaltaan. Joella on siis kaksi samanaikaista roolia, yhteys ja raja. Ranskalainen asema perustettiin tänne 1800-luvun lopulla juuri kohtaan, johon Brazzavillestä nouseva laivaliikenne päättyi.",
           "tiedosto": "",
           "lyhyt": "",
           "selite": "",
@@ -146,7 +146,7 @@
         },
         {
           "otsikko": "Bulevardien päässä on kauppa",
-          "teksti": "Banguin vanhassa, joen lähellä sijaitsevassa keskustassa leveät bulevardit johtavat keskusmarkkinapaikalle. Siirtomaa-ajan katujäsennys on osa nykyisen kaupungin rakennetta, mutta kaupankäynti ei rajoitu yhteen keskustan paikkaan: markkinoita on myös pohjoisempana. Pääkaupunki kokoaa hallinnon, palvelut ja kaupan samaan kaupunkiympäristöön. Markkinapaikka auttaa siten lukemaan katuverkkoa käytön kautta. Kadut eivät ole vain viivoja, vaan yhteyksiä kaupungin arkisiin asiointipaikkoihin.",
+          "teksti": "Banguin joenrannan vanhassa keskustassa leveät bulevardit johtavat keskusmarkkinapaikalle. Markkinoita on myös pohjoisempana, joten kaupungin kauppa ulottuu useisiin kortteleihin. Myyntiin saapuu käsitöitä ja paikallisia tuotteita. Bangui valmistaa myös tekstiilejä, elintarvikkeita, olutta, kenkiä ja saippuaa. Kaupan rinnalla näkyy siten monenlaista tuotantoa: raaka-aineita jalostetaan kaupungissa, ja valmiita tavaroita kuljetetaan markkinoille sekä ympäröivän seudun ostajille.",
           "tiedosto": "",
           "lyhyt": "",
           "selite": "",
@@ -155,7 +155,7 @@
         },
         {
           "otsikko": "Käyttöesine kertoo tekijän taidosta",
-          "teksti": "Banguin käsityömarkkinoiden tavaroihin kuuluu koreja, mattoja, puisia käyttöesineitä, saviastioita ja soittimia. Eri alueilta tulevat tuotteet kokoontuvat samaan kauppakaupunkiin. Käsityötä voi lähestyä näiden arkisten esineryhmien kautta: säilyttämiseen, ruokaan tai musiikkiin liittyvä tavara on myös tekijän osaamista. Esineen käyttö ja sen valmistus kuuluvat yhteen. Kaupungin kulttuuri näkyy näin muuallakin kuin suurissa rakennuksissa, myös tavaroissa, joita ihmiset tekevät ja käyttävät.",
+          "teksti": "Banguin käsityömarkkinoilla myydään koreja, mattoja, puisia käyttöesineitä, saviastioita ja soittimia. Tuotteita tuodaan kaupunkiin eri puolilta maata. Niiden käyttötarkoitukset näkyvät materiaalissa ja muodossa: savi muovataan astiaksi, puusta tehdään käyttöesineitä ja punottu kuitu taipuu koriksi tai matoksi. Kaupungin museokokoelmissa on myös soittimia ja keramiikkaa. Samat esineryhmät kuuluvat siten sekä päivittäiseen kaupankäyntiin että paikallisen kulttuuriperinnön säilyttämiseen.",
           "tiedosto": "",
           "lyhyt": "",
           "selite": "",
@@ -170,16 +170,16 @@
           "selite": "",
           "lahde": ""
         },
-        "kappale": "Banguihin matkustamista kannattaa tällä hetkellä välttää, ellei matka ole välttämätön. Kaupungin historiaa voi tutkia joen maantieteen, arkeologian ja vanhan keskustan kautta. Boganda-museon kokoelmia ei pidä tulkita nykyiseksi käyntilupaukseksi. Boalin putoukset ovat erillinen, kaukana kaupungista sijaitseva paikka. Matkan suunnittelussa nämä kohdekuvaukset eivät korvaa nykyisiä käytännön järjestelyjä.",
+        "kappale": "Banguin vanha keskusta sijaitsee Ubangin lähellä. Leveät bulevardit johtavat keskusmarkkinapaikalle. Vastapäinen Zongo on Kongon demokraattisessa tasavallassa. Kaupungin ympäristön raudanvalmistusjäänteet, käsityöt ja ruokaperinne avaavat paikallista historiaa eri suunnista.",
         "artikkeli": {
           "nimi": "Matkailijan Bangui",
           "taitto": "opas",
-          "teksti": "Tutustu Banguin jokisijaintiin ja kulttuuriin matkan nykyiset rajoitukset huomioiden.",
-          "nosto": "Kaupunki on kiinnostava historian kohde, mutta muuta kuin välttämätöntä matkustamista kannattaa välttää.",
+          "teksti": "Ubangi, kauppapaikat ja arkeologiset löydöt avaavat Banguin historiaa.",
+          "nosto": "Kaupungin jokirannalla ranskalaisen aseman historia kohtaa paljon vanhemman paikallisen työn.",
           "jaksot": [
             {
               "otsikko": "Perille",
-              "teksti": "Banguin M’Pokon kansainvälisen lentoaseman koodi on BGF. Kaupungin jokisatama liittyy alueen kuljetusverkkoon. Banguihin matkustamista kannattaa välttää, ellei matka ole välttämätön; tämä koskee myös lentoasemalle saapumista.",
+              "teksti": "Banguin M’Pokon kansainvälisen lentoaseman tunnus on BGF. Ubangin jokisatama yhdistää kaupungin jokikuljetuksiin, ja maanteillä liikennöi busseja sekä takseja.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -189,7 +189,7 @@
             },
             {
               "otsikko": "Rantakeskustan rakenne",
-              "teksti": "Ubangi rajaa keskustaa etelän puolella, ja leveät bulevardit liittyvät vanhaan markkinapaikkaan. Yläpuoliset kosket ja vastarannan Zongo ovat osa kaupungin maantieteellistä kehystä. Paikkojen kuvaaminen historiana ei tarkoita lupausta turvallisesta nykykierroksesta.",
+              "teksti": "Leveät bulevardit yhdistävät joenrannan vanhan keskustan markkinapaikkaan. Banguin yläpuoliset kosket rajoittavat suuria aluksia, kun taas alavirtaan vesireitti jatkuu Brazzavillen suuntaan.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -199,7 +199,7 @@
             },
             {
               "otsikko": "Raudanvalmistus ja museo",
-              "teksti": "Metallurgiset jäänteet kertovat Banguin ympäristön kaupunkia vanhemmasta historiasta. Boganda-museon kokoelmissa on arkeologiaa, etnografiaa, luonnonhistoriaa, soittimia ja keramiikkaa. Museota kuvataan suljetuksi, joten sille ei voi suunnitella varmaa yleisökäyntiä.",
+              "teksti": "Pendèrè-Senguèn arkeologiselta paikalta on löydetty raudanvalmistuksen jäänteitä. Boganda-museon kokoelmiin kuuluu arkeologiaa, etnografiaa, luonnonhistoriaa, soittimia ja keramiikkaa.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -209,7 +209,7 @@
             },
             {
               "otsikko": "Ruoka kaupungissa",
-              "teksti": "Maniokki, riisi, kurpitsat ja keittobanaanit kuuluvat kaupungin ruokakuvaukseen. Kastikkeissa esiintyy okraa ja maapähkinää; maboké ja soussou ovat kalaruokia. Näiden nimien kautta voi tutustua ruokaperinteeseen ilman vanhoihin ravintolaluetteloihin tai hintoihin nojaavaa käyntisuunnitelmaa.",
+              "teksti": "Maniokki, riisi, kurpitsat ja keittobanaanit kuuluvat Banguin keittiöön. Kastikkeissa käytetään okraa ja maapähkinöitä. Maboké ja soussou ovat kalaruokia; maniokkijauhosta valmistetaan fufua.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -218,8 +218,8 @@
               }
             },
             {
-              "otsikko": "Matkustamisen rajat",
-              "teksti": "Banguihin kannattaa matkustaa vain välttämättömästä syystä. Kaupungin ulkopuolista Boalin putousretkeä ei pidä liittää tähän suunnitelmaan tavallisena matkailukierroksena. Kaupungin historiallisia aiheita ja ruokakulttuuria voi tutkia myös ilman matkustamista.",
+              "otsikko": "Vastarannan Zongo",
+              "teksti": "Bangui sijaitsee Ubangin pohjoisrannalla. Vastarannan Zongo kuuluu Kongon demokraattiseen tasavaltaan. Joki yhdistää kuljetusreittejä ja muodostaa samalla kahden valtion välisen rajan.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -232,12 +232,12 @@
             "parasta": [],
             "hyvaTietaa": [
               {
-                "otsikko": "Nykyinen matkustusrajoitus",
-                "teksti": "Muuta kuin välttämätöntä matkustamista Banguihin kannattaa välttää."
+                "otsikko": "Ennen matkapäätöstä",
+                "teksti": "Tarkista Keski-Afrikan tasavallan ajantasainen matkustustiedote Suomen ulkoministeriöstä ja noudata sen ohjeita."
               },
               {
-                "otsikko": "Museokäynti ei ole varma",
-                "teksti": "Boganda-museota kuvataan suljetuksi."
+                "otsikko": "Museon kokoelmat",
+                "teksti": "Sovi museovierailusta ylläpitäjän kanssa; kokoelmatieto ei ole aukioloaika."
               },
               {
                 "otsikko": "Vastaranta on eri valtio",
@@ -249,7 +249,7 @@
               }
             ]
           },
-          "lahde": "Wikipedia"
+          "lahde": "Wikipedia; Wikivoyage"
         }
       }
     },
@@ -261,9 +261,9 @@
         "kysymys": "Mitä jauhoa Banguin fufun valmistukseen käytetään?",
         "vaihtoehdot": [
           "Maniokkijauhoa",
-          "Maissijauhoa",
+          "Hirssijauhoa",
           "Riisijauhoa",
-          "Vehnäjauhoa"
+          "Maapähkinäjauhoa"
         ],
         "oikea": 0,
         "fakta": "Banguin ruokakuvauksessa fufun pohjana on tärkkelysjuuresta saatu jauho."
@@ -271,7 +271,7 @@
       "nostot": [
         {
           "otsikko": "Aterian perusta voi vaihtua",
-          "teksti": "Banguin perusruokien joukossa mainitaan maniokki, riisi, kurpitsat ja keittobanaanit. Niitä tarjoillaan kastikkeiden kanssa, mutta luettelo ei tarkoita, että kaikki kuuluisivat aina samaan annokseen. Kaupungin ruokapöytää onkin parempi ajatella erilaisten ainesten yhdistelminä kuin yhtenä muuttumattomana ateriana. Maniokki antaa yhden tärkkelyspohjan, riisi toisen; kurpitsa ja keittobanaani tuovat oman osansa. Samassa kaupungissa ruokaperinne sisältää useita tapoja rakentaa ateria.",
+          "teksti": "Banguin perusruokiin kuuluvat maniokki, riisi, kurpitsat ja keittobanaanit. Niitä syödään kastikkeiden kanssa, ja ateriaan voidaan liittää grillattua lihaa. Maniokkijauhosta valmistetaan paikallista fufua eli foufouta. Riisi ja maniokki ovat erilaisia aterian pohjia, kun taas vihannekset ja kastikkeet täydentävät annosta. Kaupungin keittiö yhdistää jokivarren kalaa ja viljeltyjä kasveja: ruokakulttuuri näkyy sekä pelloilta tulevissa aineksissa että Ubangin rannoilla harjoitetussa kalastuksessa.",
           "tiedosto": "",
           "lyhyt": "",
           "selite": "",
@@ -280,7 +280,7 @@
         },
         {
           "otsikko": "Okra ja maapähkinä kastikkeessa",
-          "teksti": "Okra, jota kutsutaan myös gomboksi, kuuluu Banguissa käytettyihin vihanneksiin. Ruokaan käytetään myös maapähkinöitä ja maapähkinätahnaa, ja kastikkeet ovat osa kaupungin perusruokien kuvausta. Rinnalla mainitaan grillattua lihaa. Tämä kertoo aineksista ja annosten osista, ei yhdestä kaikkia sitovasta reseptistä. Kastikkeen rinnalla oleva pohjaruoka ja sen lisukkeet voivat vaihtua. Kaupungin ruokaperinnettä ei siksi kannata typistää vain yhteen nimettyyn kansallisannokseen.",
+          "teksti": "Okra eli gombo on Banguissa käytetty vihannes. Maapähkinät ja maapähkinätahna kuuluvat myös keittiön aineksiin, ja kastikkeet tarjotaan perusruokien, kuten riisin tai maniokin, kanssa. Grillattu liha on yksi aterioiden lisukkeista. Kaupungin ruokakuvauksissa esiintyvät lisäksi kurpitsat ja keittobanaanit. Lautasella viljelykasvit kohtaavat näin kastikkeen ja lisukkeet; samoja aineksia voidaan tarjota useina yhdistelminä. Maniokkijauhosta tehdään fufua, joka kuuluu tämän ruokaperinteen tärkkelyspohjiin.",
           "tiedosto": "",
           "lyhyt": "",
           "selite": "",
@@ -289,7 +289,7 @@
         },
         {
           "otsikko": "Kala kohtaa tärkkelysjuuren",
-          "teksti": "Maboké ja soussou ovat Banguin ruokakuvauksessa mainittuja kalaan perustuvia ruokia. Niiden rinnalla esiintyy fufu, jonka paikalliseen valmistukseen käytetään maniokkijauhoa. Maniokki on kasvi, jonka syötävä varastojuuri sisältää runsaasti tärkkelystä. Keski-Afrikan tasavallassa laajasta fufu-ruokaperheestä käytetään myös nimimuotoa foufou. Kala ja jauhosta tehty aterian osa ovat eri asioita, jotka voivat kohdata ruokapöydässä; muiden maiden fufu-reseptejä ei tarvitse siirtää tämän kaupungin annoksiksi.",
+          "teksti": "Maboké ja soussou ovat Banguin ruokakuvauksessa mainittuja kalaan perustuvia ruokia. Niiden rinnalla esiintyy fufu, jonka paikalliseen valmistukseen käytetään maniokkijauhoa. Maniokki on kasvi, jonka syötävä varastojuuri sisältää runsaasti tärkkelystä. Keski-Afrikan tasavallassa laajasta fufu-ruokaperheestä käytetään myös nimimuotoa foufou. Kalaruoka ja maniokista valmistettu pohja yhdistävät aterialla jokiveden saaliin ja viljelykasvin. Okra- ja maapähkinäkastikkeet ovat muita Banguin keittiön aineksia.",
           "tiedosto": "",
           "lyhyt": "",
           "selite": "",
@@ -297,8 +297,8 @@
           "wiki": "Bangui"
         },
         {
-          "otsikko": "Inkiväärijuoma eri joukossa",
-          "teksti": "Banguin juomaperinteeseen liittyvissä nimissä mainitaan paikallinen olut, palmuviini ja banaaniviini. Samassa kuvauksessa esiintyy myös alkoholiton ginger beer eli inkiväärijuoma. Englanninkielisen nimen beer-sana ei siis tässä tarkoita samaa kuin alkoholillinen olut. Nimet näyttävät, miten erilaisia juomatyyppejä kaupungin ruokakuvaukseen mahtuu. Niiden mainitseminen kertoo ruokakulttuurista; se ei tee alkoholijuomista matkailijan suosituksia tai yhteistä tapaa kaikille asukkaille.",
+          "otsikko": "Inkivääristä tehdään limonadia",
+          "teksti": "Banguin juomakulttuuriin kuuluu alkoholiton inkiväärilimonadi. Englanniksi juomaa kutsutaan ginger beeriksi, vaikka tässä nimessä beer ei tarkoita alkoholillista olutta. Paikallisen oluen rinnalla tunnetaan myös palmuviiniä ja banaaniviiniä. Juomien raaka-aineet ja valmistustavat ovat erilaisia: inkiväärijuoma kuuluu alkoholittomiin vaihtoehtoihin, kun taas viinien nimet liittyvät palmuun ja banaaniin. Banguin ruokaperinteessä aterioiden rinnalla on siis useita juomatyyppejä.",
           "tiedosto": "",
           "lyhyt": "",
           "selite": "",

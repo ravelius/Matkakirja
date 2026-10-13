@@ -14,8 +14,8 @@
     }
   },
   "artikkeli": {
-    "intro": "Kinshasa kasvaa **Kongo-joen etelärannalla**, vastapäätä toiseen valtioon kuuluvaa Brazzavilleä. Kongon demokraattisen tasavallan pääkaupunki on myös hallinnollinen maakunta. Sen alueella tiivis kaupunki vaihtuu paikoin maaseuduksi, joten keskustaa ja koko hallintoaluetta ei voi mitata samalla rajauksella. Joenrannan tasangon takana maasto muuttuu etelässä ja lännessä mäkiseksi.\n\nKinshasan historia alkoi ennen sen siirtomaanimeä Léopoldville. Isoisän matkavuonna 1873 alueella oli Teke- ja Humbu-yhteisöjä sekä paikallisia kalastus- ja kauppapaikkoja; myöhempi kauppa-asema syntyi 1800-luvun lopulla. Nykyinen nimi palauttaa mieleen vanhan Nshasa-paikannimen. Suurkaupungin keskellä toimii **kasvitieteellinen puutarha**, kun taas etelän metsäisellä retkialueella bonobojen suojelutyö avaa toisen näkökulman kaupungin ympäristöön.",
-    "teksti": "Kinshasan paikalliset kauppapaikat edelsivät Léopoldvillen siirtomaakaupunkia. Nshasa ja Ntamo liittyivät joenrannan kalastukseen ja kaupankäyntiin. Myöhemmän kauppa-aseman syntyä ei siksi voi kuvata kaupungin koko alueen historian alkuna.\n\nNgalieman lahti oli varhaisen kauppa-aseman satamapaikka Kintambon alueella. Lahti kuuluu Kongo-joen vasempaan rantaan lähellä koskijaksoa. Sen luonnonmaantiede ja nykyiset satamarakenteet ovat eri aikakerroksia: tämän päivän laituria ei voi siirtää vanhaan matkavuoteen.\n\nKasvitieteellinen puutarha sijaitsee Gombessa ja palvelee tutkimusta sekä ympäristökasvatusta. Kaupungin eteläpuolella Lola ya Bonobon suojapaikka yhdistää eläinten hoidon ja opetustyön. Keskustan kokoelma ja metsäinen suojapaikka kertovat luonnosta eri tavoin, eikä jälkimmäinen ole keskustan kävelykohde."
+    "intro": "Kinshasa kasvaa **Kongojoen etelärannalla**, vastapäätä toiseen valtioon kuuluvaa Brazzavilleä. Kongon demokraattisen tasavallan pääkaupunki on myös hallinnollinen maakunta. Sen alueella tiivis kaupunki vaihtuu paikoin maaseuduksi, joten keskustaa ja koko hallintoaluetta ei voi mitata samalla rajauksella. Joenrannan tasangon takana maasto muuttuu etelässä ja lännessä mäkiseksi.\n\nKinshasan historia alkoi ennen sen siirtomaanimeä Léopoldville. Isoisän matkavuonna 1873 alueella oli Teke- ja Humbu-yhteisöjä sekä paikallisia kalastus- ja kauppapaikkoja; myöhempi kauppa-asema syntyi 1800-luvun lopulla. Nykyinen nimi palauttaa mieleen vanhan Nshasa-paikannimen. Suurkaupungin keskellä toimii **kasvitieteellinen puutarha**, kun taas etelän metsäisellä retkialueella bonobojen suojelutyö avaa toisen näkökulman kaupungin ympäristöön.",
+    "teksti": "Kinshasan paikalliset kauppapaikat edelsivät Léopoldvillen siirtomaakaupunkia. Nshasa ja Ntamo liittyivät joenrannan kalastukseen ja kaupankäyntiin. Myöhemmän kauppa-aseman syntyä ei siksi voi kuvata kaupungin koko alueen historian alkuna.\n\nNgalieman lahti oli varhaisen kauppa-aseman satamapaikka Kintambon alueella. Lahti kuuluu Kongojoen vasempaan rantaan lähellä koskijaksoa. Sen luonnonmaantiede ja nykyiset satamarakenteet ovat eri aikakerroksia: tämän päivän laituria ei voi siirtää vanhaan matkavuoteen.\n\nKasvitieteellinen puutarha sijaitsee Gombessa ja palvelee tutkimusta sekä ympäristökasvatusta. Kaupungin eteläpuolella Lola ya Bonobon suojapaikka yhdistää eläinten hoidon ja opetustyön. Keskustan kokoelma ja metsäinen suojapaikka kertovat luonnosta eri tavoin, eikä jälkimmäinen ole keskustan kävelykohde."
   },
   "kysymykset": [
     {
@@ -43,16 +43,16 @@
       "correct": 0,
       "level": 1,
       "hint": "Joki virtaa päiväntasaajan Afrikan halki.",
-      "fact": "Kinshasa sijaitsee Kongo-joen etelärannalla.",
+      "fact": "Kinshasa sijaitsee Kongojoen etelärannalla.",
       "source": "https://en.wikipedia.org/wiki/Kinshasa"
     },
     {
       "q": "Mikä Kinshasa on kaupungin lisäksi?",
       "options": [
         "Hallinnollinen maakunta",
-        "Itsenäinen saarivaltio",
-        "Erillinen kuningaskunta",
-        "Liittovaltion osavaltio"
+        "Yksi hallintopiiri",
+        "Erillinen pääkaupunkiterritorio",
+        "Usean maakunnan kuntaliitto"
       ],
       "correct": 0,
       "level": 2,
@@ -70,7 +70,7 @@
       ],
       "correct": 0,
       "level": 2,
-      "hint": "Järvi syntyi 1900-luvun puolivälissä ihmisen rakentamana.",
+      "hint": "Järven historia liittyy Lukayan laakson kehittämiseen.",
       "fact": "Ma Vallée on tekoallas Lukayan laaksossa.",
       "source": "https://fr.wikipedia.org/wiki/Lac_Ma_Vall%C3%A9e"
     },
@@ -96,7 +96,7 @@
   ],
   "valokuva": {
     "tiedosto": "Forest near Kinshasa.jpg",
-    "lyhyt": "Metsää ja vettä Kinshasan lähistöllä.",
+    "lyhyt": "Metsää.",
     "selite": "Metsää ja vettä Kinshasan lähistöllä.",
     "lahde": "David Tansey, Commons (CC BY 2.0)",
     "vuosi": "2012"
@@ -109,7 +109,7 @@
       "kansikuvat": [
         {
           "tiedosto": "Kinshasa 15.32343E 4.32974S.jpg",
-          "lyhyt": "Kinshasa sijaitsee Kongojoen etelärannalla Pool Malebon vieressä.",
+          "lyhyt": "Kinshasa.",
           "selite": "Kinshasa sijaitsee Kongojoen etelärannalla Pool Malebon vieressä.",
           "lahde": "NASA, Wikimedia Commons (PD)"
         },
@@ -138,16 +138,16 @@
         },
         {
           "otsikko": "Kaupunki jatkuu maakuntana",
-          "teksti": "Kinshasa tarkoittaa sekä pääkaupunkia että hallinnollista maakuntaa. Maakunta sisältää tiiviisti rakennettuja alueita ja maaseutua, joten koko sen pinta-ala tai väestö ei kuvaa pelkkää keskustaa. Myös maasto vaihtuu: joenrannan alluviaalinen tasanko eroaa eteläisten ja läntisten alueiden mäkisyydestä. Kartan yksi paikannimi voi siis peittää useita maisemia. Kinshasaa koskevan luvun rinnalle tarvitaan aina tieto siitä, tarkoitetaanko rakennettua taajamaa vai koko kaupunki-maakuntaa.",
+          "teksti": "Kinshasa tarkoittaa sekä pääkaupunkia että hallinnollista maakuntaa. Maakunta sisältää tiiviisti rakennettuja alueita ja maaseutua, joten koko sen pinta-ala tai väestö ei kuvaa pelkkää keskustaa. Myös maasto vaihtuu: joenrannan alluviaalinen tasanko eroaa eteläisten ja läntisten alueiden mäkisyydestä. Kartan yksi paikannimi voi siis peittää useita maisemia. Hallinnollisen maakunnan sisällä kaupungin tiiviit korttelit vaihtuvat paikoin maaseuduksi; samaan kokonaisuuteen mahtuu eri elinkeinoja ja maastonmuotoja.",
           "tiedosto": "Manguier kinshasa.jpg",
-          "lyhyt": "Puustoa ja polku Kinshasassa.",
+          "lyhyt": "Puustoa.",
           "selite": "Puustoa ja polku Kinshasassa.",
           "lahde": "Max.kit, Wikimedia Commons (CC BY-SA 4.0)",
           "wiki": "Kinshasa"
         },
         {
           "otsikko": "Lahti oli satama ennen suurkaupunkia",
-          "teksti": "Ngalieman lahti sijaitsee Kongo-joen vasemmalla rannalla Kintambon alueella, lähellä koskijaksoa. Sen läheisyyteen syntyi varhainen Léopoldvillen kauppa-asema, ja lahtea käytettiin aseman satamana. Nimi liittyy paikalliseen Ngaliema-henkilöön, mutta rannan kauppahistoria on pelkkää nimeä vanhempi kokonaisuus. Paikkaa voi lukea sekä luonnonlahdeksi että kaupungin kehityksen vaiheeksi. Lahden sijainti on eri asia kuin nykyinen satamainfrastruktuuri, jota ei voi olettaa menneisyyden rantaan.",
+          "teksti": "Ngalieman lahti sijaitsee Kongojoen vasemmalla rannalla Kintambon alueella, lähellä koskijaksoa. Sen läheisyyteen syntyi varhainen Léopoldvillen kauppa-asema, ja lahtea käytettiin aseman satamana. Nimi liittyy paikalliseen Ngaliema-henkilöön, mutta rannan kauppahistoria on pelkkää nimeä vanhempi kokonaisuus. Paikkaa voi lukea sekä luonnonlahdeksi että kaupungin kehityksen vaiheeksi. Lahden kautta kulkenut tavara yhdisti paikallisen kaupan myöhempään siirtomaa-aseman jokiliikenteeseen.",
           "tiedosto": "",
           "lyhyt": "",
           "selite": "",
@@ -156,7 +156,7 @@
         },
         {
           "otsikko": "Puutarha tekee tiedettä",
-          "teksti": "Kinshasan kasvitieteellinen puutarha sijaitsee Gombessa Kasa-Vubun varrella, eläintarhaa vastapäätä. 1900-luvun alkupuolella syntynyt puutarha kuuluu ICCN:n hallintaan. Sen tehtävä ei ole vain tarjota vihreää ympäristöä: kasvikokoelmia käytetään myös tieteessä ja opetuksessa. Puutarhaan kuuluu taimisto, siemenpankki ja herbaario. Samassa kaupungin paikassa voi siksi kohdata sekä eläviä kasveja että niiden tutkimusta varten säilytettävää aineistoa, kahdenlaista kasvien muistia.",
+          "teksti": "Kinshasan kasvitieteellinen puutarha sijaitsee Gombessa Kasa-Vubun varrella, eläintarhaa vastapäätä. 1900-luvun alkupuolella syntynyt puutarhaa hallinnoi Kongon luonnonsuojeluinstituutti. Sen tehtävä ei ole vain tarjota vihreää ympäristöä: kasvikokoelmia käytetään myös tieteessä ja opetuksessa. Puutarhaan kuuluu taimisto, siemenpankki ja herbaario. Samassa kaupungin paikassa voi siksi kohdata sekä eläviä kasveja että niiden tutkimusta varten säilytettävää aineistoa, kahdenlaista kasvien muistia.",
           "tiedosto": "",
           "lyhyt": "",
           "selite": "",
@@ -171,7 +171,7 @@
           "selite": "",
           "lahde": ""
         },
-        "kappale": "Kinshasan keskustan ja eteläisen retkialueen välimatkaa ei pidä ajatella yhtenä kävelykierroksena. Kuljetus järjestetään luotettavan toimijan kautta ennakkoon. Kasvitieteellinen puutarha tarjoaa kaupungissa näkökulman kasvikokoelmiin. Bonobojen suojapaikassa vierailu sovitaan järjestäjän kanssa. Matkustamista kannattaa harkita tarkkaan, ja tarpeetonta matkustamista maan sisällä kannattaa välttää.",
+        "kappale": "Kinshasan kasvitieteellinen puutarha sijaitsee Gombessa keskustan tuntumassa. Ma Vallée, Lukayan pienet putoukset ja bonobojen suojapaikka ovat kaupungin eteläpuolisia kohteita. Järjestä niiden kuljetus erikseen. Puutarhan kasvikokoelmat ja Lola ya Bonobon opastus kertovat erilaisesta suojelutyöstä.",
         "artikkeli": {
           "nimi": "Matkailijan Kinshasa",
           "taitto": "opas",
@@ -219,8 +219,8 @@
               }
             },
             {
-              "otsikko": "Matkan harkinta",
-              "teksti": "Matkustamista kannattaa harkita tarkkaan, ja tarpeetonta matkustamista maan sisällä kannattaa välttää. Kuljetukset ja retkien järjestelyt sovitaan etukäteen luotettavan toimijan kanssa. Bonobojen suojapaikassa käynnin edellytykset ja mahdollinen ammattilaiskuvaus varmistetaan järjestäjältä.",
+              "otsikko": "Bonobojen suojapaikka",
+              "teksti": "Lola ya Bonobo sijaitsee kaupungin eteläpuolella lähellä Lukayan pieniä putouksia. Paikassa kuntoutetaan bonoboja ja opetetaan luonnonsuojelua. Osa eläimistä voidaan palauttaa luontoon erilliselle alueelle. Sovi vierailu ja mahdollinen ammattilaiskuvaus järjestäjän kanssa.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -259,8 +259,8 @@
             ],
             "hyvaTietaa": [
               {
-                "otsikko": "Maakunta on laaja",
-                "teksti": "Kinshasan hallintoalue sisältää myös maaseutua."
+                "otsikko": "Ennen matkapäätöstä",
+                "teksti": "Tarkista Kongon demokraattisen tasavallan ajantasainen matkustustiedote Suomen ulkoministeriöstä ja noudata sen ohjeita."
               },
               {
                 "otsikko": "Kuljetus ennakkoon",
@@ -276,7 +276,7 @@
               }
             ]
           },
-          "lahde": "Wikipedia"
+          "lahde": "Wikipedia; Wikivoyage"
         }
       }
     },
@@ -316,7 +316,7 @@
         },
         {
           "otsikko": "Metsä on hoidettu suojapaikka",
-          "teksti": "Lola ya Bonobo sijaitsee Kinshasan eteläpuolella, lähellä Lukayan pieniä putouksia. Metsäisessä suojapaikassa hoidetaan bonoboja puoli-luonnollisessa ympäristössä. Eläimet elävät ryhmissä ja käyttävät metsää, mutta kyse ei ole vapaasti luonnossa elävästä populaatiosta. Osa kuntoutetuista bonoboista voidaan palauttaa toisaalla sijaitsevaan luonnonympäristöön. Suojapaikan ja palautusalueen ero on olennainen: suojelutyö ei tarkoita vain sitä, että yhden metsän portti avataan.",
+          "teksti": "Lola ya Bonobo sijaitsee Kinshasan eteläpuolella, lähellä Lukayan pieniä putouksia. Metsäisessä suojapaikassa hoidetaan bonoboja puoli-luonnollisessa ympäristössä. Eläimet elävät ryhmissä ja käyttävät metsää, mutta kyse ei ole vapaasti luonnossa elävästä populaatiosta. Osa kuntoutetuista bonoboista voidaan palauttaa toisaalla sijaitsevaan luonnonympäristöön. Bonobojen kuntoutus ja luontoon palauttaminen tapahtuvat eri paikoissa; hoitopaikan metsä on yksi vaihe eläinten suojelussa.",
           "tiedosto": "",
           "lyhyt": "",
           "selite": "",
@@ -362,7 +362,7 @@
   "nahtavyydet": {
     "Ngalieman lahti": {
       "aika": "Luonnonlahti; satamahistoria 1800-luvun lopulta",
-      "teksti": "Ngalieman lahti sijaitsee Kongo-joen vasemmalla rannalla Kintambon alueella, lähellä joen koskijaksoa. Varhainen Léopoldvillen kauppa-asema syntyi sen läheisyyteen 1800-luvun lopulla, ja lahtea käytettiin aseman satamapaikkana. Nimi liittyy paikalliseen Ngaliemaan, mutta paikan merkitys sisältää myös laajemman joenrannan kauppahistorian.\n\nIsoisän matkavuonna 1873 nykyisen kaupungin alueella oli jo paikallisia kalastus- ja kauppapaikkoja. Myöhemmän aseman perustaminen ei siis aloittanut alueen ihmisten historiaa tyhjästä. Luonnonlahti ja siihen liittyneet sataman rakennusvaiheet on erotettava: nykyiset laiturit eivät kerro sellaisinaan vanhan matkavuoden näkymästä. Ngalieman lahti yhdistää saman paikan luonnonmaantieteen ja kaupungin kehityksen.",
+      "teksti": "Ngalieman lahti sijaitsee Kongojoen vasemmalla rannalla Kintambon alueella, lähellä joen koskijaksoa. Varhainen Léopoldvillen kauppa-asema syntyi sen läheisyyteen 1800-luvun lopulla, ja lahtea käytettiin aseman satamapaikkana. Nimi liittyy paikalliseen Ngaliemaan, mutta paikan merkitys sisältää myös laajemman joenrannan kauppahistorian.\n\nIsoisän matkavuonna 1873 nykyisen kaupungin alueella oli jo paikallisia kalastus- ja kauppapaikkoja. Myöhemmän aseman perustaminen ei siis aloittanut alueen ihmisten historiaa tyhjästä. Luonnonlahti ja siihen liittyneet sataman rakennusvaiheet on erotettava: nykyiset laiturit eivät kerro sellaisinaan vanhan matkavuoden näkymästä. Ngalieman lahti yhdistää saman paikan luonnonmaantieteen ja kaupungin kehityksen.",
       "kuvat": [
         {
           "tiedosto": "",

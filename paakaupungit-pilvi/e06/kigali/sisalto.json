@@ -37,12 +37,12 @@
       "options": [
         "Kukkulat ja laaksot",
         "Tasainen jokisuisto",
-        "Dyynit ja suolatasangot",
-        "Jäätiköt ja vuonot"
+        "Alava järvitasanko",
+        "Jyrkkä rannikkovyöhyke"
       ],
       "correct": 0,
       "level": 1,
-      "hint": "Kaupungin alueet levittäytyvät useille harjanteille.",
+      "hint": "Maasto vaikuttaa kaupunginosien sijaintiin.",
       "fact": "Kigalin maisema muodostuu kukkuloista ja niiden välisistä laaksoista.",
       "source": "https://en.wikipedia.org/wiki/Kigali"
     },
@@ -78,9 +78,9 @@
       "q": "Millainen hallintoyksikkö nykyinen Kigali on?",
       "options": [
         "Provinssitason kaupunkialue",
-        "Itsenäinen liittovaltio",
-        "Yhden kylän kunta",
-        "Erillinen saaripiiri"
+        "Yhden piirin kunta",
+        "Erillinen pääkaupunkiterritorio",
+        "Usean provinssin metropolialue"
       ],
       "correct": 0,
       "level": 3,
@@ -96,7 +96,7 @@
   ],
   "valokuva": {
     "tiedosto": "Nyabarongo River Scene with Bugesera Marshes - Outside Kigali - Rwanda - 01.jpg",
-    "lyhyt": "Nyabarongon jokimaisema kuuluu Kigalin lähialueisiin.",
+    "lyhyt": "Nyabarongon jokimaisema.",
     "selite": "Nyabarongon jokimaisema kuuluu Kigalin lähialueisiin.",
     "lahde": "Adam Jones, Ph.D., Commons (CC BY-SA 3.0)",
     "vuosi": "2012"
@@ -109,13 +109,13 @@
       "kansikuvat": [
         {
           "tiedosto": "Mount Kigali.jpg",
-          "lyhyt": "Kigalin asutusta Kigali-kukkulan juurella.",
+          "lyhyt": "Asutusta Kigali-kukkulan juurella.",
           "selite": "Kigalin asutusta Kigali-kukkulan juurella.",
           "lahde": "JA ALT, Wikimedia Commons (PD)"
         },
         {
           "tiedosto": "Panoramique kigali.jpg",
-          "lyhyt": "Kigalin kukkuloiden asutusta panoraamassa vuodelta 2003.",
+          "lyhyt": "Kigalin kukkuloiden panoraama.",
           "selite": "Kigalin kukkuloiden asutusta panoraamassa vuodelta 2003.",
           "lahde": "Jonathan Serex, Wikimedia Commons (CC BY-SA 3.0)"
         },
@@ -138,7 +138,7 @@
         },
         {
           "otsikko": "Asuintalon näyttely vaihtoi aihetta",
-          "teksti": "Kandtin talo oli Richard Kandtin asuintalo 1900-luvun alun Kigalin hallintoaseman yhteydessä. Rakennuksen toteutuksessa oli mukana rwandalaisia rakentajia. Nyarugengessa sijaitseva talo sai myöhemmin museotehtävän: aluksi painotus oli luonnonhistoriassa, sittemmin näyttely suuntautui historiaan. Museo kuuluu RCHA:n hallintaan. Talon nimi voi pysyä samana samalla kun sen käyttö muuttuu, joten vanha luonnonhistoriallisen museon nimitys ei yksin kuvaa koko nykyistä näyttelyä.",
+          "teksti": "Kandtin talo oli Richard Kandtin asuintalo 1900-luvun alun Kigalin hallintoaseman yhteydessä. Rakennuksen toteutuksessa oli mukana rwandalaisia rakentajia. Nyarugengessa sijaitseva talo sai myöhemmin museotehtävän: aluksi painotus oli luonnonhistoriassa, sittemmin näyttely suuntautui historiaan. Museota hallinnoi Ruandan kulttuuriperintöakatemia. Historiallinen näyttely tarkastelee Ruandan siirtomaakautta ja Kigalin varhaisia vaiheita; talo on osa samaa historiaa, jota sen sisällä esitellään.",
           "tiedosto": "",
           "lyhyt": "",
           "selite": "",
@@ -167,7 +167,7 @@
       "matkailijalle": {
         "kuva": {
           "tiedosto": "Fleur mauve de Kigali.jpg",
-          "lyhyt": "Violetteja kukkia Kigalissa huhtikuussa 2025.",
+          "lyhyt": "Violetteja kukkia Kigalissa.",
           "selite": "Violetteja kukkia Kigalissa huhtikuussa 2025.",
           "lahde": "IGANZE, Wikimedia Commons (CC0)"
         },
@@ -210,7 +210,7 @@
             },
             {
               "otsikko": "Ruokaa kaupungissa",
-              "teksti": "Kigalin ruokapaikoissa on paikallisia ja kansainvälisiä keittiöitä. Kaupungin ruokakuvauksessa mainitaan vihanneksia ja kalaa. Ravintolan nykyinen toiminta selvitetään erikseen, sillä vanha nimiluettelo ei vahvista tämän päivän palveluja.",
+              "teksti": "Kigalissa on sekä paikallisia että kansainvälisiä keittiöitä. Kaupungin ruokapaikoissa valmistetaan vihanneksia ja kalaa. Nyamirambon kävely- ja opetustoiminta tutustuttaa puolestaan kaupunginosaan paikallisten naisten keskuksen kautta.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -259,8 +259,8 @@
             ],
             "hyvaTietaa": [
               {
-                "otsikko": "Lentoasemat ovat eri paikkoja",
-                "teksti": "KGL on nykyinen saapumiskenttä, Bugesera erillinen rakennushanke."
+                "otsikko": "Ennen matkapäätöstä",
+                "teksti": "Tarkista Ruandan ajantasainen matkustustiedote Suomen ulkoministeriöstä ja noudata sen ohjeita."
               },
               {
                 "otsikko": "Kaupungin laajuus",
@@ -276,7 +276,7 @@
               }
             ]
           },
-          "lahde": "Wikipedia"
+          "lahde": "Wikipedia; Wikivoyage"
         }
       }
     },
@@ -298,7 +298,7 @@
       "nostot": [
         {
           "otsikko": "Viikunametsää palautetaan laaksoon",
-          "teksti": "Nyandungu oli heikentynyt kaupunkikosteikko, jota kunnostettiin palauttamalla paikallista kasvillisuutta. Alueelle istutettiin paikallisia puulajeja, ja alkuperäistä viikunametsää palautettiin. Kosteikko ja metsä ovat eri ympäristöjä samassa kokonaisuudessa. REMA on ollut mukana työssä, ja paikka palvelee myös luontokasvatusta. Kunnostus ei siis tarkoita vain sitä, että kaupungin karttaan lisättiin uusi puistonimi: sen taustalla on vesilaakson ja kasvillisuuden palauttamista.",
+          "teksti": "Nyandungu oli heikentynyt kaupunkikosteikko, jota kunnostettiin palauttamalla paikallista kasvillisuutta. Alueelle istutettiin paikallisia puulajeja, ja alkuperäistä viikunametsää palautettiin. Kosteikko ja metsä ovat eri ympäristöjä samassa kokonaisuudessa. Ruandan ympäristöviranomainen on ollut mukana työssä, ja paikka palvelee myös luontokasvatusta. Työssä yhdistyvät vesiuomien kunnostaminen, paikallisten puiden istuttaminen ja elinympäristöjen palauttaminen laaksoon.",
           "tiedosto": "",
           "lyhyt": "",
           "selite": "",
@@ -316,7 +316,7 @@
         },
         {
           "otsikko": "Umusambi on myös linnun nimi",
-          "teksti": "Umusambi on harmaakruunukurjen kinyarwandankielinen nimi. Samanniminen Kigalin suojapaikka toimii kunnostetussa kosteikossa ja liittyy RWCA:n suojelutyöhön. Sinne tuodut linnut on pelastettu vankeusoloista, ja osa ei vammojensa vuoksi voi palata luontoon. Paikan tehtävä on tarjota niille pysyvä, luonnonläheinen ympäristö. Suojapaikkaa ei siksi pidä ajatella vain läpikulkuna takaisin vapauteen: joillekin linnuille se on jatkuva elinpaikka ja samalla lintusuojelun opetuskohde.",
+          "teksti": "Umusambi on harmaakruunukurjen kinyarwandankielinen nimi. Samanniminen Kigalin suojapaikka toimii kunnostetussa kosteikossa ja liittyy Ruandan luonnonsuojeluyhdistyksen työhön. Sinne tuodut linnut on pelastettu vankeusoloista, ja osa ei vammojensa vuoksi voi palata luontoon. Paikan tehtävä on tarjota niille pysyvä, luonnonläheinen ympäristö. Suojapaikkaa ei siksi pidä ajatella vain läpikulkuna takaisin vapauteen: joillekin linnuille se on jatkuva elinpaikka ja samalla lintusuojelun opetuskohde.",
           "tiedosto": "",
           "lyhyt": "",
           "selite": "",
@@ -387,7 +387,7 @@
     },
     "Jali-kukkula": {
       "aika": "Luonnonmaasto",
-      "teksti": "Jali on Kigalin pohjoispuolinen kukkula Gasabon alueella. Nimestä käytetään myös muotoa Jari. Se kuuluu kaupungin harjanteiden ja laaksojen maastoon ja on eri paikka kuin keskustan länsipuolinen Kigali-kukkula. Kaupungista nähtävä maastonmuoto auttaa hahmottamaan Kigalin laajaa ympäristöä.\n\nKukkulalla on myös nykyistä radio- ja energiainfrastruktuuria. Se ei ole sama asia kuin luonnonmaasto eikä kuulu vanhaan matkavuoteen: isoisän matkavuonna 1873 nykyisiä rakenteita ei siellä ollut. Kukkulan tunnistaminen kartalta ei myöskään vahvista kulkureittiä tai pääsyä sen kaikkiin osiin.",
+      "teksti": "Jali on Kigalin pohjoispuolinen kukkula Gasabon alueella. Nimestä käytetään myös muotoa Jari. Se kuuluu kaupungin harjanteiden ja laaksojen maastoon ja on eri paikka kuin keskustan länsipuolinen Kigali-kukkula. Kaupungista nähtävä maastonmuoto auttaa hahmottamaan Kigalin laajaa ympäristöä.\n\nKukkulalla on myös nykyistä radio- ja energiainfrastruktuuria. Vuonna 1873 nykyisiä radio- ja energiatoiminnan rakenteita ei vielä ollut kukkulalla. Kukkulan tunnistaminen kartalta ei myöskään vahvista kulkureittiä tai pääsyä sen kaikkiin osiin.",
       "kuvat": [
         {
           "tiedosto": "",
@@ -413,7 +413,7 @@
     },
     "Nyandungun kosteikko": {
       "aika": "Vanha kosteikko; nykyinen kunnostus 2000-luvulla",
-      "teksti": "Nyandungu on kosteikkolaakso Gasabon ja Kicukiron välissä. Aiemmin heikentynyttä ympäristöä on kunnostettu palauttamalla paikallista kasvillisuutta, viikunametsää ja vesiuomia. Alueelle on istutettu paikallisia puita, ja kokonaisuuteen kuuluu puroja, altaita ja ruovikkoja. Näiden rinnalla paikka palvelee luontokasvatusta.\n\nNykyinen kunnostus ja puistokäyttö kuuluvat 2000-luvulle. Isoisän matkavuonna 1873 tätä ohjelmaa ja sen rakenteita ei ollut, eikä nykyistä palautettua ympäristöä voi kuvata tuon ajan tarkaksi kasvillisuudeksi. Kohteena on kosteikon ja metsän luonnonympäristö. Kulkureitit sekä käynnin nykyiset järjestelyt ovat erillisiä siitä, että laakso on tunnistettu kartalle omalla paikkapisteellään.",
+      "teksti": "Nyandungu on kosteikkolaakso Gasabon ja Kicukiron välissä. Aiemmin heikentynyttä ympäristöä on kunnostettu palauttamalla paikallista kasvillisuutta, viikunametsää ja vesiuomia. Alueelle on istutettu paikallisia puita, ja kokonaisuuteen kuuluu puroja, altaita ja ruovikkoja. Näiden rinnalla paikka palvelee luontokasvatusta.\n\nNykyinen kunnostus ja puistokäyttö kuuluvat 2000-luvulle. Isoisän matkavuonna 1873 tätä ohjelmaa ja sen rakenteita ei ollut, eikä nykyistä palautettua ympäristöä voi kuvata tuon ajan tarkaksi kasvillisuudeksi. Kohteena on kosteikon ja metsän luonnonympäristö. Infokeskus ja luontopolut tukevat kosteikon käyttöä opetuspaikkana.",
       "kuvat": [
         {
           "tiedosto": "",

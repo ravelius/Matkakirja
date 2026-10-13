@@ -14,8 +14,8 @@
     }
   },
   "artikkeli": {
-    "intro": "Libreville on Gabonin pääkaupunki **estuaarin pohjoisrannalla**, missä jokien vesi avautuu kohti Guineanlahtea. Rannan mpongwé-yhteisöt asuivat paikalla jo ennen ranskalaista hallintoa. Kaupungin ranskankielinen nimi tarkoittaa vapaata kaupunkia ja muistaa sinne asettuneita vapautettuja ihmisiä. Uuden asutuksen synty sijoittuu vuoteen 1849, ja myöhemmin rannasta kehittyi kaupan ja siirtomaahallinnon keskus.\n\nVesialue antaa kaupungille suunnan: rantakatu, satama ja vastarannan niemi kuuluvat samaan estuaarimaisemaan. Mont-Bouët'n torilla kohtaavat ruokatarvikkeet, vaatteet ja ympäröivien ravintoloiden arki. Kaupungin sisällä Sibangin arboretum säilyttää päiväntasaajan metsän puita tutkimusta varten. Kauempana Akandan ja Pongaran luonto yhdistää mangrovemetsiä, lietteisiä rantoja ja hiekkaa, joten lähiseudun maisemaan mahtuu paljon muutakin kuin yksi rantaviiva.",
-    "teksti": "Librevillen historia alkaa ennen kaupungin ranskankielistä nimeä. Mpongwé-asutuksen rinnalle syntyi vapautettujen ihmisten uusi yhteisö, ja nimi Libreville jäi muistamaan vapauden merkitystä. Isoisän matkavuonna 1873 paikalla oli jo kauppakaupunki, mutta itsenäisen Gabonin pääkaupunkiasema kuului myöhempään aikaan.\n\nGabonin estuaari tuo Komon vettä rannikolle ja avautuu Guineanlahteen. Libreville sijaitsee sen pohjoisrannalla, Pointe Denis vastarannalla. Eteläisempi Owendo on oma satama- ja rautatiealueensa. Kaupungin paikkoja hahmottaa siten myös veden kautta.\n\nSibangin arboretum liittää metsän kaupunkielämään tutkimuspaikkana. Akandassa lietteiset rannat ovat muuttolintujen talvehtimisympäristöä, kun taas Pongarassa metsät, savanni ja hiekkarannat lomittuvat. Alueiden yhteisöjen toimeentuloon kuuluvat myös kalastus ja viljely. Luonnon läheisyys ei tarkoita asumatonta ympäristöä."
+    "intro": "Libreville on Gabonin pääkaupunki **suistolahden pohjoisrannalla**, missä jokien vesi avautuu kohti Guineanlahtea. Rannan mpongwé-yhteisöt asuivat paikalla jo ennen ranskalaista hallintoa. Kaupungin ranskankielinen nimi tarkoittaa vapaata kaupunkia ja muistaa sinne asettuneita vapautettuja ihmisiä. Uuden asutuksen synty sijoittuu vuoteen 1849, ja myöhemmin rannasta kehittyi kaupan ja siirtomaahallinnon keskus.\n\nVesialue antaa kaupungille suunnan: rantakatu, satama ja vastarannan niemi kuuluvat samaan suistolahden maisemaan. Mont-Bouët'n torilla myydään ruokaa, kankaita ja vaatteita; ympärillä toimii kauppoja ja ravintoloita. Kaupungin sisällä Sibangin arboretum säilyttää päiväntasaajan metsän puita tutkimusta varten. Kauempana Akandan ja Pongaran luonto yhdistää mangrovemetsiä, lietteisiä rantoja ja hiekkaa, joten lähiseudun maisemaan mahtuu paljon muutakin kuin yksi rantaviiva.",
+    "teksti": "Librevillen historia alkaa ennen kaupungin ranskankielistä nimeä. Mpongwé-asutuksen rinnalle syntyi vapautettujen ihmisten uusi yhteisö, ja nimi Libreville jäi muistamaan vapauden merkitystä. Vuonna 1873 rannalla oli jo uusi asutus vanhempien mpongwé-yhteisöjen rinnalla.\n\nGabonin estuaari tuo Komon vettä rannikolle ja avautuu Guineanlahteen. Libreville sijaitsee sen pohjoisrannalla, Pointe Denis vastarannalla. Eteläisempi Owendo on oma satama- ja rautatiealueensa. Kaupungin paikkoja hahmottaa siten myös veden kautta.\n\nSibangin arboretum liittää metsän kaupunkielämään tutkimuspaikkana. Akandassa lietteiset rannat ovat muuttolintujen talvehtimisympäristöä, kun taas Pongarassa metsät, savanni ja hiekkarannat lomittuvat. Alueiden yhteisöjen toimeentuloon kuuluvat myös kalastus ja viljely. Kalastus ja viljely yhdistävät paikalliset yhteisöt rannikon luonnonvaroihin."
   },
   "kysymykset": [
     {
@@ -50,14 +50,14 @@
       "q": "Millainen vesialue avautuu Librevillen edustalla?",
       "options": [
         "Estuaari",
-        "Vuoristojärvi",
-        "Jäävuono",
+        "Laguuni",
+        "Tekojärvi",
         "Kraatterijärvi"
       ],
       "correct": 0,
       "level": 2,
-      "hint": "Jokien vesi kohtaa siellä meren.",
-      "fact": "Libreville sijaitsee Gabonin estuaarin pohjoisrannalla.",
+      "hint": "Vesialueen muoto liittyy joen ja meren kohtaamiseen.",
+      "fact": "Libreville on Gabonin estuaarin eli jokisuun suistolahden pohjoisrannalla.",
       "source": "https://en.wikipedia.org/wiki/Gabon_Estuary"
     },
     {
@@ -77,7 +77,7 @@
     {
       "q": "Mikä eläin käyttää Pongaran rantoja lisääntymiseen?",
       "options": [
-        "Nahkakilpikonna",
+        "Merinahkakilpikonna",
         "Tundrakurmitsa",
         "Afrikannorsu",
         "Kuovisirri"
@@ -85,7 +85,7 @@
       "correct": 0,
       "level": 3,
       "hint": "Laji viettää suuren osan elämästään meressä.",
-      "fact": "Pongara on nahkakilpikonnan lisääntymisaluetta.",
+      "fact": "Pongara on merinahkakilpikonnan lisääntymisaluetta.",
       "source": "https://en.wikipedia.org/wiki/Pongara_National_Park"
     }
   ],
@@ -96,8 +96,8 @@
   ],
   "valokuva": {
     "tiedosto": "Les cocos de Libreville.jpg",
-    "lyhyt": "Librevillen rannalla kasvaa kookospalmuja.",
-    "selite": "Librevillen rannalla kasvaa kookospalmuja.",
+    "lyhyt": "Kookospalmun hedelmiä Librevillessä.",
+    "selite": "Kookospalmun runko, lehdet ja hedelmät Librevillen rantakadun vierellä vuonna 2022.",
     "lahde": "ArnoBOUJIKA, Commons (CC0)"
   },
   "kaupunkilehti": [
@@ -108,8 +108,8 @@
       "kansikuvat": [
         {
           "tiedosto": "Libreville, Gabon.JPG",
-          "lyhyt": "Libreville sijaitsee Gabonin estuaarin pohjoisrannalla.",
-          "selite": "Libreville sijaitsee Gabonin estuaarin pohjoisrannalla.",
+          "lyhyt": "Libreville avaruudesta.",
+          "selite": "Librevillen kaupunkialue Gabonin suistolahden pohjoisrannalla avaruudesta nähtynä.",
           "lahde": "NASA Astronauts, Wikimedia Commons (PD)"
         },
         {
@@ -128,7 +128,7 @@
       "nostot": [
         {
           "otsikko": "Vapaus jäi kaupungin nimeen",
-          "teksti": "Libreville tarkoittaa ranskaksi vapaata kaupunkia. Nimi liittyy vapautettuihin ihmisiin, jotka asettuivat rannalle 1800-luvun puolivälissä. Paikka oli jo mpongwé-yhteisöjen asuttama: uuden kylän synty ei ollut rannikon historian alku. Vapautettu Mountier nousi uuden yhteisön johtajaksi. Myöhemmin Libreville kasvoi kaupalliseksi kaupungiksi, jossa toimi myös ulkomaisia yrityksiä. Isoisän matkavuonna 1873 rannalla oli siis jo kauppapaikka, vaikka itsenäisen Gabonin pääkaupunkiasema tuli vasta myöhemmin.",
+          "teksti": "Libreville tarkoittaa ranskaksi vapaata kaupunkia. Nimi liittyy vapautettuihin ihmisiin, jotka asettuivat rannalle 1800-luvun puolivälissä. Paikka oli jo mpongwé-yhteisöjen asuttama: uuden kylän synty ei ollut rannikon historian alku. Vapautettu Mountier nousi uuden yhteisön johtajaksi. Myöhemmin Libreville kasvoi kaupalliseksi kaupungiksi, jossa toimi myös ulkomaisia yrityksiä. Vuonna 1873 uuden asutuksen nimi oli jo käytössä. Myöhempi pääkaupunkiasema kuuluu itsenäisen Gabonin historiaan.",
           "wiki": "Libreville",
           "tiedosto": "",
           "lyhyt": "",
@@ -137,16 +137,16 @@
         },
         {
           "otsikko": "Veden äärellä on monta rantaa",
-          "teksti": "Librevillen edessä avautuva Gabonin estuaari vastaanottaa jokien vettä ja liittyy Guineanlahteen. Komo laskee siihen, ja lähteet mainitsevat myös Ebe-joen. Kaupunki ja sen satama sijaitsevat pohjoisrannalla, jonka yläpuolella maasto nousee kukkuloiksi ja tasanteeksi. Bord de mer on nykyinen rannalla oleskelun ja kävelyn alue. Etelämpänä Owendo muodostaa oman satama- ja rautatieympäristönsä. Kun rannikkoa seuraa nimien avulla, keskustan ranta ja tavaraliikenteen alue erottuvat toisistaan.",
+          "teksti": "Librevillen edessä avautuva Gabonin estuaari vastaanottaa jokien vettä ja liittyy Guineanlahteen. Komo laskee siihen, ja siihen laskee myös Ebe-joki. Kaupunki ja sen satama sijaitsevat pohjoisrannalla, jonka yläpuolella maasto nousee kukkuloiksi ja tasanteeksi. Bord de mer on nykyinen rannalla oleskelun ja kävelyn alue. Etelämpänä Owendo muodostaa oman satama- ja rautatieympäristönsä. Kun rannikkoa seuraa nimien avulla, keskustan ranta ja tavaraliikenteen alue erottuvat toisistaan.",
           "wiki": "Gabon Estuary",
           "tiedosto": "Le Komo 1.JPG",
-          "lyhyt": "Komojoen vesi liittyy Gabonin estuaariin.",
-          "selite": "Komojoen vesi liittyy Gabonin estuaariin.",
+          "lyhyt": "Komojoki maantiesillan kohdalla.",
+          "selite": "Komojoki Librevillen ja Lambarénén välisen maantiesillan kohdalla joulukuussa 2009.",
           "lahde": "Ballot 2, Wikimedia Commons (CC0)"
         },
         {
           "otsikko": "Metsä, jolla on tutkimustehtävä",
-          "teksti": "Sibangissa päiväntasaajan metsän puita säilytetään tutkimusta varten. Arboretum sijaitsee Librevillen sisällä, kaupungin kolmannessa hallintoalueessa, ja sen taustalla ovat tutkimuslaitokset CENAREST ja IPHAMETRA. Alue perustettiin 1900-luvun puolivälissä. Sen puustoon kuuluu okoumé-puita sekä Duboscia macrocarpa. Metsässä vieraillaan opastetusti, joten käynti sovitaan etukäteen. Kaupungin sisäinen metsä on samalla paikka, jossa elävistä puista kertyy tietoa ja jossa niitä säilytetään tutkimuksen kohteina.",
+          "teksti": "Sibangissa päiväntasaajan metsän puita säilytetään tutkimusta varten. Arboretum sijaitsee Librevillen sisällä, kaupungin kolmannessa hallintoalueessa, ja sen taustalla ovat kansallinen tiede- ja teknologiatutkimuksen keskus sekä farmakopean ja perinteisen lääketieteen tutkimuslaitos. Alue perustettiin 1900-luvun puolivälissä. Sen puustoon kuuluu okoumé-puita sekä Duboscia macrocarpa. Metsässä vieraillaan opastetusti, joten käynti sovitaan etukäteen. Kaupungin sisäinen metsä on samalla paikka, jossa elävistä puista kertyy tietoa ja jossa niitä säilytetään tutkimuksen kohteina.",
           "wiki": "Arboretum de Sibang",
           "tiedosto": "",
           "lyhyt": "",
@@ -155,7 +155,7 @@
         },
         {
           "otsikko": "Torin kauppa jatkuu ympärillä",
-          "teksti": "Mont-Bouët on Librevillen keskeinen markkinapaikka kaupungin kolmannessa hallintoalueessa. Hedelmä- ja vihannesmyynnin rinnalla siellä käydään vaate- ja tekstiilikauppaa. Länsi-Afrikasta tulevat kankaat ja Euroopasta tuodut käytetyt vaatteet kuuluvat lähteiden kuvaamaan tarjontaan. Torin ympärillä toimii myös kauppoja ja ravintoloita, joten kaupankäynti ei rajoitu yksittäiseen myyntialueeseen. Nimetty tori kertoo nykyisestä kaupunkiarjesta; sen tuotteiden saatavuus ja palvelut selviävät käyntihetkellä.",
+          "teksti": "Mont-Bouët on Librevillen keskeinen markkinapaikka kaupungin kolmannessa hallintoalueessa. Hedelmä- ja vihannesmyynnin rinnalla siellä käydään vaate- ja tekstiilikauppaa. Länsi-Afrikasta tulevat kankaat ja Euroopasta tuodut käytetyt vaatteet kuuluvat torin tarjontaan. Torin ympärillä toimii myös kauppoja ja ravintoloita, joten kaupankäynti ei rajoitu yksittäiseen myyntialueeseen. Ahtaissa käytävissä kantajat siirtävät tavaroita kottikärryillä. Torin myyntikojut levittäytyvät keskelle laajempaa kauppakorttelia.",
           "wiki": "Marché du Mont-Bouët",
           "tiedosto": "",
           "lyhyt": "",
@@ -166,8 +166,8 @@
       "matkailijalle": {
         "kuva": {
           "tiedosto": "À la plage de Libreville.jpg",
-          "lyhyt": "Kookospähkinä Librevillen rannalla.",
-          "selite": "Kookospähkinä Librevillen rannalla.",
+          "lyhyt": "Librevillen rannalla.",
+          "selite": "Ranta-aiheinen valokuva Librevillestä; suistolahden rannikko kuuluu pääkaupungin ympäristöön.",
           "lahde": "ArnoBOUJIKA, Wikimedia Commons (CC0)"
         },
         "kappale": "Librevillen rantaan voi tutustua Bord de merin alueella. Mont-Bouët'n torin ympärillä toimii myös ravintoloita ja muita kauppoja. Sibangin opastettu metsäkäynti sovitaan ennen lähtöä. Pointe Denisin vastaranta ja kansallispuistot tarvitsevat erillisen kuljetusjärjestelyn. Veneellä tehtävää retkeä suunnitellessa varmistetaan myös paluu. Ranskan kielestä on hyötyä kaupungissa asioidessa.",
@@ -209,7 +209,7 @@
             },
             {
               "otsikko": "Ruokaa ja toria",
-              "teksti": "Mont-Bouët'n torilla myydään hedelmiä ja vihanneksia, ja ympärillä toimii ravintoloita. Kaupungin ruokatarjontaan kuuluu myös kansainvälisiä keittiöitä, muun muassa libanonilaisia ja intialaisia ravintoloita. Päivän tarjonta selviää paikan päällä.",
+              "teksti": "Mont-Bouët'n torilla myydään hedelmiä ja vihanneksia, ja ympärillä toimii ravintoloita. Kaupungin ruokatarjontaan kuuluu myös kansainvälisiä keittiöitä, muun muassa libanonilaisia ja intialaisia ravintoloita. Torilla myydään myös Länsi-Afrikan kankaita ja Euroopasta tuotuja käytettyjä vaatteita.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -219,7 +219,7 @@
             },
             {
               "otsikko": "Retkien suunnittelu",
-              "teksti": "Vene- ja metsäkäynnit sovitaan etukäteen. Sibangin opastuksen saatavuus ja vastarannan toimiva kuljetus tarkistetaan ennen lähtöä. Retkelle lähdettäessä selvitetään myös paluu sekä paikalliset käyntikäytännöt. Ajantasaiset matkustus- ja palvelutiedot kuuluvat matkan valmisteluun.",
+              "teksti": "Vene- ja metsäkäynnit sovitaan etukäteen. Sibangin opastuksen saatavuus ja vastarannan toimiva kuljetus tarkistetaan ennen lähtöä. Retkelle lähdettäessä selvitetään myös paluu sekä paikalliset käyntikäytännöt. ",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -275,7 +275,7 @@
               }
             ]
           },
-          "lahde": "Wikipedia"
+          "lahde": "Wikipedia; Wikivoyage"
         }
       }
     },
@@ -286,10 +286,10 @@
       "tehtava": {
         "kysymys": "Millainen Akandan ympäristö tarjoaa kahlaajille talvehtimispaikan?",
         "vaihtoehdot": [
-          "Lietteinen ranta",
-          "Kuiva vuorenhuippu",
-          "Jäätikön pinta",
-          "Syvänmeren pohja"
+          "Mangrovepuut",
+          "Palmut",
+          "Saniaiset",
+          "Heinät"
         ],
         "oikea": 0,
         "fakta": "Kahlaajat käyttävät Akandassa vuorovesirantoja, joilla mutainen maa ja matala vesi kohtaavat."
@@ -297,7 +297,7 @@
       "nostot": [
         {
           "otsikko": "Mangrove pitää rantaa paikallaan",
-          "teksti": "Akandan kansallispuisto sijaitsee Librevillen pohjoispuolella Mondahin ja Coriscon lahtien ympäristössä. Mangrovemetsissä kasvaa Rhizophora- ja Avicennia-sukujen puita, mutta alueeseen kuuluu myös lietteisiä rantoja, suometsiä ja ruohikkoa. Ramsarin kosteikkokuvauksen mukaan kasvillisuus vakauttaa aluetta ja säätelee veden kulkua. Metsän ja veden suhde on täällä osa elinympäristön toimintaa. Puiston lähiseudun yhteisöille kalastus ja maanviljely kuuluvat toimeentuloon luonnonsuojelualueen rinnalla.",
+          "teksti": "Akandan kansallispuisto sijaitsee Librevillen pohjoispuolella Mondahin ja Coriscon lahtien ympäristössä. Mangrovemetsissä kasvaa Rhizophora- ja Avicennia-sukujen puita, mutta alueeseen kuuluu myös lietteisiä rantoja, suometsiä ja ruohikkoa. kasvillisuus vakauttaa aluetta ja säätelee veden kulkua. Metsän ja veden suhde on täällä osa elinympäristön toimintaa. Puiston lähiseudun yhteisöille kalastus ja maanviljely kuuluvat toimeentuloon luonnonsuojelualueen rinnalla.",
           "wiki": "Akanda National Park",
           "tiedosto": "",
           "lyhyt": "",
@@ -305,8 +305,8 @@
           "lahde": ""
         },
         {
-          "otsikko": "Talvi vie kahlaajat lietteelle",
-          "teksti": "Akandan lietteiset rannat tarjoavat palearktisen alueen muuttolinnuille talvehtimisympäristöjä. Kahlaajien paikka on mutainen rantavyöhyke, jossa maa ja vesi kohtaavat. Samat rannikkovedet ovat myös kalojen ja äyriäisten lisääntymisympäristöä. Kaupungin läheisyys antaa alueelle ympäristökasvatuksen tehtävän: sen luontoa voidaan käyttää oppimisen tukena. Rannan arvoa kuvaavat siis useat eri eläinryhmät ja eri vuodenaikoihin liittyvät käyttötavat, eivät pelkästään yksittäiset lintuhavainnot.",
+          "otsikko": "Pohjoisen muuttolinnut saapuvat",
+          "teksti": "Akandan lietteiset rannat tarjoavat Euroopan ja Pohjois-Aasian muuttolinnuille talvehtimisympäristöjä. Kahlaajien paikka on mutainen rantavyöhyke, jossa maa ja vesi kohtaavat. Samat rannikkovedet ovat myös kalojen ja äyriäisten lisääntymisympäristöä. Kaupungin läheisyys antaa alueelle ympäristökasvatuksen tehtävän: sen luontoa voidaan käyttää oppimisen tukena. Rannan arvoa kuvaavat siis useat eri eläinryhmät ja eri vuodenaikoihin liittyvät käyttötavat, eivät pelkästään yksittäiset lintuhavainnot.",
           "wiki": "Akanda National Park",
           "tiedosto": "",
           "lyhyt": "",
@@ -315,7 +315,7 @@
         },
         {
           "otsikko": "Pongara koostuu monesta maisemasta",
-          "teksti": "Gabonin estuaarin etelärannalla sijaitsevassa Pongarassa mangrove liittyy rantametsiin, suometsiin ja kausittain tulviviin metsiin. Alueeseen kuuluu myös hiekkarantaa ja ruohikkosavannia. Jokiverkostoa muodostavat muun muassa Remboué, Igombiné ja Gomgoué. Kasvillisuuteen kuuluu Acrostichum aureum -saniainen. Puiston ympäristö on myös asuttua: paikalliset yhteisöt kalastavat ja viljelevät esimerkiksi maniokkia ja banaania. Eri maisemien rinnalla kulkee siten myös ihmisten toimeentulon historia.",
+          "teksti": "Gabonin estuaarin etelärannalla sijaitsevassa Pongarassa mangrove liittyy jokivarsimetsiin, suometsiin ja kausittain tulviviin metsiin. Alueeseen kuuluu myös hiekkarantaa ja ruohikkosavannia. Jokiverkostoa muodostavat muun muassa Remboué, Igombiné ja Gomgoué. Kasvillisuuteen kuuluu Acrostichum aureum -saniainen. Puiston ympäristö on myös asuttua: paikalliset yhteisöt kalastavat ja viljelevät esimerkiksi maniokkia ja banaania. Eri maisemien rinnalla kulkee siten myös ihmisten toimeentulon historia.",
           "wiki": "Pongara National Park",
           "tiedosto": "",
           "lyhyt": "",
@@ -324,7 +324,7 @@
         },
         {
           "otsikko": "Ranta on lisääntymispaikka",
-          "teksti": "Pongaran rannat ovat nahkakilpikonnan lisääntymisaluetta, ja myös Pointe Denis tunnetaan lajin munintarannoista. Rannikkovesissä esiintyy muitakin merikilpikonnia. Pongarassa pesiä seurataan ja luonnosta annetaan ekologista opetusta, mutta tämä ei tarkoita, että kävijä voisi ryhtyä hoitamaan niitä. Pesivää eläintä, munia tai poikasia ei lähestytä elämyksen vuoksi. Rannalla katseltava maisema on samalla paikka, jossa eläinten elämänvaiheita suojellaan ja niiden lisääntymistä seurataan.",
+          "teksti": "Pongaran rannat ovat merinahkakilpikonnan lisääntymisaluetta, ja myös Pointe Denis tunnetaan lajin munintarannoista. Rannikkovesissä esiintyy muitakin merikilpikonnia. Pongarassa paikallinen suojeluryhmä vartioi pesiä ja antaa asukkaille ympäristöopetusta. Merinahkakilpikonna elää meressä, mutta naaraat palaavat rannalle munimaan. Rannalla katseltava maisema on samalla paikka, jossa eläinten elämänvaiheita suojellaan ja niiden lisääntymistä seurataan.",
           "wiki": "Pongara National Park",
           "tiedosto": "",
           "lyhyt": "",
@@ -361,7 +361,7 @@
   "nahtavyydet": {
     "Mont-Bouët'n tori": {
       "aika": "Nykyinen markkinapaikka",
-      "teksti": "Mont-Bouët on Librevillen keskeinen tori kaupungin kolmannessa hallintoalueessa. Sen tarjontaan kuuluvat hedelmät ja vihannekset sekä tekstiilit ja vaatteet. Kaupankäynti ulottuu myös torin ympäristöön, jossa on muita liikkeitä ja ravintoloita. Lähteet mainitsevat Länsi-Afrikasta tulevat kankaat ja Euroopasta tuodut käytetyt vaatteet osana tätä tavaroiden liikkumista.\n\nTori kuuluu nykyisen pääkaupungin arkisiin kohtaamispaikkoihin. Librevillen kaupallinen historia on sitä laajempi: isoisän matkavuonna 1873 estuaarin rannalla oli jo kauppakaupunki. Vapautettujen ihmisten uusi asutus oli syntynyt vanhemman mpongwé-asutuksen rinnalle. Nykyisen torin tavarat ja ympäröivät ravintolat kertovat tämän päivän kaupankäynnistä, jonka tarjonta ja palvelut tarkistetaan käyntihetkellä.",
+      "teksti": "Mont-Bouët on Librevillen keskeinen tori kaupungin kolmannessa hallintoalueessa. Sen tarjontaan kuuluvat hedelmät ja vihannekset sekä tekstiilit ja vaatteet. Kaupankäynti ulottuu myös torin ympäristöön, jossa on muita liikkeitä ja ravintoloita. Torilla myydään Länsi-Afrikasta tulevat kankaat ja Euroopasta tuodut käytetyt vaatteet osana tätä tavaroiden liikkumista.\n\nTori kuuluu nykyisen pääkaupungin arkisiin kohtaamispaikkoihin. Librevillen kaupallinen historia on sitä laajempi: vuonna 1873 suistolahden rannalla oli vapautettujen ihmisten uusi asutus. Vapautettujen ihmisten uusi asutus oli syntynyt vanhemman mpongwé-asutuksen rinnalle. Kantajat siirtävät tavaroita torin ahtaissa käytävissä kottikärryillä, ja ympärillä on vaatekauppoja sekä ruokapaikkoja.",
       "kuvat": [
         {
           "tiedosto": "",
@@ -374,7 +374,7 @@
     },
     "Sibangin arboretum": {
       "aika": "1900-luvun puoliväli",
-      "teksti": "Sibang on Librevillen sisäinen arboretum, jossa päiväntasaajan metsän puita säilytetään tutkimuksen ja suojelun kohteina. Se sijaitsee kaupungin kolmannessa hallintoalueessa. Tutkimusyhteyteen kuuluvat CENAREST ja IPHAMETRA, ja alueen puulajistossa mainitaan muun muassa okoumé sekä Duboscia macrocarpa. Metsän itäpuolta rajaa Adoung-joki ja pohjoispuolta Nzeng-Ayongin tie.\n\nArboretum perustettiin 1900-luvun puolivälissä, joten isoisän matkavuonna 1873 nykyistä tutkimusmetsän instituutiota ei vielä ollut. Sen tehtävä liittyy eläviin puihin: metsää säilytetään paikkana, josta tutkimus saa aineistoa. Opastetut vierailut sovitaan etukäteen. Käynti tarjoaa mahdollisuuden tutustua puututkimukseen kaupungin sisällä, kun laajemmat rannikon kansallispuistot vaativat oman retkijärjestelynsä.",
+      "teksti": "Sibang on Librevillen sisäinen arboretum, jossa päiväntasaajan metsän puita säilytetään tutkimuksen ja suojelun kohteina. Se sijaitsee kaupungin kolmannessa hallintoalueessa. Tutkimusta ohjaavat kansallinen tiede- ja teknologiatutkimuksen keskus ja farmakopean sekä perinteisen lääketieteen tutkimuslaitos, ja alueen puulajistossa mainitaan muun muassa okoumé sekä Duboscia macrocarpa. Metsän itäpuolta rajaa Adoung-joki ja pohjoispuolta Nzeng-Ayongin tie.\n\nArboretum perustettiin 1900-luvun puolivälissä, joten isoisän matkavuonna 1873 nykyistä tutkimusmetsän instituutiota ei vielä ollut. Sen tehtävä liittyy eläviin puihin: metsää säilytetään paikkana, josta tutkimus saa aineistoa. Opastetut vierailut sovitaan etukäteen. Käynti tarjoaa mahdollisuuden tutustua puututkimukseen kaupungin sisällä, kun laajemmat rannikon kansallispuistot vaativat oman retkijärjestelynsä.",
       "kuvat": [
         {
           "tiedosto": "",
