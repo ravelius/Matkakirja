@@ -19,10 +19,15 @@ Košice, Luxemburg, Venetsia, Sisilia (Palermo), Kreeta (Heraklion), Islanti (Re
 
 1. **Pääkaupunkien kohdekartat (Codex e04–e14)** — worktree `/Users/Shared/Claude/wt/karttaseppa-paakaupungit-kohdekartat-e04-e14` (haara samanniminen, ei
    committeja vielä). Data: T7 `_tyo/karttaseppa/paakaupungit-pilvi-20261013/` (git archive Codexin haaroista 13.10.) ja suodatettu
-   `paakaupungit-piirto-20261013/` (20 kaupunkia, ≥ 3 kohdetta, PIIRRÄ). Piirto `scratchpad piirra.sh` (loki piirra.log; kohdekartat.mjs --piirra per erä).
-   VIKA: rannikkokaupungeilta puuttuu `meri: true, meriHaku: 0.05` → meri maan värinen (Conakry, Luanda nähty). LISÄÄ lippu tools/piirra-kaupunkikartta.mjs:n
-   KAUPUNGIT-riveihin: banjul, conakry, monrovia, accra, luanda, saotome, mogadishu, castries, nassau, saintjohns, georgetown → piirrä uudelleen
-   (`node tools/piirra-kaupunkikartta.mjs <id>`), katso JOKAINEN kuva. Sitten commit + PR (kohdekartat-mac.json:t Pelikoodarille).
+   `paakaupungit-piirto-20261013/` (20 kaupunkia, ≥ 3 kohdetta, PIIRRÄ). e04–e11 piirretty session ajossa (loppu katkaistiin nollausta varten).
+   IRROTETTU JATKO (pid 66451): `paakaupungit-piirto-20261013/piirra-loput-ja-meri.sh`, loki `piirra-loput.log` samassa kansiossa: e12–e14 --piirra,
+   sitten `meri-lippu.py` ja 11 rannikkokaupungin uusintapiirto; loppurivi "KAIKKI VALMIS".
+   LÖYDÖS + KORJAUS: kohdekartat.mjs:n regex tunnisti vain pelkkä-rajat-rivit → vanhoille riveille, joilla oli `meri: true` (Afrikan kartat), syntyi
+   taulun loppuun DUPLIKAATTI ilman merta (jälkimmäinen voittaa) → meri paperin värinen (Conakry, Luanda nähty). `meri-lippu.py` yhdistää duplikaatit
+   (uudet rajat + vanhan rivin yksiriviset kentät; vanhan rivin kommentit poistuvat) ja lisää meri: true + meriHaku: 0.05 rannikoille;
+   kohdekartat.mjs korjattu worktreessa vaihtamaan vain rajat-rivin (testattava ensimmäisellä ajolla).
+   SEURAAVAKSI: kun loki sanoo KAIKKI VALMIS → `node --check tools/piirra-kaupunkikartta.mjs`, duplikaattitarkistus, katso JOKAINEN 20 kuvaa
+   (meri sininen, kohteet rajojen sisällä), sitten commit + PR (kohdekartat-mac.json:t T7 paakaupungit-piirto-20261013/eXX/ → Pelikoodarille).
    Codexin A-vaihe on kesken: 22 kaupungilla 0 kohdetta, 25:llä 1 → niitä EI piirretä ennen Codexin valmista erää (TILANNE.md:t).
 2. **Kööpenhamina Pariisin tasolle** (omistaja 10.3x, PT:n lista `/Users/Shared/Claude/Matkakirja-fable/scratchpad/koopenhamina-kippi-aukot-20261013.md`):
    - Opus-agentit (tulokset `kaupunki-koopenhamina-20261013/`): ilmakeha/ (aerosoli, pilvet, vesiväri; LUEMINUT-ilmakeha.md) ja elävän kaupungin

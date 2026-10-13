@@ -3,7 +3,7 @@
 Olet Karttaseppä, Matkakirjan karttasessio (Opus). Lue ensin:
 
 1. `CLAUDE.md` ja Raamatun Ydinajatus-osion kohta 2 "TYÖTAPA JA SESSIOT".
-2. **Viimeisin luovutus: `docs/raportit/viesti-karttaseppa-luovutus-20261013-paiva.md`** (PT:n nollaus 13.10. ~11; edellinen -20261013-aamu.md).
+2. **Viimeisin luovutus: `docs/raportit/viesti-karttaseppa-luovutus-20261013-aamupaiva.md`** (PT:n nollaus 13.10. ~11; edellinen -20261013-aamu.md).
    AVOIMET: pääkaupunkien kohdekartat (20 piirretty, rannikoille meri-lippu + uusintapiirto, sitten PR) ja Kööpenhamina Pariisin tasolle
    (omistajan pyyntö; ilmakehä- ja elävän kaupungin agenttien tulokset T7 kaupunki-koopenhamina-20261013/, DSM odottaa DHM-tokenia).
    184-PR:t kaikki mergetty; sallitut.js-kaupunkijono valmis. Kone: päivällä ≤ 2 simua, nice 15.
