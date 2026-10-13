@@ -11,15 +11,19 @@ Edellinen luovutus: viesti-linssiseppa-luovutus-20261013-aamu.md.
 ## 1. KÄYNNISSÄ (Julkaisijan jono linjalla 1/2, automaattinen)
 1) **alkulento187b** AJETTU 11.54 OK (todistus-alkulento187b-ipad-20261013-1152; matala ohitus, kone näkyy, loiva kaarros) → PT KUITTASI 9de62c31e (SHA NS:lle).
 2) **katso187** AJETTU 12.03: 6/6 löytyi (todistus-katso187-ipad-20261013-1154; TODISTUS.md puuttuu raporttityökalun Unicode-virheen takia) → tulos PK:lle (Lontoon aloituspaikalta Shard peittää Tower Bridgen → PK:n moottorin asia).
-3) **kehys187b** = linssiseppa/museo-palaute-187 **ca49d720d** (käännös KÄÄNNÖS NYT linja 2), iPhone + iPad kehysvertailu (sk-kehys187-*.txt)
-   + iPad museon nimi (sk-nimi187-ipad.txt). Lokit `lokit/todistus-<era>-<laite>-*`. Ilmoita SIMU VAPAA kun kaikki ajettu.
+3) **kehys187b** AJETTU 12.13 (4e1812b47): kehysvertailu lokit/todistus-kehys187b-{iphone-20261013-1204,ipad-20261013-1207}
+   (Perunansyöjien kehys 13 → 38 sRGB, ruskea puu näkyy; Iloinen juoja kulta 90 → 104; kuvat kopioitu lokit/museo187-pt/kehys-*).
+   Nimen tummennus EI näkynyt (venytetty tekstuuri) → 78a1d7301 suikaleina.
+4) **katso187b** = katso-kohteet-187 50a680cde + af91c8cac (Lontoo uudesta suunnasta), iPad sk-katso187b-ipad.txt → kuvan polku PT:lle + PK:lle.
+5) **nimi187g** = museo-palaute-187 78a1d7301, iPad sk-nimi187-ipad.txt (tarkista yläreunan pehmeä tummennus: rajaa ffmpeg crop=2752:700:0:0).
+Ilmoita Julkaisijalle SIMU VAPAA kunkin jälkeen.
 
 ## 2. MUSEO (juna 187) – linssiseppa/museo-palaute-187, wt /Users/Shared/Claude/wt/proto-linssiseppa-palaute187
 Sisältää: kävelyn korjaukset (seinä ei pylvään taakse 831300260, lattia → luonteva näkymä 3b1c68559; PT EI vielä kuitannut kävelyä,
 odotti uusia iPhone-kuvia + videon), omistajan 5 kohtaa 07.5x (lähestymiskuvasarja 8 Commons + 2 Codex, nimi ylhäällä, ☰-lähteet, ei
 automaattista sisäänmenoa; näyttely ovensuulta; alareuna → taakse; nimi + selite kahdelle riville; i-kohdat 64 teosta/176 kohtaa, PT hyväksyi),
 renkaat läpikuultaviksi/hohtaviksi (08.2x), KatsottuTeos-raja kapealle ruudulle (1ff67c5a9), nimen tummennus (4c8bef083 → ca49d720d).
-**Kesken:** kehyksen vaalennus (omistaja 10.4x "kehys liian tumma"): 9950c7b23 musta kehys 78/58/42 + puu × 3,7, kulta × 1,5.
+**Kesken:** kehyksen vaalennus (omistaja 10.4x "kehys liian tumma"): 9950c7b23 musta kehys 78/58/42 + puu × 3,7, kulta × 1,5 (simu OK, kuvapari valmis).
 QA `museo kehysvalo <puu> <kulta> [vanha]`. Ensimmäinen vertailu (kehys187, 9f64f71e5) näytti vain 13 → 19 sRGB → nyt vahvempi.
 → Kun kehys187b valmis: tarkista kuvat (NYKYINEN | UUSI, Perunansyöjät/Iloinen juoja/Yövartio, iPhone + iPad), nimi (yläreunan
 pehmeä liuku, ei kovaa reunaa), sitten PT:lle KUITTAUSPYYNTÖ koko haarasta (kävely + palaute + kehys). Valmis kuvapaketti
@@ -35,10 +39,15 @@ elävä kaupunki/vesi/valot ovat Googlen 3D-näkymässä → ei näkyisi. → OD
 
 ## 4. KAUPUNGIT – linssiseppa/kippi-lontoo-praha-187, wt proto-linssiseppa-kippi187
 KUITATTU 187: cd0fbaac5 (Oslo, Bergen, Ljubljana) ja 2de4caf63 (Bryssel, Amsterdam, Krakova, Sevilla, Sofia, Bukarest, Tampere, Akershus).
-**Erä 3 agentilla kesken** (nollaus voi katkaista): Vilna + Valletta f6ee654cf, kippi 430bf8946; Ateena + Košice muutokset työpuussa
-commitoimatta (ElavaKaupunki, KaupunkiVesi, KaupunkiYovalot, PuuRuudukko, testit) → tarkista `git -C … diff`, aja testit, commitoi tai jatka.
-Jäljellä Luxemburg, Venetsia (vesi 09.02 jälkeen, saaret), Sisilia, Kreeta, Islanti; Bergen raitiopoikkeukseen. Vesi **index-v14**
-(vientipaketti _valmiit/elava-lontoo-praha-vienti-20261013) → Julkaisija vie ämpäriin ENNEN käännöstä. Valletta liikenne vasemmalla.
+**Erä 3 VALMIS agentilta** (kärki f5832e93e): Vilna, Valletta (vasen liikenne), Ateena, Košice, Luxemburg, Venetsia (saaret maata),
+Sisilia/Palermo, Kreeta/Heraklion, Islanti/Reykjavik + Bergen Bybanen raitiopoikkeukseen; kippi 0 uutta riviä (14 aukiota testissä ilman riviä);
+Resources +4,1 Mt; testit 1670/1671. Vesi **index-v14** → Julkaisijalta pyydetty vienti 12.1x (tarkista ennen käännöstä: curl
+media.matkakirja.app/kartta/vesi/… tai Julkaisijan kuittaus). Avoimet: Luxemburgin Guillaume II -rivi (74 m) simukuvasta, Venetsian nosto 0,4 m,
+Palermon/Maltan isot lautat pikkulauttoina. Simukamerat (agentin): Vilna 54.69317 25.27017 250 60 47 · Valletta 35.88862 14.49938 250 60 325 ·
+Ateena 37.96381 23.71543 250 60 209 · Košice 48.72085 21.27366 250 60 127 · Luxemburg 49.61413 6.12883 250 60 331 ·
+Venetsia 45.43800 12.33590 600 60 200 ja 45.43200 12.34000 1800 55 320 · Palermo 38.09920 13.34657 250 60 292 ·
+Heraklion 35.31565 25.14062 250 60 75 · Reykjavik yö (`linssi opas tunti 23`) 64.14600 -21.93500 1200 65 250 · Bergen 60.38804 5.32924 600 60 180
+(kaikki `linssi opas kamera <lat> <lon> <m> <pitch> <yaw> maa`). Tee skenaario sk-kaupungit187e-ipad.txt:n pohjalta + Akershus.
 **Akershusin pysäkkikuva** (PT): ota erän 3 simussa (vain kippi-haarassa uusi rivi): kaupunkitila Oslo → kori 1 → oleta kierros alkaa →
 `linssi opas hyppy Q644464` (hyppy löytyy vasta kun kierros on alkanut) → kuva. Liitä seuraavaan kuittauspyyntöön.
 Skenaariopohja: sk-kaupungit187e-ipad.txt.
