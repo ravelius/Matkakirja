@@ -1,0 +1,192 @@
+{
+  "schemaVersion": 1,
+  "cityName": "VENETSIA",
+  "gameCityId": "venetsia",
+  "mediaSlug": "venice",
+  "taskNumbers": [
+    187,
+    188
+  ],
+  "updatedAt": "2026-10-13T19:53:56.957061+00:00",
+  "sourcePath": "posti/fable-codex-saapumisintro-uudet-6-8-loput-2-20261013.md",
+  "sourceCommit": "dbdaff9a39fa0e5052f176c890c85836e1a69a1f",
+  "sourceBlob": "2e5adc4cb04a23fcb4cd8fdd75426ac78afdcc9d",
+  "sourceReadInFull": true,
+  "sourceReadBy": "/root/intro_owner_rejection_inventory",
+  "sourceReadReceiptPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/source-read-receipt.json",
+  "assets": [
+    {
+      "taskNumber": 187,
+      "mediaSlug": "venice",
+      "slot": 6,
+      "filename": "venice-6-nakoala-intro-v1.png",
+      "title": "koko kaupunki tunnetulta näköalapaikalta päivällä — Venetsian San Marcon allas San Giorgio Maggioren kellotornista luoteeseen päivällä, San Marcon kellotorni ja Dogen palatsi kaukana.",
+      "fullDeliveryRequirement": "**6 / koko kaupunki tunnetulta näköalapaikalta päivällä — Venetsian San Marcon allas San Giorgio Maggioren kellotornista luoteeseen päivällä, San Marcon kellotorni ja Dogen palatsi kaukana.** Tiedosto `venice-6-nakoala-intro-v1.png`.\nMitä kuvataan: Venetsian laaja kaupunkipanoraama päivänvalossa korkealta, San Giorgio Maggioren saaren kellotornin näköalatasanteelta, veden yli luoteeseen. Etualalla alareunassa vain vihertävää, hieman aaltoilevaa San Marcon allasta ja aivan kuvan alalaidassa kapea vaalea kiviaukon reunus; vedellä muutama pieni vene kaukana (pieniä, merkittömiä, ei suuria risteilyaluksia). Keskellä kuvaa vastarannalla pitkä matala rantaviiva: vaaleanpunertavan ja valkoisen Dogen palatsin gotiikkainen julkisivu (pieni vaalea lohko), sen takana basilikan pyöreät kupolit ja palatsin vasemmalla puolella sen takaa kohoava solakka punatiilinen San Marcon kellotorni terävine pyramidikattoineen (selvästi tunnistettava, mutta vain pieni osa kuvasta, noin viidesosa kuvan korkeudesta); vasemmassa reunassa Canal Grandin suu ja sen rannan matalat vaaleat palatsit, oikealla pitkä rivi punaruskeita terrakottakattoja, savupiippuja ja matalia kerrostaloja Riva degli Schiavonin suuntaan, aivan oikeassa laidassa matala puiden reunustama saari pienenä vihreänä juovana. Taustalla horisontissa sumuinen vaalea mantereen viiva ja kirkas sininen taivas, vähän vaaleita pilviä. Värikuva, nykyaika, ei ihmisiä lähellä (ei lainkaan tai korkeintaan hädin näkyviä pisteitä kaukana). Kulma: vaakakuva, korotettu näkökulma noin 60 metrin korkeudesta, kamera suunnattu luoteeseen (suunta noin 318 astetta; vaakasuuntainen näkökulma enintään noin 50 astetta, siis kuvassa suunnat noin 293–343 astetta): San Marcon kellotorni on suunnassa noin 321, Dogen palatsi noin 327 ja basilika noin 326 astetta, noin 0,7 kilometrin päässä, siis kuvan keskellä; Salute-kirkko ja Punta della Dogana (suunta 283–287 astetta) jäävät vasemmalle kuvan ulkopuolelle, Redentore ja Giudecca (suunta noin 250 astetta) sekä Arsenale (noin 41 astetta) ja Lido (noin 132 astetta) kameran taakse tai sivulle, eli niitä ei saa olla kuvassa. Valo: kirkas aamupäivä, pehmeä luonnollinen valo takaa vasemmalta (kaakosta), niin että San Marcon puoli on valaistu, luonnolliset värit, ei HDR:ää. Ei saa näkyä: Salute-kirkkoa, Punta della Doganaa, Redentorea, Rialtosiltaa, ei Arsenalen portteja, ei tekstiä, kylttejä, mainoksia, logoja, vesileimaa eikä kehystä, ei lähellä olevia ihmisiä, ei risteilyaluksia, ei vaporettoja erottuvina, ei moderneja korkeita rakennuksia tai nostureita, ei lippuja (ei Italian, ei Venetsian lippua mastoissa), ei kellotornin patsaita tai enkeliä erottuvana detaljina eikä mitään muuta taideteosta pääaiheena. Fotorealistinen havainnekuva, vaimeat värit, 1536 x 1024.\nKuvateksti-ehdotus (loppuu sanaan Havainnekuva.): Venetsian San Marcon allas San Giorgio Maggioren kellotornista luoteeseen päivällä, San Marcon kellotorni ja Dogen palatsi kaukana. Havainnekuva.\n\n",
+      "sourceVersions": [
+        {
+          "path": "posti/fable-codex-saapumisintro-uudet-6-8-loput-2-20261013.md",
+          "commit": "dbdaff9a39fa0e5052f176c890c85836e1a69a1f",
+          "blob": "2e5adc4cb04a23fcb4cd8fdd75426ac78afdcc9d",
+          "readInFull": true
+        }
+      ],
+      "ownerThreadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+      "hostId": "local",
+      "generationCap": 1,
+      "status": "QA-R2-delivered-for-PT-review",
+      "productionStarted": false,
+      "delivered": true,
+      "city": "VENETSIA",
+      "gameID": "venetsia",
+      "part": 2,
+      "sourceBlob": "2e5adc4cb04a23fcb4cd8fdd75426ac78afdcc9d",
+      "sourceCommit": "dbdaff9a39fa0e5052f176c890c85836e1a69a1f",
+      "sourcePath": "posti/fable-codex-saapumisintro-uudet-6-8-loput-2-20261013.md",
+      "sourceNasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/sources/fable-codex-saapumisintro-uudet-6-8-loput-2-20261013.md",
+      "sourceCharacterSpan": [
+        17013,
+        19979
+      ],
+      "sourceByteSpan": [
+        17642,
+        20696
+      ],
+      "fullDeliveryRequirementSHA256": "f25cfb6e58f2a145827bb5c39a124e0e19bf60d127e311a3fee8ec3ba59e5b6c",
+      "fullDirective": "Venetsian laaja kaupunkipanoraama päivänvalossa korkealta, San Giorgio Maggioren saaren kellotornin näköalatasanteelta, veden yli luoteeseen. Etualalla alareunassa vain vihertävää, hieman aaltoilevaa San Marcon allasta ja aivan kuvan alalaidassa kapea vaalea kiviaukon reunus; vedellä muutama pieni vene kaukana (pieniä, merkittömiä, ei suuria risteilyaluksia). Keskellä kuvaa vastarannalla pitkä matala rantaviiva: vaaleanpunertavan ja valkoisen Dogen palatsin gotiikkainen julkisivu (pieni vaalea lohko), sen takana basilikan pyöreät kupolit ja palatsin vasemmalla puolella sen takaa kohoava solakka punatiilinen San Marcon kellotorni terävine pyramidikattoineen (selvästi tunnistettava, mutta vain pieni osa kuvasta, noin viidesosa kuvan korkeudesta); vasemmassa reunassa Canal Grandin suu ja sen rannan matalat vaaleat palatsit, oikealla pitkä rivi punaruskeita terrakottakattoja, savupiippuja ja matalia kerrostaloja Riva degli Schiavonin suuntaan, aivan oikeassa laidassa matala puiden reunustama saari pienenä vihreänä juovana. Taustalla horisontissa sumuinen vaalea mantereen viiva ja kirkas sininen taivas, vähän vaaleita pilviä. Värikuva, nykyaika, ei ihmisiä lähellä (ei lainkaan tai korkeintaan hädin näkyviä pisteitä kaukana). Kulma: vaakakuva, korotettu näkökulma noin 60 metrin korkeudesta, kamera suunnattu luoteeseen (suunta noin 318 astetta; vaakasuuntainen näkökulma enintään noin 50 astetta, siis kuvassa suunnat noin 293–343 astetta): San Marcon kellotorni on suunnassa noin 321, Dogen palatsi noin 327 ja basilika noin 326 astetta, noin 0,7 kilometrin päässä, siis kuvan keskellä; Salute-kirkko ja Punta della Dogana (suunta 283–287 astetta) jäävät vasemmalle kuvan ulkopuolelle, Redentore ja Giudecca (suunta noin 250 astetta) sekä Arsenale (noin 41 astetta) ja Lido (noin 132 astetta) kameran taakse tai sivulle, eli niitä ei saa olla kuvassa. Valo: kirkas aamupäivä, pehmeä luonnollinen valo takaa vasemmalta (kaakosta), niin että San Marcon puoli on valaistu, luonnolliset värit, ei HDR:ää. Ei saa näkyä: Salute-kirkkoa, Punta della Doganaa, Redentorea, Rialtosiltaa, ei Arsenalen portteja, ei tekstiä, kylttejä, mainoksia, logoja, vesileimaa eikä kehystä, ei lähellä olevia ihmisiä, ei risteilyaluksia, ei vaporettoja erottuvina, ei moderneja korkeita rakennuksia tai nostureita, ei lippuja (ei Italian, ei Venetsian lippua mastoissa), ei kellotornin patsaita tai enkeliä erottuvana detaljina eikä mitään muuta taideteosta pääaiheena. Fotorealistinen havainnekuva, vaimeat värit, 1536 x 1024.",
+      "caption": "Venetsian San Marcon allas San Giorgio Maggioren kellotornista luoteeseen päivällä, San Marcon kellotorni ja Dogen palatsi kaukana. Havainnekuva.",
+      "sourceReadInFullVerified": true,
+      "mappingBlockExactSourceMatch": true,
+      "r2Prefix": "julisteet/saapumisintro/venice/20261013-uudet-6-8/",
+      "deliveryManifestPath": "posti/kuvatoimitus-saapumisintro-venice-uudet-6-8-20261013.json",
+      "partDeliveryReportPath": "posti/codex-fable-saapumisintro-uudet-6-8-loput-2-20261013.md",
+      "generationCallsRecorded": 0,
+      "qaAcceptedVerified": true,
+      "r2BytesVerified": true,
+      "mailboxDeliveryVerified": false,
+      "ownerAcceptanceVerified": false,
+      "acceptanceRoute": "PT acts for owner; source authorizes direct delivery. Actual PT acceptance remains evidence-dependent.",
+      "gameIntegrated": false,
+      "published": false,
+      "r2Key": "julisteet/saapumisintro/venice/20261013-uudet-6-8/venice-6-nakoala-intro-v1.png",
+      "historical": false,
+      "id": "venice-6-nakoala-intro-v1",
+      "sourceReadInFull": true,
+      "cityName": "VENETSIA",
+      "gameCityId": "venetsia",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/venice/native-6.png",
+      "nativeSHA256": "d17f041a04ac9c9e5d2d0a64bca8cecb35f01165f64f001b280c22067e4ff150",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/venice/venice-6-nakoala-intro-v1.png",
+      "workspacePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/eurooppa-introt-uudet68-loput-20261013/venice/venice-6-nakoala-intro-v1.png",
+      "sha256": "a554aed341f891b4a1cf8c0189484297186622c17b90344c3b4550f9b8673325",
+      "width": 1536,
+      "height": 1024,
+      "opaque": true,
+      "sRGB": true,
+      "neutralGrayscale": false,
+      "pixelIdentityAfterMetadataExport": true,
+      "pixelIdentityToNative": true,
+      "historicalGrayscaleEncodingNormalized": false,
+      "exportProcessing": "Metadata/sRGB only; pixels unchanged",
+      "generationPrompt": "Use case: photorealistic-natural.\nAsset: one NEW current-day full-color camera-photograph-like European city arrival image, exactly 1536 x 1024 pixels, landscape 3:2, opaque PNG. One image only, no collage or contact sheet.\nSubject: koko kaupunki tunnetulta näköalapaikalta päivällä — Venetsian San Marcon allas San Giorgio Maggioren kellotornista luoteeseen päivällä, San Marcon kellotorni ja Dogen palatsi kaukana.\n\nEXACT SCENE, VIEWPOINT, GEOMETRY, LIGHT AND EXCLUSIONS (the following Finnish source description is the controlling composition brief; follow every detail including bearing/FOV, relative left/right position, travel direction, scale, and exclusions):\nVenetsian laaja kaupunkipanoraama päivänvalossa korkealta, San Giorgio Maggioren saaren kellotornin näköalatasanteelta, veden yli luoteeseen. Etualalla alareunassa vain vihertävää, hieman aaltoilevaa San Marcon allasta ja aivan kuvan alalaidassa kapea vaalea kiviaukon reunus; vedellä muutama pieni vene kaukana (pieniä, merkittömiä, ei suuria risteilyaluksia). Keskellä kuvaa vastarannalla pitkä matala rantaviiva: vaaleanpunertavan ja valkoisen Dogen palatsin gotiikkainen julkisivu (pieni vaalea lohko), sen takana basilikan pyöreät kupolit ja palatsin vasemmalla puolella sen takaa kohoava solakka punatiilinen San Marcon kellotorni terävine pyramidikattoineen (selvästi tunnistettava, mutta vain pieni osa kuvasta, noin viidesosa kuvan korkeudesta); vasemmassa reunassa Canal Grandin suu ja sen rannan matalat vaaleat palatsit, oikealla pitkä rivi punaruskeita terrakottakattoja, savupiippuja ja matalia kerrostaloja Riva degli Schiavonin suuntaan, aivan oikeassa laidassa matala puiden reunustama saari pienenä vihreänä juovana. Taustalla horisontissa sumuinen vaalea mantereen viiva ja kirkas sininen taivas, vähän vaaleita pilviä. Värikuva, nykyaika, ei ihmisiä lähellä (ei lainkaan tai korkeintaan hädin näkyviä pisteitä kaukana). Kulma: vaakakuva, korotettu näkökulma noin 60 metrin korkeudesta, kamera suunnattu luoteeseen (suunta noin 318 astetta; vaakasuuntainen näkökulma enintään noin 50 astetta, siis kuvassa suunnat noin 293–343 astetta): San Marcon kellotorni on suunnassa noin 321, Dogen palatsi noin 327 ja basilika noin 326 astetta, noin 0,7 kilometrin päässä, siis kuvan keskellä; Salute-kirkko ja Punta della Dogana (suunta 283–287 astetta) jäävät vasemmalle kuvan ulkopuolelle, Redentore ja Giudecca (suunta noin 250 astetta) sekä Arsenale (noin 41 astetta) ja Lido (noin 132 astetta) kameran taakse tai sivulle, eli niitä ei saa olla kuvassa. Valo: kirkas aamupäivä, pehmeä luonnollinen valo takaa vasemmalta (kaakosta), niin että San Marcon puoli on valaistu, luonnolliset värit, ei HDR:ää. Ei saa näkyä: Salute-kirkkoa, Punta della Doganaa, Redentorea, Rialtosiltaa, ei Arsenalen portteja, ei tekstiä, kylttejä, mainoksia, logoja, vesileimaa eikä kehystä, ei lähellä olevia ihmisiä, ei risteilyaluksia, ei vaporettoja erottuvina, ei moderneja korkeita rakennuksia tai nostureita, ei lippuja (ei Italian, ei Venetsian lippua mastoissa), ei kellotornin patsaita tai enkeliä erottuvana detaljina eikä mitään muuta taideteosta pääaiheena. Fotorealistinen havainnekuva, vaimeat värit, 1536 x 1024.\n\nFinal photographic requirements: Natural real-camera appearance with restrained ordinary exposure, soft realistic light and subdued COLOR; this is PRESENT DAY, not a historical reconstruction and not a youth party. Respect the exact stated transport form and uniformly neutral unmarked paint. Do not restore brand colors, stripes, vehicle identifiers, flags, signs, letters, numbers, logos, advertisements or clothing trademarks. Faces remain tiny anonymous silhouettes or back-facing at a distance as specified. No extra landmarks, sculpture, architecture, vehicles or geographic features beyond those the controlling description allows. Correct real-looking structural geometry and coherent physics. Irregular leaves, non-repeating water ripples, naturally varying worn stone/plaster, realistic glass and metal; no plastic AI surfaces, pattern stamping, HDR, cinematic oversaturation or CGI look. Any locomotive or boat motion is shown only as described, never with added drawn motion graphics. Frame native 1536 x 1024 from the start; do not create any in-image caption, disclaimer, filename, overlay, UI, frame or watermark.\n",
+      "sourceReadReceiptPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/source-read-receipt.json",
+      "references": [
+        {
+          "kind": "authorized-scene-commission",
+          "path": "posti/fable-codex-saapumisintro-uudet-6-8-loput-2-20261013.md",
+          "commit": "dbdaff9a39fa0e5052f176c890c85836e1a69a1f",
+          "blob": "2e5adc4cb04a23fcb4cd8fdd75426ac78afdcc9d",
+          "use": "Exact assigned source card read in full. Camera direction, FOV, landmark positions, transport geometry and exclusions are preserved; this is commission evidence, not a separate visual photograph reference."
+        }
+      ],
+      "url": "https://media.matkakirja.app/julisteet/saapumisintro/venice/20261013-uudet-6-8/venice-6-nakoala-intro-v1.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/venice/20261013-uudet-6-8/venice-6-nakoala-intro-v1.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "QA": {
+        "slot": 6,
+        "taskNumber": 187,
+        "assetID": "venice-6-nakoala-intro-v1",
+        "targetJsonPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/venice/asset-6.json",
+        "nativeSHA256": "d17f041a04ac9c9e5d2d0a64bca8cecb35f01165f64f001b280c22067e4ff150",
+        "finalSHA256": "a554aed341f891b4a1cf8c0189484297186622c17b90344c3b4550f9b8673325",
+        "verdict": "accepted",
+        "reason": "San Marcon allas, pieni Dogen palatsi ja takana kupolit sekä vasemmalla kellotorni muodostavat ohjeen panoraaman; nimeltä kielletyt maamerkit eivät erotu. Vedellä vain pieniä kaukaisia veneitä. Tornin kullanvärinen kärki ei erotu tunnistettavana enkelidetaljina.",
+        "reviewer": "/root",
+        "reviewedAt": "2026-10-13T19:53:26.515814+00:00",
+        "nativeViewedInFull": true,
+        "assignedSourceCardReadInFull": true,
+        "nativePixelsEqualFinalVerified": true,
+        "technicalPassed": true,
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "published": false
+      },
+      "R2Proof": {
+        "slot": 6,
+        "r2Key": "julisteet/saapumisintro/venice/20261013-uudet-6-8/venice-6-nakoala-intro-v1.png",
+        "url": "https://media.matkakirja.app/julisteet/saapumisintro/venice/20261013-uudet-6-8/venice-6-nakoala-intro-v1.png",
+        "sha256": "a554aed341f891b4a1cf8c0189484297186622c17b90344c3b4550f9b8673325",
+        "nativeSHA256": "d17f041a04ac9c9e5d2d0a64bca8cecb35f01165f64f001b280c22067e4ff150",
+        "bytes": 2100933,
+        "readbacks": [
+          {
+            "http": 200,
+            "byteExact": true,
+            "sha256": "a554aed341f891b4a1cf8c0189484297186622c17b90344c3b4550f9b8673325",
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "cacheBusted": false
+          },
+          {
+            "http": 200,
+            "byteExact": true,
+            "sha256": "a554aed341f891b4a1cf8c0189484297186622c17b90344c3b4550f9b8673325",
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "cacheBusted": true
+          }
+        ],
+        "byteExactReadback": true,
+        "verifiedAt": "2026-10-13T19:53:56.819656+00:00"
+      },
+      "FableReceiptVerified": false
+    }
+  ],
+  "omittedItems": [
+    {
+      "taskNumber": 188,
+      "slot": 8,
+      "reason": "Vesibussin vesirajan yläpuolinen alarunko on laajalti tumma vihreä-musta, kun ohje vaatii yksiväristä vaaleaa harmaa-valkoista runkoa. Tumma yhtenäinen rungon osa erottuu myös keulassa eikä ole vain yksittäinen varjo.",
+      "stage": "independent-QA",
+      "additionalGenerationAllowed": false,
+      "nativeSHA256": "ca090771a534ff36fee293857a0c0ba9d0645c3e5c36ccc3b350c23c1a4081d1",
+      "finalSHA256": "6c4e89b9d221146e487d7762de787d6fde4a0be3af9f5adaf2b39793de358e16"
+    }
+  ],
+  "actualCalls": 2,
+  "maximumGenerationCalls": 2,
+  "allRequestedItemsHandled": true,
+  "allRequestedImagesDelivered": false,
+  "productionCompleteWithinSourceLimit": true,
+  "directMailboxDeliveryAuthorized": true,
+  "acceptanceRoute": "Päätoimittaja reviews on the owner authority in the exact source. This authorization is not yet an actual acceptance receipt.",
+  "ownerAcceptanceVerified": false,
+  "FableReceiptVerified": false,
+  "gameIntegrated": false,
+  "published": false,
+  "oldFiveApprovedPilotImagesPreserved": true,
+  "oldCelebrationAnd1873TopicsRemainWithdrawn": true,
+  "existingHeroSlotsPreserved": [
+    1,
+    2,
+    3
+  ],
+  "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+  "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+  "newTopics": {
+    "6": "daytime-city-panorama",
+    "8": "local-transport-in-motion"
+  }
+}

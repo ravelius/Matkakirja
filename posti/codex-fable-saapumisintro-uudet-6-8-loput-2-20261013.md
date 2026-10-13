@@ -1,6 +1,6 @@
 # Euroopan uudet saapumisintroaiheet — osa 2/2, 13.10.2026
 
-18 QA/R2-varmennettua kuvaa toimitettu, 4 perusteltua lopullista poisjättöä. Käsitelty 22/47 tämän osan nimetyistä kuvista; 22 generointikutsua. Tilaus on kesken, kun kaikki nimetyt kohteet eivät vielä ole käsitelty.
+19 QA/R2-varmennettua kuvaa toimitettu, 5 perusteltua lopullista poisjättöä. Käsitelty 24/47 tämän osan nimetyistä kuvista; 24 generointikutsua. Tilaus on kesken, kun kaikki nimetyt kohteet eivät vielä ole käsitelty.
 
 Koko laajennus käsittää 95 nimettyä kuvaa (#133–227): osa 1 sisältää 48 ja osa 2 47 kuvaa. Aiempi 88+1 arvio ei korvaa lähteiden nimettyä inventaariota. Yksi uusi sisäänrakennettu generointi per kuva; ei uusintoja, vertailuottoja, inpaintingia tai rajauksia.
 
@@ -24,6 +24,13 @@ Manifesti: `posti/kuvatoimitus-saapumisintro-seville-uudet-6-8-20261013.json`. T
 
 - #185, slot 6: Sevillan vanhan kaupungin katot Giraldan näköalatasolta etelään, edessä katedraalin katto. Havainnekuva.
 - #186, slot 8: Sevillan Metrocentro-raitiovaunu hitaasti Avenida de la Constituciónilla ilman ajojohtoa. Havainnekuva.
+
+## VENETSIA
+
+Manifesti: `posti/kuvatoimitus-saapumisintro-venice-uudet-6-8-20261013.json`. Toimitettu 1/2; kutsuja 2.
+
+- #187, slot 6: Venetsian San Marcon allas San Giorgio Maggioren kellotornista luoteeseen päivällä, San Marcon kellotorni ja Dogen palatsi kaukana. Havainnekuva.
+- Poisjättö #188, slot 8: Vesibussin vesirajan yläpuolinen alarunko on laajalti tumma vihreä-musta, kun ohje vaatii yksiväristä vaaleaa harmaa-valkoista runkoa. Tumma yhtenäinen rungon osa erottuu myös keulassa eikä ole vain yksittäinen varjo.
 
 ## KRAKOVA
 
