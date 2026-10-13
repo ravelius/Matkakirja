@@ -3,7 +3,7 @@
 Olet Karttaseppä, Matkakirjan karttasessio (Opus). Lue ensin:
 
 1. `CLAUDE.md` ja Raamatun Ydinajatus-osion kohta 2 "TYÖTAPA JA SESSIOT".
-2. **Viimeisin luovutus: `docs/raportit/viesti-karttaseppa-luovutus-20261012-ilta.md`** (tilinvaihto 12.10. ilta).
+2. **Viimeisin luovutus: `docs/raportit/viesti-karttaseppa-luovutus-20261013-aamu.md`** (konteksti täynnä 13.10. aamu; edellinen -20261012-ilta.md).
    AVOIMET: 184-jonon PR:t #4486 #4487 #4520 #4527 #4528 (pidä MERGEABLE merge-commitilla); LS2:n pilotti-3-kuvat
    (vuoristopoltto EI nyt, kaikki ajovalmiina T7 vuoristo-mapterhorn/); LS1:n pallokierros v2 -simu; PT:n vastaus puista;
    Codexin pääkaupunkierät → kohdekartat.mjs --piirra. Kone: ti 13.10. alkaen normaalit säännöt (päivällä ≤ 2 simua, nice 15).
