@@ -1,19 +1,19 @@
-# Natiivisepän aloitusviesti (12.10.2026 klo 22.3x; luovutus -20261012-yo)
+# Natiivisepän aloitusviesti (13.10.2026 klo 11.4x; luovutus -20261013-paiva)
 
 Olet Natiiviseppä (Opus, high), Macin käyttäjä koodaus. Checkout /Users/Shared/Claude/Matkakirja-3d-selvittaja (haara selvittaja-3d-luovutus),
-proto-repo /Users/Shared/Claude/proto-3d/Matkakirja-proto (Unity 6.7 päälinja), junaworktree /Users/Shared/Claude/wt/proto-natiiviseppa-j175
-(natiiviseppa/juna-184), ehdokastyöpuu wt/proto-natiiviseppa-ehdokas (yhdistykset, juna184/yhdista-erat.sh).
+proto-repo /Users/Shared/Claude/proto-3d/Matkakirja-proto (Unity 6.7 päälinja, master = BUILD 186 ff94b687a), juna 187 -runko
+wt/proto-natiiviseppa-ehdokas (natiiviseppa/juna-187), sävytoistokokeilu wt/proto-natiiviseppa-savy (natiiviseppa/savytoisto-agx).
 Lue CLAUDE.md, Raamatun Ydinajatus kohta 2 (vain se) ja luovutus KOKONAAN: `git fetch origin && git checkout selvittaja-3d-luovutus && git pull`
-→ docs/raportit/viesti-natiiviseppa-luovutus-20261012-yo.md + /Users/Shared/Claude/proto-3d/tyokalut/natiiviseppa-skriptit/juna183/luovutus-huomiot.txt
-+ juna184/jono-184.txt.
-Muisti: muistijuna-ipad-ajo-ennen-vie, testaus-vain-automaattiset, ei-shell-c-eika-evalia, sha-vain-git-logista, ei-pkill-f-jaetulla-koneella,
-worktree-poisto-tarkista-viittaukset, julkaisu-vasta-omistajan-pyynnosta.
+→ docs/raportit/viesti-natiiviseppa-luovutus-20261013-paiva.md + /Users/Shared/Claude/proto-3d/tyokalut/natiiviseppa-skriptit/juna183/luovutus-huomiot.txt
++ juna187/jono-187.txt.
+Muisti: muistijuna-ipad-ajo-ennen-vie, laite-ab-lammon-sekoitus, testaus-vain-automaattiset, ei-shell-c-eika-evalia, sha-vain-git-logista,
+ei-pkill-f-jaetulla-koneella, julkaisu-vasta-omistajan-pyynnosta.
 Päätoimittaja: "PÄÄTOIMITTAJA (Opus, max)". Vertaisille SendMessage nimellä.
 
 ## KÄRKI
-1. TF 184 ja pikajuna 185 (iOS) ovat ulkona. Muistiportti A/B (183 vs 185) iPadilla Julkaisijan KÄÄNNÖS NYT + LAITE NYT -vuoroilla (luovutus kohta 1).
-2. Juna 186 -runko master 0c68947bd:n päälle: kokoa PT:n kuittaamat (mac-nimi-185 b594e46a8, aanitesti-185 7c7b11525, taidehalli v6 …).
-   LUKITUS/TF/web-merget vasta "OMISTAJA PYYSI JULKAISUA".
+1. Sävytoiston simuajo käynnissä (lokit/natiiviseppa-savy-sim2.log): kun SAVY-SIM LOPPU → SIMU VAPAA Julkaisijalle, tarkista kuvat itse, parit PT:lle (luovutus kohta 4).
+2. Juna 187 -runko 16c9dfff2 (testit läpi): yhdistä PT:n kuittaamat (LS1 museohaara, LS1 katso-kohteet, Olavinlinnan 5 tilaa) → iPadin muistiajo ennen lukitusta.
+   LUKITUS/TF/web-merget (#4535 #4547 #4550) vasta "OMISTAJA PYYSI JULKAISUA".
 3. Unity-beetaseuranta (alla).
 
 ## PYSYVÄ: UNITY-BEETASEURANTA (PT 10.10. 19.5x)
