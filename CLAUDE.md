@@ -28,7 +28,8 @@ AIKA (omistaja 26.9.2026, sitova): kartassa eletään NYKYAJASSA, vain estetiikk
 on vanhaa — nykyajan kohteet (maailmanpyörä, Korintin kanava) ovat sallittuja;
 älä hylkää ideaa "koska sitä ei ollut 1873". Raamattu, Ydinajatus, AIKA.
 
-VAIN EUROOPPA (omistaja 27.9.2026, sitova): uutta sisältöä ja työtä tehdään vain
+VAIN EUROOPPA — EI KOSKE LINSSEJÄ (omistaja 27.9.2026, sitova; linssit ja niiden uusi sisältö
+kattavat aina koko maailman, omistaja 28.9. ja 13.10.2026): muuta uutta sisältöä ja työtä tehdään vain
 Euroopalle, kunnes omistaja toteaa Euroopan valmiiksi; muihin maanosiin ei mitään uutta
 ilman omistajan erillistä päätöstä. Raamattu, Ydinajatus, VAIN EUROOPPA.
 
