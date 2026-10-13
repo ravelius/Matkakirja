@@ -14,7 +14,7 @@ Testit `nice -n 15 sh Linssit-testit/kaanna.sh`, `nice -n 15 zsh tyokalut/tarkis
 - Testi paikallisella juurella: scratchpad vesitesti/ (index-v15.json + index-v17.json = v17, tiedosto <id>2 → KS:n paketit), python http.server 8787
   (prosessi 34889 kuuntelee yhä; sk:ssa `doc kaupunki-vesi.txt=http://127.0.0.1:8787/`). HUOM: uusi sessio ei näe palvelinta → käynnistä uudelleen
   (`python3 -m http.server 8787 --bind 127.0.0.1 --directory <vesitesti>`), jos 34889 on kuollut.
-- vesi188a: toisen käynnin kamera samassa kaupungissa osui väärälle korkeudelle (Sofia harmaa, Lissabon/Tampere maassa) → **vesi188b ajossa 20.00**
+- vesi188a: toisen käynnin kamera samassa kaupungissa osui väärälle korkeudelle (Sofia harmaa, Lissabon/Tampere maassa) → **vesi188b VALMIS 20.02: lokit/todistus-vesi188b-ipad-20261013-1955 (katso kuvat, vertaa 188a:n ennen-kuviin)**
   (vain v18, yksi käynti/kaupunki; vertaa vesi188a:n "ennen"-kuviin). Havainnot 188a:sta: Sevillan järvi täyttyi oikein (v3), mutta iso tumma
   suorakaide pellolla (37.355,-5.915) jää molemmissa → KS:lle; Guadalquivirin vaalea läiskä (37.325,-5.995) ei muutu.
 - Kun kuvat kelpaavat: index-v18 (kuten v17: _valmiit/vesi-v18-vienti-…, "tiedosto": "<id>2", vesipalat <id>2-8m.{json,bytes} mukaan pakettiin
