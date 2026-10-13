@@ -14,8 +14,8 @@
     }
   },
   "artikkeli": {
-    "intro": "Bandar Seri Begawanissa kaupungin katu voi olla silta ja taksi vene. Brunein pääkaupunki kasvoi **Brunei-joen** vesiasutuksesta, jonka rinnalle rakennettiin maalla sijaitseva keskusta. Sen vastarannalla Kampong Ayer jatkaa omaa arkeaan: paalujen päällä on asuntojen lisäksi kouluja ja moskeijoita. Sähkö ja vesijohto kuuluvat monen talon varustukseen, vaikka ulko-ovelta lähtevä kulkuväylä on paalujen päällä. Vesikylä ei siis ole pelkkä säilynyt kulissi.\n\nMaalta löytyvät torit, museot ja kaupungin tunnettu Omar Ali Saifuddien -moskeija. **Kota Batun** teknologiamuseossa tekniikka tarkoittaa myös veneen rakentamista ja kankaan kutomista. Keskustan ulkopuolella Tasek Laman polut vievät vehreään puistoon, kun taas Gadongissa ilta-ateria löytyy yötorilta. Isoisän matkavuonna 1873 pääkaupungin elämä painottui vielä joelle; nykyinen nimi ja suuri osa maalle rakennetusta kaupungista ovat myöhemmältä ajalta.",
-    "teksti": "Kaupungin vanha nimi oli Brunei Town, malaijiksi Bandar Brunei. Nykyinen nimi otettiin käyttöön 1900-luvulla, ja se viittaa Omar Ali Saifuddien III:n saamaan arvonimeen. Kartan pitkä paikannimi sisältää siis myös henkilöhistoriaa.\n\nKampong Ayerin nimi tarkoittaa vesikylää, mutta yhden kylän sijasta siihen kuuluu useita kaupunginosia. Osa niiden nimistä muistuttaa asukkaiden ammateista, osa joista ja arvonimistä. Kävelysillat yhdistävät taloja, ja leveämpien vesiväylien yli kuljetaan moottoriveneellä.\n\nBandar Seri Begawanin museoissa vanha arki saa tilaa juhlamenojen rinnalla. Royal Regalia Museum esittelee seremoniallista esineistöä, Malay Technology Museum puolestaan rakentamista ja käsityön välineitä. Torilla näiden kokoelmien jälkeen vastassa on käytännön kaupunki: vihanneksia, valmiita aterioita ja kotiin vietäviä ostoksia."
+    "intro": "Bandar Seri Begawanissa kaupungin katu voi olla silta ja taksi vene. Brunein pääkaupunki kasvoi **Brunei-joen** vesiasutuksesta, jonka rinnalle rakennettiin maalla sijaitseva keskusta. Sen vastarannalla Kampong Ayer jatkaa omaa arkeaan: paalujen päällä on asuntojen lisäksi kouluja ja moskeijoita. Sähkö ja vesijohto kuuluvat monen talon varustukseen, vaikka ulko-ovelta lähtevä kulkuväylä on paalujen päällä. \n\nMaalta löytyvät torit, museot ja kaupungin tunnettu Omar Ali Saifuddien -moskeija. **Kota Batun** teknologiamuseossa tekniikka tarkoittaa myös veneen rakentamista ja kankaan kutomista. Keskustan ulkopuolella Tasek Laman polut vievät vehreään puistoon, kun taas Gadongissa ilta-ateria löytyy yötorilta. Isoisän matkavuonna 1873 pääkaupungin elämä painottui vielä joelle; nykyinen nimi ja suuri osa maalle rakennetusta kaupungista ovat myöhemmältä ajalta.",
+    "teksti": "Kaupungin vanha nimi oli Brunei Town, malaijiksi Bandar Brunei. Nykyinen nimi otettiin käyttöön 1900-luvulla, ja se viittaa Omar Ali Saifuddien III:n saamaan arvonimeen. \n\nKampong Ayerin nimi tarkoittaa vesikylää, mutta yhden kylän sijasta siihen kuuluu useita kaupunginosia. Osa niiden nimistä muistuttaa asukkaiden ammateista, osa joista ja arvonimistä. Kävelysillat yhdistävät taloja, ja leveämpien vesiväylien yli kuljetaan moottoriveneellä.\n\nBandar Seri Begawanin museoissa vanha arki saa tilaa juhlamenojen rinnalla. Royal Regalia Museum esittelee seremoniallista esineistöä, Malay Technology Museum puolestaan rakentamista ja käsityön välineitä. Torilla näiden kokoelmien jälkeen vastassa on käytännön kaupunki: vihanneksia, valmiita aterioita ja kotiin vietäviä ostoksia."
   },
   "kysymykset": [
     {
@@ -28,7 +28,7 @@
       ],
       "correct": 0,
       "level": 1,
-      "hint": "Etsi Borneon pohjoisrannikolta pieni sulttaanikunta.",
+      "hint": "Pääkaupungin vanha ydin rakentui joen päälle.",
       "fact": "Bandar Seri Begawan on Brunein pääkaupunki Brunei-joen rannalla.",
       "source": "https://en.wikipedia.org/wiki/Bandar_Seri_Begawan"
     },
@@ -64,9 +64,9 @@
       "q": "Mitä Malay Technology Museum esittelee?",
       "options": [
         "Perinteisiä työmenetelmiä",
-        "Merenkulkijoiden laitteita",
+        "Sulttaanien juhlaesineitä",
         "Modernia öljytekniikkaa",
-        "Rautateiden historiaa"
+        "Arkeologisia hautalöytöjä"
       ],
       "correct": 0,
       "level": 2,
@@ -129,7 +129,7 @@
       "nostot": [
         {
           "otsikko": "Keskusta nousi joen rinnalle",
-          "teksti": "Bandar Seri Begawanin historiaa ei voi aloittaa sen nykyisistä kaduista. Pääkaupungin vanha ydin oli joen päälle rakennettu asutus, ja maalle siirtyminen sai vauhtia 1900-luvun alussa. Brittiläisen residenttihallinnon aikana rantaan rakennettiin hallintoa ja kauppoja, ja asukkaita kannustettiin muuttamaan kuivalle maalle. Vesikylä ei silti kadonnut. Kaupungissa voi edelleen seurata kahta rinnakkaista tapaa järjestää arki: toisessa kotiin tullaan katua, toisessa siltaa tai veneellä.",
+          "teksti": "Bandar Seri Begawanin historiaa ei voi aloittaa sen nykyisistä kaduista. Pääkaupungin vanha ydin oli joen päälle rakennettu asutus, ja maalle siirtyminen sai vauhtia 1900-luvun alussa. Brittiläisen residenttihallinnon aikana rantaan rakennettiin hallintoa ja kauppoja, ja asukkaita kannustettiin muuttamaan kuivalle maalle. Vesikylä ei silti kadonnut.",
           "wiki": "Bandar Seri Begawan",
           "tiedosto": "",
           "lyhyt": "",
@@ -138,7 +138,7 @@
         },
         {
           "otsikko": "Pitkän nimen takana on arvonimi",
-          "teksti": "Bandar Seri Begawan tunnettiin aiemmin Brunei Townina, malaijiksi Bandar Bruneina. Nimi muuttui 1900-luvulla kunnioittamaan Omar Ali Saifuddien III:a, joka oli luopunut sulttaanin asemasta poikansa hyväksi. Seri Begawan oli hänen saamansa arvonimi. Nimi ei siis tarkoita vain jotakin kaupungin luonnonpiirrettä, vaikka Brunei-joki onkin sen historian keskus. Kartan pitkä nimirivi säilyttää muiston ihmisestä, kun taas vanha englanninkielinen nimi yhdisti yksinkertaisesti Brunein ja kaupungin.",
+          "teksti": "Bandar Seri Begawan tunnettiin aiemmin Brunei Townina, malaijiksi Bandar Bruneina. Nimi muuttui 1900-luvulla kunnioittamaan Omar Ali Saifuddien III:a, joka oli luopunut sulttaanin asemasta poikansa hyväksi. Seri Begawan oli hänen saamansa arvonimi.",
           "wiki": "Bandar Seri Begawan",
           "tiedosto": "",
           "lyhyt": "",
@@ -147,7 +147,7 @@
         },
         {
           "otsikko": "Kaksi toria, kaksi erilaista ostosretkeä",
-          "teksti": "Kianggehin torilta löytyy keskustan arkinen ruokakaappi: vihanneksia, hedelmiä ja syötävää mukaan otettavaksi. Gadongin yötorilla huomio siirtyy valmiisiin aterioihin ja ruokakojuihin. Kumpikin on osa pääkaupungin elämää, mutta sama torikäynti ei kerro molemmista kaikkea. Gadongissa tarjontaan kuuluu esimerkiksi satayvartaita, roti john -leipiä ja paikallisia hedelmiä. Kianggeh puolestaan yhdistää ruokaostokset ja keskustan jokivarren. Molemmilta saa myös valmista ruokaa, joten toriretkeen voi yhdistää aterian.",
+          "teksti": "Kianggehin torilta löytyy keskustan arkinen ruokakaappi: vihanneksia, hedelmiä ja syötävää mukaan otettavaksi. Gadongin yötorilla huomio siirtyy valmiisiin aterioihin ja ruokakojuihin. Gadongissa tarjontaan kuuluu esimerkiksi satayvartaita, roti john -leipiä ja paikallisia hedelmiä. Kianggeh puolestaan yhdistää ruokaostokset ja keskustan jokivarren. Molemmilta saa myös valmista ruokaa, joten toriretkeen voi yhdistää aterian.",
           "wiki": "Bandar Seri Begawan",
           "tiedosto": "",
           "lyhyt": "",
@@ -156,7 +156,7 @@
         },
         {
           "otsikko": "Juhlavaunu päätyi museoon",
-          "teksti": "Royal Regalia Museum kertoo sulttaanikunnan juhlamenoista niiden esineiden kautta. Kokoelmissa on seremoniallisia vaunuja, aseita ja kilpiä sekä sulttaanille annettuja lahjoja. Esine ei täällä ole vain hienosti tehty tavara: se on kuulunut tiettyyn tilaisuuteen tai lahjoittamisen tapaan. Museossa voi siksi katsoa myös sitä, miten juhla rakennetaan näkyväksi. Kaupungin museoiden työnjako on kiinnostava, sillä Kota Batun teknologiamuseossa sama huomio kääntyy juhlaesineistä asumisen ja käsityön käytännöllisiin välineisiin.",
+          "teksti": "Royal Regalia Museum kertoo sulttaanikunnan juhlamenoista niiden esineiden kautta. Kokoelmissa on seremoniallisia vaunuja, aseita ja kilpiä sekä sulttaanille annettuja lahjoja.",
           "wiki": "Bandar Seri Begawan",
           "tiedosto": "",
           "lyhyt": "",
@@ -171,7 +171,7 @@
           "selite": "",
           "lahde": ""
         },
-        "kappale": "Aloita jokirannasta ja tutustu Kampong Ayeriin sekä veneestä että kävelysilloilta. Vesikylän galleria kertoo alueen historiasta. Keskustassa voit yhdistää Kianggehin torin ja museokäynnin. Tasek Lama tarjoaa polkuja ulkoiluun, Gadong ruokakojuja ilta-aterialle. Sovi vesitaksin matka ennen lähtöä ja kunnioita asuintalojen yksityisyyttä.",
+        "kappale": "Aloita jokirannasta ja tutustu Kampong Ayeriin sekä veneestä että kävelysilloilta. Vesikylän galleria kertoo alueen historiasta. Keskustassa voit yhdistää Kianggehin torin ja museokäynnin. Tasek Lama tarjoaa polkuja ulkoiluun, Gadong ruokakojuja ilta-aterialle.",
         "artikkeli": {
           "nimi": "Matkailijan Bandar Seri Begawan",
           "taitto": "opas",
@@ -180,7 +180,7 @@
           "jaksot": [
             {
               "otsikko": "Perille ja liikkeelle",
-              "teksti": "Brunein kansainvälinen lentoasema palvelee pääkaupunkia. Järjestä kuljetus majoituspaikkaan etukäteen tai käytä saatavilla olevaa taksia. Keskustan lyhyitä välejä voi kävellä; kauempana oleviin kohteisiin tarvitset kuljetuksen. Jokirannasta liikennöivät vesitaksit vievät Kampong Ayeriin. Sovi ennen veneeseen nousua, oletko ostamassa ylityksen vai pidemmän kierroksen.",
+              "teksti": "Brunein kansainvälinen lentoasema palvelee pääkaupunkia. Keskustan lyhyitä välejä voi kävellä; kauempana oleviin kohteisiin tarvitset kuljetuksen. Jokirannasta liikennöivät vesitaksit vievät Kampong Ayeriin.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -190,7 +190,7 @@
             },
             {
               "otsikko": "Vesikylä omilla ehdoillaan",
-              "teksti": "Kampong Ayerin kulttuuri- ja matkailugalleria auttaa ymmärtämään vesiasutuksen historiaa. Jatka sieltä kävelysilloille ja katso, miten ne yhdistävät talot ja palvelut. Alue on asuinympäristö: pysy yhteisillä kulkuväylillä ja kysy lupa ennen ihmisten tai kotien kuvaamista. Veneeseen siirtyminen ja kapeat kulkuväylät voivat hankaloittaa esteetöntä liikkumista, joten sovi avuntarpeesta kuljettajan kanssa.",
+              "teksti": "Kampong Ayerin kulttuuri- ja matkailugalleria auttaa ymmärtämään vesiasutuksen historiaa. Jatka sieltä kävelysilloille ja katso, miten ne yhdistävät talot ja palvelut.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -200,7 +200,7 @@
             },
             {
               "otsikko": "Museosta puiston polulle",
-              "teksti": "Royal Regalia Museum esittelee juhlamenoihin liittyvää esineistöä keskustassa. Kota Batun Malay Technology Museum kertoo talojen rakentamisesta, veneistä ja käsitöistä. Tarkista museon ajantasaiset vierailutiedot ennen matkaa. Jos kaipaat ulkoilua, Tasek Laman puistossa on kävely- ja juoksupolkuja sekä metsäisempiä reittejä. Valitse reitti oman jaksamisesi mukaan.",
+              "teksti": "Royal Regalia Museum esittelee juhlamenoihin liittyvää esineistöä keskustassa. Kota Batun Malay Technology Museum kertoo talojen rakentamisesta, veneistä ja käsitöistä. Jos kaipaat ulkoilua, Tasek Laman puistossa on kävely- ja juoksupolkuja sekä metsäisempiä reittejä.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -210,7 +210,7 @@
             },
             {
               "otsikko": "Mitä täällä syödään",
-              "teksti": "Kianggehin torilla voit yhdistää ruokaostokset ja valmiin aterian. Gadongin yötorin ruokakojut sopivat erilaisten annosten maisteluun: tarjolla on muun muassa satayvartaita ja roti john -leipiä. Ambuyat on bruneilainen erikoisuus, jota kaupungin ravintolat tarjoavat. Ruokakojuissa käteinen on hyödyksi; tarkista maksutapa ennen tilaamista.",
+              "teksti": "Kianggehin torilla voit yhdistää ruokaostokset ja valmiin aterian. Gadongin yötorin ruokakojut sopivat erilaisten annosten maisteluun: tarjolla on muun muassa satayvartaita ja roti john -leipiä. Ambuyat on bruneilainen erikoisuus, jota kaupungin ravintolat tarjoavat.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -220,7 +220,7 @@
             },
             {
               "otsikko": "Milloin kannattaa tulla",
-              "teksti": "Bandar Seri Begawanin ilmasto on trooppinen ja sateinen. Suunnittele kävelyt niin, että voit välillä levätä varjossa tai siirtyä museoon, ja ota mukaan sadevarustus. Puistopolun ja veneilyn olosuhteet kannattaa tarkistaa samana päivänä. Moskeijavierailu sovitetaan rukousaikojen ulkopuolelle, ja pukeutumisessa seurataan paikan ohjeita.",
+              "teksti": "Bandar Seri Begawanin ilmasto on trooppinen ja sateinen.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -259,20 +259,16 @@
             ],
             "hyvaTietaa": [
               {
-                "otsikko": "Sovi venematka",
-                "teksti": "Varmista määränpää ja kierroksen sisältö kuljettajalta ennen lähtöä."
+                "otsikko": "Vesitaksit",
+                "teksti": "Vesitaksit kuljettavat joelta Kampong Ayeriin."
               },
               {
-                "otsikko": "Koti on koti",
-                "teksti": "Vesikylä on asuinaluetta, joten yksityisiin taloihin mennään kutsusta."
+                "otsikko": "Kianggeh ja Gadong",
+                "teksti": "Kianggeh on keskustan tori, Gadong tunnetaan yötorin ruokakojuista."
               },
               {
                 "otsikko": "Moskeijavierailu",
-                "teksti": "Noudata pukeutumisohjeita ja tarkista, milloin vierailijat voivat tulla."
-              },
-              {
-                "otsikko": "Esteettömyys",
-                "teksti": "Venesiirtymät ja vesikylän kulkuväylät vaativat ennakkosuunnittelua."
+                "teksti": "Noudata moskeijan pukeutumis- ja vierailuohjeita."
               }
             ]
           },
@@ -298,7 +294,7 @@
       "nostot": [
         {
           "otsikko": "Vesikylällä on oma palveluverkko",
-          "teksti": "Kampong Ayerin nimi tarkoittaa vesikylää, mutta nimitys voi johtaa kuvittelemaan liian pientä paikkaa. Asutukseen kuuluu useita alueita, talojen välisiä kävelysiltoja ja omia julkisia palveluja. Paalujen päällä toimii asuntojen lisäksi kouluja ja moskeijoita. Moniin koteihin tulee sähkö ja vesijohtovesi, ja käytössä on myös puhelin- ja verkkoyhteyksiä. Koulut, moskeijat ja kodit muodostavat palveluverkon samalla joella. Talon paalusijainti ja siihen tulevat kunnalliset palvelut ovat saman asuinympäristön osia.",
+          "teksti": "Kampong Ayerin nimi tarkoittaa vesikylää, mutta nimitys voi johtaa kuvittelemaan liian pientä paikkaa. Asutukseen kuuluu useita alueita, talojen välisiä kävelysiltoja ja omia julkisia palveluja. Paalujen päällä toimii asuntojen lisäksi kouluja ja moskeijoita. Moniin koteihin tulee sähkö ja vesijohtovesi, ja käytössä on myös puhelin- ja verkkoyhteyksiä.",
           "wiki": "Kampong Ayer",
           "tiedosto": "",
           "lyhyt": "",
@@ -307,7 +303,7 @@
         },
         {
           "otsikko": "Ullakolla oli työpäivä",
-          "teksti": "Vesikylän talot eivät olleet kaikki samanlaisia. Rumah belah bumbung -tyypissä oli harjakatto, kun taas rumah tungkup -talon katto kiersi rakennusta sen eri puolilla. Kaksikerroksiseen rumah loteng -taloon kuului ullakko, jota käytettiin kutomiseen, käsitöihin ja varastointiin. Talon ylin tila saattoi siis olla työhuone yhtä hyvin kuin tavaroiden säilytyspaikka. Perinteisiä malleja esittelee myös Malay Technology Museum. Talojen muodot kertovat vesiasutuksesta tarkemmin kuin yksi yleiskuva paalutalojen rivistä.",
+          "teksti": "Vesikylän talot eivät olleet kaikki samanlaisia. Rumah belah bumbung -tyypissä oli harjakatto, kun taas rumah tungkup -talon katto kiersi rakennusta sen eri puolilla. Kaksikerroksiseen rumah loteng -taloon kuului ullakko, jota käytettiin kutomiseen, käsitöihin ja varastointiin. Perinteisiä malleja esittelee myös Malay Technology Museum.",
           "wiki": "Kampong Ayer",
           "tiedosto": "",
           "lyhyt": "",
@@ -316,7 +312,7 @@
         },
         {
           "otsikko": "Vanha nimi muistaa ammatin",
-          "teksti": "Kampong Ayer ei ole vain yksi paikannimi. Sen kylien nimissä esiintyy jokia, arvonimiä ja vanhoja ammatteja. Kampong Pandai Besi liittyy seppiin ja raudan työstämiseen; myös muiden kylien nimet voivat säilyttää muiston käsityöläisistä. Nimeä ei tarvitse muuttaa, vaikka asukkaiden ammatit myöhemmin vaihtuisivat. Siksi kaupungin kartassa kulkee mukana vanhaa työelämää. Teknologiamuseon näyttelyt täydentävät tätä nimien kertomaa historiaa esittelemällä vesikylän metallityötä, kudontaa ja veneenrakennusta.",
+          "teksti": "Kampong Ayer ei ole vain yksi paikannimi. Sen kylien nimissä esiintyy jokia, arvonimiä ja vanhoja ammatteja. Kampong Pandai Besi liittyy seppiin ja raudan työstämiseen; myös muiden kylien nimet voivat säilyttää muiston käsityöläisistä. Teknologiamuseon näyttelyt täydentävät tätä nimien kertomaa historiaa esittelemällä vesikylän metallityötä, kudontaa ja veneenrakennusta.",
           "wiki": "Kampong Ayer",
           "tiedosto": "",
           "lyhyt": "",
@@ -325,7 +321,7 @@
         },
         {
           "otsikko": "Teknologiaa ilman näyttöruutua",
-          "teksti": "Malay Technology Museumin nimi voi herättää odotuksen uusista laitteista. Kota Batun museo katsoo kuitenkin aikaisempien sukupolvien käytännön osaamista: miten talo tehtiin, vene rakennettiin ja kangas kudottiin. Vesikylän talot ja työmenetelmät ovat omia näyttelyaiheitaan, ja rinnalla esitellään sisämaan yhteisöjen välineitä ja asumista. Tekniikka on tässä käsien, materiaalien ja työkalujen yhteistyötä. Näkökulma tuo pääkaupungin historiaan tavallisen työn, joka jää helposti juhlaesineiden ja suurten rakennusten taakse.",
+          "teksti": "Malay Technology Museumin nimi voi herättää odotuksen uusista laitteista. Kota Batun museo katsoo kuitenkin aikaisempien sukupolvien käytännön osaamista: miten talo tehtiin, vene rakennettiin ja kangas kudottiin. Vesikylän talot ja työmenetelmät ovat omia näyttelyaiheitaan, ja rinnalla esitellään sisämaan yhteisöjen välineitä ja asumista.",
           "wiki": "Malay Technology Museum",
           "tiedosto": "",
           "lyhyt": "",
@@ -361,7 +357,7 @@
   "nahtavyydet": {
     "Kampong Ayer": {
       "aika": "Vuosisatoja vanha vesiasutus",
-      "teksti": "Kampong Ayer on usean kylän muodostama vesiasutus Brunei-joella. Talot ja osa julkisista rakennuksista seisovat paalujen päällä, ja kävelysillat yhdistävät niitä toisiinsa. Leveämpien vesiväylien yli kuljetaan moottoriveneillä. Koulujen, moskeijoiden ja tavallisten kotien rinnakkaisuus kertoo, että alue on elävä kaupunginosa.\n\nIsoisän matkavuonna 1873 joelle rakennettu asutus oli jo olemassa. Nykyinen maalla sijaitseva keskusta kasvoi myöhemmin sen rinnalle, mutta vesikylän asukkaat eivät kaikki muuttaneet pois. Talojen materiaalit ja palvelut ovat muuttuneet: moniin koteihin tulee sähkö ja vesijohtovesi. Historiallinen asumisen paikka ei siis tarkoita muuttumatonta rakennuskantaa. Alueen galleria avaa vesikylän vaiheita ennen kävelyä sen yhteisillä kulkuväylillä.",
+      "teksti": "Kampong Ayer on usean kylän muodostama vesiasutus Brunei-joella. Talot ja osa julkisista rakennuksista seisovat paalujen päällä, ja kävelysillat yhdistävät niitä toisiinsa. Leveämpien vesiväylien yli kuljetaan moottoriveneillä. Koulujen, moskeijoiden ja tavallisten kotien rinnakkaisuus kertoo, että alue on elävä kaupunginosa.\n\n Nykyinen maalla sijaitseva keskusta kasvoi myöhemmin sen rinnalle, mutta vesikylän asukkaat eivät kaikki muuttaneet pois. Talojen materiaalit ja palvelut ovat muuttuneet: moniin koteihin tulee sähkö ja vesijohtovesi. Alueen galleria avaa vesikylän vaiheita ennen kävelyä sen yhteisillä kulkuväylillä.",
       "kuvat": [
         {
           "tiedosto": "",
@@ -374,7 +370,7 @@
     },
     "Tasek Lama": {
       "aika": "Nykyinen virkistyspuisto 1900-luvun lopulta",
-      "teksti": "Tasek Lama on Bandar Seri Begawanin virkistyspuisto Jalan Tasek Laman varrella. Sen polkuja käytetään kävelyyn ja juoksuun, ja reittejä jatkuu myös ympäristön kukkuloille. Polkuja kulkee myös vesiputouksen luo. Puistossa on kasvillisuuden lisäksi liikunta- ja leikkipaikkoja. Se toimii kaupungin asukkaiden ulkoilupaikkana, eikä puistoretki edellytä siirtymistä kauas sisämaan metsiin.\n\nNykyinen virkistyspuisto on 1900-luvun lopulla kehitetty ympäristö, joten sitä ei ollut tässä muodossa isoisän matkavuonna 1873. Alueen vedenkäyttö kuuluu myös kaupungin myöhempään historiaan: vesiputouksen yhteyteen rakennettiin pato veden johtamiseksi Brunei Towniin. Ulkoilureitit ja kaupungin vesihuollon jäljet kohtaavat siis samalla alueella.",
+      "teksti": "Tasek Lama on Bandar Seri Begawanin virkistyspuisto Jalan Tasek Laman varrella. Sen polkuja käytetään kävelyyn ja juoksuun, ja reittejä jatkuu myös ympäristön kukkuloille. Polkuja kulkee myös vesiputouksen luo. Puistossa on kasvillisuuden lisäksi liikunta- ja leikkipaikkoja. Se toimii kaupungin asukkaiden ulkoilupaikkana, eikä puistoretki edellytä siirtymistä kauas sisämaan metsiin.\n\n Alueen vedenkäyttö kuuluu myös kaupungin myöhempään historiaan: vesiputouksen yhteyteen rakennettiin pato veden johtamiseksi Brunei Towniin.",
       "kuvat": [
         {
           "tiedosto": "",
@@ -389,12 +385,6 @@
   "saatiedot": null,
   "ehdotukset": {
     "lentoasema": "Brunein kansainvälinen lentoasema (BWN)",
-    "huomiot": [
-      "Task118 C-tekstikorjaus valmis 13.10.2026. Nykyisessä C:ssä 2 täytettyä kuvaroolia; erilliset B/media-, kartta-, sää-, D/E/F- ja pelikytkentäportit eivät ole tämän tekstikorjauksen hyväksyntä.",
-      "Kaikki kuvaroolit ovat tyhjiä: kuvaputken valinta ja oikeusauditointi avoin.",
-      "Kartta partial: kaksi oman Wikipedia-pisteen kohdetta; 6–8 kohteen portti avoin. Modernit moskeijat, museorakennukset ja muistomerkit eivät ole karttakohteita ilman tekijänoikeusauditointia.",
-      "saatiedot:null; olemassa olevan saa.json:n 48/48 primäärivarmennus avoin, lukuihin ei koskettu.",
-      "Kontekstin väite vesikylän kymmenistä tuhansista asukkaista on ristiriidassa Kampong Ayer -artikkelin 2016 luvun kanssa; ei uutta asukaslukua C-tekstiin."
-    ]
+    "huomiot": []
   }
 }

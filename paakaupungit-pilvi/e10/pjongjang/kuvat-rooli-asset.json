@@ -3,7 +3,7 @@
   "era": "e10",
   "city": "pjongjang",
   "authorization": "hyväksyn kaikki tekemäsi kuvat. toimita ne claudelle. claudelta saat uusia ohjeita jatkoa varten",
-  "sourceContentAfterSHA256": "9bcc937be30819365f0d55c1eec1204cb56c4ea880a7849d9229b994ee9f49fe",
+  "sourceContentAfterSHA256": "162ec0f745e68a18bd6a6a0785c6ef84b6a2d8700b94c6c91336cccd8aac4820",
   "assets": [
     {
       "era": "e10",
@@ -53,10 +53,10 @@
         1448
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/pjongjang/sisalto.json",
-      "sourceContentSHA256": "9bcc937be30819365f0d55c1eec1204cb56c4ea880a7849d9229b994ee9f49fe",
+      "sourceContentSHA256": "162ec0f745e68a18bd6a6a0785c6ef84b6a2d8700b94c6c91336cccd8aac4820",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "3c137f0379ce56bb900cb49959177924a23708bbd3c3ec1fb8e19d57dea6725d",
+        "semanticContextSHA256": "5445789b05eb197d9360c3f8d6a0dae3c9aa1e15d563c9a6a11813c3fd03d56d",
         "subjectTitle": "Matkailijalle",
         "targetState": "existing-target"
       },
@@ -528,9 +528,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "9bcc937be30819365f0d55c1eec1204cb56c4ea880a7849d9229b994ee9f49fe",
+      "sourceContentAfterSHA256": "162ec0f745e68a18bd6a6a0785c6ef84b6a2d8700b94c6c91336cccd8aac4820",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "3c137f0379ce56bb900cb49959177924a23708bbd3c3ec1fb8e19d57dea6725d",
+      "contextAfterSHA256": "5445789b05eb197d9360c3f8d6a0dae3c9aa1e15d563c9a6a11813c3fd03d56d",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -553,7 +553,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "162ec0f745e68a18bd6a6a0785c6ef84b6a2d8700b94c6c91336cccd8aac4820",
+        "sameImageNativeSHA256": "dfa325507f9fd28a4f3c371961d922b2c0333d22e82c3260d378f13cd7e5c286",
+        "sameImageExportSHA256": "24f70d0715f79f3b929ede843ccc2e159ff4b1ed250fb223fe9084971aad9991",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e10",
@@ -606,7 +614,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/pjongjang/sisalto.json",
-      "sourceContentSHA256": "9bcc937be30819365f0d55c1eec1204cb56c4ea880a7849d9229b994ee9f49fe",
+      "sourceContentSHA256": "162ec0f745e68a18bd6a6a0785c6ef84b6a2d8700b94c6c91336cccd8aac4820",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
         "semanticContextSHA256": "d93c286aa24b4cdf578eb5e94f794460b941e141275c718e5307f1870c0ca7e4",
@@ -859,7 +867,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "9bcc937be30819365f0d55c1eec1204cb56c4ea880a7849d9229b994ee9f49fe",
+      "sourceContentAfterSHA256": "162ec0f745e68a18bd6a6a0785c6ef84b6a2d8700b94c6c91336cccd8aac4820",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
       "contextAfterSHA256": "d93c286aa24b4cdf578eb5e94f794460b941e141275c718e5307f1870c0ca7e4",
       "ownerApproved": true,
@@ -884,7 +892,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "162ec0f745e68a18bd6a6a0785c6ef84b6a2d8700b94c6c91336cccd8aac4820",
+        "sameImageNativeSHA256": "1129d651c5628636d2ac1b28e47e42b1ae65c065411a5100258ebbe155c98d8b",
+        "sameImageExportSHA256": "689f32186cfc0e12bce641e95ccc27542a1d4e327fcb170c49c6ed86d1df1370",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e10",
@@ -934,10 +950,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/pjongjang/sisalto.json",
-      "sourceContentSHA256": "9bcc937be30819365f0d55c1eec1204cb56c4ea880a7849d9229b994ee9f49fe",
+      "sourceContentSHA256": "162ec0f745e68a18bd6a6a0785c6ef84b6a2d8700b94c6c91336cccd8aac4820",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "653eb77b6d157e81c78e1b818da43ae5cae71401389c439155496337b38f32cf",
-        "semanticContextSHA256": "653eb77b6d157e81c78e1b818da43ae5cae71401389c439155496337b38f32cf",
+        "targetBeforeSHA256": "1e25d814b2d7058c24dc4773f5cd18ade6f22924dce0a46fad10eed60d05b0ec",
+        "semanticContextSHA256": "1e25d814b2d7058c24dc4773f5cd18ade6f22924dce0a46fad10eed60d05b0ec",
         "subjectTitle": "Tasainen maa ei tarkoita kukkulatonta kaupunkia",
         "targetState": "existing-target"
       },
@@ -1185,9 +1201,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "9bcc937be30819365f0d55c1eec1204cb56c4ea880a7849d9229b994ee9f49fe",
-      "targetAfterSHA256": "653eb77b6d157e81c78e1b818da43ae5cae71401389c439155496337b38f32cf",
-      "contextAfterSHA256": "653eb77b6d157e81c78e1b818da43ae5cae71401389c439155496337b38f32cf",
+      "sourceContentAfterSHA256": "162ec0f745e68a18bd6a6a0785c6ef84b6a2d8700b94c6c91336cccd8aac4820",
+      "targetAfterSHA256": "1e25d814b2d7058c24dc4773f5cd18ade6f22924dce0a46fad10eed60d05b0ec",
+      "contextAfterSHA256": "1e25d814b2d7058c24dc4773f5cd18ade6f22924dce0a46fad10eed60d05b0ec",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -1210,7 +1226,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "162ec0f745e68a18bd6a6a0785c6ef84b6a2d8700b94c6c91336cccd8aac4820",
+        "sameImageNativeSHA256": "6c6d8213c9abbbe3bb914f432e087aee00b1ad083db8e2699748402e42137205",
+        "sameImageExportSHA256": "65c5813562cf5ae62d2a8eb8400eac455da1c66655b882d252a785c5ed440833",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e10",
@@ -1260,7 +1284,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/pjongjang/sisalto.json",
-      "sourceContentSHA256": "9bcc937be30819365f0d55c1eec1204cb56c4ea880a7849d9229b994ee9f49fe",
+      "sourceContentSHA256": "162ec0f745e68a18bd6a6a0785c6ef84b6a2d8700b94c6c91336cccd8aac4820",
       "semanticSourceBind": {
         "targetBeforeSHA256": "ebf83d18ef7d897455c9021b6449bb1f8588abf29d788a96224092a11fa354cc",
         "semanticContextSHA256": "ebf83d18ef7d897455c9021b6449bb1f8588abf29d788a96224092a11fa354cc",
@@ -1497,7 +1521,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "9bcc937be30819365f0d55c1eec1204cb56c4ea880a7849d9229b994ee9f49fe",
+      "sourceContentAfterSHA256": "162ec0f745e68a18bd6a6a0785c6ef84b6a2d8700b94c6c91336cccd8aac4820",
       "targetAfterSHA256": "ebf83d18ef7d897455c9021b6449bb1f8588abf29d788a96224092a11fa354cc",
       "contextAfterSHA256": "ebf83d18ef7d897455c9021b6449bb1f8588abf29d788a96224092a11fa354cc",
       "ownerApproved": true,
@@ -1522,7 +1546,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "162ec0f745e68a18bd6a6a0785c6ef84b6a2d8700b94c6c91336cccd8aac4820",
+        "sameImageNativeSHA256": "ed9a35f068d2b68062eebec2ae188e560be9da819f02ecad5111665adbc3e6e5",
+        "sameImageExportSHA256": "b0f6e00c694c5e8cbd23ce0d8dd85941c106ed4c161233a9aa6788a548d35ca1",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e10",
@@ -1572,7 +1604,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/pjongjang/sisalto.json",
-      "sourceContentSHA256": "9bcc937be30819365f0d55c1eec1204cb56c4ea880a7849d9229b994ee9f49fe",
+      "sourceContentSHA256": "162ec0f745e68a18bd6a6a0785c6ef84b6a2d8700b94c6c91336cccd8aac4820",
       "semanticSourceBind": {
         "targetBeforeSHA256": "8921afb2c249b3a9bcbda16ebf2caa7931412af6d8555a93b7801ebf01ecf9bf",
         "semanticContextSHA256": "8921afb2c249b3a9bcbda16ebf2caa7931412af6d8555a93b7801ebf01ecf9bf",
@@ -1835,7 +1867,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "9bcc937be30819365f0d55c1eec1204cb56c4ea880a7849d9229b994ee9f49fe",
+      "sourceContentAfterSHA256": "162ec0f745e68a18bd6a6a0785c6ef84b6a2d8700b94c6c91336cccd8aac4820",
       "targetAfterSHA256": "8921afb2c249b3a9bcbda16ebf2caa7931412af6d8555a93b7801ebf01ecf9bf",
       "contextAfterSHA256": "8921afb2c249b3a9bcbda16ebf2caa7931412af6d8555a93b7801ebf01ecf9bf",
       "ownerApproved": true,
@@ -1860,7 +1892,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "162ec0f745e68a18bd6a6a0785c6ef84b6a2d8700b94c6c91336cccd8aac4820",
+        "sameImageNativeSHA256": "3386a3b91908ce7205b24525972f1110212d4f8589525cf0a56246c963161377",
+        "sameImageExportSHA256": "6c837a11af045a4e8645dde07482e51122d6e43cf7adfe30dd6e4e06a2914aff",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e10",
@@ -1910,10 +1950,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/pjongjang/sisalto.json",
-      "sourceContentSHA256": "9bcc937be30819365f0d55c1eec1204cb56c4ea880a7849d9229b994ee9f49fe",
+      "sourceContentSHA256": "162ec0f745e68a18bd6a6a0785c6ef84b6a2d8700b94c6c91336cccd8aac4820",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "31d96b4b8992d183ca1503f91d07f44ece4f09b68e92950464c92a1e56e6c581",
-        "semanticContextSHA256": "31d96b4b8992d183ca1503f91d07f44ece4f09b68e92950464c92a1e56e6c581",
+        "targetBeforeSHA256": "feff9196925b0f2e52bc2e3d9e103f837d7ddee07c9d1576f1cf2f37f526440d",
+        "semanticContextSHA256": "feff9196925b0f2e52bc2e3d9e103f837d7ddee07c9d1576f1cf2f37f526440d",
         "subjectTitle": "Perintö jatkuu myös keittiössä",
         "targetState": "existing-target"
       },
@@ -2173,9 +2213,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "9bcc937be30819365f0d55c1eec1204cb56c4ea880a7849d9229b994ee9f49fe",
-      "targetAfterSHA256": "31d96b4b8992d183ca1503f91d07f44ece4f09b68e92950464c92a1e56e6c581",
-      "contextAfterSHA256": "31d96b4b8992d183ca1503f91d07f44ece4f09b68e92950464c92a1e56e6c581",
+      "sourceContentAfterSHA256": "162ec0f745e68a18bd6a6a0785c6ef84b6a2d8700b94c6c91336cccd8aac4820",
+      "targetAfterSHA256": "feff9196925b0f2e52bc2e3d9e103f837d7ddee07c9d1576f1cf2f37f526440d",
+      "contextAfterSHA256": "feff9196925b0f2e52bc2e3d9e103f837d7ddee07c9d1576f1cf2f37f526440d",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -2198,7 +2238,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "162ec0f745e68a18bd6a6a0785c6ef84b6a2d8700b94c6c91336cccd8aac4820",
+        "sameImageNativeSHA256": "9d66a66b1423db0821d2e3bebb76c8bd1accb13eaae08c4bbf5037cdcea2902e",
+        "sameImageExportSHA256": "4647a7f88c95bd30600d03a2827a90f8316db484bb46d56a0508b2333dcb626b",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e10",
@@ -2248,10 +2296,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/pjongjang/sisalto.json",
-      "sourceContentSHA256": "9bcc937be30819365f0d55c1eec1204cb56c4ea880a7849d9229b994ee9f49fe",
+      "sourceContentSHA256": "162ec0f745e68a18bd6a6a0785c6ef84b6a2d8700b94c6c91336cccd8aac4820",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "0ec502bae3a1369bb17957a21b337b6f2fc2fbb2085d344964d410ddb90b316c",
-        "semanticContextSHA256": "0ec502bae3a1369bb17957a21b337b6f2fc2fbb2085d344964d410ddb90b316c",
+        "targetBeforeSHA256": "eb3e5c283a90554ecdfb3f63a029b503ddf1c722fd6bedb737131ef480db5215",
+        "semanticContextSHA256": "eb3e5c283a90554ecdfb3f63a029b503ddf1c722fd6bedb737131ef480db5215",
         "subjectTitle": "Joki löytyy myös keiton nimestä",
         "targetState": "existing-target"
       },
@@ -2499,9 +2547,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "9bcc937be30819365f0d55c1eec1204cb56c4ea880a7849d9229b994ee9f49fe",
-      "targetAfterSHA256": "0ec502bae3a1369bb17957a21b337b6f2fc2fbb2085d344964d410ddb90b316c",
-      "contextAfterSHA256": "0ec502bae3a1369bb17957a21b337b6f2fc2fbb2085d344964d410ddb90b316c",
+      "sourceContentAfterSHA256": "162ec0f745e68a18bd6a6a0785c6ef84b6a2d8700b94c6c91336cccd8aac4820",
+      "targetAfterSHA256": "eb3e5c283a90554ecdfb3f63a029b503ddf1c722fd6bedb737131ef480db5215",
+      "contextAfterSHA256": "eb3e5c283a90554ecdfb3f63a029b503ddf1c722fd6bedb737131ef480db5215",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -2524,7 +2572,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "162ec0f745e68a18bd6a6a0785c6ef84b6a2d8700b94c6c91336cccd8aac4820",
+        "sameImageNativeSHA256": "14d497534714e900f1bbfe273179912fa6298febc2aab0a3b0becb39011843ff",
+        "sameImageExportSHA256": "9d173b1a5f81777698efce0087c006269e11b8cf0989a2ce9a51c999741e2ed9",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e10",
@@ -2543,14 +2599,14 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e10/pjongjang/photo-e29f697b1e459be99ecd.jpg",
         "suora": true,
         "lahde": "Jan Engelhardt, Commons (CC BY-SA 4.0)",
-        "selite": "Moranbongin puistoaluetta Pjongjangissa 27. heinäkuuta 2019 otetussa kuvassa.",
+        "selite": "Moranbongin puistoaluetta Pjongjangissa 27. heinäkuuta 2019.",
         "lyhyt": "Moran-kukkulan puisto Pjongjangissa.",
         "tiedosto": "Moranbong Park - 02.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Jan Engelhardt, Commons (CC BY-SA 4.0)",
-        "selite": "Moranbongin puistoaluetta Pjongjangissa 27. heinäkuuta 2019 otetussa kuvassa.",
+        "selite": "Moranbongin puistoaluetta Pjongjangissa 27. heinäkuuta 2019.",
         "lyhyt": "Moran-kukkulan puisto Pjongjangissa.",
         "tiedosto": "Moranbong Park - 02.jpg"
       },
@@ -2558,7 +2614,7 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e10/pjongjang/photo-e29f697b1e459be99ecd.jpg",
         "suora": true,
         "lahde": "Jan Engelhardt, Commons (CC BY-SA 4.0)",
-        "selite": "Moranbongin puistoaluetta Pjongjangissa 27. heinäkuuta 2019 otetussa kuvassa.",
+        "selite": "Moranbongin puistoaluetta Pjongjangissa 27. heinäkuuta 2019.",
         "lyhyt": "Moran-kukkulan puisto Pjongjangissa.",
         "tiedosto": "Moranbong Park - 02.jpg"
       },
@@ -2574,10 +2630,10 @@
         5504
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/pjongjang/sisalto.json",
-      "sourceContentSHA256": "9bcc937be30819365f0d55c1eec1204cb56c4ea880a7849d9229b994ee9f49fe",
+      "sourceContentSHA256": "162ec0f745e68a18bd6a6a0785c6ef84b6a2d8700b94c6c91336cccd8aac4820",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "e0ab3544fb6c7aad319efdee278f9e6b82e1ae39c2abac198084882366a08dd7",
-        "semanticContextSHA256": "e0ab3544fb6c7aad319efdee278f9e6b82e1ae39c2abac198084882366a08dd7",
+        "targetBeforeSHA256": "8b51e01731a9f1b744d9ddb40a27421ada56b4861a4bf8e208ff9533d00e411b",
+        "semanticContextSHA256": "8b51e01731a9f1b744d9ddb40a27421ada56b4861a4bf8e208ff9533d00e411b",
         "subjectTitle": "pjongjang — aito paikkavalokuva",
         "targetState": "existing-target"
       },
@@ -2759,7 +2815,7 @@
       "priorMediaFields": {
         "tiedosto": "Moranbong Park - 02.jpg",
         "lyhyt": "Moran-kukkulan puisto Pjongjangissa.",
-        "selite": "Moranbongin puistoaluetta Pjongjangissa 27. heinäkuuta 2019 otetussa kuvassa.",
+        "selite": "Moranbongin puistoaluetta Pjongjangissa 27. heinäkuuta 2019.",
         "lahde": "Jan Engelhardt, Commons (CC BY-SA 4.0)"
       },
       "preservePreviousMediaObjects": true,
@@ -2786,14 +2842,14 @@
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Jan Engelhardt, Commons (CC BY-SA 4.0)",
-        "selite": "Moranbongin puistoaluetta Pjongjangissa 27. heinäkuuta 2019 otetussa kuvassa.",
+        "selite": "Moranbongin puistoaluetta Pjongjangissa 27. heinäkuuta 2019.",
         "lyhyt": "Moran-kukkulan puisto Pjongjangissa.",
         "tiedosto": "Moranbong Park - 02.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "9bcc937be30819365f0d55c1eec1204cb56c4ea880a7849d9229b994ee9f49fe",
-      "targetAfterSHA256": "e0ab3544fb6c7aad319efdee278f9e6b82e1ae39c2abac198084882366a08dd7",
-      "contextAfterSHA256": "e0ab3544fb6c7aad319efdee278f9e6b82e1ae39c2abac198084882366a08dd7",
+      "sourceContentAfterSHA256": "162ec0f745e68a18bd6a6a0785c6ef84b6a2d8700b94c6c91336cccd8aac4820",
+      "targetAfterSHA256": "8b51e01731a9f1b744d9ddb40a27421ada56b4861a4bf8e208ff9533d00e411b",
+      "contextAfterSHA256": "8b51e01731a9f1b744d9ddb40a27421ada56b4861a4bf8e208ff9533d00e411b",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -2816,7 +2872,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "162ec0f745e68a18bd6a6a0785c6ef84b6a2d8700b94c6c91336cccd8aac4820",
+        "sameImageNativeSHA256": "e29f697b1e459be99ecde7eb0a2d4b8f0b65dec52406eb1f15023105055d4dd8",
+        "sameImageExportSHA256": "e29f697b1e459be99ecde7eb0a2d4b8f0b65dec52406eb1f15023105055d4dd8",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": true
+      }
     },
     {
       "era": "e10",
@@ -2838,14 +2902,14 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e10/pjongjang/c1-fd7017ca13ed352038ef.jpg",
         "suora": true,
         "lahde": "attributed to Jan Adriani, Wikimedia Commons (CC0)",
-        "selite": "Tiiviisti rakennettujen talojen kattoja Pjongjangissa noin vuonna 1907; ajoitus perustuu Rijksmuseumin luettelotietoon.",
+        "selite": "Tiiviisti rakennettujen talojen kattoja Pjongjangissa noin vuonna 1907.",
         "lyhyt": "Vanhan Pjongjangin talojen kattoja.",
         "tiedosto": "De daken van Pyongyang Gezicht op de daken van eenvoudige, dicht op elkaar gebouwde huizen, Pyongyang, Noord-Korea, RP-F-2000-9-51.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "attributed to Jan Adriani, Wikimedia Commons (CC0)",
-        "selite": "Tiiviisti rakennettujen talojen kattoja Pjongjangissa noin vuonna 1907; ajoitus perustuu Rijksmuseumin luettelotietoon.",
+        "selite": "Tiiviisti rakennettujen talojen kattoja Pjongjangissa noin vuonna 1907.",
         "lyhyt": "Vanhan Pjongjangin talojen kattoja.",
         "tiedosto": "De daken van Pyongyang Gezicht op de daken van eenvoudige, dicht op elkaar gebouwde huizen, Pyongyang, Noord-Korea, RP-F-2000-9-51.jpg"
       },
@@ -2853,7 +2917,7 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e10/pjongjang/c1-fd7017ca13ed352038ef.jpg",
         "suora": true,
         "lahde": "attributed to Jan Adriani, Wikimedia Commons (CC0)",
-        "selite": "Tiiviisti rakennettujen talojen kattoja Pjongjangissa noin vuonna 1907; ajoitus perustuu Rijksmuseumin luettelotietoon.",
+        "selite": "Tiiviisti rakennettujen talojen kattoja Pjongjangissa noin vuonna 1907.",
         "lyhyt": "Vanhan Pjongjangin talojen kattoja.",
         "tiedosto": "De daken van Pyongyang Gezicht op de daken van eenvoudige, dicht op elkaar gebouwde huizen, Pyongyang, Noord-Korea, RP-F-2000-9-51.jpg"
       },
@@ -2869,10 +2933,10 @@
         2976
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/pjongjang/sisalto.json",
-      "sourceContentSHA256": "9bcc937be30819365f0d55c1eec1204cb56c4ea880a7849d9229b994ee9f49fe",
+      "sourceContentSHA256": "162ec0f745e68a18bd6a6a0785c6ef84b6a2d8700b94c6c91336cccd8aac4820",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "f7c03377874e2b173a9f6e78827988aa010b3a295d97806dbbe6d5270ffa7d9a",
-        "semanticContextSHA256": "f7c03377874e2b173a9f6e78827988aa010b3a295d97806dbbe6d5270ffa7d9a",
+        "targetBeforeSHA256": "f548652513dab902b6350399bd291c9e2ed42eb9eed622a24929209ad6692b6c",
+        "semanticContextSHA256": "f548652513dab902b6350399bd291c9e2ed42eb9eed622a24929209ad6692b6c",
         "subjectTitle": "Pjongjang",
         "targetState": "existing-target"
       },
@@ -3060,7 +3124,7 @@
       "priorMediaFields": {
         "tiedosto": "De daken van Pyongyang Gezicht op de daken van eenvoudige, dicht op elkaar gebouwde huizen, Pyongyang, Noord-Korea, RP-F-2000-9-51.jpg",
         "lyhyt": "Vanhan Pjongjangin talojen kattoja.",
-        "selite": "Tiiviisti rakennettujen talojen kattoja Pjongjangissa noin vuonna 1907; ajoitus perustuu Rijksmuseumin luettelotietoon.",
+        "selite": "Tiiviisti rakennettujen talojen kattoja Pjongjangissa noin vuonna 1907.",
         "lahde": "attributed to Jan Adriani, Wikimedia Commons (CC0)"
       },
       "preservePreviousMediaObjects": true,
@@ -3087,14 +3151,14 @@
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "attributed to Jan Adriani, Wikimedia Commons (CC0)",
-        "selite": "Tiiviisti rakennettujen talojen kattoja Pjongjangissa noin vuonna 1907; ajoitus perustuu Rijksmuseumin luettelotietoon.",
+        "selite": "Tiiviisti rakennettujen talojen kattoja Pjongjangissa noin vuonna 1907.",
         "lyhyt": "Vanhan Pjongjangin talojen kattoja.",
         "tiedosto": "De daken van Pyongyang Gezicht op de daken van eenvoudige, dicht op elkaar gebouwde huizen, Pyongyang, Noord-Korea, RP-F-2000-9-51.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "9bcc937be30819365f0d55c1eec1204cb56c4ea880a7849d9229b994ee9f49fe",
-      "targetAfterSHA256": "f7c03377874e2b173a9f6e78827988aa010b3a295d97806dbbe6d5270ffa7d9a",
-      "contextAfterSHA256": "f7c03377874e2b173a9f6e78827988aa010b3a295d97806dbbe6d5270ffa7d9a",
+      "sourceContentAfterSHA256": "162ec0f745e68a18bd6a6a0785c6ef84b6a2d8700b94c6c91336cccd8aac4820",
+      "targetAfterSHA256": "f548652513dab902b6350399bd291c9e2ed42eb9eed622a24929209ad6692b6c",
+      "contextAfterSHA256": "f548652513dab902b6350399bd291c9e2ed42eb9eed622a24929209ad6692b6c",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -3117,7 +3181,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "162ec0f745e68a18bd6a6a0785c6ef84b6a2d8700b94c6c91336cccd8aac4820",
+        "sameImageNativeSHA256": "fd7017ca13ed352038efb5d341bc292d77b0637c07a8ea51d8f9cdf84a7f0f75",
+        "sameImageExportSHA256": "fd7017ca13ed352038efb5d341bc292d77b0637c07a8ea51d8f9cdf84a7f0f75",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": true
+      }
     },
     {
       "era": "e10",
@@ -3138,24 +3210,24 @@
       "CmediaFieldPayload": {
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e10/pjongjang/c2-e11a84194ce966bf1937.jpg",
         "suora": true,
-        "lahde": "Earth Science and Remote Sensing Unit , Lyndon B. Johnson Space Center, Wikimedia Commons (PD)",
-        "selite": "Pjongjangin seutu ISS-avaruusasemalta 22. lokakuuta 2021 otetussa kuvassa.",
-        "lyhyt": "Pjongjangin seutu avaruudesta nähtynä.",
+        "lahde": "Earth Science and Remote Sensing Unit, Lyndon B. Johnson Space Center, Wikimedia Commons (PD)",
+        "selite": "Maapallon näkymä ISS-avaruusasemalta lokakuussa 2021.",
+        "lyhyt": "Maapallo avaruudesta.",
         "tiedosto": "ISS066-E-7985 - View of Earth.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
-        "lahde": "Earth Science and Remote Sensing Unit , Lyndon B. Johnson Space Center, Wikimedia Commons (PD)",
-        "selite": "Pjongjangin seutu ISS-avaruusasemalta 22. lokakuuta 2021 otetussa kuvassa.",
-        "lyhyt": "Pjongjangin seutu avaruudesta nähtynä.",
+        "lahde": "Earth Science and Remote Sensing Unit, Lyndon B. Johnson Space Center, Wikimedia Commons (PD)",
+        "selite": "Maapallon näkymä ISS-avaruusasemalta lokakuussa 2021.",
+        "lyhyt": "Maapallo avaruudesta.",
         "tiedosto": "ISS066-E-7985 - View of Earth.jpg"
       },
       "runtimeMediaFieldPayload": {
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e10/pjongjang/c2-e11a84194ce966bf1937.jpg",
         "suora": true,
-        "lahde": "Earth Science and Remote Sensing Unit , Lyndon B. Johnson Space Center, Wikimedia Commons (PD)",
-        "selite": "Pjongjangin seutu ISS-avaruusasemalta 22. lokakuuta 2021 otetussa kuvassa.",
-        "lyhyt": "Pjongjangin seutu avaruudesta nähtynä.",
+        "lahde": "Earth Science and Remote Sensing Unit, Lyndon B. Johnson Space Center, Wikimedia Commons (PD)",
+        "selite": "Maapallon näkymä ISS-avaruusasemalta lokakuussa 2021.",
+        "lyhyt": "Maapallo avaruudesta.",
         "tiedosto": "ISS066-E-7985 - View of Earth.jpg"
       },
       "runtimeRemoveMediaKeys": [],
@@ -3170,10 +3242,10 @@
         3712
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/pjongjang/sisalto.json",
-      "sourceContentSHA256": "9bcc937be30819365f0d55c1eec1204cb56c4ea880a7849d9229b994ee9f49fe",
+      "sourceContentSHA256": "162ec0f745e68a18bd6a6a0785c6ef84b6a2d8700b94c6c91336cccd8aac4820",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "93a83c4a4d1ad74e31a52588328e00aff843c2a05b90d65210ab7ccd38799d6a",
-        "semanticContextSHA256": "93a83c4a4d1ad74e31a52588328e00aff843c2a05b90d65210ab7ccd38799d6a",
+        "targetBeforeSHA256": "db0038634fc6bfc46a217bcd53c14cd0da9e0b50f9ab9d63d6013a128a060299",
+        "semanticContextSHA256": "db0038634fc6bfc46a217bcd53c14cd0da9e0b50f9ab9d63d6013a128a060299",
         "subjectTitle": "Pjongjang",
         "targetState": "existing-target"
       },
@@ -3359,9 +3431,9 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "ISS066-E-7985 - View of Earth.jpg",
-        "lyhyt": "Pjongjangin seutu avaruudesta nähtynä.",
-        "selite": "Pjongjangin seutu ISS-avaruusasemalta 22. lokakuuta 2021 otetussa kuvassa.",
-        "lahde": "Earth Science and Remote Sensing Unit , Lyndon B. Johnson Space Center, Wikimedia Commons (PD)"
+        "lyhyt": "Maapallo avaruudesta.",
+        "selite": "Maapallon näkymä ISS-avaruusasemalta lokakuussa 2021.",
+        "lahde": "Earth Science and Remote Sensing Unit, Lyndon B. Johnson Space Center, Wikimedia Commons (PD)"
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -3386,15 +3458,15 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
-        "lahde": "Earth Science and Remote Sensing Unit , Lyndon B. Johnson Space Center, Wikimedia Commons (PD)",
-        "selite": "Pjongjangin seutu ISS-avaruusasemalta 22. lokakuuta 2021 otetussa kuvassa.",
-        "lyhyt": "Pjongjangin seutu avaruudesta nähtynä.",
+        "lahde": "Earth Science and Remote Sensing Unit, Lyndon B. Johnson Space Center, Wikimedia Commons (PD)",
+        "selite": "Maapallon näkymä ISS-avaruusasemalta lokakuussa 2021.",
+        "lyhyt": "Maapallo avaruudesta.",
         "tiedosto": "ISS066-E-7985 - View of Earth.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "9bcc937be30819365f0d55c1eec1204cb56c4ea880a7849d9229b994ee9f49fe",
-      "targetAfterSHA256": "93a83c4a4d1ad74e31a52588328e00aff843c2a05b90d65210ab7ccd38799d6a",
-      "contextAfterSHA256": "93a83c4a4d1ad74e31a52588328e00aff843c2a05b90d65210ab7ccd38799d6a",
+      "sourceContentAfterSHA256": "162ec0f745e68a18bd6a6a0785c6ef84b6a2d8700b94c6c91336cccd8aac4820",
+      "targetAfterSHA256": "db0038634fc6bfc46a217bcd53c14cd0da9e0b50f9ab9d63d6013a128a060299",
+      "contextAfterSHA256": "db0038634fc6bfc46a217bcd53c14cd0da9e0b50f9ab9d63d6013a128a060299",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -3417,7 +3489,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "162ec0f745e68a18bd6a6a0785c6ef84b6a2d8700b94c6c91336cccd8aac4820",
+        "sameImageNativeSHA256": "e11a84194ce966bf19376107d67a9c30debfc388592c16f945f7cde4cc4285b7",
+        "sameImageExportSHA256": "e11a84194ce966bf19376107d67a9c30debfc388592c16f945f7cde4cc4285b7",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": true
+      }
     },
     {
       "era": "e10",
@@ -3470,10 +3550,10 @@
         3096
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/pjongjang/sisalto.json",
-      "sourceContentSHA256": "9bcc937be30819365f0d55c1eec1204cb56c4ea880a7849d9229b994ee9f49fe",
+      "sourceContentSHA256": "162ec0f745e68a18bd6a6a0785c6ef84b6a2d8700b94c6c91336cccd8aac4820",
       "semanticSourceBind": {
         "targetBeforeSHA256": "1fea15ab51e140e073a5312f680d05677ad51f8db4a12317247c2acd3eba4019",
-        "semanticContextSHA256": "8c05e3ffdf7802850db371cbb648be470cf2c6c5a3e8e4726d461a31d2c87b5d",
+        "semanticContextSHA256": "81124b09b3778d190708f71d9b22ecf77c31e8a06e859896bf945fd4ce10f7c2",
         "subjectTitle": "Moran-kukkula",
         "targetState": "existing-target"
       },
@@ -3687,9 +3767,9 @@
         "tiedosto": "Moranbong Park - 03.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "9bcc937be30819365f0d55c1eec1204cb56c4ea880a7849d9229b994ee9f49fe",
+      "sourceContentAfterSHA256": "162ec0f745e68a18bd6a6a0785c6ef84b6a2d8700b94c6c91336cccd8aac4820",
       "targetAfterSHA256": "1fea15ab51e140e073a5312f680d05677ad51f8db4a12317247c2acd3eba4019",
-      "contextAfterSHA256": "8c05e3ffdf7802850db371cbb648be470cf2c6c5a3e8e4726d461a31d2c87b5d",
+      "contextAfterSHA256": "81124b09b3778d190708f71d9b22ecf77c31e8a06e859896bf945fd4ce10f7c2",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -3712,7 +3792,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "162ec0f745e68a18bd6a6a0785c6ef84b6a2d8700b94c6c91336cccd8aac4820",
+        "sameImageNativeSHA256": "041a192f8dce9e33e59860a5a1b1a95f9358a741288df977348c56b88a674c41",
+        "sameImageExportSHA256": "041a192f8dce9e33e59860a5a1b1a95f9358a741288df977348c56b88a674c41",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     }
   ],
   "runtimeIntegrationPending": true,
@@ -3724,6 +3812,9 @@
   "task118TextRevision": true,
   "independentTextResamplePending": true,
   "textAcceptanceVerified": false,
-  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task118/immutable-media-history/e10/pjongjang/2c48ae2a25b93056fb0626a03d736bbc32551fa802deb809911e5ab5e899bbfb.json",
-  "task118ReboundAt": "2026-10-13T16:31:25.895536+00:00"
+  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task228/immutable-media-history/e10/pjongjang/280c9e6e1053f1df140c1b83e1b80db576b96ef9ed11a5992e1e3dadb6aea20a.json",
+  "task118ReboundAt": "2026-10-13T16:31:25.895536+00:00",
+  "task228ExcludedAssets": [],
+  "task228TextRevision": true,
+  "task228ReboundAt": "2026-10-13T18:10:08.039260+00:00"
 }

@@ -14,8 +14,8 @@
     }
   },
   "artikkeli": {
-    "intro": "Pjongjang on Pohjois-Korean pääkaupunki Taedong-joen varrella. Sen nimi tarkoittaa **tasaista maata**, ja kaupunki sijaitsee Korean niemimaan läntisen rannikon tasangolla. Joen reitti alkaa kuitenkin pohjoisen Rangrim-vuorilta ja jatkuu kaupungin kautta kohti Koreanlahtea. Moran-kukkula tuo tasankoon puistoa ja korkeuseroja.\n\nIsoisän matkavuoteen 1873 mennessä Pjongjang oli ollut Goguryeon pääkaupunki ja myöhemmin Goryeon läntinen pääkaupunki. Joen varren Taedongmun-portti muistuttaa ajasta, jolloin lautta kuljetti ihmisiä joen yli. Rantapaviljongit yhdistävät vanhan kaupungin puolustuspaikkoja ja maiseman katselua. Pjongjangin ruokapöydässä paikan nimi puolestaan liittyy **kylmiin tattarinuudeleihin**, joita tarjoillaan liemessä. Naengmyeon on myös yhdessäolon tapa: pitkät nuudelit liittyvät pitkän elämän toivotuksiin ja perhejuhliin.",
-    "teksti": "Pjongjangin vanha kaupunki suuntautui Taedongille. Itäinen Taedongmun-portti oli tärkeä yhteys joelle, ja sen ulkopuolella toimi lauttaliikenne. Portilta kaupunkialueelle johtava tie oli vanhan keskustan kulkuväyliä. Kivirakenteen ylle noussut paviljonki yhdisti portin ja näköalapaikan.\n\nLähistön Ryongwang-paviljonki kuului kaupungin puolustusjärjestelmään ja muuttui myöhemmin maiseman katselun paikaksi. Moran-kukkulan rannassa Pubyokin nimi viittaa kelluviin muureihin. Vanhojen paikkojen historiaan kuuluu uudelleenrakentamista ja korjauksia, joten pitkä paikkaperinne ei tarkoita muuttumatonta rakennusmateriaalia.\n\nRuokaperinteessä samaan kaupunkiin mahtuvat sekä kylmä nuudelikulho että lämmin juovakelttikeitto. Pjongjangin naengmyeonissa tattarinuudelit saavat seurakseen viileän liemen ja lisukkeita. Ruokaperinteeseen kuuluu myös taitojen välittäminen perheissä ja ravintoloissa. Annoksen reseptin rinnalla säilyy näin tieto siitä, milloin ja miten sitä tarjotaan toisille."
+    "intro": "Pjongjang on Pohjois-Korean pääkaupunki Taedong-joen varrella. Sen nimi tarkoittaa **tasaista maata**, ja kaupunki sijaitsee Korean niemimaan läntisen rannikon tasangolla. Joen reitti alkaa kuitenkin pohjoisen Rangrim-vuorilta ja jatkuu kaupungin kautta kohti Koreanlahtea. Moran-kukkula tuo tasankoon puistoa ja korkeuseroja.\n\nIsoisän matkavuoteen 1873 mennessä Pjongjang oli ollut Goguryeon pääkaupunki ja myöhemmin Goryeon läntinen pääkaupunki. Joen varren Taedongmun-portti muistuttaa ajasta, jolloin lautta kuljetti ihmisiä joen yli. Rantapaviljongit yhdistävät vanhan kaupungin puolustuspaikkoja ja maiseman katselua. Pjongjangin naengmyeonissa **kylmät tattarinuudelit** tarjoillaan liemessä. Naengmyeon on myös yhdessäolon tapa: pitkät nuudelit liittyvät pitkän elämän toivotuksiin ja perhejuhliin.",
+    "teksti": "Pjongjangin vanha kaupunki suuntautui Taedongille. Itäinen Taedongmun-portti oli tärkeä yhteys joelle, ja sen ulkopuolella toimi lauttaliikenne. Portilta kaupunkialueelle johtava tie oli vanhan keskustan kulkuväyliä. Kivirakenteen ylle noussut paviljonki yhdisti portin ja näköalapaikan.\n\nLähistön Ryongwang-paviljonki kuului kaupungin puolustusjärjestelmään ja muuttui myöhemmin maiseman katselun paikaksi. Moran-kukkulan rannassa Pubyokin nimi viittaa kelluviin muureihin. \n\nRuokaperinteessä samaan kaupunkiin mahtuvat sekä kylmä nuudelikulho että lämmin juovakelttikeitto. Pjongjangin naengmyeonissa tattarinuudelit saavat seurakseen viileän liemen ja lisukkeita. Ruokaperinteeseen kuuluu myös taitojen välittäminen perheissä ja ravintoloissa."
   },
   "kysymykset": [
     {
@@ -33,16 +33,16 @@
       "source": "https://en.wikipedia.org/wiki/Taedong_River"
     },
     {
-      "q": "Mikä yhteys Taedongmun-portin ulkopuolella auttoi ylittämään joen?",
+      "q": "Millä tavalla joen vastarannalle kuljettiin Taedongmun-portin ulkopuolelta?",
       "options": [
-        "Lautta",
-        "Rautatiesilta",
-        "Ilmaköysirata",
-        "Kanava"
+        "Lautalla",
+        "Ponttonisiltaa pitkin",
+        "Kahlaamalla",
+        "Kivisiltaa pitkin"
       ],
       "correct": 0,
       "level": 2,
-      "hint": "Portin merkitys kulkureittinä väheni siltojen rakentamisen myötä.",
+      "hint": "Joen yhteys johti suoraan vanhan kaupungin portille.",
       "fact": "Taedongmun-portin ulkopuolella lautta kuljetti aikoinaan ihmisiä joen vastarannalle.",
       "source": "https://en.wikipedia.org/wiki/Taedongmun"
     },
@@ -56,7 +56,7 @@
       ],
       "correct": 0,
       "level": 3,
-      "hint": "Nimeen liittyy ajatus rakennuksesta veden yläpuolella.",
+      "hint": "Paviljongin aiempi nimi oli Yongmyong.",
       "fact": "Pubyok-nimi vertaa joen rantatörmällä olevaa paviljonkia veden yllä leijuvaan rakenteeseen.",
       "source": "https://en.wikipedia.org/wiki/Pubyok_Pavilion"
     },
@@ -97,7 +97,7 @@
   "valokuva": {
     "tiedosto": "Moranbong Park - 02.jpg",
     "lyhyt": "Moran-kukkulan puisto Pjongjangissa.",
-    "selite": "Moranbongin puistoaluetta Pjongjangissa 27. heinäkuuta 2019 otetussa kuvassa.",
+    "selite": "Moranbongin puistoaluetta Pjongjangissa 27. heinäkuuta 2019.",
     "lahde": "Jan Engelhardt, Commons (CC BY-SA 4.0)"
   },
   "kaupunkilehti": [
@@ -109,14 +109,14 @@
         {
           "tiedosto": "De daken van Pyongyang Gezicht op de daken van eenvoudige, dicht op elkaar gebouwde huizen, Pyongyang, Noord-Korea, RP-F-2000-9-51.jpg",
           "lyhyt": "Vanhan Pjongjangin talojen kattoja.",
-          "selite": "Tiiviisti rakennettujen talojen kattoja Pjongjangissa noin vuonna 1907; ajoitus perustuu Rijksmuseumin luettelotietoon.",
+          "selite": "Tiiviisti rakennettujen talojen kattoja Pjongjangissa noin vuonna 1907.",
           "lahde": "attributed to Jan Adriani, Wikimedia Commons (CC0)"
         },
         {
           "tiedosto": "ISS066-E-7985 - View of Earth.jpg",
-          "lyhyt": "Pjongjangin seutu avaruudesta nähtynä.",
-          "selite": "Pjongjangin seutu ISS-avaruusasemalta 22. lokakuuta 2021 otetussa kuvassa.",
-          "lahde": "Earth Science and Remote Sensing Unit , Lyndon B. Johnson Space Center, Wikimedia Commons (PD)"
+          "lyhyt": "Maapallo avaruudesta.",
+          "selite": "Maapallon näkymä ISS-avaruusasemalta lokakuussa 2021.",
+          "lahde": "Earth Science and Remote Sensing Unit, Lyndon B. Johnson Space Center, Wikimedia Commons (PD)"
         },
         {
           "tiedosto": "",
@@ -128,7 +128,7 @@
       "nostot": [
         {
           "otsikko": "Tasainen maa ei tarkoita kukkulatonta kaupunkia",
-          "teksti": "Pjongjangin nimi tarkoittaa tasaista maata. Kaupunki sijaitsee niemimaan läntisen rannikon tasangolla, mutta nimen ei tarvitse kuvata sen jokaista kohtaa: keskustan Moran-kukkula on puistoa, ja sen nimi tarkoittaa pionikukkulaa. Myös Taedong-joen alku on toisenlaisessa maastossa. Joki lähtee pohjoisen Rangrim-vuorilta, virtaa kaupungin läpi lounaaseen ja laskee Koreanlahteen Nampon luona. Pjongjangin tasanko on siis osa suurempaa maisemaa, jossa vuoret, jokireitti ja merenlahti liittyvät toisiinsa.",
+          "teksti": "Pjongjangin nimi tarkoittaa tasaista maata. Kaupunki sijaitsee niemimaan läntisen rannikon tasangolla, mutta nimen ei tarvitse kuvata sen jokaista kohtaa: keskustan Moran-kukkula on puistoa, ja sen nimi tarkoittaa pionikukkulaa. Myös Taedong-joen alku on toisenlaisessa maastossa. Joki lähtee pohjoisen Rangrim-vuorilta, virtaa kaupungin läpi lounaaseen ja laskee Koreanlahteen Nampon luona.",
           "tiedosto": "",
           "lyhyt": "",
           "selite": "",
@@ -137,7 +137,7 @@
         },
         {
           "otsikko": "Portti, jolle saavuttiin joelta",
-          "teksti": "Taedongmun oli vanhan Pjongjangin sisemmän linnoituksen itäinen portti. Sen nimi tulee Taedong-joesta, jonka rannalla se seisoo. Portin ulkopuolelta liikennöi aikoinaan lautta vastarannalle, ja vesireitti oli tärkeä tapa saapua kaupunkiin. Portilta kaupunkialueelle johtava tie puolestaan muodosti vanhan keskustan pääväylän. Nykyisen portin graniittisen alustan päällä on paviljonki, josta avautuu näkymä joelle. Kun siltoja rakennettiin, portin merkitys kulkureittinä muuttui. Sen paikka kertoo yhä joen ja kaupungin aiemmasta yhteydestä.",
+          "teksti": "Taedongmun oli vanhan Pjongjangin sisemmän linnoituksen itäinen portti. Sen nimi tulee Taedong-joesta, jonka rannalla se seisoo. Portin ulkopuolelta liikennöi aikoinaan lautta vastarannalle, ja vesireitti oli tärkeä tapa saapua kaupunkiin. Portilta kaupunkialueelle johtava tie puolestaan muodosti vanhan keskustan pääväylän. Nykyisen portin graniittisen alustan päällä on paviljonki, josta avautuu näkymä joelle. Kun siltoja rakennettiin, portin merkitys kulkureittinä muuttui.",
           "tiedosto": "",
           "lyhyt": "",
           "selite": "",
@@ -146,7 +146,7 @@
         },
         {
           "otsikko": "Puolustuspaikasta näköalapaikaksi",
-          "teksti": "Ryongwang-paviljonki Taedongin rannalla ei alun perin ollut vain paikka katsella maisemaa. Se kuului muuritetun kaupungin puolustusjärjestelmään yhdessä läheisen Taedongmun-portin kanssa. Goguryeo-kaudella paikan nimi oli Sansu, ja Goryeo-kaudella siitä tuli maiseman katselun paikka. Myöhemmin Joseon-kaudella rakennus uudistettiin ja sai Ryongwang-nimen. Pitkä historia on kerrostunut samaan rantapaikkaan. Paviljonkia on palautettu vaurioiden jälkeen ja korjattu myöhemmin. Nykyinen rakennus edustaa pitkän paikkahistorian viimeisintä vaihetta.",
+          "teksti": "Ryongwang-paviljonki Taedongin rannalla ei alun perin ollut vain paikka katsella maisemaa. Se kuului muuritetun kaupungin puolustusjärjestelmään yhdessä läheisen Taedongmun-portin kanssa. Goguryeo-kaudella paikan nimi oli Sansu, ja Goryeo-kaudella siitä tuli maiseman katselun paikka. Myöhemmin Joseon-kaudella rakennus uudistettiin ja sai Ryongwang-nimen. Paviljonkia on palautettu vaurioiden jälkeen ja korjattu myöhemmin.",
           "tiedosto": "",
           "lyhyt": "",
           "selite": "",
@@ -155,7 +155,7 @@
         },
         {
           "otsikko": "Kelluvat muurit joen yläpuolella",
-          "teksti": "Pubyok-paviljongin nimi tarkoittaa kelluvia muureja, ikään kuin rakennus leijuisi Taedongin veden yllä. Paikka sijaitsee Moran-kukkulalla joen rantatörmällä. Sen aiempi nimi oli Yongmyong, ja paviljonki kuului samannimisen temppelin yhteyteen. Nykyisen nimensä se sai keskiajalla. Rakennuksen pylväät, kattorakenne ja niitä yhdistävät osat edustavat korealaista puurakentamista. Samalla joenranta on ollut maiseman ja runoperinteen paikka. Yhdessä nimessä kohtaavat siten rakennuksen sijainti, mielikuva vedestä ja vanhan temppelialueen historia.",
+          "teksti": "Pubyok-paviljongin nimi tarkoittaa kelluvia muureja, ikään kuin rakennus leijuisi Taedongin veden yllä. Paikka sijaitsee Moran-kukkulalla joen rantatörmällä. Sen aiempi nimi oli Yongmyong, ja paviljonki kuului samannimisen temppelin yhteyteen. Nykyisen nimensä se sai keskiajalla. Rakennuksen pylväät, kattorakenne ja niitä yhdistävät osat edustavat korealaista puurakentamista. Samalla joenranta on ollut maiseman ja runoperinteen paikka.",
           "tiedosto": "",
           "lyhyt": "",
           "selite": "",
@@ -170,16 +170,16 @@
           "selite": "",
           "lahde": ""
         },
-        "kappale": "Pjongjangin vanhat rantapaikat liittyvät Taedong-joen historiaan. Taedongmunin portti palveli lauttaliikennettä, Ryongwang-paviljonki puolustusta ja myöhemmin maiseman katselua. Moran-kukkulan rantatörmällä on Pubyok-paviljonki. Ruokaperinteen ytimessä ovat kylmät tattarinuudelit, lämmin onban-riisiannos ja juovakelttikeitto. Kaupungin nimissä, rakennuspaikoissa ja ruoissa säilyy vanhempien aikakausien perintöä.",
+        "kappale": "Pjongjangin vanhat rantapaikat liittyvät Taedong-joen historiaan. Taedongmun-portti palveli lauttaliikennettä, Ryongwang-paviljonki puolustusta ja myöhemmin maiseman katselua. Moran-kukkulan rantatörmällä on Pubyok-paviljonki. Ruokaperinteen ytimessä ovat kylmät tattarinuudelit, lämmin onban-riisiannos ja juovakelttikeitto. Kaupungin nimissä, rakennuspaikoissa ja ruoissa säilyy vanhempien aikakausien perintöä.",
         "artikkeli": {
           "nimi": "Matkailijan Pjongjang",
           "taitto": "opas",
-          "teksti": "Tutustu Taedongin vanhoihin rantapaikkoihin ja kaupungin ruokaperinteeseen; mahdollinen vierailu vaatii etukäteen järjestetyn, ohjatun matkan.",
+          "teksti": "Tutustu Taedongin vanhoihin rantapaikkoihin ja kaupungin ruokaperinteeseen.",
           "nosto": "Taedongin rantapaikat ja vanhat ruokaperinteet avaavat kaupungin historiaa.",
           "jaksot": [
             {
               "otsikko": "Perille ja liikkeelle",
-              "teksti": "Pjongjangin lentoasema on Sunan. Matkat järjestetään matkanjärjestäjän kautta, ja kaupungin käynnit sekä siirtymät sovitaan oppaiden kanssa. Ohjelmaan voi kuulua Taedongin rantapaikkoja ja Moran-kukkula. Sunanin lentoasema ja keskustan vanhat kohteet ovat erillisiä käyntipaikkoja.",
+              "teksti": "Pjongjangin kansainvälinen lentoasema Sunan sijaitsee kaupungin pohjoispuolella.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -189,7 +189,7 @@
             },
             {
               "otsikko": "Vanha kaupunki joen äärellä",
-              "teksti": "Taedongmunin portti ja läheinen Ryongwang-paviljonki auttavat hahmottamaan vanhan kaupungin joenpuoleista reunaa. Portti liittyi vesiliikenteeseen, paviljonki sekä puolustukseen että maiseman katseluun. Rakennuksilla on pitkä paikkahistoria, mutta niitä on myös palautettu ja korjattu. Porttia ja paviljonkia yhdistää Taedongin rantapaikka ja vanhan kaupungin linnoitushistoria.",
+              "teksti": "Taedongmun-portti ja läheinen Ryongwang-paviljonki auttavat hahmottamaan vanhan kaupungin joenpuoleista reunaa. Portti liittyi vesiliikenteeseen, paviljonki sekä puolustukseen että maiseman katseluun. Rakennuksilla on pitkä paikkahistoria, mutta niitä on myös palautettu ja korjattu. Porttia ja paviljonkia yhdistää Taedongin rantapaikka ja vanhan kaupungin linnoitushistoria.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -219,7 +219,7 @@
             },
             {
               "otsikko": "Vuodenajat ja suunnittelu",
-              "teksti": "Pjongjangin kesä on lämmin tai kuuma ja kostea, talvi kylmä ja verraten kuiva. Moran-kukkula ja joenrantapaikat ovat ulkokohteita; ruokaperinteeseen tutustutaan ravintolassa. Naengmyeon tarjoillaan kylmänä, onban ja sungeo-guk puolestaan lämpiminä. Annoksen tarjoilulämpötila ja ulkoilupäivän sää ovat kaksi eri asiaa.",
+              "teksti": "Pjongjangin kesä on lämmin tai kuuma ja kostea, talvi kylmä ja verraten kuiva. Moran-kukkula ja joenrantapaikat ovat ulkokohteita; ruokaperinteeseen tutustutaan ravintolassa. Naengmyeon tarjoillaan kylmänä, onban ja sungeo-guk puolestaan lämpiminä.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -259,19 +259,15 @@
             "hyvaTietaa": [
               {
                 "otsikko": "Ohjattu vierailu",
-                "teksti": "Omatoiminen kiertely ei käytännössä ole mahdollista; käynnit sovitaan oppaiden kanssa."
+                "teksti": "Vierailu järjestetään matkanjärjestäjän kautta, ja käynnit sekä siirtymät sovitaan oppaiden kanssa."
               },
               {
-                "otsikko": "Muuttuvat järjestelyt",
-                "teksti": "Varmista maahanpääsy ja koko matkan järjestelyt matkanjärjestäjältä ennen lähtöä."
+                "otsikko": "Taedong",
+                "teksti": "Taedong virtaa kaupungin kautta Koreanlahteen."
               },
               {
-                "otsikko": "Kuvaaminen",
-                "teksti": "Kysy oppaalta lupa ennen kuvaamista ja noudata paikalla annettuja rajoituksia."
-              },
-              {
-                "otsikko": "Matkan valmistelu",
-                "teksti": "Tarkista Ulkoministeriön ajantasainen matkustustiedote ja maahantulon ehdot ennen matkaa."
+                "otsikko": "Ruokasanasto",
+                "teksti": "Naengmyeon-nimi kirjoitetaan pohjoiskorealaisessa romanisoinnissa raengmyon."
               }
             ]
           },
@@ -315,7 +311,7 @@
         },
         {
           "otsikko": "Perintö jatkuu myös keittiössä",
-          "teksti": "Naengmyeonin taitoperinne kulkee Pjongjangissa perheen keittiöistä ravintoloihin. Perheissä äidit ja isoäidit välittävät tietoja ja taitoja lapsilleen. Ravintoloissa oppimista järjestetään koulutuksena ja työn yhteydessä. Ruokakilpailut, festivaalit ja näyttelyt ovat muita tapoja pitää perinnettä esillä. Resepti on siten osa laajempaa osaamista: siihen liittyvät valmistaminen, tarjoaminen ja tilanteet, joissa kulho annetaan toiselle. Perinne on elävää toimintaa, jota opetellaan yhä uudelleen käytännön työssä.",
+          "teksti": "Naengmyeonin taitoperinne kulkee Pjongjangissa perheen keittiöistä ravintoloihin. Perheissä äidit ja isoäidit välittävät tietoja ja taitoja lapsilleen. Ravintoloissa oppimista järjestetään koulutuksena ja työn yhteydessä. Ruokakilpailut, festivaalit ja näyttelyt ovat muita tapoja pitää perinnettä esillä.",
           "tiedosto": "",
           "lyhyt": "",
           "selite": "",
@@ -324,7 +320,7 @@
         },
         {
           "otsikko": "Joki löytyy myös keiton nimestä",
-          "teksti": "Taedonggang sungeoguk on Pjongjangin ruokaperinteen juovakelttikeitto, jonka nimi yhdistää kalan ja Taedong-joen. Kirkkaaseen liemeen kuuluvat juovakeltti (Mugil cephalus) ja mustapippuri; sitä maustetaan myös suolalla, valkosipulilla ja inkiväärillä ja viimeistellään sipulinvarsilla. Keittoa on tarjottu kaupunkiin saapuville arvostetuille vieraille. Ruokalaji kertoo näin sekä paikallisesta kalasta että vieraanvaraisuudesta. Kylmän tattarinuudelikulhon rinnalla kaupungin omiin ruokiin kuuluu myös lämmin, liemeltään selkeä kala-annos.",
+          "teksti": "Taedonggang sungeo-guk on Pjongjangin ruokaperinteen juovakelttikeitto, jonka nimi yhdistää kalan ja Taedong-joen. Kirkkaaseen liemeen kuuluvat juovakeltti (Mugil cephalus) ja mustapippuri; sitä maustetaan myös suolalla, valkosipulilla ja inkiväärillä ja viimeistellään sipulinvarsilla. Keittoa on tarjottu kaupunkiin saapuville arvostetuille vieraille.",
           "tiedosto": "",
           "lyhyt": "",
           "selite": "",
@@ -364,17 +360,12 @@
         }
       ],
       "lahde": "Wikipedia",
-      "teksti": "Moran-kukkula eli Moranbong muodostaa puiston Pjongjangin keskustassa. Sen koreankielinen nimi tarkoittaa pionikukkulaa. Paikka tuo tasangolla sijaitsevaan kaupunkiin korkeuseroja ja liittyy myös joenrantaan: Taedongin puoleisella rantatörmällä sijaitsee vanha Pubyok-paviljonki. Kukkulan ympäristö on virkistysaluetta, ja sen lähellä on ravintoloita sekä muita vapaa-ajan paikkoja.\n\nPubyokin aiempi nimi oli Yongmyong, ja paviljonki kuului samannimiseen temppeliin. Keskiajalla käyttöön tullut Pubyok-nimi viittaa kelluviin muureihin, mielikuvaan rakennuksesta joen yllä. Paviljongin pylväät ja kattorakenne edustavat korealaista puurakentamista. Kukkulan luonnollinen muoto, rantatörmä ja vanhan temppelialueen paikkaperinne tuovat tähän osaan Pjongjangia eri aikatasoja."
+      "teksti": "Moran-kukkula eli Moranbong muodostaa puiston Pjongjangin keskustassa. Sen koreankielinen nimi tarkoittaa pionikukkulaa. Paikka tuo tasangolla sijaitsevaan kaupunkiin korkeuseroja ja liittyy myös joenrantaan: Taedongin puoleisella rantatörmällä sijaitsee vanha Pubyok-paviljonki. Kukkulan ympäristö on virkistysaluetta, ja sen lähellä on ravintoloita sekä muita vapaa-ajan paikkoja.\n\nPubyokin aiempi nimi oli Yongmyong, ja paviljonki kuului samannimiseen temppeliin. Keskiajalla käyttöön tullut Pubyok-nimi viittaa kelluviin muureihin, mielikuvaan rakennuksesta joen yllä. Paviljongin pylväät ja kattorakenne edustavat korealaista puurakentamista."
     }
   },
   "saatiedot": null,
   "ehdotukset": {
     "lentoasema": "Pyongyang Sunan International Airport (FNJ)",
-    "huomiot": [
-      "Task118 C-tekstikorjaus valmis 13.10.2026. Nykyisessä C:ssä 4 täytettyä kuvaroolia; erilliset B/media-, kartta-, sää-, D/E/F- ja pelikytkentäportit eivät ole tämän tekstikorjauksen hyväksyntä.",
-      "Kuvat odottavat erillistä kuvaputkea; kaikkien kuvaroolien neljä kenttää tyhjiä.",
-      "Kartta on partial: vain Moran-kukkulan oma puistopiste. Pubyokin oma WP/WD-piste puuttuu; kunnostettujen rakennusten tekijä- ja oikeusketju avoin.",
-      "Sään 48/48 primäärivarmennus puuttuu, saatiedot:null. D/E/F, hyväksyntä, pelikytkentä ja julkaisu avoinna."
-    ]
+    "huomiot": []
   }
 }

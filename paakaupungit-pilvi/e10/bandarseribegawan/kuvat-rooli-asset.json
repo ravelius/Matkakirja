@@ -3,7 +3,7 @@
   "era": "e10",
   "city": "bandarseribegawan",
   "authorization": "hyväksyn kaikki tekemäsi kuvat. toimita ne claudelle. claudelta saat uusia ohjeita jatkoa varten",
-  "sourceContentAfterSHA256": "9880da3931ff68f11885c17c992c70b8948d499b2de6920f1f7943edae6e8b1e",
+  "sourceContentAfterSHA256": "f0409851c32c4e32673a787580d7dc39e77acfa385bccada9eb3917b0f6ea1ee",
   "assets": [
     {
       "era": "e10",
@@ -53,10 +53,10 @@
         1448
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/bandarseribegawan/sisalto.json",
-      "sourceContentSHA256": "9880da3931ff68f11885c17c992c70b8948d499b2de6920f1f7943edae6e8b1e",
+      "sourceContentSHA256": "f0409851c32c4e32673a787580d7dc39e77acfa385bccada9eb3917b0f6ea1ee",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "f93a07e86a2e235bdb841bb208c5afd099aa1cc33170bb203feae6319c0d51d6",
+        "semanticContextSHA256": "36e0870b3cf0fca67b471b5d8ad77b94c713edbd60edc3e88cf28e32788579d1",
         "subjectTitle": "Matkailijalle",
         "targetState": "existing-target"
       },
@@ -257,9 +257,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "9880da3931ff68f11885c17c992c70b8948d499b2de6920f1f7943edae6e8b1e",
+      "sourceContentAfterSHA256": "f0409851c32c4e32673a787580d7dc39e77acfa385bccada9eb3917b0f6ea1ee",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "f93a07e86a2e235bdb841bb208c5afd099aa1cc33170bb203feae6319c0d51d6",
+      "contextAfterSHA256": "36e0870b3cf0fca67b471b5d8ad77b94c713edbd60edc3e88cf28e32788579d1",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -282,7 +282,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "f0409851c32c4e32673a787580d7dc39e77acfa385bccada9eb3917b0f6ea1ee",
+        "sameImageNativeSHA256": "262d3e8bc496cb4faedcec906d386075757dba394d8f1d4288b6b02d0792a363",
+        "sameImageExportSHA256": "c832cab61364280e00ae396a510da6a778a5fd7ee671ae8a6ea4d51d951983df",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e10",
@@ -335,10 +343,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/bandarseribegawan/sisalto.json",
-      "sourceContentSHA256": "9880da3931ff68f11885c17c992c70b8948d499b2de6920f1f7943edae6e8b1e",
+      "sourceContentSHA256": "f0409851c32c4e32673a787580d7dc39e77acfa385bccada9eb3917b0f6ea1ee",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "82c85d9ade58f16cf65b574710d02a37645fdba541f0d89767c5fda3226cca7b",
+        "semanticContextSHA256": "839fe3141daf097cb3948724815006ec06f5af02e307d453b1daf8675531da1b",
         "subjectTitle": "Mitä täällä syödään",
         "targetState": "existing-target"
       },
@@ -580,9 +588,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "9880da3931ff68f11885c17c992c70b8948d499b2de6920f1f7943edae6e8b1e",
+      "sourceContentAfterSHA256": "f0409851c32c4e32673a787580d7dc39e77acfa385bccada9eb3917b0f6ea1ee",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "82c85d9ade58f16cf65b574710d02a37645fdba541f0d89767c5fda3226cca7b",
+      "contextAfterSHA256": "839fe3141daf097cb3948724815006ec06f5af02e307d453b1daf8675531da1b",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -605,7 +613,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "f0409851c32c4e32673a787580d7dc39e77acfa385bccada9eb3917b0f6ea1ee",
+        "sameImageNativeSHA256": "d290fcab39a3f39eb30eb47fb02865aacb94987f31894ed678565bc478f962ed",
+        "sameImageExportSHA256": "e757fbb7602f5d4d0fc862d2d3f1bb12fe8c47013ef27bde354c5928b1bb6723",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e10",
@@ -655,10 +671,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/bandarseribegawan/sisalto.json",
-      "sourceContentSHA256": "9880da3931ff68f11885c17c992c70b8948d499b2de6920f1f7943edae6e8b1e",
+      "sourceContentSHA256": "f0409851c32c4e32673a787580d7dc39e77acfa385bccada9eb3917b0f6ea1ee",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "0dd10a5fe1236469653d556d7a0b73e975e6aede860354a838c9f789730b89b7",
-        "semanticContextSHA256": "0dd10a5fe1236469653d556d7a0b73e975e6aede860354a838c9f789730b89b7",
+        "targetBeforeSHA256": "3754423c74ca814fe09d099353733bdf32574120f2cad7599bf150678708511e",
+        "semanticContextSHA256": "3754423c74ca814fe09d099353733bdf32574120f2cad7599bf150678708511e",
         "subjectTitle": "Kaksi toria, kaksi erilaista ostosretkeä",
         "targetState": "existing-target"
       },
@@ -898,9 +914,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "9880da3931ff68f11885c17c992c70b8948d499b2de6920f1f7943edae6e8b1e",
-      "targetAfterSHA256": "0dd10a5fe1236469653d556d7a0b73e975e6aede860354a838c9f789730b89b7",
-      "contextAfterSHA256": "0dd10a5fe1236469653d556d7a0b73e975e6aede860354a838c9f789730b89b7",
+      "sourceContentAfterSHA256": "f0409851c32c4e32673a787580d7dc39e77acfa385bccada9eb3917b0f6ea1ee",
+      "targetAfterSHA256": "3754423c74ca814fe09d099353733bdf32574120f2cad7599bf150678708511e",
+      "contextAfterSHA256": "3754423c74ca814fe09d099353733bdf32574120f2cad7599bf150678708511e",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -923,7 +939,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "f0409851c32c4e32673a787580d7dc39e77acfa385bccada9eb3917b0f6ea1ee",
+        "sameImageNativeSHA256": "ad18ad9379b78d3953cd869417daebc879915050aefbdcb9d01f21eef0e65d65",
+        "sameImageExportSHA256": "c04d10989ff569008978ddefe693c4400c46917f066214baf9fa5bbe009ec6a5",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e10",
@@ -973,10 +997,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/bandarseribegawan/sisalto.json",
-      "sourceContentSHA256": "9880da3931ff68f11885c17c992c70b8948d499b2de6920f1f7943edae6e8b1e",
+      "sourceContentSHA256": "f0409851c32c4e32673a787580d7dc39e77acfa385bccada9eb3917b0f6ea1ee",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "7939b19e4571e7c5d5901983bea043ae5d038b610d9b9760c870240b74d9a6a0",
-        "semanticContextSHA256": "7939b19e4571e7c5d5901983bea043ae5d038b610d9b9760c870240b74d9a6a0",
+        "targetBeforeSHA256": "613871a8d51c972286a035826e8b05486d39552f94a9c74fb5d4d6feaaa5c951",
+        "semanticContextSHA256": "613871a8d51c972286a035826e8b05486d39552f94a9c74fb5d4d6feaaa5c951",
         "subjectTitle": "Vesikylällä on oma palveluverkko",
         "targetState": "existing-target"
       },
@@ -1216,9 +1240,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "9880da3931ff68f11885c17c992c70b8948d499b2de6920f1f7943edae6e8b1e",
-      "targetAfterSHA256": "7939b19e4571e7c5d5901983bea043ae5d038b610d9b9760c870240b74d9a6a0",
-      "contextAfterSHA256": "7939b19e4571e7c5d5901983bea043ae5d038b610d9b9760c870240b74d9a6a0",
+      "sourceContentAfterSHA256": "f0409851c32c4e32673a787580d7dc39e77acfa385bccada9eb3917b0f6ea1ee",
+      "targetAfterSHA256": "613871a8d51c972286a035826e8b05486d39552f94a9c74fb5d4d6feaaa5c951",
+      "contextAfterSHA256": "613871a8d51c972286a035826e8b05486d39552f94a9c74fb5d4d6feaaa5c951",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -1241,7 +1265,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "f0409851c32c4e32673a787580d7dc39e77acfa385bccada9eb3917b0f6ea1ee",
+        "sameImageNativeSHA256": "22ddfca227e636d70355493921ae35b22c131e1a61868731d98921064edee670",
+        "sameImageExportSHA256": "6fd086c60d925f1e825b73e2476ba275cd4d6f4bf38fd9e76dc57ac1e09773cf",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e10",
@@ -1291,10 +1323,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/bandarseribegawan/sisalto.json",
-      "sourceContentSHA256": "9880da3931ff68f11885c17c992c70b8948d499b2de6920f1f7943edae6e8b1e",
+      "sourceContentSHA256": "f0409851c32c4e32673a787580d7dc39e77acfa385bccada9eb3917b0f6ea1ee",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "1279871c8f716091461f0360628792119757a0a78f5d029bad82d08977457ffb",
-        "semanticContextSHA256": "1279871c8f716091461f0360628792119757a0a78f5d029bad82d08977457ffb",
+        "targetBeforeSHA256": "85d94734ffdc825e32df8f08ac1b364e5ad347fe33b9be780c8dc8536564e474",
+        "semanticContextSHA256": "85d94734ffdc825e32df8f08ac1b364e5ad347fe33b9be780c8dc8536564e474",
         "subjectTitle": "Ullakolla oli työpäivä",
         "targetState": "existing-target"
       },
@@ -1536,9 +1568,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "9880da3931ff68f11885c17c992c70b8948d499b2de6920f1f7943edae6e8b1e",
-      "targetAfterSHA256": "1279871c8f716091461f0360628792119757a0a78f5d029bad82d08977457ffb",
-      "contextAfterSHA256": "1279871c8f716091461f0360628792119757a0a78f5d029bad82d08977457ffb",
+      "sourceContentAfterSHA256": "f0409851c32c4e32673a787580d7dc39e77acfa385bccada9eb3917b0f6ea1ee",
+      "targetAfterSHA256": "85d94734ffdc825e32df8f08ac1b364e5ad347fe33b9be780c8dc8536564e474",
+      "contextAfterSHA256": "85d94734ffdc825e32df8f08ac1b364e5ad347fe33b9be780c8dc8536564e474",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -1561,7 +1593,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "f0409851c32c4e32673a787580d7dc39e77acfa385bccada9eb3917b0f6ea1ee",
+        "sameImageNativeSHA256": "4cb098964b76550ce93f82338b3aa91ccb4a745a078168837027ab45e3e555c9",
+        "sameImageExportSHA256": "a0edf91a60d6740786ebf3880cba09ba150f4134cfd25813c90af11b74daffdd",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e10",
@@ -1611,10 +1651,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/bandarseribegawan/sisalto.json",
-      "sourceContentSHA256": "9880da3931ff68f11885c17c992c70b8948d499b2de6920f1f7943edae6e8b1e",
+      "sourceContentSHA256": "f0409851c32c4e32673a787580d7dc39e77acfa385bccada9eb3917b0f6ea1ee",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "de4ddcb6af9a88cdd7d38aeb041b0db042101f3948887f9d5f2685e0823a8eb0",
-        "semanticContextSHA256": "de4ddcb6af9a88cdd7d38aeb041b0db042101f3948887f9d5f2685e0823a8eb0",
+        "targetBeforeSHA256": "267a4850c67a1afcdfd6b2488f0d42f2866ed42477b9dfccee0aa7679a7dd801",
+        "semanticContextSHA256": "267a4850c67a1afcdfd6b2488f0d42f2866ed42477b9dfccee0aa7679a7dd801",
         "subjectTitle": "Vanha nimi muistaa ammatin",
         "targetState": "existing-target"
       },
@@ -1856,9 +1896,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "9880da3931ff68f11885c17c992c70b8948d499b2de6920f1f7943edae6e8b1e",
-      "targetAfterSHA256": "de4ddcb6af9a88cdd7d38aeb041b0db042101f3948887f9d5f2685e0823a8eb0",
-      "contextAfterSHA256": "de4ddcb6af9a88cdd7d38aeb041b0db042101f3948887f9d5f2685e0823a8eb0",
+      "sourceContentAfterSHA256": "f0409851c32c4e32673a787580d7dc39e77acfa385bccada9eb3917b0f6ea1ee",
+      "targetAfterSHA256": "267a4850c67a1afcdfd6b2488f0d42f2866ed42477b9dfccee0aa7679a7dd801",
+      "contextAfterSHA256": "267a4850c67a1afcdfd6b2488f0d42f2866ed42477b9dfccee0aa7679a7dd801",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -1881,7 +1921,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "f0409851c32c4e32673a787580d7dc39e77acfa385bccada9eb3917b0f6ea1ee",
+        "sameImageNativeSHA256": "83fe7be6da4ef20f1346e4fd371e918c6928a2383e1bb7d3027da05bb7c24117",
+        "sameImageExportSHA256": "59a17ba0fa5ea6b70ca918b2a1ac6d13efc9426da6220a21bd3e3b2c81ff6cd7",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e10",
@@ -1931,10 +1979,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/bandarseribegawan/sisalto.json",
-      "sourceContentSHA256": "9880da3931ff68f11885c17c992c70b8948d499b2de6920f1f7943edae6e8b1e",
+      "sourceContentSHA256": "f0409851c32c4e32673a787580d7dc39e77acfa385bccada9eb3917b0f6ea1ee",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "9e1ed73e62fb76f40bf9f97d21fe044f33c6c0f940a6bf6631d1feb4ffa19bf2",
-        "semanticContextSHA256": "9e1ed73e62fb76f40bf9f97d21fe044f33c6c0f940a6bf6631d1feb4ffa19bf2",
+        "targetBeforeSHA256": "511334981eeaf62cd65edbd3ac3a119bf08355f645f5a59d458c4220fd691a97",
+        "semanticContextSHA256": "511334981eeaf62cd65edbd3ac3a119bf08355f645f5a59d458c4220fd691a97",
         "subjectTitle": "Teknologiaa ilman näyttöruutua",
         "targetState": "existing-target"
       },
@@ -2176,9 +2224,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "9880da3931ff68f11885c17c992c70b8948d499b2de6920f1f7943edae6e8b1e",
-      "targetAfterSHA256": "9e1ed73e62fb76f40bf9f97d21fe044f33c6c0f940a6bf6631d1feb4ffa19bf2",
-      "contextAfterSHA256": "9e1ed73e62fb76f40bf9f97d21fe044f33c6c0f940a6bf6631d1feb4ffa19bf2",
+      "sourceContentAfterSHA256": "f0409851c32c4e32673a787580d7dc39e77acfa385bccada9eb3917b0f6ea1ee",
+      "targetAfterSHA256": "511334981eeaf62cd65edbd3ac3a119bf08355f645f5a59d458c4220fd691a97",
+      "contextAfterSHA256": "511334981eeaf62cd65edbd3ac3a119bf08355f645f5a59d458c4220fd691a97",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -2201,7 +2249,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "f0409851c32c4e32673a787580d7dc39e77acfa385bccada9eb3917b0f6ea1ee",
+        "sameImageNativeSHA256": "4930baba14b5ad45d67d3dde3f9564bec314ab682ed53e3227c10e5e34073ff4",
+        "sameImageExportSHA256": "dab7911866b030c73ff714e2d7a81cfd46683eb30c2e36c3317336d00e4ed434",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e10",
@@ -2254,7 +2310,7 @@
         3456
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/bandarseribegawan/sisalto.json",
-      "sourceContentSHA256": "9880da3931ff68f11885c17c992c70b8948d499b2de6920f1f7943edae6e8b1e",
+      "sourceContentSHA256": "f0409851c32c4e32673a787580d7dc39e77acfa385bccada9eb3917b0f6ea1ee",
       "semanticSourceBind": {
         "targetBeforeSHA256": "1c7bb119cbcb14fe1453f732dd83ed778dfd1eda51df7e9848874d921ea1cd8c",
         "semanticContextSHA256": "1c7bb119cbcb14fe1453f732dd83ed778dfd1eda51df7e9848874d921ea1cd8c",
@@ -2444,7 +2500,7 @@
         "vuosi": "2017"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "9880da3931ff68f11885c17c992c70b8948d499b2de6920f1f7943edae6e8b1e",
+      "sourceContentAfterSHA256": "f0409851c32c4e32673a787580d7dc39e77acfa385bccada9eb3917b0f6ea1ee",
       "targetAfterSHA256": "1c7bb119cbcb14fe1453f732dd83ed778dfd1eda51df7e9848874d921ea1cd8c",
       "contextAfterSHA256": "1c7bb119cbcb14fe1453f732dd83ed778dfd1eda51df7e9848874d921ea1cd8c",
       "ownerApproved": true,
@@ -2469,7 +2525,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "f0409851c32c4e32673a787580d7dc39e77acfa385bccada9eb3917b0f6ea1ee",
+        "sameImageNativeSHA256": "11565ef2c616a1338c89e1089dbbc932f42f7a34f3147019fb7fce4cb126ff79",
+        "sameImageExportSHA256": "11565ef2c616a1338c89e1089dbbc932f42f7a34f3147019fb7fce4cb126ff79",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e10",
@@ -2522,7 +2586,7 @@
         4640
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/bandarseribegawan/sisalto.json",
-      "sourceContentSHA256": "9880da3931ff68f11885c17c992c70b8948d499b2de6920f1f7943edae6e8b1e",
+      "sourceContentSHA256": "f0409851c32c4e32673a787580d7dc39e77acfa385bccada9eb3917b0f6ea1ee",
       "semanticSourceBind": {
         "targetBeforeSHA256": "7e47e252b3ebaab877304369fdfd472dcf30b71f1ecca17a711aa7f886f69cbd",
         "semanticContextSHA256": "7e47e252b3ebaab877304369fdfd472dcf30b71f1ecca17a711aa7f886f69cbd",
@@ -2724,7 +2788,7 @@
         "tiedosto": "Kampong Setia 'B' seen from Kampong Pintu Malim.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "9880da3931ff68f11885c17c992c70b8948d499b2de6920f1f7943edae6e8b1e",
+      "sourceContentAfterSHA256": "f0409851c32c4e32673a787580d7dc39e77acfa385bccada9eb3917b0f6ea1ee",
       "targetAfterSHA256": "7e47e252b3ebaab877304369fdfd472dcf30b71f1ecca17a711aa7f886f69cbd",
       "contextAfterSHA256": "7e47e252b3ebaab877304369fdfd472dcf30b71f1ecca17a711aa7f886f69cbd",
       "ownerApproved": true,
@@ -2749,7 +2813,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "f0409851c32c4e32673a787580d7dc39e77acfa385bccada9eb3917b0f6ea1ee",
+        "sameImageNativeSHA256": "e72b0fb1a9eb8d84c26007af2c7d26420c452ddc15a19b500acf4805d740ef89",
+        "sameImageExportSHA256": "e72b0fb1a9eb8d84c26007af2c7d26420c452ddc15a19b500acf4805d740ef89",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     }
   ],
   "runtimeIntegrationPending": true,
@@ -2761,6 +2833,9 @@
   "task118TextRevision": true,
   "independentTextResamplePending": true,
   "textAcceptanceVerified": false,
-  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task118/immutable-media-history/e10/bandarseribegawan/c8f23c948df87911889fc8cf9879ea3f33c2dbe7c2d94c5dc0ab4fe6a0058b6d.json",
-  "task118ReboundAt": "2026-10-13T16:31:25.764297+00:00"
+  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task228/immutable-media-history/e10/bandarseribegawan/4f2d66fb1725bf059369374d11db565a093cf238d1494a79f86f20f9cf0ba5a6.json",
+  "task118ReboundAt": "2026-10-13T16:31:25.764297+00:00",
+  "task228ExcludedAssets": [],
+  "task228TextRevision": true,
+  "task228ReboundAt": "2026-10-13T18:10:07.889310+00:00"
 }
