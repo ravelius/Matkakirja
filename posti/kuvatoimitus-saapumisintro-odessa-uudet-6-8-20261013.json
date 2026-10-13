@@ -1,0 +1,353 @@
+{
+  "schemaVersion": 1,
+  "cityName": "ODESSA",
+  "gameCityId": "odessa",
+  "mediaSlug": "odessa",
+  "taskNumbers": [
+    203,
+    204
+  ],
+  "updatedAt": "2026-10-13T17:52:12.225811+00:00",
+  "sourcePath": "posti/fable-codex-saapumisintro-uudet-6-8-loput-2-20261013.md",
+  "sourceCommit": "dbdaff9a39fa0e5052f176c890c85836e1a69a1f",
+  "sourceBlob": "2e5adc4cb04a23fcb4cd8fdd75426ac78afdcc9d",
+  "sourceReadInFull": true,
+  "sourceReadBy": "/root/intro_owner_rejection_inventory",
+  "sourceReadReceiptPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/source-read-receipt.json",
+  "assets": [
+    {
+      "taskNumber": 203,
+      "mediaSlug": "odessa",
+      "slot": 6,
+      "filename": "odessa-6-nakoala-intro-v1.png",
+      "title": "koko kaupunki tunnetulta näköalapaikalta päivällä — Odessan satama ja Mustameri Primorskin bulevardin kaiteelta itä-koilliseen päivällä, Potemkinin portaat pienenä.",
+      "fullDeliveryRequirement": "**6 / koko kaupunki tunnetulta näköalapaikalta päivällä — Odessan satama ja Mustameri Primorskin bulevardin kaiteelta itä-koilliseen päivällä, Potemkinin portaat pienenä.** Tiedosto `odessa-6-nakoala-intro-v1.png`.\nMitä kuvataan: Odessan satama ja Mustameri kirkkaana päivänä rinteen reunalla kulkevan bulevardin kaiteelta (nykyaikainen värivalokuva). Etualalla kuvan alareunassa vain kapea kaistale vaaleaa kivikaidetta ja lehmusten ja akaasioiden vihreitä latvoja, ei ihmisiä lähellä. Alhaalla vasemmassa alakulmassa pienenä Potemkinin portaiden yläosa: leveä vaalea graniittiporrasrakennelma, joka laskeutuu rinnettä alas kohti satamaa (näkyy viistosti sivusta, portaiden vieressä on kapea kisko raiteineen); portaat ovat kuvassa tunnistettava mutta pieni osa, ei pääaihe. Keskellä ja oikealla alhaalla satama: satamalaiturit, matalat varastorakennukset, muutama nosturi ja kaukana muutama merkitön rahtialus ilman luettavia nimiä; sen takana avoin Mustameri vaaleansinisenä horisonttiin asti, taivas kirkas sininen pienin pilvin. Kaikki ihmiset, autot ja alukset vain pieninä pisteinä kaukana. Kulma: vaakakuva, kamera bulevardin kaiteen takana silmänkorkeudelta, hieman alaspäin, katse itä-koilliseen (suunta noin 60–80 astetta; näkökulma enintään noin 55 astetta) portaiden yläpään vierestä; Richelieun patsas portaiden yläpäässä ja bulevardin rakennukset jäävät kameran taakse ja oikealle, eli ne eivät saa olla kuvassa. Valo: pehmeä aamupäivän tai iltapäivän valo, ohut meri-ilman utu kaukana, vaimeat värit, ei HDR:ää. Ei saa näkyä: lippuja (ei satamassa, laivoissa eikä rakennuksilla), sotilaita, sotalaivoja, sotilasajoneuvoja, sota- tai voittomuistomerkkejä, Richelieun patsasta tai muita patsaita, ihmisiä lähellä tai tunnistettavia kasvoja, tekstiä, kylttejä, aluksen nimiä, mainoksia, logoja, vesileimaa, kehystä, savua, vaurioita tai rauniota. Fotorealistinen havainnekuva, vaimeat värit, 1536 x 1024.\nKuvateksti-ehdotus (loppuu sanaan Havainnekuva.): Odessan satama ja Mustameri Primorskin bulevardin kaiteelta itä-koilliseen päivällä, Potemkinin portaat pienenä. Havainnekuva.\n\n",
+      "sourceVersions": [
+        {
+          "path": "posti/fable-codex-saapumisintro-uudet-6-8-loput-2-20261013.md",
+          "commit": "dbdaff9a39fa0e5052f176c890c85836e1a69a1f",
+          "blob": "2e5adc4cb04a23fcb4cd8fdd75426ac78afdcc9d",
+          "readInFull": true
+        }
+      ],
+      "ownerThreadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+      "hostId": "local",
+      "generationCap": 1,
+      "status": "QA-R2-delivered-for-PT-review",
+      "productionStarted": false,
+      "delivered": true,
+      "city": "ODESSA",
+      "gameID": "odessa",
+      "part": 2,
+      "sourceBlob": "2e5adc4cb04a23fcb4cd8fdd75426ac78afdcc9d",
+      "sourceCommit": "dbdaff9a39fa0e5052f176c890c85836e1a69a1f",
+      "sourcePath": "posti/fable-codex-saapumisintro-uudet-6-8-loput-2-20261013.md",
+      "sourceNasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/sources/fable-codex-saapumisintro-uudet-6-8-loput-2-20261013.md",
+      "sourceCharacterSpan": [
+        53873,
+        55969
+      ],
+      "sourceByteSpan": [
+        55905,
+        58082
+      ],
+      "fullDeliveryRequirementSHA256": "52d4340b9266d3bd6d9b7f81b2ba6a85c8b358f41da9ec67bc20bc789f0c29a2",
+      "fullDirective": "Odessan satama ja Mustameri kirkkaana päivänä rinteen reunalla kulkevan bulevardin kaiteelta (nykyaikainen värivalokuva). Etualalla kuvan alareunassa vain kapea kaistale vaaleaa kivikaidetta ja lehmusten ja akaasioiden vihreitä latvoja, ei ihmisiä lähellä. Alhaalla vasemmassa alakulmassa pienenä Potemkinin portaiden yläosa: leveä vaalea graniittiporrasrakennelma, joka laskeutuu rinnettä alas kohti satamaa (näkyy viistosti sivusta, portaiden vieressä on kapea kisko raiteineen); portaat ovat kuvassa tunnistettava mutta pieni osa, ei pääaihe. Keskellä ja oikealla alhaalla satama: satamalaiturit, matalat varastorakennukset, muutama nosturi ja kaukana muutama merkitön rahtialus ilman luettavia nimiä; sen takana avoin Mustameri vaaleansinisenä horisonttiin asti, taivas kirkas sininen pienin pilvin. Kaikki ihmiset, autot ja alukset vain pieninä pisteinä kaukana. Kulma: vaakakuva, kamera bulevardin kaiteen takana silmänkorkeudelta, hieman alaspäin, katse itä-koilliseen (suunta noin 60–80 astetta; näkökulma enintään noin 55 astetta) portaiden yläpään vierestä; Richelieun patsas portaiden yläpäässä ja bulevardin rakennukset jäävät kameran taakse ja oikealle, eli ne eivät saa olla kuvassa. Valo: pehmeä aamupäivän tai iltapäivän valo, ohut meri-ilman utu kaukana, vaimeat värit, ei HDR:ää. Ei saa näkyä: lippuja (ei satamassa, laivoissa eikä rakennuksilla), sotilaita, sotalaivoja, sotilasajoneuvoja, sota- tai voittomuistomerkkejä, Richelieun patsasta tai muita patsaita, ihmisiä lähellä tai tunnistettavia kasvoja, tekstiä, kylttejä, aluksen nimiä, mainoksia, logoja, vesileimaa, kehystä, savua, vaurioita tai rauniota. Fotorealistinen havainnekuva, vaimeat värit, 1536 x 1024.",
+      "caption": "Odessan satama ja Mustameri Primorskin bulevardin kaiteelta itä-koilliseen päivällä, Potemkinin portaat pienenä. Havainnekuva.",
+      "sourceReadInFullVerified": true,
+      "mappingBlockExactSourceMatch": true,
+      "r2Prefix": "julisteet/saapumisintro/odessa/20261013-uudet-6-8/",
+      "deliveryManifestPath": "posti/kuvatoimitus-saapumisintro-odessa-uudet-6-8-20261013.json",
+      "partDeliveryReportPath": "posti/codex-fable-saapumisintro-uudet-6-8-loput-2-20261013.md",
+      "generationCallsRecorded": 0,
+      "qaAcceptedVerified": true,
+      "r2BytesVerified": true,
+      "mailboxDeliveryVerified": false,
+      "ownerAcceptanceVerified": false,
+      "acceptanceRoute": "PT acts for owner; source authorizes direct delivery. Actual PT acceptance remains evidence-dependent.",
+      "gameIntegrated": false,
+      "published": false,
+      "r2Key": "julisteet/saapumisintro/odessa/20261013-uudet-6-8/odessa-6-nakoala-intro-v1.png",
+      "historical": false,
+      "id": "odessa-6-nakoala-intro-v1",
+      "sourceReadInFull": true,
+      "cityName": "ODESSA",
+      "gameCityId": "odessa",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/odessa/native-6.png",
+      "nativeSHA256": "15a1d086ea0f856759835bef775218b53fa48e1a6aa8b7ce567b68a3eb1e9de0",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/odessa/odessa-6-nakoala-intro-v1.png",
+      "workspacePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/eurooppa-introt-uudet68-loput-20261013/odessa/odessa-6-nakoala-intro-v1.png",
+      "sha256": "5ee5ed3cddd848e5cb0964a7bf1cf78e696a2472192f5215a5a8de26a7474525",
+      "width": 1536,
+      "height": 1024,
+      "opaque": true,
+      "sRGB": true,
+      "neutralGrayscale": false,
+      "pixelIdentityAfterMetadataExport": true,
+      "pixelIdentityToNative": true,
+      "historicalGrayscaleEncodingNormalized": false,
+      "exportProcessing": "Metadata/sRGB only; pixels unchanged",
+      "generationPrompt": "Create exactly one original, contemporary COLOR photographic-looking illustrative image. Output a single landscape PNG at exactly 1536x1024, opaque RGB, natural camera perspective. No collage, borders or text overlays. The scene must follow ALL of the following exact Finnish scene instructions, including direction, geometry, exclusions, scale, vehicle movement and materials:\n\nOdessan satama ja Mustameri kirkkaana päivänä rinteen reunalla kulkevan bulevardin kaiteelta (nykyaikainen värivalokuva). Etualalla kuvan alareunassa vain kapea kaistale vaaleaa kivikaidetta ja lehmusten ja akaasioiden vihreitä latvoja, ei ihmisiä lähellä. Alhaalla vasemmassa alakulmassa pienenä Potemkinin portaiden yläosa: leveä vaalea graniittiporrasrakennelma, joka laskeutuu rinnettä alas kohti satamaa (näkyy viistosti sivusta, portaiden vieressä on kapea kisko raiteineen); portaat ovat kuvassa tunnistettava mutta pieni osa, ei pääaihe. Keskellä ja oikealla alhaalla satama: satamalaiturit, matalat varastorakennukset, muutama nosturi ja kaukana muutama merkitön rahtialus ilman luettavia nimiä; sen takana avoin Mustameri vaaleansinisenä horisonttiin asti, taivas kirkas sininen pienin pilvin. Kaikki ihmiset, autot ja alukset vain pieninä pisteinä kaukana. Kulma: vaakakuva, kamera bulevardin kaiteen takana silmänkorkeudelta, hieman alaspäin, katse itä-koilliseen (suunta noin 60–80 astetta; näkökulma enintään noin 55 astetta) portaiden yläpään vierestä; Richelieun patsas portaiden yläpäässä ja bulevardin rakennukset jäävät kameran taakse ja oikealle, eli ne eivät saa olla kuvassa. Valo: pehmeä aamupäivän tai iltapäivän valo, ohut meri-ilman utu kaukana, vaimeat värit, ei HDR:ää. Ei saa näkyä: lippuja (ei satamassa, laivoissa eikä rakennuksilla), sotilaita, sotalaivoja, sotilasajoneuvoja, sota- tai voittomuistomerkkejä, Richelieun patsasta tai muita patsaita, ihmisiä lähellä tai tunnistettavia kasvoja, tekstiä, kylttejä, aluksen nimiä, mainoksia, logoja, vesileimaa, kehystä, savua, vaurioita tai rauniota. Fotorealistinen havainnekuva, vaimeat värit, 1536 x 1024.\n\nThis is present-day life, not a historical reconstruction. Use restrained realistic natural light and subtle natural colour, genuine irregular surfaces and vegetation, no CGI/render/painting/HDR look. Do not invent extra landmarks or recognizable buildings outside the requested view; prohibited background features are equally prohibited. No legible text or numbers anywhere, no vehicle emblems/branding/flags, advertisements or identifiable close faces. Keep the whole requested scene in one coherent physical camera frame. Do not write the caption inside the image. No additional variants or edits.\n\nComposition emphasis: broad low commercial harbour and open Black Sea, viewed down from Primorsky Boulevard, east-northeast 60–80 degrees / <=55-degree field. Only the SMALL top part of Potemkin Steps obliquely down the LOWER LEFT corner, not a front-on staircase portrait. Bare thin pale stone rail and treetops at bottom. Richelieu statue and boulevard buildings are BEHIND the camera, entirely absent. Clean peaceful civilian contemporary scene without any flags on cranes, buildings or ships, without military/war/propaganda/damage/smoke. Ships tiny and blank, no lettering anywhere.\n",
+      "sourceReadReceiptPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/source-read-receipt.json",
+      "references": [
+        {
+          "kind": "exact-production-brief",
+          "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/sources/fable-codex-saapumisintro-uudet-6-8-loput-2-20261013.md",
+          "gitPath": "posti/fable-codex-saapumisintro-uudet-6-8-loput-2-20261013.md",
+          "commit": "dbdaff9a39fa0e5052f176c890c85836e1a69a1f",
+          "blob": "2e5adc4cb04a23fcb4cd8fdd75426ac78afdcc9d",
+          "sourceByteSpan": [
+            55905,
+            58082
+          ],
+          "fullRequirementSHA256": "52d4340b9266d3bd6d9b7f81b2ba6a85c8b358f41da9ec67bc20bc789f0c29a2",
+          "use": "Text scene constraint, not a copyright photograph or image passed to generator."
+        },
+        {
+          "kind": "own-architectural-geographic-knowledge",
+          "use": "New image from scratch; no external visual reference supplied, no Google data used.",
+          "independentSurveyClaim": false
+        }
+      ],
+      "qaPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/odessa/qa-6.json",
+      "producerPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/odessa/producer-6.json",
+      "producerQAAccepted": true,
+      "producerQAVerdict": "accepted",
+      "actualGenerationCalls": 1,
+      "url": "https://media.matkakirja.app/julisteet/saapumisintro/odessa/20261013-uudet-6-8/odessa-6-nakoala-intro-v1.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/odessa/20261013-uudet-6-8/odessa-6-nakoala-intro-v1.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "QA": {
+        "slot": 6,
+        "taskNumber": 203,
+        "assetID": "odessa-6-nakoala-intro-v1",
+        "targetJsonPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/odessa/asset-6.json",
+        "nativeSHA256": "15a1d086ea0f856759835bef775218b53fa48e1a6aa8b7ce567b68a3eb1e9de0",
+        "finalSHA256": "5ee5ed3cddd848e5cb0964a7bf1cf78e696a2472192f5215a5a8de26a7474525",
+        "verdict": "accepted",
+        "reason": "Pieni portaiden sivunäkymä vasemmassa alalaidassa, satama, merkitön kaukainen rahtiliikenne ja laaja Mustameri toteutuvat. Ei havaittavaa Richelieun patsasta, lippua tai sodan merkkejä.",
+        "reviewer": "/root",
+        "reviewedAt": "2026-10-13T17:51:56.434281+00:00",
+        "nativeViewedInFull": true,
+        "assignedSourceCardReadInFull": true,
+        "nativePixelsEqualFinalVerified": true,
+        "technicalPassed": true,
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "published": false
+      },
+      "R2Proof": {
+        "slot": 6,
+        "r2Key": "julisteet/saapumisintro/odessa/20261013-uudet-6-8/odessa-6-nakoala-intro-v1.png",
+        "url": "https://media.matkakirja.app/julisteet/saapumisintro/odessa/20261013-uudet-6-8/odessa-6-nakoala-intro-v1.png",
+        "sha256": "5ee5ed3cddd848e5cb0964a7bf1cf78e696a2472192f5215a5a8de26a7474525",
+        "nativeSHA256": "15a1d086ea0f856759835bef775218b53fa48e1a6aa8b7ce567b68a3eb1e9de0",
+        "bytes": 2482933,
+        "readbacks": [
+          {
+            "http": 200,
+            "byteExact": true,
+            "sha256": "5ee5ed3cddd848e5cb0964a7bf1cf78e696a2472192f5215a5a8de26a7474525",
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "cacheBusted": false
+          },
+          {
+            "http": 200,
+            "byteExact": true,
+            "sha256": "5ee5ed3cddd848e5cb0964a7bf1cf78e696a2472192f5215a5a8de26a7474525",
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "cacheBusted": true
+          }
+        ],
+        "byteExactReadback": true,
+        "verifiedAt": "2026-10-13T17:52:09.374018+00:00"
+      },
+      "FableReceiptVerified": false
+    },
+    {
+      "taskNumber": 204,
+      "mediaSlug": "odessa",
+      "slot": 8,
+      "filename": "odessa-8-kulkuneuvo-intro-v1.png",
+      "title": "kaupungin oma kulkuneuvo liikkeessä — Odessan raitiovaunu puiden varjostamalla kadulla päivällä.",
+      "fullDeliveryRequirement": "**8 / kaupungin oma kulkuneuvo liikkeessä — Odessan raitiovaunu puiden varjostamalla kadulla päivällä.** Tiedosto `odessa-8-kulkuneuvo-intro-v1.png`.\nMitä kuvataan: nykyaikainen matalalattiainen kolmiosainen nivelraitiovaunu (yleisilmeeltään tavallinen eurooppalainen kaupunkiraitiovaunu) liikkeessä leveällä, puiden varjostamalla kaupunkikadulla Odessassa: raitiotie tien keskellä tai reunassa, ajojohdot yläpuolella, kadun molemmilla puolilla lehmuksia, akaasioita ja plataaneja, takana 1800-luvun kolmi-nelikerroksisia vaaleita ja okransävyisiä kivitaloja pylväskoristeineen ja ranskalaisine parvekkeineen. Ihmiset vain pieninä (muutama kävelijä kaukana jalkakäytävällä, selin tai kaukaa, ei tunnistettavia kasvoja). Värikuva, nykyaika. Kulkuneuvon värit: yksivärinen vaalea harmaa-valkoinen runko, ei raitoja, ei brändimaalauksia, ei kaupungin värejä tai lippuvärejä, ei mainoksia, ei logoja; vaunun otsassa ja kyljessä ei numeroita, reittinäyttöjä, kylttejä eikä mitään tekstiä (otsanäytöt sammutettu / tyhjät). Kulma: vaakakuva, kameran korkeus noin 1,5–2 m, raiteen sivusta kolme neljännestä edestä, vaunu kulkee vasemmalta oikealle ja täyttää noin kolmanneksen kuvan leveydestä, kevyt liikesumennus pyörissä ja taustassa (vaunu itse terävä). Valo: aurinkoinen aamupäivä, lehtien läpi pehmeitä valoläiskiä, vaimeat värit, ei HDR:ää. Ei saa näkyä: lippuja (ei rakennuksilla, ei vaunussa, ei ikkunoissa), sotilaita, sotilasajoneuvoja, sota- tai voittomuistomerkkejä, patsaita, vaurioita, hiekkasäkkejä, estekiviä tai savua, tunnistettavia rakennuksia (ei oopperataloa, ei Potemkinin portaita), tekstiä, katukylttejä, reittikylttejä, pysäkkien nimitauluja, mainoksia, logoja, auton rekisterikilpiä tai merkkejä, vesileimaa eikä kehystä; muu ajoneuvoliikenne vain kaukana ja merkittömänä. Fotorealistinen havainnekuva, vaimeat värit, 1536 x 1024.\nKuvateksti-ehdotus (loppuu sanaan Havainnekuva.): Odessan raitiovaunu puiden varjostamalla kadulla päivällä. Havainnekuva.\n\n",
+      "sourceVersions": [
+        {
+          "path": "posti/fable-codex-saapumisintro-uudet-6-8-loput-2-20261013.md",
+          "commit": "dbdaff9a39fa0e5052f176c890c85836e1a69a1f",
+          "blob": "2e5adc4cb04a23fcb4cd8fdd75426ac78afdcc9d",
+          "readInFull": true
+        }
+      ],
+      "ownerThreadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+      "hostId": "local",
+      "generationCap": 1,
+      "status": "QA-R2-delivered-for-PT-review",
+      "productionStarted": false,
+      "delivered": true,
+      "city": "ODESSA",
+      "gameID": "odessa",
+      "part": 2,
+      "sourceBlob": "2e5adc4cb04a23fcb4cd8fdd75426ac78afdcc9d",
+      "sourceCommit": "dbdaff9a39fa0e5052f176c890c85836e1a69a1f",
+      "sourcePath": "posti/fable-codex-saapumisintro-uudet-6-8-loput-2-20261013.md",
+      "sourceNasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/sources/fable-codex-saapumisintro-uudet-6-8-loput-2-20261013.md",
+      "sourceCharacterSpan": [
+        55969,
+        57943
+      ],
+      "sourceByteSpan": [
+        58082,
+        60143
+      ],
+      "fullDeliveryRequirementSHA256": "af32f0e8be30a53602fd879c8425596b1a06db12e1c43cbb69ce034cff6f821c",
+      "fullDirective": "nykyaikainen matalalattiainen kolmiosainen nivelraitiovaunu (yleisilmeeltään tavallinen eurooppalainen kaupunkiraitiovaunu) liikkeessä leveällä, puiden varjostamalla kaupunkikadulla Odessassa: raitiotie tien keskellä tai reunassa, ajojohdot yläpuolella, kadun molemmilla puolilla lehmuksia, akaasioita ja plataaneja, takana 1800-luvun kolmi-nelikerroksisia vaaleita ja okransävyisiä kivitaloja pylväskoristeineen ja ranskalaisine parvekkeineen. Ihmiset vain pieninä (muutama kävelijä kaukana jalkakäytävällä, selin tai kaukaa, ei tunnistettavia kasvoja). Värikuva, nykyaika. Kulkuneuvon värit: yksivärinen vaalea harmaa-valkoinen runko, ei raitoja, ei brändimaalauksia, ei kaupungin värejä tai lippuvärejä, ei mainoksia, ei logoja; vaunun otsassa ja kyljessä ei numeroita, reittinäyttöjä, kylttejä eikä mitään tekstiä (otsanäytöt sammutettu / tyhjät). Kulma: vaakakuva, kameran korkeus noin 1,5–2 m, raiteen sivusta kolme neljännestä edestä, vaunu kulkee vasemmalta oikealle ja täyttää noin kolmanneksen kuvan leveydestä, kevyt liikesumennus pyörissä ja taustassa (vaunu itse terävä). Valo: aurinkoinen aamupäivä, lehtien läpi pehmeitä valoläiskiä, vaimeat värit, ei HDR:ää. Ei saa näkyä: lippuja (ei rakennuksilla, ei vaunussa, ei ikkunoissa), sotilaita, sotilasajoneuvoja, sota- tai voittomuistomerkkejä, patsaita, vaurioita, hiekkasäkkejä, estekiviä tai savua, tunnistettavia rakennuksia (ei oopperataloa, ei Potemkinin portaita), tekstiä, katukylttejä, reittikylttejä, pysäkkien nimitauluja, mainoksia, logoja, auton rekisterikilpiä tai merkkejä, vesileimaa eikä kehystä; muu ajoneuvoliikenne vain kaukana ja merkittömänä. Fotorealistinen havainnekuva, vaimeat värit, 1536 x 1024.",
+      "caption": "Odessan raitiovaunu puiden varjostamalla kadulla päivällä. Havainnekuva.",
+      "sourceReadInFullVerified": true,
+      "mappingBlockExactSourceMatch": true,
+      "r2Prefix": "julisteet/saapumisintro/odessa/20261013-uudet-6-8/",
+      "deliveryManifestPath": "posti/kuvatoimitus-saapumisintro-odessa-uudet-6-8-20261013.json",
+      "partDeliveryReportPath": "posti/codex-fable-saapumisintro-uudet-6-8-loput-2-20261013.md",
+      "generationCallsRecorded": 0,
+      "qaAcceptedVerified": true,
+      "r2BytesVerified": true,
+      "mailboxDeliveryVerified": false,
+      "ownerAcceptanceVerified": false,
+      "acceptanceRoute": "PT acts for owner; source authorizes direct delivery. Actual PT acceptance remains evidence-dependent.",
+      "gameIntegrated": false,
+      "published": false,
+      "r2Key": "julisteet/saapumisintro/odessa/20261013-uudet-6-8/odessa-8-kulkuneuvo-intro-v1.png",
+      "historical": false,
+      "id": "odessa-8-kulkuneuvo-intro-v1",
+      "sourceReadInFull": true,
+      "cityName": "ODESSA",
+      "gameCityId": "odessa",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/odessa/native-8.png",
+      "nativeSHA256": "181345fb4955d2cc44278e96f5810745726363c16672e87c0b99b482f0c276e8",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/odessa/odessa-8-kulkuneuvo-intro-v1.png",
+      "workspacePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/eurooppa-introt-uudet68-loput-20261013/odessa/odessa-8-kulkuneuvo-intro-v1.png",
+      "sha256": "6e3b5166054452cc09a4038a15b4d4ce0eeefc3a5d967e4025b6dc93fb9a3433",
+      "width": 1536,
+      "height": 1024,
+      "opaque": true,
+      "sRGB": true,
+      "neutralGrayscale": false,
+      "pixelIdentityAfterMetadataExport": true,
+      "pixelIdentityToNative": true,
+      "historicalGrayscaleEncodingNormalized": false,
+      "exportProcessing": "Metadata/sRGB only; pixels unchanged",
+      "generationPrompt": "Create exactly one original, contemporary COLOR photographic-looking illustrative image. Output a single landscape PNG at exactly 1536x1024, opaque RGB, natural camera perspective. No collage, borders or text overlays. The scene must follow ALL of the following exact Finnish scene instructions, including direction, geometry, exclusions, scale, vehicle movement and materials:\n\nnykyaikainen matalalattiainen kolmiosainen nivelraitiovaunu (yleisilmeeltään tavallinen eurooppalainen kaupunkiraitiovaunu) liikkeessä leveällä, puiden varjostamalla kaupunkikadulla Odessassa: raitiotie tien keskellä tai reunassa, ajojohdot yläpuolella, kadun molemmilla puolilla lehmuksia, akaasioita ja plataaneja, takana 1800-luvun kolmi-nelikerroksisia vaaleita ja okransävyisiä kivitaloja pylväskoristeineen ja ranskalaisine parvekkeineen. Ihmiset vain pieninä (muutama kävelijä kaukana jalkakäytävällä, selin tai kaukaa, ei tunnistettavia kasvoja). Värikuva, nykyaika. Kulkuneuvon värit: yksivärinen vaalea harmaa-valkoinen runko, ei raitoja, ei brändimaalauksia, ei kaupungin värejä tai lippuvärejä, ei mainoksia, ei logoja; vaunun otsassa ja kyljessä ei numeroita, reittinäyttöjä, kylttejä eikä mitään tekstiä (otsanäytöt sammutettu / tyhjät). Kulma: vaakakuva, kameran korkeus noin 1,5–2 m, raiteen sivusta kolme neljännestä edestä, vaunu kulkee vasemmalta oikealle ja täyttää noin kolmanneksen kuvan leveydestä, kevyt liikesumennus pyörissä ja taustassa (vaunu itse terävä). Valo: aurinkoinen aamupäivä, lehtien läpi pehmeitä valoläiskiä, vaimeat värit, ei HDR:ää. Ei saa näkyä: lippuja (ei rakennuksilla, ei vaunussa, ei ikkunoissa), sotilaita, sotilasajoneuvoja, sota- tai voittomuistomerkkejä, patsaita, vaurioita, hiekkasäkkejä, estekiviä tai savua, tunnistettavia rakennuksia (ei oopperataloa, ei Potemkinin portaita), tekstiä, katukylttejä, reittikylttejä, pysäkkien nimitauluja, mainoksia, logoja, auton rekisterikilpiä tai merkkejä, vesileimaa eikä kehystä; muu ajoneuvoliikenne vain kaukana ja merkittömänä. Fotorealistinen havainnekuva, vaimeat värit, 1536 x 1024.\n\nThis is present-day life, not a historical reconstruction. Use restrained realistic natural light and subtle natural colour, genuine irregular surfaces and vegetation, no CGI/render/painting/HDR look. Do not invent extra landmarks or recognizable buildings outside the requested view; prohibited background features are equally prohibited. No legible text or numbers anywhere, no vehicle emblems/branding/flags, advertisements or identifiable close faces. Keep the whole requested scene in one coherent physical camera frame. Do not write the caption inside the image. No additional variants or edits.\n\nScale/motion priority: whole THREE-SECTION plain light grey modern low-floor tram only about one third of frame width, moving LEFT TO RIGHT. Camera eye level 1.5–2m front three-quarter side, track and overhead wire physically consistent. Wide shaded street, anonymous pale 3–4-storey period stone apartment blocks and acacia/linden/plane trees occupy most of scene. No identifiable monument/opera/stairs, no close faces, no flag, military/war/damage/smoke or propaganda, no text/number/logo/plate anywhere.\n",
+      "sourceReadReceiptPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/source-read-receipt.json",
+      "references": [
+        {
+          "kind": "exact-production-brief",
+          "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/sources/fable-codex-saapumisintro-uudet-6-8-loput-2-20261013.md",
+          "gitPath": "posti/fable-codex-saapumisintro-uudet-6-8-loput-2-20261013.md",
+          "commit": "dbdaff9a39fa0e5052f176c890c85836e1a69a1f",
+          "blob": "2e5adc4cb04a23fcb4cd8fdd75426ac78afdcc9d",
+          "sourceByteSpan": [
+            58082,
+            60143
+          ],
+          "fullRequirementSHA256": "af32f0e8be30a53602fd879c8425596b1a06db12e1c43cbb69ce034cff6f821c",
+          "use": "Text scene constraint, not a copyright photograph or image passed to generator."
+        },
+        {
+          "kind": "own-architectural-geographic-knowledge",
+          "use": "New image from scratch; no external visual reference supplied, no Google data used.",
+          "independentSurveyClaim": false
+        }
+      ],
+      "qaPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/odessa/qa-8.json",
+      "producerPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/odessa/producer-8.json",
+      "producerQAAccepted": false,
+      "producerQAVerdict": "pending-root-review",
+      "actualGenerationCalls": 1,
+      "reason": "Vehicle spans approximately x245–970, about47% of frame width versus source approximately one-third. Source sets no exact percent cutoff; this is a borderline composition for independent root QA, not an automatic final omission. Other scene/content/technical checks passed.",
+      "url": "https://media.matkakirja.app/julisteet/saapumisintro/odessa/20261013-uudet-6-8/odessa-8-kulkuneuvo-intro-v1.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/odessa/20261013-uudet-6-8/odessa-8-kulkuneuvo-intro-v1.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "QA": {
+        "slot": 8,
+        "taskNumber": 204,
+        "assetID": "odessa-8-kulkuneuvo-intro-v1",
+        "targetJsonPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/odessa/asset-8.json",
+        "nativeSHA256": "181345fb4955d2cc44278e96f5810745726363c16672e87c0b99b482f0c276e8",
+        "finalSHA256": "6e3b5166054452cc09a4038a15b4d4ce0eeefc3a5d967e4025b6dc93fb9a3433",
+        "verdict": "accepted",
+        "reason": "Kolmiosaisen vaunun keula ja ajovalot osoittavat oikealle. Lehtipuiden katu ja matalat vaaleat kerrostalot ovat luonnollisia, tekstiä tai tunnuksia ei havaita. Vaunu on noin47% leveydestä pyydetyn likimääräisen kolmanneksen sijasta; hyväksyn tämän rajatapauksen, koska kokonainen vaunu jää ympäristön sisään ja kaupunkiympäristö säilyy kuvassa selvästi. Poikkeama ilmoitetaan PT:n arvioon.",
+        "reviewer": "/root",
+        "reviewedAt": "2026-10-13T17:51:56.434281+00:00",
+        "nativeViewedInFull": true,
+        "assignedSourceCardReadInFull": true,
+        "nativePixelsEqualFinalVerified": true,
+        "technicalPassed": true,
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "published": false
+      },
+      "R2Proof": {
+        "slot": 8,
+        "r2Key": "julisteet/saapumisintro/odessa/20261013-uudet-6-8/odessa-8-kulkuneuvo-intro-v1.png",
+        "url": "https://media.matkakirja.app/julisteet/saapumisintro/odessa/20261013-uudet-6-8/odessa-8-kulkuneuvo-intro-v1.png",
+        "sha256": "6e3b5166054452cc09a4038a15b4d4ce0eeefc3a5d967e4025b6dc93fb9a3433",
+        "nativeSHA256": "181345fb4955d2cc44278e96f5810745726363c16672e87c0b99b482f0c276e8",
+        "bytes": 2630420,
+        "readbacks": [
+          {
+            "http": 200,
+            "byteExact": true,
+            "sha256": "6e3b5166054452cc09a4038a15b4d4ce0eeefc3a5d967e4025b6dc93fb9a3433",
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "cacheBusted": false
+          },
+          {
+            "http": 200,
+            "byteExact": true,
+            "sha256": "6e3b5166054452cc09a4038a15b4d4ce0eeefc3a5d967e4025b6dc93fb9a3433",
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "cacheBusted": true
+          }
+        ],
+        "byteExactReadback": true,
+        "verifiedAt": "2026-10-13T17:52:12.116932+00:00"
+      },
+      "FableReceiptVerified": false
+    }
+  ],
+  "omittedItems": [],
+  "actualCalls": 2,
+  "maximumGenerationCalls": 2,
+  "allRequestedItemsHandled": true,
+  "allRequestedImagesDelivered": true,
+  "productionCompleteWithinSourceLimit": true,
+  "directMailboxDeliveryAuthorized": true,
+  "acceptanceRoute": "Päätoimittaja reviews on the owner authority in the exact source. This authorization is not yet an actual acceptance receipt.",
+  "ownerAcceptanceVerified": false,
+  "FableReceiptVerified": false,
+  "gameIntegrated": false,
+  "published": false,
+  "oldFiveApprovedPilotImagesPreserved": true,
+  "oldCelebrationAnd1873TopicsRemainWithdrawn": true,
+  "existingHeroSlotsPreserved": [
+    1,
+    2,
+    3
+  ],
+  "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+  "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+  "newTopics": {
+    "6": "daytime-city-panorama",
+    "8": "local-transport-in-motion"
+  }
+}
