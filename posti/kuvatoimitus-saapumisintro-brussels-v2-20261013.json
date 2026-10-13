@@ -1,0 +1,243 @@
+{
+  "cityName": "Bryssel",
+  "gameCityId": "bryssel",
+  "mediaSlug": "brussels",
+  "taskNumbers": [
+    101
+  ],
+  "updatedAt": "2026-10-13T13:29:52.186643+00:00",
+  "originalRequestedNewSlots": [
+    4
+  ],
+  "activeRequestedNewSlots": [
+    4
+  ],
+  "existingHeroSlotsPreserved": [
+    1,
+    2,
+    3
+  ],
+  "assets": [
+    {
+      "slot": 4,
+      "title": "Place du Jeu de Balle, Marollen kirpputori aamulla",
+      "sceneSpec": "\n\nmediaSlug `brussels`.\n\n**Alkuperäinen ohje:**\nMitä kuvataan: Marollen kaupunginosan Place du Jeu de Balle -aukion kirpputori aamupäivällä: kojuja ja pressukatoksia, pöydillä ja maassa vanhoja huonekaluja, posliinia, lamppuja, kirjapinoja ja metalliesineitä (yleisiä rihkamaesineitä, ei tunnistettavia teoksia); ostajat ja myyjät pieninä, selin tai kaukana, muutama ostoskassi ja yksi pyörä seinää vasten (nykyaikainen värikuva). Kulma: vaakakuva, silmänkorkeudelta aukion laidalta pitkin kojuriviä, kaupunkitasanne; rajaa Palais de Justicen kupoli pois kuvasta. Valo: pehmeä, hieman pilvinen aamupäivä, ei koviä varjoja. Ei saa näkyä: tekstiä, kylttejä, hintalappuja, julisteita tai kehystettyjä tunnistettavia taideteoksia, logoja, brändejä, kasvoja lähikuvassa, Atomiumia. Fotorealistinen havainnekuva, vaimeat värit, 1536 x 1024.\n\n**UUSINTAKORJAUS:** Codexin QA: etualan kirjojen selissä kullanvärisiä kirjainmaisia merkkejä. KORJAUS: ei kirjoja, ei kirjapinoja eikä mitään painotuotteita, levyjä, julisteita tai muita kirjoitusta kantavia esineitä; pöydille vain keramiikkaa, posliinia, lamppuja, huonekaluja, metalliesineitä ja kankaita (esineissä ei merkintöjä, leimoja, etikettejä).\n\n",
+      "caption": "Place du Jeu de Balle, Marollen kirpputori aamulla. Havainnekuva.",
+      "filename": "brussels-4-arki-intro-v2.png",
+      "r2Key": "julisteet/saapumisintro/brussels/20261013-full-v2/brussels-4-arki-intro-v2.png",
+      "historical": false,
+      "referenceSlot": 5,
+      "taskNumber": 101,
+      "referencePath": null,
+      "version": 2,
+      "cityName": "Bryssel",
+      "gameCityId": "bryssel",
+      "mediaSlug": "brussels",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uusinta6-20261013/brussels/native-4.png",
+      "nativeSHA256": "90e610938a6360315e2b28a36cf768c687f04fe977362a7bdff66d7e239740a3",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uusinta6-20261013/brussels/brussels-4-arki-intro-v2.png",
+      "workspacePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/eurooppa-introt-uusinta6-20261013/brussels/brussels-4-arki-intro-v2.png",
+      "sha256": "f211ba062d38353a34d6acc00f72f6b51e8cb0528c3e50ebd7378e0601c8755a",
+      "width": 1536,
+      "height": 1024,
+      "opaque": true,
+      "sRGB": true,
+      "neutralGrayscale": false,
+      "pixelIdentityAfterMetadataExport": true,
+      "pixelIdentityToNative": true,
+      "historicalGrayscaleEncodingNormalized": false,
+      "exportProcessing": "Metadata/sRGB only; pixels unchanged",
+      "generationPrompt": "Use case: photorealistic-natural. Asset type: Matkakirja arrival intro, completely NEW whole image, no editing or inpainting. Output ONE opaque RGB landscape PNG exactly 1536x1024 pixels, 3:2. Natural documentary camera photograph look, credible optical geometry, quiet restrained color, uneven real material texture, ordinary imperfections; no HDR, no painterly surfaces, no cinematic oversaturation, no glossy CGI finish. All people are fictional, small and distant and seen from behind, no recognizable real face. Absolutely NO text anywhere, no numbers, letters, signage, logos, labels, plates, advertising, watermark or border. Any caption belongs only to later PNG metadata and must never appear inside image.\n\nPrimary scene: Contemporary morning flea market on Place du Jeu de Balle in Brussels Marolles. Eye-level 35mm view along a row of ordinary tarpaulin-covered stalls from the square edge, weathered cobblestones, plain old Brussels brick/stucco houses softly in the distance. Soft slightly overcast morning, muted credible colors and no hard shadows. Vendors and buyers are small, distant/back-facing, shopping bags plain unbranded, one bicycle rests against a distant wall. Crop Palais de Justice dome and Atomium entirely out.\nDisplay contents STRICTLY LIMITED to blank undecorated pottery/porcelain bowls, mugs and teapots; old plain wooden chairs, tables and a small cabinet; ordinary unbranded brass/glass lamps; plain metal pots and candlesticks; and folded plain solid-colored fabrics. Natural mismatched used objects, dents and wear, not luxury showroom polish. Ceramics are smooth blank unprinted surfaces and show NO maker stamps, lettering, numbers or labels. No decorated textile motifs or embroidery. No figures or recognizable works of art.\nMandatory source revision: NO BOOKS at all, no book piles, magazines, newspapers, printed paper, record sleeves, vinyl records, CDs, posters, pictures, frames, paintings, price tags, packaging, bottles, clocks or any objects bearing markings. None even in distant stalls. Table displays must contain only the strictly permitted plain undecorated objects listed above. All stall fronts are plain fabric, no signs, no market banner or price board. Every visible background facade also has no signs or writing.\n",
+      "sourceCommit": "efbc512cab1d414eea6dab7b07a5580fb1f96396",
+      "sourceBlob": "de12c45cd76efaa5a293b6bebd74ff4c0825d577",
+      "ownerAcceptanceVerified": true,
+      "gameIntegrated": false,
+      "published": false,
+      "refs": [
+        {
+          "url": "https://markets.brussels.be/markets/place-du-jeu-de-balle-market",
+          "title": "Place du Jeu de Balle market - City of Brussels",
+          "supports": "Daily morning flea market at Place du Jeu de Balle",
+          "slots": [
+            4
+          ],
+          "verification": "Official search result read"
+        }
+      ],
+      "sourcesPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uusinta6-20261013/brussels/sources-brussels.json",
+      "qaPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uusinta6-20261013/brussels/qa-4.json",
+      "originalReturnedPath": "/Users/samireivinen/.codex/generated_images/01a1348d-5abb-74a3-861e-05594dd0baea/exec-3e8e98e4-37c4-48f3-a3db-4e85e4273913.png",
+      "producerQAAccepted": true,
+      "sourceOwnerAcceptanceVerified": true,
+      "independentQAPending": false,
+      "ownerAcceptanceSource": {
+        "sourcePath": "posti/sisaltokirjuri-codex-saapumisintro-uusinta-PERUUTUS-20261013.md",
+        "sourceCommit": "4c28fefc109563a81c023ab2c1ab2ba6288aa3b9",
+        "sourceBlob": "3a23d2a7dfc370980086678f73ac44a324adc567",
+        "sourceSHA256": "0646a16ea7bcbb2f52e95b5567358a78305bc8c441a098bb8113e452494616b7",
+        "ownerPolicyPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/intro-owner-topic-rejection-20261013/owner-policy.json",
+        "ownerPolicySHA256": "0db248b979b474cdf180147e037b112d64e35b346e5f23eb99a944bbe0ea56be"
+      },
+      "rootQAPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uusinta6-20261013/brussels/root-qa.json",
+      "id": "brussels-4-arki-intro-v2",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uusinta6-20261013/brussels/brussels-4-arki-intro-v2.png",
+      "url": "https://media.matkakirja.app/julisteet/saapumisintro/brussels/20261013-full-v2/brussels-4-arki-intro-v2.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/brussels/20261013-full-v2/brussels-4-arki-intro-v2.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sources": [
+        {
+          "url": "https://markets.brussels.be/markets/place-du-jeu-de-balle-market",
+          "title": "Place du Jeu de Balle market - City of Brussels",
+          "supports": "Daily morning flea market at Place du Jeu de Balle",
+          "slots": [
+            4
+          ],
+          "verification": "Official search result read"
+        },
+        {
+          "url": "https://archives.brussels.be/extension-south",
+          "title": "Extension to the south - Brussels Archives",
+          "supports": "Bois de la Cambre converted to a park by Keilig in 1862, annexed in 1864",
+          "slots": [
+            5,
+            8
+          ],
+          "verification": "Official indexed text read; direct open timed out"
+        },
+        {
+          "url": "https://www.patrimoine.brussels/decouvrir/publications/bruxelles-ville-dart-et-dhistoire/le-bois-de-la-cambre?set_language=fr",
+          "title": "Le Bois de la Cambre - Brussels heritage service",
+          "supports": "Former part of Soignes forest landscaped by city in 1862",
+          "slots": [
+            5,
+            8
+          ],
+          "verification": "Official indexed text read"
+        },
+        {
+          "url": "https://hallessaintgery.be/a-propos/",
+          "title": "Les Halles - Halles Saint-Gery",
+          "supports": "Hall constructed in 1881 and inaugurated in 1882, architect A. Vanderheggen",
+          "slots": [
+            6
+          ],
+          "verification": "Official page read"
+        },
+        {
+          "url": "https://www.visit.brussels/en/visitors/venue-details.Eglise-Notre-Dame-du-Sablon.207330",
+          "title": "Eglise Notre-Dame du Sablon - Visit Brussels",
+          "supports": "15th-century Brabantine Gothic church, many stained glass windows",
+          "slots": [
+            7
+          ],
+          "verification": "Official tourism text read"
+        }
+      ],
+      "QA": {
+        "slot": 4,
+        "taskNumber": 101,
+        "verdict": "accepted",
+        "visualQAVerdict": "accepted",
+        "reason": "Kirpputorilla näkyy vain merkitsemätöntä keramiikkaa, metallia, kalusteita, lamppuja ja tekstiilejä. Ei kirjoja, painotuotteita, logoja tai tekstiä; luonnollinen silmänkorkeus ja materiaalipinnat.",
+        "nativeSHA256": "90e610938a6360315e2b28a36cf768c687f04fe977362a7bdff66d7e239740a3",
+        "finalSHA256": "f211ba062d38353a34d6acc00f72f6b51e8cb0528c3e50ebd7378e0601c8755a",
+        "rootWholeNativeVisualInspection": true,
+        "rootWholeFinalVisualInspection": true,
+        "exactExportFormatVerified": true,
+        "historicalGrayscaleEncodingNormalized": false,
+        "pixelIdentityToNative": true,
+        "ownerDisposition": "accepted",
+        "ownerAcceptanceVerified": true,
+        "ownerPolicyPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/intro-owner-topic-rejection-20261013/owner-policy.json",
+        "ownerPolicySHA256": "0db248b979b474cdf180147e037b112d64e35b346e5f23eb99a944bbe0ea56be",
+        "independentPeerPath": null,
+        "sourceOverride": {
+          "sourcePath": "posti/sisaltokirjuri-codex-saapumisintro-uusinta-PERUUTUS-20261013.md",
+          "sourceCommit": "4c28fefc109563a81c023ab2c1ab2ba6288aa3b9",
+          "sourceBlob": "3a23d2a7dfc370980086678f73ac44a324adc567",
+          "sourceSHA256": "0646a16ea7bcbb2f52e95b5567358a78305bc8c441a098bb8113e452494616b7",
+          "ownerPolicyPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/intro-owner-topic-rejection-20261013/owner-policy.json",
+          "ownerPolicySHA256": "0db248b979b474cdf180147e037b112d64e35b346e5f23eb99a944bbe0ea56be"
+        }
+      },
+      "R2Proof": {
+        "slot": 4,
+        "r2Key": "julisteet/saapumisintro/brussels/20261013-full-v2/brussels-4-arki-intro-v2.png",
+        "url": "https://media.matkakirja.app/julisteet/saapumisintro/brussels/20261013-full-v2/brussels-4-arki-intro-v2.png",
+        "sha256": "f211ba062d38353a34d6acc00f72f6b51e8cb0528c3e50ebd7378e0601c8755a",
+        "nativeSHA256": "90e610938a6360315e2b28a36cf768c687f04fe977362a7bdff66d7e239740a3",
+        "bytes": 2529440,
+        "readbacks": [
+          {
+            "http": 200,
+            "byteExact": true,
+            "sha256": "f211ba062d38353a34d6acc00f72f6b51e8cb0528c3e50ebd7378e0601c8755a",
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "cacheBusted": false
+          },
+          {
+            "http": 200,
+            "byteExact": true,
+            "sha256": "f211ba062d38353a34d6acc00f72f6b51e8cb0528c3e50ebd7378e0601c8755a",
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "cacheBusted": true
+          }
+        ],
+        "byteExactReadback": true,
+        "verifiedAt": "2026-10-13T13:29:01.991312+00:00"
+      },
+      "gameIntegrationVerified": false,
+      "publicationVerified": false
+    }
+  ],
+  "omittedItems": [],
+  "ownerCancelledItems": [],
+  "sourceAllowedQAOmissions": [],
+  "actualCallsBeforeCancellation": 1,
+  "actualCallsAfterCancellation": 0,
+  "originalMaximumGenerationCalls": 1,
+  "currentMaximumActiveCalls": 1,
+  "allRequestedSlotsHandled": true,
+  "allActiveRequestedSlotsDelivered": true,
+  "productionCompleteWithinUpdatedSourceLimit": true,
+  "productionCompleteWithinSourceLimit": true,
+  "ownerAcceptanceRequired": false,
+  "ownerAcceptanceVerifiedForDeliverableImages": true,
+  "ownerAcceptanceVerified": true,
+  "gameIntegrationAllowed": true,
+  "gameIntegrationVerified": false,
+  "publicationVerified": false,
+  "stages": {
+    "local": true,
+    "QA": true,
+    "R2": true,
+    "mailbox": "prepared",
+    "FableReceipt": false,
+    "ownerAcceptance": true,
+    "runtimeIntegration": false,
+    "publication": false
+  },
+  "sourcePath": "posti/sisaltokirjuri-codex-saapumisintro-uusinta-6-20261013.md",
+  "sourceCommit": "efbc512cab1d414eea6dab7b07a5580fb1f96396",
+  "sourceBlob": "de12c45cd76efaa5a293b6bebd74ff4c0825d577",
+  "sourceOverride": {
+    "sourcePath": "posti/sisaltokirjuri-codex-saapumisintro-uusinta-PERUUTUS-20261013.md",
+    "sourceCommit": "4c28fefc109563a81c023ab2c1ab2ba6288aa3b9",
+    "sourceBlob": "3a23d2a7dfc370980086678f73ac44a324adc567",
+    "sourceSHA256": "0646a16ea7bcbb2f52e95b5567358a78305bc8c441a098bb8113e452494616b7",
+    "ownerPolicyPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/intro-owner-topic-rejection-20261013/owner-policy.json",
+    "ownerPolicySHA256": "0db248b979b474cdf180147e037b112d64e35b346e5f23eb99a944bbe0ea56be"
+  },
+  "ownerPolicyPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/intro-owner-topic-rejection-20261013/owner-policy.json",
+  "priorImageFilesAndDeliveryHistoryPreserved": true,
+  "prior19V1ImageFilesPreserved": true,
+  "originalSourceCommit": "a856b50cc25c2f56064e9f18cc6f7e81f40ccf4e",
+  "originalSeparateNewGenerationQuota": 6,
+  "currentActiveGlobalGenerationQuota": 4,
+  "cancelledTopicGenerationAllowed": false
+}
