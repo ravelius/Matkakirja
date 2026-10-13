@@ -156,19 +156,6 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           /*
-           * SAAPUMISINTRON KUVA 6 (13.10.2026, Codex eurooppa-introt-kaikki,
-           * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
-           * kahdella Sonnet-vaiheella.
-           */
-          ampari: 'saapumisintro/london/20261012-full/london-6-pihajuhla-intro-v1.png',
-          lyhyt: 'Lontoon Notting Hillin karnevaali täyttää kadut joka elokuun '
-            + 'pankkilomaviikonloppuna.',
-          selite: 'Karnevaali sai alkunsa Notting Hillin karibialaisen yhteisön piirissä, ja '
-            + 'sen kulkueissa soitetaan teräsrumpuja.',
-          lahde: 'Matkakirjan havainnekuva',
-        },
-        {
-          /*
            * SAAPUMISINTRON KUVA 7 (13.10.2026, Codex eurooppa-introt-kaikki,
            * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
            * kahdella Sonnet-vaiheella.
@@ -177,19 +164,6 @@ export const KULTTUURI_KATEGORIAT = {
           lyhyt: 'Lontoon ensimmäisiä kaasukatuvaloja sytytettiin Pall Mallilla vuonna 1807.',
           selite: 'Kaasuvalon edelläkävijä Frederick Albert Winsor valaisi katua Pall '
             + 'Mallilla, ja Westminster Bridge valaistiin kaasulla 31. joulukuuta 1813.',
-          lahde: 'Matkakirjan havainnekuva',
-        },
-        {
-          /*
-           * SAAPUMISINTRON KUVA 8 (13.10.2026, Codex eurooppa-introt-kaikki,
-           * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
-           * kahdella Sonnet-vaiheella.
-           */
-          ampari: 'saapumisintro/london/20261012-full/london-8-regents-canal-1873-intro-v1.png',
-          lyhyt: 'Regent\'s Canalia pitkin kuljetettiin 1800-luvulla Lontooseen hiiltä, '
-            + 'puutavaraa ja rakennusaineita.',
-          selite: 'Kanava valmistui 1. elokuuta 1820 Limehousesta Paddingtoniin, ja sen '
-            + 'tärkeintä lastia olivat hiili ja rakennusaineet.',
           lahde: 'Matkakirjan havainnekuva',
         },
       ],
@@ -1876,18 +1850,6 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           /*
-           * SAAPUMISINTRON KUVA 6 (13.10.2026, Codex eurooppa-introt-kaikki,
-           * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
-           * kahdella Sonnet-vaiheella.
-           */
-          ampari: 'saapumisintro/prague/20261012-full/prague-6-vinohrady-ilotapahtuma-intro-v1.png',
-          lyhyt: 'Prahan Vinohrady eli viinitarhat sai nimensä keskiajan viinitarhoista.',
-          selite: 'Keisari Kaarle IV edisti viinitarhojen perustamista, ja vuonna 1867 '
-            + 'annetun nimen Královské Vinohrady oli tarkoitus muistaa hänen ansiotaan.',
-          lahde: 'Matkakirjan havainnekuva',
-        },
-        {
-          /*
            * SAAPUMISINTRON KUVA 7 (13.10.2026, Codex eurooppa-introt-kaikki,
            * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
            * kahdella Sonnet-vaiheella.
@@ -1896,19 +1858,6 @@ export const KULTTUURI_KATEGORIAT = {
           lyhyt: 'Malá Strana tarkoittaa Pientä puolta ja sijaitsee Prahan linnan juurella.',
           selite: 'Malá Stranan, eli Pikkukaupungin, kuningas Ottokar II perusti '
             + 'kuninkaalliseksi kaupungiksi vuonna 1257 Prahan linnan alapuolelle.',
-          lahde: 'Matkakirjan havainnekuva',
-        },
-        {
-          /*
-           * SAAPUMISINTRON KUVA 8 (13.10.2026, Codex eurooppa-introt-kaikki,
-           * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
-           * kahdella Sonnet-vaiheella.
-           */
-          ampari: 'saapumisintro/prague/20261012-full/prague-8-certovka-1873-intro-v1.png',
-          lyhyt: 'Čertovka tarkoittaa Paholaisen kanavaa, ja nimi vakiintui käyttöön vasta '
-            + '1800-luvulla.',
-          selite: 'Čertovka-nimi vakiintui 1800-luvulla, ja sen uskotaan tulevan lähellä '
-            + 'olleesta U sedmi čertů eli Seitsemän paholaisen talosta.',
           lahde: 'Matkakirjan havainnekuva',
         },
       ],
@@ -2889,19 +2838,6 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           /*
-           * SAAPUMISINTRON KUVA 6 (13.10.2026, Codex eurooppa-introt-kaikki,
-           * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
-           * kahdella Sonnet-vaiheella.
-           */
-          ampari: 'saapumisintro/vienna/20261012-full/vienna-6-prater-kesajuhla-intro-v1.png',
-          lyhyt: 'Keisari Joosef II avasi Praterin kaikille vuonna 1766, ja siitä on tullut '
-            + 'wieniläisten ulkoilualue.',
-          selite: 'Entinen keisarillinen metsästysmaa avattiin yleisölle 1766, ja sinne '
-            + 'syntyi pian kapakoita ja huvituksia, joista kasvoi Wurstelprater.',
-          lahde: 'Matkakirjan havainnekuva',
-        },
-        {
-          /*
            * SAAPUMISINTRON KUVA 7 (13.10.2026, Codex eurooppa-introt-kaikki,
            * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
            * kahdella Sonnet-vaiheella.
@@ -2911,18 +2847,6 @@ export const KULTTUURI_KATEGORIAT = {
             + 'syntymäkoti.',
           selite: 'Amerling syntyi talossa osoitteessa Stiftgasse 8 vuonna 1803. Talossa on '
             + 'toiminut vuodesta 1978 kulttuuri- ja asukaskeskus.',
-          lahde: 'Matkakirjan havainnekuva',
-        },
-        {
-          /*
-           * SAAPUMISINTRON KUVA 8 (13.10.2026, Codex eurooppa-introt-kaikki,
-           * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
-           * kahdella Sonnet-vaiheella.
-           */
-          ampari: 'saapumisintro/vienna/20261012-full/vienna-8-amerling1873-intro-v1.png',
-          lyhyt: 'Vuonna 1873 Wien isännöi maailmannäyttelyä Praterissa.',
-          selite: 'Maailmannäyttely avattiin Praterissa 1. toukokuuta 1873 keisari Frans '
-            + 'Joosefin 25-vuotisen hallitsijajuhlan kunniaksi.',
           lahde: 'Matkakirjan havainnekuva',
         },
       ],
@@ -3829,19 +3753,6 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           /*
-           * SAAPUMISINTRON KUVA 6 (13.10.2026, Codex eurooppa-introt-kaikki,
-           * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
-           * kahdella Sonnet-vaiheella.
-           */
-          ampari: 'saapumisintro/madrid/20261012-full/madrid-6-paloma-juhla-intro-v1.png',
-          lyhyt: 'La Latinan Paloman juhlassa elokuussa tanssitaan chotista ja pukeudutaan '
-            + 'chulapo-asuihin.',
-          selite: 'Pääpäivä on 15. elokuuta, jolloin palomiehet laskevat Neitsyt Marian '
-            + 'maalauksen alas kirkossa ennen kulkuetta.',
-          lahde: 'Matkakirjan havainnekuva',
-        },
-        {
-          /*
            * SAAPUMISINTRON KUVA 7 (13.10.2026, Codex eurooppa-introt-kaikki,
            * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
            * kahdella Sonnet-vaiheella.
@@ -3886,20 +3797,6 @@ export const KULTTUURI_KATEGORIAT = {
             + '650 metrin korkeuteen, ja Cerro del Tío Pío on yksi kaupungin '
             + 'laidan kukkuloista.',
           lahde: 'Javier Perez Montes, Wikimedia Commons (CC BY-SA 4.0)',
-        },
-        {
-          /*
-           * SAAPUMISINTRON KUVA 8 (13.10.2026, Codex eurooppa-introt-kaikki,
-           * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
-           * kahdella Sonnet-vaiheella.
-           */
-          ampari: 'saapumisintro/madrid/20261012-full/madrid-8-retiro-1873-intro-v1.png',
-          lyhyt: 'Retiro oli kuninkaallinen puutarha, kunnes siitä tuli julkinen puisto '
-            + 'vuonna 1868.',
-          selite: 'Retiro oli Espanjan kruunun omistuksessa vuoteen 1868, jolloin kuningatar '
-            + 'Isabella II syrjäytettiin ja puisto siirtyi kaupungille julkiseksi '
-            + 'puistoksi.',
-          lahde: 'Matkakirjan havainnekuva',
         },
       ],
       ennenNyt: [
@@ -4178,19 +4075,6 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           /*
-           * SAAPUMISINTRON KUVA 6 (13.10.2026, Codex eurooppa-introt-kaikki,
-           * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
-           * kahdella Sonnet-vaiheella.
-           */
-          ampari: 'saapumisintro/berlin/20261012-full/berlin-6-kanava-kesajuhla-intro-v1.png',
-          lyhyt: 'Berliinin Landwehrkanalin rannat ovat suosittuja kesäisiä '
-            + 'kohtaamispaikkoja.',
-          selite: 'Kanava rakennettiin 1845–1850 Peter Joseph Lennén suunnitelmien mukaan, ja '
-            + 'Neuköllnin Maybachuferilla pidetään kahdesti viikossa toria.',
-          lahde: 'Matkakirjan havainnekuva',
-        },
-        {
-          /*
            * SAAPUMISINTRON KUVA 7 (13.10.2026, Codex eurooppa-introt-kaikki,
            * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
            * kahdella Sonnet-vaiheella.
@@ -4224,18 +4108,6 @@ export const KULTTUURI_KATEGORIAT = {
           selite: 'Vanha kansallisgalleria rakennettiin 1862–1876, ja koko '
             + 'Museosaari on ollut Unescon maailmanperintökohde vuodesta 1999.',
           lahde: 'Ansgar Koreng, Wikimedia Commons (CC BY 3.0 DE)',
-        },
-        {
-          /*
-           * SAAPUMISINTRON KUVA 8 (13.10.2026, Codex eurooppa-introt-kaikki,
-           * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
-           * kahdella Sonnet-vaiheella.
-           */
-          ampari: 'saapumisintro/berlin/20261012-full/berlin-8-landwehrkanal-1873-intro-v2.png',
-          lyhyt: 'Landwehrkanal vihittiin käyttöön syyskuussa 1850.',
-          selite: 'Kanava rakennettiin keventämään Spree-joen liikennettä ja helpottamaan '
-            + 'rakennusmateriaalien kuljetusta Berliinin työmaille.',
-          lahde: 'Matkakirjan havainnekuva',
         },
       ],
       ennenNyt: [
@@ -5299,19 +5171,6 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           /*
-           * SAAPUMISINTRON KUVA 6 (13.10.2026, Codex eurooppa-introt-kaikki,
-           * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
-           * kahdella Sonnet-vaiheella.
-           */
-          ampari: 'saapumisintro/venice/20261012-full/venice-6-cannaregio-juhla-intro-v2.png',
-          lyhyt: 'Cannaregion Misericordian rantakatu on yksi Venetsian vilkkaimmista '
-            + 'iltapaikoista.',
-          selite: 'Rantakadun varrella on pieniä viinibaareja, joita venetsialaiset kutsuvat '
-            + 'bàcareiksi, ja niissä tarjoillaan pieniä suupaloja eli cicchettejä.',
-          lahde: 'Matkakirjan havainnekuva',
-        },
-        {
-          /*
            * SAAPUMISINTRON KUVA 7 (13.10.2026, Codex eurooppa-introt-kaikki,
            * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
            * kahdella Sonnet-vaiheella.
@@ -5320,19 +5179,6 @@ export const KULTTUURI_KATEGORIAT = {
           lyhyt: 'Venetsia rakentuu noin 118 saarelle, joita yhdistää noin 400 siltaa.',
           selite: 'Saaret sijaitsevat matalassa laguunissa kanavien erottamina. Venetsia ja '
             + 'sen laguuni on Unescon maailmanperintökohde vuodesta 1987.',
-          lahde: 'Matkakirjan havainnekuva',
-        },
-        {
-          /*
-           * SAAPUMISINTRON KUVA 8 (13.10.2026, Codex eurooppa-introt-kaikki,
-           * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
-           * kahdella Sonnet-vaiheella.
-           */
-          ampari: 'saapumisintro/venice/20261012-full/venice-8-santerasmo-1873-intro-v1.png',
-          lyhyt: 'Sant’Erasmon saarella on 1843–1844 rakennettu Torre Massimiliana.',
-          selite: 'Ranskalaiset rakensivat saarelle linnakkeen 1811–1814, ja arkkiherttua '
-            + 'Maximilian rakennutti tornin 1843–1844. Torni oli siis paikallaan jo ennen '
-            + 'vuotta 1873.',
           lahde: 'Matkakirjan havainnekuva',
         },
       ],
@@ -6070,18 +5916,6 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Matkakirjan havainnekuva',
         },
         {
-          /*
-           * SAAPUMISINTRON KUVA 6 (12.10.2026, Codex-toimitus d5f796079,
-           * PT/omistaja hyväksyi): elämän makuinen juhla- tai tapahtumakuva
-           * nykyaikana, keksittyjä aikuisia. Kirsikankukinnan päivä.
-           */
-          ampari: 'saapumisintro/stockholm/20261012-v6/stockholm-6-kungstradgarden-kirsikankukkajuhla-v6.png',
-          lyhyt: 'Kungsträdgårdenin 63 japaninkirsikkaa istutettiin 1998 ja kukkivat huhti–toukokuun taitteessa.',
-          selite: 'Kungsträdgårdenin 63 japaninkirsikkaa istutettiin 1998, ja ne '
-            + 'kukkivat huhtikuun lopulla tai toukokuun alussa.',
-          lahde: 'Matkakirjan havainnekuva',
-        },
-        {
           tiedosto: 'Stockholm (15103231170).jpg',
           selite: 'Tukholman kunnassa asuu noin miljoona ihmistä ja koko '
             + 'kaupunkiseudulla 1,6 miljoonaa.',
@@ -6353,18 +6187,6 @@ export const KULTTUURI_KATEGORIAT = {
           selite: 'Sacré-Cœurin basilikaa rakennettiin Montmartren '
             + 'kukkulalle 1875–1914, ja sen travertiinikivi valkaisee '
             + 'itsensä sateessa.',
-          lahde: 'Matkakirjan havainnekuva',
-        },
-        {
-          /*
-           * SAAPUMISINTRON KUVA 6 (12.10.2026, Codex-toimitus d5f796079,
-           * PT/omistaja hyväksyi): elämän makuinen juhla- tai tapahtumakuva
-           * nykyaikana, keksittyjä aikuisia. Kanavan ranta kesäiltana.
-           */
-          ampari: 'saapumisintro/paris/20261012-v5/paris-6-canal-saint-martin-juhla-v5.png',
-          lyhyt: 'Canal Saint-Martin tilattiin 1802 ja valmistui 1825; kesäisin sen laitureilla vietetään iltaa.',
-          selite: 'Canal Saint-Martin tilattiin Napoleonin aikana 1802 ja valmistui '
-            + '1825, ja kesäisin sen laitureilla vietetään iltaa ja piknikkejä.',
           lahde: 'Matkakirjan havainnekuva',
         },
       ],
@@ -7896,19 +7718,6 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'LBM1948, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
-          /*
-           * SAAPUMISINTRON KUVA 6 (12.10.2026, Codex-toimitus d5f796079,
-           * PT/omistaja hyväksyi): elämän makuinen juhla- tai tapahtumakuva
-           * nykyaikana, keksittyjä aikuisia. Psyrrin kuja kesäiltana, ei muistomerkkejä.
-           */
-          ampari: 'saapumisintro/athens/20261012-v5/athens-6-psyrri-juhla-v5.png',
-          lyhyt: 'Psyrrin työpajakortteli rappeutui 1900-luvulla ja on 1990-luvulta ollut ravintola- ja baarialue.',
-          selite: 'Psyrrin työpajakortteli rappeutui 1900-luvulla, ja 1990-luvulta '
-            + 'lähtien siitä on kasvanut Monastirakin vieressä ravintola- ja '
-            + 'baarialue.',
-          lahde: 'Matkakirjan havainnekuva',
-        },
-        {
           tiedosto: 'The Acropolis from Mount Hymettus on February 9, 2020.jpg',
           lyhyt: 'Ateenan kaupunkialueella asuu yli 3,6 miljoonaa, vaikka varsinaisessa kunnassa vain runsaat 640 000.',
           selite: 'Ateenan kaupunkialueella asuu yli 3,6 miljoonaa ihmistä, '
@@ -8625,19 +8434,6 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           /*
-           * SAAPUMISINTRON KUVA 6 (13.10.2026, Codex eurooppa-introt-kaikki,
-           * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
-           * kahdella Sonnet-vaiheella.
-           */
-          ampari: 'saapumisintro/amsterdam/20261012-full/amsterdam-6-kuninkaanpaiva-intro-v1.png',
-          lyhyt: 'Kuninkaanpäivänä Amsterdamin kanavien varret värjäytyvät oranssiksi.',
-          selite: 'Kuninkaanpäivää vietetään yleensä 27. huhtikuuta kuningas '
-            + 'Willem-Alexanderin syntymäpäivänä, ja silloin juhlijat pukeutuvat '
-            + 'oranssiin.',
-          lahde: 'Matkakirjan havainnekuva',
-        },
-        {
-          /*
            * SAAPUMISINTRON KUVA 7 (13.10.2026, Codex eurooppa-introt-kaikki,
            * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
            * kahdella Sonnet-vaiheella.
@@ -8680,19 +8476,6 @@ export const KULTTUURI_KATEGORIAT = {
             + 'vuonna 1889, ja se on Alankomaiden vierailluin '
             + 'valtakunnanmonumentti.',
           lahde: 'RubenVanKuik, Wikimedia Commons (CC BY-SA 4.0)',
-        },
-        {
-          /*
-           * SAAPUMISINTRON KUVA 8 (13.10.2026, Codex eurooppa-introt-kaikki,
-           * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
-           * kahdella Sonnet-vaiheella.
-           */
-          ampari: 'saapumisintro/amsterdam/20261012-full/amsterdam-8-herengracht-1873-intro-v2.png',
-          lyhyt: 'Herengrachtin kaivaminen alkoi vuonna 1613, joten kanava oli vuonna 1873 '
-            + 'jo yli 250 vuotta vanha.',
-          selite: 'Herengracht kaivettiin osana Amsterdamin kanavavyöhykettä 1600-luvun '
-            + 'alussa, ja sen varsille rakennettiin varakkaiden kauppiaiden taloja.',
-          lahde: 'Matkakirjan havainnekuva',
         },
       ],
       ennenNyt: [
@@ -9018,19 +8801,6 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           /*
-           * SAAPUMISINTRON KUVA 6 (13.10.2026, Codex eurooppa-introt-kaikki,
-           * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
-           * kahdella Sonnet-vaiheella.
-           */
-          ampari: 'saapumisintro/istanbul/20261012-full/istanbul-6-moda-rantajuhla-intro-v1.png',
-          lyhyt: 'Modan rantakaupunginosa oli ennen viinitarhoja ja kesähuviloita.',
-          selite: '1800-luvun lopulla Modaan asettuivat vauraat kreikkalaiset, armenialaiset '
-            + 'ja levanttilaiset perheet, ja alueella on yhä huviloita ja kirkkoja tuolta '
-            + 'ajalta.',
-          lahde: 'Matkakirjan havainnekuva',
-        },
-        {
-          /*
            * SAAPUMISINTRON KUVA 7 (13.10.2026, Codex eurooppa-introt-kaikki,
            * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
            * kahdella Sonnet-vaiheella.
@@ -9070,19 +8840,6 @@ export const KULTTUURI_KATEGORIAT = {
           selite: 'Eminönün rantatorilla myydään balık ekmekiä suoraan '
             + 'veneistä, joissa kala kypsennetään laiturin kupeessa.',
           lahde: 'Mstyslav Chernov, Wikimedia Commons (CC BY-SA 3.0)',
-        },
-        {
-          /*
-           * SAAPUMISINTRON KUVA 8 (13.10.2026, Codex eurooppa-introt-kaikki,
-           * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
-           * kahdella Sonnet-vaiheella.
-           */
-          ampari: 'saapumisintro/istanbul/20261012-full/istanbul-8-kucuksu-1873-intro-v2.png',
-          lyhyt: 'Abdülazizin aikana Küçüksun paviljongin julkisivuun lisättiin entistä '
-            + 'runsaampaa koristelua.',
-          selite: 'Paviljonki valmistui 1857, ja sulttaani Abdülazizin hallituskaudella '
-            + '(1861–1876) sen julkisivuun lisättiin runsaampaa koristelua.',
-          lahde: 'Matkakirjan havainnekuva',
         },
       ],
       ennenNyt: [
@@ -9998,20 +9755,6 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           /*
-           * SAAPUMISINTRON KUVA 6 (13.10.2026, Codex eurooppa-introt-kaikki,
-           * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
-           * kahdella Sonnet-vaiheella.
-           */
-          ampari: 'saapumisintro/dublin/20261012-full/dublin-6-patrickinpaiva-intro-v1.png',
-          lyhyt: 'Pyhän Patrickin päivää vietetään 17. maaliskuuta kulkueilla ja vihreissä '
-            + 'vaatteissa.',
-          selite: 'Pyhän Patrickin päivä on Irlannin juhlapäivä 17. maaliskuuta, jolloin '
-            + 'pukeudutaan vihreään ja Dublinissa järjestetään kulkue ja St Patrick\'s '
-            + 'Festival.',
-          lahde: 'Matkakirjan havainnekuva',
-        },
-        {
-          /*
            * SAAPUMISINTRON KUVA 7 (13.10.2026, Codex eurooppa-introt-kaikki,
            * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
            * kahdella Sonnet-vaiheella.
@@ -10058,20 +9801,6 @@ export const KULTTUURI_KATEGORIAT = {
             + '1700-luvun lopulla suolle, jota kaupungin kauppiaat pitivät '
             + 'kelvottomana paikkana.',
           lahde: 'Giuseppe Milo, Wikimedia Commons (CC BY 2.0)',
-        },
-        {
-          /*
-           * SAAPUMISINTRON KUVA 8 (13.10.2026, Codex eurooppa-introt-kaikki,
-           * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
-           * kahdella Sonnet-vaiheella.
-           */
-          ampari: 'saapumisintro/dublin/20261012-full/dublin-8-grand-canal-1873-intro-v1.png',
-          lyhyt: 'Grand Canalin matkustajaliikenne hiipui rautateiden takia, mutta '
-            + 'rahtiliikenne jatkui 1900-luvulle.',
-          selite: 'Rautatiet veivät Grand Canalin matkustajaliikenteen 1800-luvun '
-            + 'puolivälissä, mutta rahtiliikenne päättyi vasta vuosien 1959–1960 '
-            + 'vaihteessa.',
-          lahde: 'Matkakirjan havainnekuva',
         },
       ],
       ennenNyt: [
@@ -10651,19 +10380,6 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           /*
-           * SAAPUMISINTRON KUVA 6 (13.10.2026, Codex eurooppa-introt-kaikki,
-           * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
-           * kahdella Sonnet-vaiheella.
-           */
-          ampari: 'saapumisintro/edinburgh/20261012-full/edinburgh-6-kesatanssit-intro-v1.png',
-          lyhyt: 'Ceilidh on skotlantilainen tanssi-ilta, jossa soitetaan perinteistä '
-            + 'kansanmusiikkia.',
-          selite: 'Sana ceilidh tarkoitti gaelin kielessä alun perin vierailua; nykyään se '
-            + 'tarkoittaa yleensä musiikki- ja tanssitilaisuutta.',
-          lahde: 'Matkakirjan havainnekuva',
-        },
-        {
-          /*
            * SAAPUMISINTRON KUVA 7 (13.10.2026, Codex eurooppa-introt-kaikki,
            * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
            * kahdella Sonnet-vaiheella.
@@ -10698,19 +10414,6 @@ export const KULTTUURI_KATEGORIAT = {
             + 'yksitoista myllyä.',
           lahde: 'Gary Campbell-Hall from Edinburgh, UK, '
             + 'Wikimedia Commons (CC BY 2.0)',
-        },
-        {
-          /*
-           * SAAPUMISINTRON KUVA 8 (13.10.2026, Codex eurooppa-introt-kaikki,
-           * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
-           * kahdella Sonnet-vaiheella.
-           */
-          ampari: 'saapumisintro/edinburgh/20261012-full/edinburgh-8-union-canal-1873-intro-v1.png',
-          lyhyt: 'Union Canalin kaupallinen liikenne jatkui 1870-luvulla, vaikka '
-            + 'rautatieyhtiö omisti kanavan.',
-          selite: 'Edinburgh and Glasgow Railway osti kanavan vuonna 1849, mutta kaupallinen '
-            + 'liikenne jatkui 1930-luvulle asti.',
-          lahde: 'Matkakirjan havainnekuva',
         },
       ],
       ennenNyt: [
@@ -11214,20 +10917,6 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           /*
-           * SAAPUMISINTRON KUVA 6 (13.10.2026, Codex eurooppa-introt-kaikki,
-           * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
-           * kahdella Sonnet-vaiheella.
-           */
-          ampari: 'saapumisintro/marseille/20261012-full/marseille-6-panier-korttelijuhla-intro-v1.png',
-          lyhyt: 'Marseillessa vietetään Fête de la Musiquea 21. kesäkuuta, ja kadut ja '
-            + 'aukiot täyttyvät musiikista.',
-          selite: 'Ranskan musiikkijuhla pidetään joka vuosi 21. kesäkuuta; Marseillessa '
-            + 'esiintyjiä on ympäri kaupunkia, esimerkiksi Vanhan sataman ja Cours '
-            + 'Julienin ympäristössä.',
-          lahde: 'Matkakirjan havainnekuva',
-        },
-        {
-          /*
            * SAAPUMISINTRON KUVA 7 (13.10.2026, Codex eurooppa-introt-kaikki,
            * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
            * kahdella Sonnet-vaiheella.
@@ -11236,18 +10925,6 @@ export const KULTTUURI_KATEGORIAT = {
           lyhyt: 'Le Panier -nimen uskotaan tulevan 1600-luvun majatalon kyltistä.',
           selite: 'Le Panier sai nimensä todennäköisesti majatalosta, jonka kyltissä oli kori '
             + 'eli panier, ja nimi siirtyi ensin kadulle ja sitten kaupunginosalle.',
-          lahde: 'Matkakirjan havainnekuva',
-        },
-        {
-          /*
-           * SAAPUMISINTRON KUVA 8 (13.10.2026, Codex eurooppa-introt-kaikki,
-           * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
-           * kahdella Sonnet-vaiheella.
-           */
-          ampari: 'saapumisintro/marseille/20261012-full/marseille-8-vallon-des-auffes-1873-intro-v1.png',
-          lyhyt: 'Vallon des Auffesin satamaa ylittävä silta oli valmis jo 1860-luvulla.',
-          selite: 'Vallon des Auffesin yli kulkee kolmikaarinen kivisilta, joka rakennettiin '
-            + '1860-luvulla Corniche-rantatien töiden yhteydessä.',
           lahde: 'Matkakirjan havainnekuva',
         },
       ],
@@ -11843,17 +11520,6 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           /*
-           * SAAPUMISINTRON KUVA 6 (12.10.2026, Codex-toimitus 8a39d5cc5,
-           * omistaja hyväksyy Codexissa): nuoria aikuisia katujuhlassa.
-           */
-          ampari: 'saapumisintro/lisbon/20261012-full/lisbon-6-santos-populares-intro-v1.png',
-          lyhyt: 'Kesäkuun Santo António -juhlassa Alfaman kujat täyttyvät katujuhlista ja värikkäistä köynnöksistä.',
-          selite: 'Lissabonin Pyhän Antoniuksen juhla huipentuu yöhön 12.–13. '
-            + 'kesäkuuta, ja vanhojen kortteleiden kujilla pidetään katujuhlia.',
-          lahde: 'Matkakirjan havainnekuva',
-        },
-        {
-          /*
            * SAAPUMISINTRON KUVA 7 (12.10.2026, Codex-toimitus 8a39d5cc5,
            * omistaja hyväksyy Codexissa): asuinkuja iltavalossa.
            */
@@ -11878,19 +11544,6 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Alfama, jonka kujilla on poikkeuksellisen tiheässä '
             + 'fado-baareja ja ravintoloita.',
           lahde: 'Vicuna R from Germany, Wikimedia Commons (CC BY-SA 2.0)',
-        },
-        {
-          /*
-           * SAAPUMISINTRON KUVA 8 (13.10.2026, Codex eurooppa-introt-kaikki,
-           * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
-           * kahdella Sonnet-vaiheella.
-           */
-          ampari: 'saapumisintro/lisbon/20261012-full/lisbon-8-alfama-tejo-1873-intro-v2.png',
-          lyhyt: 'Alfama on yksi Lissabonin vanhimmista kaupunginosista ja nousee rinteelle '
-            + 'Tejo-joen rannalta.',
-          selite: 'Alfama selvisi vuoden 1755 maanjäristyksestä alakaupunkia vähemmillä '
-            + 'vaurioilla, ja sen keskiaikainen kujaverkko on pitkälti säilynyt.',
-          lahde: 'Matkakirjan havainnekuva',
         },
       ],
       ennenNyt: [
@@ -12530,19 +12183,6 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           /*
-           * SAAPUMISINTRON KUVA 6 (13.10.2026, Codex eurooppa-introt-kaikki,
-           * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
-           * kahdella Sonnet-vaiheella.
-           */
-          ampari: 'saapumisintro/barcelona/20261012-full/barcelona-6-gracia-juhla-intro-v1.png',
-          lyhyt: 'Gràcian katujuhlassa elokuussa asukkaat koristelevat kokonaisia katuja '
-            + 'omin käsin.',
-          selite: 'Juhlaa vietetään elokuun puolivälissä, ja parhaasta koristellusta kadusta '
-            + 'kilpaillaan; ensimmäinen kirjallinen maininta juhlasta on vuodelta 1817.',
-          lahde: 'Matkakirjan havainnekuva',
-        },
-        {
-          /*
            * SAAPUMISINTRON KUVA 7 (13.10.2026, Codex eurooppa-introt-kaikki,
            * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
            * kahdella Sonnet-vaiheella.
@@ -12575,19 +12215,6 @@ export const KULTTUURI_KATEGORIAT = {
           selite: 'Cerdàn ruudukon korttelit ovat 113 metriä sivultaan, ja sen '
             + 'laidalla on vuodesta 1882 rakenteilla ollut Sagrada Família.',
           lahde: 'Jcca76, Wikimedia Commons (CC BY-SA 4.0)',
-        },
-        {
-          /*
-           * SAAPUMISINTRON KUVA 8 (13.10.2026, Codex eurooppa-introt-kaikki,
-           * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
-           * kahdella Sonnet-vaiheella.
-           */
-          ampari: 'saapumisintro/barcelona/20261012-full/barcelona-8-barceloneta-1873-intro-v1.png',
-          lyhyt: 'Barcelonetan katuverkko suunniteltiin ruutukaavalla 1700-luvun '
-            + 'puolivälissä.',
-          selite: 'Kaupunginosa suunniteltiin 1753 insinööri Juan Martín Cermeñon laatiman '
-            + 'ruutukaavan mukaan, ja talot olivat alun perin kaksikerroksisia.',
-          lahde: 'Matkakirjan havainnekuva',
         },
       ],
       ennenNyt: [
@@ -13119,19 +12746,6 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           /*
-           * SAAPUMISINTRON KUVA 6 (13.10.2026, Codex eurooppa-introt-kaikki,
-           * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
-           * kahdella Sonnet-vaiheella.
-           */
-          ampari: 'saapumisintro/granada/20261012-full/granada-6-cruces-juhla-intro-v1.png',
-          lyhyt: 'Granadan Cruces de Mayo -juhlassa toukokuun alussa kadut, aukiot ja pihat '
-            + 'koristellaan kukkaristein.',
-          selite: 'Juhlaa vietetään 3. toukokuuta, ja kaupunki järjestää kauneimpien ristien '
-            + 'kilpailun; ristejä koristellaan kukilla, kuten geraniumeilla.',
-          lahde: 'Matkakirjan havainnekuva',
-        },
-        {
-          /*
            * SAAPUMISINTRON KUVA 7 (13.10.2026, Codex eurooppa-introt-kaikki,
            * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
            * kahdella Sonnet-vaiheella.
@@ -13140,19 +12754,6 @@ export const KULTTUURI_KATEGORIAT = {
           lyhyt: 'Albaicínin vanhoissa asuinkortteleissa on perinteisiä carmen-taloja.',
           selite: 'Albaicínin perinteiset carmen-talot kätkevät korkeiden muurien taakse oman '
             + 'puutarhansa.',
-          lahde: 'Matkakirjan havainnekuva',
-        },
-        {
-          /*
-           * SAAPUMISINTRON KUVA 8 (13.10.2026, Codex eurooppa-introt-kaikki,
-           * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
-           * kahdella Sonnet-vaiheella.
-           */
-          ampari: 'saapumisintro/granada/20261012-full/granada-8-darro-1873-intro-v1.png',
-          lyhyt: 'Carrera del Darro on yksi Granadan vanhimmista kaduista.',
-          selite: 'Darro-joen varrella kulkeva Carrera del Darro on yksi Granadan vanhimmista '
-            + 'kaduista, ja sen varrella on vanhoja taloja sekä El Bañuelo, yksi '
-            + 'Andalusian vanhimmista arabikylpylöistä.',
           lahde: 'Matkakirjan havainnekuva',
         },
       ],
@@ -13782,19 +13383,6 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           /*
-           * SAAPUMISINTRON KUVA 6 (13.10.2026, Codex eurooppa-introt-kaikki,
-           * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
-           * kahdella Sonnet-vaiheella.
-           */
-          ampari: 'saapumisintro/budapest/20261012-full/budapest-6-pest-katujuhla-intro-v1.png',
-          lyhyt: 'Budapestissa 20. elokuuta juhlitaan Pyhän Tapanin päivää, ja Tonavan '
-            + 'rannoilla ammutaan ilotulitus.',
-          selite: 'Päivä on Unkarin kansallispäivä ja muistuttaa valtion perustamisesta; '
-            + 'ilotulitus ammutaan pitkin Tonavan rantoja.',
-          lahde: 'Matkakirjan havainnekuva',
-        },
-        {
-          /*
            * SAAPUMISINTRON KUVA 7 (13.10.2026, Codex eurooppa-introt-kaikki,
            * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
            * kahdella Sonnet-vaiheella.
@@ -13804,18 +13392,6 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kaupunginosista.',
           selite: 'Alueella sijaitsi roomalainen Aquincum, Pannonia Inferiorin pääkaupunki, '
             + 'jonka jäänteet ovat nykyään museona ja arkeologisena puistona.',
-          lahde: 'Matkakirjan havainnekuva',
-        },
-        {
-          /*
-           * SAAPUMISINTRON KUVA 8 (13.10.2026, Codex eurooppa-introt-kaikki,
-           * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
-           * kahdella Sonnet-vaiheella.
-           */
-          ampari: 'saapumisintro/budapest/20261012-full/budapest-8-gellert-tonava-1873-intro-v1.png',
-          lyhyt: 'Buda, Óbuda ja Pest yhdistettiin Budapestiksi vuonna 1873.',
-          selite: 'Yhdistyminen saatettiin päätökseen 17. marraskuuta 1873, ja Tonavan '
-            + 'molemmin puolin sijainnut kaupunki sai yhteisen hallinnon.',
           lahde: 'Matkakirjan havainnekuva',
         },
       ],
@@ -14480,19 +14056,6 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           /*
-           * SAAPUMISINTRON KUVA 6 (13.10.2026, Codex eurooppa-introt-kaikki,
-           * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
-           * kahdella Sonnet-vaiheella.
-           */
-          ampari: 'saapumisintro/rome/20261012-full/rome-6-san-cosimato-juhla-intro-v1.png',
-          lyhyt: 'Heinäkuun Festa de\' Noantri kuljettaa Madonna del Carmine -patsaan '
-            + 'Trasteveren katujen halki.',
-          selite: 'Patsas lähtee Sant\'Agatan kirkosta vain kerran vuodessa, 16. heinäkuuta '
-            + 'jälkeisenä ensimmäisenä lauantaina, ja kulkue kiertää Trasteveren katuja.',
-          lahde: 'Matkakirjan havainnekuva',
-        },
-        {
-          /*
            * SAAPUMISINTRON KUVA 7 (13.10.2026, Codex eurooppa-introt-kaikki,
            * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
            * kahdella Sonnet-vaiheella.
@@ -14534,19 +14097,6 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Gian Lorenzo Bernini vuonna 1651, ja sen neljä jokijumalaa '
             + 'kuvaavat neljän maanosan suuria virtoja.',
           lahde: 'Myrabella, Wikimedia Commons (CC BY-SA 3.0)',
-        },
-        {
-          /*
-           * SAAPUMISINTRON KUVA 8 (13.10.2026, Codex eurooppa-introt-kaikki,
-           * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
-           * kahdella Sonnet-vaiheella.
-           */
-          ampari: 'saapumisintro/rome/20261012-full/rome-8-ponte-sisto-1873-intro-v2.png',
-          lyhyt: 'Tiberin korkeat rantamuurit rakennettiin vasta vuoden 1870 suurtulvan '
-            + 'jälkeen.',
-          selite: 'Tiberin muurien rakentaminen alkoi 1876 vuoden 1870 tulvan jälkeen, ja työ '
-            + 'jatkui 1900-luvulle. Sitä ennen joki tulvi usein kaupungin kaduille.',
-          lahde: 'Matkakirjan havainnekuva',
         },
       ],
       ennenNyt: [
@@ -15131,20 +14681,6 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           /*
-           * SAAPUMISINTRON KUVA 6 (13.10.2026, Codex eurooppa-introt-kaikki,
-           * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
-           * kahdella Sonnet-vaiheella.
-           */
-          ampari: 'saapumisintro/krakow/20261012-full/krakow-6-kazimierz-juhla-intro-v1.png',
-          lyhyt: 'Kazimierzin juutalaisen kulttuurin festivaali päättyy perinteisesti '
-            + 'Szeroka-kadun konserttiin.',
-          selite: 'Festivaali on järjestetty vuodesta 1988 Kazimierzissa, Krakovan entisessä '
-            + 'juutalaiskaupunginosassa. Päätöskonsertti Szalom na Szerokiej kuullaan '
-            + 'ulkona Szeroka-kadulla.',
-          lahde: 'Matkakirjan havainnekuva',
-        },
-        {
-          /*
            * SAAPUMISINTRON KUVA 7 (13.10.2026, Codex eurooppa-introt-kaikki,
            * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
            * kahdella Sonnet-vaiheella.
@@ -15178,19 +14714,6 @@ export const KULTTUURI_KATEGORIAT = {
             + 'vanhankaupungin eteläpuolella, ja sen juurella on '
             + 'lohikäärmetarun luola.',
           lahde: 'Ingo Mehling, Wikimedia Commons (CC BY-SA 4.0)',
-        },
-        {
-          /*
-           * SAAPUMISINTRON KUVA 8 (13.10.2026, Codex eurooppa-introt-kaikki,
-           * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
-           * kahdella Sonnet-vaiheella.
-           */
-          ampari: 'saapumisintro/krakow/20261012-full/krakow-8-planty1873-intro-v2.png',
-          lyhyt: 'Planty-puisto perustettiin vuosina 1822–1830 Krakovan vanhan kaupungin '
-            + 'muurien paikalle.',
-          selite: 'Puiston suunnitteli pääosin Feliks Radwański sen jälkeen, kun Itävallan '
-            + 'viranomaiset olivat 1800-luvun alussa alkaneet purkaa kaupunginmuureja.',
-          lahde: 'Matkakirjan havainnekuva',
         },
       ],
       ennenNyt: [
@@ -15763,20 +15286,6 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           /*
-           * SAAPUMISINTRON KUVA 6 (13.10.2026, Codex eurooppa-introt-kaikki,
-           * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
-           * kahdella Sonnet-vaiheella.
-           */
-          ampari: 'saapumisintro/warsaw/20261012-full/warsaw-6-veikselin-kesajuhla-intro-v1.png',
-          lyhyt: 'Veiksel jakaa Varsovan kahtia: toisella rannalla kaupunki, toisella '
-            + 'luonnonvaraisempi ranta.',
-          selite: 'Vasemmalla rannalla on rantabulevardeja kahviloineen, oikea ranta on '
-            + 'suojeltua ja lähes luonnontilaista. Kesäisin ihmiset kokoontuvat illoiksi '
-            + 'joen rannoille.',
-          lahde: 'Matkakirjan havainnekuva',
-        },
-        {
-          /*
            * SAAPUMISINTRON KUVA 7 (13.10.2026, Codex eurooppa-introt-kaikki,
            * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
            * kahdella Sonnet-vaiheella.
@@ -15818,19 +15327,6 @@ export const KULTTUURI_KATEGORIAT = {
           selite: 'Złota 44 -asuintorni on 192 metriä korkea, ja Daniel '
             + 'Libeskind sai sen muotoon idean kotkan siivestä.',
           lahde: 'kallerna, Wikimedia Commons (CC BY-SA 4.0)',
-        },
-        {
-          /*
-           * SAAPUMISINTRON KUVA 8 (13.10.2026, Codex eurooppa-introt-kaikki,
-           * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
-           * kahdella Sonnet-vaiheella.
-           */
-          ampari: 'saapumisintro/warsaw/20261012-full/warsaw-8-saksilaispuisto-1873-intro-v2.png',
-          lyhyt: 'Saksilaispuiston suihkulähde oli vuonna 1873 ollut paikallaan jo noin '
-            + 'kaksi vuosikymmentä.',
-          selite: 'Henryk Marconin suunnittelema suihkulähde vihittiin käyttöön 1855. Puiston '
-            + 'Saksilaispalatsi seisoi vielä, sillä se tuhoutui vasta 1944.',
-          lahde: 'Matkakirjan havainnekuva',
         },
       ],
       ennenNyt: [
@@ -16128,19 +15624,6 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           /*
-           * SAAPUMISINTRON KUVA 6 (13.10.2026, Codex eurooppa-introt-kaikki,
-           * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
-           * kahdella Sonnet-vaiheella.
-           */
-          ampari: 'saapumisintro/helsinki/20261012-full/helsinki-6-kesajuhla-intro-v1.png',
-          lyhyt: 'Helsingin Seurasaaressa juhannusta vietetään kokon, kansantanssien ja '
-            + 'juhannussalon ympärillä.',
-          selite: 'Seurasaaren juhannuksessa kokko sytytetään veden äärellä, ja ohjelmaan '
-            + 'kuuluvat kansantanssit, pelimannimusiikki ja juhannussalko.',
-          lahde: 'Matkakirjan havainnekuva',
-        },
-        {
-          /*
            * SAAPUMISINTRON KUVA 7 (13.10.2026, Codex eurooppa-introt-kaikki,
            * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
            * kahdella Sonnet-vaiheella.
@@ -16173,20 +15656,6 @@ export const KULTTUURI_KATEGORIAT = {
           selite: 'Kauppatorilta ostetaan kesällä herneitä ja mansikoita ja '
             + 'lokakuussa silakkaa suoraan veneistä.',
           lahde: 'Tuula Sipilä, Wikimedia Commons (CC BY 4.0)',
-        },
-        {
-          /*
-           * SAAPUMISINTRON KUVA 8 (13.10.2026, Codex eurooppa-introt-kaikki,
-           * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
-           * kahdella Sonnet-vaiheella.
-           */
-          ampari: 'saapumisintro/helsinki/20261012-full/helsinki-8-kaivopuisto-1873-intro-v1.png',
-          lyhyt: 'Kaivopuiston kylpyläyhtiö perustettiin 1834, ja alueelle rakennettiin '
-            + 'kylpylävieraiden huviloita.',
-          selite: 'Helsinkiläiset liikemiehet perustivat kylpyläyhtiön vuonna 1834, ja '
-            + 'Kaivopuiston alueelle rakennettiin 1800-luvulla huviloita, joissa asui '
-            + 'kylpylävieraita.',
-          lahde: 'Matkakirjan havainnekuva',
         },
       ],
       ennenNyt: [
@@ -16714,19 +16183,6 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           /*
-           * SAAPUMISINTRON KUVA 6 (13.10.2026, Codex eurooppa-introt-kaikki,
-           * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
-           * kahdella Sonnet-vaiheella.
-           */
-          ampari: 'saapumisintro/tampere/20261012-full/intro-tampere-6-v1.png',
-          lyhyt: 'Tampereen vappuperinteisiin kuuluu teekkarikaste, jossa uudet teekkarit '
-            + 'kastetaan koskeen.',
-          selite: 'Vappuna fuksivuoden pisteet kerännyt opiskelija kastetaan nosturikorilla '
-            + 'koskeen, ja siitä lähtien hän saa kutsua itseään teekkariksi.',
-          lahde: 'Matkakirjan havainnekuva',
-        },
-        {
-          /*
            * SAAPUMISINTRON KUVA 7 (13.10.2026, Codex eurooppa-introt-kaikki,
            * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
            * kahdella Sonnet-vaiheella.
@@ -16743,19 +16199,6 @@ export const KULTTUURI_KATEGORIAT = {
           selite: 'Pekka Ilveskosken suunnittelema Näsinneula avattiin 1971 '
             + 'Särkänniemessä ja on 168 metriä korkea; sen pyörivä ravintola '
             + '124 metrin korkeudessa tekee täyden kierroksen 45 minuutissa.',
-          lahde: 'Matkakirjan havainnekuva',
-        },
-        {
-          /*
-           * SAAPUMISINTRON KUVA 8 (13.10.2026, Codex eurooppa-introt-kaikki,
-           * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
-           * kahdella Sonnet-vaiheella.
-           */
-          ampari: 'saapumisintro/tampere/20261012-full/intro-tampere-8-v1.png',
-          lyhyt: 'Tampere kasvoi kahden järven välisen Tammerkosken voimalla '
-            + 'teollisuuskaupungiksi.',
-          selite: 'Järvet ovat noin 18 metrin korkeuseron päässä toisistaan, ja niitä '
-            + 'yhdistävä koski tuotti tehtaille vesivoimaa.',
           lahde: 'Matkakirjan havainnekuva',
         },
       ],
@@ -17605,19 +17048,6 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           /*
-           * SAAPUMISINTRON KUVA 6 (13.10.2026, Codex eurooppa-introt-kaikki,
-           * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
-           * kahdella Sonnet-vaiheella.
-           */
-          ampari: 'saapumisintro/tallinn/20261012-full/tallinn-6-kalamajan-pihajuhla-intro-v1.png',
-          lyhyt: 'Kalamajan päivinä asukkaat järjestävät itse kaupunginosajuhlan ja avaavat '
-            + 'pihojaan vieraille.',
-          selite: 'Tallinnan Kalamajan puutalokortteleissa vietetään toukokuussa asukkaiden '
-            + 'omaa juhlaa, jossa muuten suljettuja pihoja avataan yleisölle.',
-          lahde: 'Matkakirjan havainnekuva',
-        },
-        {
-          /*
            * SAAPUMISINTRON KUVA 7 (13.10.2026, Codex eurooppa-introt-kaikki,
            * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
            * kahdella Sonnet-vaiheella.
@@ -17660,20 +17090,6 @@ export const KULTTUURI_KATEGORIAT = {
           selite: 'Tallinnassa talvi on pakkasen puolella koko kolmen '
             + 'kuukauden ajan, ja helmikuu on vuoden kylmin kuukausi.',
           lahde: 'Enel Lepik, Wikimedia Commons (CC BY-SA 4.0)',
-        },
-        {
-          /*
-           * SAAPUMISINTRON KUVA 8 (13.10.2026, Codex eurooppa-introt-kaikki,
-           * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
-           * kahdella Sonnet-vaiheella.
-           */
-          ampari: 'saapumisintro/tallinn/20261012-full/tallinn-8-pirita-1873-intro-v1.png',
-          lyhyt: 'Piritassa ovat Pyhän Birgitan luostarin rauniot, jotka tuhoutuivat '
-            + 'Liivinsodassa 1500-luvulla.',
-          selite: 'Birgittalaisluostari perustettiin Piritaan vuonna 1407, ja sen kirkko '
-            + 'vihittiin käyttöön 1436. Luostarin tuhosivat 1500-luvulla Iivana Julman '
-            + 'joukot.',
-          lahde: 'Matkakirjan havainnekuva',
         },
       ],
       ennenNyt: [
@@ -18154,20 +17570,6 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           /*
-           * SAAPUMISINTRON KUVA 6 (13.10.2026, Codex eurooppa-introt-kaikki,
-           * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
-           * kahdella Sonnet-vaiheella.
-           */
-          ampari: 'saapumisintro/kyiv/20261012-full/kyiv-6-podil-kesajuhla-intro-v1.png',
-          lyhyt: 'Kiovan Podilin katuverkko rakennettiin uusiksi vuoden 1811 suurpalon '
-            + 'jälkeen.',
-          selite: 'Palo tuhosi suurimman osan Podilin puutaloista, ja alueelle suunniteltiin '
-            + 'vuonna 1812 uusi katuverkko, joka on yhä pääosin käytössä. Joitakin '
-            + '1700-luvun kivitaloja on säilynyt.',
-          lahde: 'Matkakirjan havainnekuva',
-        },
-        {
-          /*
            * SAAPUMISINTRON KUVA 7 (13.10.2026, Codex eurooppa-introt-kaikki,
            * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
            * kahdella Sonnet-vaiheella.
@@ -18185,19 +17587,6 @@ export const KULTTUURI_KATEGORIAT = {
             + 'veistos: hahmo on 62 metriä ja jalustoineen kokonaisuus 102 '
             + 'metriä korkea, ja se paljastettiin 9. toukokuuta 1981 Vasyl '
             + 'Borodain johdolla valmistuneena.',
-          lahde: 'Matkakirjan havainnekuva',
-        },
-        {
-          /*
-           * SAAPUMISINTRON KUVA 8 (13.10.2026, Codex eurooppa-introt-kaikki,
-           * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
-           * kahdella Sonnet-vaiheella.
-           */
-          ampari: 'saapumisintro/kyiv/20261012-full/kyiv-8-trukhaniv-1873-intro-v1.png',
-          lyhyt: 'Trukhanivin saarelle ei vielä 1873 johtanut siltaa: kävelysilta valmistui '
-            + 'vasta 1957.',
-          selite: 'Kävelysilta valmistui vuosina 1956–1957, ja sitä ennen saarelle kuljettiin '
-            + 'veneillä ja moottoriveneillä.',
           lahde: 'Matkakirjan havainnekuva',
         },
       ],
@@ -18696,18 +18085,6 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           /*
-           * SAAPUMISINTRON KUVA 6 (13.10.2026, Codex eurooppa-introt-kaikki,
-           * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
-           * kahdella Sonnet-vaiheella.
-           */
-          ampari: 'saapumisintro/saint-petersburg/20261012-full/saint-petersburg-6-jelaginin-puistojuhla-intro-v1.png',
-          lyhyt: 'Jelaginin saari muotoiltiin 1818–1822 englantilaiseksi maisemapuistoksi.',
-          selite: 'Arkkitehti Carlo Rossi rakensi saarelle palatsin keisarin äidille Maria '
-            + 'Fjodorovnalle, ja puisto on yhä pietarilaisten suosima ulkoilupaikka.',
-          lahde: 'Matkakirjan havainnekuva',
-        },
-        {
-          /*
            * SAAPUMISINTRON KUVA 7 (13.10.2026, Codex eurooppa-introt-kaikki,
            * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
            * kahdella Sonnet-vaiheella.
@@ -18740,19 +18117,6 @@ export const KULTTUURI_KATEGORIAT = {
           selite: 'Palatsisilta rakennettiin 1912–1916, ja se nostetaan '
             + 'öisin auki kuten lähes kaikki muutkin Nevan sillat.',
           lahde: 'Igor Abramov, Wikimedia Commons (CC BY-SA 3.0)',
-        },
-        {
-          /*
-           * SAAPUMISINTRON KUVA 8 (13.10.2026, Codex eurooppa-introt-kaikki,
-           * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
-           * kahdella Sonnet-vaiheella.
-           */
-          ampari: 'saapumisintro/saint-petersburg/20261012-full/saint-petersburg-8-moika-sininen-silta-1873-intro-v1.png',
-          lyhyt: 'Sininen silta Moikan yllä Pietarissa oli vuonna 1873 jo valurautainen '
-            + 'kaarisilta.',
-          selite: 'Valurautainen kaarisilta valmistui 1818 ja levennettiin 1840-luvun alussa, '
-            + 'joten 1873 se oli jo nykyleveydessään.',
-          lahde: 'Matkakirjan havainnekuva',
         },
       ],
       ennenNyt: [
@@ -19403,19 +18767,6 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           /*
-           * SAAPUMISINTRON KUVA 6 (13.10.2026, Codex eurooppa-introt-kaikki,
-           * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
-           * kahdella Sonnet-vaiheella.
-           */
-          ampari: 'saapumisintro/moscow/20261012-full/moscow-6-neskuchny-juhla-intro-v1.png',
-          lyhyt: 'Moskovan Neskutšnyi-puutarha on peräisin 1700-luvulta ja kuuluu nykyään '
-            + 'Gorkin puistoon.',
-          selite: 'Puutarha oli 1800-luvulla Moskovan seuraelämän keskus, jossa pidettiin '
-            + 'tansseja ja naamiaisia. Gorkin puisto perustettiin vuonna 1928.',
-          lahde: 'Matkakirjan havainnekuva',
-        },
-        {
-          /*
            * SAAPUMISINTRON KUVA 7 (13.10.2026, Codex eurooppa-introt-kaikki,
            * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
            * kahdella Sonnet-vaiheella.
@@ -19448,20 +18799,6 @@ export const KULTTUURI_KATEGORIAT = {
             + '1992, ja siellä on nykyään Euroopan suurin määrä '
             + 'pilvenpiirtäjiä.',
           lahde: 'Igor Gorshkov, Wikimedia Commons (CC BY 3.0)',
-        },
-        {
-          /*
-           * SAAPUMISINTRON KUVA 8 (13.10.2026, Codex eurooppa-introt-kaikki,
-           * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
-           * kahdella Sonnet-vaiheella.
-           */
-          ampari: 'saapumisintro/moscow/20261012-full/moscow-8-chistye-1873-intro-v1.png',
-          lyhyt: 'Chistoprudnyn bulevardi rakennettiin osaksi Moskovan Bulevardirengasta '
-            + '1820-luvulla.',
-          selite: 'Perimätiedon mukaan lampi sai 1600-luvulla nimen "likainen", kun '
-            + 'lihakauppiaat heittivät siihen jätteitä; myöhemmin se puhdistettiin ja '
-            + 'nimettiin uudelleen.',
-          lahde: 'Matkakirjan havainnekuva',
         },
       ],
       ennenNyt: [
@@ -20006,20 +19343,6 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           /*
-           * SAAPUMISINTRON KUVA 6 (13.10.2026, Codex eurooppa-introt-kaikki,
-           * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
-           * kahdella Sonnet-vaiheella.
-           */
-          ampari: 'saapumisintro/sofia/20261012-full/sofia-6-kaupunkipuutarha-juhla-intro-v1.png',
-          lyhyt: 'Sofian keskustan Kaupunginpuutarha on kaupunkilaisten suosima '
-            + 'kokoontumispaikka.',
-          selite: 'Puutarha oli olemassa jo ennen Bulgarian vapautumista 1878, ja sitä '
-            + 'laajennettiin, kun Sofiasta tuli pääkaupunki. Sen laidalla on Vazovin '
-            + 'kansallisteatteri.',
-          lahde: 'Matkakirjan havainnekuva',
-        },
-        {
-          /*
            * SAAPUMISINTRON KUVA 7 (13.10.2026, Codex eurooppa-introt-kaikki,
            * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
            * kahdella Sonnet-vaiheella.
@@ -20043,19 +19366,6 @@ export const KULTTUURI_KATEGORIAT = {
           selite: 'Vitosan luonnonpuisto rauhoitettiin 1934 ensimmäisenä '
             + 'koko Balkanilla, ja sen korkein huippu yltää 2 292 metriin.',
           lahde: 'Ivano Giambattista, Wikimedia Commons (CC0)',
-        },
-        {
-          /*
-           * SAAPUMISINTRON KUVA 8 (13.10.2026, Codex eurooppa-introt-kaikki,
-           * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
-           * kahdella Sonnet-vaiheella.
-           */
-          ampari: 'saapumisintro/sofia/20261012-full/sofia-8-boyana1873-intro-v2.png',
-          lyhyt: 'Vuonna 1873 Sofia oli ottomaanien hallitsema kaupunki Vitosha-vuoren '
-            + 'juurella.',
-          selite: 'Venäläiset joukot vapauttivat Sofian ottomaanien vallasta 4. tammikuuta '
-            + '1878, ja kaupungista tuli Bulgarian pääkaupunki 1879.',
-          lahde: 'Matkakirjan havainnekuva',
         },
       ],
       ennenNyt: [
@@ -20680,19 +19990,6 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           /*
-           * SAAPUMISINTRON KUVA 6 (13.10.2026, Codex eurooppa-introt-kaikki,
-           * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
-           * kahdella Sonnet-vaiheella.
-           */
-          ampari: 'saapumisintro/bucharest/20261012-full/bucharest-intro-6-v1.png',
-          lyhyt: 'Manucin majatalon kaarikäytävien reunustama piha on Bukarestin '
-            + 'vanhankaupungin kohtaamispaikka.',
-          selite: 'Armenialaiskauppias Manuc Bei rakennutti majatalon vuosina 1806–1808, ja '
-            + 'nykyään siinä on ravintola ja baareja.',
-          lahde: 'Matkakirjan havainnekuva',
-        },
-        {
-          /*
            * SAAPUMISINTRON KUVA 7 (13.10.2026, Codex eurooppa-introt-kaikki,
            * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
            * kahdella Sonnet-vaiheella.
@@ -20710,20 +20007,6 @@ export const KULTTUURI_KATEGORIAT = {
           selite: 'CEC-palatsi valmistui 1900 säästöpankin päärakennukseksi '
             + 'Calea Victoriellen — beaux-arts-tyylinen talo, jonka keskellä '
             + 'kaartuu suuri lasi- ja metallikupoli.',
-          lahde: 'Matkakirjan havainnekuva',
-        },
-        {
-          /*
-           * SAAPUMISINTRON KUVA 8 (13.10.2026, Codex eurooppa-introt-kaikki,
-           * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
-           * kahdella Sonnet-vaiheella.
-           */
-          ampari: 'saapumisintro/bucharest/20261012-full/bucharest-intro-8-v1.png',
-          lyhyt: 'Cișmigiun puiston alkuperäisen ilmeen loi 1840-luvulla saksalaissyntyinen '
-            + 'puutarhuri Wilhelm Meyer.',
-          selite: 'Meyer kutsuttiin Bukarestiin 1843 uudistamaan kaupungin puutarhoja. Hän '
-            + 'suunnitteli Cișmigiuhun polut ja kallioisen romanttisen maiseman järvelle '
-            + 'ja kuoli 1852.',
           lahde: 'Matkakirjan havainnekuva',
         },
       ],
@@ -21263,20 +20546,6 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           /*
-           * SAAPUMISINTRON KUVA 6 (13.10.2026, Codex eurooppa-introt-kaikki,
-           * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
-           * kahdella Sonnet-vaiheella.
-           */
-          ampari: 'saapumisintro/sarajevo/20261012-full/sarajevo-6-pihan-musiikki-ilta-intro-v1.png',
-          lyhyt: 'Sevdalinka, Bosnian perinteinen kaupunkilaislaulu, otettiin UNESCOn '
-            + 'perintöluetteloon 2024.',
-          selite: 'UNESCO hyväksyi sevdalinkan ihmiskunnan aineettoman kulttuuriperinnön '
-            + 'edustavaan luetteloon. Sitä lauletaan a cappella tai perinteisten '
-            + 'soittimien säestyksellä.',
-          lahde: 'Matkakirjan havainnekuva',
-        },
-        {
-          /*
            * SAAPUMISINTRON KUVA 7 (13.10.2026, Codex eurooppa-introt-kaikki,
            * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
            * kahdella Sonnet-vaiheella.
@@ -21294,19 +20563,6 @@ export const KULTTUURI_KATEGORIAT = {
           selite: 'Latinalainen silta rakennettiin kivestä Miljackan yli '
             + 'ottomaanikaudella, ja sen kupeessa tapahtui kesäkuussa 1914 '
             + 'laukaus, joka sysäsi maailman sotaan.',
-          lahde: 'Matkakirjan havainnekuva',
-        },
-        {
-          /*
-           * SAAPUMISINTRON KUVA 8 (13.10.2026, Codex eurooppa-introt-kaikki,
-           * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
-           * kahdella Sonnet-vaiheella.
-           */
-          ampari: 'saapumisintro/sarajevo/20261012-full/sarajevo-8-miljacka-kozija-1873-intro-v1.png',
-          lyhyt: 'Vuonna 1873 Bosnia kuului ottomaanien valtakuntaan, ja Kozija ćuprija oli '
-            + 'Istanbulin tien silta.',
-          selite: 'Kozija ćuprija rakennettiin tielle, joka johti Sarajevosta Istanbuliin. '
-            + 'Itävalta-Unkari miehitti Bosnian vasta 1878.',
           lahde: 'Matkakirjan havainnekuva',
         },
       ],
@@ -21876,18 +21132,6 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           /*
-           * SAAPUMISINTRON KUVA 6 (13.10.2026, Codex eurooppa-introt-kaikki,
-           * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
-           * kahdella Sonnet-vaiheella.
-           */
-          ampari: 'saapumisintro/odessa/20261012-full/odessa-6-merenranta-juhla-intro-v1.png',
-          lyhyt: 'Odessan Arkadia on kaupungin tunnetuin ranta ja kesäiltojen juhlapaikka.',
-          selite: 'Päivisin Arkadiassa uidaan ja auringonotetaan, ja kesäisin rantaklubit ja '
-            + 'kahvilat täyttyvät illalla ihmisistä.',
-          lahde: 'Matkakirjan havainnekuva',
-        },
-        {
-          /*
            * SAAPUMISINTRON KUVA 7 (13.10.2026, Codex eurooppa-introt-kaikki,
            * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
            * kahdella Sonnet-vaiheella.
@@ -21906,18 +21150,6 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Francesco Boffon ja Gregorio Toricellin uusklassisena '
             + 'suunnitelmana Primorskin bulevardin päähän, ja Franz Morandi '
             + 'rakensi sen uudelleen 1871–1873.',
-          lahde: 'Matkakirjan havainnekuva',
-        },
-        {
-          /*
-           * SAAPUMISINTRON KUVA 8 (13.10.2026, Codex eurooppa-introt-kaikki,
-           * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
-           * kahdella Sonnet-vaiheella.
-           */
-          ampari: 'saapumisintro/odessa/20261012-full/odessa-8-kuyalnyk1873-intro-v1.png',
-          lyhyt: 'Kuyalnykin rannalle perustettiin mutahoitola vuonna 1833.',
-          selite: 'Odessan lähellä sijaitsevan Kuyalnykin suolaisen estuaarin rannalla alkoi '
-            + 'vuonna 1833 toimia hoitola, joka tarjosi muta- ja suolavesikylpyjä.',
           lahde: 'Matkakirjan havainnekuva',
         },
       ],
@@ -26310,20 +25542,6 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           /*
-           * SAAPUMISINTRON KUVA 6 (13.10.2026, Codex eurooppa-introt-kaikki,
-           * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
-           * kahdella Sonnet-vaiheella.
-           */
-          ampari: 'saapumisintro/tromso/20261012-full/intro-tromssa-6-v1.png',
-          lyhyt: 'Tromssassa aurinko pysyy taivaalla yötä päivää toukokuun puolivälin '
-            + 'jälkeen heinäkuun loppupuolelle.',
-          selite: 'Valoisat kesäillat vietetään ulkona, esimerkiksi Telegrafbuktan '
-            + 'rantapuistossa, jossa grillataan, uidaan ja järjestetään kesäisin '
-            + 'Bukta-festivaali.',
-          lahde: 'Matkakirjan havainnekuva',
-        },
-        {
-          /*
            * SAAPUMISINTRON KUVA 7 (13.10.2026, Codex eurooppa-introt-kaikki,
            * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
            * kahdella Sonnet-vaiheella.
@@ -26332,19 +25550,6 @@ export const KULTTUURI_KATEGORIAT = {
           lyhyt: 'Tromssa sai kaupunkioikeudet kesäkuussa 1794.',
           selite: 'Kuningas Christian VII myönsi kaupunkioikeudet sen jälkeen, kun Bergenin '
             + 'kauppamonopoli Pohjois-Norjassa oli lakkautettu 1789.',
-          lahde: 'Matkakirjan havainnekuva',
-        },
-        {
-          /*
-           * SAAPUMISINTRON KUVA 8 (13.10.2026, Codex eurooppa-introt-kaikki,
-           * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
-           * kahdella Sonnet-vaiheella.
-           */
-          ampari: 'saapumisintro/tromso/20261012-full/intro-tromssa-8-v1.png',
-          lyhyt: 'Prestvannet oli vuonna 1873 jo kuusi vuotta palvellut kaupungin '
-            + 'juomavesivarastona.',
-          selite: 'Järven vettä käytettiin juomavetenä vuosina 1867–1921, kunnes vesilaitos '
-            + 'aloitti toimintansa Slettaelvalla.',
           lahde: 'Matkakirjan havainnekuva',
         },
       ],
@@ -26888,20 +26093,6 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           /*
-           * SAAPUMISINTRON KUVA 6 (13.10.2026, Codex eurooppa-introt-kaikki,
-           * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
-           * kahdella Sonnet-vaiheella.
-           */
-          ampari: 'saapumisintro/iceland/20261012-full/iceland-6-reykjavikin-kesajuhla-intro-v1.png',
-          lyhyt: 'Reykjavikin Menningarnótt tuo elokuussa kaupunkiin konsertteja, avoimia '
-            + 'ovia ja ilotulituksen.',
-          selite: 'Kulttuuriyötä on vietetty vuodesta 1996 elokuun 18. päivän jälkeisenä '
-            + 'lauantaina; museot ovat avoinna ilmaiseksi, ja ilta päättyy '
-            + 'ilotulitukseen.',
-          lahde: 'Matkakirjan havainnekuva',
-        },
-        {
-          /*
            * SAAPUMISINTRON KUVA 7 (13.10.2026, Codex eurooppa-introt-kaikki,
            * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
            * kahdella Sonnet-vaiheella.
@@ -26910,18 +26101,6 @@ export const KULTTUURI_KATEGORIAT = {
           lyhyt: 'Alþingi perustettiin uudelleen Reykjavikiin vuonna 1845.',
           selite: 'Alþingi on Islannin kansalliskokous, joka perustettiin alun perin noin '
             + 'vuonna 930. Reykjavik sai kaupunkioikeudet vuonna 1786.',
-          lahde: 'Matkakirjan havainnekuva',
-        },
-        {
-          /*
-           * SAAPUMISINTRON KUVA 8 (13.10.2026, Codex eurooppa-introt-kaikki,
-           * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
-           * kahdella Sonnet-vaiheella.
-           */
-          ampari: 'saapumisintro/iceland/20261012-full/iceland-8-tjornin-1873-intro-v1.png',
-          lyhyt: 'Reykjavikin rakentaminen alkoi Tjörnin pohjoispäästä 1700-luvulla.',
-          selite: 'Tjörnin pohjoispuolelle syntyi 1750-luvulla villatehtaiden kylä, ja '
-            + 'Reykjavik sai kaupunkioikeudet vuonna 1786.',
           lahde: 'Matkakirjan havainnekuva',
         },
       ],
@@ -27462,19 +26641,6 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           /*
-           * SAAPUMISINTRON KUVA 6 (13.10.2026, Codex eurooppa-introt-kaikki,
-           * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
-           * kahdella Sonnet-vaiheella.
-           */
-          ampari: 'saapumisintro/lapland/20261012-full/intro-lappi-6-v1.png',
-          lyhyt: 'Rovaniemellä napapiirillä kesäyöt ovat valoisia, ja keskikesällä aurinko '
-            + 'ei laske lainkaan.',
-          selite: 'Valoisat yöt jatkuvat toukokuun lopusta elokuuhun, ja kesäpäivänseisauksen '
-            + 'aikoihin aurinko pysyy taivaalla vuorokauden ympäri.',
-          lahde: 'Matkakirjan havainnekuva',
-        },
-        {
-          /*
            * SAAPUMISINTRON KUVA 7 (13.10.2026, Codex eurooppa-introt-kaikki,
            * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
            * kahdella Sonnet-vaiheella.
@@ -27483,18 +26649,6 @@ export const KULTTUURI_KATEGORIAT = {
           lyhyt: 'Ivalojoen kultalöydöt houkuttelivat kullanhuuhtojia Lappiin 1870-luvulla.',
           selite: 'Ivalojoesta löydettiin kultaa 1868, ja 1870-luvulla joella huuhdottiin '
             + 'kultaa vilkkaasti.',
-          lahde: 'Matkakirjan havainnekuva',
-        },
-        {
-          /*
-           * SAAPUMISINTRON KUVA 8 (13.10.2026, Codex eurooppa-introt-kaikki,
-           * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
-           * kahdella Sonnet-vaiheella.
-           */
-          ampari: 'saapumisintro/lapland/20261012-full/intro-lappi-8-v1.png',
-          lyhyt: 'Inarijärven ranta on inarinsaamelaisten vanhaa asuinaluetta.',
-          selite: 'Inarinsaamea puhutaan vain Suomessa, perinteisesti Inarijärven '
-            + 'ympäristössä.',
           lahde: 'Matkakirjan havainnekuva',
         },
       ],
@@ -28090,20 +27244,6 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           /*
-           * SAAPUMISINTRON KUVA 6 (13.10.2026, Codex eurooppa-introt-kaikki,
-           * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
-           * kahdella Sonnet-vaiheella.
-           */
-          ampari: 'saapumisintro/crete/20261012-full/crete-6-kreetan-kesajuhla-intro-v1.png',
-          lyhyt: 'Kreetan kyläjuhlissa eli panigireissa lyyra ja laouto soivat ja tanssitaan '
-            + 'pitkälle yöhön.',
-          selite: 'Panigiri pidetään kylän kirkon suojelupyhän päivänä: juhla siirtyy '
-            + 'kirkosta kylän aukiolle, jossa soitetaan ja tanssitaan esimerkiksi '
-            + 'pentozalia.',
-          lahde: 'Matkakirjan havainnekuva',
-        },
-        {
-          /*
            * SAAPUMISINTRON KUVA 7 (13.10.2026, Codex eurooppa-introt-kaikki,
            * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
            * kahdella Sonnet-vaiheella.
@@ -28113,19 +27253,6 @@ export const KULTTUURI_KATEGORIAT = {
             + 'asuinaluetta.',
           selite: 'Topanas sijaitsee Hanian vanhankaupungin länsiosassa, ja siellä asuivat '
             + 'kaupungin kristityt ottomaanien hallinnon aikana.',
-          lahde: 'Matkakirjan havainnekuva',
-        },
-        {
-          /*
-           * SAAPUMISINTRON KUVA 8 (13.10.2026, Codex eurooppa-introt-kaikki,
-           * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
-           * kahdella Sonnet-vaiheella.
-           */
-          ampari: 'saapumisintro/crete/20261012-full/crete-8-kournasjarvi-1873-intro-v2.png',
-          lyhyt: 'Kournasjärven pohjasedimentit kertovat alueen luonnosta ja maankäytöstä 10 '
-            + '000 vuoden ajalta.',
-          selite: 'Kournasjärven sedimenttinäytteet kattavat noin kymmenen vuosituhatta, ja '
-            + 'niistä on luettu alueen kasvillisuuden ja maankäytön muutokset.',
           lahde: 'Matkakirjan havainnekuva',
         },
       ],
@@ -28717,20 +27844,6 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           /*
-           * SAAPUMISINTRON KUVA 6 (13.10.2026, Codex eurooppa-introt-kaikki,
-           * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
-           * kahdella Sonnet-vaiheella.
-           */
-          ampari: 'saapumisintro/sicily/20261012-full/sicily-6-marzamemi-juhla-intro-v1.png',
-          lyhyt: 'Marzamemin kalastajakylä kasvoi tonnikalan pyyntilaitoksen, tonnaran, '
-            + 'ympärille.',
-          selite: 'Tonnarassa tonnikalaa pyydettiin ja säilöttiin, ja nykyään sen tiloissa '
-            + 'järjestetään näyttelyitä ja tapahtumia. Kylän suojelupyhimys on Francesco '
-            + 'di Paola.',
-          lahde: 'Matkakirjan havainnekuva',
-        },
-        {
-          /*
            * SAAPUMISINTRON KUVA 7 (13.10.2026, Codex eurooppa-introt-kaikki,
            * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
            * kahdella Sonnet-vaiheella.
@@ -28739,19 +27852,6 @@ export const KULTTUURI_KATEGORIAT = {
           lyhyt: 'Marzamemin nimen alkuosa on arabiaa: marsa tarkoittaa satamaa tai lahtea.',
           selite: 'Nimeä on selitetty sekä kyyhkysten lahdeksi että pieneksi satamaksi. Kylän '
             + 'elinkeino oli vuosisatoja tonnikalan pyynti.',
-          lahde: 'Matkakirjan havainnekuva',
-        },
-        {
-          /*
-           * SAAPUMISINTRON KUVA 8 (13.10.2026, Codex eurooppa-introt-kaikki,
-           * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
-           * kahdella Sonnet-vaiheella.
-           */
-          ampari: 'saapumisintro/sicily/20261012-full/sicily-8-calamosche-1873-intro-v1.png',
-          lyhyt: 'Vendicarin luonnonsuojelualueella on 1400-luvun torni ja 1700-luvun '
-            + 'tonnaran rauniot.',
-          selite: 'Torre Sveva rakennettiin 1400-luvulla rannikkoa puolustamaan. Läheiset '
-            + 'tonnaran rauniot kertovat alueen vanhasta tonnikalan pyynnistä.',
           lahde: 'Matkakirjan havainnekuva',
         },
       ],
@@ -29382,19 +28482,6 @@ export const KULTTUURI_KATEGORIAT = {
             + 'josta tuli museo vuonna 1960.',
           lahde: 'Matkakirjan havainnekuva',
         },
-        {
-          /*
-           * SAAPUMISINTRON KUVA 8 (13.10.2026, Codex eurooppa-introt-kaikki,
-           * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
-           * kahdella Sonnet-vaiheella.
-           */
-          ampari: 'saapumisintro/alps/20261012-full/alps-8-silsjarvi-1873-intro-v2.png',
-          lyhyt: 'Sils-järvi on Engadinin suurimpia järviä ja sijaitsee 1797 metrin '
-            + 'korkeudessa.',
-          selite: 'Sils-järvi on Engadinin suurimpia järviä, ja sen pinta on 1797 metrin '
-            + 'korkeudessa merenpinnasta.',
-          lahde: 'Matkakirjan havainnekuva',
-        },
       ],
       ennenNyt: [
         {
@@ -29948,19 +29035,6 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           /*
-           * SAAPUMISINTRON KUVA 6 (13.10.2026, Codex eurooppa-introt-kaikki,
-           * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
-           * kahdella Sonnet-vaiheella.
-           */
-          ampari: 'saapumisintro/dubrovnik/20261012-full/dubrovnik-intro-6.png',
-          lyhyt: 'Dubrovnikin kesä täyttyy kesäjuhlien esityksistä, joita on järjestetty '
-            + 'joka kesä vuodesta 1950.',
-          selite: 'Kesäjuhlat kestävät 10. heinäkuuta–25. elokuuta, ja teatteria, musiikkia, '
-            + 'oopperaa ja tanssia esitetään ulkoilmapaikoilla ympäri vanhaakaupunkia.',
-          lahde: 'Matkakirjan havainnekuva',
-        },
-        {
-          /*
            * SAAPUMISINTRON KUVA 7 (13.10.2026, Codex eurooppa-introt-kaikki,
            * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
            * kahdella Sonnet-vaiheella.
@@ -29980,19 +29054,6 @@ export const KULTTUURI_KATEGORIAT = {
             + 'rakensi nykyisen barokkikirkon 1715 edellisen palettua 1706; '
             + 'sen edessä seisoo Orlandon pylväs vuodelta 1418, Dubrovnikin '
             + 'vanhin säilynyt julkinen veistos.',
-          lahde: 'Matkakirjan havainnekuva',
-        },
-        {
-          /*
-           * SAAPUMISINTRON KUVA 8 (13.10.2026, Codex eurooppa-introt-kaikki,
-           * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
-           * kahdella Sonnet-vaiheella.
-           */
-          ampari: 'saapumisintro/dubrovnik/20261012-full/dubrovnik-intro-8.png',
-          lyhyt: 'Lokrumin saarelle perustettiin benediktiiniluostari 1000-luvulla.',
-          selite: 'Luostarin perustamiskirja on vuodelta 1023. Saari siirtyi 1859 '
-            + 'arkkiherttua Maximilianin ja hänen puolisonsa Charlotten haltuun, ja '
-            + 'luostari muutettiin kesäasunnoksi.',
           lahde: 'Matkakirjan havainnekuva',
         },
       ],
@@ -30501,19 +29562,6 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           /*
-           * SAAPUMISINTRON KUVA 6 (13.10.2026, Codex eurooppa-introt-kaikki,
-           * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
-           * kahdella Sonnet-vaiheella.
-           */
-          ampari: 'saapumisintro/riga/20261012-full/riga-6-kalnciema-juhla-intro-v2.png',
-          lyhyt: 'Latviassa juhannusta, Līgoa ja Jāņia, vietetään 23.–24. kesäkuuta kokkojen '
-            + 'ja seppeleiden kera.',
-          selite: 'Miehet pitävät päässään tammenlehväseppeleitä ja naiset kukkaseppeleitä, '
-            + 'kokko palaa aamuun asti ja pöytään kuuluu kuminajuusto Jāņu siers.',
-          lahde: 'Matkakirjan havainnekuva',
-        },
-        {
-          /*
            * SAAPUMISINTRON KUVA 7 (13.10.2026, Codex eurooppa-introt-kaikki,
            * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
            * kahdella Sonnet-vaiheella.
@@ -30555,18 +29603,6 @@ export const KULTTUURI_KATEGORIAT = {
             + 'rakennuksista, ja useimmat niistä valmistuivat vuosina '
             + '1904–1914.',
           lahde: 'Scotch Mist, Wikimedia Commons (CC BY-SA 4.0)',
-        },
-        {
-          /*
-           * SAAPUMISINTRON KUVA 8 (13.10.2026, Codex eurooppa-introt-kaikki,
-           * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
-           * kahdella Sonnet-vaiheella.
-           */
-          ampari: 'saapumisintro/riga/20261012-full/riga-8-bastejkalns-1873-intro-v2.png',
-          lyhyt: 'Riiassa pidettiin kesällä 1873 ensimmäinen yleislatvialainen laulujuhla.',
-          selite: 'Juhlaan osallistui noin tuhat laulajaa yli 40 kuorosta, ja se aloitti '
-            + 'latvialaisten laulujuhlien perinteen.',
-          lahde: 'Matkakirjan havainnekuva',
         },
       ],
       ennenNyt: [
@@ -31075,20 +30111,6 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           /*
-           * SAAPUMISINTRON KUVA 6 (13.10.2026, Codex eurooppa-introt-kaikki,
-           * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
-           * kahdella Sonnet-vaiheella.
-           */
-          ampari: 'saapumisintro/vilnius/20261012-full/vilnius-6-uzupisin-pihajuhla-intro-v1.png',
-          lyhyt: 'Vilnan Užupis julistautui itsenäiseksi tasavallaksi 1. huhtikuuta 1997, ja '
-            + 'päivää juhlitaan yhä.',
-          selite: 'Taiteilijayhteisön leimaama Užupis sijaitsee Vilnelė-joen toisella '
-            + 'puolella vanhaakaupunkia, ja sen itsenäisyyspäivä on huhtikuun '
-            + 'ensimmäinen.',
-          lahde: 'Matkakirjan havainnekuva',
-        },
-        {
-          /*
            * SAAPUMISINTRON KUVA 7 (13.10.2026, Codex eurooppa-introt-kaikki,
            * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
            * kahdella Sonnet-vaiheella.
@@ -31108,19 +30130,6 @@ export const KULTTUURI_KATEGORIAT = {
             + 'rakennutti hetmani Michał Kazimierz Pac, ja sen holveissa on '
             + 'noin kaksituhatta Giovanni Pietro Pertin veistämää '
             + 'stukkohahmoa.',
-          lahde: 'Matkakirjan havainnekuva',
-        },
-        {
-          /*
-           * SAAPUMISINTRON KUVA 8 (13.10.2026, Codex eurooppa-introt-kaikki,
-           * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
-           * kahdella Sonnet-vaiheella.
-           */
-          ampari: 'saapumisintro/vilnius/20261012-full/vilnius-8-vilnia-1873-intro-v1.png',
-          lyhyt: 'Vilna kuului vuonna 1873 Venäjän keisarikuntaan, johon Liettua liitettiin '
-            + '1795.',
-          selite: 'Venäjä liitti Liettuan itseensä 1795, ja Vilnan yliopisto suljettiin '
-            + 'vuoden 1831 kansannousun jälkeen 1832.',
           lahde: 'Matkakirjan havainnekuva',
         },
       ],
@@ -31625,20 +30634,6 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           /*
-           * SAAPUMISINTRON KUVA 6 (13.10.2026, Codex eurooppa-introt-kaikki,
-           * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
-           * kahdella Sonnet-vaiheella.
-           */
-          ampari: 'saapumisintro/oslo/20261012-full/oslo-6-grunerlokka-tapahtuma-intro-v1.png',
-          lyhyt: 'Grünerløkka oli 1800-luvulla työläiskaupunginosa, ja nykyään se on '
-            + 'kahviloiden aluetta.',
-          selite: 'Grünerløkka liitettiin Christianiaan 1850-luvun lopulla ja rakennettiin '
-            + '1860-luvulta vuosisadan loppuun vuokrataloilla; nykyään alue tunnetaan '
-            + 'kahviloistaan.',
-          lahde: 'Matkakirjan havainnekuva',
-        },
-        {
-          /*
            * SAAPUMISINTRON KUVA 7 (13.10.2026, Codex eurooppa-introt-kaikki,
            * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
            * kahdella Sonnet-vaiheella.
@@ -31677,18 +30672,6 @@ export const KULTTUURI_KATEGORIAT = {
           selite: 'Oslo on rakennettu Oslovuonon pohjukkaan, ja kaupungin '
             + 'rajojen sisällä on 40 saarta ja 343 järveä.',
           lahde: 'Chell Hill, Wikimedia Commons (CC BY-SA 3.0)',
-        },
-        {
-          /*
-           * SAAPUMISINTRON KUVA 8 (13.10.2026, Codex eurooppa-introt-kaikki,
-           * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
-           * kahdella Sonnet-vaiheella.
-           */
-          ampari: 'saapumisintro/oslo/20261012-full/oslo-8-hovedoya-1873-intro-v1.png',
-          lyhyt: 'Hovedøyan luostari oli vuonna 1873 ollut raunioina jo yli 300 vuotta.',
-          selite: 'Cistercienseiluostari poltettiin vuonna 1532 eikä sitä koskaan rakennettu '
-            + 'uudelleen, ja sen kiveä käytettiin Akershusin linnoitukseen.',
-          lahde: 'Matkakirjan havainnekuva',
         },
       ],
       ennenNyt: [
@@ -32062,19 +31045,6 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           /*
-           * SAAPUMISINTRON KUVA 6 (13.10.2026, Codex eurooppa-introt-kaikki,
-           * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
-           * kahdella Sonnet-vaiheella.
-           */
-          ampari: 'saapumisintro/florence/20261012-full/florence-6-tasso-juhla-intro-v1.png',
-          lyhyt: 'Firenze juhlii suojeluspyhimystään Johannes Kastajaa 24. kesäkuuta '
-            + 'ilotulituksella.',
-          selite: 'Fochi di San Giovanni -ilotulitusta katsellaan Arnon rannoilta ja '
-            + 'silloilta, ja se alkaa illalla noin kello 22.',
-          lahde: 'Matkakirjan havainnekuva',
-        },
-        {
-          /*
            * SAAPUMISINTRON KUVA 7 (13.10.2026, Codex eurooppa-introt-kaikki,
            * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
            * kahdella Sonnet-vaiheella.
@@ -32133,18 +31103,6 @@ export const KULTTUURI_KATEGORIAT = {
           selite: 'Brunelleschin kupoliin kului yli neljä miljoonaa tiiltä, ja '
             + 'se valmistui vuonna 1436.',
           lahde: 'Francisco Anzola, Flickr (CC BY 2.0)',
-        },
-        {
-          /*
-           * SAAPUMISINTRON KUVA 8 (13.10.2026, Codex eurooppa-introt-kaikki,
-           * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
-           * kahdella Sonnet-vaiheella.
-           */
-          ampari: 'saapumisintro/florence/20261012-full/florence-8-cascine-1873-intro-v1.png',
-          lyhyt: 'Cascinen puisto oli vuonna 1873 jo Firenzen kaupungin omistuksessa.',
-          selite: 'Firenzen kaupunki osti Cascinen puiston omistukseensa vuonna 1869, ja '
-            + 'arkkitehti Felice Francolini johti sen kunnostusta.',
-          lahde: 'Matkakirjan havainnekuva',
         },
       ],
       ennenNyt: [
@@ -32812,20 +31770,6 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           /*
-           * SAAPUMISINTRON KUVA 6 (13.10.2026, Codex eurooppa-introt-kaikki,
-           * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
-           * kahdella Sonnet-vaiheella.
-           */
-          ampari: 'saapumisintro/copenhagen/20261012-full/copenhagen-6-korttelijuhla-intro-v1.png',
-          lyhyt: 'Sankthansaftenina 23. kesäkuuta kööpenhaminalaiset kokoontuvat piknikille '
-            + 'ja kokkojen äärelle.',
-          selite: 'Juhannusta vietetään Tanskassa Johannes Kastajan päivän aattona: '
-            + 'puistoissa ja rannoilla syödään yhdessä, ja kokko sytytetään '
-            + 'auringonlaskun aikaan.',
-          lahde: 'Matkakirjan havainnekuva',
-        },
-        {
-          /*
            * SAAPUMISINTRON KUVA 7 (13.10.2026, Codex eurooppa-introt-kaikki,
            * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
            * kahdella Sonnet-vaiheella.
@@ -32863,20 +31807,6 @@ export const KULTTUURI_KATEGORIAT = {
           lyhyt: 'Nyhavn kaivettiin 1670-luvulla kanavaksi, jotta laivat pääsisivät keskelle kaupunkia.',
           selite: 'Nyhavn kaivettiin 1670-luvulla kanavaksi, jotta laivat '
             + 'pääsisivät purkamaan lastinsa keskelle kaupunkia.',
-          lahde: 'Matkakirjan havainnekuva',
-        },
-        {
-          /*
-           * SAAPUMISINTRON KUVA 8 (13.10.2026, Codex eurooppa-introt-kaikki,
-           * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
-           * kahdella Sonnet-vaiheella.
-           */
-          ampari: 'saapumisintro/copenhagen/20261012-full/copenhagen-8-frederiksberg-1873-intro-v1.png',
-          lyhyt: 'Frederiksbergin puisto syntyi kuninkaan kesälinnan yhteyteen 1690-luvun '
-            + 'lopulla.',
-          selite: 'Kuningas Frederik IV perusti puiston Frederiksbergin kesälinnansa '
-            + 'ympärille 1690-luvun lopulla, ja puiston kanavat saivat nykyisen muotonsa '
-            + '1800-luvun alussa.',
           lahde: 'Matkakirjan havainnekuva',
         },
       ],
@@ -34231,6 +33161,44 @@ export const KULTTUURI_KATEGORIAT = {
             + 'ottomaanit rakensivat 1572 vuosi saaren valtauksen jälkeen; '
             + 'sisäpihan keskellä on pieni moskeija suihkulähteineen, ja '
             + 'britit käyttivät taloa kaupungin ensimmäisenä vankilana.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          /*
+           * SAAPUMISINTRON KUVA 4 (13.10.2026, Codex viimeiset 5 kaupunkia,
+           * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
+           * kahdella Sonnet-vaiheella.
+           */
+          ampari: 'saapumisintro/luxembourg/20261013-full/luxembourg-4-arki-intro-v1.png',
+          lyhyt: 'Pfaffenthal on Alzetten laakson vanha kaupunginosa, johon keskiajalla asettui vettä '
+            + 'tarvitsevia käsityöläisiä.',
+          selite: 'Alzetten rannoille asettui nahkureita, värjäreitä ja myllääjiä, jotka tarvitsivat '
+            + 'joen vettä. Pfaffenthal kuuluu Luxemburgin vanhimpiin asuinalueisiin.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          /*
+           * SAAPUMISINTRON KUVA 5 (13.10.2026, Codex viimeiset 5 kaupunkia,
+           * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
+           * kahdella Sonnet-vaiheella.
+           */
+          ampari: 'saapumisintro/luxembourg/20261013-full/luxembourg-5-luonto-intro-v1.png',
+          lyhyt: 'Passerelle-viadukti ylittää Pétrussen laakson 24 kaarella ja valmistui 1861.',
+          selite: 'Silta rakennettiin 1859–1861, ja se kohoaa noin 45 metriä laakson yläpuolelle. '
+            + 'Paikalliset kutsuvat sitä Vanhaksi sillaksi.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          /*
+           * SAAPUMISINTRON KUVA 7 (13.10.2026, Codex viimeiset 5 kaupunkia,
+           * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
+           * kahdella Sonnet-vaiheella.
+           */
+          ampari: 'saapumisintro/luxembourg/20261013-full/luxembourg-7-ilta-intro-v1.png',
+          lyhyt: 'Chemin de la Corniche kulkee 1600-luvun valleilla ja sitä sanotaan Euroopan '
+            + 'kauneimmaksi parvekkeeksi.',
+          selite: 'Kävelytie kulkee Bock-niemeltä Pyhän Hengen linnakkeen alaosaan, ja sieltä näkyy '
+            + 'Grundin kaupunginosa ja Rham-ylänkö. Nimitys liitetään kirjailija Batty Weberiin.',
           lahde: 'Matkakirjan havainnekuva',
         },
       ],
@@ -67964,19 +66932,6 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           /*
-           * SAAPUMISINTRON KUVA 6 (13.10.2026, Codex eurooppa-introt-kaikki,
-           * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
-           * kahdella Sonnet-vaiheella.
-           */
-          ampari: 'saapumisintro/seville/20261012-full/seville-6-feria-juhla-intro-v1.png',
-          lyhyt: 'Sevillan Feria de Abril alkoi vuonna 1847 karjamarkkinoina ja on kasvanut '
-            + 'koko kaupungin juhlaksi.',
-          selite: 'Ensimmäisessä markkinassa oli 19 casetaa eli juhlatelttaa, nykyään niitä '
-            + 'on yli tuhat. Feria pidetään parin viikon kuluttua pääsiäisestä.',
-          lahde: 'Matkakirjan havainnekuva',
-        },
-        {
-          /*
            * SAAPUMISINTRON KUVA 7 (13.10.2026, Codex eurooppa-introt-kaikki,
            * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
            * kahdella Sonnet-vaiheella.
@@ -68009,19 +66964,6 @@ export const KULTTUURI_KATEGORIAT = {
             + 'keskimäärin seitsemän metriä merenpinnan yläpuolelle, ja '
             + 'kunnan pinta-ala on 141 neliökilometriä.',
           lahde: 'Michiel1972, Wikimedia Commons (CC BY-SA 3.0)',
-        },
-        {
-          /*
-           * SAAPUMISINTRON KUVA 8 (13.10.2026, Codex eurooppa-introt-kaikki,
-           * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
-           * kahdella Sonnet-vaiheella.
-           */
-          ampari: 'saapumisintro/seville/20261012-full/seville-8-triana-1873-intro-v2.png',
-          lyhyt: 'Trianan rautasillan edeltäjä oli proomuista tehty kelluva silta, joka '
-            + 'palveli seitsemän vuosisataa.',
-          selite: 'Almohadit rakennuttivat kelluvan sillan 1171. Nykyinen rautasilta korvasi '
-            + 'sen 1852, joten se oli 1873 jo parikymmentä vuotta vanha.',
-          lahde: 'Matkakirjan havainnekuva',
         },
       ],
       nostot: [
@@ -68642,6 +67584,33 @@ export const KULTTUURI_KATEGORIAT = {
           selite: 'Mont des Artsin geometrinen puutarha yhdistää yläkaupungin ja '
               + 'alakaupungin, ja portailta erottuu Brysselin kaupungintalon torni.',
           lahde: 'Alex Sirac, Wikimedia Commons (CC BY 4.0)',
+        },
+        {
+          /*
+           * SAAPUMISINTRON KUVA 5 (13.10.2026, Codex viimeiset 5 kaupunkia,
+           * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
+           * kahdella Sonnet-vaiheella.
+           */
+          ampari: 'saapumisintro/brussels/20261013-full/brussels-5-luonto-intro-v1.png',
+          lyhyt: 'Bois de la Cambre on Soignesin metsän jatke, joka ulottuu Brysselin kaakkoisosaan.',
+          selite: 'Saksalainen puutarha-arkkitehti Édouard Keilig voitti suunnittelukilpailun 1862 ja '
+            + 'suunnitteli puiston englantilaiseen maisemapuistotyyliin. Työt tehtiin pääosin '
+            + 'viidessä vuodessa.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          /*
+           * SAAPUMISINTRON KUVA 7 (13.10.2026, Codex viimeiset 5 kaupunkia,
+           * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
+           * kahdella Sonnet-vaiheella.
+           */
+          ampari: 'saapumisintro/brussels/20261013-full/brussels-7-ilta-intro-v1.png',
+          lyhyt: 'Notre-Dame du Sablon on goottilainen kirkko, jonka varsijousimiesten kilta perusti '
+            + 'kappelina 1304.',
+          selite: 'Varsijousimiesten kilta rakennutti pienen kappelin 1300-luvun alussa. Nykyinen '
+            + 'goottilainen kirkko rakennettiin 1400-luvulta alkaen, ja sen kuoriosa oli valmis '
+            + '1435 mennessä.',
+          lahde: 'Matkakirjan havainnekuva',
         },
       ],
       ennenNyt: [
@@ -69368,6 +68337,46 @@ export const KULTTUURI_KATEGORIAT = {
               + 'rinteen alapuolella, ja horisontissa kohoaa vuorijono.',
           lahde: 'Radek Kucharski, Wikimedia Commons (CC BY 2.0)',
         },
+        {
+          /*
+           * SAAPUMISINTRON KUVA 4 (13.10.2026, Codex viimeiset 5 kaupunkia,
+           * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
+           * kahdella Sonnet-vaiheella.
+           */
+          ampari: 'saapumisintro/ljubljana/20261013-full/ljubljana-4-arki-intro-v1.png',
+          lyhyt: 'Krakovo on Ljubljanan keskustan vieressä oleva vanha esikaupunki, jossa kasvimaita '
+            + 'on viljelty jo keskiajalla.',
+          selite: 'Saksalaisen ritarikunnan maakirja vuodelta 1490 mainitsee Krakovon kylän kasvimaat '
+            + 'ja kalastajat. Alue ja Eipprova ulica julistettiin kulttuurihistorialliseksi '
+            + 'monumentiksi 1986.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          /*
+           * SAAPUMISINTRON KUVA 5 (13.10.2026, Codex viimeiset 5 kaupunkia,
+           * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
+           * kahdella Sonnet-vaiheella.
+           */
+          ampari: 'saapumisintro/ljubljana/20261013-full/ljubljana-5-luonto-intro-v1.png',
+          lyhyt: 'Tivolin, Rožnikin ja Šišenski hribin metsäalue ulottuu aivan Ljubljanan keskustan '
+            + 'viereen.',
+          selite: 'Alue julistettiin luonnonnähtävyydeksi 1984 ja maisemapuistoksi 2015. Noin kolme '
+            + 'neljäsosaa alueesta on metsää.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          /*
+           * SAAPUMISINTRON KUVA 7 (13.10.2026, Codex viimeiset 5 kaupunkia,
+           * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
+           * kahdella Sonnet-vaiheella.
+           */
+          ampari: 'saapumisintro/ljubljana/20261013-full/ljubljana-7-ilta-intro-v1.png',
+          lyhyt: 'Vanhankaupungin talot ovat pääosin 1500-luvulta tai uudempia, sillä 1511 '
+            + 'maanjäristys tuhosi vanhoja taloja.',
+          selite: 'Maaliskuussa 1511 maanjäristys vaurioitti Ljubljanaa pahoin. Monen tuhoutuneen '
+            + 'keskiaikaisen rakennuksen tilalle nousi renessanssi- ja barokkitaloja.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
       ],
       ennenNyt: [
         {
@@ -70002,6 +69011,31 @@ export const KULTTUURI_KATEGORIAT = {
               + 'valtionteatteriin, ja horisontissa kohoavat kukkulat. Kuvan etualalla '
               + 'näkyy suihkulähteen puisto.',
           lahde: 'Patrick Hendriksen, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          /*
+           * SAAPUMISINTRON KUVA 4 (13.10.2026, Codex viimeiset 5 kaupunkia,
+           * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
+           * kahdella Sonnet-vaiheella.
+           */
+          ampari: 'saapumisintro/kosice/20261013-full/kosice-4-arki-intro-v1.png',
+          lyhyt: 'Hrnčiarska on Košicen vanhankaupungin kuja, jonka pienissä taloissa toimii '
+            + 'perinteisiä käsityöpajoja.',
+          selite: 'Katua kutsutaan myös Käsityöläiskujaksi, ja siellä voi nähdä muun muassa '
+            + 'savenvalajan ja puusepän työtä. Kadun nimi viittaa savenvalajiin.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          /*
+           * SAAPUMISINTRON KUVA 5 (13.10.2026, Codex viimeiset 5 kaupunkia,
+           * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
+           * kahdella Sonnet-vaiheella.
+           */
+          ampari: 'saapumisintro/kosice/20261013-full/kosice-5-luonto-intro-v1.png',
+          lyhyt: 'Hornád-joki virtaa Košicen läpi etelään ja jatkaa Unkarin puolelle.',
+          selite: 'Joki virtaa Itä-Slovakian halki Košicen kautta etelään ja laskee Unkarin puolella '
+            + 'Sajó-jokeen.',
+          lahde: 'Matkakirjan havainnekuva',
         },
       ],
       ennenNyt: [
@@ -71032,19 +70066,6 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           /*
-           * SAAPUMISINTRON KUVA 6 (13.10.2026, Codex eurooppa-introt-kaikki,
-           * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
-           * kahdella Sonnet-vaiheella.
-           */
-          ampari: 'saapumisintro/bergen/20261012-full/bergen-6-musiikki-ilta-intro-v1.png',
-          lyhyt: 'Bergenin kansainväliset festivaalit järjestetään joka vuosi '
-            + 'touko-kesäkuussa.',
-          selite: 'Bergenin kansainvälisiä festivaaleja on järjestetty vuodesta 1953, ja ne '
-            + 'kestävät noin kaksi viikkoa touko-kesäkuun vaihteessa.',
-          lahde: 'Matkakirjan havainnekuva',
-        },
-        {
-          /*
            * SAAPUMISINTRON KUVA 7 (13.10.2026, Codex eurooppa-introt-kaikki,
            * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
            * kahdella Sonnet-vaiheella.
@@ -71078,15 +70099,16 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           /*
-           * SAAPUMISINTRON KUVA 8 (13.10.2026, Codex eurooppa-introt-kaikki,
+           * SAAPUMISINTRON KUVA 5 (13.10.2026, Codex viimeiset 5 kaupunkia,
            * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
            * kahdella Sonnet-vaiheella.
            */
-          ampari: 'saapumisintro/bergen/20261012-full/bergen-8-nordnes-1873-intro-v1.png',
-          lyhyt: 'Nordnesin puisto tehtiin vasta 1888–1898, joten vuonna 1873 sitä ei vielä '
-            + 'ollut niemen kärjessä.',
-          selite: 'Nordnesin puisto tehtiin vuosina 1888–1898, ja sen perustamista tuki '
-            + 'Bergenin Det nyttige Selskab -yhdistys.',
+          ampari: 'saapumisintro/valletta/20261013-full/valletta-5-luonto-intro-v1.png',
+          lyhyt: 'Upper Barrakka Gardensin terassilta avautuu näkymä Grand Harbouriin ja Kolmeen '
+            + 'kaupunkiin.',
+          selite: 'Puutarha perustettiin 1661 Italian kielikunnan ritarien yksityiseksi puutarhaksi. '
+            + 'Kolme kaupunkia ovat Grand Harbourin vastarannalla sijaitsevat Birgu, Senglea ja '
+            + 'Cospicua.',
           lahde: 'Matkakirjan havainnekuva',
         },
       ],
