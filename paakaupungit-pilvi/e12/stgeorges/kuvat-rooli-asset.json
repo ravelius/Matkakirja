@@ -3,7 +3,7 @@
   "era": "e12",
   "city": "stgeorges",
   "authorization": "hyväksyn kaikki tekemäsi kuvat. toimita ne claudelle. claudelta saat uusia ohjeita jatkoa varten",
-  "sourceContentAfterSHA256": "7ccc26be029319d0279c6016347d2c573758a2484b3bdfedf1d82c954e483f50",
+  "sourceContentAfterSHA256": "14dce1a0b0d13e3ce8dbda5e8478846ac9cee81e5b56e5b94941c71b221bad4b",
   "assets": [
     {
       "era": "e12",
@@ -28,10 +28,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/stgeorges/e12-stgeorges-O4-e02fe9ea50-d41643973cad.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva satamakaupungin merellisestä lounaasta.",
-        "lyhyt": "Havainnekuva satamakaupungin merellisestä lounaasta."
+        "selite": "Havainnekuva satamakaupungin merellisestä lounaasta."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -39,10 +39,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/stgeorges/e12-stgeorges-O4-e02fe9ea50-d41643973cad.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva satamakaupungin merellisestä lounaasta.",
-        "lyhyt": "Havainnekuva satamakaupungin merellisestä lounaasta."
+        "selite": "Havainnekuva satamakaupungin merellisestä lounaasta."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -56,7 +56,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/stgeorges/sisalto.json",
-      "sourceContentSHA256": "6530adf5faa43579e8183fe92526d4fd5c63aa395d13740e8d3d4dba1b83d670",
+      "sourceContentSHA256": "14dce1a0b0d13e3ce8dbda5e8478846ac9cee81e5b56e5b94941c71b221bad4b",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
         "semanticContextSHA256": "a9d31efc83d974d1dcdd97336c24430ac5f155198d34dcce55cabcfe867f31f4",
@@ -285,9 +285,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -306,17 +306,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "7ccc26be029319d0279c6016347d2c573758a2484b3bdfedf1d82c954e483f50",
+      "sourceContentAfterSHA256": "14dce1a0b0d13e3ce8dbda5e8478846ac9cee81e5b56e5b94941c71b221bad4b",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
       "contextAfterSHA256": "a9d31efc83d974d1dcdd97336c24430ac5f155198d34dcce55cabcfe867f31f4",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "7ccc26be029319d0279c6016347d2c573758a2484b3bdfedf1d82c954e483f50",
+        "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "contextAfterSHA256": "a9d31efc83d974d1dcdd97336c24430ac5f155198d34dcce55cabcfe867f31f4",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+          "semanticContextSHA256": "a9d31efc83d974d1dcdd97336c24430ac5f155198d34dcce55cabcfe867f31f4",
+          "subjectTitle": "Mitä täällä syödään",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "14dce1a0b0d13e3ce8dbda5e8478846ac9cee81e5b56e5b94941c71b221bad4b",
+        "sameImageNativeSHA256": "d41643973cad40c08ed9129f71b1171d626a2a2b60dba7167a6040d6cd466d93",
+        "sameImageExportSHA256": "cb1c3910b1bef4a6de33c23f1cf59186134299b7ca4f9149ebcb1f21ae38f946",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e12",
@@ -338,10 +359,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/stgeorges/e12-stgeorges-L3-31d60a08be-a7921d3cb6da.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Opetusaiheen havainnekuva vaurioituneessa kirkossa jatkuneiden koulutuntien aiheeseen.",
-        "lyhyt": "Opetusaiheen havainnekuva vaurioituneessa kirkossa jatkuneiden koulutuntien aiheeseen."
+        "selite": "Opetusaiheen havainnekuva vaurioituneessa kirkossa jatkuneiden koulutuntien aiheeseen."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -349,10 +370,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/stgeorges/e12-stgeorges-L3-31d60a08be-a7921d3cb6da.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Opetusaiheen havainnekuva vaurioituneessa kirkossa jatkuneiden koulutuntien aiheeseen.",
-        "lyhyt": "Opetusaiheen havainnekuva vaurioituneessa kirkossa jatkuneiden koulutuntien aiheeseen."
+        "selite": "Opetusaiheen havainnekuva vaurioituneessa kirkossa jatkuneiden koulutuntien aiheeseen."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -366,7 +387,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/stgeorges/sisalto.json",
-      "sourceContentSHA256": "6530adf5faa43579e8183fe92526d4fd5c63aa395d13740e8d3d4dba1b83d670",
+      "sourceContentSHA256": "14dce1a0b0d13e3ce8dbda5e8478846ac9cee81e5b56e5b94941c71b221bad4b",
       "semanticSourceBind": {
         "targetBeforeSHA256": "25e3eab30d45d60c0e17d575c74087899281eeb0cb3ec88813c4b56945122894",
         "semanticContextSHA256": "25e3eab30d45d60c0e17d575c74087899281eeb0cb3ec88813c4b56945122894",
@@ -593,9 +614,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -614,17 +635,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "7ccc26be029319d0279c6016347d2c573758a2484b3bdfedf1d82c954e483f50",
+      "sourceContentAfterSHA256": "14dce1a0b0d13e3ce8dbda5e8478846ac9cee81e5b56e5b94941c71b221bad4b",
       "targetAfterSHA256": "25e3eab30d45d60c0e17d575c74087899281eeb0cb3ec88813c4b56945122894",
       "contextAfterSHA256": "25e3eab30d45d60c0e17d575c74087899281eeb0cb3ec88813c4b56945122894",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "7ccc26be029319d0279c6016347d2c573758a2484b3bdfedf1d82c954e483f50",
+        "targetAfterSHA256": "25e3eab30d45d60c0e17d575c74087899281eeb0cb3ec88813c4b56945122894",
+        "contextAfterSHA256": "25e3eab30d45d60c0e17d575c74087899281eeb0cb3ec88813c4b56945122894",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "25e3eab30d45d60c0e17d575c74087899281eeb0cb3ec88813c4b56945122894",
+          "semanticContextSHA256": "25e3eab30d45d60c0e17d575c74087899281eeb0cb3ec88813c4b56945122894",
+          "subjectTitle": "Kirkko jatkoi ilman ehjää taloa",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "14dce1a0b0d13e3ce8dbda5e8478846ac9cee81e5b56e5b94941c71b221bad4b",
+        "sameImageNativeSHA256": "a7921d3cb6da7415b9abe264a1caf2085d02ca00083808035efca0f59fac8c8e",
+        "sameImageExportSHA256": "f646c711c2bfd71b8304e4e00a261222b66c0aa601d46ab306acde9db1252b0a",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e12",
@@ -643,16 +685,16 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/stgeorges/photo-58deca4ffd888f7000c7.jpg",
         "suora": true,
         "lahde": "Stefan_und_Bille, Commons (CC BY-SA 3.0)",
-        "selite": "Aquarium Beachin luonnonrantaa Grenadalla vuonna 2003.",
-        "lyhyt": "Aquarium Beachin luonnonrantaa Grenadalla vuonna 2003.",
+        "selite": "Vaalea hiekkaranta kaartuu etualalla; veden takana näkyvät vihreät rinteet ja niiden asutus.",
+        "lyhyt": "Aquarium Beachin rantaa Grenadalla.",
         "tiedosto": "Grenada Aquarium Beach - panoramio - Stefan und Bille.jpg",
         "vuosi": "2003"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Stefan_und_Bille, Commons (CC BY-SA 3.0)",
-        "selite": "Aquarium Beachin luonnonrantaa Grenadalla vuonna 2003.",
-        "lyhyt": "Aquarium Beachin luonnonrantaa Grenadalla vuonna 2003.",
+        "selite": "Vaalea hiekkaranta kaartuu etualalla; veden takana näkyvät vihreät rinteet ja niiden asutus.",
+        "lyhyt": "Aquarium Beachin rantaa Grenadalla.",
         "tiedosto": "Grenada Aquarium Beach - panoramio - Stefan und Bille.jpg",
         "vuosi": "2003"
       },
@@ -660,8 +702,8 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/stgeorges/photo-58deca4ffd888f7000c7.jpg",
         "suora": true,
         "lahde": "Stefan_und_Bille, Commons (CC BY-SA 3.0)",
-        "selite": "Aquarium Beachin luonnonrantaa Grenadalla vuonna 2003.",
-        "lyhyt": "Aquarium Beachin luonnonrantaa Grenadalla vuonna 2003.",
+        "selite": "Vaalea hiekkaranta kaartuu etualalla; veden takana näkyvät vihreät rinteet ja niiden asutus.",
+        "lyhyt": "Aquarium Beachin rantaa Grenadalla.",
         "tiedosto": "Grenada Aquarium Beach - panoramio - Stefan und Bille.jpg",
         "vuosi": "2003"
       },
@@ -677,10 +719,10 @@
         1520
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/stgeorges/sisalto.json",
-      "sourceContentSHA256": "6530adf5faa43579e8183fe92526d4fd5c63aa395d13740e8d3d4dba1b83d670",
+      "sourceContentSHA256": "14dce1a0b0d13e3ce8dbda5e8478846ac9cee81e5b56e5b94941c71b221bad4b",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "ff91cb662cf30c05b24031d799d496ca30250400290f71f5ef005c4aaf5076b6",
-        "semanticContextSHA256": "ff91cb662cf30c05b24031d799d496ca30250400290f71f5ef005c4aaf5076b6",
+        "targetBeforeSHA256": "aea49a05706309d40adc907c89254ceaa38ca685c90bdeee0e414b503b5c250a",
+        "semanticContextSHA256": "aea49a05706309d40adc907c89254ceaa38ca685c90bdeee0e414b503b5c250a",
         "subjectTitle": "stgeorges — aito paikkavalokuva",
         "targetState": "existing-target"
       },
@@ -1005,9 +1047,9 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "Grenada Aquarium Beach - panoramio - Stefan und Bille.jpg",
+        "lyhyt": "Aquarium Beachin rantaa Grenadalla.",
+        "selite": "Vaalea hiekkaranta kaartuu etualalla; veden takana näkyvät vihreät rinteet ja niiden asutus.",
         "lahde": "Stefan_und_Bille, Commons (CC BY-SA 3.0)",
-        "selite": "Aquarium Beachin luonnonrantaa Grenadalla vuonna 2003.",
-        "lyhyt": "Aquarium Beachin luonnonrantaa Grenadalla vuonna 2003.",
         "vuosi": "2003"
       },
       "preservePreviousMediaObjects": true,
@@ -1027,24 +1069,45 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Stefan_und_Bille, Commons (CC BY-SA 3.0)",
-        "selite": "Aquarium Beachin luonnonrantaa Grenadalla vuonna 2003.",
-        "lyhyt": "Aquarium Beachin luonnonrantaa Grenadalla vuonna 2003.",
+        "selite": "Vaalea hiekkaranta kaartuu etualalla; veden takana näkyvät vihreät rinteet ja niiden asutus.",
+        "lyhyt": "Aquarium Beachin rantaa Grenadalla.",
         "tiedosto": "Grenada Aquarium Beach - panoramio - Stefan und Bille.jpg",
         "vuosi": "2003"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "7ccc26be029319d0279c6016347d2c573758a2484b3bdfedf1d82c954e483f50",
-      "targetAfterSHA256": "ff91cb662cf30c05b24031d799d496ca30250400290f71f5ef005c4aaf5076b6",
-      "contextAfterSHA256": "ff91cb662cf30c05b24031d799d496ca30250400290f71f5ef005c4aaf5076b6",
+      "sourceContentAfterSHA256": "14dce1a0b0d13e3ce8dbda5e8478846ac9cee81e5b56e5b94941c71b221bad4b",
+      "targetAfterSHA256": "aea49a05706309d40adc907c89254ceaa38ca685c90bdeee0e414b503b5c250a",
+      "contextAfterSHA256": "aea49a05706309d40adc907c89254ceaa38ca685c90bdeee0e414b503b5c250a",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "7ccc26be029319d0279c6016347d2c573758a2484b3bdfedf1d82c954e483f50",
+        "targetAfterSHA256": "ff91cb662cf30c05b24031d799d496ca30250400290f71f5ef005c4aaf5076b6",
+        "contextAfterSHA256": "ff91cb662cf30c05b24031d799d496ca30250400290f71f5ef005c4aaf5076b6",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "ff91cb662cf30c05b24031d799d496ca30250400290f71f5ef005c4aaf5076b6",
+          "semanticContextSHA256": "ff91cb662cf30c05b24031d799d496ca30250400290f71f5ef005c4aaf5076b6",
+          "subjectTitle": "stgeorges — aito paikkavalokuva",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "14dce1a0b0d13e3ce8dbda5e8478846ac9cee81e5b56e5b94941c71b221bad4b",
+        "sameImageNativeSHA256": "58deca4ffd888f7000c765711163aa71f7bda3498cd770e4be7d2da37681572e",
+        "sameImageExportSHA256": "58deca4ffd888f7000c765711163aa71f7bda3498cd770e4be7d2da37681572e",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e12",
@@ -1066,23 +1129,23 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/stgeorges/c1-570819ce72a7506bf32c.jpg",
         "suora": true,
         "lahde": "Stefan_und_Bille, Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "St. George’sin satama ja kaupungin rinteitä huhtikuussa 2004.",
-        "lyhyt": "St. George’sin satama ja kaupungin rinteitä huhtikuussa 2004.",
+        "selite": "Lahti kaartuu rakennusten väliin; talot jatkuvat veden ääreltä vihreille rinteille.",
+        "lyhyt": "Carenagen sisäsatama Fort Georgelta nähtynä.",
         "tiedosto": "St. Georges from Fort George - panoramio.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Stefan_und_Bille, Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "St. George’sin satama ja kaupungin rinteitä huhtikuussa 2004.",
-        "lyhyt": "St. George’sin satama ja kaupungin rinteitä huhtikuussa 2004.",
+        "selite": "Lahti kaartuu rakennusten väliin; talot jatkuvat veden ääreltä vihreille rinteille.",
+        "lyhyt": "Carenagen sisäsatama Fort Georgelta nähtynä.",
         "tiedosto": "St. Georges from Fort George - panoramio.jpg"
       },
       "runtimeMediaFieldPayload": {
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/stgeorges/c1-570819ce72a7506bf32c.jpg",
         "suora": true,
         "lahde": "Stefan_und_Bille, Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "St. George’sin satama ja kaupungin rinteitä huhtikuussa 2004.",
-        "lyhyt": "St. George’sin satama ja kaupungin rinteitä huhtikuussa 2004.",
+        "selite": "Lahti kaartuu rakennusten väliin; talot jatkuvat veden ääreltä vihreille rinteille.",
+        "lyhyt": "Carenagen sisäsatama Fort Georgelta nähtynä.",
         "tiedosto": "St. Georges from Fort George - panoramio.jpg"
       },
       "runtimeRemoveMediaKeys": [],
@@ -1097,10 +1160,10 @@
         1712
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/stgeorges/sisalto.json",
-      "sourceContentSHA256": "6530adf5faa43579e8183fe92526d4fd5c63aa395d13740e8d3d4dba1b83d670",
+      "sourceContentSHA256": "14dce1a0b0d13e3ce8dbda5e8478846ac9cee81e5b56e5b94941c71b221bad4b",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "eabe9dbd16f337a24b550e31c0e824961ded1337a9381d3a84ddd26fc28830fb",
-        "semanticContextSHA256": "eabe9dbd16f337a24b550e31c0e824961ded1337a9381d3a84ddd26fc28830fb",
+        "targetBeforeSHA256": "0c06cf4ab1596c7a6a6f2a2402de4f2e500265f14736cc9051bbe413efda4bba",
+        "semanticContextSHA256": "0c06cf4ab1596c7a6a6f2a2402de4f2e500265f14736cc9051bbe413efda4bba",
         "subjectTitle": "St. George's",
         "targetState": "existing-target"
       },
@@ -1423,9 +1486,9 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "St. Georges from Fort George - panoramio.jpg",
-        "lahde": "Stefan_und_Bille, Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "St. George’sin satama ja kaupungin rinteitä huhtikuussa 2004.",
-        "lyhyt": "St. George’sin satama ja kaupungin rinteitä huhtikuussa 2004."
+        "lyhyt": "Carenagen sisäsatama Fort Georgelta nähtynä.",
+        "selite": "Lahti kaartuu rakennusten väliin; talot jatkuvat veden ääreltä vihreille rinteille.",
+        "lahde": "Stefan_und_Bille, Wikimedia Commons (CC BY-SA 3.0)"
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -1444,23 +1507,44 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Stefan_und_Bille, Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "St. George’sin satama ja kaupungin rinteitä huhtikuussa 2004.",
-        "lyhyt": "St. George’sin satama ja kaupungin rinteitä huhtikuussa 2004.",
+        "selite": "Lahti kaartuu rakennusten väliin; talot jatkuvat veden ääreltä vihreille rinteille.",
+        "lyhyt": "Carenagen sisäsatama Fort Georgelta nähtynä.",
         "tiedosto": "St. Georges from Fort George - panoramio.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "7ccc26be029319d0279c6016347d2c573758a2484b3bdfedf1d82c954e483f50",
-      "targetAfterSHA256": "eabe9dbd16f337a24b550e31c0e824961ded1337a9381d3a84ddd26fc28830fb",
-      "contextAfterSHA256": "eabe9dbd16f337a24b550e31c0e824961ded1337a9381d3a84ddd26fc28830fb",
+      "sourceContentAfterSHA256": "14dce1a0b0d13e3ce8dbda5e8478846ac9cee81e5b56e5b94941c71b221bad4b",
+      "targetAfterSHA256": "0c06cf4ab1596c7a6a6f2a2402de4f2e500265f14736cc9051bbe413efda4bba",
+      "contextAfterSHA256": "0c06cf4ab1596c7a6a6f2a2402de4f2e500265f14736cc9051bbe413efda4bba",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "7ccc26be029319d0279c6016347d2c573758a2484b3bdfedf1d82c954e483f50",
+        "targetAfterSHA256": "eabe9dbd16f337a24b550e31c0e824961ded1337a9381d3a84ddd26fc28830fb",
+        "contextAfterSHA256": "eabe9dbd16f337a24b550e31c0e824961ded1337a9381d3a84ddd26fc28830fb",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "eabe9dbd16f337a24b550e31c0e824961ded1337a9381d3a84ddd26fc28830fb",
+          "semanticContextSHA256": "eabe9dbd16f337a24b550e31c0e824961ded1337a9381d3a84ddd26fc28830fb",
+          "subjectTitle": "St. George's",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "14dce1a0b0d13e3ce8dbda5e8478846ac9cee81e5b56e5b94941c71b221bad4b",
+        "sameImageNativeSHA256": "570819ce72a7506bf32c56a6f6ab32a7e9f26c9f64a90da5ebf08b792dabc404",
+        "sameImageExportSHA256": "570819ce72a7506bf32c56a6f6ab32a7e9f26c9f64a90da5ebf08b792dabc404",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e12",
@@ -1482,23 +1566,23 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/stgeorges/c2-83086c6385b1168c4b83.jpg",
         "suora": true,
         "lahde": "Stefan_und_Bille, Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "Saint George’sin laguunin satama ja vihreät rinteet vuonna 2004.",
-        "lyhyt": "Saint George’sin laguunin satama ja vihreät rinteet vuonna 2004.",
+        "selite": "Venesataman mastot, satamalaiturin kontit ja rinteiden asutus näkyvät lahden ympärillä.",
+        "lyhyt": "St. George’sin Lagoon Fort Georgelta nähtynä.",
         "tiedosto": "St. Georges The Logoon from Fort Georges - panoramio.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Stefan_und_Bille, Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "Saint George’sin laguunin satama ja vihreät rinteet vuonna 2004.",
-        "lyhyt": "Saint George’sin laguunin satama ja vihreät rinteet vuonna 2004.",
+        "selite": "Venesataman mastot, satamalaiturin kontit ja rinteiden asutus näkyvät lahden ympärillä.",
+        "lyhyt": "St. George’sin Lagoon Fort Georgelta nähtynä.",
         "tiedosto": "St. Georges The Logoon from Fort Georges - panoramio.jpg"
       },
       "runtimeMediaFieldPayload": {
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/stgeorges/c2-83086c6385b1168c4b83.jpg",
         "suora": true,
         "lahde": "Stefan_und_Bille, Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "Saint George’sin laguunin satama ja vihreät rinteet vuonna 2004.",
-        "lyhyt": "Saint George’sin laguunin satama ja vihreät rinteet vuonna 2004.",
+        "selite": "Venesataman mastot, satamalaiturin kontit ja rinteiden asutus näkyvät lahden ympärillä.",
+        "lyhyt": "St. George’sin Lagoon Fort Georgelta nähtynä.",
         "tiedosto": "St. Georges The Logoon from Fort Georges - panoramio.jpg"
       },
       "runtimeRemoveMediaKeys": [],
@@ -1513,10 +1597,10 @@
         1712
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/stgeorges/sisalto.json",
-      "sourceContentSHA256": "6530adf5faa43579e8183fe92526d4fd5c63aa395d13740e8d3d4dba1b83d670",
+      "sourceContentSHA256": "14dce1a0b0d13e3ce8dbda5e8478846ac9cee81e5b56e5b94941c71b221bad4b",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "748e8c63cb9283cf731b66a279f3eaa3be0d806068fc34091bca7aba9095fede",
-        "semanticContextSHA256": "748e8c63cb9283cf731b66a279f3eaa3be0d806068fc34091bca7aba9095fede",
+        "targetBeforeSHA256": "ab7ac8bdfbf83d14fc1a5601aa5fb5468a5d6b38b160b7664d66ab5786a15812",
+        "semanticContextSHA256": "ab7ac8bdfbf83d14fc1a5601aa5fb5468a5d6b38b160b7664d66ab5786a15812",
         "subjectTitle": "St. George's",
         "targetState": "existing-target"
       },
@@ -1817,9 +1901,9 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "St. Georges The Logoon from Fort Georges - panoramio.jpg",
-        "lahde": "Stefan_und_Bille, Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "Saint George’sin laguunin satama ja vihreät rinteet vuonna 2004.",
-        "lyhyt": "Saint George’sin laguunin satama ja vihreät rinteet vuonna 2004."
+        "lyhyt": "St. George’sin Lagoon Fort Georgelta nähtynä.",
+        "selite": "Venesataman mastot, satamalaiturin kontit ja rinteiden asutus näkyvät lahden ympärillä.",
+        "lahde": "Stefan_und_Bille, Wikimedia Commons (CC BY-SA 3.0)"
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -1838,23 +1922,44 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Stefan_und_Bille, Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "Saint George’sin laguunin satama ja vihreät rinteet vuonna 2004.",
-        "lyhyt": "Saint George’sin laguunin satama ja vihreät rinteet vuonna 2004.",
+        "selite": "Venesataman mastot, satamalaiturin kontit ja rinteiden asutus näkyvät lahden ympärillä.",
+        "lyhyt": "St. George’sin Lagoon Fort Georgelta nähtynä.",
         "tiedosto": "St. Georges The Logoon from Fort Georges - panoramio.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "7ccc26be029319d0279c6016347d2c573758a2484b3bdfedf1d82c954e483f50",
-      "targetAfterSHA256": "748e8c63cb9283cf731b66a279f3eaa3be0d806068fc34091bca7aba9095fede",
-      "contextAfterSHA256": "748e8c63cb9283cf731b66a279f3eaa3be0d806068fc34091bca7aba9095fede",
+      "sourceContentAfterSHA256": "14dce1a0b0d13e3ce8dbda5e8478846ac9cee81e5b56e5b94941c71b221bad4b",
+      "targetAfterSHA256": "ab7ac8bdfbf83d14fc1a5601aa5fb5468a5d6b38b160b7664d66ab5786a15812",
+      "contextAfterSHA256": "ab7ac8bdfbf83d14fc1a5601aa5fb5468a5d6b38b160b7664d66ab5786a15812",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "7ccc26be029319d0279c6016347d2c573758a2484b3bdfedf1d82c954e483f50",
+        "targetAfterSHA256": "748e8c63cb9283cf731b66a279f3eaa3be0d806068fc34091bca7aba9095fede",
+        "contextAfterSHA256": "748e8c63cb9283cf731b66a279f3eaa3be0d806068fc34091bca7aba9095fede",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "748e8c63cb9283cf731b66a279f3eaa3be0d806068fc34091bca7aba9095fede",
+          "semanticContextSHA256": "748e8c63cb9283cf731b66a279f3eaa3be0d806068fc34091bca7aba9095fede",
+          "subjectTitle": "St. George's",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "14dce1a0b0d13e3ce8dbda5e8478846ac9cee81e5b56e5b94941c71b221bad4b",
+        "sameImageNativeSHA256": "83086c6385b1168c4b83f1a364ec7c5890df32e98e2b52de8c7b29f771930004",
+        "sameImageExportSHA256": "83086c6385b1168c4b83f1a364ec7c5890df32e98e2b52de8c7b29f771930004",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e12",
@@ -1876,23 +1981,23 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/stgeorges/c3-ccb2be061941613e1176.jpg",
         "suora": true,
         "lahde": "giggel, Wikimedia Commons (CC BY 3.0)",
-        "selite": "Saint George’sin satamalahti, kaupunkikorttelit ja vihreät rinteet maaliskuussa 2012.",
-        "lyhyt": "Saint George’sin satamalahti, kaupunkikorttelit ja vihreät rinteet maaliskuussa 2012.",
+        "selite": "Rantatie, rakennukset ja rinteiden talot erottuvat laajassa panoraamassa; veneitä näkyy veden puolella.",
+        "lyhyt": "St. George’sin pohjoisosan rantakortteleita.",
         "tiedosto": "Grenada, Karibik - St. George's - North - panoramio.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "giggel, Wikimedia Commons (CC BY 3.0)",
-        "selite": "Saint George’sin satamalahti, kaupunkikorttelit ja vihreät rinteet maaliskuussa 2012.",
-        "lyhyt": "Saint George’sin satamalahti, kaupunkikorttelit ja vihreät rinteet maaliskuussa 2012.",
+        "selite": "Rantatie, rakennukset ja rinteiden talot erottuvat laajassa panoraamassa; veneitä näkyy veden puolella.",
+        "lyhyt": "St. George’sin pohjoisosan rantakortteleita.",
         "tiedosto": "Grenada, Karibik - St. George's - North - panoramio.jpg"
       },
       "runtimeMediaFieldPayload": {
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/stgeorges/c3-ccb2be061941613e1176.jpg",
         "suora": true,
         "lahde": "giggel, Wikimedia Commons (CC BY 3.0)",
-        "selite": "Saint George’sin satamalahti, kaupunkikorttelit ja vihreät rinteet maaliskuussa 2012.",
-        "lyhyt": "Saint George’sin satamalahti, kaupunkikorttelit ja vihreät rinteet maaliskuussa 2012.",
+        "selite": "Rantatie, rakennukset ja rinteiden talot erottuvat laajassa panoraamassa; veneitä näkyy veden puolella.",
+        "lyhyt": "St. George’sin pohjoisosan rantakortteleita.",
         "tiedosto": "Grenada, Karibik - St. George's - North - panoramio.jpg"
       },
       "runtimeRemoveMediaKeys": [],
@@ -1907,10 +2012,10 @@
         2927
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/stgeorges/sisalto.json",
-      "sourceContentSHA256": "6530adf5faa43579e8183fe92526d4fd5c63aa395d13740e8d3d4dba1b83d670",
+      "sourceContentSHA256": "14dce1a0b0d13e3ce8dbda5e8478846ac9cee81e5b56e5b94941c71b221bad4b",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "targetBeforeSHA256": "d82101bf9a76474c4ba38bccac8d7e1e42d23513b25abe1b1375b871cbf661be",
+        "semanticContextSHA256": "d82101bf9a76474c4ba38bccac8d7e1e42d23513b25abe1b1375b871cbf661be",
         "subjectTitle": "St. George's",
         "targetState": "existing-target"
       },
@@ -2394,10 +2499,10 @@
       "producerExportProof": null,
       "technicalExportProof": null,
       "priorMediaFields": {
-        "tiedosto": "",
-        "lahde": "",
-        "selite": "",
-        "lyhyt": ""
+        "tiedosto": "Grenada, Karibik - St. George's - North - panoramio.jpg",
+        "lyhyt": "St. George’sin pohjoisosan rantakortteleita.",
+        "selite": "Rantatie, rakennukset ja rinteiden talot erottuvat laajassa panoraamassa; veneitä näkyy veden puolella.",
+        "lahde": "giggel, Wikimedia Commons (CC BY 3.0)"
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -2416,28 +2521,55 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "giggel, Wikimedia Commons (CC BY 3.0)",
-        "selite": "Saint George’sin satamalahti, kaupunkikorttelit ja vihreät rinteet maaliskuussa 2012.",
-        "lyhyt": "Saint George’sin satamalahti, kaupunkikorttelit ja vihreät rinteet maaliskuussa 2012.",
+        "selite": "Rantatie, rakennukset ja rinteiden talot erottuvat laajassa panoraamassa; veneitä näkyy veden puolella.",
+        "lyhyt": "St. George’sin pohjoisosan rantakortteleita.",
         "tiedosto": "Grenada, Karibik - St. George's - North - panoramio.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "7ccc26be029319d0279c6016347d2c573758a2484b3bdfedf1d82c954e483f50",
-      "targetAfterSHA256": "9540e656f63c14626b79b30dd6fe6fa11b408a4b7ded261593a7332da9af2149",
-      "contextAfterSHA256": "9540e656f63c14626b79b30dd6fe6fa11b408a4b7ded261593a7332da9af2149",
+      "sourceContentAfterSHA256": "14dce1a0b0d13e3ce8dbda5e8478846ac9cee81e5b56e5b94941c71b221bad4b",
+      "targetAfterSHA256": "d82101bf9a76474c4ba38bccac8d7e1e42d23513b25abe1b1375b871cbf661be",
+      "contextAfterSHA256": "d82101bf9a76474c4ba38bccac8d7e1e42d23513b25abe1b1375b871cbf661be",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "7ccc26be029319d0279c6016347d2c573758a2484b3bdfedf1d82c954e483f50",
+        "targetAfterSHA256": "9540e656f63c14626b79b30dd6fe6fa11b408a4b7ded261593a7332da9af2149",
+        "contextAfterSHA256": "9540e656f63c14626b79b30dd6fe6fa11b408a4b7ded261593a7332da9af2149",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+          "semanticContextSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+          "subjectTitle": "St. George's",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "14dce1a0b0d13e3ce8dbda5e8478846ac9cee81e5b56e5b94941c71b221bad4b",
+        "sameImageNativeSHA256": "ccb2be061941613e1176ec615071f17417d24d2afe5d07dfb2a2cf2d49143565",
+        "sameImageExportSHA256": "ccb2be061941613e1176ec615071f17417d24d2afe5d07dfb2a2cf2d49143565",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     }
   ],
   "runtimeIntegrationPending": true,
   "ownerAcceptedNotImpliedByAuthorization": false,
   "gameIntegrated": false,
   "allAssetsExplicitlyOwnerApproved": true,
-  "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+  "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+  "task118ExcludedAssets": [],
+  "task118TextRevision": true,
+  "independentTextResamplePending": true,
+  "textAcceptanceVerified": false,
+  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task118/immutable-media-history/e12/stgeorges/0f30f150be93e67bc60207c65bfb6874c2a5973c6a66600bc5b82cf03c40443d.json",
+  "task118ReboundAt": "2026-10-13T16:31:26.430494+00:00"
 }

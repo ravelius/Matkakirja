@@ -1,414 +1,414 @@
 {
-  "$skeema": "matkakirja-paakaupunki/1",
+ "$skeema": "matkakirja-paakaupunki/1",
+ "id": "saintjohns",
+ "maa": "ATG",
+ "era": "e12",
+ "kaupunki": {
   "id": "saintjohns",
-  "maa": "ATG",
-  "era": "e12",
-  "kaupunki": {
-    "id": "saintjohns",
-    "name": "Saint John's",
-    "wiki": "Saint John's",
-    "ambience": "satama",
-    "pallo": {
-      "lat": 17.121,
-      "lon": -61.845
-    }
-  },
-  "artikkeli": {
-    "intro": "Saint John’s kokoaa Antiguan ja Barbudan hallintoa, kauppaa ja koulutusta saman satamakaupungin ympärille. Rantakortteleista kaupunki nousee loivasti kohti **katedraalin kukkulaa**, jonka alla historian kerrokset vaihtuvat korttelista toiseen. Entiseen oikeustaloon sijoitettu museo kertoo alkuperäiskansojen elämästä, siirtomaakaudesta ja kriketistä. Keskustan lounaisreunan ruokatorilla myydään kasviksia, kalaa ja lihaa.\n\nKatedraalissa on kivikuoren sisällä puinen tukirakenne, jota on kuvattu **rakennukseksi rakennuksen sisällä**. Satamansuun Fort James taas käytti tykkejä 1800-luvulla myös tervehdyksiin ja päivän vaihtumisesta kertoviin merkkeihin. Vanhan kaupungin historiaan kuuluvat tulipalot sekä määräykset julkisten rakennusten seinistä ja katoista. Kaupankäynnin lisäksi on pitänyt järjestää katujen kunnossapito ja yövahti. Saaripääkaupunkia voi lukea myös materiaalien ja arkisten järjestelyjen kautta: puu ja kivi tukevat kirkkoa, verot taas yhteisen kaupungin ylläpitoa.",
-    "teksti": "Saint John’s alkoi kasvaa 1600-luvulla satamalahden ympärille. Ennen kaupungin suunnittelua paikalla oli pieni taloryhmä, jonka aluetta kutsuttiin nimellä the Cove. Loiva rinne sataman itäpuolella helpotti teiden ja kulkuväylien rakentamista, ja kaupungista tuli saaren kauppapaikka.\n\n1700-luvun tulipalot johtivat rakennussääntöjen tiukentamiseen. Useimpien julkisten rakennusten piti saada tiiliseinät sekä tiili- tai liuskekivikatto. Kaupungin järjestäminen näkyi myös yövahtina ja katuympäristön ongelmien vuoksi kerättyinä veroina.\n\nKatedraali ja entinen oikeustalo olivat kaupungissa jo isoisän matkavuonna 1873. Nykyinen museo toimii oikeustalossa, mutta sen kokoelmat ulottuvat rakennusta vanhempaan alkuperäiskansojen historiaan ja myös paljon uudempaan urheiluun. Sataman puolustuslinnake Fort James avaa toisen suunnan kaupungin menneisyyteen."
-  },
-  "kysymykset": [
-    {
-      "q": "Minkä maan pääkaupunki Saint John’s on?",
-      "options": [
-        "Antigua ja Barbuda",
-        "Saint Kitts ja Nevis",
-        "Trinidad ja Tobago",
-        "Saint Vincent ja Grenadiinit"
-      ],
-      "correct": 0,
-      "level": 1,
-      "hint": "Maan nimessä on kaksi saarennimeä.",
-      "fact": "Saint John’s on Antiguan ja Barbudan pääkaupunki Antiguan saarella.",
-      "source": "https://en.wikipedia.org/wiki/St._John%27s,_Antigua_and_Barbuda"
-    },
-    {
-      "q": "Mitä materiaalia Saint John’sin katedraalin sisäinen rakenne on?",
-      "options": [
-        "Mäntypuuta",
-        "Takorautaa",
-        "Bamburuokoa",
-        "Marmorikiveä"
-      ],
-      "correct": 0,
-      "level": 2,
-      "hint": "Kivikuoren sisällä on toisenlainen rakennusmateriaali.",
-      "fact": "Katedraalin sisällä on pitch pine -mäntypuusta tehty tukirakenne ja verhoilu.",
-      "source": "https://en.wikipedia.org/wiki/St._John%27s_Cathedral_(Antigua_and_Barbuda)"
-    },
-    {
-      "q": "Missä entisessä rakennuksessa Antiguan ja Barbudan museo toimii?",
-      "options": [
-        "Oikeustalossa",
-        "Satamamakasiinissa",
-        "Rautatieasemalla",
-        "Kuvernöörin asunnossa"
-      ],
-      "correct": 0,
-      "level": 1,
-      "hint": "Talon alkuperäinen tehtävä liittyi oikeudenkäyttöön.",
-      "fact": "Museo toimii siirtomaa-ajan oikeustalossa, joka rakennettiin kaupungin varhaisen torin paikalle.",
-      "source": "https://en.wikipedia.org/wiki/Museum_of_Antigua_and_Barbuda"
-    },
-    {
-      "q": "Kenen mukaan Fort James on nimetty?",
-      "options": [
-        "Kuningas Jaakko II:n",
-        "Kuvernööri Woodes Rogersin",
-        "Arkkitehti Thomas Fullerin",
-        "Krikettipelaaja Viv Richardsin"
-      ],
-      "correct": 0,
-      "level": 3,
-      "hint": "Nimen taustalla on Englannin hallitsija.",
-      "fact": "Fort James sai nimensä Englannin kuningas Jaakko II:n mukaan.",
-      "source": "https://en.wikipedia.org/wiki/Fort_James,_Antigua_and_Barbuda"
-    },
-    {
-      "q": "Mitä julkisten rakennusten kattoihin vaadittiin palojen jälkeen?",
-      "options": [
-        "Tiiltä tai liuskekiveä",
-        "Palmunlehtiä tai olkea",
-        "Purjekangasta tai huopaa",
-        "Lasia tai läpinäkyvää paperia"
-      ],
-      "correct": 0,
-      "level": 3,
-      "hint": "Määräyksen tavoite oli ehkäistä uusia tulipaloja.",
-      "fact": "Saint John’sin 1700-luvun rakennussäännöt edellyttivät useimpiin julkisiin rakennuksiin tiiliseiniä ja tiili- tai liuskekivikattoja.",
-      "source": "https://en.wikipedia.org/wiki/St._John%27s,_Antigua_and_Barbuda"
-    }
-  ],
-  "tiedot": [
-    "Saint John’sin katedraalissa on puinen rakennusrakenne kivikuoren sisällä. Kirkkoa on tämän vuoksi kuvattu rakennukseksi rakennuksen sisällä.",
-    "Fort Jamesin tykit palvelivat myös merkinannossa: 1800-luvulla niillä tervehdittiin sotalaivoja ja ilmoitettiin auringonnoususta sekä auringonlaskusta.",
-    "Museon nykyinen oikeustalorakennus nousi kaupungin varhaisen torin paikalle. Samalla paikalla kaupankäynti vaihtui oikeudenkäyttöön ja myöhemmin historian esittelyyn."
-  ],
-  "valokuva": {
-    "tiedosto": "AG-Stjohns-fort-james.jpg",
-    "lyhyt": "Saint John’sin Deepwater Harbourin merimaisemaa vuonna 2015.",
-    "selite": "Saint John’sin Deepwater Harbourin merimaisemaa vuonna 2015.",
-    "lahde": "Balou46, Commons (CC BY-SA 4.0)"
-  },
-  "kaupunkilehti": [
-    {
-      "id": "kaupunki",
-      "nimi": "Saint John's",
-      "johdanto": "Katedraalin puinen sisärakenne, tykeillä annetut merkit ja vanhan oikeustalon kokoelmat avaavat satamakaupungin historiaa.",
-      "kansikuvat": [
-        {
-          "tiedosto": "AG-Stjohns-pano-01.jpg",
-          "lyhyt": "Saint John’sin laaja kaupunkipanoraama marraskuussa 2015.",
-          "selite": "Saint John’sin laaja kaupunkipanoraama marraskuussa 2015.",
-          "lahde": "Balou46, Wikimedia Commons (CC BY-SA 4.0)"
-        },
-        {
-          "tiedosto": "",
-          "lyhyt": "",
-          "selite": "",
-          "lahde": ""
-        },
-        {
-          "tiedosto": "",
-          "lyhyt": "",
-          "selite": "",
-          "lahde": ""
-        }
-      ],
-      "nostot": [
-        {
-          "otsikko": "Rakennus rakennuksen sisällä",
-          "teksti": "Saint John’sin katedraalin kivikuoren sisällä on pitch pine -mäntypuusta tehty rakenne ja verhoilu. Ne tukevat rakennusta maanjäristysten ja myrskyjen kuormaa vastaan. Kirkkoa onkin kutsuttu rakennukseksi rakennuksen sisällä. Samalla paikalla on ollut sekä puukirkko että tiilikirkko ennen nykyistä katedraalia, jonka suunnitteli Thomas Fuller. Kaupungin tornit kertovat siis myös rakentamisen ongelmasta: miten kirkko tehdään paikkaan, jossa maa ja sää voivat ravistella sitä.",
-          "wiki": "St. John's Cathedral (Antigua and Barbuda)",
-          "tiedosto": "",
-          "lyhyt": "",
-          "selite": "",
-          "lahde": ""
-        },
-        {
-          "otsikko": "Tykki kertoi päivän vaihtumisesta",
-          "teksti": "Fort James sijaitsee Saint John’sin satamansuun niemellä. Britit rakensivat sen 1700-luvulla puolustamaan satamaa, ja nimen linnake sai Englannin kuningas Jaakko II:lta. Paikalla on yhä ruutivarasto, tykkejä ja muurien perustuksia. 1800-luvulla tykillä ammuttiin tervehdyksiä vieraileville sotalaivoille sekä merkkejä auringonnousun ja auringonlaskun aikaan. Linnakkeen aseilla oli siis myös viestintätehtävä. Satamansuun paikka yhdisti puolustuksen, saapuvien alusten tervehdykset ja päivän rytmin.",
-          "wiki": "Fort James, Antigua and Barbuda",
-          "tiedosto": "",
-          "lyhyt": "",
-          "selite": "",
-          "lahde": ""
-        },
-        {
-          "otsikko": "Oikeustalossa on toinen kokoelma",
-          "teksti": "Antiguan ja Barbudan museo toimii entisessä siirtomaa-ajan oikeustalossa. Rakennus nousi 1700-luvulla kaupungin varhaisen torin paikalle. Museossa on saarilta kaivettuja alkuperäiskansojen ja siirtomaakauden esineitä, sokeriplantaasien malleja sekä krikettipelaaja Viv Richardsin maila. Talon käyttötarkoitus ja kokoelmat yhdistävät siten hyvin erilaisia aikoja: oikeudenkäytön rakennuksen sisällä kerrotaan asukkaista ennen siirtomaakautta, plantaasitaloudesta ja urheilusta.",
-          "wiki": "Museum of Antigua and Barbuda",
-          "tiedosto": "",
-          "lyhyt": "",
-          "selite": "",
-          "lahde": ""
-        },
-        {
-          "otsikko": "Sataman kauppa ja torin ruoka",
-          "teksti": "Redcliffe Quay ja Heritage Quay ovat Saint John’sin risteilymatkailun kauppapaikkoja. Redcliffe on historiallisempi alue, Heritage uudempi ostosympäristö. Kaupungin lounaisreunalla toimii myös tori, jossa myydään tuoreita kasviksia, lihaa ja kalaa. Samassa satamakaupungissa kaupankäynti saa näin erilaiset kasvot: laivalta tuleva matkailija kohtaa ostoskorttelit, ruokaa etsivä paikallisen torin. Torin tuotteet kertovat kaupungin keittiöstä toisenlaisen tarinan kuin koru- ja vaatekauppojen näyteikkunat.",
-          "wiki": "St. John's, Antigua and Barbuda",
-          "tiedosto": "",
-          "lyhyt": "",
-          "selite": "",
-          "lahde": ""
-        }
-      ],
-      "matkailijalle": {
-        "kuva": {
-          "tiedosto": "",
-          "lyhyt": "",
-          "selite": "",
-          "lahde": ""
-        },
-        "kappale": "Keskustan katedraali ja museo antavat Saint John’sin kävelylle historialliset kiintopisteet. Sataman ostosalueet ovat Redcliffe Quay ja Heritage Quay. Ruokatori löytyy kaupungin lounaisreunalta. Fort James sijaitsee satamansuun niemellä, joten sille kannattaa varata oma siirtymä. Lentoasemalta saapuvan kannattaa suunnitella keskustapäivä erikseen saaren muista retkistä.",
-        "artikkeli": {
-          "nimi": "Matkailijan Saint John’s",
-          "taitto": "opas",
-          "teksti": "Yhdistä keskustan museo ja katedraali torikäyntiin, ja varaa satamansuun linnakkeelle oma siirtymä.",
-          "nosto": "Risteilylaiturien ostosalueet, ruokatori ja kukkulan katedraali näyttävät kaupungin eri tehtävät.",
-          "jaksot": [
-            {
-              "otsikko": "Perille ja liikkeelle",
-              "teksti": "Saint John’sia palvelee V. C. Birdin kansainvälinen lentoasema. Sataman risteilyliikenne saapuu Heritage Quayn ja Redcliffe Quayn alueille. Keskustan museon, katedraalin ja kauppakortteleiden ympärille voi suunnitella kävelyreitin. Fort James sijaitsee satamansuun niemellä, joten ota se erilliseksi retkeksi keskustasta. Kaupungissa on takseja, vuokra-autoja ja paikallisbussiliikennettä; varmista bussin reitti ennen lähtöä.",
-              "kuva": {
-                "tiedosto": "",
-                "lyhyt": "",
-                "selite": "",
-                "lahde": ""
-              }
-            },
-            {
-              "otsikko": "Katedraalin kaksi rakennusta",
-              "teksti": "Katedraali seisoo keskustan kukkulalla. Sen kivikuoren sisällä on puinen tukirakenne ja verhoilu, jotka liittyvät myrskyjen ja maanjäristysten kuormien hallintaan. Rakennus on anglikaaninen kirkko, joten vierailu kannattaa sovittaa sen muuhun käyttöön. Ennen nykyistä katedraalia samalla paikalla oli aiempia kirkkoja. Sisään pääsyn ja mahdollisten kunnostustöiden tilanne kannattaa tarkistaa ennen käyntiä.",
-              "kuva": {
-                "tiedosto": "",
-                "lyhyt": "",
-                "selite": "",
-                "lahde": ""
-              }
-            },
-            {
-              "otsikko": "Oikeustalosta museoon ja torille",
-              "teksti": "Antiguan ja Barbudan museo toimii vanhassa oikeustalossa. Kokoelmissa kohtaavat arkeologiset esineet, siirtomaakausi ja kriketti. Redcliffe Quay ja Heritage Quay ovat sataman kauppaympäristöjä; kaupungin lounaisreunan tori taas myy ruokatarvikkeita. Museokäynti ja tori sopivat keskustan tutustumiseen ilman, että koko päivä jää risteilylaiturien kauppoihin. Museon ajantasaiset vierailutiedot kannattaa tarkistaa erikseen.",
-              "kuva": {
-                "tiedosto": "",
-                "lyhyt": "",
-                "selite": "",
-                "lahde": ""
-              }
-            },
-            {
-              "otsikko": "Mitä täällä syödään",
-              "teksti": "Fungee on maissijauhosta valmistettu, polentaa muistuttava ruoka, ja sitä pidetään pepperpotin kanssa maan kansallisruokana. Paikallisessa keittiössä ovat tuttuja myös suolakala ja ducana. Aamiaisella voi tulla vastaan munakoiso, josta käytetään nimeä troba. Butter bread on pehmeä voinen leipä, jota syödään esimerkiksi juuston kanssa. Kaupungin ruokatorilta löytyvät kasvikset, liha ja tuore kala yhdistävät satamakierroksen saarikeittiön raaka-aineisiin.",
-              "kuva": {
-                "tiedosto": "",
-                "lyhyt": "",
-                "selite": "",
-                "lahde": ""
-              }
-            },
-            {
-              "otsikko": "Milloin kannattaa tulla",
-              "teksti": "Saint John’sissa on kesäisen lämmintä ympäri vuoden. Sateita tulee enemmän syksyn puolella, joten torikävelyn ja linnakekäynnin rinnalle kannattaa varata myös sisäkohde. Museokäynti ja katedraalin vierailu tarvitsevat oman ajantasaisen tarkistuksensa. Risteilylaitureiden käyntipäivä ja Antiguan muualle suuntautuva retki ovat eri ohjelmia: jätä keskustalle aikaa ennen satamasta lähtemistä.",
-              "kuva": {
-                "tiedosto": "",
-                "lyhyt": "",
-                "selite": "",
-                "lahde": ""
-              }
-            }
-          ],
-          "matkailu": {
-            "parasta": [
-              {
-                "mita": "Saint John’sin katedraali",
-                "tahdet": 3,
-                "selite": "Kivikuori ja puinen sisärakenne kertovat saaren rakennusolosuhteista."
-              },
-              {
-                "mita": "Antiguan ja Barbudan museo",
-                "tahdet": 3,
-                "selite": "Entinen oikeustalo kokoaa saariston arkeologiaa ja historiaa."
-              },
-              {
-                "mita": "Fort James",
-                "tahdet": 2,
-                "selite": "Satamansuun linnakkeessa säilyy puolustus- ja merkinantohistoriaa."
-              },
-              {
-                "mita": "Redcliffe Quay",
-                "tahdet": 2,
-                "selite": "Sataman historiallinen kauppa-alue kuuluu keskustan kävelykierrokseen."
-              },
-              {
-                "mita": "Keskustan ruokatori",
-                "tahdet": 2,
-                "selite": "Kasvikset, kala ja liha näyttävät kaupungin arjen ruokakauppaa."
-              }
-            ],
-            "hyvaTietaa": [
-              {
-                "otsikko": "Kaupunki ja seurakunta",
-                "teksti": "Saint John’sin kaupunki ja laajempi Saint Johnin seurakunta ovat eri alueita."
-              },
-              {
-                "otsikko": "Kirkon vierailu",
-                "teksti": "Katedraali on käytössä oleva anglikaaninen kirkko; varmista vierailun sopivuus etukäteen."
-              },
-              {
-                "otsikko": "Linnakkeen sijainti",
-                "teksti": "Fort James on satamansuun niemellä, erillään keskustan museokorttelista."
-              }
-            ]
-          },
-          "lahde": "Wikipedia"
-        }
-      }
-    },
-    {
-      "id": "historia",
-      "nimi": "Katto, katu ja kiitotie",
-      "johdanto": "Kaupungin järjestäminen näkyi materiaaleissa, veroissa ja myöhemmin lentopaikan nimessä.",
-      "tehtava": {
-        "kysymys": "Mikä paikka on jättänyt Saint John’siin nimen Old Runway?",
-        "vaihtoehdot": [
-          "Vanha lentokenttä",
-          "Entinen ravirata",
-          "Hylätty rautatie",
-          "Siirretty kalatori"
-        ],
-        "oikea": 0,
-        "fakta": "Old Runway tarkoittaa Vanhaa kiitotietä ja liittyy Villan alueen aiempaan lentopaikkaan."
-      },
-      "nostot": [
-        {
-          "otsikko": "Kaupunki lahden vanhojen talojen ympärille",
-          "teksti": "Ennen Saint John’sin kaupungin suunnittelua satamalahden äärellä oli pieni taloryhmä, jonka paikka tunnettiin nimellä the Cove. Kaupunki alettiin järjestää 1600-luvulla lahden strategisen sijainnin ympärille, ja siitä tuli yksi saaren virallisista kauppapaikoista. Se kasvoi samalle tasolle Antiguan aiemman keskuksen Falmouthin kanssa. Sataman itäpuolella oleva loiva rinne mahdollisti teiden ja kävelyväylien rakentamisen. Kaupungin synty liittyy siten sekä kaupankäyntiin että paikan maastoon.",
-          "wiki": "St. John's, Antigua and Barbuda",
-          "tiedosto": "",
-          "lyhyt": "",
-          "selite": "",
-          "lahde": ""
-        },
-        {
-          "otsikko": "Palosta seurasi määräys katolle",
-          "teksti": "Saint John’s kärsi useista suurista tulipaloista 1700-luvulla. Yhden palon jälkeen kaupungin rakennussääntöjä tiukennettiin: useimpien julkisten rakennusten seinien piti olla tiiltä ja kattojen tiiltä tai liuskekiveä. Tavoitteena oli ehkäistä uusi tulipalo. Samalla kaupungille järjestettiin yövahti, jonka ylläpitoa varten asukkailta kerättiin veroa. Palohistoria näkyy siis sekä rakennusmateriaaleihin kohdistuneissa määräyksissä että uudessa valvontajärjestelyssä, ei vain tuhoutuneiden talojen luettelossa.",
-          "wiki": "St. John's, Antigua and Barbuda",
-          "tiedosto": "",
-          "lyhyt": "",
-          "selite": "",
-          "lahde": ""
-        },
-        {
-          "otsikko": "Kaktuksista tuli veron aihe",
-          "teksti": "1700-luvun lopun Saint John’sissa katuja ei vielä päällystetty eikä pidetty puhtaina. Haittaeläimet, matelijat ja katujen varsilla kasvavat piikikkäät opuntiakaktukset mainittiin syinä uudelle verolle. Kaupungin järjestäminen tarkoitti siis myös arkisia ongelmia teiden reunoilla. Samalla aikakaudella seurakunnan hallinnolle annettiin oikeus verottaa kauppiaita, sillä Saint John’s oli alueensa taloudellinen keskus. Vanhan satamakaupungin historiassa verot liittyivät sekä kauppaan että ympäristön kunnossapitoon.",
-          "wiki": "St. John's, Antigua and Barbuda",
-          "tiedosto": "",
-          "lyhyt": "",
-          "selite": "",
-          "lahde": ""
-        },
-        {
-          "otsikko": "Vanha kiitotie jäi paikannimeen",
-          "teksti": "Saint John’sin Villan alueella oli lentokenttä 1900-luvun alkupuoliskolla. Paikka tunnetaan nimellä Old Runway, Vanha kiitotie. Nykyisin kaupunkia palvelee V. C. Birdin kansainvälinen lentoasema. Saint John’sin matkustamisen historiaan kuuluu siten myös satamakaupungin oma varhainen lentopaikka, jonka nimi on säilynyt kaupungissa. Old Runway ei tarkoita nykyisen lentoaseman terminaalia: nimessä elää paikallinen ilmailun vaihe, ja lentomatkustajan nykyinen saapumispaikka on muualla.",
-          "wiki": "St. John's, Antigua and Barbuda",
-          "tiedosto": "",
-          "lyhyt": "",
-          "selite": "",
-          "lahde": ""
-        }
-      ]
-    }
-  ],
-  "kohdekartta": {
-    "numeroympyrat": true,
-    "esittely": "Katedraali ja entinen oikeustalo kertovat keskustan rakentamisesta. Fort James vie satamansuun puolustus- ja merkinantohistoriaan.",
-    "rajat": {
-      "pohjoinen": 17.13292,
-      "etela": 17.1195,
-      "lansi": -61.86646,
-      "ita": -61.83908
-    },
-    "kohteet": [
-      {
-        "nimi": "Saint John’sin katedraali",
-        "lat": 17.1227,
-        "lon": -61.8419
-      },
-      {
-        "nimi": "Antiguan ja Barbudan museo",
-        "lat": 17.1222,
-        "lon": -61.8439
-      },
-      {
-        "nimi": "Fort James",
-        "lat": 17.13022,
-        "lon": -61.86364
-      }
-    ]
-  },
-  "nahtavyydet": {
-    "Saint John’sin katedraali": {
-      "aika": "1800-luvun alkupuolisko",
-      "teksti": "Saint John’sin anglikaaninen katedraali seisoo kukkulalla keskustan yläpuolella. Nykyisen kirkon suunnitteli englantilainen Thomas Fuller. Sen ulkorakenne on kiveä, mutta sisällä on pitch pine -mäntypuusta tehty rakenne ja verhoilu. Puinen sisäosa tukee kirkkoa maanjäristysten ja myrskyjen kuormia vastaan. Tästä tulee rakennuksen kuvaus rakennuksena rakennuksen sisällä.\n\nSamalla paikalla oli aiemmin ensin puukirkko ja sitten suurempi tiilikirkko. Kirkkojen historiaan kuuluu maanjäristyksissä syntyneitä vaurioita, mutta nykyinen katedraali oli jo olemassa isoisän matkavuonna 1873. Tornit kuuluvat kaupungin siluettiin, ja sisärakenne kertoo myös paikallisista rakentamisen haasteista. Katedraali on edelleen anglikaanisen kirkon käytössä.",
-      "kuvat": [
-        {
-          "tiedosto": "",
-          "lyhyt": "",
-          "selite": "",
-          "lahde": ""
-        }
-      ],
-      "lahde": "Wikipedia"
-    },
-    "Antiguan ja Barbudan museo": {
-      "aika": "Rakennus 1700-luvun puoliväli",
-      "teksti": "Antiguan ja Barbudan museo sijaitsee Saint John’sin vanhassa siirtomaa-ajan oikeustalossa. Rakennus nousi kaupungin varhaisen torin paikalle 1700-luvun puolivälissä. Se oli jo osa kaupunkia isoisän matkavuonna 1873, mutta nykyinen museokäyttö on rakennuksen historiassa oma myöhempi vaiheensa. Oikeustalon menneisyyttä ja nykyisiä kokoelmia ei siis pidä sijoittaa samaan aikakauteen.\n\nMuseossa on saarilta arkeologisissa kaivauksissa löydettyjä alkuperäiskansojen ja siirtomaakauden esineitä. Kokoelmiin kuuluvat myös sokeriplantaasien mallit ja krikettipelaaja Viv Richardsin maila. Museon rakennus on vanha hallinnon paikka, mutta sen sisällä saarten historiaa tarkastellaan monesta suunnasta: asutuksesta, plantaasitaloudesta ja urheilusta. Museon kokoelmiin kuuluu myös Antiguan sokeriruokorautateillä käytettyjä vetureita.",
-      "kuvat": [
-        {
-          "tiedosto": "",
-          "lyhyt": "",
-          "selite": "",
-          "lahde": ""
-        }
-      ],
-      "lahde": "Wikipedia"
-    },
-    "Fort James": {
-      "aika": "1700-luku",
-      "teksti": "Fort James sijaitsee niemellä Saint John’sin sataman suulla. Britit rakensivat sen 1700-luvulla vartioimaan satamaa, ja rakennushanketta vauhditti pelko Ranskan hyökkäyksestä. Nimi viittaa Englannin kuningas Jaakko II:een. Paikalla on säilynyt ruutivarasto, tykkejä ja muurien perustuksia, ja niemeltä näkyy ympäröivä satama. Vastakkaisella puolella satamansuuta on Fort Barrington.\n\nIsoisän matkavuonna 1873 Fort James oli jo vanha puolustuspaikka. Sen tykeillä oli 1800-luvulla myös merkinantotehtäviä: vierailevia sotalaivoja tervehdittiin laukauksilla, ja tykillä annettiin merkkejä auringonnousun sekä auringonlaskun aikaan. Linnakkeen historiaa ei siten tarvitse tulkita pelkkänä taistelukertomuksena. Satamansuun rakennelmat kuuluivat myös alusten saapumiseen ja kaupungin päivän rytmiin.",
-      "kuvat": [
-        {
-          "tiedosto": "",
-          "lyhyt": "",
-          "selite": "",
-          "lahde": ""
-        }
-      ],
-      "lahde": "Wikipedia"
-    }
-  },
-  "saatiedot": null,
-  "ehdotukset": {
-    "lentoasema": "V. C. Bird International Airport",
-    "huomiot": [
-      "C-tekstiluonnos; B-kuvat, riippumaton D/E/F ja toimitushyväksyntä avoinna.",
-      "Kartta partial: kolme kohteen oman Wikipedia-artikkelin pisteestä varmennettua paikkaa; 6–8 kohteen kattavuusportti avoin.",
-      "Kaikkien kuvaroolien tiedosto, lyhyt, selite ja lahde ovat tyhjinä; kuvat tulevat erillisestä kuvaputkesta.",
-      "saatiedot:null: 48/48:n primäärivarmennusta ei ole osoitettu, eikä säälukuja kirjoitettu.",
-      "Kontekstin kaupungin ja Saint Johnin laajemman seurakunnan väestöalueet pidetään erillään; väkilukua ei kirjoitettu.",
-      "Katedraaliartikkelin eri kohdissa on ristiriitaisia varhaisten kirkkojen ja järistysten vuosia; luonnoksessa vain aikakaudet.",
-      "Thomas Fuller kuoli 1800-luvulla; modernit teokset, museon näyttelymallit ja nimetyt uudet rakennukset eivät ole karttakohteita."
-    ]
+  "name": "Saint John's",
+  "wiki": "Saint John's",
+  "ambience": "satama",
+  "pallo": {
+   "lat": 17.121,
+   "lon": -61.845
   }
+ },
+ "artikkeli": {
+  "intro": "Saint John’s kokoaa Antiguan ja Barbudan hallintoa, kauppaa ja koulutusta saman satamakaupungin ympärille. Rantakortteleista kaupunki nousee loivasti kohti **katedraalin kukkulaa**, jonka alla historian kerrokset vaihtuvat korttelista toiseen. Entiseen oikeustaloon sijoitettu museo kertoo alkuperäiskansojen elämästä, siirtomaakaudesta ja kriketistä. Keskustan lounaisreunan ruokatorilla myydään kasviksia, kalaa ja lihaa.\n\nKatedraalissa on kivikuoren sisällä puinen tukirakenne, jota on kuvattu **rakennukseksi rakennuksen sisällä**. Satamansuun Fort James taas käytti tykkejä 1800-luvulla myös tervehdyksiin ja päivän vaihtumisesta kertoviin merkkeihin. Vanhan kaupungin historiaan kuuluvat tulipalot sekä määräykset julkisten rakennusten seinistä ja katoista. Kaupankäynnin lisäksi on pitänyt järjestää katujen kunnossapito ja yövahti. Saaripääkaupunkia voi lukea myös materiaalien ja arkisten järjestelyjen kautta: puu ja kivi tukevat kirkkoa, verot taas yhteisen kaupungin ylläpitoa.",
+  "teksti": "Saint John’s alkoi kasvaa 1600-luvulla satamalahden ympärille. Ennen kaupungin suunnittelua paikalla oli pieni taloryhmä, jonka aluetta kutsuttiin nimellä the Cove. Loiva rinne sataman itäpuolella helpotti teiden ja kulkuväylien rakentamista, ja kaupungista tuli saaren kauppapaikka.\n\n1700-luvun tulipalot johtivat rakennussääntöjen tiukentamiseen. Useimpien julkisten rakennusten piti saada tiiliseinät sekä tiili- tai liuskekivikatto. Kaupungin järjestäminen näkyi myös yövahtina ja katuympäristön ongelmien vuoksi kerättyinä veroina.\n\nKatedraali ja entinen oikeustalo olivat kaupungissa jo isoisän matkavuonna 1873. Nykyinen museo toimii oikeustalossa, mutta sen kokoelmat ulottuvat rakennusta vanhempaan alkuperäiskansojen historiaan ja myös paljon uudempaan urheiluun. Sataman puolustuslinnake Fort James avaa toisen suunnan kaupungin menneisyyteen."
+ },
+ "kysymykset": [
+  {
+   "q": "Minkä maan pääkaupunki Saint John’s on?",
+   "options": [
+    "Antigua ja Barbuda",
+    "Saint Kitts ja Nevis",
+    "Trinidad ja Tobago",
+    "Saint Vincent ja Grenadiinit"
+   ],
+   "correct": 0,
+   "level": 1,
+   "hint": "Maan nimessä on kaksi saarennimeä.",
+   "fact": "Saint John’s on Antiguan ja Barbudan pääkaupunki Antiguan saarella.",
+   "source": "https://en.wikipedia.org/wiki/St._John%27s,_Antigua_and_Barbuda"
+  },
+  {
+   "q": "Mitä materiaalia Saint John’sin katedraalin sisäinen rakenne on?",
+   "options": [
+    "Mäntypuuta",
+    "Takorautaa",
+    "Bamburuokoa",
+    "Marmorikiveä"
+   ],
+   "correct": 0,
+   "level": 2,
+   "hint": "Kivikuoren sisällä on toisenlainen rakennusmateriaali.",
+   "fact": "Katedraalin sisällä on mäntypuusta tehty tukirakenne ja verhoilu.",
+   "source": "https://en.wikipedia.org/wiki/St._John%27s_Cathedral_(Antigua_and_Barbuda)"
+  },
+  {
+   "q": "Missä entisessä rakennuksessa Antiguan ja Barbudan museo toimii?",
+   "options": [
+    "Oikeustalossa",
+    "Satamamakasiinissa",
+    "Rautatieasemalla",
+    "Kuvernöörin asunnossa"
+   ],
+   "correct": 0,
+   "level": 1,
+   "hint": "Rakennus nousi kaupungin varhaisen torin paikalle.",
+   "fact": "Museo toimii siirtomaa-ajan oikeustalossa, joka rakennettiin kaupungin varhaisen torin paikalle.",
+   "source": "https://en.wikipedia.org/wiki/Museum_of_Antigua_and_Barbuda"
+  },
+  {
+   "q": "Kenen mukaan Fort James on nimetty?",
+   "options": [
+    "Kuningas Jaakko II:n",
+    "Kuvernööri Woodes Rogersin",
+    "Arkkitehti Thomas Fullerin",
+    "Krikettipelaaja Viv Richardsin"
+   ],
+   "correct": 0,
+   "level": 3,
+   "hint": "Nimen taustalla on Englannin hallitsija.",
+   "fact": "Fort James sai nimensä Englannin kuningas Jaakko II:n mukaan.",
+   "source": "https://en.wikipedia.org/wiki/Fort_James,_Antigua_and_Barbuda"
+  },
+  {
+   "q": "Mitä julkisten rakennusten kattoihin vaadittiin palojen jälkeen?",
+   "options": [
+    "Tiiltä tai liuskekiveä",
+    "Puuta tai pärettä",
+    "Kangasta tai huopaa",
+    "Peltiä tai kuparilevyä"
+   ],
+   "correct": 0,
+   "level": 3,
+   "hint": "Määräyksen tavoite oli ehkäistä uusia tulipaloja.",
+   "fact": "Saint John’sin 1700-luvun rakennussäännöt edellyttivät useimpiin julkisiin rakennuksiin tiiliseiniä ja tiili- tai liuskekivikattoja.",
+   "source": "https://en.wikipedia.org/wiki/St._John%27s,_Antigua_and_Barbuda"
+  }
+ ],
+ "tiedot": [
+  "Saint John’sin katedraalissa on puinen rakennusrakenne kivikuoren sisällä. Kirkkoa on tämän vuoksi kuvattu rakennukseksi rakennuksen sisällä.",
+  "Fort Jamesin tykit palvelivat myös merkinannossa: 1800-luvulla niillä tervehdittiin sotalaivoja ja ilmoitettiin auringonnoususta sekä auringonlaskusta.",
+  "Museon nykyinen oikeustalorakennus nousi kaupungin varhaisen torin paikalle. Samalla paikalla kaupankäynti vaihtui oikeudenkäyttöön ja myöhemmin historian esittelyyn."
+ ],
+ "valokuva": {
+  "tiedosto": "AG-Stjohns-fort-james.jpg",
+  "lyhyt": "Saint John’sin satamaa ja Fort Jamesin suuntaa.",
+  "selite": "Veden takana näkyy sataman kontteja ja nosturi; linnakkeen jäänteet kohoavat vihreällä niemellä.",
+  "lahde": "Balou46, Commons (CC BY-SA 4.0)"
+ },
+ "kaupunkilehti": [
+  {
+   "id": "kaupunki",
+   "nimi": "Saint John's",
+   "johdanto": "Katedraalin puinen sisärakenne, tykeillä annetut merkit ja vanhan oikeustalon kokoelmat avaavat satamakaupungin historiaa.",
+   "kansikuvat": [
+    {
+     "tiedosto": "AG-Stjohns-pano-01.jpg",
+     "lyhyt": "Saint John’sin keskustan panoraama.",
+     "selite": "Matala rakennuskanta levittäytyy satamasta rinteille; katedraalin kaksi tornia erottuvat taustalla.",
+     "lahde": "Balou46, Wikimedia Commons (CC BY-SA 4.0)"
+    },
+    {
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": ""
+    },
+    {
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": ""
+    }
+   ],
+   "nostot": [
+    {
+     "otsikko": "Rakennus rakennuksen sisällä",
+     "teksti": "Saint John’sin katedraalin kivikuoren sisällä on mäntypuusta tehty rakenne ja verhoilu. Ne tukevat rakennusta maanjäristysten ja myrskyjen kuormaa vastaan. Kirkkoa onkin kutsuttu rakennukseksi rakennuksen sisällä. Samalla paikalla on ollut sekä puukirkko että tiilikirkko ennen nykyistä katedraalia, jonka suunnitteli Thomas Fuller. Kaupungin tornit kertovat siis myös rakentamisen ongelmasta: miten kirkko tehdään paikkaan, jossa maa ja sää voivat ravistella sitä.",
+     "wiki": "St. John's Cathedral (Antigua and Barbuda)",
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": ""
+    },
+    {
+     "otsikko": "Tykki kertoi päivän vaihtumisesta",
+     "teksti": "Fort James sijaitsee Saint John’sin satamansuun niemellä. Britit rakensivat sen 1700-luvulla puolustamaan satamaa, ja nimen linnake sai Englannin kuningas Jaakko II:lta. Paikalla on yhä ruutivarasto, tykkejä ja muurien perustuksia. 1800-luvulla tykillä ammuttiin tervehdyksiä vieraileville sotalaivoille sekä merkkejä auringonnousun ja auringonlaskun aikaan. Linnakkeen aseilla oli siis myös viestintätehtävä. Satamansuun paikka yhdisti puolustuksen, saapuvien alusten tervehdykset ja päivän rytmin.",
+     "wiki": "Fort James, Antigua and Barbuda",
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": ""
+    },
+    {
+     "otsikko": "Oikeustalossa on toinen kokoelma",
+     "teksti": "Antiguan ja Barbudan museo toimii entisessä siirtomaa-ajan oikeustalossa. Rakennus nousi 1700-luvulla kaupungin varhaisen torin paikalle. Museossa on saarilta kaivettuja alkuperäiskansojen ja siirtomaakauden esineitä, sokeriplantaasien malleja sekä krikettipelaaja Viv Richardsin maila. Talon käyttötarkoitus ja kokoelmat yhdistävät siten hyvin erilaisia aikoja: oikeudenkäytön rakennuksen sisällä kerrotaan asukkaista ennen siirtomaakautta, plantaasitaloudesta ja urheilusta.",
+     "wiki": "Museum of Antigua and Barbuda",
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": ""
+    },
+    {
+     "otsikko": "Sataman kauppa ja torin ruoka",
+     "teksti": "Redcliffe Quay ja Heritage Quay ovat Saint John’sin risteilymatkailun kauppapaikkoja. Redcliffe on historiallisempi alue, Heritage uudempi ostosympäristö. Kaupungin lounaisreunalla toimii myös tori, jossa myydään tuoreita kasviksia, lihaa ja kalaa. Samassa satamakaupungissa kaupankäynti saa näin erilaiset kasvot: laivalta tuleva matkailija kohtaa ostoskorttelit, ruokaa etsivä paikallisen torin. Torin tuotteet kertovat kaupungin keittiöstä toisenlaisen tarinan kuin koru- ja vaatekauppojen näyteikkunat.",
+     "wiki": "St. John's, Antigua and Barbuda",
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": ""
+    }
+   ],
+   "matkailijalle": {
+    "kuva": {
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": ""
+    },
+    "kappale": "Keskustan katedraali ja museo antavat Saint John’sin kävelylle historialliset kiintopisteet. Sataman ostosalueet ovat Redcliffe Quay ja Heritage Quay. Ruokatori löytyy kaupungin lounaisreunalta. Fort James sijaitsee satamansuun niemellä, joten sille kannattaa varata oma siirtymä. Lentoasemalta saapuvan kannattaa suunnitella keskustapäivä erikseen saaren muista retkistä.",
+    "artikkeli": {
+     "nimi": "Matkailijan Saint John’s",
+     "taitto": "opas",
+     "teksti": "Yhdistä keskustan museo ja katedraali torikäyntiin, ja varaa satamansuun linnakkeelle oma siirtymä.",
+     "nosto": "Risteilylaiturien ostosalueet, ruokatori ja kukkulan katedraali näyttävät kaupungin eri tehtävät.",
+     "jaksot": [
+      {
+       "otsikko": "Perille ja liikkeelle",
+       "teksti": "Saint John’sia palvelee V. C. Birdin kansainvälinen lentoasema. Sataman risteilyliikenne saapuu Heritage Quayn ja Redcliffe Quayn alueille. Keskustan museon, katedraalin ja kauppakortteleiden ympärille voi suunnitella kävelyreitin. Fort James sijaitsee satamansuun niemellä, joten ota se erilliseksi retkeksi keskustasta. Kaupungissa on takseja, vuokra-autoja ja paikallisbussiliikennettä; varmista bussin reitti ennen lähtöä.",
+       "kuva": {
+        "tiedosto": "",
+        "lyhyt": "",
+        "selite": "",
+        "lahde": ""
+       }
+      },
+      {
+       "otsikko": "Katedraalin kaksi rakennusta",
+       "teksti": "Katedraali seisoo keskustan kukkulalla. Sen kivikuoren sisällä on puinen tukirakenne ja verhoilu, jotka liittyvät myrskyjen ja maanjäristysten kuormien hallintaan. Rakennus on anglikaaninen kirkko, joten vierailu kannattaa sovittaa sen muuhun käyttöön. Ennen nykyistä katedraalia samalla paikalla oli aiempia kirkkoja. Museo esittelee Antiguan ja Barbudan historiaa; katedraali on käytössä oleva kirkko.",
+       "kuva": {
+        "tiedosto": "",
+        "lyhyt": "",
+        "selite": "",
+        "lahde": ""
+       }
+      },
+      {
+       "otsikko": "Oikeustalosta museoon ja torille",
+       "teksti": "Antiguan ja Barbudan museo toimii vanhassa oikeustalossa. Kokoelmissa kohtaavat arkeologiset esineet, siirtomaakausi ja kriketti. Redcliffe Quay ja Heritage Quay ovat sataman kauppaympäristöjä; kaupungin lounaisreunan tori taas myy ruokatarvikkeita. Museokäynti ja tori sopivat keskustan tutustumiseen ilman, että koko päivä jää risteilylaiturien kauppoihin.",
+       "kuva": {
+        "tiedosto": "",
+        "lyhyt": "",
+        "selite": "",
+        "lahde": ""
+       }
+      },
+      {
+       "otsikko": "Mitä täällä syödään",
+       "teksti": "Fungee on maissijauhosta valmistettu, polentaa muistuttava ruoka, ja sitä pidetään pepperpotin kanssa maan kansallisruokana. Paikallisessa keittiössä ovat tuttuja myös suolakala ja ducana. Aamiaisella voi tulla vastaan munakoiso, josta käytetään nimeä troba. Butter bread on pehmeä voinen leipä, jota syödään esimerkiksi juuston kanssa. Kaupungin ruokatorilta löytyvät kasvikset, liha ja tuore kala yhdistävät satamakierroksen saarikeittiön raaka-aineisiin.",
+       "kuva": {
+        "tiedosto": "",
+        "lyhyt": "",
+        "selite": "",
+        "lahde": ""
+       }
+      },
+      {
+       "otsikko": "Milloin kannattaa tulla",
+       "teksti": "Saint John’sissa on kesäisen lämmintä ympäri vuoden. Sateita tulee enemmän syksyn puolella, joten torikävelyn ja linnakekäynnin rinnalle kannattaa varata myös sisäkohde. Risteilylaitureiden käyntipäivä ja Antiguan muualle suuntautuva retki ovat eri ohjelmia: jätä keskustalle aikaa ennen satamasta lähtemistä.",
+       "kuva": {
+        "tiedosto": "",
+        "lyhyt": "",
+        "selite": "",
+        "lahde": ""
+       }
+      }
+     ],
+     "matkailu": {
+      "parasta": [
+       {
+        "mita": "Saint John’sin katedraali",
+        "tahdet": 3,
+        "selite": "Kivikuori ja puinen sisärakenne kertovat saaren rakennusolosuhteista."
+       },
+       {
+        "mita": "Antiguan ja Barbudan museo",
+        "tahdet": 3,
+        "selite": "Entinen oikeustalo kokoaa saariston arkeologiaa ja historiaa."
+       },
+       {
+        "mita": "Fort James",
+        "tahdet": 2,
+        "selite": "Satamansuun linnakkeessa säilyy puolustus- ja merkinantohistoriaa."
+       },
+       {
+        "mita": "Redcliffe Quay",
+        "tahdet": 2,
+        "selite": "Sataman historiallinen kauppa-alue kuuluu keskustan kävelykierrokseen."
+       },
+       {
+        "mita": "Keskustan ruokatori",
+        "tahdet": 2,
+        "selite": "Kasvikset, kala ja liha näyttävät kaupungin arjen ruokakauppaa."
+       }
+      ],
+      "hyvaTietaa": [
+       {
+        "otsikko": "Kaupunki ja seurakunta",
+        "teksti": "Saint John’sin kaupunki ja laajempi Saint Johnin seurakunta ovat eri alueita."
+       },
+       {
+        "otsikko": "Kirkon vierailu",
+        "teksti": "Tarkista museon ja katedraalin vierailukäytännöt kohteiden omilta sivuilta ennen käyntiä. Katedraali on käytössä oleva anglikaaninen kirkko."
+       },
+       {
+        "otsikko": "Linnakkeen sijainti",
+        "teksti": "Fort James on satamansuun niemellä, erillään keskustan museokorttelista."
+       }
+      ]
+     },
+     "lahde": "Wikipedia"
+    }
+   }
+  },
+  {
+   "id": "historia",
+   "nimi": "Katto, katu ja kiitotie",
+   "johdanto": "Kaupungin järjestäminen näkyi materiaaleissa, veroissa ja myöhemmin lentopaikan nimessä.",
+   "tehtava": {
+    "kysymys": "Mikä paikka on jättänyt Saint John’siin nimen Old Runway?",
+    "vaihtoehdot": [
+     "Vanha lentokenttä",
+     "Entinen ravirata",
+     "Hylätty rautatie",
+     "Siirretty kalatori"
+    ],
+    "oikea": 0,
+    "fakta": "Old Runway tarkoittaa Vanhaa kiitotietä ja liittyy Villan alueen aiempaan lentopaikkaan."
+   },
+   "nostot": [
+    {
+     "otsikko": "Kaupunki lahden vanhojen talojen ympärille",
+     "teksti": "Ennen Saint John’sin kaupungin suunnittelua satamalahden äärellä oli pieni taloryhmä, jonka paikka tunnettiin nimellä the Cove. Kaupunki alettiin järjestää 1600-luvulla lahden strategisen sijainnin ympärille, ja siitä tuli yksi saaren virallisista kauppapaikoista. Se kasvoi samalle tasolle Antiguan aiemman keskuksen Falmouthin kanssa. Sataman itäpuolella oleva loiva rinne mahdollisti teiden ja kävelyväylien rakentamisen. Kaupungin synty liittyy siten sekä kaupankäyntiin että paikan maastoon.",
+     "wiki": "St. John's, Antigua and Barbuda",
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": ""
+    },
+    {
+     "otsikko": "Palosta seurasi määräys katolle",
+     "teksti": "Saint John’s kärsi useista suurista tulipaloista 1700-luvulla. Yhden palon jälkeen kaupungin rakennussääntöjä tiukennettiin: useimpien julkisten rakennusten seinien piti olla tiiltä ja kattojen tiiltä tai liuskekiveä. Tavoitteena oli ehkäistä uusi tulipalo. Samalla kaupungille järjestettiin yövahti, jonka ylläpitoa varten asukkailta kerättiin veroa. Palohistoria näkyy siis sekä rakennusmateriaaleihin kohdistuneissa määräyksissä että uudessa valvontajärjestelyssä, ei vain tuhoutuneiden talojen luettelossa.",
+     "wiki": "St. John's, Antigua and Barbuda",
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": ""
+    },
+    {
+     "otsikko": "Kaktuksista tuli veron aihe",
+     "teksti": "1700-luvun lopun Saint John’sissa katuja ei vielä päällystetty eikä pidetty puhtaina. Haittaeläimet, matelijat ja katujen varsilla kasvavat piikikkäät opuntiakaktukset mainittiin syinä uudelle verolle. Kaupungin järjestäminen tarkoitti siis myös arkisia ongelmia teiden reunoilla. Samalla aikakaudella seurakunnan hallinnolle annettiin oikeus verottaa kauppiaita, sillä Saint John’s oli alueensa taloudellinen keskus. Vanhan satamakaupungin historiassa verot liittyivät sekä kauppaan että ympäristön kunnossapitoon.",
+     "wiki": "St. John's, Antigua and Barbuda",
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": ""
+    },
+    {
+     "otsikko": "Vanha kiitotie jäi paikannimeen",
+     "teksti": "Saint John’sin Villan alueella oli lentokenttä 1900-luvun alkupuoliskolla. Paikka tunnetaan nimellä Old Runway, Vanha kiitotie. Nykyisin kaupunkia palvelee V. C. Birdin kansainvälinen lentoasema. Saint John’sin matkustamisen historiaan kuuluu siten myös satamakaupungin oma varhainen lentopaikka, jonka nimi on säilynyt kaupungissa. Old Runway ei tarkoita nykyisen lentoaseman terminaalia: nimessä elää paikallinen ilmailun vaihe, ja lentomatkustajan nykyinen saapumispaikka on muualla.",
+     "wiki": "St. John's, Antigua and Barbuda",
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": ""
+    }
+   ]
+  }
+ ],
+ "kohdekartta": {
+  "numeroympyrat": true,
+  "esittely": "Katedraali ja entinen oikeustalo kertovat keskustan rakentamisesta. Fort James vie satamansuun puolustus- ja merkinantohistoriaan.",
+  "rajat": {
+   "pohjoinen": 17.13292,
+   "etela": 17.1195,
+   "lansi": -61.86646,
+   "ita": -61.83908
+  },
+  "kohteet": [
+   {
+    "nimi": "Saint John’sin katedraali",
+    "lat": 17.1227,
+    "lon": -61.8419
+   },
+   {
+    "nimi": "Antiguan ja Barbudan museo",
+    "lat": 17.1222,
+    "lon": -61.8439
+   },
+   {
+    "nimi": "Fort James",
+    "lat": 17.13022,
+    "lon": -61.86364
+   }
+  ]
+ },
+ "nahtavyydet": {
+  "Saint John’sin katedraali": {
+   "aika": "1800-luvun alkupuolisko",
+   "teksti": "Saint John’sin anglikaaninen katedraali seisoo kukkulalla keskustan yläpuolella. Nykyisen kirkon suunnitteli englantilainen Thomas Fuller. Sen ulkorakenne on kiveä, mutta sisällä on mäntypuusta tehty rakenne ja verhoilu. Puinen sisäosa tukee kirkkoa maanjäristysten ja myrskyjen kuormia vastaan. Tästä tulee rakennuksen kuvaus rakennuksena rakennuksen sisällä.\n\nSamalla paikalla oli aiemmin ensin puukirkko ja sitten suurempi tiilikirkko. Kirkkojen historiaan kuuluu maanjäristyksissä syntyneitä vaurioita, mutta nykyinen katedraali oli jo olemassa isoisän matkavuonna 1873. Tornit kuuluvat kaupungin siluettiin, ja sisärakenne kertoo myös paikallisista rakentamisen haasteista. Katedraali on edelleen anglikaanisen kirkon käytössä.",
+   "kuvat": [
+    {
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": ""
+    }
+   ],
+   "lahde": "Wikipedia"
+  },
+  "Antiguan ja Barbudan museo": {
+   "aika": "Rakennus 1700-luvun puoliväli",
+   "teksti": "Antiguan ja Barbudan museo sijaitsee Saint John’sin vanhassa siirtomaa-ajan oikeustalossa. Rakennus nousi kaupungin varhaisen torin paikalle 1700-luvun puolivälissä. Se oli jo osa kaupunkia isoisän matkavuonna 1873, mutta nykyinen museokäyttö on rakennuksen historiassa oma myöhempi vaiheensa. Museokokoelmat koottiin taloon myöhemmin.\n\nMuseossa on saarilta arkeologisissa kaivauksissa löydettyjä alkuperäiskansojen ja siirtomaakauden esineitä. Kokoelmiin kuuluvat myös sokeriplantaasien mallit ja krikettipelaaja Viv Richardsin maila. Museon rakennus on vanha hallinnon paikka, mutta sen sisällä saarten historiaa tarkastellaan monesta suunnasta: asutuksesta, plantaasitaloudesta ja urheilusta. Museon kokoelmiin kuuluu myös Antiguan sokeriruokorautateillä käytettyjä vetureita.",
+   "kuvat": [
+    {
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": ""
+    }
+   ],
+   "lahde": "Wikipedia"
+  },
+  "Fort James": {
+   "aika": "1700-luku",
+   "teksti": "Fort James sijaitsee niemellä Saint John’sin sataman suulla. Britit rakensivat sen 1700-luvulla vartioimaan satamaa, ja rakennushanketta vauhditti pelko Ranskan hyökkäyksestä. Nimi viittaa Englannin kuningas Jaakko II:een. Paikalla on säilynyt ruutivarasto, tykkejä ja muurien perustuksia, ja niemeltä näkyy ympäröivä satama. Vastakkaisella puolella satamansuuta on Fort Barrington.\n\nIsoisän matkavuonna 1873 Fort James oli jo vanha puolustuspaikka. Sen tykeillä oli 1800-luvulla myös merkinantotehtäviä: vierailevia sotalaivoja tervehdittiin laukauksilla, ja tykillä annettiin merkkejä auringonnousun sekä auringonlaskun aikaan. Tykit palvelivat siis myös sataman viestintää. Satamansuun rakennelmat kuuluivat myös alusten saapumiseen ja kaupungin päivän rytmiin.",
+   "kuvat": [
+    {
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": ""
+    }
+   ],
+   "lahde": "Wikipedia"
+  }
+ },
+ "saatiedot": null,
+ "ehdotukset": {
+  "lentoasema": "V. C. Bird International Airport",
+  "huomiot": [
+   "C-tekstiluonnos; B-kuvat, riippumaton D/E/F ja toimitushyväksyntä avoinna.",
+   "Kartta partial: kolme kohteen oman Wikipedia-artikkelin pisteestä varmennettua paikkaa; 6–8 kohteen kattavuusportti avoin.",
+   "Kaikkien kuvaroolien tiedosto, lyhyt, selite ja lahde ovat tyhjinä; kuvat tulevat erillisestä kuvaputkesta.",
+   "saatiedot:null: 48/48:n primäärivarmennusta ei ole osoitettu, eikä säälukuja kirjoitettu.",
+   "Kontekstin kaupungin ja Saint Johnin laajemman seurakunnan väestöalueet pidetään erillään; väkilukua ei kirjoitettu.",
+   "Katedraaliartikkelin eri kohdissa on ristiriitaisia varhaisten kirkkojen ja järistysten vuosia; luonnoksessa vain aikakaudet.",
+   "Thomas Fuller kuoli 1800-luvulla; modernit teokset, museon näyttelymallit ja nimetyt uudet rakennukset eivät ole karttakohteita."
+  ]
+ }
 }

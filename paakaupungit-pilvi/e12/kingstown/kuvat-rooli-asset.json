@@ -3,7 +3,7 @@
   "era": "e12",
   "city": "kingstown",
   "authorization": "hyväksyn kaikki tekemäsi kuvat. toimita ne claudelle. claudelta saat uusia ohjeita jatkoa varten",
-  "sourceContentAfterSHA256": "d32acbf1cdb20106854a566e67882358ac25f05ebd6837284edd3ac88bd72dce",
+  "sourceContentAfterSHA256": "95c17f396512a50ede234c47eb61a53416b8a625301ed3a20f51c474801bc9ed",
   "assets": [
     {
       "era": "e12",
@@ -28,10 +28,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/kingstown/e12-kingstown-O4-8c82c1df26-ea952842b552.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Roti-leivän havainne keskustan ruokatarjonnan aiheeseen.",
-        "lyhyt": "Roti-leivän havainne keskustan ruokatarjonnan aiheeseen."
+        "selite": "Roti-leivän havainne keskustan ruokatarjonnan aiheeseen."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -39,10 +39,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/kingstown/e12-kingstown-O4-8c82c1df26-ea952842b552.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Roti-leivän havainne keskustan ruokatarjonnan aiheeseen.",
-        "lyhyt": "Roti-leivän havainne keskustan ruokatarjonnan aiheeseen."
+        "selite": "Roti-leivän havainne keskustan ruokatarjonnan aiheeseen."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -56,10 +56,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/kingstown/sisalto.json",
-      "sourceContentSHA256": "d32acbf1cdb20106854a566e67882358ac25f05ebd6837284edd3ac88bd72dce",
+      "sourceContentSHA256": "95c17f396512a50ede234c47eb61a53416b8a625301ed3a20f51c474801bc9ed",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "efdbfe15f323b039e4afe88a7d366bddfa8c902be0db997d81ea3383b06d12a9",
+        "semanticContextSHA256": "5673efd78a54996ed5529db874eeeddef8b5a7ec64600af1632a9b56b490de65",
         "subjectTitle": "Mitä täällä syödään",
         "targetState": "existing-target"
       },
@@ -303,9 +303,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -324,17 +324,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "d32acbf1cdb20106854a566e67882358ac25f05ebd6837284edd3ac88bd72dce",
+      "sourceContentAfterSHA256": "95c17f396512a50ede234c47eb61a53416b8a625301ed3a20f51c474801bc9ed",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "efdbfe15f323b039e4afe88a7d366bddfa8c902be0db997d81ea3383b06d12a9",
+      "contextAfterSHA256": "5673efd78a54996ed5529db874eeeddef8b5a7ec64600af1632a9b56b490de65",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "d32acbf1cdb20106854a566e67882358ac25f05ebd6837284edd3ac88bd72dce",
+        "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "contextAfterSHA256": "efdbfe15f323b039e4afe88a7d366bddfa8c902be0db997d81ea3383b06d12a9",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+          "semanticContextSHA256": "efdbfe15f323b039e4afe88a7d366bddfa8c902be0db997d81ea3383b06d12a9",
+          "subjectTitle": "Mitä täällä syödään",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "95c17f396512a50ede234c47eb61a53416b8a625301ed3a20f51c474801bc9ed",
+        "sameImageNativeSHA256": "ea952842b55221653bbca8014352dbbc454de9df57160ac2464151ddbcdbed62",
+        "sameImageExportSHA256": "10bf9547c0a033c1ab5044d1eec1a4514cbeca4b066f2ec4af267a4d0d081849",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e12",
@@ -356,10 +377,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/kingstown/e12-kingstown-L1-46ce13e5a6-b15c6cba3b93.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Puuvillan havainnekuva Kingstownin puutarhan koeviljelyjen aiheeseen.",
-        "lyhyt": "Puuvillan havainnekuva Kingstownin puutarhan koeviljelyjen aiheeseen."
+        "selite": "Puuvillan havainnekuva Kingstownin puutarhan koeviljelyjen aiheeseen."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -367,10 +388,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/kingstown/e12-kingstown-L1-46ce13e5a6-b15c6cba3b93.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Puuvillan havainnekuva Kingstownin puutarhan koeviljelyjen aiheeseen.",
-        "lyhyt": "Puuvillan havainnekuva Kingstownin puutarhan koeviljelyjen aiheeseen."
+        "selite": "Puuvillan havainnekuva Kingstownin puutarhan koeviljelyjen aiheeseen."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -384,7 +405,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/kingstown/sisalto.json",
-      "sourceContentSHA256": "d32acbf1cdb20106854a566e67882358ac25f05ebd6837284edd3ac88bd72dce",
+      "sourceContentSHA256": "95c17f396512a50ede234c47eb61a53416b8a625301ed3a20f51c474801bc9ed",
       "semanticSourceBind": {
         "targetBeforeSHA256": "99c6f881f29b3af365cf14f814fc51abbf3cf351de009794e8fd6534b9427f15",
         "semanticContextSHA256": "99c6f881f29b3af365cf14f814fc51abbf3cf351de009794e8fd6534b9427f15",
@@ -611,9 +632,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -632,17 +653,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "d32acbf1cdb20106854a566e67882358ac25f05ebd6837284edd3ac88bd72dce",
+      "sourceContentAfterSHA256": "95c17f396512a50ede234c47eb61a53416b8a625301ed3a20f51c474801bc9ed",
       "targetAfterSHA256": "99c6f881f29b3af365cf14f814fc51abbf3cf351de009794e8fd6534b9427f15",
       "contextAfterSHA256": "99c6f881f29b3af365cf14f814fc51abbf3cf351de009794e8fd6534b9427f15",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "d32acbf1cdb20106854a566e67882358ac25f05ebd6837284edd3ac88bd72dce",
+        "targetAfterSHA256": "99c6f881f29b3af365cf14f814fc51abbf3cf351de009794e8fd6534b9427f15",
+        "contextAfterSHA256": "99c6f881f29b3af365cf14f814fc51abbf3cf351de009794e8fd6534b9427f15",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "99c6f881f29b3af365cf14f814fc51abbf3cf351de009794e8fd6534b9427f15",
+          "semanticContextSHA256": "99c6f881f29b3af365cf14f814fc51abbf3cf351de009794e8fd6534b9427f15",
+          "subjectTitle": "Puutarha lääkkeitä ja ruokaa varten",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "95c17f396512a50ede234c47eb61a53416b8a625301ed3a20f51c474801bc9ed",
+        "sameImageNativeSHA256": "b15c6cba3b93c16d58fac86931669b013f0f214fe31bfea9a0c3cb7b4a50b90c",
+        "sameImageExportSHA256": "3192e66ded016fc8d0d940837381016821415967a76a70fb27dba94b6cab4124",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e12",
@@ -664,10 +706,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/kingstown/e12-kingstown-L2-d08ff60aa1-2df9ab161871.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Leipäpuun havainnekuva historiallisten kasvinsiirtojen aiheeseen.",
-        "lyhyt": "Leipäpuun havainnekuva historiallisten kasvinsiirtojen aiheeseen."
+        "selite": "Leipäpuun havainnekuva historiallisten kasvinsiirtojen aiheeseen."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -675,10 +717,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/kingstown/e12-kingstown-L2-d08ff60aa1-2df9ab161871.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Leipäpuun havainnekuva historiallisten kasvinsiirtojen aiheeseen.",
-        "lyhyt": "Leipäpuun havainnekuva historiallisten kasvinsiirtojen aiheeseen."
+        "selite": "Leipäpuun havainnekuva historiallisten kasvinsiirtojen aiheeseen."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -692,10 +734,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/kingstown/sisalto.json",
-      "sourceContentSHA256": "d32acbf1cdb20106854a566e67882358ac25f05ebd6837284edd3ac88bd72dce",
+      "sourceContentSHA256": "95c17f396512a50ede234c47eb61a53416b8a625301ed3a20f51c474801bc9ed",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "0912c0d23e0a87150bbe03ad5ef0ab901067e908365c94bc582a985fc874d5b0",
-        "semanticContextSHA256": "0912c0d23e0a87150bbe03ad5ef0ab901067e908365c94bc582a985fc874d5b0",
+        "targetBeforeSHA256": "401117e8a830621b641ef1aeff4225874b3c5214d5433e80bc6b663837b5d3ae",
+        "semanticContextSHA256": "401117e8a830621b641ef1aeff4225874b3c5214d5433e80bc6b663837b5d3ae",
         "subjectTitle": "Bounty ei tuonut leipäpuita perille",
         "targetState": "existing-target"
       },
@@ -916,9 +958,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -937,17 +979,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "d32acbf1cdb20106854a566e67882358ac25f05ebd6837284edd3ac88bd72dce",
-      "targetAfterSHA256": "0912c0d23e0a87150bbe03ad5ef0ab901067e908365c94bc582a985fc874d5b0",
-      "contextAfterSHA256": "0912c0d23e0a87150bbe03ad5ef0ab901067e908365c94bc582a985fc874d5b0",
+      "sourceContentAfterSHA256": "95c17f396512a50ede234c47eb61a53416b8a625301ed3a20f51c474801bc9ed",
+      "targetAfterSHA256": "401117e8a830621b641ef1aeff4225874b3c5214d5433e80bc6b663837b5d3ae",
+      "contextAfterSHA256": "401117e8a830621b641ef1aeff4225874b3c5214d5433e80bc6b663837b5d3ae",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "d32acbf1cdb20106854a566e67882358ac25f05ebd6837284edd3ac88bd72dce",
+        "targetAfterSHA256": "0912c0d23e0a87150bbe03ad5ef0ab901067e908365c94bc582a985fc874d5b0",
+        "contextAfterSHA256": "0912c0d23e0a87150bbe03ad5ef0ab901067e908365c94bc582a985fc874d5b0",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "0912c0d23e0a87150bbe03ad5ef0ab901067e908365c94bc582a985fc874d5b0",
+          "semanticContextSHA256": "0912c0d23e0a87150bbe03ad5ef0ab901067e908365c94bc582a985fc874d5b0",
+          "subjectTitle": "Bounty ei tuonut leipäpuita perille",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "95c17f396512a50ede234c47eb61a53416b8a625301ed3a20f51c474801bc9ed",
+        "sameImageNativeSHA256": "2df9ab161871845b32a7325447d5ac7c13c4679d4ad8bf825667baec809b6779",
+        "sameImageExportSHA256": "c51f0a0ad8512411ec6303c65d8821b46ac5b37e55bdae68ada6a0c60d9ca231",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e12",
@@ -969,10 +1032,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/kingstown/e12-kingstown-L3-425c8e3467-dd8dbb34f5ad.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Kanelin havainnekuva Kingstownin kasvinsiirtojen aiheeseen.",
-        "lyhyt": "Kanelin havainnekuva Kingstownin kasvinsiirtojen aiheeseen."
+        "selite": "Kanelin havainnekuva Kingstownin kasvinsiirtojen aiheeseen."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -980,10 +1043,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/kingstown/e12-kingstown-L3-425c8e3467-dd8dbb34f5ad.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Kanelin havainnekuva Kingstownin kasvinsiirtojen aiheeseen.",
-        "lyhyt": "Kanelin havainnekuva Kingstownin kasvinsiirtojen aiheeseen."
+        "selite": "Kanelin havainnekuva Kingstownin kasvinsiirtojen aiheeseen."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -997,7 +1060,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/kingstown/sisalto.json",
-      "sourceContentSHA256": "d32acbf1cdb20106854a566e67882358ac25f05ebd6837284edd3ac88bd72dce",
+      "sourceContentSHA256": "95c17f396512a50ede234c47eb61a53416b8a625301ed3a20f51c474801bc9ed",
       "semanticSourceBind": {
         "targetBeforeSHA256": "0b559b7316c229aaf7c7cb4c746ad3efe9ea3478bdce75dcc22ad4955e2ec450",
         "semanticContextSHA256": "0b559b7316c229aaf7c7cb4c746ad3efe9ea3478bdce75dcc22ad4955e2ec450",
@@ -1219,9 +1282,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -1240,17 +1303,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "d32acbf1cdb20106854a566e67882358ac25f05ebd6837284edd3ac88bd72dce",
+      "sourceContentAfterSHA256": "95c17f396512a50ede234c47eb61a53416b8a625301ed3a20f51c474801bc9ed",
       "targetAfterSHA256": "0b559b7316c229aaf7c7cb4c746ad3efe9ea3478bdce75dcc22ad4955e2ec450",
       "contextAfterSHA256": "0b559b7316c229aaf7c7cb4c746ad3efe9ea3478bdce75dcc22ad4955e2ec450",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "d32acbf1cdb20106854a566e67882358ac25f05ebd6837284edd3ac88bd72dce",
+        "targetAfterSHA256": "0b559b7316c229aaf7c7cb4c746ad3efe9ea3478bdce75dcc22ad4955e2ec450",
+        "contextAfterSHA256": "0b559b7316c229aaf7c7cb4c746ad3efe9ea3478bdce75dcc22ad4955e2ec450",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "0b559b7316c229aaf7c7cb4c746ad3efe9ea3478bdce75dcc22ad4955e2ec450",
+          "semanticContextSHA256": "0b559b7316c229aaf7c7cb4c746ad3efe9ea3478bdce75dcc22ad4955e2ec450",
+          "subjectTitle": "Kaneli kulki saarien välillä",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "95c17f396512a50ede234c47eb61a53416b8a625301ed3a20f51c474801bc9ed",
+        "sameImageNativeSHA256": "dd8dbb34f5ad5c894184007ee12ff9a2063a86ce50f2cd6ca407e3bc1607c1cb",
+        "sameImageExportSHA256": "94ed93ecb680300cf0aeea92d46b9b4f52d1b916543d68adec1cfc33a9bfc2b7",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e12",
@@ -1272,10 +1356,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/kingstown/e12-kingstown-L4-a777be4bbb-fffa10cdd61e.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Saint Vincentin papukaijan (Amazona guildingii) lajikohtainen havainne.",
-        "lyhyt": "Saint Vincentin papukaijan (Amazona guildingii) lajikohtainen havainne."
+        "selite": "Saintvincentinamatsonin (Amazona guildingii) lajikohtainen havainnekuva."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -1283,10 +1367,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/kingstown/e12-kingstown-L4-a777be4bbb-fffa10cdd61e.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Saint Vincentin papukaijan (Amazona guildingii) lajikohtainen havainne.",
-        "lyhyt": "Saint Vincentin papukaijan (Amazona guildingii) lajikohtainen havainne."
+        "selite": "Saintvincentinamatsonin (Amazona guildingii) lajikohtainen havainnekuva."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -1300,10 +1384,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/kingstown/sisalto.json",
-      "sourceContentSHA256": "d32acbf1cdb20106854a566e67882358ac25f05ebd6837284edd3ac88bd72dce",
+      "sourceContentSHA256": "95c17f396512a50ede234c47eb61a53416b8a625301ed3a20f51c474801bc9ed",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "efaa31ad94d3d2c6f24a8d1da9319eda9631e1603f4432b4bc5077c20292d426",
-        "semanticContextSHA256": "efaa31ad94d3d2c6f24a8d1da9319eda9631e1603f4432b4bc5077c20292d426",
+        "targetBeforeSHA256": "1fb8530d87f143bc164948aabcc2bb40fb145a2311c0548062f1f173ba5068b8",
+        "semanticContextSHA256": "1fb8530d87f143bc164948aabcc2bb40fb145a2311c0548062f1f173ba5068b8",
         "subjectTitle": "Kasvien keskellä kasvatetaan lintua",
         "targetState": "existing-target"
       },
@@ -1563,9 +1647,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -1584,17 +1668,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "d32acbf1cdb20106854a566e67882358ac25f05ebd6837284edd3ac88bd72dce",
-      "targetAfterSHA256": "efaa31ad94d3d2c6f24a8d1da9319eda9631e1603f4432b4bc5077c20292d426",
-      "contextAfterSHA256": "efaa31ad94d3d2c6f24a8d1da9319eda9631e1603f4432b4bc5077c20292d426",
+      "sourceContentAfterSHA256": "95c17f396512a50ede234c47eb61a53416b8a625301ed3a20f51c474801bc9ed",
+      "targetAfterSHA256": "1fb8530d87f143bc164948aabcc2bb40fb145a2311c0548062f1f173ba5068b8",
+      "contextAfterSHA256": "1fb8530d87f143bc164948aabcc2bb40fb145a2311c0548062f1f173ba5068b8",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "d32acbf1cdb20106854a566e67882358ac25f05ebd6837284edd3ac88bd72dce",
+        "targetAfterSHA256": "efaa31ad94d3d2c6f24a8d1da9319eda9631e1603f4432b4bc5077c20292d426",
+        "contextAfterSHA256": "efaa31ad94d3d2c6f24a8d1da9319eda9631e1603f4432b4bc5077c20292d426",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "efaa31ad94d3d2c6f24a8d1da9319eda9631e1603f4432b4bc5077c20292d426",
+          "semanticContextSHA256": "efaa31ad94d3d2c6f24a8d1da9319eda9631e1603f4432b4bc5077c20292d426",
+          "subjectTitle": "Kasvien keskellä kasvatetaan lintua",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "95c17f396512a50ede234c47eb61a53416b8a625301ed3a20f51c474801bc9ed",
+        "sameImageNativeSHA256": "fffa10cdd61e0f4d61a584ba564aaab21d17e37c20719e63d67cb20f4177a140",
+        "sameImageExportSHA256": "0397aeab58816dbd7c1864062576a6a9bd33ec1c3aea81dcbbf39ed953bdbf37",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e12",
@@ -1619,10 +1724,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/kingstown/e12-kingstown-O3-a28334e70c-70612dc9ba3f.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva opastekstissä mainitusta leipäpuuaiheesta.",
-        "lyhyt": "Havainnekuva opastekstissä mainitusta leipäpuuaiheesta."
+        "selite": "Havainnekuva opastekstissä mainitusta leipäpuuaiheesta."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -1630,10 +1735,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/kingstown/e12-kingstown-O3-a28334e70c-70612dc9ba3f.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva opastekstissä mainitusta leipäpuuaiheesta.",
-        "lyhyt": "Havainnekuva opastekstissä mainitusta leipäpuuaiheesta."
+        "selite": "Havainnekuva opastekstissä mainitusta leipäpuuaiheesta."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -1647,10 +1752,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/kingstown/sisalto.json",
-      "sourceContentSHA256": "d32acbf1cdb20106854a566e67882358ac25f05ebd6837284edd3ac88bd72dce",
+      "sourceContentSHA256": "95c17f396512a50ede234c47eb61a53416b8a625301ed3a20f51c474801bc9ed",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "48c1b6101bfab1bfc0c8b039ddc5c475a54fca3d30bd826a9951315bb75d168e",
+        "semanticContextSHA256": "cddac76683f49101d4557bb02c2a0acf675df1c2542fea1b6d391dda57fd9e60",
         "subjectTitle": "Puutarha ja kukkula",
         "targetState": "existing-target"
       },
@@ -1904,9 +2009,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -1925,17 +2030,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "d32acbf1cdb20106854a566e67882358ac25f05ebd6837284edd3ac88bd72dce",
+      "sourceContentAfterSHA256": "95c17f396512a50ede234c47eb61a53416b8a625301ed3a20f51c474801bc9ed",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "48c1b6101bfab1bfc0c8b039ddc5c475a54fca3d30bd826a9951315bb75d168e",
+      "contextAfterSHA256": "cddac76683f49101d4557bb02c2a0acf675df1c2542fea1b6d391dda57fd9e60",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "d32acbf1cdb20106854a566e67882358ac25f05ebd6837284edd3ac88bd72dce",
+        "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "contextAfterSHA256": "48c1b6101bfab1bfc0c8b039ddc5c475a54fca3d30bd826a9951315bb75d168e",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+          "semanticContextSHA256": "48c1b6101bfab1bfc0c8b039ddc5c475a54fca3d30bd826a9951315bb75d168e",
+          "subjectTitle": "Puutarha ja kukkula",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "95c17f396512a50ede234c47eb61a53416b8a625301ed3a20f51c474801bc9ed",
+        "sameImageNativeSHA256": "70612dc9ba3fa6f6a01299af1a7a1f7f345e9339f897ad2fa9c6b5e426840405",
+        "sameImageExportSHA256": "75a8a71845b9b34de2cb2b992fbf3911099c26c169928e800802210309e309a7",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e12",
@@ -1954,23 +2080,23 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/kingstown/photo-09fd3fa86f4815c4535e.jpg",
         "suora": true,
         "lahde": "giggel, Commons (CC BY 3.0)",
-        "selite": "Puu Kingstownin kasvitieteellisessä puutarhassa, kuva vuodelta 2012.",
-        "lyhyt": "Puu Kingstownin kasvitieteellisessä puutarhassa, kuva vuodelta 2012.",
+        "selite": "Vaalea puunrunko haarautuu korkealle ympäröivän kasvillisuuden keskeltä vuonna 2012 otetussa kuvassa.",
+        "lyhyt": "Eukalyptus Kingstownin kasvitieteellisessä puutarhassa.",
         "tiedosto": "St. Vincent, Karibik - Botanical Garden of Kingstown - Eucalyptus tree - panoramio.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "giggel, Commons (CC BY 3.0)",
-        "selite": "Puu Kingstownin kasvitieteellisessä puutarhassa, kuva vuodelta 2012.",
-        "lyhyt": "Puu Kingstownin kasvitieteellisessä puutarhassa, kuva vuodelta 2012.",
+        "selite": "Vaalea puunrunko haarautuu korkealle ympäröivän kasvillisuuden keskeltä vuonna 2012 otetussa kuvassa.",
+        "lyhyt": "Eukalyptus Kingstownin kasvitieteellisessä puutarhassa.",
         "tiedosto": "St. Vincent, Karibik - Botanical Garden of Kingstown - Eucalyptus tree - panoramio.jpg"
       },
       "runtimeMediaFieldPayload": {
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/kingstown/photo-09fd3fa86f4815c4535e.jpg",
         "suora": true,
         "lahde": "giggel, Commons (CC BY 3.0)",
-        "selite": "Puu Kingstownin kasvitieteellisessä puutarhassa, kuva vuodelta 2012.",
-        "lyhyt": "Puu Kingstownin kasvitieteellisessä puutarhassa, kuva vuodelta 2012.",
+        "selite": "Vaalea puunrunko haarautuu korkealle ympäröivän kasvillisuuden keskeltä vuonna 2012 otetussa kuvassa.",
+        "lyhyt": "Eukalyptus Kingstownin kasvitieteellisessä puutarhassa.",
         "tiedosto": "St. Vincent, Karibik - Botanical Garden of Kingstown - Eucalyptus tree - panoramio.jpg"
       },
       "runtimeRemoveMediaKeys": [],
@@ -1985,10 +2111,10 @@
         4000
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/kingstown/sisalto.json",
-      "sourceContentSHA256": "d32acbf1cdb20106854a566e67882358ac25f05ebd6837284edd3ac88bd72dce",
+      "sourceContentSHA256": "95c17f396512a50ede234c47eb61a53416b8a625301ed3a20f51c474801bc9ed",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "bb868a05a1e7f87837a12372a6ef384e0000e2c1197b8a8fac501a4dadc0cbef",
-        "semanticContextSHA256": "bb868a05a1e7f87837a12372a6ef384e0000e2c1197b8a8fac501a4dadc0cbef",
+        "targetBeforeSHA256": "e63e1d5826ccd0c1b7aaaeaac1351d2a876014a6140283072157f14a359dca3d",
+        "semanticContextSHA256": "e63e1d5826ccd0c1b7aaaeaac1351d2a876014a6140283072157f14a359dca3d",
         "subjectTitle": "kingstown — aito paikkavalokuva",
         "targetState": "existing-target"
       },
@@ -2184,9 +2310,9 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "St. Vincent, Karibik - Botanical Garden of Kingstown - Eucalyptus tree - panoramio.jpg",
-        "lahde": "giggel, Commons (CC BY 3.0)",
-        "selite": "Puu Kingstownin kasvitieteellisessä puutarhassa, kuva vuodelta 2012.",
-        "lyhyt": "Puu Kingstownin kasvitieteellisessä puutarhassa, kuva vuodelta 2012."
+        "lyhyt": "Eukalyptus Kingstownin kasvitieteellisessä puutarhassa.",
+        "selite": "Vaalea puunrunko haarautuu korkealle ympäröivän kasvillisuuden keskeltä vuonna 2012 otetussa kuvassa.",
+        "lahde": "giggel, Commons (CC BY 3.0)"
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -2205,23 +2331,44 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "giggel, Commons (CC BY 3.0)",
-        "selite": "Puu Kingstownin kasvitieteellisessä puutarhassa, kuva vuodelta 2012.",
-        "lyhyt": "Puu Kingstownin kasvitieteellisessä puutarhassa, kuva vuodelta 2012.",
+        "selite": "Vaalea puunrunko haarautuu korkealle ympäröivän kasvillisuuden keskeltä vuonna 2012 otetussa kuvassa.",
+        "lyhyt": "Eukalyptus Kingstownin kasvitieteellisessä puutarhassa.",
         "tiedosto": "St. Vincent, Karibik - Botanical Garden of Kingstown - Eucalyptus tree - panoramio.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "d32acbf1cdb20106854a566e67882358ac25f05ebd6837284edd3ac88bd72dce",
-      "targetAfterSHA256": "bb868a05a1e7f87837a12372a6ef384e0000e2c1197b8a8fac501a4dadc0cbef",
-      "contextAfterSHA256": "bb868a05a1e7f87837a12372a6ef384e0000e2c1197b8a8fac501a4dadc0cbef",
+      "sourceContentAfterSHA256": "95c17f396512a50ede234c47eb61a53416b8a625301ed3a20f51c474801bc9ed",
+      "targetAfterSHA256": "e63e1d5826ccd0c1b7aaaeaac1351d2a876014a6140283072157f14a359dca3d",
+      "contextAfterSHA256": "e63e1d5826ccd0c1b7aaaeaac1351d2a876014a6140283072157f14a359dca3d",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "d32acbf1cdb20106854a566e67882358ac25f05ebd6837284edd3ac88bd72dce",
+        "targetAfterSHA256": "bb868a05a1e7f87837a12372a6ef384e0000e2c1197b8a8fac501a4dadc0cbef",
+        "contextAfterSHA256": "bb868a05a1e7f87837a12372a6ef384e0000e2c1197b8a8fac501a4dadc0cbef",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "bb868a05a1e7f87837a12372a6ef384e0000e2c1197b8a8fac501a4dadc0cbef",
+          "semanticContextSHA256": "bb868a05a1e7f87837a12372a6ef384e0000e2c1197b8a8fac501a4dadc0cbef",
+          "subjectTitle": "kingstown — aito paikkavalokuva",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "95c17f396512a50ede234c47eb61a53416b8a625301ed3a20f51c474801bc9ed",
+        "sameImageNativeSHA256": "09fd3fa86f4815c4535eb44e7571204b81cd2baf6b414fb0f59fb5b42e71dc70",
+        "sameImageExportSHA256": "09fd3fa86f4815c4535eb44e7571204b81cd2baf6b414fb0f59fb5b42e71dc70",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e12",
@@ -2243,23 +2390,23 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/kingstown/c1-700329447353b254cd30.jpg",
         "suora": true,
         "lahde": "giggel, Wikimedia Commons (CC BY 3.0)",
-        "selite": "Kingstownin laaja kaupunki- ja rinnenäkymä helmikuussa 2012.",
-        "lyhyt": "Kingstownin laaja kaupunki- ja rinnenäkymä helmikuussa 2012.",
+        "selite": "Veden äärellä näkyy tiheästi rakennettuja kortteleita ja veneitä; talot jatkuvat takana kohoaville vihreille rinteille.",
+        "lyhyt": "Kingstownin rantataloja ja rinteiden asutusta.",
         "tiedosto": "St. Vincent, Karibik - Kingstown City - panoramio.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "giggel, Wikimedia Commons (CC BY 3.0)",
-        "selite": "Kingstownin laaja kaupunki- ja rinnenäkymä helmikuussa 2012.",
-        "lyhyt": "Kingstownin laaja kaupunki- ja rinnenäkymä helmikuussa 2012.",
+        "selite": "Veden äärellä näkyy tiheästi rakennettuja kortteleita ja veneitä; talot jatkuvat takana kohoaville vihreille rinteille.",
+        "lyhyt": "Kingstownin rantataloja ja rinteiden asutusta.",
         "tiedosto": "St. Vincent, Karibik - Kingstown City - panoramio.jpg"
       },
       "runtimeMediaFieldPayload": {
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/kingstown/c1-700329447353b254cd30.jpg",
         "suora": true,
         "lahde": "giggel, Wikimedia Commons (CC BY 3.0)",
-        "selite": "Kingstownin laaja kaupunki- ja rinnenäkymä helmikuussa 2012.",
-        "lyhyt": "Kingstownin laaja kaupunki- ja rinnenäkymä helmikuussa 2012.",
+        "selite": "Veden äärellä näkyy tiheästi rakennettuja kortteleita ja veneitä; talot jatkuvat takana kohoaville vihreille rinteille.",
+        "lyhyt": "Kingstownin rantataloja ja rinteiden asutusta.",
         "tiedosto": "St. Vincent, Karibik - Kingstown City - panoramio.jpg"
       },
       "runtimeRemoveMediaKeys": [],
@@ -2274,10 +2421,10 @@
         3000
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/kingstown/sisalto.json",
-      "sourceContentSHA256": "d32acbf1cdb20106854a566e67882358ac25f05ebd6837284edd3ac88bd72dce",
+      "sourceContentSHA256": "95c17f396512a50ede234c47eb61a53416b8a625301ed3a20f51c474801bc9ed",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "8183a4f686549314e896874782c50fe28198fc52eeb459820b36d8b94699b03c",
-        "semanticContextSHA256": "8183a4f686549314e896874782c50fe28198fc52eeb459820b36d8b94699b03c",
+        "targetBeforeSHA256": "b3aebcb1e9886701051ab32a1d6ae13837566fa4da0e7e45dcdd54ad8d4953fc",
+        "semanticContextSHA256": "b3aebcb1e9886701051ab32a1d6ae13837566fa4da0e7e45dcdd54ad8d4953fc",
         "subjectTitle": "Kingstown",
         "targetState": "existing-target"
       },
@@ -2475,9 +2622,9 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "St. Vincent, Karibik - Kingstown City - panoramio.jpg",
-        "lahde": "giggel, Wikimedia Commons (CC BY 3.0)",
-        "selite": "Kingstownin laaja kaupunki- ja rinnenäkymä helmikuussa 2012.",
-        "lyhyt": "Kingstownin laaja kaupunki- ja rinnenäkymä helmikuussa 2012."
+        "lyhyt": "Kingstownin rantataloja ja rinteiden asutusta.",
+        "selite": "Veden äärellä näkyy tiheästi rakennettuja kortteleita ja veneitä; talot jatkuvat takana kohoaville vihreille rinteille.",
+        "lahde": "giggel, Wikimedia Commons (CC BY 3.0)"
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -2496,23 +2643,44 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "giggel, Wikimedia Commons (CC BY 3.0)",
-        "selite": "Kingstownin laaja kaupunki- ja rinnenäkymä helmikuussa 2012.",
-        "lyhyt": "Kingstownin laaja kaupunki- ja rinnenäkymä helmikuussa 2012.",
+        "selite": "Veden äärellä näkyy tiheästi rakennettuja kortteleita ja veneitä; talot jatkuvat takana kohoaville vihreille rinteille.",
+        "lyhyt": "Kingstownin rantataloja ja rinteiden asutusta.",
         "tiedosto": "St. Vincent, Karibik - Kingstown City - panoramio.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "d32acbf1cdb20106854a566e67882358ac25f05ebd6837284edd3ac88bd72dce",
-      "targetAfterSHA256": "8183a4f686549314e896874782c50fe28198fc52eeb459820b36d8b94699b03c",
-      "contextAfterSHA256": "8183a4f686549314e896874782c50fe28198fc52eeb459820b36d8b94699b03c",
+      "sourceContentAfterSHA256": "95c17f396512a50ede234c47eb61a53416b8a625301ed3a20f51c474801bc9ed",
+      "targetAfterSHA256": "b3aebcb1e9886701051ab32a1d6ae13837566fa4da0e7e45dcdd54ad8d4953fc",
+      "contextAfterSHA256": "b3aebcb1e9886701051ab32a1d6ae13837566fa4da0e7e45dcdd54ad8d4953fc",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "d32acbf1cdb20106854a566e67882358ac25f05ebd6837284edd3ac88bd72dce",
+        "targetAfterSHA256": "8183a4f686549314e896874782c50fe28198fc52eeb459820b36d8b94699b03c",
+        "contextAfterSHA256": "8183a4f686549314e896874782c50fe28198fc52eeb459820b36d8b94699b03c",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "8183a4f686549314e896874782c50fe28198fc52eeb459820b36d8b94699b03c",
+          "semanticContextSHA256": "8183a4f686549314e896874782c50fe28198fc52eeb459820b36d8b94699b03c",
+          "subjectTitle": "Kingstown",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "95c17f396512a50ede234c47eb61a53416b8a625301ed3a20f51c474801bc9ed",
+        "sameImageNativeSHA256": "700329447353b254cd30cdaa253ddb55b234aaaafec0be0442d66d533deb27d5",
+        "sameImageExportSHA256": "700329447353b254cd30cdaa253ddb55b234aaaafec0be0442d66d533deb27d5",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e12",
@@ -2534,23 +2702,23 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/kingstown/n1-8e284ce6021da00bf11e.jpg",
         "suora": true,
         "lahde": "giggel, Wikimedia Commons (CC BY 3.0)",
-        "selite": "Kingstownin kasvitieteellisen puutarhan kasvillisuutta vuonna 2012.",
-        "lyhyt": "Kingstownin kasvitieteellisen puutarhan kasvillisuutta vuonna 2012.",
+        "selite": "Käytävää reunustavat palmut ja punakukkaiset pensasaidat kasvitieteellisessä puutarhassa vuonna 2012.",
+        "lyhyt": "Palmujen reunustama käytävä Kingstownin puutarhassa.",
         "tiedosto": "St. Vincent, Karibik - Botanical Garden of Kingstown - panoramio.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "giggel, Wikimedia Commons (CC BY 3.0)",
-        "selite": "Kingstownin kasvitieteellisen puutarhan kasvillisuutta vuonna 2012.",
-        "lyhyt": "Kingstownin kasvitieteellisen puutarhan kasvillisuutta vuonna 2012.",
+        "selite": "Käytävää reunustavat palmut ja punakukkaiset pensasaidat kasvitieteellisessä puutarhassa vuonna 2012.",
+        "lyhyt": "Palmujen reunustama käytävä Kingstownin puutarhassa.",
         "tiedosto": "St. Vincent, Karibik - Botanical Garden of Kingstown - panoramio.jpg"
       },
       "runtimeMediaFieldPayload": {
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/kingstown/n1-8e284ce6021da00bf11e.jpg",
         "suora": true,
         "lahde": "giggel, Wikimedia Commons (CC BY 3.0)",
-        "selite": "Kingstownin kasvitieteellisen puutarhan kasvillisuutta vuonna 2012.",
-        "lyhyt": "Kingstownin kasvitieteellisen puutarhan kasvillisuutta vuonna 2012.",
+        "selite": "Käytävää reunustavat palmut ja punakukkaiset pensasaidat kasvitieteellisessä puutarhassa vuonna 2012.",
+        "lyhyt": "Palmujen reunustama käytävä Kingstownin puutarhassa.",
         "tiedosto": "St. Vincent, Karibik - Botanical Garden of Kingstown - panoramio.jpg"
       },
       "runtimeRemoveMediaKeys": [],
@@ -2565,10 +2733,10 @@
         3000
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/kingstown/sisalto.json",
-      "sourceContentSHA256": "d32acbf1cdb20106854a566e67882358ac25f05ebd6837284edd3ac88bd72dce",
+      "sourceContentSHA256": "95c17f396512a50ede234c47eb61a53416b8a625301ed3a20f51c474801bc9ed",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "c48b0feb6a254d87436c58828b4a567b2d67cdc6b9668fce301cf8f676cedba4",
-        "semanticContextSHA256": "fbf366fdbe61f79a148bd030a47f2aec317281ea6fd3bf6ec78ea55f35f33318",
+        "targetBeforeSHA256": "b9bd10e5804865214f995c56cc9809f42917a37411b738c46f7c36d0ca030a56",
+        "semanticContextSHA256": "0afb14d701baa8c443c460570abfcbbed57b072e1fd71fdf417347476abfbef6",
         "subjectTitle": "Kingstownin kasvitieteellinen puutarha",
         "targetState": "existing-target"
       },
@@ -2764,9 +2932,9 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "St. Vincent, Karibik - Botanical Garden of Kingstown - panoramio.jpg",
-        "lahde": "giggel, Wikimedia Commons (CC BY 3.0)",
-        "selite": "Kingstownin kasvitieteellisen puutarhan kasvillisuutta vuonna 2012.",
-        "lyhyt": "Kingstownin kasvitieteellisen puutarhan kasvillisuutta vuonna 2012."
+        "lyhyt": "Palmujen reunustama käytävä Kingstownin puutarhassa.",
+        "selite": "Käytävää reunustavat palmut ja punakukkaiset pensasaidat kasvitieteellisessä puutarhassa vuonna 2012.",
+        "lahde": "giggel, Wikimedia Commons (CC BY 3.0)"
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -2785,28 +2953,55 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "giggel, Wikimedia Commons (CC BY 3.0)",
-        "selite": "Kingstownin kasvitieteellisen puutarhan kasvillisuutta vuonna 2012.",
-        "lyhyt": "Kingstownin kasvitieteellisen puutarhan kasvillisuutta vuonna 2012.",
+        "selite": "Käytävää reunustavat palmut ja punakukkaiset pensasaidat kasvitieteellisessä puutarhassa vuonna 2012.",
+        "lyhyt": "Palmujen reunustama käytävä Kingstownin puutarhassa.",
         "tiedosto": "St. Vincent, Karibik - Botanical Garden of Kingstown - panoramio.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "d32acbf1cdb20106854a566e67882358ac25f05ebd6837284edd3ac88bd72dce",
-      "targetAfterSHA256": "c48b0feb6a254d87436c58828b4a567b2d67cdc6b9668fce301cf8f676cedba4",
-      "contextAfterSHA256": "fbf366fdbe61f79a148bd030a47f2aec317281ea6fd3bf6ec78ea55f35f33318",
+      "sourceContentAfterSHA256": "95c17f396512a50ede234c47eb61a53416b8a625301ed3a20f51c474801bc9ed",
+      "targetAfterSHA256": "b9bd10e5804865214f995c56cc9809f42917a37411b738c46f7c36d0ca030a56",
+      "contextAfterSHA256": "0afb14d701baa8c443c460570abfcbbed57b072e1fd71fdf417347476abfbef6",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "d32acbf1cdb20106854a566e67882358ac25f05ebd6837284edd3ac88bd72dce",
+        "targetAfterSHA256": "c48b0feb6a254d87436c58828b4a567b2d67cdc6b9668fce301cf8f676cedba4",
+        "contextAfterSHA256": "fbf366fdbe61f79a148bd030a47f2aec317281ea6fd3bf6ec78ea55f35f33318",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "c48b0feb6a254d87436c58828b4a567b2d67cdc6b9668fce301cf8f676cedba4",
+          "semanticContextSHA256": "fbf366fdbe61f79a148bd030a47f2aec317281ea6fd3bf6ec78ea55f35f33318",
+          "subjectTitle": "Kingstownin kasvitieteellinen puutarha",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "95c17f396512a50ede234c47eb61a53416b8a625301ed3a20f51c474801bc9ed",
+        "sameImageNativeSHA256": "8e284ce6021da00bf11e3d173a1cae5c8b88cda4de7886780829efa4fb57ce80",
+        "sameImageExportSHA256": "8e284ce6021da00bf11e3d173a1cae5c8b88cda4de7886780829efa4fb57ce80",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     }
   ],
   "runtimeIntegrationPending": true,
   "ownerAcceptedNotImpliedByAuthorization": false,
   "gameIntegrated": false,
   "allAssetsExplicitlyOwnerApproved": true,
-  "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+  "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+  "task118ExcludedAssets": [],
+  "task118TextRevision": true,
+  "independentTextResamplePending": true,
+  "textAcceptanceVerified": false,
+  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task118/immutable-media-history/e12/kingstown/fcaa4849de7e9d1fe01bdd538a4a803299d5b093f75fb9e05d7fe81bb3823361.json",
+  "task118ReboundAt": "2026-10-13T16:31:26.294630+00:00"
 }

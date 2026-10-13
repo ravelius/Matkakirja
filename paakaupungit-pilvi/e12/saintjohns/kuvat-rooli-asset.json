@@ -3,7 +3,7 @@
   "era": "e12",
   "city": "saintjohns",
   "authorization": "hyväksyn kaikki tekemäsi kuvat. toimita ne claudelle. claudelta saat uusia ohjeita jatkoa varten",
-  "sourceContentAfterSHA256": "166dc94921e2aa33bf3ddf2c42518d76eeed26d64ef95b72811effedd4aea96a",
+  "sourceContentAfterSHA256": "78f3cad311f86ec2da935449a89fae03b96a6b13a2ae5d2f0e7d529c249aefec",
   "assets": [
     {
       "era": "e12",
@@ -28,10 +28,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/saintjohns/e12-saintjohns-O4-0a57ed7930-92d979e2804c.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva maissijauhosta valmistetusta fungeesta.",
-        "lyhyt": "Havainnekuva maissijauhosta valmistetusta fungeesta."
+        "selite": "Havainnekuva maissijauhosta valmistetusta fungeesta."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -39,10 +39,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/saintjohns/e12-saintjohns-O4-0a57ed7930-92d979e2804c.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva maissijauhosta valmistetusta fungeesta.",
-        "lyhyt": "Havainnekuva maissijauhosta valmistetusta fungeesta."
+        "selite": "Havainnekuva maissijauhosta valmistetusta fungeesta."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -56,7 +56,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/saintjohns/sisalto.json",
-      "sourceContentSHA256": "166dc94921e2aa33bf3ddf2c42518d76eeed26d64ef95b72811effedd4aea96a",
+      "sourceContentSHA256": "78f3cad311f86ec2da935449a89fae03b96a6b13a2ae5d2f0e7d529c249aefec",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
         "semanticContextSHA256": "9f03f859e6a3cd56e816fffb17ff2baa4009397f857d852fac7f467d60e6546b",
@@ -280,9 +280,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -301,17 +301,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "166dc94921e2aa33bf3ddf2c42518d76eeed26d64ef95b72811effedd4aea96a",
+      "sourceContentAfterSHA256": "78f3cad311f86ec2da935449a89fae03b96a6b13a2ae5d2f0e7d529c249aefec",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
       "contextAfterSHA256": "9f03f859e6a3cd56e816fffb17ff2baa4009397f857d852fac7f467d60e6546b",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "166dc94921e2aa33bf3ddf2c42518d76eeed26d64ef95b72811effedd4aea96a",
+        "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "contextAfterSHA256": "9f03f859e6a3cd56e816fffb17ff2baa4009397f857d852fac7f467d60e6546b",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+          "semanticContextSHA256": "9f03f859e6a3cd56e816fffb17ff2baa4009397f857d852fac7f467d60e6546b",
+          "subjectTitle": "Mitä täällä syödään",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "78f3cad311f86ec2da935449a89fae03b96a6b13a2ae5d2f0e7d529c249aefec",
+        "sameImageNativeSHA256": "92d979e2804c73fcb1fcbc35bfa631c734cf63946d4d1ec64caac36ae6e9bba3",
+        "sameImageExportSHA256": "394cfb1e9c848c4fc8bd4f0bb8c654b166c85e3a723196079d130cec9315226e",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e12",
@@ -333,10 +354,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/saintjohns/e12-saintjohns-K1-4f2dd3f6f1-ef31ca033f5a.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Mäntypuun ja kiven materiaalihavainne katedraalin rakentamisen aiheeseen.",
-        "lyhyt": "Mäntypuun ja kiven materiaalihavainne katedraalin rakentamisen aiheeseen."
+        "selite": "Mäntypuun ja kiven materiaalihavainne katedraalin rakentamisen aiheeseen."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -344,10 +365,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/saintjohns/e12-saintjohns-K1-4f2dd3f6f1-ef31ca033f5a.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Mäntypuun ja kiven materiaalihavainne katedraalin rakentamisen aiheeseen.",
-        "lyhyt": "Mäntypuun ja kiven materiaalihavainne katedraalin rakentamisen aiheeseen."
+        "selite": "Mäntypuun ja kiven materiaalihavainne katedraalin rakentamisen aiheeseen."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -361,10 +382,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/saintjohns/sisalto.json",
-      "sourceContentSHA256": "166dc94921e2aa33bf3ddf2c42518d76eeed26d64ef95b72811effedd4aea96a",
+      "sourceContentSHA256": "78f3cad311f86ec2da935449a89fae03b96a6b13a2ae5d2f0e7d529c249aefec",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "2db94c44996a3837c4689e86b10ca5d9f8402de1b2aed1d2fdc7fd72f5d3c342",
-        "semanticContextSHA256": "2db94c44996a3837c4689e86b10ca5d9f8402de1b2aed1d2fdc7fd72f5d3c342",
+        "targetBeforeSHA256": "0d29de19dbdd0864286822aa86b46033cfabde9cddc30933f251afadca9b08bb",
+        "semanticContextSHA256": "0d29de19dbdd0864286822aa86b46033cfabde9cddc30933f251afadca9b08bb",
         "subjectTitle": "Rakennus rakennuksen sisällä",
         "targetState": "existing-target"
       },
@@ -588,9 +609,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -609,17 +630,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "166dc94921e2aa33bf3ddf2c42518d76eeed26d64ef95b72811effedd4aea96a",
-      "targetAfterSHA256": "2db94c44996a3837c4689e86b10ca5d9f8402de1b2aed1d2fdc7fd72f5d3c342",
-      "contextAfterSHA256": "2db94c44996a3837c4689e86b10ca5d9f8402de1b2aed1d2fdc7fd72f5d3c342",
+      "sourceContentAfterSHA256": "78f3cad311f86ec2da935449a89fae03b96a6b13a2ae5d2f0e7d529c249aefec",
+      "targetAfterSHA256": "0d29de19dbdd0864286822aa86b46033cfabde9cddc30933f251afadca9b08bb",
+      "contextAfterSHA256": "0d29de19dbdd0864286822aa86b46033cfabde9cddc30933f251afadca9b08bb",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "166dc94921e2aa33bf3ddf2c42518d76eeed26d64ef95b72811effedd4aea96a",
+        "targetAfterSHA256": "2db94c44996a3837c4689e86b10ca5d9f8402de1b2aed1d2fdc7fd72f5d3c342",
+        "contextAfterSHA256": "2db94c44996a3837c4689e86b10ca5d9f8402de1b2aed1d2fdc7fd72f5d3c342",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "2db94c44996a3837c4689e86b10ca5d9f8402de1b2aed1d2fdc7fd72f5d3c342",
+          "semanticContextSHA256": "2db94c44996a3837c4689e86b10ca5d9f8402de1b2aed1d2fdc7fd72f5d3c342",
+          "subjectTitle": "Rakennus rakennuksen sisällä",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "78f3cad311f86ec2da935449a89fae03b96a6b13a2ae5d2f0e7d529c249aefec",
+        "sameImageNativeSHA256": "ef31ca033f5aa40be50d9fed302add5dff6682e8cd42794da02f34a5db9bcf60",
+        "sameImageExportSHA256": "dc4e0c7674baf9a8d10793c4782f72bcb385d1320f8cbff3da5c93eb8e44d622",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e12",
@@ -641,10 +683,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/saintjohns/e12-saintjohns-L2-e6bc61a3ba-0fc2b0aa4490.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Tiilen ja liuskekiven havainnekuva Saint John’sin rakennusmääräysten aiheeseen.",
-        "lyhyt": "Tiilen ja liuskekiven havainnekuva Saint John’sin rakennusmääräysten aiheeseen."
+        "selite": "Tiilen ja liuskekiven havainnekuva Saint John’sin rakennusmääräysten aiheeseen."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -652,10 +694,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/saintjohns/e12-saintjohns-L2-e6bc61a3ba-0fc2b0aa4490.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Tiilen ja liuskekiven havainnekuva Saint John’sin rakennusmääräysten aiheeseen.",
-        "lyhyt": "Tiilen ja liuskekiven havainnekuva Saint John’sin rakennusmääräysten aiheeseen."
+        "selite": "Tiilen ja liuskekiven havainnekuva Saint John’sin rakennusmääräysten aiheeseen."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -669,7 +711,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/saintjohns/sisalto.json",
-      "sourceContentSHA256": "166dc94921e2aa33bf3ddf2c42518d76eeed26d64ef95b72811effedd4aea96a",
+      "sourceContentSHA256": "78f3cad311f86ec2da935449a89fae03b96a6b13a2ae5d2f0e7d529c249aefec",
       "semanticSourceBind": {
         "targetBeforeSHA256": "8d148180847c1ecf50ffbbc0032c55a7915c490d081310d7d3535e1690c4891b",
         "semanticContextSHA256": "8d148180847c1ecf50ffbbc0032c55a7915c490d081310d7d3535e1690c4891b",
@@ -896,9 +938,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -917,17 +959,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "166dc94921e2aa33bf3ddf2c42518d76eeed26d64ef95b72811effedd4aea96a",
+      "sourceContentAfterSHA256": "78f3cad311f86ec2da935449a89fae03b96a6b13a2ae5d2f0e7d529c249aefec",
       "targetAfterSHA256": "8d148180847c1ecf50ffbbc0032c55a7915c490d081310d7d3535e1690c4891b",
       "contextAfterSHA256": "8d148180847c1ecf50ffbbc0032c55a7915c490d081310d7d3535e1690c4891b",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "166dc94921e2aa33bf3ddf2c42518d76eeed26d64ef95b72811effedd4aea96a",
+        "targetAfterSHA256": "8d148180847c1ecf50ffbbc0032c55a7915c490d081310d7d3535e1690c4891b",
+        "contextAfterSHA256": "8d148180847c1ecf50ffbbc0032c55a7915c490d081310d7d3535e1690c4891b",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "8d148180847c1ecf50ffbbc0032c55a7915c490d081310d7d3535e1690c4891b",
+          "semanticContextSHA256": "8d148180847c1ecf50ffbbc0032c55a7915c490d081310d7d3535e1690c4891b",
+          "subjectTitle": "Palosta seurasi määräys katolle",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "78f3cad311f86ec2da935449a89fae03b96a6b13a2ae5d2f0e7d529c249aefec",
+        "sameImageNativeSHA256": "0fc2b0aa4490f032c8d788e576e4bac5caaad4fa075ea8abbcfd53dc185f2f19",
+        "sameImageExportSHA256": "e4d7b066e1c33fcffcf6435a87902506f94883e07a06b96fa9d9dc5f6168b93a",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e12",
@@ -949,10 +1012,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/saintjohns/e12-saintjohns-L3-63400a3c3b-1e96a7cfb1c7.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva opuntiakaktuksen piikikkäistä varsista.",
-        "lyhyt": "Havainnekuva opuntiakaktuksen piikikkäistä varsista."
+        "selite": "Havainnekuva opuntiakaktuksen piikikkäistä varsista."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -960,10 +1023,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/saintjohns/e12-saintjohns-L3-63400a3c3b-1e96a7cfb1c7.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva opuntiakaktuksen piikikkäistä varsista.",
-        "lyhyt": "Havainnekuva opuntiakaktuksen piikikkäistä varsista."
+        "selite": "Havainnekuva opuntiakaktuksen piikikkäistä varsista."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -977,7 +1040,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/saintjohns/sisalto.json",
-      "sourceContentSHA256": "166dc94921e2aa33bf3ddf2c42518d76eeed26d64ef95b72811effedd4aea96a",
+      "sourceContentSHA256": "78f3cad311f86ec2da935449a89fae03b96a6b13a2ae5d2f0e7d529c249aefec",
       "semanticSourceBind": {
         "targetBeforeSHA256": "a1e341f7d2642d0f6b4656d6111e71bc050fd7915043e0b160aebbfc7347c112",
         "semanticContextSHA256": "a1e341f7d2642d0f6b4656d6111e71bc050fd7915043e0b160aebbfc7347c112",
@@ -1206,9 +1269,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -1227,17 +1290,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "166dc94921e2aa33bf3ddf2c42518d76eeed26d64ef95b72811effedd4aea96a",
+      "sourceContentAfterSHA256": "78f3cad311f86ec2da935449a89fae03b96a6b13a2ae5d2f0e7d529c249aefec",
       "targetAfterSHA256": "a1e341f7d2642d0f6b4656d6111e71bc050fd7915043e0b160aebbfc7347c112",
       "contextAfterSHA256": "a1e341f7d2642d0f6b4656d6111e71bc050fd7915043e0b160aebbfc7347c112",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "166dc94921e2aa33bf3ddf2c42518d76eeed26d64ef95b72811effedd4aea96a",
+        "targetAfterSHA256": "a1e341f7d2642d0f6b4656d6111e71bc050fd7915043e0b160aebbfc7347c112",
+        "contextAfterSHA256": "a1e341f7d2642d0f6b4656d6111e71bc050fd7915043e0b160aebbfc7347c112",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "a1e341f7d2642d0f6b4656d6111e71bc050fd7915043e0b160aebbfc7347c112",
+          "semanticContextSHA256": "a1e341f7d2642d0f6b4656d6111e71bc050fd7915043e0b160aebbfc7347c112",
+          "subjectTitle": "Kaktuksista tuli veron aihe",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "78f3cad311f86ec2da935449a89fae03b96a6b13a2ae5d2f0e7d529c249aefec",
+        "sameImageNativeSHA256": "1e96a7cfb1c755577f65eea53ec1109ea93c0312c412bf291e0adaa9df3ac86a",
+        "sameImageExportSHA256": "02f0844ce8ec3719db1f47070f204f1b88d3d4a1426a4ecb29dfb1e971510c48",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e12",
@@ -1259,10 +1343,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/saintjohns/e12-saintjohns-TRAVELER-ce838f1ee2-c2c1ed42d72c.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva Saint John’sin oppaan butter bread -aiheesta.",
-        "lyhyt": "Havainnekuva Saint John’sin oppaan butter bread -aiheesta."
+        "selite": "Havainnekuva Saint John’sin oppaan butter bread -aiheesta."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -1270,10 +1354,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/saintjohns/e12-saintjohns-TRAVELER-ce838f1ee2-c2c1ed42d72c.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva Saint John’sin oppaan butter bread -aiheesta.",
-        "lyhyt": "Havainnekuva Saint John’sin oppaan butter bread -aiheesta."
+        "selite": "Havainnekuva Saint John’sin oppaan butter bread -aiheesta."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -1287,10 +1371,10 @@
         1536
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/saintjohns/sisalto.json",
-      "sourceContentSHA256": "166dc94921e2aa33bf3ddf2c42518d76eeed26d64ef95b72811effedd4aea96a",
+      "sourceContentSHA256": "78f3cad311f86ec2da935449a89fae03b96a6b13a2ae5d2f0e7d529c249aefec",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "637af9eb74ef875cd02e1a5f38b7e2d5202546087dbccd95644f58e4bc9f7cc1",
+        "semanticContextSHA256": "857855ddb0bd674899f960399fc9fef63cdf817ba5541204ef1088b97a1128a5",
         "subjectTitle": "Matkailijalle",
         "targetState": "existing-target"
       },
@@ -1728,9 +1812,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -1749,17 +1833,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "166dc94921e2aa33bf3ddf2c42518d76eeed26d64ef95b72811effedd4aea96a",
+      "sourceContentAfterSHA256": "78f3cad311f86ec2da935449a89fae03b96a6b13a2ae5d2f0e7d529c249aefec",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "637af9eb74ef875cd02e1a5f38b7e2d5202546087dbccd95644f58e4bc9f7cc1",
+      "contextAfterSHA256": "857855ddb0bd674899f960399fc9fef63cdf817ba5541204ef1088b97a1128a5",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "166dc94921e2aa33bf3ddf2c42518d76eeed26d64ef95b72811effedd4aea96a",
+        "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "contextAfterSHA256": "637af9eb74ef875cd02e1a5f38b7e2d5202546087dbccd95644f58e4bc9f7cc1",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+          "semanticContextSHA256": "637af9eb74ef875cd02e1a5f38b7e2d5202546087dbccd95644f58e4bc9f7cc1",
+          "subjectTitle": "Matkailijalle",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "78f3cad311f86ec2da935449a89fae03b96a6b13a2ae5d2f0e7d529c249aefec",
+        "sameImageNativeSHA256": "c2c1ed42d72c349ee9400308a3d3feb25c35e523dec158ab0ee27d7c30dcdc1c",
+        "sameImageExportSHA256": "fa31bd071d8e7b141fe31061aa62fa70b3e6a875824f923b91126d164630b202",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e12",
@@ -1781,10 +1886,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/saintjohns/e12-saintjohns-K4-a00d1db0d6-903ee2e075af.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva tekstissä mainituista ruokatorin raaka-aineista.",
-        "lyhyt": "Havainnekuva tekstissä mainituista ruokatorin raaka-aineista."
+        "selite": "Havainnekuva tekstissä mainituista ruokatorin raaka-aineista."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -1792,10 +1897,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/saintjohns/e12-saintjohns-K4-a00d1db0d6-903ee2e075af.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva tekstissä mainituista ruokatorin raaka-aineista.",
-        "lyhyt": "Havainnekuva tekstissä mainituista ruokatorin raaka-aineista."
+        "selite": "Havainnekuva tekstissä mainituista ruokatorin raaka-aineista."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -1809,7 +1914,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/saintjohns/sisalto.json",
-      "sourceContentSHA256": "166dc94921e2aa33bf3ddf2c42518d76eeed26d64ef95b72811effedd4aea96a",
+      "sourceContentSHA256": "78f3cad311f86ec2da935449a89fae03b96a6b13a2ae5d2f0e7d529c249aefec",
       "semanticSourceBind": {
         "targetBeforeSHA256": "ac17ea2113816e46a984675930844cca9aef07cc579db5813ac56057c0bea9e3",
         "semanticContextSHA256": "ac17ea2113816e46a984675930844cca9aef07cc579db5813ac56057c0bea9e3",
@@ -2046,9 +2151,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -2067,17 +2172,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "166dc94921e2aa33bf3ddf2c42518d76eeed26d64ef95b72811effedd4aea96a",
+      "sourceContentAfterSHA256": "78f3cad311f86ec2da935449a89fae03b96a6b13a2ae5d2f0e7d529c249aefec",
       "targetAfterSHA256": "ac17ea2113816e46a984675930844cca9aef07cc579db5813ac56057c0bea9e3",
       "contextAfterSHA256": "ac17ea2113816e46a984675930844cca9aef07cc579db5813ac56057c0bea9e3",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "166dc94921e2aa33bf3ddf2c42518d76eeed26d64ef95b72811effedd4aea96a",
+        "targetAfterSHA256": "ac17ea2113816e46a984675930844cca9aef07cc579db5813ac56057c0bea9e3",
+        "contextAfterSHA256": "ac17ea2113816e46a984675930844cca9aef07cc579db5813ac56057c0bea9e3",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "ac17ea2113816e46a984675930844cca9aef07cc579db5813ac56057c0bea9e3",
+          "semanticContextSHA256": "ac17ea2113816e46a984675930844cca9aef07cc579db5813ac56057c0bea9e3",
+          "subjectTitle": "Sataman kauppa ja torin ruoka",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "78f3cad311f86ec2da935449a89fae03b96a6b13a2ae5d2f0e7d529c249aefec",
+        "sameImageNativeSHA256": "903ee2e075af7983ef0490c23f9c78539d5ff5af4cff8805cfdc870118f58182",
+        "sameImageExportSHA256": "c1055f76de273d5a64ee877e54ed9c409ee8070aa89c595fdbc38688dcc2a9b1",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e12",
@@ -2096,23 +2222,23 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/saintjohns/photo-72bf118a45bfbb2dc375.jpg",
         "suora": true,
         "lahde": "Balou46, Commons (CC BY-SA 4.0)",
-        "selite": "Saint John’sin Deepwater Harbourin merimaisemaa vuonna 2015.",
-        "lyhyt": "Saint John’sin Deepwater Harbourin merimaisemaa vuonna 2015.",
+        "selite": "Veden takana näkyy sataman kontteja ja nosturi; linnakkeen jäänteet kohoavat vihreällä niemellä.",
+        "lyhyt": "Saint John’sin satamaa ja Fort Jamesin suuntaa.",
         "tiedosto": "AG-Stjohns-fort-james.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Balou46, Commons (CC BY-SA 4.0)",
-        "selite": "Saint John’sin Deepwater Harbourin merimaisemaa vuonna 2015.",
-        "lyhyt": "Saint John’sin Deepwater Harbourin merimaisemaa vuonna 2015.",
+        "selite": "Veden takana näkyy sataman kontteja ja nosturi; linnakkeen jäänteet kohoavat vihreällä niemellä.",
+        "lyhyt": "Saint John’sin satamaa ja Fort Jamesin suuntaa.",
         "tiedosto": "AG-Stjohns-fort-james.jpg"
       },
       "runtimeMediaFieldPayload": {
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/saintjohns/photo-72bf118a45bfbb2dc375.jpg",
         "suora": true,
         "lahde": "Balou46, Commons (CC BY-SA 4.0)",
-        "selite": "Saint John’sin Deepwater Harbourin merimaisemaa vuonna 2015.",
-        "lyhyt": "Saint John’sin Deepwater Harbourin merimaisemaa vuonna 2015.",
+        "selite": "Veden takana näkyy sataman kontteja ja nosturi; linnakkeen jäänteet kohoavat vihreällä niemellä.",
+        "lyhyt": "Saint John’sin satamaa ja Fort Jamesin suuntaa.",
         "tiedosto": "AG-Stjohns-fort-james.jpg"
       },
       "runtimeRemoveMediaKeys": [],
@@ -2127,10 +2253,10 @@
         3104
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/saintjohns/sisalto.json",
-      "sourceContentSHA256": "166dc94921e2aa33bf3ddf2c42518d76eeed26d64ef95b72811effedd4aea96a",
+      "sourceContentSHA256": "78f3cad311f86ec2da935449a89fae03b96a6b13a2ae5d2f0e7d529c249aefec",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "872f86f84ddc3663b512874b08d1cf7d67e21b1553b3c285ca0c0692688f47a6",
-        "semanticContextSHA256": "872f86f84ddc3663b512874b08d1cf7d67e21b1553b3c285ca0c0692688f47a6",
+        "targetBeforeSHA256": "8a2101368748b22e2ab9141a4a806ef5256715c783b1c77119795a8471dbfdd6",
+        "semanticContextSHA256": "8a2101368748b22e2ab9141a4a806ef5256715c783b1c77119795a8471dbfdd6",
         "subjectTitle": "saintjohns — aito paikkavalokuva",
         "targetState": "existing-target"
       },
@@ -2369,9 +2495,9 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "AG-Stjohns-fort-james.jpg",
-        "lahde": "Balou46, Commons (CC BY-SA 4.0)",
-        "selite": "Saint John’sin Deepwater Harbourin merimaisemaa vuonna 2015.",
-        "lyhyt": "Saint John’sin Deepwater Harbourin merimaisemaa vuonna 2015."
+        "lyhyt": "Saint John’sin satamaa ja Fort Jamesin suuntaa.",
+        "selite": "Veden takana näkyy sataman kontteja ja nosturi; linnakkeen jäänteet kohoavat vihreällä niemellä.",
+        "lahde": "Balou46, Commons (CC BY-SA 4.0)"
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -2390,23 +2516,44 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Balou46, Commons (CC BY-SA 4.0)",
-        "selite": "Saint John’sin Deepwater Harbourin merimaisemaa vuonna 2015.",
-        "lyhyt": "Saint John’sin Deepwater Harbourin merimaisemaa vuonna 2015.",
+        "selite": "Veden takana näkyy sataman kontteja ja nosturi; linnakkeen jäänteet kohoavat vihreällä niemellä.",
+        "lyhyt": "Saint John’sin satamaa ja Fort Jamesin suuntaa.",
         "tiedosto": "AG-Stjohns-fort-james.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "166dc94921e2aa33bf3ddf2c42518d76eeed26d64ef95b72811effedd4aea96a",
-      "targetAfterSHA256": "872f86f84ddc3663b512874b08d1cf7d67e21b1553b3c285ca0c0692688f47a6",
-      "contextAfterSHA256": "872f86f84ddc3663b512874b08d1cf7d67e21b1553b3c285ca0c0692688f47a6",
+      "sourceContentAfterSHA256": "78f3cad311f86ec2da935449a89fae03b96a6b13a2ae5d2f0e7d529c249aefec",
+      "targetAfterSHA256": "8a2101368748b22e2ab9141a4a806ef5256715c783b1c77119795a8471dbfdd6",
+      "contextAfterSHA256": "8a2101368748b22e2ab9141a4a806ef5256715c783b1c77119795a8471dbfdd6",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "166dc94921e2aa33bf3ddf2c42518d76eeed26d64ef95b72811effedd4aea96a",
+        "targetAfterSHA256": "872f86f84ddc3663b512874b08d1cf7d67e21b1553b3c285ca0c0692688f47a6",
+        "contextAfterSHA256": "872f86f84ddc3663b512874b08d1cf7d67e21b1553b3c285ca0c0692688f47a6",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "872f86f84ddc3663b512874b08d1cf7d67e21b1553b3c285ca0c0692688f47a6",
+          "semanticContextSHA256": "872f86f84ddc3663b512874b08d1cf7d67e21b1553b3c285ca0c0692688f47a6",
+          "subjectTitle": "saintjohns — aito paikkavalokuva",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "78f3cad311f86ec2da935449a89fae03b96a6b13a2ae5d2f0e7d529c249aefec",
+        "sameImageNativeSHA256": "72bf118a45bfbb2dc3752046695182cfa35a8445a8192e835c9de8c782662e50",
+        "sameImageExportSHA256": "72bf118a45bfbb2dc3752046695182cfa35a8445a8192e835c9de8c782662e50",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e12",
@@ -2428,23 +2575,23 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/saintjohns/c1-49a90da2f9e5770a1992.jpg",
         "suora": true,
         "lahde": "Balou46, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Saint John’sin laaja kaupunkipanoraama marraskuussa 2015.",
-        "lyhyt": "Saint John’sin laaja kaupunkipanoraama marraskuussa 2015.",
+        "selite": "Matala rakennuskanta levittäytyy satamasta rinteille; katedraalin kaksi tornia erottuvat taustalla.",
+        "lyhyt": "Saint John’sin keskustan panoraama.",
         "tiedosto": "AG-Stjohns-pano-01.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Balou46, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Saint John’sin laaja kaupunkipanoraama marraskuussa 2015.",
-        "lyhyt": "Saint John’sin laaja kaupunkipanoraama marraskuussa 2015.",
+        "selite": "Matala rakennuskanta levittäytyy satamasta rinteille; katedraalin kaksi tornia erottuvat taustalla.",
+        "lyhyt": "Saint John’sin keskustan panoraama.",
         "tiedosto": "AG-Stjohns-pano-01.jpg"
       },
       "runtimeMediaFieldPayload": {
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/saintjohns/c1-49a90da2f9e5770a1992.jpg",
         "suora": true,
         "lahde": "Balou46, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Saint John’sin laaja kaupunkipanoraama marraskuussa 2015.",
-        "lyhyt": "Saint John’sin laaja kaupunkipanoraama marraskuussa 2015.",
+        "selite": "Matala rakennuskanta levittäytyy satamasta rinteille; katedraalin kaksi tornia erottuvat taustalla.",
+        "lyhyt": "Saint John’sin keskustan panoraama.",
         "tiedosto": "AG-Stjohns-pano-01.jpg"
       },
       "runtimeRemoveMediaKeys": [],
@@ -2459,10 +2606,10 @@
         2522
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/saintjohns/sisalto.json",
-      "sourceContentSHA256": "166dc94921e2aa33bf3ddf2c42518d76eeed26d64ef95b72811effedd4aea96a",
+      "sourceContentSHA256": "78f3cad311f86ec2da935449a89fae03b96a6b13a2ae5d2f0e7d529c249aefec",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "e9139ba362eb26433ba7a4b7847eb6a491d28b197a33a0d8af32230a1b7dd5ce",
-        "semanticContextSHA256": "e9139ba362eb26433ba7a4b7847eb6a491d28b197a33a0d8af32230a1b7dd5ce",
+        "targetBeforeSHA256": "84b18f733665953d4da947a6d6f38c02c79b6347c99edc817a8db532015156e2",
+        "semanticContextSHA256": "84b18f733665953d4da947a6d6f38c02c79b6347c99edc817a8db532015156e2",
         "subjectTitle": "Saint John's",
         "targetState": "existing-target"
       },
@@ -2703,9 +2850,9 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "AG-Stjohns-pano-01.jpg",
-        "lahde": "Balou46, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Saint John’sin laaja kaupunkipanoraama marraskuussa 2015.",
-        "lyhyt": "Saint John’sin laaja kaupunkipanoraama marraskuussa 2015."
+        "lyhyt": "Saint John’sin keskustan panoraama.",
+        "selite": "Matala rakennuskanta levittäytyy satamasta rinteille; katedraalin kaksi tornia erottuvat taustalla.",
+        "lahde": "Balou46, Wikimedia Commons (CC BY-SA 4.0)"
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -2724,28 +2871,55 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Balou46, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Saint John’sin laaja kaupunkipanoraama marraskuussa 2015.",
-        "lyhyt": "Saint John’sin laaja kaupunkipanoraama marraskuussa 2015.",
+        "selite": "Matala rakennuskanta levittäytyy satamasta rinteille; katedraalin kaksi tornia erottuvat taustalla.",
+        "lyhyt": "Saint John’sin keskustan panoraama.",
         "tiedosto": "AG-Stjohns-pano-01.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "166dc94921e2aa33bf3ddf2c42518d76eeed26d64ef95b72811effedd4aea96a",
-      "targetAfterSHA256": "e9139ba362eb26433ba7a4b7847eb6a491d28b197a33a0d8af32230a1b7dd5ce",
-      "contextAfterSHA256": "e9139ba362eb26433ba7a4b7847eb6a491d28b197a33a0d8af32230a1b7dd5ce",
+      "sourceContentAfterSHA256": "78f3cad311f86ec2da935449a89fae03b96a6b13a2ae5d2f0e7d529c249aefec",
+      "targetAfterSHA256": "84b18f733665953d4da947a6d6f38c02c79b6347c99edc817a8db532015156e2",
+      "contextAfterSHA256": "84b18f733665953d4da947a6d6f38c02c79b6347c99edc817a8db532015156e2",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "166dc94921e2aa33bf3ddf2c42518d76eeed26d64ef95b72811effedd4aea96a",
+        "targetAfterSHA256": "e9139ba362eb26433ba7a4b7847eb6a491d28b197a33a0d8af32230a1b7dd5ce",
+        "contextAfterSHA256": "e9139ba362eb26433ba7a4b7847eb6a491d28b197a33a0d8af32230a1b7dd5ce",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "e9139ba362eb26433ba7a4b7847eb6a491d28b197a33a0d8af32230a1b7dd5ce",
+          "semanticContextSHA256": "e9139ba362eb26433ba7a4b7847eb6a491d28b197a33a0d8af32230a1b7dd5ce",
+          "subjectTitle": "Saint John's",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "78f3cad311f86ec2da935449a89fae03b96a6b13a2ae5d2f0e7d529c249aefec",
+        "sameImageNativeSHA256": "49a90da2f9e5770a199249b41297a1ca5eee0124194125b40b26aed570dd224c",
+        "sameImageExportSHA256": "49a90da2f9e5770a199249b41297a1ca5eee0124194125b40b26aed570dd224c",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     }
   ],
   "runtimeIntegrationPending": true,
   "ownerAcceptedNotImpliedByAuthorization": false,
   "gameIntegrated": false,
   "allAssetsExplicitlyOwnerApproved": true,
-  "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+  "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+  "task118ExcludedAssets": [],
+  "task118TextRevision": true,
+  "independentTextResamplePending": true,
+  "textAcceptanceVerified": false,
+  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task118/immutable-media-history/e12/saintjohns/c1a823e97e2eea8a9ef95b362b988b47e53302d01567cd1e69fcf470b84e8d89.json",
+  "task118ReboundAt": "2026-10-13T16:31:26.405004+00:00"
 }

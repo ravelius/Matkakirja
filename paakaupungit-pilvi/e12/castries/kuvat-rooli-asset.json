@@ -3,7 +3,7 @@
   "era": "e12",
   "city": "castries",
   "authorization": "hyväksyn kaikki tekemäsi kuvat. toimita ne claudelle. claudelta saat uusia ohjeita jatkoa varten",
-  "sourceContentAfterSHA256": "be20029c24f7e599af388976450f7efbb53117352c7843c63495ce0fc5eed900",
+  "sourceContentAfterSHA256": "629c56a144c8197877b6fc40643ce7929c6bd143cf8d71d480451d9883363917",
   "assets": [
     {
       "era": "e12",
@@ -28,10 +28,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/castries/e12-castries-O4-391fd8e494-83a5ffddf840.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva Castriesin ruokatorin kasvis- ja yrttiaiheesta.",
-        "lyhyt": "Havainnekuva Castriesin ruokatorin kasvis- ja yrttiaiheesta."
+        "selite": "Havainnekuva Castriesin ruokatorin kasvis- ja yrttiaiheesta."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -39,10 +39,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/castries/e12-castries-O4-391fd8e494-83a5ffddf840.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva Castriesin ruokatorin kasvis- ja yrttiaiheesta.",
-        "lyhyt": "Havainnekuva Castriesin ruokatorin kasvis- ja yrttiaiheesta."
+        "selite": "Havainnekuva Castriesin ruokatorin kasvis- ja yrttiaiheesta."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -56,7 +56,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/castries/sisalto.json",
-      "sourceContentSHA256": "e5b0612495f534dceb34a7e5cfa90989717b0ab7460572daa1144dab27e7391c",
+      "sourceContentSHA256": "629c56a144c8197877b6fc40643ce7929c6bd143cf8d71d480451d9883363917",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
         "semanticContextSHA256": "823467df31beb8957d64ed1517151e74952e797f65feacbaf75cebb1c3fb0467",
@@ -280,9 +280,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -301,17 +301,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "be20029c24f7e599af388976450f7efbb53117352c7843c63495ce0fc5eed900",
+      "sourceContentAfterSHA256": "629c56a144c8197877b6fc40643ce7929c6bd143cf8d71d480451d9883363917",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
       "contextAfterSHA256": "823467df31beb8957d64ed1517151e74952e797f65feacbaf75cebb1c3fb0467",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "be20029c24f7e599af388976450f7efbb53117352c7843c63495ce0fc5eed900",
+        "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "contextAfterSHA256": "823467df31beb8957d64ed1517151e74952e797f65feacbaf75cebb1c3fb0467",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+          "semanticContextSHA256": "823467df31beb8957d64ed1517151e74952e797f65feacbaf75cebb1c3fb0467",
+          "subjectTitle": "Mitä täällä syödään",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "629c56a144c8197877b6fc40643ce7929c6bd143cf8d71d480451d9883363917",
+        "sameImageNativeSHA256": "83a5ffddf8400d481a9b51ead2828a7a20cb7a4829a3ceb2bfdadc853ff073d3",
+        "sameImageExportSHA256": "41328b56d1cff89462c72b1fcdcda97ca2a84d4cb3c8bb311a01f82a543e6ef3",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e12",
@@ -333,10 +354,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/castries/e12-castries-K1-9e3589437f-de9b4c3c6388.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Kivihiilen materiaalihavainne Castriesin sataman polttoainekaupan aiheeseen.",
-        "lyhyt": "Kivihiilen materiaalihavainne Castriesin sataman polttoainekaupan aiheeseen."
+        "selite": "Kivihiilen materiaalihavainne Castriesin sataman polttoainekaupan aiheeseen."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -344,10 +365,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/castries/e12-castries-K1-9e3589437f-de9b4c3c6388.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Kivihiilen materiaalihavainne Castriesin sataman polttoainekaupan aiheeseen.",
-        "lyhyt": "Kivihiilen materiaalihavainne Castriesin sataman polttoainekaupan aiheeseen."
+        "selite": "Kivihiilen materiaalihavainne Castriesin sataman polttoainekaupan aiheeseen."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -361,7 +382,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/castries/sisalto.json",
-      "sourceContentSHA256": "e5b0612495f534dceb34a7e5cfa90989717b0ab7460572daa1144dab27e7391c",
+      "sourceContentSHA256": "629c56a144c8197877b6fc40643ce7929c6bd143cf8d71d480451d9883363917",
       "semanticSourceBind": {
         "targetBeforeSHA256": "7a619f00b361e557da64e0479bd103f256113241d7a577295c5c4e1ad9887bdc",
         "semanticContextSHA256": "7a619f00b361e557da64e0479bd103f256113241d7a577295c5c4e1ad9887bdc",
@@ -588,9 +609,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -609,17 +630,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "be20029c24f7e599af388976450f7efbb53117352c7843c63495ce0fc5eed900",
+      "sourceContentAfterSHA256": "629c56a144c8197877b6fc40643ce7929c6bd143cf8d71d480451d9883363917",
       "targetAfterSHA256": "7a619f00b361e557da64e0479bd103f256113241d7a577295c5c4e1ad9887bdc",
       "contextAfterSHA256": "7a619f00b361e557da64e0479bd103f256113241d7a577295c5c4e1ad9887bdc",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "be20029c24f7e599af388976450f7efbb53117352c7843c63495ce0fc5eed900",
+        "targetAfterSHA256": "7a619f00b361e557da64e0479bd103f256113241d7a577295c5c4e1ad9887bdc",
+        "contextAfterSHA256": "7a619f00b361e557da64e0479bd103f256113241d7a577295c5c4e1ad9887bdc",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "7a619f00b361e557da64e0479bd103f256113241d7a577295c5c4e1ad9887bdc",
+          "semanticContextSHA256": "7a619f00b361e557da64e0479bd103f256113241d7a577295c5c4e1ad9887bdc",
+          "subjectTitle": "Höyrylaivan ostoslista",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "629c56a144c8197877b6fc40643ce7929c6bd143cf8d71d480451d9883363917",
+        "sameImageNativeSHA256": "de9b4c3c63886ad70c3f9377be37d54575a7d182162c1083debe1d8467254540",
+        "sameImageExportSHA256": "98768bacf35862757dedb9af662b25750e48851c911747e9a0143df6869c63a1",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e12",
@@ -641,10 +683,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/castries/e12-castries-L3-9f6a4d437b-a33184694081.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Työpöydän havainnekuva Arthur Lewisin varhaisen kirjurityön aiheeseen.",
-        "lyhyt": "Työpöydän havainnekuva Arthur Lewisin varhaisen kirjurityön aiheeseen."
+        "selite": "Työpöydän havainnekuva Arthur Lewisin varhaisen kirjurityön aiheeseen."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -652,10 +694,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/castries/e12-castries-L3-9f6a4d437b-a33184694081.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Työpöydän havainnekuva Arthur Lewisin varhaisen kirjurityön aiheeseen.",
-        "lyhyt": "Työpöydän havainnekuva Arthur Lewisin varhaisen kirjurityön aiheeseen."
+        "selite": "Työpöydän havainnekuva Arthur Lewisin varhaisen kirjurityön aiheeseen."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -669,7 +711,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/castries/sisalto.json",
-      "sourceContentSHA256": "e5b0612495f534dceb34a7e5cfa90989717b0ab7460572daa1144dab27e7391c",
+      "sourceContentSHA256": "629c56a144c8197877b6fc40643ce7929c6bd143cf8d71d480451d9883363917",
       "semanticSourceBind": {
         "targetBeforeSHA256": "a74a6461b7f89da8a523944f360c056474e264fbc7f63b895c353acbb1087947",
         "semanticContextSHA256": "a74a6461b7f89da8a523944f360c056474e264fbc7f63b895c353acbb1087947",
@@ -893,9 +935,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -914,17 +956,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "be20029c24f7e599af388976450f7efbb53117352c7843c63495ce0fc5eed900",
+      "sourceContentAfterSHA256": "629c56a144c8197877b6fc40643ce7929c6bd143cf8d71d480451d9883363917",
       "targetAfterSHA256": "a74a6461b7f89da8a523944f360c056474e264fbc7f63b895c353acbb1087947",
       "contextAfterSHA256": "a74a6461b7f89da8a523944f360c056474e264fbc7f63b895c353acbb1087947",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "be20029c24f7e599af388976450f7efbb53117352c7843c63495ce0fc5eed900",
+        "targetAfterSHA256": "a74a6461b7f89da8a523944f360c056474e264fbc7f63b895c353acbb1087947",
+        "contextAfterSHA256": "a74a6461b7f89da8a523944f360c056474e264fbc7f63b895c353acbb1087947",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "a74a6461b7f89da8a523944f360c056474e264fbc7f63b895c353acbb1087947",
+          "semanticContextSHA256": "a74a6461b7f89da8a523944f360c056474e264fbc7f63b895c353acbb1087947",
+          "subjectTitle": "Kirjuri ennen taloustieteilijää",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "629c56a144c8197877b6fc40643ce7929c6bd143cf8d71d480451d9883363917",
+        "sameImageNativeSHA256": "a331846940818e4c069df21cfb8dceb96b3d9a666d84a268f1e2667298ecc53a",
+        "sameImageExportSHA256": "4c50aebbdf6ec0a815c8e00878e16929d3660620bce5e04c59a345868987ec94",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e12",
@@ -946,10 +1009,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/castries/e12-castries-L4-44fd139707-08086e93e518.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Kirjahavainnekuva Derek Walcottin ensimmäisen julkaisun aiheeseen.",
-        "lyhyt": "Kirjahavainnekuva Derek Walcottin ensimmäisen julkaisun aiheeseen."
+        "selite": "Kirjahavainnekuva Derek Walcottin ensimmäisen julkaisun aiheeseen."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -957,10 +1020,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/castries/e12-castries-L4-44fd139707-08086e93e518.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Kirjahavainnekuva Derek Walcottin ensimmäisen julkaisun aiheeseen.",
-        "lyhyt": "Kirjahavainnekuva Derek Walcottin ensimmäisen julkaisun aiheeseen."
+        "selite": "Kirjahavainnekuva Derek Walcottin ensimmäisen julkaisun aiheeseen."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -974,7 +1037,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/castries/sisalto.json",
-      "sourceContentSHA256": "e5b0612495f534dceb34a7e5cfa90989717b0ab7460572daa1144dab27e7391c",
+      "sourceContentSHA256": "629c56a144c8197877b6fc40643ce7929c6bd143cf8d71d480451d9883363917",
       "semanticSourceBind": {
         "targetBeforeSHA256": "11c4bcaa392537008485febb4ccb287b8c4180c76f2e5a417351a62a67487fee",
         "semanticContextSHA256": "11c4bcaa392537008485febb4ccb287b8c4180c76f2e5a417351a62a67487fee",
@@ -1201,9 +1264,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -1222,17 +1285,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "be20029c24f7e599af388976450f7efbb53117352c7843c63495ce0fc5eed900",
+      "sourceContentAfterSHA256": "629c56a144c8197877b6fc40643ce7929c6bd143cf8d71d480451d9883363917",
       "targetAfterSHA256": "11c4bcaa392537008485febb4ccb287b8c4180c76f2e5a417351a62a67487fee",
       "contextAfterSHA256": "11c4bcaa392537008485febb4ccb287b8c4180c76f2e5a417351a62a67487fee",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "be20029c24f7e599af388976450f7efbb53117352c7843c63495ce0fc5eed900",
+        "targetAfterSHA256": "11c4bcaa392537008485febb4ccb287b8c4180c76f2e5a417351a62a67487fee",
+        "contextAfterSHA256": "11c4bcaa392537008485febb4ccb287b8c4180c76f2e5a417351a62a67487fee",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "11c4bcaa392537008485febb4ccb287b8c4180c76f2e5a417351a62a67487fee",
+          "semanticContextSHA256": "11c4bcaa392537008485febb4ccb287b8c4180c76f2e5a417351a62a67487fee",
+          "subjectTitle": "Runokirja äidin avustuksella",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "629c56a144c8197877b6fc40643ce7929c6bd143cf8d71d480451d9883363917",
+        "sameImageNativeSHA256": "08086e93e518286ab3805a832c786648017cc1ec258231af60c1c18fac1d83db",
+        "sameImageExportSHA256": "183e71edf7108652a77aa3e1f3161e989cd324e6499b262748f8963fd97ab8d7",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e12",
@@ -1257,10 +1341,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/castries/e12-castries-O2-8d09d668af-f0cab4e66416.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva Castriesin opastekstin mauste- ja yrttiaiheesta.",
-        "lyhyt": "Havainnekuva Castriesin opastekstin mauste- ja yrttiaiheesta."
+        "selite": "Havainnekuva Castriesin opastekstin mauste- ja yrttiaiheesta."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -1268,10 +1352,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/castries/e12-castries-O2-8d09d668af-f0cab4e66416.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva Castriesin opastekstin mauste- ja yrttiaiheesta.",
-        "lyhyt": "Havainnekuva Castriesin opastekstin mauste- ja yrttiaiheesta."
+        "selite": "Havainnekuva Castriesin opastekstin mauste- ja yrttiaiheesta."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -1285,7 +1369,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/castries/sisalto.json",
-      "sourceContentSHA256": "e5b0612495f534dceb34a7e5cfa90989717b0ab7460572daa1144dab27e7391c",
+      "sourceContentSHA256": "629c56a144c8197877b6fc40643ce7929c6bd143cf8d71d480451d9883363917",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
         "semanticContextSHA256": "bf958290498f05d5412b1f37ea960e28ad68e95e80ea8683016684a36c6420f4",
@@ -1524,9 +1608,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -1545,17 +1629,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "be20029c24f7e599af388976450f7efbb53117352c7843c63495ce0fc5eed900",
+      "sourceContentAfterSHA256": "629c56a144c8197877b6fc40643ce7929c6bd143cf8d71d480451d9883363917",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
       "contextAfterSHA256": "bf958290498f05d5412b1f37ea960e28ad68e95e80ea8683016684a36c6420f4",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "be20029c24f7e599af388976450f7efbb53117352c7843c63495ce0fc5eed900",
+        "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "contextAfterSHA256": "bf958290498f05d5412b1f37ea960e28ad68e95e80ea8683016684a36c6420f4",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+          "semanticContextSHA256": "bf958290498f05d5412b1f37ea960e28ad68e95e80ea8683016684a36c6420f4",
+          "subjectTitle": "Tori ja runoilijan aukio",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "629c56a144c8197877b6fc40643ce7929c6bd143cf8d71d480451d9883363917",
+        "sameImageNativeSHA256": "f0cab4e66416dfddfee459cf9f52246e48789f9afc0082c6ebc76042a62a7351",
+        "sameImageExportSHA256": "bb962e10b9b52f7e663619de82989e7226a64ebf7286b806e4838cd543334dcc",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e12",
@@ -1574,16 +1679,16 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/castries/photo-ea848a9c1a77fe7d592b.jpg",
         "suora": true,
         "lahde": "Edgar El, Commons (CC BY 3.0)",
-        "selite": "Castriesin rannikon luonnonmaisemaa vuonna 2012.",
-        "lyhyt": "Castriesin rannikon luonnonmaisemaa vuonna 2012.",
+        "selite": "Aallot murtuvat kiviin, ja rantakasvillisuus täyttää kuvan etualaa.",
+        "lyhyt": "Saint Lucian kivikkoista rannikkoa Bagshawsin luona.",
         "tiedosto": "Coast at the Baghaws Studios - panoramio.jpg",
         "vuosi": "2012"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Edgar El, Commons (CC BY 3.0)",
-        "selite": "Castriesin rannikon luonnonmaisemaa vuonna 2012.",
-        "lyhyt": "Castriesin rannikon luonnonmaisemaa vuonna 2012.",
+        "selite": "Aallot murtuvat kiviin, ja rantakasvillisuus täyttää kuvan etualaa.",
+        "lyhyt": "Saint Lucian kivikkoista rannikkoa Bagshawsin luona.",
         "tiedosto": "Coast at the Baghaws Studios - panoramio.jpg",
         "vuosi": "2012"
       },
@@ -1591,8 +1696,8 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/castries/photo-ea848a9c1a77fe7d592b.jpg",
         "suora": true,
         "lahde": "Edgar El, Commons (CC BY 3.0)",
-        "selite": "Castriesin rannikon luonnonmaisemaa vuonna 2012.",
-        "lyhyt": "Castriesin rannikon luonnonmaisemaa vuonna 2012.",
+        "selite": "Aallot murtuvat kiviin, ja rantakasvillisuus täyttää kuvan etualaa.",
+        "lyhyt": "Saint Lucian kivikkoista rannikkoa Bagshawsin luona.",
         "tiedosto": "Coast at the Baghaws Studios - panoramio.jpg",
         "vuosi": "2012"
       },
@@ -1608,10 +1713,10 @@
         3000
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/castries/sisalto.json",
-      "sourceContentSHA256": "e5b0612495f534dceb34a7e5cfa90989717b0ab7460572daa1144dab27e7391c",
+      "sourceContentSHA256": "629c56a144c8197877b6fc40643ce7929c6bd143cf8d71d480451d9883363917",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "baa550719c9abb41f43ac625e3d29b049ee8b7d1f7506d1415b098d9debb8124",
-        "semanticContextSHA256": "baa550719c9abb41f43ac625e3d29b049ee8b7d1f7506d1415b098d9debb8124",
+        "targetBeforeSHA256": "9e1023ae29d90b71884f818de784105f188a34189def029d12164f682b4e9832",
+        "semanticContextSHA256": "9e1023ae29d90b71884f818de784105f188a34189def029d12164f682b4e9832",
         "subjectTitle": "castries — aito paikkavalokuva",
         "targetState": "existing-target"
       },
@@ -1781,9 +1886,9 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "Coast at the Baghaws Studios - panoramio.jpg",
+        "lyhyt": "Saint Lucian kivikkoista rannikkoa Bagshawsin luona.",
+        "selite": "Aallot murtuvat kiviin, ja rantakasvillisuus täyttää kuvan etualaa.",
         "lahde": "Edgar El, Commons (CC BY 3.0)",
-        "selite": "Castriesin rannikon luonnonmaisemaa vuonna 2012.",
-        "lyhyt": "Castriesin rannikon luonnonmaisemaa vuonna 2012.",
         "vuosi": "2012"
       },
       "preservePreviousMediaObjects": true,
@@ -1803,24 +1908,45 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Edgar El, Commons (CC BY 3.0)",
-        "selite": "Castriesin rannikon luonnonmaisemaa vuonna 2012.",
-        "lyhyt": "Castriesin rannikon luonnonmaisemaa vuonna 2012.",
+        "selite": "Aallot murtuvat kiviin, ja rantakasvillisuus täyttää kuvan etualaa.",
+        "lyhyt": "Saint Lucian kivikkoista rannikkoa Bagshawsin luona.",
         "tiedosto": "Coast at the Baghaws Studios - panoramio.jpg",
         "vuosi": "2012"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "be20029c24f7e599af388976450f7efbb53117352c7843c63495ce0fc5eed900",
-      "targetAfterSHA256": "baa550719c9abb41f43ac625e3d29b049ee8b7d1f7506d1415b098d9debb8124",
-      "contextAfterSHA256": "baa550719c9abb41f43ac625e3d29b049ee8b7d1f7506d1415b098d9debb8124",
+      "sourceContentAfterSHA256": "629c56a144c8197877b6fc40643ce7929c6bd143cf8d71d480451d9883363917",
+      "targetAfterSHA256": "9e1023ae29d90b71884f818de784105f188a34189def029d12164f682b4e9832",
+      "contextAfterSHA256": "9e1023ae29d90b71884f818de784105f188a34189def029d12164f682b4e9832",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "be20029c24f7e599af388976450f7efbb53117352c7843c63495ce0fc5eed900",
+        "targetAfterSHA256": "baa550719c9abb41f43ac625e3d29b049ee8b7d1f7506d1415b098d9debb8124",
+        "contextAfterSHA256": "baa550719c9abb41f43ac625e3d29b049ee8b7d1f7506d1415b098d9debb8124",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "baa550719c9abb41f43ac625e3d29b049ee8b7d1f7506d1415b098d9debb8124",
+          "semanticContextSHA256": "baa550719c9abb41f43ac625e3d29b049ee8b7d1f7506d1415b098d9debb8124",
+          "subjectTitle": "castries — aito paikkavalokuva",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "629c56a144c8197877b6fc40643ce7929c6bd143cf8d71d480451d9883363917",
+        "sameImageNativeSHA256": "ea848a9c1a77fe7d592b89751d1312f976566a8a9397326205ab1712d33f95a7",
+        "sameImageExportSHA256": "ea848a9c1a77fe7d592b89751d1312f976566a8a9397326205ab1712d33f95a7",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e12",
@@ -1842,23 +1968,23 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/castries/c1-02865c8db4a4be7e575c.jpg",
         "suora": true,
         "lahde": "UpstateNYer, Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "Laaja näkymä Castriesin satamaan ja kaupunkiin tammikuussa 2008.",
-        "lyhyt": "Laaja näkymä Castriesin satamaan ja kaupunkiin tammikuussa 2008.",
+        "selite": "Risteilyalus on satamalaiturissa; rakennukset levittäytyvät veden takana vihreille rinteille.",
+        "lyhyt": "Castriesin satama ja kaupungin rakennuksia.",
         "tiedosto": "CastriesStLucia.JPG"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "UpstateNYer, Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "Laaja näkymä Castriesin satamaan ja kaupunkiin tammikuussa 2008.",
-        "lyhyt": "Laaja näkymä Castriesin satamaan ja kaupunkiin tammikuussa 2008.",
+        "selite": "Risteilyalus on satamalaiturissa; rakennukset levittäytyvät veden takana vihreille rinteille.",
+        "lyhyt": "Castriesin satama ja kaupungin rakennuksia.",
         "tiedosto": "CastriesStLucia.JPG"
       },
       "runtimeMediaFieldPayload": {
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/castries/c1-02865c8db4a4be7e575c.jpg",
         "suora": true,
         "lahde": "UpstateNYer, Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "Laaja näkymä Castriesin satamaan ja kaupunkiin tammikuussa 2008.",
-        "lyhyt": "Laaja näkymä Castriesin satamaan ja kaupunkiin tammikuussa 2008.",
+        "selite": "Risteilyalus on satamalaiturissa; rakennukset levittäytyvät veden takana vihreille rinteille.",
+        "lyhyt": "Castriesin satama ja kaupungin rakennuksia.",
         "tiedosto": "CastriesStLucia.JPG"
       },
       "runtimeRemoveMediaKeys": [],
@@ -1873,10 +1999,10 @@
         1944
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/castries/sisalto.json",
-      "sourceContentSHA256": "e5b0612495f534dceb34a7e5cfa90989717b0ab7460572daa1144dab27e7391c",
+      "sourceContentSHA256": "629c56a144c8197877b6fc40643ce7929c6bd143cf8d71d480451d9883363917",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "6c020ffae7be1f8a87ff6ae48ef8e439b0ee3d0ee2a4ec15528f812a7018ef44",
-        "semanticContextSHA256": "6c020ffae7be1f8a87ff6ae48ef8e439b0ee3d0ee2a4ec15528f812a7018ef44",
+        "targetBeforeSHA256": "c608868bfad09cf8596a181692a9fc636e18e03f878251dee07bba742a863ec6",
+        "semanticContextSHA256": "c608868bfad09cf8596a181692a9fc636e18e03f878251dee07bba742a863ec6",
         "subjectTitle": "Castries",
         "targetState": "existing-target"
       },
@@ -2080,9 +2206,9 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "CastriesStLucia.JPG",
-        "lahde": "UpstateNYer, Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "Laaja näkymä Castriesin satamaan ja kaupunkiin tammikuussa 2008.",
-        "lyhyt": "Laaja näkymä Castriesin satamaan ja kaupunkiin tammikuussa 2008."
+        "lyhyt": "Castriesin satama ja kaupungin rakennuksia.",
+        "selite": "Risteilyalus on satamalaiturissa; rakennukset levittäytyvät veden takana vihreille rinteille.",
+        "lahde": "UpstateNYer, Wikimedia Commons (CC BY-SA 3.0)"
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -2101,23 +2227,44 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "UpstateNYer, Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "Laaja näkymä Castriesin satamaan ja kaupunkiin tammikuussa 2008.",
-        "lyhyt": "Laaja näkymä Castriesin satamaan ja kaupunkiin tammikuussa 2008.",
+        "selite": "Risteilyalus on satamalaiturissa; rakennukset levittäytyvät veden takana vihreille rinteille.",
+        "lyhyt": "Castriesin satama ja kaupungin rakennuksia.",
         "tiedosto": "CastriesStLucia.JPG"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "be20029c24f7e599af388976450f7efbb53117352c7843c63495ce0fc5eed900",
-      "targetAfterSHA256": "6c020ffae7be1f8a87ff6ae48ef8e439b0ee3d0ee2a4ec15528f812a7018ef44",
-      "contextAfterSHA256": "6c020ffae7be1f8a87ff6ae48ef8e439b0ee3d0ee2a4ec15528f812a7018ef44",
+      "sourceContentAfterSHA256": "629c56a144c8197877b6fc40643ce7929c6bd143cf8d71d480451d9883363917",
+      "targetAfterSHA256": "c608868bfad09cf8596a181692a9fc636e18e03f878251dee07bba742a863ec6",
+      "contextAfterSHA256": "c608868bfad09cf8596a181692a9fc636e18e03f878251dee07bba742a863ec6",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "be20029c24f7e599af388976450f7efbb53117352c7843c63495ce0fc5eed900",
+        "targetAfterSHA256": "6c020ffae7be1f8a87ff6ae48ef8e439b0ee3d0ee2a4ec15528f812a7018ef44",
+        "contextAfterSHA256": "6c020ffae7be1f8a87ff6ae48ef8e439b0ee3d0ee2a4ec15528f812a7018ef44",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "6c020ffae7be1f8a87ff6ae48ef8e439b0ee3d0ee2a4ec15528f812a7018ef44",
+          "semanticContextSHA256": "6c020ffae7be1f8a87ff6ae48ef8e439b0ee3d0ee2a4ec15528f812a7018ef44",
+          "subjectTitle": "Castries",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "629c56a144c8197877b6fc40643ce7929c6bd143cf8d71d480451d9883363917",
+        "sameImageNativeSHA256": "02865c8db4a4be7e575cc5a0084dbf2af6c8b4382c96bfa53bca14a21f396b7d",
+        "sameImageExportSHA256": "02865c8db4a4be7e575cc5a0084dbf2af6c8b4382c96bfa53bca14a21f396b7d",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e12",
@@ -2139,23 +2286,23 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/castries/c2-1f94e8f705bb04837817.jpg",
         "suora": true,
         "lahde": "Chensiyuan, Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "Castriesin sataman, kaupunkikortteleiden ja rinteiden yleisnäkymä.",
-        "lyhyt": "Castriesin sataman, kaupunkikortteleiden ja rinteiden yleisnäkymä.",
+        "selite": "Lahden laidalla näkyy sataman varastorakennuksia ja kontteja; kaupungin talot jatkuvat kukkuloille.",
+        "lyhyt": "Castriesin satamalahtea ja rinteiden asutusta.",
         "tiedosto": "View of Castries Saint Lucia Day248bdriveb.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Chensiyuan, Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "Castriesin sataman, kaupunkikortteleiden ja rinteiden yleisnäkymä.",
-        "lyhyt": "Castriesin sataman, kaupunkikortteleiden ja rinteiden yleisnäkymä.",
+        "selite": "Lahden laidalla näkyy sataman varastorakennuksia ja kontteja; kaupungin talot jatkuvat kukkuloille.",
+        "lyhyt": "Castriesin satamalahtea ja rinteiden asutusta.",
         "tiedosto": "View of Castries Saint Lucia Day248bdriveb.jpg"
       },
       "runtimeMediaFieldPayload": {
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/castries/c2-1f94e8f705bb04837817.jpg",
         "suora": true,
         "lahde": "Chensiyuan, Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "Castriesin sataman, kaupunkikortteleiden ja rinteiden yleisnäkymä.",
-        "lyhyt": "Castriesin sataman, kaupunkikortteleiden ja rinteiden yleisnäkymä.",
+        "selite": "Lahden laidalla näkyy sataman varastorakennuksia ja kontteja; kaupungin talot jatkuvat kukkuloille.",
+        "lyhyt": "Castriesin satamalahtea ja rinteiden asutusta.",
         "tiedosto": "View of Castries Saint Lucia Day248bdriveb.jpg"
       },
       "runtimeRemoveMediaKeys": [],
@@ -2170,10 +2317,10 @@
         639
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/castries/sisalto.json",
-      "sourceContentSHA256": "e5b0612495f534dceb34a7e5cfa90989717b0ab7460572daa1144dab27e7391c",
+      "sourceContentSHA256": "629c56a144c8197877b6fc40643ce7929c6bd143cf8d71d480451d9883363917",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "targetBeforeSHA256": "e7941bc75b6bac2ba8f8708038d13f79b7ab3f3201f2485abd20bb75b0b0b7e8",
+        "semanticContextSHA256": "e7941bc75b6bac2ba8f8708038d13f79b7ab3f3201f2485abd20bb75b0b0b7e8",
         "subjectTitle": "Castries",
         "targetState": "existing-target"
       },
@@ -2395,10 +2542,10 @@
       "producerExportProof": null,
       "technicalExportProof": null,
       "priorMediaFields": {
-        "tiedosto": "",
-        "lahde": "",
-        "selite": "",
-        "lyhyt": ""
+        "tiedosto": "View of Castries Saint Lucia Day248bdriveb.jpg",
+        "lyhyt": "Castriesin satamalahtea ja rinteiden asutusta.",
+        "selite": "Lahden laidalla näkyy sataman varastorakennuksia ja kontteja; kaupungin talot jatkuvat kukkuloille.",
+        "lahde": "Chensiyuan, Wikimedia Commons (CC BY-SA 3.0)"
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -2417,28 +2564,55 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Chensiyuan, Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "Castriesin sataman, kaupunkikortteleiden ja rinteiden yleisnäkymä.",
-        "lyhyt": "Castriesin sataman, kaupunkikortteleiden ja rinteiden yleisnäkymä.",
+        "selite": "Lahden laidalla näkyy sataman varastorakennuksia ja kontteja; kaupungin talot jatkuvat kukkuloille.",
+        "lyhyt": "Castriesin satamalahtea ja rinteiden asutusta.",
         "tiedosto": "View of Castries Saint Lucia Day248bdriveb.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "be20029c24f7e599af388976450f7efbb53117352c7843c63495ce0fc5eed900",
-      "targetAfterSHA256": "d1cd4a879cc4bcec1c2d533b8a4d0930b4dfdd473beb2638ac91e4236a1f2dfc",
-      "contextAfterSHA256": "d1cd4a879cc4bcec1c2d533b8a4d0930b4dfdd473beb2638ac91e4236a1f2dfc",
+      "sourceContentAfterSHA256": "629c56a144c8197877b6fc40643ce7929c6bd143cf8d71d480451d9883363917",
+      "targetAfterSHA256": "e7941bc75b6bac2ba8f8708038d13f79b7ab3f3201f2485abd20bb75b0b0b7e8",
+      "contextAfterSHA256": "e7941bc75b6bac2ba8f8708038d13f79b7ab3f3201f2485abd20bb75b0b0b7e8",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "be20029c24f7e599af388976450f7efbb53117352c7843c63495ce0fc5eed900",
+        "targetAfterSHA256": "d1cd4a879cc4bcec1c2d533b8a4d0930b4dfdd473beb2638ac91e4236a1f2dfc",
+        "contextAfterSHA256": "d1cd4a879cc4bcec1c2d533b8a4d0930b4dfdd473beb2638ac91e4236a1f2dfc",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+          "semanticContextSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+          "subjectTitle": "Castries",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "629c56a144c8197877b6fc40643ce7929c6bd143cf8d71d480451d9883363917",
+        "sameImageNativeSHA256": "1f94e8f705bb0483781711b1cab31ba6207fe1836ac8c82051e19d50a02ed0e2",
+        "sameImageExportSHA256": "1f94e8f705bb0483781711b1cab31ba6207fe1836ac8c82051e19d50a02ed0e2",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     }
   ],
   "runtimeIntegrationPending": true,
   "ownerAcceptedNotImpliedByAuthorization": false,
   "gameIntegrated": false,
   "allAssetsExplicitlyOwnerApproved": true,
-  "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+  "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+  "task118ExcludedAssets": [],
+  "task118TextRevision": true,
+  "independentTextResamplePending": true,
+  "textAcceptanceVerified": false,
+  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task118/immutable-media-history/e12/castries/ad9ce1a4b69fe4ac748fc5c0d5fd0245e6b72bcaac361609fa1ac4778e553a9c.json",
+  "task118ReboundAt": "2026-10-13T16:31:26.264713+00:00"
 }

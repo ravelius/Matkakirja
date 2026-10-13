@@ -3,7 +3,7 @@
   "era": "e12",
   "city": "nassau",
   "authorization": "hyväksyn kaikki tekemäsi kuvat. toimita ne claudelle. claudelta saat uusia ohjeita jatkoa varten",
-  "sourceContentAfterSHA256": "9ee0363e287ef499d1c26c8ac5bc77a947c54e226ed1e58757fbe0b69d1a88de",
+  "sourceContentAfterSHA256": "1d079f6220a140006aa16abfc203f04340a5db084add729084bb74f12087b590",
   "assets": [
     {
       "era": "e12",
@@ -28,10 +28,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/nassau/e12-nassau-O4-157be13177-0ac9a35c9925.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva friteeratuista conch-merikotilopaloista.",
-        "lyhyt": "Havainnekuva friteeratuista conch-merikotilopaloista."
+        "selite": "Havainnekuva friteeratuista conch-merikotilopaloista."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -39,10 +39,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/nassau/e12-nassau-O4-157be13177-0ac9a35c9925.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva friteeratuista conch-merikotilopaloista.",
-        "lyhyt": "Havainnekuva friteeratuista conch-merikotilopaloista."
+        "selite": "Havainnekuva friteeratuista conch-merikotilopaloista."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -56,7 +56,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/nassau/sisalto.json",
-      "sourceContentSHA256": "9ee0363e287ef499d1c26c8ac5bc77a947c54e226ed1e58757fbe0b69d1a88de",
+      "sourceContentSHA256": "1d079f6220a140006aa16abfc203f04340a5db084add729084bb74f12087b590",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
         "semanticContextSHA256": "4dfad821d791c0785aedaa9e84722bdf282dcea98f29f177f6e8c55b9ce32d9c",
@@ -436,9 +436,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -457,17 +457,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "9ee0363e287ef499d1c26c8ac5bc77a947c54e226ed1e58757fbe0b69d1a88de",
+      "sourceContentAfterSHA256": "1d079f6220a140006aa16abfc203f04340a5db084add729084bb74f12087b590",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
       "contextAfterSHA256": "4dfad821d791c0785aedaa9e84722bdf282dcea98f29f177f6e8c55b9ce32d9c",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "9ee0363e287ef499d1c26c8ac5bc77a947c54e226ed1e58757fbe0b69d1a88de",
+        "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "contextAfterSHA256": "4dfad821d791c0785aedaa9e84722bdf282dcea98f29f177f6e8c55b9ce32d9c",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+          "semanticContextSHA256": "4dfad821d791c0785aedaa9e84722bdf282dcea98f29f177f6e8c55b9ce32d9c",
+          "subjectTitle": "Mitä täällä syödään",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "1d079f6220a140006aa16abfc203f04340a5db084add729084bb74f12087b590",
+        "sameImageNativeSHA256": "0ac9a35c99256a59e77ccb144ffc06d0a0aed48538fa44dea9c93cceccbf8b28",
+        "sameImageExportSHA256": "79095a85568fa3219da3b3598fae8a7ed716766e24e3e6f117ca75bae40e7e16",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e12",
@@ -489,10 +510,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/nassau/e12-nassau-K1-056177d902-37953dae01f6.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva Junkanoo-pukujen kreppipaperista ja kartongista.",
-        "lyhyt": "Havainnekuva Junkanoo-pukujen kreppipaperista ja kartongista."
+        "selite": "Havainnekuva Junkanoo-pukujen kreppipaperista ja kartongista."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -500,10 +521,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/nassau/e12-nassau-K1-056177d902-37953dae01f6.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva Junkanoo-pukujen kreppipaperista ja kartongista.",
-        "lyhyt": "Havainnekuva Junkanoo-pukujen kreppipaperista ja kartongista."
+        "selite": "Havainnekuva Junkanoo-pukujen kreppipaperista ja kartongista."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -517,7 +538,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/nassau/sisalto.json",
-      "sourceContentSHA256": "9ee0363e287ef499d1c26c8ac5bc77a947c54e226ed1e58757fbe0b69d1a88de",
+      "sourceContentSHA256": "1d079f6220a140006aa16abfc203f04340a5db084add729084bb74f12087b590",
       "semanticSourceBind": {
         "targetBeforeSHA256": "0f28b2e98056d3f8112bfdaad789ef9205754af7b7243d1ea6474bc5da8a3359",
         "semanticContextSHA256": "0f28b2e98056d3f8112bfdaad789ef9205754af7b7243d1ea6474bc5da8a3359",
@@ -855,9 +876,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -876,17 +897,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "9ee0363e287ef499d1c26c8ac5bc77a947c54e226ed1e58757fbe0b69d1a88de",
+      "sourceContentAfterSHA256": "1d079f6220a140006aa16abfc203f04340a5db084add729084bb74f12087b590",
       "targetAfterSHA256": "0f28b2e98056d3f8112bfdaad789ef9205754af7b7243d1ea6474bc5da8a3359",
       "contextAfterSHA256": "0f28b2e98056d3f8112bfdaad789ef9205754af7b7243d1ea6474bc5da8a3359",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "9ee0363e287ef499d1c26c8ac5bc77a947c54e226ed1e58757fbe0b69d1a88de",
+        "targetAfterSHA256": "0f28b2e98056d3f8112bfdaad789ef9205754af7b7243d1ea6474bc5da8a3359",
+        "contextAfterSHA256": "0f28b2e98056d3f8112bfdaad789ef9205754af7b7243d1ea6474bc5da8a3359",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "0f28b2e98056d3f8112bfdaad789ef9205754af7b7243d1ea6474bc5da8a3359",
+          "semanticContextSHA256": "0f28b2e98056d3f8112bfdaad789ef9205754af7b7243d1ea6474bc5da8a3359",
+          "subjectTitle": "Koko vuosi paperia varten",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "1d079f6220a140006aa16abfc203f04340a5db084add729084bb74f12087b590",
+        "sameImageNativeSHA256": "37953dae01f6cee153fee9c3baea18a42832e5759cecb8c922220039932b0f80",
+        "sameImageExportSHA256": "fdc68b85bbeb6bbff9ee4328cd319197d612bfa81a23caefe45ba795e3c95458",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e12",
@@ -908,10 +950,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/nassau/e12-nassau-TRAVELER-13bbb4a047-a8f9731b78f3.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva Nassaun oppaassa mainituista conch fritters -paloista.",
-        "lyhyt": "Havainnekuva Nassaun oppaassa mainituista conch fritters -paloista."
+        "selite": "Havainnekuva Nassaun oppaassa mainituista conch fritters -paloista."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -919,10 +961,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/nassau/e12-nassau-TRAVELER-13bbb4a047-a8f9731b78f3.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva Nassaun oppaassa mainituista conch fritters -paloista.",
-        "lyhyt": "Havainnekuva Nassaun oppaassa mainituista conch fritters -paloista."
+        "selite": "Havainnekuva Nassaun oppaassa mainituista conch fritters -paloista."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -936,10 +978,10 @@
         1536
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/nassau/sisalto.json",
-      "sourceContentSHA256": "9ee0363e287ef499d1c26c8ac5bc77a947c54e226ed1e58757fbe0b69d1a88de",
+      "sourceContentSHA256": "1d079f6220a140006aa16abfc203f04340a5db084add729084bb74f12087b590",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "29c31034b1a498de8bb7ea4eb9e7bb6f74043528bdc8b140db1135556637804e",
+        "semanticContextSHA256": "b7dd959927c531f4266211055b40c1682e370fca8216a5e735be7a16b9c289f0",
         "subjectTitle": "Matkailijalle",
         "targetState": "existing-target"
       },
@@ -1377,9 +1419,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -1398,17 +1440,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "9ee0363e287ef499d1c26c8ac5bc77a947c54e226ed1e58757fbe0b69d1a88de",
+      "sourceContentAfterSHA256": "1d079f6220a140006aa16abfc203f04340a5db084add729084bb74f12087b590",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "29c31034b1a498de8bb7ea4eb9e7bb6f74043528bdc8b140db1135556637804e",
+      "contextAfterSHA256": "b7dd959927c531f4266211055b40c1682e370fca8216a5e735be7a16b9c289f0",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "9ee0363e287ef499d1c26c8ac5bc77a947c54e226ed1e58757fbe0b69d1a88de",
+        "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "contextAfterSHA256": "29c31034b1a498de8bb7ea4eb9e7bb6f74043528bdc8b140db1135556637804e",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+          "semanticContextSHA256": "29c31034b1a498de8bb7ea4eb9e7bb6f74043528bdc8b140db1135556637804e",
+          "subjectTitle": "Matkailijalle",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "1d079f6220a140006aa16abfc203f04340a5db084add729084bb74f12087b590",
+        "sameImageNativeSHA256": "a8f9731b78f37f8a98f3f521442e2af1f989db0cafa87d88260e2a65eb52e086",
+        "sameImageExportSHA256": "16b5a1e0cacf5950db2a0793db59a475df4420bce8b1ae96cd46c0cdfe4b5b10",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e12",
@@ -1430,10 +1493,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/nassau/e12-nassau-K2-4ec2436d46-4e38604e99f7.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva Queen’s Staircase -tekstissä mainitusta kalkkikivimateriaalista.",
-        "lyhyt": "Havainnekuva Queen’s Staircase -tekstissä mainitusta kalkkikivimateriaalista."
+        "selite": "Havainnekuva Queen’s Staircase -tekstissä mainitusta kalkkikivimateriaalista."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -1441,10 +1504,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/nassau/e12-nassau-K2-4ec2436d46-4e38604e99f7.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva Queen’s Staircase -tekstissä mainitusta kalkkikivimateriaalista.",
-        "lyhyt": "Havainnekuva Queen’s Staircase -tekstissä mainitusta kalkkikivimateriaalista."
+        "selite": "Havainnekuva Queen’s Staircase -tekstissä mainitusta kalkkikivimateriaalista."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -1458,7 +1521,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/nassau/sisalto.json",
-      "sourceContentSHA256": "9ee0363e287ef499d1c26c8ac5bc77a947c54e226ed1e58757fbe0b69d1a88de",
+      "sourceContentSHA256": "1d079f6220a140006aa16abfc203f04340a5db084add729084bb74f12087b590",
       "semanticSourceBind": {
         "targetBeforeSHA256": "110a357780af6c60a111451ac12770823e725f2e80174eee07ae10e936f66a95",
         "semanticContextSHA256": "110a357780af6c60a111451ac12770823e725f2e80174eee07ae10e936f66a95",
@@ -1695,9 +1758,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -1716,17 +1779,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "9ee0363e287ef499d1c26c8ac5bc77a947c54e226ed1e58757fbe0b69d1a88de",
+      "sourceContentAfterSHA256": "1d079f6220a140006aa16abfc203f04340a5db084add729084bb74f12087b590",
       "targetAfterSHA256": "110a357780af6c60a111451ac12770823e725f2e80174eee07ae10e936f66a95",
       "contextAfterSHA256": "110a357780af6c60a111451ac12770823e725f2e80174eee07ae10e936f66a95",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "9ee0363e287ef499d1c26c8ac5bc77a947c54e226ed1e58757fbe0b69d1a88de",
+        "targetAfterSHA256": "110a357780af6c60a111451ac12770823e725f2e80174eee07ae10e936f66a95",
+        "contextAfterSHA256": "110a357780af6c60a111451ac12770823e725f2e80174eee07ae10e936f66a95",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "110a357780af6c60a111451ac12770823e725f2e80174eee07ae10e936f66a95",
+          "semanticContextSHA256": "110a357780af6c60a111451ac12770823e725f2e80174eee07ae10e936f66a95",
+          "subjectTitle": "Portaat on otettu pois kalliosta",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "1d079f6220a140006aa16abfc203f04340a5db084add729084bb74f12087b590",
+        "sameImageNativeSHA256": "4e38604e99f795f954566d2adae9cccd6fff1a7d91f5ac74ca64d04e8436466c",
+        "sameImageExportSHA256": "95c640e60d488c7bac871616cb82fbafec875e207c40fd6d3a5017df7790c912",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e12",
@@ -1745,23 +1829,23 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/nassau/photo-5968eab004a92702dc02.jpg",
         "suora": true,
         "lahde": "P. Hughes, Commons (CC BY 4.0)",
-        "selite": "Conch-merikotiloiden kuoria Nassaussa.",
-        "lyhyt": "Conch-merikotiloiden kuoria Nassaussa.",
+        "selite": "Vaaleat, sisältä vaaleanpunaiset kotilonkuoret on asetettu soralle kasvillisuuden lomaan.",
+        "lyhyt": "Kotilonkuoria kasvien välissä Nassaussa.",
         "tiedosto": "Nassau - conch shells.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "P. Hughes, Commons (CC BY 4.0)",
-        "selite": "Conch-merikotiloiden kuoria Nassaussa.",
-        "lyhyt": "Conch-merikotiloiden kuoria Nassaussa.",
+        "selite": "Vaaleat, sisältä vaaleanpunaiset kotilonkuoret on asetettu soralle kasvillisuuden lomaan.",
+        "lyhyt": "Kotilonkuoria kasvien välissä Nassaussa.",
         "tiedosto": "Nassau - conch shells.jpg"
       },
       "runtimeMediaFieldPayload": {
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/nassau/photo-5968eab004a92702dc02.jpg",
         "suora": true,
         "lahde": "P. Hughes, Commons (CC BY 4.0)",
-        "selite": "Conch-merikotiloiden kuoria Nassaussa.",
-        "lyhyt": "Conch-merikotiloiden kuoria Nassaussa.",
+        "selite": "Vaaleat, sisältä vaaleanpunaiset kotilonkuoret on asetettu soralle kasvillisuuden lomaan.",
+        "lyhyt": "Kotilonkuoria kasvien välissä Nassaussa.",
         "tiedosto": "Nassau - conch shells.jpg"
       },
       "runtimeRemoveMediaKeys": [],
@@ -1776,10 +1860,10 @@
         4024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/nassau/sisalto.json",
-      "sourceContentSHA256": "9ee0363e287ef499d1c26c8ac5bc77a947c54e226ed1e58757fbe0b69d1a88de",
+      "sourceContentSHA256": "1d079f6220a140006aa16abfc203f04340a5db084add729084bb74f12087b590",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "cac6e12bd4e5c88d5c5d180c2fd6f44cebb81d5ff9926ee36737315116d3a115",
-        "semanticContextSHA256": "cac6e12bd4e5c88d5c5d180c2fd6f44cebb81d5ff9926ee36737315116d3a115",
+        "targetBeforeSHA256": "9b5542da3d2764089a7f316c2fe509ec2cc2f8a67e66b2547dd164255941b812",
+        "semanticContextSHA256": "9b5542da3d2764089a7f316c2fe509ec2cc2f8a67e66b2547dd164255941b812",
         "subjectTitle": "nassau — aito paikkavalokuva",
         "targetState": "existing-target"
       },
@@ -1941,9 +2025,9 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "Nassau - conch shells.jpg",
-        "lahde": "P. Hughes, Commons (CC BY 4.0)",
-        "selite": "Conch-merikotiloiden kuoria Nassaussa.",
-        "lyhyt": "Conch-merikotiloiden kuoria Nassaussa."
+        "lyhyt": "Kotilonkuoria kasvien välissä Nassaussa.",
+        "selite": "Vaaleat, sisältä vaaleanpunaiset kotilonkuoret on asetettu soralle kasvillisuuden lomaan.",
+        "lahde": "P. Hughes, Commons (CC BY 4.0)"
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -1962,23 +2046,44 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "P. Hughes, Commons (CC BY 4.0)",
-        "selite": "Conch-merikotiloiden kuoria Nassaussa.",
-        "lyhyt": "Conch-merikotiloiden kuoria Nassaussa.",
+        "selite": "Vaaleat, sisältä vaaleanpunaiset kotilonkuoret on asetettu soralle kasvillisuuden lomaan.",
+        "lyhyt": "Kotilonkuoria kasvien välissä Nassaussa.",
         "tiedosto": "Nassau - conch shells.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "9ee0363e287ef499d1c26c8ac5bc77a947c54e226ed1e58757fbe0b69d1a88de",
-      "targetAfterSHA256": "cac6e12bd4e5c88d5c5d180c2fd6f44cebb81d5ff9926ee36737315116d3a115",
-      "contextAfterSHA256": "cac6e12bd4e5c88d5c5d180c2fd6f44cebb81d5ff9926ee36737315116d3a115",
+      "sourceContentAfterSHA256": "1d079f6220a140006aa16abfc203f04340a5db084add729084bb74f12087b590",
+      "targetAfterSHA256": "9b5542da3d2764089a7f316c2fe509ec2cc2f8a67e66b2547dd164255941b812",
+      "contextAfterSHA256": "9b5542da3d2764089a7f316c2fe509ec2cc2f8a67e66b2547dd164255941b812",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "9ee0363e287ef499d1c26c8ac5bc77a947c54e226ed1e58757fbe0b69d1a88de",
+        "targetAfterSHA256": "cac6e12bd4e5c88d5c5d180c2fd6f44cebb81d5ff9926ee36737315116d3a115",
+        "contextAfterSHA256": "cac6e12bd4e5c88d5c5d180c2fd6f44cebb81d5ff9926ee36737315116d3a115",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "cac6e12bd4e5c88d5c5d180c2fd6f44cebb81d5ff9926ee36737315116d3a115",
+          "semanticContextSHA256": "cac6e12bd4e5c88d5c5d180c2fd6f44cebb81d5ff9926ee36737315116d3a115",
+          "subjectTitle": "nassau — aito paikkavalokuva",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "1d079f6220a140006aa16abfc203f04340a5db084add729084bb74f12087b590",
+        "sameImageNativeSHA256": "5968eab004a92702dc02d23fa44d0dcb96d6c60fad2b6013e99c0de05d20dfd6",
+        "sameImageExportSHA256": "5968eab004a92702dc02d23fa44d0dcb96d6c60fad2b6013e99c0de05d20dfd6",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e12",
@@ -2000,23 +2105,23 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/nassau/c1-a63ccb494b6c1a669a46.jpg",
         "suora": true,
         "lahde": "Axelspace Corporation, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Nassau ja New Providencen itäosa Hodoyoshi-1-satelliitista heinäkuussa 2017.",
-        "lyhyt": "Nassau ja New Providencen itäosa Hodoyoshi-1-satelliitista heinäkuussa 2017.",
+        "selite": "New Providencen kaupunkialue ja sen edustan Paradise Island erottuvat turkoosin veden ja pilvien keskellä.",
+        "lyhyt": "Nassau New Providencella satelliittikuvassa.",
         "tiedosto": "Nassau, The Bahamas (satellite view).jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Axelspace Corporation, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Nassau ja New Providencen itäosa Hodoyoshi-1-satelliitista heinäkuussa 2017.",
-        "lyhyt": "Nassau ja New Providencen itäosa Hodoyoshi-1-satelliitista heinäkuussa 2017.",
+        "selite": "New Providencen kaupunkialue ja sen edustan Paradise Island erottuvat turkoosin veden ja pilvien keskellä.",
+        "lyhyt": "Nassau New Providencella satelliittikuvassa.",
         "tiedosto": "Nassau, The Bahamas (satellite view).jpg"
       },
       "runtimeMediaFieldPayload": {
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/nassau/c1-a63ccb494b6c1a669a46.jpg",
         "suora": true,
         "lahde": "Axelspace Corporation, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Nassau ja New Providencen itäosa Hodoyoshi-1-satelliitista heinäkuussa 2017.",
-        "lyhyt": "Nassau ja New Providencen itäosa Hodoyoshi-1-satelliitista heinäkuussa 2017.",
+        "selite": "New Providencen kaupunkialue ja sen edustan Paradise Island erottuvat turkoosin veden ja pilvien keskellä.",
+        "lyhyt": "Nassau New Providencella satelliittikuvassa.",
         "tiedosto": "Nassau, The Bahamas (satellite view).jpg"
       },
       "runtimeRemoveMediaKeys": [],
@@ -2031,10 +2136,10 @@
         1280
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/nassau/sisalto.json",
-      "sourceContentSHA256": "9ee0363e287ef499d1c26c8ac5bc77a947c54e226ed1e58757fbe0b69d1a88de",
+      "sourceContentSHA256": "1d079f6220a140006aa16abfc203f04340a5db084add729084bb74f12087b590",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "57e7cc6ac3b2c19da2514841987e79f90d8662bcc310c0a4c97d3cb24d06524c",
-        "semanticContextSHA256": "57e7cc6ac3b2c19da2514841987e79f90d8662bcc310c0a4c97d3cb24d06524c",
+        "targetBeforeSHA256": "57306496a57a0ccc20ae7cd5bc7ce2c6116c4f1beacb21cbb47bfb9db76a0545",
+        "semanticContextSHA256": "57306496a57a0ccc20ae7cd5bc7ce2c6116c4f1beacb21cbb47bfb9db76a0545",
         "subjectTitle": "Nassau",
         "targetState": "existing-target"
       },
@@ -2226,9 +2331,9 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "Nassau, The Bahamas (satellite view).jpg",
-        "lahde": "Axelspace Corporation, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Nassau ja New Providencen itäosa Hodoyoshi-1-satelliitista heinäkuussa 2017.",
-        "lyhyt": "Nassau ja New Providencen itäosa Hodoyoshi-1-satelliitista heinäkuussa 2017."
+        "lyhyt": "Nassau New Providencella satelliittikuvassa.",
+        "selite": "New Providencen kaupunkialue ja sen edustan Paradise Island erottuvat turkoosin veden ja pilvien keskellä.",
+        "lahde": "Axelspace Corporation, Wikimedia Commons (CC BY-SA 4.0)"
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -2247,23 +2352,44 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Axelspace Corporation, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Nassau ja New Providencen itäosa Hodoyoshi-1-satelliitista heinäkuussa 2017.",
-        "lyhyt": "Nassau ja New Providencen itäosa Hodoyoshi-1-satelliitista heinäkuussa 2017.",
+        "selite": "New Providencen kaupunkialue ja sen edustan Paradise Island erottuvat turkoosin veden ja pilvien keskellä.",
+        "lyhyt": "Nassau New Providencella satelliittikuvassa.",
         "tiedosto": "Nassau, The Bahamas (satellite view).jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "9ee0363e287ef499d1c26c8ac5bc77a947c54e226ed1e58757fbe0b69d1a88de",
-      "targetAfterSHA256": "57e7cc6ac3b2c19da2514841987e79f90d8662bcc310c0a4c97d3cb24d06524c",
-      "contextAfterSHA256": "57e7cc6ac3b2c19da2514841987e79f90d8662bcc310c0a4c97d3cb24d06524c",
+      "sourceContentAfterSHA256": "1d079f6220a140006aa16abfc203f04340a5db084add729084bb74f12087b590",
+      "targetAfterSHA256": "57306496a57a0ccc20ae7cd5bc7ce2c6116c4f1beacb21cbb47bfb9db76a0545",
+      "contextAfterSHA256": "57306496a57a0ccc20ae7cd5bc7ce2c6116c4f1beacb21cbb47bfb9db76a0545",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "9ee0363e287ef499d1c26c8ac5bc77a947c54e226ed1e58757fbe0b69d1a88de",
+        "targetAfterSHA256": "57e7cc6ac3b2c19da2514841987e79f90d8662bcc310c0a4c97d3cb24d06524c",
+        "contextAfterSHA256": "57e7cc6ac3b2c19da2514841987e79f90d8662bcc310c0a4c97d3cb24d06524c",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "57e7cc6ac3b2c19da2514841987e79f90d8662bcc310c0a4c97d3cb24d06524c",
+          "semanticContextSHA256": "57e7cc6ac3b2c19da2514841987e79f90d8662bcc310c0a4c97d3cb24d06524c",
+          "subjectTitle": "Nassau",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "1d079f6220a140006aa16abfc203f04340a5db084add729084bb74f12087b590",
+        "sameImageNativeSHA256": "a63ccb494b6c1a669a46d533309d4c2c1ae12aa08d10e55833265a4ee827b2f0",
+        "sameImageExportSHA256": "a63ccb494b6c1a669a46d533309d4c2c1ae12aa08d10e55833265a4ee827b2f0",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e12",
@@ -2285,23 +2411,23 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/nassau/c2-c9cf5098f4abc2fb4415.jpg",
         "suora": true,
         "lahde": "Clem Onojeghuo clemono2, Wikimedia Commons (CC0)",
-        "selite": "Nassaun rannikkonäkymä, valokuva vuodelta 2015.",
-        "lyhyt": "Nassaun rannikkonäkymä, valokuva vuodelta 2015.",
+        "selite": "Valkoinen majakka kohoaa matalan, puustoisen rannan äärellä; sininen meri täyttää etualan.",
+        "lyhyt": "Majakka Nassaun edustan rannalla.",
         "tiedosto": "Nassau, The Bahamas (Unsplash 6ieXV38E3h8).jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Clem Onojeghuo clemono2, Wikimedia Commons (CC0)",
-        "selite": "Nassaun rannikkonäkymä, valokuva vuodelta 2015.",
-        "lyhyt": "Nassaun rannikkonäkymä, valokuva vuodelta 2015.",
+        "selite": "Valkoinen majakka kohoaa matalan, puustoisen rannan äärellä; sininen meri täyttää etualan.",
+        "lyhyt": "Majakka Nassaun edustan rannalla.",
         "tiedosto": "Nassau, The Bahamas (Unsplash 6ieXV38E3h8).jpg"
       },
       "runtimeMediaFieldPayload": {
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/nassau/c2-c9cf5098f4abc2fb4415.jpg",
         "suora": true,
         "lahde": "Clem Onojeghuo clemono2, Wikimedia Commons (CC0)",
-        "selite": "Nassaun rannikkonäkymä, valokuva vuodelta 2015.",
-        "lyhyt": "Nassaun rannikkonäkymä, valokuva vuodelta 2015.",
+        "selite": "Valkoinen majakka kohoaa matalan, puustoisen rannan äärellä; sininen meri täyttää etualan.",
+        "lyhyt": "Majakka Nassaun edustan rannalla.",
         "tiedosto": "Nassau, The Bahamas (Unsplash 6ieXV38E3h8).jpg"
       },
       "runtimeRemoveMediaKeys": [],
@@ -2316,10 +2442,10 @@
         3394
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/nassau/sisalto.json",
-      "sourceContentSHA256": "9ee0363e287ef499d1c26c8ac5bc77a947c54e226ed1e58757fbe0b69d1a88de",
+      "sourceContentSHA256": "1d079f6220a140006aa16abfc203f04340a5db084add729084bb74f12087b590",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "e64115ed0a6ddb7248578efedfed722ef0d2ff504277404aa9d278281d3e4924",
-        "semanticContextSHA256": "e64115ed0a6ddb7248578efedfed722ef0d2ff504277404aa9d278281d3e4924",
+        "targetBeforeSHA256": "5c62dfdce96bccfa37c7f394c6df0a9e369faec22548173dc01271e4350c8687",
+        "semanticContextSHA256": "5c62dfdce96bccfa37c7f394c6df0a9e369faec22548173dc01271e4350c8687",
         "subjectTitle": "Nassau",
         "targetState": "existing-target"
       },
@@ -2503,9 +2629,9 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "Nassau, The Bahamas (Unsplash 6ieXV38E3h8).jpg",
-        "lahde": "Clem Onojeghuo clemono2, Wikimedia Commons (CC0)",
-        "selite": "Nassaun rannikkonäkymä, valokuva vuodelta 2015.",
-        "lyhyt": "Nassaun rannikkonäkymä, valokuva vuodelta 2015."
+        "lyhyt": "Majakka Nassaun edustan rannalla.",
+        "selite": "Valkoinen majakka kohoaa matalan, puustoisen rannan äärellä; sininen meri täyttää etualan.",
+        "lahde": "Clem Onojeghuo clemono2, Wikimedia Commons (CC0)"
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -2524,23 +2650,44 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Clem Onojeghuo clemono2, Wikimedia Commons (CC0)",
-        "selite": "Nassaun rannikkonäkymä, valokuva vuodelta 2015.",
-        "lyhyt": "Nassaun rannikkonäkymä, valokuva vuodelta 2015.",
+        "selite": "Valkoinen majakka kohoaa matalan, puustoisen rannan äärellä; sininen meri täyttää etualan.",
+        "lyhyt": "Majakka Nassaun edustan rannalla.",
         "tiedosto": "Nassau, The Bahamas (Unsplash 6ieXV38E3h8).jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "9ee0363e287ef499d1c26c8ac5bc77a947c54e226ed1e58757fbe0b69d1a88de",
-      "targetAfterSHA256": "e64115ed0a6ddb7248578efedfed722ef0d2ff504277404aa9d278281d3e4924",
-      "contextAfterSHA256": "e64115ed0a6ddb7248578efedfed722ef0d2ff504277404aa9d278281d3e4924",
+      "sourceContentAfterSHA256": "1d079f6220a140006aa16abfc203f04340a5db084add729084bb74f12087b590",
+      "targetAfterSHA256": "5c62dfdce96bccfa37c7f394c6df0a9e369faec22548173dc01271e4350c8687",
+      "contextAfterSHA256": "5c62dfdce96bccfa37c7f394c6df0a9e369faec22548173dc01271e4350c8687",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "9ee0363e287ef499d1c26c8ac5bc77a947c54e226ed1e58757fbe0b69d1a88de",
+        "targetAfterSHA256": "e64115ed0a6ddb7248578efedfed722ef0d2ff504277404aa9d278281d3e4924",
+        "contextAfterSHA256": "e64115ed0a6ddb7248578efedfed722ef0d2ff504277404aa9d278281d3e4924",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "e64115ed0a6ddb7248578efedfed722ef0d2ff504277404aa9d278281d3e4924",
+          "semanticContextSHA256": "e64115ed0a6ddb7248578efedfed722ef0d2ff504277404aa9d278281d3e4924",
+          "subjectTitle": "Nassau",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "1d079f6220a140006aa16abfc203f04340a5db084add729084bb74f12087b590",
+        "sameImageNativeSHA256": "c9cf5098f4abc2fb441560048032f74b2d481cb4f9f4c8f1e4b13b39dc40adfd",
+        "sameImageExportSHA256": "c9cf5098f4abc2fb441560048032f74b2d481cb4f9f4c8f1e4b13b39dc40adfd",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e12",
@@ -2562,23 +2709,23 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/nassau/c3-91770d002b2fd0d01f0e.jpg",
         "suora": true,
         "lahde": "Oscar Flowers, Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "Rantaviivaa New Providencen länsiosassa tammikuussa 2009.",
-        "lyhyt": "Rantaviivaa New Providencen länsiosassa tammikuussa 2009.",
+        "selite": "Hiekalla on rantaan ajautunutta merikasvillisuutta; taustalla näkyvät puut ja vaaleanpunaiset rakennukset.",
+        "lyhyt": "Nirvanha Beachin hiekkarantaa New Providencella.",
         "tiedosto": "Nirvanha Beach - panoramio.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Oscar Flowers, Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "Rantaviivaa New Providencen länsiosassa tammikuussa 2009.",
-        "lyhyt": "Rantaviivaa New Providencen länsiosassa tammikuussa 2009.",
+        "selite": "Hiekalla on rantaan ajautunutta merikasvillisuutta; taustalla näkyvät puut ja vaaleanpunaiset rakennukset.",
+        "lyhyt": "Nirvanha Beachin hiekkarantaa New Providencella.",
         "tiedosto": "Nirvanha Beach - panoramio.jpg"
       },
       "runtimeMediaFieldPayload": {
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/nassau/c3-91770d002b2fd0d01f0e.jpg",
         "suora": true,
         "lahde": "Oscar Flowers, Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "Rantaviivaa New Providencen länsiosassa tammikuussa 2009.",
-        "lyhyt": "Rantaviivaa New Providencen länsiosassa tammikuussa 2009.",
+        "selite": "Hiekalla on rantaan ajautunutta merikasvillisuutta; taustalla näkyvät puut ja vaaleanpunaiset rakennukset.",
+        "lyhyt": "Nirvanha Beachin hiekkarantaa New Providencella.",
         "tiedosto": "Nirvanha Beach - panoramio.jpg"
       },
       "runtimeRemoveMediaKeys": [],
@@ -2593,10 +2740,10 @@
         2061
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/nassau/sisalto.json",
-      "sourceContentSHA256": "9ee0363e287ef499d1c26c8ac5bc77a947c54e226ed1e58757fbe0b69d1a88de",
+      "sourceContentSHA256": "1d079f6220a140006aa16abfc203f04340a5db084add729084bb74f12087b590",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "4622f7699dc484e79d595ed6f21a4688899296d97e09a74b6b59516703b1f2d5",
-        "semanticContextSHA256": "4622f7699dc484e79d595ed6f21a4688899296d97e09a74b6b59516703b1f2d5",
+        "targetBeforeSHA256": "db1c1c82ae7f3f32e19a73afe684df310f1e834bb286def05a4a169a10692bbf",
+        "semanticContextSHA256": "db1c1c82ae7f3f32e19a73afe684df310f1e834bb286def05a4a169a10692bbf",
         "subjectTitle": "Nassau",
         "targetState": "existing-target"
       },
@@ -2788,9 +2935,9 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "Nirvanha Beach - panoramio.jpg",
-        "lahde": "Oscar Flowers, Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "Rantaviivaa New Providencen länsiosassa tammikuussa 2009.",
-        "lyhyt": "Rantaviivaa New Providencen länsiosassa tammikuussa 2009."
+        "lyhyt": "Nirvanha Beachin hiekkarantaa New Providencella.",
+        "selite": "Hiekalla on rantaan ajautunutta merikasvillisuutta; taustalla näkyvät puut ja vaaleanpunaiset rakennukset.",
+        "lahde": "Oscar Flowers, Wikimedia Commons (CC BY-SA 3.0)"
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -2809,28 +2956,55 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Oscar Flowers, Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "Rantaviivaa New Providencen länsiosassa tammikuussa 2009.",
-        "lyhyt": "Rantaviivaa New Providencen länsiosassa tammikuussa 2009.",
+        "selite": "Hiekalla on rantaan ajautunutta merikasvillisuutta; taustalla näkyvät puut ja vaaleanpunaiset rakennukset.",
+        "lyhyt": "Nirvanha Beachin hiekkarantaa New Providencella.",
         "tiedosto": "Nirvanha Beach - panoramio.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "9ee0363e287ef499d1c26c8ac5bc77a947c54e226ed1e58757fbe0b69d1a88de",
-      "targetAfterSHA256": "4622f7699dc484e79d595ed6f21a4688899296d97e09a74b6b59516703b1f2d5",
-      "contextAfterSHA256": "4622f7699dc484e79d595ed6f21a4688899296d97e09a74b6b59516703b1f2d5",
+      "sourceContentAfterSHA256": "1d079f6220a140006aa16abfc203f04340a5db084add729084bb74f12087b590",
+      "targetAfterSHA256": "db1c1c82ae7f3f32e19a73afe684df310f1e834bb286def05a4a169a10692bbf",
+      "contextAfterSHA256": "db1c1c82ae7f3f32e19a73afe684df310f1e834bb286def05a4a169a10692bbf",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "9ee0363e287ef499d1c26c8ac5bc77a947c54e226ed1e58757fbe0b69d1a88de",
+        "targetAfterSHA256": "4622f7699dc484e79d595ed6f21a4688899296d97e09a74b6b59516703b1f2d5",
+        "contextAfterSHA256": "4622f7699dc484e79d595ed6f21a4688899296d97e09a74b6b59516703b1f2d5",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "4622f7699dc484e79d595ed6f21a4688899296d97e09a74b6b59516703b1f2d5",
+          "semanticContextSHA256": "4622f7699dc484e79d595ed6f21a4688899296d97e09a74b6b59516703b1f2d5",
+          "subjectTitle": "Nassau",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "1d079f6220a140006aa16abfc203f04340a5db084add729084bb74f12087b590",
+        "sameImageNativeSHA256": "91770d002b2fd0d01f0e5e1bfbc69f11fc02e21dd73ad357f5612e3a028db317",
+        "sameImageExportSHA256": "91770d002b2fd0d01f0e5e1bfbc69f11fc02e21dd73ad357f5612e3a028db317",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     }
   ],
   "runtimeIntegrationPending": true,
   "ownerAcceptedNotImpliedByAuthorization": false,
   "gameIntegrated": false,
   "allAssetsExplicitlyOwnerApproved": true,
-  "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+  "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+  "task118ExcludedAssets": [],
+  "task118TextRevision": true,
+  "independentTextResamplePending": true,
+  "textAcceptanceVerified": false,
+  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task118/immutable-media-history/e12/nassau/44da3855fae690ce933f10d88b68fe8ebd7b5345637910de2680f34e6a001484.json",
+  "task118ReboundAt": "2026-10-13T16:31:26.322150+00:00"
 }
