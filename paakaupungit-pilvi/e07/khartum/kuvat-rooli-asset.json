@@ -3,7 +3,7 @@
   "era": "e07",
   "city": "khartum",
   "authorization": "hyväksyn kaikki tekemäsi kuvat. toimita ne claudelle. claudelta saat uusia ohjeita jatkoa varten",
-  "sourceContentAfterSHA256": "f8f52cd4508afc665d78e8c25994c6041a919a3e5f7312f0dd6c5c728e412a8d",
+  "sourceContentAfterSHA256": "a7ba316a3c40449b049f7e5dbdce2746930eb6e8400ecb33af0c31ae12f66615",
   "assets": [
     {
       "era": "e07",
@@ -28,10 +28,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/khartum/e07-khartum-O3-v1-20261012-06c5ffc6a0bf.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Kasvikokoelman valmistelun havainnekuva; ei Khartumin kasvitieteellisen puutarhan näyte.",
-        "lyhyt": "Kasvikokoelman valmistelun havainnekuva; ei Khartumin kasvitieteellisen puutarhan näyte."
+        "selite": "Kasvikokoelman valmistelun havainnekuva; ei Khartumin kasvitieteellisen puutarhan näyte."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -39,10 +39,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/khartum/e07-khartum-O3-v1-20261012-06c5ffc6a0bf.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Kasvikokoelman valmistelun havainnekuva; ei Khartumin kasvitieteellisen puutarhan näyte.",
-        "lyhyt": "Kasvikokoelman valmistelun havainnekuva; ei Khartumin kasvitieteellisen puutarhan näyte."
+        "selite": "Kasvikokoelman valmistelun havainnekuva; ei Khartumin kasvitieteellisen puutarhan näyte."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -56,10 +56,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/khartum/sisalto.json",
-      "sourceContentSHA256": "f8f52cd4508afc665d78e8c25994c6041a919a3e5f7312f0dd6c5c728e412a8d",
+      "sourceContentSHA256": "a7ba316a3c40449b049f7e5dbdce2746930eb6e8400ecb33af0c31ae12f66615",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "7721b46010605111abdf659f9d59aeaeccee08848def3d4f5f350e453d6c5af5",
+        "semanticContextSHA256": "2ed3fb674e0ebe24687ae20ccb3b2c77c1a9c198818a0ad4b9aee0551fd753a9",
         "subjectTitle": "Saari, kasvit ja arkeologinen muisti",
         "targetState": "existing-target"
       },
@@ -216,9 +216,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -237,17 +237,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "f8f52cd4508afc665d78e8c25994c6041a919a3e5f7312f0dd6c5c728e412a8d",
+      "sourceContentAfterSHA256": "a7ba316a3c40449b049f7e5dbdce2746930eb6e8400ecb33af0c31ae12f66615",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "7721b46010605111abdf659f9d59aeaeccee08848def3d4f5f350e453d6c5af5",
+      "contextAfterSHA256": "2ed3fb674e0ebe24687ae20ccb3b2c77c1a9c198818a0ad4b9aee0551fd753a9",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "f8f52cd4508afc665d78e8c25994c6041a919a3e5f7312f0dd6c5c728e412a8d",
+        "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "contextAfterSHA256": "7721b46010605111abdf659f9d59aeaeccee08848def3d4f5f350e453d6c5af5",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+          "semanticContextSHA256": "7721b46010605111abdf659f9d59aeaeccee08848def3d4f5f350e453d6c5af5",
+          "subjectTitle": "Saari, kasvit ja arkeologinen muisti",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "a7ba316a3c40449b049f7e5dbdce2746930eb6e8400ecb33af0c31ae12f66615",
+        "sameImageNativeSHA256": "06c5ffc6a0bfa20222b20cae2dc75e7d24b493e6189bf32d9621e2926ddd1627",
+        "sameImageExportSHA256": "9c1b6f126f55fc2566d7aeac254b2a1fd8895b582c8f3e18b627d7a6b7f29578",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e07",
@@ -272,10 +293,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/khartum/e07-khartum-O4-v1-20261012-6a41a095f8b7.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Vehnäpohjaisen leivän ja okra-lihakastikkeen havainnekuva; ei dokumentoitu ravintola-annos.",
-        "lyhyt": "Vehnäpohjaisen leivän ja okra-lihakastikkeen havainnekuva; ei dokumentoitu ravintola-annos."
+        "selite": "Vehnäpohjaisen leivän ja okra-lihakastikkeen havainnekuva; ei dokumentoitu ravintola-annos."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -283,10 +304,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/khartum/e07-khartum-O4-v1-20261012-6a41a095f8b7.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Vehnäpohjaisen leivän ja okra-lihakastikkeen havainnekuva; ei dokumentoitu ravintola-annos.",
-        "lyhyt": "Vehnäpohjaisen leivän ja okra-lihakastikkeen havainnekuva; ei dokumentoitu ravintola-annos."
+        "selite": "Vehnäpohjaisen leivän ja okra-lihakastikkeen havainnekuva; ei dokumentoitu ravintola-annos."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -300,10 +321,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/khartum/sisalto.json",
-      "sourceContentSHA256": "f8f52cd4508afc665d78e8c25994c6041a919a3e5f7312f0dd6c5c728e412a8d",
+      "sourceContentSHA256": "a7ba316a3c40449b049f7e5dbdce2746930eb6e8400ecb33af0c31ae12f66615",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "b8c01ba245de5c502c8e0315c626254bf5089e0f8e9502ff8fc8b99184d0595b",
+        "semanticContextSHA256": "17ed7a76fbd422410f92071dce4a0323560cac584309d3a5950c5fa56d897dc5",
         "subjectTitle": "Ruokaperinne",
         "targetState": "existing-target"
       },
@@ -446,9 +467,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -467,17 +488,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "f8f52cd4508afc665d78e8c25994c6041a919a3e5f7312f0dd6c5c728e412a8d",
+      "sourceContentAfterSHA256": "a7ba316a3c40449b049f7e5dbdce2746930eb6e8400ecb33af0c31ae12f66615",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "b8c01ba245de5c502c8e0315c626254bf5089e0f8e9502ff8fc8b99184d0595b",
+      "contextAfterSHA256": "17ed7a76fbd422410f92071dce4a0323560cac584309d3a5950c5fa56d897dc5",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "f8f52cd4508afc665d78e8c25994c6041a919a3e5f7312f0dd6c5c728e412a8d",
+        "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "contextAfterSHA256": "b8c01ba245de5c502c8e0315c626254bf5089e0f8e9502ff8fc8b99184d0595b",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+          "semanticContextSHA256": "b8c01ba245de5c502c8e0315c626254bf5089e0f8e9502ff8fc8b99184d0595b",
+          "subjectTitle": "Ruokaperinne",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "a7ba316a3c40449b049f7e5dbdce2746930eb6e8400ecb33af0c31ae12f66615",
+        "sameImageNativeSHA256": "6a41a095f8b7d04f8ccc1fa65779255d7f5c8e0bc1bd4163f813bada890a3fda",
+        "sameImageExportSHA256": "49ec19c763fc4280f4721e2eb29fe3fdfc26ab23e5300e216c4b37a53d1c7c6e",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e07",
@@ -499,10 +541,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/khartum/e07-khartum-K2-v1-20261012-740147eb699e.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Sitrusviljelyn havainnekuva; kuva ei esitä Tutin nykyistä maisemaa.",
-        "lyhyt": "Sitrusviljelyn havainnekuva; kuva ei esitä Tutin nykyistä maisemaa."
+        "selite": "Sitrusviljelyn havainnekuva; kuva ei esitä Tutin nykyistä maisemaa."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -510,10 +552,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/khartum/e07-khartum-K2-v1-20261012-740147eb699e.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Sitrusviljelyn havainnekuva; kuva ei esitä Tutin nykyistä maisemaa.",
-        "lyhyt": "Sitrusviljelyn havainnekuva; kuva ei esitä Tutin nykyistä maisemaa."
+        "selite": "Sitrusviljelyn havainnekuva; kuva ei esitä Tutin nykyistä maisemaa."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -527,10 +569,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/khartum/sisalto.json",
-      "sourceContentSHA256": "f8f52cd4508afc665d78e8c25994c6041a919a3e5f7312f0dd6c5c728e412a8d",
+      "sourceContentSHA256": "a7ba316a3c40449b049f7e5dbdce2746930eb6e8400ecb33af0c31ae12f66615",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "651a5aa042a39f049ee2d4f5145ee2f6d92b25a842b607f5db17a53667417ddb",
-        "semanticContextSHA256": "651a5aa042a39f049ee2d4f5145ee2f6d92b25a842b607f5db17a53667417ddb",
+        "targetBeforeSHA256": "b8191bd8446eba3e43eca0384992849560dc6d52ce49347c1c2d2ca521412686",
+        "semanticContextSHA256": "b8191bd8446eba3e43eca0384992849560dc6d52ce49347c1c2d2ca521412686",
         "subjectTitle": "Viljelysaari kaupunkien välissä",
         "targetState": "existing-target"
       },
@@ -672,9 +714,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -693,17 +735,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "f8f52cd4508afc665d78e8c25994c6041a919a3e5f7312f0dd6c5c728e412a8d",
-      "targetAfterSHA256": "651a5aa042a39f049ee2d4f5145ee2f6d92b25a842b607f5db17a53667417ddb",
-      "contextAfterSHA256": "651a5aa042a39f049ee2d4f5145ee2f6d92b25a842b607f5db17a53667417ddb",
+      "sourceContentAfterSHA256": "a7ba316a3c40449b049f7e5dbdce2746930eb6e8400ecb33af0c31ae12f66615",
+      "targetAfterSHA256": "b8191bd8446eba3e43eca0384992849560dc6d52ce49347c1c2d2ca521412686",
+      "contextAfterSHA256": "b8191bd8446eba3e43eca0384992849560dc6d52ce49347c1c2d2ca521412686",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "f8f52cd4508afc665d78e8c25994c6041a919a3e5f7312f0dd6c5c728e412a8d",
+        "targetAfterSHA256": "651a5aa042a39f049ee2d4f5145ee2f6d92b25a842b607f5db17a53667417ddb",
+        "contextAfterSHA256": "651a5aa042a39f049ee2d4f5145ee2f6d92b25a842b607f5db17a53667417ddb",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "651a5aa042a39f049ee2d4f5145ee2f6d92b25a842b607f5db17a53667417ddb",
+          "semanticContextSHA256": "651a5aa042a39f049ee2d4f5145ee2f6d92b25a842b607f5db17a53667417ddb",
+          "subjectTitle": "Viljelysaari kaupunkien välissä",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "a7ba316a3c40449b049f7e5dbdce2746930eb6e8400ecb33af0c31ae12f66615",
+        "sameImageNativeSHA256": "740147eb699e57e6249fb29ebcd33084658a970733d57d0b111fced32216a298",
+        "sameImageExportSHA256": "0d722b0a55da7303fce5ae9de9edc2afb4f3d94f62d2b539f03f0fb12ecc3fbc",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e07",
@@ -725,10 +788,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/khartum/e07-khartum-K3-v1-20261012-13eaa7e57654.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Kultamateriaalin kaupankäyntiin liittyvä havainnekuva.",
-        "lyhyt": "Kultamateriaalin kaupankäyntiin liittyvä havainnekuva."
+        "selite": "Kultamateriaalin kaupankäyntiin liittyvä havainnekuva."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -736,10 +799,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/khartum/e07-khartum-K3-v1-20261012-13eaa7e57654.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Kultamateriaalin kaupankäyntiin liittyvä havainnekuva.",
-        "lyhyt": "Kultamateriaalin kaupankäyntiin liittyvä havainnekuva."
+        "selite": "Kultamateriaalin kaupankäyntiin liittyvä havainnekuva."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -753,10 +816,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/khartum/sisalto.json",
-      "sourceContentSHA256": "f8f52cd4508afc665d78e8c25994c6041a919a3e5f7312f0dd6c5c728e412a8d",
+      "sourceContentSHA256": "a7ba316a3c40449b049f7e5dbdce2746930eb6e8400ecb33af0c31ae12f66615",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "56ed4fc60f8370683c91aa68bc968b1ef07f57c14658bce516d9996a6dd25d03",
-        "semanticContextSHA256": "56ed4fc60f8370683c91aa68bc968b1ef07f57c14658bce516d9996a6dd25d03",
+        "targetBeforeSHA256": "a2bb7e94294afdf04353dbc8eaf933db3ba03d53a32cf6fea7d840161b03a9d2",
+        "semanticContextSHA256": "a2bb7e94294afdf04353dbc8eaf933db3ba03d53a32cf6fea7d840161b03a9d2",
         "subjectTitle": "Tavara määrää torin suunnan",
         "targetState": "existing-target"
       },
@@ -913,9 +976,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -934,17 +997,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "f8f52cd4508afc665d78e8c25994c6041a919a3e5f7312f0dd6c5c728e412a8d",
-      "targetAfterSHA256": "56ed4fc60f8370683c91aa68bc968b1ef07f57c14658bce516d9996a6dd25d03",
-      "contextAfterSHA256": "56ed4fc60f8370683c91aa68bc968b1ef07f57c14658bce516d9996a6dd25d03",
+      "sourceContentAfterSHA256": "a7ba316a3c40449b049f7e5dbdce2746930eb6e8400ecb33af0c31ae12f66615",
+      "targetAfterSHA256": "a2bb7e94294afdf04353dbc8eaf933db3ba03d53a32cf6fea7d840161b03a9d2",
+      "contextAfterSHA256": "a2bb7e94294afdf04353dbc8eaf933db3ba03d53a32cf6fea7d840161b03a9d2",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "f8f52cd4508afc665d78e8c25994c6041a919a3e5f7312f0dd6c5c728e412a8d",
+        "targetAfterSHA256": "56ed4fc60f8370683c91aa68bc968b1ef07f57c14658bce516d9996a6dd25d03",
+        "contextAfterSHA256": "56ed4fc60f8370683c91aa68bc968b1ef07f57c14658bce516d9996a6dd25d03",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "56ed4fc60f8370683c91aa68bc968b1ef07f57c14658bce516d9996a6dd25d03",
+          "semanticContextSHA256": "56ed4fc60f8370683c91aa68bc968b1ef07f57c14658bce516d9996a6dd25d03",
+          "subjectTitle": "Tavara määrää torin suunnan",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "a7ba316a3c40449b049f7e5dbdce2746930eb6e8400ecb33af0c31ae12f66615",
+        "sameImageNativeSHA256": "13eaa7e57654a457e1645f7c4697f1f7cbffd92968699dd7a8d05a4478c9ed8f",
+        "sameImageExportSHA256": "7690407f9f6d9d22e5008cfd5921dde799a1ba4c4c95899a4d478f87b9378f3c",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e07",
@@ -966,10 +1050,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/khartum/e07-khartum-K4-v2-20261012-fa07d4d42ec8.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Maanmittauksen välineiden havainnekuva.",
-        "lyhyt": "Maanmittauksen välineiden havainnekuva."
+        "selite": "Maanmittauksen välineiden havainnekuva."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -977,10 +1061,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/khartum/e07-khartum-K4-v2-20261012-fa07d4d42ec8.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Maanmittauksen välineiden havainnekuva.",
-        "lyhyt": "Maanmittauksen välineiden havainnekuva."
+        "selite": "Maanmittauksen välineiden havainnekuva."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -994,10 +1078,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/khartum/sisalto.json",
-      "sourceContentSHA256": "f8f52cd4508afc665d78e8c25994c6041a919a3e5f7312f0dd6c5c728e412a8d",
+      "sourceContentSHA256": "a7ba316a3c40449b049f7e5dbdce2746930eb6e8400ecb33af0c31ae12f66615",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "d4fd74d800c165ccb19563fbfd1787c82a67c7f15651908a30bc9bcc22c571dd",
-        "semanticContextSHA256": "d4fd74d800c165ccb19563fbfd1787c82a67c7f15651908a30bc9bcc22c571dd",
+        "targetBeforeSHA256": "a5d352764f5e659f1f098d6c755e1610b87140282ecb45891ff25db7dfd3b76e",
+        "semanticContextSHA256": "a5d352764f5e659f1f098d6c755e1610b87140282ecb45891ff25db7dfd3b76e",
         "subjectTitle": "Mittaaja ja opettaja samassa collegessa",
         "targetState": "existing-target"
       },
@@ -1146,9 +1230,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -1167,17 +1251,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "f8f52cd4508afc665d78e8c25994c6041a919a3e5f7312f0dd6c5c728e412a8d",
-      "targetAfterSHA256": "d4fd74d800c165ccb19563fbfd1787c82a67c7f15651908a30bc9bcc22c571dd",
-      "contextAfterSHA256": "d4fd74d800c165ccb19563fbfd1787c82a67c7f15651908a30bc9bcc22c571dd",
+      "sourceContentAfterSHA256": "a7ba316a3c40449b049f7e5dbdce2746930eb6e8400ecb33af0c31ae12f66615",
+      "targetAfterSHA256": "a5d352764f5e659f1f098d6c755e1610b87140282ecb45891ff25db7dfd3b76e",
+      "contextAfterSHA256": "a5d352764f5e659f1f098d6c755e1610b87140282ecb45891ff25db7dfd3b76e",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "f8f52cd4508afc665d78e8c25994c6041a919a3e5f7312f0dd6c5c728e412a8d",
+        "targetAfterSHA256": "d4fd74d800c165ccb19563fbfd1787c82a67c7f15651908a30bc9bcc22c571dd",
+        "contextAfterSHA256": "d4fd74d800c165ccb19563fbfd1787c82a67c7f15651908a30bc9bcc22c571dd",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "d4fd74d800c165ccb19563fbfd1787c82a67c7f15651908a30bc9bcc22c571dd",
+          "semanticContextSHA256": "d4fd74d800c165ccb19563fbfd1787c82a67c7f15651908a30bc9bcc22c571dd",
+          "subjectTitle": "Mittaaja ja opettaja samassa collegessa",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "a7ba316a3c40449b049f7e5dbdce2746930eb6e8400ecb33af0c31ae12f66615",
+        "sameImageNativeSHA256": "fa07d4d42ec853a22f990ccf744ad7be49147b9163ddfd9686ae58f15a33f14f",
+        "sameImageExportSHA256": "9326e3f685aeca904ea86452ff471536f70e755af90e22c61dbda6a0584448e1",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e07",
@@ -1199,10 +1304,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/khartum/e07-khartum-L1-v1-20261012-01cd61c840a9.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Ruoko-, maa- ja kivimateriaalien havainnekuva; ei Khartumin historiallisen rakennuksen kuva.",
-        "lyhyt": "Ruoko-, maa- ja kivimateriaalien havainnekuva; ei Khartumin historiallisen rakennuksen kuva."
+        "selite": "Ruoko-, maa- ja kivimateriaalien havainnekuva; ei Khartumin historiallisen rakennuksen kuva."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -1210,10 +1315,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/khartum/e07-khartum-L1-v1-20261012-01cd61c840a9.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Ruoko-, maa- ja kivimateriaalien havainnekuva; ei Khartumin historiallisen rakennuksen kuva.",
-        "lyhyt": "Ruoko-, maa- ja kivimateriaalien havainnekuva; ei Khartumin historiallisen rakennuksen kuva."
+        "selite": "Ruoko-, maa- ja kivimateriaalien havainnekuva; ei Khartumin historiallisen rakennuksen kuva."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -1227,7 +1332,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/khartum/sisalto.json",
-      "sourceContentSHA256": "f8f52cd4508afc665d78e8c25994c6041a919a3e5f7312f0dd6c5c728e412a8d",
+      "sourceContentSHA256": "a7ba316a3c40449b049f7e5dbdce2746930eb6e8400ecb33af0c31ae12f66615",
       "semanticSourceBind": {
         "targetBeforeSHA256": "ee19c176c3e4f25eb9cdd6ad65b51b2c10111be8ee14941701f8710757d88c71",
         "semanticContextSHA256": "ee19c176c3e4f25eb9cdd6ad65b51b2c10111be8ee14941701f8710757d88c71",
@@ -1373,9 +1478,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -1394,17 +1499,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "f8f52cd4508afc665d78e8c25994c6041a919a3e5f7312f0dd6c5c728e412a8d",
+      "sourceContentAfterSHA256": "a7ba316a3c40449b049f7e5dbdce2746930eb6e8400ecb33af0c31ae12f66615",
       "targetAfterSHA256": "ee19c176c3e4f25eb9cdd6ad65b51b2c10111be8ee14941701f8710757d88c71",
       "contextAfterSHA256": "ee19c176c3e4f25eb9cdd6ad65b51b2c10111be8ee14941701f8710757d88c71",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "f8f52cd4508afc665d78e8c25994c6041a919a3e5f7312f0dd6c5c728e412a8d",
+        "targetAfterSHA256": "ee19c176c3e4f25eb9cdd6ad65b51b2c10111be8ee14941701f8710757d88c71",
+        "contextAfterSHA256": "ee19c176c3e4f25eb9cdd6ad65b51b2c10111be8ee14941701f8710757d88c71",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "ee19c176c3e4f25eb9cdd6ad65b51b2c10111be8ee14941701f8710757d88c71",
+          "semanticContextSHA256": "ee19c176c3e4f25eb9cdd6ad65b51b2c10111be8ee14941701f8710757d88c71",
+          "subjectTitle": "Tulva muutti rakennusaineita",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "a7ba316a3c40449b049f7e5dbdce2746930eb6e8400ecb33af0c31ae12f66615",
+        "sameImageNativeSHA256": "01cd61c840a96f2fe8ae89f1243e80cee3210e8f7a76e8dc7f528b32132be6e9",
+        "sameImageExportSHA256": "99b2655017de21b5fb545abe798b7695b8141ec5b567b1099638ae2717c2dfef",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e07",
@@ -1426,10 +1552,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/khartum/e07-khartum-L2-herbaario-v1-20261012-77279ebfd167.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Herbaarion ja elävän kasviaineiston havainnekuva.",
-        "lyhyt": "Herbaarion ja elävän kasviaineiston havainnekuva."
+        "selite": "Herbaarion ja elävän kasviaineiston havainnekuva."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -1437,10 +1563,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/khartum/e07-khartum-L2-herbaario-v1-20261012-77279ebfd167.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Herbaarion ja elävän kasviaineiston havainnekuva.",
-        "lyhyt": "Herbaarion ja elävän kasviaineiston havainnekuva."
+        "selite": "Herbaarion ja elävän kasviaineiston havainnekuva."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -1454,7 +1580,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/khartum/sisalto.json",
-      "sourceContentSHA256": "f8f52cd4508afc665d78e8c25994c6041a919a3e5f7312f0dd6c5c728e412a8d",
+      "sourceContentSHA256": "a7ba316a3c40449b049f7e5dbdce2746930eb6e8400ecb33af0c31ae12f66615",
       "semanticSourceBind": {
         "targetBeforeSHA256": "1dbc84c2e5d9459355cc2f7c3a99f57ec86b19ae026ab51e99038605954a760a",
         "semanticContextSHA256": "1dbc84c2e5d9459355cc2f7c3a99f57ec86b19ae026ab51e99038605954a760a",
@@ -1613,9 +1739,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -1634,17 +1760,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "f8f52cd4508afc665d78e8c25994c6041a919a3e5f7312f0dd6c5c728e412a8d",
+      "sourceContentAfterSHA256": "a7ba316a3c40449b049f7e5dbdce2746930eb6e8400ecb33af0c31ae12f66615",
       "targetAfterSHA256": "1dbc84c2e5d9459355cc2f7c3a99f57ec86b19ae026ab51e99038605954a760a",
       "contextAfterSHA256": "1dbc84c2e5d9459355cc2f7c3a99f57ec86b19ae026ab51e99038605954a760a",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "f8f52cd4508afc665d78e8c25994c6041a919a3e5f7312f0dd6c5c728e412a8d",
+        "targetAfterSHA256": "1dbc84c2e5d9459355cc2f7c3a99f57ec86b19ae026ab51e99038605954a760a",
+        "contextAfterSHA256": "1dbc84c2e5d9459355cc2f7c3a99f57ec86b19ae026ab51e99038605954a760a",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "1dbc84c2e5d9459355cc2f7c3a99f57ec86b19ae026ab51e99038605954a760a",
+          "semanticContextSHA256": "1dbc84c2e5d9459355cc2f7c3a99f57ec86b19ae026ab51e99038605954a760a",
+          "subjectTitle": "Elävän kasvin rinnalla on arkistokasvi",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "a7ba316a3c40449b049f7e5dbdce2746930eb6e8400ecb33af0c31ae12f66615",
+        "sameImageNativeSHA256": "77279ebfd1672664181c9d82f7e903ce18caf685f1adfa5c1945c390be17a5df",
+        "sameImageExportSHA256": "757949a327791fb92cfb4322e87a432d0c4c970f5061ae2a9ef3b9ffd2538303",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e07",
@@ -1664,7 +1811,7 @@
         "suora": true,
         "lahde": "NASA Johnson Space Center, Commons (PD)",
         "selite": "Khartumin ja Omdurmanin jokiseutu avaruusasemalta kuvattuna.",
-        "lyhyt": "Khartumin ja Omdurmanin jokiseutu avaruusasemalta kuvattuna.",
+        "lyhyt": "Khartumin ja Omdurmanin jokiseutu.",
         "tiedosto": "Iss070e002191.jpg",
         "vuosi": "2023"
       },
@@ -1672,7 +1819,7 @@
       "CvalidatorCompatiblePayload": {
         "lahde": "NASA Johnson Space Center, Commons (PD)",
         "selite": "Khartumin ja Omdurmanin jokiseutu avaruusasemalta kuvattuna.",
-        "lyhyt": "Khartumin ja Omdurmanin jokiseutu avaruusasemalta kuvattuna.",
+        "lyhyt": "Khartumin ja Omdurmanin jokiseutu.",
         "tiedosto": "Iss070e002191.jpg",
         "vuosi": "2023"
       },
@@ -1681,7 +1828,7 @@
         "suora": true,
         "lahde": "NASA Johnson Space Center, Commons (PD)",
         "selite": "Khartumin ja Omdurmanin jokiseutu avaruusasemalta kuvattuna.",
-        "lyhyt": "Khartumin ja Omdurmanin jokiseutu avaruusasemalta kuvattuna.",
+        "lyhyt": "Khartumin ja Omdurmanin jokiseutu.",
         "tiedosto": "Iss070e002191.jpg",
         "vuosi": "2023"
       },
@@ -1697,10 +1844,10 @@
         3712
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/khartum/sisalto.json",
-      "sourceContentSHA256": "f8f52cd4508afc665d78e8c25994c6041a919a3e5f7312f0dd6c5c728e412a8d",
+      "sourceContentSHA256": "a7ba316a3c40449b049f7e5dbdce2746930eb6e8400ecb33af0c31ae12f66615",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "2d00bd13803b058a99dd2b34a1b139e5869225f5282a23f2679457a3586c9a4f",
-        "semanticContextSHA256": "2d00bd13803b058a99dd2b34a1b139e5869225f5282a23f2679457a3586c9a4f",
+        "targetBeforeSHA256": "c64b129f6ee9580e83535a64554009bb8ccadec14d4d65160ce85b10dadee815",
+        "semanticContextSHA256": "c64b129f6ee9580e83535a64554009bb8ccadec14d4d65160ce85b10dadee815",
         "subjectTitle": "khartum — aito paikkavalokuva",
         "targetState": "existing-target"
       },
@@ -1814,9 +1961,9 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "Iss070e002191.jpg",
-        "lahde": "NASA Johnson Space Center, Commons (PD)",
+        "lyhyt": "Khartumin ja Omdurmanin jokiseutu.",
         "selite": "Khartumin ja Omdurmanin jokiseutu avaruusasemalta kuvattuna.",
-        "lyhyt": "Khartumin ja Omdurmanin jokiseutu avaruusasemalta kuvattuna.",
+        "lahde": "NASA Johnson Space Center, Commons (PD)",
         "vuosi": "2023"
       },
       "preservePreviousMediaObjects": true,
@@ -1836,7 +1983,7 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
@@ -1844,16 +1991,37 @@
       "CcommonsFieldPayload": {
         "lahde": "NASA Johnson Space Center, Commons (PD)",
         "selite": "Khartumin ja Omdurmanin jokiseutu avaruusasemalta kuvattuna.",
-        "lyhyt": "Khartumin ja Omdurmanin jokiseutu avaruusasemalta kuvattuna.",
+        "lyhyt": "Khartumin ja Omdurmanin jokiseutu.",
         "tiedosto": "Iss070e002191.jpg",
         "vuosi": "2023"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "f8f52cd4508afc665d78e8c25994c6041a919a3e5f7312f0dd6c5c728e412a8d",
-      "targetAfterSHA256": "2d00bd13803b058a99dd2b34a1b139e5869225f5282a23f2679457a3586c9a4f",
-      "contextAfterSHA256": "2d00bd13803b058a99dd2b34a1b139e5869225f5282a23f2679457a3586c9a4f",
+      "sourceContentAfterSHA256": "a7ba316a3c40449b049f7e5dbdce2746930eb6e8400ecb33af0c31ae12f66615",
+      "targetAfterSHA256": "c64b129f6ee9580e83535a64554009bb8ccadec14d4d65160ce85b10dadee815",
+      "contextAfterSHA256": "c64b129f6ee9580e83535a64554009bb8ccadec14d4d65160ce85b10dadee815",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "f8f52cd4508afc665d78e8c25994c6041a919a3e5f7312f0dd6c5c728e412a8d",
+        "targetAfterSHA256": "2d00bd13803b058a99dd2b34a1b139e5869225f5282a23f2679457a3586c9a4f",
+        "contextAfterSHA256": "2d00bd13803b058a99dd2b34a1b139e5869225f5282a23f2679457a3586c9a4f",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "2d00bd13803b058a99dd2b34a1b139e5869225f5282a23f2679457a3586c9a4f",
+          "semanticContextSHA256": "2d00bd13803b058a99dd2b34a1b139e5869225f5282a23f2679457a3586c9a4f",
+          "subjectTitle": "khartum — aito paikkavalokuva",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "a7ba316a3c40449b049f7e5dbdce2746930eb6e8400ecb33af0c31ae12f66615",
+        "sameImageNativeSHA256": "a02c95213a6b69ddb89991244f715145895261c53bf0f57d97471723da46cfdd",
+        "sameImageExportSHA256": "a02c95213a6b69ddb89991244f715145895261c53bf0f57d97471723da46cfdd",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e07",
@@ -1876,14 +2044,14 @@
         "suora": true,
         "lahde": "NASA, Wikimedia Commons (PD)",
         "selite": "Khartumin jokien erottamaa kaupunkiseutua yövalokuvassa avaruusasemalta.",
-        "lyhyt": "Khartumin jokien erottamaa kaupunkiseutua yövalokuvassa avaruusasemalta.",
+        "lyhyt": "Khartumin yövalot avaruudesta.",
         "tiedosto": "ISS-64 Khartoum, Sudan.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "NASA, Wikimedia Commons (PD)",
         "selite": "Khartumin jokien erottamaa kaupunkiseutua yövalokuvassa avaruusasemalta.",
-        "lyhyt": "Khartumin jokien erottamaa kaupunkiseutua yövalokuvassa avaruusasemalta.",
+        "lyhyt": "Khartumin yövalot avaruudesta.",
         "tiedosto": "ISS-64 Khartoum, Sudan.jpg"
       },
       "runtimeMediaFieldPayload": {
@@ -1891,7 +2059,7 @@
         "suora": true,
         "lahde": "NASA, Wikimedia Commons (PD)",
         "selite": "Khartumin jokien erottamaa kaupunkiseutua yövalokuvassa avaruusasemalta.",
-        "lyhyt": "Khartumin jokien erottamaa kaupunkiseutua yövalokuvassa avaruusasemalta.",
+        "lyhyt": "Khartumin yövalot avaruudesta.",
         "tiedosto": "ISS-64 Khartoum, Sudan.jpg"
       },
       "runtimeRemoveMediaKeys": [],
@@ -1906,10 +2074,10 @@
         5568
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/khartum/sisalto.json",
-      "sourceContentSHA256": "f8f52cd4508afc665d78e8c25994c6041a919a3e5f7312f0dd6c5c728e412a8d",
+      "sourceContentSHA256": "a7ba316a3c40449b049f7e5dbdce2746930eb6e8400ecb33af0c31ae12f66615",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "af24b22c3bc5b14d982785bffd1d760fa32f76cc23e79c0855b0c62627d57e10",
-        "semanticContextSHA256": "af24b22c3bc5b14d982785bffd1d760fa32f76cc23e79c0855b0c62627d57e10",
+        "targetBeforeSHA256": "b69861896019839c19921831fdecc6937fbfc994c8b5a70622eda300d8c7989d",
+        "semanticContextSHA256": "b69861896019839c19921831fdecc6937fbfc994c8b5a70622eda300d8c7989d",
         "subjectTitle": "Khartum",
         "targetState": "existing-target"
       },
@@ -2069,9 +2237,9 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "ISS-64 Khartoum, Sudan.jpg",
-        "lahde": "NASA, Wikimedia Commons (PD)",
+        "lyhyt": "Khartumin yövalot avaruudesta.",
         "selite": "Khartumin jokien erottamaa kaupunkiseutua yövalokuvassa avaruusasemalta.",
-        "lyhyt": "Khartumin jokien erottamaa kaupunkiseutua yövalokuvassa avaruusasemalta."
+        "lahde": "NASA, Wikimedia Commons (PD)"
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -2090,7 +2258,7 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
@@ -2098,15 +2266,36 @@
       "CcommonsFieldPayload": {
         "lahde": "NASA, Wikimedia Commons (PD)",
         "selite": "Khartumin jokien erottamaa kaupunkiseutua yövalokuvassa avaruusasemalta.",
-        "lyhyt": "Khartumin jokien erottamaa kaupunkiseutua yövalokuvassa avaruusasemalta.",
+        "lyhyt": "Khartumin yövalot avaruudesta.",
         "tiedosto": "ISS-64 Khartoum, Sudan.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "f8f52cd4508afc665d78e8c25994c6041a919a3e5f7312f0dd6c5c728e412a8d",
-      "targetAfterSHA256": "af24b22c3bc5b14d982785bffd1d760fa32f76cc23e79c0855b0c62627d57e10",
-      "contextAfterSHA256": "af24b22c3bc5b14d982785bffd1d760fa32f76cc23e79c0855b0c62627d57e10",
+      "sourceContentAfterSHA256": "a7ba316a3c40449b049f7e5dbdce2746930eb6e8400ecb33af0c31ae12f66615",
+      "targetAfterSHA256": "b69861896019839c19921831fdecc6937fbfc994c8b5a70622eda300d8c7989d",
+      "contextAfterSHA256": "b69861896019839c19921831fdecc6937fbfc994c8b5a70622eda300d8c7989d",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "f8f52cd4508afc665d78e8c25994c6041a919a3e5f7312f0dd6c5c728e412a8d",
+        "targetAfterSHA256": "af24b22c3bc5b14d982785bffd1d760fa32f76cc23e79c0855b0c62627d57e10",
+        "contextAfterSHA256": "af24b22c3bc5b14d982785bffd1d760fa32f76cc23e79c0855b0c62627d57e10",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "af24b22c3bc5b14d982785bffd1d760fa32f76cc23e79c0855b0c62627d57e10",
+          "semanticContextSHA256": "af24b22c3bc5b14d982785bffd1d760fa32f76cc23e79c0855b0c62627d57e10",
+          "subjectTitle": "Khartum",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "a7ba316a3c40449b049f7e5dbdce2746930eb6e8400ecb33af0c31ae12f66615",
+        "sameImageNativeSHA256": "4698c01116dbbade6b3bdb033da3131ef22282f371c00824f5da518213a9ecc9",
+        "sameImageExportSHA256": "4698c01116dbbade6b3bdb033da3131ef22282f371c00824f5da518213a9ecc9",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e07",
@@ -2128,23 +2317,23 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e07/khartum/c2-7dba4c208fb2e07f9c44.jpg",
         "suora": true,
         "lahde": "Wikimomsd, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Niilin rantamaisema ja Khartumin kaupunkiseutu joen takana.",
-        "lyhyt": "Niilin rantamaisema ja Khartumin kaupunkiseutu joen takana.",
+        "selite": "Niilin vettä, rantakasvillisuutta ja vastarannan rakennuksia Khartumissa vuonna 2022.",
+        "lyhyt": "Niilin rantaa Khartumissa.",
         "tiedosto": "River Nile2.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Wikimomsd, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Niilin rantamaisema ja Khartumin kaupunkiseutu joen takana.",
-        "lyhyt": "Niilin rantamaisema ja Khartumin kaupunkiseutu joen takana.",
+        "selite": "Niilin vettä, rantakasvillisuutta ja vastarannan rakennuksia Khartumissa vuonna 2022.",
+        "lyhyt": "Niilin rantaa Khartumissa.",
         "tiedosto": "River Nile2.jpg"
       },
       "runtimeMediaFieldPayload": {
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e07/khartum/c2-7dba4c208fb2e07f9c44.jpg",
         "suora": true,
         "lahde": "Wikimomsd, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Niilin rantamaisema ja Khartumin kaupunkiseutu joen takana.",
-        "lyhyt": "Niilin rantamaisema ja Khartumin kaupunkiseutu joen takana.",
+        "selite": "Niilin vettä, rantakasvillisuutta ja vastarannan rakennuksia Khartumissa vuonna 2022.",
+        "lyhyt": "Niilin rantaa Khartumissa.",
         "tiedosto": "River Nile2.jpg"
       },
       "runtimeRemoveMediaKeys": [],
@@ -2159,10 +2348,10 @@
         3264
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/khartum/sisalto.json",
-      "sourceContentSHA256": "f8f52cd4508afc665d78e8c25994c6041a919a3e5f7312f0dd6c5c728e412a8d",
+      "sourceContentSHA256": "a7ba316a3c40449b049f7e5dbdce2746930eb6e8400ecb33af0c31ae12f66615",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "f9675f2c0c3eece54ed29b31c5aa25620a317edf6fedada49f9822f43e4025ed",
-        "semanticContextSHA256": "f9675f2c0c3eece54ed29b31c5aa25620a317edf6fedada49f9822f43e4025ed",
+        "targetBeforeSHA256": "5a1a6453715b6429dfedff1d7f361cf235193fc0008c92028149d1dd6bf611f9",
+        "semanticContextSHA256": "5a1a6453715b6429dfedff1d7f361cf235193fc0008c92028149d1dd6bf611f9",
         "subjectTitle": "Khartum",
         "targetState": "existing-target"
       },
@@ -2319,9 +2508,9 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "River Nile2.jpg",
-        "lahde": "Wikimomsd, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Niilin rantamaisema ja Khartumin kaupunkiseutu joen takana.",
-        "lyhyt": "Niilin rantamaisema ja Khartumin kaupunkiseutu joen takana."
+        "lyhyt": "Niilin rantaa Khartumissa.",
+        "selite": "Niilin vettä, rantakasvillisuutta ja vastarannan rakennuksia Khartumissa vuonna 2022.",
+        "lahde": "Wikimomsd, Wikimedia Commons (CC BY-SA 4.0)"
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -2340,23 +2529,44 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Wikimomsd, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Niilin rantamaisema ja Khartumin kaupunkiseutu joen takana.",
-        "lyhyt": "Niilin rantamaisema ja Khartumin kaupunkiseutu joen takana.",
+        "selite": "Niilin vettä, rantakasvillisuutta ja vastarannan rakennuksia Khartumissa vuonna 2022.",
+        "lyhyt": "Niilin rantaa Khartumissa.",
         "tiedosto": "River Nile2.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "f8f52cd4508afc665d78e8c25994c6041a919a3e5f7312f0dd6c5c728e412a8d",
-      "targetAfterSHA256": "f9675f2c0c3eece54ed29b31c5aa25620a317edf6fedada49f9822f43e4025ed",
-      "contextAfterSHA256": "f9675f2c0c3eece54ed29b31c5aa25620a317edf6fedada49f9822f43e4025ed",
+      "sourceContentAfterSHA256": "a7ba316a3c40449b049f7e5dbdce2746930eb6e8400ecb33af0c31ae12f66615",
+      "targetAfterSHA256": "5a1a6453715b6429dfedff1d7f361cf235193fc0008c92028149d1dd6bf611f9",
+      "contextAfterSHA256": "5a1a6453715b6429dfedff1d7f361cf235193fc0008c92028149d1dd6bf611f9",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "f8f52cd4508afc665d78e8c25994c6041a919a3e5f7312f0dd6c5c728e412a8d",
+        "targetAfterSHA256": "f9675f2c0c3eece54ed29b31c5aa25620a317edf6fedada49f9822f43e4025ed",
+        "contextAfterSHA256": "f9675f2c0c3eece54ed29b31c5aa25620a317edf6fedada49f9822f43e4025ed",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "f9675f2c0c3eece54ed29b31c5aa25620a317edf6fedada49f9822f43e4025ed",
+          "semanticContextSHA256": "f9675f2c0c3eece54ed29b31c5aa25620a317edf6fedada49f9822f43e4025ed",
+          "subjectTitle": "Khartum",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "a7ba316a3c40449b049f7e5dbdce2746930eb6e8400ecb33af0c31ae12f66615",
+        "sameImageNativeSHA256": "7dba4c208fb2e07f9c443af6335fec14472a5937580efddd66ab47f70ee56bdb",
+        "sameImageExportSHA256": "7dba4c208fb2e07f9c443af6335fec14472a5937580efddd66ab47f70ee56bdb",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e07",
@@ -2379,14 +2589,14 @@
         "suora": true,
         "lahde": "Mohoseen, Wikimedia Commons (CC BY-SA 4.0)",
         "selite": "Sunutin rantametsää Khartumissa.",
-        "lyhyt": "Sunutin rantametsää Khartumissa.",
+        "lyhyt": "Sunutin metsän rantaa.",
         "tiedosto": "Sunut Forest, Khartoum.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Mohoseen, Wikimedia Commons (CC BY-SA 4.0)",
         "selite": "Sunutin rantametsää Khartumissa.",
-        "lyhyt": "Sunutin rantametsää Khartumissa.",
+        "lyhyt": "Sunutin metsän rantaa.",
         "tiedosto": "Sunut Forest, Khartoum.jpg"
       },
       "runtimeMediaFieldPayload": {
@@ -2394,7 +2604,7 @@
         "suora": true,
         "lahde": "Mohoseen, Wikimedia Commons (CC BY-SA 4.0)",
         "selite": "Sunutin rantametsää Khartumissa.",
-        "lyhyt": "Sunutin rantametsää Khartumissa.",
+        "lyhyt": "Sunutin metsän rantaa.",
         "tiedosto": "Sunut Forest, Khartoum.jpg"
       },
       "runtimeRemoveMediaKeys": [],
@@ -2409,10 +2619,10 @@
         1836
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/khartum/sisalto.json",
-      "sourceContentSHA256": "f8f52cd4508afc665d78e8c25994c6041a919a3e5f7312f0dd6c5c728e412a8d",
+      "sourceContentSHA256": "a7ba316a3c40449b049f7e5dbdce2746930eb6e8400ecb33af0c31ae12f66615",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "eec31c4ddc3be8584775a68da249e117defb619c2bf24ff413bef91288ee88ff",
-        "semanticContextSHA256": "eec31c4ddc3be8584775a68da249e117defb619c2bf24ff413bef91288ee88ff",
+        "targetBeforeSHA256": "354c41f6fd8f3cfc355a2c7e91e00d3900b03785713acdec87cfca65b7215afd",
+        "semanticContextSHA256": "354c41f6fd8f3cfc355a2c7e91e00d3900b03785713acdec87cfca65b7215afd",
         "subjectTitle": "Khartum",
         "targetState": "existing-target"
       },
@@ -2569,9 +2779,9 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "Sunut Forest, Khartoum.jpg",
-        "lahde": "Mohoseen, Wikimedia Commons (CC BY-SA 4.0)",
+        "lyhyt": "Sunutin metsän rantaa.",
         "selite": "Sunutin rantametsää Khartumissa.",
-        "lyhyt": "Sunutin rantametsää Khartumissa."
+        "lahde": "Mohoseen, Wikimedia Commons (CC BY-SA 4.0)"
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -2590,7 +2800,7 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
@@ -2598,15 +2808,36 @@
       "CcommonsFieldPayload": {
         "lahde": "Mohoseen, Wikimedia Commons (CC BY-SA 4.0)",
         "selite": "Sunutin rantametsää Khartumissa.",
-        "lyhyt": "Sunutin rantametsää Khartumissa.",
+        "lyhyt": "Sunutin metsän rantaa.",
         "tiedosto": "Sunut Forest, Khartoum.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "f8f52cd4508afc665d78e8c25994c6041a919a3e5f7312f0dd6c5c728e412a8d",
-      "targetAfterSHA256": "eec31c4ddc3be8584775a68da249e117defb619c2bf24ff413bef91288ee88ff",
-      "contextAfterSHA256": "eec31c4ddc3be8584775a68da249e117defb619c2bf24ff413bef91288ee88ff",
+      "sourceContentAfterSHA256": "a7ba316a3c40449b049f7e5dbdce2746930eb6e8400ecb33af0c31ae12f66615",
+      "targetAfterSHA256": "354c41f6fd8f3cfc355a2c7e91e00d3900b03785713acdec87cfca65b7215afd",
+      "contextAfterSHA256": "354c41f6fd8f3cfc355a2c7e91e00d3900b03785713acdec87cfca65b7215afd",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "f8f52cd4508afc665d78e8c25994c6041a919a3e5f7312f0dd6c5c728e412a8d",
+        "targetAfterSHA256": "eec31c4ddc3be8584775a68da249e117defb619c2bf24ff413bef91288ee88ff",
+        "contextAfterSHA256": "eec31c4ddc3be8584775a68da249e117defb619c2bf24ff413bef91288ee88ff",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "eec31c4ddc3be8584775a68da249e117defb619c2bf24ff413bef91288ee88ff",
+          "semanticContextSHA256": "eec31c4ddc3be8584775a68da249e117defb619c2bf24ff413bef91288ee88ff",
+          "subjectTitle": "Khartum",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "a7ba316a3c40449b049f7e5dbdce2746930eb6e8400ecb33af0c31ae12f66615",
+        "sameImageNativeSHA256": "3d37cb6361fafb383c76b2b28ffc3ea1275a71c47ce10c75bf2aef793b4713b4",
+        "sameImageExportSHA256": "3d37cb6361fafb383c76b2b28ffc3ea1275a71c47ce10c75bf2aef793b4713b4",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e07",
@@ -2629,14 +2860,14 @@
         "suora": true,
         "lahde": "Matthias Gehricke, Wikimedia Commons (CC BY-SA 4.0)",
         "selite": "Semnan temppelin muinainen reliefi Sudanin kansallismuseossa, kuvattu vuonna 2019.",
-        "lyhyt": "Semnan temppelin muinainen reliefi Sudanin kansallismuseossa, kuvattu vuonna 2019.",
+        "lyhyt": "Semnan temppelin reliefi.",
         "tiedosto": "Relief Semna temple Sesostris III barge.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Matthias Gehricke, Wikimedia Commons (CC BY-SA 4.0)",
         "selite": "Semnan temppelin muinainen reliefi Sudanin kansallismuseossa, kuvattu vuonna 2019.",
-        "lyhyt": "Semnan temppelin muinainen reliefi Sudanin kansallismuseossa, kuvattu vuonna 2019.",
+        "lyhyt": "Semnan temppelin reliefi.",
         "tiedosto": "Relief Semna temple Sesostris III barge.jpg"
       },
       "runtimeMediaFieldPayload": {
@@ -2644,7 +2875,7 @@
         "suora": true,
         "lahde": "Matthias Gehricke, Wikimedia Commons (CC BY-SA 4.0)",
         "selite": "Semnan temppelin muinainen reliefi Sudanin kansallismuseossa, kuvattu vuonna 2019.",
-        "lyhyt": "Semnan temppelin muinainen reliefi Sudanin kansallismuseossa, kuvattu vuonna 2019.",
+        "lyhyt": "Semnan temppelin reliefi.",
         "tiedosto": "Relief Semna temple Sesostris III barge.jpg"
       },
       "runtimeRemoveMediaKeys": [],
@@ -2659,10 +2890,10 @@
         4480
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/khartum/sisalto.json",
-      "sourceContentSHA256": "f8f52cd4508afc665d78e8c25994c6041a919a3e5f7312f0dd6c5c728e412a8d",
+      "sourceContentSHA256": "a7ba316a3c40449b049f7e5dbdce2746930eb6e8400ecb33af0c31ae12f66615",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "02ec49520de4043187f0ad293d25ee4f0f490b792d60b577bc717ece13cf36c6",
-        "semanticContextSHA256": "02ec49520de4043187f0ad293d25ee4f0f490b792d60b577bc717ece13cf36c6",
+        "targetBeforeSHA256": "f78678021a5d3c3589b22d466ff9b205c5eeac2e022fa63fc82dde67ead50550",
+        "semanticContextSHA256": "f78678021a5d3c3589b22d466ff9b205c5eeac2e022fa63fc82dde67ead50550",
         "subjectTitle": "Temppeli on vanha, sijainti uudempi",
         "targetState": "existing-target"
       },
@@ -2831,9 +3062,9 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "Relief Semna temple Sesostris III barge.jpg",
-        "lahde": "Matthias Gehricke, Wikimedia Commons (CC BY-SA 4.0)",
+        "lyhyt": "Semnan temppelin reliefi.",
         "selite": "Semnan temppelin muinainen reliefi Sudanin kansallismuseossa, kuvattu vuonna 2019.",
-        "lyhyt": "Semnan temppelin muinainen reliefi Sudanin kansallismuseossa, kuvattu vuonna 2019."
+        "lahde": "Matthias Gehricke, Wikimedia Commons (CC BY-SA 4.0)"
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -2852,7 +3083,7 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
@@ -2860,15 +3091,36 @@
       "CcommonsFieldPayload": {
         "lahde": "Matthias Gehricke, Wikimedia Commons (CC BY-SA 4.0)",
         "selite": "Semnan temppelin muinainen reliefi Sudanin kansallismuseossa, kuvattu vuonna 2019.",
-        "lyhyt": "Semnan temppelin muinainen reliefi Sudanin kansallismuseossa, kuvattu vuonna 2019.",
+        "lyhyt": "Semnan temppelin reliefi.",
         "tiedosto": "Relief Semna temple Sesostris III barge.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "f8f52cd4508afc665d78e8c25994c6041a919a3e5f7312f0dd6c5c728e412a8d",
-      "targetAfterSHA256": "02ec49520de4043187f0ad293d25ee4f0f490b792d60b577bc717ece13cf36c6",
-      "contextAfterSHA256": "02ec49520de4043187f0ad293d25ee4f0f490b792d60b577bc717ece13cf36c6",
+      "sourceContentAfterSHA256": "a7ba316a3c40449b049f7e5dbdce2746930eb6e8400ecb33af0c31ae12f66615",
+      "targetAfterSHA256": "f78678021a5d3c3589b22d466ff9b205c5eeac2e022fa63fc82dde67ead50550",
+      "contextAfterSHA256": "f78678021a5d3c3589b22d466ff9b205c5eeac2e022fa63fc82dde67ead50550",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "f8f52cd4508afc665d78e8c25994c6041a919a3e5f7312f0dd6c5c728e412a8d",
+        "targetAfterSHA256": "02ec49520de4043187f0ad293d25ee4f0f490b792d60b577bc717ece13cf36c6",
+        "contextAfterSHA256": "02ec49520de4043187f0ad293d25ee4f0f490b792d60b577bc717ece13cf36c6",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "02ec49520de4043187f0ad293d25ee4f0f490b792d60b577bc717ece13cf36c6",
+          "semanticContextSHA256": "02ec49520de4043187f0ad293d25ee4f0f490b792d60b577bc717ece13cf36c6",
+          "subjectTitle": "Temppeli on vanha, sijainti uudempi",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "a7ba316a3c40449b049f7e5dbdce2746930eb6e8400ecb33af0c31ae12f66615",
+        "sameImageNativeSHA256": "086375780a5134b0813d92a5355e7dd1086961c8b969496b12a5c50053c37f28",
+        "sameImageExportSHA256": "086375780a5134b0813d92a5355e7dd1086961c8b969496b12a5c50053c37f28",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e07",
@@ -2891,14 +3143,14 @@
         "suora": true,
         "lahde": "Petr Adam Dohnálek, Wikimedia Commons (CC BY-SA 3.0 cz)",
         "selite": "Tutin saaren taloja ja piha-aluetta heinäkuussa 2009.",
-        "lyhyt": "Tutin saaren taloja ja piha-aluetta heinäkuussa 2009.",
+        "lyhyt": "Tutin saaren taloja.",
         "tiedosto": "Tuti Island (Khartoum, Sudan) 001.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Petr Adam Dohnálek, Wikimedia Commons (CC BY-SA 3.0 cz)",
         "selite": "Tutin saaren taloja ja piha-aluetta heinäkuussa 2009.",
-        "lyhyt": "Tutin saaren taloja ja piha-aluetta heinäkuussa 2009.",
+        "lyhyt": "Tutin saaren taloja.",
         "tiedosto": "Tuti Island (Khartoum, Sudan) 001.jpg"
       },
       "runtimeMediaFieldPayload": {
@@ -2906,7 +3158,7 @@
         "suora": true,
         "lahde": "Petr Adam Dohnálek, Wikimedia Commons (CC BY-SA 3.0 cz)",
         "selite": "Tutin saaren taloja ja piha-aluetta heinäkuussa 2009.",
-        "lyhyt": "Tutin saaren taloja ja piha-aluetta heinäkuussa 2009.",
+        "lyhyt": "Tutin saaren taloja.",
         "tiedosto": "Tuti Island (Khartoum, Sudan) 001.jpg"
       },
       "runtimeRemoveMediaKeys": [],
@@ -2921,10 +3173,10 @@
         1200
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/khartum/sisalto.json",
-      "sourceContentSHA256": "f8f52cd4508afc665d78e8c25994c6041a919a3e5f7312f0dd6c5c728e412a8d",
+      "sourceContentSHA256": "a7ba316a3c40449b049f7e5dbdce2746930eb6e8400ecb33af0c31ae12f66615",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "92e6e66470a2c4a25c500e36bd8cc16b20f1463bc63e769817d5515407e239c0",
-        "semanticContextSHA256": "eef44e61b48dbe9a09c301a7831ddfb85a0de6b2911333334a6e38ec8a2899a7",
+        "targetBeforeSHA256": "1510a2b1a7820fa9b207b173f0ba76385699a49ac9a3f85322139e3f2ada672a",
+        "semanticContextSHA256": "922915e47c146df7d64d4e04f7758bfb95bfc3b216d199c508a995a086b3fa4e",
         "subjectTitle": "Tutin saari",
         "targetState": "existing-target"
       },
@@ -3093,9 +3345,9 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "Tuti Island (Khartoum, Sudan) 001.jpg",
-        "lahde": "Petr Adam Dohnálek, Wikimedia Commons (CC BY-SA 3.0 cz)",
+        "lyhyt": "Tutin saaren taloja.",
         "selite": "Tutin saaren taloja ja piha-aluetta heinäkuussa 2009.",
-        "lyhyt": "Tutin saaren taloja ja piha-aluetta heinäkuussa 2009."
+        "lahde": "Petr Adam Dohnálek, Wikimedia Commons (CC BY-SA 3.0 cz)"
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -3114,7 +3366,7 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
@@ -3122,20 +3374,47 @@
       "CcommonsFieldPayload": {
         "lahde": "Petr Adam Dohnálek, Wikimedia Commons (CC BY-SA 3.0 cz)",
         "selite": "Tutin saaren taloja ja piha-aluetta heinäkuussa 2009.",
-        "lyhyt": "Tutin saaren taloja ja piha-aluetta heinäkuussa 2009.",
+        "lyhyt": "Tutin saaren taloja.",
         "tiedosto": "Tuti Island (Khartoum, Sudan) 001.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "f8f52cd4508afc665d78e8c25994c6041a919a3e5f7312f0dd6c5c728e412a8d",
-      "targetAfterSHA256": "92e6e66470a2c4a25c500e36bd8cc16b20f1463bc63e769817d5515407e239c0",
-      "contextAfterSHA256": "eef44e61b48dbe9a09c301a7831ddfb85a0de6b2911333334a6e38ec8a2899a7",
+      "sourceContentAfterSHA256": "a7ba316a3c40449b049f7e5dbdce2746930eb6e8400ecb33af0c31ae12f66615",
+      "targetAfterSHA256": "1510a2b1a7820fa9b207b173f0ba76385699a49ac9a3f85322139e3f2ada672a",
+      "contextAfterSHA256": "922915e47c146df7d64d4e04f7758bfb95bfc3b216d199c508a995a086b3fa4e",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "f8f52cd4508afc665d78e8c25994c6041a919a3e5f7312f0dd6c5c728e412a8d",
+        "targetAfterSHA256": "92e6e66470a2c4a25c500e36bd8cc16b20f1463bc63e769817d5515407e239c0",
+        "contextAfterSHA256": "eef44e61b48dbe9a09c301a7831ddfb85a0de6b2911333334a6e38ec8a2899a7",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "92e6e66470a2c4a25c500e36bd8cc16b20f1463bc63e769817d5515407e239c0",
+          "semanticContextSHA256": "eef44e61b48dbe9a09c301a7831ddfb85a0de6b2911333334a6e38ec8a2899a7",
+          "subjectTitle": "Tutin saari",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "a7ba316a3c40449b049f7e5dbdce2746930eb6e8400ecb33af0c31ae12f66615",
+        "sameImageNativeSHA256": "83b4053facae21d7bedd7e9fe2f0c8a04dc102679f72186c1b6136e997b46a90",
+        "sameImageExportSHA256": "83b4053facae21d7bedd7e9fe2f0c8a04dc102679f72186c1b6136e997b46a90",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     }
   ],
   "runtimeIntegrationPending": true,
   "ownerAcceptedNotImpliedByAuthorization": false,
   "gameIntegrated": false,
   "allAssetsExplicitlyOwnerApproved": true,
-  "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+  "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+  "task118ExcludedAssets": [],
+  "task118TextRevision": true,
+  "independentTextResamplePending": true,
+  "textAcceptanceVerified": false,
+  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task118/immutable-media-history/e07/khartum/860411a2584c553f14d55c9fb08334fb257e1d6e0b9b005568cdcd35839b2bb9.json",
+  "task118ReboundAt": "2026-10-13T16:31:25.189428+00:00"
 }

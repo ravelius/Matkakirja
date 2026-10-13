@@ -3,7 +3,7 @@
   "era": "e07",
   "city": "asmara",
   "authorization": "hyväksyn kaikki tekemäsi kuvat. toimita ne claudelle. claudelta saat uusia ohjeita jatkoa varten",
-  "sourceContentAfterSHA256": "6b581ebd34404d37a43e26a6b47cf334ca55ca037b7ff8e5bf57337ceb2742a1",
+  "sourceContentAfterSHA256": "db81d815bf89239e0871e037639700d75548f369b115f8a9f5af603cb25c4690",
   "assets": [
     {
       "era": "e07",
@@ -28,10 +28,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/asmara/e07-asmara-O2-v1-20261012-d89ed106da8e.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Torikaupan puuvillatekstiilien havainnekuva.",
-        "lyhyt": "Torikaupan puuvillatekstiilien havainnekuva."
+        "selite": "Torikaupan puuvillatekstiilien havainnekuva."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -39,10 +39,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/asmara/e07-asmara-O2-v1-20261012-d89ed106da8e.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Torikaupan puuvillatekstiilien havainnekuva.",
-        "lyhyt": "Torikaupan puuvillatekstiilien havainnekuva."
+        "selite": "Torikaupan puuvillatekstiilien havainnekuva."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -56,7 +56,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/asmara/sisalto.json",
-      "sourceContentSHA256": "6b581ebd34404d37a43e26a6b47cf334ca55ca037b7ff8e5bf57337ceb2742a1",
+      "sourceContentSHA256": "db81d815bf89239e0871e037639700d75548f369b115f8a9f5af603cb25c4690",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
         "semanticContextSHA256": "37ae7c9606ab333e1f8658d1cacf38889511abc0aec92f54d94859e9ba44e409",
@@ -216,9 +216,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -237,17 +237,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "6b581ebd34404d37a43e26a6b47cf334ca55ca037b7ff8e5bf57337ceb2742a1",
+      "sourceContentAfterSHA256": "db81d815bf89239e0871e037639700d75548f369b115f8a9f5af603cb25c4690",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
       "contextAfterSHA256": "37ae7c9606ab333e1f8658d1cacf38889511abc0aec92f54d94859e9ba44e409",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "6b581ebd34404d37a43e26a6b47cf334ca55ca037b7ff8e5bf57337ceb2742a1",
+        "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "contextAfterSHA256": "37ae7c9606ab333e1f8658d1cacf38889511abc0aec92f54d94859e9ba44e409",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+          "semanticContextSHA256": "37ae7c9606ab333e1f8658d1cacf38889511abc0aec92f54d94859e9ba44e409",
+          "subjectTitle": "Tori ja käsityön kaupunginosa",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "db81d815bf89239e0871e037639700d75548f369b115f8a9f5af603cb25c4690",
+        "sameImageNativeSHA256": "d89ed106da8eb5099921c783654ebd4dcf62f8eec8fe03116ef3f68eca477b94",
+        "sameImageExportSHA256": "db558b49de36148057705e87e5440090b00065579e486f278d862e31685c732b",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e07",
@@ -272,10 +293,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/asmara/e07-asmara-O3-v1-20261012-22893fcb7bfa.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Tiilen materiaalihavainnekuva; ei Asmaran kirkon valokuva.",
-        "lyhyt": "Tiilen materiaalihavainnekuva; ei Asmaran kirkon valokuva."
+        "selite": "Tiilen materiaalihavainnekuva; ei Asmaran kirkon valokuva."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -283,10 +304,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/asmara/e07-asmara-O3-v1-20261012-22893fcb7bfa.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Tiilen materiaalihavainnekuva; ei Asmaran kirkon valokuva.",
-        "lyhyt": "Tiilen materiaalihavainnekuva; ei Asmaran kirkon valokuva."
+        "selite": "Tiilen materiaalihavainnekuva; ei Asmaran kirkon valokuva."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -300,10 +321,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/asmara/sisalto.json",
-      "sourceContentSHA256": "6b581ebd34404d37a43e26a6b47cf334ca55ca037b7ff8e5bf57337ceb2742a1",
+      "sourceContentSHA256": "db81d815bf89239e0871e037639700d75548f369b115f8a9f5af603cb25c4690",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "2c001686f3739f2535587548995911af5d49f6336d3cc763a8fa790a5ce39d9b",
+        "semanticContextSHA256": "ac24851f1fbf9adc45e75bfbce266aa60220de500f7f97d05e2dd7e2cf39aa9f",
         "subjectTitle": "Rakennusten eri vaiheet",
         "targetState": "existing-target"
       },
@@ -460,9 +481,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -481,17 +502,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "6b581ebd34404d37a43e26a6b47cf334ca55ca037b7ff8e5bf57337ceb2742a1",
+      "sourceContentAfterSHA256": "db81d815bf89239e0871e037639700d75548f369b115f8a9f5af603cb25c4690",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "2c001686f3739f2535587548995911af5d49f6336d3cc763a8fa790a5ce39d9b",
+      "contextAfterSHA256": "ac24851f1fbf9adc45e75bfbce266aa60220de500f7f97d05e2dd7e2cf39aa9f",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "6b581ebd34404d37a43e26a6b47cf334ca55ca037b7ff8e5bf57337ceb2742a1",
+        "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "contextAfterSHA256": "2c001686f3739f2535587548995911af5d49f6336d3cc763a8fa790a5ce39d9b",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+          "semanticContextSHA256": "2c001686f3739f2535587548995911af5d49f6336d3cc763a8fa790a5ce39d9b",
+          "subjectTitle": "Rakennusten eri vaiheet",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "db81d815bf89239e0871e037639700d75548f369b115f8a9f5af603cb25c4690",
+        "sameImageNativeSHA256": "22893fcb7bfa20ba15680abdc95344c955232dbb03a7b4f9f4cf415633b1d1cb",
+        "sameImageExportSHA256": "126adaf245b0af4b326016cb249b51875b2bcc1352d0329956ab63b854a2f4a8",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e07",
@@ -516,10 +558,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/asmara/e07-asmara-O4-v1-20261012-81f6608e455e.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Espresson ja cappuccinon havainnekuva; ei tietty Asmaran kahvila.",
-        "lyhyt": "Espresson ja cappuccinon havainnekuva; ei tietty Asmaran kahvila."
+        "selite": "Espresson ja cappuccinon havainnekuva; ei tietty Asmaran kahvila."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -527,10 +569,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/asmara/e07-asmara-O4-v1-20261012-81f6608e455e.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Espresson ja cappuccinon havainnekuva; ei tietty Asmaran kahvila.",
-        "lyhyt": "Espresson ja cappuccinon havainnekuva; ei tietty Asmaran kahvila."
+        "selite": "Espresson ja cappuccinon havainnekuva; ei tietty Asmaran kahvila."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -544,10 +586,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/asmara/sisalto.json",
-      "sourceContentSHA256": "6b581ebd34404d37a43e26a6b47cf334ca55ca037b7ff8e5bf57337ceb2742a1",
+      "sourceContentSHA256": "db81d815bf89239e0871e037639700d75548f369b115f8a9f5af603cb25c4690",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "89c0eb668b6c8f809c9a44266df64ea60cce4b1049bbb38229670df76792d258",
+        "semanticContextSHA256": "f9950c65e1f6bb79a5bbc81dd1bfc97398ed204804f72f01a07837c0077a14ff",
         "subjectTitle": "Kahvila-ateria",
         "targetState": "existing-target"
       },
@@ -704,9 +746,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -725,17 +767,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "6b581ebd34404d37a43e26a6b47cf334ca55ca037b7ff8e5bf57337ceb2742a1",
+      "sourceContentAfterSHA256": "db81d815bf89239e0871e037639700d75548f369b115f8a9f5af603cb25c4690",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "89c0eb668b6c8f809c9a44266df64ea60cce4b1049bbb38229670df76792d258",
+      "contextAfterSHA256": "f9950c65e1f6bb79a5bbc81dd1bfc97398ed204804f72f01a07837c0077a14ff",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "6b581ebd34404d37a43e26a6b47cf334ca55ca037b7ff8e5bf57337ceb2742a1",
+        "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "contextAfterSHA256": "89c0eb668b6c8f809c9a44266df64ea60cce4b1049bbb38229670df76792d258",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+          "semanticContextSHA256": "89c0eb668b6c8f809c9a44266df64ea60cce4b1049bbb38229670df76792d258",
+          "subjectTitle": "Kahvila-ateria",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "db81d815bf89239e0871e037639700d75548f369b115f8a9f5af603cb25c4690",
+        "sameImageNativeSHA256": "81f6608e455e35f99c5299c7ac35abf77c6ca9aba14699bb31a8c2328b3ea5eb",
+        "sameImageExportSHA256": "4bfb09e561ef5168d3a9090a8d83a543efff850d760e1076c7a10d2ba2b58af0",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e07",
@@ -757,10 +820,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/asmara/e07-asmara-K2-v1-20261012-f507309f7e6c.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Kierrätysmetallin käyttöesineen havainnekuva; ei tietty Medeberin työpaja.",
-        "lyhyt": "Kierrätysmetallin käyttöesineen havainnekuva; ei tietty Medeberin työpaja."
+        "selite": "Kierrätysmetallin käyttöesineen havainnekuva; ei tietty Medeberin työpaja."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -768,10 +831,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/asmara/e07-asmara-K2-v1-20261012-f507309f7e6c.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Kierrätysmetallin käyttöesineen havainnekuva; ei tietty Medeberin työpaja.",
-        "lyhyt": "Kierrätysmetallin käyttöesineen havainnekuva; ei tietty Medeberin työpaja."
+        "selite": "Kierrätysmetallin käyttöesineen havainnekuva; ei tietty Medeberin työpaja."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -785,10 +848,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/asmara/sisalto.json",
-      "sourceContentSHA256": "6b581ebd34404d37a43e26a6b47cf334ca55ca037b7ff8e5bf57337ceb2742a1",
+      "sourceContentSHA256": "db81d815bf89239e0871e037639700d75548f369b115f8a9f5af603cb25c4690",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "92b349fd32a913fe0eaa7676d4129afc35f6b4d22da8cf4ec2e0c36ee8078093",
-        "semanticContextSHA256": "92b349fd32a913fe0eaa7676d4129afc35f6b4d22da8cf4ec2e0c36ee8078093",
+        "targetBeforeSHA256": "54da60e9800de5fbdba90c9b43b37acab70a70922435fb359cfc673e9779c7ff",
+        "semanticContextSHA256": "54da60e9800de5fbdba90c9b43b37acab70a70922435fb359cfc673e9779c7ff",
         "subjectTitle": "Karavaanipaikasta kierrätyspaja",
         "targetState": "existing-target"
       },
@@ -946,9 +1009,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -967,17 +1030,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "6b581ebd34404d37a43e26a6b47cf334ca55ca037b7ff8e5bf57337ceb2742a1",
-      "targetAfterSHA256": "92b349fd32a913fe0eaa7676d4129afc35f6b4d22da8cf4ec2e0c36ee8078093",
-      "contextAfterSHA256": "92b349fd32a913fe0eaa7676d4129afc35f6b4d22da8cf4ec2e0c36ee8078093",
+      "sourceContentAfterSHA256": "db81d815bf89239e0871e037639700d75548f369b115f8a9f5af603cb25c4690",
+      "targetAfterSHA256": "54da60e9800de5fbdba90c9b43b37acab70a70922435fb359cfc673e9779c7ff",
+      "contextAfterSHA256": "54da60e9800de5fbdba90c9b43b37acab70a70922435fb359cfc673e9779c7ff",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "6b581ebd34404d37a43e26a6b47cf334ca55ca037b7ff8e5bf57337ceb2742a1",
+        "targetAfterSHA256": "92b349fd32a913fe0eaa7676d4129afc35f6b4d22da8cf4ec2e0c36ee8078093",
+        "contextAfterSHA256": "92b349fd32a913fe0eaa7676d4129afc35f6b4d22da8cf4ec2e0c36ee8078093",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "92b349fd32a913fe0eaa7676d4129afc35f6b4d22da8cf4ec2e0c36ee8078093",
+          "semanticContextSHA256": "92b349fd32a913fe0eaa7676d4129afc35f6b4d22da8cf4ec2e0c36ee8078093",
+          "subjectTitle": "Karavaanipaikasta kierrätyspaja",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "db81d815bf89239e0871e037639700d75548f369b115f8a9f5af603cb25c4690",
+        "sameImageNativeSHA256": "f507309f7e6ce386e5874ab1e59dd1b73d7428e8107bce3737405dce284e3fff",
+        "sameImageExportSHA256": "11dff874a21cdb351003e22a964650a1ca78d2e0aee31efc1a160b2731d3adf6",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e07",
@@ -999,10 +1083,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/asmara/e07-asmara-K3-v1-20261012-a0e01d3595cd.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Tomaattikastikkeisen ja berberellä maustetun pastan havainnekuva.",
-        "lyhyt": "Tomaattikastikkeisen ja berberellä maustetun pastan havainnekuva."
+        "selite": "Tomaattikastikkeisen ja berberellä maustetun pastan havainnekuva."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -1010,10 +1094,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/asmara/e07-asmara-K3-v1-20261012-a0e01d3595cd.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Tomaattikastikkeisen ja berberellä maustetun pastan havainnekuva.",
-        "lyhyt": "Tomaattikastikkeisen ja berberellä maustetun pastan havainnekuva."
+        "selite": "Tomaattikastikkeisen ja berberellä maustetun pastan havainnekuva."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -1027,7 +1111,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/asmara/sisalto.json",
-      "sourceContentSHA256": "6b581ebd34404d37a43e26a6b47cf334ca55ca037b7ff8e5bf57337ceb2742a1",
+      "sourceContentSHA256": "db81d815bf89239e0871e037639700d75548f369b115f8a9f5af603cb25c4690",
       "semanticSourceBind": {
         "targetBeforeSHA256": "1335713695a151e79920db351bddb8670cecb95ee8349623dc908507e7182735",
         "semanticContextSHA256": "1335713695a151e79920db351bddb8670cecb95ee8349623dc908507e7182735",
@@ -1188,9 +1272,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -1209,17 +1293,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "6b581ebd34404d37a43e26a6b47cf334ca55ca037b7ff8e5bf57337ceb2742a1",
+      "sourceContentAfterSHA256": "db81d815bf89239e0871e037639700d75548f369b115f8a9f5af603cb25c4690",
       "targetAfterSHA256": "1335713695a151e79920db351bddb8670cecb95ee8349623dc908507e7182735",
       "contextAfterSHA256": "1335713695a151e79920db351bddb8670cecb95ee8349623dc908507e7182735",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "6b581ebd34404d37a43e26a6b47cf334ca55ca037b7ff8e5bf57337ceb2742a1",
+        "targetAfterSHA256": "1335713695a151e79920db351bddb8670cecb95ee8349623dc908507e7182735",
+        "contextAfterSHA256": "1335713695a151e79920db351bddb8670cecb95ee8349623dc908507e7182735",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "1335713695a151e79920db351bddb8670cecb95ee8349623dc908507e7182735",
+          "semanticContextSHA256": "1335713695a151e79920db351bddb8670cecb95ee8349623dc908507e7182735",
+          "subjectTitle": "Pasta sai berbereä",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "db81d815bf89239e0871e037639700d75548f369b115f8a9f5af603cb25c4690",
+        "sameImageNativeSHA256": "a0e01d3595cd6bb753f424e9c6092a74653809d52854f4b4567f47f7d88b9a2e",
+        "sameImageExportSHA256": "f7dca3d876c29b461ba2c009752c7cdd32d2f9276c8fde6bf688b166e1e89a1f",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e07",
@@ -1241,10 +1346,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/asmara/e07-asmara-K4-v1-20261012-c0006ba26bdb.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Raidekaluston materiaalin havainnekuva; ei Eritrean radan tietty veturi.",
-        "lyhyt": "Raidekaluston materiaalin havainnekuva; ei Eritrean radan tietty veturi."
+        "selite": "Raidekaluston materiaalin havainnekuva; ei Eritrean radan tietty veturi."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -1252,10 +1357,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/asmara/e07-asmara-K4-v1-20261012-c0006ba26bdb.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Raidekaluston materiaalin havainnekuva; ei Eritrean radan tietty veturi.",
-        "lyhyt": "Raidekaluston materiaalin havainnekuva; ei Eritrean radan tietty veturi."
+        "selite": "Raidekaluston materiaalin havainnekuva; ei Eritrean radan tietty veturi."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -1269,7 +1374,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/asmara/sisalto.json",
-      "sourceContentSHA256": "6b581ebd34404d37a43e26a6b47cf334ca55ca037b7ff8e5bf57337ceb2742a1",
+      "sourceContentSHA256": "db81d815bf89239e0871e037639700d75548f369b115f8a9f5af603cb25c4690",
       "semanticSourceBind": {
         "targetBeforeSHA256": "b9c68c9ab8dd42ca1d134f48e11ca50635ce29a53cd3f9a945308812b7b4d3ca",
         "semanticContextSHA256": "b9c68c9ab8dd42ca1d134f48e11ca50635ce29a53cd3f9a945308812b7b4d3ca",
@@ -1429,9 +1534,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -1450,17 +1555,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "6b581ebd34404d37a43e26a6b47cf334ca55ca037b7ff8e5bf57337ceb2742a1",
+      "sourceContentAfterSHA256": "db81d815bf89239e0871e037639700d75548f369b115f8a9f5af603cb25c4690",
       "targetAfterSHA256": "b9c68c9ab8dd42ca1d134f48e11ca50635ce29a53cd3f9a945308812b7b4d3ca",
       "contextAfterSHA256": "b9c68c9ab8dd42ca1d134f48e11ca50635ce29a53cd3f9a945308812b7b4d3ca",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "6b581ebd34404d37a43e26a6b47cf334ca55ca037b7ff8e5bf57337ceb2742a1",
+        "targetAfterSHA256": "b9c68c9ab8dd42ca1d134f48e11ca50635ce29a53cd3f9a945308812b7b4d3ca",
+        "contextAfterSHA256": "b9c68c9ab8dd42ca1d134f48e11ca50635ce29a53cd3f9a945308812b7b4d3ca",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "b9c68c9ab8dd42ca1d134f48e11ca50635ce29a53cd3f9a945308812b7b4d3ca",
+          "semanticContextSHA256": "b9c68c9ab8dd42ca1d134f48e11ca50635ce29a53cd3f9a945308812b7b4d3ca",
+          "subjectTitle": "Rata nousi rannikon tasolta",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "db81d815bf89239e0871e037639700d75548f369b115f8a9f5af603cb25c4690",
+        "sameImageNativeSHA256": "c0006ba26bdb72a9560780247946da2ac98395486c4d8b134adf6e589fd2f29a",
+        "sameImageExportSHA256": "7af89e35b278c2d6a1b3afa7605b0bdd7cab3c5649c999872eb524411d1ba9a8",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e07",
@@ -1482,10 +1608,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/asmara/e07-asmara-L2-v1-20261012-ae6283b4195d.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Painamisen välineiden havainnekuva; ei kirkon todellinen painokone.",
-        "lyhyt": "Painamisen välineiden havainnekuva; ei kirkon todellinen painokone."
+        "selite": "Painamisen välineiden havainnekuva; ei kirkon todellinen painokone."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -1493,10 +1619,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/asmara/e07-asmara-L2-v1-20261012-ae6283b4195d.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Painamisen välineiden havainnekuva; ei kirkon todellinen painokone.",
-        "lyhyt": "Painamisen välineiden havainnekuva; ei kirkon todellinen painokone."
+        "selite": "Painamisen välineiden havainnekuva; ei kirkon todellinen painokone."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -1510,10 +1636,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/asmara/sisalto.json",
-      "sourceContentSHA256": "6b581ebd34404d37a43e26a6b47cf334ca55ca037b7ff8e5bf57337ceb2742a1",
+      "sourceContentSHA256": "db81d815bf89239e0871e037639700d75548f369b115f8a9f5af603cb25c4690",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "5407fc0b23f023d6273be5800611dbd2277ca5b752928eb93e1d541a190923ee",
-        "semanticContextSHA256": "5407fc0b23f023d6273be5800611dbd2277ca5b752928eb93e1d541a190923ee",
+        "targetBeforeSHA256": "bda1f34169dbedc0cb37b97c2dc9488541b03ee00d50f64eac38ffeb07c7997c",
+        "semanticContextSHA256": "bda1f34169dbedc0cb37b97c2dc9488541b03ee00d50f64eac38ffeb07c7997c",
         "subjectTitle": "Kirkon pihapiirissä oli painokone",
         "targetState": "existing-target"
       },
@@ -1670,9 +1796,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -1691,17 +1817,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "6b581ebd34404d37a43e26a6b47cf334ca55ca037b7ff8e5bf57337ceb2742a1",
-      "targetAfterSHA256": "5407fc0b23f023d6273be5800611dbd2277ca5b752928eb93e1d541a190923ee",
-      "contextAfterSHA256": "5407fc0b23f023d6273be5800611dbd2277ca5b752928eb93e1d541a190923ee",
+      "sourceContentAfterSHA256": "db81d815bf89239e0871e037639700d75548f369b115f8a9f5af603cb25c4690",
+      "targetAfterSHA256": "bda1f34169dbedc0cb37b97c2dc9488541b03ee00d50f64eac38ffeb07c7997c",
+      "contextAfterSHA256": "bda1f34169dbedc0cb37b97c2dc9488541b03ee00d50f64eac38ffeb07c7997c",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "6b581ebd34404d37a43e26a6b47cf334ca55ca037b7ff8e5bf57337ceb2742a1",
+        "targetAfterSHA256": "5407fc0b23f023d6273be5800611dbd2277ca5b752928eb93e1d541a190923ee",
+        "contextAfterSHA256": "5407fc0b23f023d6273be5800611dbd2277ca5b752928eb93e1d541a190923ee",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "5407fc0b23f023d6273be5800611dbd2277ca5b752928eb93e1d541a190923ee",
+          "semanticContextSHA256": "5407fc0b23f023d6273be5800611dbd2277ca5b752928eb93e1d541a190923ee",
+          "subjectTitle": "Kirkon pihapiirissä oli painokone",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "db81d815bf89239e0871e037639700d75548f369b115f8a9f5af603cb25c4690",
+        "sameImageNativeSHA256": "ae6283b4195da96be941f20577401778a57881d306205160479ba3c40bbc011f",
+        "sameImageExportSHA256": "54cd21f71ce2bb55806eff9b78965b21bdc49a0394f726ddc73ebdbd84740147",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e07",
@@ -1723,10 +1870,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/asmara/e07-asmara-L3-v1-20261012-c6585a52ee63.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Elokuvatekniikan materiaalin havainnekuva; ei Asmaran teatterin alkuperäinen kalusto.",
-        "lyhyt": "Elokuvatekniikan materiaalin havainnekuva; ei Asmaran teatterin alkuperäinen kalusto."
+        "selite": "Elokuvatekniikan materiaalin havainnekuva; ei Asmaran teatterin alkuperäinen kalusto."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -1734,10 +1881,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/asmara/e07-asmara-L3-v1-20261012-c6585a52ee63.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Elokuvatekniikan materiaalin havainnekuva; ei Asmaran teatterin alkuperäinen kalusto.",
-        "lyhyt": "Elokuvatekniikan materiaalin havainnekuva; ei Asmaran teatterin alkuperäinen kalusto."
+        "selite": "Elokuvatekniikan materiaalin havainnekuva; ei Asmaran teatterin alkuperäinen kalusto."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -1751,10 +1898,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/asmara/sisalto.json",
-      "sourceContentSHA256": "6b581ebd34404d37a43e26a6b47cf334ca55ca037b7ff8e5bf57337ceb2742a1",
+      "sourceContentSHA256": "db81d815bf89239e0871e037639700d75548f369b115f8a9f5af603cb25c4690",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "e09d9865d3cecb5134a97eb5955a5c81111ff3eb33b035152047353e2905c946",
-        "semanticContextSHA256": "e09d9865d3cecb5134a97eb5955a5c81111ff3eb33b035152047353e2905c946",
+        "targetBeforeSHA256": "78e3ce6a86216055f35cdffe1310ff420eac465cfa69d55fb0eb9cdfc74f7236",
+        "semanticContextSHA256": "78e3ce6a86216055f35cdffe1310ff420eac465cfa69d55fb0eb9cdfc74f7236",
         "subjectTitle": "Teatteri sai uuden katselutavan",
         "targetState": "existing-target"
       },
@@ -1911,9 +2058,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -1932,17 +2079,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "6b581ebd34404d37a43e26a6b47cf334ca55ca037b7ff8e5bf57337ceb2742a1",
-      "targetAfterSHA256": "e09d9865d3cecb5134a97eb5955a5c81111ff3eb33b035152047353e2905c946",
-      "contextAfterSHA256": "e09d9865d3cecb5134a97eb5955a5c81111ff3eb33b035152047353e2905c946",
+      "sourceContentAfterSHA256": "db81d815bf89239e0871e037639700d75548f369b115f8a9f5af603cb25c4690",
+      "targetAfterSHA256": "78e3ce6a86216055f35cdffe1310ff420eac465cfa69d55fb0eb9cdfc74f7236",
+      "contextAfterSHA256": "78e3ce6a86216055f35cdffe1310ff420eac465cfa69d55fb0eb9cdfc74f7236",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "6b581ebd34404d37a43e26a6b47cf334ca55ca037b7ff8e5bf57337ceb2742a1",
+        "targetAfterSHA256": "e09d9865d3cecb5134a97eb5955a5c81111ff3eb33b035152047353e2905c946",
+        "contextAfterSHA256": "e09d9865d3cecb5134a97eb5955a5c81111ff3eb33b035152047353e2905c946",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "e09d9865d3cecb5134a97eb5955a5c81111ff3eb33b035152047353e2905c946",
+          "semanticContextSHA256": "e09d9865d3cecb5134a97eb5955a5c81111ff3eb33b035152047353e2905c946",
+          "subjectTitle": "Teatteri sai uuden katselutavan",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "db81d815bf89239e0871e037639700d75548f369b115f8a9f5af603cb25c4690",
+        "sameImageNativeSHA256": "c6585a52ee63a21eb1e43956b7abe9d556d10f5f48a7b487be88d87f7ca99bfd",
+        "sameImageExportSHA256": "9c82a29ffc5bece6ff4b6896e221cb2be4978547e36849887f4ace88dcbe6644",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e07",
@@ -1964,10 +2132,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/asmara/e07-asmara-L4-v1-20261012-7695035fc404.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Arkeologisen aineiston käsittelyvälineiden havainnekuva; ei todellinen kaivaus tai museoesine.",
-        "lyhyt": "Arkeologisen aineiston käsittelyvälineiden havainnekuva; ei todellinen kaivaus tai museoesine."
+        "selite": "Arkeologisen aineiston käsittelyvälineiden havainnekuva; ei todellinen kaivaus tai museoesine."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -1975,10 +2143,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/asmara/e07-asmara-L4-v1-20261012-7695035fc404.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Arkeologisen aineiston käsittelyvälineiden havainnekuva; ei todellinen kaivaus tai museoesine.",
-        "lyhyt": "Arkeologisen aineiston käsittelyvälineiden havainnekuva; ei todellinen kaivaus tai museoesine."
+        "selite": "Arkeologisen aineiston käsittelyvälineiden havainnekuva; ei todellinen kaivaus tai museoesine."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -1992,7 +2160,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/asmara/sisalto.json",
-      "sourceContentSHA256": "6b581ebd34404d37a43e26a6b47cf334ca55ca037b7ff8e5bf57337ceb2742a1",
+      "sourceContentSHA256": "db81d815bf89239e0871e037639700d75548f369b115f8a9f5af603cb25c4690",
       "semanticSourceBind": {
         "targetBeforeSHA256": "c6f31ce4d0a15ab24fff6dcec51d14cbb34252f3aad0f15cacc6045688c3c182",
         "semanticContextSHA256": "c6f31ce4d0a15ab24fff6dcec51d14cbb34252f3aad0f15cacc6045688c3c182",
@@ -2152,9 +2320,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -2173,17 +2341,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "6b581ebd34404d37a43e26a6b47cf334ca55ca037b7ff8e5bf57337ceb2742a1",
+      "sourceContentAfterSHA256": "db81d815bf89239e0871e037639700d75548f369b115f8a9f5af603cb25c4690",
       "targetAfterSHA256": "c6f31ce4d0a15ab24fff6dcec51d14cbb34252f3aad0f15cacc6045688c3c182",
       "contextAfterSHA256": "c6f31ce4d0a15ab24fff6dcec51d14cbb34252f3aad0f15cacc6045688c3c182",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "6b581ebd34404d37a43e26a6b47cf334ca55ca037b7ff8e5bf57337ceb2742a1",
+        "targetAfterSHA256": "c6f31ce4d0a15ab24fff6dcec51d14cbb34252f3aad0f15cacc6045688c3c182",
+        "contextAfterSHA256": "c6f31ce4d0a15ab24fff6dcec51d14cbb34252f3aad0f15cacc6045688c3c182",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "c6f31ce4d0a15ab24fff6dcec51d14cbb34252f3aad0f15cacc6045688c3c182",
+          "semanticContextSHA256": "c6f31ce4d0a15ab24fff6dcec51d14cbb34252f3aad0f15cacc6045688c3c182",
+          "subjectTitle": "Museo vaihtoi palatsin kouluun",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "db81d815bf89239e0871e037639700d75548f369b115f8a9f5af603cb25c4690",
+        "sameImageNativeSHA256": "7695035fc404ea61f49fb50f201b37c1bf1ee577ebeb09ab4bd2f6eeac5a9f3d",
+        "sameImageExportSHA256": "10cad0e3fa2e42424653696de2703a6d2b0a40d98f127eed8a130504e1d17e1b",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e07",
@@ -2202,24 +2391,27 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e07/asmara/photo-24381624b6b5a84c9ea2.jpg",
         "suora": true,
         "lahde": "Л.П. Джепко (Leonid Dzhepko), Commons (CC BY-SA 3.0)",
-        "selite": "Asmaran keskustaa ja Ruusukon kirkon ympäristöä ilmasta kuvattuna.",
-        "lyhyt": "Asmaran keskustaa ja Ruusukon kirkon ympäristöä ilmasta kuvattuna.",
-        "tiedosto": "Asmara aerial view 1981 02.jpg"
+        "selite": "Helikopterista vuonna 1981 kuvatussa Asmaran keskustassa näkyy Ruusukransin kirkko ympäröivine kortteleineen.",
+        "lyhyt": "Asmaran keskustaa helikopterista vuonna 1981.",
+        "tiedosto": "Asmara aerial view 1981 02.jpg",
+        "vuosi": "1981"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Л.П. Джепко (Leonid Dzhepko), Commons (CC BY-SA 3.0)",
-        "selite": "Asmaran keskustaa ja Ruusukon kirkon ympäristöä ilmasta kuvattuna.",
-        "lyhyt": "Asmaran keskustaa ja Ruusukon kirkon ympäristöä ilmasta kuvattuna.",
-        "tiedosto": "Asmara aerial view 1981 02.jpg"
+        "selite": "Helikopterista vuonna 1981 kuvatussa Asmaran keskustassa näkyy Ruusukransin kirkko ympäröivine kortteleineen.",
+        "lyhyt": "Asmaran keskustaa helikopterista vuonna 1981.",
+        "tiedosto": "Asmara aerial view 1981 02.jpg",
+        "vuosi": "1981"
       },
       "runtimeMediaFieldPayload": {
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e07/asmara/photo-24381624b6b5a84c9ea2.jpg",
         "suora": true,
         "lahde": "Л.П. Джепко (Leonid Dzhepko), Commons (CC BY-SA 3.0)",
-        "selite": "Asmaran keskustaa ja Ruusukon kirkon ympäristöä ilmasta kuvattuna.",
-        "lyhyt": "Asmaran keskustaa ja Ruusukon kirkon ympäristöä ilmasta kuvattuna.",
-        "tiedosto": "Asmara aerial view 1981 02.jpg"
+        "selite": "Helikopterista vuonna 1981 kuvatussa Asmaran keskustassa näkyy Ruusukransin kirkko ympäröivine kortteleineen.",
+        "lyhyt": "Asmaran keskustaa helikopterista vuonna 1981.",
+        "tiedosto": "Asmara aerial view 1981 02.jpg",
+        "vuosi": "1981"
       },
       "runtimeRemoveMediaKeys": [],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -2233,10 +2425,10 @@
         3063
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/asmara/sisalto.json",
-      "sourceContentSHA256": "6b581ebd34404d37a43e26a6b47cf334ca55ca037b7ff8e5bf57337ceb2742a1",
+      "sourceContentSHA256": "db81d815bf89239e0871e037639700d75548f369b115f8a9f5af603cb25c4690",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "5602762a7337e6373f19ed6d08647cbc9a643f969a2e87a0122cfd8c8ffb8940",
-        "semanticContextSHA256": "5602762a7337e6373f19ed6d08647cbc9a643f969a2e87a0122cfd8c8ffb8940",
+        "targetBeforeSHA256": "afba1cab50c8788d56786c3f111c44a565cc16926edf025806192e8890a6516a",
+        "semanticContextSHA256": "afba1cab50c8788d56786c3f111c44a565cc16926edf025806192e8890a6516a",
         "subjectTitle": "asmara — aito paikkavalokuva",
         "targetState": "existing-target"
       },
@@ -2430,9 +2622,10 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "Asmara aerial view 1981 02.jpg",
+        "lyhyt": "Asmaran keskustaa helikopterista vuonna 1981.",
+        "selite": "Helikopterista vuonna 1981 kuvatussa Asmaran keskustassa näkyy Ruusukransin kirkko ympäröivine kortteleineen.",
         "lahde": "Л.П. Джепко (Leonid Dzhepko), Commons (CC BY-SA 3.0)",
-        "selite": "Asmaran keskustaa ja Ruusukon kirkon ympäristöä ilmasta kuvattuna.",
-        "lyhyt": "Asmaran keskustaa ja Ruusukon kirkon ympäristöä ilmasta kuvattuna."
+        "vuosi": "1981"
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -2451,23 +2644,45 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Л.П. Джепко (Leonid Dzhepko), Commons (CC BY-SA 3.0)",
-        "selite": "Asmaran keskustaa ja Ruusukon kirkon ympäristöä ilmasta kuvattuna.",
-        "lyhyt": "Asmaran keskustaa ja Ruusukon kirkon ympäristöä ilmasta kuvattuna.",
-        "tiedosto": "Asmara aerial view 1981 02.jpg"
+        "selite": "Helikopterista vuonna 1981 kuvatussa Asmaran keskustassa näkyy Ruusukransin kirkko ympäröivine kortteleineen.",
+        "lyhyt": "Asmaran keskustaa helikopterista vuonna 1981.",
+        "tiedosto": "Asmara aerial view 1981 02.jpg",
+        "vuosi": "1981"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "6b581ebd34404d37a43e26a6b47cf334ca55ca037b7ff8e5bf57337ceb2742a1",
-      "targetAfterSHA256": "5602762a7337e6373f19ed6d08647cbc9a643f969a2e87a0122cfd8c8ffb8940",
-      "contextAfterSHA256": "5602762a7337e6373f19ed6d08647cbc9a643f969a2e87a0122cfd8c8ffb8940",
+      "sourceContentAfterSHA256": "db81d815bf89239e0871e037639700d75548f369b115f8a9f5af603cb25c4690",
+      "targetAfterSHA256": "afba1cab50c8788d56786c3f111c44a565cc16926edf025806192e8890a6516a",
+      "contextAfterSHA256": "afba1cab50c8788d56786c3f111c44a565cc16926edf025806192e8890a6516a",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "6b581ebd34404d37a43e26a6b47cf334ca55ca037b7ff8e5bf57337ceb2742a1",
+        "targetAfterSHA256": "5602762a7337e6373f19ed6d08647cbc9a643f969a2e87a0122cfd8c8ffb8940",
+        "contextAfterSHA256": "5602762a7337e6373f19ed6d08647cbc9a643f969a2e87a0122cfd8c8ffb8940",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "5602762a7337e6373f19ed6d08647cbc9a643f969a2e87a0122cfd8c8ffb8940",
+          "semanticContextSHA256": "5602762a7337e6373f19ed6d08647cbc9a643f969a2e87a0122cfd8c8ffb8940",
+          "subjectTitle": "asmara — aito paikkavalokuva",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "db81d815bf89239e0871e037639700d75548f369b115f8a9f5af603cb25c4690",
+        "sameImageNativeSHA256": "24381624b6b5a84c9ea2a3cbfe57f34b42bb4922af992d7d5f88f56eea7d0ec3",
+        "sameImageExportSHA256": "24381624b6b5a84c9ea2a3cbfe57f34b42bb4922af992d7d5f88f56eea7d0ec3",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e07",
@@ -2490,14 +2705,14 @@
         "suora": true,
         "lahde": "Hansueli Krapf, Wikimedia Commons (CC BY-SA 3.0)",
         "selite": "Asmaran laajaa kattomaisemaa ja katuverkkoa marraskuussa 2006.",
-        "lyhyt": "Asmaran laajaa kattomaisemaa ja katuverkkoa marraskuussa 2006.",
+        "lyhyt": "Asmaran kattoja ja katuja.",
         "tiedosto": "2006-11-01 Asmara 02.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Hansueli Krapf, Wikimedia Commons (CC BY-SA 3.0)",
         "selite": "Asmaran laajaa kattomaisemaa ja katuverkkoa marraskuussa 2006.",
-        "lyhyt": "Asmaran laajaa kattomaisemaa ja katuverkkoa marraskuussa 2006.",
+        "lyhyt": "Asmaran kattoja ja katuja.",
         "tiedosto": "2006-11-01 Asmara 02.jpg"
       },
       "runtimeMediaFieldPayload": {
@@ -2505,7 +2720,7 @@
         "suora": true,
         "lahde": "Hansueli Krapf, Wikimedia Commons (CC BY-SA 3.0)",
         "selite": "Asmaran laajaa kattomaisemaa ja katuverkkoa marraskuussa 2006.",
-        "lyhyt": "Asmaran laajaa kattomaisemaa ja katuverkkoa marraskuussa 2006.",
+        "lyhyt": "Asmaran kattoja ja katuja.",
         "tiedosto": "2006-11-01 Asmara 02.jpg"
       },
       "runtimeRemoveMediaKeys": [],
@@ -2520,10 +2735,10 @@
         1392
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/asmara/sisalto.json",
-      "sourceContentSHA256": "6b581ebd34404d37a43e26a6b47cf334ca55ca037b7ff8e5bf57337ceb2742a1",
+      "sourceContentSHA256": "db81d815bf89239e0871e037639700d75548f369b115f8a9f5af603cb25c4690",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "70cd94d1a1370335f12e98512d020d34fe8bf4f4f32caf5182e1b136be37f1cd",
-        "semanticContextSHA256": "70cd94d1a1370335f12e98512d020d34fe8bf4f4f32caf5182e1b136be37f1cd",
+        "targetBeforeSHA256": "29c4334f8d3013bec2c67ed652b2932adf86e35fbbf2e1203f763f630b4d0b89",
+        "semanticContextSHA256": "29c4334f8d3013bec2c67ed652b2932adf86e35fbbf2e1203f763f630b4d0b89",
         "subjectTitle": "Asmara",
         "targetState": "existing-target"
       },
@@ -2730,9 +2945,9 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "2006-11-01 Asmara 02.jpg",
-        "lahde": "Hansueli Krapf, Wikimedia Commons (CC BY-SA 3.0)",
+        "lyhyt": "Asmaran kattoja ja katuja.",
         "selite": "Asmaran laajaa kattomaisemaa ja katuverkkoa marraskuussa 2006.",
-        "lyhyt": "Asmaran laajaa kattomaisemaa ja katuverkkoa marraskuussa 2006."
+        "lahde": "Hansueli Krapf, Wikimedia Commons (CC BY-SA 3.0)"
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -2751,7 +2966,7 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
@@ -2759,15 +2974,36 @@
       "CcommonsFieldPayload": {
         "lahde": "Hansueli Krapf, Wikimedia Commons (CC BY-SA 3.0)",
         "selite": "Asmaran laajaa kattomaisemaa ja katuverkkoa marraskuussa 2006.",
-        "lyhyt": "Asmaran laajaa kattomaisemaa ja katuverkkoa marraskuussa 2006.",
+        "lyhyt": "Asmaran kattoja ja katuja.",
         "tiedosto": "2006-11-01 Asmara 02.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "6b581ebd34404d37a43e26a6b47cf334ca55ca037b7ff8e5bf57337ceb2742a1",
-      "targetAfterSHA256": "70cd94d1a1370335f12e98512d020d34fe8bf4f4f32caf5182e1b136be37f1cd",
-      "contextAfterSHA256": "70cd94d1a1370335f12e98512d020d34fe8bf4f4f32caf5182e1b136be37f1cd",
+      "sourceContentAfterSHA256": "db81d815bf89239e0871e037639700d75548f369b115f8a9f5af603cb25c4690",
+      "targetAfterSHA256": "29c4334f8d3013bec2c67ed652b2932adf86e35fbbf2e1203f763f630b4d0b89",
+      "contextAfterSHA256": "29c4334f8d3013bec2c67ed652b2932adf86e35fbbf2e1203f763f630b4d0b89",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "6b581ebd34404d37a43e26a6b47cf334ca55ca037b7ff8e5bf57337ceb2742a1",
+        "targetAfterSHA256": "70cd94d1a1370335f12e98512d020d34fe8bf4f4f32caf5182e1b136be37f1cd",
+        "contextAfterSHA256": "70cd94d1a1370335f12e98512d020d34fe8bf4f4f32caf5182e1b136be37f1cd",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "70cd94d1a1370335f12e98512d020d34fe8bf4f4f32caf5182e1b136be37f1cd",
+          "semanticContextSHA256": "70cd94d1a1370335f12e98512d020d34fe8bf4f4f32caf5182e1b136be37f1cd",
+          "subjectTitle": "Asmara",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "db81d815bf89239e0871e037639700d75548f369b115f8a9f5af603cb25c4690",
+        "sameImageNativeSHA256": "b16a14d1c52acde7504432a27e460b8b613673a103059dff9411b91dec93651c",
+        "sameImageExportSHA256": "b16a14d1c52acde7504432a27e460b8b613673a103059dff9411b91dec93651c",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e07",
@@ -2789,23 +3025,23 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e07/asmara/n1-87d53cae3ac4fe93f521.jpg",
         "suora": true,
         "lahde": "sailko, Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "Ruusukon Neitsyt Marian kirkon erillinen kellotorni Asmarassa, kuvattu vuonna 2015.",
-        "lyhyt": "Ruusukon Neitsyt Marian kirkon erillinen kellotorni Asmarassa, kuvattu vuonna 2015.",
+        "selite": "Ruusukransin Neitsyt Marian kirkon erillinen kellotorni Asmarassa, kuvattu vuonna 2015.",
+        "lyhyt": "Ruusukransin kirkon kellotorni.",
         "tiedosto": "Asmara, cattedrale cattolica, campanile 01.JPG"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "sailko, Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "Ruusukon Neitsyt Marian kirkon erillinen kellotorni Asmarassa, kuvattu vuonna 2015.",
-        "lyhyt": "Ruusukon Neitsyt Marian kirkon erillinen kellotorni Asmarassa, kuvattu vuonna 2015.",
+        "selite": "Ruusukransin Neitsyt Marian kirkon erillinen kellotorni Asmarassa, kuvattu vuonna 2015.",
+        "lyhyt": "Ruusukransin kirkon kellotorni.",
         "tiedosto": "Asmara, cattedrale cattolica, campanile 01.JPG"
       },
       "runtimeMediaFieldPayload": {
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e07/asmara/n1-87d53cae3ac4fe93f521.jpg",
         "suora": true,
         "lahde": "sailko, Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "Ruusukon Neitsyt Marian kirkon erillinen kellotorni Asmarassa, kuvattu vuonna 2015.",
-        "lyhyt": "Ruusukon Neitsyt Marian kirkon erillinen kellotorni Asmarassa, kuvattu vuonna 2015.",
+        "selite": "Ruusukransin Neitsyt Marian kirkon erillinen kellotorni Asmarassa, kuvattu vuonna 2015.",
+        "lyhyt": "Ruusukransin kirkon kellotorni.",
         "tiedosto": "Asmara, cattedrale cattolica, campanile 01.JPG"
       },
       "runtimeRemoveMediaKeys": [],
@@ -2820,10 +3056,10 @@
         3456
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/asmara/sisalto.json",
-      "sourceContentSHA256": "6b581ebd34404d37a43e26a6b47cf334ca55ca037b7ff8e5bf57337ceb2742a1",
+      "sourceContentSHA256": "db81d815bf89239e0871e037639700d75548f369b115f8a9f5af603cb25c4690",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "71c750cce8b245ef340e06837e190d4f3a9bbd0327581e24f9d9d6a1f0b71192",
-        "semanticContextSHA256": "4bf974c4359ad6a2c487e8e4e4f5d3ff0aa7f9f7dc6d8109944f45f452eb2f57",
+        "targetBeforeSHA256": "2c9c0210a23b30b1702cd48845645ee8d787ce48d00a47828f88f62e9c0f1876",
+        "semanticContextSHA256": "010edbf6bd37b0280e0c011eb4611dc45ff23e9ea794eec9fb1267c55a91ed3b",
         "subjectTitle": "Ruusukon Neitsyt Marian kirkko",
         "targetState": "existing-target"
       },
@@ -3050,9 +3286,9 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "Asmara, cattedrale cattolica, campanile 01.JPG",
-        "lahde": "sailko, Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "Ruusukon Neitsyt Marian kirkon erillinen kellotorni Asmarassa, kuvattu vuonna 2015.",
-        "lyhyt": "Ruusukon Neitsyt Marian kirkon erillinen kellotorni Asmarassa, kuvattu vuonna 2015."
+        "lyhyt": "Ruusukransin kirkon kellotorni.",
+        "selite": "Ruusukransin Neitsyt Marian kirkon erillinen kellotorni Asmarassa, kuvattu vuonna 2015.",
+        "lahde": "sailko, Wikimedia Commons (CC BY-SA 3.0)"
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -3071,28 +3307,55 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "sailko, Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "Ruusukon Neitsyt Marian kirkon erillinen kellotorni Asmarassa, kuvattu vuonna 2015.",
-        "lyhyt": "Ruusukon Neitsyt Marian kirkon erillinen kellotorni Asmarassa, kuvattu vuonna 2015.",
+        "selite": "Ruusukransin Neitsyt Marian kirkon erillinen kellotorni Asmarassa, kuvattu vuonna 2015.",
+        "lyhyt": "Ruusukransin kirkon kellotorni.",
         "tiedosto": "Asmara, cattedrale cattolica, campanile 01.JPG"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "6b581ebd34404d37a43e26a6b47cf334ca55ca037b7ff8e5bf57337ceb2742a1",
-      "targetAfterSHA256": "71c750cce8b245ef340e06837e190d4f3a9bbd0327581e24f9d9d6a1f0b71192",
-      "contextAfterSHA256": "4bf974c4359ad6a2c487e8e4e4f5d3ff0aa7f9f7dc6d8109944f45f452eb2f57",
+      "sourceContentAfterSHA256": "db81d815bf89239e0871e037639700d75548f369b115f8a9f5af603cb25c4690",
+      "targetAfterSHA256": "2c9c0210a23b30b1702cd48845645ee8d787ce48d00a47828f88f62e9c0f1876",
+      "contextAfterSHA256": "010edbf6bd37b0280e0c011eb4611dc45ff23e9ea794eec9fb1267c55a91ed3b",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "6b581ebd34404d37a43e26a6b47cf334ca55ca037b7ff8e5bf57337ceb2742a1",
+        "targetAfterSHA256": "71c750cce8b245ef340e06837e190d4f3a9bbd0327581e24f9d9d6a1f0b71192",
+        "contextAfterSHA256": "4bf974c4359ad6a2c487e8e4e4f5d3ff0aa7f9f7dc6d8109944f45f452eb2f57",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "71c750cce8b245ef340e06837e190d4f3a9bbd0327581e24f9d9d6a1f0b71192",
+          "semanticContextSHA256": "4bf974c4359ad6a2c487e8e4e4f5d3ff0aa7f9f7dc6d8109944f45f452eb2f57",
+          "subjectTitle": "Ruusukon Neitsyt Marian kirkko",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "db81d815bf89239e0871e037639700d75548f369b115f8a9f5af603cb25c4690",
+        "sameImageNativeSHA256": "87d53cae3ac4fe93f521c5866f703cc6bfa2e33961648ce707ab3e5516da60b0",
+        "sameImageExportSHA256": "87d53cae3ac4fe93f521c5866f703cc6bfa2e33961648ce707ab3e5516da60b0",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     }
   ],
   "runtimeIntegrationPending": true,
   "ownerAcceptedNotImpliedByAuthorization": false,
   "gameIntegrated": false,
   "allAssetsExplicitlyOwnerApproved": true,
-  "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+  "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+  "task118ExcludedAssets": [],
+  "task118TextRevision": true,
+  "independentTextResamplePending": true,
+  "textAcceptanceVerified": false,
+  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task118/immutable-media-history/e07/asmara/ef200d650123bae4add9bed7ba7aac4f7acb08701010fa9ff2b6af5bc3bb7e1f.json",
+  "task118ReboundAt": "2026-10-13T16:31:25.055094+00:00"
 }

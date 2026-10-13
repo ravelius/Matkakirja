@@ -11,19 +11,19 @@
       "kansikuvat": [
         {
           "tiedosto": "Juba (8184843425).jpg",
-          "lyhyt": "Juban asutusta, katuverkkoa ja kallioista maastoa korkealta nähtynä.",
+          "lyhyt": "Juban asutusta, katuverkkoa.",
           "selite": "Juban asutusta, katuverkkoa ja kallioista maastoa korkealta nähtynä.",
           "lahde": "Flavio Alagia, Wikimedia Commons (CC BY 2.0)"
         },
         {
           "tiedosto": "Blick auf Juba im Landeanflug (2018).jpg",
-          "lyhyt": "Juban laajaa asutusta ja taustalla kohoavaa kallioista maastoa lentokoneesta nähtynä, 2018.",
+          "lyhyt": "Juban laajaa asutusta.",
           "selite": "Juban laajaa asutusta ja taustalla kohoavaa kallioista maastoa lentokoneesta nähtynä, 2018.",
           "lahde": "Besserwisser123, Wikimedia Commons (CC BY-SA 4.0)"
         },
         {
           "tiedosto": "AERIAL VIEW OF JUBA, SOUTH SUDAN.jpg",
-          "lyhyt": "Juban rakennuksia ja avointa lentopaikkamaastoa laajassa näkymässä joulukuussa 2018.",
+          "lyhyt": "Juban rakennuksia ja avointa lentopaikkamaastoa laajassa näkymässä.",
           "selite": "Juban rakennuksia ja avointa lentopaikkamaastoa laajassa näkymässä joulukuussa 2018.",
           "lahde": "Umar sheriff habibullah, Wikimedia Commons (CC BY-SA 4.0)"
         }
@@ -31,7 +31,7 @@
       "nostot": [
         {
           "otsikko": "Koulu ehti ennen kaupunkisuunnitelmaa",
-          "teksti": "Nykyisen Juban paikalla oli Bari-kylä ennen uuden hallintokaupungin rakentamista. Church Missionary Society perusti tänne 1900-luvun alussa lähetysaseman ja koulun. Paikkaan kuului talo, kirkko, työpaja sekä oppilaiden majoja. Koulun olemassaolo ja jokikuljetuksen läheisyys vaikuttivat uuden keskuksen paikan valintaan. Hallintorakennusten rinnalle tuli kauppaa, ja myös Rejafin kauppiaita muutti Jubaan. Kaupungin historia ei siten ala yhdestä perustamispäivästä: kylä, koulu ja hallintokeskus ovat eri vaiheita.",
+          "teksti": "Nykyisen Juban paikalla oli Bari-kylä ennen uuden hallintokaupungin rakentamista. Church Missionary Society perusti tänne 1900-luvun alussa lähetysaseman ja koulun. Paikkaan kuului talo, kirkko, työpaja sekä oppilaiden majoja. Koulun olemassaolo ja jokikuljetuksen läheisyys vaikuttivat uuden keskuksen paikan valintaan. Hallintorakennusten rinnalle tuli kauppaa, ja myös Rejafin kauppiaita muutti Jubaan. Bari-kylä, lähetyskoulu ja hallintokeskus ovat saman paikan eri vaiheita. Koulu toi paikalle oppilaita ja opettajia jo ennen hallintokaupungin katuverkkoa.",
           "wiki": "Juba",
           "tiedosto": "",
           "lyhyt": "",
@@ -49,7 +49,7 @@
         },
         {
           "otsikko": "Ruokatori on tavaran jatkoyhteys",
-          "teksti": "Konyo Konyossa myydään ruokatarvikkeiden lisäksi vaatteita ja ruoanvalmistusvälineitä. Tuotteissa on paikallista satoa, mutta tuoreita hedelmiä ja vihanneksia on tuotu myös Ugandasta maanteitse. Konyo Konyo ja Gumbo Market välittävät tuoretuotteita pienemmille toreille Juban piirikunnassa ja sen ulkopuolella. Tori on siis myös jakelupaikka. Siellä on lisäksi järjestetty kansallisarkiston asiakirjojen pop-up-esittely: kaupankäynnin keskellä on voinut kohdata kaupungin historiaa, ilman että paikasta tuli pysyvä arkistomuseo.",
+          "teksti": "Konyo Konyossa myydään ruokatarvikkeiden lisäksi vaatteita ja ruoanvalmistusvälineitä. Tuotteissa on paikallista satoa, mutta tuoreita hedelmiä ja vihanneksia on tuotu myös Ugandasta maanteitse. Konyo Konyo ja Gumbo Market välittävät tuoretuotteita pienemmille toreille Juban piirikunnassa ja sen ulkopuolella. Tori on siis myös jakelupaikka. Siellä on lisäksi järjestetty kansallisarkiston asiakirjojen pop-up-esittely: torikaupan keskellä asiakirjat toivat nähtäville kaupungin vanhoja vaiheita.",
           "wiki": "Juba",
           "tiedosto": "",
           "lyhyt": "",
@@ -82,7 +82,7 @@
           "jaksot": [
             {
               "otsikko": "Perille ja liikkeelle",
-              "teksti": "Jubaan matkustamista tulee toistaiseksi välttää. Maassa olevia kehotetaan poistumaan. Juban kansainvälisen lentoaseman tunnus on JUB. Kuljetuspalveluissa on rajoitteita, ja sateet vaikeuttavat päällystämättömillä teillä liikkumista. Seuraa ajantasaisia viranomaisohjeita; vanhat opastiedot eivät ole nykyisen matkan reittejä.",
+              "teksti": "Juba sijaitsee Valkoisen Niilin varrella ja sen kansainvälisen lentoaseman tunnus on JUB. Kaupungin varhaisessa kasvussa koulu ja jokikuljetuksen läheisyys vaikuttivat hallintopaikan valintaan.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -121,8 +121,8 @@
               }
             },
             {
-              "otsikko": "Sateinen ja kuiva kausi",
-              "teksti": "Jubassa sateinen ja kuiva kausi vuorottelevat. Sateet vaikuttavat päällystämättömien teiden kulkukelpoisuuteen. Vuodenajan kuvaus ei muuta nykyistä matkustusrajoitusta: kaupunkiin matkustamista tulee toistaiseksi välttää.",
+              "otsikko": "Hai Cinema",
+              "teksti": "Hai Cinema -nimi säilyi kaupunginosassa vanhan elokuvateatterin käytön muututtua. Juba Picture Housessa esitettiin muun muassa intialaisia, egyptiläisiä ja yhdysvaltalaisia elokuvia. Rakennus sai myöhemmin seurakuntatehtävän.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -161,8 +161,8 @@
             ],
             "hyvaTietaa": [
               {
-                "otsikko": "Matkustusrajoitus",
-                "teksti": "Jubaan matkustamista tulee toistaiseksi välttää. Maassa olevia kehotetaan poistumaan."
+                "otsikko": "Ennen matkapäätöstä",
+                "teksti": "Tarkista Etelä-Sudanin ajantasainen matkustustiedote Suomen ulkoministeriöstä ja noudata sen ohjeita."
               },
               {
                 "otsikko": "Hoidon saatavuus",
@@ -178,7 +178,7 @@
               }
             ]
           },
-          "lahde": "Wikipedia"
+          "lahde": "Wikipedia; Wikivoyage"
         }
       }
     },
@@ -256,13 +256,13 @@
       "q": "Mikä vaikutti uuden hallintokaupungin paikan valintaan jokikuljetuksen lisäksi?",
       "options": [
         "Paikallinen koulu",
-        "Suuri kaivos",
-        "Rautatieasema",
-        "Majakkatorni"
+        "Kauppavarasto",
+        "Karjatori",
+        "Lähetyssairaala"
       ],
       "correct": 0,
       "level": 2,
-      "hint": "Paikalla oli jo oppimiseen liittyvää toimintaa.",
+      "hint": "Kaupunki kasvoi jo olemassa olevien toimintojen ympärille.",
       "fact": "Koulun olemassaolo oli yksi Juban paikan valinnan perusteista.",
       "source": "https://en.wikipedia.org/wiki/Juba"
     },
@@ -284,9 +284,9 @@
       "q": "Mihin Konyo Konyosta välitetään tuoretuotteita?",
       "options": [
         "Pienemmille toreille",
-        "Kukkulan louhoksille",
-        "Lentokoneiden tehtaille",
-        "Kirjaston varastoille"
+        "Pääasiassa lentoaseman rahtiin",
+        "Vain kaupungin hotelleihin",
+        "Enimmäkseen kaivosalueille"
       ],
       "correct": 0,
       "level": 2,
@@ -354,7 +354,7 @@
   },
   "valokuva": {
     "tiedosto": "ISS-30 Juba - South Sudan.jpg",
-    "lyhyt": "Juban ja Niilin seutua avaruusasemalta kuvattuna.",
+    "lyhyt": "Juban.",
     "selite": "Juban ja Niilin seutua avaruusasemalta kuvattuna.",
     "lahde": "NASA, Commons (PD)"
   },

@@ -1,7 +1,7 @@
 {
   "artikkeli": {
-    "intro": "Asmara on Eritrean pääkaupunki **ylängöllä rannikon alangon yläpuolella**. Paikalla oli asutusta ja kauppaa jo ennen nykyisen keskustan suuria rakennusvaiheita. Paikallinen perimätieto liittää kaupungin nimen kylien yhdistymiseen naisten aloitteesta. Isoisän matkavuonna 1873 täällä oli vanhempi asutus- ja toripaikka. Nykyisen keskustan kirkot, teatteri ja rautatieasema tulivat myöhemmin.\n\nAsmaran katuverkossa suora ruutukaava kohtaa kaartuvat kadut, vanhat paikat ja maaston. Medeber kehittyi karavaanien pysähdyspaikasta kaupan, käsityön ja kierrätysmateriaalien ympäristöksi. Rautatie nousi Punaisenmeren rannikolta ylängölle, mikä vaati siltoja, tunneleita ja paljon rakennustyötä. Kaupungin kahviloissa ja ruokaperinteessä näkyy puolestaan **paikallisten makujen ja italialaisten ruokalajien kohtaaminen**, kuten berberellä maustettu tomaattikastikepasta.",
-    "teksti": "Asmara ei ollut siirtomaasuunnittelijan tyhjä kangas. Paikallinen asutus, torit, Mai Bela -joki ja ylängön maasto vaikuttivat kaupungin suunnitteluun. Katuverkkoon syntyi ruutua ja kaartuvia linjoja, mutta siirtomaahallinto myös erotteli asuinalueita.\n\nRakennusten arki ulottui niiden julkisivuja pidemmälle. Ruusukon kirkon pihapiirissä oli koulu, kirjasto ja painokone, jolla tuotettiin paikalliskielisiä tekstejä. Teatterin myöhempi elokuvakäyttö puolestaan toi vanhaan rakennukseen projektoritilan.\n\nKaupungin tehtävät ovat myös vaihtaneet paikkaa. Medeber siirrettiin koilliseen teollisuusalueeseen, ja kansallismuseo muutti entisestä palatsista entiseen tyttökouluun. Käyttö, sijainti ja rakennuksen ulkoasu eivät aina kerro samaa vaihetta kaupungin historiasta."
+    "intro": "Asmara on Eritrean pääkaupunki **ylängöllä rannikon alangon yläpuolella**. Paikalla oli asutusta ja kauppaa jo ennen nykyisen keskustan suuria rakennusvaiheita. Paikallinen perimätieto liittää kaupungin nimen kylien yhdistymiseen naisten aloitteesta. Isoisän matkavuonna 1873 täällä oli vanhempi asutus- ja toripaikka. Nykyisen keskustan kirkot, teatteri ja rautatieasema tulivat myöhemmin.\n\nAsmaran katuverkossa suora ruutukaava kohtaa kaartuvat kadut, vanhat paikat ja maaston. Medeber kehittyi karavaanien pysähdyspaikasta kaupan, käsityön ja kierrätysmateriaalien ympäristöksi. Rautatie nousi Punaisenmeren rannikolta ylängölle, mikä vaati siltoja, tunneleita ja paljon rakennustyötä. Kaupungin kahviloissa ja ruokaperinteessä näkyy puolestaan **paikallisten makujen ja italialaisten ruokalajien kohtaaminen**, kuten berbere-mausteella maustettu tomaattikastikepasta.",
+    "teksti": "Asmaran vanha asutus oli olemassa ennen siirtomaakauden kaupunkisuunnittelua. Paikallinen asutus, torit, Mai Bela -joki ja ylängön maasto vaikuttivat kaupungin suunnitteluun. Katuverkkoon syntyi ruutua ja kaartuvia linjoja, mutta siirtomaahallinto myös erotteli asuinalueita.\n\nRakennusten arki ulottui niiden julkisivuja pidemmälle. Ruusukransin kirkon pihapiirissä oli koulu, kirjasto ja painokone, jolla tuotettiin paikalliskielisiä tekstejä. Teatterin myöhempi elokuvakäyttö puolestaan toi vanhaan rakennukseen projektoritilan.\n\nKaupungin tehtävät ovat myös vaihtaneet paikkaa. Medeber siirrettiin koilliseen teollisuusalueelle, ja kansallismuseo muutti entisestä palatsista entiseen tyttökouluun. Käyttö, sijainti ja rakennuksen ulkoasu eivät aina kerro samaa vaihetta kaupungin historiasta."
   },
   "kaupunkilehti": [
     {
@@ -11,7 +11,7 @@
       "kansikuvat": [
         {
           "tiedosto": "2006-11-01 Asmara 02.jpg",
-          "lyhyt": "Asmaran laajaa kattomaisemaa ja katuverkkoa marraskuussa 2006.",
+          "lyhyt": "Asmaran kattoja ja katuja.",
           "selite": "Asmaran laajaa kattomaisemaa ja katuverkkoa marraskuussa 2006.",
           "lahde": "Hansueli Krapf, Wikimedia Commons (CC BY-SA 3.0)"
         },
@@ -31,7 +31,7 @@
       "nostot": [
         {
           "otsikko": "Naiset saivat kylät yhteen",
-          "teksti": "Paikallinen perimätieto liittää Asmaran nimen kylien yhdistymiseen. Kertomuksessa erillisten yhteisöjen naiset kokoontuvat pohtimaan yhteistä turvaa ja ehdottavat kylien liittämistä yhteen. Miehet suostuvat, ja yhteinen paikka saa nimen Arbate Asmara. Tarina kertoo paikallisista toimijoista, jotka etsivät ratkaisua yhdessä. Se on suullista perustamiskertomusta, ei tarkka perustamispäivä tai kylien väestötilasto. Nimeen säilynyt yhdistämisen ajatus tuo kaupungin taustaan vanhemman kerroksen kuin sen tunnetut julkisivut.",
+          "teksti": "Paikallinen perimätieto liittää Asmaran nimen kylien yhdistymiseen. Kertomuksessa erillisten yhteisöjen naiset kokoontuvat pohtimaan yhteistä turvaa ja ehdottavat kylien liittämistä yhteen. Miehet suostuvat, ja yhteinen paikka saa nimen Arbate Asmera. Tarina kertoo paikallisista toimijoista, jotka etsivät ratkaisua yhdessä. Arbate Asmera viittaa neljän kylän yhdistymiseen ja niiden yhteisen turvan etsimiseen. Nimeen säilynyt yhdistämisen ajatus tuo kaupungin taustaan vanhemman kerroksen kuin sen tunnetut julkisivut.",
           "wiki": "Asmara",
           "tiedosto": "",
           "lyhyt": "",
@@ -40,7 +40,7 @@
         },
         {
           "otsikko": "Karavaanipaikasta kierrätyspaja",
-          "teksti": "Medeber oli aluksi karavaanien pysähdyspaikka: siellä korjattiin varusteita, hankittiin tarvikkeita ja käytiin kauppaa. Paikka siirrettiin 1900-luvun alussa kaupungin koilliseen teollisuusalueeseen. Se kehittyi tavaran, etenkin tekstiilien, kauppakeskukseksi ja myöhemmin käsityön ympäristöksi. Kierrätysmetallista tehtiin käyttöesineitä, kuten uuneja; työpajoissa myös jauhettiin chiliä. Suuri osa alkuperäisistä rakennuksista menetettiin, mutta vanha portti ja pienempiä reunan tiloja säilyi. Tavaran uusi käyttö on osa paikan historiaa.",
+          "teksti": "Medeber oli aluksi karavaanien pysähdyspaikka: siellä korjattiin varusteita, hankittiin tarvikkeita ja käytiin kauppaa. Paikka siirrettiin 1900-luvun alussa kaupungin koilliseen teollisuusalueelle. Se kehittyi tavaran, etenkin tekstiilien, kauppakeskukseksi ja myöhemmin käsityön ympäristöksi. Kierrätysmetallista tehtiin käyttöesineitä, kuten uuneja; työpajoissa myös jauhettiin chiliä. Suuri osa alkuperäisistä rakennuksista menetettiin, mutta vanha portti ja pienempiä reunan tiloja säilyi. Tavaran uusi käyttö on osa paikan historiaa.",
           "wiki": "Asmara",
           "tiedosto": "",
           "lyhyt": "",
@@ -73,16 +73,16 @@
           "selite": "",
           "lahde": ""
         },
-        "kappale": "Asmaraan matkustettaessa tulee noudattaa erityistä varovaisuutta. Keskustassa katujen, torien ja kahviloiden ympäristöt kuuluvat kaupunkikuvaan. Viranomaiskohteiden kuvaamista ja pimeässä matkustamista tulee välttää. Kaupungin ulkopuolelle tarvitaan ennakkoon haettava matkustuslupa. Hoidon ja lääkkeiden saatavuus on rajoitettua.",
+        "kappale": "Asmaran katuverkossa suorat ja kaartuvat kadut liittyvät ylängön maastoon sekä vanhoihin asutuspaikkoihin. Medeberissä valmistetaan käyttöesineitä kierrätysmetallista. Kahviloissa paikalliset maut kohtaavat italialaiset ruokalajit. Rautatien historia yhdistää Punaisenmeren rannikon ylängön kaupunkiin.",
         "artikkeli": {
           "nimi": "Matkailijan Asmara",
           "taitto": "opas",
           "teksti": "Katuverkon muodot, Medeberin materiaalit ja kahvila-ateria avaavat Asmaran eri puolia.",
-          "nosto": "Katuverkon muodot, Medeberin materiaalit ja kahvila-ateria avaavat Asmaran eri puolia.",
+          "nosto": "Medeberin metallityöpajat ja berbere-mausteella valmistettu pasta kertovat materiaalien ja ruokaperinteiden uudesta käytöstä.",
           "jaksot": [
             {
               "otsikko": "Perille ja liikkeelle",
-              "teksti": "Asmaran kansainvälisen lentoaseman tunnus on ASM. Kaupungissa on takseja, ja julkinen liikenne on lähinnä bussiliikennettä. Kaupungin ulkopuolinen retki tarvitsee etukäteen haettavan luvan, jonka myöntämistä ei voi olettaa. Vältä pimeässä matkustamista.",
+              "teksti": "Asmaran kansainvälisen lentoaseman tunnus on ASM. Kaupungissa kuljetaan takseilla ja busseilla. Keskustan Harnet Avenue sekä Sematat Avenue kuuluvat kahvila- ja kauppa-alueisiin.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -102,7 +102,7 @@
             },
             {
               "otsikko": "Rakennusten eri vaiheet",
-              "teksti": "Ruusukon kirkon tiilirakennus ja myöhempi erillinen kellotorni ovat eri vaiheita. Teatterin portiikki ja katutason liiketilat kertovat myös muutoksista. Kaupungin kirkot, moskeija ja synagoga kuuluvat uskonnolliseen ympäristöön; pukeudu kunnioittavasti ja noudata paikkojen rajoituksia.",
+              "teksti": "Ruusukransin kirkon tiilirakennus ja myöhempi erillinen kellotorni ovat eri vaiheita. Teatterin portiikki ja katutason liiketilat kertovat myös muutoksista. Kaupungin kirkot, moskeija ja synagoga kuuluvat uskonnolliseen ympäristöön; pukeudu kunnioittavasti ja noudata paikkojen rajoituksia.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -112,7 +112,7 @@
             },
             {
               "otsikko": "Kahvila-ateria",
-              "teksti": "Asmaran kahviloissa tarjotaan espressoa ja cappuccinoa. Italialais-eritrealaiseen ruokaan kuuluu tomaattikastikepasta, jota maustetaan berberellä. Myös lasagne ja gelato esiintyvät kaupungin ruokaperinteessä. Kahviloita on kuvattu etenkin Harnet Avenuen ja Sematat Avenuen suunnalla.",
+              "teksti": "Asmaran kahviloissa tarjotaan espressoa ja cappuccinoa. Italialais-eritrealaiseen ruokaan kuuluu tomaattikastikepasta, jota maustetaan berbere-mausteella. Myös lasagne ja gelato esiintyvät kaupungin ruokaperinteessä. Kahviloita on kuvattu etenkin Harnet Avenuen ja Sematat Avenuen suunnalla.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -122,7 +122,7 @@
             },
             {
               "otsikko": "Ylängön kaupunki",
-              "teksti": "Asmara sijaitsee ylängöllä, kun rannikon suuntaan maasto laskee alankoon. Ota vaatetus ja päivän reitti huomioon tämän ympäristön mukaan. Kaupungin ulkopuoliset lupaehdot ja liikkumisrajoitukset on huomioitava vuodenajasta riippumatta.",
+              "teksti": "Asmara sijaitsee ylängöllä, ja maasto laskee rannikon Massawan suuntaan. Rautatien rakentaminen tälle välille vaati siltoja, tunneleita ja pitkän nousun. Kapearaiteisella radalla käytettiin höyryvetureita ja Littorina-moottorivaunuja.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -141,7 +141,7 @@
               {
                 "mita": "Vanha tiilikirkko",
                 "tahdet": 3,
-                "selite": "Ruusukon kirkolla on oma historiallinen rakennusvaiheensa."
+                "selite": "Ruusukransin kirkolla on oma historiallinen rakennusvaiheensa."
               },
               {
                 "mita": "Medeberin materiaalit",
@@ -161,24 +161,24 @@
             ],
             "hyvaTietaa": [
               {
-                "otsikko": "Matkustuslupa",
-                "teksti": "Hae lupa kaupungin ulkopuolelle etukäteen."
+                "otsikko": "Ennen matkapäätöstä",
+                "teksti": "Tarkista Eritrean ajantasainen matkustustiedote Suomen ulkoministeriöstä, myös lupa- ja kuvausohjeet."
               },
               {
-                "otsikko": "Hoidon saatavuus",
-                "teksti": "Hoitoa ja lääkkeitä on rajoitetusti saatavilla."
+                "otsikko": "Mausteseos",
+                "teksti": "Berbere on paikallinen mausteseos, jota käytetään myös tomaattikastikepastassa."
               },
               {
-                "otsikko": "Rahanvaihto",
-                "teksti": "Käytä virallista rahanvaihtoa ja säilytä vaihtokuitit."
+                "otsikko": "Kaupungin vanha nimi",
+                "teksti": "Arbate Asmera liittyy kylien yhdistymisestä kerrottuun paikalliseen perimätietoon."
               },
               {
-                "otsikko": "Kuvaaminen",
-                "teksti": "Noudata paikallisia rajoituksia ja vältä viranomaiskohteiden sekä lentoaseman kuvaamista."
+                "otsikko": "Kirkon nimet",
+                "teksti": "Ruusukransin kirkkoa kutsutaan usein katedraaliksi; Kidane Mehret on eri kirkko."
               }
             ]
           },
-          "lahde": "Wikipedia"
+          "lahde": "Wikipedia; Wikivoyage; UNESCO"
         }
       }
     },
@@ -189,7 +189,7 @@
       "nostot": [
         {
           "otsikko": "Ruutukaava kiersi maastoa",
-          "teksti": "Asmaran katuverkossa on suorakulmaista ruutua sekä kaartuvia ja säteittäisiä katuja. Suunnitteluun vaikuttivat korkeuserot, Mai Bela -joki, vanha toripaikka, Arbate Asmeran kylä ja ylängön reunajyrkänne. Koillinen teollisuusalue erottui vinosti asetetusta katuverkosta ja suuremmista tonteista. Kaupunki ei siis syntynyt tyhjälle paperille. Samalla siirtomaahallinto erotteli asukkaiden asuinalueita. Kaavan muoto kertoo sekä maastoon mukautumisesta että aikakauden yhteiskunnallisista rajoista.",
+          "teksti": "Asmaran katuverkossa on suorakulmaista ruutua sekä kaartuvia ja säteittäisiä katuja. Suunnitteluun vaikuttivat korkeuserot, Mai Bela -joki, vanha toripaikka, vanhat kylät, joihin Arbate Asmera -nimi viittaa ja ylängön reunajyrkänne. Koillinen teollisuusalue erottui vinosti asetetusta katuverkosta ja suuremmista tonteista. Vanha asutus vaikutti uusien katujen sijoitteluun. Samalla siirtomaahallinto erotteli asukkaiden asuinalueita. Kaavan muoto kertoo sekä maastoon mukautumisesta että aikakauden yhteiskunnallisista rajoista.",
           "wiki": "History of Asmara",
           "tiedosto": "",
           "lyhyt": "",
@@ -198,7 +198,7 @@
         },
         {
           "otsikko": "Kirkon pihapiirissä oli painokone",
-          "teksti": "Ruusukon Neitsyt Marian kirkko kehittyi vanhan katolisen lähetysaseman ympärille. Nykyistä suurempaa kirkkoa edelsi pieni Pyhän Markuksen kirkko. Oreste Scanavinin suunnitteleman tiilikirkon kokonaisuuteen kuului myös koulu ja kirjasto. Painokoneella tuotettiin uskonnollisia ja koulutekstejä paikallisilla kielillä. Erillinen kellotorni valmistui kirkon päävaihetta myöhemmin. Pihapiiri oli siis myös oppimisen ja tekstien ympäristö. Ruskea tiili ja lombardialainen uusromaanisuus kertovat rakennuksen omasta arkkitehtuurista.",
+          "teksti": "Ruusukransin Neitsyt Marian kirkko kehittyi vanhan katolisen lähetysaseman ympärille. Nykyistä suurempaa kirkkoa edelsi pieni Pyhän Markuksen kirkko. Oreste Scanavinin suunnitteleman tiilikirkon kokonaisuuteen kuului myös koulu ja kirjasto. Painokoneella tuotettiin uskonnollisia ja koulutekstejä paikallisilla kielillä. Erillinen kellotorni valmistui kirkon päävaihetta myöhemmin. Pihapiiri oli siis myös oppimisen ja tekstien ympäristö. Ruskea tiili ja lombardialainen uusromaanisuus kertovat rakennuksen omasta arkkitehtuurista.",
           "wiki": "Church of Our Lady of the Rosary, Asmara",
           "tiedosto": "",
           "lyhyt": "",
@@ -207,7 +207,7 @@
         },
         {
           "otsikko": "Teatteri sai uuden katselutavan",
-          "teksti": "Odoardo Cavagnari suunnitteli Asmaran teatterin 1900-luvun alkupuolella. Julkisivun kaaret, pylväät ja portaat liittävät rakennuksen nousevaan pääkatuun. Yläosan alkuperäinen portiikki ja myöhemmin lisätyt katutason liiketilat ovat eri vaiheita. Teatteri muutettiin myöhemmin elokuvateatteriksi, ja sinne rakennettiin projektoritila. Muutoksia tekivät Antonio Vitaliti ja Pietro del Fabro. Katsomon paikka säilyi, mutta esityksen tekniikka muuttui. Rakennuksen tarinassa alkuperäinen suunnitelma ja myöhemmät käytöt kuuluvat yhteen.",
+          "teksti": "Odoardo Cavagnari suunnitteli Asmaran teatterin 1900-luvun alkupuolella. Julkisivun kaaret, pylväät ja portaat liittävät rakennuksen nousevaan pääkatuun. Yläosan alkuperäinen portiikki ja myöhemmin lisätyt katutason liiketilat ovat eri vaiheita. Teatteriin tuli 1930-luvulla myös elokuvaesityksiä, ja sinne rakennettiin projektoritila. Muutoksia tekivät Antonio Vitaliti ja Pietro del Fabro. Katsomon paikka säilyi, mutta esityksen tekniikka muuttui. Rakennuksen tarinassa alkuperäinen suunnitelma ja myöhemmät käytöt kuuluvat yhteen.",
           "wiki": "Asmara Theatre",
           "tiedosto": "",
           "lyhyt": "",
@@ -225,7 +225,7 @@
         }
       ],
       "tehtava": {
-        "kysymys": "Mitä työtä Ruusukon kirkon pihapiirissä tehtiin koulun ja kirjaston lisäksi?",
+        "kysymys": "Mitä työtä Ruusukransin kirkon pihapiirissä tehtiin koulun ja kirjaston lisäksi?",
         "vaihtoehdot": [
           "Paikalliskielisten tekstien painamista",
           "Rannikon laivojen korjaamista",
@@ -249,7 +249,7 @@
       "correct": 0,
       "level": 1,
       "hint": "Maa sijaitsee Punaisenmeren rannikolla.",
-      "fact": "Asmara on Eritrean ylängön pääkaupunki.",
+      "fact": "Asmara on Eritrean pääkaupunki, ja se sijaitsee ylängöllä.",
       "source": "https://en.wikipedia.org/wiki/Asmara"
     },
     {
@@ -295,28 +295,28 @@
       "source": "https://en.wikipedia.org/wiki/Italian_Eritrean_cuisine"
     },
     {
-      "q": "Mihin käyttöön Asmaran teatteria muutettiin?",
+      "q": "Minkä lisäkäytön Asmaran teatteri sai 1930-luvulla?",
       "options": [
-        "Elokuvateatteriksi",
-        "Rautatievarikoksi",
-        "Koulun kirjastoksi",
-        "Tekstiilimarkkinaksi"
+        "Elokuvaesitykset",
+        "Arkiston säilytystilat",
+        "Koulun luokkahuoneet",
+        "Museon näyttelysalit"
       ],
       "correct": 0,
       "level": 3,
-      "hint": "Rakennukseen lisättiin projektoritila.",
-      "fact": "Teatterin myöhempi käyttö muutti esityksen tekniikkaa.",
-      "source": "https://en.wikipedia.org/wiki/Asmara_Theatre"
+      "hint": "Katsomoon tuli uudenlainen esitystekniikka.",
+      "fact": "Teatteriin rakennettiin projektoritila elokuvien esittämistä varten. Rakennusta on käytetty myös teatterina.",
+      "source": "https://whc.unesco.org/document/155767"
     }
   ],
   "tiedot": [
     "Asmaran katuverkossa on sekä ruutukaavaa että maastoon ja vanhoihin paikkoihin liittyviä kaartuvia linjoja.",
     "Medeberin käsityöläiset ovat valmistaneet käyttöesineitä kierrätysmateriaaleista, esimerkiksi metallisia uuneja.",
-    "Ruusukon kirkkoa kutsutaan usein katedraaliksi, mutta se ei ole sama paikka kuin nykyinen Kidane Mehret -katedraali."
+    "Ruusukransin kirkkoa kutsutaan usein katedraaliksi, mutta se ei ole sama paikka kuin nykyinen Kidane Mehret -katedraali."
   ],
   "kohdekartta": {
     "numeroympyrat": true,
-    "esittely": "Ruusukon Neitsyt Marian kirkko liittyy keskustan historiallisten rakennusten ja lähetyskokonaisuuden vaiheisiin.",
+    "esittely": "Ruusukransin Neitsyt Marian kirkko liittyy keskustan historiallisten rakennusten ja lähetyskokonaisuuden vaiheisiin.",
     "rajat": {
       "pohjoinen": 15.33975,
       "etela": 15.33375,
@@ -334,12 +334,12 @@
   "nahtavyydet": {
     "Ruusukon Neitsyt Marian kirkko": {
       "aika": "1900-luvun alkupuoli",
-      "teksti": "Ruusukon Neitsyt Marian kirkko sijaitsee Asmaran keskustassa. Oreste Scanavini suunnitteli sen lombardialaisen uusromaanisuuden hengessä, ja rakennuksessa käytettiin ruskeaa tiiltä. Pohjakaavassa on keskilaiva, sivulaivat ja poikkilaiva. Nykyistä kirkkoa edelsi pienempi Pyhän Markuksen kirkko vanhan katolisen lähetysaseman yhteydessä.\n\nKokonaisuuteen kuului koulutoimintaa, kirjasto ja painokone, jolla tuotettiin uskonnollisia sekä koulutekstejä paikallisilla kielillä. Erillinen kellotorni on kirkon päävaihetta myöhempi. Nykyistä rakennusta ja tätä lähetyskokonaisuutta ei ollut vuonna 1873. Paikkaa kutsutaan usein katedraaliksi, mutta se ei ole sama kuin nykyinen Kidane Mehret -katedraali. Sen historia yhdistää arkkitehtuurin ja tekstien tekemisen.",
+      "teksti": "Ruusukransin Neitsyt Marian kirkko sijaitsee Asmaran keskustassa. Oreste Scanavini suunnitteli sen lombardialaisen uusromaanisuuden hengessä, ja rakennuksessa käytettiin ruskeaa tiiltä. Pohjakaavassa on keskilaiva, sivulaivat ja poikkilaiva. Nykyistä kirkkoa edelsi pienempi Pyhän Markuksen kirkko vanhan katolisen lähetysaseman yhteydessä.\n\nKokonaisuuteen kuului koulutoimintaa, kirjasto ja painokone, jolla tuotettiin uskonnollisia sekä koulutekstejä paikallisilla kielillä. Erillinen kellotorni on kirkon päävaihetta myöhempi. Nykyistä rakennusta ja tätä lähetyskokonaisuutta ei ollut vuonna 1873. Paikkaa kutsutaan usein katedraaliksi, mutta se ei ole sama kuin nykyinen Kidane Mehret -katedraali. Sen historia yhdistää arkkitehtuurin ja tekstien tekemisen.",
       "kuvat": [
         {
           "tiedosto": "Asmara, cattedrale cattolica, campanile 01.JPG",
-          "lyhyt": "Ruusukon Neitsyt Marian kirkon erillinen kellotorni Asmarassa, kuvattu vuonna 2015.",
-          "selite": "Ruusukon Neitsyt Marian kirkon erillinen kellotorni Asmarassa, kuvattu vuonna 2015.",
+          "lyhyt": "Ruusukransin kirkon kellotorni.",
+          "selite": "Ruusukransin Neitsyt Marian kirkon erillinen kellotorni Asmarassa, kuvattu vuonna 2015.",
           "lahde": "sailko, Wikimedia Commons (CC BY-SA 3.0)"
         }
       ],
@@ -374,9 +374,10 @@
   },
   "valokuva": {
     "tiedosto": "Asmara aerial view 1981 02.jpg",
-    "lyhyt": "Asmaran keskustaa ja Ruusukon kirkon ympäristöä ilmasta kuvattuna.",
-    "selite": "Asmaran keskustaa ja Ruusukon kirkon ympäristöä ilmasta kuvattuna.",
-    "lahde": "Л.П. Джепко (Leonid Dzhepko), Commons (CC BY-SA 3.0)"
+    "lyhyt": "Asmaran keskustaa helikopterista vuonna 1981.",
+    "selite": "Helikopterista vuonna 1981 kuvatussa Asmaran keskustassa näkyy Ruusukransin kirkko ympäröivine kortteleineen.",
+    "lahde": "Л.П. Джепко (Leonid Dzhepko), Commons (CC BY-SA 3.0)",
+    "vuosi": "1981"
   },
   "saatiedot": null
 }

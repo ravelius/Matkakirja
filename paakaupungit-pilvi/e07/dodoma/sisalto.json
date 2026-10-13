@@ -61,16 +61,16 @@
       "source": "https://en.wikipedia.org/wiki/Tanzanian_wine"
     },
     {
-      "q": "Millaiseen tutkimukseen GST käyttää kairausnäytteitä ja karttoja?",
+      "q": "Millaiseen tutkimukseen Tansanian geologinen tutkimuslaitos GST käyttää kairausnäytteitä ja karttoja?",
       "options": [
         "Geotieteelliseen tutkimukseen",
-        "Kirjallisuuden tutkimukseen",
-        "Kielten äänteiden tutkimukseen",
-        "Eläinten käytöksen tutkimukseen"
+        "Arkeologiseen tutkimukseen",
+        "Maaperän viljavuustutkimukseen",
+        "Vesistöjen ekologiaan"
       ],
       "correct": 0,
       "level": 2,
-      "hint": "Aineisto liittyy maan kiviin ja mineraaleihin.",
+      "hint": "Dodoman tutkimuslaitoksessa säilytetään eri puolilta maata kerättyjä näytteitä.",
       "fact": "Geological Survey of Tanzania säilyttää geotieteellisiä näytteitä ja aineistoja.",
       "source": "https://en.wikipedia.org/wiki/Geological_Survey_of_Tanzania"
     },
@@ -96,7 +96,7 @@
   ],
   "valokuva": {
     "tiedosto": "Iyumbu ward landscape, Dodoma City.jpg",
-    "lyhyt": "Maastoa Iyumbun alueella Dodomassa.",
+    "lyhyt": "Dodomassa Iyumbun maasto.",
     "selite": "Maastoa Iyumbun alueella Dodomassa.",
     "lahde": "Mangapwani, Commons (CC BY-SA 4.0)",
     "vuosi": "2022"
@@ -109,7 +109,7 @@
       "kansikuvat": [
         {
           "tiedosto": "Makulu from Udom, Dodoma City.jpg",
-          "lyhyt": "Makulu Dodomassa yliopiston suunnasta nähtynä, 2022.",
+          "lyhyt": "Makulu yliopiston suunnasta.",
           "selite": "Makulu Dodomassa yliopiston suunnasta nähtynä, 2022.",
           "lahde": "Mangapwani, Wikimedia Commons (CC BY-SA 4.0)"
         },
@@ -156,7 +156,7 @@
         },
         {
           "otsikko": "Mgogo, Wagogo ja Kigogo",
-          "teksti": "Gogo eli Wagogo on Dodoman seutuun ja Ugogoon liittyvä kansan nimi. Yhdestä ihmisestä käytetään nimitystä Mgogo, ihmisryhmästä Wagogo ja kielestä Kigogo. Samantapaiset nimet tarkoittavat siis eri asioita. Yhteisöjen alue kuului 1800-luvun karavaanireittien historiaan jo ennen nykyistä rautatiekaupunkia. Nimien tunteminen auttaa puhumaan seudun ihmisistä ja kielestä täsmällisesti, mutta se ei tarkoita, että kaikki nykyisen Dodoman asukkaat kuuluisivat samaan yhteisöön tai taustaan.",
+          "teksti": "Gogo eli Wagogo on Dodoman seutuun ja Ugogoon liittyvä kansan nimi. Yhdestä ihmisestä käytetään nimitystä Mgogo, ihmisryhmästä Wagogo ja kielestä Kigogo. Samantapaiset nimet tarkoittavat siis eri asioita. Yhteisöjen alue kuului 1800-luvun karavaanireittien historiaan jo ennen nykyistä rautatiekaupunkia. Wagogo on monikkomuoto ihmisistä, Mgogo yksikkö ja Kigogo kieli. Nämä paikalliset nimimuodot kuuluvat Ugogon seudun historiaan, joka jatkui karavaanikaupan ja rautatien vaiheiden läpi.",
           "tiedosto": "",
           "lyhyt": "",
           "selite": "",
@@ -171,7 +171,7 @@
           "selite": "",
           "lahde": ""
         },
-        "kappale": "Dodoman vanha keskusta ja uusi SGR-asema ovat eri paikkoja. Myös Chimwagan yliopistoalue sijaitsee keskustan ulkopuolella. Geologisen museon palvelu ja näytevarasto ovat erillisiä asioita. Parlamenttialueella on pääsy- ja kuvausrajoituksia. Matkaan valmistaudutaan erityisellä varovaisuudella ja ajantasaiset maahantulo- sekä vakuutusehdot tarkistaen.",
+        "kappale": "Dodoman vanha keskusta ja uusi SGR-asema ovat eri paikkoja. Myös Chimwagan yliopistoalue sijaitsee keskustan ulkopuolella. Geologisen museon palvelu ja näytevarasto ovat erillisiä asioita. Parlamenttialueella on pääsy- ja kuvausrajoituksia.",
         "artikkeli": {
           "nimi": "Matkailijan Dodoma",
           "taitto": "opas",
@@ -180,7 +180,7 @@
           "jaksot": [
             {
               "otsikko": "Perille ja liikkeelle",
-              "teksti": "Dodoman lentoaseman koodi on DOD. Msalato on erillinen lentoasemahanke, jonka valmistumista ei pidä olettaa vanhasta tavoitevuodesta. Myös vanhan keskustaaseman ja pohjoisemman SGR-aseman sijainnit eroavat; nykyiset yhteydet tarkistetaan erikseen.",
+              "teksti": "Dodoman lentoaseman tunnus on DOD. Msalato on erillinen lentoasemahanke. Vanha rautatieasema on keskustassa ja uudempi normaaliraiteisen radan asema pohjoisempana. Tarkista lähtöpaikka ja yhteys liikennöitsijältä.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -200,7 +200,7 @@
             },
             {
               "otsikko": "Seudun viiniköynnökset",
-              "teksti": "Dodoman ympäristön rypäleenkasvatus on oma alueellinen aiheensa. Viljelmä ja viininvalmistuspaikka eivät välttämättä ole sama kohde, ja tilat voivat sijaita kaupungin ulkopuolella. Mahdollinen käynti järjestetään paikan kanssa; lajikkeen nimi ei ole vierailuohjelma.",
+              "teksti": "Dodoman ympäristön rypäleenkasvatus on oma alueellinen aiheensa. Viljelmä ja viininvalmistuspaikka eivät välttämättä ole sama kohde, ja tilat voivat sijaita kaupungin ulkopuolella. Sovi tilavierailu suoraan viljelmän tai valmistajan kanssa.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -210,7 +210,7 @@
             },
             {
               "otsikko": "Kiviä ja oppimisen paikkoja",
-              "teksti": "GST:n museopalvelu liittyy kiviin ja mineraaleihin, mutta kairausnäytevarasto on erillinen tutkimusaineisto. Museon käynti ja näyttelyn nykyinen toiminta varmistetaan. UDOMin Chimwaga-alue ja St. John’sin kampus ovat eri korkeakoulupaikkoja.",
+              "teksti": "Tansanian geologisen tutkimuslaitoksen museopalvelu liittyy kiviin ja mineraaleihin, mutta kairausnäytevarasto on erillinen tutkimusaineisto. Museon käynti ja näyttelyn nykyinen toiminta varmistetaan. UDOMin Chimwaga-alue ja St. John’sin kampus ovat eri korkeakoulupaikkoja.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -219,8 +219,8 @@
               }
             },
             {
-              "otsikko": "Matkaan valmistautuminen",
-              "teksti": "Tansaniassa tarvitaan erityistä varovaisuutta. Väkijoukkoja ja pimeällä jalankulkua vältetään, paikallisia ohjeita seurataan. Ennen matkaa tarkistetaan ajantasaiset maahantulo- ja vakuutusehdot; Sansibarin erillisiä käytäntöjä ei sovelleta automaattisesti Dodoman matkaan.",
+              "otsikko": "Gogo ja Kigogo",
+              "teksti": "Dodoman seutuun liittyvä Wagogo tarkoittaa ihmisryhmää, Mgogo yhtä ihmistä ja Kigogo kieltä. Ugogon alue kuului 1800-luvun karavaanireitteihin jo ennen myöhemmän rautatiekaupungin syntyä.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -233,8 +233,8 @@
             "parasta": [],
             "hyvaTietaa": [
               {
-                "otsikko": "Kaksi asemaa",
-                "teksti": "Vanha keskustaasema ja uusi pohjoisempi SGR-asema ovat eri paikkoja."
+                "otsikko": "Ennen matkapäätöstä",
+                "teksti": "Tarkista Tansanian ajantasainen matkustustiedote Suomen ulkoministeriöstä ja noudata sen ohjeita."
               },
               {
                 "otsikko": "Lentoasemahanke",
@@ -250,7 +250,7 @@
               }
             ]
           },
-          "lahde": "Wikipedia"
+          "lahde": "Wikipedia; Wikivoyage"
         }
       }
     },
@@ -272,7 +272,7 @@
       "nostot": [
         {
           "otsikko": "Kivi museossa, näyte tutkimuksessa",
-          "teksti": "Geological Survey of Tanzanian päätoimisto on Dodomassa. Virasto säilyttää geotieteellistä tietoa, ja sen museossa on kiviä sekä mineraaleja. Tutkimustyöhön kuuluvat myös eri puolilta maata kairatut näytteet, geologiset kartat, raportit, kirjasto ja arkisto. Museo ja kairausnäytevarasto ovat eri aineistoja ja tiloja. Näyttelyssä oleva kivi ei siksi ole välttämättä kaupungin maaperästä: sen paikka museossa kertoo kokoelman sijainnista, ei yksin alkuperäisestä löytöpaikasta.",
+          "teksti": "Tansanian geologisen tutkimuslaitoksen päätoimisto on Dodomassa. Virasto säilyttää geotieteellistä tietoa, ja sen museossa on kiviä sekä mineraaleja. Tutkimustyöhön kuuluvat myös eri puolilta maata kairatut näytteet, geologiset kartat, raportit, kirjasto ja arkisto. Museo ja kairausnäytevarasto ovat eri aineistoja ja tiloja. Näyttelyssä oleva kivi ei siksi ole välttämättä kaupungin maaperästä: sen paikka museossa kertoo kokoelman sijainnista, ei yksin alkuperäisestä löytöpaikasta.",
           "tiedosto": "",
           "lyhyt": "",
           "selite": "",
@@ -290,7 +290,7 @@
         },
         {
           "otsikko": "Uusi rata käyttää eri raideleveyttä",
-          "teksti": "Vanha Central Line kulkee Dar es Salaamin rannikolta Dodoman kautta sisämaahan. Se on metriraiteinen, kun uusi SGR on normaaliraiteinen ja osin vanhan linjan rinnalla kulkeva rata. Uudempi verkko on rakentunut vaiheittain. Myös Dodoman asemat ovat eri paikkoja: vanha asema on keskustassa, uusi SGR-asema pohjoisempana. Junaan lähtijälle radan ja aseman nimi kuuluu samaan suunnitelmaan. Koko maan reittikartta ei silti kerro, että kaikki sen osat olisivat yhtä aikaa valmiita matkustajayhteyksiä.",
+          "teksti": "Vanha Central Line kulkee Dar es Salaamin rannikolta Dodoman kautta sisämaahan. Se on metriraiteinen, kun uusi SGR eli standardiraideleveyden rata on normaaliraiteinen ja osin vanhan linjan rinnalla kulkeva rata. Uudempi verkko on rakentunut vaiheittain. Myös Dodoman asemat ovat eri paikkoja: vanha asema on keskustassa, uusi SGR-asema pohjoisempana. Junaan lähtijälle radan ja aseman nimi kuuluu samaan suunnitelmaan. Koko maan reittikartta ei silti kerro, että kaikki sen osat olisivat yhtä aikaa valmiita matkustajayhteyksiä.",
           "tiedosto": "",
           "lyhyt": "",
           "selite": "",
@@ -298,8 +298,8 @@
           "wiki": "Tanzania Standard Gauge Railway"
         },
         {
-          "otsikko": "Jamhuri ei tarkoita yhtä stadionia",
-          "teksti": "Dodoman Jamhuri Stadium on monikäyttöinen urheilupaikka, jonka pääkäyttö liittyy jalkapalloon. Kaupungin Dodoma Jiji FC käyttää sitä kotikenttänään. Morogorossa on kuitenkin samanniminen eri stadion. Sama rakennusnimi ei siksi yksin paikanna kenttää. Kaupungin seura ja urheilupaikka liittyvät toisiinsa, mutta yksi nimi voi esiintyä useamman kaupungin urheilussa. Dodoman Jamhuri kuuluu tämän kaupungin arkeen; Morogoron kenttää ei tarvitse siirtää paikasta toiseen nimen samankaltaisuuden vuoksi.",
+          "otsikko": "Jamhuri on Dodoma Jijin kotikenttä",
+          "teksti": "Dodoman Jamhuri Stadium on monikäyttöinen urheilupaikka, jonka pääkäyttö liittyy jalkapalloon. Kaupungin Dodoma Jiji FC käyttää sitä kotikenttänään. Morogorossa on kuitenkin samanniminen eri stadion. Sama rakennusnimi ei siksi yksin paikanna kenttää. Kaupungin seura ja urheilupaikka liittyvät toisiinsa, mutta yksi nimi voi esiintyä useamman kaupungin urheilussa. Dodoman stadion palvelee paikallista jalkapalloa ja muita urheilutapahtumia. Morogoron samanniminen kenttä on eri kaupungin urheilupaikka.",
           "tiedosto": "",
           "lyhyt": "",
           "selite": "",

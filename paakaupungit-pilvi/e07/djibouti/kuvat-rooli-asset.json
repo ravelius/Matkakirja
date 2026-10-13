@@ -3,7 +3,7 @@
   "era": "e07",
   "city": "djibouti",
   "authorization": "hyväksyn kaikki tekemäsi kuvat. toimita ne claudelle. claudelta saat uusia ohjeita jatkoa varten",
-  "sourceContentAfterSHA256": "a10e042854b961b11e5672baea00c3cb10a0145958df7f3c58c2cd0ab1ba3840",
+  "sourceContentAfterSHA256": "293ddc39ce3623e1875d0e0fffbabd77fc4d858f29760c2045e309a35d5c3911",
   "assets": [
     {
       "era": "e07",
@@ -28,10 +28,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/djibouti/e07-djibouti-O2-v1-20261012-0c27cf8a08b6.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Paahdetun kalan havainnekuva; ei tietyn ravintolan annos tai saviuunin dokumentointi.",
-        "lyhyt": "Paahdetun kalan havainnekuva; ei tietyn ravintolan annos tai saviuunin dokumentointi."
+        "selite": "Paahdetun kalan havainnekuva; ei tietyn ravintolan annos tai saviuunin dokumentointi."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -39,10 +39,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/djibouti/e07-djibouti-O2-v1-20261012-0c27cf8a08b6.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Paahdetun kalan havainnekuva; ei tietyn ravintolan annos tai saviuunin dokumentointi.",
-        "lyhyt": "Paahdetun kalan havainnekuva; ei tietyn ravintolan annos tai saviuunin dokumentointi."
+        "selite": "Paahdetun kalan havainnekuva; ei tietyn ravintolan annos tai saviuunin dokumentointi."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -56,7 +56,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/djibouti/sisalto.json",
-      "sourceContentSHA256": "a10e042854b961b11e5672baea00c3cb10a0145958df7f3c58c2cd0ab1ba3840",
+      "sourceContentSHA256": "293ddc39ce3623e1875d0e0fffbabd77fc4d858f29760c2045e309a35d5c3911",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
         "semanticContextSHA256": "9ff14ee0cb3299f32a1a21e3b29f55ead193e2bf206ada92bde1cd53b5a30358",
@@ -216,9 +216,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -237,17 +237,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "a10e042854b961b11e5672baea00c3cb10a0145958df7f3c58c2cd0ab1ba3840",
+      "sourceContentAfterSHA256": "293ddc39ce3623e1875d0e0fffbabd77fc4d858f29760c2045e309a35d5c3911",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
       "contextAfterSHA256": "9ff14ee0cb3299f32a1a21e3b29f55ead193e2bf206ada92bde1cd53b5a30358",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "a10e042854b961b11e5672baea00c3cb10a0145958df7f3c58c2cd0ab1ba3840",
+        "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "contextAfterSHA256": "9ff14ee0cb3299f32a1a21e3b29f55ead193e2bf206ada92bde1cd53b5a30358",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+          "semanticContextSHA256": "9ff14ee0cb3299f32a1a21e3b29f55ead193e2bf206ada92bde1cd53b5a30358",
+          "subjectTitle": "Ruokapöydässä",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "293ddc39ce3623e1875d0e0fffbabd77fc4d858f29760c2045e309a35d5c3911",
+        "sameImageNativeSHA256": "0c27cf8a08b6412f352dab20cd6f5f2979b55269fd6f32857e2448afd142f1f8",
+        "sameImageExportSHA256": "bd066951fadc27d9c1aebb345181ded5f3434996f1b8b9dafa9b1deb6dd969c6",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e07",
@@ -272,10 +293,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/djibouti/e07-djibouti-O3-v1-20261012-ac05a49de5e6.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Mangroven juuriston havainnekuva; ei tietyn saariretken paikkavalokuva.",
-        "lyhyt": "Mangroven juuriston havainnekuva; ei tietyn saariretken paikkavalokuva."
+        "selite": "Mangroven juuriston havainnekuva; ei tietyn saariretken paikkavalokuva."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -283,10 +304,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/djibouti/e07-djibouti-O3-v1-20261012-ac05a49de5e6.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Mangroven juuriston havainnekuva; ei tietyn saariretken paikkavalokuva.",
-        "lyhyt": "Mangroven juuriston havainnekuva; ei tietyn saariretken paikkavalokuva."
+        "selite": "Mangroven juuriston havainnekuva; ei tietyn saariretken paikkavalokuva."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -300,10 +321,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/djibouti/sisalto.json",
-      "sourceContentSHA256": "a10e042854b961b11e5672baea00c3cb10a0145958df7f3c58c2cd0ab1ba3840",
+      "sourceContentSHA256": "293ddc39ce3623e1875d0e0fffbabd77fc4d858f29760c2045e309a35d5c3911",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "67a88f7e0e5977d317b20495f36f0be35dd1155d1948a493fb2ee062db588023",
+        "semanticContextSHA256": "af4462f90fc958c1fbda66afc1a2d68827d45a41ad11c71d0b8ecf9b24ae95fc",
         "subjectTitle": "Merelle kaupungista",
         "targetState": "existing-target"
       },
@@ -472,9 +493,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -493,17 +514,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "a10e042854b961b11e5672baea00c3cb10a0145958df7f3c58c2cd0ab1ba3840",
+      "sourceContentAfterSHA256": "293ddc39ce3623e1875d0e0fffbabd77fc4d858f29760c2045e309a35d5c3911",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "67a88f7e0e5977d317b20495f36f0be35dd1155d1948a493fb2ee062db588023",
+      "contextAfterSHA256": "af4462f90fc958c1fbda66afc1a2d68827d45a41ad11c71d0b8ecf9b24ae95fc",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "a10e042854b961b11e5672baea00c3cb10a0145958df7f3c58c2cd0ab1ba3840",
+        "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "contextAfterSHA256": "67a88f7e0e5977d317b20495f36f0be35dd1155d1948a493fb2ee062db588023",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+          "semanticContextSHA256": "67a88f7e0e5977d317b20495f36f0be35dd1155d1948a493fb2ee062db588023",
+          "subjectTitle": "Merelle kaupungista",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "293ddc39ce3623e1875d0e0fffbabd77fc4d858f29760c2045e309a35d5c3911",
+        "sameImageNativeSHA256": "ac05a49de5e66da7c9e23268501a8de2f1cf7599abde2a4e3a7a4a48c3969213",
+        "sameImageExportSHA256": "0995cc32c9612a29aaa078b4be62186d747eb9a402d860db6fcd891b24c42024",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e07",
@@ -528,10 +570,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/djibouti/e07-djibouti-O4-v1-20261012-73e834d4a923.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Veden kuljettamiseen liittyvien välineiden havainnekuva.",
-        "lyhyt": "Veden kuljettamiseen liittyvien välineiden havainnekuva."
+        "selite": "Veden kuljettamiseen liittyvien välineiden havainnekuva."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -539,10 +581,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/djibouti/e07-djibouti-O4-v1-20261012-73e834d4a923.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Veden kuljettamiseen liittyvien välineiden havainnekuva.",
-        "lyhyt": "Veden kuljettamiseen liittyvien välineiden havainnekuva."
+        "selite": "Veden kuljettamiseen liittyvien välineiden havainnekuva."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -556,10 +598,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/djibouti/sisalto.json",
-      "sourceContentSHA256": "a10e042854b961b11e5672baea00c3cb10a0145958df7f3c58c2cd0ab1ba3840",
+      "sourceContentSHA256": "293ddc39ce3623e1875d0e0fffbabd77fc4d858f29760c2045e309a35d5c3911",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "223c7f3599dd7bb2e57317ddb35c7fa72e5985334b1d5d18ce20ff6811c1d7e4",
+        "semanticContextSHA256": "198d5cb7465f431d3ba12fdbe6327e9d00c80bd19c16fd507e124c88500a4a76",
         "subjectTitle": "Kuumuus, vesi ja varovaisuus",
         "targetState": "existing-target"
       },
@@ -716,9 +758,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -737,17 +779,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "a10e042854b961b11e5672baea00c3cb10a0145958df7f3c58c2cd0ab1ba3840",
+      "sourceContentAfterSHA256": "293ddc39ce3623e1875d0e0fffbabd77fc4d858f29760c2045e309a35d5c3911",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "223c7f3599dd7bb2e57317ddb35c7fa72e5985334b1d5d18ce20ff6811c1d7e4",
+      "contextAfterSHA256": "198d5cb7465f431d3ba12fdbe6327e9d00c80bd19c16fd507e124c88500a4a76",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "a10e042854b961b11e5672baea00c3cb10a0145958df7f3c58c2cd0ab1ba3840",
+        "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "contextAfterSHA256": "223c7f3599dd7bb2e57317ddb35c7fa72e5985334b1d5d18ce20ff6811c1d7e4",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+          "semanticContextSHA256": "223c7f3599dd7bb2e57317ddb35c7fa72e5985334b1d5d18ce20ff6811c1d7e4",
+          "subjectTitle": "Kuumuus, vesi ja varovaisuus",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "293ddc39ce3623e1875d0e0fffbabd77fc4d858f29760c2045e309a35d5c3911",
+        "sameImageNativeSHA256": "73e834d4a92345b89223d08bca543ac32068f4c76eb03e641ee539cb1ed69fb8",
+        "sameImageExportSHA256": "fb0e83d49be339ae6744dfba2fc8e9cd8c3bda2cd0e46daf46672a258b745ee0",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e07",
@@ -769,10 +832,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/djibouti/e07-djibouti-K2-v1-20261012-5118f62dcc4f.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Punottujen käyttökorien havainnekuva; ei yksittäinen Djiboutin tori.",
-        "lyhyt": "Punottujen käyttökorien havainnekuva; ei yksittäinen Djiboutin tori."
+        "selite": "Punottujen käyttökorien havainnekuva; ei yksittäinen Djiboutin tori."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -780,10 +843,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/djibouti/e07-djibouti-K2-v1-20261012-5118f62dcc4f.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Punottujen käyttökorien havainnekuva; ei yksittäinen Djiboutin tori.",
-        "lyhyt": "Punottujen käyttökorien havainnekuva; ei yksittäinen Djiboutin tori."
+        "selite": "Punottujen käyttökorien havainnekuva; ei yksittäinen Djiboutin tori."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -797,10 +860,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/djibouti/sisalto.json",
-      "sourceContentSHA256": "a10e042854b961b11e5672baea00c3cb10a0145958df7f3c58c2cd0ab1ba3840",
+      "sourceContentSHA256": "293ddc39ce3623e1875d0e0fffbabd77fc4d858f29760c2045e309a35d5c3911",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "24fc791bf6fb0c0f41971a060cdf3ec665cd4ade7582db9f5ae02379cb28d39a",
-        "semanticContextSHA256": "24fc791bf6fb0c0f41971a060cdf3ec665cd4ade7582db9f5ae02379cb28d39a",
+        "targetBeforeSHA256": "909947f9079e1f88db14aeda09733df7d215a59aeaf938bde766f323d5d05dee",
+        "semanticContextSHA256": "909947f9079e1f88db14aeda09733df7d215a59aeaf938bde766f323d5d05dee",
         "subjectTitle": "Torin kujat ja korit",
         "targetState": "existing-target"
       },
@@ -958,9 +1021,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -979,17 +1042,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "a10e042854b961b11e5672baea00c3cb10a0145958df7f3c58c2cd0ab1ba3840",
-      "targetAfterSHA256": "24fc791bf6fb0c0f41971a060cdf3ec665cd4ade7582db9f5ae02379cb28d39a",
-      "contextAfterSHA256": "24fc791bf6fb0c0f41971a060cdf3ec665cd4ade7582db9f5ae02379cb28d39a",
+      "sourceContentAfterSHA256": "293ddc39ce3623e1875d0e0fffbabd77fc4d858f29760c2045e309a35d5c3911",
+      "targetAfterSHA256": "909947f9079e1f88db14aeda09733df7d215a59aeaf938bde766f323d5d05dee",
+      "contextAfterSHA256": "909947f9079e1f88db14aeda09733df7d215a59aeaf938bde766f323d5d05dee",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "a10e042854b961b11e5672baea00c3cb10a0145958df7f3c58c2cd0ab1ba3840",
+        "targetAfterSHA256": "24fc791bf6fb0c0f41971a060cdf3ec665cd4ade7582db9f5ae02379cb28d39a",
+        "contextAfterSHA256": "24fc791bf6fb0c0f41971a060cdf3ec665cd4ade7582db9f5ae02379cb28d39a",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "24fc791bf6fb0c0f41971a060cdf3ec665cd4ade7582db9f5ae02379cb28d39a",
+          "semanticContextSHA256": "24fc791bf6fb0c0f41971a060cdf3ec665cd4ade7582db9f5ae02379cb28d39a",
+          "subjectTitle": "Torin kujat ja korit",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "293ddc39ce3623e1875d0e0fffbabd77fc4d858f29760c2045e309a35d5c3911",
+        "sameImageNativeSHA256": "5118f62dcc4f80ecf66e9c93a8aaaaf270b475a79e874db45ccdf753bdd8b61f",
+        "sameImageExportSHA256": "e3d5389f8e6bd06769e6f1f4edb0d782a4557a787d7afda18b8abebba07f4c07",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e07",
@@ -1011,10 +1095,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/djibouti/e07-djibouti-K3-v1-20261012-0db602f54414.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Saviuuniin liittyvän kalapaiston havainnekuva; ei tietty ravintola.",
-        "lyhyt": "Saviuuniin liittyvän kalapaiston havainnekuva; ei tietty ravintola."
+        "selite": "Saviuuniin liittyvän kalapaiston havainnekuva; ei tietty ravintola."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -1022,10 +1106,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/djibouti/e07-djibouti-K3-v1-20261012-0db602f54414.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Saviuuniin liittyvän kalapaiston havainnekuva; ei tietty ravintola.",
-        "lyhyt": "Saviuuniin liittyvän kalapaiston havainnekuva; ei tietty ravintola."
+        "selite": "Saviuuniin liittyvän kalapaiston havainnekuva; ei tietty ravintola."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -1039,7 +1123,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/djibouti/sisalto.json",
-      "sourceContentSHA256": "a10e042854b961b11e5672baea00c3cb10a0145958df7f3c58c2cd0ab1ba3840",
+      "sourceContentSHA256": "293ddc39ce3623e1875d0e0fffbabd77fc4d858f29760c2045e309a35d5c3911",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e6aa6a54eb7dba67823c9d91bca1c6f886e2d2969ad2d20d242b11c8f025232c",
         "semanticContextSHA256": "e6aa6a54eb7dba67823c9d91bca1c6f886e2d2969ad2d20d242b11c8f025232c",
@@ -1200,9 +1284,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -1221,17 +1305,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "a10e042854b961b11e5672baea00c3cb10a0145958df7f3c58c2cd0ab1ba3840",
+      "sourceContentAfterSHA256": "293ddc39ce3623e1875d0e0fffbabd77fc4d858f29760c2045e309a35d5c3911",
       "targetAfterSHA256": "e6aa6a54eb7dba67823c9d91bca1c6f886e2d2969ad2d20d242b11c8f025232c",
       "contextAfterSHA256": "e6aa6a54eb7dba67823c9d91bca1c6f886e2d2969ad2d20d242b11c8f025232c",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "a10e042854b961b11e5672baea00c3cb10a0145958df7f3c58c2cd0ab1ba3840",
+        "targetAfterSHA256": "e6aa6a54eb7dba67823c9d91bca1c6f886e2d2969ad2d20d242b11c8f025232c",
+        "contextAfterSHA256": "e6aa6a54eb7dba67823c9d91bca1c6f886e2d2969ad2d20d242b11c8f025232c",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "e6aa6a54eb7dba67823c9d91bca1c6f886e2d2969ad2d20d242b11c8f025232c",
+          "semanticContextSHA256": "e6aa6a54eb7dba67823c9d91bca1c6f886e2d2969ad2d20d242b11c8f025232c",
+          "subjectTitle": "Kala jemeniittiläisessä uunissa",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "293ddc39ce3623e1875d0e0fffbabd77fc4d858f29760c2045e309a35d5c3911",
+        "sameImageNativeSHA256": "0db602f54414c7cb8dc72b53eac594a95f7666ecd5ea4237ad12a59bdf83d815",
+        "sameImageExportSHA256": "86812ca0fd0906b71b7c36c87a2836567d4e2396ddda6f7a6ad9c9b6160ef482",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e07",
@@ -1253,10 +1358,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/djibouti/e07-djibouti-K4-v1-20261012-0ccbe447a3ce.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Mangroven tukijuurten havainnekuva; ei Mouchan tai Maskalin paikkavalokuva.",
-        "lyhyt": "Mangroven tukijuurten havainnekuva; ei Mouchan tai Maskalin paikkavalokuva."
+        "selite": "Mangroven tukijuurten havainnekuva; ei Mouchan tai Maskalin paikkavalokuva."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -1264,10 +1369,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/djibouti/e07-djibouti-K4-v1-20261012-0ccbe447a3ce.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Mangroven tukijuurten havainnekuva; ei Mouchan tai Maskalin paikkavalokuva.",
-        "lyhyt": "Mangroven tukijuurten havainnekuva; ei Mouchan tai Maskalin paikkavalokuva."
+        "selite": "Mangroven tukijuurten havainnekuva; ei Mouchan tai Maskalin paikkavalokuva."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -1281,10 +1386,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/djibouti/sisalto.json",
-      "sourceContentSHA256": "a10e042854b961b11e5672baea00c3cb10a0145958df7f3c58c2cd0ab1ba3840",
+      "sourceContentSHA256": "293ddc39ce3623e1875d0e0fffbabd77fc4d858f29760c2045e309a35d5c3911",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "511ab7c5354e9fb16ccc39b17c3fbbbfe734af31eb39a789a8dd498db3b5fb67",
-        "semanticContextSHA256": "511ab7c5354e9fb16ccc39b17c3fbbbfe734af31eb39a789a8dd498db3b5fb67",
+        "targetBeforeSHA256": "ca64b858a7af5d04204f733f6b6bc4c4898dc933e51a230fe27156d51d82e14d",
+        "semanticContextSHA256": "ca64b858a7af5d04204f733f6b6bc4c4898dc933e51a230fe27156d51d82e14d",
         "subjectTitle": "Saaria korallin päällä",
         "targetState": "existing-target"
       },
@@ -1453,9 +1558,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -1474,17 +1579,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "a10e042854b961b11e5672baea00c3cb10a0145958df7f3c58c2cd0ab1ba3840",
-      "targetAfterSHA256": "511ab7c5354e9fb16ccc39b17c3fbbbfe734af31eb39a789a8dd498db3b5fb67",
-      "contextAfterSHA256": "511ab7c5354e9fb16ccc39b17c3fbbbfe734af31eb39a789a8dd498db3b5fb67",
+      "sourceContentAfterSHA256": "293ddc39ce3623e1875d0e0fffbabd77fc4d858f29760c2045e309a35d5c3911",
+      "targetAfterSHA256": "ca64b858a7af5d04204f733f6b6bc4c4898dc933e51a230fe27156d51d82e14d",
+      "contextAfterSHA256": "ca64b858a7af5d04204f733f6b6bc4c4898dc933e51a230fe27156d51d82e14d",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "a10e042854b961b11e5672baea00c3cb10a0145958df7f3c58c2cd0ab1ba3840",
+        "targetAfterSHA256": "511ab7c5354e9fb16ccc39b17c3fbbbfe734af31eb39a789a8dd498db3b5fb67",
+        "contextAfterSHA256": "511ab7c5354e9fb16ccc39b17c3fbbbfe734af31eb39a789a8dd498db3b5fb67",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "511ab7c5354e9fb16ccc39b17c3fbbbfe734af31eb39a789a8dd498db3b5fb67",
+          "semanticContextSHA256": "511ab7c5354e9fb16ccc39b17c3fbbbfe734af31eb39a789a8dd498db3b5fb67",
+          "subjectTitle": "Saaria korallin päällä",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "293ddc39ce3623e1875d0e0fffbabd77fc4d858f29760c2045e309a35d5c3911",
+        "sameImageNativeSHA256": "0ccbe447a3ce76cdc056d9eb2ad378688c04bdf305806ad9c841f9f654495250",
+        "sameImageExportSHA256": "89c2fa50c1bc731042fb67b57096d05d772dd00be8ae99592668c08f5a988b57",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e07",
@@ -1506,10 +1632,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/djibouti/e07-djibouti-L2-v1-20261012-1dd552fd87ba.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Taateliviljelyn havainnekuva; ei Amboulin nykyinen tarha.",
-        "lyhyt": "Taateliviljelyn havainnekuva; ei Amboulin nykyinen tarha."
+        "selite": "Taateliviljelyn havainnekuva; ei Amboulin nykyinen tarha."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -1517,10 +1643,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/djibouti/e07-djibouti-L2-v1-20261012-1dd552fd87ba.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Taateliviljelyn havainnekuva; ei Amboulin nykyinen tarha.",
-        "lyhyt": "Taateliviljelyn havainnekuva; ei Amboulin nykyinen tarha."
+        "selite": "Taateliviljelyn havainnekuva; ei Amboulin nykyinen tarha."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -1534,10 +1660,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/djibouti/sisalto.json",
-      "sourceContentSHA256": "a10e042854b961b11e5672baea00c3cb10a0145958df7f3c58c2cd0ab1ba3840",
+      "sourceContentSHA256": "293ddc39ce3623e1875d0e0fffbabd77fc4d858f29760c2045e309a35d5c3911",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "6bc891f91d739b5b00b77cb7053393b3df5c251b61e9642b549c14c8f5eaff59",
-        "semanticContextSHA256": "6bc891f91d739b5b00b77cb7053393b3df5c251b61e9642b549c14c8f5eaff59",
+        "targetBeforeSHA256": "d2be47eeaee60ab334e5503404f91e2983cea47e2bf2458bd1b622b16466cadd",
+        "semanticContextSHA256": "d2be47eeaee60ab334e5503404f91e2983cea47e2bf2458bd1b622b16466cadd",
         "subjectTitle": "Amboulin kylä ja puutarhat",
         "targetState": "existing-target"
       },
@@ -1695,9 +1821,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -1716,17 +1842,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "a10e042854b961b11e5672baea00c3cb10a0145958df7f3c58c2cd0ab1ba3840",
-      "targetAfterSHA256": "6bc891f91d739b5b00b77cb7053393b3df5c251b61e9642b549c14c8f5eaff59",
-      "contextAfterSHA256": "6bc891f91d739b5b00b77cb7053393b3df5c251b61e9642b549c14c8f5eaff59",
+      "sourceContentAfterSHA256": "293ddc39ce3623e1875d0e0fffbabd77fc4d858f29760c2045e309a35d5c3911",
+      "targetAfterSHA256": "d2be47eeaee60ab334e5503404f91e2983cea47e2bf2458bd1b622b16466cadd",
+      "contextAfterSHA256": "d2be47eeaee60ab334e5503404f91e2983cea47e2bf2458bd1b622b16466cadd",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "a10e042854b961b11e5672baea00c3cb10a0145958df7f3c58c2cd0ab1ba3840",
+        "targetAfterSHA256": "6bc891f91d739b5b00b77cb7053393b3df5c251b61e9642b549c14c8f5eaff59",
+        "contextAfterSHA256": "6bc891f91d739b5b00b77cb7053393b3df5c251b61e9642b549c14c8f5eaff59",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "6bc891f91d739b5b00b77cb7053393b3df5c251b61e9642b549c14c8f5eaff59",
+          "semanticContextSHA256": "6bc891f91d739b5b00b77cb7053393b3df5c251b61e9642b549c14c8f5eaff59",
+          "subjectTitle": "Amboulin kylä ja puutarhat",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "293ddc39ce3623e1875d0e0fffbabd77fc4d858f29760c2045e309a35d5c3911",
+        "sameImageNativeSHA256": "1dd552fd87ba1bf628b758b574365b832a475d396dc7570acb9237567b1b26e2",
+        "sameImageExportSHA256": "5df0a9a5d99d8c7dc75a75a405ec706b50e197edb6a905ba66e7c20f4230735a",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e07",
@@ -1748,10 +1895,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/djibouti/e07-djibouti-L3-v1-20261012-ed8efddba04c.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Raidetekniikan havainnekuva; ei vanhan tai uuden Djiboutin radan valokuva.",
-        "lyhyt": "Raidetekniikan havainnekuva; ei vanhan tai uuden Djiboutin radan valokuva."
+        "selite": "Raidetekniikan havainnekuva; ei vanhan tai uuden Djiboutin radan valokuva."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -1759,10 +1906,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/djibouti/e07-djibouti-L3-v1-20261012-ed8efddba04c.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Raidetekniikan havainnekuva; ei vanhan tai uuden Djiboutin radan valokuva.",
-        "lyhyt": "Raidetekniikan havainnekuva; ei vanhan tai uuden Djiboutin radan valokuva."
+        "selite": "Raidetekniikan havainnekuva; ei vanhan tai uuden Djiboutin radan valokuva."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -1776,7 +1923,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/djibouti/sisalto.json",
-      "sourceContentSHA256": "a10e042854b961b11e5672baea00c3cb10a0145958df7f3c58c2cd0ab1ba3840",
+      "sourceContentSHA256": "293ddc39ce3623e1875d0e0fffbabd77fc4d858f29760c2045e309a35d5c3911",
       "semanticSourceBind": {
         "targetBeforeSHA256": "7582dfd410ed859d126ddc7b3a5fa99d8d0909611157899db1b372e9d35caf8a",
         "semanticContextSHA256": "7582dfd410ed859d126ddc7b3a5fa99d8d0909611157899db1b372e9d35caf8a",
@@ -1936,9 +2083,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -1957,17 +2104,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "a10e042854b961b11e5672baea00c3cb10a0145958df7f3c58c2cd0ab1ba3840",
+      "sourceContentAfterSHA256": "293ddc39ce3623e1875d0e0fffbabd77fc4d858f29760c2045e309a35d5c3911",
       "targetAfterSHA256": "7582dfd410ed859d126ddc7b3a5fa99d8d0909611157899db1b372e9d35caf8a",
       "contextAfterSHA256": "7582dfd410ed859d126ddc7b3a5fa99d8d0909611157899db1b372e9d35caf8a",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "a10e042854b961b11e5672baea00c3cb10a0145958df7f3c58c2cd0ab1ba3840",
+        "targetAfterSHA256": "7582dfd410ed859d126ddc7b3a5fa99d8d0909611157899db1b372e9d35caf8a",
+        "contextAfterSHA256": "7582dfd410ed859d126ddc7b3a5fa99d8d0909611157899db1b372e9d35caf8a",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "7582dfd410ed859d126ddc7b3a5fa99d8d0909611157899db1b372e9d35caf8a",
+          "semanticContextSHA256": "7582dfd410ed859d126ddc7b3a5fa99d8d0909611157899db1b372e9d35caf8a",
+          "subjectTitle": "Rata meren ja sisämaan välillä",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "293ddc39ce3623e1875d0e0fffbabd77fc4d858f29760c2045e309a35d5c3911",
+        "sameImageNativeSHA256": "ed8efddba04c26fbcc1febd92571f047ea5f85a48bf9f0e98a2f246a50c34863",
+        "sameImageExportSHA256": "a120feae023264fb8447671642eb2a6f8dcece3827af6a8764e7b9e38ff4cf6c",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e07",
@@ -1989,10 +2157,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/djibouti/e07-djibouti-L4-v1-20261012-3d24c047812b.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Höyrylaivojen polttoaineena käytetyn hiilen havainnekuva.",
-        "lyhyt": "Höyrylaivojen polttoaineena käytetyn hiilen havainnekuva."
+        "selite": "Höyrylaivojen polttoaineena käytetyn hiilen havainnekuva."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -2000,10 +2168,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/djibouti/e07-djibouti-L4-v1-20261012-3d24c047812b.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Höyrylaivojen polttoaineena käytetyn hiilen havainnekuva.",
-        "lyhyt": "Höyrylaivojen polttoaineena käytetyn hiilen havainnekuva."
+        "selite": "Höyrylaivojen polttoaineena käytetyn hiilen havainnekuva."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -2017,7 +2185,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/djibouti/sisalto.json",
-      "sourceContentSHA256": "a10e042854b961b11e5672baea00c3cb10a0145958df7f3c58c2cd0ab1ba3840",
+      "sourceContentSHA256": "293ddc39ce3623e1875d0e0fffbabd77fc4d858f29760c2045e309a35d5c3911",
       "semanticSourceBind": {
         "targetBeforeSHA256": "5a767c40a7d4173db954923758aae4d727a5397d6809b359d135a56ffccc92ef",
         "semanticContextSHA256": "5a767c40a7d4173db954923758aae4d727a5397d6809b359d135a56ffccc92ef",
@@ -2177,9 +2345,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -2198,17 +2366,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "a10e042854b961b11e5672baea00c3cb10a0145958df7f3c58c2cd0ab1ba3840",
+      "sourceContentAfterSHA256": "293ddc39ce3623e1875d0e0fffbabd77fc4d858f29760c2045e309a35d5c3911",
       "targetAfterSHA256": "5a767c40a7d4173db954923758aae4d727a5397d6809b359d135a56ffccc92ef",
       "contextAfterSHA256": "5a767c40a7d4173db954923758aae4d727a5397d6809b359d135a56ffccc92ef",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "a10e042854b961b11e5672baea00c3cb10a0145958df7f3c58c2cd0ab1ba3840",
+        "targetAfterSHA256": "5a767c40a7d4173db954923758aae4d727a5397d6809b359d135a56ffccc92ef",
+        "contextAfterSHA256": "5a767c40a7d4173db954923758aae4d727a5397d6809b359d135a56ffccc92ef",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "5a767c40a7d4173db954923758aae4d727a5397d6809b359d135a56ffccc92ef",
+          "semanticContextSHA256": "5a767c40a7d4173db954923758aae4d727a5397d6809b359d135a56ffccc92ef",
+          "subjectTitle": "Höyrylaivojen hiilestä kontteihin",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "293ddc39ce3623e1875d0e0fffbabd77fc4d858f29760c2045e309a35d5c3911",
+        "sameImageNativeSHA256": "3d24c047812bff1c8330243636cdeea524161cd4bbdbf9722b97cce121e72262",
+        "sameImageExportSHA256": "46356d03df02755cd5daba0333b881b1af9c04d190c9c3aa18bc89693490a23d",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e07",
@@ -2228,14 +2417,14 @@
         "suora": true,
         "lahde": "delrinian, Commons (CC BY-SA 3.0)",
         "selite": "Pieni moottorivene Djiboutin satama-alueella.",
-        "lyhyt": "Pieni moottorivene Djiboutin satama-alueella.",
+        "lyhyt": "Vene Djiboutin satamassa.",
         "tiedosto": "Dingy in Djibouti harbor - panoramio.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "delrinian, Commons (CC BY-SA 3.0)",
         "selite": "Pieni moottorivene Djiboutin satama-alueella.",
-        "lyhyt": "Pieni moottorivene Djiboutin satama-alueella.",
+        "lyhyt": "Vene Djiboutin satamassa.",
         "tiedosto": "Dingy in Djibouti harbor - panoramio.jpg"
       },
       "runtimeMediaFieldPayload": {
@@ -2243,7 +2432,7 @@
         "suora": true,
         "lahde": "delrinian, Commons (CC BY-SA 3.0)",
         "selite": "Pieni moottorivene Djiboutin satama-alueella.",
-        "lyhyt": "Pieni moottorivene Djiboutin satama-alueella.",
+        "lyhyt": "Vene Djiboutin satamassa.",
         "tiedosto": "Dingy in Djibouti harbor - panoramio.jpg"
       },
       "runtimeRemoveMediaKeys": [],
@@ -2258,10 +2447,10 @@
         2000
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/djibouti/sisalto.json",
-      "sourceContentSHA256": "a10e042854b961b11e5672baea00c3cb10a0145958df7f3c58c2cd0ab1ba3840",
+      "sourceContentSHA256": "293ddc39ce3623e1875d0e0fffbabd77fc4d858f29760c2045e309a35d5c3911",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "75f5ba00f0ff63986cafc0649cb1148385ae44e674a99b4fe236f2e09cc65089",
-        "semanticContextSHA256": "75f5ba00f0ff63986cafc0649cb1148385ae44e674a99b4fe236f2e09cc65089",
+        "targetBeforeSHA256": "b28a5b469208e66bad15dfbbc353564128e36eee1e407cc76996a21230a344f9",
+        "semanticContextSHA256": "b28a5b469208e66bad15dfbbc353564128e36eee1e407cc76996a21230a344f9",
         "subjectTitle": "djibouti — aito paikkavalokuva",
         "targetState": "existing-target"
       },
@@ -2387,9 +2576,9 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "Dingy in Djibouti harbor - panoramio.jpg",
-        "lahde": "delrinian, Commons (CC BY-SA 3.0)",
+        "lyhyt": "Vene Djiboutin satamassa.",
         "selite": "Pieni moottorivene Djiboutin satama-alueella.",
-        "lyhyt": "Pieni moottorivene Djiboutin satama-alueella."
+        "lahde": "delrinian, Commons (CC BY-SA 3.0)"
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -2408,7 +2597,7 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
@@ -2416,20 +2605,47 @@
       "CcommonsFieldPayload": {
         "lahde": "delrinian, Commons (CC BY-SA 3.0)",
         "selite": "Pieni moottorivene Djiboutin satama-alueella.",
-        "lyhyt": "Pieni moottorivene Djiboutin satama-alueella.",
+        "lyhyt": "Vene Djiboutin satamassa.",
         "tiedosto": "Dingy in Djibouti harbor - panoramio.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "a10e042854b961b11e5672baea00c3cb10a0145958df7f3c58c2cd0ab1ba3840",
-      "targetAfterSHA256": "75f5ba00f0ff63986cafc0649cb1148385ae44e674a99b4fe236f2e09cc65089",
-      "contextAfterSHA256": "75f5ba00f0ff63986cafc0649cb1148385ae44e674a99b4fe236f2e09cc65089",
+      "sourceContentAfterSHA256": "293ddc39ce3623e1875d0e0fffbabd77fc4d858f29760c2045e309a35d5c3911",
+      "targetAfterSHA256": "b28a5b469208e66bad15dfbbc353564128e36eee1e407cc76996a21230a344f9",
+      "contextAfterSHA256": "b28a5b469208e66bad15dfbbc353564128e36eee1e407cc76996a21230a344f9",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "a10e042854b961b11e5672baea00c3cb10a0145958df7f3c58c2cd0ab1ba3840",
+        "targetAfterSHA256": "75f5ba00f0ff63986cafc0649cb1148385ae44e674a99b4fe236f2e09cc65089",
+        "contextAfterSHA256": "75f5ba00f0ff63986cafc0649cb1148385ae44e674a99b4fe236f2e09cc65089",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "75f5ba00f0ff63986cafc0649cb1148385ae44e674a99b4fe236f2e09cc65089",
+          "semanticContextSHA256": "75f5ba00f0ff63986cafc0649cb1148385ae44e674a99b4fe236f2e09cc65089",
+          "subjectTitle": "djibouti — aito paikkavalokuva",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "293ddc39ce3623e1875d0e0fffbabd77fc4d858f29760c2045e309a35d5c3911",
+        "sameImageNativeSHA256": "e06768832f22dde9406ad81e07210a5630aced35f183b1f5c9ce115f6ada5051",
+        "sameImageExportSHA256": "e06768832f22dde9406ad81e07210a5630aced35f183b1f5c9ce115f6ada5051",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     }
   ],
   "runtimeIntegrationPending": true,
   "ownerAcceptedNotImpliedByAuthorization": false,
   "gameIntegrated": false,
   "allAssetsExplicitlyOwnerApproved": true,
-  "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+  "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+  "task118ExcludedAssets": [],
+  "task118TextRevision": true,
+  "independentTextResamplePending": true,
+  "textAcceptanceVerified": false,
+  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task118/immutable-media-history/e07/djibouti/bb18d34e23df92321c51c2a8d78d150bb8b144c961adc37fe11acba8baff981e.json",
+  "task118ReboundAt": "2026-10-13T16:31:25.079154+00:00"
 }

@@ -15,7 +15,7 @@
   },
   "artikkeli": {
     "intro": "Lusaka on Sambian pääkaupunki **sisämaan ylängöllä**, jossa kaupallinen keskusta kulkee rautatien vieressä. Cairo Roadin kaupat ja palvelut sijaitsevat radan länsipuolella, hallinnon alueet idempänä Cathedral Hillin ja Ridgewayn suunnalla. Nykyinen taajama kasvoi rautatieyhteyden ympärille 1900-luvun alussa. Pääkaupungin tehtävät siirtyivät tänne Livingstonesta 1930-luvulla.\n\nIsoisän matkavuonna 1873 tätä myöhempää pääkaupunkia ei ollut, mutta Lenje- ja Soli-yhteisöjen historia alueella oli jo olemassa. Nykyisen kaupungin kieliarkeen kuuluu **Town Nyanja**, joka yhdistää Nyanjan pohjaan vaikutteita muista kielistä ja poikkeaa myös standardikielen rakenteesta. Ruokapöydässä nshiman maissipuuro saa makunsa kasvis-, kala- tai lihalisukkeista. Lusakassa syntynyt jalkapalloilija Barbra Banda on puolestaan vienyt kaupunkisidoksen maailmalle, kahteen hattutemppuun Tokion olympiaturnauksessa asti.",
-    "teksti": "Cairo Road on Lusakan pohjois–eteläsuuntainen kaupallinen pääväylä. Rautatien päärata kulkee sen rinnalla idässä, ja hallinnon alueet sijoittuvat kaupallisesta ytimestä vielä idemmäksi. Kaupungin rakennetta voi siten hahmottaa kiskojen ja pääkadun suhteesta.\n\nTown Nyanja toimii eri kieliryhmien välisen viestinnän kielenä. Sen sanastoon kuuluu vaikutteita englannista, Bembasta ja muista paikallisista kielistä, mutta kyse ei ole vain lainasanojen luettelosta. Myös kieliopilliset rakenteet erottavat sitä koulussa käytetystä standardimuodosta.\n\nLusakan alla kalkkikivi ja dolomiittinen marmori liittyvät karstiseen maaperään. Vesi voi kulkea rakoja pitkin maan alla, vaikka kadulla ei näkyisi suurta jokea. Kansallismuseossa taas työkalut, keramiikka ja koriste-esineet kertovat Sambian historiasta: maaperä ja esineet tarjoavat kaupungissa erilaisia tiedon reittejä."
+    "teksti": "Cairo Road on Lusakan pohjois–eteläsuuntainen kaupallinen pääväylä. Rautatien päärata kulkee sen rinnalla idässä, ja hallinnon alueet sijoittuvat kaupallisesta ytimestä vielä idemmäksi. Kaupungin rakennetta voi siten hahmottaa kiskojen ja pääkadun suhteesta.\n\nTown Nyanja toimii eri kieliryhmien välisen viestinnän kielenä. Sen sanastoon kuuluu vaikutteita englannista, bembasta ja muista paikallisista kielistä. Myös kieliopilliset rakenteet erottavat sitä koulussa käytetystä standardimuodosta.\n\nLusakan alla kalkkikivi ja dolomiittinen marmori liittyvät karstiseen maaperään. Vesi voi kulkea rakoja pitkin maan alla, vaikka kadulla ei näkyisi suurta jokea. Kansallismuseossa taas työkalut, keramiikka ja koriste-esineet kertovat Sambian historiasta: maaperä ja esineet tarjoavat kaupungissa erilaisia tiedon reittejä."
   },
   "kysymykset": [
     {
@@ -77,14 +77,14 @@
     {
       "q": "Mihin Town Nyanjan erot standardimuotoon ulottuvat?",
       "options": [
-        "Sanastoon ja kieliopillisiin rakenteisiin",
-        "Ainoastaan paikannimien kirjoitusasuun",
-        "Ainoastaan tervehdysten ääntämiseen",
-        "Ainoastaan mittayksiköiden lyhenteisiin"
+        "Sanastoon ja kielioppiin",
+        "Sanastoon ja kirjoitusjärjestelmään",
+        "Sanastoon ja vain ääntämiseen",
+        "Sanastoon ja ainoastaan murresanoihin"
       ],
       "correct": 0,
       "level": 3,
-      "hint": "Kaupunkimuoto ei ole vain uusien sanojen luettelo.",
+      "hint": "Town Nyanja on eri kieliryhmien yhteinen kaupunkimuoto.",
       "fact": "Town Nyanja eroaa standardista myös kieliopillisissa kongruensseissa.",
       "source": "https://en.wikipedia.org/wiki/Chewa_language"
     }
@@ -96,7 +96,7 @@
   ],
   "valokuva": {
     "tiedosto": "Lusaka Jun 1 2023 001.jpg",
-    "lyhyt": "Kukka kuvattuna Lusakassa.",
+    "lyhyt": "Lusakan kukka.",
     "selite": "Kukka kuvattuna Lusakassa.",
     "lahde": "Jae zambia, Commons (CC BY-SA 4.0)"
   },
@@ -108,13 +108,13 @@
       "kansikuvat": [
         {
           "tiedosto": "Taking off from bauleni.jpg",
-          "lyhyt": "Ilmakuva Baulenin alueelta Lusakassa.",
+          "lyhyt": "Bauleni ilmasta.",
           "selite": "Ilmakuva Baulenin alueelta Lusakassa.",
           "lahde": "Joseph Manase, Wikimedia Commons (CC BY-SA 4.0)"
         },
         {
           "tiedosto": "Lusaka, capital city of Zambia.jpg",
-          "lyhyt": "Lusakan kaupunkikeskustan laaja näkymä vuonna 2008.",
+          "lyhyt": "Lusakan kaupunkikeskustan laaja näkymä.",
           "selite": "Lusakan kaupunkikeskustan laaja näkymä vuonna 2008.",
           "lahde": "Alex Mukuka, Wikimedia Commons (CC BY-SA 4.0)"
         },
@@ -155,7 +155,7 @@
         },
         {
           "otsikko": "Lainasanat eivät poista rakennetta",
-          "teksti": "Town Nyanja on Lusakassa puhuttu Nyanjan eli Chichewan kaupunkimuoto ja eri kieliryhmien välinen viestintäkieli. Sanastossa on englannin, Bemban ja muiden Sambian kielten vaikutteita sekä Nsengan piirteitä. Kaupunkimuoto poikkeaa koulun standardikielestä myös kieliopillisissa kongruensseissa, sanojen yhteensopivuudessa. Runsaat lainasanat eivät tee siitä rakenteetonta slangia. Se on elävä kaupungin kielimuoto, vaikka sillä ei ole virallisen kielen asemaa: puhujat käyttävät myös kielioppia, eivät vain uusia sanoja.",
+          "teksti": "Town Nyanja on Lusakassa puhuttu Nyanjan eli Chichewan kaupunkimuoto ja eri kieliryhmien välinen viestintäkieli. Sanastossa on englannin, Bemban ja muiden Sambian kielten vaikutteita sekä Nsengan piirteitä. Kaupunkimuoto poikkeaa koulun standardikielestä myös kieliopillisissa kongruensseissa, sanojen yhteensopivuudessa. Runsaat lainasanat eivät tee siitä rakenteetonta slangia. Sanojen yhteensopivuudessa on omia kaupunkimuodolle tyypillisiä rakenteita, joilla eri kielitaustaiset asukkaat viestivät keskenään.",
           "tiedosto": "",
           "lyhyt": "",
           "selite": "",
@@ -189,7 +189,7 @@
             },
             {
               "otsikko": "Cairo Roadin kaupallinen keskusta",
-              "teksti": "Pohjois–eteläsuuntainen Cairo Road ja sen itäpuolinen päärata auttavat hahmottamaan keskustaa. Kaupat, toimistot ja torit ovat erilaisia asiointipaikkoja. Lyhyt kävelyosuus suunnitellaan valoisaan aikaan; torin nimen perusteella ei yhdistetä kaikkia markkinapaikkoja yhdeksi halliksi.",
+              "teksti": "Pohjois–eteläsuuntainen Cairo Road ja sen itäpuolinen päärata auttavat hahmottamaan keskustaa. Kaupat, toimistot ja torit ovat erilaisia asiointipaikkoja. Lyhyt kävelyosuus suunnitellaan valoisaan aikaan; Central Market ja New City Market ovat erillisiä kauppapaikkoja Cairo Roadin länsipuolella.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -199,7 +199,7 @@
             },
             {
               "otsikko": "Historiaa museossa, luontoa retkellä",
-              "teksti": "Kansallismuseon aineisto tutustuttaa Sambian historiaan ja kulttuuriin. Käynnin ja kuvaamisen nykyiset ehdot varmistetaan paikalta. State House on toimiva hallintoalue, johon ei oleteta museon pääsyä. Munda Wanga ja Lusaka National Park ovat keskustan ulkopuolisia retkikohteita, joiden järjestelyt selvitetään erikseen.",
+              "teksti": "Lusakan kansallismuseo esittelee Sambian historiaa ja kulttuuria: kokoelmissa on työkaluja, keramiikkaa ja koriste-esineitä. Munda Wanga ja Lusaka National Park ovat keskustan ulkopuolisia luontokohteita, joiden retket järjestetään erikseen.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -219,7 +219,7 @@
             },
             {
               "otsikko": "Milloin kannattaa tulla",
-              "teksti": "Sateet keskittyvät loppuvuodesta alkuvuoteen, ja keskivuosi on kuiva sekä viileämpi. Kuivan kauden loppupuolella lämpenee ennen seuraavaa sateista jaksoa. Sadekaudella tiet voivat tulvia ja sivuteiden kulku vaikeutua. Majoituksen sähkön ja veden varajärjestelyt selvitetään ennen matkaa.",
+              "teksti": "Sateet keskittyvät loppuvuodesta alkuvuoteen, ja vuoden keskivaiheen kuukaudet ovat kuivia ja viileämpiä. Kuivan kauden loppupuolella lämpenee ennen seuraavaa sateista jaksoa. Sadekaudella tiet voivat tulvia ja sivuteiden kulku vaikeutua. Majoituksen sähkön ja veden varajärjestelyt selvitetään ennen matkaa.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -258,8 +258,8 @@
             ],
             "hyvaTietaa": [
               {
-                "otsikko": "Lentoasemien ero",
-                "teksti": "Matkailijan LUN ja City Airportin sääasema ovat eri paikkoja."
+                "otsikko": "Ennen matkapäätöstä",
+                "teksti": "Tarkista Sambian ajantasainen matkustustiedote Suomen ulkoministeriöstä ja noudata sen ohjeita."
               },
               {
                 "otsikko": "Turvavyöllinen kuljetus",
@@ -275,7 +275,7 @@
               }
             ]
           },
-          "lahde": "Wikipedia"
+          "lahde": "Wikipedia; Wikivoyage"
         }
       }
     },
@@ -306,7 +306,7 @@
         },
         {
           "otsikko": "Bussin kori päätyi kiskoille",
-          "teksti": "Lusakassa kokeiltiin 1990-luvulla Njanji-lähijunayhteyttä, jonka historiaan kuuluu myös Mulungushi Railway -nimi. Yhteys kulki Chilenjen suunnalta päärautatieaseman kautta George Townshipin ja teollisuusalueen suuntaan. Kalustoa tehtiin liittämällä Tata-bussien koreja kaivosvaunujen alustoihin. Kokonainen bussi ei siis vain kääntynyt tieltä radalle: kori ja sen alla oleva alusta olivat eri osia. Kokeilu päättyi saman vuosikymmenen lopulla, ja myöhemmät elvytyssuunnitelmat ovat erillinen vaihe sen historiassa.",
+          "teksti": "Lusakassa kokeiltiin 1990-luvulla Njanji-lähijunayhteyttä, jonka historiaan kuuluu myös Mulungushi Railway -nimi. Yhteys kulki Chilenjen suunnalta päärautatieaseman kautta George Townshipin ja teollisuusalueen suuntaan. Kalustoa tehtiin liittämällä Tata-bussien koreja kaivosvaunujen alustoihin. Bussin matkustajakori sai näin alleen raideliikenteeseen sopivan alustan. Kokeilu päättyi saman vuosikymmenen lopulla, ja myöhemmät elvytyssuunnitelmat ovat erillinen vaihe sen historiassa.",
           "tiedosto": "",
           "lyhyt": "",
           "selite": "",
@@ -404,7 +404,7 @@
       "nimi": "en-Wikipedia, ilmastotaulukko",
       "kausi": "1991–2020"
     },
-    "luonnehdinta": "Sateet painottuvat loppuvuodesta alkuvuoteen, kun taas keskivuosi on kuiva. Keskivuoden viileämmän jakson jälkeen lämpenee kuivan kauden lopulla ennen sateiden runsastumista."
+    "luonnehdinta": "Sateet painottuvat loppuvuodesta alkuvuoteen, kun taas vuoden keskivaiheen kuukaudet ovat kuivia. Keskivuoden viileämmän jakson jälkeen lämpenee kuivan kauden lopulla ennen sateiden runsastumista."
   },
   "ehdotukset": {
     "lentoasema": "Kenneth Kaunda International Airport (LUN)",

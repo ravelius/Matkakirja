@@ -3,7 +3,7 @@
   "era": "e07",
   "city": "kampala",
   "authorization": "hyväksyn kaikki tekemäsi kuvat. toimita ne claudelle. claudelta saat uusia ohjeita jatkoa varten",
-  "sourceContentAfterSHA256": "4fe0ece56e55c425f17175a3b42c358753ab3293ff288ac1a2cdabf75e58b21e",
+  "sourceContentAfterSHA256": "3b55da80adcdfc6b4b42c2b832e07459bd1ae4087d802fd442e9b858dca8fae0",
   "assets": [
     {
       "era": "e07",
@@ -28,10 +28,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/kampala/e07-kampala-O2-v1-20261012-faad3183cc9a.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Torikaupan vaatteiden ja tekstiilien havainnekuva; ei Nakasero-torin valokuva.",
-        "lyhyt": "Torikaupan vaatteiden ja tekstiilien havainnekuva; ei Nakasero-torin valokuva."
+        "selite": "Torikaupan vaatteiden ja tekstiilien havainnekuva; ei Nakasero-torin valokuva."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -39,10 +39,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/kampala/e07-kampala-O2-v1-20261012-faad3183cc9a.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Torikaupan vaatteiden ja tekstiilien havainnekuva; ei Nakasero-torin valokuva.",
-        "lyhyt": "Torikaupan vaatteiden ja tekstiilien havainnekuva; ei Nakasero-torin valokuva."
+        "selite": "Torikaupan vaatteiden ja tekstiilien havainnekuva; ei Nakasero-torin valokuva."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -56,7 +56,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/kampala/sisalto.json",
-      "sourceContentSHA256": "4fe0ece56e55c425f17175a3b42c358753ab3293ff288ac1a2cdabf75e58b21e",
+      "sourceContentSHA256": "3b55da80adcdfc6b4b42c2b832e07459bd1ae4087d802fd442e9b858dca8fae0",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
         "semanticContextSHA256": "54feff1d4cc4283e5915b911751a7bb9ef046aea56b7246d048f80b6328aaad0",
@@ -216,9 +216,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -237,17 +237,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "4fe0ece56e55c425f17175a3b42c358753ab3293ff288ac1a2cdabf75e58b21e",
+      "sourceContentAfterSHA256": "3b55da80adcdfc6b4b42c2b832e07459bd1ae4087d802fd442e9b858dca8fae0",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
       "contextAfterSHA256": "54feff1d4cc4283e5915b911751a7bb9ef046aea56b7246d048f80b6328aaad0",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "4fe0ece56e55c425f17175a3b42c358753ab3293ff288ac1a2cdabf75e58b21e",
+        "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "contextAfterSHA256": "54feff1d4cc4283e5915b911751a7bb9ef046aea56b7246d048f80b6328aaad0",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+          "semanticContextSHA256": "54feff1d4cc4283e5915b911751a7bb9ef046aea56b7246d048f80b6328aaad0",
+          "subjectTitle": "Tori ja arki",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "3b55da80adcdfc6b4b42c2b832e07459bd1ae4087d802fd442e9b858dca8fae0",
+        "sameImageNativeSHA256": "faad3183cc9a53c8cae819b869238865e6f81ec304b3768548f35fec6549e98a",
+        "sameImageExportSHA256": "6a1b324ccc4d1bc21c10ce8606eb38eb28b78a01a7d09cfe0f283002bc725d71",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e07",
@@ -272,10 +293,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/kampala/e07-kampala-O3-v1-20261012-9f08bffba439.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Oppimisen välineiden havainnekuva; ei Makereren tilakuva.",
-        "lyhyt": "Oppimisen välineiden havainnekuva; ei Makereren tilakuva."
+        "selite": "Oppimisen välineiden havainnekuva; ei Makereren tilakuva."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -283,10 +304,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/kampala/e07-kampala-O3-v1-20261012-9f08bffba439.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Oppimisen välineiden havainnekuva; ei Makereren tilakuva.",
-        "lyhyt": "Oppimisen välineiden havainnekuva; ei Makereren tilakuva."
+        "selite": "Oppimisen välineiden havainnekuva; ei Makereren tilakuva."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -300,7 +321,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/kampala/sisalto.json",
-      "sourceContentSHA256": "4fe0ece56e55c425f17175a3b42c358753ab3293ff288ac1a2cdabf75e58b21e",
+      "sourceContentSHA256": "3b55da80adcdfc6b4b42c2b832e07459bd1ae4087d802fd442e9b858dca8fae0",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
         "semanticContextSHA256": "5e5dcb80ec8479cc32bf8b516cdd5c83553f0aaf3bfa27a186b522ce4a7064d6",
@@ -460,9 +481,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -481,17 +502,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "4fe0ece56e55c425f17175a3b42c358753ab3293ff288ac1a2cdabf75e58b21e",
+      "sourceContentAfterSHA256": "3b55da80adcdfc6b4b42c2b832e07459bd1ae4087d802fd442e9b858dca8fae0",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
       "contextAfterSHA256": "5e5dcb80ec8479cc32bf8b516cdd5c83553f0aaf3bfa27a186b522ce4a7064d6",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "4fe0ece56e55c425f17175a3b42c358753ab3293ff288ac1a2cdabf75e58b21e",
+        "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "contextAfterSHA256": "5e5dcb80ec8479cc32bf8b516cdd5c83553f0aaf3bfa27a186b522ce4a7064d6",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+          "semanticContextSHA256": "5e5dcb80ec8479cc32bf8b516cdd5c83553f0aaf3bfa27a186b522ce4a7064d6",
+          "subjectTitle": "Opetus ja kulttuuri",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "3b55da80adcdfc6b4b42c2b832e07459bd1ae4087d802fd442e9b858dca8fae0",
+        "sameImageNativeSHA256": "9f08bffba439519862177d789f3e0dd3296cf0e0dc1d063d303ea39db4df7633",
+        "sameImageExportSHA256": "4d2ad3b2c25970a995dc3e58b51ac1a7c552a8ceade31971511859e01abc62a5",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e07",
@@ -513,10 +555,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/kampala/e07-kampala-K1-v1-20261012-cd3fbb607c61.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Impalan havainnekuva kaupungin nimen taustaan; ei nykyinen Kampala-havainto.",
-        "lyhyt": "Impalan havainnekuva kaupungin nimen taustaan; ei nykyinen Kampala-havainto."
+        "selite": "Impalan havainnekuva kaupungin nimen taustaan; ei nykyinen Kampala-havainto."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -524,10 +566,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/kampala/e07-kampala-K1-v1-20261012-cd3fbb607c61.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Impalan havainnekuva kaupungin nimen taustaan; ei nykyinen Kampala-havainto.",
-        "lyhyt": "Impalan havainnekuva kaupungin nimen taustaan; ei nykyinen Kampala-havainto."
+        "selite": "Impalan havainnekuva kaupungin nimen taustaan; ei nykyinen Kampala-havainto."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -541,10 +583,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/kampala/sisalto.json",
-      "sourceContentSHA256": "4fe0ece56e55c425f17175a3b42c358753ab3293ff288ac1a2cdabf75e58b21e",
+      "sourceContentSHA256": "3b55da80adcdfc6b4b42c2b832e07459bd1ae4087d802fd442e9b858dca8fae0",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "170748e4189c4e808078bbe551da4363b87f774f1c14c6ebc310cbbdde324b7f",
-        "semanticContextSHA256": "170748e4189c4e808078bbe551da4363b87f774f1c14c6ebc310cbbdde324b7f",
+        "targetBeforeSHA256": "3a462a7a92019be25b5c7a70a866be76f035954eaa7a9e57148499e2a6dc4f94",
+        "semanticContextSHA256": "3a462a7a92019be25b5c7a70a866be76f035954eaa7a9e57148499e2a6dc4f94",
         "subjectTitle": "Kukkulan nimi levisi kaupungiksi",
         "targetState": "existing-target"
       },
@@ -702,9 +744,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -723,17 +765,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "4fe0ece56e55c425f17175a3b42c358753ab3293ff288ac1a2cdabf75e58b21e",
-      "targetAfterSHA256": "170748e4189c4e808078bbe551da4363b87f774f1c14c6ebc310cbbdde324b7f",
-      "contextAfterSHA256": "170748e4189c4e808078bbe551da4363b87f774f1c14c6ebc310cbbdde324b7f",
+      "sourceContentAfterSHA256": "3b55da80adcdfc6b4b42c2b832e07459bd1ae4087d802fd442e9b858dca8fae0",
+      "targetAfterSHA256": "3a462a7a92019be25b5c7a70a866be76f035954eaa7a9e57148499e2a6dc4f94",
+      "contextAfterSHA256": "3a462a7a92019be25b5c7a70a866be76f035954eaa7a9e57148499e2a6dc4f94",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "4fe0ece56e55c425f17175a3b42c358753ab3293ff288ac1a2cdabf75e58b21e",
+        "targetAfterSHA256": "170748e4189c4e808078bbe551da4363b87f774f1c14c6ebc310cbbdde324b7f",
+        "contextAfterSHA256": "170748e4189c4e808078bbe551da4363b87f774f1c14c6ebc310cbbdde324b7f",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "170748e4189c4e808078bbe551da4363b87f774f1c14c6ebc310cbbdde324b7f",
+          "semanticContextSHA256": "170748e4189c4e808078bbe551da4363b87f774f1c14c6ebc310cbbdde324b7f",
+          "subjectTitle": "Kukkulan nimi levisi kaupungiksi",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "3b55da80adcdfc6b4b42c2b832e07459bd1ae4087d802fd442e9b858dca8fae0",
+        "sameImageNativeSHA256": "cd3fbb607c614816c7c9979f04c3ee12f0bcac1ac9c19069cb7580a853f16314",
+        "sameImageExportSHA256": "837b562105e60c82a4870d63a253f2eb0e13d52ce2f6a83a2543f570dbff7201",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e07",
@@ -755,10 +818,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/kampala/e07-kampala-K2-v1-20261012-4eb73babb345.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Tuoreruokatorin tuotteiden havainnekuva; ei todellinen Nakasero-koju.",
-        "lyhyt": "Tuoreruokatorin tuotteiden havainnekuva; ei todellinen Nakasero-koju."
+        "selite": "Tuoreruokatorin tuotteiden havainnekuva; ei todellinen Nakasero-koju."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -766,10 +829,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/kampala/e07-kampala-K2-v1-20261012-4eb73babb345.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Tuoreruokatorin tuotteiden havainnekuva; ei todellinen Nakasero-koju.",
-        "lyhyt": "Tuoreruokatorin tuotteiden havainnekuva; ei todellinen Nakasero-koju."
+        "selite": "Tuoreruokatorin tuotteiden havainnekuva; ei todellinen Nakasero-koju."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -783,7 +846,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/kampala/sisalto.json",
-      "sourceContentSHA256": "4fe0ece56e55c425f17175a3b42c358753ab3293ff288ac1a2cdabf75e58b21e",
+      "sourceContentSHA256": "3b55da80adcdfc6b4b42c2b832e07459bd1ae4087d802fd442e9b858dca8fae0",
       "semanticSourceBind": {
         "targetBeforeSHA256": "1053d7a844545f27e0b88ac4f926603667a3194a554c6d6b6e9c3d59774799d7",
         "semanticContextSHA256": "1053d7a844545f27e0b88ac4f926603667a3194a554c6d6b6e9c3d59774799d7",
@@ -944,9 +1007,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -965,17 +1028,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "4fe0ece56e55c425f17175a3b42c358753ab3293ff288ac1a2cdabf75e58b21e",
+      "sourceContentAfterSHA256": "3b55da80adcdfc6b4b42c2b832e07459bd1ae4087d802fd442e9b858dca8fae0",
       "targetAfterSHA256": "1053d7a844545f27e0b88ac4f926603667a3194a554c6d6b6e9c3d59774799d7",
       "contextAfterSHA256": "1053d7a844545f27e0b88ac4f926603667a3194a554c6d6b6e9c3d59774799d7",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "4fe0ece56e55c425f17175a3b42c358753ab3293ff288ac1a2cdabf75e58b21e",
+        "targetAfterSHA256": "1053d7a844545f27e0b88ac4f926603667a3194a554c6d6b6e9c3d59774799d7",
+        "contextAfterSHA256": "1053d7a844545f27e0b88ac4f926603667a3194a554c6d6b6e9c3d59774799d7",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "1053d7a844545f27e0b88ac4f926603667a3194a554c6d6b6e9c3d59774799d7",
+          "semanticContextSHA256": "1053d7a844545f27e0b88ac4f926603667a3194a554c6d6b6e9c3d59774799d7",
+          "subjectTitle": "Torilla on kaksi eri puolta",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "3b55da80adcdfc6b4b42c2b832e07459bd1ae4087d802fd442e9b858dca8fae0",
+        "sameImageNativeSHA256": "4eb73babb345522321068b12b8b75db0edbaff7aa9444f402ca2d9fc270d73f4",
+        "sameImageExportSHA256": "ee60c5e7317fdd09d36316f694924c042bc76dbfba2bc58916d224be4aacbb82",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e07",
@@ -997,10 +1081,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/kampala/e07-kampala-K3-v1-20261012-f327e1be7e57.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Puusepäntyön havainnekuva Makereren koulutushistorian aiheeseen.",
-        "lyhyt": "Puusepäntyön havainnekuva Makereren koulutushistorian aiheeseen."
+        "selite": "Puusepäntyön havainnekuva Makereren koulutushistorian aiheeseen."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -1008,10 +1092,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/kampala/e07-kampala-K3-v1-20261012-f327e1be7e57.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Puusepäntyön havainnekuva Makereren koulutushistorian aiheeseen.",
-        "lyhyt": "Puusepäntyön havainnekuva Makereren koulutushistorian aiheeseen."
+        "selite": "Puusepäntyön havainnekuva Makereren koulutushistorian aiheeseen."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -1025,7 +1109,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/kampala/sisalto.json",
-      "sourceContentSHA256": "4fe0ece56e55c425f17175a3b42c358753ab3293ff288ac1a2cdabf75e58b21e",
+      "sourceContentSHA256": "3b55da80adcdfc6b4b42c2b832e07459bd1ae4087d802fd442e9b858dca8fae0",
       "semanticSourceBind": {
         "targetBeforeSHA256": "0c3cd287071a79f5834fb6223abac1dfb2391f4ca519e7ce43816c92fe467ab8",
         "semanticContextSHA256": "0c3cd287071a79f5834fb6223abac1dfb2391f4ca519e7ce43816c92fe467ab8",
@@ -1186,9 +1270,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -1207,17 +1291,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "4fe0ece56e55c425f17175a3b42c358753ab3293ff288ac1a2cdabf75e58b21e",
+      "sourceContentAfterSHA256": "3b55da80adcdfc6b4b42c2b832e07459bd1ae4087d802fd442e9b858dca8fae0",
       "targetAfterSHA256": "0c3cd287071a79f5834fb6223abac1dfb2391f4ca519e7ce43816c92fe467ab8",
       "contextAfterSHA256": "0c3cd287071a79f5834fb6223abac1dfb2391f4ca519e7ce43816c92fe467ab8",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "4fe0ece56e55c425f17175a3b42c358753ab3293ff288ac1a2cdabf75e58b21e",
+        "targetAfterSHA256": "0c3cd287071a79f5834fb6223abac1dfb2391f4ca519e7ce43816c92fe467ab8",
+        "contextAfterSHA256": "0c3cd287071a79f5834fb6223abac1dfb2391f4ca519e7ce43816c92fe467ab8",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "0c3cd287071a79f5834fb6223abac1dfb2391f4ca519e7ce43816c92fe467ab8",
+          "semanticContextSHA256": "0c3cd287071a79f5834fb6223abac1dfb2391f4ca519e7ce43816c92fe467ab8",
+          "subjectTitle": "Puusepästä korkeakouluun",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "3b55da80adcdfc6b4b42c2b832e07459bd1ae4087d802fd442e9b858dca8fae0",
+        "sameImageNativeSHA256": "f327e1be7e57cd261b58e58aff505d6d3e2219b1e68955789d78e0ef392a23ef",
+        "sameImageExportSHA256": "7f89e9b55ce0ab1271d0f3b001584e87f4087abbba7d09d2a93325c3ca2ff449",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e07",
@@ -1267,10 +1372,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/kampala/sisalto.json",
-      "sourceContentSHA256": "4fe0ece56e55c425f17175a3b42c358753ab3293ff288ac1a2cdabf75e58b21e",
+      "sourceContentSHA256": "3b55da80adcdfc6b4b42c2b832e07459bd1ae4087d802fd442e9b858dca8fae0",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "924e36890fe2c8e5d4bc8b1b9b27b45a1fb065d64c899d426d417904bdae25c1",
-        "semanticContextSHA256": "924e36890fe2c8e5d4bc8b1b9b27b45a1fb065d64c899d426d417904bdae25c1",
+        "targetBeforeSHA256": "cf4637100f27e2aac7e8c398d82d91bf4bdcdd5e49b646fefdbab67d233b9367",
+        "semanticContextSHA256": "cf4637100f27e2aac7e8c398d82d91bf4bdcdd5e49b646fefdbab67d233b9367",
         "subjectTitle": "Museoesine palaa tutkimukseen",
         "targetState": "existing-target"
       },
@@ -1427,9 +1532,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -1448,17 +1553,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "4fe0ece56e55c425f17175a3b42c358753ab3293ff288ac1a2cdabf75e58b21e",
-      "targetAfterSHA256": "924e36890fe2c8e5d4bc8b1b9b27b45a1fb065d64c899d426d417904bdae25c1",
-      "contextAfterSHA256": "924e36890fe2c8e5d4bc8b1b9b27b45a1fb065d64c899d426d417904bdae25c1",
+      "sourceContentAfterSHA256": "3b55da80adcdfc6b4b42c2b832e07459bd1ae4087d802fd442e9b858dca8fae0",
+      "targetAfterSHA256": "cf4637100f27e2aac7e8c398d82d91bf4bdcdd5e49b646fefdbab67d233b9367",
+      "contextAfterSHA256": "cf4637100f27e2aac7e8c398d82d91bf4bdcdd5e49b646fefdbab67d233b9367",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "4fe0ece56e55c425f17175a3b42c358753ab3293ff288ac1a2cdabf75e58b21e",
+        "targetAfterSHA256": "924e36890fe2c8e5d4bc8b1b9b27b45a1fb065d64c899d426d417904bdae25c1",
+        "contextAfterSHA256": "924e36890fe2c8e5d4bc8b1b9b27b45a1fb065d64c899d426d417904bdae25c1",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "924e36890fe2c8e5d4bc8b1b9b27b45a1fb065d64c899d426d417904bdae25c1",
+          "semanticContextSHA256": "924e36890fe2c8e5d4bc8b1b9b27b45a1fb065d64c899d426d417904bdae25c1",
+          "subjectTitle": "Museoesine palaa tutkimukseen",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "3b55da80adcdfc6b4b42c2b832e07459bd1ae4087d802fd442e9b858dca8fae0",
+        "sameImageNativeSHA256": "b4decc0e7737eee36c2d67b1aee6d96b3b93c98d76e9f6b31227959cf272c49b",
+        "sameImageExportSHA256": "a163af3631159f6dc399ec6bb266303bcc60216602f76dafe611d2f30948a754",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e07",
@@ -1480,10 +1606,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/kampala/e07-kampala-L1-v1-20261012-5d4d0e4b3e93.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Jauhamiseen käytettyjen välineiden havainnekuva; ei aito Mengon esine.",
-        "lyhyt": "Jauhamiseen käytettyjen välineiden havainnekuva; ei aito Mengon esine."
+        "selite": "Jauhamiseen käytettyjen välineiden havainnekuva; ei aito Mengon esine."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -1491,10 +1617,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/kampala/e07-kampala-L1-v1-20261012-5d4d0e4b3e93.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Jauhamiseen käytettyjen välineiden havainnekuva; ei aito Mengon esine.",
-        "lyhyt": "Jauhamiseen käytettyjen välineiden havainnekuva; ei aito Mengon esine."
+        "selite": "Jauhamiseen käytettyjen välineiden havainnekuva; ei aito Mengon esine."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -1508,7 +1634,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/kampala/sisalto.json",
-      "sourceContentSHA256": "4fe0ece56e55c425f17175a3b42c358753ab3293ff288ac1a2cdabf75e58b21e",
+      "sourceContentSHA256": "3b55da80adcdfc6b4b42c2b832e07459bd1ae4087d802fd442e9b858dca8fae0",
       "semanticSourceBind": {
         "targetBeforeSHA256": "a9f6de8f0a7afc5680f8df13f893039b4c896a416d6b072c905c029d1144c3b8",
         "semanticContextSHA256": "a9f6de8f0a7afc5680f8df13f893039b4c896a416d6b072c905c029d1144c3b8",
@@ -1669,9 +1795,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -1690,17 +1816,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "4fe0ece56e55c425f17175a3b42c358753ab3293ff288ac1a2cdabf75e58b21e",
+      "sourceContentAfterSHA256": "3b55da80adcdfc6b4b42c2b832e07459bd1ae4087d802fd442e9b858dca8fae0",
       "targetAfterSHA256": "a9f6de8f0a7afc5680f8df13f893039b4c896a416d6b072c905c029d1144c3b8",
       "contextAfterSHA256": "a9f6de8f0a7afc5680f8df13f893039b4c896a416d6b072c905c029d1144c3b8",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "4fe0ece56e55c425f17175a3b42c358753ab3293ff288ac1a2cdabf75e58b21e",
+        "targetAfterSHA256": "a9f6de8f0a7afc5680f8df13f893039b4c896a416d6b072c905c029d1144c3b8",
+        "contextAfterSHA256": "a9f6de8f0a7afc5680f8df13f893039b4c896a416d6b072c905c029d1144c3b8",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "a9f6de8f0a7afc5680f8df13f893039b4c896a416d6b072c905c029d1144c3b8",
+          "semanticContextSHA256": "a9f6de8f0a7afc5680f8df13f893039b4c896a416d6b072c905c029d1144c3b8",
+          "subjectTitle": "Mengo ja jauhinkiven nimi",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "3b55da80adcdfc6b4b42c2b832e07459bd1ae4087d802fd442e9b858dca8fae0",
+        "sameImageNativeSHA256": "5d4d0e4b3e93740ac23447857c27ad5189b43a10f1bf3b33c7861bdd8f11ce6c",
+        "sameImageExportSHA256": "2cfcaab6efd84430f6fc7a873b4673007c9a0d42ff07e7ea0714b293a2dcd439",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e07",
@@ -1722,10 +1869,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/kampala/e07-kampala-L2-v1-20261012-52828b31b161.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Tiilen materiaalihavainnekuva; ei Namiremben katedraalin valokuva.",
-        "lyhyt": "Tiilen materiaalihavainnekuva; ei Namiremben katedraalin valokuva."
+        "selite": "Tiilen materiaalihavainnekuva; ei Namiremben katedraalin valokuva."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -1733,10 +1880,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/kampala/e07-kampala-L2-v1-20261012-52828b31b161.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Tiilen materiaalihavainnekuva; ei Namiremben katedraalin valokuva.",
-        "lyhyt": "Tiilen materiaalihavainnekuva; ei Namiremben katedraalin valokuva."
+        "selite": "Tiilen materiaalihavainnekuva; ei Namiremben katedraalin valokuva."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -1750,10 +1897,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/kampala/sisalto.json",
-      "sourceContentSHA256": "4fe0ece56e55c425f17175a3b42c358753ab3293ff288ac1a2cdabf75e58b21e",
+      "sourceContentSHA256": "3b55da80adcdfc6b4b42c2b832e07459bd1ae4087d802fd442e9b858dca8fae0",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "f2e490641d979a095d58242e52074f1b47dc3a70267dc5ad98c080f46100b936",
-        "semanticContextSHA256": "f2e490641d979a095d58242e52074f1b47dc3a70267dc5ad98c080f46100b936",
+        "targetBeforeSHA256": "a3b109239c25e7936bead27556150e3a70516430a582eab4249e069cc876d1e1",
+        "semanticContextSHA256": "a3b109239c25e7936bead27556150e3a70516430a582eab4249e069cc876d1e1",
         "subjectTitle": "Rakennus on kukkulaa nuorempi",
         "targetState": "existing-target"
       },
@@ -1910,9 +2057,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -1931,17 +2078,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "4fe0ece56e55c425f17175a3b42c358753ab3293ff288ac1a2cdabf75e58b21e",
-      "targetAfterSHA256": "f2e490641d979a095d58242e52074f1b47dc3a70267dc5ad98c080f46100b936",
-      "contextAfterSHA256": "f2e490641d979a095d58242e52074f1b47dc3a70267dc5ad98c080f46100b936",
+      "sourceContentAfterSHA256": "3b55da80adcdfc6b4b42c2b832e07459bd1ae4087d802fd442e9b858dca8fae0",
+      "targetAfterSHA256": "a3b109239c25e7936bead27556150e3a70516430a582eab4249e069cc876d1e1",
+      "contextAfterSHA256": "a3b109239c25e7936bead27556150e3a70516430a582eab4249e069cc876d1e1",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "4fe0ece56e55c425f17175a3b42c358753ab3293ff288ac1a2cdabf75e58b21e",
+        "targetAfterSHA256": "f2e490641d979a095d58242e52074f1b47dc3a70267dc5ad98c080f46100b936",
+        "contextAfterSHA256": "f2e490641d979a095d58242e52074f1b47dc3a70267dc5ad98c080f46100b936",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "f2e490641d979a095d58242e52074f1b47dc3a70267dc5ad98c080f46100b936",
+          "semanticContextSHA256": "f2e490641d979a095d58242e52074f1b47dc3a70267dc5ad98c080f46100b936",
+          "subjectTitle": "Rakennus on kukkulaa nuorempi",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "3b55da80adcdfc6b4b42c2b832e07459bd1ae4087d802fd442e9b858dca8fae0",
+        "sameImageNativeSHA256": "52828b31b161cda34b3e7781d80f22fd1331d0310d9ca6efbe275a779bf8fe46",
+        "sameImageExportSHA256": "ea5e329f048ad25bcec998f6e1f50b71e90cdd60f97d6f33b16940efd7517c97",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e07",
@@ -1960,16 +2128,16 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e07/kampala/photo-6eab2bed7c8efd04a62d.jpg",
         "suora": true,
         "lahde": "Gratypius, Commons (CC BY-SA 4.0)",
-        "selite": "Paikallista metsämaisemaa Kampalasta.",
-        "lyhyt": "Paikallista metsämaisemaa Kampalasta.",
+        "selite": "Puustoa, matalaa kasvillisuutta ja polku Kampalassa vuonna 2026.",
+        "lyhyt": "Metsäkaistale Kampalassa.",
         "tiedosto": "A local small forest in Kampala Uganda.jpg",
         "vuosi": "2026"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Gratypius, Commons (CC BY-SA 4.0)",
-        "selite": "Paikallista metsämaisemaa Kampalasta.",
-        "lyhyt": "Paikallista metsämaisemaa Kampalasta.",
+        "selite": "Puustoa, matalaa kasvillisuutta ja polku Kampalassa vuonna 2026.",
+        "lyhyt": "Metsäkaistale Kampalassa.",
         "tiedosto": "A local small forest in Kampala Uganda.jpg",
         "vuosi": "2026"
       },
@@ -1977,8 +2145,8 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e07/kampala/photo-6eab2bed7c8efd04a62d.jpg",
         "suora": true,
         "lahde": "Gratypius, Commons (CC BY-SA 4.0)",
-        "selite": "Paikallista metsämaisemaa Kampalasta.",
-        "lyhyt": "Paikallista metsämaisemaa Kampalasta.",
+        "selite": "Puustoa, matalaa kasvillisuutta ja polku Kampalassa vuonna 2026.",
+        "lyhyt": "Metsäkaistale Kampalassa.",
         "tiedosto": "A local small forest in Kampala Uganda.jpg",
         "vuosi": "2026"
       },
@@ -1994,10 +2162,10 @@
         3000
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/kampala/sisalto.json",
-      "sourceContentSHA256": "4fe0ece56e55c425f17175a3b42c358753ab3293ff288ac1a2cdabf75e58b21e",
+      "sourceContentSHA256": "3b55da80adcdfc6b4b42c2b832e07459bd1ae4087d802fd442e9b858dca8fae0",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "0e2d3dfbb9d10c3cc957c722aff82a6e2eabeddfdc5bcf6ad966174cfb7e0ba5",
-        "semanticContextSHA256": "0e2d3dfbb9d10c3cc957c722aff82a6e2eabeddfdc5bcf6ad966174cfb7e0ba5",
+        "targetBeforeSHA256": "e0be75848ecdcd6ec6cb736e96bb18d82e5df85322a5d0f9a1aa4ea0e88e88ae",
+        "semanticContextSHA256": "e0be75848ecdcd6ec6cb736e96bb18d82e5df85322a5d0f9a1aa4ea0e88e88ae",
         "subjectTitle": "kampala — aito paikkavalokuva",
         "targetState": "existing-target"
       },
@@ -2143,9 +2311,9 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "A local small forest in Kampala Uganda.jpg",
+        "lyhyt": "Metsäkaistale Kampalassa.",
+        "selite": "Puustoa, matalaa kasvillisuutta ja polku Kampalassa vuonna 2026.",
         "lahde": "Gratypius, Commons (CC BY-SA 4.0)",
-        "selite": "Paikallista metsämaisemaa Kampalasta.",
-        "lyhyt": "Paikallista metsämaisemaa Kampalasta.",
         "vuosi": "2026"
       },
       "preservePreviousMediaObjects": true,
@@ -2165,24 +2333,45 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Gratypius, Commons (CC BY-SA 4.0)",
-        "selite": "Paikallista metsämaisemaa Kampalasta.",
-        "lyhyt": "Paikallista metsämaisemaa Kampalasta.",
+        "selite": "Puustoa, matalaa kasvillisuutta ja polku Kampalassa vuonna 2026.",
+        "lyhyt": "Metsäkaistale Kampalassa.",
         "tiedosto": "A local small forest in Kampala Uganda.jpg",
         "vuosi": "2026"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "4fe0ece56e55c425f17175a3b42c358753ab3293ff288ac1a2cdabf75e58b21e",
-      "targetAfterSHA256": "0e2d3dfbb9d10c3cc957c722aff82a6e2eabeddfdc5bcf6ad966174cfb7e0ba5",
-      "contextAfterSHA256": "0e2d3dfbb9d10c3cc957c722aff82a6e2eabeddfdc5bcf6ad966174cfb7e0ba5",
+      "sourceContentAfterSHA256": "3b55da80adcdfc6b4b42c2b832e07459bd1ae4087d802fd442e9b858dca8fae0",
+      "targetAfterSHA256": "e0be75848ecdcd6ec6cb736e96bb18d82e5df85322a5d0f9a1aa4ea0e88e88ae",
+      "contextAfterSHA256": "e0be75848ecdcd6ec6cb736e96bb18d82e5df85322a5d0f9a1aa4ea0e88e88ae",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "4fe0ece56e55c425f17175a3b42c358753ab3293ff288ac1a2cdabf75e58b21e",
+        "targetAfterSHA256": "0e2d3dfbb9d10c3cc957c722aff82a6e2eabeddfdc5bcf6ad966174cfb7e0ba5",
+        "contextAfterSHA256": "0e2d3dfbb9d10c3cc957c722aff82a6e2eabeddfdc5bcf6ad966174cfb7e0ba5",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "0e2d3dfbb9d10c3cc957c722aff82a6e2eabeddfdc5bcf6ad966174cfb7e0ba5",
+          "semanticContextSHA256": "0e2d3dfbb9d10c3cc957c722aff82a6e2eabeddfdc5bcf6ad966174cfb7e0ba5",
+          "subjectTitle": "kampala — aito paikkavalokuva",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "3b55da80adcdfc6b4b42c2b832e07459bd1ae4087d802fd442e9b858dca8fae0",
+        "sameImageNativeSHA256": "6eab2bed7c8efd04a62d0392135ad2f83406eaf9db24075437d5b5a921bbc4c4",
+        "sameImageExportSHA256": "6eab2bed7c8efd04a62d0392135ad2f83406eaf9db24075437d5b5a921bbc4c4",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e07",
@@ -2205,14 +2394,14 @@
         "suora": true,
         "lahde": "Timothy Akolamazima, Wikimedia Commons (CC BY-SA 4.0)",
         "selite": "Makereren ja Kikonin alueen asutusta Kampalassa vuonna 2022.",
-        "lyhyt": "Makereren ja Kikonin alueen asutusta Kampalassa vuonna 2022.",
+        "lyhyt": "Makereren ja Kikonin asutusta.",
         "tiedosto": "Makerere, Kikoni.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Timothy Akolamazima, Wikimedia Commons (CC BY-SA 4.0)",
         "selite": "Makereren ja Kikonin alueen asutusta Kampalassa vuonna 2022.",
-        "lyhyt": "Makereren ja Kikonin alueen asutusta Kampalassa vuonna 2022.",
+        "lyhyt": "Makereren ja Kikonin asutusta.",
         "tiedosto": "Makerere, Kikoni.jpg"
       },
       "runtimeMediaFieldPayload": {
@@ -2220,7 +2409,7 @@
         "suora": true,
         "lahde": "Timothy Akolamazima, Wikimedia Commons (CC BY-SA 4.0)",
         "selite": "Makereren ja Kikonin alueen asutusta Kampalassa vuonna 2022.",
-        "lyhyt": "Makereren ja Kikonin alueen asutusta Kampalassa vuonna 2022.",
+        "lyhyt": "Makereren ja Kikonin asutusta.",
         "tiedosto": "Makerere, Kikoni.jpg"
       },
       "runtimeRemoveMediaKeys": [],
@@ -2235,10 +2424,10 @@
         4640
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/kampala/sisalto.json",
-      "sourceContentSHA256": "4fe0ece56e55c425f17175a3b42c358753ab3293ff288ac1a2cdabf75e58b21e",
+      "sourceContentSHA256": "3b55da80adcdfc6b4b42c2b832e07459bd1ae4087d802fd442e9b858dca8fae0",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "d501c3019d1374cc7f2ae51f2b1e9642f377511f9b520b3e2a2e5a3c2906533c",
-        "semanticContextSHA256": "d501c3019d1374cc7f2ae51f2b1e9642f377511f9b520b3e2a2e5a3c2906533c",
+        "targetBeforeSHA256": "c338ff9f64e5deb8d607dda85319853e3016af2c36191d0fb0826c56ec61c04a",
+        "semanticContextSHA256": "c338ff9f64e5deb8d607dda85319853e3016af2c36191d0fb0826c56ec61c04a",
         "subjectTitle": "Kampala",
         "targetState": "existing-target"
       },
@@ -2424,9 +2613,9 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "Makerere, Kikoni.jpg",
-        "lahde": "Timothy Akolamazima, Wikimedia Commons (CC BY-SA 4.0)",
+        "lyhyt": "Makereren ja Kikonin asutusta.",
         "selite": "Makereren ja Kikonin alueen asutusta Kampalassa vuonna 2022.",
-        "lyhyt": "Makereren ja Kikonin alueen asutusta Kampalassa vuonna 2022."
+        "lahde": "Timothy Akolamazima, Wikimedia Commons (CC BY-SA 4.0)"
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -2445,7 +2634,7 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
@@ -2453,15 +2642,36 @@
       "CcommonsFieldPayload": {
         "lahde": "Timothy Akolamazima, Wikimedia Commons (CC BY-SA 4.0)",
         "selite": "Makereren ja Kikonin alueen asutusta Kampalassa vuonna 2022.",
-        "lyhyt": "Makereren ja Kikonin alueen asutusta Kampalassa vuonna 2022.",
+        "lyhyt": "Makereren ja Kikonin asutusta.",
         "tiedosto": "Makerere, Kikoni.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "4fe0ece56e55c425f17175a3b42c358753ab3293ff288ac1a2cdabf75e58b21e",
-      "targetAfterSHA256": "d501c3019d1374cc7f2ae51f2b1e9642f377511f9b520b3e2a2e5a3c2906533c",
-      "contextAfterSHA256": "d501c3019d1374cc7f2ae51f2b1e9642f377511f9b520b3e2a2e5a3c2906533c",
+      "sourceContentAfterSHA256": "3b55da80adcdfc6b4b42c2b832e07459bd1ae4087d802fd442e9b858dca8fae0",
+      "targetAfterSHA256": "c338ff9f64e5deb8d607dda85319853e3016af2c36191d0fb0826c56ec61c04a",
+      "contextAfterSHA256": "c338ff9f64e5deb8d607dda85319853e3016af2c36191d0fb0826c56ec61c04a",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "4fe0ece56e55c425f17175a3b42c358753ab3293ff288ac1a2cdabf75e58b21e",
+        "targetAfterSHA256": "d501c3019d1374cc7f2ae51f2b1e9642f377511f9b520b3e2a2e5a3c2906533c",
+        "contextAfterSHA256": "d501c3019d1374cc7f2ae51f2b1e9642f377511f9b520b3e2a2e5a3c2906533c",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "d501c3019d1374cc7f2ae51f2b1e9642f377511f9b520b3e2a2e5a3c2906533c",
+          "semanticContextSHA256": "d501c3019d1374cc7f2ae51f2b1e9642f377511f9b520b3e2a2e5a3c2906533c",
+          "subjectTitle": "Kampala",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "3b55da80adcdfc6b4b42c2b832e07459bd1ae4087d802fd442e9b858dca8fae0",
+        "sameImageNativeSHA256": "46ac10f97fd0f72df743df384cc159043e84beb81deaac66fe3689576aad4c92",
+        "sameImageExportSHA256": "46ac10f97fd0f72df743df384cc159043e84beb81deaac66fe3689576aad4c92",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e07",
@@ -2484,14 +2694,14 @@
         "suora": true,
         "lahde": "Ruslik0, Wikimedia Commons (CC BY-SA 4.0)",
         "selite": "Näkymä Vanhan Kampalan kukkulalta kaupungin asutukseen ja muille kukkuloille, 2015.",
-        "lyhyt": "Näkymä Vanhan Kampalan kukkulalta kaupungin asutukseen ja muille kukkuloille, 2015.",
+        "lyhyt": "Kampalan kukkuloita ja asutusta.",
         "tiedosto": "Gaddafi Mosque view 24.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Ruslik0, Wikimedia Commons (CC BY-SA 4.0)",
         "selite": "Näkymä Vanhan Kampalan kukkulalta kaupungin asutukseen ja muille kukkuloille, 2015.",
-        "lyhyt": "Näkymä Vanhan Kampalan kukkulalta kaupungin asutukseen ja muille kukkuloille, 2015.",
+        "lyhyt": "Kampalan kukkuloita ja asutusta.",
         "tiedosto": "Gaddafi Mosque view 24.jpg"
       },
       "runtimeMediaFieldPayload": {
@@ -2499,7 +2709,7 @@
         "suora": true,
         "lahde": "Ruslik0, Wikimedia Commons (CC BY-SA 4.0)",
         "selite": "Näkymä Vanhan Kampalan kukkulalta kaupungin asutukseen ja muille kukkuloille, 2015.",
-        "lyhyt": "Näkymä Vanhan Kampalan kukkulalta kaupungin asutukseen ja muille kukkuloille, 2015.",
+        "lyhyt": "Kampalan kukkuloita ja asutusta.",
         "tiedosto": "Gaddafi Mosque view 24.jpg"
       },
       "runtimeRemoveMediaKeys": [],
@@ -2514,10 +2724,10 @@
         2448
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/kampala/sisalto.json",
-      "sourceContentSHA256": "4fe0ece56e55c425f17175a3b42c358753ab3293ff288ac1a2cdabf75e58b21e",
+      "sourceContentSHA256": "3b55da80adcdfc6b4b42c2b832e07459bd1ae4087d802fd442e9b858dca8fae0",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "372abbe446115183ab5a9c9f8054088c34c6a39b482c120ac0f75e0cf2353b87",
-        "semanticContextSHA256": "e3ea07c360d86ed1dffeba0274c5402ae9dcfacf4d48f8f1838c314399e9ce74",
+        "targetBeforeSHA256": "62776d7fd8b7ff8ee2c156429eb0a01e0cd1d83575a1c26f5c4d25f37340cea1",
+        "semanticContextSHA256": "45ceb6ba37d3ba80c06c83ced6ccdbbf3176965b4f975cf140b536250ada8469",
         "subjectTitle": "Vanhan Kampalan kukkula",
         "targetState": "existing-target"
       },
@@ -2710,9 +2920,9 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "Gaddafi Mosque view 24.jpg",
-        "lahde": "Ruslik0, Wikimedia Commons (CC BY-SA 4.0)",
+        "lyhyt": "Kampalan kukkuloita ja asutusta.",
         "selite": "Näkymä Vanhan Kampalan kukkulalta kaupungin asutukseen ja muille kukkuloille, 2015.",
-        "lyhyt": "Näkymä Vanhan Kampalan kukkulalta kaupungin asutukseen ja muille kukkuloille, 2015."
+        "lahde": "Ruslik0, Wikimedia Commons (CC BY-SA 4.0)"
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -2731,7 +2941,7 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
@@ -2739,20 +2949,47 @@
       "CcommonsFieldPayload": {
         "lahde": "Ruslik0, Wikimedia Commons (CC BY-SA 4.0)",
         "selite": "Näkymä Vanhan Kampalan kukkulalta kaupungin asutukseen ja muille kukkuloille, 2015.",
-        "lyhyt": "Näkymä Vanhan Kampalan kukkulalta kaupungin asutukseen ja muille kukkuloille, 2015.",
+        "lyhyt": "Kampalan kukkuloita ja asutusta.",
         "tiedosto": "Gaddafi Mosque view 24.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "4fe0ece56e55c425f17175a3b42c358753ab3293ff288ac1a2cdabf75e58b21e",
-      "targetAfterSHA256": "372abbe446115183ab5a9c9f8054088c34c6a39b482c120ac0f75e0cf2353b87",
-      "contextAfterSHA256": "e3ea07c360d86ed1dffeba0274c5402ae9dcfacf4d48f8f1838c314399e9ce74",
+      "sourceContentAfterSHA256": "3b55da80adcdfc6b4b42c2b832e07459bd1ae4087d802fd442e9b858dca8fae0",
+      "targetAfterSHA256": "62776d7fd8b7ff8ee2c156429eb0a01e0cd1d83575a1c26f5c4d25f37340cea1",
+      "contextAfterSHA256": "45ceb6ba37d3ba80c06c83ced6ccdbbf3176965b4f975cf140b536250ada8469",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "4fe0ece56e55c425f17175a3b42c358753ab3293ff288ac1a2cdabf75e58b21e",
+        "targetAfterSHA256": "372abbe446115183ab5a9c9f8054088c34c6a39b482c120ac0f75e0cf2353b87",
+        "contextAfterSHA256": "e3ea07c360d86ed1dffeba0274c5402ae9dcfacf4d48f8f1838c314399e9ce74",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "372abbe446115183ab5a9c9f8054088c34c6a39b482c120ac0f75e0cf2353b87",
+          "semanticContextSHA256": "e3ea07c360d86ed1dffeba0274c5402ae9dcfacf4d48f8f1838c314399e9ce74",
+          "subjectTitle": "Vanhan Kampalan kukkula",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "3b55da80adcdfc6b4b42c2b832e07459bd1ae4087d802fd442e9b858dca8fae0",
+        "sameImageNativeSHA256": "eafe7854d6088fb13cb890a4a47d1bfc92ecd73862a68f6a671483c88b7bdd2d",
+        "sameImageExportSHA256": "eafe7854d6088fb13cb890a4a47d1bfc92ecd73862a68f6a671483c88b7bdd2d",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     }
   ],
   "runtimeIntegrationPending": true,
   "ownerAcceptedNotImpliedByAuthorization": false,
   "gameIntegrated": false,
   "allAssetsExplicitlyOwnerApproved": true,
-  "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+  "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+  "task118ExcludedAssets": [],
+  "task118TextRevision": true,
+  "independentTextResamplePending": true,
+  "textAcceptanceVerified": false,
+  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task118/immutable-media-history/e07/kampala/ef56e6a0d28fa082ce14ba34af485eb3505713313960504417b1ed004e4de231.json",
+  "task118ReboundAt": "2026-10-13T16:31:25.160360+00:00"
 }

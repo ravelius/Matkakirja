@@ -3,7 +3,7 @@
   "era": "e07",
   "city": "dodoma",
   "authorization": "hyväksyn kaikki tekemäsi kuvat. toimita ne claudelle. claudelta saat uusia ohjeita jatkoa varten",
-  "sourceContentAfterSHA256": "ac8585b55a7571f1718a0bb244e0f57781ef0863438f537f3ba91baf325b7ffa",
+  "sourceContentAfterSHA256": "9946f64bf127568bd2ec990a2caa2679b152030158d1506b3abdc09ed0ff084e",
   "assets": [
     {
       "era": "e07",
@@ -28,10 +28,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/dodoma/e07-dodoma-O3-v1-20261012-be64d5d4d49f.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Rypäleenkasvatuksen havainnekuva; ei nimetyn lajikkeen tai tilan valokuva.",
-        "lyhyt": "Rypäleenkasvatuksen havainnekuva; ei nimetyn lajikkeen tai tilan valokuva."
+        "selite": "Rypäleenkasvatuksen havainnekuva; ei nimetyn lajikkeen tai tilan valokuva."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -39,10 +39,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/dodoma/e07-dodoma-O3-v1-20261012-be64d5d4d49f.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Rypäleenkasvatuksen havainnekuva; ei nimetyn lajikkeen tai tilan valokuva.",
-        "lyhyt": "Rypäleenkasvatuksen havainnekuva; ei nimetyn lajikkeen tai tilan valokuva."
+        "selite": "Rypäleenkasvatuksen havainnekuva; ei nimetyn lajikkeen tai tilan valokuva."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -56,10 +56,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/dodoma/sisalto.json",
-      "sourceContentSHA256": "ac8585b55a7571f1718a0bb244e0f57781ef0863438f537f3ba91baf325b7ffa",
+      "sourceContentSHA256": "9946f64bf127568bd2ec990a2caa2679b152030158d1506b3abdc09ed0ff084e",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "14f5a799f47c6ba32744b226bdfd16ce63e0752c80b20221b1ec0f39133ccb07",
+        "semanticContextSHA256": "cda07fd43571b8b8ae5915815a743e8fd1906679c17f10d24e403ae2aa7b80b3",
         "subjectTitle": "Seudun viiniköynnökset",
         "targetState": "existing-target"
       },
@@ -216,9 +216,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -237,17 +237,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "ac8585b55a7571f1718a0bb244e0f57781ef0863438f537f3ba91baf325b7ffa",
+      "sourceContentAfterSHA256": "9946f64bf127568bd2ec990a2caa2679b152030158d1506b3abdc09ed0ff084e",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "14f5a799f47c6ba32744b226bdfd16ce63e0752c80b20221b1ec0f39133ccb07",
+      "contextAfterSHA256": "cda07fd43571b8b8ae5915815a743e8fd1906679c17f10d24e403ae2aa7b80b3",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "ac8585b55a7571f1718a0bb244e0f57781ef0863438f537f3ba91baf325b7ffa",
+        "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "contextAfterSHA256": "14f5a799f47c6ba32744b226bdfd16ce63e0752c80b20221b1ec0f39133ccb07",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+          "semanticContextSHA256": "14f5a799f47c6ba32744b226bdfd16ce63e0752c80b20221b1ec0f39133ccb07",
+          "subjectTitle": "Seudun viiniköynnökset",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "9946f64bf127568bd2ec990a2caa2679b152030158d1506b3abdc09ed0ff084e",
+        "sameImageNativeSHA256": "be64d5d4d49fecc37ff236bdd1b73ff292cdc5876aa4a7048e10d3b5135be51f",
+        "sameImageExportSHA256": "fd1987be78b9fbe2645a0a34d3be06db7198af23089e8ed46bd4b81ac43da3e4",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e07",
@@ -272,10 +293,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/dodoma/e07-dodoma-O4-v1-20261012-1d549bca190f.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Kairausnäytteiden havainnekuva; ei GST:n museon tai varaston todellinen aineisto.",
-        "lyhyt": "Kairausnäytteiden havainnekuva; ei GST:n museon tai varaston todellinen aineisto."
+        "selite": "Kairausnäytteiden havainnekuva; ei GST:n museon tai varaston todellinen aineisto."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -283,10 +304,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/dodoma/e07-dodoma-O4-v1-20261012-1d549bca190f.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Kairausnäytteiden havainnekuva; ei GST:n museon tai varaston todellinen aineisto.",
-        "lyhyt": "Kairausnäytteiden havainnekuva; ei GST:n museon tai varaston todellinen aineisto."
+        "selite": "Kairausnäytteiden havainnekuva; ei GST:n museon tai varaston todellinen aineisto."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -300,10 +321,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/dodoma/sisalto.json",
-      "sourceContentSHA256": "ac8585b55a7571f1718a0bb244e0f57781ef0863438f537f3ba91baf325b7ffa",
+      "sourceContentSHA256": "9946f64bf127568bd2ec990a2caa2679b152030158d1506b3abdc09ed0ff084e",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "32582269e55d91b7fcf41fd89d20a0d5f324c349d9a6632bd0f1ed8bd4b59216",
+        "semanticContextSHA256": "f7bd8833931960dc639d9d81a6ff141de9b1fd9e7e01cda3c6d58e10a240e788",
         "subjectTitle": "Kiviä ja oppimisen paikkoja",
         "targetState": "existing-target"
       },
@@ -460,9 +481,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -481,17 +502,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "ac8585b55a7571f1718a0bb244e0f57781ef0863438f537f3ba91baf325b7ffa",
+      "sourceContentAfterSHA256": "9946f64bf127568bd2ec990a2caa2679b152030158d1506b3abdc09ed0ff084e",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "32582269e55d91b7fcf41fd89d20a0d5f324c349d9a6632bd0f1ed8bd4b59216",
+      "contextAfterSHA256": "f7bd8833931960dc639d9d81a6ff141de9b1fd9e7e01cda3c6d58e10a240e788",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "ac8585b55a7571f1718a0bb244e0f57781ef0863438f537f3ba91baf325b7ffa",
+        "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "contextAfterSHA256": "32582269e55d91b7fcf41fd89d20a0d5f324c349d9a6632bd0f1ed8bd4b59216",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+          "semanticContextSHA256": "32582269e55d91b7fcf41fd89d20a0d5f324c349d9a6632bd0f1ed8bd4b59216",
+          "subjectTitle": "Kiviä ja oppimisen paikkoja",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "9946f64bf127568bd2ec990a2caa2679b152030158d1506b3abdc09ed0ff084e",
+        "sameImageNativeSHA256": "1d549bca190fc90d68ace96985e7efe36c44b7137b2ac7cee6e78836459b1245",
+        "sameImageExportSHA256": "e5db1660d76a2630b0dec1342f127c2ead56dc8ed0a7ae03f9f05543bd39d34a",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e07",
@@ -513,10 +555,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/dodoma/e07-dodoma-K1-v1-20261012-72de6631cecb.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Maataloustuotteiden kuljetusmateriaalien havainnekuva; ei Idodomyan historiallinen torinäkymä.",
-        "lyhyt": "Maataloustuotteiden kuljetusmateriaalien havainnekuva; ei Idodomyan historiallinen torinäkymä."
+        "selite": "Maataloustuotteiden kuljetusmateriaalien havainnekuva; ei Idodomyan historiallinen torinäkymä."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -524,10 +566,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/dodoma/e07-dodoma-K1-v1-20261012-72de6631cecb.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Maataloustuotteiden kuljetusmateriaalien havainnekuva; ei Idodomyan historiallinen torinäkymä.",
-        "lyhyt": "Maataloustuotteiden kuljetusmateriaalien havainnekuva; ei Idodomyan historiallinen torinäkymä."
+        "selite": "Maataloustuotteiden kuljetusmateriaalien havainnekuva; ei Idodomyan historiallinen torinäkymä."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -541,7 +583,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/dodoma/sisalto.json",
-      "sourceContentSHA256": "ac8585b55a7571f1718a0bb244e0f57781ef0863438f537f3ba91baf325b7ffa",
+      "sourceContentSHA256": "9946f64bf127568bd2ec990a2caa2679b152030158d1506b3abdc09ed0ff084e",
       "semanticSourceBind": {
         "targetBeforeSHA256": "8d799063886a43146eaaaa2fb649598423e0543630a08bfa6f4daf720e05db96",
         "semanticContextSHA256": "8d799063886a43146eaaaa2fb649598423e0543630a08bfa6f4daf720e05db96",
@@ -705,9 +747,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -726,17 +768,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "ac8585b55a7571f1718a0bb244e0f57781ef0863438f537f3ba91baf325b7ffa",
+      "sourceContentAfterSHA256": "9946f64bf127568bd2ec990a2caa2679b152030158d1506b3abdc09ed0ff084e",
       "targetAfterSHA256": "8d799063886a43146eaaaa2fb649598423e0543630a08bfa6f4daf720e05db96",
       "contextAfterSHA256": "8d799063886a43146eaaaa2fb649598423e0543630a08bfa6f4daf720e05db96",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "ac8585b55a7571f1718a0bb244e0f57781ef0863438f537f3ba91baf325b7ffa",
+        "targetAfterSHA256": "8d799063886a43146eaaaa2fb649598423e0543630a08bfa6f4daf720e05db96",
+        "contextAfterSHA256": "8d799063886a43146eaaaa2fb649598423e0543630a08bfa6f4daf720e05db96",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "8d799063886a43146eaaaa2fb649598423e0543630a08bfa6f4daf720e05db96",
+          "semanticContextSHA256": "8d799063886a43146eaaaa2fb649598423e0543630a08bfa6f4daf720e05db96",
+          "subjectTitle": "Markkinapaikka ennen rautatiekaupunkia",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "9946f64bf127568bd2ec990a2caa2679b152030158d1506b3abdc09ed0ff084e",
+        "sameImageNativeSHA256": "72de6631cecb18c47e2121a8351ca24d7a3429c75f617b39044049042953c99b",
+        "sameImageExportSHA256": "23b8406d4f6f792df0968c67991baa25e2317c11826b8c05b09bfbd81225778c",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e07",
@@ -758,10 +821,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/dodoma/e07-dodoma-K2-v1-20261012-306035396833.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Viiniköynnöksen havainnekuva; ei tietyn Makutupora-lajikkeen tai tilan valokuva.",
-        "lyhyt": "Viiniköynnöksen havainnekuva; ei tietyn Makutupora-lajikkeen tai tilan valokuva."
+        "selite": "Viiniköynnöksen havainnekuva; ei tietyn Makutupora-lajikkeen tai tilan valokuva."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -769,10 +832,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/dodoma/e07-dodoma-K2-v1-20261012-306035396833.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Viiniköynnöksen havainnekuva; ei tietyn Makutupora-lajikkeen tai tilan valokuva.",
-        "lyhyt": "Viiniköynnöksen havainnekuva; ei tietyn Makutupora-lajikkeen tai tilan valokuva."
+        "selite": "Viiniköynnöksen havainnekuva; ei tietyn Makutupora-lajikkeen tai tilan valokuva."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -786,7 +849,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/dodoma/sisalto.json",
-      "sourceContentSHA256": "ac8585b55a7571f1718a0bb244e0f57781ef0863438f537f3ba91baf325b7ffa",
+      "sourceContentSHA256": "9946f64bf127568bd2ec990a2caa2679b152030158d1506b3abdc09ed0ff084e",
       "semanticSourceBind": {
         "targetBeforeSHA256": "cbbf7be672865fe6fdfcf7b402cda0d53ea4d9774454bf76285cf9d825e282d5",
         "semanticContextSHA256": "cbbf7be672865fe6fdfcf7b402cda0d53ea4d9774454bf76285cf9d825e282d5",
@@ -947,9 +1010,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -968,17 +1031,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "ac8585b55a7571f1718a0bb244e0f57781ef0863438f537f3ba91baf325b7ffa",
+      "sourceContentAfterSHA256": "9946f64bf127568bd2ec990a2caa2679b152030158d1506b3abdc09ed0ff084e",
       "targetAfterSHA256": "cbbf7be672865fe6fdfcf7b402cda0d53ea4d9774454bf76285cf9d825e282d5",
       "contextAfterSHA256": "cbbf7be672865fe6fdfcf7b402cda0d53ea4d9774454bf76285cf9d825e282d5",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "ac8585b55a7571f1718a0bb244e0f57781ef0863438f537f3ba91baf325b7ffa",
+        "targetAfterSHA256": "cbbf7be672865fe6fdfcf7b402cda0d53ea4d9774454bf76285cf9d825e282d5",
+        "contextAfterSHA256": "cbbf7be672865fe6fdfcf7b402cda0d53ea4d9774454bf76285cf9d825e282d5",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "cbbf7be672865fe6fdfcf7b402cda0d53ea4d9774454bf76285cf9d825e282d5",
+          "semanticContextSHA256": "cbbf7be672865fe6fdfcf7b402cda0d53ea4d9774454bf76285cf9d825e282d5",
+          "subjectTitle": "Rypäleellä on seudun nimi",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "9946f64bf127568bd2ec990a2caa2679b152030158d1506b3abdc09ed0ff084e",
+        "sameImageNativeSHA256": "306035396833d76e356c785eedba6c68653450df999fdc414ce35c5f5aa6a7ba",
+        "sameImageExportSHA256": "d9f3617f33be084f9470756a4003dbe602819d862d9def380da819127c15e9f1",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e07",
@@ -1000,10 +1084,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/dodoma/e07-dodoma-L1-v1-20261012-b7dab62cb3b0.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Geologisten näytteiden havainnekuva; ei Dodoman omaa löytöpaikkaa tai museoesinettä.",
-        "lyhyt": "Geologisten näytteiden havainnekuva; ei Dodoman omaa löytöpaikkaa tai museoesinettä."
+        "selite": "Geologisten näytteiden havainnekuva; ei Dodoman omaa löytöpaikkaa tai museoesinettä."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -1011,10 +1095,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/dodoma/e07-dodoma-L1-v1-20261012-b7dab62cb3b0.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Geologisten näytteiden havainnekuva; ei Dodoman omaa löytöpaikkaa tai museoesinettä.",
-        "lyhyt": "Geologisten näytteiden havainnekuva; ei Dodoman omaa löytöpaikkaa tai museoesinettä."
+        "selite": "Geologisten näytteiden havainnekuva; ei Dodoman omaa löytöpaikkaa tai museoesinettä."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -1028,10 +1112,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/dodoma/sisalto.json",
-      "sourceContentSHA256": "ac8585b55a7571f1718a0bb244e0f57781ef0863438f537f3ba91baf325b7ffa",
+      "sourceContentSHA256": "9946f64bf127568bd2ec990a2caa2679b152030158d1506b3abdc09ed0ff084e",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "8910ceb4f61f00e7137253200059d3f7d5a9030c0166016aef5533bfc44bc482",
-        "semanticContextSHA256": "8910ceb4f61f00e7137253200059d3f7d5a9030c0166016aef5533bfc44bc482",
+        "targetBeforeSHA256": "ed5855702563323aafc9d6356cba9eaea31439aea178973f3adc19b219e986d5",
+        "semanticContextSHA256": "ed5855702563323aafc9d6356cba9eaea31439aea178973f3adc19b219e986d5",
         "subjectTitle": "Kivi museossa, näyte tutkimuksessa",
         "targetState": "existing-target"
       },
@@ -1189,9 +1273,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -1210,17 +1294,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "ac8585b55a7571f1718a0bb244e0f57781ef0863438f537f3ba91baf325b7ffa",
-      "targetAfterSHA256": "8910ceb4f61f00e7137253200059d3f7d5a9030c0166016aef5533bfc44bc482",
-      "contextAfterSHA256": "8910ceb4f61f00e7137253200059d3f7d5a9030c0166016aef5533bfc44bc482",
+      "sourceContentAfterSHA256": "9946f64bf127568bd2ec990a2caa2679b152030158d1506b3abdc09ed0ff084e",
+      "targetAfterSHA256": "ed5855702563323aafc9d6356cba9eaea31439aea178973f3adc19b219e986d5",
+      "contextAfterSHA256": "ed5855702563323aafc9d6356cba9eaea31439aea178973f3adc19b219e986d5",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "ac8585b55a7571f1718a0bb244e0f57781ef0863438f537f3ba91baf325b7ffa",
+        "targetAfterSHA256": "8910ceb4f61f00e7137253200059d3f7d5a9030c0166016aef5533bfc44bc482",
+        "contextAfterSHA256": "8910ceb4f61f00e7137253200059d3f7d5a9030c0166016aef5533bfc44bc482",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "8910ceb4f61f00e7137253200059d3f7d5a9030c0166016aef5533bfc44bc482",
+          "semanticContextSHA256": "8910ceb4f61f00e7137253200059d3f7d5a9030c0166016aef5533bfc44bc482",
+          "subjectTitle": "Kivi museossa, näyte tutkimuksessa",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "9946f64bf127568bd2ec990a2caa2679b152030158d1506b3abdc09ed0ff084e",
+        "sameImageNativeSHA256": "b7dab62cb3b09a9948fde99bf9a33d4bdd01c21d4b269f6c8e7b8182cf973093",
+        "sameImageExportSHA256": "d7e73228b959ef4fa7a68f890efcb30a13663a6e16610a2063c355b9a1fcbab8",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e07",
@@ -1242,10 +1347,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/dodoma/e07-dodoma-L2-v1-20261012-0e3a29a5c5ff.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Korkeakouluoppimisen välineiden havainnekuva; ei UDOMin tai St. John’sin tilakuva.",
-        "lyhyt": "Korkeakouluoppimisen välineiden havainnekuva; ei UDOMin tai St. John’sin tilakuva."
+        "selite": "Korkeakouluoppimisen välineiden havainnekuva; ei UDOMin tai St. John’sin tilakuva."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -1253,10 +1358,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/dodoma/e07-dodoma-L2-v1-20261012-0e3a29a5c5ff.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Korkeakouluoppimisen välineiden havainnekuva; ei UDOMin tai St. John’sin tilakuva.",
-        "lyhyt": "Korkeakouluoppimisen välineiden havainnekuva; ei UDOMin tai St. John’sin tilakuva."
+        "selite": "Korkeakouluoppimisen välineiden havainnekuva; ei UDOMin tai St. John’sin tilakuva."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -1270,7 +1375,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/dodoma/sisalto.json",
-      "sourceContentSHA256": "ac8585b55a7571f1718a0bb244e0f57781ef0863438f537f3ba91baf325b7ffa",
+      "sourceContentSHA256": "9946f64bf127568bd2ec990a2caa2679b152030158d1506b3abdc09ed0ff084e",
       "semanticSourceBind": {
         "targetBeforeSHA256": "b9e71b84eb940b0704ce6253b66c31f49cfe8e7d3daa5232d00afd0fff0c1510",
         "semanticContextSHA256": "b9e71b84eb940b0704ce6253b66c31f49cfe8e7d3daa5232d00afd0fff0c1510",
@@ -1430,9 +1535,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -1451,17 +1556,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "ac8585b55a7571f1718a0bb244e0f57781ef0863438f537f3ba91baf325b7ffa",
+      "sourceContentAfterSHA256": "9946f64bf127568bd2ec990a2caa2679b152030158d1506b3abdc09ed0ff084e",
       "targetAfterSHA256": "b9e71b84eb940b0704ce6253b66c31f49cfe8e7d3daa5232d00afd0fff0c1510",
       "contextAfterSHA256": "b9e71b84eb940b0704ce6253b66c31f49cfe8e7d3daa5232d00afd0fff0c1510",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "ac8585b55a7571f1718a0bb244e0f57781ef0863438f537f3ba91baf325b7ffa",
+        "targetAfterSHA256": "b9e71b84eb940b0704ce6253b66c31f49cfe8e7d3daa5232d00afd0fff0c1510",
+        "contextAfterSHA256": "b9e71b84eb940b0704ce6253b66c31f49cfe8e7d3daa5232d00afd0fff0c1510",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "b9e71b84eb940b0704ce6253b66c31f49cfe8e7d3daa5232d00afd0fff0c1510",
+          "semanticContextSHA256": "b9e71b84eb940b0704ce6253b66c31f49cfe8e7d3daa5232d00afd0fff0c1510",
+          "subjectTitle": "Korkeakoulut ovat eri paikoissa",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "9946f64bf127568bd2ec990a2caa2679b152030158d1506b3abdc09ed0ff084e",
+        "sameImageNativeSHA256": "0e3a29a5c5ff199d6a6d63014c3cd235769ec6452d7308e597e0ae8961fc4e21",
+        "sameImageExportSHA256": "e2e70da10f22d5d2ea8134dc8ab8e6014e45d87d68b2b93314ed89bf8f20fdf7",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e07",
@@ -1483,10 +1609,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/dodoma/e07-dodoma-L3-v1-20261012-16265dbfe50f.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Rautatien materiaalien havainnekuva; ei nimetty Dodoman asema tai raideleveyden mittaus.",
-        "lyhyt": "Rautatien materiaalien havainnekuva; ei nimetty Dodoman asema tai raideleveyden mittaus."
+        "selite": "Rautatien materiaalien havainnekuva; ei nimetty Dodoman asema tai raideleveyden mittaus."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -1494,10 +1620,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/dodoma/e07-dodoma-L3-v1-20261012-16265dbfe50f.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Rautatien materiaalien havainnekuva; ei nimetty Dodoman asema tai raideleveyden mittaus.",
-        "lyhyt": "Rautatien materiaalien havainnekuva; ei nimetty Dodoman asema tai raideleveyden mittaus."
+        "selite": "Rautatien materiaalien havainnekuva; ei nimetty Dodoman asema tai raideleveyden mittaus."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -1511,10 +1637,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/dodoma/sisalto.json",
-      "sourceContentSHA256": "ac8585b55a7571f1718a0bb244e0f57781ef0863438f537f3ba91baf325b7ffa",
+      "sourceContentSHA256": "9946f64bf127568bd2ec990a2caa2679b152030158d1506b3abdc09ed0ff084e",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "3691274946c18793cd17532bf304b3035c0b021de066c22e6ce91293826c619f",
-        "semanticContextSHA256": "3691274946c18793cd17532bf304b3035c0b021de066c22e6ce91293826c619f",
+        "targetBeforeSHA256": "93c7e621d6addcabfaa2c60e870f22af6029f650c20dbb77a5f01f787622c912",
+        "semanticContextSHA256": "93c7e621d6addcabfaa2c60e870f22af6029f650c20dbb77a5f01f787622c912",
         "subjectTitle": "Uusi rata käyttää eri raideleveyttä",
         "targetState": "existing-target"
       },
@@ -1671,9 +1797,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -1692,17 +1818,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "ac8585b55a7571f1718a0bb244e0f57781ef0863438f537f3ba91baf325b7ffa",
-      "targetAfterSHA256": "3691274946c18793cd17532bf304b3035c0b021de066c22e6ce91293826c619f",
-      "contextAfterSHA256": "3691274946c18793cd17532bf304b3035c0b021de066c22e6ce91293826c619f",
+      "sourceContentAfterSHA256": "9946f64bf127568bd2ec990a2caa2679b152030158d1506b3abdc09ed0ff084e",
+      "targetAfterSHA256": "93c7e621d6addcabfaa2c60e870f22af6029f650c20dbb77a5f01f787622c912",
+      "contextAfterSHA256": "93c7e621d6addcabfaa2c60e870f22af6029f650c20dbb77a5f01f787622c912",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "ac8585b55a7571f1718a0bb244e0f57781ef0863438f537f3ba91baf325b7ffa",
+        "targetAfterSHA256": "3691274946c18793cd17532bf304b3035c0b021de066c22e6ce91293826c619f",
+        "contextAfterSHA256": "3691274946c18793cd17532bf304b3035c0b021de066c22e6ce91293826c619f",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "3691274946c18793cd17532bf304b3035c0b021de066c22e6ce91293826c619f",
+          "semanticContextSHA256": "3691274946c18793cd17532bf304b3035c0b021de066c22e6ce91293826c619f",
+          "subjectTitle": "Uusi rata käyttää eri raideleveyttä",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "9946f64bf127568bd2ec990a2caa2679b152030158d1506b3abdc09ed0ff084e",
+        "sameImageNativeSHA256": "16265dbfe50f3eb1f2320469f4909817369351d7e07b64ec409f0d78c346e5e3",
+        "sameImageExportSHA256": "ec3d214fb16d39dc130899a83baad457b50d17407a599ed860cf64ed8a9cd31d",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e07",
@@ -1724,10 +1871,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/dodoma/e07-dodoma-L4-v1-20261012-2a380367f6d4.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Jalkapalloaiheen havainnekuva; ei Jamhuri Stadiumin valokuva.",
-        "lyhyt": "Jalkapalloaiheen havainnekuva; ei Jamhuri Stadiumin valokuva."
+        "selite": "Jalkapalloaiheen havainnekuva; ei Jamhuri Stadiumin valokuva."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -1735,10 +1882,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/dodoma/e07-dodoma-L4-v1-20261012-2a380367f6d4.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Jalkapalloaiheen havainnekuva; ei Jamhuri Stadiumin valokuva.",
-        "lyhyt": "Jalkapalloaiheen havainnekuva; ei Jamhuri Stadiumin valokuva."
+        "selite": "Jalkapalloaiheen havainnekuva; ei Jamhuri Stadiumin valokuva."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -1752,10 +1899,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/dodoma/sisalto.json",
-      "sourceContentSHA256": "ac8585b55a7571f1718a0bb244e0f57781ef0863438f537f3ba91baf325b7ffa",
+      "sourceContentSHA256": "9946f64bf127568bd2ec990a2caa2679b152030158d1506b3abdc09ed0ff084e",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "034e445822e0f2a8eab0571b41dae9f16a0258f77b1b456dc2439105d5c40d5c",
-        "semanticContextSHA256": "034e445822e0f2a8eab0571b41dae9f16a0258f77b1b456dc2439105d5c40d5c",
+        "targetBeforeSHA256": "b6ff9a5b27caca80cec5bf8c00e62df530ea5a8e7e7060eb589d5cc8f655d499",
+        "semanticContextSHA256": "b6ff9a5b27caca80cec5bf8c00e62df530ea5a8e7e7060eb589d5cc8f655d499",
         "subjectTitle": "Jamhuri ei tarkoita yhtä stadionia",
         "targetState": "existing-target"
       },
@@ -1912,9 +2059,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -1933,17 +2080,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "ac8585b55a7571f1718a0bb244e0f57781ef0863438f537f3ba91baf325b7ffa",
-      "targetAfterSHA256": "034e445822e0f2a8eab0571b41dae9f16a0258f77b1b456dc2439105d5c40d5c",
-      "contextAfterSHA256": "034e445822e0f2a8eab0571b41dae9f16a0258f77b1b456dc2439105d5c40d5c",
+      "sourceContentAfterSHA256": "9946f64bf127568bd2ec990a2caa2679b152030158d1506b3abdc09ed0ff084e",
+      "targetAfterSHA256": "b6ff9a5b27caca80cec5bf8c00e62df530ea5a8e7e7060eb589d5cc8f655d499",
+      "contextAfterSHA256": "b6ff9a5b27caca80cec5bf8c00e62df530ea5a8e7e7060eb589d5cc8f655d499",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "ac8585b55a7571f1718a0bb244e0f57781ef0863438f537f3ba91baf325b7ffa",
+        "targetAfterSHA256": "034e445822e0f2a8eab0571b41dae9f16a0258f77b1b456dc2439105d5c40d5c",
+        "contextAfterSHA256": "034e445822e0f2a8eab0571b41dae9f16a0258f77b1b456dc2439105d5c40d5c",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "034e445822e0f2a8eab0571b41dae9f16a0258f77b1b456dc2439105d5c40d5c",
+          "semanticContextSHA256": "034e445822e0f2a8eab0571b41dae9f16a0258f77b1b456dc2439105d5c40d5c",
+          "subjectTitle": "Jamhuri ei tarkoita yhtä stadionia",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "9946f64bf127568bd2ec990a2caa2679b152030158d1506b3abdc09ed0ff084e",
+        "sameImageNativeSHA256": "2a380367f6d48dc81d3b02e19164c18ccea5322bdcdfe777b6de6509b68ea590",
+        "sameImageExportSHA256": "e0babb2fdf8c8063548bb9b550c9d2db05480845db8ae889e6fb1c9c63eaa7c8",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e07",
@@ -1963,7 +2131,7 @@
         "suora": true,
         "lahde": "Mangapwani, Commons (CC BY-SA 4.0)",
         "selite": "Maastoa Iyumbun alueella Dodomassa.",
-        "lyhyt": "Maastoa Iyumbun alueella Dodomassa.",
+        "lyhyt": "Dodomassa Iyumbun maasto.",
         "tiedosto": "Iyumbu ward landscape, Dodoma City.jpg",
         "vuosi": "2022"
       },
@@ -1971,7 +2139,7 @@
       "CvalidatorCompatiblePayload": {
         "lahde": "Mangapwani, Commons (CC BY-SA 4.0)",
         "selite": "Maastoa Iyumbun alueella Dodomassa.",
-        "lyhyt": "Maastoa Iyumbun alueella Dodomassa.",
+        "lyhyt": "Dodomassa Iyumbun maasto.",
         "tiedosto": "Iyumbu ward landscape, Dodoma City.jpg",
         "vuosi": "2022"
       },
@@ -1980,7 +2148,7 @@
         "suora": true,
         "lahde": "Mangapwani, Commons (CC BY-SA 4.0)",
         "selite": "Maastoa Iyumbun alueella Dodomassa.",
-        "lyhyt": "Maastoa Iyumbun alueella Dodomassa.",
+        "lyhyt": "Dodomassa Iyumbun maasto.",
         "tiedosto": "Iyumbu ward landscape, Dodoma City.jpg",
         "vuosi": "2022"
       },
@@ -1996,10 +2164,10 @@
         1635
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/dodoma/sisalto.json",
-      "sourceContentSHA256": "ac8585b55a7571f1718a0bb244e0f57781ef0863438f537f3ba91baf325b7ffa",
+      "sourceContentSHA256": "9946f64bf127568bd2ec990a2caa2679b152030158d1506b3abdc09ed0ff084e",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "9713fae7b46bf0b44e88530d009cb15b3f2f1014b569a9f8a449c51470b97272",
-        "semanticContextSHA256": "9713fae7b46bf0b44e88530d009cb15b3f2f1014b569a9f8a449c51470b97272",
+        "targetBeforeSHA256": "1d1f42c66de76abd9827c5ae452093df7149f814cd835b931dffa7bb1aabb918",
+        "semanticContextSHA256": "1d1f42c66de76abd9827c5ae452093df7149f814cd835b931dffa7bb1aabb918",
         "subjectTitle": "dodoma — aito paikkavalokuva",
         "targetState": "existing-target"
       },
@@ -2282,9 +2450,9 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "Iyumbu ward landscape, Dodoma City.jpg",
-        "lahde": "Mangapwani, Commons (CC BY-SA 4.0)",
+        "lyhyt": "Dodomassa Iyumbun maasto.",
         "selite": "Maastoa Iyumbun alueella Dodomassa.",
-        "lyhyt": "Maastoa Iyumbun alueella Dodomassa.",
+        "lahde": "Mangapwani, Commons (CC BY-SA 4.0)",
         "vuosi": "2022"
       },
       "preservePreviousMediaObjects": true,
@@ -2304,7 +2472,7 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
@@ -2312,16 +2480,37 @@
       "CcommonsFieldPayload": {
         "lahde": "Mangapwani, Commons (CC BY-SA 4.0)",
         "selite": "Maastoa Iyumbun alueella Dodomassa.",
-        "lyhyt": "Maastoa Iyumbun alueella Dodomassa.",
+        "lyhyt": "Dodomassa Iyumbun maasto.",
         "tiedosto": "Iyumbu ward landscape, Dodoma City.jpg",
         "vuosi": "2022"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "ac8585b55a7571f1718a0bb244e0f57781ef0863438f537f3ba91baf325b7ffa",
-      "targetAfterSHA256": "9713fae7b46bf0b44e88530d009cb15b3f2f1014b569a9f8a449c51470b97272",
-      "contextAfterSHA256": "9713fae7b46bf0b44e88530d009cb15b3f2f1014b569a9f8a449c51470b97272",
+      "sourceContentAfterSHA256": "9946f64bf127568bd2ec990a2caa2679b152030158d1506b3abdc09ed0ff084e",
+      "targetAfterSHA256": "1d1f42c66de76abd9827c5ae452093df7149f814cd835b931dffa7bb1aabb918",
+      "contextAfterSHA256": "1d1f42c66de76abd9827c5ae452093df7149f814cd835b931dffa7bb1aabb918",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "ac8585b55a7571f1718a0bb244e0f57781ef0863438f537f3ba91baf325b7ffa",
+        "targetAfterSHA256": "9713fae7b46bf0b44e88530d009cb15b3f2f1014b569a9f8a449c51470b97272",
+        "contextAfterSHA256": "9713fae7b46bf0b44e88530d009cb15b3f2f1014b569a9f8a449c51470b97272",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "9713fae7b46bf0b44e88530d009cb15b3f2f1014b569a9f8a449c51470b97272",
+          "semanticContextSHA256": "9713fae7b46bf0b44e88530d009cb15b3f2f1014b569a9f8a449c51470b97272",
+          "subjectTitle": "dodoma — aito paikkavalokuva",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "9946f64bf127568bd2ec990a2caa2679b152030158d1506b3abdc09ed0ff084e",
+        "sameImageNativeSHA256": "126aeef047cb02de4476bd7150f834a03109688de446aa4d06a1b317f566a30e",
+        "sameImageExportSHA256": "126aeef047cb02de4476bd7150f834a03109688de446aa4d06a1b317f566a30e",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e07",
@@ -2344,14 +2533,14 @@
         "suora": true,
         "lahde": "Mangapwani, Wikimedia Commons (CC BY-SA 4.0)",
         "selite": "Makulu Dodomassa yliopiston suunnasta nähtynä, 2022.",
-        "lyhyt": "Makulu Dodomassa yliopiston suunnasta nähtynä, 2022.",
+        "lyhyt": "Makulu yliopiston suunnasta.",
         "tiedosto": "Makulu from Udom, Dodoma City.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Mangapwani, Wikimedia Commons (CC BY-SA 4.0)",
         "selite": "Makulu Dodomassa yliopiston suunnasta nähtynä, 2022.",
-        "lyhyt": "Makulu Dodomassa yliopiston suunnasta nähtynä, 2022.",
+        "lyhyt": "Makulu yliopiston suunnasta.",
         "tiedosto": "Makulu from Udom, Dodoma City.jpg"
       },
       "runtimeMediaFieldPayload": {
@@ -2359,7 +2548,7 @@
         "suora": true,
         "lahde": "Mangapwani, Wikimedia Commons (CC BY-SA 4.0)",
         "selite": "Makulu Dodomassa yliopiston suunnasta nähtynä, 2022.",
-        "lyhyt": "Makulu Dodomassa yliopiston suunnasta nähtynä, 2022.",
+        "lyhyt": "Makulu yliopiston suunnasta.",
         "tiedosto": "Makulu from Udom, Dodoma City.jpg"
       },
       "runtimeRemoveMediaKeys": [],
@@ -2374,10 +2563,10 @@
         2139
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/dodoma/sisalto.json",
-      "sourceContentSHA256": "ac8585b55a7571f1718a0bb244e0f57781ef0863438f537f3ba91baf325b7ffa",
+      "sourceContentSHA256": "9946f64bf127568bd2ec990a2caa2679b152030158d1506b3abdc09ed0ff084e",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "ed43af0dcc5e184402eba332af745de0cc1fab8a8b0171f3b95485da189d7296",
-        "semanticContextSHA256": "ed43af0dcc5e184402eba332af745de0cc1fab8a8b0171f3b95485da189d7296",
+        "targetBeforeSHA256": "d24fe431c6c88509c35eda7ab45541db3bd3baf2031fff559abe7ea91b00bf2f",
+        "semanticContextSHA256": "d24fe431c6c88509c35eda7ab45541db3bd3baf2031fff559abe7ea91b00bf2f",
         "subjectTitle": "Dodoma",
         "targetState": "existing-target"
       },
@@ -2660,9 +2849,9 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "Makulu from Udom, Dodoma City.jpg",
-        "lahde": "Mangapwani, Wikimedia Commons (CC BY-SA 4.0)",
+        "lyhyt": "Makulu yliopiston suunnasta.",
         "selite": "Makulu Dodomassa yliopiston suunnasta nähtynä, 2022.",
-        "lyhyt": "Makulu Dodomassa yliopiston suunnasta nähtynä, 2022."
+        "lahde": "Mangapwani, Wikimedia Commons (CC BY-SA 4.0)"
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -2681,7 +2870,7 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
@@ -2689,20 +2878,47 @@
       "CcommonsFieldPayload": {
         "lahde": "Mangapwani, Wikimedia Commons (CC BY-SA 4.0)",
         "selite": "Makulu Dodomassa yliopiston suunnasta nähtynä, 2022.",
-        "lyhyt": "Makulu Dodomassa yliopiston suunnasta nähtynä, 2022.",
+        "lyhyt": "Makulu yliopiston suunnasta.",
         "tiedosto": "Makulu from Udom, Dodoma City.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "ac8585b55a7571f1718a0bb244e0f57781ef0863438f537f3ba91baf325b7ffa",
-      "targetAfterSHA256": "ed43af0dcc5e184402eba332af745de0cc1fab8a8b0171f3b95485da189d7296",
-      "contextAfterSHA256": "ed43af0dcc5e184402eba332af745de0cc1fab8a8b0171f3b95485da189d7296",
+      "sourceContentAfterSHA256": "9946f64bf127568bd2ec990a2caa2679b152030158d1506b3abdc09ed0ff084e",
+      "targetAfterSHA256": "d24fe431c6c88509c35eda7ab45541db3bd3baf2031fff559abe7ea91b00bf2f",
+      "contextAfterSHA256": "d24fe431c6c88509c35eda7ab45541db3bd3baf2031fff559abe7ea91b00bf2f",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "ac8585b55a7571f1718a0bb244e0f57781ef0863438f537f3ba91baf325b7ffa",
+        "targetAfterSHA256": "ed43af0dcc5e184402eba332af745de0cc1fab8a8b0171f3b95485da189d7296",
+        "contextAfterSHA256": "ed43af0dcc5e184402eba332af745de0cc1fab8a8b0171f3b95485da189d7296",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "ed43af0dcc5e184402eba332af745de0cc1fab8a8b0171f3b95485da189d7296",
+          "semanticContextSHA256": "ed43af0dcc5e184402eba332af745de0cc1fab8a8b0171f3b95485da189d7296",
+          "subjectTitle": "Dodoma",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "9946f64bf127568bd2ec990a2caa2679b152030158d1506b3abdc09ed0ff084e",
+        "sameImageNativeSHA256": "022c2e2a083d2848eb2a07ec7381bcea8143ed9b8e8af31309a1af3c0a3125e4",
+        "sameImageExportSHA256": "022c2e2a083d2848eb2a07ec7381bcea8143ed9b8e8af31309a1af3c0a3125e4",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     }
   ],
   "runtimeIntegrationPending": true,
   "ownerAcceptedNotImpliedByAuthorization": false,
   "gameIntegrated": false,
   "allAssetsExplicitlyOwnerApproved": true,
-  "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+  "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+  "task118ExcludedAssets": [],
+  "task118TextRevision": true,
+  "independentTextResamplePending": true,
+  "textAcceptanceVerified": false,
+  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task118/immutable-media-history/e07/dodoma/4272c5aea33fa0b3776e2bb64588e81b33f8397108b1e20783de8c1fd99c2def.json",
+  "task118ReboundAt": "2026-10-13T16:31:25.103599+00:00"
 }

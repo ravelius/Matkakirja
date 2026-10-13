@@ -50,9 +50,9 @@
       "q": "Miksi eläinkuntoutuksen sanctuary on yleisöltä suljettu?",
       "options": [
         "Villin käyttäytymisen säilyttämiseksi",
-        "Eläinten ihmiskontaktin lisäämiseksi",
-        "Kaikkien eläinten kesyttämiseksi",
-        "Eläinten esiintymistaitojen opettamiseksi"
+        "Eläinten tautitutkimuksen vuoksi",
+        "Pesäpaikkojen laskennan vuoksi",
+        "Alueen kasvillisuuden ennallistamiseksi"
       ],
       "correct": 0,
       "level": 2,
@@ -61,12 +61,12 @@
       "source": "https://lilongwewildlife.org/visit/"
     },
     {
-      "q": "Mitä vervet-apinat poistavat toistensa turkista?",
+      "q": "Mitä vihermarakatit poistavat toistensa turkista?",
       "options": [
         "Likaa ja loisia",
-        "Kaikki pitkät karvat",
-        "Hedelmien siemeniä",
-        "Puunkuoren suikaleita"
+        "Kuolleita ihosoluja yksinomaan",
+        "Pitkien karvojen latvoja",
+        "Toistensa hajumerkintöjä"
       ],
       "correct": 0,
       "level": 2,
@@ -84,7 +84,7 @@
       ],
       "correct": 0,
       "level": 3,
-      "hint": "Ajattele metsän ylimpänä olevaa elinympäristöä.",
+      "hint": "Metsän eri kerroksissa on erilaisia elinympäristöjä.",
       "fact": "Canopy on puiden latvusten muodostama metsän ylempi kerros.",
       "source": "https://en.wikipedia.org/wiki/Canopy_(biology)"
     }
@@ -96,7 +96,7 @@
   ],
   "valokuva": {
     "tiedosto": "Kanengo, Lilongwe, Malawi - panoramio (2).jpg",
-    "lyhyt": "Nosturi Kanengon alueella Lilongwessa.",
+    "lyhyt": "Kanengon nosturi.",
     "selite": "Nosturi Kanengon alueella Lilongwessa.",
     "lahde": "Timon Zingg, Commons (CC BY-SA 3.0)"
   },
@@ -108,7 +108,7 @@
       "kansikuvat": [
         {
           "tiedosto": "Lilongwe Area 2.jpg",
-          "lyhyt": "Lilongwen Area 2 -alueen katunäkymä.",
+          "lyhyt": "Area 2:n katua Lilongwessa.",
           "selite": "Lilongwen Area 2 -alueen katunäkymä.",
           "lahde": "Brian Dell, Wikimedia Commons (PD)"
         },
@@ -199,7 +199,7 @@
             },
             {
               "otsikko": "Nsima ja torikauppa",
-              "teksti": "Nsima valmistetaan maissijauhosta, ja sen rinnalla voi olla lihaa, papuja tai vihanneksia. Perinne sisältää myös maissin käsittelyn ja yhteisen aterian. Lilongwen markkinoille tulee tuotteita ympäröivältä maatalousalueelta, mutta kuvauksesta ei voi päätellä tietyn kojun tämän päivän valikoimaa.",
+              "teksti": "Nsima valmistetaan maissijauhosta, ja sen rinnalla voi olla lihaa, papuja tai vihanneksia. Perinne sisältää myös maissin käsittelyn ja yhteisen aterian. Lilongwen markkinat välittävät tuotteita kaupungin asukkaille ympäröivältä maatalousalueelta.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -218,8 +218,8 @@
               }
             },
             {
-              "otsikko": "Ennen kaupunkikierrosta",
-              "teksti": "Lilongwessa noudatetaan tavanomaista varovaisuutta, ja liikennejärjestelyihin kiinnitetään huomiota. Pimeällä ja yksin liikkumista vältetään. Maahantulo- sekä muut matkan ehdot tarkistetaan ennen lähtöä; lentoasema- ja viranomaiskohteiden kuvausrajoitukset selvitetään erikseen.",
+              "otsikko": "Lingadzi ja Lilongwe",
+              "teksti": "Lilongwe Wildlife Centren metsäalueella kulkee Lingadzi-joki. Se on eri vesistö kuin kaupungin nimen antanut Lilongwe-joki. Metsäalue sijaitsee vanhan ja uuden keskustan välissä ja siellä elää luonnonvaraisia vihermarakatteja sekä lintuja.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -258,8 +258,8 @@
             ],
             "hyvaTietaa": [
               {
-                "otsikko": "Liikenne",
-                "teksti": "Vasemmanpuoleinen liikenne ja luotettavat kuljetukset huomioidaan."
+                "otsikko": "Ennen matkapäätöstä",
+                "teksti": "Tarkista Malawin ajantasainen matkustustiedote Suomen ulkoministeriöstä ja noudata sen ohjeita."
               },
               {
                 "otsikko": "Kuntoutusalue on suljettu",
@@ -275,7 +275,7 @@
               }
             ]
           },
-          "lahde": "Wikipedia"
+          "lahde": "Wikipedia; Wikivoyage"
         }
       }
     },
@@ -284,7 +284,7 @@
       "nimi": "Metsä kaupungin keskellä",
       "johdanto": "Lingadzin metsän puiden hedelmät, apinoiden toiminta ja lintujen pesät paljastavat elämää eri korkeuksilla.",
       "tehtava": {
-        "kysymys": "Mikä sulkee hamerkopin risupesän yläpuolelta?",
+        "kysymys": "Mikä sulkee vasarapääin risupesän yläpuolelta?",
         "vaihtoehdot": [
           "Kupolimainen katto",
           "Avoin oksarengas",
@@ -297,7 +297,7 @@
       "nostot": [
         {
           "otsikko": "Puulla on siivet hedelmässä",
-          "teksti": "Lilongwe Wildlife Centren metsää kuvataan Acacia- ja Combretum-puiden ympäristöksi. Paikallinen vierailuopas tunnistaa Combretum molle -lajin, jonka englanninkielinen nimi on velvet bushwillow. Sen hedelmässä on siipimäisiä osia, joten puuta voi tarkastella myös hedelmän muodon kautta. Laji kasvaa laajasti länsi-, itä- ja eteläisessä Afrikassa; se ei ole vain Lilongwen oma puu. Se toimii myös eräiden perhosten toukkien ravintokasvina. Yhden puun ympärille liittyy siten muutakin elämää kuin sen omat lehdet.",
+          "teksti": "Lilongwe Wildlife Centren metsää kuvataan Acacia- ja Combretum-puiden ympäristöksi. Metsässä kasvaa Combretum molle -puulajia, jonka hedelmässä on siipimäisiä osia. Puulajin hedelmän muoto eroaa marjasta: sitä ympäröivät siipimäiset osat. Puulajin luontainen levinneisyys ulottuu Länsi-, Itä- ja Etelä-Afrikkaan. Se toimii myös eräiden perhosten toukkien ravintokasvina. Yhden puun ympärille liittyy siten muutakin elämää kuin sen omat lehdet.",
           "tiedosto": "",
           "lyhyt": "",
           "selite": "",
@@ -306,7 +306,7 @@
         },
         {
           "otsikko": "Apinaryhmä pitää turkista huolta",
-          "teksti": "Metsässä elää luonnonvaraisia vervet-apinoiden ryhmiä, erillään kuntoutuksessa olevista eläimistä. Ne liikkuvat päivällä ja nukkuvat puissa yöllä. Toistensa turkkia hoitaessaan apinat poistavat likaa ja loisia. Lajilla on myös erilaisia varoitusääniä eri tilanteita varten. Ravintoon kuuluu lehtiä, hedelmiä ja siemeniä, mutta se ei rajoitu pelkkiin kasveihin. Metsän vierailija antaa eläimille tilaa eikä ruoki niitä: luonnonvaraisen ryhmän arkea ei tarvitse muuttaa ihmisen kohtaamiseksi.",
+          "teksti": "Metsässä elää luonnonvaraisia vihermarakattien ryhmiä, erillään kuntoutuksessa olevista eläimistä. Ne liikkuvat päivällä ja nukkuvat puissa yöllä. Toistensa turkkia hoitaessaan apinat poistavat likaa ja loisia. Lajilla on myös erilaisia varoitusääniä eri tilanteita varten. Ravintoon kuuluu lehtiä, hedelmiä ja siemeniä, mutta se ei rajoitu pelkkiin kasveihin. Vihermarakatit elävät sosiaalisissa ryhmissä, joissa turkinhoito kuuluu eläinten väliseen vuorovaikutukseen.",
           "tiedosto": "",
           "lyhyt": "",
           "selite": "",
@@ -315,7 +315,7 @@
         },
         {
           "otsikko": "Lintu rakentaa pesälle katon",
-          "teksti": "Lingadzi-joen linnustossa esiintyvä hamerkop on ruskea vesilintu. Se etsii ravintoa matalasta vedestä ja syö muun muassa kaloja sekä sammakkoeläimiä. Sen pesä on suuri risurakennelma, jossa on kupolimainen katto, ja molemmat parin linnut osallistuvat rakentamiseen. Pesä ei siis ole vain avoin kuppi oksien välissä. Lajia koskevissa kuvauksissa myös muut eläimet voivat käyttää sen pesiä. Metsässä katollinen risurakenne on kiinnostava havainto, vaikka sen rakentajaa ei näkisi joka käynnillä.",
+          "teksti": "Lingadzi-joen linnustossa esiintyvä vasarapäähaikara (Scopus umbretta) on ruskea vesilintu. Se etsii ravintoa matalasta vedestä ja syö muun muassa kaloja sekä sammakkoeläimiä. Sen pesä on suuri risurakennelma, jossa on kupolimainen katto, ja molemmat parin linnut osallistuvat rakentamiseen. Pesä ei siis ole vain avoin kuppi oksien välissä. Lajia koskevissa kuvauksissa myös muut eläimet voivat käyttää sen pesiä. Metsässä katollinen risurakenne on kiinnostava havainto, vaikka sen rakentajaa ei näkisi joka käynnillä.",
           "tiedosto": "",
           "lyhyt": "",
           "selite": "",
@@ -324,7 +324,7 @@
         },
         {
           "otsikko": "Metsän ylin kerros on elintila",
-          "teksti": "Puulatvukset muodostavat metsän ylemmän kerroksen. Niissä elää lintuja, hyönteisiä ja muita eliöitä, samalla kun puut varjostavat alempia kasvustoja. Lilongwen metsäalueen vierailuopas esittelee tätä kerrosta havainnollistavan latvuspolun, jossa on käytetty myös kierrätettyä muovia. Ympäristökasvatus nostaa näin huomion maan pinnalta ylöspäin. Metsä ei ole vain runkojen välinen tila: latvuksessa on oma elinympäristönsä, jota voi tarkastella erillään suljetun eläinkuntoutusalueen toiminnasta.",
+          "teksti": "Puulatvukset muodostavat metsän ylemmän kerroksen. Niissä elää lintuja, hyönteisiä ja muita eliöitä, samalla kun puut varjostavat alempia kasvustoja. Lilongwen metsäalueen vierailuopas esittelee tätä kerrosta havainnollistavan latvuspolun, jossa on käytetty myös kierrätettyä muovia. Ympäristökasvatus nostaa näin huomion maan pinnalta ylöspäin. Latvusten tasolla kulkeva polku näyttää eri kerroksen kuin maanpinnan reitti: lintujen, hyönteisten ja puiden lehtien ympäristön.",
           "tiedosto": "",
           "lyhyt": "",
           "selite": "",
@@ -355,7 +355,7 @@
   "nahtavyydet": {
     "Lilongwe Wildlife Centren metsäalue": {
       "aika": "Nykyinen vierailu- ja kuntoutuskeskus 2000-luvulla",
-      "teksti": "Lilongwe Wildlife Centren metsäalue sijaitsee Old Townin ja City Centren välissä. Vierailualueelle tullaan Kenyatta Roadin kautta. Acacia- ja Combretum-puiden ympäristön läpi kulkee Lingadzi-joki. Metsässä on luonnonvaraisia vervet-apinoita, ja jokialueen linnustoon kuuluvat myös hamerkopit.\n\nJulkinen metsä ja yleisöltä suljettu eläinkuntoutusalue ovat eri osia. Kuntoutuksessa ihmiskontaktia rajoitetaan villin käyttäytymisen säilyttämiseksi; metsäalueen tehtäviin taas kuuluvat luontokävelyt ja ympäristökasvatus. Isoisän matkavuonna 1873 nykyistä keskusta ei ollut. Metsäkierroksen pääsyjärjestelyt varmistetaan ylläpitäjältä.",
+      "teksti": "Lilongwe Wildlife Centren metsäalue sijaitsee Old Townin ja City Centren välissä. Vierailualueelle tullaan Kenyatta Roadin kautta. Acacia- ja Combretum-puiden ympäristön läpi kulkee Lingadzi-joki. Metsässä on luonnonvaraisia vihermarakatteja, ja jokialueen linnustoon kuuluvat myös vasarapäähaikarat.\n\nJulkinen metsä ja yleisöltä suljettu eläinkuntoutusalue ovat eri osia. Kuntoutuksessa ihmiskontaktia rajoitetaan villin käyttäytymisen säilyttämiseksi; metsäalueen tehtäviin taas kuuluvat luontokävelyt ja ympäristökasvatus. Isoisän matkavuonna 1873 nykyistä keskusta ei ollut. Metsäkierroksen pääsyjärjestelyt varmistetaan ylläpitäjältä.",
       "kuvat": [
         {
           "tiedosto": "",

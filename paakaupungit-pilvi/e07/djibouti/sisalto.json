@@ -40,7 +40,7 @@
         },
         {
           "otsikko": "Torin kujat ja korit",
-          "teksti": "Mahamoud Harbin aukio oli aikaisemmin Place Rimbaud. Sen ympärillä on vanhan keskustan kauppakujia ja ulkoilmabasaareja. Paikallisiin käsityötuotteisiin kuuluvat esimerkiksi punotut korit, laukut ja helmikorut. Kauppa sijoittuu kapeille kaduille, ja aukion yhteydessä kohoaa suuren moskeijan minareetti. Nykyiset kulkujärjestelyt ovat muuttuneet, joten tori ei ole pysyvä kojukartta. Aukio ja kujat muodostavat silti kaupungin asioinnin ympäristön: sama paikannimi yhdistää julkisen tilan ja sen ympärillä tehtävän työn.",
+          "teksti": "Mahamoud Harbin aukio oli aikaisemmin Place Rimbaud. Sen ympärillä on vanhan keskustan kauppakujia ja ulkoilmabasaareja. Paikallisiin käsityötuotteisiin kuuluvat esimerkiksi punotut korit, laukut ja helmikorut. Kauppa sijoittuu kapeille kaduille, ja aukion yhteydessä kohoaa suuren moskeijan minareetti. Aukion kauppaan kuuluu sekä elintarvikkeita että käsitöitä, joita hankitaan keskustan kujilta. Aukio ja kujat muodostavat silti kaupungin asioinnin ympäristön: sama paikannimi yhdistää julkisen tilan ja sen ympärillä tehtävän työn.",
           "wiki": "Djibouti City",
           "tiedosto": "",
           "lyhyt": "",
@@ -58,7 +58,7 @@
         },
         {
           "otsikko": "Saaria korallin päällä",
-          "teksti": "Moucha ja Maskali sijaitsevat Tadjouran lahden suulla. Ne ovat kohonneita koralliriuttoja ja korallisaarekkeita, joilla kasvaa mangrovea. Vedenalaisessa ympäristössä on koralleja ja levää; alueeseen liittyy myös merilintuja, kilpikonnia ja rauskuja. Saariluonnon suojelussa on rajoitettu korallien ja simpukankuorien keräämistä sekä vedenalaista metsästystä. Saaret ovat kaupungista erillinen meriretken alue, eivät keskustan puisto. Niiden arvo kuuluu kokonaisuuteen, joka jatkuu rannalta pinnan alle.",
+          "teksti": "Moucha ja Maskali sijaitsevat Tadjouran lahden suulla. Ne ovat kohonneita koralliriuttoja ja korallisaarekkeita, joilla kasvaa mangrovea. Vedenalaisessa ympäristössä on koralleja ja levää; alueeseen liittyy myös merilintuja, kilpikonnia ja rauskuja. Saariluonnon suojelussa on rajoitettu korallien ja simpukankuorien keräämistä sekä vedenalaista metsästystä. Saaret sijaitsevat erillään kaupungista Tadjouran lahden suulla. Niiden arvo kuuluu kokonaisuuteen, joka jatkuu rannalta pinnan alle.",
           "wiki": "Moucha Island",
           "tiedosto": "",
           "lyhyt": "",
@@ -73,7 +73,7 @@
           "selite": "",
           "lahde": ""
         },
-        "kappale": "Djiboutissa matkalla tarvitaan tavallista enemmän varovaisuutta. Vanhassa keskustassa aukiot yhdistyvät kauppakujilla. Kalakeittiö kertoo rannikon yli kulkeneista vaikutteista. Saarille suuntautuvan retken ehdot on selvitettävä erikseen. Kuumuus, juomavesi ja paikalliset kuvausrajoitukset kuuluvat matkan valmisteluun.",
+        "kappale": "Vanhassa keskustassa aukiot yhdistyvät kauppakujilla. Kalakeittiö kertoo rannikon yli kulkeneista vaikutteista. Saarille suuntautuvan retken ehdot on selvitettävä erikseen. Kuumuus, juomavesi ja paikalliset kuvausrajoitukset kuuluvat matkan valmisteluun.",
         "artikkeli": {
           "nimi": "Matkailijan Djibouti",
           "taitto": "opas",
@@ -82,7 +82,7 @@
           "jaksot": [
             {
               "otsikko": "Keskustan kaksi aukiota",
-              "teksti": "Place du 27 Juin ja Mahamoud Harbin aukio liittyvät toisiinsa kauppakujilla. Kaupungissa on myös vihreitä takseja. Kulkujärjestelyt voivat muuttua, joten pysyvää kojureittiä ei kannata olettaa. Moskeijoiden vierailuehdot selvitetään paikallisesti.",
+              "teksti": "Place du 27 Juin ja Mahamoud Harbin aukio liittyvät toisiinsa kauppakujilla. Kaupungissa on myös vihreitä takseja. Kujilla myydään muun muassa punottuja koreja, laukkuja ja helmikoruja. Moskeijoiden vierailuehdot selvitetään paikallisesti.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -102,7 +102,7 @@
             },
             {
               "otsikko": "Merelle kaupungista",
-              "teksti": "Moucha ja Maskali ovat erillinen saariretken alue. Selvitä kuljetuksen, opastuksen ja mahdollisen sukelluksen nykyiset ehdot järjestäjältä. Noudata keräämisen ja vedenalaisen metsästyksen rajoituksia. Mangrove, korallit ja merilinnut ovat alueen luontoa, mutta eläinhavaintoja ei voi luvata.",
+              "teksti": "Moucha ja Maskali ovat erillinen saariretken alue. Selvitä kuljetuksen, opastuksen ja mahdollisen sukelluksen nykyiset ehdot järjestäjältä. Noudata keräämisen ja vedenalaisen metsästyksen rajoituksia. Saarten luontoon kuuluvat mangrove, korallit ja merilinnut.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -111,8 +111,8 @@
               }
             },
             {
-              "otsikko": "Kuumuus, vesi ja varovaisuus",
-              "teksti": "Ota vettä mukaan, etenkin kaupungin ulkopuolelle. Kuumuus on huomioitava päivän liikkumisessa. Eritrean raja-alueelle ei matkusteta eikä tukikohta-alueiden lähistölle mennä. Kaupungin ulkopuolella on vältettävä pimeällä ajoa.",
+              "otsikko": "Vanha rata ja Nagadin asema",
+              "teksti": "Vanha Ethio-Djibouti-rata oli metriraiteinen yhteys sisämaan Addis Abebasta Djiboutin satamaan. Nykyinen sähköistetty normaaliraiteinen rata on eri linja, jonka matkustaja-asema on Nagad. Keskustan vanha asema kuuluu aiempaan vaiheeseen.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -161,8 +161,8 @@
             ],
             "hyvaTietaa": [
               {
-                "otsikko": "Vesi",
-                "teksti": "Varaa juomavettä mukaan."
+                "otsikko": "Ennen matkapäätöstä",
+                "teksti": "Tarkista Djiboutin ajantasainen matkustustiedote Suomen ulkoministeriöstä ja noudata sen ohjeita."
               },
               {
                 "otsikko": "Pukeutuminen",
@@ -178,7 +178,7 @@
               }
             ]
           },
-          "lahde": "Wikipedia"
+          "lahde": "Wikipedia; Wikivoyage"
         }
       }
     },
@@ -198,7 +198,7 @@
         },
         {
           "otsikko": "Amboulin kylä ja puutarhat",
-          "teksti": "Ambouli on Djiboutin eteläinen kaupunginosa ja vanhempi kyläpaikka. Se oli olemassa ennen ranskalaisen satamakaupungin syntyä. Historiallisessa kaupunkikuvauksessa alueella viljeltiin taatelipalmuja ja mainittiin hedelmätarhoja. Nykyinen lentoasema on Amboulin alueella, mutta sen historia kuuluu toiseen aikaan kuin kylän vanhempi asutus. Kaupunginosan nimen alla on siis sekä aikaisempaa rannikon elämää että nykyisen pääkaupungin kulkuyhteyksiä; vanhaa tarhaa ei pidä samastaa koko nykyiseen alueeseen.",
+          "teksti": "Ambouli on Djiboutin eteläinen kaupunginosa ja vanhempi kyläpaikka. Se oli olemassa ennen ranskalaisen satamakaupungin syntyä. Historiallisessa kaupunkikuvauksessa alueella viljeltiin taatelipalmuja ja mainittiin hedelmätarhoja. Nykyinen lentoasema on Amboulin alueella, mutta sen historia kuuluu toiseen aikaan kuin kylän vanhempi asutus. Ambouli yhdistää vanhan kylän ja viljelyn historian nykyisiin kulkuyhteyksiin: siellä on Djiboutia palveleva kansainvälinen lentoasema.",
           "wiki": "Ambouli",
           "tiedosto": "",
           "lyhyt": "",
@@ -270,9 +270,9 @@
       "q": "Mitä kasvillisuutta korallisaarten yhteydessä on?",
       "options": [
         "Mangrovea",
-        "Kuusimetsää",
-        "Alppiniittyä",
-        "Koivikkoa"
+        "Palmulehtoja",
+        "Savanniruohikkoa",
+        "Saniaismetsää"
       ],
       "correct": 0,
       "level": 2,
@@ -284,13 +284,13 @@
       "q": "Millaisen yhteyden vanha Ethio-Djibouti-rata muodosti?",
       "options": [
         "Sisämaasta merisatamaan",
-        "Saarelta toiselle saarelle",
-        "Majakasta lentoasemalle",
-        "Aukiolta uimarannalle"
+        "Kaupungista rannikon toiseen satamaan",
+        "Lentoasemalta keskustaan",
+        "Viljelyalueelta kaivosseudulle"
       ],
       "correct": 0,
       "level": 3,
-      "hint": "Raide palvelee tavaran kulkua Etiopian puolelta rannikolle.",
+      "hint": "Raide oli osa Etiopian ja Djiboutin kaupankäyntiä.",
       "fact": "Vanha rata yhdisti Etiopian sisämaan Djiboutin satamaan.",
       "source": "https://en.wikipedia.org/wiki/Ethio-Djibouti_Railways"
     },
@@ -354,7 +354,7 @@
   },
   "valokuva": {
     "tiedosto": "Dingy in Djibouti harbor - panoramio.jpg",
-    "lyhyt": "Pieni moottorivene Djiboutin satama-alueella.",
+    "lyhyt": "Vene Djiboutin satamassa.",
     "selite": "Pieni moottorivene Djiboutin satama-alueella.",
     "lahde": "delrinian, Commons (CC BY-SA 3.0)"
   },

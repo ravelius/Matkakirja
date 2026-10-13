@@ -1,7 +1,7 @@
 {
   "artikkeli": {
-    "intro": "Kampala on Ugandan pääkaupunki **kukkuloilla ja niiden välisissä laaksoissa** lähellä Victoria-järveä. Sen nimi tarkoitti ensin nykyistä Old Kampala -kukkulaa. Nimen yleinen selitys liittyy impala-antilooppeihin, kun taas myöhempi linnake kuuluu toiseen kaupunkivaiheeseen. Isoisän matkavuonna 1873 seutu oli Bugandan kuningaskunnan ydinaluetta. Nykyistä linnakekaupungista kasvanutta Kampalaa ja sen myöhempiä laitoksia ei vielä ollut.\n\nKaupungin kasvaessa vanhoille mäille tuli erilaisia tehtäviä, kuten opetusta, hoitoa ja kaupankäyntiä. Nakasero-torin tuoretuotteet ja muut tavarat sijoittuvat sen eri osiin. **Makereren yliopisto alkoi teknisistä taidoista**, kuten puusepäntyöstä, rakentamisesta ja mekaniikasta. Ugandan museon kokoelmien tutkimus puolestaan jatkuu myös esineiden pitkissä lainajärjestelyissä ja yhteisöjen kanssa käytävässä keskustelussa.",
-    "teksti": "Kampalan paikannimet liittyvät maastoon, mutta sama nimi voi tarkoittaa myös naapurustoa tai laitosta. Mengo Hospital sijaitsee Namiremben alueella, ja Nakasero-tori on samannimisen kukkulan juurella. Paikan nimi ei siis yksin tarkoita yhtä rakennusta.\n\nKukkuloiden tehtävät ovat muuttuneet. Lubagan palatsialuetta seurasi myöhempi kirkollinen, hoito- ja opetusympäristö. Nsambyassa lähetysyhteisön rinnalle kehittyivät koulut ja sairaala. Fyysiset mäet ovat näitä rakennusvaiheita vanhempia.\n\nMakerere kasvoi teknisestä koulusta korkeakouluksi, kun taas museon työ yhdistää kokoelmat ja tutkimuksen. Cambridgesta tuodut esineet saapuivat pitkäaikaislainaan, eivät yhtenä lopullisena omistuksen siirtona. Kaupungin historia jatkuu näin myös laitosten käytännön työssä."
+    "intro": "Kampala on Ugandan pääkaupunki **kukkuloilla ja niiden välisissä laaksoissa** lähellä Victoriajärveä. Sen nimi tarkoitti ensin nykyistä Old Kampala -kukkulaa. Nimen yleinen selitys liittyy impala-antilooppeihin, kun taas myöhempi linnake kuuluu toiseen kaupunkivaiheeseen. Isoisän matkavuonna 1873 seutu oli Bugandan kuningaskunnan ydinaluetta. Linnakkeen ympärille kasvanutta nykykaupunkia ei vielä ollut.\n\nKaupungin kasvaessa vanhoille mäille tuli erilaisia tehtäviä, kuten opetusta, hoitoa ja kaupankäyntiä. Nakasero-torilla tuore ruoka myydään avoimessa osassa, vaatteet ja tarvikkeet suljetummassa rakennusosassa. **Makereren yliopisto alkoi teknisistä taidoista**, kuten puusepäntyöstä, rakentamisesta ja mekaniikasta. Ugandan museo tutkii kokoelmiaan myös pitkäaikaislainaan saatujen esineiden ja niiden alkuperäyhteisöjen kanssa.",
+    "teksti": "Kampalan kukkuloille on kehittynyt erilaisia tehtäviä. Nakasero-tori on samannimisen mäen juurella, Makereren yliopiston pääkampus taas kukkulalla. Mengo Hospital sijaitsee nimestään huolimatta Namiremben alueella.\n\nNamiremben kirkkorakennuksia on vaihdettu useita kertoja: myrsky rikkoi katon, yksi rakennus hylättiin termiittejä peläten ja salama sytytti toisen olkikaton. Lubagassa vanhaa palatsialuetta seurasi kirkollinen, hoito- ja opetusympäristö.\n\nMakereren alkuvaiheen koulussa opittiin puusepäntyötä, rakentamista ja mekaniikkaa. Museon työ puolestaan yhdistää esineet niiden käyttäjiin: Ugandan museo valitsi Cambridgen arkeologian ja antropologian museosta pitkäaikaislainaksi esineitä tutkimusta ja yhteisöjen kanssa käytävää keskustelua varten."
   },
   "kaupunkilehti": [
     {
@@ -23,7 +23,7 @@
         },
         {
           "tiedosto": "Makerere, Kikoni.jpg",
-          "lyhyt": "Makereren ja Kikonin alueen asutusta Kampalassa vuonna 2022.",
+          "lyhyt": "Makereren ja Kikonin asutusta.",
           "selite": "Makereren ja Kikonin alueen asutusta Kampalassa vuonna 2022.",
           "lahde": "Timothy Akolamazima, Wikimedia Commons (CC BY-SA 4.0)"
         }
@@ -31,7 +31,7 @@
       "nostot": [
         {
           "otsikko": "Kukkulan nimi levisi kaupungiksi",
-          "teksti": "Kampala-nimi tarkoitti ensin nykyistä Old Kampala -kukkulaa. Nimen yleinen selitys liittää sen impala-antilooppeihin ja Bugandan kuninkaan metsästysalueeseen. Lugandan Akasozi k’empala on tässä selityksessä impalakukkula. Myöhemmin mäelle rakennettiin Fort Lugard, ja kaupungin kasvaessa muille kukkuloille alkuperäistä aluetta alettiin kutsua Old Kampalaksi. Nykyinen naapurusto on asuin- ja kaupankäyntialuetta. Kaupungin nimen eläintausta ei siis tarkoita, että vanha kukkula olisi säilynyt villieläinpuistona.",
+          "teksti": "Kampala-nimi tarkoitti ensin nykyistä Old Kampala -kukkulaa. Nimen yleinen selitys liittää sen impala-antilooppeihin ja Bugandan kuninkaan metsästysalueeseen. Lugandan Akasozi k’empala on tässä selityksessä impalakukkula. Myöhemmin mäelle rakennettiin Fort Lugard, ja kaupungin kasvaessa muille kukkuloille alkuperäistä aluetta alettiin kutsua Old Kampalaksi. Nykyinen naapurusto on asuin- ja kaupankäyntialuetta. Old Kampalan eteläpuolella on Mengo, lännessä Namirembe ja idässä Nakasero; vanha nimi on siten jäänyt yhteen kaupungin mäistä.",
           "wiki": "Kampala Hill",
           "tiedosto": "",
           "lyhyt": "",
@@ -58,7 +58,7 @@
         },
         {
           "otsikko": "Museoesine palaa tutkimukseen",
-          "teksti": "Cambridgen MAA:n kokoelmista tuotiin esineitä Ugandan museoon 2020-luvulla pitkäaikaislainaan. Ugandan museon ammattilaiset valitsivat aineistoa tutkimuskäynnillä. Esineiden alkuperää ja merkitystä tutkitaan myös yhteisöjen kanssa keskustellen. Aiempiin kokoelmiin ne olivat päätyneet eri tavoin, joten kaikilla ei ole yhtä yhteistä hankintatarinaa. Pitkäaikaislaina ei ole sama asia kuin lopullinen omistuksen siirto. Museon työ yhdistää näin esineiden säilyttämisen, tutkimuksen ja sen, ketkä voivat kertoa niiden merkityksestä.",
+          "teksti": "Cambridgen yliopiston arkeologian ja antropologian museo lähetti vuonna 2024 Ugandan museoon pitkäaikaislainaksi 39 esinettä. Ugandan museon työntekijät olivat valinneet ne Cambridgessa tekemällään tutkimuskäynnillä. Esineet ovat peräisin Ugandan eri yhteisöistä ja kuningaskunnista, ja niitä tutkitaan alkuperäyhteisöjen kanssa. Kokoelmiin ne olivat päätyneet eri tavoin. Laina yhdistää esineiden säilyttämisen tutkimukseen, näyttelytyöhön ja niiden ihmisten tietoon, joiden kulttuurista ne ovat lähtöisin.",
           "wiki": "Uganda Museum",
           "tiedosto": "",
           "lyhyt": "",
@@ -73,16 +73,16 @@
           "selite": "",
           "lahde": ""
         },
-        "kappale": "Kampalassa maasto muodostuu kukkuloista ja niiden välisistä laaksoista. Nakasero-torin eri osat kertovat ruokakaupasta ja arkitavaroista. Makereren historia alkaa teknisistä taidoista, museon työ jatkuu kokoelmien tutkimuksessa. Matkalla tulee noudattaa erityistä varovaisuutta. Liikenne ja paikalliset pääsyehdot on huomioitava päivän suunnittelussa.",
+        "kappale": "Kampalan maasto muodostuu kukkuloista ja niiden välisistä laaksoista. Nakasero-torin eri osat palvelevat ruoka- ja tavarakauppaa. Makereren koulutushistoria alkaa teknisistä taidoista. Namiremben ja Lubagan kirkolliseen ympäristöön kuuluvat myös koulut ja sairaalat.",
         "artikkeli": {
           "nimi": "Matkailijan Kampala",
           "taitto": "opas",
           "teksti": "Tunne kaupungin maasto ja sen päälle kasvaneet arjen tehtävät.",
-          "nosto": "Tunne kaupungin maasto ja sen päälle kasvaneet arjen tehtävät.",
+          "nosto": "Kampalan mäillä kohtaavat vanhat paikannimet, torikauppa, korkeakoulutus ja sairaaloiden työ.",
           "jaksot": [
             {
               "otsikko": "Kukkuloilta toiselle",
-              "teksti": "Old Kampala, Namirembe ja Lubaga ovat vanhan keskustan länsipuolisia maastonpaikkoja; Nakasero on idempänä ja Makerere pohjoisessa. Liikenne kulkee mäkien ja laaksojen kautta. Suunnittele todelliset kulkureitit paikallisesti: kukkula ei tarkoita vapaata pääsyä jokaiselle yksityiselle pihalle.",
+              "teksti": "Old Kampala on kaupungin vanha ydin. Namirembe ja Lubaga sijaitsevat sen länsipuolella, Nakasero idempänä ja Makerere pohjoisessa. Liikenne kulkee kukkuloiden ja laaksojen kautta.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -111,8 +111,8 @@
               }
             },
             {
-              "otsikko": "Varovaisuus ja liikenne",
-              "teksti": "Noudata erityistä varovaisuutta, vältä suuria väkijoukkoja ja seuraa paikallisia ohjeita. Pimeällä liikkumista sekä yömaantieliikennettä tulee välttää. Boda-boda-moottoripyörätaksien käyttöä on vältettävä liikenneonnettomuusriskin vuoksi. Seuraa myös paikallisia sääennusteita.",
+              "otsikko": "Namiremben rakennusvaiheet",
+              "teksti": "Namiremben nykyistä tiilikatedraalia edelsi useita kirkkoja. Myrsky vaurioitti yhden katon, toinen rakennus hylättiin termiittituhojen pelon vuoksi ja salama sytytti olkikattoisen kirkon. Nykyisessä rakennuksessa on tiiliseinät ja tiilikatto.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -121,8 +121,8 @@
               }
             },
             {
-              "otsikko": "Saapuminen ja ajantasaiset asiat",
-              "teksti": "Kampalaa palveleva Entebben kansainvälinen lentoasema, EBB, on Entebbessä kaupungin ulkopuolella. Varmista maahantulo- ja viisumiehdot sekä ajantasaiset matkustusjärjestelyt ennen matkaa. Kaupungin sairaaloiden historia ei itsessään kerro matkailijan hoidon saatavuudesta.",
+              "otsikko": "Saapuminen Entebbestä",
+              "teksti": "Kampalaa palveleva Entebben kansainvälinen lentoasema (EBB) on Entebbessä kaupungin ulkopuolella. Pääkaupungissa eri kukkulat jäsentävät kaupunginosia: Nakasero, Makerere, Namirembe ja Lubaga ovat myös paikallisia osoitteita.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -165,8 +165,8 @@
                 "teksti": "Selvitä julkinen pääsy ja todellinen reitti kohteeseen."
               },
               {
-                "otsikko": "Moottoripyörätaksit",
-                "teksti": "Vältä boda-bodoja liikenneonnettomuusriskin vuoksi."
+                "otsikko": "Ennen matkapäätöstä",
+                "teksti": "Tarkista Ugandan ajantasainen matkustustiedote Suomen ulkoministeriöstä ja noudata sen liikennettä sekä turvallisuutta koskevia ohjeita."
               },
               {
                 "otsikko": "Vierailuehdot",
@@ -178,7 +178,7 @@
               }
             ]
           },
-          "lahde": "Wikipedia"
+          "lahde": "Wikipedia; Wikivoyage; Cambridgen yliopiston arkeologian ja antropologian museo"
         }
       }
     },
@@ -197,8 +197,8 @@
           "lahde": ""
         },
         {
-          "otsikko": "Rakennus on kukkulaa nuorempi",
-          "teksti": "Namiremben nykyistä tiilikatedraalia edelsi useita erilaisia kirkkoja. Ensimmäinen paikka oli alempana kostealla alueella ja jäi seurakunnalle pieneksi. Myöhemmän rakennuksen katto vaurioitui myrskyssä. Perinteisistä aineista tehty kirkko hylättiin termiittituhojen pelon vuoksi; toisessa vaiheessa salamanisku poltti olkikaton. Nykyinen 1900-luvun alun rakennus käyttää tiiltä ja tiilikattoa. Kukkula ja sen rauhaan liittyvä paikannimi ovat tätä taloa vanhempia. Rakennuspaikan jatkuvuus ei siis tarkoita yhtä muuttumatonta kirkkoa.",
+          "otsikko": "Namiremben kirkko rakennettiin uudelleen",
+          "teksti": "Namiremben nykyistä tiilikatedraalia edelsi useita erilaisia kirkkoja. Ensimmäinen paikka oli alempana kostealla alueella ja jäi seurakunnalle pieneksi. Myöhemmän rakennuksen katto vaurioitui myrskyssä. Perinteisistä aineista tehty kirkko hylättiin termiittituhojen pelon vuoksi; toisessa vaiheessa salamanisku poltti olkikaton. Nykyinen 1900-luvun alun rakennus käyttää tiiltä ja tiilikattoa. Namiremben nimi liittyy lugandan rauhaa tarkoittavaan mirembe-sanaan. Kirkkojen rakentaminen on muuttanut mäen ilmettä useita kertoja.",
           "wiki": "Namirembe Cathedral",
           "tiedosto": "",
           "lyhyt": "",
@@ -216,7 +216,7 @@
         },
         {
           "otsikko": "Nsambya, opetuksen ja hoidon mäki",
-          "teksti": "Nsambya on keskustan eteläisempi kukkula, jonka nimi ulottuu myös rinteiden kaupunginosaan. Mill Hill -lähetysyhteisö aloitti toimintaansa siellä 1800-luvun lopulla. Kirkon rinnalle tuli kouluja ja hoitotoimintaa. St. Francis alkoi lääke- ja hoitopaikkana 1900-luvun alkupuolella ja kasvoi sairaalaksi, jonka yhteydessä kehittyi hoitajien koulutusta. Nykyinen opetus- ja yhteisösairaala on siis osa mäen myöhempää historiaa. Nsambyan tarinassa hoito ja oppiminen liittyvät toisiinsa, mutta fyysinen kukkula on näitä laitoksia vanhempi.",
+          "teksti": "Nsambya on keskustan eteläisempi kukkula, jonka nimi ulottuu myös rinteiden kaupunginosaan. Mill Hill -lähetysyhteisö aloitti toimintaansa siellä 1800-luvun lopulla. Kirkon rinnalle tuli kouluja ja hoitotoimintaa. St. Francis alkoi lääke- ja hoitopaikkana 1900-luvun alkupuolella ja kasvoi sairaalaksi, jonka yhteydessä kehittyi hoitajien koulutusta. Nykyinen opetus- ja lähetesairaala on siis osa mäen myöhempää historiaa. Nsambyassa sairaalahoito ja terveysalan koulutus kuuluvat samoihin laitoksiin; sairaala vastaanottaa myös muualta hoitoon lähetettyjä potilaita.",
           "wiki": "Nsambya",
           "tiedosto": "",
           "lyhyt": "",
@@ -248,7 +248,7 @@
       ],
       "correct": 0,
       "level": 1,
-      "hint": "Maa sijaitsee Victoria-järven pohjoispuolella.",
+      "hint": "Maa sijaitsee Victoriajärven pohjoispuolella.",
       "fact": "Kampala on Ugandan pääkaupunki.",
       "source": "https://en.wikipedia.org/wiki/Kampala"
     },
@@ -256,13 +256,13 @@
       "q": "Mikä eläin liittyy Kampala-nimen yleiseen selitykseen?",
       "options": [
         "Impala",
-        "Strutsi",
-        "Leopardi",
-        "Dromedaari"
+        "Puhveli",
+        "Sakaali",
+        "Leopardi"
       ],
       "correct": 0,
       "level": 1,
-      "hint": "Nimenselitys liittyy antilooppiin.",
+      "hint": "Nimenselitys liittyy Bugandan kuninkaan vanhaan metsästysalueeseen.",
       "fact": "Old Kampalan nimen yleinen selitys viittaa impalakukkulaan.",
       "source": "https://en.wikipedia.org/wiki/Kampala_Hill"
     },
@@ -285,12 +285,12 @@
       "options": [
         "Avoimessa osassa",
         "Suljetussa osassa",
-        "Kellotornissa",
-        "Kampusalueella"
+        "Ylemmässä kerroksessa",
+        "Torin ulkopuolisella kadulla"
       ],
       "correct": 0,
       "level": 2,
-      "hint": "Ruokatavaran alue on osittain katettu.",
+      "hint": "Tori jakautuu erilaisiin myyntitiloihin.",
       "fact": "Torin avoin alue painottuu tuoreisiin elintarvikkeisiin.",
       "source": "https://en.wikipedia.org/wiki/Nakasero_Market"
     },
@@ -299,18 +299,18 @@
       "options": [
         "Pitkäaikaislainana",
         "Pysyvänä lahjana",
-        "Lyhyenä myyntinä",
-        "Tilapäisenä panttina"
+        "Museoiden välisenä ostona",
+        "Kokoelmien vaihtona"
       ],
       "correct": 0,
       "level": 3,
-      "hint": "Järjestely ei tarkoita lopullista omistuksen siirtoa.",
+      "hint": "Museot sopivat esineiden tutkimuksesta ja esittelystä yhdessä.",
       "fact": "Esineitä tuotiin museoon pitkäaikaista laina- ja tutkimustyötä varten.",
       "source": "https://maa.cam.ac.uk/news/repositioning-the-uganda-museum"
     }
   ],
   "tiedot": [
-    "Namiremben fyysinen kukkula on sen nykyistä katedraalirakennusta vanhempi.",
+    "Namiremben aiempien kirkkojen kattoja vaurioittivat myrsky ja salamanisku; yksi rakennus hylättiin termiittituhojen pelon vuoksi.",
     "Makereren yliopiston taustalla on puusepäntyötä, rakentamista ja mekaniikkaa opettanut tekninen koulu.",
     "Museoesineiden pitkäaikaislaina on eri asia kuin niiden omistuksen lopullinen siirto."
   ],
@@ -371,11 +371,11 @@
   "nahtavyydet": {
     "Vanhan Kampalan kukkula": {
       "aika": "vanha maastonpaikka; myöhempi kaupunkikerros",
-      "teksti": "Old Kampala eli Kampala Hill on fyysinen kukkula keskustassa. Kampala-nimi tarkoitti ensin tätä paikkaa, ja sen yleinen selitys liittyy impala-antilooppeihin sekä Bugandan kuninkaan metsästysalueeseen. Kaupungin levittäytyessä muille mäille vanhaa aluetta alettiin kutsua Old Kampalaksi. Nykyisessä naapurustossa on asumista ja kaupankäyntiä.\n\nMakerere sijaitsee pohjoisessa, Namirembe lännessä ja Nakasero idempänä. Vuonna 1873 seutu oli Bugandan ydinaluetta, mutta myöhempää Fort Lugardia ei vielä ollut. Kukkulan historia kertoo maastonpaikasta ja kaupungin nimen laajenemisesta. Sen päällä olevat nykyiset rakennukset ovat omia myöhempiä kohteitaan, eikä niiden ikä ole sama kuin kukkulan tai paikannimen ikä.",
+      "teksti": "Old Kampala eli Kampala Hill on kukkula keskustassa. Kampala-nimi tarkoitti ensin tätä paikkaa, ja sen yleinen selitys liittyy impala-antilooppeihin sekä Bugandan kuninkaan metsästysalueeseen. Kaupungin levittäytyessä muille mäille vanhaa aluetta alettiin kutsua Old Kampalaksi. Nykyisessä naapurustossa on asumista ja kaupankäyntiä.\n\nMakerere sijaitsee pohjoisessa, Namirembe lännessä ja Nakasero idempänä. Vuonna 1873 seutu oli Bugandan ydinaluetta, mutta myöhempää Fort Lugardia ei vielä ollut. Kukkulan historia kertoo maastonpaikasta ja kaupungin nimen laajenemisesta. Fort Lugard kuului myöhempään brittiläiseen kaupunkivaiheeseen, jonka jälkeen Kampala kasvoi alkuperäisen kukkulan ulkopuolelle.",
       "kuvat": [
         {
           "tiedosto": "Gaddafi Mosque view 24.jpg",
-          "lyhyt": "Näkymä Vanhan Kampalan kukkulalta kaupungin asutukseen ja muille kukkuloille, 2015.",
+          "lyhyt": "Kampalan kukkuloita ja asutusta.",
           "selite": "Näkymä Vanhan Kampalan kukkulalta kaupungin asutukseen ja muille kukkuloille, 2015.",
           "lahde": "Ruslik0, Wikimedia Commons (CC BY-SA 4.0)"
         }
@@ -384,7 +384,7 @@
     },
     "Namiremben kukkula": {
       "aika": "vanha kukkula; lähetyskeskus 1800-luvun lopulta",
-      "teksti": "Namirembe on kukkula vanhan kaupungin länsipuolella. Sen nimi liittyy lugandan rauhaa tarkoittavaan mirembe-sanaan. Old Kampala on idässä, Lubaga lounaassa ja Mengo kaakossa. Fyysinen mäki on nykyistä katedraalirakennusta vanhempi ja kuuluu kaupungin maastoon omana paikkanaan.\n\nAnglikaaninen instituutio tuli alueelle 1800-luvun lopulla, ja nykyistä tiilikirkkoa edelsi useita eri rakennuksia. Myös Mengo Hospital sijaitsee tällä alueella nimestään huolimatta. Vuonna 1873 myöhempää anglikaanista keskusta ja nykyistä kirkkoa ei ollut. Paikannimen, laitoksen ja rakennuksen historia ovat siten eri kerroksia.",
+      "teksti": "Namirembe on kukkula vanhan kaupungin länsipuolella. Sen nimi liittyy lugandan rauhaa tarkoittavaan mirembe-sanaan. Old Kampala on idässä, Lubaga lounaassa ja Mengo kaakossa. Namirembe sijaitsee mäellä, jonka nimen mirembe-sana tarkoittaa rauhaa.\n\nAnglikaaninen instituutio tuli alueelle 1800-luvun lopulla, ja nykyistä tiilikirkkoa edelsi useita eri rakennuksia. Myös Mengo Hospital sijaitsee tällä alueella nimestään huolimatta. Vuonna 1873 myöhempää anglikaanista keskusta ja nykyistä kirkkoa ei ollut. Namiremben kirkkojen uudelleenrakentaminen myrskyn, termiittituhojen pelon ja salamaniskun jälkeen muutti mäen ilmettä.",
       "kuvat": [
         {
           "tiedosto": "",
@@ -397,7 +397,7 @@
     },
     "Lubagan kukkula": {
       "aika": "vanha palatsipaikan kukkula; myöhempiä laitoksia",
-      "teksti": "Lubaga eli Rubaga on fyysinen kukkula ja samanniminen naapurusto Kampalan vanhassa länsiytimessä. Mengo sijaitsee sen itäpuolella ja Namirembe koillisessa. Mäellä oli Bugandan palatsialue ennen nykyisen katedraalin aikaa, joten sen kaupunkihistoria ei ala kirkon rakentamisesta.\n\nKatolinen lähetysyhteisö sai myöhemmin maata kukkulalta, ja alueelle tuli kirkollisen toiminnan lisäksi hoitoa sekä koulutusta. Sairaala ja hoitajakoulu kuuluvat tähän myöhempään kerrokseen. Vuonna 1873 alue oli vanhemman palatsikeskuksen maisemaa, mutta nykyinen 1900-luvun alkupuolen katedraali ei vielä ollut siellä. Kukkulan kaksi nimeä tarkoittavat samaa maastonpaikkaa, jonka tehtävät ovat vaihtuneet.",
+      "teksti": "Lubaga eli Rubaga on kukkula ja samanniminen naapurusto Kampalan vanhassa länsiytimessä. Mengo sijaitsee sen itäpuolella ja Namirembe koillisessa. Mäellä oli Bugandan palatsialue ennen nykyisen katedraalin aikaa, joten sen kaupunkihistoria ei ala kirkon rakentamisesta.\n\nKatolinen lähetysyhteisö sai myöhemmin maata kukkulalta, ja alueelle tuli kirkollisen toiminnan lisäksi hoitoa sekä koulutusta. Sairaala ja hoitajakoulu kuuluvat tähän myöhempään kerrokseen. Kukkulalla ollut palatsi paloi Muteesa I:n kaudella, ja hovi siirtyi pois. Katolinen lähetysyhteisö tuli alueelle vasta vuoden 1873 jälkeen. Kukkulan kaksi nimeä tarkoittavat samaa maastonpaikkaa, jonka tehtävät ovat vaihtuneet.",
       "kuvat": [
         {
           "tiedosto": "",
@@ -410,7 +410,7 @@
     },
     "Nakasero-kukkula": {
       "aika": "vanha maasto; myöhempi kauppa ja hallinto",
-      "teksti": "Nakasero on keskustan kukkula ja sen rinteille levittäytyvä naapurusto. Alemmilla länsi- ja etelärinteillä on kaupan sekä liikkumisen toimintaa, ylemmälle alueelle sijoittui myöhemmin hallintoa ja muita laitoksia. Nakasero-tori on alempana kukkulan juurella, eikä sen paikka ole sama kuin kukkulan oma sijainti.\n\nOld Kampala on lännessä, Makerere luoteessa ja Kololo idässä. Alueen myöhempi linnake kuului brittiläisen siirtomaakaupungin vaiheeseen. Vuoden 1873 maastonpaikkaa ei pidä samastaa näihin myöhempiin rakennuksiin tai nykyisiin liike- ja hallintokortteleihin. Nakasero kertoo siitä, kuinka kaupungin tehtävät sijoittuvat saman mäen eri korkeuksille ja miten naapuruston nimi voi kattaa useita paikkoja.",
+      "teksti": "Nakasero on keskustan kukkula ja sen rinteille levittäytyvä naapurusto. Alemmilla länsi- ja etelärinteillä on kaupan sekä liikkumisen toimintaa, ylemmälle alueelle sijoittui myöhemmin hallintoa ja muita laitoksia. Nakasero-tori on alempana kukkulan juurella, eikä sen paikka ole sama kuin kukkulan oma sijainti.\n\nOld Kampala on lännessä, Makerere luoteessa ja Kololo idässä. Alueen myöhempi linnake kuului brittiläisen siirtomaakaupungin vaiheeseen. Vuonna 1873 myöhempi linnake ja nykyiset liike- sekä hallintokorttelit eivät vielä olleet kukkulalla. Nakasero kertoo siitä, kuinka kaupungin tehtävät sijoittuvat saman mäen eri korkeuksille ja miten naapuruston nimi voi kattaa useita paikkoja.",
       "kuvat": [
         {
           "tiedosto": "",
@@ -423,7 +423,7 @@
     },
     "Kibulin kukkula": {
       "aika": "vanha maasto; myöhempi yhteisö- ja opetusympäristö",
-      "teksti": "Kibuli on fyysinen kukkula keskisessä Kampalassa. Sen nimi tarkoittaa myös rinteiden asuin- ja kaupallisia alueita. Nsambya on lounaassa ja Namuwongo itäpuolella. Kukkula liittyy kaupungin muslimiyhteisön käyttämiin alueisiin, mutta maastonpaikka ja nykyisen moskeijan rakennus ovat eri asioita.\n\nPrince Nuhu Mbogo lahjoitti maata ensimmäiseen moskeijaan liittyvää käyttöä varten. Myöhempää lahjoitettua maata käytettiin myös koulu- ja hoitotoimintaan; alueen oppilaitoksiin kuuluvat Kibuli Secondary School ja Teacher Training College. Nämä nimetyt vaiheet ovat vuotta 1873 myöhempiä. Kukkulan kaupunkihistoria kertoo yhteisön, opetuksen ja asumisen ympäristöstä, ilman että nykyiset rakennukset olisivat sama kohde kuin mäki.",
+      "teksti": "Kibuli on kukkula keskisessä Kampalassa. Sen nimi tarkoittaa myös rinteiden asuin- ja kaupallisia alueita. Nsambya on lounaassa ja Namuwongo itäpuolella. Kibuli kuuluu kaupungin muslimiyhteisön historiallisiin paikkoihin.\n\nPrinssi Nuhu Mbogo lahjoitti maata ensimmäiseen moskeijaan liittyvää käyttöä varten. Myöhempää lahjoitettua maata käytettiin myös koulu- ja hoitotoimintaan; alueen oppilaitoksiin kuuluvat Kibulin lukio ja opettajankoulutuslaitos. Nämä nimetyt vaiheet ovat vuotta 1873 myöhempiä. Kibulin rinteillä asutaan ja käydään kauppaa, kun taas oppilaitokset ja hoitotoiminta ovat mäen myöhempiä yhteisöllisiä tehtäviä.",
       "kuvat": [
         {
           "tiedosto": "",
@@ -449,7 +449,7 @@
     },
     "Makereren kukkula": {
       "aika": "vanha maasto; korkeakoulutus 1900-luvulta",
-      "teksti": "Makerere on fyysinen kukkula ja sen mukaan nimetty kaupunginosa. Old Kampala on etelässä, Wandegeya kaakossa ja Mulago idässä. Yliopiston pääkampus sijoittuu kukkulalle, mutta alueella on myös muita oppilaitoksia sekä kampusrajan ulkopuolista opiskelija-asumista.\n\nMakereren opetuksen taustalla oli 1900-luvun alkupuolen tekninen koulu, jossa opiskeltiin puusepäntyötä, rakentamista ja mekaniikkaa. Ammattiopinnot laajenivat myöhemmin korkeakoulutukseksi. Vuonna 1873 tätä koulua tai yliopistoa ei vielä ollut. Kukkula on siis vanhempi kuin sen nykyinen opetusrooli, eikä kaupunginosan koko rakennusjoukko ole yksi alkuperäinen yliopistotalo. Maastonpaikan historiaa voi seurata myös sen päälle kasvaneiden tehtävien kautta.",
+      "teksti": "Makerere on kukkula ja sen mukaan nimetty kaupunginosa. Old Kampala on etelässä, Wandegeya kaakossa ja Mulago idässä. Yliopiston pääkampus sijoittuu kukkulalle, mutta alueella on myös muita oppilaitoksia sekä kampusrajan ulkopuolista opiskelija-asumista.\n\nMakereren opetuksen taustalla oli 1900-luvun alkupuolen tekninen koulu, jossa opiskeltiin puusepäntyötä, rakentamista ja mekaniikkaa. Ammattiopinnot laajenivat myöhemmin korkeakoulutukseksi. Vuonna 1873 tätä koulua tai yliopistoa ei vielä ollut. Yliopiston pääkampuksen lisäksi kukkulan ympärillä on muita oppilaitoksia ja opiskelija-asuntoja. Maastonpaikan historiaa voi seurata myös sen päälle kasvaneiden tehtävien kautta.",
       "kuvat": [
         {
           "tiedosto": "",
@@ -489,8 +489,8 @@
   },
   "valokuva": {
     "tiedosto": "A local small forest in Kampala Uganda.jpg",
-    "lyhyt": "Paikallista metsämaisemaa Kampalasta.",
-    "selite": "Paikallista metsämaisemaa Kampalasta.",
+    "lyhyt": "Metsäkaistale Kampalassa.",
+    "selite": "Puustoa, matalaa kasvillisuutta ja polku Kampalassa vuonna 2026.",
     "lahde": "Gratypius, Commons (CC BY-SA 4.0)",
     "vuosi": "2026"
   },

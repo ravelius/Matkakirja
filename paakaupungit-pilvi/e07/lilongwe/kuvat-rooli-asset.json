@@ -3,7 +3,7 @@
   "era": "e07",
   "city": "lilongwe",
   "authorization": "hyväksyn kaikki tekemäsi kuvat. toimita ne claudelle. claudelta saat uusia ohjeita jatkoa varten",
-  "sourceContentAfterSHA256": "2f6d0e006b1b04cc9a459c316f6737355cbb7bf4d2de971ddb18a5c3aba4dd8a",
+  "sourceContentAfterSHA256": "a71e8c7d569a3b4cb6d848c35c1159bc20159718a1c6ad245b54744179ee97ba",
   "assets": [
     {
       "era": "e07",
@@ -28,10 +28,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/lilongwe/e07-lilongwe-O3-v1-20261012-2129a082eefb.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Nsima-aterian havainnekuva; ei Lilongwen torin tietyn myyjän annos.",
-        "lyhyt": "Nsima-aterian havainnekuva; ei Lilongwen torin tietyn myyjän annos."
+        "selite": "Nsima-aterian havainnekuva; ei Lilongwen torin tietyn myyjän annos."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -39,10 +39,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/lilongwe/e07-lilongwe-O3-v1-20261012-2129a082eefb.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Nsima-aterian havainnekuva; ei Lilongwen torin tietyn myyjän annos.",
-        "lyhyt": "Nsima-aterian havainnekuva; ei Lilongwen torin tietyn myyjän annos."
+        "selite": "Nsima-aterian havainnekuva; ei Lilongwen torin tietyn myyjän annos."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -56,10 +56,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lilongwe/sisalto.json",
-      "sourceContentSHA256": "2f6d0e006b1b04cc9a459c316f6737355cbb7bf4d2de971ddb18a5c3aba4dd8a",
+      "sourceContentSHA256": "a71e8c7d569a3b4cb6d848c35c1159bc20159718a1c6ad245b54744179ee97ba",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "f1e1290dd7334126013f8d47aa5731664403f1e485d1fd90fefec84f9c1d7da4",
+        "semanticContextSHA256": "9a5eca2307b8810fe3af8441fb5cd9d9583709ff4b87b49c877fc6df69b9b2bd",
         "subjectTitle": "Nsima ja torikauppa",
         "targetState": "existing-target"
       },
@@ -216,9 +216,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -237,17 +237,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "2f6d0e006b1b04cc9a459c316f6737355cbb7bf4d2de971ddb18a5c3aba4dd8a",
+      "sourceContentAfterSHA256": "a71e8c7d569a3b4cb6d848c35c1159bc20159718a1c6ad245b54744179ee97ba",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "f1e1290dd7334126013f8d47aa5731664403f1e485d1fd90fefec84f9c1d7da4",
+      "contextAfterSHA256": "9a5eca2307b8810fe3af8441fb5cd9d9583709ff4b87b49c877fc6df69b9b2bd",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "2f6d0e006b1b04cc9a459c316f6737355cbb7bf4d2de971ddb18a5c3aba4dd8a",
+        "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "contextAfterSHA256": "f1e1290dd7334126013f8d47aa5731664403f1e485d1fd90fefec84f9c1d7da4",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+          "semanticContextSHA256": "f1e1290dd7334126013f8d47aa5731664403f1e485d1fd90fefec84f9c1d7da4",
+          "subjectTitle": "Nsima ja torikauppa",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "a71e8c7d569a3b4cb6d848c35c1159bc20159718a1c6ad245b54744179ee97ba",
+        "sameImageNativeSHA256": "2129a082eefbb6fa72ac5ee845447d4b09f7dc1ae9414cb171ff99f7b8b61538",
+        "sameImageExportSHA256": "89aef5fc26d9b20efb084f92801257faaaaa2f740c63987a86c234de58c6f357",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e07",
@@ -269,10 +290,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/lilongwe/e07-lilongwe-K2-v1-20261012-50ed7c7543f9.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Nsima-aterian havainnekuva; ei Lilongwen ravintolavalokuva.",
-        "lyhyt": "Nsima-aterian havainnekuva; ei Lilongwen ravintolavalokuva."
+        "selite": "Nsima-aterian havainnekuva; ei Lilongwen ravintolavalokuva."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -280,10 +301,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/lilongwe/e07-lilongwe-K2-v1-20261012-50ed7c7543f9.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Nsima-aterian havainnekuva; ei Lilongwen ravintolavalokuva.",
-        "lyhyt": "Nsima-aterian havainnekuva; ei Lilongwen ravintolavalokuva."
+        "selite": "Nsima-aterian havainnekuva; ei Lilongwen ravintolavalokuva."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -297,7 +318,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lilongwe/sisalto.json",
-      "sourceContentSHA256": "2f6d0e006b1b04cc9a459c316f6737355cbb7bf4d2de971ddb18a5c3aba4dd8a",
+      "sourceContentSHA256": "a71e8c7d569a3b4cb6d848c35c1159bc20159718a1c6ad245b54744179ee97ba",
       "semanticSourceBind": {
         "targetBeforeSHA256": "bf02727a27b60ff3c29d0b43b8543a90ef313b27f5e20c50bd03c5b799593512",
         "semanticContextSHA256": "bf02727a27b60ff3c29d0b43b8543a90ef313b27f5e20c50bd03c5b799593512",
@@ -458,9 +479,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -479,17 +500,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "2f6d0e006b1b04cc9a459c316f6737355cbb7bf4d2de971ddb18a5c3aba4dd8a",
+      "sourceContentAfterSHA256": "a71e8c7d569a3b4cb6d848c35c1159bc20159718a1c6ad245b54744179ee97ba",
       "targetAfterSHA256": "bf02727a27b60ff3c29d0b43b8543a90ef313b27f5e20c50bd03c5b799593512",
       "contextAfterSHA256": "bf02727a27b60ff3c29d0b43b8543a90ef313b27f5e20c50bd03c5b799593512",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "2f6d0e006b1b04cc9a459c316f6737355cbb7bf4d2de971ddb18a5c3aba4dd8a",
+        "targetAfterSHA256": "bf02727a27b60ff3c29d0b43b8543a90ef313b27f5e20c50bd03c5b799593512",
+        "contextAfterSHA256": "bf02727a27b60ff3c29d0b43b8543a90ef313b27f5e20c50bd03c5b799593512",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "bf02727a27b60ff3c29d0b43b8543a90ef313b27f5e20c50bd03c5b799593512",
+          "semanticContextSHA256": "bf02727a27b60ff3c29d0b43b8543a90ef313b27f5e20c50bd03c5b799593512",
+          "subjectTitle": "Nsima alkaa jo pellolla",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "a71e8c7d569a3b4cb6d848c35c1159bc20159718a1c6ad245b54744179ee97ba",
+        "sameImageNativeSHA256": "50ed7c7543f95acf339541e6992125cc2ad831aefa9ef06466e02d170ee5d8ac",
+        "sameImageExportSHA256": "719caf696baa5b380f7fc40cc1ad4ef05d9976cb9d37133f92c1b1f597d23154",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e07",
@@ -511,10 +553,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/lilongwe/e07-lilongwe-K3-v1-20261012-eaaf908877cd.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Maataloustuotteiden havainnekuva Lilongwen torikaupan aiheeseen.",
-        "lyhyt": "Maataloustuotteiden havainnekuva Lilongwen torikaupan aiheeseen."
+        "selite": "Maataloustuotteiden havainnekuva Lilongwen torikaupan aiheeseen."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -522,10 +564,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/lilongwe/e07-lilongwe-K3-v1-20261012-eaaf908877cd.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Maataloustuotteiden havainnekuva Lilongwen torikaupan aiheeseen.",
-        "lyhyt": "Maataloustuotteiden havainnekuva Lilongwen torikaupan aiheeseen."
+        "selite": "Maataloustuotteiden havainnekuva Lilongwen torikaupan aiheeseen."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -539,7 +581,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lilongwe/sisalto.json",
-      "sourceContentSHA256": "2f6d0e006b1b04cc9a459c316f6737355cbb7bf4d2de971ddb18a5c3aba4dd8a",
+      "sourceContentSHA256": "a71e8c7d569a3b4cb6d848c35c1159bc20159718a1c6ad245b54744179ee97ba",
       "semanticSourceBind": {
         "targetBeforeSHA256": "a33be3bcef7e786892fafbd3c5a5b352d1dcd17765e68f444c1a2a5e8d77635f",
         "semanticContextSHA256": "a33be3bcef7e786892fafbd3c5a5b352d1dcd17765e68f444c1a2a5e8d77635f",
@@ -700,9 +742,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -721,17 +763,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "2f6d0e006b1b04cc9a459c316f6737355cbb7bf4d2de971ddb18a5c3aba4dd8a",
+      "sourceContentAfterSHA256": "a71e8c7d569a3b4cb6d848c35c1159bc20159718a1c6ad245b54744179ee97ba",
       "targetAfterSHA256": "a33be3bcef7e786892fafbd3c5a5b352d1dcd17765e68f444c1a2a5e8d77635f",
       "contextAfterSHA256": "a33be3bcef7e786892fafbd3c5a5b352d1dcd17765e68f444c1a2a5e8d77635f",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "2f6d0e006b1b04cc9a459c316f6737355cbb7bf4d2de971ddb18a5c3aba4dd8a",
+        "targetAfterSHA256": "a33be3bcef7e786892fafbd3c5a5b352d1dcd17765e68f444c1a2a5e8d77635f",
+        "contextAfterSHA256": "a33be3bcef7e786892fafbd3c5a5b352d1dcd17765e68f444c1a2a5e8d77635f",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "a33be3bcef7e786892fafbd3c5a5b352d1dcd17765e68f444c1a2a5e8d77635f",
+          "semanticContextSHA256": "a33be3bcef7e786892fafbd3c5a5b352d1dcd17765e68f444c1a2a5e8d77635f",
+          "subjectTitle": "Torikaupunki ulottuu pelloille",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "a71e8c7d569a3b4cb6d848c35c1159bc20159718a1c6ad245b54744179ee97ba",
+        "sameImageNativeSHA256": "eaaf908877cd377dd86804f6d590b307e803b2424e4da630e648495719837d93",
+        "sameImageExportSHA256": "e15b3285f48e77b303e502679aeb13b56a68859f45c5cc122cbbe60184bebcc4",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e07",
@@ -753,10 +816,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/lilongwe/e07-lilongwe-L1-v2-20261012-fc2ce7c7a693.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Combretum molle -lajin siivellisen hedelmän havainnekuva.",
-        "lyhyt": "Combretum molle -lajin siivellisen hedelmän havainnekuva."
+        "selite": "Combretum molle -lajin siivellisen hedelmän havainnekuva."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -764,10 +827,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/lilongwe/e07-lilongwe-L1-v2-20261012-fc2ce7c7a693.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Combretum molle -lajin siivellisen hedelmän havainnekuva.",
-        "lyhyt": "Combretum molle -lajin siivellisen hedelmän havainnekuva."
+        "selite": "Combretum molle -lajin siivellisen hedelmän havainnekuva."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -781,10 +844,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lilongwe/sisalto.json",
-      "sourceContentSHA256": "2f6d0e006b1b04cc9a459c316f6737355cbb7bf4d2de971ddb18a5c3aba4dd8a",
+      "sourceContentSHA256": "a71e8c7d569a3b4cb6d848c35c1159bc20159718a1c6ad245b54744179ee97ba",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "a7097c3c9e1de6bce96636679d520d69755afc5d313b0217c32e4283becce6ea",
-        "semanticContextSHA256": "a7097c3c9e1de6bce96636679d520d69755afc5d313b0217c32e4283becce6ea",
+        "targetBeforeSHA256": "3dce425adb6272524e98289f804c8f73e1aa5a7c4e216484a172d125a4383160",
+        "semanticContextSHA256": "3dce425adb6272524e98289f804c8f73e1aa5a7c4e216484a172d125a4383160",
         "subjectTitle": "Puulla on siivet hedelmässä",
         "targetState": "existing-target"
       },
@@ -958,9 +1021,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -979,17 +1042,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "2f6d0e006b1b04cc9a459c316f6737355cbb7bf4d2de971ddb18a5c3aba4dd8a",
-      "targetAfterSHA256": "a7097c3c9e1de6bce96636679d520d69755afc5d313b0217c32e4283becce6ea",
-      "contextAfterSHA256": "a7097c3c9e1de6bce96636679d520d69755afc5d313b0217c32e4283becce6ea",
+      "sourceContentAfterSHA256": "a71e8c7d569a3b4cb6d848c35c1159bc20159718a1c6ad245b54744179ee97ba",
+      "targetAfterSHA256": "3dce425adb6272524e98289f804c8f73e1aa5a7c4e216484a172d125a4383160",
+      "contextAfterSHA256": "3dce425adb6272524e98289f804c8f73e1aa5a7c4e216484a172d125a4383160",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "2f6d0e006b1b04cc9a459c316f6737355cbb7bf4d2de971ddb18a5c3aba4dd8a",
+        "targetAfterSHA256": "a7097c3c9e1de6bce96636679d520d69755afc5d313b0217c32e4283becce6ea",
+        "contextAfterSHA256": "a7097c3c9e1de6bce96636679d520d69755afc5d313b0217c32e4283becce6ea",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "a7097c3c9e1de6bce96636679d520d69755afc5d313b0217c32e4283becce6ea",
+          "semanticContextSHA256": "a7097c3c9e1de6bce96636679d520d69755afc5d313b0217c32e4283becce6ea",
+          "subjectTitle": "Puulla on siivet hedelmässä",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "a71e8c7d569a3b4cb6d848c35c1159bc20159718a1c6ad245b54744179ee97ba",
+        "sameImageNativeSHA256": "fc2ce7c7a693ebbaa766cb886484a2dadd4bf427b5b581b2174ddd70e9980e87",
+        "sameImageExportSHA256": "fa26238987dd8d2b9d23775bf0143836df0a45abe83e36819fefce0a75564b5e",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e07",
@@ -1011,10 +1095,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/lilongwe/e07-lilongwe-L2-v1-20261012-c8aa9a4bc820.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Vervet-apinoiden turkinhoidon havainnekuva; ei todellinen Lilongwen kohtaaminen.",
-        "lyhyt": "Vervet-apinoiden turkinhoidon havainnekuva; ei todellinen Lilongwen kohtaaminen."
+        "selite": "Vervet-apinoiden turkinhoidon havainnekuva; ei todellinen Lilongwen kohtaaminen."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -1022,10 +1106,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/lilongwe/e07-lilongwe-L2-v1-20261012-c8aa9a4bc820.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Vervet-apinoiden turkinhoidon havainnekuva; ei todellinen Lilongwen kohtaaminen.",
-        "lyhyt": "Vervet-apinoiden turkinhoidon havainnekuva; ei todellinen Lilongwen kohtaaminen."
+        "selite": "Vervet-apinoiden turkinhoidon havainnekuva; ei todellinen Lilongwen kohtaaminen."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -1039,10 +1123,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lilongwe/sisalto.json",
-      "sourceContentSHA256": "2f6d0e006b1b04cc9a459c316f6737355cbb7bf4d2de971ddb18a5c3aba4dd8a",
+      "sourceContentSHA256": "a71e8c7d569a3b4cb6d848c35c1159bc20159718a1c6ad245b54744179ee97ba",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "f666f9c4ff64a71edc6ed9ec3ac06371dcf353eb6756982fd23c7724baa9a764",
-        "semanticContextSHA256": "f666f9c4ff64a71edc6ed9ec3ac06371dcf353eb6756982fd23c7724baa9a764",
+        "targetBeforeSHA256": "4bc5568ec4f1d103e4d7ff151e6f0f61b600806186c1a500ad87d05a1ae48cc5",
+        "semanticContextSHA256": "4bc5568ec4f1d103e4d7ff151e6f0f61b600806186c1a500ad87d05a1ae48cc5",
         "subjectTitle": "Apinaryhmä pitää turkista huolta",
         "targetState": "existing-target"
       },
@@ -1200,9 +1284,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -1221,17 +1305,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "2f6d0e006b1b04cc9a459c316f6737355cbb7bf4d2de971ddb18a5c3aba4dd8a",
-      "targetAfterSHA256": "f666f9c4ff64a71edc6ed9ec3ac06371dcf353eb6756982fd23c7724baa9a764",
-      "contextAfterSHA256": "f666f9c4ff64a71edc6ed9ec3ac06371dcf353eb6756982fd23c7724baa9a764",
+      "sourceContentAfterSHA256": "a71e8c7d569a3b4cb6d848c35c1159bc20159718a1c6ad245b54744179ee97ba",
+      "targetAfterSHA256": "4bc5568ec4f1d103e4d7ff151e6f0f61b600806186c1a500ad87d05a1ae48cc5",
+      "contextAfterSHA256": "4bc5568ec4f1d103e4d7ff151e6f0f61b600806186c1a500ad87d05a1ae48cc5",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "2f6d0e006b1b04cc9a459c316f6737355cbb7bf4d2de971ddb18a5c3aba4dd8a",
+        "targetAfterSHA256": "f666f9c4ff64a71edc6ed9ec3ac06371dcf353eb6756982fd23c7724baa9a764",
+        "contextAfterSHA256": "f666f9c4ff64a71edc6ed9ec3ac06371dcf353eb6756982fd23c7724baa9a764",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "f666f9c4ff64a71edc6ed9ec3ac06371dcf353eb6756982fd23c7724baa9a764",
+          "semanticContextSHA256": "f666f9c4ff64a71edc6ed9ec3ac06371dcf353eb6756982fd23c7724baa9a764",
+          "subjectTitle": "Apinaryhmä pitää turkista huolta",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "a71e8c7d569a3b4cb6d848c35c1159bc20159718a1c6ad245b54744179ee97ba",
+        "sameImageNativeSHA256": "c8aa9a4bc8200ce071ce937cd77edc417a6c27ebd439059870cae87302191e14",
+        "sameImageExportSHA256": "a16b9e07c467c14e3b2b5a76420a3f480c9c43cb91c11e9f2d9535791c7dd004",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e07",
@@ -1253,10 +1358,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/lilongwe/e07-lilongwe-L3-v2-20261012-738501962941.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Hamerkopin ja katollisen risupesän havainnekuva.",
-        "lyhyt": "Hamerkopin ja katollisen risupesän havainnekuva."
+        "selite": "Hamerkopin ja katollisen risupesän havainnekuva."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -1264,10 +1369,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/lilongwe/e07-lilongwe-L3-v2-20261012-738501962941.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Hamerkopin ja katollisen risupesän havainnekuva.",
-        "lyhyt": "Hamerkopin ja katollisen risupesän havainnekuva."
+        "selite": "Hamerkopin ja katollisen risupesän havainnekuva."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -1281,10 +1386,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lilongwe/sisalto.json",
-      "sourceContentSHA256": "2f6d0e006b1b04cc9a459c316f6737355cbb7bf4d2de971ddb18a5c3aba4dd8a",
+      "sourceContentSHA256": "a71e8c7d569a3b4cb6d848c35c1159bc20159718a1c6ad245b54744179ee97ba",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "84164f3a1bbcc38a75e6c6302fc1cac8f0dfb50ec3b7ce4fc04f5894630a70a2",
-        "semanticContextSHA256": "84164f3a1bbcc38a75e6c6302fc1cac8f0dfb50ec3b7ce4fc04f5894630a70a2",
+        "targetBeforeSHA256": "eaaea16e90290b3543fd2d201fa968bd6f99a7361fd8dda528b708336a4f5dee",
+        "semanticContextSHA256": "eaaea16e90290b3543fd2d201fa968bd6f99a7361fd8dda528b708336a4f5dee",
         "subjectTitle": "Lintu rakentaa pesälle katon",
         "targetState": "existing-target"
       },
@@ -1442,9 +1547,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -1463,17 +1568,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "2f6d0e006b1b04cc9a459c316f6737355cbb7bf4d2de971ddb18a5c3aba4dd8a",
-      "targetAfterSHA256": "84164f3a1bbcc38a75e6c6302fc1cac8f0dfb50ec3b7ce4fc04f5894630a70a2",
-      "contextAfterSHA256": "84164f3a1bbcc38a75e6c6302fc1cac8f0dfb50ec3b7ce4fc04f5894630a70a2",
+      "sourceContentAfterSHA256": "a71e8c7d569a3b4cb6d848c35c1159bc20159718a1c6ad245b54744179ee97ba",
+      "targetAfterSHA256": "eaaea16e90290b3543fd2d201fa968bd6f99a7361fd8dda528b708336a4f5dee",
+      "contextAfterSHA256": "eaaea16e90290b3543fd2d201fa968bd6f99a7361fd8dda528b708336a4f5dee",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "2f6d0e006b1b04cc9a459c316f6737355cbb7bf4d2de971ddb18a5c3aba4dd8a",
+        "targetAfterSHA256": "84164f3a1bbcc38a75e6c6302fc1cac8f0dfb50ec3b7ce4fc04f5894630a70a2",
+        "contextAfterSHA256": "84164f3a1bbcc38a75e6c6302fc1cac8f0dfb50ec3b7ce4fc04f5894630a70a2",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "84164f3a1bbcc38a75e6c6302fc1cac8f0dfb50ec3b7ce4fc04f5894630a70a2",
+          "semanticContextSHA256": "84164f3a1bbcc38a75e6c6302fc1cac8f0dfb50ec3b7ce4fc04f5894630a70a2",
+          "subjectTitle": "Lintu rakentaa pesälle katon",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "a71e8c7d569a3b4cb6d848c35c1159bc20159718a1c6ad245b54744179ee97ba",
+        "sameImageNativeSHA256": "738501962941b05f58ca3898b45a5ceccfedffe1c87d15c5a9e19fd43ab1a6a7",
+        "sameImageExportSHA256": "58635894f0c1d2ed541b74e6f10b4fc898e41e3d939afb2ad2860f67463cacea",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e07",
@@ -1495,10 +1621,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/lilongwe/e07-lilongwe-L4-v1-20261012-b5c23932a303.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Metsän latvuskerroksen havainnekuva; ei Lilongwen latvuspolun valokuva.",
-        "lyhyt": "Metsän latvuskerroksen havainnekuva; ei Lilongwen latvuspolun valokuva."
+        "selite": "Metsän latvuskerroksen havainnekuva; ei Lilongwen latvuspolun valokuva."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -1506,10 +1632,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/lilongwe/e07-lilongwe-L4-v1-20261012-b5c23932a303.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Metsän latvuskerroksen havainnekuva; ei Lilongwen latvuspolun valokuva.",
-        "lyhyt": "Metsän latvuskerroksen havainnekuva; ei Lilongwen latvuspolun valokuva."
+        "selite": "Metsän latvuskerroksen havainnekuva; ei Lilongwen latvuspolun valokuva."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -1523,10 +1649,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lilongwe/sisalto.json",
-      "sourceContentSHA256": "2f6d0e006b1b04cc9a459c316f6737355cbb7bf4d2de971ddb18a5c3aba4dd8a",
+      "sourceContentSHA256": "a71e8c7d569a3b4cb6d848c35c1159bc20159718a1c6ad245b54744179ee97ba",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "90c21171a94d82353738ab472e9dcbef755ce98f14c0efd2b3e284dd1cf168c5",
-        "semanticContextSHA256": "90c21171a94d82353738ab472e9dcbef755ce98f14c0efd2b3e284dd1cf168c5",
+        "targetBeforeSHA256": "ca3b8f9719f4b9382f7fe91c9bad3b4295e02f80f5e73d93bf518a9eb232d839",
+        "semanticContextSHA256": "ca3b8f9719f4b9382f7fe91c9bad3b4295e02f80f5e73d93bf518a9eb232d839",
         "subjectTitle": "Metsän ylin kerros on elintila",
         "targetState": "existing-target"
       },
@@ -1684,9 +1810,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -1705,17 +1831,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "2f6d0e006b1b04cc9a459c316f6737355cbb7bf4d2de971ddb18a5c3aba4dd8a",
-      "targetAfterSHA256": "90c21171a94d82353738ab472e9dcbef755ce98f14c0efd2b3e284dd1cf168c5",
-      "contextAfterSHA256": "90c21171a94d82353738ab472e9dcbef755ce98f14c0efd2b3e284dd1cf168c5",
+      "sourceContentAfterSHA256": "a71e8c7d569a3b4cb6d848c35c1159bc20159718a1c6ad245b54744179ee97ba",
+      "targetAfterSHA256": "ca3b8f9719f4b9382f7fe91c9bad3b4295e02f80f5e73d93bf518a9eb232d839",
+      "contextAfterSHA256": "ca3b8f9719f4b9382f7fe91c9bad3b4295e02f80f5e73d93bf518a9eb232d839",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "2f6d0e006b1b04cc9a459c316f6737355cbb7bf4d2de971ddb18a5c3aba4dd8a",
+        "targetAfterSHA256": "90c21171a94d82353738ab472e9dcbef755ce98f14c0efd2b3e284dd1cf168c5",
+        "contextAfterSHA256": "90c21171a94d82353738ab472e9dcbef755ce98f14c0efd2b3e284dd1cf168c5",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "90c21171a94d82353738ab472e9dcbef755ce98f14c0efd2b3e284dd1cf168c5",
+          "semanticContextSHA256": "90c21171a94d82353738ab472e9dcbef755ce98f14c0efd2b3e284dd1cf168c5",
+          "subjectTitle": "Metsän ylin kerros on elintila",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "a71e8c7d569a3b4cb6d848c35c1159bc20159718a1c6ad245b54744179ee97ba",
+        "sameImageNativeSHA256": "b5c23932a3036ba9df6cd6572978ef10f402b4b75f675937cb42bb499dc7b52f",
+        "sameImageExportSHA256": "c5c2d1d4fef07aea2a8bf62c8afc85150a5a41197aa45bfa1a6e782ed9d0c943",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e07",
@@ -1735,14 +1882,14 @@
         "suora": true,
         "lahde": "Timon Zingg, Commons (CC BY-SA 3.0)",
         "selite": "Nosturi Kanengon alueella Lilongwessa.",
-        "lyhyt": "Nosturi Kanengon alueella Lilongwessa.",
+        "lyhyt": "Kanengon nosturi.",
         "tiedosto": "Kanengo, Lilongwe, Malawi - panoramio (2).jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Timon Zingg, Commons (CC BY-SA 3.0)",
         "selite": "Nosturi Kanengon alueella Lilongwessa.",
-        "lyhyt": "Nosturi Kanengon alueella Lilongwessa.",
+        "lyhyt": "Kanengon nosturi.",
         "tiedosto": "Kanengo, Lilongwe, Malawi - panoramio (2).jpg"
       },
       "runtimeMediaFieldPayload": {
@@ -1750,7 +1897,7 @@
         "suora": true,
         "lahde": "Timon Zingg, Commons (CC BY-SA 3.0)",
         "selite": "Nosturi Kanengon alueella Lilongwessa.",
-        "lyhyt": "Nosturi Kanengon alueella Lilongwessa.",
+        "lyhyt": "Kanengon nosturi.",
         "tiedosto": "Kanengo, Lilongwe, Malawi - panoramio (2).jpg"
       },
       "runtimeRemoveMediaKeys": [],
@@ -1765,10 +1912,10 @@
         2736
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lilongwe/sisalto.json",
-      "sourceContentSHA256": "2f6d0e006b1b04cc9a459c316f6737355cbb7bf4d2de971ddb18a5c3aba4dd8a",
+      "sourceContentSHA256": "a71e8c7d569a3b4cb6d848c35c1159bc20159718a1c6ad245b54744179ee97ba",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "28c77f2f7a7bf8488a1d13c732b0e3ef15a6543a8604323ff4deefafdd7e4732",
-        "semanticContextSHA256": "28c77f2f7a7bf8488a1d13c732b0e3ef15a6543a8604323ff4deefafdd7e4732",
+        "targetBeforeSHA256": "ef4618868fabb8fcecc277da76ed2cbcf29d585be7ae0ce9e137e4a352b300b7",
+        "semanticContextSHA256": "ef4618868fabb8fcecc277da76ed2cbcf29d585be7ae0ce9e137e4a352b300b7",
         "subjectTitle": "lilongwe — aito paikkavalokuva",
         "targetState": "existing-target"
       },
@@ -1960,9 +2107,9 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "Kanengo, Lilongwe, Malawi - panoramio (2).jpg",
-        "lahde": "Timon Zingg, Commons (CC BY-SA 3.0)",
+        "lyhyt": "Kanengon nosturi.",
         "selite": "Nosturi Kanengon alueella Lilongwessa.",
-        "lyhyt": "Nosturi Kanengon alueella Lilongwessa."
+        "lahde": "Timon Zingg, Commons (CC BY-SA 3.0)"
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -1981,7 +2128,7 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
@@ -1989,15 +2136,36 @@
       "CcommonsFieldPayload": {
         "lahde": "Timon Zingg, Commons (CC BY-SA 3.0)",
         "selite": "Nosturi Kanengon alueella Lilongwessa.",
-        "lyhyt": "Nosturi Kanengon alueella Lilongwessa.",
+        "lyhyt": "Kanengon nosturi.",
         "tiedosto": "Kanengo, Lilongwe, Malawi - panoramio (2).jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "2f6d0e006b1b04cc9a459c316f6737355cbb7bf4d2de971ddb18a5c3aba4dd8a",
-      "targetAfterSHA256": "28c77f2f7a7bf8488a1d13c732b0e3ef15a6543a8604323ff4deefafdd7e4732",
-      "contextAfterSHA256": "28c77f2f7a7bf8488a1d13c732b0e3ef15a6543a8604323ff4deefafdd7e4732",
+      "sourceContentAfterSHA256": "a71e8c7d569a3b4cb6d848c35c1159bc20159718a1c6ad245b54744179ee97ba",
+      "targetAfterSHA256": "ef4618868fabb8fcecc277da76ed2cbcf29d585be7ae0ce9e137e4a352b300b7",
+      "contextAfterSHA256": "ef4618868fabb8fcecc277da76ed2cbcf29d585be7ae0ce9e137e4a352b300b7",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "2f6d0e006b1b04cc9a459c316f6737355cbb7bf4d2de971ddb18a5c3aba4dd8a",
+        "targetAfterSHA256": "28c77f2f7a7bf8488a1d13c732b0e3ef15a6543a8604323ff4deefafdd7e4732",
+        "contextAfterSHA256": "28c77f2f7a7bf8488a1d13c732b0e3ef15a6543a8604323ff4deefafdd7e4732",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "28c77f2f7a7bf8488a1d13c732b0e3ef15a6543a8604323ff4deefafdd7e4732",
+          "semanticContextSHA256": "28c77f2f7a7bf8488a1d13c732b0e3ef15a6543a8604323ff4deefafdd7e4732",
+          "subjectTitle": "lilongwe — aito paikkavalokuva",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "a71e8c7d569a3b4cb6d848c35c1159bc20159718a1c6ad245b54744179ee97ba",
+        "sameImageNativeSHA256": "249675ed384d2637bd3fb20024d326ecbf3dd59097c119747a8afe85ada927f5",
+        "sameImageExportSHA256": "249675ed384d2637bd3fb20024d326ecbf3dd59097c119747a8afe85ada927f5",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e07",
@@ -2020,14 +2188,14 @@
         "suora": true,
         "lahde": "Brian Dell, Wikimedia Commons (PD)",
         "selite": "Lilongwen Area 2 -alueen katunäkymä.",
-        "lyhyt": "Lilongwen Area 2 -alueen katunäkymä.",
+        "lyhyt": "Area 2:n katua Lilongwessa.",
         "tiedosto": "Lilongwe Area 2.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Brian Dell, Wikimedia Commons (PD)",
         "selite": "Lilongwen Area 2 -alueen katunäkymä.",
-        "lyhyt": "Lilongwen Area 2 -alueen katunäkymä.",
+        "lyhyt": "Area 2:n katua Lilongwessa.",
         "tiedosto": "Lilongwe Area 2.jpg"
       },
       "runtimeMediaFieldPayload": {
@@ -2035,7 +2203,7 @@
         "suora": true,
         "lahde": "Brian Dell, Wikimedia Commons (PD)",
         "selite": "Lilongwen Area 2 -alueen katunäkymä.",
-        "lyhyt": "Lilongwen Area 2 -alueen katunäkymä.",
+        "lyhyt": "Area 2:n katua Lilongwessa.",
         "tiedosto": "Lilongwe Area 2.jpg"
       },
       "runtimeRemoveMediaKeys": [],
@@ -2050,10 +2218,10 @@
         859
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lilongwe/sisalto.json",
-      "sourceContentSHA256": "2f6d0e006b1b04cc9a459c316f6737355cbb7bf4d2de971ddb18a5c3aba4dd8a",
+      "sourceContentSHA256": "a71e8c7d569a3b4cb6d848c35c1159bc20159718a1c6ad245b54744179ee97ba",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "5e225ba60080eb24970fc515d2989f3bb4fa78e240cdbd225ddbd779820ec8cb",
-        "semanticContextSHA256": "5e225ba60080eb24970fc515d2989f3bb4fa78e240cdbd225ddbd779820ec8cb",
+        "targetBeforeSHA256": "72d3a2c01eb22f8ee4e46eeea2a2e07f6b5a6de4f0666a4c81ce4e8738cc4c8e",
+        "semanticContextSHA256": "72d3a2c01eb22f8ee4e46eeea2a2e07f6b5a6de4f0666a4c81ce4e8738cc4c8e",
         "subjectTitle": "Lilongwe",
         "targetState": "existing-target"
       },
@@ -2255,9 +2423,9 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "Lilongwe Area 2.jpg",
-        "lahde": "Brian Dell, Wikimedia Commons (PD)",
+        "lyhyt": "Area 2:n katua Lilongwessa.",
         "selite": "Lilongwen Area 2 -alueen katunäkymä.",
-        "lyhyt": "Lilongwen Area 2 -alueen katunäkymä."
+        "lahde": "Brian Dell, Wikimedia Commons (PD)"
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -2276,7 +2444,7 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
@@ -2284,20 +2452,47 @@
       "CcommonsFieldPayload": {
         "lahde": "Brian Dell, Wikimedia Commons (PD)",
         "selite": "Lilongwen Area 2 -alueen katunäkymä.",
-        "lyhyt": "Lilongwen Area 2 -alueen katunäkymä.",
+        "lyhyt": "Area 2:n katua Lilongwessa.",
         "tiedosto": "Lilongwe Area 2.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "2f6d0e006b1b04cc9a459c316f6737355cbb7bf4d2de971ddb18a5c3aba4dd8a",
-      "targetAfterSHA256": "5e225ba60080eb24970fc515d2989f3bb4fa78e240cdbd225ddbd779820ec8cb",
-      "contextAfterSHA256": "5e225ba60080eb24970fc515d2989f3bb4fa78e240cdbd225ddbd779820ec8cb",
+      "sourceContentAfterSHA256": "a71e8c7d569a3b4cb6d848c35c1159bc20159718a1c6ad245b54744179ee97ba",
+      "targetAfterSHA256": "72d3a2c01eb22f8ee4e46eeea2a2e07f6b5a6de4f0666a4c81ce4e8738cc4c8e",
+      "contextAfterSHA256": "72d3a2c01eb22f8ee4e46eeea2a2e07f6b5a6de4f0666a4c81ce4e8738cc4c8e",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "2f6d0e006b1b04cc9a459c316f6737355cbb7bf4d2de971ddb18a5c3aba4dd8a",
+        "targetAfterSHA256": "5e225ba60080eb24970fc515d2989f3bb4fa78e240cdbd225ddbd779820ec8cb",
+        "contextAfterSHA256": "5e225ba60080eb24970fc515d2989f3bb4fa78e240cdbd225ddbd779820ec8cb",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "5e225ba60080eb24970fc515d2989f3bb4fa78e240cdbd225ddbd779820ec8cb",
+          "semanticContextSHA256": "5e225ba60080eb24970fc515d2989f3bb4fa78e240cdbd225ddbd779820ec8cb",
+          "subjectTitle": "Lilongwe",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "a71e8c7d569a3b4cb6d848c35c1159bc20159718a1c6ad245b54744179ee97ba",
+        "sameImageNativeSHA256": "b3cf55a88d92993cf9067698a1dcd42b3d8650921d0d4ab39fae591e072caa9d",
+        "sameImageExportSHA256": "b3cf55a88d92993cf9067698a1dcd42b3d8650921d0d4ab39fae591e072caa9d",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     }
   ],
   "runtimeIntegrationPending": true,
   "ownerAcceptedNotImpliedByAuthorization": false,
   "gameIntegrated": false,
   "allAssetsExplicitlyOwnerApproved": true,
-  "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+  "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+  "task118ExcludedAssets": [],
+  "task118TextRevision": true,
+  "independentTextResamplePending": true,
+  "textAcceptanceVerified": false,
+  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task118/immutable-media-history/e07/lilongwe/17ff5aafaffdb085feb50cff6f03383399f3c3fa03787da737713af622f2e2b8.json",
+  "task118ReboundAt": "2026-10-13T16:31:25.214534+00:00"
 }
