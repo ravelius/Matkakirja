@@ -1,0 +1,208 @@
+{
+  "schemaVersion": 1,
+  "cityName": "PIETARI",
+  "gameCityId": "pietari",
+  "mediaSlug": "saint-petersburg",
+  "taskNumbers": [
+    205,
+    206
+  ],
+  "updatedAt": "2026-10-13T18:10:14.479943+00:00",
+  "sourcePath": "posti/fable-codex-saapumisintro-uudet-6-8-loput-2-20261013.md",
+  "sourceCommit": "dbdaff9a39fa0e5052f176c890c85836e1a69a1f",
+  "sourceBlob": "2e5adc4cb04a23fcb4cd8fdd75426ac78afdcc9d",
+  "sourceReadInFull": true,
+  "sourceReadBy": "/root/intro_owner_rejection_inventory",
+  "sourceReadReceiptPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/source-read-receipt.json",
+  "assets": [
+    {
+      "taskNumber": 205,
+      "mediaSlug": "saint-petersburg",
+      "slot": 6,
+      "filename": "saint-petersburg-6-nakoala-intro-v1.png",
+      "title": "koko kaupunki tunnetulta näköalapaikalta päivällä — Pietarin keskusta Iisakinkirkon kolonnadilta koilliseen päivällä: Admiraliteetin torni, Talvipalatsin katto ja Verikirkon kupolit kaukana.",
+      "fullDeliveryRequirement": "**6 / koko kaupunki tunnetulta näköalapaikalta päivällä — Pietarin keskusta Iisakinkirkon kolonnadilta koilliseen päivällä: Admiraliteetin torni, Talvipalatsin katto ja Verikirkon kupolit kaukana.** Tiedosto `saint-petersburg-6-nakoala-intro-v1.png`.\nMitä kuvataan: Pietarin keskustan panoraama kirkkaana päivänä (nykyaikainen värivalokuva) Iisakinkirkon kupolia kiertävältä kolonnaditasanteelta, noin 43 metrin korkeudesta. Etualalla kuvan alareunassa vain kapea kaistale vaaleaa kivikaidetta, ei ihmisiä lähellä. Alhaalla matala, tasakorkea kattomeri: vaaleiksi rapattuja 1800-luvun kivitaloja, vihreitä ja punaruskeita peltikattoja, sisäpihoja ja yksittäisiä lehtipuiden latvoja. Kuvan vasemmassa kolmanneksessa Admiraliteetin hoikka kullattu torni (itse rakennus matalana ja vaaleana sen alla), ja sen takana kaukana joen yli Pietari-Paavalin katedraalin kapea kultainen torninhuippu. Keskellä kaukana Talvipalatsin pitkä vihreä-valkoinen, matala rakennusmassa Neva-joen rannalla, ja kuvan vasemmassa reunassa sen takana Neva leveänä harmaansinisenä nauhana. Oikealla keskimatkalla, kattojen yläpuolella pienenä, Verikirkon värikkäät, koristeelliset sipulikupolit. Autot ja kävelijät vain pieninä pisteinä katujen pohjalla. Kulma: vaakakuva, katse koilliseen (suunta noin 40 astetta, näkökenttä noin 60 astetta eli 10-70 astetta), kamera kaiteen takana silmänkorkeudelta, hieman alaspäin. Valo: kirkas mutta pehmeä aamupäivän tai iltapäivän valo, ohut kaupunkiutu kaukana, vaimeat värit, ei HDR:ää. Ei saa näkyä: ihmisiä lähellä tai tunnistettavia kasvoja, tekstiä, kylttejä, mainoksia, logoja, lippuja (ei lippusalkoja katoilla), Iisakinkirkon omaa kupolia tai kolonnadin veistoksia, Pronssiratsumiestä, Aleksanterin pylvästä tai muita muistomerkkejä erottuvina, sotalaivoja tai sotilaita, ilotulitusta, drooneja, pilvenpiirtäjiä. Fotorealistinen havainnekuva, vaimeat värit, 1536 x 1024.\nKuvateksti-ehdotus (loppuu sanaan Havainnekuva.): Pietarin keskusta Iisakinkirkon kolonnadilta koilliseen päivällä: Admiraliteetin torni, Talvipalatsin katto ja Verikirkon kupolit kaukana. Havainnekuva.\n\n",
+      "sourceVersions": [
+        {
+          "path": "posti/fable-codex-saapumisintro-uudet-6-8-loput-2-20261013.md",
+          "commit": "dbdaff9a39fa0e5052f176c890c85836e1a69a1f",
+          "blob": "2e5adc4cb04a23fcb4cd8fdd75426ac78afdcc9d",
+          "readInFull": true
+        }
+      ],
+      "ownerThreadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+      "hostId": "local",
+      "generationCap": 1,
+      "status": "QA-R2-delivered-for-PT-review",
+      "productionStarted": false,
+      "delivered": true,
+      "city": "PIETARI",
+      "gameID": "pietari",
+      "part": 2,
+      "sourceBlob": "2e5adc4cb04a23fcb4cd8fdd75426ac78afdcc9d",
+      "sourceCommit": "dbdaff9a39fa0e5052f176c890c85836e1a69a1f",
+      "sourcePath": "posti/fable-codex-saapumisintro-uudet-6-8-loput-2-20261013.md",
+      "sourceNasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/sources/fable-codex-saapumisintro-uudet-6-8-loput-2-20261013.md",
+      "sourceCharacterSpan": [
+        57997,
+        60095
+      ],
+      "sourceByteSpan": [
+        60197,
+        62365
+      ],
+      "fullDeliveryRequirementSHA256": "68c47a070695469d629c8e2d050abe662a722df45e87288efeaabdaedfc36bfb",
+      "fullDirective": "Pietarin keskustan panoraama kirkkaana päivänä (nykyaikainen värivalokuva) Iisakinkirkon kupolia kiertävältä kolonnaditasanteelta, noin 43 metrin korkeudesta. Etualalla kuvan alareunassa vain kapea kaistale vaaleaa kivikaidetta, ei ihmisiä lähellä. Alhaalla matala, tasakorkea kattomeri: vaaleiksi rapattuja 1800-luvun kivitaloja, vihreitä ja punaruskeita peltikattoja, sisäpihoja ja yksittäisiä lehtipuiden latvoja. Kuvan vasemmassa kolmanneksessa Admiraliteetin hoikka kullattu torni (itse rakennus matalana ja vaaleana sen alla), ja sen takana kaukana joen yli Pietari-Paavalin katedraalin kapea kultainen torninhuippu. Keskellä kaukana Talvipalatsin pitkä vihreä-valkoinen, matala rakennusmassa Neva-joen rannalla, ja kuvan vasemmassa reunassa sen takana Neva leveänä harmaansinisenä nauhana. Oikealla keskimatkalla, kattojen yläpuolella pienenä, Verikirkon värikkäät, koristeelliset sipulikupolit. Autot ja kävelijät vain pieninä pisteinä katujen pohjalla. Kulma: vaakakuva, katse koilliseen (suunta noin 40 astetta, näkökenttä noin 60 astetta eli 10-70 astetta), kamera kaiteen takana silmänkorkeudelta, hieman alaspäin. Valo: kirkas mutta pehmeä aamupäivän tai iltapäivän valo, ohut kaupunkiutu kaukana, vaimeat värit, ei HDR:ää. Ei saa näkyä: ihmisiä lähellä tai tunnistettavia kasvoja, tekstiä, kylttejä, mainoksia, logoja, lippuja (ei lippusalkoja katoilla), Iisakinkirkon omaa kupolia tai kolonnadin veistoksia, Pronssiratsumiestä, Aleksanterin pylvästä tai muita muistomerkkejä erottuvina, sotalaivoja tai sotilaita, ilotulitusta, drooneja, pilvenpiirtäjiä. Fotorealistinen havainnekuva, vaimeat värit, 1536 x 1024.",
+      "caption": "Pietarin keskusta Iisakinkirkon kolonnadilta koilliseen päivällä: Admiraliteetin torni, Talvipalatsin katto ja Verikirkon kupolit kaukana. Havainnekuva.",
+      "sourceReadInFullVerified": true,
+      "mappingBlockExactSourceMatch": true,
+      "r2Prefix": "julisteet/saapumisintro/saint-petersburg/20261013-uudet-6-8/",
+      "deliveryManifestPath": "posti/kuvatoimitus-saapumisintro-saint-petersburg-uudet-6-8-20261013.json",
+      "partDeliveryReportPath": "posti/codex-fable-saapumisintro-uudet-6-8-loput-2-20261013.md",
+      "generationCallsRecorded": 0,
+      "qaAcceptedVerified": true,
+      "r2BytesVerified": true,
+      "mailboxDeliveryVerified": false,
+      "ownerAcceptanceVerified": false,
+      "acceptanceRoute": "PT acts for owner; source authorizes direct delivery. Actual PT acceptance remains evidence-dependent.",
+      "gameIntegrated": false,
+      "published": false,
+      "r2Key": "julisteet/saapumisintro/saint-petersburg/20261013-uudet-6-8/saint-petersburg-6-nakoala-intro-v1.png",
+      "historical": false,
+      "id": "saint-petersburg-6-nakoala-intro-v1",
+      "sourceReadInFull": true,
+      "cityName": "PIETARI",
+      "gameCityId": "pietari",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/saint-petersburg/native-6.png",
+      "nativeSHA256": "9a6bc5a9cf8ae46704643f41a3b8fdb2878e04d29192e8d09685441df027a142",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/saint-petersburg/saint-petersburg-6-nakoala-intro-v1.png",
+      "workspacePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/eurooppa-introt-uudet68-loput-20261013/saint-petersburg/saint-petersburg-6-nakoala-intro-v1.png",
+      "sha256": "7957b7d2725b59e445b2b1060bda3ea4faf224c5d605047ba3d90b2cf355980f",
+      "width": 1536,
+      "height": 1024,
+      "opaque": true,
+      "sRGB": true,
+      "neutralGrayscale": false,
+      "pixelIdentityAfterMetadataExport": true,
+      "pixelIdentityToNative": true,
+      "historicalGrayscaleEncodingNormalized": false,
+      "exportProcessing": "Metadata/sRGB only; pixels unchanged",
+      "generationPrompt": "Create exactly one original, contemporary COLOR photographic-looking illustrative image. Output a single landscape PNG at exactly 1536x1024, opaque RGB, natural camera perspective. No collage, borders or text overlays. The scene must follow ALL of the following exact Finnish scene instructions, including direction, geometry, exclusions, scale, vehicle movement and materials:\n\nPietarin keskustan panoraama kirkkaana päivänä (nykyaikainen värivalokuva) Iisakinkirkon kupolia kiertävältä kolonnaditasanteelta, noin 43 metrin korkeudesta. Etualalla kuvan alareunassa vain kapea kaistale vaaleaa kivikaidetta, ei ihmisiä lähellä. Alhaalla matala, tasakorkea kattomeri: vaaleiksi rapattuja 1800-luvun kivitaloja, vihreitä ja punaruskeita peltikattoja, sisäpihoja ja yksittäisiä lehtipuiden latvoja. Kuvan vasemmassa kolmanneksessa Admiraliteetin hoikka kullattu torni (itse rakennus matalana ja vaaleana sen alla), ja sen takana kaukana joen yli Pietari-Paavalin katedraalin kapea kultainen torninhuippu. Keskellä kaukana Talvipalatsin pitkä vihreä-valkoinen, matala rakennusmassa Neva-joen rannalla, ja kuvan vasemmassa reunassa sen takana Neva leveänä harmaansinisenä nauhana. Oikealla keskimatkalla, kattojen yläpuolella pienenä, Verikirkon värikkäät, koristeelliset sipulikupolit. Autot ja kävelijät vain pieninä pisteinä katujen pohjalla. Kulma: vaakakuva, katse koilliseen (suunta noin 40 astetta, näkökenttä noin 60 astetta eli 10-70 astetta), kamera kaiteen takana silmänkorkeudelta, hieman alaspäin. Valo: kirkas mutta pehmeä aamupäivän tai iltapäivän valo, ohut kaupunkiutu kaukana, vaimeat värit, ei HDR:ää. Ei saa näkyä: ihmisiä lähellä tai tunnistettavia kasvoja, tekstiä, kylttejä, mainoksia, logoja, lippuja (ei lippusalkoja katoilla), Iisakinkirkon omaa kupolia tai kolonnadin veistoksia, Pronssiratsumiestä, Aleksanterin pylvästä tai muita muistomerkkejä erottuvina, sotalaivoja tai sotilaita, ilotulitusta, drooneja, pilvenpiirtäjiä. Fotorealistinen havainnekuva, vaimeat värit, 1536 x 1024.\n\nThis is present-day life, not a historical reconstruction. Use restrained realistic natural light and subtle natural colour, genuine irregular surfaces and vegetation, no CGI/render/painting/HDR look. Do not invent extra landmarks or recognizable buildings outside the requested view; prohibited background features are equally prohibited. No legible text or numbers anywhere, no vehicle emblems/branding/flags, advertisements or identifiable close faces. Keep the whole requested scene in one coherent physical camera frame. Do not write the caption inside the image. No additional variants or edits.\n\nFraming emphasis: eye-level view looking slightly downward from the Saint Isaac colonnade, NO cathedral dome/columns/sculptures visible where camera stands. Restricted northeast view 40 degrees with 60-degree field (10–70). Low ordinary pale roofscape fills middle/lower frame; Admiralty slender gold spire LEFT, faint Peter/Paul thin gold spire beyond, Neva and long small green-white Winter Palace LEFT-CENTER distance, tiny Church of Spilled Blood onion domes RIGHT. Landmark silhouettes small parts of the whole city, not stacked monuments. Thin stone rail only at bottom. No flag, statue, war imagery, soldier or high-rise, no text anywhere.\n",
+      "sourceReadReceiptPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/source-read-receipt.json",
+      "references": [
+        {
+          "kind": "exact-production-brief",
+          "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/sources/fable-codex-saapumisintro-uudet-6-8-loput-2-20261013.md",
+          "gitPath": "posti/fable-codex-saapumisintro-uudet-6-8-loput-2-20261013.md",
+          "commit": "dbdaff9a39fa0e5052f176c890c85836e1a69a1f",
+          "blob": "2e5adc4cb04a23fcb4cd8fdd75426ac78afdcc9d",
+          "sourceByteSpan": [
+            60197,
+            62365
+          ],
+          "fullRequirementSHA256": "68c47a070695469d629c8e2d050abe662a722df45e87288efeaabdaedfc36bfb",
+          "use": "Text scene constraint, not a copyright photograph or image passed to generator."
+        },
+        {
+          "kind": "own-architectural-geographic-knowledge",
+          "use": "New image from scratch; no external visual reference supplied, no Google data used.",
+          "independentSurveyClaim": false
+        }
+      ],
+      "qaPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/saint-petersburg/qa-6.json",
+      "producerPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/saint-petersburg/producer-6.json",
+      "producerQAAccepted": true,
+      "producerQAVerdict": "accepted",
+      "actualGenerationCalls": 1,
+      "url": "https://media.matkakirja.app/julisteet/saapumisintro/saint-petersburg/20261013-uudet-6-8/saint-petersburg-6-nakoala-intro-v1.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/saint-petersburg/20261013-uudet-6-8/saint-petersburg-6-nakoala-intro-v1.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "QA": {
+        "slot": 6,
+        "taskNumber": 205,
+        "assetID": "saint-petersburg-6-nakoala-intro-v1",
+        "targetJsonPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/saint-petersburg/asset-6.json",
+        "nativeSHA256": "9a6bc5a9cf8ae46704643f41a3b8fdb2878e04d29192e8d09685441df027a142",
+        "finalSHA256": "7957b7d2725b59e445b2b1060bda3ea4faf224c5d605047ba3d90b2cf355980f",
+        "verdict": "accepted",
+        "reason": "Admiraliteetin kultainen torni vasemmalla, kaukaisempi Pietari-Paavalin torni sen takana, vihreävalkoinen Talvipalatsi keskellä ja Verikirkon sipulikupolit oikealla erottuvat kattomeren osina. Ei tunnistettavaa Aleksanterin pylvästä, Pronssiratsumiestä tai lippusalkoja.",
+        "reviewer": "/root",
+        "reviewedAt": "2026-10-13T18:10:08.748084+00:00",
+        "nativeViewedInFull": true,
+        "assignedSourceCardReadInFull": true,
+        "nativePixelsEqualFinalVerified": true,
+        "technicalPassed": true,
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "published": false
+      },
+      "R2Proof": {
+        "slot": 6,
+        "r2Key": "julisteet/saapumisintro/saint-petersburg/20261013-uudet-6-8/saint-petersburg-6-nakoala-intro-v1.png",
+        "url": "https://media.matkakirja.app/julisteet/saapumisintro/saint-petersburg/20261013-uudet-6-8/saint-petersburg-6-nakoala-intro-v1.png",
+        "sha256": "7957b7d2725b59e445b2b1060bda3ea4faf224c5d605047ba3d90b2cf355980f",
+        "nativeSHA256": "9a6bc5a9cf8ae46704643f41a3b8fdb2878e04d29192e8d09685441df027a142",
+        "bytes": 2544577,
+        "readbacks": [
+          {
+            "http": 200,
+            "byteExact": true,
+            "sha256": "7957b7d2725b59e445b2b1060bda3ea4faf224c5d605047ba3d90b2cf355980f",
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "cacheBusted": false
+          },
+          {
+            "http": 200,
+            "byteExact": true,
+            "sha256": "7957b7d2725b59e445b2b1060bda3ea4faf224c5d605047ba3d90b2cf355980f",
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "cacheBusted": true
+          }
+        ],
+        "byteExactReadback": true,
+        "verifiedAt": "2026-10-13T18:10:14.396172+00:00"
+      },
+      "FableReceiptVerified": false
+    }
+  ],
+  "omittedItems": [
+    {
+      "taskNumber": 206,
+      "slot": 8,
+      "reason": "Johtava ohjaamo ja palavat ajovalot osoittavat vasemmalle; lähteen oikealle ja kohti kameraa liike ei välity. Tämä on merkittävä suuntapoikkeama, vaikka neutraali vaunu ja katu ovat muuten kameramaisia.",
+      "stage": "independent-QA",
+      "additionalGenerationAllowed": false,
+      "nativeSHA256": "2c7c7d384cd6ad2aeb1cde8583681db4b271578e744e7c08ec04f1ab40b60139",
+      "finalSHA256": "3e07442b317052bd7bc84830babc0e7d6e0f27c2e1031b13c3bad4b06a091934"
+    }
+  ],
+  "actualCalls": 2,
+  "maximumGenerationCalls": 2,
+  "allRequestedItemsHandled": true,
+  "allRequestedImagesDelivered": false,
+  "productionCompleteWithinSourceLimit": true,
+  "directMailboxDeliveryAuthorized": true,
+  "acceptanceRoute": "Päätoimittaja reviews on the owner authority in the exact source. This authorization is not yet an actual acceptance receipt.",
+  "ownerAcceptanceVerified": false,
+  "FableReceiptVerified": false,
+  "gameIntegrated": false,
+  "published": false,
+  "oldFiveApprovedPilotImagesPreserved": true,
+  "oldCelebrationAnd1873TopicsRemainWithdrawn": true,
+  "existingHeroSlotsPreserved": [
+    1,
+    2,
+    3
+  ],
+  "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+  "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+  "newTopics": {
+    "6": "daytime-city-panorama",
+    "8": "local-transport-in-motion"
+  }
+}
