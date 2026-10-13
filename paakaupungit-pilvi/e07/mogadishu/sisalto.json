@@ -1,7 +1,7 @@
 {
   "artikkeli": {
     "intro": "Mogadishu on Somalian pääkaupunki **Intian valtameren rannikolla**. Se oli jo vanha kaupunki vuonna 1873. Historialliseen ytimeen kuuluvat Hamar Weyne ja Shangani, joiden moskeijat ja kauppapaikat kertovat rannikon pitkästä asutuksesta. Nykyinen katedraali, rautatien historiallinen linja ja radioasema tulivat myöhemmin. Liidon rannalla on myös Mogadishun tärkeä kalan rantautumispaikka ja kalatori. Sen kehittämiseen kuuluvat saaliin käsittely, jäähdytys ja jätevesien johtaminen pois. Radio Mogadishun arkistossa säilytetään musiikin lisäksi radiodraamaa, kirjallisuutta ja urheilun ääniä.\n\n**Magneettinauhojen puhdistus ja digitointi** ovat osa tämän muistin hoitamista. Rakennuksillakin on eri vaiheensa: Garesasta tuli museon vanha koti, myöhemmin kokoelma siirtyi uuteen taloon, ja rannikon majakka on osittain sortuneena säilyttämistyön kohde.",
-    "teksti": "Mogadishun vanha rannikkokaupunki edeltää 1900-luvun siirtomaarakennuksia. Arba’a Rukunin alkuperäinen moskeija on keskiajalta, kun taas katedraalin esikuva on keskiaikaisessa Sisiliassa ja rakennus itse myöhemmältä ajalta.\n\nKaupungin muistia on säilytetty myös rakennusten ulkopuolella. Radioarkiston magneettinauhoilla on kirjallisuutta, radiodraamaa, musiikkia ja urheilua. Nauhojen puhdistus, arviointi ja digitointi tekevät säilyttämisestä konkreettista työtä.\n\nMogadishun museon kokoelma on muuttanut vanhasta Garesasta uudempaan taloon. Majakan rakenteita tutkitaan pitkäaikaisen säilyttämisen suunnittelemiseksi."
+    "teksti": "Mogadishun vanha rannikkokaupunki edeltää 1900-luvun siirtomaarakennuksia. Arba’a Rukunin alkuperäinen moskeija on keskiajalta. Hamar Weyne ja Shangani kuuluvat kaupungin historialliseen rannikkoytimeen.\n\nKaupungin muistia on säilytetty myös rakennusten ulkopuolella. Radioarkiston magneettinauhoilla on kirjallisuutta, radiodraamaa, musiikkia ja urheilua. Nauhojen puhdistus, arviointi ja digitointi kuuluvat UNESCO:n tukemaan säilyttämishankkeeseen, jota rahoittaa Japani.\n\nMogadishun museon kokoelma on muuttanut vanhasta Garesasta uudempaan taloon. Majakan rakenteita tutkitaan pitkäaikaisen säilyttämisen suunnittelemiseksi."
   },
   "kaupunkilehti": [
     {
@@ -40,7 +40,7 @@
         },
         {
           "otsikko": "Ompelija oppi kauppaa äidiltään",
-          "teksti": "Vaatekauppias Dahabo työskenteli Hamar Weynessä. Hän oppi kaupankäyntiä auttamalla äitinsä pienessä kaupassa. Työhön kuului tavaran hankkimista myytäväksi ja arkisten tuotteiden, kuten kahvin ja suolan, myyntiä. Myöhemmin hänellä oli oma liike, ja hän myös ompeli vaatteita sekä lakanoita. Äidin kaupassa opitut hankinta- ja myyntitaidot jatkuivat myöhemmin hänen omassa liikkeessään. Kaupan ja käsityön taidot liittyivät hänen työssään toisiinsa: sama ihminen sekä hankki että valmisti myytävää.",
+          "teksti": "Vaatekauppias Dahabo työskenteli Hamar Weynessä. Hän oppi kaupankäyntiä auttamalla äitinsä pienessä kaupassa. Työhön kuului tavaran hankkimista myytäväksi ja arkisten tuotteiden, kuten kahvin ja suolan, myyntiä. Myöhemmin hänellä oli oma liike, ja hän myös ompeli vaatteita sekä lakanoita. Haastattelussaan hän kertoo muiden naiskauppiaiden myyvän Bakaara Marketissa käytettyjä vaatteita, vihanneksia, kotitalousvälineitä ja kosmetiikkaa.",
           "wiki": "Mogadishu",
           "tiedosto": "",
           "lyhyt": "",
@@ -49,7 +49,7 @@
         },
         {
           "otsikko": "Ääni ei säily itsestään",
-          "teksti": "Radio Mogadishun arkistossa ääniä on tallennettu magneettinauhakeloille. Musiikin lisäksi aineistoon kuuluu radiodraamaa, kirjallisuutta ja urheilutapahtumia. Nauhoja uhkaavat ikääntyminen ja kosteus. Säilyttämistyössä niitä puhdistetaan, niiden kuntoa arvioidaan ja ääniä digitoidaan myöhempää kuuntelua varten. Puhdistuksen ja kuntotarkastuksen jälkeen ääni voidaan siirtää nauhalta digitaaliseen muotoon. Työ etenee tallenne kerrallaan. Säilyttämistä tukee UNESCO Maailman muisti -ohjelmansa kautta Japanin rahoituksella.",
+          "teksti": "Radio Mogadishun arkistossa ääniä on tallennettu magneettinauhakeloille. Musiikin lisäksi aineistoon kuuluu radiodraamaa, kirjallisuutta ja urheilutapahtumia. Nauhoja uhkaavat ikääntyminen ja kosteus. Säilyttämistyössä niitä puhdistetaan, niiden kuntoa arvioidaan ja ääniä digitoidaan myöhempää kuuntelua varten. Säilyttämistä tukee UNESCO Maailman muisti -ohjelmansa kautta Japanin rahoituksella.",
           "wiki": "Radio Mogadishu",
           "tiedosto": "",
           "lyhyt": "",
@@ -92,7 +92,7 @@
             },
             {
               "otsikko": "Vanhan kaupungin kerrokset",
-              "teksti": "Hamar Weyne ja Shangani kuuluvat vanhaan rannikkokaupunkiin. Katedraalin esikuva on Sisilian Cefalùssa, mutta itse rakennus on 1900-luvulta. Osittain sortuneen Al-Munaara-majakan rakenteita tutkitaan säilyttämistyötä varten.",
+              "teksti": "Hamar Weyne ja Shangani kuuluvat vanhaan rannikkokaupunkiin. Osittain sortuneen Al-Munaara-majakan rakenteita tutkitaan säilyttämistyötä varten.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -151,7 +151,7 @@
               {
                 "mita": "Katedraalin arkkitehtuuri",
                 "tahdet": 2,
-                "selite": "Sisilialainen esikuva on rakennusta vanhempi."
+                "selite": "Alkuperäisen julkisivun sivuilla olivat tornit."
               },
               {
                 "mita": "Historiallinen rata",
@@ -165,12 +165,12 @@
                 "teksti": "Tarkista Somalian ajantasainen matkustustiedote Suomen ulkoministeriöstä ja noudata sen ohjeita."
               },
               {
-                "otsikko": "Rauniot",
-                "teksti": "Vaurioituneisiin rakenteisiin ei suunnitella omatoimisia käyntejä."
+                "otsikko": "Hamar Weyne",
+                "teksti": "Vaatekauppias Dahabo myi naisten vaatteita ja ompeli myös lakanoita."
               },
               {
-                "otsikko": "Palvelut",
-                "teksti": "Liikenne- ja terveyspalvelujen saatavuus on rajallista."
+                "otsikko": "Radan raideleveys",
+                "teksti": "Mogadishun ja Villabruzzin välinen historiallinen rata oli kapearaiteinen."
               },
               {
                 "otsikko": "Museon paikat",
@@ -207,7 +207,7 @@
         },
         {
           "otsikko": "Rata jäi historialliseksi yhteydeksi",
-          "teksti": "Mogadishun vanha rata kulki Afgooyen kautta sisämaahan Villabruzziin, joka tunnetaan nykyään nimellä Jowhar. Rata rakennettiin 1900-luvun alkupuolella ja kuljetti matkustajia sekä maataloustuotteita. Satamayhteys palveli tavaroiden vientiä. Linja purettiin toisen maailmansodan aikana ja sen raiteet vietiin pois. Isoisän matkavuonna 1873 tätä rataa ei vielä ollut. Rautatien tarina kertoo yhdestä kaupungin kuljetusvaiheesta, joka ei jatkunut muuttumattomana nykypäivään.",
+          "teksti": "Mogadishun vanha rata kulki Afgooyen kautta sisämaahan Villabruzziin, joka tunnetaan nykyään nimellä Jowhar. Rata rakennettiin 1900-luvun alkupuolella ja kuljetti matkustajia sekä maataloustuotteita. Satamayhteys palveli tavaroiden vientiä. Linja purettiin toisen maailmansodan aikana ja sen raiteet vietiin pois. Rata oli kapearaiteinen. Sen vientikuljetuksiin kuului banaaneja, puuvillaa ja kahvia.",
           "wiki": "Mogadishu–Villabruzzi Railway",
           "tiedosto": "",
           "lyhyt": "",
@@ -216,7 +216,7 @@
         },
         {
           "otsikko": "Sisilialainen esikuva valtameren äärellä",
-          "teksti": "Antonio Vandone suunnitteli Mogadishun katedraalin 1900-luvun alkupuolella. Esikuvana oli Cefalùn katedraali Sisiliassa, ja rakennus käytti normannivaikutteista historiallistyyliä. Alkuperäisen julkisivun sivuilla olivat tornit, pohja oli latinalainen risti ja sisätilassa pilarit sekä teräväkaaret erottivat laivoja. Nykyinen katedraali on raunioitunut. Se ei ollut keskiaikainen kirkko Mogadishussa, vaikka esikuva oli keskiajalta, eikä sitä ollut vuonna 1873. Rakennuksen oma ikä ja arkkitehtuurin esikuvan ikä ovat eri asioita.",
+          "teksti": "Antonio Vandone suunnitteli Mogadishun katedraalin 1900-luvun alkupuolella. Esikuvana oli Cefalùn katedraali Sisiliassa, ja rakennus käytti normannivaikutteista historiallistyyliä. Alkuperäisen julkisivun sivuilla olivat tornit, pohja oli latinalainen risti ja sisätilassa pilarit sekä teräväkaaret erottivat laivoja. Nykyinen katedraali on raunioitunut.",
           "wiki": "Mogadishu Cathedral",
           "tiedosto": "",
           "lyhyt": "",
@@ -267,7 +267,7 @@
       "source": "https://www.unesco.org/en/articles/safeguarding-voices-shaped-nation"
     },
     {
-      "q": "Missä Välimeren saaressa Mogadishun katedraalin esikuva sijaitsee?",
+      "q": "Missä Mogadishun katedraalin esikuva sijaitsee?",
       "options": [
         "Sisiliassa",
         "Sardiniassa",
@@ -311,7 +311,7 @@
   ],
   "tiedot": [
     "Radioarkiston nauhojen kuntoa arvioidaan ja niitä puhdistetaan ennen digitointia.",
-    "Mogadishun katedraalin sisilialainen esikuva on rakennusta paljon vanhempi.",
+    "Mogadishun katedraalin pohja on latinalainen risti, ja pilarit sekä teräväkaaret erottavat sen laivoja.",
     "Garesa ja myöhempi kansallismuseotalo ovat eri rakennuksia, vaikka kuuluvat saman museon historiaan."
   ],
   "kohdekartta": {

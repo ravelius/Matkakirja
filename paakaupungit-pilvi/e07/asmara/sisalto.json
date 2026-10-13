@@ -1,7 +1,7 @@
 {
   "artikkeli": {
     "intro": "Asmara on Eritrean pääkaupunki **ylängöllä rannikon alangon yläpuolella**. Paikalla oli asutusta ja kauppaa jo ennen nykyisen keskustan suuria rakennusvaiheita. Paikallinen perimätieto liittää kaupungin nimen kylien yhdistymiseen naisten aloitteesta. Vuonna 1873 täällä oli vanhempi asutus- ja toripaikka. Nykyisen keskustan kirkot, teatteri ja rautatieasema tulivat myöhemmin.\n\nAsmaran katuverkossa suora ruutukaava kohtaa kaartuvat kadut, vanhat paikat ja maaston. Medeber kehittyi karavaanien pysähdyspaikasta kaupan, käsityön ja kierrätysmateriaalien ympäristöksi. Rautatie nousi Punaisenmeren rannikolta ylängölle, mikä vaati siltoja, tunneleita ja paljon rakennustyötä. Kaupungin kahviloissa ja ruokaperinteessä näkyy puolestaan **paikallisten makujen ja italialaisten ruokalajien kohtaaminen**, kuten berbere-mausteella maustettu tomaattikastikepasta.",
-    "teksti": "Asmaran vanha asutus oli olemassa ennen siirtomaakauden kaupunkisuunnittelua. Paikallinen asutus, torit, Mai Bela -joki ja ylängön maasto vaikuttivat kaupungin suunnitteluun. Katuverkkoon syntyi ruutua ja kaartuvia linjoja, mutta siirtomaahallinto myös erotteli asuinalueita.\n\nRakennusten arki ulottui niiden julkisivuja pidemmälle. Ruusukransin kirkon pihapiirissä oli koulu, kirjasto ja painokone, jolla tuotettiin paikalliskielisiä tekstejä. Teatterin myöhempi elokuvakäyttö puolestaan toi vanhaan rakennukseen projektoritilan.\n\nKaupungin tehtävät ovat myös vaihtaneet paikkaa. Medeber siirrettiin koilliseen teollisuusalueelle, ja kansallismuseo muutti entisestä palatsista entiseen tyttökouluun."
+    "teksti": "Asmaran vanha asutus oli olemassa ennen siirtomaakauden kaupunkisuunnittelua. Paikallinen asutus, torit, Mai Bela -joki ja ylängön maasto vaikuttivat kaupungin suunnitteluun. Katuverkkoon syntyi ruutua ja kaartuvia linjoja, mutta siirtomaahallinto myös erotteli asuinalueita.\n\nRakennusten arki ulottui niiden julkisivuja pidemmälle. Ruusukon kirkon pihapiirissä oli koulu, kirjasto ja painokone, jolla tuotettiin paikalliskielisiä tekstejä. Teatterin myöhempi elokuvakäyttö puolestaan toi vanhaan rakennukseen projektoritilan.\n\nKaupungin tehtävät ovat myös vaihtaneet paikkaa. Medeber siirrettiin koilliseen teollisuusalueelle, ja kansallismuseo muutti entisestä palatsista entiseen tyttökouluun."
   },
   "kaupunkilehti": [
     {
@@ -102,7 +102,7 @@
             },
             {
               "otsikko": "Rakennusten eri vaiheet",
-              "teksti": "Ruusukransin kirkon tiilirakennus ja myöhempi erillinen kellotorni ovat eri vaiheita. Teatterin portiikki ja katutason liiketilat kertovat myös muutoksista.",
+              "teksti": "Ruusukon kirkon tiilirakennus ja myöhempi erillinen kellotorni ovat eri vaiheita. Teatterin portiikki ja katutason liiketilat kertovat myös muutoksista.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -141,7 +141,7 @@
               {
                 "mita": "Vanha tiilikirkko",
                 "tahdet": 3,
-                "selite": "Ruusukransin kirkolla on oma historiallinen rakennusvaiheensa."
+                "selite": "Ruusukon kirkolla on oma historiallinen rakennusvaiheensa."
               },
               {
                 "mita": "Medeberin materiaalit",
@@ -174,7 +174,7 @@
               },
               {
                 "otsikko": "Kirkon nimet",
-                "teksti": "Ruusukransin kirkkoa kutsutaan usein katedraaliksi; Kidane Mehret on eri kirkko."
+                "teksti": "Ruusukon kirkkoa kutsutaan usein katedraaliksi; Kidane Mehret on eri kirkko."
               }
             ]
           },
@@ -198,7 +198,7 @@
         },
         {
           "otsikko": "Kirkon pihapiirissä oli painokone",
-          "teksti": "Ruusukransin Neitsyt Marian kirkko kehittyi vanhan katolisen lähetysaseman ympärille. Nykyistä suurempaa kirkkoa edelsi pieni Pyhän Markuksen kirkko. Oreste Scanavinin suunnitteleman tiilikirkon kokonaisuuteen kuului myös koulu ja kirjasto. Painokoneella tuotettiin uskonnollisia ja koulutekstejä paikallisilla kielillä. Erillinen kellotorni valmistui kirkon päävaihetta myöhemmin. Ruskea tiili ja lombardialainen uusromaanisuus kertovat rakennuksen omasta arkkitehtuurista.",
+          "teksti": "Ruusukon Neitsyt Marian kirkko kehittyi vanhan katolisen lähetysaseman ympärille. Nykyistä suurempaa kirkkoa edelsi pieni Pyhän Markuksen kirkko. Oreste Scanavinin suunnitteleman tiilikirkon kokonaisuuteen kuului myös koulu ja kirjasto. Painokoneella tuotettiin uskonnollisia ja koulutekstejä paikallisilla kielillä. Erillinen kellotorni valmistui kirkon päävaihetta myöhemmin. Ruskea tiili ja lombardialainen uusromaanisuus kertovat rakennuksen omasta arkkitehtuurista.",
           "wiki": "Church of Our Lady of the Rosary, Asmara",
           "tiedosto": "",
           "lyhyt": "",
@@ -225,7 +225,7 @@
         }
       ],
       "tehtava": {
-        "kysymys": "Mitä työtä Ruusukransin kirkon pihapiirissä tehtiin koulun ja kirjaston lisäksi?",
+        "kysymys": "Mitä työtä Ruusukon kirkon pihapiirissä tehtiin koulun ja kirjaston lisäksi?",
         "vaihtoehdot": [
           "Paikalliskielisten tekstien painamista",
           "Maahan tuotujen kirjojen sitomista",
@@ -312,11 +312,11 @@
   "tiedot": [
     "Asmaran katuverkossa on sekä ruutukaavaa että maastoon ja vanhoihin paikkoihin liittyviä kaartuvia linjoja.",
     "Medeberin käsityöläiset ovat valmistaneet käyttöesineitä kierrätysmateriaaleista, esimerkiksi metallisia uuneja.",
-    "Ruusukransin kirkkoa kutsutaan usein katedraaliksi, mutta se ei ole sama paikka kuin nykyinen Kidane Mehret -katedraali."
+    "Ruusukon kirkkoa kutsutaan usein katedraaliksi, mutta se ei ole sama paikka kuin nykyinen Kidane Mehret -katedraali."
   ],
   "kohdekartta": {
     "numeroympyrat": true,
-    "esittely": "Ruusukransin Neitsyt Marian kirkko liittyy keskustan historiallisten rakennusten ja lähetyskokonaisuuden vaiheisiin.",
+    "esittely": "Ruusukon Neitsyt Marian kirkko liittyy keskustan historiallisten rakennusten ja lähetyskokonaisuuden vaiheisiin.",
     "rajat": {
       "pohjoinen": 15.33975,
       "etela": 15.33375,
@@ -325,21 +325,21 @@
     },
     "kohteet": [
       {
-        "nimi": "Ruusukransin Neitsyt Marian kirkko",
+        "nimi": "Ruusukon Neitsyt Marian kirkko",
         "lat": 15.33675,
         "lon": 38.93789
       }
     ]
   },
   "nahtavyydet": {
-    "Ruusukransin Neitsyt Marian kirkko": {
+    "Ruusukon Neitsyt Marian kirkko": {
       "aika": "1900-luvun alkupuoli",
-      "teksti": "Ruusukransin Neitsyt Marian kirkko sijaitsee Asmaran keskustassa. Oreste Scanavini suunnitteli sen lombardialaisen uusromaanisuuden hengessä, ja rakennuksessa käytettiin ruskeaa tiiltä. Pohjakaavassa on keskilaiva, sivulaivat ja poikkilaiva. Nykyistä kirkkoa edelsi pienempi Pyhän Markuksen kirkko vanhan katolisen lähetysaseman yhteydessä. Kokonaisuuteen kuului koulutoimintaa, kirjasto ja painokone, jolla tuotettiin uskonnollisia sekä koulutekstejä paikallisilla kielillä. Erillinen kellotorni on kirkon päävaihetta myöhempi. Nykyistä rakennusta ja tätä lähetyskokonaisuutta ei ollut vuonna 1873. Paikkaa kutsutaan usein katedraaliksi, mutta se ei ole sama kuin nykyinen Kidane Mehret -katedraali.",
+      "teksti": "Ruusukon Neitsyt Marian kirkko sijaitsee Asmaran keskustassa. Oreste Scanavini suunnitteli sen lombardialaisen uusromaanisuuden hengessä, ja rakennuksessa käytettiin ruskeaa tiiltä. Pohjakaavassa on keskilaiva, sivulaivat ja poikkilaiva.\n\nNykyistä kirkkoa edelsi pienempi Pyhän Markuksen kirkko vanhan katolisen lähetysaseman yhteydessä. Kokonaisuuteen kuului koulutoimintaa, kirjasto ja painokone, jolla tuotettiin uskonnollisia sekä koulutekstejä paikallisilla kielillä. Erillinen kellotorni on kirkon päävaihetta myöhempi. Nykyistä rakennusta ja tätä lähetyskokonaisuutta ei ollut vuonna 1873. Paikkaa kutsutaan usein katedraaliksi, mutta se ei ole sama kuin nykyinen Kidane Mehret -katedraali.",
       "kuvat": [
         {
           "tiedosto": "Asmara, cattedrale cattolica, campanile 01.JPG",
-          "lyhyt": "Ruusukransin kirkon kellotorni.",
-          "selite": "Ruusukransin Neitsyt Marian kirkon erillinen kellotorni Asmarassa, kuvattu vuonna 2015.",
+          "lyhyt": "Ruusukon kirkon kellotorni.",
+          "selite": "Ruusukon Neitsyt Marian kirkon erillinen kellotorni Asmarassa, kuvattu vuonna 2015.",
           "lahde": "sailko, Wikimedia Commons (CC BY-SA 3.0)"
         }
       ],
@@ -367,7 +367,7 @@
   "valokuva": {
     "tiedosto": "Asmara aerial view 1981 02.jpg",
     "lyhyt": "Asmaran keskustaa helikopterista vuonna 1981.",
-    "selite": "Helikopterista vuonna 1981 kuvatussa Asmaran keskustassa näkyy Ruusukransin kirkko ympäröivine kortteleineen.",
+    "selite": "Helikopterista vuonna 1981 kuvatussa Asmaran keskustassa näkyy Ruusukon kirkko ympäröivine kortteleineen.",
     "lahde": "Л.П. Джепко (Leonid Dzhepko), Commons (CC BY-SA 3.0)",
     "vuosi": "1981"
   },
