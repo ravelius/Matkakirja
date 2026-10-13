@@ -1,8 +1,8 @@
 # Raketin Andøya-alku: kertojan teksti ja kuvaehdokkaat (Sisältökirjuri 14.10.2026, LUONNOS)
 
-## Kertojan teksti (William, 27 sanaa, ~11 s)
+## Kertojan teksti (William, 25 sanaa, ~11 s) — HYVÄKSYTTY 14.10. (PT: "Länsi-Euroopasta", Plesetsk on Euroopan puolella Venäjää)
 
-Laukaisu tapahtuu Andøyalta, Norjan pohjoisrannikon saarelta. Pohjoinen sijainti sopii napojen yli kulkeville radoille, ja raketti lentää avomeren yllä, kaukana asutuksesta. Täältä nousi ensimmäinen raketti Euroopan mantereelta kiertoradalle.
+Laukaisu tapahtuu Andøyalta, Norjan pohjoisrannikon saarelta. Pohjoinen sijainti sopii napojen yli kulkeville radoille, ja raketti lentää avomeren yllä, kaukana asutuksesta. Täältä nousi ensimmäinen raketti Länsi-Euroopasta kiertoradalle.
 
 Lähteet:
 - [Wikipedia: Andøya Space](https://en.wikipedia.org/wiki/And%C3%B8ya_Space): 69°17′N, Andøyan saari; ensimmäinen onnistunut kiertoratalaukaisu 5.9.2026
