@@ -3,7 +3,7 @@
   "era": "e11",
   "city": "santodomingo",
   "authorization": "hyväksyn kaikki tekemäsi kuvat. toimita ne claudelle. claudelta saat uusia ohjeita jatkoa varten",
-  "sourceContentAfterSHA256": "bdf344d93321b1250f4e2901ed791aac7c5a3e81ee8523f79222048583b085f1",
+  "sourceContentAfterSHA256": "950ca199610edf5b7226c2a7c527451961904983a33921ee4208e0292d62c0dd",
   "assets": [
     {
       "era": "e11",
@@ -25,10 +25,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/santodomingo/santodomingo-traveler-20261012-v1-2c9d14-0ae4585810ac.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva päivän annoksesta: riisiä, papuja, kanaa ja salaattia.",
-        "lyhyt": "Havainnekuva päivän annoksesta: riisiä, papuja, kanaa ja salaattia."
+        "selite": "Havainnekuva päivän annoksesta: riisiä, papuja, kanaa ja salaattia."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -36,10 +36,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/santodomingo/santodomingo-traveler-20261012-v1-2c9d14-0ae4585810ac.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva päivän annoksesta: riisiä, papuja, kanaa ja salaattia.",
-        "lyhyt": "Havainnekuva päivän annoksesta: riisiä, papuja, kanaa ja salaattia."
+        "selite": "Havainnekuva päivän annoksesta: riisiä, papuja, kanaa ja salaattia."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -53,10 +53,10 @@
         1536
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/santodomingo/sisalto.json",
-      "sourceContentSHA256": "bdf344d93321b1250f4e2901ed791aac7c5a3e81ee8523f79222048583b085f1",
+      "sourceContentSHA256": "950ca199610edf5b7226c2a7c527451961904983a33921ee4208e0292d62c0dd",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "8acd6a2b70bf0bee4cfac8746b210ed266fb3aed1cc0e63f2f7b8f2bde715b03",
+        "semanticContextSHA256": "65d4c36c03f820ceb11439efb704b43fa7abfc894ac69baa256de3608569885c",
         "subjectTitle": "Matkailijalle",
         "targetState": "existing-target"
       },
@@ -480,9 +480,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -501,17 +501,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "bdf344d93321b1250f4e2901ed791aac7c5a3e81ee8523f79222048583b085f1",
+      "sourceContentAfterSHA256": "950ca199610edf5b7226c2a7c527451961904983a33921ee4208e0292d62c0dd",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "8acd6a2b70bf0bee4cfac8746b210ed266fb3aed1cc0e63f2f7b8f2bde715b03",
+      "contextAfterSHA256": "65d4c36c03f820ceb11439efb704b43fa7abfc894ac69baa256de3608569885c",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "bdf344d93321b1250f4e2901ed791aac7c5a3e81ee8523f79222048583b085f1",
+        "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "contextAfterSHA256": "8acd6a2b70bf0bee4cfac8746b210ed266fb3aed1cc0e63f2f7b8f2bde715b03",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+          "semanticContextSHA256": "8acd6a2b70bf0bee4cfac8746b210ed266fb3aed1cc0e63f2f7b8f2bde715b03",
+          "subjectTitle": "Matkailijalle",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "950ca199610edf5b7226c2a7c527451961904983a33921ee4208e0292d62c0dd",
+        "sameImageNativeSHA256": "0ae4585810ace70198d4e51c899dab3340487d835582c3e997b2e940e36ce678",
+        "sameImageExportSHA256": "00d06c9484e3606c302e8f16f789119c4223c3c72dd4762d944c32d91d71c312",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e11",
@@ -536,10 +557,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/santodomingo/santodomingo-o4-20261012-v1-688227-135794cd3f74.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva päivän annoksesta: riisiä, papuja, kanaa ja salaattia.",
-        "lyhyt": "Havainnekuva päivän annoksesta: riisiä, papuja, kanaa ja salaattia."
+        "selite": "Havainnekuva päivän annoksesta: riisiä, papuja, kanaa ja salaattia."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -547,10 +568,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/santodomingo/santodomingo-o4-20261012-v1-688227-135794cd3f74.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva päivän annoksesta: riisiä, papuja, kanaa ja salaattia.",
-        "lyhyt": "Havainnekuva päivän annoksesta: riisiä, papuja, kanaa ja salaattia."
+        "selite": "Havainnekuva päivän annoksesta: riisiä, papuja, kanaa ja salaattia."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -564,10 +585,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/santodomingo/sisalto.json",
-      "sourceContentSHA256": "bdf344d93321b1250f4e2901ed791aac7c5a3e81ee8523f79222048583b085f1",
+      "sourceContentSHA256": "950ca199610edf5b7226c2a7c527451961904983a33921ee4208e0292d62c0dd",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "ea1f31d33c155164e1e1c8861b0a54d4d31b99c79b3bde49dbfcd627642f5e4f",
+        "semanticContextSHA256": "03cb46fdcda5f45b4f303f089afba2a436e0db692283824ae424a444bc93ab13",
         "subjectTitle": "Mitä täällä syödään",
         "targetState": "existing-target"
       },
@@ -781,9 +802,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -802,17 +823,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "bdf344d93321b1250f4e2901ed791aac7c5a3e81ee8523f79222048583b085f1",
+      "sourceContentAfterSHA256": "950ca199610edf5b7226c2a7c527451961904983a33921ee4208e0292d62c0dd",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "ea1f31d33c155164e1e1c8861b0a54d4d31b99c79b3bde49dbfcd627642f5e4f",
+      "contextAfterSHA256": "03cb46fdcda5f45b4f303f089afba2a436e0db692283824ae424a444bc93ab13",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "bdf344d93321b1250f4e2901ed791aac7c5a3e81ee8523f79222048583b085f1",
+        "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "contextAfterSHA256": "ea1f31d33c155164e1e1c8861b0a54d4d31b99c79b3bde49dbfcd627642f5e4f",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+          "semanticContextSHA256": "ea1f31d33c155164e1e1c8861b0a54d4d31b99c79b3bde49dbfcd627642f5e4f",
+          "subjectTitle": "Mitä täällä syödään",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "950ca199610edf5b7226c2a7c527451961904983a33921ee4208e0292d62c0dd",
+        "sameImageNativeSHA256": "135794cd3f74c0775c90bcfcb9dec2b84ea1da751d8b5a90c122dbe036de2364",
+        "sameImageExportSHA256": "0261dd54429070c1a028d1bc2c5318758947143da326ee97a04fdcf4ebcd4e12",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e11",
@@ -834,10 +876,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/santodomingo/santodomingo-l1-20261012-v1-006517-cb2f1694f2aa.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva korallikivestä rakennusmateriaalina, ei Ozaman linnoituksen todellinen kivipinta.",
-        "lyhyt": "Havainnekuva korallikivestä rakennusmateriaalina, ei Ozaman linnoituksen todellinen kivipinta."
+        "selite": "Havainnekuva korallikivestä rakennusmateriaalina, ei Ozaman linnoituksen todellinen kivipinta."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -845,10 +887,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/santodomingo/santodomingo-l1-20261012-v1-006517-cb2f1694f2aa.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva korallikivestä rakennusmateriaalina, ei Ozaman linnoituksen todellinen kivipinta.",
-        "lyhyt": "Havainnekuva korallikivestä rakennusmateriaalina, ei Ozaman linnoituksen todellinen kivipinta."
+        "selite": "Havainnekuva korallikivestä rakennusmateriaalina, ei Ozaman linnoituksen todellinen kivipinta."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -862,7 +904,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/santodomingo/sisalto.json",
-      "sourceContentSHA256": "bdf344d93321b1250f4e2901ed791aac7c5a3e81ee8523f79222048583b085f1",
+      "sourceContentSHA256": "950ca199610edf5b7226c2a7c527451961904983a33921ee4208e0292d62c0dd",
       "semanticSourceBind": {
         "targetBeforeSHA256": "9c6215fd991fc34b73f70b2f640bbe93b9eba4e0031d17ab9fa04dd9fc3f70c0",
         "semanticContextSHA256": "9c6215fd991fc34b73f70b2f640bbe93b9eba4e0031d17ab9fa04dd9fc3f70c0",
@@ -1077,9 +1119,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -1098,17 +1140,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "bdf344d93321b1250f4e2901ed791aac7c5a3e81ee8523f79222048583b085f1",
+      "sourceContentAfterSHA256": "950ca199610edf5b7226c2a7c527451961904983a33921ee4208e0292d62c0dd",
       "targetAfterSHA256": "9c6215fd991fc34b73f70b2f640bbe93b9eba4e0031d17ab9fa04dd9fc3f70c0",
       "contextAfterSHA256": "9c6215fd991fc34b73f70b2f640bbe93b9eba4e0031d17ab9fa04dd9fc3f70c0",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "bdf344d93321b1250f4e2901ed791aac7c5a3e81ee8523f79222048583b085f1",
+        "targetAfterSHA256": "9c6215fd991fc34b73f70b2f640bbe93b9eba4e0031d17ab9fa04dd9fc3f70c0",
+        "contextAfterSHA256": "9c6215fd991fc34b73f70b2f640bbe93b9eba4e0031d17ab9fa04dd9fc3f70c0",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "9c6215fd991fc34b73f70b2f640bbe93b9eba4e0031d17ab9fa04dd9fc3f70c0",
+          "semanticContextSHA256": "9c6215fd991fc34b73f70b2f640bbe93b9eba4e0031d17ab9fa04dd9fc3f70c0",
+          "subjectTitle": "Korallikivi vartioi satamaa",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "950ca199610edf5b7226c2a7c527451961904983a33921ee4208e0292d62c0dd",
+        "sameImageNativeSHA256": "cb2f1694f2aa9d4659efd74acf14fa591384798ceddca84f620f92dba7962be9",
+        "sameImageExportSHA256": "b8266b2e5dd458be4fc27f64bb99d5eb31ef4992231daba5b6872e6b4d2b76e6",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e11",
@@ -1158,7 +1221,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/santodomingo/sisalto.json",
-      "sourceContentSHA256": "bdf344d93321b1250f4e2901ed791aac7c5a3e81ee8523f79222048583b085f1",
+      "sourceContentSHA256": "950ca199610edf5b7226c2a7c527451961904983a33921ee4208e0292d62c0dd",
       "semanticSourceBind": {
         "targetBeforeSHA256": "701957bf8d363069cebdc243e65faf464a9c50257149ee3f2f9dd99acb20eaaa",
         "semanticContextSHA256": "701957bf8d363069cebdc243e65faf464a9c50257149ee3f2f9dd99acb20eaaa",
@@ -1373,9 +1436,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -1394,22 +1457,49 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "bdf344d93321b1250f4e2901ed791aac7c5a3e81ee8523f79222048583b085f1",
+      "sourceContentAfterSHA256": "950ca199610edf5b7226c2a7c527451961904983a33921ee4208e0292d62c0dd",
       "targetAfterSHA256": "701957bf8d363069cebdc243e65faf464a9c50257149ee3f2f9dd99acb20eaaa",
       "contextAfterSHA256": "701957bf8d363069cebdc243e65faf464a9c50257149ee3f2f9dd99acb20eaaa",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "bdf344d93321b1250f4e2901ed791aac7c5a3e81ee8523f79222048583b085f1",
+        "targetAfterSHA256": "701957bf8d363069cebdc243e65faf464a9c50257149ee3f2f9dd99acb20eaaa",
+        "contextAfterSHA256": "701957bf8d363069cebdc243e65faf464a9c50257149ee3f2f9dd99acb20eaaa",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "701957bf8d363069cebdc243e65faf464a9c50257149ee3f2f9dd99acb20eaaa",
+          "semanticContextSHA256": "701957bf8d363069cebdc243e65faf464a9c50257149ee3f2f9dd99acb20eaaa",
+          "subjectTitle": "Holvit kantavat kahta aikakautta",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "950ca199610edf5b7226c2a7c527451961904983a33921ee4208e0292d62c0dd",
+        "sameImageNativeSHA256": "215b34f8b1f78c301095eb820c64703dfcbb52b3f1122d51ea60e79593c56efe",
+        "sameImageExportSHA256": "4d4af7abf429b22a2ccdf0edebf4452e8f613db1e6697e6625e20f96b5195e52",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     }
   ],
   "runtimeIntegrationPending": true,
   "ownerAcceptedNotImpliedByAuthorization": false,
   "gameIntegrated": false,
   "allAssetsExplicitlyOwnerApproved": true,
-  "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+  "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+  "task118ExcludedAssets": [],
+  "task118TextRevision": true,
+  "independentTextResamplePending": true,
+  "textAcceptanceVerified": false,
+  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task118/immutable-media-history/e11/santodomingo/490859947e08e792b1c8318ddf96304cd2529cb6c8c3f7074297871d205dc958.json",
+  "task118ReboundAt": "2026-10-13T16:31:26.122556+00:00"
 }

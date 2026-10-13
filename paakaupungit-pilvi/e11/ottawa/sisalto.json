@@ -1,414 +1,414 @@
 {
-  "$skeema": "matkakirja-paakaupunki/1",
+ "$skeema": "matkakirja-paakaupunki/1",
+ "id": "ottawa",
+ "maa": "CAN",
+ "era": "e11",
+ "kaupunki": {
   "id": "ottawa",
-  "maa": "CAN",
-  "era": "e11",
-  "kaupunki": {
-    "id": "ottawa",
-    "name": "Ottawa",
-    "wiki": "Ottawa",
-    "ambience": "kaupunki",
-    "pallo": {
-      "lat": 45.4247,
-      "lon": -75.695
-    }
-  },
-  "artikkeli": {
-    "intro": "Ottawa on Kanadan pääkaupunki, mutta sen tarina alkaa paljon ennen hallintokortteleita. Ottawa-joen seutu oli algonkinien kaupan ja kulkemisen aluetta jo ennen eurooppalaista asutusta. Kaupungin nimen taustalla on kaupankäyntiä tarkoittava sana. Kanavan rakentajien Bytown kasvoi puutavarakaupungiksi ja sai myöhemmin nykyisen nimensä. Isoisän matkavuonna 1873 Ottawa oli jo pääkaupunki, vaikka parlamenttikirjaston rakentaminen oli yhä kesken.\n\n**ByWard Marketin** ympärillä pääkaupunki vaihtaa juhlapuvun kauppakassiin: alueella on tuottajien kojuja, pieniä liikkeitä ja ravintoloita. **Central Experimental Farm** puolestaan on toimiva maatila ja tutkimuskeskus kaupunkialueen keskellä. Sen arboretumissa tutkitaan puiden ja pensaiden sopeutumista paikallisiin oloihin. Joet, kanava ja Dows Lake sitovat rakennettua kaupunkia vesimaisemaan, jossa luonnon ja ihmisen työn raja ei aina näy ensi katsomalta.",
-    "teksti": "Ottawan vanha nimi Bytown viittasi Rideau-kanavan rakentamista johtaneeseen John Byhin. Kaupunki kasvoi kanavatyömaan ja puutavarakaupan ympärille. Algonkinien jokiseudun historia on paljon tätä vanhempi: vesireitit yhdistivät ihmisiä ja kauppapaikkoja ennen siirtomaa-asutusta.\n\nParlamentin rakennukset tekivät Ottawasta hallinnon keskuksen jo ennen vuotta 1873. Kirjasto valmistui myöhemmin 1800-luvulla. Sen erillinen sijainti ja suljetut rautaovet säästivät kokoelman parlamentin päärakennuksen tulipalossa seuraavalla vuosisadalla. Kirjaston työ on yhä tiedon kokoamista ja tutkimuspalvelua.\n\nToisenlaista tutkimusta tehdään Central Experimental Farmilla, joka perustettiin 1800-luvun lopulla. Tila jäi kaupungin kasvaessa sen sisään. Pellot, arboretum ja puistomainen ympäristö muistuttavat, että pääkaupungin tutkimustyöhön kuuluu myös kasvien kasvattamista, hyönteisiä ja viljelymenetelmien kokeilemista."
-  },
-  "kysymykset": [
-    {
-      "q": "Mikä oli Ottawan aiempi nimi?",
-      "options": [
-        "Bytown",
-        "Yorktown",
-        "Newport",
-        "Kingston"
-      ],
-      "correct": 0,
-      "level": 1,
-      "hint": "Nimi liittyi kanavan rakentamista johtaneeseen henkilöön.",
-      "fact": "Bytown sai nimensä John Bystä ennen kaupungin nimeämistä Ottawaksi.",
-      "source": "https://en.wikipedia.org/wiki/Ottawa"
-    },
-    {
-      "q": "Mihin toimintaan Ottawan nimen taustalla oleva sana viittaa?",
-      "options": [
-        "Kaupankäyntiin",
-        "Kalastukseen",
-        "Puunkaatoon",
-        "Purjehdukseen"
-      ],
-      "correct": 0,
-      "level": 2,
-      "hint": "Jokireitit yhdistivät ihmisiä ja vaihtopaikkoja.",
-      "fact": "Ottawa-joen nimen taustalla on algonkinien kaupankäyntiä tarkoittava sana.",
-      "source": "https://en.wikipedia.org/wiki/Ottawa"
-    },
-    {
-      "q": "Mikä on Central Experimental Farmin tehtävä?",
-      "options": [
-        "Maataloustutkimus",
-        "Satamaliikenteen hoito",
-        "Lentokoneiden huolto",
-        "Kaupunkiraiteiden ylläpito"
-      ],
-      "correct": 0,
-      "level": 1,
-      "hint": "Paikalla kokeillaan viljelymenetelmiä ja tutkitaan kasveja.",
-      "fact": "Central Experimental Farm on toimiva maatila ja maatalouden tutkimuskeskus.",
-      "source": "https://en.wikipedia.org/wiki/Central_Experimental_Farm"
-    },
-    {
-      "q": "Mitä Rideau-putousten ranskankielinen nimi tarkoittaa?",
-      "options": [
-        "Verhoa",
-        "Portaita",
-        "Siltaa",
-        "Käytävää"
-      ],
-      "correct": 0,
-      "level": 2,
-      "hint": "Putoavan veden muoto antoi paikan nimen.",
-      "fact": "Rideau tarkoittaa verhoa, ja joki sai nimensä putouksista.",
-      "source": "https://en.wikipedia.org/wiki/Rideau_Falls"
-    },
-    {
-      "q": "Miten Dows Lake syntyi?",
-      "options": [
-        "Suon tulvittamisesta",
-        "Meteoriitin törmäyksestä",
-        "Tulivuoren kraatterista",
-        "Joen uoman sortumisesta"
-      ],
-      "correct": 0,
-      "level": 3,
-      "hint": "Järven synty liittyi kanavan rakentamiseen.",
-      "fact": "Kanavaa varten rakennettu maapato mahdollisti suon tulvittamisen. Järvi kuuluu Rideau-kanavaan.",
-      "source": "https://en.wikipedia.org/wiki/Dow's_Lake"
-    }
-  ],
-  "tiedot": [
-    "Ottawan parlamenttikirjaston rautaovet suljettiin tulipalon aikana, ja kirjasto säästyi päärakennuksen palossa.",
-    "Dominion Arboretumin puut ovat sekä puiston kasvillisuutta että kasvien kestävyyden tutkimuskokoelma.",
-    "ByWard Marketissa voi ostaa tuottajien tuotteita ja käsitöitä; markkinahallin ympärillä on myös ravintolakortteleita."
-  ],
-  "valokuva": {
-    "tiedosto": "The Rideau Falls.JPG",
-    "lyhyt": "Rideau-putoukset laskevat Rideau-joen vedet Ottawa-jokeen.",
-    "selite": "Rideau-putoukset laskevat Rideau-joen vedet Ottawa-jokeen.",
-    "lahde": "Óðinn, Commons (CC BY-SA 2.5 ca)"
-  },
-  "kaupunkilehti": [
-    {
-      "id": "kaupunki",
-      "nimi": "Ottawa",
-      "johdanto": "Kaupan vanhat vesireitit, parlamentin kirjasto ja tutkimustilan pellot kertovat Ottawasta eri puolia.",
-      "kansikuvat": [
-        {
-          "tiedosto": "Downtown Ottawa 2022.jpg",
-          "lyhyt": "Ottawan keskusta liittyy jokien ympärille kasvaneeseen pääkaupunkiin.",
-          "selite": "Ottawan keskusta liittyy jokien ympärille kasvaneeseen pääkaupunkiin.",
-          "lahde": "Harleyd613, Wikimedia Commons (CC BY-SA 4.0)"
-        },
-        {
-          "tiedosto": "Dow's Lake aerial view 2025.jpg",
-          "lyhyt": "Dows Lake kuuluu Ottawan kanavavesistön ja kaupunkirantojen maisemaan.",
-          "selite": "Dows Lake kuuluu Ottawan kanavavesistön ja kaupunkirantojen maisemaan.",
-          "lahde": "Canmenwalker, Wikimedia Commons (CC BY 4.0)"
-        },
-        {
-          "tiedosto": "Central Experimental Farm aerial view 2025.jpg",
-          "lyhyt": "Central Experimental Farm säilyttää viljelyn tutkimusalueen Ottawan kaupunkirakenteen keskellä.",
-          "selite": "Central Experimental Farm säilyttää viljelyn tutkimusalueen Ottawan kaupunkirakenteen keskellä.",
-          "lahde": "Canmenwalker, Wikimedia Commons (CC BY 4.0)"
-        }
-      ],
-      "nostot": [
-        {
-          "otsikko": "Nimessä kulkee kauppa",
-          "teksti": "Ottawan nykyinen nimi viittaa Ottawa-jokeen, jonka nimen taustalla on algonkinien kaupankäyntiä tarkoittava sana. Jokien kohtaamispaikka oli kaupan ja kulkemisen aluetta kauan ennen kanavatyömaata. Eurooppalaisen asutuksen kasvuvaiheessa kaupunkia kutsuttiin Bytowniksi kanavan rakennustöitä johtaneen John Byn mukaan. Nykyinen nimi otettiin käyttöön 1800-luvun puolivälissä. Kaupungin nimikerrokset kertovat eri ajoista: alkuperäiskansojen vesireiteistä ja paljon myöhemmästä rakennushankkeesta.",
-          "wiki": "Ottawa",
-          "tiedosto": "",
-          "lyhyt": "",
-          "selite": "",
-          "lahde": ""
-        },
-        {
-          "otsikko": "Kirjat rautaovien takana",
-          "teksti": "Parlamenttikirjasto liittyy päärakennukseen käytävällä. Kun parlamentin keskusrakennus paloi 1900-luvun alussa, kirjaston rautaovet suljettiin ennen kuin tuli levisi sen puolelle. Erillinen rakennus ja suljetut ovet auttoivat säästämään kokoelman. Ulkoa kirjasto kuuluu parlamenttikukkulan uusgoottilaiseen rakennusryhmään; sisällä lukusalin seiniä kiertävät koristeelliset puupaneelit. Kirjastolaitos palvelee parlamenttia tiedon kokoajana ja tutkimuspalveluna. Isoisän matkavuonna 1873 nykyinen kirjastorakennus ei ollut vielä valmis.",
-          "wiki": "Library of Parliament",
-          "tiedosto": "Ottawa - ON - Library of Parliament.jpg",
-          "lyhyt": "Parlamentin kirjastotalo kuuluu Ottawan historialliseen uusgoottilaiseen arkkitehtuuriin.",
-          "selite": "Parlamentin kirjastotalo kuuluu Ottawan historialliseen uusgoottilaiseen arkkitehtuuriin.",
-          "lahde": "Wladyslaw ( talk ), Wikimedia Commons (CC BY-SA 3.0)"
-        },
-        {
-          "otsikko": "Kauppakassi kuuluu pääkaupunkiin",
-          "teksti": "ByWard Market on sekä tuottajien markkinapaikka että sitä ympäröivä kauppojen ja ravintoloiden alue. Kesäisin kadunvarsien kojuissa myydään tuoreita kasviksia ja kukkia, ja pienistä liikkeistä löytyy myös käsitöitä. Alue oli Ottawan elämän keskus jo kaupungin puutavarakaupan aikana. Päivällä asioidaan ostoksilla, illalla ravintolat ja baarit muuttavat alueen luonnetta. Marketin nimi voi tarkoittaa koko korttelistoa, joten yhden hallin katsominen ei vielä kerro kaikkea. Täällä pääkaupunkia tarkastellaan tiskin toiselta puolelta.",
-          "wiki": "Ottawa",
-          "tiedosto": "",
-          "lyhyt": "",
-          "selite": "",
-          "lahde": ""
-        },
-        {
-          "otsikko": "Majavan häntä ilman majavaa",
-          "teksti": "BeaverTail eli majavanhäntä on Ottawaan yhdistetty paistettu taikinaleivonnainen. Nimi ei tarkoita, että tarjolla olisi majavaa: kyse on taikinaleivonnaisesta. Makeaan versioon saa esimerkiksi kanelia ja sokeria; leivonnaista myydään ByWard Marketin alueella ja talvisin kanavan luistelureitin yhteydessä. Myös shawarma kuuluu kaupungin arkiseen ruokavalikoimaan. Sitä tarjoavia ravintoloita on muun muassa Rideau Streetillä ja Elgin Streetin tuntumassa. Pääkaupungin ruokakierros voi siis kulkea paistetusta taikinasta pitaleivän sisään koottuun ateriaan.",
-          "wiki": "Ottawa",
-          "tiedosto": "",
-          "lyhyt": "",
-          "selite": "",
-          "lahde": ""
-        }
-      ],
-      "matkailijalle": {
-        "kuva": {
-          "tiedosto": "",
-          "lyhyt": "",
-          "selite": "",
-          "lahde": ""
-        },
-        "kappale": "Ottawassa kävely voi kulkea markkinakojuista joelle ja kanavan rannalle. ByWard Marketin alueella on tuottajien kojuja, käsitöitä ja ruokapaikkoja. Dominion Arboretum ja Dows Lake sopivat puistoihin suuntautuvaan retkeen. Kaupungin sisällä voi liikkua myös OC Transpon busseilla ja O-Train-junilla. Talvinen luistelu kuuluu mahdolliseen ohjelmaan vasta, kun kanavan jäätilanne sallii sen.",
-        "artikkeli": {
-          "nimi": "Matkailijan Ottawa",
-          "taitto": "opas",
-          "teksti": "Lähde pääkaupunkikierrokselle, jolla kauppapaikat, tutkimuspuistot ja vesi kuuluvat samaan kaupunkiin.",
-          "nosto": "Ottawa avautuu myös parlamenttikukkulan ulkopuolella: markkinakortteleissa, arboretumissa ja jokirannoilla.",
-          "jaksot": [
-            {
-              "otsikko": "Perille ja liikkeelle",
-              "teksti": "Ottawan kansainvälinen lentoasema on Macdonald–Cartier International Airport. Kaupungin joukkoliikenteeseen kuuluvat OC Transpon bussit ja O-Train-junat, ja kaukojunia liikennöi VIA Rail. Keskustan kävelyä voi jatkaa kanavan rannoille tai Ottawa-joen varsille. Gatineaun bussiliikenteellä on oma operaattorinsa STO, joten joen ylittävää matkaa varten kannattaa katsoa myös sen reittitiedot.",
-              "kuva": {
-                "tiedosto": "",
-                "lyhyt": "",
-                "selite": "",
-                "lahde": ""
-              }
-            },
-            {
-              "otsikko": "Kauppakortteleista jokirantaan",
-              "teksti": "ByWard Marketissa kulje myös hallin ympärillä: tuottajien kojut, pienet liikkeet ja ruokapaikat kuuluvat samaan alueeseen. Päivällä markkinapaikkaa luetaan ostosten, illalla ravintoloiden kautta. Rideau Fallsilla näkee Rideau-joen liittyvän Ottawa-jokeen. Putousten ympäristö on puistoa, mutta paikan historiaan kuuluu myös veden voimaa hyödyntänyt teollisuus.",
-              "kuva": {
-                "tiedosto": "Rideau Falls 20250720 150134.jpg",
-                "lyhyt": "Rideau-putoukset ja Ottawa-joki heinäkuussa 2025.",
-                "selite": "Rideau-putoukset ja Ottawa-joki heinäkuussa 2025.",
-                "lahde": "R Prazeres, Wikimedia Commons (CC BY-SA 4.0)"
-              }
-            },
-            {
-              "otsikko": "Tutkimuspuisto ja kanavajärvi",
-              "teksti": "Dominion Arboretumissa puut ja pensaat ovat sekä puiston kasvillisuutta että kestävyyden tutkimuskokoelma. Sen läheinen Dows Lake syntyi kanavatyömaalla suon tulvittamisesta. Arboretum kuuluu Central Experimental Farmiin, joka on yhä toimiva tutkimustila. Puistoihin suuntautuva retki kertoo Ottawasta eri asioita kuin parlamenttikukkulan katselu.",
-              "kuva": {
-                "tiedosto": "",
-                "lyhyt": "",
-                "selite": "",
-                "lahde": ""
-              }
-            },
-            {
-              "otsikko": "Mitä täällä syödään",
-              "teksti": "ByWard Marketin ympärillä on monenlaisia ruokapaikkoja. BeaverTail on paistettu taikinaleivonnainen, jonka makeaan versioon voi valita esimerkiksi kanelia ja sokeria. Shawarma kuuluu Ottawan arkiseen ruokavalikoimaan, ja sitä tarjoavia paikkoja löytyy myös Rideau Streetiltä. Jos etsii toisenlaisia makuja, Somerset Streetin Chinatown ja Preston Streetin Little Italy ovat kaupungin omia ruokakortteleita.",
-              "kuva": {
-                "tiedosto": "",
-                "lyhyt": "",
-                "selite": "",
-                "lahde": ""
-              }
-            },
-            {
-              "otsikko": "Milloin kannattaa tulla",
-              "teksti": "Ottawan vuodenajoissa on selvä ero: talvet ovat kylmiä ja lumisia, kesät lämpimiä. Puistojen ja rantojen kävelykierros sekä kanavan luisteluretki ovat siksi erilaisia matkoja. Luistelureitin käyttö riippuu jääoloista, eivätkä kaikki osuudet välttämättä ole avoinna. Talvista ohjelmaa ei kannata rakentaa pelkän kalenterin varaan: tarkista reitin avaaminen ennen jäälle menoa.",
-              "kuva": {
-                "tiedosto": "",
-                "lyhyt": "",
-                "selite": "",
-                "lahde": ""
-              }
-            }
-          ],
-          "matkailu": {
-            "parasta": [
-              {
-                "mita": "ByWard Market",
-                "tahdet": 3,
-                "selite": "Tuottajien kojuja, pieniä liikkeitä ja ravintoloita saman alueen sisällä."
-              },
-              {
-                "mita": "Rideau Falls",
-                "tahdet": 3,
-                "selite": "Rideau-joen suulla kaksi putousta liittyy Ottawa-jokeen."
-              },
-              {
-                "mita": "Dominion Arboretum",
-                "tahdet": 3,
-                "selite": "Puiden ja pensaiden tutkimuskokoelma toimii myös kävelypuistona."
-              },
-              {
-                "mita": "Dows Lake",
-                "tahdet": 2,
-                "selite": "Kanavatyömaan synnyttämä järvi puistojen ja arboretumin lähellä."
-              },
-              {
-                "mita": "Rideau-kanavan rannat",
-                "tahdet": 3,
-                "selite": "Keskustan vesireitti yhdistää kävelyä, veneilyä ja talven salliessa luistelua."
-              }
-            ],
-            "hyvaTietaa": [
-              {
-                "otsikko": "Jääolot ratkaisevat",
-                "teksti": "Kanavan luistelureitti avataan jäätilanteen mukaan, ja osia voi olla suljettuna."
-              },
-              {
-                "otsikko": "Jokirajan liikenne",
-                "teksti": "Ottawan liikennettä hoitaa OC Transpo, Gatineaun puolella operaattori on STO."
-              },
-              {
-                "otsikko": "Markkina on alue",
-                "teksti": "ByWard Market tarkoittaa myös hallia ympäröiviä kauppa- ja ravintolakortteleita."
-              }
-            ]
-          },
-          "lahde": "Wikipedia"
-        }
-      }
-    },
-    {
-      "id": "luonto",
-      "nimi": "Puistoja, kokeita ja rakennettua vettä",
-      "johdanto": "Ottawan vihreillä rannoilla luonnon, tutkimuksen ja rakentamisen historia kulkee rinnakkain.",
-      "tehtava": {
-        "kysymys": "Mitä arboretumin puukokoelman avulla arvioidaan?",
-        "vaihtoehdot": [
-          "Kasvien kestävyyttä",
-          "Jokien virtausnopeutta",
-          "Peltojen omistushistoriaa",
-          "Kaupunkiliikenteen määrää"
-        ],
-        "oikea": 0,
-        "fakta": "Puistossa kasvavia puita ja pensaita käytetään tutkimaan, miten ne menestyvät paikallisissa oloissa."
-      },
-      "nostot": [
-        {
-          "otsikko": "Maatila jäi kaupungin sisään",
-          "teksti": "Central Experimental Farm perustettiin 1800-luvun lopulla tutkimaan viljelymenetelmiä ja kasveja. Aluksi paikka sijaitsi kaupungin ulkopuolella, mutta Ottawa kasvoi sen ympärille. Tutkimustila toimii yhä, vaikka sen puistomainen ympäristö on myös asukkaiden virkistys- ja oppimispaikka. Varhaisissa tutkimuksissa perehdyttiin hyönteisiin, kasvitieteeseen ja puutarhanhoitoon. Tilaan liittyy arboretum, ja sen itäpuolella kulkee Rideau-kanava. Tässä kaupungissa pellon näkeminen ei siis välttämättä tarkoita, että olet poistunut pääkaupungista.",
-          "wiki": "Central Experimental Farm",
-          "tiedosto": "",
-          "lyhyt": "",
-          "selite": "",
-          "lahde": ""
-        },
-        {
-          "otsikko": "Puut käyvät kestävyyden kokeessa",
-          "teksti": "Dominion Arboretum on elävä puiden ja pensaiden kokoelma Central Experimental Farmin yhteydessä. Sen tehtävänä on arvioida kasvien kestävyyttä paikallisissa oloissa. Puisto perustettiin 1800-luvun lopulla kumpuilevalle maalle kanavan ja Dows Laken lähelle. Maaston synnyttämä pienilmasto on mahdollistanut myös seudulla tavallista arempien puiden kasvattamisen. Kokoelmassa on esimerkiksi magnolioita ja atsaleoita. Kävelyllä näkee siis sekä puiston että tutkimuskokoelman: sama puu voi olla varjopaikka ja pitkäkestoinen koe.",
-          "wiki": "Dominion Arboretum",
-          "tiedosto": "",
-          "lyhyt": "",
-          "selite": "",
-          "lahde": ""
-        },
-        {
-          "otsikko": "Verho, joka antoi joelle nimen",
-          "teksti": "Rideau-joen suulla vesi putoaa Ottawa-jokeen kahtena putouksena. Niiden väliin jää Green Island, joka jakaa joen haaroihin jo ennen pudotusta. Varhaiset ranskalaiset antoivat putouksille nimen rideau, verho, ja joki sai nimensä putouksista. Paikka ei kuitenkaan ole ollut pelkkä maisemakohde. Veden voimaa hyödynnettiin 1800-luvun teollisuudessa, ja virtaamaa säädellään yhä padoilla. Myöhemmin ympäristö muutettiin puistoksi. Nimen verho kuvaa vettä; nykyinen puistomaisema puolestaan peittää alleen osan alueen teollisesta historiasta.",
-          "wiki": "Rideau Falls",
-          "tiedosto": "",
-          "lyhyt": "",
-          "selite": "",
-          "lahde": ""
-        },
-        {
-          "otsikko": "Järvi, joka oli suo",
-          "teksti": "Dows Lake näyttää järveltä, mutta sen synty kuuluu Rideau-kanavan rakennustöihin. Paikka tunnettiin aiemmin Dow’n suurena suona. Kanavaa varten pohjoisreunalle tehtiin maapato, jonka avulla alue voitiin tulvittaa. Järven nimi viittaa seudulta maata omistaneeseen Abram Dow’hun. Rannoilla kohtaavat nykyisin puistot, kanava ja arboretum; etelän suunnalla on Carleton University. Vesillä voi liikkua veneellä, ja talven olojen salliessa järvi liittyy kanavan luistelureittiin. Luontomaisemalta näyttävä paikka on samalla osa rakennettua vesiliikennejärjestelmää.",
-          "wiki": "Dow's Lake",
-          "tiedosto": "",
-          "lyhyt": "",
-          "selite": "",
-          "lahde": ""
-        }
-      ]
-    }
-  ],
-  "kohdekartta": {
-    "numeroympyrat": true,
-    "esittely": "Rideau-joen putoukset, kanavajärvi ja puiden tutkimuskokoelma näyttävät Ottawan vesimaiseman eri kerroksia.",
-    "rajat": {
-      "pohjoinen": 45.4442,
-      "etela": 45.388,
-      "lansi": -75.7084,
-      "ita": -75.6923
-    },
-    "kohteet": [
-      {
-        "nimi": "Rideau-putoukset",
-        "tyyppi": "luonto",
-        "lat": 45.44141,
-        "lon": -75.69623
-      },
-      {
-        "nimi": "Dominion Arboretum",
-        "tyyppi": "luonto",
-        "lat": 45.3908,
-        "lon": -75.7044
-      },
-      {
-        "nimi": "Dows Lake",
-        "tyyppi": "luonto",
-        "lat": 45.39441,
-        "lon": -75.70155
-      }
-    ]
-  },
-  "nahtavyydet": {
-    "Rideau-putoukset": {
-      "aika": "Luontokohde; teollisuutta 1800-luvulla, puisto 1900-luvulla",
-      "teksti": "Rideau-putoukset ovat Rideau-joen suulla, jossa sen vesi liittyy Ottawa-jokeen. Green Island jakaa joen kahteen haaraan ja erottaa myös putoukset toisistaan. Varhaiset ranskalaiset näkivät putoavassa vedessä verhon ja antoivat sille nimen rideau. Myöhemmin nimi siirtyi putouksilta joelle.\n\nPaikan historiaan kuuluu myös teollisuus. Isoisän matkavuonna 1873 putoukset olivat jo olemassa, ja 1800-luvulla niiden ympärillä hyödynnettiin veden voimaa. Joen haarojen virtaamaa säätelevät padot; ympäristö muutettiin vasta myöhemmin puistoksi. Nykyinen virkistysalue ei siis kuvaa sellaisenaan matkavuoden rantaa. Luontokohteen kiinnostavuus on tässä kerroksisuudessa: putoukset, veden säätely ja entinen teollisuusalue kuuluvat saman paikan tarinaan.",
-      "kuvat": [
-        {
-          "tiedosto": "Rideau Falls - 01.jpg",
-          "lyhyt": "Rideau-putousten vettä ja kallioita vuonna 2016.",
-          "selite": "Rideau-putousten vettä ja kallioita vuonna 2016.",
-          "lahde": "Jeangagnon, Wikimedia Commons (CC BY-SA 4.0)"
-        }
-      ],
-      "lahde": "Wikipedia"
-    },
-    "Dominion Arboretum": {
-      "aika": "1800-luvun loppu",
-      "teksti": "Dominion Arboretum on Central Experimental Farmin puiden ja pensaiden tutkimuskokoelma. Se sijaitsee kumpuilevalla maalla Prince of Wales Driven, Dows Laken ja Rideau-kanavan välissä. Kokoelman tarkoitus on arvioida kasvien kestävyyttä paikallisissa oloissa. Kävelijälle paikka avautuu puistona, mutta sen puut ovat myös tutkimusaineistoa.\n\nArboretum perustettiin 1800-luvun lopulla, joten isoisän matkavuonna 1873 nykyistä tutkimuspuistoa ei vielä ollut. Maaston synnyttämä pienilmasto on mahdollistanut seudulle tavallista arempien kasvien kasvattamisen. Kokoelmassa on esimerkiksi magnolioita ja atsaleoita. Kanavan toisella puolella on Carleton University. Näiden rantojen ympärillä kasvien tutkimus, kaupunkipuisto ja korkeakouluympäristö ovat nykyisin lähekkäin.",
-      "kuvat": [
-        {
-          "tiedosto": "Dominion Arboretum 2025.JPG",
-          "lyhyt": "Dominion Arboretum on Ottawan puiden ja pensaiden tutkimus- ja viheralue.",
-          "selite": "Dominion Arboretum on Ottawan puiden ja pensaiden tutkimus- ja viheralue.",
-          "lahde": "Canmenwalker, Wikimedia Commons (CC BY 4.0)"
-        }
-      ],
-      "lahde": "Wikipedia"
-    },
-    "Dows Lake": {
-      "aika": "Rideau-kanavan rakentaminen 1800-luvun alkupuolella",
-      "teksti": "Dows Lake on Rideau-kanavaan kuuluva ihmisen tekemä järvi Ottawassa. Ennen kanavan rakentamista paikka tunnettiin Dow’n suurena suona. Pohjoisreunalle rakennettu maapato mahdollisti alueen tulvittamisen osaksi kanavareittiä. Nimi viittaa Abram Dow’hun, joka omisti seudulla maata. Järvi oli syntynyt jo ennen isoisän matkavuotta 1873, mutta nykyisiä rantapalveluja ei pidä kuvitella siihen aikaan.\n\nNykyisen järven länsipuolella on Dominion Arboretum ja etelän suunnalla Carleton University. Pohjoisrannan paviljongin yhteydessä on veneilypalveluja, ja kanavan varsia seuraavat tieyhteydet kulkevat myös järven ohi. Talvella järvi voi liittyä kanavan luistelureittiin, jos jääolot sallivat sen. Järven taustaa ajatellessa maisema muuttuu: vedestä tulee samalla näkyvä osa suolle rakennettua kulkureittiä.",
-      "kuvat": [
-        {
-          "tiedosto": "Dow’s Lake, off the Rideau Canal (48363469826).jpg",
-          "lyhyt": "Dows Laken vettä ja rantakasvillisuutta heinäkuussa 2019.",
-          "selite": "Dows Laken vettä ja rantakasvillisuutta heinäkuussa 2019.",
-          "lahde": "Ross Dunn, Wikimedia Commons (CC BY-SA 2.0)"
-        }
-      ],
-      "lahde": "Wikipedia"
-    }
-  },
-  "saatiedot": null,
-  "ehdotukset": {
-    "lentoasema": "Macdonald–Cartier International Airport (YOW)",
-    "huomiot": [
-      "C-tekstiluonnos; kartta partial (3/6–8): mukaan vain lähdesivujen omilla pisteillä varmennetut luontokohteet. Rakennusten tekijäketjut ja mahdolliset lisäkohteet tarkistettava erikseen.",
-      "Kaikki 21 kuvaroolia odottavat kuvaputkea; tiedosto, lyhyt, selite ja lahde ovat tyhjät.",
-      "Sääauditointi 48/48 primäärivarmennuksen mukaan on avoin; saatiedot:null, ilmastolukuja ei käytetty.",
-      "Riippumaton D, korjaus E ja pääsession F sekä hyväksyntä, pelikytkentä ja julkaisu ovat avoinna."
-    ]
+  "name": "Ottawa",
+  "wiki": "Ottawa",
+  "ambience": "kaupunki",
+  "pallo": {
+   "lat": 45.4247,
+   "lon": -75.695
   }
+ },
+ "artikkeli": {
+  "intro": "Ottawa on Kanadan pääkaupunki, mutta sen tarina alkaa paljon ennen hallintokortteleita. Ottawa-joen seutu oli algonkinien kaupan ja kulkemisen aluetta jo ennen eurooppalaista asutusta. Kaupungin nimen taustalla on kaupankäyntiä tarkoittava sana. Kanavan rakentajien Bytown kasvoi puutavarakaupungiksi ja sai myöhemmin nykyisen nimensä. Isoisän matkavuonna 1873 Ottawa oli jo pääkaupunki, vaikka parlamenttikirjaston rakentaminen oli yhä kesken.\n\n**ByWard Marketin** ympärillä on alueella on tuottajien kojuja, pieniä liikkeitä ja ravintoloita. **Central Experimental Farm** puolestaan on toimiva maatila ja tutkimuskeskus kaupunkialueen keskellä. Sen arboretumissa tutkitaan puiden ja pensaiden sopeutumista paikallisiin oloihin. Joet, kanava ja Dows Lake sitovat rakennettua kaupunkia vesimaisemaan, jossa luonnon ja ihmisen työn raja ei aina näy ensi katsomalta.",
+  "teksti": "Ottawan vanha nimi Bytown viittasi Rideau-kanavan rakentamista johtaneeseen John Byhin. Kaupunki kasvoi kanavatyömaan ja puutavarakaupan ympärille. Algonkinien jokiseudun historia on paljon tätä vanhempi: vesireitit yhdistivät ihmisiä ja kauppapaikkoja ennen siirtomaa-asutusta.\n\nParlamentin rakennukset tekivät Ottawasta hallinnon keskuksen jo ennen vuotta 1873. Kirjasto valmistui myöhemmin 1800-luvulla. Sen erillinen sijainti ja suljetut rautaovet säästivät kokoelman parlamentin päärakennuksen tulipalossa seuraavalla vuosisadalla. Kirjaston työ on yhä tiedon kokoamista ja tutkimuspalvelua.\n\nToisenlaista tutkimusta tehdään Central Experimental Farmilla, joka perustettiin 1800-luvun lopulla. Tila jäi kaupungin kasvaessa sen sisään. Pellot, arboretum ja puistomainen ympäristö muistuttavat, että pääkaupungin tutkimustyöhön kuuluu myös kasvien kasvattamista, hyönteisten tutkimista ja viljelymenetelmien kokeilemista."
+ },
+ "kysymykset": [
+  {
+   "q": "Mikä oli Ottawan aiempi nimi?",
+   "options": [
+    "Bytown",
+    "Yorktown",
+    "Newport",
+    "Kingston"
+   ],
+   "correct": 0,
+   "level": 1,
+   "hint": "Nimi liittyi kanavan rakentamista johtaneeseen henkilöön.",
+   "fact": "Bytown sai nimensä John Bystä ennen kaupungin nimeämistä Ottawaksi.",
+   "source": "https://en.wikipedia.org/wiki/Ottawa"
+  },
+  {
+   "q": "Mihin toimintaan Ottawan nimen taustalla oleva sana viittaa?",
+   "options": [
+    "Kaupankäyntiin",
+    "Kalastukseen",
+    "Puunkaatoon",
+    "Purjehdukseen"
+   ],
+   "correct": 0,
+   "level": 2,
+   "hint": "Jokireitit yhdistivät ihmisiä ja vaihtopaikkoja.",
+   "fact": "Ottawa-joen nimen taustalla on algonkinien kaupankäyntiä tarkoittava sana.",
+   "source": "https://en.wikipedia.org/wiki/Ottawa"
+  },
+  {
+   "q": "Mikä on Central Experimental Farmin tehtävä?",
+   "options": [
+    "Maataloustutkimus",
+    "Metsätalouden koulutus",
+    "Geologinen tutkimus",
+    "Elintarvikkeiden tarkastus"
+   ],
+   "correct": 0,
+   "level": 1,
+   "hint": "Nimi liittyy koetoimintaan, jota tehdään kaupungin sisään jääneellä alueella.",
+   "fact": "Central Experimental Farm on toimiva maatila ja maatalouden tutkimuskeskus.",
+   "source": "https://en.wikipedia.org/wiki/Central_Experimental_Farm"
+  },
+  {
+   "q": "Mikä jakaa Rideau-joen kahdeksi haaraksi ennen putouksia?",
+   "options": [
+    "Green Island",
+    "Victoria Island",
+    "Bate Island",
+    "Petrie Island"
+   ],
+   "correct": 0,
+   "level": 2,
+   "hint": "Sama maastonkohta erottaa putoukset toisistaan.",
+   "fact": "Green Island jakaa Rideau-joen kahteen haaraan sen suulla. Molemmat haarat putoavat Ottawa-jokeen.",
+   "source": "https://en.wikipedia.org/wiki/Rideau_Falls"
+  },
+  {
+   "q": "Miten Dows Lake syntyi?",
+   "options": [
+    "Suon tulvittamisesta",
+    "Joen uoman siirtymisestä",
+    "Hiekkakuopan täyttymisestä",
+    "Vanhan lahden patoamisesta"
+   ],
+   "correct": 0,
+   "level": 3,
+   "hint": "Järven synty liittyi kanavan rakentamiseen.",
+   "fact": "Kanavaa varten rakennettu maapato mahdollisti suon tulvittamisen. Järvi kuuluu Rideau-kanavaan.",
+   "source": "https://en.wikipedia.org/wiki/Dow's_Lake"
+  }
+ ],
+ "tiedot": [
+  "Ottawan parlamenttikirjaston rautaovet suljettiin tulipalon aikana, ja kirjasto säästyi päärakennuksen palossa.",
+  "Dominion Arboretumin puut ovat sekä puiston kasvillisuutta että kasvien kestävyyden tutkimuskokoelma.",
+  "ByWard Marketissa voi ostaa tuottajien tuotteita ja käsitöitä; markkinahallin ympärillä on myös ravintolakortteleita."
+ ],
+ "valokuva": {
+  "tiedosto": "The Rideau Falls.JPG",
+  "lyhyt": "Rideau-putoukset ja niiden yläpuolinen pato.",
+  "selite": "Vesi laskee padon alta kallioisen reunaman yli Ottawa-jokeen; taustalla on syysvärisiä puita.",
+  "lahde": "Óðinn, Commons (CC BY-SA 2.5 ca)"
+ },
+ "kaupunkilehti": [
+  {
+   "id": "kaupunki",
+   "nimi": "Ottawa",
+   "johdanto": "Kaupan vanhat vesireitit, parlamentin kirjasto ja tutkimustilan pellot kertovat Ottawasta eri puolia.",
+   "kansikuvat": [
+    {
+     "tiedosto": "Downtown Ottawa 2022.jpg",
+     "lyhyt": "Ottawan keskustan korkeita taloja ilmasta.",
+     "selite": "Ilmakuvassa näkyvät korkeat asuin- ja toimistorakennukset, matalat korttelit sekä taustalla jokiranta.",
+     "lahde": "Harleyd613, Wikimedia Commons (CC BY-SA 4.0)"
+    },
+    {
+     "tiedosto": "Dow's Lake aerial view 2025.jpg",
+     "lyhyt": "Dows Lake ja Ottawan rantakorttelit ilmasta.",
+     "selite": "Järveä reunustavat puistot, rantatie ja kaupunkikorttelit vuonna 2025 otetussa ilmakuvassa.",
+     "lahde": "Canmenwalker, Wikimedia Commons (CC BY 4.0)"
+    },
+    {
+     "tiedosto": "Central Experimental Farm aerial view 2025.jpg",
+     "lyhyt": "Central Experimental Farmin pellot ja puutarhat ilmasta.",
+     "selite": "Ilmakuvassa erottuvat tutkimustilan rakennukset, istutusruudut ja laajat peltoalueet Ottawassa.",
+     "lahde": "Canmenwalker, Wikimedia Commons (CC BY 4.0)"
+    }
+   ],
+   "nostot": [
+    {
+     "otsikko": "Nimessä kulkee kauppa",
+     "teksti": "Ottawan nykyinen nimi viittaa Ottawa-jokeen, jonka nimen taustalla on algonkinien kaupankäyntiä tarkoittava sana. Jokien kohtaamispaikka oli kaupan ja kulkemisen aluetta kauan ennen kanavatyömaata. Eurooppalaisen asutuksen kasvuvaiheessa kaupunkia kutsuttiin Bytowniksi kanavan rakennustöitä johtaneen John Byn mukaan. Nykyinen nimi otettiin käyttöön 1800-luvun puolivälissä. Kaupungin nimikerrokset kertovat eri ajoista: alkuperäiskansojen vesireiteistä ja paljon myöhemmästä rakennushankkeesta.",
+     "wiki": "Ottawa",
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": ""
+    },
+    {
+     "otsikko": "Kirjat rautaovien takana",
+     "teksti": "Parlamenttikirjasto liittyy päärakennukseen käytävällä. Kun parlamentin keskusrakennus paloi 1900-luvun alussa, kirjaston rautaovet suljettiin ennen kuin tuli levisi sen puolelle. Erillinen rakennus ja suljetut ovet auttoivat säästämään kokoelman. Ulkoa kirjasto kuuluu parlamenttikukkulan uusgoottilaiseen rakennusryhmään; sisällä lukusalin seiniä kiertävät koristeelliset puupaneelit. Kirjastolaitos palvelee parlamenttia tiedon kokoajana ja tutkimuspalveluna. Isoisän matkavuonna 1873 nykyinen kirjastorakennus ei ollut vielä valmis.",
+     "wiki": "Library of Parliament",
+     "tiedosto": "Ottawa - ON - Library of Parliament.jpg",
+     "lyhyt": "Parlamentin kirjaston uusgoottilainen julkisivu.",
+     "selite": "Kirjaston monikulmainen rakennus, suippokaari-ikkunat ja korkea kattotorni näkyvät katutasolta.",
+     "lahde": "Wladyslaw ( talk ), Wikimedia Commons (CC BY-SA 3.0)"
+    },
+    {
+     "otsikko": "Kauppakassi kuuluu pääkaupunkiin",
+     "teksti": "ByWard Market tarkoittaa sekä tuottajien markkinapaikkaa että sitä ympäröiviä kauppa- ja ravintolakortteleita. Kesäisin kadunvarsien kojuissa myydään kasviksia ja kukkia. Pienissä liikkeissä on myös käsitöitä, ja alueen ruokapaikat ulottuvat markkinarakennusten ympärille. Päivällä täällä tehdään ostoksia, illalla ravintolat ja baarit keräävät väkeä. Torihalli on siis vain yksi osa ByWard Marketia: samalla nimellä tunnetaan myös sitä ympäröivä ostos- ja ravintola-alue.",
+     "wiki": "Ottawa",
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": ""
+    },
+    {
+     "otsikko": "Majavan häntä ilman majavaa",
+     "teksti": "BeaverTail eli majavanhäntä on Ottawaan yhdistetty paistettu taikinaleivonnainen. Nimi ei tarkoita, että tarjolla olisi majavaa: kyse on taikinaleivonnaisesta. Makeaan versioon saa esimerkiksi kanelia ja sokeria; leivonnaista myydään ByWard Marketin alueella ja talvisin kanavan luistelureitin yhteydessä. Myös shawarma kuuluu kaupungin arkiseen ruokavalikoimaan. Kaupunginvaltuusto julisti Ottawan Kanadan shawarmapääkaupungiksi vuonna 2024. Shawarma-annoksessa lihaa leikataan pystysuorasta vartaasta.",
+     "wiki": "Ottawa",
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": ""
+    }
+   ],
+   "matkailijalle": {
+    "kuva": {
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": ""
+    },
+    "kappale": "Ottawassa kävely voi kulkea markkinakojuista joelle ja kanavan rannalle. ByWard Marketin alueella on tuottajien kojuja, käsitöitä ja ruokapaikkoja. Dominion Arboretum ja Dows Lake sopivat puistoihin suuntautuvaan retkeen. Kaupungin sisällä voi liikkua myös OC Transpon busseilla ja O-Train-junilla.",
+    "artikkeli": {
+     "nimi": "Matkailijan Ottawa",
+     "taitto": "opas",
+     "teksti": "Lähde pääkaupunkikierrokselle, jolla kauppapaikat, tutkimuspuistot ja vesi kuuluvat samaan kaupunkiin.",
+     "nosto": "Ottawa avautuu myös parlamenttikukkulan ulkopuolella: markkinakortteleissa, arboretumissa ja jokirannoilla.",
+     "jaksot": [
+      {
+       "otsikko": "Perille ja liikkeelle",
+       "teksti": "Ottawan kansainvälinen lentoasema on Macdonald–Cartier International Airport. Kaupungin joukkoliikenteeseen kuuluvat OC Transpon bussit ja O-Train-junat, ja kaukojunia liikennöi VIA Rail. Keskustan kävelyä voi jatkaa kanavan rannoille tai Ottawa-joen varsille. Gatineaun bussiliikennettä hoitaa Société de transport de l’Outaouais (STO), joten joen ylittävää matkaa varten kannattaa katsoa myös sen reittitiedot.",
+       "kuva": {
+        "tiedosto": "",
+        "lyhyt": "",
+        "selite": "",
+        "lahde": ""
+       }
+      },
+      {
+       "otsikko": "Kauppakortteleista jokirantaan",
+       "teksti": "ByWard Marketissa kulje myös hallin ympärillä: tuottajien kojut, pienet liikkeet ja ruokapaikat kuuluvat samaan alueeseen. Päivällä markkinapaikkaa luetaan ostosten, illalla ravintoloiden kautta. Rideau Fallsilla näkee Rideau-joen liittyvän Ottawa-jokeen. Putousten ympäristö on puistoa, mutta paikan historiaan kuuluu myös veden voimaa hyödyntänyt teollisuus.",
+       "kuva": {
+        "tiedosto": "Rideau Falls 20250720 150134.jpg",
+        "lyhyt": "Rideau-putoukset heinäkuussa 2025.",
+        "selite": "Etualalla putoaa Rideau-joen vesi, ja Ottawa-joki veneineen avautuu putouksen alapuolella.",
+        "lahde": "R Prazeres, Wikimedia Commons (CC BY-SA 4.0)"
+       }
+      },
+      {
+       "otsikko": "Tutkimuspuisto ja kanavajärvi",
+       "teksti": "Dominion Arboretumissa puut ja pensaat ovat sekä puiston kasvillisuutta että kestävyyden tutkimuskokoelma. Sen läheinen Dows Lake syntyi kanavatyömaalla suon tulvittamisesta. Arboretum kuuluu Central Experimental Farmiin, joka on yhä toimiva tutkimustila. Puistoihin suuntautuva retki kertoo Ottawasta eri asioita kuin parlamenttikukkulan katselu.",
+       "kuva": {
+        "tiedosto": "",
+        "lyhyt": "",
+        "selite": "",
+        "lahde": ""
+       }
+      },
+      {
+       "otsikko": "Mitä täällä syödään",
+       "teksti": "ByWard Marketin ympärillä on monenlaisia ruokapaikkoja. BeaverTail on paistettu taikinaleivonnainen, jonka makeaan versioon voi valita esimerkiksi kanelia ja sokeria. Shawarma kuuluu Ottawan arkiseen ruokavalikoimaan, ja kaupungissa on paljon sitä tarjoavia ravintoloita. Jos etsii toisenlaisia makuja, Somerset Streetin Chinatown ja Preston Streetin Little Italy ovat kaupungin omia ruokakortteleita.",
+       "kuva": {
+        "tiedosto": "",
+        "lyhyt": "",
+        "selite": "",
+        "lahde": ""
+       }
+      },
+      {
+       "otsikko": "Milloin kannattaa tulla",
+       "teksti": "Ottawan talvet ovat kylmiä ja lumisia, kesät lämpimiä. Kesäkierroksella ByWard Marketin kojut ja rantapuistot tarjoavat ulkoilupaikkoja. Talvella kaupunki tunnetaan Rideau-kanavan luistelureitistä.",
+       "kuva": {
+        "tiedosto": "",
+        "lyhyt": "",
+        "selite": "",
+        "lahde": ""
+       }
+      }
+     ],
+     "matkailu": {
+      "parasta": [
+       {
+        "mita": "ByWard Market",
+        "tahdet": 3,
+        "selite": "Tuottajien kojuja, pieniä liikkeitä ja ravintoloita saman alueen sisällä."
+       },
+       {
+        "mita": "Rideau Falls",
+        "tahdet": 3,
+        "selite": "Rideau-joen suulla kaksi putousta liittyy Ottawa-jokeen."
+       },
+       {
+        "mita": "Dominion Arboretum",
+        "tahdet": 3,
+        "selite": "Puiden ja pensaiden tutkimuskokoelma toimii myös kävelypuistona."
+       },
+       {
+        "mita": "Dows Lake",
+        "tahdet": 2,
+        "selite": "Kanavatyömaan synnyttämä järvi puistojen ja arboretumin lähellä."
+       },
+       {
+        "mita": "Rideau-kanavan rannat",
+        "tahdet": 3,
+        "selite": "Keskustan vesireitti yhdistää kävelyä, veneilyä ja talven salliessa luistelua."
+       }
+      ],
+      "hyvaTietaa": [
+       {
+        "otsikko": "Jääolot ratkaisevat",
+        "teksti": "Kanavan luistelureitti avataan jäätilanteen mukaan, ja osia voi olla suljettuna."
+       },
+       {
+        "otsikko": "Jokirajan liikenne",
+        "teksti": "Ottawan liikennettä hoitaa OC Transpo, Gatineaun puolella operaattori on STO."
+       },
+       {
+        "otsikko": "Markkina on alue",
+        "teksti": "ByWard Market tarkoittaa myös hallia ympäröiviä kauppa- ja ravintolakortteleita."
+       }
+      ]
+     },
+     "lahde": "Wikipedia"
+    }
+   }
+  },
+  {
+   "id": "luonto",
+   "nimi": "Puistoja, kokeita ja rakennettua vettä",
+   "johdanto": "Ottawan vihreillä rannoilla luonnon, tutkimuksen ja rakentamisen historia kulkee rinnakkain.",
+   "tehtava": {
+    "kysymys": "Mitä arboretumin puukokoelman avulla arvioidaan?",
+    "vaihtoehdot": [
+     "Kasvien paikallista kestävyyttä",
+     "Taimien kaupallista tuotantoa",
+     "Hedelmäkasvien jalostusta",
+     "Alkuperäisten metsiköiden suojelua"
+    ],
+    "oikea": 0,
+    "fakta": "Puistossa kasvavia puita ja pensaita käytetään tutkimaan, miten ne menestyvät paikallisissa oloissa."
+   },
+   "nostot": [
+    {
+     "otsikko": "Maatila jäi kaupungin sisään",
+     "teksti": "Central Experimental Farm perustettiin 1800-luvun lopulla tutkimaan viljelymenetelmiä ja kasveja. Aluksi paikka sijaitsi kaupungin ulkopuolella, mutta Ottawa kasvoi sen ympärille. Tutkimustila toimii yhä, vaikka sen puistomainen ympäristö on myös asukkaiden virkistys- ja oppimispaikka. Varhaisissa tutkimuksissa perehdyttiin hyönteisiin, kasvitieteeseen ja puutarhanhoitoon. Tilaan liittyy arboretum, ja sen itäpuolella kulkee Rideau-kanava. Ottawan kasvu jätti tutkimustilan kaupunkiympäristöön: sen pellot, puutarhat ja puukokoelma ovat yhä pääkaupungissa.",
+     "wiki": "Central Experimental Farm",
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": ""
+    },
+    {
+     "otsikko": "Puut käyvät kestävyyden kokeessa",
+     "teksti": "Dominion Arboretum on elävä puiden ja pensaiden kokoelma Central Experimental Farmin yhteydessä. Sen tehtävänä on arvioida kasvien kestävyyttä paikallisissa oloissa. Puisto perustettiin 1800-luvun lopulla kumpuilevalle maalle kanavan ja Dows Laken lähelle. Maaston synnyttämä pienilmasto on mahdollistanut myös seudulla tavallista arempien puiden kasvattamisen. Kokoelmassa on esimerkiksi magnolioita ja atsaleoita. Kävelyllä näkee siis sekä puiston että tutkimuskokoelman: sama puu voi olla varjopaikka ja pitkäkestoinen koe.",
+     "wiki": "Dominion Arboretum",
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": ""
+    },
+    {
+     "otsikko": "Saari jakaa putouksen",
+     "teksti": "Rideau-joen suulla vesi putoaa Ottawa-jokeen kahtena putouksena. Niiden väliin jää Green Island, joka jakaa joen haaroihin jo ennen pudotusta. Green Islandin molemmin puolin vesi laskee saman joen suulta. Paikka ei kuitenkaan ole ollut pelkkä maisemakohde. Veden voimaa hyödynnettiin 1800-luvun teollisuudessa, ja virtaamaa säädellään yhä padoilla. Myöhemmin ympäristö muutettiin puistoksi. Putousten molemmat haarat sekä virtaaman säätelypadot kuuluvat samaan jokisuuhun.",
+     "wiki": "Rideau Falls",
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": ""
+    },
+    {
+     "otsikko": "Järvi, joka oli suo",
+     "teksti": "Dows Lake näyttää järveltä, mutta sen synty kuuluu Rideau-kanavan rakennustöihin. Paikka tunnettiin aiemmin Dow’n suurena suona. Kanavaa varten pohjoisreunalle tehtiin maapato, jonka avulla alue voitiin tulvittaa. Järven nimi viittaa seudulta maata omistaneeseen Abram Dow’hun. Rannoilla kohtaavat nykyisin puistot, kanava ja arboretum; etelän suunnalla on Carleton University. Vesillä voi liikkua veneellä, ja talven olojen salliessa järvi liittyy kanavan luistelureittiin. Luontomaisemalta näyttävä paikka on samalla osa rakennettua vesiliikennejärjestelmää.",
+     "wiki": "Dow's Lake",
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": ""
+    }
+   ]
+  }
+ ],
+ "kohdekartta": {
+  "numeroympyrat": true,
+  "esittely": "Rideau-joen putoukset, kanavajärvi ja puiden tutkimuskokoelma näyttävät Ottawan vesimaiseman eri kerroksia.",
+  "rajat": {
+   "pohjoinen": 45.4442,
+   "etela": 45.388,
+   "lansi": -75.7084,
+   "ita": -75.6923
+  },
+  "kohteet": [
+   {
+    "nimi": "Rideau-putoukset",
+    "tyyppi": "luonto",
+    "lat": 45.44141,
+    "lon": -75.69623
+   },
+   {
+    "nimi": "Dominion Arboretum",
+    "tyyppi": "luonto",
+    "lat": 45.3908,
+    "lon": -75.7044
+   },
+   {
+    "nimi": "Dows Lake",
+    "tyyppi": "luonto",
+    "lat": 45.39441,
+    "lon": -75.70155
+   }
+  ]
+ },
+ "nahtavyydet": {
+  "Rideau-putoukset": {
+   "aika": "Luontokohde; teollisuutta 1800-luvulla, puisto 1900-luvulla",
+   "teksti": "Rideau-putoukset ovat Rideau-joen suulla, jossa sen vesi liittyy Ottawa-jokeen. Green Island jakaa joen kahteen haaraan ja erottaa myös putoukset toisistaan. Varhaiset ranskalaiset näkivät putoavassa vedessä verhon ja antoivat sille nimen rideau. Myöhemmin nimi siirtyi putouksilta joelle.\n\nPaikan historiaan kuuluu myös teollisuus. Isoisän matkavuonna 1873 putoukset olivat jo olemassa, ja 1800-luvulla niiden ympärillä hyödynnettiin veden voimaa. Joen haarojen virtaamaa säätelevät padot; ympäristö muutettiin vasta myöhemmin puistoksi. Nykyinen puisto on syntynyt entiselle teollisuusalueelle.",
+   "kuvat": [
+    {
+     "tiedosto": "Rideau Falls - 01.jpg",
+     "lyhyt": "Rideau-putouksen vettä ja yläpuolista patorakennetta.",
+     "selite": "Vesi virtaa padon alta ja putoaa kallion reunalta; taustalla näkyy myös kaupungin rakennuksia.",
+     "lahde": "Jeangagnon, Wikimedia Commons (CC BY-SA 4.0)"
+    }
+   ],
+   "lahde": "Wikipedia"
+  },
+  "Dominion Arboretum": {
+   "aika": "1800-luvun loppu",
+   "teksti": "Dominion Arboretum on Central Experimental Farmin puiden ja pensaiden tutkimuskokoelma. Se sijaitsee kumpuilevalla maalla Prince of Wales Driven, Dows Laken ja Rideau-kanavan välissä. Kokoelman tarkoitus on arvioida kasvien kestävyyttä paikallisissa oloissa. Kävelijälle paikka avautuu puistona, mutta sen puut ovat myös tutkimusaineistoa.\n\nArboretum perustettiin 1800-luvun lopulla, joten isoisän matkavuonna 1873 nykyistä tutkimuspuistoa ei vielä ollut. Maaston synnyttämä pienilmasto on mahdollistanut seudulle tavallista arempien kasvien kasvattamisen. Kokoelmassa on esimerkiksi magnolioita ja atsaleoita. Kanavan toisella puolella on Carleton University. Näiden rantojen ympärillä kasvien tutkimus, kaupunkipuisto ja korkeakouluympäristö ovat nykyisin lähekkäin.",
+   "kuvat": [
+    {
+     "tiedosto": "Dominion Arboretum 2025.JPG",
+     "lyhyt": "Dominion Arboretumin nurmialueita ja puita.",
+     "selite": "Puiston polut kulkevat nurmialueiden ja puiden lomassa; taustalla näkyy Dows Laken vettä.",
+     "lahde": "Canmenwalker, Wikimedia Commons (CC BY 4.0)"
+    }
+   ],
+   "lahde": "Wikipedia"
+  },
+  "Dows Lake": {
+   "aika": "Rideau-kanavan rakentaminen 1800-luvun alkupuolella",
+   "teksti": "Dows Lake on Rideau-kanavaan kuuluva ihmisen tekemä järvi Ottawassa. Ennen kanavan rakentamista paikka tunnettiin Dow’n suurena suona. Pohjoisreunalle rakennettu maapato mahdollisti alueen tulvittamisen osaksi kanavareittiä. Nimi viittaa Abram Dow’hun, joka omisti seudulla maata. Järvi oli syntynyt jo ennen isoisän matkavuotta 1873, ja kuului kanavareittiin.\n\nNykyisen järven länsipuolella on Dominion Arboretum ja etelän suunnalla Carleton University. Pohjoisrannan paviljongin yhteydessä on veneilypalveluja, ja kanavan varsia seuraavat tieyhteydet kulkevat myös järven ohi. Talvella järvi voi liittyä kanavan luistelureittiin, jos jääolot sallivat sen.",
+   "kuvat": [
+    {
+     "tiedosto": "Dow’s Lake, off the Rideau Canal (48363469826).jpg",
+     "lyhyt": "Dows Laken rantakasvillisuutta heinäkuussa 2019.",
+     "selite": "Etualalla kasvaa korkeita ruohovartisia kasveja, ja niiden takana avautuu järven pinta sekä vastarannan puusto.",
+     "lahde": "Ross Dunn, Wikimedia Commons (CC BY-SA 2.0)"
+    }
+   ],
+   "lahde": "Wikipedia"
+  }
+ },
+ "saatiedot": null,
+ "ehdotukset": {
+  "lentoasema": "Macdonald–Cartier International Airport (YOW)",
+  "huomiot": [
+   "C-tekstiluonnos; kartta partial (3/6–8): mukaan vain lähdesivujen omilla pisteillä varmennetut luontokohteet. Rakennusten tekijäketjut ja mahdolliset lisäkohteet tarkistettava erikseen.",
+   "Kaikki 21 kuvaroolia odottavat kuvaputkea; tiedosto, lyhyt, selite ja lahde ovat tyhjät.",
+   "Sääauditointi 48/48 primäärivarmennuksen mukaan on avoin; saatiedot:null, ilmastolukuja ei käytetty.",
+   "Riippumaton D, korjaus E ja pääsession F sekä hyväksyntä, pelikytkentä ja julkaisu ovat avoinna."
+  ]
+ }
 }

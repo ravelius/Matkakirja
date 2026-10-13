@@ -3,7 +3,7 @@
   "era": "e11",
   "city": "sanjose",
   "authorization": "hyväksyn kaikki tekemäsi kuvat. toimita ne claudelle. claudelta saat uusia ohjeita jatkoa varten",
-  "sourceContentAfterSHA256": "f61775ade9593a3e794dd870aa8a0b05c256d99dccab6a17463a15020ab36733",
+  "sourceContentAfterSHA256": "012a802fa7b8bdc52c0561dd96bd4421c63e5ecb46a40384ea3943647be99e7a",
   "assets": [
     {
       "era": "e11",
@@ -25,10 +25,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/sanjose/sanjose-traveler-20261012-v1-f253af-b1b81909ef85.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva kahvin raaka-aineesta ja paahdetuista pavuista; ei tietyn kahvikauppiaan valokuva.",
-        "lyhyt": "Havainnekuva kahvin raaka-aineesta ja paahdetuista pavuista; ei tietyn kahvikauppiaan valokuva."
+        "selite": "Havainnekuva kahvin raaka-aineesta ja paahdetuista pavuista; ei tietyn kahvikauppiaan valokuva."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -36,10 +36,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/sanjose/sanjose-traveler-20261012-v1-f253af-b1b81909ef85.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva kahvin raaka-aineesta ja paahdetuista pavuista; ei tietyn kahvikauppiaan valokuva.",
-        "lyhyt": "Havainnekuva kahvin raaka-aineesta ja paahdetuista pavuista; ei tietyn kahvikauppiaan valokuva."
+        "selite": "Havainnekuva kahvin raaka-aineesta ja paahdetuista pavuista; ei tietyn kahvikauppiaan valokuva."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -53,10 +53,10 @@
         1536
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/sanjose/sisalto.json",
-      "sourceContentSHA256": "f61775ade9593a3e794dd870aa8a0b05c256d99dccab6a17463a15020ab36733",
+      "sourceContentSHA256": "012a802fa7b8bdc52c0561dd96bd4421c63e5ecb46a40384ea3943647be99e7a",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "fdf59aed8c37c5090d91357eff239c1c31c5f3b7139cbfec13b1886cad37bab0",
+        "semanticContextSHA256": "9367738d8994480fc9ef59d344c60e27846de9578f2be2aa98eb4d67592163ba",
         "subjectTitle": "Matkailijalle",
         "targetState": "existing-target"
       },
@@ -472,9 +472,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -493,17 +493,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "f61775ade9593a3e794dd870aa8a0b05c256d99dccab6a17463a15020ab36733",
+      "sourceContentAfterSHA256": "012a802fa7b8bdc52c0561dd96bd4421c63e5ecb46a40384ea3943647be99e7a",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "fdf59aed8c37c5090d91357eff239c1c31c5f3b7139cbfec13b1886cad37bab0",
+      "contextAfterSHA256": "9367738d8994480fc9ef59d344c60e27846de9578f2be2aa98eb4d67592163ba",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "f61775ade9593a3e794dd870aa8a0b05c256d99dccab6a17463a15020ab36733",
+        "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "contextAfterSHA256": "fdf59aed8c37c5090d91357eff239c1c31c5f3b7139cbfec13b1886cad37bab0",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+          "semanticContextSHA256": "fdf59aed8c37c5090d91357eff239c1c31c5f3b7139cbfec13b1886cad37bab0",
+          "subjectTitle": "Matkailijalle",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "012a802fa7b8bdc52c0561dd96bd4421c63e5ecb46a40384ea3943647be99e7a",
+        "sameImageNativeSHA256": "b1b81909ef853aa54cc463f59dabd62cfb5682283558cf7087d54b9292e7bbbd",
+        "sameImageExportSHA256": "eaed214fa5ff5ceed5608aacff11adc0856071366a4c0421e1a50f86817c733a",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e11",
@@ -528,10 +549,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/sanjose/sanjose-o4-20261012-v1-9c3fde-5ad11a741df3.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva gallo pintosta, jossa riisi ja mustat pavut yhdistyvät.",
-        "lyhyt": "Havainnekuva gallo pintosta, jossa riisi ja mustat pavut yhdistyvät."
+        "selite": "Havainnekuva gallo pintosta, jossa riisi ja mustat pavut yhdistyvät."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -539,10 +560,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/sanjose/sanjose-o4-20261012-v1-9c3fde-5ad11a741df3.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva gallo pintosta, jossa riisi ja mustat pavut yhdistyvät.",
-        "lyhyt": "Havainnekuva gallo pintosta, jossa riisi ja mustat pavut yhdistyvät."
+        "selite": "Havainnekuva gallo pintosta, jossa riisi ja mustat pavut yhdistyvät."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -556,7 +577,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/sanjose/sisalto.json",
-      "sourceContentSHA256": "f61775ade9593a3e794dd870aa8a0b05c256d99dccab6a17463a15020ab36733",
+      "sourceContentSHA256": "012a802fa7b8bdc52c0561dd96bd4421c63e5ecb46a40384ea3943647be99e7a",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
         "semanticContextSHA256": "525f467eafc77f8d78ed13812b3178d7928b3b37e41abfa845a5d02e0ec19f9a",
@@ -773,9 +794,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -794,17 +815,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "f61775ade9593a3e794dd870aa8a0b05c256d99dccab6a17463a15020ab36733",
+      "sourceContentAfterSHA256": "012a802fa7b8bdc52c0561dd96bd4421c63e5ecb46a40384ea3943647be99e7a",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
       "contextAfterSHA256": "525f467eafc77f8d78ed13812b3178d7928b3b37e41abfa845a5d02e0ec19f9a",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "f61775ade9593a3e794dd870aa8a0b05c256d99dccab6a17463a15020ab36733",
+        "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "contextAfterSHA256": "525f467eafc77f8d78ed13812b3178d7928b3b37e41abfa845a5d02e0ec19f9a",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+          "semanticContextSHA256": "525f467eafc77f8d78ed13812b3178d7928b3b37e41abfa845a5d02e0ec19f9a",
+          "subjectTitle": "Mitä täällä syödään",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "012a802fa7b8bdc52c0561dd96bd4421c63e5ecb46a40384ea3943647be99e7a",
+        "sameImageNativeSHA256": "5ad11a741df31fdd2a16a94089db2720228638919b81ee2cde649942a342e57e",
+        "sameImageExportSHA256": "d9e03bc70336a76c73d5504649af3381673876a0b7ee02b9933e46b936230c39",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e11",
@@ -826,10 +868,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/sanjose/sanjose-k2-20261012-v1-ff1054-4dbf19b51a4e.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva ratsastussatulasta, yhdestä Mercado Centralin tekstissä mainitusta myyntituotteesta.",
-        "lyhyt": "Havainnekuva ratsastussatulasta, yhdestä Mercado Centralin tekstissä mainitusta myyntituotteesta."
+        "selite": "Havainnekuva ratsastussatulasta, yhdestä Mercado Centralin tekstissä mainitusta myyntituotteesta."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -837,10 +879,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/sanjose/sanjose-k2-20261012-v1-ff1054-4dbf19b51a4e.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva ratsastussatulasta, yhdestä Mercado Centralin tekstissä mainitusta myyntituotteesta.",
-        "lyhyt": "Havainnekuva ratsastussatulasta, yhdestä Mercado Centralin tekstissä mainitusta myyntituotteesta."
+        "selite": "Havainnekuva ratsastussatulasta, yhdestä Mercado Centralin tekstissä mainitusta myyntituotteesta."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -854,7 +896,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/sanjose/sisalto.json",
-      "sourceContentSHA256": "f61775ade9593a3e794dd870aa8a0b05c256d99dccab6a17463a15020ab36733",
+      "sourceContentSHA256": "012a802fa7b8bdc52c0561dd96bd4421c63e5ecb46a40384ea3943647be99e7a",
       "semanticSourceBind": {
         "targetBeforeSHA256": "424837d3e390f6b00b946136b490dc8c056022a4bd32fadff0294377df020780",
         "semanticContextSHA256": "424837d3e390f6b00b946136b490dc8c056022a4bd32fadff0294377df020780",
@@ -1069,9 +1111,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -1090,17 +1132,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "f61775ade9593a3e794dd870aa8a0b05c256d99dccab6a17463a15020ab36733",
+      "sourceContentAfterSHA256": "012a802fa7b8bdc52c0561dd96bd4421c63e5ecb46a40384ea3943647be99e7a",
       "targetAfterSHA256": "424837d3e390f6b00b946136b490dc8c056022a4bd32fadff0294377df020780",
       "contextAfterSHA256": "424837d3e390f6b00b946136b490dc8c056022a4bd32fadff0294377df020780",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "f61775ade9593a3e794dd870aa8a0b05c256d99dccab6a17463a15020ab36733",
+        "targetAfterSHA256": "424837d3e390f6b00b946136b490dc8c056022a4bd32fadff0294377df020780",
+        "contextAfterSHA256": "424837d3e390f6b00b946136b490dc8c056022a4bd32fadff0294377df020780",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "424837d3e390f6b00b946136b490dc8c056022a4bd32fadff0294377df020780",
+          "semanticContextSHA256": "424837d3e390f6b00b946136b490dc8c056022a4bd32fadff0294377df020780",
+          "subjectTitle": "Tori on kokonainen kortteli",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "012a802fa7b8bdc52c0561dd96bd4421c63e5ecb46a40384ea3943647be99e7a",
+        "sameImageNativeSHA256": "4dbf19b51a4ea451bbba9460637ff7b1dc34e2f0ca3e626f02ccf0992f549f43",
+        "sameImageExportSHA256": "958a8e6ff275cc7388ccf96ee4d120af60b77b839ab0b140c94252441048a084",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e11",
@@ -1122,10 +1185,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/sanjose/sanjose-k3-20261012-v1-449dab-5d05aa0d2a28.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva kahvin raaka-aineesta ja paahdetuista pavuista; ei tietyn kahvikauppiaan valokuva.",
-        "lyhyt": "Havainnekuva kahvin raaka-aineesta ja paahdetuista pavuista; ei tietyn kahvikauppiaan valokuva."
+        "selite": "Havainnekuva kahvin raaka-aineesta ja paahdetuista pavuista; ei tietyn kahvikauppiaan valokuva."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -1133,10 +1196,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/sanjose/sanjose-k3-20261012-v1-449dab-5d05aa0d2a28.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva kahvin raaka-aineesta ja paahdetuista pavuista; ei tietyn kahvikauppiaan valokuva.",
-        "lyhyt": "Havainnekuva kahvin raaka-aineesta ja paahdetuista pavuista; ei tietyn kahvikauppiaan valokuva."
+        "selite": "Havainnekuva kahvin raaka-aineesta ja paahdetuista pavuista; ei tietyn kahvikauppiaan valokuva."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -1150,7 +1213,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/sanjose/sisalto.json",
-      "sourceContentSHA256": "f61775ade9593a3e794dd870aa8a0b05c256d99dccab6a17463a15020ab36733",
+      "sourceContentSHA256": "012a802fa7b8bdc52c0561dd96bd4421c63e5ecb46a40384ea3943647be99e7a",
       "semanticSourceBind": {
         "targetBeforeSHA256": "cae49fa7172e86d7e2293dc071b6fa56b71cb0ca41254cda4faaf1f9974c487b",
         "semanticContextSHA256": "cae49fa7172e86d7e2293dc071b6fa56b71cb0ca41254cda4faaf1f9974c487b",
@@ -1365,9 +1428,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -1386,17 +1449,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "f61775ade9593a3e794dd870aa8a0b05c256d99dccab6a17463a15020ab36733",
+      "sourceContentAfterSHA256": "012a802fa7b8bdc52c0561dd96bd4421c63e5ecb46a40384ea3943647be99e7a",
       "targetAfterSHA256": "cae49fa7172e86d7e2293dc071b6fa56b71cb0ca41254cda4faaf1f9974c487b",
       "contextAfterSHA256": "cae49fa7172e86d7e2293dc071b6fa56b71cb0ca41254cda4faaf1f9974c487b",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "f61775ade9593a3e794dd870aa8a0b05c256d99dccab6a17463a15020ab36733",
+        "targetAfterSHA256": "cae49fa7172e86d7e2293dc071b6fa56b71cb0ca41254cda4faaf1f9974c487b",
+        "contextAfterSHA256": "cae49fa7172e86d7e2293dc071b6fa56b71cb0ca41254cda4faaf1f9974c487b",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "cae49fa7172e86d7e2293dc071b6fa56b71cb0ca41254cda4faaf1f9974c487b",
+          "semanticContextSHA256": "cae49fa7172e86d7e2293dc071b6fa56b71cb0ca41254cda4faaf1f9974c487b",
+          "subjectTitle": "Kahvikauppa näkyy taloissa",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "012a802fa7b8bdc52c0561dd96bd4421c63e5ecb46a40384ea3943647be99e7a",
+        "sameImageNativeSHA256": "5d05aa0d2a2834ec4c959428518aa8f7a4f3cf2e37dadffa39d3bc0bb7f7d327",
+        "sameImageExportSHA256": "bf1c45dd6455a575b42443a5809fd3b6bb34b8dc8d835c576998867108429128",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e11",
@@ -1446,10 +1530,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/sanjose/sisalto.json",
-      "sourceContentSHA256": "f61775ade9593a3e794dd870aa8a0b05c256d99dccab6a17463a15020ab36733",
+      "sourceContentSHA256": "012a802fa7b8bdc52c0561dd96bd4421c63e5ecb46a40384ea3943647be99e7a",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "a176463555837728ff186bb4a691ced8eff12d29a4ee9284843d615104fe865a",
-        "semanticContextSHA256": "a176463555837728ff186bb4a691ced8eff12d29a4ee9284843d615104fe865a",
+        "targetBeforeSHA256": "8d6513f3397850055277345050e78163bdb96022cb1aeac0511e9e6196e0bf13",
+        "semanticContextSHA256": "8d6513f3397850055277345050e78163bdb96022cb1aeac0511e9e6196e0bf13",
         "subjectTitle": "Kahvi muuttui näyttämöksi",
         "targetState": "existing-target"
       },
@@ -1669,9 +1753,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -1690,17 +1774,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "f61775ade9593a3e794dd870aa8a0b05c256d99dccab6a17463a15020ab36733",
-      "targetAfterSHA256": "a176463555837728ff186bb4a691ced8eff12d29a4ee9284843d615104fe865a",
-      "contextAfterSHA256": "a176463555837728ff186bb4a691ced8eff12d29a4ee9284843d615104fe865a",
+      "sourceContentAfterSHA256": "012a802fa7b8bdc52c0561dd96bd4421c63e5ecb46a40384ea3943647be99e7a",
+      "targetAfterSHA256": "8d6513f3397850055277345050e78163bdb96022cb1aeac0511e9e6196e0bf13",
+      "contextAfterSHA256": "8d6513f3397850055277345050e78163bdb96022cb1aeac0511e9e6196e0bf13",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "f61775ade9593a3e794dd870aa8a0b05c256d99dccab6a17463a15020ab36733",
+        "targetAfterSHA256": "a176463555837728ff186bb4a691ced8eff12d29a4ee9284843d615104fe865a",
+        "contextAfterSHA256": "a176463555837728ff186bb4a691ced8eff12d29a4ee9284843d615104fe865a",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "a176463555837728ff186bb4a691ced8eff12d29a4ee9284843d615104fe865a",
+          "semanticContextSHA256": "a176463555837728ff186bb4a691ced8eff12d29a4ee9284843d615104fe865a",
+          "subjectTitle": "Kahvi muuttui näyttämöksi",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "012a802fa7b8bdc52c0561dd96bd4421c63e5ecb46a40384ea3943647be99e7a",
+        "sameImageNativeSHA256": "fc135663c388942c05a752636ef1a6ecb47fe12c1625373ec751df53b37a7bc3",
+        "sameImageExportSHA256": "569fd52538d0eb1d0e4d5b7a67d510bcc3c2a3ae74bd7ec990ca93cb8a518c74",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e11",
@@ -1722,10 +1827,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/sanjose/sanjose-l4-20261012-v1-be96f1-53cc7b87d420.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva kultamateriaalista, ei Kultamuseon kokoelman esineistä.",
-        "lyhyt": "Havainnekuva kultamateriaalista, ei Kultamuseon kokoelman esineistä."
+        "selite": "Havainnekuva kultamateriaalista, ei Kultamuseon kokoelman esineistä."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -1733,10 +1838,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/sanjose/sanjose-l4-20261012-v1-be96f1-53cc7b87d420.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva kultamateriaalista, ei Kultamuseon kokoelman esineistä.",
-        "lyhyt": "Havainnekuva kultamateriaalista, ei Kultamuseon kokoelman esineistä."
+        "selite": "Havainnekuva kultamateriaalista, ei Kultamuseon kokoelman esineistä."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -1750,7 +1855,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/sanjose/sisalto.json",
-      "sourceContentSHA256": "f61775ade9593a3e794dd870aa8a0b05c256d99dccab6a17463a15020ab36733",
+      "sourceContentSHA256": "012a802fa7b8bdc52c0561dd96bd4421c63e5ecb46a40384ea3943647be99e7a",
       "semanticSourceBind": {
         "targetBeforeSHA256": "018ad486123424b7d08043720cca829080dbe0ed4286c239ff7ad9c6b5d2bb11",
         "semanticContextSHA256": "018ad486123424b7d08043720cca829080dbe0ed4286c239ff7ad9c6b5d2bb11",
@@ -1965,9 +2070,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -1986,17 +2091,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "f61775ade9593a3e794dd870aa8a0b05c256d99dccab6a17463a15020ab36733",
+      "sourceContentAfterSHA256": "012a802fa7b8bdc52c0561dd96bd4421c63e5ecb46a40384ea3943647be99e7a",
       "targetAfterSHA256": "018ad486123424b7d08043720cca829080dbe0ed4286c239ff7ad9c6b5d2bb11",
       "contextAfterSHA256": "018ad486123424b7d08043720cca829080dbe0ed4286c239ff7ad9c6b5d2bb11",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "f61775ade9593a3e794dd870aa8a0b05c256d99dccab6a17463a15020ab36733",
+        "targetAfterSHA256": "018ad486123424b7d08043720cca829080dbe0ed4286c239ff7ad9c6b5d2bb11",
+        "contextAfterSHA256": "018ad486123424b7d08043720cca829080dbe0ed4286c239ff7ad9c6b5d2bb11",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "018ad486123424b7d08043720cca829080dbe0ed4286c239ff7ad9c6b5d2bb11",
+          "semanticContextSHA256": "018ad486123424b7d08043720cca829080dbe0ed4286c239ff7ad9c6b5d2bb11",
+          "subjectTitle": "Aukion alla on kultaa",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "012a802fa7b8bdc52c0561dd96bd4421c63e5ecb46a40384ea3943647be99e7a",
+        "sameImageNativeSHA256": "53cc7b87d42017306bf2ee94478ca38db4992cf501a8f8cc69dc67c58068f9e0",
+        "sameImageExportSHA256": "35aa02675aa2f000f4bf7338afcc1e975ccee4598bac76ee87431879be37e0b5",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e11",
@@ -2015,16 +2141,16 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/sanjose/photo-f7fdf359c2b814c28bae.jpg",
         "suora": true,
         "lahde": "Bernard DUPONT from FRANCE, Commons (CC BY-SA 2.0)",
-        "selite": "Perhonen Spirogyran perhospuutarhassa San Josén seudulla vuonna 2006.",
-        "lyhyt": "Perhonen Spirogyran perhospuutarhassa San Josén seudulla vuonna 2006.",
+        "selite": "Papilio thoas -perhonen pitää kuvassa siipiään levällään; tummilla siivillä erottuvat vaaleankeltaiset kuviot.",
+        "lyhyt": "Mustakeltainen perhonen vihreällä lehdellä.",
         "tiedosto": "King Swallowtail (Papilio thoas nealces) (9564832228).jpg",
         "vuosi": "2006"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Bernard DUPONT from FRANCE, Commons (CC BY-SA 2.0)",
-        "selite": "Perhonen Spirogyran perhospuutarhassa San Josén seudulla vuonna 2006.",
-        "lyhyt": "Perhonen Spirogyran perhospuutarhassa San Josén seudulla vuonna 2006.",
+        "selite": "Papilio thoas -perhonen pitää kuvassa siipiään levällään; tummilla siivillä erottuvat vaaleankeltaiset kuviot.",
+        "lyhyt": "Mustakeltainen perhonen vihreällä lehdellä.",
         "tiedosto": "King Swallowtail (Papilio thoas nealces) (9564832228).jpg",
         "vuosi": "2006"
       },
@@ -2032,8 +2158,8 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/sanjose/photo-f7fdf359c2b814c28bae.jpg",
         "suora": true,
         "lahde": "Bernard DUPONT from FRANCE, Commons (CC BY-SA 2.0)",
-        "selite": "Perhonen Spirogyran perhospuutarhassa San Josén seudulla vuonna 2006.",
-        "lyhyt": "Perhonen Spirogyran perhospuutarhassa San Josén seudulla vuonna 2006.",
+        "selite": "Papilio thoas -perhonen pitää kuvassa siipiään levällään; tummilla siivillä erottuvat vaaleankeltaiset kuviot.",
+        "lyhyt": "Mustakeltainen perhonen vihreällä lehdellä.",
         "tiedosto": "King Swallowtail (Papilio thoas nealces) (9564832228).jpg",
         "vuosi": "2006"
       },
@@ -2049,10 +2175,10 @@
         1200
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/sanjose/sisalto.json",
-      "sourceContentSHA256": "f61775ade9593a3e794dd870aa8a0b05c256d99dccab6a17463a15020ab36733",
+      "sourceContentSHA256": "012a802fa7b8bdc52c0561dd96bd4421c63e5ecb46a40384ea3943647be99e7a",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "6370bf51e967b07459d556ff5067496c47c5767aae5791fa36e03fb76ae7fd4a",
-        "semanticContextSHA256": "6370bf51e967b07459d556ff5067496c47c5767aae5791fa36e03fb76ae7fd4a",
+        "targetBeforeSHA256": "b91e0c442d0947060d8864d8161d0f116a60b7f0564b4509a97eb81dd7eb779c",
+        "semanticContextSHA256": "b91e0c442d0947060d8864d8161d0f116a60b7f0564b4509a97eb81dd7eb779c",
         "subjectTitle": "sanjose — aito paikkavalokuva",
         "targetState": "existing-target"
       },
@@ -2215,9 +2341,9 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "King Swallowtail (Papilio thoas nealces) (9564832228).jpg",
+        "lyhyt": "Mustakeltainen perhonen vihreällä lehdellä.",
+        "selite": "Papilio thoas -perhonen pitää kuvassa siipiään levällään; tummilla siivillä erottuvat vaaleankeltaiset kuviot.",
         "lahde": "Bernard DUPONT from FRANCE, Commons (CC BY-SA 2.0)",
-        "selite": "Perhonen Spirogyran perhospuutarhassa San Josén seudulla vuonna 2006.",
-        "lyhyt": "Perhonen Spirogyran perhospuutarhassa San Josén seudulla vuonna 2006.",
         "vuosi": "2006"
       },
       "preservePreviousMediaObjects": true,
@@ -2237,24 +2363,45 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Bernard DUPONT from FRANCE, Commons (CC BY-SA 2.0)",
-        "selite": "Perhonen Spirogyran perhospuutarhassa San Josén seudulla vuonna 2006.",
-        "lyhyt": "Perhonen Spirogyran perhospuutarhassa San Josén seudulla vuonna 2006.",
+        "selite": "Papilio thoas -perhonen pitää kuvassa siipiään levällään; tummilla siivillä erottuvat vaaleankeltaiset kuviot.",
+        "lyhyt": "Mustakeltainen perhonen vihreällä lehdellä.",
         "tiedosto": "King Swallowtail (Papilio thoas nealces) (9564832228).jpg",
         "vuosi": "2006"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "f61775ade9593a3e794dd870aa8a0b05c256d99dccab6a17463a15020ab36733",
-      "targetAfterSHA256": "6370bf51e967b07459d556ff5067496c47c5767aae5791fa36e03fb76ae7fd4a",
-      "contextAfterSHA256": "6370bf51e967b07459d556ff5067496c47c5767aae5791fa36e03fb76ae7fd4a",
+      "sourceContentAfterSHA256": "012a802fa7b8bdc52c0561dd96bd4421c63e5ecb46a40384ea3943647be99e7a",
+      "targetAfterSHA256": "b91e0c442d0947060d8864d8161d0f116a60b7f0564b4509a97eb81dd7eb779c",
+      "contextAfterSHA256": "b91e0c442d0947060d8864d8161d0f116a60b7f0564b4509a97eb81dd7eb779c",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "f61775ade9593a3e794dd870aa8a0b05c256d99dccab6a17463a15020ab36733",
+        "targetAfterSHA256": "6370bf51e967b07459d556ff5067496c47c5767aae5791fa36e03fb76ae7fd4a",
+        "contextAfterSHA256": "6370bf51e967b07459d556ff5067496c47c5767aae5791fa36e03fb76ae7fd4a",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "6370bf51e967b07459d556ff5067496c47c5767aae5791fa36e03fb76ae7fd4a",
+          "semanticContextSHA256": "6370bf51e967b07459d556ff5067496c47c5767aae5791fa36e03fb76ae7fd4a",
+          "subjectTitle": "sanjose — aito paikkavalokuva",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "012a802fa7b8bdc52c0561dd96bd4421c63e5ecb46a40384ea3943647be99e7a",
+        "sameImageNativeSHA256": "f7fdf359c2b814c28bae0f4ba1ff0368ed034170c6d3a53221fd96a4d5ba95a8",
+        "sameImageExportSHA256": "f7fdf359c2b814c28bae0f4ba1ff0368ed034170c6d3a53221fd96a4d5ba95a8",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e11",
@@ -2276,23 +2423,23 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/sanjose/c1-039ca7a531f86d4deeb6.jpg",
         "suora": true,
         "lahde": "NASA Astronauts, Wikimedia Commons (PD)",
-        "selite": "San Josén kaupunkialue avaruusasemalta kuvattuna vuonna 2011.",
-        "lyhyt": "San Josén kaupunkialue avaruusasemalta kuvattuna vuonna 2011.",
+        "selite": "Tiheä katu- ja kortteliverkko erottuu San Josén seudun avaruuskuvassa; tummat jokilaaksot katkovat rakennettua aluetta.",
+        "lyhyt": "San Josén kaupunkialuetta avaruusasemalta.",
         "tiedosto": "San Jose, Costa Rica Astronaut Image.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "NASA Astronauts, Wikimedia Commons (PD)",
-        "selite": "San Josén kaupunkialue avaruusasemalta kuvattuna vuonna 2011.",
-        "lyhyt": "San Josén kaupunkialue avaruusasemalta kuvattuna vuonna 2011.",
+        "selite": "Tiheä katu- ja kortteliverkko erottuu San Josén seudun avaruuskuvassa; tummat jokilaaksot katkovat rakennettua aluetta.",
+        "lyhyt": "San Josén kaupunkialuetta avaruusasemalta.",
         "tiedosto": "San Jose, Costa Rica Astronaut Image.jpg"
       },
       "runtimeMediaFieldPayload": {
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/sanjose/c1-039ca7a531f86d4deeb6.jpg",
         "suora": true,
         "lahde": "NASA Astronauts, Wikimedia Commons (PD)",
-        "selite": "San Josén kaupunkialue avaruusasemalta kuvattuna vuonna 2011.",
-        "lyhyt": "San Josén kaupunkialue avaruusasemalta kuvattuna vuonna 2011.",
+        "selite": "Tiheä katu- ja kortteliverkko erottuu San Josén seudun avaruuskuvassa; tummat jokilaaksot katkovat rakennettua aluetta.",
+        "lyhyt": "San Josén kaupunkialuetta avaruusasemalta.",
         "tiedosto": "San Jose, Costa Rica Astronaut Image.jpg"
       },
       "runtimeRemoveMediaKeys": [],
@@ -2307,10 +2454,10 @@
         2848
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/sanjose/sisalto.json",
-      "sourceContentSHA256": "f61775ade9593a3e794dd870aa8a0b05c256d99dccab6a17463a15020ab36733",
+      "sourceContentSHA256": "012a802fa7b8bdc52c0561dd96bd4421c63e5ecb46a40384ea3943647be99e7a",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "de593d9a2f09cfa0e85b2f78d5ea4d44a74430a38aed021c93aed544266a1bc4",
-        "semanticContextSHA256": "de593d9a2f09cfa0e85b2f78d5ea4d44a74430a38aed021c93aed544266a1bc4",
+        "targetBeforeSHA256": "ffb1aed86572e395e4bb107ac1ef3f4f7139e1138a12e1032ff27a842122591e",
+        "semanticContextSHA256": "ffb1aed86572e395e4bb107ac1ef3f4f7139e1138a12e1032ff27a842122591e",
         "subjectTitle": "San José",
         "targetState": "existing-target"
       },
@@ -2471,9 +2618,9 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "San Jose, Costa Rica Astronaut Image.jpg",
-        "lahde": "NASA Astronauts, Wikimedia Commons (PD)",
-        "selite": "San Josén kaupunkialue avaruusasemalta kuvattuna vuonna 2011.",
-        "lyhyt": "San Josén kaupunkialue avaruusasemalta kuvattuna vuonna 2011."
+        "lyhyt": "San Josén kaupunkialuetta avaruusasemalta.",
+        "selite": "Tiheä katu- ja kortteliverkko erottuu San Josén seudun avaruuskuvassa; tummat jokilaaksot katkovat rakennettua aluetta.",
+        "lahde": "NASA Astronauts, Wikimedia Commons (PD)"
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -2492,28 +2639,55 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "NASA Astronauts, Wikimedia Commons (PD)",
-        "selite": "San Josén kaupunkialue avaruusasemalta kuvattuna vuonna 2011.",
-        "lyhyt": "San Josén kaupunkialue avaruusasemalta kuvattuna vuonna 2011.",
+        "selite": "Tiheä katu- ja kortteliverkko erottuu San Josén seudun avaruuskuvassa; tummat jokilaaksot katkovat rakennettua aluetta.",
+        "lyhyt": "San Josén kaupunkialuetta avaruusasemalta.",
         "tiedosto": "San Jose, Costa Rica Astronaut Image.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "f61775ade9593a3e794dd870aa8a0b05c256d99dccab6a17463a15020ab36733",
-      "targetAfterSHA256": "de593d9a2f09cfa0e85b2f78d5ea4d44a74430a38aed021c93aed544266a1bc4",
-      "contextAfterSHA256": "de593d9a2f09cfa0e85b2f78d5ea4d44a74430a38aed021c93aed544266a1bc4",
+      "sourceContentAfterSHA256": "012a802fa7b8bdc52c0561dd96bd4421c63e5ecb46a40384ea3943647be99e7a",
+      "targetAfterSHA256": "ffb1aed86572e395e4bb107ac1ef3f4f7139e1138a12e1032ff27a842122591e",
+      "contextAfterSHA256": "ffb1aed86572e395e4bb107ac1ef3f4f7139e1138a12e1032ff27a842122591e",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "f61775ade9593a3e794dd870aa8a0b05c256d99dccab6a17463a15020ab36733",
+        "targetAfterSHA256": "de593d9a2f09cfa0e85b2f78d5ea4d44a74430a38aed021c93aed544266a1bc4",
+        "contextAfterSHA256": "de593d9a2f09cfa0e85b2f78d5ea4d44a74430a38aed021c93aed544266a1bc4",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "de593d9a2f09cfa0e85b2f78d5ea4d44a74430a38aed021c93aed544266a1bc4",
+          "semanticContextSHA256": "de593d9a2f09cfa0e85b2f78d5ea4d44a74430a38aed021c93aed544266a1bc4",
+          "subjectTitle": "San José",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "012a802fa7b8bdc52c0561dd96bd4421c63e5ecb46a40384ea3943647be99e7a",
+        "sameImageNativeSHA256": "039ca7a531f86d4deeb6d34f543ccd51055a5eee248a0c7ea2e0a72b0188bbe9",
+        "sameImageExportSHA256": "039ca7a531f86d4deeb6d34f543ccd51055a5eee248a0c7ea2e0a72b0188bbe9",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     }
   ],
   "runtimeIntegrationPending": true,
   "ownerAcceptedNotImpliedByAuthorization": false,
   "gameIntegrated": false,
   "allAssetsExplicitlyOwnerApproved": true,
-  "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+  "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+  "task118ExcludedAssets": [],
+  "task118TextRevision": true,
+  "independentTextResamplePending": true,
+  "textAcceptanceVerified": false,
+  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task118/immutable-media-history/e11/sanjose/c0c159493763c72f6e0e8f9be96898b42d1964fb3615140533b8bf531d97e5b2.json",
+  "task118ReboundAt": "2026-10-13T16:31:26.069317+00:00"
 }

@@ -1,381 +1,381 @@
 {
-  "$skeema": "matkakirja-paakaupunki/1",
+ "$skeema": "matkakirja-paakaupunki/1",
+ "id": "belmopan",
+ "maa": "BLZ",
+ "era": "e11",
+ "kaupunki": {
   "id": "belmopan",
-  "maa": "BLZ",
-  "era": "e11",
-  "kaupunki": {
-    "id": "belmopan",
-    "name": "Belmopan",
-    "wiki": "Belmopan",
-    "ambience": "sademetsa",
-    "pallo": {
-      "lat": 17.25,
-      "lon": -88.7675
-    }
-  },
-  "artikkeli": {
-    "intro": "Belmopan on Belizen pääkaupunki Cayon piirikunnassa, sisämaassa Belize-joen lähellä. Kaupunki suunniteltiin 1900-luvun jälkipuoliskolla, kun hurrikaani Hattie oli vahingoittanut rannikon Belize Cityä. Uusi paikka valittiin korkeammalta ja kauempaa meren myrskyaalloista. Isoisän matkavuonna 1873 tätä suunniteltua pääkaupunkia ei vielä ollut. **Belmopanin nimi** yhdistää Belize- ja Mopan-jokien nimet, joten kaupungin kartta alkaa jo sen sanasta.\n\nKeskustan perusrakenne kiertyy Ring Roadin eli kehätien ympärille, ja sen sisään jää myös puistoaluetta. **University of Belizen** kampuksella naapurimaiden espanjankieliset opiskelijat voivat opiskella englantia. Keskustan markkinoille puolestaan saapuu väkeä ympäröivistä kylistä ja kaupungeista. Läheinen Guanacasten kansallispuisto vie kävelijän metsään, jonka nimenantajana oli aikanaan hakkuulta säästynyt puu. Hallintokaupungin tarinaan mahtuvat siis myös opiskelijat, torikauppa ja lähimetsä.",
-    "teksti": "Belmopanin rakentaminen oli vastaus rannikon pääkaupungin myrskyvahinkoihin. Hurrikaani Hattien jälkeen uudelle hallintokeskukselle etsittiin sisämaasta korkeampaa maata. Kaupungin rakentaminen alkoi 1900-luvun jälkipuoliskolla, ja hallinto siirtyi sinne ensimmäisen rakennusvaiheen valmistuttua.\n\nSuunnitellun keskustan tunnus on Ring Road. Sen sisäpuolella ja ympärillä sijaitsee suuri osa hallintorakennuksista, mutta renkaan sisään jätettiin myös puistoja. Asukkaisiin kuuluu monia yhteisöjä, muun muassa belizenkreoli-, garifuna-, mestitsi- ja mayaperheitä. Kaupungin elämää ei voi kuvata vain virastojen kautta.\n\nYliopiston kielikeskus tuo Belmopaniin englanninopiskelijoita espanjankielisistä naapurimaista. Keskustan markkinat kokoavat myös lähiseutujen väkeä ostoksille ja kaupankäyntiin. Guanacasten puisto taas tarjoaa polkuja ja ympäristöopetusta aivan kaupungin tuntumassa: metsäpolut ja ympäristöopetus ovat osa sisämaan pääkaupungin kierrosta."
-  },
-  "kysymykset": [
-    {
-      "q": "Minkä maan pääkaupunki Belmopan on?",
-      "options": [
-        "Belizen",
-        "Guatemalan",
-        "Hondurasin",
-        "Nicaraguan"
-      ],
-      "correct": 0,
-      "level": 1,
-      "hint": "Maan nimi on myös osa kaupungin nimen taustaa.",
-      "fact": "Belmopan on Belizen pääkaupunki Cayon piirikunnassa.",
-      "source": "https://en.wikipedia.org/wiki/Belmopan"
-    },
-    {
-      "q": "Miksi uudelle pääkaupungille valittiin paikka sisämaasta?",
-      "options": [
-        "Myrskyaalloilta suojaamiseksi",
-        "Uuden merisataman perustamiseksi",
-        "Suolantuotannon laajentamiseksi",
-        "Rannikkolomailun keskittämiseksi"
-      ],
-      "correct": 0,
-      "level": 2,
-      "hint": "Vanha pääkaupunki sijaitsi matalalla meren rannalla.",
-      "fact": "Hurrikaani Hattien jälkeen hallinnolle etsittiin korkeampaa sisämaan paikkaa.",
-      "source": "https://en.wikipedia.org/wiki/Belmopan"
-    },
-    {
-      "q": "Mikä tie jäsentää Belmopanin suunniteltua keskustaa?",
-      "options": [
-        "Ring Road",
-        "Ocean Drive",
-        "King’s Road",
-        "Mountain Way"
-      ],
-      "correct": 0,
-      "level": 1,
-      "hint": "Tie kulkee keskustan ympäri.",
-      "fact": "Hallintorakennuksia ja puistoalueita sijoittuu kehätien sisään ja ympärille.",
-      "source": "https://en.wikipedia.org/wiki/Belmopan"
-    },
-    {
-      "q": "Miksi Guanacasten puiston nimipuu säästyi aikanaan hakkuulta?",
-      "options": [
-        "Runko haarautui",
-        "Puu oli hedelmäviljelmällä",
-        "Runko oli jo kaatunut",
-        "Puu sijaitsi suolaisessa vedessä"
-      ],
-      "correct": 0,
-      "level": 3,
-      "hint": "Selitys liittyy siihen, millaista puutavaraa siitä olisi saanut.",
-      "fact": "Haarautunut runko heikensi puun arvoa puutavarana. Se antoi myöhemmin nimensä puistolle.",
-      "source": "https://en.wikipedia.org/wiki/Guanacaste_National_Park_(Belize)"
-    },
-    {
-      "q": "Minkä kulttuurin klassisen kauden käytöstä St. Hermanin ja Crystal Caven luolista on löytynyt näyttöä?",
-      "options": [
-        "Mayakulttuurin",
-        "Inkojen kulttuurin",
-        "Roomalaisen kulttuurin",
-        "Viikinkikulttuurin"
-      ],
-      "correct": 0,
-      "level": 2,
-      "hint": "Sama elävä kulttuuriperintö kuuluu Belizen historiaan.",
-      "fact": "Arkeologit ovat löytäneet luolista esineitä ja muuta näyttöä mayakulttuurin klassisen kauden käytöstä.",
-      "source": "https://en.wikipedia.org/wiki/St._Herman's_Blue_Hole_National_Park"
-    }
-  ],
-  "tiedot": [
-    "Belmopanin yliopiston kielikeskukseen tulee espanjankielisten naapurimaiden opiskelijoita opiskelemaan englantia.",
-    "Belmopanin nimi yhdistää Belize- ja Mopan-jokien nimet samaan sanaan.",
-    "Guanacasten puiston nimipuu säästyi aikanaan hakkuulta, koska haarautunut runko vähensi sen arvoa tukkipuuna."
-  ],
-  "valokuva": {
-    "tiedosto": "St. Herman's Blue Hole.jpg",
-    "lyhyt": "St. Hermanin Blue Hole on Belmopanin lähiseudun metsäinen luontoretkikohde.",
-    "selite": "St. Hermanin Blue Hole on Belmopanin lähiseudun metsäinen luontoretkikohde.",
-    "lahde": "Haakon S. Krohn, Commons (CC BY-SA 3.0)"
-  },
-  "kaupunkilehti": [
-    {
-      "id": "kaupunki",
-      "nimi": "Belmopan",
-      "johdanto": "Belmopanin pääkaupunkihistoria alkoi uuden paikan valinnasta, mutta sen arki näkyy myös opiskelijoissa, markkinoissa ja lähimetsässä.",
-      "kansikuvat": [
-        {
-          "tiedosto": "Aerials Belize WHwy 04.jpg",
-          "lyhyt": "Belmopanin katuja, kortteleita ja viheralueita ilmasta vuonna 2015.",
-          "selite": "Belmopanin katuja, kortteleita ja viheralueita ilmasta vuonna 2015.",
-          "lahde": "Denis Barthel, Wikimedia Commons (CC BY-SA 4.0)"
-        },
-        {
-          "tiedosto": "",
-          "lyhyt": "",
-          "selite": "",
-          "lahde": ""
-        },
-        {
-          "tiedosto": "",
-          "lyhyt": "",
-          "selite": "",
-          "lahde": ""
-        }
-      ],
-      "nostot": [
-        {
-          "otsikko": "Pääkaupunki siirtyi pois rannalta",
-          "teksti": "Belmopan rakennettiin uudeksi pääkaupungiksi sen jälkeen, kun hurrikaani Hattie oli vahingoittanut rannikon Belize Cityä. Uudelle hallintokaupungille etsittiin sisämaasta korkeampaa paikkaa, jota meren myrskyaallot eivät tavoittaisi. Rakentaminen alkoi 1900-luvun jälkipuoliskolla, ja hallinto siirtyi uuteen kaupunkiin sen ensimmäisen rakennusvaiheen jälkeen. Kyseessä ei ollut vanhan keskustan korjaaminen vaan uuden paikan valinta. Belmopanin lähtökohta on siksi poikkeuksellisen konkreettinen: pääkaupungin osoite vaihdettiin.",
-          "wiki": "Belmopan",
-          "tiedosto": "",
-          "lyhyt": "",
-          "selite": "",
-          "lahde": ""
-        },
-        {
-          "otsikko": "Jokien nimet samassa sanassa",
-          "teksti": "Belmopanin nimi on koottu sanoista Belize ja Mopan. Molemmat viittaavat seudun jokiin: Mopan laskee Belize-jokeen. Nimi ei siis ole sattumalta samanlainen kuin maan nimi, vaan siinä yhdistetään kaksi vesistön nimeä. Kaupunki itse sijaitsee Cayon piirikunnassa Belize-joen lähellä, sisämaassa Karibianmeren rannikosta. Hallintokaupungin nimi palauttaa huomion maastoon sen ympärillä. Kun sanan jakaa osiin, kartalta löytyy selitys, joka jää helposti virastojen ja pääkaupunkiaseman varjoon.",
-          "wiki": "Belmopan",
-          "tiedosto": "",
-          "lyhyt": "",
-          "selite": "",
-          "lahde": ""
-        },
-        {
-          "otsikko": "Keskustaa kiertää rengas",
-          "teksti": "Belmopanin suunnitellun keskustan runko on Ring Road, keskustaa kiertävä kehätie. Suuri osa hallintorakennuksista sijoittuu sen sisäpuolelle tai ympärille, ja renkaan sisään jää myös puistoaluetta. Keskustan perusrakenne suunniteltiin alusta saakka uutta pääkaupunkia varten. Kehätie on helppo tunnistaa kartalta, mutta kaikki kaupunki ei mahdu sen sisään. Belmopan on myös opiskelijoiden ja eri yhteisöjen asuinpaikka, ei pelkkä hallinnon rakennusryhmä.",
-          "wiki": "Belmopan",
-          "tiedosto": "",
-          "lyhyt": "",
-          "selite": "",
-          "lahde": ""
-        },
-        {
-          "otsikko": "Englantia yli kielirajan",
-          "teksti": "University of Belizen kampuksella Belmopanissa toimii Regional Language Centre. Sinne tulee naapurimaiden espanjankielisiä opiskelijoita opiskelemaan englantia. Pääkaupungissa kohtaavat siis myös alueen erilaiset kielimaailmat. Kampuksella opiskellaan kielten lisäksi esimerkiksi luonnontieteitä, tekniikkaa, kasvatusta ja terveysalaa. Belmopanin asukkaisiin kuuluu muun muassa belizenkreoli-, garifuna-, mestitsi- ja mayayhteisöjä. Hallintokaupungin rinnalla elää opiskelijoiden ja monenlaisten perheiden kaupunki.",
-          "wiki": "Belmopan",
-          "tiedosto": "",
-          "lyhyt": "",
-          "selite": "",
-          "lahde": ""
-        }
-      ],
-      "matkailijalle": {
-        "kuva": {
-          "tiedosto": "",
-          "lyhyt": "",
-          "selite": "",
-          "lahde": ""
-        },
-        "kappale": "Belmopanin keskustan kierrokseen kuuluvat Ring Roadin puistot ja markkinapaikat. Kaupunkiin tullaan maanteitse, ja keskustassa voi liikkua kävellen tai taksilla. Markkinoille saapuu väkeä myös ympäröivistä kylistä ja kaupungeista. Guanacasten kansallispuisto sopii lähialueen metsäretkeen. St. Herman’s Blue Hole -puiston luolat ja metsäallas puolestaan ovat erillinen retkikohde Hummingbird Highwayn varrella.",
-        "artikkeli": {
-          "nimi": "Matkailijan Belmopan",
-          "taitto": "opas",
-          "teksti": "Tutustu suunnitellun pääkaupungin keskustaan ja jatka lähimetsän poluille.",
-          "nosto": "Ring Road, markkinat ja Guanacasten puisto sopivat kaupungin kierrokseen; kauempien luolien retki suunnitellaan erikseen.",
-          "jaksot": [
-            {
-              "otsikko": "Perille ja liikkeelle",
-              "teksti": "Belmopaniin tullaan maanteitse esimerkiksi Belize Citystä. Kaupunkia palvelevat George Price Highway ja Hummingbird Highway, ja keskustassa on linja-autoterminaali. Paikalliseen liikkumiseen voi käyttää taksia tai kävellä. Sisämaan retkien lähtöpaikat ja paluuyhteys on syytä sopia erikseen, sillä kaikki luontokohteet eivät ole kaupungin kävelykeskustassa.",
-              "kuva": {
-                "tiedosto": "",
-                "lyhyt": "",
-                "selite": "",
-                "lahde": ""
-              }
-            },
-            {
-              "otsikko": "Keskustan kierros",
-              "teksti": "Ring Road näyttää suunnitellun pääkaupungin perusrakenteen. Sen sisällä on hallintorakennuksia ja puistoaluetta, mutta kaupungin arkiseen kierrokseen kuuluvat myös markkinapaikat. Markkinoilla myydään ruokaa, kasviksia, vaatteita ja pieniä tavaroita. Lähiseutujen asukkaat tulevat sinne myös linja-autolla, joten torilla kohtaa kaupungin lisäksi sen ympäristön.",
-              "kuva": {
-                "tiedosto": "",
-                "lyhyt": "",
-                "selite": "",
-                "lahde": ""
-              }
-            },
-            {
-              "otsikko": "Metsä ja luolaretki",
-              "teksti": "Guanacasten kansallispuisto on Belmopanin lähialueen metsäretkikohde, jossa on ylläpidettyjä polkuja. St. Herman’s Blue Hole -puiston luolat ja sisämaan Blue Hole sijaitsevat kauempana Hummingbird Highwayn varrella ja kuuluvat erilliseen retkeen. Crystal Caveen pääsee vain hyväksytyn oppaan kanssa. Varaa luolalle sille tarkoitettu opastettu retki, älä käsittele sitä tavallisena puistokävelynä.",
-              "kuva": {
-                "tiedosto": "",
-                "lyhyt": "",
-                "selite": "",
-                "lahde": ""
-              }
-            },
-            {
-              "otsikko": "Mitä täällä syödään",
-              "teksti": "Keskustan markkinoilla myydään ruokaa ja tuoreita kasviksia. Belmopanissa on myös kiinalaisten omistamia ravintoloita, joiden tarjonnassa on paikallista belizeläistä ruokaa. Matkan ruokatauko voi siten löytyä sekä torilta että ravintolasta; omistajan tausta ei yksin kerro keittiön sisällöstä.",
-              "kuva": {
-                "tiedosto": "",
-                "lyhyt": "",
-                "selite": "",
-                "lahde": ""
-              }
-            },
-            {
-              "otsikko": "Milloin kannattaa tulla",
-              "teksti": "Belmopanissa on pitkä sadekausi ja sitä lyhyempi kuiva kausi. Kuivana kautenakin voi sataa, joten se ei tarkoita varmuutta sateettomista päivistä. Puistokierroksen ja luolaretken toteutuminen on erillinen asia kuin kaupungissa liikkuminen. Varmista retken järjestäjältä sen toteutuminen ennen lähtöä: retkiä ei järjestetä välttämättä jokaisena päivänä.",
-              "kuva": {
-                "tiedosto": "",
-                "lyhyt": "",
-                "selite": "",
-                "lahde": ""
-              }
-            }
-          ],
-          "matkailu": {
-            "parasta": [
-              {
-                "mita": "Keskustan markkinat",
-                "tahdet": 3,
-                "selite": "Tuotteita, ruokaa ja kohtaamisia kaupungin sekä lähiseutujen väen kanssa."
-              },
-              {
-                "mita": "Ring Road",
-                "tahdet": 2,
-                "selite": "Suunnitellun keskustan perusrakenne erottuu kehätien ympärillä."
-              },
-              {
-                "mita": "Guanacasten kansallispuisto",
-                "tahdet": 3,
-                "selite": "Lähialueen metsäpolut ja ympäristöopetus tuovat luontoretken lähelle."
-              },
-              {
-                "mita": "Sisämaan Blue Hole",
-                "tahdet": 3,
-                "selite": "Metsäallas kuuluu maan alla kulkevaan vesireittiin."
-              },
-              {
-                "mita": "Opastettu luolaretki",
-                "tahdet": 2,
-                "selite": "St. Hermanin ja Crystal Caven luolastoissa kohtaavat karsti ja mayakulttuurin historia."
-              }
-            ],
-            "hyvaTietaa": [
-              {
-                "otsikko": "Blue Hole -nimet",
-                "teksti": "St. Herman’s Blue Hole sijaitsee sisämaassa; matkavarausta tehdessä tarkista kohteen koko nimi."
-              },
-              {
-                "otsikko": "Retki on erillinen matka",
-                "teksti": "St. Herman’s Blue Hole -puistoon suuntaudutaan Hummingbird Highwayta pitkin, ja paluuyhteys sovitaan erikseen."
-              },
-              {
-                "otsikko": "Luolan opastus",
-                "teksti": "Crystal Caveen mennään hyväksytyn oppaan kanssa."
-              },
-              {
-                "otsikko": "Sateita myös kuivana kautena",
-                "teksti": "Kuiva kausi on sadekautta lyhyempi, ja myös sen aikana voi sataa."
-              }
-            ]
-          },
-          "lahde": "Wikipedia"
-        }
-      }
-    },
-    {
-      "id": "luonto",
-      "nimi": "Puusta maan alle",
-      "johdanto": "Lähimetsän nimipuu ja sisämaan luolat kertovat, miten Belmopanin ympäristössä puu, vesi ja ihmisten historia kohtaavat.",
-      "tehtava": {
-        "kysymys": "Mikä yhdistää St. Hermanin luolan ja sisämaan Blue Hole -altaan?",
-        "vaihtoehdot": [
-          "Maanalainen vesivirta",
-          "Vanha rautatietunneli",
-          "Meren vuorovesikanava",
-          "Kaupungin sadevesiviemäri"
-        ],
-        "oikea": 0,
-        "fakta": "Altaan vesi on osa reittiä, joka kulkee luolasta vajoamaan ja jatkuu taas maan alla."
-      },
-      "nostot": [
-        {
-          "otsikko": "Huono tukkipuu sai puiston",
-          "teksti": "Guanacasten kansallispuisto sai nimensä suuresta guanacaste-puusta. Se säästyi aikanaan hakkuulta, koska haarautunut runko heikensi sen arvoa puutavarana. Metsätalouden kannalta hankalasta puusta tuli siis suojelualueen nimenantaja. Puisto sijaitsee Belmopanin lähellä Roaring Creekin sillan tuntumassa, päätien pohjoispuolella. Alue tuli suojelun piiriin vasta 1900-luvun jälkipuoliskolla, joten nykyinen kansallispuisto ei kuulu isoisän matkavuoteen 1873. Haarautunut runko antoi puulle uuden roolin: sahatavaran sijasta se tunnettiin suojelualueen nimenantajana.",
-          "wiki": "Guanacaste National Park (Belize)",
-          "tiedosto": "",
-          "lyhyt": "",
-          "selite": "",
-          "lahde": ""
-        },
-        {
-          "otsikko": "Metsään pääsee kaupungin laidalta",
-          "teksti": "Guanacasten kansallispuistossa on ylläpidettyjä kävelypolkuja ja ympäristöopetukseen tarkoitettu keskus. Metsässä kasvaa esimerkiksi mahonkia sekä monia muita puulajeja. Alueelta on havaintoja muun muassa valkohäntäpeuroista, jaguarundeista ja vyötiäisistä. Myös linnusto kuuluu puiston luontoon, joten polulla voi keskittyä kuuntelemiseen ja katseluun. Puisto on myös lintuharrastajien retkikohde. Alue kuuluu Belize Audubon Societyn hoitamiin suojelualueisiin. Belmopanin luontokierros voi alkaa aivan lähialueelta: tämän metsän vuoksi ei tarvitse lähteä pitkälle sisämaan matkalle.",
-          "wiki": "Guanacaste National Park (Belize)",
-          "tiedosto": "",
-          "lyhyt": "",
-          "selite": "",
-          "lahde": ""
-        },
-        {
-          "otsikko": "Sininen allas maan sisäisellä reitillä",
-          "teksti": "St. Herman’s Blue Hole -puiston Blue Hole on sisämaan metsäallas. Maanalainen virta kulkee St. Hermanin luolasta vajoamaan, jonka pohjalla allas sijaitsee, ja jatkaa sitten jälleen maan alle. Vesipaikka kuuluu siis näkyvänä osana suurempaan maanalaiseen reittiin. Puisto sijaitsee Hummingbird Highwayn varrella Belmopanin kaakkoispuolella, Maya-vuorten juurella. Metsäiset karstimaastot ovat sekä jyrkkiä että kumpuilevia. Puiston nimeä täsmennettiin myöhemmin, jotta sisämaan kohde ei sekoittuisi Belizen meren Blue Hole -kohteeseen.",
-          "wiki": "St. Herman's Blue Hole National Park",
-          "tiedosto": "",
-          "lyhyt": "",
-          "selite": "",
-          "lahde": ""
-        },
-        {
-          "otsikko": "Luolissa näkyy ihmisten historia",
-          "teksti": "St. Herman’s Blue Hole -puistossa on St. Hermanin ja Crystal Caven laajat luolastot. Arkeologit ovat löytäneet niistä esineitä ja muuta näyttöä mayakulttuurin klassisen kauden käytöstä. Luolat kuuluvat siten sekä luonnon että ihmisten historiaan. Nykyinen kansallispuisto perustettiin vasta 1900-luvun jälkipuoliskolla, mutta luolat ja niiden vanha käyttö ovat tätä paljon vanhempia. Retkillä liikutaan maanpäällisistä metsäpoluista luolien puolelle. Crystal Cave tunnetaan myös nimellä Mountain Cow Cave, ja sinne mennään hyväksytyn oppaan kanssa.",
-          "wiki": "St. Herman's Blue Hole National Park",
-          "tiedosto": "",
-          "lyhyt": "",
-          "selite": "",
-          "lahde": ""
-        }
-      ]
-    }
-  ],
-  "kohdekartta": {
-    "numeroympyrat": true,
-    "esittely": "Guanacasten lähimetsän poluilla puiston historia alkaa hakkuulta säästyneestä puusta.",
-    "rajat": {
-      "pohjoinen": 17.2672,
-      "etela": 17.2616,
-      "lansi": -88.789,
-      "ita": -88.783
-    },
-    "kohteet": [
-      {
-        "nimi": "Guanacasten kansallispuisto",
-        "tyyppi": "luonto",
-        "lat": 17.2644,
-        "lon": -88.786
-      }
-    ]
-  },
-  "nahtavyydet": {
-    "Guanacasten kansallispuisto": {
-      "aika": "Suojelualue 1900-luvun jälkipuoliskolta",
-      "teksti": "Guanacasten kansallispuisto sijaitsee Belmopanin lähellä, Roaring Creekin sillan tuntumassa päätien pohjoispuolella. Puisto sai nimensä suuresta guanacaste-puusta, jonka haarautunut runko vähensi sen arvoa puutavarana. Puu säästyi aikanaan hakkuulta ja antoi myöhemmin nimensä suojelualueelle. Isoisän matkavuonna 1873 nykyistä kansallispuistoa ei vielä ollut; alue tuli suojelun piiriin vasta seuraavan vuosisadan jälkipuoliskolla.\n\nPuistoa hoitaa Belize Audubon Society. Alueella on ylläpidettyjä metsäpolkuja ja ympäristöopetuksen keskus. Puustoon kuuluu esimerkiksi mahonkia, ja metsän eläimistä on havaittu valkohäntäpeuroja, jaguarundeja ja vyötiäisiä. Lintuharrastajalle alue on myös paikallinen retkikohde. Suojelualueen historia, polut ja luonnon tarkkailu antavat sisämaan pääkaupunkivierailulle oman metsäisen osuuden.",
-      "kuvat": [
-        {
-          "tiedosto": "",
-          "lyhyt": "",
-          "selite": "",
-          "lahde": ""
-        }
-      ],
-      "lahde": "Wikipedia"
-    }
-  },
-  "saatiedot": null,
-  "ehdotukset": {
-    "lentoasema": null,
-    "huomiot": [
-      "C-tekstiluonnos; kartta partial (1 varmennettu lähikohde). Pieni suunniteltu kaupunki; keskustan rakennusten tekijäketjut ja kohteiden omat WP/WD-pisteet ovat auki.",
-      "St. Herman’s Blue Hole on erillinen lähiseudun retki, eikä sitä sijoitettu keskustan kohdekarttaan.",
-      "Kaikki 19 kuvaroolia odottavat kuvaputkea; tiedosto, lyhyt, selite ja lahde tyhjinä. Modernin kansalliskokousrakennuksen ja muistomerkkien tekijäportit eivät ole tässä varmennettuja; niitä ei valittu kuva- tai karttakohteiksi.",
-      "Sääauditointi 48/48 primäärivarmennuksen mukaan avoin: saatiedot:null, ei ilmastolukuja eikä saa.json-muutoksia.",
-      "Riippumaton D/E/F, hyväksyntä, pelikytkentä ja julkaisu avoinna. Belmopanin oman lentoaseman palvelu ja mahdollinen kansainvälinen saapumiskenttä jätetty tässä tarkistamatta."
-    ]
+  "name": "Belmopan",
+  "wiki": "Belmopan",
+  "ambience": "sademetsa",
+  "pallo": {
+   "lat": 17.25,
+   "lon": -88.7675
   }
+ },
+ "artikkeli": {
+  "intro": "Belmopan on Belizen pääkaupunki Cayon piirikunnassa, sisämaassa Belize-joen lähellä. Kaupunki suunniteltiin 1900-luvun jälkipuoliskolla, kun hurrikaani Hattie oli vahingoittanut rannikon Belize Cityä. Uusi paikka valittiin korkeammalta ja kauempaa meren myrskyaalloista. Isoisän matkavuonna 1873 tätä suunniteltua pääkaupunkia ei vielä ollut. **Belmopanin nimi** yhdistää Belize- ja Mopan-jokien nimet,.\n\nKeskustan perusrakenne kiertyy Ring Roadin eli kehätien ympärille, ja sen sisään jää myös puistoaluetta. **University of Belizen** kampuksella naapurimaiden espanjankieliset opiskelijat voivat opiskella englantia. Keskustan markkinoille puolestaan saapuu väkeä ympäröivistä kylistä ja kaupungeista. Läheinen Guanacasten kansallispuisto vie kävelijän metsään, jonka nimenantajana oli aikanaan hakkuulta säästynyt puu.",
+  "teksti": "Belmopanin rakentaminen oli vastaus rannikon pääkaupungin myrskyvahinkoihin. Hurrikaani Hattien jälkeen uudelle hallintokeskukselle etsittiin sisämaasta korkeampaa maata. Kaupungin rakentaminen alkoi 1900-luvun jälkipuoliskolla, ja hallinto siirtyi sinne ensimmäisen rakennusvaiheen valmistuttua.\n\nSuunnitellun keskustan tunnus on Ring Road. Sen sisäpuolella ja ympärillä sijaitsee suuri osa hallintorakennuksista, mutta renkaan sisään jätettiin myös puistoja. Asukkaisiin kuuluu monia yhteisöjä, muun muassa belizenkreoli-, garifuna-, mestitsi- ja mayaperheitä. \n\nYliopiston kielikeskus tuo Belmopaniin englanninopiskelijoita espanjankielisistä naapurimaista. Keskustan markkinat kokoavat myös lähiseutujen väkeä ostoksille ja kaupankäyntiin. Guanacasten puisto taas tarjoaa polkuja ja ympäristöopetusta aivan kaupungin tuntumassa: puistossa on myös opetuskeskus."
+ },
+ "kysymykset": [
+  {
+   "q": "Minkä maan pääkaupunki Belmopan on?",
+   "options": [
+    "Belizen",
+    "Guatemalan",
+    "Hondurasin",
+    "Nicaraguan"
+   ],
+   "correct": 0,
+   "level": 1,
+   "hint": "Maan nimi on myös osa kaupungin nimen taustaa.",
+   "fact": "Belmopan on Belizen pääkaupunki Cayon piirikunnassa.",
+   "source": "https://en.wikipedia.org/wiki/Belmopan"
+  },
+  {
+   "q": "Miksi uudelle pääkaupungille valittiin paikka sisämaasta?",
+   "options": [
+    "Myrskyaalloilta suojaamiseksi",
+    "Maatalouskeskuksen rakentamiseksi",
+    "Rautatieverkoston yhdistämiseksi",
+    "Kaivoshallinnon keskittämiseksi"
+   ],
+   "correct": 0,
+   "level": 2,
+   "hint": "Vanha pääkaupunki sijaitsi matalalla meren rannalla.",
+   "fact": "Hurrikaani Hattien jälkeen hallinnolle etsittiin korkeampaa sisämaan paikkaa.",
+   "source": "https://en.wikipedia.org/wiki/Belmopan"
+  },
+  {
+   "q": "Mikä tie jäsentää Belmopanin suunniteltua keskustaa?",
+   "options": [
+    "Ring Road",
+    "Ocean Drive",
+    "King’s Road",
+    "Mountain Way"
+   ],
+   "correct": 0,
+   "level": 1,
+   "hint": "Keskustan suunnitelmaan jätettiin tilaa myös puistoille.",
+   "fact": "Hallintorakennuksia ja puistoalueita sijoittuu kehätien sisään ja ympärille.",
+   "source": "https://en.wikipedia.org/wiki/Belmopan"
+  },
+  {
+   "q": "Miksi Guanacasten puiston nimipuu säästyi aikanaan hakkuulta?",
+   "options": [
+    "Runko haarautui",
+    "Puun kuori oli vaurioitunut",
+    "Puun puuaines oli lahonnut",
+    "Runko oli liian kapea"
+   ],
+   "correct": 0,
+   "level": 3,
+   "hint": "Selitys liittyy siihen, millaista puutavaraa siitä olisi saanut.",
+   "fact": "Haarautunut runko heikensi puun arvoa puutavarana. Se antoi myöhemmin nimensä puistolle.",
+   "source": "https://en.wikipedia.org/wiki/Guanacaste_National_Park_(Belize)"
+  },
+  {
+   "q": "Minkä kulttuurin klassisen kauden käytöstä St. Hermanin ja Crystal Caven luolista on löytynyt näyttöä?",
+   "options": [
+    "Mayakulttuurin",
+    "Olmeekkikulttuurin",
+    "Taino-kulttuurin",
+    "Muisca-kulttuurin"
+   ],
+   "correct": 0,
+   "level": 2,
+   "hint": "Sama elävä kulttuuriperintö kuuluu Belizen historiaan.",
+   "fact": "Arkeologit ovat löytäneet luolista esineitä ja muuta näyttöä mayakulttuurin klassisen kauden käytöstä.",
+   "source": "https://en.wikipedia.org/wiki/St._Herman's_Blue_Hole_National_Park"
+  }
+ ],
+ "tiedot": [
+  "Belmopanin yliopiston kielikeskukseen tulee espanjankielisten naapurimaiden opiskelijoita opiskelemaan englantia.",
+  "Belmopanin nimi yhdistää Belize- ja Mopan-jokien nimet samaan sanaan.",
+  "Guanacasten puiston nimipuu säästyi aikanaan hakkuulta, koska haarautunut runko vähensi sen arvoa tukkipuuna."
+ ],
+ "valokuva": {
+  "tiedosto": "St. Herman's Blue Hole.jpg",
+  "lyhyt": "St. Hermanin Blue Holen metsäallas.",
+  "selite": "Sinertävää vettä, kalliorantaa ja kasvillisuutta St. Hermanin Blue Hole -puistossa Belmopanin lähiseudulla.",
+  "lahde": "Haakon S. Krohn, Commons (CC BY-SA 3.0)"
+ },
+ "kaupunkilehti": [
+  {
+   "id": "kaupunki",
+   "nimi": "Belmopan",
+   "johdanto": "Belmopanin pääkaupunkihistoria alkoi uuden paikan valinnasta, mutta sen arki näkyy myös opiskelijoissa, markkinoissa ja lähimetsässä.",
+   "kansikuvat": [
+    {
+     "tiedosto": "Aerials Belize WHwy 04.jpg",
+     "lyhyt": "Belmopanin katuverkkoa ilmasta vuonna 2015.",
+     "selite": "Ilmakuvassa erottuvat Belmopanin matalat rakennukset, katuverkko ja korttelien väliset viheralueet.",
+     "lahde": "Denis Barthel, Wikimedia Commons (CC BY-SA 4.0)"
+    },
+    {
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": ""
+    },
+    {
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": ""
+    }
+   ],
+   "nostot": [
+    {
+     "otsikko": "Pääkaupunki siirtyi pois rannalta",
+     "teksti": "Belmopan rakennettiin uudeksi pääkaupungiksi sen jälkeen, kun hurrikaani Hattie oli vahingoittanut rannikon Belize Cityä. Uudelle hallintokaupungille etsittiin sisämaasta korkeampaa paikkaa, jota meren myrskyaallot eivät tavoittaisi. Rakentaminen alkoi 1900-luvun jälkipuoliskolla, ja hallinto siirtyi uuteen kaupunkiin sen ensimmäisen rakennusvaiheen jälkeen. Uuden kaupungin keskustan ympärille rakennettiin Ring Road. Kehätien sisäpuolella on hallintorakennuksia ja puistoaluetta.",
+     "wiki": "Belmopan",
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": ""
+    },
+    {
+     "otsikko": "Jokien nimet samassa sanassa",
+     "teksti": "Belmopanin nimi on koottu sanoista Belize ja Mopan. Molemmat viittaavat seudun jokiin: Mopan laskee Belize-jokeen. Nimi ei siis ole sattumalta samanlainen kuin maan nimi, vaan siinä yhdistetään kaksi vesistön nimeä. Kaupunki itse sijaitsee Cayon piirikunnassa Belize-joen lähellä, sisämaassa Karibianmeren rannikosta. Belmopan suunniteltiin uudeksi pääkaupungiksi rannikon Belize Cityn hurrikaanivahinkojen jälkeen. Uusi kaupunki sai jokiseutuun viittaavan nimen.",
+     "wiki": "Belmopan",
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": ""
+    },
+    {
+     "otsikko": "Keskustaa kiertää rengas",
+     "teksti": "Belmopanin suunnitellun keskustan runko on Ring Road, keskustaa kiertävä kehätie. Suuri osa hallintorakennuksista sijoittuu sen sisäpuolelle tai ympärille, ja renkaan sisään jää myös puistoaluetta. Keskustan perusrakenne suunniteltiin alusta saakka uutta pääkaupunkia varten. Kehätie on helppo tunnistaa kartalta, mutta kaikki kaupunki ei mahdu sen sisään. Belmopan on myös opiskelijoiden ja eri yhteisöjen asuinpaikka, ei pelkkä hallinnon rakennusryhmä.",
+     "wiki": "Belmopan",
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": ""
+    },
+    {
+     "otsikko": "Englantia yli kielirajan",
+     "teksti": "University of Belizen kampuksella Belmopanissa toimii Regional Language Centre. Sinne tulee naapurimaiden espanjankielisiä opiskelijoita opiskelemaan englantia. Pääkaupungissa kohtaavat siis myös alueen erilaiset kielimaailmat. Kampuksella opiskellaan kielten lisäksi esimerkiksi luonnontieteitä, tekniikkaa, kasvatusta ja terveysalaa. Belmopanin asukkaisiin kuuluu muun muassa belizenkreoli-, garifuna-, mestitsi- ja mayayhteisöjä. Yliopiston kielikeskuksessa englanti yhdistää Belizen ja sen espanjankielisten naapurimaiden opiskelijoita.",
+     "wiki": "Belmopan",
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": ""
+    }
+   ],
+   "matkailijalle": {
+    "kuva": {
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": ""
+    },
+    "kappale": "Belmopanin keskustan kierrokseen kuuluvat Ring Roadin puistot ja markkinapaikat. Kaupunkiin tullaan maanteitse, ja keskustassa voi liikkua kävellen tai taksilla. Markkinoille saapuu väkeä myös ympäröivistä kylistä ja kaupungeista. Guanacasten kansallispuisto sopii lähialueen metsäretkeen. St. Herman’s Blue Hole -puiston luolat ja metsäallas puolestaan ovat erillinen retkikohde Hummingbird Highwayn varrella.",
+    "artikkeli": {
+     "nimi": "Matkailijan Belmopan",
+     "taitto": "opas",
+     "teksti": "Tutustu suunnitellun pääkaupungin keskustaan ja jatka lähimetsän poluille.",
+     "nosto": "Ring Road, markkinat ja Guanacasten puisto sopivat kaupungin kierrokseen; kauempien luolien retki suunnitellaan erikseen.",
+     "jaksot": [
+      {
+       "otsikko": "Perille ja liikkeelle",
+       "teksti": "Belmopaniin tullaan maanteitse esimerkiksi Belize Citystä. Kaupunkia palvelevat George Price Highway ja Hummingbird Highway, ja keskustassa on linja-autoterminaali. Paikalliseen liikkumiseen voi käyttää taksia tai kävellä. Sisämaan retkien lähtöpaikat ja paluuyhteys on syytä sopia erikseen, sillä kaikki luontokohteet eivät ole kaupungin kävelykeskustassa.",
+       "kuva": {
+        "tiedosto": "",
+        "lyhyt": "",
+        "selite": "",
+        "lahde": ""
+       }
+      },
+      {
+       "otsikko": "Keskustan kierros",
+       "teksti": "Ring Road näyttää suunnitellun pääkaupungin perusrakenteen. Sen sisällä on hallintorakennuksia ja puistoaluetta, mutta kaupungin arkiseen kierrokseen kuuluvat myös markkinapaikat. Markkinoilla myydään ruokaa, kasviksia, vaatteita ja pieniä tavaroita. Lähiseutujen asukkaat tulevat sinne myös linja-autolla, joten torilla kohtaa kaupungin lisäksi sen ympäristön.",
+       "kuva": {
+        "tiedosto": "",
+        "lyhyt": "",
+        "selite": "",
+        "lahde": ""
+       }
+      },
+      {
+       "otsikko": "Metsä ja luolaretki",
+       "teksti": "Guanacasten kansallispuisto on Belmopanin lähialueen metsäretkikohde, jossa on ylläpidettyjä polkuja. St. Herman’s Blue Hole -puiston luolat ja sisämaan Blue Hole sijaitsevat kauempana Hummingbird Highwayn varrella ja kuuluvat erilliseen retkeen. Crystal Caveen pääsee vain hyväksytyn oppaan kanssa. Varaa luolalle sille tarkoitettu opastettu retki, älä käsittele sitä tavallisena puistokävelynä.",
+       "kuva": {
+        "tiedosto": "",
+        "lyhyt": "",
+        "selite": "",
+        "lahde": ""
+       }
+      },
+      {
+       "otsikko": "Mitä täällä syödään",
+       "teksti": "Keskustan markkinoilla myydään ruokaa ja tuoreita kasviksia. Belmopanissa on myös kiinalaisten omistamia ravintoloita, joiden tarjonnassa on paikallista belizeläistä ruokaa. Matkan ruokatauko voi siten löytyä sekä torilta että ravintolasta; ravintoloissa tarjotaan belizeläisiä annoksia.",
+       "kuva": {
+        "tiedosto": "",
+        "lyhyt": "",
+        "selite": "",
+        "lahde": ""
+       }
+      },
+      {
+       "otsikko": "Milloin kannattaa tulla",
+       "teksti": "Belmopanissa on pitkä sadekausi ja sitä lyhyempi kuiva kausi. Kuivana kautenakin voi sataa, joten se ei tarkoita varmuutta sateettomista päivistä. Puistokierroksen ja luolaretken toteutuminen on erillinen asia kuin kaupungissa liikkuminen. Varmista retken järjestäjältä sen toteutuminen ennen lähtöä: retkiä ei järjestetä välttämättä jokaisena päivänä.",
+       "kuva": {
+        "tiedosto": "",
+        "lyhyt": "",
+        "selite": "",
+        "lahde": ""
+       }
+      }
+     ],
+     "matkailu": {
+      "parasta": [
+       {
+        "mita": "Keskustan markkinat",
+        "tahdet": 3,
+        "selite": "Tuotteita, ruokaa ja kohtaamisia kaupungin sekä lähiseutujen väen kanssa."
+       },
+       {
+        "mita": "Ring Road",
+        "tahdet": 2,
+        "selite": "Suunnitellun keskustan perusrakenne erottuu kehätien ympärillä."
+       },
+       {
+        "mita": "Guanacasten kansallispuisto",
+        "tahdet": 3,
+        "selite": "Lähialueen metsäpolut ja ympäristöopetus tuovat luontoretken lähelle."
+       },
+       {
+        "mita": "Sisämaan Blue Hole",
+        "tahdet": 3,
+        "selite": "Metsäallas kuuluu maan alla kulkevaan vesireittiin."
+       },
+       {
+        "mita": "Opastettu luolaretki",
+        "tahdet": 2,
+        "selite": "St. Hermanin ja Crystal Caven luolastoissa kohtaavat karsti ja mayakulttuurin historia."
+       }
+      ],
+      "hyvaTietaa": [
+       {
+        "otsikko": "Blue Hole -nimet",
+        "teksti": "St. Herman’s Blue Hole sijaitsee sisämaassa; matkavarausta tehdessä tarkista kohteen koko nimi."
+       },
+       {
+        "otsikko": "Retki on erillinen matka",
+        "teksti": "St. Herman’s Blue Hole -puistoon suuntaudutaan Hummingbird Highwayta pitkin, ja paluuyhteys sovitaan erikseen."
+       },
+       {
+        "otsikko": "Luolan opastus",
+        "teksti": "Crystal Caveen mennään hyväksytyn oppaan kanssa."
+       },
+       {
+        "otsikko": "Sateita myös kuivana kautena",
+        "teksti": "Kuiva kausi on sadekautta lyhyempi, ja myös sen aikana voi sataa."
+       }
+      ]
+     },
+     "lahde": "Wikipedia"
+    }
+   }
+  },
+  {
+   "id": "luonto",
+   "nimi": "Puusta maan alle",
+   "johdanto": "Lähimetsän nimipuu ja sisämaan luolat kertovat, miten Belmopanin ympäristössä puu, vesi ja ihmisten historia kohtaavat.",
+   "tehtava": {
+    "kysymys": "Mikä yhdistää St. Hermanin luolan ja sisämaan Blue Hole -altaan?",
+    "vaihtoehdot": [
+     "Maanalainen vesivirta",
+     "Vanha rautatietunneli",
+     "Meren vuorovesikanava",
+     "Kaupungin sadevesiviemäri"
+    ],
+    "oikea": 0,
+    "fakta": "Altaan vesi on osa reittiä, joka kulkee luolasta vajoamaan ja jatkuu taas maan alla."
+   },
+   "nostot": [
+    {
+     "otsikko": "Huono tukkipuu sai puiston",
+     "teksti": "Guanacasten kansallispuisto sai nimensä suuresta guanacaste-puusta. Se säästyi aikanaan hakkuulta, koska haarautunut runko heikensi sen arvoa puutavarana. Metsätalouden kannalta hankalasta puusta tuli siis suojelualueen nimenantaja. Puisto sijaitsee Belmopanin lähellä Roaring Creekin sillan tuntumassa, päätien pohjoispuolella. Alue tuli suojelun piiriin vasta 1900-luvun jälkipuoliskolla, joten nykyinen kansallispuisto ei kuulu isoisän matkavuoteen 1873. Puistossa kasvaa myös mahonkia, ja kävelypolkujen varrella tutustutaan seudun metsään.",
+     "wiki": "Guanacaste National Park (Belize)",
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": ""
+    },
+    {
+     "otsikko": "Metsään pääsee kaupungin laidalta",
+     "teksti": "Guanacasten kansallispuistossa on ylläpidettyjä kävelypolkuja ja ympäristöopetukseen tarkoitettu keskus. Metsässä kasvaa esimerkiksi mahonkia sekä monia muita puulajeja. Alueelta on havaintoja muun muassa valkohäntäpeuroista, jaguarundeista ja vyötiäisistä. Myös linnusto kuuluu puiston luontoon, joten polulla voi keskittyä kuuntelemiseen ja katseluun. Puisto on myös lintuharrastajien retkikohde. Alue kuuluu Belize Audubon Societyn hoitamiin suojelualueisiin. Belmopanin luontokierros voi alkaa aivan lähialueelta: tämän metsän vuoksi ei tarvitse lähteä pitkälle sisämaan matkalle.",
+     "wiki": "Guanacaste National Park (Belize)",
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": ""
+    },
+    {
+     "otsikko": "Sininen allas maan sisäisellä reitillä",
+     "teksti": "St. Herman’s Blue Hole -puiston Blue Hole on sisämaan metsäallas. Maanalainen virta kulkee St. Hermanin luolasta vajoamaan, jonka pohjalla allas sijaitsee, ja jatkaa sitten jälleen maan alle. Vesipaikka kuuluu siis näkyvänä osana suurempaan maanalaiseen reittiin. Puisto sijaitsee Hummingbird Highwayn varrella Belmopanin kaakkoispuolella, Maya-vuorten juurella. Metsäiset karstimaastot ovat sekä jyrkkiä että kumpuilevia. Puiston nimeä täsmennettiin myöhemmin, jotta sisämaan kohde ei sekoittuisi Belizen meren Blue Hole -kohteeseen.",
+     "wiki": "St. Herman's Blue Hole National Park",
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": ""
+    },
+    {
+     "otsikko": "Luolissa näkyy ihmisten historia",
+     "teksti": "St. Herman’s Blue Hole -puistossa on St. Hermanin ja Crystal Caven laajat luolastot. Arkeologit ovat löytäneet niistä esineitä ja muuta näyttöä mayakulttuurin klassisen kauden käytöstä. Luolat kuuluvat siten sekä luonnon että ihmisten historiaan. Nykyinen kansallispuisto perustettiin vasta 1900-luvun jälkipuoliskolla, mutta luolat ja niiden vanha käyttö ovat tätä paljon vanhempia. Retkillä liikutaan maanpäällisistä metsäpoluista luolien puolelle. Crystal Cave tunnetaan myös nimellä Mountain Cow Cave, ja sinne mennään hyväksytyn oppaan kanssa.",
+     "wiki": "St. Herman's Blue Hole National Park",
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": ""
+    }
+   ]
+  }
+ ],
+ "kohdekartta": {
+  "numeroympyrat": true,
+  "esittely": "Guanacasten lähimetsän poluilla puiston historia alkaa hakkuulta säästyneestä puusta.",
+  "rajat": {
+   "pohjoinen": 17.2672,
+   "etela": 17.2616,
+   "lansi": -88.789,
+   "ita": -88.783
+  },
+  "kohteet": [
+   {
+    "nimi": "Guanacasten kansallispuisto",
+    "tyyppi": "luonto",
+    "lat": 17.2644,
+    "lon": -88.786
+   }
+  ]
+ },
+ "nahtavyydet": {
+  "Guanacasten kansallispuisto": {
+   "aika": "Suojelualue 1900-luvun jälkipuoliskolta",
+   "teksti": "Guanacasten kansallispuisto sijaitsee Belmopanin lähellä, Roaring Creekin sillan tuntumassa päätien pohjoispuolella. Puisto sai nimensä suuresta guanacaste-puusta, jonka haarautunut runko vähensi sen arvoa puutavarana. Puu säästyi aikanaan hakkuulta ja antoi myöhemmin nimensä suojelualueelle. Isoisän matkavuonna 1873 nykyistä kansallispuistoa ei vielä ollut; alue tuli suojelun piiriin vasta seuraavan vuosisadan jälkipuoliskolla.\n\nPuistoa hoitaa Belize Audubon Society. Alueella on ylläpidettyjä metsäpolkuja ja ympäristöopetuksen keskus. Puustoon kuuluu esimerkiksi mahonkia, ja metsän eläimistä on havaittu valkohäntäpeuroja, jaguarundeja ja vyötiäisiä. Lintuharrastajalle alue on myös paikallinen retkikohde. Suojelualueen historia, polut ja luonnon tarkkailu antavat sisämaan pääkaupunkivierailulle oman metsäisen osuuden.",
+   "kuvat": [
+    {
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": ""
+    }
+   ],
+   "lahde": "Wikipedia"
+  }
+ },
+ "saatiedot": null,
+ "ehdotukset": {
+  "lentoasema": null,
+  "huomiot": [
+   "C-tekstiluonnos; kartta partial (1 varmennettu lähikohde). Pieni suunniteltu kaupunki; keskustan rakennusten tekijäketjut ja kohteiden omat WP/WD-pisteet ovat auki.",
+   "St. Herman’s Blue Hole on erillinen lähiseudun retki, eikä sitä sijoitettu keskustan kohdekarttaan.",
+   "Kaikki 19 kuvaroolia odottavat kuvaputkea; tiedosto, lyhyt, selite ja lahde tyhjinä. Modernin kansalliskokousrakennuksen ja muistomerkkien tekijäportit eivät ole tässä varmennettuja; niitä ei valittu kuva- tai karttakohteiksi.",
+   "Sääauditointi 48/48 primäärivarmennuksen mukaan avoin: saatiedot:null, ei ilmastolukuja eikä saa.json-muutoksia.",
+   "Riippumaton D/E/F, hyväksyntä, pelikytkentä ja julkaisu avoinna. Belmopanin oman lentoaseman palvelu ja mahdollinen kansainvälinen saapumiskenttä jätetty tässä tarkistamatta."
+  ]
+ }
 }

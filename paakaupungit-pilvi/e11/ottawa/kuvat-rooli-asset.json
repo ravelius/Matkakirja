@@ -3,7 +3,7 @@
   "era": "e11",
   "city": "ottawa",
   "authorization": "hyväksyn kaikki tekemäsi kuvat. toimita ne claudelle. claudelta saat uusia ohjeita jatkoa varten",
-  "sourceContentAfterSHA256": "a59989d85042421a2c0cac223359909ff07e8de89567d27fe60e51aeeb8deb8f",
+  "sourceContentAfterSHA256": "b801f2cd32b53a99ea02f9202da6a408da352b738b55a91fab08407b7148886d",
   "assets": [
     {
       "era": "e11",
@@ -25,10 +25,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/ottawa/ottawa-traveler-20261012-v1-592cca-077b8e43674b.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva majavanhännäksi kutsutusta paistetusta taikinaleivonnaisesta.",
-        "lyhyt": "Havainnekuva majavanhännäksi kutsutusta paistetusta taikinaleivonnaisesta."
+        "selite": "Havainnekuva majavanhännäksi kutsutusta paistetusta taikinaleivonnaisesta."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -36,10 +36,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/ottawa/ottawa-traveler-20261012-v1-592cca-077b8e43674b.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva majavanhännäksi kutsutusta paistetusta taikinaleivonnaisesta.",
-        "lyhyt": "Havainnekuva majavanhännäksi kutsutusta paistetusta taikinaleivonnaisesta."
+        "selite": "Havainnekuva majavanhännäksi kutsutusta paistetusta taikinaleivonnaisesta."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -53,10 +53,10 @@
         1536
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/ottawa/sisalto.json",
-      "sourceContentSHA256": "a59989d85042421a2c0cac223359909ff07e8de89567d27fe60e51aeeb8deb8f",
+      "sourceContentSHA256": "b801f2cd32b53a99ea02f9202da6a408da352b738b55a91fab08407b7148886d",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "fdfdef0b0d91f6196b1ffa3f1e6e5eb976f185d0a6a37cb22e728dd774325f8b",
+        "semanticContextSHA256": "0fd558d6d3abbdf134c422dfdd661b96903b12014801f3c559e2e63402dbb785",
         "subjectTitle": "Matkailijalle",
         "targetState": "existing-target"
       },
@@ -704,9 +704,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -725,17 +725,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "a59989d85042421a2c0cac223359909ff07e8de89567d27fe60e51aeeb8deb8f",
+      "sourceContentAfterSHA256": "b801f2cd32b53a99ea02f9202da6a408da352b738b55a91fab08407b7148886d",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "fdfdef0b0d91f6196b1ffa3f1e6e5eb976f185d0a6a37cb22e728dd774325f8b",
+      "contextAfterSHA256": "0fd558d6d3abbdf134c422dfdd661b96903b12014801f3c559e2e63402dbb785",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "a59989d85042421a2c0cac223359909ff07e8de89567d27fe60e51aeeb8deb8f",
+        "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "contextAfterSHA256": "fdfdef0b0d91f6196b1ffa3f1e6e5eb976f185d0a6a37cb22e728dd774325f8b",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+          "semanticContextSHA256": "fdfdef0b0d91f6196b1ffa3f1e6e5eb976f185d0a6a37cb22e728dd774325f8b",
+          "subjectTitle": "Matkailijalle",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "b801f2cd32b53a99ea02f9202da6a408da352b738b55a91fab08407b7148886d",
+        "sameImageNativeSHA256": "077b8e43674be53bbc22d72700362c15855cdec5406835c91b25f07deac49c3a",
+        "sameImageExportSHA256": "5360c143acb15d934e5a842c4d114b965cb5433345fb5185e86e9a08d04d8738",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e11",
@@ -760,10 +781,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/ottawa/ottawa-o4-20261012-v1-571412-55f7f1aeccb1.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva pitaleivässä tarjottavasta shawarma-ateriasta.",
-        "lyhyt": "Havainnekuva pitaleivässä tarjottavasta shawarma-ateriasta."
+        "selite": "Havainnekuva pitaleivässä tarjottavasta shawarma-ateriasta."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -771,10 +792,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/ottawa/ottawa-o4-20261012-v1-571412-55f7f1aeccb1.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva pitaleivässä tarjottavasta shawarma-ateriasta.",
-        "lyhyt": "Havainnekuva pitaleivässä tarjottavasta shawarma-ateriasta."
+        "selite": "Havainnekuva pitaleivässä tarjottavasta shawarma-ateriasta."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -788,10 +809,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/ottawa/sisalto.json",
-      "sourceContentSHA256": "a59989d85042421a2c0cac223359909ff07e8de89567d27fe60e51aeeb8deb8f",
+      "sourceContentSHA256": "b801f2cd32b53a99ea02f9202da6a408da352b738b55a91fab08407b7148886d",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "373c33ee652358135b925347eadf7a76c1113b97371d87c55e81c300ea41c67f",
+        "semanticContextSHA256": "ab18584f925f506a5d4c9e39a1be0c87bfee2179ea72e24c43d32ff160a4166d",
         "subjectTitle": "Mitä täällä syödään",
         "targetState": "existing-target"
       },
@@ -1182,9 +1203,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -1203,17 +1224,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "a59989d85042421a2c0cac223359909ff07e8de89567d27fe60e51aeeb8deb8f",
+      "sourceContentAfterSHA256": "b801f2cd32b53a99ea02f9202da6a408da352b738b55a91fab08407b7148886d",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "373c33ee652358135b925347eadf7a76c1113b97371d87c55e81c300ea41c67f",
+      "contextAfterSHA256": "ab18584f925f506a5d4c9e39a1be0c87bfee2179ea72e24c43d32ff160a4166d",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "a59989d85042421a2c0cac223359909ff07e8de89567d27fe60e51aeeb8deb8f",
+        "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "contextAfterSHA256": "373c33ee652358135b925347eadf7a76c1113b97371d87c55e81c300ea41c67f",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+          "semanticContextSHA256": "373c33ee652358135b925347eadf7a76c1113b97371d87c55e81c300ea41c67f",
+          "subjectTitle": "Mitä täällä syödään",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "b801f2cd32b53a99ea02f9202da6a408da352b738b55a91fab08407b7148886d",
+        "sameImageNativeSHA256": "55f7f1aeccb1c6d4b1bb8cf0d0f8b6251fe357971e760f32c1b1dcf50ddc3ff9",
+        "sameImageExportSHA256": "3a11398de7b53077cff469a92ccbdc11ef94ed15b77f1e9b9524d218726f1d1a",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e11",
@@ -1235,10 +1277,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/ottawa/ottawa-k3-20261012-v1-51293c-2273c0f0426b.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva torin kasviksista ja kukista, ei valokuva ByWard Marketista.",
-        "lyhyt": "Havainnekuva torin kasviksista ja kukista, ei valokuva ByWard Marketista."
+        "selite": "Havainnekuva torin kasviksista ja kukista, ei valokuva ByWard Marketista."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -1246,10 +1288,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/ottawa/ottawa-k3-20261012-v1-51293c-2273c0f0426b.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva torin kasviksista ja kukista, ei valokuva ByWard Marketista.",
-        "lyhyt": "Havainnekuva torin kasviksista ja kukista, ei valokuva ByWard Marketista."
+        "selite": "Havainnekuva torin kasviksista ja kukista, ei valokuva ByWard Marketista."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -1263,10 +1305,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/ottawa/sisalto.json",
-      "sourceContentSHA256": "a59989d85042421a2c0cac223359909ff07e8de89567d27fe60e51aeeb8deb8f",
+      "sourceContentSHA256": "b801f2cd32b53a99ea02f9202da6a408da352b738b55a91fab08407b7148886d",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "ca7f252b9a0dada70c1f3855e1584031065e34c293450690e39c1a7afcd0a66b",
-        "semanticContextSHA256": "ca7f252b9a0dada70c1f3855e1584031065e34c293450690e39c1a7afcd0a66b",
+        "targetBeforeSHA256": "d5f0dadd134212f80aecb9dd284dbce9b3f5a8d53b46e11e6fffe64915a47f27",
+        "semanticContextSHA256": "d5f0dadd134212f80aecb9dd284dbce9b3f5a8d53b46e11e6fffe64915a47f27",
         "subjectTitle": "Kauppakassi kuuluu pääkaupunkiin",
         "targetState": "existing-target"
       },
@@ -1653,9 +1695,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -1674,17 +1716,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "a59989d85042421a2c0cac223359909ff07e8de89567d27fe60e51aeeb8deb8f",
-      "targetAfterSHA256": "ca7f252b9a0dada70c1f3855e1584031065e34c293450690e39c1a7afcd0a66b",
-      "contextAfterSHA256": "ca7f252b9a0dada70c1f3855e1584031065e34c293450690e39c1a7afcd0a66b",
+      "sourceContentAfterSHA256": "b801f2cd32b53a99ea02f9202da6a408da352b738b55a91fab08407b7148886d",
+      "targetAfterSHA256": "d5f0dadd134212f80aecb9dd284dbce9b3f5a8d53b46e11e6fffe64915a47f27",
+      "contextAfterSHA256": "d5f0dadd134212f80aecb9dd284dbce9b3f5a8d53b46e11e6fffe64915a47f27",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "a59989d85042421a2c0cac223359909ff07e8de89567d27fe60e51aeeb8deb8f",
+        "targetAfterSHA256": "ca7f252b9a0dada70c1f3855e1584031065e34c293450690e39c1a7afcd0a66b",
+        "contextAfterSHA256": "ca7f252b9a0dada70c1f3855e1584031065e34c293450690e39c1a7afcd0a66b",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "ca7f252b9a0dada70c1f3855e1584031065e34c293450690e39c1a7afcd0a66b",
+          "semanticContextSHA256": "ca7f252b9a0dada70c1f3855e1584031065e34c293450690e39c1a7afcd0a66b",
+          "subjectTitle": "Kauppakassi kuuluu pääkaupunkiin",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "b801f2cd32b53a99ea02f9202da6a408da352b738b55a91fab08407b7148886d",
+        "sameImageNativeSHA256": "2273c0f0426becaabc8727008ec90cee4ea541e485bf75c2dfa20e6f65dee54c",
+        "sameImageExportSHA256": "d41f68c07d7adfb685d16353d390d021991430b42dbfae6e38a854c32eba4398",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e11",
@@ -1706,10 +1769,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/ottawa/ottawa-k4-20261012-v1-2d4e73-6c5878d3491a.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva majavanhännäksi kutsutusta paistetusta taikinaleivonnaisesta.",
-        "lyhyt": "Havainnekuva majavanhännäksi kutsutusta paistetusta taikinaleivonnaisesta."
+        "selite": "Havainnekuva majavanhännäksi kutsutusta paistetusta taikinaleivonnaisesta."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -1717,10 +1780,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/ottawa/ottawa-k4-20261012-v1-2d4e73-6c5878d3491a.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva majavanhännäksi kutsutusta paistetusta taikinaleivonnaisesta.",
-        "lyhyt": "Havainnekuva majavanhännäksi kutsutusta paistetusta taikinaleivonnaisesta."
+        "selite": "Havainnekuva majavanhännäksi kutsutusta paistetusta taikinaleivonnaisesta."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -1734,10 +1797,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/ottawa/sisalto.json",
-      "sourceContentSHA256": "a59989d85042421a2c0cac223359909ff07e8de89567d27fe60e51aeeb8deb8f",
+      "sourceContentSHA256": "b801f2cd32b53a99ea02f9202da6a408da352b738b55a91fab08407b7148886d",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "a67c886078008c5c505e418fc45f36b34e8059ddfe22e48d2e8e13f6f743ff6b",
-        "semanticContextSHA256": "a67c886078008c5c505e418fc45f36b34e8059ddfe22e48d2e8e13f6f743ff6b",
+        "targetBeforeSHA256": "7dc81d8f0bf7355ea39940cbdffafa0234f7bd2d9254cc2139e6560a98a04351",
+        "semanticContextSHA256": "7dc81d8f0bf7355ea39940cbdffafa0234f7bd2d9254cc2139e6560a98a04351",
         "subjectTitle": "Majavan häntä ilman majavaa",
         "targetState": "existing-target"
       },
@@ -2124,9 +2187,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -2145,17 +2208,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "a59989d85042421a2c0cac223359909ff07e8de89567d27fe60e51aeeb8deb8f",
-      "targetAfterSHA256": "a67c886078008c5c505e418fc45f36b34e8059ddfe22e48d2e8e13f6f743ff6b",
-      "contextAfterSHA256": "a67c886078008c5c505e418fc45f36b34e8059ddfe22e48d2e8e13f6f743ff6b",
+      "sourceContentAfterSHA256": "b801f2cd32b53a99ea02f9202da6a408da352b738b55a91fab08407b7148886d",
+      "targetAfterSHA256": "7dc81d8f0bf7355ea39940cbdffafa0234f7bd2d9254cc2139e6560a98a04351",
+      "contextAfterSHA256": "7dc81d8f0bf7355ea39940cbdffafa0234f7bd2d9254cc2139e6560a98a04351",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "a59989d85042421a2c0cac223359909ff07e8de89567d27fe60e51aeeb8deb8f",
+        "targetAfterSHA256": "a67c886078008c5c505e418fc45f36b34e8059ddfe22e48d2e8e13f6f743ff6b",
+        "contextAfterSHA256": "a67c886078008c5c505e418fc45f36b34e8059ddfe22e48d2e8e13f6f743ff6b",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "a67c886078008c5c505e418fc45f36b34e8059ddfe22e48d2e8e13f6f743ff6b",
+          "semanticContextSHA256": "a67c886078008c5c505e418fc45f36b34e8059ddfe22e48d2e8e13f6f743ff6b",
+          "subjectTitle": "Majavan häntä ilman majavaa",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "b801f2cd32b53a99ea02f9202da6a408da352b738b55a91fab08407b7148886d",
+        "sameImageNativeSHA256": "6c5878d3491a35213fb9db80402c073f14721b55964bb1926175b3aa8bfaa1c3",
+        "sameImageExportSHA256": "b5ed10a28cb07ffe80231b06290638b8ecdfea13d35307b44639398bafd31a4a",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e11",
@@ -2177,10 +2261,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/ottawa/ottawa-l2-20261012-v1-339e1c-c74536f722ec.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva magnoliasta arboretumin kasvikokoelman aiheeseen.",
-        "lyhyt": "Havainnekuva magnoliasta arboretumin kasvikokoelman aiheeseen."
+        "selite": "Havainnekuva magnoliasta arboretumin kasvikokoelman aiheeseen."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -2188,10 +2272,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/ottawa/ottawa-l2-20261012-v1-339e1c-c74536f722ec.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva magnoliasta arboretumin kasvikokoelman aiheeseen.",
-        "lyhyt": "Havainnekuva magnoliasta arboretumin kasvikokoelman aiheeseen."
+        "selite": "Havainnekuva magnoliasta arboretumin kasvikokoelman aiheeseen."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -2205,7 +2289,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/ottawa/sisalto.json",
-      "sourceContentSHA256": "a59989d85042421a2c0cac223359909ff07e8de89567d27fe60e51aeeb8deb8f",
+      "sourceContentSHA256": "b801f2cd32b53a99ea02f9202da6a408da352b738b55a91fab08407b7148886d",
       "semanticSourceBind": {
         "targetBeforeSHA256": "24f31526d78c010f5f03ceea907e4f4edd912af95ad0c81fc31ac38c22d0802b",
         "semanticContextSHA256": "24f31526d78c010f5f03ceea907e4f4edd912af95ad0c81fc31ac38c22d0802b",
@@ -2595,9 +2679,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -2616,17 +2700,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "a59989d85042421a2c0cac223359909ff07e8de89567d27fe60e51aeeb8deb8f",
+      "sourceContentAfterSHA256": "b801f2cd32b53a99ea02f9202da6a408da352b738b55a91fab08407b7148886d",
       "targetAfterSHA256": "24f31526d78c010f5f03ceea907e4f4edd912af95ad0c81fc31ac38c22d0802b",
       "contextAfterSHA256": "24f31526d78c010f5f03ceea907e4f4edd912af95ad0c81fc31ac38c22d0802b",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "a59989d85042421a2c0cac223359909ff07e8de89567d27fe60e51aeeb8deb8f",
+        "targetAfterSHA256": "24f31526d78c010f5f03ceea907e4f4edd912af95ad0c81fc31ac38c22d0802b",
+        "contextAfterSHA256": "24f31526d78c010f5f03ceea907e4f4edd912af95ad0c81fc31ac38c22d0802b",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "24f31526d78c010f5f03ceea907e4f4edd912af95ad0c81fc31ac38c22d0802b",
+          "semanticContextSHA256": "24f31526d78c010f5f03ceea907e4f4edd912af95ad0c81fc31ac38c22d0802b",
+          "subjectTitle": "Puut käyvät kestävyyden kokeessa",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "b801f2cd32b53a99ea02f9202da6a408da352b738b55a91fab08407b7148886d",
+        "sameImageNativeSHA256": "c74536f722ec48a3f6e7fb02c81423e567ec74c26d2c8812fe1cf16d46d9ab1c",
+        "sameImageExportSHA256": "418e8a3d257268a856c2175f1294dd98839ea869eb36033a403a41b995df969d",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e11",
@@ -2645,23 +2750,23 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/ottawa/photo-6981989cbef5f6c26c2b.jpg",
         "suora": true,
         "lahde": "Óðinn, Commons (CC BY-SA 2.5 ca)",
-        "selite": "Rideau-putoukset laskevat Rideau-joen vedet Ottawa-jokeen.",
-        "lyhyt": "Rideau-putoukset laskevat Rideau-joen vedet Ottawa-jokeen.",
+        "selite": "Vesi laskee padon alta kallioisen reunaman yli Ottawa-jokeen; taustalla on syysvärisiä puita.",
+        "lyhyt": "Rideau-putoukset ja niiden yläpuolinen pato.",
         "tiedosto": "The Rideau Falls.JPG"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Óðinn, Commons (CC BY-SA 2.5 ca)",
-        "selite": "Rideau-putoukset laskevat Rideau-joen vedet Ottawa-jokeen.",
-        "lyhyt": "Rideau-putoukset laskevat Rideau-joen vedet Ottawa-jokeen.",
+        "selite": "Vesi laskee padon alta kallioisen reunaman yli Ottawa-jokeen; taustalla on syysvärisiä puita.",
+        "lyhyt": "Rideau-putoukset ja niiden yläpuolinen pato.",
         "tiedosto": "The Rideau Falls.JPG"
       },
       "runtimeMediaFieldPayload": {
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/ottawa/photo-6981989cbef5f6c26c2b.jpg",
         "suora": true,
         "lahde": "Óðinn, Commons (CC BY-SA 2.5 ca)",
-        "selite": "Rideau-putoukset laskevat Rideau-joen vedet Ottawa-jokeen.",
-        "lyhyt": "Rideau-putoukset laskevat Rideau-joen vedet Ottawa-jokeen.",
+        "selite": "Vesi laskee padon alta kallioisen reunaman yli Ottawa-jokeen; taustalla on syysvärisiä puita.",
+        "lyhyt": "Rideau-putoukset ja niiden yläpuolinen pato.",
         "tiedosto": "The Rideau Falls.JPG"
       },
       "runtimeRemoveMediaKeys": [],
@@ -2676,10 +2781,10 @@
         2775
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/ottawa/sisalto.json",
-      "sourceContentSHA256": "a59989d85042421a2c0cac223359909ff07e8de89567d27fe60e51aeeb8deb8f",
+      "sourceContentSHA256": "b801f2cd32b53a99ea02f9202da6a408da352b738b55a91fab08407b7148886d",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "c4c47d9654899724b6cf7ec1af821298de2a67ca3ea289a2299daccc79985296",
-        "semanticContextSHA256": "c4c47d9654899724b6cf7ec1af821298de2a67ca3ea289a2299daccc79985296",
+        "targetBeforeSHA256": "d7b6090c13cff4a9def89d34656918bce2e4e0e379afa4eb878fe24cabc8b025",
+        "semanticContextSHA256": "d7b6090c13cff4a9def89d34656918bce2e4e0e379afa4eb878fe24cabc8b025",
         "subjectTitle": "ottawa — aito paikkavalokuva",
         "targetState": "existing-target"
       },
@@ -2871,9 +2976,9 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "The Rideau Falls.JPG",
-        "lahde": "Óðinn, Commons (CC BY-SA 2.5 ca)",
-        "selite": "Rideau-putoukset laskevat Rideau-joen vedet Ottawa-jokeen.",
-        "lyhyt": "Rideau-putoukset laskevat Rideau-joen vedet Ottawa-jokeen."
+        "lyhyt": "Rideau-putoukset ja niiden yläpuolinen pato.",
+        "selite": "Vesi laskee padon alta kallioisen reunaman yli Ottawa-jokeen; taustalla on syysvärisiä puita.",
+        "lahde": "Óðinn, Commons (CC BY-SA 2.5 ca)"
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -2892,23 +2997,44 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Óðinn, Commons (CC BY-SA 2.5 ca)",
-        "selite": "Rideau-putoukset laskevat Rideau-joen vedet Ottawa-jokeen.",
-        "lyhyt": "Rideau-putoukset laskevat Rideau-joen vedet Ottawa-jokeen.",
+        "selite": "Vesi laskee padon alta kallioisen reunaman yli Ottawa-jokeen; taustalla on syysvärisiä puita.",
+        "lyhyt": "Rideau-putoukset ja niiden yläpuolinen pato.",
         "tiedosto": "The Rideau Falls.JPG"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "a59989d85042421a2c0cac223359909ff07e8de89567d27fe60e51aeeb8deb8f",
-      "targetAfterSHA256": "c4c47d9654899724b6cf7ec1af821298de2a67ca3ea289a2299daccc79985296",
-      "contextAfterSHA256": "c4c47d9654899724b6cf7ec1af821298de2a67ca3ea289a2299daccc79985296",
+      "sourceContentAfterSHA256": "b801f2cd32b53a99ea02f9202da6a408da352b738b55a91fab08407b7148886d",
+      "targetAfterSHA256": "d7b6090c13cff4a9def89d34656918bce2e4e0e379afa4eb878fe24cabc8b025",
+      "contextAfterSHA256": "d7b6090c13cff4a9def89d34656918bce2e4e0e379afa4eb878fe24cabc8b025",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "a59989d85042421a2c0cac223359909ff07e8de89567d27fe60e51aeeb8deb8f",
+        "targetAfterSHA256": "c4c47d9654899724b6cf7ec1af821298de2a67ca3ea289a2299daccc79985296",
+        "contextAfterSHA256": "c4c47d9654899724b6cf7ec1af821298de2a67ca3ea289a2299daccc79985296",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "c4c47d9654899724b6cf7ec1af821298de2a67ca3ea289a2299daccc79985296",
+          "semanticContextSHA256": "c4c47d9654899724b6cf7ec1af821298de2a67ca3ea289a2299daccc79985296",
+          "subjectTitle": "ottawa — aito paikkavalokuva",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "b801f2cd32b53a99ea02f9202da6a408da352b738b55a91fab08407b7148886d",
+        "sameImageNativeSHA256": "6981989cbef5f6c26c2b759a8c5d5b0f30a48c0ff314faf8ec44d0ec4c62195a",
+        "sameImageExportSHA256": "6981989cbef5f6c26c2b759a8c5d5b0f30a48c0ff314faf8ec44d0ec4c62195a",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e11",
@@ -2930,23 +3056,23 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/ottawa/c1-1a8767775191948e95e5.jpg",
         "suora": true,
         "lahde": "Harleyd613, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Ottawan keskusta liittyy jokien ympärille kasvaneeseen pääkaupunkiin.",
-        "lyhyt": "Ottawan keskusta liittyy jokien ympärille kasvaneeseen pääkaupunkiin.",
+        "selite": "Ilmakuvassa näkyvät korkeat asuin- ja toimistorakennukset, matalat korttelit sekä taustalla jokiranta.",
+        "lyhyt": "Ottawan keskustan korkeita taloja ilmasta.",
         "tiedosto": "Downtown Ottawa 2022.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Harleyd613, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Ottawan keskusta liittyy jokien ympärille kasvaneeseen pääkaupunkiin.",
-        "lyhyt": "Ottawan keskusta liittyy jokien ympärille kasvaneeseen pääkaupunkiin.",
+        "selite": "Ilmakuvassa näkyvät korkeat asuin- ja toimistorakennukset, matalat korttelit sekä taustalla jokiranta.",
+        "lyhyt": "Ottawan keskustan korkeita taloja ilmasta.",
         "tiedosto": "Downtown Ottawa 2022.jpg"
       },
       "runtimeMediaFieldPayload": {
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/ottawa/c1-1a8767775191948e95e5.jpg",
         "suora": true,
         "lahde": "Harleyd613, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Ottawan keskusta liittyy jokien ympärille kasvaneeseen pääkaupunkiin.",
-        "lyhyt": "Ottawan keskusta liittyy jokien ympärille kasvaneeseen pääkaupunkiin.",
+        "selite": "Ilmakuvassa näkyvät korkeat asuin- ja toimistorakennukset, matalat korttelit sekä taustalla jokiranta.",
+        "lyhyt": "Ottawan keskustan korkeita taloja ilmasta.",
         "tiedosto": "Downtown Ottawa 2022.jpg"
       },
       "runtimeRemoveMediaKeys": [],
@@ -2961,10 +3087,10 @@
         3640
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/ottawa/sisalto.json",
-      "sourceContentSHA256": "a59989d85042421a2c0cac223359909ff07e8de89567d27fe60e51aeeb8deb8f",
+      "sourceContentSHA256": "b801f2cd32b53a99ea02f9202da6a408da352b738b55a91fab08407b7148886d",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "5a495a8f3e0ef6408b089348a5300a39f9b4fa0a683bd2a5bcc26d2627bdfed1",
-        "semanticContextSHA256": "5a495a8f3e0ef6408b089348a5300a39f9b4fa0a683bd2a5bcc26d2627bdfed1",
+        "targetBeforeSHA256": "09047521dfc963606f36f4090d933fe5c237d66685a6cbfd44e294974bc111a1",
+        "semanticContextSHA256": "09047521dfc963606f36f4090d933fe5c237d66685a6cbfd44e294974bc111a1",
         "subjectTitle": "Ottawa",
         "targetState": "existing-target"
       },
@@ -3182,9 +3308,9 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "Downtown Ottawa 2022.jpg",
-        "lahde": "Harleyd613, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Ottawan keskusta liittyy jokien ympärille kasvaneeseen pääkaupunkiin.",
-        "lyhyt": "Ottawan keskusta liittyy jokien ympärille kasvaneeseen pääkaupunkiin."
+        "lyhyt": "Ottawan keskustan korkeita taloja ilmasta.",
+        "selite": "Ilmakuvassa näkyvät korkeat asuin- ja toimistorakennukset, matalat korttelit sekä taustalla jokiranta.",
+        "lahde": "Harleyd613, Wikimedia Commons (CC BY-SA 4.0)"
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -3203,23 +3329,44 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Harleyd613, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Ottawan keskusta liittyy jokien ympärille kasvaneeseen pääkaupunkiin.",
-        "lyhyt": "Ottawan keskusta liittyy jokien ympärille kasvaneeseen pääkaupunkiin.",
+        "selite": "Ilmakuvassa näkyvät korkeat asuin- ja toimistorakennukset, matalat korttelit sekä taustalla jokiranta.",
+        "lyhyt": "Ottawan keskustan korkeita taloja ilmasta.",
         "tiedosto": "Downtown Ottawa 2022.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "a59989d85042421a2c0cac223359909ff07e8de89567d27fe60e51aeeb8deb8f",
-      "targetAfterSHA256": "5a495a8f3e0ef6408b089348a5300a39f9b4fa0a683bd2a5bcc26d2627bdfed1",
-      "contextAfterSHA256": "5a495a8f3e0ef6408b089348a5300a39f9b4fa0a683bd2a5bcc26d2627bdfed1",
+      "sourceContentAfterSHA256": "b801f2cd32b53a99ea02f9202da6a408da352b738b55a91fab08407b7148886d",
+      "targetAfterSHA256": "09047521dfc963606f36f4090d933fe5c237d66685a6cbfd44e294974bc111a1",
+      "contextAfterSHA256": "09047521dfc963606f36f4090d933fe5c237d66685a6cbfd44e294974bc111a1",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "a59989d85042421a2c0cac223359909ff07e8de89567d27fe60e51aeeb8deb8f",
+        "targetAfterSHA256": "5a495a8f3e0ef6408b089348a5300a39f9b4fa0a683bd2a5bcc26d2627bdfed1",
+        "contextAfterSHA256": "5a495a8f3e0ef6408b089348a5300a39f9b4fa0a683bd2a5bcc26d2627bdfed1",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "5a495a8f3e0ef6408b089348a5300a39f9b4fa0a683bd2a5bcc26d2627bdfed1",
+          "semanticContextSHA256": "5a495a8f3e0ef6408b089348a5300a39f9b4fa0a683bd2a5bcc26d2627bdfed1",
+          "subjectTitle": "Ottawa",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "b801f2cd32b53a99ea02f9202da6a408da352b738b55a91fab08407b7148886d",
+        "sameImageNativeSHA256": "1a8767775191948e95e5c7c3b0c44178d8c713a0a7cb1448ddf94deb86d8142b",
+        "sameImageExportSHA256": "1a8767775191948e95e5c7c3b0c44178d8c713a0a7cb1448ddf94deb86d8142b",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e11",
@@ -3241,23 +3388,23 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/ottawa/c2-af00f16284eaf336ff94.jpg",
         "suora": true,
         "lahde": "Canmenwalker, Wikimedia Commons (CC BY 4.0)",
-        "selite": "Dows Lake kuuluu Ottawan kanavavesistön ja kaupunkirantojen maisemaan.",
-        "lyhyt": "Dows Lake kuuluu Ottawan kanavavesistön ja kaupunkirantojen maisemaan.",
+        "selite": "Järveä reunustavat puistot, rantatie ja kaupunkikorttelit vuonna 2025 otetussa ilmakuvassa.",
+        "lyhyt": "Dows Lake ja Ottawan rantakorttelit ilmasta.",
         "tiedosto": "Dow's Lake aerial view 2025.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Canmenwalker, Wikimedia Commons (CC BY 4.0)",
-        "selite": "Dows Lake kuuluu Ottawan kanavavesistön ja kaupunkirantojen maisemaan.",
-        "lyhyt": "Dows Lake kuuluu Ottawan kanavavesistön ja kaupunkirantojen maisemaan.",
+        "selite": "Järveä reunustavat puistot, rantatie ja kaupunkikorttelit vuonna 2025 otetussa ilmakuvassa.",
+        "lyhyt": "Dows Lake ja Ottawan rantakorttelit ilmasta.",
         "tiedosto": "Dow's Lake aerial view 2025.jpg"
       },
       "runtimeMediaFieldPayload": {
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/ottawa/c2-af00f16284eaf336ff94.jpg",
         "suora": true,
         "lahde": "Canmenwalker, Wikimedia Commons (CC BY 4.0)",
-        "selite": "Dows Lake kuuluu Ottawan kanavavesistön ja kaupunkirantojen maisemaan.",
-        "lyhyt": "Dows Lake kuuluu Ottawan kanavavesistön ja kaupunkirantojen maisemaan.",
+        "selite": "Järveä reunustavat puistot, rantatie ja kaupunkikorttelit vuonna 2025 otetussa ilmakuvassa.",
+        "lyhyt": "Dows Lake ja Ottawan rantakorttelit ilmasta.",
         "tiedosto": "Dow's Lake aerial view 2025.jpg"
       },
       "runtimeRemoveMediaKeys": [],
@@ -3272,10 +3419,10 @@
         1515
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/ottawa/sisalto.json",
-      "sourceContentSHA256": "a59989d85042421a2c0cac223359909ff07e8de89567d27fe60e51aeeb8deb8f",
+      "sourceContentSHA256": "b801f2cd32b53a99ea02f9202da6a408da352b738b55a91fab08407b7148886d",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "66b3d02064f7d7553572572077f6676d14032694be10fe8debcd689ba92ca101",
-        "semanticContextSHA256": "66b3d02064f7d7553572572077f6676d14032694be10fe8debcd689ba92ca101",
+        "targetBeforeSHA256": "4954fe5d903a07ebd07efbaf98cff58bfc85f1b253e682705ce1e713b5b850ae",
+        "semanticContextSHA256": "4954fe5d903a07ebd07efbaf98cff58bfc85f1b253e682705ce1e713b5b850ae",
         "subjectTitle": "Ottawa",
         "targetState": "existing-target"
       },
@@ -3491,9 +3638,9 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "Dow's Lake aerial view 2025.jpg",
-        "lahde": "Canmenwalker, Wikimedia Commons (CC BY 4.0)",
-        "selite": "Dows Lake kuuluu Ottawan kanavavesistön ja kaupunkirantojen maisemaan.",
-        "lyhyt": "Dows Lake kuuluu Ottawan kanavavesistön ja kaupunkirantojen maisemaan."
+        "lyhyt": "Dows Lake ja Ottawan rantakorttelit ilmasta.",
+        "selite": "Järveä reunustavat puistot, rantatie ja kaupunkikorttelit vuonna 2025 otetussa ilmakuvassa.",
+        "lahde": "Canmenwalker, Wikimedia Commons (CC BY 4.0)"
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -3512,23 +3659,44 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Canmenwalker, Wikimedia Commons (CC BY 4.0)",
-        "selite": "Dows Lake kuuluu Ottawan kanavavesistön ja kaupunkirantojen maisemaan.",
-        "lyhyt": "Dows Lake kuuluu Ottawan kanavavesistön ja kaupunkirantojen maisemaan.",
+        "selite": "Järveä reunustavat puistot, rantatie ja kaupunkikorttelit vuonna 2025 otetussa ilmakuvassa.",
+        "lyhyt": "Dows Lake ja Ottawan rantakorttelit ilmasta.",
         "tiedosto": "Dow's Lake aerial view 2025.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "a59989d85042421a2c0cac223359909ff07e8de89567d27fe60e51aeeb8deb8f",
-      "targetAfterSHA256": "66b3d02064f7d7553572572077f6676d14032694be10fe8debcd689ba92ca101",
-      "contextAfterSHA256": "66b3d02064f7d7553572572077f6676d14032694be10fe8debcd689ba92ca101",
+      "sourceContentAfterSHA256": "b801f2cd32b53a99ea02f9202da6a408da352b738b55a91fab08407b7148886d",
+      "targetAfterSHA256": "4954fe5d903a07ebd07efbaf98cff58bfc85f1b253e682705ce1e713b5b850ae",
+      "contextAfterSHA256": "4954fe5d903a07ebd07efbaf98cff58bfc85f1b253e682705ce1e713b5b850ae",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "a59989d85042421a2c0cac223359909ff07e8de89567d27fe60e51aeeb8deb8f",
+        "targetAfterSHA256": "66b3d02064f7d7553572572077f6676d14032694be10fe8debcd689ba92ca101",
+        "contextAfterSHA256": "66b3d02064f7d7553572572077f6676d14032694be10fe8debcd689ba92ca101",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "66b3d02064f7d7553572572077f6676d14032694be10fe8debcd689ba92ca101",
+          "semanticContextSHA256": "66b3d02064f7d7553572572077f6676d14032694be10fe8debcd689ba92ca101",
+          "subjectTitle": "Ottawa",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "b801f2cd32b53a99ea02f9202da6a408da352b738b55a91fab08407b7148886d",
+        "sameImageNativeSHA256": "af00f16284eaf336ff946cbbb1f7cdc2470effd0b778a9aa6976990301e3e53a",
+        "sameImageExportSHA256": "af00f16284eaf336ff946cbbb1f7cdc2470effd0b778a9aa6976990301e3e53a",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e11",
@@ -3550,23 +3718,23 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/ottawa/c3-5c98a9f28083ff03a5a4.jpg",
         "suora": true,
         "lahde": "Canmenwalker, Wikimedia Commons (CC BY 4.0)",
-        "selite": "Central Experimental Farm säilyttää viljelyn tutkimusalueen Ottawan kaupunkirakenteen keskellä.",
-        "lyhyt": "Central Experimental Farm säilyttää viljelyn tutkimusalueen Ottawan kaupunkirakenteen keskellä.",
+        "selite": "Ilmakuvassa erottuvat tutkimustilan rakennukset, istutusruudut ja laajat peltoalueet Ottawassa.",
+        "lyhyt": "Central Experimental Farmin pellot ja puutarhat ilmasta.",
         "tiedosto": "Central Experimental Farm aerial view 2025.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Canmenwalker, Wikimedia Commons (CC BY 4.0)",
-        "selite": "Central Experimental Farm säilyttää viljelyn tutkimusalueen Ottawan kaupunkirakenteen keskellä.",
-        "lyhyt": "Central Experimental Farm säilyttää viljelyn tutkimusalueen Ottawan kaupunkirakenteen keskellä.",
+        "selite": "Ilmakuvassa erottuvat tutkimustilan rakennukset, istutusruudut ja laajat peltoalueet Ottawassa.",
+        "lyhyt": "Central Experimental Farmin pellot ja puutarhat ilmasta.",
         "tiedosto": "Central Experimental Farm aerial view 2025.jpg"
       },
       "runtimeMediaFieldPayload": {
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/ottawa/c3-5c98a9f28083ff03a5a4.jpg",
         "suora": true,
         "lahde": "Canmenwalker, Wikimedia Commons (CC BY 4.0)",
-        "selite": "Central Experimental Farm säilyttää viljelyn tutkimusalueen Ottawan kaupunkirakenteen keskellä.",
-        "lyhyt": "Central Experimental Farm säilyttää viljelyn tutkimusalueen Ottawan kaupunkirakenteen keskellä.",
+        "selite": "Ilmakuvassa erottuvat tutkimustilan rakennukset, istutusruudut ja laajat peltoalueet Ottawassa.",
+        "lyhyt": "Central Experimental Farmin pellot ja puutarhat ilmasta.",
         "tiedosto": "Central Experimental Farm aerial view 2025.jpg"
       },
       "runtimeRemoveMediaKeys": [],
@@ -3581,10 +3749,10 @@
         2272
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/ottawa/sisalto.json",
-      "sourceContentSHA256": "a59989d85042421a2c0cac223359909ff07e8de89567d27fe60e51aeeb8deb8f",
+      "sourceContentSHA256": "b801f2cd32b53a99ea02f9202da6a408da352b738b55a91fab08407b7148886d",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "d4ca9998e1fe9b649dd21428a0e93c1c53988a59fe2cf667eae60f3ed9de9b7c",
-        "semanticContextSHA256": "d4ca9998e1fe9b649dd21428a0e93c1c53988a59fe2cf667eae60f3ed9de9b7c",
+        "targetBeforeSHA256": "1c65fe63b9ab471cc3c8045ff6c03bb147f9faeec97fb9131f4de42a1bb5192b",
+        "semanticContextSHA256": "1c65fe63b9ab471cc3c8045ff6c03bb147f9faeec97fb9131f4de42a1bb5192b",
         "subjectTitle": "Ottawa",
         "targetState": "existing-target"
       },
@@ -3786,9 +3954,9 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "Central Experimental Farm aerial view 2025.jpg",
-        "lahde": "Canmenwalker, Wikimedia Commons (CC BY 4.0)",
-        "selite": "Central Experimental Farm säilyttää viljelyn tutkimusalueen Ottawan kaupunkirakenteen keskellä.",
-        "lyhyt": "Central Experimental Farm säilyttää viljelyn tutkimusalueen Ottawan kaupunkirakenteen keskellä."
+        "lyhyt": "Central Experimental Farmin pellot ja puutarhat ilmasta.",
+        "selite": "Ilmakuvassa erottuvat tutkimustilan rakennukset, istutusruudut ja laajat peltoalueet Ottawassa.",
+        "lahde": "Canmenwalker, Wikimedia Commons (CC BY 4.0)"
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -3807,23 +3975,44 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Canmenwalker, Wikimedia Commons (CC BY 4.0)",
-        "selite": "Central Experimental Farm säilyttää viljelyn tutkimusalueen Ottawan kaupunkirakenteen keskellä.",
-        "lyhyt": "Central Experimental Farm säilyttää viljelyn tutkimusalueen Ottawan kaupunkirakenteen keskellä.",
+        "selite": "Ilmakuvassa erottuvat tutkimustilan rakennukset, istutusruudut ja laajat peltoalueet Ottawassa.",
+        "lyhyt": "Central Experimental Farmin pellot ja puutarhat ilmasta.",
         "tiedosto": "Central Experimental Farm aerial view 2025.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "a59989d85042421a2c0cac223359909ff07e8de89567d27fe60e51aeeb8deb8f",
-      "targetAfterSHA256": "d4ca9998e1fe9b649dd21428a0e93c1c53988a59fe2cf667eae60f3ed9de9b7c",
-      "contextAfterSHA256": "d4ca9998e1fe9b649dd21428a0e93c1c53988a59fe2cf667eae60f3ed9de9b7c",
+      "sourceContentAfterSHA256": "b801f2cd32b53a99ea02f9202da6a408da352b738b55a91fab08407b7148886d",
+      "targetAfterSHA256": "1c65fe63b9ab471cc3c8045ff6c03bb147f9faeec97fb9131f4de42a1bb5192b",
+      "contextAfterSHA256": "1c65fe63b9ab471cc3c8045ff6c03bb147f9faeec97fb9131f4de42a1bb5192b",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "a59989d85042421a2c0cac223359909ff07e8de89567d27fe60e51aeeb8deb8f",
+        "targetAfterSHA256": "d4ca9998e1fe9b649dd21428a0e93c1c53988a59fe2cf667eae60f3ed9de9b7c",
+        "contextAfterSHA256": "d4ca9998e1fe9b649dd21428a0e93c1c53988a59fe2cf667eae60f3ed9de9b7c",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "d4ca9998e1fe9b649dd21428a0e93c1c53988a59fe2cf667eae60f3ed9de9b7c",
+          "semanticContextSHA256": "d4ca9998e1fe9b649dd21428a0e93c1c53988a59fe2cf667eae60f3ed9de9b7c",
+          "subjectTitle": "Ottawa",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "b801f2cd32b53a99ea02f9202da6a408da352b738b55a91fab08407b7148886d",
+        "sameImageNativeSHA256": "5c98a9f28083ff03a5a4046f0500e230ff5df395475053859fcd16f6fd45b58a",
+        "sameImageExportSHA256": "5c98a9f28083ff03a5a4046f0500e230ff5df395475053859fcd16f6fd45b58a",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e11",
@@ -3848,23 +4037,23 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/ottawa/o2-9dbb83b331e242bbb4df.jpg",
         "suora": true,
         "lahde": "R Prazeres, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Rideau-putoukset ja Ottawa-joki heinäkuussa 2025.",
-        "lyhyt": "Rideau-putoukset ja Ottawa-joki heinäkuussa 2025.",
+        "selite": "Etualalla putoaa Rideau-joen vesi, ja Ottawa-joki veneineen avautuu putouksen alapuolella.",
+        "lyhyt": "Rideau-putoukset heinäkuussa 2025.",
         "tiedosto": "Rideau Falls 20250720 150134.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "R Prazeres, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Rideau-putoukset ja Ottawa-joki heinäkuussa 2025.",
-        "lyhyt": "Rideau-putoukset ja Ottawa-joki heinäkuussa 2025.",
+        "selite": "Etualalla putoaa Rideau-joen vesi, ja Ottawa-joki veneineen avautuu putouksen alapuolella.",
+        "lyhyt": "Rideau-putoukset heinäkuussa 2025.",
         "tiedosto": "Rideau Falls 20250720 150134.jpg"
       },
       "runtimeMediaFieldPayload": {
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/ottawa/o2-9dbb83b331e242bbb4df.jpg",
         "suora": true,
         "lahde": "R Prazeres, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Rideau-putoukset ja Ottawa-joki heinäkuussa 2025.",
-        "lyhyt": "Rideau-putoukset ja Ottawa-joki heinäkuussa 2025.",
+        "selite": "Etualalla putoaa Rideau-joen vesi, ja Ottawa-joki veneineen avautuu putouksen alapuolella.",
+        "lyhyt": "Rideau-putoukset heinäkuussa 2025.",
         "tiedosto": "Rideau Falls 20250720 150134.jpg"
       },
       "runtimeRemoveMediaKeys": [],
@@ -3879,10 +4068,10 @@
         3000
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/ottawa/sisalto.json",
-      "sourceContentSHA256": "a59989d85042421a2c0cac223359909ff07e8de89567d27fe60e51aeeb8deb8f",
+      "sourceContentSHA256": "b801f2cd32b53a99ea02f9202da6a408da352b738b55a91fab08407b7148886d",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "d3a5705ee6a0c3317e8caf1403ce7cb7e548b64d96a970e1da40449c1dd27782",
-        "semanticContextSHA256": "7d01add76703f34257c584da8dff8d86c981a68abb9b9c23628f8466315c5731",
+        "targetBeforeSHA256": "e1801db9cb05e780cd297153707d1fe050523c8f389d0ef6d9559cb4736c1683",
+        "semanticContextSHA256": "3a9a20db4148bcff606971705135947afe779619ca84ccbfc15d660cc2fe9c2c",
         "subjectTitle": "Kauppakortteleista jokirantaan",
         "targetState": "existing-target"
       },
@@ -4073,9 +4262,9 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "Rideau Falls 20250720 150134.jpg",
-        "lahde": "R Prazeres, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Rideau-putoukset ja Ottawa-joki heinäkuussa 2025.",
-        "lyhyt": "Rideau-putoukset ja Ottawa-joki heinäkuussa 2025."
+        "lyhyt": "Rideau-putoukset heinäkuussa 2025.",
+        "selite": "Etualalla putoaa Rideau-joen vesi, ja Ottawa-joki veneineen avautuu putouksen alapuolella.",
+        "lahde": "R Prazeres, Wikimedia Commons (CC BY-SA 4.0)"
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -4094,23 +4283,44 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "R Prazeres, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Rideau-putoukset ja Ottawa-joki heinäkuussa 2025.",
-        "lyhyt": "Rideau-putoukset ja Ottawa-joki heinäkuussa 2025.",
+        "selite": "Etualalla putoaa Rideau-joen vesi, ja Ottawa-joki veneineen avautuu putouksen alapuolella.",
+        "lyhyt": "Rideau-putoukset heinäkuussa 2025.",
         "tiedosto": "Rideau Falls 20250720 150134.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "a59989d85042421a2c0cac223359909ff07e8de89567d27fe60e51aeeb8deb8f",
-      "targetAfterSHA256": "d3a5705ee6a0c3317e8caf1403ce7cb7e548b64d96a970e1da40449c1dd27782",
-      "contextAfterSHA256": "7d01add76703f34257c584da8dff8d86c981a68abb9b9c23628f8466315c5731",
+      "sourceContentAfterSHA256": "b801f2cd32b53a99ea02f9202da6a408da352b738b55a91fab08407b7148886d",
+      "targetAfterSHA256": "e1801db9cb05e780cd297153707d1fe050523c8f389d0ef6d9559cb4736c1683",
+      "contextAfterSHA256": "3a9a20db4148bcff606971705135947afe779619ca84ccbfc15d660cc2fe9c2c",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "a59989d85042421a2c0cac223359909ff07e8de89567d27fe60e51aeeb8deb8f",
+        "targetAfterSHA256": "d3a5705ee6a0c3317e8caf1403ce7cb7e548b64d96a970e1da40449c1dd27782",
+        "contextAfterSHA256": "7d01add76703f34257c584da8dff8d86c981a68abb9b9c23628f8466315c5731",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "d3a5705ee6a0c3317e8caf1403ce7cb7e548b64d96a970e1da40449c1dd27782",
+          "semanticContextSHA256": "7d01add76703f34257c584da8dff8d86c981a68abb9b9c23628f8466315c5731",
+          "subjectTitle": "Kauppakortteleista jokirantaan",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "b801f2cd32b53a99ea02f9202da6a408da352b738b55a91fab08407b7148886d",
+        "sameImageNativeSHA256": "9dbb83b331e242bbb4df32273cc10f66dbf52669c3cd426e064497c8a3adecbc",
+        "sameImageExportSHA256": "9dbb83b331e242bbb4df32273cc10f66dbf52669c3cd426e064497c8a3adecbc",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e11",
@@ -4132,23 +4342,23 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/ottawa/k2-920b632c2957b4ee38b7.jpg",
         "suora": true,
         "lahde": "Wladyslaw ( talk ), Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "Parlamentin kirjastotalo kuuluu Ottawan historialliseen uusgoottilaiseen arkkitehtuuriin.",
-        "lyhyt": "Parlamentin kirjastotalo kuuluu Ottawan historialliseen uusgoottilaiseen arkkitehtuuriin.",
+        "selite": "Kirjaston monikulmainen rakennus, suippokaari-ikkunat ja korkea kattotorni näkyvät katutasolta.",
+        "lyhyt": "Parlamentin kirjaston uusgoottilainen julkisivu.",
         "tiedosto": "Ottawa - ON - Library of Parliament.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Wladyslaw ( talk ), Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "Parlamentin kirjastotalo kuuluu Ottawan historialliseen uusgoottilaiseen arkkitehtuuriin.",
-        "lyhyt": "Parlamentin kirjastotalo kuuluu Ottawan historialliseen uusgoottilaiseen arkkitehtuuriin.",
+        "selite": "Kirjaston monikulmainen rakennus, suippokaari-ikkunat ja korkea kattotorni näkyvät katutasolta.",
+        "lyhyt": "Parlamentin kirjaston uusgoottilainen julkisivu.",
         "tiedosto": "Ottawa - ON - Library of Parliament.jpg"
       },
       "runtimeMediaFieldPayload": {
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/ottawa/k2-920b632c2957b4ee38b7.jpg",
         "suora": true,
         "lahde": "Wladyslaw ( talk ), Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "Parlamentin kirjastotalo kuuluu Ottawan historialliseen uusgoottilaiseen arkkitehtuuriin.",
-        "lyhyt": "Parlamentin kirjastotalo kuuluu Ottawan historialliseen uusgoottilaiseen arkkitehtuuriin.",
+        "selite": "Kirjaston monikulmainen rakennus, suippokaari-ikkunat ja korkea kattotorni näkyvät katutasolta.",
+        "lyhyt": "Parlamentin kirjaston uusgoottilainen julkisivu.",
         "tiedosto": "Ottawa - ON - Library of Parliament.jpg"
       },
       "runtimeRemoveMediaKeys": [],
@@ -4163,10 +4373,10 @@
         3746
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/ottawa/sisalto.json",
-      "sourceContentSHA256": "a59989d85042421a2c0cac223359909ff07e8de89567d27fe60e51aeeb8deb8f",
+      "sourceContentSHA256": "b801f2cd32b53a99ea02f9202da6a408da352b738b55a91fab08407b7148886d",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "5992d4e90f37d0897ad83ba3c9aa372182e7df468226596ee49034f7791b5404",
-        "semanticContextSHA256": "5992d4e90f37d0897ad83ba3c9aa372182e7df468226596ee49034f7791b5404",
+        "targetBeforeSHA256": "c97d2052bd7398bad70957818aea4b705fa9c9e92084fc49ccacdb795117f576",
+        "semanticContextSHA256": "c97d2052bd7398bad70957818aea4b705fa9c9e92084fc49ccacdb795117f576",
         "subjectTitle": "Kirjat rautaovien takana",
         "targetState": "existing-target"
       },
@@ -4388,9 +4598,9 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "Ottawa - ON - Library of Parliament.jpg",
-        "lahde": "Wladyslaw ( talk ), Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "Parlamentin kirjastotalo kuuluu Ottawan historialliseen uusgoottilaiseen arkkitehtuuriin.",
-        "lyhyt": "Parlamentin kirjastotalo kuuluu Ottawan historialliseen uusgoottilaiseen arkkitehtuuriin."
+        "lyhyt": "Parlamentin kirjaston uusgoottilainen julkisivu.",
+        "selite": "Kirjaston monikulmainen rakennus, suippokaari-ikkunat ja korkea kattotorni näkyvät katutasolta.",
+        "lahde": "Wladyslaw ( talk ), Wikimedia Commons (CC BY-SA 3.0)"
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -4409,23 +4619,44 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Wladyslaw ( talk ), Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "Parlamentin kirjastotalo kuuluu Ottawan historialliseen uusgoottilaiseen arkkitehtuuriin.",
-        "lyhyt": "Parlamentin kirjastotalo kuuluu Ottawan historialliseen uusgoottilaiseen arkkitehtuuriin.",
+        "selite": "Kirjaston monikulmainen rakennus, suippokaari-ikkunat ja korkea kattotorni näkyvät katutasolta.",
+        "lyhyt": "Parlamentin kirjaston uusgoottilainen julkisivu.",
         "tiedosto": "Ottawa - ON - Library of Parliament.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "a59989d85042421a2c0cac223359909ff07e8de89567d27fe60e51aeeb8deb8f",
-      "targetAfterSHA256": "5992d4e90f37d0897ad83ba3c9aa372182e7df468226596ee49034f7791b5404",
-      "contextAfterSHA256": "5992d4e90f37d0897ad83ba3c9aa372182e7df468226596ee49034f7791b5404",
+      "sourceContentAfterSHA256": "b801f2cd32b53a99ea02f9202da6a408da352b738b55a91fab08407b7148886d",
+      "targetAfterSHA256": "c97d2052bd7398bad70957818aea4b705fa9c9e92084fc49ccacdb795117f576",
+      "contextAfterSHA256": "c97d2052bd7398bad70957818aea4b705fa9c9e92084fc49ccacdb795117f576",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "a59989d85042421a2c0cac223359909ff07e8de89567d27fe60e51aeeb8deb8f",
+        "targetAfterSHA256": "5992d4e90f37d0897ad83ba3c9aa372182e7df468226596ee49034f7791b5404",
+        "contextAfterSHA256": "5992d4e90f37d0897ad83ba3c9aa372182e7df468226596ee49034f7791b5404",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "5992d4e90f37d0897ad83ba3c9aa372182e7df468226596ee49034f7791b5404",
+          "semanticContextSHA256": "5992d4e90f37d0897ad83ba3c9aa372182e7df468226596ee49034f7791b5404",
+          "subjectTitle": "Kirjat rautaovien takana",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "b801f2cd32b53a99ea02f9202da6a408da352b738b55a91fab08407b7148886d",
+        "sameImageNativeSHA256": "920b632c2957b4ee38b723842cd56739229805aa3fd7abd1169a3abefaeaab1b",
+        "sameImageExportSHA256": "920b632c2957b4ee38b723842cd56739229805aa3fd7abd1169a3abefaeaab1b",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e11",
@@ -4447,23 +4678,23 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/ottawa/n2-cfc04dcb8f02d27db355.jpg",
         "suora": true,
         "lahde": "Canmenwalker, Wikimedia Commons (CC BY 4.0)",
-        "selite": "Dominion Arboretum on Ottawan puiden ja pensaiden tutkimus- ja viheralue.",
-        "lyhyt": "Dominion Arboretum on Ottawan puiden ja pensaiden tutkimus- ja viheralue.",
+        "selite": "Puiston polut kulkevat nurmialueiden ja puiden lomassa; taustalla näkyy Dows Laken vettä.",
+        "lyhyt": "Dominion Arboretumin nurmialueita ja puita.",
         "tiedosto": "Dominion Arboretum 2025.JPG"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Canmenwalker, Wikimedia Commons (CC BY 4.0)",
-        "selite": "Dominion Arboretum on Ottawan puiden ja pensaiden tutkimus- ja viheralue.",
-        "lyhyt": "Dominion Arboretum on Ottawan puiden ja pensaiden tutkimus- ja viheralue.",
+        "selite": "Puiston polut kulkevat nurmialueiden ja puiden lomassa; taustalla näkyy Dows Laken vettä.",
+        "lyhyt": "Dominion Arboretumin nurmialueita ja puita.",
         "tiedosto": "Dominion Arboretum 2025.JPG"
       },
       "runtimeMediaFieldPayload": {
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/ottawa/n2-cfc04dcb8f02d27db355.jpg",
         "suora": true,
         "lahde": "Canmenwalker, Wikimedia Commons (CC BY 4.0)",
-        "selite": "Dominion Arboretum on Ottawan puiden ja pensaiden tutkimus- ja viheralue.",
-        "lyhyt": "Dominion Arboretum on Ottawan puiden ja pensaiden tutkimus- ja viheralue.",
+        "selite": "Puiston polut kulkevat nurmialueiden ja puiden lomassa; taustalla näkyy Dows Laken vettä.",
+        "lyhyt": "Dominion Arboretumin nurmialueita ja puita.",
         "tiedosto": "Dominion Arboretum 2025.JPG"
       },
       "runtimeRemoveMediaKeys": [],
@@ -4478,10 +4709,10 @@
         3024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/ottawa/sisalto.json",
-      "sourceContentSHA256": "a59989d85042421a2c0cac223359909ff07e8de89567d27fe60e51aeeb8deb8f",
+      "sourceContentSHA256": "b801f2cd32b53a99ea02f9202da6a408da352b738b55a91fab08407b7148886d",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "ca08faaedfb6fe72e1c0c8e696e9c430cda3e7c663419a66adc1456f2cd42b30",
-        "semanticContextSHA256": "c95cd993de32a19a18c28b41be33f7643f8032c5caf1f82cc213819e9ec9470f",
+        "targetBeforeSHA256": "d24ad577f5f72c95b262fbdf049c3ebbf122679fedc73312cba59113ca45edfa",
+        "semanticContextSHA256": "1d4a346b38c3e95055a8589cb66b40e2fbb20d8e2dca7a10cee0b2b8cfbe4ff5",
         "subjectTitle": "Dominion Arboretum",
         "targetState": "existing-target"
       },
@@ -4657,9 +4888,9 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "Dominion Arboretum 2025.JPG",
-        "lahde": "Canmenwalker, Wikimedia Commons (CC BY 4.0)",
-        "selite": "Dominion Arboretum on Ottawan puiden ja pensaiden tutkimus- ja viheralue.",
-        "lyhyt": "Dominion Arboretum on Ottawan puiden ja pensaiden tutkimus- ja viheralue."
+        "lyhyt": "Dominion Arboretumin nurmialueita ja puita.",
+        "selite": "Puiston polut kulkevat nurmialueiden ja puiden lomassa; taustalla näkyy Dows Laken vettä.",
+        "lahde": "Canmenwalker, Wikimedia Commons (CC BY 4.0)"
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -4678,23 +4909,44 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Canmenwalker, Wikimedia Commons (CC BY 4.0)",
-        "selite": "Dominion Arboretum on Ottawan puiden ja pensaiden tutkimus- ja viheralue.",
-        "lyhyt": "Dominion Arboretum on Ottawan puiden ja pensaiden tutkimus- ja viheralue.",
+        "selite": "Puiston polut kulkevat nurmialueiden ja puiden lomassa; taustalla näkyy Dows Laken vettä.",
+        "lyhyt": "Dominion Arboretumin nurmialueita ja puita.",
         "tiedosto": "Dominion Arboretum 2025.JPG"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "a59989d85042421a2c0cac223359909ff07e8de89567d27fe60e51aeeb8deb8f",
-      "targetAfterSHA256": "ca08faaedfb6fe72e1c0c8e696e9c430cda3e7c663419a66adc1456f2cd42b30",
-      "contextAfterSHA256": "c95cd993de32a19a18c28b41be33f7643f8032c5caf1f82cc213819e9ec9470f",
+      "sourceContentAfterSHA256": "b801f2cd32b53a99ea02f9202da6a408da352b738b55a91fab08407b7148886d",
+      "targetAfterSHA256": "d24ad577f5f72c95b262fbdf049c3ebbf122679fedc73312cba59113ca45edfa",
+      "contextAfterSHA256": "1d4a346b38c3e95055a8589cb66b40e2fbb20d8e2dca7a10cee0b2b8cfbe4ff5",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "a59989d85042421a2c0cac223359909ff07e8de89567d27fe60e51aeeb8deb8f",
+        "targetAfterSHA256": "ca08faaedfb6fe72e1c0c8e696e9c430cda3e7c663419a66adc1456f2cd42b30",
+        "contextAfterSHA256": "c95cd993de32a19a18c28b41be33f7643f8032c5caf1f82cc213819e9ec9470f",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "ca08faaedfb6fe72e1c0c8e696e9c430cda3e7c663419a66adc1456f2cd42b30",
+          "semanticContextSHA256": "c95cd993de32a19a18c28b41be33f7643f8032c5caf1f82cc213819e9ec9470f",
+          "subjectTitle": "Dominion Arboretum",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "b801f2cd32b53a99ea02f9202da6a408da352b738b55a91fab08407b7148886d",
+        "sameImageNativeSHA256": "cfc04dcb8f02d27db35514bcefb24cb2210e89bd7453d5337eb6e3e37bad37ca",
+        "sameImageExportSHA256": "cfc04dcb8f02d27db35514bcefb24cb2210e89bd7453d5337eb6e3e37bad37ca",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e11",
@@ -4716,23 +4968,23 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/ottawa/n3-7a95856475c338c42fdb.jpg",
         "suora": true,
         "lahde": "Ross Dunn, Wikimedia Commons (CC BY-SA 2.0)",
-        "selite": "Dows Laken vettä ja rantakasvillisuutta heinäkuussa 2019.",
-        "lyhyt": "Dows Laken vettä ja rantakasvillisuutta heinäkuussa 2019.",
+        "selite": "Etualalla kasvaa korkeita ruohovartisia kasveja, ja niiden takana avautuu järven pinta sekä vastarannan puusto.",
+        "lyhyt": "Dows Laken rantakasvillisuutta heinäkuussa 2019.",
         "tiedosto": "Dow’s Lake, off the Rideau Canal (48363469826).jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Ross Dunn, Wikimedia Commons (CC BY-SA 2.0)",
-        "selite": "Dows Laken vettä ja rantakasvillisuutta heinäkuussa 2019.",
-        "lyhyt": "Dows Laken vettä ja rantakasvillisuutta heinäkuussa 2019.",
+        "selite": "Etualalla kasvaa korkeita ruohovartisia kasveja, ja niiden takana avautuu järven pinta sekä vastarannan puusto.",
+        "lyhyt": "Dows Laken rantakasvillisuutta heinäkuussa 2019.",
         "tiedosto": "Dow’s Lake, off the Rideau Canal (48363469826).jpg"
       },
       "runtimeMediaFieldPayload": {
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/ottawa/n3-7a95856475c338c42fdb.jpg",
         "suora": true,
         "lahde": "Ross Dunn, Wikimedia Commons (CC BY-SA 2.0)",
-        "selite": "Dows Laken vettä ja rantakasvillisuutta heinäkuussa 2019.",
-        "lyhyt": "Dows Laken vettä ja rantakasvillisuutta heinäkuussa 2019.",
+        "selite": "Etualalla kasvaa korkeita ruohovartisia kasveja, ja niiden takana avautuu järven pinta sekä vastarannan puusto.",
+        "lyhyt": "Dows Laken rantakasvillisuutta heinäkuussa 2019.",
         "tiedosto": "Dow’s Lake, off the Rideau Canal (48363469826).jpg"
       },
       "runtimeRemoveMediaKeys": [],
@@ -4747,10 +4999,10 @@
         2896
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/ottawa/sisalto.json",
-      "sourceContentSHA256": "a59989d85042421a2c0cac223359909ff07e8de89567d27fe60e51aeeb8deb8f",
+      "sourceContentSHA256": "b801f2cd32b53a99ea02f9202da6a408da352b738b55a91fab08407b7148886d",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "133170ef91601b01b85fc1153526a8aa990d91e26f4fe71e9570fc2eaf986bdc",
-        "semanticContextSHA256": "3d331890e00e5b94b865aabe7c956572c1e01a4c2dab1766a960d7b6a790ad19",
+        "targetBeforeSHA256": "97972fe0810adfdbb9c77ebd5d06ca6687ac1df0e3618d0e1908b2c52c0715f3",
+        "semanticContextSHA256": "16f3700b0e2508927f7cdaad6da27c590d62f66a0a8b91d1a17df735ba6c7364",
         "subjectTitle": "Dows Lake",
         "targetState": "existing-target"
       },
@@ -4941,9 +5193,9 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "Dow’s Lake, off the Rideau Canal (48363469826).jpg",
-        "lahde": "Ross Dunn, Wikimedia Commons (CC BY-SA 2.0)",
-        "selite": "Dows Laken vettä ja rantakasvillisuutta heinäkuussa 2019.",
-        "lyhyt": "Dows Laken vettä ja rantakasvillisuutta heinäkuussa 2019."
+        "lyhyt": "Dows Laken rantakasvillisuutta heinäkuussa 2019.",
+        "selite": "Etualalla kasvaa korkeita ruohovartisia kasveja, ja niiden takana avautuu järven pinta sekä vastarannan puusto.",
+        "lahde": "Ross Dunn, Wikimedia Commons (CC BY-SA 2.0)"
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -4962,23 +5214,44 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Ross Dunn, Wikimedia Commons (CC BY-SA 2.0)",
-        "selite": "Dows Laken vettä ja rantakasvillisuutta heinäkuussa 2019.",
-        "lyhyt": "Dows Laken vettä ja rantakasvillisuutta heinäkuussa 2019.",
+        "selite": "Etualalla kasvaa korkeita ruohovartisia kasveja, ja niiden takana avautuu järven pinta sekä vastarannan puusto.",
+        "lyhyt": "Dows Laken rantakasvillisuutta heinäkuussa 2019.",
         "tiedosto": "Dow’s Lake, off the Rideau Canal (48363469826).jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "a59989d85042421a2c0cac223359909ff07e8de89567d27fe60e51aeeb8deb8f",
-      "targetAfterSHA256": "133170ef91601b01b85fc1153526a8aa990d91e26f4fe71e9570fc2eaf986bdc",
-      "contextAfterSHA256": "3d331890e00e5b94b865aabe7c956572c1e01a4c2dab1766a960d7b6a790ad19",
+      "sourceContentAfterSHA256": "b801f2cd32b53a99ea02f9202da6a408da352b738b55a91fab08407b7148886d",
+      "targetAfterSHA256": "97972fe0810adfdbb9c77ebd5d06ca6687ac1df0e3618d0e1908b2c52c0715f3",
+      "contextAfterSHA256": "16f3700b0e2508927f7cdaad6da27c590d62f66a0a8b91d1a17df735ba6c7364",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "a59989d85042421a2c0cac223359909ff07e8de89567d27fe60e51aeeb8deb8f",
+        "targetAfterSHA256": "133170ef91601b01b85fc1153526a8aa990d91e26f4fe71e9570fc2eaf986bdc",
+        "contextAfterSHA256": "3d331890e00e5b94b865aabe7c956572c1e01a4c2dab1766a960d7b6a790ad19",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "133170ef91601b01b85fc1153526a8aa990d91e26f4fe71e9570fc2eaf986bdc",
+          "semanticContextSHA256": "3d331890e00e5b94b865aabe7c956572c1e01a4c2dab1766a960d7b6a790ad19",
+          "subjectTitle": "Dows Lake",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "b801f2cd32b53a99ea02f9202da6a408da352b738b55a91fab08407b7148886d",
+        "sameImageNativeSHA256": "7a95856475c338c42fdb650c33d50fcabf85ddd5806c8f579ef7b70a93dae7d3",
+        "sameImageExportSHA256": "7a95856475c338c42fdb650c33d50fcabf85ddd5806c8f579ef7b70a93dae7d3",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e11",
@@ -5000,23 +5273,23 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/ottawa/n1-15a6333771ef270822fc.jpg",
         "suora": true,
         "lahde": "Jeangagnon, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Rideau-putousten vettä ja kallioita vuonna 2016.",
-        "lyhyt": "Rideau-putousten vettä ja kallioita vuonna 2016.",
+        "selite": "Vesi virtaa padon alta ja putoaa kallion reunalta; taustalla näkyy myös kaupungin rakennuksia.",
+        "lyhyt": "Rideau-putouksen vettä ja yläpuolista patorakennetta.",
         "tiedosto": "Rideau Falls - 01.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Jeangagnon, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Rideau-putousten vettä ja kallioita vuonna 2016.",
-        "lyhyt": "Rideau-putousten vettä ja kallioita vuonna 2016.",
+        "selite": "Vesi virtaa padon alta ja putoaa kallion reunalta; taustalla näkyy myös kaupungin rakennuksia.",
+        "lyhyt": "Rideau-putouksen vettä ja yläpuolista patorakennetta.",
         "tiedosto": "Rideau Falls - 01.jpg"
       },
       "runtimeMediaFieldPayload": {
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/ottawa/n1-15a6333771ef270822fc.jpg",
         "suora": true,
         "lahde": "Jeangagnon, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Rideau-putousten vettä ja kallioita vuonna 2016.",
-        "lyhyt": "Rideau-putousten vettä ja kallioita vuonna 2016.",
+        "selite": "Vesi virtaa padon alta ja putoaa kallion reunalta; taustalla näkyy myös kaupungin rakennuksia.",
+        "lyhyt": "Rideau-putouksen vettä ja yläpuolista patorakennetta.",
         "tiedosto": "Rideau Falls - 01.jpg"
       },
       "runtimeRemoveMediaKeys": [],
@@ -5031,10 +5304,10 @@
         2736
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/ottawa/sisalto.json",
-      "sourceContentSHA256": "a59989d85042421a2c0cac223359909ff07e8de89567d27fe60e51aeeb8deb8f",
+      "sourceContentSHA256": "b801f2cd32b53a99ea02f9202da6a408da352b738b55a91fab08407b7148886d",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "8608b56e5f51d00d3e0c921443e2a1e4bbd9dde5af30fcc980a7e129bb9ebee1",
-        "semanticContextSHA256": "cc12b2ae707e994c521f12d00c78e3f67969b8be593e0893499e1262ca8b8a5d",
+        "targetBeforeSHA256": "35f45d2995ac7f5521b65319216eb96ad176d06c60d2aa859fd116299d734de2",
+        "semanticContextSHA256": "2135ca3f6a3eba43cd77645c6c5a311701e8c3b9873a55b1f2c6c23efd3cc2ed",
         "subjectTitle": "Rideau-putoukset",
         "targetState": "existing-target"
       },
@@ -5225,9 +5498,9 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "Rideau Falls - 01.jpg",
-        "lahde": "Jeangagnon, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Rideau-putousten vettä ja kallioita vuonna 2016.",
-        "lyhyt": "Rideau-putousten vettä ja kallioita vuonna 2016."
+        "lyhyt": "Rideau-putouksen vettä ja yläpuolista patorakennetta.",
+        "selite": "Vesi virtaa padon alta ja putoaa kallion reunalta; taustalla näkyy myös kaupungin rakennuksia.",
+        "lahde": "Jeangagnon, Wikimedia Commons (CC BY-SA 4.0)"
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -5246,28 +5519,55 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Jeangagnon, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Rideau-putousten vettä ja kallioita vuonna 2016.",
-        "lyhyt": "Rideau-putousten vettä ja kallioita vuonna 2016.",
+        "selite": "Vesi virtaa padon alta ja putoaa kallion reunalta; taustalla näkyy myös kaupungin rakennuksia.",
+        "lyhyt": "Rideau-putouksen vettä ja yläpuolista patorakennetta.",
         "tiedosto": "Rideau Falls - 01.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "a59989d85042421a2c0cac223359909ff07e8de89567d27fe60e51aeeb8deb8f",
-      "targetAfterSHA256": "8608b56e5f51d00d3e0c921443e2a1e4bbd9dde5af30fcc980a7e129bb9ebee1",
-      "contextAfterSHA256": "cc12b2ae707e994c521f12d00c78e3f67969b8be593e0893499e1262ca8b8a5d",
+      "sourceContentAfterSHA256": "b801f2cd32b53a99ea02f9202da6a408da352b738b55a91fab08407b7148886d",
+      "targetAfterSHA256": "35f45d2995ac7f5521b65319216eb96ad176d06c60d2aa859fd116299d734de2",
+      "contextAfterSHA256": "2135ca3f6a3eba43cd77645c6c5a311701e8c3b9873a55b1f2c6c23efd3cc2ed",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "a59989d85042421a2c0cac223359909ff07e8de89567d27fe60e51aeeb8deb8f",
+        "targetAfterSHA256": "8608b56e5f51d00d3e0c921443e2a1e4bbd9dde5af30fcc980a7e129bb9ebee1",
+        "contextAfterSHA256": "cc12b2ae707e994c521f12d00c78e3f67969b8be593e0893499e1262ca8b8a5d",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "8608b56e5f51d00d3e0c921443e2a1e4bbd9dde5af30fcc980a7e129bb9ebee1",
+          "semanticContextSHA256": "cc12b2ae707e994c521f12d00c78e3f67969b8be593e0893499e1262ca8b8a5d",
+          "subjectTitle": "Rideau-putoukset",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "b801f2cd32b53a99ea02f9202da6a408da352b738b55a91fab08407b7148886d",
+        "sameImageNativeSHA256": "15a6333771ef270822fc34c2fcbb32c253df608398dec7e2c9bf5d6e4e56f4e7",
+        "sameImageExportSHA256": "15a6333771ef270822fc34c2fcbb32c253df608398dec7e2c9bf5d6e4e56f4e7",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     }
   ],
   "runtimeIntegrationPending": true,
   "ownerAcceptedNotImpliedByAuthorization": false,
   "gameIntegrated": false,
   "allAssetsExplicitlyOwnerApproved": true,
-  "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+  "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+  "task118ExcludedAssets": [],
+  "task118TextRevision": true,
+  "independentTextResamplePending": true,
+  "textAcceptanceVerified": false,
+  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task118/immutable-media-history/e11/ottawa/2943eec50054243f41084bb39ac26c6162b9fa0b669b2e4da8c841161a6dee53.json",
+  "task118ReboundAt": "2026-10-13T16:31:26.016815+00:00"
 }

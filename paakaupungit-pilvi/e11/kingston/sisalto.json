@@ -1,349 +1,349 @@
 {
-  "$skeema": "matkakirja-paakaupunki/1",
+ "$skeema": "matkakirja-paakaupunki/1",
+ "id": "kingston",
+ "maa": "JAM",
+ "era": "e11",
+ "kaupunki": {
   "id": "kingston",
-  "maa": "JAM",
-  "era": "e11",
-  "kaupunki": {
-    "id": "kingston",
-    "name": "Kingston",
-    "wiki": "Kingston",
-    "ambience": "kaupunki",
-    "pallo": {
-      "lat": 17.9714,
-      "lon": -76.7931
-    }
-  },
-  "artikkeli": {
-    "intro": "Kingston on Jamaikan pääkaupunki saaren kaakkoisrannikolla, Blue Mountains -vuorten edustalla. Sen luonnonsatamaa suojaa **Palisadoesin pitkä hiekkakannas**, jota pitkin ovat yhteydessä myös Port Royal ja kansainvälinen lentoasema. Kaupunki perustettiin 1600-luvun lopulla Port Royalia tuhonneen maanjäristyksen jälkeen. Alkuun sen rannalla asui katastrofista selvinneitä ihmisiä telttaleirissä.\n\nKasvava kaupunki sai **ruutukaavan**, jonka katujen nimet North, East, West ja Harbour kuvaavat vanhan ytimen rajoja. Isoisän matkavuonna 1873 Kingston oli Britannian siirtomaahan kuulunut satama- ja hallintokaupunki. Keskusalueeseen kuuluvat nykyään historiallinen Downtown ja uudempi New Kingston. Devon House ja Hope Gardens kertovat toisenlaisesta Kingstonista: vanhoista asuinalueista ja puutarhoista. Kaupungin musiikkielämässä myös levyjen soittaminen ja äänitteiden muokkaaminen ovat kasvaneet omaksi kulttuurikseen.",
-    "teksti": "Kingstonin synty liittyy Port Royalia tuhonneeseen maanjäristykseen 1600-luvun lopulla. Rannalle asettuneet selviytyjät eivät aloittaneet valmiista kaupungista, vaan telttaleiristä. John Goffen piirtämä ruutukaava loi uuden kaupungin rungon, ja satama liitti sen kaupankäyntiin muualla saarella.\n\nPalisadoesin hiekkakannas erottaa Kingstonin luonnonsataman avoimesta merestä. Sen varrella ovat Port Royal ja Norman Manleyn kansainvälinen lentoasema. Varsinaisessa kaupungissa vanha Downtown ja New Kingston ovat eri keskusta-alueita; sama nimi ei tarkoita yhtä ainoaa katunäkymää.\n\nHope Gardensin historiaan kuuluu viljelykasvien kokeilua ja puutarhatyötä. Musiikkikulttuurissa puolestaan levyt, kaiuttimet ja studioiden miksauspöydät ovat olleet tärkeitä työvälineitä. Kingstonia voi lähestyä sekä rakentajien että äänen tekijöiden kaupunkina: kummassakin työssä olemassa olevasta aineksesta syntyy jotakin uutta."
-  },
-  "kysymykset": [
-    {
-      "q": "Minkä maan pääkaupunki Kingston on?",
-      "options": [
-        "Jamaikan",
-        "Haitin",
-        "Barbadoksen",
-        "Dominican"
-      ],
-      "correct": 0,
-      "level": 1,
-      "hint": "Saari tunnetaan reggaesta ja Blue Mountains -vuorista.",
-      "fact": "Kingston on Jamaikan pääkaupunki saaren kaakkoisrannikolla.",
-      "source": "https://en.wikipedia.org/wiki/Kingston,_Jamaica"
-    },
-    {
-      "q": "Mikä Palisadoes on?",
-      "options": [
-        "Hiekkakannas",
-        "Tulivuorijono",
-        "Sisämaan järvi",
-        "Vuoristosola"
-      ],
-      "correct": 0,
-      "level": 2,
-      "hint": "Tämä maastonmuoto suojaa satamaa mereltä.",
-      "fact": "Palisadoesin hiekkakannas suojaa Kingstonin luonnonsatamaa ja yhdistää Port Royalin muuhun saareen.",
-      "source": "https://en.wikipedia.org/wiki/Kingston,_Jamaica"
-    },
-    {
-      "q": "Kenen kotina Devon House rakennettiin?",
-      "options": [
-        "George Stiebelin",
-        "John Goffen",
-        "Richard Hopen",
-        "Norman Manleyn"
-      ],
-      "correct": 0,
-      "level": 3,
-      "hint": "Omistaja oli Venezuelassa varallisuutta hankkinut jamaikalainen liikemies.",
-      "fact": "Devon House oli George Stiebelin asuintalo; se on myöhemmin restauroitu kotimuseoksi.",
-      "source": "https://en.wikipedia.org/wiki/Devon_House"
-    },
-    {
-      "q": "Mitä jamaikalainen sound system tarkoittaa laitteiston lisäksi?",
-      "options": [
-        "Musiikin esittäjäryhmää",
-        "Rakennuksen puuosia",
-        "Kaupungin bussiverkkoa",
-        "Puutarhan kasvilistaa"
-      ],
-      "correct": 0,
-      "level": 2,
-      "hint": "Mukana voi olla levyjen valitsijoita, ääniteknikoita ja MC-esiintyjiä.",
-      "fact": "Sound system on myös ryhmä, joka soittaa levyjä ja esiintyy niiden ympärillä.",
-      "source": "https://en.wikipedia.org/wiki/Sound_system_(Jamaican)"
-    },
-    {
-      "q": "Mitä dub-miksauksessa tavallisesti korostetaan?",
-      "options": [
-        "Rumpuja ja bassoa",
-        "Viuluja ja oboeta",
-        "Huiluja ja harppua",
-        "Urkuja ja cembaloa"
-      ],
-      "correct": 0,
-      "level": 3,
-      "hint": "Valmiista äänityksestä voidaan häivyttää laulu, jolloin rytmiryhmä pääsee esiin.",
-      "fact": "Dubissa muokataan olemassa olevaa äänitystä, usein poistetaan laulua ja korostetaan rumpuja sekä bassoa.",
-      "source": "https://en.wikipedia.org/wiki/Dub_music"
-    }
-  ],
-  "tiedot": [
-    "Palisadoes on pitkä hiekkakannas, joka suojaa Kingstonin satamaa ja yhdistää Port Royalin sekä Norman Manleyn lentoaseman muuhun saareen.",
-    "Kingstonin ruutukaavan vanhaa ydintä rajasivat North-, East-, West- ja Harbour-kadut.",
-    "Hope Gardensin puutarhassa on kokeiltu viljelykasveja, kuten ananasta, kaakaota, kahvia ja tupakkaa."
-  ],
-  "valokuva": {
-    "tiedosto": "Jamaica Palisadoes Kingston; Harbor View Photo Katinka Zuchowicz Photography DSC 8572-2(2).jpg",
-    "lyhyt": "Kingstonin Palisadoesin rantaa ja Harbor Viewn suunta toukokuussa 2009.",
-    "selite": "Kingstonin Palisadoesin rantaa ja Harbor Viewn suunta toukokuussa 2009.",
-    "lahde": "Katinka Zuchowicz Photography, Commons (CC BY-SA 3.0)",
-    "vuosi": "2009"
-  },
-  "kaupunkilehti": [
-    {
-      "id": "kaupunki",
-      "nimi": "Kingston",
-      "johdanto": "Kingstonin taustalla ovat katastrofista selvinneiden uusi alku, satamakaupungin ruutukaava ja rakentajien oma kädenjälki.",
-      "kansikuvat": [
-        {
-          "tiedosto": "Kingston, Jamaica.JPG",
-          "lyhyt": "Kingstonin kaupunkialue, satamalahti ja Palisadoes avaruusasemalta tammikuussa 2010.",
-          "selite": "Kingstonin kaupunkialue, satamalahti ja Palisadoes avaruusasemalta tammikuussa 2010.",
-          "lahde": "NASA Astronauts, Wikimedia Commons (PD)"
-        },
-        {
-          "tiedosto": "",
-          "lyhyt": "",
-          "selite": "",
-          "lahde": ""
-        },
-        {
-          "tiedosto": "",
-          "lyhyt": "",
-          "selite": "",
-          "lahde": ""
-        }
-      ],
-      "nostot": [
-        {
-          "otsikko": "Kaupungin alku oli telttaleiri",
-          "teksti": "Kingston perustettiin 1600-luvun lopulla, kun maanjäristys oli tuhonnut Port Royalia. Selviytyjät asettuivat aluksi rannalle telttaleiriin. Uuden kaupungin suunnitelman piirsi maanmittari John Goffe, jonka ruutukaavaa rajasivat North-, East-, West- ja Harbour-kadut. Sataman ja saaren sisäosien väliset yhteydet kuuluivat suunnitelman tarkoitukseen. Kingstonin alku ei siis ollut yksi valmis palatsi tai juhlallinen pääkaupungin avaus, vaan ihmisten uusi asuinpaikka ja sille vähitellen rakentunut kaupunkiverkko.",
-          "tiedosto": "Fort Port Royal Jamaica.JPG",
-          "lyhyt": "Port Royalin linnoituksen tiilimuurit kuuluvat Kingstonin satamaseudun historiaan.",
-          "selite": "Port Royalin linnoituksen tiilimuurit kuuluvat Kingstonin satamaseudun historiaan. Valokuva vuodelta 2011.",
-          "lahde": "Raychristofer, Wikimedia Commons (CC BY-SA 4.0)",
-          "wiki": "Kingston, Jamaica"
-        },
-        {
-          "otsikko": "Hiekkakannas sataman suojana",
-          "teksti": "Kingstonin luonnonsataman edessä kulkee Palisadoesin pitkä hiekkakannas. Se yhdistää Port Royalin ja Norman Manleyn kansainvälisen lentoaseman muuhun Jamaikaan ja suojaa satamaa avoimelta mereltä. Kaupungin sijainti avautuu tämän maaston kautta: lentokenttä ei ole keskellä kaupunkiruutuja vaan kapealla rannikkokaistaleella. Kingstonin vanha Downtown on eri paikka kuin uudempi New Kingston. Satama, kannas ja kaupunkikeskukset kuuluvat samaan kokonaisuuteen, mutta niitä ei kannata kuvitella yhdeksi pieneksi rantaraitiksi.",
-          "tiedosto": "",
-          "lyhyt": "",
-          "selite": "",
-          "lahde": "",
-          "wiki": "Kingston, Jamaica"
-        },
-        {
-          "otsikko": "Devon House kertoo noususta",
-          "teksti": "Devon House oli jamaikalaisen liikemiehen George Stiebelin koti. Stiebel hankki varallisuutta Venezuelassa ja palasi Jamaikaan, missä hän sai myös St. Andrew’n alueen korkean Custos-tehtävän. Hänen 1800-luvun lopun asuintalonsa kertoo näin paikallisesta liikemiehestä, ei nimettömästä siirtomaaisännästä. Rakennusta uhkasi myöhemmin purkaminen, mutta Jamaikan valtio osti kiinteistön ja talo restauroitiin. Se toimii kotimuseona ja kansallisena perintökohteena; piha-alueella on myös kauppoja, ravintoloita ja jäätelöä.",
-          "tiedosto": "",
-          "lyhyt": "",
-          "selite": "",
-          "lahde": "",
-          "wiki": "Devon House"
-        },
-        {
-          "otsikko": "Puutarhassa kokeiltiin viljelyä",
-          "teksti": "Hope Gardensin puutarhan taustalla on muutakin kuin puistokävelyä. Alueella toimi kasvien tuonti- ja koeviljelypaikka, jossa kokeiltiin esimerkiksi ananasta, kaakaota, kahvia ja tupakkaa. Varsinaisen kasvitieteellisen puutarhan suunnitteluun osallistui väkeä Englannin Kew Gardensista. Puutarhassa on sekä muualta tuotuja kasveja että Jamaikan omia puita, ja sen tunnettuja osia ovat orkideatalo, palmukäytävä ja lummeallas. Koristepuutarha ja hyötykasvien tutkiminen kuuluvat siis saman paikan historiaan.",
-          "tiedosto": "",
-          "lyhyt": "",
-          "selite": "",
-          "lahde": "",
-          "wiki": "Hope Botanical Gardens"
-        }
-      ],
-      "matkailijalle": {
-        "kuva": {
-          "tiedosto": "",
-          "lyhyt": "",
-          "selite": "",
-          "lahde": ""
-        },
-        "kappale": "Kingstonissa historiallinen Downtown ja uudempi New Kingston ovat eri alueita. Päivän kohteet kannattaa ryhmitellä niiden sijainnin mukaan. Liikkuminen vaatii huolellista turvallisuussuunnittelua: vältä kävelyä ja bussimatkoja pimeällä ja käytä luotettavia, luvallisia kuljetuksia. Devon House ja Hope Gardens tarjoavat näkökulmia rakentamiseen ja puutarhakulttuuriin. Musiikkihistoriaan tutustuminen täydentää kuvaa kaupungista studioiden ja äänentoiston keskuksena.",
-        "artikkeli": {
-          "nimi": "Matkailijan Kingston",
-          "taitto": "opas",
-          "teksti": "Yhdistä satamakaupungin historia puutarhoihin ja musiikin tekemisen paikkoihin.",
-          "nosto": "Downtown, New Kingston ja rannikon kohteet muodostavat eri retkiä; suunnittele kuljetukset etukäteen.",
-          "jaksot": [
-            {
-              "otsikko": "Perille ja liikkeelle",
-              "teksti": "Norman Manleyn kansainvälinen lentoasema sijaitsee Palisadoesin kannaksella. Kingstonin bussiliikenteessä toimii JUTC, ja kaupungissa on sekä tavallisia takseja että määrättyjä reittejä kulkevia yhteistakseja. Valitse luotettava, luvallinen kuljetus ja sovi määränpää sekä hinta ennen lähtöä; vältä kävelyä ja bussimatkoja pimeällä. Downtown ja New Kingston kannattaa käsitellä eri alueina päivän suunnitelmassa.",
-              "kuva": {
-                "tiedosto": "",
-                "lyhyt": "",
-                "selite": "",
-                "lahde": ""
-              }
-            },
-            {
-              "otsikko": "Downtown ja sataman puoli",
-              "teksti": "Vanhan Kingstonin ruutukaava kertoo satamakaupungin suunnittelusta. North-, East-, West- ja Harbour-kadut liittyvät sen historialliseen rajaukseen. Palisadoesin hiekkakannas puolestaan selittää luonnonsataman suojaa ja Port Royalin sijaintia. Näiden paikkojen välillä on oikeita siirtymiä: niitä ei kannata suunnitella yhdeksi lyhyeksi keskustakävelyksi.",
-              "kuva": {
-                "tiedosto": "",
-                "lyhyt": "",
-                "selite": "",
-                "lahde": ""
-              }
-            },
-            {
-              "otsikko": "Talo ja puutarha",
-              "teksti": "Devon House esittelee George Stiebelin asuinympäristöä, ja sen pihalla on myös kauppoja ja ruokapaikkoja. Hope Gardensissa kasvien koeviljelyn historia liittyy puutarhakulttuuriin. Molemmat ovat kaupungin tunnettuja tutustumiskohteita, mutta ajantasaiset käyntimahdollisuudet ja kuljetus kannattaa selvittää ennen lähtöä.",
-              "kuva": {
-                "tiedosto": "",
-                "lyhyt": "",
-                "selite": "",
-                "lahde": ""
-              }
-            },
-            {
-              "otsikko": "Mitä täällä syödään",
-              "teksti": "Kingstonin ruokapaikoissa voi maistaa jerk-maustettua kanaa, riisiä ja papuja sekä patties-leivonnaisia. Ackee and saltfish yhdistää ackeen ja suolakalan. Devon Housen pihapiiri tunnetaan myös jäätelöstä, ja kaupungissa on sekä paikallisia pikaruokapaikkoja että ravintoloita. Ruoan nimet auttavat lukemaan ruokalistaa; yksi kaupungin maku ei edusta kaikkia keittiöitä.",
-              "kuva": {
-                "tiedosto": "",
-                "lyhyt": "",
-                "selite": "",
-                "lahde": ""
-              }
-            },
-            {
-              "otsikko": "Milloin kannattaa tulla",
-              "teksti": "Kingstonin ilmasto on trooppinen, ja siinä erottuvat kuivempi ja sateisempi kausi. Tropiikin hurrikaanikaudella voimakkaat sääilmiöt voivat vaikuttaa matkustamiseen. Suunnittele ulkoilukohteet joustavasti ja tarkista paikallinen säätilanne lähellä lähtöä. Vuoriston ja rannikon olosuhteita ei pidä pitää automaattisesti samanlaisina.",
-              "kuva": {
-                "tiedosto": "",
-                "lyhyt": "",
-                "selite": "",
-                "lahde": ""
-              }
-            }
-          ],
-          "matkailu": {
-            "parasta": [
-              {
-                "mita": "Devon House",
-                "tahdet": 3,
-                "selite": "Vanha asuintalo kertoo Kingstonin kauppias- ja rakennushistoriasta."
-              },
-              {
-                "mita": "Hope Gardens",
-                "tahdet": 3,
-                "selite": "Puutarhan taustalla on sekä kasvien kokeilua että puutarhakulttuuria."
-              },
-              {
-                "mita": "Historiallinen Downtown",
-                "tahdet": 2,
-                "selite": "Vanhan ytimen ruutukaava liittyy satamakaupungin kasvuun."
-              },
-              {
-                "mita": "Palisadoes ja satamamaantiede",
-                "tahdet": 2,
-                "selite": "Pitkä hiekkakannas selittää sataman ja lentoaseman sijainnin."
-              },
-              {
-                "mita": "Musiikin tuotantohistoria",
-                "tahdet": 3,
-                "selite": "Sound system -kulttuuri ja studiotyö ovat osa Kingstonin musiikkiperintöä."
-              }
-            ],
-            "hyvaTietaa": [
-              {
-                "otsikko": "Useita keskuksia",
-                "teksti": "Downtown ja New Kingston ovat eri alueita, joten retkiä ei kannata suunnitella yhden keskustakävelyn varaan."
-              },
-              {
-                "otsikko": "Sovi kuljetus etukäteen",
-                "teksti": "Käytä luotettavia, luvallisia kuljetuksia. Vältä kävelyä ja bussimatkoja pimeällä ja selvitä kohteen saavutettavuus ennen lähtöä."
-              },
-              {
-                "otsikko": "Kieli ja valuutta",
-                "teksti": "Virallinen kieli on englanti, arjessa puhutaan laajasti jamaikanpatois’ta ja valuutta on Jamaikan dollari."
-              }
-            ]
-          },
-          "lahde": "Wikipedia"
-        }
-      }
-    },
-    {
-      "id": "musiikki",
-      "nimi": "Kaiuttimista miksauspöytään",
-      "johdanto": "Kingstonin musiikkihistoriaan kuuluu myös se, miten levy soi ja miten äänitteestä rakennetaan uusi versio.",
-      "tehtava": {
-        "kysymys": "Miten rocksteadyn tempoa verrataan yleensä skan tempoon?",
-        "vaihtoehdot": [
-          "Se on hitaampi",
-          "Se on nopeampi",
-          "Tempo puuttuu",
-          "Se on aina sama"
-        ],
-        "oikea": 0,
-        "fakta": "Rocksteady rauhoitti skan vauhtia, ja samalla laululle ja bassolle tuli uudenlaista tilaa."
-      },
-      "nostot": [
-        {
-          "otsikko": "Kaiutin ei soita yksin",
-          "teksti": "Jamaikalainen sound system tarkoittaa laitteiston lisäksi ihmisten ryhmää: levyjen soittajia, ääniteknikoita ja mikrofonin ääressä esiintyviä MC-hahmoja. Kingstonissa järjestettiin katutansseja kuljettamalla paikalle levysoittimet, generaattori ja suuret kaiuttimet. Aluksi ohjelmistoon kuului amerikkalaista rhythm and bluesia, myöhemmin yhä enemmän paikallista musiikkia. Selector valitsee soitettavat levyt, kun taas deejay voi puhua musiikin päälle. Samassa illassa tarvitaan siis sekä sopiva levy että taito saada se elämään yleisölle.",
-          "tiedosto": "",
-          "lyhyt": "",
-          "selite": "",
-          "lahde": "",
-          "wiki": "Sound system (Jamaican)"
-        },
-        {
-          "otsikko": "Ska löysi oman takapotkunsa",
-          "teksti": "Ska yhdisti Jamaikan mentoa amerikkalaiseen jazziin ja rhythm and bluesiin. Sen tunnusmerkkejä ovat liikkuva bassolinja ja väli-iskuille osuvat painotukset, joita kitara ja piano voivat korostaa. Kingstonin studioissa, kuten Studio Onessa ja Federal Recordsissa, tehtiin varhaisia ska-äänityksiä. Sound system -toimijoista tuli myös omien levyjen tuottajia, joten tanssi-illan musiikkia ei enää vain tuotu ulkomailta. Syntyi paikallista ohjelmistoa, jonka rytmi kulki myöhemmin myös Britanniaan ja muihin maihin.",
-          "tiedosto": "",
-          "lyhyt": "",
-          "selite": "",
-          "lahde": "",
-          "wiki": "Ska"
-        },
-        {
-          "otsikko": "Rocksteady rauhoitti vauhtia",
-          "teksti": "Skan jälkeen kehittynyt rocksteady kulki hitaammassa tempossa. Pienemmät yhtyeet ja rauhallisempi vauhti nostivat bassolinjaa entistä enemmän esiin; kitara saattoi kaksintaa sitä vaimennetuilla sävelillä. Laulussa kuuluivat soul-vaikutteet ja lauluryhmien harmoniat, ja monet kappaleet käsittelivät rakkautta. Studio One ja Treasure Isle olivat tärkeitä levymerkkejä. Laulun, kitaran ja basson väliset suhteet saivat uusia painotuksia, joista tuli osa myöhempää jamaikalaista soundia.",
-          "tiedosto": "",
-          "lyhyt": "",
-          "selite": "",
-          "lahde": "",
-          "wiki": "Rocksteady"
-        },
-        {
-          "otsikko": "Miksauspöydästä tuli soitin",
-          "teksti": "Dubissa valmis äänitys muuttuu uuden työn raaka-aineeksi. Laulu voidaan poistaa kokonaan tai osittain, rumpuja ja bassoa korostaa sekä ääniä tuoda mukaan ja häivyttää pois. Kaiku ja viive muuttavat niiden tilaa ja kestoa. Kingstonin studiokulttuurissa esimerkiksi King Tubby ja Lee ”Scratch” Perry käyttivät miksauspöytää soittimen tavoin. Sound system -illat puolestaan suosivat omia, muista erottuvia versioita. Uutta musiikkia syntyi siis myös järjestämällä ja käsittelemällä jo äänitettyjä osia, ilman että koko yhtye soitti kaiken uudelleen.",
-          "tiedosto": "",
-          "lyhyt": "",
-          "selite": "",
-          "lahde": "",
-          "wiki": "Dub music"
-        }
-      ]
-    }
-  ],
-  "kohdekartta": {
-    "numeroympyrat": true,
-    "esittely": "Kingstonin historia kulkee satamakaupungin ruutukaavasta asuintaloihin ja puutarhoihin.",
-    "rajat": null,
-    "kohteet": []
-  },
-  "nahtavyydet": {},
-  "saatiedot": null,
-  "ehdotukset": {
-    "lentoasema": "Norman Manley International Airport (KIN)",
-    "huomiot": [
-      "C on tekstiluonnos. B-kuvat, kohdekohtaiset karttapisteet ja tekijäketjut sekä sääaineiston primääriauditointi ovat avoinna. D/E/F eivät ole tehtyjä.",
-      "Väestölukua ei käytetä: Kingstonin parish, Kingston–St. Andrew ja kaupunkialue ovat eri laajuuksia."
-    ]
+  "name": "Kingston",
+  "wiki": "Kingston",
+  "ambience": "kaupunki",
+  "pallo": {
+   "lat": 17.9714,
+   "lon": -76.7931
   }
+ },
+ "artikkeli": {
+  "intro": "Kingston on Jamaikan pääkaupunki saaren kaakkoisrannikolla, Blue Mountains -vuorten edustalla. Sen luonnonsatamaa suojaa **Palisadoesin pitkä hiekkakannas**, jota pitkin ovat yhteydessä myös Port Royal ja kansainvälinen lentoasema. Kaupunki perustettiin 1600-luvun lopulla Port Royalia tuhonneen maanjäristyksen jälkeen. Alkuun sen rannalla asui katastrofista selvinneitä ihmisiä telttaleirissä.\n\nKasvava kaupunki sai **ruutukaavan**, jonka katujen nimet North, East, West ja Harbour kuvaavat vanhan ytimen rajoja. Isoisän matkavuonna 1873 Kingston oli Britannian siirtomaahan kuulunut satama- ja hallintokaupunki. Keskusalueeseen kuuluvat nykyään historiallinen Downtown ja uudempi New Kingston. Devon House ja Hope Gardens kertovat toisenlaisesta Kingstonista: vanhoista asuinalueista ja puutarhoista. Kaupungin musiikkielämässä myös levyjen soittaminen ja äänitteiden muokkaaminen ovat kasvaneet omaksi kulttuurikseen.",
+  "teksti": "Kingstonin synty liittyy Port Royalia tuhonneeseen maanjäristykseen 1600-luvun lopulla. Rannalle asettuneet selviytyjät eivät aloittaneet valmiista kaupungista, vaan telttaleiristä. John Goffen piirtämä ruutukaava loi uuden kaupungin rungon, ja satama liitti sen kaupankäyntiin muualla saarella.\n\nPalisadoesin hiekkakannas erottaa Kingstonin luonnonsataman avoimesta merestä. Sen varrella ovat Port Royal ja Norman Manleyn kansainvälinen lentoasema. Varsinaisessa kaupungissa vanha Downtown ja New Kingston ovat eri keskusta-alueita; keskustan palvelut jakautuvat molemmille alueille.\n\nHope Gardensin historiaan kuuluu viljelykasvien kokeilua ja puutarhatyötä. Musiikkikulttuurissa puolestaan levyt, kaiuttimet ja studioiden miksauspöydät ovat olleet tärkeitä työvälineitä. Dubissa valmiita äänitteitä muokataan poistamalla laulua ja lisäämällä kaikua sekä viivettä."
+ },
+ "kysymykset": [
+  {
+   "q": "Minkä maan pääkaupunki Kingston on?",
+   "options": [
+    "Jamaikan",
+    "Haitin",
+    "Barbadoksen",
+    "Dominican"
+   ],
+   "correct": 0,
+   "level": 1,
+   "hint": "Saari tunnetaan reggaesta ja Blue Mountains -vuorista.",
+   "fact": "Kingston on Jamaikan pääkaupunki saaren kaakkoisrannikolla.",
+   "source": "https://en.wikipedia.org/wiki/Kingston,_Jamaica"
+  },
+  {
+   "q": "Mikä Palisadoes on?",
+   "options": [
+    "Hiekkakannas",
+    "Tulivuorijono",
+    "Sisämaan järvi",
+    "Vuoristosola"
+   ],
+   "correct": 0,
+   "level": 2,
+   "hint": "Tämä maastonmuoto suojaa satamaa mereltä.",
+   "fact": "Palisadoesin hiekkakannas suojaa Kingstonin luonnonsatamaa ja yhdistää Port Royalin muuhun saareen.",
+   "source": "https://en.wikipedia.org/wiki/Kingston,_Jamaica"
+  },
+  {
+   "q": "Kenen kotina Devon House rakennettiin?",
+   "options": [
+    "George Stiebelin",
+    "John Goffen",
+    "Richard Hopen",
+    "Norman Manleyn"
+   ],
+   "correct": 0,
+   "level": 3,
+   "hint": "Omistaja oli Venezuelassa varallisuutta hankkinut jamaikalainen liikemies.",
+   "fact": "Devon House oli George Stiebelin asuintalo; se on myöhemmin restauroitu kotimuseoksi.",
+   "source": "https://en.wikipedia.org/wiki/Devon_House"
+  },
+  {
+   "q": "Mitä jamaikalainen sound system tarkoittaa laitteiston lisäksi?",
+   "options": [
+    "Musiikin esittäjäryhmää",
+    "Radiokanavien verkostoa",
+    "Äänitysstudioiden ketjua",
+    "Levy-yhtiöiden liittoa"
+   ],
+   "correct": 0,
+   "level": 2,
+   "hint": "Ilmiö syntyi tanssi-iltojen ympärille.",
+   "fact": "Sound system on myös ryhmä, joka soittaa levyjä ja esiintyy niiden ympärillä.",
+   "source": "https://en.wikipedia.org/wiki/Sound_system_(Jamaican)"
+  },
+  {
+   "q": "Mitä dub-miksauksessa tavallisesti korostetaan?",
+   "options": [
+    "Rumpuja ja bassoa",
+    "Viuluja ja oboeta",
+    "Huiluja ja harppua",
+    "Urkuja ja cembaloa"
+   ],
+   "correct": 0,
+   "level": 3,
+   "hint": "Valmiista äänityksestä voidaan häivyttää laulu, jolloin rytmiryhmä pääsee esiin.",
+   "fact": "Dubissa muokataan olemassa olevaa äänitystä, usein poistetaan laulua ja korostetaan rumpuja sekä bassoa.",
+   "source": "https://en.wikipedia.org/wiki/Dub_music"
+  }
+ ],
+ "tiedot": [
+  "Palisadoes on pitkä hiekkakannas, joka suojaa Kingstonin satamaa ja yhdistää Port Royalin sekä Norman Manleyn lentoaseman muuhun saareen.",
+  "Kingstonin ruutukaavan vanhaa ydintä rajasivat North-, East-, West- ja Harbour-kadut.",
+  "Hope Gardensin puutarhassa on kokeiltu viljelykasveja, kuten ananasta, kaakaota, kahvia ja tupakkaa."
+ ],
+ "valokuva": {
+  "tiedosto": "Jamaica Palisadoes Kingston; Harbor View Photo Katinka Zuchowicz Photography DSC 8572-2(2).jpg",
+  "lyhyt": "Palisadoesin kivikkoista rantaa Kingstonissa.",
+  "selite": "Etualalla on kivikkoista rantaa ja vettä; lahden toisella puolella näkyy Harbor Viewn suunta.",
+  "lahde": "Katinka Zuchowicz Photography, Commons (CC BY-SA 3.0)",
+  "vuosi": "2009"
+ },
+ "kaupunkilehti": [
+  {
+   "id": "kaupunki",
+   "nimi": "Kingston",
+   "johdanto": "Kingstonin taustalla ovat katastrofista selvinneiden uusi alku, satamakaupungin ruutukaava ja rakentajien oma kädenjälki.",
+   "kansikuvat": [
+    {
+     "tiedosto": "Kingston, Jamaica.JPG",
+     "lyhyt": "Kingstonin satamalahti ja Palisadoes avaruusasemalta.",
+     "selite": "Kingstonin kaupunkialue levittäytyy lahden taakse. Kapea Palisadoesin kannas erottaa satamalahden avoimesta merestä tammikuussa 2010 otetussa kuvassa.",
+     "lahde": "NASA Astronauts, Wikimedia Commons (PD)"
+    },
+    {
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": ""
+    },
+    {
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": ""
+    }
+   ],
+   "nostot": [
+    {
+     "otsikko": "Kaupungin alku oli telttaleiri",
+     "teksti": "Kingston perustettiin 1600-luvun lopulla, kun maanjäristys oli tuhonnut Port Royalia. Selviytyjät asettuivat aluksi rannalle telttaleiriin. Uuden kaupungin suunnitelman piirsi maanmittari John Goffe, jonka ruutukaavaa rajasivat North-, East-, West- ja Harbour-kadut. Sataman ja saaren sisäosien väliset yhteydet kuuluivat suunnitelman tarkoitukseen. Telttaleiristä kasvoi satamakaupunki. Sen nykyinen vanha keskusta tunnetaan nimellä Downtown, kun taas New Kingston on myöhemmin kehittynyt keskusta-alue.",
+     "tiedosto": "Fort Port Royal Jamaica.JPG",
+     "lyhyt": "Port Royalin linnoituksen tiilimuuria.",
+     "selite": "Tiilimuurin kaariaukot avautuvat ruohikkoiseen etualaan Port Royalissa vuonna 2011 otetussa kuvassa.",
+     "lahde": "Raychristofer, Wikimedia Commons (CC BY-SA 4.0)",
+     "wiki": "Kingston, Jamaica"
+    },
+    {
+     "otsikko": "Hiekkakannas sataman suojana",
+     "teksti": "Kingstonin luonnonsataman edessä kulkee Palisadoesin pitkä hiekkakannas. Se yhdistää Port Royalin ja Norman Manleyn kansainvälisen lentoaseman muuhun Jamaikaan ja suojaa satamaa avoimelta mereltä. Kaupungin sijainti avautuu tämän maaston kautta: lentokenttä ei ole keskellä kaupunkiruutuja vaan kapealla rannikkokaistaleella. Kingstonin vanha Downtown on eri paikka kuin uudempi New Kingston. Kannaksella oleva lentoasema ja kaupungin kaksi keskusta-aluetta ovat eri pysähdyksiä Kingstonin kierroksella.",
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": "",
+     "wiki": "Kingston, Jamaica"
+    },
+    {
+     "otsikko": "Devon House kertoo noususta",
+     "teksti": "Devon House oli jamaikalaisen liikemiehen George Stiebelin koti. Stiebel hankki varallisuutta Venezuelassa ja palasi Jamaikaan, missä hän sai myös St. Andrew’n alueen korkean Custos-tehtävän. Hänen 1800-luvun lopun asuintalonsa kertoo näin paikallisesta liikemiehestä, ei nimettömästä siirtomaaisännästä. Rakennusta uhkasi myöhemmin purkaminen, mutta Jamaikan valtio osti kiinteistön ja talo restauroitiin. Se toimii kotimuseona ja kansallisena perintökohteena; piha-alueella on myös kauppoja, ravintoloita ja jäätelöä.",
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": "",
+     "wiki": "Devon House"
+    },
+    {
+     "otsikko": "Puutarhassa kokeiltiin viljelyä",
+     "teksti": "Hope Gardensin puutarhan taustalla on muutakin kuin puistokävelyä. Alueella toimi kasvien tuonti- ja koeviljelypaikka, jossa kokeiltiin esimerkiksi ananasta, kaakaota, kahvia ja tupakkaa. Varsinaisen kasvitieteellisen puutarhan suunnitteluun osallistui väkeä Englannin Kew Gardensista. Puutarhassa on sekä muualta tuotuja kasveja että Jamaikan omia puita, ja sen tunnettuja osia ovat orkideatalo, palmukäytävä ja lummeallas. Koristepuutarha ja hyötykasvien tutkiminen kuuluvat siis saman paikan historiaan.",
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": "",
+     "wiki": "Hope Botanical Gardens"
+    }
+   ],
+   "matkailijalle": {
+    "kuva": {
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": ""
+    },
+    "kappale": "Kingstonissa historiallinen Downtown ja uudempi New Kingston ovat eri alueita. Päivän kohteet kannattaa ryhmitellä niiden sijainnin mukaan. Devon House ja Hope Gardens tarjoavat näkökulmia rakentamiseen ja puutarhakulttuuriin. Musiikkihistoriaan tutustuminen täydentää kuvaa kaupungista studioiden ja äänentoiston keskuksena.",
+    "artikkeli": {
+     "nimi": "Matkailijan Kingston",
+     "taitto": "opas",
+     "teksti": "Yhdistä satamakaupungin historia puutarhoihin ja musiikin tekemisen paikkoihin.",
+     "nosto": "Downtown, New Kingston ja rannikon kohteet muodostavat eri retkiä; suunnittele kuljetukset etukäteen.",
+     "jaksot": [
+      {
+       "otsikko": "Perille ja liikkeelle",
+       "teksti": "Norman Manleyn kansainvälinen lentoasema sijaitsee Palisadoesin kannaksella. Kingstonin bussiliikennettä hoitaa Jamaica Urban Transit Company eli JUTC, ja kaupungissa on sekä tavallisia takseja että määrättyjä reittejä kulkevia yhteistakseja. Downtown ja New Kingston kannattaa käsitellä eri alueina päivän suunnitelmassa.",
+       "kuva": {
+        "tiedosto": "",
+        "lyhyt": "",
+        "selite": "",
+        "lahde": ""
+       }
+      },
+      {
+       "otsikko": "Downtown ja sataman puoli",
+       "teksti": "Vanhan Kingstonin ruutukaava kertoo satamakaupungin suunnittelusta. North-, East-, West- ja Harbour-kadut liittyvät sen historialliseen rajaukseen. Palisadoesin hiekkakannas puolestaan selittää luonnonsataman suojaa ja Port Royalin sijaintia. Näiden paikkojen välillä on oikeita siirtymiä: niitä ei kannata suunnitella yhdeksi lyhyeksi keskustakävelyksi.",
+       "kuva": {
+        "tiedosto": "",
+        "lyhyt": "",
+        "selite": "",
+        "lahde": ""
+       }
+      },
+      {
+       "otsikko": "Talo ja puutarha",
+       "teksti": "Devon House esittelee George Stiebelin asuinympäristöä, ja sen pihalla on myös kauppoja ja ruokapaikkoja. Hope Gardensissa kasvien koeviljelyn historia liittyy puutarhakulttuuriin. Molemmat ovat Kingstonin musiikkihistoriaan liittyviä käyntikohteita.",
+       "kuva": {
+        "tiedosto": "",
+        "lyhyt": "",
+        "selite": "",
+        "lahde": ""
+       }
+      },
+      {
+       "otsikko": "Mitä täällä syödään",
+       "teksti": "Kingstonin ruokapaikoissa voi maistaa jerk-maustettua kanaa, riisiä ja papuja sekä patties-leivonnaisia. Ackee and saltfish yhdistää ackeen ja suolakalan. Devon Housen pihapiiri tunnetaan myös jäätelöstä, ja kaupungissa on sekä paikallisia pikaruokapaikkoja että ravintoloita. Jerk tarkoittaa maustamis- ja kypsentämistapaa, patties puolestaan täytettyjä taikinaleivonnaisia.",
+       "kuva": {
+        "tiedosto": "",
+        "lyhyt": "",
+        "selite": "",
+        "lahde": ""
+       }
+      },
+      {
+       "otsikko": "Milloin kannattaa tulla",
+       "teksti": "Kingstonin ilmasto on trooppinen, ja siinä erottuvat kuivempi ja sateisempi kausi. Tropiikin hurrikaanikaudella voimakkaat sääilmiöt voivat vaikuttaa matkustamiseen. Kuivempi kausi ja sateisempi kausi vaikuttavat ulkoiluun. Vuoriston ja rannikon olosuhteita ei pidä pitää automaattisesti samanlaisina.",
+       "kuva": {
+        "tiedosto": "",
+        "lyhyt": "",
+        "selite": "",
+        "lahde": ""
+       }
+      }
+     ],
+     "matkailu": {
+      "parasta": [
+       {
+        "mita": "Devon House",
+        "tahdet": 3,
+        "selite": "Vanha asuintalo kertoo Kingstonin kauppias- ja rakennushistoriasta."
+       },
+       {
+        "mita": "Hope Gardens",
+        "tahdet": 3,
+        "selite": "Puutarhan taustalla on sekä kasvien kokeilua että puutarhakulttuuria."
+       },
+       {
+        "mita": "Historiallinen Downtown",
+        "tahdet": 2,
+        "selite": "Vanhan ytimen ruutukaava liittyy satamakaupungin kasvuun."
+       },
+       {
+        "mita": "Palisadoes ja satamamaantiede",
+        "tahdet": 2,
+        "selite": "Pitkä hiekkakannas selittää sataman ja lentoaseman sijainnin."
+       },
+       {
+        "mita": "Musiikin tuotantohistoria",
+        "tahdet": 3,
+        "selite": "Sound system -kulttuuri ja studiotyö ovat osa Kingstonin musiikkiperintöä."
+       }
+      ],
+      "hyvaTietaa": [
+       {
+        "otsikko": "Useita keskuksia",
+        "teksti": "Downtown ja New Kingston ovat eri alueita, joten retkiä ei kannata suunnitella yhden keskustakävelyn varaan."
+       },
+       {
+        "otsikko": "Sovi kuljetus etukäteen",
+        "teksti": "Tarkista ennen matkaa ajankohtainen matkustustiedote, säätilanne, kohteiden käyntimahdollisuudet ja kuljetukset. Vältä kävelyä ja bussimatkoja pimeällä."
+       },
+       {
+        "otsikko": "Kieli ja valuutta",
+        "teksti": "Virallinen kieli on englanti, arjessa puhutaan laajasti jamaikanpatois’ta ja valuutta on Jamaikan dollari."
+       }
+      ]
+     },
+     "lahde": "Wikipedia"
+    }
+   }
+  },
+  {
+   "id": "musiikki",
+   "nimi": "Kaiuttimista miksauspöytään",
+   "johdanto": "Kingstonin musiikkihistoriaan kuuluu myös se, miten levy soi ja miten äänitteestä rakennetaan uusi versio.",
+   "tehtava": {
+    "kysymys": "Miten rocksteadyn tempoa verrataan yleensä skan tempoon?",
+    "vaihtoehdot": [
+     "Se on hitaampi",
+     "Se on nopeampi",
+     "Se vaihtelee kappaleen sisällä",
+     "Se on yleensä sama"
+    ],
+    "oikea": 0,
+    "fakta": "Rocksteady rauhoitti skan vauhtia, ja samalla laululle ja bassolle tuli uudenlaista tilaa."
+   },
+   "nostot": [
+    {
+     "otsikko": "Kaiutin ei soita yksin",
+     "teksti": "Jamaikalainen sound system tarkoittaa laitteiston lisäksi ihmisten ryhmää: levyjen soittajia, ääniteknikoita ja mikrofonin ääressä esiintyviä juontajia ja deejay-artisteja. Kingstonissa järjestettiin katutansseja kuljettamalla paikalle levysoittimet, generaattori ja suuret kaiuttimet. Aluksi ohjelmistoon kuului amerikkalaista rhythm and bluesia, myöhemmin yhä enemmän paikallista musiikkia. Selector valitsee soitettavat levyt, kun taas deejay voi puhua musiikin päälle. Samassa illassa tarvitaan siis sekä sopiva levy että taito saada se elämään yleisölle.",
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": "",
+     "wiki": "Sound system (Jamaican)"
+    },
+    {
+     "otsikko": "Ska löysi oman takapotkunsa",
+     "teksti": "Ska yhdisti Jamaikan mentoa amerikkalaiseen jazziin ja rhythm and bluesiin. Sen tunnusmerkkejä ovat liikkuva bassolinja ja väli-iskuille osuvat painotukset, joita kitara ja piano voivat korostaa. Kingstonin studioissa, kuten Studio Onessa ja Federal Recordsissa, tehtiin varhaisia ska-äänityksiä. Sound system -toimijoista tuli myös omien levyjen tuottajia, joten tanssi-illan musiikkia ei enää vain tuotu ulkomailta. Syntyi paikallista ohjelmistoa, jonka rytmi kulki myöhemmin myös Britanniaan ja muihin maihin.",
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": "",
+     "wiki": "Ska"
+    },
+    {
+     "otsikko": "Rocksteady rauhoitti vauhtia",
+     "teksti": "Skan jälkeen kehittynyt rocksteady kulki hitaammassa tempossa. Pienemmät yhtyeet ja rauhallisempi vauhti nostivat bassolinjaa entistä enemmän esiin; kitara saattoi kaksintaa sitä vaimennetuilla sävelillä. Laulussa kuuluivat soul-vaikutteet ja lauluryhmien harmoniat, ja monet kappaleet käsittelivät rakkautta. Studio One ja Treasure Isle olivat tärkeitä levymerkkejä. Laulun, kitaran ja basson väliset suhteet saivat uusia painotuksia, joista tuli osa myöhempää jamaikalaista soundia.",
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": "",
+     "wiki": "Rocksteady"
+    },
+    {
+     "otsikko": "Miksauspöydästä tuli soitin",
+     "teksti": "Dubissa valmis äänitys muuttuu uuden työn raaka-aineeksi. Laulu voidaan poistaa kokonaan tai osittain, rumpuja ja bassoa korostaa sekä ääniä tuoda mukaan ja häivyttää pois. Kaiku ja viive muuttavat niiden tilaa ja kestoa. Kingstonin studiokulttuurissa esimerkiksi King Tubby ja Lee ”Scratch” Perry käyttivät miksauspöytää soittimen tavoin. Sound system -illat puolestaan suosivat omia, muista erottuvia versioita. Uutta musiikkia syntyi siis myös järjestämällä ja käsittelemällä jo äänitettyjä osia, ilman että koko yhtye soitti kaiken uudelleen.",
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": "",
+     "wiki": "Dub music"
+    }
+   ]
+  }
+ ],
+ "kohdekartta": {
+  "numeroympyrat": true,
+  "esittely": "Kingstonin historia kulkee satamakaupungin ruutukaavasta asuintaloihin ja puutarhoihin.",
+  "rajat": null,
+  "kohteet": []
+ },
+ "nahtavyydet": {},
+ "saatiedot": null,
+ "ehdotukset": {
+  "lentoasema": "Norman Manley International Airport (KIN)",
+  "huomiot": [
+   "C on tekstiluonnos. B-kuvat, kohdekohtaiset karttapisteet ja tekijäketjut sekä sääaineiston primääriauditointi ovat avoinna. D/E/F eivät ole tehtyjä.",
+   "Väestölukua ei käytetä: Kingstonin parish, Kingston–St. Andrew ja kaupunkialue ovat eri laajuuksia."
+  ]
+ }
 }

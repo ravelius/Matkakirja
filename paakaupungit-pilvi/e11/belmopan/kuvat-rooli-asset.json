@@ -3,7 +3,7 @@
   "era": "e11",
   "city": "belmopan",
   "authorization": "hyväksyn kaikki tekemäsi kuvat. toimita ne claudelle. claudelta saat uusia ohjeita jatkoa varten",
-  "sourceContentAfterSHA256": "c7c34dfc84a3c5e3d1550f023c2fc6a117730992fc289df990de8e74585f0373",
+  "sourceContentAfterSHA256": "a4d2a55699443c149d77a0adb3818898bf35118e9497908f7886f82ceff82ae4",
   "assets": [
     {
       "era": "e11",
@@ -25,10 +25,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/belmopan/belmopan-traveler-20261012-v1-cd79b1-ee58670ea15d.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva trooppisen metsän kasvillisuudesta, ei tietyn puistopolun valokuva.",
-        "lyhyt": "Havainnekuva trooppisen metsän kasvillisuudesta, ei tietyn puistopolun valokuva."
+        "selite": "Havainnekuva trooppisen metsän kasvillisuudesta, ei tietyn puistopolun valokuva."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -36,10 +36,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/belmopan/belmopan-traveler-20261012-v1-cd79b1-ee58670ea15d.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva trooppisen metsän kasvillisuudesta, ei tietyn puistopolun valokuva.",
-        "lyhyt": "Havainnekuva trooppisen metsän kasvillisuudesta, ei tietyn puistopolun valokuva."
+        "selite": "Havainnekuva trooppisen metsän kasvillisuudesta, ei tietyn puistopolun valokuva."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -53,10 +53,10 @@
         1536
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/belmopan/sisalto.json",
-      "sourceContentSHA256": "c7c34dfc84a3c5e3d1550f023c2fc6a117730992fc289df990de8e74585f0373",
+      "sourceContentSHA256": "a4d2a55699443c149d77a0adb3818898bf35118e9497908f7886f82ceff82ae4",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "17f8c1339cfded23d5f618792615df2eb0223227305b63d30b9f325af9c40a09",
+        "semanticContextSHA256": "6e30bd8205f1cd0e251f57106ff710d266ac0961643352258bc3cb96dfd665fa",
         "subjectTitle": "Matkailijalle",
         "targetState": "existing-target"
       },
@@ -480,9 +480,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -501,17 +501,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "c7c34dfc84a3c5e3d1550f023c2fc6a117730992fc289df990de8e74585f0373",
+      "sourceContentAfterSHA256": "a4d2a55699443c149d77a0adb3818898bf35118e9497908f7886f82ceff82ae4",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "17f8c1339cfded23d5f618792615df2eb0223227305b63d30b9f325af9c40a09",
+      "contextAfterSHA256": "6e30bd8205f1cd0e251f57106ff710d266ac0961643352258bc3cb96dfd665fa",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "c7c34dfc84a3c5e3d1550f023c2fc6a117730992fc289df990de8e74585f0373",
+        "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "contextAfterSHA256": "17f8c1339cfded23d5f618792615df2eb0223227305b63d30b9f325af9c40a09",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+          "semanticContextSHA256": "17f8c1339cfded23d5f618792615df2eb0223227305b63d30b9f325af9c40a09",
+          "subjectTitle": "Matkailijalle",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "a4d2a55699443c149d77a0adb3818898bf35118e9497908f7886f82ceff82ae4",
+        "sameImageNativeSHA256": "ee58670ea15d79ba1b257a08a5032dc396b6d0d413279e883dd9d91a46880f31",
+        "sameImageExportSHA256": "8444fe9e8d8195b60fb709ca6d08c058732c825fb967cf544fa872812cf04f12",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e11",
@@ -536,10 +557,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/belmopan/belmopan-o4-20261012-v1-2a160c-b94023d9a5c8.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva torilla myytävistä kasviksista, ei valokuva Belmopanin torista.",
-        "lyhyt": "Havainnekuva torilla myytävistä kasviksista, ei valokuva Belmopanin torista."
+        "selite": "Havainnekuva torilla myytävistä kasviksista, ei valokuva Belmopanin torista."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -547,10 +568,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/belmopan/belmopan-o4-20261012-v1-2a160c-b94023d9a5c8.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva torilla myytävistä kasviksista, ei valokuva Belmopanin torista.",
-        "lyhyt": "Havainnekuva torilla myytävistä kasviksista, ei valokuva Belmopanin torista."
+        "selite": "Havainnekuva torilla myytävistä kasviksista, ei valokuva Belmopanin torista."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -564,10 +585,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/belmopan/sisalto.json",
-      "sourceContentSHA256": "c7c34dfc84a3c5e3d1550f023c2fc6a117730992fc289df990de8e74585f0373",
+      "sourceContentSHA256": "a4d2a55699443c149d77a0adb3818898bf35118e9497908f7886f82ceff82ae4",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "9d6dacfa4ac4356db104ee0331e5a4787c691f6c9266d33ff1d1839fb079794d",
+        "semanticContextSHA256": "f3919c3a9f16b1efc51c0d3fd2340c3d64777293d3acd5af61e4a358e6ba928b",
         "subjectTitle": "Mitä täällä syödään",
         "targetState": "existing-target"
       },
@@ -781,9 +802,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -802,17 +823,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "c7c34dfc84a3c5e3d1550f023c2fc6a117730992fc289df990de8e74585f0373",
+      "sourceContentAfterSHA256": "a4d2a55699443c149d77a0adb3818898bf35118e9497908f7886f82ceff82ae4",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "9d6dacfa4ac4356db104ee0331e5a4787c691f6c9266d33ff1d1839fb079794d",
+      "contextAfterSHA256": "f3919c3a9f16b1efc51c0d3fd2340c3d64777293d3acd5af61e4a358e6ba928b",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "c7c34dfc84a3c5e3d1550f023c2fc6a117730992fc289df990de8e74585f0373",
+        "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "contextAfterSHA256": "9d6dacfa4ac4356db104ee0331e5a4787c691f6c9266d33ff1d1839fb079794d",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+          "semanticContextSHA256": "9d6dacfa4ac4356db104ee0331e5a4787c691f6c9266d33ff1d1839fb079794d",
+          "subjectTitle": "Mitä täällä syödään",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "a4d2a55699443c149d77a0adb3818898bf35118e9497908f7886f82ceff82ae4",
+        "sameImageNativeSHA256": "b94023d9a5c830080451df8df7bb2e690492f3fcc63b2f2b2cbe6fac3bdd759d",
+        "sameImageExportSHA256": "c0e7fe747b656c4c80e681ed08c8020ba243e984f547e3d5a1ec6aa6c2d9a0f4",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e11",
@@ -834,10 +876,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/belmopan/belmopan-k2-20261012-v1-ecd8bd-ba9c54081e39.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva vesiuomien yhtymisestä, ei Belize- tai Mopanjoen dokumentoitu näkymä.",
-        "lyhyt": "Havainnekuva vesiuomien yhtymisestä, ei Belize- tai Mopanjoen dokumentoitu näkymä."
+        "selite": "Havainnekuva vesiuomien yhtymisestä, ei Belize- tai Mopanjoen dokumentoitu näkymä."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -845,10 +887,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/belmopan/belmopan-k2-20261012-v1-ecd8bd-ba9c54081e39.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva vesiuomien yhtymisestä, ei Belize- tai Mopanjoen dokumentoitu näkymä.",
-        "lyhyt": "Havainnekuva vesiuomien yhtymisestä, ei Belize- tai Mopanjoen dokumentoitu näkymä."
+        "selite": "Havainnekuva vesiuomien yhtymisestä, ei Belize- tai Mopanjoen dokumentoitu näkymä."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -862,10 +904,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/belmopan/sisalto.json",
-      "sourceContentSHA256": "c7c34dfc84a3c5e3d1550f023c2fc6a117730992fc289df990de8e74585f0373",
+      "sourceContentSHA256": "a4d2a55699443c149d77a0adb3818898bf35118e9497908f7886f82ceff82ae4",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "622e2ef5afc52b17f19f51e88ed686dbdbc3e11f483870a9289315b4d3e615f8",
-        "semanticContextSHA256": "622e2ef5afc52b17f19f51e88ed686dbdbc3e11f483870a9289315b4d3e615f8",
+        "targetBeforeSHA256": "5616c8afad76d7fd6cbc4ff4ebb11bd7fc0f0b152e614e8e7c6d72c43e44fcc3",
+        "semanticContextSHA256": "5616c8afad76d7fd6cbc4ff4ebb11bd7fc0f0b152e614e8e7c6d72c43e44fcc3",
         "subjectTitle": "Jokien nimet samassa sanassa",
         "targetState": "existing-target"
       },
@@ -1077,9 +1119,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -1098,17 +1140,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "c7c34dfc84a3c5e3d1550f023c2fc6a117730992fc289df990de8e74585f0373",
-      "targetAfterSHA256": "622e2ef5afc52b17f19f51e88ed686dbdbc3e11f483870a9289315b4d3e615f8",
-      "contextAfterSHA256": "622e2ef5afc52b17f19f51e88ed686dbdbc3e11f483870a9289315b4d3e615f8",
+      "sourceContentAfterSHA256": "a4d2a55699443c149d77a0adb3818898bf35118e9497908f7886f82ceff82ae4",
+      "targetAfterSHA256": "5616c8afad76d7fd6cbc4ff4ebb11bd7fc0f0b152e614e8e7c6d72c43e44fcc3",
+      "contextAfterSHA256": "5616c8afad76d7fd6cbc4ff4ebb11bd7fc0f0b152e614e8e7c6d72c43e44fcc3",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "c7c34dfc84a3c5e3d1550f023c2fc6a117730992fc289df990de8e74585f0373",
+        "targetAfterSHA256": "622e2ef5afc52b17f19f51e88ed686dbdbc3e11f483870a9289315b4d3e615f8",
+        "contextAfterSHA256": "622e2ef5afc52b17f19f51e88ed686dbdbc3e11f483870a9289315b4d3e615f8",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "622e2ef5afc52b17f19f51e88ed686dbdbc3e11f483870a9289315b4d3e615f8",
+          "semanticContextSHA256": "622e2ef5afc52b17f19f51e88ed686dbdbc3e11f483870a9289315b4d3e615f8",
+          "subjectTitle": "Jokien nimet samassa sanassa",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "a4d2a55699443c149d77a0adb3818898bf35118e9497908f7886f82ceff82ae4",
+        "sameImageNativeSHA256": "ba9c54081e398892bcb0f43f61ff9dbe2dd12e531f6170b642110b045d39aa11",
+        "sameImageExportSHA256": "2d4fff14ccf47ab2fe3ea8a4db8791ef4a8dd3e2aa035985b4b5a50b53290555",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e11",
@@ -1130,10 +1193,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/belmopan/belmopan-l1-20261012-v1-1af59a-20439b449be5.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva puun rungon haarautumisesta, ei Guanacasten puiston nimipuun valokuva.",
-        "lyhyt": "Havainnekuva puun rungon haarautumisesta, ei Guanacasten puiston nimipuun valokuva."
+        "selite": "Havainnekuva puun rungon haarautumisesta, ei Guanacasten puiston nimipuun valokuva."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -1141,10 +1204,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/belmopan/belmopan-l1-20261012-v1-1af59a-20439b449be5.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva puun rungon haarautumisesta, ei Guanacasten puiston nimipuun valokuva.",
-        "lyhyt": "Havainnekuva puun rungon haarautumisesta, ei Guanacasten puiston nimipuun valokuva."
+        "selite": "Havainnekuva puun rungon haarautumisesta, ei Guanacasten puiston nimipuun valokuva."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -1158,10 +1221,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/belmopan/sisalto.json",
-      "sourceContentSHA256": "c7c34dfc84a3c5e3d1550f023c2fc6a117730992fc289df990de8e74585f0373",
+      "sourceContentSHA256": "a4d2a55699443c149d77a0adb3818898bf35118e9497908f7886f82ceff82ae4",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "55270f3dfeabd37f83120cbe1a0b308d868c432668a97d353cf58c6c46b417db",
-        "semanticContextSHA256": "55270f3dfeabd37f83120cbe1a0b308d868c432668a97d353cf58c6c46b417db",
+        "targetBeforeSHA256": "1b09ef51aa7b54ae55fcfafd2261af21e2eb4957b373450c04859ad7b8bea60e",
+        "semanticContextSHA256": "1b09ef51aa7b54ae55fcfafd2261af21e2eb4957b373450c04859ad7b8bea60e",
         "subjectTitle": "Huono tukkipuu sai puiston",
         "targetState": "existing-target"
       },
@@ -1373,9 +1436,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -1394,17 +1457,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "c7c34dfc84a3c5e3d1550f023c2fc6a117730992fc289df990de8e74585f0373",
-      "targetAfterSHA256": "55270f3dfeabd37f83120cbe1a0b308d868c432668a97d353cf58c6c46b417db",
-      "contextAfterSHA256": "55270f3dfeabd37f83120cbe1a0b308d868c432668a97d353cf58c6c46b417db",
+      "sourceContentAfterSHA256": "a4d2a55699443c149d77a0adb3818898bf35118e9497908f7886f82ceff82ae4",
+      "targetAfterSHA256": "1b09ef51aa7b54ae55fcfafd2261af21e2eb4957b373450c04859ad7b8bea60e",
+      "contextAfterSHA256": "1b09ef51aa7b54ae55fcfafd2261af21e2eb4957b373450c04859ad7b8bea60e",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "c7c34dfc84a3c5e3d1550f023c2fc6a117730992fc289df990de8e74585f0373",
+        "targetAfterSHA256": "55270f3dfeabd37f83120cbe1a0b308d868c432668a97d353cf58c6c46b417db",
+        "contextAfterSHA256": "55270f3dfeabd37f83120cbe1a0b308d868c432668a97d353cf58c6c46b417db",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "55270f3dfeabd37f83120cbe1a0b308d868c432668a97d353cf58c6c46b417db",
+          "semanticContextSHA256": "55270f3dfeabd37f83120cbe1a0b308d868c432668a97d353cf58c6c46b417db",
+          "subjectTitle": "Huono tukkipuu sai puiston",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "a4d2a55699443c149d77a0adb3818898bf35118e9497908f7886f82ceff82ae4",
+        "sameImageNativeSHA256": "20439b449be5a9c62f44e8b18b77941db4cb87f66e905e90a249daad0e8065e8",
+        "sameImageExportSHA256": "e4ec73d4126e3beeab0c198fb01cbe55c6a713a0c2a3a66b178730e75e0d5ccf",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e11",
@@ -1426,10 +1510,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/belmopan/belmopan-l2-20261012-v1-c0235f-3d71a567fc7c.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva trooppisen metsän kasvillisuudesta, ei tietyn puistopolun valokuva.",
-        "lyhyt": "Havainnekuva trooppisen metsän kasvillisuudesta, ei tietyn puistopolun valokuva."
+        "selite": "Havainnekuva trooppisen metsän kasvillisuudesta, ei tietyn puistopolun valokuva."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -1437,10 +1521,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/belmopan/belmopan-l2-20261012-v1-c0235f-3d71a567fc7c.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva trooppisen metsän kasvillisuudesta, ei tietyn puistopolun valokuva.",
-        "lyhyt": "Havainnekuva trooppisen metsän kasvillisuudesta, ei tietyn puistopolun valokuva."
+        "selite": "Havainnekuva trooppisen metsän kasvillisuudesta, ei tietyn puistopolun valokuva."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -1454,7 +1538,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/belmopan/sisalto.json",
-      "sourceContentSHA256": "c7c34dfc84a3c5e3d1550f023c2fc6a117730992fc289df990de8e74585f0373",
+      "sourceContentSHA256": "a4d2a55699443c149d77a0adb3818898bf35118e9497908f7886f82ceff82ae4",
       "semanticSourceBind": {
         "targetBeforeSHA256": "edc9ef98129380c0d58f97371bb93f99f7a5547305b1bdbf787d86ba823f0667",
         "semanticContextSHA256": "edc9ef98129380c0d58f97371bb93f99f7a5547305b1bdbf787d86ba823f0667",
@@ -1669,9 +1753,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -1690,17 +1774,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "c7c34dfc84a3c5e3d1550f023c2fc6a117730992fc289df990de8e74585f0373",
+      "sourceContentAfterSHA256": "a4d2a55699443c149d77a0adb3818898bf35118e9497908f7886f82ceff82ae4",
       "targetAfterSHA256": "edc9ef98129380c0d58f97371bb93f99f7a5547305b1bdbf787d86ba823f0667",
       "contextAfterSHA256": "edc9ef98129380c0d58f97371bb93f99f7a5547305b1bdbf787d86ba823f0667",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "c7c34dfc84a3c5e3d1550f023c2fc6a117730992fc289df990de8e74585f0373",
+        "targetAfterSHA256": "edc9ef98129380c0d58f97371bb93f99f7a5547305b1bdbf787d86ba823f0667",
+        "contextAfterSHA256": "edc9ef98129380c0d58f97371bb93f99f7a5547305b1bdbf787d86ba823f0667",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "edc9ef98129380c0d58f97371bb93f99f7a5547305b1bdbf787d86ba823f0667",
+          "semanticContextSHA256": "edc9ef98129380c0d58f97371bb93f99f7a5547305b1bdbf787d86ba823f0667",
+          "subjectTitle": "Metsään pääsee kaupungin laidalta",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "a4d2a55699443c149d77a0adb3818898bf35118e9497908f7886f82ceff82ae4",
+        "sameImageNativeSHA256": "3d71a567fc7cfbb3dbbcf7a76523b7023014ab664d9ce3875d955872b1ea66cc",
+        "sameImageExportSHA256": "ac407aa535c3fefb576a833190e85492dca88bebc3b357516a433dcac7c88aea",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e11",
@@ -1719,23 +1824,23 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/belmopan/photo-d3956640dc812975a1fe.jpg",
         "suora": true,
         "lahde": "Haakon S. Krohn, Commons (CC BY-SA 3.0)",
-        "selite": "St. Hermanin Blue Hole on Belmopanin lähiseudun metsäinen luontoretkikohde.",
-        "lyhyt": "St. Hermanin Blue Hole on Belmopanin lähiseudun metsäinen luontoretkikohde.",
+        "selite": "Sinertävää vettä, kalliorantaa ja kasvillisuutta St. Hermanin Blue Hole -puistossa Belmopanin lähiseudulla.",
+        "lyhyt": "St. Hermanin Blue Holen metsäallas.",
         "tiedosto": "St. Herman's Blue Hole.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Haakon S. Krohn, Commons (CC BY-SA 3.0)",
-        "selite": "St. Hermanin Blue Hole on Belmopanin lähiseudun metsäinen luontoretkikohde.",
-        "lyhyt": "St. Hermanin Blue Hole on Belmopanin lähiseudun metsäinen luontoretkikohde.",
+        "selite": "Sinertävää vettä, kalliorantaa ja kasvillisuutta St. Hermanin Blue Hole -puistossa Belmopanin lähiseudulla.",
+        "lyhyt": "St. Hermanin Blue Holen metsäallas.",
         "tiedosto": "St. Herman's Blue Hole.jpg"
       },
       "runtimeMediaFieldPayload": {
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/belmopan/photo-d3956640dc812975a1fe.jpg",
         "suora": true,
         "lahde": "Haakon S. Krohn, Commons (CC BY-SA 3.0)",
-        "selite": "St. Hermanin Blue Hole on Belmopanin lähiseudun metsäinen luontoretkikohde.",
-        "lyhyt": "St. Hermanin Blue Hole on Belmopanin lähiseudun metsäinen luontoretkikohde.",
+        "selite": "Sinertävää vettä, kalliorantaa ja kasvillisuutta St. Hermanin Blue Hole -puistossa Belmopanin lähiseudulla.",
+        "lyhyt": "St. Hermanin Blue Holen metsäallas.",
         "tiedosto": "St. Herman's Blue Hole.jpg"
       },
       "runtimeRemoveMediaKeys": [],
@@ -1750,10 +1855,10 @@
         3554
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/belmopan/sisalto.json",
-      "sourceContentSHA256": "c7c34dfc84a3c5e3d1550f023c2fc6a117730992fc289df990de8e74585f0373",
+      "sourceContentSHA256": "a4d2a55699443c149d77a0adb3818898bf35118e9497908f7886f82ceff82ae4",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "080037dc54bd3d30288dfffe228081c0acc84c9498a806674a21ec59e18fb183",
-        "semanticContextSHA256": "080037dc54bd3d30288dfffe228081c0acc84c9498a806674a21ec59e18fb183",
+        "targetBeforeSHA256": "29ae6a488df193148ca119020bd4e8504e08129f469de6e9ebc350f373703fed",
+        "semanticContextSHA256": "29ae6a488df193148ca119020bd4e8504e08129f469de6e9ebc350f373703fed",
         "subjectTitle": "belmopan — aito paikkavalokuva",
         "targetState": "existing-target"
       },
@@ -1963,9 +2068,9 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "St. Herman's Blue Hole.jpg",
-        "lahde": "Haakon S. Krohn, Commons (CC BY-SA 3.0)",
-        "selite": "St. Hermanin Blue Hole on Belmopanin lähiseudun metsäinen luontoretkikohde.",
-        "lyhyt": "St. Hermanin Blue Hole on Belmopanin lähiseudun metsäinen luontoretkikohde."
+        "lyhyt": "St. Hermanin Blue Holen metsäallas.",
+        "selite": "Sinertävää vettä, kalliorantaa ja kasvillisuutta St. Hermanin Blue Hole -puistossa Belmopanin lähiseudulla.",
+        "lahde": "Haakon S. Krohn, Commons (CC BY-SA 3.0)"
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -1984,23 +2089,44 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Haakon S. Krohn, Commons (CC BY-SA 3.0)",
-        "selite": "St. Hermanin Blue Hole on Belmopanin lähiseudun metsäinen luontoretkikohde.",
-        "lyhyt": "St. Hermanin Blue Hole on Belmopanin lähiseudun metsäinen luontoretkikohde.",
+        "selite": "Sinertävää vettä, kalliorantaa ja kasvillisuutta St. Hermanin Blue Hole -puistossa Belmopanin lähiseudulla.",
+        "lyhyt": "St. Hermanin Blue Holen metsäallas.",
         "tiedosto": "St. Herman's Blue Hole.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "c7c34dfc84a3c5e3d1550f023c2fc6a117730992fc289df990de8e74585f0373",
-      "targetAfterSHA256": "080037dc54bd3d30288dfffe228081c0acc84c9498a806674a21ec59e18fb183",
-      "contextAfterSHA256": "080037dc54bd3d30288dfffe228081c0acc84c9498a806674a21ec59e18fb183",
+      "sourceContentAfterSHA256": "a4d2a55699443c149d77a0adb3818898bf35118e9497908f7886f82ceff82ae4",
+      "targetAfterSHA256": "29ae6a488df193148ca119020bd4e8504e08129f469de6e9ebc350f373703fed",
+      "contextAfterSHA256": "29ae6a488df193148ca119020bd4e8504e08129f469de6e9ebc350f373703fed",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "c7c34dfc84a3c5e3d1550f023c2fc6a117730992fc289df990de8e74585f0373",
+        "targetAfterSHA256": "080037dc54bd3d30288dfffe228081c0acc84c9498a806674a21ec59e18fb183",
+        "contextAfterSHA256": "080037dc54bd3d30288dfffe228081c0acc84c9498a806674a21ec59e18fb183",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "080037dc54bd3d30288dfffe228081c0acc84c9498a806674a21ec59e18fb183",
+          "semanticContextSHA256": "080037dc54bd3d30288dfffe228081c0acc84c9498a806674a21ec59e18fb183",
+          "subjectTitle": "belmopan — aito paikkavalokuva",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "a4d2a55699443c149d77a0adb3818898bf35118e9497908f7886f82ceff82ae4",
+        "sameImageNativeSHA256": "d3956640dc812975a1feebebb4bbedf648b1c9aa5ff5c1b9ec2ca7bf74bc69bc",
+        "sameImageExportSHA256": "d3956640dc812975a1feebebb4bbedf648b1c9aa5ff5c1b9ec2ca7bf74bc69bc",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e11",
@@ -2022,23 +2148,23 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/belmopan/c1-55cb3cc14b84117bce8c.jpg",
         "suora": true,
         "lahde": "Denis Barthel, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Belmopanin katuja, kortteleita ja viheralueita ilmasta vuonna 2015.",
-        "lyhyt": "Belmopanin katuja, kortteleita ja viheralueita ilmasta vuonna 2015.",
+        "selite": "Ilmakuvassa erottuvat Belmopanin matalat rakennukset, katuverkko ja korttelien väliset viheralueet.",
+        "lyhyt": "Belmopanin katuverkkoa ilmasta vuonna 2015.",
         "tiedosto": "Aerials Belize WHwy 04.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Denis Barthel, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Belmopanin katuja, kortteleita ja viheralueita ilmasta vuonna 2015.",
-        "lyhyt": "Belmopanin katuja, kortteleita ja viheralueita ilmasta vuonna 2015.",
+        "selite": "Ilmakuvassa erottuvat Belmopanin matalat rakennukset, katuverkko ja korttelien väliset viheralueet.",
+        "lyhyt": "Belmopanin katuverkkoa ilmasta vuonna 2015.",
         "tiedosto": "Aerials Belize WHwy 04.jpg"
       },
       "runtimeMediaFieldPayload": {
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/belmopan/c1-55cb3cc14b84117bce8c.jpg",
         "suora": true,
         "lahde": "Denis Barthel, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Belmopanin katuja, kortteleita ja viheralueita ilmasta vuonna 2015.",
-        "lyhyt": "Belmopanin katuja, kortteleita ja viheralueita ilmasta vuonna 2015.",
+        "selite": "Ilmakuvassa erottuvat Belmopanin matalat rakennukset, katuverkko ja korttelien väliset viheralueet.",
+        "lyhyt": "Belmopanin katuverkkoa ilmasta vuonna 2015.",
         "tiedosto": "Aerials Belize WHwy 04.jpg"
       },
       "runtimeRemoveMediaKeys": [],
@@ -2053,10 +2179,10 @@
         4000
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/belmopan/sisalto.json",
-      "sourceContentSHA256": "c7c34dfc84a3c5e3d1550f023c2fc6a117730992fc289df990de8e74585f0373",
+      "sourceContentSHA256": "a4d2a55699443c149d77a0adb3818898bf35118e9497908f7886f82ceff82ae4",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "a7727ca4172d4bcbf84805fcf98e69c05fa0d78554b2725fe35d2fc44b94a88a",
-        "semanticContextSHA256": "a7727ca4172d4bcbf84805fcf98e69c05fa0d78554b2725fe35d2fc44b94a88a",
+        "targetBeforeSHA256": "2648b8fd67862bdfa45d2e3a8744967be4e260cce5fb2670fc5ff0e3d811f5ed",
+        "semanticContextSHA256": "2648b8fd67862bdfa45d2e3a8744967be4e260cce5fb2670fc5ff0e3d811f5ed",
         "subjectTitle": "Belmopan",
         "targetState": "existing-target"
       },
@@ -2254,9 +2380,9 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "Aerials Belize WHwy 04.jpg",
-        "lahde": "Denis Barthel, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Belmopanin katuja, kortteleita ja viheralueita ilmasta vuonna 2015.",
-        "lyhyt": "Belmopanin katuja, kortteleita ja viheralueita ilmasta vuonna 2015."
+        "lyhyt": "Belmopanin katuverkkoa ilmasta vuonna 2015.",
+        "selite": "Ilmakuvassa erottuvat Belmopanin matalat rakennukset, katuverkko ja korttelien väliset viheralueet.",
+        "lahde": "Denis Barthel, Wikimedia Commons (CC BY-SA 4.0)"
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -2275,28 +2401,55 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Denis Barthel, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Belmopanin katuja, kortteleita ja viheralueita ilmasta vuonna 2015.",
-        "lyhyt": "Belmopanin katuja, kortteleita ja viheralueita ilmasta vuonna 2015.",
+        "selite": "Ilmakuvassa erottuvat Belmopanin matalat rakennukset, katuverkko ja korttelien väliset viheralueet.",
+        "lyhyt": "Belmopanin katuverkkoa ilmasta vuonna 2015.",
         "tiedosto": "Aerials Belize WHwy 04.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "c7c34dfc84a3c5e3d1550f023c2fc6a117730992fc289df990de8e74585f0373",
-      "targetAfterSHA256": "a7727ca4172d4bcbf84805fcf98e69c05fa0d78554b2725fe35d2fc44b94a88a",
-      "contextAfterSHA256": "a7727ca4172d4bcbf84805fcf98e69c05fa0d78554b2725fe35d2fc44b94a88a",
+      "sourceContentAfterSHA256": "a4d2a55699443c149d77a0adb3818898bf35118e9497908f7886f82ceff82ae4",
+      "targetAfterSHA256": "2648b8fd67862bdfa45d2e3a8744967be4e260cce5fb2670fc5ff0e3d811f5ed",
+      "contextAfterSHA256": "2648b8fd67862bdfa45d2e3a8744967be4e260cce5fb2670fc5ff0e3d811f5ed",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "c7c34dfc84a3c5e3d1550f023c2fc6a117730992fc289df990de8e74585f0373",
+        "targetAfterSHA256": "a7727ca4172d4bcbf84805fcf98e69c05fa0d78554b2725fe35d2fc44b94a88a",
+        "contextAfterSHA256": "a7727ca4172d4bcbf84805fcf98e69c05fa0d78554b2725fe35d2fc44b94a88a",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "a7727ca4172d4bcbf84805fcf98e69c05fa0d78554b2725fe35d2fc44b94a88a",
+          "semanticContextSHA256": "a7727ca4172d4bcbf84805fcf98e69c05fa0d78554b2725fe35d2fc44b94a88a",
+          "subjectTitle": "Belmopan",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "a4d2a55699443c149d77a0adb3818898bf35118e9497908f7886f82ceff82ae4",
+        "sameImageNativeSHA256": "55cb3cc14b84117bce8c4704f7ab49eaf7fcf53b8a8befbbc54986ddcb776ef6",
+        "sameImageExportSHA256": "55cb3cc14b84117bce8c4704f7ab49eaf7fcf53b8a8befbbc54986ddcb776ef6",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     }
   ],
   "runtimeIntegrationPending": true,
   "ownerAcceptedNotImpliedByAuthorization": false,
   "gameIntegrated": false,
   "allAssetsExplicitlyOwnerApproved": true,
-  "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+  "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+  "task118ExcludedAssets": [],
+  "task118TextRevision": true,
+  "independentTextResamplePending": true,
+  "textAcceptanceVerified": false,
+  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task118/immutable-media-history/e11/belmopan/314885d247a8bc46eaed921e39cf93098dd00de49b7504bfc12a7e9a28726c18.json",
+  "task118ReboundAt": "2026-10-13T16:31:25.961596+00:00"
 }
