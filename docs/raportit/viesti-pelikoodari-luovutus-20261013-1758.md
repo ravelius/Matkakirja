@@ -28,6 +28,10 @@ odottaa SK:n tekstipistokoetta erä kerrallaan. Lisäksi odottaa Kööpenhaminan
      pk-tarkistus-20261013/ (hyvaksytyt-pistokoe.json, assets.json, b0073.json = batch-0073, 1018 kuvaa). EI KYTKETÄ: tekoälyn
      esinekuvat (O2/O3/TRAVELER-illustraatiot) jäävät kokonaan pois (omistaja); satelliittikuvat (C-slotit) vain SK:n myöhemmin
      hyväksymät; hylätyt. Uudet kuvat jatkossa vain Commonsista (omistaja 17.4x).
+   - SK 18.0x LOPULLINEN lista (korvaa v1:n): kopio /Users/Shared/Claude/proto-3d/_tyo/sisaltokirjuri/pk-tarkistus-20261013/
+     hyvaksytyt-v2.json, avaimet hyvaksytty_per_era (861 = 750 + 111 satelliittikuvaa), poistettu_esineslotit (106, EI kytketä)
+     ja hylatty (51, EI). yhdista-kuvat.py lukee v2:n (kaikki muut listat poissulkuja); kuiva-ajo v2:lla: 861/861 sulautui
+     93 tiedostoon, 0 ohitettu. SK kuittaa tekstierät erikseen ennen kytkentää.
    - Työkalut valmiina: proto-3d/_tyo/pelikoodari/pk-kytkenta/yhdista-kuvat.py <b0073.json> <hyväksytyt.json> <pilvi-kansio>
      sulauttaa runtimeMediaFieldPayloadin targetTokens-polkuun (tyhjä nähtävyyden kuvat-lista saa kuvat[0]). Tarkista, että
      v2-listan muoto on sama (hyvaksytty_per_era); jos ei, sovita lukija.
