@@ -1,7 +1,7 @@
 # Korjauskierros 2 — gaborone
 
-Tehtävät 228 ja 229; lähde b1b84a6c8a34e8e459aa1cb5afd704c6fe92be36.
+Tehtävät 228/229 sekä lisäohjeet 235/236. Lähteet b1b84a6c8a34e8e459aa1cb5afd704c6fe92be36 ja b0d92e3e38ecfe4e58466f02133c6da96b4aafba.
 
-Tekstin työversio korjattu. Tämä on välitallennus, ei Sisältökirjurin hyväksyntä eikä pelikytkentä. Nykyiset kuvat säilyvät; kuvatekstien sidokset seuraavat tätä C-versiota. Legacy-kuva- ja karttaportit eivät kuulu kierrokseen.
+Tekstin korjausversio valmis lähdehaaran toimitukseen. Kanoninen postikuitti toimitetaan erikseen; Sisältökirjurin pistokoe sekä PK/PT-hyväksyntä ja pelikytkentä odottavat. Nykyiset kuvat säilyvät; kuvatekstien sidokset seuraavat tätä C-versiota. Legacy-kuva- ja karttaportit eivät kuulu kierrokseen.
 
-C SHA256: 01f7c60ee29910f5717f9f4a6382af55b9c48a1c6121f393babe27dba510b4dc
+C SHA256: 60180e797d3f9a2de48553fa0d1dab2c7d020a9165c83e4b81dc5cc03acedcfe

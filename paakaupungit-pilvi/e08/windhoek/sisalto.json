@@ -14,8 +14,8 @@
     }
   },
   "artikkeli": {
-    "intro": "Windhoekin tärkeimpiä nähtävyyksiä ei erota kaupungin siluetista: yksi niistä kulkee vesiputkissa. **Namibian pääkaupunki** sijaitsee Khomasin ylängöllä sisämaassa, kallioisten rinteiden ympäröimänä. Paikan lämpimät lähteet vetivät asukkaita puoleensa jo ennen nykyistä kaupunkikeskustaa. Orlamyhteisö rakensi tänne kirkon, joka palveli myös kouluna. Myöhemmin saksalainen siirtomaahallinto teki Windhoekista sotilaallisen ja hallinnollisen keskuksen.\n\nKeskustan Christuskirchen hiekkakivi on paikallista, mutta sen marmori tuotiin Italiasta. Rautatieasema puolestaan muistuttaa ajasta, jolloin ylänkö yhdistettiin rannikolle kiskoilla. **Goreangabin vedenpuhdistamo** kertoo toisenlaisesta yhteydestä: käytetty vesi puhdistetaan takaisin juomavesiverkostoon. Windhoekissa kaupungin historiaa voi lukea rakennuksista, mutta sen tulevaisuuden ymmärtämiseksi kannattaa seurata myös veden kiertoa.",
-    "teksti": "Windhoekin paikka ei ollut tyhjä ennen siirtomaakaupungin rakentamista. Lämpimien lähteiden äärelle syntyi orlamyhteisön asutus 1800-luvun alkupuolella. Isoisän matkavuonna 1873 varhaisen asutuksen kukoistus oli jo hiipunut; nykyinen linnake ja Christuskirche nousivat vasta myöhemmin.\n\nSiirtomaakauden rakennuksissa materiaalit liikkuivat pitkiä matkoja. Christuskirchessä paikallinen hiekkakivi yhdistyy italialaiseen marmoriin ja Saksasta tuotuihin rakennusosiin. Asemarakennuksen tyyli taas liittyy Etelä-Afrikan rakennusperinteeseen.\n\nVesi sitoo yhteen kaupungin vanhan ja uuden historian. Lähteiden lisäksi Windhoek tarvitsee patojen ja pohjaveden varantoja sekä veden uudelleenkäyttöä. Goreangabissa jo käytetty vesi kulkee puhdistusvaiheiden läpi ja palaa juomaveden lähteeksi. Kaupunki sijaitsee kuivalla ylängöllä, mutta sen vesihuolto ei perustu vain siihen, mitä taivaalta tulee."
+    "intro": "Windhoekissa käytetty vesi puhdistetaan takaisin juomavesiverkostoon. **Namibian pääkaupunki** sijaitsee Khomasin ylängöllä sisämaassa, kallioisten rinteiden ympäröimänä. Paikan lämpimät lähteet vetivät asukkaita puoleensa jo ennen nykyistä kaupunkikeskustaa. Orlamyhteisö rakensi tänne kirkon, joka palveli myös kouluna. Myöhemmin saksalainen siirtomaahallinto teki Windhoekista sotilaallisen ja hallinnollisen keskuksen.\n\nRautatieasema puolestaan muistuttaa ajasta, jolloin ylänkö yhdistettiin rannikolle kiskoilla. **Goreangabin vedenpuhdistamossa** veden käsittelyyn kuuluu otsonointia, suodatusta ja epäpuhtauksien sitomista aktiivihiileen.",
+    "teksti": "Windhoekin lämpimien lähteiden äärelle syntyi orlamyhteisön asutus 1800-luvun alkupuolella. Yhteisön rakentama kirkko palveli myös kouluna. Asutuksen kukoistus hiipui ennen myöhemmän siirtomaakeskuksen rakentamista.\n\nBahnhof Streetin asemarakennus on kap-hollantilaista tyyliä. Sen pohjoissiipi rakennettiin saman tyylin mukaiseksi kuin alkuperäinen osa. Aseman museossa on rautatiekalustoa, karttoja ja ruokailuvaunujen astioita. Näyttely käsittelee myös Namibian lento- ja meriliikenteen historiaa.\n\nWindhoek käyttää vesihuollossaan patojen ja pohjaveden varantoja sekä veden uudelleenkäyttöä. Goreangabissa käytetty vesi puhdistetaan juomaveden lähteeksi. Uuden laitoksen suunnittelussa yhdistettiin paikallista tutkimusta, vanhan laitoksen käyttökokemusta ja kansainvälisten asiantuntijoiden työtä."
   },
   "kysymykset": [
     {
@@ -176,7 +176,7 @@
           "nimi": "Matkailijan Windhoek",
           "taitto": "opas",
           "teksti": "Tutki ylängön pääkaupunkia rakennusten, kasvien ja veden kautta.",
-          "nosto": "Keskustan arkkitehtuuri on lähellä toisiaan, mutta lentoasema ja kaupunginosat vaativat erillisen siirtymän.",
+          "nosto": "Christuskirche ja Alte Feste kuuluvat Windhoekin historialliseen keskustaan.",
           "jaksot": [
             {
               "otsikko": "Perille ja liikkeelle",
@@ -190,7 +190,7 @@
             },
             {
               "otsikko": "Kiveä ja siirtomaahistoriaa",
-              "teksti": "Christuskirchessä paikallinen hiekkakivi ja tuontimarmori muodostavat tunnistettavan kokonaisuuden. Lähellä sijaitseva Alte Feste rakennettiin saksalaisen siirtomaajoukon tukikohdaksi. Sen myöhempiin käyttötapoihin kuuluivat koulun asuntola ja museo.",
+              "teksti": "Alte Feste rakennettiin saksalaisen siirtomaajoukon tukikohdaksi. Sen myöhempiin käyttötapoihin kuuluivat koulun asuntola ja museo.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -232,9 +232,9 @@
           "matkailu": {
             "parasta": [
               {
-                "mita": "Christuskirchen rakennusmateriaalit",
+                "mita": "Christuskirchen arkkitehtuuri",
                 "tahdet": 3,
-                "selite": "Paikallinen hiekkakivi ja tuontimarmori kertovat saman rakennuksen eri yhteyksistä."
+                "selite": "Gottlieb Redeckerin kirkossa yhdistyvät uusromaaniset, uusgoottilaiset ja jugendin vaikutteet."
               },
               {
                 "mita": "Kansallinen kasvitieteellinen puutarha",
@@ -312,7 +312,7 @@
         },
         {
           "otsikko": "Turva rakennetaan vaihe vaiheelta",
-          "teksti": "Goreangabissa veden käsittely ei perustu yhteen puhdistustemppuun. Prosessiin kuuluvat muun muassa otsonikäsittely, hiukkasten kokoaminen ja erottaminen, suodatus sekä aktiivihiili ja ultrasuodatus. Eri käsittelyvaiheet muodostavat useita esteitä epäpuhtauksille ennen veden palaamista juomavesiverkostoon. Aktiivihiiltä käytetään sekä biologisessa suodatuksessa että epäpuhtauksien sitomiseen eli adsorptioon.",
+          "teksti": "Goreangabissa veden käsittely ei perustu yhteen puhdistustemppuun. Prosessiin kuuluvat muun muassa otsonikäsittely, hiukkasten kokoaminen ja erottaminen, suodatus sekä aktiivihiili ja ultrasuodatus. Eri käsittelyvaiheet muodostavat useita esteitä epäpuhtauksille ennen veden palaamista juomavesiverkostoon. Aktiivihiiltä käytetään sekä suodatuksessa että epäpuhtauksien sitomiseen eli adsorptioon.",
           "tiedosto": "",
           "lyhyt": "",
           "selite": "",
@@ -321,7 +321,7 @@
         },
         {
           "otsikko": "Kaupunki ei saa kasvaa mihin tahansa",
-          "teksti": "Windhoekin ympärillä on kallioisia ja vuoristoisia alueita, joiden rakentaminen on vaikeaa ja kallista. Kaupungin eteläpuolella myös maanalaiset vesivarannot rajoittavat teollisuuden sijoittamista. Pohjoisen Brakwaterin alueella on sen sijaan tilaa laajentumiselle. Etelän lisäksi itää ja länttä reunustavat vuoristot; pohjoisen Brakwater on laajentumisen suunta.",
+          "teksti": "Windhoek sijaitsee Khomasin ylängöllä keskellä Namibiaa. Kaupungin etelä-, itä- ja länsipuolta reunustavat kallioiset vuoristoalueet, joissa rakennusmaan kehittäminen on vaikeaa ja kallista. Eteläpuolella maanalaiset vesivarannot rajoittavat lisäksi teollisuuden sijoittamista. Pohjoisen Brakwaterin laaja alue tarjoaa sen sijaan tilaa kaupungin laajentumiselle.",
           "tiedosto": "",
           "lyhyt": "",
           "selite": "",

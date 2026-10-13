@@ -3146,7 +3146,7 @@
         "sameImageExportSHA256": "e1b4c4940ca8fe2170ab5708b03761cfaa6d1e22db384d40ada09149abf83068",
         "independentNativeQAEvidencePreserved": true,
         "independentTextResamplePending": true,
-        "captionChanged": true
+        "captionChanged": false
       }
     },
     {
@@ -3565,7 +3565,7 @@
         "sameImageExportSHA256": "b266d7d63efbe212a0ecc9a29a5a573e3d527192eaa26ba4fa4d38b92a52bbaf",
         "independentNativeQAEvidencePreserved": true,
         "independentTextResamplePending": true,
-        "captionChanged": true
+        "captionChanged": false
       }
     },
     {
@@ -4009,7 +4009,7 @@
         "sameImageExportSHA256": "47cc37dee60f2163c507f820101e9c2d8f27653e7de8325934a0ecc0b1308b12",
         "independentNativeQAEvidencePreserved": true,
         "independentTextResamplePending": true,
-        "captionChanged": true
+        "captionChanged": false
       }
     },
     {
@@ -4407,7 +4407,7 @@
         "sameImageExportSHA256": "b17a97c85e92731b92825d93586c994d5cd476dc554225444dac4037ab854d32",
         "independentNativeQAEvidencePreserved": true,
         "independentTextResamplePending": true,
-        "captionChanged": true
+        "captionChanged": false
       }
     },
     {
@@ -4809,7 +4809,7 @@
         "sameImageExportSHA256": "cb30a6d549acd5deab005b0adf3a96f98befb023706b92bc6c5094d31b9296b7",
         "independentNativeQAEvidencePreserved": true,
         "independentTextResamplePending": true,
-        "captionChanged": true
+        "captionChanged": false
       }
     }
   ],
@@ -4822,9 +4822,9 @@
   "task118TextRevision": true,
   "independentTextResamplePending": true,
   "textAcceptanceVerified": false,
-  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task228/immutable-media-history/e08/harare/a401007798b191562e0f96329647c4aebdcd1f07163f4758eebf1430389dbe14.json",
+  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task228/immutable-media-history/e08/harare/453a514956252f6f4145fa830290f8859e8860f36e43a2b3f2ad12dbc3301fba.json",
   "task118ReboundAt": "2026-10-13T16:31:25.357240+00:00",
   "task228ExcludedAssets": [],
   "task228TextRevision": true,
-  "task228ReboundAt": "2026-10-13T18:31:22.879694+00:00"
+  "task228ReboundAt": "2026-10-13T19:32:47.606244+00:00"
 }

@@ -56,7 +56,7 @@
       ],
       "correct": 0,
       "level": 2,
-      "hint": "Vesihuolto liittyy kaupungin kaakkoiseen sijaintiin, kaukana Botswanan pohjoisista vesistöistä.",
+      "hint": "Padon vesi palvelee myös Lobatsea.",
       "fact": "Gaboronen pato varastoi Notwane-joen vettä kaupungin vesihuoltoon.",
       "source": "https://en.wikipedia.org/wiki/Gaborone_Dam"
     },
@@ -294,7 +294,7 @@
       "nostot": [
         {
           "otsikko": "Seutu ennen suunnitelmaa",
-          "teksti": "Notwane-joen seutu oli asuttu vuosisatoja ennen nykyisen Gaboronen rakentamista. Vanha Gaberones jäi uuden kaupungin osaksi The Village -nimisenä alueena. Suunnitellun pääkaupungin perustamisen aikaan protektoraatin hallinto toimi Mafekingissa, nykyisessä Mahikengissa, Bechuanamaan rajojen ulkopuolella. Itsenäistyvälle maalle rakennettiin oma hallintokeskus 1960-luvulla. Uuden paikan valinnassa huomioitiin veden läheisyys ja rautatieyhteys; pääkaupunki tarvitsi molempia heti ensimmäisistä rakennusvaiheista lähtien.",
+          "teksti": "Notwane-joen seutu oli asuttu vuosisatoja ennen nykyisen Gaboronen rakentamista. Vanha Gaberones jäi uuden kaupungin osaksi The Village -nimisenä alueena. Suunnitellun pääkaupungin perustamisen aikaan protektoraatin hallinto toimi Mafekingissa, nykyisessä Mahikengissa, Bechuanamaan rajojen ulkopuolella. Itsenäistyvälle maalle rakennettiin oma hallintokeskus 1960-luvulla. Uuden paikan valinnassa huomioitiin veden läheisyys ja rautatieyhteys.",
           "tiedosto": "",
           "lyhyt": "",
           "selite": "",
@@ -311,8 +311,8 @@
           "wiki": "Gaborone"
         },
         {
-          "otsikko": "Kaupunki jalankulkijalle",
-          "teksti": "Uuden Gaboronen suunnittelussa sovellettiin puutarhakaupungin ajatuksia. Kävelyreittejä ja avoimia tiloja oli paljon, ja kaupallinen keskus järjestettiin pitkäksi Main Mall -alueeksi. Hallintorakennukset muodostivat sen yhteyteen oman kokonaisuutensa. Suunnitelmassa pääkaupunki oli samalla paikka asioinnille, kaupalle ja kulkemiselle. Main Mall on autoton.",
+          "otsikko": "Mitä uuteen kaupunkiin tarvittiin?",
+          "teksti": "Gaboronen ensimmäisiin rakennuksiin kuuluivat hallintotalojen ja asuntojen lisäksi voimalaitos, sairaala ja koulut. Kaupunkiin rakennettiin myös radioasema, puhelinkeskus, poliisiasemia ja posti. Näitä palveluja tehtiin pääkaupunkia varten samassa nopeassa rakennusvaiheessa. Uusi kaupunki veti puoleensa rakentajia, joiden asuntotarve kasvoi. Ensimmäinen suunnitelma oli laadittu pienelle kaupungille, mutta asukasmäärä ylitti myöhemmin sen lähtökohdat.",
           "tiedosto": "",
           "lyhyt": "",
           "selite": "",
@@ -320,8 +320,8 @@
           "wiki": "Gaborone"
         },
         {
-          "otsikko": "Vesi ja rata samassa valinnassa",
-          "teksti": "Uuden pääkaupungin sijaintia valittaessa makean veden läheisyys ja rautatieyhteys kuuluivat perusteisiin. Bechuanamaan hallintokeskus oli aiemmin Mafekingissa, josta hallinto siirtyi uuteen keskukseen. Gaboroneen rakennettiin oma keskus maan itsenäistymisen yhteydessä. Gaboronen pato tehtiin samaan aikaan kun uutta kaupunkia suunniteltiin. Mafeking jäi protektoraatin rajojen ulkopuolelle.",
+          "otsikko": "Kaupungin rakentajien Naledi",
+          "teksti": "Gaboronen rakentaminen toi kaupunkiin paljon työläisiä. Heidän asuinalueitaan syntyi uuden kaupungin eteläiseen teollisuusalueeseen, ja niitä alettiin kutsua Nalediksi. Nimi tarkoittaa tähteä. Myöhemmin Old Naledin asukkaita yritettiin siirtää tien toiselle puolelle rakennettuun New Nalediin, mutta kaikki eivät pitäneet uusista taloista. Lopulta alkuperäisen Naledin kaava muutettiin teollisuusalueesta asuinalueeksi.",
           "tiedosto": "",
           "lyhyt": "",
           "selite": "",

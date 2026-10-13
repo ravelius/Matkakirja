@@ -3544,7 +3544,7 @@
         "sameImageExportSHA256": "948b9aae92fb23c77c9e4a7fdfbd20d24ccc4b6987506c53fbc27787e0b426f5",
         "independentNativeQAEvidencePreserved": true,
         "independentTextResamplePending": true,
-        "captionChanged": true
+        "captionChanged": false
       }
     },
     {
@@ -3973,7 +3973,7 @@
         "sameImageExportSHA256": "18d6f3e19c0e0938127eeeb2cc5db506b8a3a08bbe268d038ad7cce772131167",
         "independentNativeQAEvidencePreserved": true,
         "independentTextResamplePending": true,
-        "captionChanged": true
+        "captionChanged": false
       }
     },
     {
@@ -4402,7 +4402,7 @@
         "sameImageExportSHA256": "84e6a237cba3f4e5ec34345fa21047041d868c9e5feb0ca0ff6936218ba3e637",
         "independentNativeQAEvidencePreserved": true,
         "independentTextResamplePending": true,
-        "captionChanged": true
+        "captionChanged": false
       }
     },
     {
@@ -4823,7 +4823,7 @@
         "sameImageExportSHA256": "f1d3e9001b1b1e0e69da7f55d16cc466c6e3c00a19e16b8a419033545d200909",
         "independentNativeQAEvidencePreserved": true,
         "independentTextResamplePending": true,
-        "captionChanged": true
+        "captionChanged": false
       }
     }
   ],
@@ -4836,9 +4836,9 @@
   "task118TextRevision": true,
   "independentTextResamplePending": true,
   "textAcceptanceVerified": false,
-  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task228/immutable-media-history/e08/victoria/a32e1e809299f5e433084005c74ed5da716a221f20674bc0f12ece11d596f787.json",
+  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task228/immutable-media-history/e08/victoria/55bdcf3a085a15d27da779c517d501858fac9b9dc4cee52c793c6945cf31b9aa.json",
   "task118ReboundAt": "2026-10-13T16:31:25.513439+00:00",
   "task228ExcludedAssets": [],
   "task228TextRevision": true,
-  "task228ReboundAt": "2026-10-13T18:31:23.075605+00:00"
+  "task228ReboundAt": "2026-10-13T19:32:47.792885+00:00"
 }
