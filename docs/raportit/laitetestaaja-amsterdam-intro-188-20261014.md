@@ -19,3 +19,13 @@ Muut havainnot:
 
 Kuvat (täysi tarkkuus, iso selite): `docs/raportit/kuvat/amsterdam-intro-188-iphone.png` (1206×2622), `docs/raportit/kuvat/amsterdam-intro-188-ipad.png` (2064×2752).
 Ehdotus toistoon: matka Amsterdamiin heti käynnistyksen jälkeen (< 20 s, ennen kuin fokusvirrat ovat ladattu, tai rajoitetulla verkolla), konsoli `--console-pty` mukana.
+
+## Jatko 14.10. ~01.55–02.20: kehittäjätila ja heti-käynnistyksen-jälkeen (vain iPad Pro 13 `3622D89D`, iPhonelle ei aikaa)
+
+Konsoli `--console-pty` mukana molemmissa. Debug-käännös: Asetukset.Kehittaja on aina päällä (`kehittaja tila` → "kehittäjätila päällä").
+
+1. **Kehittäjätilan pikasiirto** (`kehittaja maailma 1`, kamera `aja 50.5 3.5 8 2`, napautus Amsterdamin pisteeseen kartalla = maailmahyppy Pariisista): **traileri SOI** (nimi + alaotsikko + Rijksmuseum-kuva, sitten isoisän puhe + kuvat). Konsoli: "traileri kuva 1 sisään 215,243 … traileri päättyi 224,293 (9,05 s)". "ei tarjolla": 0 osumaa. Kuva: `kuvat/amsterdam-intro-188-ipad-kehittajahyppy.png`.
+2. **Tavallinen matka käynnistyksen jälkeen** (Jatka matkaa → Liiku → juna → Bryssel → Liiku → juna → Amsterdam): **traileri SOI** ("traileri päättyi 215,853 (8,97 s)"), "ei tarjolla": 0. Kuva: `kuvat/amsterdam-intro-188-ipad-tavallinen.png`.
+   - HUOM aikaikkuna: en onnistunut matkustamaan "heti" (< 20 s). Peli jatkui tallenteesta Amsterdamista, ja ensimmäinen liike oli 95 s käynnistyksestä (puu-haku hidasti), Amsterdamin saapuminen n. 7 min kohdalla. Esilataajan lokissa ei ollut yhtään "fokusvirta"-riviä koko istunnossa (esilataaja "joutilas"), eli fokusvirtoja ei ollut esiladattu tuolloinkaan, ja traileri soi silti. Eli ainakaan tämä käynnistysvaihe ei yksin aiheuta vikaa.
+   - Bryssel-luenta (~60 s) pitää Liiku-liuskan piilossa; liikkeet vasta Ohitan/luennan jälkeen.
+3. Kaikki neljä Amsterdam-saapumista tänä yönä (iPhone, iPad ×3) saivat trailerin; lokin syy-riviä ei yhdessäkään. Vika ei toistunut missään polussa. Seuraavaksi ehdotus: omistajan laitteelta konsolilokin/`ui saapuminen`-rivit (juuri se rivi "traileri ei tarjolla amsterdam: …"), tai testi rajoitetulla verkolla/muistipaineessa.
