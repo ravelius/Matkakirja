@@ -2,7 +2,7 @@
   "schemaVersion": "capital-city-role-assets/v1",
   "era": "e12",
   "city": "bridgetown",
-  "authorization": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+  "authorization": "hyväksyn kaikki tekemäsi kuvat. toimita ne claudelle. claudelta saat uusia ohjeita jatkoa varten",
   "sourceContentAfterSHA256": "eb207bc6eeb510f1eded87fe29505b396523ed4a58618d00d24489026f633422",
   "assets": [
     {
@@ -53,7 +53,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/bridgetown/sisalto.json",
-      "sourceContentSHA256": "aa556c8c56fe83e664c5c598936e2395af9e3d3b6fb13d4d9892948083cd7b27",
+      "sourceContentSHA256": "eb207bc6eeb510f1eded87fe29505b396523ed4a58618d00d24489026f633422",
       "semanticSourceBind": {
         "targetBeforeSHA256": "0a3ad040b0e58f90da6a40ae2be4e046579f199276ec0c51fab8ee155dfc8531",
         "semanticContextSHA256": "0a3ad040b0e58f90da6a40ae2be4e046579f199276ec0c51fab8ee155dfc8531",
@@ -309,7 +309,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "eb207bc6eeb510f1eded87fe29505b396523ed4a58618d00d24489026f633422",
       "targetAfterSHA256": "0a3ad040b0e58f90da6a40ae2be4e046579f199276ec0c51fab8ee155dfc8531",
-      "contextAfterSHA256": "0a3ad040b0e58f90da6a40ae2be4e046579f199276ec0c51fab8ee155dfc8531"
+      "contextAfterSHA256": "0a3ad040b0e58f90da6a40ae2be4e046579f199276ec0c51fab8ee155dfc8531",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e12",
@@ -359,7 +361,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/bridgetown/sisalto.json",
-      "sourceContentSHA256": "aa556c8c56fe83e664c5c598936e2395af9e3d3b6fb13d4d9892948083cd7b27",
+      "sourceContentSHA256": "eb207bc6eeb510f1eded87fe29505b396523ed4a58618d00d24489026f633422",
       "semanticSourceBind": {
         "targetBeforeSHA256": "35f88a14f6a82cb987ef11ab5929bc8d3746424a6922229f309a51625193aad0",
         "semanticContextSHA256": "35f88a14f6a82cb987ef11ab5929bc8d3746424a6922229f309a51625193aad0",
@@ -608,7 +610,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "eb207bc6eeb510f1eded87fe29505b396523ed4a58618d00d24489026f633422",
       "targetAfterSHA256": "35f88a14f6a82cb987ef11ab5929bc8d3746424a6922229f309a51625193aad0",
-      "contextAfterSHA256": "35f88a14f6a82cb987ef11ab5929bc8d3746424a6922229f309a51625193aad0"
+      "contextAfterSHA256": "35f88a14f6a82cb987ef11ab5929bc8d3746424a6922229f309a51625193aad0",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e12",
@@ -658,7 +662,7 @@
         3216
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/bridgetown/sisalto.json",
-      "sourceContentSHA256": "aa556c8c56fe83e664c5c598936e2395af9e3d3b6fb13d4d9892948083cd7b27",
+      "sourceContentSHA256": "eb207bc6eeb510f1eded87fe29505b396523ed4a58618d00d24489026f633422",
       "semanticSourceBind": {
         "targetBeforeSHA256": "5617ba0ce26096d4a3ddb047c08ce3c85350d159b6a60499e9d96615f4a0c545",
         "semanticContextSHA256": "5617ba0ce26096d4a3ddb047c08ce3c85350d159b6a60499e9d96615f4a0c545",
@@ -893,7 +897,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "eb207bc6eeb510f1eded87fe29505b396523ed4a58618d00d24489026f633422",
       "targetAfterSHA256": "5617ba0ce26096d4a3ddb047c08ce3c85350d159b6a60499e9d96615f4a0c545",
-      "contextAfterSHA256": "5617ba0ce26096d4a3ddb047c08ce3c85350d159b6a60499e9d96615f4a0c545"
+      "contextAfterSHA256": "5617ba0ce26096d4a3ddb047c08ce3c85350d159b6a60499e9d96615f4a0c545",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e12",
@@ -946,7 +952,7 @@
         3418
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/bridgetown/sisalto.json",
-      "sourceContentSHA256": "aa556c8c56fe83e664c5c598936e2395af9e3d3b6fb13d4d9892948083cd7b27",
+      "sourceContentSHA256": "eb207bc6eeb510f1eded87fe29505b396523ed4a58618d00d24489026f633422",
       "semanticSourceBind": {
         "targetBeforeSHA256": "3e4b951b725822075a7d02b154dc614ca596b214243d7fe6b1e20dc87d09c2de",
         "semanticContextSHA256": "3e4b951b725822075a7d02b154dc614ca596b214243d7fe6b1e20dc87d09c2de",
@@ -1191,7 +1197,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "eb207bc6eeb510f1eded87fe29505b396523ed4a58618d00d24489026f633422",
       "targetAfterSHA256": "3e4b951b725822075a7d02b154dc614ca596b214243d7fe6b1e20dc87d09c2de",
-      "contextAfterSHA256": "3e4b951b725822075a7d02b154dc614ca596b214243d7fe6b1e20dc87d09c2de"
+      "contextAfterSHA256": "3e4b951b725822075a7d02b154dc614ca596b214243d7fe6b1e20dc87d09c2de",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e12",
@@ -1244,10 +1252,10 @@
         2845
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/bridgetown/sisalto.json",
-      "sourceContentSHA256": "aa556c8c56fe83e664c5c598936e2395af9e3d3b6fb13d4d9892948083cd7b27",
+      "sourceContentSHA256": "eb207bc6eeb510f1eded87fe29505b396523ed4a58618d00d24489026f633422",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "targetBeforeSHA256": "4fdb6efcf8040378fdcc4211df41400c159966c3d6275d341ad122291834fffa",
+        "semanticContextSHA256": "4fdb6efcf8040378fdcc4211df41400c159966c3d6275d341ad122291834fffa",
         "subjectTitle": "Bridgetown",
         "targetState": "existing-target"
       },
@@ -1415,10 +1423,10 @@
       "producerExportProof": null,
       "technicalExportProof": null,
       "priorMediaFields": {
-        "tiedosto": "",
-        "lahde": "",
-        "selite": "",
-        "lyhyt": ""
+        "tiedosto": "Bridgetown, Barbados.jpg",
+        "lahde": "NASA Astronauts, Wikimedia Commons (PD)",
+        "selite": "Bridgetown ja sen rannikko ISS-avaruusasemalta joulukuussa 2009.",
+        "lyhyt": "Bridgetown ja sen rannikko ISS-avaruusasemalta joulukuussa 2009."
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -1451,7 +1459,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "eb207bc6eeb510f1eded87fe29505b396523ed4a58618d00d24489026f633422",
       "targetAfterSHA256": "4fdb6efcf8040378fdcc4211df41400c159966c3d6275d341ad122291834fffa",
-      "contextAfterSHA256": "4fdb6efcf8040378fdcc4211df41400c159966c3d6275d341ad122291834fffa"
+      "contextAfterSHA256": "4fdb6efcf8040378fdcc4211df41400c159966c3d6275d341ad122291834fffa",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e12",
@@ -1504,10 +1514,10 @@
         2040
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/bridgetown/sisalto.json",
-      "sourceContentSHA256": "aa556c8c56fe83e664c5c598936e2395af9e3d3b6fb13d4d9892948083cd7b27",
+      "sourceContentSHA256": "eb207bc6eeb510f1eded87fe29505b396523ed4a58618d00d24489026f633422",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "targetBeforeSHA256": "7e0a571d8fc841040a64520987f3cd4177d405f4f8a8fc0f3222b532b99ee865",
+        "semanticContextSHA256": "7e0a571d8fc841040a64520987f3cd4177d405f4f8a8fc0f3222b532b99ee865",
         "subjectTitle": "Bridgetown",
         "targetState": "existing-target"
       },
@@ -1699,10 +1709,10 @@
       "producerExportProof": null,
       "technicalExportProof": null,
       "priorMediaFields": {
-        "tiedosto": "",
-        "lahde": "",
-        "selite": "",
-        "lyhyt": ""
+        "tiedosto": "Approaching Barbados - Bridgetown Harbour - panoramio.jpg",
+        "lahde": "David Broad, Wikimedia Commons (CC BY 3.0)",
+        "selite": "Bridgetownin sataman rantaviiva marraskuussa 2012.",
+        "lyhyt": "Bridgetownin sataman rantaviiva marraskuussa 2012."
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -1735,7 +1745,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "eb207bc6eeb510f1eded87fe29505b396523ed4a58618d00d24489026f633422",
       "targetAfterSHA256": "7e0a571d8fc841040a64520987f3cd4177d405f4f8a8fc0f3222b532b99ee865",
-      "contextAfterSHA256": "7e0a571d8fc841040a64520987f3cd4177d405f4f8a8fc0f3222b532b99ee865"
+      "contextAfterSHA256": "7e0a571d8fc841040a64520987f3cd4177d405f4f8a8fc0f3222b532b99ee865",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e12",
@@ -1788,10 +1800,10 @@
         1200
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/bridgetown/sisalto.json",
-      "sourceContentSHA256": "aa556c8c56fe83e664c5c598936e2395af9e3d3b6fb13d4d9892948083cd7b27",
+      "sourceContentSHA256": "eb207bc6eeb510f1eded87fe29505b396523ed4a58618d00d24489026f633422",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "3dbfb63a403e0647b76b36b3ea0a208f03d9f9eb6f0990662fe5ee208f9482e8",
-        "semanticContextSHA256": "3dbfb63a403e0647b76b36b3ea0a208f03d9f9eb6f0990662fe5ee208f9482e8",
+        "targetBeforeSHA256": "2b24a829bf2ff073fb6e4711b56e73fd5147cc62f1b2ed6fc15b5c6d646ecdf7",
+        "semanticContextSHA256": "2b24a829bf2ff073fb6e4711b56e73fd5147cc62f1b2ed6fc15b5c6d646ecdf7",
         "subjectTitle": "Telakka nosti koko laivan",
         "targetState": "existing-target"
       },
@@ -1967,10 +1979,10 @@
       "producerExportProof": null,
       "technicalExportProof": null,
       "priorMediaFields": {
-        "tiedosto": "",
-        "lahde": "",
-        "selite": "",
-        "lyhyt": ""
+        "tiedosto": "191223 Bridgetown Screw Dock.jpg",
+        "lahde": "Rennboot, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Bridgetownin Screw Dockin ruuvit ja telakka-allas joulukuussa 2019.",
+        "lyhyt": "Bridgetownin Screw Dockin ruuvit ja telakka-allas joulukuussa 2019."
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -2003,10 +2015,14 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "eb207bc6eeb510f1eded87fe29505b396523ed4a58618d00d24489026f633422",
       "targetAfterSHA256": "2b24a829bf2ff073fb6e4711b56e73fd5147cc62f1b2ed6fc15b5c6d646ecdf7",
-      "contextAfterSHA256": "2b24a829bf2ff073fb6e4711b56e73fd5147cc62f1b2ed6fc15b5c6d646ecdf7"
+      "contextAfterSHA256": "2b24a829bf2ff073fb6e4711b56e73fd5147cc62f1b2ed6fc15b5c6d646ecdf7",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     }
   ],
   "runtimeIntegrationPending": true,
-  "ownerAcceptedNotImpliedByAuthorization": true,
-  "gameIntegrated": false
+  "ownerAcceptedNotImpliedByAuthorization": false,
+  "gameIntegrated": false,
+  "allAssetsExplicitlyOwnerApproved": true,
+  "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
 }

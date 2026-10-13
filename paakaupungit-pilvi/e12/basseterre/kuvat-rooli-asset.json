@@ -2,7 +2,7 @@
   "schemaVersion": "capital-city-role-assets/v1",
   "era": "e12",
   "city": "basseterre",
-  "authorization": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+  "authorization": "hyväksyn kaikki tekemäsi kuvat. toimita ne claudelle. claudelta saat uusia ohjeita jatkoa varten",
   "sourceContentAfterSHA256": "2143fbd9c01c2db6d84138496c1a40ed07dfe368a1a845fba4eb629bfa8695d1",
   "assets": [
     {
@@ -56,7 +56,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/basseterre/sisalto.json",
-      "sourceContentSHA256": "505614d583facb582a8cff8784048c501319709a57572391a5fa132f7f3935d8",
+      "sourceContentSHA256": "2143fbd9c01c2db6d84138496c1a40ed07dfe368a1a845fba4eb629bfa8695d1",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
         "semanticContextSHA256": "a6b757272031e1d427b592c8688718f733e180c96a67a55308ae6c1fa6a16112",
@@ -146,7 +146,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/basseterre/illustration-qa-extra.json",
-        "fileSHA256": "dc329bb963e6f97bc24360a3d3612ff6b765cdfb27dbb118679737b9801d1e9c",
+        "fileSHA256": "c8a7d901516cea9c841840bf563e4b6905c59d753177ff54555066d59ae1ccdb",
         "item": {
           "slot": "O4",
           "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
@@ -224,7 +224,7 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/basseterre/illustration-qa-extra.json",
-            "sha256": "dc329bb963e6f97bc24360a3d3612ff6b765cdfb27dbb118679737b9801d1e9c"
+            "sha256": "c8a7d901516cea9c841840bf563e4b6905c59d753177ff54555066d59ae1ccdb"
           }
         ]
       },
@@ -309,7 +309,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "2143fbd9c01c2db6d84138496c1a40ed07dfe368a1a845fba4eb629bfa8695d1",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "a6b757272031e1d427b592c8688718f733e180c96a67a55308ae6c1fa6a16112"
+      "contextAfterSHA256": "a6b757272031e1d427b592c8688718f733e180c96a67a55308ae6c1fa6a16112",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e12",
@@ -359,7 +361,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/basseterre/sisalto.json",
-      "sourceContentSHA256": "505614d583facb582a8cff8784048c501319709a57572391a5fa132f7f3935d8",
+      "sourceContentSHA256": "2143fbd9c01c2db6d84138496c1a40ed07dfe368a1a845fba4eb629bfa8695d1",
       "semanticSourceBind": {
         "targetBeforeSHA256": "baf55651cd00d82bd8517f6e3ba60649dbe4d769f72d6d4a5446368a6f88f320",
         "semanticContextSHA256": "baf55651cd00d82bd8517f6e3ba60649dbe4d769f72d6d4a5446368a6f88f320",
@@ -447,7 +449,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/basseterre/illustration-qa-extra.json",
-        "fileSHA256": "dc329bb963e6f97bc24360a3d3612ff6b765cdfb27dbb118679737b9801d1e9c",
+        "fileSHA256": "c8a7d901516cea9c841840bf563e4b6905c59d753177ff54555066d59ae1ccdb",
         "item": {
           "slot": "K3",
           "targetJsonPath": "$.kaupunkilehti[0].nostot[2]",
@@ -523,7 +525,7 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/basseterre/illustration-qa-extra.json",
-            "sha256": "dc329bb963e6f97bc24360a3d3612ff6b765cdfb27dbb118679737b9801d1e9c"
+            "sha256": "c8a7d901516cea9c841840bf563e4b6905c59d753177ff54555066d59ae1ccdb"
           }
         ]
       },
@@ -608,7 +610,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "2143fbd9c01c2db6d84138496c1a40ed07dfe368a1a845fba4eb629bfa8695d1",
       "targetAfterSHA256": "baf55651cd00d82bd8517f6e3ba60649dbe4d769f72d6d4a5446368a6f88f320",
-      "contextAfterSHA256": "baf55651cd00d82bd8517f6e3ba60649dbe4d769f72d6d4a5446368a6f88f320"
+      "contextAfterSHA256": "baf55651cd00d82bd8517f6e3ba60649dbe4d769f72d6d4a5446368a6f88f320",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e12",
@@ -658,7 +662,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/basseterre/sisalto.json",
-      "sourceContentSHA256": "505614d583facb582a8cff8784048c501319709a57572391a5fa132f7f3935d8",
+      "sourceContentSHA256": "2143fbd9c01c2db6d84138496c1a40ed07dfe368a1a845fba4eb629bfa8695d1",
       "semanticSourceBind": {
         "targetBeforeSHA256": "c984a3c76e67cf493e9b2f51a4d6af55c1700497b2c297bb25a9153aa92f2530",
         "semanticContextSHA256": "c984a3c76e67cf493e9b2f51a4d6af55c1700497b2c297bb25a9153aa92f2530",
@@ -749,7 +753,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/basseterre/illustration-qa-extra.json",
-        "fileSHA256": "dc329bb963e6f97bc24360a3d3612ff6b765cdfb27dbb118679737b9801d1e9c",
+        "fileSHA256": "c8a7d901516cea9c841840bf563e4b6905c59d753177ff54555066d59ae1ccdb",
         "item": {
           "slot": "K4",
           "targetJsonPath": "$.kaupunkilehti[0].nostot[3]",
@@ -829,7 +833,7 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/basseterre/illustration-qa-extra.json",
-            "sha256": "dc329bb963e6f97bc24360a3d3612ff6b765cdfb27dbb118679737b9801d1e9c"
+            "sha256": "c8a7d901516cea9c841840bf563e4b6905c59d753177ff54555066d59ae1ccdb"
           }
         ]
       },
@@ -914,7 +918,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "2143fbd9c01c2db6d84138496c1a40ed07dfe368a1a845fba4eb629bfa8695d1",
       "targetAfterSHA256": "c984a3c76e67cf493e9b2f51a4d6af55c1700497b2c297bb25a9153aa92f2530",
-      "contextAfterSHA256": "c984a3c76e67cf493e9b2f51a4d6af55c1700497b2c297bb25a9153aa92f2530"
+      "contextAfterSHA256": "c984a3c76e67cf493e9b2f51a4d6af55c1700497b2c297bb25a9153aa92f2530",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e12",
@@ -964,7 +970,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/basseterre/sisalto.json",
-      "sourceContentSHA256": "505614d583facb582a8cff8784048c501319709a57572391a5fa132f7f3935d8",
+      "sourceContentSHA256": "2143fbd9c01c2db6d84138496c1a40ed07dfe368a1a845fba4eb629bfa8695d1",
       "semanticSourceBind": {
         "targetBeforeSHA256": "447c3b49ba7bee7ce45bd416607865931db10b932b24b1ee2d048ec464720303",
         "semanticContextSHA256": "447c3b49ba7bee7ce45bd416607865931db10b932b24b1ee2d048ec464720303",
@@ -1055,7 +1061,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/basseterre/illustration-qa-extra.json",
-        "fileSHA256": "dc329bb963e6f97bc24360a3d3612ff6b765cdfb27dbb118679737b9801d1e9c",
+        "fileSHA256": "c8a7d901516cea9c841840bf563e4b6905c59d753177ff54555066d59ae1ccdb",
         "item": {
           "slot": "L1",
           "targetJsonPath": "$.kaupunkilehti[1].nostot[0]",
@@ -1135,7 +1141,7 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/basseterre/illustration-qa-extra.json",
-            "sha256": "dc329bb963e6f97bc24360a3d3612ff6b765cdfb27dbb118679737b9801d1e9c"
+            "sha256": "c8a7d901516cea9c841840bf563e4b6905c59d753177ff54555066d59ae1ccdb"
           }
         ]
       },
@@ -1220,7 +1226,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "2143fbd9c01c2db6d84138496c1a40ed07dfe368a1a845fba4eb629bfa8695d1",
       "targetAfterSHA256": "447c3b49ba7bee7ce45bd416607865931db10b932b24b1ee2d048ec464720303",
-      "contextAfterSHA256": "447c3b49ba7bee7ce45bd416607865931db10b932b24b1ee2d048ec464720303"
+      "contextAfterSHA256": "447c3b49ba7bee7ce45bd416607865931db10b932b24b1ee2d048ec464720303",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e12",
@@ -1270,7 +1278,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/basseterre/sisalto.json",
-      "sourceContentSHA256": "505614d583facb582a8cff8784048c501319709a57572391a5fa132f7f3935d8",
+      "sourceContentSHA256": "2143fbd9c01c2db6d84138496c1a40ed07dfe368a1a845fba4eb629bfa8695d1",
       "semanticSourceBind": {
         "targetBeforeSHA256": "153e610333a5d833ad970559e2fcbc259714b255b74918d9f9b55664366f4a4b",
         "semanticContextSHA256": "153e610333a5d833ad970559e2fcbc259714b255b74918d9f9b55664366f4a4b",
@@ -1364,7 +1372,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/basseterre/illustration-qa-extra.json",
-        "fileSHA256": "dc329bb963e6f97bc24360a3d3612ff6b765cdfb27dbb118679737b9801d1e9c",
+        "fileSHA256": "c8a7d901516cea9c841840bf563e4b6905c59d753177ff54555066d59ae1ccdb",
         "item": {
           "slot": "L4",
           "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
@@ -1447,7 +1455,7 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/basseterre/illustration-qa-extra.json",
-            "sha256": "dc329bb963e6f97bc24360a3d3612ff6b765cdfb27dbb118679737b9801d1e9c"
+            "sha256": "c8a7d901516cea9c841840bf563e4b6905c59d753177ff54555066d59ae1ccdb"
           }
         ]
       },
@@ -1532,7 +1540,531 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "2143fbd9c01c2db6d84138496c1a40ed07dfe368a1a845fba4eb629bfa8695d1",
       "targetAfterSHA256": "153e610333a5d833ad970559e2fcbc259714b255b74918d9f9b55664366f4a4b",
-      "contextAfterSHA256": "153e610333a5d833ad970559e2fcbc259714b255b74918d9f9b55664366f4a4b"
+      "contextAfterSHA256": "153e610333a5d833ad970559e2fcbc259714b255b74918d9f9b55664366f4a4b",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+    },
+    {
+      "era": "e12",
+      "city": "basseterre",
+      "slot": "TRAVELER",
+      "type": "illustration",
+      "assetID": "e12-basseterre-TRAVELER-b1d389f042",
+      "galleryImageID": "e12-basseterre-TRAVELER-b1d389f042",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "matkailijalle",
+        "kuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/basseterre/e12-basseterre-TRAVELER-b1d389f042-23db97efca24.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva oppaassa mainitusta Saint Kittsin ja Nevisin kansallisannoksesta.",
+        "lyhyt": "Havainnekuva oppaassa mainitusta Saint Kittsin ja Nevisin kansallisannoksesta."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/basseterre/e12-basseterre-TRAVELER-b1d389f042-23db97efca24.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva oppaassa mainitusta Saint Kittsin ja Nevisin kansallisannoksesta.",
+        "lyhyt": "Havainnekuva oppaassa mainitusta Saint Kittsin ja Nevisin kansallisannoksesta."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "23db97efca244543aab57b58ac9a570ccc5da576a61d84ad07d278c6de718157",
+      "exportSHA256": "70264b934627446a9059a352fe9640f0e9ef0f695750b1f9978cc256399adc55",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/basseterre/e12-basseterre-TRAVELER-b1d389f042-23db97efca24.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/basseterre/e12-basseterre-TRAVELER-b1d389f042-23db97efca24.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e12/basseterre/e12-basseterre-TRAVELER-b1d389f042-23db97efca24.png",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/basseterre/sisalto.json",
+      "sourceContentSHA256": "2143fbd9c01c2db6d84138496c1a40ed07dfe368a1a845fba4eb629bfa8695d1",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "91dafd5518038514247f6c2f7c2462eba289f53ec1561b1014646db206a412a2",
+        "subjectTitle": "Matkailijalle",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Tavallinen ruoka/raaka-aine tai luonnonmateriaali, ei nimetyn paikan, rakennuksen, suojatun taideteoksen tai historiallisen yksilön rekonstruktio. Uusi itsenäinen havainne, ei O4-tiedoston tai muun aiemman kuvan uudelleenkäyttö.",
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/basseterre/assets/e12-basseterre-TRAVELER-b1d389f042/original.png",
+            "nativeSHA256": "23db97efca244543aab57b58ac9a570ccc5da576a61d84ad07d278c6de718157",
+            "nativeWidth": 1024,
+            "nativeHeight": 1536,
+            "nativeAspectRatio": 0.6666666666666666,
+            "format": "PNG",
+            "pngChunks": [
+              "IHDR",
+              "caBX",
+              "IDAT",
+              "IEND"
+            ],
+            "manifestMatch": true,
+            "captionFi": "Havainnekuva oppaassa mainitusta Saint Kittsin ja Nevisin kansallisannoksesta.",
+            "sourceEvidence": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/basseterre/sisalto.json",
+              "contentSHA256": "2143fbd9c01c2db6d84138496c1a40ed07dfe368a1a845fba4eb629bfa8695d1",
+              "sourceText": "{\"artikkeli\": {\"jaksot\": [{\"otsikko\": \"Perille ja liikkeelle\", \"teksti\": \"Basseterrea palvelee Robert L. Bradshaw International Airport (SKB). Risteilyalukset käyttävät Port Zantea, josta pääsee kävellen keskustaan. Nevisin Charlestownista on lauttayhteys Basseterreen. Keskustassa liikutaan helposti jalan; muualla saarella vaihtoehtoja ovat taksi ja paikallinen pikkubussi. Liikenne kulkee vasemmalla. Tarkista lautan vuorot ja paluuyhteys matkapäivälle, sillä eri saarten yhteydet eivät ole sama asia kuin keskustan kävelymatka.\"}, {\"otsikko\": \"Satamasta vanhaan keskustaan\", \"teksti\": \"Port Zantesta vanhaan keskustaan tultaessa kansallismuseon rakennus auttaa ymmärtämään vanhaa rantaviivaa. Sen läpi kuljettiin aikanaan laiturilta kaupunkiin, mutta rakennuksen edessä on nyt täyttömaata. Kansallismuseon toiminta ja rakennuksen korjaustilanne kannattaa tarkistaa ennen sisävierailun suunnittelua. Jatka Fort Streetin kautta Circusin kellolle ja Itsenäisyydenaukiolle: näin satama, kauppakadut ja vanha hallinnollinen keskus liittyvät samaan kävelyyn.\"}, {\"otsikko\": \"Kaupunki ja sokerirata\", \"teksti\": \"Itsenäisyydenaukion vanha nimi oli Pall Mall Square. Sen historiaan kuuluu orjakauppa, joten paikkaan kannattaa tutustua myös historian kautta. Scenic Railway puolestaan on Saint Kittsin saaren retki, ei Basseterreen paikallisjuna. Rata kuljetti ennen sokeriruokoa kaupunkiin; nykyisissä vaunuissa voi katsella rannikkoa joko alemmasta salongista tai avoimesta yläkerroksesta. Selvitä retken lähtöpaikka erikseen, älä suuntaa vanhalle ratalinjalle odottamaan keskustan vuoroa.\"}, {\"otsikko\": \"Mitä täällä syödään\", \"teksti\": \"Saint Kittsin ja Nevisin kansallisannoksessa haudutettu suolakala saa rinnalleen mausteista keittobanaania, maustettua leipäpuun hedelmää ja kookosmykyjä. Annos yhdistää kalan ja kasviperäiset lisäkkeet yhdeksi ateriaksi. Suolakala ei tässä tarkoita suoraan merestä nostettua, vain kevyesti suolattua kalaa: hallituksen reseptissä se liotetaan ja keitetään ennen haudutusta. Kaupungin ruokapaikassa voi aloittaa kysymällä tätä kokonaisuutta tai päivän kalaa. Kansallisannos on koko saarivaltion ruokaa, ei vain Basseterreen oma erikoisuus.\"}, {\"otsikko\": \"Milloin kannattaa tulla\", \"teksti\": \"Kaupungin karnevaalikausi osuu joulun ja vuodenvaihteen ympärille. Silloin kalenterissa on musiikkia, naamiohahmoja ja katukulkueita; tapahtumien tarkat päivät tarkistetaan kunkin vuoden ohjelmasta. Karnevaaliin ajoitettu matka ja rauhallinen historian tutkiminen ovat erilaisia tapoja kokea sama keskusta. Sääennuste ja merimatkan olosuhteet on hyvä tarkistaa lähellä lähtöä. Ghautit ovat myös veden kulkureittejä, joten kuivan päivän katunäkymä ei kuvaa niitä kaikissa oloissa.\"}], \"matkailu\": {\"hyvaTietaa\": [{\"otsikko\": \"Museon vierailu\", \"teksti\": \"Tarkista kansallismuseon rakennuksen ja näyttelyiden ajantasainen tilanne.\"}, {\"otsikko\": \"Lautat\", \"teksti\": \"Varmista matkapäivän vuorot ja paluuyhteys ennen saariretkeä.\"}, {\"otsikko\": \"Vasemmanpuoleinen liikenne\", \"teksti\": \"Huomioi ajosuunta myös katuja ylittäessä.\"}], \"parasta\": [{\"mita\": \"Itsenäisyydenaukio\", \"tahdet\": 3}, {\"mita\": \"Circus\", \"tahdet\": 3}, {\"mita\": \"Kansallismuseon rakennus\", \"tahdet\": 2}, {\"mita\": \"Scenic Railway\", \"tahdet\": 2}, {\"mita\": \"Lautta Nevisille\", \"tahdet\": 2}]}, \"nimi\": \"Matkailijan Basseterre\", \"nosto\": \"Pieni keskusta yhdistää sataman, kauppakadut ja vanhat aukiot; saarten välinen matka alkaa taas omalta laituriltaan.\", \"taitto\": \"opas\", \"teksti\": \"Seuraa vanhaa kulkureittiä mereltä keskustaan ja jatka halutessasi sokeriradan maisemiin.\"}, \"kappale\": \"Basseterreen vanhaan keskustaan voi tutustua jalan Port Zantesta. Circusin kellon, Itsenäisyydenaukion ja entisen valtiovarainhallinnon talon välillä näkyy satamakaupungin eri puolia. Kansallismuseon ajantasainen korjaus- ja vierailutilanne kannattaa selvittää erikseen. Saarta kiertävä Scenic Railway on retki keskustan ulkopuolelle. Nevisille lähdetään lautalla, joten paluumatka kuuluu päivän suunnitelmaan.\"}",
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/basseterre/faktapohja.md",
+              "originalSources": [
+                "https://www.gov.kn/skn-national-symbols/"
+              ],
+              "ccRelease": {},
+              "generationAuthorization": {
+                "rule": "OHJEET: turvallinen yleishavainnollistus ilman CC-odotusta",
+                "sharedReservationRecord": "/Volumes/T7 4TB/ChatGPT-Codex-active/coordination/paakaupungit-claims/08391cff28146b17/e12/basseterre/TRAVELER/owner.json",
+                "ccReleaseRequired": false,
+                "scope": "lähdeperustainen turvallinen avoin mixed; ei PHOTO/C1-C3 tai nimetty kaupunkiasettelu"
+              },
+              "sourceTopicAudit": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/source-scout/continuation-20261013/safe-topic-production-priorities.json",
+              "sourceTopicAuditSHA256": "b5fd12034028af4a090b68a5ac0644b7a6d737a177b35b838ab6b3974c772dc0",
+              "auditContentSHA256": "2143fbd9c01c2db6d84138496c1a40ed07dfe368a1a845fba4eb629bfa8695d1",
+              "auditTargetContext": "Basseterreen vanhaan keskustaan voi tutustua jalan Port Zantesta. Circusin kellon, Itsenäisyydenaukion ja entisen valtiovarainhallinnon talon välillä näkyy satamakaupungin eri puolia. Kansallismuseon ajantasainen korjaus- ja vierailutilanne kannattaa selvittää erikseen. Saarta kiertävä Scenic Railway on retki keskustan ulkopuolelle. Nevisille lähdetään lautalla, joten paluumatka kuuluu päivän suunnitelmaan. Matkailijan Basseterre opas Seuraa vanhaa kulkureittiä mereltä keskustaan ja jatka halutessasi sokeriradan maisemiin. Pieni keskusta yhdistää sataman, kauppakadut ja vanhat aukiot; saarten välinen matka alkaa taas omalta laituriltaan. Perille ja liikkeelle Basseterrea palvelee Robert L. Bradshaw International Airport (SKB). Risteilyalukset käyttävät Port Zantea, josta pääsee kävellen keskustaan. Nevisin Charlestownista on lauttayhteys Basseterreen. Keskustassa liikutaan helposti jalan; muualla saarella vaihtoehtoja ovat taksi ja paikallinen pikkubussi. Liikenne kulkee vasemmalla. Tarkista lautan vuorot ja paluuyhteys matkapäivälle, sillä eri saarten yhteydet eivät ole sama asia kuin keskustan kävelymatka. Satamasta vanhaan keskustaan Port Zantesta vanhaan keskustaan tultaessa kansallismuseon rakennus auttaa ymmärtämään vanhaa rantaviivaa. Sen läpi kuljettiin aikanaan laiturilta kaupunkiin, mutta rakennuksen edessä on nyt täyttömaata. Kansallismuseon toiminta ja rakennuksen korjaustilanne kannattaa tarkistaa ennen sisävierailun suunnittelua. Jatka Fort Streetin kautta Circusin kellolle ja Itsenäisyydenaukiolle: näin satama, kauppakadut ja vanha hallinnollinen keskus liittyvät samaan kävelyyn. Kaupunki ja sokerirata Itsenäisyydenaukion vanha nimi oli Pall Mall Square. Sen historiaan kuuluu orjakauppa, joten paikkaan kannattaa tutustua myös historian kautta. Scenic Railway puolestaan on Saint Kittsin saaren retki, ei Basseterreen paikallisjuna. Rata kuljetti ennen sokeriruokoa kaupunkiin; nykyisissä vaunuissa voi katsella rannikkoa joko alemmasta salongista tai avoimesta yläkerroksesta. Selvitä retken lähtöpaikka erikseen, älä suuntaa vanhalle ratalinjalle odottamaan keskustan vuoroa. Mitä täällä syödään Saint Kittsin ja Nevisin kansallisannoksessa haudutettu suolakala saa rinnalleen mausteista keittobanaania, maustettua leipäpuun hedelmää ja kookosmykyjä. Annos yhdistää kalan ja kasviperäiset lisäkkeet yhdeksi ateriaksi. Suolakala ei tässä tarkoita suoraan merestä nostettua, vain kevyesti suolattua kalaa: hallituksen reseptissä se liotetaan ja keitetään ennen haudutusta. Kaupungin ruokapaikassa voi aloittaa kysymällä tätä kokonaisuutta tai päivän kalaa. Kansallisannos on koko saarivaltion ruokaa, ei vain Basseterreen oma erikoisuus. Milloin kannattaa tulla Kaupungin karnevaalikausi osuu joulun ja vuodenvaihteen ympärille. Silloin kalenterissa on musiikkia, naamiohahmoja ja katukulkueita; tapahtumien tarkat päivät tarkistetaan kunkin vuoden ohjelmasta. Karnevaaliin ajoitettu matka ja rauhallinen historian tutkiminen ovat erilaisia tapoja kokea sama keskusta. Sääennuste ja merimatkan olosuhteet on hyvä tarkistaa lähellä lähtöä. Ghautit ovat myös veden kulkureittejä, joten kuivan päivän katunäkymä ei kuvaa niitä kaikissa oloissa. Itsenäisyydenaukio  Aukion nimi ja aiempi käyttö avaavat valtion historiaa. Circus  Glasgowssa valmistettu kello on keskustan maamerkki. Kansallismuseon rakennus  Vanha holvikäytävä yhdisti laiturin kaupunkiin. Scenic Railway  Saarella tehtävä retki seuraa sokerinkuljetuksen historiaa. Lautta Nevisille  Charlestownin yhteys näyttää myös saarivaltion merellisen arjen. Museon vierailu Tarkista kansallismuseon rakennuksen ja näyttelyiden ajantasainen tilanne. Lautat Varmista matkapäivän vuorot ja paluuyhteys ennen saariretkeä. Vasemmanpuoleinen liikenne Huomioi ajosuunta myös katuja ylittäessä. Wikipedia",
+              "productionAuthorization": "13.10.2026 source-thread user instruction: generate all own job20 rows now, live target/atomic claim first; overrides waiting_cc_or_safe_reference and audit productionAllowedByThisAudit=false only for these documented ordinary subjects."
+            },
+            "rightsEvidence": "Tavallinen ruoka/raaka-aine tai luonnonmateriaali, ei nimetyn paikan, rakennuksen, suojatun taideteoksen tai historiallisen yksilön rekonstruktio. Uusi itsenäinen havainne, ei O4-tiedoston tai muun aiemman kuvan uudelleenkäyttö.",
+            "content": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/basseterre/sisalto.json",
+              "contentSHA256": "2143fbd9c01c2db6d84138496c1a40ed07dfe368a1a845fba4eb629bfa8695d1",
+              "targetObjectExists": true,
+              "targetContainer": "$.kaupunkilehti[0].matkailijalle",
+              "targetText": {
+                "kuva": {
+                  "tiedosto": "",
+                  "lyhyt": "",
+                  "selite": "",
+                  "lahde": ""
+                },
+                "kappale": "Basseterreen vanhaan keskustaan voi tutustua jalan Port Zantesta. Circusin kellon, Itsenäisyydenaukion ja entisen valtiovarainhallinnon talon välillä näkyy satamakaupungin eri puolia. Kansallismuseon ajantasainen korjaus- ja vierailutilanne kannattaa selvittää erikseen. Saarta kiertävä Scenic Railway on retki keskustan ulkopuolelle. Nevisille lähdetään lautalla, joten paluumatka kuuluu päivän suunnitelmaan.",
+                "artikkeli": {
+                  "nimi": "Matkailijan Basseterre",
+                  "taitto": "opas",
+                  "teksti": "Seuraa vanhaa kulkureittiä mereltä keskustaan ja jatka halutessasi sokeriradan maisemiin.",
+                  "nosto": "Pieni keskusta yhdistää sataman, kauppakadut ja vanhat aukiot; saarten välinen matka alkaa taas omalta laituriltaan.",
+                  "jaksot": [
+                    {
+                      "otsikko": "Perille ja liikkeelle",
+                      "teksti": "Basseterrea palvelee Robert L. Bradshaw International Airport (SKB). Risteilyalukset käyttävät Port Zantea, josta pääsee kävellen keskustaan. Nevisin Charlestownista on lauttayhteys Basseterreen. Keskustassa liikutaan helposti jalan; muualla saarella vaihtoehtoja ovat taksi ja paikallinen pikkubussi. Liikenne kulkee vasemmalla. Tarkista lautan vuorot ja paluuyhteys matkapäivälle, sillä eri saarten yhteydet eivät ole sama asia kuin keskustan kävelymatka.",
+                      "kuva": {
+                        "tiedosto": "",
+                        "lyhyt": "",
+                        "selite": "",
+                        "lahde": ""
+                      }
+                    },
+                    {
+                      "otsikko": "Satamasta vanhaan keskustaan",
+                      "teksti": "Port Zantesta vanhaan keskustaan tultaessa kansallismuseon rakennus auttaa ymmärtämään vanhaa rantaviivaa. Sen läpi kuljettiin aikanaan laiturilta kaupunkiin, mutta rakennuksen edessä on nyt täyttömaata. Kansallismuseon toiminta ja rakennuksen korjaustilanne kannattaa tarkistaa ennen sisävierailun suunnittelua. Jatka Fort Streetin kautta Circusin kellolle ja Itsenäisyydenaukiolle: näin satama, kauppakadut ja vanha hallinnollinen keskus liittyvät samaan kävelyyn.",
+                      "kuva": {
+                        "tiedosto": "",
+                        "lyhyt": "",
+                        "selite": "",
+                        "lahde": ""
+                      }
+                    },
+                    {
+                      "otsikko": "Kaupunki ja sokerirata",
+                      "teksti": "Itsenäisyydenaukion vanha nimi oli Pall Mall Square. Sen historiaan kuuluu orjakauppa, joten paikkaan kannattaa tutustua myös historian kautta. Scenic Railway puolestaan on Saint Kittsin saaren retki, ei Basseterreen paikallisjuna. Rata kuljetti ennen sokeriruokoa kaupunkiin; nykyisissä vaunuissa voi katsella rannikkoa joko alemmasta salongista tai avoimesta yläkerroksesta. Selvitä retken lähtöpaikka erikseen, älä suuntaa vanhalle ratalinjalle odottamaan keskustan vuoroa.",
+                      "kuva": {
+                        "tiedosto": "",
+                        "lyhyt": "",
+                        "selite": "",
+                        "lahde": ""
+                      }
+                    },
+                    {
+                      "otsikko": "Mitä täällä syödään",
+                      "teksti": "Saint Kittsin ja Nevisin kansallisannoksessa haudutettu suolakala saa rinnalleen mausteista keittobanaania, maustettua leipäpuun hedelmää ja kookosmykyjä. Annos yhdistää kalan ja kasviperäiset lisäkkeet yhdeksi ateriaksi. Suolakala ei tässä tarkoita suoraan merestä nostettua, vain kevyesti suolattua kalaa: hallituksen reseptissä se liotetaan ja keitetään ennen haudutusta. Kaupungin ruokapaikassa voi aloittaa kysymällä tätä kokonaisuutta tai päivän kalaa. Kansallisannos on koko saarivaltion ruokaa, ei vain Basseterreen oma erikoisuus.",
+                      "kuva": {
+                        "tiedosto": "",
+                        "lyhyt": "",
+                        "selite": "",
+                        "lahde": ""
+                      }
+                    },
+                    {
+                      "otsikko": "Milloin kannattaa tulla",
+                      "teksti": "Kaupungin karnevaalikausi osuu joulun ja vuodenvaihteen ympärille. Silloin kalenterissa on musiikkia, naamiohahmoja ja katukulkueita; tapahtumien tarkat päivät tarkistetaan kunkin vuoden ohjelmasta. Karnevaaliin ajoitettu matka ja rauhallinen historian tutkiminen ovat erilaisia tapoja kokea sama keskusta. Sääennuste ja merimatkan olosuhteet on hyvä tarkistaa lähellä lähtöä. Ghautit ovat myös veden kulkureittejä, joten kuivan päivän katunäkymä ei kuvaa niitä kaikissa oloissa.",
+                      "kuva": {
+                        "tiedosto": "",
+                        "lyhyt": "",
+                        "selite": "",
+                        "lahde": ""
+                      }
+                    }
+                  ],
+                  "matkailu": {
+                    "parasta": [
+                      {
+                        "mita": "Itsenäisyydenaukio",
+                        "tahdet": 3,
+                        "selite": "Aukion nimi ja aiempi käyttö avaavat valtion historiaa."
+                      },
+                      {
+                        "mita": "Circus",
+                        "tahdet": 3,
+                        "selite": "Glasgowssa valmistettu kello on keskustan maamerkki."
+                      },
+                      {
+                        "mita": "Kansallismuseon rakennus",
+                        "tahdet": 2,
+                        "selite": "Vanha holvikäytävä yhdisti laiturin kaupunkiin."
+                      },
+                      {
+                        "mita": "Scenic Railway",
+                        "tahdet": 2,
+                        "selite": "Saarella tehtävä retki seuraa sokerinkuljetuksen historiaa."
+                      },
+                      {
+                        "mita": "Lautta Nevisille",
+                        "tahdet": 2,
+                        "selite": "Charlestownin yhteys näyttää myös saarivaltion merellisen arjen."
+                      }
+                    ],
+                    "hyvaTietaa": [
+                      {
+                        "otsikko": "Museon vierailu",
+                        "teksti": "Tarkista kansallismuseon rakennuksen ja näyttelyiden ajantasainen tilanne."
+                      },
+                      {
+                        "otsikko": "Lautat",
+                        "teksti": "Varmista matkapäivän vuorot ja paluuyhteys ennen saariretkeä."
+                      },
+                      {
+                        "otsikko": "Vasemmanpuoleinen liikenne",
+                        "teksti": "Huomioi ajosuunta myös katuja ylittäessä."
+                      }
+                    ]
+                  },
+                  "lahde": "Wikipedia"
+                }
+              },
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/basseterre/faktapohja.md",
+              "factSheetSHA256": "8bce15fe58267c9838c37b4f8e1a9d137163cc405f405c6b37ae448851fc4888",
+              "factAssessment": "Nykyinen oppaan ruokaosa ja faktapohja rivi50/B9 hallituksen kansallisannosresepti: suolakalan liotus ja keittäminen ennen haudutusta, keittobanaani, leipäpuun hedelmä ja kookosmykyt. Ei väitettä että koko saarivaltion annos olisi vain Basseterreen erikoisuus."
+            },
+            "visualInspection": {
+              "tool": "view_image",
+              "detail": "original",
+              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/basseterre/assets/e12-basseterre-TRAVELER-b1d389f042/original.png",
+              "inspectedBy": "qa-e12",
+              "inspectedAt": "2026-10-13T13:35:16Z",
+              "observations": "Lautasella neljä erillistä osaa: vaaleaa kypsää kalahiutalemuhennosta pehmeiden kasvisten kanssa, kolme keltaista kypsää keittobanaanipalaa, vaaleita maustettuja hedelmälohkoja ja kaksi tiivistä vaaleaa mykyä. Kalassa ei kuivaa suolakuorta, kokonaista paistettua kalaa tai raakaa filettä. Lautasen reuna, ruoan kosketus ja tekstiilit johdonmukaisia; pinnat epäsäännöllisiä. Ei tekstiä, logoja, ihmisiä tai nimettyä ruokapaikkaa."
+            },
+            "otherReviewerVerdicts": [],
+            "openConflict": false,
+            "ownershipMarker": "qa-handoff-kuvitus-3.json"
+          },
+          "qaReason": "Neliosainen kypsä ruoka-annos vastaa Basseterreen oppaan kansallisannosta: haudutettu suolakala, keittobanaani, leipäpuun hedelmä ja kookosmykyt. Kala esitetään kosteina kypsinä hiutaleina. Kuva on rehellisesti yleinen havainne. Natiivi1024×1536, suhde0.666667 hyväksyttävä."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva oppaassa mainitusta Saint Kittsin ja Nevisin kansallisannoksesta.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/basseterre/illustration-qa-extra.json",
+        "fileSHA256": "c8a7d901516cea9c841840bf563e4b6905c59d753177ff54555066d59ae1ccdb",
+        "item": {
+          "slot": "TRAVELER",
+          "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
+          "assetID": "e12-basseterre-TRAVELER-b1d389f042",
+          "sha256": "23db97efca244543aab57b58ac9a570ccc5da576a61d84ad07d278c6de718157",
+          "verdict": "accepted",
+          "reason": "Neliosainen kypsä ruoka-annos vastaa Basseterreen oppaan kansallisannosta: haudutettu suolakala, keittobanaani, leipäpuun hedelmä ja kookosmykyt. Kala esitetään kosteina kypsinä hiutaleina. Kuva on rehellisesti yleinen havainne. Natiivi1024×1536, suhde0.666667 hyväksyttävä.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/basseterre/assets/e12-basseterre-TRAVELER-b1d389f042/original.png",
+            "nativeSHA256": "23db97efca244543aab57b58ac9a570ccc5da576a61d84ad07d278c6de718157",
+            "nativeWidth": 1024,
+            "nativeHeight": 1536,
+            "nativeAspectRatio": 0.6666666666666666,
+            "format": "PNG",
+            "pngChunks": [
+              "IHDR",
+              "caBX",
+              "IDAT",
+              "IEND"
+            ],
+            "manifestMatch": true,
+            "captionFi": "Havainnekuva oppaassa mainitusta Saint Kittsin ja Nevisin kansallisannoksesta.",
+            "sourceEvidence": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/basseterre/sisalto.json",
+              "contentSHA256": "2143fbd9c01c2db6d84138496c1a40ed07dfe368a1a845fba4eb629bfa8695d1",
+              "sourceText": "{\"artikkeli\": {\"jaksot\": [{\"otsikko\": \"Perille ja liikkeelle\", \"teksti\": \"Basseterrea palvelee Robert L. Bradshaw International Airport (SKB). Risteilyalukset käyttävät Port Zantea, josta pääsee kävellen keskustaan. Nevisin Charlestownista on lauttayhteys Basseterreen. Keskustassa liikutaan helposti jalan; muualla saarella vaihtoehtoja ovat taksi ja paikallinen pikkubussi. Liikenne kulkee vasemmalla. Tarkista lautan vuorot ja paluuyhteys matkapäivälle, sillä eri saarten yhteydet eivät ole sama asia kuin keskustan kävelymatka.\"}, {\"otsikko\": \"Satamasta vanhaan keskustaan\", \"teksti\": \"Port Zantesta vanhaan keskustaan tultaessa kansallismuseon rakennus auttaa ymmärtämään vanhaa rantaviivaa. Sen läpi kuljettiin aikanaan laiturilta kaupunkiin, mutta rakennuksen edessä on nyt täyttömaata. Kansallismuseon toiminta ja rakennuksen korjaustilanne kannattaa tarkistaa ennen sisävierailun suunnittelua. Jatka Fort Streetin kautta Circusin kellolle ja Itsenäisyydenaukiolle: näin satama, kauppakadut ja vanha hallinnollinen keskus liittyvät samaan kävelyyn.\"}, {\"otsikko\": \"Kaupunki ja sokerirata\", \"teksti\": \"Itsenäisyydenaukion vanha nimi oli Pall Mall Square. Sen historiaan kuuluu orjakauppa, joten paikkaan kannattaa tutustua myös historian kautta. Scenic Railway puolestaan on Saint Kittsin saaren retki, ei Basseterreen paikallisjuna. Rata kuljetti ennen sokeriruokoa kaupunkiin; nykyisissä vaunuissa voi katsella rannikkoa joko alemmasta salongista tai avoimesta yläkerroksesta. Selvitä retken lähtöpaikka erikseen, älä suuntaa vanhalle ratalinjalle odottamaan keskustan vuoroa.\"}, {\"otsikko\": \"Mitä täällä syödään\", \"teksti\": \"Saint Kittsin ja Nevisin kansallisannoksessa haudutettu suolakala saa rinnalleen mausteista keittobanaania, maustettua leipäpuun hedelmää ja kookosmykyjä. Annos yhdistää kalan ja kasviperäiset lisäkkeet yhdeksi ateriaksi. Suolakala ei tässä tarkoita suoraan merestä nostettua, vain kevyesti suolattua kalaa: hallituksen reseptissä se liotetaan ja keitetään ennen haudutusta. Kaupungin ruokapaikassa voi aloittaa kysymällä tätä kokonaisuutta tai päivän kalaa. Kansallisannos on koko saarivaltion ruokaa, ei vain Basseterreen oma erikoisuus.\"}, {\"otsikko\": \"Milloin kannattaa tulla\", \"teksti\": \"Kaupungin karnevaalikausi osuu joulun ja vuodenvaihteen ympärille. Silloin kalenterissa on musiikkia, naamiohahmoja ja katukulkueita; tapahtumien tarkat päivät tarkistetaan kunkin vuoden ohjelmasta. Karnevaaliin ajoitettu matka ja rauhallinen historian tutkiminen ovat erilaisia tapoja kokea sama keskusta. Sääennuste ja merimatkan olosuhteet on hyvä tarkistaa lähellä lähtöä. Ghautit ovat myös veden kulkureittejä, joten kuivan päivän katunäkymä ei kuvaa niitä kaikissa oloissa.\"}], \"matkailu\": {\"hyvaTietaa\": [{\"otsikko\": \"Museon vierailu\", \"teksti\": \"Tarkista kansallismuseon rakennuksen ja näyttelyiden ajantasainen tilanne.\"}, {\"otsikko\": \"Lautat\", \"teksti\": \"Varmista matkapäivän vuorot ja paluuyhteys ennen saariretkeä.\"}, {\"otsikko\": \"Vasemmanpuoleinen liikenne\", \"teksti\": \"Huomioi ajosuunta myös katuja ylittäessä.\"}], \"parasta\": [{\"mita\": \"Itsenäisyydenaukio\", \"tahdet\": 3}, {\"mita\": \"Circus\", \"tahdet\": 3}, {\"mita\": \"Kansallismuseon rakennus\", \"tahdet\": 2}, {\"mita\": \"Scenic Railway\", \"tahdet\": 2}, {\"mita\": \"Lautta Nevisille\", \"tahdet\": 2}]}, \"nimi\": \"Matkailijan Basseterre\", \"nosto\": \"Pieni keskusta yhdistää sataman, kauppakadut ja vanhat aukiot; saarten välinen matka alkaa taas omalta laituriltaan.\", \"taitto\": \"opas\", \"teksti\": \"Seuraa vanhaa kulkureittiä mereltä keskustaan ja jatka halutessasi sokeriradan maisemiin.\"}, \"kappale\": \"Basseterreen vanhaan keskustaan voi tutustua jalan Port Zantesta. Circusin kellon, Itsenäisyydenaukion ja entisen valtiovarainhallinnon talon välillä näkyy satamakaupungin eri puolia. Kansallismuseon ajantasainen korjaus- ja vierailutilanne kannattaa selvittää erikseen. Saarta kiertävä Scenic Railway on retki keskustan ulkopuolelle. Nevisille lähdetään lautalla, joten paluumatka kuuluu päivän suunnitelmaan.\"}",
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/basseterre/faktapohja.md",
+              "originalSources": [
+                "https://www.gov.kn/skn-national-symbols/"
+              ],
+              "ccRelease": {},
+              "generationAuthorization": {
+                "rule": "OHJEET: turvallinen yleishavainnollistus ilman CC-odotusta",
+                "sharedReservationRecord": "/Volumes/T7 4TB/ChatGPT-Codex-active/coordination/paakaupungit-claims/08391cff28146b17/e12/basseterre/TRAVELER/owner.json",
+                "ccReleaseRequired": false,
+                "scope": "lähdeperustainen turvallinen avoin mixed; ei PHOTO/C1-C3 tai nimetty kaupunkiasettelu"
+              },
+              "sourceTopicAudit": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/source-scout/continuation-20261013/safe-topic-production-priorities.json",
+              "sourceTopicAuditSHA256": "b5fd12034028af4a090b68a5ac0644b7a6d737a177b35b838ab6b3974c772dc0",
+              "auditContentSHA256": "2143fbd9c01c2db6d84138496c1a40ed07dfe368a1a845fba4eb629bfa8695d1",
+              "auditTargetContext": "Basseterreen vanhaan keskustaan voi tutustua jalan Port Zantesta. Circusin kellon, Itsenäisyydenaukion ja entisen valtiovarainhallinnon talon välillä näkyy satamakaupungin eri puolia. Kansallismuseon ajantasainen korjaus- ja vierailutilanne kannattaa selvittää erikseen. Saarta kiertävä Scenic Railway on retki keskustan ulkopuolelle. Nevisille lähdetään lautalla, joten paluumatka kuuluu päivän suunnitelmaan. Matkailijan Basseterre opas Seuraa vanhaa kulkureittiä mereltä keskustaan ja jatka halutessasi sokeriradan maisemiin. Pieni keskusta yhdistää sataman, kauppakadut ja vanhat aukiot; saarten välinen matka alkaa taas omalta laituriltaan. Perille ja liikkeelle Basseterrea palvelee Robert L. Bradshaw International Airport (SKB). Risteilyalukset käyttävät Port Zantea, josta pääsee kävellen keskustaan. Nevisin Charlestownista on lauttayhteys Basseterreen. Keskustassa liikutaan helposti jalan; muualla saarella vaihtoehtoja ovat taksi ja paikallinen pikkubussi. Liikenne kulkee vasemmalla. Tarkista lautan vuorot ja paluuyhteys matkapäivälle, sillä eri saarten yhteydet eivät ole sama asia kuin keskustan kävelymatka. Satamasta vanhaan keskustaan Port Zantesta vanhaan keskustaan tultaessa kansallismuseon rakennus auttaa ymmärtämään vanhaa rantaviivaa. Sen läpi kuljettiin aikanaan laiturilta kaupunkiin, mutta rakennuksen edessä on nyt täyttömaata. Kansallismuseon toiminta ja rakennuksen korjaustilanne kannattaa tarkistaa ennen sisävierailun suunnittelua. Jatka Fort Streetin kautta Circusin kellolle ja Itsenäisyydenaukiolle: näin satama, kauppakadut ja vanha hallinnollinen keskus liittyvät samaan kävelyyn. Kaupunki ja sokerirata Itsenäisyydenaukion vanha nimi oli Pall Mall Square. Sen historiaan kuuluu orjakauppa, joten paikkaan kannattaa tutustua myös historian kautta. Scenic Railway puolestaan on Saint Kittsin saaren retki, ei Basseterreen paikallisjuna. Rata kuljetti ennen sokeriruokoa kaupunkiin; nykyisissä vaunuissa voi katsella rannikkoa joko alemmasta salongista tai avoimesta yläkerroksesta. Selvitä retken lähtöpaikka erikseen, älä suuntaa vanhalle ratalinjalle odottamaan keskustan vuoroa. Mitä täällä syödään Saint Kittsin ja Nevisin kansallisannoksessa haudutettu suolakala saa rinnalleen mausteista keittobanaania, maustettua leipäpuun hedelmää ja kookosmykyjä. Annos yhdistää kalan ja kasviperäiset lisäkkeet yhdeksi ateriaksi. Suolakala ei tässä tarkoita suoraan merestä nostettua, vain kevyesti suolattua kalaa: hallituksen reseptissä se liotetaan ja keitetään ennen haudutusta. Kaupungin ruokapaikassa voi aloittaa kysymällä tätä kokonaisuutta tai päivän kalaa. Kansallisannos on koko saarivaltion ruokaa, ei vain Basseterreen oma erikoisuus. Milloin kannattaa tulla Kaupungin karnevaalikausi osuu joulun ja vuodenvaihteen ympärille. Silloin kalenterissa on musiikkia, naamiohahmoja ja katukulkueita; tapahtumien tarkat päivät tarkistetaan kunkin vuoden ohjelmasta. Karnevaaliin ajoitettu matka ja rauhallinen historian tutkiminen ovat erilaisia tapoja kokea sama keskusta. Sääennuste ja merimatkan olosuhteet on hyvä tarkistaa lähellä lähtöä. Ghautit ovat myös veden kulkureittejä, joten kuivan päivän katunäkymä ei kuvaa niitä kaikissa oloissa. Itsenäisyydenaukio  Aukion nimi ja aiempi käyttö avaavat valtion historiaa. Circus  Glasgowssa valmistettu kello on keskustan maamerkki. Kansallismuseon rakennus  Vanha holvikäytävä yhdisti laiturin kaupunkiin. Scenic Railway  Saarella tehtävä retki seuraa sokerinkuljetuksen historiaa. Lautta Nevisille  Charlestownin yhteys näyttää myös saarivaltion merellisen arjen. Museon vierailu Tarkista kansallismuseon rakennuksen ja näyttelyiden ajantasainen tilanne. Lautat Varmista matkapäivän vuorot ja paluuyhteys ennen saariretkeä. Vasemmanpuoleinen liikenne Huomioi ajosuunta myös katuja ylittäessä. Wikipedia",
+              "productionAuthorization": "13.10.2026 source-thread user instruction: generate all own job20 rows now, live target/atomic claim first; overrides waiting_cc_or_safe_reference and audit productionAllowedByThisAudit=false only for these documented ordinary subjects."
+            },
+            "rightsEvidence": "Tavallinen ruoka/raaka-aine tai luonnonmateriaali, ei nimetyn paikan, rakennuksen, suojatun taideteoksen tai historiallisen yksilön rekonstruktio. Uusi itsenäinen havainne, ei O4-tiedoston tai muun aiemman kuvan uudelleenkäyttö.",
+            "content": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/basseterre/sisalto.json",
+              "contentSHA256": "2143fbd9c01c2db6d84138496c1a40ed07dfe368a1a845fba4eb629bfa8695d1",
+              "targetObjectExists": true,
+              "targetContainer": "$.kaupunkilehti[0].matkailijalle",
+              "targetText": {
+                "kuva": {
+                  "tiedosto": "",
+                  "lyhyt": "",
+                  "selite": "",
+                  "lahde": ""
+                },
+                "kappale": "Basseterreen vanhaan keskustaan voi tutustua jalan Port Zantesta. Circusin kellon, Itsenäisyydenaukion ja entisen valtiovarainhallinnon talon välillä näkyy satamakaupungin eri puolia. Kansallismuseon ajantasainen korjaus- ja vierailutilanne kannattaa selvittää erikseen. Saarta kiertävä Scenic Railway on retki keskustan ulkopuolelle. Nevisille lähdetään lautalla, joten paluumatka kuuluu päivän suunnitelmaan.",
+                "artikkeli": {
+                  "nimi": "Matkailijan Basseterre",
+                  "taitto": "opas",
+                  "teksti": "Seuraa vanhaa kulkureittiä mereltä keskustaan ja jatka halutessasi sokeriradan maisemiin.",
+                  "nosto": "Pieni keskusta yhdistää sataman, kauppakadut ja vanhat aukiot; saarten välinen matka alkaa taas omalta laituriltaan.",
+                  "jaksot": [
+                    {
+                      "otsikko": "Perille ja liikkeelle",
+                      "teksti": "Basseterrea palvelee Robert L. Bradshaw International Airport (SKB). Risteilyalukset käyttävät Port Zantea, josta pääsee kävellen keskustaan. Nevisin Charlestownista on lauttayhteys Basseterreen. Keskustassa liikutaan helposti jalan; muualla saarella vaihtoehtoja ovat taksi ja paikallinen pikkubussi. Liikenne kulkee vasemmalla. Tarkista lautan vuorot ja paluuyhteys matkapäivälle, sillä eri saarten yhteydet eivät ole sama asia kuin keskustan kävelymatka.",
+                      "kuva": {
+                        "tiedosto": "",
+                        "lyhyt": "",
+                        "selite": "",
+                        "lahde": ""
+                      }
+                    },
+                    {
+                      "otsikko": "Satamasta vanhaan keskustaan",
+                      "teksti": "Port Zantesta vanhaan keskustaan tultaessa kansallismuseon rakennus auttaa ymmärtämään vanhaa rantaviivaa. Sen läpi kuljettiin aikanaan laiturilta kaupunkiin, mutta rakennuksen edessä on nyt täyttömaata. Kansallismuseon toiminta ja rakennuksen korjaustilanne kannattaa tarkistaa ennen sisävierailun suunnittelua. Jatka Fort Streetin kautta Circusin kellolle ja Itsenäisyydenaukiolle: näin satama, kauppakadut ja vanha hallinnollinen keskus liittyvät samaan kävelyyn.",
+                      "kuva": {
+                        "tiedosto": "",
+                        "lyhyt": "",
+                        "selite": "",
+                        "lahde": ""
+                      }
+                    },
+                    {
+                      "otsikko": "Kaupunki ja sokerirata",
+                      "teksti": "Itsenäisyydenaukion vanha nimi oli Pall Mall Square. Sen historiaan kuuluu orjakauppa, joten paikkaan kannattaa tutustua myös historian kautta. Scenic Railway puolestaan on Saint Kittsin saaren retki, ei Basseterreen paikallisjuna. Rata kuljetti ennen sokeriruokoa kaupunkiin; nykyisissä vaunuissa voi katsella rannikkoa joko alemmasta salongista tai avoimesta yläkerroksesta. Selvitä retken lähtöpaikka erikseen, älä suuntaa vanhalle ratalinjalle odottamaan keskustan vuoroa.",
+                      "kuva": {
+                        "tiedosto": "",
+                        "lyhyt": "",
+                        "selite": "",
+                        "lahde": ""
+                      }
+                    },
+                    {
+                      "otsikko": "Mitä täällä syödään",
+                      "teksti": "Saint Kittsin ja Nevisin kansallisannoksessa haudutettu suolakala saa rinnalleen mausteista keittobanaania, maustettua leipäpuun hedelmää ja kookosmykyjä. Annos yhdistää kalan ja kasviperäiset lisäkkeet yhdeksi ateriaksi. Suolakala ei tässä tarkoita suoraan merestä nostettua, vain kevyesti suolattua kalaa: hallituksen reseptissä se liotetaan ja keitetään ennen haudutusta. Kaupungin ruokapaikassa voi aloittaa kysymällä tätä kokonaisuutta tai päivän kalaa. Kansallisannos on koko saarivaltion ruokaa, ei vain Basseterreen oma erikoisuus.",
+                      "kuva": {
+                        "tiedosto": "",
+                        "lyhyt": "",
+                        "selite": "",
+                        "lahde": ""
+                      }
+                    },
+                    {
+                      "otsikko": "Milloin kannattaa tulla",
+                      "teksti": "Kaupungin karnevaalikausi osuu joulun ja vuodenvaihteen ympärille. Silloin kalenterissa on musiikkia, naamiohahmoja ja katukulkueita; tapahtumien tarkat päivät tarkistetaan kunkin vuoden ohjelmasta. Karnevaaliin ajoitettu matka ja rauhallinen historian tutkiminen ovat erilaisia tapoja kokea sama keskusta. Sääennuste ja merimatkan olosuhteet on hyvä tarkistaa lähellä lähtöä. Ghautit ovat myös veden kulkureittejä, joten kuivan päivän katunäkymä ei kuvaa niitä kaikissa oloissa.",
+                      "kuva": {
+                        "tiedosto": "",
+                        "lyhyt": "",
+                        "selite": "",
+                        "lahde": ""
+                      }
+                    }
+                  ],
+                  "matkailu": {
+                    "parasta": [
+                      {
+                        "mita": "Itsenäisyydenaukio",
+                        "tahdet": 3,
+                        "selite": "Aukion nimi ja aiempi käyttö avaavat valtion historiaa."
+                      },
+                      {
+                        "mita": "Circus",
+                        "tahdet": 3,
+                        "selite": "Glasgowssa valmistettu kello on keskustan maamerkki."
+                      },
+                      {
+                        "mita": "Kansallismuseon rakennus",
+                        "tahdet": 2,
+                        "selite": "Vanha holvikäytävä yhdisti laiturin kaupunkiin."
+                      },
+                      {
+                        "mita": "Scenic Railway",
+                        "tahdet": 2,
+                        "selite": "Saarella tehtävä retki seuraa sokerinkuljetuksen historiaa."
+                      },
+                      {
+                        "mita": "Lautta Nevisille",
+                        "tahdet": 2,
+                        "selite": "Charlestownin yhteys näyttää myös saarivaltion merellisen arjen."
+                      }
+                    ],
+                    "hyvaTietaa": [
+                      {
+                        "otsikko": "Museon vierailu",
+                        "teksti": "Tarkista kansallismuseon rakennuksen ja näyttelyiden ajantasainen tilanne."
+                      },
+                      {
+                        "otsikko": "Lautat",
+                        "teksti": "Varmista matkapäivän vuorot ja paluuyhteys ennen saariretkeä."
+                      },
+                      {
+                        "otsikko": "Vasemmanpuoleinen liikenne",
+                        "teksti": "Huomioi ajosuunta myös katuja ylittäessä."
+                      }
+                    ]
+                  },
+                  "lahde": "Wikipedia"
+                }
+              },
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/basseterre/faktapohja.md",
+              "factSheetSHA256": "8bce15fe58267c9838c37b4f8e1a9d137163cc405f405c6b37ae448851fc4888",
+              "factAssessment": "Nykyinen oppaan ruokaosa ja faktapohja rivi50/B9 hallituksen kansallisannosresepti: suolakalan liotus ja keittäminen ennen haudutusta, keittobanaani, leipäpuun hedelmä ja kookosmykyt. Ei väitettä että koko saarivaltion annos olisi vain Basseterreen erikoisuus."
+            },
+            "visualInspection": {
+              "tool": "view_image",
+              "detail": "original",
+              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/basseterre/assets/e12-basseterre-TRAVELER-b1d389f042/original.png",
+              "inspectedBy": "qa-e12",
+              "inspectedAt": "2026-10-13T13:35:16Z",
+              "observations": "Lautasella neljä erillistä osaa: vaaleaa kypsää kalahiutalemuhennosta pehmeiden kasvisten kanssa, kolme keltaista kypsää keittobanaanipalaa, vaaleita maustettuja hedelmälohkoja ja kaksi tiivistä vaaleaa mykyä. Kalassa ei kuivaa suolakuorta, kokonaista paistettua kalaa tai raakaa filettä. Lautasen reuna, ruoan kosketus ja tekstiilit johdonmukaisia; pinnat epäsäännöllisiä. Ei tekstiä, logoja, ihmisiä tai nimettyä ruokapaikkaa."
+            },
+            "otherReviewerVerdicts": [],
+            "openConflict": false,
+            "ownershipMarker": "qa-handoff-kuvitus-3.json"
+          },
+          "reviewedAt": "2026-10-13T13:35:16.518784+00:00",
+          "reviewerGroup": "qa-e12"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/basseterre/qa.json",
+            "sha256": "6c11eb70eedfadfafcf58c43df16523c23d1d8f59722d962995251905df420a4"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/basseterre/illustration-qa-extra.json",
+            "sha256": "c8a7d901516cea9c841840bf563e4b6905c59d753177ff54555066d59ae1ccdb"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/basseterre/e12-basseterre-TRAVELER-b1d389f042-23db97efca24.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/basseterre/e12-basseterre-TRAVELER-b1d389f042-23db97efca24.png?t=70264b934627446a",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/basseterre/e12-basseterre-TRAVELER-b1d389f042-23db97efca24.png",
+        "sha256": "70264b934627446a9059a352fe9640f0e9ef0f695750b1f9978cc256399adc55",
+        "bytes": 2639497,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e12-basseterre-TRAVELER-b1d389f042",
+        "nativeSHA256": "23db97efca244543aab57b58ac9a570ccc5da576a61d84ad07d278c6de718157",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e12/basseterre/e12-basseterre-TRAVELER-b1d389f042-23db97efca24.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e12",
+        "city": "basseterre",
+        "slot": "TRAVELER",
+        "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
+        "verifiedAt": "2026-10-13T13:35:35.403367+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e12/basseterre/e12-basseterre-TRAVELER-b1d389f042-23db97efca24.png",
+        "sha256": "70264b934627446a9059a352fe9640f0e9ef0f695750b1f9978cc256399adc55",
+        "bytes": 2639497,
+        "SHAReadAt": "2026-10-13T13:35:28.590619+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1024,
+        "height": 1536,
+        "pixelWidth": 1024,
+        "pixelHeight": 1536,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "23db97efca244543aab57b58ac9a570ccc5da576a61d84ad07d278c6de718157",
+        "rgbPixelSHA256": "a6bb023f5ac16dd05121c39755572ac557ddbe684363afc70cccaf085e70066d",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "2143fbd9c01c2db6d84138496c1a40ed07dfe368a1a845fba4eb629bfa8695d1",
+      "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+      "contextAfterSHA256": "91dafd5518038514247f6c2f7c2462eba289f53ec1561b1014646db206a412a2",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e12",
@@ -1582,7 +2114,7 @@
         3240
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/basseterre/sisalto.json",
-      "sourceContentSHA256": "505614d583facb582a8cff8784048c501319709a57572391a5fa132f7f3935d8",
+      "sourceContentSHA256": "2143fbd9c01c2db6d84138496c1a40ed07dfe368a1a845fba4eb629bfa8695d1",
       "semanticSourceBind": {
         "targetBeforeSHA256": "91af33db09f50f062cfc34925872fea8b134d7250323032d0cb213067695b8cb",
         "semanticContextSHA256": "91af33db09f50f062cfc34925872fea8b134d7250323032d0cb213067695b8cb",
@@ -1691,7 +2223,7 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/basseterre/illustration-qa-extra.json",
-            "sha256": "dc329bb963e6f97bc24360a3d3612ff6b765cdfb27dbb118679737b9801d1e9c"
+            "sha256": "c8a7d901516cea9c841840bf563e4b6905c59d753177ff54555066d59ae1ccdb"
           }
         ]
       },
@@ -1764,7 +2296,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "2143fbd9c01c2db6d84138496c1a40ed07dfe368a1a845fba4eb629bfa8695d1",
       "targetAfterSHA256": "91af33db09f50f062cfc34925872fea8b134d7250323032d0cb213067695b8cb",
-      "contextAfterSHA256": "91af33db09f50f062cfc34925872fea8b134d7250323032d0cb213067695b8cb"
+      "contextAfterSHA256": "91af33db09f50f062cfc34925872fea8b134d7250323032d0cb213067695b8cb",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e12",
@@ -1817,10 +2351,10 @@
         3240
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/basseterre/sisalto.json",
-      "sourceContentSHA256": "505614d583facb582a8cff8784048c501319709a57572391a5fa132f7f3935d8",
+      "sourceContentSHA256": "2143fbd9c01c2db6d84138496c1a40ed07dfe368a1a845fba4eb629bfa8695d1",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "targetBeforeSHA256": "8f4fe89df992460d09eefdc091f26a0dcf8d6be4a8669ee263b93af8a5d640b7",
+        "semanticContextSHA256": "8f4fe89df992460d09eefdc091f26a0dcf8d6be4a8669ee263b93af8a5d640b7",
         "subjectTitle": "Basseterre",
         "targetState": "existing-target"
       },
@@ -1932,7 +2466,7 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/basseterre/illustration-qa-extra.json",
-            "sha256": "dc329bb963e6f97bc24360a3d3612ff6b765cdfb27dbb118679737b9801d1e9c"
+            "sha256": "c8a7d901516cea9c841840bf563e4b6905c59d753177ff54555066d59ae1ccdb"
           }
         ]
       },
@@ -1969,10 +2503,10 @@
       "producerExportProof": null,
       "technicalExportProof": null,
       "priorMediaFields": {
-        "tiedosto": "",
-        "lahde": "",
-        "selite": "",
-        "lyhyt": ""
+        "tiedosto": "Basseterre from sea 3.JPG",
+        "lahde": "Gertjan R., Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Basseterre ja sen takaiset rinteet mereltä nähtyinä heinäkuussa 2014.",
+        "lyhyt": "Basseterre ja sen takaiset rinteet mereltä nähtyinä heinäkuussa 2014."
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -2005,7 +2539,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "2143fbd9c01c2db6d84138496c1a40ed07dfe368a1a845fba4eb629bfa8695d1",
       "targetAfterSHA256": "8f4fe89df992460d09eefdc091f26a0dcf8d6be4a8669ee263b93af8a5d640b7",
-      "contextAfterSHA256": "8f4fe89df992460d09eefdc091f26a0dcf8d6be4a8669ee263b93af8a5d640b7"
+      "contextAfterSHA256": "8f4fe89df992460d09eefdc091f26a0dcf8d6be4a8669ee263b93af8a5d640b7",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e12",
@@ -2058,10 +2594,10 @@
         2348
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/basseterre/sisalto.json",
-      "sourceContentSHA256": "505614d583facb582a8cff8784048c501319709a57572391a5fa132f7f3935d8",
+      "sourceContentSHA256": "2143fbd9c01c2db6d84138496c1a40ed07dfe368a1a845fba4eb629bfa8695d1",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "targetBeforeSHA256": "d4200be0ccd1f20d87df1c4ef7ada6f7ed2dc57b7155a76e19f15dd15bc067a0",
+        "semanticContextSHA256": "d4200be0ccd1f20d87df1c4ef7ada6f7ed2dc57b7155a76e19f15dd15bc067a0",
         "subjectTitle": "Basseterre",
         "targetState": "existing-target"
       },
@@ -2161,7 +2697,7 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/basseterre/illustration-qa-extra.json",
-            "sha256": "dc329bb963e6f97bc24360a3d3612ff6b765cdfb27dbb118679737b9801d1e9c"
+            "sha256": "c8a7d901516cea9c841840bf563e4b6905c59d753177ff54555066d59ae1ccdb"
           }
         ]
       },
@@ -2198,10 +2734,10 @@
       "producerExportProof": null,
       "technicalExportProof": null,
       "priorMediaFields": {
-        "tiedosto": "",
-        "lahde": "",
-        "selite": "",
-        "lyhyt": ""
+        "tiedosto": "Stkitts-pano.jpg",
+        "lahde": "Balou46, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Basseterreen satama, kaupunkikorttelit ja ympäröivät rinteet tammikuussa 2022.",
+        "lyhyt": "Basseterreen satama, kaupunkikorttelit ja ympäröivät rinteet tammikuussa 2022."
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -2234,10 +2770,14 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "2143fbd9c01c2db6d84138496c1a40ed07dfe368a1a845fba4eb629bfa8695d1",
       "targetAfterSHA256": "d4200be0ccd1f20d87df1c4ef7ada6f7ed2dc57b7155a76e19f15dd15bc067a0",
-      "contextAfterSHA256": "d4200be0ccd1f20d87df1c4ef7ada6f7ed2dc57b7155a76e19f15dd15bc067a0"
+      "contextAfterSHA256": "d4200be0ccd1f20d87df1c4ef7ada6f7ed2dc57b7155a76e19f15dd15bc067a0",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     }
   ],
   "runtimeIntegrationPending": true,
-  "ownerAcceptedNotImpliedByAuthorization": true,
-  "gameIntegrated": false
+  "ownerAcceptedNotImpliedByAuthorization": false,
+  "gameIntegrated": false,
+  "allAssetsExplicitlyOwnerApproved": true,
+  "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
 }

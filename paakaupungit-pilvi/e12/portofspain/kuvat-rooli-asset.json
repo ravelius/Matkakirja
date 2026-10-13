@@ -2,7 +2,7 @@
   "schemaVersion": "capital-city-role-assets/v1",
   "era": "e12",
   "city": "portofspain",
-  "authorization": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+  "authorization": "hyväksyn kaikki tekemäsi kuvat. toimita ne claudelle. claudelta saat uusia ohjeita jatkoa varten",
   "sourceContentAfterSHA256": "76311394847cd4a923031a237ebda82e6df27cbd26922ac6965cac714eff7900",
   "assets": [
     {
@@ -56,7 +56,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/portofspain/sisalto.json",
-      "sourceContentSHA256": "c3ea2c54ea6afadcf4eb81779ab41f1c5254a5c42114bdc0ac959ce0ff155c74",
+      "sourceContentSHA256": "76311394847cd4a923031a237ebda82e6df27cbd26922ac6965cac714eff7900",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
         "semanticContextSHA256": "921b884901694ef5e2b1ab3e7d744e4b738de45397e85d1b782badde0c54d0b0",
@@ -478,7 +478,7 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/portofspain/illustration-qa-extra.json",
-            "sha256": "164a01f817bcc680b22d37e27b1ef52656493db0be817e2ccf497f3859478a97"
+            "sha256": "bf2b3ca9ec5f6952868cae5c996b705bdb69ded33b126065d6f823f4f1329627"
           }
         ]
       },
@@ -563,7 +563,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "76311394847cd4a923031a237ebda82e6df27cbd26922ac6965cac714eff7900",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "921b884901694ef5e2b1ab3e7d744e4b738de45397e85d1b782badde0c54d0b0"
+      "contextAfterSHA256": "921b884901694ef5e2b1ab3e7d744e4b738de45397e85d1b782badde0c54d0b0",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e12",
@@ -613,7 +615,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/portofspain/sisalto.json",
-      "sourceContentSHA256": "c3ea2c54ea6afadcf4eb81779ab41f1c5254a5c42114bdc0ac959ce0ff155c74",
+      "sourceContentSHA256": "76311394847cd4a923031a237ebda82e6df27cbd26922ac6965cac714eff7900",
       "semanticSourceBind": {
         "targetBeforeSHA256": "0f7545410f18a373168312d864f0707e49902a3eae44e74669dd0f49039aedc1",
         "semanticContextSHA256": "0f7545410f18a373168312d864f0707e49902a3eae44e74669dd0f49039aedc1",
@@ -976,7 +978,7 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/portofspain/illustration-qa-extra.json",
-            "sha256": "164a01f817bcc680b22d37e27b1ef52656493db0be817e2ccf497f3859478a97"
+            "sha256": "bf2b3ca9ec5f6952868cae5c996b705bdb69ded33b126065d6f823f4f1329627"
           }
         ]
       },
@@ -1061,7 +1063,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "76311394847cd4a923031a237ebda82e6df27cbd26922ac6965cac714eff7900",
       "targetAfterSHA256": "0f7545410f18a373168312d864f0707e49902a3eae44e74669dd0f49039aedc1",
-      "contextAfterSHA256": "0f7545410f18a373168312d864f0707e49902a3eae44e74669dd0f49039aedc1"
+      "contextAfterSHA256": "0f7545410f18a373168312d864f0707e49902a3eae44e74669dd0f49039aedc1",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e12",
@@ -1111,7 +1115,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/portofspain/sisalto.json",
-      "sourceContentSHA256": "c3ea2c54ea6afadcf4eb81779ab41f1c5254a5c42114bdc0ac959ce0ff155c74",
+      "sourceContentSHA256": "76311394847cd4a923031a237ebda82e6df27cbd26922ac6965cac714eff7900",
       "semanticSourceBind": {
         "targetBeforeSHA256": "be4a276756130fa70a274cd7730161528852ac981bf403e68ddeecc26e9cfe56",
         "semanticContextSHA256": "be4a276756130fa70a274cd7730161528852ac981bf403e68ddeecc26e9cfe56",
@@ -1419,7 +1423,7 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/portofspain/illustration-qa-extra.json",
-            "sha256": "164a01f817bcc680b22d37e27b1ef52656493db0be817e2ccf497f3859478a97"
+            "sha256": "bf2b3ca9ec5f6952868cae5c996b705bdb69ded33b126065d6f823f4f1329627"
           }
         ]
       },
@@ -1504,7 +1508,531 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "76311394847cd4a923031a237ebda82e6df27cbd26922ac6965cac714eff7900",
       "targetAfterSHA256": "be4a276756130fa70a274cd7730161528852ac981bf403e68ddeecc26e9cfe56",
-      "contextAfterSHA256": "be4a276756130fa70a274cd7730161528852ac981bf403e68ddeecc26e9cfe56"
+      "contextAfterSHA256": "be4a276756130fa70a274cd7730161528852ac981bf403e68ddeecc26e9cfe56",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+    },
+    {
+      "era": "e12",
+      "city": "portofspain",
+      "slot": "TRAVELER",
+      "type": "illustration",
+      "assetID": "e12-portofspain-TRAVELER-4d668d7a47",
+      "galleryImageID": "e12-portofspain-TRAVELER-4d668d7a47",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "matkailijalle",
+        "kuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/portofspain/e12-portofspain-TRAVELER-4d668d7a47-b74961146bbd.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva Port of Spainin oppaassa mainitusta doubles-ruoasta.",
+        "lyhyt": "Havainnekuva Port of Spainin oppaassa mainitusta doubles-ruoasta."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/portofspain/e12-portofspain-TRAVELER-4d668d7a47-b74961146bbd.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva Port of Spainin oppaassa mainitusta doubles-ruoasta.",
+        "lyhyt": "Havainnekuva Port of Spainin oppaassa mainitusta doubles-ruoasta."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "b74961146bbda2cfaa45640eabfa10510cad074aa6e445072240bbc0ca71c13a",
+      "exportSHA256": "9080743ab697d7d77dd6359fbb3fb8f437bf5ed998ed36745231055f4d68100d",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/portofspain/e12-portofspain-TRAVELER-4d668d7a47-b74961146bbd.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/portofspain/e12-portofspain-TRAVELER-4d668d7a47-b74961146bbd.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e12/portofspain/e12-portofspain-TRAVELER-4d668d7a47-b74961146bbd.png",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/portofspain/sisalto.json",
+      "sourceContentSHA256": "76311394847cd4a923031a237ebda82e6df27cbd26922ac6965cac714eff7900",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "d5794a71fc137b4b497cdb72da5c05d4f3257d0e70d0163350ab69d9e37bb394",
+        "subjectTitle": "Matkailijalle",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Tavallinen ruoka/raaka-aine tai luonnonmateriaali, ei nimetyn paikan, rakennuksen, suojatun taideteoksen tai historiallisen yksilön rekonstruktio. Uusi itsenäinen havainne, ei O4-tiedoston tai muun aiemman kuvan uudelleenkäyttö.",
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/portofspain/assets/e12-portofspain-TRAVELER-4d668d7a47/original.png",
+            "nativeSHA256": "b74961146bbda2cfaa45640eabfa10510cad074aa6e445072240bbc0ca71c13a",
+            "nativeWidth": 1024,
+            "nativeHeight": 1536,
+            "nativeAspectRatio": 0.6666666666666666,
+            "format": "PNG",
+            "pngChunks": [
+              "IHDR",
+              "caBX",
+              "IDAT",
+              "IEND"
+            ],
+            "manifestMatch": true,
+            "captionFi": "Havainnekuva Port of Spainin oppaassa mainitusta doubles-ruoasta.",
+            "sourceEvidence": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/portofspain/sisalto.json",
+              "contentSHA256": "76311394847cd4a923031a237ebda82e6df27cbd26922ac6965cac714eff7900",
+              "sourceText": "{\"artikkeli\": {\"jaksot\": [{\"otsikko\": \"Perille ja liikkeelle\", \"teksti\": \"Port of Spainia palvelee Piarcon kansainvälinen lentoasema kaupungin itäpuolella. Lentokenttä ja keskusta ovat eri paikkoja, joten saapumiseen kuuluu myös maamatka. Keskustassa City Gate South Quaylla kokoaa linja-autoja ja maxi-takseja, eli yksityisiä pikkubusseja. Suunnittele liikkuminen sen mukaan, kuljetko keskustan sisällä vai itään jatkuvassa taajamassa. Kaupungin nimi kartalla ei tarkoita, että kaikki sen ympäristön kohteet olisivat kävelyetäisyydellä.\"}, {\"otsikko\": \"Keskustan kerrokset\", \"teksti\": \"Woodford Squaren ympärillä ovat Holy Trinity Cathedral ja Red House, kun taas Independence Square sijaitsee lähempänä sataman puoleista keskustaa. Katso katuverkkoa: sen suora ruudukko on vanhempi kuin monet sitä reunustavat talot. Rannikon täyttömaan historia selittää, miksi vanha rantaan liittynyt aukio on nyt keskellä rakennettua kaupunkia. Holy Trinity Cathedral on kärsinyt maanjäristysvaurioista, joten sen mahdollisuus ottaa vieraita vastaan on tarkistettava erikseen. Kirkkojen ulkopuolella voi silti tarkastella niiden paikkaa keskustan rakenteessa.\"}, {\"otsikko\": \"Savannahin molemmat puolet\", \"teksti\": \"Savannah on avoin viheralue, jonka pohjoispuolella kasvitieteellinen puutarha tarjoaa toisenlaisen kävelyn puiden keskellä. Länsireunalla kulkee Maraval Road ja sen varrella tunnettu Magnificent Seven -rakennusten ryhmä. Rakennusten käyttötavat vaihtelevat; kadulta katsominen ei tarkoita pääsyä sisään. Puiston ja puutarhan yhdistelmä antaa hyvän käsityksen keskustan pohjoisreunasta ilman, että jokainen maamerkki on oma retkensä.\"}, {\"otsikko\": \"Mitä täällä syödään\", \"teksti\": \"Doubles on paikallinen jauhoista ja kikherneistä tehty ruoka, jota myydään myös Port of Spainin keskustassa. Savannahin ruokakojujen tarjontaan kuuluvat doublesin lisäksi muun muassa maissikeitto, shawarma ja jerk-kana. Kaupungin ruokatarjonta ei mahdu yhteen alkuperään. Iltaisin toimiva ruokatori on eri kokemus kuin puiston päiväkävely, joten järjestä myös paluukuljetus etukäteen. Kojujen aukioloajat ja valikoima on tarkistettava paikan päällä.\"}, {\"otsikko\": \"Milloin kannattaa tulla\", \"teksti\": \"Port of Spainin ilmastossa erottuvat kuivempi ja sateisempi kausi. Sateisena aikana jätä kävelypäivään väljyyttä ja varaudu kuuroihin; ulkona vietetty päivä ei vaadi pelkkää aurinkosäätä. Karnevaali ennen paastoa muuttaa kaupungin rytmiä ja lisää majoituksen kysyntää, joten tapahtuman päivät kannattaa tarkistaa oman matkan vuodelle. Jos tavoitteena on rauhallinen kaupunkikävely, valitse ajankohta sen mukaan. Käytä sovittuja kuljetuksia ja tarkista ajantasaiset matkustusohjeet ennen lähtöä.\"}], \"matkailu\": {\"hyvaTietaa\": [{\"otsikko\": \"Kaupunki ja taajama\", \"teksti\": \"Itään jatkuva taajama ulottuu kaupunginrajojen ulkopuolelle.\"}, {\"otsikko\": \"Kuljetus\", \"teksti\": \"Piarcon lentoasemalta tarvitaan erillinen maamatka keskustaan.\"}, {\"otsikko\": \"Käyntikäytännöt\", \"teksti\": \"Kirkkojen ja muiden rakennusten vierailuajat tarkistetaan erikseen.\"}], \"parasta\": [{\"mita\": \"Savannah\", \"tahdet\": 3}, {\"mita\": \"Royal Botanic Gardens\", \"tahdet\": 3}, {\"mita\": \"Woodford Square\", \"tahdet\": 2}, {\"mita\": \"Belmont\", \"tahdet\": 2}, {\"mita\": \"Savannahin ruoka\", \"tahdet\": 2}]}, \"nimi\": \"Matkailijan Port of Spain\", \"nosto\": \"Savannah ja kasvitieteellinen puutarha ovat vierekkäin, mutta toinen kasvoi laitumesta ja toinen perustettiin puukokoelmaksi.\", \"taitto\": \"opas\", \"teksti\": \"Kulje vanhan keskustan ja pohjoisreunan viheralueiden välillä.\"}, \"kappale\": \"Aloita keskustan suorista kaduista ja Woodford Squaren ympäristöstä. Jatka Savannahille, jonka pohjoispuolella on kasvitieteellinen puutarha. Belmontin katuverkko näyttää toisenlaisen puolen kaupungin kasvusta. Piarcon lentoasema sijaitsee kaupungin itäpuolella, ja jatkokuljetus kuuluu saapumisen suunnitteluun. Käytä tunnettuja kuljetuksia ja sovi paluu etukäteen.\"}",
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/portofspain/faktapohja.md",
+              "originalSources": [
+                "https://en.wikivoyage.org/wiki/Port_of_Spain"
+              ],
+              "ccRelease": {},
+              "generationAuthorization": {
+                "rule": "OHJEET: turvallinen yleishavainnollistus ilman CC-odotusta",
+                "sharedReservationRecord": "/Volumes/T7 4TB/ChatGPT-Codex-active/coordination/paakaupungit-claims/08391cff28146b17/e12/portofspain/TRAVELER/owner.json",
+                "ccReleaseRequired": false,
+                "scope": "lähdeperustainen turvallinen avoin mixed; ei PHOTO/C1-C3 tai nimetty kaupunkiasettelu"
+              },
+              "sourceTopicAudit": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/source-scout/continuation-20261013/safe-topic-production-priorities.json",
+              "sourceTopicAuditSHA256": "b5fd12034028af4a090b68a5ac0644b7a6d737a177b35b838ab6b3974c772dc0",
+              "auditContentSHA256": "76311394847cd4a923031a237ebda82e6df27cbd26922ac6965cac714eff7900",
+              "auditTargetContext": "Aloita keskustan suorista kaduista ja Woodford Squaren ympäristöstä. Jatka Savannahille, jonka pohjoispuolella on kasvitieteellinen puutarha. Belmontin katuverkko näyttää toisenlaisen puolen kaupungin kasvusta. Piarcon lentoasema sijaitsee kaupungin itäpuolella, ja jatkokuljetus kuuluu saapumisen suunnitteluun. Käytä tunnettuja kuljetuksia ja sovi paluu etukäteen. Matkailijan Port of Spain opas Kulje vanhan keskustan ja pohjoisreunan viheralueiden välillä. Savannah ja kasvitieteellinen puutarha ovat vierekkäin, mutta toinen kasvoi laitumesta ja toinen perustettiin puukokoelmaksi. Perille ja liikkeelle Port of Spainia palvelee Piarcon kansainvälinen lentoasema kaupungin itäpuolella. Lentokenttä ja keskusta ovat eri paikkoja, joten saapumiseen kuuluu myös maamatka. Keskustassa City Gate South Quaylla kokoaa linja-autoja ja maxi-takseja, eli yksityisiä pikkubusseja. Suunnittele liikkuminen sen mukaan, kuljetko keskustan sisällä vai itään jatkuvassa taajamassa. Kaupungin nimi kartalla ei tarkoita, että kaikki sen ympäristön kohteet olisivat kävelyetäisyydellä. Keskustan kerrokset Woodford Squaren ympärillä ovat Holy Trinity Cathedral ja Red House, kun taas Independence Square sijaitsee lähempänä sataman puoleista keskustaa. Katso katuverkkoa: sen suora ruudukko on vanhempi kuin monet sitä reunustavat talot. Rannikon täyttömaan historia selittää, miksi vanha rantaan liittynyt aukio on nyt keskellä rakennettua kaupunkia. Holy Trinity Cathedral on kärsinyt maanjäristysvaurioista, joten sen mahdollisuus ottaa vieraita vastaan on tarkistettava erikseen. Kirkkojen ulkopuolella voi silti tarkastella niiden paikkaa keskustan rakenteessa. Savannahin molemmat puolet Savannah on avoin viheralue, jonka pohjoispuolella kasvitieteellinen puutarha tarjoaa toisenlaisen kävelyn puiden keskellä. Länsireunalla kulkee Maraval Road ja sen varrella tunnettu Magnificent Seven -rakennusten ryhmä. Rakennusten käyttötavat vaihtelevat; kadulta katsominen ei tarkoita pääsyä sisään. Puiston ja puutarhan yhdistelmä antaa hyvän käsityksen keskustan pohjoisreunasta ilman, että jokainen maamerkki on oma retkensä. Mitä täällä syödään Doubles on paikallinen jauhoista ja kikherneistä tehty ruoka, jota myydään myös Port of Spainin keskustassa. Savannahin ruokakojujen tarjontaan kuuluvat doublesin lisäksi muun muassa maissikeitto, shawarma ja jerk-kana. Kaupungin ruokatarjonta ei mahdu yhteen alkuperään. Iltaisin toimiva ruokatori on eri kokemus kuin puiston päiväkävely, joten järjestä myös paluukuljetus etukäteen. Kojujen aukioloajat ja valikoima on tarkistettava paikan päällä. Milloin kannattaa tulla Port of Spainin ilmastossa erottuvat kuivempi ja sateisempi kausi. Sateisena aikana jätä kävelypäivään väljyyttä ja varaudu kuuroihin; ulkona vietetty päivä ei vaadi pelkkää aurinkosäätä. Karnevaali ennen paastoa muuttaa kaupungin rytmiä ja lisää majoituksen kysyntää, joten tapahtuman päivät kannattaa tarkistaa oman matkan vuodelle. Jos tavoitteena on rauhallinen kaupunkikävely, valitse ajankohta sen mukaan. Käytä sovittuja kuljetuksia ja tarkista ajantasaiset matkustusohjeet ennen lähtöä. Savannah  Entinen viljelymaa ja laidun on nykyinen avoin viheralue. Royal Botanic Gardens  Puukokoelma yhdistää paikallisia ja maailmalta tuotuja lajeja. Woodford Square  Keskustan aukion ympärillä näkyy kaupungin rakennushistoriaa. Belmont  Mutkittelevat kadut kertovat ruutukeskustasta poikkeavasta kasvusta. Savannahin ruoka  Ruokakojuissa on muun muassa doublesia ja maissikeittoa. Kaupunki ja taajama Itään jatkuva taajama ulottuu kaupunginrajojen ulkopuolelle. Kuljetus Piarcon lentoasemalta tarvitaan erillinen maamatka keskustaan. Käyntikäytännöt Kirkkojen ja muiden rakennusten vierailuajat tarkistetaan erikseen. Wikipedia",
+              "productionAuthorization": "13.10.2026 source-thread user instruction: generate all own job20 rows now, live target/atomic claim first; overrides waiting_cc_or_safe_reference and audit productionAllowedByThisAudit=false only for these documented ordinary subjects."
+            },
+            "rightsEvidence": "Tavallinen ruoka/raaka-aine tai luonnonmateriaali, ei nimetyn paikan, rakennuksen, suojatun taideteoksen tai historiallisen yksilön rekonstruktio. Uusi itsenäinen havainne, ei O4-tiedoston tai muun aiemman kuvan uudelleenkäyttö.",
+            "content": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/portofspain/sisalto.json",
+              "contentSHA256": "76311394847cd4a923031a237ebda82e6df27cbd26922ac6965cac714eff7900",
+              "targetObjectExists": true,
+              "targetContainer": "$.kaupunkilehti[0].matkailijalle",
+              "targetText": {
+                "kuva": {
+                  "tiedosto": "",
+                  "lyhyt": "",
+                  "selite": "",
+                  "lahde": ""
+                },
+                "kappale": "Aloita keskustan suorista kaduista ja Woodford Squaren ympäristöstä. Jatka Savannahille, jonka pohjoispuolella on kasvitieteellinen puutarha. Belmontin katuverkko näyttää toisenlaisen puolen kaupungin kasvusta. Piarcon lentoasema sijaitsee kaupungin itäpuolella, ja jatkokuljetus kuuluu saapumisen suunnitteluun. Käytä tunnettuja kuljetuksia ja sovi paluu etukäteen.",
+                "artikkeli": {
+                  "nimi": "Matkailijan Port of Spain",
+                  "taitto": "opas",
+                  "teksti": "Kulje vanhan keskustan ja pohjoisreunan viheralueiden välillä.",
+                  "nosto": "Savannah ja kasvitieteellinen puutarha ovat vierekkäin, mutta toinen kasvoi laitumesta ja toinen perustettiin puukokoelmaksi.",
+                  "jaksot": [
+                    {
+                      "otsikko": "Perille ja liikkeelle",
+                      "teksti": "Port of Spainia palvelee Piarcon kansainvälinen lentoasema kaupungin itäpuolella. Lentokenttä ja keskusta ovat eri paikkoja, joten saapumiseen kuuluu myös maamatka. Keskustassa City Gate South Quaylla kokoaa linja-autoja ja maxi-takseja, eli yksityisiä pikkubusseja. Suunnittele liikkuminen sen mukaan, kuljetko keskustan sisällä vai itään jatkuvassa taajamassa. Kaupungin nimi kartalla ei tarkoita, että kaikki sen ympäristön kohteet olisivat kävelyetäisyydellä.",
+                      "kuva": {
+                        "tiedosto": "",
+                        "lyhyt": "",
+                        "selite": "",
+                        "lahde": ""
+                      }
+                    },
+                    {
+                      "otsikko": "Keskustan kerrokset",
+                      "teksti": "Woodford Squaren ympärillä ovat Holy Trinity Cathedral ja Red House, kun taas Independence Square sijaitsee lähempänä sataman puoleista keskustaa. Katso katuverkkoa: sen suora ruudukko on vanhempi kuin monet sitä reunustavat talot. Rannikon täyttömaan historia selittää, miksi vanha rantaan liittynyt aukio on nyt keskellä rakennettua kaupunkia. Holy Trinity Cathedral on kärsinyt maanjäristysvaurioista, joten sen mahdollisuus ottaa vieraita vastaan on tarkistettava erikseen. Kirkkojen ulkopuolella voi silti tarkastella niiden paikkaa keskustan rakenteessa.",
+                      "kuva": {
+                        "tiedosto": "",
+                        "lyhyt": "",
+                        "selite": "",
+                        "lahde": ""
+                      }
+                    },
+                    {
+                      "otsikko": "Savannahin molemmat puolet",
+                      "teksti": "Savannah on avoin viheralue, jonka pohjoispuolella kasvitieteellinen puutarha tarjoaa toisenlaisen kävelyn puiden keskellä. Länsireunalla kulkee Maraval Road ja sen varrella tunnettu Magnificent Seven -rakennusten ryhmä. Rakennusten käyttötavat vaihtelevat; kadulta katsominen ei tarkoita pääsyä sisään. Puiston ja puutarhan yhdistelmä antaa hyvän käsityksen keskustan pohjoisreunasta ilman, että jokainen maamerkki on oma retkensä.",
+                      "kuva": {
+                        "tiedosto": "",
+                        "lyhyt": "",
+                        "selite": "",
+                        "lahde": ""
+                      }
+                    },
+                    {
+                      "otsikko": "Mitä täällä syödään",
+                      "teksti": "Doubles on paikallinen jauhoista ja kikherneistä tehty ruoka, jota myydään myös Port of Spainin keskustassa. Savannahin ruokakojujen tarjontaan kuuluvat doublesin lisäksi muun muassa maissikeitto, shawarma ja jerk-kana. Kaupungin ruokatarjonta ei mahdu yhteen alkuperään. Iltaisin toimiva ruokatori on eri kokemus kuin puiston päiväkävely, joten järjestä myös paluukuljetus etukäteen. Kojujen aukioloajat ja valikoima on tarkistettava paikan päällä.",
+                      "kuva": {
+                        "tiedosto": "",
+                        "lyhyt": "",
+                        "selite": "",
+                        "lahde": ""
+                      }
+                    },
+                    {
+                      "otsikko": "Milloin kannattaa tulla",
+                      "teksti": "Port of Spainin ilmastossa erottuvat kuivempi ja sateisempi kausi. Sateisena aikana jätä kävelypäivään väljyyttä ja varaudu kuuroihin; ulkona vietetty päivä ei vaadi pelkkää aurinkosäätä. Karnevaali ennen paastoa muuttaa kaupungin rytmiä ja lisää majoituksen kysyntää, joten tapahtuman päivät kannattaa tarkistaa oman matkan vuodelle. Jos tavoitteena on rauhallinen kaupunkikävely, valitse ajankohta sen mukaan. Käytä sovittuja kuljetuksia ja tarkista ajantasaiset matkustusohjeet ennen lähtöä.",
+                      "kuva": {
+                        "tiedosto": "",
+                        "lyhyt": "",
+                        "selite": "",
+                        "lahde": ""
+                      }
+                    }
+                  ],
+                  "matkailu": {
+                    "parasta": [
+                      {
+                        "mita": "Savannah",
+                        "tahdet": 3,
+                        "selite": "Entinen viljelymaa ja laidun on nykyinen avoin viheralue."
+                      },
+                      {
+                        "mita": "Royal Botanic Gardens",
+                        "tahdet": 3,
+                        "selite": "Puukokoelma yhdistää paikallisia ja maailmalta tuotuja lajeja."
+                      },
+                      {
+                        "mita": "Woodford Square",
+                        "tahdet": 2,
+                        "selite": "Keskustan aukion ympärillä näkyy kaupungin rakennushistoriaa."
+                      },
+                      {
+                        "mita": "Belmont",
+                        "tahdet": 2,
+                        "selite": "Mutkittelevat kadut kertovat ruutukeskustasta poikkeavasta kasvusta."
+                      },
+                      {
+                        "mita": "Savannahin ruoka",
+                        "tahdet": 2,
+                        "selite": "Ruokakojuissa on muun muassa doublesia ja maissikeittoa."
+                      }
+                    ],
+                    "hyvaTietaa": [
+                      {
+                        "otsikko": "Kaupunki ja taajama",
+                        "teksti": "Itään jatkuva taajama ulottuu kaupunginrajojen ulkopuolelle."
+                      },
+                      {
+                        "otsikko": "Kuljetus",
+                        "teksti": "Piarcon lentoasemalta tarvitaan erillinen maamatka keskustaan."
+                      },
+                      {
+                        "otsikko": "Käyntikäytännöt",
+                        "teksti": "Kirkkojen ja muiden rakennusten vierailuajat tarkistetaan erikseen."
+                      }
+                    ]
+                  },
+                  "lahde": "Wikipedia"
+                }
+              },
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/portofspain/faktapohja.md",
+              "factSheetSHA256": "4a4d3821d8b3bcfe4428b5c7ebb5528498c49347d8e19df2bc3913604cf280d5",
+              "factAssessment": "Nykyinen oppaan ruokajakso nimeää doublesin jauho-/kikherneannokseksi. Faktapohja rivi44/S5 Eat ja S2 Recreational activities: doubles Port of Spainin keskustassa ja Savannahin ruokatorilla. Yleinen ruokahavainne, ei paikkadokumentti."
+            },
+            "visualInspection": {
+              "tool": "view_image",
+              "detail": "original",
+              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/portofspain/assets/e12-portofspain-TRAVELER-4d668d7a47/original.png",
+              "inspectedBy": "qa-e12",
+              "inspectedAt": "2026-10-13T13:37:04Z",
+              "observations": "Lautasella alempi pyöreä pehmeä leipä ja sen kanssa limittäin toinen, jonka vapaa reuna kaartuu osittain kikherneiden päälle. Leivät kullanruskeita, pinnassa vaihtelevia kuplia ja pehmeitä poimuja. Välissä kypsät kastikkeiset kikherneet; ei kovia tacokuoria tai sämpylää. Lautanen ja ruoan kontaktit uskottavia. Ei tekstiä, logoja, pakkauksia tai ihmisiä."
+            },
+            "otherReviewerVerdicts": [],
+            "openConflict": false,
+            "ownershipMarker": "qa-handoff-kuvitus-3.json"
+          },
+          "qaReason": "Doubles-havainteen pehmeät paistetut bara-leivät ja kypsät kikherneet vastaavat Port of Spainin oppaan ruoka-aihetta. Leivät ovat ohuita ja joustavia; annos ei esitä nimettyä kojua. Natiivi1024×1536 ja suhde0.666667 täyttävät pystyvaatimuksen."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva Port of Spainin oppaassa mainitusta doubles-ruoasta.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/portofspain/illustration-qa-extra.json",
+        "fileSHA256": "bf2b3ca9ec5f6952868cae5c996b705bdb69ded33b126065d6f823f4f1329627",
+        "item": {
+          "slot": "TRAVELER",
+          "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
+          "assetID": "e12-portofspain-TRAVELER-4d668d7a47",
+          "sha256": "b74961146bbda2cfaa45640eabfa10510cad074aa6e445072240bbc0ca71c13a",
+          "verdict": "accepted",
+          "reason": "Doubles-havainteen pehmeät paistetut bara-leivät ja kypsät kikherneet vastaavat Port of Spainin oppaan ruoka-aihetta. Leivät ovat ohuita ja joustavia; annos ei esitä nimettyä kojua. Natiivi1024×1536 ja suhde0.666667 täyttävät pystyvaatimuksen.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/portofspain/assets/e12-portofspain-TRAVELER-4d668d7a47/original.png",
+            "nativeSHA256": "b74961146bbda2cfaa45640eabfa10510cad074aa6e445072240bbc0ca71c13a",
+            "nativeWidth": 1024,
+            "nativeHeight": 1536,
+            "nativeAspectRatio": 0.6666666666666666,
+            "format": "PNG",
+            "pngChunks": [
+              "IHDR",
+              "caBX",
+              "IDAT",
+              "IEND"
+            ],
+            "manifestMatch": true,
+            "captionFi": "Havainnekuva Port of Spainin oppaassa mainitusta doubles-ruoasta.",
+            "sourceEvidence": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/portofspain/sisalto.json",
+              "contentSHA256": "76311394847cd4a923031a237ebda82e6df27cbd26922ac6965cac714eff7900",
+              "sourceText": "{\"artikkeli\": {\"jaksot\": [{\"otsikko\": \"Perille ja liikkeelle\", \"teksti\": \"Port of Spainia palvelee Piarcon kansainvälinen lentoasema kaupungin itäpuolella. Lentokenttä ja keskusta ovat eri paikkoja, joten saapumiseen kuuluu myös maamatka. Keskustassa City Gate South Quaylla kokoaa linja-autoja ja maxi-takseja, eli yksityisiä pikkubusseja. Suunnittele liikkuminen sen mukaan, kuljetko keskustan sisällä vai itään jatkuvassa taajamassa. Kaupungin nimi kartalla ei tarkoita, että kaikki sen ympäristön kohteet olisivat kävelyetäisyydellä.\"}, {\"otsikko\": \"Keskustan kerrokset\", \"teksti\": \"Woodford Squaren ympärillä ovat Holy Trinity Cathedral ja Red House, kun taas Independence Square sijaitsee lähempänä sataman puoleista keskustaa. Katso katuverkkoa: sen suora ruudukko on vanhempi kuin monet sitä reunustavat talot. Rannikon täyttömaan historia selittää, miksi vanha rantaan liittynyt aukio on nyt keskellä rakennettua kaupunkia. Holy Trinity Cathedral on kärsinyt maanjäristysvaurioista, joten sen mahdollisuus ottaa vieraita vastaan on tarkistettava erikseen. Kirkkojen ulkopuolella voi silti tarkastella niiden paikkaa keskustan rakenteessa.\"}, {\"otsikko\": \"Savannahin molemmat puolet\", \"teksti\": \"Savannah on avoin viheralue, jonka pohjoispuolella kasvitieteellinen puutarha tarjoaa toisenlaisen kävelyn puiden keskellä. Länsireunalla kulkee Maraval Road ja sen varrella tunnettu Magnificent Seven -rakennusten ryhmä. Rakennusten käyttötavat vaihtelevat; kadulta katsominen ei tarkoita pääsyä sisään. Puiston ja puutarhan yhdistelmä antaa hyvän käsityksen keskustan pohjoisreunasta ilman, että jokainen maamerkki on oma retkensä.\"}, {\"otsikko\": \"Mitä täällä syödään\", \"teksti\": \"Doubles on paikallinen jauhoista ja kikherneistä tehty ruoka, jota myydään myös Port of Spainin keskustassa. Savannahin ruokakojujen tarjontaan kuuluvat doublesin lisäksi muun muassa maissikeitto, shawarma ja jerk-kana. Kaupungin ruokatarjonta ei mahdu yhteen alkuperään. Iltaisin toimiva ruokatori on eri kokemus kuin puiston päiväkävely, joten järjestä myös paluukuljetus etukäteen. Kojujen aukioloajat ja valikoima on tarkistettava paikan päällä.\"}, {\"otsikko\": \"Milloin kannattaa tulla\", \"teksti\": \"Port of Spainin ilmastossa erottuvat kuivempi ja sateisempi kausi. Sateisena aikana jätä kävelypäivään väljyyttä ja varaudu kuuroihin; ulkona vietetty päivä ei vaadi pelkkää aurinkosäätä. Karnevaali ennen paastoa muuttaa kaupungin rytmiä ja lisää majoituksen kysyntää, joten tapahtuman päivät kannattaa tarkistaa oman matkan vuodelle. Jos tavoitteena on rauhallinen kaupunkikävely, valitse ajankohta sen mukaan. Käytä sovittuja kuljetuksia ja tarkista ajantasaiset matkustusohjeet ennen lähtöä.\"}], \"matkailu\": {\"hyvaTietaa\": [{\"otsikko\": \"Kaupunki ja taajama\", \"teksti\": \"Itään jatkuva taajama ulottuu kaupunginrajojen ulkopuolelle.\"}, {\"otsikko\": \"Kuljetus\", \"teksti\": \"Piarcon lentoasemalta tarvitaan erillinen maamatka keskustaan.\"}, {\"otsikko\": \"Käyntikäytännöt\", \"teksti\": \"Kirkkojen ja muiden rakennusten vierailuajat tarkistetaan erikseen.\"}], \"parasta\": [{\"mita\": \"Savannah\", \"tahdet\": 3}, {\"mita\": \"Royal Botanic Gardens\", \"tahdet\": 3}, {\"mita\": \"Woodford Square\", \"tahdet\": 2}, {\"mita\": \"Belmont\", \"tahdet\": 2}, {\"mita\": \"Savannahin ruoka\", \"tahdet\": 2}]}, \"nimi\": \"Matkailijan Port of Spain\", \"nosto\": \"Savannah ja kasvitieteellinen puutarha ovat vierekkäin, mutta toinen kasvoi laitumesta ja toinen perustettiin puukokoelmaksi.\", \"taitto\": \"opas\", \"teksti\": \"Kulje vanhan keskustan ja pohjoisreunan viheralueiden välillä.\"}, \"kappale\": \"Aloita keskustan suorista kaduista ja Woodford Squaren ympäristöstä. Jatka Savannahille, jonka pohjoispuolella on kasvitieteellinen puutarha. Belmontin katuverkko näyttää toisenlaisen puolen kaupungin kasvusta. Piarcon lentoasema sijaitsee kaupungin itäpuolella, ja jatkokuljetus kuuluu saapumisen suunnitteluun. Käytä tunnettuja kuljetuksia ja sovi paluu etukäteen.\"}",
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/portofspain/faktapohja.md",
+              "originalSources": [
+                "https://en.wikivoyage.org/wiki/Port_of_Spain"
+              ],
+              "ccRelease": {},
+              "generationAuthorization": {
+                "rule": "OHJEET: turvallinen yleishavainnollistus ilman CC-odotusta",
+                "sharedReservationRecord": "/Volumes/T7 4TB/ChatGPT-Codex-active/coordination/paakaupungit-claims/08391cff28146b17/e12/portofspain/TRAVELER/owner.json",
+                "ccReleaseRequired": false,
+                "scope": "lähdeperustainen turvallinen avoin mixed; ei PHOTO/C1-C3 tai nimetty kaupunkiasettelu"
+              },
+              "sourceTopicAudit": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/source-scout/continuation-20261013/safe-topic-production-priorities.json",
+              "sourceTopicAuditSHA256": "b5fd12034028af4a090b68a5ac0644b7a6d737a177b35b838ab6b3974c772dc0",
+              "auditContentSHA256": "76311394847cd4a923031a237ebda82e6df27cbd26922ac6965cac714eff7900",
+              "auditTargetContext": "Aloita keskustan suorista kaduista ja Woodford Squaren ympäristöstä. Jatka Savannahille, jonka pohjoispuolella on kasvitieteellinen puutarha. Belmontin katuverkko näyttää toisenlaisen puolen kaupungin kasvusta. Piarcon lentoasema sijaitsee kaupungin itäpuolella, ja jatkokuljetus kuuluu saapumisen suunnitteluun. Käytä tunnettuja kuljetuksia ja sovi paluu etukäteen. Matkailijan Port of Spain opas Kulje vanhan keskustan ja pohjoisreunan viheralueiden välillä. Savannah ja kasvitieteellinen puutarha ovat vierekkäin, mutta toinen kasvoi laitumesta ja toinen perustettiin puukokoelmaksi. Perille ja liikkeelle Port of Spainia palvelee Piarcon kansainvälinen lentoasema kaupungin itäpuolella. Lentokenttä ja keskusta ovat eri paikkoja, joten saapumiseen kuuluu myös maamatka. Keskustassa City Gate South Quaylla kokoaa linja-autoja ja maxi-takseja, eli yksityisiä pikkubusseja. Suunnittele liikkuminen sen mukaan, kuljetko keskustan sisällä vai itään jatkuvassa taajamassa. Kaupungin nimi kartalla ei tarkoita, että kaikki sen ympäristön kohteet olisivat kävelyetäisyydellä. Keskustan kerrokset Woodford Squaren ympärillä ovat Holy Trinity Cathedral ja Red House, kun taas Independence Square sijaitsee lähempänä sataman puoleista keskustaa. Katso katuverkkoa: sen suora ruudukko on vanhempi kuin monet sitä reunustavat talot. Rannikon täyttömaan historia selittää, miksi vanha rantaan liittynyt aukio on nyt keskellä rakennettua kaupunkia. Holy Trinity Cathedral on kärsinyt maanjäristysvaurioista, joten sen mahdollisuus ottaa vieraita vastaan on tarkistettava erikseen. Kirkkojen ulkopuolella voi silti tarkastella niiden paikkaa keskustan rakenteessa. Savannahin molemmat puolet Savannah on avoin viheralue, jonka pohjoispuolella kasvitieteellinen puutarha tarjoaa toisenlaisen kävelyn puiden keskellä. Länsireunalla kulkee Maraval Road ja sen varrella tunnettu Magnificent Seven -rakennusten ryhmä. Rakennusten käyttötavat vaihtelevat; kadulta katsominen ei tarkoita pääsyä sisään. Puiston ja puutarhan yhdistelmä antaa hyvän käsityksen keskustan pohjoisreunasta ilman, että jokainen maamerkki on oma retkensä. Mitä täällä syödään Doubles on paikallinen jauhoista ja kikherneistä tehty ruoka, jota myydään myös Port of Spainin keskustassa. Savannahin ruokakojujen tarjontaan kuuluvat doublesin lisäksi muun muassa maissikeitto, shawarma ja jerk-kana. Kaupungin ruokatarjonta ei mahdu yhteen alkuperään. Iltaisin toimiva ruokatori on eri kokemus kuin puiston päiväkävely, joten järjestä myös paluukuljetus etukäteen. Kojujen aukioloajat ja valikoima on tarkistettava paikan päällä. Milloin kannattaa tulla Port of Spainin ilmastossa erottuvat kuivempi ja sateisempi kausi. Sateisena aikana jätä kävelypäivään väljyyttä ja varaudu kuuroihin; ulkona vietetty päivä ei vaadi pelkkää aurinkosäätä. Karnevaali ennen paastoa muuttaa kaupungin rytmiä ja lisää majoituksen kysyntää, joten tapahtuman päivät kannattaa tarkistaa oman matkan vuodelle. Jos tavoitteena on rauhallinen kaupunkikävely, valitse ajankohta sen mukaan. Käytä sovittuja kuljetuksia ja tarkista ajantasaiset matkustusohjeet ennen lähtöä. Savannah  Entinen viljelymaa ja laidun on nykyinen avoin viheralue. Royal Botanic Gardens  Puukokoelma yhdistää paikallisia ja maailmalta tuotuja lajeja. Woodford Square  Keskustan aukion ympärillä näkyy kaupungin rakennushistoriaa. Belmont  Mutkittelevat kadut kertovat ruutukeskustasta poikkeavasta kasvusta. Savannahin ruoka  Ruokakojuissa on muun muassa doublesia ja maissikeittoa. Kaupunki ja taajama Itään jatkuva taajama ulottuu kaupunginrajojen ulkopuolelle. Kuljetus Piarcon lentoasemalta tarvitaan erillinen maamatka keskustaan. Käyntikäytännöt Kirkkojen ja muiden rakennusten vierailuajat tarkistetaan erikseen. Wikipedia",
+              "productionAuthorization": "13.10.2026 source-thread user instruction: generate all own job20 rows now, live target/atomic claim first; overrides waiting_cc_or_safe_reference and audit productionAllowedByThisAudit=false only for these documented ordinary subjects."
+            },
+            "rightsEvidence": "Tavallinen ruoka/raaka-aine tai luonnonmateriaali, ei nimetyn paikan, rakennuksen, suojatun taideteoksen tai historiallisen yksilön rekonstruktio. Uusi itsenäinen havainne, ei O4-tiedoston tai muun aiemman kuvan uudelleenkäyttö.",
+            "content": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/portofspain/sisalto.json",
+              "contentSHA256": "76311394847cd4a923031a237ebda82e6df27cbd26922ac6965cac714eff7900",
+              "targetObjectExists": true,
+              "targetContainer": "$.kaupunkilehti[0].matkailijalle",
+              "targetText": {
+                "kuva": {
+                  "tiedosto": "",
+                  "lyhyt": "",
+                  "selite": "",
+                  "lahde": ""
+                },
+                "kappale": "Aloita keskustan suorista kaduista ja Woodford Squaren ympäristöstä. Jatka Savannahille, jonka pohjoispuolella on kasvitieteellinen puutarha. Belmontin katuverkko näyttää toisenlaisen puolen kaupungin kasvusta. Piarcon lentoasema sijaitsee kaupungin itäpuolella, ja jatkokuljetus kuuluu saapumisen suunnitteluun. Käytä tunnettuja kuljetuksia ja sovi paluu etukäteen.",
+                "artikkeli": {
+                  "nimi": "Matkailijan Port of Spain",
+                  "taitto": "opas",
+                  "teksti": "Kulje vanhan keskustan ja pohjoisreunan viheralueiden välillä.",
+                  "nosto": "Savannah ja kasvitieteellinen puutarha ovat vierekkäin, mutta toinen kasvoi laitumesta ja toinen perustettiin puukokoelmaksi.",
+                  "jaksot": [
+                    {
+                      "otsikko": "Perille ja liikkeelle",
+                      "teksti": "Port of Spainia palvelee Piarcon kansainvälinen lentoasema kaupungin itäpuolella. Lentokenttä ja keskusta ovat eri paikkoja, joten saapumiseen kuuluu myös maamatka. Keskustassa City Gate South Quaylla kokoaa linja-autoja ja maxi-takseja, eli yksityisiä pikkubusseja. Suunnittele liikkuminen sen mukaan, kuljetko keskustan sisällä vai itään jatkuvassa taajamassa. Kaupungin nimi kartalla ei tarkoita, että kaikki sen ympäristön kohteet olisivat kävelyetäisyydellä.",
+                      "kuva": {
+                        "tiedosto": "",
+                        "lyhyt": "",
+                        "selite": "",
+                        "lahde": ""
+                      }
+                    },
+                    {
+                      "otsikko": "Keskustan kerrokset",
+                      "teksti": "Woodford Squaren ympärillä ovat Holy Trinity Cathedral ja Red House, kun taas Independence Square sijaitsee lähempänä sataman puoleista keskustaa. Katso katuverkkoa: sen suora ruudukko on vanhempi kuin monet sitä reunustavat talot. Rannikon täyttömaan historia selittää, miksi vanha rantaan liittynyt aukio on nyt keskellä rakennettua kaupunkia. Holy Trinity Cathedral on kärsinyt maanjäristysvaurioista, joten sen mahdollisuus ottaa vieraita vastaan on tarkistettava erikseen. Kirkkojen ulkopuolella voi silti tarkastella niiden paikkaa keskustan rakenteessa.",
+                      "kuva": {
+                        "tiedosto": "",
+                        "lyhyt": "",
+                        "selite": "",
+                        "lahde": ""
+                      }
+                    },
+                    {
+                      "otsikko": "Savannahin molemmat puolet",
+                      "teksti": "Savannah on avoin viheralue, jonka pohjoispuolella kasvitieteellinen puutarha tarjoaa toisenlaisen kävelyn puiden keskellä. Länsireunalla kulkee Maraval Road ja sen varrella tunnettu Magnificent Seven -rakennusten ryhmä. Rakennusten käyttötavat vaihtelevat; kadulta katsominen ei tarkoita pääsyä sisään. Puiston ja puutarhan yhdistelmä antaa hyvän käsityksen keskustan pohjoisreunasta ilman, että jokainen maamerkki on oma retkensä.",
+                      "kuva": {
+                        "tiedosto": "",
+                        "lyhyt": "",
+                        "selite": "",
+                        "lahde": ""
+                      }
+                    },
+                    {
+                      "otsikko": "Mitä täällä syödään",
+                      "teksti": "Doubles on paikallinen jauhoista ja kikherneistä tehty ruoka, jota myydään myös Port of Spainin keskustassa. Savannahin ruokakojujen tarjontaan kuuluvat doublesin lisäksi muun muassa maissikeitto, shawarma ja jerk-kana. Kaupungin ruokatarjonta ei mahdu yhteen alkuperään. Iltaisin toimiva ruokatori on eri kokemus kuin puiston päiväkävely, joten järjestä myös paluukuljetus etukäteen. Kojujen aukioloajat ja valikoima on tarkistettava paikan päällä.",
+                      "kuva": {
+                        "tiedosto": "",
+                        "lyhyt": "",
+                        "selite": "",
+                        "lahde": ""
+                      }
+                    },
+                    {
+                      "otsikko": "Milloin kannattaa tulla",
+                      "teksti": "Port of Spainin ilmastossa erottuvat kuivempi ja sateisempi kausi. Sateisena aikana jätä kävelypäivään väljyyttä ja varaudu kuuroihin; ulkona vietetty päivä ei vaadi pelkkää aurinkosäätä. Karnevaali ennen paastoa muuttaa kaupungin rytmiä ja lisää majoituksen kysyntää, joten tapahtuman päivät kannattaa tarkistaa oman matkan vuodelle. Jos tavoitteena on rauhallinen kaupunkikävely, valitse ajankohta sen mukaan. Käytä sovittuja kuljetuksia ja tarkista ajantasaiset matkustusohjeet ennen lähtöä.",
+                      "kuva": {
+                        "tiedosto": "",
+                        "lyhyt": "",
+                        "selite": "",
+                        "lahde": ""
+                      }
+                    }
+                  ],
+                  "matkailu": {
+                    "parasta": [
+                      {
+                        "mita": "Savannah",
+                        "tahdet": 3,
+                        "selite": "Entinen viljelymaa ja laidun on nykyinen avoin viheralue."
+                      },
+                      {
+                        "mita": "Royal Botanic Gardens",
+                        "tahdet": 3,
+                        "selite": "Puukokoelma yhdistää paikallisia ja maailmalta tuotuja lajeja."
+                      },
+                      {
+                        "mita": "Woodford Square",
+                        "tahdet": 2,
+                        "selite": "Keskustan aukion ympärillä näkyy kaupungin rakennushistoriaa."
+                      },
+                      {
+                        "mita": "Belmont",
+                        "tahdet": 2,
+                        "selite": "Mutkittelevat kadut kertovat ruutukeskustasta poikkeavasta kasvusta."
+                      },
+                      {
+                        "mita": "Savannahin ruoka",
+                        "tahdet": 2,
+                        "selite": "Ruokakojuissa on muun muassa doublesia ja maissikeittoa."
+                      }
+                    ],
+                    "hyvaTietaa": [
+                      {
+                        "otsikko": "Kaupunki ja taajama",
+                        "teksti": "Itään jatkuva taajama ulottuu kaupunginrajojen ulkopuolelle."
+                      },
+                      {
+                        "otsikko": "Kuljetus",
+                        "teksti": "Piarcon lentoasemalta tarvitaan erillinen maamatka keskustaan."
+                      },
+                      {
+                        "otsikko": "Käyntikäytännöt",
+                        "teksti": "Kirkkojen ja muiden rakennusten vierailuajat tarkistetaan erikseen."
+                      }
+                    ]
+                  },
+                  "lahde": "Wikipedia"
+                }
+              },
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/portofspain/faktapohja.md",
+              "factSheetSHA256": "4a4d3821d8b3bcfe4428b5c7ebb5528498c49347d8e19df2bc3913604cf280d5",
+              "factAssessment": "Nykyinen oppaan ruokajakso nimeää doublesin jauho-/kikherneannokseksi. Faktapohja rivi44/S5 Eat ja S2 Recreational activities: doubles Port of Spainin keskustassa ja Savannahin ruokatorilla. Yleinen ruokahavainne, ei paikkadokumentti."
+            },
+            "visualInspection": {
+              "tool": "view_image",
+              "detail": "original",
+              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/portofspain/assets/e12-portofspain-TRAVELER-4d668d7a47/original.png",
+              "inspectedBy": "qa-e12",
+              "inspectedAt": "2026-10-13T13:37:04Z",
+              "observations": "Lautasella alempi pyöreä pehmeä leipä ja sen kanssa limittäin toinen, jonka vapaa reuna kaartuu osittain kikherneiden päälle. Leivät kullanruskeita, pinnassa vaihtelevia kuplia ja pehmeitä poimuja. Välissä kypsät kastikkeiset kikherneet; ei kovia tacokuoria tai sämpylää. Lautanen ja ruoan kontaktit uskottavia. Ei tekstiä, logoja, pakkauksia tai ihmisiä."
+            },
+            "otherReviewerVerdicts": [],
+            "openConflict": false,
+            "ownershipMarker": "qa-handoff-kuvitus-3.json"
+          },
+          "reviewedAt": "2026-10-13T13:37:05.010537+00:00",
+          "reviewerGroup": "qa-e12"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/portofspain/qa.json",
+            "sha256": "ee06a8a063e9ead493eba8d98236f902b4cc776df48546fd13daa73888d52cbd"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/portofspain/illustration-qa-extra.json",
+            "sha256": "bf2b3ca9ec5f6952868cae5c996b705bdb69ded33b126065d6f823f4f1329627"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/portofspain/e12-portofspain-TRAVELER-4d668d7a47-b74961146bbd.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/portofspain/e12-portofspain-TRAVELER-4d668d7a47-b74961146bbd.png?t=9080743ab697d7d7",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/portofspain/e12-portofspain-TRAVELER-4d668d7a47-b74961146bbd.png",
+        "sha256": "9080743ab697d7d77dd6359fbb3fb8f437bf5ed998ed36745231055f4d68100d",
+        "bytes": 2501284,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e12-portofspain-TRAVELER-4d668d7a47",
+        "nativeSHA256": "b74961146bbda2cfaa45640eabfa10510cad074aa6e445072240bbc0ca71c13a",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e12/portofspain/e12-portofspain-TRAVELER-4d668d7a47-b74961146bbd.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e12",
+        "city": "portofspain",
+        "slot": "TRAVELER",
+        "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
+        "verifiedAt": "2026-10-13T13:37:32.088703+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e12/portofspain/e12-portofspain-TRAVELER-4d668d7a47-b74961146bbd.png",
+        "sha256": "9080743ab697d7d77dd6359fbb3fb8f437bf5ed998ed36745231055f4d68100d",
+        "bytes": 2501284,
+        "SHAReadAt": "2026-10-13T13:37:28.177138+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1024,
+        "height": 1536,
+        "pixelWidth": 1024,
+        "pixelHeight": 1536,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "b74961146bbda2cfaa45640eabfa10510cad074aa6e445072240bbc0ca71c13a",
+        "rgbPixelSHA256": "e139953795c901d37fe303d7947df0ce2580528c36662c5ff3f8a43ab5a7b861",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "76311394847cd4a923031a237ebda82e6df27cbd26922ac6965cac714eff7900",
+      "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+      "contextAfterSHA256": "d5794a71fc137b4b497cdb72da5c05d4f3257d0e70d0163350ab69d9e37bb394",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e12",
@@ -1554,7 +2082,7 @@
         663
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/portofspain/sisalto.json",
-      "sourceContentSHA256": "c3ea2c54ea6afadcf4eb81779ab41f1c5254a5c42114bdc0ac959ce0ff155c74",
+      "sourceContentSHA256": "76311394847cd4a923031a237ebda82e6df27cbd26922ac6965cac714eff7900",
       "semanticSourceBind": {
         "targetBeforeSHA256": "1147747ecff88a33ef826d0060e2071cbbb36e9c38d29911d3a9669ab51b04ba",
         "semanticContextSHA256": "1147747ecff88a33ef826d0060e2071cbbb36e9c38d29911d3a9669ab51b04ba",
@@ -1720,7 +2248,7 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/portofspain/illustration-qa-extra.json",
-            "sha256": "164a01f817bcc680b22d37e27b1ef52656493db0be817e2ccf497f3859478a97"
+            "sha256": "bf2b3ca9ec5f6952868cae5c996b705bdb69ded33b126065d6f823f4f1329627"
           }
         ]
       },
@@ -1793,7 +2321,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "76311394847cd4a923031a237ebda82e6df27cbd26922ac6965cac714eff7900",
       "targetAfterSHA256": "1147747ecff88a33ef826d0060e2071cbbb36e9c38d29911d3a9669ab51b04ba",
-      "contextAfterSHA256": "1147747ecff88a33ef826d0060e2071cbbb36e9c38d29911d3a9669ab51b04ba"
+      "contextAfterSHA256": "1147747ecff88a33ef826d0060e2071cbbb36e9c38d29911d3a9669ab51b04ba",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e12",
@@ -1846,7 +2376,7 @@
         1856
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/portofspain/sisalto.json",
-      "sourceContentSHA256": "c3ea2c54ea6afadcf4eb81779ab41f1c5254a5c42114bdc0ac959ce0ff155c74",
+      "sourceContentSHA256": "76311394847cd4a923031a237ebda82e6df27cbd26922ac6965cac714eff7900",
       "semanticSourceBind": {
         "targetBeforeSHA256": "3b2d4fdfcdd99989f3513bdf93f22286c6ee9e744d2905b032aa8f39b3ab8e69",
         "semanticContextSHA256": "3b2d4fdfcdd99989f3513bdf93f22286c6ee9e744d2905b032aa8f39b3ab8e69",
@@ -2032,7 +2562,7 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/portofspain/illustration-qa-extra.json",
-            "sha256": "164a01f817bcc680b22d37e27b1ef52656493db0be817e2ccf497f3859478a97"
+            "sha256": "bf2b3ca9ec5f6952868cae5c996b705bdb69ded33b126065d6f823f4f1329627"
           }
         ]
       },
@@ -2105,7 +2635,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "76311394847cd4a923031a237ebda82e6df27cbd26922ac6965cac714eff7900",
       "targetAfterSHA256": "3b2d4fdfcdd99989f3513bdf93f22286c6ee9e744d2905b032aa8f39b3ab8e69",
-      "contextAfterSHA256": "3b2d4fdfcdd99989f3513bdf93f22286c6ee9e744d2905b032aa8f39b3ab8e69"
+      "contextAfterSHA256": "3b2d4fdfcdd99989f3513bdf93f22286c6ee9e744d2905b032aa8f39b3ab8e69",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e12",
@@ -2158,10 +2690,10 @@
         3240
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/portofspain/sisalto.json",
-      "sourceContentSHA256": "c3ea2c54ea6afadcf4eb81779ab41f1c5254a5c42114bdc0ac959ce0ff155c74",
+      "sourceContentSHA256": "76311394847cd4a923031a237ebda82e6df27cbd26922ac6965cac714eff7900",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "targetBeforeSHA256": "c63be3bb4edee42ea67dcd58589a9bc721420f6c53e7cd2fca7292347807a713",
+        "semanticContextSHA256": "c63be3bb4edee42ea67dcd58589a9bc721420f6c53e7cd2fca7292347807a713",
         "subjectTitle": "Port of Spain",
         "targetState": "existing-target"
       },
@@ -2305,7 +2837,7 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/portofspain/illustration-qa-extra.json",
-            "sha256": "164a01f817bcc680b22d37e27b1ef52656493db0be817e2ccf497f3859478a97"
+            "sha256": "bf2b3ca9ec5f6952868cae5c996b705bdb69ded33b126065d6f823f4f1329627"
           }
         ]
       },
@@ -2342,10 +2874,10 @@
       "producerExportProof": null,
       "technicalExportProof": null,
       "priorMediaFields": {
-        "tiedosto": "",
-        "lahde": "",
-        "selite": "",
-        "lyhyt": ""
+        "tiedosto": "TnT PoS Queen's Park Savannah.jpg",
+        "lahde": "Grueslayer, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Queen’s Park Savannahin pohjoisosan puut ja avoin nurmi vuonna 2014.",
+        "lyhyt": "Queen’s Park Savannahin pohjoisosan puut ja avoin nurmi vuonna 2014."
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -2378,7 +2910,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "76311394847cd4a923031a237ebda82e6df27cbd26922ac6965cac714eff7900",
       "targetAfterSHA256": "c63be3bb4edee42ea67dcd58589a9bc721420f6c53e7cd2fca7292347807a713",
-      "contextAfterSHA256": "c63be3bb4edee42ea67dcd58589a9bc721420f6c53e7cd2fca7292347807a713"
+      "contextAfterSHA256": "c63be3bb4edee42ea67dcd58589a9bc721420f6c53e7cd2fca7292347807a713",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e12",
@@ -2431,10 +2965,10 @@
         2414
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/portofspain/sisalto.json",
-      "sourceContentSHA256": "c3ea2c54ea6afadcf4eb81779ab41f1c5254a5c42114bdc0ac959ce0ff155c74",
+      "sourceContentSHA256": "76311394847cd4a923031a237ebda82e6df27cbd26922ac6965cac714eff7900",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "494b950d95e3fe6dbb59d57bb4ad63b91eaadc4c426f0462ecd81f238612e412",
-        "semanticContextSHA256": "494b950d95e3fe6dbb59d57bb4ad63b91eaadc4c426f0462ecd81f238612e412",
+        "targetBeforeSHA256": "ff82974655e46137892fe3e895cd627ba328c4fa1ece57b0ef927b38b3a054ec",
+        "semanticContextSHA256": "ff82974655e46137892fe3e895cd627ba328c4fa1ece57b0ef927b38b3a054ec",
         "subjectTitle": "Puiston keskelle jäi suvun pala",
         "targetState": "existing-target"
       },
@@ -2570,7 +3104,7 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/portofspain/illustration-qa-extra.json",
-            "sha256": "164a01f817bcc680b22d37e27b1ef52656493db0be817e2ccf497f3859478a97"
+            "sha256": "bf2b3ca9ec5f6952868cae5c996b705bdb69ded33b126065d6f823f4f1329627"
           }
         ]
       },
@@ -2607,10 +3141,10 @@
       "producerExportProof": null,
       "technicalExportProof": null,
       "priorMediaFields": {
-        "tiedosto": "",
-        "lahde": "",
-        "selite": "",
-        "lyhyt": ""
+        "tiedosto": "Queen's Park Savannah - panoramio.jpg",
+        "lahde": "James Roberts (Jampp…, Wikimedia Commons (CC BY-SA 3.0)",
+        "selite": "Queen’s Park Savannahin avointa nurmialuetta vuonna 2011.",
+        "lyhyt": "Queen’s Park Savannahin avointa nurmialuetta vuonna 2011."
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -2643,10 +3177,14 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "76311394847cd4a923031a237ebda82e6df27cbd26922ac6965cac714eff7900",
       "targetAfterSHA256": "ff82974655e46137892fe3e895cd627ba328c4fa1ece57b0ef927b38b3a054ec",
-      "contextAfterSHA256": "ff82974655e46137892fe3e895cd627ba328c4fa1ece57b0ef927b38b3a054ec"
+      "contextAfterSHA256": "ff82974655e46137892fe3e895cd627ba328c4fa1ece57b0ef927b38b3a054ec",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     }
   ],
   "runtimeIntegrationPending": true,
-  "ownerAcceptedNotImpliedByAuthorization": true,
-  "gameIntegrated": false
+  "ownerAcceptedNotImpliedByAuthorization": false,
+  "gameIntegrated": false,
+  "allAssetsExplicitlyOwnerApproved": true,
+  "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
 }

@@ -2,8 +2,8 @@
   "schemaVersion": "capital-city-role-assets/v1",
   "era": "e12",
   "city": "castries",
-  "authorization": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
-  "sourceContentAfterSHA256": "e5b0612495f534dceb34a7e5cfa90989717b0ab7460572daa1144dab27e7391c",
+  "authorization": "hyväksyn kaikki tekemäsi kuvat. toimita ne claudelle. claudelta saat uusia ohjeita jatkoa varten",
+  "sourceContentAfterSHA256": "be20029c24f7e599af388976450f7efbb53117352c7843c63495ce0fc5eed900",
   "assets": [
     {
       "era": "e12",
@@ -146,7 +146,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/castries/illustration-qa-extra.json",
-        "fileSHA256": "668ce214c2e04188c6697330beefe8680ab72329e0abc35ddb8cb6254f3863fb",
+        "fileSHA256": "ded79ed42e06412aeeb5edcfaadde6bb7d98b2c5690c0fe910678be7739ae049",
         "item": {
           "slot": "O4",
           "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
@@ -220,11 +220,11 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/castries/qa.json",
-            "sha256": "6d0e44d035008f2d8c23a7f23c0be4f5525f33366256195807b4b87f1c5f81b1"
+            "sha256": "9eeb8e08219085b3aa4559ef33fc53c012106d8c6e4942f50ffa54e5c4ac72b2"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/castries/illustration-qa-extra.json",
-            "sha256": "668ce214c2e04188c6697330beefe8680ab72329e0abc35ddb8cb6254f3863fb"
+            "sha256": "ded79ed42e06412aeeb5edcfaadde6bb7d98b2c5690c0fe910678be7739ae049"
           }
         ]
       },
@@ -307,9 +307,11 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "e5b0612495f534dceb34a7e5cfa90989717b0ab7460572daa1144dab27e7391c",
+      "sourceContentAfterSHA256": "be20029c24f7e599af388976450f7efbb53117352c7843c63495ce0fc5eed900",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "823467df31beb8957d64ed1517151e74952e797f65feacbaf75cebb1c3fb0467"
+      "contextAfterSHA256": "823467df31beb8957d64ed1517151e74952e797f65feacbaf75cebb1c3fb0467",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e12",
@@ -450,7 +452,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/castries/illustration-qa-extra.json",
-        "fileSHA256": "668ce214c2e04188c6697330beefe8680ab72329e0abc35ddb8cb6254f3863fb",
+        "fileSHA256": "ded79ed42e06412aeeb5edcfaadde6bb7d98b2c5690c0fe910678be7739ae049",
         "item": {
           "slot": "K1",
           "targetJsonPath": "$.kaupunkilehti[0].nostot[0]",
@@ -526,11 +528,11 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/castries/qa.json",
-            "sha256": "6d0e44d035008f2d8c23a7f23c0be4f5525f33366256195807b4b87f1c5f81b1"
+            "sha256": "9eeb8e08219085b3aa4559ef33fc53c012106d8c6e4942f50ffa54e5c4ac72b2"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/castries/illustration-qa-extra.json",
-            "sha256": "668ce214c2e04188c6697330beefe8680ab72329e0abc35ddb8cb6254f3863fb"
+            "sha256": "ded79ed42e06412aeeb5edcfaadde6bb7d98b2c5690c0fe910678be7739ae049"
           }
         ]
       },
@@ -613,9 +615,11 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "e5b0612495f534dceb34a7e5cfa90989717b0ab7460572daa1144dab27e7391c",
+      "sourceContentAfterSHA256": "be20029c24f7e599af388976450f7efbb53117352c7843c63495ce0fc5eed900",
       "targetAfterSHA256": "7a619f00b361e557da64e0479bd103f256113241d7a577295c5c4e1ad9887bdc",
-      "contextAfterSHA256": "7a619f00b361e557da64e0479bd103f256113241d7a577295c5c4e1ad9887bdc"
+      "contextAfterSHA256": "7a619f00b361e557da64e0479bd103f256113241d7a577295c5c4e1ad9887bdc",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e12",
@@ -755,7 +759,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/castries/illustration-qa-extra.json",
-        "fileSHA256": "668ce214c2e04188c6697330beefe8680ab72329e0abc35ddb8cb6254f3863fb",
+        "fileSHA256": "ded79ed42e06412aeeb5edcfaadde6bb7d98b2c5690c0fe910678be7739ae049",
         "item": {
           "slot": "L3",
           "targetJsonPath": "$.kaupunkilehti[1].nostot[2]",
@@ -829,11 +833,11 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/castries/qa.json",
-            "sha256": "6d0e44d035008f2d8c23a7f23c0be4f5525f33366256195807b4b87f1c5f81b1"
+            "sha256": "9eeb8e08219085b3aa4559ef33fc53c012106d8c6e4942f50ffa54e5c4ac72b2"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/castries/illustration-qa-extra.json",
-            "sha256": "668ce214c2e04188c6697330beefe8680ab72329e0abc35ddb8cb6254f3863fb"
+            "sha256": "ded79ed42e06412aeeb5edcfaadde6bb7d98b2c5690c0fe910678be7739ae049"
           }
         ]
       },
@@ -916,9 +920,11 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "e5b0612495f534dceb34a7e5cfa90989717b0ab7460572daa1144dab27e7391c",
+      "sourceContentAfterSHA256": "be20029c24f7e599af388976450f7efbb53117352c7843c63495ce0fc5eed900",
       "targetAfterSHA256": "a74a6461b7f89da8a523944f360c056474e264fbc7f63b895c353acbb1087947",
-      "contextAfterSHA256": "a74a6461b7f89da8a523944f360c056474e264fbc7f63b895c353acbb1087947"
+      "contextAfterSHA256": "a74a6461b7f89da8a523944f360c056474e264fbc7f63b895c353acbb1087947",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e12",
@@ -1059,7 +1065,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/castries/illustration-qa-extra.json",
-        "fileSHA256": "668ce214c2e04188c6697330beefe8680ab72329e0abc35ddb8cb6254f3863fb",
+        "fileSHA256": "ded79ed42e06412aeeb5edcfaadde6bb7d98b2c5690c0fe910678be7739ae049",
         "item": {
           "slot": "L4",
           "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
@@ -1135,11 +1141,11 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/castries/qa.json",
-            "sha256": "6d0e44d035008f2d8c23a7f23c0be4f5525f33366256195807b4b87f1c5f81b1"
+            "sha256": "9eeb8e08219085b3aa4559ef33fc53c012106d8c6e4942f50ffa54e5c4ac72b2"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/castries/illustration-qa-extra.json",
-            "sha256": "668ce214c2e04188c6697330beefe8680ab72329e0abc35ddb8cb6254f3863fb"
+            "sha256": "ded79ed42e06412aeeb5edcfaadde6bb7d98b2c5690c0fe910678be7739ae049"
           }
         ]
       },
@@ -1222,9 +1228,334 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "e5b0612495f534dceb34a7e5cfa90989717b0ab7460572daa1144dab27e7391c",
+      "sourceContentAfterSHA256": "be20029c24f7e599af388976450f7efbb53117352c7843c63495ce0fc5eed900",
       "targetAfterSHA256": "11c4bcaa392537008485febb4ccb287b8c4180c76f2e5a417351a62a67487fee",
-      "contextAfterSHA256": "11c4bcaa392537008485febb4ccb287b8c4180c76f2e5a417351a62a67487fee"
+      "contextAfterSHA256": "11c4bcaa392537008485febb4ccb287b8c4180c76f2e5a417351a62a67487fee",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+    },
+    {
+      "era": "e12",
+      "city": "castries",
+      "slot": "O2",
+      "type": "illustration",
+      "assetID": "e12-castries-O2-8d09d668af",
+      "galleryImageID": "e12-castries-O2-8d09d668af",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[1].kuva",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "matkailijalle",
+        "artikkeli",
+        "jaksot",
+        1,
+        "kuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/castries/e12-castries-O2-8d09d668af-f0cab4e66416.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva Castriesin opastekstin mauste- ja yrttiaiheesta.",
+        "lyhyt": "Havainnekuva Castriesin opastekstin mauste- ja yrttiaiheesta."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/castries/e12-castries-O2-8d09d668af-f0cab4e66416.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva Castriesin opastekstin mauste- ja yrttiaiheesta.",
+        "lyhyt": "Havainnekuva Castriesin opastekstin mauste- ja yrttiaiheesta."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "f0cab4e66416dfddfee459cf9f52246e48789f9afc0082c6ebc76042a62a7351",
+      "exportSHA256": "bb962e10b9b52f7e663619de82989e7226a64ebf7286b806e4838cd543334dcc",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/castries/e12-castries-O2-8d09d668af-f0cab4e66416.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/castries/e12-castries-O2-8d09d668af-f0cab4e66416.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e12/castries/e12-castries-O2-8d09d668af-f0cab4e66416.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/castries/sisalto.json",
+      "sourceContentSHA256": "e5b0612495f534dceb34a7e5cfa90989717b0ab7460572daa1144dab27e7391c",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "bf958290498f05d5412b1f37ea960e28ad68e95e80ea8683016684a36c6420f4",
+        "subjectTitle": "Tori ja runoilijan aukio",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Tavallinen ruoka/raaka-aine tai luonnonmateriaali, ei nimetyn paikan, rakennuksen, suojatun taideteoksen tai historiallisen yksilön rekonstruktio. Uusi itsenäinen havainne, ei O4-tiedoston tai muun aiemman kuvan uudelleenkäyttö.",
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/castries/assets/e12-castries-O2-8d09d668af/original.png",
+            "nativeSHA256": "f0cab4e66416dfddfee459cf9f52246e48789f9afc0082c6ebc76042a62a7351",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "nativeAspectRatio": 1.5,
+            "format": "PNG",
+            "pngChunks": [
+              "IHDR",
+              "caBX",
+              "IDAT",
+              "IEND"
+            ],
+            "manifestMatch": true,
+            "captionFi": "Havainnekuva Castriesin opastekstin mauste- ja yrttiaiheesta.",
+            "sourceEvidence": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/castries/sisalto.json",
+              "contentSHA256": "e5b0612495f534dceb34a7e5cfa90989717b0ab7460572daa1144dab27e7391c",
+              "sourceText": "Jeremie Streetin torilla voi tutustua kasviksiin, mausteisiin ja käsitöihin. Viereinen Vendor’s Arcade täydentää tarjontaa ruokapaikoilla ja käsityömyynnillä. Derek Walcottin aukio on keskustan puistoaukio, jonka laidalla ovat katedraali ja keskuskirjasto. Aukion aikaisemmat nimet Place d’Armes ja Columbus Square muistuttavat kaupungin eri vaiheista.",
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/castries/faktapohja.md",
+              "originalSources": [
+                "https://en.wikipedia.org/wiki/Castries_Market"
+              ],
+              "ccRelease": {},
+              "generationAuthorization": {
+                "rule": "OHJEET: turvallinen yleishavainnollistus ilman CC-odotusta",
+                "sharedReservationRecord": "/Volumes/T7 4TB/ChatGPT-Codex-active/coordination/paakaupungit-claims/08391cff28146b17/e12/castries/O2/owner.json",
+                "ccReleaseRequired": false,
+                "scope": "lähdeperustainen turvallinen avoin mixed; ei PHOTO/C1-C3 tai nimetty kaupunkiasettelu"
+              },
+              "sourceTopicAudit": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/source-scout/continuation-20261013/safe-topic-production-priorities.json",
+              "sourceTopicAuditSHA256": "b5fd12034028af4a090b68a5ac0644b7a6d737a177b35b838ab6b3974c772dc0",
+              "auditContentSHA256": "e5b0612495f534dceb34a7e5cfa90989717b0ab7460572daa1144dab27e7391c",
+              "auditTargetContext": "Tori ja runoilijan aukio Jeremie Streetin torilla voi tutustua kasviksiin, mausteisiin ja käsitöihin. Viereinen Vendor’s Arcade täydentää tarjontaa ruokapaikoilla ja käsityömyynnillä. Derek Walcottin aukio on keskustan puistoaukio, jonka laidalla ovat katedraali ja keskuskirjasto. Aukion aikaisemmat nimet Place d’Armes ja Columbus Square muistuttavat kaupungin eri vaiheista.",
+              "productionAuthorization": "13.10.2026 source-thread user instruction: generate all own job20 rows now, live target/atomic claim first; overrides waiting_cc_or_safe_reference and audit productionAllowedByThisAudit=false only for these documented ordinary subjects."
+            },
+            "rightsEvidence": "Tavallinen ruoka/raaka-aine tai luonnonmateriaali, ei nimetyn paikan, rakennuksen, suojatun taideteoksen tai historiallisen yksilön rekonstruktio. Uusi itsenäinen havainne, ei O4-tiedoston tai muun aiemman kuvan uudelleenkäyttö.",
+            "content": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/castries/sisalto.json",
+              "contentSHA256": "e5b0612495f534dceb34a7e5cfa90989717b0ab7460572daa1144dab27e7391c",
+              "targetObjectExists": true,
+              "targetContainer": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[1]",
+              "targetText": {
+                "otsikko": "Tori ja runoilijan aukio",
+                "teksti": "Jeremie Streetin torilla voi tutustua kasviksiin, mausteisiin ja käsitöihin. Viereinen Vendor’s Arcade täydentää tarjontaa ruokapaikoilla ja käsityömyynnillä. Derek Walcottin aukio on keskustan puistoaukio, jonka laidalla ovat katedraali ja keskuskirjasto. Aukion aikaisemmat nimet Place d’Armes ja Columbus Square muistuttavat kaupungin eri vaiheista.",
+                "kuva": {
+                  "tiedosto": "",
+                  "lyhyt": "",
+                  "selite": "",
+                  "lahde": ""
+                }
+              },
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/castries/faktapohja.md",
+              "factSheetSHA256": "843decf98982de5311ae5c2f8f5ca9688c3d8a48e87445f3b17c3fda7618c6a8",
+              "factAssessment": "Nykyinen O2-jakso Tori ja runoilijan aukio nimeää mausteet; faktapohja rivi49/C2–C3 tukee mauste-/yrttihavainnetta. Uusi assetID/SHA on tarkistettu itsenäisesti. Hylätty e12-castries-O2-cdc34e8c08/SHA3a88bfb84ce5cc747043147e411a6d65aca9d5f613b60947e24393d7364f44a7 säilyy omana historiarivinään."
+            },
+            "visualInspection": {
+              "tool": "view_image",
+              "detail": "original",
+              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/castries/assets/e12-castries-O2-8d09d668af/original.png",
+              "inspectedBy": "qa-e12",
+              "inspectedAt": "2026-10-13T13:43:56Z",
+              "observations": "Vaalealla aluslautasella ruskea jauhemaustekasa, kaksi erillistä kiertyvää kanelinkuorta ja pieni vihreä yrtti lehtineen ja leikatun varren kanssa. Jauheessa vaihtelevia hienoja jyviä ja murusia, epäsäännöllinen reuna; kuorissa karhea pinta ja epätasaiset kerrosreunat. Lehdet kiinnittyvät samaan varteen ja suonet haarautuvat. Pippureita tai toistuvia kennopalloja ei ole. Ei tekstiä, logoja, ihmisiä, torirakennusta tai kehystä."
+            },
+            "otherReviewerVerdicts": [],
+            "openConflict": false,
+            "ownershipMarker": "qa-handoff-kuvitus-3.json"
+          },
+          "qaReason": "Uusi O2-versio korjaa hylätyn kuvan pintatoiston. Jauhemausteen satunnainen mururakenne, kanelinkuorien kerrokset ja yrtin lehtisuonet ovat luonnollisia. Aihe vastaa opastekstin mausteita, eikä kuvateksti väitä nimettyä torikojuinventaarioa. SHA ja1536×1024mitat täsmäävät."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva Castriesin opastekstin mauste- ja yrttiaiheesta.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/castries/illustration-qa-extra.json",
+        "fileSHA256": "ded79ed42e06412aeeb5edcfaadde6bb7d98b2c5690c0fe910678be7739ae049",
+        "item": {
+          "slot": "O2",
+          "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[1].kuva",
+          "assetID": "e12-castries-O2-8d09d668af",
+          "sha256": "f0cab4e66416dfddfee459cf9f52246e48789f9afc0082c6ebc76042a62a7351",
+          "verdict": "accepted",
+          "reason": "Uusi O2-versio korjaa hylätyn kuvan pintatoiston. Jauhemausteen satunnainen mururakenne, kanelinkuorien kerrokset ja yrtin lehtisuonet ovat luonnollisia. Aihe vastaa opastekstin mausteita, eikä kuvateksti väitä nimettyä torikojuinventaarioa. SHA ja1536×1024mitat täsmäävät.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/castries/assets/e12-castries-O2-8d09d668af/original.png",
+            "nativeSHA256": "f0cab4e66416dfddfee459cf9f52246e48789f9afc0082c6ebc76042a62a7351",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "nativeAspectRatio": 1.5,
+            "format": "PNG",
+            "pngChunks": [
+              "IHDR",
+              "caBX",
+              "IDAT",
+              "IEND"
+            ],
+            "manifestMatch": true,
+            "captionFi": "Havainnekuva Castriesin opastekstin mauste- ja yrttiaiheesta.",
+            "sourceEvidence": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/castries/sisalto.json",
+              "contentSHA256": "e5b0612495f534dceb34a7e5cfa90989717b0ab7460572daa1144dab27e7391c",
+              "sourceText": "Jeremie Streetin torilla voi tutustua kasviksiin, mausteisiin ja käsitöihin. Viereinen Vendor’s Arcade täydentää tarjontaa ruokapaikoilla ja käsityömyynnillä. Derek Walcottin aukio on keskustan puistoaukio, jonka laidalla ovat katedraali ja keskuskirjasto. Aukion aikaisemmat nimet Place d’Armes ja Columbus Square muistuttavat kaupungin eri vaiheista.",
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/castries/faktapohja.md",
+              "originalSources": [
+                "https://en.wikipedia.org/wiki/Castries_Market"
+              ],
+              "ccRelease": {},
+              "generationAuthorization": {
+                "rule": "OHJEET: turvallinen yleishavainnollistus ilman CC-odotusta",
+                "sharedReservationRecord": "/Volumes/T7 4TB/ChatGPT-Codex-active/coordination/paakaupungit-claims/08391cff28146b17/e12/castries/O2/owner.json",
+                "ccReleaseRequired": false,
+                "scope": "lähdeperustainen turvallinen avoin mixed; ei PHOTO/C1-C3 tai nimetty kaupunkiasettelu"
+              },
+              "sourceTopicAudit": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/source-scout/continuation-20261013/safe-topic-production-priorities.json",
+              "sourceTopicAuditSHA256": "b5fd12034028af4a090b68a5ac0644b7a6d737a177b35b838ab6b3974c772dc0",
+              "auditContentSHA256": "e5b0612495f534dceb34a7e5cfa90989717b0ab7460572daa1144dab27e7391c",
+              "auditTargetContext": "Tori ja runoilijan aukio Jeremie Streetin torilla voi tutustua kasviksiin, mausteisiin ja käsitöihin. Viereinen Vendor’s Arcade täydentää tarjontaa ruokapaikoilla ja käsityömyynnillä. Derek Walcottin aukio on keskustan puistoaukio, jonka laidalla ovat katedraali ja keskuskirjasto. Aukion aikaisemmat nimet Place d’Armes ja Columbus Square muistuttavat kaupungin eri vaiheista.",
+              "productionAuthorization": "13.10.2026 source-thread user instruction: generate all own job20 rows now, live target/atomic claim first; overrides waiting_cc_or_safe_reference and audit productionAllowedByThisAudit=false only for these documented ordinary subjects."
+            },
+            "rightsEvidence": "Tavallinen ruoka/raaka-aine tai luonnonmateriaali, ei nimetyn paikan, rakennuksen, suojatun taideteoksen tai historiallisen yksilön rekonstruktio. Uusi itsenäinen havainne, ei O4-tiedoston tai muun aiemman kuvan uudelleenkäyttö.",
+            "content": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/castries/sisalto.json",
+              "contentSHA256": "e5b0612495f534dceb34a7e5cfa90989717b0ab7460572daa1144dab27e7391c",
+              "targetObjectExists": true,
+              "targetContainer": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[1]",
+              "targetText": {
+                "otsikko": "Tori ja runoilijan aukio",
+                "teksti": "Jeremie Streetin torilla voi tutustua kasviksiin, mausteisiin ja käsitöihin. Viereinen Vendor’s Arcade täydentää tarjontaa ruokapaikoilla ja käsityömyynnillä. Derek Walcottin aukio on keskustan puistoaukio, jonka laidalla ovat katedraali ja keskuskirjasto. Aukion aikaisemmat nimet Place d’Armes ja Columbus Square muistuttavat kaupungin eri vaiheista.",
+                "kuva": {
+                  "tiedosto": "",
+                  "lyhyt": "",
+                  "selite": "",
+                  "lahde": ""
+                }
+              },
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/castries/faktapohja.md",
+              "factSheetSHA256": "843decf98982de5311ae5c2f8f5ca9688c3d8a48e87445f3b17c3fda7618c6a8",
+              "factAssessment": "Nykyinen O2-jakso Tori ja runoilijan aukio nimeää mausteet; faktapohja rivi49/C2–C3 tukee mauste-/yrttihavainnetta. Uusi assetID/SHA on tarkistettu itsenäisesti. Hylätty e12-castries-O2-cdc34e8c08/SHA3a88bfb84ce5cc747043147e411a6d65aca9d5f613b60947e24393d7364f44a7 säilyy omana historiarivinään."
+            },
+            "visualInspection": {
+              "tool": "view_image",
+              "detail": "original",
+              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/castries/assets/e12-castries-O2-8d09d668af/original.png",
+              "inspectedBy": "qa-e12",
+              "inspectedAt": "2026-10-13T13:43:56Z",
+              "observations": "Vaalealla aluslautasella ruskea jauhemaustekasa, kaksi erillistä kiertyvää kanelinkuorta ja pieni vihreä yrtti lehtineen ja leikatun varren kanssa. Jauheessa vaihtelevia hienoja jyviä ja murusia, epäsäännöllinen reuna; kuorissa karhea pinta ja epätasaiset kerrosreunat. Lehdet kiinnittyvät samaan varteen ja suonet haarautuvat. Pippureita tai toistuvia kennopalloja ei ole. Ei tekstiä, logoja, ihmisiä, torirakennusta tai kehystä."
+            },
+            "otherReviewerVerdicts": [],
+            "openConflict": false,
+            "ownershipMarker": "qa-handoff-kuvitus-3.json"
+          },
+          "reviewedAt": "2026-10-13T13:43:56.418920+00:00",
+          "reviewerGroup": "qa-e12"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/castries/qa.json",
+            "sha256": "9eeb8e08219085b3aa4559ef33fc53c012106d8c6e4942f50ffa54e5c4ac72b2"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/castries/illustration-qa-extra.json",
+            "sha256": "ded79ed42e06412aeeb5edcfaadde6bb7d98b2c5690c0fe910678be7739ae049"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/castries/e12-castries-O2-8d09d668af-f0cab4e66416.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/castries/e12-castries-O2-8d09d668af-f0cab4e66416.png?t=bb962e10b9b52f7e",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/castries/e12-castries-O2-8d09d668af-f0cab4e66416.png",
+        "sha256": "bb962e10b9b52f7e663619de82989e7226a64ebf7286b806e4838cd543334dcc",
+        "bytes": 2290623,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e12-castries-O2-8d09d668af",
+        "nativeSHA256": "f0cab4e66416dfddfee459cf9f52246e48789f9afc0082c6ebc76042a62a7351",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e12/castries/e12-castries-O2-8d09d668af-f0cab4e66416.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e12",
+        "city": "castries",
+        "slot": "O2",
+        "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[1].kuva",
+        "verifiedAt": "2026-10-13T13:44:59.691049+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e12/castries/e12-castries-O2-8d09d668af-f0cab4e66416.png",
+        "sha256": "bb962e10b9b52f7e663619de82989e7226a64ebf7286b806e4838cd543334dcc",
+        "bytes": 2290623,
+        "SHAReadAt": "2026-10-13T13:43:59.907208+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "f0cab4e66416dfddfee459cf9f52246e48789f9afc0082c6ebc76042a62a7351",
+        "rgbPixelSHA256": "3b20bff7e55ce7965c63b1e8ef97a916adc28293abda5e31bade5639dae95b02",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "be20029c24f7e599af388976450f7efbb53117352c7843c63495ce0fc5eed900",
+      "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+      "contextAfterSHA256": "bf958290498f05d5412b1f37ea960e28ad68e95e80ea8683016684a36c6420f4",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e12",
@@ -1355,7 +1686,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/castries/qa.json",
-        "fileSHA256": "6d0e44d035008f2d8c23a7f23c0be4f5525f33366256195807b4b87f1c5f81b1",
+        "fileSHA256": "9eeb8e08219085b3aa4559ef33fc53c012106d8c6e4942f50ffa54e5c4ac72b2",
         "item": {
           "slot": "PHOTO",
           "targetJsonPath": "$.valokuva",
@@ -1408,11 +1739,11 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/castries/qa.json",
-            "sha256": "6d0e44d035008f2d8c23a7f23c0be4f5525f33366256195807b4b87f1c5f81b1"
+            "sha256": "9eeb8e08219085b3aa4559ef33fc53c012106d8c6e4942f50ffa54e5c4ac72b2"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/castries/illustration-qa-extra.json",
-            "sha256": "668ce214c2e04188c6697330beefe8680ab72329e0abc35ddb8cb6254f3863fb"
+            "sha256": "ded79ed42e06412aeeb5edcfaadde6bb7d98b2c5690c0fe910678be7739ae049"
           }
         ]
       },
@@ -1485,9 +1816,11 @@
         "vuosi": "2012"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "e5b0612495f534dceb34a7e5cfa90989717b0ab7460572daa1144dab27e7391c",
+      "sourceContentAfterSHA256": "be20029c24f7e599af388976450f7efbb53117352c7843c63495ce0fc5eed900",
       "targetAfterSHA256": "baa550719c9abb41f43ac625e3d29b049ee8b7d1f7506d1415b098d9debb8124",
-      "contextAfterSHA256": "baa550719c9abb41f43ac625e3d29b049ee8b7d1f7506d1415b098d9debb8124"
+      "contextAfterSHA256": "baa550719c9abb41f43ac625e3d29b049ee8b7d1f7506d1415b098d9debb8124",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e12",
@@ -1635,7 +1968,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/castries/qa.json",
-        "fileSHA256": "6d0e44d035008f2d8c23a7f23c0be4f5525f33366256195807b4b87f1c5f81b1",
+        "fileSHA256": "9eeb8e08219085b3aa4559ef33fc53c012106d8c6e4942f50ffa54e5c4ac72b2",
         "item": {
           "slot": "C1",
           "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
@@ -1705,11 +2038,11 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/castries/qa.json",
-            "sha256": "6d0e44d035008f2d8c23a7f23c0be4f5525f33366256195807b4b87f1c5f81b1"
+            "sha256": "9eeb8e08219085b3aa4559ef33fc53c012106d8c6e4942f50ffa54e5c4ac72b2"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/castries/illustration-qa-extra.json",
-            "sha256": "668ce214c2e04188c6697330beefe8680ab72329e0abc35ddb8cb6254f3863fb"
+            "sha256": "ded79ed42e06412aeeb5edcfaadde6bb7d98b2c5690c0fe910678be7739ae049"
           }
         ]
       },
@@ -1780,12 +2113,332 @@
         "tiedosto": "CastriesStLucia.JPG"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "e5b0612495f534dceb34a7e5cfa90989717b0ab7460572daa1144dab27e7391c",
+      "sourceContentAfterSHA256": "be20029c24f7e599af388976450f7efbb53117352c7843c63495ce0fc5eed900",
       "targetAfterSHA256": "6c020ffae7be1f8a87ff6ae48ef8e439b0ee3d0ee2a4ec15528f812a7018ef44",
-      "contextAfterSHA256": "6c020ffae7be1f8a87ff6ae48ef8e439b0ee3d0ee2a4ec15528f812a7018ef44"
+      "contextAfterSHA256": "6c020ffae7be1f8a87ff6ae48ef8e439b0ee3d0ee2a4ec15528f812a7018ef44",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+    },
+    {
+      "era": "e12",
+      "city": "castries",
+      "slot": "C2",
+      "type": "commons",
+      "assetID": "capital-cc-e12-castries-c2-1f94e8f705bb0483",
+      "galleryImageID": "capital-cc-e12-castries-c2-1f94e8f705bb0483",
+      "commonsFile": "View of Castries Saint Lucia Day248bdriveb.jpg",
+      "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[1]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "kansikuvat",
+        1
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/castries/c2-1f94e8f705bb04837817.jpg",
+        "suora": true,
+        "lahde": "Chensiyuan, Wikimedia Commons (CC BY-SA 3.0)",
+        "selite": "Castriesin sataman, kaupunkikortteleiden ja rinteiden yleisnäkymä.",
+        "lyhyt": "Castriesin sataman, kaupunkikortteleiden ja rinteiden yleisnäkymä.",
+        "tiedosto": "View of Castries Saint Lucia Day248bdriveb.jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Chensiyuan, Wikimedia Commons (CC BY-SA 3.0)",
+        "selite": "Castriesin sataman, kaupunkikortteleiden ja rinteiden yleisnäkymä.",
+        "lyhyt": "Castriesin sataman, kaupunkikortteleiden ja rinteiden yleisnäkymä.",
+        "tiedosto": "View of Castries Saint Lucia Day248bdriveb.jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/castries/c2-1f94e8f705bb04837817.jpg",
+        "suora": true,
+        "lahde": "Chensiyuan, Wikimedia Commons (CC BY-SA 3.0)",
+        "selite": "Castriesin sataman, kaupunkikortteleiden ja rinteiden yleisnäkymä.",
+        "lyhyt": "Castriesin sataman, kaupunkikortteleiden ja rinteiden yleisnäkymä.",
+        "tiedosto": "View of Castries Saint Lucia Day248bdriveb.jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "1f94e8f705bb0483781711b1cab31ba6207fe1836ac8c82051e19d50a02ed0e2",
+      "exportSHA256": "1f94e8f705bb0483781711b1cab31ba6207fe1836ac8c82051e19d50a02ed0e2",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/castries/c2-1f94e8f705bb04837817.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/castries/c2-1f94e8f705bb04837817.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/castries/cc-gap-evidence/4796651fc9dd.original.jpg",
+      "dimensions": [
+        1280,
+        639
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/castries/sisalto.json",
+      "sourceContentSHA256": "e5b0612495f534dceb34a7e5cfa90989717b0ab7460572daa1144dab27e7391c",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "subjectTitle": "Castries",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Chensiyuan",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:View_of_Castries_Saint_Lucia_Day248bdriveb.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a5/View_of_Castries_Saint_Lucia_Day248bdriveb.jpg",
+        "rightsEvidence": {
+          "selection": "Chensiyuan on valokuvan nimenomainen copyright-holder ja Attribution-krediitti; lähdesivunCC BY-SA3.0Unported ja tarkka lisenssilinkki varmennettu, JoaoXavier on siirtäjä. Lähteen otsikko/Description yksilöiCastriesin. Kokonainen laaja1280×639 kuva näyttää sataman, kaupungin, merenrannan ja mäkisen luonnon asettelun. Rakennukset pieninä hajautuneina kokonaisuutena, ei yhden nimetyn omaperäisen nykyteoksen reproduktiopääaihetta tai erillistä taideteosta. Ei blanket-PD/FOP-väitettä tai yksittäisen rakennuksen eristysrajauslupaa. MorneFortune-kamerapaikkaa ei väitetä; aikaisempi käyttöviitteestä päätelty paikkatulkinta on peruttu. EXIF Date and time of data generation6.5.2006 säilyy erillisenä metadatatietona, captureDate ei varmennettu. Ei tuoreus-/palveluväitettä.",
+          "QA": {
+            "inputManifest": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/castries/cc-gap-selection.json",
+            "producerCandidateMetadataSHA256": "8646ac8a225f64b391325e4f6314126691d010bbbc84be4a8e5e5f94c12464ec",
+            "reviewer": "job-25 independent-image-QA",
+            "reviewedAt": "2026-10-13T13:47:10.104679+00:00",
+            "visualTool": "view_image",
+            "visualDetail": "original",
+            "localOriginal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/castries/cc-gap-evidence/4796651fc9dd.original.jpg",
+            "actualWidth": 1280,
+            "actualHeight": 639,
+            "actualFormat": "JPEG",
+            "nativePixelWidth": 1280,
+            "nativePixelHeight": 639,
+            "exifOrientation": 1,
+            "dimensionsConvention": "actualWidth/Height are correctly oriented display dimensions; native stored pixel dimensions are separately recorded",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:View_of_Castries_Saint_Lucia_Day248bdriveb.jpg",
+            "savedSourcePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/castries/cc-gap-evidence/4796651fc9dd.source.html",
+            "savedSourceSHA256": "2c84de4e234b916cd9e6a83be7b8ff5f8a45ecc96af17aeddbfc7244922241cf",
+            "authorVerified": "Chensiyuan",
+            "authorField": "Explicit original copyright-holder declaration and Attribution Chensiyuan, independently read; not uploader inference",
+            "licenseVerified": "CC BY-SA 3.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+            "captureDate": null,
+            "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/castries/sisalto.json",
+            "sourceContentSHA256": "e5b0612495f534dceb34a7e5cfa90989717b0ab7460572daa1144dab27e7391c",
+            "captionFi": "Castriesin sataman, kaupunkikortteleiden ja rinteiden yleisnäkymä.",
+            "depictedWorkLayer": "Aiemmin itse katsottu laaja hajautunut pieni kaupunkirakenne, meri, rinteet ja toiminnallinen satamaliikenne; ei eristettyä nimettyä suojattua nykyteosta tai erillistä taideteosta. Sama nativeSHA säilyy. Ei maan yleistä FOP-/PD-väitettä. Kuvauspaikan tarkka Morne Fortune -väite poistettu, ei uusia teosvapauksia oletettu.",
+            "duplicateInCity": false,
+            "sourceRevision": 449893212,
+            "dateEvidence": {
+              "type": "EXIFDateTimeOriginal",
+              "value": "11:20,6May2006",
+              "exactCaptureDateConfirmed": false
+            },
+            "placeEvidenceVerified": "Description View of Castries, capital town of Saint Lucia. Actual CategoryCastries; Morne Fortune is a file-usage entry.",
+            "visualReviewedAt": "2026-10-12T20:47:42.841182+00:00",
+            "candidateMetadataSHA256": "8646ac8a225f64b391325e4f6314126691d010bbbc84be4a8e5e5f94c12464ec",
+            "metadataRecheck": {
+              "checkedAt": "2026-10-13T13:47:10.104679+00:00",
+              "previousVerdict": "blocked",
+              "nativeSHA256Verified": "1f94e8f705bb0483781711b1cab31ba6207fe1836ac8c82051e19d50a02ed0e2",
+              "savedSourceSHA256Verified": "2c84de4e234b916cd9e6a83be7b8ff5f8a45ecc96af17aeddbfc7244922241cf",
+              "captionVerified": "Castriesin sataman, kaupunkikortteleiden ja rinteiden yleisnäkymä.",
+              "preciseCameraLocationNotClaimed": true,
+              "captureDateNotConfirmed": true,
+              "personalOriginalVisualInspectionPreserved": true,
+              "newImageOrNewVisualInspectionClaimed": false
+            }
+          },
+          "qaReason": "Aiemmin itse alkuperäisistä pikseleistä katsottu1280×639 laaja Castriesin sataman, kaupunkikortteleiden, merenrannan ja rinteiden näkymä. Sama natiivi/SHA ja Commons-lähdetavut varmennettu uudelleen. Korjattu neutraali kuvateksti vastaa kuvaa ja Descriptionia eikä väitä Morne Fortune -kamerapaikkaa tai varmennettua kuvausajankohtaa. Tekijä Chensiyuan ja CC BY-SA3.0 luettu alkuperäisestä nimenomaisesta copyright-holder/Attribution-lausumasta. Aiemmat kasvojen, kuvalaadun, lisättyjen tekstien ja teoskerroksen omat tarkistukset säilyvät; pelkkä kuvatekstin este poistui."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Castriesin sataman, kaupunkikortteleiden ja rinteiden yleisnäkymä.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/castries/qa.json",
+        "fileSHA256": "9eeb8e08219085b3aa4559ef33fc53c012106d8c6e4942f50ffa54e5c4ac72b2",
+        "item": {
+          "slot": "C2",
+          "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[1]",
+          "commonsFile": "View of Castries Saint Lucia Day248bdriveb.jpg",
+          "sha256": "1f94e8f705bb0483781711b1cab31ba6207fe1836ac8c82051e19d50a02ed0e2",
+          "verdict": "accepted",
+          "reason": "Aiemmin itse alkuperäisistä pikseleistä katsottu1280×639 laaja Castriesin sataman, kaupunkikortteleiden, merenrannan ja rinteiden näkymä. Sama natiivi/SHA ja Commons-lähdetavut varmennettu uudelleen. Korjattu neutraali kuvateksti vastaa kuvaa ja Descriptionia eikä väitä Morne Fortune -kamerapaikkaa tai varmennettua kuvausajankohtaa. Tekijä Chensiyuan ja CC BY-SA3.0 luettu alkuperäisestä nimenomaisesta copyright-holder/Attribution-lausumasta. Aiemmat kasvojen, kuvalaadun, lisättyjen tekstien ja teoskerroksen omat tarkistukset säilyvät; pelkkä kuvatekstin este poistui.",
+          "evidence": {
+            "inputManifest": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/castries/cc-gap-selection.json",
+            "producerCandidateMetadataSHA256": "8646ac8a225f64b391325e4f6314126691d010bbbc84be4a8e5e5f94c12464ec",
+            "reviewer": "job-25 independent-image-QA",
+            "reviewedAt": "2026-10-13T13:47:10.104679+00:00",
+            "visualTool": "view_image",
+            "visualDetail": "original",
+            "localOriginal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/castries/cc-gap-evidence/4796651fc9dd.original.jpg",
+            "actualWidth": 1280,
+            "actualHeight": 639,
+            "actualFormat": "JPEG",
+            "nativePixelWidth": 1280,
+            "nativePixelHeight": 639,
+            "exifOrientation": 1,
+            "dimensionsConvention": "actualWidth/Height are correctly oriented display dimensions; native stored pixel dimensions are separately recorded",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:View_of_Castries_Saint_Lucia_Day248bdriveb.jpg",
+            "savedSourcePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/castries/cc-gap-evidence/4796651fc9dd.source.html",
+            "savedSourceSHA256": "2c84de4e234b916cd9e6a83be7b8ff5f8a45ecc96af17aeddbfc7244922241cf",
+            "authorVerified": "Chensiyuan",
+            "authorField": "Explicit original copyright-holder declaration and Attribution Chensiyuan, independently read; not uploader inference",
+            "licenseVerified": "CC BY-SA 3.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+            "captureDate": null,
+            "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/castries/sisalto.json",
+            "sourceContentSHA256": "e5b0612495f534dceb34a7e5cfa90989717b0ab7460572daa1144dab27e7391c",
+            "captionFi": "Castriesin sataman, kaupunkikortteleiden ja rinteiden yleisnäkymä.",
+            "depictedWorkLayer": "Aiemmin itse katsottu laaja hajautunut pieni kaupunkirakenne, meri, rinteet ja toiminnallinen satamaliikenne; ei eristettyä nimettyä suojattua nykyteosta tai erillistä taideteosta. Sama nativeSHA säilyy. Ei maan yleistä FOP-/PD-väitettä. Kuvauspaikan tarkka Morne Fortune -väite poistettu, ei uusia teosvapauksia oletettu.",
+            "duplicateInCity": false,
+            "sourceRevision": 449893212,
+            "dateEvidence": {
+              "type": "EXIFDateTimeOriginal",
+              "value": "11:20,6May2006",
+              "exactCaptureDateConfirmed": false
+            },
+            "placeEvidenceVerified": "Description View of Castries, capital town of Saint Lucia. Actual CategoryCastries; Morne Fortune is a file-usage entry.",
+            "visualReviewedAt": "2026-10-12T20:47:42.841182+00:00",
+            "candidateMetadataSHA256": "8646ac8a225f64b391325e4f6314126691d010bbbc84be4a8e5e5f94c12464ec",
+            "metadataRecheck": {
+              "checkedAt": "2026-10-13T13:47:10.104679+00:00",
+              "previousVerdict": "blocked",
+              "nativeSHA256Verified": "1f94e8f705bb0483781711b1cab31ba6207fe1836ac8c82051e19d50a02ed0e2",
+              "savedSourceSHA256Verified": "2c84de4e234b916cd9e6a83be7b8ff5f8a45ecc96af17aeddbfc7244922241cf",
+              "captionVerified": "Castriesin sataman, kaupunkikortteleiden ja rinteiden yleisnäkymä.",
+              "preciseCameraLocationNotClaimed": true,
+              "captureDateNotConfirmed": true,
+              "personalOriginalVisualInspectionPreserved": true,
+              "newImageOrNewVisualInspectionClaimed": false
+            }
+          },
+          "reviewHistory": [
+            {
+              "changedAt": "2026-10-13T13:47:10.104679+00:00",
+              "change": "Neutral caption removes unsupported precise camera-location claim; exact native and source bytes unchanged.",
+              "verdict": "blocked",
+              "reason": "Alkuperäinen1280×639 näyttää laajasti oikean Castriesin sataman, kaupungin ja rinteet. Tumma/pehmeä yksityiskohta kirjataan, mutta asettelu luettavissa ja vähimmäisleveys täyttyy. Ei kasvoja, lisättyä tekstiä, vesileimaa tai kehystä. Description todistaaCastriesin ja nimenomainen copyright-holder-/Attribution-lausuma Chensiyuanin. Selitteen kuvauspaikka Morne Fortune ei ilmene Descriptionista tai varsinaisesta kategoriasta: kuvasivulla se on File usage/Category-sivun käyttöviite. Se ei yksin todista kamerapaikkaa. Korjaa selite yleisnäkymäksi tai toimita kuvauspaikan lähde.",
+              "evidence": {
+                "inputManifest": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/castries/cc-gap-selection.json",
+                "producerCandidateMetadataSHA256": "b4c3fdcb950cdf9ad34cef74c75480a5e3b1c49cef2a7b1732df83f2ca1c2218",
+                "reviewer": "job-25 independent-image-QA",
+                "reviewedAt": "2026-10-12T20:47:42.841182+00:00",
+                "visualTool": "view_image",
+                "visualDetail": "original",
+                "localOriginal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/castries/cc-gap-evidence/4796651fc9dd.original.jpg",
+                "actualWidth": 1280,
+                "actualHeight": 639,
+                "actualFormat": "JPEG",
+                "nativePixelWidth": 1280,
+                "nativePixelHeight": 639,
+                "exifOrientation": 1,
+                "dimensionsConvention": "actualWidth/Height are correctly oriented display dimensions; native stored pixel dimensions are separately recorded",
+                "sourcePage": "https://commons.wikimedia.org/wiki/File:View_of_Castries_Saint_Lucia_Day248bdriveb.jpg",
+                "savedSourcePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/castries/cc-gap-evidence/4796651fc9dd.source.html",
+                "savedSourceSHA256": "2c84de4e234b916cd9e6a83be7b8ff5f8a45ecc96af17aeddbfc7244922241cf",
+                "authorVerified": "Chensiyuan",
+                "authorField": "Explicit original copyright-holder declaration and Attribution Chensiyuan, independently read; not uploader inference",
+                "licenseVerified": "CC BY-SA 3.0",
+                "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+                "captureDate": null,
+                "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/castries/sisalto.json",
+                "sourceContentSHA256": "e5b0612495f534dceb34a7e5cfa90989717b0ab7460572daa1144dab27e7391c",
+                "captionFi": "Castriesin satama ja kaupunkikorttelit Morne Fortune -kukkulalta nähtynä.",
+                "depictedWorkLayer": "Chensiyuan at English Wikipedia on alkuperäisen lisenssilausuman copyright-holder, jaCC BY-SA3.0Unported/Attribution Chensiyuan luettu itse. JoaoXavier on siirtäjä, ei arvattu kuvaaja. ValitaanCC BY-SA3.0; GFDL-disclaimer-varaus ei korvaa valittuaCC-lisenssiä. Exif6.5.2006 säilyy varauksellisena metadatatietona. Teoskerros: laaja hajautunut pieni kaupunkirakenne, meri, rinteet ja toiminnallinen satamaliikenne, ei eristettyä nimettyä suojattua nykyteosta. Ei maan yleistäFOP-/PD-väitettä. Natiivikuvan muut tarkistukset hyväksyttävät, pidossa selitteen täsmäpaikkavarmennus.",
+                "duplicateInCity": false,
+                "sourceRevision": 449893212,
+                "dateEvidence": {
+                  "type": "EXIFDateTimeOriginal",
+                  "value": "11:20,6May2006",
+                  "exactCaptureDateConfirmed": false
+                },
+                "placeEvidenceVerified": "Description View of Castries, capital town of Saint Lucia. Actual CategoryCastries; Morne Fortune is a file-usage entry.",
+                "requiredCorrection": "Selitteeksi esim. Castriesin satama ja kaupunkikorttelit yleisnäkymässä. Poista varmennettu kuvauspaikka Morne Fortune -väite tai toimita alkuperäinen kamerapaikkalähde. Sama natiivikuva/SHA1f94e8f705bb0483781711b1cab31ba6207fe1836ac8c82051e19d50a02ed0e2 säilyy; ei uutta generointia."
+              }
+            }
+          ]
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/castries/qa.json",
+            "sha256": "9eeb8e08219085b3aa4559ef33fc53c012106d8c6e4942f50ffa54e5c4ac72b2"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/castries/illustration-qa-extra.json",
+            "sha256": "ded79ed42e06412aeeb5edcfaadde6bb7d98b2c5690c0fe910678be7739ae049"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e12",
+        "city": "castries",
+        "slot": "C2",
+        "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[1]",
+        "commonsFile": "View of Castries Saint Lucia Day248bdriveb.jpg",
+        "sha256": "1f94e8f705bb0483781711b1cab31ba6207fe1836ac8c82051e19d50a02ed0e2",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:View_of_Castries_Saint_Lucia_Day248bdriveb.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a5/View_of_Castries_Saint_Lucia_Day248bdriveb.jpg",
+        "author": "Chensiyuan",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+        "width": 1280,
+        "height": 639,
+        "originalSHA256": "1f94e8f705bb0483781711b1cab31ba6207fe1836ac8c82051e19d50a02ed0e2",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/castries/c2-1f94e8f705bb04837817.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/castries/c2-1f94e8f705bb04837817.jpg",
+        "bytes": 332843,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-13T13:48:03.093091+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Chensiyuan, Wikimedia Commons (CC BY-SA 3.0)",
+        "selite": "Castriesin sataman, kaupunkikortteleiden ja rinteiden yleisnäkymä.",
+        "lyhyt": "Castriesin sataman, kaupunkikortteleiden ja rinteiden yleisnäkymä.",
+        "tiedosto": "View of Castries Saint Lucia Day248bdriveb.jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "be20029c24f7e599af388976450f7efbb53117352c7843c63495ce0fc5eed900",
+      "targetAfterSHA256": "d1cd4a879cc4bcec1c2d533b8a4d0930b4dfdd473beb2638ac91e4236a1f2dfc",
+      "contextAfterSHA256": "d1cd4a879cc4bcec1c2d533b8a4d0930b4dfdd473beb2638ac91e4236a1f2dfc",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     }
   ],
   "runtimeIntegrationPending": true,
-  "ownerAcceptedNotImpliedByAuthorization": true,
-  "gameIntegrated": false
+  "ownerAcceptedNotImpliedByAuthorization": false,
+  "gameIntegrated": false,
+  "allAssetsExplicitlyOwnerApproved": true,
+  "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
 }

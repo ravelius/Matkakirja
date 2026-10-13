@@ -2,7 +2,7 @@
   "schemaVersion": "capital-city-role-assets/v1",
   "era": "e12",
   "city": "nassau",
-  "authorization": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+  "authorization": "hyväksyn kaikki tekemäsi kuvat. toimita ne claudelle. claudelta saat uusia ohjeita jatkoa varten",
   "sourceContentAfterSHA256": "9ee0363e287ef499d1c26c8ac5bc77a947c54e226ed1e58757fbe0b69d1a88de",
   "assets": [
     {
@@ -56,7 +56,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/nassau/sisalto.json",
-      "sourceContentSHA256": "836a23b7047697263a30d535db52048cb05e0ee77bc09253cb62d84b11edcb68",
+      "sourceContentSHA256": "9ee0363e287ef499d1c26c8ac5bc77a947c54e226ed1e58757fbe0b69d1a88de",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
         "semanticContextSHA256": "4dfad821d791c0785aedaa9e84722bdf282dcea98f29f177f6e8c55b9ce32d9c",
@@ -380,7 +380,7 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/nassau/illustration-qa-extra.json",
-            "sha256": "90a3935f9c49a641c384f0dc375b4266e0dd746d3a555336f208e0dcdd5e668d"
+            "sha256": "14f602e3cf939a641d73d3fb0bc4c2f1ef296c96e3dcd07700f6ad96950c7b4c"
           }
         ]
       },
@@ -465,7 +465,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "9ee0363e287ef499d1c26c8ac5bc77a947c54e226ed1e58757fbe0b69d1a88de",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "4dfad821d791c0785aedaa9e84722bdf282dcea98f29f177f6e8c55b9ce32d9c"
+      "contextAfterSHA256": "4dfad821d791c0785aedaa9e84722bdf282dcea98f29f177f6e8c55b9ce32d9c",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e12",
@@ -515,7 +517,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/nassau/sisalto.json",
-      "sourceContentSHA256": "836a23b7047697263a30d535db52048cb05e0ee77bc09253cb62d84b11edcb68",
+      "sourceContentSHA256": "9ee0363e287ef499d1c26c8ac5bc77a947c54e226ed1e58757fbe0b69d1a88de",
       "semanticSourceBind": {
         "targetBeforeSHA256": "0f28b2e98056d3f8112bfdaad789ef9205754af7b7243d1ea6474bc5da8a3359",
         "semanticContextSHA256": "0f28b2e98056d3f8112bfdaad789ef9205754af7b7243d1ea6474bc5da8a3359",
@@ -797,7 +799,7 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/nassau/illustration-qa-extra.json",
-            "sha256": "90a3935f9c49a641c384f0dc375b4266e0dd746d3a555336f208e0dcdd5e668d"
+            "sha256": "14f602e3cf939a641d73d3fb0bc4c2f1ef296c96e3dcd07700f6ad96950c7b4c"
           }
         ]
       },
@@ -882,7 +884,849 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "9ee0363e287ef499d1c26c8ac5bc77a947c54e226ed1e58757fbe0b69d1a88de",
       "targetAfterSHA256": "0f28b2e98056d3f8112bfdaad789ef9205754af7b7243d1ea6474bc5da8a3359",
-      "contextAfterSHA256": "0f28b2e98056d3f8112bfdaad789ef9205754af7b7243d1ea6474bc5da8a3359"
+      "contextAfterSHA256": "0f28b2e98056d3f8112bfdaad789ef9205754af7b7243d1ea6474bc5da8a3359",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+    },
+    {
+      "era": "e12",
+      "city": "nassau",
+      "slot": "TRAVELER",
+      "type": "illustration",
+      "assetID": "e12-nassau-TRAVELER-13bbb4a047",
+      "galleryImageID": "e12-nassau-TRAVELER-13bbb4a047",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "matkailijalle",
+        "kuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/nassau/e12-nassau-TRAVELER-13bbb4a047-a8f9731b78f3.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva Nassaun oppaassa mainituista conch fritters -paloista.",
+        "lyhyt": "Havainnekuva Nassaun oppaassa mainituista conch fritters -paloista."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/nassau/e12-nassau-TRAVELER-13bbb4a047-a8f9731b78f3.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva Nassaun oppaassa mainituista conch fritters -paloista.",
+        "lyhyt": "Havainnekuva Nassaun oppaassa mainituista conch fritters -paloista."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "a8f9731b78f37f8a98f3f521442e2af1f989db0cafa87d88260e2a65eb52e086",
+      "exportSHA256": "16b5a1e0cacf5950db2a0793db59a475df4420bce8b1ae96cd46c0cdfe4b5b10",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/nassau/e12-nassau-TRAVELER-13bbb4a047-a8f9731b78f3.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/nassau/e12-nassau-TRAVELER-13bbb4a047-a8f9731b78f3.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e12/nassau/e12-nassau-TRAVELER-13bbb4a047-a8f9731b78f3.png",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/nassau/sisalto.json",
+      "sourceContentSHA256": "9ee0363e287ef499d1c26c8ac5bc77a947c54e226ed1e58757fbe0b69d1a88de",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "29c31034b1a498de8bb7ea4eb9e7bb6f74043528bdc8b140db1135556637804e",
+        "subjectTitle": "Matkailijalle",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Tavallinen ruoka/raaka-aine tai luonnonmateriaali, ei nimetyn paikan, rakennuksen, suojatun taideteoksen tai historiallisen yksilön rekonstruktio. Uusi itsenäinen havainne, ei O4-tiedoston tai muun aiemman kuvan uudelleenkäyttö.",
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/nassau/assets/e12-nassau-TRAVELER-13bbb4a047/original.png",
+            "nativeSHA256": "a8f9731b78f37f8a98f3f521442e2af1f989db0cafa87d88260e2a65eb52e086",
+            "nativeWidth": 1024,
+            "nativeHeight": 1536,
+            "nativeAspectRatio": 0.6666666666666666,
+            "format": "PNG",
+            "pngChunks": [
+              "IHDR",
+              "caBX",
+              "IDAT",
+              "IEND"
+            ],
+            "manifestMatch": true,
+            "captionFi": "Havainnekuva Nassaun oppaassa mainituista conch fritters -paloista.",
+            "sourceEvidence": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/nassau/sisalto.json",
+              "contentSHA256": "9ee0363e287ef499d1c26c8ac5bc77a947c54e226ed1e58757fbe0b69d1a88de",
+              "sourceText": "{\"artikkeli\": {\"jaksot\": [{\"otsikko\": \"Perille ja liikkeelle\", \"teksti\": \"Lynden Pindlingin kansainvälinen lentoasema sijaitsee New Providencen länsiosassa. Keskustaan voi jatkaa taksilla; sovi hinta ennen lähtöä. Nassaun ja saaren paikallisliikenteessä kulkee jitney-pikkubusseja, joiden reitit kannattaa varmistaa kuljettajalta. Ne eivät liikennöi Paradise Islandille. Vanhan keskustan satamakortteleihin voi tutustua kävellen, kun taas Cable Beach ja muu saari vaativat oman siirtymänsä.\"}, {\"otsikko\": \"Satamakatu ja olkitori\", \"teksti\": \"Bay Streetin varrelta löytyvät keskustan kaupat ja Straw Market, olkitoriksi kutsuttu käsityö- ja matkamuistotori. Kadun läheisyydessä sijaitsevat myös Christ Church Cathedral ja Nassaun kirjasto. Potters Caylla Paradise Islandin sillan alla on kalatori ja ruokakojuja. Satamakortteleiden kävelyn voi siis yhdistää torikäyntiin, mutta Potters Cay on eri paikka kuin Bay Streetin olkitori.\"}, {\"otsikko\": \"Kalkkikiviportaat ja linnakkeet\", \"teksti\": \"Queen’s Staircase yhdistää kaupungin Fort Fincastlen kukkulaan. Portaiden historiaan kuuluu orjuutettujen ihmisten tekemä louhintatyö. Linnakkeelta avautuu näkymä Nassaun ja Paradise Islandin suuntaan; lännessä sijaitseva Fort Charlotte on toinen vanha satamaa valvonut linnoitus. Portaiden ja Fincastlen voi ottaa samaksi kävelykohteeksi. Charlotteen siirtyessä kaupungin satamarannan mittakaava avautuu toisesta suunnasta.\"}, {\"otsikko\": \"Mitä täällä syödään\", \"teksti\": \"Conch on merikotilo, jota tarjotaan esimerkiksi salaattina ja friteerattuina fritters-paloina. Potters Cayn kalatorin kojuissa valmistetaan näitä ruokia sekä muita bahamalaisia meren antimia. Keskustan ravintoloissa on myös kalaa ja paikallisia jälkiruokia. Jos kotilo ei ole entuudestaan tuttu ruoka, kysy valmistustavasta: conch salad ja conch fritters ovat samasta raaka-aineesta tehtyjä hyvin erilaisia annoksia.\"}, {\"otsikko\": \"Milloin kannattaa tulla\", \"teksti\": \"Nassau on lämmin ympäri vuoden, ja sateita on enemmän kesäkaudella kuin talvella. Joulu ja vuodenvaihde liittyvät Junkanoon suuriin katukulkueisiin, joten juhlan seuraaminen on erilainen matka kuin tavallinen rantapäivä. Varmista kulkueen ajankohta matkaa suunnitellessa. Päivän kävelyreittiin on hyvä yhdistää myös sisäkohde, kuten kirjasto, eikä rakentaa koko ohjelmaa yhden rantapäivän varaan.\"}], \"matkailu\": {\"hyvaTietaa\": [{\"otsikko\": \"Eri saaret\", \"teksti\": \"Nassau sijaitsee New Providencella, Paradise Island sataman toisella puolella.\"}, {\"otsikko\": \"Pikkubussin reitti\", \"teksti\": \"Jitney-pikkubussien reitit vaihtelevat; varmista määränpää kuljettajalta.\"}, {\"otsikko\": \"Hotellin sijainti\", \"teksti\": \"Paradise Island ja Cable Beach ovat eri majoitusalueita kuin sataman vanha keskusta.\"}], \"parasta\": [{\"mita\": \"Queen’s Staircase\", \"tahdet\": 3}, {\"mita\": \"Fort Fincastle\", \"tahdet\": 3}, {\"mita\": \"Fort Charlotte\", \"tahdet\": 2}, {\"mita\": \"Straw Market\", \"tahdet\": 2}, {\"mita\": \"Potters Cay\", \"tahdet\": 2}]}, \"nimi\": \"Matkailijan Nassau\", \"nosto\": \"Vanha keskusta ja hotellialueet ovat eri ympäristöjä. Nassaun mittakaava avautuu parhaiten, kun erotat New Providencen ja vastarannan Paradise Islandin.\", \"taitto\": \"opas\", \"teksti\": \"Kulje satamasta kivisten portaiden kautta kukkulalle ja jätä aikaa myös torille.\"}, \"kappale\": \"Vanhan Nassaun kävelykohteet alkavat Bay Streetin satamakortteleista. Olkitori tuo vastaan käsityöt, Kuningattaren portaat kalkkikivisen reitin kukkulalle. Fort Fincastlelta voi hahmottaa myös edustan Paradise Islandin. Kalatorin ruokakojuja löytyy Potters Caylta sillan alta. Hotellialueiden ja keskustan väliset siirtymät kannattaa suunnitella erikseen.\"}",
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/nassau/faktapohja.md",
+              "originalSources": [
+                "https://en.wikivoyage.org/wiki/Nassau"
+              ],
+              "ccRelease": null,
+              "generationAuthorization": {
+                "rule": "OHJEET: turvallinen yleishavainnollistus ilman CC-odotusta",
+                "sharedReservationRecord": "/Volumes/T7 4TB/ChatGPT-Codex-active/coordination/paakaupungit-claims/08391cff28146b17/e12/nassau/TRAVELER/owner.json",
+                "ccReleaseRequired": false,
+                "scope": "lähdeperustainen turvallinen avoin mixed; ei PHOTO/C1-C3 tai nimetty kaupunkiasettelu"
+              },
+              "sourceTopicAudit": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/source-scout/continuation-20261013/safe-topic-production-priorities.json",
+              "sourceTopicAuditSHA256": "b5fd12034028af4a090b68a5ac0644b7a6d737a177b35b838ab6b3974c772dc0",
+              "auditContentSHA256": "9ee0363e287ef499d1c26c8ac5bc77a947c54e226ed1e58757fbe0b69d1a88de",
+              "auditTargetContext": "Vanhan Nassaun kävelykohteet alkavat Bay Streetin satamakortteleista. Olkitori tuo vastaan käsityöt, Kuningattaren portaat kalkkikivisen reitin kukkulalle. Fort Fincastlelta voi hahmottaa myös edustan Paradise Islandin. Kalatorin ruokakojuja löytyy Potters Caylta sillan alta. Hotellialueiden ja keskustan väliset siirtymät kannattaa suunnitella erikseen. Matkailijan Nassau opas Kulje satamasta kivisten portaiden kautta kukkulalle ja jätä aikaa myös torille. Vanha keskusta ja hotellialueet ovat eri ympäristöjä. Nassaun mittakaava avautuu parhaiten, kun erotat New Providencen ja vastarannan Paradise Islandin. Perille ja liikkeelle Lynden Pindlingin kansainvälinen lentoasema sijaitsee New Providencen länsiosassa. Keskustaan voi jatkaa taksilla; sovi hinta ennen lähtöä. Nassaun ja saaren paikallisliikenteessä kulkee jitney-pikkubusseja, joiden reitit kannattaa varmistaa kuljettajalta. Ne eivät liikennöi Paradise Islandille. Vanhan keskustan satamakortteleihin voi tutustua kävellen, kun taas Cable Beach ja muu saari vaativat oman siirtymänsä. Satamakatu ja olkitori Bay Streetin varrelta löytyvät keskustan kaupat ja Straw Market, olkitoriksi kutsuttu käsityö- ja matkamuistotori. Kadun läheisyydessä sijaitsevat myös Christ Church Cathedral ja Nassaun kirjasto. Potters Caylla Paradise Islandin sillan alla on kalatori ja ruokakojuja. Satamakortteleiden kävelyn voi siis yhdistää torikäyntiin, mutta Potters Cay on eri paikka kuin Bay Streetin olkitori. Kalkkikiviportaat ja linnakkeet Queen’s Staircase yhdistää kaupungin Fort Fincastlen kukkulaan. Portaiden historiaan kuuluu orjuutettujen ihmisten tekemä louhintatyö. Linnakkeelta avautuu näkymä Nassaun ja Paradise Islandin suuntaan; lännessä sijaitseva Fort Charlotte on toinen vanha satamaa valvonut linnoitus. Portaiden ja Fincastlen voi ottaa samaksi kävelykohteeksi. Charlotteen siirtyessä kaupungin satamarannan mittakaava avautuu toisesta suunnasta. Mitä täällä syödään Conch on merikotilo, jota tarjotaan esimerkiksi salaattina ja friteerattuina fritters-paloina. Potters Cayn kalatorin kojuissa valmistetaan näitä ruokia sekä muita bahamalaisia meren antimia. Keskustan ravintoloissa on myös kalaa ja paikallisia jälkiruokia. Jos kotilo ei ole entuudestaan tuttu ruoka, kysy valmistustavasta: conch salad ja conch fritters ovat samasta raaka-aineesta tehtyjä hyvin erilaisia annoksia. Milloin kannattaa tulla Nassau on lämmin ympäri vuoden, ja sateita on enemmän kesäkaudella kuin talvella. Joulu ja vuodenvaihde liittyvät Junkanoon suuriin katukulkueisiin, joten juhlan seuraaminen on erilainen matka kuin tavallinen rantapäivä. Varmista kulkueen ajankohta matkaa suunnitellessa. Päivän kävelyreittiin on hyvä yhdistää myös sisäkohde, kuten kirjasto, eikä rakentaa koko ohjelmaa yhden rantapäivän varaan. Queen’s Staircase  Kiinteään kalkkikiveen louhittu kulkureitti kertoo linnakkeen lisäksi rakentajiensa työstä. Fort Fincastle  Kukkulan linnakkeelta voi hahmottaa kaupungin ja sen edustan saaren. Fort Charlotte  Vanha kalkkikivilinnake valvoo satamaa keskustan länsipuolella. Straw Market  Satamakadun torilla tutustuu bahamalaisiin käsitöihin ja matkamuistokauppaan. Potters Cay  Kalatorin ruokakojuissa conch tulee vastaan useassa valmistustavassa. Eri saaret Nassau sijaitsee New Providencella, Paradise Island sataman toisella puolella. Pikkubussin reitti Jitney-pikkubussien reitit vaihtelevat; varmista määränpää kuljettajalta. Hotellin sijainti Paradise Island ja Cable Beach ovat eri majoitusalueita kuin sataman vanha keskusta. Wikipedia",
+              "productionAuthorization": "13.10.2026 source-thread user instruction: generate all own job20 rows now, live target/atomic claim first; overrides waiting_cc_or_safe_reference and audit productionAllowedByThisAudit=false only for these documented ordinary subjects."
+            },
+            "rightsEvidence": "Tavallinen ruoka/raaka-aine tai luonnonmateriaali, ei nimetyn paikan, rakennuksen, suojatun taideteoksen tai historiallisen yksilön rekonstruktio. Uusi itsenäinen havainne, ei O4-tiedoston tai muun aiemman kuvan uudelleenkäyttö.",
+            "content": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/nassau/sisalto.json",
+              "contentSHA256": "9ee0363e287ef499d1c26c8ac5bc77a947c54e226ed1e58757fbe0b69d1a88de",
+              "targetObjectExists": true,
+              "targetContainer": "$.kaupunkilehti[0].matkailijalle",
+              "targetText": {
+                "kuva": {
+                  "tiedosto": "",
+                  "lyhyt": "",
+                  "selite": "",
+                  "lahde": ""
+                },
+                "kappale": "Vanhan Nassaun kävelykohteet alkavat Bay Streetin satamakortteleista. Olkitori tuo vastaan käsityöt, Kuningattaren portaat kalkkikivisen reitin kukkulalle. Fort Fincastlelta voi hahmottaa myös edustan Paradise Islandin. Kalatorin ruokakojuja löytyy Potters Caylta sillan alta. Hotellialueiden ja keskustan väliset siirtymät kannattaa suunnitella erikseen.",
+                "artikkeli": {
+                  "nimi": "Matkailijan Nassau",
+                  "taitto": "opas",
+                  "teksti": "Kulje satamasta kivisten portaiden kautta kukkulalle ja jätä aikaa myös torille.",
+                  "nosto": "Vanha keskusta ja hotellialueet ovat eri ympäristöjä. Nassaun mittakaava avautuu parhaiten, kun erotat New Providencen ja vastarannan Paradise Islandin.",
+                  "jaksot": [
+                    {
+                      "otsikko": "Perille ja liikkeelle",
+                      "teksti": "Lynden Pindlingin kansainvälinen lentoasema sijaitsee New Providencen länsiosassa. Keskustaan voi jatkaa taksilla; sovi hinta ennen lähtöä. Nassaun ja saaren paikallisliikenteessä kulkee jitney-pikkubusseja, joiden reitit kannattaa varmistaa kuljettajalta. Ne eivät liikennöi Paradise Islandille. Vanhan keskustan satamakortteleihin voi tutustua kävellen, kun taas Cable Beach ja muu saari vaativat oman siirtymänsä.",
+                      "kuva": {
+                        "tiedosto": "",
+                        "lyhyt": "",
+                        "selite": "",
+                        "lahde": ""
+                      }
+                    },
+                    {
+                      "otsikko": "Satamakatu ja olkitori",
+                      "teksti": "Bay Streetin varrelta löytyvät keskustan kaupat ja Straw Market, olkitoriksi kutsuttu käsityö- ja matkamuistotori. Kadun läheisyydessä sijaitsevat myös Christ Church Cathedral ja Nassaun kirjasto. Potters Caylla Paradise Islandin sillan alla on kalatori ja ruokakojuja. Satamakortteleiden kävelyn voi siis yhdistää torikäyntiin, mutta Potters Cay on eri paikka kuin Bay Streetin olkitori.",
+                      "kuva": {
+                        "tiedosto": "",
+                        "lyhyt": "",
+                        "selite": "",
+                        "lahde": ""
+                      }
+                    },
+                    {
+                      "otsikko": "Kalkkikiviportaat ja linnakkeet",
+                      "teksti": "Queen’s Staircase yhdistää kaupungin Fort Fincastlen kukkulaan. Portaiden historiaan kuuluu orjuutettujen ihmisten tekemä louhintatyö. Linnakkeelta avautuu näkymä Nassaun ja Paradise Islandin suuntaan; lännessä sijaitseva Fort Charlotte on toinen vanha satamaa valvonut linnoitus. Portaiden ja Fincastlen voi ottaa samaksi kävelykohteeksi. Charlotteen siirtyessä kaupungin satamarannan mittakaava avautuu toisesta suunnasta.",
+                      "kuva": {
+                        "tiedosto": "",
+                        "lyhyt": "",
+                        "selite": "",
+                        "lahde": ""
+                      }
+                    },
+                    {
+                      "otsikko": "Mitä täällä syödään",
+                      "teksti": "Conch on merikotilo, jota tarjotaan esimerkiksi salaattina ja friteerattuina fritters-paloina. Potters Cayn kalatorin kojuissa valmistetaan näitä ruokia sekä muita bahamalaisia meren antimia. Keskustan ravintoloissa on myös kalaa ja paikallisia jälkiruokia. Jos kotilo ei ole entuudestaan tuttu ruoka, kysy valmistustavasta: conch salad ja conch fritters ovat samasta raaka-aineesta tehtyjä hyvin erilaisia annoksia.",
+                      "kuva": {
+                        "tiedosto": "",
+                        "lyhyt": "",
+                        "selite": "",
+                        "lahde": ""
+                      }
+                    },
+                    {
+                      "otsikko": "Milloin kannattaa tulla",
+                      "teksti": "Nassau on lämmin ympäri vuoden, ja sateita on enemmän kesäkaudella kuin talvella. Joulu ja vuodenvaihde liittyvät Junkanoon suuriin katukulkueisiin, joten juhlan seuraaminen on erilainen matka kuin tavallinen rantapäivä. Varmista kulkueen ajankohta matkaa suunnitellessa. Päivän kävelyreittiin on hyvä yhdistää myös sisäkohde, kuten kirjasto, eikä rakentaa koko ohjelmaa yhden rantapäivän varaan.",
+                      "kuva": {
+                        "tiedosto": "",
+                        "lyhyt": "",
+                        "selite": "",
+                        "lahde": ""
+                      }
+                    }
+                  ],
+                  "matkailu": {
+                    "parasta": [
+                      {
+                        "mita": "Queen’s Staircase",
+                        "tahdet": 3,
+                        "selite": "Kiinteään kalkkikiveen louhittu kulkureitti kertoo linnakkeen lisäksi rakentajiensa työstä."
+                      },
+                      {
+                        "mita": "Fort Fincastle",
+                        "tahdet": 3,
+                        "selite": "Kukkulan linnakkeelta voi hahmottaa kaupungin ja sen edustan saaren."
+                      },
+                      {
+                        "mita": "Fort Charlotte",
+                        "tahdet": 2,
+                        "selite": "Vanha kalkkikivilinnake valvoo satamaa keskustan länsipuolella."
+                      },
+                      {
+                        "mita": "Straw Market",
+                        "tahdet": 2,
+                        "selite": "Satamakadun torilla tutustuu bahamalaisiin käsitöihin ja matkamuistokauppaan."
+                      },
+                      {
+                        "mita": "Potters Cay",
+                        "tahdet": 2,
+                        "selite": "Kalatorin ruokakojuissa conch tulee vastaan useassa valmistustavassa."
+                      }
+                    ],
+                    "hyvaTietaa": [
+                      {
+                        "otsikko": "Eri saaret",
+                        "teksti": "Nassau sijaitsee New Providencella, Paradise Island sataman toisella puolella."
+                      },
+                      {
+                        "otsikko": "Pikkubussin reitti",
+                        "teksti": "Jitney-pikkubussien reitit vaihtelevat; varmista määränpää kuljettajalta."
+                      },
+                      {
+                        "otsikko": "Hotellin sijainti",
+                        "teksti": "Paradise Island ja Cable Beach ovat eri majoitusalueita kuin sataman vanha keskusta."
+                      }
+                    ]
+                  },
+                  "lahde": "Wikipedia"
+                }
+              },
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/nassau/faktapohja.md",
+              "factSheetSHA256": "be1a03774cccf47fd0678729ca8bc81e5401d655b46440c0fe74ca0b8fe4ea6a",
+              "factAssessment": "Nykyinen $.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3] nimeää conchin merikotiloksi ja conch frittersin friteeratuiksi paloiksi. Faktapohja rivi49: N6 See/Eat, conch salad/fritters Potters Caylla; kuvateksti selvästi havainne."
+            },
+            "visualInspection": {
+              "tool": "view_image",
+              "detail": "original",
+              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/nassau/assets/e12-nassau-TRAVELER-13bbb4a047/original.png",
+              "inspectedBy": "qa-e12",
+              "inspectedAt": "2026-10-13T13:34:18Z",
+              "observations": "Valkoisella soikealla astialla epäsäännöllisiä kullanruskeita friteerattuja taikinapaloja; etummainen avattu pala näyttää vaaleita kiinteitä kotilonlihapaloja pehmeässä taikinassa. Kuori, huokoset ja ruskistuminen vaihtelevat luonnollisesti. Astia ehjä. Ei kuoria, merkintöjä, logoja, ihmisiä tai paikkaväitettä."
+            },
+            "otherReviewerVerdicts": [],
+            "openConflict": false,
+            "ownershipMarker": "qa-handoff-kuvitus-3.json"
+          },
+          "qaReason": "Conch fritters -havainne vastaa Nassaun oppaan ruokajaksoa. Friteerattujen taikinapalojen pinta ja avattu kypsä sisus ovat luontevia; kuva ei esitä Potters Cayn nimettyä annosta. Natiivi1024×1536, suhde0.666667 täyttää Matkailijalle-pystyportin."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva Nassaun oppaassa mainituista conch fritters -paloista.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/nassau/illustration-qa-extra.json",
+        "fileSHA256": "14f602e3cf939a641d73d3fb0bc4c2f1ef296c96e3dcd07700f6ad96950c7b4c",
+        "item": {
+          "slot": "TRAVELER",
+          "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
+          "assetID": "e12-nassau-TRAVELER-13bbb4a047",
+          "sha256": "a8f9731b78f37f8a98f3f521442e2af1f989db0cafa87d88260e2a65eb52e086",
+          "verdict": "accepted",
+          "reason": "Conch fritters -havainne vastaa Nassaun oppaan ruokajaksoa. Friteerattujen taikinapalojen pinta ja avattu kypsä sisus ovat luontevia; kuva ei esitä Potters Cayn nimettyä annosta. Natiivi1024×1536, suhde0.666667 täyttää Matkailijalle-pystyportin.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/nassau/assets/e12-nassau-TRAVELER-13bbb4a047/original.png",
+            "nativeSHA256": "a8f9731b78f37f8a98f3f521442e2af1f989db0cafa87d88260e2a65eb52e086",
+            "nativeWidth": 1024,
+            "nativeHeight": 1536,
+            "nativeAspectRatio": 0.6666666666666666,
+            "format": "PNG",
+            "pngChunks": [
+              "IHDR",
+              "caBX",
+              "IDAT",
+              "IEND"
+            ],
+            "manifestMatch": true,
+            "captionFi": "Havainnekuva Nassaun oppaassa mainituista conch fritters -paloista.",
+            "sourceEvidence": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/nassau/sisalto.json",
+              "contentSHA256": "9ee0363e287ef499d1c26c8ac5bc77a947c54e226ed1e58757fbe0b69d1a88de",
+              "sourceText": "{\"artikkeli\": {\"jaksot\": [{\"otsikko\": \"Perille ja liikkeelle\", \"teksti\": \"Lynden Pindlingin kansainvälinen lentoasema sijaitsee New Providencen länsiosassa. Keskustaan voi jatkaa taksilla; sovi hinta ennen lähtöä. Nassaun ja saaren paikallisliikenteessä kulkee jitney-pikkubusseja, joiden reitit kannattaa varmistaa kuljettajalta. Ne eivät liikennöi Paradise Islandille. Vanhan keskustan satamakortteleihin voi tutustua kävellen, kun taas Cable Beach ja muu saari vaativat oman siirtymänsä.\"}, {\"otsikko\": \"Satamakatu ja olkitori\", \"teksti\": \"Bay Streetin varrelta löytyvät keskustan kaupat ja Straw Market, olkitoriksi kutsuttu käsityö- ja matkamuistotori. Kadun läheisyydessä sijaitsevat myös Christ Church Cathedral ja Nassaun kirjasto. Potters Caylla Paradise Islandin sillan alla on kalatori ja ruokakojuja. Satamakortteleiden kävelyn voi siis yhdistää torikäyntiin, mutta Potters Cay on eri paikka kuin Bay Streetin olkitori.\"}, {\"otsikko\": \"Kalkkikiviportaat ja linnakkeet\", \"teksti\": \"Queen’s Staircase yhdistää kaupungin Fort Fincastlen kukkulaan. Portaiden historiaan kuuluu orjuutettujen ihmisten tekemä louhintatyö. Linnakkeelta avautuu näkymä Nassaun ja Paradise Islandin suuntaan; lännessä sijaitseva Fort Charlotte on toinen vanha satamaa valvonut linnoitus. Portaiden ja Fincastlen voi ottaa samaksi kävelykohteeksi. Charlotteen siirtyessä kaupungin satamarannan mittakaava avautuu toisesta suunnasta.\"}, {\"otsikko\": \"Mitä täällä syödään\", \"teksti\": \"Conch on merikotilo, jota tarjotaan esimerkiksi salaattina ja friteerattuina fritters-paloina. Potters Cayn kalatorin kojuissa valmistetaan näitä ruokia sekä muita bahamalaisia meren antimia. Keskustan ravintoloissa on myös kalaa ja paikallisia jälkiruokia. Jos kotilo ei ole entuudestaan tuttu ruoka, kysy valmistustavasta: conch salad ja conch fritters ovat samasta raaka-aineesta tehtyjä hyvin erilaisia annoksia.\"}, {\"otsikko\": \"Milloin kannattaa tulla\", \"teksti\": \"Nassau on lämmin ympäri vuoden, ja sateita on enemmän kesäkaudella kuin talvella. Joulu ja vuodenvaihde liittyvät Junkanoon suuriin katukulkueisiin, joten juhlan seuraaminen on erilainen matka kuin tavallinen rantapäivä. Varmista kulkueen ajankohta matkaa suunnitellessa. Päivän kävelyreittiin on hyvä yhdistää myös sisäkohde, kuten kirjasto, eikä rakentaa koko ohjelmaa yhden rantapäivän varaan.\"}], \"matkailu\": {\"hyvaTietaa\": [{\"otsikko\": \"Eri saaret\", \"teksti\": \"Nassau sijaitsee New Providencella, Paradise Island sataman toisella puolella.\"}, {\"otsikko\": \"Pikkubussin reitti\", \"teksti\": \"Jitney-pikkubussien reitit vaihtelevat; varmista määränpää kuljettajalta.\"}, {\"otsikko\": \"Hotellin sijainti\", \"teksti\": \"Paradise Island ja Cable Beach ovat eri majoitusalueita kuin sataman vanha keskusta.\"}], \"parasta\": [{\"mita\": \"Queen’s Staircase\", \"tahdet\": 3}, {\"mita\": \"Fort Fincastle\", \"tahdet\": 3}, {\"mita\": \"Fort Charlotte\", \"tahdet\": 2}, {\"mita\": \"Straw Market\", \"tahdet\": 2}, {\"mita\": \"Potters Cay\", \"tahdet\": 2}]}, \"nimi\": \"Matkailijan Nassau\", \"nosto\": \"Vanha keskusta ja hotellialueet ovat eri ympäristöjä. Nassaun mittakaava avautuu parhaiten, kun erotat New Providencen ja vastarannan Paradise Islandin.\", \"taitto\": \"opas\", \"teksti\": \"Kulje satamasta kivisten portaiden kautta kukkulalle ja jätä aikaa myös torille.\"}, \"kappale\": \"Vanhan Nassaun kävelykohteet alkavat Bay Streetin satamakortteleista. Olkitori tuo vastaan käsityöt, Kuningattaren portaat kalkkikivisen reitin kukkulalle. Fort Fincastlelta voi hahmottaa myös edustan Paradise Islandin. Kalatorin ruokakojuja löytyy Potters Caylta sillan alta. Hotellialueiden ja keskustan väliset siirtymät kannattaa suunnitella erikseen.\"}",
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/nassau/faktapohja.md",
+              "originalSources": [
+                "https://en.wikivoyage.org/wiki/Nassau"
+              ],
+              "ccRelease": null,
+              "generationAuthorization": {
+                "rule": "OHJEET: turvallinen yleishavainnollistus ilman CC-odotusta",
+                "sharedReservationRecord": "/Volumes/T7 4TB/ChatGPT-Codex-active/coordination/paakaupungit-claims/08391cff28146b17/e12/nassau/TRAVELER/owner.json",
+                "ccReleaseRequired": false,
+                "scope": "lähdeperustainen turvallinen avoin mixed; ei PHOTO/C1-C3 tai nimetty kaupunkiasettelu"
+              },
+              "sourceTopicAudit": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/source-scout/continuation-20261013/safe-topic-production-priorities.json",
+              "sourceTopicAuditSHA256": "b5fd12034028af4a090b68a5ac0644b7a6d737a177b35b838ab6b3974c772dc0",
+              "auditContentSHA256": "9ee0363e287ef499d1c26c8ac5bc77a947c54e226ed1e58757fbe0b69d1a88de",
+              "auditTargetContext": "Vanhan Nassaun kävelykohteet alkavat Bay Streetin satamakortteleista. Olkitori tuo vastaan käsityöt, Kuningattaren portaat kalkkikivisen reitin kukkulalle. Fort Fincastlelta voi hahmottaa myös edustan Paradise Islandin. Kalatorin ruokakojuja löytyy Potters Caylta sillan alta. Hotellialueiden ja keskustan väliset siirtymät kannattaa suunnitella erikseen. Matkailijan Nassau opas Kulje satamasta kivisten portaiden kautta kukkulalle ja jätä aikaa myös torille. Vanha keskusta ja hotellialueet ovat eri ympäristöjä. Nassaun mittakaava avautuu parhaiten, kun erotat New Providencen ja vastarannan Paradise Islandin. Perille ja liikkeelle Lynden Pindlingin kansainvälinen lentoasema sijaitsee New Providencen länsiosassa. Keskustaan voi jatkaa taksilla; sovi hinta ennen lähtöä. Nassaun ja saaren paikallisliikenteessä kulkee jitney-pikkubusseja, joiden reitit kannattaa varmistaa kuljettajalta. Ne eivät liikennöi Paradise Islandille. Vanhan keskustan satamakortteleihin voi tutustua kävellen, kun taas Cable Beach ja muu saari vaativat oman siirtymänsä. Satamakatu ja olkitori Bay Streetin varrelta löytyvät keskustan kaupat ja Straw Market, olkitoriksi kutsuttu käsityö- ja matkamuistotori. Kadun läheisyydessä sijaitsevat myös Christ Church Cathedral ja Nassaun kirjasto. Potters Caylla Paradise Islandin sillan alla on kalatori ja ruokakojuja. Satamakortteleiden kävelyn voi siis yhdistää torikäyntiin, mutta Potters Cay on eri paikka kuin Bay Streetin olkitori. Kalkkikiviportaat ja linnakkeet Queen’s Staircase yhdistää kaupungin Fort Fincastlen kukkulaan. Portaiden historiaan kuuluu orjuutettujen ihmisten tekemä louhintatyö. Linnakkeelta avautuu näkymä Nassaun ja Paradise Islandin suuntaan; lännessä sijaitseva Fort Charlotte on toinen vanha satamaa valvonut linnoitus. Portaiden ja Fincastlen voi ottaa samaksi kävelykohteeksi. Charlotteen siirtyessä kaupungin satamarannan mittakaava avautuu toisesta suunnasta. Mitä täällä syödään Conch on merikotilo, jota tarjotaan esimerkiksi salaattina ja friteerattuina fritters-paloina. Potters Cayn kalatorin kojuissa valmistetaan näitä ruokia sekä muita bahamalaisia meren antimia. Keskustan ravintoloissa on myös kalaa ja paikallisia jälkiruokia. Jos kotilo ei ole entuudestaan tuttu ruoka, kysy valmistustavasta: conch salad ja conch fritters ovat samasta raaka-aineesta tehtyjä hyvin erilaisia annoksia. Milloin kannattaa tulla Nassau on lämmin ympäri vuoden, ja sateita on enemmän kesäkaudella kuin talvella. Joulu ja vuodenvaihde liittyvät Junkanoon suuriin katukulkueisiin, joten juhlan seuraaminen on erilainen matka kuin tavallinen rantapäivä. Varmista kulkueen ajankohta matkaa suunnitellessa. Päivän kävelyreittiin on hyvä yhdistää myös sisäkohde, kuten kirjasto, eikä rakentaa koko ohjelmaa yhden rantapäivän varaan. Queen’s Staircase  Kiinteään kalkkikiveen louhittu kulkureitti kertoo linnakkeen lisäksi rakentajiensa työstä. Fort Fincastle  Kukkulan linnakkeelta voi hahmottaa kaupungin ja sen edustan saaren. Fort Charlotte  Vanha kalkkikivilinnake valvoo satamaa keskustan länsipuolella. Straw Market  Satamakadun torilla tutustuu bahamalaisiin käsitöihin ja matkamuistokauppaan. Potters Cay  Kalatorin ruokakojuissa conch tulee vastaan useassa valmistustavassa. Eri saaret Nassau sijaitsee New Providencella, Paradise Island sataman toisella puolella. Pikkubussin reitti Jitney-pikkubussien reitit vaihtelevat; varmista määränpää kuljettajalta. Hotellin sijainti Paradise Island ja Cable Beach ovat eri majoitusalueita kuin sataman vanha keskusta. Wikipedia",
+              "productionAuthorization": "13.10.2026 source-thread user instruction: generate all own job20 rows now, live target/atomic claim first; overrides waiting_cc_or_safe_reference and audit productionAllowedByThisAudit=false only for these documented ordinary subjects."
+            },
+            "rightsEvidence": "Tavallinen ruoka/raaka-aine tai luonnonmateriaali, ei nimetyn paikan, rakennuksen, suojatun taideteoksen tai historiallisen yksilön rekonstruktio. Uusi itsenäinen havainne, ei O4-tiedoston tai muun aiemman kuvan uudelleenkäyttö.",
+            "content": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/nassau/sisalto.json",
+              "contentSHA256": "9ee0363e287ef499d1c26c8ac5bc77a947c54e226ed1e58757fbe0b69d1a88de",
+              "targetObjectExists": true,
+              "targetContainer": "$.kaupunkilehti[0].matkailijalle",
+              "targetText": {
+                "kuva": {
+                  "tiedosto": "",
+                  "lyhyt": "",
+                  "selite": "",
+                  "lahde": ""
+                },
+                "kappale": "Vanhan Nassaun kävelykohteet alkavat Bay Streetin satamakortteleista. Olkitori tuo vastaan käsityöt, Kuningattaren portaat kalkkikivisen reitin kukkulalle. Fort Fincastlelta voi hahmottaa myös edustan Paradise Islandin. Kalatorin ruokakojuja löytyy Potters Caylta sillan alta. Hotellialueiden ja keskustan väliset siirtymät kannattaa suunnitella erikseen.",
+                "artikkeli": {
+                  "nimi": "Matkailijan Nassau",
+                  "taitto": "opas",
+                  "teksti": "Kulje satamasta kivisten portaiden kautta kukkulalle ja jätä aikaa myös torille.",
+                  "nosto": "Vanha keskusta ja hotellialueet ovat eri ympäristöjä. Nassaun mittakaava avautuu parhaiten, kun erotat New Providencen ja vastarannan Paradise Islandin.",
+                  "jaksot": [
+                    {
+                      "otsikko": "Perille ja liikkeelle",
+                      "teksti": "Lynden Pindlingin kansainvälinen lentoasema sijaitsee New Providencen länsiosassa. Keskustaan voi jatkaa taksilla; sovi hinta ennen lähtöä. Nassaun ja saaren paikallisliikenteessä kulkee jitney-pikkubusseja, joiden reitit kannattaa varmistaa kuljettajalta. Ne eivät liikennöi Paradise Islandille. Vanhan keskustan satamakortteleihin voi tutustua kävellen, kun taas Cable Beach ja muu saari vaativat oman siirtymänsä.",
+                      "kuva": {
+                        "tiedosto": "",
+                        "lyhyt": "",
+                        "selite": "",
+                        "lahde": ""
+                      }
+                    },
+                    {
+                      "otsikko": "Satamakatu ja olkitori",
+                      "teksti": "Bay Streetin varrelta löytyvät keskustan kaupat ja Straw Market, olkitoriksi kutsuttu käsityö- ja matkamuistotori. Kadun läheisyydessä sijaitsevat myös Christ Church Cathedral ja Nassaun kirjasto. Potters Caylla Paradise Islandin sillan alla on kalatori ja ruokakojuja. Satamakortteleiden kävelyn voi siis yhdistää torikäyntiin, mutta Potters Cay on eri paikka kuin Bay Streetin olkitori.",
+                      "kuva": {
+                        "tiedosto": "",
+                        "lyhyt": "",
+                        "selite": "",
+                        "lahde": ""
+                      }
+                    },
+                    {
+                      "otsikko": "Kalkkikiviportaat ja linnakkeet",
+                      "teksti": "Queen’s Staircase yhdistää kaupungin Fort Fincastlen kukkulaan. Portaiden historiaan kuuluu orjuutettujen ihmisten tekemä louhintatyö. Linnakkeelta avautuu näkymä Nassaun ja Paradise Islandin suuntaan; lännessä sijaitseva Fort Charlotte on toinen vanha satamaa valvonut linnoitus. Portaiden ja Fincastlen voi ottaa samaksi kävelykohteeksi. Charlotteen siirtyessä kaupungin satamarannan mittakaava avautuu toisesta suunnasta.",
+                      "kuva": {
+                        "tiedosto": "",
+                        "lyhyt": "",
+                        "selite": "",
+                        "lahde": ""
+                      }
+                    },
+                    {
+                      "otsikko": "Mitä täällä syödään",
+                      "teksti": "Conch on merikotilo, jota tarjotaan esimerkiksi salaattina ja friteerattuina fritters-paloina. Potters Cayn kalatorin kojuissa valmistetaan näitä ruokia sekä muita bahamalaisia meren antimia. Keskustan ravintoloissa on myös kalaa ja paikallisia jälkiruokia. Jos kotilo ei ole entuudestaan tuttu ruoka, kysy valmistustavasta: conch salad ja conch fritters ovat samasta raaka-aineesta tehtyjä hyvin erilaisia annoksia.",
+                      "kuva": {
+                        "tiedosto": "",
+                        "lyhyt": "",
+                        "selite": "",
+                        "lahde": ""
+                      }
+                    },
+                    {
+                      "otsikko": "Milloin kannattaa tulla",
+                      "teksti": "Nassau on lämmin ympäri vuoden, ja sateita on enemmän kesäkaudella kuin talvella. Joulu ja vuodenvaihde liittyvät Junkanoon suuriin katukulkueisiin, joten juhlan seuraaminen on erilainen matka kuin tavallinen rantapäivä. Varmista kulkueen ajankohta matkaa suunnitellessa. Päivän kävelyreittiin on hyvä yhdistää myös sisäkohde, kuten kirjasto, eikä rakentaa koko ohjelmaa yhden rantapäivän varaan.",
+                      "kuva": {
+                        "tiedosto": "",
+                        "lyhyt": "",
+                        "selite": "",
+                        "lahde": ""
+                      }
+                    }
+                  ],
+                  "matkailu": {
+                    "parasta": [
+                      {
+                        "mita": "Queen’s Staircase",
+                        "tahdet": 3,
+                        "selite": "Kiinteään kalkkikiveen louhittu kulkureitti kertoo linnakkeen lisäksi rakentajiensa työstä."
+                      },
+                      {
+                        "mita": "Fort Fincastle",
+                        "tahdet": 3,
+                        "selite": "Kukkulan linnakkeelta voi hahmottaa kaupungin ja sen edustan saaren."
+                      },
+                      {
+                        "mita": "Fort Charlotte",
+                        "tahdet": 2,
+                        "selite": "Vanha kalkkikivilinnake valvoo satamaa keskustan länsipuolella."
+                      },
+                      {
+                        "mita": "Straw Market",
+                        "tahdet": 2,
+                        "selite": "Satamakadun torilla tutustuu bahamalaisiin käsitöihin ja matkamuistokauppaan."
+                      },
+                      {
+                        "mita": "Potters Cay",
+                        "tahdet": 2,
+                        "selite": "Kalatorin ruokakojuissa conch tulee vastaan useassa valmistustavassa."
+                      }
+                    ],
+                    "hyvaTietaa": [
+                      {
+                        "otsikko": "Eri saaret",
+                        "teksti": "Nassau sijaitsee New Providencella, Paradise Island sataman toisella puolella."
+                      },
+                      {
+                        "otsikko": "Pikkubussin reitti",
+                        "teksti": "Jitney-pikkubussien reitit vaihtelevat; varmista määränpää kuljettajalta."
+                      },
+                      {
+                        "otsikko": "Hotellin sijainti",
+                        "teksti": "Paradise Island ja Cable Beach ovat eri majoitusalueita kuin sataman vanha keskusta."
+                      }
+                    ]
+                  },
+                  "lahde": "Wikipedia"
+                }
+              },
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/nassau/faktapohja.md",
+              "factSheetSHA256": "be1a03774cccf47fd0678729ca8bc81e5401d655b46440c0fe74ca0b8fe4ea6a",
+              "factAssessment": "Nykyinen $.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3] nimeää conchin merikotiloksi ja conch frittersin friteeratuiksi paloiksi. Faktapohja rivi49: N6 See/Eat, conch salad/fritters Potters Caylla; kuvateksti selvästi havainne."
+            },
+            "visualInspection": {
+              "tool": "view_image",
+              "detail": "original",
+              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/nassau/assets/e12-nassau-TRAVELER-13bbb4a047/original.png",
+              "inspectedBy": "qa-e12",
+              "inspectedAt": "2026-10-13T13:34:18Z",
+              "observations": "Valkoisella soikealla astialla epäsäännöllisiä kullanruskeita friteerattuja taikinapaloja; etummainen avattu pala näyttää vaaleita kiinteitä kotilonlihapaloja pehmeässä taikinassa. Kuori, huokoset ja ruskistuminen vaihtelevat luonnollisesti. Astia ehjä. Ei kuoria, merkintöjä, logoja, ihmisiä tai paikkaväitettä."
+            },
+            "otherReviewerVerdicts": [],
+            "openConflict": false,
+            "ownershipMarker": "qa-handoff-kuvitus-3.json"
+          },
+          "reviewedAt": "2026-10-13T13:34:18.684444+00:00",
+          "reviewerGroup": "qa-e12"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/nassau/qa.json",
+            "sha256": "63a1804b12b5f5c8cbcf5ce164b62a61fbae656b704c2d6e49e085586624d716"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/nassau/illustration-qa-extra.json",
+            "sha256": "14f602e3cf939a641d73d3fb0bc4c2f1ef296c96e3dcd07700f6ad96950c7b4c"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/nassau/e12-nassau-TRAVELER-13bbb4a047-a8f9731b78f3.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/nassau/e12-nassau-TRAVELER-13bbb4a047-a8f9731b78f3.png?t=16b5a1e0cacf5950",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/nassau/e12-nassau-TRAVELER-13bbb4a047-a8f9731b78f3.png",
+        "sha256": "16b5a1e0cacf5950db2a0793db59a475df4420bce8b1ae96cd46c0cdfe4b5b10",
+        "bytes": 2543273,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e12-nassau-TRAVELER-13bbb4a047",
+        "nativeSHA256": "a8f9731b78f37f8a98f3f521442e2af1f989db0cafa87d88260e2a65eb52e086",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e12/nassau/e12-nassau-TRAVELER-13bbb4a047-a8f9731b78f3.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e12",
+        "city": "nassau",
+        "slot": "TRAVELER",
+        "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
+        "verifiedAt": "2026-10-13T13:34:30.180964+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e12/nassau/e12-nassau-TRAVELER-13bbb4a047-a8f9731b78f3.png",
+        "sha256": "16b5a1e0cacf5950db2a0793db59a475df4420bce8b1ae96cd46c0cdfe4b5b10",
+        "bytes": 2543273,
+        "SHAReadAt": "2026-10-13T13:34:24.443272+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1024,
+        "height": 1536,
+        "pixelWidth": 1024,
+        "pixelHeight": 1536,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "a8f9731b78f37f8a98f3f521442e2af1f989db0cafa87d88260e2a65eb52e086",
+        "rgbPixelSHA256": "1a50ce9485a0132f00742965982e0e4afadd9301678b6ae5b0625d9f3fe7f83f",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "9ee0363e287ef499d1c26c8ac5bc77a947c54e226ed1e58757fbe0b69d1a88de",
+      "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+      "contextAfterSHA256": "29c31034b1a498de8bb7ea4eb9e7bb6f74043528bdc8b140db1135556637804e",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+    },
+    {
+      "era": "e12",
+      "city": "nassau",
+      "slot": "K2",
+      "type": "illustration",
+      "assetID": "e12-nassau-K2-4ec2436d46",
+      "galleryImageID": "e12-nassau-K2-4ec2436d46",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].nostot[1]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "nostot",
+        1
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/nassau/e12-nassau-K2-4ec2436d46-4e38604e99f7.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva Queen’s Staircase -tekstissä mainitusta kalkkikivimateriaalista.",
+        "lyhyt": "Havainnekuva Queen’s Staircase -tekstissä mainitusta kalkkikivimateriaalista."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/nassau/e12-nassau-K2-4ec2436d46-4e38604e99f7.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva Queen’s Staircase -tekstissä mainitusta kalkkikivimateriaalista.",
+        "lyhyt": "Havainnekuva Queen’s Staircase -tekstissä mainitusta kalkkikivimateriaalista."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "4e38604e99f795f954566d2adae9cccd6fff1a7d91f5ac74ca64d04e8436466c",
+      "exportSHA256": "95c640e60d488c7bac871616cb82fbafec875e207c40fd6d3a5017df7790c912",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/nassau/e12-nassau-K2-4ec2436d46-4e38604e99f7.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/nassau/e12-nassau-K2-4ec2436d46-4e38604e99f7.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e12/nassau/e12-nassau-K2-4ec2436d46-4e38604e99f7.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/nassau/sisalto.json",
+      "sourceContentSHA256": "9ee0363e287ef499d1c26c8ac5bc77a947c54e226ed1e58757fbe0b69d1a88de",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "110a357780af6c60a111451ac12770823e725f2e80174eee07ae10e936f66a95",
+        "semanticContextSHA256": "110a357780af6c60a111451ac12770823e725f2e80174eee07ae10e936f66a95",
+        "subjectTitle": "Portaat on otettu pois kalliosta",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Tavallinen ruoka/raaka-aine tai luonnonmateriaali, ei nimetyn paikan, rakennuksen, suojatun taideteoksen tai historiallisen yksilön rekonstruktio. Uusi itsenäinen havainne, ei O4-tiedoston tai muun aiemman kuvan uudelleenkäyttö.",
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/nassau/assets/e12-nassau-K2-4ec2436d46/original.png",
+            "nativeSHA256": "4e38604e99f795f954566d2adae9cccd6fff1a7d91f5ac74ca64d04e8436466c",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "nativeAspectRatio": 1.5,
+            "format": "PNG",
+            "pngChunks": [
+              "IHDR",
+              "caBX",
+              "IDAT",
+              "IEND"
+            ],
+            "manifestMatch": true,
+            "captionFi": "Havainnekuva Queen’s Staircase -tekstissä mainitusta kalkkikivimateriaalista.",
+            "sourceEvidence": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/nassau/sisalto.json",
+              "contentSHA256": "9ee0363e287ef499d1c26c8ac5bc77a947c54e226ed1e58757fbe0b69d1a88de",
+              "sourceText": "Queen’s Staircase, Kuningattaren portaat, syntyi louhimalla kiinteää kalkkikiveä. Orjuutetut ihmiset tekivät työn rajallisilla työkaluilla 1700-luvun lopulla, jotta kaupungista saatiin kulkuyhteys Fort Fincastleen. Reitti nousee kiviseinien välistä Bennet’s Hillin suuntaan. Nimi annettiin myöhemmin kuningatar Victorian kunniaksi. Nimen takana on siis toinen historia kuin itse rakentamisen takana: kuninkaallinen muistaminen ja työhön pakotettujen ihmisten työn jälki ovat samassa paikassa.",
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/nassau/faktapohja.md",
+              "originalSources": [
+                "https://www.bahamas.com/natural-wonders/queens-staircase"
+              ],
+              "ccRelease": null,
+              "generationAuthorization": {
+                "rule": "OHJEET: turvallinen yleishavainnollistus ilman CC-odotusta",
+                "sharedReservationRecord": "/Volumes/T7 4TB/ChatGPT-Codex-active/coordination/paakaupungit-claims/08391cff28146b17/e12/nassau/K2/owner.json",
+                "ccReleaseRequired": false,
+                "scope": "lähdeperustainen turvallinen avoin mixed; ei PHOTO/C1-C3 tai nimetty kaupunkiasettelu"
+              },
+              "sourceTopicAudit": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/source-scout/continuation-20261013/safe-topic-production-priorities.json",
+              "sourceTopicAuditSHA256": "b5fd12034028af4a090b68a5ac0644b7a6d737a177b35b838ab6b3974c772dc0",
+              "auditContentSHA256": "9ee0363e287ef499d1c26c8ac5bc77a947c54e226ed1e58757fbe0b69d1a88de",
+              "auditTargetContext": "Portaat on otettu pois kalliosta Queen’s Staircase, Kuningattaren portaat, syntyi louhimalla kiinteää kalkkikiveä. Orjuutetut ihmiset tekivät työn rajallisilla työkaluilla 1700-luvun lopulla, jotta kaupungista saatiin kulkuyhteys Fort Fincastleen. Reitti nousee kiviseinien välistä Bennet’s Hillin suuntaan. Nimi annettiin myöhemmin kuningatar Victorian kunniaksi. Nimen takana on siis toinen historia kuin itse rakentamisen takana: kuninkaallinen muistaminen ja työhön pakotettujen ihmisten työn jälki ovat samassa paikassa. Queen's Staircase    ",
+              "productionAuthorization": "13.10.2026 source-thread user instruction: generate all own job20 rows now, live target/atomic claim first; overrides waiting_cc_or_safe_reference and audit productionAllowedByThisAudit=false only for these documented ordinary subjects."
+            },
+            "rightsEvidence": "Tavallinen ruoka/raaka-aine tai luonnonmateriaali, ei nimetyn paikan, rakennuksen, suojatun taideteoksen tai historiallisen yksilön rekonstruktio. Uusi itsenäinen havainne, ei O4-tiedoston tai muun aiemman kuvan uudelleenkäyttö.",
+            "content": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/nassau/sisalto.json",
+              "contentSHA256": "9ee0363e287ef499d1c26c8ac5bc77a947c54e226ed1e58757fbe0b69d1a88de",
+              "targetObjectExists": true,
+              "targetContainer": "$.kaupunkilehti[0].nostot[1]",
+              "targetText": {
+                "otsikko": "Portaat on otettu pois kalliosta",
+                "teksti": "Queen’s Staircase, Kuningattaren portaat, syntyi louhimalla kiinteää kalkkikiveä. Orjuutetut ihmiset tekivät työn rajallisilla työkaluilla 1700-luvun lopulla, jotta kaupungista saatiin kulkuyhteys Fort Fincastleen. Reitti nousee kiviseinien välistä Bennet’s Hillin suuntaan. Nimi annettiin myöhemmin kuningatar Victorian kunniaksi. Nimen takana on siis toinen historia kuin itse rakentamisen takana: kuninkaallinen muistaminen ja työhön pakotettujen ihmisten työn jälki ovat samassa paikassa.",
+                "wiki": "Queen's Staircase",
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              },
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/nassau/faktapohja.md",
+              "factSheetSHA256": "be1a03774cccf47fd0678729ca8bc81e5401d655b46440c0fe74ca0b8fe4ea6a",
+              "factAssessment": "Nykyinen K2-nosto sanoo Queen’s Staircasen louhitun kiinteästä kalkkikivestä. Faktapohja rivi33/N4 ja N9: sama materiaalitieto. Kuvateksti rajaa kuvan materiaalihavainteeksi eikä väitä näytettä paikalta otetuksi."
+            },
+            "visualInspection": {
+              "tool": "view_image",
+              "detail": "original",
+              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/nassau/assets/e12-nassau-K2-4ec2436d46/original.png",
+              "inspectedBy": "qa-e12",
+              "inspectedAt": "2026-10-13T13:39:49Z",
+              "observations": "Yksi epäsäännöllinen vaaleanharmaa/beige kivikappale neutraalilla kivipinnalla. Pieniä erikokoisia huokosia, murenevia rajoja, vaihtelevia mineraalipintoja ja selvä kontaktivarjo. Ei tasaisia sahapintoja, portaita, työkaluja, rakennuksia, ihmisiä, tekstiä tai logoja."
+            },
+            "otherReviewerVerdicts": [],
+            "openConflict": false,
+            "ownershipMarker": "qa-handoff-kuvitus-3.json"
+          },
+          "qaReason": "Vaalea huokoinen kalkkikiven materiaalihavainne vastaa K2-nostossa mainittua louhittua materiaalia. Kuva ei keksi Queen’s Staircase -portaiden tai kallioseinien geometriaa. NatiivinSHA ja1536×1024mitat täsmäävät."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva Queen’s Staircase -tekstissä mainitusta kalkkikivimateriaalista.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/nassau/illustration-qa-extra.json",
+        "fileSHA256": "14f602e3cf939a641d73d3fb0bc4c2f1ef296c96e3dcd07700f6ad96950c7b4c",
+        "item": {
+          "slot": "K2",
+          "targetJsonPath": "$.kaupunkilehti[0].nostot[1]",
+          "assetID": "e12-nassau-K2-4ec2436d46",
+          "sha256": "4e38604e99f795f954566d2adae9cccd6fff1a7d91f5ac74ca64d04e8436466c",
+          "verdict": "accepted",
+          "reason": "Vaalea huokoinen kalkkikiven materiaalihavainne vastaa K2-nostossa mainittua louhittua materiaalia. Kuva ei keksi Queen’s Staircase -portaiden tai kallioseinien geometriaa. NatiivinSHA ja1536×1024mitat täsmäävät.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/nassau/assets/e12-nassau-K2-4ec2436d46/original.png",
+            "nativeSHA256": "4e38604e99f795f954566d2adae9cccd6fff1a7d91f5ac74ca64d04e8436466c",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "nativeAspectRatio": 1.5,
+            "format": "PNG",
+            "pngChunks": [
+              "IHDR",
+              "caBX",
+              "IDAT",
+              "IEND"
+            ],
+            "manifestMatch": true,
+            "captionFi": "Havainnekuva Queen’s Staircase -tekstissä mainitusta kalkkikivimateriaalista.",
+            "sourceEvidence": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/nassau/sisalto.json",
+              "contentSHA256": "9ee0363e287ef499d1c26c8ac5bc77a947c54e226ed1e58757fbe0b69d1a88de",
+              "sourceText": "Queen’s Staircase, Kuningattaren portaat, syntyi louhimalla kiinteää kalkkikiveä. Orjuutetut ihmiset tekivät työn rajallisilla työkaluilla 1700-luvun lopulla, jotta kaupungista saatiin kulkuyhteys Fort Fincastleen. Reitti nousee kiviseinien välistä Bennet’s Hillin suuntaan. Nimi annettiin myöhemmin kuningatar Victorian kunniaksi. Nimen takana on siis toinen historia kuin itse rakentamisen takana: kuninkaallinen muistaminen ja työhön pakotettujen ihmisten työn jälki ovat samassa paikassa.",
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/nassau/faktapohja.md",
+              "originalSources": [
+                "https://www.bahamas.com/natural-wonders/queens-staircase"
+              ],
+              "ccRelease": null,
+              "generationAuthorization": {
+                "rule": "OHJEET: turvallinen yleishavainnollistus ilman CC-odotusta",
+                "sharedReservationRecord": "/Volumes/T7 4TB/ChatGPT-Codex-active/coordination/paakaupungit-claims/08391cff28146b17/e12/nassau/K2/owner.json",
+                "ccReleaseRequired": false,
+                "scope": "lähdeperustainen turvallinen avoin mixed; ei PHOTO/C1-C3 tai nimetty kaupunkiasettelu"
+              },
+              "sourceTopicAudit": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/source-scout/continuation-20261013/safe-topic-production-priorities.json",
+              "sourceTopicAuditSHA256": "b5fd12034028af4a090b68a5ac0644b7a6d737a177b35b838ab6b3974c772dc0",
+              "auditContentSHA256": "9ee0363e287ef499d1c26c8ac5bc77a947c54e226ed1e58757fbe0b69d1a88de",
+              "auditTargetContext": "Portaat on otettu pois kalliosta Queen’s Staircase, Kuningattaren portaat, syntyi louhimalla kiinteää kalkkikiveä. Orjuutetut ihmiset tekivät työn rajallisilla työkaluilla 1700-luvun lopulla, jotta kaupungista saatiin kulkuyhteys Fort Fincastleen. Reitti nousee kiviseinien välistä Bennet’s Hillin suuntaan. Nimi annettiin myöhemmin kuningatar Victorian kunniaksi. Nimen takana on siis toinen historia kuin itse rakentamisen takana: kuninkaallinen muistaminen ja työhön pakotettujen ihmisten työn jälki ovat samassa paikassa. Queen's Staircase    ",
+              "productionAuthorization": "13.10.2026 source-thread user instruction: generate all own job20 rows now, live target/atomic claim first; overrides waiting_cc_or_safe_reference and audit productionAllowedByThisAudit=false only for these documented ordinary subjects."
+            },
+            "rightsEvidence": "Tavallinen ruoka/raaka-aine tai luonnonmateriaali, ei nimetyn paikan, rakennuksen, suojatun taideteoksen tai historiallisen yksilön rekonstruktio. Uusi itsenäinen havainne, ei O4-tiedoston tai muun aiemman kuvan uudelleenkäyttö.",
+            "content": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/nassau/sisalto.json",
+              "contentSHA256": "9ee0363e287ef499d1c26c8ac5bc77a947c54e226ed1e58757fbe0b69d1a88de",
+              "targetObjectExists": true,
+              "targetContainer": "$.kaupunkilehti[0].nostot[1]",
+              "targetText": {
+                "otsikko": "Portaat on otettu pois kalliosta",
+                "teksti": "Queen’s Staircase, Kuningattaren portaat, syntyi louhimalla kiinteää kalkkikiveä. Orjuutetut ihmiset tekivät työn rajallisilla työkaluilla 1700-luvun lopulla, jotta kaupungista saatiin kulkuyhteys Fort Fincastleen. Reitti nousee kiviseinien välistä Bennet’s Hillin suuntaan. Nimi annettiin myöhemmin kuningatar Victorian kunniaksi. Nimen takana on siis toinen historia kuin itse rakentamisen takana: kuninkaallinen muistaminen ja työhön pakotettujen ihmisten työn jälki ovat samassa paikassa.",
+                "wiki": "Queen's Staircase",
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              },
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/nassau/faktapohja.md",
+              "factSheetSHA256": "be1a03774cccf47fd0678729ca8bc81e5401d655b46440c0fe74ca0b8fe4ea6a",
+              "factAssessment": "Nykyinen K2-nosto sanoo Queen’s Staircasen louhitun kiinteästä kalkkikivestä. Faktapohja rivi33/N4 ja N9: sama materiaalitieto. Kuvateksti rajaa kuvan materiaalihavainteeksi eikä väitä näytettä paikalta otetuksi."
+            },
+            "visualInspection": {
+              "tool": "view_image",
+              "detail": "original",
+              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/nassau/assets/e12-nassau-K2-4ec2436d46/original.png",
+              "inspectedBy": "qa-e12",
+              "inspectedAt": "2026-10-13T13:39:49Z",
+              "observations": "Yksi epäsäännöllinen vaaleanharmaa/beige kivikappale neutraalilla kivipinnalla. Pieniä erikokoisia huokosia, murenevia rajoja, vaihtelevia mineraalipintoja ja selvä kontaktivarjo. Ei tasaisia sahapintoja, portaita, työkaluja, rakennuksia, ihmisiä, tekstiä tai logoja."
+            },
+            "otherReviewerVerdicts": [],
+            "openConflict": false,
+            "ownershipMarker": "qa-handoff-kuvitus-3.json"
+          },
+          "reviewedAt": "2026-10-13T13:39:50.052865+00:00",
+          "reviewerGroup": "qa-e12"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/nassau/qa.json",
+            "sha256": "63a1804b12b5f5c8cbcf5ce164b62a61fbae656b704c2d6e49e085586624d716"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/nassau/illustration-qa-extra.json",
+            "sha256": "14f602e3cf939a641d73d3fb0bc4c2f1ef296c96e3dcd07700f6ad96950c7b4c"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/nassau/e12-nassau-K2-4ec2436d46-4e38604e99f7.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/nassau/e12-nassau-K2-4ec2436d46-4e38604e99f7.png?t=95c640e60d488c7b",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/nassau/e12-nassau-K2-4ec2436d46-4e38604e99f7.png",
+        "sha256": "95c640e60d488c7bac871616cb82fbafec875e207c40fd6d3a5017df7790c912",
+        "bytes": 2931868,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e12-nassau-K2-4ec2436d46",
+        "nativeSHA256": "4e38604e99f795f954566d2adae9cccd6fff1a7d91f5ac74ca64d04e8436466c",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e12/nassau/e12-nassau-K2-4ec2436d46-4e38604e99f7.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e12",
+        "city": "nassau",
+        "slot": "K2",
+        "targetJsonPath": "$.kaupunkilehti[0].nostot[1]",
+        "verifiedAt": "2026-10-13T13:40:50.399178+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e12/nassau/e12-nassau-K2-4ec2436d46-4e38604e99f7.png",
+        "sha256": "95c640e60d488c7bac871616cb82fbafec875e207c40fd6d3a5017df7790c912",
+        "bytes": 2931868,
+        "SHAReadAt": "2026-10-13T13:39:51.125142+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "4e38604e99f795f954566d2adae9cccd6fff1a7d91f5ac74ca64d04e8436466c",
+        "rgbPixelSHA256": "4de2ed4351b06370e870cfa976d7290b4339803c05e681149c3af8b42939e9b1",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "9ee0363e287ef499d1c26c8ac5bc77a947c54e226ed1e58757fbe0b69d1a88de",
+      "targetAfterSHA256": "110a357780af6c60a111451ac12770823e725f2e80174eee07ae10e936f66a95",
+      "contextAfterSHA256": "110a357780af6c60a111451ac12770823e725f2e80174eee07ae10e936f66a95",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e12",
@@ -932,7 +1776,7 @@
         4024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/nassau/sisalto.json",
-      "sourceContentSHA256": "836a23b7047697263a30d535db52048cb05e0ee77bc09253cb62d84b11edcb68",
+      "sourceContentSHA256": "9ee0363e287ef499d1c26c8ac5bc77a947c54e226ed1e58757fbe0b69d1a88de",
       "semanticSourceBind": {
         "targetBeforeSHA256": "cac6e12bd4e5c88d5c5d180c2fd6f44cebb81d5ff9926ee36737315116d3a115",
         "semanticContextSHA256": "cac6e12bd4e5c88d5c5d180c2fd6f44cebb81d5ff9926ee36737315116d3a115",
@@ -1059,7 +1903,7 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/nassau/illustration-qa-extra.json",
-            "sha256": "90a3935f9c49a641c384f0dc375b4266e0dd746d3a555336f208e0dcdd5e668d"
+            "sha256": "14f602e3cf939a641d73d3fb0bc4c2f1ef296c96e3dcd07700f6ad96950c7b4c"
           }
         ]
       },
@@ -1132,7 +1976,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "9ee0363e287ef499d1c26c8ac5bc77a947c54e226ed1e58757fbe0b69d1a88de",
       "targetAfterSHA256": "cac6e12bd4e5c88d5c5d180c2fd6f44cebb81d5ff9926ee36737315116d3a115",
-      "contextAfterSHA256": "cac6e12bd4e5c88d5c5d180c2fd6f44cebb81d5ff9926ee36737315116d3a115"
+      "contextAfterSHA256": "cac6e12bd4e5c88d5c5d180c2fd6f44cebb81d5ff9926ee36737315116d3a115",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e12",
@@ -1185,10 +2031,10 @@
         1280
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/nassau/sisalto.json",
-      "sourceContentSHA256": "836a23b7047697263a30d535db52048cb05e0ee77bc09253cb62d84b11edcb68",
+      "sourceContentSHA256": "9ee0363e287ef499d1c26c8ac5bc77a947c54e226ed1e58757fbe0b69d1a88de",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "targetBeforeSHA256": "57e7cc6ac3b2c19da2514841987e79f90d8662bcc310c0a4c97d3cb24d06524c",
+        "semanticContextSHA256": "57e7cc6ac3b2c19da2514841987e79f90d8662bcc310c0a4c97d3cb24d06524c",
         "subjectTitle": "Nassau",
         "targetState": "existing-target"
       },
@@ -1342,7 +2188,7 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/nassau/illustration-qa-extra.json",
-            "sha256": "90a3935f9c49a641c384f0dc375b4266e0dd746d3a555336f208e0dcdd5e668d"
+            "sha256": "14f602e3cf939a641d73d3fb0bc4c2f1ef296c96e3dcd07700f6ad96950c7b4c"
           }
         ]
       },
@@ -1379,10 +2225,10 @@
       "producerExportProof": null,
       "technicalExportProof": null,
       "priorMediaFields": {
-        "tiedosto": "",
-        "lahde": "",
-        "selite": "",
-        "lyhyt": ""
+        "tiedosto": "Nassau, The Bahamas (satellite view).jpg",
+        "lahde": "Axelspace Corporation, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Nassau ja New Providencen itäosa Hodoyoshi-1-satelliitista heinäkuussa 2017.",
+        "lyhyt": "Nassau ja New Providencen itäosa Hodoyoshi-1-satelliitista heinäkuussa 2017."
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -1415,7 +2261,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "9ee0363e287ef499d1c26c8ac5bc77a947c54e226ed1e58757fbe0b69d1a88de",
       "targetAfterSHA256": "57e7cc6ac3b2c19da2514841987e79f90d8662bcc310c0a4c97d3cb24d06524c",
-      "contextAfterSHA256": "57e7cc6ac3b2c19da2514841987e79f90d8662bcc310c0a4c97d3cb24d06524c"
+      "contextAfterSHA256": "57e7cc6ac3b2c19da2514841987e79f90d8662bcc310c0a4c97d3cb24d06524c",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e12",
@@ -1468,7 +2316,7 @@
         3394
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/nassau/sisalto.json",
-      "sourceContentSHA256": "836a23b7047697263a30d535db52048cb05e0ee77bc09253cb62d84b11edcb68",
+      "sourceContentSHA256": "9ee0363e287ef499d1c26c8ac5bc77a947c54e226ed1e58757fbe0b69d1a88de",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e64115ed0a6ddb7248578efedfed722ef0d2ff504277404aa9d278281d3e4924",
         "semanticContextSHA256": "e64115ed0a6ddb7248578efedfed722ef0d2ff504277404aa9d278281d3e4924",
@@ -1617,7 +2465,7 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/nassau/illustration-qa-extra.json",
-            "sha256": "90a3935f9c49a641c384f0dc375b4266e0dd746d3a555336f208e0dcdd5e668d"
+            "sha256": "14f602e3cf939a641d73d3fb0bc4c2f1ef296c96e3dcd07700f6ad96950c7b4c"
           }
         ]
       },
@@ -1690,7 +2538,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "9ee0363e287ef499d1c26c8ac5bc77a947c54e226ed1e58757fbe0b69d1a88de",
       "targetAfterSHA256": "e64115ed0a6ddb7248578efedfed722ef0d2ff504277404aa9d278281d3e4924",
-      "contextAfterSHA256": "e64115ed0a6ddb7248578efedfed722ef0d2ff504277404aa9d278281d3e4924"
+      "contextAfterSHA256": "e64115ed0a6ddb7248578efedfed722ef0d2ff504277404aa9d278281d3e4924",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e12",
@@ -1743,7 +2593,7 @@
         2061
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/nassau/sisalto.json",
-      "sourceContentSHA256": "836a23b7047697263a30d535db52048cb05e0ee77bc09253cb62d84b11edcb68",
+      "sourceContentSHA256": "9ee0363e287ef499d1c26c8ac5bc77a947c54e226ed1e58757fbe0b69d1a88de",
       "semanticSourceBind": {
         "targetBeforeSHA256": "4622f7699dc484e79d595ed6f21a4688899296d97e09a74b6b59516703b1f2d5",
         "semanticContextSHA256": "4622f7699dc484e79d595ed6f21a4688899296d97e09a74b6b59516703b1f2d5",
@@ -1900,7 +2750,7 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/nassau/illustration-qa-extra.json",
-            "sha256": "90a3935f9c49a641c384f0dc375b4266e0dd746d3a555336f208e0dcdd5e668d"
+            "sha256": "14f602e3cf939a641d73d3fb0bc4c2f1ef296c96e3dcd07700f6ad96950c7b4c"
           }
         ]
       },
@@ -1973,10 +2823,14 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "9ee0363e287ef499d1c26c8ac5bc77a947c54e226ed1e58757fbe0b69d1a88de",
       "targetAfterSHA256": "4622f7699dc484e79d595ed6f21a4688899296d97e09a74b6b59516703b1f2d5",
-      "contextAfterSHA256": "4622f7699dc484e79d595ed6f21a4688899296d97e09a74b6b59516703b1f2d5"
+      "contextAfterSHA256": "4622f7699dc484e79d595ed6f21a4688899296d97e09a74b6b59516703b1f2d5",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     }
   ],
   "runtimeIntegrationPending": true,
-  "ownerAcceptedNotImpliedByAuthorization": true,
-  "gameIntegrated": false
+  "ownerAcceptedNotImpliedByAuthorization": false,
+  "gameIntegrated": false,
+  "allAssetsExplicitlyOwnerApproved": true,
+  "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
 }

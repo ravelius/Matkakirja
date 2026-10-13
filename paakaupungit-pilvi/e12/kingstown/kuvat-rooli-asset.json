@@ -2,7 +2,7 @@
   "schemaVersion": "capital-city-role-assets/v1",
   "era": "e12",
   "city": "kingstown",
-  "authorization": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+  "authorization": "hyväksyn kaikki tekemäsi kuvat. toimita ne claudelle. claudelta saat uusia ohjeita jatkoa varten",
   "sourceContentAfterSHA256": "d32acbf1cdb20106854a566e67882358ac25f05ebd6837284edd3ac88bd72dce",
   "assets": [
     {
@@ -157,7 +157,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/kingstown/illustration-qa-extra.json",
-        "fileSHA256": "88b01cb26d61ac88b9bddbb72b62353199976a5ed218f71f73fb6e99701d61b9",
+        "fileSHA256": "3dc87df216396a147b7019de855c3512c2014b6669c0193581682271144f484e",
         "item": {
           "slot": "O4",
           "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
@@ -247,7 +247,7 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/kingstown/illustration-qa-extra.json",
-            "sha256": "88b01cb26d61ac88b9bddbb72b62353199976a5ed218f71f73fb6e99701d61b9"
+            "sha256": "3dc87df216396a147b7019de855c3512c2014b6669c0193581682271144f484e"
           }
         ]
       },
@@ -332,7 +332,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "d32acbf1cdb20106854a566e67882358ac25f05ebd6837284edd3ac88bd72dce",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "efdbfe15f323b039e4afe88a7d366bddfa8c902be0db997d81ea3383b06d12a9"
+      "contextAfterSHA256": "efdbfe15f323b039e4afe88a7d366bddfa8c902be0db997d81ea3383b06d12a9",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e12",
@@ -473,7 +475,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/kingstown/illustration-qa-extra.json",
-        "fileSHA256": "88b01cb26d61ac88b9bddbb72b62353199976a5ed218f71f73fb6e99701d61b9",
+        "fileSHA256": "3dc87df216396a147b7019de855c3512c2014b6669c0193581682271144f484e",
         "item": {
           "slot": "L1",
           "targetJsonPath": "$.kaupunkilehti[1].nostot[0]",
@@ -553,7 +555,7 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/kingstown/illustration-qa-extra.json",
-            "sha256": "88b01cb26d61ac88b9bddbb72b62353199976a5ed218f71f73fb6e99701d61b9"
+            "sha256": "3dc87df216396a147b7019de855c3512c2014b6669c0193581682271144f484e"
           }
         ]
       },
@@ -638,7 +640,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "d32acbf1cdb20106854a566e67882358ac25f05ebd6837284edd3ac88bd72dce",
       "targetAfterSHA256": "99c6f881f29b3af365cf14f814fc51abbf3cf351de009794e8fd6534b9427f15",
-      "contextAfterSHA256": "99c6f881f29b3af365cf14f814fc51abbf3cf351de009794e8fd6534b9427f15"
+      "contextAfterSHA256": "99c6f881f29b3af365cf14f814fc51abbf3cf351de009794e8fd6534b9427f15",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e12",
@@ -778,7 +782,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/kingstown/illustration-qa-extra.json",
-        "fileSHA256": "88b01cb26d61ac88b9bddbb72b62353199976a5ed218f71f73fb6e99701d61b9",
+        "fileSHA256": "3dc87df216396a147b7019de855c3512c2014b6669c0193581682271144f484e",
         "item": {
           "slot": "L2",
           "targetJsonPath": "$.kaupunkilehti[1].nostot[1]",
@@ -856,7 +860,7 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/kingstown/illustration-qa-extra.json",
-            "sha256": "88b01cb26d61ac88b9bddbb72b62353199976a5ed218f71f73fb6e99701d61b9"
+            "sha256": "3dc87df216396a147b7019de855c3512c2014b6669c0193581682271144f484e"
           }
         ]
       },
@@ -941,7 +945,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "d32acbf1cdb20106854a566e67882358ac25f05ebd6837284edd3ac88bd72dce",
       "targetAfterSHA256": "0912c0d23e0a87150bbe03ad5ef0ab901067e908365c94bc582a985fc874d5b0",
-      "contextAfterSHA256": "0912c0d23e0a87150bbe03ad5ef0ab901067e908365c94bc582a985fc874d5b0"
+      "contextAfterSHA256": "0912c0d23e0a87150bbe03ad5ef0ab901067e908365c94bc582a985fc874d5b0",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e12",
@@ -1080,7 +1086,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/kingstown/illustration-qa-extra.json",
-        "fileSHA256": "88b01cb26d61ac88b9bddbb72b62353199976a5ed218f71f73fb6e99701d61b9",
+        "fileSHA256": "3dc87df216396a147b7019de855c3512c2014b6669c0193581682271144f484e",
         "item": {
           "slot": "L3",
           "targetJsonPath": "$.kaupunkilehti[1].nostot[2]",
@@ -1157,7 +1163,7 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/kingstown/illustration-qa-extra.json",
-            "sha256": "88b01cb26d61ac88b9bddbb72b62353199976a5ed218f71f73fb6e99701d61b9"
+            "sha256": "3dc87df216396a147b7019de855c3512c2014b6669c0193581682271144f484e"
           }
         ]
       },
@@ -1242,7 +1248,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "d32acbf1cdb20106854a566e67882358ac25f05ebd6837284edd3ac88bd72dce",
       "targetAfterSHA256": "0b559b7316c229aaf7c7cb4c746ad3efe9ea3478bdce75dcc22ad4955e2ec450",
-      "contextAfterSHA256": "0b559b7316c229aaf7c7cb4c746ad3efe9ea3478bdce75dcc22ad4955e2ec450"
+      "contextAfterSHA256": "0b559b7316c229aaf7c7cb4c746ad3efe9ea3478bdce75dcc22ad4955e2ec450",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e12",
@@ -1401,7 +1409,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/kingstown/illustration-qa-extra.json",
-        "fileSHA256": "88b01cb26d61ac88b9bddbb72b62353199976a5ed218f71f73fb6e99701d61b9",
+        "fileSHA256": "3dc87df216396a147b7019de855c3512c2014b6669c0193581682271144f484e",
         "item": {
           "slot": "L4",
           "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
@@ -1499,7 +1507,7 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/kingstown/illustration-qa-extra.json",
-            "sha256": "88b01cb26d61ac88b9bddbb72b62353199976a5ed218f71f73fb6e99701d61b9"
+            "sha256": "3dc87df216396a147b7019de855c3512c2014b6669c0193581682271144f484e"
           }
         ]
       },
@@ -1584,7 +1592,350 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "d32acbf1cdb20106854a566e67882358ac25f05ebd6837284edd3ac88bd72dce",
       "targetAfterSHA256": "efaa31ad94d3d2c6f24a8d1da9319eda9631e1603f4432b4bc5077c20292d426",
-      "contextAfterSHA256": "efaa31ad94d3d2c6f24a8d1da9319eda9631e1603f4432b4bc5077c20292d426"
+      "contextAfterSHA256": "efaa31ad94d3d2c6f24a8d1da9319eda9631e1603f4432b4bc5077c20292d426",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+    },
+    {
+      "era": "e12",
+      "city": "kingstown",
+      "slot": "O3",
+      "type": "illustration",
+      "assetID": "e12-kingstown-O3-a28334e70c",
+      "galleryImageID": "e12-kingstown-O3-a28334e70c",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[2].kuva",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "matkailijalle",
+        "artikkeli",
+        "jaksot",
+        2,
+        "kuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/kingstown/e12-kingstown-O3-a28334e70c-70612dc9ba3f.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva opastekstissä mainitusta leipäpuuaiheesta.",
+        "lyhyt": "Havainnekuva opastekstissä mainitusta leipäpuuaiheesta."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/kingstown/e12-kingstown-O3-a28334e70c-70612dc9ba3f.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva opastekstissä mainitusta leipäpuuaiheesta.",
+        "lyhyt": "Havainnekuva opastekstissä mainitusta leipäpuuaiheesta."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "70612dc9ba3fa6f6a01299af1a7a1f7f345e9339f897ad2fa9c6b5e426840405",
+      "exportSHA256": "75a8a71845b9b34de2cb2b992fbf3911099c26c169928e800802210309e309a7",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/kingstown/e12-kingstown-O3-a28334e70c-70612dc9ba3f.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/kingstown/e12-kingstown-O3-a28334e70c-70612dc9ba3f.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e12/kingstown/e12-kingstown-O3-a28334e70c-70612dc9ba3f.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/kingstown/sisalto.json",
+      "sourceContentSHA256": "d32acbf1cdb20106854a566e67882358ac25f05ebd6837284edd3ac88bd72dce",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "48c1b6101bfab1bfc0c8b039ddc5c475a54fca3d30bd826a9951315bb75d168e",
+        "subjectTitle": "Puutarha ja kukkula",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Tavallinen ruoka/raaka-aine tai luonnonmateriaali, ei nimetyn paikan, rakennuksen, suojatun taideteoksen tai historiallisen yksilön rekonstruktio. Uusi itsenäinen havainne, ei O4-tiedoston tai muun aiemman kuvan uudelleenkäyttö.",
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/kingstown/assets/e12-kingstown-O3-a28334e70c/original.png",
+            "nativeSHA256": "70612dc9ba3fa6f6a01299af1a7a1f7f345e9339f897ad2fa9c6b5e426840405",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "nativeAspectRatio": 1.5,
+            "format": "PNG",
+            "pngChunks": [
+              "IHDR",
+              "caBX",
+              "IDAT",
+              "IEND"
+            ],
+            "manifestMatch": true,
+            "captionFi": "Havainnekuva opastekstissä mainitusta leipäpuuaiheesta.",
+            "sourceEvidence": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/kingstown/sisalto.json",
+              "contentSHA256": "d32acbf1cdb20106854a566e67882358ac25f05ebd6837284edd3ac88bd72dce",
+              "sourceText": "Kasvitieteellinen puutarha on Kingstownin pohjoisella laidalla. Sen kasvihistoriaan kuuluvat lääkekasvit, viljelykokeet ja meritse tuodut leipäpuut. Lintutarhan kasvatusohjelma liittyy saaren kotoperäiseen papukaijaan. Fort Charlotte sijaitsee kaupungin länsipuolella kukkulalla. Selvitä linnakkeen käyntimahdollisuus etukäteen.",
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/kingstown/faktapohja.md",
+              "originalSources": [
+                "https://en.wikipedia.org/wiki/Saint_Vincent_and_the_Grenadines_Botanic_Gardens"
+              ],
+              "ccRelease": {
+                "O4": {
+                  "subject": "yleinen nimetön roti-ruokahavainne, ei tietyn ravintolan annoskuva",
+                  "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/kingstown/sisalto.json",
+                  "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+                  "sourceText": "Kingstownin keskustan ruokapaikkojen tarjonnassa on esimerkiksi rotia ja keittoja.",
+                  "originalSource": "https://en.wikivoyage.org/wiki/Kingstown",
+                  "constraints": "Ei lisättyä tekstiä, logoja, pakkauksia, kasvoja tai nimettyä paikkarakennusta; havainnollistuksen nimitys. Yhteinen reserve ennen gen-kutsua."
+                }
+              },
+              "generationAuthorization": {
+                "rule": "OHJEET: turvallinen yleishavainnollistus ilman CC-odotusta",
+                "sharedReservationRecord": "/Volumes/T7 4TB/ChatGPT-Codex-active/coordination/paakaupungit-claims/08391cff28146b17/e12/kingstown/O3/owner.json",
+                "ccReleaseRequired": false,
+                "scope": "lähdeperustainen turvallinen avoin mixed; ei PHOTO/C1-C3 tai nimetty kaupunkiasettelu"
+              },
+              "sourceTopicAudit": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/source-scout/continuation-20261013/safe-topic-production-priorities.json",
+              "sourceTopicAuditSHA256": "b5fd12034028af4a090b68a5ac0644b7a6d737a177b35b838ab6b3974c772dc0",
+              "auditContentSHA256": "d32acbf1cdb20106854a566e67882358ac25f05ebd6837284edd3ac88bd72dce",
+              "auditTargetContext": "Puutarha ja kukkula Kasvitieteellinen puutarha on Kingstownin pohjoisella laidalla. Sen kasvihistoriaan kuuluvat lääkekasvit, viljelykokeet ja meritse tuodut leipäpuut. Lintutarhan kasvatusohjelma liittyy saaren kotoperäiseen papukaijaan. Fort Charlotte sijaitsee kaupungin länsipuolella kukkulalla. Selvitä linnakkeen käyntimahdollisuus etukäteen.",
+              "productionAuthorization": "13.10.2026 source-thread user instruction: generate all own job20 rows now, live target/atomic claim first; overrides waiting_cc_or_safe_reference and audit productionAllowedByThisAudit=false only for these documented ordinary subjects."
+            },
+            "rightsEvidence": "Tavallinen ruoka/raaka-aine tai luonnonmateriaali, ei nimetyn paikan, rakennuksen, suojatun taideteoksen tai historiallisen yksilön rekonstruktio. Uusi itsenäinen havainne, ei O4-tiedoston tai muun aiemman kuvan uudelleenkäyttö.",
+            "content": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/kingstown/sisalto.json",
+              "contentSHA256": "d32acbf1cdb20106854a566e67882358ac25f05ebd6837284edd3ac88bd72dce",
+              "targetObjectExists": true,
+              "targetContainer": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[2]",
+              "targetText": {
+                "otsikko": "Puutarha ja kukkula",
+                "teksti": "Kasvitieteellinen puutarha on Kingstownin pohjoisella laidalla. Sen kasvihistoriaan kuuluvat lääkekasvit, viljelykokeet ja meritse tuodut leipäpuut. Lintutarhan kasvatusohjelma liittyy saaren kotoperäiseen papukaijaan. Fort Charlotte sijaitsee kaupungin länsipuolella kukkulalla. Selvitä linnakkeen käyntimahdollisuus etukäteen.",
+                "kuva": {
+                  "tiedosto": "",
+                  "lyhyt": "",
+                  "selite": "",
+                  "lahde": ""
+                }
+              },
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/kingstown/faktapohja.md",
+              "factSheetSHA256": "c668716c2a51509cefcbaccba306543782e86acc682f5078130529a6a0680d48",
+              "factAssessment": "Nykyinen O3-jakso Puutarha ja kukkula kertoo meritse tuoduista leipäpuista. Faktapohja rivi40/K3–K5: Providence-matka ja Kingstownin puutarhan leipäpuut; kuva ei väitä olevansa historiallisen kantapuun kloonijälkeläinen tai puutarhasta kuvattu yksilö."
+            },
+            "visualInspection": {
+              "tool": "view_image",
+              "detail": "original",
+              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/kingstown/assets/e12-kingstown-O3-a28334e70c/original.png",
+              "inspectedBy": "qa-e12",
+              "inspectedAt": "2026-10-13T13:40:53Z",
+              "observations": "Yksi kokonainen vihreä pyöreähkö leipäpuun hedelmä paksuine katkaistuine kantoineen ja yksi syvään liuskoittunut lehti. Hedelmän luontaisen monikulmaisen pinnan solut vaihtelevat koossa, värissä ja kulumissa; pieniä epäsäännöllisiä ruskeita ja vaaleita kohtia. Lehden pääsuoni jatkuu lehtiruodista ja sivusuonet haarautuvat liuskoihin; reunat jatkuvia. Ei puutarhanäkymää, lajike-/yksilöväitettä, laivaa, tekstiä, logoja tai ihmisiä."
+            },
+            "otherReviewerVerdicts": [],
+            "openConflict": false,
+            "ownershipMarker": "qa-handoff-kuvitus-3.json"
+          },
+          "qaReason": "Leipäpuun hedelmän ja syvään liuskoittuneen lehden havainne sopii O3-jakson meritse tuotujen leipäpuiden aiheeseen. Kasvin osien rakenne on johdonmukainen, ja kuvateksti rajaa kuvan yleiseksi aihehavainteeksi. Natiivin1536×1024mitat ja SHA täsmäävät."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva opastekstissä mainitusta leipäpuuaiheesta.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/kingstown/illustration-qa-extra.json",
+        "fileSHA256": "3dc87df216396a147b7019de855c3512c2014b6669c0193581682271144f484e",
+        "item": {
+          "slot": "O3",
+          "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[2].kuva",
+          "assetID": "e12-kingstown-O3-a28334e70c",
+          "sha256": "70612dc9ba3fa6f6a01299af1a7a1f7f345e9339f897ad2fa9c6b5e426840405",
+          "verdict": "accepted",
+          "reason": "Leipäpuun hedelmän ja syvään liuskoittuneen lehden havainne sopii O3-jakson meritse tuotujen leipäpuiden aiheeseen. Kasvin osien rakenne on johdonmukainen, ja kuvateksti rajaa kuvan yleiseksi aihehavainteeksi. Natiivin1536×1024mitat ja SHA täsmäävät.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/kingstown/assets/e12-kingstown-O3-a28334e70c/original.png",
+            "nativeSHA256": "70612dc9ba3fa6f6a01299af1a7a1f7f345e9339f897ad2fa9c6b5e426840405",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "nativeAspectRatio": 1.5,
+            "format": "PNG",
+            "pngChunks": [
+              "IHDR",
+              "caBX",
+              "IDAT",
+              "IEND"
+            ],
+            "manifestMatch": true,
+            "captionFi": "Havainnekuva opastekstissä mainitusta leipäpuuaiheesta.",
+            "sourceEvidence": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/kingstown/sisalto.json",
+              "contentSHA256": "d32acbf1cdb20106854a566e67882358ac25f05ebd6837284edd3ac88bd72dce",
+              "sourceText": "Kasvitieteellinen puutarha on Kingstownin pohjoisella laidalla. Sen kasvihistoriaan kuuluvat lääkekasvit, viljelykokeet ja meritse tuodut leipäpuut. Lintutarhan kasvatusohjelma liittyy saaren kotoperäiseen papukaijaan. Fort Charlotte sijaitsee kaupungin länsipuolella kukkulalla. Selvitä linnakkeen käyntimahdollisuus etukäteen.",
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/kingstown/faktapohja.md",
+              "originalSources": [
+                "https://en.wikipedia.org/wiki/Saint_Vincent_and_the_Grenadines_Botanic_Gardens"
+              ],
+              "ccRelease": {
+                "O4": {
+                  "subject": "yleinen nimetön roti-ruokahavainne, ei tietyn ravintolan annoskuva",
+                  "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/kingstown/sisalto.json",
+                  "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+                  "sourceText": "Kingstownin keskustan ruokapaikkojen tarjonnassa on esimerkiksi rotia ja keittoja.",
+                  "originalSource": "https://en.wikivoyage.org/wiki/Kingstown",
+                  "constraints": "Ei lisättyä tekstiä, logoja, pakkauksia, kasvoja tai nimettyä paikkarakennusta; havainnollistuksen nimitys. Yhteinen reserve ennen gen-kutsua."
+                }
+              },
+              "generationAuthorization": {
+                "rule": "OHJEET: turvallinen yleishavainnollistus ilman CC-odotusta",
+                "sharedReservationRecord": "/Volumes/T7 4TB/ChatGPT-Codex-active/coordination/paakaupungit-claims/08391cff28146b17/e12/kingstown/O3/owner.json",
+                "ccReleaseRequired": false,
+                "scope": "lähdeperustainen turvallinen avoin mixed; ei PHOTO/C1-C3 tai nimetty kaupunkiasettelu"
+              },
+              "sourceTopicAudit": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/source-scout/continuation-20261013/safe-topic-production-priorities.json",
+              "sourceTopicAuditSHA256": "b5fd12034028af4a090b68a5ac0644b7a6d737a177b35b838ab6b3974c772dc0",
+              "auditContentSHA256": "d32acbf1cdb20106854a566e67882358ac25f05ebd6837284edd3ac88bd72dce",
+              "auditTargetContext": "Puutarha ja kukkula Kasvitieteellinen puutarha on Kingstownin pohjoisella laidalla. Sen kasvihistoriaan kuuluvat lääkekasvit, viljelykokeet ja meritse tuodut leipäpuut. Lintutarhan kasvatusohjelma liittyy saaren kotoperäiseen papukaijaan. Fort Charlotte sijaitsee kaupungin länsipuolella kukkulalla. Selvitä linnakkeen käyntimahdollisuus etukäteen.",
+              "productionAuthorization": "13.10.2026 source-thread user instruction: generate all own job20 rows now, live target/atomic claim first; overrides waiting_cc_or_safe_reference and audit productionAllowedByThisAudit=false only for these documented ordinary subjects."
+            },
+            "rightsEvidence": "Tavallinen ruoka/raaka-aine tai luonnonmateriaali, ei nimetyn paikan, rakennuksen, suojatun taideteoksen tai historiallisen yksilön rekonstruktio. Uusi itsenäinen havainne, ei O4-tiedoston tai muun aiemman kuvan uudelleenkäyttö.",
+            "content": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/kingstown/sisalto.json",
+              "contentSHA256": "d32acbf1cdb20106854a566e67882358ac25f05ebd6837284edd3ac88bd72dce",
+              "targetObjectExists": true,
+              "targetContainer": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[2]",
+              "targetText": {
+                "otsikko": "Puutarha ja kukkula",
+                "teksti": "Kasvitieteellinen puutarha on Kingstownin pohjoisella laidalla. Sen kasvihistoriaan kuuluvat lääkekasvit, viljelykokeet ja meritse tuodut leipäpuut. Lintutarhan kasvatusohjelma liittyy saaren kotoperäiseen papukaijaan. Fort Charlotte sijaitsee kaupungin länsipuolella kukkulalla. Selvitä linnakkeen käyntimahdollisuus etukäteen.",
+                "kuva": {
+                  "tiedosto": "",
+                  "lyhyt": "",
+                  "selite": "",
+                  "lahde": ""
+                }
+              },
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/kingstown/faktapohja.md",
+              "factSheetSHA256": "c668716c2a51509cefcbaccba306543782e86acc682f5078130529a6a0680d48",
+              "factAssessment": "Nykyinen O3-jakso Puutarha ja kukkula kertoo meritse tuoduista leipäpuista. Faktapohja rivi40/K3–K5: Providence-matka ja Kingstownin puutarhan leipäpuut; kuva ei väitä olevansa historiallisen kantapuun kloonijälkeläinen tai puutarhasta kuvattu yksilö."
+            },
+            "visualInspection": {
+              "tool": "view_image",
+              "detail": "original",
+              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/kingstown/assets/e12-kingstown-O3-a28334e70c/original.png",
+              "inspectedBy": "qa-e12",
+              "inspectedAt": "2026-10-13T13:40:53Z",
+              "observations": "Yksi kokonainen vihreä pyöreähkö leipäpuun hedelmä paksuine katkaistuine kantoineen ja yksi syvään liuskoittunut lehti. Hedelmän luontaisen monikulmaisen pinnan solut vaihtelevat koossa, värissä ja kulumissa; pieniä epäsäännöllisiä ruskeita ja vaaleita kohtia. Lehden pääsuoni jatkuu lehtiruodista ja sivusuonet haarautuvat liuskoihin; reunat jatkuvia. Ei puutarhanäkymää, lajike-/yksilöväitettä, laivaa, tekstiä, logoja tai ihmisiä."
+            },
+            "otherReviewerVerdicts": [],
+            "openConflict": false,
+            "ownershipMarker": "qa-handoff-kuvitus-3.json"
+          },
+          "reviewedAt": "2026-10-13T13:40:53.806591+00:00",
+          "reviewerGroup": "qa-e12"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/kingstown/qa.json",
+            "sha256": "22a9f0fd7dbd79f1fec05058d3b447a67fe789f679469212109716c28578ab5c"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/kingstown/illustration-qa-extra.json",
+            "sha256": "3dc87df216396a147b7019de855c3512c2014b6669c0193581682271144f484e"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/kingstown/e12-kingstown-O3-a28334e70c-70612dc9ba3f.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/kingstown/e12-kingstown-O3-a28334e70c-70612dc9ba3f.png?t=75a8a71845b9b34d",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/kingstown/e12-kingstown-O3-a28334e70c-70612dc9ba3f.png",
+        "sha256": "75a8a71845b9b34de2cb2b992fbf3911099c26c169928e800802210309e309a7",
+        "bytes": 2838529,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e12-kingstown-O3-a28334e70c",
+        "nativeSHA256": "70612dc9ba3fa6f6a01299af1a7a1f7f345e9339f897ad2fa9c6b5e426840405",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e12/kingstown/e12-kingstown-O3-a28334e70c-70612dc9ba3f.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e12",
+        "city": "kingstown",
+        "slot": "O3",
+        "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[2].kuva",
+        "verifiedAt": "2026-10-13T13:41:53.355595+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e12/kingstown/e12-kingstown-O3-a28334e70c-70612dc9ba3f.png",
+        "sha256": "75a8a71845b9b34de2cb2b992fbf3911099c26c169928e800802210309e309a7",
+        "bytes": 2838529,
+        "SHAReadAt": "2026-10-13T13:40:55.311592+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "70612dc9ba3fa6f6a01299af1a7a1f7f345e9339f897ad2fa9c6b5e426840405",
+        "rgbPixelSHA256": "3dc7b29af494f7de05393b41f13a0e04f092b286ed7c68c3b0e2db5c87f9ee4b",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "d32acbf1cdb20106854a566e67882358ac25f05ebd6837284edd3ac88bd72dce",
+      "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+      "contextAfterSHA256": "48c1b6101bfab1bfc0c8b039ddc5c475a54fca3d30bd826a9951315bb75d168e",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e12",
@@ -1795,7 +2146,7 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/kingstown/illustration-qa-extra.json",
-            "sha256": "88b01cb26d61ac88b9bddbb72b62353199976a5ed218f71f73fb6e99701d61b9"
+            "sha256": "3dc87df216396a147b7019de855c3512c2014b6669c0193581682271144f484e"
           }
         ]
       },
@@ -1868,7 +2219,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "d32acbf1cdb20106854a566e67882358ac25f05ebd6837284edd3ac88bd72dce",
       "targetAfterSHA256": "bb868a05a1e7f87837a12372a6ef384e0000e2c1197b8a8fac501a4dadc0cbef",
-      "contextAfterSHA256": "bb868a05a1e7f87837a12372a6ef384e0000e2c1197b8a8fac501a4dadc0cbef"
+      "contextAfterSHA256": "bb868a05a1e7f87837a12372a6ef384e0000e2c1197b8a8fac501a4dadc0cbef",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e12",
@@ -2084,7 +2437,7 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/kingstown/illustration-qa-extra.json",
-            "sha256": "88b01cb26d61ac88b9bddbb72b62353199976a5ed218f71f73fb6e99701d61b9"
+            "sha256": "3dc87df216396a147b7019de855c3512c2014b6669c0193581682271144f484e"
           }
         ]
       },
@@ -2157,7 +2510,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "d32acbf1cdb20106854a566e67882358ac25f05ebd6837284edd3ac88bd72dce",
       "targetAfterSHA256": "8183a4f686549314e896874782c50fe28198fc52eeb459820b36d8b94699b03c",
-      "contextAfterSHA256": "8183a4f686549314e896874782c50fe28198fc52eeb459820b36d8b94699b03c"
+      "contextAfterSHA256": "8183a4f686549314e896874782c50fe28198fc52eeb459820b36d8b94699b03c",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e12",
@@ -2371,7 +2726,7 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/kingstown/illustration-qa-extra.json",
-            "sha256": "88b01cb26d61ac88b9bddbb72b62353199976a5ed218f71f73fb6e99701d61b9"
+            "sha256": "3dc87df216396a147b7019de855c3512c2014b6669c0193581682271144f484e"
           }
         ]
       },
@@ -2444,10 +2799,14 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "d32acbf1cdb20106854a566e67882358ac25f05ebd6837284edd3ac88bd72dce",
       "targetAfterSHA256": "c48b0feb6a254d87436c58828b4a567b2d67cdc6b9668fce301cf8f676cedba4",
-      "contextAfterSHA256": "fbf366fdbe61f79a148bd030a47f2aec317281ea6fd3bf6ec78ea55f35f33318"
+      "contextAfterSHA256": "fbf366fdbe61f79a148bd030a47f2aec317281ea6fd3bf6ec78ea55f35f33318",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     }
   ],
   "runtimeIntegrationPending": true,
-  "ownerAcceptedNotImpliedByAuthorization": true,
-  "gameIntegrated": false
+  "ownerAcceptedNotImpliedByAuthorization": false,
+  "gameIntegrated": false,
+  "allAssetsExplicitlyOwnerApproved": true,
+  "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
 }

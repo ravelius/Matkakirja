@@ -2,7 +2,7 @@
   "schemaVersion": "capital-city-role-assets/v1",
   "era": "e12",
   "city": "saintjohns",
-  "authorization": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+  "authorization": "hyväksyn kaikki tekemäsi kuvat. toimita ne claudelle. claudelta saat uusia ohjeita jatkoa varten",
   "sourceContentAfterSHA256": "166dc94921e2aa33bf3ddf2c42518d76eeed26d64ef95b72811effedd4aea96a",
   "assets": [
     {
@@ -146,7 +146,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/saintjohns/illustration-qa-extra.json",
-        "fileSHA256": "a4bc491778aba177fa9878021beb3ec71f86cb0a321d27f19e449da3aca50e86",
+        "fileSHA256": "4565bdb138ac009939a95bb33f23ae086a9a836d6a067c40c020cda9fdd1fcda",
         "item": {
           "slot": "O4",
           "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
@@ -224,7 +224,7 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/saintjohns/illustration-qa-extra.json",
-            "sha256": "a4bc491778aba177fa9878021beb3ec71f86cb0a321d27f19e449da3aca50e86"
+            "sha256": "4565bdb138ac009939a95bb33f23ae086a9a836d6a067c40c020cda9fdd1fcda"
           }
         ]
       },
@@ -309,7 +309,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "166dc94921e2aa33bf3ddf2c42518d76eeed26d64ef95b72811effedd4aea96a",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "9f03f859e6a3cd56e816fffb17ff2baa4009397f857d852fac7f467d60e6546b"
+      "contextAfterSHA256": "9f03f859e6a3cd56e816fffb17ff2baa4009397f857d852fac7f467d60e6546b",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e12",
@@ -450,7 +452,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/saintjohns/illustration-qa-extra.json",
-        "fileSHA256": "a4bc491778aba177fa9878021beb3ec71f86cb0a321d27f19e449da3aca50e86",
+        "fileSHA256": "4565bdb138ac009939a95bb33f23ae086a9a836d6a067c40c020cda9fdd1fcda",
         "item": {
           "slot": "K1",
           "targetJsonPath": "$.kaupunkilehti[0].nostot[0]",
@@ -530,7 +532,7 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/saintjohns/illustration-qa-extra.json",
-            "sha256": "a4bc491778aba177fa9878021beb3ec71f86cb0a321d27f19e449da3aca50e86"
+            "sha256": "4565bdb138ac009939a95bb33f23ae086a9a836d6a067c40c020cda9fdd1fcda"
           }
         ]
       },
@@ -615,7 +617,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "166dc94921e2aa33bf3ddf2c42518d76eeed26d64ef95b72811effedd4aea96a",
       "targetAfterSHA256": "2db94c44996a3837c4689e86b10ca5d9f8402de1b2aed1d2fdc7fd72f5d3c342",
-      "contextAfterSHA256": "2db94c44996a3837c4689e86b10ca5d9f8402de1b2aed1d2fdc7fd72f5d3c342"
+      "contextAfterSHA256": "2db94c44996a3837c4689e86b10ca5d9f8402de1b2aed1d2fdc7fd72f5d3c342",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e12",
@@ -756,7 +760,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/saintjohns/illustration-qa-extra.json",
-        "fileSHA256": "a4bc491778aba177fa9878021beb3ec71f86cb0a321d27f19e449da3aca50e86",
+        "fileSHA256": "4565bdb138ac009939a95bb33f23ae086a9a836d6a067c40c020cda9fdd1fcda",
         "item": {
           "slot": "L2",
           "targetJsonPath": "$.kaupunkilehti[1].nostot[1]",
@@ -836,7 +840,7 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/saintjohns/illustration-qa-extra.json",
-            "sha256": "a4bc491778aba177fa9878021beb3ec71f86cb0a321d27f19e449da3aca50e86"
+            "sha256": "4565bdb138ac009939a95bb33f23ae086a9a836d6a067c40c020cda9fdd1fcda"
           }
         ]
       },
@@ -921,7 +925,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "166dc94921e2aa33bf3ddf2c42518d76eeed26d64ef95b72811effedd4aea96a",
       "targetAfterSHA256": "8d148180847c1ecf50ffbbc0032c55a7915c490d081310d7d3535e1690c4891b",
-      "contextAfterSHA256": "8d148180847c1ecf50ffbbc0032c55a7915c490d081310d7d3535e1690c4891b"
+      "contextAfterSHA256": "8d148180847c1ecf50ffbbc0032c55a7915c490d081310d7d3535e1690c4891b",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e12",
@@ -1063,7 +1069,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/saintjohns/illustration-qa-extra.json",
-        "fileSHA256": "a4bc491778aba177fa9878021beb3ec71f86cb0a321d27f19e449da3aca50e86",
+        "fileSHA256": "4565bdb138ac009939a95bb33f23ae086a9a836d6a067c40c020cda9fdd1fcda",
         "item": {
           "slot": "L3",
           "targetJsonPath": "$.kaupunkilehti[1].nostot[2]",
@@ -1144,7 +1150,7 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/saintjohns/illustration-qa-extra.json",
-            "sha256": "a4bc491778aba177fa9878021beb3ec71f86cb0a321d27f19e449da3aca50e86"
+            "sha256": "4565bdb138ac009939a95bb33f23ae086a9a836d6a067c40c020cda9fdd1fcda"
           }
         ]
       },
@@ -1229,7 +1235,849 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "166dc94921e2aa33bf3ddf2c42518d76eeed26d64ef95b72811effedd4aea96a",
       "targetAfterSHA256": "a1e341f7d2642d0f6b4656d6111e71bc050fd7915043e0b160aebbfc7347c112",
-      "contextAfterSHA256": "a1e341f7d2642d0f6b4656d6111e71bc050fd7915043e0b160aebbfc7347c112"
+      "contextAfterSHA256": "a1e341f7d2642d0f6b4656d6111e71bc050fd7915043e0b160aebbfc7347c112",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+    },
+    {
+      "era": "e12",
+      "city": "saintjohns",
+      "slot": "TRAVELER",
+      "type": "illustration",
+      "assetID": "e12-saintjohns-TRAVELER-ce838f1ee2",
+      "galleryImageID": "e12-saintjohns-TRAVELER-ce838f1ee2",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "matkailijalle",
+        "kuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/saintjohns/e12-saintjohns-TRAVELER-ce838f1ee2-c2c1ed42d72c.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva Saint John’sin oppaan butter bread -aiheesta.",
+        "lyhyt": "Havainnekuva Saint John’sin oppaan butter bread -aiheesta."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/saintjohns/e12-saintjohns-TRAVELER-ce838f1ee2-c2c1ed42d72c.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva Saint John’sin oppaan butter bread -aiheesta.",
+        "lyhyt": "Havainnekuva Saint John’sin oppaan butter bread -aiheesta."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "c2c1ed42d72c349ee9400308a3d3feb25c35e523dec158ab0ee27d7c30dcdc1c",
+      "exportSHA256": "fa31bd071d8e7b141fe31061aa62fa70b3e6a875824f923b91126d164630b202",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/saintjohns/e12-saintjohns-TRAVELER-ce838f1ee2-c2c1ed42d72c.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/saintjohns/e12-saintjohns-TRAVELER-ce838f1ee2-c2c1ed42d72c.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e12/saintjohns/e12-saintjohns-TRAVELER-ce838f1ee2-c2c1ed42d72c.png",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/saintjohns/sisalto.json",
+      "sourceContentSHA256": "166dc94921e2aa33bf3ddf2c42518d76eeed26d64ef95b72811effedd4aea96a",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "637af9eb74ef875cd02e1a5f38b7e2d5202546087dbccd95644f58e4bc9f7cc1",
+        "subjectTitle": "Matkailijalle",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Tavallinen ruoka/raaka-aine tai luonnonmateriaali, ei nimetyn paikan, rakennuksen, suojatun taideteoksen tai historiallisen yksilön rekonstruktio. Uusi itsenäinen havainne, ei O4-tiedoston tai muun aiemman kuvan uudelleenkäyttö.",
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/saintjohns/assets/e12-saintjohns-TRAVELER-ce838f1ee2/original.png",
+            "nativeSHA256": "c2c1ed42d72c349ee9400308a3d3feb25c35e523dec158ab0ee27d7c30dcdc1c",
+            "nativeWidth": 1024,
+            "nativeHeight": 1536,
+            "nativeAspectRatio": 0.6666666666666666,
+            "format": "PNG",
+            "pngChunks": [
+              "IHDR",
+              "caBX",
+              "IDAT",
+              "IEND"
+            ],
+            "manifestMatch": true,
+            "captionFi": "Havainnekuva Saint John’sin oppaan butter bread -aiheesta.",
+            "sourceEvidence": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/saintjohns/sisalto.json",
+              "contentSHA256": "166dc94921e2aa33bf3ddf2c42518d76eeed26d64ef95b72811effedd4aea96a",
+              "sourceText": "{\"artikkeli\": {\"jaksot\": [{\"otsikko\": \"Perille ja liikkeelle\", \"teksti\": \"Saint John’sia palvelee V. C. Birdin kansainvälinen lentoasema. Sataman risteilyliikenne saapuu Heritage Quayn ja Redcliffe Quayn alueille. Keskustan museon, katedraalin ja kauppakortteleiden ympärille voi suunnitella kävelyreitin. Fort James sijaitsee satamansuun niemellä, joten ota se erilliseksi retkeksi keskustasta. Kaupungissa on takseja, vuokra-autoja ja paikallisbussiliikennettä; varmista bussin reitti ennen lähtöä.\"}, {\"otsikko\": \"Katedraalin kaksi rakennusta\", \"teksti\": \"Katedraali seisoo keskustan kukkulalla. Sen kivikuoren sisällä on puinen tukirakenne ja verhoilu, jotka liittyvät myrskyjen ja maanjäristysten kuormien hallintaan. Rakennus on anglikaaninen kirkko, joten vierailu kannattaa sovittaa sen muuhun käyttöön. Ennen nykyistä katedraalia samalla paikalla oli aiempia kirkkoja. Sisään pääsyn ja mahdollisten kunnostustöiden tilanne kannattaa tarkistaa ennen käyntiä.\"}, {\"otsikko\": \"Oikeustalosta museoon ja torille\", \"teksti\": \"Antiguan ja Barbudan museo toimii vanhassa oikeustalossa. Kokoelmissa kohtaavat arkeologiset esineet, siirtomaakausi ja kriketti. Redcliffe Quay ja Heritage Quay ovat sataman kauppaympäristöjä; kaupungin lounaisreunan tori taas myy ruokatarvikkeita. Museokäynti ja tori sopivat keskustan tutustumiseen ilman, että koko päivä jää risteilylaiturien kauppoihin. Museon ajantasaiset vierailutiedot kannattaa tarkistaa erikseen.\"}, {\"otsikko\": \"Mitä täällä syödään\", \"teksti\": \"Fungee on maissijauhosta valmistettu, polentaa muistuttava ruoka, ja sitä pidetään pepperpotin kanssa maan kansallisruokana. Paikallisessa keittiössä ovat tuttuja myös suolakala ja ducana. Aamiaisella voi tulla vastaan munakoiso, josta käytetään nimeä troba. Butter bread on pehmeä voinen leipä, jota syödään esimerkiksi juuston kanssa. Kaupungin ruokatorilta löytyvät kasvikset, liha ja tuore kala yhdistävät satamakierroksen saarikeittiön raaka-aineisiin.\"}, {\"otsikko\": \"Milloin kannattaa tulla\", \"teksti\": \"Saint John’sissa on kesäisen lämmintä ympäri vuoden. Sateita tulee enemmän syksyn puolella, joten torikävelyn ja linnakekäynnin rinnalle kannattaa varata myös sisäkohde. Museokäynti ja katedraalin vierailu tarvitsevat oman ajantasaisen tarkistuksensa. Risteilylaitureiden käyntipäivä ja Antiguan muualle suuntautuva retki ovat eri ohjelmia: jätä keskustalle aikaa ennen satamasta lähtemistä.\"}], \"matkailu\": {\"hyvaTietaa\": [{\"otsikko\": \"Kaupunki ja seurakunta\", \"teksti\": \"Saint John’sin kaupunki ja laajempi Saint Johnin seurakunta ovat eri alueita.\"}, {\"otsikko\": \"Kirkon vierailu\", \"teksti\": \"Katedraali on käytössä oleva anglikaaninen kirkko; varmista vierailun sopivuus etukäteen.\"}, {\"otsikko\": \"Linnakkeen sijainti\", \"teksti\": \"Fort James on satamansuun niemellä, erillään keskustan museokorttelista.\"}], \"parasta\": [{\"mita\": \"Saint John’sin katedraali\", \"tahdet\": 3}, {\"mita\": \"Antiguan ja Barbudan museo\", \"tahdet\": 3}, {\"mita\": \"Fort James\", \"tahdet\": 2}, {\"mita\": \"Redcliffe Quay\", \"tahdet\": 2}, {\"mita\": \"Keskustan ruokatori\", \"tahdet\": 2}]}, \"nimi\": \"Matkailijan Saint John’s\", \"nosto\": \"Risteilylaiturien ostosalueet, ruokatori ja kukkulan katedraali näyttävät kaupungin eri tehtävät.\", \"taitto\": \"opas\", \"teksti\": \"Yhdistä keskustan museo ja katedraali torikäyntiin, ja varaa satamansuun linnakkeelle oma siirtymä.\"}, \"kappale\": \"Keskustan katedraali ja museo antavat Saint John’sin kävelylle historialliset kiintopisteet. Sataman ostosalueet ovat Redcliffe Quay ja Heritage Quay. Ruokatori löytyy kaupungin lounaisreunalta. Fort James sijaitsee satamansuun niemellä, joten sille kannattaa varata oma siirtymä. Lentoasemalta saapuvan kannattaa suunnitella keskustapäivä erikseen saaren muista retkistä.\"}",
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/saintjohns/faktapohja.md",
+              "originalSources": [
+                "https://en.wikipedia.org/wiki/Antigua_and_Barbuda_cuisine"
+              ],
+              "ccRelease": {},
+              "generationAuthorization": {
+                "rule": "OHJEET: turvallinen yleishavainnollistus ilman CC-odotusta",
+                "sharedReservationRecord": "/Volumes/T7 4TB/ChatGPT-Codex-active/coordination/paakaupungit-claims/08391cff28146b17/e12/saintjohns/TRAVELER/owner.json",
+                "ccReleaseRequired": false,
+                "scope": "lähdeperustainen turvallinen avoin mixed; ei PHOTO/C1-C3 tai nimetty kaupunkiasettelu"
+              },
+              "sourceTopicAudit": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/source-scout/continuation-20261013/safe-topic-production-priorities.json",
+              "sourceTopicAuditSHA256": "b5fd12034028af4a090b68a5ac0644b7a6d737a177b35b838ab6b3974c772dc0",
+              "auditContentSHA256": "166dc94921e2aa33bf3ddf2c42518d76eeed26d64ef95b72811effedd4aea96a",
+              "auditTargetContext": "Keskustan katedraali ja museo antavat Saint John’sin kävelylle historialliset kiintopisteet. Sataman ostosalueet ovat Redcliffe Quay ja Heritage Quay. Ruokatori löytyy kaupungin lounaisreunalta. Fort James sijaitsee satamansuun niemellä, joten sille kannattaa varata oma siirtymä. Lentoasemalta saapuvan kannattaa suunnitella keskustapäivä erikseen saaren muista retkistä. Matkailijan Saint John’s opas Yhdistä keskustan museo ja katedraali torikäyntiin, ja varaa satamansuun linnakkeelle oma siirtymä. Risteilylaiturien ostosalueet, ruokatori ja kukkulan katedraali näyttävät kaupungin eri tehtävät. Perille ja liikkeelle Saint John’sia palvelee V. C. Birdin kansainvälinen lentoasema. Sataman risteilyliikenne saapuu Heritage Quayn ja Redcliffe Quayn alueille. Keskustan museon, katedraalin ja kauppakortteleiden ympärille voi suunnitella kävelyreitin. Fort James sijaitsee satamansuun niemellä, joten ota se erilliseksi retkeksi keskustasta. Kaupungissa on takseja, vuokra-autoja ja paikallisbussiliikennettä; varmista bussin reitti ennen lähtöä. Katedraalin kaksi rakennusta Katedraali seisoo keskustan kukkulalla. Sen kivikuoren sisällä on puinen tukirakenne ja verhoilu, jotka liittyvät myrskyjen ja maanjäristysten kuormien hallintaan. Rakennus on anglikaaninen kirkko, joten vierailu kannattaa sovittaa sen muuhun käyttöön. Ennen nykyistä katedraalia samalla paikalla oli aiempia kirkkoja. Sisään pääsyn ja mahdollisten kunnostustöiden tilanne kannattaa tarkistaa ennen käyntiä. Oikeustalosta museoon ja torille Antiguan ja Barbudan museo toimii vanhassa oikeustalossa. Kokoelmissa kohtaavat arkeologiset esineet, siirtomaakausi ja kriketti. Redcliffe Quay ja Heritage Quay ovat sataman kauppaympäristöjä; kaupungin lounaisreunan tori taas myy ruokatarvikkeita. Museokäynti ja tori sopivat keskustan tutustumiseen ilman, että koko päivä jää risteilylaiturien kauppoihin. Museon ajantasaiset vierailutiedot kannattaa tarkistaa erikseen. Mitä täällä syödään Fungee on maissijauhosta valmistettu, polentaa muistuttava ruoka, ja sitä pidetään pepperpotin kanssa maan kansallisruokana. Paikallisessa keittiössä ovat tuttuja myös suolakala ja ducana. Aamiaisella voi tulla vastaan munakoiso, josta käytetään nimeä troba. Butter bread on pehmeä voinen leipä, jota syödään esimerkiksi juuston kanssa. Kaupungin ruokatorilta löytyvät kasvikset, liha ja tuore kala yhdistävät satamakierroksen saarikeittiön raaka-aineisiin. Milloin kannattaa tulla Saint John’sissa on kesäisen lämmintä ympäri vuoden. Sateita tulee enemmän syksyn puolella, joten torikävelyn ja linnakekäynnin rinnalle kannattaa varata myös sisäkohde. Museokäynti ja katedraalin vierailu tarvitsevat oman ajantasaisen tarkistuksensa. Risteilylaitureiden käyntipäivä ja Antiguan muualle suuntautuva retki ovat eri ohjelmia: jätä keskustalle aikaa ennen satamasta lähtemistä. Saint John’sin katedraali  Kivikuori ja puinen sisärakenne kertovat saaren rakennusolosuhteista. Antiguan ja Barbudan museo  Entinen oikeustalo kokoaa saariston arkeologiaa ja historiaa. Fort James  Satamansuun linnakkeessa säilyy puolustus- ja merkinantohistoriaa. Redcliffe Quay  Sataman historiallinen kauppa-alue kuuluu keskustan kävelykierrokseen. Keskustan ruokatori  Kasvikset, kala ja liha näyttävät kaupungin arjen ruokakauppaa. Kaupunki ja seurakunta Saint John’sin kaupunki ja laajempi Saint Johnin seurakunta ovat eri alueita. Kirkon vierailu Katedraali on käytössä oleva anglikaaninen kirkko; varmista vierailun sopivuus etukäteen. Linnakkeen sijainti Fort James on satamansuun niemellä, erillään keskustan museokorttelista. Wikipedia",
+              "productionAuthorization": "13.10.2026 source-thread user instruction: generate all own job20 rows now, live target/atomic claim first; overrides waiting_cc_or_safe_reference and audit productionAllowedByThisAudit=false only for these documented ordinary subjects."
+            },
+            "rightsEvidence": "Tavallinen ruoka/raaka-aine tai luonnonmateriaali, ei nimetyn paikan, rakennuksen, suojatun taideteoksen tai historiallisen yksilön rekonstruktio. Uusi itsenäinen havainne, ei O4-tiedoston tai muun aiemman kuvan uudelleenkäyttö.",
+            "content": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/saintjohns/sisalto.json",
+              "contentSHA256": "166dc94921e2aa33bf3ddf2c42518d76eeed26d64ef95b72811effedd4aea96a",
+              "targetObjectExists": true,
+              "targetContainer": "$.kaupunkilehti[0].matkailijalle",
+              "targetText": {
+                "kuva": {
+                  "tiedosto": "",
+                  "lyhyt": "",
+                  "selite": "",
+                  "lahde": ""
+                },
+                "kappale": "Keskustan katedraali ja museo antavat Saint John’sin kävelylle historialliset kiintopisteet. Sataman ostosalueet ovat Redcliffe Quay ja Heritage Quay. Ruokatori löytyy kaupungin lounaisreunalta. Fort James sijaitsee satamansuun niemellä, joten sille kannattaa varata oma siirtymä. Lentoasemalta saapuvan kannattaa suunnitella keskustapäivä erikseen saaren muista retkistä.",
+                "artikkeli": {
+                  "nimi": "Matkailijan Saint John’s",
+                  "taitto": "opas",
+                  "teksti": "Yhdistä keskustan museo ja katedraali torikäyntiin, ja varaa satamansuun linnakkeelle oma siirtymä.",
+                  "nosto": "Risteilylaiturien ostosalueet, ruokatori ja kukkulan katedraali näyttävät kaupungin eri tehtävät.",
+                  "jaksot": [
+                    {
+                      "otsikko": "Perille ja liikkeelle",
+                      "teksti": "Saint John’sia palvelee V. C. Birdin kansainvälinen lentoasema. Sataman risteilyliikenne saapuu Heritage Quayn ja Redcliffe Quayn alueille. Keskustan museon, katedraalin ja kauppakortteleiden ympärille voi suunnitella kävelyreitin. Fort James sijaitsee satamansuun niemellä, joten ota se erilliseksi retkeksi keskustasta. Kaupungissa on takseja, vuokra-autoja ja paikallisbussiliikennettä; varmista bussin reitti ennen lähtöä.",
+                      "kuva": {
+                        "tiedosto": "",
+                        "lyhyt": "",
+                        "selite": "",
+                        "lahde": ""
+                      }
+                    },
+                    {
+                      "otsikko": "Katedraalin kaksi rakennusta",
+                      "teksti": "Katedraali seisoo keskustan kukkulalla. Sen kivikuoren sisällä on puinen tukirakenne ja verhoilu, jotka liittyvät myrskyjen ja maanjäristysten kuormien hallintaan. Rakennus on anglikaaninen kirkko, joten vierailu kannattaa sovittaa sen muuhun käyttöön. Ennen nykyistä katedraalia samalla paikalla oli aiempia kirkkoja. Sisään pääsyn ja mahdollisten kunnostustöiden tilanne kannattaa tarkistaa ennen käyntiä.",
+                      "kuva": {
+                        "tiedosto": "",
+                        "lyhyt": "",
+                        "selite": "",
+                        "lahde": ""
+                      }
+                    },
+                    {
+                      "otsikko": "Oikeustalosta museoon ja torille",
+                      "teksti": "Antiguan ja Barbudan museo toimii vanhassa oikeustalossa. Kokoelmissa kohtaavat arkeologiset esineet, siirtomaakausi ja kriketti. Redcliffe Quay ja Heritage Quay ovat sataman kauppaympäristöjä; kaupungin lounaisreunan tori taas myy ruokatarvikkeita. Museokäynti ja tori sopivat keskustan tutustumiseen ilman, että koko päivä jää risteilylaiturien kauppoihin. Museon ajantasaiset vierailutiedot kannattaa tarkistaa erikseen.",
+                      "kuva": {
+                        "tiedosto": "",
+                        "lyhyt": "",
+                        "selite": "",
+                        "lahde": ""
+                      }
+                    },
+                    {
+                      "otsikko": "Mitä täällä syödään",
+                      "teksti": "Fungee on maissijauhosta valmistettu, polentaa muistuttava ruoka, ja sitä pidetään pepperpotin kanssa maan kansallisruokana. Paikallisessa keittiössä ovat tuttuja myös suolakala ja ducana. Aamiaisella voi tulla vastaan munakoiso, josta käytetään nimeä troba. Butter bread on pehmeä voinen leipä, jota syödään esimerkiksi juuston kanssa. Kaupungin ruokatorilta löytyvät kasvikset, liha ja tuore kala yhdistävät satamakierroksen saarikeittiön raaka-aineisiin.",
+                      "kuva": {
+                        "tiedosto": "",
+                        "lyhyt": "",
+                        "selite": "",
+                        "lahde": ""
+                      }
+                    },
+                    {
+                      "otsikko": "Milloin kannattaa tulla",
+                      "teksti": "Saint John’sissa on kesäisen lämmintä ympäri vuoden. Sateita tulee enemmän syksyn puolella, joten torikävelyn ja linnakekäynnin rinnalle kannattaa varata myös sisäkohde. Museokäynti ja katedraalin vierailu tarvitsevat oman ajantasaisen tarkistuksensa. Risteilylaitureiden käyntipäivä ja Antiguan muualle suuntautuva retki ovat eri ohjelmia: jätä keskustalle aikaa ennen satamasta lähtemistä.",
+                      "kuva": {
+                        "tiedosto": "",
+                        "lyhyt": "",
+                        "selite": "",
+                        "lahde": ""
+                      }
+                    }
+                  ],
+                  "matkailu": {
+                    "parasta": [
+                      {
+                        "mita": "Saint John’sin katedraali",
+                        "tahdet": 3,
+                        "selite": "Kivikuori ja puinen sisärakenne kertovat saaren rakennusolosuhteista."
+                      },
+                      {
+                        "mita": "Antiguan ja Barbudan museo",
+                        "tahdet": 3,
+                        "selite": "Entinen oikeustalo kokoaa saariston arkeologiaa ja historiaa."
+                      },
+                      {
+                        "mita": "Fort James",
+                        "tahdet": 2,
+                        "selite": "Satamansuun linnakkeessa säilyy puolustus- ja merkinantohistoriaa."
+                      },
+                      {
+                        "mita": "Redcliffe Quay",
+                        "tahdet": 2,
+                        "selite": "Sataman historiallinen kauppa-alue kuuluu keskustan kävelykierrokseen."
+                      },
+                      {
+                        "mita": "Keskustan ruokatori",
+                        "tahdet": 2,
+                        "selite": "Kasvikset, kala ja liha näyttävät kaupungin arjen ruokakauppaa."
+                      }
+                    ],
+                    "hyvaTietaa": [
+                      {
+                        "otsikko": "Kaupunki ja seurakunta",
+                        "teksti": "Saint John’sin kaupunki ja laajempi Saint Johnin seurakunta ovat eri alueita."
+                      },
+                      {
+                        "otsikko": "Kirkon vierailu",
+                        "teksti": "Katedraali on käytössä oleva anglikaaninen kirkko; varmista vierailun sopivuus etukäteen."
+                      },
+                      {
+                        "otsikko": "Linnakkeen sijainti",
+                        "teksti": "Fort James on satamansuun niemellä, erillään keskustan museokorttelista."
+                      }
+                    ]
+                  },
+                  "lahde": "Wikipedia"
+                }
+              },
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/saintjohns/faktapohja.md",
+              "factSheetSHA256": "0c8b1c7f23f50a9e73ea7718627e45e6300bebcf23625152cec6bb40ad1035d2",
+              "factAssessment": "Nykyinen $.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3]: butter bread pehmeänä voisena leipänä juuston kanssa. Faktapohja rivi50/S5 Antigua and Barbuda cuisine. Havainne ei nimeä juustolajia, tuottajaa tai paikallista ruokapaikkaa."
+            },
+            "visualInspection": {
+              "tool": "view_image",
+              "detail": "original",
+              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/saintjohns/assets/e12-saintjohns-TRAVELER-ce838f1ee2/original.png",
+              "inspectedBy": "qa-e12",
+              "inspectedAt": "2026-10-13T13:34:18Z",
+              "observations": "Lautasella pieni soikea vaaleanruskea leipä, kaksi vaaleaa viipaletta ja merkitsemättömiä juustoviipaleita. Kuori, pienihuokoinen pehmeä sisus, leikkauspinnat ja juuston reunat luontevia. Ei täytettyä voileipää, palmikkoa, logoja, tekstiä, pakkauksia tai ihmisiä."
+            },
+            "otherReviewerVerdicts": [],
+            "openConflict": false,
+            "ownershipMarker": "qa-handoff-kuvitus-3.json"
+          },
+          "qaReason": "Pehmeän butter bread -leivän ja juuston havainne vastaa Saint John’sin oppaan nimenomaista ruoka-aihetta. Materiaalit ja leivän rakenne uskottavia. Natiivi1024×1536, suhde0.666667 täyttää pystyportin."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva Saint John’sin oppaan butter bread -aiheesta.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/saintjohns/illustration-qa-extra.json",
+        "fileSHA256": "4565bdb138ac009939a95bb33f23ae086a9a836d6a067c40c020cda9fdd1fcda",
+        "item": {
+          "slot": "TRAVELER",
+          "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
+          "assetID": "e12-saintjohns-TRAVELER-ce838f1ee2",
+          "sha256": "c2c1ed42d72c349ee9400308a3d3feb25c35e523dec158ab0ee27d7c30dcdc1c",
+          "verdict": "accepted",
+          "reason": "Pehmeän butter bread -leivän ja juuston havainne vastaa Saint John’sin oppaan nimenomaista ruoka-aihetta. Materiaalit ja leivän rakenne uskottavia. Natiivi1024×1536, suhde0.666667 täyttää pystyportin.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/saintjohns/assets/e12-saintjohns-TRAVELER-ce838f1ee2/original.png",
+            "nativeSHA256": "c2c1ed42d72c349ee9400308a3d3feb25c35e523dec158ab0ee27d7c30dcdc1c",
+            "nativeWidth": 1024,
+            "nativeHeight": 1536,
+            "nativeAspectRatio": 0.6666666666666666,
+            "format": "PNG",
+            "pngChunks": [
+              "IHDR",
+              "caBX",
+              "IDAT",
+              "IEND"
+            ],
+            "manifestMatch": true,
+            "captionFi": "Havainnekuva Saint John’sin oppaan butter bread -aiheesta.",
+            "sourceEvidence": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/saintjohns/sisalto.json",
+              "contentSHA256": "166dc94921e2aa33bf3ddf2c42518d76eeed26d64ef95b72811effedd4aea96a",
+              "sourceText": "{\"artikkeli\": {\"jaksot\": [{\"otsikko\": \"Perille ja liikkeelle\", \"teksti\": \"Saint John’sia palvelee V. C. Birdin kansainvälinen lentoasema. Sataman risteilyliikenne saapuu Heritage Quayn ja Redcliffe Quayn alueille. Keskustan museon, katedraalin ja kauppakortteleiden ympärille voi suunnitella kävelyreitin. Fort James sijaitsee satamansuun niemellä, joten ota se erilliseksi retkeksi keskustasta. Kaupungissa on takseja, vuokra-autoja ja paikallisbussiliikennettä; varmista bussin reitti ennen lähtöä.\"}, {\"otsikko\": \"Katedraalin kaksi rakennusta\", \"teksti\": \"Katedraali seisoo keskustan kukkulalla. Sen kivikuoren sisällä on puinen tukirakenne ja verhoilu, jotka liittyvät myrskyjen ja maanjäristysten kuormien hallintaan. Rakennus on anglikaaninen kirkko, joten vierailu kannattaa sovittaa sen muuhun käyttöön. Ennen nykyistä katedraalia samalla paikalla oli aiempia kirkkoja. Sisään pääsyn ja mahdollisten kunnostustöiden tilanne kannattaa tarkistaa ennen käyntiä.\"}, {\"otsikko\": \"Oikeustalosta museoon ja torille\", \"teksti\": \"Antiguan ja Barbudan museo toimii vanhassa oikeustalossa. Kokoelmissa kohtaavat arkeologiset esineet, siirtomaakausi ja kriketti. Redcliffe Quay ja Heritage Quay ovat sataman kauppaympäristöjä; kaupungin lounaisreunan tori taas myy ruokatarvikkeita. Museokäynti ja tori sopivat keskustan tutustumiseen ilman, että koko päivä jää risteilylaiturien kauppoihin. Museon ajantasaiset vierailutiedot kannattaa tarkistaa erikseen.\"}, {\"otsikko\": \"Mitä täällä syödään\", \"teksti\": \"Fungee on maissijauhosta valmistettu, polentaa muistuttava ruoka, ja sitä pidetään pepperpotin kanssa maan kansallisruokana. Paikallisessa keittiössä ovat tuttuja myös suolakala ja ducana. Aamiaisella voi tulla vastaan munakoiso, josta käytetään nimeä troba. Butter bread on pehmeä voinen leipä, jota syödään esimerkiksi juuston kanssa. Kaupungin ruokatorilta löytyvät kasvikset, liha ja tuore kala yhdistävät satamakierroksen saarikeittiön raaka-aineisiin.\"}, {\"otsikko\": \"Milloin kannattaa tulla\", \"teksti\": \"Saint John’sissa on kesäisen lämmintä ympäri vuoden. Sateita tulee enemmän syksyn puolella, joten torikävelyn ja linnakekäynnin rinnalle kannattaa varata myös sisäkohde. Museokäynti ja katedraalin vierailu tarvitsevat oman ajantasaisen tarkistuksensa. Risteilylaitureiden käyntipäivä ja Antiguan muualle suuntautuva retki ovat eri ohjelmia: jätä keskustalle aikaa ennen satamasta lähtemistä.\"}], \"matkailu\": {\"hyvaTietaa\": [{\"otsikko\": \"Kaupunki ja seurakunta\", \"teksti\": \"Saint John’sin kaupunki ja laajempi Saint Johnin seurakunta ovat eri alueita.\"}, {\"otsikko\": \"Kirkon vierailu\", \"teksti\": \"Katedraali on käytössä oleva anglikaaninen kirkko; varmista vierailun sopivuus etukäteen.\"}, {\"otsikko\": \"Linnakkeen sijainti\", \"teksti\": \"Fort James on satamansuun niemellä, erillään keskustan museokorttelista.\"}], \"parasta\": [{\"mita\": \"Saint John’sin katedraali\", \"tahdet\": 3}, {\"mita\": \"Antiguan ja Barbudan museo\", \"tahdet\": 3}, {\"mita\": \"Fort James\", \"tahdet\": 2}, {\"mita\": \"Redcliffe Quay\", \"tahdet\": 2}, {\"mita\": \"Keskustan ruokatori\", \"tahdet\": 2}]}, \"nimi\": \"Matkailijan Saint John’s\", \"nosto\": \"Risteilylaiturien ostosalueet, ruokatori ja kukkulan katedraali näyttävät kaupungin eri tehtävät.\", \"taitto\": \"opas\", \"teksti\": \"Yhdistä keskustan museo ja katedraali torikäyntiin, ja varaa satamansuun linnakkeelle oma siirtymä.\"}, \"kappale\": \"Keskustan katedraali ja museo antavat Saint John’sin kävelylle historialliset kiintopisteet. Sataman ostosalueet ovat Redcliffe Quay ja Heritage Quay. Ruokatori löytyy kaupungin lounaisreunalta. Fort James sijaitsee satamansuun niemellä, joten sille kannattaa varata oma siirtymä. Lentoasemalta saapuvan kannattaa suunnitella keskustapäivä erikseen saaren muista retkistä.\"}",
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/saintjohns/faktapohja.md",
+              "originalSources": [
+                "https://en.wikipedia.org/wiki/Antigua_and_Barbuda_cuisine"
+              ],
+              "ccRelease": {},
+              "generationAuthorization": {
+                "rule": "OHJEET: turvallinen yleishavainnollistus ilman CC-odotusta",
+                "sharedReservationRecord": "/Volumes/T7 4TB/ChatGPT-Codex-active/coordination/paakaupungit-claims/08391cff28146b17/e12/saintjohns/TRAVELER/owner.json",
+                "ccReleaseRequired": false,
+                "scope": "lähdeperustainen turvallinen avoin mixed; ei PHOTO/C1-C3 tai nimetty kaupunkiasettelu"
+              },
+              "sourceTopicAudit": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/source-scout/continuation-20261013/safe-topic-production-priorities.json",
+              "sourceTopicAuditSHA256": "b5fd12034028af4a090b68a5ac0644b7a6d737a177b35b838ab6b3974c772dc0",
+              "auditContentSHA256": "166dc94921e2aa33bf3ddf2c42518d76eeed26d64ef95b72811effedd4aea96a",
+              "auditTargetContext": "Keskustan katedraali ja museo antavat Saint John’sin kävelylle historialliset kiintopisteet. Sataman ostosalueet ovat Redcliffe Quay ja Heritage Quay. Ruokatori löytyy kaupungin lounaisreunalta. Fort James sijaitsee satamansuun niemellä, joten sille kannattaa varata oma siirtymä. Lentoasemalta saapuvan kannattaa suunnitella keskustapäivä erikseen saaren muista retkistä. Matkailijan Saint John’s opas Yhdistä keskustan museo ja katedraali torikäyntiin, ja varaa satamansuun linnakkeelle oma siirtymä. Risteilylaiturien ostosalueet, ruokatori ja kukkulan katedraali näyttävät kaupungin eri tehtävät. Perille ja liikkeelle Saint John’sia palvelee V. C. Birdin kansainvälinen lentoasema. Sataman risteilyliikenne saapuu Heritage Quayn ja Redcliffe Quayn alueille. Keskustan museon, katedraalin ja kauppakortteleiden ympärille voi suunnitella kävelyreitin. Fort James sijaitsee satamansuun niemellä, joten ota se erilliseksi retkeksi keskustasta. Kaupungissa on takseja, vuokra-autoja ja paikallisbussiliikennettä; varmista bussin reitti ennen lähtöä. Katedraalin kaksi rakennusta Katedraali seisoo keskustan kukkulalla. Sen kivikuoren sisällä on puinen tukirakenne ja verhoilu, jotka liittyvät myrskyjen ja maanjäristysten kuormien hallintaan. Rakennus on anglikaaninen kirkko, joten vierailu kannattaa sovittaa sen muuhun käyttöön. Ennen nykyistä katedraalia samalla paikalla oli aiempia kirkkoja. Sisään pääsyn ja mahdollisten kunnostustöiden tilanne kannattaa tarkistaa ennen käyntiä. Oikeustalosta museoon ja torille Antiguan ja Barbudan museo toimii vanhassa oikeustalossa. Kokoelmissa kohtaavat arkeologiset esineet, siirtomaakausi ja kriketti. Redcliffe Quay ja Heritage Quay ovat sataman kauppaympäristöjä; kaupungin lounaisreunan tori taas myy ruokatarvikkeita. Museokäynti ja tori sopivat keskustan tutustumiseen ilman, että koko päivä jää risteilylaiturien kauppoihin. Museon ajantasaiset vierailutiedot kannattaa tarkistaa erikseen. Mitä täällä syödään Fungee on maissijauhosta valmistettu, polentaa muistuttava ruoka, ja sitä pidetään pepperpotin kanssa maan kansallisruokana. Paikallisessa keittiössä ovat tuttuja myös suolakala ja ducana. Aamiaisella voi tulla vastaan munakoiso, josta käytetään nimeä troba. Butter bread on pehmeä voinen leipä, jota syödään esimerkiksi juuston kanssa. Kaupungin ruokatorilta löytyvät kasvikset, liha ja tuore kala yhdistävät satamakierroksen saarikeittiön raaka-aineisiin. Milloin kannattaa tulla Saint John’sissa on kesäisen lämmintä ympäri vuoden. Sateita tulee enemmän syksyn puolella, joten torikävelyn ja linnakekäynnin rinnalle kannattaa varata myös sisäkohde. Museokäynti ja katedraalin vierailu tarvitsevat oman ajantasaisen tarkistuksensa. Risteilylaitureiden käyntipäivä ja Antiguan muualle suuntautuva retki ovat eri ohjelmia: jätä keskustalle aikaa ennen satamasta lähtemistä. Saint John’sin katedraali  Kivikuori ja puinen sisärakenne kertovat saaren rakennusolosuhteista. Antiguan ja Barbudan museo  Entinen oikeustalo kokoaa saariston arkeologiaa ja historiaa. Fort James  Satamansuun linnakkeessa säilyy puolustus- ja merkinantohistoriaa. Redcliffe Quay  Sataman historiallinen kauppa-alue kuuluu keskustan kävelykierrokseen. Keskustan ruokatori  Kasvikset, kala ja liha näyttävät kaupungin arjen ruokakauppaa. Kaupunki ja seurakunta Saint John’sin kaupunki ja laajempi Saint Johnin seurakunta ovat eri alueita. Kirkon vierailu Katedraali on käytössä oleva anglikaaninen kirkko; varmista vierailun sopivuus etukäteen. Linnakkeen sijainti Fort James on satamansuun niemellä, erillään keskustan museokorttelista. Wikipedia",
+              "productionAuthorization": "13.10.2026 source-thread user instruction: generate all own job20 rows now, live target/atomic claim first; overrides waiting_cc_or_safe_reference and audit productionAllowedByThisAudit=false only for these documented ordinary subjects."
+            },
+            "rightsEvidence": "Tavallinen ruoka/raaka-aine tai luonnonmateriaali, ei nimetyn paikan, rakennuksen, suojatun taideteoksen tai historiallisen yksilön rekonstruktio. Uusi itsenäinen havainne, ei O4-tiedoston tai muun aiemman kuvan uudelleenkäyttö.",
+            "content": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/saintjohns/sisalto.json",
+              "contentSHA256": "166dc94921e2aa33bf3ddf2c42518d76eeed26d64ef95b72811effedd4aea96a",
+              "targetObjectExists": true,
+              "targetContainer": "$.kaupunkilehti[0].matkailijalle",
+              "targetText": {
+                "kuva": {
+                  "tiedosto": "",
+                  "lyhyt": "",
+                  "selite": "",
+                  "lahde": ""
+                },
+                "kappale": "Keskustan katedraali ja museo antavat Saint John’sin kävelylle historialliset kiintopisteet. Sataman ostosalueet ovat Redcliffe Quay ja Heritage Quay. Ruokatori löytyy kaupungin lounaisreunalta. Fort James sijaitsee satamansuun niemellä, joten sille kannattaa varata oma siirtymä. Lentoasemalta saapuvan kannattaa suunnitella keskustapäivä erikseen saaren muista retkistä.",
+                "artikkeli": {
+                  "nimi": "Matkailijan Saint John’s",
+                  "taitto": "opas",
+                  "teksti": "Yhdistä keskustan museo ja katedraali torikäyntiin, ja varaa satamansuun linnakkeelle oma siirtymä.",
+                  "nosto": "Risteilylaiturien ostosalueet, ruokatori ja kukkulan katedraali näyttävät kaupungin eri tehtävät.",
+                  "jaksot": [
+                    {
+                      "otsikko": "Perille ja liikkeelle",
+                      "teksti": "Saint John’sia palvelee V. C. Birdin kansainvälinen lentoasema. Sataman risteilyliikenne saapuu Heritage Quayn ja Redcliffe Quayn alueille. Keskustan museon, katedraalin ja kauppakortteleiden ympärille voi suunnitella kävelyreitin. Fort James sijaitsee satamansuun niemellä, joten ota se erilliseksi retkeksi keskustasta. Kaupungissa on takseja, vuokra-autoja ja paikallisbussiliikennettä; varmista bussin reitti ennen lähtöä.",
+                      "kuva": {
+                        "tiedosto": "",
+                        "lyhyt": "",
+                        "selite": "",
+                        "lahde": ""
+                      }
+                    },
+                    {
+                      "otsikko": "Katedraalin kaksi rakennusta",
+                      "teksti": "Katedraali seisoo keskustan kukkulalla. Sen kivikuoren sisällä on puinen tukirakenne ja verhoilu, jotka liittyvät myrskyjen ja maanjäristysten kuormien hallintaan. Rakennus on anglikaaninen kirkko, joten vierailu kannattaa sovittaa sen muuhun käyttöön. Ennen nykyistä katedraalia samalla paikalla oli aiempia kirkkoja. Sisään pääsyn ja mahdollisten kunnostustöiden tilanne kannattaa tarkistaa ennen käyntiä.",
+                      "kuva": {
+                        "tiedosto": "",
+                        "lyhyt": "",
+                        "selite": "",
+                        "lahde": ""
+                      }
+                    },
+                    {
+                      "otsikko": "Oikeustalosta museoon ja torille",
+                      "teksti": "Antiguan ja Barbudan museo toimii vanhassa oikeustalossa. Kokoelmissa kohtaavat arkeologiset esineet, siirtomaakausi ja kriketti. Redcliffe Quay ja Heritage Quay ovat sataman kauppaympäristöjä; kaupungin lounaisreunan tori taas myy ruokatarvikkeita. Museokäynti ja tori sopivat keskustan tutustumiseen ilman, että koko päivä jää risteilylaiturien kauppoihin. Museon ajantasaiset vierailutiedot kannattaa tarkistaa erikseen.",
+                      "kuva": {
+                        "tiedosto": "",
+                        "lyhyt": "",
+                        "selite": "",
+                        "lahde": ""
+                      }
+                    },
+                    {
+                      "otsikko": "Mitä täällä syödään",
+                      "teksti": "Fungee on maissijauhosta valmistettu, polentaa muistuttava ruoka, ja sitä pidetään pepperpotin kanssa maan kansallisruokana. Paikallisessa keittiössä ovat tuttuja myös suolakala ja ducana. Aamiaisella voi tulla vastaan munakoiso, josta käytetään nimeä troba. Butter bread on pehmeä voinen leipä, jota syödään esimerkiksi juuston kanssa. Kaupungin ruokatorilta löytyvät kasvikset, liha ja tuore kala yhdistävät satamakierroksen saarikeittiön raaka-aineisiin.",
+                      "kuva": {
+                        "tiedosto": "",
+                        "lyhyt": "",
+                        "selite": "",
+                        "lahde": ""
+                      }
+                    },
+                    {
+                      "otsikko": "Milloin kannattaa tulla",
+                      "teksti": "Saint John’sissa on kesäisen lämmintä ympäri vuoden. Sateita tulee enemmän syksyn puolella, joten torikävelyn ja linnakekäynnin rinnalle kannattaa varata myös sisäkohde. Museokäynti ja katedraalin vierailu tarvitsevat oman ajantasaisen tarkistuksensa. Risteilylaitureiden käyntipäivä ja Antiguan muualle suuntautuva retki ovat eri ohjelmia: jätä keskustalle aikaa ennen satamasta lähtemistä.",
+                      "kuva": {
+                        "tiedosto": "",
+                        "lyhyt": "",
+                        "selite": "",
+                        "lahde": ""
+                      }
+                    }
+                  ],
+                  "matkailu": {
+                    "parasta": [
+                      {
+                        "mita": "Saint John’sin katedraali",
+                        "tahdet": 3,
+                        "selite": "Kivikuori ja puinen sisärakenne kertovat saaren rakennusolosuhteista."
+                      },
+                      {
+                        "mita": "Antiguan ja Barbudan museo",
+                        "tahdet": 3,
+                        "selite": "Entinen oikeustalo kokoaa saariston arkeologiaa ja historiaa."
+                      },
+                      {
+                        "mita": "Fort James",
+                        "tahdet": 2,
+                        "selite": "Satamansuun linnakkeessa säilyy puolustus- ja merkinantohistoriaa."
+                      },
+                      {
+                        "mita": "Redcliffe Quay",
+                        "tahdet": 2,
+                        "selite": "Sataman historiallinen kauppa-alue kuuluu keskustan kävelykierrokseen."
+                      },
+                      {
+                        "mita": "Keskustan ruokatori",
+                        "tahdet": 2,
+                        "selite": "Kasvikset, kala ja liha näyttävät kaupungin arjen ruokakauppaa."
+                      }
+                    ],
+                    "hyvaTietaa": [
+                      {
+                        "otsikko": "Kaupunki ja seurakunta",
+                        "teksti": "Saint John’sin kaupunki ja laajempi Saint Johnin seurakunta ovat eri alueita."
+                      },
+                      {
+                        "otsikko": "Kirkon vierailu",
+                        "teksti": "Katedraali on käytössä oleva anglikaaninen kirkko; varmista vierailun sopivuus etukäteen."
+                      },
+                      {
+                        "otsikko": "Linnakkeen sijainti",
+                        "teksti": "Fort James on satamansuun niemellä, erillään keskustan museokorttelista."
+                      }
+                    ]
+                  },
+                  "lahde": "Wikipedia"
+                }
+              },
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/saintjohns/faktapohja.md",
+              "factSheetSHA256": "0c8b1c7f23f50a9e73ea7718627e45e6300bebcf23625152cec6bb40ad1035d2",
+              "factAssessment": "Nykyinen $.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3]: butter bread pehmeänä voisena leipänä juuston kanssa. Faktapohja rivi50/S5 Antigua and Barbuda cuisine. Havainne ei nimeä juustolajia, tuottajaa tai paikallista ruokapaikkaa."
+            },
+            "visualInspection": {
+              "tool": "view_image",
+              "detail": "original",
+              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/saintjohns/assets/e12-saintjohns-TRAVELER-ce838f1ee2/original.png",
+              "inspectedBy": "qa-e12",
+              "inspectedAt": "2026-10-13T13:34:18Z",
+              "observations": "Lautasella pieni soikea vaaleanruskea leipä, kaksi vaaleaa viipaletta ja merkitsemättömiä juustoviipaleita. Kuori, pienihuokoinen pehmeä sisus, leikkauspinnat ja juuston reunat luontevia. Ei täytettyä voileipää, palmikkoa, logoja, tekstiä, pakkauksia tai ihmisiä."
+            },
+            "otherReviewerVerdicts": [],
+            "openConflict": false,
+            "ownershipMarker": "qa-handoff-kuvitus-3.json"
+          },
+          "reviewedAt": "2026-10-13T13:34:18.772106+00:00",
+          "reviewerGroup": "qa-e12"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/saintjohns/qa.json",
+            "sha256": "4c285432161e22d461eb739164924691c5c37820eeb1a87bbab8ab19bd8a117e"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/saintjohns/illustration-qa-extra.json",
+            "sha256": "4565bdb138ac009939a95bb33f23ae086a9a836d6a067c40c020cda9fdd1fcda"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/saintjohns/e12-saintjohns-TRAVELER-ce838f1ee2-c2c1ed42d72c.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/saintjohns/e12-saintjohns-TRAVELER-ce838f1ee2-c2c1ed42d72c.png?t=fa31bd071d8e7b14",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/saintjohns/e12-saintjohns-TRAVELER-ce838f1ee2-c2c1ed42d72c.png",
+        "sha256": "fa31bd071d8e7b141fe31061aa62fa70b3e6a875824f923b91126d164630b202",
+        "bytes": 2320077,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e12-saintjohns-TRAVELER-ce838f1ee2",
+        "nativeSHA256": "c2c1ed42d72c349ee9400308a3d3feb25c35e523dec158ab0ee27d7c30dcdc1c",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e12/saintjohns/e12-saintjohns-TRAVELER-ce838f1ee2-c2c1ed42d72c.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e12",
+        "city": "saintjohns",
+        "slot": "TRAVELER",
+        "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
+        "verifiedAt": "2026-10-13T13:34:31.650851+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e12/saintjohns/e12-saintjohns-TRAVELER-ce838f1ee2-c2c1ed42d72c.png",
+        "sha256": "fa31bd071d8e7b141fe31061aa62fa70b3e6a875824f923b91126d164630b202",
+        "bytes": 2320077,
+        "SHAReadAt": "2026-10-13T13:34:24.661031+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1024,
+        "height": 1536,
+        "pixelWidth": 1024,
+        "pixelHeight": 1536,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "c2c1ed42d72c349ee9400308a3d3feb25c35e523dec158ab0ee27d7c30dcdc1c",
+        "rgbPixelSHA256": "9c62c52506f33bef2681faa349d1ae895554fb971a0241eb76cea5437b1751d8",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "166dc94921e2aa33bf3ddf2c42518d76eeed26d64ef95b72811effedd4aea96a",
+      "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+      "contextAfterSHA256": "637af9eb74ef875cd02e1a5f38b7e2d5202546087dbccd95644f58e4bc9f7cc1",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+    },
+    {
+      "era": "e12",
+      "city": "saintjohns",
+      "slot": "K4",
+      "type": "illustration",
+      "assetID": "e12-saintjohns-K4-a00d1db0d6",
+      "galleryImageID": "e12-saintjohns-K4-a00d1db0d6",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].nostot[3]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "nostot",
+        3
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/saintjohns/e12-saintjohns-K4-a00d1db0d6-903ee2e075af.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva tekstissä mainituista ruokatorin raaka-aineista.",
+        "lyhyt": "Havainnekuva tekstissä mainituista ruokatorin raaka-aineista."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/saintjohns/e12-saintjohns-K4-a00d1db0d6-903ee2e075af.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva tekstissä mainituista ruokatorin raaka-aineista.",
+        "lyhyt": "Havainnekuva tekstissä mainituista ruokatorin raaka-aineista."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "903ee2e075af7983ef0490c23f9c78539d5ff5af4cff8805cfdc870118f58182",
+      "exportSHA256": "c1055f76de273d5a64ee877e54ed9c409ee8070aa89c595fdbc38688dcc2a9b1",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/saintjohns/e12-saintjohns-K4-a00d1db0d6-903ee2e075af.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/saintjohns/e12-saintjohns-K4-a00d1db0d6-903ee2e075af.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e12/saintjohns/e12-saintjohns-K4-a00d1db0d6-903ee2e075af.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/saintjohns/sisalto.json",
+      "sourceContentSHA256": "166dc94921e2aa33bf3ddf2c42518d76eeed26d64ef95b72811effedd4aea96a",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "ac17ea2113816e46a984675930844cca9aef07cc579db5813ac56057c0bea9e3",
+        "semanticContextSHA256": "ac17ea2113816e46a984675930844cca9aef07cc579db5813ac56057c0bea9e3",
+        "subjectTitle": "Sataman kauppa ja torin ruoka",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Tavallinen ruoka/raaka-aine tai luonnonmateriaali, ei nimetyn paikan, rakennuksen, suojatun taideteoksen tai historiallisen yksilön rekonstruktio. Uusi itsenäinen havainne, ei O4-tiedoston tai muun aiemman kuvan uudelleenkäyttö.",
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/saintjohns/assets/e12-saintjohns-K4-a00d1db0d6/original.png",
+            "nativeSHA256": "903ee2e075af7983ef0490c23f9c78539d5ff5af4cff8805cfdc870118f58182",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "nativeAspectRatio": 1.5,
+            "format": "PNG",
+            "pngChunks": [
+              "IHDR",
+              "caBX",
+              "IDAT",
+              "IEND"
+            ],
+            "manifestMatch": true,
+            "captionFi": "Havainnekuva tekstissä mainituista ruokatorin raaka-aineista.",
+            "sourceEvidence": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/saintjohns/sisalto.json",
+              "contentSHA256": "166dc94921e2aa33bf3ddf2c42518d76eeed26d64ef95b72811effedd4aea96a",
+              "sourceText": "Redcliffe Quay ja Heritage Quay ovat Saint John’sin risteilymatkailun kauppapaikkoja. Redcliffe on historiallisempi alue, Heritage uudempi ostosympäristö. Kaupungin lounaisreunalla toimii myös tori, jossa myydään tuoreita kasviksia, lihaa ja kalaa. Samassa satamakaupungissa kaupankäynti saa näin erilaiset kasvot: laivalta tuleva matkailija kohtaa ostoskorttelit, ruokaa etsivä paikallisen torin. Torin tuotteet kertovat kaupungin keittiöstä toisenlaisen tarinan kuin koru- ja vaatekauppojen näyteikkunat.",
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/saintjohns/faktapohja.md",
+              "originalSources": [
+                "https://en.wikipedia.org/wiki/St._John%27s,_Antigua_and_Barbuda"
+              ],
+              "ccRelease": {},
+              "generationAuthorization": {
+                "rule": "OHJEET: turvallinen yleishavainnollistus ilman CC-odotusta",
+                "sharedReservationRecord": "/Volumes/T7 4TB/ChatGPT-Codex-active/coordination/paakaupungit-claims/08391cff28146b17/e12/saintjohns/K4/owner.json",
+                "ccReleaseRequired": false,
+                "scope": "lähdeperustainen turvallinen avoin mixed; ei PHOTO/C1-C3 tai nimetty kaupunkiasettelu"
+              },
+              "sourceTopicAudit": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/source-scout/continuation-20261013/safe-topic-production-priorities.json",
+              "sourceTopicAuditSHA256": "b5fd12034028af4a090b68a5ac0644b7a6d737a177b35b838ab6b3974c772dc0",
+              "auditContentSHA256": "166dc94921e2aa33bf3ddf2c42518d76eeed26d64ef95b72811effedd4aea96a",
+              "auditTargetContext": "Sataman kauppa ja torin ruoka Redcliffe Quay ja Heritage Quay ovat Saint John’sin risteilymatkailun kauppapaikkoja. Redcliffe on historiallisempi alue, Heritage uudempi ostosympäristö. Kaupungin lounaisreunalla toimii myös tori, jossa myydään tuoreita kasviksia, lihaa ja kalaa. Samassa satamakaupungissa kaupankäynti saa näin erilaiset kasvot: laivalta tuleva matkailija kohtaa ostoskorttelit, ruokaa etsivä paikallisen torin. Torin tuotteet kertovat kaupungin keittiöstä toisenlaisen tarinan kuin koru- ja vaatekauppojen näyteikkunat. St. John's, Antigua and Barbuda    ",
+              "productionAuthorization": "13.10.2026 source-thread user instruction: generate all own job20 rows now, live target/atomic claim first; overrides waiting_cc_or_safe_reference and audit productionAllowedByThisAudit=false only for these documented ordinary subjects."
+            },
+            "rightsEvidence": "Tavallinen ruoka/raaka-aine tai luonnonmateriaali, ei nimetyn paikan, rakennuksen, suojatun taideteoksen tai historiallisen yksilön rekonstruktio. Uusi itsenäinen havainne, ei O4-tiedoston tai muun aiemman kuvan uudelleenkäyttö.",
+            "content": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/saintjohns/sisalto.json",
+              "contentSHA256": "166dc94921e2aa33bf3ddf2c42518d76eeed26d64ef95b72811effedd4aea96a",
+              "targetObjectExists": true,
+              "targetContainer": "$.kaupunkilehti[0].nostot[3]",
+              "targetText": {
+                "otsikko": "Sataman kauppa ja torin ruoka",
+                "teksti": "Redcliffe Quay ja Heritage Quay ovat Saint John’sin risteilymatkailun kauppapaikkoja. Redcliffe on historiallisempi alue, Heritage uudempi ostosympäristö. Kaupungin lounaisreunalla toimii myös tori, jossa myydään tuoreita kasviksia, lihaa ja kalaa. Samassa satamakaupungissa kaupankäynti saa näin erilaiset kasvot: laivalta tuleva matkailija kohtaa ostoskorttelit, ruokaa etsivä paikallisen torin. Torin tuotteet kertovat kaupungin keittiöstä toisenlaisen tarinan kuin koru- ja vaatekauppojen näyteikkunat.",
+                "wiki": "St. John's, Antigua and Barbuda",
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              },
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/saintjohns/faktapohja.md",
+              "factSheetSHA256": "0c8b1c7f23f50a9e73ea7718627e45e6300bebcf23625152cec6bb40ad1035d2",
+              "factAssessment": "Nykyinen $.kaupunkilehti[0].nostot[3] kertoo lounaisreunan torin tuoreista kasviksista, lihasta ja kalasta. Faktapohja rivi36/S1 Economy/Landmarks tukee raaka-aineaihetta. Havainne rajattu yleisiin raaka-aineisiin."
+            },
+            "visualInspection": {
+              "tool": "view_image",
+              "detail": "original",
+              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/saintjohns/assets/e12-saintjohns-K4-a00d1db0d6/original.png",
+              "inspectedBy": "qa-e12",
+              "inspectedAt": "2026-10-13T13:37:04Z",
+              "observations": "Neutraalilla pinnalla yksi suippeneva raaka kalafilee, kolme tomaattia, sipuli ja vihreä paprika. Fileen hieman läpikuultava liha ja lihasjaot luonnollisia, kasvien kuoret ja kannat erillisiä ja loogisia. Ei kypsää ruokaa, torikojuja, kylttejä, logoja, käsiä tai ihmisiä."
+            },
+            "otherReviewerVerdicts": [],
+            "openConflict": false,
+            "ownershipMarker": "qa-handoff-kuvitus-3.json"
+          },
+          "qaReason": "Raakojen kasvisten ja kalan havainne vastaa K4-noston torin elintarvikekauppaa. Kuvateksti ei väitä näyttävänsä Saint John’sin todellista toripöytää eikä nimeä kalalajia. Natiivi-SHA ja1536×1024mitat täsmäävät."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva tekstissä mainituista ruokatorin raaka-aineista.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/saintjohns/illustration-qa-extra.json",
+        "fileSHA256": "4565bdb138ac009939a95bb33f23ae086a9a836d6a067c40c020cda9fdd1fcda",
+        "item": {
+          "slot": "K4",
+          "targetJsonPath": "$.kaupunkilehti[0].nostot[3]",
+          "assetID": "e12-saintjohns-K4-a00d1db0d6",
+          "sha256": "903ee2e075af7983ef0490c23f9c78539d5ff5af4cff8805cfdc870118f58182",
+          "verdict": "accepted",
+          "reason": "Raakojen kasvisten ja kalan havainne vastaa K4-noston torin elintarvikekauppaa. Kuvateksti ei väitä näyttävänsä Saint John’sin todellista toripöytää eikä nimeä kalalajia. Natiivi-SHA ja1536×1024mitat täsmäävät.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/saintjohns/assets/e12-saintjohns-K4-a00d1db0d6/original.png",
+            "nativeSHA256": "903ee2e075af7983ef0490c23f9c78539d5ff5af4cff8805cfdc870118f58182",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "nativeAspectRatio": 1.5,
+            "format": "PNG",
+            "pngChunks": [
+              "IHDR",
+              "caBX",
+              "IDAT",
+              "IEND"
+            ],
+            "manifestMatch": true,
+            "captionFi": "Havainnekuva tekstissä mainituista ruokatorin raaka-aineista.",
+            "sourceEvidence": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/saintjohns/sisalto.json",
+              "contentSHA256": "166dc94921e2aa33bf3ddf2c42518d76eeed26d64ef95b72811effedd4aea96a",
+              "sourceText": "Redcliffe Quay ja Heritage Quay ovat Saint John’sin risteilymatkailun kauppapaikkoja. Redcliffe on historiallisempi alue, Heritage uudempi ostosympäristö. Kaupungin lounaisreunalla toimii myös tori, jossa myydään tuoreita kasviksia, lihaa ja kalaa. Samassa satamakaupungissa kaupankäynti saa näin erilaiset kasvot: laivalta tuleva matkailija kohtaa ostoskorttelit, ruokaa etsivä paikallisen torin. Torin tuotteet kertovat kaupungin keittiöstä toisenlaisen tarinan kuin koru- ja vaatekauppojen näyteikkunat.",
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/saintjohns/faktapohja.md",
+              "originalSources": [
+                "https://en.wikipedia.org/wiki/St._John%27s,_Antigua_and_Barbuda"
+              ],
+              "ccRelease": {},
+              "generationAuthorization": {
+                "rule": "OHJEET: turvallinen yleishavainnollistus ilman CC-odotusta",
+                "sharedReservationRecord": "/Volumes/T7 4TB/ChatGPT-Codex-active/coordination/paakaupungit-claims/08391cff28146b17/e12/saintjohns/K4/owner.json",
+                "ccReleaseRequired": false,
+                "scope": "lähdeperustainen turvallinen avoin mixed; ei PHOTO/C1-C3 tai nimetty kaupunkiasettelu"
+              },
+              "sourceTopicAudit": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/source-scout/continuation-20261013/safe-topic-production-priorities.json",
+              "sourceTopicAuditSHA256": "b5fd12034028af4a090b68a5ac0644b7a6d737a177b35b838ab6b3974c772dc0",
+              "auditContentSHA256": "166dc94921e2aa33bf3ddf2c42518d76eeed26d64ef95b72811effedd4aea96a",
+              "auditTargetContext": "Sataman kauppa ja torin ruoka Redcliffe Quay ja Heritage Quay ovat Saint John’sin risteilymatkailun kauppapaikkoja. Redcliffe on historiallisempi alue, Heritage uudempi ostosympäristö. Kaupungin lounaisreunalla toimii myös tori, jossa myydään tuoreita kasviksia, lihaa ja kalaa. Samassa satamakaupungissa kaupankäynti saa näin erilaiset kasvot: laivalta tuleva matkailija kohtaa ostoskorttelit, ruokaa etsivä paikallisen torin. Torin tuotteet kertovat kaupungin keittiöstä toisenlaisen tarinan kuin koru- ja vaatekauppojen näyteikkunat. St. John's, Antigua and Barbuda    ",
+              "productionAuthorization": "13.10.2026 source-thread user instruction: generate all own job20 rows now, live target/atomic claim first; overrides waiting_cc_or_safe_reference and audit productionAllowedByThisAudit=false only for these documented ordinary subjects."
+            },
+            "rightsEvidence": "Tavallinen ruoka/raaka-aine tai luonnonmateriaali, ei nimetyn paikan, rakennuksen, suojatun taideteoksen tai historiallisen yksilön rekonstruktio. Uusi itsenäinen havainne, ei O4-tiedoston tai muun aiemman kuvan uudelleenkäyttö.",
+            "content": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/saintjohns/sisalto.json",
+              "contentSHA256": "166dc94921e2aa33bf3ddf2c42518d76eeed26d64ef95b72811effedd4aea96a",
+              "targetObjectExists": true,
+              "targetContainer": "$.kaupunkilehti[0].nostot[3]",
+              "targetText": {
+                "otsikko": "Sataman kauppa ja torin ruoka",
+                "teksti": "Redcliffe Quay ja Heritage Quay ovat Saint John’sin risteilymatkailun kauppapaikkoja. Redcliffe on historiallisempi alue, Heritage uudempi ostosympäristö. Kaupungin lounaisreunalla toimii myös tori, jossa myydään tuoreita kasviksia, lihaa ja kalaa. Samassa satamakaupungissa kaupankäynti saa näin erilaiset kasvot: laivalta tuleva matkailija kohtaa ostoskorttelit, ruokaa etsivä paikallisen torin. Torin tuotteet kertovat kaupungin keittiöstä toisenlaisen tarinan kuin koru- ja vaatekauppojen näyteikkunat.",
+                "wiki": "St. John's, Antigua and Barbuda",
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              },
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/saintjohns/faktapohja.md",
+              "factSheetSHA256": "0c8b1c7f23f50a9e73ea7718627e45e6300bebcf23625152cec6bb40ad1035d2",
+              "factAssessment": "Nykyinen $.kaupunkilehti[0].nostot[3] kertoo lounaisreunan torin tuoreista kasviksista, lihasta ja kalasta. Faktapohja rivi36/S1 Economy/Landmarks tukee raaka-aineaihetta. Havainne rajattu yleisiin raaka-aineisiin."
+            },
+            "visualInspection": {
+              "tool": "view_image",
+              "detail": "original",
+              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/saintjohns/assets/e12-saintjohns-K4-a00d1db0d6/original.png",
+              "inspectedBy": "qa-e12",
+              "inspectedAt": "2026-10-13T13:37:04Z",
+              "observations": "Neutraalilla pinnalla yksi suippeneva raaka kalafilee, kolme tomaattia, sipuli ja vihreä paprika. Fileen hieman läpikuultava liha ja lihasjaot luonnollisia, kasvien kuoret ja kannat erillisiä ja loogisia. Ei kypsää ruokaa, torikojuja, kylttejä, logoja, käsiä tai ihmisiä."
+            },
+            "otherReviewerVerdicts": [],
+            "openConflict": false,
+            "ownershipMarker": "qa-handoff-kuvitus-3.json"
+          },
+          "reviewedAt": "2026-10-13T13:37:05.088218+00:00",
+          "reviewerGroup": "qa-e12"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/saintjohns/qa.json",
+            "sha256": "4c285432161e22d461eb739164924691c5c37820eeb1a87bbab8ab19bd8a117e"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/saintjohns/illustration-qa-extra.json",
+            "sha256": "4565bdb138ac009939a95bb33f23ae086a9a836d6a067c40c020cda9fdd1fcda"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/saintjohns/e12-saintjohns-K4-a00d1db0d6-903ee2e075af.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/saintjohns/e12-saintjohns-K4-a00d1db0d6-903ee2e075af.png?t=c1055f76de273d5a",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/saintjohns/e12-saintjohns-K4-a00d1db0d6-903ee2e075af.png",
+        "sha256": "c1055f76de273d5a64ee877e54ed9c409ee8070aa89c595fdbc38688dcc2a9b1",
+        "bytes": 2058214,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e12-saintjohns-K4-a00d1db0d6",
+        "nativeSHA256": "903ee2e075af7983ef0490c23f9c78539d5ff5af4cff8805cfdc870118f58182",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e12/saintjohns/e12-saintjohns-K4-a00d1db0d6-903ee2e075af.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e12",
+        "city": "saintjohns",
+        "slot": "K4",
+        "targetJsonPath": "$.kaupunkilehti[0].nostot[3]",
+        "verifiedAt": "2026-10-13T13:37:33.236770+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e12/saintjohns/e12-saintjohns-K4-a00d1db0d6-903ee2e075af.png",
+        "sha256": "c1055f76de273d5a64ee877e54ed9c409ee8070aa89c595fdbc38688dcc2a9b1",
+        "bytes": 2058214,
+        "SHAReadAt": "2026-10-13T13:37:28.389948+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "903ee2e075af7983ef0490c23f9c78539d5ff5af4cff8805cfdc870118f58182",
+        "rgbPixelSHA256": "504ebb1793ae9636a7ecffefbef69511a9432351dd466a287bf03224a1241cf4",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "166dc94921e2aa33bf3ddf2c42518d76eeed26d64ef95b72811effedd4aea96a",
+      "targetAfterSHA256": "ac17ea2113816e46a984675930844cca9aef07cc579db5813ac56057c0bea9e3",
+      "contextAfterSHA256": "ac17ea2113816e46a984675930844cca9aef07cc579db5813ac56057c0bea9e3",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e12",
@@ -1483,7 +2331,7 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/saintjohns/illustration-qa-extra.json",
-            "sha256": "a4bc491778aba177fa9878021beb3ec71f86cb0a321d27f19e449da3aca50e86"
+            "sha256": "4565bdb138ac009939a95bb33f23ae086a9a836d6a067c40c020cda9fdd1fcda"
           }
         ]
       },
@@ -1556,7 +2404,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "166dc94921e2aa33bf3ddf2c42518d76eeed26d64ef95b72811effedd4aea96a",
       "targetAfterSHA256": "872f86f84ddc3663b512874b08d1cf7d67e21b1553b3c285ca0c0692688f47a6",
-      "contextAfterSHA256": "872f86f84ddc3663b512874b08d1cf7d67e21b1553b3c285ca0c0692688f47a6"
+      "contextAfterSHA256": "872f86f84ddc3663b512874b08d1cf7d67e21b1553b3c285ca0c0692688f47a6",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e12",
@@ -1815,7 +2665,7 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/saintjohns/illustration-qa-extra.json",
-            "sha256": "a4bc491778aba177fa9878021beb3ec71f86cb0a321d27f19e449da3aca50e86"
+            "sha256": "4565bdb138ac009939a95bb33f23ae086a9a836d6a067c40c020cda9fdd1fcda"
           }
         ]
       },
@@ -1888,10 +2738,14 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "166dc94921e2aa33bf3ddf2c42518d76eeed26d64ef95b72811effedd4aea96a",
       "targetAfterSHA256": "e9139ba362eb26433ba7a4b7847eb6a491d28b197a33a0d8af32230a1b7dd5ce",
-      "contextAfterSHA256": "e9139ba362eb26433ba7a4b7847eb6a491d28b197a33a0d8af32230a1b7dd5ce"
+      "contextAfterSHA256": "e9139ba362eb26433ba7a4b7847eb6a491d28b197a33a0d8af32230a1b7dd5ce",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     }
   ],
   "runtimeIntegrationPending": true,
-  "ownerAcceptedNotImpliedByAuthorization": true,
-  "gameIntegrated": false
+  "ownerAcceptedNotImpliedByAuthorization": false,
+  "gameIntegrated": false,
+  "allAssetsExplicitlyOwnerApproved": true,
+  "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
 }

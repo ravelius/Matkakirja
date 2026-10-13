@@ -2,8 +2,8 @@
   "schemaVersion": "capital-city-role-assets/v1",
   "era": "e12",
   "city": "stgeorges",
-  "authorization": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
-  "sourceContentAfterSHA256": "6530adf5faa43579e8183fe92526d4fd5c63aa395d13740e8d3d4dba1b83d670",
+  "authorization": "hyväksyn kaikki tekemäsi kuvat. toimita ne claudelle. claudelta saat uusia ohjeita jatkoa varten",
+  "sourceContentAfterSHA256": "7ccc26be029319d0279c6016347d2c573758a2484b3bdfedf1d82c954e483f50",
   "assets": [
     {
       "era": "e12",
@@ -56,7 +56,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/stgeorges/sisalto.json",
-      "sourceContentSHA256": "f92282c0b614649a159c8582ce80f67fe03e966d2520211d4940f689de164483",
+      "sourceContentSHA256": "6530adf5faa43579e8183fe92526d4fd5c63aa395d13740e8d3d4dba1b83d670",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
         "semanticContextSHA256": "a9d31efc83d974d1dcdd97336c24430ac5f155198d34dcce55cabcfe867f31f4",
@@ -225,7 +225,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/stgeorges/qa.json",
-            "sha256": "9f1af68b85573f425751f59147753dd50fc39cd03a4d4e748d94d7845423db4c"
+            "sha256": "f2c755c1316f29fddc57312ce4f53d4e969d6a5abd44f53e9fa2d8ec68517eb7"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/stgeorges/illustration-qa-extra.json",
@@ -312,9 +312,11 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "6530adf5faa43579e8183fe92526d4fd5c63aa395d13740e8d3d4dba1b83d670",
+      "sourceContentAfterSHA256": "7ccc26be029319d0279c6016347d2c573758a2484b3bdfedf1d82c954e483f50",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "a9d31efc83d974d1dcdd97336c24430ac5f155198d34dcce55cabcfe867f31f4"
+      "contextAfterSHA256": "a9d31efc83d974d1dcdd97336c24430ac5f155198d34dcce55cabcfe867f31f4",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e12",
@@ -364,7 +366,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/stgeorges/sisalto.json",
-      "sourceContentSHA256": "f92282c0b614649a159c8582ce80f67fe03e966d2520211d4940f689de164483",
+      "sourceContentSHA256": "6530adf5faa43579e8183fe92526d4fd5c63aa395d13740e8d3d4dba1b83d670",
       "semanticSourceBind": {
         "targetBeforeSHA256": "25e3eab30d45d60c0e17d575c74087899281eeb0cb3ec88813c4b56945122894",
         "semanticContextSHA256": "25e3eab30d45d60c0e17d575c74087899281eeb0cb3ec88813c4b56945122894",
@@ -531,7 +533,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/stgeorges/qa.json",
-            "sha256": "9f1af68b85573f425751f59147753dd50fc39cd03a4d4e748d94d7845423db4c"
+            "sha256": "f2c755c1316f29fddc57312ce4f53d4e969d6a5abd44f53e9fa2d8ec68517eb7"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/stgeorges/illustration-qa-extra.json",
@@ -618,9 +620,11 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "6530adf5faa43579e8183fe92526d4fd5c63aa395d13740e8d3d4dba1b83d670",
+      "sourceContentAfterSHA256": "7ccc26be029319d0279c6016347d2c573758a2484b3bdfedf1d82c954e483f50",
       "targetAfterSHA256": "25e3eab30d45d60c0e17d575c74087899281eeb0cb3ec88813c4b56945122894",
-      "contextAfterSHA256": "25e3eab30d45d60c0e17d575c74087899281eeb0cb3ec88813c4b56945122894"
+      "contextAfterSHA256": "25e3eab30d45d60c0e17d575c74087899281eeb0cb3ec88813c4b56945122894",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e12",
@@ -673,7 +677,7 @@
         1520
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/stgeorges/sisalto.json",
-      "sourceContentSHA256": "f92282c0b614649a159c8582ce80f67fe03e966d2520211d4940f689de164483",
+      "sourceContentSHA256": "6530adf5faa43579e8183fe92526d4fd5c63aa395d13740e8d3d4dba1b83d670",
       "semanticSourceBind": {
         "targetBeforeSHA256": "ff91cb662cf30c05b24031d799d496ca30250400290f71f5ef005c4aaf5076b6",
         "semanticContextSHA256": "ff91cb662cf30c05b24031d799d496ca30250400290f71f5ef005c4aaf5076b6",
@@ -793,8 +797,8 @@
             ],
             "currentContentVersionCheck": {
               "reviewedContentSHA256": "c7c644b3f37ab98f13c2f12cdb77751d5542251e32ec8b63309ca975b8fb0138",
-              "currentContentSHA256": "f92282c0b614649a159c8582ce80f67fe03e966d2520211d4940f689de164483",
-              "checkedAt": "2026-10-12T20:45:08.506918+00:00",
+              "currentContentSHA256": "6530adf5faa43579e8183fe92526d4fd5c63aa395d13740e8d3d4dba1b83d670",
+              "checkedAt": "2026-10-13T14:23:56.840008+00:00",
               "personallyViewedAgain": false,
               "reviewedSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/c-integration/history/e12/stgeorges/c7c644b3f37ab98f13c2f12cdb77751d5542251e32ec8b63309ca975b8fb0138-sisalto.json",
               "reviewedSnapshotSHA256": "c7c644b3f37ab98f13c2f12cdb77751d5542251e32ec8b63309ca975b8fb0138",
@@ -805,8 +809,8 @@
               "imageFieldsExcludedOnlyAtInventoriedSlots": true
             },
             "currentBindingMetadataCheck": {
-              "checkedAt": "2026-10-12T20:45:08.526436+00:00",
-              "contentSHA256": "f92282c0b614649a159c8582ce80f67fe03e966d2520211d4940f689de164483",
+              "checkedAt": "2026-10-13T14:23:56.850704+00:00",
+              "contentSHA256": "6530adf5faa43579e8183fe92526d4fd5c63aa395d13740e8d3d4dba1b83d670",
               "commonsFile": "Grenada Aquarium Beach - panoramio - Stefan und Bille.jpg",
               "captionFi": "Aquarium Beachin luonnonrantaa Grenadalla vuonna 2003.",
               "credit": "Stefan_und_Bille, Commons (CC BY-SA 3.0)",
@@ -828,7 +832,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/stgeorges/qa.json",
-        "fileSHA256": "9f1af68b85573f425751f59147753dd50fc39cd03a4d4e748d94d7845423db4c",
+        "fileSHA256": "f2c755c1316f29fddc57312ce4f53d4e969d6a5abd44f53e9fa2d8ec68517eb7",
         "item": {
           "slot": "PHOTO",
           "targetJsonPath": "$.valokuva",
@@ -932,8 +936,8 @@
             ],
             "currentContentVersionCheck": {
               "reviewedContentSHA256": "c7c644b3f37ab98f13c2f12cdb77751d5542251e32ec8b63309ca975b8fb0138",
-              "currentContentSHA256": "f92282c0b614649a159c8582ce80f67fe03e966d2520211d4940f689de164483",
-              "checkedAt": "2026-10-12T20:45:08.506918+00:00",
+              "currentContentSHA256": "6530adf5faa43579e8183fe92526d4fd5c63aa395d13740e8d3d4dba1b83d670",
+              "checkedAt": "2026-10-13T14:23:56.840008+00:00",
               "personallyViewedAgain": false,
               "reviewedSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/c-integration/history/e12/stgeorges/c7c644b3f37ab98f13c2f12cdb77751d5542251e32ec8b63309ca975b8fb0138-sisalto.json",
               "reviewedSnapshotSHA256": "c7c644b3f37ab98f13c2f12cdb77751d5542251e32ec8b63309ca975b8fb0138",
@@ -944,8 +948,8 @@
               "imageFieldsExcludedOnlyAtInventoriedSlots": true
             },
             "currentBindingMetadataCheck": {
-              "checkedAt": "2026-10-12T20:45:08.526436+00:00",
-              "contentSHA256": "f92282c0b614649a159c8582ce80f67fe03e966d2520211d4940f689de164483",
+              "checkedAt": "2026-10-13T14:23:56.850704+00:00",
+              "contentSHA256": "6530adf5faa43579e8183fe92526d4fd5c63aa395d13740e8d3d4dba1b83d670",
               "commonsFile": "Grenada Aquarium Beach - panoramio - Stefan und Bille.jpg",
               "captionFi": "Aquarium Beachin luonnonrantaa Grenadalla vuonna 2003.",
               "credit": "Stefan_und_Bille, Commons (CC BY-SA 3.0)",
@@ -959,7 +963,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/stgeorges/qa.json",
-            "sha256": "9f1af68b85573f425751f59147753dd50fc39cd03a4d4e748d94d7845423db4c"
+            "sha256": "f2c755c1316f29fddc57312ce4f53d4e969d6a5abd44f53e9fa2d8ec68517eb7"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/stgeorges/illustration-qa-extra.json",
@@ -1036,9 +1040,11 @@
         "vuosi": "2003"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "6530adf5faa43579e8183fe92526d4fd5c63aa395d13740e8d3d4dba1b83d670",
+      "sourceContentAfterSHA256": "7ccc26be029319d0279c6016347d2c573758a2484b3bdfedf1d82c954e483f50",
       "targetAfterSHA256": "ff91cb662cf30c05b24031d799d496ca30250400290f71f5ef005c4aaf5076b6",
-      "contextAfterSHA256": "ff91cb662cf30c05b24031d799d496ca30250400290f71f5ef005c4aaf5076b6"
+      "contextAfterSHA256": "ff91cb662cf30c05b24031d799d496ca30250400290f71f5ef005c4aaf5076b6",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e12",
@@ -1091,7 +1097,7 @@
         1712
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/stgeorges/sisalto.json",
-      "sourceContentSHA256": "f92282c0b614649a159c8582ce80f67fe03e966d2520211d4940f689de164483",
+      "sourceContentSHA256": "6530adf5faa43579e8183fe92526d4fd5c63aa395d13740e8d3d4dba1b83d670",
       "semanticSourceBind": {
         "targetBeforeSHA256": "eabe9dbd16f337a24b550e31c0e824961ded1337a9381d3a84ddd26fc28830fb",
         "semanticContextSHA256": "eabe9dbd16f337a24b550e31c0e824961ded1337a9381d3a84ddd26fc28830fb",
@@ -1210,8 +1216,8 @@
             ],
             "currentContentVersionCheck": {
               "reviewedContentSHA256": "c7c644b3f37ab98f13c2f12cdb77751d5542251e32ec8b63309ca975b8fb0138",
-              "currentContentSHA256": "f92282c0b614649a159c8582ce80f67fe03e966d2520211d4940f689de164483",
-              "checkedAt": "2026-10-12T20:45:08.506918+00:00",
+              "currentContentSHA256": "6530adf5faa43579e8183fe92526d4fd5c63aa395d13740e8d3d4dba1b83d670",
+              "checkedAt": "2026-10-13T14:23:56.840008+00:00",
               "personallyViewedAgain": false,
               "reviewedSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/c-integration/history/e12/stgeorges/c7c644b3f37ab98f13c2f12cdb77751d5542251e32ec8b63309ca975b8fb0138-sisalto.json",
               "reviewedSnapshotSHA256": "c7c644b3f37ab98f13c2f12cdb77751d5542251e32ec8b63309ca975b8fb0138",
@@ -1222,8 +1228,8 @@
               "imageFieldsExcludedOnlyAtInventoriedSlots": true
             },
             "currentBindingMetadataCheck": {
-              "checkedAt": "2026-10-12T20:45:08.520832+00:00",
-              "contentSHA256": "f92282c0b614649a159c8582ce80f67fe03e966d2520211d4940f689de164483",
+              "checkedAt": "2026-10-13T14:23:56.847214+00:00",
+              "contentSHA256": "6530adf5faa43579e8183fe92526d4fd5c63aa395d13740e8d3d4dba1b83d670",
               "commonsFile": "St. Georges from Fort George - panoramio.jpg",
               "captionFi": "St. George’sin satama ja kaupungin rinteitä huhtikuussa 2004.",
               "credit": "Stefan_und_Bille, Wikimedia Commons (CC BY-SA 3.0)",
@@ -1245,7 +1251,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/stgeorges/qa.json",
-        "fileSHA256": "9f1af68b85573f425751f59147753dd50fc39cd03a4d4e748d94d7845423db4c",
+        "fileSHA256": "f2c755c1316f29fddc57312ce4f53d4e969d6a5abd44f53e9fa2d8ec68517eb7",
         "item": {
           "slot": "C1",
           "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
@@ -1348,8 +1354,8 @@
             ],
             "currentContentVersionCheck": {
               "reviewedContentSHA256": "c7c644b3f37ab98f13c2f12cdb77751d5542251e32ec8b63309ca975b8fb0138",
-              "currentContentSHA256": "f92282c0b614649a159c8582ce80f67fe03e966d2520211d4940f689de164483",
-              "checkedAt": "2026-10-12T20:45:08.506918+00:00",
+              "currentContentSHA256": "6530adf5faa43579e8183fe92526d4fd5c63aa395d13740e8d3d4dba1b83d670",
+              "checkedAt": "2026-10-13T14:23:56.840008+00:00",
               "personallyViewedAgain": false,
               "reviewedSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/c-integration/history/e12/stgeorges/c7c644b3f37ab98f13c2f12cdb77751d5542251e32ec8b63309ca975b8fb0138-sisalto.json",
               "reviewedSnapshotSHA256": "c7c644b3f37ab98f13c2f12cdb77751d5542251e32ec8b63309ca975b8fb0138",
@@ -1360,8 +1366,8 @@
               "imageFieldsExcludedOnlyAtInventoriedSlots": true
             },
             "currentBindingMetadataCheck": {
-              "checkedAt": "2026-10-12T20:45:08.520832+00:00",
-              "contentSHA256": "f92282c0b614649a159c8582ce80f67fe03e966d2520211d4940f689de164483",
+              "checkedAt": "2026-10-13T14:23:56.847214+00:00",
+              "contentSHA256": "6530adf5faa43579e8183fe92526d4fd5c63aa395d13740e8d3d4dba1b83d670",
               "commonsFile": "St. Georges from Fort George - panoramio.jpg",
               "captionFi": "St. George’sin satama ja kaupungin rinteitä huhtikuussa 2004.",
               "credit": "Stefan_und_Bille, Wikimedia Commons (CC BY-SA 3.0)",
@@ -1375,7 +1381,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/stgeorges/qa.json",
-            "sha256": "9f1af68b85573f425751f59147753dd50fc39cd03a4d4e748d94d7845423db4c"
+            "sha256": "f2c755c1316f29fddc57312ce4f53d4e969d6a5abd44f53e9fa2d8ec68517eb7"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/stgeorges/illustration-qa-extra.json",
@@ -1450,9 +1456,11 @@
         "tiedosto": "St. Georges from Fort George - panoramio.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "6530adf5faa43579e8183fe92526d4fd5c63aa395d13740e8d3d4dba1b83d670",
+      "sourceContentAfterSHA256": "7ccc26be029319d0279c6016347d2c573758a2484b3bdfedf1d82c954e483f50",
       "targetAfterSHA256": "eabe9dbd16f337a24b550e31c0e824961ded1337a9381d3a84ddd26fc28830fb",
-      "contextAfterSHA256": "eabe9dbd16f337a24b550e31c0e824961ded1337a9381d3a84ddd26fc28830fb"
+      "contextAfterSHA256": "eabe9dbd16f337a24b550e31c0e824961ded1337a9381d3a84ddd26fc28830fb",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e12",
@@ -1505,10 +1513,10 @@
         1712
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/stgeorges/sisalto.json",
-      "sourceContentSHA256": "f92282c0b614649a159c8582ce80f67fe03e966d2520211d4940f689de164483",
+      "sourceContentSHA256": "6530adf5faa43579e8183fe92526d4fd5c63aa395d13740e8d3d4dba1b83d670",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "targetBeforeSHA256": "748e8c63cb9283cf731b66a279f3eaa3be0d806068fc34091bca7aba9095fede",
+        "semanticContextSHA256": "748e8c63cb9283cf731b66a279f3eaa3be0d806068fc34091bca7aba9095fede",
         "subjectTitle": "St. George's",
         "targetState": "existing-target"
       },
@@ -1606,7 +1614,29 @@
             "sourceDescriptionExact": "Grenada: St. Georges, the lagoon from Fort Georges",
             "placeBoundary": "Lagoon view; not labelled Carenage, not a claim of current building condition.",
             "depictedWorkAssessment": "Broad natural/functional harbour and dispersed ordinary urban surroundings, no independent artwork or isolated creative facade as principal subject; no blanket PD/age/FOP assumption.",
-            "manifestFragment": "cc-gap-selection.json"
+            "manifestFragment": "cc-gap-selection.json",
+            "currentContentVersionCheck": {
+              "reviewedContentSHA256": "f92282c0b614649a159c8582ce80f67fe03e966d2520211d4940f689de164483",
+              "currentContentSHA256": "6530adf5faa43579e8183fe92526d4fd5c63aa395d13740e8d3d4dba1b83d670",
+              "checkedAt": "2026-10-13T14:23:56.850712+00:00",
+              "personallyViewedAgain": false,
+              "reviewedSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/c-integration/history/e12/stgeorges/f92282c0b614649a159c8582ce80f67fe03e966d2520211d4940f689de164483-sisalto.json",
+              "reviewedSnapshotSHA256": "f92282c0b614649a159c8582ce80f67fe03e966d2520211d4940f689de164483",
+              "matches": true,
+              "method": "exact archived content SHA and full nonmedia comparison",
+              "reviewedNonmediaSHA256": "fca0dca14acff61bae30fcf251c13d043dae5d2e9e1bc9b8fc9d0cf28f14d6fc",
+              "currentNonmediaSHA256": "fca0dca14acff61bae30fcf251c13d043dae5d2e9e1bc9b8fc9d0cf28f14d6fc",
+              "imageFieldsExcludedOnlyAtInventoriedSlots": true
+            },
+            "currentBindingMetadataCheck": {
+              "checkedAt": "2026-10-13T14:23:56.856891+00:00",
+              "contentSHA256": "6530adf5faa43579e8183fe92526d4fd5c63aa395d13740e8d3d4dba1b83d670",
+              "commonsFile": "St. Georges The Logoon from Fort Georges - panoramio.jpg",
+              "captionFi": "Saint George’sin laguunin satama ja vihreät rinteet vuonna 2004.",
+              "credit": "Stefan_und_Bille, Wikimedia Commons (CC BY-SA 3.0)",
+              "captionMatchesReviewed": true,
+              "personallyViewedAgain": false
+            }
           },
           "qaReason": "Aito laaja St. George’sin laguunin sataman, rantakäytön ja asutuksen näkymä sopii C2-kanteen. Alkuperäinen Description nimeää kaupungin laguunin ja Fort Georges -katselupaikan; Stefan_und_Bille ja CC BY-SA 3.0 varmennettu. Natiivit 2288×1712 sekä SHA täsmäävät. Selite rajaa vuoteen 2004 eikä nimeä laguunia Carenageksi."
         }
@@ -1622,7 +1652,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/stgeorges/qa.json",
-        "fileSHA256": "9f1af68b85573f425751f59147753dd50fc39cd03a4d4e748d94d7845423db4c",
+        "fileSHA256": "f2c755c1316f29fddc57312ce4f53d4e969d6a5abd44f53e9fa2d8ec68517eb7",
         "item": {
           "slot": "C2",
           "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[1]",
@@ -1715,7 +1745,29 @@
             "sourceDescriptionExact": "Grenada: St. Georges, the lagoon from Fort Georges",
             "placeBoundary": "Lagoon view; not labelled Carenage, not a claim of current building condition.",
             "depictedWorkAssessment": "Broad natural/functional harbour and dispersed ordinary urban surroundings, no independent artwork or isolated creative facade as principal subject; no blanket PD/age/FOP assumption.",
-            "manifestFragment": "cc-gap-selection.json"
+            "manifestFragment": "cc-gap-selection.json",
+            "currentContentVersionCheck": {
+              "reviewedContentSHA256": "f92282c0b614649a159c8582ce80f67fe03e966d2520211d4940f689de164483",
+              "currentContentSHA256": "6530adf5faa43579e8183fe92526d4fd5c63aa395d13740e8d3d4dba1b83d670",
+              "checkedAt": "2026-10-13T14:23:56.850712+00:00",
+              "personallyViewedAgain": false,
+              "reviewedSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/c-integration/history/e12/stgeorges/f92282c0b614649a159c8582ce80f67fe03e966d2520211d4940f689de164483-sisalto.json",
+              "reviewedSnapshotSHA256": "f92282c0b614649a159c8582ce80f67fe03e966d2520211d4940f689de164483",
+              "matches": true,
+              "method": "exact archived content SHA and full nonmedia comparison",
+              "reviewedNonmediaSHA256": "fca0dca14acff61bae30fcf251c13d043dae5d2e9e1bc9b8fc9d0cf28f14d6fc",
+              "currentNonmediaSHA256": "fca0dca14acff61bae30fcf251c13d043dae5d2e9e1bc9b8fc9d0cf28f14d6fc",
+              "imageFieldsExcludedOnlyAtInventoriedSlots": true
+            },
+            "currentBindingMetadataCheck": {
+              "checkedAt": "2026-10-13T14:23:56.856891+00:00",
+              "contentSHA256": "6530adf5faa43579e8183fe92526d4fd5c63aa395d13740e8d3d4dba1b83d670",
+              "commonsFile": "St. Georges The Logoon from Fort Georges - panoramio.jpg",
+              "captionFi": "Saint George’sin laguunin satama ja vihreät rinteet vuonna 2004.",
+              "credit": "Stefan_und_Bille, Wikimedia Commons (CC BY-SA 3.0)",
+              "captionMatchesReviewed": true,
+              "personallyViewedAgain": false
+            }
           },
           "reviewedAt": "2026-10-12T20:36:36.600715+00:00",
           "sha256": "83086c6385b1168c4b83f1a364ec7c5890df32e98e2b52de8c7b29f771930004"
@@ -1723,7 +1775,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/stgeorges/qa.json",
-            "sha256": "9f1af68b85573f425751f59147753dd50fc39cd03a4d4e748d94d7845423db4c"
+            "sha256": "f2c755c1316f29fddc57312ce4f53d4e969d6a5abd44f53e9fa2d8ec68517eb7"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/stgeorges/illustration-qa-extra.json",
@@ -1764,10 +1816,10 @@
       "producerExportProof": null,
       "technicalExportProof": null,
       "priorMediaFields": {
-        "tiedosto": "",
-        "lahde": "",
-        "selite": "",
-        "lyhyt": ""
+        "tiedosto": "St. Georges The Logoon from Fort Georges - panoramio.jpg",
+        "lahde": "Stefan_und_Bille, Wikimedia Commons (CC BY-SA 3.0)",
+        "selite": "Saint George’sin laguunin satama ja vihreät rinteet vuonna 2004.",
+        "lyhyt": "Saint George’sin laguunin satama ja vihreät rinteet vuonna 2004."
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -1798,12 +1850,594 @@
         "tiedosto": "St. Georges The Logoon from Fort Georges - panoramio.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "6530adf5faa43579e8183fe92526d4fd5c63aa395d13740e8d3d4dba1b83d670",
+      "sourceContentAfterSHA256": "7ccc26be029319d0279c6016347d2c573758a2484b3bdfedf1d82c954e483f50",
       "targetAfterSHA256": "748e8c63cb9283cf731b66a279f3eaa3be0d806068fc34091bca7aba9095fede",
-      "contextAfterSHA256": "748e8c63cb9283cf731b66a279f3eaa3be0d806068fc34091bca7aba9095fede"
+      "contextAfterSHA256": "748e8c63cb9283cf731b66a279f3eaa3be0d806068fc34091bca7aba9095fede",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+    },
+    {
+      "era": "e12",
+      "city": "stgeorges",
+      "slot": "C3",
+      "type": "commons",
+      "assetID": "capital-cc-e12-stgeorges-c3-ccb2be061941613e",
+      "galleryImageID": "capital-cc-e12-stgeorges-c3-ccb2be061941613e",
+      "commonsFile": "Grenada, Karibik - St. George's - North - panoramio.jpg",
+      "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[2]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "kansikuvat",
+        2
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/stgeorges/c3-ccb2be061941613e1176.jpg",
+        "suora": true,
+        "lahde": "giggel, Wikimedia Commons (CC BY 3.0)",
+        "selite": "Saint George’sin satamalahti, kaupunkikorttelit ja vihreät rinteet maaliskuussa 2012.",
+        "lyhyt": "Saint George’sin satamalahti, kaupunkikorttelit ja vihreät rinteet maaliskuussa 2012.",
+        "tiedosto": "Grenada, Karibik - St. George's - North - panoramio.jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "giggel, Wikimedia Commons (CC BY 3.0)",
+        "selite": "Saint George’sin satamalahti, kaupunkikorttelit ja vihreät rinteet maaliskuussa 2012.",
+        "lyhyt": "Saint George’sin satamalahti, kaupunkikorttelit ja vihreät rinteet maaliskuussa 2012.",
+        "tiedosto": "Grenada, Karibik - St. George's - North - panoramio.jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/stgeorges/c3-ccb2be061941613e1176.jpg",
+        "suora": true,
+        "lahde": "giggel, Wikimedia Commons (CC BY 3.0)",
+        "selite": "Saint George’sin satamalahti, kaupunkikorttelit ja vihreät rinteet maaliskuussa 2012.",
+        "lyhyt": "Saint George’sin satamalahti, kaupunkikorttelit ja vihreät rinteet maaliskuussa 2012.",
+        "tiedosto": "Grenada, Karibik - St. George's - North - panoramio.jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "ccb2be061941613e1176ec615071f17417d24d2afe5d07dfb2a2cf2d49143565",
+      "exportSHA256": "ccb2be061941613e1176ec615071f17417d24d2afe5d07dfb2a2cf2d49143565",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/stgeorges/c3-ccb2be061941613e1176.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/stgeorges/c3-ccb2be061941613e1176.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/commons-originals/e12/stgeorges/78cec5735d61e98ef065272ae8ab2bf56bd7e0bbca9503b8f86e08c5629155e9.jpg",
+      "dimensions": [
+        11231,
+        2927
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/stgeorges/sisalto.json",
+      "sourceContentSHA256": "6530adf5faa43579e8183fe92526d4fd5c63aa395d13740e8d3d4dba1b83d670",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "subjectTitle": "St. George's",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "giggel",
+        "license": "CC BY 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/3.0/deed.en",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Grenada,_Karibik_-_St._George%27s_-_North_-_panoramio.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/8/8a/Grenada%2C_Karibik_-_St._George%27s_-_North_-_panoramio.jpg",
+        "rightsEvidence": {
+          "selection": "Valokuvaajan nimi giggel on lähteen Author-taulukossa; valokuvan CC BY 3.0 ja täsmällinen lisenssilinkki on varmennettu tallennetusta lähdesivusta. Description nimeää Saint George’sin, Grenadan ja North-suunnan; Date ilmoittaa Taken on 7 March 2012. Pääaiheena on koko satamalahti, kaupungin hajautunut rakennuskanta ja rinteet. Yksittäistä luovaa julkisivua tai taideteosta ei eristetä pääaiheeksi. Kuva sisältää tavallisia sataman käyttörakenteita ja pieniä luonnollisia ympäristön kylttejä. Ei yleistä rakennusten ikään, PD-statukseen tai FOP-poikkeukseen perustuvaa päätelmää. Selite ei nimeä tarkkaa kuvauspaikkaa eikä esitä näkymää nykytilana.",
+          "QA": {
+            "manifestPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/stgeorges/cc-gap-selection.json",
+            "candidateSnapshot": {
+              "commonsFile": "Grenada, Karibik - St. George's - North - panoramio.jpg",
+              "sourcePage": "https://commons.wikimedia.org/wiki/File:Grenada,_Karibik_-_St._George%27s_-_North_-_panoramio.jpg",
+              "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/8/8a/Grenada%2C_Karibik_-_St._George%27s_-_North_-_panoramio.jpg",
+              "author": "giggel",
+              "license": "CC BY 3.0",
+              "licenseUrl": "https://creativecommons.org/licenses/by/3.0/deed.en",
+              "width": 11231,
+              "height": 2927,
+              "slot": "C3",
+              "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[2]",
+              "type": "commons",
+              "captionFi": "Saint George’sin satamalahti, kaupunkikorttelit ja vihreät rinteet maaliskuussa 2012.",
+              "rightsEvidence": "Valokuvaajan nimi giggel on lähteen Author-taulukossa; valokuvan CC BY 3.0 ja täsmällinen lisenssilinkki on varmennettu tallennetusta lähdesivusta. Description nimeää Saint George’sin, Grenadan ja North-suunnan; Date ilmoittaa Taken on 7 March 2012. Pääaiheena on koko satamalahti, kaupungin hajautunut rakennuskanta ja rinteet. Yksittäistä luovaa julkisivua tai taideteosta ei eristetä pääaiheeksi. Kuva sisältää tavallisia sataman käyttörakenteita ja pieniä luonnollisia ympäristön kylttejä. Ei yleistä rakennusten ikään, PD-statukseen tai FOP-poikkeukseen perustuvaa päätelmää. Selite ei nimeä tarkkaa kuvauspaikkaa eikä esitä näkymää nykytilana.",
+              "reviewState": "candidate",
+              "captureDate": "Taken on 7 March 2012",
+              "originalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/stgeorges/cc-gap-evidence/e8df70c22b8f.original.jpg",
+              "nativeSHA256": "ccb2be061941613e1176ec615071f17417d24d2afe5d07dfb2a2cf2d49143565",
+              "sourceHtml": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/stgeorges/cc-gap-evidence/e8df70c22b8f.source.html",
+              "sourceHtmlSHA256": "c7a5512fac5b4c9816fc85c77874cb5f165c2077f477fa53592e64a643ceb571",
+              "sourceText": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/stgeorges/cc-gap-evidence/e8df70c22b8f.source.txt",
+              "sourceDescription": "Grenada, Karibik - St. George's - North",
+              "authorFieldSource": "Author table",
+              "claimRecord": "/Volumes/T7 4TB/ChatGPT-Codex-active/coordination/paakaupungit-claims/08391cff28146b17/e12/stgeorges/C3/owner.json",
+              "producerVisualReview": {
+                "by": "CC-gap-search job20",
+                "at": "2026-10-13T13:55:18.181959+00:00",
+                "view": "original pixels inspected",
+                "reason": "Koko alkuperäinen panoraama katsottu native-tiedostosta original-näkymässä. Todellinen laaja kaupungin ja satamalahden yleiskuva; satamavesi, korttelit ja vihreät rinteet näkyvät. Ei lisättyä tekstiä, vesileimaa tai kehystä; ihmiset ovat pieniä ympäristön osia ilman tunnistettavia kasvoja. Kolme hajautunutta kirkontornia ja monet talot ovat osa laajaa kaupunkikuvaa, eivät eristetty rakennuskuva. Valokuvan omia pieniä fyysisiä yrityskylttejä ei käsitellä päälle lisättynä grafiikkana. Native 11231x2927 säilytetään muuttamattomana."
+              },
+              "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/stgeorges/sisalto.json",
+              "sourceContentSHA256": "6530adf5faa43579e8183fe92526d4fd5c63aa395d13740e8d3d4dba1b83d670",
+              "qaFeedbackReadAt": "2026-10-13T13:55:18.182223+00:00",
+              "qaFeedbackEvidence": {
+                "qa-feedback.md": "711b0160221e6a71a5280ec266f1af13210d005f9ab8f704b467051870ad47cd",
+                "illustration-qa-extra-feedback.md": "767823e2aebcf7d5d66921b150289cbbed9471fd6f1f09ab8bff8f58de5c679b"
+              }
+            },
+            "candidateFingerprintSHA256": "77a19e4e2670e282ecc53c39215d5b3fa86b422900b2f2d4c1abaa7a8cf9840b",
+            "currentContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/stgeorges/sisalto.json",
+            "currentContentSHA256": "6530adf5faa43579e8183fe92526d4fd5c63aa395d13740e8d3d4dba1b83d670",
+            "targetExists": true,
+            "currentTargetContent": {
+              "tiedosto": "",
+              "lyhyt": "",
+              "selite": "",
+              "lahde": ""
+            },
+            "visualObservation": "Katsoin itse alkuperäisen NAS-JPEGin kokonaan view_image(original)-näkymässä, jossa työkalu pienensi 11231×2927 kuvan 6000×1564:ään. Katsoin lisäksi viisi erillistä alkuperäisistä pikseleistä tehtyä 1:1-rajausta: laiturin ja minibussien ihmiset, oikean reunan kadut ja kattopinnat, pankin edustan kadut sekä vasemman reunan veneiden matkustajat. Päät jäävät pieniksi, tummiksi tai pehmeiksi eikä silmiä tai muita yksilöllisiä kasvonpiirteitä erotu. Laaja todellinen sataman kaari, kadut ja rinteiden taloryhmät näkyvät luettavasti. Sinertävä väri ja terävöityminen kirjattu, mutta eivät estä asettelun lukemista. Kirkot hajautuvat kaupungin rakennuskantaan, eikä pääaiheena näy erillistä nykytaideteosta. Republic Bank-, KFC- ja muut pienet fyysiset kyltit ovat ympäristöön kuvattuja merkintöjä, eivät päälle lisättyä grafiikkaa. Ei lisättyä vesileimaa tai kehystä.",
+            "reviewedAt": "2026-10-13T14:08:21.575975+00:00",
+            "pixelsViewed": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/stgeorges/cc-gap-evidence/e8df70c22b8f.original.jpg",
+            "pixelSHA256": "ccb2be061941613e1176ec615071f17417d24d2afe5d07dfb2a2cf2d49143565",
+            "sourceEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/stgeorges/cc-gap-evidence/e8df70c22b8f.source.html",
+            "sourceMetadata": {
+              "author": [
+                "giggel"
+              ],
+              "licenses": [
+                "CC BY 3.0"
+              ],
+              "dimensions": [
+                11231,
+                2927
+              ],
+              "sourceSHA256": "c7a5512fac5b4c9816fc85c77874cb5f165c2077f477fa53592e64a643ceb571"
+            },
+            "sourceLicenseLinks": [
+              "//creativecommons.org/licenses/by/3.0/deed.en",
+              "https://creativecommons.org/publicdomain/zero/1.0/",
+              "https://creativecommons.org/licenses/by-sa/4.0/"
+            ],
+            "sourceDescriptionExcerpt": "Summary: Grenada, Karibik - St. George's - North. Date: Taken on 7 March 2012. Author: giggel. Tags: Saint George's, Grenada. Camera location: 12.051261, -61.756894.",
+            "sourceDateExcerpt": "DateFormat\":\"dmy\",\"wgMonthNames\":[\"\",\"January\",\"February\",\"March\",\"April\",\"May\",\"June\",\"July\",\"August\",\"September\",\"October\",\"November\",\"December\"],\"wgRequestId\":\"12b59ceb-afe4-4476-96ad-c29a1e798eff\",\"wgCanonicalNamespace\":\"File\",\"wgCanonicalSpecialPageName\":false,\"wgNamespaceNumber\":6,\"wgPageName\":\"File:Grenada,_Karibik_-_St._George's_-_North_-_panoramio.jpg\",\"wgTitle\":\"Grenada, Karibik - St. George's - North - panoramio.jpg\",\"wgCurRevisionId\":1064797868,\"wgRevisionId\":1064797868,\"wgArticleId\":54576584,\"wgIsArticle\":true,\"wgIsRedirect\":false,\"wgAction\":\"view\",\"wgUserName\":null,\"wgUserGroups\":[\"*\"],\"wgCategories\":[\"Grenada photographs taken on 2012-03-07\",\"CC-BY-3.0\",\"Panoramio images reviewed by trusted users\",\"Photos from Panoramio\",\"Files with coordinates missing SDC location of creation\",\"Panoramio files uploaded by Panoramio upload bot\",\"St. George's, Grenada\"],\"wgPageViewLanguage\":\"en\",\"wgPageContentLanguage\":\"en\",\"wgPageContentModel\":\"wikitext\",\"wgRelevantPageName\":\"File:Grenad",
+            "sourceAuthorExcerpt": "Information.Author = giggel; Panoramio upload bot is the uploader, not the photographer.",
+            "sourceLicensingExcerpt": null,
+            "sourceCameralocationExcerpt": "Camera location 12° 03′ 04.54″ N, 61° 45′ 24.82″ W View this and other nearby images on: OpenStreetMap 12.051261; -61.756894 File history Click on a date/time to view the file as it appeared at that time. Date/Time Thumbnail Dimensions User Comment current 12:31, 29 December 2016 11,231 × 2,927 (7.71 MB) Panoramio upload bot ( talk | contribs ) == {{int:filedesc}} == {{Information |description=Grenada, Karibik - St. George's - North |date={{Taken on|2012-03-07}} |source=http://www.panoramio.com/photo/70578059 |author=[http://www.panoramio.com/user/1368505?with_photo_id=70578059 giggel] |permi... You cannot overwrite this file. File usage on Commons The following 3 pages use this file: St. George's, Grenada Category:Births in St. George's, Grenada Category:St. George's, Grenada File usage on other wikis The following other wikis use this file: Usage on ca.wikipedia.org Saint George's Usage on fa.wikipedia.org جغرافیای گرنادا Usage on gl.wikipedia.org Saint George's Usage on www.wikidata",
+            "actualDimensions": [
+              11231,
+              2927
+            ],
+            "actualFormat": "JPEG",
+            "actualColorMode": "RGB",
+            "exifOrientation": null,
+            "sourceHTML": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/stgeorges/cc-gap-evidence/e8df70c22b8f.source.html",
+            "sourceSHA256": "c7a5512fac5b4c9816fc85c77874cb5f165c2077f477fa53592e64a643ceb571",
+            "captionFi": "Saint George’sin satamalahti, kaupunkikorttelit ja vihreät rinteet maaliskuussa 2012.",
+            "sourceLicenceExcerpt": "Creative Commons Attribution 3.0 Unported; Attribution: giggel. Panoramio upload bot confirmed the source licence on 29 December 2016.",
+            "captureDate": "2012-03-07",
+            "nativeCropsPersonallyViewed": [
+              {
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/stgeorges/qa-evidence/c3-native-wharf.png",
+                "nativeCropBox": [
+                  3500,
+                  1900,
+                  4700,
+                  2800
+                ],
+                "sha256": "d944191de74f27b8f56568213d21a7457b123f0377d67137fbe66495ab744b7e",
+                "personallyViewed": true,
+                "viewMode": "original",
+                "purpose": "Exact decoded native pixels for faces and visible work surfaces; original asset unchanged"
+              },
+              {
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/stgeorges/qa-evidence/c3-native-right-street.png",
+                "nativeCropBox": [
+                  8700,
+                  1800,
+                  9900,
+                  2700
+                ],
+                "sha256": "967613080923dab715c2bc461f2ea9a1c3daeaf4ef832d2d4071a2801f97cf40",
+                "personallyViewed": true,
+                "viewMode": "original",
+                "purpose": "Exact decoded native pixels for faces and visible work surfaces; original asset unchanged"
+              },
+              {
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/stgeorges/qa-evidence/c3-native-far-right.png",
+                "nativeCropBox": [
+                  10100,
+                  1900,
+                  11231,
+                  2927
+                ],
+                "sha256": "542b807722892612830f25b3fdab7525c29b1b742f0b24b6d8f13b632068a35f",
+                "personallyViewed": true,
+                "viewMode": "original",
+                "purpose": "Exact decoded native pixels for faces and visible work surfaces; original asset unchanged"
+              },
+              {
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/stgeorges/qa-evidence/c3-native-plaza.png",
+                "nativeCropBox": [
+                  7000,
+                  1200,
+                  8300,
+                  2300
+                ],
+                "sha256": "77cb46d37572e70eff390dc50b430ac02b9db843744fa210c963a359c6976e86",
+                "personallyViewed": true,
+                "viewMode": "original",
+                "purpose": "Exact decoded native pixels for faces and visible work surfaces; original asset unchanged"
+              },
+              {
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/stgeorges/qa-evidence/c3-native-left-boats.png",
+                "nativeCropBox": [
+                  300,
+                  1900,
+                  1400,
+                  2650
+                ],
+                "sha256": "a983da1b3f48f6292fa99acaf18213acbe05de7d329ceb1c858c7efa78a5b5a3",
+                "personallyViewed": true,
+                "viewMode": "original",
+                "purpose": "Exact decoded native pixels for faces and visible work surfaces; original asset unchanged"
+              }
+            ],
+            "visualPass": true,
+            "depictedWorkAssessment": "Grenada Copyright Act 21/2011 §5(1)(g) includes architecture; §19(a/b) explicitly allows certain inclusion of artistic works, with no noncommercial-only condition in that section. For this complete wide panorama, individual buildings/churches remain elements of the harbour/urban/hillside context, rather than an isolated expressive work reproduction. Applied §19(b) to this exact whole-image use. Separate CC BY 3.0 photo licence verified. No age-based PD inference; a future isolated-building crop needs its own assessment.",
+            "rightsSourceGap": {
+              "secondaryLead": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/stgeorges/cc-search/rights.html",
+              "secondaryLeadSHA256": "b6122c528198ee128c6941ab9a06d9eb12d7937083cbae18194a332887c2978a",
+              "sectionSuggested": "Grenada Copyright Act Cap.67 Act21/2011 section19",
+              "primaryUrlAttempted": "https://www.wipo.int/edocs/lexdocs/laws/en/gd/gd013en.pdf",
+              "method": "updated common sallittu_haku.py",
+              "result": "robots prohibits /edocs/lexdocs/ for both checked user agents",
+              "primaryLegalTextRead": true,
+              "resolvedAt": "2026-10-13T14:23:38.609599+00:00",
+              "resolvedPrimaryUrl": "https://www.wipo.int/wipolex/en/legislation/details/15753"
+            },
+            "verdictHistory": [
+              {
+                "verdict": "blocked",
+                "reason": "Aito laaja St. George’sin satamalahden, katukorttelien ja vihreiden rinteiden asettelu sekä 7.3.2012 selite sopivat C3-kanteen. Giggel ja valokuvan CC BY 3.0 varmennettu alkuperäisestä tallennetusta Commons-lähdesivusta. Alkuperäiset 11231×2927 pikselit ja SHA sekä viisi 1:1-rajausta tarkistettu; ihmisistä ei erotu tunnistettavia kasvonpiirteitä. Avoinna on rakennusten teoskerroksen kaupallisen käytön alkuperäislähdevarmistus: tallennettu Commonsin maakohtainen ohje viittaa Grenadan Copyright Act 21/2011 §19:ään, mutta alkuperäinen WIPO-lakiteksti estyi yhteisen sallittu_haku.py:n robots-tarkistuksessa. Tuottajalle: toimita sallittua väylää pitkin tallennettu alkuperäinen §19 tai muu tähän täsmälliseen näkymään soveltuva teoskerrosnäyttö. Ei automaattista rakennusten ikään perustuvaa PD- tai yleistä FOP-päätelmää.",
+                "reviewedAt": "2026-10-13T14:08:21.593204+00:00",
+                "sha256": "ccb2be061941613e1176ec615071f17417d24d2afe5d07dfb2a2cf2d49143565",
+                "rightsSourceGap": {
+                  "secondaryLead": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/stgeorges/cc-search/rights.html",
+                  "secondaryLeadSHA256": "b6122c528198ee128c6941ab9a06d9eb12d7937083cbae18194a332887c2978a",
+                  "sectionSuggested": "Grenada Copyright Act Cap.67 Act21/2011 section19",
+                  "primaryUrlAttempted": "https://www.wipo.int/edocs/lexdocs/laws/en/gd/gd013en.pdf",
+                  "method": "updated common sallittu_haku.py",
+                  "result": "robots prohibits /edocs/lexdocs/ for both checked user agents",
+                  "primaryLegalTextRead": false
+                },
+                "resolvedBy": "Primary 2011 law text personally read; exact same original pixels and target verified"
+              }
+            ],
+            "visualInspectionPerformedAt": "2026-10-13T14:08:21.593204+00:00",
+            "personallyViewedAgain": false,
+            "nativeSHARecheckedAt": "2026-10-13T14:23:38.609597+00:00",
+            "primaryLegalEvidence": {
+              "url": "https://www.wipo.int/wipolex/en/legislation/details/15753",
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/rights-support/amerikat-oseania/sources/grenada-wipo-copyright2011.html",
+              "sha256": "8bda31244de2b830193e45a86eaa13a465da2bf6226b556d7327c23168998494",
+              "title": "Copyright Act, 2011 (Act No. 21 of 2011), Grenada, WIPO Lex",
+              "section19Text": "19. Notwithstanding section 8(1) and section 18, the inclusion of an artistic work in a work, broadcast or communication to the public shall not be considered an infringement if the artistic work— (a) is permanently situated in a public place or in premises open to the public; or (b) is included in the work, broadcast or communication to the public by way only of background or as incidental to the essential matters represented. ",
+              "personallyReadByJob28": true,
+              "retrievalEvidence": "Shared sallittu_haku.py source log: HTTP200, 2026-10-13T17:19:25+0300, bytes133889, matchingSHA",
+              "scope": "Primary law content embedded in the official WIPO Lex HTML; no PDF download or PDF viewing claimed"
+            }
+          },
+          "qaReason": "Aito laaja St. George’sin satamalahden, kaupunkikorttelien ja vihreiden rinteiden asettelu sopii C3-kanteen. Giggel, CC BY 3.0 ja 7.3.2012 varmennettu tallennetusta Commonsin alkuperäissivusta. Alkuperäinen 11231×2927 JPEG ja SHA tarkistettu sekä viisi 1:1-pikselirajausta katsottu: ei tunnistettavia kasvonpiirteitä, lisättyä grafiikkaa tai itsenäistä nykytaideteospääaihetta. Aiempi teoskerroksen lähde-este ratkaistu: luin itse WIPO Lexin alkuperäisen Grenadan Copyright Act 21/2011 -lakitekstin §5(1)(g), §19(a/b). Yksittäiset rakennukset ja hajautuneet kirkot sisältyvät tähän koko satamalahden ja kaupunkirinteiden laajaan asetteluun ympäristön osina; sovellan §19(b):n tausta-/sivuosarajausta tähän täsmälliseen kokopanoraamaan. Valokuvan lisenssi ja rakennusten teoskerros on käsitelty erikseen. Ei rakennusten iästä pääteltyä PD:tä eikä yleistä kaikkien rakennuskuvien lupaa."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Saint George’sin satamalahti, kaupunkikorttelit ja vihreät rinteet maaliskuussa 2012.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/stgeorges/qa.json",
+        "fileSHA256": "f2c755c1316f29fddc57312ce4f53d4e969d6a5abd44f53e9fa2d8ec68517eb7",
+        "item": {
+          "slot": "C3",
+          "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[2]",
+          "commonsFile": "Grenada, Karibik - St. George's - North - panoramio.jpg",
+          "verdict": "accepted",
+          "reason": "Aito laaja St. George’sin satamalahden, kaupunkikorttelien ja vihreiden rinteiden asettelu sopii C3-kanteen. Giggel, CC BY 3.0 ja 7.3.2012 varmennettu tallennetusta Commonsin alkuperäissivusta. Alkuperäinen 11231×2927 JPEG ja SHA tarkistettu sekä viisi 1:1-pikselirajausta katsottu: ei tunnistettavia kasvonpiirteitä, lisättyä grafiikkaa tai itsenäistä nykytaideteospääaihetta. Aiempi teoskerroksen lähde-este ratkaistu: luin itse WIPO Lexin alkuperäisen Grenadan Copyright Act 21/2011 -lakitekstin §5(1)(g), §19(a/b). Yksittäiset rakennukset ja hajautuneet kirkot sisältyvät tähän koko satamalahden ja kaupunkirinteiden laajaan asetteluun ympäristön osina; sovellan §19(b):n tausta-/sivuosarajausta tähän täsmälliseen kokopanoraamaan. Valokuvan lisenssi ja rakennusten teoskerros on käsitelty erikseen. Ei rakennusten iästä pääteltyä PD:tä eikä yleistä kaikkien rakennuskuvien lupaa.",
+          "evidence": {
+            "manifestPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/stgeorges/cc-gap-selection.json",
+            "candidateSnapshot": {
+              "commonsFile": "Grenada, Karibik - St. George's - North - panoramio.jpg",
+              "sourcePage": "https://commons.wikimedia.org/wiki/File:Grenada,_Karibik_-_St._George%27s_-_North_-_panoramio.jpg",
+              "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/8/8a/Grenada%2C_Karibik_-_St._George%27s_-_North_-_panoramio.jpg",
+              "author": "giggel",
+              "license": "CC BY 3.0",
+              "licenseUrl": "https://creativecommons.org/licenses/by/3.0/deed.en",
+              "width": 11231,
+              "height": 2927,
+              "slot": "C3",
+              "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[2]",
+              "type": "commons",
+              "captionFi": "Saint George’sin satamalahti, kaupunkikorttelit ja vihreät rinteet maaliskuussa 2012.",
+              "rightsEvidence": "Valokuvaajan nimi giggel on lähteen Author-taulukossa; valokuvan CC BY 3.0 ja täsmällinen lisenssilinkki on varmennettu tallennetusta lähdesivusta. Description nimeää Saint George’sin, Grenadan ja North-suunnan; Date ilmoittaa Taken on 7 March 2012. Pääaiheena on koko satamalahti, kaupungin hajautunut rakennuskanta ja rinteet. Yksittäistä luovaa julkisivua tai taideteosta ei eristetä pääaiheeksi. Kuva sisältää tavallisia sataman käyttörakenteita ja pieniä luonnollisia ympäristön kylttejä. Ei yleistä rakennusten ikään, PD-statukseen tai FOP-poikkeukseen perustuvaa päätelmää. Selite ei nimeä tarkkaa kuvauspaikkaa eikä esitä näkymää nykytilana.",
+              "reviewState": "candidate",
+              "captureDate": "Taken on 7 March 2012",
+              "originalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/stgeorges/cc-gap-evidence/e8df70c22b8f.original.jpg",
+              "nativeSHA256": "ccb2be061941613e1176ec615071f17417d24d2afe5d07dfb2a2cf2d49143565",
+              "sourceHtml": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/stgeorges/cc-gap-evidence/e8df70c22b8f.source.html",
+              "sourceHtmlSHA256": "c7a5512fac5b4c9816fc85c77874cb5f165c2077f477fa53592e64a643ceb571",
+              "sourceText": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/stgeorges/cc-gap-evidence/e8df70c22b8f.source.txt",
+              "sourceDescription": "Grenada, Karibik - St. George's - North",
+              "authorFieldSource": "Author table",
+              "claimRecord": "/Volumes/T7 4TB/ChatGPT-Codex-active/coordination/paakaupungit-claims/08391cff28146b17/e12/stgeorges/C3/owner.json",
+              "producerVisualReview": {
+                "by": "CC-gap-search job20",
+                "at": "2026-10-13T13:55:18.181959+00:00",
+                "view": "original pixels inspected",
+                "reason": "Koko alkuperäinen panoraama katsottu native-tiedostosta original-näkymässä. Todellinen laaja kaupungin ja satamalahden yleiskuva; satamavesi, korttelit ja vihreät rinteet näkyvät. Ei lisättyä tekstiä, vesileimaa tai kehystä; ihmiset ovat pieniä ympäristön osia ilman tunnistettavia kasvoja. Kolme hajautunutta kirkontornia ja monet talot ovat osa laajaa kaupunkikuvaa, eivät eristetty rakennuskuva. Valokuvan omia pieniä fyysisiä yrityskylttejä ei käsitellä päälle lisättynä grafiikkana. Native 11231x2927 säilytetään muuttamattomana."
+              },
+              "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/stgeorges/sisalto.json",
+              "sourceContentSHA256": "6530adf5faa43579e8183fe92526d4fd5c63aa395d13740e8d3d4dba1b83d670",
+              "qaFeedbackReadAt": "2026-10-13T13:55:18.182223+00:00",
+              "qaFeedbackEvidence": {
+                "qa-feedback.md": "711b0160221e6a71a5280ec266f1af13210d005f9ab8f704b467051870ad47cd",
+                "illustration-qa-extra-feedback.md": "767823e2aebcf7d5d66921b150289cbbed9471fd6f1f09ab8bff8f58de5c679b"
+              }
+            },
+            "candidateFingerprintSHA256": "77a19e4e2670e282ecc53c39215d5b3fa86b422900b2f2d4c1abaa7a8cf9840b",
+            "currentContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/stgeorges/sisalto.json",
+            "currentContentSHA256": "6530adf5faa43579e8183fe92526d4fd5c63aa395d13740e8d3d4dba1b83d670",
+            "targetExists": true,
+            "currentTargetContent": {
+              "tiedosto": "",
+              "lyhyt": "",
+              "selite": "",
+              "lahde": ""
+            },
+            "visualObservation": "Katsoin itse alkuperäisen NAS-JPEGin kokonaan view_image(original)-näkymässä, jossa työkalu pienensi 11231×2927 kuvan 6000×1564:ään. Katsoin lisäksi viisi erillistä alkuperäisistä pikseleistä tehtyä 1:1-rajausta: laiturin ja minibussien ihmiset, oikean reunan kadut ja kattopinnat, pankin edustan kadut sekä vasemman reunan veneiden matkustajat. Päät jäävät pieniksi, tummiksi tai pehmeiksi eikä silmiä tai muita yksilöllisiä kasvonpiirteitä erotu. Laaja todellinen sataman kaari, kadut ja rinteiden taloryhmät näkyvät luettavasti. Sinertävä väri ja terävöityminen kirjattu, mutta eivät estä asettelun lukemista. Kirkot hajautuvat kaupungin rakennuskantaan, eikä pääaiheena näy erillistä nykytaideteosta. Republic Bank-, KFC- ja muut pienet fyysiset kyltit ovat ympäristöön kuvattuja merkintöjä, eivät päälle lisättyä grafiikkaa. Ei lisättyä vesileimaa tai kehystä.",
+            "reviewedAt": "2026-10-13T14:08:21.575975+00:00",
+            "pixelsViewed": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/stgeorges/cc-gap-evidence/e8df70c22b8f.original.jpg",
+            "pixelSHA256": "ccb2be061941613e1176ec615071f17417d24d2afe5d07dfb2a2cf2d49143565",
+            "sourceEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/stgeorges/cc-gap-evidence/e8df70c22b8f.source.html",
+            "sourceMetadata": {
+              "author": [
+                "giggel"
+              ],
+              "licenses": [
+                "CC BY 3.0"
+              ],
+              "dimensions": [
+                11231,
+                2927
+              ],
+              "sourceSHA256": "c7a5512fac5b4c9816fc85c77874cb5f165c2077f477fa53592e64a643ceb571"
+            },
+            "sourceLicenseLinks": [
+              "//creativecommons.org/licenses/by/3.0/deed.en",
+              "https://creativecommons.org/publicdomain/zero/1.0/",
+              "https://creativecommons.org/licenses/by-sa/4.0/"
+            ],
+            "sourceDescriptionExcerpt": "Summary: Grenada, Karibik - St. George's - North. Date: Taken on 7 March 2012. Author: giggel. Tags: Saint George's, Grenada. Camera location: 12.051261, -61.756894.",
+            "sourceDateExcerpt": "DateFormat\":\"dmy\",\"wgMonthNames\":[\"\",\"January\",\"February\",\"March\",\"April\",\"May\",\"June\",\"July\",\"August\",\"September\",\"October\",\"November\",\"December\"],\"wgRequestId\":\"12b59ceb-afe4-4476-96ad-c29a1e798eff\",\"wgCanonicalNamespace\":\"File\",\"wgCanonicalSpecialPageName\":false,\"wgNamespaceNumber\":6,\"wgPageName\":\"File:Grenada,_Karibik_-_St._George's_-_North_-_panoramio.jpg\",\"wgTitle\":\"Grenada, Karibik - St. George's - North - panoramio.jpg\",\"wgCurRevisionId\":1064797868,\"wgRevisionId\":1064797868,\"wgArticleId\":54576584,\"wgIsArticle\":true,\"wgIsRedirect\":false,\"wgAction\":\"view\",\"wgUserName\":null,\"wgUserGroups\":[\"*\"],\"wgCategories\":[\"Grenada photographs taken on 2012-03-07\",\"CC-BY-3.0\",\"Panoramio images reviewed by trusted users\",\"Photos from Panoramio\",\"Files with coordinates missing SDC location of creation\",\"Panoramio files uploaded by Panoramio upload bot\",\"St. George's, Grenada\"],\"wgPageViewLanguage\":\"en\",\"wgPageContentLanguage\":\"en\",\"wgPageContentModel\":\"wikitext\",\"wgRelevantPageName\":\"File:Grenad",
+            "sourceAuthorExcerpt": "Information.Author = giggel; Panoramio upload bot is the uploader, not the photographer.",
+            "sourceLicensingExcerpt": null,
+            "sourceCameralocationExcerpt": "Camera location 12° 03′ 04.54″ N, 61° 45′ 24.82″ W View this and other nearby images on: OpenStreetMap 12.051261; -61.756894 File history Click on a date/time to view the file as it appeared at that time. Date/Time Thumbnail Dimensions User Comment current 12:31, 29 December 2016 11,231 × 2,927 (7.71 MB) Panoramio upload bot ( talk | contribs ) == {{int:filedesc}} == {{Information |description=Grenada, Karibik - St. George's - North |date={{Taken on|2012-03-07}} |source=http://www.panoramio.com/photo/70578059 |author=[http://www.panoramio.com/user/1368505?with_photo_id=70578059 giggel] |permi... You cannot overwrite this file. File usage on Commons The following 3 pages use this file: St. George's, Grenada Category:Births in St. George's, Grenada Category:St. George's, Grenada File usage on other wikis The following other wikis use this file: Usage on ca.wikipedia.org Saint George's Usage on fa.wikipedia.org جغرافیای گرنادا Usage on gl.wikipedia.org Saint George's Usage on www.wikidata",
+            "actualDimensions": [
+              11231,
+              2927
+            ],
+            "actualFormat": "JPEG",
+            "actualColorMode": "RGB",
+            "exifOrientation": null,
+            "sourceHTML": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/stgeorges/cc-gap-evidence/e8df70c22b8f.source.html",
+            "sourceSHA256": "c7a5512fac5b4c9816fc85c77874cb5f165c2077f477fa53592e64a643ceb571",
+            "captionFi": "Saint George’sin satamalahti, kaupunkikorttelit ja vihreät rinteet maaliskuussa 2012.",
+            "sourceLicenceExcerpt": "Creative Commons Attribution 3.0 Unported; Attribution: giggel. Panoramio upload bot confirmed the source licence on 29 December 2016.",
+            "captureDate": "2012-03-07",
+            "nativeCropsPersonallyViewed": [
+              {
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/stgeorges/qa-evidence/c3-native-wharf.png",
+                "nativeCropBox": [
+                  3500,
+                  1900,
+                  4700,
+                  2800
+                ],
+                "sha256": "d944191de74f27b8f56568213d21a7457b123f0377d67137fbe66495ab744b7e",
+                "personallyViewed": true,
+                "viewMode": "original",
+                "purpose": "Exact decoded native pixels for faces and visible work surfaces; original asset unchanged"
+              },
+              {
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/stgeorges/qa-evidence/c3-native-right-street.png",
+                "nativeCropBox": [
+                  8700,
+                  1800,
+                  9900,
+                  2700
+                ],
+                "sha256": "967613080923dab715c2bc461f2ea9a1c3daeaf4ef832d2d4071a2801f97cf40",
+                "personallyViewed": true,
+                "viewMode": "original",
+                "purpose": "Exact decoded native pixels for faces and visible work surfaces; original asset unchanged"
+              },
+              {
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/stgeorges/qa-evidence/c3-native-far-right.png",
+                "nativeCropBox": [
+                  10100,
+                  1900,
+                  11231,
+                  2927
+                ],
+                "sha256": "542b807722892612830f25b3fdab7525c29b1b742f0b24b6d8f13b632068a35f",
+                "personallyViewed": true,
+                "viewMode": "original",
+                "purpose": "Exact decoded native pixels for faces and visible work surfaces; original asset unchanged"
+              },
+              {
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/stgeorges/qa-evidence/c3-native-plaza.png",
+                "nativeCropBox": [
+                  7000,
+                  1200,
+                  8300,
+                  2300
+                ],
+                "sha256": "77cb46d37572e70eff390dc50b430ac02b9db843744fa210c963a359c6976e86",
+                "personallyViewed": true,
+                "viewMode": "original",
+                "purpose": "Exact decoded native pixels for faces and visible work surfaces; original asset unchanged"
+              },
+              {
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/stgeorges/qa-evidence/c3-native-left-boats.png",
+                "nativeCropBox": [
+                  300,
+                  1900,
+                  1400,
+                  2650
+                ],
+                "sha256": "a983da1b3f48f6292fa99acaf18213acbe05de7d329ceb1c858c7efa78a5b5a3",
+                "personallyViewed": true,
+                "viewMode": "original",
+                "purpose": "Exact decoded native pixels for faces and visible work surfaces; original asset unchanged"
+              }
+            ],
+            "visualPass": true,
+            "depictedWorkAssessment": "Grenada Copyright Act 21/2011 §5(1)(g) includes architecture; §19(a/b) explicitly allows certain inclusion of artistic works, with no noncommercial-only condition in that section. For this complete wide panorama, individual buildings/churches remain elements of the harbour/urban/hillside context, rather than an isolated expressive work reproduction. Applied §19(b) to this exact whole-image use. Separate CC BY 3.0 photo licence verified. No age-based PD inference; a future isolated-building crop needs its own assessment.",
+            "rightsSourceGap": {
+              "secondaryLead": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/stgeorges/cc-search/rights.html",
+              "secondaryLeadSHA256": "b6122c528198ee128c6941ab9a06d9eb12d7937083cbae18194a332887c2978a",
+              "sectionSuggested": "Grenada Copyright Act Cap.67 Act21/2011 section19",
+              "primaryUrlAttempted": "https://www.wipo.int/edocs/lexdocs/laws/en/gd/gd013en.pdf",
+              "method": "updated common sallittu_haku.py",
+              "result": "robots prohibits /edocs/lexdocs/ for both checked user agents",
+              "primaryLegalTextRead": true,
+              "resolvedAt": "2026-10-13T14:23:38.609599+00:00",
+              "resolvedPrimaryUrl": "https://www.wipo.int/wipolex/en/legislation/details/15753"
+            },
+            "verdictHistory": [
+              {
+                "verdict": "blocked",
+                "reason": "Aito laaja St. George’sin satamalahden, katukorttelien ja vihreiden rinteiden asettelu sekä 7.3.2012 selite sopivat C3-kanteen. Giggel ja valokuvan CC BY 3.0 varmennettu alkuperäisestä tallennetusta Commons-lähdesivusta. Alkuperäiset 11231×2927 pikselit ja SHA sekä viisi 1:1-rajausta tarkistettu; ihmisistä ei erotu tunnistettavia kasvonpiirteitä. Avoinna on rakennusten teoskerroksen kaupallisen käytön alkuperäislähdevarmistus: tallennettu Commonsin maakohtainen ohje viittaa Grenadan Copyright Act 21/2011 §19:ään, mutta alkuperäinen WIPO-lakiteksti estyi yhteisen sallittu_haku.py:n robots-tarkistuksessa. Tuottajalle: toimita sallittua väylää pitkin tallennettu alkuperäinen §19 tai muu tähän täsmälliseen näkymään soveltuva teoskerrosnäyttö. Ei automaattista rakennusten ikään perustuvaa PD- tai yleistä FOP-päätelmää.",
+                "reviewedAt": "2026-10-13T14:08:21.593204+00:00",
+                "sha256": "ccb2be061941613e1176ec615071f17417d24d2afe5d07dfb2a2cf2d49143565",
+                "rightsSourceGap": {
+                  "secondaryLead": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/stgeorges/cc-search/rights.html",
+                  "secondaryLeadSHA256": "b6122c528198ee128c6941ab9a06d9eb12d7937083cbae18194a332887c2978a",
+                  "sectionSuggested": "Grenada Copyright Act Cap.67 Act21/2011 section19",
+                  "primaryUrlAttempted": "https://www.wipo.int/edocs/lexdocs/laws/en/gd/gd013en.pdf",
+                  "method": "updated common sallittu_haku.py",
+                  "result": "robots prohibits /edocs/lexdocs/ for both checked user agents",
+                  "primaryLegalTextRead": false
+                },
+                "resolvedBy": "Primary 2011 law text personally read; exact same original pixels and target verified"
+              }
+            ],
+            "visualInspectionPerformedAt": "2026-10-13T14:08:21.593204+00:00",
+            "personallyViewedAgain": false,
+            "nativeSHARecheckedAt": "2026-10-13T14:23:38.609597+00:00",
+            "primaryLegalEvidence": {
+              "url": "https://www.wipo.int/wipolex/en/legislation/details/15753",
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/rights-support/amerikat-oseania/sources/grenada-wipo-copyright2011.html",
+              "sha256": "8bda31244de2b830193e45a86eaa13a465da2bf6226b556d7327c23168998494",
+              "title": "Copyright Act, 2011 (Act No. 21 of 2011), Grenada, WIPO Lex",
+              "section19Text": "19. Notwithstanding section 8(1) and section 18, the inclusion of an artistic work in a work, broadcast or communication to the public shall not be considered an infringement if the artistic work— (a) is permanently situated in a public place or in premises open to the public; or (b) is included in the work, broadcast or communication to the public by way only of background or as incidental to the essential matters represented. ",
+              "personallyReadByJob28": true,
+              "retrievalEvidence": "Shared sallittu_haku.py source log: HTTP200, 2026-10-13T17:19:25+0300, bytes133889, matchingSHA",
+              "scope": "Primary law content embedded in the official WIPO Lex HTML; no PDF download or PDF viewing claimed"
+            }
+          },
+          "reviewedAt": "2026-10-13T14:23:38.609433+00:00",
+          "sha256": "ccb2be061941613e1176ec615071f17417d24d2afe5d07dfb2a2cf2d49143565"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/stgeorges/qa.json",
+            "sha256": "f2c755c1316f29fddc57312ce4f53d4e969d6a5abd44f53e9fa2d8ec68517eb7"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/stgeorges/illustration-qa-extra.json",
+            "sha256": "423cd43d9def133a5dec9dd6ef43afa7e46677a1134b336aa6ae25ba99c05612"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e12",
+        "city": "stgeorges",
+        "slot": "C3",
+        "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[2]",
+        "commonsFile": "Grenada, Karibik - St. George's - North - panoramio.jpg",
+        "sha256": "ccb2be061941613e1176ec615071f17417d24d2afe5d07dfb2a2cf2d49143565",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Grenada,_Karibik_-_St._George%27s_-_North_-_panoramio.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/8/8a/Grenada%2C_Karibik_-_St._George%27s_-_North_-_panoramio.jpg",
+        "author": "giggel",
+        "license": "CC BY 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/3.0/deed.en",
+        "width": 11231,
+        "height": 2927,
+        "originalSHA256": "ccb2be061941613e1176ec615071f17417d24d2afe5d07dfb2a2cf2d49143565",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/stgeorges/c3-ccb2be061941613e1176.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/stgeorges/c3-ccb2be061941613e1176.jpg",
+        "bytes": 8079368,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-13T14:24:39.821851+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "giggel, Wikimedia Commons (CC BY 3.0)",
+        "selite": "Saint George’sin satamalahti, kaupunkikorttelit ja vihreät rinteet maaliskuussa 2012.",
+        "lyhyt": "Saint George’sin satamalahti, kaupunkikorttelit ja vihreät rinteet maaliskuussa 2012.",
+        "tiedosto": "Grenada, Karibik - St. George's - North - panoramio.jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "7ccc26be029319d0279c6016347d2c573758a2484b3bdfedf1d82c954e483f50",
+      "targetAfterSHA256": "9540e656f63c14626b79b30dd6fe6fa11b408a4b7ded261593a7332da9af2149",
+      "contextAfterSHA256": "9540e656f63c14626b79b30dd6fe6fa11b408a4b7ded261593a7332da9af2149",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     }
   ],
   "runtimeIntegrationPending": true,
-  "ownerAcceptedNotImpliedByAuthorization": true,
-  "gameIntegrated": false
+  "ownerAcceptedNotImpliedByAuthorization": false,
+  "gameIntegrated": false,
+  "allAssetsExplicitlyOwnerApproved": true,
+  "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
 }
