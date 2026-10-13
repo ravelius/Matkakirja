@@ -1,3 +1,12 @@
+## 2026-10-13 14.41 UTC — LINJAUS: pääkaupunkien kuvat jatkossa VAIN Commonsista (omistaja 13.10.2026 klo 17.4x)
+
+Omistaja: "nykyiset voi jättää, mutta jatkossa vain commons". Jo toimitetut havainnekuvat (myös ruoka-, luonto- ja
+nähtävyysjuttujen kuvitukset) saavat jäädä. Tästä eteenpäin pääkaupunkien lehtiin, nähtävyysjuttuihin, valokuva-osioon
+ja oppaaseen EI generoida uusia kuvia eikä uusintoja: kuvat vain Wikimedia Commonsista (PD/CC, panoraamavapaussääntö
+16.15 UTC ennallaan), kuten PILVIOHJE-paakaupungit.md:n luku "Ei generointia" sanoo. Jos Commonsista ei löydy
+sopivaa vapaata kuvaa, jätä kohta ilman kuvaa tai valitse toinen kohde ja kirjaa se RAPORTTI.md:hen.
+Kunkin pääkaupungin kaksi hyväksyttyä havainnekuvaa (kaupunkinäkymä ja tunnuskohde, tilaus 10.10.) pysyvät.
+
 ## 2026-10-11 16.15 UTC — LISÄSÄÄNTÖ: panoraamavapaus (Päätoimittaja, Raamattu #4431)
 
 Peli on kaupallinen: rakennuksen tai julkisen taideteoksen kuva kelpaa vain, jos kuvauspaikan maan panoraamavapaus sallii
