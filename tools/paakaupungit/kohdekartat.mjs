@@ -78,9 +78,11 @@ if (PIIRRA) {
     const a = s.indexOf('const KAUPUNGIT = {');
     const loppu = s.indexOf('\n};', a);
     const rivi = `  ${id}: {\n    rajat: { pohjoinen: ${t.rajat.pohjoinen}, etela: ${t.rajat.etela}, lansi: ${t.rajat.lansi}, ita: ${t.rajat.ita} },\n  },`;
-    const vanha = new RegExp(`\\n  ${id}: \\{\\n    rajat: \\{[^}]*\\},\\n  \\},`);
+    // Vanhalla rivillä voi olla lisäkenttiä (meri, meriHaku, kommentit): vaihdetaan vain rajat-rivi, muuten
+    // taulun loppuun syntyisi samanniminen avain, joka voittaa ja pudottaa lisäkentät (13.10.2026: Conakry, Luanda… ilman merta).
+    const vanha = new RegExp(`(\\n  ${id}: \\{\\n(?:    //[^\\n]*\\n|\\s*\\n)*)    rajat: \\{[^}]*\\},`);
     const taulu = s.slice(a, loppu);
-    if (vanha.test(taulu)) s = s.slice(0, a) + taulu.replace(vanha, `\n${rivi}`) + s.slice(loppu);
+    if (vanha.test(taulu)) s = s.slice(0, a) + taulu.replace(vanha, `$1    rajat: { pohjoinen: ${t.rajat.pohjoinen}, etela: ${t.rajat.etela}, lansi: ${t.rajat.lansi}, ita: ${t.rajat.ita} },`) + s.slice(loppu);
     else s = s.slice(0, loppu) + `\n  // PÄÄKAUPUNKI ${era} (Codex, kohdekartat.mjs)\n${rivi}` + s.slice(loppu);
     writeFileSync(polku, s);
     console.log(`\npiirretään ${id}…`);

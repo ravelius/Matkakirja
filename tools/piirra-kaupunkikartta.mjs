@@ -6241,10 +6241,6 @@ const KAUPUNGIT = {
   abuja: {
     rajat: { pohjoinen: 9.0767, etela: 9.0413, lansi: 7.4833, ita: 7.5249 },
   },
-  accra: {
-    rajat: { pohjoinen: 5.5582, etela: 5.5268, lansi: -0.2185, ita: -0.1769 },
-    meri: true,
-  },
   alger: {
     rajat: { pohjoinen: 36.7916, etela: 36.7684, lansi: 3.0512, ita: 3.0679 },
     meri: true,
@@ -6261,20 +6257,12 @@ const KAUPUNGIT = {
   bangui: {
     rajat: { pohjoinen: 4.4053, etela: 4.3538, lansi: 18.5527, ita: 18.5826 },
   },
-  banjul: {
-    rajat: { pohjoinen: 13.4641, etela: 13.4469, lansi: -16.5888, ita: -16.5683 },
-    meri: true,
-  },
   bissau: {
     rajat: { pohjoinen: 11.8671, etela: 11.8533, lansi: -15.5893, ita: -15.5754 },
     meri: true,
   },
   brazzaville: {
     rajat: { pohjoinen: -4.2548, etela: -4.2892, lansi: 15.2395, ita: 15.2981 },
-  },
-  conakry: {
-    rajat: { pohjoinen: 9.5394, etela: 9.496, lansi: -13.7249, ita: -13.6768 },
-    meri: true,
   },
   djibouti: {
     rajat: { pohjoinen: 11.6084, etela: 11.588, lansi: 43.136, ita: 43.1545 },
@@ -6285,7 +6273,7 @@ const KAUPUNGIT = {
     meri: true,
   },
   gaborone: {
-    rajat: { pohjoinen: -24.6533, etela: -24.6709, lansi: 25.9056, ita: 25.9383 },
+    rajat: { pohjoinen: -24.6539, etela: -24.7032, lansi: 25.8645, ita: 25.9482 },
   },
   harare: {
     rajat: { pohjoinen: -17.7949, etela: -17.8419, lansi: 31.0321, ita: 31.06 },
@@ -6297,10 +6285,10 @@ const KAUPUNGIT = {
     rajat: { pohjoinen: 0.3432, etela: 0.2923, lansi: 32.5439, ita: 32.5973 },
   },
   khartum: {
-    rajat: { pohjoinen: 15.6188, etela: 15.5917, lansi: 32.5011, ita: 32.5488 },
+    rajat: { pohjoinen: 15.6222, etela: 15.598, lansi: 32.5025, ita: 32.528 },
   },
   kigali: {
-    rajat: { pohjoinen: -1.9261, etela: -1.9619, lansi: 30.0443, ita: 30.1028 },
+    rajat: { pohjoinen: -1.8787, etela: -1.9721, lansi: 29.9954, ita: 30.15 },
   },
   kinshasa: {
     rajat: { pohjoinen: -4.2933, etela: -4.3456, lansi: 15.2724, ita: 15.3229 },
@@ -6316,10 +6304,6 @@ const KAUPUNGIT = {
     rajat: { pohjoinen: 6.1338, etela: 6.1162, lansi: 1.2089, ita: 1.2306 },
     meri: true,
   },
-  luanda: {
-    rajat: { pohjoinen: -8.8049, etela: -8.8284, lansi: 13.2153, ita: 13.2392 },
-    meri: true,
-  },
   lusaka: {
     rajat: { pohjoinen: -15.4072, etela: -15.4346, lansi: 28.2743, ita: 28.3226 },
   },
@@ -6330,19 +6314,11 @@ const KAUPUNGIT = {
   maseru: {
     rajat: { pohjoinen: -29.3079, etela: -29.3271, lansi: 27.4734, ita: 27.5064 },
   },
-  mogadishu: {
-    rajat: { pohjoinen: 2.0439, etela: 2.0283, lansi: 45.3271, ita: 45.3486 },
-    meri: true,
-  },
-  monrovia: {
-    rajat: { pohjoinen: 6.3232, etela: 6.2945, lansi: -10.8168, ita: -10.795 },
-    meri: true,
-  },
   ndjamena: {
     rajat: { pohjoinen: 12.1265, etela: 12.0935, lansi: 15.0296, ita: 15.0597 },
   },
   niamey: {
-    rajat: { pohjoinen: 13.5322, etela: 13.4978, lansi: 2.0975, ita: 2.1391 },
+    rajat: { pohjoinen: 13.5201, etela: 13.4898, lansi: 2.0567, ita: 2.1083 },
   },
   nouakchott: {
     rajat: { pohjoinen: 18.1109, etela: 18.0681, lansi: -15.9892, ita: -15.9637 },
@@ -6367,10 +6343,6 @@ const KAUPUNGIT = {
     rajat: { pohjoinen: 34.0371, etela: 33.992, lansi: -6.8465, ita: -6.8157 },
     meri: true,
   },
-  saotome: {
-    rajat: { pohjoinen: 0.349, etela: 0.3309, lansi: 6.7239, ita: 6.7426 },
-    meri: true,
-  },
   tunis: {
     rajat: { pohjoinen: 36.8138, etela: 36.7899, lansi: 10.1638, ita: 10.1891 },
     meri: true,
@@ -6383,13 +6355,92 @@ const KAUPUNGIT = {
     rajat: { pohjoinen: -22.5562, etela: -22.5785, lansi: 17.0776, ita: 17.0957 },
   },
   yaounde: {
-    rajat: { pohjoinen: 3.8809, etela: 3.8329, lansi: 11.4801, ita: 11.5284 },
+    rajat: { pohjoinen: 3.9169, etela: 3.8253, lansi: 11.4351, ita: 11.5135 },
   },
   // AFRIKAN PÄÄKAUPUNKIPISTEET LOPPU
   // VATIKAANI (PT 11.10.2026, juna 183): Euroopan viimeinen pääkaupunkipiste ilman karttaa.
   vatikaanivaltio: {
     rajat: { pohjoinen: 41.9081, etela: 41.8986, lansi: 12.4467, ita: 12.4605 },
     laajennus: 1.6, // reunus kuten muissa kartoissa (Karttaseppä 12.10.2026, yhtenäisyystarkistus)
+  },
+  // PÄÄKAUPUNKI e04 (Codex, kohdekartat.mjs)
+  banjul: {
+    rajat: { pohjoinen: 13.4694, etela: 13.414, lansi: -16.6194, ita: -16.5639 },
+    meri: true,
+  },
+  // PÄÄKAUPUNKI e04 (Codex, kohdekartat.mjs)
+  conakry: {
+    // meri: 'maa' (Karttaseppä 13.10.2026): Codexin kohteisiin kuuluvat Îles de Losin saaret, joten ruutu on 18 × 11 km
+    // ja enimmäkseen merta; vesipuolen täyttö varoitti 93–98 % ja piirsi pelkän rantanauhan (meri paperin värinen).
+    rajat: { pohjoinen: 9.5364, etela: 9.4386, lansi: -13.845, ita: -13.681 },
+    meri: 'maa',
+    meriHaku: 0.05,
+    meriMax: 0.98,
+  },
+  // PÄÄKAUPUNKI e04 (Codex, kohdekartat.mjs)
+  monrovia: {
+    rajat: { pohjoinen: 6.3602, etela: 6.2973, lansi: -10.8091, ita: -10.7473 },
+    meri: true,
+  },
+  // PÄÄKAUPUNKI e05 (Codex, kohdekartat.mjs)
+  accra: {
+    rajat: { pohjoinen: 5.5739, etela: 5.5222, lansi: -0.2225, ita: -0.1366 },
+    meri: true,
+  },
+  // PÄÄKAUPUNKI e06 (Codex, kohdekartat.mjs)
+  luanda: {
+    rajat: { pohjoinen: -8.7756, etela: -8.8203, lansi: 13.2179, ita: 13.25 },
+    meri: true,
+  },
+  // PÄÄKAUPUNKI e06 (Codex, kohdekartat.mjs)
+  saotome: {
+    rajat: { pohjoinen: 0.411, etela: 0.3428, lansi: 6.703, ita: 6.7514 },
+    meri: true,
+  },
+  // PÄÄKAUPUNKI e07 (Codex, kohdekartat.mjs)
+  mogadishu: {
+    rajat: { pohjoinen: 2.0459, etela: 2.0289, lansi: 45.3386, ita: 45.3667 },
+    meri: true,
+  },
+  // PÄÄKAUPUNKI e11 (Codex, kohdekartat.mjs)
+  ottawa: {
+    rajat: { pohjoinen: 45.4442, etela: 45.388, lansi: -75.7288, ita: -75.6719 },
+  },
+  // PÄÄKAUPUNKI e11 (Codex, kohdekartat.mjs)
+  washington: {
+    rajat: { pohjoinen: 38.9122, etela: 38.8821, lansi: -77.0646, ita: -77.0006 },
+  },
+  // PÄÄKAUPUNKI e12 (Codex, kohdekartat.mjs)
+  castries: {
+    rajat: { pohjoinen: 14.0148, etela: 13.9859, lansi: -61.0009, ita: -60.9798 },
+    meri: true,
+    meriHaku: 0.05,
+  },
+  // PÄÄKAUPUNKI e12 (Codex, kohdekartat.mjs)
+  nassau: {
+    rajat: { pohjoinen: 25.0828, etela: 25.0681, lansi: -77.3616, ita: -77.3347 },
+    meri: true,
+    meriHaku: 0.05,
+  },
+  // PÄÄKAUPUNKI e12 (Codex, kohdekartat.mjs)
+  saintjohns: {
+    rajat: { pohjoinen: 17.1341, etela: 17.1183, lansi: -61.8665, ita: -61.8391 },
+    meri: true,
+    meriHaku: 0.05,
+  },
+  // PÄÄKAUPUNKI e13 (Codex, kohdekartat.mjs)
+  georgetown: {
+    rajat: { pohjoinen: 6.827, etela: 6.802, lansi: -58.1697, ita: -58.1427 },
+    meri: true,
+    meriHaku: 0.05,
+  },
+  // PÄÄKAUPUNKI e13 (Codex, kohdekartat.mjs)
+  santiagodechile: {
+    rajat: { pohjoinen: -33.4307, etela: -33.446, lansi: -70.6574, ita: -70.6405 },
+  },
+  // PÄÄKAUPUNKI e14 (Codex, kohdekartat.mjs)
+  canberra: {
+    rajat: { pohjoinen: -35.2321, etela: -35.2754, lansi: 149.0963, ita: 149.1843 },
   },
 };
 
@@ -7040,7 +7091,7 @@ function piirretytRajat({ rajat, laajennus = 1 }) {
  * pääkuvan sisällä.
  */
 let PIDA_MAANALAISET = false;
-function kokoaKerrokset(elementit, x, y, rajat, meri = false, rantaLaaja = null, laguuniMaa = 0) {
+function kokoaKerrokset(elementit, x, y, rajat, meri = false, rantaLaaja = null, laguuniMaa = 0, meriMax = 0.85) {
   const pisteet = (geom) => geom.map((p) => `${x(p.lon)},${y(p.lat)}`).join(' ');
   const kerrokset = {
     meri: [], saaret: [], puistot: [], vedet: [], joet: [], radat: [], muurit: [],
@@ -7253,7 +7304,8 @@ function kokoaKerrokset(elementit, x, y, rajat, meri = false, rantaLaaja = null,
       const pintaAla = renkaat.reduce((summa, rengas) => summa + renkaanAla(rengas), 0)
         - saaret.reduce((summa, saari) => summa + renkaanAla(saari), 0);
       const tayttoAla = (tayttoRajat.ita - tayttoRajat.lansi) * (tayttoRajat.pohjoinen - tayttoRajat.etela);
-      if (!renkaat.length || pintaAla > tayttoAla * 0.85) {
+      // meriMax (Karttaseppä 13.10.2026, Conakry): saaristoruudussa meri on aidosti yli 85 % — raja kaupunkikohtaisesti.
+      if (!renkaat.length || pintaAla > tayttoAla * meriMax) {
         if (renkaat.length) {
           console.log(`  VAROITUS: meri peittäisi ${Math.round((pintaAla / tayttoAla) * 100)} %`
             + ' rajauksesta — piirretään rantanauha. Tarkista rajaus.');
@@ -7409,7 +7461,7 @@ function piirraKainalo(kainalo, elementit, W, H, ydinW, rauniokaupunki = false) 
 
 function piirra(kaupunki, elementit, kainaloAineistot = [], rantaLaaja = null) {
   const {
-    kainalot = [], meri = false, laajennus = 1, rauniokaupunki = false, laguuniMaa = 0, maanalaisetVedet = false,
+    kainalot = [], meri = false, laajennus = 1, rauniokaupunki = false, laguuniMaa = 0, maanalaisetVedet = false, meriMax = 0.85,
   } = KAUPUNGIT[kaupunki];
   PIDA_MAANALAISET = maanalaisetVedet;
   const rajat = piirretytRajat(KAUPUNGIT[kaupunki]);
@@ -7419,7 +7471,7 @@ function piirra(kaupunki, elementit, kainaloAineistot = [], rantaLaaja = null) {
   const H = Math.round(W / kuvasuhde(rajat));
   const x = (lon) => (((lon - rajat.lansi) / (rajat.ita - rajat.lansi)) * W).toFixed(1);
   const y = (lat) => (((rajat.pohjoinen - lat) / (rajat.pohjoinen - rajat.etela)) * H).toFixed(1);
-  const kerrokset = kokoaKerrokset(elementit, x, y, rajat, meri, rantaLaaja, laguuniMaa);
+  const kerrokset = kokoaKerrokset(elementit, x, y, rajat, meri, rantaLaaja, laguuniMaa, meriMax);
   const kainaloKuvat = kainalot
     .map((k, i) => piirraKainalo(k, kainaloAineistot[i] ?? [], W, H, W / laajennus, rauniokaupunki))
     .join('\n');
