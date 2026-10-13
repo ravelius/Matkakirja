@@ -1,0 +1,30 @@
+{
+  "task": 118,
+  "supplementedAt": "2026-10-13T16:52:01.809708+00:00",
+  "initialCorrectionPostCommit": "25f249c0dffc8ec8644c2d0d243b9361eb4e8acb",
+  "initialCorrectionManifest": "posti/paakaupungit-tekstikorjaus-task118-20261013.json",
+  "SemnaClarificationAttachment": "posti/paakaupungit-tekstikorjaus-task118-20261013-semna-clarification.json",
+  "SemnaSourcePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task118/semna-source-licence-clarification.json",
+  "SemnaSourceSHA256": "174212c7616320be5084ca3fdb3c4726db20ab3db0c35efb4e59c84d1ada6293",
+  "metadataConcernResolved": true,
+  "existingQAAndImageUnchanged": true,
+  "newNativeVisualQAClaimed": false,
+  "noDefaultCameraMetadataInference": true,
+  "textAcceptanceVerified": false,
+  "correctedCities": 93,
+  "currentImageBindings": 1029,
+  "excludedRoleBindings": 11,
+  "unexpectedTextSchemaErrors": 0,
+  "remainingLegacyPortErrors": 1478,
+  "SisaltokirjuriResampleRequired": {
+    "citiesPerEra": 2,
+    "totalCities": 22
+  },
+  "NouakchottPrimaryValues": 24,
+  "NouakchottRequiredValues": 48,
+  "NouakchottCSaatiedot": null,
+  "SitesChanged": false,
+  "newGenerationIssued": false,
+  "mainChanged": false,
+  "gameIntegrated": false
+}

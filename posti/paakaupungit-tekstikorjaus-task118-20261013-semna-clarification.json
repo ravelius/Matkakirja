@@ -1,0 +1,86 @@
+{
+  "task": 118,
+  "city": "khartum",
+  "era": "e07",
+  "role": "L3",
+  "targetJsonPath": "$.kaupunkilehti[1].nostot[2]",
+  "commonsFile": "Relief Semna temple Sesostris III barge.jpg",
+  "resolution": "resolved",
+  "resolvedScope": "Reservation-string versus explicit file-page licence metadata clarification only. Existing QA verdict and asset are unchanged.",
+  "reason": "All-rights-reserved and no-permission strings are confined to embedded EXIF/IPTC/XMP metadata displayed in the Metadata section. The current Commons Summary identifies own work by Matthias Gehricke; Licensing contains his explicit self CC BY-SA4.0 grant, and File history shows the same account as sole original uploader. No reservation or contradictory noncommercial/no-use restriction appears in Summary or Licensing. This evidence resolves the metadata concern without asserting that the embedded strings were camera defaults or that they were removed.",
+  "sourcePage": "https://commons.wikimedia.org/wiki/File:Relief_Semna_temple_Sesostris_III_barge.jpg",
+  "currentCommonsPageCheckedAt": "2026-10-13T16:43:03.275247+00:00",
+  "currentPageReadMethod": "web normal Wikimedia Commons /wiki/File page; Summary, Licensing, File history, Metadata and Structured data inspected. No API, /w history, archive or blocked-route bypass.",
+  "savedSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/7533db4d0663b684c0302e479afad549171441cb7c5502e6de3dae266c983f7f.html",
+  "sourceSHA256": "ac4936798cde70a02018d0ba0024f5c77cfbf31af564095fe458be2a74a03d55",
+  "cachedPageRevisionId": 915016483,
+  "cachedSHAEqualsExistingQAEvidence": true,
+  "author": "Matthias Gehricke",
+  "sourceField": "Own work",
+  "license": "CC BY-SA 4.0",
+  "licenseURL": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "licenceSectionEvidence": "Explicit self-publication by the copyright holder under Attribution-ShareAlike4.0; not inferred merely from a category or EXIF field.",
+  "fileHistoryEvidence": {
+    "uploadDateUTC": "2019-09-19 20:48",
+    "uploader": "Matthias Gehricke",
+    "entryCountOnCurrentPage": 1,
+    "comment": "UploadWizard original creation",
+    "currentDimensions": [
+      6720,
+      4480
+    ]
+  },
+  "structuredDataEvidence": {
+    "creatorName": "Matthias Gehricke",
+    "fileSource": "original creation by uploader",
+    "copyrightLicense": "CC BY-SA 4.0",
+    "copyrightStatus": "copyrighted; compatible with retaining copyright while granting CC permissions"
+  },
+  "embeddedMetadataEvidence": {
+    "scope": "EXIF APP1, Photoshop/IPTC APP13 and XMP APP1; not EXIF-only",
+    "copyrightNotice": "©Matthias Gehricke. All rights reservered",
+    "usageTerms": "All rights reserved. No usage without permission",
+    "xmpFields": [
+      "dc:creator",
+      "dc:rights",
+      "xmpRights:UsageTerms"
+    ],
+    "markerOffsets": {
+      "ExifAPP1": 2,
+      "PhotoshopIPTCAPP13": 19248,
+      "XMPAPP1": 41116
+    },
+    "stringsFoundInNative": true,
+    "defaultOrLegacyOriginVerified": false
+  },
+  "nativeEvidence": {
+    "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/khartum/cc-evidence/meta-07.jpg",
+    "SHA256": "086375780a5134b0813d92a5355e7dd1086961c8b969496b12a5c50053c37f28",
+    "bytes": 42673981,
+    "SHAEqualsApprovedQA": true,
+    "newVisualInspection": false,
+    "existingQAActualViewMethod": "view_image high; entire 6720x4480 original displayed resized to 1920x1280",
+    "existingQAFullNativeViewedFlag": false,
+    "existingQAFullImageViewedFlag": true,
+    "note": "Existing reviewer opened original file and viewed entire image resized1920x1280; report does not reinterpret this as fresh native-resolution inspection."
+  },
+  "existingQA": {
+    "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/khartum/qa.json",
+    "verdict": "accepted",
+    "reviewedAt": "2026-10-12T19:24:17.677535+00:00"
+  },
+  "recommendation": "Preserve the currently accepted source asset and licence credit. Retain this clarification with task118 source evidence; the earlier EXIF concern alone does not justify an additional HOLD.",
+  "noMutations": [
+    "C",
+    "QA",
+    "native image",
+    "media selection",
+    "Git",
+    "integration sidecar",
+    "immutable approved1040 image post"
+  ],
+  "scopeLimits": [
+    "This resolves the recorded licence/metadata discrepancy, not all depicted-object or site-access rights.",
+    "No photographer consent was invented and no external messages were sent."
+  ]
+}
