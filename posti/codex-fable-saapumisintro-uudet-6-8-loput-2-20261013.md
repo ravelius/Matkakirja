@@ -1,6 +1,6 @@
 # Euroopan uudet saapumisintroaiheet — osa 2/2, 13.10.2026
 
-16 QA/R2-varmennettua kuvaa toimitettu, 4 perusteltua lopullista poisjättöä. Käsitelty 20/47 tämän osan nimetyistä kuvista; 20 generointikutsua. Tilaus on kesken, kun kaikki nimetyt kohteet eivät vielä ole käsitelty.
+18 QA/R2-varmennettua kuvaa toimitettu, 4 perusteltua lopullista poisjättöä. Käsitelty 22/47 tämän osan nimetyistä kuvista; 22 generointikutsua. Tilaus on kesken, kun kaikki nimetyt kohteet eivät vielä ole käsitelty.
 
 Koko laajennus käsittää 95 nimettyä kuvaa (#133–227): osa 1 sisältää 48 ja osa 2 47 kuvaa. Aiempi 88+1 arvio ei korvaa lähteiden nimettyä inventaariota. Yksi uusi sisäänrakennettu generointi per kuva; ei uusintoja, vertailuottoja, inpaintingia tai rajauksia.
 
@@ -17,6 +17,13 @@ Manifesti: `posti/kuvatoimitus-saapumisintro-sicily-uudet-6-8-20261013.json`. To
 
 - #183, slot 6: Taorminan katot ja Giardini Naxosin lahti Piazza IX Aprilelta lounaaseen, taustalla Etna. Havainnekuva.
 - #184, slot 8: Taorminan köysirata laskeutuu Monte Tauron rinnettä merelle Mazzaròn suuntaan. Havainnekuva.
+
+## SEVILLA
+
+Manifesti: `posti/kuvatoimitus-saapumisintro-seville-uudet-6-8-20261013.json`. Toimitettu 2/2; kutsuja 2.
+
+- #185, slot 6: Sevillan vanhan kaupungin katot Giraldan näköalatasolta etelään, edessä katedraalin katto. Havainnekuva.
+- #186, slot 8: Sevillan Metrocentro-raitiovaunu hitaasti Avenida de la Constituciónilla ilman ajojohtoa. Havainnekuva.
 
 ## KRAKOVA
 

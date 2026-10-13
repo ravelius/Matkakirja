@@ -1,0 +1,320 @@
+{
+  "schemaVersion": 1,
+  "cityName": "SEVILLA",
+  "gameCityId": "sevilla",
+  "mediaSlug": "seville",
+  "taskNumbers": [
+    185,
+    186
+  ],
+  "updatedAt": "2026-10-13T19:53:50.761337+00:00",
+  "sourcePath": "posti/fable-codex-saapumisintro-uudet-6-8-loput-2-20261013.md",
+  "sourceCommit": "dbdaff9a39fa0e5052f176c890c85836e1a69a1f",
+  "sourceBlob": "2e5adc4cb04a23fcb4cd8fdd75426ac78afdcc9d",
+  "sourceReadInFull": true,
+  "sourceReadBy": "/root/intro_owner_rejection_inventory",
+  "sourceReadReceiptPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/source-read-receipt.json",
+  "assets": [
+    {
+      "taskNumber": 185,
+      "mediaSlug": "seville",
+      "slot": 6,
+      "filename": "seville-6-nakoala-intro-v1.png",
+      "title": "koko kaupunki tunnetulta näköalapaikalta päivällä — Sevillan vanhan kaupungin katot Giraldan näköalatasolta etelään, edessä katedraalin katto.",
+      "fullDeliveryRequirement": "**6 / koko kaupunki tunnetulta näköalapaikalta päivällä — Sevillan vanhan kaupungin katot Giraldan näköalatasolta etelään, edessä katedraalin katto.** Tiedosto `seville-6-nakoala-intro-v1.png`.\nMitä kuvataan: Sevillan vanhan kaupungin ja katedraalin katto päivänvalossa Giraldan kellotornin näköalatasolta etelään katsoen (nykyaikainen värikuva): alhaalla suoraan edessä Sevillan katedraalin goottilaisen katon vaalea, sään patinoima kalkkikivi, tukikaaret, ohuet huippukoristeet (pinaklit) ja kattokaarien rytmi, joka näkyy tunnistettavana ja täyttää kuvan alakolmanneksen keskiosan; sen takana vanhan kaupungin terrakottakattoja, kermanvärisiä ja valkoisia taloja, kapeita varjoisia kujia, palmuja ja appelsiinipuiden latvoja; vasemmassa reunassa alhaalla ja kaukana Alcázarin puutarhojen tiheä vihreä lehvistö ja palmut pienenä; kaukana taustalla Parque María Luisan puiden vihreä vyöhyke ja matalat hämyiset kattorivit; kirkas sininen taivas, vaaleat pilvihahtuvat. Etualalla alareunassa vain kapea kaistale vaaleaa kellohuoneen kivikaidetta, ei ihmisiä lähellä, ei turvaverkkoja eikä kylttejä (ei lainkaan ihmisiä tai korkeintaan hädin näkyviä pisteitä kaukana kaduilla). Kulma: vaakakuva, Giraldan näköalatason aukosta silmänkorkeudelta (noin 70 m korkeudesta), kamera suunnattu etelään (keskisuunta noin 183 astetta; vaakasuuntainen näkökulma noin 62 astetta, siis kuvassa suunnat noin 152-214 astetta): katedraalin katto lähietäisyydellä keskellä, Alcázarin puutarhat (suunta 150-170 astetta) vasemmassa reunassa, vanhan kaupungin katot oikealla kohti jokea. Metropol Parasol (suunta noin 5 astetta, 0,8 km) ja Torre Sevilla (noin 335 astetta) ovat kameran takana pohjoisessa, Triana ja Guadalquivir (suunta noin 245 astetta) lännessä, Torre del Oro (noin 220 astetta) heti oikean reunan ulkopuolella, eli niitä ei saa näkyä; älä käännä kameraa pohjoiseen tai länteen. Valo: kirkas päivä, pehmeä aamupäivän valo vasemmalta sivulta (idästä), ohut kaupunkiutu kaukana, luonnolliset vaimeat värit, ei HDR:ää. Ei saa näkyä: Giraldaa itseään (kamera on sen sisällä), Metropol Parasolia, Torre Sevillaa, Triana-siltoja, Plaza de Españan rakennusta, patsaita ja muistomerkkejä, pilvenpiirtäjiä, nostureita, ihmisiä lähellä tai tunnistettavia kasvoja, tekstiä, kylttejä, mainoksia, logoja, vesileimaa eikä kehystä. Fotorealistinen havainnekuva, vaimeat värit, 1536 x 1024.\nKuvateksti-ehdotus (loppuu sanaan Havainnekuva.): Sevillan vanhan kaupungin katot Giraldan näköalatasolta etelään, edessä katedraalin katto. Havainnekuva.\n\n",
+      "sourceVersions": [
+        {
+          "path": "posti/fable-codex-saapumisintro-uudet-6-8-loput-2-20261013.md",
+          "commit": "dbdaff9a39fa0e5052f176c890c85836e1a69a1f",
+          "blob": "2e5adc4cb04a23fcb4cd8fdd75426ac78afdcc9d",
+          "readInFull": true
+        }
+      ],
+      "ownerThreadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+      "hostId": "local",
+      "generationCap": 1,
+      "status": "QA-R2-delivered-for-PT-review",
+      "productionStarted": false,
+      "delivered": true,
+      "city": "SEVILLA",
+      "gameID": "sevilla",
+      "part": 2,
+      "sourceBlob": "2e5adc4cb04a23fcb4cd8fdd75426ac78afdcc9d",
+      "sourceCommit": "dbdaff9a39fa0e5052f176c890c85836e1a69a1f",
+      "sourcePath": "posti/fable-codex-saapumisintro-uudet-6-8-loput-2-20261013.md",
+      "sourceNasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/sources/fable-codex-saapumisintro-uudet-6-8-loput-2-20261013.md",
+      "sourceCharacterSpan": [
+        12321,
+        14850
+      ],
+      "sourceByteSpan": [
+        12762,
+        15395
+      ],
+      "fullDeliveryRequirementSHA256": "dbd1dae7474e4a29482ca1fead7b9ca810cb553a2879a5acd0de5d55b987a6c1",
+      "fullDirective": "Sevillan vanhan kaupungin ja katedraalin katto päivänvalossa Giraldan kellotornin näköalatasolta etelään katsoen (nykyaikainen värikuva): alhaalla suoraan edessä Sevillan katedraalin goottilaisen katon vaalea, sään patinoima kalkkikivi, tukikaaret, ohuet huippukoristeet (pinaklit) ja kattokaarien rytmi, joka näkyy tunnistettavana ja täyttää kuvan alakolmanneksen keskiosan; sen takana vanhan kaupungin terrakottakattoja, kermanvärisiä ja valkoisia taloja, kapeita varjoisia kujia, palmuja ja appelsiinipuiden latvoja; vasemmassa reunassa alhaalla ja kaukana Alcázarin puutarhojen tiheä vihreä lehvistö ja palmut pienenä; kaukana taustalla Parque María Luisan puiden vihreä vyöhyke ja matalat hämyiset kattorivit; kirkas sininen taivas, vaaleat pilvihahtuvat. Etualalla alareunassa vain kapea kaistale vaaleaa kellohuoneen kivikaidetta, ei ihmisiä lähellä, ei turvaverkkoja eikä kylttejä (ei lainkaan ihmisiä tai korkeintaan hädin näkyviä pisteitä kaukana kaduilla). Kulma: vaakakuva, Giraldan näköalatason aukosta silmänkorkeudelta (noin 70 m korkeudesta), kamera suunnattu etelään (keskisuunta noin 183 astetta; vaakasuuntainen näkökulma noin 62 astetta, siis kuvassa suunnat noin 152-214 astetta): katedraalin katto lähietäisyydellä keskellä, Alcázarin puutarhat (suunta 150-170 astetta) vasemmassa reunassa, vanhan kaupungin katot oikealla kohti jokea. Metropol Parasol (suunta noin 5 astetta, 0,8 km) ja Torre Sevilla (noin 335 astetta) ovat kameran takana pohjoisessa, Triana ja Guadalquivir (suunta noin 245 astetta) lännessä, Torre del Oro (noin 220 astetta) heti oikean reunan ulkopuolella, eli niitä ei saa näkyä; älä käännä kameraa pohjoiseen tai länteen. Valo: kirkas päivä, pehmeä aamupäivän valo vasemmalta sivulta (idästä), ohut kaupunkiutu kaukana, luonnolliset vaimeat värit, ei HDR:ää. Ei saa näkyä: Giraldaa itseään (kamera on sen sisällä), Metropol Parasolia, Torre Sevillaa, Triana-siltoja, Plaza de Españan rakennusta, patsaita ja muistomerkkejä, pilvenpiirtäjiä, nostureita, ihmisiä lähellä tai tunnistettavia kasvoja, tekstiä, kylttejä, mainoksia, logoja, vesileimaa eikä kehystä. Fotorealistinen havainnekuva, vaimeat värit, 1536 x 1024.",
+      "caption": "Sevillan vanhan kaupungin katot Giraldan näköalatasolta etelään, edessä katedraalin katto. Havainnekuva.",
+      "sourceReadInFullVerified": true,
+      "mappingBlockExactSourceMatch": true,
+      "r2Prefix": "julisteet/saapumisintro/seville/20261013-uudet-6-8/",
+      "deliveryManifestPath": "posti/kuvatoimitus-saapumisintro-seville-uudet-6-8-20261013.json",
+      "partDeliveryReportPath": "posti/codex-fable-saapumisintro-uudet-6-8-loput-2-20261013.md",
+      "generationCallsRecorded": 0,
+      "qaAcceptedVerified": true,
+      "r2BytesVerified": true,
+      "mailboxDeliveryVerified": false,
+      "ownerAcceptanceVerified": false,
+      "acceptanceRoute": "PT acts for owner; source authorizes direct delivery. Actual PT acceptance remains evidence-dependent.",
+      "gameIntegrated": false,
+      "published": false,
+      "r2Key": "julisteet/saapumisintro/seville/20261013-uudet-6-8/seville-6-nakoala-intro-v1.png",
+      "historical": false,
+      "id": "seville-6-nakoala-intro-v1",
+      "sourceReadInFull": true,
+      "cityName": "SEVILLA",
+      "gameCityId": "sevilla",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/seville/native-6.png",
+      "nativeSHA256": "a4a750332b3663bef1800fd030da860c759e33faf261d3a783bb756dbdf96dc7",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/seville/seville-6-nakoala-intro-v1.png",
+      "workspacePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/eurooppa-introt-uudet68-loput-20261013/seville/seville-6-nakoala-intro-v1.png",
+      "sha256": "54f1db6516560be04ea9e62e8a3d8f27b89d8f91cbda4b198d8856048d845f40",
+      "width": 1536,
+      "height": 1024,
+      "opaque": true,
+      "sRGB": true,
+      "neutralGrayscale": false,
+      "pixelIdentityAfterMetadataExport": true,
+      "pixelIdentityToNative": true,
+      "historicalGrayscaleEncodingNormalized": false,
+      "exportProcessing": "Metadata/sRGB only; pixels unchanged",
+      "generationPrompt": "Use case: photorealistic-natural.\nAsset: one NEW current-day full-color camera-photograph-like European city arrival image, exactly 1536 x 1024 pixels, landscape 3:2, opaque PNG. One image only, no collage or contact sheet.\nSubject: koko kaupunki tunnetulta näköalapaikalta päivällä — Sevillan vanhan kaupungin katot Giraldan näköalatasolta etelään, edessä katedraalin katto.\n\nEXACT SCENE, VIEWPOINT, GEOMETRY, LIGHT AND EXCLUSIONS (the following Finnish source description is the controlling composition brief; follow every detail including bearing/FOV, relative left/right position, travel direction, scale, and exclusions):\nSevillan vanhan kaupungin ja katedraalin katto päivänvalossa Giraldan kellotornin näköalatasolta etelään katsoen (nykyaikainen värikuva): alhaalla suoraan edessä Sevillan katedraalin goottilaisen katon vaalea, sään patinoima kalkkikivi, tukikaaret, ohuet huippukoristeet (pinaklit) ja kattokaarien rytmi, joka näkyy tunnistettavana ja täyttää kuvan alakolmanneksen keskiosan; sen takana vanhan kaupungin terrakottakattoja, kermanvärisiä ja valkoisia taloja, kapeita varjoisia kujia, palmuja ja appelsiinipuiden latvoja; vasemmassa reunassa alhaalla ja kaukana Alcázarin puutarhojen tiheä vihreä lehvistö ja palmut pienenä; kaukana taustalla Parque María Luisan puiden vihreä vyöhyke ja matalat hämyiset kattorivit; kirkas sininen taivas, vaaleat pilvihahtuvat. Etualalla alareunassa vain kapea kaistale vaaleaa kellohuoneen kivikaidetta, ei ihmisiä lähellä, ei turvaverkkoja eikä kylttejä (ei lainkaan ihmisiä tai korkeintaan hädin näkyviä pisteitä kaukana kaduilla). Kulma: vaakakuva, Giraldan näköalatason aukosta silmänkorkeudelta (noin 70 m korkeudesta), kamera suunnattu etelään (keskisuunta noin 183 astetta; vaakasuuntainen näkökulma noin 62 astetta, siis kuvassa suunnat noin 152-214 astetta): katedraalin katto lähietäisyydellä keskellä, Alcázarin puutarhat (suunta 150-170 astetta) vasemmassa reunassa, vanhan kaupungin katot oikealla kohti jokea. Metropol Parasol (suunta noin 5 astetta, 0,8 km) ja Torre Sevilla (noin 335 astetta) ovat kameran takana pohjoisessa, Triana ja Guadalquivir (suunta noin 245 astetta) lännessä, Torre del Oro (noin 220 astetta) heti oikean reunan ulkopuolella, eli niitä ei saa näkyä; älä käännä kameraa pohjoiseen tai länteen. Valo: kirkas päivä, pehmeä aamupäivän valo vasemmalta sivulta (idästä), ohut kaupunkiutu kaukana, luonnolliset vaimeat värit, ei HDR:ää. Ei saa näkyä: Giraldaa itseään (kamera on sen sisällä), Metropol Parasolia, Torre Sevillaa, Triana-siltoja, Plaza de Españan rakennusta, patsaita ja muistomerkkejä, pilvenpiirtäjiä, nostureita, ihmisiä lähellä tai tunnistettavia kasvoja, tekstiä, kylttejä, mainoksia, logoja, vesileimaa eikä kehystä. Fotorealistinen havainnekuva, vaimeat värit, 1536 x 1024.\n\nFinal photographic requirements: Natural real-camera appearance with restrained ordinary exposure, soft realistic light and subdued COLOR; this is PRESENT DAY, not a historical reconstruction and not a youth party. Respect the exact stated transport form and uniformly neutral unmarked paint. Do not restore brand colors, stripes, vehicle identifiers, flags, signs, letters, numbers, logos, advertisements or clothing trademarks. Faces remain tiny anonymous silhouettes or back-facing at a distance as specified. No extra landmarks, sculpture, architecture, vehicles or geographic features beyond those the controlling description allows. Correct real-looking structural geometry and coherent physics. Irregular leaves, non-repeating water ripples, naturally varying worn stone/plaster, realistic glass and metal; no plastic AI surfaces, pattern stamping, HDR, cinematic oversaturation or CGI look. Any locomotive or boat motion is shown only as described, never with added drawn motion graphics. Frame native 1536 x 1024 from the start; do not create any in-image caption, disclaimer, filename, overlay, UI, frame or watermark.\n",
+      "sourceReadReceiptPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/source-read-receipt.json",
+      "references": [
+        {
+          "kind": "authorized-scene-commission",
+          "path": "posti/fable-codex-saapumisintro-uudet-6-8-loput-2-20261013.md",
+          "commit": "dbdaff9a39fa0e5052f176c890c85836e1a69a1f",
+          "blob": "2e5adc4cb04a23fcb4cd8fdd75426ac78afdcc9d",
+          "use": "Exact assigned source card read in full. Camera direction, FOV, landmark positions, transport geometry and exclusions are preserved; this is commission evidence, not a separate visual photograph reference."
+        }
+      ],
+      "url": "https://media.matkakirja.app/julisteet/saapumisintro/seville/20261013-uudet-6-8/seville-6-nakoala-intro-v1.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/seville/20261013-uudet-6-8/seville-6-nakoala-intro-v1.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "QA": {
+        "slot": 6,
+        "taskNumber": 185,
+        "assetID": "seville-6-nakoala-intro-v1",
+        "targetJsonPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/seville/asset-6.json",
+        "nativeSHA256": "a4a750332b3663bef1800fd030da860c759e33faf261d3a783bb756dbdf96dc7",
+        "finalSHA256": "54f1db6516560be04ea9e62e8a3d8f27b89d8f91cbda4b198d8856048d845f40",
+        "verdict": "accepted",
+        "reason": "Giraldan aukosta katedraalin goottilaiset katot, vasemman reunan puutarha ja vanha kaupunki etelään tunnistuvat, kielletyt pohjois-/länsimaamerkit eivät erotu. Katto yltää alakolmanneksesta myös keskikuvan puolelle; tämä sommittelupoikkeama on kirjattu, mutta kaupungin kokonaisnäkymä ja ohjeen pääaihe säilyvät.",
+        "reviewer": "/root",
+        "reviewedAt": "2026-10-13T19:53:26.515814+00:00",
+        "nativeViewedInFull": true,
+        "assignedSourceCardReadInFull": true,
+        "nativePixelsEqualFinalVerified": true,
+        "technicalPassed": true,
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "published": false
+      },
+      "R2Proof": {
+        "slot": 6,
+        "r2Key": "julisteet/saapumisintro/seville/20261013-uudet-6-8/seville-6-nakoala-intro-v1.png",
+        "url": "https://media.matkakirja.app/julisteet/saapumisintro/seville/20261013-uudet-6-8/seville-6-nakoala-intro-v1.png",
+        "sha256": "54f1db6516560be04ea9e62e8a3d8f27b89d8f91cbda4b198d8856048d845f40",
+        "nativeSHA256": "a4a750332b3663bef1800fd030da860c759e33faf261d3a783bb756dbdf96dc7",
+        "bytes": 2844016,
+        "readbacks": [
+          {
+            "http": 200,
+            "byteExact": true,
+            "sha256": "54f1db6516560be04ea9e62e8a3d8f27b89d8f91cbda4b198d8856048d845f40",
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "cacheBusted": false
+          },
+          {
+            "http": 200,
+            "byteExact": true,
+            "sha256": "54f1db6516560be04ea9e62e8a3d8f27b89d8f91cbda4b198d8856048d845f40",
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "cacheBusted": true
+          }
+        ],
+        "byteExactReadback": true,
+        "verifiedAt": "2026-10-13T19:53:48.096564+00:00"
+      },
+      "FableReceiptVerified": false
+    },
+    {
+      "taskNumber": 186,
+      "mediaSlug": "seville",
+      "slot": 8,
+      "filename": "seville-8-kulkuneuvo-intro-v1.png",
+      "title": "kaupungin oma kulkuneuvo liikkeessä — Sevillan Metrocentro-raitiovaunu hitaasti Avenida de la Constituciónilla ilman ajojohtoa.",
+      "fullDeliveryRequirement": "**8 / kaupungin oma kulkuneuvo liikkeessä — Sevillan Metrocentro-raitiovaunu hitaasti Avenida de la Constituciónilla ilman ajojohtoa.** Tiedosto `seville-8-kulkuneuvo-intro-v1.png`.\nMitä kuvataan: nykyaikainen matalalattiainen, nivelletty kaupunkiraitiovaunu (kolme tai neljä nivelosaa, yleisilmeeltään tavallinen eurooppalainen raitiovaunu) liikkeessä hitaasti leveällä, kivetyllä jalankulkupainotteisella pääkadulla päivällä: raiteet kadun kivetyksessä samassa tasossa, vaunun yläpuolella ei ajojohtoa eikä ajolankoja (katu on johdoton), kadun reunoilla yksittäisiä lehtipuita ja takana vaaleita, 3–4-kerroksisia historiallisia taloja okran-, kerman- ja valkoisilla seinillä, koristeellisia rautaparvekkeita ja vihreitä tai ruskeita ikkunaluukkuja; sileä kivikatu, jolla muutama kävelijä ja pyöräilijä pienenä kaukana, selin tai kaukaa, ei tunnistettavia kasvoja. Värikuva, nykyaika. Kulkuneuvon värit: yksivärinen vaalea harmaa-valkoinen runko, ei raitoja, ei brändimaalauksia, ei mainoksia, ei logoja, ei ikkunakalvoja tai kylkimainoksia; vaunun otsassa ja kyljessä ei numeroita, reittinäyttöjä, kylttejä eikä mitään tekstiä (otsanäytöt sammutettu / tyhjät). Kulma: vaakakuva, kameran korkeus noin 1,5 m, kadun reunalta viistosti etuvasemmalta (kolmen neljänneksen kuva), vaunu liikkuu hitaasti vasemmalta oikealle, vaunu terävä, tausta hieman pehmeä; vaunu täyttää noin kaksi kolmasosaa kuvan leveydestä. Valo: aurinkoinen aamupäivä, kirkas sininen taivas, puiden pehmeät varjot katukivellä, luonnolliset värit, ei HDR:ää. Ei saa näkyä: katedraalia, Giraldaa, Archivo de Indiasia, muita tunnistettavia julkisia rakennuksia, patsaita ja muistomerkkejä, hevoskärryjä, tekstiä, kylttejä, katukylttejä, liikennekylttejä, reittikylttejä, pysäkkitauluja, lipunautomaatteja, mainoksia, logoja, auton rekisterikilpiä tai merkkejä, vesileimaa eikä kehystä; muu ajoneuvoliikenne vain kaukana ja merkittömänä. Fotorealistinen havainnekuva, vaimeat värit, 1536 x 1024.\nKuvateksti-ehdotus (loppuu sanaan Havainnekuva.): Sevillan Metrocentro-raitiovaunu hitaasti Avenida de la Constituciónilla ilman ajojohtoa. Havainnekuva.\n\n",
+      "sourceVersions": [
+        {
+          "path": "posti/fable-codex-saapumisintro-uudet-6-8-loput-2-20261013.md",
+          "commit": "dbdaff9a39fa0e5052f176c890c85836e1a69a1f",
+          "blob": "2e5adc4cb04a23fcb4cd8fdd75426ac78afdcc9d",
+          "readInFull": true
+        }
+      ],
+      "ownerThreadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+      "hostId": "local",
+      "generationCap": 1,
+      "status": "QA-R2-delivered-for-PT-review",
+      "productionStarted": false,
+      "delivered": true,
+      "city": "SEVILLA",
+      "gameID": "sevilla",
+      "part": 2,
+      "sourceBlob": "2e5adc4cb04a23fcb4cd8fdd75426ac78afdcc9d",
+      "sourceCommit": "dbdaff9a39fa0e5052f176c890c85836e1a69a1f",
+      "sourcePath": "posti/fable-codex-saapumisintro-uudet-6-8-loput-2-20261013.md",
+      "sourceNasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/sources/fable-codex-saapumisintro-uudet-6-8-loput-2-20261013.md",
+      "sourceCharacterSpan": [
+        14850,
+        16967
+      ],
+      "sourceByteSpan": [
+        15395,
+        17596
+      ],
+      "fullDeliveryRequirementSHA256": "93cf6f4261e03a2c8ba2ae508f620068ee86d165fd4f4d87980e92b7450fb381",
+      "fullDirective": "nykyaikainen matalalattiainen, nivelletty kaupunkiraitiovaunu (kolme tai neljä nivelosaa, yleisilmeeltään tavallinen eurooppalainen raitiovaunu) liikkeessä hitaasti leveällä, kivetyllä jalankulkupainotteisella pääkadulla päivällä: raiteet kadun kivetyksessä samassa tasossa, vaunun yläpuolella ei ajojohtoa eikä ajolankoja (katu on johdoton), kadun reunoilla yksittäisiä lehtipuita ja takana vaaleita, 3–4-kerroksisia historiallisia taloja okran-, kerman- ja valkoisilla seinillä, koristeellisia rautaparvekkeita ja vihreitä tai ruskeita ikkunaluukkuja; sileä kivikatu, jolla muutama kävelijä ja pyöräilijä pienenä kaukana, selin tai kaukaa, ei tunnistettavia kasvoja. Värikuva, nykyaika. Kulkuneuvon värit: yksivärinen vaalea harmaa-valkoinen runko, ei raitoja, ei brändimaalauksia, ei mainoksia, ei logoja, ei ikkunakalvoja tai kylkimainoksia; vaunun otsassa ja kyljessä ei numeroita, reittinäyttöjä, kylttejä eikä mitään tekstiä (otsanäytöt sammutettu / tyhjät). Kulma: vaakakuva, kameran korkeus noin 1,5 m, kadun reunalta viistosti etuvasemmalta (kolmen neljänneksen kuva), vaunu liikkuu hitaasti vasemmalta oikealle, vaunu terävä, tausta hieman pehmeä; vaunu täyttää noin kaksi kolmasosaa kuvan leveydestä. Valo: aurinkoinen aamupäivä, kirkas sininen taivas, puiden pehmeät varjot katukivellä, luonnolliset värit, ei HDR:ää. Ei saa näkyä: katedraalia, Giraldaa, Archivo de Indiasia, muita tunnistettavia julkisia rakennuksia, patsaita ja muistomerkkejä, hevoskärryjä, tekstiä, kylttejä, katukylttejä, liikennekylttejä, reittikylttejä, pysäkkitauluja, lipunautomaatteja, mainoksia, logoja, auton rekisterikilpiä tai merkkejä, vesileimaa eikä kehystä; muu ajoneuvoliikenne vain kaukana ja merkittömänä. Fotorealistinen havainnekuva, vaimeat värit, 1536 x 1024.",
+      "caption": "Sevillan Metrocentro-raitiovaunu hitaasti Avenida de la Constituciónilla ilman ajojohtoa. Havainnekuva.",
+      "sourceReadInFullVerified": true,
+      "mappingBlockExactSourceMatch": true,
+      "r2Prefix": "julisteet/saapumisintro/seville/20261013-uudet-6-8/",
+      "deliveryManifestPath": "posti/kuvatoimitus-saapumisintro-seville-uudet-6-8-20261013.json",
+      "partDeliveryReportPath": "posti/codex-fable-saapumisintro-uudet-6-8-loput-2-20261013.md",
+      "generationCallsRecorded": 0,
+      "qaAcceptedVerified": true,
+      "r2BytesVerified": true,
+      "mailboxDeliveryVerified": false,
+      "ownerAcceptanceVerified": false,
+      "acceptanceRoute": "PT acts for owner; source authorizes direct delivery. Actual PT acceptance remains evidence-dependent.",
+      "gameIntegrated": false,
+      "published": false,
+      "r2Key": "julisteet/saapumisintro/seville/20261013-uudet-6-8/seville-8-kulkuneuvo-intro-v1.png",
+      "historical": false,
+      "id": "seville-8-kulkuneuvo-intro-v1",
+      "sourceReadInFull": true,
+      "cityName": "SEVILLA",
+      "gameCityId": "sevilla",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/seville/native-8.png",
+      "nativeSHA256": "b6d9a29199ce1d79289360159ca360282b4faaedc6fad394493b594afaad96a8",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/seville/seville-8-kulkuneuvo-intro-v1.png",
+      "workspacePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/eurooppa-introt-uudet68-loput-20261013/seville/seville-8-kulkuneuvo-intro-v1.png",
+      "sha256": "b19be37b88bc43e9c234d1f755a8718addf7f57f458db3de914d0f29ce69120d",
+      "width": 1536,
+      "height": 1024,
+      "opaque": true,
+      "sRGB": true,
+      "neutralGrayscale": false,
+      "pixelIdentityAfterMetadataExport": true,
+      "pixelIdentityToNative": true,
+      "historicalGrayscaleEncodingNormalized": false,
+      "exportProcessing": "Metadata/sRGB only; pixels unchanged",
+      "generationPrompt": "Use case: photorealistic-natural.\nAsset: one NEW current-day full-color camera-photograph-like European city arrival image, exactly 1536 x 1024 pixels, landscape 3:2, opaque PNG. One image only, no collage or contact sheet.\nSubject: kaupungin oma kulkuneuvo liikkeessä — Sevillan Metrocentro-raitiovaunu hitaasti Avenida de la Constituciónilla ilman ajojohtoa.\n\nEXACT SCENE, VIEWPOINT, GEOMETRY, LIGHT AND EXCLUSIONS (the following Finnish source description is the controlling composition brief; follow every detail including bearing/FOV, relative left/right position, travel direction, scale, and exclusions):\nnykyaikainen matalalattiainen, nivelletty kaupunkiraitiovaunu (kolme tai neljä nivelosaa, yleisilmeeltään tavallinen eurooppalainen raitiovaunu) liikkeessä hitaasti leveällä, kivetyllä jalankulkupainotteisella pääkadulla päivällä: raiteet kadun kivetyksessä samassa tasossa, vaunun yläpuolella ei ajojohtoa eikä ajolankoja (katu on johdoton), kadun reunoilla yksittäisiä lehtipuita ja takana vaaleita, 3–4-kerroksisia historiallisia taloja okran-, kerman- ja valkoisilla seinillä, koristeellisia rautaparvekkeita ja vihreitä tai ruskeita ikkunaluukkuja; sileä kivikatu, jolla muutama kävelijä ja pyöräilijä pienenä kaukana, selin tai kaukaa, ei tunnistettavia kasvoja. Värikuva, nykyaika. Kulkuneuvon värit: yksivärinen vaalea harmaa-valkoinen runko, ei raitoja, ei brändimaalauksia, ei mainoksia, ei logoja, ei ikkunakalvoja tai kylkimainoksia; vaunun otsassa ja kyljessä ei numeroita, reittinäyttöjä, kylttejä eikä mitään tekstiä (otsanäytöt sammutettu / tyhjät). Kulma: vaakakuva, kameran korkeus noin 1,5 m, kadun reunalta viistosti etuvasemmalta (kolmen neljänneksen kuva), vaunu liikkuu hitaasti vasemmalta oikealle, vaunu terävä, tausta hieman pehmeä; vaunu täyttää noin kaksi kolmasosaa kuvan leveydestä. Valo: aurinkoinen aamupäivä, kirkas sininen taivas, puiden pehmeät varjot katukivellä, luonnolliset värit, ei HDR:ää. Ei saa näkyä: katedraalia, Giraldaa, Archivo de Indiasia, muita tunnistettavia julkisia rakennuksia, patsaita ja muistomerkkejä, hevoskärryjä, tekstiä, kylttejä, katukylttejä, liikennekylttejä, reittikylttejä, pysäkkitauluja, lipunautomaatteja, mainoksia, logoja, auton rekisterikilpiä tai merkkejä, vesileimaa eikä kehystä; muu ajoneuvoliikenne vain kaukana ja merkittömänä. Fotorealistinen havainnekuva, vaimeat värit, 1536 x 1024.\n\nFinal photographic requirements: Natural real-camera appearance with restrained ordinary exposure, soft realistic light and subdued COLOR; this is PRESENT DAY, not a historical reconstruction and not a youth party. Respect the exact stated transport form and uniformly neutral unmarked paint. Do not restore brand colors, stripes, vehicle identifiers, flags, signs, letters, numbers, logos, advertisements or clothing trademarks. Faces remain tiny anonymous silhouettes or back-facing at a distance as specified. No extra landmarks, sculpture, architecture, vehicles or geographic features beyond those the controlling description allows. Correct real-looking structural geometry and coherent physics. Irregular leaves, non-repeating water ripples, naturally varying worn stone/plaster, realistic glass and metal; no plastic AI surfaces, pattern stamping, HDR, cinematic oversaturation or CGI look. Any locomotive or boat motion is shown only as described, never with added drawn motion graphics. Frame native 1536 x 1024 from the start; do not create any in-image caption, disclaimer, filename, overlay, UI, frame or watermark.\n\nTransport composition reinforcement: The visual forward-travel direction is LEFT TO RIGHT: place the recognizable leading front/bow and any active front lamps toward the RIGHT, with the trailing rear/wake to the LEFT. Do not show a left-facing lit driving cab as the leading end. Respect the source's approximate subject size, TWO THIRDS of the full image WIDTH, not merely of a crop or small center area. NO overhead wires, catenary or overhead contact line anywhere: the source explicitly requires wire-free Metrocentro. \n",
+      "sourceReadReceiptPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/source-read-receipt.json",
+      "references": [
+        {
+          "kind": "authorized-scene-commission",
+          "path": "posti/fable-codex-saapumisintro-uudet-6-8-loput-2-20261013.md",
+          "commit": "dbdaff9a39fa0e5052f176c890c85836e1a69a1f",
+          "blob": "2e5adc4cb04a23fcb4cd8fdd75426ac78afdcc9d",
+          "use": "Exact assigned source card read in full. Camera direction, FOV, landmark positions, transport geometry and exclusions are preserved; this is commission evidence, not a separate visual photograph reference."
+        }
+      ],
+      "url": "https://media.matkakirja.app/julisteet/saapumisintro/seville/20261013-uudet-6-8/seville-8-kulkuneuvo-intro-v1.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/seville/20261013-uudet-6-8/seville-8-kulkuneuvo-intro-v1.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "QA": {
+        "slot": 8,
+        "taskNumber": 186,
+        "assetID": "seville-8-kulkuneuvo-intro-v1",
+        "targetJsonPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/seville/asset-8.json",
+        "nativeSHA256": "b6d9a29199ce1d79289360159ca360282b4faaedc6fad394493b594afaad96a8",
+        "finalSHA256": "b19be37b88bc43e9c234d1f755a8718addf7f57f458db3de914d0f29ce69120d",
+        "verdict": "accepted",
+        "reason": "Neliosainen neutraali raitiovaunu, keula oikealla, raiteet kiveyksessä ja ei ajojohtoa/virroitinta. Historiallinen asuintalokatu, etäiset ihmiset eikä tekstejä/maamerkkejä. Vaunu noin kolme neljäsosaa kuvaleveydestä verrattuna lähteen noin kahteen kolmasosaan; kokonaisarviossa kulkuneuvon sommittelu hyväksytään, poikkeama kirjattu.",
+        "reviewer": "/root",
+        "reviewedAt": "2026-10-13T19:53:26.515814+00:00",
+        "nativeViewedInFull": true,
+        "assignedSourceCardReadInFull": true,
+        "nativePixelsEqualFinalVerified": true,
+        "technicalPassed": true,
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "published": false
+      },
+      "R2Proof": {
+        "slot": 8,
+        "r2Key": "julisteet/saapumisintro/seville/20261013-uudet-6-8/seville-8-kulkuneuvo-intro-v1.png",
+        "url": "https://media.matkakirja.app/julisteet/saapumisintro/seville/20261013-uudet-6-8/seville-8-kulkuneuvo-intro-v1.png",
+        "sha256": "b19be37b88bc43e9c234d1f755a8718addf7f57f458db3de914d0f29ce69120d",
+        "nativeSHA256": "b6d9a29199ce1d79289360159ca360282b4faaedc6fad394493b594afaad96a8",
+        "bytes": 2586125,
+        "readbacks": [
+          {
+            "http": 200,
+            "byteExact": true,
+            "sha256": "b19be37b88bc43e9c234d1f755a8718addf7f57f458db3de914d0f29ce69120d",
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "cacheBusted": false
+          },
+          {
+            "http": 200,
+            "byteExact": true,
+            "sha256": "b19be37b88bc43e9c234d1f755a8718addf7f57f458db3de914d0f29ce69120d",
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "cacheBusted": true
+          }
+        ],
+        "byteExactReadback": true,
+        "verifiedAt": "2026-10-13T19:53:50.681680+00:00"
+      },
+      "FableReceiptVerified": false
+    }
+  ],
+  "omittedItems": [],
+  "actualCalls": 2,
+  "maximumGenerationCalls": 2,
+  "allRequestedItemsHandled": true,
+  "allRequestedImagesDelivered": true,
+  "productionCompleteWithinSourceLimit": true,
+  "directMailboxDeliveryAuthorized": true,
+  "acceptanceRoute": "Päätoimittaja reviews on the owner authority in the exact source. This authorization is not yet an actual acceptance receipt.",
+  "ownerAcceptanceVerified": false,
+  "FableReceiptVerified": false,
+  "gameIntegrated": false,
+  "published": false,
+  "oldFiveApprovedPilotImagesPreserved": true,
+  "oldCelebrationAnd1873TopicsRemainWithdrawn": true,
+  "existingHeroSlotsPreserved": [
+    1,
+    2,
+    3
+  ],
+  "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+  "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+  "newTopics": {
+    "6": "daytime-city-panorama",
+    "8": "local-transport-in-motion"
+  }
+}
