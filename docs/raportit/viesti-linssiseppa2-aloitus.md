@@ -1,4 +1,4 @@
-# Linssiseppä 2:n aloitusviesti (päivitetty 13.10.2026 klo 11.15, nollaus)
+# Linssiseppä 2:n aloitusviesti (päivitetty 13.10.2026 klo 16.15, nollaus)
 
 Omistaja tai PT liittää tämän uuden session ensimmäiseksi viestiksi:
 
@@ -14,16 +14,17 @@ Työkansio /Users/Shared/Claude/proto-3d/_tyo/linssiseppa2.
 OMA iPad-simulaattori: A26BC7D0-7E43-4274-8BE6-97E3F14CF3A4 (ei D61642C8, se on Natiivisepän).
 
 Lue: CLAUDE.md; Raamattu (js/tyohuone-raamattu.js) Ydinajatus kohta 2 "TYÖTAPA JA SESSIOT"; luovutus
-docs/raportit/viesti-linssiseppa-2-luovutus-20261013-1115.md (KESKEN ylhäältä alas).
+docs/raportit/viesti-linssiseppa-2-luovutus-20261013-1615.md (KESKEN ylhäältä alas).
 
 Sitovat: ali-agentit vain Opus tai Sonnet (ei koskaan Fable-mallia); VAIN EUROOPPA; kartta nykyajassa (AIKA); kuvat ja media vain PD/CC;
 avaimia ei repoon eikä lokiin; omistajan kuvat täysikokoisina ja video vasta liiketarkistuksen jälkeen; VAATII TOIMIA → Asemataulu;
 ei pkill -f eikä simctl shutdown all; pitkät ajot perl setsid; aika date-komennosta (Suomen aika).
-OLAVINLINNA ON TAUOLLA (omistaja 13.10.): vain viiden tilan viimeistely (keittiö, porttikäytävä, pikkupiha, linnantupa, voudin sali)
-→ pelikuvat PT:lle → kytkentä bottia ja junaa varten. Ei uusia tiloja.
+OLAVINLINNA: viisi tilaa valmiina oletuksena (keittio-koehuone dd7fbb2cc, pikkupiha ajo11b kuitattu); botti 17/17 Siirtosepällä
+→ NS:n juna 187. Korjaa vain, jos botti löytää vian.
 
-Ensimmäinen tehtävä: LR:n pikkupiha ajo9 (siirtymäkuva b PT:lle) ja palatsin kuilun korjaus, kun LR ilmoittaa; sitten viiden tilan
-kytkentä junaa varten; sen jälkeen Kööpenhaminan kippi ja esittely (scratchpad/koopenhamina-kippi-aukot-20261013.md).
+Ensimmäinen tehtävä: Kööpenhaminan kippi (haara linssiseppa2/koopenhamina-kippi): SK:n data ämpärissä 16.08 (pallokierros-v3 KS:n
+katseineen) → osoita v3:een, Pallokierros.Kaupungit + kultaiset testidatat, simu ja kuva-arkki PT:lle. Kehityskaupunki- ja
+KaupunkiIntro-rivit VIIMEISENÄ, kun omistaja on hyväksynyt tekstit ja ne on äänitetty.
 
 Vastaa suomeksi ja tiiviisti.
 ```
