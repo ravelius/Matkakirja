@@ -31,7 +31,8 @@ for a in b['qualifiedAssets']:
 # Havainnekuvan kuvateksti ei saa kutsua kuvaa kuvitukseksi (tests/havainnekuva-sanasto.test.mjs, omistaja 27.9.).
 KUVITUS = [(', yleiskuvitus. Havainnekuva.', '. Havainnekuva.'), (' museotyön yleiskuvituksena.', ' museotyössä.'),
            ('Rannan aamukäyttö, Labadin aiheen yleiskuvitus.', 'Rannan aamukäyttö Labadissa.')]
-def tyhja(x): return isinstance(x, dict) and 'tiedosto' in x and not any(x.get(k) for k in ('tiedosto', 'osoite', 'ampari'))
+# Myös avaimeton {} on tyhjä paikka: Codexin tehtävä 118 jätti QA-pidosta poistetut kansikuvat sellaisiksi (Monrovia).
+def tyhja(x): return isinstance(x, dict) and not any(x.get(k) for k in ('tiedosto', 'osoite', 'ampari'))
 korjattu, karsittu = 0, 0
 def siivoa(o):
     # Codexin tyhjät kuvapaikat (hylätty, esineslot tai satelliitti ilman hyväksyntää) pois kuvalistoista.
