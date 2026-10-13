@@ -1,0 +1,320 @@
+{
+  "schemaVersion": 1,
+  "cityName": "DUBROVNIK",
+  "gameCityId": "dubrovnik",
+  "mediaSlug": "dubrovnik",
+  "taskNumbers": [
+    191,
+    192
+  ],
+  "updatedAt": "2026-10-13T19:55:32.890675+00:00",
+  "sourcePath": "posti/fable-codex-saapumisintro-uudet-6-8-loput-2-20261013.md",
+  "sourceCommit": "dbdaff9a39fa0e5052f176c890c85836e1a69a1f",
+  "sourceBlob": "2e5adc4cb04a23fcb4cd8fdd75426ac78afdcc9d",
+  "sourceReadInFull": true,
+  "sourceReadBy": "/root/intro_owner_rejection_inventory",
+  "sourceReadReceiptPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/source-read-receipt.json",
+  "assets": [
+    {
+      "taskNumber": 191,
+      "mediaSlug": "dubrovnik",
+      "slot": 6,
+      "filename": "dubrovnik-6-nakoala-intro-v1.png",
+      "title": "koko kaupunki tunnetulta näköalapaikalta päivällä — Dubrovnikin Vanhakaupunki ja Lokrum Srđ-kukkulan näköalatasanteelta etelään päivällä.",
+      "fullDeliveryRequirement": "**6 / koko kaupunki tunnetulta näköalapaikalta päivällä — Dubrovnikin Vanhakaupunki ja Lokrum Srđ-kukkulan näköalatasanteelta etelään päivällä.** Tiedosto `dubrovnik-6-nakoala-intro-v1.png`.\nMitä kuvataan: Dubrovnikin Vanhankaupungin laaja panoraama päivänvalossa korkealta Srđ-kukkulan rinteeltä, noin 400 metrin korkeudelta: keskellä ja oikealla alhaalla tiheä terrakotanpunaisten ja oranssinruskeiden kivikattojen meri, jota kiertää vaalea kalkkikivinen kaupunginmuuri pyöreine ja nelikulmaisine torneineen (muuri selvästi näkyvä, muurin oikeassa päässä saa näkyä Minčetan pyöreä torni pienenä); kattojen seasta nousee muutama matala vaalea kupoli ja kellotorni (pieniä, ei tunnistettavia yksityiskohtia); vasemmassa reunassa pieni vanha satama aallonmurtajineen ja sen takana pitkä vihreä Lokrum-saari (mäntyjä ja pensaita) keskellä sinistä Adrianmerta; kaukana horisontissa sumuinen merenselkä ja pehmeä taivas. Etualalla alareunassa ja vasemmassa alakulmassa vain harmaanvalkoista kalkkikivirinnettä, matalaa välimerellistä pensaikkoa ja muutama mänty (ei rakenteita). Värikuva, nykyaika, ei ihmisiä lähellä (ei lainkaan tai korkeintaan hädin näkyviä pisteitä kaukana). Kulma: vaakakuva, korotettu näkökulma Srđ-kukkulan köysiradan yläaseman ympäristön rinteeltä, kamera suunnattu etelään (suunta noin 177 astetta; vaakasuuntainen näkökulma enintään noin 55 astetta, siis kuvassa suunnat noin 150–204 astetta): Lokrum on suunnassa noin 154–172 astetta (vasemmalla), Vanhan sataman suunta noin 169 ja koko Vanhakaupunki noin 170–197 astetta (keskellä ja oikealla, noin 1 km päässä). Kameran takana luoteessa (suunta noin 314 astetta) on Fort Imperial ja kuvan oikean reunan ulkopuolella lännessä Lapad ja Elaphitit (suunnat 280–290 astetta); ne jäävät kuvan ulkopuolelle eikä niitä saa olla kuvassa. Valo: kirkas aamupäivä, pehmeä luonnollinen valo vasemmalta (idästä), luonnolliset värit, ei HDR:ää. Ei saa näkyä: köysirataa, sen vaunuja, kaapeleita, pylväitä tai yläaseman rakennuksia, ravintolaa tai kaiteita, Fort Imperialia, Srđin ristiä tai muita muistomerkkejä, Lovrijenacia, isoja hotelleja, risteilyaluksia, ei sota- tai muistoaiheita, ei lippuja (ei Kroatian, ei Dubrovnikin eikä muuta lippua mastoissa tai rakennuksissa), ei tekstiä, kylttejä, mainoksia, logoja, vesileimaa eikä kehystä, ei lähellä olevia ihmisiä. Fotorealistinen havainnekuva, vaimeat värit, 1536 x 1024.\nKuvateksti-ehdotus (loppuu sanaan Havainnekuva.): Dubrovnikin Vanhakaupunki ja Lokrum Srđ-kukkulan näköalatasanteelta etelään päivällä. Havainnekuva.\n\n",
+      "sourceVersions": [
+        {
+          "path": "posti/fable-codex-saapumisintro-uudet-6-8-loput-2-20261013.md",
+          "commit": "dbdaff9a39fa0e5052f176c890c85836e1a69a1f",
+          "blob": "2e5adc4cb04a23fcb4cd8fdd75426ac78afdcc9d",
+          "readInFull": true
+        }
+      ],
+      "ownerThreadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+      "hostId": "local",
+      "generationCap": 1,
+      "status": "QA-R2-delivered-for-PT-review",
+      "productionStarted": false,
+      "delivered": true,
+      "city": "DUBROVNIK",
+      "gameID": "dubrovnik",
+      "part": 2,
+      "sourceBlob": "2e5adc4cb04a23fcb4cd8fdd75426ac78afdcc9d",
+      "sourceCommit": "dbdaff9a39fa0e5052f176c890c85836e1a69a1f",
+      "sourcePath": "posti/fable-codex-saapumisintro-uudet-6-8-loput-2-20261013.md",
+      "sourceNasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/sources/fable-codex-saapumisintro-uudet-6-8-loput-2-20261013.md",
+      "sourceCharacterSpan": [
+        26903,
+        29443
+      ],
+      "sourceByteSpan": [
+        27884,
+        30549
+      ],
+      "fullDeliveryRequirementSHA256": "617dc0996ae5d29af2eb403af6309745fea09fbd85478ab7419f93d98483e73b",
+      "fullDirective": "Dubrovnikin Vanhankaupungin laaja panoraama päivänvalossa korkealta Srđ-kukkulan rinteeltä, noin 400 metrin korkeudelta: keskellä ja oikealla alhaalla tiheä terrakotanpunaisten ja oranssinruskeiden kivikattojen meri, jota kiertää vaalea kalkkikivinen kaupunginmuuri pyöreine ja nelikulmaisine torneineen (muuri selvästi näkyvä, muurin oikeassa päässä saa näkyä Minčetan pyöreä torni pienenä); kattojen seasta nousee muutama matala vaalea kupoli ja kellotorni (pieniä, ei tunnistettavia yksityiskohtia); vasemmassa reunassa pieni vanha satama aallonmurtajineen ja sen takana pitkä vihreä Lokrum-saari (mäntyjä ja pensaita) keskellä sinistä Adrianmerta; kaukana horisontissa sumuinen merenselkä ja pehmeä taivas. Etualalla alareunassa ja vasemmassa alakulmassa vain harmaanvalkoista kalkkikivirinnettä, matalaa välimerellistä pensaikkoa ja muutama mänty (ei rakenteita). Värikuva, nykyaika, ei ihmisiä lähellä (ei lainkaan tai korkeintaan hädin näkyviä pisteitä kaukana). Kulma: vaakakuva, korotettu näkökulma Srđ-kukkulan köysiradan yläaseman ympäristön rinteeltä, kamera suunnattu etelään (suunta noin 177 astetta; vaakasuuntainen näkökulma enintään noin 55 astetta, siis kuvassa suunnat noin 150–204 astetta): Lokrum on suunnassa noin 154–172 astetta (vasemmalla), Vanhan sataman suunta noin 169 ja koko Vanhakaupunki noin 170–197 astetta (keskellä ja oikealla, noin 1 km päässä). Kameran takana luoteessa (suunta noin 314 astetta) on Fort Imperial ja kuvan oikean reunan ulkopuolella lännessä Lapad ja Elaphitit (suunnat 280–290 astetta); ne jäävät kuvan ulkopuolelle eikä niitä saa olla kuvassa. Valo: kirkas aamupäivä, pehmeä luonnollinen valo vasemmalta (idästä), luonnolliset värit, ei HDR:ää. Ei saa näkyä: köysirataa, sen vaunuja, kaapeleita, pylväitä tai yläaseman rakennuksia, ravintolaa tai kaiteita, Fort Imperialia, Srđin ristiä tai muita muistomerkkejä, Lovrijenacia, isoja hotelleja, risteilyaluksia, ei sota- tai muistoaiheita, ei lippuja (ei Kroatian, ei Dubrovnikin eikä muuta lippua mastoissa tai rakennuksissa), ei tekstiä, kylttejä, mainoksia, logoja, vesileimaa eikä kehystä, ei lähellä olevia ihmisiä. Fotorealistinen havainnekuva, vaimeat värit, 1536 x 1024.",
+      "caption": "Dubrovnikin Vanhakaupunki ja Lokrum Srđ-kukkulan näköalatasanteelta etelään päivällä. Havainnekuva.",
+      "sourceReadInFullVerified": true,
+      "mappingBlockExactSourceMatch": true,
+      "r2Prefix": "julisteet/saapumisintro/dubrovnik/20261013-uudet-6-8/",
+      "deliveryManifestPath": "posti/kuvatoimitus-saapumisintro-dubrovnik-uudet-6-8-20261013.json",
+      "partDeliveryReportPath": "posti/codex-fable-saapumisintro-uudet-6-8-loput-2-20261013.md",
+      "generationCallsRecorded": 0,
+      "qaAcceptedVerified": true,
+      "r2BytesVerified": true,
+      "mailboxDeliveryVerified": false,
+      "ownerAcceptanceVerified": false,
+      "acceptanceRoute": "PT acts for owner; source authorizes direct delivery. Actual PT acceptance remains evidence-dependent.",
+      "gameIntegrated": false,
+      "published": false,
+      "r2Key": "julisteet/saapumisintro/dubrovnik/20261013-uudet-6-8/dubrovnik-6-nakoala-intro-v1.png",
+      "historical": false,
+      "id": "dubrovnik-6-nakoala-intro-v1",
+      "sourceReadInFull": true,
+      "cityName": "DUBROVNIK",
+      "gameCityId": "dubrovnik",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/dubrovnik/native-6.png",
+      "nativeSHA256": "2db7b891c4003b1f71fd1d9e51e90af46fd514daa7c037438979807ec2b04d20",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/dubrovnik/dubrovnik-6-nakoala-intro-v1.png",
+      "workspacePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/eurooppa-introt-uudet68-loput-20261013/dubrovnik/dubrovnik-6-nakoala-intro-v1.png",
+      "sha256": "a8fbd49f5e1033aa3562048cdebd46a4ec3064852400fe5a85a6b0084023dbe6",
+      "width": 1536,
+      "height": 1024,
+      "opaque": true,
+      "sRGB": true,
+      "neutralGrayscale": false,
+      "pixelIdentityAfterMetadataExport": true,
+      "pixelIdentityToNative": true,
+      "historicalGrayscaleEncodingNormalized": false,
+      "exportProcessing": "Metadata/sRGB only; pixels unchanged",
+      "generationPrompt": "Use case: photorealistic-natural.\nAsset: one NEW current-day full-color camera-photograph-like European city arrival image, exactly 1536 x 1024 pixels, landscape 3:2, opaque PNG. One image only, no collage or contact sheet.\nSubject: koko kaupunki tunnetulta näköalapaikalta päivällä — Dubrovnikin Vanhakaupunki ja Lokrum Srđ-kukkulan näköalatasanteelta etelään päivällä.\n\nEXACT SCENE, VIEWPOINT, GEOMETRY, LIGHT AND EXCLUSIONS (the following Finnish source description is the controlling composition brief; follow every detail including bearing/FOV, relative left/right position, travel direction, scale, and exclusions):\nDubrovnikin Vanhankaupungin laaja panoraama päivänvalossa korkealta Srđ-kukkulan rinteeltä, noin 400 metrin korkeudelta: keskellä ja oikealla alhaalla tiheä terrakotanpunaisten ja oranssinruskeiden kivikattojen meri, jota kiertää vaalea kalkkikivinen kaupunginmuuri pyöreine ja nelikulmaisine torneineen (muuri selvästi näkyvä, muurin oikeassa päässä saa näkyä Minčetan pyöreä torni pienenä); kattojen seasta nousee muutama matala vaalea kupoli ja kellotorni (pieniä, ei tunnistettavia yksityiskohtia); vasemmassa reunassa pieni vanha satama aallonmurtajineen ja sen takana pitkä vihreä Lokrum-saari (mäntyjä ja pensaita) keskellä sinistä Adrianmerta; kaukana horisontissa sumuinen merenselkä ja pehmeä taivas. Etualalla alareunassa ja vasemmassa alakulmassa vain harmaanvalkoista kalkkikivirinnettä, matalaa välimerellistä pensaikkoa ja muutama mänty (ei rakenteita). Värikuva, nykyaika, ei ihmisiä lähellä (ei lainkaan tai korkeintaan hädin näkyviä pisteitä kaukana). Kulma: vaakakuva, korotettu näkökulma Srđ-kukkulan köysiradan yläaseman ympäristön rinteeltä, kamera suunnattu etelään (suunta noin 177 astetta; vaakasuuntainen näkökulma enintään noin 55 astetta, siis kuvassa suunnat noin 150–204 astetta): Lokrum on suunnassa noin 154–172 astetta (vasemmalla), Vanhan sataman suunta noin 169 ja koko Vanhakaupunki noin 170–197 astetta (keskellä ja oikealla, noin 1 km päässä). Kameran takana luoteessa (suunta noin 314 astetta) on Fort Imperial ja kuvan oikean reunan ulkopuolella lännessä Lapad ja Elaphitit (suunnat 280–290 astetta); ne jäävät kuvan ulkopuolelle eikä niitä saa olla kuvassa. Valo: kirkas aamupäivä, pehmeä luonnollinen valo vasemmalta (idästä), luonnolliset värit, ei HDR:ää. Ei saa näkyä: köysirataa, sen vaunuja, kaapeleita, pylväitä tai yläaseman rakennuksia, ravintolaa tai kaiteita, Fort Imperialia, Srđin ristiä tai muita muistomerkkejä, Lovrijenacia, isoja hotelleja, risteilyaluksia, ei sota- tai muistoaiheita, ei lippuja (ei Kroatian, ei Dubrovnikin eikä muuta lippua mastoissa tai rakennuksissa), ei tekstiä, kylttejä, mainoksia, logoja, vesileimaa eikä kehystä, ei lähellä olevia ihmisiä. Fotorealistinen havainnekuva, vaimeat värit, 1536 x 1024.\n\nFinal photographic requirements: Natural real-camera appearance with restrained ordinary exposure, soft realistic light and subdued COLOR; this is PRESENT DAY, not a historical reconstruction and not a youth party. Respect the exact stated transport form and uniformly neutral unmarked paint. Do not restore brand colors, stripes, vehicle identifiers, flags, signs, letters, numbers, logos, advertisements or clothing trademarks. Faces remain tiny anonymous silhouettes or back-facing at a distance as specified. No extra landmarks, sculpture, architecture, vehicles or geographic features beyond those the controlling description allows. Correct real-looking structural geometry and coherent physics. Irregular leaves, non-repeating water ripples, naturally varying worn stone/plaster, realistic glass and metal; no plastic AI surfaces, pattern stamping, HDR, cinematic oversaturation or CGI look. Any locomotive or boat motion is shown only as described, never with added drawn motion graphics. Frame native 1536 x 1024 from the start; do not create any in-image caption, disclaimer, filename, overlay, UI, frame or watermark.\n",
+      "sourceReadReceiptPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/source-read-receipt.json",
+      "references": [
+        {
+          "kind": "authorized-scene-commission",
+          "path": "posti/fable-codex-saapumisintro-uudet-6-8-loput-2-20261013.md",
+          "commit": "dbdaff9a39fa0e5052f176c890c85836e1a69a1f",
+          "blob": "2e5adc4cb04a23fcb4cd8fdd75426ac78afdcc9d",
+          "use": "Exact assigned source card read in full. Camera direction, FOV, landmark positions, transport geometry and exclusions are preserved; this is commission evidence, not a separate visual photograph reference."
+        }
+      ],
+      "url": "https://media.matkakirja.app/julisteet/saapumisintro/dubrovnik/20261013-uudet-6-8/dubrovnik-6-nakoala-intro-v1.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/dubrovnik/20261013-uudet-6-8/dubrovnik-6-nakoala-intro-v1.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "QA": {
+        "slot": 6,
+        "taskNumber": 191,
+        "assetID": "dubrovnik-6-nakoala-intro-v1",
+        "targetJsonPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/dubrovnik/asset-6.json",
+        "nativeSHA256": "2db7b891c4003b1f71fd1d9e51e90af46fd514daa7c037438979807ec2b04d20",
+        "finalSHA256": "a8fbd49f5e1033aa3562048cdebd46a4ec3064852400fe5a85a6b0084023dbe6",
+        "verdict": "accepted",
+        "reason": "Muuri ja Minčetan torni oikealla, vanha satama sekä Lokrum vasemmalla, kalkkikivirinne etualalla. Ei Lovrijenacia, köysirataa, muistomerkkiä, lippua, tekstiä tai risteilyalusta.",
+        "reviewer": "/root",
+        "reviewedAt": "2026-10-13T19:55:15.238769+00:00",
+        "nativeViewedInFull": true,
+        "assignedSourceCardReadInFull": true,
+        "nativePixelsEqualFinalVerified": true,
+        "technicalPassed": true,
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "published": false
+      },
+      "R2Proof": {
+        "slot": 6,
+        "r2Key": "julisteet/saapumisintro/dubrovnik/20261013-uudet-6-8/dubrovnik-6-nakoala-intro-v1.png",
+        "url": "https://media.matkakirja.app/julisteet/saapumisintro/dubrovnik/20261013-uudet-6-8/dubrovnik-6-nakoala-intro-v1.png",
+        "sha256": "a8fbd49f5e1033aa3562048cdebd46a4ec3064852400fe5a85a6b0084023dbe6",
+        "nativeSHA256": "2db7b891c4003b1f71fd1d9e51e90af46fd514daa7c037438979807ec2b04d20",
+        "bytes": 2774849,
+        "readbacks": [
+          {
+            "http": 200,
+            "byteExact": true,
+            "sha256": "a8fbd49f5e1033aa3562048cdebd46a4ec3064852400fe5a85a6b0084023dbe6",
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "cacheBusted": false
+          },
+          {
+            "http": 200,
+            "byteExact": true,
+            "sha256": "a8fbd49f5e1033aa3562048cdebd46a4ec3064852400fe5a85a6b0084023dbe6",
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "cacheBusted": true
+          }
+        ],
+        "byteExactReadback": true,
+        "verifiedAt": "2026-10-13T19:55:30.706997+00:00"
+      },
+      "FableReceiptVerified": false
+    },
+    {
+      "taskNumber": 192,
+      "mediaSlug": "dubrovnik",
+      "slot": 8,
+      "filename": "dubrovnik-8-kulkuneuvo-intro-v1.png",
+      "title": "kaupungin oma kulkuneuvo liikkeessä — Dubrovnikin köysirata Srđ-kukkulan kalkkikivirinteen yllä, vaunu liikkeessä.",
+      "fullDeliveryRequirement": "**8 / kaupungin oma kulkuneuvo liikkeessä — Dubrovnikin köysirata Srđ-kukkulan kalkkikivirinteen yllä, vaunu liikkeessä.** Tiedosto `dubrovnik-8-kulkuneuvo-intro-v1.png`.\nMitä kuvataan: Dubrovnikin köysiradan iso, matala, pyöreäkulmainen ja laajasti lasitettu ilmavaunu liikkeessä kantokaapeleiden varassa harmaanvalkoisen kalkkikivirinteen yllä, noin 30 matkustajan vaunu, vaunun lasien takana vain pieniä siluetteja (ei tunnistettavia kasvoja). Rinne vaunun alla ja sivulla on karua, vaaleaa kalkkikiveä, matalaa välimerellistä pensaikkoa, kuivaa heinää ja muutama mänty; kantokaapelit kulkevat vinosti kuvan poikki, kaukana rinteellä yksi kaapelien tukipylväs saa näkyä. Taustalla alhaalla sininen Adrianmeri ja kaukana sumuinen rannikko, kirkas taivas pienine pilvineen. Ihmiset vain pieninä siluetteina vaunussa. Värikuva, nykyaika. Kulkuneuvon värit: yksivärinen vaalea harmaa-valkoinen runko ja katto, lasit läpinäkyvät, ei raitoja, ei brändimaalauksia, ei mainoksia, ei logoja, ei oranssia eikä muuta kirkasta väriä; vaunun kyljessä, katolla ja ovessa ei numeroita, kylttejä eikä mitään tekstiä. Kulma: vaakakuva, kameran korkeus samalla tasolla kuin vaunu, kuvattuna rinteeltä sivusta kolmen neljänneksen kulmasta viistosti edestä, vaunu hieman liikkeessä (kevyt liikesumennus kaapeleissa ja taustassa, vaunu itse terävä), vaunu noin kolmannes kuvan leveydestä. Valo: aurinkoinen aamupäivä tai iltapäivä, kirkas sininen taivas, luonnolliset värit, ei HDR:ää. Ei saa näkyä: Vanhaakaupunkia, kaupunginmuuria, Lokrumia tai satamaa, yläasemaa tai alaasemaa, ravintolaa, Fort Imperialia, Srđin ristiä tai muita muistomerkkejä, ei sota- tai muistoaiheita, ei lippuja (ei Kroatian eikä muuta lippua), ei tekstiä, kylttejä, mainoksia, logoja, vesileimaa eikä kehystä, ei lähellä olevia ihmisiä rinteellä. Fotorealistinen havainnekuva, vaimeat värit, 1536 x 1024.\nKuvateksti-ehdotus (loppuu sanaan Havainnekuva.): Dubrovnikin köysirata Srđ-kukkulan kalkkikivirinteen yllä, vaunu liikkeessä. Havainnekuva.\n\n",
+      "sourceVersions": [
+        {
+          "path": "posti/fable-codex-saapumisintro-uudet-6-8-loput-2-20261013.md",
+          "commit": "dbdaff9a39fa0e5052f176c890c85836e1a69a1f",
+          "blob": "2e5adc4cb04a23fcb4cd8fdd75426ac78afdcc9d",
+          "readInFull": true
+        }
+      ],
+      "ownerThreadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+      "hostId": "local",
+      "generationCap": 1,
+      "status": "QA-R2-delivered-for-PT-review",
+      "productionStarted": false,
+      "delivered": true,
+      "city": "DUBROVNIK",
+      "gameID": "dubrovnik",
+      "part": 2,
+      "sourceBlob": "2e5adc4cb04a23fcb4cd8fdd75426ac78afdcc9d",
+      "sourceCommit": "dbdaff9a39fa0e5052f176c890c85836e1a69a1f",
+      "sourcePath": "posti/fable-codex-saapumisintro-uudet-6-8-loput-2-20261013.md",
+      "sourceNasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/sources/fable-codex-saapumisintro-uudet-6-8-loput-2-20261013.md",
+      "sourceCharacterSpan": [
+        29443,
+        31449
+      ],
+      "sourceByteSpan": [
+        30549,
+        32630
+      ],
+      "fullDeliveryRequirementSHA256": "c9b0542f3b0043a2aa0c03544485dead7c037047d22f7a2a78cacc11fae92829",
+      "fullDirective": "Dubrovnikin köysiradan iso, matala, pyöreäkulmainen ja laajasti lasitettu ilmavaunu liikkeessä kantokaapeleiden varassa harmaanvalkoisen kalkkikivirinteen yllä, noin 30 matkustajan vaunu, vaunun lasien takana vain pieniä siluetteja (ei tunnistettavia kasvoja). Rinne vaunun alla ja sivulla on karua, vaaleaa kalkkikiveä, matalaa välimerellistä pensaikkoa, kuivaa heinää ja muutama mänty; kantokaapelit kulkevat vinosti kuvan poikki, kaukana rinteellä yksi kaapelien tukipylväs saa näkyä. Taustalla alhaalla sininen Adrianmeri ja kaukana sumuinen rannikko, kirkas taivas pienine pilvineen. Ihmiset vain pieninä siluetteina vaunussa. Värikuva, nykyaika. Kulkuneuvon värit: yksivärinen vaalea harmaa-valkoinen runko ja katto, lasit läpinäkyvät, ei raitoja, ei brändimaalauksia, ei mainoksia, ei logoja, ei oranssia eikä muuta kirkasta väriä; vaunun kyljessä, katolla ja ovessa ei numeroita, kylttejä eikä mitään tekstiä. Kulma: vaakakuva, kameran korkeus samalla tasolla kuin vaunu, kuvattuna rinteeltä sivusta kolmen neljänneksen kulmasta viistosti edestä, vaunu hieman liikkeessä (kevyt liikesumennus kaapeleissa ja taustassa, vaunu itse terävä), vaunu noin kolmannes kuvan leveydestä. Valo: aurinkoinen aamupäivä tai iltapäivä, kirkas sininen taivas, luonnolliset värit, ei HDR:ää. Ei saa näkyä: Vanhaakaupunkia, kaupunginmuuria, Lokrumia tai satamaa, yläasemaa tai alaasemaa, ravintolaa, Fort Imperialia, Srđin ristiä tai muita muistomerkkejä, ei sota- tai muistoaiheita, ei lippuja (ei Kroatian eikä muuta lippua), ei tekstiä, kylttejä, mainoksia, logoja, vesileimaa eikä kehystä, ei lähellä olevia ihmisiä rinteellä. Fotorealistinen havainnekuva, vaimeat värit, 1536 x 1024.",
+      "caption": "Dubrovnikin köysirata Srđ-kukkulan kalkkikivirinteen yllä, vaunu liikkeessä. Havainnekuva.",
+      "sourceReadInFullVerified": true,
+      "mappingBlockExactSourceMatch": true,
+      "r2Prefix": "julisteet/saapumisintro/dubrovnik/20261013-uudet-6-8/",
+      "deliveryManifestPath": "posti/kuvatoimitus-saapumisintro-dubrovnik-uudet-6-8-20261013.json",
+      "partDeliveryReportPath": "posti/codex-fable-saapumisintro-uudet-6-8-loput-2-20261013.md",
+      "generationCallsRecorded": 0,
+      "qaAcceptedVerified": true,
+      "r2BytesVerified": true,
+      "mailboxDeliveryVerified": false,
+      "ownerAcceptanceVerified": false,
+      "acceptanceRoute": "PT acts for owner; source authorizes direct delivery. Actual PT acceptance remains evidence-dependent.",
+      "gameIntegrated": false,
+      "published": false,
+      "r2Key": "julisteet/saapumisintro/dubrovnik/20261013-uudet-6-8/dubrovnik-8-kulkuneuvo-intro-v1.png",
+      "historical": false,
+      "id": "dubrovnik-8-kulkuneuvo-intro-v1",
+      "sourceReadInFull": true,
+      "cityName": "DUBROVNIK",
+      "gameCityId": "dubrovnik",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/dubrovnik/native-8.png",
+      "nativeSHA256": "44284ccccd1526caf24b56e6d7a2511bcd8d093c5dc38d1e6281d878d583820b",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/dubrovnik/dubrovnik-8-kulkuneuvo-intro-v1.png",
+      "workspacePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/eurooppa-introt-uudet68-loput-20261013/dubrovnik/dubrovnik-8-kulkuneuvo-intro-v1.png",
+      "sha256": "41809d233843545f4e223a127b8416251687ff54b58ee827bdcb3f4823847622",
+      "width": 1536,
+      "height": 1024,
+      "opaque": true,
+      "sRGB": true,
+      "neutralGrayscale": false,
+      "pixelIdentityAfterMetadataExport": true,
+      "pixelIdentityToNative": true,
+      "historicalGrayscaleEncodingNormalized": false,
+      "exportProcessing": "Metadata/sRGB only; pixels unchanged",
+      "generationPrompt": "Use case: photorealistic-natural.\nAsset: one NEW current-day full-color camera-photograph-like European city arrival image, exactly 1536 x 1024 pixels, landscape 3:2, opaque PNG. One image only, no collage or contact sheet.\nSubject: kaupungin oma kulkuneuvo liikkeessä — Dubrovnikin köysirata Srđ-kukkulan kalkkikivirinteen yllä, vaunu liikkeessä.\n\nEXACT SCENE, VIEWPOINT, GEOMETRY, LIGHT AND EXCLUSIONS (the following Finnish source description is the controlling composition brief; follow every detail including bearing/FOV, relative left/right position, travel direction, scale, and exclusions):\nDubrovnikin köysiradan iso, matala, pyöreäkulmainen ja laajasti lasitettu ilmavaunu liikkeessä kantokaapeleiden varassa harmaanvalkoisen kalkkikivirinteen yllä, noin 30 matkustajan vaunu, vaunun lasien takana vain pieniä siluetteja (ei tunnistettavia kasvoja). Rinne vaunun alla ja sivulla on karua, vaaleaa kalkkikiveä, matalaa välimerellistä pensaikkoa, kuivaa heinää ja muutama mänty; kantokaapelit kulkevat vinosti kuvan poikki, kaukana rinteellä yksi kaapelien tukipylväs saa näkyä. Taustalla alhaalla sininen Adrianmeri ja kaukana sumuinen rannikko, kirkas taivas pienine pilvineen. Ihmiset vain pieninä siluetteina vaunussa. Värikuva, nykyaika. Kulkuneuvon värit: yksivärinen vaalea harmaa-valkoinen runko ja katto, lasit läpinäkyvät, ei raitoja, ei brändimaalauksia, ei mainoksia, ei logoja, ei oranssia eikä muuta kirkasta väriä; vaunun kyljessä, katolla ja ovessa ei numeroita, kylttejä eikä mitään tekstiä. Kulma: vaakakuva, kameran korkeus samalla tasolla kuin vaunu, kuvattuna rinteeltä sivusta kolmen neljänneksen kulmasta viistosti edestä, vaunu hieman liikkeessä (kevyt liikesumennus kaapeleissa ja taustassa, vaunu itse terävä), vaunu noin kolmannes kuvan leveydestä. Valo: aurinkoinen aamupäivä tai iltapäivä, kirkas sininen taivas, luonnolliset värit, ei HDR:ää. Ei saa näkyä: Vanhaakaupunkia, kaupunginmuuria, Lokrumia tai satamaa, yläasemaa tai alaasemaa, ravintolaa, Fort Imperialia, Srđin ristiä tai muita muistomerkkejä, ei sota- tai muistoaiheita, ei lippuja (ei Kroatian eikä muuta lippua), ei tekstiä, kylttejä, mainoksia, logoja, vesileimaa eikä kehystä, ei lähellä olevia ihmisiä rinteellä. Fotorealistinen havainnekuva, vaimeat värit, 1536 x 1024.\n\nFinal photographic requirements: Natural real-camera appearance with restrained ordinary exposure, soft realistic light and subdued COLOR; this is PRESENT DAY, not a historical reconstruction and not a youth party. Respect the exact stated transport form and uniformly neutral unmarked paint. Do not restore brand colors, stripes, vehicle identifiers, flags, signs, letters, numbers, logos, advertisements or clothing trademarks. Faces remain tiny anonymous silhouettes or back-facing at a distance as specified. No extra landmarks, sculpture, architecture, vehicles or geographic features beyond those the controlling description allows. Correct real-looking structural geometry and coherent physics. Irregular leaves, non-repeating water ripples, naturally varying worn stone/plaster, realistic glass and metal; no plastic AI surfaces, pattern stamping, HDR, cinematic oversaturation or CGI look. Any locomotive or boat motion is shown only as described, never with added drawn motion graphics. Frame native 1536 x 1024 from the start; do not create any in-image caption, disclaimer, filename, overlay, UI, frame or watermark.\n\nTransport composition reinforcement: Respect the source's approximate subject size, one THIRD of the full image WIDTH, not merely of a crop or small center area. \n",
+      "sourceReadReceiptPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/source-read-receipt.json",
+      "references": [
+        {
+          "kind": "authorized-scene-commission",
+          "path": "posti/fable-codex-saapumisintro-uudet-6-8-loput-2-20261013.md",
+          "commit": "dbdaff9a39fa0e5052f176c890c85836e1a69a1f",
+          "blob": "2e5adc4cb04a23fcb4cd8fdd75426ac78afdcc9d",
+          "use": "Exact assigned source card read in full. Camera direction, FOV, landmark positions, transport geometry and exclusions are preserved; this is commission evidence, not a separate visual photograph reference."
+        }
+      ],
+      "url": "https://media.matkakirja.app/julisteet/saapumisintro/dubrovnik/20261013-uudet-6-8/dubrovnik-8-kulkuneuvo-intro-v1.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/dubrovnik/20261013-uudet-6-8/dubrovnik-8-kulkuneuvo-intro-v1.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "QA": {
+        "slot": 8,
+        "taskNumber": 192,
+        "assetID": "dubrovnik-8-kulkuneuvo-intro-v1",
+        "targetJsonPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/dubrovnik/asset-8.json",
+        "nativeSHA256": "44284ccccd1526caf24b56e6d7a2511bcd8d093c5dc38d1e6281d878d583820b",
+        "finalSHA256": "41809d233843545f4e223a127b8416251687ff54b58ee827bdcb3f4823847622",
+        "verdict": "accepted",
+        "reason": "Vaalea merkintätön suuri lasitettu ilmavaunu kantokaapeleilla kalkkikivirinteen yllä; noin28%kuvaleveydestä vastaa lähteen noin kolmannesta. Tummat pienet sisähahmot, etäinen meri ja ei kiellettyä vanhaakaupunkia/saarta/asemia.",
+        "reviewer": "/root",
+        "reviewedAt": "2026-10-13T19:55:15.238769+00:00",
+        "nativeViewedInFull": true,
+        "assignedSourceCardReadInFull": true,
+        "nativePixelsEqualFinalVerified": true,
+        "technicalPassed": true,
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "published": false
+      },
+      "R2Proof": {
+        "slot": 8,
+        "r2Key": "julisteet/saapumisintro/dubrovnik/20261013-uudet-6-8/dubrovnik-8-kulkuneuvo-intro-v1.png",
+        "url": "https://media.matkakirja.app/julisteet/saapumisintro/dubrovnik/20261013-uudet-6-8/dubrovnik-8-kulkuneuvo-intro-v1.png",
+        "sha256": "41809d233843545f4e223a127b8416251687ff54b58ee827bdcb3f4823847622",
+        "nativeSHA256": "44284ccccd1526caf24b56e6d7a2511bcd8d093c5dc38d1e6281d878d583820b",
+        "bytes": 2587425,
+        "readbacks": [
+          {
+            "http": 200,
+            "byteExact": true,
+            "sha256": "41809d233843545f4e223a127b8416251687ff54b58ee827bdcb3f4823847622",
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "cacheBusted": false
+          },
+          {
+            "http": 200,
+            "byteExact": true,
+            "sha256": "41809d233843545f4e223a127b8416251687ff54b58ee827bdcb3f4823847622",
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "cacheBusted": true
+          }
+        ],
+        "byteExactReadback": true,
+        "verifiedAt": "2026-10-13T19:55:32.809356+00:00"
+      },
+      "FableReceiptVerified": false
+    }
+  ],
+  "omittedItems": [],
+  "actualCalls": 2,
+  "maximumGenerationCalls": 2,
+  "allRequestedItemsHandled": true,
+  "allRequestedImagesDelivered": true,
+  "productionCompleteWithinSourceLimit": true,
+  "directMailboxDeliveryAuthorized": true,
+  "acceptanceRoute": "Päätoimittaja reviews on the owner authority in the exact source. This authorization is not yet an actual acceptance receipt.",
+  "ownerAcceptanceVerified": false,
+  "FableReceiptVerified": false,
+  "gameIntegrated": false,
+  "published": false,
+  "oldFiveApprovedPilotImagesPreserved": true,
+  "oldCelebrationAnd1873TopicsRemainWithdrawn": true,
+  "existingHeroSlotsPreserved": [
+    1,
+    2,
+    3
+  ],
+  "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+  "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+  "newTopics": {
+    "6": "daytime-city-panorama",
+    "8": "local-transport-in-motion"
+  }
+}

@@ -1,6 +1,6 @@
 # Euroopan uudet saapumisintroaiheet — osa 2/2, 13.10.2026
 
-21 QA/R2-varmennettua kuvaa toimitettu, 5 perusteltua lopullista poisjättöä. Käsitelty 26/47 tämän osan nimetyistä kuvista; 26 generointikutsua. Tilaus on kesken, kun kaikki nimetyt kohteet eivät vielä ole käsitelty.
+23 QA/R2-varmennettua kuvaa toimitettu, 5 perusteltua lopullista poisjättöä. Käsitelty 28/47 tämän osan nimetyistä kuvista; 28 generointikutsua. Tilaus on kesken, kun kaikki nimetyt kohteet eivät vielä ole käsitelty.
 
 Koko laajennus käsittää 95 nimettyä kuvaa (#133–227): osa 1 sisältää 48 ja osa 2 47 kuvaa. Aiempi 88+1 arvio ei korvaa lähteiden nimettyä inventaariota. Yksi uusi sisäänrakennettu generointi per kuva; ei uusintoja, vertailuottoja, inpaintingia tai rajauksia.
 
@@ -38,6 +38,13 @@ Manifesti: `posti/kuvatoimitus-saapumisintro-bucharest-uudet-6-8-20261013.json`.
 
 - #189, slot 6: Bukarestin kattomeri ja Kiseleff-bulevardi Riemukaaren yläterassilta etelä-kaakkoon päivällä. Havainnekuva.
 - #190, slot 8: Bukarestin raitiovaunu erillisellä raiteella puiden reunustamalla bulevardilla, vaaleita kerrostaloja taustalla. Havainnekuva.
+
+## DUBROVNIK
+
+Manifesti: `posti/kuvatoimitus-saapumisintro-dubrovnik-uudet-6-8-20261013.json`. Toimitettu 2/2; kutsuja 2.
+
+- #191, slot 6: Dubrovnikin Vanhakaupunki ja Lokrum Srđ-kukkulan näköalatasanteelta etelään päivällä. Havainnekuva.
+- #192, slot 8: Dubrovnikin köysirata Srđ-kukkulan kalkkikivirinteen yllä, vaunu liikkeessä. Havainnekuva.
 
 ## KRAKOVA
 
