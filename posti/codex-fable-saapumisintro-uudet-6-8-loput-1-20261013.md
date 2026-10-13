@@ -1,6 +1,6 @@
 # Euroopan uudet saapumisintroaiheet — osa 1/2, 13.10.2026
 
-21 QA/R2-varmennettua kuvaa toimitettu, 25 perusteltua lopullista poisjättöä. Käsitelty 46/48 tämän osan nimetyistä kuvista; 45 generointikutsua. Tilaus on kesken, kun kaikki nimetyt kohteet eivät vielä ole käsitelty.
+22 QA/R2-varmennettua kuvaa toimitettu, 26 perusteltua lopullista poisjättöä. Käsitelty 48/48 tämän osan nimetyistä kuvista; 47 generointikutsua. Tilaus on kesken, kun kaikki nimetyt kohteet eivät vielä ole käsitelty.
 
 Koko laajennus käsittää 95 nimettyä kuvaa (#133–227): osa 1 sisältää 48 ja osa 2 47 kuvaa. Aiempi 88+1 arvio ei korvaa lähteiden nimettyä inventaariota. Yksi uusi sisäänrakennettu generointi per kuva; ei uusintoja, vertailuottoja, inpaintingia tai rajauksia.
 
@@ -108,6 +108,13 @@ Manifesti: `posti/kuvatoimitus-saapumisintro-tromso-uudet-6-8-20261013.json`. To
 
 - #161, slot 6: Tromssan saari, Tromsøbrua ja Arktinen katedraali Storsteinenin näköalatasanteelta päivällä. Havainnekuva.
 - #162, slot 8: Hurtigruten-rannikkolaiva Tromssansundissa Tromssan saaren edustalla talvipäivänä. Havainnekuva.
+
+## BARCELONA
+
+Manifesti: `posti/kuvatoimitus-saapumisintro-barcelona-uudet-6-8-20261013.json`. Toimitettu 1/2; kutsuja 2.
+
+- #163, slot 6: Bunkers del Carmel, Turó de la Roviran huippu: koko Barcelona, Sagrada Família ja meri päivällä. Havainnekuva.
+- Poisjättö #164, slot 8: Golondrina täyttää noin puolet kuvan leveydestä noin kolmanneksen sijaan, ja ikkunakehykset ovat ruskeaa puuta vaaditun vaaleanharmaan sijaan. Näin ohjeen neutraali kokonaismaalaus ja etäisempi sommittelu eivät täyty.
 
 ## BERLIINI
 

@@ -1,0 +1,219 @@
+{
+  "schemaVersion": 1,
+  "cityName": "BARCELONA",
+  "gameCityId": "barcelona",
+  "mediaSlug": "barcelona",
+  "taskNumbers": [
+    163,
+    164
+  ],
+  "updatedAt": "2026-10-13T19:53:41.226900+00:00",
+  "sourcePath": "posti/fable-codex-saapumisintro-uudet-6-8-loput-1-20261013.md",
+  "sourceCommit": "dbdaff9a39fa0e5052f176c890c85836e1a69a1f",
+  "sourceBlob": "1f499828d63779dfd3af7c99a4db2c4fa186e034",
+  "sourceReadInFull": true,
+  "sourceReadBy": "/root/intro_owner_rejection_inventory",
+  "sourceReadReceiptPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/source-read-receipt.json",
+  "assets": [
+    {
+      "taskNumber": 163,
+      "mediaSlug": "barcelona",
+      "slot": 6,
+      "filename": "barcelona-6-nakoala-intro-v1.png",
+      "title": "koko kaupunki tunnetulta näköalapaikalta päivällä — Bunkers del Carmel, Turó de la Roviran huippu: koko Barcelona, Sagrada Família ja meri päivällä.",
+      "fullDeliveryRequirement": "**6 / koko kaupunki tunnetulta näköalapaikalta päivällä — Bunkers del Carmel, Turó de la Roviran huippu: koko Barcelona, Sagrada Família ja meri päivällä.** Tiedosto `barcelona-6-nakoala-intro-v1.png`.\nMitä kuvataan: koko Barcelona päivällä Bunkers del Carmelin näköalapaikalta Turó de la Roviran huipulta (nykyaikainen värivalokuva). Etualalla kuvan alareunassa vain kapea kaistale harmaata betonialustaa ja karua, kuivaa kasvillisuutta, ei ihmisiä lähellä. Alla rinteessä Carmelin kaupunginosan matalat talot ja vaaleat kattopinnat, niiden takana Eixamplen tasainen ruutukaava: samankokoisia kortteleita, joiden kulmat on leikattu vinoiksi, ja välissä suoria, leveitä katuja. Keskellä vasemmalla kaukana Torre Glòriesin luodinmuotoinen lasitorni pienenä (noin 3 km päässä); hieman oikealla keskellä Sagrada Famílian korkeat torninkärjet pienenä, tunnistettavana siluettina (noin 2 km päässä, korkein keskitorni ristillä), ei pääaiheena. Horisontissa Välimeri sinisenä kaistaleena ja rantaviiva utuisena. Maamerkit ovat pieniä osia laajaa kokonaisuutta, pääaihe on koko kaupungin kattojen, korttelien ja meren panoraama. Kulma: vaakakuva, katse kaakkoon (noin 138 astetta, vaakakulma noin 50 astetta eli noin 113-163 astetta): Torre Glòries kuvan vasemmassa keskiosassa (noin 128 astetta), Sagrada Família oikealla keskellä (noin 149 astetta), meri taustalla; kamera silmänkorkeudelta alustan reunalta, hieman alaspäin, kaupunki täyttää yli puolet kuvasta. Valo: kirkas mutta pehmeä iltapäivävalo takaa oikealta (lounaasta), ohut kaupunkiutu kaukana, vaimeat värit, ei HDR:ää. Ei saa näkyä: ihmisiä lähellä tai tunnistettavia kasvoja, tekstiä, kylttejä, mainoksia, logoja, tykkejä, aseita tai sotilaita, Montjuïcia ja Tibidaboa (katse kaakkoon pitää ne kuvan ulkopuolella), nostureita pääaiheena, Gaudín koristeveistoksia tai mosaiikkeja lähikuvassa, lippuja, ilotulitusta, valoshowta, drooneja. Fotorealistinen havainnekuva, vaimeat värit, 1536 x 1024.\nKuvateksti-ehdotus (loppuu sanaan Havainnekuva.): Bunkers del Carmel, Turó de la Roviran huippu: koko Barcelona, Sagrada Família ja meri päivällä. Havainnekuva.\n\n",
+      "sourceVersions": [
+        {
+          "path": "posti/fable-codex-saapumisintro-uudet-6-8-loput-1-20261013.md",
+          "commit": "dbdaff9a39fa0e5052f176c890c85836e1a69a1f",
+          "blob": "1f499828d63779dfd3af7c99a4db2c4fa186e034",
+          "readInFull": true
+        }
+      ],
+      "ownerThreadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+      "hostId": "local",
+      "generationCap": 1,
+      "status": "QA-R2-delivered-for-PT-review",
+      "productionStarted": false,
+      "delivered": true,
+      "city": "BARCELONA",
+      "gameID": "barcelona",
+      "part": 1,
+      "sourceBlob": "1f499828d63779dfd3af7c99a4db2c4fa186e034",
+      "sourceCommit": "dbdaff9a39fa0e5052f176c890c85836e1a69a1f",
+      "sourcePath": "posti/fable-codex-saapumisintro-uudet-6-8-loput-1-20261013.md",
+      "sourceNasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/sources/fable-codex-saapumisintro-uudet-6-8-loput-1-20261013.md",
+      "sourceCharacterSpan": [
+        65242,
+        67359
+      ],
+      "sourceByteSpan": [
+        67669,
+        69869
+      ],
+      "fullDeliveryRequirementSHA256": "3d0919308c7b32e65b506c990cae7553350ad44f2cfa6932922259caf6f1f4c8",
+      "fullDirective": "koko Barcelona päivällä Bunkers del Carmelin näköalapaikalta Turó de la Roviran huipulta (nykyaikainen värivalokuva). Etualalla kuvan alareunassa vain kapea kaistale harmaata betonialustaa ja karua, kuivaa kasvillisuutta, ei ihmisiä lähellä. Alla rinteessä Carmelin kaupunginosan matalat talot ja vaaleat kattopinnat, niiden takana Eixamplen tasainen ruutukaava: samankokoisia kortteleita, joiden kulmat on leikattu vinoiksi, ja välissä suoria, leveitä katuja. Keskellä vasemmalla kaukana Torre Glòriesin luodinmuotoinen lasitorni pienenä (noin 3 km päässä); hieman oikealla keskellä Sagrada Famílian korkeat torninkärjet pienenä, tunnistettavana siluettina (noin 2 km päässä, korkein keskitorni ristillä), ei pääaiheena. Horisontissa Välimeri sinisenä kaistaleena ja rantaviiva utuisena. Maamerkit ovat pieniä osia laajaa kokonaisuutta, pääaihe on koko kaupungin kattojen, korttelien ja meren panoraama. Kulma: vaakakuva, katse kaakkoon (noin 138 astetta, vaakakulma noin 50 astetta eli noin 113-163 astetta): Torre Glòries kuvan vasemmassa keskiosassa (noin 128 astetta), Sagrada Família oikealla keskellä (noin 149 astetta), meri taustalla; kamera silmänkorkeudelta alustan reunalta, hieman alaspäin, kaupunki täyttää yli puolet kuvasta. Valo: kirkas mutta pehmeä iltapäivävalo takaa oikealta (lounaasta), ohut kaupunkiutu kaukana, vaimeat värit, ei HDR:ää. Ei saa näkyä: ihmisiä lähellä tai tunnistettavia kasvoja, tekstiä, kylttejä, mainoksia, logoja, tykkejä, aseita tai sotilaita, Montjuïcia ja Tibidaboa (katse kaakkoon pitää ne kuvan ulkopuolella), nostureita pääaiheena, Gaudín koristeveistoksia tai mosaiikkeja lähikuvassa, lippuja, ilotulitusta, valoshowta, drooneja. Fotorealistinen havainnekuva, vaimeat värit, 1536 x 1024.",
+      "caption": "Bunkers del Carmel, Turó de la Roviran huippu: koko Barcelona, Sagrada Família ja meri päivällä. Havainnekuva.",
+      "sourceReadInFullVerified": true,
+      "mappingBlockExactSourceMatch": true,
+      "r2Prefix": "julisteet/saapumisintro/barcelona/20261013-uudet-6-8/",
+      "deliveryManifestPath": "posti/kuvatoimitus-saapumisintro-barcelona-uudet-6-8-20261013.json",
+      "partDeliveryReportPath": "posti/codex-fable-saapumisintro-uudet-6-8-loput-1-20261013.md",
+      "generationCallsRecorded": 0,
+      "qaAcceptedVerified": true,
+      "r2BytesVerified": true,
+      "mailboxDeliveryVerified": false,
+      "ownerAcceptanceVerified": false,
+      "acceptanceRoute": "PT acts for owner; source authorizes direct delivery. Actual PT acceptance remains evidence-dependent.",
+      "gameIntegrated": false,
+      "published": false,
+      "r2Key": "julisteet/saapumisintro/barcelona/20261013-uudet-6-8/barcelona-6-nakoala-intro-v1.png",
+      "historical": false,
+      "id": "barcelona-6-nakoala-intro-v1",
+      "sourceReadInFull": true,
+      "cityName": "BARCELONA",
+      "gameCityId": "barcelona",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/barcelona/native-6.png",
+      "nativeSHA256": "804455749d7ccfbe709a7894589c6b180b6cc5dedf6fcb090729263be7043ef3",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/barcelona/barcelona-6-nakoala-intro-v1.png",
+      "workspacePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/eurooppa-introt-uudet68-loput-20261013/barcelona/barcelona-6-nakoala-intro-v1.png",
+      "sha256": "bd897bff2b22a31f53cb0011aeff31da042a20eee34a0374c5527b8d2ac847f7",
+      "width": 1536,
+      "height": 1024,
+      "opaque": true,
+      "sRGB": true,
+      "neutralGrayscale": false,
+      "pixelIdentityAfterMetadataExport": true,
+      "pixelIdentityToNative": true,
+      "historicalGrayscaleEncodingNormalized": false,
+      "exportProcessing": "Metadata/sRGB only; pixels unchanged",
+      "generationPrompt": "Use case: photorealistic-natural\nAsset type: a travel game city-arrival illustrative image.\nGenerate one complete, brand-new, current-day COLOR photograph-like image. Exact PNG output 1536 x 1024 pixels, landscape 3:2, opaque sRGB. No image editing or reuse of another conversation image. Follow the authorized Finnish scene specification below literally: city, viewpoint, compass direction, field of view, relative landmark positions, season, time of day, movement direction, subject size, materials and exclusions are all important. Caption and filename are metadata only and must never appear in the pixels.\nReal-camera documentary appearance, natural subdued color and exposure, irregular genuine-looking stone, foliage, water and surfaces; coherent architecture, geography and perspective. No HDR, oversaturation, cinematic grading, CGI gloss, artificial repeating texture, collaged or pasted-on objects. Preserve each city's specified setting and weather; do not make the series mechanically identical.\nNo readable text, numbers, logos, signage, brand liveries, advertisements, flags, watermarks or decorative frame anywhere. Any transport is wholly unbranded, with exactly the source-prescribed neutral colors and blank/switch-off route displays. People are tiny and distant, turned away or silhouettes, never identifiable faces. Only show a landmark if this exact scene specification explicitly permits it, at the small source-prescribed scale; do not add other city landmarks. This is neither a historical 1873 view nor a youth-celebration scene. No Google 3D or Street View inputs.\n\nNUMBERS: any background clock or decorative circle must be distant enough that no numeral, letter or inscription is readable. Do not insert a clearly numbered clock face.\n\nAUTHORIZED SCENE SPECIFICATION:\nMitä kuvataan: koko Barcelona päivällä Bunkers del Carmelin näköalapaikalta Turó de la Roviran huipulta (nykyaikainen värivalokuva). Etualalla kuvan alareunassa vain kapea kaistale harmaata betonialustaa ja karua, kuivaa kasvillisuutta, ei ihmisiä lähellä. Alla rinteessä Carmelin kaupunginosan matalat talot ja vaaleat kattopinnat, niiden takana Eixamplen tasainen ruutukaava: samankokoisia kortteleita, joiden kulmat on leikattu vinoiksi, ja välissä suoria, leveitä katuja. Keskellä vasemmalla kaukana Torre Glòriesin luodinmuotoinen lasitorni pienenä (noin 3 km päässä); hieman oikealla keskellä Sagrada Famílian korkeat torninkärjet pienenä, tunnistettavana siluettina (noin 2 km päässä, korkein keskitorni ristillä), ei pääaiheena. Horisontissa Välimeri sinisenä kaistaleena ja rantaviiva utuisena. Maamerkit ovat pieniä osia laajaa kokonaisuutta, pääaihe on koko kaupungin kattojen, korttelien ja meren panoraama. Kulma: vaakakuva, katse kaakkoon (noin 138 astetta, vaakakulma noin 50 astetta eli noin 113-163 astetta): Torre Glòries kuvan vasemmassa keskiosassa (noin 128 astetta), Sagrada Família oikealla keskellä (noin 149 astetta), meri taustalla; kamera silmänkorkeudelta alustan reunalta, hieman alaspäin, kaupunki täyttää yli puolet kuvasta. Valo: kirkas mutta pehmeä iltapäivävalo takaa oikealta (lounaasta), ohut kaupunkiutu kaukana, vaimeat värit, ei HDR:ää. Ei saa näkyä: ihmisiä lähellä tai tunnistettavia kasvoja, tekstiä, kylttejä, mainoksia, logoja, tykkejä, aseita tai sotilaita, Montjuïcia ja Tibidaboa (katse kaakkoon pitää ne kuvan ulkopuolella), nostureita pääaiheena, Gaudín koristeveistoksia tai mosaiikkeja lähikuvassa, lippuja, ilotulitusta, valoshowta, drooneja. Fotorealistinen havainnekuva, vaimeat värit, 1536 x 1024.\n",
+      "sourceReadReceiptPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/source-read-receipt.json",
+      "references": [
+        {
+          "role": "exact authorized source instruction and viewpoint",
+          "sourcePath": "posti/fable-codex-saapumisintro-uudet-6-8-loput-1-20261013.md",
+          "sourceCommit": "dbdaff9a39fa0e5052f176c890c85836e1a69a1f",
+          "sourceBlob": "1f499828d63779dfd3af7c99a4db2c4fa186e034",
+          "sourceTaskNumber": 163,
+          "sourceTaskCardSHA256": "3d0919308c7b32e65b506c990cae7553350ad44f2cfa6932922259caf6f1f4c8",
+          "sourceCharacterSpan": [
+            65242,
+            67359
+          ],
+          "sourceByteSpan": [
+            67669,
+            69869
+          ],
+          "assignedCardReadInFullByWorker": true,
+          "fullOrdersReadInFullByTeamVerified": true,
+          "sourceReadReceiptPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/source-read-receipt.json",
+          "sourceReadActualReader": "/root/intro_owner_rejection_inventory",
+          "imageInput": false
+        },
+        {
+          "role": "own knowledge and fully provided source geometry; not a pixel-photo reference",
+          "visualImageInputsUsed": false,
+          "google3DUsed": false,
+          "streetViewUsed": false,
+          "museumCopyrightImageInputsUsed": false,
+          "commonsCCBYSAUsed": false,
+          "additionalExternalFactsAsserted": false
+        }
+      ],
+      "qaPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/barcelona/qa-6.json",
+      "producerQAVerdict": "needs-root-review",
+      "producerQAPassed": false,
+      "independentRootQARequired": true,
+      "url": "https://media.matkakirja.app/julisteet/saapumisintro/barcelona/20261013-uudet-6-8/barcelona-6-nakoala-intro-v1.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/barcelona/20261013-uudet-6-8/barcelona-6-nakoala-intro-v1.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "QA": {
+        "slot": 6,
+        "taskNumber": 163,
+        "assetID": "barcelona-6-nakoala-intro-v1",
+        "targetJsonPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/barcelona/asset-6.json",
+        "nativeSHA256": "804455749d7ccfbe709a7894589c6b180b6cc5dedf6fcb090729263be7043ef3",
+        "finalSHA256": "bd897bff2b22a31f53cb0011aeff31da042a20eee34a0374c5527b8d2ac847f7",
+        "verdict": "accepted",
+        "reason": "Laaja kattomeri täyttää yli puolet, Torre Glòries vasemmalla ja Sagrada Família oikealla kaukana, meri takana. Kuvassa ei tunnisteta kiellettyä Montjuïcia/Tibidaboa, lippua tai lähitekstiä. Muita pieniä rantarakennuksia ei ole lähteessä kategorisesti kielletty. Tarkkaa kompassikulmaa ei väitetä kuvasta mitatuksi.",
+        "reviewer": "/root",
+        "reviewedAt": "2026-10-13T19:53:26.515814+00:00",
+        "nativeViewedInFull": true,
+        "assignedSourceCardReadInFull": true,
+        "nativePixelsEqualFinalVerified": true,
+        "technicalPassed": true,
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "published": false
+      },
+      "R2Proof": {
+        "slot": 6,
+        "r2Key": "julisteet/saapumisintro/barcelona/20261013-uudet-6-8/barcelona-6-nakoala-intro-v1.png",
+        "url": "https://media.matkakirja.app/julisteet/saapumisintro/barcelona/20261013-uudet-6-8/barcelona-6-nakoala-intro-v1.png",
+        "sha256": "bd897bff2b22a31f53cb0011aeff31da042a20eee34a0374c5527b8d2ac847f7",
+        "nativeSHA256": "804455749d7ccfbe709a7894589c6b180b6cc5dedf6fcb090729263be7043ef3",
+        "bytes": 2823571,
+        "readbacks": [
+          {
+            "http": 200,
+            "byteExact": true,
+            "sha256": "bd897bff2b22a31f53cb0011aeff31da042a20eee34a0374c5527b8d2ac847f7",
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "cacheBusted": false
+          },
+          {
+            "http": 200,
+            "byteExact": true,
+            "sha256": "bd897bff2b22a31f53cb0011aeff31da042a20eee34a0374c5527b8d2ac847f7",
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "cacheBusted": true
+          }
+        ],
+        "byteExactReadback": true,
+        "verifiedAt": "2026-10-13T19:53:41.145868+00:00"
+      },
+      "FableReceiptVerified": false
+    }
+  ],
+  "omittedItems": [
+    {
+      "taskNumber": 164,
+      "slot": 8,
+      "reason": "Golondrina täyttää noin puolet kuvan leveydestä noin kolmanneksen sijaan, ja ikkunakehykset ovat ruskeaa puuta vaaditun vaaleanharmaan sijaan. Näin ohjeen neutraali kokonaismaalaus ja etäisempi sommittelu eivät täyty.",
+      "stage": "independent-QA",
+      "additionalGenerationAllowed": false,
+      "nativeSHA256": "ba8d6d6d81e5b23e0d52f94aa5dff22313e8c0515ecf2270120b4967a0f019f8",
+      "finalSHA256": "ce069cb863841965bd40b965c37a9113d8ff8a9997133aea575666ad0ef7f19e"
+    }
+  ],
+  "actualCalls": 2,
+  "maximumGenerationCalls": 2,
+  "allRequestedItemsHandled": true,
+  "allRequestedImagesDelivered": false,
+  "productionCompleteWithinSourceLimit": true,
+  "directMailboxDeliveryAuthorized": true,
+  "acceptanceRoute": "Päätoimittaja reviews on the owner authority in the exact source. This authorization is not yet an actual acceptance receipt.",
+  "ownerAcceptanceVerified": false,
+  "FableReceiptVerified": false,
+  "gameIntegrated": false,
+  "published": false,
+  "oldFiveApprovedPilotImagesPreserved": true,
+  "oldCelebrationAnd1873TopicsRemainWithdrawn": true,
+  "existingHeroSlotsPreserved": [
+    1,
+    2,
+    3
+  ],
+  "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+  "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+  "newTopics": {
+    "6": "daytime-city-panorama",
+    "8": "local-transport-in-motion"
+  }
+}
