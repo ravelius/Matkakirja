@@ -5147,4 +5147,124 @@ export const SAATIEDOT = {
     },
     luonnehdinta: 'Tbilisissä tammikuun keskilämpötila on noin 3 °C ja elokuun noin 25 °C. Vuodessa sataa noin 510 millimetriä; sateisimmat kuukaudet ovat touko- ja kesäkuu noin 85 millimetrillä kuussa, ja kuivin on tammikuu noin 16 millimetrillä.',
   },
+  /*
+   * PÄÄKAUPUNKIPISTEET (Päätoimittaja 11.10.2026, pilvierät e04, e05, e06, e07, e08, e09, e10, e11, e12, e13, e14, 93 kaupunkia):
+   * Säärivit sääaseman normaaleista (tyokalu.mjs saa; asema ja kausi lahde-kentässä). Avain on pääkaupunkipisteen id (js/packs/paakaupungit.js), ei laudan kaupunki: lehti aukeaa
+   * maakortin pääkaupunkirivistä (ei pysäkkiä). Lähteet ja faktapohja: haarat paakaupungit-e04-pilvi, paakaupungit-e05-pilvi, paakaupungit-e06-pilvi, paakaupungit-e07-pilvi, paakaupungit-e08-pilvi, paakaupungit-e09-pilvi, paakaupungit-e10-pilvi, paakaupungit-e11-pilvi, paakaupungit-e12-pilvi, paakaupungit-e13-pilvi, paakaupungit-e14-pilvi.
+   * Ilmastotaulukon artikkeli ja luku-päivä: haaran <id>/saa.json tausta.
+   */
+  banjul: {
+    lat: 13.45,
+    lon: -16.58,
+    keskilampo: [25.3, 25.9, 26.3, 26.1, 26.5, 27.5, 27.7, 27.7, 27.9, 28.9, 28.4, 26.6],
+    ylin: [33, 33, 33, 32, 32, 32, 32, 32, 32, 34, 34, 33],
+    alin: [18, 19, 20, 20, 21, 23, 24, 24, 24, 24, 23, 20],
+    sade: [1, 1, 0, 0, 3, 55, 175, 354, 244, 76, 1, 0],
+    lahde: {
+      nimi: 'en-Wikipedia, ilmastotaulukko',
+      kausi: '1991–2020',
+    },
+    luonnehdinta: 'Päivän ylimmät normaalit ovat vuoden mittaan noin 32–34 astetta. Sateet keskittyvät kesä–lokakuuhun, ja elokuu on selvästi sateisin kuukausi. Marraskuusta huhtikuuhun sadetta kertyy normaalitaulukossa vain vähän.',
+  },
+  bissau: {
+    lat: 11.86,
+    lon: -15.58,
+    keskilampo: [25.3, 27.1, 28.2, 28, 28.5, 28.1, 27.2, 26.9, 27.3, 27.9, 27.7, 26],
+    ylin: [32, 35, 36, 35, 35, 33, 31, 30, 31, 32, 33, 33],
+    alin: [18, 19, 20, 21, 22, 23, 23, 23, 23, 24, 23, 19],
+    sade: [0, 0, 0, 0, 11, 140, 371, 468, 364, 167, 11, 0],
+    lahde: {
+      nimi: 'en-Wikipedia, ilmastotaulukko',
+      kausi: '1991–2020',
+    },
+    luonnehdinta: 'Bissaussa alkuvuosi on hyvin kuiva ja sateet painottuvat kesä–lokakuuhun. Keväällä päivän ylimmät normaalit ovat noin 35–36 astetta ja elokuussa noin 30 astetta. Elokuun sademäärä on noin 470 millimetriä.',
+  },
+  conakry: {
+    lat: 9.51,
+    lon: -13.71,
+    keskilampo: [26.9, 27.6, 28.2, 28.4, 28.3, 27, 25.9, 25.7, 26.3, 26.8, 27.7, 27.6],
+    ylin: [32, 32, 32, 32, 32, 30, 29, 28, 30, 30, 31, 32],
+    alin: [22, 23, 24, 25, 25, 24, 23, 23, 23, 23, 24, 23],
+    sade: [3, 1, 3, 18, 113, 434, 1083, 1142, 555, 293, 80, 6],
+    lahde: {
+      nimi: 'en-Wikipedia, ilmastotaulukko',
+      kausi: '1991–2020',
+    },
+    luonnehdinta: 'Kuukausien keskilämpötilat pysyvät noin 26–28 asteessa läpi vuoden. Joulukuusta maaliskuuhun sademäärät ovat pieniä, mutta keskikesän sateet ovat runsaita. Heinä- ja elokuun kuukausisade ylittää kummassakin tuhat millimetriä.',
+  },
+  monrovia: {
+    lat: 6.31,
+    lon: -10.8,
+    keskilampo: [26.9, 27.5, 27.9, 27.5, 26.9, 26.1, 25.3, 25, 25.5, 26.4, 26.7, 27],
+    ylin: [31, 32, 32, 31, 30, 29, 28, 27, 28, 29, 30, 31],
+    alin: [23, 23, 24, 24, 24, 23, 23, 23, 23, 23, 23, 23],
+    sade: [25, 48, 97, 160, 417, 818, 696, 561, 914, 587, 191, 48],
+    lahde: {
+      nimi: 'en-Wikipedia, ilmastotaulukko',
+      kausi: '1991–2020',
+    },
+    luonnehdinta: 'Robertsin lentoaseman seudulla kuukausikeskilämpötilat pysyvät noin 25–28 asteessa. Runsaat sateet painottuvat touko–lokakuuhun, ja syyskuu on sateisin kuukausi. Loppu- ja alkuvuosi ovat kuivempia, mutta silloinkin sataa.',
+  },
+  nouakchott: {
+    keskilampo: [21.6, 23.3, 24.4, 24.6, 25.7, 26.9, 27.4, 28.7, 29.6, 29.2, 25.9, 22.9],
+    sade: [1, 0.1, 0.7, 0, 0, 3.6, 10.2, 46.4, 51.3, 7.9, 1.7, 8.8],
+    lahde: {
+      nimi: 'JMA',
+      kausi: '1991–2020',
+    },
+    lat: 18.1,
+    lon: -15.95,
+  },
+  rabat: {
+    lat: 34.02,
+    lon: -6.84,
+    keskilampo: [12.3, 13, 14.8, 16, 18.5, 20.8, 22.6, 23.1, 21.7, 19.6, 15.9, 13.7],
+    ylin: [17, 18, 20, 21, 24, 26, 27, 28, 27, 25, 21, 19],
+    alin: [7, 8, 10, 11, 13, 16, 18, 18, 17, 14, 11, 9],
+    sade: [81, 61, 63, 42, 18, 4, 0, 1, 14, 55, 94, 90],
+    lahde: {
+      nimi: 'en-Wikipedia, ilmastotaulukko',
+      kausi: '1991–2020',
+    },
+    luonnehdinta: 'Kesä on kuiva: heinäkuun keskimääräinen sademäärä on 0 millimetriä ja elokuun 1 millimetri. Heinä–elokuussa päivän ylimpien lämpötilojen normaalit ovat noin 27–28 astetta, kun tammikuun yön alin on noin 7 astetta. Sateet painottuvat myöhäissyksyyn ja talveen.',
+  },
+  tunis: {
+    lat: 36.81,
+    lon: 10.18,
+    keskilampo: [12.3, 12.5, 14.6, 17.2, 21, 25.1, 28.1, 28.7, 25.6, 22, 17.2, 13.5],
+    ylin: [16, 17, 19, 22, 27, 31, 34, 35, 31, 27, 22, 18],
+    alin: [8, 8, 10, 12, 15, 19, 22, 23, 21, 17, 13, 9],
+    sade: [59, 55, 46, 38, 22, 13, 4, 15, 58, 55, 53, 68],
+    lahde: {
+      nimi: 'en-Wikipedia, ilmastotaulukko',
+      kausi: '1991–2020',
+    },
+    luonnehdinta: 'Talvella kuukausien keskilämpötilat ovat noin 12–14 astetta, keskikesällä noin 28–29. Kesä on talvea kuivempi, ja heinäkuussa sataa vain vähän. Kevät ja syksy ovat keskikesää viileämpiä.',
+  },
+  accra: {
+    lat: 5.56,
+    lon: -0.2,
+    keskilampo: [28.5, 29.2, 29.2, 29, 28.3, 26.8, 25.9, 25.6, 26.5, 27.5, 28.3, 28.6],
+    ylin: [33, 33, 33, 33, 32, 30, 29, 28, 30, 31, 32, 32],
+    alin: [25, 25, 25, 25, 25, 24, 23, 23, 23, 24, 25, 25],
+    sade: [12, 26, 61, 88, 151, 190, 63, 21, 43, 80, 37, 27],
+    lahde: {
+      nimi: 'en-Wikipedia, ilmastotaulukko',
+      kausi: '1991–2020',
+    },
+    luonnehdinta: 'Accrassa on lämmintä ympäri vuoden: kuukausien keskilämpö vaihtelee elokuun 25,6 asteesta helmi–maaliskuun 29,2 asteeseen. Kesäkuu on sateisin kuukausi, noin 190 millimetriä, ja tammikuu kuivin, noin 12 millimetriä. Heinäkuun jälkeen sade vähenee elokuuksi ja lisääntyy taas syksyllä.',
+  },
+  lusaka: {
+    lat: -15.42,
+    lon: 28.28,
+    keskilampo: [22.1, 21.9, 22, 21, 19.2, 17.3, 18.3, 21.3, 23.6, 24.8, 24.4, 22.5],
+    ylin: [27, 27, 27, 27, 25, 24, 26, 30, 32, 32, 30, 28],
+    alin: [17, 17, 17, 15, 13, 11, 11, 13, 16, 18, 18, 18],
+    sade: [210, 169, 88, 21, 3, 0, 0, 0, 0, 11, 78, 179],
+    lahde: {
+      nimi: 'en-Wikipedia, ilmastotaulukko',
+      kausi: '1991–2020',
+    },
+    luonnehdinta: 'Sateet painottuvat loppuvuodesta alkuvuoteen, kun taas vuoden keskivaiheen kuukaudet ovat kuivia. Vuoden keskivaiheen viileämmän jakson jälkeen lämpenee kuivan kauden lopulla ennen sateiden runsastumista.',
+  },
 };
