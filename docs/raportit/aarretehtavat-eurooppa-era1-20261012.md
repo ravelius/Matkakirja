@@ -4,7 +4,7 @@ Suunnitelman (`aarretehtavat-eurooppa-suunnitelma-20261012.md`) mukainen erä; P
 
 | Kaupunki · henkilö | a) Katso ja löydä | b) Toinen tehtävä |
 |---|---|---|
-| **Lontoo** · Muotialan opiskelija Leila | Tower Bridge (990 m) | Salakirjoitus: LASIKATTO |
+| **Lontoo** · Muotialan opiskelija Leila | Tower Bridge (706 m) | Salakirjoitus: LASIKATTO |
 | **Edinburgh** · Tykkimestari Ewan | Charlotte Square (580 m) | Aikajana: 1128 → 1582 → 1766 |
 | **Kööpenhamina** · Karusellinhoitaja Freja | Rundetårn (970 m) | Aikajana: 1167 → 1479 → 1642 |
 | **Amsterdam** · Muuttotyöntekijä Yara | Kuninkaanpalatsi (843 m) | Aikajana: 1613 → 1885 → 2010 |
