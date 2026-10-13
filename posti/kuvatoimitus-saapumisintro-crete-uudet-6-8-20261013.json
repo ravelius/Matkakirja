@@ -1,0 +1,352 @@
+{
+  "schemaVersion": 1,
+  "cityName": "KREETA",
+  "gameCityId": "kreeta",
+  "mediaSlug": "crete",
+  "taskNumbers": [
+    199,
+    200
+  ],
+  "updatedAt": "2026-10-13T17:38:30.219029+00:00",
+  "sourcePath": "posti/fable-codex-saapumisintro-uudet-6-8-loput-2-20261013.md",
+  "sourceCommit": "dbdaff9a39fa0e5052f176c890c85836e1a69a1f",
+  "sourceBlob": "2e5adc4cb04a23fcb4cd8fdd75426ac78afdcc9d",
+  "sourceReadInFull": true,
+  "sourceReadBy": "/root/intro_owner_rejection_inventory",
+  "sourceReadReceiptPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/source-read-receipt.json",
+  "assets": [
+    {
+      "taskNumber": 199,
+      "mediaSlug": "crete",
+      "slot": 6,
+      "filename": "crete-6-nakoala-intro-v1.png",
+      "title": "koko kaupunki tunnetulta näköalapaikalta päivällä — Chanian kattomeri ja Valkoiset vuoret Profitis Ilias -kukkulalta lounaaseen päivällä.",
+      "fullDeliveryRequirement": "**6 / koko kaupunki tunnetulta näköalapaikalta päivällä — Chanian kattomeri ja Valkoiset vuoret Profitis Ilias -kukkulalta lounaaseen päivällä.** Tiedosto `crete-6-nakoala-intro-v1.png`.\nMitä kuvataan: Chanian kattomeri päivänvalossa korkealta kukkulalta: tiheä kaupunkialue valkoisia ja hiekansävyisiä 2–5-kerroksisia kerrostaloja ja pieniä taloja, tasakattoja aurinkopaneeleineen ja vesisäiliöineen, joukossa muutamia punaisia tiilikattoja, kapeita katuja, palmuja, mäntyjä ja oliivipuita sekä pieniä puistokaistaleita; kaukana taustalla Valkoisten vuorten (Lefka Ori) korkea, karu, vaalea kalkkikiviharjanne ilmakehän utuun häivytettynä, kirkas sininen taivas ja muutama pieni vaalea pilvi. Etualalla (kuvan alareunassa) vain kapea kaistale kivistä, kuivan heinän ja mäntyjen peittämää kukkularinnettä, ei rakenteita eikä ihmisiä. Värikuva, nykyaika. Kulma: vaakakuva, Chanian itäpuolella Akrotirin niemimaan kukkulan rinteeltä, kamera suunnattu länsilounaaseen (suunta noin 225 astetta; näkökulma enintään noin 45 astetta, eli kuvassa on suuntia noin 200–245 astetta). Kaupunki täyttää kuvan keskiosan ja oikean puolen, Valkoiset vuoret nousevat vasemmalle taustalle yläreunaan. Vanhan sataman suunta (noin 245–250 astetta) ja meri jäävät kameran oikealle puolelle kuvan ulkopuolelle, joten rajaus ei saa ulottua oikealle yli noin 245 asteen; merta ei tarvita lainkaan. Valo: kirkas päivä, pehmeä iltapäivän valo, luonnolliset värit, ei HDR:ää. Ei saa näkyä: mitään Kreikan muistomerkkiä, hautamuistomerkkiä, patsasta tai antiikkikohdetta, ei Knossosta, ei linnoituksia tai muureja (ei Firkaa, ei bastioneja), ei vanhaa Venetsialaista satamaa, majakkaa eikä moskeijaa tai minareettia, ei kappelia, kirkkoja tai kupoleita erottuvina, ei kahviloita eikä rakenteita etualalla, ei Soudan lahden sotilaslaitoksia, sotalaivoja eikä lentokoneita, ei tekstiä, kylttejä, mainoksia, logoja, vesileimaa eikä kehystä, ei ihmisiä lähellä (ei lainkaan tai korkeintaan hädin näkyviä pisteitä kaukana). Fotorealistinen havainnekuva, vaimeat värit, 1536 x 1024.\nKuvateksti-ehdotus (loppuu sanaan Havainnekuva.): Chanian kattomeri ja Valkoiset vuoret Profitis Ilias -kukkulalta lounaaseen päivällä. Havainnekuva.\n\n",
+      "sourceVersions": [
+        {
+          "path": "posti/fable-codex-saapumisintro-uudet-6-8-loput-2-20261013.md",
+          "commit": "dbdaff9a39fa0e5052f176c890c85836e1a69a1f",
+          "blob": "2e5adc4cb04a23fcb4cd8fdd75426ac78afdcc9d",
+          "readInFull": true
+        }
+      ],
+      "ownerThreadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+      "hostId": "local",
+      "generationCap": 1,
+      "status": "QA-R2-delivered-for-PT-review",
+      "productionStarted": false,
+      "delivered": true,
+      "city": "KREETA",
+      "gameID": "kreeta",
+      "part": 2,
+      "sourceBlob": "2e5adc4cb04a23fcb4cd8fdd75426ac78afdcc9d",
+      "sourceCommit": "dbdaff9a39fa0e5052f176c890c85836e1a69a1f",
+      "sourcePath": "posti/fable-codex-saapumisintro-uudet-6-8-loput-2-20261013.md",
+      "sourceNasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/sources/fable-codex-saapumisintro-uudet-6-8-loput-2-20261013.md",
+      "sourceCharacterSpan": [
+        45137,
+        47337
+      ],
+      "sourceByteSpan": [
+        46826,
+        49114
+      ],
+      "fullDeliveryRequirementSHA256": "00c7843e19d63cb1f9c80be0477013d1795e4e5f935cdb624fc2e3f2c8edfbb9",
+      "fullDirective": "Chanian kattomeri päivänvalossa korkealta kukkulalta: tiheä kaupunkialue valkoisia ja hiekansävyisiä 2–5-kerroksisia kerrostaloja ja pieniä taloja, tasakattoja aurinkopaneeleineen ja vesisäiliöineen, joukossa muutamia punaisia tiilikattoja, kapeita katuja, palmuja, mäntyjä ja oliivipuita sekä pieniä puistokaistaleita; kaukana taustalla Valkoisten vuorten (Lefka Ori) korkea, karu, vaalea kalkkikiviharjanne ilmakehän utuun häivytettynä, kirkas sininen taivas ja muutama pieni vaalea pilvi. Etualalla (kuvan alareunassa) vain kapea kaistale kivistä, kuivan heinän ja mäntyjen peittämää kukkularinnettä, ei rakenteita eikä ihmisiä. Värikuva, nykyaika. Kulma: vaakakuva, Chanian itäpuolella Akrotirin niemimaan kukkulan rinteeltä, kamera suunnattu länsilounaaseen (suunta noin 225 astetta; näkökulma enintään noin 45 astetta, eli kuvassa on suuntia noin 200–245 astetta). Kaupunki täyttää kuvan keskiosan ja oikean puolen, Valkoiset vuoret nousevat vasemmalle taustalle yläreunaan. Vanhan sataman suunta (noin 245–250 astetta) ja meri jäävät kameran oikealle puolelle kuvan ulkopuolelle, joten rajaus ei saa ulottua oikealle yli noin 245 asteen; merta ei tarvita lainkaan. Valo: kirkas päivä, pehmeä iltapäivän valo, luonnolliset värit, ei HDR:ää. Ei saa näkyä: mitään Kreikan muistomerkkiä, hautamuistomerkkiä, patsasta tai antiikkikohdetta, ei Knossosta, ei linnoituksia tai muureja (ei Firkaa, ei bastioneja), ei vanhaa Venetsialaista satamaa, majakkaa eikä moskeijaa tai minareettia, ei kappelia, kirkkoja tai kupoleita erottuvina, ei kahviloita eikä rakenteita etualalla, ei Soudan lahden sotilaslaitoksia, sotalaivoja eikä lentokoneita, ei tekstiä, kylttejä, mainoksia, logoja, vesileimaa eikä kehystä, ei ihmisiä lähellä (ei lainkaan tai korkeintaan hädin näkyviä pisteitä kaukana). Fotorealistinen havainnekuva, vaimeat värit, 1536 x 1024.",
+      "caption": "Chanian kattomeri ja Valkoiset vuoret Profitis Ilias -kukkulalta lounaaseen päivällä. Havainnekuva.",
+      "sourceReadInFullVerified": true,
+      "mappingBlockExactSourceMatch": true,
+      "r2Prefix": "julisteet/saapumisintro/crete/20261013-uudet-6-8/",
+      "deliveryManifestPath": "posti/kuvatoimitus-saapumisintro-crete-uudet-6-8-20261013.json",
+      "partDeliveryReportPath": "posti/codex-fable-saapumisintro-uudet-6-8-loput-2-20261013.md",
+      "generationCallsRecorded": 0,
+      "qaAcceptedVerified": true,
+      "r2BytesVerified": true,
+      "mailboxDeliveryVerified": false,
+      "ownerAcceptanceVerified": false,
+      "acceptanceRoute": "PT acts for owner; source authorizes direct delivery. Actual PT acceptance remains evidence-dependent.",
+      "gameIntegrated": false,
+      "published": false,
+      "r2Key": "julisteet/saapumisintro/crete/20261013-uudet-6-8/crete-6-nakoala-intro-v1.png",
+      "historical": false,
+      "id": "crete-6-nakoala-intro-v1",
+      "sourceReadInFull": true,
+      "cityName": "KREETA",
+      "gameCityId": "kreeta",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/crete/native-6.png",
+      "nativeSHA256": "a64957d99ed7ac0b6ca791cdab8a06959102317c810745facc0598632f18f2cf",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/crete/crete-6-nakoala-intro-v1.png",
+      "workspacePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/eurooppa-introt-uudet68-loput-20261013/crete/crete-6-nakoala-intro-v1.png",
+      "sha256": "b6973f6fbad7c9945dc980e867976997dbeca3d84292477381db6a9194b88cdd",
+      "width": 1536,
+      "height": 1024,
+      "opaque": true,
+      "sRGB": true,
+      "neutralGrayscale": false,
+      "pixelIdentityAfterMetadataExport": true,
+      "pixelIdentityToNative": true,
+      "historicalGrayscaleEncodingNormalized": false,
+      "exportProcessing": "Metadata/sRGB only; pixels unchanged",
+      "generationPrompt": "Create exactly one original, contemporary COLOR photographic-looking illustrative image. Output a single landscape PNG at exactly 1536x1024, opaque RGB, natural camera perspective. No collage, borders or text overlays. The scene must follow ALL of the following exact Finnish scene instructions, including direction, geometry, exclusions, scale, vehicle movement and materials:\n\nChanian kattomeri päivänvalossa korkealta kukkulalta: tiheä kaupunkialue valkoisia ja hiekansävyisiä 2–5-kerroksisia kerrostaloja ja pieniä taloja, tasakattoja aurinkopaneeleineen ja vesisäiliöineen, joukossa muutamia punaisia tiilikattoja, kapeita katuja, palmuja, mäntyjä ja oliivipuita sekä pieniä puistokaistaleita; kaukana taustalla Valkoisten vuorten (Lefka Ori) korkea, karu, vaalea kalkkikiviharjanne ilmakehän utuun häivytettynä, kirkas sininen taivas ja muutama pieni vaalea pilvi. Etualalla (kuvan alareunassa) vain kapea kaistale kivistä, kuivan heinän ja mäntyjen peittämää kukkularinnettä, ei rakenteita eikä ihmisiä. Värikuva, nykyaika. Kulma: vaakakuva, Chanian itäpuolella Akrotirin niemimaan kukkulan rinteeltä, kamera suunnattu länsilounaaseen (suunta noin 225 astetta; näkökulma enintään noin 45 astetta, eli kuvassa on suuntia noin 200–245 astetta). Kaupunki täyttää kuvan keskiosan ja oikean puolen, Valkoiset vuoret nousevat vasemmalle taustalle yläreunaan. Vanhan sataman suunta (noin 245–250 astetta) ja meri jäävät kameran oikealle puolelle kuvan ulkopuolelle, joten rajaus ei saa ulottua oikealle yli noin 245 asteen; merta ei tarvita lainkaan. Valo: kirkas päivä, pehmeä iltapäivän valo, luonnolliset värit, ei HDR:ää. Ei saa näkyä: mitään Kreikan muistomerkkiä, hautamuistomerkkiä, patsasta tai antiikkikohdetta, ei Knossosta, ei linnoituksia tai muureja (ei Firkaa, ei bastioneja), ei vanhaa Venetsialaista satamaa, majakkaa eikä moskeijaa tai minareettia, ei kappelia, kirkkoja tai kupoleita erottuvina, ei kahviloita eikä rakenteita etualalla, ei Soudan lahden sotilaslaitoksia, sotalaivoja eikä lentokoneita, ei tekstiä, kylttejä, mainoksia, logoja, vesileimaa eikä kehystä, ei ihmisiä lähellä (ei lainkaan tai korkeintaan hädin näkyviä pisteitä kaukana). Fotorealistinen havainnekuva, vaimeat värit, 1536 x 1024.\n\nThis is present-day life, not a historical reconstruction. Use restrained realistic natural light and subtle natural colour, genuine irregular surfaces and vegetation, no CGI/render/painting/HDR look. Do not invent extra landmarks or recognizable buildings outside the requested view; prohibited background features are equally prohibited. No legible text or numbers anywhere, no vehicle emblems/branding/flags, advertisements or identifiable close faces. Keep the whole requested scene in one coherent physical camera frame. Do not write the caption inside the image. No additional variants or edits.\n\nComposition priority: the distant requested city is the main panorama, with foreground rock/pines only a narrow strip at the bottom. The source-specific framing and prohibited structures must hold at every scale. No Greek monuments anywhere, not even as tiny background features. The Chania skyline is ordinary low flat roofs; never add a church, dome, minaret, harbour, lighthouse or Venetian fortifications.\n",
+      "sourceReadReceiptPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/source-read-receipt.json",
+      "references": [
+        {
+          "kind": "exact-production-brief",
+          "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/sources/fable-codex-saapumisintro-uudet-6-8-loput-2-20261013.md",
+          "gitPath": "posti/fable-codex-saapumisintro-uudet-6-8-loput-2-20261013.md",
+          "commit": "dbdaff9a39fa0e5052f176c890c85836e1a69a1f",
+          "blob": "2e5adc4cb04a23fcb4cd8fdd75426ac78afdcc9d",
+          "sourceByteSpan": [
+            46826,
+            49114
+          ],
+          "fullRequirementSHA256": "00c7843e19d63cb1f9c80be0477013d1795e4e5f935cdb624fc2e3f2c8edfbb9",
+          "use": "Text scene constraint, not a copyright photograph or image passed to generator."
+        },
+        {
+          "kind": "own-architectural-geographic-knowledge",
+          "use": "New image from scratch; no external visual reference supplied, no Google data used.",
+          "independentSurveyClaim": false
+        }
+      ],
+      "qaPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/crete/qa-6.json",
+      "producerPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/crete/producer-6.json",
+      "producerQAAccepted": true,
+      "producerQAVerdict": "accepted",
+      "actualGenerationCalls": 1,
+      "url": "https://media.matkakirja.app/julisteet/saapumisintro/crete/20261013-uudet-6-8/crete-6-nakoala-intro-v1.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/crete/20261013-uudet-6-8/crete-6-nakoala-intro-v1.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "QA": {
+        "slot": 6,
+        "taskNumber": 199,
+        "assetID": "crete-6-nakoala-intro-v1",
+        "targetJsonPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/crete/asset-6.json",
+        "nativeSHA256": "a64957d99ed7ac0b6ca791cdab8a06959102317c810745facc0598632f18f2cf",
+        "finalSHA256": "b6973f6fbad7c9945dc980e867976997dbeca3d84292477381db6a9194b88cdd",
+        "verdict": "accepted",
+        "reason": "Tavallinen Chanian matala tasakattokaupunki ja vasemmalla karu vaalea vuoristo toteutuvat, ilman merta, satamaa tai tunnistettavaa Kreikan monumenttia. Eturinne on luonnollinen.",
+        "reviewer": "/root",
+        "reviewedAt": "2026-10-13T17:36:17.170439+00:00",
+        "nativeViewedInFull": true,
+        "assignedSourceCardReadInFull": true,
+        "nativePixelsEqualFinalVerified": true,
+        "technicalPassed": true,
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "published": false
+      },
+      "R2Proof": {
+        "slot": 6,
+        "r2Key": "julisteet/saapumisintro/crete/20261013-uudet-6-8/crete-6-nakoala-intro-v1.png",
+        "url": "https://media.matkakirja.app/julisteet/saapumisintro/crete/20261013-uudet-6-8/crete-6-nakoala-intro-v1.png",
+        "sha256": "b6973f6fbad7c9945dc980e867976997dbeca3d84292477381db6a9194b88cdd",
+        "nativeSHA256": "a64957d99ed7ac0b6ca791cdab8a06959102317c810745facc0598632f18f2cf",
+        "bytes": 3024732,
+        "readbacks": [
+          {
+            "http": 200,
+            "byteExact": true,
+            "sha256": "b6973f6fbad7c9945dc980e867976997dbeca3d84292477381db6a9194b88cdd",
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "cacheBusted": false
+          },
+          {
+            "http": 200,
+            "byteExact": true,
+            "sha256": "b6973f6fbad7c9945dc980e867976997dbeca3d84292477381db6a9194b88cdd",
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "cacheBusted": true
+          }
+        ],
+        "byteExactReadback": true,
+        "verifiedAt": "2026-10-13T17:38:27.944894+00:00"
+      },
+      "FableReceiptVerified": false
+    },
+    {
+      "taskNumber": 200,
+      "mediaSlug": "crete",
+      "slot": 8,
+      "filename": "crete-8-kulkuneuvo-intro-v1.png",
+      "title": "kaupungin oma kulkuneuvo liikkeessä — Chanian kaupunkibussi rannikkotiellä Agioi Apostoloin suunnalla, meri vieressä.",
+      "fullDeliveryRequirement": "**8 / kaupungin oma kulkuneuvo liikkeessä — Chanian kaupunkibussi rannikkotiellä Agioi Apostoloin suunnalla, meri vieressä.** Tiedosto `crete-8-kulkuneuvo-intro-v1.png`.\nMitä kuvataan: nykyaikainen keskikokoinen kaupunkibussi (lyhyt yksikerroksinen matalalattiainen linja-auto, tavallinen eurooppalainen kaupunkibussi) liikkeessä rannikkotiellä Chanian länsipuolella: kaksikaistainen tie, tien reunassa tamariskeja, ruohoa ja matala kivi- tai pensasaita, toisella puolella vaalea hiekka- tai kiviranta ja rauhallinen kirkas meri, kaukana matala niemi tai kukkulalinja utuisena; muutama pieni uimari tai kävelijä vain kaukana rannalla, selin tai kaukaa, ei tunnistettavia kasvoja. Värikuva, nykyaika. Kulkuneuvon värit: yksivärinen vaalea harmaa-valkoinen runko, ei raitoja, ei brändimaalauksia, ei mainoksia, ei logoja; bussin otsassa ja kyljessä ei numeroita, reittinäyttöjä, kylttejä eikä mitään tekstiä (otsanäyttö sammutettu tai tyhjä), ikkunoissa ei tarroja eikä kylttejä. Kulma: vaakakuva, kameran korkeus noin 1,5 m tien vierestä, bussi kolme neljännestä edestä-sivulta kulkemassa vasemmalta oikealle, kevyt liikesumennus pyörissä ja taustan ruohossa (bussi itse terävä); bussi täyttää noin kolmanneksen kuvan leveydestä. Valo: aurinkoinen aamupäivä tai iltapäivä, kirkas sininen taivas, luonnolliset värit, ei HDR:ää. Ei saa näkyä: mitään Kreikan muistomerkkiä, antiikkikohdetta, linnoitusta, majakkaa, moskeijaa tai kirkkoa, ei satamaa, lauttoja eikä telakoita, ei Chanian vanhaa kaupunkia, ei isoja rakennuksia, ei tekstiä, katukylttejä, reittikylttejä, pysäkkien nimitauluja, mainoksia, logoja, auton rekisterikilpiä tai merkkejä, vesileimaa eikä kehystä; muu ajoneuvoliikenne vain kaukana ja merkittömänä. Fotorealistinen havainnekuva, vaimeat värit, 1536 x 1024.\nKuvateksti-ehdotus (loppuu sanaan Havainnekuva.): Chanian kaupunkibussi rannikkotiellä Agioi Apostoloin suunnalla, meri vieressä. Havainnekuva.\n\n",
+      "sourceVersions": [
+        {
+          "path": "posti/fable-codex-saapumisintro-uudet-6-8-loput-2-20261013.md",
+          "commit": "dbdaff9a39fa0e5052f176c890c85836e1a69a1f",
+          "blob": "2e5adc4cb04a23fcb4cd8fdd75426ac78afdcc9d",
+          "readInFull": true
+        }
+      ],
+      "ownerThreadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+      "hostId": "local",
+      "generationCap": 1,
+      "status": "QA-R2-delivered-for-PT-review",
+      "productionStarted": false,
+      "delivered": true,
+      "city": "KREETA",
+      "gameID": "kreeta",
+      "part": 2,
+      "sourceBlob": "2e5adc4cb04a23fcb4cd8fdd75426ac78afdcc9d",
+      "sourceCommit": "dbdaff9a39fa0e5052f176c890c85836e1a69a1f",
+      "sourcePath": "posti/fable-codex-saapumisintro-uudet-6-8-loput-2-20261013.md",
+      "sourceNasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/sources/fable-codex-saapumisintro-uudet-6-8-loput-2-20261013.md",
+      "sourceCharacterSpan": [
+        47337,
+        49258
+      ],
+      "sourceByteSpan": [
+        49114,
+        51103
+      ],
+      "fullDeliveryRequirementSHA256": "31a1ce063a353d5dd87bafd76532b0ce4547b6883e0f0b6a84dbca5f01ead68b",
+      "fullDirective": "nykyaikainen keskikokoinen kaupunkibussi (lyhyt yksikerroksinen matalalattiainen linja-auto, tavallinen eurooppalainen kaupunkibussi) liikkeessä rannikkotiellä Chanian länsipuolella: kaksikaistainen tie, tien reunassa tamariskeja, ruohoa ja matala kivi- tai pensasaita, toisella puolella vaalea hiekka- tai kiviranta ja rauhallinen kirkas meri, kaukana matala niemi tai kukkulalinja utuisena; muutama pieni uimari tai kävelijä vain kaukana rannalla, selin tai kaukaa, ei tunnistettavia kasvoja. Värikuva, nykyaika. Kulkuneuvon värit: yksivärinen vaalea harmaa-valkoinen runko, ei raitoja, ei brändimaalauksia, ei mainoksia, ei logoja; bussin otsassa ja kyljessä ei numeroita, reittinäyttöjä, kylttejä eikä mitään tekstiä (otsanäyttö sammutettu tai tyhjä), ikkunoissa ei tarroja eikä kylttejä. Kulma: vaakakuva, kameran korkeus noin 1,5 m tien vierestä, bussi kolme neljännestä edestä-sivulta kulkemassa vasemmalta oikealle, kevyt liikesumennus pyörissä ja taustan ruohossa (bussi itse terävä); bussi täyttää noin kolmanneksen kuvan leveydestä. Valo: aurinkoinen aamupäivä tai iltapäivä, kirkas sininen taivas, luonnolliset värit, ei HDR:ää. Ei saa näkyä: mitään Kreikan muistomerkkiä, antiikkikohdetta, linnoitusta, majakkaa, moskeijaa tai kirkkoa, ei satamaa, lauttoja eikä telakoita, ei Chanian vanhaa kaupunkia, ei isoja rakennuksia, ei tekstiä, katukylttejä, reittikylttejä, pysäkkien nimitauluja, mainoksia, logoja, auton rekisterikilpiä tai merkkejä, vesileimaa eikä kehystä; muu ajoneuvoliikenne vain kaukana ja merkittömänä. Fotorealistinen havainnekuva, vaimeat värit, 1536 x 1024.",
+      "caption": "Chanian kaupunkibussi rannikkotiellä Agioi Apostoloin suunnalla, meri vieressä. Havainnekuva.",
+      "sourceReadInFullVerified": true,
+      "mappingBlockExactSourceMatch": true,
+      "r2Prefix": "julisteet/saapumisintro/crete/20261013-uudet-6-8/",
+      "deliveryManifestPath": "posti/kuvatoimitus-saapumisintro-crete-uudet-6-8-20261013.json",
+      "partDeliveryReportPath": "posti/codex-fable-saapumisintro-uudet-6-8-loput-2-20261013.md",
+      "generationCallsRecorded": 0,
+      "qaAcceptedVerified": true,
+      "r2BytesVerified": true,
+      "mailboxDeliveryVerified": false,
+      "ownerAcceptanceVerified": false,
+      "acceptanceRoute": "PT acts for owner; source authorizes direct delivery. Actual PT acceptance remains evidence-dependent.",
+      "gameIntegrated": false,
+      "published": false,
+      "r2Key": "julisteet/saapumisintro/crete/20261013-uudet-6-8/crete-8-kulkuneuvo-intro-v1.png",
+      "historical": false,
+      "id": "crete-8-kulkuneuvo-intro-v1",
+      "sourceReadInFull": true,
+      "cityName": "KREETA",
+      "gameCityId": "kreeta",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/crete/native-8.png",
+      "nativeSHA256": "7dc2a52645335f521fdd301b3673e1f5bf2782ded64fb95869036a9bfee5a2de",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/crete/crete-8-kulkuneuvo-intro-v1.png",
+      "workspacePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/eurooppa-introt-uudet68-loput-20261013/crete/crete-8-kulkuneuvo-intro-v1.png",
+      "sha256": "b440fa166971923aa0a5219104afdd812fd119917596101e0d453a19ec827514",
+      "width": 1536,
+      "height": 1024,
+      "opaque": true,
+      "sRGB": true,
+      "neutralGrayscale": false,
+      "pixelIdentityAfterMetadataExport": true,
+      "pixelIdentityToNative": true,
+      "historicalGrayscaleEncodingNormalized": false,
+      "exportProcessing": "Metadata/sRGB only; pixels unchanged",
+      "generationPrompt": "Create exactly one original, contemporary COLOR photographic-looking illustrative image. Output a single landscape PNG at exactly 1536x1024, opaque RGB, natural camera perspective. No collage, borders or text overlays. The scene must follow ALL of the following exact Finnish scene instructions, including direction, geometry, exclusions, scale, vehicle movement and materials:\n\nnykyaikainen keskikokoinen kaupunkibussi (lyhyt yksikerroksinen matalalattiainen linja-auto, tavallinen eurooppalainen kaupunkibussi) liikkeessä rannikkotiellä Chanian länsipuolella: kaksikaistainen tie, tien reunassa tamariskeja, ruohoa ja matala kivi- tai pensasaita, toisella puolella vaalea hiekka- tai kiviranta ja rauhallinen kirkas meri, kaukana matala niemi tai kukkulalinja utuisena; muutama pieni uimari tai kävelijä vain kaukana rannalla, selin tai kaukaa, ei tunnistettavia kasvoja. Värikuva, nykyaika. Kulkuneuvon värit: yksivärinen vaalea harmaa-valkoinen runko, ei raitoja, ei brändimaalauksia, ei mainoksia, ei logoja; bussin otsassa ja kyljessä ei numeroita, reittinäyttöjä, kylttejä eikä mitään tekstiä (otsanäyttö sammutettu tai tyhjä), ikkunoissa ei tarroja eikä kylttejä. Kulma: vaakakuva, kameran korkeus noin 1,5 m tien vierestä, bussi kolme neljännestä edestä-sivulta kulkemassa vasemmalta oikealle, kevyt liikesumennus pyörissä ja taustan ruohossa (bussi itse terävä); bussi täyttää noin kolmanneksen kuvan leveydestä. Valo: aurinkoinen aamupäivä tai iltapäivä, kirkas sininen taivas, luonnolliset värit, ei HDR:ää. Ei saa näkyä: mitään Kreikan muistomerkkiä, antiikkikohdetta, linnoitusta, majakkaa, moskeijaa tai kirkkoa, ei satamaa, lauttoja eikä telakoita, ei Chanian vanhaa kaupunkia, ei isoja rakennuksia, ei tekstiä, katukylttejä, reittikylttejä, pysäkkien nimitauluja, mainoksia, logoja, auton rekisterikilpiä tai merkkejä, vesileimaa eikä kehystä; muu ajoneuvoliikenne vain kaukana ja merkittömänä. Fotorealistinen havainnekuva, vaimeat värit, 1536 x 1024.\n\nThis is present-day life, not a historical reconstruction. Use restrained realistic natural light and subtle natural colour, genuine irregular surfaces and vegetation, no CGI/render/painting/HDR look. Do not invent extra landmarks or recognizable buildings outside the requested view; prohibited background features are equally prohibited. No legible text or numbers anywhere, no vehicle emblems/branding/flags, advertisements or identifiable close faces. Keep the whole requested scene in one coherent physical camera frame. Do not write the caption inside the image. No additional variants or edits.\n\nFraming priority: show the WHOLE modest short bus at about ONE THIRD of image width, with natural surrounding coastal road and sea occupying most of the camera frame. The camera is 1.5m high from front-left three-quarter side; the vehicle travels LEFT TO RIGHT. Completely plain empty dark front display, absolutely no badge, licence plate, words or numbers; no Greek monuments or recognizable landmarks anywhere.\n",
+      "sourceReadReceiptPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/source-read-receipt.json",
+      "references": [
+        {
+          "kind": "exact-production-brief",
+          "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/sources/fable-codex-saapumisintro-uudet-6-8-loput-2-20261013.md",
+          "gitPath": "posti/fable-codex-saapumisintro-uudet-6-8-loput-2-20261013.md",
+          "commit": "dbdaff9a39fa0e5052f176c890c85836e1a69a1f",
+          "blob": "2e5adc4cb04a23fcb4cd8fdd75426ac78afdcc9d",
+          "sourceByteSpan": [
+            49114,
+            51103
+          ],
+          "fullRequirementSHA256": "31a1ce063a353d5dd87bafd76532b0ce4547b6883e0f0b6a84dbca5f01ead68b",
+          "use": "Text scene constraint, not a copyright photograph or image passed to generator."
+        },
+        {
+          "kind": "own-architectural-geographic-knowledge",
+          "use": "New image from scratch; no external visual reference supplied, no Google data used.",
+          "independentSurveyClaim": false
+        }
+      ],
+      "qaPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/crete/qa-8.json",
+      "producerPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/crete/producer-8.json",
+      "producerQAAccepted": true,
+      "producerQAVerdict": "accepted",
+      "actualGenerationCalls": 1,
+      "url": "https://media.matkakirja.app/julisteet/saapumisintro/crete/20261013-uudet-6-8/crete-8-kulkuneuvo-intro-v1.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/crete/20261013-uudet-6-8/crete-8-kulkuneuvo-intro-v1.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "QA": {
+        "slot": 8,
+        "taskNumber": 200,
+        "assetID": "crete-8-kulkuneuvo-intro-v1",
+        "targetJsonPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/crete/asset-8.json",
+        "nativeSHA256": "7dc2a52645335f521fdd301b3673e1f5bf2782ded64fb95869036a9bfee5a2de",
+        "finalSHA256": "b440fa166971923aa0a5219104afdd812fd119917596101e0d453a19ec827514",
+        "verdict": "accepted",
+        "reason": "Merkitön lyhyt yksikerroksinen bussi näkyy kokonaan ja suuntautuu oikealle rannikkotiellä. Ei tekstiä, reittinumeroa tai tunnistettavia lähikasvoja. Bussin noin 40 prosentin leveys hyväksytään lähteen likimääräisen kolmanneksen pienenä poikkeamana.",
+        "reviewer": "/root",
+        "reviewedAt": "2026-10-13T17:36:17.170439+00:00",
+        "nativeViewedInFull": true,
+        "assignedSourceCardReadInFull": true,
+        "nativePixelsEqualFinalVerified": true,
+        "technicalPassed": true,
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "published": false
+      },
+      "R2Proof": {
+        "slot": 8,
+        "r2Key": "julisteet/saapumisintro/crete/20261013-uudet-6-8/crete-8-kulkuneuvo-intro-v1.png",
+        "url": "https://media.matkakirja.app/julisteet/saapumisintro/crete/20261013-uudet-6-8/crete-8-kulkuneuvo-intro-v1.png",
+        "sha256": "b440fa166971923aa0a5219104afdd812fd119917596101e0d453a19ec827514",
+        "nativeSHA256": "7dc2a52645335f521fdd301b3673e1f5bf2782ded64fb95869036a9bfee5a2de",
+        "bytes": 2199444,
+        "readbacks": [
+          {
+            "http": 200,
+            "byteExact": true,
+            "sha256": "b440fa166971923aa0a5219104afdd812fd119917596101e0d453a19ec827514",
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "cacheBusted": false
+          },
+          {
+            "http": 200,
+            "byteExact": true,
+            "sha256": "b440fa166971923aa0a5219104afdd812fd119917596101e0d453a19ec827514",
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "cacheBusted": true
+          }
+        ],
+        "byteExactReadback": true,
+        "verifiedAt": "2026-10-13T17:38:30.115894+00:00"
+      },
+      "FableReceiptVerified": false
+    }
+  ],
+  "omittedItems": [],
+  "actualCalls": 2,
+  "maximumGenerationCalls": 2,
+  "allRequestedItemsHandled": true,
+  "allRequestedImagesDelivered": true,
+  "productionCompleteWithinSourceLimit": true,
+  "directMailboxDeliveryAuthorized": true,
+  "acceptanceRoute": "Päätoimittaja reviews on the owner authority in the exact source. This authorization is not yet an actual acceptance receipt.",
+  "ownerAcceptanceVerified": false,
+  "FableReceiptVerified": false,
+  "gameIntegrated": false,
+  "published": false,
+  "oldFiveApprovedPilotImagesPreserved": true,
+  "oldCelebrationAnd1873TopicsRemainWithdrawn": true,
+  "existingHeroSlotsPreserved": [
+    1,
+    2,
+    3
+  ],
+  "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+  "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+  "newTopics": {
+    "6": "daytime-city-panorama",
+    "8": "local-transport-in-motion"
+  }
+}
