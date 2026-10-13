@@ -1,0 +1,147 @@
+{
+  "task": 118,
+  "city": "nouakchott",
+  "auditedAt": "2026-10-13T15:54:56.609546+00:00",
+  "readOnlyCityFiles": true,
+  "primary48of48Available": false,
+  "currentSaaAccepted": false,
+  "currentSaaSHA256": "09b4766121327d4582a1d7a105d359d3cef44435226281a2eacb9bdb32161a5c",
+  "conclusion": "Nykyistä 1991–2020/Oumtounsy 48-arvosarjaa ei voi hyväksyä. JMA varmentaa saman 1991–2020-kauden 12 keskilämpö- ja 12 sadearvoa eri Nouakchott-asemapisteelle; ylimpien ja alimpien kuukausinormaalien 24 arvoa puuttuu hyväksyttävästä primääriketjusta. Älä yhdistä JMA-arvoja DWD1961–1990-lämpöihin tai nykyiseen saa.json-sarjaan.",
+  "recommendedGate": "saatiedot:null, kunnes yksi asema/kausi/48 kuukausiarvoa voidaan varmentaa primääristä",
+  "currentProblems": [
+    {
+      "type": "normalPeriodConflict",
+      "currentPeriod": "1991–2020",
+      "cachedWikipediaReference": "Deutscher Wetterdienst, Baseline climate means 1961–1990",
+      "evidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/nouakchott-A/Nouakchott.txt",
+      "cachedTableHeading": "Climate data for Nouakchott (Oumtounsy Airport) (1991–2020, extremes 1934–present)"
+    },
+    {
+      "type": "annualPrecipitationMismatch",
+      "currentMonthlySum": 113,
+      "declaredAnnual": 113
+    },
+    {
+      "type": "stationMismatch",
+      "currentNamedStation": "Nouakchott Oumtounsy Airport",
+      "currentCoords": [
+        18.09,
+        -15.98
+      ],
+      "oldAirportWMO": "61442",
+      "oldAirportJMA": [
+        18.1,
+        -15.95
+      ],
+      "OumtounsyArticleCoords": [
+        18.31,
+        -15.96972
+      ],
+      "note": "Pääkaupungin vanha asema ja vuodesta2016 käytetty Oumtounsy-lentoasema ovat eri paikoissa; kauden1991–2020 koko sarjaa ei voi pelkän otsikon perusteella osoittaa uudelle asemalle."
+    }
+  ],
+  "JMAPartialPrimary": {
+    "stationName": "NOUAKCHOTT",
+    "WMOStationID": "61442",
+    "country": "Mauritania",
+    "lat": 18.1,
+    "lon": -15.95,
+    "heightMetres": 2,
+    "period": "1991–2020",
+    "keskilampo": [
+      21.6,
+      23.3,
+      24.4,
+      24.6,
+      25.7,
+      26.9,
+      27.4,
+      28.7,
+      29.6,
+      29.2,
+      25.9,
+      22.9
+    ],
+    "sade": [
+      1.0,
+      0.1,
+      0.7,
+      0.0,
+      0.0,
+      3.6,
+      10.2,
+      46.4,
+      51.3,
+      7.9,
+      1.7,
+      8.8
+    ],
+    "annualPrecipitationSum": 131.7,
+    "ylin": null,
+    "alin": null,
+    "validatedValues": 24,
+    "requiredValues": 48,
+    "periodEvidenceURL": "https://ds.data.jma.go.jp/gmd/tcc/tcc/products/climate/climatview/outline.html",
+    "normalSource": {
+      "url": "https://ds.data.jma.go.jp/gmd/tcc/tcc/products/climate/climatview/graph_mkhtml_nrm.php?e=6&k=0&m=3&n=61442&r=1&s=3&y=2021",
+      "status": 200,
+      "sha256": "5219980802b1970a4b4c61fc71edb987953c0341e18a686d5ba99a62a96ebb02",
+      "bytes": 5439,
+      "robotsChecks": [
+        {
+          "agent": "Claude-User",
+          "allowed": true,
+          "rule": null
+        },
+        {
+          "agent": "Matkakirja-pilviajo/1.0 (https://github.com/ravelius/Matkakirja)",
+          "allowed": true,
+          "rule": null
+        }
+      ],
+      "text": "ClimatView / World Climate / TCC HOME > World Climate > ClimatView > chart/table(monthly normal) Monthly Normal --- chart/table ♦Search Form NOUAKCHOTT [MAURITANIA] NOUAKCHOTT -MAURITANIA Lat.: 18.10 °N / Lon.: 15.95°W Height: 2(m) ---- download in csv file Month Normal Mean Temp. degC Precip. mm 01 21.6 1.0 02 23.3 0.1 03 24.4 0.7 04 24.6 0.0 05 25.7 0.0 06 26.9 3.6 07 27.4 10.2 08 28.7 46.4 09 29.6 51.3 10 29.2 7.9 11 25.9 1.7 12 22.9 8.8"
+    },
+    "periodSource": {
+      "url": "https://ds.data.jma.go.jp/gmd/tcc/tcc/products/climate/climatview/outline.html",
+      "sha256": "7db6d671cc5a485f8de08020fbc22afbb7ced8fc3effe8a29b129e7ea6fd994a",
+      "bytes": 9250,
+      "status": 200,
+      "statement": "Statistics on climatological normals for monthly mean temperature and monthly total precipitation are based on the period 1991 - 2020."
+    }
+  },
+  "accessAndOtherSources": [
+    {
+      "publisher": "DWD",
+      "url": "https://www.dwd.de/DWD/klima/beratung/ak/ak_614420_kt.pdf",
+      "status": "Parent reported HTTP403; no retry/alternate/Wayback bypass attempted"
+    },
+    {
+      "publisher": "NOAA NCEI",
+      "url": "https://www.ncei.noaa.gov/products/wmo-climate-normals",
+      "status": "Public product page read, lists official station directories"
+    },
+    {
+      "publisher": "NOAA NCEI",
+      "url": "https://www.ncei.noaa.gov/data/normals-old/WMO/1961-1990/RA-I/FILE_ID1.TXT",
+      "status": "Publicly indexed list inspected; no Mauritania/Nouakchott station entry. After current robots check no scripted /data request."
+    },
+    {
+      "publisher": "NOAA NCEI",
+      "url": "https://www.ncei.noaa.gov/archive/accession/0253808/data/0-data/Region-1-WMO-Normals-9120/",
+      "status": "robots allowed initial /archive route, HTTP301; destination /data* is robots DISALLOW, not followed"
+    },
+    {
+      "publisher": "NOAA NCEI",
+      "url": "https://www.ncei.noaa.gov/data/oceans/archive/arc0216/0253808/2.2/data/0-data/Region-1-WMO-Normals-9120/",
+      "status": "robots DISALLOW /data* for both required user agents; request not made"
+    },
+    {
+      "publisher": "ONM Mauritania",
+      "url": "https://meteomauritanie.mr/services/climat/",
+      "status": "HTTP200 robots allowed; public service description provides data-request contact and monthly/seasonal bulletin links, no complete station normal48table"
+    }
+  ],
+  "noInterpolation": true,
+  "noArchiveBypass": true,
+  "noCityWrites": true
+}

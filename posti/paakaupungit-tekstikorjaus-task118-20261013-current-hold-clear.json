@@ -1,0 +1,194 @@
+{
+  "clearedAt": "2026-10-13T16:08:57.033758+00:00",
+  "roleAwareCurrentHoldOnly": true,
+  "gameIntegrationVerified": false,
+  "removals": [
+    {
+      "era": "e04",
+      "city": "monrovia",
+      "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
+      "currentCFile": "Liberia, Africa - panoramio (267).jpg",
+      "qaVerdict": "blocked",
+      "reason": "Nativekuva katsottu. Laaja oikea rannikon kaupunkiasettelu, hyvä laatu, ei luettavia kasvoja tai watermarkia. Oikeuseste rajataan keskialueen selvästi erottuvaan kupoli-/minareettirakennukseen ja oikean reunan läheiseen julkisivuun, ei jokaiseen kaukaiseen taustataloon. Näiden teosidentiteetti/tekijä/suojastatus puuttuvat. Valokuvan blk24ga/CC BY3.0 ja paikka ovat varmennettuja; LIPO-sivupykälät eivät tuota yleistä rakennuslupaa. Kyse ei ole todistetusta tekijänoikeussuojasta, vaan nimetyn selvityksen puutteesta.",
+      "qaPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/monrovia/qa.json",
+      "laterAcceptedAtSameSlot": 0,
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "kansikuvat",
+        0
+      ],
+      "removedMediaFields": {
+        "tiedosto": "Liberia, Africa - panoramio (267).jpg",
+        "lyhyt": "Monrovian kaupunki Atlantin rannalla vuonna 2013.",
+        "selite": "Monrovian laaja rantakaupunkimaisema vuoden 2013 kuvassa liittää keskustan Atlantin rannikkoon.",
+        "lahde": "blk24ga, Wikimedia Commons (CC BY 3.0)"
+      },
+      "beforeSHA256": "d7e0afd1749df5c4b9a681963196ec9602feaacd7f8d036fc58b79907a882834",
+      "afterSHA256": "411ed3e7851b39230d42c43d4db98ee42c2199ae61e2999af8bf70b07b36d7b5",
+      "originalFileAndSelectorsPreserved": true
+    },
+    {
+      "era": "e04",
+      "city": "monrovia",
+      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[0].kuva",
+      "currentCFile": "Cookies Town, Monrovia - kakata highway; Montserrado.jpg",
+      "qaVerdict": "rejected",
+      "reason": "Katsotussa kuvassa oikean alakulman päälle lisätty signeeraus/vesileima. CC BY-SA 4.0/tekijä ovat oikeat, mutta visuaalinen sääntö rikkoutuu. Hylkäys ei johdu pystyformaatista. Tarvitaan uusi vesileimaton ehdokas; vanha säilyy.",
+      "qaPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/monrovia/qa.json",
+      "laterAcceptedAtSameSlot": 0,
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "matkailijalle",
+        "artikkeli",
+        "jaksot",
+        0,
+        "kuva"
+      ],
+      "removedMediaFields": {
+        "tiedosto": "Cookies Town, Monrovia - kakata highway; Montserrado.jpg",
+        "lyhyt": "Cookies Town ja Monrovia–Kakata-tie vuonna 2020.",
+        "selite": "Cookies Town Monrovian ulkoreunalla ja Monrovia–Kakata-tie vuoden 2020 ilmakuvassa havainnollistavat alueen tieympäristöä.",
+        "lahde": "Bethel. Anthony Chisom, Wikimedia Commons (CC BY-SA 4.0)"
+      },
+      "beforeSHA256": "411ed3e7851b39230d42c43d4db98ee42c2199ae61e2999af8bf70b07b36d7b5",
+      "afterSHA256": "dad922aa0533b209b905b9c6d1d63b38dd984ff122eeabd7522996129a866999",
+      "originalFileAndSelectorsPreserved": true
+    },
+    {
+      "era": "e04",
+      "city": "monrovia",
+      "targetJsonPath": "$.nahtavyydet[\"Bushrod Island\"].kuvat[0]",
+      "currentCFile": "Bushrod Island, Monrovia, Liberia.JPG",
+      "qaVerdict": "blocked",
+      "reason": "Valokuvan päämotiivi on West Pointin etualan niemeke. Kaukaa näkyvä joentakainen kaupunkiranta ei yksin riitä Bushrod Island -kohteen yksiselitteiseksi identiteettinäytöksi, ja nykyinen kuvatekstikään ei nimeä sitä Bushrodiksi. Lähdecredit/lisenssi oikeat; paikka-identiteetti tarvitsee oman vahvistuksen tai suoremman Bushrod-kuvan. Ei hylkäystä pystyformaatista.",
+      "qaPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/monrovia/qa.json",
+      "laterAcceptedAtSameSlot": 0,
+      "targetTokens": [
+        "nahtavyydet",
+        "Bushrod Island",
+        "kuvat",
+        0
+      ],
+      "removedMediaFields": {
+        "tiedosto": "Bushrod Island, Monrovia, Liberia.JPG",
+        "lyhyt": "Mesuradon vesi ja Monrovian rantarakenne vuonna 2010.",
+        "selite": "West Pointin etuala, Mesuradon vesi ja joen takainen kaupunkiranta kuuluvat Monrovian vuoden 2010 näkymään.",
+        "lahde": "Rjruiziii, Wikimedia Commons (CC BY-SA 3.0)"
+      },
+      "beforeSHA256": "dad922aa0533b209b905b9c6d1d63b38dd984ff122eeabd7522996129a866999",
+      "afterSHA256": "c0cc7bb6876eaf9af08fbf817e74b76ef41308e8502f6e76626f2d9623d324a1",
+      "originalFileAndSelectorsPreserved": true
+    },
+    {
+      "era": "e04",
+      "city": "rabat",
+      "targetJsonPath": "$.kaupunkilehti[0].nostot[3]",
+      "currentCFile": "Rabat–Salé tramway in 2026.01.jpg",
+      "qaVerdict": "blocked",
+      "reason": "Valokuva esittää oikeaa raitiovaunua; luonnollinen operaattori-/mallimerkintä ei yksin ole hylkäysperuste. Vaunun näkyvän nykyisen graafisen teippauksen oma kaupallinen teosoikeuskerros ei ole kuvaajan CC0-luvasta varmennettu. Tarvitaan kyseisen grafiikan oikeusperuste tai toinen vaunukuva.",
+      "qaPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/rabat/qa.json",
+      "laterAcceptedAtSameSlot": 0,
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "nostot",
+        3
+      ],
+      "removedMediaFields": {
+        "otsikko": "Raitiovaunu vie joen yli",
+        "teksti": "Rabat–Salén raitiovaunun nimessä on kaksi kaupunkia, ja reitti myös yhdistää ne. Nykyinen verkko kulkee Bou Regreg -joen yli sekä Rabat-Villen rautatieaseman läheltä. Nivelletyt Alstom Citadis -vaunut kuuluvat 2000-luvulla aloittaneeseen järjestelmään. Rabatissa oli raitioliikennettä jo 1900-luvun alkupuolella, mutta nykyinen verkko on myöhempi hanke. Joen vastaranta liittyy siten Rabatin arkeen myös matkareittinä: Salén puolelle voi jatkaa samalla kaupunkiliikenteen järjestelmällä.",
+        "tiedosto": "Rabat–Salé tramway in 2026.01.jpg",
+        "lyhyt": "Rabat–Salén raitiovaunu yhdistää joen vastarannat.",
+        "selite": "Nykyinen Rabat–Salén raitiotie palvelee molempien kaupunkien aluetta ja kulkee Bou Regreg -joen yli.",
+        "lahde": "CAPTAIN RAJU, Wikimedia Commons (CC0)",
+        "wiki": "Rabat–Salé tramway"
+      },
+      "beforeSHA256": "e07fdef08b0cc22d4092789ce9208a52f7f7426ea16c782b92975902e3b6028f",
+      "afterSHA256": "d97e68e1679793ca5b9da887de7b975cd393e73406093b75af63e7dbc1b1389e",
+      "originalFileAndSelectorsPreserved": true
+    },
+    {
+      "era": "e04",
+      "city": "rabat",
+      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[0].kuva",
+      "currentCFile": "Rabat–Salé tramway in 2026.02.jpg",
+      "qaVerdict": "blocked",
+      "reason": "Aito raitiovaunu asemaympäristössä. Samantyyppinen graafinen teippaus kuin K4:ssä vaatii erillisen oikeusperusteen; ei automaattista hylkäystä tuote-/mallimerkinnän takia. Pylväs peittää vaunun keulaa, mutta tämä yksin ei ole hylkäysperuste.",
+      "qaPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/rabat/qa.json",
+      "laterAcceptedAtSameSlot": 0,
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "matkailijalle",
+        "artikkeli",
+        "jaksot",
+        0,
+        "kuva"
+      ],
+      "removedMediaFields": {
+        "tiedosto": "Rabat–Salé tramway in 2026.02.jpg",
+        "lyhyt": "Raitiovaunu kulkee myös Rabat-Villen aseman läheltä.",
+        "selite": "Rabat–Salén raitiotie liittää rautatieaseman ympäristön molempien kaupunkien kaupunkiliikenteeseen.",
+        "lahde": "CAPTAIN RAJU, Wikimedia Commons (CC0)"
+      },
+      "beforeSHA256": "d97e68e1679793ca5b9da887de7b975cd393e73406093b75af63e7dbc1b1389e",
+      "afterSHA256": "3175882aa7c4a94ffe7dab16f8c9b3a15102b62e72cb605cd76017c17aeda4cf",
+      "originalFileAndSelectorsPreserved": true
+    },
+    {
+      "era": "e06",
+      "city": "luanda",
+      "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[1]",
+      "currentCFile": "Panorama baixa Luanda.JPG",
+      "qaVerdict": "blocked",
+      "reason": "Baixan laaja aito kaupunkikuva katsottu. Oikeassa reunassa suuri nykyinen julkisivu ja keskellä tunnistettavaa monumentaalista rakennusmuotoa. Kuvaajan CC BY-SA3.0 on oikein, mutta Angolan Art51.1(c)-tekijä-/nimeämisehtoa ja kyseisten arkkitehtuuriteosten ketjua ei ole primäärinä osoitettu. Ei blanket-FOP eikä rakennusiästä arvausta; säilytä ehdokas tapauskohtaiseen oikeustukeen.",
+      "qaPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/luanda/qa.json",
+      "laterAcceptedAtSameSlot": 0,
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "kansikuvat",
+        1
+      ],
+      "removedMediaFields": {
+        "tiedosto": "Panorama baixa Luanda.JPG",
+        "lyhyt": "Baixa on Luandan alakaupunki sataman tuntumassa.",
+        "selite": "Baixa on Luandan sataman viereinen alakaupunki, johon kuuluu vanhaa katutilaa ja rakennuskantaa.",
+        "lahde": "Fabio Vanin, Wikimedia Commons (CC BY-SA 3.0)"
+      },
+      "beforeSHA256": "713361f972309ac2af456986900f69b6ef11bfa6a1bc4f0e184baf6d8933a73d",
+      "afterSHA256": "e8dc3399eab9fb4272aa8b557fac6cf2db19d7873b024de6089f02975895af2a",
+      "originalFileAndSelectorsPreserved": true
+    },
+    {
+      "era": "e06",
+      "city": "luanda",
+      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[2].kuva",
+      "currentCFile": "Luanda, Angola (Unsplash).jpg",
+      "qaVerdict": "blocked",
+      "reason": "Luandan rantaa ja kaukaisen henkilön täysin tummaa siluettia näyttävä CC0-valokuva katsottu, ei tunnistettavia kasvoja. Kuva on2017, eikä kuvasivu nimeä Ilha/Marginal-rannan tarkkaa paikkaa. Nykyinen O3 käsittelee näitä nimettyjä rannikkoalueita: tämän kuvan täsmällinen soveltuminen ja oppaan tuoreus jäävät avoimiksi. Ei hylkäystä PHOTO-tuoreusvaatimuksesta; kyse on opaskuvasta.",
+      "qaPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/luanda/qa.json",
+      "laterAcceptedAtSameSlot": 0,
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "matkailijalle",
+        "artikkeli",
+        "jaksot",
+        2,
+        "kuva"
+      ],
+      "removedMediaFields": {
+        "tiedosto": "Luanda, Angola (Unsplash).jpg",
+        "lyhyt": "Luanda sijaitsee Atlantin rannalla.",
+        "selite": "Luandan rannikkoympäristö kuuluu Atlantin äärelle kasvaneeseen satamakaupunkiin.",
+        "lahde": "Jesus Kiteque jesuskiteque, Wikimedia Commons (CC0)"
+      },
+      "beforeSHA256": "e8dc3399eab9fb4272aa8b557fac6cf2db19d7873b024de6089f02975895af2a",
+      "afterSHA256": "cdeeb23c95c9187fe66b072c06a1fc338b60969abf2ae067f2cc12644e0b83b7",
+      "originalFileAndSelectorsPreserved": true
+    }
+  ]
+}

@@ -1,0 +1,2481 @@
+{
+  "task": 118,
+  "audit": "read-only complete93 continuation",
+  "createdAt": "2026-10-13T16:19:01.637293+00:00",
+  "canonicalWrites": false,
+  "reviewedCount": 93,
+  "snapshotFiles": [
+    {
+      "era": "e04",
+      "city": "alger",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/alger/sisalto.json",
+      "sha256": "ac8fe8d1ef41455b8f2499167cffd37e20313674764e133ed34f1e3b0ea3971a"
+    },
+    {
+      "era": "e04",
+      "city": "banjul",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/banjul/sisalto.json",
+      "sha256": "75a54b170e0c5d3c96e0b1054699e54855cf3d62049c3e6df04aa04c3593d5ed"
+    },
+    {
+      "era": "e04",
+      "city": "bissau",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/bissau/sisalto.json",
+      "sha256": "b35c1ad1774daf1c28edf58059bf0ecfb0039c71596134e906e7c2c97f647c9b"
+    },
+    {
+      "era": "e04",
+      "city": "conakry",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/conakry/sisalto.json",
+      "sha256": "ce702cb124ad37b72be424dd208bda6c405c021ebac3354b1e3e4635649a1c83"
+    },
+    {
+      "era": "e04",
+      "city": "monrovia",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/monrovia/sisalto.json",
+      "sha256": "c0cc7bb6876eaf9af08fbf817e74b76ef41308e8502f6e76626f2d9623d324a1"
+    },
+    {
+      "era": "e04",
+      "city": "nouakchott",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/nouakchott/sisalto.json",
+      "sha256": "b2a3370c717f4fac5665ed0970415219ffa8a37643baaa15afb239eee59bf34a"
+    },
+    {
+      "era": "e04",
+      "city": "praia",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/praia/sisalto.json",
+      "sha256": "0fcf3afcb35c384a6b22c8e02572a4090792bc2e7caf743ef7806b04b300355a"
+    },
+    {
+      "era": "e04",
+      "city": "rabat",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/rabat/sisalto.json",
+      "sha256": "3175882aa7c4a94ffe7dab16f8c9b3a15102b62e72cb605cd76017c17aeda4cf"
+    },
+    {
+      "era": "e04",
+      "city": "tunis",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/tunis/sisalto.json",
+      "sha256": "bc4091031c23e8c7fdb6b529ae575936542283a921f1456635814a0a5013509d"
+    },
+    {
+      "era": "e05",
+      "city": "abuja",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/abuja/sisalto.json",
+      "sha256": "664ef9109f312526e3c34a2f5d329e1121eee1a3cd4956cba43ff3a9d4f29970"
+    },
+    {
+      "era": "e05",
+      "city": "accra",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/accra/sisalto.json",
+      "sha256": "29e5761ffe121c12186dab8c486056e3461161de5153aa264593381698370d1a"
+    },
+    {
+      "era": "e05",
+      "city": "bamako",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/bamako/sisalto.json",
+      "sha256": "89128d0109c59a9282f45217471f4774f83fc6c47eb70343ce0df9efac559323"
+    },
+    {
+      "era": "e05",
+      "city": "lome",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/lome/sisalto.json",
+      "sha256": "d38e2c7ea1ddf66d6840ce36be9542e4df2f53a8628b1819b58d1e87f1235827"
+    },
+    {
+      "era": "e05",
+      "city": "ndjamena",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/ndjamena/sisalto.json",
+      "sha256": "6db3773e9595fa4ea092748aaf31d593933a6eef2ea28e6f464c31f97818328e"
+    },
+    {
+      "era": "e05",
+      "city": "niamey",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/niamey/sisalto.json",
+      "sha256": "b985e23c6ab60afbf7d1afe413c3d348022171ec35f527308f80b73b3d5ffe74"
+    },
+    {
+      "era": "e05",
+      "city": "ouagadougou",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/ouagadougou/sisalto.json",
+      "sha256": "c56af9b1718ab3f7236454c030cefc91dc95d68ee8eace920cc7345f113cbda8"
+    },
+    {
+      "era": "e05",
+      "city": "portonovo",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/portonovo/sisalto.json",
+      "sha256": "27240310dcccc00f8dd885b870029e6bd24f0f2f84ffa9cf7714a3846fc7292a"
+    },
+    {
+      "era": "e05",
+      "city": "yamoussoukro",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/yamoussoukro/sisalto.json",
+      "sha256": "acb8eef0954ad2bbbc9c952985d4bd6441e8a323ede101667fb35c0fb09585f3"
+    },
+    {
+      "era": "e05",
+      "city": "yaounde",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/yaounde/sisalto.json",
+      "sha256": "0eac06489ecfcf172f4c0f3b9cd9612249b81a5ce29430a0ad9fa9c23c1a8f0c"
+    },
+    {
+      "era": "e06",
+      "city": "bangui",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/bangui/sisalto.json",
+      "sha256": "7e72bbd835979e2c194326f019bc707c8a55f9d091ad2f740a1f4c338d8283c5"
+    },
+    {
+      "era": "e06",
+      "city": "brazzaville",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/brazzaville/sisalto.json",
+      "sha256": "cbd047508d12d5e44e1e6a184d73d796d236b5f77598741fe937f95d58869aad"
+    },
+    {
+      "era": "e06",
+      "city": "ciudaddelapaz",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/ciudaddelapaz/sisalto.json",
+      "sha256": "c9a4dd024f9abdf32790bcfe4606f46605411d6601a85ced30419e71d790f0c9"
+    },
+    {
+      "era": "e06",
+      "city": "gitega",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/gitega/sisalto.json",
+      "sha256": "edbeecce1e2c90efbea7d5bfa333cb2b67166f3a8dc2bb491963d38990a2cb4d"
+    },
+    {
+      "era": "e06",
+      "city": "kigali",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/kigali/sisalto.json",
+      "sha256": "6a5badd6cc010d8799900a5ec970fe8457ec80e8161980d09415c81f0e53772d"
+    },
+    {
+      "era": "e06",
+      "city": "kinshasa",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/kinshasa/sisalto.json",
+      "sha256": "345a41c7badcd99b22d14246f1ca55cdf7b60ca99635f4628424f8273c40fd81"
+    },
+    {
+      "era": "e06",
+      "city": "libreville",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/libreville/sisalto.json",
+      "sha256": "c9df6771ce98e0308ecdb48406c6e66d16a1f81fb373081f9cd44cfeb3c07225"
+    },
+    {
+      "era": "e06",
+      "city": "luanda",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/luanda/sisalto.json",
+      "sha256": "cdeeb23c95c9187fe66b072c06a1fc338b60969abf2ae067f2cc12644e0b83b7"
+    },
+    {
+      "era": "e06",
+      "city": "saotome",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/saotome/sisalto.json",
+      "sha256": "fab84d8835dad7417243771e8c2e5d7361b74997d1e26250ba789a4bb07bd50e"
+    },
+    {
+      "era": "e07",
+      "city": "asmara",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/asmara/sisalto.json",
+      "sha256": "db81d815bf89239e0871e037639700d75548f369b115f8a9f5af603cb25c4690"
+    },
+    {
+      "era": "e07",
+      "city": "djibouti",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/djibouti/sisalto.json",
+      "sha256": "293ddc39ce3623e1875d0e0fffbabd77fc4d858f29760c2045e309a35d5c3911"
+    },
+    {
+      "era": "e07",
+      "city": "dodoma",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/dodoma/sisalto.json",
+      "sha256": "9946f64bf127568bd2ec990a2caa2679b152030158d1506b3abdc09ed0ff084e"
+    },
+    {
+      "era": "e07",
+      "city": "juba",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/juba/sisalto.json",
+      "sha256": "5a346551ec4b34e8cffdad1dd38160d798603633c92c278f0ef25085848bb2aa"
+    },
+    {
+      "era": "e07",
+      "city": "kampala",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/kampala/sisalto.json",
+      "sha256": "3b55da80adcdfc6b4b42c2b832e07459bd1ae4087d802fd442e9b858dca8fae0"
+    },
+    {
+      "era": "e07",
+      "city": "khartum",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/khartum/sisalto.json",
+      "sha256": "a7ba316a3c40449b049f7e5dbdce2746930eb6e8400ecb33af0c31ae12f66615"
+    },
+    {
+      "era": "e07",
+      "city": "lilongwe",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lilongwe/sisalto.json",
+      "sha256": "a71e8c7d569a3b4cb6d848c35c1159bc20159718a1c6ad245b54744179ee97ba"
+    },
+    {
+      "era": "e07",
+      "city": "lusaka",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lusaka/sisalto.json",
+      "sha256": "adb84071d9870a51896c248cf17c6c84685eb8b333446a26194665698902c732"
+    },
+    {
+      "era": "e07",
+      "city": "mogadishu",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/mogadishu/sisalto.json",
+      "sha256": "4346ec4f9ef96475ad48c911c60dfa382beebeed73eca7b9f850bbdb9946903f"
+    },
+    {
+      "era": "e08",
+      "city": "antananarivo",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/antananarivo/sisalto.json",
+      "sha256": "9f6e4a42a4c1bf17b635a090122cd8dad52e523b4381d3da887add80ccee287f"
+    },
+    {
+      "era": "e08",
+      "city": "gaborone",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/gaborone/sisalto.json",
+      "sha256": "04845ed6c138bfb44cccb188c65102e2dd060c12b8bbdeed35af8a5f3938d6ed"
+    },
+    {
+      "era": "e08",
+      "city": "harare",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/harare/sisalto.json",
+      "sha256": "c9b46eb02d9e0bed38b8269728c3a4b52b3de965572daa4bfed43722ea0c6287"
+    },
+    {
+      "era": "e08",
+      "city": "maputo",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/maputo/sisalto.json",
+      "sha256": "dd1b44b9f48ddf8f703cec086a01cb22950b5f82dc9ab42c09af456f68f58a83"
+    },
+    {
+      "era": "e08",
+      "city": "maseru",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/maseru/sisalto.json",
+      "sha256": "8804590bb842a7e676fe16419d220f9fa761465583d69d319938b564ace56074"
+    },
+    {
+      "era": "e08",
+      "city": "mbabane",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/mbabane/sisalto.json",
+      "sha256": "643c0fac087c719eac8d936ad359bc393138769c70453ea76d212f1f804fefef"
+    },
+    {
+      "era": "e08",
+      "city": "moroni",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/moroni/sisalto.json",
+      "sha256": "5cce35c38c44314b88f936253db554f7af63f9e7097a473938da27bdfd26f192"
+    },
+    {
+      "era": "e08",
+      "city": "portlouis",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/portlouis/sisalto.json",
+      "sha256": "2218f3a790669dc5bb8afd050f5377a1f442d8109bd87094f2666dd2119a42e8"
+    },
+    {
+      "era": "e08",
+      "city": "victoria",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/victoria/sisalto.json",
+      "sha256": "14ba341c2a98f447610cb2ff6f578409cf7cd6b4f0ad32c62436c8cca3304bf4"
+    },
+    {
+      "era": "e08",
+      "city": "windhoek",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/windhoek/sisalto.json",
+      "sha256": "7e91e4fba1a8a1eee31b4c0e573fcebfd23d205cb1628e1b906782b37c80b78b"
+    },
+    {
+      "era": "e09",
+      "city": "asgabat",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/asgabat/sisalto.json",
+      "sha256": "3455f6150af2ce50fbc9130e4f21c40a37b351cff0a1903e4c5fc64b977fca2c"
+    },
+    {
+      "era": "e09",
+      "city": "biskek",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/biskek/sisalto.json",
+      "sha256": "22440a8ac34bdbff5316af1a1830c4924f56c174b94d39e8d27d0b4270d6cd82"
+    },
+    {
+      "era": "e09",
+      "city": "dhaka",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/dhaka/sisalto.json",
+      "sha256": "5602aaeffd28e7738e1729cb5e81122cebc640755d31d28b3fae243ab043be13"
+    },
+    {
+      "era": "e09",
+      "city": "dusanbe",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/dusanbe/sisalto.json",
+      "sha256": "18dce38e942113d135101226db7160b1a3a7ed3d8694d6749fd52eb63beeb869"
+    },
+    {
+      "era": "e09",
+      "city": "islamabad",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/islamabad/sisalto.json",
+      "sha256": "1752eb29341ed1d11b13b9a3c234ecbe6eb229e32fe8eb8e3d6c720adff9b8e4"
+    },
+    {
+      "era": "e09",
+      "city": "taskent",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/taskent/sisalto.json",
+      "sha256": "0825a8c2f7cf4f5774bcfa48d00606c643aa79a202d59b685cdcfd160e0b812b"
+    },
+    {
+      "era": "e09",
+      "city": "thimphu",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/thimphu/sisalto.json",
+      "sha256": "d853ac6cd09bc5ac75dfa604c7ea94128240a9380ec2eba869265f84c38a8268"
+    },
+    {
+      "era": "e10",
+      "city": "bandarseribegawan",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/bandarseribegawan/sisalto.json",
+      "sha256": "9880da3931ff68f11885c17c992c70b8948d499b2de6920f1f7943edae6e8b1e"
+    },
+    {
+      "era": "e10",
+      "city": "kualalumpur",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/kualalumpur/sisalto.json",
+      "sha256": "cf5602189c012de590acbd54d2a8319f49a24655f6648dba2858a4f5dbe5f9bb"
+    },
+    {
+      "era": "e10",
+      "city": "male",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/male/sisalto.json",
+      "sha256": "ad17b5b3c6f84db5640ba55b35fb7a13889fd9f62b388d52ae19b29e4f8fb712"
+    },
+    {
+      "era": "e10",
+      "city": "naypyidaw",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/naypyidaw/sisalto.json",
+      "sha256": "a059f2eb68bb70c2baa07177e943a009e084bd0a3c92062b7787a226dc669d8f"
+    },
+    {
+      "era": "e10",
+      "city": "phnompenh",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/phnompenh/sisalto.json",
+      "sha256": "197d94dcf0ee3ee1786bc36d29a4e1c3f48567fe86adf78fa2f48a8873a1cc65"
+    },
+    {
+      "era": "e10",
+      "city": "pjongjang",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/pjongjang/sisalto.json",
+      "sha256": "9bcc937be30819365f0d55c1eec1204cb56c4ea880a7849d9229b994ee9f49fe"
+    },
+    {
+      "era": "e10",
+      "city": "vientiane",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/vientiane/sisalto.json",
+      "sha256": "ea0d9dac107a58c9ce0c4b4374c2a3427202c2c630354226258d73a5e55e75ed"
+    },
+    {
+      "era": "e11",
+      "city": "belmopan",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/belmopan/sisalto.json",
+      "sha256": "a4d2a55699443c149d77a0adb3818898bf35118e9497908f7886f82ceff82ae4"
+    },
+    {
+      "era": "e11",
+      "city": "kingston",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/kingston/sisalto.json",
+      "sha256": "747d00cfe7208b21ba14a6cf83e690f2f696bb7aa70b844e6902ee68d22ac031"
+    },
+    {
+      "era": "e11",
+      "city": "ottawa",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/ottawa/sisalto.json",
+      "sha256": "b801f2cd32b53a99ea02f9202da6a408da352b738b55a91fab08407b7148886d"
+    },
+    {
+      "era": "e11",
+      "city": "portauprince",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/portauprince/sisalto.json",
+      "sha256": "736482cc94a62ddd7502ae74d9cf7091413e133ec8b00abe05885774889099b0"
+    },
+    {
+      "era": "e11",
+      "city": "sanjose",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/sanjose/sisalto.json",
+      "sha256": "012a802fa7b8bdc52c0561dd96bd4421c63e5ecb46a40384ea3943647be99e7a"
+    },
+    {
+      "era": "e11",
+      "city": "sansalvador",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/sansalvador/sisalto.json",
+      "sha256": "a666562e1092b6f31d4c1dd6d4515e738e19c5d8fdc9b4fe113ae1d94d40e936"
+    },
+    {
+      "era": "e11",
+      "city": "santodomingo",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/santodomingo/sisalto.json",
+      "sha256": "950ca199610edf5b7226c2a7c527451961904983a33921ee4208e0292d62c0dd"
+    },
+    {
+      "era": "e11",
+      "city": "tegucigalpa",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/tegucigalpa/sisalto.json",
+      "sha256": "67910bb401d50f31138c3470b19c1984f64721d150c6db8bd639658f5020e88e"
+    },
+    {
+      "era": "e11",
+      "city": "washington",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/washington/sisalto.json",
+      "sha256": "12bf73df5a769f3806a71b2cc6b49aac7676ef169f8dbfb4e84666429dbeab7c"
+    },
+    {
+      "era": "e12",
+      "city": "basseterre",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/basseterre/sisalto.json",
+      "sha256": "d3efa7e6663a9aa74f34965e01ec3caa915a13a32d91ab15b61b2f375d3f4b10"
+    },
+    {
+      "era": "e12",
+      "city": "bridgetown",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/bridgetown/sisalto.json",
+      "sha256": "577cf24beaaebe927378b911cbb3a023e3ce46193235f7011828e34046fc6fa0"
+    },
+    {
+      "era": "e12",
+      "city": "castries",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/castries/sisalto.json",
+      "sha256": "629c56a144c8197877b6fc40643ce7929c6bd143cf8d71d480451d9883363917"
+    },
+    {
+      "era": "e12",
+      "city": "kingstown",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/kingstown/sisalto.json",
+      "sha256": "95c17f396512a50ede234c47eb61a53416b8a625301ed3a20f51c474801bc9ed"
+    },
+    {
+      "era": "e12",
+      "city": "nassau",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/nassau/sisalto.json",
+      "sha256": "1d079f6220a140006aa16abfc203f04340a5db084add729084bb74f12087b590"
+    },
+    {
+      "era": "e12",
+      "city": "portofspain",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/portofspain/sisalto.json",
+      "sha256": "c66b2a1545944a71f07072c0385d9db2bdaa46fefb96fa2413c2bd486c85b9cb"
+    },
+    {
+      "era": "e12",
+      "city": "roseau",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/roseau/sisalto.json",
+      "sha256": "ad8e18b0a43319854d2959ef4f88bb7ee3b2902a217e716d59482c3b6c59d6bd"
+    },
+    {
+      "era": "e12",
+      "city": "saintjohns",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/saintjohns/sisalto.json",
+      "sha256": "78f3cad311f86ec2da935449a89fae03b96a6b13a2ae5d2f0e7d529c249aefec"
+    },
+    {
+      "era": "e12",
+      "city": "stgeorges",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/stgeorges/sisalto.json",
+      "sha256": "14dce1a0b0d13e3ce8dbda5e8478846ac9cee81e5b56e5b94941c71b221bad4b"
+    },
+    {
+      "era": "e13",
+      "city": "brasilia",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e13/paakaupungit-pilvi/e13/brasilia/sisalto.json",
+      "sha256": "985f1fceff8d4878563852e38deb9848c871ba264a71282d71dec76bcf1dfa70"
+    },
+    {
+      "era": "e13",
+      "city": "georgetown",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e13/paakaupungit-pilvi/e13/georgetown/sisalto.json",
+      "sha256": "6a78ea0ff59a8bdbffb720f91592da7004c4ca3028e8c1c9eeaaa6e582374b3c"
+    },
+    {
+      "era": "e13",
+      "city": "lapaz",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e13/paakaupungit-pilvi/e13/lapaz/sisalto.json",
+      "sha256": "c0291d6ce562eb6e78c098a7146377b17bbcc93ae65b83710007782aa14f83d9"
+    },
+    {
+      "era": "e13",
+      "city": "paramaribo",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e13/paakaupungit-pilvi/e13/paramaribo/sisalto.json",
+      "sha256": "3e558910b8b374265c316a1b062cacd6ebd8d0ae5be564e5a9d95a87fa6acf92"
+    },
+    {
+      "era": "e13",
+      "city": "santiagodechile",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e13/paakaupungit-pilvi/e13/santiagodechile/sisalto.json",
+      "sha256": "e868de7b42e39dca45579b2408bf326aef191c1ac6ed8cc4910ff7b39ac52234"
+    },
+    {
+      "era": "e14",
+      "city": "apia",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/apia/sisalto.json",
+      "sha256": "309388861926d27d4bffdf3a5b53bf0d5ec517a5c5e00d7e19e45f9ad8a7de40"
+    },
+    {
+      "era": "e14",
+      "city": "canberra",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/canberra/sisalto.json",
+      "sha256": "0e8b6e7164cc877985bed3cbfb2c44459111da52ec8038318ca5b3c4cc5e831e"
+    },
+    {
+      "era": "e14",
+      "city": "funafuti",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/funafuti/sisalto.json",
+      "sha256": "ff073d5474ede844f07b7ed87adc0077d4319a61534f0da250680c56a2e810ac"
+    },
+    {
+      "era": "e14",
+      "city": "majuro",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/majuro/sisalto.json",
+      "sha256": "ed5d9cd5e95948ab11f4f32c8e324ac9d39d74ec3af033dd09b90cbcf53b81e9"
+    },
+    {
+      "era": "e14",
+      "city": "ngerulmud",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/ngerulmud/sisalto.json",
+      "sha256": "d54f79f028f57d0b9cf1ce4aab55a4ad506700605f2ec9f9aa80c24808d16101"
+    },
+    {
+      "era": "e14",
+      "city": "nukualofa",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/nukualofa/sisalto.json",
+      "sha256": "2233601695187dffd2906f6dc2d9c6db9da360c8a1702865ded11753dc299e6b"
+    },
+    {
+      "era": "e14",
+      "city": "palikir",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/palikir/sisalto.json",
+      "sha256": "fd0aba51549c674a69742625b68a7db9da9f1c19422adfacf6649671d2190921"
+    },
+    {
+      "era": "e14",
+      "city": "southtarawa",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/southtarawa/sisalto.json",
+      "sha256": "6605c03ef9f4f50d43ad58c3611c79d39075ec317b59d8e196bb1b556ce2bcca"
+    },
+    {
+      "era": "e14",
+      "city": "yaren",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/yaren/sisalto.json",
+      "sha256": "ec8f1985f77c4c9b6debac09d048f03bf33f1829dd9e4b34f5576a0f72877a3d"
+    }
+  ],
+  "findings": [
+    {
+      "era": "e09",
+      "city": "biskek",
+      "sourcePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/biskek/sisalto.json",
+      "tokens": [
+        "kysymykset",
+        3,
+        "hint"
+      ],
+      "jsonPath": "$[\"kysymykset\"][3][\"hint\"]",
+      "type": "Finnish grammar",
+      "severity": "correction",
+      "old": "Sämpylä muistuttaa tutulta, mutta täyte seuraa toista katuruokaa.",
+      "recommendation": "Sämpylä näyttää tutulta, mutta täyte seuraa toista katuruokaa.",
+      "reason": "Muistuttaa requires an object, not tutulta.",
+      "snapshotSHA256": "190cb0e64bfda64ba4e71557b61b9b8e83103c459f9783465e966fa4259bb3e8",
+      "stillPresentAtFollowupRead": false,
+      "current": "Sämpylä näyttää tutulta, mutta täyte seuraa toista katuruokaa.",
+      "resolution": "resolved by current field change"
+    },
+    {
+      "era": "e08",
+      "city": "harare",
+      "sourcePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/harare/sisalto.json",
+      "tokens": [
+        "kaupunkilehti",
+        0,
+        "matkailijalle",
+        "artikkeli",
+        "nosto"
+      ],
+      "jsonPath": "$[\"kaupunkilehti\"][0][\"matkailijalle\"][\"artikkeli\"][\"nosto\"]",
+      "type": "duplicate safety warning",
+      "severity": "correction",
+      "old": "Noudata erityistä varovaisuutta ja järjestä liikkuminen luotettavasti; luontokohteet ovat eri paikkoja kuin ydinkeskustan puistot.",
+      "recommendation": "Kopje ja Mbare Musika näyttävät kaupungin eri puolia. Kasvitieteellisen puutarhan rinnalla kansallinen herbaario säilyttää kasvinäytteitä.",
+      "reason": "Nosto repeats a safety warning already consolidated in matkailu.hyvaTietaa[0].",
+      "snapshotSHA256": "93653af328fb40ff8c28db2a49d0a75661466e2b4f0fac7b38702350003049b3",
+      "stillPresentAtFollowupRead": false,
+      "current": "Kopje ja Mbare Musika näyttävät kaupungin eri puolia. Kasvitieteellisen puutarhan rinnalla kansallinen herbaario säilyttää kasvinäytteitä.",
+      "resolution": "resolved by current field change"
+    },
+    {
+      "era": "e08",
+      "city": "portlouis",
+      "sourcePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/portlouis/sisalto.json",
+      "tokens": [
+        "kaupunkilehti",
+        1,
+        "tehtava",
+        "vaihtoehdot"
+      ],
+      "jsonPath": "$[\"kaupunkilehti\"][1][\"tehtava\"][\"vaihtoehdot\"]",
+      "type": "implausible quiz distractors",
+      "severity": "correction",
+      "old": [
+        "Nuotit ja äänitallenteet",
+        "Kilpailujen satulat",
+        "Sataman nosturikoneet",
+        "Torin myyntipöydät"
+      ],
+      "recommendation": [
+        "Nuotit ja äänitallenteet",
+        "Kasvinäytteet ja siemenpankki",
+        "Kivinäytteet ja mineraalit",
+        "Kolikot ja kaivauslöydöt"
+      ],
+      "reason": "Saddles, port cranes and market tables are absurd library-collection alternatives; general rule remains unmet.",
+      "snapshotSHA256": "a2772051a7dcbc8bc05b2d8d43ee2186954b3815258271a7eca4ab4bf51a75e2",
+      "stillPresentAtFollowupRead": false,
+      "current": [
+        "Nuotit ja äänitallenteet",
+        "Kasvinäytteet ja siemenpankki",
+        "Kivinäytteet ja mineraalit",
+        "Kolikot ja kaivauslöydöt"
+      ],
+      "resolution": "resolved by current field change"
+    },
+    {
+      "era": "e04",
+      "city": "nouakchott",
+      "sourcePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/nouakchott/sisalto.json",
+      "tokens": [
+        "nahtavyydet",
+        "Marché Capitale",
+        "teksti"
+      ],
+      "jsonPath": "$[\"nahtavyydet\"][\"Marché Capitale\"][\"teksti\"]",
+      "type": "production meta",
+      "severity": "correction",
+      "old": "Marché Capitale on Nouakchottin keskustan markkinapaikka Ould Abas -moskeijan luoteispuolella. Kauppaa käydään rakennuksissa ja niiden ympärillä. Markkinan tarjontaan on kuvattu ruokatavaroita, kankaita, koruja ja kodin käyttöesineitä.\n\nTorin yhteydessä toimii myös ompelijoita ja muita käsityöläisiä. Vaatteiden joukossa tunnetaan Mauritanian miesten väljä derra’a-asu. Marché Capitale on eri paikka kuin Marocaine-tori ja kaupungin eteläisempi Cinquième-markkina-alue. Toritoiminta kuuluu nykyisen pääkaupungin kauppa-arkeen; sen perustamisajasta ei ole varmennettua tietoa vuoden 1873 kehykseen.",
+      "recommendation": "Remove only the final clause: “; sen perustamisajasta ei ole varmennettua tietoa vuoden 1873 kehykseen”. End sentence “Toritoiminta kuuluu nykyisen pääkaupungin kauppa-arkeen.”",
+      "reason": "Explicit commentary about unverified 1873 framework is writing-process talk; keep documented current market facts.",
+      "snapshotSHA256": "acfd2db72987eb49e792832a137740832f005c905419f5f4135cc2477a792ddd",
+      "stillPresentAtFollowupRead": false,
+      "current": "Marché Capitale on Nouakchottin keskustan markkinapaikka Ould Abas -moskeijan luoteispuolella. Kauppaa käydään rakennuksissa ja niiden ympärillä. Markkinan tarjontaan on kuvattu ruokatavaroita, kankaita, koruja ja kodin käyttöesineitä.\n\nTorin yhteydessä toimii myös ompelijoita ja muita käsityöläisiä. Vaatteiden joukossa tunnetaan Mauritanian miesten väljä derra’a-asu. Marché Capitale on eri paikka kuin Marocaine-tori ja kaupungin eteläisempi Cinquième-markkina-alue. Toritoiminta kuuluu nykyisen pääkaupungin kauppa-arkeen.",
+      "resolution": "resolved by current field change"
+    },
+    {
+      "era": "e04",
+      "city": "nouakchott",
+      "sourcePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/nouakchott/sisalto.json",
+      "tokens": [
+        "nahtavyydet",
+        "Kalastajaranta",
+        "teksti"
+      ],
+      "jsonPath": "$[\"nahtavyydet\"][\"Kalastajaranta\"][\"teksti\"]",
+      "type": "production meta",
+      "severity": "correction",
+      "old": "Nouakchottin kalastajaranta sijaitsee kaupungin länsipuolella Atlantin äärellä. Pienveneiden saalis tuodaan tänne myyntiin ja jatkokuljetukseen. Puuveneitä vedetään rannalle, ja työntekijät käsittelevät niiden tuomaa kalaa. Alueella toimivat jälleenmyyjät ja kalanperkaajat; osa tuotteista kulkee myös käsittelyyn, pakkaamiseen ja vientiin.\n\nPaikka tunnetaan nimellä Port de Pêche, mutta se ei ole sama satama kuin kaupungin teollinen Friendship Port. Markkina-alueen tarkkaa perustamisaikaa ei tunneta. Vuonna 1873 paikalla oli nykyistä pääkaupunkia edeltävää rannikon asutusta, mutta tämän päivän venejonoa tai markkinarakenteita ei voi siirtää siihen aikaan. Ranta on toimiva työalue, jonka kävijä kohtaa työn ehdoilla.",
+      "recommendation": "Replace second paragraph with: “Port de Pêche on pienveneiden kalastajaranta, erillään tavaralaivojen Friendship Port -satamasta. Veneiden saaliin ympärille on muodostunut kalakaupan ja käsittelyn työalue.”",
+      "reason": "The wording “ei voi siirtää siihen aikaan” instructs writers about anachronism instead of telling the player a local fact.",
+      "snapshotSHA256": "acfd2db72987eb49e792832a137740832f005c905419f5f4135cc2477a792ddd",
+      "stillPresentAtFollowupRead": false,
+      "current": "Nouakchottin kalastajaranta sijaitsee kaupungin länsipuolella Atlantin äärellä. Pienveneiden saalis tuodaan tänne myyntiin ja jatkokuljetukseen. Puuveneitä vedetään rannalle, ja työntekijät käsittelevät niiden tuomaa kalaa. Alueella toimivat jälleenmyyjät ja kalanperkaajat; osa tuotteista kulkee myös käsittelyyn, pakkaamiseen ja vientiin.\n\nPort de Pêche on pienveneiden kalastajaranta, erillään tavaralaivojen Friendship Port -satamasta. Veneiden saaliin ympärille on muodostunut kalakaupan ja käsittelyn työalue. Kala siirtyy rannasta kaupungin myyntipaikkoihin tai vientiä varten käsiteltäväksi ja pakattavaksi.",
+      "resolution": "resolved by current field change"
+    },
+    {
+      "era": "e04",
+      "city": "nouakchott",
+      "sourcePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/nouakchott/sisalto.json",
+      "tokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        0,
+        "wiki"
+      ],
+      "jsonPath": "$[\"kaupunkilehti\"][1][\"nostot\"][0][\"wiki\"]",
+      "type": "source does not support detail",
+      "severity": "correction",
+      "old": "Nouakchott",
+      "recommendation": "Remove wiki=Nouakchott; bind explicit textual source to https://www.fao.org/4/i1488e/i1488e.pdf (chapters 2–4), plus greenbelt project source N14 as applicable. Preserve existing image credit separately.",
+      "reason": "Named Wikipedia Nouakchott source omits Nitraria, porous fences, saltation and detailed project care. Actual evidence is FAO sources N14/N15 in faktapohja and fao-manual.txt.",
+      "snapshotSHA256": "acfd2db72987eb49e792832a137740832f005c905419f5f4135cc2477a792ddd",
+      "stillPresentAtFollowupRead": false,
+      "current": "<field removed>",
+      "resolution": "resolved by current field change"
+    },
+    {
+      "era": "e04",
+      "city": "nouakchott",
+      "sourcePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/nouakchott/sisalto.json",
+      "tokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        1,
+        "wiki"
+      ],
+      "jsonPath": "$[\"kaupunkilehti\"][1][\"nostot\"][1][\"wiki\"]",
+      "type": "source does not support detail",
+      "severity": "correction",
+      "old": "Nouakchott",
+      "recommendation": "Remove wiki=Nouakchott; bind explicit textual source to https://www.fao.org/4/i1488e/i1488e.pdf (chapters 2–4), plus greenbelt project source N14 as applicable. Preserve existing image credit separately.",
+      "reason": "Named Wikipedia Nouakchott source omits Nitraria, porous fences, saltation and detailed project care. Actual evidence is FAO sources N14/N15 in faktapohja and fao-manual.txt.",
+      "snapshotSHA256": "acfd2db72987eb49e792832a137740832f005c905419f5f4135cc2477a792ddd",
+      "stillPresentAtFollowupRead": false,
+      "current": "<field removed>",
+      "resolution": "resolved by current field change"
+    },
+    {
+      "era": "e04",
+      "city": "nouakchott",
+      "sourcePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/nouakchott/sisalto.json",
+      "tokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        2,
+        "wiki"
+      ],
+      "jsonPath": "$[\"kaupunkilehti\"][1][\"nostot\"][2][\"wiki\"]",
+      "type": "source does not support detail",
+      "severity": "correction",
+      "old": "Nouakchott",
+      "recommendation": "Remove wiki=Nouakchott; bind explicit textual source to https://www.fao.org/4/i1488e/i1488e.pdf (chapters 2–4), plus greenbelt project source N14 as applicable. Preserve existing image credit separately.",
+      "reason": "Named Wikipedia Nouakchott source omits Nitraria, porous fences, saltation and detailed project care. Actual evidence is FAO sources N14/N15 in faktapohja and fao-manual.txt.",
+      "snapshotSHA256": "acfd2db72987eb49e792832a137740832f005c905419f5f4135cc2477a792ddd",
+      "stillPresentAtFollowupRead": false,
+      "current": "<field removed>",
+      "resolution": "resolved by current field change"
+    },
+    {
+      "era": "e04",
+      "city": "nouakchott",
+      "sourcePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/nouakchott/sisalto.json",
+      "tokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        3,
+        "wiki"
+      ],
+      "jsonPath": "$[\"kaupunkilehti\"][1][\"nostot\"][3][\"wiki\"]",
+      "type": "source does not support detail",
+      "severity": "correction",
+      "old": "Nouakchott",
+      "recommendation": "Remove wiki=Nouakchott; bind explicit textual source to https://www.fao.org/4/i1488e/i1488e.pdf (chapters 2–4), plus greenbelt project source N14 as applicable. Preserve existing image credit separately.",
+      "reason": "Named Wikipedia Nouakchott source omits Nitraria, porous fences, saltation and detailed project care. Actual evidence is FAO sources N14/N15 in faktapohja and fao-manual.txt.",
+      "snapshotSHA256": "acfd2db72987eb49e792832a137740832f005c905419f5f4135cc2477a792ddd",
+      "stillPresentAtFollowupRead": false,
+      "current": "<field removed>",
+      "resolution": "resolved by current field change"
+    },
+    {
+      "era": "e05",
+      "city": "abuja",
+      "sourcePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/abuja/sisalto.json",
+      "tokens": [
+        "kysymykset",
+        3,
+        "hint"
+      ],
+      "jsonPath": "$[\"kysymykset\"][3][\"hint\"]",
+      "type": "answer-revealing hint",
+      "severity": "correction",
+      "old": "Vesialue syntyi padon yhteyteen.",
+      "recommendation": "Järvi sijaitsee Jabin kaupunginosassa.",
+      "reason": "A water body formed at a dam directly identifies Tekojärvi among lagoon/mountain lake/salt lake.",
+      "snapshotSHA256": "07e0430d53be5b013bd8239e613775d2ba625b10ca7e8122cefcbc12857964a3",
+      "stillPresentAtFollowupRead": false,
+      "current": "Järvi sijaitsee Jabin kaupunginosassa.",
+      "resolution": "resolved by current field change"
+    },
+    {
+      "era": "e05",
+      "city": "niamey",
+      "sourcePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/niamey/sisalto.json",
+      "tokens": [
+        "kysymykset",
+        1,
+        "hint"
+      ],
+      "jsonPath": "$[\"kysymykset\"][1][\"hint\"]",
+      "type": "answer-revealing hint",
+      "severity": "correction",
+      "old": "Sama nimi kuuluu myös kaupungin kotimaalle.",
+      "recommendation": "Kaupungin pohjoinen ja etelä yhdistyvät joen ylittävillä silloilla.",
+      "reason": "The city country is Niger and the clue explicitly gives the same name, revealing the answer.",
+      "snapshotSHA256": "eda8d74b9e809bb34616c7e7bf1c2903428481814932b048f8d3860698031b39",
+      "stillPresentAtFollowupRead": false,
+      "current": "Kaupunkialue jatkuu joen molemmilla rannoilla.",
+      "resolution": "resolved by current field change"
+    },
+    {
+      "era": "e12",
+      "city": "basseterre",
+      "sourcePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/basseterre/sisalto.json",
+      "tokens": [
+        "kysymykset",
+        4,
+        "hint"
+      ],
+      "jsonPath": "$[\"kysymykset\"][4][\"hint\"]",
+      "type": "answer-revealing hint",
+      "severity": "correction",
+      "old": "Maamerkin suunnitelma tuli Skotlannista.",
+      "recommendation": "Muistomerkin valmistaja oli George Smith and Co.",
+      "reason": "Glasgow is the only Scottish city among Glasgow/Liverpool/Birmingham/Manchester; the hint uniquely identifies it.",
+      "snapshotSHA256": "718b4cab9809798e492196bbd73b9b47d544228ea81ddb55f067d4d668ff235b",
+      "stillPresentAtFollowupRead": false,
+      "current": "Maamerkin suunnitelma tuli Skotlannista.",
+      "resolution": "resolved semantically by all-Scottish distractors",
+      "currentQuestion": {
+        "q": "Missä kaupungissa Berkeley Memorialin suunnittelijayritys George Smith and Co. toimi?",
+        "options": [
+          "Glasgowssa",
+          "Edinburghissa",
+          "Dundeessa",
+          "Aberdeenissa"
+        ],
+        "correct": 0,
+        "level": 3,
+        "hint": "Maamerkin suunnitelma tuli Skotlannista.",
+        "fact": "George Smith and Co. Glasgowsta suunnitteli kellon ja juomavesisuihkulähteen yhdistävän Berkeley Memorialin.",
+        "source": "https://en.wikipedia.org/wiki/Berkeley_Memorial"
+      }
+    },
+    {
+      "era": "e11",
+      "city": "ottawa",
+      "sourcePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/ottawa/sisalto.json",
+      "tokens": [
+        "kaupunkilehti",
+        1,
+        "tehtava"
+      ],
+      "jsonPath": "$[\"kaupunkilehti\"][1][\"tehtava\"]",
+      "type": "implausible quiz distractors",
+      "severity": "correction",
+      "old": {
+        "kysymys": "Mitä arboretumin puukokoelman avulla arvioidaan?",
+        "vaihtoehdot": [
+          "Kasvien kestävyyttä",
+          "Jokien virtausnopeutta",
+          "Peltojen omistushistoriaa",
+          "Kaupunkiliikenteen määrää"
+        ],
+        "oikea": 0,
+        "fakta": "Puistossa kasvavia puita ja pensaita käytetään tutkimaan, miten ne menestyvät paikallisissa oloissa."
+      },
+      "recommendation": "Keep hardiness fact; use q “Mitä tarkoitusta varten Dominion Arboretum perustettiin?” with choices “Selvittämään puiden ja pensaiden menestymistä Ottawan ilmastossa / Tuottamaan istutustaimia kaupallisesti muille provinsseille / Kokoamaan puulajikkeita hedelmänjalostusta varten / Säilyttämään Kanadan vanhimpia alkuperäisiä metsiköitä”. Recheck exact source before final wording.",
+      "reason": "The question concerns tree-collection assessment but alternatives ask river flow, land ownership or traffic counts.",
+      "snapshotSHA256": "b35c70c226996285293afa6bfd962909443c19c6747b385c756b6ac2e29af3f6",
+      "stillPresentAtFollowupRead": false,
+      "current": {
+        "kysymys": "Mitä arboretumin puukokoelman avulla arvioidaan?",
+        "vaihtoehdot": [
+          "Kasvien paikallista kestävyyttä",
+          "Taimien kaupallista tuotantoa",
+          "Hedelmäkasvien jalostusta",
+          "Alkuperäisten metsiköiden suojelua"
+        ],
+        "oikea": 0,
+        "fakta": "Puistossa kasvavia puita ja pensaita käytetään tutkimaan, miten ne menestyvät paikallisissa oloissa."
+      },
+      "resolution": "resolved by current field change"
+    },
+    {
+      "era": "e05",
+      "city": "ndjamena",
+      "sourcePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/ndjamena/sisalto.json",
+      "tokens": [
+        "kaupunkilehti",
+        0,
+        "matkailijalle",
+        "kappale"
+      ],
+      "jsonPath": "$[\"kaupunkilehti\"][0][\"matkailijalle\"][\"kappale\"]",
+      "type": "missing sentence space",
+      "severity": "correction",
+      "old": "N’Djamenan jokimaisema ja markkinat kuuluvat kaupungin arkeen. Kansallismuseon aiheissa on myös esihistoriaa ja fossiililöytöjä.Museon pääsy, yhteydet ja mahdolliset vierailut selvitetään ajantasaisesti.",
+      "recommendation": "Replace “fossiililöytöjä.Museon” with “fossiililöytöjä. Museon”.",
+      "reason": "Current text joins fossiililöytöjä.Museon without whitespace.",
+      "snapshotSHA256": "398d8a153b30d20bcf0d1574a2e2b20015658324f8cf5fb58a4ec544dfd082a2",
+      "stillPresentAtFollowupRead": false,
+      "current": "N’Djamenan jokimaisema ja markkinat kuuluvat kaupungin arkeen. Kansallismuseon aiheissa on myös esihistoriaa ja fossiililöytöjä. Museon pääsy, yhteydet ja mahdolliset vierailut selvitetään ajantasaisesti.",
+      "resolution": "resolved by current field change"
+    },
+    {
+      "era": "e05",
+      "city": "niamey",
+      "sourcePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/niamey/sisalto.json",
+      "tokens": [
+        "kaupunkilehti",
+        0,
+        "matkailijalle",
+        "kappale"
+      ],
+      "jsonPath": "$[\"kaupunkilehti\"][0][\"matkailijalle\"][\"kappale\"]",
+      "type": "missing sentence space",
+      "severity": "correction",
+      "old": "Niameyn jokimaisema, torit ja käsityö kertovat kaupungin arjesta.Kaupungin kansallismuseossa esitellään kulttuuria ja arkeologiaa. Néini Goungoun saarella on oma kylä ja paikallisen päällikön johtama yhteisö.",
+      "recommendation": "Replace “arjesta.Kaupungin” with “arjesta. Kaupungin”.",
+      "reason": "Current text joins arjesta.Kaupungin without whitespace.",
+      "snapshotSHA256": "eda8d74b9e809bb34616c7e7bf1c2903428481814932b048f8d3860698031b39",
+      "stillPresentAtFollowupRead": false,
+      "current": "Niameyn jokimaisema, torit ja käsityö kertovat kaupungin arjesta. Kaupungin kansallismuseossa esitellään kulttuuria ja arkeologiaa. Néini Goungoun saarella on oma kylä ja paikallisen päällikön johtama yhteisö.",
+      "resolution": "resolved by current field change"
+    },
+    {
+      "era": "e07",
+      "city": "djibouti",
+      "sourcePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/djibouti/sisalto.json",
+      "tokens": [
+        "kaupunkilehti",
+        0,
+        "matkailijalle",
+        "kappale"
+      ],
+      "jsonPath": "$[\"kaupunkilehti\"][0][\"matkailijalle\"][\"kappale\"]",
+      "type": "duplicate safety warning",
+      "severity": "correction",
+      "old": "Djiboutissa matkalla tarvitaan tavallista enemmän varovaisuutta. Vanhassa keskustassa aukiot yhdistyvät kauppakujilla. Kalakeittiö kertoo rannikon yli kulkeneista vaikutteista. Saarille suuntautuvan retken ehdot on selvitettävä erikseen. Kuumuus, juomavesi ja paikalliset kuvausrajoitukset kuuluvat matkan valmisteluun.",
+      "recommendation": "Delete the opening sentence “Djiboutissa matkalla tarvitaan tavallista enemmän varovaisuutta.” Keep concrete square/market/fish-kitchen passage.",
+      "reason": "The introductory citywide varovaisuus warning duplicates the consolidated travel advisory in hyvaTietaa[0].",
+      "snapshotSHA256": "84554feb57b967c7a1c1df112d2f6390ca89332eb425b5fd0dea495b9d6dd55d",
+      "stillPresentAtFollowupRead": false,
+      "current": "Vanhassa keskustassa aukiot yhdistyvät kauppakujilla. Kalakeittiö kertoo rannikon yli kulkeneista vaikutteista. Saarille suuntautuvan retken ehdot on selvitettävä erikseen. Kuumuus, juomavesi ja paikalliset kuvausrajoitukset kuuluvat matkan valmisteluun.",
+      "resolution": "resolved by current field change"
+    },
+    {
+      "era": "e14",
+      "city": "yaren",
+      "sourcePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/yaren/sisalto.json",
+      "tokens": [
+        "kysymykset",
+        4,
+        "q"
+      ],
+      "jsonPath": "$[\"kysymykset\"][4][\"q\"]",
+      "type": "question and answer mismatch",
+      "severity": "correction",
+      "old": "Miten Buada-järven vesi poistuu saarelta?",
+      "recommendation": "Mikä väite Buada-järven laskuyhteydestä pitää paikkansa?",
+      "reason": "Asks how water leaves the island, whereas correct option states absent outflow; does not answer water-exit method.",
+      "current": "Mikä väite Buada-järven laskuyhteydestä pitää paikkansa?",
+      "stillPresentAtFollowupRead": false,
+      "resolution": "resolved by current field change"
+    },
+    {
+      "era": "e14",
+      "city": "yaren",
+      "sourcePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/yaren/sisalto.json",
+      "tokens": [
+        "kysymykset",
+        0,
+        "options",
+        3
+      ],
+      "jsonPath": "$[\"kysymykset\"][0][\"options\"][3]",
+      "type": "invented distractor category",
+      "severity": "correction",
+      "old": "Erillinen hallintoaluevaltio",
+      "recommendation": "Erityishallintoalue",
+      "reason": "Awkward invented category instead of plausible administrative option.",
+      "current": "Erityishallintoalue",
+      "stillPresentAtFollowupRead": false,
+      "resolution": "resolved by current field change"
+    },
+    {
+      "era": "e14",
+      "city": "yaren",
+      "sourcePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/yaren/sisalto.json",
+      "tokens": [
+        "kaupunkilehti",
+        0,
+        "matkailijalle",
+        "artikkeli",
+        "jaksot",
+        2,
+        "teksti"
+      ],
+      "jsonPath": "$[\"kaupunkilehti\"][0][\"matkailijalle\"][\"artikkeli\"][\"jaksot\"][2][\"teksti\"]",
+      "type": "adjacent repeated fact",
+      "severity": "correction",
+      "old": "Moqua on Yarenin maanalainen järvi. Sen ympärille on rakennettu aita onnettomuuksien ehkäisemiseksi. Buada-järvi sijaitsee toisessa piirissä Yarenin pohjoispuolella; sen ympärillä on asutusta ja puutarhoja. Järven rantoja ympäröivät myös yksityiset asuinpaikat ja puutarhat. Buadan vesi on lievästi suolaista.",
+      "recommendation": "Remove repeated sentence “Järven rantoja ympäröivät myös yksityiset asuinpaikat ja puutarhat.”",
+      "reason": "Asutus/puutarhat repeated in two adjacent sentences.",
+      "current": "Moqua on Yarenin maanalainen järvi. Sen ympärille on rakennettu aita onnettomuuksien ehkäisemiseksi. Buada-järvi sijaitsee toisessa piirissä Yarenin pohjoispuolella; sen ympärillä on asutusta ja puutarhoja. Buadan vesi on lievästi suolaista.",
+      "stillPresentAtFollowupRead": false,
+      "resolution": "resolved by current field change"
+    },
+    {
+      "era": "e14",
+      "city": "yaren",
+      "sourcePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/yaren/sisalto.json",
+      "tokens": [
+        "kaupunkilehti",
+        0,
+        "nostot",
+        1,
+        "wiki"
+      ],
+      "jsonPath": "$[\"kaupunkilehti\"][0][\"nostot\"][1][\"wiki\"]",
+      "type": "source does not support story",
+      "severity": "correction",
+      "old": "Yaren",
+      "recommendation": "Remove misleading wiki pointer or bind actual textual source https://en.wikivoyage.org/wiki/Nauru, preserving exact Yaren support for terminal/headquarters separately.",
+      "reason": "Faktapohja assigns airplane/traffic light story to Y3 Wikivoyage Nauru; Yaren supplies only terminal/headquarters facts.",
+      "current": "",
+      "stillPresentAtFollowupRead": false,
+      "resolution": "resolved by current field change"
+    },
+    {
+      "era": "e13",
+      "city": "brasilia",
+      "sourcePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e13/paakaupungit-pilvi/e13/brasilia/sisalto.json",
+      "tokens": [
+        "kaupunkilehti",
+        0,
+        "matkailijalle",
+        "artikkeli",
+        "jaksot",
+        0,
+        "teksti"
+      ],
+      "jsonPath": "$[\"kaupunkilehti\"][0][\"matkailijalle\"][\"artikkeli\"][\"jaksot\"][0][\"teksti\"]",
+      "type": "obsolete factual place",
+      "severity": "correction",
+      "old": "Brasíliaa palvelee Presidente Juscelino Kubitschek International Airport eli BSB. Lentokentältä keskustaan kuljetaan maanteitse. Plano Piloton Rodoviária on paikallisbussien ja metron vaihtopaikka. Kaukoliikenteen busseille on erillinen rodoferroviária-asema kaupungin läntisellä laidalla. Kävelykierrokselle kannattaa valita yksi alue, sillä sektorien välillä on pitkiä siirtymiä.",
+      "recommendation": "Kaukoliikenteen bussit käyttävät Rodoviária Interestadual -asemaa lähellä ParkShoppingia; se on eri paikka kuin Plano Piloton vaihtoterminaali.",
+      "reason": "Correction-list proposal was obsolete: official ANTT documents interstate move from Rodoferroviária to new Terminal Rodoviário in2010, and 2025 ANTT inspection office is at Rodoviária Interestadual.",
+      "current": "Brasíliaa palvelee Presidente Juscelino Kubitschek International Airport eli BSB. Lentokentältä keskustaan kuljetaan maanteitse. Plano Piloton Rodoviária on paikallisbussien ja metron vaihtopaikka. Kaukoliikenteen bussit käyttävät Rodoviária Interestadual -asemaa lähellä ParkShoppingia. Se on eri paikka kuin Plano Piloton vaihtoterminaali. Kävelykierrokselle kannattaa valita yksi alue, sillä sektorien välillä on pitkiä siirtymiä.",
+      "stillPresentAtFollowupRead": false,
+      "resolution": "resolved by current field change"
+    },
+    {
+      "era": "e04",
+      "city": "alger",
+      "sourcePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/alger/sisalto.json",
+      "tokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        0,
+        "teksti"
+      ],
+      "jsonPath": "$[\"kaupunkilehti\"][1][\"nostot\"][0][\"teksti\"]",
+      "type": "architectural word translation",
+      "severity": "correction",
+      "old": "Dar Mustapha Pachan palatsin suureen pääoveen on sovitettu pieni kulkuovi. Pronssiniitein koristellun oven takana on sqifa eli sisäänkäyntihalli. Holvien alla on seinäsyvennyksiin tehtyjä penkkejä. Vieras kulkee sisäänkäyntitilojen kautta sisäpihalle, jota ympäröivät marmorisarakkeiden kannattamat kaaret. Gallerioiden seinissä on kaakeleita ja katoissa pieniä puupalkkeja. Marmoriset ovenkehykset erottavat huoneiden sisäänkäynnit pihan ympärillä jatkuvista käytävistä.",
+      "recommendation": "Replace marmorisarakkeiden with marmoripylväiden.",
+      "reason": "Physical architectural columns are pylväät, while sarakkeet suggests table columns.",
+      "current": "Dar Mustapha Pachan palatsin suureen pääoveen on sovitettu pieni kulkuovi. Pronssiniitein koristellun oven takana on sqifa eli sisäänkäyntihalli. Holvien alla on seinäsyvennyksiin tehtyjä penkkejä. Vieras kulkee sisäänkäyntitilojen kautta sisäpihalle, jota ympäröivät marmoripylväiden kannattamat kaaret. Gallerioiden seinissä on kaakeleita ja katoissa pieniä puupalkkeja. Marmoriset ovenkehykset erottavat huoneiden sisäänkäynnit pihan ympärillä jatkuvista käytävistä.",
+      "stillPresentAtFollowupRead": false,
+      "resolution": "resolved by current field change"
+    },
+    {
+      "era": "e04",
+      "city": "alger",
+      "sourcePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/alger/sisalto.json",
+      "tokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        1,
+        "teksti"
+      ],
+      "jsonPath": "$[\"kaupunkilehti\"][1][\"nostot\"][1][\"teksti\"]",
+      "type": "architectural word translation",
+      "severity": "correction",
+      "old": "Wast ad-dar tarkoittaa talon keskustaa: sisäpihaa, jonka ympärille huoneet ja käytävät järjestyvät. Dar Azizan palatsissa marmorisarakkeet kannattavat pihan kaaria. Koristeisiin kuuluu kaakeleita, veistettyä stukkoa, ristikkopintaisia ikkunoita ja suihkulähde. Rinnetontin alkuperäisiin alimpiin tiloihin kuului varastoja, keittiöitä ja talleja. Tavallistenkin Casbah-talojen sisäpihat toimivat perheiden yhteisinä tiloina ja vieraiden vastaanottopaikkoina, ja niiden kautta huoneisiin pääsi valoa.",
+      "recommendation": "Replace marmorisarakkeet with marmoripylväät.",
+      "reason": "Physical architectural columns are pylväät, while sarakkeet suggests table columns.",
+      "current": "Wast ad-dar tarkoittaa talon keskustaa: sisäpihaa, jonka ympärille huoneet ja käytävät järjestyvät. Dar Azizan palatsissa marmoripylväät kannattavat pihan kaaria. Koristeisiin kuuluu kaakeleita, veistettyä stukkoa, ristikkopintaisia ikkunoita ja suihkulähde. Rinnetontin alkuperäisiin alimpiin tiloihin kuului varastoja, keittiöitä ja talleja. Tavallistenkin Casbah-talojen sisäpihat toimivat perheiden yhteisinä tiloina ja vieraiden vastaanottopaikkoina, ja niiden kautta huoneisiin pääsi valoa.",
+      "stillPresentAtFollowupRead": false,
+      "resolution": "resolved by current field change"
+    },
+    {
+      "era": "e04",
+      "city": "alger",
+      "sourcePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/alger/sisalto.json",
+      "tokens": [
+        "nahtavyydet",
+        "Dar Mustapha Pacha",
+        "teksti"
+      ],
+      "jsonPath": "$[\"nahtavyydet\"][\"Dar Mustapha Pacha\"][\"teksti\"]",
+      "type": "architectural word translation",
+      "severity": "correction",
+      "old": "Dar Mustapha Pacha rakennettiin Casbahiin Mustapha Pachalle 1700-luvun lopulla. Palatsin suureen pääoveen on sovitettu pieni kulkuovi, ja ovessa on pronssiniittikoristelua. Sisäänkäyntihalleissa on holveja ja seinäsyvennyksiin tehtyjä penkkejä. Sisäpihaa ympäröivät marmorisarakkeiden kannattamat kaarikäytävät, joista avautuu suuria huoneita.\n\nKaakeliseinät, marmoriset ovenkehykset ja gallerioiden puupalkit ovat osa talon rakennuskulttuuria. Palatsi on muutettu miniatyyrien, käsikirjoitusten koristelun ja kalligrafian eli kaunokirjoituksen kansallismuseoksi. Museon rakennus itsessään esittelee osmanikauden asumista: eteishallit, kaarikäytävät ja pihan ympärille avautuvat huoneet ovat osa palatsin alkuperäistä tilajakoa.",
+      "recommendation": "Replace marmorisarakkeiden with marmoripylväiden.",
+      "reason": "Physical architectural columns are pylväät, while sarakkeet suggests table columns.",
+      "current": "Dar Mustapha Pacha rakennettiin Casbahiin Mustapha Pachalle 1700-luvun lopulla. Palatsin suureen pääoveen on sovitettu pieni kulkuovi, ja ovessa on pronssiniittikoristelua. Sisäänkäyntihalleissa on holveja ja seinäsyvennyksiin tehtyjä penkkejä. Sisäpihaa ympäröivät marmoripylväiden kannattamat kaarikäytävät, joista avautuu suuria huoneita.\n\nKaakeliseinät, marmoriset ovenkehykset ja gallerioiden puupalkit ovat osa talon rakennuskulttuuria. Palatsi on muutettu miniatyyrien, käsikirjoitusten koristelun ja kalligrafian eli kaunokirjoituksen kansallismuseoksi. Museon rakennus itsessään esittelee osmanikauden asumista: eteishallit, kaarikäytävät ja pihan ympärille avautuvat huoneet ovat osa palatsin alkuperäistä tilajakoa.",
+      "stillPresentAtFollowupRead": false,
+      "resolution": "resolved by current field change"
+    },
+    {
+      "era": "e04",
+      "city": "alger",
+      "sourcePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/alger/sisalto.json",
+      "tokens": [
+        "nahtavyydet",
+        "Djamaa el Kebir",
+        "teksti"
+      ],
+      "jsonPath": "$[\"nahtavyydet\"][\"Djamaa el Kebir\"][\"teksti\"]",
+      "type": "architectural word translation",
+      "severity": "correction",
+      "old": "Djamaa el Kebir on Casbahin historiallinen moskeija sataman lähellä. Sen alkuperäinen rakennus kuuluu almoravidikaudelle, 1000-luvun loppuun. Myöhemmät rakentajat täydensivät ja uudistivat kokonaisuutta: minareetti on alkuperäistä rakennusta nuorempi keskiaikainen lisäys. Rukoussalissa valkoiset pilarit ja hevosenkenkäkaaret jakavat tilan pitkittäisiin käytäviin.\n\nRanskan siirtomaakauden alkupuolella ulkopuolelle lisättiin kaarikäytävä, jossa käytettiin puretun al-Sa’ida-moskeijan marmorisarakkeita. Kaarikäytävä täydensi keskiaikaista moskeijaa. Vanha puinen minbar eli saarnatuoli oli pyörillä liikuteltava; sitä säilytetään nykyään museossa. Saarnatuoli siirrettiin rukoussaliin lattiaan upotettuja kiskoja pitkin; kiskot ovat jääneet rakennukseen, vaikka vanha minbar siirrettiin museon kokoelmiin.",
+      "recommendation": "Replace marmorisarakkeita with marmoripylväitä.",
+      "reason": "Physical architectural columns are pylväät, while sarakkeet suggests table columns.",
+      "current": "Djamaa el Kebir on Casbahin historiallinen moskeija sataman lähellä. Sen alkuperäinen rakennus kuuluu almoravidikaudelle, 1000-luvun loppuun. Myöhemmät rakentajat täydensivät ja uudistivat kokonaisuutta: minareetti on alkuperäistä rakennusta nuorempi keskiaikainen lisäys. Rukoussalissa valkoiset pilarit ja hevosenkenkäkaaret jakavat tilan pitkittäisiin käytäviin.\n\nRanskan siirtomaakauden alkupuolella ulkopuolelle lisättiin kaarikäytävä, jossa käytettiin puretun al-Sa’ida-moskeijan marmoripylväitä. Kaarikäytävä täydensi keskiaikaista moskeijaa. Vanha puinen minbar eli saarnatuoli oli pyörillä liikuteltava; sitä säilytetään nykyään museossa. Saarnatuoli siirrettiin rukoussaliin lattiaan upotettuja kiskoja pitkin; kiskot ovat jääneet rakennukseen, vaikka vanha minbar siirrettiin museon kokoelmiin.",
+      "stillPresentAtFollowupRead": false,
+      "resolution": "resolved by current field change"
+    },
+    {
+      "era": "e06",
+      "city": "gitega",
+      "sourcePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/gitega/sisalto.json",
+      "tokens": [
+        "kaupunkilehti",
+        1,
+        "tehtava",
+        "vaihtoehdot",
+        2
+      ],
+      "jsonPath": "$.kaupunkilehti[1].tehtava.vaihtoehdot[2]",
+      "type": "implausible quiz distractor",
+      "severity": "correction",
+      "old": "Erillisiin suljettuihin huoneisiin",
+      "recommendation": "Täyden ympyrän muotoon",
+      "reason": "Separate closed rooms are an absurd arrangement distractor for the visible ensemble performance; use a plausible grouping shape.",
+      "current": "Täyden ympyrän muotoon",
+      "stillPresentAtFollowupRead": false,
+      "resolution": "resolved by current field change"
+    },
+    {
+      "era": "e04",
+      "city": "banjul",
+      "sourcePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/banjul/sisalto.json",
+      "tokens": [
+        "nahtavyydet",
+        "Albertin tori",
+        "teksti"
+      ],
+      "jsonPath": "$[\"nahtavyydet\"][\"Albertin tori\"][\"teksti\"]",
+      "type": "production meta",
+      "reason": "Paragraph explains what writers cannot infer about current stall ages instead of local history.",
+      "old": "Albertin tori kuuluu Banjulin vanhan saarikaupungin asiointipaikkoihin. Liberation Avenuella sijaitseva katutori tunnettiin aiemmin virallisella nimellä Royal Albert Market. Nykyinen tiheä kojujen ja käytävien ympäristö on kauppapaikka, jossa historiallinen nimi on osa tämän päivän katukuvaa.\n\nTorin alku ajoittuu 1800-luvun puoliväliin, ja nimi tulee kuningatar Victorian puolisosta prinssi Albertista. Isoisän matkavuonna 1873 tori oli siten jo olemassa. Nykyisten myyntipöytien, katosten tai kylttien ikää ei kuitenkaan voi lukea kauppapaikan perustamisesta, eikä vanha nimi kerro jokaisen nykyisen kojun tavarasta tai pitäjästä.\n\nAlbertin tori sijaitsee varsinaisessa Banjulissa, St Mary's -saaren kaupungissa. Serrekundan markkinat sijaitsevat mantereella eri paikkakunnalla kuin Albertin tori. Saarikaupungin historia ja paikallinen kaupankäynti kohtaavat samalla torialueella.",
+      "recommendation": "Remove the sentence beginning “Nykyisten myyntipöytien, katosten tai kylttien ikää…”; retain documented market foundation/name/1873 facts.",
+      "sourceSHA256AtAudit": "8642cb8fe34d30d41dd1ab7ae36be63e1db697854cb13f2f9fce05db0021eeb7",
+      "resolution": "resolved by current field change",
+      "stillPresentAtFollowupRead": false,
+      "current": "Albertin tori kuuluu Banjulin vanhan saarikaupungin asiointipaikkoihin. Liberation Avenuella sijaitseva katutori tunnettiin aiemmin virallisella nimellä Royal Albert Market. Nykyinen tiheä kojujen ja käytävien ympäristö on kauppapaikka, jossa historiallinen nimi on osa tämän päivän katukuvaa.\n\nTorin alku ajoittuu 1800-luvun puoliväliin, ja nimi tulee kuningatar Victorian puolisosta prinssi Albertista. Isoisän matkavuonna 1873 tori oli siten jo olemassa.\n\nAlbertin tori sijaitsee varsinaisessa Banjulissa, St Mary's -saaren kaupungissa. Serrekundan markkinat sijaitsevat mantereella eri paikkakunnalla kuin Albertin tori. Saarikaupungin historia ja paikallinen kaupankäynti kohtaavat samalla torialueella."
+    },
+    {
+      "era": "e04",
+      "city": "banjul",
+      "sourcePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/banjul/sisalto.json",
+      "tokens": [
+        "nahtavyydet",
+        "Tanbin kosteikko",
+        "teksti"
+      ],
+      "jsonPath": "$[\"nahtavyydet\"][\"Tanbin kosteikko\"][\"teksti\"]",
+      "type": "production meta",
+      "reason": "1873 vegetation/channel verification limitations are production commentary.",
+      "old": "Tanbi levittäytyy Banjulin länsi- ja lounaispuolen rannoille Gambia-joen suun tuntumaan. Mangrovekasvillisuus, vuorovesikanavat, laguunit ja liejuiset pinnat muodostavat yhtenäisen rannikkokosteikon. Kosteikon luontopaikat ulottuvat laajalle kaupungin vierellä ja rannikon suunnassa.\n\nKosteikolla on monta tehtävää samanaikaisesti. Se vastaanottaa vettä, osallistuu rannan vakauttamiseen ja sedimenttien liikkeeseen sekä toimii kaupungin hydrologisena puskurina. Linnuille ja muille kosteikkoeläimille se on elinympäristö, ja paikalliseen työhön kuuluvat kalastus, osterin keruu sekä viljely reuna-alueilla. Tanbi on myös Ramsar-kohde.\n\nNykyinen suojelustatus kuuluu myöhempään aikaan kuin isoisän matkavuosi 1873. Vuoden 1873 kasvillisuuden tarkka laajuus ja kanavien tila ovat epävarmoja; nykyiset rajat ja retkipalvelut eivät kuvaa matkavuoden tilannetta. Rannikkoluonnon merkitys näkyy yhä siinä, kuinka vesi, elinkeinot ja eläinten ympäristö kohtaavat kaupungin vierellä.",
+      "recommendation": "Remove “Vuoden 1873 kasvillisuuden tarkka laajuus ja kanavien tila ovat epävarmoja; nykyiset rajat ja retkipalvelut eivät kuvaa matkavuoden tilannetta.” Keep historical Ramsar contrast and local wetland facts.",
+      "sourceSHA256AtAudit": "8642cb8fe34d30d41dd1ab7ae36be63e1db697854cb13f2f9fce05db0021eeb7",
+      "resolution": "resolved by current field change",
+      "stillPresentAtFollowupRead": false,
+      "current": "Tanbi levittäytyy Banjulin länsi- ja lounaispuolen rannoille Gambia-joen suun tuntumaan. Mangrovekasvillisuus, vuorovesikanavat, laguunit ja liejuiset pinnat muodostavat yhtenäisen rannikkokosteikon. Kosteikon luontopaikat ulottuvat laajalle kaupungin vierellä ja rannikon suunnassa.\n\nKosteikolla on monta tehtävää samanaikaisesti. Se vastaanottaa vettä, osallistuu rannan vakauttamiseen ja sedimenttien liikkeeseen sekä toimii kaupungin hydrologisena puskurina. Linnuille ja muille kosteikkoeläimille se on elinympäristö, ja paikalliseen työhön kuuluvat kalastus, osterin keruu sekä viljely reuna-alueilla. Tanbi on myös Ramsar-kohde.\n\nNykyinen suojelustatus kuuluu myöhempään aikaan kuin isoisän matkavuosi 1873. Rannikkoluonnon merkitys näkyy yhä siinä, kuinka vesi, elinkeinot ja eläinten ympäristö kohtaavat kaupungin vierellä."
+    },
+    {
+      "era": "e04",
+      "city": "banjul",
+      "sourcePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/banjul/sisalto.json",
+      "tokens": [
+        "kaupunkilehti",
+        0,
+        "matkailijalle",
+        "kappale"
+      ],
+      "jsonPath": "$[\"kaupunkilehti\"][0][\"matkailijalle\"][\"kappale\"]",
+      "type": "duplicate citywide safety warning",
+      "reason": "Citywide caution/night-transport warning repeats the official advisory already consolidated in hyvaTietaa[0].",
+      "old": "Banjulin torikaduille tullessa kannattaa erottaa saarikaupunki mantereen majoitusalueista. Albertin tori, kansallismuseo ja jokisuun näkymät muodostavat oman kaupunkiretken, jota voi täydentää sovitulla Tanbin luontokäynnillä. Banjul–Barra-lautta vie joen toiselle rannalle, mutta kulkujärjestelyt tarkistetaan ennen matkaa. Liikenteessä tarvitaan erityistä varovaisuutta ja pimeän ajan kuljetus on hyvä sopia etukäteen. Jokisuun ranta liittyy lauttaliikenteeseen ja kosteikon ympäristöön.",
+      "recommendation": "Remove “Liikenteessä tarvitaan erityistä varovaisuutta ja pimeän ajan kuljetus on hyvä sopia etukäteen.” Keep concrete Banjul itinerary/boat planning.",
+      "sourceSHA256AtAudit": "8642cb8fe34d30d41dd1ab7ae36be63e1db697854cb13f2f9fce05db0021eeb7",
+      "resolution": "resolved by current field change",
+      "stillPresentAtFollowupRead": false,
+      "current": "Banjulin torikaduille tullessa kannattaa erottaa saarikaupunki mantereen majoitusalueista. Albertin tori, kansallismuseo ja jokisuun näkymät muodostavat oman kaupunkiretken, jota voi täydentää sovitulla Tanbin luontokäynnillä. Banjul–Barra-lautta vie joen toiselle rannalle, mutta kulkujärjestelyt tarkistetaan ennen matkaa. Jokisuun ranta liittyy lauttaliikenteeseen ja kosteikon ympäristöön."
+    },
+    {
+      "era": "e04",
+      "city": "banjul",
+      "sourcePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/banjul/sisalto.json",
+      "tokens": [
+        "kaupunkilehti",
+        0,
+        "nostot",
+        3,
+        "wiki"
+      ],
+      "jsonPath": "$[\"kaupunkilehti\"][0][\"nostot\"][3][\"wiki\"]",
+      "type": "source pointer mismatch",
+      "reason": "Museum English cache discusses photo archive/NCAC administration but not oral history collection. Actual source B9 is NCAC oralarchive official page.",
+      "old": "Gambia National Museum",
+      "recommendation": "Remove wiki=Gambia National Museum; preserve textual citation https://ncac.gm/oralarchieve/ in source references. Existing quiz source already correct.",
+      "sourceSHA256AtAudit": "8642cb8fe34d30d41dd1ab7ae36be63e1db697854cb13f2f9fce05db0021eeb7",
+      "resolution": "resolved by current field change",
+      "stillPresentAtFollowupRead": false,
+      "current": "<field removed>"
+    },
+    {
+      "era": "e04",
+      "city": "bissau",
+      "sourcePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/bissau/sisalto.json",
+      "tokens": [
+        "nahtavyydet",
+        "Tulliaukio",
+        "aika"
+      ],
+      "jsonPath": "$[\"nahtavyydet\"][\"Tulliaukio\"][\"aika\"]",
+      "type": "production status in player field",
+      "reason": "Unverified-year status appears in sight age label.",
+      "old": "Tarkka kehitysvuosi vahvistamatta",
+      "recommendation": "Vanhan satamaytimen aukio",
+      "sourceSHA256AtAudit": "2e3808ca35a27419edcee6e3253610dcbf621fb283746e09bb0f72673dac6db4",
+      "resolution": "resolved by current field change",
+      "stillPresentAtFollowupRead": false,
+      "current": "Vanhan satamaytimen aukio"
+    },
+    {
+      "era": "e04",
+      "city": "bissau",
+      "sourcePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/bissau/sisalto.json",
+      "tokens": [
+        "nahtavyydet",
+        "Tulliaukio",
+        "teksti"
+      ],
+      "jsonPath": "$[\"nahtavyydet\"][\"Tulliaukio\"][\"teksti\"]",
+      "type": "production meta",
+      "reason": "Final paragraph begins an unverified1873/age proof-status sentence.",
+      "old": "Praça da Alfândega, suomeksi Tulliaukio, sijaitsee Amuran linnoituksen itäpuolella Bissaun vanhassa satamaytimessä. Paikka on aukio ja myös puutarhatilaa. Sen nimi viittaa Bissaun tullitaloon: portugalin alfândega tarkoittaa tullia. Aukio ja nimessä mainittu rakennus ovat erillisiä paikkoja.\n\nTullitalojen yleinen tehtävä liittyy maahan tulevien ja sieltä lähtevien tavaroiden käsittelyyn. Nimi kytkee tämän kaupunkitilan sataman kautta kulkevaan kaupankäyntiin. Linnoitus, laiturit ja tulliin viittaava aukio kertovat saman vanhan ytimen eri tehtävistä.\n\nAukion tarkkaa kehitysvuotta ja sen asua vuonna 1873 ei ole vahvistettu. Aukion yhteys tullitaloon ja satamaan säilyy nimessä. Linnoitus, laiturit ja tulliin liittyvä aukio edustavat lähekkäin kauppasataman eri toimintoja.",
+      "recommendation": "Remove “Aukion tarkkaa kehitysvuotta ja sen asua vuonna 1873 ei ole vahvistettu.” Retain documented plaza/custom-house relationship; do not invent date.",
+      "sourceSHA256AtAudit": "2e3808ca35a27419edcee6e3253610dcbf621fb283746e09bb0f72673dac6db4",
+      "resolution": "resolved by current field change",
+      "stillPresentAtFollowupRead": false,
+      "current": "Praça da Alfândega, suomeksi Tulliaukio, sijaitsee Amuran linnoituksen itäpuolella Bissaun vanhassa satamaytimessä. Paikka on aukio ja myös puutarhatilaa. Sen nimi viittaa Bissaun tullitaloon: portugalin alfândega tarkoittaa tullia. Aukio ja nimessä mainittu rakennus ovat erillisiä paikkoja.\n\nTullitalojen yleinen tehtävä liittyy maahan tulevien ja sieltä lähtevien tavaroiden käsittelyyn. Nimi kytkee tämän kaupunkitilan sataman kautta kulkevaan kaupankäyntiin. Linnoitus, laiturit ja tulliin viittaava aukio kertovat saman vanhan ytimen eri tehtävistä.\n\nAukion yhteys tullitaloon ja satamaan säilyy nimessä. Linnoitus, laiturit ja tulliin liittyvä aukio edustavat lähekkäin kauppasataman eri toimintoja."
+    },
+    {
+      "era": "e04",
+      "city": "bissau",
+      "sourcePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/bissau/sisalto.json",
+      "tokens": [
+        "nahtavyydet",
+        "Pidjiguitin laituri",
+        "teksti"
+      ],
+      "jsonPath": "$[\"nahtavyydet\"][\"Pidjiguitin laituri\"][\"teksti\"]",
+      "type": "production meta",
+      "reason": "Source-chronology limitation “ei ole ajoitettu” is authoring commentary.",
+      "old": "Pidjiguiti on tunnistettu laituripaikka Bissaun satamassa. Sen julkinen laiturivaihe kuuluu 1800-luvun loppupuolelle. Varhaisessa rakenteessa yhdistettiin puuta ja muurausta, ja paikka tunnettiin nimellä Ponte-cais Correia e Lança. Sataman ja laiturin tarinat alkavat kuitenkin eri kohdista.\n\nBissaussa käytiin satamakauppaa jo ennen tätä julkista laituria. Satamassa oli myös yritysten käyttämiä puisia lastaus- ja maihinnousulaitureita, mutta niiden tarkkaa tilannetta isoisän matkavuonna 1873 ei ole ajoitettu. Bissau oli tuolloin jo kauppapaikka, kun taas Pidjiguitin julkisen laiturin rakennusvaihe kuuluu myöhempään aikaan.\n\nMyöhemmin Bissaun sataman muualle rakennettiin uudempia laitureita. Ne kuuluvat saman sataman historiaan mutta ovat eri paikkoja kuin vanha Pidjiguiti. Laiturin nimi kohdistuu alusten ja tavaroiden maihin kytkeytyvään työympäristöön. Sen vaiheita voi seurata erottamalla vanhan satamapaikan, julkisen laiturin ja myöhemmän satamainfrastruktuurin toisistaan.",
+      "recommendation": "Remove only “, mutta niiden tarkkaa tilannetta isoisän matkavuonna 1873 ei ole ajoitettu”; keep earlier wooden wharves and later public-pier chronology.",
+      "sourceSHA256AtAudit": "2e3808ca35a27419edcee6e3253610dcbf621fb283746e09bb0f72673dac6db4",
+      "resolution": "resolved by current field change",
+      "stillPresentAtFollowupRead": false,
+      "current": "Pidjiguiti on tunnistettu laituripaikka Bissaun satamassa. Sen julkinen laiturivaihe kuuluu 1800-luvun loppupuolelle. Varhaisessa rakenteessa yhdistettiin puuta ja muurausta, ja paikka tunnettiin nimellä Ponte-cais Correia e Lança. Sataman ja laiturin tarinat alkavat kuitenkin eri kohdista.\n\nBissaussa käytiin satamakauppaa jo ennen tätä julkista laituria. Satamassa oli myös yritysten käyttämiä puisia lastaus- ja maihinnousulaitureita. Isoisän matkavuonna 1873 Bissau oli jo kauppapaikka, kun taas Pidjiguitin julkisen laiturin rakennusvaihe kuuluu myöhempään aikaan.\n\nMyöhemmin Bissaun sataman muualle rakennettiin uudempia laitureita. Ne kuuluvat saman sataman historiaan mutta ovat eri paikkoja kuin vanha Pidjiguiti. Laiturin nimi kohdistuu alusten ja tavaroiden maihin kytkeytyvään työympäristöön. Sen vaiheita voi seurata erottamalla vanhan satamapaikan, julkisen laiturin ja myöhemmän satamainfrastruktuurin toisistaan."
+    },
+    {
+      "era": "e04",
+      "city": "bissau",
+      "sourcePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/bissau/sisalto.json",
+      "tokens": [
+        "kaupunkilehti",
+        0,
+        "nostot",
+        3,
+        "wiki"
+      ],
+      "jsonPath": "$[\"kaupunkilehti\"][0][\"nostot\"][3][\"wiki\"]",
+      "type": "source pointer mismatch",
+      "reason": "English museum stub only1040 characters omits contact-proof digitisation story; actual cache museum-pt.txt and museum-camoes.txt supports it.",
+      "old": "National Ethnographic Museum (Guinea-Bissau)",
+      "recommendation": "Remove misleading English wiki pointer; preserve https://pt.wikipedia.org/wiki/Museu_Etnogr%C3%A1fico_Nacional_da_Guin%C3%A9-Bissau and official Camões source S9. Quiz source is already correct.",
+      "sourceSHA256AtAudit": "2e3808ca35a27419edcee6e3253610dcbf621fb283746e09bb0f72673dac6db4",
+      "resolution": "resolved by current field change",
+      "stillPresentAtFollowupRead": false,
+      "current": "<field removed>"
+    },
+    {
+      "era": "e04",
+      "city": "bissau",
+      "sourcePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/bissau/sisalto.json",
+      "tokens": [
+        "kaupunkilehti",
+        1,
+        "tehtava",
+        "vaihtoehdot"
+      ],
+      "jsonPath": "$[\"kaupunkilehti\"][1][\"tehtava\"][\"vaihtoehdot\"]",
+      "type": "implausible quiz distractors",
+      "reason": "Astronomy and airport are unrelated customs-square translation alternatives.",
+      "old": [
+        "Tulliin",
+        "Kalastajakiltaan",
+        "Tähtitieteeseen",
+        "Lentoasemaan"
+      ],
+      "recommendation": [
+        "Tulliin",
+        "Kauppahalliin",
+        "Satamalaituriin",
+        "Kaupungintaloon"
+      ],
+      "sourceSHA256AtAudit": "2e3808ca35a27419edcee6e3253610dcbf621fb283746e09bb0f72673dac6db4",
+      "resolution": "resolved by current field change",
+      "stillPresentAtFollowupRead": false,
+      "current": [
+        "Tulliin",
+        "Kauppahalliin",
+        "Satamalaituriin",
+        "Kaupungintaloon"
+      ]
+    },
+    {
+      "era": "e04",
+      "city": "bissau",
+      "sourcePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/bissau/sisalto.json",
+      "tokens": [
+        "kaupunkilehti",
+        0,
+        "matkailijalle",
+        "artikkeli",
+        "nosto"
+      ],
+      "jsonPath": "$[\"kaupunkilehti\"][0][\"matkailijalle\"][\"artikkeli\"][\"nosto\"]",
+      "type": "generic filler and repeated instruction",
+      "reason": "Only generic travel logistics, repeated by traveller paragraph; no Bissau-specific story.",
+      "old": "Suunnittele kuljetukset huolellisesti ja varmista vierailupaikkojen tämänhetkinen pääsy.",
+      "recommendation": "Bissau Velhon taloissa jatkuu asiointi. Bandimin tori ja Pidjiguitin vanha laituripaikka näyttävät satamakaupungin eri puolia.",
+      "sourceSHA256AtAudit": "2e3808ca35a27419edcee6e3253610dcbf621fb283746e09bb0f72673dac6db4",
+      "resolution": "resolved by current field change",
+      "stillPresentAtFollowupRead": false,
+      "current": "Bissau Velhon taloissa jatkuu asiointi. Bandimin tori ja Pidjiguitin vanha laituripaikka näyttävät satamakaupungin eri puolia."
+    },
+    {
+      "era": "e04",
+      "city": "conakry",
+      "sourcePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/conakry/sisalto.json",
+      "tokens": [
+        "nahtavyydet",
+        "Camayennen kasvitieteellinen puutarha",
+        "teksti"
+      ],
+      "jsonPath": "$[\"nahtavyydet\"][\"Camayennen kasvitieteellinen puutarha\"][\"teksti\"]",
+      "type": "adjacent duplicated fact and source-process wording",
+      "reason": "Two adjacent sentences repeat1800s founding, followed by “Puutarhan historiaa kuvaava lähde kertoo…” wrapper.",
+      "old": "Camayennen kasvitieteellinen puutarha sijaitsee Conakryn Camayennen kaupunginosassa. Puutarha tunnetaan kapokkipuista. Ambroise Paré -sairaala jää sen eteläpuolelle ja Conakryn suuri moskeija pohjoispuolelle. Sijainti asettaa puutarhan keskelle rakennettua ja käytettyä kaupunkia.\n\nRanskalaiset perustivat puutarhan 1800-luvun lopulla. Puutarha perustettiin 1800-luvun lopulla uuden kaupungin rakentamisen yhteydessä. Vuonna 1873 tätä puutarhaa ei vielä ollut. Suuret puut kertovat luontopaikasta, jonka ympärille pääkaupunki on jatkanut kasvuaan.\n\nPuutarhan historiaa kuvaava lähde kertoo alueen pienentyneen kaupungin kasvun yhteydessä. Puutarhan ja sitä ympäröivien katujen mittakaavat ovat näin muuttuneet rinnakkain. Puutarhan tämänhetkinen vierailujärjestely on varmistettava erikseen.",
+      "recommendation": "Merge to “Ranskalaiset perustivat puutarhan 1800-luvun lopulla uuden kaupungin rakentamisen yhteydessä.” Replace source wrapper with “Puutarhan alue pienentyi kaupungin kasvun yhteydessä.”",
+      "sourceSHA256AtAudit": "703d5d3847ce886664e9d5ba39b06d24565c8883f530b2ddd7a281eecf635ef0",
+      "resolution": "resolved by current field change",
+      "stillPresentAtFollowupRead": false,
+      "current": "Camayennen kasvitieteellinen puutarha sijaitsee Conakryn Camayennen kaupunginosassa. Puutarha tunnetaan kapokkipuista. Ambroise Paré -sairaala jää sen eteläpuolelle ja Conakryn suuri moskeija pohjoispuolelle. Sijainti asettaa puutarhan keskelle rakennettua ja käytettyä kaupunkia.\n\nRanskalaiset perustivat puutarhan 1800-luvun lopulla uuden kaupungin rakentamisen yhteydessä. Vuonna 1873 tätä puutarhaa ei vielä ollut. Suuret puut kertovat luontopaikasta, jonka ympärille pääkaupunki on jatkanut kasvuaan.\n\nPuutarhan alue on pienentynyt kaupungin kasvun yhteydessä. Puutarhan ja sitä ympäröivien katujen mittakaavat ovat näin muuttuneet rinnakkain."
+    },
+    {
+      "era": "e04",
+      "city": "conakry",
+      "sourcePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/conakry/sisalto.json",
+      "tokens": [
+        "kaupunkilehti",
+        0,
+        "nostot",
+        3,
+        "lyhyt"
+      ],
+      "jsonPath": "$[\"kaupunkilehti\"][0][\"nostot\"][3][\"lyhyt\"]",
+      "type": "caption copied story title and wrong specificity",
+      "reason": "Short caption copies heading and suggests multiple city trees; actual file/long caption is one kapok tree in Cuba.",
+      "old": "Kapokkipuut keskellä kaupunkia.",
+      "recommendation": "Kapokkipuu Kuubassa vuonna 2019.",
+      "sourceSHA256AtAudit": "703d5d3847ce886664e9d5ba39b06d24565c8883f530b2ddd7a281eecf635ef0",
+      "resolution": "resolved by current field change",
+      "stillPresentAtFollowupRead": false,
+      "current": "Kapokkipuu Kuubassa vuonna 2019."
+    },
+    {
+      "era": "e04",
+      "city": "conakry",
+      "sourcePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/conakry/sisalto.json",
+      "tokens": [
+        "nahtavyydet",
+        "Tamaran saari",
+        "teksti"
+      ],
+      "jsonPath": "$[\"nahtavyydet\"][\"Tamaran saari\"][\"teksti\"]",
+      "type": "production imperative",
+      "reason": "“Ei siirretä tämän matkavuoden näkymään” directs writing instead of describing timeline.",
+      "old": "Tamara sijaitsee Los-saariston läntisellä laidalla. Pitkä kaareva saari muodostaa Kassan kanssa Roumea ympäröivän saaristokehän. Tamara tunnetaan myös nimellä Fotoba; nimen Fortoba-kirjoitusasu esiintyy osassa lähteitä. Kaareva muoto ja sijainti erottavat sen saariston keskellä olevasta Roumesta.\n\nSaariston luonnonmaisemaan kuuluvat rannat ja metsäiset sisäosat. Tamaran historiassa on myös 1900-luvun bauksiittikaivostoimintaa. Saareen liittyvät merenkulun majakka ja Fotoban entinen vankila ovat myöhempien rakennettujen paikkojen historiaa. \n\nVuonna 1873 Tamara kuului Britannian hallitsemaan saaristoon. Myöhempiä kaivoksia ja rakennuksia ei siirretä tämän matkavuoden näkymään. Luonnonpaikkana saari on ollut olemassa ennen nykyistä Conakrya. Sen rannat ovat osa saaristokokonaisuutta, jonka ulkokaari avautuu kaupungin edustan merimaisemaan.",
+      "recommendation": "Remove only “Myöhempiä kaivoksia ja rakennuksia ei siirretä tämän matkavuoden näkymään.” Keep actual British-era and twentieth-century mining timeline.",
+      "sourceSHA256AtAudit": "703d5d3847ce886664e9d5ba39b06d24565c8883f530b2ddd7a281eecf635ef0",
+      "resolution": "resolved by current field change",
+      "stillPresentAtFollowupRead": false,
+      "current": "Tamara sijaitsee Los-saariston läntisellä laidalla. Pitkä kaareva saari muodostaa Kassan kanssa Roumea ympäröivän saaristokehän. Tamara tunnetaan myös nimellä Fotoba; nimen Fortoba-kirjoitusasu esiintyy osassa lähteitä. Kaareva muoto ja sijainti erottavat sen saariston keskellä olevasta Roumesta.\n\nSaariston luonnonmaisemaan kuuluvat rannat ja metsäiset sisäosat. Tamaran historiassa on myös 1900-luvun bauksiittikaivostoimintaa. Saareen liittyvät merenkulun majakka ja Fotoban entinen vankila ovat myöhempien rakennettujen paikkojen historiaa. \n\nVuonna 1873 Tamara kuului Britannian hallitsemaan saaristoon. Luonnonpaikkana saari on ollut olemassa ennen nykyistä Conakrya. Sen rannat ovat osa saaristokokonaisuutta, jonka ulkokaari avautuu kaupungin edustan merimaisemaan."
+    },
+    {
+      "era": "e04",
+      "city": "praia",
+      "sourcePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/praia/sisalto.json",
+      "tokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        2,
+        "wiki"
+      ],
+      "jsonPath": "$[\"kaupunkilehti\"][1][\"nostot\"][2][\"wiki\"]",
+      "type": "source pointer mismatch",
+      "reason": "Cached en-Praia only notes Beagle stop, no shell/lava details. Actual P13 is Darwin original Chapter1.",
+      "old": "Praia",
+      "recommendation": "Remove wiki=Praia; preserve actual original Darwin Chapter1 citation from factual-source pack P13.",
+      "sourceSHA256AtAudit": "278930fe54e023b7288e82ba31708795393177a294d5d5409d258625c50d4087",
+      "resolution": "resolved by current field change",
+      "stillPresentAtFollowupRead": false,
+      "current": "<field removed>"
+    },
+    {
+      "era": "e04",
+      "city": "praia",
+      "sourcePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/praia/sisalto.json",
+      "tokens": [
+        "kysymykset",
+        3
+      ],
+      "jsonPath": "$[\"kysymykset\"][3]",
+      "type": "implausible generic quiz distractors",
+      "reason": "Lighthouse-function alternatives load cargo/store rainwater/weigh fish are absurd; use current source-supported local-place question.",
+      "old": {
+        "q": "Mikä on Maria Pian majakan tehtävä?",
+        "options": [
+          "Merenkulun suunnistus",
+          "Tavaralaivojen lastaus",
+          "Sadeveden varastointi",
+          "Kalasaaliin punnitus"
+        ],
+        "correct": 0,
+        "level": 2,
+        "hint": "Rakennus sijaitsee lahden sisääntulossa.",
+        "fact": "Majakka palvelee navigointia.",
+        "source": "https://en.wikipedia.org/wiki/Dona_Maria_Pia_Lighthouse"
+      },
+      "recommendation": "q “Missä Praian Maria Pian majakka sijaitsee?” options “Ponta Temerosa -niemellä / Plateau-tasanteella / Santa Marian luodolla / Gamboan rannalla”; correct0; hint “Majakka on Praian lahden sisääntulossa.” Keep source Dona Maria Pia Lighthouse.",
+      "sourceSHA256AtAudit": "278930fe54e023b7288e82ba31708795393177a294d5d5409d258625c50d4087",
+      "resolution": "resolved by current field change",
+      "stillPresentAtFollowupRead": false,
+      "current": {
+        "q": "Missä Praian Maria Pian majakka sijaitsee?",
+        "options": [
+          "Ponta Temerosassa",
+          "Plateau-keskustassa",
+          "Santa Marian luodolla",
+          "Gamboan rannalla"
+        ],
+        "correct": 0,
+        "level": 2,
+        "hint": "Majakka merkitsee kaupungin lahden sisääntuloa.",
+        "fact": "Maria Pian majakka sijaitsee Ponta Temerosa -niemellä Praian satamalahden sisääntulossa.",
+        "source": "https://en.wikipedia.org/wiki/Dona_Maria_Pia_Lighthouse"
+      }
+    },
+    {
+      "era": "e04",
+      "city": "praia",
+      "sourcePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/praia/sisalto.json",
+      "tokens": [
+        "kaupunkilehti",
+        1,
+        "tehtava",
+        "vaihtoehdot"
+      ],
+      "jsonPath": "$[\"kaupunkilehti\"][1][\"tehtava\"][\"vaihtoehdot\"]",
+      "type": "implausible ancient-geology distractor",
+      "reason": "Ship nails are an absurd alternative for Darwin ancientmarine/calcareous white-layer finding.",
+      "old": [
+        "Simpukankuoria",
+        "Laivojen rautanauloja",
+        "Mustia hiilikappaleita",
+        "Puiden lehtiä"
+      ],
+      "recommendation": [
+        "Simpukankuoria",
+        "Basalttikiteitä",
+        "Kvartsirakeita",
+        "Graniittisoraa"
+      ],
+      "sourceSHA256AtAudit": "278930fe54e023b7288e82ba31708795393177a294d5d5409d258625c50d4087",
+      "resolution": "resolved by current field change",
+      "stillPresentAtFollowupRead": false,
+      "current": [
+        "Simpukankuoria",
+        "Basalttikiteitä",
+        "Kvartsirakeita",
+        "Graniittisoraa"
+      ]
+    },
+    {
+      "era": "e04",
+      "city": "tunis",
+      "sourcePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/tunis/sisalto.json",
+      "tokens": [
+        "kaupunkilehti",
+        0,
+        "matkailijalle",
+        "kappale"
+      ],
+      "jsonPath": "$[\"kaupunkilehti\"][0][\"matkailijalle\"][\"kappale\"]",
+      "type": "duplicate citywide safety warning",
+      "reason": "Caution and demonstration warning also repeated in hyvaTietaa[3], with official advisory already hyvaTietaa[0].",
+      "old": "Aloita medinan kävely Bab el Bharin portilta ja tutustu Zitounan ympäristön kauppakujiin. Palatsien pihat avaavat toisen näkökulman vanhaan kaupunkiin. Varmista moskeijoiden ja palatsien nykyinen käyntimahdollisuus sekä pukeutumisohjeet etukäteen. Noudata liikenteessä erityistä varovaisuutta ja vältä mielenosoituksia ympäristöineen. Tarkista julkisten rakennusten kuvaamisohjeet ja varaa kävelyyn aikaa sekä taukoja.",
+      "recommendation": "Remove “Noudata liikenteessä erityistä varovaisuutta ja vältä mielenosoituksia ympäristöineen.” Keep concrete Tunis visit facts and site-specific instructions.",
+      "sourceSHA256AtAudit": "f17badc20bec43ba4e0744c0d803ade2280fd891de4b3864f3ee3b82dd393fa8",
+      "resolution": "resolved by current field change",
+      "stillPresentAtFollowupRead": false,
+      "current": "Aloita medinan kävely Bab el Bharin portilta ja tutustu Zitounan ympäristön kauppakujiin. Palatsien pihat avaavat toisen näkökulman vanhaan kaupunkiin. Varmista moskeijoiden ja palatsien nykyinen käyntimahdollisuus sekä pukeutumisohjeet etukäteen. Tarkista julkisten rakennusten kuvaamisohjeet ja varaa kävelyyn aikaa sekä taukoja."
+    },
+    {
+      "era": "e04",
+      "city": "tunis",
+      "sourcePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/tunis/sisalto.json",
+      "tokens": [
+        "kaupunkilehti",
+        0,
+        "matkailijalle",
+        "artikkeli",
+        "matkailu",
+        "hyvaTietaa",
+        3,
+        "teksti"
+      ],
+      "jsonPath": "$[\"kaupunkilehti\"][0][\"matkailijalle\"][\"artikkeli\"][\"matkailu\"][\"hyvaTietaa\"][3][\"teksti\"]",
+      "type": "duplicate citywide safety warning",
+      "reason": "Extra whole-city caution/demonstration advisory repeats official advisory.",
+      "old": "Noudata matkalla erityistä varovaisuutta ja vältä mielenosoituksia sekä niitä ympäröiviä väkijoukkoja.",
+      "recommendation": "Consolidate with hyvaTietaa[0], or replace this slot with local “Souk El Attarine on Zitounan pohjoispuolinen hajusteiden kauppakuja.”",
+      "sourceSHA256AtAudit": "f17badc20bec43ba4e0744c0d803ade2280fd891de4b3864f3ee3b82dd393fa8",
+      "resolution": "resolved by current field change",
+      "stillPresentAtFollowupRead": false,
+      "current": "Bab el Bhar avautuu medinan ja uudemman kaupungin rajalle; Kasbah on vanhan kaupungin hallinnollista ydintä."
+    },
+    {
+      "era": "e04",
+      "city": "tunis",
+      "sourcePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/tunis/sisalto.json",
+      "tokens": [
+        "nahtavyydet",
+        "Dar Lasram",
+        "kuvat",
+        0,
+        "lyhyt"
+      ],
+      "jsonPath": "$[\"nahtavyydet\"][\"Dar Lasram\"][\"kuvat\"][0][\"lyhyt\"]",
+      "type": "caption only history",
+      "reason": "Short caption states construction era rather than what source filename identifies in the image.",
+      "old": "Dar Lasramin palatsi rakennettiin 1800-luvun alkupuolella.",
+      "recommendation": "Dar Lasramin palatsin sisäänkäynti.",
+      "sourceSHA256AtAudit": "f17badc20bec43ba4e0744c0d803ade2280fd891de4b3864f3ee3b82dd393fa8",
+      "resolution": "resolved by current field change",
+      "stillPresentAtFollowupRead": false,
+      "current": "Dar Lasramin palatsin sisäänkäynti."
+    }
+  ],
+  "verifiedNotes": [
+    "All city IDs/country/era/pallo retained. Weather arrays, period, source and coordinates retained; Lusaka weather luonnehdinta changed only to improve language. Nouakchott remains null.",
+    "Nouakchott new five map subjects are real named places, not city-coordinate fillers; port/stadium source HTML and old museum/market source caches support the functional text.",
+    "Juovakeltti is correct Finnish for Mugil cephalus; current EU official commercial names confirms https://fish-commercial-names.ec.europa.eu/fish-names/species/mugil-cephalus_en .",
+    "No accepted images, QA records, posts, Git or integration sidecars changed by this audit.",
+    "Final fresh93-file sweep: zero yearspace/soft-hyphen/double-space/sentence-space findings; zero identical short/long captions; zero protected city/weather data differences. All45 observed residual field findings resolved.",
+    "Root cleared all15 documented exact heldC role/file leaves. Current93 QA scan has no remaining blocked/rejected exact C file matches; historical QA is retained, no new personal visual approval claimed.",
+    "Bissau Pidjiguiti date antecedent restored explicitly to grandfather frame1873; this is source-backed by existing historical-port facts."
+  ],
+  "pending": [
+    "Claude Sisältökirjuri independent two-cities-per-era resample remains separate and required before game integration.",
+    "Media/source/caption rebind at newtask118 snapshot, missing media/map/weather gates, game integration and publication remain separately evidenced."
+  ],
+  "sourceReview": [
+    "valiaikainen/nouakchott-A/fao-manual.txt (grain transport lines405–423; coastal species lines836–837,1251)",
+    "valiaikainen/nopea-e08-portlouis/port-louis.txt National Library collection paragraph",
+    "task118/nouakchott-port-de.html opening1986 and exact coordinates; stadium-fr HTML 1983/athletics/function",
+    "https://de.wikipedia.org/wiki/Nouakchott local Marché Capitale and stadium music/address details verified live",
+    "Brasília official ANTT 2010 interstate-terminal move; recent ANTT2025 inspection-office continuity at Rodoviária Interestadual. Source URLs in factual finding recommendations/report evidence.",
+    "banjul-A: Gambia National Museum cached page vs official NCAC oralarchive source B9",
+    "bissau-A: English museum stub vs Portuguese museum-pt.txt and official museum-camoes.txt proof-digitisation story",
+    "praia-A: Praia cache only Beagle arrival; Darwin original P13 supports shell/lava layer",
+    "conakry-A: en iles-en.txt and fr los-fr.txt directly support syenite, magma intrusion/ring structure; no factual defect there"
+  ],
+  "updatedAt": "2026-10-13T16:35:21.055546+00:00",
+  "knownTopicShiftMediaHolds": [
+    {
+      "era": "e09",
+      "city": "dhaka",
+      "role": "K2",
+      "targetJsonPath": "$.kaupunkilehti[0].nostot[1]",
+      "oldTopic": "Liikkuva kuvakertomus",
+      "newTopic": "Kauppiaat jäivät kadunnimiin",
+      "currentCFile": "",
+      "holdOldAsset": true,
+      "reason": "Changed story topic or changed subject emphasis; prior illustration must not inherit acceptance at the new text snapshot without current subject QA."
+    },
+    {
+      "era": "e14",
+      "city": "canberra",
+      "role": "K1",
+      "targetJsonPath": "$.kaupunkilehti[0].nostot[0]",
+      "oldTopic": "Pääkaupunki, jota kumpikaan ei saanut",
+      "newTopic": "Kirkko ja koulu ennen pääkaupunkia",
+      "currentCFile": "",
+      "holdOldAsset": true,
+      "reason": "Changed story topic or changed subject emphasis; prior illustration must not inherit acceptance at the new text snapshot without current subject QA."
+    },
+    {
+      "era": "e12",
+      "city": "kingstown",
+      "role": "K1",
+      "targetJsonPath": "$.kaupunkilehti[0].nostot[0]",
+      "oldTopic": "Kaarien kaupunki",
+      "newTopic": "Kaarien kaupunki",
+      "currentCFile": "",
+      "holdOldAsset": true,
+      "reason": "Changed story topic or changed subject emphasis; prior illustration must not inherit acceptance at the new text snapshot without current subject QA."
+    },
+    {
+      "era": "e04",
+      "city": "monrovia",
+      "role": "K4",
+      "targetJsonPath": "$.kaupunkilehti[0].nostot[3]",
+      "oldTopic": "Samassa kaupungissa on myös falafelia",
+      "newTopic": "Keskusta jatkuu veden toisella puolella",
+      "currentCFile": null,
+      "holdOldAsset": true,
+      "reason": "Changed story topic or changed subject emphasis; prior illustration must not inherit acceptance at the new text snapshot without current subject QA."
+    },
+    {
+      "era": "e04",
+      "city": "nouakchott",
+      "role": "K4",
+      "targetJsonPath": "$.kaupunkilehti[0].nostot[3]",
+      "oldTopic": "Teen vaahto tehdään kaatamalla",
+      "newTopic": "Syväsatama rakennettiin avoimelle rannikolle",
+      "currentCFile": "",
+      "holdOldAsset": true,
+      "reason": "Changed story topic or changed subject emphasis; prior illustration must not inherit acceptance at the new text snapshot without current subject QA."
+    }
+  ],
+  "freshMechanicalResults": {
+    "yearSpacesSoftHyphensDoubleSpacesSentenceSpaceFindings": [],
+    "identicalShortLongCaptions": [],
+    "protectedCityWeatherDataDiffs": [],
+    "weatherLuonnehdintaLanguageChangeAllowed": [
+      "lusaka"
+    ]
+  },
+  "openResidualTextFields": [],
+  "scopeLimitations": [
+    "Full current93 text/quiz/caption screening completed, with beforebaseline comparisons and source-cache challenges. Not all465 quiz URLs were downloaded anew; selected factual/source conflicts were checked directly.",
+    "This internal read-only audit is not Claude Sisältökirjuri independent resample and is not a new visualQA approval.",
+    "Only audit JSON/Markdown files were written. C/Git/QA/native images/sidecars and immutable approved1040 post were not edited by this audit."
+  ],
+  "brasiliaOfficialSources": [
+    "https://www.gov.br/antt/pt-br/assuntos/noticias/novo-terminal-rodoviario-de-brasilia-comeca-a-operar-em-25-de-julho",
+    "https://www.gov.br/antt/pt-br/assuntos/ultimas-noticias/antt-inaugura-o-novo-local-do-escritorio-de-fiscalizacao-em-brasilia-df"
+  ],
+  "completeReadOnlyAudit": true,
+  "phase": "complete93-final-stable-snapshot",
+  "extraFiveFindings": [
+    {
+      "era": "e04",
+      "city": "banjul",
+      "sourcePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/banjul/sisalto.json",
+      "tokens": [
+        "nahtavyydet",
+        "Albertin tori",
+        "teksti"
+      ],
+      "jsonPath": "$[\"nahtavyydet\"][\"Albertin tori\"][\"teksti\"]",
+      "type": "production meta",
+      "reason": "Paragraph explains what writers cannot infer about current stall ages instead of local history.",
+      "old": "Albertin tori kuuluu Banjulin vanhan saarikaupungin asiointipaikkoihin. Liberation Avenuella sijaitseva katutori tunnettiin aiemmin virallisella nimellä Royal Albert Market. Nykyinen tiheä kojujen ja käytävien ympäristö on kauppapaikka, jossa historiallinen nimi on osa tämän päivän katukuvaa.\n\nTorin alku ajoittuu 1800-luvun puoliväliin, ja nimi tulee kuningatar Victorian puolisosta prinssi Albertista. Isoisän matkavuonna 1873 tori oli siten jo olemassa. Nykyisten myyntipöytien, katosten tai kylttien ikää ei kuitenkaan voi lukea kauppapaikan perustamisesta, eikä vanha nimi kerro jokaisen nykyisen kojun tavarasta tai pitäjästä.\n\nAlbertin tori sijaitsee varsinaisessa Banjulissa, St Mary's -saaren kaupungissa. Serrekundan markkinat sijaitsevat mantereella eri paikkakunnalla kuin Albertin tori. Saarikaupungin historia ja paikallinen kaupankäynti kohtaavat samalla torialueella.",
+      "recommendation": "Remove the sentence beginning “Nykyisten myyntipöytien, katosten tai kylttien ikää…”; retain documented market foundation/name/1873 facts.",
+      "sourceSHA256AtAudit": "8642cb8fe34d30d41dd1ab7ae36be63e1db697854cb13f2f9fce05db0021eeb7",
+      "resolution": "resolved by current field change",
+      "stillPresentAtFollowupRead": false,
+      "current": "Albertin tori kuuluu Banjulin vanhan saarikaupungin asiointipaikkoihin. Liberation Avenuella sijaitseva katutori tunnettiin aiemmin virallisella nimellä Royal Albert Market. Nykyinen tiheä kojujen ja käytävien ympäristö on kauppapaikka, jossa historiallinen nimi on osa tämän päivän katukuvaa.\n\nTorin alku ajoittuu 1800-luvun puoliväliin, ja nimi tulee kuningatar Victorian puolisosta prinssi Albertista. Isoisän matkavuonna 1873 tori oli siten jo olemassa.\n\nAlbertin tori sijaitsee varsinaisessa Banjulissa, St Mary's -saaren kaupungissa. Serrekundan markkinat sijaitsevat mantereella eri paikkakunnalla kuin Albertin tori. Saarikaupungin historia ja paikallinen kaupankäynti kohtaavat samalla torialueella."
+    },
+    {
+      "era": "e04",
+      "city": "banjul",
+      "sourcePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/banjul/sisalto.json",
+      "tokens": [
+        "nahtavyydet",
+        "Tanbin kosteikko",
+        "teksti"
+      ],
+      "jsonPath": "$[\"nahtavyydet\"][\"Tanbin kosteikko\"][\"teksti\"]",
+      "type": "production meta",
+      "reason": "1873 vegetation/channel verification limitations are production commentary.",
+      "old": "Tanbi levittäytyy Banjulin länsi- ja lounaispuolen rannoille Gambia-joen suun tuntumaan. Mangrovekasvillisuus, vuorovesikanavat, laguunit ja liejuiset pinnat muodostavat yhtenäisen rannikkokosteikon. Kosteikon luontopaikat ulottuvat laajalle kaupungin vierellä ja rannikon suunnassa.\n\nKosteikolla on monta tehtävää samanaikaisesti. Se vastaanottaa vettä, osallistuu rannan vakauttamiseen ja sedimenttien liikkeeseen sekä toimii kaupungin hydrologisena puskurina. Linnuille ja muille kosteikkoeläimille se on elinympäristö, ja paikalliseen työhön kuuluvat kalastus, osterin keruu sekä viljely reuna-alueilla. Tanbi on myös Ramsar-kohde.\n\nNykyinen suojelustatus kuuluu myöhempään aikaan kuin isoisän matkavuosi 1873. Vuoden 1873 kasvillisuuden tarkka laajuus ja kanavien tila ovat epävarmoja; nykyiset rajat ja retkipalvelut eivät kuvaa matkavuoden tilannetta. Rannikkoluonnon merkitys näkyy yhä siinä, kuinka vesi, elinkeinot ja eläinten ympäristö kohtaavat kaupungin vierellä.",
+      "recommendation": "Remove “Vuoden 1873 kasvillisuuden tarkka laajuus ja kanavien tila ovat epävarmoja; nykyiset rajat ja retkipalvelut eivät kuvaa matkavuoden tilannetta.” Keep historical Ramsar contrast and local wetland facts.",
+      "sourceSHA256AtAudit": "8642cb8fe34d30d41dd1ab7ae36be63e1db697854cb13f2f9fce05db0021eeb7",
+      "resolution": "resolved by current field change",
+      "stillPresentAtFollowupRead": false,
+      "current": "Tanbi levittäytyy Banjulin länsi- ja lounaispuolen rannoille Gambia-joen suun tuntumaan. Mangrovekasvillisuus, vuorovesikanavat, laguunit ja liejuiset pinnat muodostavat yhtenäisen rannikkokosteikon. Kosteikon luontopaikat ulottuvat laajalle kaupungin vierellä ja rannikon suunnassa.\n\nKosteikolla on monta tehtävää samanaikaisesti. Se vastaanottaa vettä, osallistuu rannan vakauttamiseen ja sedimenttien liikkeeseen sekä toimii kaupungin hydrologisena puskurina. Linnuille ja muille kosteikkoeläimille se on elinympäristö, ja paikalliseen työhön kuuluvat kalastus, osterin keruu sekä viljely reuna-alueilla. Tanbi on myös Ramsar-kohde.\n\nNykyinen suojelustatus kuuluu myöhempään aikaan kuin isoisän matkavuosi 1873. Rannikkoluonnon merkitys näkyy yhä siinä, kuinka vesi, elinkeinot ja eläinten ympäristö kohtaavat kaupungin vierellä."
+    },
+    {
+      "era": "e04",
+      "city": "banjul",
+      "sourcePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/banjul/sisalto.json",
+      "tokens": [
+        "kaupunkilehti",
+        0,
+        "matkailijalle",
+        "kappale"
+      ],
+      "jsonPath": "$[\"kaupunkilehti\"][0][\"matkailijalle\"][\"kappale\"]",
+      "type": "duplicate citywide safety warning",
+      "reason": "Citywide caution/night-transport warning repeats the official advisory already consolidated in hyvaTietaa[0].",
+      "old": "Banjulin torikaduille tullessa kannattaa erottaa saarikaupunki mantereen majoitusalueista. Albertin tori, kansallismuseo ja jokisuun näkymät muodostavat oman kaupunkiretken, jota voi täydentää sovitulla Tanbin luontokäynnillä. Banjul–Barra-lautta vie joen toiselle rannalle, mutta kulkujärjestelyt tarkistetaan ennen matkaa. Liikenteessä tarvitaan erityistä varovaisuutta ja pimeän ajan kuljetus on hyvä sopia etukäteen. Jokisuun ranta liittyy lauttaliikenteeseen ja kosteikon ympäristöön.",
+      "recommendation": "Remove “Liikenteessä tarvitaan erityistä varovaisuutta ja pimeän ajan kuljetus on hyvä sopia etukäteen.” Keep concrete Banjul itinerary/boat planning.",
+      "sourceSHA256AtAudit": "8642cb8fe34d30d41dd1ab7ae36be63e1db697854cb13f2f9fce05db0021eeb7",
+      "resolution": "resolved by current field change",
+      "stillPresentAtFollowupRead": false,
+      "current": "Banjulin torikaduille tullessa kannattaa erottaa saarikaupunki mantereen majoitusalueista. Albertin tori, kansallismuseo ja jokisuun näkymät muodostavat oman kaupunkiretken, jota voi täydentää sovitulla Tanbin luontokäynnillä. Banjul–Barra-lautta vie joen toiselle rannalle, mutta kulkujärjestelyt tarkistetaan ennen matkaa. Jokisuun ranta liittyy lauttaliikenteeseen ja kosteikon ympäristöön."
+    },
+    {
+      "era": "e04",
+      "city": "banjul",
+      "sourcePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/banjul/sisalto.json",
+      "tokens": [
+        "kaupunkilehti",
+        0,
+        "nostot",
+        3,
+        "wiki"
+      ],
+      "jsonPath": "$[\"kaupunkilehti\"][0][\"nostot\"][3][\"wiki\"]",
+      "type": "source pointer mismatch",
+      "reason": "Museum English cache discusses photo archive/NCAC administration but not oral history collection. Actual source B9 is NCAC oralarchive official page.",
+      "old": "Gambia National Museum",
+      "recommendation": "Remove wiki=Gambia National Museum; preserve textual citation https://ncac.gm/oralarchieve/ in source references. Existing quiz source already correct.",
+      "sourceSHA256AtAudit": "8642cb8fe34d30d41dd1ab7ae36be63e1db697854cb13f2f9fce05db0021eeb7",
+      "resolution": "resolved by current field change",
+      "stillPresentAtFollowupRead": false,
+      "current": "<field removed>"
+    },
+    {
+      "era": "e04",
+      "city": "bissau",
+      "sourcePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/bissau/sisalto.json",
+      "tokens": [
+        "nahtavyydet",
+        "Tulliaukio",
+        "aika"
+      ],
+      "jsonPath": "$[\"nahtavyydet\"][\"Tulliaukio\"][\"aika\"]",
+      "type": "production status in player field",
+      "reason": "Unverified-year status appears in sight age label.",
+      "old": "Tarkka kehitysvuosi vahvistamatta",
+      "recommendation": "Vanhan satamaytimen aukio",
+      "sourceSHA256AtAudit": "2e3808ca35a27419edcee6e3253610dcbf621fb283746e09bb0f72673dac6db4",
+      "resolution": "resolved by current field change",
+      "stillPresentAtFollowupRead": false,
+      "current": "Vanhan satamaytimen aukio"
+    },
+    {
+      "era": "e04",
+      "city": "bissau",
+      "sourcePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/bissau/sisalto.json",
+      "tokens": [
+        "nahtavyydet",
+        "Tulliaukio",
+        "teksti"
+      ],
+      "jsonPath": "$[\"nahtavyydet\"][\"Tulliaukio\"][\"teksti\"]",
+      "type": "production meta",
+      "reason": "Final paragraph begins an unverified1873/age proof-status sentence.",
+      "old": "Praça da Alfândega, suomeksi Tulliaukio, sijaitsee Amuran linnoituksen itäpuolella Bissaun vanhassa satamaytimessä. Paikka on aukio ja myös puutarhatilaa. Sen nimi viittaa Bissaun tullitaloon: portugalin alfândega tarkoittaa tullia. Aukio ja nimessä mainittu rakennus ovat erillisiä paikkoja.\n\nTullitalojen yleinen tehtävä liittyy maahan tulevien ja sieltä lähtevien tavaroiden käsittelyyn. Nimi kytkee tämän kaupunkitilan sataman kautta kulkevaan kaupankäyntiin. Linnoitus, laiturit ja tulliin viittaava aukio kertovat saman vanhan ytimen eri tehtävistä.\n\nAukion tarkkaa kehitysvuotta ja sen asua vuonna 1873 ei ole vahvistettu. Aukion yhteys tullitaloon ja satamaan säilyy nimessä. Linnoitus, laiturit ja tulliin liittyvä aukio edustavat lähekkäin kauppasataman eri toimintoja.",
+      "recommendation": "Remove “Aukion tarkkaa kehitysvuotta ja sen asua vuonna 1873 ei ole vahvistettu.” Retain documented plaza/custom-house relationship; do not invent date.",
+      "sourceSHA256AtAudit": "2e3808ca35a27419edcee6e3253610dcbf621fb283746e09bb0f72673dac6db4",
+      "resolution": "resolved by current field change",
+      "stillPresentAtFollowupRead": false,
+      "current": "Praça da Alfândega, suomeksi Tulliaukio, sijaitsee Amuran linnoituksen itäpuolella Bissaun vanhassa satamaytimessä. Paikka on aukio ja myös puutarhatilaa. Sen nimi viittaa Bissaun tullitaloon: portugalin alfândega tarkoittaa tullia. Aukio ja nimessä mainittu rakennus ovat erillisiä paikkoja.\n\nTullitalojen yleinen tehtävä liittyy maahan tulevien ja sieltä lähtevien tavaroiden käsittelyyn. Nimi kytkee tämän kaupunkitilan sataman kautta kulkevaan kaupankäyntiin. Linnoitus, laiturit ja tulliin viittaava aukio kertovat saman vanhan ytimen eri tehtävistä.\n\nAukion yhteys tullitaloon ja satamaan säilyy nimessä. Linnoitus, laiturit ja tulliin liittyvä aukio edustavat lähekkäin kauppasataman eri toimintoja."
+    },
+    {
+      "era": "e04",
+      "city": "bissau",
+      "sourcePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/bissau/sisalto.json",
+      "tokens": [
+        "nahtavyydet",
+        "Pidjiguitin laituri",
+        "teksti"
+      ],
+      "jsonPath": "$[\"nahtavyydet\"][\"Pidjiguitin laituri\"][\"teksti\"]",
+      "type": "production meta",
+      "reason": "Source-chronology limitation “ei ole ajoitettu” is authoring commentary.",
+      "old": "Pidjiguiti on tunnistettu laituripaikka Bissaun satamassa. Sen julkinen laiturivaihe kuuluu 1800-luvun loppupuolelle. Varhaisessa rakenteessa yhdistettiin puuta ja muurausta, ja paikka tunnettiin nimellä Ponte-cais Correia e Lança. Sataman ja laiturin tarinat alkavat kuitenkin eri kohdista.\n\nBissaussa käytiin satamakauppaa jo ennen tätä julkista laituria. Satamassa oli myös yritysten käyttämiä puisia lastaus- ja maihinnousulaitureita, mutta niiden tarkkaa tilannetta isoisän matkavuonna 1873 ei ole ajoitettu. Bissau oli tuolloin jo kauppapaikka, kun taas Pidjiguitin julkisen laiturin rakennusvaihe kuuluu myöhempään aikaan.\n\nMyöhemmin Bissaun sataman muualle rakennettiin uudempia laitureita. Ne kuuluvat saman sataman historiaan mutta ovat eri paikkoja kuin vanha Pidjiguiti. Laiturin nimi kohdistuu alusten ja tavaroiden maihin kytkeytyvään työympäristöön. Sen vaiheita voi seurata erottamalla vanhan satamapaikan, julkisen laiturin ja myöhemmän satamainfrastruktuurin toisistaan.",
+      "recommendation": "Remove only “, mutta niiden tarkkaa tilannetta isoisän matkavuonna 1873 ei ole ajoitettu”; keep earlier wooden wharves and later public-pier chronology.",
+      "sourceSHA256AtAudit": "2e3808ca35a27419edcee6e3253610dcbf621fb283746e09bb0f72673dac6db4",
+      "resolution": "resolved by current field change",
+      "stillPresentAtFollowupRead": false,
+      "current": "Pidjiguiti on tunnistettu laituripaikka Bissaun satamassa. Sen julkinen laiturivaihe kuuluu 1800-luvun loppupuolelle. Varhaisessa rakenteessa yhdistettiin puuta ja muurausta, ja paikka tunnettiin nimellä Ponte-cais Correia e Lança. Sataman ja laiturin tarinat alkavat kuitenkin eri kohdista.\n\nBissaussa käytiin satamakauppaa jo ennen tätä julkista laituria. Satamassa oli myös yritysten käyttämiä puisia lastaus- ja maihinnousulaitureita. Isoisän matkavuonna 1873 Bissau oli jo kauppapaikka, kun taas Pidjiguitin julkisen laiturin rakennusvaihe kuuluu myöhempään aikaan.\n\nMyöhemmin Bissaun sataman muualle rakennettiin uudempia laitureita. Ne kuuluvat saman sataman historiaan mutta ovat eri paikkoja kuin vanha Pidjiguiti. Laiturin nimi kohdistuu alusten ja tavaroiden maihin kytkeytyvään työympäristöön. Sen vaiheita voi seurata erottamalla vanhan satamapaikan, julkisen laiturin ja myöhemmän satamainfrastruktuurin toisistaan."
+    },
+    {
+      "era": "e04",
+      "city": "bissau",
+      "sourcePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/bissau/sisalto.json",
+      "tokens": [
+        "kaupunkilehti",
+        0,
+        "nostot",
+        3,
+        "wiki"
+      ],
+      "jsonPath": "$[\"kaupunkilehti\"][0][\"nostot\"][3][\"wiki\"]",
+      "type": "source pointer mismatch",
+      "reason": "English museum stub only1040 characters omits contact-proof digitisation story; actual cache museum-pt.txt and museum-camoes.txt supports it.",
+      "old": "National Ethnographic Museum (Guinea-Bissau)",
+      "recommendation": "Remove misleading English wiki pointer; preserve https://pt.wikipedia.org/wiki/Museu_Etnogr%C3%A1fico_Nacional_da_Guin%C3%A9-Bissau and official Camões source S9. Quiz source is already correct.",
+      "sourceSHA256AtAudit": "2e3808ca35a27419edcee6e3253610dcbf621fb283746e09bb0f72673dac6db4",
+      "resolution": "resolved by current field change",
+      "stillPresentAtFollowupRead": false,
+      "current": "<field removed>"
+    },
+    {
+      "era": "e04",
+      "city": "bissau",
+      "sourcePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/bissau/sisalto.json",
+      "tokens": [
+        "kaupunkilehti",
+        1,
+        "tehtava",
+        "vaihtoehdot"
+      ],
+      "jsonPath": "$[\"kaupunkilehti\"][1][\"tehtava\"][\"vaihtoehdot\"]",
+      "type": "implausible quiz distractors",
+      "reason": "Astronomy and airport are unrelated customs-square translation alternatives.",
+      "old": [
+        "Tulliin",
+        "Kalastajakiltaan",
+        "Tähtitieteeseen",
+        "Lentoasemaan"
+      ],
+      "recommendation": [
+        "Tulliin",
+        "Kauppahalliin",
+        "Satamalaituriin",
+        "Kaupungintaloon"
+      ],
+      "sourceSHA256AtAudit": "2e3808ca35a27419edcee6e3253610dcbf621fb283746e09bb0f72673dac6db4",
+      "resolution": "resolved by current field change",
+      "stillPresentAtFollowupRead": false,
+      "current": [
+        "Tulliin",
+        "Kauppahalliin",
+        "Satamalaituriin",
+        "Kaupungintaloon"
+      ]
+    },
+    {
+      "era": "e04",
+      "city": "bissau",
+      "sourcePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/bissau/sisalto.json",
+      "tokens": [
+        "kaupunkilehti",
+        0,
+        "matkailijalle",
+        "artikkeli",
+        "nosto"
+      ],
+      "jsonPath": "$[\"kaupunkilehti\"][0][\"matkailijalle\"][\"artikkeli\"][\"nosto\"]",
+      "type": "generic filler and repeated instruction",
+      "reason": "Only generic travel logistics, repeated by traveller paragraph; no Bissau-specific story.",
+      "old": "Suunnittele kuljetukset huolellisesti ja varmista vierailupaikkojen tämänhetkinen pääsy.",
+      "recommendation": "Bissau Velhon taloissa jatkuu asiointi. Bandimin tori ja Pidjiguitin vanha laituripaikka näyttävät satamakaupungin eri puolia.",
+      "sourceSHA256AtAudit": "2e3808ca35a27419edcee6e3253610dcbf621fb283746e09bb0f72673dac6db4",
+      "resolution": "resolved by current field change",
+      "stillPresentAtFollowupRead": false,
+      "current": "Bissau Velhon taloissa jatkuu asiointi. Bandimin tori ja Pidjiguitin vanha laituripaikka näyttävät satamakaupungin eri puolia."
+    },
+    {
+      "era": "e04",
+      "city": "conakry",
+      "sourcePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/conakry/sisalto.json",
+      "tokens": [
+        "nahtavyydet",
+        "Camayennen kasvitieteellinen puutarha",
+        "teksti"
+      ],
+      "jsonPath": "$[\"nahtavyydet\"][\"Camayennen kasvitieteellinen puutarha\"][\"teksti\"]",
+      "type": "adjacent duplicated fact and source-process wording",
+      "reason": "Two adjacent sentences repeat1800s founding, followed by “Puutarhan historiaa kuvaava lähde kertoo…” wrapper.",
+      "old": "Camayennen kasvitieteellinen puutarha sijaitsee Conakryn Camayennen kaupunginosassa. Puutarha tunnetaan kapokkipuista. Ambroise Paré -sairaala jää sen eteläpuolelle ja Conakryn suuri moskeija pohjoispuolelle. Sijainti asettaa puutarhan keskelle rakennettua ja käytettyä kaupunkia.\n\nRanskalaiset perustivat puutarhan 1800-luvun lopulla. Puutarha perustettiin 1800-luvun lopulla uuden kaupungin rakentamisen yhteydessä. Vuonna 1873 tätä puutarhaa ei vielä ollut. Suuret puut kertovat luontopaikasta, jonka ympärille pääkaupunki on jatkanut kasvuaan.\n\nPuutarhan historiaa kuvaava lähde kertoo alueen pienentyneen kaupungin kasvun yhteydessä. Puutarhan ja sitä ympäröivien katujen mittakaavat ovat näin muuttuneet rinnakkain. Puutarhan tämänhetkinen vierailujärjestely on varmistettava erikseen.",
+      "recommendation": "Merge to “Ranskalaiset perustivat puutarhan 1800-luvun lopulla uuden kaupungin rakentamisen yhteydessä.” Replace source wrapper with “Puutarhan alue pienentyi kaupungin kasvun yhteydessä.”",
+      "sourceSHA256AtAudit": "703d5d3847ce886664e9d5ba39b06d24565c8883f530b2ddd7a281eecf635ef0",
+      "resolution": "resolved by current field change",
+      "stillPresentAtFollowupRead": false,
+      "current": "Camayennen kasvitieteellinen puutarha sijaitsee Conakryn Camayennen kaupunginosassa. Puutarha tunnetaan kapokkipuista. Ambroise Paré -sairaala jää sen eteläpuolelle ja Conakryn suuri moskeija pohjoispuolelle. Sijainti asettaa puutarhan keskelle rakennettua ja käytettyä kaupunkia.\n\nRanskalaiset perustivat puutarhan 1800-luvun lopulla uuden kaupungin rakentamisen yhteydessä. Vuonna 1873 tätä puutarhaa ei vielä ollut. Suuret puut kertovat luontopaikasta, jonka ympärille pääkaupunki on jatkanut kasvuaan.\n\nPuutarhan alue on pienentynyt kaupungin kasvun yhteydessä. Puutarhan ja sitä ympäröivien katujen mittakaavat ovat näin muuttuneet rinnakkain."
+    },
+    {
+      "era": "e04",
+      "city": "conakry",
+      "sourcePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/conakry/sisalto.json",
+      "tokens": [
+        "kaupunkilehti",
+        0,
+        "nostot",
+        3,
+        "lyhyt"
+      ],
+      "jsonPath": "$[\"kaupunkilehti\"][0][\"nostot\"][3][\"lyhyt\"]",
+      "type": "caption copied story title and wrong specificity",
+      "reason": "Short caption copies heading and suggests multiple city trees; actual file/long caption is one kapok tree in Cuba.",
+      "old": "Kapokkipuut keskellä kaupunkia.",
+      "recommendation": "Kapokkipuu Kuubassa vuonna 2019.",
+      "sourceSHA256AtAudit": "703d5d3847ce886664e9d5ba39b06d24565c8883f530b2ddd7a281eecf635ef0",
+      "resolution": "resolved by current field change",
+      "stillPresentAtFollowupRead": false,
+      "current": "Kapokkipuu Kuubassa vuonna 2019."
+    },
+    {
+      "era": "e04",
+      "city": "conakry",
+      "sourcePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/conakry/sisalto.json",
+      "tokens": [
+        "nahtavyydet",
+        "Tamaran saari",
+        "teksti"
+      ],
+      "jsonPath": "$[\"nahtavyydet\"][\"Tamaran saari\"][\"teksti\"]",
+      "type": "production imperative",
+      "reason": "“Ei siirretä tämän matkavuoden näkymään” directs writing instead of describing timeline.",
+      "old": "Tamara sijaitsee Los-saariston läntisellä laidalla. Pitkä kaareva saari muodostaa Kassan kanssa Roumea ympäröivän saaristokehän. Tamara tunnetaan myös nimellä Fotoba; nimen Fortoba-kirjoitusasu esiintyy osassa lähteitä. Kaareva muoto ja sijainti erottavat sen saariston keskellä olevasta Roumesta.\n\nSaariston luonnonmaisemaan kuuluvat rannat ja metsäiset sisäosat. Tamaran historiassa on myös 1900-luvun bauksiittikaivostoimintaa. Saareen liittyvät merenkulun majakka ja Fotoban entinen vankila ovat myöhempien rakennettujen paikkojen historiaa. \n\nVuonna 1873 Tamara kuului Britannian hallitsemaan saaristoon. Myöhempiä kaivoksia ja rakennuksia ei siirretä tämän matkavuoden näkymään. Luonnonpaikkana saari on ollut olemassa ennen nykyistä Conakrya. Sen rannat ovat osa saaristokokonaisuutta, jonka ulkokaari avautuu kaupungin edustan merimaisemaan.",
+      "recommendation": "Remove only “Myöhempiä kaivoksia ja rakennuksia ei siirretä tämän matkavuoden näkymään.” Keep actual British-era and twentieth-century mining timeline.",
+      "sourceSHA256AtAudit": "703d5d3847ce886664e9d5ba39b06d24565c8883f530b2ddd7a281eecf635ef0",
+      "resolution": "resolved by current field change",
+      "stillPresentAtFollowupRead": false,
+      "current": "Tamara sijaitsee Los-saariston läntisellä laidalla. Pitkä kaareva saari muodostaa Kassan kanssa Roumea ympäröivän saaristokehän. Tamara tunnetaan myös nimellä Fotoba; nimen Fortoba-kirjoitusasu esiintyy osassa lähteitä. Kaareva muoto ja sijainti erottavat sen saariston keskellä olevasta Roumesta.\n\nSaariston luonnonmaisemaan kuuluvat rannat ja metsäiset sisäosat. Tamaran historiassa on myös 1900-luvun bauksiittikaivostoimintaa. Saareen liittyvät merenkulun majakka ja Fotoban entinen vankila ovat myöhempien rakennettujen paikkojen historiaa. \n\nVuonna 1873 Tamara kuului Britannian hallitsemaan saaristoon. Luonnonpaikkana saari on ollut olemassa ennen nykyistä Conakrya. Sen rannat ovat osa saaristokokonaisuutta, jonka ulkokaari avautuu kaupungin edustan merimaisemaan."
+    },
+    {
+      "era": "e04",
+      "city": "praia",
+      "sourcePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/praia/sisalto.json",
+      "tokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        2,
+        "wiki"
+      ],
+      "jsonPath": "$[\"kaupunkilehti\"][1][\"nostot\"][2][\"wiki\"]",
+      "type": "source pointer mismatch",
+      "reason": "Cached en-Praia only notes Beagle stop, no shell/lava details. Actual P13 is Darwin original Chapter1.",
+      "old": "Praia",
+      "recommendation": "Remove wiki=Praia; preserve actual original Darwin Chapter1 citation from factual-source pack P13.",
+      "sourceSHA256AtAudit": "278930fe54e023b7288e82ba31708795393177a294d5d5409d258625c50d4087",
+      "resolution": "resolved by current field change",
+      "stillPresentAtFollowupRead": false,
+      "current": "<field removed>"
+    },
+    {
+      "era": "e04",
+      "city": "praia",
+      "sourcePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/praia/sisalto.json",
+      "tokens": [
+        "kysymykset",
+        3
+      ],
+      "jsonPath": "$[\"kysymykset\"][3]",
+      "type": "implausible generic quiz distractors",
+      "reason": "Lighthouse-function alternatives load cargo/store rainwater/weigh fish are absurd; use current source-supported local-place question.",
+      "old": {
+        "q": "Mikä on Maria Pian majakan tehtävä?",
+        "options": [
+          "Merenkulun suunnistus",
+          "Tavaralaivojen lastaus",
+          "Sadeveden varastointi",
+          "Kalasaaliin punnitus"
+        ],
+        "correct": 0,
+        "level": 2,
+        "hint": "Rakennus sijaitsee lahden sisääntulossa.",
+        "fact": "Majakka palvelee navigointia.",
+        "source": "https://en.wikipedia.org/wiki/Dona_Maria_Pia_Lighthouse"
+      },
+      "recommendation": "q “Missä Praian Maria Pian majakka sijaitsee?” options “Ponta Temerosa -niemellä / Plateau-tasanteella / Santa Marian luodolla / Gamboan rannalla”; correct0; hint “Majakka on Praian lahden sisääntulossa.” Keep source Dona Maria Pia Lighthouse.",
+      "sourceSHA256AtAudit": "278930fe54e023b7288e82ba31708795393177a294d5d5409d258625c50d4087",
+      "resolution": "resolved by current field change",
+      "stillPresentAtFollowupRead": false,
+      "current": {
+        "q": "Missä Praian Maria Pian majakka sijaitsee?",
+        "options": [
+          "Ponta Temerosassa",
+          "Plateau-keskustassa",
+          "Santa Marian luodolla",
+          "Gamboan rannalla"
+        ],
+        "correct": 0,
+        "level": 2,
+        "hint": "Majakka merkitsee kaupungin lahden sisääntuloa.",
+        "fact": "Maria Pian majakka sijaitsee Ponta Temerosa -niemellä Praian satamalahden sisääntulossa.",
+        "source": "https://en.wikipedia.org/wiki/Dona_Maria_Pia_Lighthouse"
+      }
+    },
+    {
+      "era": "e04",
+      "city": "praia",
+      "sourcePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/praia/sisalto.json",
+      "tokens": [
+        "kaupunkilehti",
+        1,
+        "tehtava",
+        "vaihtoehdot"
+      ],
+      "jsonPath": "$[\"kaupunkilehti\"][1][\"tehtava\"][\"vaihtoehdot\"]",
+      "type": "implausible ancient-geology distractor",
+      "reason": "Ship nails are an absurd alternative for Darwin ancientmarine/calcareous white-layer finding.",
+      "old": [
+        "Simpukankuoria",
+        "Laivojen rautanauloja",
+        "Mustia hiilikappaleita",
+        "Puiden lehtiä"
+      ],
+      "recommendation": [
+        "Simpukankuoria",
+        "Basalttikiteitä",
+        "Kvartsirakeita",
+        "Graniittisoraa"
+      ],
+      "sourceSHA256AtAudit": "278930fe54e023b7288e82ba31708795393177a294d5d5409d258625c50d4087",
+      "resolution": "resolved by current field change",
+      "stillPresentAtFollowupRead": false,
+      "current": [
+        "Simpukankuoria",
+        "Basalttikiteitä",
+        "Kvartsirakeita",
+        "Graniittisoraa"
+      ]
+    },
+    {
+      "era": "e04",
+      "city": "tunis",
+      "sourcePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/tunis/sisalto.json",
+      "tokens": [
+        "kaupunkilehti",
+        0,
+        "matkailijalle",
+        "kappale"
+      ],
+      "jsonPath": "$[\"kaupunkilehti\"][0][\"matkailijalle\"][\"kappale\"]",
+      "type": "duplicate citywide safety warning",
+      "reason": "Caution and demonstration warning also repeated in hyvaTietaa[3], with official advisory already hyvaTietaa[0].",
+      "old": "Aloita medinan kävely Bab el Bharin portilta ja tutustu Zitounan ympäristön kauppakujiin. Palatsien pihat avaavat toisen näkökulman vanhaan kaupunkiin. Varmista moskeijoiden ja palatsien nykyinen käyntimahdollisuus sekä pukeutumisohjeet etukäteen. Noudata liikenteessä erityistä varovaisuutta ja vältä mielenosoituksia ympäristöineen. Tarkista julkisten rakennusten kuvaamisohjeet ja varaa kävelyyn aikaa sekä taukoja.",
+      "recommendation": "Remove “Noudata liikenteessä erityistä varovaisuutta ja vältä mielenosoituksia ympäristöineen.” Keep concrete Tunis visit facts and site-specific instructions.",
+      "sourceSHA256AtAudit": "f17badc20bec43ba4e0744c0d803ade2280fd891de4b3864f3ee3b82dd393fa8",
+      "resolution": "resolved by current field change",
+      "stillPresentAtFollowupRead": false,
+      "current": "Aloita medinan kävely Bab el Bharin portilta ja tutustu Zitounan ympäristön kauppakujiin. Palatsien pihat avaavat toisen näkökulman vanhaan kaupunkiin. Varmista moskeijoiden ja palatsien nykyinen käyntimahdollisuus sekä pukeutumisohjeet etukäteen. Tarkista julkisten rakennusten kuvaamisohjeet ja varaa kävelyyn aikaa sekä taukoja."
+    },
+    {
+      "era": "e04",
+      "city": "tunis",
+      "sourcePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/tunis/sisalto.json",
+      "tokens": [
+        "kaupunkilehti",
+        0,
+        "matkailijalle",
+        "artikkeli",
+        "matkailu",
+        "hyvaTietaa",
+        3,
+        "teksti"
+      ],
+      "jsonPath": "$[\"kaupunkilehti\"][0][\"matkailijalle\"][\"artikkeli\"][\"matkailu\"][\"hyvaTietaa\"][3][\"teksti\"]",
+      "type": "duplicate citywide safety warning",
+      "reason": "Extra whole-city caution/demonstration advisory repeats official advisory.",
+      "old": "Noudata matkalla erityistä varovaisuutta ja vältä mielenosoituksia sekä niitä ympäröiviä väkijoukkoja.",
+      "recommendation": "Consolidate with hyvaTietaa[0], or replace this slot with local “Souk El Attarine on Zitounan pohjoispuolinen hajusteiden kauppakuja.”",
+      "sourceSHA256AtAudit": "f17badc20bec43ba4e0744c0d803ade2280fd891de4b3864f3ee3b82dd393fa8",
+      "resolution": "resolved by current field change",
+      "stillPresentAtFollowupRead": false,
+      "current": "Bab el Bhar avautuu medinan ja uudemman kaupungin rajalle; Kasbah on vanhan kaupungin hallinnollista ydintä."
+    },
+    {
+      "era": "e04",
+      "city": "tunis",
+      "sourcePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/tunis/sisalto.json",
+      "tokens": [
+        "nahtavyydet",
+        "Dar Lasram",
+        "kuvat",
+        0,
+        "lyhyt"
+      ],
+      "jsonPath": "$[\"nahtavyydet\"][\"Dar Lasram\"][\"kuvat\"][0][\"lyhyt\"]",
+      "type": "caption only history",
+      "reason": "Short caption states construction era rather than what source filename identifies in the image.",
+      "old": "Dar Lasramin palatsi rakennettiin 1800-luvun alkupuolella.",
+      "recommendation": "Dar Lasramin palatsin sisäänkäynti.",
+      "sourceSHA256AtAudit": "f17badc20bec43ba4e0744c0d803ade2280fd891de4b3864f3ee3b82dd393fa8",
+      "resolution": "resolved by current field change",
+      "stillPresentAtFollowupRead": false,
+      "current": "Dar Lasramin palatsin sisäänkäynti."
+    }
+  ],
+  "extraFiveReadyStatus": "correct_e04_extra-status.json ready=true finishedCount=5",
+  "newlyDocumentedExtraHeldMedia": [
+    {
+      "era": "e04",
+      "city": "bissau",
+      "targetJsonPath": "$.kaupunkilehti[0].nostot[0]",
+      "commonsFile": "Bissau Velho.jpg",
+      "qaVerdict": "blocked",
+      "reason": "Päämotiivi on yksi koristeellinen historialliseksi kuvattu talojulkisivu. Authorin PD koskee valokuvaa, ei automaattisesti rakennusteosta. B käyttää art152:n Commons-yhteenvetoa, mutta alkuperäislaki ei ole luettu ja tekijäketju puuttuu. Erillinen rakennusteoksen kaupallinen julkaisemisperuste tarvitaan; talon ikää ei päätellä kuvasta.",
+      "qaPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/bissau/qa.json"
+    },
+    {
+      "era": "e04",
+      "city": "bissau",
+      "targetJsonPath": "$.kaupunkilehti[0].nostot[2]",
+      "commonsFile": "Avenida dos Combatentes da Liberdade da Pátria, Bissau (1).jpg",
+      "qaVerdict": "rejected",
+      "reason": "Alkuperäiskokoinen4608×2592 tiedosto tarkastettu. Etualan jalankulkijoissa näkyy kasvonpiirteitä; turvallinen kasvoton rajaus ei ole tässä valmis. Tarvitaan uusi kasvoton dokumentaarinen ehdokas, ei nykyisen tiedoston hämärtämistä.",
+      "qaPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/bissau/qa.json"
+    },
+    {
+      "era": "e04",
+      "city": "bissau",
+      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+      "commonsFile": "Cooked Rice 2.jpg",
+      "qaVerdict": "rejected",
+      "reason": "Keitetyn riisin lähikuva on selvästi pehmeä/epäterävä eikä jyvien rakenne erotu laadukkaasti. Hylkäys kuvan laadusta, EI pystyformaatista tai Nepalin yleiskuvan käytöstä. Uusi tarkka riisin yleiskuva tähän rooliin.",
+      "qaPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/bissau/qa.json"
+    },
+    {
+      "era": "e04",
+      "city": "bissau",
+      "targetJsonPath": "$.kaupunkilehti[1].nostot[0]",
+      "commonsFile": "Interior da Fortaleza de São José de Amura, Bissau.jpg",
+      "qaVerdict": "blocked",
+      "reason": "Linnoituksen sisäpihan yleisnäkymä on katsottu eikä mausoleumia/taidemonumenttia näy. Nimetyn rakennuskokonaisuuden näkyvien alkuperäisten/uusien osien ketju tai alkuperäisen julkaisemispoikkeuksen näyttö kuitenkin puuttuu; pelkkää1700-luvun syntyä tai Commons FOP-yhteenvetoa ei hyväksytty koko teoskerroksen todisteeksi.",
+      "qaPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/bissau/qa.json"
+    },
+    {
+      "era": "e04",
+      "city": "conakry",
+      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
+      "commonsFile": "Conakry Coast.jpg",
+      "qaVerdict": "blocked",
+      "reason": "Pysty .75 täyttää suhteen; kuva on oikea Conakry 2021. Etualan parveke, seinä, lattia ja kaide vievät suuren osan kuvasta. Kuvattujen rakennusosien tekijä-/kaupallinen teoskerros ei ole varmistettu eikä art27:n sivuosaisuutta voi tässä varmasti soveltaa. Etsi kasvillisuus-/rantapysty ilman hallitsevaa rakennuspintaa. Alkuperäinen näyttää myös geometrisen kattovalaisimen ja parvekkeen sisäosan. Art27:n julkisen paikan ja kuvan pääaiheen ehdot sekä omaperäisen rakennus-/valaisinosan raja ovat avoimet; rakennuspelkkänä kategoriana ei ole hylkäysperuste.",
+      "qaPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/conakry/qa.json"
+    },
+    {
+      "era": "e04",
+      "city": "conakry",
+      "targetJsonPath": "$.kaupunkilehti[1].nostot[2]",
+      "commonsFile": "Plage du Gouverneur à Roume.jpg",
+      "qaVerdict": "blocked",
+      "reason": "Alkuperäisversio 5184×3456 itse katsottu. Etu- ja keskialan rantakävijöiden sivuprofiilien piirteet jäävät epäselviksi; kaikkien kasvojen tunnistamattomuutta ei voitu varmentaa. Ei hyväksyntää: tarvitaan samaan Roumen paikkaan turvallisempi ehdokas ilman etualan kasvoja. Muoto ei ole estoperuste. Vanha tiedosto säilyy.",
+      "qaPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/conakry/qa.json"
+    },
+    {
+      "era": "e04",
+      "city": "tunis",
+      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
+      "commonsFile": "Narrow street in the Medina of Tunis .jpg",
+      "qaVerdict": "blocked",
+      "reason": "Kasvoton paikan oma pysty 3096×4128, suhde .75 täyttää TRAVELERin ehdon. Kuvauspäivä 11.3.2017; sitä ei ole varmistettu nykyoppaan tuoreeksi kuvatiedoksi. Tarvitaan tuore pystykuva tai nimenomainen nykytilan/tuoreuspoikkeuksen perustelu. Ei hylkäystä pystyformaatista tai yleisestä PHOTO-tuoreusvaatimuksesta.",
+      "qaPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/tunis/qa.json"
+    },
+    {
+      "era": "e04",
+      "city": "tunis",
+      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[1].kuva",
+      "commonsFile": "Covid-19 Tunis Tunisie kassba 18-04-2020 photographed by Brahim Guedich-2702.jpg",
+      "qaVerdict": "rejected",
+      "reason": "Kuva on lähteen mukaan vuoden 2020 pandemiasulun suljettu kauppakatutila. Historiallinen tilanne on selitteessä rehellisesti nimetty, mutta se ei täytä nykyoppaan tuoreen arkitilan kuvaa. Säilytetään vanha valinta ja pyydetään nykyistä katunäkymää; syy on dokumentoitu sulkutilanne, ei pelkkä pystyformaatti.",
+      "qaPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/tunis/qa.json"
+    }
+  ],
+  "allObservedResidualFieldCount": 45,
+  "resolvedResidualFieldCount": 45,
+  "heldMediaClearReceipts": [
+    {
+      "era": "e04",
+      "city": "monrovia",
+      "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
+      "heldQAFile": "Liberia, Africa - panoramio (267).jpg",
+      "currentCFile": null,
+      "leafCleared": true,
+      "oldHeldStillPresent": false,
+      "qaVerdict": "blocked",
+      "qaPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/monrovia/qa.json",
+      "visualInspectionByThisAudit": false
+    },
+    {
+      "era": "e04",
+      "city": "monrovia",
+      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[0].kuva",
+      "heldQAFile": "Cookies Town, Monrovia - kakata highway; Montserrado.jpg",
+      "currentCFile": null,
+      "leafCleared": true,
+      "oldHeldStillPresent": false,
+      "qaVerdict": "rejected",
+      "qaPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/monrovia/qa.json",
+      "visualInspectionByThisAudit": false
+    },
+    {
+      "era": "e04",
+      "city": "monrovia",
+      "targetJsonPath": "$.nahtavyydet[\"Bushrod Island\"].kuvat[0]",
+      "heldQAFile": "Bushrod Island, Monrovia, Liberia.JPG",
+      "currentCFile": null,
+      "leafCleared": true,
+      "oldHeldStillPresent": false,
+      "qaVerdict": "blocked",
+      "qaPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/monrovia/qa.json",
+      "visualInspectionByThisAudit": false
+    },
+    {
+      "era": "e04",
+      "city": "rabat",
+      "targetJsonPath": "$.kaupunkilehti[0].nostot[3]",
+      "heldQAFile": "Rabat–Salé tramway in 2026.01.jpg",
+      "currentCFile": null,
+      "leafCleared": true,
+      "oldHeldStillPresent": false,
+      "qaVerdict": "blocked",
+      "qaPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/rabat/qa.json",
+      "visualInspectionByThisAudit": false
+    },
+    {
+      "era": "e04",
+      "city": "rabat",
+      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[0].kuva",
+      "heldQAFile": "Rabat–Salé tramway in 2026.02.jpg",
+      "currentCFile": null,
+      "leafCleared": true,
+      "oldHeldStillPresent": false,
+      "qaVerdict": "blocked",
+      "qaPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/rabat/qa.json",
+      "visualInspectionByThisAudit": false
+    },
+    {
+      "era": "e06",
+      "city": "luanda",
+      "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[1]",
+      "heldQAFile": "Panorama baixa Luanda.JPG",
+      "currentCFile": null,
+      "leafCleared": true,
+      "oldHeldStillPresent": false,
+      "qaVerdict": "blocked",
+      "qaPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/luanda/qa.json",
+      "visualInspectionByThisAudit": false
+    },
+    {
+      "era": "e06",
+      "city": "luanda",
+      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[2].kuva",
+      "heldQAFile": "Luanda, Angola (Unsplash).jpg",
+      "currentCFile": null,
+      "leafCleared": true,
+      "oldHeldStillPresent": false,
+      "qaVerdict": "blocked",
+      "qaPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/luanda/qa.json",
+      "visualInspectionByThisAudit": false
+    },
+    {
+      "era": "e04",
+      "city": "bissau",
+      "targetJsonPath": "$.kaupunkilehti[0].nostot[0]",
+      "heldQAFile": "Bissau Velho.jpg",
+      "currentCFile": null,
+      "leafCleared": true,
+      "oldHeldStillPresent": false,
+      "qaVerdict": "blocked",
+      "qaPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/bissau/qa.json",
+      "visualInspectionByThisAudit": false
+    },
+    {
+      "era": "e04",
+      "city": "bissau",
+      "targetJsonPath": "$.kaupunkilehti[0].nostot[2]",
+      "heldQAFile": "Avenida dos Combatentes da Liberdade da Pátria, Bissau (1).jpg",
+      "currentCFile": null,
+      "leafCleared": true,
+      "oldHeldStillPresent": false,
+      "qaVerdict": "rejected",
+      "qaPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/bissau/qa.json",
+      "visualInspectionByThisAudit": false
+    },
+    {
+      "era": "e04",
+      "city": "bissau",
+      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+      "heldQAFile": "Cooked Rice 2.jpg",
+      "currentCFile": null,
+      "leafCleared": true,
+      "oldHeldStillPresent": false,
+      "qaVerdict": "rejected",
+      "qaPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/bissau/qa.json",
+      "visualInspectionByThisAudit": false
+    },
+    {
+      "era": "e04",
+      "city": "bissau",
+      "targetJsonPath": "$.kaupunkilehti[1].nostot[0]",
+      "heldQAFile": "Interior da Fortaleza de São José de Amura, Bissau.jpg",
+      "currentCFile": null,
+      "leafCleared": true,
+      "oldHeldStillPresent": false,
+      "qaVerdict": "blocked",
+      "qaPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/bissau/qa.json",
+      "visualInspectionByThisAudit": false
+    },
+    {
+      "era": "e04",
+      "city": "conakry",
+      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
+      "heldQAFile": "Conakry Coast.jpg",
+      "currentCFile": null,
+      "leafCleared": true,
+      "oldHeldStillPresent": false,
+      "qaVerdict": "blocked",
+      "qaPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/conakry/qa.json",
+      "visualInspectionByThisAudit": false
+    },
+    {
+      "era": "e04",
+      "city": "conakry",
+      "targetJsonPath": "$.kaupunkilehti[1].nostot[2]",
+      "heldQAFile": "Plage du Gouverneur à Roume.jpg",
+      "currentCFile": null,
+      "leafCleared": true,
+      "oldHeldStillPresent": false,
+      "qaVerdict": "blocked",
+      "qaPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/conakry/qa.json",
+      "visualInspectionByThisAudit": false
+    },
+    {
+      "era": "e04",
+      "city": "tunis",
+      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
+      "heldQAFile": "Narrow street in the Medina of Tunis .jpg",
+      "currentCFile": null,
+      "leafCleared": true,
+      "oldHeldStillPresent": false,
+      "qaVerdict": "blocked",
+      "qaPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/tunis/qa.json",
+      "visualInspectionByThisAudit": false
+    },
+    {
+      "era": "e04",
+      "city": "tunis",
+      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[1].kuva",
+      "heldQAFile": "Covid-19 Tunis Tunisie kassba 18-04-2020 photographed by Brahim Guedich-2702.jpg",
+      "currentCFile": null,
+      "leafCleared": true,
+      "oldHeldStillPresent": false,
+      "qaVerdict": "rejected",
+      "qaPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/tunis/qa.json",
+      "visualInspectionByThisAudit": false
+    }
+  ],
+  "remainingExactHeldCFileMatches": [],
+  "global93QAHeldCScan": {
+    "exactRoleAndFileMatches": [],
+    "recordSemantics": "Only current C target-path and exact Commons-file equality; historical generated rejections at later-replaced slots do not match.",
+    "personalNewVisualApprovals": 0
+  },
+  "historicalExactCHeldAtInitial88Read": [
+    {
+      "era": "e04",
+      "city": "monrovia",
+      "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
+      "currentCFile": "Liberia, Africa - panoramio (267).jpg",
+      "qaVerdict": "blocked",
+      "reason": "Nativekuva katsottu. Laaja oikea rannikon kaupunkiasettelu, hyvä laatu, ei luettavia kasvoja tai watermarkia. Oikeuseste rajataan keskialueen selvästi erottuvaan kupoli-/minareettirakennukseen ja oikean reunan läheiseen julkisivuun, ei jokaiseen kaukaiseen taustataloon. Näiden teosidentiteetti/tekijä/suojastatus puuttuvat. Valokuvan blk24ga/CC BY3.0 ja paikka ovat varmennettuja; LIPO-sivupykälät eivät tuota yleistä rakennuslupaa. Kyse ei ole todistetusta tekijänoikeussuojasta, vaan nimetyn selvityksen puutteesta.",
+      "qaPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/monrovia/qa.json",
+      "laterAcceptedAtSameSlot": 0
+    },
+    {
+      "era": "e04",
+      "city": "monrovia",
+      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[0].kuva",
+      "currentCFile": "Cookies Town, Monrovia - kakata highway; Montserrado.jpg",
+      "qaVerdict": "rejected",
+      "reason": "Katsotussa kuvassa oikean alakulman päälle lisätty signeeraus/vesileima. CC BY-SA 4.0/tekijä ovat oikeat, mutta visuaalinen sääntö rikkoutuu. Hylkäys ei johdu pystyformaatista. Tarvitaan uusi vesileimaton ehdokas; vanha säilyy.",
+      "qaPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/monrovia/qa.json",
+      "laterAcceptedAtSameSlot": 0
+    },
+    {
+      "era": "e04",
+      "city": "monrovia",
+      "targetJsonPath": "$.nahtavyydet[\"Bushrod Island\"].kuvat[0]",
+      "currentCFile": "Bushrod Island, Monrovia, Liberia.JPG",
+      "qaVerdict": "blocked",
+      "reason": "Valokuvan päämotiivi on West Pointin etualan niemeke. Kaukaa näkyvä joentakainen kaupunkiranta ei yksin riitä Bushrod Island -kohteen yksiselitteiseksi identiteettinäytöksi, ja nykyinen kuvatekstikään ei nimeä sitä Bushrodiksi. Lähdecredit/lisenssi oikeat; paikka-identiteetti tarvitsee oman vahvistuksen tai suoremman Bushrod-kuvan. Ei hylkäystä pystyformaatista.",
+      "qaPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/monrovia/qa.json",
+      "laterAcceptedAtSameSlot": 0
+    },
+    {
+      "era": "e04",
+      "city": "rabat",
+      "targetJsonPath": "$.kaupunkilehti[0].nostot[3]",
+      "currentCFile": "Rabat–Salé tramway in 2026.01.jpg",
+      "qaVerdict": "blocked",
+      "reason": "Valokuva esittää oikeaa raitiovaunua; luonnollinen operaattori-/mallimerkintä ei yksin ole hylkäysperuste. Vaunun näkyvän nykyisen graafisen teippauksen oma kaupallinen teosoikeuskerros ei ole kuvaajan CC0-luvasta varmennettu. Tarvitaan kyseisen grafiikan oikeusperuste tai toinen vaunukuva.",
+      "qaPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/rabat/qa.json",
+      "laterAcceptedAtSameSlot": 0
+    },
+    {
+      "era": "e04",
+      "city": "rabat",
+      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[0].kuva",
+      "currentCFile": "Rabat–Salé tramway in 2026.02.jpg",
+      "qaVerdict": "blocked",
+      "reason": "Aito raitiovaunu asemaympäristössä. Samantyyppinen graafinen teippaus kuin K4:ssä vaatii erillisen oikeusperusteen; ei automaattista hylkäystä tuote-/mallimerkinnän takia. Pylväs peittää vaunun keulaa, mutta tämä yksin ei ole hylkäysperuste.",
+      "qaPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/rabat/qa.json",
+      "laterAcceptedAtSameSlot": 0
+    },
+    {
+      "era": "e06",
+      "city": "luanda",
+      "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[1]",
+      "currentCFile": "Panorama baixa Luanda.JPG",
+      "qaVerdict": "blocked",
+      "reason": "Baixan laaja aito kaupunkikuva katsottu. Oikeassa reunassa suuri nykyinen julkisivu ja keskellä tunnistettavaa monumentaalista rakennusmuotoa. Kuvaajan CC BY-SA3.0 on oikein, mutta Angolan Art51.1(c)-tekijä-/nimeämisehtoa ja kyseisten arkkitehtuuriteosten ketjua ei ole primäärinä osoitettu. Ei blanket-FOP eikä rakennusiästä arvausta; säilytä ehdokas tapauskohtaiseen oikeustukeen.",
+      "qaPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/luanda/qa.json",
+      "laterAcceptedAtSameSlot": 0
+    },
+    {
+      "era": "e06",
+      "city": "luanda",
+      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[2].kuva",
+      "currentCFile": "Luanda, Angola (Unsplash).jpg",
+      "qaVerdict": "blocked",
+      "reason": "Luandan rantaa ja kaukaisen henkilön täysin tummaa siluettia näyttävä CC0-valokuva katsottu, ei tunnistettavia kasvoja. Kuva on2017, eikä kuvasivu nimeä Ilha/Marginal-rannan tarkkaa paikkaa. Nykyinen O3 käsittelee näitä nimettyjä rannikkoalueita: tämän kuvan täsmällinen soveltuminen ja oppaan tuoreus jäävät avoimiksi. Ei hylkäystä PHOTO-tuoreusvaatimuksesta; kyse on opaskuvasta.",
+      "qaPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/luanda/qa.json",
+      "laterAcceptedAtSameSlot": 0
+    }
+  ],
+  "exactCurrentCHeldMedia": [],
+  "secondReadSnapshotStability": {
+    "checkedAt": "2026-10-13T16:35:35.441996+00:00",
+    "filesChecked": 93,
+    "changedCities": [],
+    "stable": true
+  }
+}

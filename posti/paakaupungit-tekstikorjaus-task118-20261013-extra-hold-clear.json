@@ -1,0 +1,225 @@
+{
+  "updatedAt": "2026-10-13T16:21:21.434490+00:00",
+  "removals": [
+    {
+      "era": "e04",
+      "city": "bissau",
+      "targetJsonPath": "$.kaupunkilehti[0].nostot[0]",
+      "commonsFile": "Bissau Velho.jpg",
+      "qaVerdict": "blocked",
+      "reason": "Päämotiivi on yksi koristeellinen historialliseksi kuvattu talojulkisivu. Authorin PD koskee valokuvaa, ei automaattisesti rakennusteosta. B käyttää art152:n Commons-yhteenvetoa, mutta alkuperäislaki ei ole luettu ja tekijäketju puuttuu. Erillinen rakennusteoksen kaupallinen julkaisemisperuste tarvitaan; talon ikää ei päätellä kuvasta.",
+      "qaPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/bissau/qa.json",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "nostot",
+        0
+      ],
+      "oldMedia": {
+        "otsikko": "Vanha talo jatkaa työpäivää",
+        "teksti": "Bissau Velho on vanha keskusta, jonka siirtomaa-ajan taloissa toimii edelleen liikkeitä ja apteekkeja. Kaupunginosan nimi kertoo sen asemasta kaupungin historiassa, mutta talojen käyttö jatkuu nykyajassa. Linnoitus ja satama kuuluvat saman vanhan ytimen ympäristöön. Niiden takana kaupunki levittäytyy laajemmalle kuin vanhoihin kortteleihin. Vanhassa talossa voi siis käydä tämän päivän asioilla: historian kerrokset ovat osa tavallista työ- ja asiointiympäristöä.",
+        "wiki": "Bissau",
+        "tiedosto": "Bissau Velho.jpg",
+        "lyhyt": "Pyykki kuuluu vanhan Bissau Velhon talon arkeen vuonna 2007.",
+        "selite": "Bissau Velhon talon kuistilla kuivuva pyykki vuonna 2007 kertoo vanhan rakennuksen arkisesta käytöstä.",
+        "lahde": "(WT-en) Pis bus at English Wikivoyage, Wikimedia Commons (PD)"
+      },
+      "cleared": true,
+      "originalFilesRetained": true
+    },
+    {
+      "era": "e04",
+      "city": "bissau",
+      "targetJsonPath": "$.kaupunkilehti[0].nostot[2]",
+      "commonsFile": "Avenida dos Combatentes da Liberdade da Pátria, Bissau (1).jpg",
+      "qaVerdict": "rejected",
+      "reason": "Alkuperäiskokoinen4608×2592 tiedosto tarkastettu. Etualan jalankulkijoissa näkyy kasvonpiirteitä; turvallinen kasvoton rajaus ei ole tässä valmis. Tarvitaan uusi kasvoton dokumentaarinen ehdokas, ei nykyisen tiedoston hämärtämistä.",
+      "qaPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/bissau/qa.json",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "nostot",
+        2
+      ],
+      "oldMedia": {
+        "otsikko": "Bandimissa ostetaan arkea",
+        "teksti": "Bandimin torin kauppatavarat liittyvät Bissaun jokapäiväiseen elämään. Hedelmien, vihannesten ja viljan rinnalla myydään vaatteita ja jalkineita. Valikoimaan kuuluu myös käsinkudottuja tekstiilejä. Torin ja sataman kautta kulkevat tavarat kertovat kaupankäynnin eri mittakaavoista: Bandim palvelee paikallista asiointia, satama yhdistää kaupunkia vesireitteihin. Bandimissa ruoan raaka-aineet, kudotut tekstiilit ja käyttöesineet ovat osa samaa paikallista kauppaa.",
+        "wiki": "Bissau",
+        "tiedosto": "Avenida dos Combatentes da Liberdade da Pátria, Bissau (1).jpg",
+        "lyhyt": "Avenue kulkee Bandimin markkinan laidalla vuonna 2017.",
+        "selite": "Avenida dos Combatentes da Liberdade da Pátria kulkee Bandimin markkinan laidalla vuoden 2017 katunäkymässä.",
+        "lahde": "Joehawkins, Wikimedia Commons (CC BY-SA 4.0)"
+      },
+      "cleared": true,
+      "originalFilesRetained": true
+    },
+    {
+      "era": "e04",
+      "city": "bissau",
+      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+      "commonsFile": "Cooked Rice 2.jpg",
+      "qaVerdict": "rejected",
+      "reason": "Keitetyn riisin lähikuva on selvästi pehmeä/epäterävä eikä jyvien rakenne erotu laadukkaasti. Hylkäys kuvan laadusta, EI pystyformaatista tai Nepalin yleiskuvan käytöstä. Uusi tarkka riisin yleiskuva tähän rooliin.",
+      "qaPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/bissau/qa.json",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "matkailijalle",
+        "artikkeli",
+        "jaksot",
+        3,
+        "kuva"
+      ],
+      "oldMedia": {
+        "tiedosto": "Cooked Rice 2.jpg",
+        "lyhyt": "Nepalissa kuvattu riisi on ruoka-aineen yleiskuva.",
+        "selite": "Nepalissa vuonna 2022 kuvattu keitetty riisi havainnollistaa ruoka-ainetta, joka kuuluu myös Guinea-Bissaun ruokataustaan.",
+        "lahde": "Gaurav Dhwaj Khadka, Wikimedia Commons (CC BY-SA 4.0)"
+      },
+      "cleared": true,
+      "originalFilesRetained": true
+    },
+    {
+      "era": "e04",
+      "city": "bissau",
+      "targetJsonPath": "$.kaupunkilehti[1].nostot[0]",
+      "commonsFile": "Interior da Fortaleza de São José de Amura, Bissau.jpg",
+      "qaVerdict": "blocked",
+      "reason": "Linnoituksen sisäpihan yleisnäkymä on katsottu eikä mausoleumia/taidemonumenttia näy. Nimetyn rakennuskokonaisuuden näkyvien alkuperäisten/uusien osien ketju tai alkuperäisen julkaisemispoikkeuksen näyttö kuitenkin puuttuu; pelkkää1700-luvun syntyä tai Commons FOP-yhteenvetoa ei hyväksytty koko teoskerroksen todisteeksi.",
+      "qaPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/bissau/qa.json",
+      "targetTokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        0
+      ],
+      "oldMedia": {
+        "otsikko": "Linnoitus rakentui uudelleen",
+        "teksti": "Amuran linnoituksen historia alkaa 1600-luvun lopun kauppa-asemavaiheesta. Varhainen linnake hylättiin ja tuhoutui; nykyinen kokonaisuus rakennettiin sen jälkeen uusissa vaiheissa. Nykyisen kokonaisuuden keskeisiä vaiheita rakennettiin 1700-luvulla. Linnoitusta korjattiin myös 1800-luvulla ja restauroitiin seuraavalla vuosisadalla. Vuonna 1873 paikalla oli jo linnoitus, mutta sen kaikki nykyiset osat eivät kuulu samaan aikaan. Yksi rakennusnimi kätkee näin useita rakentamisen ja korjaamisen vaiheita.",
+        "wiki": "Fortaleza de São José da Amura",
+        "tiedosto": "Interior da Fortaleza de São José de Amura, Bissau.jpg",
+        "lyhyt": "Amuran linnoituksen sisäpiha vuonna 2017.",
+        "selite": "Amuran linnoituksen sisäpiha vuonna 2017 kuuluu useissa vaiheissa rakennettuun kokonaisuuteen, jonka eri osien iät vaihtelevat.",
+        "lahde": "Joehawkins, Wikimedia Commons (CC BY-SA 4.0)"
+      },
+      "cleared": true,
+      "originalFilesRetained": true
+    },
+    {
+      "era": "e04",
+      "city": "conakry",
+      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
+      "commonsFile": "Conakry Coast.jpg",
+      "qaVerdict": "blocked",
+      "reason": "Pysty .75 täyttää suhteen; kuva on oikea Conakry 2021. Etualan parveke, seinä, lattia ja kaide vievät suuren osan kuvasta. Kuvattujen rakennusosien tekijä-/kaupallinen teoskerros ei ole varmistettu eikä art27:n sivuosaisuutta voi tässä varmasti soveltaa. Etsi kasvillisuus-/rantapysty ilman hallitsevaa rakennuspintaa. Alkuperäinen näyttää myös geometrisen kattovalaisimen ja parvekkeen sisäosan. Art27:n julkisen paikan ja kuvan pääaiheen ehdot sekä omaperäisen rakennus-/valaisinosan raja ovat avoimet; rakennuspelkkänä kategoriana ei ole hylkäysperuste.",
+      "qaPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/conakry/qa.json",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "matkailijalle",
+        "kuva"
+      ],
+      "oldMedia": {
+        "tiedosto": "Conakry Coast.jpg",
+        "lyhyt": "Conakryn merinäkymä parvekkeelta vuonna 2021.",
+        "selite": "Conakryn parvekkeelta avautuva merinäkymä tammikuussa 2021 kertoo kaupungin rannikkosijainnista.",
+        "lahde": "Johannes Noppen, Wikimedia Commons (CC BY-SA 4.0)"
+      },
+      "cleared": true,
+      "originalFilesRetained": true
+    },
+    {
+      "era": "e04",
+      "city": "conakry",
+      "targetJsonPath": "$.kaupunkilehti[1].nostot[2]",
+      "commonsFile": "Plage du Gouverneur à Roume.jpg",
+      "qaVerdict": "blocked",
+      "reason": "Alkuperäisversio 5184×3456 itse katsottu. Etu- ja keskialan rantakävijöiden sivuprofiilien piirteet jäävät epäselviksi; kaikkien kasvojen tunnistamattomuutta ei voitu varmentaa. Ei hyväksyntää: tarvitaan samaan Roumen paikkaan turvallisempi ehdokas ilman etualan kasvoja. Muoto ei ole estoperuste. Vanha tiedosto säilyy.",
+      "qaPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/conakry/qa.json",
+      "targetTokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        2
+      ],
+      "oldMedia": {
+        "otsikko": "Roumen nimi vaihtoi kirjoitusasua",
+        "teksti": "Roume on asuttu saari Los-saariston keskellä. Sen vanhoihin nimiin kuuluvat Room ja Crawford Island. Room-muoto liittyy englanninkielisten asukkaiden käyttämään nimeen, kun taas Roume-kirjoitusasu yhdistyy ranskalaisen siirtomaahallinnon Ernest Roumeen. Nimien kerrostumat kertovat saaren eri aikakausista. Maantieteellinen paikka pysyy niiden alla: Kassa ja Tamara kaartuvat Roumen ympärille. Saaren Plage du Gouverneur -ranta puolestaan nimeää yhden paikan tämän keskisaareksi tunnistetun kokonaisuuden sisällä.",
+        "wiki": "Îles de Los",
+        "tiedosto": "Plage du Gouverneur à Roume.jpg",
+        "lyhyt": "Plage du Gouverneur on Roumen saaren ranta.",
+        "selite": "Roumen Plage du Gouverneur -ranta vuoden 2020 kuvassa on yksi saariston keskisaareen kuuluvista paikoista.",
+        "lahde": "Aboubacarkhoraa, Wikimedia Commons (CC BY-SA 4.0)"
+      },
+      "cleared": true,
+      "originalFilesRetained": true
+    },
+    {
+      "era": "e04",
+      "city": "tunis",
+      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
+      "commonsFile": "Narrow street in the Medina of Tunis .jpg",
+      "qaVerdict": "blocked",
+      "reason": "Kasvoton paikan oma pysty 3096×4128, suhde .75 täyttää TRAVELERin ehdon. Kuvauspäivä 11.3.2017; sitä ei ole varmistettu nykyoppaan tuoreeksi kuvatiedoksi. Tarvitaan tuore pystykuva tai nimenomainen nykytilan/tuoreuspoikkeuksen perustelu. Ei hylkäystä pystyformaatista tai yleisestä PHOTO-tuoreusvaatimuksesta.",
+      "qaPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/tunis/qa.json",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "matkailijalle",
+        "kuva"
+      ],
+      "oldMedia": {
+        "tiedosto": "Narrow street in the Medina of Tunis .jpg",
+        "lyhyt": "Medinan kuja Tunisissa vuonna 2017.",
+        "selite": "Tunisin medinan kapea kuja vuonna 2017 kuuluu vanhan kaupungin katuverkkoon, jossa asuinpaikat ja kulkureitit ovat rinnakkain.",
+        "lahde": "Emna Mizouni, Wikimedia Commons (CC BY-SA 3.0)"
+      },
+      "cleared": true,
+      "originalFilesRetained": true
+    },
+    {
+      "era": "e04",
+      "city": "tunis",
+      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[1].kuva",
+      "commonsFile": "Covid-19 Tunis Tunisie kassba 18-04-2020 photographed by Brahim Guedich-2702.jpg",
+      "qaVerdict": "rejected",
+      "reason": "Kuva on lähteen mukaan vuoden 2020 pandemiasulun suljettu kauppakatutila. Historiallinen tilanne on selitteessä rehellisesti nimetty, mutta se ei täytä nykyoppaan tuoreen arkitilan kuvaa. Säilytetään vanha valinta ja pyydetään nykyistä katunäkymää; syy on dokumentoitu sulkutilanne, ei pelkkä pystyformaatti.",
+      "qaPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/tunis/qa.json",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "matkailijalle",
+        "artikkeli",
+        "jaksot",
+        1,
+        "kuva"
+      ],
+      "oldMedia": {
+        "tiedosto": "Covid-19 Tunis Tunisie kassba 18-04-2020 photographed by Brahim Guedich-2702.jpg",
+        "lyhyt": "Tunisin medinan katutilaa vuonna 2020.",
+        "selite": "Tunisin medinan katutila vuoden 2020 sulkuaikana ei kerro kauppojen nykyisestä avoimuudesta.",
+        "lahde": "Brahim Guedich, Wikimedia Commons (CC BY-SA 4.0)"
+      },
+      "cleared": true,
+      "originalFilesRetained": true
+    },
+    {
+      "era": "e04",
+      "city": "bissau",
+      "slot": "PHOTO",
+      "targetTokens": [
+        "valokuva"
+      ],
+      "oldMedia": {
+        "tiedosto": "Bissau (19362097179).jpg",
+        "lyhyt": "Pyykkinaru kuuluu Bissaun katutilaan vuonna 2015.",
+        "selite": "Bissaun talon seinustalla kuivuva pyykki kuuluu arkiseen katutilaan vuoden 2015 valokuvassa.",
+        "lahde": "Barnabe Freixo, Commons (CC BY 2.0)",
+        "vuosi": "2015"
+      },
+      "reason": "Existing root exact native poster HOLD",
+      "cleared": true,
+      "originalFilesRetained": true
+    }
+  ]
+}

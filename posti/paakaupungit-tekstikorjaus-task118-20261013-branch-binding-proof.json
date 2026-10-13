@@ -1,0 +1,1020 @@
+{
+  "verifiedAt": "2026-10-13T16:47:35.322298+00:00",
+  "remoteBranches": [
+    {
+      "era": "e04",
+      "branch": "paakaupungit-e04-codex",
+      "snapshotCommit": "98a349a5c6f92104a917716f725d12846b292aec",
+      "remoteHead": "98a349a5c6f92104a917716f725d12846b292aec",
+      "remoteContainsCorrectionCommit": true
+    },
+    {
+      "era": "e05",
+      "branch": "paakaupungit-e05-codex",
+      "snapshotCommit": "92c65cbab4f791b305a81f0378712c94a2ebcb23",
+      "remoteHead": "92c65cbab4f791b305a81f0378712c94a2ebcb23",
+      "remoteContainsCorrectionCommit": true
+    },
+    {
+      "era": "e06",
+      "branch": "paakaupungit-e06-codex",
+      "snapshotCommit": "1c265bbb3c80c25a2130f9012ac90e953ff72b1e",
+      "remoteHead": "1c265bbb3c80c25a2130f9012ac90e953ff72b1e",
+      "remoteContainsCorrectionCommit": true
+    },
+    {
+      "era": "e07",
+      "branch": "paakaupungit-e07-codex",
+      "snapshotCommit": "69f99edf64738fa146ef0ad61964496c58e85cfa",
+      "remoteHead": "69f99edf64738fa146ef0ad61964496c58e85cfa",
+      "remoteContainsCorrectionCommit": true
+    },
+    {
+      "era": "e08",
+      "branch": "paakaupungit-e08-codex",
+      "snapshotCommit": "878e309aeb649b5bf2cf9b6d9a3ccd84cb377592",
+      "remoteHead": "878e309aeb649b5bf2cf9b6d9a3ccd84cb377592",
+      "remoteContainsCorrectionCommit": true
+    },
+    {
+      "era": "e09",
+      "branch": "paakaupungit-e09-codex",
+      "snapshotCommit": "d21ee5cadb0a309e94d847974e81c326a8367a7c",
+      "remoteHead": "d21ee5cadb0a309e94d847974e81c326a8367a7c",
+      "remoteContainsCorrectionCommit": true
+    },
+    {
+      "era": "e10",
+      "branch": "paakaupungit-e10-codex",
+      "snapshotCommit": "8978056200a944a7b6175fb0d086e75c93bd9b33",
+      "remoteHead": "8978056200a944a7b6175fb0d086e75c93bd9b33",
+      "remoteContainsCorrectionCommit": true
+    },
+    {
+      "era": "e11",
+      "branch": "paakaupungit-e11-codex",
+      "snapshotCommit": "f15730b97c9f7484350a7753cd0e2355cc597a57",
+      "remoteHead": "f15730b97c9f7484350a7753cd0e2355cc597a57",
+      "remoteContainsCorrectionCommit": true
+    },
+    {
+      "era": "e12",
+      "branch": "paakaupungit-e12-codex",
+      "snapshotCommit": "b2fea20e50fa219fde9166a3a8964ed62832b034",
+      "remoteHead": "b2fea20e50fa219fde9166a3a8964ed62832b034",
+      "remoteContainsCorrectionCommit": true
+    },
+    {
+      "era": "e13",
+      "branch": "paakaupungit-e13-codex",
+      "snapshotCommit": "7ef20ebb7df278c6dd1da0f37ed16948b558b5a6",
+      "remoteHead": "7ef20ebb7df278c6dd1da0f37ed16948b558b5a6",
+      "remoteContainsCorrectionCommit": true
+    },
+    {
+      "era": "e14",
+      "branch": "paakaupungit-e14-codex",
+      "snapshotCommit": "97a8f3b9ab169f4a8763459cbea3a99d743d4a60",
+      "remoteHead": "97a8f3b9ab169f4a8763459cbea3a99d743d4a60",
+      "remoteContainsCorrectionCommit": true
+    }
+  ],
+  "citySnapshots": [
+    {
+      "era": "e04",
+      "city": "alger",
+      "sourceCommit": "98a349a5c6f92104a917716f725d12846b292aec",
+      "contentSHA256": "ac8fe8d1ef41455b8f2499167cffd37e20313674764e133ed34f1e3b0ea3971a",
+      "sidecarSHA256": "07b2e60141e906c612e5239649b2c884eec4a70de183316f1d459780c40b5dbe",
+      "currentMediaBindings": 10,
+      "excludedRoleBindings": 0,
+      "independent93ValidationSnapshotMatches": true
+    },
+    {
+      "era": "e04",
+      "city": "banjul",
+      "sourceCommit": "98a349a5c6f92104a917716f725d12846b292aec",
+      "contentSHA256": "75a54b170e0c5d3c96e0b1054699e54855cf3d62049c3e6df04aa04c3593d5ed",
+      "sidecarSHA256": "59d5e5cde05f8c883da5cba92a21e5fe58d464da2832d43d8dbcefd3efe2cabd",
+      "currentMediaBindings": 18,
+      "excludedRoleBindings": 0,
+      "independent93ValidationSnapshotMatches": true
+    },
+    {
+      "era": "e04",
+      "city": "bissau",
+      "sourceCommit": "98a349a5c6f92104a917716f725d12846b292aec",
+      "contentSHA256": "b35c1ad1774daf1c28edf58059bf0ecfb0039c71596134e906e7c2c97f647c9b",
+      "sidecarSHA256": "47b3c00c83376a50920572477160d1e9aca3e978c4081c22106bea7b72cd7a9c",
+      "currentMediaBindings": 13,
+      "excludedRoleBindings": 1,
+      "independent93ValidationSnapshotMatches": true
+    },
+    {
+      "era": "e04",
+      "city": "conakry",
+      "sourceCommit": "98a349a5c6f92104a917716f725d12846b292aec",
+      "contentSHA256": "ce702cb124ad37b72be424dd208bda6c405c021ebac3354b1e3e4635649a1c83",
+      "sidecarSHA256": "1d3f0673ef3f7b748c5c1110ae6c38c05f08ee777f63c2aa4cd12a8f9dff87df",
+      "currentMediaBindings": 19,
+      "excludedRoleBindings": 1,
+      "independent93ValidationSnapshotMatches": true
+    },
+    {
+      "era": "e04",
+      "city": "monrovia",
+      "sourceCommit": "98a349a5c6f92104a917716f725d12846b292aec",
+      "contentSHA256": "c0cc7bb6876eaf9af08fbf817e74b76ef41308e8502f6e76626f2d9623d324a1",
+      "sidecarSHA256": "c5ac85bfb1c10816a09d3d7abc1bfcc5d77f9cbb2b077a12af2f164c9c45f865",
+      "currentMediaBindings": 9,
+      "excludedRoleBindings": 5,
+      "independent93ValidationSnapshotMatches": true
+    },
+    {
+      "era": "e04",
+      "city": "nouakchott",
+      "sourceCommit": "98a349a5c6f92104a917716f725d12846b292aec",
+      "contentSHA256": "b2a3370c717f4fac5665ed0970415219ffa8a37643baaa15afb239eee59bf34a",
+      "sidecarSHA256": "23fa2f18442f476e3e9f166ded1e57b7f7f5ce301e2f15638654a15918c3ca89",
+      "currentMediaBindings": 14,
+      "excludedRoleBindings": 1,
+      "independent93ValidationSnapshotMatches": true
+    },
+    {
+      "era": "e04",
+      "city": "praia",
+      "sourceCommit": "98a349a5c6f92104a917716f725d12846b292aec",
+      "contentSHA256": "0fcf3afcb35c384a6b22c8e02572a4090792bc2e7caf743ef7806b04b300355a",
+      "sidecarSHA256": "6864a9fd88798c0fea0ce706045263a839230b5f6d5698224eac48f7a318a9e7",
+      "currentMediaBindings": 11,
+      "excludedRoleBindings": 0,
+      "independent93ValidationSnapshotMatches": true
+    },
+    {
+      "era": "e04",
+      "city": "rabat",
+      "sourceCommit": "98a349a5c6f92104a917716f725d12846b292aec",
+      "contentSHA256": "3175882aa7c4a94ffe7dab16f8c9b3a15102b62e72cb605cd76017c17aeda4cf",
+      "sidecarSHA256": "5841a5f6c9c8ac7faf59dd8ee6fb6eddbd0af2d6946d66c13ab4cf91544db053",
+      "currentMediaBindings": 21,
+      "excludedRoleBindings": 0,
+      "independent93ValidationSnapshotMatches": true
+    },
+    {
+      "era": "e04",
+      "city": "tunis",
+      "sourceCommit": "98a349a5c6f92104a917716f725d12846b292aec",
+      "contentSHA256": "bc4091031c23e8c7fdb6b529ae575936542283a921f1456635814a0a5013509d",
+      "sidecarSHA256": "4dd4a203017ca4e8d2b4676c8fa6e073560f0a0f2ffadfd8ab3704c3760430da",
+      "currentMediaBindings": 17,
+      "excludedRoleBindings": 0,
+      "independent93ValidationSnapshotMatches": true
+    },
+    {
+      "era": "e05",
+      "city": "abuja",
+      "sourceCommit": "92c65cbab4f791b305a81f0378712c94a2ebcb23",
+      "contentSHA256": "664ef9109f312526e3c34a2f5d329e1121eee1a3cd4956cba43ff3a9d4f29970",
+      "sidecarSHA256": "643aaf84455c34dba69534d8c062b6cedcee374e3ab513c557bd7bc3c015147f",
+      "currentMediaBindings": 11,
+      "excludedRoleBindings": 0,
+      "independent93ValidationSnapshotMatches": true
+    },
+    {
+      "era": "e05",
+      "city": "accra",
+      "sourceCommit": "92c65cbab4f791b305a81f0378712c94a2ebcb23",
+      "contentSHA256": "29e5761ffe121c12186dab8c486056e3461161de5153aa264593381698370d1a",
+      "sidecarSHA256": "68907c083b30799ad331b7bde7ce0b347d72c2a1a894850da87ef917c2822fbb",
+      "currentMediaBindings": 17,
+      "excludedRoleBindings": 0,
+      "independent93ValidationSnapshotMatches": true
+    },
+    {
+      "era": "e05",
+      "city": "bamako",
+      "sourceCommit": "92c65cbab4f791b305a81f0378712c94a2ebcb23",
+      "contentSHA256": "89128d0109c59a9282f45217471f4774f83fc6c47eb70343ce0df9efac559323",
+      "sidecarSHA256": "899cfe16e111fa7355aa5d633a853c24330b82e6969306c0846657385d569dcc",
+      "currentMediaBindings": 11,
+      "excludedRoleBindings": 1,
+      "independent93ValidationSnapshotMatches": true
+    },
+    {
+      "era": "e05",
+      "city": "lome",
+      "sourceCommit": "92c65cbab4f791b305a81f0378712c94a2ebcb23",
+      "contentSHA256": "d38e2c7ea1ddf66d6840ce36be9542e4df2f53a8628b1819b58d1e87f1235827",
+      "sidecarSHA256": "fc44ad959ea8f4ed27b29eaefe1703c4f0662e43835e52657d140f283d82b818",
+      "currentMediaBindings": 9,
+      "excludedRoleBindings": 0,
+      "independent93ValidationSnapshotMatches": true
+    },
+    {
+      "era": "e05",
+      "city": "ndjamena",
+      "sourceCommit": "92c65cbab4f791b305a81f0378712c94a2ebcb23",
+      "contentSHA256": "6db3773e9595fa4ea092748aaf31d593933a6eef2ea28e6f464c31f97818328e",
+      "sidecarSHA256": "a38e759a9c23b2f010f869512fb0384b0aec1d8d489d79e2abbbf736974abe36",
+      "currentMediaBindings": 8,
+      "excludedRoleBindings": 0,
+      "independent93ValidationSnapshotMatches": true
+    },
+    {
+      "era": "e05",
+      "city": "niamey",
+      "sourceCommit": "92c65cbab4f791b305a81f0378712c94a2ebcb23",
+      "contentSHA256": "b985e23c6ab60afbf7d1afe413c3d348022171ec35f527308f80b73b3d5ffe74",
+      "sidecarSHA256": "2a9ea2f3e4897a22461c389ddeabbb5f28487434bb5614974da419a67168ce30",
+      "currentMediaBindings": 12,
+      "excludedRoleBindings": 0,
+      "independent93ValidationSnapshotMatches": true
+    },
+    {
+      "era": "e05",
+      "city": "ouagadougou",
+      "sourceCommit": "92c65cbab4f791b305a81f0378712c94a2ebcb23",
+      "contentSHA256": "c56af9b1718ab3f7236454c030cefc91dc95d68ee8eace920cc7345f113cbda8",
+      "sidecarSHA256": "d3b1ea0a78d0269b54890c306c8a90543023be724540763976b159113a522dcc",
+      "currentMediaBindings": 13,
+      "excludedRoleBindings": 1,
+      "independent93ValidationSnapshotMatches": true
+    },
+    {
+      "era": "e05",
+      "city": "portonovo",
+      "sourceCommit": "92c65cbab4f791b305a81f0378712c94a2ebcb23",
+      "contentSHA256": "27240310dcccc00f8dd885b870029e6bd24f0f2f84ffa9cf7714a3846fc7292a",
+      "sidecarSHA256": "efb2565b6c0601e427285e14b80e2a3804f766a4f74039b581fe46c3eecda309",
+      "currentMediaBindings": 10,
+      "excludedRoleBindings": 0,
+      "independent93ValidationSnapshotMatches": true
+    },
+    {
+      "era": "e05",
+      "city": "yamoussoukro",
+      "sourceCommit": "92c65cbab4f791b305a81f0378712c94a2ebcb23",
+      "contentSHA256": "acb8eef0954ad2bbbc9c952985d4bd6441e8a323ede101667fb35c0fb09585f3",
+      "sidecarSHA256": "568caf3ef9b1c951fc415d98aeb109bbc711fcd1bcaeb68a49b27d477a693667",
+      "currentMediaBindings": 12,
+      "excludedRoleBindings": 0,
+      "independent93ValidationSnapshotMatches": true
+    },
+    {
+      "era": "e05",
+      "city": "yaounde",
+      "sourceCommit": "92c65cbab4f791b305a81f0378712c94a2ebcb23",
+      "contentSHA256": "0eac06489ecfcf172f4c0f3b9cd9612249b81a5ce29430a0ad9fa9c23c1a8f0c",
+      "sidecarSHA256": "b0f9374941da9e21779d4307009dd98e03623d6139dc397cbba4651a4e898a94",
+      "currentMediaBindings": 10,
+      "excludedRoleBindings": 0,
+      "independent93ValidationSnapshotMatches": true
+    },
+    {
+      "era": "e06",
+      "city": "bangui",
+      "sourceCommit": "1c265bbb3c80c25a2130f9012ac90e953ff72b1e",
+      "contentSHA256": "7e72bbd835979e2c194326f019bc707c8a55f9d091ad2f740a1f4c338d8283c5",
+      "sidecarSHA256": "224fd2ef35637a421847f56204923cf60bad6002b34308bcf65849c66ad79670",
+      "currentMediaBindings": 13,
+      "excludedRoleBindings": 0,
+      "independent93ValidationSnapshotMatches": true
+    },
+    {
+      "era": "e06",
+      "city": "brazzaville",
+      "sourceCommit": "1c265bbb3c80c25a2130f9012ac90e953ff72b1e",
+      "contentSHA256": "cbd047508d12d5e44e1e6a184d73d796d236b5f77598741fe937f95d58869aad",
+      "sidecarSHA256": "e7fa568921ca84af12b4e3a1405e433848dd8aa843d01ec65db2b017ce9b0197",
+      "currentMediaBindings": 13,
+      "excludedRoleBindings": 0,
+      "independent93ValidationSnapshotMatches": true
+    },
+    {
+      "era": "e06",
+      "city": "ciudaddelapaz",
+      "sourceCommit": "1c265bbb3c80c25a2130f9012ac90e953ff72b1e",
+      "contentSHA256": "c9a4dd024f9abdf32790bcfe4606f46605411d6601a85ced30419e71d790f0c9",
+      "sidecarSHA256": "9b5cae26f11a7d7f8728db5f8340047c0cfbf37eaef1702ca5a097278bebb012",
+      "currentMediaBindings": 9,
+      "excludedRoleBindings": 0,
+      "independent93ValidationSnapshotMatches": true
+    },
+    {
+      "era": "e06",
+      "city": "gitega",
+      "sourceCommit": "1c265bbb3c80c25a2130f9012ac90e953ff72b1e",
+      "contentSHA256": "edbeecce1e2c90efbea7d5bfa333cb2b67166f3a8dc2bb491963d38990a2cb4d",
+      "sidecarSHA256": "f17dc093c0568589f7c4dc4728765f22a934f95a627ad9592288853aa344eb63",
+      "currentMediaBindings": 9,
+      "excludedRoleBindings": 0,
+      "independent93ValidationSnapshotMatches": true
+    },
+    {
+      "era": "e06",
+      "city": "kigali",
+      "sourceCommit": "1c265bbb3c80c25a2130f9012ac90e953ff72b1e",
+      "contentSHA256": "6a5badd6cc010d8799900a5ec970fe8457ec80e8161980d09415c81f0e53772d",
+      "sidecarSHA256": "0f890678571ab3c870717891556d2eb3355b9133f1ee53cd8e693f71391c4026",
+      "currentMediaBindings": 11,
+      "excludedRoleBindings": 0,
+      "independent93ValidationSnapshotMatches": true
+    },
+    {
+      "era": "e06",
+      "city": "kinshasa",
+      "sourceCommit": "1c265bbb3c80c25a2130f9012ac90e953ff72b1e",
+      "contentSHA256": "345a41c7badcd99b22d14246f1ca55cdf7b60ca99635f4628424f8273c40fd81",
+      "sidecarSHA256": "0c2c2d697c334cd684d6c71932e703405f51f662b1f318e48e69c7a7bc5f7570",
+      "currentMediaBindings": 10,
+      "excludedRoleBindings": 0,
+      "independent93ValidationSnapshotMatches": true
+    },
+    {
+      "era": "e06",
+      "city": "libreville",
+      "sourceCommit": "1c265bbb3c80c25a2130f9012ac90e953ff72b1e",
+      "contentSHA256": "c9df6771ce98e0308ecdb48406c6e66d16a1f81fb373081f9cd44cfeb3c07225",
+      "sidecarSHA256": "c34ef11866ed8199771126f476fafeeb6dd9c3b99f98367ecf4bf147fe8c43e7",
+      "currentMediaBindings": 14,
+      "excludedRoleBindings": 0,
+      "independent93ValidationSnapshotMatches": true
+    },
+    {
+      "era": "e06",
+      "city": "luanda",
+      "sourceCommit": "1c265bbb3c80c25a2130f9012ac90e953ff72b1e",
+      "contentSHA256": "cdeeb23c95c9187fe66b072c06a1fc338b60969abf2ae067f2cc12644e0b83b7",
+      "sidecarSHA256": "8103dd05cec85fc3000ebcd3264fba40ce0a17f8693ad03f30e9339479fdaad1",
+      "currentMediaBindings": 11,
+      "excludedRoleBindings": 1,
+      "independent93ValidationSnapshotMatches": true
+    },
+    {
+      "era": "e06",
+      "city": "saotome",
+      "sourceCommit": "1c265bbb3c80c25a2130f9012ac90e953ff72b1e",
+      "contentSHA256": "fab84d8835dad7417243771e8c2e5d7361b74997d1e26250ba789a4bb07bd50e",
+      "sidecarSHA256": "21324597438c6b86a756eadcb6051f8292a0464a259a852155b96b91b23ff004",
+      "currentMediaBindings": 12,
+      "excludedRoleBindings": 0,
+      "independent93ValidationSnapshotMatches": true
+    },
+    {
+      "era": "e07",
+      "city": "asmara",
+      "sourceCommit": "69f99edf64738fa146ef0ad61964496c58e85cfa",
+      "contentSHA256": "db81d815bf89239e0871e037639700d75548f369b115f8a9f5af603cb25c4690",
+      "sidecarSHA256": "4b3ea5609acf382e75d1adae92c236b7841fed341b495ca4f6eb28a7cfd8c8fc",
+      "currentMediaBindings": 12,
+      "excludedRoleBindings": 0,
+      "independent93ValidationSnapshotMatches": true
+    },
+    {
+      "era": "e07",
+      "city": "djibouti",
+      "sourceCommit": "69f99edf64738fa146ef0ad61964496c58e85cfa",
+      "contentSHA256": "293ddc39ce3623e1875d0e0fffbabd77fc4d858f29760c2045e309a35d5c3911",
+      "sidecarSHA256": "0a69fa2436fca48e4a6f1cf94fb371cd5ef6987394adecf41b82a4f81adc3120",
+      "currentMediaBindings": 10,
+      "excludedRoleBindings": 0,
+      "independent93ValidationSnapshotMatches": true
+    },
+    {
+      "era": "e07",
+      "city": "dodoma",
+      "sourceCommit": "69f99edf64738fa146ef0ad61964496c58e85cfa",
+      "contentSHA256": "9946f64bf127568bd2ec990a2caa2679b152030158d1506b3abdc09ed0ff084e",
+      "sidecarSHA256": "33f85b0cc8edf56dc7088279ebece83d92922d82ef7011c2aba50f8a2d808093",
+      "currentMediaBindings": 10,
+      "excludedRoleBindings": 0,
+      "independent93ValidationSnapshotMatches": true
+    },
+    {
+      "era": "e07",
+      "city": "juba",
+      "sourceCommit": "69f99edf64738fa146ef0ad61964496c58e85cfa",
+      "contentSHA256": "5a346551ec4b34e8cffdad1dd38160d798603633c92c278f0ef25085848bb2aa",
+      "sidecarSHA256": "29badb5e1bbebcc8fb11963b2abfbcd38f8081e4cfe648f74b2b5b0f1de5cd5b",
+      "currentMediaBindings": 12,
+      "excludedRoleBindings": 0,
+      "independent93ValidationSnapshotMatches": true
+    },
+    {
+      "era": "e07",
+      "city": "kampala",
+      "sourceCommit": "69f99edf64738fa146ef0ad61964496c58e85cfa",
+      "contentSHA256": "3b55da80adcdfc6b4b42c2b832e07459bd1ae4087d802fd442e9b858dca8fae0",
+      "sidecarSHA256": "75638dd0bb1e2da39a3f3d89d5b6814d1b10ab17a509f461215f2f94f8948c35",
+      "currentMediaBindings": 11,
+      "excludedRoleBindings": 0,
+      "independent93ValidationSnapshotMatches": true
+    },
+    {
+      "era": "e07",
+      "city": "khartum",
+      "sourceCommit": "69f99edf64738fa146ef0ad61964496c58e85cfa",
+      "contentSHA256": "a7ba316a3c40449b049f7e5dbdce2746930eb6e8400ecb33af0c31ae12f66615",
+      "sidecarSHA256": "c04d85b03f406e3556f4c2d54e34559c2b3c86d54c8f6f1dfbd20b794be1e5d9",
+      "currentMediaBindings": 13,
+      "excludedRoleBindings": 0,
+      "independent93ValidationSnapshotMatches": true
+    },
+    {
+      "era": "e07",
+      "city": "lilongwe",
+      "sourceCommit": "69f99edf64738fa146ef0ad61964496c58e85cfa",
+      "contentSHA256": "a71e8c7d569a3b4cb6d848c35c1159bc20159718a1c6ad245b54744179ee97ba",
+      "sidecarSHA256": "f4527b847ff962c1c3489d93b5dac072405f1bef103aaab9a9ad3eff58c81fca",
+      "currentMediaBindings": 9,
+      "excludedRoleBindings": 0,
+      "independent93ValidationSnapshotMatches": true
+    },
+    {
+      "era": "e07",
+      "city": "lusaka",
+      "sourceCommit": "69f99edf64738fa146ef0ad61964496c58e85cfa",
+      "contentSHA256": "adb84071d9870a51896c248cf17c6c84685eb8b333446a26194665698902c732",
+      "sidecarSHA256": "26846055871a2f01a4c00ce04f8ae3756133224907589688fca9bd14b89ee9bf",
+      "currentMediaBindings": 10,
+      "excludedRoleBindings": 0,
+      "independent93ValidationSnapshotMatches": true
+    },
+    {
+      "era": "e07",
+      "city": "mogadishu",
+      "sourceCommit": "69f99edf64738fa146ef0ad61964496c58e85cfa",
+      "contentSHA256": "4346ec4f9ef96475ad48c911c60dfa382beebeed73eca7b9f850bbdb9946903f",
+      "sidecarSHA256": "9036c8b6c6ef1a10cd661a3885a2cc4edf07f15e83ed0292d45231ea8f98d5e8",
+      "currentMediaBindings": 8,
+      "excludedRoleBindings": 0,
+      "independent93ValidationSnapshotMatches": true
+    },
+    {
+      "era": "e08",
+      "city": "antananarivo",
+      "sourceCommit": "878e309aeb649b5bf2cf9b6d9a3ccd84cb377592",
+      "contentSHA256": "9f6e4a42a4c1bf17b635a090122cd8dad52e523b4381d3da887add80ccee287f",
+      "sidecarSHA256": "c5bf81031ff9757b93f24f48e0ef4db8130aa867bc94a50bfd86664faa7d4eec",
+      "currentMediaBindings": 12,
+      "excludedRoleBindings": 0,
+      "independent93ValidationSnapshotMatches": true
+    },
+    {
+      "era": "e08",
+      "city": "gaborone",
+      "sourceCommit": "878e309aeb649b5bf2cf9b6d9a3ccd84cb377592",
+      "contentSHA256": "04845ed6c138bfb44cccb188c65102e2dd060c12b8bbdeed35af8a5f3938d6ed",
+      "sidecarSHA256": "2f96efcbd722a473e262450b54809ed1e10615c7b6771de56ebeb26355d11200",
+      "currentMediaBindings": 12,
+      "excludedRoleBindings": 0,
+      "independent93ValidationSnapshotMatches": true
+    },
+    {
+      "era": "e08",
+      "city": "harare",
+      "sourceCommit": "878e309aeb649b5bf2cf9b6d9a3ccd84cb377592",
+      "contentSHA256": "c9b46eb02d9e0bed38b8269728c3a4b52b3de965572daa4bfed43722ea0c6287",
+      "sidecarSHA256": "930e92beea8ca578e32cf6e5517bb3b23444ed84e29482287c5173c448016016",
+      "currentMediaBindings": 14,
+      "excludedRoleBindings": 0,
+      "independent93ValidationSnapshotMatches": true
+    },
+    {
+      "era": "e08",
+      "city": "maputo",
+      "sourceCommit": "878e309aeb649b5bf2cf9b6d9a3ccd84cb377592",
+      "contentSHA256": "dd1b44b9f48ddf8f703cec086a01cb22950b5f82dc9ab42c09af456f68f58a83",
+      "sidecarSHA256": "a06bac746736be65f078f469e5b346c53e77abc52c64b03a20a62da7de23d72a",
+      "currentMediaBindings": 7,
+      "excludedRoleBindings": 0,
+      "independent93ValidationSnapshotMatches": true
+    },
+    {
+      "era": "e08",
+      "city": "maseru",
+      "sourceCommit": "878e309aeb649b5bf2cf9b6d9a3ccd84cb377592",
+      "contentSHA256": "8804590bb842a7e676fe16419d220f9fa761465583d69d319938b564ace56074",
+      "sidecarSHA256": "ab9f117e0cc10807ce222001ab490053b6067f9bf55556957f48798e95f7d601",
+      "currentMediaBindings": 11,
+      "excludedRoleBindings": 0,
+      "independent93ValidationSnapshotMatches": true
+    },
+    {
+      "era": "e08",
+      "city": "mbabane",
+      "sourceCommit": "878e309aeb649b5bf2cf9b6d9a3ccd84cb377592",
+      "contentSHA256": "643c0fac087c719eac8d936ad359bc393138769c70453ea76d212f1f804fefef",
+      "sidecarSHA256": "1e2a5779733d4645252f7ac287804c8756c551b064eb8267d8cebf3c164d99bb",
+      "currentMediaBindings": 11,
+      "excludedRoleBindings": 0,
+      "independent93ValidationSnapshotMatches": true
+    },
+    {
+      "era": "e08",
+      "city": "moroni",
+      "sourceCommit": "878e309aeb649b5bf2cf9b6d9a3ccd84cb377592",
+      "contentSHA256": "5cce35c38c44314b88f936253db554f7af63f9e7097a473938da27bdfd26f192",
+      "sidecarSHA256": "f5e13403d59331ea1f0b3ead7e8cf48c9247f92bd7ccb2c1b107f7ebc5e471de",
+      "currentMediaBindings": 13,
+      "excludedRoleBindings": 0,
+      "independent93ValidationSnapshotMatches": true
+    },
+    {
+      "era": "e08",
+      "city": "portlouis",
+      "sourceCommit": "878e309aeb649b5bf2cf9b6d9a3ccd84cb377592",
+      "contentSHA256": "2218f3a790669dc5bb8afd050f5377a1f442d8109bd87094f2666dd2119a42e8",
+      "sidecarSHA256": "d92d8a50fb818316efa4e6e5015005fa12db7dad48764c77de062a653c8fe8a1",
+      "currentMediaBindings": 11,
+      "excludedRoleBindings": 0,
+      "independent93ValidationSnapshotMatches": true
+    },
+    {
+      "era": "e08",
+      "city": "victoria",
+      "sourceCommit": "878e309aeb649b5bf2cf9b6d9a3ccd84cb377592",
+      "contentSHA256": "14ba341c2a98f447610cb2ff6f578409cf7cd6b4f0ad32c62436c8cca3304bf4",
+      "sidecarSHA256": "c1865bce62db49bc0ed014d71d7f1bf243a0699680f1184a65a25ff945cfbff3",
+      "currentMediaBindings": 15,
+      "excludedRoleBindings": 0,
+      "independent93ValidationSnapshotMatches": true
+    },
+    {
+      "era": "e08",
+      "city": "windhoek",
+      "sourceCommit": "878e309aeb649b5bf2cf9b6d9a3ccd84cb377592",
+      "contentSHA256": "7e91e4fba1a8a1eee31b4c0e573fcebfd23d205cb1628e1b906782b37c80b78b",
+      "sidecarSHA256": "dae6ef642c52f796d86cfe718ac7ef094515b765ed5d88587c9072761aed0ee1",
+      "currentMediaBindings": 15,
+      "excludedRoleBindings": 0,
+      "independent93ValidationSnapshotMatches": true
+    },
+    {
+      "era": "e09",
+      "city": "asgabat",
+      "sourceCommit": "d21ee5cadb0a309e94d847974e81c326a8367a7c",
+      "contentSHA256": "3455f6150af2ce50fbc9130e4f21c40a37b351cff0a1903e4c5fc64b977fca2c",
+      "sidecarSHA256": "a2ad0d82ed1e2cc8236c9e52d380fa4c0b67ee28020d641f451948324e248297",
+      "currentMediaBindings": 10,
+      "excludedRoleBindings": 0,
+      "independent93ValidationSnapshotMatches": true
+    },
+    {
+      "era": "e09",
+      "city": "biskek",
+      "sourceCommit": "d21ee5cadb0a309e94d847974e81c326a8367a7c",
+      "contentSHA256": "22440a8ac34bdbff5316af1a1830c4924f56c174b94d39e8d27d0b4270d6cd82",
+      "sidecarSHA256": "56641b725aa4dc98e37fb11d4da6d5cdb0c306a9d67b9e740b7daec69a2f9d7f",
+      "currentMediaBindings": 8,
+      "excludedRoleBindings": 0,
+      "independent93ValidationSnapshotMatches": true
+    },
+    {
+      "era": "e09",
+      "city": "dhaka",
+      "sourceCommit": "d21ee5cadb0a309e94d847974e81c326a8367a7c",
+      "contentSHA256": "5602aaeffd28e7738e1729cb5e81122cebc640755d31d28b3fae243ab043be13",
+      "sidecarSHA256": "d412522fce201590d93f0f12a56324c2b1a9fa5067ba564ecbcd612ad371a9db",
+      "currentMediaBindings": 11,
+      "excludedRoleBindings": 0,
+      "independent93ValidationSnapshotMatches": true
+    },
+    {
+      "era": "e09",
+      "city": "dusanbe",
+      "sourceCommit": "d21ee5cadb0a309e94d847974e81c326a8367a7c",
+      "contentSHA256": "18dce38e942113d135101226db7160b1a3a7ed3d8694d6749fd52eb63beeb869",
+      "sidecarSHA256": "38e92ae89ee8895cfaa77aa8215bcff6cd2ed237ca35eef448c42793e3d1bb74",
+      "currentMediaBindings": 7,
+      "excludedRoleBindings": 0,
+      "independent93ValidationSnapshotMatches": true
+    },
+    {
+      "era": "e09",
+      "city": "islamabad",
+      "sourceCommit": "d21ee5cadb0a309e94d847974e81c326a8367a7c",
+      "contentSHA256": "1752eb29341ed1d11b13b9a3c234ecbe6eb229e32fe8eb8e3d6c720adff9b8e4",
+      "sidecarSHA256": "6002ca7e8d632bc78b0c6b83581c04857ad647509ffdf69d6dfc58eb2cab720e",
+      "currentMediaBindings": 8,
+      "excludedRoleBindings": 0,
+      "independent93ValidationSnapshotMatches": true
+    },
+    {
+      "era": "e09",
+      "city": "taskent",
+      "sourceCommit": "d21ee5cadb0a309e94d847974e81c326a8367a7c",
+      "contentSHA256": "0825a8c2f7cf4f5774bcfa48d00606c643aa79a202d59b685cdcfd160e0b812b",
+      "sidecarSHA256": "b9e69c1921f9f813f5b5593c1541045182fcfa94b8c2bcf13d4c5eb09a31d756",
+      "currentMediaBindings": 11,
+      "excludedRoleBindings": 0,
+      "independent93ValidationSnapshotMatches": true
+    },
+    {
+      "era": "e09",
+      "city": "thimphu",
+      "sourceCommit": "d21ee5cadb0a309e94d847974e81c326a8367a7c",
+      "contentSHA256": "d853ac6cd09bc5ac75dfa604c7ea94128240a9380ec2eba869265f84c38a8268",
+      "sidecarSHA256": "02a3def013c4e73dd8836425b3cc4491697157ff39a962a856219678205cfe0e",
+      "currentMediaBindings": 10,
+      "excludedRoleBindings": 0,
+      "independent93ValidationSnapshotMatches": true
+    },
+    {
+      "era": "e10",
+      "city": "bandarseribegawan",
+      "sourceCommit": "8978056200a944a7b6175fb0d086e75c93bd9b33",
+      "contentSHA256": "9880da3931ff68f11885c17c992c70b8948d499b2de6920f1f7943edae6e8b1e",
+      "sidecarSHA256": "4f2d66fb1725bf059369374d11db565a093cf238d1494a79f86f20f9cf0ba5a6",
+      "currentMediaBindings": 9,
+      "excludedRoleBindings": 0,
+      "independent93ValidationSnapshotMatches": true
+    },
+    {
+      "era": "e10",
+      "city": "kualalumpur",
+      "sourceCommit": "8978056200a944a7b6175fb0d086e75c93bd9b33",
+      "contentSHA256": "cf5602189c012de590acbd54d2a8319f49a24655f6648dba2858a4f5dbe5f9bb",
+      "sidecarSHA256": "b971e7119fd947be8b28693f7e434480594a84b659234c49c4b80de40a7e8f09",
+      "currentMediaBindings": 13,
+      "excludedRoleBindings": 0,
+      "independent93ValidationSnapshotMatches": true
+    },
+    {
+      "era": "e10",
+      "city": "male",
+      "sourceCommit": "8978056200a944a7b6175fb0d086e75c93bd9b33",
+      "contentSHA256": "ad17b5b3c6f84db5640ba55b35fb7a13889fd9f62b388d52ae19b29e4f8fb712",
+      "sidecarSHA256": "67a5c4688c61e53a868f8167a4993d74ee06c69b0917add64a4243efac781d4f",
+      "currentMediaBindings": 14,
+      "excludedRoleBindings": 0,
+      "independent93ValidationSnapshotMatches": true
+    },
+    {
+      "era": "e10",
+      "city": "naypyidaw",
+      "sourceCommit": "8978056200a944a7b6175fb0d086e75c93bd9b33",
+      "contentSHA256": "a059f2eb68bb70c2baa07177e943a009e084bd0a3c92062b7787a226dc669d8f",
+      "sidecarSHA256": "5e2f8b86af8f4b662ee425b0809eaca4bdbc726f106a82dc2c8a3737ca782481",
+      "currentMediaBindings": 10,
+      "excludedRoleBindings": 0,
+      "independent93ValidationSnapshotMatches": true
+    },
+    {
+      "era": "e10",
+      "city": "phnompenh",
+      "sourceCommit": "8978056200a944a7b6175fb0d086e75c93bd9b33",
+      "contentSHA256": "197d94dcf0ee3ee1786bc36d29a4e1c3f48567fe86adf78fa2f48a8873a1cc65",
+      "sidecarSHA256": "ebb91bfc2eb71a346f3076654642fdd0c05aa4ecfd2e22ba4613700460d7a777",
+      "currentMediaBindings": 6,
+      "excludedRoleBindings": 0,
+      "independent93ValidationSnapshotMatches": true
+    },
+    {
+      "era": "e10",
+      "city": "pjongjang",
+      "sourceCommit": "8978056200a944a7b6175fb0d086e75c93bd9b33",
+      "contentSHA256": "9bcc937be30819365f0d55c1eec1204cb56c4ea880a7849d9229b994ee9f49fe",
+      "sidecarSHA256": "280c9e6e1053f1df140c1b83e1b80db576b96ef9ed11a5992e1e3dadb6aea20a",
+      "currentMediaBindings": 11,
+      "excludedRoleBindings": 0,
+      "independent93ValidationSnapshotMatches": true
+    },
+    {
+      "era": "e10",
+      "city": "vientiane",
+      "sourceCommit": "8978056200a944a7b6175fb0d086e75c93bd9b33",
+      "contentSHA256": "ea0d9dac107a58c9ce0c4b4374c2a3427202c2c630354226258d73a5e55e75ed",
+      "sidecarSHA256": "4e09982e989308655741dfa8479e5f4e0a548d5576f0630920f94895ec622bdd",
+      "currentMediaBindings": 13,
+      "excludedRoleBindings": 0,
+      "independent93ValidationSnapshotMatches": true
+    },
+    {
+      "era": "e11",
+      "city": "belmopan",
+      "sourceCommit": "f15730b97c9f7484350a7753cd0e2355cc597a57",
+      "contentSHA256": "a4d2a55699443c149d77a0adb3818898bf35118e9497908f7886f82ceff82ae4",
+      "sidecarSHA256": "261b4f8ae36458c401815e4df76994a4292b55c50389242d98970058a9af7895",
+      "currentMediaBindings": 7,
+      "excludedRoleBindings": 0,
+      "independent93ValidationSnapshotMatches": true
+    },
+    {
+      "era": "e11",
+      "city": "kingston",
+      "sourceCommit": "f15730b97c9f7484350a7753cd0e2355cc597a57",
+      "contentSHA256": "747d00cfe7208b21ba14a6cf83e690f2f696bb7aa70b844e6902ee68d22ac031",
+      "sidecarSHA256": "1a37c5650aae11afbed1611a40bf0ba18414677cb8cda58f9869cefd6a1124b5",
+      "currentMediaBindings": 10,
+      "excludedRoleBindings": 0,
+      "independent93ValidationSnapshotMatches": true
+    },
+    {
+      "era": "e11",
+      "city": "ottawa",
+      "sourceCommit": "f15730b97c9f7484350a7753cd0e2355cc597a57",
+      "contentSHA256": "b801f2cd32b53a99ea02f9202da6a408da352b738b55a91fab08407b7148886d",
+      "sidecarSHA256": "43f5b193950fecb6907cb6f3590f195756bf073465cc564d1c6e6fd49a41d6bb",
+      "currentMediaBindings": 14,
+      "excludedRoleBindings": 0,
+      "independent93ValidationSnapshotMatches": true
+    },
+    {
+      "era": "e11",
+      "city": "portauprince",
+      "sourceCommit": "f15730b97c9f7484350a7753cd0e2355cc597a57",
+      "contentSHA256": "736482cc94a62ddd7502ae74d9cf7091413e133ec8b00abe05885774889099b0",
+      "sidecarSHA256": "924aed9f133cfaf7f24011106bc7110694dda3740a67454dcd64f0de708ab5fb",
+      "currentMediaBindings": 12,
+      "excludedRoleBindings": 0,
+      "independent93ValidationSnapshotMatches": true
+    },
+    {
+      "era": "e11",
+      "city": "sanjose",
+      "sourceCommit": "f15730b97c9f7484350a7753cd0e2355cc597a57",
+      "contentSHA256": "012a802fa7b8bdc52c0561dd96bd4421c63e5ecb46a40384ea3943647be99e7a",
+      "sidecarSHA256": "865bf817d7220832e2fb59382f85f9d69bd4824e0c71e0e8ebc8bfa0a1319df1",
+      "currentMediaBindings": 8,
+      "excludedRoleBindings": 0,
+      "independent93ValidationSnapshotMatches": true
+    },
+    {
+      "era": "e11",
+      "city": "sansalvador",
+      "sourceCommit": "f15730b97c9f7484350a7753cd0e2355cc597a57",
+      "contentSHA256": "a666562e1092b6f31d4c1dd6d4515e738e19c5d8fdc9b4fe113ae1d94d40e936",
+      "sidecarSHA256": "007032cfc5f912d254e249053bbdf5698d27f525eaf2a4a89e21c47546b68486",
+      "currentMediaBindings": 10,
+      "excludedRoleBindings": 0,
+      "independent93ValidationSnapshotMatches": true
+    },
+    {
+      "era": "e11",
+      "city": "santodomingo",
+      "sourceCommit": "f15730b97c9f7484350a7753cd0e2355cc597a57",
+      "contentSHA256": "950ca199610edf5b7226c2a7c527451961904983a33921ee4208e0292d62c0dd",
+      "sidecarSHA256": "f55b0bd13d4e04374e7898c6125180325533b9a46ef7f344f10fa064709589bb",
+      "currentMediaBindings": 4,
+      "excludedRoleBindings": 0,
+      "independent93ValidationSnapshotMatches": true
+    },
+    {
+      "era": "e11",
+      "city": "tegucigalpa",
+      "sourceCommit": "f15730b97c9f7484350a7753cd0e2355cc597a57",
+      "contentSHA256": "67910bb401d50f31138c3470b19c1984f64721d150c6db8bd639658f5020e88e",
+      "sidecarSHA256": "2515a87e70cebef24eca505bd3062010beaf34ca404630faaa0f17e614e581df",
+      "currentMediaBindings": 7,
+      "excludedRoleBindings": 0,
+      "independent93ValidationSnapshotMatches": true
+    },
+    {
+      "era": "e11",
+      "city": "washington",
+      "sourceCommit": "f15730b97c9f7484350a7753cd0e2355cc597a57",
+      "contentSHA256": "12bf73df5a769f3806a71b2cc6b49aac7676ef169f8dbfb4e84666429dbeab7c",
+      "sidecarSHA256": "6d10e44ab29eb6fe6fdd69774e7a8439418748fcb9a243dd2a1c7f084016f65d",
+      "currentMediaBindings": 16,
+      "excludedRoleBindings": 0,
+      "independent93ValidationSnapshotMatches": true
+    },
+    {
+      "era": "e12",
+      "city": "basseterre",
+      "sourceCommit": "b2fea20e50fa219fde9166a3a8964ed62832b034",
+      "contentSHA256": "d3efa7e6663a9aa74f34965e01ec3caa915a13a32d91ab15b61b2f375d3f4b10",
+      "sidecarSHA256": "56fd37404df4bdb3c0c8c1a4f64ba159e15a1800abc450c1c43af891dde0c604",
+      "currentMediaBindings": 9,
+      "excludedRoleBindings": 0,
+      "independent93ValidationSnapshotMatches": true
+    },
+    {
+      "era": "e12",
+      "city": "bridgetown",
+      "sourceCommit": "b2fea20e50fa219fde9166a3a8964ed62832b034",
+      "contentSHA256": "577cf24beaaebe927378b911cbb3a023e3ce46193235f7011828e34046fc6fa0",
+      "sidecarSHA256": "2216b26babdac6ff6ff5a8be0ba2c5d8fbd2257dccfd0d441cdc0d22150eaca8",
+      "currentMediaBindings": 7,
+      "excludedRoleBindings": 0,
+      "independent93ValidationSnapshotMatches": true
+    },
+    {
+      "era": "e12",
+      "city": "castries",
+      "sourceCommit": "b2fea20e50fa219fde9166a3a8964ed62832b034",
+      "contentSHA256": "629c56a144c8197877b6fc40643ce7929c6bd143cf8d71d480451d9883363917",
+      "sidecarSHA256": "66175eb7878fc268d7d9641066da43e8b25c61a3d4d141d0a47fb08640706c7c",
+      "currentMediaBindings": 8,
+      "excludedRoleBindings": 0,
+      "independent93ValidationSnapshotMatches": true
+    },
+    {
+      "era": "e12",
+      "city": "kingstown",
+      "sourceCommit": "b2fea20e50fa219fde9166a3a8964ed62832b034",
+      "contentSHA256": "95c17f396512a50ede234c47eb61a53416b8a625301ed3a20f51c474801bc9ed",
+      "sidecarSHA256": "17b558101b98eec2011cdf19560e94ada61e34051988b4027577fac7440089de",
+      "currentMediaBindings": 9,
+      "excludedRoleBindings": 0,
+      "independent93ValidationSnapshotMatches": true
+    },
+    {
+      "era": "e12",
+      "city": "nassau",
+      "sourceCommit": "b2fea20e50fa219fde9166a3a8964ed62832b034",
+      "contentSHA256": "1d079f6220a140006aa16abfc203f04340a5db084add729084bb74f12087b590",
+      "sidecarSHA256": "45d9e59f4b43eff837a9c1d86b0d6ca50751934265f232337365fde25d08999d",
+      "currentMediaBindings": 8,
+      "excludedRoleBindings": 0,
+      "independent93ValidationSnapshotMatches": true
+    },
+    {
+      "era": "e12",
+      "city": "portofspain",
+      "sourceCommit": "b2fea20e50fa219fde9166a3a8964ed62832b034",
+      "contentSHA256": "c66b2a1545944a71f07072c0385d9db2bdaa46fefb96fa2413c2bd486c85b9cb",
+      "sidecarSHA256": "05aa15509f521e971d896f9fcb89ad8f2964166de98d21953e54a4674ccd0518",
+      "currentMediaBindings": 8,
+      "excludedRoleBindings": 0,
+      "independent93ValidationSnapshotMatches": true
+    },
+    {
+      "era": "e12",
+      "city": "roseau",
+      "sourceCommit": "b2fea20e50fa219fde9166a3a8964ed62832b034",
+      "contentSHA256": "ad8e18b0a43319854d2959ef4f88bb7ee3b2902a217e716d59482c3b6c59d6bd",
+      "sidecarSHA256": "48d1e97f9e1cc768bcf3b6ca814c3dab5ac2d9c905e441d5db262d96bdd36967",
+      "currentMediaBindings": 10,
+      "excludedRoleBindings": 0,
+      "independent93ValidationSnapshotMatches": true
+    },
+    {
+      "era": "e12",
+      "city": "saintjohns",
+      "sourceCommit": "b2fea20e50fa219fde9166a3a8964ed62832b034",
+      "contentSHA256": "78f3cad311f86ec2da935449a89fae03b96a6b13a2ae5d2f0e7d529c249aefec",
+      "sidecarSHA256": "62d3a9c31d438273b55ef23e3801e44d008072a74a66de4e50371f7e614c48e4",
+      "currentMediaBindings": 8,
+      "excludedRoleBindings": 0,
+      "independent93ValidationSnapshotMatches": true
+    },
+    {
+      "era": "e12",
+      "city": "stgeorges",
+      "sourceCommit": "b2fea20e50fa219fde9166a3a8964ed62832b034",
+      "contentSHA256": "14dce1a0b0d13e3ce8dbda5e8478846ac9cee81e5b56e5b94941c71b221bad4b",
+      "sidecarSHA256": "52501a8517b49e5e7ee494d39b8f4861a373452b44c39cf2b5f0a0a613824c9e",
+      "currentMediaBindings": 6,
+      "excludedRoleBindings": 0,
+      "independent93ValidationSnapshotMatches": true
+    },
+    {
+      "era": "e13",
+      "city": "brasilia",
+      "sourceCommit": "7ef20ebb7df278c6dd1da0f37ed16948b558b5a6",
+      "contentSHA256": "985f1fceff8d4878563852e38deb9848c871ba264a71282d71dec76bcf1dfa70",
+      "sidecarSHA256": "36bac929b3816c2106b479bbbbdd9beff5e131945a58a36a474c17ed186e3806",
+      "currentMediaBindings": 13,
+      "excludedRoleBindings": 0,
+      "independent93ValidationSnapshotMatches": true
+    },
+    {
+      "era": "e13",
+      "city": "georgetown",
+      "sourceCommit": "7ef20ebb7df278c6dd1da0f37ed16948b558b5a6",
+      "contentSHA256": "6a78ea0ff59a8bdbffb720f91592da7004c4ca3028e8c1c9eeaaa6e582374b3c",
+      "sidecarSHA256": "75c14296986282f11bebbf0d62f0dc061fac3c6ea95d940336bfa81cc325a12c",
+      "currentMediaBindings": 14,
+      "excludedRoleBindings": 0,
+      "independent93ValidationSnapshotMatches": true
+    },
+    {
+      "era": "e13",
+      "city": "lapaz",
+      "sourceCommit": "7ef20ebb7df278c6dd1da0f37ed16948b558b5a6",
+      "contentSHA256": "c0291d6ce562eb6e78c098a7146377b17bbcc93ae65b83710007782aa14f83d9",
+      "sidecarSHA256": "5678ea7e5ff639cbc0c3f41819a282b5e98da9679a43bfa4f9c433c8cd08df4c",
+      "currentMediaBindings": 11,
+      "excludedRoleBindings": 0,
+      "independent93ValidationSnapshotMatches": true
+    },
+    {
+      "era": "e13",
+      "city": "paramaribo",
+      "sourceCommit": "7ef20ebb7df278c6dd1da0f37ed16948b558b5a6",
+      "contentSHA256": "3e558910b8b374265c316a1b062cacd6ebd8d0ae5be564e5a9d95a87fa6acf92",
+      "sidecarSHA256": "f2a5c2dfac0ca73e6dca9ccb2193ebef7c9545fe437ec2517c834e7da80c5c1a",
+      "currentMediaBindings": 17,
+      "excludedRoleBindings": 0,
+      "independent93ValidationSnapshotMatches": true
+    },
+    {
+      "era": "e13",
+      "city": "santiagodechile",
+      "sourceCommit": "7ef20ebb7df278c6dd1da0f37ed16948b558b5a6",
+      "contentSHA256": "e868de7b42e39dca45579b2408bf326aef191c1ac6ed8cc4910ff7b39ac52234",
+      "sidecarSHA256": "42f7d0de6235d487002d3622cfca12f577b367d7e20962530df4626ddb49f5fa",
+      "currentMediaBindings": 11,
+      "excludedRoleBindings": 0,
+      "independent93ValidationSnapshotMatches": true
+    },
+    {
+      "era": "e14",
+      "city": "apia",
+      "sourceCommit": "97a8f3b9ab169f4a8763459cbea3a99d743d4a60",
+      "contentSHA256": "309388861926d27d4bffdf3a5b53bf0d5ec517a5c5e00d7e19e45f9ad8a7de40",
+      "sidecarSHA256": "0daf5c14100420c9d3b35a17dc691284b7e6a576f3fb727be795f88938abd325",
+      "currentMediaBindings": 10,
+      "excludedRoleBindings": 0,
+      "independent93ValidationSnapshotMatches": true
+    },
+    {
+      "era": "e14",
+      "city": "canberra",
+      "sourceCommit": "97a8f3b9ab169f4a8763459cbea3a99d743d4a60",
+      "contentSHA256": "0e8b6e7164cc877985bed3cbfb2c44459111da52ec8038318ca5b3c4cc5e831e",
+      "sidecarSHA256": "3c8c7d59237cfb6856c381c7347adec5aa847d0f55e1db74247771e3154e081e",
+      "currentMediaBindings": 15,
+      "excludedRoleBindings": 0,
+      "independent93ValidationSnapshotMatches": true
+    },
+    {
+      "era": "e14",
+      "city": "funafuti",
+      "sourceCommit": "97a8f3b9ab169f4a8763459cbea3a99d743d4a60",
+      "contentSHA256": "ff073d5474ede844f07b7ed87adc0077d4319a61534f0da250680c56a2e810ac",
+      "sidecarSHA256": "02e5b20b67b152ed726a0dd0cfe7ce69bf09f4cfcd0c212520c948a2435abdaa",
+      "currentMediaBindings": 13,
+      "excludedRoleBindings": 0,
+      "independent93ValidationSnapshotMatches": true
+    },
+    {
+      "era": "e14",
+      "city": "majuro",
+      "sourceCommit": "97a8f3b9ab169f4a8763459cbea3a99d743d4a60",
+      "contentSHA256": "ed5d9cd5e95948ab11f4f32c8e324ac9d39d74ec3af033dd09b90cbcf53b81e9",
+      "sidecarSHA256": "25bc60d022e458051cf6593bbb1b261e1c37f5dd764341f734f10d9b6b004735",
+      "currentMediaBindings": 15,
+      "excludedRoleBindings": 0,
+      "independent93ValidationSnapshotMatches": true
+    },
+    {
+      "era": "e14",
+      "city": "ngerulmud",
+      "sourceCommit": "97a8f3b9ab169f4a8763459cbea3a99d743d4a60",
+      "contentSHA256": "d54f79f028f57d0b9cf1ce4aab55a4ad506700605f2ec9f9aa80c24808d16101",
+      "sidecarSHA256": "161b819adfa69aa0ac3b7ebb5dee6a7e9aee1145b954b11836b6429296567c4b",
+      "currentMediaBindings": 12,
+      "excludedRoleBindings": 0,
+      "independent93ValidationSnapshotMatches": true
+    },
+    {
+      "era": "e14",
+      "city": "nukualofa",
+      "sourceCommit": "97a8f3b9ab169f4a8763459cbea3a99d743d4a60",
+      "contentSHA256": "2233601695187dffd2906f6dc2d9c6db9da360c8a1702865ded11753dc299e6b",
+      "sidecarSHA256": "071365ef57c5986e19d5191bd2de99cc5837dc80a6e22734ae1328002fb71230",
+      "currentMediaBindings": 9,
+      "excludedRoleBindings": 0,
+      "independent93ValidationSnapshotMatches": true
+    },
+    {
+      "era": "e14",
+      "city": "palikir",
+      "sourceCommit": "97a8f3b9ab169f4a8763459cbea3a99d743d4a60",
+      "contentSHA256": "fd0aba51549c674a69742625b68a7db9da9f1c19422adfacf6649671d2190921",
+      "sidecarSHA256": "c0d1c1b92450931c4567eb3d595a2dbb694f61feb4cf0b477c34b219b9658ff2",
+      "currentMediaBindings": 8,
+      "excludedRoleBindings": 0,
+      "independent93ValidationSnapshotMatches": true
+    },
+    {
+      "era": "e14",
+      "city": "southtarawa",
+      "sourceCommit": "97a8f3b9ab169f4a8763459cbea3a99d743d4a60",
+      "contentSHA256": "6605c03ef9f4f50d43ad58c3611c79d39075ec317b59d8e196bb1b556ce2bcca",
+      "sidecarSHA256": "06829a775b44b196d8e696d97a185ef5e56c83934f2bf032d10f37a1ca251692",
+      "currentMediaBindings": 8,
+      "excludedRoleBindings": 0,
+      "independent93ValidationSnapshotMatches": true
+    },
+    {
+      "era": "e14",
+      "city": "yaren",
+      "sourceCommit": "97a8f3b9ab169f4a8763459cbea3a99d743d4a60",
+      "contentSHA256": "ec8f1985f77c4c9b6debac09d048f03bf33f1829dd9e4b34f5576a0f72877a3d",
+      "sidecarSHA256": "df2057064886e705944032a4615acf6e2f274958a1ef2f92155b71fe6f67109d",
+      "currentMediaBindings": 8,
+      "excludedRoleBindings": 0,
+      "independent93ValidationSnapshotMatches": true
+    }
+  ],
+  "cityCount": 93,
+  "activeImageBindings": 1029,
+  "excludedImageBindings": 11,
+  "sameNativeExportURLIdentitiesAsBatch0088": true,
+  "textAcceptanceVerified": false,
+  "gameIntegrated": false
+}
