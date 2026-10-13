@@ -1,0 +1,92 @@
+{
+  "cityName": "Luxemburg",
+  "gameCityId": "luxemburg",
+  "mediaSlug": "luxembourg",
+  "taskNumbers": [
+    102
+  ],
+  "updatedAt": "2026-10-13T13:30:26.186162+00:00",
+  "originalRequestedNewSlots": [
+    8
+  ],
+  "activeRequestedNewSlots": [],
+  "existingHeroSlotsPreserved": [
+    1,
+    2,
+    3
+  ],
+  "assets": [],
+  "omittedItems": [
+    {
+      "slot": 8,
+      "taskNumber": 102,
+      "reason": "Omistaja perui kaikki 1800-luvun introkuvat. Lisäksi itsenäinen QA havaitsi sillankannesta nousevan pienen erillisen pystyulokkeen kohdassa x936–937,y236–239; esinetyyppi ei ole varma mutta ohje kieltää kaikki kannen pystyulokkeet.",
+      "stage": "owner-topic-cancellation",
+      "ownerCancelled": true,
+      "allowedByUpdatedSource": true,
+      "additionalGenerationAllowed": false,
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uusinta6-20261013/luxembourg/native-8.png",
+      "nativeSHA256": "15c7b0720045ad229ec0563fdf6c7348790cc94c4b69a312e1b84f4bef9ead6d",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uusinta6-20261013/luxembourg/luxembourg-8-1873-intro-v2.png",
+      "finalSHA256": "ee41c0b56d98831d99b64c1b43ae0f7a5880db70be2bc3c776e17f0d137b73f9"
+    }
+  ],
+  "ownerCancelledItems": [
+    {
+      "slot": 8,
+      "taskNumber": 102,
+      "reason": "Omistaja perui kaikki 1800-luvun introkuvat. Lisäksi itsenäinen QA havaitsi sillankannesta nousevan pienen erillisen pystyulokkeen kohdassa x936–937,y236–239; esinetyyppi ei ole varma mutta ohje kieltää kaikki kannen pystyulokkeet.",
+      "stage": "owner-topic-cancellation",
+      "ownerCancelled": true,
+      "allowedByUpdatedSource": true,
+      "additionalGenerationAllowed": false,
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uusinta6-20261013/luxembourg/native-8.png",
+      "nativeSHA256": "15c7b0720045ad229ec0563fdf6c7348790cc94c4b69a312e1b84f4bef9ead6d",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uusinta6-20261013/luxembourg/luxembourg-8-1873-intro-v2.png",
+      "finalSHA256": "ee41c0b56d98831d99b64c1b43ae0f7a5880db70be2bc3c776e17f0d137b73f9"
+    }
+  ],
+  "sourceAllowedQAOmissions": [],
+  "actualCallsBeforeCancellation": 1,
+  "actualCallsAfterCancellation": 0,
+  "originalMaximumGenerationCalls": 1,
+  "currentMaximumActiveCalls": 0,
+  "allRequestedSlotsHandled": true,
+  "allActiveRequestedSlotsDelivered": true,
+  "productionCompleteWithinUpdatedSourceLimit": true,
+  "productionCompleteWithinSourceLimit": true,
+  "ownerAcceptanceRequired": false,
+  "ownerAcceptanceVerifiedForDeliverableImages": true,
+  "ownerAcceptanceVerified": false,
+  "gameIntegrationAllowed": false,
+  "gameIntegrationVerified": false,
+  "publicationVerified": false,
+  "stages": {
+    "local": true,
+    "QA": true,
+    "R2": true,
+    "mailbox": "prepared",
+    "FableReceipt": false,
+    "ownerAcceptance": false,
+    "runtimeIntegration": false,
+    "publication": false
+  },
+  "sourcePath": "posti/sisaltokirjuri-codex-saapumisintro-uusinta-6-20261013.md",
+  "sourceCommit": "efbc512cab1d414eea6dab7b07a5580fb1f96396",
+  "sourceBlob": "de12c45cd76efaa5a293b6bebd74ff4c0825d577",
+  "sourceOverride": {
+    "sourcePath": "posti/sisaltokirjuri-codex-saapumisintro-uusinta-PERUUTUS-20261013.md",
+    "sourceCommit": "4c28fefc109563a81c023ab2c1ab2ba6288aa3b9",
+    "sourceBlob": "3a23d2a7dfc370980086678f73ac44a324adc567",
+    "sourceSHA256": "0646a16ea7bcbb2f52e95b5567358a78305bc8c441a098bb8113e452494616b7",
+    "ownerPolicyPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/intro-owner-topic-rejection-20261013/owner-policy.json",
+    "ownerPolicySHA256": "0db248b979b474cdf180147e037b112d64e35b346e5f23eb99a944bbe0ea56be"
+  },
+  "ownerPolicyPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/intro-owner-topic-rejection-20261013/owner-policy.json",
+  "priorImageFilesAndDeliveryHistoryPreserved": true,
+  "prior19V1ImageFilesPreserved": true,
+  "originalSourceCommit": "a856b50cc25c2f56064e9f18cc6f7e81f40ccf4e",
+  "originalSeparateNewGenerationQuota": 6,
+  "currentActiveGlobalGenerationQuota": 4,
+  "cancelledTopicGenerationAllowed": false
+}
