@@ -13994,3 +13994,15 @@ Omistaja 13.10.2026 klo 09.1x kysyi: "Miten iso työ Olavinlinnassa on vielä j�
 ## PÄÄKAUPUNKIEN KUVAT VAIN COMMONSISTA JA TARKISTUS ENNEN PELIÄ (13.10.2026 klo 17.42)
 
 Omistaja 13.10.2026 klo 17.4x (kortti: "nykyiset voi jättää, mutta jatkossa vain commons"; viesti: "sieltä tulee nyt aika paljon kuvia. pitää varmaan tarkastaa ne ennen peliin lisäämistä"): Codexin pääkaupunkierien e04–e14 jo toimitetut havainnekuvat (myös ruoka-, luonto- ja nähtävyysjuttujen kuvitukset) saavat jäädä. Jatkossa pääkaupunkien lehtiin, nähtävyysjuttuihin, valokuva-osioon ja oppaaseen ei generoida uusia kuvia eikä uusintoja, vaan kuvat otetaan vain Wikimedia Commonsista (PILVIOHJE-paakaupungit.md: Ei generointia). Kunkin pääkaupungin kaksi havainnekuvaa (tilaus 10.10.) pysyvät. Jokainen Codexin pääkaupunkikuva tarkistetaan ennen peliin kytkemistä: Sisältökirjuri katsoo, että aihe vastaa tekstiä, kuvassa ei ole tekstiä, tunnistettavia kasvoja eikä epäaitoa pintaa, ja että lisenssi ja panoraamavapaus ovat kunnossa. Hylätyt jäävät pois, ja Pelikoodari kytkee vain tarkistetut. Codexille posti claude/postilaatikko b78d34283.
+
+## TARKENNUS: PÄÄKAUPUNKIKUVAT PISTOKOKEELLA (13.10.2026 klo 18.17)
+
+Omistaja 13.10.2026 klo 17.5x: "varmaan riittää ensin että alkuun tarkastaa osan, että miltä näyttää. toistuu varmasti samalla kaavalla loput" (tarkentaa kirjausta PÄÄKAUPUNKIEN KUVAT VAIN COMMONSISTA JA TARKISTUS ENNEN PELIÄ: jokaisen kuvan sijaan pistokoe kuvatyypeittäin). Toistuva vika laajentaa tarkistusta: omistajan kortti 17.4x "Satelliitit läpi, esineet pois" (Commonsin C-slottien satelliitti- ja ilmakuvat tarkistettu kaikki: 111 hyväksytty, 46 hylätty; tekoälyn käsityö- ja esinekuvat 106 pois pelistä). Lopputulos 861 hyväksyttyä kuvaa. Tekstien pistokoe: Codex korjaa e04–e14 löydöslistoilla (PT 18.0x, Clauden kiintiö Euroopan keskitykseen), sitten SK:n uusintapistokoe ja PK:n kytkentä erä kerrallaan.
+
+## TAIDEMUSEO 2: RANSKA (13.10.2026 klo 18.17)
+
+Omistaja 13.10.2026 klo 18.1x (kortti "Ranska (Suositus)"): toinen maittainen taidemuseo on Ranska (MAITTAIN, ALANKOMAAT ENSIN -kaavalla): Louvren klassikot, romantiikka (Delacroix, Géricault), impressionismi Orsayn tapaan (Monet: Impressio, nouseva aurinko 1872) ja Rodinin veistokset 3D-skannauksina; vain PD-teoksia Commonsin kopioina (EU DSM art. 14). Aineisto Sisältökirjuri, sali Linssiseppä. Louvren Google-malli näyttää likaiselta (omistaja 18.1x): oma Blender-malli myöhemmin vain vapaista osista (vanha palatsi, Cour Carrée).
+
+## POIKKEUS: LOUVREN LASIPYRAMIDI HAVAINNEKUVAN PÄÄAIHEENA (13.10.2026 klo 18.17)
+
+Omistaja 13.10.2026 klo 18.2x ("louvrehan näkyy nyt jo googlen kuvissa. käytä havainnekuvaa", "siis siitä lasipyramidista"; kortti "Pyramidi pääaiheena"): Ranskan taidemuseon lähestymisen havainnekuvassa I. M. Pein lasipyramidi saa olla pääaiheena, vaikka teos on suojattu vuoteen 2089 eikä Ranskassa ole kaupallista panoraamavapautta (poikkeus panoraamavapaussääntöön #4431). Omistaja hyväksyi riskin; jos oikeudenomistaja huomauttaa, kuva vaihdetaan. Pyramidia ei mallinneta omana 3D-mallina.
