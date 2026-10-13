@@ -38,6 +38,10 @@ Luovuttaja: Linssiseppä 2 (Opus, high). Edellinen: viesti-linssiseppa-2-luovutu
 5. Avoimet muille: Ranskan näyttelyvalikon "Rijksmuseum"-otsikko korjattu LS1:n 9fecfada9:ssä (kuva-alue piilossa); veistosten
    tekstit eivät vielä näy pelissä (MuseoTaulu näyttää vain Teokset) – luonnos `_tyo/linssiseppa2/taidemuseo-ranska/rodin-pysahdykset-luonnos.json`
    (8 veistosta, SK:n tekstit, Haamut mukana) odottaa LS1/NUI:n veistosriviä.
+7. **rodin4 valmis 21.33** (lokit/todistus-rodin4-20261013-2128/kuva-arkki.png, 7/7 veistosta, 0 virhettä): puutarha nyt päivänvalossa
+   (v2c korjasi). LÖYDÖS (LR: veistosten kohdevalot ovat LS2:n): Balzacin ja Porvarien ALAOSA on tumma – puutarhan veistoksilla ei ole
+   ympäristövaloa, ja kohdevalojen kartio (puolikulma 22°, kohde 0,4 × max_koko.y) ei ylety alas. Korjausehdotus: puutarhan (rp) valoille
+   puolikulma ~35° ja kohde keskelle, tai veistosmateriaalille ulkona ympäristövalo (MuseoValaistu, LS1:n runko) – sovi LS1/LR:n kanssa.
 6. Simussa patsaat näkyvät marmorivarana (simu ei tue ASTC:tä) – värit tarkistetaan vasta laitteella; kerro PT:lle kuvien yhteydessä.
 
 ## Paketit (ämpärissä)
