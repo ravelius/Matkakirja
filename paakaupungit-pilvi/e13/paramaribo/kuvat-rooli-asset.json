@@ -3,7 +3,7 @@
   "era": "e13",
   "city": "paramaribo",
   "authorization": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
-  "sourceContentAfterSHA256": "639174f16381bc6b743caec890e7d92ff6dece7d78d9dc53e8bccfc1b1e8aded",
+  "sourceContentAfterSHA256": "8c6d2aeb487b8d17890fc2c36fa8a43d949757d10669c1af21127807617a8d34",
   "assets": [
     {
       "era": "e13",
@@ -139,7 +139,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/paramaribo/qa.json",
-            "sha256": "804eeff14dcf010d260ea1276f05a9b7530c8d9fa366b98a2da4c87ccb9bb59b"
+            "sha256": "e645e401faeae0afb188aab52744cee74993e5a5378de5d4374c567e090d380e"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/paramaribo/illustration-qa-extra.json",
@@ -226,7 +226,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "639174f16381bc6b743caec890e7d92ff6dece7d78d9dc53e8bccfc1b1e8aded",
+      "sourceContentAfterSHA256": "8c6d2aeb487b8d17890fc2c36fa8a43d949757d10669c1af21127807617a8d34",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
       "contextAfterSHA256": "ddef89710432260ea593aeac6e8568cbe91899af384f3b85aae19e839559c503"
     },
@@ -361,7 +361,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/paramaribo/qa.json",
-            "sha256": "804eeff14dcf010d260ea1276f05a9b7530c8d9fa366b98a2da4c87ccb9bb59b"
+            "sha256": "e645e401faeae0afb188aab52744cee74993e5a5378de5d4374c567e090d380e"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/paramaribo/illustration-qa-extra.json",
@@ -448,7 +448,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "639174f16381bc6b743caec890e7d92ff6dece7d78d9dc53e8bccfc1b1e8aded",
+      "sourceContentAfterSHA256": "8c6d2aeb487b8d17890fc2c36fa8a43d949757d10669c1af21127807617a8d34",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
       "contextAfterSHA256": "4b1e16d5a1fc5c8deaf28f6cf22d060eae97f50bd5c0e1ef6a1e6bdc8f0419be"
     },
@@ -583,7 +583,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/paramaribo/qa.json",
-            "sha256": "804eeff14dcf010d260ea1276f05a9b7530c8d9fa366b98a2da4c87ccb9bb59b"
+            "sha256": "e645e401faeae0afb188aab52744cee74993e5a5378de5d4374c567e090d380e"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/paramaribo/illustration-qa-extra.json",
@@ -670,7 +670,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "639174f16381bc6b743caec890e7d92ff6dece7d78d9dc53e8bccfc1b1e8aded",
+      "sourceContentAfterSHA256": "8c6d2aeb487b8d17890fc2c36fa8a43d949757d10669c1af21127807617a8d34",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
       "contextAfterSHA256": "c1adbd23050cdbd00addbb9ecda6ef8316c25f02627e81e2bfbb3e5031e8281f"
     },
@@ -804,7 +804,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/paramaribo/qa.json",
-            "sha256": "804eeff14dcf010d260ea1276f05a9b7530c8d9fa366b98a2da4c87ccb9bb59b"
+            "sha256": "e645e401faeae0afb188aab52744cee74993e5a5378de5d4374c567e090d380e"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/paramaribo/illustration-qa-extra.json",
@@ -891,7 +891,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "639174f16381bc6b743caec890e7d92ff6dece7d78d9dc53e8bccfc1b1e8aded",
+      "sourceContentAfterSHA256": "8c6d2aeb487b8d17890fc2c36fa8a43d949757d10669c1af21127807617a8d34",
       "targetAfterSHA256": "19344505cf60faf787dbc8448f9675863c23b039e4c592c688df61aa29bc2f45",
       "contextAfterSHA256": "19344505cf60faf787dbc8448f9675863c23b039e4c592c688df61aa29bc2f45"
     },
@@ -1025,7 +1025,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/paramaribo/qa.json",
-            "sha256": "804eeff14dcf010d260ea1276f05a9b7530c8d9fa366b98a2da4c87ccb9bb59b"
+            "sha256": "e645e401faeae0afb188aab52744cee74993e5a5378de5d4374c567e090d380e"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/paramaribo/illustration-qa-extra.json",
@@ -1112,7 +1112,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "639174f16381bc6b743caec890e7d92ff6dece7d78d9dc53e8bccfc1b1e8aded",
+      "sourceContentAfterSHA256": "8c6d2aeb487b8d17890fc2c36fa8a43d949757d10669c1af21127807617a8d34",
       "targetAfterSHA256": "2c639d7727cc7f4ce384caed616098b3c82fd2a6791d330ff5226b84839dcdd9",
       "contextAfterSHA256": "2c639d7727cc7f4ce384caed616098b3c82fd2a6791d330ff5226b84839dcdd9"
     },
@@ -1244,7 +1244,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/paramaribo/qa.json",
-            "sha256": "804eeff14dcf010d260ea1276f05a9b7530c8d9fa366b98a2da4c87ccb9bb59b"
+            "sha256": "e645e401faeae0afb188aab52744cee74993e5a5378de5d4374c567e090d380e"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/paramaribo/illustration-qa-extra.json",
@@ -1331,7 +1331,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "639174f16381bc6b743caec890e7d92ff6dece7d78d9dc53e8bccfc1b1e8aded",
+      "sourceContentAfterSHA256": "8c6d2aeb487b8d17890fc2c36fa8a43d949757d10669c1af21127807617a8d34",
       "targetAfterSHA256": "12478cc3634344a6e32436641ff3fbc1a337edb9eaf30585174c194b217edff6",
       "contextAfterSHA256": "12478cc3634344a6e32436641ff3fbc1a337edb9eaf30585174c194b217edff6"
     },
@@ -1465,7 +1465,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/paramaribo/qa.json",
-            "sha256": "804eeff14dcf010d260ea1276f05a9b7530c8d9fa366b98a2da4c87ccb9bb59b"
+            "sha256": "e645e401faeae0afb188aab52744cee74993e5a5378de5d4374c567e090d380e"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/paramaribo/illustration-qa-extra.json",
@@ -1552,7 +1552,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "639174f16381bc6b743caec890e7d92ff6dece7d78d9dc53e8bccfc1b1e8aded",
+      "sourceContentAfterSHA256": "8c6d2aeb487b8d17890fc2c36fa8a43d949757d10669c1af21127807617a8d34",
       "targetAfterSHA256": "2a392bec57dd9077d9b4607fd66cb7b57f32dab10cce1e23d637cce69d5eb414",
       "contextAfterSHA256": "2a392bec57dd9077d9b4607fd66cb7b57f32dab10cce1e23d637cce69d5eb414"
     },
@@ -1686,7 +1686,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/paramaribo/qa.json",
-            "sha256": "804eeff14dcf010d260ea1276f05a9b7530c8d9fa366b98a2da4c87ccb9bb59b"
+            "sha256": "e645e401faeae0afb188aab52744cee74993e5a5378de5d4374c567e090d380e"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/paramaribo/illustration-qa-extra.json",
@@ -1773,7 +1773,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "639174f16381bc6b743caec890e7d92ff6dece7d78d9dc53e8bccfc1b1e8aded",
+      "sourceContentAfterSHA256": "8c6d2aeb487b8d17890fc2c36fa8a43d949757d10669c1af21127807617a8d34",
       "targetAfterSHA256": "3d459ef56bca8943faef91c74ba28adb18743c3405e4a7573b05bcd210731416",
       "contextAfterSHA256": "3d459ef56bca8943faef91c74ba28adb18743c3405e4a7573b05bcd210731416"
     },
@@ -1907,7 +1907,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/paramaribo/qa.json",
-            "sha256": "804eeff14dcf010d260ea1276f05a9b7530c8d9fa366b98a2da4c87ccb9bb59b"
+            "sha256": "e645e401faeae0afb188aab52744cee74993e5a5378de5d4374c567e090d380e"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/paramaribo/illustration-qa-extra.json",
@@ -1994,7 +1994,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "639174f16381bc6b743caec890e7d92ff6dece7d78d9dc53e8bccfc1b1e8aded",
+      "sourceContentAfterSHA256": "8c6d2aeb487b8d17890fc2c36fa8a43d949757d10669c1af21127807617a8d34",
       "targetAfterSHA256": "aaf4f2a14824d7fc103e07ee2ee05548db880e455e6e69187a55ee959f052436",
       "contextAfterSHA256": "aaf4f2a14824d7fc103e07ee2ee05548db880e455e6e69187a55ee959f052436"
     },
@@ -2128,7 +2128,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/paramaribo/qa.json",
-            "sha256": "804eeff14dcf010d260ea1276f05a9b7530c8d9fa366b98a2da4c87ccb9bb59b"
+            "sha256": "e645e401faeae0afb188aab52744cee74993e5a5378de5d4374c567e090d380e"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/paramaribo/illustration-qa-extra.json",
@@ -2215,7 +2215,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "639174f16381bc6b743caec890e7d92ff6dece7d78d9dc53e8bccfc1b1e8aded",
+      "sourceContentAfterSHA256": "8c6d2aeb487b8d17890fc2c36fa8a43d949757d10669c1af21127807617a8d34",
       "targetAfterSHA256": "cca4d9ca979bef2c2b5147854d0a5ff9007525e25a1eb86f8a0f8b64d3bc4d8e",
       "contextAfterSHA256": "cca4d9ca979bef2c2b5147854d0a5ff9007525e25a1eb86f8a0f8b64d3bc4d8e"
     },
@@ -2351,7 +2351,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/paramaribo/qa.json",
-            "sha256": "804eeff14dcf010d260ea1276f05a9b7530c8d9fa366b98a2da4c87ccb9bb59b"
+            "sha256": "e645e401faeae0afb188aab52744cee74993e5a5378de5d4374c567e090d380e"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/paramaribo/illustration-qa-extra.json",
@@ -2438,7 +2438,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "639174f16381bc6b743caec890e7d92ff6dece7d78d9dc53e8bccfc1b1e8aded",
+      "sourceContentAfterSHA256": "8c6d2aeb487b8d17890fc2c36fa8a43d949757d10669c1af21127807617a8d34",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
       "contextAfterSHA256": "f8427aa51992cdebe3f9fcb9d8f296600b80b25c2972580db8ce03e0549b1982"
     },
@@ -2536,7 +2536,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/paramaribo/qa.json",
-        "fileSHA256": "804eeff14dcf010d260ea1276f05a9b7530c8d9fa366b98a2da4c87ccb9bb59b",
+        "fileSHA256": "e645e401faeae0afb188aab52744cee74993e5a5378de5d4374c567e090d380e",
         "item": {
           "slot": "PHOTO",
           "targetJsonPath": "$.valokuva",
@@ -2565,7 +2565,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/paramaribo/qa.json",
-            "sha256": "804eeff14dcf010d260ea1276f05a9b7530c8d9fa366b98a2da4c87ccb9bb59b"
+            "sha256": "e645e401faeae0afb188aab52744cee74993e5a5378de5d4374c567e090d380e"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/paramaribo/illustration-qa-extra.json",
@@ -2640,7 +2640,7 @@
         "tiedosto": "Luchtfoto van ’t Hogerhuysstraat Paramaribo Suriname.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "639174f16381bc6b743caec890e7d92ff6dece7d78d9dc53e8bccfc1b1e8aded",
+      "sourceContentAfterSHA256": "8c6d2aeb487b8d17890fc2c36fa8a43d949757d10669c1af21127807617a8d34",
       "targetAfterSHA256": "edbb9297b4757c864d8c6fd58c29871dbcae54a275aa2c648a75c430db273566",
       "contextAfterSHA256": "edbb9297b4757c864d8c6fd58c29871dbcae54a275aa2c648a75c430db273566"
     },
@@ -2741,7 +2741,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/paramaribo/qa.json",
-        "fileSHA256": "804eeff14dcf010d260ea1276f05a9b7530c8d9fa366b98a2da4c87ccb9bb59b",
+        "fileSHA256": "e645e401faeae0afb188aab52744cee74993e5a5378de5d4374c567e090d380e",
         "item": {
           "slot": "C1",
           "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
@@ -2770,7 +2770,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/paramaribo/qa.json",
-            "sha256": "804eeff14dcf010d260ea1276f05a9b7530c8d9fa366b98a2da4c87ccb9bb59b"
+            "sha256": "e645e401faeae0afb188aab52744cee74993e5a5378de5d4374c567e090d380e"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/paramaribo/illustration-qa-extra.json",
@@ -2845,214 +2845,9 @@
         "tiedosto": "Waterkant Paramaribo with the Unesco Heritage Buildings.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "639174f16381bc6b743caec890e7d92ff6dece7d78d9dc53e8bccfc1b1e8aded",
+      "sourceContentAfterSHA256": "8c6d2aeb487b8d17890fc2c36fa8a43d949757d10669c1af21127807617a8d34",
       "targetAfterSHA256": "6de00e51465394b6485efe7d049c02923cabad9136ce1b3d6220f08aaf2cd6c1",
       "contextAfterSHA256": "6de00e51465394b6485efe7d049c02923cabad9136ce1b3d6220f08aaf2cd6c1"
-    },
-    {
-      "era": "e13",
-      "city": "paramaribo",
-      "slot": "N1",
-      "type": "commons",
-      "assetID": "capital-cc-e13-paramaribo-n1-90d2c2a88566c6ba",
-      "galleryImageID": "capital-cc-e13-paramaribo-n1-90d2c2a88566c6ba",
-      "commonsFile": "Fort Zeelandia, Paramaribo, Suriname.jpg",
-      "targetJsonPath": "$.nahtavyydet[\"Fort Zeelandia\"].kuvat[0]",
-      "targetTokens": [
-        "nahtavyydet",
-        "Fort Zeelandia",
-        "kuvat",
-        0
-      ],
-      "operation": "merge-media-fields-preserve-other-content",
-      "CmediaFieldPayload": {
-        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e13/paramaribo/n1-90d2c2a88566c6ba2602.jpg",
-        "suora": true,
-        "lahde": "Medimir, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Fort Zeelandia kuuluu Paramaribon varhaisiin siirtomaa-ajan rakennuskerroksiin.",
-        "lyhyt": "Fort Zeelandia kuuluu Paramaribon varhaisiin siirtomaa-ajan rakennuskerroksiin.",
-        "tiedosto": "Fort Zeelandia, Paramaribo, Suriname.jpg"
-      },
-      "removeMediaKeys": [],
-      "CvalidatorCompatiblePayload": {
-        "lahde": "Medimir, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Fort Zeelandia kuuluu Paramaribon varhaisiin siirtomaa-ajan rakennuskerroksiin.",
-        "lyhyt": "Fort Zeelandia kuuluu Paramaribon varhaisiin siirtomaa-ajan rakennuskerroksiin.",
-        "tiedosto": "Fort Zeelandia, Paramaribo, Suriname.jpg"
-      },
-      "runtimeMediaFieldPayload": {
-        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e13/paramaribo/n1-90d2c2a88566c6ba2602.jpg",
-        "suora": true,
-        "lahde": "Medimir, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Fort Zeelandia kuuluu Paramaribon varhaisiin siirtomaa-ajan rakennuskerroksiin.",
-        "lyhyt": "Fort Zeelandia kuuluu Paramaribon varhaisiin siirtomaa-ajan rakennuskerroksiin.",
-        "tiedosto": "Fort Zeelandia, Paramaribo, Suriname.jpg"
-      },
-      "runtimeRemoveMediaKeys": [],
-      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
-      "nativeSHA256": "90d2c2a88566c6ba26021e11818c761612ee6cf6a23a66ff685307e934a36b64",
-      "exportSHA256": "90d2c2a88566c6ba26021e11818c761612ee6cf6a23a66ff685307e934a36b64",
-      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e13/paramaribo/n1-90d2c2a88566c6ba2602.jpg",
-      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e13/paramaribo/n1-90d2c2a88566c6ba2602.jpg",
-      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/paramaribo/cc-work/original-2.jpg",
-      "dimensions": [
-        1599,
-        899
-      ],
-      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e13/paakaupungit-pilvi/e13/paramaribo/sisalto.json",
-      "sourceContentSHA256": "639174f16381bc6b743caec890e7d92ff6dece7d78d9dc53e8bccfc1b1e8aded",
-      "semanticSourceBind": {
-        "targetBeforeSHA256": "275b563c646c5ed6a010df465122096d1091f9a4d916987e96be1ac8ae9429e7",
-        "semanticContextSHA256": "511f70b41d1760c479230dd36f04a926b5e23f9abd843217a523f85cdfcfb097",
-        "subjectTitle": "Fort Zeelandia",
-        "targetState": "existing-target"
-      },
-      "attribution": {
-        "author": "Medimir",
-        "license": "CC BY-SA 4.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
-        "sourcePage": "https://commons.wikimedia.org/wiki/File:Fort_Zeelandia,_Paramaribo,_Suriname.jpg",
-        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/a/aa/Fort_Zeelandia%2C_Paramaribo%2C_Suriname.jpg",
-        "rightsEvidence": {
-          "selection": "Laaja todellinen kaupunkinäkymä / julkiselta tieltä näkyvä historiallisten rakennusten ulkopuoli. Valokuvan CC-lisenssi erikseen. Commons Suriname -oikeusohje, Copyright Act Article 18, sallii julkisen tien varrella pysyvästi näkyvän arkkitehtuurin erikokoisen valokuvatoisinnon; vain ulkopuoli. Ei iästä arvattua tekijän kuolinvuotta, ei modernia sisätaidetta.",
-          "QA": {
-            "visualViewed": true,
-            "viewedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/paramaribo/qa-evidence/cc-41d8030528b3ac56/original.jpg",
-            "sourceHTML": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/360f156cb85edee2365c2cd0d92b26e16cb9626a676d5ce939bbb6b95a6177b4.html",
-            "sourceHTMLSHA256": "cda2f03001828f10e39f1d5e7c5ef5fe7329cb8a9c8ded2e39fe611fc27c2b59",
-            "sourcePage": "https://commons.wikimedia.org/wiki/File:Fort_Zeelandia,_Paramaribo,_Suriname.jpg",
-            "sourceDescription": "Nederlands: De voorkant van Fort Zeelandia",
-            "sourceDate": "30 September 2022",
-            "author": "Medimir",
-            "license": "CC BY-SA 4.0",
-            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
-            "width": 1599,
-            "height": 899,
-            "rightsEvidence": "Laaja todellinen kaupunkinäkymä / julkiselta tieltä näkyvä historiallisten rakennusten ulkopuoli. Valokuvan CC-lisenssi erikseen. Commons Suriname -oikeusohje, Copyright Act Article 18, sallii julkisen tien varrella pysyvästi näkyvän arkkitehtuurin erikokoisen valokuvatoisinnon; vain ulkopuoli. Ei iästä arvattua tekijän kuolinvuotta, ei modernia sisätaidetta.",
-            "sourceContentSHA256": "dc0ae90432a2c2cabe922e9ea62791eb71d48cab1bca0f7b3713620c3e994237",
-            "reviewedAt": "2026-10-12T18:53:01.154713+00:00"
-          },
-          "qaReason": "Fort Zeelandian oikea vanha tiilinen ulkorakenne, lähde nimeää linnoituksen. Kasvoton, ei museon esinettä/taidetta kuvaava sisäkuva. Alkuperäinen1599×899 leveys>=1200, CC BY-SA4.0/Medimir todennettu; eri tiedosto kuin muut kaupungin kuvat."
-        }
-      },
-      "luentaMetadata": {
-        "existingImageLuenta": null,
-        "captionReadingText": "Fort Zeelandia kuuluu Paramaribon varhaisiin siirtomaa-ajan rakennuskerroksiin.",
-        "existingArticleAndSectionLuentaPreserved": true,
-        "audioGenerated": false,
-        "audioURL": null,
-        "imageSpecificAudioProvided": false,
-        "reuseAudioAllowedByThisPacket": false
-      },
-      "qaEvidence": {
-        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/paramaribo/qa.json",
-        "fileSHA256": "804eeff14dcf010d260ea1276f05a9b7530c8d9fa366b98a2da4c87ccb9bb59b",
-        "item": {
-          "slot": "N1",
-          "targetJsonPath": "$.nahtavyydet[\"Fort Zeelandia\"].kuvat[0]",
-          "commonsFile": "Fort Zeelandia, Paramaribo, Suriname.jpg",
-          "sha256": "90d2c2a88566c6ba26021e11818c761612ee6cf6a23a66ff685307e934a36b64",
-          "verdict": "accepted",
-          "reason": "Fort Zeelandian oikea vanha tiilinen ulkorakenne, lähde nimeää linnoituksen. Kasvoton, ei museon esinettä/taidetta kuvaava sisäkuva. Alkuperäinen1599×899 leveys>=1200, CC BY-SA4.0/Medimir todennettu; eri tiedosto kuin muut kaupungin kuvat.",
-          "evidence": {
-            "visualViewed": true,
-            "viewedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/paramaribo/qa-evidence/cc-41d8030528b3ac56/original.jpg",
-            "sourceHTML": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/360f156cb85edee2365c2cd0d92b26e16cb9626a676d5ce939bbb6b95a6177b4.html",
-            "sourceHTMLSHA256": "cda2f03001828f10e39f1d5e7c5ef5fe7329cb8a9c8ded2e39fe611fc27c2b59",
-            "sourcePage": "https://commons.wikimedia.org/wiki/File:Fort_Zeelandia,_Paramaribo,_Suriname.jpg",
-            "sourceDescription": "Nederlands: De voorkant van Fort Zeelandia",
-            "sourceDate": "30 September 2022",
-            "author": "Medimir",
-            "license": "CC BY-SA 4.0",
-            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
-            "width": 1599,
-            "height": 899,
-            "rightsEvidence": "Laaja todellinen kaupunkinäkymä / julkiselta tieltä näkyvä historiallisten rakennusten ulkopuoli. Valokuvan CC-lisenssi erikseen. Commons Suriname -oikeusohje, Copyright Act Article 18, sallii julkisen tien varrella pysyvästi näkyvän arkkitehtuurin erikokoisen valokuvatoisinnon; vain ulkopuoli. Ei iästä arvattua tekijän kuolinvuotta, ei modernia sisätaidetta.",
-            "sourceContentSHA256": "dc0ae90432a2c2cabe922e9ea62791eb71d48cab1bca0f7b3713620c3e994237",
-            "reviewedAt": "2026-10-12T18:53:01.154713+00:00"
-          }
-        },
-        "allSources": [
-          {
-            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/paramaribo/qa.json",
-            "sha256": "804eeff14dcf010d260ea1276f05a9b7530c8d9fa366b98a2da4c87ccb9bb59b"
-          },
-          {
-            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/paramaribo/illustration-qa-extra.json",
-            "sha256": "b26bde859a2002844b228fe44b6ec0f5efc7b6703ea90c46df58897019c10eb6"
-          }
-        ]
-      },
-      "R2ByteVerification": {
-        "era": "e13",
-        "city": "paramaribo",
-        "slot": "N1",
-        "targetJsonPath": "$.nahtavyydet[\"Fort Zeelandia\"].kuvat[0]",
-        "commonsFile": "Fort Zeelandia, Paramaribo, Suriname.jpg",
-        "sha256": "90d2c2a88566c6ba26021e11818c761612ee6cf6a23a66ff685307e934a36b64",
-        "sourcePage": "https://commons.wikimedia.org/wiki/File:Fort_Zeelandia,_Paramaribo,_Suriname.jpg",
-        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/a/aa/Fort_Zeelandia%2C_Paramaribo%2C_Suriname.jpg",
-        "author": "Medimir",
-        "license": "CC BY-SA 4.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
-        "width": 1599,
-        "height": 899,
-        "originalSHA256": "90d2c2a88566c6ba26021e11818c761612ee6cf6a23a66ff685307e934a36b64",
-        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e13/paramaribo/n1-90d2c2a88566c6ba2602.jpg",
-        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e13/paramaribo/n1-90d2c2a88566c6ba2602.jpg",
-        "bytes": 176426,
-        "http": 200,
-        "mime": "image/jpeg",
-        "cors": "https://matkakirja.app",
-        "byteExactReadback": true,
-        "canonicalReadbackByteExact": true,
-        "conditionalIfNoneMatch": "*",
-        "s3PutHttp": 200,
-        "verifiedAt": "2026-10-12T18:54:38.942088+00:00",
-        "ownerAcceptanceVerified": false,
-        "gameIntegrated": false,
-        "attributionSource": "current-exact-QA-and-source-manifest"
-      },
-      "producerExportProof": null,
-      "technicalExportProof": null,
-      "priorMediaFields": {
-        "tiedosto": "Fort Zeelandia, Paramaribo, Suriname.jpg",
-        "lahde": "Medimir, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Fort Zeelandia kuuluu Paramaribon varhaisiin siirtomaa-ajan rakennuskerroksiin.",
-        "lyhyt": "Fort Zeelandia kuuluu Paramaribon varhaisiin siirtomaa-ajan rakennuskerroksiin."
-      },
-      "preservePreviousMediaObjects": true,
-      "authorization": {
-        "status": "waived-owner-review",
-        "authorizedByOwner": true,
-        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
-        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
-        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
-        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
-        "ownerAcceptanceImplied": false,
-        "QARequired": true,
-        "R2ByteVerificationRequired": true,
-        "galleryBeforeGameRequired": false,
-        "verifiedHumanMessageSource": {
-          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
-          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
-        }
-      },
-      "ownerAcceptanceVerified": false,
-      "gameIntegrated": false,
-      "gamePublicationVerified": false,
-      "inMemoryMergeVerified": true,
-      "CcommonsMetadataBound": true,
-      "CcommonsFieldPayload": {
-        "lahde": "Medimir, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Fort Zeelandia kuuluu Paramaribon varhaisiin siirtomaa-ajan rakennuskerroksiin.",
-        "lyhyt": "Fort Zeelandia kuuluu Paramaribon varhaisiin siirtomaa-ajan rakennuskerroksiin.",
-        "tiedosto": "Fort Zeelandia, Paramaribo, Suriname.jpg"
-      },
-      "roleManifestBound": true,
-      "sourceContentAfterSHA256": "639174f16381bc6b743caec890e7d92ff6dece7d78d9dc53e8bccfc1b1e8aded",
-      "targetAfterSHA256": "275b563c646c5ed6a010df465122096d1091f9a4d916987e96be1ac8ae9429e7",
-      "contextAfterSHA256": "511f70b41d1760c479230dd36f04a926b5e23f9abd843217a523f85cdfcfb097"
     },
     {
       "era": "e13",
@@ -3154,7 +2949,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/paramaribo/qa.json",
-        "fileSHA256": "804eeff14dcf010d260ea1276f05a9b7530c8d9fa366b98a2da4c87ccb9bb59b",
+        "fileSHA256": "e645e401faeae0afb188aab52744cee74993e5a5378de5d4374c567e090d380e",
         "item": {
           "slot": "C2",
           "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[1]",
@@ -3186,7 +2981,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/paramaribo/qa.json",
-            "sha256": "804eeff14dcf010d260ea1276f05a9b7530c8d9fa366b98a2da4c87ccb9bb59b"
+            "sha256": "e645e401faeae0afb188aab52744cee74993e5a5378de5d4374c567e090d380e"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/paramaribo/illustration-qa-extra.json",
@@ -3261,7 +3056,7 @@
         "tiedosto": "Paramaribo aan de Surinamerivier, gezien vanaf de ms Nestor, Bestanddeelnr 252-2143.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "639174f16381bc6b743caec890e7d92ff6dece7d78d9dc53e8bccfc1b1e8aded",
+      "sourceContentAfterSHA256": "8c6d2aeb487b8d17890fc2c36fa8a43d949757d10669c1af21127807617a8d34",
       "targetAfterSHA256": "8247e4fd0f669dfe65f10280c1ecee82c6231a8bd9219befa311e2674bfe4f74",
       "contextAfterSHA256": "8247e4fd0f669dfe65f10280c1ecee82c6231a8bd9219befa311e2674bfe4f74"
     },
@@ -3366,7 +3161,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/paramaribo/qa.json",
-        "fileSHA256": "804eeff14dcf010d260ea1276f05a9b7530c8d9fa366b98a2da4c87ccb9bb59b",
+        "fileSHA256": "e645e401faeae0afb188aab52744cee74993e5a5378de5d4374c567e090d380e",
         "item": {
           "slot": "C3",
           "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[2]",
@@ -3399,7 +3194,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/paramaribo/qa.json",
-            "sha256": "804eeff14dcf010d260ea1276f05a9b7530c8d9fa366b98a2da4c87ccb9bb59b"
+            "sha256": "e645e401faeae0afb188aab52744cee74993e5a5378de5d4374c567e090d380e"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/paramaribo/illustration-qa-extra.json",
@@ -3474,9 +3269,425 @@
         "tiedosto": "Overzicht van uit de lucht van Paramaribo - Paramaribo - 20417679 - RCE.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "639174f16381bc6b743caec890e7d92ff6dece7d78d9dc53e8bccfc1b1e8aded",
+      "sourceContentAfterSHA256": "8c6d2aeb487b8d17890fc2c36fa8a43d949757d10669c1af21127807617a8d34",
       "targetAfterSHA256": "26ca46f56d1d9eeb03191b070eec708ee8f1c9ec7d0370676bac451e784e97a0",
       "contextAfterSHA256": "26ca46f56d1d9eeb03191b070eec708ee8f1c9ec7d0370676bac451e784e97a0"
+    },
+    {
+      "era": "e13",
+      "city": "paramaribo",
+      "slot": "K2",
+      "type": "commons",
+      "assetID": "capital-cc-e13-paramaribo-k2-c57919ca412d5bbe",
+      "galleryImageID": "capital-cc-e13-paramaribo-k2-c57919ca412d5bbe",
+      "commonsFile": "Paramaribo District 01.jpg",
+      "targetJsonPath": "$.kaupunkilehti[0].nostot[1]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "nostot",
+        1
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e13/paramaribo/k2-c57919ca412d5bbef098.jpg",
+        "suora": true,
+        "lahde": "Sn.fernandez, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Paramaribon aluetta ilmasta 11.7.2018.",
+        "lyhyt": "Paramaribon aluetta ilmasta 11.7.2018.",
+        "tiedosto": "Paramaribo District 01.jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Sn.fernandez, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Paramaribon aluetta ilmasta 11.7.2018.",
+        "lyhyt": "Paramaribon aluetta ilmasta 11.7.2018.",
+        "tiedosto": "Paramaribo District 01.jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e13/paramaribo/k2-c57919ca412d5bbef098.jpg",
+        "suora": true,
+        "lahde": "Sn.fernandez, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Paramaribon aluetta ilmasta 11.7.2018.",
+        "lyhyt": "Paramaribon aluetta ilmasta 11.7.2018.",
+        "tiedosto": "Paramaribo District 01.jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "c57919ca412d5bbef098c02fedbaa7797ae87665132064ad5bc9cd87eda622c8",
+      "exportSHA256": "c57919ca412d5bbef098c02fedbaa7797ae87665132064ad5bc9cd87eda622c8",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e13/paramaribo/k2-c57919ca412d5bbef098.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e13/paramaribo/k2-c57919ca412d5bbef098.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/paramaribo/cc-gap-job21-work/original-Paramaribo-District-01-jpg.jpg",
+      "dimensions": [
+        3840,
+        2160
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e13/paakaupungit-pilvi/e13/paramaribo/sisalto.json",
+      "sourceContentSHA256": "639174f16381bc6b743caec890e7d92ff6dece7d78d9dc53e8bccfc1b1e8aded",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "4c3ffb6f968b372e8f731a290477d6381d4d174beba76bfed905646b1c568aa6",
+        "semanticContextSHA256": "4c3ffb6f968b372e8f731a290477d6381d4d174beba76bfed905646b1c568aa6",
+        "subjectTitle": "Uusi nimi ei tarttunut",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Sn.fernandez",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Paramaribo_District_01.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/4/41/Paramaribo_District_01.jpg",
+        "rightsEvidence": {
+          "selection": "Alkuperäisen kuvasivun Description ParamariboDistrict01, SourceOwnwork, AuthorSn.fernandez ja CC BY-SA4.0 luettu. Laaja kaupunkimassa, ei erillistä tunnistettavaa nykyteosta päämotiivina. Ei rakennuksen iästä PD-oletusta. Päiväys2018 säilyy; kuvaa ei kutsuta historialliseksi keskustaksi tai tämän päivän näkymäksi.",
+          "QA": {
+            "visualViewed": true,
+            "viewedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/paramaribo/qa-evidence/cc-81229f581d8c0a24/original-c57919ca412d5bbef098c02fedbaa7797ae87665132064ad5bc9cd87eda622c8.jpg",
+            "sourceHTML": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/paramaribo/qa-evidence/cc-81229f581d8c0a24/source-9a2e235816d74d39a0e12519ddcf09aafdce14fb9ada014306a5ddb62d0657b8.html",
+            "sourceHTMLSHA256": "9a2e235816d74d39a0e12519ddcf09aafdce14fb9ada014306a5ddb62d0657b8",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Paramaribo_District_01.jpg",
+            "sourceDescription": "English: Paramaribo District 01",
+            "sourceDate": "11 July 2018",
+            "author": "Sn.fernandez",
+            "license": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "width": 3840,
+            "height": 2160,
+            "rightsEvidence": "Alkuperäisen kuvasivun Description ParamariboDistrict01, SourceOwnwork, AuthorSn.fernandez ja CC BY-SA4.0 luettu. Laaja kaupunkimassa, ei erillistä tunnistettavaa nykyteosta päämotiivina. Ei rakennuksen iästä PD-oletusta. Päiväys2018 säilyy; kuvaa ei kutsuta historialliseksi keskustaksi tai tämän päivän näkymäksi.",
+            "sourceContentSHA256": "639174f16381bc6b743caec890e7d92ff6dece7d78d9dc53e8bccfc1b1e8aded",
+            "reviewedAt": "2026-10-12T20:31:21.277418+00:00",
+            "inputFragment": "cc-gap-selection.json",
+            "selectionPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/paramaribo/cc-gap-selection.json",
+            "selectionSHA256": "a4f00ad7c0d26e3a8a1d2969d4bd6e7f8c80b5b973ee1c5fe7e27413da33a943"
+          },
+          "qaReason": "Alkuperäinen3840×2160 katsottu itse: laaja todellinen Paramaribon alueen katu-/kortteliverkko ja joki, ei17vuosisadan rekonstruktio. SourceDescription Paramaribo District01, Author Sn.fernandez, SourceOwnwork ja CC BY-SA4.0 luettu tiedostosivulta. K2:n kaupungin nimihistoriaa havainnollistaa nykyinen kaupunkialue; caption ei väitä näkymää New Middelburgin aikaiseksi tai historialliseksi keskustaksi. Vuosi2018/11.7.2018 säilyy. Ilmakehän/kuvauksen vaalea utu pehmentää etäistä osaa, mutta lähemmän alueen todellinen asettelu on luettava. Ei kasvoja/lisättyä tekstiä/vesileimaa/kehystä tai yksilöidyn nykyteoksen luovia detaljeja pääaiheena; rakennusten iästä ei PD-oletusta. NativeSHA varmistettu, eri kuva kuin kaupungin muut ilmakuva-/kansivalinnat."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Paramaribon aluetta ilmasta 11.7.2018.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/paramaribo/qa.json",
+        "fileSHA256": "e645e401faeae0afb188aab52744cee74993e5a5378de5d4374c567e090d380e",
+        "item": {
+          "slot": "K2",
+          "targetJsonPath": "$.kaupunkilehti[0].nostot[1]",
+          "commonsFile": "Paramaribo District 01.jpg",
+          "sha256": "c57919ca412d5bbef098c02fedbaa7797ae87665132064ad5bc9cd87eda622c8",
+          "verdict": "accepted",
+          "reason": "Alkuperäinen3840×2160 katsottu itse: laaja todellinen Paramaribon alueen katu-/kortteliverkko ja joki, ei17vuosisadan rekonstruktio. SourceDescription Paramaribo District01, Author Sn.fernandez, SourceOwnwork ja CC BY-SA4.0 luettu tiedostosivulta. K2:n kaupungin nimihistoriaa havainnollistaa nykyinen kaupunkialue; caption ei väitä näkymää New Middelburgin aikaiseksi tai historialliseksi keskustaksi. Vuosi2018/11.7.2018 säilyy. Ilmakehän/kuvauksen vaalea utu pehmentää etäistä osaa, mutta lähemmän alueen todellinen asettelu on luettava. Ei kasvoja/lisättyä tekstiä/vesileimaa/kehystä tai yksilöidyn nykyteoksen luovia detaljeja pääaiheena; rakennusten iästä ei PD-oletusta. NativeSHA varmistettu, eri kuva kuin kaupungin muut ilmakuva-/kansivalinnat.",
+          "evidence": {
+            "visualViewed": true,
+            "viewedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/paramaribo/qa-evidence/cc-81229f581d8c0a24/original-c57919ca412d5bbef098c02fedbaa7797ae87665132064ad5bc9cd87eda622c8.jpg",
+            "sourceHTML": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/paramaribo/qa-evidence/cc-81229f581d8c0a24/source-9a2e235816d74d39a0e12519ddcf09aafdce14fb9ada014306a5ddb62d0657b8.html",
+            "sourceHTMLSHA256": "9a2e235816d74d39a0e12519ddcf09aafdce14fb9ada014306a5ddb62d0657b8",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Paramaribo_District_01.jpg",
+            "sourceDescription": "English: Paramaribo District 01",
+            "sourceDate": "11 July 2018",
+            "author": "Sn.fernandez",
+            "license": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "width": 3840,
+            "height": 2160,
+            "rightsEvidence": "Alkuperäisen kuvasivun Description ParamariboDistrict01, SourceOwnwork, AuthorSn.fernandez ja CC BY-SA4.0 luettu. Laaja kaupunkimassa, ei erillistä tunnistettavaa nykyteosta päämotiivina. Ei rakennuksen iästä PD-oletusta. Päiväys2018 säilyy; kuvaa ei kutsuta historialliseksi keskustaksi tai tämän päivän näkymäksi.",
+            "sourceContentSHA256": "639174f16381bc6b743caec890e7d92ff6dece7d78d9dc53e8bccfc1b1e8aded",
+            "reviewedAt": "2026-10-12T20:31:21.277418+00:00",
+            "inputFragment": "cc-gap-selection.json",
+            "selectionPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/paramaribo/cc-gap-selection.json",
+            "selectionSHA256": "a4f00ad7c0d26e3a8a1d2969d4bd6e7f8c80b5b973ee1c5fe7e27413da33a943"
+          }
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/paramaribo/qa.json",
+            "sha256": "e645e401faeae0afb188aab52744cee74993e5a5378de5d4374c567e090d380e"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/paramaribo/illustration-qa-extra.json",
+            "sha256": "b26bde859a2002844b228fe44b6ec0f5efc7b6703ea90c46df58897019c10eb6"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e13",
+        "city": "paramaribo",
+        "slot": "K2",
+        "targetJsonPath": "$.kaupunkilehti[0].nostot[1]",
+        "commonsFile": "Paramaribo District 01.jpg",
+        "sha256": "c57919ca412d5bbef098c02fedbaa7797ae87665132064ad5bc9cd87eda622c8",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Paramaribo_District_01.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/4/41/Paramaribo_District_01.jpg",
+        "author": "Sn.fernandez",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "width": 3840,
+        "height": 2160,
+        "originalSHA256": "c57919ca412d5bbef098c02fedbaa7797ae87665132064ad5bc9cd87eda622c8",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e13/paramaribo/k2-c57919ca412d5bbef098.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e13/paramaribo/k2-c57919ca412d5bbef098.jpg",
+        "bytes": 1076163,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T20:32:45.601235+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Sn.fernandez, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Paramaribon aluetta ilmasta 11.7.2018.",
+        "lyhyt": "Paramaribon aluetta ilmasta 11.7.2018.",
+        "tiedosto": "Paramaribo District 01.jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "8c6d2aeb487b8d17890fc2c36fa8a43d949757d10669c1af21127807617a8d34",
+      "targetAfterSHA256": "a0babde4dc35262517b99f9f72e54ec774fc90e5272f0857e336667a81d725bd",
+      "contextAfterSHA256": "a0babde4dc35262517b99f9f72e54ec774fc90e5272f0857e336667a81d725bd"
+    },
+    {
+      "era": "e13",
+      "city": "paramaribo",
+      "slot": "N1",
+      "type": "commons",
+      "assetID": "capital-cc-e13-paramaribo-n1-90d2c2a88566c6ba",
+      "galleryImageID": "capital-cc-e13-paramaribo-n1-90d2c2a88566c6ba",
+      "commonsFile": "Fort Zeelandia, Paramaribo, Suriname.jpg",
+      "targetJsonPath": "$.nahtavyydet[\"Fort Zeelandia\"].kuvat[0]",
+      "targetTokens": [
+        "nahtavyydet",
+        "Fort Zeelandia",
+        "kuvat",
+        0
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e13/paramaribo/n1-90d2c2a88566c6ba2602.jpg",
+        "suora": true,
+        "lahde": "Medimir, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Fort Zeelandia kuuluu Paramaribon varhaisiin siirtomaa-ajan rakennuskerroksiin.",
+        "lyhyt": "Fort Zeelandia kuuluu Paramaribon varhaisiin siirtomaa-ajan rakennuskerroksiin.",
+        "tiedosto": "Fort Zeelandia, Paramaribo, Suriname.jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Medimir, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Fort Zeelandia kuuluu Paramaribon varhaisiin siirtomaa-ajan rakennuskerroksiin.",
+        "lyhyt": "Fort Zeelandia kuuluu Paramaribon varhaisiin siirtomaa-ajan rakennuskerroksiin.",
+        "tiedosto": "Fort Zeelandia, Paramaribo, Suriname.jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e13/paramaribo/n1-90d2c2a88566c6ba2602.jpg",
+        "suora": true,
+        "lahde": "Medimir, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Fort Zeelandia kuuluu Paramaribon varhaisiin siirtomaa-ajan rakennuskerroksiin.",
+        "lyhyt": "Fort Zeelandia kuuluu Paramaribon varhaisiin siirtomaa-ajan rakennuskerroksiin.",
+        "tiedosto": "Fort Zeelandia, Paramaribo, Suriname.jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "90d2c2a88566c6ba26021e11818c761612ee6cf6a23a66ff685307e934a36b64",
+      "exportSHA256": "90d2c2a88566c6ba26021e11818c761612ee6cf6a23a66ff685307e934a36b64",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e13/paramaribo/n1-90d2c2a88566c6ba2602.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e13/paramaribo/n1-90d2c2a88566c6ba2602.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/paramaribo/cc-work/original-2.jpg",
+      "dimensions": [
+        1599,
+        899
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e13/paakaupungit-pilvi/e13/paramaribo/sisalto.json",
+      "sourceContentSHA256": "639174f16381bc6b743caec890e7d92ff6dece7d78d9dc53e8bccfc1b1e8aded",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "275b563c646c5ed6a010df465122096d1091f9a4d916987e96be1ac8ae9429e7",
+        "semanticContextSHA256": "511f70b41d1760c479230dd36f04a926b5e23f9abd843217a523f85cdfcfb097",
+        "subjectTitle": "Fort Zeelandia",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Medimir",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Fort_Zeelandia,_Paramaribo,_Suriname.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/a/aa/Fort_Zeelandia%2C_Paramaribo%2C_Suriname.jpg",
+        "rightsEvidence": {
+          "selection": "Laaja todellinen kaupunkinäkymä / julkiselta tieltä näkyvä historiallisten rakennusten ulkopuoli. Valokuvan CC-lisenssi erikseen. Commons Suriname -oikeusohje, Copyright Act Article 18, sallii julkisen tien varrella pysyvästi näkyvän arkkitehtuurin erikokoisen valokuvatoisinnon; vain ulkopuoli. Ei iästä arvattua tekijän kuolinvuotta, ei modernia sisätaidetta.",
+          "QA": {
+            "visualViewed": true,
+            "viewedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/paramaribo/qa-evidence/cc-41d8030528b3ac56/original.jpg",
+            "sourceHTML": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/360f156cb85edee2365c2cd0d92b26e16cb9626a676d5ce939bbb6b95a6177b4.html",
+            "sourceHTMLSHA256": "cda2f03001828f10e39f1d5e7c5ef5fe7329cb8a9c8ded2e39fe611fc27c2b59",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Fort_Zeelandia,_Paramaribo,_Suriname.jpg",
+            "sourceDescription": "Nederlands: De voorkant van Fort Zeelandia",
+            "sourceDate": "30 September 2022",
+            "author": "Medimir",
+            "license": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+            "width": 1599,
+            "height": 899,
+            "rightsEvidence": "Laaja todellinen kaupunkinäkymä / julkiselta tieltä näkyvä historiallisten rakennusten ulkopuoli. Valokuvan CC-lisenssi erikseen. Commons Suriname -oikeusohje, Copyright Act Article 18, sallii julkisen tien varrella pysyvästi näkyvän arkkitehtuurin erikokoisen valokuvatoisinnon; vain ulkopuoli. Ei iästä arvattua tekijän kuolinvuotta, ei modernia sisätaidetta.",
+            "sourceContentSHA256": "dc0ae90432a2c2cabe922e9ea62791eb71d48cab1bca0f7b3713620c3e994237",
+            "reviewedAt": "2026-10-12T18:53:01.154713+00:00"
+          },
+          "qaReason": "Fort Zeelandian oikea vanha tiilinen ulkorakenne, lähde nimeää linnoituksen. Kasvoton, ei museon esinettä/taidetta kuvaava sisäkuva. Alkuperäinen1599×899 leveys>=1200, CC BY-SA4.0/Medimir todennettu; eri tiedosto kuin muut kaupungin kuvat."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Fort Zeelandia kuuluu Paramaribon varhaisiin siirtomaa-ajan rakennuskerroksiin.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/paramaribo/qa.json",
+        "fileSHA256": "e645e401faeae0afb188aab52744cee74993e5a5378de5d4374c567e090d380e",
+        "item": {
+          "slot": "N1",
+          "targetJsonPath": "$.nahtavyydet[\"Fort Zeelandia\"].kuvat[0]",
+          "commonsFile": "Fort Zeelandia, Paramaribo, Suriname.jpg",
+          "sha256": "90d2c2a88566c6ba26021e11818c761612ee6cf6a23a66ff685307e934a36b64",
+          "verdict": "accepted",
+          "reason": "Fort Zeelandian oikea vanha tiilinen ulkorakenne, lähde nimeää linnoituksen. Kasvoton, ei museon esinettä/taidetta kuvaava sisäkuva. Alkuperäinen1599×899 leveys>=1200, CC BY-SA4.0/Medimir todennettu; eri tiedosto kuin muut kaupungin kuvat.",
+          "evidence": {
+            "visualViewed": true,
+            "viewedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/paramaribo/qa-evidence/cc-41d8030528b3ac56/original.jpg",
+            "sourceHTML": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/360f156cb85edee2365c2cd0d92b26e16cb9626a676d5ce939bbb6b95a6177b4.html",
+            "sourceHTMLSHA256": "cda2f03001828f10e39f1d5e7c5ef5fe7329cb8a9c8ded2e39fe611fc27c2b59",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Fort_Zeelandia,_Paramaribo,_Suriname.jpg",
+            "sourceDescription": "Nederlands: De voorkant van Fort Zeelandia",
+            "sourceDate": "30 September 2022",
+            "author": "Medimir",
+            "license": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+            "width": 1599,
+            "height": 899,
+            "rightsEvidence": "Laaja todellinen kaupunkinäkymä / julkiselta tieltä näkyvä historiallisten rakennusten ulkopuoli. Valokuvan CC-lisenssi erikseen. Commons Suriname -oikeusohje, Copyright Act Article 18, sallii julkisen tien varrella pysyvästi näkyvän arkkitehtuurin erikokoisen valokuvatoisinnon; vain ulkopuoli. Ei iästä arvattua tekijän kuolinvuotta, ei modernia sisätaidetta.",
+            "sourceContentSHA256": "dc0ae90432a2c2cabe922e9ea62791eb71d48cab1bca0f7b3713620c3e994237",
+            "reviewedAt": "2026-10-12T18:53:01.154713+00:00"
+          }
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/paramaribo/qa.json",
+            "sha256": "e645e401faeae0afb188aab52744cee74993e5a5378de5d4374c567e090d380e"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/paramaribo/illustration-qa-extra.json",
+            "sha256": "b26bde859a2002844b228fe44b6ec0f5efc7b6703ea90c46df58897019c10eb6"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e13",
+        "city": "paramaribo",
+        "slot": "N1",
+        "targetJsonPath": "$.nahtavyydet[\"Fort Zeelandia\"].kuvat[0]",
+        "commonsFile": "Fort Zeelandia, Paramaribo, Suriname.jpg",
+        "sha256": "90d2c2a88566c6ba26021e11818c761612ee6cf6a23a66ff685307e934a36b64",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Fort_Zeelandia,_Paramaribo,_Suriname.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/a/aa/Fort_Zeelandia%2C_Paramaribo%2C_Suriname.jpg",
+        "author": "Medimir",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+        "width": 1599,
+        "height": 899,
+        "originalSHA256": "90d2c2a88566c6ba26021e11818c761612ee6cf6a23a66ff685307e934a36b64",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e13/paramaribo/n1-90d2c2a88566c6ba2602.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e13/paramaribo/n1-90d2c2a88566c6ba2602.jpg",
+        "bytes": 176426,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T18:54:38.942088+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "Fort Zeelandia, Paramaribo, Suriname.jpg",
+        "lahde": "Medimir, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Fort Zeelandia kuuluu Paramaribon varhaisiin siirtomaa-ajan rakennuskerroksiin.",
+        "lyhyt": "Fort Zeelandia kuuluu Paramaribon varhaisiin siirtomaa-ajan rakennuskerroksiin."
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Medimir, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Fort Zeelandia kuuluu Paramaribon varhaisiin siirtomaa-ajan rakennuskerroksiin.",
+        "lyhyt": "Fort Zeelandia kuuluu Paramaribon varhaisiin siirtomaa-ajan rakennuskerroksiin.",
+        "tiedosto": "Fort Zeelandia, Paramaribo, Suriname.jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "8c6d2aeb487b8d17890fc2c36fa8a43d949757d10669c1af21127807617a8d34",
+      "targetAfterSHA256": "275b563c646c5ed6a010df465122096d1091f9a4d916987e96be1ac8ae9429e7",
+      "contextAfterSHA256": "511f70b41d1760c479230dd36f04a926b5e23f9abd843217a523f85cdfcfb097"
     }
   ],
   "runtimeIntegrationPending": true,

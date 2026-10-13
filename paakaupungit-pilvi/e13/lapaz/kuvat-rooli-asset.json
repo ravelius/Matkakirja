@@ -3,7 +3,7 @@
   "era": "e13",
   "city": "lapaz",
   "authorization": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
-  "sourceContentAfterSHA256": "ec7f6260ffc1e88359e114a885253fbf2b8fd03315253eb281964b5e7b701a1a",
+  "sourceContentAfterSHA256": "bf4b47b346d0ce6ab1a1dfdc239292fcb5640199bfa698f232eee8f36d2d6016",
   "assets": [
     {
       "era": "e13",
@@ -145,7 +145,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/lapaz/qa.json",
-            "sha256": "8b2cf05fe6041e60da9cc4ab993d6f5575c390f95672f46319759f2edd41c960"
+            "sha256": "be9ba2900e92895d4fd3ea15f5e0aa33048fe95c6cefd244e68e4bc1544d7203"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/lapaz/illustration-qa-extra.json",
@@ -232,7 +232,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "ec7f6260ffc1e88359e114a885253fbf2b8fd03315253eb281964b5e7b701a1a",
+      "sourceContentAfterSHA256": "bf4b47b346d0ce6ab1a1dfdc239292fcb5640199bfa698f232eee8f36d2d6016",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
       "contextAfterSHA256": "9c27b7801c0589f946f03b5806c1bb676657bff9ffba6b84d858c4ba3ad110a9"
     },
@@ -365,7 +365,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/lapaz/qa.json",
-            "sha256": "8b2cf05fe6041e60da9cc4ab993d6f5575c390f95672f46319759f2edd41c960"
+            "sha256": "be9ba2900e92895d4fd3ea15f5e0aa33048fe95c6cefd244e68e4bc1544d7203"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/lapaz/illustration-qa-extra.json",
@@ -452,7 +452,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "ec7f6260ffc1e88359e114a885253fbf2b8fd03315253eb281964b5e7b701a1a",
+      "sourceContentAfterSHA256": "bf4b47b346d0ce6ab1a1dfdc239292fcb5640199bfa698f232eee8f36d2d6016",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
       "contextAfterSHA256": "4e23f02110d0ae23dd601968e6a1c9b36edf7c954f2bddb91b12878bb6e79caa"
     },
@@ -586,7 +586,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/lapaz/qa.json",
-            "sha256": "8b2cf05fe6041e60da9cc4ab993d6f5575c390f95672f46319759f2edd41c960"
+            "sha256": "be9ba2900e92895d4fd3ea15f5e0aa33048fe95c6cefd244e68e4bc1544d7203"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/lapaz/illustration-qa-extra.json",
@@ -673,7 +673,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "ec7f6260ffc1e88359e114a885253fbf2b8fd03315253eb281964b5e7b701a1a",
+      "sourceContentAfterSHA256": "bf4b47b346d0ce6ab1a1dfdc239292fcb5640199bfa698f232eee8f36d2d6016",
       "targetAfterSHA256": "ff05a92e8a9708a58f6d0d4bd5c32f05be497f317f3133902bc4f26c4968c973",
       "contextAfterSHA256": "ff05a92e8a9708a58f6d0d4bd5c32f05be497f317f3133902bc4f26c4968c973"
     },
@@ -805,7 +805,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/lapaz/qa.json",
-            "sha256": "8b2cf05fe6041e60da9cc4ab993d6f5575c390f95672f46319759f2edd41c960"
+            "sha256": "be9ba2900e92895d4fd3ea15f5e0aa33048fe95c6cefd244e68e4bc1544d7203"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/lapaz/illustration-qa-extra.json",
@@ -892,7 +892,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "ec7f6260ffc1e88359e114a885253fbf2b8fd03315253eb281964b5e7b701a1a",
+      "sourceContentAfterSHA256": "bf4b47b346d0ce6ab1a1dfdc239292fcb5640199bfa698f232eee8f36d2d6016",
       "targetAfterSHA256": "6147ecd59563a04238cbd99e162063063093e03885435196bb040de4515dd2fa",
       "contextAfterSHA256": "6147ecd59563a04238cbd99e162063063093e03885435196bb040de4515dd2fa"
     },
@@ -1026,7 +1026,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/lapaz/qa.json",
-            "sha256": "8b2cf05fe6041e60da9cc4ab993d6f5575c390f95672f46319759f2edd41c960"
+            "sha256": "be9ba2900e92895d4fd3ea15f5e0aa33048fe95c6cefd244e68e4bc1544d7203"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/lapaz/illustration-qa-extra.json",
@@ -1113,7 +1113,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "ec7f6260ffc1e88359e114a885253fbf2b8fd03315253eb281964b5e7b701a1a",
+      "sourceContentAfterSHA256": "bf4b47b346d0ce6ab1a1dfdc239292fcb5640199bfa698f232eee8f36d2d6016",
       "targetAfterSHA256": "d52c00e257f38b94d86b3aed159b145ec360cf0ad503c825602c3e9592bc5111",
       "contextAfterSHA256": "d52c00e257f38b94d86b3aed159b145ec360cf0ad503c825602c3e9592bc5111"
     },
@@ -1247,7 +1247,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/lapaz/qa.json",
-            "sha256": "8b2cf05fe6041e60da9cc4ab993d6f5575c390f95672f46319759f2edd41c960"
+            "sha256": "be9ba2900e92895d4fd3ea15f5e0aa33048fe95c6cefd244e68e4bc1544d7203"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/lapaz/illustration-qa-extra.json",
@@ -1334,7 +1334,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "ec7f6260ffc1e88359e114a885253fbf2b8fd03315253eb281964b5e7b701a1a",
+      "sourceContentAfterSHA256": "bf4b47b346d0ce6ab1a1dfdc239292fcb5640199bfa698f232eee8f36d2d6016",
       "targetAfterSHA256": "45f496875a36b24b9036101cd4794ac980001f5b411e8f52b5fe11b6236856a5",
       "contextAfterSHA256": "45f496875a36b24b9036101cd4794ac980001f5b411e8f52b5fe11b6236856a5"
     },
@@ -1468,7 +1468,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/lapaz/qa.json",
-            "sha256": "8b2cf05fe6041e60da9cc4ab993d6f5575c390f95672f46319759f2edd41c960"
+            "sha256": "be9ba2900e92895d4fd3ea15f5e0aa33048fe95c6cefd244e68e4bc1544d7203"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/lapaz/illustration-qa-extra.json",
@@ -1555,7 +1555,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "ec7f6260ffc1e88359e114a885253fbf2b8fd03315253eb281964b5e7b701a1a",
+      "sourceContentAfterSHA256": "bf4b47b346d0ce6ab1a1dfdc239292fcb5640199bfa698f232eee8f36d2d6016",
       "targetAfterSHA256": "47c9423451c1cd1d6ebee36d4d2cb7f96e24b32459da391bde4d791ad1cbe697",
       "contextAfterSHA256": "47c9423451c1cd1d6ebee36d4d2cb7f96e24b32459da391bde4d791ad1cbe697"
     },
@@ -1700,7 +1700,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/lapaz/qa.json",
-        "fileSHA256": "8b2cf05fe6041e60da9cc4ab993d6f5575c390f95672f46319759f2edd41c960",
+        "fileSHA256": "be9ba2900e92895d4fd3ea15f5e0aa33048fe95c6cefd244e68e4bc1544d7203",
         "item": {
           "slot": "PHOTO",
           "targetJsonPath": "$.valokuva",
@@ -1844,7 +1844,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/lapaz/qa.json",
-            "sha256": "8b2cf05fe6041e60da9cc4ab993d6f5575c390f95672f46319759f2edd41c960"
+            "sha256": "be9ba2900e92895d4fd3ea15f5e0aa33048fe95c6cefd244e68e4bc1544d7203"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/lapaz/illustration-qa-extra.json",
@@ -1921,7 +1921,7 @@
         "vuosi": "2015"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "ec7f6260ffc1e88359e114a885253fbf2b8fd03315253eb281964b5e7b701a1a",
+      "sourceContentAfterSHA256": "bf4b47b346d0ce6ab1a1dfdc239292fcb5640199bfa698f232eee8f36d2d6016",
       "targetAfterSHA256": "81e0ab7e854d99f528b0213eae7c4165ead9831651aa32f8ae0e1d4faea4b340",
       "contextAfterSHA256": "81e0ab7e854d99f528b0213eae7c4165ead9831651aa32f8ae0e1d4faea4b340"
     },
@@ -2066,7 +2066,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/lapaz/qa.json",
-        "fileSHA256": "8b2cf05fe6041e60da9cc4ab993d6f5575c390f95672f46319759f2edd41c960",
+        "fileSHA256": "be9ba2900e92895d4fd3ea15f5e0aa33048fe95c6cefd244e68e4bc1544d7203",
         "item": {
           "slot": "C2",
           "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[1]",
@@ -2210,7 +2210,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/lapaz/qa.json",
-            "sha256": "8b2cf05fe6041e60da9cc4ab993d6f5575c390f95672f46319759f2edd41c960"
+            "sha256": "be9ba2900e92895d4fd3ea15f5e0aa33048fe95c6cefd244e68e4bc1544d7203"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/lapaz/illustration-qa-extra.json",
@@ -2285,7 +2285,7 @@
         "tiedosto": "City of La Paz, Bolivia2.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "ec7f6260ffc1e88359e114a885253fbf2b8fd03315253eb281964b5e7b701a1a",
+      "sourceContentAfterSHA256": "bf4b47b346d0ce6ab1a1dfdc239292fcb5640199bfa698f232eee8f36d2d6016",
       "targetAfterSHA256": "8552d7d591a4a5904d2be646d7acecd61057536c9d693300862a657dd5405fc5",
       "contextAfterSHA256": "8552d7d591a4a5904d2be646d7acecd61057536c9d693300862a657dd5405fc5"
     },
@@ -2413,7 +2413,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/lapaz/qa.json",
-        "fileSHA256": "8b2cf05fe6041e60da9cc4ab993d6f5575c390f95672f46319759f2edd41c960",
+        "fileSHA256": "be9ba2900e92895d4fd3ea15f5e0aa33048fe95c6cefd244e68e4bc1544d7203",
         "item": {
           "slot": "C3",
           "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[2]",
@@ -2469,7 +2469,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/lapaz/qa.json",
-            "sha256": "8b2cf05fe6041e60da9cc4ab993d6f5575c390f95672f46319759f2edd41c960"
+            "sha256": "be9ba2900e92895d4fd3ea15f5e0aa33048fe95c6cefd244e68e4bc1544d7203"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/lapaz/illustration-qa-extra.json",
@@ -2544,9 +2544,272 @@
         "tiedosto": "Vista Lejana de La Paz.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "ec7f6260ffc1e88359e114a885253fbf2b8fd03315253eb281964b5e7b701a1a",
+      "sourceContentAfterSHA256": "bf4b47b346d0ce6ab1a1dfdc239292fcb5640199bfa698f232eee8f36d2d6016",
       "targetAfterSHA256": "ceabc5390303a4058a358cd8e55b35b002f7d293898c73727a70d411578ff4fc",
       "contextAfterSHA256": "ceabc5390303a4058a358cd8e55b35b002f7d293898c73727a70d411578ff4fc"
+    },
+    {
+      "era": "e13",
+      "city": "lapaz",
+      "slot": "K2",
+      "type": "commons",
+      "assetID": "capital-cc-e13-lapaz-k2-741a1daf1aa30956",
+      "galleryImageID": "capital-cc-e13-lapaz-k2-741a1daf1aa30956",
+      "commonsFile": "Teleferico de La Paz.jpg",
+      "targetJsonPath": "$.kaupunkilehti[0].nostot[1]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "nostot",
+        1
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e13/lapaz/k2-741a1daf1aa309561a49.jpg",
+        "suora": true,
+        "lahde": "Parallelepiped09, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Mi Teleféricon vaunut La Pazin katujen yllä. Kuvasivun Exif-päiväys 18.9.2025.",
+        "lyhyt": "Mi Teleféricon vaunut La Pazin katujen yllä. Kuvasivun Exif-päiväys 18.9.2025.",
+        "tiedosto": "Teleferico de La Paz.jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Parallelepiped09, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Mi Teleféricon vaunut La Pazin katujen yllä. Kuvasivun Exif-päiväys 18.9.2025.",
+        "lyhyt": "Mi Teleféricon vaunut La Pazin katujen yllä. Kuvasivun Exif-päiväys 18.9.2025.",
+        "tiedosto": "Teleferico de La Paz.jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e13/lapaz/k2-741a1daf1aa309561a49.jpg",
+        "suora": true,
+        "lahde": "Parallelepiped09, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Mi Teleféricon vaunut La Pazin katujen yllä. Kuvasivun Exif-päiväys 18.9.2025.",
+        "lyhyt": "Mi Teleféricon vaunut La Pazin katujen yllä. Kuvasivun Exif-päiväys 18.9.2025.",
+        "tiedosto": "Teleferico de La Paz.jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "741a1daf1aa309561a49eebff0920a6789d64509bb81fc8f1ee7ce5aafe89453",
+      "exportSHA256": "741a1daf1aa309561a49eebff0920a6789d64509bb81fc8f1ee7ce5aafe89453",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e13/lapaz/k2-741a1daf1aa309561a49.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e13/lapaz/k2-741a1daf1aa309561a49.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/lapaz/cc-gap-job21-work/original-Teleferico-de-La-Paz-jpg.jpg",
+      "dimensions": [
+        4096,
+        2303
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e13/paakaupungit-pilvi/e13/lapaz/sisalto.json",
+      "sourceContentSHA256": "ec7f6260ffc1e88359e114a885253fbf2b8fd03315253eb281964b5e7b701a1a",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "0e8d85887ea2de3a042f9a4cb6cfb95870cafaaed824bc7025f39bf0af090e61",
+        "semanticContextSHA256": "0e8d85887ea2de3a042f9a4cb6cfb95870cafaaed824bc7025f39bf0af090e61",
+        "subjectTitle": "Työmatka kattojen yläpuolella",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Parallelepiped09",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Teleferico_de_La_Paz.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Teleferico_de_La_Paz.jpg",
+        "rightsEvidence": {
+          "selection": "Alkuperäisen kuvasivun Author Parallelepiped09, Own work, CC BY-SA4.0 sekä päivämäärän Exif-varaus luettu. Aito toiminnallinen joukkoliikenneväline/mekanismi ja julkisen katutilan kokonaisuus, ei yksilöity nykytaideteos tai lainattu kuvitus. Fyysinen yritys-/toimintatunnus ei tee yleisestä joukkoliikenteen valokuvasta mainos-/pakkauskuvaa. CAN351Art22(h)-primäärinäyttö rights-015:ssa julkisen ulkokaupunkiympäristön arvioon, ei koko maan blanket-lupa. QA tarkistaa natiivin matkustajapiirteet ja mahdollisen erillisen teoksen.",
+          "QA": {
+            "inputManifest": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/lapaz/cc-gap-selection.json",
+            "reviewer": "job-25 independent-image-QA",
+            "reviewedAt": "2026-10-12T20:33:21.370404+00:00",
+            "visualTool": "view_image",
+            "visualDetail": "original",
+            "localOriginal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/lapaz/cc-gap-job21-work/original-Teleferico-de-La-Paz-jpg.jpg",
+            "actualWidth": 4096,
+            "actualHeight": 2303,
+            "actualFormat": "JPEG",
+            "nativePixelWidth": 4096,
+            "nativePixelHeight": 2303,
+            "exifOrientation": 1,
+            "dimensionsConvention": "actualWidth/Height are correctly oriented display dimensions; native stored pixel dimensions are separately recorded",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Teleferico_de_La_Paz.jpg",
+            "savedSourcePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/lapaz/cc-gap-job21-work/Teleferico-de-La-Paz-jpg.html",
+            "savedSourceSHA256": "d1528e3713f3a1deeb3f08816a7ae5d5c0c801526fe76939492b83527d426997",
+            "authorVerified": "Parallelepiped09",
+            "authorField": "Original Commons Author table, independently read; not inferred from uploader",
+            "licenseVerified": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "captureDate": "18 September 2025 (according to Exif data)",
+            "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e13/paakaupungit-pilvi/e13/lapaz/sisalto.json",
+            "sourceContentSHA256": "ec7f6260ffc1e88359e114a885253fbf2b8fd03315253eb281964b5e7b701a1a",
+            "captionFi": "Mi Teleféricon vaunut La Pazin katujen yllä. Kuvasivun Exif-päiväys 18.9.2025.",
+            "depictedWorkLayer": "Valokuvakerros: Parallelepiped09 / CC BY-SA4.0, Source Own work, Author/Licensing-taulukko luettu itse. Commonsin nykyisen27.9.2025version kuvaaja on lisännyt kontrastia; QA ei muuttanut pikseleitä. Erillinen teoskerros: toiminnalliset vaunut, kaapeli/pylvään mekanismi ja tavalliset toistuvat ikkunaseinä-/kattopinnat julkisessa kaupunkiympäristössä. Ei eristettyä patsasta, muraalia, suurta mainosvalokuvaa tai tunnistettua omaperäistä julkisivuteosta. CAN:n aiemmin luettu päätös351 Art21 ja22(h) ovat erillinen primäärinen julkisen arkkitehtuurin arviointinäyttö; ei koko maan vapautus eikä ajoneuvon luonnollisen toimintatunnuksen automaattinen logohylkäys. Tämä kuva ei ole C1:n reliefi- tai K1:n mainosvalokuvakerroksen toisinto.",
+            "duplicateInCity": false,
+            "sourceRevision": 1183438375,
+            "captureDateAsStated": "18 September2025 according to Exif",
+            "placeEvidence": {
+              "description": "Teleferico de La Paz",
+              "cameraLocation": [
+                -16.498108,
+                -68.134922
+              ],
+              "category": "Avenida Germán Busch, La Paz / Teleférico La Paz - El Alto"
+            },
+            "creditForPublication": "Parallelepiped09 / CC BY-SA4.0",
+            "underlyingWorkPrimaryLaw": {
+              "url": "https://www.comunidadandina.org/StaticFiles/DocOf/DEC351.pdf",
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/lahdevarasto/bf66e03c4c1e0dffd4d558850242ad4edecf3551f96fd3cc9879f0aab26d340e.body",
+              "sha256": "3e4965bd0f129eb28b627b6018e26732c88918f3cc2930fece02aec3c8779e90",
+              "readPersonallyEarlierInQA": true,
+              "scope": "Art21/22(h), independently evaluated visible architecture; no named protected modern artwork clearance"
+            }
+          },
+          "qaReason": "Todellinen Mi Teleféricon joukkoliikennekuva vastaa K2-tekstiä Työmatka kattojen yläpuolella. Alkuperäinen Description ja kamerapaikka-16.498108,-68.134922 yksilöivät La Pazin; lähteen Exif-varauksellinen18.9.2025 säilyy selitteessä. Vaunujen ikkunat heijastavat ympäristöä ja ihmiset jäävät varjoiksi ilman tunnistettavia kasvonpiirteitä. Ei lisättyä tekstiä, vesileimaa tai kehystä. Vaunun numerot ja ympäristön fyysinen yritysopaste eivät tee kuvan pääaiheesta mainos-/pakkauskuvaa. Lähteen lisätty kontrasti ja voimakkaat sävyt kirjataan."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Mi Teleféricon vaunut La Pazin katujen yllä. Kuvasivun Exif-päiväys 18.9.2025.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/lapaz/qa.json",
+        "fileSHA256": "be9ba2900e92895d4fd3ea15f5e0aa33048fe95c6cefd244e68e4bc1544d7203",
+        "item": {
+          "slot": "K2",
+          "targetJsonPath": "$.kaupunkilehti[0].nostot[1]",
+          "commonsFile": "Teleferico de La Paz.jpg",
+          "sha256": "741a1daf1aa309561a49eebff0920a6789d64509bb81fc8f1ee7ce5aafe89453",
+          "verdict": "accepted",
+          "reason": "Todellinen Mi Teleféricon joukkoliikennekuva vastaa K2-tekstiä Työmatka kattojen yläpuolella. Alkuperäinen Description ja kamerapaikka-16.498108,-68.134922 yksilöivät La Pazin; lähteen Exif-varauksellinen18.9.2025 säilyy selitteessä. Vaunujen ikkunat heijastavat ympäristöä ja ihmiset jäävät varjoiksi ilman tunnistettavia kasvonpiirteitä. Ei lisättyä tekstiä, vesileimaa tai kehystä. Vaunun numerot ja ympäristön fyysinen yritysopaste eivät tee kuvan pääaiheesta mainos-/pakkauskuvaa. Lähteen lisätty kontrasti ja voimakkaat sävyt kirjataan.",
+          "evidence": {
+            "inputManifest": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/lapaz/cc-gap-selection.json",
+            "reviewer": "job-25 independent-image-QA",
+            "reviewedAt": "2026-10-12T20:33:21.370404+00:00",
+            "visualTool": "view_image",
+            "visualDetail": "original",
+            "localOriginal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/lapaz/cc-gap-job21-work/original-Teleferico-de-La-Paz-jpg.jpg",
+            "actualWidth": 4096,
+            "actualHeight": 2303,
+            "actualFormat": "JPEG",
+            "nativePixelWidth": 4096,
+            "nativePixelHeight": 2303,
+            "exifOrientation": 1,
+            "dimensionsConvention": "actualWidth/Height are correctly oriented display dimensions; native stored pixel dimensions are separately recorded",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Teleferico_de_La_Paz.jpg",
+            "savedSourcePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/lapaz/cc-gap-job21-work/Teleferico-de-La-Paz-jpg.html",
+            "savedSourceSHA256": "d1528e3713f3a1deeb3f08816a7ae5d5c0c801526fe76939492b83527d426997",
+            "authorVerified": "Parallelepiped09",
+            "authorField": "Original Commons Author table, independently read; not inferred from uploader",
+            "licenseVerified": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "captureDate": "18 September 2025 (according to Exif data)",
+            "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e13/paakaupungit-pilvi/e13/lapaz/sisalto.json",
+            "sourceContentSHA256": "ec7f6260ffc1e88359e114a885253fbf2b8fd03315253eb281964b5e7b701a1a",
+            "captionFi": "Mi Teleféricon vaunut La Pazin katujen yllä. Kuvasivun Exif-päiväys 18.9.2025.",
+            "depictedWorkLayer": "Valokuvakerros: Parallelepiped09 / CC BY-SA4.0, Source Own work, Author/Licensing-taulukko luettu itse. Commonsin nykyisen27.9.2025version kuvaaja on lisännyt kontrastia; QA ei muuttanut pikseleitä. Erillinen teoskerros: toiminnalliset vaunut, kaapeli/pylvään mekanismi ja tavalliset toistuvat ikkunaseinä-/kattopinnat julkisessa kaupunkiympäristössä. Ei eristettyä patsasta, muraalia, suurta mainosvalokuvaa tai tunnistettua omaperäistä julkisivuteosta. CAN:n aiemmin luettu päätös351 Art21 ja22(h) ovat erillinen primäärinen julkisen arkkitehtuurin arviointinäyttö; ei koko maan vapautus eikä ajoneuvon luonnollisen toimintatunnuksen automaattinen logohylkäys. Tämä kuva ei ole C1:n reliefi- tai K1:n mainosvalokuvakerroksen toisinto.",
+            "duplicateInCity": false,
+            "sourceRevision": 1183438375,
+            "captureDateAsStated": "18 September2025 according to Exif",
+            "placeEvidence": {
+              "description": "Teleferico de La Paz",
+              "cameraLocation": [
+                -16.498108,
+                -68.134922
+              ],
+              "category": "Avenida Germán Busch, La Paz / Teleférico La Paz - El Alto"
+            },
+            "creditForPublication": "Parallelepiped09 / CC BY-SA4.0",
+            "underlyingWorkPrimaryLaw": {
+              "url": "https://www.comunidadandina.org/StaticFiles/DocOf/DEC351.pdf",
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/lahdevarasto/bf66e03c4c1e0dffd4d558850242ad4edecf3551f96fd3cc9879f0aab26d340e.body",
+              "sha256": "3e4965bd0f129eb28b627b6018e26732c88918f3cc2930fece02aec3c8779e90",
+              "readPersonallyEarlierInQA": true,
+              "scope": "Art21/22(h), independently evaluated visible architecture; no named protected modern artwork clearance"
+            }
+          }
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/lapaz/qa.json",
+            "sha256": "be9ba2900e92895d4fd3ea15f5e0aa33048fe95c6cefd244e68e4bc1544d7203"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/lapaz/illustration-qa-extra.json",
+            "sha256": "61cbc9d085d93bcb312532248176f7e93ffc7aa30f632916320733170bf77d9f"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e13",
+        "city": "lapaz",
+        "slot": "K2",
+        "targetJsonPath": "$.kaupunkilehti[0].nostot[1]",
+        "commonsFile": "Teleferico de La Paz.jpg",
+        "sha256": "741a1daf1aa309561a49eebff0920a6789d64509bb81fc8f1ee7ce5aafe89453",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Teleferico_de_La_Paz.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Teleferico_de_La_Paz.jpg",
+        "author": "Parallelepiped09",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "width": 4096,
+        "height": 2303,
+        "originalSHA256": "741a1daf1aa309561a49eebff0920a6789d64509bb81fc8f1ee7ce5aafe89453",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e13/lapaz/k2-741a1daf1aa309561a49.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e13/lapaz/k2-741a1daf1aa309561a49.jpg",
+        "bytes": 6681386,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T20:33:48.653148+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Parallelepiped09, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Mi Teleféricon vaunut La Pazin katujen yllä. Kuvasivun Exif-päiväys 18.9.2025.",
+        "lyhyt": "Mi Teleféricon vaunut La Pazin katujen yllä. Kuvasivun Exif-päiväys 18.9.2025.",
+        "tiedosto": "Teleferico de La Paz.jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "bf4b47b346d0ce6ab1a1dfdc239292fcb5640199bfa698f232eee8f36d2d6016",
+      "targetAfterSHA256": "82e53aafb4c26685b8411125bc0950722869f89b21f576a3bfbff9d8ab9ef020",
+      "contextAfterSHA256": "82e53aafb4c26685b8411125bc0950722869f89b21f576a3bfbff9d8ab9ef020"
     }
   ],
   "runtimeIntegrationPending": true,
