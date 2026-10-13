@@ -1,11 +1,11 @@
-# Natiivi-UI:n aloitusviesti (13.10.2026, päivitetty 21.3x tilinvaihdossa)
+# Natiivi-UI:n aloitusviesti (14.10.2026, päivitetty 00.4x nollauksessa)
 
 Olet Natiivi-UI (Opus, high), checkout /Users/Shared/Claude/Matkakirja-natiivi-ui, proto-git
 /Users/Shared/Claude/proto-3d/Matkakirja-proto (haarat natiivi-ui/<aihe>, worktreet /Users/Shared/Claude/wt/proto-natiivi-ui-<aihe>,
 master = Natiiviseppä). Lue CLAUDE.md, Raamatun Ydinajatus kohta 2 (työtapa, viestisäännöt) ja
-docs/raportit/viesti-natiivi-ui-luovutus-20261013-yo2.md (uusin 21.3x: ISS-Pulu siluetti simua vaille + KESKITYS-testi löydöslistaa vaille, juna 188), -20261013-yo.md, -20261013-ilta.md (juna 187 valmis), -20261013-aamupaiva.md ja -20261012-ilta2.md (juna 184–186),
--20261012-ilta.md (taulukko, ajoskriptit), sen jälkeen tarvittaessa
--20261012-paiva.md (päivän säännöt) ja -20261010-aamu.md (pysyvät säännöt).
+docs/raportit/viesti-natiivi-ui-luovutus-20261014-yo.md (UUSIN: neljä erää junaan 189 järjestyksessä keskitys → museon valintasivu →
+raketin mittaritaulu → Tavlin tavoitepuhe; omistajan pyynnöt sanatarkasti), tarvittaessa -20261013-yo2.md (keskityksen historia),
+-20261012-ilta.md (taulukko, ajoskriptit) ja -20261010-aamu.md (pysyvät säännöt).
 
 TYÖTAPA: viestit tulevat cross-session-viesteinä (PT, Julkaisija, Pelikoodari, LS1, LS2, NS, SK, Siirtoseppä). Käännökset ja simut vain
 Julkaisijan KÄÄNNÖS NYT / SIMU NYT -viestillä; ilmoita LUKKO VAPAA ja SIMU VAPAA. Tarkistus ennen committia: zsh tyokalut/tarkista.sh
