@@ -795,7 +795,7 @@ export const MUSEO_KYSYMYKSET = {
       },
       {
         "kysymys": "Mistä osista Amsterdamin jättikartta koottiin?",
-        "vastaus": "Kartta koostuu yhdeksästä kaiverretusta arkista, jotka voi liimata yhteen. Mukaan kuuluu puupiirroskaistale, jossa on latinankielinen otsikko, suomeksi \"Amsterdam, Hollannin tärkein kauppapaikka ja koko Euroopan kuuluisin\". Allard Piersonin ensipainoksen kappale on värjätty käsin valmistuksen aikaan.",
+        "vastaus": "Kartta koostuu yhdeksästä kaiverretusta arkista, jotka voi liimata yhteen. Mukaan kuuluu puupiirroskaistale, jossa on latinankielinen otsikko, suomeksi \"Amsterdam, Hollannin tärkein kauppapaikka ja koko Euroopan kuuluisin\". Allard Piersonin kappale on 1630-luvun painos vuoden 1625 kartasta, ja se on värjätty käsin valmistuksen aikaan.",
         "lahteet": [
           {
             "url": "https://www.allardpierson.nl/en/news/allard-pierson-acquires-unique-17th-century-wall-map-of-amsterdam",
