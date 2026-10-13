@@ -2,7 +2,7 @@
   "schemaVersion": "capital-city-role-assets/v1",
   "era": "e08",
   "city": "victoria",
-  "authorization": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+  "authorization": "hyväksyn kaikki tekemäsi kuvat. toimita ne claudelle. claudelta saat uusia ohjeita jatkoa varten",
   "sourceContentAfterSHA256": "7140efcb3482e764940ebefe8a49638de8a10fcb9231215c841b33c9e9aee1e0",
   "assets": [
     {
@@ -53,7 +53,7 @@
         1536
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/victoria/sisalto.json",
-      "sourceContentSHA256": "f877a315a3aa5f955305cbe9c205b9b1f8a5eb313462bbceb36040a1f289dd60",
+      "sourceContentSHA256": "7140efcb3482e764940ebefe8a49638de8a10fcb9231215c841b33c9e9aee1e0",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
         "semanticContextSHA256": "6ad39983b833ca715d839c05131462256ded3982c476b940053e4c95acef3521",
@@ -152,7 +152,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/victoria/qa.json",
-            "sha256": "7498eeee553ffddad2b3e3461ec42ae43179f056ec04ac77bc18d93b0c9b8d41"
+            "sha256": "15a385cbab2ec1e48a92e570bb29a9337a34ca2e670a35c3971881532c1dbb37"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/victoria/illustration-qa-extra.json",
@@ -241,7 +241,1141 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "7140efcb3482e764940ebefe8a49638de8a10fcb9231215c841b33c9e9aee1e0",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "6ad39983b833ca715d839c05131462256ded3982c476b940053e4c95acef3521"
+      "contextAfterSHA256": "6ad39983b833ca715d839c05131462256ded3982c476b940053e4c95acef3521",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+    },
+    {
+      "era": "e08",
+      "city": "victoria",
+      "slot": "O3",
+      "type": "illustration",
+      "assetID": "e08-victoria-O3-illustration-v1-20261012",
+      "galleryImageID": "e08-victoria-O3-illustration-v1-20261012",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[2].kuva",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "matkailijalle",
+        "artikkeli",
+        "jaksot",
+        2,
+        "kuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/victoria/e08-victoria-O3-illustration-v1-20261012-7707da227cf1.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva jättiläiskilpikonnan ruokailusta.",
+        "lyhyt": "Havainnekuva jättiläiskilpikonnan ruokailusta."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/victoria/e08-victoria-O3-illustration-v1-20261012-7707da227cf1.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva jättiläiskilpikonnan ruokailusta.",
+        "lyhyt": "Havainnekuva jättiläiskilpikonnan ruokailusta."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "7707da227cf1a8dcc0ea180ac6b1b9fa25fb93ef4efb113e0f26d9f835a0c1cc",
+      "exportSHA256": "2bbf3bdcce65f793c3ba3b2cea81b4aeddaf95aba4fc6d3e1fc0e12cf75ca162",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/victoria/e08-victoria-O3-illustration-v1-20261012-7707da227cf1.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/victoria/e08-victoria-O3-illustration-v1-20261012-7707da227cf1.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/victoria/e08-victoria-O3-illustration-v1-20261012-7707da227cf1.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/victoria/sisalto.json",
+      "sourceContentSHA256": "7140efcb3482e764940ebefe8a49638de8a10fcb9231215c841b33c9e9aee1e0",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "5a703db9537874543a2c98b7e44e6189a89e0832cfbf7abef507c6176a849be2",
+        "subjectTitle": "Puutarha ja luonnon kokoelmat",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": {
+            "scope": "Common natural material, plant, animal, food or unbranded functional object. No named protected artwork or real architecture/collection reconstruction.",
+            "notLocationProof": true
+          },
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/victoria/assets/e08-victoria-O3-illustration-v1-20261012/image.png",
+            "nativeSha256Verified": "7707da227cf1a8dcc0ea180ac6b1b9fa25fb93ef4efb113e0f26d9f835a0c1cc",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "nativeMode": "RGB",
+            "visualInspection": "Tarkistaja katsoi itse natiivin NAS-tiedoston view_image-työkalulla original-tarkkuudessa tässä sessiossa: Suuri maakilpikonna syö lehtiä, pitkä ryppyinen kaula, kupolimainen kilpi ja kaksi näkyvää etujalkaa. Kilven saumat ja ihon vaihtelu luontevia, anonyymi rantatausta; ei merkintöjä.",
+            "captionFi": "Havainnekuva jättiläiskilpikonnan ruokailusta.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/victoria/sisalto.json",
+            "contentSha256": "f877a315a3aa5f955305cbe9c205b9b1f8a5eb313462bbceb36040a1f289dd60",
+            "targetCurrentlyPresent": true,
+            "targetText": "Mont Fleurin kasvitieteellisessä puutarhassa on paikallisia ja muualta tuotuja kasveja, coco de mer -palmuja ja jättiläiskilpikonnia. Katso palmun lehtiä ja eri puiden kukkia, sillä hede- ja emikukat ovat eri yksilöissä. Victorian luonnonhistoriallisen museon aiheisiin kuuluvat kasvit, eläimet, geologia ja ihmisen kulttuurit. Tarkista museoiden ajantasainen käyntitilanne erikseen ennen kuin rakennat päivän näyttelyvierailun varaan.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/victoria/faktapohja.md",
+            "factSheetSha256": "ef0d4061cc02b40add81339e2a8760770e549bb027b061e2284dc52214bc76d6",
+            "topicEvidence": "Faktapohja §3 V11 Aldabra giant tortoise: pitkä kaula ja kasviravinto; §4 Mont Fleuri.",
+            "rightsAssessment": "Yleinen luonnon-, materiaali-, ruoka- tai arkiesineaihe; ei nimettyä nykytaideteosta. Aiheen ja paikkarehellisyyden arvio verdictissä ja omassa silmähavainnossa.",
+            "scope": "Vain riippumaton natiivikuvituksen QA; R2-toimitus, integrointi ja julkaisu eivät ole kuitattuja."
+          },
+          "qaReason": "Jättiläiskilpikonnan kasviravinto vastaa opasaihetta. Ei Mont Fleurin aitauksen tai tietyn yksilön todistusväite."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva jättiläiskilpikonnan ruokailusta.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/victoria/illustration-qa-extra.json",
+        "fileSHA256": "72cd430aafc94d772540d5b44b3d78ef32be6db473f6109702bb8fd0c71af5b5",
+        "item": {
+          "slot": "O3",
+          "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[2].kuva",
+          "assetID": "e08-victoria-O3-illustration-v1-20261012",
+          "sha256": "7707da227cf1a8dcc0ea180ac6b1b9fa25fb93ef4efb113e0f26d9f835a0c1cc",
+          "verdict": "accepted",
+          "reason": "Jättiläiskilpikonnan kasviravinto vastaa opasaihetta. Ei Mont Fleurin aitauksen tai tietyn yksilön todistusväite.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/victoria/assets/e08-victoria-O3-illustration-v1-20261012/image.png",
+            "nativeSha256Verified": "7707da227cf1a8dcc0ea180ac6b1b9fa25fb93ef4efb113e0f26d9f835a0c1cc",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "nativeMode": "RGB",
+            "visualInspection": "Tarkistaja katsoi itse natiivin NAS-tiedoston view_image-työkalulla original-tarkkuudessa tässä sessiossa: Suuri maakilpikonna syö lehtiä, pitkä ryppyinen kaula, kupolimainen kilpi ja kaksi näkyvää etujalkaa. Kilven saumat ja ihon vaihtelu luontevia, anonyymi rantatausta; ei merkintöjä.",
+            "captionFi": "Havainnekuva jättiläiskilpikonnan ruokailusta.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/victoria/sisalto.json",
+            "contentSha256": "f877a315a3aa5f955305cbe9c205b9b1f8a5eb313462bbceb36040a1f289dd60",
+            "targetCurrentlyPresent": true,
+            "targetText": "Mont Fleurin kasvitieteellisessä puutarhassa on paikallisia ja muualta tuotuja kasveja, coco de mer -palmuja ja jättiläiskilpikonnia. Katso palmun lehtiä ja eri puiden kukkia, sillä hede- ja emikukat ovat eri yksilöissä. Victorian luonnonhistoriallisen museon aiheisiin kuuluvat kasvit, eläimet, geologia ja ihmisen kulttuurit. Tarkista museoiden ajantasainen käyntitilanne erikseen ennen kuin rakennat päivän näyttelyvierailun varaan.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/victoria/faktapohja.md",
+            "factSheetSha256": "ef0d4061cc02b40add81339e2a8760770e549bb027b061e2284dc52214bc76d6",
+            "topicEvidence": "Faktapohja §3 V11 Aldabra giant tortoise: pitkä kaula ja kasviravinto; §4 Mont Fleuri.",
+            "rightsAssessment": "Yleinen luonnon-, materiaali-, ruoka- tai arkiesineaihe; ei nimettyä nykytaideteosta. Aiheen ja paikkarehellisyyden arvio verdictissä ja omassa silmähavainnossa.",
+            "scope": "Vain riippumaton natiivikuvituksen QA; R2-toimitus, integrointi ja julkaisu eivät ole kuitattuja."
+          },
+          "reviewedAt": "2026-10-13T05:57:48.372998+00:00",
+          "reviewerSession": "e08-extra-01a131d7-1d58-7eb0-a959-c0073288e011"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/victoria/qa.json",
+            "sha256": "15a385cbab2ec1e48a92e570bb29a9337a34ca2e670a35c3971881532c1dbb37"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/victoria/illustration-qa-extra.json",
+            "sha256": "72cd430aafc94d772540d5b44b3d78ef32be6db473f6109702bb8fd0c71af5b5"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/victoria/e08-victoria-O3-illustration-v1-20261012-7707da227cf1.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/victoria/e08-victoria-O3-illustration-v1-20261012-7707da227cf1.png?t=2bbf3bdcce65f793",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/victoria/e08-victoria-O3-illustration-v1-20261012-7707da227cf1.png",
+        "sha256": "2bbf3bdcce65f793c3ba3b2cea81b4aeddaf95aba4fc6d3e1fc0e12cf75ca162",
+        "bytes": 2914190,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e08-victoria-O3-illustration-v1-20261012",
+        "nativeSHA256": "7707da227cf1a8dcc0ea180ac6b1b9fa25fb93ef4efb113e0f26d9f835a0c1cc",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/victoria/e08-victoria-O3-illustration-v1-20261012-7707da227cf1.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e08",
+        "city": "victoria",
+        "slot": "O3",
+        "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[2].kuva",
+        "verifiedAt": "2026-10-13T05:58:43.708187+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/victoria/e08-victoria-O3-illustration-v1-20261012-7707da227cf1.png",
+        "sha256": "2bbf3bdcce65f793c3ba3b2cea81b4aeddaf95aba4fc6d3e1fc0e12cf75ca162",
+        "bytes": 2914190,
+        "SHAReadAt": "2026-10-13T05:58:01.048945+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "7707da227cf1a8dcc0ea180ac6b1b9fa25fb93ef4efb113e0f26d9f835a0c1cc",
+        "rgbPixelSHA256": "b16931049bb6a80dd8879217d04a2ced308418e93d4132848eeb1125476f059d",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "7140efcb3482e764940ebefe8a49638de8a10fcb9231215c841b33c9e9aee1e0",
+      "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+      "contextAfterSHA256": "5a703db9537874543a2c98b7e44e6189a89e0832cfbf7abef507c6176a849be2",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+    },
+    {
+      "era": "e08",
+      "city": "victoria",
+      "slot": "O4",
+      "type": "illustration",
+      "assetID": "e08-victoria-O4-illustration-v1-20261012",
+      "galleryImageID": "e08-victoria-O4-illustration-v1-20261012",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "matkailijalle",
+        "artikkeli",
+        "jaksot",
+        3,
+        "kuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/victoria/e08-victoria-O4-illustration-v1-20261012-b4c6e684e513.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva kala- ja kookosraaka-aineista, ei Victorian torin paikkavalokuva.",
+        "lyhyt": "Havainnekuva kala- ja kookosraaka-aineista, ei Victorian torin paikkavalokuva."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/victoria/e08-victoria-O4-illustration-v1-20261012-b4c6e684e513.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva kala- ja kookosraaka-aineista, ei Victorian torin paikkavalokuva.",
+        "lyhyt": "Havainnekuva kala- ja kookosraaka-aineista, ei Victorian torin paikkavalokuva."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "b4c6e684e51357d7070a7130286f9d454979c01b9327224a37fa13165745b0b5",
+      "exportSHA256": "d31b839857d359c089e7611c2f2400e7a92f1890511f8eebb09b2d9519e99482",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/victoria/e08-victoria-O4-illustration-v1-20261012-b4c6e684e513.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/victoria/e08-victoria-O4-illustration-v1-20261012-b4c6e684e513.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/victoria/e08-victoria-O4-illustration-v1-20261012-b4c6e684e513.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/victoria/sisalto.json",
+      "sourceContentSHA256": "7140efcb3482e764940ebefe8a49638de8a10fcb9231215c841b33c9e9aee1e0",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "6c804bd58e894e00191ff9bc819127b9389ef9ee180bc2ff7b86e763320811af",
+        "subjectTitle": "Mitä täällä syödään",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": {
+            "scope": "Common sourced natural/agricultural material or unbranded functional object only; no named protected artwork, city plan, institutional interior or real-site claim.",
+            "notLocationProof": true
+          },
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/victoria/assets/e08-victoria-O4-illustration-v1-20261012/image.png",
+            "nativeSha256Verified": "b4c6e684e51357d7070a7130286f9d454979c01b9327224a37fa13165745b0b5",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "visualInspection": "Reviewer personally opened this native NAS PNG with view_image before handoff: kokonainen kala, avattu kookos ja kookoslohkoja. Luontevat suomut, evät, kuorikuidut ja malto; ei henkilöitä tai merkintöjä.",
+            "captionFi": "Havainnekuva kala- ja kookosraaka-aineista, ei Victorian torin paikkavalokuva.",
+            "topicEvidence": "Ajantasainen O4 kertoo kalasta ja kookostuotteista.",
+            "sourceEvidence": {
+              "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/victoria/sisalto.json",
+              "sourceContentSha256": "98b4aa2bc73b65c8c9f7fb3b5cc737cb1420ba7114c5b4762a286d3734f16611",
+              "targetText": "Kaupungin toriperinteeseen kuuluvat kala, hedelmät ja vihannekset. Victoriassa voi tutustua myös kreolikeittiöön, ja kookosta sekä kookostuotteita on tarjolla. Kalastus näkyy sataman teollisuudessa, mutta torikierroksella se muuttuu ostettavaksi ruoaksi. Aloita saatavilla olevista tuotteista ja kysy myyjältä niiden käytöstä. Jos tavoitteena on ateria eikä raaka-aineiden ostaminen, etsi kreoliruokaa tarjoava ravintola.",
+              "sourceFactSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/victoria/faktapohja.md",
+              "factSheetSha256": "ef0d4061cc02b40add81339e2a8760770e549bb027b061e2284dc52214bc76d6",
+              "wiki": null,
+              "subjectBasis": "A generic food-ingredient still life of an ordinary edible coconut Cocos nucifera cut open to show white flesh, beside a fresh fish on plain unlabelled food-preparation surface. This is not a coco de mer seed. No blood, people, brands, labels or actual market identity."
+            },
+            "scope": "Independent native-image QA only; no delivery or publication approval."
+          },
+          "qaReason": "Kala ja kookos sopivat ruokajakson raaka-aineisiin. Selite erottaa havainnollistuksen Victorian torin paikkavalokuvasta."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva kala- ja kookosraaka-aineista, ei Victorian torin paikkavalokuva.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/victoria/illustration-qa-extra.json",
+        "fileSHA256": "72cd430aafc94d772540d5b44b3d78ef32be6db473f6109702bb8fd0c71af5b5",
+        "item": {
+          "slot": "O4",
+          "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+          "assetID": "e08-victoria-O4-illustration-v1-20261012",
+          "sha256": "b4c6e684e51357d7070a7130286f9d454979c01b9327224a37fa13165745b0b5",
+          "verdict": "accepted",
+          "reason": "Kala ja kookos sopivat ruokajakson raaka-aineisiin. Selite erottaa havainnollistuksen Victorian torin paikkavalokuvasta.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/victoria/assets/e08-victoria-O4-illustration-v1-20261012/image.png",
+            "nativeSha256Verified": "b4c6e684e51357d7070a7130286f9d454979c01b9327224a37fa13165745b0b5",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "visualInspection": "Reviewer personally opened this native NAS PNG with view_image before handoff: kokonainen kala, avattu kookos ja kookoslohkoja. Luontevat suomut, evät, kuorikuidut ja malto; ei henkilöitä tai merkintöjä.",
+            "captionFi": "Havainnekuva kala- ja kookosraaka-aineista, ei Victorian torin paikkavalokuva.",
+            "topicEvidence": "Ajantasainen O4 kertoo kalasta ja kookostuotteista.",
+            "sourceEvidence": {
+              "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/victoria/sisalto.json",
+              "sourceContentSha256": "98b4aa2bc73b65c8c9f7fb3b5cc737cb1420ba7114c5b4762a286d3734f16611",
+              "targetText": "Kaupungin toriperinteeseen kuuluvat kala, hedelmät ja vihannekset. Victoriassa voi tutustua myös kreolikeittiöön, ja kookosta sekä kookostuotteita on tarjolla. Kalastus näkyy sataman teollisuudessa, mutta torikierroksella se muuttuu ostettavaksi ruoaksi. Aloita saatavilla olevista tuotteista ja kysy myyjältä niiden käytöstä. Jos tavoitteena on ateria eikä raaka-aineiden ostaminen, etsi kreoliruokaa tarjoava ravintola.",
+              "sourceFactSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/victoria/faktapohja.md",
+              "factSheetSha256": "ef0d4061cc02b40add81339e2a8760770e549bb027b061e2284dc52214bc76d6",
+              "wiki": null,
+              "subjectBasis": "A generic food-ingredient still life of an ordinary edible coconut Cocos nucifera cut open to show white flesh, beside a fresh fish on plain unlabelled food-preparation surface. This is not a coco de mer seed. No blood, people, brands, labels or actual market identity."
+            },
+            "scope": "Independent native-image QA only; no delivery or publication approval."
+          },
+          "reviewedAt": "2026-10-13T05:56:52.126754+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/victoria/qa.json",
+            "sha256": "15a385cbab2ec1e48a92e570bb29a9337a34ca2e670a35c3971881532c1dbb37"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/victoria/illustration-qa-extra.json",
+            "sha256": "72cd430aafc94d772540d5b44b3d78ef32be6db473f6109702bb8fd0c71af5b5"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/victoria/e08-victoria-O4-illustration-v1-20261012-b4c6e684e513.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/victoria/e08-victoria-O4-illustration-v1-20261012-b4c6e684e513.png?t=d31b839857d359c0",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/victoria/e08-victoria-O4-illustration-v1-20261012-b4c6e684e513.png",
+        "sha256": "d31b839857d359c089e7611c2f2400e7a92f1890511f8eebb09b2d9519e99482",
+        "bytes": 2671657,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e08-victoria-O4-illustration-v1-20261012",
+        "nativeSHA256": "b4c6e684e51357d7070a7130286f9d454979c01b9327224a37fa13165745b0b5",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/victoria/e08-victoria-O4-illustration-v1-20261012-b4c6e684e513.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e08",
+        "city": "victoria",
+        "slot": "O4",
+        "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+        "verifiedAt": "2026-10-13T05:58:45.652948+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/victoria/e08-victoria-O4-illustration-v1-20261012-b4c6e684e513.png",
+        "sha256": "d31b839857d359c089e7611c2f2400e7a92f1890511f8eebb09b2d9519e99482",
+        "bytes": 2671657,
+        "SHAReadAt": "2026-10-13T05:57:05.713419+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "b4c6e684e51357d7070a7130286f9d454979c01b9327224a37fa13165745b0b5",
+        "rgbPixelSHA256": "8f116f0da5cd149dd9c9c7423a1ee93496962d3d9711fcca732e21a957c7c479",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "7140efcb3482e764940ebefe8a49638de8a10fcb9231215c841b33c9e9aee1e0",
+      "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+      "contextAfterSHA256": "6c804bd58e894e00191ff9bc819127b9389ef9ee180bc2ff7b86e763320811af",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+    },
+    {
+      "era": "e08",
+      "city": "victoria",
+      "slot": "K2",
+      "type": "illustration",
+      "assetID": "e08-victoria-K2-illustration-v1-20261012",
+      "galleryImageID": "e08-victoria-K2-illustration-v1-20261012",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].nostot[1]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "nostot",
+        1
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/victoria/e08-victoria-K2-illustration-v1-20261012-7318d02b7810.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva hedelmäpuun kasvusta.",
+        "lyhyt": "Havainnekuva hedelmäpuun kasvusta."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/victoria/e08-victoria-K2-illustration-v1-20261012-7318d02b7810.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva hedelmäpuun kasvusta.",
+        "lyhyt": "Havainnekuva hedelmäpuun kasvusta."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "7318d02b7810ce64b76a802dec9fbd5f64afa3fde35778c99a3dd0d132f9a6e5",
+      "exportSHA256": "f2040fe58299cce0a29c2ce4dc7cfff5a83e6640553d1018cdc2904c9c73336e",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/victoria/e08-victoria-K2-illustration-v1-20261012-7318d02b7810.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/victoria/e08-victoria-K2-illustration-v1-20261012-7318d02b7810.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/victoria/e08-victoria-K2-illustration-v1-20261012-7318d02b7810.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/victoria/sisalto.json",
+      "sourceContentSHA256": "7140efcb3482e764940ebefe8a49638de8a10fcb9231215c841b33c9e9aee1e0",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "dcad4076a5efddaffb22fb167844199b993ccc65b64cbcbe17a9e64b295ea4e6",
+        "semanticContextSHA256": "dcad4076a5efddaffb22fb167844199b993ccc65b64cbcbe17a9e64b295ea4e6",
+        "subjectTitle": "Puutarha aloitti työasemana",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": {
+            "scope": "Common natural material, plant, animal, food or unbranded functional object. No named protected artwork or real architecture/collection reconstruction.",
+            "notLocationProof": true
+          },
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/victoria/assets/e08-victoria-K2-illustration-v1-20261012/image.png",
+            "nativeSha256Verified": "7318d02b7810ce64b76a802dec9fbd5f64afa3fde35778c99a3dd0d132f9a6e5",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "nativeMode": "RGB",
+            "visualInspection": "Tarkistaja katsoi itse natiivin NAS-tiedoston view_image-työkalulla original-tarkkuudessa tässä sessiossa: Oksassa oranssi sitrushedelmä ja vihreitä lehtiä, taustalla epäteräviä hedelmiä. Kanta ja lehtisuonet uskottavia; ei kylttejä tai henkilöitä.",
+            "captionFi": "Havainnekuva hedelmäpuun kasvusta.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/victoria/sisalto.json",
+            "contentSha256": "f877a315a3aa5f955305cbe9c205b9b1f8a5eb313462bbceb36040a1f289dd60",
+            "targetCurrentlyPresent": true,
+            "targetText": "Mont Fleurin kasvitieteellinen puutarha perustettiin 1900-luvun alussa maatalousasemaksi. Mauritiukselta tullut agronomi Dupont keräsi sinne puutavaraa tuottavia puita, palmuja, maustekasveja ja hedelmäpuita. Kokoelman lähtökohtana oli siis myös kasvien käyttö, ei pelkkä puistokävely. Myöhemmin alue kehittyi yleiseksi puistoksi. Nykyään siellä kasvaa sekä Seychellien omia kasveja että muualta tuotuja koristekasveja, joukossa coco de mer -palmuja. Puutarha on samalla paikka säilyttää ja tutkia kasvilajeja.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/victoria/faktapohja.md",
+            "factSheetSha256": "ef0d4061cc02b40add81339e2a8760770e549bb027b061e2284dc52214bc76d6",
+            "topicEvidence": "Faktapohja §2 Puutarha aloitti työasemana, V3/V4: hedelmäpuut.",
+            "rightsAssessment": "Yleinen luonnon-, materiaali-, ruoka- tai arkiesineaihe; ei nimettyä nykytaideteosta. Aiheen ja paikkarehellisyyden arvio verdictissä ja omassa silmähavainnossa.",
+            "scope": "Vain riippumaton natiivikuvituksen QA; R2-toimitus, integrointi ja julkaisu eivät ole kuitattuja."
+          },
+          "qaReason": "Hedelmäpuun lähikuva vastaa hyötykasvikokoelman aihetta. Ei puutarhan tietyn lajin tai istutuksen todistusväite."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva hedelmäpuun kasvusta.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/victoria/illustration-qa-extra.json",
+        "fileSHA256": "72cd430aafc94d772540d5b44b3d78ef32be6db473f6109702bb8fd0c71af5b5",
+        "item": {
+          "slot": "K2",
+          "targetJsonPath": "$.kaupunkilehti[0].nostot[1]",
+          "assetID": "e08-victoria-K2-illustration-v1-20261012",
+          "sha256": "7318d02b7810ce64b76a802dec9fbd5f64afa3fde35778c99a3dd0d132f9a6e5",
+          "verdict": "accepted",
+          "reason": "Hedelmäpuun lähikuva vastaa hyötykasvikokoelman aihetta. Ei puutarhan tietyn lajin tai istutuksen todistusväite.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/victoria/assets/e08-victoria-K2-illustration-v1-20261012/image.png",
+            "nativeSha256Verified": "7318d02b7810ce64b76a802dec9fbd5f64afa3fde35778c99a3dd0d132f9a6e5",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "nativeMode": "RGB",
+            "visualInspection": "Tarkistaja katsoi itse natiivin NAS-tiedoston view_image-työkalulla original-tarkkuudessa tässä sessiossa: Oksassa oranssi sitrushedelmä ja vihreitä lehtiä, taustalla epäteräviä hedelmiä. Kanta ja lehtisuonet uskottavia; ei kylttejä tai henkilöitä.",
+            "captionFi": "Havainnekuva hedelmäpuun kasvusta.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/victoria/sisalto.json",
+            "contentSha256": "f877a315a3aa5f955305cbe9c205b9b1f8a5eb313462bbceb36040a1f289dd60",
+            "targetCurrentlyPresent": true,
+            "targetText": "Mont Fleurin kasvitieteellinen puutarha perustettiin 1900-luvun alussa maatalousasemaksi. Mauritiukselta tullut agronomi Dupont keräsi sinne puutavaraa tuottavia puita, palmuja, maustekasveja ja hedelmäpuita. Kokoelman lähtökohtana oli siis myös kasvien käyttö, ei pelkkä puistokävely. Myöhemmin alue kehittyi yleiseksi puistoksi. Nykyään siellä kasvaa sekä Seychellien omia kasveja että muualta tuotuja koristekasveja, joukossa coco de mer -palmuja. Puutarha on samalla paikka säilyttää ja tutkia kasvilajeja.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/victoria/faktapohja.md",
+            "factSheetSha256": "ef0d4061cc02b40add81339e2a8760770e549bb027b061e2284dc52214bc76d6",
+            "topicEvidence": "Faktapohja §2 Puutarha aloitti työasemana, V3/V4: hedelmäpuut.",
+            "rightsAssessment": "Yleinen luonnon-, materiaali-, ruoka- tai arkiesineaihe; ei nimettyä nykytaideteosta. Aiheen ja paikkarehellisyyden arvio verdictissä ja omassa silmähavainnossa.",
+            "scope": "Vain riippumaton natiivikuvituksen QA; R2-toimitus, integrointi ja julkaisu eivät ole kuitattuja."
+          },
+          "reviewedAt": "2026-10-13T05:57:48.183267+00:00",
+          "reviewerSession": "e08-extra-01a131d7-1d58-7eb0-a959-c0073288e011"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/victoria/qa.json",
+            "sha256": "15a385cbab2ec1e48a92e570bb29a9337a34ca2e670a35c3971881532c1dbb37"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/victoria/illustration-qa-extra.json",
+            "sha256": "72cd430aafc94d772540d5b44b3d78ef32be6db473f6109702bb8fd0c71af5b5"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/victoria/e08-victoria-K2-illustration-v1-20261012-7318d02b7810.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/victoria/e08-victoria-K2-illustration-v1-20261012-7318d02b7810.png?t=f2040fe58299cce0",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/victoria/e08-victoria-K2-illustration-v1-20261012-7318d02b7810.png",
+        "sha256": "f2040fe58299cce0a29c2ce4dc7cfff5a83e6640553d1018cdc2904c9c73336e",
+        "bytes": 2105469,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e08-victoria-K2-illustration-v1-20261012",
+        "nativeSHA256": "7318d02b7810ce64b76a802dec9fbd5f64afa3fde35778c99a3dd0d132f9a6e5",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/victoria/e08-victoria-K2-illustration-v1-20261012-7318d02b7810.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e08",
+        "city": "victoria",
+        "slot": "K2",
+        "targetJsonPath": "$.kaupunkilehti[0].nostot[1]",
+        "verifiedAt": "2026-10-13T05:58:47.050503+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/victoria/e08-victoria-K2-illustration-v1-20261012-7318d02b7810.png",
+        "sha256": "f2040fe58299cce0a29c2ce4dc7cfff5a83e6640553d1018cdc2904c9c73336e",
+        "bytes": 2105469,
+        "SHAReadAt": "2026-10-13T05:58:00.437569+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "7318d02b7810ce64b76a802dec9fbd5f64afa3fde35778c99a3dd0d132f9a6e5",
+        "rgbPixelSHA256": "ba5d1ea984396a37359edffe085595fadea075d3e9cf1fc50fafae870a3a4ebf",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "7140efcb3482e764940ebefe8a49638de8a10fcb9231215c841b33c9e9aee1e0",
+      "targetAfterSHA256": "dcad4076a5efddaffb22fb167844199b993ccc65b64cbcbe17a9e64b295ea4e6",
+      "contextAfterSHA256": "dcad4076a5efddaffb22fb167844199b993ccc65b64cbcbe17a9e64b295ea4e6",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+    },
+    {
+      "era": "e08",
+      "city": "victoria",
+      "slot": "K3",
+      "type": "illustration",
+      "assetID": "e08-victoria-K3-illustration-v1-20261012",
+      "galleryImageID": "e08-victoria-K3-illustration-v1-20261012",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].nostot[2]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "nostot",
+        2
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/victoria/e08-victoria-K3-illustration-v1-20261012-a24dd12f5010.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva tonnikalasta.",
+        "lyhyt": "Havainnekuva tonnikalasta."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/victoria/e08-victoria-K3-illustration-v1-20261012-a24dd12f5010.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva tonnikalasta.",
+        "lyhyt": "Havainnekuva tonnikalasta."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "a24dd12f5010267f9c829b6f8f83012865bc30ff5c426cea32ca9db46847ca42",
+      "exportSHA256": "0c9f3f8d8de0a33f492d2c0321ee47459a8032890115577182d45abce7210cac",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/victoria/e08-victoria-K3-illustration-v1-20261012-a24dd12f5010.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/victoria/e08-victoria-K3-illustration-v1-20261012-a24dd12f5010.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/victoria/e08-victoria-K3-illustration-v1-20261012-a24dd12f5010.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/victoria/sisalto.json",
+      "sourceContentSHA256": "7140efcb3482e764940ebefe8a49638de8a10fcb9231215c841b33c9e9aee1e0",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "107b76c40703de1d53305c26413db100153d41d25967f010c59ea4083cc31f78",
+        "semanticContextSHA256": "107b76c40703de1d53305c26413db100153d41d25967f010c59ea4083cc31f78",
+        "subjectTitle": "Satama tekee töitä",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": {
+            "scope": "Common natural material, plant, animal, food or unbranded functional object. No named protected artwork or real architecture/collection reconstruction.",
+            "notLocationProof": true
+          },
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/victoria/assets/e08-victoria-K3-illustration-v1-20261012/image.png",
+            "nativeSha256Verified": "a24dd12f5010267f9c829b6f8f83012865bc30ff5c426cea32ca9db46847ca42",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "nativeMode": "RGB",
+            "visualInspection": "Tarkistaja katsoi itse natiivin NAS-tiedoston view_image-työkalulla original-tarkkuudessa tässä sessiossa: Hopeinen tummaselkäinen tonnikala, erilliset selkäevät, kellertävät eväkkeet ja syvästi haarautunut pyrstö. Pintakiilto vaihtelee; ei merkintöjä.",
+            "captionFi": "Havainnekuva tonnikalasta.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/victoria/sisalto.json",
+            "contentSha256": "f877a315a3aa5f955305cbe9c205b9b1f8a5eb313462bbceb36040a1f289dd60",
+            "targetCurrentlyPresent": true,
+            "targetText": "Port Victoria on Seychellien pääkaupungin satama. Sisäsatama sijaitsee keskustan itäpuolella, ja sen ympärille kuuluu tonnikalan kalastusta ja säilöntäteollisuutta. Rannassa on siten muutakin kuin saaristoloman maisema: kala on myös kaupungin taloudellinen tuote. Victoria sijaitsee Mahén koillispuolella, ja samassa kaupungissa yhdistyvät saarivaltion hallintokeskus ja kalatalouden työpaikat. Seychellien kansainvälinen lentoasema palvelee kaupunkia ilmasta; satama puolestaan kytkee sen merellä tehtävään työhön.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/victoria/faktapohja.md",
+            "factSheetSha256": "ef0d4061cc02b40add81339e2a8760770e549bb027b061e2284dc52214bc76d6",
+            "topicEvidence": "Faktapohja §1/§2 Satama tekee töitä, V1/V2.",
+            "rightsAssessment": "Yleinen luonnon-, materiaali-, ruoka- tai arkiesineaihe; ei nimettyä nykytaideteosta. Aiheen ja paikkarehellisyyden arvio verdictissä ja omassa silmähavainnossa.",
+            "scope": "Vain riippumaton natiivikuvituksen QA; R2-toimitus, integrointi ja julkaisu eivät ole kuitattuja."
+          },
+          "qaReason": "Tonnikala vastaa sataman kalatalousaihetta, ilman tietyn saaliin alkuperä- tai käsittelypaikkaväitettä."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva tonnikalasta.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/victoria/illustration-qa-extra.json",
+        "fileSHA256": "72cd430aafc94d772540d5b44b3d78ef32be6db473f6109702bb8fd0c71af5b5",
+        "item": {
+          "slot": "K3",
+          "targetJsonPath": "$.kaupunkilehti[0].nostot[2]",
+          "assetID": "e08-victoria-K3-illustration-v1-20261012",
+          "sha256": "a24dd12f5010267f9c829b6f8f83012865bc30ff5c426cea32ca9db46847ca42",
+          "verdict": "accepted",
+          "reason": "Tonnikala vastaa sataman kalatalousaihetta, ilman tietyn saaliin alkuperä- tai käsittelypaikkaväitettä.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/victoria/assets/e08-victoria-K3-illustration-v1-20261012/image.png",
+            "nativeSha256Verified": "a24dd12f5010267f9c829b6f8f83012865bc30ff5c426cea32ca9db46847ca42",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "nativeMode": "RGB",
+            "visualInspection": "Tarkistaja katsoi itse natiivin NAS-tiedoston view_image-työkalulla original-tarkkuudessa tässä sessiossa: Hopeinen tummaselkäinen tonnikala, erilliset selkäevät, kellertävät eväkkeet ja syvästi haarautunut pyrstö. Pintakiilto vaihtelee; ei merkintöjä.",
+            "captionFi": "Havainnekuva tonnikalasta.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/victoria/sisalto.json",
+            "contentSha256": "f877a315a3aa5f955305cbe9c205b9b1f8a5eb313462bbceb36040a1f289dd60",
+            "targetCurrentlyPresent": true,
+            "targetText": "Port Victoria on Seychellien pääkaupungin satama. Sisäsatama sijaitsee keskustan itäpuolella, ja sen ympärille kuuluu tonnikalan kalastusta ja säilöntäteollisuutta. Rannassa on siten muutakin kuin saaristoloman maisema: kala on myös kaupungin taloudellinen tuote. Victoria sijaitsee Mahén koillispuolella, ja samassa kaupungissa yhdistyvät saarivaltion hallintokeskus ja kalatalouden työpaikat. Seychellien kansainvälinen lentoasema palvelee kaupunkia ilmasta; satama puolestaan kytkee sen merellä tehtävään työhön.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/victoria/faktapohja.md",
+            "factSheetSha256": "ef0d4061cc02b40add81339e2a8760770e549bb027b061e2284dc52214bc76d6",
+            "topicEvidence": "Faktapohja §1/§2 Satama tekee töitä, V1/V2.",
+            "rightsAssessment": "Yleinen luonnon-, materiaali-, ruoka- tai arkiesineaihe; ei nimettyä nykytaideteosta. Aiheen ja paikkarehellisyyden arvio verdictissä ja omassa silmähavainnossa.",
+            "scope": "Vain riippumaton natiivikuvituksen QA; R2-toimitus, integrointi ja julkaisu eivät ole kuitattuja."
+          },
+          "reviewedAt": "2026-10-13T05:57:48.248736+00:00",
+          "reviewerSession": "e08-extra-01a131d7-1d58-7eb0-a959-c0073288e011"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/victoria/qa.json",
+            "sha256": "15a385cbab2ec1e48a92e570bb29a9337a34ca2e670a35c3971881532c1dbb37"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/victoria/illustration-qa-extra.json",
+            "sha256": "72cd430aafc94d772540d5b44b3d78ef32be6db473f6109702bb8fd0c71af5b5"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/victoria/e08-victoria-K3-illustration-v1-20261012-a24dd12f5010.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/victoria/e08-victoria-K3-illustration-v1-20261012-a24dd12f5010.png?t=0c9f3f8d8de0a33f",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/victoria/e08-victoria-K3-illustration-v1-20261012-a24dd12f5010.png",
+        "sha256": "0c9f3f8d8de0a33f492d2c0321ee47459a8032890115577182d45abce7210cac",
+        "bytes": 2723665,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e08-victoria-K3-illustration-v1-20261012",
+        "nativeSHA256": "a24dd12f5010267f9c829b6f8f83012865bc30ff5c426cea32ca9db46847ca42",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/victoria/e08-victoria-K3-illustration-v1-20261012-a24dd12f5010.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e08",
+        "city": "victoria",
+        "slot": "K3",
+        "targetJsonPath": "$.kaupunkilehti[0].nostot[2]",
+        "verifiedAt": "2026-10-13T05:58:48.498658+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/victoria/e08-victoria-K3-illustration-v1-20261012-a24dd12f5010.png",
+        "sha256": "0c9f3f8d8de0a33f492d2c0321ee47459a8032890115577182d45abce7210cac",
+        "bytes": 2723665,
+        "SHAReadAt": "2026-10-13T05:58:00.637909+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "a24dd12f5010267f9c829b6f8f83012865bc30ff5c426cea32ca9db46847ca42",
+        "rgbPixelSHA256": "5a0b14674e67dff6128f8c2ce047c19f53e2a8a69914bc4b12e9e3b5d2e38cbb",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "7140efcb3482e764940ebefe8a49638de8a10fcb9231215c841b33c9e9aee1e0",
+      "targetAfterSHA256": "107b76c40703de1d53305c26413db100153d41d25967f010c59ea4083cc31f78",
+      "contextAfterSHA256": "107b76c40703de1d53305c26413db100153d41d25967f010c59ea4083cc31f78",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+    },
+    {
+      "era": "e08",
+      "city": "victoria",
+      "slot": "K4",
+      "type": "illustration",
+      "assetID": "e08-victoria-K4-illustration-v1-20261012",
+      "galleryImageID": "e08-victoria-K4-illustration-v1-20261012",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].nostot[3]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "nostot",
+        3
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/victoria/e08-victoria-K4-illustration-v1-20261012-ff12de497f05.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva torin kasvis- ja hedelmäaiheesta.",
+        "lyhyt": "Havainnekuva torin kasvis- ja hedelmäaiheesta."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/victoria/e08-victoria-K4-illustration-v1-20261012-ff12de497f05.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva torin kasvis- ja hedelmäaiheesta.",
+        "lyhyt": "Havainnekuva torin kasvis- ja hedelmäaiheesta."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "ff12de497f058bbe5371198f16726c84e3024e17af572df3054549b87d74dc72",
+      "exportSHA256": "e25576e23e236ac402668c9b7fbea6746ba78fb2ea1853b5ce8104393b09616e",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/victoria/e08-victoria-K4-illustration-v1-20261012-ff12de497f05.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/victoria/e08-victoria-K4-illustration-v1-20261012-ff12de497f05.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/victoria/e08-victoria-K4-illustration-v1-20261012-ff12de497f05.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/victoria/sisalto.json",
+      "sourceContentSHA256": "7140efcb3482e764940ebefe8a49638de8a10fcb9231215c841b33c9e9aee1e0",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "2a2d2d26de5cd732d18181a1f17618e70f1c43e860ba88130a6723ddea36472a",
+        "semanticContextSHA256": "2a2d2d26de5cd732d18181a1f17618e70f1c43e860ba88130a6723ddea36472a",
+        "subjectTitle": "Torin osoite voi vaihtua",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": {
+            "scope": "Common natural material, plant, animal, food or unbranded functional object. No named protected artwork or real architecture/collection reconstruction.",
+            "notLocationProof": true
+          },
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/victoria/assets/e08-victoria-K4-illustration-v1-20261012/image.png",
+            "nativeSha256Verified": "ff12de497f058bbe5371198f16726c84e3024e17af572df3054549b87d74dc72",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "nativeMode": "RGB",
+            "visualInspection": "Tarkistaja katsoi itse natiivin NAS-tiedoston view_image-työkalulla original-tarkkuudessa tässä sessiossa: Puulaatikossa banaaneja, ananas, mangoja, kookoksia, sitruksia, tomaatteja ja vihanneksia. Kuoret, varret ja lehdet vaihtelevat, banaanit kiinni kannassa; ei hintakylttejä.",
+            "captionFi": "Havainnekuva torin kasvis- ja hedelmäaiheesta.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/victoria/sisalto.json",
+            "contentSha256": "f877a315a3aa5f955305cbe9c205b9b1f8a5eb313462bbceb36040a1f289dd60",
+            "targetCurrentlyPresent": true,
+            "targetText": "Sir Selwyn Selwyn-Clarke Market kuuluu Victorian historialliseen keskustaan. Kauppahallin historia ulottuu 1800-luvulle, ja sen perinteisiin kuuluvat kala, hedelmät ja vihannekset. Torin kunnostamista varten suunniteltiin kaupankäynnille väliaikaiset tilat entiseen STC Supermarketiin. Hankkeessa haluttiin parantaa muun muassa ilmanvaihtoa ja vedenpoistoa. Torikierros kannattaa siksi aloittaa tarkistamalla myyjien nykyinen käyntipaikka: tuttu nimi ei välttämättä tarkoita, että kauppa käydään vanhassa hallissa.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/victoria/faktapohja.md",
+            "factSheetSha256": "ef0d4061cc02b40add81339e2a8760770e549bb027b061e2284dc52214bc76d6",
+            "topicEvidence": "Faktapohja §2 Torin osoite voi vaihtua, V1/V2/V6.",
+            "rightsAssessment": "Yleinen luonnon-, materiaali-, ruoka- tai arkiesineaihe; ei nimettyä nykytaideteosta. Aiheen ja paikkarehellisyyden arvio verdictissä ja omassa silmähavainnossa.",
+            "scope": "Vain riippumaton natiivikuvituksen QA; R2-toimitus, integrointi ja julkaisu eivät ole kuitattuja."
+          },
+          "qaReason": "Hedelmät ja vihannekset vastaavat toriperinteen tuoteryhmiä. Ei torin nykyosoitteen tai hallin ulkonäköväite."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva torin kasvis- ja hedelmäaiheesta.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/victoria/illustration-qa-extra.json",
+        "fileSHA256": "72cd430aafc94d772540d5b44b3d78ef32be6db473f6109702bb8fd0c71af5b5",
+        "item": {
+          "slot": "K4",
+          "targetJsonPath": "$.kaupunkilehti[0].nostot[3]",
+          "assetID": "e08-victoria-K4-illustration-v1-20261012",
+          "sha256": "ff12de497f058bbe5371198f16726c84e3024e17af572df3054549b87d74dc72",
+          "verdict": "accepted",
+          "reason": "Hedelmät ja vihannekset vastaavat toriperinteen tuoteryhmiä. Ei torin nykyosoitteen tai hallin ulkonäköväite.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/victoria/assets/e08-victoria-K4-illustration-v1-20261012/image.png",
+            "nativeSha256Verified": "ff12de497f058bbe5371198f16726c84e3024e17af572df3054549b87d74dc72",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "nativeMode": "RGB",
+            "visualInspection": "Tarkistaja katsoi itse natiivin NAS-tiedoston view_image-työkalulla original-tarkkuudessa tässä sessiossa: Puulaatikossa banaaneja, ananas, mangoja, kookoksia, sitruksia, tomaatteja ja vihanneksia. Kuoret, varret ja lehdet vaihtelevat, banaanit kiinni kannassa; ei hintakylttejä.",
+            "captionFi": "Havainnekuva torin kasvis- ja hedelmäaiheesta.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/victoria/sisalto.json",
+            "contentSha256": "f877a315a3aa5f955305cbe9c205b9b1f8a5eb313462bbceb36040a1f289dd60",
+            "targetCurrentlyPresent": true,
+            "targetText": "Sir Selwyn Selwyn-Clarke Market kuuluu Victorian historialliseen keskustaan. Kauppahallin historia ulottuu 1800-luvulle, ja sen perinteisiin kuuluvat kala, hedelmät ja vihannekset. Torin kunnostamista varten suunniteltiin kaupankäynnille väliaikaiset tilat entiseen STC Supermarketiin. Hankkeessa haluttiin parantaa muun muassa ilmanvaihtoa ja vedenpoistoa. Torikierros kannattaa siksi aloittaa tarkistamalla myyjien nykyinen käyntipaikka: tuttu nimi ei välttämättä tarkoita, että kauppa käydään vanhassa hallissa.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/victoria/faktapohja.md",
+            "factSheetSha256": "ef0d4061cc02b40add81339e2a8760770e549bb027b061e2284dc52214bc76d6",
+            "topicEvidence": "Faktapohja §2 Torin osoite voi vaihtua, V1/V2/V6.",
+            "rightsAssessment": "Yleinen luonnon-, materiaali-, ruoka- tai arkiesineaihe; ei nimettyä nykytaideteosta. Aiheen ja paikkarehellisyyden arvio verdictissä ja omassa silmähavainnossa.",
+            "scope": "Vain riippumaton natiivikuvituksen QA; R2-toimitus, integrointi ja julkaisu eivät ole kuitattuja."
+          },
+          "reviewedAt": "2026-10-13T05:57:48.310578+00:00",
+          "reviewerSession": "e08-extra-01a131d7-1d58-7eb0-a959-c0073288e011"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/victoria/qa.json",
+            "sha256": "15a385cbab2ec1e48a92e570bb29a9337a34ca2e670a35c3971881532c1dbb37"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/victoria/illustration-qa-extra.json",
+            "sha256": "72cd430aafc94d772540d5b44b3d78ef32be6db473f6109702bb8fd0c71af5b5"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/victoria/e08-victoria-K4-illustration-v1-20261012-ff12de497f05.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/victoria/e08-victoria-K4-illustration-v1-20261012-ff12de497f05.png?t=e25576e23e236ac4",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/victoria/e08-victoria-K4-illustration-v1-20261012-ff12de497f05.png",
+        "sha256": "e25576e23e236ac402668c9b7fbea6746ba78fb2ea1853b5ce8104393b09616e",
+        "bytes": 2788179,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e08-victoria-K4-illustration-v1-20261012",
+        "nativeSHA256": "ff12de497f058bbe5371198f16726c84e3024e17af572df3054549b87d74dc72",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/victoria/e08-victoria-K4-illustration-v1-20261012-ff12de497f05.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e08",
+        "city": "victoria",
+        "slot": "K4",
+        "targetJsonPath": "$.kaupunkilehti[0].nostot[3]",
+        "verifiedAt": "2026-10-13T05:58:50.028326+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/victoria/e08-victoria-K4-illustration-v1-20261012-ff12de497f05.png",
+        "sha256": "e25576e23e236ac402668c9b7fbea6746ba78fb2ea1853b5ce8104393b09616e",
+        "bytes": 2788179,
+        "SHAReadAt": "2026-10-13T05:58:00.839776+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "ff12de497f058bbe5371198f16726c84e3024e17af572df3054549b87d74dc72",
+        "rgbPixelSHA256": "27de2e475827c04ac672dbbd909a37fd6b10d3c7e7f509f0199927144beaa1f4",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "7140efcb3482e764940ebefe8a49638de8a10fcb9231215c841b33c9e9aee1e0",
+      "targetAfterSHA256": "2a2d2d26de5cd732d18181a1f17618e70f1c43e860ba88130a6723ddea36472a",
+      "contextAfterSHA256": "2a2d2d26de5cd732d18181a1f17618e70f1c43e860ba88130a6723ddea36472a",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e08",
@@ -291,7 +1425,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/victoria/sisalto.json",
-      "sourceContentSHA256": "f877a315a3aa5f955305cbe9c205b9b1f8a5eb313462bbceb36040a1f289dd60",
+      "sourceContentSHA256": "7140efcb3482e764940ebefe8a49638de8a10fcb9231215c841b33c9e9aee1e0",
       "semanticSourceBind": {
         "targetBeforeSHA256": "c3b0b62d6e4e9cc1c16ed55ffb2111c47de4fbeb9d440fdadc14e614cfcfa829",
         "semanticContextSHA256": "c3b0b62d6e4e9cc1c16ed55ffb2111c47de4fbeb9d440fdadc14e614cfcfa829",
@@ -404,7 +1538,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/victoria/qa.json",
-            "sha256": "7498eeee553ffddad2b3e3461ec42ae43179f056ec04ac77bc18d93b0c9b8d41"
+            "sha256": "15a385cbab2ec1e48a92e570bb29a9337a34ca2e670a35c3971881532c1dbb37"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/victoria/illustration-qa-extra.json",
@@ -493,7 +1627,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "7140efcb3482e764940ebefe8a49638de8a10fcb9231215c841b33c9e9aee1e0",
       "targetAfterSHA256": "c3b0b62d6e4e9cc1c16ed55ffb2111c47de4fbeb9d440fdadc14e614cfcfa829",
-      "contextAfterSHA256": "c3b0b62d6e4e9cc1c16ed55ffb2111c47de4fbeb9d440fdadc14e614cfcfa829"
+      "contextAfterSHA256": "c3b0b62d6e4e9cc1c16ed55ffb2111c47de4fbeb9d440fdadc14e614cfcfa829",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e08",
@@ -543,7 +1679,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/victoria/sisalto.json",
-      "sourceContentSHA256": "f877a315a3aa5f955305cbe9c205b9b1f8a5eb313462bbceb36040a1f289dd60",
+      "sourceContentSHA256": "7140efcb3482e764940ebefe8a49638de8a10fcb9231215c841b33c9e9aee1e0",
       "semanticSourceBind": {
         "targetBeforeSHA256": "68b1e36a022117b6a4b95e6881b72c21208a47ce36a51edba1f74ef43403aa85",
         "semanticContextSHA256": "68b1e36a022117b6a4b95e6881b72c21208a47ce36a51edba1f74ef43403aa85",
@@ -656,7 +1792,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/victoria/qa.json",
-            "sha256": "7498eeee553ffddad2b3e3461ec42ae43179f056ec04ac77bc18d93b0c9b8d41"
+            "sha256": "15a385cbab2ec1e48a92e570bb29a9337a34ca2e670a35c3971881532c1dbb37"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/victoria/illustration-qa-extra.json",
@@ -745,7 +1881,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "7140efcb3482e764940ebefe8a49638de8a10fcb9231215c841b33c9e9aee1e0",
       "targetAfterSHA256": "68b1e36a022117b6a4b95e6881b72c21208a47ce36a51edba1f74ef43403aa85",
-      "contextAfterSHA256": "68b1e36a022117b6a4b95e6881b72c21208a47ce36a51edba1f74ef43403aa85"
+      "contextAfterSHA256": "68b1e36a022117b6a4b95e6881b72c21208a47ce36a51edba1f74ef43403aa85",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e08",
@@ -795,7 +1933,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/victoria/sisalto.json",
-      "sourceContentSHA256": "f877a315a3aa5f955305cbe9c205b9b1f8a5eb313462bbceb36040a1f289dd60",
+      "sourceContentSHA256": "7140efcb3482e764940ebefe8a49638de8a10fcb9231215c841b33c9e9aee1e0",
       "semanticSourceBind": {
         "targetBeforeSHA256": "28338576ce94b44e652f5e8a68fecf3166db544f7bf04ce7bd6edd093a872773",
         "semanticContextSHA256": "28338576ce94b44e652f5e8a68fecf3166db544f7bf04ce7bd6edd093a872773",
@@ -908,7 +2046,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/victoria/qa.json",
-            "sha256": "7498eeee553ffddad2b3e3461ec42ae43179f056ec04ac77bc18d93b0c9b8d41"
+            "sha256": "15a385cbab2ec1e48a92e570bb29a9337a34ca2e670a35c3971881532c1dbb37"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/victoria/illustration-qa-extra.json",
@@ -997,7 +2135,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "7140efcb3482e764940ebefe8a49638de8a10fcb9231215c841b33c9e9aee1e0",
       "targetAfterSHA256": "28338576ce94b44e652f5e8a68fecf3166db544f7bf04ce7bd6edd093a872773",
-      "contextAfterSHA256": "28338576ce94b44e652f5e8a68fecf3166db544f7bf04ce7bd6edd093a872773"
+      "contextAfterSHA256": "28338576ce94b44e652f5e8a68fecf3166db544f7bf04ce7bd6edd093a872773",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e08",
@@ -1047,7 +2187,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/victoria/sisalto.json",
-      "sourceContentSHA256": "f877a315a3aa5f955305cbe9c205b9b1f8a5eb313462bbceb36040a1f289dd60",
+      "sourceContentSHA256": "7140efcb3482e764940ebefe8a49638de8a10fcb9231215c841b33c9e9aee1e0",
       "semanticSourceBind": {
         "targetBeforeSHA256": "bdb73a5df7b8612bc97df964b16d57c7ada3d29eb6f30a0881cb5e51626ce205",
         "semanticContextSHA256": "bdb73a5df7b8612bc97df964b16d57c7ada3d29eb6f30a0881cb5e51626ce205",
@@ -1160,7 +2300,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/victoria/qa.json",
-            "sha256": "7498eeee553ffddad2b3e3461ec42ae43179f056ec04ac77bc18d93b0c9b8d41"
+            "sha256": "15a385cbab2ec1e48a92e570bb29a9337a34ca2e670a35c3971881532c1dbb37"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/victoria/illustration-qa-extra.json",
@@ -1249,1129 +2389,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "7140efcb3482e764940ebefe8a49638de8a10fcb9231215c841b33c9e9aee1e0",
       "targetAfterSHA256": "bdb73a5df7b8612bc97df964b16d57c7ada3d29eb6f30a0881cb5e51626ce205",
-      "contextAfterSHA256": "bdb73a5df7b8612bc97df964b16d57c7ada3d29eb6f30a0881cb5e51626ce205"
-    },
-    {
-      "era": "e08",
-      "city": "victoria",
-      "slot": "O3",
-      "type": "illustration",
-      "assetID": "e08-victoria-O3-illustration-v1-20261012",
-      "galleryImageID": "e08-victoria-O3-illustration-v1-20261012",
-      "commonsFile": null,
-      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[2].kuva",
-      "targetTokens": [
-        "kaupunkilehti",
-        0,
-        "matkailijalle",
-        "artikkeli",
-        "jaksot",
-        2,
-        "kuva"
-      ],
-      "operation": "merge-media-fields-preserve-other-content",
-      "CmediaFieldPayload": {
-        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/victoria/e08-victoria-O3-illustration-v1-20261012-7707da227cf1.png",
-        "suora": true,
-        "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva jättiläiskilpikonnan ruokailusta.",
-        "lyhyt": "Havainnekuva jättiläiskilpikonnan ruokailusta."
-      },
-      "removeMediaKeys": [
-        "tiedosto"
-      ],
-      "CvalidatorCompatiblePayload": {},
-      "runtimeMediaFieldPayload": {
-        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/victoria/e08-victoria-O3-illustration-v1-20261012-7707da227cf1.png",
-        "suora": true,
-        "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva jättiläiskilpikonnan ruokailusta.",
-        "lyhyt": "Havainnekuva jättiläiskilpikonnan ruokailusta."
-      },
-      "runtimeRemoveMediaKeys": [
-        "tiedosto"
-      ],
-      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
-      "nativeSHA256": "7707da227cf1a8dcc0ea180ac6b1b9fa25fb93ef4efb113e0f26d9f835a0c1cc",
-      "exportSHA256": "2bbf3bdcce65f793c3ba3b2cea81b4aeddaf95aba4fc6d3e1fc0e12cf75ca162",
-      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/victoria/e08-victoria-O3-illustration-v1-20261012-7707da227cf1.png",
-      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/victoria/e08-victoria-O3-illustration-v1-20261012-7707da227cf1.png",
-      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/victoria/e08-victoria-O3-illustration-v1-20261012-7707da227cf1.png",
-      "dimensions": [
-        1536,
-        1024
-      ],
-      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/victoria/sisalto.json",
-      "sourceContentSHA256": "f877a315a3aa5f955305cbe9c205b9b1f8a5eb313462bbceb36040a1f289dd60",
-      "semanticSourceBind": {
-        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "5a703db9537874543a2c98b7e44e6189a89e0832cfbf7abef507c6176a849be2",
-        "subjectTitle": "Puutarha ja luonnon kokoelmat",
-        "targetState": "existing-target"
-      },
-      "attribution": {
-        "author": null,
-        "license": null,
-        "licenseUrl": null,
-        "sourcePage": null,
-        "originalUrl": null,
-        "rightsEvidence": {
-          "production": {
-            "scope": "Common natural material, plant, animal, food or unbranded functional object. No named protected artwork or real architecture/collection reconstruction.",
-            "notLocationProof": true
-          },
-          "QA": {
-            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/victoria/assets/e08-victoria-O3-illustration-v1-20261012/image.png",
-            "nativeSha256Verified": "7707da227cf1a8dcc0ea180ac6b1b9fa25fb93ef4efb113e0f26d9f835a0c1cc",
-            "nativeWidth": 1536,
-            "nativeHeight": 1024,
-            "format": "PNG",
-            "nativeMode": "RGB",
-            "visualInspection": "Tarkistaja katsoi itse natiivin NAS-tiedoston view_image-työkalulla original-tarkkuudessa tässä sessiossa: Suuri maakilpikonna syö lehtiä, pitkä ryppyinen kaula, kupolimainen kilpi ja kaksi näkyvää etujalkaa. Kilven saumat ja ihon vaihtelu luontevia, anonyymi rantatausta; ei merkintöjä.",
-            "captionFi": "Havainnekuva jättiläiskilpikonnan ruokailusta.",
-            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/victoria/sisalto.json",
-            "contentSha256": "f877a315a3aa5f955305cbe9c205b9b1f8a5eb313462bbceb36040a1f289dd60",
-            "targetCurrentlyPresent": true,
-            "targetText": "Mont Fleurin kasvitieteellisessä puutarhassa on paikallisia ja muualta tuotuja kasveja, coco de mer -palmuja ja jättiläiskilpikonnia. Katso palmun lehtiä ja eri puiden kukkia, sillä hede- ja emikukat ovat eri yksilöissä. Victorian luonnonhistoriallisen museon aiheisiin kuuluvat kasvit, eläimet, geologia ja ihmisen kulttuurit. Tarkista museoiden ajantasainen käyntitilanne erikseen ennen kuin rakennat päivän näyttelyvierailun varaan.",
-            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/victoria/faktapohja.md",
-            "factSheetSha256": "ef0d4061cc02b40add81339e2a8760770e549bb027b061e2284dc52214bc76d6",
-            "topicEvidence": "Faktapohja §3 V11 Aldabra giant tortoise: pitkä kaula ja kasviravinto; §4 Mont Fleuri.",
-            "rightsAssessment": "Yleinen luonnon-, materiaali-, ruoka- tai arkiesineaihe; ei nimettyä nykytaideteosta. Aiheen ja paikkarehellisyyden arvio verdictissä ja omassa silmähavainnossa.",
-            "scope": "Vain riippumaton natiivikuvituksen QA; R2-toimitus, integrointi ja julkaisu eivät ole kuitattuja."
-          },
-          "qaReason": "Jättiläiskilpikonnan kasviravinto vastaa opasaihetta. Ei Mont Fleurin aitauksen tai tietyn yksilön todistusväite."
-        }
-      },
-      "luentaMetadata": {
-        "existingImageLuenta": null,
-        "captionReadingText": "Havainnekuva jättiläiskilpikonnan ruokailusta.",
-        "existingArticleAndSectionLuentaPreserved": true,
-        "audioGenerated": false,
-        "audioURL": null,
-        "imageSpecificAudioProvided": false,
-        "reuseAudioAllowedByThisPacket": false
-      },
-      "qaEvidence": {
-        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/victoria/illustration-qa-extra.json",
-        "fileSHA256": "72cd430aafc94d772540d5b44b3d78ef32be6db473f6109702bb8fd0c71af5b5",
-        "item": {
-          "slot": "O3",
-          "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[2].kuva",
-          "assetID": "e08-victoria-O3-illustration-v1-20261012",
-          "sha256": "7707da227cf1a8dcc0ea180ac6b1b9fa25fb93ef4efb113e0f26d9f835a0c1cc",
-          "verdict": "accepted",
-          "reason": "Jättiläiskilpikonnan kasviravinto vastaa opasaihetta. Ei Mont Fleurin aitauksen tai tietyn yksilön todistusväite.",
-          "evidence": {
-            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/victoria/assets/e08-victoria-O3-illustration-v1-20261012/image.png",
-            "nativeSha256Verified": "7707da227cf1a8dcc0ea180ac6b1b9fa25fb93ef4efb113e0f26d9f835a0c1cc",
-            "nativeWidth": 1536,
-            "nativeHeight": 1024,
-            "format": "PNG",
-            "nativeMode": "RGB",
-            "visualInspection": "Tarkistaja katsoi itse natiivin NAS-tiedoston view_image-työkalulla original-tarkkuudessa tässä sessiossa: Suuri maakilpikonna syö lehtiä, pitkä ryppyinen kaula, kupolimainen kilpi ja kaksi näkyvää etujalkaa. Kilven saumat ja ihon vaihtelu luontevia, anonyymi rantatausta; ei merkintöjä.",
-            "captionFi": "Havainnekuva jättiläiskilpikonnan ruokailusta.",
-            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/victoria/sisalto.json",
-            "contentSha256": "f877a315a3aa5f955305cbe9c205b9b1f8a5eb313462bbceb36040a1f289dd60",
-            "targetCurrentlyPresent": true,
-            "targetText": "Mont Fleurin kasvitieteellisessä puutarhassa on paikallisia ja muualta tuotuja kasveja, coco de mer -palmuja ja jättiläiskilpikonnia. Katso palmun lehtiä ja eri puiden kukkia, sillä hede- ja emikukat ovat eri yksilöissä. Victorian luonnonhistoriallisen museon aiheisiin kuuluvat kasvit, eläimet, geologia ja ihmisen kulttuurit. Tarkista museoiden ajantasainen käyntitilanne erikseen ennen kuin rakennat päivän näyttelyvierailun varaan.",
-            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/victoria/faktapohja.md",
-            "factSheetSha256": "ef0d4061cc02b40add81339e2a8760770e549bb027b061e2284dc52214bc76d6",
-            "topicEvidence": "Faktapohja §3 V11 Aldabra giant tortoise: pitkä kaula ja kasviravinto; §4 Mont Fleuri.",
-            "rightsAssessment": "Yleinen luonnon-, materiaali-, ruoka- tai arkiesineaihe; ei nimettyä nykytaideteosta. Aiheen ja paikkarehellisyyden arvio verdictissä ja omassa silmähavainnossa.",
-            "scope": "Vain riippumaton natiivikuvituksen QA; R2-toimitus, integrointi ja julkaisu eivät ole kuitattuja."
-          },
-          "reviewedAt": "2026-10-13T05:57:48.372998+00:00",
-          "reviewerSession": "e08-extra-01a131d7-1d58-7eb0-a959-c0073288e011"
-        },
-        "allSources": [
-          {
-            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/victoria/qa.json",
-            "sha256": "7498eeee553ffddad2b3e3461ec42ae43179f056ec04ac77bc18d93b0c9b8d41"
-          },
-          {
-            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/victoria/illustration-qa-extra.json",
-            "sha256": "72cd430aafc94d772540d5b44b3d78ef32be6db473f6109702bb8fd0c71af5b5"
-          }
-        ]
-      },
-      "R2ByteVerification": {
-        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/victoria/e08-victoria-O3-illustration-v1-20261012-7707da227cf1.png",
-        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/victoria/e08-victoria-O3-illustration-v1-20261012-7707da227cf1.png?t=2bbf3bdcce65f793",
-        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/victoria/e08-victoria-O3-illustration-v1-20261012-7707da227cf1.png",
-        "sha256": "2bbf3bdcce65f793c3ba3b2cea81b4aeddaf95aba4fc6d3e1fc0e12cf75ca162",
-        "bytes": 2914190,
-        "http": 200,
-        "mime": "image/png",
-        "cors": "https://matkakirja.app",
-        "cacheBustedPreflightHttp": 404,
-        "cacheBustedReadback": true,
-        "byteExactReadback": true,
-        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
-        "conditionalIfNoneMatch": "*",
-        "s3PutHttp": 200,
-        "assetID": "e08-victoria-O3-illustration-v1-20261012",
-        "nativeSHA256": "7707da227cf1a8dcc0ea180ac6b1b9fa25fb93ef4efb113e0f26d9f835a0c1cc",
-        "canonicalReadbackByteExact": true,
-        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/victoria/e08-victoria-O3-illustration-v1-20261012-7707da227cf1.png",
-        "pixelIdenticalToQAAcceptedNative": true,
-        "era": "e08",
-        "city": "victoria",
-        "slot": "O3",
-        "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[2].kuva",
-        "verifiedAt": "2026-10-13T05:58:43.708187+00:00",
-        "ownerAcceptanceVerified": false,
-        "gameIntegrated": false,
-        "galleryVisibleVerified": false
-      },
-      "producerExportProof": null,
-      "technicalExportProof": {
-        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/victoria/e08-victoria-O3-illustration-v1-20261012-7707da227cf1.png",
-        "sha256": "2bbf3bdcce65f793c3ba3b2cea81b4aeddaf95aba4fc6d3e1fc0e12cf75ca162",
-        "bytes": 2914190,
-        "SHAReadAt": "2026-10-13T05:58:01.048945+00:00",
-        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
-        "width": 1536,
-        "height": 1024,
-        "pixelWidth": 1536,
-        "pixelHeight": 1024,
-        "exifOrientation": 1,
-        "dimensionsBasis": "EXIF-oriented-display",
-        "format": "PNG",
-        "largeOriginalHeaderOnlyRead": false,
-        "nativeSHA256": "7707da227cf1a8dcc0ea180ac6b1b9fa25fb93ef4efb113e0f26d9f835a0c1cc",
-        "rgbPixelSHA256": "b16931049bb6a80dd8879217d04a2ced308418e93d4132848eeb1125476f059d",
-        "pixelIdenticalToQAAcceptedNative": true,
-        "sRGBProfileEmbedded": true,
-        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
-      },
-      "priorMediaFields": {
-        "tiedosto": "",
-        "lahde": "",
-        "selite": "",
-        "lyhyt": ""
-      },
-      "preservePreviousMediaObjects": true,
-      "authorization": {
-        "status": "waived-owner-review",
-        "authorizedByOwner": true,
-        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
-        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
-        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
-        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
-        "ownerAcceptanceImplied": false,
-        "QARequired": true,
-        "R2ByteVerificationRequired": true,
-        "galleryBeforeGameRequired": false,
-        "verifiedHumanMessageSource": {
-          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
-          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
-        }
-      },
-      "ownerAcceptanceVerified": false,
-      "gameIntegrated": false,
-      "gamePublicationVerified": false,
-      "inMemoryMergeVerified": true,
-      "CcommonsMetadataBound": false,
-      "roleManifestBound": true,
-      "sourceContentAfterSHA256": "7140efcb3482e764940ebefe8a49638de8a10fcb9231215c841b33c9e9aee1e0",
-      "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "5a703db9537874543a2c98b7e44e6189a89e0832cfbf7abef507c6176a849be2"
-    },
-    {
-      "era": "e08",
-      "city": "victoria",
-      "slot": "O4",
-      "type": "illustration",
-      "assetID": "e08-victoria-O4-illustration-v1-20261012",
-      "galleryImageID": "e08-victoria-O4-illustration-v1-20261012",
-      "commonsFile": null,
-      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
-      "targetTokens": [
-        "kaupunkilehti",
-        0,
-        "matkailijalle",
-        "artikkeli",
-        "jaksot",
-        3,
-        "kuva"
-      ],
-      "operation": "merge-media-fields-preserve-other-content",
-      "CmediaFieldPayload": {
-        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/victoria/e08-victoria-O4-illustration-v1-20261012-b4c6e684e513.png",
-        "suora": true,
-        "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva kala- ja kookosraaka-aineista, ei Victorian torin paikkavalokuva.",
-        "lyhyt": "Havainnekuva kala- ja kookosraaka-aineista, ei Victorian torin paikkavalokuva."
-      },
-      "removeMediaKeys": [
-        "tiedosto"
-      ],
-      "CvalidatorCompatiblePayload": {},
-      "runtimeMediaFieldPayload": {
-        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/victoria/e08-victoria-O4-illustration-v1-20261012-b4c6e684e513.png",
-        "suora": true,
-        "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva kala- ja kookosraaka-aineista, ei Victorian torin paikkavalokuva.",
-        "lyhyt": "Havainnekuva kala- ja kookosraaka-aineista, ei Victorian torin paikkavalokuva."
-      },
-      "runtimeRemoveMediaKeys": [
-        "tiedosto"
-      ],
-      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
-      "nativeSHA256": "b4c6e684e51357d7070a7130286f9d454979c01b9327224a37fa13165745b0b5",
-      "exportSHA256": "d31b839857d359c089e7611c2f2400e7a92f1890511f8eebb09b2d9519e99482",
-      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/victoria/e08-victoria-O4-illustration-v1-20261012-b4c6e684e513.png",
-      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/victoria/e08-victoria-O4-illustration-v1-20261012-b4c6e684e513.png",
-      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/victoria/e08-victoria-O4-illustration-v1-20261012-b4c6e684e513.png",
-      "dimensions": [
-        1536,
-        1024
-      ],
-      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/victoria/sisalto.json",
-      "sourceContentSHA256": "f877a315a3aa5f955305cbe9c205b9b1f8a5eb313462bbceb36040a1f289dd60",
-      "semanticSourceBind": {
-        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "6c804bd58e894e00191ff9bc819127b9389ef9ee180bc2ff7b86e763320811af",
-        "subjectTitle": "Mitä täällä syödään",
-        "targetState": "existing-target"
-      },
-      "attribution": {
-        "author": null,
-        "license": null,
-        "licenseUrl": null,
-        "sourcePage": null,
-        "originalUrl": null,
-        "rightsEvidence": {
-          "production": {
-            "scope": "Common sourced natural/agricultural material or unbranded functional object only; no named protected artwork, city plan, institutional interior or real-site claim.",
-            "notLocationProof": true
-          },
-          "QA": {
-            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/victoria/assets/e08-victoria-O4-illustration-v1-20261012/image.png",
-            "nativeSha256Verified": "b4c6e684e51357d7070a7130286f9d454979c01b9327224a37fa13165745b0b5",
-            "nativeWidth": 1536,
-            "nativeHeight": 1024,
-            "format": "PNG",
-            "visualInspection": "Reviewer personally opened this native NAS PNG with view_image before handoff: kokonainen kala, avattu kookos ja kookoslohkoja. Luontevat suomut, evät, kuorikuidut ja malto; ei henkilöitä tai merkintöjä.",
-            "captionFi": "Havainnekuva kala- ja kookosraaka-aineista, ei Victorian torin paikkavalokuva.",
-            "topicEvidence": "Ajantasainen O4 kertoo kalasta ja kookostuotteista.",
-            "sourceEvidence": {
-              "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/victoria/sisalto.json",
-              "sourceContentSha256": "98b4aa2bc73b65c8c9f7fb3b5cc737cb1420ba7114c5b4762a286d3734f16611",
-              "targetText": "Kaupungin toriperinteeseen kuuluvat kala, hedelmät ja vihannekset. Victoriassa voi tutustua myös kreolikeittiöön, ja kookosta sekä kookostuotteita on tarjolla. Kalastus näkyy sataman teollisuudessa, mutta torikierroksella se muuttuu ostettavaksi ruoaksi. Aloita saatavilla olevista tuotteista ja kysy myyjältä niiden käytöstä. Jos tavoitteena on ateria eikä raaka-aineiden ostaminen, etsi kreoliruokaa tarjoava ravintola.",
-              "sourceFactSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/victoria/faktapohja.md",
-              "factSheetSha256": "ef0d4061cc02b40add81339e2a8760770e549bb027b061e2284dc52214bc76d6",
-              "wiki": null,
-              "subjectBasis": "A generic food-ingredient still life of an ordinary edible coconut Cocos nucifera cut open to show white flesh, beside a fresh fish on plain unlabelled food-preparation surface. This is not a coco de mer seed. No blood, people, brands, labels or actual market identity."
-            },
-            "scope": "Independent native-image QA only; no delivery or publication approval."
-          },
-          "qaReason": "Kala ja kookos sopivat ruokajakson raaka-aineisiin. Selite erottaa havainnollistuksen Victorian torin paikkavalokuvasta."
-        }
-      },
-      "luentaMetadata": {
-        "existingImageLuenta": null,
-        "captionReadingText": "Havainnekuva kala- ja kookosraaka-aineista, ei Victorian torin paikkavalokuva.",
-        "existingArticleAndSectionLuentaPreserved": true,
-        "audioGenerated": false,
-        "audioURL": null,
-        "imageSpecificAudioProvided": false,
-        "reuseAudioAllowedByThisPacket": false
-      },
-      "qaEvidence": {
-        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/victoria/illustration-qa-extra.json",
-        "fileSHA256": "72cd430aafc94d772540d5b44b3d78ef32be6db473f6109702bb8fd0c71af5b5",
-        "item": {
-          "slot": "O4",
-          "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
-          "assetID": "e08-victoria-O4-illustration-v1-20261012",
-          "sha256": "b4c6e684e51357d7070a7130286f9d454979c01b9327224a37fa13165745b0b5",
-          "verdict": "accepted",
-          "reason": "Kala ja kookos sopivat ruokajakson raaka-aineisiin. Selite erottaa havainnollistuksen Victorian torin paikkavalokuvasta.",
-          "evidence": {
-            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/victoria/assets/e08-victoria-O4-illustration-v1-20261012/image.png",
-            "nativeSha256Verified": "b4c6e684e51357d7070a7130286f9d454979c01b9327224a37fa13165745b0b5",
-            "nativeWidth": 1536,
-            "nativeHeight": 1024,
-            "format": "PNG",
-            "visualInspection": "Reviewer personally opened this native NAS PNG with view_image before handoff: kokonainen kala, avattu kookos ja kookoslohkoja. Luontevat suomut, evät, kuorikuidut ja malto; ei henkilöitä tai merkintöjä.",
-            "captionFi": "Havainnekuva kala- ja kookosraaka-aineista, ei Victorian torin paikkavalokuva.",
-            "topicEvidence": "Ajantasainen O4 kertoo kalasta ja kookostuotteista.",
-            "sourceEvidence": {
-              "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/victoria/sisalto.json",
-              "sourceContentSha256": "98b4aa2bc73b65c8c9f7fb3b5cc737cb1420ba7114c5b4762a286d3734f16611",
-              "targetText": "Kaupungin toriperinteeseen kuuluvat kala, hedelmät ja vihannekset. Victoriassa voi tutustua myös kreolikeittiöön, ja kookosta sekä kookostuotteita on tarjolla. Kalastus näkyy sataman teollisuudessa, mutta torikierroksella se muuttuu ostettavaksi ruoaksi. Aloita saatavilla olevista tuotteista ja kysy myyjältä niiden käytöstä. Jos tavoitteena on ateria eikä raaka-aineiden ostaminen, etsi kreoliruokaa tarjoava ravintola.",
-              "sourceFactSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/victoria/faktapohja.md",
-              "factSheetSha256": "ef0d4061cc02b40add81339e2a8760770e549bb027b061e2284dc52214bc76d6",
-              "wiki": null,
-              "subjectBasis": "A generic food-ingredient still life of an ordinary edible coconut Cocos nucifera cut open to show white flesh, beside a fresh fish on plain unlabelled food-preparation surface. This is not a coco de mer seed. No blood, people, brands, labels or actual market identity."
-            },
-            "scope": "Independent native-image QA only; no delivery or publication approval."
-          },
-          "reviewedAt": "2026-10-13T05:56:52.126754+00:00"
-        },
-        "allSources": [
-          {
-            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/victoria/qa.json",
-            "sha256": "7498eeee553ffddad2b3e3461ec42ae43179f056ec04ac77bc18d93b0c9b8d41"
-          },
-          {
-            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/victoria/illustration-qa-extra.json",
-            "sha256": "72cd430aafc94d772540d5b44b3d78ef32be6db473f6109702bb8fd0c71af5b5"
-          }
-        ]
-      },
-      "R2ByteVerification": {
-        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/victoria/e08-victoria-O4-illustration-v1-20261012-b4c6e684e513.png",
-        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/victoria/e08-victoria-O4-illustration-v1-20261012-b4c6e684e513.png?t=d31b839857d359c0",
-        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/victoria/e08-victoria-O4-illustration-v1-20261012-b4c6e684e513.png",
-        "sha256": "d31b839857d359c089e7611c2f2400e7a92f1890511f8eebb09b2d9519e99482",
-        "bytes": 2671657,
-        "http": 200,
-        "mime": "image/png",
-        "cors": "https://matkakirja.app",
-        "cacheBustedPreflightHttp": 404,
-        "cacheBustedReadback": true,
-        "byteExactReadback": true,
-        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
-        "conditionalIfNoneMatch": "*",
-        "s3PutHttp": 200,
-        "assetID": "e08-victoria-O4-illustration-v1-20261012",
-        "nativeSHA256": "b4c6e684e51357d7070a7130286f9d454979c01b9327224a37fa13165745b0b5",
-        "canonicalReadbackByteExact": true,
-        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/victoria/e08-victoria-O4-illustration-v1-20261012-b4c6e684e513.png",
-        "pixelIdenticalToQAAcceptedNative": true,
-        "era": "e08",
-        "city": "victoria",
-        "slot": "O4",
-        "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
-        "verifiedAt": "2026-10-13T05:58:45.652948+00:00",
-        "ownerAcceptanceVerified": false,
-        "gameIntegrated": false,
-        "galleryVisibleVerified": false
-      },
-      "producerExportProof": null,
-      "technicalExportProof": {
-        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/victoria/e08-victoria-O4-illustration-v1-20261012-b4c6e684e513.png",
-        "sha256": "d31b839857d359c089e7611c2f2400e7a92f1890511f8eebb09b2d9519e99482",
-        "bytes": 2671657,
-        "SHAReadAt": "2026-10-13T05:57:05.713419+00:00",
-        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
-        "width": 1536,
-        "height": 1024,
-        "pixelWidth": 1536,
-        "pixelHeight": 1024,
-        "exifOrientation": 1,
-        "dimensionsBasis": "EXIF-oriented-display",
-        "format": "PNG",
-        "largeOriginalHeaderOnlyRead": false,
-        "nativeSHA256": "b4c6e684e51357d7070a7130286f9d454979c01b9327224a37fa13165745b0b5",
-        "rgbPixelSHA256": "8f116f0da5cd149dd9c9c7423a1ee93496962d3d9711fcca732e21a957c7c479",
-        "pixelIdenticalToQAAcceptedNative": true,
-        "sRGBProfileEmbedded": true,
-        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
-      },
-      "priorMediaFields": {
-        "tiedosto": "",
-        "lahde": "",
-        "selite": "",
-        "lyhyt": ""
-      },
-      "preservePreviousMediaObjects": true,
-      "authorization": {
-        "status": "waived-owner-review",
-        "authorizedByOwner": true,
-        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
-        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
-        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
-        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
-        "ownerAcceptanceImplied": false,
-        "QARequired": true,
-        "R2ByteVerificationRequired": true,
-        "galleryBeforeGameRequired": false,
-        "verifiedHumanMessageSource": {
-          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
-          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
-        }
-      },
-      "ownerAcceptanceVerified": false,
-      "gameIntegrated": false,
-      "gamePublicationVerified": false,
-      "inMemoryMergeVerified": true,
-      "CcommonsMetadataBound": false,
-      "roleManifestBound": true,
-      "sourceContentAfterSHA256": "7140efcb3482e764940ebefe8a49638de8a10fcb9231215c841b33c9e9aee1e0",
-      "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "6c804bd58e894e00191ff9bc819127b9389ef9ee180bc2ff7b86e763320811af"
-    },
-    {
-      "era": "e08",
-      "city": "victoria",
-      "slot": "K2",
-      "type": "illustration",
-      "assetID": "e08-victoria-K2-illustration-v1-20261012",
-      "galleryImageID": "e08-victoria-K2-illustration-v1-20261012",
-      "commonsFile": null,
-      "targetJsonPath": "$.kaupunkilehti[0].nostot[1]",
-      "targetTokens": [
-        "kaupunkilehti",
-        0,
-        "nostot",
-        1
-      ],
-      "operation": "merge-media-fields-preserve-other-content",
-      "CmediaFieldPayload": {
-        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/victoria/e08-victoria-K2-illustration-v1-20261012-7318d02b7810.png",
-        "suora": true,
-        "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva hedelmäpuun kasvusta.",
-        "lyhyt": "Havainnekuva hedelmäpuun kasvusta."
-      },
-      "removeMediaKeys": [
-        "tiedosto"
-      ],
-      "CvalidatorCompatiblePayload": {},
-      "runtimeMediaFieldPayload": {
-        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/victoria/e08-victoria-K2-illustration-v1-20261012-7318d02b7810.png",
-        "suora": true,
-        "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva hedelmäpuun kasvusta.",
-        "lyhyt": "Havainnekuva hedelmäpuun kasvusta."
-      },
-      "runtimeRemoveMediaKeys": [
-        "tiedosto"
-      ],
-      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
-      "nativeSHA256": "7318d02b7810ce64b76a802dec9fbd5f64afa3fde35778c99a3dd0d132f9a6e5",
-      "exportSHA256": "f2040fe58299cce0a29c2ce4dc7cfff5a83e6640553d1018cdc2904c9c73336e",
-      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/victoria/e08-victoria-K2-illustration-v1-20261012-7318d02b7810.png",
-      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/victoria/e08-victoria-K2-illustration-v1-20261012-7318d02b7810.png",
-      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/victoria/e08-victoria-K2-illustration-v1-20261012-7318d02b7810.png",
-      "dimensions": [
-        1536,
-        1024
-      ],
-      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/victoria/sisalto.json",
-      "sourceContentSHA256": "f877a315a3aa5f955305cbe9c205b9b1f8a5eb313462bbceb36040a1f289dd60",
-      "semanticSourceBind": {
-        "targetBeforeSHA256": "dcad4076a5efddaffb22fb167844199b993ccc65b64cbcbe17a9e64b295ea4e6",
-        "semanticContextSHA256": "dcad4076a5efddaffb22fb167844199b993ccc65b64cbcbe17a9e64b295ea4e6",
-        "subjectTitle": "Puutarha aloitti työasemana",
-        "targetState": "existing-target"
-      },
-      "attribution": {
-        "author": null,
-        "license": null,
-        "licenseUrl": null,
-        "sourcePage": null,
-        "originalUrl": null,
-        "rightsEvidence": {
-          "production": {
-            "scope": "Common natural material, plant, animal, food or unbranded functional object. No named protected artwork or real architecture/collection reconstruction.",
-            "notLocationProof": true
-          },
-          "QA": {
-            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/victoria/assets/e08-victoria-K2-illustration-v1-20261012/image.png",
-            "nativeSha256Verified": "7318d02b7810ce64b76a802dec9fbd5f64afa3fde35778c99a3dd0d132f9a6e5",
-            "nativeWidth": 1536,
-            "nativeHeight": 1024,
-            "format": "PNG",
-            "nativeMode": "RGB",
-            "visualInspection": "Tarkistaja katsoi itse natiivin NAS-tiedoston view_image-työkalulla original-tarkkuudessa tässä sessiossa: Oksassa oranssi sitrushedelmä ja vihreitä lehtiä, taustalla epäteräviä hedelmiä. Kanta ja lehtisuonet uskottavia; ei kylttejä tai henkilöitä.",
-            "captionFi": "Havainnekuva hedelmäpuun kasvusta.",
-            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/victoria/sisalto.json",
-            "contentSha256": "f877a315a3aa5f955305cbe9c205b9b1f8a5eb313462bbceb36040a1f289dd60",
-            "targetCurrentlyPresent": true,
-            "targetText": "Mont Fleurin kasvitieteellinen puutarha perustettiin 1900-luvun alussa maatalousasemaksi. Mauritiukselta tullut agronomi Dupont keräsi sinne puutavaraa tuottavia puita, palmuja, maustekasveja ja hedelmäpuita. Kokoelman lähtökohtana oli siis myös kasvien käyttö, ei pelkkä puistokävely. Myöhemmin alue kehittyi yleiseksi puistoksi. Nykyään siellä kasvaa sekä Seychellien omia kasveja että muualta tuotuja koristekasveja, joukossa coco de mer -palmuja. Puutarha on samalla paikka säilyttää ja tutkia kasvilajeja.",
-            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/victoria/faktapohja.md",
-            "factSheetSha256": "ef0d4061cc02b40add81339e2a8760770e549bb027b061e2284dc52214bc76d6",
-            "topicEvidence": "Faktapohja §2 Puutarha aloitti työasemana, V3/V4: hedelmäpuut.",
-            "rightsAssessment": "Yleinen luonnon-, materiaali-, ruoka- tai arkiesineaihe; ei nimettyä nykytaideteosta. Aiheen ja paikkarehellisyyden arvio verdictissä ja omassa silmähavainnossa.",
-            "scope": "Vain riippumaton natiivikuvituksen QA; R2-toimitus, integrointi ja julkaisu eivät ole kuitattuja."
-          },
-          "qaReason": "Hedelmäpuun lähikuva vastaa hyötykasvikokoelman aihetta. Ei puutarhan tietyn lajin tai istutuksen todistusväite."
-        }
-      },
-      "luentaMetadata": {
-        "existingImageLuenta": null,
-        "captionReadingText": "Havainnekuva hedelmäpuun kasvusta.",
-        "existingArticleAndSectionLuentaPreserved": true,
-        "audioGenerated": false,
-        "audioURL": null,
-        "imageSpecificAudioProvided": false,
-        "reuseAudioAllowedByThisPacket": false
-      },
-      "qaEvidence": {
-        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/victoria/illustration-qa-extra.json",
-        "fileSHA256": "72cd430aafc94d772540d5b44b3d78ef32be6db473f6109702bb8fd0c71af5b5",
-        "item": {
-          "slot": "K2",
-          "targetJsonPath": "$.kaupunkilehti[0].nostot[1]",
-          "assetID": "e08-victoria-K2-illustration-v1-20261012",
-          "sha256": "7318d02b7810ce64b76a802dec9fbd5f64afa3fde35778c99a3dd0d132f9a6e5",
-          "verdict": "accepted",
-          "reason": "Hedelmäpuun lähikuva vastaa hyötykasvikokoelman aihetta. Ei puutarhan tietyn lajin tai istutuksen todistusväite.",
-          "evidence": {
-            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/victoria/assets/e08-victoria-K2-illustration-v1-20261012/image.png",
-            "nativeSha256Verified": "7318d02b7810ce64b76a802dec9fbd5f64afa3fde35778c99a3dd0d132f9a6e5",
-            "nativeWidth": 1536,
-            "nativeHeight": 1024,
-            "format": "PNG",
-            "nativeMode": "RGB",
-            "visualInspection": "Tarkistaja katsoi itse natiivin NAS-tiedoston view_image-työkalulla original-tarkkuudessa tässä sessiossa: Oksassa oranssi sitrushedelmä ja vihreitä lehtiä, taustalla epäteräviä hedelmiä. Kanta ja lehtisuonet uskottavia; ei kylttejä tai henkilöitä.",
-            "captionFi": "Havainnekuva hedelmäpuun kasvusta.",
-            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/victoria/sisalto.json",
-            "contentSha256": "f877a315a3aa5f955305cbe9c205b9b1f8a5eb313462bbceb36040a1f289dd60",
-            "targetCurrentlyPresent": true,
-            "targetText": "Mont Fleurin kasvitieteellinen puutarha perustettiin 1900-luvun alussa maatalousasemaksi. Mauritiukselta tullut agronomi Dupont keräsi sinne puutavaraa tuottavia puita, palmuja, maustekasveja ja hedelmäpuita. Kokoelman lähtökohtana oli siis myös kasvien käyttö, ei pelkkä puistokävely. Myöhemmin alue kehittyi yleiseksi puistoksi. Nykyään siellä kasvaa sekä Seychellien omia kasveja että muualta tuotuja koristekasveja, joukossa coco de mer -palmuja. Puutarha on samalla paikka säilyttää ja tutkia kasvilajeja.",
-            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/victoria/faktapohja.md",
-            "factSheetSha256": "ef0d4061cc02b40add81339e2a8760770e549bb027b061e2284dc52214bc76d6",
-            "topicEvidence": "Faktapohja §2 Puutarha aloitti työasemana, V3/V4: hedelmäpuut.",
-            "rightsAssessment": "Yleinen luonnon-, materiaali-, ruoka- tai arkiesineaihe; ei nimettyä nykytaideteosta. Aiheen ja paikkarehellisyyden arvio verdictissä ja omassa silmähavainnossa.",
-            "scope": "Vain riippumaton natiivikuvituksen QA; R2-toimitus, integrointi ja julkaisu eivät ole kuitattuja."
-          },
-          "reviewedAt": "2026-10-13T05:57:48.183267+00:00",
-          "reviewerSession": "e08-extra-01a131d7-1d58-7eb0-a959-c0073288e011"
-        },
-        "allSources": [
-          {
-            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/victoria/qa.json",
-            "sha256": "7498eeee553ffddad2b3e3461ec42ae43179f056ec04ac77bc18d93b0c9b8d41"
-          },
-          {
-            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/victoria/illustration-qa-extra.json",
-            "sha256": "72cd430aafc94d772540d5b44b3d78ef32be6db473f6109702bb8fd0c71af5b5"
-          }
-        ]
-      },
-      "R2ByteVerification": {
-        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/victoria/e08-victoria-K2-illustration-v1-20261012-7318d02b7810.png",
-        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/victoria/e08-victoria-K2-illustration-v1-20261012-7318d02b7810.png?t=f2040fe58299cce0",
-        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/victoria/e08-victoria-K2-illustration-v1-20261012-7318d02b7810.png",
-        "sha256": "f2040fe58299cce0a29c2ce4dc7cfff5a83e6640553d1018cdc2904c9c73336e",
-        "bytes": 2105469,
-        "http": 200,
-        "mime": "image/png",
-        "cors": "https://matkakirja.app",
-        "cacheBustedPreflightHttp": 404,
-        "cacheBustedReadback": true,
-        "byteExactReadback": true,
-        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
-        "conditionalIfNoneMatch": "*",
-        "s3PutHttp": 200,
-        "assetID": "e08-victoria-K2-illustration-v1-20261012",
-        "nativeSHA256": "7318d02b7810ce64b76a802dec9fbd5f64afa3fde35778c99a3dd0d132f9a6e5",
-        "canonicalReadbackByteExact": true,
-        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/victoria/e08-victoria-K2-illustration-v1-20261012-7318d02b7810.png",
-        "pixelIdenticalToQAAcceptedNative": true,
-        "era": "e08",
-        "city": "victoria",
-        "slot": "K2",
-        "targetJsonPath": "$.kaupunkilehti[0].nostot[1]",
-        "verifiedAt": "2026-10-13T05:58:47.050503+00:00",
-        "ownerAcceptanceVerified": false,
-        "gameIntegrated": false,
-        "galleryVisibleVerified": false
-      },
-      "producerExportProof": null,
-      "technicalExportProof": {
-        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/victoria/e08-victoria-K2-illustration-v1-20261012-7318d02b7810.png",
-        "sha256": "f2040fe58299cce0a29c2ce4dc7cfff5a83e6640553d1018cdc2904c9c73336e",
-        "bytes": 2105469,
-        "SHAReadAt": "2026-10-13T05:58:00.437569+00:00",
-        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
-        "width": 1536,
-        "height": 1024,
-        "pixelWidth": 1536,
-        "pixelHeight": 1024,
-        "exifOrientation": 1,
-        "dimensionsBasis": "EXIF-oriented-display",
-        "format": "PNG",
-        "largeOriginalHeaderOnlyRead": false,
-        "nativeSHA256": "7318d02b7810ce64b76a802dec9fbd5f64afa3fde35778c99a3dd0d132f9a6e5",
-        "rgbPixelSHA256": "ba5d1ea984396a37359edffe085595fadea075d3e9cf1fc50fafae870a3a4ebf",
-        "pixelIdenticalToQAAcceptedNative": true,
-        "sRGBProfileEmbedded": true,
-        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
-      },
-      "priorMediaFields": {
-        "tiedosto": "",
-        "lahde": "",
-        "selite": "",
-        "lyhyt": ""
-      },
-      "preservePreviousMediaObjects": true,
-      "authorization": {
-        "status": "waived-owner-review",
-        "authorizedByOwner": true,
-        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
-        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
-        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
-        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
-        "ownerAcceptanceImplied": false,
-        "QARequired": true,
-        "R2ByteVerificationRequired": true,
-        "galleryBeforeGameRequired": false,
-        "verifiedHumanMessageSource": {
-          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
-          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
-        }
-      },
-      "ownerAcceptanceVerified": false,
-      "gameIntegrated": false,
-      "gamePublicationVerified": false,
-      "inMemoryMergeVerified": true,
-      "CcommonsMetadataBound": false,
-      "roleManifestBound": true,
-      "sourceContentAfterSHA256": "7140efcb3482e764940ebefe8a49638de8a10fcb9231215c841b33c9e9aee1e0",
-      "targetAfterSHA256": "dcad4076a5efddaffb22fb167844199b993ccc65b64cbcbe17a9e64b295ea4e6",
-      "contextAfterSHA256": "dcad4076a5efddaffb22fb167844199b993ccc65b64cbcbe17a9e64b295ea4e6"
-    },
-    {
-      "era": "e08",
-      "city": "victoria",
-      "slot": "K3",
-      "type": "illustration",
-      "assetID": "e08-victoria-K3-illustration-v1-20261012",
-      "galleryImageID": "e08-victoria-K3-illustration-v1-20261012",
-      "commonsFile": null,
-      "targetJsonPath": "$.kaupunkilehti[0].nostot[2]",
-      "targetTokens": [
-        "kaupunkilehti",
-        0,
-        "nostot",
-        2
-      ],
-      "operation": "merge-media-fields-preserve-other-content",
-      "CmediaFieldPayload": {
-        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/victoria/e08-victoria-K3-illustration-v1-20261012-a24dd12f5010.png",
-        "suora": true,
-        "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva tonnikalasta.",
-        "lyhyt": "Havainnekuva tonnikalasta."
-      },
-      "removeMediaKeys": [
-        "tiedosto"
-      ],
-      "CvalidatorCompatiblePayload": {},
-      "runtimeMediaFieldPayload": {
-        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/victoria/e08-victoria-K3-illustration-v1-20261012-a24dd12f5010.png",
-        "suora": true,
-        "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva tonnikalasta.",
-        "lyhyt": "Havainnekuva tonnikalasta."
-      },
-      "runtimeRemoveMediaKeys": [
-        "tiedosto"
-      ],
-      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
-      "nativeSHA256": "a24dd12f5010267f9c829b6f8f83012865bc30ff5c426cea32ca9db46847ca42",
-      "exportSHA256": "0c9f3f8d8de0a33f492d2c0321ee47459a8032890115577182d45abce7210cac",
-      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/victoria/e08-victoria-K3-illustration-v1-20261012-a24dd12f5010.png",
-      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/victoria/e08-victoria-K3-illustration-v1-20261012-a24dd12f5010.png",
-      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/victoria/e08-victoria-K3-illustration-v1-20261012-a24dd12f5010.png",
-      "dimensions": [
-        1536,
-        1024
-      ],
-      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/victoria/sisalto.json",
-      "sourceContentSHA256": "f877a315a3aa5f955305cbe9c205b9b1f8a5eb313462bbceb36040a1f289dd60",
-      "semanticSourceBind": {
-        "targetBeforeSHA256": "107b76c40703de1d53305c26413db100153d41d25967f010c59ea4083cc31f78",
-        "semanticContextSHA256": "107b76c40703de1d53305c26413db100153d41d25967f010c59ea4083cc31f78",
-        "subjectTitle": "Satama tekee töitä",
-        "targetState": "existing-target"
-      },
-      "attribution": {
-        "author": null,
-        "license": null,
-        "licenseUrl": null,
-        "sourcePage": null,
-        "originalUrl": null,
-        "rightsEvidence": {
-          "production": {
-            "scope": "Common natural material, plant, animal, food or unbranded functional object. No named protected artwork or real architecture/collection reconstruction.",
-            "notLocationProof": true
-          },
-          "QA": {
-            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/victoria/assets/e08-victoria-K3-illustration-v1-20261012/image.png",
-            "nativeSha256Verified": "a24dd12f5010267f9c829b6f8f83012865bc30ff5c426cea32ca9db46847ca42",
-            "nativeWidth": 1536,
-            "nativeHeight": 1024,
-            "format": "PNG",
-            "nativeMode": "RGB",
-            "visualInspection": "Tarkistaja katsoi itse natiivin NAS-tiedoston view_image-työkalulla original-tarkkuudessa tässä sessiossa: Hopeinen tummaselkäinen tonnikala, erilliset selkäevät, kellertävät eväkkeet ja syvästi haarautunut pyrstö. Pintakiilto vaihtelee; ei merkintöjä.",
-            "captionFi": "Havainnekuva tonnikalasta.",
-            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/victoria/sisalto.json",
-            "contentSha256": "f877a315a3aa5f955305cbe9c205b9b1f8a5eb313462bbceb36040a1f289dd60",
-            "targetCurrentlyPresent": true,
-            "targetText": "Port Victoria on Seychellien pääkaupungin satama. Sisäsatama sijaitsee keskustan itäpuolella, ja sen ympärille kuuluu tonnikalan kalastusta ja säilöntäteollisuutta. Rannassa on siten muutakin kuin saaristoloman maisema: kala on myös kaupungin taloudellinen tuote. Victoria sijaitsee Mahén koillispuolella, ja samassa kaupungissa yhdistyvät saarivaltion hallintokeskus ja kalatalouden työpaikat. Seychellien kansainvälinen lentoasema palvelee kaupunkia ilmasta; satama puolestaan kytkee sen merellä tehtävään työhön.",
-            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/victoria/faktapohja.md",
-            "factSheetSha256": "ef0d4061cc02b40add81339e2a8760770e549bb027b061e2284dc52214bc76d6",
-            "topicEvidence": "Faktapohja §1/§2 Satama tekee töitä, V1/V2.",
-            "rightsAssessment": "Yleinen luonnon-, materiaali-, ruoka- tai arkiesineaihe; ei nimettyä nykytaideteosta. Aiheen ja paikkarehellisyyden arvio verdictissä ja omassa silmähavainnossa.",
-            "scope": "Vain riippumaton natiivikuvituksen QA; R2-toimitus, integrointi ja julkaisu eivät ole kuitattuja."
-          },
-          "qaReason": "Tonnikala vastaa sataman kalatalousaihetta, ilman tietyn saaliin alkuperä- tai käsittelypaikkaväitettä."
-        }
-      },
-      "luentaMetadata": {
-        "existingImageLuenta": null,
-        "captionReadingText": "Havainnekuva tonnikalasta.",
-        "existingArticleAndSectionLuentaPreserved": true,
-        "audioGenerated": false,
-        "audioURL": null,
-        "imageSpecificAudioProvided": false,
-        "reuseAudioAllowedByThisPacket": false
-      },
-      "qaEvidence": {
-        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/victoria/illustration-qa-extra.json",
-        "fileSHA256": "72cd430aafc94d772540d5b44b3d78ef32be6db473f6109702bb8fd0c71af5b5",
-        "item": {
-          "slot": "K3",
-          "targetJsonPath": "$.kaupunkilehti[0].nostot[2]",
-          "assetID": "e08-victoria-K3-illustration-v1-20261012",
-          "sha256": "a24dd12f5010267f9c829b6f8f83012865bc30ff5c426cea32ca9db46847ca42",
-          "verdict": "accepted",
-          "reason": "Tonnikala vastaa sataman kalatalousaihetta, ilman tietyn saaliin alkuperä- tai käsittelypaikkaväitettä.",
-          "evidence": {
-            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/victoria/assets/e08-victoria-K3-illustration-v1-20261012/image.png",
-            "nativeSha256Verified": "a24dd12f5010267f9c829b6f8f83012865bc30ff5c426cea32ca9db46847ca42",
-            "nativeWidth": 1536,
-            "nativeHeight": 1024,
-            "format": "PNG",
-            "nativeMode": "RGB",
-            "visualInspection": "Tarkistaja katsoi itse natiivin NAS-tiedoston view_image-työkalulla original-tarkkuudessa tässä sessiossa: Hopeinen tummaselkäinen tonnikala, erilliset selkäevät, kellertävät eväkkeet ja syvästi haarautunut pyrstö. Pintakiilto vaihtelee; ei merkintöjä.",
-            "captionFi": "Havainnekuva tonnikalasta.",
-            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/victoria/sisalto.json",
-            "contentSha256": "f877a315a3aa5f955305cbe9c205b9b1f8a5eb313462bbceb36040a1f289dd60",
-            "targetCurrentlyPresent": true,
-            "targetText": "Port Victoria on Seychellien pääkaupungin satama. Sisäsatama sijaitsee keskustan itäpuolella, ja sen ympärille kuuluu tonnikalan kalastusta ja säilöntäteollisuutta. Rannassa on siten muutakin kuin saaristoloman maisema: kala on myös kaupungin taloudellinen tuote. Victoria sijaitsee Mahén koillispuolella, ja samassa kaupungissa yhdistyvät saarivaltion hallintokeskus ja kalatalouden työpaikat. Seychellien kansainvälinen lentoasema palvelee kaupunkia ilmasta; satama puolestaan kytkee sen merellä tehtävään työhön.",
-            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/victoria/faktapohja.md",
-            "factSheetSha256": "ef0d4061cc02b40add81339e2a8760770e549bb027b061e2284dc52214bc76d6",
-            "topicEvidence": "Faktapohja §1/§2 Satama tekee töitä, V1/V2.",
-            "rightsAssessment": "Yleinen luonnon-, materiaali-, ruoka- tai arkiesineaihe; ei nimettyä nykytaideteosta. Aiheen ja paikkarehellisyyden arvio verdictissä ja omassa silmähavainnossa.",
-            "scope": "Vain riippumaton natiivikuvituksen QA; R2-toimitus, integrointi ja julkaisu eivät ole kuitattuja."
-          },
-          "reviewedAt": "2026-10-13T05:57:48.248736+00:00",
-          "reviewerSession": "e08-extra-01a131d7-1d58-7eb0-a959-c0073288e011"
-        },
-        "allSources": [
-          {
-            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/victoria/qa.json",
-            "sha256": "7498eeee553ffddad2b3e3461ec42ae43179f056ec04ac77bc18d93b0c9b8d41"
-          },
-          {
-            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/victoria/illustration-qa-extra.json",
-            "sha256": "72cd430aafc94d772540d5b44b3d78ef32be6db473f6109702bb8fd0c71af5b5"
-          }
-        ]
-      },
-      "R2ByteVerification": {
-        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/victoria/e08-victoria-K3-illustration-v1-20261012-a24dd12f5010.png",
-        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/victoria/e08-victoria-K3-illustration-v1-20261012-a24dd12f5010.png?t=0c9f3f8d8de0a33f",
-        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/victoria/e08-victoria-K3-illustration-v1-20261012-a24dd12f5010.png",
-        "sha256": "0c9f3f8d8de0a33f492d2c0321ee47459a8032890115577182d45abce7210cac",
-        "bytes": 2723665,
-        "http": 200,
-        "mime": "image/png",
-        "cors": "https://matkakirja.app",
-        "cacheBustedPreflightHttp": 404,
-        "cacheBustedReadback": true,
-        "byteExactReadback": true,
-        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
-        "conditionalIfNoneMatch": "*",
-        "s3PutHttp": 200,
-        "assetID": "e08-victoria-K3-illustration-v1-20261012",
-        "nativeSHA256": "a24dd12f5010267f9c829b6f8f83012865bc30ff5c426cea32ca9db46847ca42",
-        "canonicalReadbackByteExact": true,
-        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/victoria/e08-victoria-K3-illustration-v1-20261012-a24dd12f5010.png",
-        "pixelIdenticalToQAAcceptedNative": true,
-        "era": "e08",
-        "city": "victoria",
-        "slot": "K3",
-        "targetJsonPath": "$.kaupunkilehti[0].nostot[2]",
-        "verifiedAt": "2026-10-13T05:58:48.498658+00:00",
-        "ownerAcceptanceVerified": false,
-        "gameIntegrated": false,
-        "galleryVisibleVerified": false
-      },
-      "producerExportProof": null,
-      "technicalExportProof": {
-        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/victoria/e08-victoria-K3-illustration-v1-20261012-a24dd12f5010.png",
-        "sha256": "0c9f3f8d8de0a33f492d2c0321ee47459a8032890115577182d45abce7210cac",
-        "bytes": 2723665,
-        "SHAReadAt": "2026-10-13T05:58:00.637909+00:00",
-        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
-        "width": 1536,
-        "height": 1024,
-        "pixelWidth": 1536,
-        "pixelHeight": 1024,
-        "exifOrientation": 1,
-        "dimensionsBasis": "EXIF-oriented-display",
-        "format": "PNG",
-        "largeOriginalHeaderOnlyRead": false,
-        "nativeSHA256": "a24dd12f5010267f9c829b6f8f83012865bc30ff5c426cea32ca9db46847ca42",
-        "rgbPixelSHA256": "5a0b14674e67dff6128f8c2ce047c19f53e2a8a69914bc4b12e9e3b5d2e38cbb",
-        "pixelIdenticalToQAAcceptedNative": true,
-        "sRGBProfileEmbedded": true,
-        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
-      },
-      "priorMediaFields": {
-        "tiedosto": "",
-        "lahde": "",
-        "selite": "",
-        "lyhyt": ""
-      },
-      "preservePreviousMediaObjects": true,
-      "authorization": {
-        "status": "waived-owner-review",
-        "authorizedByOwner": true,
-        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
-        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
-        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
-        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
-        "ownerAcceptanceImplied": false,
-        "QARequired": true,
-        "R2ByteVerificationRequired": true,
-        "galleryBeforeGameRequired": false,
-        "verifiedHumanMessageSource": {
-          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
-          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
-        }
-      },
-      "ownerAcceptanceVerified": false,
-      "gameIntegrated": false,
-      "gamePublicationVerified": false,
-      "inMemoryMergeVerified": true,
-      "CcommonsMetadataBound": false,
-      "roleManifestBound": true,
-      "sourceContentAfterSHA256": "7140efcb3482e764940ebefe8a49638de8a10fcb9231215c841b33c9e9aee1e0",
-      "targetAfterSHA256": "107b76c40703de1d53305c26413db100153d41d25967f010c59ea4083cc31f78",
-      "contextAfterSHA256": "107b76c40703de1d53305c26413db100153d41d25967f010c59ea4083cc31f78"
-    },
-    {
-      "era": "e08",
-      "city": "victoria",
-      "slot": "K4",
-      "type": "illustration",
-      "assetID": "e08-victoria-K4-illustration-v1-20261012",
-      "galleryImageID": "e08-victoria-K4-illustration-v1-20261012",
-      "commonsFile": null,
-      "targetJsonPath": "$.kaupunkilehti[0].nostot[3]",
-      "targetTokens": [
-        "kaupunkilehti",
-        0,
-        "nostot",
-        3
-      ],
-      "operation": "merge-media-fields-preserve-other-content",
-      "CmediaFieldPayload": {
-        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/victoria/e08-victoria-K4-illustration-v1-20261012-ff12de497f05.png",
-        "suora": true,
-        "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva torin kasvis- ja hedelmäaiheesta.",
-        "lyhyt": "Havainnekuva torin kasvis- ja hedelmäaiheesta."
-      },
-      "removeMediaKeys": [
-        "tiedosto"
-      ],
-      "CvalidatorCompatiblePayload": {},
-      "runtimeMediaFieldPayload": {
-        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/victoria/e08-victoria-K4-illustration-v1-20261012-ff12de497f05.png",
-        "suora": true,
-        "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva torin kasvis- ja hedelmäaiheesta.",
-        "lyhyt": "Havainnekuva torin kasvis- ja hedelmäaiheesta."
-      },
-      "runtimeRemoveMediaKeys": [
-        "tiedosto"
-      ],
-      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
-      "nativeSHA256": "ff12de497f058bbe5371198f16726c84e3024e17af572df3054549b87d74dc72",
-      "exportSHA256": "e25576e23e236ac402668c9b7fbea6746ba78fb2ea1853b5ce8104393b09616e",
-      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/victoria/e08-victoria-K4-illustration-v1-20261012-ff12de497f05.png",
-      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/victoria/e08-victoria-K4-illustration-v1-20261012-ff12de497f05.png",
-      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/victoria/e08-victoria-K4-illustration-v1-20261012-ff12de497f05.png",
-      "dimensions": [
-        1536,
-        1024
-      ],
-      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/victoria/sisalto.json",
-      "sourceContentSHA256": "f877a315a3aa5f955305cbe9c205b9b1f8a5eb313462bbceb36040a1f289dd60",
-      "semanticSourceBind": {
-        "targetBeforeSHA256": "2a2d2d26de5cd732d18181a1f17618e70f1c43e860ba88130a6723ddea36472a",
-        "semanticContextSHA256": "2a2d2d26de5cd732d18181a1f17618e70f1c43e860ba88130a6723ddea36472a",
-        "subjectTitle": "Torin osoite voi vaihtua",
-        "targetState": "existing-target"
-      },
-      "attribution": {
-        "author": null,
-        "license": null,
-        "licenseUrl": null,
-        "sourcePage": null,
-        "originalUrl": null,
-        "rightsEvidence": {
-          "production": {
-            "scope": "Common natural material, plant, animal, food or unbranded functional object. No named protected artwork or real architecture/collection reconstruction.",
-            "notLocationProof": true
-          },
-          "QA": {
-            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/victoria/assets/e08-victoria-K4-illustration-v1-20261012/image.png",
-            "nativeSha256Verified": "ff12de497f058bbe5371198f16726c84e3024e17af572df3054549b87d74dc72",
-            "nativeWidth": 1536,
-            "nativeHeight": 1024,
-            "format": "PNG",
-            "nativeMode": "RGB",
-            "visualInspection": "Tarkistaja katsoi itse natiivin NAS-tiedoston view_image-työkalulla original-tarkkuudessa tässä sessiossa: Puulaatikossa banaaneja, ananas, mangoja, kookoksia, sitruksia, tomaatteja ja vihanneksia. Kuoret, varret ja lehdet vaihtelevat, banaanit kiinni kannassa; ei hintakylttejä.",
-            "captionFi": "Havainnekuva torin kasvis- ja hedelmäaiheesta.",
-            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/victoria/sisalto.json",
-            "contentSha256": "f877a315a3aa5f955305cbe9c205b9b1f8a5eb313462bbceb36040a1f289dd60",
-            "targetCurrentlyPresent": true,
-            "targetText": "Sir Selwyn Selwyn-Clarke Market kuuluu Victorian historialliseen keskustaan. Kauppahallin historia ulottuu 1800-luvulle, ja sen perinteisiin kuuluvat kala, hedelmät ja vihannekset. Torin kunnostamista varten suunniteltiin kaupankäynnille väliaikaiset tilat entiseen STC Supermarketiin. Hankkeessa haluttiin parantaa muun muassa ilmanvaihtoa ja vedenpoistoa. Torikierros kannattaa siksi aloittaa tarkistamalla myyjien nykyinen käyntipaikka: tuttu nimi ei välttämättä tarkoita, että kauppa käydään vanhassa hallissa.",
-            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/victoria/faktapohja.md",
-            "factSheetSha256": "ef0d4061cc02b40add81339e2a8760770e549bb027b061e2284dc52214bc76d6",
-            "topicEvidence": "Faktapohja §2 Torin osoite voi vaihtua, V1/V2/V6.",
-            "rightsAssessment": "Yleinen luonnon-, materiaali-, ruoka- tai arkiesineaihe; ei nimettyä nykytaideteosta. Aiheen ja paikkarehellisyyden arvio verdictissä ja omassa silmähavainnossa.",
-            "scope": "Vain riippumaton natiivikuvituksen QA; R2-toimitus, integrointi ja julkaisu eivät ole kuitattuja."
-          },
-          "qaReason": "Hedelmät ja vihannekset vastaavat toriperinteen tuoteryhmiä. Ei torin nykyosoitteen tai hallin ulkonäköväite."
-        }
-      },
-      "luentaMetadata": {
-        "existingImageLuenta": null,
-        "captionReadingText": "Havainnekuva torin kasvis- ja hedelmäaiheesta.",
-        "existingArticleAndSectionLuentaPreserved": true,
-        "audioGenerated": false,
-        "audioURL": null,
-        "imageSpecificAudioProvided": false,
-        "reuseAudioAllowedByThisPacket": false
-      },
-      "qaEvidence": {
-        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/victoria/illustration-qa-extra.json",
-        "fileSHA256": "72cd430aafc94d772540d5b44b3d78ef32be6db473f6109702bb8fd0c71af5b5",
-        "item": {
-          "slot": "K4",
-          "targetJsonPath": "$.kaupunkilehti[0].nostot[3]",
-          "assetID": "e08-victoria-K4-illustration-v1-20261012",
-          "sha256": "ff12de497f058bbe5371198f16726c84e3024e17af572df3054549b87d74dc72",
-          "verdict": "accepted",
-          "reason": "Hedelmät ja vihannekset vastaavat toriperinteen tuoteryhmiä. Ei torin nykyosoitteen tai hallin ulkonäköväite.",
-          "evidence": {
-            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/victoria/assets/e08-victoria-K4-illustration-v1-20261012/image.png",
-            "nativeSha256Verified": "ff12de497f058bbe5371198f16726c84e3024e17af572df3054549b87d74dc72",
-            "nativeWidth": 1536,
-            "nativeHeight": 1024,
-            "format": "PNG",
-            "nativeMode": "RGB",
-            "visualInspection": "Tarkistaja katsoi itse natiivin NAS-tiedoston view_image-työkalulla original-tarkkuudessa tässä sessiossa: Puulaatikossa banaaneja, ananas, mangoja, kookoksia, sitruksia, tomaatteja ja vihanneksia. Kuoret, varret ja lehdet vaihtelevat, banaanit kiinni kannassa; ei hintakylttejä.",
-            "captionFi": "Havainnekuva torin kasvis- ja hedelmäaiheesta.",
-            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/victoria/sisalto.json",
-            "contentSha256": "f877a315a3aa5f955305cbe9c205b9b1f8a5eb313462bbceb36040a1f289dd60",
-            "targetCurrentlyPresent": true,
-            "targetText": "Sir Selwyn Selwyn-Clarke Market kuuluu Victorian historialliseen keskustaan. Kauppahallin historia ulottuu 1800-luvulle, ja sen perinteisiin kuuluvat kala, hedelmät ja vihannekset. Torin kunnostamista varten suunniteltiin kaupankäynnille väliaikaiset tilat entiseen STC Supermarketiin. Hankkeessa haluttiin parantaa muun muassa ilmanvaihtoa ja vedenpoistoa. Torikierros kannattaa siksi aloittaa tarkistamalla myyjien nykyinen käyntipaikka: tuttu nimi ei välttämättä tarkoita, että kauppa käydään vanhassa hallissa.",
-            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/victoria/faktapohja.md",
-            "factSheetSha256": "ef0d4061cc02b40add81339e2a8760770e549bb027b061e2284dc52214bc76d6",
-            "topicEvidence": "Faktapohja §2 Torin osoite voi vaihtua, V1/V2/V6.",
-            "rightsAssessment": "Yleinen luonnon-, materiaali-, ruoka- tai arkiesineaihe; ei nimettyä nykytaideteosta. Aiheen ja paikkarehellisyyden arvio verdictissä ja omassa silmähavainnossa.",
-            "scope": "Vain riippumaton natiivikuvituksen QA; R2-toimitus, integrointi ja julkaisu eivät ole kuitattuja."
-          },
-          "reviewedAt": "2026-10-13T05:57:48.310578+00:00",
-          "reviewerSession": "e08-extra-01a131d7-1d58-7eb0-a959-c0073288e011"
-        },
-        "allSources": [
-          {
-            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/victoria/qa.json",
-            "sha256": "7498eeee553ffddad2b3e3461ec42ae43179f056ec04ac77bc18d93b0c9b8d41"
-          },
-          {
-            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/victoria/illustration-qa-extra.json",
-            "sha256": "72cd430aafc94d772540d5b44b3d78ef32be6db473f6109702bb8fd0c71af5b5"
-          }
-        ]
-      },
-      "R2ByteVerification": {
-        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/victoria/e08-victoria-K4-illustration-v1-20261012-ff12de497f05.png",
-        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/victoria/e08-victoria-K4-illustration-v1-20261012-ff12de497f05.png?t=e25576e23e236ac4",
-        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/victoria/e08-victoria-K4-illustration-v1-20261012-ff12de497f05.png",
-        "sha256": "e25576e23e236ac402668c9b7fbea6746ba78fb2ea1853b5ce8104393b09616e",
-        "bytes": 2788179,
-        "http": 200,
-        "mime": "image/png",
-        "cors": "https://matkakirja.app",
-        "cacheBustedPreflightHttp": 404,
-        "cacheBustedReadback": true,
-        "byteExactReadback": true,
-        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
-        "conditionalIfNoneMatch": "*",
-        "s3PutHttp": 200,
-        "assetID": "e08-victoria-K4-illustration-v1-20261012",
-        "nativeSHA256": "ff12de497f058bbe5371198f16726c84e3024e17af572df3054549b87d74dc72",
-        "canonicalReadbackByteExact": true,
-        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/victoria/e08-victoria-K4-illustration-v1-20261012-ff12de497f05.png",
-        "pixelIdenticalToQAAcceptedNative": true,
-        "era": "e08",
-        "city": "victoria",
-        "slot": "K4",
-        "targetJsonPath": "$.kaupunkilehti[0].nostot[3]",
-        "verifiedAt": "2026-10-13T05:58:50.028326+00:00",
-        "ownerAcceptanceVerified": false,
-        "gameIntegrated": false,
-        "galleryVisibleVerified": false
-      },
-      "producerExportProof": null,
-      "technicalExportProof": {
-        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/victoria/e08-victoria-K4-illustration-v1-20261012-ff12de497f05.png",
-        "sha256": "e25576e23e236ac402668c9b7fbea6746ba78fb2ea1853b5ce8104393b09616e",
-        "bytes": 2788179,
-        "SHAReadAt": "2026-10-13T05:58:00.839776+00:00",
-        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
-        "width": 1536,
-        "height": 1024,
-        "pixelWidth": 1536,
-        "pixelHeight": 1024,
-        "exifOrientation": 1,
-        "dimensionsBasis": "EXIF-oriented-display",
-        "format": "PNG",
-        "largeOriginalHeaderOnlyRead": false,
-        "nativeSHA256": "ff12de497f058bbe5371198f16726c84e3024e17af572df3054549b87d74dc72",
-        "rgbPixelSHA256": "27de2e475827c04ac672dbbd909a37fd6b10d3c7e7f509f0199927144beaa1f4",
-        "pixelIdenticalToQAAcceptedNative": true,
-        "sRGBProfileEmbedded": true,
-        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
-      },
-      "priorMediaFields": {
-        "tiedosto": "",
-        "lahde": "",
-        "selite": "",
-        "lyhyt": ""
-      },
-      "preservePreviousMediaObjects": true,
-      "authorization": {
-        "status": "waived-owner-review",
-        "authorizedByOwner": true,
-        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
-        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
-        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
-        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
-        "ownerAcceptanceImplied": false,
-        "QARequired": true,
-        "R2ByteVerificationRequired": true,
-        "galleryBeforeGameRequired": false,
-        "verifiedHumanMessageSource": {
-          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
-          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
-        }
-      },
-      "ownerAcceptanceVerified": false,
-      "gameIntegrated": false,
-      "gamePublicationVerified": false,
-      "inMemoryMergeVerified": true,
-      "CcommonsMetadataBound": false,
-      "roleManifestBound": true,
-      "sourceContentAfterSHA256": "7140efcb3482e764940ebefe8a49638de8a10fcb9231215c841b33c9e9aee1e0",
-      "targetAfterSHA256": "2a2d2d26de5cd732d18181a1f17618e70f1c43e860ba88130a6723ddea36472a",
-      "contextAfterSHA256": "2a2d2d26de5cd732d18181a1f17618e70f1c43e860ba88130a6723ddea36472a"
+      "contextAfterSHA256": "bdb73a5df7b8612bc97df964b16d57c7ada3d29eb6f30a0881cb5e51626ce205",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e08",
@@ -2424,7 +2444,7 @@
         4000
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/victoria/sisalto.json",
-      "sourceContentSHA256": "f877a315a3aa5f955305cbe9c205b9b1f8a5eb313462bbceb36040a1f289dd60",
+      "sourceContentSHA256": "7140efcb3482e764940ebefe8a49638de8a10fcb9231215c841b33c9e9aee1e0",
       "semanticSourceBind": {
         "targetBeforeSHA256": "012a89f340b4979f8f5c01be25ed2bfd5ea0611228bab6d4d6125c88dab7d0e1",
         "semanticContextSHA256": "012a89f340b4979f8f5c01be25ed2bfd5ea0611228bab6d4d6125c88dab7d0e1",
@@ -2538,8 +2558,8 @@
             "photoNotTraveler": true,
             "currentContentVersionCheck": {
               "reviewedContentSHA256": "98b4aa2bc73b65c8c9f7fb3b5cc737cb1420ba7114c5b4762a286d3734f16611",
-              "currentContentSHA256": "f877a315a3aa5f955305cbe9c205b9b1f8a5eb313462bbceb36040a1f289dd60",
-              "checkedAt": "2026-10-13T05:58:38.200424+00:00",
+              "currentContentSHA256": "7140efcb3482e764940ebefe8a49638de8a10fcb9231215c841b33c9e9aee1e0",
+              "checkedAt": "2026-10-13T14:14:46.267605+00:00",
               "personallyViewedAgain": false,
               "reviewedSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/c-integration/history/e08/victoria/98b4aa2bc73b65c8c9f7fb3b5cc737cb1420ba7114c5b4762a286d3734f16611-sisalto.json",
               "reviewedSnapshotSHA256": "98b4aa2bc73b65c8c9f7fb3b5cc737cb1420ba7114c5b4762a286d3734f16611",
@@ -2550,8 +2570,8 @@
               "imageFieldsExcludedOnlyAtInventoriedSlots": true
             },
             "currentBindingMetadataCheck": {
-              "checkedAt": "2026-10-13T05:58:38.206089+00:00",
-              "contentSHA256": "f877a315a3aa5f955305cbe9c205b9b1f8a5eb313462bbceb36040a1f289dd60",
+              "checkedAt": "2026-10-13T14:14:46.274147+00:00",
+              "contentSHA256": "7140efcb3482e764940ebefe8a49638de8a10fcb9231215c841b33c9e9aee1e0",
               "commonsFile": "Sey Botanical Garden Entrance.JPG",
               "captionFi": "Mont Fleurin kasvitieteellinen puutarha sijaitsee Victorian kaupungissa Mahélla.",
               "credit": "Marek Gehrmann, Commons (CC BY-SA 3.0)",
@@ -2573,7 +2593,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/victoria/qa.json",
-        "fileSHA256": "7498eeee553ffddad2b3e3461ec42ae43179f056ec04ac77bc18d93b0c9b8d41",
+        "fileSHA256": "15a385cbab2ec1e48a92e570bb29a9337a34ca2e670a35c3971881532c1dbb37",
         "item": {
           "slot": "PHOTO",
           "targetJsonPath": "$.valokuva",
@@ -2669,8 +2689,8 @@
             "photoNotTraveler": true,
             "currentContentVersionCheck": {
               "reviewedContentSHA256": "98b4aa2bc73b65c8c9f7fb3b5cc737cb1420ba7114c5b4762a286d3734f16611",
-              "currentContentSHA256": "f877a315a3aa5f955305cbe9c205b9b1f8a5eb313462bbceb36040a1f289dd60",
-              "checkedAt": "2026-10-13T05:58:38.200424+00:00",
+              "currentContentSHA256": "7140efcb3482e764940ebefe8a49638de8a10fcb9231215c841b33c9e9aee1e0",
+              "checkedAt": "2026-10-13T14:14:46.267605+00:00",
               "personallyViewedAgain": false,
               "reviewedSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/c-integration/history/e08/victoria/98b4aa2bc73b65c8c9f7fb3b5cc737cb1420ba7114c5b4762a286d3734f16611-sisalto.json",
               "reviewedSnapshotSHA256": "98b4aa2bc73b65c8c9f7fb3b5cc737cb1420ba7114c5b4762a286d3734f16611",
@@ -2681,8 +2701,8 @@
               "imageFieldsExcludedOnlyAtInventoriedSlots": true
             },
             "currentBindingMetadataCheck": {
-              "checkedAt": "2026-10-13T05:58:38.206089+00:00",
-              "contentSHA256": "f877a315a3aa5f955305cbe9c205b9b1f8a5eb313462bbceb36040a1f289dd60",
+              "checkedAt": "2026-10-13T14:14:46.274147+00:00",
+              "contentSHA256": "7140efcb3482e764940ebefe8a49638de8a10fcb9231215c841b33c9e9aee1e0",
               "commonsFile": "Sey Botanical Garden Entrance.JPG",
               "captionFi": "Mont Fleurin kasvitieteellinen puutarha sijaitsee Victorian kaupungissa Mahélla.",
               "credit": "Marek Gehrmann, Commons (CC BY-SA 3.0)",
@@ -2696,7 +2716,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/victoria/qa.json",
-            "sha256": "7498eeee553ffddad2b3e3461ec42ae43179f056ec04ac77bc18d93b0c9b8d41"
+            "sha256": "15a385cbab2ec1e48a92e570bb29a9337a34ca2e670a35c3971881532c1dbb37"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/victoria/illustration-qa-extra.json",
@@ -2775,7 +2795,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "7140efcb3482e764940ebefe8a49638de8a10fcb9231215c841b33c9e9aee1e0",
       "targetAfterSHA256": "012a89f340b4979f8f5c01be25ed2bfd5ea0611228bab6d4d6125c88dab7d0e1",
-      "contextAfterSHA256": "012a89f340b4979f8f5c01be25ed2bfd5ea0611228bab6d4d6125c88dab7d0e1"
+      "contextAfterSHA256": "012a89f340b4979f8f5c01be25ed2bfd5ea0611228bab6d4d6125c88dab7d0e1",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e08",
@@ -2828,7 +2850,7 @@
         1201
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/victoria/sisalto.json",
-      "sourceContentSHA256": "f877a315a3aa5f955305cbe9c205b9b1f8a5eb313462bbceb36040a1f289dd60",
+      "sourceContentSHA256": "7140efcb3482e764940ebefe8a49638de8a10fcb9231215c841b33c9e9aee1e0",
       "semanticSourceBind": {
         "targetBeforeSHA256": "6e43f16cdc76d86c6510b98d6954d19750179c1cf32824110d06715657fe1898",
         "semanticContextSHA256": "6e43f16cdc76d86c6510b98d6954d19750179c1cf32824110d06715657fe1898",
@@ -2941,8 +2963,8 @@
             "coverScope": "Coastal residential and marina layout viewed from a plane in 2015; no claim of present conditions or a particular city-centre landmark.",
             "currentContentVersionCheck": {
               "reviewedContentSHA256": "98b4aa2bc73b65c8c9f7fb3b5cc737cb1420ba7114c5b4762a286d3734f16611",
-              "currentContentSHA256": "f877a315a3aa5f955305cbe9c205b9b1f8a5eb313462bbceb36040a1f289dd60",
-              "checkedAt": "2026-10-13T05:58:38.200424+00:00",
+              "currentContentSHA256": "7140efcb3482e764940ebefe8a49638de8a10fcb9231215c841b33c9e9aee1e0",
+              "checkedAt": "2026-10-13T14:14:46.267605+00:00",
               "personallyViewedAgain": false,
               "reviewedSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/c-integration/history/e08/victoria/98b4aa2bc73b65c8c9f7fb3b5cc737cb1420ba7114c5b4762a286d3734f16611-sisalto.json",
               "reviewedSnapshotSHA256": "98b4aa2bc73b65c8c9f7fb3b5cc737cb1420ba7114c5b4762a286d3734f16611",
@@ -2953,8 +2975,8 @@
               "imageFieldsExcludedOnlyAtInventoriedSlots": true
             },
             "currentBindingMetadataCheck": {
-              "checkedAt": "2026-10-13T05:58:38.212974+00:00",
-              "contentSHA256": "f877a315a3aa5f955305cbe9c205b9b1f8a5eb313462bbceb36040a1f289dd60",
+              "checkedAt": "2026-10-13T14:14:46.283248+00:00",
+              "contentSHA256": "7140efcb3482e764940ebefe8a49638de8a10fcb9231215c841b33c9e9aee1e0",
               "commonsFile": "Ile de Mahe - Victoria (1).JPG",
               "captionFi": "Victorian rannikon asutusta ja venesatamaa lentokoneesta nähtynä, 2015.",
               "credit": "Remi Jouan, Wikimedia Commons (CC BY-SA 3.0)",
@@ -2976,7 +2998,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/victoria/qa.json",
-        "fileSHA256": "7498eeee553ffddad2b3e3461ec42ae43179f056ec04ac77bc18d93b0c9b8d41",
+        "fileSHA256": "15a385cbab2ec1e48a92e570bb29a9337a34ca2e670a35c3971881532c1dbb37",
         "item": {
           "slot": "C1",
           "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
@@ -3069,8 +3091,8 @@
             "coverScope": "Coastal residential and marina layout viewed from a plane in 2015; no claim of present conditions or a particular city-centre landmark.",
             "currentContentVersionCheck": {
               "reviewedContentSHA256": "98b4aa2bc73b65c8c9f7fb3b5cc737cb1420ba7114c5b4762a286d3734f16611",
-              "currentContentSHA256": "f877a315a3aa5f955305cbe9c205b9b1f8a5eb313462bbceb36040a1f289dd60",
-              "checkedAt": "2026-10-13T05:58:38.200424+00:00",
+              "currentContentSHA256": "7140efcb3482e764940ebefe8a49638de8a10fcb9231215c841b33c9e9aee1e0",
+              "checkedAt": "2026-10-13T14:14:46.267605+00:00",
               "personallyViewedAgain": false,
               "reviewedSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/c-integration/history/e08/victoria/98b4aa2bc73b65c8c9f7fb3b5cc737cb1420ba7114c5b4762a286d3734f16611-sisalto.json",
               "reviewedSnapshotSHA256": "98b4aa2bc73b65c8c9f7fb3b5cc737cb1420ba7114c5b4762a286d3734f16611",
@@ -3081,8 +3103,8 @@
               "imageFieldsExcludedOnlyAtInventoriedSlots": true
             },
             "currentBindingMetadataCheck": {
-              "checkedAt": "2026-10-13T05:58:38.212974+00:00",
-              "contentSHA256": "f877a315a3aa5f955305cbe9c205b9b1f8a5eb313462bbceb36040a1f289dd60",
+              "checkedAt": "2026-10-13T14:14:46.283248+00:00",
+              "contentSHA256": "7140efcb3482e764940ebefe8a49638de8a10fcb9231215c841b33c9e9aee1e0",
               "commonsFile": "Ile de Mahe - Victoria (1).JPG",
               "captionFi": "Victorian rannikon asutusta ja venesatamaa lentokoneesta nähtynä, 2015.",
               "credit": "Remi Jouan, Wikimedia Commons (CC BY-SA 3.0)",
@@ -3096,7 +3118,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/victoria/qa.json",
-            "sha256": "7498eeee553ffddad2b3e3461ec42ae43179f056ec04ac77bc18d93b0c9b8d41"
+            "sha256": "15a385cbab2ec1e48a92e570bb29a9337a34ca2e670a35c3971881532c1dbb37"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/victoria/illustration-qa-extra.json",
@@ -3173,7 +3195,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "7140efcb3482e764940ebefe8a49638de8a10fcb9231215c841b33c9e9aee1e0",
       "targetAfterSHA256": "6e43f16cdc76d86c6510b98d6954d19750179c1cf32824110d06715657fe1898",
-      "contextAfterSHA256": "6e43f16cdc76d86c6510b98d6954d19750179c1cf32824110d06715657fe1898"
+      "contextAfterSHA256": "6e43f16cdc76d86c6510b98d6954d19750179c1cf32824110d06715657fe1898",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e08",
@@ -3226,10 +3250,10 @@
         1068
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/victoria/sisalto.json",
-      "sourceContentSHA256": "f877a315a3aa5f955305cbe9c205b9b1f8a5eb313462bbceb36040a1f289dd60",
+      "sourceContentSHA256": "7140efcb3482e764940ebefe8a49638de8a10fcb9231215c841b33c9e9aee1e0",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "targetBeforeSHA256": "887a1cfc622138edaf0df29ed193e502644772649af2efceb8718f0a6d3769c8",
+        "semanticContextSHA256": "887a1cfc622138edaf0df29ed193e502644772649af2efceb8718f0a6d3769c8",
         "subjectTitle": "Victoria",
         "targetState": "existing-target"
       },
@@ -3336,7 +3360,29 @@
             "photographedAt": "2015-02-13",
             "sourceDescriptionExact": "Victoria, Ile de Mahe",
             "depictedWorkAssessment": "Tavallinen rannikon asutus-/käyttöympäristö sekä luonto laajana kokonaisuutena. Ei yksittäisen luovan rakennusjulkisivun, patsaan tai muraalin pääaiheista jäljennöstä.",
-            "coverScope": "Actual wide coastal urban area in 2015; distinct native image from C1."
+            "coverScope": "Actual wide coastal urban area in 2015; distinct native image from C1.",
+            "currentContentVersionCheck": {
+              "reviewedContentSHA256": "f877a315a3aa5f955305cbe9c205b9b1f8a5eb313462bbceb36040a1f289dd60",
+              "currentContentSHA256": "7140efcb3482e764940ebefe8a49638de8a10fcb9231215c841b33c9e9aee1e0",
+              "checkedAt": "2026-10-13T14:14:46.283264+00:00",
+              "personallyViewedAgain": false,
+              "reviewedSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/c-integration/history/e08/victoria/f877a315a3aa5f955305cbe9c205b9b1f8a5eb313462bbceb36040a1f289dd60-sisalto.json",
+              "reviewedSnapshotSHA256": "f877a315a3aa5f955305cbe9c205b9b1f8a5eb313462bbceb36040a1f289dd60",
+              "matches": true,
+              "method": "exact archived content SHA and full nonmedia comparison",
+              "reviewedNonmediaSHA256": "c7e5023487a4070d32d8a8170f4c521a2deec566ef9db33414bc8230575f02e6",
+              "currentNonmediaSHA256": "c7e5023487a4070d32d8a8170f4c521a2deec566ef9db33414bc8230575f02e6",
+              "imageFieldsExcludedOnlyAtInventoriedSlots": true
+            },
+            "currentBindingMetadataCheck": {
+              "checkedAt": "2026-10-13T14:14:46.286457+00:00",
+              "contentSHA256": "7140efcb3482e764940ebefe8a49638de8a10fcb9231215c841b33c9e9aee1e0",
+              "commonsFile": "Ile de Mahe - Victoria (7).JPG",
+              "captionFi": "Victorian rannikkoaluetta ja asutusta Mahélla, 2015.",
+              "credit": "Remi Jouan, Wikimedia Commons (CC BY-SA 3.0)",
+              "captionMatchesReviewed": true,
+              "personallyViewedAgain": false
+            }
           },
           "qaReason": "Aito laaja Victorian rannikkoalueen, asutuksen, vesiväylien ja tiestön näkymä sopii C2-kanteen. Remi Jouan, CC BY-SA 3.0 ja kuvauspäivä 13.2.2015 varmennettu alkuperäissivulta. Natiivit 1600×1068 ja SHA täsmäävät. Selite kuvaa rannikon aluetta eikä väitä ydinkeskustaa, nykytilaa tai nimetyn maamerkin lähikuvaa."
         }
@@ -3352,7 +3398,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/victoria/qa.json",
-        "fileSHA256": "7498eeee553ffddad2b3e3461ec42ae43179f056ec04ac77bc18d93b0c9b8d41",
+        "fileSHA256": "15a385cbab2ec1e48a92e570bb29a9337a34ca2e670a35c3971881532c1dbb37",
         "item": {
           "slot": "C2",
           "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[1]",
@@ -3442,7 +3488,29 @@
             "photographedAt": "2015-02-13",
             "sourceDescriptionExact": "Victoria, Ile de Mahe",
             "depictedWorkAssessment": "Tavallinen rannikon asutus-/käyttöympäristö sekä luonto laajana kokonaisuutena. Ei yksittäisen luovan rakennusjulkisivun, patsaan tai muraalin pääaiheista jäljennöstä.",
-            "coverScope": "Actual wide coastal urban area in 2015; distinct native image from C1."
+            "coverScope": "Actual wide coastal urban area in 2015; distinct native image from C1.",
+            "currentContentVersionCheck": {
+              "reviewedContentSHA256": "f877a315a3aa5f955305cbe9c205b9b1f8a5eb313462bbceb36040a1f289dd60",
+              "currentContentSHA256": "7140efcb3482e764940ebefe8a49638de8a10fcb9231215c841b33c9e9aee1e0",
+              "checkedAt": "2026-10-13T14:14:46.283264+00:00",
+              "personallyViewedAgain": false,
+              "reviewedSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/c-integration/history/e08/victoria/f877a315a3aa5f955305cbe9c205b9b1f8a5eb313462bbceb36040a1f289dd60-sisalto.json",
+              "reviewedSnapshotSHA256": "f877a315a3aa5f955305cbe9c205b9b1f8a5eb313462bbceb36040a1f289dd60",
+              "matches": true,
+              "method": "exact archived content SHA and full nonmedia comparison",
+              "reviewedNonmediaSHA256": "c7e5023487a4070d32d8a8170f4c521a2deec566ef9db33414bc8230575f02e6",
+              "currentNonmediaSHA256": "c7e5023487a4070d32d8a8170f4c521a2deec566ef9db33414bc8230575f02e6",
+              "imageFieldsExcludedOnlyAtInventoriedSlots": true
+            },
+            "currentBindingMetadataCheck": {
+              "checkedAt": "2026-10-13T14:14:46.286457+00:00",
+              "contentSHA256": "7140efcb3482e764940ebefe8a49638de8a10fcb9231215c841b33c9e9aee1e0",
+              "commonsFile": "Ile de Mahe - Victoria (7).JPG",
+              "captionFi": "Victorian rannikkoaluetta ja asutusta Mahélla, 2015.",
+              "credit": "Remi Jouan, Wikimedia Commons (CC BY-SA 3.0)",
+              "captionMatchesReviewed": true,
+              "personallyViewedAgain": false
+            }
           },
           "reviewedAt": "2026-10-12T20:29:28.660752+00:00",
           "sha256": "18d6f3e19c0e0938127eeeb2cc5db506b8a3a08bbe268d038ad7cce772131167"
@@ -3450,7 +3518,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/victoria/qa.json",
-            "sha256": "7498eeee553ffddad2b3e3461ec42ae43179f056ec04ac77bc18d93b0c9b8d41"
+            "sha256": "15a385cbab2ec1e48a92e570bb29a9337a34ca2e670a35c3971881532c1dbb37"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/victoria/illustration-qa-extra.json",
@@ -3491,10 +3559,10 @@
       "producerExportProof": null,
       "technicalExportProof": null,
       "priorMediaFields": {
-        "tiedosto": "",
-        "lahde": "",
-        "selite": "",
-        "lyhyt": ""
+        "tiedosto": "Ile de Mahe - Victoria (7).JPG",
+        "lahde": "Remi Jouan, Wikimedia Commons (CC BY-SA 3.0)",
+        "selite": "Victorian rannikkoaluetta ja asutusta Mahélla, 2015.",
+        "lyhyt": "Victorian rannikkoaluetta ja asutusta Mahélla, 2015."
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -3527,7 +3595,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "7140efcb3482e764940ebefe8a49638de8a10fcb9231215c841b33c9e9aee1e0",
       "targetAfterSHA256": "887a1cfc622138edaf0df29ed193e502644772649af2efceb8718f0a6d3769c8",
-      "contextAfterSHA256": "887a1cfc622138edaf0df29ed193e502644772649af2efceb8718f0a6d3769c8"
+      "contextAfterSHA256": "887a1cfc622138edaf0df29ed193e502644772649af2efceb8718f0a6d3769c8",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e08",
@@ -3580,10 +3650,10 @@
         1067
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/victoria/sisalto.json",
-      "sourceContentSHA256": "f877a315a3aa5f955305cbe9c205b9b1f8a5eb313462bbceb36040a1f289dd60",
+      "sourceContentSHA256": "7140efcb3482e764940ebefe8a49638de8a10fcb9231215c841b33c9e9aee1e0",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "targetBeforeSHA256": "fbb97462cc3ece4f061589ce9900589950ce563c190e94f7fd7214d517029d75",
+        "semanticContextSHA256": "fbb97462cc3ece4f061589ce9900589950ce563c190e94f7fd7214d517029d75",
         "subjectTitle": "Victoria",
         "targetState": "existing-target"
       },
@@ -3690,7 +3760,29 @@
             "photographedAt": "2015-02-13",
             "sourceDescriptionExact": "Victoria, Ile de Mahe vue d'avion",
             "depictedWorkAssessment": "Tavallinen sataman käyttö-/varasto-/asuinympäristö laajana kokonaisuutena, alukset ja luonnolliset merkit sivuosia. Ei itsenäistä nykyteosta tai nimetyn suojatun rakennuksen pääaiheista julkisivututkielmaa.",
-            "coverScope": "Actual port/coastal urban layout in 2015; distinct native image and SHA from C1/C2."
+            "coverScope": "Actual port/coastal urban layout in 2015; distinct native image and SHA from C1/C2.",
+            "currentContentVersionCheck": {
+              "reviewedContentSHA256": "f877a315a3aa5f955305cbe9c205b9b1f8a5eb313462bbceb36040a1f289dd60",
+              "currentContentSHA256": "7140efcb3482e764940ebefe8a49638de8a10fcb9231215c841b33c9e9aee1e0",
+              "checkedAt": "2026-10-13T14:14:46.283264+00:00",
+              "personallyViewedAgain": false,
+              "reviewedSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/c-integration/history/e08/victoria/f877a315a3aa5f955305cbe9c205b9b1f8a5eb313462bbceb36040a1f289dd60-sisalto.json",
+              "reviewedSnapshotSHA256": "f877a315a3aa5f955305cbe9c205b9b1f8a5eb313462bbceb36040a1f289dd60",
+              "matches": true,
+              "method": "exact archived content SHA and full nonmedia comparison",
+              "reviewedNonmediaSHA256": "c7e5023487a4070d32d8a8170f4c521a2deec566ef9db33414bc8230575f02e6",
+              "currentNonmediaSHA256": "c7e5023487a4070d32d8a8170f4c521a2deec566ef9db33414bc8230575f02e6",
+              "imageFieldsExcludedOnlyAtInventoriedSlots": true
+            },
+            "currentBindingMetadataCheck": {
+              "checkedAt": "2026-10-13T14:14:46.288377+00:00",
+              "contentSHA256": "7140efcb3482e764940ebefe8a49638de8a10fcb9231215c841b33c9e9aee1e0",
+              "commonsFile": "Ile de Mahe - Victoria (10).JPG",
+              "captionFi": "Victorian satamaa ja rannikon asutusta lentokoneesta nähtynä, 2015.",
+              "credit": "Remi Jouan, Wikimedia Commons (CC BY-SA 3.0)",
+              "captionMatchesReviewed": true,
+              "personallyViewedAgain": false
+            }
           },
           "qaReason": "Aito laaja Victorian sataman, rannikon asutuksen ja tiestön ilmakuva sopii C3-kanteen. Alkuperäinen Description nimeää Victorian Mahélla lentokoneesta, tekijä Remi Jouan ja lisenssi CC BY-SA 3.0 varmennettu. Natiivit 1600×1067 ja SHA täsmäävät. Kuvauspäivä 13.2.2015; selite ei väitä nykytilaa."
         }
@@ -3706,7 +3798,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/victoria/qa.json",
-        "fileSHA256": "7498eeee553ffddad2b3e3461ec42ae43179f056ec04ac77bc18d93b0c9b8d41",
+        "fileSHA256": "15a385cbab2ec1e48a92e570bb29a9337a34ca2e670a35c3971881532c1dbb37",
         "item": {
           "slot": "C3",
           "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[2]",
@@ -3796,7 +3888,29 @@
             "photographedAt": "2015-02-13",
             "sourceDescriptionExact": "Victoria, Ile de Mahe vue d'avion",
             "depictedWorkAssessment": "Tavallinen sataman käyttö-/varasto-/asuinympäristö laajana kokonaisuutena, alukset ja luonnolliset merkit sivuosia. Ei itsenäistä nykyteosta tai nimetyn suojatun rakennuksen pääaiheista julkisivututkielmaa.",
-            "coverScope": "Actual port/coastal urban layout in 2015; distinct native image and SHA from C1/C2."
+            "coverScope": "Actual port/coastal urban layout in 2015; distinct native image and SHA from C1/C2.",
+            "currentContentVersionCheck": {
+              "reviewedContentSHA256": "f877a315a3aa5f955305cbe9c205b9b1f8a5eb313462bbceb36040a1f289dd60",
+              "currentContentSHA256": "7140efcb3482e764940ebefe8a49638de8a10fcb9231215c841b33c9e9aee1e0",
+              "checkedAt": "2026-10-13T14:14:46.283264+00:00",
+              "personallyViewedAgain": false,
+              "reviewedSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/c-integration/history/e08/victoria/f877a315a3aa5f955305cbe9c205b9b1f8a5eb313462bbceb36040a1f289dd60-sisalto.json",
+              "reviewedSnapshotSHA256": "f877a315a3aa5f955305cbe9c205b9b1f8a5eb313462bbceb36040a1f289dd60",
+              "matches": true,
+              "method": "exact archived content SHA and full nonmedia comparison",
+              "reviewedNonmediaSHA256": "c7e5023487a4070d32d8a8170f4c521a2deec566ef9db33414bc8230575f02e6",
+              "currentNonmediaSHA256": "c7e5023487a4070d32d8a8170f4c521a2deec566ef9db33414bc8230575f02e6",
+              "imageFieldsExcludedOnlyAtInventoriedSlots": true
+            },
+            "currentBindingMetadataCheck": {
+              "checkedAt": "2026-10-13T14:14:46.288377+00:00",
+              "contentSHA256": "7140efcb3482e764940ebefe8a49638de8a10fcb9231215c841b33c9e9aee1e0",
+              "commonsFile": "Ile de Mahe - Victoria (10).JPG",
+              "captionFi": "Victorian satamaa ja rannikon asutusta lentokoneesta nähtynä, 2015.",
+              "credit": "Remi Jouan, Wikimedia Commons (CC BY-SA 3.0)",
+              "captionMatchesReviewed": true,
+              "personallyViewedAgain": false
+            }
           },
           "reviewedAt": "2026-10-12T20:29:28.768130+00:00",
           "sha256": "84e6a237cba3f4e5ec34345fa21047041d868c9e5feb0ca0ff6936218ba3e637"
@@ -3804,7 +3918,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/victoria/qa.json",
-            "sha256": "7498eeee553ffddad2b3e3461ec42ae43179f056ec04ac77bc18d93b0c9b8d41"
+            "sha256": "15a385cbab2ec1e48a92e570bb29a9337a34ca2e670a35c3971881532c1dbb37"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/victoria/illustration-qa-extra.json",
@@ -3845,10 +3959,10 @@
       "producerExportProof": null,
       "technicalExportProof": null,
       "priorMediaFields": {
-        "tiedosto": "",
-        "lahde": "",
-        "selite": "",
-        "lyhyt": ""
+        "tiedosto": "Ile de Mahe - Victoria (10).JPG",
+        "lahde": "Remi Jouan, Wikimedia Commons (CC BY-SA 3.0)",
+        "selite": "Victorian satamaa ja rannikon asutusta lentokoneesta nähtynä, 2015.",
+        "lyhyt": "Victorian satamaa ja rannikon asutusta lentokoneesta nähtynä, 2015."
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -3881,7 +3995,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "7140efcb3482e764940ebefe8a49638de8a10fcb9231215c841b33c9e9aee1e0",
       "targetAfterSHA256": "fbb97462cc3ece4f061589ce9900589950ce563c190e94f7fd7214d517029d75",
-      "contextAfterSHA256": "fbb97462cc3ece4f061589ce9900589950ce563c190e94f7fd7214d517029d75"
+      "contextAfterSHA256": "fbb97462cc3ece4f061589ce9900589950ce563c190e94f7fd7214d517029d75",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e08",
@@ -3934,7 +4050,7 @@
         3072
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/victoria/sisalto.json",
-      "sourceContentSHA256": "f877a315a3aa5f955305cbe9c205b9b1f8a5eb313462bbceb36040a1f289dd60",
+      "sourceContentSHA256": "7140efcb3482e764940ebefe8a49638de8a10fcb9231215c841b33c9e9aee1e0",
       "semanticSourceBind": {
         "targetBeforeSHA256": "8424e377ba5e3716ec75f9010bacfd7f523c8d568e06a744ee1cea6d9d694daf",
         "semanticContextSHA256": "b5964ebdccfe580673a5cfbfcddfeaf710713aeea5fe92934affe92620603137",
@@ -4043,8 +4159,8 @@
             "creatorResolution": "Use named photographer Anatoly Terentiev from original Description and explicit User:Ipaat link, rather than guessing uploader credit.",
             "currentContentVersionCheck": {
               "reviewedContentSHA256": "98b4aa2bc73b65c8c9f7fb3b5cc737cb1420ba7114c5b4762a286d3734f16611",
-              "currentContentSHA256": "f877a315a3aa5f955305cbe9c205b9b1f8a5eb313462bbceb36040a1f289dd60",
-              "checkedAt": "2026-10-13T05:58:38.200424+00:00",
+              "currentContentSHA256": "7140efcb3482e764940ebefe8a49638de8a10fcb9231215c841b33c9e9aee1e0",
+              "checkedAt": "2026-10-13T14:14:46.267605+00:00",
               "personallyViewedAgain": false,
               "reviewedSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/c-integration/history/e08/victoria/98b4aa2bc73b65c8c9f7fb3b5cc737cb1420ba7114c5b4762a286d3734f16611-sisalto.json",
               "reviewedSnapshotSHA256": "98b4aa2bc73b65c8c9f7fb3b5cc737cb1420ba7114c5b4762a286d3734f16611",
@@ -4055,8 +4171,8 @@
               "imageFieldsExcludedOnlyAtInventoriedSlots": true
             },
             "currentBindingMetadataCheck": {
-              "checkedAt": "2026-10-13T05:58:38.211433+00:00",
-              "contentSHA256": "f877a315a3aa5f955305cbe9c205b9b1f8a5eb313462bbceb36040a1f289dd60",
+              "checkedAt": "2026-10-13T14:14:46.280905+00:00",
+              "contentSHA256": "7140efcb3482e764940ebefe8a49638de8a10fcb9231215c841b33c9e9aee1e0",
               "commonsFile": "Giant alocasia.jpg",
               "captionFi": "Alokasia Mont Fleurin kasvitieteellisessä puutarhassa Victoriassa, 2007.",
               "credit": "Anatoly Terentiev, Wikimedia Commons (PD)",
@@ -4078,7 +4194,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/victoria/qa.json",
-        "fileSHA256": "7498eeee553ffddad2b3e3461ec42ae43179f056ec04ac77bc18d93b0c9b8d41",
+        "fileSHA256": "15a385cbab2ec1e48a92e570bb29a9337a34ca2e670a35c3971881532c1dbb37",
         "item": {
           "slot": "N1",
           "targetJsonPath": "$.nahtavyydet[\"Mont Fleurin kasvitieteellinen puutarha\"].kuvat[0]",
@@ -4167,8 +4283,8 @@
             "creatorResolution": "Use named photographer Anatoly Terentiev from original Description and explicit User:Ipaat link, rather than guessing uploader credit.",
             "currentContentVersionCheck": {
               "reviewedContentSHA256": "98b4aa2bc73b65c8c9f7fb3b5cc737cb1420ba7114c5b4762a286d3734f16611",
-              "currentContentSHA256": "f877a315a3aa5f955305cbe9c205b9b1f8a5eb313462bbceb36040a1f289dd60",
-              "checkedAt": "2026-10-13T05:58:38.200424+00:00",
+              "currentContentSHA256": "7140efcb3482e764940ebefe8a49638de8a10fcb9231215c841b33c9e9aee1e0",
+              "checkedAt": "2026-10-13T14:14:46.267605+00:00",
               "personallyViewedAgain": false,
               "reviewedSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/c-integration/history/e08/victoria/98b4aa2bc73b65c8c9f7fb3b5cc737cb1420ba7114c5b4762a286d3734f16611-sisalto.json",
               "reviewedSnapshotSHA256": "98b4aa2bc73b65c8c9f7fb3b5cc737cb1420ba7114c5b4762a286d3734f16611",
@@ -4179,8 +4295,8 @@
               "imageFieldsExcludedOnlyAtInventoriedSlots": true
             },
             "currentBindingMetadataCheck": {
-              "checkedAt": "2026-10-13T05:58:38.211433+00:00",
-              "contentSHA256": "f877a315a3aa5f955305cbe9c205b9b1f8a5eb313462bbceb36040a1f289dd60",
+              "checkedAt": "2026-10-13T14:14:46.280905+00:00",
+              "contentSHA256": "7140efcb3482e764940ebefe8a49638de8a10fcb9231215c841b33c9e9aee1e0",
               "commonsFile": "Giant alocasia.jpg",
               "captionFi": "Alokasia Mont Fleurin kasvitieteellisessä puutarhassa Victoriassa, 2007.",
               "credit": "Anatoly Terentiev, Wikimedia Commons (PD)",
@@ -4194,7 +4310,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/victoria/qa.json",
-            "sha256": "7498eeee553ffddad2b3e3461ec42ae43179f056ec04ac77bc18d93b0c9b8d41"
+            "sha256": "15a385cbab2ec1e48a92e570bb29a9337a34ca2e670a35c3971881532c1dbb37"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/victoria/illustration-qa-extra.json",
@@ -4271,10 +4387,14 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "7140efcb3482e764940ebefe8a49638de8a10fcb9231215c841b33c9e9aee1e0",
       "targetAfterSHA256": "8424e377ba5e3716ec75f9010bacfd7f523c8d568e06a744ee1cea6d9d694daf",
-      "contextAfterSHA256": "b5964ebdccfe580673a5cfbfcddfeaf710713aeea5fe92934affe92620603137"
+      "contextAfterSHA256": "b5964ebdccfe580673a5cfbfcddfeaf710713aeea5fe92934affe92620603137",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     }
   ],
   "runtimeIntegrationPending": true,
-  "ownerAcceptedNotImpliedByAuthorization": true,
-  "gameIntegrated": false
+  "ownerAcceptedNotImpliedByAuthorization": false,
+  "gameIntegrated": false,
+  "allAssetsExplicitlyOwnerApproved": true,
+  "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
 }

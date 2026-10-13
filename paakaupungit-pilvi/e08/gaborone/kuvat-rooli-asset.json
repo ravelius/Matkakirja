@@ -2,7 +2,7 @@
   "schemaVersion": "capital-city-role-assets/v1",
   "era": "e08",
   "city": "gaborone",
-  "authorization": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+  "authorization": "hyväksyn kaikki tekemäsi kuvat. toimita ne claudelle. claudelta saat uusia ohjeita jatkoa varten",
   "sourceContentAfterSHA256": "1b9c7c6310c5176102953351373b02bbe7b2dc80c41176ac4a4983ce4ad9cf72",
   "assets": [
     {
@@ -293,7 +293,237 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "1b9c7c6310c5176102953351373b02bbe7b2dc80c41176ac4a4983ce4ad9cf72",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "9f80280e6d5c1346ce7dc9317c5080b0b586df47883554f856594e06b6d6a478"
+      "contextAfterSHA256": "9f80280e6d5c1346ce7dc9317c5080b0b586df47883554f856594e06b6d6a478",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+    },
+    {
+      "era": "e08",
+      "city": "gaborone",
+      "slot": "O3",
+      "type": "illustration",
+      "assetID": "e08-gaborone-O3-illustration-v1-20261012",
+      "galleryImageID": "e08-gaborone-O3-illustration-v1-20261012",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[2].kuva",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "matkailijalle",
+        "artikkeli",
+        "jaksot",
+        2,
+        "kuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/gaborone/e08-gaborone-O3-illustration-v1-20261012-8dfc9913f793.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva paviaanista.",
+        "lyhyt": "Havainnekuva paviaanista."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/gaborone/e08-gaborone-O3-illustration-v1-20261012-8dfc9913f793.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva paviaanista.",
+        "lyhyt": "Havainnekuva paviaanista."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "8dfc9913f79314ffd088c142a3ba0c629d08db215309fc3565ffa7976dcb47b3",
+      "exportSHA256": "f5042b553f7f0a62488a840f20e3a83aa4b95f4ebf02dbbd096fc3dc65ca8624",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/gaborone/e08-gaborone-O3-illustration-v1-20261012-8dfc9913f793.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/gaborone/e08-gaborone-O3-illustration-v1-20261012-8dfc9913f793.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/gaborone/e08-gaborone-O3-illustration-v1-20261012-8dfc9913f793.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/gaborone/sisalto.json",
+      "sourceContentSHA256": "1b9c7c6310c5176102953351373b02bbe7b2dc80c41176ac4a4983ce4ad9cf72",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "6e3830817033e326b0e1e3721df05f37df4f619e3c78f63e658186a6b9fd6ba1",
+        "subjectTitle": "Kukkula, vesi ja eläimet",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": {
+            "scope": "Common natural material, plant, animal, food or unbranded functional object. No named protected artwork or real architecture/collection reconstruction.",
+            "notLocationProof": true
+          },
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/gaborone/assets/e08-gaborone-O3-illustration-v1-20261012/image.png",
+            "nativeSha256Verified": "8dfc9913f79314ffd088c142a3ba0c629d08db215309fc3565ffa7976dcb47b3",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "nativeMode": "RGB",
+            "visualInspection": "Tarkistaja katsoi itse natiivin NAS-tiedoston view_image-työkalulla original-tarkkuudessa tässä sessiossa: Istuva paviaani, pitkä kuono, kaksi eturaajaa ja kaksi takaraajaa, häntä maassa. Varpaat ja käsi erottuvat, turkin suunta ja sävyt vaihtelevat; ei ihmisiä tai merkintöjä.",
+            "captionFi": "Havainnekuva paviaanista.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/gaborone/sisalto.json",
+            "contentSha256": "1b9c7c6310c5176102953351373b02bbe7b2dc80c41176ac4a4983ce4ad9cf72",
+            "targetCurrentlyPresent": true,
+            "targetText": "Kgale Hilliltä voi katsella Gaboronea ja sen ympäristöä. Valitse kävelyreitti kunnon ja sään mukaan ja anna paviaanien olla rauhassa. Gaborone Game Reserve puolestaan on päiväretkikohde, jossa kuljetaan puiston teitä ja tarkkaillaan esimerkiksi antilooppeja, seeproja ja lintuja. Gaboronen padon ympäristö liittyy sekä vesihuoltoon että virkistykseen. Seuraa kunkin kohteen paikallisia kulku- ja käyttöohjeita; kukkula, riistapuisto ja pato ovat erillisiä käyntipaikkoja.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/gaborone/faktapohja.md",
+            "factSheetSha256": "ae989c67f81a2aab6b338e994448beb014e20f166091be0a0e06ff45bf52703c",
+            "topicEvidence": "Faktapohja G3 Kgale Hill ja §2 Nukkuva jättiläinen: paviaanit.",
+            "rightsAssessment": "Yleinen luonnon-, materiaali-, ruoka- tai arkiesineaihe; ei nimettyä nykytaideteosta. Aiheen ja paikkarehellisyyden arvio verdictissä ja omassa silmähavainnossa.",
+            "scope": "Vain riippumaton natiivikuvituksen QA; R2-toimitus, integrointi ja julkaisu eivät ole kuitattuja."
+          },
+          "qaReason": "Paviaani sopii Kgale-aiheeseen. Yleinen eläinhavainne ilman yksilön tai kuvauspaikan väitettä."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva paviaanista.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/gaborone/illustration-qa-extra.json",
+        "fileSHA256": "9c56f8aa1e49209d5558dccb3c90870aa6a053de729bbf3e0a04ebb7566fa0f5",
+        "item": {
+          "slot": "O3",
+          "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[2].kuva",
+          "assetID": "e08-gaborone-O3-illustration-v1-20261012",
+          "sha256": "8dfc9913f79314ffd088c142a3ba0c629d08db215309fc3565ffa7976dcb47b3",
+          "verdict": "accepted",
+          "reason": "Paviaani sopii Kgale-aiheeseen. Yleinen eläinhavainne ilman yksilön tai kuvauspaikan väitettä.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/gaborone/assets/e08-gaborone-O3-illustration-v1-20261012/image.png",
+            "nativeSha256Verified": "8dfc9913f79314ffd088c142a3ba0c629d08db215309fc3565ffa7976dcb47b3",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "nativeMode": "RGB",
+            "visualInspection": "Tarkistaja katsoi itse natiivin NAS-tiedoston view_image-työkalulla original-tarkkuudessa tässä sessiossa: Istuva paviaani, pitkä kuono, kaksi eturaajaa ja kaksi takaraajaa, häntä maassa. Varpaat ja käsi erottuvat, turkin suunta ja sävyt vaihtelevat; ei ihmisiä tai merkintöjä.",
+            "captionFi": "Havainnekuva paviaanista.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/gaborone/sisalto.json",
+            "contentSha256": "1b9c7c6310c5176102953351373b02bbe7b2dc80c41176ac4a4983ce4ad9cf72",
+            "targetCurrentlyPresent": true,
+            "targetText": "Kgale Hilliltä voi katsella Gaboronea ja sen ympäristöä. Valitse kävelyreitti kunnon ja sään mukaan ja anna paviaanien olla rauhassa. Gaborone Game Reserve puolestaan on päiväretkikohde, jossa kuljetaan puiston teitä ja tarkkaillaan esimerkiksi antilooppeja, seeproja ja lintuja. Gaboronen padon ympäristö liittyy sekä vesihuoltoon että virkistykseen. Seuraa kunkin kohteen paikallisia kulku- ja käyttöohjeita; kukkula, riistapuisto ja pato ovat erillisiä käyntipaikkoja.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/gaborone/faktapohja.md",
+            "factSheetSha256": "ae989c67f81a2aab6b338e994448beb014e20f166091be0a0e06ff45bf52703c",
+            "topicEvidence": "Faktapohja G3 Kgale Hill ja §2 Nukkuva jättiläinen: paviaanit.",
+            "rightsAssessment": "Yleinen luonnon-, materiaali-, ruoka- tai arkiesineaihe; ei nimettyä nykytaideteosta. Aiheen ja paikkarehellisyyden arvio verdictissä ja omassa silmähavainnossa.",
+            "scope": "Vain riippumaton natiivikuvituksen QA; R2-toimitus, integrointi ja julkaisu eivät ole kuitattuja."
+          },
+          "reviewedAt": "2026-10-13T05:57:47.104130+00:00",
+          "reviewerSession": "e08-extra-01a131d7-1d58-7eb0-a959-c0073288e011"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/gaborone/qa.json",
+            "sha256": "5138bd2d5178848a2e2076009200645eabee25377507da59e3b5dca516309653"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/gaborone/illustration-qa-extra.json",
+            "sha256": "9c56f8aa1e49209d5558dccb3c90870aa6a053de729bbf3e0a04ebb7566fa0f5"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/gaborone/e08-gaborone-O3-illustration-v1-20261012-8dfc9913f793.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/gaborone/e08-gaborone-O3-illustration-v1-20261012-8dfc9913f793.png?t=f5042b553f7f0a62",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/gaborone/e08-gaborone-O3-illustration-v1-20261012-8dfc9913f793.png",
+        "sha256": "f5042b553f7f0a62488a840f20e3a83aa4b95f4ebf02dbbd096fc3dc65ca8624",
+        "bytes": 2797222,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e08-gaborone-O3-illustration-v1-20261012",
+        "nativeSHA256": "8dfc9913f79314ffd088c142a3ba0c629d08db215309fc3565ffa7976dcb47b3",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/gaborone/e08-gaborone-O3-illustration-v1-20261012-8dfc9913f793.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e08",
+        "city": "gaborone",
+        "slot": "O3",
+        "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[2].kuva",
+        "verifiedAt": "2026-10-13T05:58:11.152467+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/gaborone/e08-gaborone-O3-illustration-v1-20261012-8dfc9913f793.png",
+        "sha256": "f5042b553f7f0a62488a840f20e3a83aa4b95f4ebf02dbbd096fc3dc65ca8624",
+        "bytes": 2797222,
+        "SHAReadAt": "2026-10-13T05:57:56.712272+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "8dfc9913f79314ffd088c142a3ba0c629d08db215309fc3565ffa7976dcb47b3",
+        "rgbPixelSHA256": "027d332853b8ea36fc0fba12bd763960b3d74d41616b7a97bb9233b235892b2b",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "1b9c7c6310c5176102953351373b02bbe7b2dc80c41176ac4a4983ce4ad9cf72",
+      "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+      "contextAfterSHA256": "6e3830817033e326b0e1e3721df05f37df4f619e3c78f63e658186a6b9fd6ba1",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e08",
@@ -645,7 +875,234 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "1b9c7c6310c5176102953351373b02bbe7b2dc80c41176ac4a4983ce4ad9cf72",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "04ed261874e499a607a7f7d3853cb87a5b1418512c31362ad3ce36754e21caff"
+      "contextAfterSHA256": "04ed261874e499a607a7f7d3853cb87a5b1418512c31362ad3ce36754e21caff",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+    },
+    {
+      "era": "e08",
+      "city": "gaborone",
+      "slot": "K2",
+      "type": "illustration",
+      "assetID": "e08-gaborone-K2-illustration-v1-20261012",
+      "galleryImageID": "e08-gaborone-K2-illustration-v1-20261012",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].nostot[1]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "nostot",
+        1
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/gaborone/e08-gaborone-K2-illustration-v1-20261012-8118f27100a6.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva veden arkisesta käytöstä.",
+        "lyhyt": "Havainnekuva veden arkisesta käytöstä."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/gaborone/e08-gaborone-K2-illustration-v1-20261012-8118f27100a6.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva veden arkisesta käytöstä.",
+        "lyhyt": "Havainnekuva veden arkisesta käytöstä."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "8118f27100a63a496007a302f217732247f48e07e4d25e2560857eb3f812b9ac",
+      "exportSHA256": "63a4679ac26789feafc9290b8e837a631ae4a0cac2a6e8634ebbbb182dd878d6",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/gaborone/e08-gaborone-K2-illustration-v1-20261012-8118f27100a6.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/gaborone/e08-gaborone-K2-illustration-v1-20261012-8118f27100a6.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/gaborone/e08-gaborone-K2-illustration-v1-20261012-8118f27100a6.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/gaborone/sisalto.json",
+      "sourceContentSHA256": "1b9c7c6310c5176102953351373b02bbe7b2dc80c41176ac4a4983ce4ad9cf72",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "0ea82e9800ce15cb356d26282b4410587d2a5960ae89e91a8706794e7e5ecf03",
+        "semanticContextSHA256": "0ea82e9800ce15cb356d26282b4410587d2a5960ae89e91a8706794e7e5ecf03",
+        "subjectTitle": "Vedellä on työ",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": {
+            "scope": "Common natural material, plant, animal, food or unbranded functional object. No named protected artwork or real architecture/collection reconstruction.",
+            "notLocationProof": true
+          },
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/gaborone/assets/e08-gaborone-K2-illustration-v1-20261012/image.png",
+            "nativeSha256Verified": "8118f27100a63a496007a302f217732247f48e07e4d25e2560857eb3f812b9ac",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "nativeMode": "RGB",
+            "visualInspection": "Tarkistaja katsoi itse natiivin NAS-tiedoston view_image-työkalulla original-tarkkuudessa tässä sessiossa: Yhtenäinen vesivirta lasikannusta juomalasiin, kuplia ja vaihtelevat heijastukset. Kannu, lasi ja veden taittuminen uskottavia; ei käsiä tai merkintöjä.",
+            "captionFi": "Havainnekuva veden arkisesta käytöstä.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/gaborone/sisalto.json",
+            "contentSha256": "1b9c7c6310c5176102953351373b02bbe7b2dc80c41176ac4a4983ce4ad9cf72",
+            "targetCurrentlyPresent": true,
+            "targetText": "Gaboronen eteläpuolella Notwane-joen vesi kootaan padon taakse. Tekojärvi palvelee pääkaupungin vesihuoltoa ja myös Lobatsen veden saantia. Pato rakennettiin uuden Gaboronen suunnittelun aikaan ja sitä korotettiin myöhemmin. Kuivuus ja vedenkulutuksen kasvu ovat vaikuttaneet altaan vesitilanteeseen. Rannalla on myös virkistyskäyttöä, mutta maiseman takana on arkinen tehtävä: kaupunki tarvitsee vettä. Pato kertoo pääkaupungin elämästä yhtä konkreettisesti kuin sen kauppakadut.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/gaborone/faktapohja.md",
+            "factSheetSha256": "ae989c67f81a2aab6b338e994448beb014e20f166091be0a0e06ff45bf52703c",
+            "topicEvidence": "Faktapohja §2 Vedellä on työ, G4: Gaboronen ja Lobatsen vesihuolto.",
+            "rightsAssessment": "Yleinen luonnon-, materiaali-, ruoka- tai arkiesineaihe; ei nimettyä nykytaideteosta. Aiheen ja paikkarehellisyyden arvio verdictissä ja omassa silmähavainnossa.",
+            "scope": "Vain riippumaton natiivikuvituksen QA; R2-toimitus, integrointi ja julkaisu eivät ole kuitattuja."
+          },
+          "qaReason": "Veden kaataminen lasiin havainnollistaa vesihuollon arkista käyttöä, ilman padon tai paikallisen veden ulkonäköväitettä."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva veden arkisesta käytöstä.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/gaborone/illustration-qa-extra.json",
+        "fileSHA256": "9c56f8aa1e49209d5558dccb3c90870aa6a053de729bbf3e0a04ebb7566fa0f5",
+        "item": {
+          "slot": "K2",
+          "targetJsonPath": "$.kaupunkilehti[0].nostot[1]",
+          "assetID": "e08-gaborone-K2-illustration-v1-20261012",
+          "sha256": "8118f27100a63a496007a302f217732247f48e07e4d25e2560857eb3f812b9ac",
+          "verdict": "accepted",
+          "reason": "Veden kaataminen lasiin havainnollistaa vesihuollon arkista käyttöä, ilman padon tai paikallisen veden ulkonäköväitettä.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/gaborone/assets/e08-gaborone-K2-illustration-v1-20261012/image.png",
+            "nativeSha256Verified": "8118f27100a63a496007a302f217732247f48e07e4d25e2560857eb3f812b9ac",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "nativeMode": "RGB",
+            "visualInspection": "Tarkistaja katsoi itse natiivin NAS-tiedoston view_image-työkalulla original-tarkkuudessa tässä sessiossa: Yhtenäinen vesivirta lasikannusta juomalasiin, kuplia ja vaihtelevat heijastukset. Kannu, lasi ja veden taittuminen uskottavia; ei käsiä tai merkintöjä.",
+            "captionFi": "Havainnekuva veden arkisesta käytöstä.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/gaborone/sisalto.json",
+            "contentSha256": "1b9c7c6310c5176102953351373b02bbe7b2dc80c41176ac4a4983ce4ad9cf72",
+            "targetCurrentlyPresent": true,
+            "targetText": "Gaboronen eteläpuolella Notwane-joen vesi kootaan padon taakse. Tekojärvi palvelee pääkaupungin vesihuoltoa ja myös Lobatsen veden saantia. Pato rakennettiin uuden Gaboronen suunnittelun aikaan ja sitä korotettiin myöhemmin. Kuivuus ja vedenkulutuksen kasvu ovat vaikuttaneet altaan vesitilanteeseen. Rannalla on myös virkistyskäyttöä, mutta maiseman takana on arkinen tehtävä: kaupunki tarvitsee vettä. Pato kertoo pääkaupungin elämästä yhtä konkreettisesti kuin sen kauppakadut.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/gaborone/faktapohja.md",
+            "factSheetSha256": "ae989c67f81a2aab6b338e994448beb014e20f166091be0a0e06ff45bf52703c",
+            "topicEvidence": "Faktapohja §2 Vedellä on työ, G4: Gaboronen ja Lobatsen vesihuolto.",
+            "rightsAssessment": "Yleinen luonnon-, materiaali-, ruoka- tai arkiesineaihe; ei nimettyä nykytaideteosta. Aiheen ja paikkarehellisyyden arvio verdictissä ja omassa silmähavainnossa.",
+            "scope": "Vain riippumaton natiivikuvituksen QA; R2-toimitus, integrointi ja julkaisu eivät ole kuitattuja."
+          },
+          "reviewedAt": "2026-10-13T05:57:47.045397+00:00",
+          "reviewerSession": "e08-extra-01a131d7-1d58-7eb0-a959-c0073288e011"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/gaborone/qa.json",
+            "sha256": "5138bd2d5178848a2e2076009200645eabee25377507da59e3b5dca516309653"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/gaborone/illustration-qa-extra.json",
+            "sha256": "9c56f8aa1e49209d5558dccb3c90870aa6a053de729bbf3e0a04ebb7566fa0f5"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/gaborone/e08-gaborone-K2-illustration-v1-20261012-8118f27100a6.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/gaborone/e08-gaborone-K2-illustration-v1-20261012-8118f27100a6.png?t=63a4679ac26789fe",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/gaborone/e08-gaborone-K2-illustration-v1-20261012-8118f27100a6.png",
+        "sha256": "63a4679ac26789feafc9290b8e837a631ae4a0cac2a6e8634ebbbb182dd878d6",
+        "bytes": 2110839,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e08-gaborone-K2-illustration-v1-20261012",
+        "nativeSHA256": "8118f27100a63a496007a302f217732247f48e07e4d25e2560857eb3f812b9ac",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/gaborone/e08-gaborone-K2-illustration-v1-20261012-8118f27100a6.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e08",
+        "city": "gaborone",
+        "slot": "K2",
+        "targetJsonPath": "$.kaupunkilehti[0].nostot[1]",
+        "verifiedAt": "2026-10-13T05:58:12.247004+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/gaborone/e08-gaborone-K2-illustration-v1-20261012-8118f27100a6.png",
+        "sha256": "63a4679ac26789feafc9290b8e837a631ae4a0cac2a6e8634ebbbb182dd878d6",
+        "bytes": 2110839,
+        "SHAReadAt": "2026-10-13T05:57:56.515578+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "8118f27100a63a496007a302f217732247f48e07e4d25e2560857eb3f812b9ac",
+        "rgbPixelSHA256": "fdb6ffd0e2321ac4b8497b2cbea001f004924e1c86ffdc4d277961a98bd13bcf",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "1b9c7c6310c5176102953351373b02bbe7b2dc80c41176ac4a4983ce4ad9cf72",
+      "targetAfterSHA256": "0ea82e9800ce15cb356d26282b4410587d2a5960ae89e91a8706794e7e5ecf03",
+      "contextAfterSHA256": "0ea82e9800ce15cb356d26282b4410587d2a5960ae89e91a8706794e7e5ecf03",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e08",
@@ -883,456 +1340,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "1b9c7c6310c5176102953351373b02bbe7b2dc80c41176ac4a4983ce4ad9cf72",
       "targetAfterSHA256": "44dd32fac9a46906a8998682883042c986a8358020184a3fc39188e6cfc3bb85",
-      "contextAfterSHA256": "44dd32fac9a46906a8998682883042c986a8358020184a3fc39188e6cfc3bb85"
-    },
-    {
-      "era": "e08",
-      "city": "gaborone",
-      "slot": "O3",
-      "type": "illustration",
-      "assetID": "e08-gaborone-O3-illustration-v1-20261012",
-      "galleryImageID": "e08-gaborone-O3-illustration-v1-20261012",
-      "commonsFile": null,
-      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[2].kuva",
-      "targetTokens": [
-        "kaupunkilehti",
-        0,
-        "matkailijalle",
-        "artikkeli",
-        "jaksot",
-        2,
-        "kuva"
-      ],
-      "operation": "merge-media-fields-preserve-other-content",
-      "CmediaFieldPayload": {
-        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/gaborone/e08-gaborone-O3-illustration-v1-20261012-8dfc9913f793.png",
-        "suora": true,
-        "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva paviaanista.",
-        "lyhyt": "Havainnekuva paviaanista."
-      },
-      "removeMediaKeys": [
-        "tiedosto"
-      ],
-      "CvalidatorCompatiblePayload": {},
-      "runtimeMediaFieldPayload": {
-        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/gaborone/e08-gaborone-O3-illustration-v1-20261012-8dfc9913f793.png",
-        "suora": true,
-        "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva paviaanista.",
-        "lyhyt": "Havainnekuva paviaanista."
-      },
-      "runtimeRemoveMediaKeys": [
-        "tiedosto"
-      ],
-      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
-      "nativeSHA256": "8dfc9913f79314ffd088c142a3ba0c629d08db215309fc3565ffa7976dcb47b3",
-      "exportSHA256": "f5042b553f7f0a62488a840f20e3a83aa4b95f4ebf02dbbd096fc3dc65ca8624",
-      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/gaborone/e08-gaborone-O3-illustration-v1-20261012-8dfc9913f793.png",
-      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/gaborone/e08-gaborone-O3-illustration-v1-20261012-8dfc9913f793.png",
-      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/gaborone/e08-gaborone-O3-illustration-v1-20261012-8dfc9913f793.png",
-      "dimensions": [
-        1536,
-        1024
-      ],
-      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/gaborone/sisalto.json",
-      "sourceContentSHA256": "1b9c7c6310c5176102953351373b02bbe7b2dc80c41176ac4a4983ce4ad9cf72",
-      "semanticSourceBind": {
-        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "6e3830817033e326b0e1e3721df05f37df4f619e3c78f63e658186a6b9fd6ba1",
-        "subjectTitle": "Kukkula, vesi ja eläimet",
-        "targetState": "existing-target"
-      },
-      "attribution": {
-        "author": null,
-        "license": null,
-        "licenseUrl": null,
-        "sourcePage": null,
-        "originalUrl": null,
-        "rightsEvidence": {
-          "production": {
-            "scope": "Common natural material, plant, animal, food or unbranded functional object. No named protected artwork or real architecture/collection reconstruction.",
-            "notLocationProof": true
-          },
-          "QA": {
-            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/gaborone/assets/e08-gaborone-O3-illustration-v1-20261012/image.png",
-            "nativeSha256Verified": "8dfc9913f79314ffd088c142a3ba0c629d08db215309fc3565ffa7976dcb47b3",
-            "nativeWidth": 1536,
-            "nativeHeight": 1024,
-            "format": "PNG",
-            "nativeMode": "RGB",
-            "visualInspection": "Tarkistaja katsoi itse natiivin NAS-tiedoston view_image-työkalulla original-tarkkuudessa tässä sessiossa: Istuva paviaani, pitkä kuono, kaksi eturaajaa ja kaksi takaraajaa, häntä maassa. Varpaat ja käsi erottuvat, turkin suunta ja sävyt vaihtelevat; ei ihmisiä tai merkintöjä.",
-            "captionFi": "Havainnekuva paviaanista.",
-            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/gaborone/sisalto.json",
-            "contentSha256": "1b9c7c6310c5176102953351373b02bbe7b2dc80c41176ac4a4983ce4ad9cf72",
-            "targetCurrentlyPresent": true,
-            "targetText": "Kgale Hilliltä voi katsella Gaboronea ja sen ympäristöä. Valitse kävelyreitti kunnon ja sään mukaan ja anna paviaanien olla rauhassa. Gaborone Game Reserve puolestaan on päiväretkikohde, jossa kuljetaan puiston teitä ja tarkkaillaan esimerkiksi antilooppeja, seeproja ja lintuja. Gaboronen padon ympäristö liittyy sekä vesihuoltoon että virkistykseen. Seuraa kunkin kohteen paikallisia kulku- ja käyttöohjeita; kukkula, riistapuisto ja pato ovat erillisiä käyntipaikkoja.",
-            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/gaborone/faktapohja.md",
-            "factSheetSha256": "ae989c67f81a2aab6b338e994448beb014e20f166091be0a0e06ff45bf52703c",
-            "topicEvidence": "Faktapohja G3 Kgale Hill ja §2 Nukkuva jättiläinen: paviaanit.",
-            "rightsAssessment": "Yleinen luonnon-, materiaali-, ruoka- tai arkiesineaihe; ei nimettyä nykytaideteosta. Aiheen ja paikkarehellisyyden arvio verdictissä ja omassa silmähavainnossa.",
-            "scope": "Vain riippumaton natiivikuvituksen QA; R2-toimitus, integrointi ja julkaisu eivät ole kuitattuja."
-          },
-          "qaReason": "Paviaani sopii Kgale-aiheeseen. Yleinen eläinhavainne ilman yksilön tai kuvauspaikan väitettä."
-        }
-      },
-      "luentaMetadata": {
-        "existingImageLuenta": null,
-        "captionReadingText": "Havainnekuva paviaanista.",
-        "existingArticleAndSectionLuentaPreserved": true,
-        "audioGenerated": false,
-        "audioURL": null,
-        "imageSpecificAudioProvided": false,
-        "reuseAudioAllowedByThisPacket": false
-      },
-      "qaEvidence": {
-        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/gaborone/illustration-qa-extra.json",
-        "fileSHA256": "9c56f8aa1e49209d5558dccb3c90870aa6a053de729bbf3e0a04ebb7566fa0f5",
-        "item": {
-          "slot": "O3",
-          "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[2].kuva",
-          "assetID": "e08-gaborone-O3-illustration-v1-20261012",
-          "sha256": "8dfc9913f79314ffd088c142a3ba0c629d08db215309fc3565ffa7976dcb47b3",
-          "verdict": "accepted",
-          "reason": "Paviaani sopii Kgale-aiheeseen. Yleinen eläinhavainne ilman yksilön tai kuvauspaikan väitettä.",
-          "evidence": {
-            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/gaborone/assets/e08-gaborone-O3-illustration-v1-20261012/image.png",
-            "nativeSha256Verified": "8dfc9913f79314ffd088c142a3ba0c629d08db215309fc3565ffa7976dcb47b3",
-            "nativeWidth": 1536,
-            "nativeHeight": 1024,
-            "format": "PNG",
-            "nativeMode": "RGB",
-            "visualInspection": "Tarkistaja katsoi itse natiivin NAS-tiedoston view_image-työkalulla original-tarkkuudessa tässä sessiossa: Istuva paviaani, pitkä kuono, kaksi eturaajaa ja kaksi takaraajaa, häntä maassa. Varpaat ja käsi erottuvat, turkin suunta ja sävyt vaihtelevat; ei ihmisiä tai merkintöjä.",
-            "captionFi": "Havainnekuva paviaanista.",
-            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/gaborone/sisalto.json",
-            "contentSha256": "1b9c7c6310c5176102953351373b02bbe7b2dc80c41176ac4a4983ce4ad9cf72",
-            "targetCurrentlyPresent": true,
-            "targetText": "Kgale Hilliltä voi katsella Gaboronea ja sen ympäristöä. Valitse kävelyreitti kunnon ja sään mukaan ja anna paviaanien olla rauhassa. Gaborone Game Reserve puolestaan on päiväretkikohde, jossa kuljetaan puiston teitä ja tarkkaillaan esimerkiksi antilooppeja, seeproja ja lintuja. Gaboronen padon ympäristö liittyy sekä vesihuoltoon että virkistykseen. Seuraa kunkin kohteen paikallisia kulku- ja käyttöohjeita; kukkula, riistapuisto ja pato ovat erillisiä käyntipaikkoja.",
-            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/gaborone/faktapohja.md",
-            "factSheetSha256": "ae989c67f81a2aab6b338e994448beb014e20f166091be0a0e06ff45bf52703c",
-            "topicEvidence": "Faktapohja G3 Kgale Hill ja §2 Nukkuva jättiläinen: paviaanit.",
-            "rightsAssessment": "Yleinen luonnon-, materiaali-, ruoka- tai arkiesineaihe; ei nimettyä nykytaideteosta. Aiheen ja paikkarehellisyyden arvio verdictissä ja omassa silmähavainnossa.",
-            "scope": "Vain riippumaton natiivikuvituksen QA; R2-toimitus, integrointi ja julkaisu eivät ole kuitattuja."
-          },
-          "reviewedAt": "2026-10-13T05:57:47.104130+00:00",
-          "reviewerSession": "e08-extra-01a131d7-1d58-7eb0-a959-c0073288e011"
-        },
-        "allSources": [
-          {
-            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/gaborone/qa.json",
-            "sha256": "5138bd2d5178848a2e2076009200645eabee25377507da59e3b5dca516309653"
-          },
-          {
-            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/gaborone/illustration-qa-extra.json",
-            "sha256": "9c56f8aa1e49209d5558dccb3c90870aa6a053de729bbf3e0a04ebb7566fa0f5"
-          }
-        ]
-      },
-      "R2ByteVerification": {
-        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/gaborone/e08-gaborone-O3-illustration-v1-20261012-8dfc9913f793.png",
-        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/gaborone/e08-gaborone-O3-illustration-v1-20261012-8dfc9913f793.png?t=f5042b553f7f0a62",
-        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/gaborone/e08-gaborone-O3-illustration-v1-20261012-8dfc9913f793.png",
-        "sha256": "f5042b553f7f0a62488a840f20e3a83aa4b95f4ebf02dbbd096fc3dc65ca8624",
-        "bytes": 2797222,
-        "http": 200,
-        "mime": "image/png",
-        "cors": "https://matkakirja.app",
-        "cacheBustedPreflightHttp": 404,
-        "cacheBustedReadback": true,
-        "byteExactReadback": true,
-        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
-        "conditionalIfNoneMatch": "*",
-        "s3PutHttp": 200,
-        "assetID": "e08-gaborone-O3-illustration-v1-20261012",
-        "nativeSHA256": "8dfc9913f79314ffd088c142a3ba0c629d08db215309fc3565ffa7976dcb47b3",
-        "canonicalReadbackByteExact": true,
-        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/gaborone/e08-gaborone-O3-illustration-v1-20261012-8dfc9913f793.png",
-        "pixelIdenticalToQAAcceptedNative": true,
-        "era": "e08",
-        "city": "gaborone",
-        "slot": "O3",
-        "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[2].kuva",
-        "verifiedAt": "2026-10-13T05:58:11.152467+00:00",
-        "ownerAcceptanceVerified": false,
-        "gameIntegrated": false,
-        "galleryVisibleVerified": false
-      },
-      "producerExportProof": null,
-      "technicalExportProof": {
-        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/gaborone/e08-gaborone-O3-illustration-v1-20261012-8dfc9913f793.png",
-        "sha256": "f5042b553f7f0a62488a840f20e3a83aa4b95f4ebf02dbbd096fc3dc65ca8624",
-        "bytes": 2797222,
-        "SHAReadAt": "2026-10-13T05:57:56.712272+00:00",
-        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
-        "width": 1536,
-        "height": 1024,
-        "pixelWidth": 1536,
-        "pixelHeight": 1024,
-        "exifOrientation": 1,
-        "dimensionsBasis": "EXIF-oriented-display",
-        "format": "PNG",
-        "largeOriginalHeaderOnlyRead": false,
-        "nativeSHA256": "8dfc9913f79314ffd088c142a3ba0c629d08db215309fc3565ffa7976dcb47b3",
-        "rgbPixelSHA256": "027d332853b8ea36fc0fba12bd763960b3d74d41616b7a97bb9233b235892b2b",
-        "pixelIdenticalToQAAcceptedNative": true,
-        "sRGBProfileEmbedded": true,
-        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
-      },
-      "priorMediaFields": {
-        "tiedosto": "",
-        "lahde": "",
-        "selite": "",
-        "lyhyt": ""
-      },
-      "preservePreviousMediaObjects": true,
-      "authorization": {
-        "status": "waived-owner-review",
-        "authorizedByOwner": true,
-        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
-        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
-        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
-        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
-        "ownerAcceptanceImplied": false,
-        "QARequired": true,
-        "R2ByteVerificationRequired": true,
-        "galleryBeforeGameRequired": false,
-        "verifiedHumanMessageSource": {
-          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
-          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
-        }
-      },
-      "ownerAcceptanceVerified": false,
-      "gameIntegrated": false,
-      "gamePublicationVerified": false,
-      "inMemoryMergeVerified": true,
-      "CcommonsMetadataBound": false,
-      "roleManifestBound": true,
-      "sourceContentAfterSHA256": "1b9c7c6310c5176102953351373b02bbe7b2dc80c41176ac4a4983ce4ad9cf72",
-      "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "6e3830817033e326b0e1e3721df05f37df4f619e3c78f63e658186a6b9fd6ba1"
-    },
-    {
-      "era": "e08",
-      "city": "gaborone",
-      "slot": "K2",
-      "type": "illustration",
-      "assetID": "e08-gaborone-K2-illustration-v1-20261012",
-      "galleryImageID": "e08-gaborone-K2-illustration-v1-20261012",
-      "commonsFile": null,
-      "targetJsonPath": "$.kaupunkilehti[0].nostot[1]",
-      "targetTokens": [
-        "kaupunkilehti",
-        0,
-        "nostot",
-        1
-      ],
-      "operation": "merge-media-fields-preserve-other-content",
-      "CmediaFieldPayload": {
-        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/gaborone/e08-gaborone-K2-illustration-v1-20261012-8118f27100a6.png",
-        "suora": true,
-        "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva veden arkisesta käytöstä.",
-        "lyhyt": "Havainnekuva veden arkisesta käytöstä."
-      },
-      "removeMediaKeys": [
-        "tiedosto"
-      ],
-      "CvalidatorCompatiblePayload": {},
-      "runtimeMediaFieldPayload": {
-        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/gaborone/e08-gaborone-K2-illustration-v1-20261012-8118f27100a6.png",
-        "suora": true,
-        "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva veden arkisesta käytöstä.",
-        "lyhyt": "Havainnekuva veden arkisesta käytöstä."
-      },
-      "runtimeRemoveMediaKeys": [
-        "tiedosto"
-      ],
-      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
-      "nativeSHA256": "8118f27100a63a496007a302f217732247f48e07e4d25e2560857eb3f812b9ac",
-      "exportSHA256": "63a4679ac26789feafc9290b8e837a631ae4a0cac2a6e8634ebbbb182dd878d6",
-      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/gaborone/e08-gaborone-K2-illustration-v1-20261012-8118f27100a6.png",
-      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/gaborone/e08-gaborone-K2-illustration-v1-20261012-8118f27100a6.png",
-      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/gaborone/e08-gaborone-K2-illustration-v1-20261012-8118f27100a6.png",
-      "dimensions": [
-        1536,
-        1024
-      ],
-      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/gaborone/sisalto.json",
-      "sourceContentSHA256": "1b9c7c6310c5176102953351373b02bbe7b2dc80c41176ac4a4983ce4ad9cf72",
-      "semanticSourceBind": {
-        "targetBeforeSHA256": "0ea82e9800ce15cb356d26282b4410587d2a5960ae89e91a8706794e7e5ecf03",
-        "semanticContextSHA256": "0ea82e9800ce15cb356d26282b4410587d2a5960ae89e91a8706794e7e5ecf03",
-        "subjectTitle": "Vedellä on työ",
-        "targetState": "existing-target"
-      },
-      "attribution": {
-        "author": null,
-        "license": null,
-        "licenseUrl": null,
-        "sourcePage": null,
-        "originalUrl": null,
-        "rightsEvidence": {
-          "production": {
-            "scope": "Common natural material, plant, animal, food or unbranded functional object. No named protected artwork or real architecture/collection reconstruction.",
-            "notLocationProof": true
-          },
-          "QA": {
-            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/gaborone/assets/e08-gaborone-K2-illustration-v1-20261012/image.png",
-            "nativeSha256Verified": "8118f27100a63a496007a302f217732247f48e07e4d25e2560857eb3f812b9ac",
-            "nativeWidth": 1536,
-            "nativeHeight": 1024,
-            "format": "PNG",
-            "nativeMode": "RGB",
-            "visualInspection": "Tarkistaja katsoi itse natiivin NAS-tiedoston view_image-työkalulla original-tarkkuudessa tässä sessiossa: Yhtenäinen vesivirta lasikannusta juomalasiin, kuplia ja vaihtelevat heijastukset. Kannu, lasi ja veden taittuminen uskottavia; ei käsiä tai merkintöjä.",
-            "captionFi": "Havainnekuva veden arkisesta käytöstä.",
-            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/gaborone/sisalto.json",
-            "contentSha256": "1b9c7c6310c5176102953351373b02bbe7b2dc80c41176ac4a4983ce4ad9cf72",
-            "targetCurrentlyPresent": true,
-            "targetText": "Gaboronen eteläpuolella Notwane-joen vesi kootaan padon taakse. Tekojärvi palvelee pääkaupungin vesihuoltoa ja myös Lobatsen veden saantia. Pato rakennettiin uuden Gaboronen suunnittelun aikaan ja sitä korotettiin myöhemmin. Kuivuus ja vedenkulutuksen kasvu ovat vaikuttaneet altaan vesitilanteeseen. Rannalla on myös virkistyskäyttöä, mutta maiseman takana on arkinen tehtävä: kaupunki tarvitsee vettä. Pato kertoo pääkaupungin elämästä yhtä konkreettisesti kuin sen kauppakadut.",
-            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/gaborone/faktapohja.md",
-            "factSheetSha256": "ae989c67f81a2aab6b338e994448beb014e20f166091be0a0e06ff45bf52703c",
-            "topicEvidence": "Faktapohja §2 Vedellä on työ, G4: Gaboronen ja Lobatsen vesihuolto.",
-            "rightsAssessment": "Yleinen luonnon-, materiaali-, ruoka- tai arkiesineaihe; ei nimettyä nykytaideteosta. Aiheen ja paikkarehellisyyden arvio verdictissä ja omassa silmähavainnossa.",
-            "scope": "Vain riippumaton natiivikuvituksen QA; R2-toimitus, integrointi ja julkaisu eivät ole kuitattuja."
-          },
-          "qaReason": "Veden kaataminen lasiin havainnollistaa vesihuollon arkista käyttöä, ilman padon tai paikallisen veden ulkonäköväitettä."
-        }
-      },
-      "luentaMetadata": {
-        "existingImageLuenta": null,
-        "captionReadingText": "Havainnekuva veden arkisesta käytöstä.",
-        "existingArticleAndSectionLuentaPreserved": true,
-        "audioGenerated": false,
-        "audioURL": null,
-        "imageSpecificAudioProvided": false,
-        "reuseAudioAllowedByThisPacket": false
-      },
-      "qaEvidence": {
-        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/gaborone/illustration-qa-extra.json",
-        "fileSHA256": "9c56f8aa1e49209d5558dccb3c90870aa6a053de729bbf3e0a04ebb7566fa0f5",
-        "item": {
-          "slot": "K2",
-          "targetJsonPath": "$.kaupunkilehti[0].nostot[1]",
-          "assetID": "e08-gaborone-K2-illustration-v1-20261012",
-          "sha256": "8118f27100a63a496007a302f217732247f48e07e4d25e2560857eb3f812b9ac",
-          "verdict": "accepted",
-          "reason": "Veden kaataminen lasiin havainnollistaa vesihuollon arkista käyttöä, ilman padon tai paikallisen veden ulkonäköväitettä.",
-          "evidence": {
-            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/gaborone/assets/e08-gaborone-K2-illustration-v1-20261012/image.png",
-            "nativeSha256Verified": "8118f27100a63a496007a302f217732247f48e07e4d25e2560857eb3f812b9ac",
-            "nativeWidth": 1536,
-            "nativeHeight": 1024,
-            "format": "PNG",
-            "nativeMode": "RGB",
-            "visualInspection": "Tarkistaja katsoi itse natiivin NAS-tiedoston view_image-työkalulla original-tarkkuudessa tässä sessiossa: Yhtenäinen vesivirta lasikannusta juomalasiin, kuplia ja vaihtelevat heijastukset. Kannu, lasi ja veden taittuminen uskottavia; ei käsiä tai merkintöjä.",
-            "captionFi": "Havainnekuva veden arkisesta käytöstä.",
-            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/gaborone/sisalto.json",
-            "contentSha256": "1b9c7c6310c5176102953351373b02bbe7b2dc80c41176ac4a4983ce4ad9cf72",
-            "targetCurrentlyPresent": true,
-            "targetText": "Gaboronen eteläpuolella Notwane-joen vesi kootaan padon taakse. Tekojärvi palvelee pääkaupungin vesihuoltoa ja myös Lobatsen veden saantia. Pato rakennettiin uuden Gaboronen suunnittelun aikaan ja sitä korotettiin myöhemmin. Kuivuus ja vedenkulutuksen kasvu ovat vaikuttaneet altaan vesitilanteeseen. Rannalla on myös virkistyskäyttöä, mutta maiseman takana on arkinen tehtävä: kaupunki tarvitsee vettä. Pato kertoo pääkaupungin elämästä yhtä konkreettisesti kuin sen kauppakadut.",
-            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/gaborone/faktapohja.md",
-            "factSheetSha256": "ae989c67f81a2aab6b338e994448beb014e20f166091be0a0e06ff45bf52703c",
-            "topicEvidence": "Faktapohja §2 Vedellä on työ, G4: Gaboronen ja Lobatsen vesihuolto.",
-            "rightsAssessment": "Yleinen luonnon-, materiaali-, ruoka- tai arkiesineaihe; ei nimettyä nykytaideteosta. Aiheen ja paikkarehellisyyden arvio verdictissä ja omassa silmähavainnossa.",
-            "scope": "Vain riippumaton natiivikuvituksen QA; R2-toimitus, integrointi ja julkaisu eivät ole kuitattuja."
-          },
-          "reviewedAt": "2026-10-13T05:57:47.045397+00:00",
-          "reviewerSession": "e08-extra-01a131d7-1d58-7eb0-a959-c0073288e011"
-        },
-        "allSources": [
-          {
-            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/gaborone/qa.json",
-            "sha256": "5138bd2d5178848a2e2076009200645eabee25377507da59e3b5dca516309653"
-          },
-          {
-            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/gaborone/illustration-qa-extra.json",
-            "sha256": "9c56f8aa1e49209d5558dccb3c90870aa6a053de729bbf3e0a04ebb7566fa0f5"
-          }
-        ]
-      },
-      "R2ByteVerification": {
-        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/gaborone/e08-gaborone-K2-illustration-v1-20261012-8118f27100a6.png",
-        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/gaborone/e08-gaborone-K2-illustration-v1-20261012-8118f27100a6.png?t=63a4679ac26789fe",
-        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/gaborone/e08-gaborone-K2-illustration-v1-20261012-8118f27100a6.png",
-        "sha256": "63a4679ac26789feafc9290b8e837a631ae4a0cac2a6e8634ebbbb182dd878d6",
-        "bytes": 2110839,
-        "http": 200,
-        "mime": "image/png",
-        "cors": "https://matkakirja.app",
-        "cacheBustedPreflightHttp": 404,
-        "cacheBustedReadback": true,
-        "byteExactReadback": true,
-        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
-        "conditionalIfNoneMatch": "*",
-        "s3PutHttp": 200,
-        "assetID": "e08-gaborone-K2-illustration-v1-20261012",
-        "nativeSHA256": "8118f27100a63a496007a302f217732247f48e07e4d25e2560857eb3f812b9ac",
-        "canonicalReadbackByteExact": true,
-        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/gaborone/e08-gaborone-K2-illustration-v1-20261012-8118f27100a6.png",
-        "pixelIdenticalToQAAcceptedNative": true,
-        "era": "e08",
-        "city": "gaborone",
-        "slot": "K2",
-        "targetJsonPath": "$.kaupunkilehti[0].nostot[1]",
-        "verifiedAt": "2026-10-13T05:58:12.247004+00:00",
-        "ownerAcceptanceVerified": false,
-        "gameIntegrated": false,
-        "galleryVisibleVerified": false
-      },
-      "producerExportProof": null,
-      "technicalExportProof": {
-        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/gaborone/e08-gaborone-K2-illustration-v1-20261012-8118f27100a6.png",
-        "sha256": "63a4679ac26789feafc9290b8e837a631ae4a0cac2a6e8634ebbbb182dd878d6",
-        "bytes": 2110839,
-        "SHAReadAt": "2026-10-13T05:57:56.515578+00:00",
-        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
-        "width": 1536,
-        "height": 1024,
-        "pixelWidth": 1536,
-        "pixelHeight": 1024,
-        "exifOrientation": 1,
-        "dimensionsBasis": "EXIF-oriented-display",
-        "format": "PNG",
-        "largeOriginalHeaderOnlyRead": false,
-        "nativeSHA256": "8118f27100a63a496007a302f217732247f48e07e4d25e2560857eb3f812b9ac",
-        "rgbPixelSHA256": "fdb6ffd0e2321ac4b8497b2cbea001f004924e1c86ffdc4d277961a98bd13bcf",
-        "pixelIdenticalToQAAcceptedNative": true,
-        "sRGBProfileEmbedded": true,
-        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
-      },
-      "priorMediaFields": {
-        "tiedosto": "",
-        "lahde": "",
-        "selite": "",
-        "lyhyt": ""
-      },
-      "preservePreviousMediaObjects": true,
-      "authorization": {
-        "status": "waived-owner-review",
-        "authorizedByOwner": true,
-        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
-        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
-        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
-        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
-        "ownerAcceptanceImplied": false,
-        "QARequired": true,
-        "R2ByteVerificationRequired": true,
-        "galleryBeforeGameRequired": false,
-        "verifiedHumanMessageSource": {
-          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
-          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
-        }
-      },
-      "ownerAcceptanceVerified": false,
-      "gameIntegrated": false,
-      "gamePublicationVerified": false,
-      "inMemoryMergeVerified": true,
-      "CcommonsMetadataBound": false,
-      "roleManifestBound": true,
-      "sourceContentAfterSHA256": "1b9c7c6310c5176102953351373b02bbe7b2dc80c41176ac4a4983ce4ad9cf72",
-      "targetAfterSHA256": "0ea82e9800ce15cb356d26282b4410587d2a5960ae89e91a8706794e7e5ecf03",
-      "contextAfterSHA256": "0ea82e9800ce15cb356d26282b4410587d2a5960ae89e91a8706794e7e5ecf03"
+      "contextAfterSHA256": "44dd32fac9a46906a8998682883042c986a8358020184a3fc39188e6cfc3bb85",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e08",
@@ -1555,7 +1565,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "1b9c7c6310c5176102953351373b02bbe7b2dc80c41176ac4a4983ce4ad9cf72",
       "targetAfterSHA256": "2fbeb0f078215e851a9d7bc8354a256a615260e0b0469f8fe08981a632eb5605",
-      "contextAfterSHA256": "2fbeb0f078215e851a9d7bc8354a256a615260e0b0469f8fe08981a632eb5605"
+      "contextAfterSHA256": "2fbeb0f078215e851a9d7bc8354a256a615260e0b0469f8fe08981a632eb5605",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e08",
@@ -1809,7 +1821,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "1b9c7c6310c5176102953351373b02bbe7b2dc80c41176ac4a4983ce4ad9cf72",
       "targetAfterSHA256": "a7a16eed09b552d4c98fc98c58ea952e38603cfe2567cbd8e420a5d667c6aa30",
-      "contextAfterSHA256": "a7a16eed09b552d4c98fc98c58ea952e38603cfe2567cbd8e420a5d667c6aa30"
+      "contextAfterSHA256": "a7a16eed09b552d4c98fc98c58ea952e38603cfe2567cbd8e420a5d667c6aa30",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e08",
@@ -2086,7 +2100,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "1b9c7c6310c5176102953351373b02bbe7b2dc80c41176ac4a4983ce4ad9cf72",
       "targetAfterSHA256": "aeb5b94092a76e0b1cd84c4688bc42e6a1a33161e9752140250f9c666810a1eb",
-      "contextAfterSHA256": "aeb5b94092a76e0b1cd84c4688bc42e6a1a33161e9752140250f9c666810a1eb"
+      "contextAfterSHA256": "aeb5b94092a76e0b1cd84c4688bc42e6a1a33161e9752140250f9c666810a1eb",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e08",
@@ -2363,7 +2379,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "1b9c7c6310c5176102953351373b02bbe7b2dc80c41176ac4a4983ce4ad9cf72",
       "targetAfterSHA256": "7b601199501dbb4221b177a95bc9a1e970f4182ee4f1fcccc5f770d44afa65a3",
-      "contextAfterSHA256": "7b601199501dbb4221b177a95bc9a1e970f4182ee4f1fcccc5f770d44afa65a3"
+      "contextAfterSHA256": "7b601199501dbb4221b177a95bc9a1e970f4182ee4f1fcccc5f770d44afa65a3",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e08",
@@ -2644,7 +2662,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "1b9c7c6310c5176102953351373b02bbe7b2dc80c41176ac4a4983ce4ad9cf72",
       "targetAfterSHA256": "4720d5fafe7898f3ae5431d33a0c5a4ae9a0da72516be6b65563deeb3b52b753",
-      "contextAfterSHA256": "4720d5fafe7898f3ae5431d33a0c5a4ae9a0da72516be6b65563deeb3b52b753"
+      "contextAfterSHA256": "4720d5fafe7898f3ae5431d33a0c5a4ae9a0da72516be6b65563deeb3b52b753",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e08",
@@ -2922,7 +2942,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "1b9c7c6310c5176102953351373b02bbe7b2dc80c41176ac4a4983ce4ad9cf72",
       "targetAfterSHA256": "3154f4e46979c39a5643d1493d4dc619fc3fe363b8d0db35a80e8af5311e87ef",
-      "contextAfterSHA256": "1ba277a81c2212903067a3662c617165a0a1e767bf900fd7a614a1952ec0ac1e"
+      "contextAfterSHA256": "1ba277a81c2212903067a3662c617165a0a1e767bf900fd7a614a1952ec0ac1e",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e08",
@@ -3200,10 +3222,14 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "1b9c7c6310c5176102953351373b02bbe7b2dc80c41176ac4a4983ce4ad9cf72",
       "targetAfterSHA256": "0709a0ea340561cc8e109e7e3e61b6230ec4997dc574fa67a9ec18e0a9871773",
-      "contextAfterSHA256": "cddb34bcf459cc9e4ba824e068aaad105acfed309c7be98132a3dbe7f5b1257c"
+      "contextAfterSHA256": "cddb34bcf459cc9e4ba824e068aaad105acfed309c7be98132a3dbe7f5b1257c",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     }
   ],
   "runtimeIntegrationPending": true,
-  "ownerAcceptedNotImpliedByAuthorization": true,
-  "gameIntegrated": false
+  "ownerAcceptedNotImpliedByAuthorization": false,
+  "gameIntegrated": false,
+  "allAssetsExplicitlyOwnerApproved": true,
+  "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
 }

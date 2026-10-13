@@ -2,7 +2,7 @@
   "schemaVersion": "capital-city-role-assets/v1",
   "era": "e08",
   "city": "antananarivo",
-  "authorization": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+  "authorization": "hyväksyn kaikki tekemäsi kuvat. toimita ne claudelle. claudelta saat uusia ohjeita jatkoa varten",
   "sourceContentAfterSHA256": "7a4d5fa01aec14637573d2a248aade78ed1939ca47659a70f1924ad1de3aaf17",
   "assets": [
     {
@@ -53,7 +53,7 @@
         1536
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/antananarivo/sisalto.json",
-      "sourceContentSHA256": "b3232a08d75b78768d174ec399c70cb7e7504cfad30e5afac273341b25e97d2a",
+      "sourceContentSHA256": "7a4d5fa01aec14637573d2a248aade78ed1939ca47659a70f1924ad1de3aaf17",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
         "semanticContextSHA256": "478b7dfb2752c4d18172101af224b800522c562f78201aa146aa795bf8b91c77",
@@ -344,7 +344,237 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "7a4d5fa01aec14637573d2a248aade78ed1939ca47659a70f1924ad1de3aaf17",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "478b7dfb2752c4d18172101af224b800522c562f78201aa146aa795bf8b91c77"
+      "contextAfterSHA256": "478b7dfb2752c4d18172101af224b800522c562f78201aa146aa795bf8b91c77",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+    },
+    {
+      "era": "e08",
+      "city": "antananarivo",
+      "slot": "O3",
+      "type": "illustration",
+      "assetID": "e08-antananarivo-O3-illustration-v1-20261012",
+      "galleryImageID": "e08-antananarivo-O3-illustration-v1-20261012",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[2].kuva",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "matkailijalle",
+        "artikkeli",
+        "jaksot",
+        2,
+        "kuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/antananarivo/e08-antananarivo-O3-illustration-v1-20261012-7e99148f4e48.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva jakarandan kukista ja lehdistä.",
+        "lyhyt": "Havainnekuva jakarandan kukista ja lehdistä."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/antananarivo/e08-antananarivo-O3-illustration-v1-20261012-7e99148f4e48.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva jakarandan kukista ja lehdistä.",
+        "lyhyt": "Havainnekuva jakarandan kukista ja lehdistä."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "7e99148f4e48c3062ef1db2e2b94d7453b7f9b5b0ee8cca05940d0032f59a4eb",
+      "exportSHA256": "0da62ad5e4a2e0cf5348ba3cbb5b55abe150af925e9b7d6bf9e91552b6a91cba",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/antananarivo/e08-antananarivo-O3-illustration-v1-20261012-7e99148f4e48.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/antananarivo/e08-antananarivo-O3-illustration-v1-20261012-7e99148f4e48.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/antananarivo/e08-antananarivo-O3-illustration-v1-20261012-7e99148f4e48.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/antananarivo/sisalto.json",
+      "sourceContentSHA256": "7a4d5fa01aec14637573d2a248aade78ed1939ca47659a70f1924ad1de3aaf17",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "3bd2a72ccf39b55dd3813f1e9aeb941dea49b6fc310d1eb398602f8af0e30bfa",
+        "subjectTitle": "Anosy ja vanhat asuinkorttelit",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": {
+            "scope": "Common natural material, plant, animal, food or unbranded functional object. No named protected artwork or real architecture/collection reconstruction.",
+            "notLocationProof": true
+          },
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/antananarivo/assets/e08-antananarivo-O3-illustration-v1-20261012/image.png",
+            "nativeSha256Verified": "7e99148f4e48c3062ef1db2e2b94d7453b7f9b5b0ee8cca05940d0032f59a4eb",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "nativeMode": "RGB",
+            "visualInspection": "Tarkistaja katsoi itse natiivin NAS-tiedoston view_image-työkalulla original-tarkkuudessa tässä sessiossa: Haarautuva kukinto, violetit putkimaiset kukat ja hennot kahdesti parilehdykkäiset lehdet. Eri avautumisasteet luontevia; ei tekstiä, logoja tai henkilöitä.",
+            "captionFi": "Havainnekuva jakarandan kukista ja lehdistä.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/antananarivo/sisalto.json",
+            "contentSha256": "b3232a08d75b78768d174ec399c70cb7e7504cfad30e5afac273341b25e97d2a",
+            "targetCurrentlyPresent": true,
+            "targetText": "Anosy-järvi on rakennettu järvi keskustan eteläpuolella. Sen saari ja rantaa reunustavat jakarandat kuuluvat kaupungin maisemaan. Yläkaupungissa taas kannattaa tarkastella asuintalojen tiiltä ja verantoja: trano gasy on paikallisen rakennustavan nimi. Järvi, kauppakeskusta ja yläkaupunki tarjoavat erilaiset näkymät saman kaupungin arkeen.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/antananarivo/faktapohja.md",
+            "factSheetSha256": "cd24a15fb3aefce1cd60eb7c02da79b02a94309018c264a5b5ac43d369c2e493",
+            "topicEvidence": "Faktapohja S3 Lake Anosy ja §4: jakarandat.",
+            "rightsAssessment": "Yleinen luonnon-, materiaali-, ruoka- tai arkiesineaihe; ei nimettyä nykytaideteosta. Aiheen ja paikkarehellisyyden arvio verdictissä ja omassa silmähavainnossa.",
+            "scope": "Vain riippumaton natiivikuvituksen QA; R2-toimitus, integrointi ja julkaisu eivät ole kuitattuja."
+          },
+          "qaReason": "Jakarandan kukat ja lehdet vastaavat Anosy-jakson kasviaihetta. Kuva ei väitä olevansa järven paikkakuva."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva jakarandan kukista ja lehdistä.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/antananarivo/illustration-qa-extra.json",
+        "fileSHA256": "cbde9aa9d3182acb7dcdd02159bbff1fc8dea7ab4c71729d3e6b4029d82efd97",
+        "item": {
+          "slot": "O3",
+          "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[2].kuva",
+          "assetID": "e08-antananarivo-O3-illustration-v1-20261012",
+          "sha256": "7e99148f4e48c3062ef1db2e2b94d7453b7f9b5b0ee8cca05940d0032f59a4eb",
+          "verdict": "accepted",
+          "reason": "Jakarandan kukat ja lehdet vastaavat Anosy-jakson kasviaihetta. Kuva ei väitä olevansa järven paikkakuva.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/antananarivo/assets/e08-antananarivo-O3-illustration-v1-20261012/image.png",
+            "nativeSha256Verified": "7e99148f4e48c3062ef1db2e2b94d7453b7f9b5b0ee8cca05940d0032f59a4eb",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "nativeMode": "RGB",
+            "visualInspection": "Tarkistaja katsoi itse natiivin NAS-tiedoston view_image-työkalulla original-tarkkuudessa tässä sessiossa: Haarautuva kukinto, violetit putkimaiset kukat ja hennot kahdesti parilehdykkäiset lehdet. Eri avautumisasteet luontevia; ei tekstiä, logoja tai henkilöitä.",
+            "captionFi": "Havainnekuva jakarandan kukista ja lehdistä.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/antananarivo/sisalto.json",
+            "contentSha256": "b3232a08d75b78768d174ec399c70cb7e7504cfad30e5afac273341b25e97d2a",
+            "targetCurrentlyPresent": true,
+            "targetText": "Anosy-järvi on rakennettu järvi keskustan eteläpuolella. Sen saari ja rantaa reunustavat jakarandat kuuluvat kaupungin maisemaan. Yläkaupungissa taas kannattaa tarkastella asuintalojen tiiltä ja verantoja: trano gasy on paikallisen rakennustavan nimi. Järvi, kauppakeskusta ja yläkaupunki tarjoavat erilaiset näkymät saman kaupungin arkeen.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/antananarivo/faktapohja.md",
+            "factSheetSha256": "cd24a15fb3aefce1cd60eb7c02da79b02a94309018c264a5b5ac43d369c2e493",
+            "topicEvidence": "Faktapohja S3 Lake Anosy ja §4: jakarandat.",
+            "rightsAssessment": "Yleinen luonnon-, materiaali-, ruoka- tai arkiesineaihe; ei nimettyä nykytaideteosta. Aiheen ja paikkarehellisyyden arvio verdictissä ja omassa silmähavainnossa.",
+            "scope": "Vain riippumaton natiivikuvituksen QA; R2-toimitus, integrointi ja julkaisu eivät ole kuitattuja."
+          },
+          "reviewedAt": "2026-10-13T05:57:46.999946+00:00",
+          "reviewerSession": "e08-extra-01a131d7-1d58-7eb0-a959-c0073288e011"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/antananarivo/qa.json",
+            "sha256": "aef25e0e741df5b2997ed50c845901d07665567111debc0ee3d3d19f721b4cb8"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/antananarivo/illustration-qa-extra.json",
+            "sha256": "cbde9aa9d3182acb7dcdd02159bbff1fc8dea7ab4c71729d3e6b4029d82efd97"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/antananarivo/e08-antananarivo-O3-illustration-v1-20261012-7e99148f4e48.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/antananarivo/e08-antananarivo-O3-illustration-v1-20261012-7e99148f4e48.png?t=0da62ad5e4a2e0cf",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/antananarivo/e08-antananarivo-O3-illustration-v1-20261012-7e99148f4e48.png",
+        "sha256": "0da62ad5e4a2e0cf5348ba3cbb5b55abe150af925e9b7d6bf9e91552b6a91cba",
+        "bytes": 2678782,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e08-antananarivo-O3-illustration-v1-20261012",
+        "nativeSHA256": "7e99148f4e48c3062ef1db2e2b94d7453b7f9b5b0ee8cca05940d0032f59a4eb",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/antananarivo/e08-antananarivo-O3-illustration-v1-20261012-7e99148f4e48.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e08",
+        "city": "antananarivo",
+        "slot": "O3",
+        "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[2].kuva",
+        "verifiedAt": "2026-10-13T05:58:08.601384+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/antananarivo/e08-antananarivo-O3-illustration-v1-20261012-7e99148f4e48.png",
+        "sha256": "0da62ad5e4a2e0cf5348ba3cbb5b55abe150af925e9b7d6bf9e91552b6a91cba",
+        "bytes": 2678782,
+        "SHAReadAt": "2026-10-13T05:57:56.284738+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "7e99148f4e48c3062ef1db2e2b94d7453b7f9b5b0ee8cca05940d0032f59a4eb",
+        "rgbPixelSHA256": "8f5821e4213c72d12d2cb7d75adf167e0523e6588b058cb55f50aad22dad2b65",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "7a4d5fa01aec14637573d2a248aade78ed1939ca47659a70f1924ad1de3aaf17",
+      "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+      "contextAfterSHA256": "3bd2a72ccf39b55dd3813f1e9aeb941dea49b6fc310d1eb398602f8af0e30bfa",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e08",
@@ -397,7 +627,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/antananarivo/sisalto.json",
-      "sourceContentSHA256": "b3232a08d75b78768d174ec399c70cb7e7504cfad30e5afac273341b25e97d2a",
+      "sourceContentSHA256": "7a4d5fa01aec14637573d2a248aade78ed1939ca47659a70f1924ad1de3aaf17",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
         "semanticContextSHA256": "c667d6de427e8553a93cb67bddee5bd53bb004b27433492c40b39d506dcc3ce0",
@@ -703,7 +933,234 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "7a4d5fa01aec14637573d2a248aade78ed1939ca47659a70f1924ad1de3aaf17",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "c667d6de427e8553a93cb67bddee5bd53bb004b27433492c40b39d506dcc3ce0"
+      "contextAfterSHA256": "c667d6de427e8553a93cb67bddee5bd53bb004b27433492c40b39d506dcc3ce0",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+    },
+    {
+      "era": "e08",
+      "city": "antananarivo",
+      "slot": "K1",
+      "type": "illustration",
+      "assetID": "e08-antananarivo-K1-illustration-v1-20261012",
+      "galleryImageID": "e08-antananarivo-K1-illustration-v1-20261012",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].nostot[0]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "nostot",
+        0
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/antananarivo/e08-antananarivo-K1-illustration-v1-20261012-8ff222a4147c.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva torin valkoisen päivänvarjon materiaalista.",
+        "lyhyt": "Havainnekuva torin valkoisen päivänvarjon materiaalista."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/antananarivo/e08-antananarivo-K1-illustration-v1-20261012-8ff222a4147c.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva torin valkoisen päivänvarjon materiaalista.",
+        "lyhyt": "Havainnekuva torin valkoisen päivänvarjon materiaalista."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "8ff222a4147cfd6fa2758e38f1b4a97b34307a3a0d5eb2eff2828db3a39e1e97",
+      "exportSHA256": "dc36dbc6e3279f4b6ed664c40886ca7262439690edceafa267d2bd6fd4901f1f",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/antananarivo/e08-antananarivo-K1-illustration-v1-20261012-8ff222a4147c.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/antananarivo/e08-antananarivo-K1-illustration-v1-20261012-8ff222a4147c.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/antananarivo/e08-antananarivo-K1-illustration-v1-20261012-8ff222a4147c.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/antananarivo/sisalto.json",
+      "sourceContentSHA256": "7a4d5fa01aec14637573d2a248aade78ed1939ca47659a70f1924ad1de3aaf17",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e12c7218f7f96beb38d791abfd33940065fe2bad7c6ecce7686fc37f92661517",
+        "semanticContextSHA256": "e12c7218f7f96beb38d791abfd33940065fe2bad7c6ecce7686fc37f92661517",
+        "subjectTitle": "Perjantai muutti osoitetta",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": {
+            "scope": "Common natural material, plant, animal, food or unbranded functional object. No named protected artwork or real architecture/collection reconstruction.",
+            "notLocationProof": true
+          },
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/antananarivo/assets/e08-antananarivo-K1-illustration-v1-20261012/image.png",
+            "nativeSha256Verified": "8ff222a4147cfd6fa2758e38f1b4a97b34307a3a0d5eb2eff2828db3a39e1e97",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "nativeMode": "RGB",
+            "visualInspection": "Tarkistaja katsoi itse natiivin NAS-tiedoston view_image-työkalulla original-tarkkuudessa tässä sessiossa: Valkoinen kangas, puinen keskitanko, säteittäiset ruoteet ja nivelletyt tuet. Kangas laskostuu luontevasti; ei logoja, tekstiä tai ihmisiä.",
+            "captionFi": "Havainnekuva torin valkoisen päivänvarjon materiaalista.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/antananarivo/sisalto.json",
+            "contentSha256": "b3232a08d75b78768d174ec399c70cb7e7504cfad30e5afac273341b25e97d2a",
+            "targetCurrentlyPresent": true,
+            "targetText": "Zoma tarkoittaa perjantaita, ja Antananarivossa se oli myös suuren torin nimi. Kauppiaat pystyttivät valkoisten päivänvarjojen alle myyntipaikkoja Analakelyn laaksoon. Toripäivän määräsi jo Merinan kuningas Andrianampoinimerina. Kaupunki muuttui, ja viime vuosisadan lopulla perjantain kauppiaat siirrettiin eri kaupunginosiin liikenteen ja turvallisuuden vuoksi. Analakely ei silti lakannut olemasta kauppapaikka: sen kauppapaviljongit ja ympäröivät liikkeet jatkavat alueen arkista tehtävää.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/antananarivo/faktapohja.md",
+            "factSheetSha256": "cd24a15fb3aefce1cd60eb7c02da79b02a94309018c264a5b5ac43d369c2e493",
+            "topicEvidence": "Faktapohja §3, S1 Cityscape: valkoiset päivänvarjot.",
+            "rightsAssessment": "Yleinen luonnon-, materiaali-, ruoka- tai arkiesineaihe; ei nimettyä nykytaideteosta. Aiheen ja paikkarehellisyyden arvio verdictissä ja omassa silmähavainnossa.",
+            "scope": "Vain riippumaton natiivikuvituksen QA; R2-toimitus, integrointi ja julkaisu eivät ole kuitattuja."
+          },
+          "qaReason": "Valkoinen päivänvarjo vastaa Zoma-tekstin materiaalia, ilman torin todellisen asettelun väitettä."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva torin valkoisen päivänvarjon materiaalista.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/antananarivo/illustration-qa-extra.json",
+        "fileSHA256": "cbde9aa9d3182acb7dcdd02159bbff1fc8dea7ab4c71729d3e6b4029d82efd97",
+        "item": {
+          "slot": "K1",
+          "targetJsonPath": "$.kaupunkilehti[0].nostot[0]",
+          "assetID": "e08-antananarivo-K1-illustration-v1-20261012",
+          "sha256": "8ff222a4147cfd6fa2758e38f1b4a97b34307a3a0d5eb2eff2828db3a39e1e97",
+          "verdict": "accepted",
+          "reason": "Valkoinen päivänvarjo vastaa Zoma-tekstin materiaalia, ilman torin todellisen asettelun väitettä.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/antananarivo/assets/e08-antananarivo-K1-illustration-v1-20261012/image.png",
+            "nativeSha256Verified": "8ff222a4147cfd6fa2758e38f1b4a97b34307a3a0d5eb2eff2828db3a39e1e97",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "nativeMode": "RGB",
+            "visualInspection": "Tarkistaja katsoi itse natiivin NAS-tiedoston view_image-työkalulla original-tarkkuudessa tässä sessiossa: Valkoinen kangas, puinen keskitanko, säteittäiset ruoteet ja nivelletyt tuet. Kangas laskostuu luontevasti; ei logoja, tekstiä tai ihmisiä.",
+            "captionFi": "Havainnekuva torin valkoisen päivänvarjon materiaalista.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/antananarivo/sisalto.json",
+            "contentSha256": "b3232a08d75b78768d174ec399c70cb7e7504cfad30e5afac273341b25e97d2a",
+            "targetCurrentlyPresent": true,
+            "targetText": "Zoma tarkoittaa perjantaita, ja Antananarivossa se oli myös suuren torin nimi. Kauppiaat pystyttivät valkoisten päivänvarjojen alle myyntipaikkoja Analakelyn laaksoon. Toripäivän määräsi jo Merinan kuningas Andrianampoinimerina. Kaupunki muuttui, ja viime vuosisadan lopulla perjantain kauppiaat siirrettiin eri kaupunginosiin liikenteen ja turvallisuuden vuoksi. Analakely ei silti lakannut olemasta kauppapaikka: sen kauppapaviljongit ja ympäröivät liikkeet jatkavat alueen arkista tehtävää.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/antananarivo/faktapohja.md",
+            "factSheetSha256": "cd24a15fb3aefce1cd60eb7c02da79b02a94309018c264a5b5ac43d369c2e493",
+            "topicEvidence": "Faktapohja §3, S1 Cityscape: valkoiset päivänvarjot.",
+            "rightsAssessment": "Yleinen luonnon-, materiaali-, ruoka- tai arkiesineaihe; ei nimettyä nykytaideteosta. Aiheen ja paikkarehellisyyden arvio verdictissä ja omassa silmähavainnossa.",
+            "scope": "Vain riippumaton natiivikuvituksen QA; R2-toimitus, integrointi ja julkaisu eivät ole kuitattuja."
+          },
+          "reviewedAt": "2026-10-13T05:57:46.931284+00:00",
+          "reviewerSession": "e08-extra-01a131d7-1d58-7eb0-a959-c0073288e011"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/antananarivo/qa.json",
+            "sha256": "aef25e0e741df5b2997ed50c845901d07665567111debc0ee3d3d19f721b4cb8"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/antananarivo/illustration-qa-extra.json",
+            "sha256": "cbde9aa9d3182acb7dcdd02159bbff1fc8dea7ab4c71729d3e6b4029d82efd97"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/antananarivo/e08-antananarivo-K1-illustration-v1-20261012-8ff222a4147c.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/antananarivo/e08-antananarivo-K1-illustration-v1-20261012-8ff222a4147c.png?t=dc36dbc6e3279f4b",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/antananarivo/e08-antananarivo-K1-illustration-v1-20261012-8ff222a4147c.png",
+        "sha256": "dc36dbc6e3279f4b6ed664c40886ca7262439690edceafa267d2bd6fd4901f1f",
+        "bytes": 1951636,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e08-antananarivo-K1-illustration-v1-20261012",
+        "nativeSHA256": "8ff222a4147cfd6fa2758e38f1b4a97b34307a3a0d5eb2eff2828db3a39e1e97",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/antananarivo/e08-antananarivo-K1-illustration-v1-20261012-8ff222a4147c.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e08",
+        "city": "antananarivo",
+        "slot": "K1",
+        "targetJsonPath": "$.kaupunkilehti[0].nostot[0]",
+        "verifiedAt": "2026-10-13T05:58:09.849381+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/antananarivo/e08-antananarivo-K1-illustration-v1-20261012-8ff222a4147c.png",
+        "sha256": "dc36dbc6e3279f4b6ed664c40886ca7262439690edceafa267d2bd6fd4901f1f",
+        "bytes": 1951636,
+        "SHAReadAt": "2026-10-13T05:57:56.085071+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "8ff222a4147cfd6fa2758e38f1b4a97b34307a3a0d5eb2eff2828db3a39e1e97",
+        "rgbPixelSHA256": "c3f66270e4eb03d5b1c02bf823f201e54eeb5a4f664177fe1b07b0116576fd58",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "7a4d5fa01aec14637573d2a248aade78ed1939ca47659a70f1924ad1de3aaf17",
+      "targetAfterSHA256": "e12c7218f7f96beb38d791abfd33940065fe2bad7c6ecce7686fc37f92661517",
+      "contextAfterSHA256": "e12c7218f7f96beb38d791abfd33940065fe2bad7c6ecce7686fc37f92661517",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e08",
@@ -753,7 +1210,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/antananarivo/sisalto.json",
-      "sourceContentSHA256": "b3232a08d75b78768d174ec399c70cb7e7504cfad30e5afac273341b25e97d2a",
+      "sourceContentSHA256": "7a4d5fa01aec14637573d2a248aade78ed1939ca47659a70f1924ad1de3aaf17",
       "semanticSourceBind": {
         "targetBeforeSHA256": "7680619c36cad7a005a93b2e61946f6c23877c2c1e4f26423789f0cd3cd3f7a1",
         "semanticContextSHA256": "7680619c36cad7a005a93b2e61946f6c23877c2c1e4f26423789f0cd3cd3f7a1",
@@ -1059,7 +1516,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "7a4d5fa01aec14637573d2a248aade78ed1939ca47659a70f1924ad1de3aaf17",
       "targetAfterSHA256": "7680619c36cad7a005a93b2e61946f6c23877c2c1e4f26423789f0cd3cd3f7a1",
-      "contextAfterSHA256": "7680619c36cad7a005a93b2e61946f6c23877c2c1e4f26423789f0cd3cd3f7a1"
+      "contextAfterSHA256": "7680619c36cad7a005a93b2e61946f6c23877c2c1e4f26423789f0cd3cd3f7a1",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e08",
@@ -1109,7 +1568,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/antananarivo/sisalto.json",
-      "sourceContentSHA256": "b3232a08d75b78768d174ec399c70cb7e7504cfad30e5afac273341b25e97d2a",
+      "sourceContentSHA256": "7a4d5fa01aec14637573d2a248aade78ed1939ca47659a70f1924ad1de3aaf17",
       "semanticSourceBind": {
         "targetBeforeSHA256": "c3a0886069f4269e5fcc8d018da18d58f4a57dbe55c4737649511b2c95554dc3",
         "semanticContextSHA256": "c3a0886069f4269e5fcc8d018da18d58f4a57dbe55c4737649511b2c95554dc3",
@@ -1415,7 +1874,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "7a4d5fa01aec14637573d2a248aade78ed1939ca47659a70f1924ad1de3aaf17",
       "targetAfterSHA256": "c3a0886069f4269e5fcc8d018da18d58f4a57dbe55c4737649511b2c95554dc3",
-      "contextAfterSHA256": "c3a0886069f4269e5fcc8d018da18d58f4a57dbe55c4737649511b2c95554dc3"
+      "contextAfterSHA256": "c3a0886069f4269e5fcc8d018da18d58f4a57dbe55c4737649511b2c95554dc3",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e08",
@@ -1465,7 +1926,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/antananarivo/sisalto.json",
-      "sourceContentSHA256": "b3232a08d75b78768d174ec399c70cb7e7504cfad30e5afac273341b25e97d2a",
+      "sourceContentSHA256": "7a4d5fa01aec14637573d2a248aade78ed1939ca47659a70f1924ad1de3aaf17",
       "semanticSourceBind": {
         "targetBeforeSHA256": "d72212096727b0711a2bfff0fc45307ad32ab8da07b9a3747dd6fa14adf044f6",
         "semanticContextSHA256": "d72212096727b0711a2bfff0fc45307ad32ab8da07b9a3747dd6fa14adf044f6",
@@ -1771,456 +2232,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "7a4d5fa01aec14637573d2a248aade78ed1939ca47659a70f1924ad1de3aaf17",
       "targetAfterSHA256": "d72212096727b0711a2bfff0fc45307ad32ab8da07b9a3747dd6fa14adf044f6",
-      "contextAfterSHA256": "d72212096727b0711a2bfff0fc45307ad32ab8da07b9a3747dd6fa14adf044f6"
-    },
-    {
-      "era": "e08",
-      "city": "antananarivo",
-      "slot": "O3",
-      "type": "illustration",
-      "assetID": "e08-antananarivo-O3-illustration-v1-20261012",
-      "galleryImageID": "e08-antananarivo-O3-illustration-v1-20261012",
-      "commonsFile": null,
-      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[2].kuva",
-      "targetTokens": [
-        "kaupunkilehti",
-        0,
-        "matkailijalle",
-        "artikkeli",
-        "jaksot",
-        2,
-        "kuva"
-      ],
-      "operation": "merge-media-fields-preserve-other-content",
-      "CmediaFieldPayload": {
-        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/antananarivo/e08-antananarivo-O3-illustration-v1-20261012-7e99148f4e48.png",
-        "suora": true,
-        "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva jakarandan kukista ja lehdistä.",
-        "lyhyt": "Havainnekuva jakarandan kukista ja lehdistä."
-      },
-      "removeMediaKeys": [
-        "tiedosto"
-      ],
-      "CvalidatorCompatiblePayload": {},
-      "runtimeMediaFieldPayload": {
-        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/antananarivo/e08-antananarivo-O3-illustration-v1-20261012-7e99148f4e48.png",
-        "suora": true,
-        "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva jakarandan kukista ja lehdistä.",
-        "lyhyt": "Havainnekuva jakarandan kukista ja lehdistä."
-      },
-      "runtimeRemoveMediaKeys": [
-        "tiedosto"
-      ],
-      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
-      "nativeSHA256": "7e99148f4e48c3062ef1db2e2b94d7453b7f9b5b0ee8cca05940d0032f59a4eb",
-      "exportSHA256": "0da62ad5e4a2e0cf5348ba3cbb5b55abe150af925e9b7d6bf9e91552b6a91cba",
-      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/antananarivo/e08-antananarivo-O3-illustration-v1-20261012-7e99148f4e48.png",
-      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/antananarivo/e08-antananarivo-O3-illustration-v1-20261012-7e99148f4e48.png",
-      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/antananarivo/e08-antananarivo-O3-illustration-v1-20261012-7e99148f4e48.png",
-      "dimensions": [
-        1536,
-        1024
-      ],
-      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/antananarivo/sisalto.json",
-      "sourceContentSHA256": "b3232a08d75b78768d174ec399c70cb7e7504cfad30e5afac273341b25e97d2a",
-      "semanticSourceBind": {
-        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "3bd2a72ccf39b55dd3813f1e9aeb941dea49b6fc310d1eb398602f8af0e30bfa",
-        "subjectTitle": "Anosy ja vanhat asuinkorttelit",
-        "targetState": "existing-target"
-      },
-      "attribution": {
-        "author": null,
-        "license": null,
-        "licenseUrl": null,
-        "sourcePage": null,
-        "originalUrl": null,
-        "rightsEvidence": {
-          "production": {
-            "scope": "Common natural material, plant, animal, food or unbranded functional object. No named protected artwork or real architecture/collection reconstruction.",
-            "notLocationProof": true
-          },
-          "QA": {
-            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/antananarivo/assets/e08-antananarivo-O3-illustration-v1-20261012/image.png",
-            "nativeSha256Verified": "7e99148f4e48c3062ef1db2e2b94d7453b7f9b5b0ee8cca05940d0032f59a4eb",
-            "nativeWidth": 1536,
-            "nativeHeight": 1024,
-            "format": "PNG",
-            "nativeMode": "RGB",
-            "visualInspection": "Tarkistaja katsoi itse natiivin NAS-tiedoston view_image-työkalulla original-tarkkuudessa tässä sessiossa: Haarautuva kukinto, violetit putkimaiset kukat ja hennot kahdesti parilehdykkäiset lehdet. Eri avautumisasteet luontevia; ei tekstiä, logoja tai henkilöitä.",
-            "captionFi": "Havainnekuva jakarandan kukista ja lehdistä.",
-            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/antananarivo/sisalto.json",
-            "contentSha256": "b3232a08d75b78768d174ec399c70cb7e7504cfad30e5afac273341b25e97d2a",
-            "targetCurrentlyPresent": true,
-            "targetText": "Anosy-järvi on rakennettu järvi keskustan eteläpuolella. Sen saari ja rantaa reunustavat jakarandat kuuluvat kaupungin maisemaan. Yläkaupungissa taas kannattaa tarkastella asuintalojen tiiltä ja verantoja: trano gasy on paikallisen rakennustavan nimi. Järvi, kauppakeskusta ja yläkaupunki tarjoavat erilaiset näkymät saman kaupungin arkeen.",
-            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/antananarivo/faktapohja.md",
-            "factSheetSha256": "cd24a15fb3aefce1cd60eb7c02da79b02a94309018c264a5b5ac43d369c2e493",
-            "topicEvidence": "Faktapohja S3 Lake Anosy ja §4: jakarandat.",
-            "rightsAssessment": "Yleinen luonnon-, materiaali-, ruoka- tai arkiesineaihe; ei nimettyä nykytaideteosta. Aiheen ja paikkarehellisyyden arvio verdictissä ja omassa silmähavainnossa.",
-            "scope": "Vain riippumaton natiivikuvituksen QA; R2-toimitus, integrointi ja julkaisu eivät ole kuitattuja."
-          },
-          "qaReason": "Jakarandan kukat ja lehdet vastaavat Anosy-jakson kasviaihetta. Kuva ei väitä olevansa järven paikkakuva."
-        }
-      },
-      "luentaMetadata": {
-        "existingImageLuenta": null,
-        "captionReadingText": "Havainnekuva jakarandan kukista ja lehdistä.",
-        "existingArticleAndSectionLuentaPreserved": true,
-        "audioGenerated": false,
-        "audioURL": null,
-        "imageSpecificAudioProvided": false,
-        "reuseAudioAllowedByThisPacket": false
-      },
-      "qaEvidence": {
-        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/antananarivo/illustration-qa-extra.json",
-        "fileSHA256": "cbde9aa9d3182acb7dcdd02159bbff1fc8dea7ab4c71729d3e6b4029d82efd97",
-        "item": {
-          "slot": "O3",
-          "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[2].kuva",
-          "assetID": "e08-antananarivo-O3-illustration-v1-20261012",
-          "sha256": "7e99148f4e48c3062ef1db2e2b94d7453b7f9b5b0ee8cca05940d0032f59a4eb",
-          "verdict": "accepted",
-          "reason": "Jakarandan kukat ja lehdet vastaavat Anosy-jakson kasviaihetta. Kuva ei väitä olevansa järven paikkakuva.",
-          "evidence": {
-            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/antananarivo/assets/e08-antananarivo-O3-illustration-v1-20261012/image.png",
-            "nativeSha256Verified": "7e99148f4e48c3062ef1db2e2b94d7453b7f9b5b0ee8cca05940d0032f59a4eb",
-            "nativeWidth": 1536,
-            "nativeHeight": 1024,
-            "format": "PNG",
-            "nativeMode": "RGB",
-            "visualInspection": "Tarkistaja katsoi itse natiivin NAS-tiedoston view_image-työkalulla original-tarkkuudessa tässä sessiossa: Haarautuva kukinto, violetit putkimaiset kukat ja hennot kahdesti parilehdykkäiset lehdet. Eri avautumisasteet luontevia; ei tekstiä, logoja tai henkilöitä.",
-            "captionFi": "Havainnekuva jakarandan kukista ja lehdistä.",
-            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/antananarivo/sisalto.json",
-            "contentSha256": "b3232a08d75b78768d174ec399c70cb7e7504cfad30e5afac273341b25e97d2a",
-            "targetCurrentlyPresent": true,
-            "targetText": "Anosy-järvi on rakennettu järvi keskustan eteläpuolella. Sen saari ja rantaa reunustavat jakarandat kuuluvat kaupungin maisemaan. Yläkaupungissa taas kannattaa tarkastella asuintalojen tiiltä ja verantoja: trano gasy on paikallisen rakennustavan nimi. Järvi, kauppakeskusta ja yläkaupunki tarjoavat erilaiset näkymät saman kaupungin arkeen.",
-            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/antananarivo/faktapohja.md",
-            "factSheetSha256": "cd24a15fb3aefce1cd60eb7c02da79b02a94309018c264a5b5ac43d369c2e493",
-            "topicEvidence": "Faktapohja S3 Lake Anosy ja §4: jakarandat.",
-            "rightsAssessment": "Yleinen luonnon-, materiaali-, ruoka- tai arkiesineaihe; ei nimettyä nykytaideteosta. Aiheen ja paikkarehellisyyden arvio verdictissä ja omassa silmähavainnossa.",
-            "scope": "Vain riippumaton natiivikuvituksen QA; R2-toimitus, integrointi ja julkaisu eivät ole kuitattuja."
-          },
-          "reviewedAt": "2026-10-13T05:57:46.999946+00:00",
-          "reviewerSession": "e08-extra-01a131d7-1d58-7eb0-a959-c0073288e011"
-        },
-        "allSources": [
-          {
-            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/antananarivo/qa.json",
-            "sha256": "aef25e0e741df5b2997ed50c845901d07665567111debc0ee3d3d19f721b4cb8"
-          },
-          {
-            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/antananarivo/illustration-qa-extra.json",
-            "sha256": "cbde9aa9d3182acb7dcdd02159bbff1fc8dea7ab4c71729d3e6b4029d82efd97"
-          }
-        ]
-      },
-      "R2ByteVerification": {
-        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/antananarivo/e08-antananarivo-O3-illustration-v1-20261012-7e99148f4e48.png",
-        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/antananarivo/e08-antananarivo-O3-illustration-v1-20261012-7e99148f4e48.png?t=0da62ad5e4a2e0cf",
-        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/antananarivo/e08-antananarivo-O3-illustration-v1-20261012-7e99148f4e48.png",
-        "sha256": "0da62ad5e4a2e0cf5348ba3cbb5b55abe150af925e9b7d6bf9e91552b6a91cba",
-        "bytes": 2678782,
-        "http": 200,
-        "mime": "image/png",
-        "cors": "https://matkakirja.app",
-        "cacheBustedPreflightHttp": 404,
-        "cacheBustedReadback": true,
-        "byteExactReadback": true,
-        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
-        "conditionalIfNoneMatch": "*",
-        "s3PutHttp": 200,
-        "assetID": "e08-antananarivo-O3-illustration-v1-20261012",
-        "nativeSHA256": "7e99148f4e48c3062ef1db2e2b94d7453b7f9b5b0ee8cca05940d0032f59a4eb",
-        "canonicalReadbackByteExact": true,
-        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/antananarivo/e08-antananarivo-O3-illustration-v1-20261012-7e99148f4e48.png",
-        "pixelIdenticalToQAAcceptedNative": true,
-        "era": "e08",
-        "city": "antananarivo",
-        "slot": "O3",
-        "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[2].kuva",
-        "verifiedAt": "2026-10-13T05:58:08.601384+00:00",
-        "ownerAcceptanceVerified": false,
-        "gameIntegrated": false,
-        "galleryVisibleVerified": false
-      },
-      "producerExportProof": null,
-      "technicalExportProof": {
-        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/antananarivo/e08-antananarivo-O3-illustration-v1-20261012-7e99148f4e48.png",
-        "sha256": "0da62ad5e4a2e0cf5348ba3cbb5b55abe150af925e9b7d6bf9e91552b6a91cba",
-        "bytes": 2678782,
-        "SHAReadAt": "2026-10-13T05:57:56.284738+00:00",
-        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
-        "width": 1536,
-        "height": 1024,
-        "pixelWidth": 1536,
-        "pixelHeight": 1024,
-        "exifOrientation": 1,
-        "dimensionsBasis": "EXIF-oriented-display",
-        "format": "PNG",
-        "largeOriginalHeaderOnlyRead": false,
-        "nativeSHA256": "7e99148f4e48c3062ef1db2e2b94d7453b7f9b5b0ee8cca05940d0032f59a4eb",
-        "rgbPixelSHA256": "8f5821e4213c72d12d2cb7d75adf167e0523e6588b058cb55f50aad22dad2b65",
-        "pixelIdenticalToQAAcceptedNative": true,
-        "sRGBProfileEmbedded": true,
-        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
-      },
-      "priorMediaFields": {
-        "tiedosto": "",
-        "lahde": "",
-        "selite": "",
-        "lyhyt": ""
-      },
-      "preservePreviousMediaObjects": true,
-      "authorization": {
-        "status": "waived-owner-review",
-        "authorizedByOwner": true,
-        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
-        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
-        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
-        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
-        "ownerAcceptanceImplied": false,
-        "QARequired": true,
-        "R2ByteVerificationRequired": true,
-        "galleryBeforeGameRequired": false,
-        "verifiedHumanMessageSource": {
-          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
-          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
-        }
-      },
-      "ownerAcceptanceVerified": false,
-      "gameIntegrated": false,
-      "gamePublicationVerified": false,
-      "inMemoryMergeVerified": true,
-      "CcommonsMetadataBound": false,
-      "roleManifestBound": true,
-      "sourceContentAfterSHA256": "7a4d5fa01aec14637573d2a248aade78ed1939ca47659a70f1924ad1de3aaf17",
-      "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "3bd2a72ccf39b55dd3813f1e9aeb941dea49b6fc310d1eb398602f8af0e30bfa"
-    },
-    {
-      "era": "e08",
-      "city": "antananarivo",
-      "slot": "K1",
-      "type": "illustration",
-      "assetID": "e08-antananarivo-K1-illustration-v1-20261012",
-      "galleryImageID": "e08-antananarivo-K1-illustration-v1-20261012",
-      "commonsFile": null,
-      "targetJsonPath": "$.kaupunkilehti[0].nostot[0]",
-      "targetTokens": [
-        "kaupunkilehti",
-        0,
-        "nostot",
-        0
-      ],
-      "operation": "merge-media-fields-preserve-other-content",
-      "CmediaFieldPayload": {
-        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/antananarivo/e08-antananarivo-K1-illustration-v1-20261012-8ff222a4147c.png",
-        "suora": true,
-        "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva torin valkoisen päivänvarjon materiaalista.",
-        "lyhyt": "Havainnekuva torin valkoisen päivänvarjon materiaalista."
-      },
-      "removeMediaKeys": [
-        "tiedosto"
-      ],
-      "CvalidatorCompatiblePayload": {},
-      "runtimeMediaFieldPayload": {
-        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/antananarivo/e08-antananarivo-K1-illustration-v1-20261012-8ff222a4147c.png",
-        "suora": true,
-        "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva torin valkoisen päivänvarjon materiaalista.",
-        "lyhyt": "Havainnekuva torin valkoisen päivänvarjon materiaalista."
-      },
-      "runtimeRemoveMediaKeys": [
-        "tiedosto"
-      ],
-      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
-      "nativeSHA256": "8ff222a4147cfd6fa2758e38f1b4a97b34307a3a0d5eb2eff2828db3a39e1e97",
-      "exportSHA256": "dc36dbc6e3279f4b6ed664c40886ca7262439690edceafa267d2bd6fd4901f1f",
-      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/antananarivo/e08-antananarivo-K1-illustration-v1-20261012-8ff222a4147c.png",
-      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/antananarivo/e08-antananarivo-K1-illustration-v1-20261012-8ff222a4147c.png",
-      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/antananarivo/e08-antananarivo-K1-illustration-v1-20261012-8ff222a4147c.png",
-      "dimensions": [
-        1536,
-        1024
-      ],
-      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/antananarivo/sisalto.json",
-      "sourceContentSHA256": "b3232a08d75b78768d174ec399c70cb7e7504cfad30e5afac273341b25e97d2a",
-      "semanticSourceBind": {
-        "targetBeforeSHA256": "e12c7218f7f96beb38d791abfd33940065fe2bad7c6ecce7686fc37f92661517",
-        "semanticContextSHA256": "e12c7218f7f96beb38d791abfd33940065fe2bad7c6ecce7686fc37f92661517",
-        "subjectTitle": "Perjantai muutti osoitetta",
-        "targetState": "existing-target"
-      },
-      "attribution": {
-        "author": null,
-        "license": null,
-        "licenseUrl": null,
-        "sourcePage": null,
-        "originalUrl": null,
-        "rightsEvidence": {
-          "production": {
-            "scope": "Common natural material, plant, animal, food or unbranded functional object. No named protected artwork or real architecture/collection reconstruction.",
-            "notLocationProof": true
-          },
-          "QA": {
-            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/antananarivo/assets/e08-antananarivo-K1-illustration-v1-20261012/image.png",
-            "nativeSha256Verified": "8ff222a4147cfd6fa2758e38f1b4a97b34307a3a0d5eb2eff2828db3a39e1e97",
-            "nativeWidth": 1536,
-            "nativeHeight": 1024,
-            "format": "PNG",
-            "nativeMode": "RGB",
-            "visualInspection": "Tarkistaja katsoi itse natiivin NAS-tiedoston view_image-työkalulla original-tarkkuudessa tässä sessiossa: Valkoinen kangas, puinen keskitanko, säteittäiset ruoteet ja nivelletyt tuet. Kangas laskostuu luontevasti; ei logoja, tekstiä tai ihmisiä.",
-            "captionFi": "Havainnekuva torin valkoisen päivänvarjon materiaalista.",
-            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/antananarivo/sisalto.json",
-            "contentSha256": "b3232a08d75b78768d174ec399c70cb7e7504cfad30e5afac273341b25e97d2a",
-            "targetCurrentlyPresent": true,
-            "targetText": "Zoma tarkoittaa perjantaita, ja Antananarivossa se oli myös suuren torin nimi. Kauppiaat pystyttivät valkoisten päivänvarjojen alle myyntipaikkoja Analakelyn laaksoon. Toripäivän määräsi jo Merinan kuningas Andrianampoinimerina. Kaupunki muuttui, ja viime vuosisadan lopulla perjantain kauppiaat siirrettiin eri kaupunginosiin liikenteen ja turvallisuuden vuoksi. Analakely ei silti lakannut olemasta kauppapaikka: sen kauppapaviljongit ja ympäröivät liikkeet jatkavat alueen arkista tehtävää.",
-            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/antananarivo/faktapohja.md",
-            "factSheetSha256": "cd24a15fb3aefce1cd60eb7c02da79b02a94309018c264a5b5ac43d369c2e493",
-            "topicEvidence": "Faktapohja §3, S1 Cityscape: valkoiset päivänvarjot.",
-            "rightsAssessment": "Yleinen luonnon-, materiaali-, ruoka- tai arkiesineaihe; ei nimettyä nykytaideteosta. Aiheen ja paikkarehellisyyden arvio verdictissä ja omassa silmähavainnossa.",
-            "scope": "Vain riippumaton natiivikuvituksen QA; R2-toimitus, integrointi ja julkaisu eivät ole kuitattuja."
-          },
-          "qaReason": "Valkoinen päivänvarjo vastaa Zoma-tekstin materiaalia, ilman torin todellisen asettelun väitettä."
-        }
-      },
-      "luentaMetadata": {
-        "existingImageLuenta": null,
-        "captionReadingText": "Havainnekuva torin valkoisen päivänvarjon materiaalista.",
-        "existingArticleAndSectionLuentaPreserved": true,
-        "audioGenerated": false,
-        "audioURL": null,
-        "imageSpecificAudioProvided": false,
-        "reuseAudioAllowedByThisPacket": false
-      },
-      "qaEvidence": {
-        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/antananarivo/illustration-qa-extra.json",
-        "fileSHA256": "cbde9aa9d3182acb7dcdd02159bbff1fc8dea7ab4c71729d3e6b4029d82efd97",
-        "item": {
-          "slot": "K1",
-          "targetJsonPath": "$.kaupunkilehti[0].nostot[0]",
-          "assetID": "e08-antananarivo-K1-illustration-v1-20261012",
-          "sha256": "8ff222a4147cfd6fa2758e38f1b4a97b34307a3a0d5eb2eff2828db3a39e1e97",
-          "verdict": "accepted",
-          "reason": "Valkoinen päivänvarjo vastaa Zoma-tekstin materiaalia, ilman torin todellisen asettelun väitettä.",
-          "evidence": {
-            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/antananarivo/assets/e08-antananarivo-K1-illustration-v1-20261012/image.png",
-            "nativeSha256Verified": "8ff222a4147cfd6fa2758e38f1b4a97b34307a3a0d5eb2eff2828db3a39e1e97",
-            "nativeWidth": 1536,
-            "nativeHeight": 1024,
-            "format": "PNG",
-            "nativeMode": "RGB",
-            "visualInspection": "Tarkistaja katsoi itse natiivin NAS-tiedoston view_image-työkalulla original-tarkkuudessa tässä sessiossa: Valkoinen kangas, puinen keskitanko, säteittäiset ruoteet ja nivelletyt tuet. Kangas laskostuu luontevasti; ei logoja, tekstiä tai ihmisiä.",
-            "captionFi": "Havainnekuva torin valkoisen päivänvarjon materiaalista.",
-            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/antananarivo/sisalto.json",
-            "contentSha256": "b3232a08d75b78768d174ec399c70cb7e7504cfad30e5afac273341b25e97d2a",
-            "targetCurrentlyPresent": true,
-            "targetText": "Zoma tarkoittaa perjantaita, ja Antananarivossa se oli myös suuren torin nimi. Kauppiaat pystyttivät valkoisten päivänvarjojen alle myyntipaikkoja Analakelyn laaksoon. Toripäivän määräsi jo Merinan kuningas Andrianampoinimerina. Kaupunki muuttui, ja viime vuosisadan lopulla perjantain kauppiaat siirrettiin eri kaupunginosiin liikenteen ja turvallisuuden vuoksi. Analakely ei silti lakannut olemasta kauppapaikka: sen kauppapaviljongit ja ympäröivät liikkeet jatkavat alueen arkista tehtävää.",
-            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/antananarivo/faktapohja.md",
-            "factSheetSha256": "cd24a15fb3aefce1cd60eb7c02da79b02a94309018c264a5b5ac43d369c2e493",
-            "topicEvidence": "Faktapohja §3, S1 Cityscape: valkoiset päivänvarjot.",
-            "rightsAssessment": "Yleinen luonnon-, materiaali-, ruoka- tai arkiesineaihe; ei nimettyä nykytaideteosta. Aiheen ja paikkarehellisyyden arvio verdictissä ja omassa silmähavainnossa.",
-            "scope": "Vain riippumaton natiivikuvituksen QA; R2-toimitus, integrointi ja julkaisu eivät ole kuitattuja."
-          },
-          "reviewedAt": "2026-10-13T05:57:46.931284+00:00",
-          "reviewerSession": "e08-extra-01a131d7-1d58-7eb0-a959-c0073288e011"
-        },
-        "allSources": [
-          {
-            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/antananarivo/qa.json",
-            "sha256": "aef25e0e741df5b2997ed50c845901d07665567111debc0ee3d3d19f721b4cb8"
-          },
-          {
-            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/antananarivo/illustration-qa-extra.json",
-            "sha256": "cbde9aa9d3182acb7dcdd02159bbff1fc8dea7ab4c71729d3e6b4029d82efd97"
-          }
-        ]
-      },
-      "R2ByteVerification": {
-        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/antananarivo/e08-antananarivo-K1-illustration-v1-20261012-8ff222a4147c.png",
-        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/antananarivo/e08-antananarivo-K1-illustration-v1-20261012-8ff222a4147c.png?t=dc36dbc6e3279f4b",
-        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/antananarivo/e08-antananarivo-K1-illustration-v1-20261012-8ff222a4147c.png",
-        "sha256": "dc36dbc6e3279f4b6ed664c40886ca7262439690edceafa267d2bd6fd4901f1f",
-        "bytes": 1951636,
-        "http": 200,
-        "mime": "image/png",
-        "cors": "https://matkakirja.app",
-        "cacheBustedPreflightHttp": 404,
-        "cacheBustedReadback": true,
-        "byteExactReadback": true,
-        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
-        "conditionalIfNoneMatch": "*",
-        "s3PutHttp": 200,
-        "assetID": "e08-antananarivo-K1-illustration-v1-20261012",
-        "nativeSHA256": "8ff222a4147cfd6fa2758e38f1b4a97b34307a3a0d5eb2eff2828db3a39e1e97",
-        "canonicalReadbackByteExact": true,
-        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/antananarivo/e08-antananarivo-K1-illustration-v1-20261012-8ff222a4147c.png",
-        "pixelIdenticalToQAAcceptedNative": true,
-        "era": "e08",
-        "city": "antananarivo",
-        "slot": "K1",
-        "targetJsonPath": "$.kaupunkilehti[0].nostot[0]",
-        "verifiedAt": "2026-10-13T05:58:09.849381+00:00",
-        "ownerAcceptanceVerified": false,
-        "gameIntegrated": false,
-        "galleryVisibleVerified": false
-      },
-      "producerExportProof": null,
-      "technicalExportProof": {
-        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/antananarivo/e08-antananarivo-K1-illustration-v1-20261012-8ff222a4147c.png",
-        "sha256": "dc36dbc6e3279f4b6ed664c40886ca7262439690edceafa267d2bd6fd4901f1f",
-        "bytes": 1951636,
-        "SHAReadAt": "2026-10-13T05:57:56.085071+00:00",
-        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
-        "width": 1536,
-        "height": 1024,
-        "pixelWidth": 1536,
-        "pixelHeight": 1024,
-        "exifOrientation": 1,
-        "dimensionsBasis": "EXIF-oriented-display",
-        "format": "PNG",
-        "largeOriginalHeaderOnlyRead": false,
-        "nativeSHA256": "8ff222a4147cfd6fa2758e38f1b4a97b34307a3a0d5eb2eff2828db3a39e1e97",
-        "rgbPixelSHA256": "c3f66270e4eb03d5b1c02bf823f201e54eeb5a4f664177fe1b07b0116576fd58",
-        "pixelIdenticalToQAAcceptedNative": true,
-        "sRGBProfileEmbedded": true,
-        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
-      },
-      "priorMediaFields": {
-        "tiedosto": "",
-        "lahde": "",
-        "selite": "",
-        "lyhyt": ""
-      },
-      "preservePreviousMediaObjects": true,
-      "authorization": {
-        "status": "waived-owner-review",
-        "authorizedByOwner": true,
-        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
-        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
-        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
-        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
-        "ownerAcceptanceImplied": false,
-        "QARequired": true,
-        "R2ByteVerificationRequired": true,
-        "galleryBeforeGameRequired": false,
-        "verifiedHumanMessageSource": {
-          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
-          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
-        }
-      },
-      "ownerAcceptanceVerified": false,
-      "gameIntegrated": false,
-      "gamePublicationVerified": false,
-      "inMemoryMergeVerified": true,
-      "CcommonsMetadataBound": false,
-      "roleManifestBound": true,
-      "sourceContentAfterSHA256": "7a4d5fa01aec14637573d2a248aade78ed1939ca47659a70f1924ad1de3aaf17",
-      "targetAfterSHA256": "e12c7218f7f96beb38d791abfd33940065fe2bad7c6ecce7686fc37f92661517",
-      "contextAfterSHA256": "e12c7218f7f96beb38d791abfd33940065fe2bad7c6ecce7686fc37f92661517"
+      "contextAfterSHA256": "d72212096727b0711a2bfff0fc45307ad32ab8da07b9a3747dd6fa14adf044f6",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e08",
@@ -2270,7 +2284,7 @@
         1536
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/antananarivo/sisalto.json",
-      "sourceContentSHA256": "b3232a08d75b78768d174ec399c70cb7e7504cfad30e5afac273341b25e97d2a",
+      "sourceContentSHA256": "7a4d5fa01aec14637573d2a248aade78ed1939ca47659a70f1924ad1de3aaf17",
       "semanticSourceBind": {
         "targetBeforeSHA256": "817b1bc59dc27a3934558b59b8f8be98e8722b86bf29bae9879055efd74cc052",
         "semanticContextSHA256": "817b1bc59dc27a3934558b59b8f8be98e8722b86bf29bae9879055efd74cc052",
@@ -2485,7 +2499,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "7a4d5fa01aec14637573d2a248aade78ed1939ca47659a70f1924ad1de3aaf17",
       "targetAfterSHA256": "817b1bc59dc27a3934558b59b8f8be98e8722b86bf29bae9879055efd74cc052",
-      "contextAfterSHA256": "817b1bc59dc27a3934558b59b8f8be98e8722b86bf29bae9879055efd74cc052"
+      "contextAfterSHA256": "817b1bc59dc27a3934558b59b8f8be98e8722b86bf29bae9879055efd74cc052",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e08",
@@ -2538,10 +2554,10 @@
         3765
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/antananarivo/sisalto.json",
-      "sourceContentSHA256": "b3232a08d75b78768d174ec399c70cb7e7504cfad30e5afac273341b25e97d2a",
+      "sourceContentSHA256": "7a4d5fa01aec14637573d2a248aade78ed1939ca47659a70f1924ad1de3aaf17",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "targetBeforeSHA256": "1c443fe66abbe157315c18822a07a2b29451d01258fb47d9fb6ba6c1f0e74906",
+        "semanticContextSHA256": "1c443fe66abbe157315c18822a07a2b29451d01258fb47d9fb6ba6c1f0e74906",
         "subjectTitle": "Antananarivo",
         "targetState": "existing-target"
       },
@@ -2765,10 +2781,10 @@
       "producerExportProof": null,
       "technicalExportProof": null,
       "priorMediaFields": {
-        "tiedosto": "",
-        "lahde": "",
-        "selite": "",
-        "lyhyt": ""
+        "tiedosto": "Antananarivo in Madagascar ESA23267313.jpeg",
+        "lahde": "European Space Agency, Wikimedia Commons (CC BY-SA 3.0 igo)",
+        "selite": "Antananarivo ja sitä ympäröiviä viljelyalueita Sentinel-2-satelliitista, 2017.",
+        "lyhyt": "Antananarivo ja sitä ympäröiviä viljelyalueita Sentinel-2-satelliitista, 2017."
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -2801,7 +2817,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "7a4d5fa01aec14637573d2a248aade78ed1939ca47659a70f1924ad1de3aaf17",
       "targetAfterSHA256": "1c443fe66abbe157315c18822a07a2b29451d01258fb47d9fb6ba6c1f0e74906",
-      "contextAfterSHA256": "1c443fe66abbe157315c18822a07a2b29451d01258fb47d9fb6ba6c1f0e74906"
+      "contextAfterSHA256": "1c443fe66abbe157315c18822a07a2b29451d01258fb47d9fb6ba6c1f0e74906",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e08",
@@ -2854,10 +2872,10 @@
         3216
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/antananarivo/sisalto.json",
-      "sourceContentSHA256": "b3232a08d75b78768d174ec399c70cb7e7504cfad30e5afac273341b25e97d2a",
+      "sourceContentSHA256": "7a4d5fa01aec14637573d2a248aade78ed1939ca47659a70f1924ad1de3aaf17",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "targetBeforeSHA256": "78e4a0c352b298b753666004f7452f50cbd8db82270b462e79fde77312e60154",
+        "semanticContextSHA256": "78e4a0c352b298b753666004f7452f50cbd8db82270b462e79fde77312e60154",
         "subjectTitle": "Antananarivo",
         "targetState": "existing-target"
       },
@@ -3046,10 +3064,10 @@
       "producerExportProof": null,
       "technicalExportProof": null,
       "priorMediaFields": {
-        "tiedosto": "",
-        "lahde": "",
-        "selite": "",
-        "lyhyt": ""
+        "tiedosto": "Antananarivo 2013 1.jpg",
+        "lahde": "Smiley.toerist, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Antananarivon laaja kaupunkinäkymä Rovan suunnasta, 2013.",
+        "lyhyt": "Antananarivon laaja kaupunkinäkymä Rovan suunnasta, 2013."
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -3082,7 +3100,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "7a4d5fa01aec14637573d2a248aade78ed1939ca47659a70f1924ad1de3aaf17",
       "targetAfterSHA256": "78e4a0c352b298b753666004f7452f50cbd8db82270b462e79fde77312e60154",
-      "contextAfterSHA256": "78e4a0c352b298b753666004f7452f50cbd8db82270b462e79fde77312e60154"
+      "contextAfterSHA256": "78e4a0c352b298b753666004f7452f50cbd8db82270b462e79fde77312e60154",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e08",
@@ -3135,10 +3155,10 @@
         1200
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/antananarivo/sisalto.json",
-      "sourceContentSHA256": "b3232a08d75b78768d174ec399c70cb7e7504cfad30e5afac273341b25e97d2a",
+      "sourceContentSHA256": "7a4d5fa01aec14637573d2a248aade78ed1939ca47659a70f1924ad1de3aaf17",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "targetBeforeSHA256": "727f5c3845194b099c6b240da50a593e531765712102c4bc9bfa777514475d18",
+        "semanticContextSHA256": "727f5c3845194b099c6b240da50a593e531765712102c4bc9bfa777514475d18",
         "subjectTitle": "Antananarivo",
         "targetState": "existing-target"
       },
@@ -3329,10 +3349,10 @@
       "producerExportProof": null,
       "technicalExportProof": null,
       "priorMediaFields": {
-        "tiedosto": "",
-        "lahde": "",
-        "selite": "",
-        "lyhyt": ""
+        "tiedosto": "Antananarivo (atamari).jpg",
+        "lahde": "Robin Taylor (robin.elaine) from Washington, DC, USA, Wikimedia Commons (CC BY 2.0)",
+        "selite": "Antananarivon asutusta ja kasvillisuutta kukkulamaisemassa, 2004.",
+        "lyhyt": "Antananarivon asutusta ja kasvillisuutta kukkulamaisemassa, 2004."
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -3365,7 +3385,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "7a4d5fa01aec14637573d2a248aade78ed1939ca47659a70f1924ad1de3aaf17",
       "targetAfterSHA256": "727f5c3845194b099c6b240da50a593e531765712102c4bc9bfa777514475d18",
-      "contextAfterSHA256": "727f5c3845194b099c6b240da50a593e531765712102c4bc9bfa777514475d18"
+      "contextAfterSHA256": "727f5c3845194b099c6b240da50a593e531765712102c4bc9bfa777514475d18",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e08",
@@ -3418,7 +3440,7 @@
         2736
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/antananarivo/sisalto.json",
-      "sourceContentSHA256": "b3232a08d75b78768d174ec399c70cb7e7504cfad30e5afac273341b25e97d2a",
+      "sourceContentSHA256": "7a4d5fa01aec14637573d2a248aade78ed1939ca47659a70f1924ad1de3aaf17",
       "semanticSourceBind": {
         "targetBeforeSHA256": "49163db1c788a209883607c0ed4401632dbb2f22df6b0412f500ae5f2cb3fbd5",
         "semanticContextSHA256": "a88ac8717e75369d72c94c5fb9c947a66ce3a7c09a4b5a66dea8e4601be3c0f3",
@@ -3637,10 +3659,14 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "7a4d5fa01aec14637573d2a248aade78ed1939ca47659a70f1924ad1de3aaf17",
       "targetAfterSHA256": "49163db1c788a209883607c0ed4401632dbb2f22df6b0412f500ae5f2cb3fbd5",
-      "contextAfterSHA256": "a88ac8717e75369d72c94c5fb9c947a66ce3a7c09a4b5a66dea8e4601be3c0f3"
+      "contextAfterSHA256": "a88ac8717e75369d72c94c5fb9c947a66ce3a7c09a4b5a66dea8e4601be3c0f3",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     }
   ],
   "runtimeIntegrationPending": true,
-  "ownerAcceptedNotImpliedByAuthorization": true,
-  "gameIntegrated": false
+  "ownerAcceptedNotImpliedByAuthorization": false,
+  "gameIntegrated": false,
+  "allAssetsExplicitlyOwnerApproved": true,
+  "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
 }

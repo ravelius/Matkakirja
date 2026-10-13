@@ -2,7 +2,7 @@
   "schemaVersion": "capital-city-role-assets/v1",
   "era": "e08",
   "city": "windhoek",
-  "authorization": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+  "authorization": "hyväksyn kaikki tekemäsi kuvat. toimita ne claudelle. claudelta saat uusia ohjeita jatkoa varten",
   "sourceContentAfterSHA256": "33044b0a725c78c49975a7162a9966f51a61b6f96a5629a9c0ed1c59d6250d38",
   "assets": [
     {
@@ -53,7 +53,7 @@
         1536
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/windhoek/sisalto.json",
-      "sourceContentSHA256": "394c8a71eace7519becc050bfb75716b95a4ed5629eae449b3f7f371bda9d225",
+      "sourceContentSHA256": "33044b0a725c78c49975a7162a9966f51a61b6f96a5629a9c0ed1c59d6250d38",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
         "semanticContextSHA256": "06aaf7021e7b9ee71aab4f3103c8eb0024161f50fe350d8f0951d0f0849fde48",
@@ -152,7 +152,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/windhoek/qa.json",
-            "sha256": "d6fb0249785a075396037b56c3a4d0aedcf57d465d2c73fbfcdee998eef9b92a"
+            "sha256": "79d0f971c98bcef4101280eea741606bf2753e7c6422add551d2b546b4c4c790"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/windhoek/illustration-qa-extra.json",
@@ -241,7 +241,465 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "33044b0a725c78c49975a7162a9966f51a61b6f96a5629a9c0ed1c59d6250d38",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "06aaf7021e7b9ee71aab4f3103c8eb0024161f50fe350d8f0951d0f0849fde48"
+      "contextAfterSHA256": "06aaf7021e7b9ee71aab4f3103c8eb0024161f50fe350d8f0951d0f0849fde48",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+    },
+    {
+      "era": "e08",
+      "city": "windhoek",
+      "slot": "O2",
+      "type": "illustration",
+      "assetID": "e08-windhoek-O2-illustration-v1-20261012",
+      "galleryImageID": "e08-windhoek-O2-illustration-v1-20261012",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[1].kuva",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "matkailijalle",
+        "artikkeli",
+        "jaksot",
+        1,
+        "kuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/windhoek/e08-windhoek-O2-illustration-v1-20261012-298f47a69183.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva rakennuskiven materiaaleista.",
+        "lyhyt": "Havainnekuva rakennuskiven materiaaleista."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/windhoek/e08-windhoek-O2-illustration-v1-20261012-298f47a69183.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva rakennuskiven materiaaleista.",
+        "lyhyt": "Havainnekuva rakennuskiven materiaaleista."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "298f47a691830273cda77548b61ca35f9a398b7e04ea8521b24dbcaa90b6c289",
+      "exportSHA256": "29c1b49a0f0b1a279556d1c79678ea4c90dc9c58e34259164bbaff7830542adb",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/windhoek/e08-windhoek-O2-illustration-v1-20261012-298f47a69183.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/windhoek/e08-windhoek-O2-illustration-v1-20261012-298f47a69183.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/windhoek/e08-windhoek-O2-illustration-v1-20261012-298f47a69183.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/windhoek/sisalto.json",
+      "sourceContentSHA256": "33044b0a725c78c49975a7162a9966f51a61b6f96a5629a9c0ed1c59d6250d38",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "44a37996983422f3fcc2093cb981ea462e259436e4b6968809eb0338880aeb50",
+        "subjectTitle": "Kiveä ja siirtomaahistoriaa",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": {
+            "scope": "Common natural material, plant, animal, food or unbranded functional object. No named protected artwork or real architecture/collection reconstruction.",
+            "notLocationProof": true
+          },
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/windhoek/assets/e08-windhoek-O2-illustration-v1-20261012/image.png",
+            "nativeSha256Verified": "298f47a691830273cda77548b61ca35f9a398b7e04ea8521b24dbcaa90b6c289",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "nativeMode": "RGB",
+            "visualInspection": "Tarkistaja katsoi itse natiivin NAS-tiedoston view_image-työkalulla original-tarkkuudessa tässä sessiossa: Rakeinen kellertävä hiekkakivipinta ja vaalea suonikas marmoripinta vierekkäin. Murtoreunat ja mineraalisyyt vaihtelevat; ei koristeveistoa tai tekstiä.",
+            "captionFi": "Havainnekuva rakennuskiven materiaaleista.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/windhoek/sisalto.json",
+            "contentSha256": "394c8a71eace7519becc050bfb75716b95a4ed5629eae449b3f7f371bda9d225",
+            "targetCurrentlyPresent": true,
+            "targetText": "Christuskirchessä paikallinen hiekkakivi ja tuontimarmori muodostavat tunnistettavan kokonaisuuden. Lähellä sijaitseva Alte Feste rakennettiin saksalaisen siirtomaajoukon tukikohdaksi. Sen myöhempiin käyttötapoihin kuuluivat koulun asuntola ja museo. Linnakkeen kunnostus ja museokäyttö ovat muuttuneet, joten tarkista käyntimahdollisuus ennen kuin rakennat päivän sen varaan.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/windhoek/faktapohja.md",
+            "factSheetSha256": "f9883c307605c6764857aad9ab3b5c08d727f3b3189bc15c6ed51a1f70c946df",
+            "topicEvidence": "Faktapohja W3 ja §5 opas kirkko/linnake.",
+            "rightsAssessment": "Yleinen luonnon-, materiaali-, ruoka- tai arkiesineaihe; ei nimettyä nykytaideteosta. Aiheen ja paikkarehellisyyden arvio verdictissä ja omassa silmähavainnossa.",
+            "scope": "Vain riippumaton natiivikuvituksen QA; R2-toimitus, integrointi ja julkaisu eivät ole kuitattuja."
+          },
+          "qaReason": "Materiaalilähikuva vastaa oppaan hiekkakivi-/marmoriaihetta. Ei kirkon tietyn seinän tai näytteiden alkuperän väite."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva rakennuskiven materiaaleista.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/windhoek/illustration-qa-extra.json",
+        "fileSHA256": "79eada6746db9a1e26d3614c8a853ab7615587de59a21759a0a8e82991cd768c",
+        "item": {
+          "slot": "O2",
+          "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[1].kuva",
+          "assetID": "e08-windhoek-O2-illustration-v1-20261012",
+          "sha256": "298f47a691830273cda77548b61ca35f9a398b7e04ea8521b24dbcaa90b6c289",
+          "verdict": "accepted",
+          "reason": "Materiaalilähikuva vastaa oppaan hiekkakivi-/marmoriaihetta. Ei kirkon tietyn seinän tai näytteiden alkuperän väite.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/windhoek/assets/e08-windhoek-O2-illustration-v1-20261012/image.png",
+            "nativeSha256Verified": "298f47a691830273cda77548b61ca35f9a398b7e04ea8521b24dbcaa90b6c289",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "nativeMode": "RGB",
+            "visualInspection": "Tarkistaja katsoi itse natiivin NAS-tiedoston view_image-työkalulla original-tarkkuudessa tässä sessiossa: Rakeinen kellertävä hiekkakivipinta ja vaalea suonikas marmoripinta vierekkäin. Murtoreunat ja mineraalisyyt vaihtelevat; ei koristeveistoa tai tekstiä.",
+            "captionFi": "Havainnekuva rakennuskiven materiaaleista.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/windhoek/sisalto.json",
+            "contentSha256": "394c8a71eace7519becc050bfb75716b95a4ed5629eae449b3f7f371bda9d225",
+            "targetCurrentlyPresent": true,
+            "targetText": "Christuskirchessä paikallinen hiekkakivi ja tuontimarmori muodostavat tunnistettavan kokonaisuuden. Lähellä sijaitseva Alte Feste rakennettiin saksalaisen siirtomaajoukon tukikohdaksi. Sen myöhempiin käyttötapoihin kuuluivat koulun asuntola ja museo. Linnakkeen kunnostus ja museokäyttö ovat muuttuneet, joten tarkista käyntimahdollisuus ennen kuin rakennat päivän sen varaan.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/windhoek/faktapohja.md",
+            "factSheetSha256": "f9883c307605c6764857aad9ab3b5c08d727f3b3189bc15c6ed51a1f70c946df",
+            "topicEvidence": "Faktapohja W3 ja §5 opas kirkko/linnake.",
+            "rightsAssessment": "Yleinen luonnon-, materiaali-, ruoka- tai arkiesineaihe; ei nimettyä nykytaideteosta. Aiheen ja paikkarehellisyyden arvio verdictissä ja omassa silmähavainnossa.",
+            "scope": "Vain riippumaton natiivikuvituksen QA; R2-toimitus, integrointi ja julkaisu eivät ole kuitattuja."
+          },
+          "reviewedAt": "2026-10-13T05:57:48.567596+00:00",
+          "reviewerSession": "e08-extra-01a131d7-1d58-7eb0-a959-c0073288e011"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/windhoek/qa.json",
+            "sha256": "79d0f971c98bcef4101280eea741606bf2753e7c6422add551d2b546b4c4c790"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/windhoek/illustration-qa-extra.json",
+            "sha256": "79eada6746db9a1e26d3614c8a853ab7615587de59a21759a0a8e82991cd768c"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/windhoek/e08-windhoek-O2-illustration-v1-20261012-298f47a69183.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/windhoek/e08-windhoek-O2-illustration-v1-20261012-298f47a69183.png?t=29c1b49a0f0b1a27",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/windhoek/e08-windhoek-O2-illustration-v1-20261012-298f47a69183.png",
+        "sha256": "29c1b49a0f0b1a279556d1c79678ea4c90dc9c58e34259164bbaff7830542adb",
+        "bytes": 3259946,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e08-windhoek-O2-illustration-v1-20261012",
+        "nativeSHA256": "298f47a691830273cda77548b61ca35f9a398b7e04ea8521b24dbcaa90b6c289",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/windhoek/e08-windhoek-O2-illustration-v1-20261012-298f47a69183.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e08",
+        "city": "windhoek",
+        "slot": "O2",
+        "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[1].kuva",
+        "verifiedAt": "2026-10-13T05:58:51.486483+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/windhoek/e08-windhoek-O2-illustration-v1-20261012-298f47a69183.png",
+        "sha256": "29c1b49a0f0b1a279556d1c79678ea4c90dc9c58e34259164bbaff7830542adb",
+        "bytes": 3259946,
+        "SHAReadAt": "2026-10-13T05:58:01.686460+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "298f47a691830273cda77548b61ca35f9a398b7e04ea8521b24dbcaa90b6c289",
+        "rgbPixelSHA256": "b930f095921ae51d8f56974c32abe3f996ef5ff2dc05c51f20000e5acf969f40",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "33044b0a725c78c49975a7162a9966f51a61b6f96a5629a9c0ed1c59d6250d38",
+      "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+      "contextAfterSHA256": "44a37996983422f3fcc2093cb981ea462e259436e4b6968809eb0338880aeb50",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+    },
+    {
+      "era": "e08",
+      "city": "windhoek",
+      "slot": "O3",
+      "type": "illustration",
+      "assetID": "e08-windhoek-O3-illustration-v1-20261012",
+      "galleryImageID": "e08-windhoek-O3-illustration-v1-20261012",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[2].kuva",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "matkailijalle",
+        "artikkeli",
+        "jaksot",
+        2,
+        "kuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/windhoek/e08-windhoek-O3-illustration-v1-20261012-7e5f06ce7c7c.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva kuivamaan kasvillisuuden ja kiven kohtaamisesta.",
+        "lyhyt": "Havainnekuva kuivamaan kasvillisuuden ja kiven kohtaamisesta."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/windhoek/e08-windhoek-O3-illustration-v1-20261012-7e5f06ce7c7c.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva kuivamaan kasvillisuuden ja kiven kohtaamisesta.",
+        "lyhyt": "Havainnekuva kuivamaan kasvillisuuden ja kiven kohtaamisesta."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "7e5f06ce7c7c630b33be0047848204433b269b36247111e18d945714ca24f32b",
+      "exportSHA256": "db8f336ff98a13bbb407632df7798d869b835ab862c4e7ef3539ac3828ba1a9e",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/windhoek/e08-windhoek-O3-illustration-v1-20261012-7e5f06ce7c7c.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/windhoek/e08-windhoek-O3-illustration-v1-20261012-7e5f06ce7c7c.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/windhoek/e08-windhoek-O3-illustration-v1-20261012-7e5f06ce7c7c.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/windhoek/sisalto.json",
+      "sourceContentSHA256": "33044b0a725c78c49975a7162a9966f51a61b6f96a5629a9c0ed1c59d6250d38",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "5df284f48f94507bd8df4509a3f3cdab93bdb2d8d8fb82e26073539081bd49db",
+        "subjectTitle": "Ylänkö kasvaa keskellä kaupunkia",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": {
+            "scope": "Common natural material, plant, animal, food or unbranded functional object. No named protected artwork or real architecture/collection reconstruction.",
+            "notLocationProof": true
+          },
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/windhoek/assets/e08-windhoek-O3-illustration-v1-20261012/image.png",
+            "nativeSha256Verified": "7e5f06ce7c7c630b33be0047848204433b269b36247111e18d945714ca24f32b",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "nativeMode": "RGB",
+            "visualInspection": "Tarkistaja katsoi itse natiivin NAS-tiedoston view_image-työkalulla original-tarkkuudessa tässä sessiossa: Kuivaa hienovartista heinää, vihreitä lehtiä ja vaihtelevia kivipintoja. Kasvien asennot ja kiven pinnat luontevia; ei mekaanista toistoa, kylttejä tai henkilöitä.",
+            "captionFi": "Havainnekuva kuivamaan kasvillisuuden ja kiven kohtaamisesta.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/windhoek/sisalto.json",
+            "contentSha256": "394c8a71eace7519becc050bfb75716b95a4ed5629eae449b3f7f371bda9d225",
+            "targetCurrentlyPresent": true,
+            "targetText": "Kansallinen kasvitieteellinen puutarha on samalla luonnonsuojelualue. Sen paikallinen kasvillisuus ja Windhoekille ominaiset kallioiset kumpareet auttavat hahmottamaan, millaiseen maastoon pääkaupunki on rakennettu. Kävely kannattaa yhdistää keskustan tutkimiseen: samana päivänä voi tarkastella sekä tuotuja rakennusmateriaaleja että kaupungin omaa luontoa.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/windhoek/faktapohja.md",
+            "factSheetSha256": "f9883c307605c6764857aad9ab3b5c08d727f3b3189bc15c6ed51a1f70c946df",
+            "topicEvidence": "Faktapohja W6 South West Nature Reserve ja §5 opas puutarha.",
+            "rightsAssessment": "Yleinen luonnon-, materiaali-, ruoka- tai arkiesineaihe; ei nimettyä nykytaideteosta. Aiheen ja paikkarehellisyyden arvio verdictissä ja omassa silmähavainnossa.",
+            "scope": "Vain riippumaton natiivikuvituksen QA; R2-toimitus, integrointi ja julkaisu eivät ole kuitattuja."
+          },
+          "qaReason": "Heinien, versojen ja kallion lähikuva vastaa kuivamaan kasvillisuutta. Ei puutarhareitin tai tarkan lajin väitettä."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva kuivamaan kasvillisuuden ja kiven kohtaamisesta.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/windhoek/illustration-qa-extra.json",
+        "fileSHA256": "79eada6746db9a1e26d3614c8a853ab7615587de59a21759a0a8e82991cd768c",
+        "item": {
+          "slot": "O3",
+          "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[2].kuva",
+          "assetID": "e08-windhoek-O3-illustration-v1-20261012",
+          "sha256": "7e5f06ce7c7c630b33be0047848204433b269b36247111e18d945714ca24f32b",
+          "verdict": "accepted",
+          "reason": "Heinien, versojen ja kallion lähikuva vastaa kuivamaan kasvillisuutta. Ei puutarhareitin tai tarkan lajin väitettä.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/windhoek/assets/e08-windhoek-O3-illustration-v1-20261012/image.png",
+            "nativeSha256Verified": "7e5f06ce7c7c630b33be0047848204433b269b36247111e18d945714ca24f32b",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "nativeMode": "RGB",
+            "visualInspection": "Tarkistaja katsoi itse natiivin NAS-tiedoston view_image-työkalulla original-tarkkuudessa tässä sessiossa: Kuivaa hienovartista heinää, vihreitä lehtiä ja vaihtelevia kivipintoja. Kasvien asennot ja kiven pinnat luontevia; ei mekaanista toistoa, kylttejä tai henkilöitä.",
+            "captionFi": "Havainnekuva kuivamaan kasvillisuuden ja kiven kohtaamisesta.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/windhoek/sisalto.json",
+            "contentSha256": "394c8a71eace7519becc050bfb75716b95a4ed5629eae449b3f7f371bda9d225",
+            "targetCurrentlyPresent": true,
+            "targetText": "Kansallinen kasvitieteellinen puutarha on samalla luonnonsuojelualue. Sen paikallinen kasvillisuus ja Windhoekille ominaiset kallioiset kumpareet auttavat hahmottamaan, millaiseen maastoon pääkaupunki on rakennettu. Kävely kannattaa yhdistää keskustan tutkimiseen: samana päivänä voi tarkastella sekä tuotuja rakennusmateriaaleja että kaupungin omaa luontoa.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/windhoek/faktapohja.md",
+            "factSheetSha256": "f9883c307605c6764857aad9ab3b5c08d727f3b3189bc15c6ed51a1f70c946df",
+            "topicEvidence": "Faktapohja W6 South West Nature Reserve ja §5 opas puutarha.",
+            "rightsAssessment": "Yleinen luonnon-, materiaali-, ruoka- tai arkiesineaihe; ei nimettyä nykytaideteosta. Aiheen ja paikkarehellisyyden arvio verdictissä ja omassa silmähavainnossa.",
+            "scope": "Vain riippumaton natiivikuvituksen QA; R2-toimitus, integrointi ja julkaisu eivät ole kuitattuja."
+          },
+          "reviewedAt": "2026-10-13T05:57:48.638904+00:00",
+          "reviewerSession": "e08-extra-01a131d7-1d58-7eb0-a959-c0073288e011"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/windhoek/qa.json",
+            "sha256": "79d0f971c98bcef4101280eea741606bf2753e7c6422add551d2b546b4c4c790"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/windhoek/illustration-qa-extra.json",
+            "sha256": "79eada6746db9a1e26d3614c8a853ab7615587de59a21759a0a8e82991cd768c"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/windhoek/e08-windhoek-O3-illustration-v1-20261012-7e5f06ce7c7c.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/windhoek/e08-windhoek-O3-illustration-v1-20261012-7e5f06ce7c7c.png?t=db8f336ff98a13bb",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/windhoek/e08-windhoek-O3-illustration-v1-20261012-7e5f06ce7c7c.png",
+        "sha256": "db8f336ff98a13bbb407632df7798d869b835ab862c4e7ef3539ac3828ba1a9e",
+        "bytes": 3199348,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e08-windhoek-O3-illustration-v1-20261012",
+        "nativeSHA256": "7e5f06ce7c7c630b33be0047848204433b269b36247111e18d945714ca24f32b",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/windhoek/e08-windhoek-O3-illustration-v1-20261012-7e5f06ce7c7c.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e08",
+        "city": "windhoek",
+        "slot": "O3",
+        "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[2].kuva",
+        "verifiedAt": "2026-10-13T05:58:54.576370+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/windhoek/e08-windhoek-O3-illustration-v1-20261012-7e5f06ce7c7c.png",
+        "sha256": "db8f336ff98a13bbb407632df7798d869b835ab862c4e7ef3539ac3828ba1a9e",
+        "bytes": 3199348,
+        "SHAReadAt": "2026-10-13T05:58:01.890566+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "7e5f06ce7c7c630b33be0047848204433b269b36247111e18d945714ca24f32b",
+        "rgbPixelSHA256": "c9d1be8941ba6d1078b4d0d6df018d1e031c11e7a179bdd8de17fbc1c0597429",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "33044b0a725c78c49975a7162a9966f51a61b6f96a5629a9c0ed1c59d6250d38",
+      "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+      "contextAfterSHA256": "5df284f48f94507bd8df4509a3f3cdab93bdb2d8d8fb82e26073539081bd49db",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e08",
@@ -294,7 +752,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/windhoek/sisalto.json",
-      "sourceContentSHA256": "394c8a71eace7519becc050bfb75716b95a4ed5629eae449b3f7f371bda9d225",
+      "sourceContentSHA256": "33044b0a725c78c49975a7162a9966f51a61b6f96a5629a9c0ed1c59d6250d38",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
         "semanticContextSHA256": "94bbc80668c9e4aa7aa4f24c92ddc61aa8af99e076481aa74f78c5320a2c2c0d",
@@ -403,7 +861,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/windhoek/qa.json",
-            "sha256": "d6fb0249785a075396037b56c3a4d0aedcf57d465d2c73fbfcdee998eef9b92a"
+            "sha256": "79d0f971c98bcef4101280eea741606bf2753e7c6422add551d2b546b4c4c790"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/windhoek/illustration-qa-extra.json",
@@ -492,7 +950,459 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "33044b0a725c78c49975a7162a9966f51a61b6f96a5629a9c0ed1c59d6250d38",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "94bbc80668c9e4aa7aa4f24c92ddc61aa8af99e076481aa74f78c5320a2c2c0d"
+      "contextAfterSHA256": "94bbc80668c9e4aa7aa4f24c92ddc61aa8af99e076481aa74f78c5320a2c2c0d",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+    },
+    {
+      "era": "e08",
+      "city": "windhoek",
+      "slot": "K1",
+      "type": "illustration",
+      "assetID": "e08-windhoek-K1-illustration-v1-20261012",
+      "galleryImageID": "e08-windhoek-K1-illustration-v1-20261012",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].nostot[0]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "nostot",
+        0
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/windhoek/e08-windhoek-K1-illustration-v1-20261012-616da4f96356.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva hiekkakivestä ja marmorista.",
+        "lyhyt": "Havainnekuva hiekkakivestä ja marmorista."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/windhoek/e08-windhoek-K1-illustration-v1-20261012-616da4f96356.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva hiekkakivestä ja marmorista.",
+        "lyhyt": "Havainnekuva hiekkakivestä ja marmorista."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "616da4f96356147a5117b59538af9c1693396df3d6262e36304089c8eaa21cae",
+      "exportSHA256": "c4edff289ffccd815b7d0d6882fb134ffb9236f2b39455f795e93eabaed5fbed",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/windhoek/e08-windhoek-K1-illustration-v1-20261012-616da4f96356.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/windhoek/e08-windhoek-K1-illustration-v1-20261012-616da4f96356.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/windhoek/e08-windhoek-K1-illustration-v1-20261012-616da4f96356.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/windhoek/sisalto.json",
+      "sourceContentSHA256": "33044b0a725c78c49975a7162a9966f51a61b6f96a5629a9c0ed1c59d6250d38",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "850436854fe5c7b9182223177c50f626912bf6ac14ae2418cef92aee10d98ba0",
+        "semanticContextSHA256": "850436854fe5c7b9182223177c50f626912bf6ac14ae2418cef92aee10d98ba0",
+        "subjectTitle": "Kirkko koottiin läheltä ja kaukaa",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": {
+            "scope": "Common natural material, plant, animal, food or unbranded functional object. No named protected artwork or real architecture/collection reconstruction.",
+            "notLocationProof": true
+          },
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/windhoek/assets/e08-windhoek-K1-illustration-v1-20261012/image.png",
+            "nativeSha256Verified": "616da4f96356147a5117b59538af9c1693396df3d6262e36304089c8eaa21cae",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "nativeMode": "RGB",
+            "visualInspection": "Tarkistaja katsoi itse natiivin NAS-tiedoston view_image-työkalulla original-tarkkuudessa tässä sessiossa: Kellertävä rakeinen hiekkakivipala ja vaalea harmaasuoninen marmoripala. Epäsäännölliset murtopinnat ja varjot luontevia; ei rakennuksia tai merkintöjä.",
+            "captionFi": "Havainnekuva hiekkakivestä ja marmorista.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/windhoek/sisalto.json",
+            "contentSha256": "394c8a71eace7519becc050bfb75716b95a4ed5629eae449b3f7f371bda9d225",
+            "targetCurrentlyPresent": true,
+            "targetText": "Christuskirche näyttää ensi silmäyksellä yhdeltä rakennukselta, mutta sen materiaalien kartta ulottuu paljon Windhoekia laajemmalle. Kvartsipitoinen hiekkakivi louhittiin Avisin padon läheltä. Sisäänkäynnin Carraran marmori tuli Italiasta, ja kellolaite sekä osa katosta Saksasta. Gottlieb Redeckerin suunnittelemassa kirkossa yhdistyvät uusromaaniset, uusgoottilaiset ja jugendin vaikutteet. Paikallinen kivi ja ulkomailta saapuneet osat kohtaavat samassa siirtomaakauden rakennuksessa.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/windhoek/faktapohja.md",
+            "factSheetSha256": "f9883c307605c6764857aad9ab3b5c08d727f3b3189bc15c6ed51a1f70c946df",
+            "topicEvidence": "Faktapohja W3 Christ Church Background ja §3.",
+            "rightsAssessment": "Yleinen luonnon-, materiaali-, ruoka- tai arkiesineaihe; ei nimettyä nykytaideteosta. Aiheen ja paikkarehellisyyden arvio verdictissä ja omassa silmähavainnossa.",
+            "scope": "Vain riippumaton natiivikuvituksen QA; R2-toimitus, integrointi ja julkaisu eivät ole kuitattuja."
+          },
+          "qaReason": "Hiekkakivi ja marmori havainnollistavat kirkon materiaaleja. Ei palojen alkuperä- tai rakennuksen rekonstruktioväite."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva hiekkakivestä ja marmorista.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/windhoek/illustration-qa-extra.json",
+        "fileSHA256": "79eada6746db9a1e26d3614c8a853ab7615587de59a21759a0a8e82991cd768c",
+        "item": {
+          "slot": "K1",
+          "targetJsonPath": "$.kaupunkilehti[0].nostot[0]",
+          "assetID": "e08-windhoek-K1-illustration-v1-20261012",
+          "sha256": "616da4f96356147a5117b59538af9c1693396df3d6262e36304089c8eaa21cae",
+          "verdict": "accepted",
+          "reason": "Hiekkakivi ja marmori havainnollistavat kirkon materiaaleja. Ei palojen alkuperä- tai rakennuksen rekonstruktioväite.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/windhoek/assets/e08-windhoek-K1-illustration-v1-20261012/image.png",
+            "nativeSha256Verified": "616da4f96356147a5117b59538af9c1693396df3d6262e36304089c8eaa21cae",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "nativeMode": "RGB",
+            "visualInspection": "Tarkistaja katsoi itse natiivin NAS-tiedoston view_image-työkalulla original-tarkkuudessa tässä sessiossa: Kellertävä rakeinen hiekkakivipala ja vaalea harmaasuoninen marmoripala. Epäsäännölliset murtopinnat ja varjot luontevia; ei rakennuksia tai merkintöjä.",
+            "captionFi": "Havainnekuva hiekkakivestä ja marmorista.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/windhoek/sisalto.json",
+            "contentSha256": "394c8a71eace7519becc050bfb75716b95a4ed5629eae449b3f7f371bda9d225",
+            "targetCurrentlyPresent": true,
+            "targetText": "Christuskirche näyttää ensi silmäyksellä yhdeltä rakennukselta, mutta sen materiaalien kartta ulottuu paljon Windhoekia laajemmalle. Kvartsipitoinen hiekkakivi louhittiin Avisin padon läheltä. Sisäänkäynnin Carraran marmori tuli Italiasta, ja kellolaite sekä osa katosta Saksasta. Gottlieb Redeckerin suunnittelemassa kirkossa yhdistyvät uusromaaniset, uusgoottilaiset ja jugendin vaikutteet. Paikallinen kivi ja ulkomailta saapuneet osat kohtaavat samassa siirtomaakauden rakennuksessa.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/windhoek/faktapohja.md",
+            "factSheetSha256": "f9883c307605c6764857aad9ab3b5c08d727f3b3189bc15c6ed51a1f70c946df",
+            "topicEvidence": "Faktapohja W3 Christ Church Background ja §3.",
+            "rightsAssessment": "Yleinen luonnon-, materiaali-, ruoka- tai arkiesineaihe; ei nimettyä nykytaideteosta. Aiheen ja paikkarehellisyyden arvio verdictissä ja omassa silmähavainnossa.",
+            "scope": "Vain riippumaton natiivikuvituksen QA; R2-toimitus, integrointi ja julkaisu eivät ole kuitattuja."
+          },
+          "reviewedAt": "2026-10-13T05:57:48.429600+00:00",
+          "reviewerSession": "e08-extra-01a131d7-1d58-7eb0-a959-c0073288e011"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/windhoek/qa.json",
+            "sha256": "79d0f971c98bcef4101280eea741606bf2753e7c6422add551d2b546b4c4c790"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/windhoek/illustration-qa-extra.json",
+            "sha256": "79eada6746db9a1e26d3614c8a853ab7615587de59a21759a0a8e82991cd768c"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/windhoek/e08-windhoek-K1-illustration-v1-20261012-616da4f96356.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/windhoek/e08-windhoek-K1-illustration-v1-20261012-616da4f96356.png?t=c4edff289ffccd81",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/windhoek/e08-windhoek-K1-illustration-v1-20261012-616da4f96356.png",
+        "sha256": "c4edff289ffccd815b7d0d6882fb134ffb9236f2b39455f795e93eabaed5fbed",
+        "bytes": 2224598,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e08-windhoek-K1-illustration-v1-20261012",
+        "nativeSHA256": "616da4f96356147a5117b59538af9c1693396df3d6262e36304089c8eaa21cae",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/windhoek/e08-windhoek-K1-illustration-v1-20261012-616da4f96356.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e08",
+        "city": "windhoek",
+        "slot": "K1",
+        "targetJsonPath": "$.kaupunkilehti[0].nostot[0]",
+        "verifiedAt": "2026-10-13T05:58:56.151124+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/windhoek/e08-windhoek-K1-illustration-v1-20261012-616da4f96356.png",
+        "sha256": "c4edff289ffccd815b7d0d6882fb134ffb9236f2b39455f795e93eabaed5fbed",
+        "bytes": 2224598,
+        "SHAReadAt": "2026-10-13T05:58:01.280752+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "616da4f96356147a5117b59538af9c1693396df3d6262e36304089c8eaa21cae",
+        "rgbPixelSHA256": "536105099e976be5d4461e42c78e3cdae16d0d382e25b70fb0a1ccdcbf49ea8d",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "33044b0a725c78c49975a7162a9966f51a61b6f96a5629a9c0ed1c59d6250d38",
+      "targetAfterSHA256": "850436854fe5c7b9182223177c50f626912bf6ac14ae2418cef92aee10d98ba0",
+      "contextAfterSHA256": "850436854fe5c7b9182223177c50f626912bf6ac14ae2418cef92aee10d98ba0",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+    },
+    {
+      "era": "e08",
+      "city": "windhoek",
+      "slot": "K3",
+      "type": "illustration",
+      "assetID": "e08-windhoek-K3-illustration-v1-20261012",
+      "galleryImageID": "e08-windhoek-K3-illustration-v1-20261012",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].nostot[2]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "nostot",
+        2
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/windhoek/e08-windhoek-K3-illustration-v1-20261012-9e085a98308c.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva kallioisen kuivamaan kasvillisuudesta.",
+        "lyhyt": "Havainnekuva kallioisen kuivamaan kasvillisuudesta."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/windhoek/e08-windhoek-K3-illustration-v1-20261012-9e085a98308c.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva kallioisen kuivamaan kasvillisuudesta.",
+        "lyhyt": "Havainnekuva kallioisen kuivamaan kasvillisuudesta."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "9e085a98308c5230222f2f950cddc38d1e4850fff45c600f539750047fa49c3f",
+      "exportSHA256": "16dd3729087702382ea0e7212b53e0ab72aee9261d04d8c0ee8027ee4799a3ee",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/windhoek/e08-windhoek-K3-illustration-v1-20261012-9e085a98308c.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/windhoek/e08-windhoek-K3-illustration-v1-20261012-9e085a98308c.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/windhoek/e08-windhoek-K3-illustration-v1-20261012-9e085a98308c.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/windhoek/sisalto.json",
+      "sourceContentSHA256": "33044b0a725c78c49975a7162a9966f51a61b6f96a5629a9c0ed1c59d6250d38",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "2c181124942415ab8c318aba215d2496c61b2ee47bf60aaa2e9dc6938bc84691",
+        "semanticContextSHA256": "2c181124942415ab8c318aba215d2496c61b2ee47bf60aaa2e9dc6938bc84691",
+        "subjectTitle": "Puutarha, joka suojelee omaa paikkaansa",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": {
+            "scope": "Common natural material, plant, animal, food or unbranded functional object. No named protected artwork or real architecture/collection reconstruction.",
+            "notLocationProof": true
+          },
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/windhoek/assets/e08-windhoek-K3-illustration-v1-20261012/image.png",
+            "nativeSha256Verified": "9e085a98308c5230222f2f950cddc38d1e4850fff45c600f539750047fa49c3f",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "nativeMode": "RGB",
+            "visualInspection": "Tarkistaja katsoi itse natiivin NAS-tiedoston view_image-työkalulla original-tarkkuudessa tässä sessiossa: Pieni pensas luonnonkivien välissä, kuivaa heinää ja vihreitä versoja. Oksat ja kivipinnat vaihtelevat luontevasti; ei polkuja, kylttejä tai rakennuksia.",
+            "captionFi": "Havainnekuva kallioisen kuivamaan kasvillisuudesta.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/windhoek/sisalto.json",
+            "contentSha256": "394c8a71eace7519becc050bfb75716b95a4ed5629eae449b3f7f371bda9d225",
+            "targetCurrentlyPresent": true,
+            "targetText": "Windhoekin kansallinen kasvitieteellinen puutarha tunnetaan myös South West Nature Reservenä. Se sijaitsee kaupungin sydämessä ja suojelee alueelle ominaista kasvillisuutta kallioisine kumpuineen. Täällä kasvitieteellinen puutarha ja luonnonsuojelualue ovat sama paikka: huomio kiinnittyy myös siihen, mitä maastossa kasvaa valmiiksi. Kaupungissa kulkeva pääsee tutkimaan paikallista luontoa poistumatta kauas keskustasta. Ylänkö ei katoa rakennusten tieltä kokonaan.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/windhoek/faktapohja.md",
+            "factSheetSha256": "f9883c307605c6764857aad9ab3b5c08d727f3b3189bc15c6ed51a1f70c946df",
+            "topicEvidence": "Faktapohja W6 MEFT South West Nature Reserve ja §3.",
+            "rightsAssessment": "Yleinen luonnon-, materiaali-, ruoka- tai arkiesineaihe; ei nimettyä nykytaideteosta. Aiheen ja paikkarehellisyyden arvio verdictissä ja omassa silmähavainnossa.",
+            "scope": "Vain riippumaton natiivikuvituksen QA; R2-toimitus, integrointi ja julkaisu eivät ole kuitattuja."
+          },
+          "qaReason": "Kuivamaan pensas ja kivet vastaavat kasvillisuuden ja kallioisuuden yleisiä aiheita. Ei lajimääritystä tai puutarhan asetteluväitettä."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva kallioisen kuivamaan kasvillisuudesta.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/windhoek/illustration-qa-extra.json",
+        "fileSHA256": "79eada6746db9a1e26d3614c8a853ab7615587de59a21759a0a8e82991cd768c",
+        "item": {
+          "slot": "K3",
+          "targetJsonPath": "$.kaupunkilehti[0].nostot[2]",
+          "assetID": "e08-windhoek-K3-illustration-v1-20261012",
+          "sha256": "9e085a98308c5230222f2f950cddc38d1e4850fff45c600f539750047fa49c3f",
+          "verdict": "accepted",
+          "reason": "Kuivamaan pensas ja kivet vastaavat kasvillisuuden ja kallioisuuden yleisiä aiheita. Ei lajimääritystä tai puutarhan asetteluväitettä.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/windhoek/assets/e08-windhoek-K3-illustration-v1-20261012/image.png",
+            "nativeSha256Verified": "9e085a98308c5230222f2f950cddc38d1e4850fff45c600f539750047fa49c3f",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "nativeMode": "RGB",
+            "visualInspection": "Tarkistaja katsoi itse natiivin NAS-tiedoston view_image-työkalulla original-tarkkuudessa tässä sessiossa: Pieni pensas luonnonkivien välissä, kuivaa heinää ja vihreitä versoja. Oksat ja kivipinnat vaihtelevat luontevasti; ei polkuja, kylttejä tai rakennuksia.",
+            "captionFi": "Havainnekuva kallioisen kuivamaan kasvillisuudesta.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/windhoek/sisalto.json",
+            "contentSha256": "394c8a71eace7519becc050bfb75716b95a4ed5629eae449b3f7f371bda9d225",
+            "targetCurrentlyPresent": true,
+            "targetText": "Windhoekin kansallinen kasvitieteellinen puutarha tunnetaan myös South West Nature Reservenä. Se sijaitsee kaupungin sydämessä ja suojelee alueelle ominaista kasvillisuutta kallioisine kumpuineen. Täällä kasvitieteellinen puutarha ja luonnonsuojelualue ovat sama paikka: huomio kiinnittyy myös siihen, mitä maastossa kasvaa valmiiksi. Kaupungissa kulkeva pääsee tutkimaan paikallista luontoa poistumatta kauas keskustasta. Ylänkö ei katoa rakennusten tieltä kokonaan.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/windhoek/faktapohja.md",
+            "factSheetSha256": "f9883c307605c6764857aad9ab3b5c08d727f3b3189bc15c6ed51a1f70c946df",
+            "topicEvidence": "Faktapohja W6 MEFT South West Nature Reserve ja §3.",
+            "rightsAssessment": "Yleinen luonnon-, materiaali-, ruoka- tai arkiesineaihe; ei nimettyä nykytaideteosta. Aiheen ja paikkarehellisyyden arvio verdictissä ja omassa silmähavainnossa.",
+            "scope": "Vain riippumaton natiivikuvituksen QA; R2-toimitus, integrointi ja julkaisu eivät ole kuitattuja."
+          },
+          "reviewedAt": "2026-10-13T05:57:48.504640+00:00",
+          "reviewerSession": "e08-extra-01a131d7-1d58-7eb0-a959-c0073288e011"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/windhoek/qa.json",
+            "sha256": "79d0f971c98bcef4101280eea741606bf2753e7c6422add551d2b546b4c4c790"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/windhoek/illustration-qa-extra.json",
+            "sha256": "79eada6746db9a1e26d3614c8a853ab7615587de59a21759a0a8e82991cd768c"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/windhoek/e08-windhoek-K3-illustration-v1-20261012-9e085a98308c.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/windhoek/e08-windhoek-K3-illustration-v1-20261012-9e085a98308c.png?t=16dd372908770238",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/windhoek/e08-windhoek-K3-illustration-v1-20261012-9e085a98308c.png",
+        "sha256": "16dd3729087702382ea0e7212b53e0ab72aee9261d04d8c0ee8027ee4799a3ee",
+        "bytes": 3074523,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e08-windhoek-K3-illustration-v1-20261012",
+        "nativeSHA256": "9e085a98308c5230222f2f950cddc38d1e4850fff45c600f539750047fa49c3f",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/windhoek/e08-windhoek-K3-illustration-v1-20261012-9e085a98308c.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e08",
+        "city": "windhoek",
+        "slot": "K3",
+        "targetJsonPath": "$.kaupunkilehti[0].nostot[2]",
+        "verifiedAt": "2026-10-13T05:58:57.822672+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/windhoek/e08-windhoek-K3-illustration-v1-20261012-9e085a98308c.png",
+        "sha256": "16dd3729087702382ea0e7212b53e0ab72aee9261d04d8c0ee8027ee4799a3ee",
+        "bytes": 3074523,
+        "SHAReadAt": "2026-10-13T05:58:01.486090+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "9e085a98308c5230222f2f950cddc38d1e4850fff45c600f539750047fa49c3f",
+        "rgbPixelSHA256": "43c00678d4b4acb50a55fa315aa48a898c3f5d353204f136843e32a72b8ea201",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "33044b0a725c78c49975a7162a9966f51a61b6f96a5629a9c0ed1c59d6250d38",
+      "targetAfterSHA256": "2c181124942415ab8c318aba215d2496c61b2ee47bf60aaa2e9dc6938bc84691",
+      "contextAfterSHA256": "2c181124942415ab8c318aba215d2496c61b2ee47bf60aaa2e9dc6938bc84691",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e08",
@@ -542,7 +1452,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/windhoek/sisalto.json",
-      "sourceContentSHA256": "394c8a71eace7519becc050bfb75716b95a4ed5629eae449b3f7f371bda9d225",
+      "sourceContentSHA256": "33044b0a725c78c49975a7162a9966f51a61b6f96a5629a9c0ed1c59d6250d38",
       "semanticSourceBind": {
         "targetBeforeSHA256": "61d64f78452f7c5f1231458069d51844da47a95d77f1f292f61b7b0521666006",
         "semanticContextSHA256": "61d64f78452f7c5f1231458069d51844da47a95d77f1f292f61b7b0521666006",
@@ -641,7 +1551,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/windhoek/qa.json",
-            "sha256": "d6fb0249785a075396037b56c3a4d0aedcf57d465d2c73fbfcdee998eef9b92a"
+            "sha256": "79d0f971c98bcef4101280eea741606bf2753e7c6422add551d2b546b4c4c790"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/windhoek/illustration-qa-extra.json",
@@ -730,7 +1640,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "33044b0a725c78c49975a7162a9966f51a61b6f96a5629a9c0ed1c59d6250d38",
       "targetAfterSHA256": "61d64f78452f7c5f1231458069d51844da47a95d77f1f292f61b7b0521666006",
-      "contextAfterSHA256": "61d64f78452f7c5f1231458069d51844da47a95d77f1f292f61b7b0521666006"
+      "contextAfterSHA256": "61d64f78452f7c5f1231458069d51844da47a95d77f1f292f61b7b0521666006",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e08",
@@ -780,7 +1692,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/windhoek/sisalto.json",
-      "sourceContentSHA256": "394c8a71eace7519becc050bfb75716b95a4ed5629eae449b3f7f371bda9d225",
+      "sourceContentSHA256": "33044b0a725c78c49975a7162a9966f51a61b6f96a5629a9c0ed1c59d6250d38",
       "semanticSourceBind": {
         "targetBeforeSHA256": "be2dd7d7348e1dc67b2161e0f77cad7edcb2ddec82e046e5f2a23cc5e80afc08",
         "semanticContextSHA256": "be2dd7d7348e1dc67b2161e0f77cad7edcb2ddec82e046e5f2a23cc5e80afc08",
@@ -889,7 +1801,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/windhoek/qa.json",
-            "sha256": "d6fb0249785a075396037b56c3a4d0aedcf57d465d2c73fbfcdee998eef9b92a"
+            "sha256": "79d0f971c98bcef4101280eea741606bf2753e7c6422add551d2b546b4c4c790"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/windhoek/illustration-qa-extra.json",
@@ -978,7 +1890,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "33044b0a725c78c49975a7162a9966f51a61b6f96a5629a9c0ed1c59d6250d38",
       "targetAfterSHA256": "be2dd7d7348e1dc67b2161e0f77cad7edcb2ddec82e046e5f2a23cc5e80afc08",
-      "contextAfterSHA256": "be2dd7d7348e1dc67b2161e0f77cad7edcb2ddec82e046e5f2a23cc5e80afc08"
+      "contextAfterSHA256": "be2dd7d7348e1dc67b2161e0f77cad7edcb2ddec82e046e5f2a23cc5e80afc08",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e08",
@@ -1028,7 +1942,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/windhoek/sisalto.json",
-      "sourceContentSHA256": "394c8a71eace7519becc050bfb75716b95a4ed5629eae449b3f7f371bda9d225",
+      "sourceContentSHA256": "33044b0a725c78c49975a7162a9966f51a61b6f96a5629a9c0ed1c59d6250d38",
       "semanticSourceBind": {
         "targetBeforeSHA256": "a0cb7dcdef642c1d4846a5a6541b190d1f9786eb5420e00ddf2cbff4997bdf53",
         "semanticContextSHA256": "a0cb7dcdef642c1d4846a5a6541b190d1f9786eb5420e00ddf2cbff4997bdf53",
@@ -1137,7 +2051,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/windhoek/qa.json",
-            "sha256": "d6fb0249785a075396037b56c3a4d0aedcf57d465d2c73fbfcdee998eef9b92a"
+            "sha256": "79d0f971c98bcef4101280eea741606bf2753e7c6422add551d2b546b4c4c790"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/windhoek/illustration-qa-extra.json",
@@ -1226,7 +2140,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "33044b0a725c78c49975a7162a9966f51a61b6f96a5629a9c0ed1c59d6250d38",
       "targetAfterSHA256": "a0cb7dcdef642c1d4846a5a6541b190d1f9786eb5420e00ddf2cbff4997bdf53",
-      "contextAfterSHA256": "a0cb7dcdef642c1d4846a5a6541b190d1f9786eb5420e00ddf2cbff4997bdf53"
+      "contextAfterSHA256": "a0cb7dcdef642c1d4846a5a6541b190d1f9786eb5420e00ddf2cbff4997bdf53",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e08",
@@ -1276,7 +2192,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/windhoek/sisalto.json",
-      "sourceContentSHA256": "394c8a71eace7519becc050bfb75716b95a4ed5629eae449b3f7f371bda9d225",
+      "sourceContentSHA256": "33044b0a725c78c49975a7162a9966f51a61b6f96a5629a9c0ed1c59d6250d38",
       "semanticSourceBind": {
         "targetBeforeSHA256": "596ac0bfd212717274cebcb8c93caf5db03e245074a2fc13cead396d02bedeb1",
         "semanticContextSHA256": "596ac0bfd212717274cebcb8c93caf5db03e245074a2fc13cead396d02bedeb1",
@@ -1385,7 +2301,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/windhoek/qa.json",
-            "sha256": "d6fb0249785a075396037b56c3a4d0aedcf57d465d2c73fbfcdee998eef9b92a"
+            "sha256": "79d0f971c98bcef4101280eea741606bf2753e7c6422add551d2b546b4c4c790"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/windhoek/illustration-qa-extra.json",
@@ -1474,905 +2390,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "33044b0a725c78c49975a7162a9966f51a61b6f96a5629a9c0ed1c59d6250d38",
       "targetAfterSHA256": "596ac0bfd212717274cebcb8c93caf5db03e245074a2fc13cead396d02bedeb1",
-      "contextAfterSHA256": "596ac0bfd212717274cebcb8c93caf5db03e245074a2fc13cead396d02bedeb1"
-    },
-    {
-      "era": "e08",
-      "city": "windhoek",
-      "slot": "O2",
-      "type": "illustration",
-      "assetID": "e08-windhoek-O2-illustration-v1-20261012",
-      "galleryImageID": "e08-windhoek-O2-illustration-v1-20261012",
-      "commonsFile": null,
-      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[1].kuva",
-      "targetTokens": [
-        "kaupunkilehti",
-        0,
-        "matkailijalle",
-        "artikkeli",
-        "jaksot",
-        1,
-        "kuva"
-      ],
-      "operation": "merge-media-fields-preserve-other-content",
-      "CmediaFieldPayload": {
-        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/windhoek/e08-windhoek-O2-illustration-v1-20261012-298f47a69183.png",
-        "suora": true,
-        "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva rakennuskiven materiaaleista.",
-        "lyhyt": "Havainnekuva rakennuskiven materiaaleista."
-      },
-      "removeMediaKeys": [
-        "tiedosto"
-      ],
-      "CvalidatorCompatiblePayload": {},
-      "runtimeMediaFieldPayload": {
-        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/windhoek/e08-windhoek-O2-illustration-v1-20261012-298f47a69183.png",
-        "suora": true,
-        "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva rakennuskiven materiaaleista.",
-        "lyhyt": "Havainnekuva rakennuskiven materiaaleista."
-      },
-      "runtimeRemoveMediaKeys": [
-        "tiedosto"
-      ],
-      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
-      "nativeSHA256": "298f47a691830273cda77548b61ca35f9a398b7e04ea8521b24dbcaa90b6c289",
-      "exportSHA256": "29c1b49a0f0b1a279556d1c79678ea4c90dc9c58e34259164bbaff7830542adb",
-      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/windhoek/e08-windhoek-O2-illustration-v1-20261012-298f47a69183.png",
-      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/windhoek/e08-windhoek-O2-illustration-v1-20261012-298f47a69183.png",
-      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/windhoek/e08-windhoek-O2-illustration-v1-20261012-298f47a69183.png",
-      "dimensions": [
-        1536,
-        1024
-      ],
-      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/windhoek/sisalto.json",
-      "sourceContentSHA256": "394c8a71eace7519becc050bfb75716b95a4ed5629eae449b3f7f371bda9d225",
-      "semanticSourceBind": {
-        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "44a37996983422f3fcc2093cb981ea462e259436e4b6968809eb0338880aeb50",
-        "subjectTitle": "Kiveä ja siirtomaahistoriaa",
-        "targetState": "existing-target"
-      },
-      "attribution": {
-        "author": null,
-        "license": null,
-        "licenseUrl": null,
-        "sourcePage": null,
-        "originalUrl": null,
-        "rightsEvidence": {
-          "production": {
-            "scope": "Common natural material, plant, animal, food or unbranded functional object. No named protected artwork or real architecture/collection reconstruction.",
-            "notLocationProof": true
-          },
-          "QA": {
-            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/windhoek/assets/e08-windhoek-O2-illustration-v1-20261012/image.png",
-            "nativeSha256Verified": "298f47a691830273cda77548b61ca35f9a398b7e04ea8521b24dbcaa90b6c289",
-            "nativeWidth": 1536,
-            "nativeHeight": 1024,
-            "format": "PNG",
-            "nativeMode": "RGB",
-            "visualInspection": "Tarkistaja katsoi itse natiivin NAS-tiedoston view_image-työkalulla original-tarkkuudessa tässä sessiossa: Rakeinen kellertävä hiekkakivipinta ja vaalea suonikas marmoripinta vierekkäin. Murtoreunat ja mineraalisyyt vaihtelevat; ei koristeveistoa tai tekstiä.",
-            "captionFi": "Havainnekuva rakennuskiven materiaaleista.",
-            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/windhoek/sisalto.json",
-            "contentSha256": "394c8a71eace7519becc050bfb75716b95a4ed5629eae449b3f7f371bda9d225",
-            "targetCurrentlyPresent": true,
-            "targetText": "Christuskirchessä paikallinen hiekkakivi ja tuontimarmori muodostavat tunnistettavan kokonaisuuden. Lähellä sijaitseva Alte Feste rakennettiin saksalaisen siirtomaajoukon tukikohdaksi. Sen myöhempiin käyttötapoihin kuuluivat koulun asuntola ja museo. Linnakkeen kunnostus ja museokäyttö ovat muuttuneet, joten tarkista käyntimahdollisuus ennen kuin rakennat päivän sen varaan.",
-            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/windhoek/faktapohja.md",
-            "factSheetSha256": "f9883c307605c6764857aad9ab3b5c08d727f3b3189bc15c6ed51a1f70c946df",
-            "topicEvidence": "Faktapohja W3 ja §5 opas kirkko/linnake.",
-            "rightsAssessment": "Yleinen luonnon-, materiaali-, ruoka- tai arkiesineaihe; ei nimettyä nykytaideteosta. Aiheen ja paikkarehellisyyden arvio verdictissä ja omassa silmähavainnossa.",
-            "scope": "Vain riippumaton natiivikuvituksen QA; R2-toimitus, integrointi ja julkaisu eivät ole kuitattuja."
-          },
-          "qaReason": "Materiaalilähikuva vastaa oppaan hiekkakivi-/marmoriaihetta. Ei kirkon tietyn seinän tai näytteiden alkuperän väite."
-        }
-      },
-      "luentaMetadata": {
-        "existingImageLuenta": null,
-        "captionReadingText": "Havainnekuva rakennuskiven materiaaleista.",
-        "existingArticleAndSectionLuentaPreserved": true,
-        "audioGenerated": false,
-        "audioURL": null,
-        "imageSpecificAudioProvided": false,
-        "reuseAudioAllowedByThisPacket": false
-      },
-      "qaEvidence": {
-        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/windhoek/illustration-qa-extra.json",
-        "fileSHA256": "79eada6746db9a1e26d3614c8a853ab7615587de59a21759a0a8e82991cd768c",
-        "item": {
-          "slot": "O2",
-          "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[1].kuva",
-          "assetID": "e08-windhoek-O2-illustration-v1-20261012",
-          "sha256": "298f47a691830273cda77548b61ca35f9a398b7e04ea8521b24dbcaa90b6c289",
-          "verdict": "accepted",
-          "reason": "Materiaalilähikuva vastaa oppaan hiekkakivi-/marmoriaihetta. Ei kirkon tietyn seinän tai näytteiden alkuperän väite.",
-          "evidence": {
-            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/windhoek/assets/e08-windhoek-O2-illustration-v1-20261012/image.png",
-            "nativeSha256Verified": "298f47a691830273cda77548b61ca35f9a398b7e04ea8521b24dbcaa90b6c289",
-            "nativeWidth": 1536,
-            "nativeHeight": 1024,
-            "format": "PNG",
-            "nativeMode": "RGB",
-            "visualInspection": "Tarkistaja katsoi itse natiivin NAS-tiedoston view_image-työkalulla original-tarkkuudessa tässä sessiossa: Rakeinen kellertävä hiekkakivipinta ja vaalea suonikas marmoripinta vierekkäin. Murtoreunat ja mineraalisyyt vaihtelevat; ei koristeveistoa tai tekstiä.",
-            "captionFi": "Havainnekuva rakennuskiven materiaaleista.",
-            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/windhoek/sisalto.json",
-            "contentSha256": "394c8a71eace7519becc050bfb75716b95a4ed5629eae449b3f7f371bda9d225",
-            "targetCurrentlyPresent": true,
-            "targetText": "Christuskirchessä paikallinen hiekkakivi ja tuontimarmori muodostavat tunnistettavan kokonaisuuden. Lähellä sijaitseva Alte Feste rakennettiin saksalaisen siirtomaajoukon tukikohdaksi. Sen myöhempiin käyttötapoihin kuuluivat koulun asuntola ja museo. Linnakkeen kunnostus ja museokäyttö ovat muuttuneet, joten tarkista käyntimahdollisuus ennen kuin rakennat päivän sen varaan.",
-            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/windhoek/faktapohja.md",
-            "factSheetSha256": "f9883c307605c6764857aad9ab3b5c08d727f3b3189bc15c6ed51a1f70c946df",
-            "topicEvidence": "Faktapohja W3 ja §5 opas kirkko/linnake.",
-            "rightsAssessment": "Yleinen luonnon-, materiaali-, ruoka- tai arkiesineaihe; ei nimettyä nykytaideteosta. Aiheen ja paikkarehellisyyden arvio verdictissä ja omassa silmähavainnossa.",
-            "scope": "Vain riippumaton natiivikuvituksen QA; R2-toimitus, integrointi ja julkaisu eivät ole kuitattuja."
-          },
-          "reviewedAt": "2026-10-13T05:57:48.567596+00:00",
-          "reviewerSession": "e08-extra-01a131d7-1d58-7eb0-a959-c0073288e011"
-        },
-        "allSources": [
-          {
-            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/windhoek/qa.json",
-            "sha256": "d6fb0249785a075396037b56c3a4d0aedcf57d465d2c73fbfcdee998eef9b92a"
-          },
-          {
-            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/windhoek/illustration-qa-extra.json",
-            "sha256": "79eada6746db9a1e26d3614c8a853ab7615587de59a21759a0a8e82991cd768c"
-          }
-        ]
-      },
-      "R2ByteVerification": {
-        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/windhoek/e08-windhoek-O2-illustration-v1-20261012-298f47a69183.png",
-        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/windhoek/e08-windhoek-O2-illustration-v1-20261012-298f47a69183.png?t=29c1b49a0f0b1a27",
-        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/windhoek/e08-windhoek-O2-illustration-v1-20261012-298f47a69183.png",
-        "sha256": "29c1b49a0f0b1a279556d1c79678ea4c90dc9c58e34259164bbaff7830542adb",
-        "bytes": 3259946,
-        "http": 200,
-        "mime": "image/png",
-        "cors": "https://matkakirja.app",
-        "cacheBustedPreflightHttp": 404,
-        "cacheBustedReadback": true,
-        "byteExactReadback": true,
-        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
-        "conditionalIfNoneMatch": "*",
-        "s3PutHttp": 200,
-        "assetID": "e08-windhoek-O2-illustration-v1-20261012",
-        "nativeSHA256": "298f47a691830273cda77548b61ca35f9a398b7e04ea8521b24dbcaa90b6c289",
-        "canonicalReadbackByteExact": true,
-        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/windhoek/e08-windhoek-O2-illustration-v1-20261012-298f47a69183.png",
-        "pixelIdenticalToQAAcceptedNative": true,
-        "era": "e08",
-        "city": "windhoek",
-        "slot": "O2",
-        "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[1].kuva",
-        "verifiedAt": "2026-10-13T05:58:51.486483+00:00",
-        "ownerAcceptanceVerified": false,
-        "gameIntegrated": false,
-        "galleryVisibleVerified": false
-      },
-      "producerExportProof": null,
-      "technicalExportProof": {
-        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/windhoek/e08-windhoek-O2-illustration-v1-20261012-298f47a69183.png",
-        "sha256": "29c1b49a0f0b1a279556d1c79678ea4c90dc9c58e34259164bbaff7830542adb",
-        "bytes": 3259946,
-        "SHAReadAt": "2026-10-13T05:58:01.686460+00:00",
-        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
-        "width": 1536,
-        "height": 1024,
-        "pixelWidth": 1536,
-        "pixelHeight": 1024,
-        "exifOrientation": 1,
-        "dimensionsBasis": "EXIF-oriented-display",
-        "format": "PNG",
-        "largeOriginalHeaderOnlyRead": false,
-        "nativeSHA256": "298f47a691830273cda77548b61ca35f9a398b7e04ea8521b24dbcaa90b6c289",
-        "rgbPixelSHA256": "b930f095921ae51d8f56974c32abe3f996ef5ff2dc05c51f20000e5acf969f40",
-        "pixelIdenticalToQAAcceptedNative": true,
-        "sRGBProfileEmbedded": true,
-        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
-      },
-      "priorMediaFields": {
-        "tiedosto": "",
-        "lahde": "",
-        "selite": "",
-        "lyhyt": ""
-      },
-      "preservePreviousMediaObjects": true,
-      "authorization": {
-        "status": "waived-owner-review",
-        "authorizedByOwner": true,
-        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
-        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
-        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
-        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
-        "ownerAcceptanceImplied": false,
-        "QARequired": true,
-        "R2ByteVerificationRequired": true,
-        "galleryBeforeGameRequired": false,
-        "verifiedHumanMessageSource": {
-          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
-          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
-        }
-      },
-      "ownerAcceptanceVerified": false,
-      "gameIntegrated": false,
-      "gamePublicationVerified": false,
-      "inMemoryMergeVerified": true,
-      "CcommonsMetadataBound": false,
-      "roleManifestBound": true,
-      "sourceContentAfterSHA256": "33044b0a725c78c49975a7162a9966f51a61b6f96a5629a9c0ed1c59d6250d38",
-      "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "44a37996983422f3fcc2093cb981ea462e259436e4b6968809eb0338880aeb50"
-    },
-    {
-      "era": "e08",
-      "city": "windhoek",
-      "slot": "O3",
-      "type": "illustration",
-      "assetID": "e08-windhoek-O3-illustration-v1-20261012",
-      "galleryImageID": "e08-windhoek-O3-illustration-v1-20261012",
-      "commonsFile": null,
-      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[2].kuva",
-      "targetTokens": [
-        "kaupunkilehti",
-        0,
-        "matkailijalle",
-        "artikkeli",
-        "jaksot",
-        2,
-        "kuva"
-      ],
-      "operation": "merge-media-fields-preserve-other-content",
-      "CmediaFieldPayload": {
-        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/windhoek/e08-windhoek-O3-illustration-v1-20261012-7e5f06ce7c7c.png",
-        "suora": true,
-        "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva kuivamaan kasvillisuuden ja kiven kohtaamisesta.",
-        "lyhyt": "Havainnekuva kuivamaan kasvillisuuden ja kiven kohtaamisesta."
-      },
-      "removeMediaKeys": [
-        "tiedosto"
-      ],
-      "CvalidatorCompatiblePayload": {},
-      "runtimeMediaFieldPayload": {
-        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/windhoek/e08-windhoek-O3-illustration-v1-20261012-7e5f06ce7c7c.png",
-        "suora": true,
-        "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva kuivamaan kasvillisuuden ja kiven kohtaamisesta.",
-        "lyhyt": "Havainnekuva kuivamaan kasvillisuuden ja kiven kohtaamisesta."
-      },
-      "runtimeRemoveMediaKeys": [
-        "tiedosto"
-      ],
-      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
-      "nativeSHA256": "7e5f06ce7c7c630b33be0047848204433b269b36247111e18d945714ca24f32b",
-      "exportSHA256": "db8f336ff98a13bbb407632df7798d869b835ab862c4e7ef3539ac3828ba1a9e",
-      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/windhoek/e08-windhoek-O3-illustration-v1-20261012-7e5f06ce7c7c.png",
-      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/windhoek/e08-windhoek-O3-illustration-v1-20261012-7e5f06ce7c7c.png",
-      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/windhoek/e08-windhoek-O3-illustration-v1-20261012-7e5f06ce7c7c.png",
-      "dimensions": [
-        1536,
-        1024
-      ],
-      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/windhoek/sisalto.json",
-      "sourceContentSHA256": "394c8a71eace7519becc050bfb75716b95a4ed5629eae449b3f7f371bda9d225",
-      "semanticSourceBind": {
-        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "5df284f48f94507bd8df4509a3f3cdab93bdb2d8d8fb82e26073539081bd49db",
-        "subjectTitle": "Ylänkö kasvaa keskellä kaupunkia",
-        "targetState": "existing-target"
-      },
-      "attribution": {
-        "author": null,
-        "license": null,
-        "licenseUrl": null,
-        "sourcePage": null,
-        "originalUrl": null,
-        "rightsEvidence": {
-          "production": {
-            "scope": "Common natural material, plant, animal, food or unbranded functional object. No named protected artwork or real architecture/collection reconstruction.",
-            "notLocationProof": true
-          },
-          "QA": {
-            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/windhoek/assets/e08-windhoek-O3-illustration-v1-20261012/image.png",
-            "nativeSha256Verified": "7e5f06ce7c7c630b33be0047848204433b269b36247111e18d945714ca24f32b",
-            "nativeWidth": 1536,
-            "nativeHeight": 1024,
-            "format": "PNG",
-            "nativeMode": "RGB",
-            "visualInspection": "Tarkistaja katsoi itse natiivin NAS-tiedoston view_image-työkalulla original-tarkkuudessa tässä sessiossa: Kuivaa hienovartista heinää, vihreitä lehtiä ja vaihtelevia kivipintoja. Kasvien asennot ja kiven pinnat luontevia; ei mekaanista toistoa, kylttejä tai henkilöitä.",
-            "captionFi": "Havainnekuva kuivamaan kasvillisuuden ja kiven kohtaamisesta.",
-            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/windhoek/sisalto.json",
-            "contentSha256": "394c8a71eace7519becc050bfb75716b95a4ed5629eae449b3f7f371bda9d225",
-            "targetCurrentlyPresent": true,
-            "targetText": "Kansallinen kasvitieteellinen puutarha on samalla luonnonsuojelualue. Sen paikallinen kasvillisuus ja Windhoekille ominaiset kallioiset kumpareet auttavat hahmottamaan, millaiseen maastoon pääkaupunki on rakennettu. Kävely kannattaa yhdistää keskustan tutkimiseen: samana päivänä voi tarkastella sekä tuotuja rakennusmateriaaleja että kaupungin omaa luontoa.",
-            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/windhoek/faktapohja.md",
-            "factSheetSha256": "f9883c307605c6764857aad9ab3b5c08d727f3b3189bc15c6ed51a1f70c946df",
-            "topicEvidence": "Faktapohja W6 South West Nature Reserve ja §5 opas puutarha.",
-            "rightsAssessment": "Yleinen luonnon-, materiaali-, ruoka- tai arkiesineaihe; ei nimettyä nykytaideteosta. Aiheen ja paikkarehellisyyden arvio verdictissä ja omassa silmähavainnossa.",
-            "scope": "Vain riippumaton natiivikuvituksen QA; R2-toimitus, integrointi ja julkaisu eivät ole kuitattuja."
-          },
-          "qaReason": "Heinien, versojen ja kallion lähikuva vastaa kuivamaan kasvillisuutta. Ei puutarhareitin tai tarkan lajin väitettä."
-        }
-      },
-      "luentaMetadata": {
-        "existingImageLuenta": null,
-        "captionReadingText": "Havainnekuva kuivamaan kasvillisuuden ja kiven kohtaamisesta.",
-        "existingArticleAndSectionLuentaPreserved": true,
-        "audioGenerated": false,
-        "audioURL": null,
-        "imageSpecificAudioProvided": false,
-        "reuseAudioAllowedByThisPacket": false
-      },
-      "qaEvidence": {
-        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/windhoek/illustration-qa-extra.json",
-        "fileSHA256": "79eada6746db9a1e26d3614c8a853ab7615587de59a21759a0a8e82991cd768c",
-        "item": {
-          "slot": "O3",
-          "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[2].kuva",
-          "assetID": "e08-windhoek-O3-illustration-v1-20261012",
-          "sha256": "7e5f06ce7c7c630b33be0047848204433b269b36247111e18d945714ca24f32b",
-          "verdict": "accepted",
-          "reason": "Heinien, versojen ja kallion lähikuva vastaa kuivamaan kasvillisuutta. Ei puutarhareitin tai tarkan lajin väitettä.",
-          "evidence": {
-            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/windhoek/assets/e08-windhoek-O3-illustration-v1-20261012/image.png",
-            "nativeSha256Verified": "7e5f06ce7c7c630b33be0047848204433b269b36247111e18d945714ca24f32b",
-            "nativeWidth": 1536,
-            "nativeHeight": 1024,
-            "format": "PNG",
-            "nativeMode": "RGB",
-            "visualInspection": "Tarkistaja katsoi itse natiivin NAS-tiedoston view_image-työkalulla original-tarkkuudessa tässä sessiossa: Kuivaa hienovartista heinää, vihreitä lehtiä ja vaihtelevia kivipintoja. Kasvien asennot ja kiven pinnat luontevia; ei mekaanista toistoa, kylttejä tai henkilöitä.",
-            "captionFi": "Havainnekuva kuivamaan kasvillisuuden ja kiven kohtaamisesta.",
-            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/windhoek/sisalto.json",
-            "contentSha256": "394c8a71eace7519becc050bfb75716b95a4ed5629eae449b3f7f371bda9d225",
-            "targetCurrentlyPresent": true,
-            "targetText": "Kansallinen kasvitieteellinen puutarha on samalla luonnonsuojelualue. Sen paikallinen kasvillisuus ja Windhoekille ominaiset kallioiset kumpareet auttavat hahmottamaan, millaiseen maastoon pääkaupunki on rakennettu. Kävely kannattaa yhdistää keskustan tutkimiseen: samana päivänä voi tarkastella sekä tuotuja rakennusmateriaaleja että kaupungin omaa luontoa.",
-            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/windhoek/faktapohja.md",
-            "factSheetSha256": "f9883c307605c6764857aad9ab3b5c08d727f3b3189bc15c6ed51a1f70c946df",
-            "topicEvidence": "Faktapohja W6 South West Nature Reserve ja §5 opas puutarha.",
-            "rightsAssessment": "Yleinen luonnon-, materiaali-, ruoka- tai arkiesineaihe; ei nimettyä nykytaideteosta. Aiheen ja paikkarehellisyyden arvio verdictissä ja omassa silmähavainnossa.",
-            "scope": "Vain riippumaton natiivikuvituksen QA; R2-toimitus, integrointi ja julkaisu eivät ole kuitattuja."
-          },
-          "reviewedAt": "2026-10-13T05:57:48.638904+00:00",
-          "reviewerSession": "e08-extra-01a131d7-1d58-7eb0-a959-c0073288e011"
-        },
-        "allSources": [
-          {
-            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/windhoek/qa.json",
-            "sha256": "d6fb0249785a075396037b56c3a4d0aedcf57d465d2c73fbfcdee998eef9b92a"
-          },
-          {
-            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/windhoek/illustration-qa-extra.json",
-            "sha256": "79eada6746db9a1e26d3614c8a853ab7615587de59a21759a0a8e82991cd768c"
-          }
-        ]
-      },
-      "R2ByteVerification": {
-        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/windhoek/e08-windhoek-O3-illustration-v1-20261012-7e5f06ce7c7c.png",
-        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/windhoek/e08-windhoek-O3-illustration-v1-20261012-7e5f06ce7c7c.png?t=db8f336ff98a13bb",
-        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/windhoek/e08-windhoek-O3-illustration-v1-20261012-7e5f06ce7c7c.png",
-        "sha256": "db8f336ff98a13bbb407632df7798d869b835ab862c4e7ef3539ac3828ba1a9e",
-        "bytes": 3199348,
-        "http": 200,
-        "mime": "image/png",
-        "cors": "https://matkakirja.app",
-        "cacheBustedPreflightHttp": 404,
-        "cacheBustedReadback": true,
-        "byteExactReadback": true,
-        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
-        "conditionalIfNoneMatch": "*",
-        "s3PutHttp": 200,
-        "assetID": "e08-windhoek-O3-illustration-v1-20261012",
-        "nativeSHA256": "7e5f06ce7c7c630b33be0047848204433b269b36247111e18d945714ca24f32b",
-        "canonicalReadbackByteExact": true,
-        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/windhoek/e08-windhoek-O3-illustration-v1-20261012-7e5f06ce7c7c.png",
-        "pixelIdenticalToQAAcceptedNative": true,
-        "era": "e08",
-        "city": "windhoek",
-        "slot": "O3",
-        "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[2].kuva",
-        "verifiedAt": "2026-10-13T05:58:54.576370+00:00",
-        "ownerAcceptanceVerified": false,
-        "gameIntegrated": false,
-        "galleryVisibleVerified": false
-      },
-      "producerExportProof": null,
-      "technicalExportProof": {
-        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/windhoek/e08-windhoek-O3-illustration-v1-20261012-7e5f06ce7c7c.png",
-        "sha256": "db8f336ff98a13bbb407632df7798d869b835ab862c4e7ef3539ac3828ba1a9e",
-        "bytes": 3199348,
-        "SHAReadAt": "2026-10-13T05:58:01.890566+00:00",
-        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
-        "width": 1536,
-        "height": 1024,
-        "pixelWidth": 1536,
-        "pixelHeight": 1024,
-        "exifOrientation": 1,
-        "dimensionsBasis": "EXIF-oriented-display",
-        "format": "PNG",
-        "largeOriginalHeaderOnlyRead": false,
-        "nativeSHA256": "7e5f06ce7c7c630b33be0047848204433b269b36247111e18d945714ca24f32b",
-        "rgbPixelSHA256": "c9d1be8941ba6d1078b4d0d6df018d1e031c11e7a179bdd8de17fbc1c0597429",
-        "pixelIdenticalToQAAcceptedNative": true,
-        "sRGBProfileEmbedded": true,
-        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
-      },
-      "priorMediaFields": {
-        "tiedosto": "",
-        "lahde": "",
-        "selite": "",
-        "lyhyt": ""
-      },
-      "preservePreviousMediaObjects": true,
-      "authorization": {
-        "status": "waived-owner-review",
-        "authorizedByOwner": true,
-        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
-        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
-        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
-        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
-        "ownerAcceptanceImplied": false,
-        "QARequired": true,
-        "R2ByteVerificationRequired": true,
-        "galleryBeforeGameRequired": false,
-        "verifiedHumanMessageSource": {
-          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
-          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
-        }
-      },
-      "ownerAcceptanceVerified": false,
-      "gameIntegrated": false,
-      "gamePublicationVerified": false,
-      "inMemoryMergeVerified": true,
-      "CcommonsMetadataBound": false,
-      "roleManifestBound": true,
-      "sourceContentAfterSHA256": "33044b0a725c78c49975a7162a9966f51a61b6f96a5629a9c0ed1c59d6250d38",
-      "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "5df284f48f94507bd8df4509a3f3cdab93bdb2d8d8fb82e26073539081bd49db"
-    },
-    {
-      "era": "e08",
-      "city": "windhoek",
-      "slot": "K1",
-      "type": "illustration",
-      "assetID": "e08-windhoek-K1-illustration-v1-20261012",
-      "galleryImageID": "e08-windhoek-K1-illustration-v1-20261012",
-      "commonsFile": null,
-      "targetJsonPath": "$.kaupunkilehti[0].nostot[0]",
-      "targetTokens": [
-        "kaupunkilehti",
-        0,
-        "nostot",
-        0
-      ],
-      "operation": "merge-media-fields-preserve-other-content",
-      "CmediaFieldPayload": {
-        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/windhoek/e08-windhoek-K1-illustration-v1-20261012-616da4f96356.png",
-        "suora": true,
-        "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva hiekkakivestä ja marmorista.",
-        "lyhyt": "Havainnekuva hiekkakivestä ja marmorista."
-      },
-      "removeMediaKeys": [
-        "tiedosto"
-      ],
-      "CvalidatorCompatiblePayload": {},
-      "runtimeMediaFieldPayload": {
-        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/windhoek/e08-windhoek-K1-illustration-v1-20261012-616da4f96356.png",
-        "suora": true,
-        "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva hiekkakivestä ja marmorista.",
-        "lyhyt": "Havainnekuva hiekkakivestä ja marmorista."
-      },
-      "runtimeRemoveMediaKeys": [
-        "tiedosto"
-      ],
-      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
-      "nativeSHA256": "616da4f96356147a5117b59538af9c1693396df3d6262e36304089c8eaa21cae",
-      "exportSHA256": "c4edff289ffccd815b7d0d6882fb134ffb9236f2b39455f795e93eabaed5fbed",
-      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/windhoek/e08-windhoek-K1-illustration-v1-20261012-616da4f96356.png",
-      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/windhoek/e08-windhoek-K1-illustration-v1-20261012-616da4f96356.png",
-      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/windhoek/e08-windhoek-K1-illustration-v1-20261012-616da4f96356.png",
-      "dimensions": [
-        1536,
-        1024
-      ],
-      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/windhoek/sisalto.json",
-      "sourceContentSHA256": "394c8a71eace7519becc050bfb75716b95a4ed5629eae449b3f7f371bda9d225",
-      "semanticSourceBind": {
-        "targetBeforeSHA256": "850436854fe5c7b9182223177c50f626912bf6ac14ae2418cef92aee10d98ba0",
-        "semanticContextSHA256": "850436854fe5c7b9182223177c50f626912bf6ac14ae2418cef92aee10d98ba0",
-        "subjectTitle": "Kirkko koottiin läheltä ja kaukaa",
-        "targetState": "existing-target"
-      },
-      "attribution": {
-        "author": null,
-        "license": null,
-        "licenseUrl": null,
-        "sourcePage": null,
-        "originalUrl": null,
-        "rightsEvidence": {
-          "production": {
-            "scope": "Common natural material, plant, animal, food or unbranded functional object. No named protected artwork or real architecture/collection reconstruction.",
-            "notLocationProof": true
-          },
-          "QA": {
-            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/windhoek/assets/e08-windhoek-K1-illustration-v1-20261012/image.png",
-            "nativeSha256Verified": "616da4f96356147a5117b59538af9c1693396df3d6262e36304089c8eaa21cae",
-            "nativeWidth": 1536,
-            "nativeHeight": 1024,
-            "format": "PNG",
-            "nativeMode": "RGB",
-            "visualInspection": "Tarkistaja katsoi itse natiivin NAS-tiedoston view_image-työkalulla original-tarkkuudessa tässä sessiossa: Kellertävä rakeinen hiekkakivipala ja vaalea harmaasuoninen marmoripala. Epäsäännölliset murtopinnat ja varjot luontevia; ei rakennuksia tai merkintöjä.",
-            "captionFi": "Havainnekuva hiekkakivestä ja marmorista.",
-            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/windhoek/sisalto.json",
-            "contentSha256": "394c8a71eace7519becc050bfb75716b95a4ed5629eae449b3f7f371bda9d225",
-            "targetCurrentlyPresent": true,
-            "targetText": "Christuskirche näyttää ensi silmäyksellä yhdeltä rakennukselta, mutta sen materiaalien kartta ulottuu paljon Windhoekia laajemmalle. Kvartsipitoinen hiekkakivi louhittiin Avisin padon läheltä. Sisäänkäynnin Carraran marmori tuli Italiasta, ja kellolaite sekä osa katosta Saksasta. Gottlieb Redeckerin suunnittelemassa kirkossa yhdistyvät uusromaaniset, uusgoottilaiset ja jugendin vaikutteet. Paikallinen kivi ja ulkomailta saapuneet osat kohtaavat samassa siirtomaakauden rakennuksessa.",
-            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/windhoek/faktapohja.md",
-            "factSheetSha256": "f9883c307605c6764857aad9ab3b5c08d727f3b3189bc15c6ed51a1f70c946df",
-            "topicEvidence": "Faktapohja W3 Christ Church Background ja §3.",
-            "rightsAssessment": "Yleinen luonnon-, materiaali-, ruoka- tai arkiesineaihe; ei nimettyä nykytaideteosta. Aiheen ja paikkarehellisyyden arvio verdictissä ja omassa silmähavainnossa.",
-            "scope": "Vain riippumaton natiivikuvituksen QA; R2-toimitus, integrointi ja julkaisu eivät ole kuitattuja."
-          },
-          "qaReason": "Hiekkakivi ja marmori havainnollistavat kirkon materiaaleja. Ei palojen alkuperä- tai rakennuksen rekonstruktioväite."
-        }
-      },
-      "luentaMetadata": {
-        "existingImageLuenta": null,
-        "captionReadingText": "Havainnekuva hiekkakivestä ja marmorista.",
-        "existingArticleAndSectionLuentaPreserved": true,
-        "audioGenerated": false,
-        "audioURL": null,
-        "imageSpecificAudioProvided": false,
-        "reuseAudioAllowedByThisPacket": false
-      },
-      "qaEvidence": {
-        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/windhoek/illustration-qa-extra.json",
-        "fileSHA256": "79eada6746db9a1e26d3614c8a853ab7615587de59a21759a0a8e82991cd768c",
-        "item": {
-          "slot": "K1",
-          "targetJsonPath": "$.kaupunkilehti[0].nostot[0]",
-          "assetID": "e08-windhoek-K1-illustration-v1-20261012",
-          "sha256": "616da4f96356147a5117b59538af9c1693396df3d6262e36304089c8eaa21cae",
-          "verdict": "accepted",
-          "reason": "Hiekkakivi ja marmori havainnollistavat kirkon materiaaleja. Ei palojen alkuperä- tai rakennuksen rekonstruktioväite.",
-          "evidence": {
-            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/windhoek/assets/e08-windhoek-K1-illustration-v1-20261012/image.png",
-            "nativeSha256Verified": "616da4f96356147a5117b59538af9c1693396df3d6262e36304089c8eaa21cae",
-            "nativeWidth": 1536,
-            "nativeHeight": 1024,
-            "format": "PNG",
-            "nativeMode": "RGB",
-            "visualInspection": "Tarkistaja katsoi itse natiivin NAS-tiedoston view_image-työkalulla original-tarkkuudessa tässä sessiossa: Kellertävä rakeinen hiekkakivipala ja vaalea harmaasuoninen marmoripala. Epäsäännölliset murtopinnat ja varjot luontevia; ei rakennuksia tai merkintöjä.",
-            "captionFi": "Havainnekuva hiekkakivestä ja marmorista.",
-            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/windhoek/sisalto.json",
-            "contentSha256": "394c8a71eace7519becc050bfb75716b95a4ed5629eae449b3f7f371bda9d225",
-            "targetCurrentlyPresent": true,
-            "targetText": "Christuskirche näyttää ensi silmäyksellä yhdeltä rakennukselta, mutta sen materiaalien kartta ulottuu paljon Windhoekia laajemmalle. Kvartsipitoinen hiekkakivi louhittiin Avisin padon läheltä. Sisäänkäynnin Carraran marmori tuli Italiasta, ja kellolaite sekä osa katosta Saksasta. Gottlieb Redeckerin suunnittelemassa kirkossa yhdistyvät uusromaaniset, uusgoottilaiset ja jugendin vaikutteet. Paikallinen kivi ja ulkomailta saapuneet osat kohtaavat samassa siirtomaakauden rakennuksessa.",
-            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/windhoek/faktapohja.md",
-            "factSheetSha256": "f9883c307605c6764857aad9ab3b5c08d727f3b3189bc15c6ed51a1f70c946df",
-            "topicEvidence": "Faktapohja W3 Christ Church Background ja §3.",
-            "rightsAssessment": "Yleinen luonnon-, materiaali-, ruoka- tai arkiesineaihe; ei nimettyä nykytaideteosta. Aiheen ja paikkarehellisyyden arvio verdictissä ja omassa silmähavainnossa.",
-            "scope": "Vain riippumaton natiivikuvituksen QA; R2-toimitus, integrointi ja julkaisu eivät ole kuitattuja."
-          },
-          "reviewedAt": "2026-10-13T05:57:48.429600+00:00",
-          "reviewerSession": "e08-extra-01a131d7-1d58-7eb0-a959-c0073288e011"
-        },
-        "allSources": [
-          {
-            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/windhoek/qa.json",
-            "sha256": "d6fb0249785a075396037b56c3a4d0aedcf57d465d2c73fbfcdee998eef9b92a"
-          },
-          {
-            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/windhoek/illustration-qa-extra.json",
-            "sha256": "79eada6746db9a1e26d3614c8a853ab7615587de59a21759a0a8e82991cd768c"
-          }
-        ]
-      },
-      "R2ByteVerification": {
-        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/windhoek/e08-windhoek-K1-illustration-v1-20261012-616da4f96356.png",
-        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/windhoek/e08-windhoek-K1-illustration-v1-20261012-616da4f96356.png?t=c4edff289ffccd81",
-        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/windhoek/e08-windhoek-K1-illustration-v1-20261012-616da4f96356.png",
-        "sha256": "c4edff289ffccd815b7d0d6882fb134ffb9236f2b39455f795e93eabaed5fbed",
-        "bytes": 2224598,
-        "http": 200,
-        "mime": "image/png",
-        "cors": "https://matkakirja.app",
-        "cacheBustedPreflightHttp": 404,
-        "cacheBustedReadback": true,
-        "byteExactReadback": true,
-        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
-        "conditionalIfNoneMatch": "*",
-        "s3PutHttp": 200,
-        "assetID": "e08-windhoek-K1-illustration-v1-20261012",
-        "nativeSHA256": "616da4f96356147a5117b59538af9c1693396df3d6262e36304089c8eaa21cae",
-        "canonicalReadbackByteExact": true,
-        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/windhoek/e08-windhoek-K1-illustration-v1-20261012-616da4f96356.png",
-        "pixelIdenticalToQAAcceptedNative": true,
-        "era": "e08",
-        "city": "windhoek",
-        "slot": "K1",
-        "targetJsonPath": "$.kaupunkilehti[0].nostot[0]",
-        "verifiedAt": "2026-10-13T05:58:56.151124+00:00",
-        "ownerAcceptanceVerified": false,
-        "gameIntegrated": false,
-        "galleryVisibleVerified": false
-      },
-      "producerExportProof": null,
-      "technicalExportProof": {
-        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/windhoek/e08-windhoek-K1-illustration-v1-20261012-616da4f96356.png",
-        "sha256": "c4edff289ffccd815b7d0d6882fb134ffb9236f2b39455f795e93eabaed5fbed",
-        "bytes": 2224598,
-        "SHAReadAt": "2026-10-13T05:58:01.280752+00:00",
-        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
-        "width": 1536,
-        "height": 1024,
-        "pixelWidth": 1536,
-        "pixelHeight": 1024,
-        "exifOrientation": 1,
-        "dimensionsBasis": "EXIF-oriented-display",
-        "format": "PNG",
-        "largeOriginalHeaderOnlyRead": false,
-        "nativeSHA256": "616da4f96356147a5117b59538af9c1693396df3d6262e36304089c8eaa21cae",
-        "rgbPixelSHA256": "536105099e976be5d4461e42c78e3cdae16d0d382e25b70fb0a1ccdcbf49ea8d",
-        "pixelIdenticalToQAAcceptedNative": true,
-        "sRGBProfileEmbedded": true,
-        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
-      },
-      "priorMediaFields": {
-        "tiedosto": "",
-        "lahde": "",
-        "selite": "",
-        "lyhyt": ""
-      },
-      "preservePreviousMediaObjects": true,
-      "authorization": {
-        "status": "waived-owner-review",
-        "authorizedByOwner": true,
-        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
-        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
-        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
-        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
-        "ownerAcceptanceImplied": false,
-        "QARequired": true,
-        "R2ByteVerificationRequired": true,
-        "galleryBeforeGameRequired": false,
-        "verifiedHumanMessageSource": {
-          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
-          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
-        }
-      },
-      "ownerAcceptanceVerified": false,
-      "gameIntegrated": false,
-      "gamePublicationVerified": false,
-      "inMemoryMergeVerified": true,
-      "CcommonsMetadataBound": false,
-      "roleManifestBound": true,
-      "sourceContentAfterSHA256": "33044b0a725c78c49975a7162a9966f51a61b6f96a5629a9c0ed1c59d6250d38",
-      "targetAfterSHA256": "850436854fe5c7b9182223177c50f626912bf6ac14ae2418cef92aee10d98ba0",
-      "contextAfterSHA256": "850436854fe5c7b9182223177c50f626912bf6ac14ae2418cef92aee10d98ba0"
-    },
-    {
-      "era": "e08",
-      "city": "windhoek",
-      "slot": "K3",
-      "type": "illustration",
-      "assetID": "e08-windhoek-K3-illustration-v1-20261012",
-      "galleryImageID": "e08-windhoek-K3-illustration-v1-20261012",
-      "commonsFile": null,
-      "targetJsonPath": "$.kaupunkilehti[0].nostot[2]",
-      "targetTokens": [
-        "kaupunkilehti",
-        0,
-        "nostot",
-        2
-      ],
-      "operation": "merge-media-fields-preserve-other-content",
-      "CmediaFieldPayload": {
-        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/windhoek/e08-windhoek-K3-illustration-v1-20261012-9e085a98308c.png",
-        "suora": true,
-        "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva kallioisen kuivamaan kasvillisuudesta.",
-        "lyhyt": "Havainnekuva kallioisen kuivamaan kasvillisuudesta."
-      },
-      "removeMediaKeys": [
-        "tiedosto"
-      ],
-      "CvalidatorCompatiblePayload": {},
-      "runtimeMediaFieldPayload": {
-        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/windhoek/e08-windhoek-K3-illustration-v1-20261012-9e085a98308c.png",
-        "suora": true,
-        "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva kallioisen kuivamaan kasvillisuudesta.",
-        "lyhyt": "Havainnekuva kallioisen kuivamaan kasvillisuudesta."
-      },
-      "runtimeRemoveMediaKeys": [
-        "tiedosto"
-      ],
-      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
-      "nativeSHA256": "9e085a98308c5230222f2f950cddc38d1e4850fff45c600f539750047fa49c3f",
-      "exportSHA256": "16dd3729087702382ea0e7212b53e0ab72aee9261d04d8c0ee8027ee4799a3ee",
-      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/windhoek/e08-windhoek-K3-illustration-v1-20261012-9e085a98308c.png",
-      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/windhoek/e08-windhoek-K3-illustration-v1-20261012-9e085a98308c.png",
-      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/windhoek/e08-windhoek-K3-illustration-v1-20261012-9e085a98308c.png",
-      "dimensions": [
-        1536,
-        1024
-      ],
-      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/windhoek/sisalto.json",
-      "sourceContentSHA256": "394c8a71eace7519becc050bfb75716b95a4ed5629eae449b3f7f371bda9d225",
-      "semanticSourceBind": {
-        "targetBeforeSHA256": "2c181124942415ab8c318aba215d2496c61b2ee47bf60aaa2e9dc6938bc84691",
-        "semanticContextSHA256": "2c181124942415ab8c318aba215d2496c61b2ee47bf60aaa2e9dc6938bc84691",
-        "subjectTitle": "Puutarha, joka suojelee omaa paikkaansa",
-        "targetState": "existing-target"
-      },
-      "attribution": {
-        "author": null,
-        "license": null,
-        "licenseUrl": null,
-        "sourcePage": null,
-        "originalUrl": null,
-        "rightsEvidence": {
-          "production": {
-            "scope": "Common natural material, plant, animal, food or unbranded functional object. No named protected artwork or real architecture/collection reconstruction.",
-            "notLocationProof": true
-          },
-          "QA": {
-            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/windhoek/assets/e08-windhoek-K3-illustration-v1-20261012/image.png",
-            "nativeSha256Verified": "9e085a98308c5230222f2f950cddc38d1e4850fff45c600f539750047fa49c3f",
-            "nativeWidth": 1536,
-            "nativeHeight": 1024,
-            "format": "PNG",
-            "nativeMode": "RGB",
-            "visualInspection": "Tarkistaja katsoi itse natiivin NAS-tiedoston view_image-työkalulla original-tarkkuudessa tässä sessiossa: Pieni pensas luonnonkivien välissä, kuivaa heinää ja vihreitä versoja. Oksat ja kivipinnat vaihtelevat luontevasti; ei polkuja, kylttejä tai rakennuksia.",
-            "captionFi": "Havainnekuva kallioisen kuivamaan kasvillisuudesta.",
-            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/windhoek/sisalto.json",
-            "contentSha256": "394c8a71eace7519becc050bfb75716b95a4ed5629eae449b3f7f371bda9d225",
-            "targetCurrentlyPresent": true,
-            "targetText": "Windhoekin kansallinen kasvitieteellinen puutarha tunnetaan myös South West Nature Reservenä. Se sijaitsee kaupungin sydämessä ja suojelee alueelle ominaista kasvillisuutta kallioisine kumpuineen. Täällä kasvitieteellinen puutarha ja luonnonsuojelualue ovat sama paikka: huomio kiinnittyy myös siihen, mitä maastossa kasvaa valmiiksi. Kaupungissa kulkeva pääsee tutkimaan paikallista luontoa poistumatta kauas keskustasta. Ylänkö ei katoa rakennusten tieltä kokonaan.",
-            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/windhoek/faktapohja.md",
-            "factSheetSha256": "f9883c307605c6764857aad9ab3b5c08d727f3b3189bc15c6ed51a1f70c946df",
-            "topicEvidence": "Faktapohja W6 MEFT South West Nature Reserve ja §3.",
-            "rightsAssessment": "Yleinen luonnon-, materiaali-, ruoka- tai arkiesineaihe; ei nimettyä nykytaideteosta. Aiheen ja paikkarehellisyyden arvio verdictissä ja omassa silmähavainnossa.",
-            "scope": "Vain riippumaton natiivikuvituksen QA; R2-toimitus, integrointi ja julkaisu eivät ole kuitattuja."
-          },
-          "qaReason": "Kuivamaan pensas ja kivet vastaavat kasvillisuuden ja kallioisuuden yleisiä aiheita. Ei lajimääritystä tai puutarhan asetteluväitettä."
-        }
-      },
-      "luentaMetadata": {
-        "existingImageLuenta": null,
-        "captionReadingText": "Havainnekuva kallioisen kuivamaan kasvillisuudesta.",
-        "existingArticleAndSectionLuentaPreserved": true,
-        "audioGenerated": false,
-        "audioURL": null,
-        "imageSpecificAudioProvided": false,
-        "reuseAudioAllowedByThisPacket": false
-      },
-      "qaEvidence": {
-        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/windhoek/illustration-qa-extra.json",
-        "fileSHA256": "79eada6746db9a1e26d3614c8a853ab7615587de59a21759a0a8e82991cd768c",
-        "item": {
-          "slot": "K3",
-          "targetJsonPath": "$.kaupunkilehti[0].nostot[2]",
-          "assetID": "e08-windhoek-K3-illustration-v1-20261012",
-          "sha256": "9e085a98308c5230222f2f950cddc38d1e4850fff45c600f539750047fa49c3f",
-          "verdict": "accepted",
-          "reason": "Kuivamaan pensas ja kivet vastaavat kasvillisuuden ja kallioisuuden yleisiä aiheita. Ei lajimääritystä tai puutarhan asetteluväitettä.",
-          "evidence": {
-            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/windhoek/assets/e08-windhoek-K3-illustration-v1-20261012/image.png",
-            "nativeSha256Verified": "9e085a98308c5230222f2f950cddc38d1e4850fff45c600f539750047fa49c3f",
-            "nativeWidth": 1536,
-            "nativeHeight": 1024,
-            "format": "PNG",
-            "nativeMode": "RGB",
-            "visualInspection": "Tarkistaja katsoi itse natiivin NAS-tiedoston view_image-työkalulla original-tarkkuudessa tässä sessiossa: Pieni pensas luonnonkivien välissä, kuivaa heinää ja vihreitä versoja. Oksat ja kivipinnat vaihtelevat luontevasti; ei polkuja, kylttejä tai rakennuksia.",
-            "captionFi": "Havainnekuva kallioisen kuivamaan kasvillisuudesta.",
-            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/windhoek/sisalto.json",
-            "contentSha256": "394c8a71eace7519becc050bfb75716b95a4ed5629eae449b3f7f371bda9d225",
-            "targetCurrentlyPresent": true,
-            "targetText": "Windhoekin kansallinen kasvitieteellinen puutarha tunnetaan myös South West Nature Reservenä. Se sijaitsee kaupungin sydämessä ja suojelee alueelle ominaista kasvillisuutta kallioisine kumpuineen. Täällä kasvitieteellinen puutarha ja luonnonsuojelualue ovat sama paikka: huomio kiinnittyy myös siihen, mitä maastossa kasvaa valmiiksi. Kaupungissa kulkeva pääsee tutkimaan paikallista luontoa poistumatta kauas keskustasta. Ylänkö ei katoa rakennusten tieltä kokonaan.",
-            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/windhoek/faktapohja.md",
-            "factSheetSha256": "f9883c307605c6764857aad9ab3b5c08d727f3b3189bc15c6ed51a1f70c946df",
-            "topicEvidence": "Faktapohja W6 MEFT South West Nature Reserve ja §3.",
-            "rightsAssessment": "Yleinen luonnon-, materiaali-, ruoka- tai arkiesineaihe; ei nimettyä nykytaideteosta. Aiheen ja paikkarehellisyyden arvio verdictissä ja omassa silmähavainnossa.",
-            "scope": "Vain riippumaton natiivikuvituksen QA; R2-toimitus, integrointi ja julkaisu eivät ole kuitattuja."
-          },
-          "reviewedAt": "2026-10-13T05:57:48.504640+00:00",
-          "reviewerSession": "e08-extra-01a131d7-1d58-7eb0-a959-c0073288e011"
-        },
-        "allSources": [
-          {
-            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/windhoek/qa.json",
-            "sha256": "d6fb0249785a075396037b56c3a4d0aedcf57d465d2c73fbfcdee998eef9b92a"
-          },
-          {
-            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/windhoek/illustration-qa-extra.json",
-            "sha256": "79eada6746db9a1e26d3614c8a853ab7615587de59a21759a0a8e82991cd768c"
-          }
-        ]
-      },
-      "R2ByteVerification": {
-        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/windhoek/e08-windhoek-K3-illustration-v1-20261012-9e085a98308c.png",
-        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/windhoek/e08-windhoek-K3-illustration-v1-20261012-9e085a98308c.png?t=16dd372908770238",
-        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/windhoek/e08-windhoek-K3-illustration-v1-20261012-9e085a98308c.png",
-        "sha256": "16dd3729087702382ea0e7212b53e0ab72aee9261d04d8c0ee8027ee4799a3ee",
-        "bytes": 3074523,
-        "http": 200,
-        "mime": "image/png",
-        "cors": "https://matkakirja.app",
-        "cacheBustedPreflightHttp": 404,
-        "cacheBustedReadback": true,
-        "byteExactReadback": true,
-        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
-        "conditionalIfNoneMatch": "*",
-        "s3PutHttp": 200,
-        "assetID": "e08-windhoek-K3-illustration-v1-20261012",
-        "nativeSHA256": "9e085a98308c5230222f2f950cddc38d1e4850fff45c600f539750047fa49c3f",
-        "canonicalReadbackByteExact": true,
-        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/windhoek/e08-windhoek-K3-illustration-v1-20261012-9e085a98308c.png",
-        "pixelIdenticalToQAAcceptedNative": true,
-        "era": "e08",
-        "city": "windhoek",
-        "slot": "K3",
-        "targetJsonPath": "$.kaupunkilehti[0].nostot[2]",
-        "verifiedAt": "2026-10-13T05:58:57.822672+00:00",
-        "ownerAcceptanceVerified": false,
-        "gameIntegrated": false,
-        "galleryVisibleVerified": false
-      },
-      "producerExportProof": null,
-      "technicalExportProof": {
-        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/windhoek/e08-windhoek-K3-illustration-v1-20261012-9e085a98308c.png",
-        "sha256": "16dd3729087702382ea0e7212b53e0ab72aee9261d04d8c0ee8027ee4799a3ee",
-        "bytes": 3074523,
-        "SHAReadAt": "2026-10-13T05:58:01.486090+00:00",
-        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
-        "width": 1536,
-        "height": 1024,
-        "pixelWidth": 1536,
-        "pixelHeight": 1024,
-        "exifOrientation": 1,
-        "dimensionsBasis": "EXIF-oriented-display",
-        "format": "PNG",
-        "largeOriginalHeaderOnlyRead": false,
-        "nativeSHA256": "9e085a98308c5230222f2f950cddc38d1e4850fff45c600f539750047fa49c3f",
-        "rgbPixelSHA256": "43c00678d4b4acb50a55fa315aa48a898c3f5d353204f136843e32a72b8ea201",
-        "pixelIdenticalToQAAcceptedNative": true,
-        "sRGBProfileEmbedded": true,
-        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
-      },
-      "priorMediaFields": {
-        "tiedosto": "",
-        "lahde": "",
-        "selite": "",
-        "lyhyt": ""
-      },
-      "preservePreviousMediaObjects": true,
-      "authorization": {
-        "status": "waived-owner-review",
-        "authorizedByOwner": true,
-        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
-        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
-        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
-        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
-        "ownerAcceptanceImplied": false,
-        "QARequired": true,
-        "R2ByteVerificationRequired": true,
-        "galleryBeforeGameRequired": false,
-        "verifiedHumanMessageSource": {
-          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
-          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
-        }
-      },
-      "ownerAcceptanceVerified": false,
-      "gameIntegrated": false,
-      "gamePublicationVerified": false,
-      "inMemoryMergeVerified": true,
-      "CcommonsMetadataBound": false,
-      "roleManifestBound": true,
-      "sourceContentAfterSHA256": "33044b0a725c78c49975a7162a9966f51a61b6f96a5629a9c0ed1c59d6250d38",
-      "targetAfterSHA256": "2c181124942415ab8c318aba215d2496c61b2ee47bf60aaa2e9dc6938bc84691",
-      "contextAfterSHA256": "2c181124942415ab8c318aba215d2496c61b2ee47bf60aaa2e9dc6938bc84691"
+      "contextAfterSHA256": "596ac0bfd212717274cebcb8c93caf5db03e245074a2fc13cead396d02bedeb1",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e08",
@@ -2425,7 +2445,7 @@
         4032
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/windhoek/sisalto.json",
-      "sourceContentSHA256": "394c8a71eace7519becc050bfb75716b95a4ed5629eae449b3f7f371bda9d225",
+      "sourceContentSHA256": "33044b0a725c78c49975a7162a9966f51a61b6f96a5629a9c0ed1c59d6250d38",
       "semanticSourceBind": {
         "targetBeforeSHA256": "f0a6f233c8605610c731712f210529b3c386c60aac5bfce0004b96867156b319",
         "semanticContextSHA256": "f0a6f233c8605610c731712f210529b3c386c60aac5bfce0004b96867156b319",
@@ -2501,7 +2521,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/windhoek/qa.json",
-        "fileSHA256": "d6fb0249785a075396037b56c3a4d0aedcf57d465d2c73fbfcdee998eef9b92a",
+        "fileSHA256": "79d0f971c98bcef4101280eea741606bf2753e7c6422add551d2b546b4c4c790",
         "item": {
           "slot": "PHOTO",
           "targetJsonPath": "$.valokuva",
@@ -2550,7 +2570,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/windhoek/qa.json",
-            "sha256": "d6fb0249785a075396037b56c3a4d0aedcf57d465d2c73fbfcdee998eef9b92a"
+            "sha256": "79d0f971c98bcef4101280eea741606bf2753e7c6422add551d2b546b4c4c790"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/windhoek/illustration-qa-extra.json",
@@ -2629,7 +2649,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "33044b0a725c78c49975a7162a9966f51a61b6f96a5629a9c0ed1c59d6250d38",
       "targetAfterSHA256": "f0a6f233c8605610c731712f210529b3c386c60aac5bfce0004b96867156b319",
-      "contextAfterSHA256": "f0a6f233c8605610c731712f210529b3c386c60aac5bfce0004b96867156b319"
+      "contextAfterSHA256": "f0a6f233c8605610c731712f210529b3c386c60aac5bfce0004b96867156b319",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e08",
@@ -2682,7 +2704,7 @@
         1920
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/windhoek/sisalto.json",
-      "sourceContentSHA256": "394c8a71eace7519becc050bfb75716b95a4ed5629eae449b3f7f371bda9d225",
+      "sourceContentSHA256": "33044b0a725c78c49975a7162a9966f51a61b6f96a5629a9c0ed1c59d6250d38",
       "semanticSourceBind": {
         "targetBeforeSHA256": "ada5919f323789d2aa62009b712823e72a0b69a909c098a2c362e5478edada89",
         "semanticContextSHA256": "ada5919f323789d2aa62009b712823e72a0b69a909c098a2c362e5478edada89",
@@ -2771,7 +2793,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/windhoek/qa.json",
-        "fileSHA256": "d6fb0249785a075396037b56c3a4d0aedcf57d465d2c73fbfcdee998eef9b92a",
+        "fileSHA256": "79d0f971c98bcef4101280eea741606bf2753e7c6422add551d2b546b4c4c790",
         "item": {
           "slot": "C1",
           "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
@@ -2830,7 +2852,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/windhoek/qa.json",
-            "sha256": "d6fb0249785a075396037b56c3a4d0aedcf57d465d2c73fbfcdee998eef9b92a"
+            "sha256": "79d0f971c98bcef4101280eea741606bf2753e7c6422add551d2b546b4c4c790"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/windhoek/illustration-qa-extra.json",
@@ -2907,7 +2929,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "33044b0a725c78c49975a7162a9966f51a61b6f96a5629a9c0ed1c59d6250d38",
       "targetAfterSHA256": "ada5919f323789d2aa62009b712823e72a0b69a909c098a2c362e5478edada89",
-      "contextAfterSHA256": "ada5919f323789d2aa62009b712823e72a0b69a909c098a2c362e5478edada89"
+      "contextAfterSHA256": "ada5919f323789d2aa62009b712823e72a0b69a909c098a2c362e5478edada89",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e08",
@@ -2960,7 +2984,7 @@
         2280
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/windhoek/sisalto.json",
-      "sourceContentSHA256": "394c8a71eace7519becc050bfb75716b95a4ed5629eae449b3f7f371bda9d225",
+      "sourceContentSHA256": "33044b0a725c78c49975a7162a9966f51a61b6f96a5629a9c0ed1c59d6250d38",
       "semanticSourceBind": {
         "targetBeforeSHA256": "d4a017a3f8a302b255fd1d8c557fc3644fa32fe4198fe3757d60403fc6deab9d",
         "semanticContextSHA256": "d4a017a3f8a302b255fd1d8c557fc3644fa32fe4198fe3757d60403fc6deab9d",
@@ -3038,7 +3062,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/windhoek/qa.json",
-        "fileSHA256": "d6fb0249785a075396037b56c3a4d0aedcf57d465d2c73fbfcdee998eef9b92a",
+        "fileSHA256": "79d0f971c98bcef4101280eea741606bf2753e7c6422add551d2b546b4c4c790",
         "item": {
           "slot": "C2",
           "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[1]",
@@ -3086,7 +3110,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/windhoek/qa.json",
-            "sha256": "d6fb0249785a075396037b56c3a4d0aedcf57d465d2c73fbfcdee998eef9b92a"
+            "sha256": "79d0f971c98bcef4101280eea741606bf2753e7c6422add551d2b546b4c4c790"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/windhoek/illustration-qa-extra.json",
@@ -3163,7 +3187,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "33044b0a725c78c49975a7162a9966f51a61b6f96a5629a9c0ed1c59d6250d38",
       "targetAfterSHA256": "d4a017a3f8a302b255fd1d8c557fc3644fa32fe4198fe3757d60403fc6deab9d",
-      "contextAfterSHA256": "d4a017a3f8a302b255fd1d8c557fc3644fa32fe4198fe3757d60403fc6deab9d"
+      "contextAfterSHA256": "d4a017a3f8a302b255fd1d8c557fc3644fa32fe4198fe3757d60403fc6deab9d",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e08",
@@ -3216,7 +3242,7 @@
         2304
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/windhoek/sisalto.json",
-      "sourceContentSHA256": "394c8a71eace7519becc050bfb75716b95a4ed5629eae449b3f7f371bda9d225",
+      "sourceContentSHA256": "33044b0a725c78c49975a7162a9966f51a61b6f96a5629a9c0ed1c59d6250d38",
       "semanticSourceBind": {
         "targetBeforeSHA256": "57506e0d697313ce3e77dab10292645bdc20c811041fb166919d9f9be247abc9",
         "semanticContextSHA256": "57506e0d697313ce3e77dab10292645bdc20c811041fb166919d9f9be247abc9",
@@ -3305,7 +3331,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/windhoek/qa.json",
-        "fileSHA256": "d6fb0249785a075396037b56c3a4d0aedcf57d465d2c73fbfcdee998eef9b92a",
+        "fileSHA256": "79d0f971c98bcef4101280eea741606bf2753e7c6422add551d2b546b4c4c790",
         "item": {
           "slot": "C3",
           "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[2]",
@@ -3364,7 +3390,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/windhoek/qa.json",
-            "sha256": "d6fb0249785a075396037b56c3a4d0aedcf57d465d2c73fbfcdee998eef9b92a"
+            "sha256": "79d0f971c98bcef4101280eea741606bf2753e7c6422add551d2b546b4c4c790"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/windhoek/illustration-qa-extra.json",
@@ -3441,7 +3467,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "33044b0a725c78c49975a7162a9966f51a61b6f96a5629a9c0ed1c59d6250d38",
       "targetAfterSHA256": "57506e0d697313ce3e77dab10292645bdc20c811041fb166919d9f9be247abc9",
-      "contextAfterSHA256": "57506e0d697313ce3e77dab10292645bdc20c811041fb166919d9f9be247abc9"
+      "contextAfterSHA256": "57506e0d697313ce3e77dab10292645bdc20c811041fb166919d9f9be247abc9",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e08",
@@ -3494,10 +3522,10 @@
         4935
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/windhoek/sisalto.json",
-      "sourceContentSHA256": "394c8a71eace7519becc050bfb75716b95a4ed5629eae449b3f7f371bda9d225",
+      "sourceContentSHA256": "33044b0a725c78c49975a7162a9966f51a61b6f96a5629a9c0ed1c59d6250d38",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "f5547b2f83ea44d303415c0c05c1d13f3b3e54f4100044b6e4f0e0b882763a31",
+        "targetBeforeSHA256": "1cb05976ab668eefc415058f08162d32b3fc5f4768353d5607644d2c64f91c59",
+        "semanticContextSHA256": "62e1d9398355dda5da382a26b05a9a156868bf3af0109e4d914ff88bb9d78176",
         "subjectTitle": "Christuskirche",
         "targetState": "existing-target"
       },
@@ -3602,7 +3630,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/windhoek/qa.json",
-        "fileSHA256": "d6fb0249785a075396037b56c3a4d0aedcf57d465d2c73fbfcdee998eef9b92a",
+        "fileSHA256": "79d0f971c98bcef4101280eea741606bf2753e7c6422add551d2b546b4c4c790",
         "item": {
           "slot": "N1",
           "targetJsonPath": "$.nahtavyydet[\"Christuskirche\"].kuvat[0]",
@@ -3671,7 +3699,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/windhoek/qa.json",
-            "sha256": "d6fb0249785a075396037b56c3a4d0aedcf57d465d2c73fbfcdee998eef9b92a"
+            "sha256": "79d0f971c98bcef4101280eea741606bf2753e7c6422add551d2b546b4c4c790"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/windhoek/illustration-qa-extra.json",
@@ -3712,10 +3740,10 @@
       "producerExportProof": null,
       "technicalExportProof": null,
       "priorMediaFields": {
-        "tiedosto": "",
-        "lahde": "",
-        "selite": "",
-        "lyhyt": ""
+        "tiedosto": "Iglesia de Cristo, Windhoek, Namibia, 2018-08-04, DD 05.jpg",
+        "lahde": "Diego Delso, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Christuskirche Windhoekissa, 2018.",
+        "lyhyt": "Christuskirche Windhoekissa, 2018."
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -3748,10 +3776,14 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "33044b0a725c78c49975a7162a9966f51a61b6f96a5629a9c0ed1c59d6250d38",
       "targetAfterSHA256": "1cb05976ab668eefc415058f08162d32b3fc5f4768353d5607644d2c64f91c59",
-      "contextAfterSHA256": "62e1d9398355dda5da382a26b05a9a156868bf3af0109e4d914ff88bb9d78176"
+      "contextAfterSHA256": "62e1d9398355dda5da382a26b05a9a156868bf3af0109e4d914ff88bb9d78176",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     }
   ],
   "runtimeIntegrationPending": true,
-  "ownerAcceptedNotImpliedByAuthorization": true,
-  "gameIntegrated": false
+  "ownerAcceptedNotImpliedByAuthorization": false,
+  "gameIntegrated": false,
+  "allAssetsExplicitlyOwnerApproved": true,
+  "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
 }

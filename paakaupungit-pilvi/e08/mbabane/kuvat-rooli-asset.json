@@ -2,7 +2,7 @@
   "schemaVersion": "capital-city-role-assets/v1",
   "era": "e08",
   "city": "mbabane",
-  "authorization": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+  "authorization": "hyväksyn kaikki tekemäsi kuvat. toimita ne claudelle. claudelta saat uusia ohjeita jatkoa varten",
   "sourceContentAfterSHA256": "7ec11728e15ba74a9c36aea0a2ee1d687632835d6fd8bacf4e19668f240b722b",
   "assets": [
     {
@@ -241,7 +241,237 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "7ec11728e15ba74a9c36aea0a2ee1d687632835d6fd8bacf4e19668f240b722b",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "32276d82a2ece9360f64d9ca08b436b8d041934ea89d726235de3b53e2e32193"
+      "contextAfterSHA256": "32276d82a2ece9360f64d9ca08b436b8d041934ea89d726235de3b53e2e32193",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+    },
+    {
+      "era": "e08",
+      "city": "mbabane",
+      "slot": "O2",
+      "type": "illustration",
+      "assetID": "e08-mbabane-O2-illustration-v1-20261012",
+      "galleryImageID": "e08-mbabane-O2-illustration-v1-20261012",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[1].kuva",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "matkailijalle",
+        "artikkeli",
+        "jaksot",
+        1,
+        "kuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/mbabane/e08-mbabane-O2-illustration-v1-20261012-d61e8d78fc34.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva keramiikasta ja tekstiilistä.",
+        "lyhyt": "Havainnekuva keramiikasta ja tekstiilistä."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/mbabane/e08-mbabane-O2-illustration-v1-20261012-d61e8d78fc34.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva keramiikasta ja tekstiilistä.",
+        "lyhyt": "Havainnekuva keramiikasta ja tekstiilistä."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "d61e8d78fc341beb3bb3419c83a26275a265600e2e15b359ea132b8877aa51a2",
+      "exportSHA256": "e4d8d282e1588364ffff8bf1417d32531cbef2fba4e78ca04e70dcfd31b34c07",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/mbabane/e08-mbabane-O2-illustration-v1-20261012-d61e8d78fc34.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/mbabane/e08-mbabane-O2-illustration-v1-20261012-d61e8d78fc34.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/mbabane/e08-mbabane-O2-illustration-v1-20261012-d61e8d78fc34.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/mbabane/sisalto.json",
+      "sourceContentSHA256": "7ec11728e15ba74a9c36aea0a2ee1d687632835d6fd8bacf4e19668f240b722b",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "e435b6f526bc81e8507aced17f085f0006e8266af705210a01d34b34bfc8a1b2",
+        "subjectTitle": "Keskustan kierros",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": {
+            "scope": "Common natural material, plant, animal, food or unbranded functional object. No named protected artwork or real architecture/collection reconstruction.",
+            "notLocationProof": true
+          },
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/mbabane/assets/e08-mbabane-O2-illustration-v1-20261012/image.png",
+            "nativeSha256Verified": "d61e8d78fc341beb3bb3419c83a26275a265600e2e15b359ea132b8877aa51a2",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "nativeMode": "RGB",
+            "visualInspection": "Tarkistaja katsoi itse natiivin NAS-tiedoston view_image-työkalulla original-tarkkuudessa tässä sessiossa: Vaalea keraaminen kulho ja taiteltu kuvioton kangas puupöydällä. Lasite, kankaan kudos ja puun kulumat luontevia; ei merkintöjä tai tunnistettavaa taideteosta.",
+            "captionFi": "Havainnekuva keramiikasta ja tekstiilistä.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/mbabane/sisalto.json",
+            "contentSha256": "7ec11728e15ba74a9c36aea0a2ee1d687632835d6fd8bacf4e19668f240b722b",
+            "targetCurrentlyPresent": true,
+            "targetText": "Swazi Plaza ja Mbabane Mall ovat keskustan palvelujen keskittymiä. Niiden ympärillä kaupungin arki näkyy kauppoina, pankkeina ja ruokapaikkoina. Keskustassa on myös avomarkkinoita, mutta niiden toiminta ei ole samanlaista joka päivä. Indingilizi Galleryn valikoima ulottuu maalauksista tekstiileihin ja keramiikkaan; varmista vierailumahdollisuus ennen lähtöä. Siswati on paikallinen pääkieli, ja englanti on laajalti käytössä.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/mbabane/faktapohja.md",
+            "factSheetSha256": "a59647f1196470a86b53357933576b96e94bf832774719123911b33d72693fb3",
+            "topicEvidence": "Faktapohja E1 Culture, §2 Galleria on myös tekstiilien paikka ja opas2.",
+            "rightsAssessment": "Yleinen luonnon-, materiaali-, ruoka- tai arkiesineaihe; ei nimettyä nykytaideteosta. Aiheen ja paikkarehellisyyden arvio verdictissä ja omassa silmähavainnossa.",
+            "scope": "Vain riippumaton natiivikuvituksen QA; R2-toimitus, integrointi ja julkaisu eivät ole kuitattuja."
+          },
+          "qaReason": "Yleinen keramiikka ja tekstiili vastaavat gallerian materiaaliryhmiä, ilman tietyn teoksen tai valikoiman jäljentämistä."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva keramiikasta ja tekstiilistä.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/mbabane/illustration-qa-extra.json",
+        "fileSHA256": "ebbd0eba039c0e44af2928185c8dd696dbf9e925ff221158b72c2041b10ce1d8",
+        "item": {
+          "slot": "O2",
+          "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[1].kuva",
+          "assetID": "e08-mbabane-O2-illustration-v1-20261012",
+          "sha256": "d61e8d78fc341beb3bb3419c83a26275a265600e2e15b359ea132b8877aa51a2",
+          "verdict": "accepted",
+          "reason": "Yleinen keramiikka ja tekstiili vastaavat gallerian materiaaliryhmiä, ilman tietyn teoksen tai valikoiman jäljentämistä.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/mbabane/assets/e08-mbabane-O2-illustration-v1-20261012/image.png",
+            "nativeSha256Verified": "d61e8d78fc341beb3bb3419c83a26275a265600e2e15b359ea132b8877aa51a2",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "nativeMode": "RGB",
+            "visualInspection": "Tarkistaja katsoi itse natiivin NAS-tiedoston view_image-työkalulla original-tarkkuudessa tässä sessiossa: Vaalea keraaminen kulho ja taiteltu kuvioton kangas puupöydällä. Lasite, kankaan kudos ja puun kulumat luontevia; ei merkintöjä tai tunnistettavaa taideteosta.",
+            "captionFi": "Havainnekuva keramiikasta ja tekstiilistä.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/mbabane/sisalto.json",
+            "contentSha256": "7ec11728e15ba74a9c36aea0a2ee1d687632835d6fd8bacf4e19668f240b722b",
+            "targetCurrentlyPresent": true,
+            "targetText": "Swazi Plaza ja Mbabane Mall ovat keskustan palvelujen keskittymiä. Niiden ympärillä kaupungin arki näkyy kauppoina, pankkeina ja ruokapaikkoina. Keskustassa on myös avomarkkinoita, mutta niiden toiminta ei ole samanlaista joka päivä. Indingilizi Galleryn valikoima ulottuu maalauksista tekstiileihin ja keramiikkaan; varmista vierailumahdollisuus ennen lähtöä. Siswati on paikallinen pääkieli, ja englanti on laajalti käytössä.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/mbabane/faktapohja.md",
+            "factSheetSha256": "a59647f1196470a86b53357933576b96e94bf832774719123911b33d72693fb3",
+            "topicEvidence": "Faktapohja E1 Culture, §2 Galleria on myös tekstiilien paikka ja opas2.",
+            "rightsAssessment": "Yleinen luonnon-, materiaali-, ruoka- tai arkiesineaihe; ei nimettyä nykytaideteosta. Aiheen ja paikkarehellisyyden arvio verdictissä ja omassa silmähavainnossa.",
+            "scope": "Vain riippumaton natiivikuvituksen QA; R2-toimitus, integrointi ja julkaisu eivät ole kuitattuja."
+          },
+          "reviewedAt": "2026-10-13T05:57:47.550235+00:00",
+          "reviewerSession": "e08-extra-01a131d7-1d58-7eb0-a959-c0073288e011"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/mbabane/qa.json",
+            "sha256": "14c7ae454a44d7a92f682a4031d4fa132ae91e809be2c66f7d945c06ac60b079"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/mbabane/illustration-qa-extra.json",
+            "sha256": "ebbd0eba039c0e44af2928185c8dd696dbf9e925ff221158b72c2041b10ce1d8"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/mbabane/e08-mbabane-O2-illustration-v1-20261012-d61e8d78fc34.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/mbabane/e08-mbabane-O2-illustration-v1-20261012-d61e8d78fc34.png?t=e4d8d282e1588364",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/mbabane/e08-mbabane-O2-illustration-v1-20261012-d61e8d78fc34.png",
+        "sha256": "e4d8d282e1588364ffff8bf1417d32531cbef2fba4e78ca04e70dcfd31b34c07",
+        "bytes": 2168301,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e08-mbabane-O2-illustration-v1-20261012",
+        "nativeSHA256": "d61e8d78fc341beb3bb3419c83a26275a265600e2e15b359ea132b8877aa51a2",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/mbabane/e08-mbabane-O2-illustration-v1-20261012-d61e8d78fc34.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e08",
+        "city": "mbabane",
+        "slot": "O2",
+        "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[1].kuva",
+        "verifiedAt": "2026-10-13T05:58:21.566741+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/mbabane/e08-mbabane-O2-illustration-v1-20261012-d61e8d78fc34.png",
+        "sha256": "e4d8d282e1588364ffff8bf1417d32531cbef2fba4e78ca04e70dcfd31b34c07",
+        "bytes": 2168301,
+        "SHAReadAt": "2026-10-13T05:57:58.268068+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "d61e8d78fc341beb3bb3419c83a26275a265600e2e15b359ea132b8877aa51a2",
+        "rgbPixelSHA256": "543bb958e2f2e3911b2c9aea70e69853fd24442e8255f86208a690ad484b4789",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "7ec11728e15ba74a9c36aea0a2ee1d687632835d6fd8bacf4e19668f240b722b",
+      "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+      "contextAfterSHA256": "e435b6f526bc81e8507aced17f085f0006e8266af705210a01d34b34bfc8a1b2",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e08",
@@ -492,7 +722,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "7ec11728e15ba74a9c36aea0a2ee1d687632835d6fd8bacf4e19668f240b722b",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "324b6bf791eb72d813e10e3638a209f0e7e18c1ef24c8531d6ebcf7f760921e7"
+      "contextAfterSHA256": "324b6bf791eb72d813e10e3638a209f0e7e18c1ef24c8531d6ebcf7f760921e7",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e08",
@@ -730,7 +962,234 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "7ec11728e15ba74a9c36aea0a2ee1d687632835d6fd8bacf4e19668f240b722b",
       "targetAfterSHA256": "2b763a01238c8817a54c90507ee839afb9461f13cb593756e84ee160b2e16608",
-      "contextAfterSHA256": "2b763a01238c8817a54c90507ee839afb9461f13cb593756e84ee160b2e16608"
+      "contextAfterSHA256": "2b763a01238c8817a54c90507ee839afb9461f13cb593756e84ee160b2e16608",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+    },
+    {
+      "era": "e08",
+      "city": "mbabane",
+      "slot": "L1",
+      "type": "illustration",
+      "assetID": "e08-mbabane-L1-illustration-v1-20261012",
+      "galleryImageID": "e08-mbabane-L1-illustration-v1-20261012",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[1].nostot[0]",
+      "targetTokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        0
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/mbabane/e08-mbabane-L1-illustration-v1-20261012-c6d203e65a2e.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva graniitin pinnasta.",
+        "lyhyt": "Havainnekuva graniitin pinnasta."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/mbabane/e08-mbabane-L1-illustration-v1-20261012-c6d203e65a2e.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva graniitin pinnasta.",
+        "lyhyt": "Havainnekuva graniitin pinnasta."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "c6d203e65a2ebb0ca709d26e5074d2738c1781bdfd202ab916c787771ee655c4",
+      "exportSHA256": "fd36b84345973d6eec74e3ea11c85a1c8bf13fcc4c7dc90f9ec6d25b54786649",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/mbabane/e08-mbabane-L1-illustration-v1-20261012-c6d203e65a2e.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/mbabane/e08-mbabane-L1-illustration-v1-20261012-c6d203e65a2e.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/mbabane/e08-mbabane-L1-illustration-v1-20261012-c6d203e65a2e.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/mbabane/sisalto.json",
+      "sourceContentSHA256": "7ec11728e15ba74a9c36aea0a2ee1d687632835d6fd8bacf4e19668f240b722b",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "d6443f526b725234851d07e29d90c7e4b3151509166067502df256b451a373c3",
+        "semanticContextSHA256": "d6443f526b725234851d07e29d90c7e4b3151509166067502df256b451a373c3",
+        "subjectTitle": "Sibebe on graniittia",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": {
+            "scope": "Common natural material, plant, animal, food or unbranded functional object. No named protected artwork or real architecture/collection reconstruction.",
+            "notLocationProof": true
+          },
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/mbabane/assets/e08-mbabane-L1-illustration-v1-20261012/image.png",
+            "nativeSha256Verified": "c6d203e65a2ebb0ca709d26e5074d2738c1781bdfd202ab916c787771ee655c4",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "nativeMode": "RGB",
+            "visualInspection": "Tarkistaja katsoi itse natiivin NAS-tiedoston view_image-työkalulla original-tarkkuudessa tässä sessiossa: Karkeassa kivipinnassa vaaleita/harmaita ja vaaleanpunaisia kiteitä sekä tummia mineraaleja. Vaihtelevat kidekoot ja halkeamat; ei mekaanista kuvioiden toistoa.",
+            "captionFi": "Havainnekuva graniitin pinnasta.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/mbabane/sisalto.json",
+            "contentSha256": "7ec11728e15ba74a9c36aea0a2ee1d687632835d6fd8bacf4e19668f240b722b",
+            "targetCurrentlyPresent": true,
+            "targetText": "Sibebe kohoaa Mbabanen lähellä Mbuluzi-joen laakson yläpuolella. Suuri graniittimuodostuma tunnetaan myös nimellä Bald Rock, Kalju kallio. Sen paljaiden rinteiden lisäksi ympäristössä on ruohomaita, lohkareita ja metsän peittämiä uurteita. Kallio on myös yhteisön retkipaikka: Rotaryn Sibebe Survivor -kävelyllä kerätään varoja hyväntekeväisyyteen. Maisemaa ei tarvitse arvioida maailmanennätyksen kautta. Luonnonmuodostuman ja kaupunkilaisten yhteys näkyy siinä, että samalle kalliolle noustaan myös yhdessä.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/mbabane/faktapohja.md",
+            "factSheetSha256": "a59647f1196470a86b53357933576b96e94bf832774719123911b33d72693fb3",
+            "topicEvidence": "Faktapohja §3 Sibebe on graniittia, E5.",
+            "rightsAssessment": "Yleinen luonnon-, materiaali-, ruoka- tai arkiesineaihe; ei nimettyä nykytaideteosta. Aiheen ja paikkarehellisyyden arvio verdictissä ja omassa silmähavainnossa.",
+            "scope": "Vain riippumaton natiivikuvituksen QA; R2-toimitus, integrointi ja julkaisu eivät ole kuitattuja."
+          },
+          "qaReason": "Graniitin materiaalipinta vastaa Sibeben kivilajiaihetta, ilman kallionmuodon tai paikallisen näytepalan väitettä."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva graniitin pinnasta.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/mbabane/illustration-qa-extra.json",
+        "fileSHA256": "ebbd0eba039c0e44af2928185c8dd696dbf9e925ff221158b72c2041b10ce1d8",
+        "item": {
+          "slot": "L1",
+          "targetJsonPath": "$.kaupunkilehti[1].nostot[0]",
+          "assetID": "e08-mbabane-L1-illustration-v1-20261012",
+          "sha256": "c6d203e65a2ebb0ca709d26e5074d2738c1781bdfd202ab916c787771ee655c4",
+          "verdict": "accepted",
+          "reason": "Graniitin materiaalipinta vastaa Sibeben kivilajiaihetta, ilman kallionmuodon tai paikallisen näytepalan väitettä.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/mbabane/assets/e08-mbabane-L1-illustration-v1-20261012/image.png",
+            "nativeSha256Verified": "c6d203e65a2ebb0ca709d26e5074d2738c1781bdfd202ab916c787771ee655c4",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "nativeMode": "RGB",
+            "visualInspection": "Tarkistaja katsoi itse natiivin NAS-tiedoston view_image-työkalulla original-tarkkuudessa tässä sessiossa: Karkeassa kivipinnassa vaaleita/harmaita ja vaaleanpunaisia kiteitä sekä tummia mineraaleja. Vaihtelevat kidekoot ja halkeamat; ei mekaanista kuvioiden toistoa.",
+            "captionFi": "Havainnekuva graniitin pinnasta.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/mbabane/sisalto.json",
+            "contentSha256": "7ec11728e15ba74a9c36aea0a2ee1d687632835d6fd8bacf4e19668f240b722b",
+            "targetCurrentlyPresent": true,
+            "targetText": "Sibebe kohoaa Mbabanen lähellä Mbuluzi-joen laakson yläpuolella. Suuri graniittimuodostuma tunnetaan myös nimellä Bald Rock, Kalju kallio. Sen paljaiden rinteiden lisäksi ympäristössä on ruohomaita, lohkareita ja metsän peittämiä uurteita. Kallio on myös yhteisön retkipaikka: Rotaryn Sibebe Survivor -kävelyllä kerätään varoja hyväntekeväisyyteen. Maisemaa ei tarvitse arvioida maailmanennätyksen kautta. Luonnonmuodostuman ja kaupunkilaisten yhteys näkyy siinä, että samalle kalliolle noustaan myös yhdessä.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/mbabane/faktapohja.md",
+            "factSheetSha256": "a59647f1196470a86b53357933576b96e94bf832774719123911b33d72693fb3",
+            "topicEvidence": "Faktapohja §3 Sibebe on graniittia, E5.",
+            "rightsAssessment": "Yleinen luonnon-, materiaali-, ruoka- tai arkiesineaihe; ei nimettyä nykytaideteosta. Aiheen ja paikkarehellisyyden arvio verdictissä ja omassa silmähavainnossa.",
+            "scope": "Vain riippumaton natiivikuvituksen QA; R2-toimitus, integrointi ja julkaisu eivät ole kuitattuja."
+          },
+          "reviewedAt": "2026-10-13T05:57:47.625516+00:00",
+          "reviewerSession": "e08-extra-01a131d7-1d58-7eb0-a959-c0073288e011"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/mbabane/qa.json",
+            "sha256": "14c7ae454a44d7a92f682a4031d4fa132ae91e809be2c66f7d945c06ac60b079"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/mbabane/illustration-qa-extra.json",
+            "sha256": "ebbd0eba039c0e44af2928185c8dd696dbf9e925ff221158b72c2041b10ce1d8"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/mbabane/e08-mbabane-L1-illustration-v1-20261012-c6d203e65a2e.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/mbabane/e08-mbabane-L1-illustration-v1-20261012-c6d203e65a2e.png?t=fd36b84345973d6e",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/mbabane/e08-mbabane-L1-illustration-v1-20261012-c6d203e65a2e.png",
+        "sha256": "fd36b84345973d6eec74e3ea11c85a1c8bf13fcc4c7dc90f9ec6d25b54786649",
+        "bytes": 3723041,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e08-mbabane-L1-illustration-v1-20261012",
+        "nativeSHA256": "c6d203e65a2ebb0ca709d26e5074d2738c1781bdfd202ab916c787771ee655c4",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/mbabane/e08-mbabane-L1-illustration-v1-20261012-c6d203e65a2e.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e08",
+        "city": "mbabane",
+        "slot": "L1",
+        "targetJsonPath": "$.kaupunkilehti[1].nostot[0]",
+        "verifiedAt": "2026-10-13T05:58:22.877755+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/mbabane/e08-mbabane-L1-illustration-v1-20261012-c6d203e65a2e.png",
+        "sha256": "fd36b84345973d6eec74e3ea11c85a1c8bf13fcc4c7dc90f9ec6d25b54786649",
+        "bytes": 3723041,
+        "SHAReadAt": "2026-10-13T05:57:58.475307+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "c6d203e65a2ebb0ca709d26e5074d2738c1781bdfd202ab916c787771ee655c4",
+        "rgbPixelSHA256": "b9277568c506c2eab858f1880ba3b49c37f709c9c51ed3b35d0087330075f7e3",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "7ec11728e15ba74a9c36aea0a2ee1d687632835d6fd8bacf4e19668f240b722b",
+      "targetAfterSHA256": "d6443f526b725234851d07e29d90c7e4b3151509166067502df256b451a373c3",
+      "contextAfterSHA256": "d6443f526b725234851d07e29d90c7e4b3151509166067502df256b451a373c3",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e08",
@@ -978,7 +1437,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "7ec11728e15ba74a9c36aea0a2ee1d687632835d6fd8bacf4e19668f240b722b",
       "targetAfterSHA256": "c233c03a16e90bfe9e0879e902e61f9a1e7950b61364778da91906e61e485e94",
-      "contextAfterSHA256": "c233c03a16e90bfe9e0879e902e61f9a1e7950b61364778da91906e61e485e94"
+      "contextAfterSHA256": "c233c03a16e90bfe9e0879e902e61f9a1e7950b61364778da91906e61e485e94",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e08",
@@ -1226,456 +1687,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "7ec11728e15ba74a9c36aea0a2ee1d687632835d6fd8bacf4e19668f240b722b",
       "targetAfterSHA256": "6c6c3b2cfc66e16e3d7c6afa720b51ecc50742d413ce5168ba79b6800bb875c9",
-      "contextAfterSHA256": "6c6c3b2cfc66e16e3d7c6afa720b51ecc50742d413ce5168ba79b6800bb875c9"
-    },
-    {
-      "era": "e08",
-      "city": "mbabane",
-      "slot": "O2",
-      "type": "illustration",
-      "assetID": "e08-mbabane-O2-illustration-v1-20261012",
-      "galleryImageID": "e08-mbabane-O2-illustration-v1-20261012",
-      "commonsFile": null,
-      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[1].kuva",
-      "targetTokens": [
-        "kaupunkilehti",
-        0,
-        "matkailijalle",
-        "artikkeli",
-        "jaksot",
-        1,
-        "kuva"
-      ],
-      "operation": "merge-media-fields-preserve-other-content",
-      "CmediaFieldPayload": {
-        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/mbabane/e08-mbabane-O2-illustration-v1-20261012-d61e8d78fc34.png",
-        "suora": true,
-        "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva keramiikasta ja tekstiilistä.",
-        "lyhyt": "Havainnekuva keramiikasta ja tekstiilistä."
-      },
-      "removeMediaKeys": [
-        "tiedosto"
-      ],
-      "CvalidatorCompatiblePayload": {},
-      "runtimeMediaFieldPayload": {
-        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/mbabane/e08-mbabane-O2-illustration-v1-20261012-d61e8d78fc34.png",
-        "suora": true,
-        "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva keramiikasta ja tekstiilistä.",
-        "lyhyt": "Havainnekuva keramiikasta ja tekstiilistä."
-      },
-      "runtimeRemoveMediaKeys": [
-        "tiedosto"
-      ],
-      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
-      "nativeSHA256": "d61e8d78fc341beb3bb3419c83a26275a265600e2e15b359ea132b8877aa51a2",
-      "exportSHA256": "e4d8d282e1588364ffff8bf1417d32531cbef2fba4e78ca04e70dcfd31b34c07",
-      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/mbabane/e08-mbabane-O2-illustration-v1-20261012-d61e8d78fc34.png",
-      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/mbabane/e08-mbabane-O2-illustration-v1-20261012-d61e8d78fc34.png",
-      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/mbabane/e08-mbabane-O2-illustration-v1-20261012-d61e8d78fc34.png",
-      "dimensions": [
-        1536,
-        1024
-      ],
-      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/mbabane/sisalto.json",
-      "sourceContentSHA256": "7ec11728e15ba74a9c36aea0a2ee1d687632835d6fd8bacf4e19668f240b722b",
-      "semanticSourceBind": {
-        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "e435b6f526bc81e8507aced17f085f0006e8266af705210a01d34b34bfc8a1b2",
-        "subjectTitle": "Keskustan kierros",
-        "targetState": "existing-target"
-      },
-      "attribution": {
-        "author": null,
-        "license": null,
-        "licenseUrl": null,
-        "sourcePage": null,
-        "originalUrl": null,
-        "rightsEvidence": {
-          "production": {
-            "scope": "Common natural material, plant, animal, food or unbranded functional object. No named protected artwork or real architecture/collection reconstruction.",
-            "notLocationProof": true
-          },
-          "QA": {
-            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/mbabane/assets/e08-mbabane-O2-illustration-v1-20261012/image.png",
-            "nativeSha256Verified": "d61e8d78fc341beb3bb3419c83a26275a265600e2e15b359ea132b8877aa51a2",
-            "nativeWidth": 1536,
-            "nativeHeight": 1024,
-            "format": "PNG",
-            "nativeMode": "RGB",
-            "visualInspection": "Tarkistaja katsoi itse natiivin NAS-tiedoston view_image-työkalulla original-tarkkuudessa tässä sessiossa: Vaalea keraaminen kulho ja taiteltu kuvioton kangas puupöydällä. Lasite, kankaan kudos ja puun kulumat luontevia; ei merkintöjä tai tunnistettavaa taideteosta.",
-            "captionFi": "Havainnekuva keramiikasta ja tekstiilistä.",
-            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/mbabane/sisalto.json",
-            "contentSha256": "7ec11728e15ba74a9c36aea0a2ee1d687632835d6fd8bacf4e19668f240b722b",
-            "targetCurrentlyPresent": true,
-            "targetText": "Swazi Plaza ja Mbabane Mall ovat keskustan palvelujen keskittymiä. Niiden ympärillä kaupungin arki näkyy kauppoina, pankkeina ja ruokapaikkoina. Keskustassa on myös avomarkkinoita, mutta niiden toiminta ei ole samanlaista joka päivä. Indingilizi Galleryn valikoima ulottuu maalauksista tekstiileihin ja keramiikkaan; varmista vierailumahdollisuus ennen lähtöä. Siswati on paikallinen pääkieli, ja englanti on laajalti käytössä.",
-            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/mbabane/faktapohja.md",
-            "factSheetSha256": "a59647f1196470a86b53357933576b96e94bf832774719123911b33d72693fb3",
-            "topicEvidence": "Faktapohja E1 Culture, §2 Galleria on myös tekstiilien paikka ja opas2.",
-            "rightsAssessment": "Yleinen luonnon-, materiaali-, ruoka- tai arkiesineaihe; ei nimettyä nykytaideteosta. Aiheen ja paikkarehellisyyden arvio verdictissä ja omassa silmähavainnossa.",
-            "scope": "Vain riippumaton natiivikuvituksen QA; R2-toimitus, integrointi ja julkaisu eivät ole kuitattuja."
-          },
-          "qaReason": "Yleinen keramiikka ja tekstiili vastaavat gallerian materiaaliryhmiä, ilman tietyn teoksen tai valikoiman jäljentämistä."
-        }
-      },
-      "luentaMetadata": {
-        "existingImageLuenta": null,
-        "captionReadingText": "Havainnekuva keramiikasta ja tekstiilistä.",
-        "existingArticleAndSectionLuentaPreserved": true,
-        "audioGenerated": false,
-        "audioURL": null,
-        "imageSpecificAudioProvided": false,
-        "reuseAudioAllowedByThisPacket": false
-      },
-      "qaEvidence": {
-        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/mbabane/illustration-qa-extra.json",
-        "fileSHA256": "ebbd0eba039c0e44af2928185c8dd696dbf9e925ff221158b72c2041b10ce1d8",
-        "item": {
-          "slot": "O2",
-          "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[1].kuva",
-          "assetID": "e08-mbabane-O2-illustration-v1-20261012",
-          "sha256": "d61e8d78fc341beb3bb3419c83a26275a265600e2e15b359ea132b8877aa51a2",
-          "verdict": "accepted",
-          "reason": "Yleinen keramiikka ja tekstiili vastaavat gallerian materiaaliryhmiä, ilman tietyn teoksen tai valikoiman jäljentämistä.",
-          "evidence": {
-            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/mbabane/assets/e08-mbabane-O2-illustration-v1-20261012/image.png",
-            "nativeSha256Verified": "d61e8d78fc341beb3bb3419c83a26275a265600e2e15b359ea132b8877aa51a2",
-            "nativeWidth": 1536,
-            "nativeHeight": 1024,
-            "format": "PNG",
-            "nativeMode": "RGB",
-            "visualInspection": "Tarkistaja katsoi itse natiivin NAS-tiedoston view_image-työkalulla original-tarkkuudessa tässä sessiossa: Vaalea keraaminen kulho ja taiteltu kuvioton kangas puupöydällä. Lasite, kankaan kudos ja puun kulumat luontevia; ei merkintöjä tai tunnistettavaa taideteosta.",
-            "captionFi": "Havainnekuva keramiikasta ja tekstiilistä.",
-            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/mbabane/sisalto.json",
-            "contentSha256": "7ec11728e15ba74a9c36aea0a2ee1d687632835d6fd8bacf4e19668f240b722b",
-            "targetCurrentlyPresent": true,
-            "targetText": "Swazi Plaza ja Mbabane Mall ovat keskustan palvelujen keskittymiä. Niiden ympärillä kaupungin arki näkyy kauppoina, pankkeina ja ruokapaikkoina. Keskustassa on myös avomarkkinoita, mutta niiden toiminta ei ole samanlaista joka päivä. Indingilizi Galleryn valikoima ulottuu maalauksista tekstiileihin ja keramiikkaan; varmista vierailumahdollisuus ennen lähtöä. Siswati on paikallinen pääkieli, ja englanti on laajalti käytössä.",
-            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/mbabane/faktapohja.md",
-            "factSheetSha256": "a59647f1196470a86b53357933576b96e94bf832774719123911b33d72693fb3",
-            "topicEvidence": "Faktapohja E1 Culture, §2 Galleria on myös tekstiilien paikka ja opas2.",
-            "rightsAssessment": "Yleinen luonnon-, materiaali-, ruoka- tai arkiesineaihe; ei nimettyä nykytaideteosta. Aiheen ja paikkarehellisyyden arvio verdictissä ja omassa silmähavainnossa.",
-            "scope": "Vain riippumaton natiivikuvituksen QA; R2-toimitus, integrointi ja julkaisu eivät ole kuitattuja."
-          },
-          "reviewedAt": "2026-10-13T05:57:47.550235+00:00",
-          "reviewerSession": "e08-extra-01a131d7-1d58-7eb0-a959-c0073288e011"
-        },
-        "allSources": [
-          {
-            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/mbabane/qa.json",
-            "sha256": "14c7ae454a44d7a92f682a4031d4fa132ae91e809be2c66f7d945c06ac60b079"
-          },
-          {
-            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/mbabane/illustration-qa-extra.json",
-            "sha256": "ebbd0eba039c0e44af2928185c8dd696dbf9e925ff221158b72c2041b10ce1d8"
-          }
-        ]
-      },
-      "R2ByteVerification": {
-        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/mbabane/e08-mbabane-O2-illustration-v1-20261012-d61e8d78fc34.png",
-        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/mbabane/e08-mbabane-O2-illustration-v1-20261012-d61e8d78fc34.png?t=e4d8d282e1588364",
-        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/mbabane/e08-mbabane-O2-illustration-v1-20261012-d61e8d78fc34.png",
-        "sha256": "e4d8d282e1588364ffff8bf1417d32531cbef2fba4e78ca04e70dcfd31b34c07",
-        "bytes": 2168301,
-        "http": 200,
-        "mime": "image/png",
-        "cors": "https://matkakirja.app",
-        "cacheBustedPreflightHttp": 404,
-        "cacheBustedReadback": true,
-        "byteExactReadback": true,
-        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
-        "conditionalIfNoneMatch": "*",
-        "s3PutHttp": 200,
-        "assetID": "e08-mbabane-O2-illustration-v1-20261012",
-        "nativeSHA256": "d61e8d78fc341beb3bb3419c83a26275a265600e2e15b359ea132b8877aa51a2",
-        "canonicalReadbackByteExact": true,
-        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/mbabane/e08-mbabane-O2-illustration-v1-20261012-d61e8d78fc34.png",
-        "pixelIdenticalToQAAcceptedNative": true,
-        "era": "e08",
-        "city": "mbabane",
-        "slot": "O2",
-        "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[1].kuva",
-        "verifiedAt": "2026-10-13T05:58:21.566741+00:00",
-        "ownerAcceptanceVerified": false,
-        "gameIntegrated": false,
-        "galleryVisibleVerified": false
-      },
-      "producerExportProof": null,
-      "technicalExportProof": {
-        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/mbabane/e08-mbabane-O2-illustration-v1-20261012-d61e8d78fc34.png",
-        "sha256": "e4d8d282e1588364ffff8bf1417d32531cbef2fba4e78ca04e70dcfd31b34c07",
-        "bytes": 2168301,
-        "SHAReadAt": "2026-10-13T05:57:58.268068+00:00",
-        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
-        "width": 1536,
-        "height": 1024,
-        "pixelWidth": 1536,
-        "pixelHeight": 1024,
-        "exifOrientation": 1,
-        "dimensionsBasis": "EXIF-oriented-display",
-        "format": "PNG",
-        "largeOriginalHeaderOnlyRead": false,
-        "nativeSHA256": "d61e8d78fc341beb3bb3419c83a26275a265600e2e15b359ea132b8877aa51a2",
-        "rgbPixelSHA256": "543bb958e2f2e3911b2c9aea70e69853fd24442e8255f86208a690ad484b4789",
-        "pixelIdenticalToQAAcceptedNative": true,
-        "sRGBProfileEmbedded": true,
-        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
-      },
-      "priorMediaFields": {
-        "tiedosto": "",
-        "lahde": "",
-        "selite": "",
-        "lyhyt": ""
-      },
-      "preservePreviousMediaObjects": true,
-      "authorization": {
-        "status": "waived-owner-review",
-        "authorizedByOwner": true,
-        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
-        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
-        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
-        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
-        "ownerAcceptanceImplied": false,
-        "QARequired": true,
-        "R2ByteVerificationRequired": true,
-        "galleryBeforeGameRequired": false,
-        "verifiedHumanMessageSource": {
-          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
-          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
-        }
-      },
-      "ownerAcceptanceVerified": false,
-      "gameIntegrated": false,
-      "gamePublicationVerified": false,
-      "inMemoryMergeVerified": true,
-      "CcommonsMetadataBound": false,
-      "roleManifestBound": true,
-      "sourceContentAfterSHA256": "7ec11728e15ba74a9c36aea0a2ee1d687632835d6fd8bacf4e19668f240b722b",
-      "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "e435b6f526bc81e8507aced17f085f0006e8266af705210a01d34b34bfc8a1b2"
-    },
-    {
-      "era": "e08",
-      "city": "mbabane",
-      "slot": "L1",
-      "type": "illustration",
-      "assetID": "e08-mbabane-L1-illustration-v1-20261012",
-      "galleryImageID": "e08-mbabane-L1-illustration-v1-20261012",
-      "commonsFile": null,
-      "targetJsonPath": "$.kaupunkilehti[1].nostot[0]",
-      "targetTokens": [
-        "kaupunkilehti",
-        1,
-        "nostot",
-        0
-      ],
-      "operation": "merge-media-fields-preserve-other-content",
-      "CmediaFieldPayload": {
-        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/mbabane/e08-mbabane-L1-illustration-v1-20261012-c6d203e65a2e.png",
-        "suora": true,
-        "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva graniitin pinnasta.",
-        "lyhyt": "Havainnekuva graniitin pinnasta."
-      },
-      "removeMediaKeys": [
-        "tiedosto"
-      ],
-      "CvalidatorCompatiblePayload": {},
-      "runtimeMediaFieldPayload": {
-        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/mbabane/e08-mbabane-L1-illustration-v1-20261012-c6d203e65a2e.png",
-        "suora": true,
-        "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva graniitin pinnasta.",
-        "lyhyt": "Havainnekuva graniitin pinnasta."
-      },
-      "runtimeRemoveMediaKeys": [
-        "tiedosto"
-      ],
-      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
-      "nativeSHA256": "c6d203e65a2ebb0ca709d26e5074d2738c1781bdfd202ab916c787771ee655c4",
-      "exportSHA256": "fd36b84345973d6eec74e3ea11c85a1c8bf13fcc4c7dc90f9ec6d25b54786649",
-      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/mbabane/e08-mbabane-L1-illustration-v1-20261012-c6d203e65a2e.png",
-      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/mbabane/e08-mbabane-L1-illustration-v1-20261012-c6d203e65a2e.png",
-      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/mbabane/e08-mbabane-L1-illustration-v1-20261012-c6d203e65a2e.png",
-      "dimensions": [
-        1536,
-        1024
-      ],
-      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/mbabane/sisalto.json",
-      "sourceContentSHA256": "7ec11728e15ba74a9c36aea0a2ee1d687632835d6fd8bacf4e19668f240b722b",
-      "semanticSourceBind": {
-        "targetBeforeSHA256": "d6443f526b725234851d07e29d90c7e4b3151509166067502df256b451a373c3",
-        "semanticContextSHA256": "d6443f526b725234851d07e29d90c7e4b3151509166067502df256b451a373c3",
-        "subjectTitle": "Sibebe on graniittia",
-        "targetState": "existing-target"
-      },
-      "attribution": {
-        "author": null,
-        "license": null,
-        "licenseUrl": null,
-        "sourcePage": null,
-        "originalUrl": null,
-        "rightsEvidence": {
-          "production": {
-            "scope": "Common natural material, plant, animal, food or unbranded functional object. No named protected artwork or real architecture/collection reconstruction.",
-            "notLocationProof": true
-          },
-          "QA": {
-            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/mbabane/assets/e08-mbabane-L1-illustration-v1-20261012/image.png",
-            "nativeSha256Verified": "c6d203e65a2ebb0ca709d26e5074d2738c1781bdfd202ab916c787771ee655c4",
-            "nativeWidth": 1536,
-            "nativeHeight": 1024,
-            "format": "PNG",
-            "nativeMode": "RGB",
-            "visualInspection": "Tarkistaja katsoi itse natiivin NAS-tiedoston view_image-työkalulla original-tarkkuudessa tässä sessiossa: Karkeassa kivipinnassa vaaleita/harmaita ja vaaleanpunaisia kiteitä sekä tummia mineraaleja. Vaihtelevat kidekoot ja halkeamat; ei mekaanista kuvioiden toistoa.",
-            "captionFi": "Havainnekuva graniitin pinnasta.",
-            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/mbabane/sisalto.json",
-            "contentSha256": "7ec11728e15ba74a9c36aea0a2ee1d687632835d6fd8bacf4e19668f240b722b",
-            "targetCurrentlyPresent": true,
-            "targetText": "Sibebe kohoaa Mbabanen lähellä Mbuluzi-joen laakson yläpuolella. Suuri graniittimuodostuma tunnetaan myös nimellä Bald Rock, Kalju kallio. Sen paljaiden rinteiden lisäksi ympäristössä on ruohomaita, lohkareita ja metsän peittämiä uurteita. Kallio on myös yhteisön retkipaikka: Rotaryn Sibebe Survivor -kävelyllä kerätään varoja hyväntekeväisyyteen. Maisemaa ei tarvitse arvioida maailmanennätyksen kautta. Luonnonmuodostuman ja kaupunkilaisten yhteys näkyy siinä, että samalle kalliolle noustaan myös yhdessä.",
-            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/mbabane/faktapohja.md",
-            "factSheetSha256": "a59647f1196470a86b53357933576b96e94bf832774719123911b33d72693fb3",
-            "topicEvidence": "Faktapohja §3 Sibebe on graniittia, E5.",
-            "rightsAssessment": "Yleinen luonnon-, materiaali-, ruoka- tai arkiesineaihe; ei nimettyä nykytaideteosta. Aiheen ja paikkarehellisyyden arvio verdictissä ja omassa silmähavainnossa.",
-            "scope": "Vain riippumaton natiivikuvituksen QA; R2-toimitus, integrointi ja julkaisu eivät ole kuitattuja."
-          },
-          "qaReason": "Graniitin materiaalipinta vastaa Sibeben kivilajiaihetta, ilman kallionmuodon tai paikallisen näytepalan väitettä."
-        }
-      },
-      "luentaMetadata": {
-        "existingImageLuenta": null,
-        "captionReadingText": "Havainnekuva graniitin pinnasta.",
-        "existingArticleAndSectionLuentaPreserved": true,
-        "audioGenerated": false,
-        "audioURL": null,
-        "imageSpecificAudioProvided": false,
-        "reuseAudioAllowedByThisPacket": false
-      },
-      "qaEvidence": {
-        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/mbabane/illustration-qa-extra.json",
-        "fileSHA256": "ebbd0eba039c0e44af2928185c8dd696dbf9e925ff221158b72c2041b10ce1d8",
-        "item": {
-          "slot": "L1",
-          "targetJsonPath": "$.kaupunkilehti[1].nostot[0]",
-          "assetID": "e08-mbabane-L1-illustration-v1-20261012",
-          "sha256": "c6d203e65a2ebb0ca709d26e5074d2738c1781bdfd202ab916c787771ee655c4",
-          "verdict": "accepted",
-          "reason": "Graniitin materiaalipinta vastaa Sibeben kivilajiaihetta, ilman kallionmuodon tai paikallisen näytepalan väitettä.",
-          "evidence": {
-            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/mbabane/assets/e08-mbabane-L1-illustration-v1-20261012/image.png",
-            "nativeSha256Verified": "c6d203e65a2ebb0ca709d26e5074d2738c1781bdfd202ab916c787771ee655c4",
-            "nativeWidth": 1536,
-            "nativeHeight": 1024,
-            "format": "PNG",
-            "nativeMode": "RGB",
-            "visualInspection": "Tarkistaja katsoi itse natiivin NAS-tiedoston view_image-työkalulla original-tarkkuudessa tässä sessiossa: Karkeassa kivipinnassa vaaleita/harmaita ja vaaleanpunaisia kiteitä sekä tummia mineraaleja. Vaihtelevat kidekoot ja halkeamat; ei mekaanista kuvioiden toistoa.",
-            "captionFi": "Havainnekuva graniitin pinnasta.",
-            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/mbabane/sisalto.json",
-            "contentSha256": "7ec11728e15ba74a9c36aea0a2ee1d687632835d6fd8bacf4e19668f240b722b",
-            "targetCurrentlyPresent": true,
-            "targetText": "Sibebe kohoaa Mbabanen lähellä Mbuluzi-joen laakson yläpuolella. Suuri graniittimuodostuma tunnetaan myös nimellä Bald Rock, Kalju kallio. Sen paljaiden rinteiden lisäksi ympäristössä on ruohomaita, lohkareita ja metsän peittämiä uurteita. Kallio on myös yhteisön retkipaikka: Rotaryn Sibebe Survivor -kävelyllä kerätään varoja hyväntekeväisyyteen. Maisemaa ei tarvitse arvioida maailmanennätyksen kautta. Luonnonmuodostuman ja kaupunkilaisten yhteys näkyy siinä, että samalle kalliolle noustaan myös yhdessä.",
-            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/mbabane/faktapohja.md",
-            "factSheetSha256": "a59647f1196470a86b53357933576b96e94bf832774719123911b33d72693fb3",
-            "topicEvidence": "Faktapohja §3 Sibebe on graniittia, E5.",
-            "rightsAssessment": "Yleinen luonnon-, materiaali-, ruoka- tai arkiesineaihe; ei nimettyä nykytaideteosta. Aiheen ja paikkarehellisyyden arvio verdictissä ja omassa silmähavainnossa.",
-            "scope": "Vain riippumaton natiivikuvituksen QA; R2-toimitus, integrointi ja julkaisu eivät ole kuitattuja."
-          },
-          "reviewedAt": "2026-10-13T05:57:47.625516+00:00",
-          "reviewerSession": "e08-extra-01a131d7-1d58-7eb0-a959-c0073288e011"
-        },
-        "allSources": [
-          {
-            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/mbabane/qa.json",
-            "sha256": "14c7ae454a44d7a92f682a4031d4fa132ae91e809be2c66f7d945c06ac60b079"
-          },
-          {
-            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/mbabane/illustration-qa-extra.json",
-            "sha256": "ebbd0eba039c0e44af2928185c8dd696dbf9e925ff221158b72c2041b10ce1d8"
-          }
-        ]
-      },
-      "R2ByteVerification": {
-        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/mbabane/e08-mbabane-L1-illustration-v1-20261012-c6d203e65a2e.png",
-        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/mbabane/e08-mbabane-L1-illustration-v1-20261012-c6d203e65a2e.png?t=fd36b84345973d6e",
-        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/mbabane/e08-mbabane-L1-illustration-v1-20261012-c6d203e65a2e.png",
-        "sha256": "fd36b84345973d6eec74e3ea11c85a1c8bf13fcc4c7dc90f9ec6d25b54786649",
-        "bytes": 3723041,
-        "http": 200,
-        "mime": "image/png",
-        "cors": "https://matkakirja.app",
-        "cacheBustedPreflightHttp": 404,
-        "cacheBustedReadback": true,
-        "byteExactReadback": true,
-        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
-        "conditionalIfNoneMatch": "*",
-        "s3PutHttp": 200,
-        "assetID": "e08-mbabane-L1-illustration-v1-20261012",
-        "nativeSHA256": "c6d203e65a2ebb0ca709d26e5074d2738c1781bdfd202ab916c787771ee655c4",
-        "canonicalReadbackByteExact": true,
-        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/mbabane/e08-mbabane-L1-illustration-v1-20261012-c6d203e65a2e.png",
-        "pixelIdenticalToQAAcceptedNative": true,
-        "era": "e08",
-        "city": "mbabane",
-        "slot": "L1",
-        "targetJsonPath": "$.kaupunkilehti[1].nostot[0]",
-        "verifiedAt": "2026-10-13T05:58:22.877755+00:00",
-        "ownerAcceptanceVerified": false,
-        "gameIntegrated": false,
-        "galleryVisibleVerified": false
-      },
-      "producerExportProof": null,
-      "technicalExportProof": {
-        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/mbabane/e08-mbabane-L1-illustration-v1-20261012-c6d203e65a2e.png",
-        "sha256": "fd36b84345973d6eec74e3ea11c85a1c8bf13fcc4c7dc90f9ec6d25b54786649",
-        "bytes": 3723041,
-        "SHAReadAt": "2026-10-13T05:57:58.475307+00:00",
-        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
-        "width": 1536,
-        "height": 1024,
-        "pixelWidth": 1536,
-        "pixelHeight": 1024,
-        "exifOrientation": 1,
-        "dimensionsBasis": "EXIF-oriented-display",
-        "format": "PNG",
-        "largeOriginalHeaderOnlyRead": false,
-        "nativeSHA256": "c6d203e65a2ebb0ca709d26e5074d2738c1781bdfd202ab916c787771ee655c4",
-        "rgbPixelSHA256": "b9277568c506c2eab858f1880ba3b49c37f709c9c51ed3b35d0087330075f7e3",
-        "pixelIdenticalToQAAcceptedNative": true,
-        "sRGBProfileEmbedded": true,
-        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
-      },
-      "priorMediaFields": {
-        "tiedosto": "",
-        "lahde": "",
-        "selite": "",
-        "lyhyt": ""
-      },
-      "preservePreviousMediaObjects": true,
-      "authorization": {
-        "status": "waived-owner-review",
-        "authorizedByOwner": true,
-        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
-        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
-        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
-        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
-        "ownerAcceptanceImplied": false,
-        "QARequired": true,
-        "R2ByteVerificationRequired": true,
-        "galleryBeforeGameRequired": false,
-        "verifiedHumanMessageSource": {
-          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
-          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
-        }
-      },
-      "ownerAcceptanceVerified": false,
-      "gameIntegrated": false,
-      "gamePublicationVerified": false,
-      "inMemoryMergeVerified": true,
-      "CcommonsMetadataBound": false,
-      "roleManifestBound": true,
-      "sourceContentAfterSHA256": "7ec11728e15ba74a9c36aea0a2ee1d687632835d6fd8bacf4e19668f240b722b",
-      "targetAfterSHA256": "d6443f526b725234851d07e29d90c7e4b3151509166067502df256b451a373c3",
-      "contextAfterSHA256": "d6443f526b725234851d07e29d90c7e4b3151509166067502df256b451a373c3"
+      "contextAfterSHA256": "6c6c3b2cfc66e16e3d7c6afa720b51ecc50742d413ce5168ba79b6800bb875c9",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e08",
@@ -1898,7 +1912,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "7ec11728e15ba74a9c36aea0a2ee1d687632835d6fd8bacf4e19668f240b722b",
       "targetAfterSHA256": "742978128046953943f5a240a59c516c619e0e99adfb21e56cc39391e23bb8f2",
-      "contextAfterSHA256": "742978128046953943f5a240a59c516c619e0e99adfb21e56cc39391e23bb8f2"
+      "contextAfterSHA256": "742978128046953943f5a240a59c516c619e0e99adfb21e56cc39391e23bb8f2",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e08",
@@ -2192,7 +2208,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "7ec11728e15ba74a9c36aea0a2ee1d687632835d6fd8bacf4e19668f240b722b",
       "targetAfterSHA256": "69a01a2729c451400b6e0f154a12c98189e151fad5eb299a940c2ae7d41d2d43",
-      "contextAfterSHA256": "69a01a2729c451400b6e0f154a12c98189e151fad5eb299a940c2ae7d41d2d43"
+      "contextAfterSHA256": "69a01a2729c451400b6e0f154a12c98189e151fad5eb299a940c2ae7d41d2d43",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e08",
@@ -2507,7 +2525,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "7ec11728e15ba74a9c36aea0a2ee1d687632835d6fd8bacf4e19668f240b722b",
       "targetAfterSHA256": "a0f4c4b8c6d7c3fb39d3f69008f833c819d3f3ac54c2bc412af136bf47936bae",
-      "contextAfterSHA256": "a0f4c4b8c6d7c3fb39d3f69008f833c819d3f3ac54c2bc412af136bf47936bae"
+      "contextAfterSHA256": "a0f4c4b8c6d7c3fb39d3f69008f833c819d3f3ac54c2bc412af136bf47936bae",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e08",
@@ -2798,10 +2818,14 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "7ec11728e15ba74a9c36aea0a2ee1d687632835d6fd8bacf4e19668f240b722b",
       "targetAfterSHA256": "5b191d54c68cce16691545b16d625a14feab12d09ab4bf675738bee0af2d8ee6",
-      "contextAfterSHA256": "1f4aeccdb60c855282455453dc375fcbbac7b0520834e625f31ffe3809c32ca1"
+      "contextAfterSHA256": "1f4aeccdb60c855282455453dc375fcbbac7b0520834e625f31ffe3809c32ca1",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     }
   ],
   "runtimeIntegrationPending": true,
-  "ownerAcceptedNotImpliedByAuthorization": true,
-  "gameIntegrated": false
+  "ownerAcceptedNotImpliedByAuthorization": false,
+  "gameIntegrated": false,
+  "allAssetsExplicitlyOwnerApproved": true,
+  "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
 }
