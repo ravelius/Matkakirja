@@ -4,7 +4,7 @@
 Ajo: python3 -I scratchpad/asemataulu/laitteet.py  → kirjoittaa scratchpad/asemataulu/laitteet.json
 (Postivahti kierroksellaan paivita.py:n kautta; omistaja 10.10.2026 klo 16.3x: iPad + Blender, 16.4x kortti: Unity-käännökset,
 Pilviajot, Simulaattorit, Codex-tilaukset + prosessori). Rooli päätellään prosessin vanhemmista: ensimmäinen Claude-prosessi
-ja sen työkansio (roolin checkout). Prosessori = prosessien %cpu yhteensä / ytimet (0–100).
+ja sen työkansio (roolin checkout). Prosessori = prosessien prosessoriaika (kahden näytteen ja edellisen ajon keskiarvon suurempi) yhteensä / ytimet (0–100).
 """
 import json, os, re, subprocess, sys, time
 from datetime import datetime, timezone
@@ -44,16 +44,80 @@ LYRIA = re.compile(r'musiikki[\w./-]*/generoi[\w-]*\.mjs|lyria', re.I)
 MJS = re.compile(r'([\w-]+)/(generoi[\w-]*)\.mjs')
 
 
-def prosessit():
-    ulos = subprocess.run(['ps', '-axo', 'pid=,ppid=,etime=,%cpu=,command='], capture_output=True, text=True).stdout
-    P = {}
+CPU_TILA = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'hoitaja', 'cpu-tila.json')
+NAYTE_VALI = 2.0
+
+
+def aika_s(teksti):
+    """ps time/etime sekunteina: [[dd-]hh:]mm:ss[.ss] tai m:ss.ss."""
+    paivat, _, aika = teksti.rpartition('-')
+    osat = aika.split(':')
+    try:
+        s = float(osat[-1].replace(',', '.'))
+        for k, x in enumerate(reversed(osat[:-1])):
+            s += int(x) * (60, 3600)[k]
+        return s + int(paivat or 0) * 86400
+    except (ValueError, IndexError):
+        return 0.0
+
+
+def ps_kuva():
+    ulos = subprocess.run(['ps', '-axo', 'pid=,ppid=,etime=,time=,command='], capture_output=True, text=True).stdout
+    nyt = time.time()
+    K = {}
     for rivi in ulos.splitlines():
         osat = rivi.split(None, 4)
         if len(osat) == 5:
             try:
-                P[int(osat[0])] = (int(osat[1]), osat[2], osat[4], float(osat[3].replace(',', '.')))
+                K[int(osat[0])] = (int(osat[1]), osat[2], osat[4], aika_s(osat[3]), nyt - aika_s(osat[2]))
             except ValueError:
                 pass
+    return K, nyt
+
+
+def lue_tila():
+    try:
+        with open(CPU_TILA, encoding='utf-8') as f:
+            return json.load(f)
+    except (OSError, ValueError):
+        return {}
+
+
+def prosessit():
+    """Prosessit ja niiden prosessorin käyttö (0 .. 100 x ytimet, %). Ei ps:n %cpu-arvoa (hetken liukuva keskiarvo, omistaja
+    13.10.2026: Blender 600 % mutta taulussa 0 %), vaan prosessien kumulatiivisesta prosessoriajasta:
+    1) todellinen näyte: kaksi ps-kuvaa NAYTE_VALI sekunnin välein, 2) keskiarvo edellisestä ajosta (pid → kumulatiivinen aika
+    tilatiedostossa; uusi pid: koko elinaika). Näytetään suurempi, jotta kahden kierroksen välissä ajanut raskas ajo näkyy."""
+    K1, t1 = ps_kuva()
+    time.sleep(NAYTE_VALI)
+    K2, t2 = ps_kuva()
+    tila = lue_tila()
+    ed = tila.get('pidit', {})
+    vali = t2 - tila['ts'] if tila.get('ts') else 0
+    P = {}
+    uusi = {}
+    for pid, (ppid, etime, cmd, cum, alku) in K2.items():
+        hetki = 0.0
+        if pid in K1 and abs(K1[pid][4] - alku) < 3:
+            hetki = max(0.0, (cum - K1[pid][3]) / (t2 - t1)) * 100
+        keskiarvo = 0.0
+        e = ed.get(str(pid))
+        if e and abs(e[1] - alku) < 3 and vali > 0:
+            keskiarvo = max(0.0, (cum - e[0]) / vali) * 100
+        elif vali > 0 or not tila:
+            elinaika = max(t2 - alku, 1.0)
+            if not tila.get('ts') or elinaika <= vali + 3:
+                keskiarvo = cum / elinaika * 100
+        P[pid] = (ppid, etime, cmd, max(hetki, keskiarvo))
+        if cum > 0.5:
+            uusi[str(pid)] = [cum, alku]
+    try:
+        os.makedirs(os.path.dirname(CPU_TILA), exist_ok=True)
+        with open(CPU_TILA + '.tmp', 'w', encoding='utf-8') as f:
+            json.dump({'ts': t2, 'pidit': uusi}, f)
+        os.replace(CPU_TILA + '.tmp', CPU_TILA)
+    except OSError:
+        pass
     return P
 
 
