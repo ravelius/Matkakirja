@@ -1,0 +1,122 @@
+{
+  "cityName": "Pariisi",
+  "gameCityId": "pariisi",
+  "mediaSlug": "paris",
+  "taskNumbers": [
+    108,
+    109
+  ],
+  "updatedAt": "2026-10-13T13:58:07.444787+00:00",
+  "requestedNewSlots": [
+    6,
+    8
+  ],
+  "existingHeroSlotsPreserved": [
+    1,
+    2,
+    3
+  ],
+  "assets": [],
+  "omittedItems": [
+    {
+      "slot": 6,
+      "taskNumber": 108,
+      "filename": "paris-6-nakoala-intro-v1.png",
+      "reason": "Grand Palais’n kattomaston päässä on pieni mutta erotettava sinivalkopunainen lippu. Lähde kieltää liput tässä kuvassa, joten näköalakuvaa ei hyväksytä toimitettavaksi.",
+      "sourceAllowsOmission": true,
+      "finalWithinSource": true,
+      "actualGenerationCalls": 1,
+      "newAttemptsAuthorized": false,
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-pilotti-20261013/paris/native-6.png",
+      "nativeSHA256": "eb737e5c7c4edca8a691231a29bacc0966b19b7d1c8000e8426ea87239b7c622",
+      "candidatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-pilotti-20261013/paris/paris-6-nakoala-intro-v1.png",
+      "candidateSHA256": "cdd89d2a4045fdaab8762fb8aa821a95c0efe7a5ed5a9c89cad3b858820360ee",
+      "qaPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-pilotti-20261013/paris/qa-6.json",
+      "refs": [
+        {
+          "url": "https://www.paris-arc-de-triomphe.fr/decouvrir/le-panorama",
+          "title": "Le panorama — Arc de triomphe / Centre des monuments nationaux",
+          "primarySource": true,
+          "supports": "Official terrace panorama above Paris roofs and its position on the Champs-Elysees historic axis toward the Louvre.",
+          "appliesToSlots": [
+            6
+          ]
+        }
+      ]
+    },
+    {
+      "slot": 8,
+      "taskNumber": 109,
+      "filename": "paris-8-kulkuneuvo-intro-v1.png",
+      "reason": "Pont Alexandre III:n kullatut siipihevospatsaat, pylväiden hahmoreliefit ja sillan koristeet ovat selvästi erotettavia ja teräviä. Lähde vaatii sillan ja veistosten jäävän pehmeästi epätarkaksi taustaksi; tätä ehtoa kuva ei täytä.",
+      "sourceAllowsOmission": true,
+      "finalWithinSource": true,
+      "actualGenerationCalls": 1,
+      "newAttemptsAuthorized": false,
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-pilotti-20261013/paris/native-8.png",
+      "nativeSHA256": "1447c70343ad36ea57d2e27f31926d17e61d02b77cbefa67423b928a8cca23ed",
+      "candidatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-pilotti-20261013/paris/paris-8-kulkuneuvo-intro-v1.png",
+      "candidateSHA256": "bbcb72a6d388a87124020073d65140e6553e58295abd6334ae7bfb00469e3ae8",
+      "qaPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-pilotti-20261013/paris/qa-8.json",
+      "refs": [
+        {
+          "url": "https://www.batobus.com/en/general-information",
+          "title": "General Information — Batobus",
+          "primarySource": true,
+          "supports": "Operator confirms glass-covered human-scale Seine shuttle boats and an open-air deck. The source order independently requires a plain white fictionalized unbranded exterior.",
+          "appliesToSlots": [
+            8
+          ]
+        },
+        {
+          "url": "https://parisjetaime.com/eng/transport/pont-alexandre-iii-p1875",
+          "title": "Pont Alexandre III — Paris Tourist Office",
+          "primarySource": true,
+          "supports": "Bridge location and its gilded winged-horse pylons; these are kept small and indistinct in the background per the source order.",
+          "appliesToSlots": [
+            8
+          ]
+        },
+        {
+          "url": "https://parisjetaime.com/eng/article/art-nouveau-a232",
+          "title": "Art Nouveau — Paris Tourist Office",
+          "primarySource": true,
+          "supports": "Pont Alexandre III is a single-arch bridge, preventing an invented multi-arch background.",
+          "appliesToSlots": [
+            8
+          ]
+        }
+      ]
+    }
+  ],
+  "actualCalls": 2,
+  "maximumGenerationCalls": 2,
+  "allRequestedSlotsHandled": true,
+  "allRequestedSlotsDelivered": false,
+  "productionCompleteWithinSourceLimit": true,
+  "ownerAcceptanceRequired": true,
+  "ownerAcceptanceVerified": false,
+  "gameIntegrationAllowedWithoutOwnerAcceptance": false,
+  "gameIntegrationVerified": false,
+  "publicationVerified": false,
+  "stages": {
+    "local": true,
+    "QA": true,
+    "R2": true,
+    "mailbox": "prepared",
+    "FableReceipt": false,
+    "ownerAcceptance": false,
+    "runtimeIntegration": false,
+    "publication": false
+  },
+  "sourcePath": "posti/sisaltokirjuri-codex-saapumisintro-uudet-6-8-pilotti-20261013.md",
+  "sourceCommit": "f71ff6871eb83ee7d461079680a64facf5fa70cc",
+  "sourceBlob": "3424c5088a5f1a210d7d2a5331ed8ae5eb696921",
+  "oldRejectedTopicsRemainWithdrawn": true,
+  "pilotOnly": true,
+  "remaining88ImagesNotAuthorized": true,
+  "newTopics": {
+    "6": "daytime-city-panorama",
+    "8": "local-transport-in-motion"
+  }
+}
