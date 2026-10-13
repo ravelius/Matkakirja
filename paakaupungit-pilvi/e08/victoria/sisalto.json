@@ -109,20 +109,20 @@
       "kansikuvat": [
         {
           "tiedosto": "Ile de Mahe - Victoria (1).JPG",
-          "lyhyt": "Victorian rannikkoa ilmasta nähtynä.",
-          "selite": "Lentokoneesta kuvattu Victorian rannikon asutus ja venesatama vuonna 2015.",
+          "lyhyt": "Victoria ilmasta nähtynä.",
+          "selite": "Mahén Victoria lentokoneesta nähtynä helmikuussa 2015.",
           "lahde": "Remi Jouan, Wikimedia Commons (CC BY-SA 3.0)"
         },
         {
           "tiedosto": "Ile de Mahe - Victoria (7).JPG",
-          "lyhyt": "Victorian rannikkoaluetta Mahélla.",
-          "selite": "Mahén rannikon asutusta Victorian ympäristössä vuonna 2015.",
+          "lyhyt": "Victoria Mahén saarella.",
+          "selite": "Mahén Victoria helmikuussa 2015.",
           "lahde": "Remi Jouan, Wikimedia Commons (CC BY-SA 3.0)"
         },
         {
           "tiedosto": "Ile de Mahe - Victoria (10).JPG",
-          "lyhyt": "Victorian satama ilmasta nähtynä.",
-          "selite": "Lentokoneesta kuvattu satama ja rannikon asutus Victoriassa vuonna 2015.",
+          "lyhyt": "Victorian ilmakuva.",
+          "selite": "Victoria lentokoneesta nähtynä helmikuussa 2015.",
           "lahde": "Remi Jouan, Wikimedia Commons (CC BY-SA 3.0)"
         }
       ],
@@ -147,7 +147,7 @@
         },
         {
           "otsikko": "Satama tekee töitä",
-          "teksti": "Port Victoria on Seychellien pääkaupungin satama. Sisäsatama sijaitsee keskustan itäpuolella, ja sen ympärille kuuluu tonnikalan kalastusta ja säilöntäteollisuutta. Victoria sijaitsee Mahén koillispuolella, ja samassa kaupungissa yhdistyvät saarivaltion hallintokeskus ja kalatalouden työpaikat.",
+          "teksti": "Port Victoria on Seychellien pääkaupungin satama. Sisäsatama sijaitsee keskustan itäpuolella, ja sen ympärille kuuluu tonnikalan kalastusta ja säilöntäteollisuutta. Victoria sijaitsee Mahén koillispuolella, ja samassa kaupungissa yhdistyvät saarivaltion hallintokeskus ja kalatalouden työpaikat. Kaupungin vientituotteita ovat myös vanilja, kookospähkinät ja kookosöljy.",
           "wiki": "Victoria, Seychelles",
           "tiedosto": "",
           "lyhyt": "",
@@ -156,7 +156,7 @@
         },
         {
           "otsikko": "Torilla myydään saaren tuotteita",
-          "teksti": "Sir Selwyn Selwyn-Clarke Market kuuluu Victorian historialliseen keskustaan. Kauppahallin perinteisiin kuuluvat kala, hedelmät ja vihannekset. Kalastuksen tuotteet saapuvat täällä samaan myyntipaikkaan Mahén viljelytuotteiden kanssa.",
+          "teksti": "Sir Selwyn Selwyn-Clarke Market kuuluu Victorian historialliseen keskustaan. Kauppahallin perinteisiin kuuluvat kala, hedelmät ja vihannekset. Kalastuksen tuotteet saapuvat täällä samaan myyntipaikkaan Mahén viljelytuotteiden kanssa. Torihallin kunnostuksen yhteydessä kaupalle suunniteltiin väistötila kauppayhtiö STC:n entiseen supermarkettiin. Suunnitelmaan kuuluivat ilmanvaihdon, viemäröinnin ja paloturvallisuuden parannukset.",
           "wiki": "Victoria, Seychelles",
           "tiedosto": "",
           "lyhyt": "",
@@ -190,7 +190,7 @@
             },
             {
               "otsikko": "Kellotorni ja torin historia",
-              "teksti": "Lorloz-kellotorni on keskustan kiintopiste. Sen esikuva on Lontoon Little Ben, ja valurautainen torni pystytettiin 1900-luvun alussa. Sir Selwyn Selwyn-Clarke Market kuuluu saman historiallisen keskustan kauppaperinteeseen.",
+              "teksti": "Lorloz-kellotorni on keskustan kiintopiste. Esikuvana käytettiin Lontoon Little Beniä, ja valurautainen torni pystytettiin 1900-luvun alussa. Sir Selwyn Selwyn-Clarke Market kuuluu saman historiallisen keskustan kauppaperinteeseen.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -260,15 +260,15 @@
             "hyvaTietaa": [
               {
                 "otsikko": "Valuutta",
-                "teksti": "Seychellien rupian tunnus on SCR; Mauritiuksen rupia on eri valuutta."
+                "teksti": "Seychellien rupian tunnus on SCR."
               },
               {
                 "otsikko": "Mahé",
                 "teksti": "Victoria sijaitsee Mahén koillisrannikolla."
               },
               {
-                "otsikko": "Kilpikonnat",
-                "teksti": "Noudata puutarhan henkilökunnan ohjeita eläinten lähellä ja mahdollisessa ruokinnassa."
+                "otsikko": "Luonnonhistoriallinen museo",
+                "teksti": "Museo sijaitsee pääpostin vieressä."
               }
             ]
           },
@@ -321,7 +321,7 @@
         },
         {
           "otsikko": "Luonto tulee postin naapuriin",
-          "teksti": "Victorian luonnonhistoriallinen museo sijaitsee pääpostin vieressä. Näyttelyiden aiheita ovat kasvitiede, eläintiede, geologia ja antropologia eli ihmisen tutkimus.",
+          "teksti": "Victorian luonnonhistoriallinen museo sijaitsee pääpostin vieressä. Näyttelyiden aiheita ovat kasvitiede, eläintiede, geologia ja antropologia eli ihmisen tutkimus. Seychellien museohistorian alkuvaiheessa luonnonhistoria, historia ja kansatiede olivat samassa monialaisessa museossa. Historian ja kansatieteen kokoelmat siirrettiin myöhemmin eri rakennukseen.",
           "wiki": "Seychelles Natural History Museum",
           "tiedosto": "",
           "lyhyt": "",
@@ -352,12 +352,12 @@
   "nahtavyydet": {
     "Mont Fleurin kasvitieteellinen puutarha": {
       "aika": "1900-luvun alku",
-      "teksti": "Mont Fleurin kasvitieteellinen puutarha on Victorian keskustan tuntumassa Mahén saarella. Se alkoi maatalousasemana, jonka kokoelmaan kerättiin hyötykasveja: puita, palmuja, mausteita, hedelmäpuita ja aromaattisia kasveja. Perustaja oli Mauritiukselta tullut agronomi Dupont. \n\nAlue kehittyi myöhemmin yleiseksi puistoksi. Nykyisessä kokoelmassa on sekä Seychellien omia kasveja että muualta tuotuja koristekasveja. Coco de mer -palmuja kasvaa täällä viljeltyinä, vaikka lajin luonnonvarainen elinalue on Praslinilla ja Curieusella. Puutarhassa elää myös Aldabran jättiläiskilpikonnia.\n\nKasvien säilyttäminen alkuperäisen elinympäristön ulkopuolella kuuluu puutarhan tehtäviin. Elävien kokoelmien tunnistus ja tutkimus täydentävät puiston virkistyskäyttöä.",
+      "teksti": "Mont Fleurin kasvitieteellinen puutarha on Victorian keskustan tuntumassa Mahén saarella. Se alkoi maatalousasemana, jonka kokoelmaan kerättiin hyötykasveja: puita, palmuja, mausteita, hedelmäpuita ja aromaattisia kasveja. Perustaja oli Mauritiukselta tullut agronomi Dupont.\n\nAlue kehittyi myöhemmin yleiseksi puistoksi. Nykyisessä kokoelmassa on sekä Seychellien omia kasveja että muualta tuotuja koristekasveja. Coco de mer -palmuja kasvaa täällä viljeltyinä, vaikka lajin luonnonvarainen elinalue on Praslinilla ja Curieusella. Puutarhassa elää myös Aldabran jättiläiskilpikonnia.\n\nKasvien säilyttäminen alkuperäisen elinympäristön ulkopuolella kuuluu puutarhan tehtäviin. Elävien kokoelmien tunnistus ja tutkimus täydentävät puiston virkistyskäyttöä.",
       "kuvat": [
         {
           "tiedosto": "Giant alocasia.jpg",
-          "lyhyt": "Alokasia Mont Fleurin puutarhassa.",
-          "selite": "Mont Fleurin kasvitieteellisessä puutarhassa kuvattu suurilehtinen alokasia vuonna 2007.",
+          "lyhyt": "Alocasia Mont Fleurissa.",
+          "selite": "Alocasia-suvun kasvi Mont Fleurin puutarhassa Mahélla vuonna 2007.",
           "lahde": "Anatoly Terentiev, Wikimedia Commons (PD)"
         }
       ],

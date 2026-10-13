@@ -96,8 +96,8 @@
   ],
   "valokuva": {
     "tiedosto": "Port Louis, Mauritius, Bulk Sugar Terminal Quay.jpg",
-    "lyhyt": "Port Louis’n sataman sokeriterminaalin laituri.",
-    "selite": "Aluksia ja kuljetinrakenteita Bulk Sugar Terminal -laiturilla Port Louis’n satamassa vuonna 2025.",
+    "lyhyt": "Port Louis’n sokeriterminaalin laituri.",
+    "selite": "Bulk Sugar Terminal -laituri Port Louis’ssa huhtikuussa 2025.",
     "lahde": "Richard N Horne, Commons (CC BY 4.0)"
   },
   "kaupunkilehti": [
@@ -108,14 +108,14 @@
       "kansikuvat": [
         {
           "tiedosto": "The Champ de Mars Racecourse.JPG",
-          "lyhyt": "Champ de Marsin laukkarata Port Louis’ssa.",
-          "selite": "Ovaalia laukkarataa ympäröivät kaupungin talot ja vuorenrinne vuonna 2015.",
+          "lyhyt": "Champ de Marsin laukkarata.",
+          "selite": "Champ de Marsin laukkarata Port Louis’ssa syyskuussa 2015.",
           "lahde": "Martin Falbisoner, Wikimedia Commons (CC BY-SA 4.0)"
         },
         {
           "tiedosto": "2007-09-09 Mauritius 26.jpg",
-          "lyhyt": "Port Louis’n satamapanoraama.",
-          "selite": "Vuoden 2007 panoraamassa näkyvät sataman vesi, aluksia, laitureita ja varastorakennuksia.",
+          "lyhyt": "Port Louis’n satama.",
+          "selite": "Port Louis’n satama Mauritiuksella syyskuussa 2007.",
           "lahde": "Hansueli Krapf, Wikimedia Commons (CC BY-SA 3.0)"
         },
         {
@@ -137,7 +137,7 @@
         },
         {
           "otsikko": "Portaat uuteen elämään",
-          "teksti": "Aapravasi Ghatin kiviset portaat kuuluivat sopimustyöläisten vastaanottopaikkaan. Tänne saapui etenkin Intiasta ihmisiä, jotka jatkoivat Mauritiuksen sokeritiloille tai muihin siirtomaihin. Alueella oli majoitustiloja, keittiöitä ja sairaala; jäljellä on vain osa kokonaisuudesta.",
+          "teksti": "Aapravasi Ghatin kiviset portaat kuuluivat sopimustyöläisten vastaanottopaikkaan. Tänne saapui etenkin Intiasta ihmisiä, jotka jatkoivat Mauritiuksen sokeritiloille tai muihin siirtomaihin. Alueella oli majoitustiloja, keittiöitä ja sairaala; jäljellä on vain osa kokonaisuudesta. Vastaanottokeskukseen kuuluivat myös peseytymistilat; tulijat ohjattiin sinne sataman portaiden kautta.",
           "wiki": "Aapravasi Ghat",
           "tiedosto": "",
           "lyhyt": "",
@@ -155,7 +155,7 @@
         },
         {
           "otsikko": "Saari mahtuu museoon",
-          "teksti": "Caudan Waterfrontin Blue Penny Museum esittelee Mauritiuksen historiaa ja taidetta. Kokoelmassa on vanhoja merikarttoja, maalauksia, kaiverruksia ja postimerkkejä. Museon nimi viittaa kuuluisaan siniseen postimerkkiin, mutta kokoelma ulottuu postihistoriaa laajemmalle. ",
+          "teksti": "Caudan Waterfrontin Blue Penny Museum esittelee Mauritiuksen historiaa ja taidetta. Kokoelmassa on vanhoja merikarttoja, maalauksia, kaiverruksia ja postimerkkejä. Museon nimi viittaa kuuluisaan siniseen postimerkkiin, mutta kokoelma ulottuu postihistoriaa laajemmalle. Kokoelmaan kuuluvat kuuluisat sininen ja oranssinpunainen Post Office -postimerkki.",
           "wiki": "Blue Penny Museum",
           "tiedosto": "",
           "lyhyt": "",
@@ -320,7 +320,7 @@
         },
         {
           "otsikko": "Kirjasto säilyttää muutakin kuin kirjoja",
-          "teksti": "Mauritiuksen kansalliskirjaston kokoelmiin kuuluu kirjojen lisäksi käsikirjoituksia, sanomalehtiä ja aikakauslehtiä. Se säilyttää myös nuotteja, valokuvia, karttoja, piirroksia sekä ääni- ja kuva-aineistoja. Kirjasto palvelee kaupungin asukkaita, mutta sen säilyttämät aineistot koskevat koko saarta.",
+          "teksti": "Mauritiuksen kansalliskirjaston kokoelmiin kuuluu kirjojen lisäksi käsikirjoituksia, sanomalehtiä ja aikakauslehtiä. Se säilyttää myös nuotteja, valokuvia, karttoja, piirroksia sekä ääni- ja kuva-aineistoja. Kirjasto palvelee kaupungin asukkaita, mutta sen säilyttämät aineistot koskevat koko saarta. Kokoelmiin kuuluu lisäksi muita graafisen taiteen aineistoja.",
           "wiki": "Port Louis",
           "tiedosto": "",
           "lyhyt": "",
@@ -355,7 +355,7 @@
   "nahtavyydet": {
     "Aapravasi Ghat": {
       "aika": "1800-luku",
-      "teksti": "Aapravasi Ghat on Trou Fanfaronin lahden tuntumassa säilynyt osa sopimustyöläisten vastaanottopaikkaa. Meritse saapuneet ihmiset ohjattiin satamasta kivisiä portaita pitkin vastaanottokeskukseen. Kokonaisuuteen kuului majoitustiloja, keittiöitä, peseytymistiloja ja sairaala. Nykyiset jäänteet edustavat vain osaa aikaisemmasta alueesta.\n\n Monet tulijat jatkoivat Mauritiuksen sokeritiloille, osa puolestaan muihin siirtomaihin. Vastaanottopaikan historia liittyy sekä työn järjestämiseen että muuttajien mukanaan tuomiin tapoihin ja perheiden muistoihin.",
+      "teksti": "Aapravasi Ghat on Trou Fanfaronin lahden tuntumassa säilynyt osa sopimustyöläisten vastaanottopaikkaa. Meritse saapuneet ihmiset ohjattiin satamasta kivisiä portaita pitkin vastaanottokeskukseen. Kokonaisuuteen kuului majoitustiloja, keittiöitä, peseytymistiloja ja sairaala. Nykyiset jäänteet edustavat vain osaa aikaisemmasta alueesta.\n\nMonet tulijat jatkoivat Mauritiuksen sokeritiloille, osa puolestaan muihin siirtomaihin. Vastaanottopaikan historia liittyy sekä työn järjestämiseen että muuttajien mukanaan tuomiin tapoihin ja perheiden muistoihin.",
       "kuvat": [
         {
           "tiedosto": "",

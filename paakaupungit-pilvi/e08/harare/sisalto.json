@@ -61,7 +61,7 @@
       "source": "https://en.wikipedia.org/wiki/National_Botanic_Garden_(Zimbabwe)"
     },
     {
-      "q": "Mistä Hararen sinijakarandan laji on alkuperäisin?",
+      "q": "Mistä Hararen jakarandan laji on alkuperäisin?",
       "options": [
         "Etelä-Amerikasta",
         "Etelä-Afrikasta",
@@ -70,7 +70,7 @@
       ],
       "correct": 0,
       "level": 2,
-      "hint": "Sinijakarandaa on istutettu kaupunkien koristepuuksi myös alkuperäalueensa ulkopuolelle.",
+      "hint": "Jakarandaa on istutettu kaupunkien koristepuuksi myös alkuperäalueensa ulkopuolelle.",
       "fact": "Jacaranda mimosifolia on Etelä-Amerikasta peräisin oleva koristepuu.",
       "source": "https://en.wikipedia.org/wiki/Jacaranda_mimosifolia"
     },
@@ -96,8 +96,8 @@
   ],
   "valokuva": {
     "tiedosto": "Harare 2024 1.jpg",
-    "lyhyt": "Hararen puukujannetta.",
-    "selite": "Hararen kaupunkimaisemaa ja katupuustoa vuonna 2024.",
+    "lyhyt": "Harare vuonna 2024.",
+    "selite": "Harare huhtikuussa 2024.",
     "lahde": "Peter in s, Commons (CC BY-SA 4.0)",
     "vuosi": "2024"
   },
@@ -109,14 +109,14 @@
       "kansikuvat": [
         {
           "tiedosto": "Planting season in Harare.jpg",
-          "lyhyt": "Kaupunkiviljelyä Hararessa.",
-          "selite": "Istutuskauden viljelyä Hararen asutuksen lomassa vuonna 2020.",
+          "lyhyt": "Maissin viljelyä Hararessa.",
+          "selite": "Maissin viljelyvakoja Hararessa joulukuussa 2020.",
           "lahde": "Itaisibanda, Wikimedia Commons (CC BY-SA 4.0)"
         },
         {
           "tiedosto": "Harare from the Kopje.jpg",
           "lyhyt": "Harare Kopjelta nähtynä.",
-          "selite": "Kopjelta avautuva näkymä Hararen kortteleihin ja katuverkkoon vuonna 2001.",
+          "selite": "Näkymä Harareen Kopjelta toukokuussa 2001.",
           "lahde": "Andrew Balet, Wikimedia Commons (CC BY 2.5)"
         },
         {
@@ -171,7 +171,7 @@
           "selite": "",
           "lahde": ""
         },
-        "kappale": "Hararen keskustassa Africa Unity Square, Harare Gardens ja Kopje muodostavat erilaisia ulkokohteita. Ihmistieteiden museossa tutustutaan arkeologiaan ja antropologiaan, Repsissä teatteritoimintaan. Alexandra Parkin kasvitieteellinen puutarha ja Mukuvisi Woodlands ovat erillisiä luontoretkiä. Mukuvisissa kasvava msasa on paikallinen metsäpuu, katujen sinijakarandat istutettuja koristepuita.",
+        "kappale": "Hararen keskustassa Africa Unity Square, Harare Gardens ja Kopje muodostavat erilaisia ulkokohteita. Ihmistieteiden museossa tutustutaan arkeologiaan ja antropologiaan, Repsissä teatteritoimintaan. Alexandra Parkin kasvitieteellinen puutarha ja Mukuvisi Woodlands ovat erillisiä luontoretkiä. Mukuvisissa kasvava msasa on paikallinen metsäpuu, katujen jakarandat istutettuja koristepuita.",
         "artikkeli": {
           "nimi": "Matkailijan Harare",
           "taitto": "opas",
@@ -294,7 +294,7 @@
       "nostot": [
         {
           "otsikko": "Punainen msasa tekee uusia lehtiä",
-          "teksti": "Msasa eli Brachystegia spiciformis kuuluu Hararen ympäristön avointen metsien puustoon. Sen uudet lehdet voivat olla viininpunaisia, meripihkan värisiä tai ruskehtavia ennen vihertymistään. Msasan lehdet ovat yhdistelmälehtiä, sen pienet vihreät kukat ovat tuoksuvia ja palot avautuvat levittämään siemeniä.",
+          "teksti": "Msasa eli Brachystegia spiciformis kuuluu Hararen ympäristön avointen metsien puustoon. Sen uudet lehdet voivat olla viininpunaisia, meripihkan värisiä tai ruskehtavia ennen vihertymistään. Msasan lehdet ovat yhdistelmälehtiä, sen pienet vihreät kukat ovat tuoksuvia ja palot avautuvat levittämään siemeniä. Värikäs uusi lehdistö puhkeaa kuivan kauden loppupuolella.",
           "wiki": "Brachystegia spiciformis",
           "tiedosto": "",
           "lyhyt": "",
@@ -303,20 +303,20 @@
         },
         {
           "otsikko": "Violetti katuvieras Etelä-Amerikasta",
-          "teksti": "Sinijakaranda eli Jacaranda mimosifolia on alkuperältään Etelä-Amerikasta. Hararen katujen jakarandat ovat istutettuja koristepuita, jotka tunnetaan violeteista kukistaan. Lehdet jakautuvat moniin hentoihin lehdyköihin, ja kukinnan jälkeen muodostuu puutuneita siemenkotia. Niiden sisällä on litteitä siivellisiä siemeniä.",
+          "teksti": "Jakaranda eli Jacaranda mimosifolia on alkuperältään Etelä-Amerikasta. Hararen katujen jakarandat ovat istutettuja koristepuita, jotka tunnetaan violeteista kukistaan. Lehdet jakautuvat moniin hentoihin lehdyköihin, ja kukinnan jälkeen muodostuu puutuneita siemenkotia. Niiden sisällä on litteitä siivellisiä siemeniä. Lehdet ovat kahteen kertaan jakautuneita yhdistelmälehtiä.",
           "wiki": "Jacaranda mimosifolia",
           "tiedosto": "Jacaranda1212.jpg",
-          "lyhyt": "Sinijakarandan violetteja kukkia.",
-          "selite": "Sinijakaranda (Jacaranda mimosifolia).",
+          "lyhyt": "Kukkiva jakaranda.",
+          "selite": "Kukkiva jakaranda Whakatānessa Uudessa-Seelannissa joulukuussa 2006.",
           "lahde": "Kahuroa, Wikimedia Commons (PD)"
         },
         {
-          "otsikko": "Liekkipuu kasvattaa tummat palot",
-          "teksti": "Liekkipuu eli Delonix regia on alkuperältään Madagaskarista. Hararen katujen koristepuissa sitä tavataan jakarandan rinnalla, mutta kyse on eri lajista. Sen kukat ovat tavallisesti oranssinpunaisia tai punaisia, ja höyhenmäiset lehdet koostuvat monista pienistä lehdyköistä. Pitkät palot muuttuvat kypsyessään tummiksi ja puutuneiksi.",
+          "otsikko": "Punapunaliekkipuu kasvattaa tummat palot",
+          "teksti": "Punapunaliekkipuu eli Delonix regia on alkuperältään Madagaskarista. Hararen katujen koristepuissa sitä tavataan jakarandan rinnalla, mutta kyse on eri lajista. Sen kukat ovat tavallisesti oranssinpunaisia tai punaisia, ja höyhenmäiset lehdet koostuvat monista pienistä lehdyköistä. Pitkät palot muuttuvat kypsyessään tummiksi ja puutuneiksi. Lajista tunnetaan myös keltakukkaisia muotoja.",
           "wiki": "Delonix regia",
           "tiedosto": "Royal Poinciana.jpg",
-          "lyhyt": "Liekkipuun punaisia kukkia.",
-          "selite": "Delonix regia, Madagaskarista lähtöisin oleva puulaji.",
+          "lyhyt": "Kukkiva punaliekkipuu.",
+          "selite": "Punaliekkipuu (Delonix regia) kukkii Floridan Keys-saarilla.",
           "lahde": "Averette, Wikimedia Commons (CC BY-SA 3.0)"
         },
         {

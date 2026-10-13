@@ -96,8 +96,8 @@
   ],
   "valokuva": {
     "tiedosto": "ISS024-E-12750 - View of Lesotho - Maseru - Caledon River - mountains Qoaling Quotsaneng Likotsi - Maqalika Lake - Platbergsdrift (cropped).jpg",
-    "lyhyt": "Maseru ja Mohokare avaruudesta nähtynä.",
-    "selite": "ISS-avaruusasemalta näkyvät Maseru, Mohokare- eli Caledonjoki ja ympäröivä vuorimaasto.",
+    "lyhyt": "Lesotho avaruudesta.",
+    "selite": "Lesotho ISS-avaruusasemalta elokuussa 2010.",
     "lahde": "Earth Science and Remote Sensing Unit , Lyndon B. Johnson Space Center, Commons (PD)"
   },
   "kaupunkilehti": [
@@ -120,15 +120,15 @@
         },
         {
           "tiedosto": "Maseru South West Phase III (Masowe III) Housing Estate - panoramio.jpg",
-          "lyhyt": "Masowe III -asutusaluetta Maserussa.",
-          "selite": "Maserun lounaisosan Masowe III -asutusalueen kuva; tiedosto julkaistiin vuonna 2010.",
+          "lyhyt": "Masowe III -asutusalue Maserussa.",
+          "selite": "Maserun South West Phase III eli Masowe III -asutusalue.",
           "lahde": "Paramente Phamotse, Wikimedia Commons (CC BY-SA 3.0)"
         }
       ],
       "nostot": [
         {
           "otsikko": "Joella on kaksi nimeä",
-          "teksti": "Mohokare ja Caledon ovat sama joki. Maserussa se erottaa Lesothon Etelä-Afrikasta, mutta sillan kohdalla raja myös yhdistää: sen yli kulkee tie naapurimaan Ladybrandin suuntaan. Kaupunki on matalassa laaksossa Maloti-vuoriston reunalla. Maseru Bridge on sekä joen ylitys että maantien raja-asema.",
+          "teksti": "Mohokare ja Caledon ovat sama joki. Maserussa se erottaa Lesothon Etelä-Afrikasta, mutta sillan kohdalla raja myös yhdistää: sen yli kulkee tie naapurimaan Ladybrandin suuntaan. Kaupunki on matalassa laaksossa Maloti-vuoriston reunalla. Maseru Bridge on sekä joen ylitys että maantien raja-asema. Rajalta Etelä-Afrikan N8-tie jatkuu Ladybrandin kautta Bloemfonteiniin.",
           "tiedosto": "",
           "lyhyt": "",
           "selite": "",
@@ -137,7 +137,7 @@
         },
         {
           "otsikko": "Kauppa vaihtaa mittakaavaa",
-          "teksti": "Kingswayn ympärille on kasvanut vierekkäisiä liikekeskuksia, joilla on erilaiset kasvot. Läntisellä puolella ovat suuret toimistorakennukset, tavaratalot ja pankit; idempänä pienemmät liikkeet, torit ja katukauppiaat. Basotho Hat -käsityökauppa sijaitsee samalla Kingswayn kauppa-alueella.",
+          "teksti": "Kingswayn ympärille on kasvanut vierekkäisiä liikekeskuksia, joilla on erilaiset kasvot. Läntisellä puolella ovat suuret toimistorakennukset, tavaratalot ja pankit; idempänä pienemmät liikkeet, torit ja katukauppiaat. Basotho Hat -käsityökauppa sijaitsee samalla Kingswayn kauppa-alueella. Kingsway yhdistää kuninkaallisen palatsin Mejametalanan lentoasemaan.",
           "tiedosto": "",
           "lyhyt": "",
           "selite": "",
@@ -146,7 +146,7 @@
         },
         {
           "otsikko": "T-paidan kaupunki",
-          "teksti": "Thetsanen alueella Maserun eteläosassa toimii tekstiili- ja jalkineteollisuutta. Kaupungin teollisuus ei kuitenkaan ole pelkkää ompelua: Moshoeshoe Roadin suunnalla on myllyjä ja muita yrityksiä. Palvelut ja valmistava teollisuus ovat molemmat osa Maserun taloutta.",
+          "teksti": "Thetsanen alueella Maserun eteläosassa toimii tekstiili- ja jalkineteollisuutta. Kaupungin teollisuus ei kuitenkaan ole pelkkää ompelua: Moshoeshoe Roadin suunnalla on myllyjä ja muita yrityksiä. Palvelut ja valmistava teollisuus ovat molemmat osa Maserun taloutta. Moshoeshoe Roadin teollisuus keskittyy liikekeskusten pohjoispuolelle, Thetsane etelään.",
           "tiedosto": "",
           "lyhyt": "",
           "selite": "",
@@ -311,7 +311,7 @@
         },
         {
           "otsikko": "Kiskot tulivat myöhemmin",
-          "teksti": "Maserun rautatieasemalla rata päättyy. Se liittyy Mohokaren ylittävän sillan kautta Etelä-Afrikan rataverkkoon, ja Lesothon puoleinen osuus on lyhyt. Yhteys rakennettiin 1900-luvun alussa. Kaupungin raideliikenne palvelee tavaraa eikä matkustajia.",
+          "teksti": "Maserun rautatieasemalla rata päättyy. Se liittyy Mohokaren ylittävän sillan kautta Etelä-Afrikan rataverkkoon, ja Lesothon puoleinen osuus on lyhyt. Yhteys rakennettiin 1900-luvun alussa. Kaupungin raideliikenne palvelee tavaraa eikä matkustajia. Rata jatkuu Etelä-Afrikan puolella Bloemfonteinin suunnan päärataan. Maiden välillä on yksi ratayhteys.",
           "tiedosto": "",
           "lyhyt": "",
           "selite": "",
@@ -320,7 +320,7 @@
         },
         {
           "otsikko": "Peite on myös vaate",
-          "teksti": "Basothojen peite on Lesothossa myös hartioilla kannettava vaate. Sen käyttötavat liittyvät arkeen ja erilaisiin elämänvaiheisiin, eivät vain nukkumiseen. Perinteisen eläimennahkaisen viitan rinnalle ja tilalle tuli kudottuja tekstiilejä. Maserun kaupoissa näitä vaatteita myydään edelleen.",
+          "teksti": "Basothojen peite on Lesothossa myös hartioilla kannettava vaate. Sen käyttötavat liittyvät arkeen ja erilaisiin elämänvaiheisiin, eivät vain nukkumiseen. Perinteisen eläimennahkaisen viitan rinnalle ja tilalle tuli kudottuja tekstiilejä. Maserun kaupoissa näitä vaatteita myydään edelleen. Malleilla on omia käyttötapojaan: Lingoetsi on morsiamen peite, Sefate ja Morena arkeen tarkoitettuja.",
           "tiedosto": "",
           "lyhyt": "",
           "selite": "",

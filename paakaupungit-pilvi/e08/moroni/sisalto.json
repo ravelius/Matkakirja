@@ -137,7 +137,7 @@
         },
         {
           "otsikko": "Tori ruokkii kaupunkia kahdesti",
-          "teksti": "Volo Volo on Moronin arjen kauppapaikka kaupungin pohjoisosassa. Sieltä hankitaan hedelmiä ja vihanneksia, ja torin yhteydessä toimii myös pieniä ruokapaikkoja. Ruokapöytään voi tulla esimerkiksi paistettua kalaa banaanien kanssa tai riisiä ja lihaa. Illalla torin ympärillä valmistetaan myös grilliruokaa.",
+          "teksti": "Volo Volo on Moronin arjen kauppapaikka kaupungin pohjoisosassa. Sieltä hankitaan hedelmiä ja vihanneksia, ja torin yhteydessä toimii myös pieniä ruokapaikkoja. Ruokapöytään voi tulla esimerkiksi paistettua kalaa banaanien kanssa tai riisiä ja lihaa. Illalla torin ympärillä valmistetaan myös grilliruokaa. Iltagrilleissä myydään myös kanaa, bataattia ja maniokkia.",
           "tiedosto": "",
           "lyhyt": "",
           "selite": "",
@@ -155,7 +155,7 @@
         },
         {
           "otsikko": "Tulivuori mahtuu myös museoon",
-          "teksti": "Komorien kansallismuseo Moronissa yhdistää eri tieteenaloja. Sen näyttelyaiheisiin kuuluvat historia, arkeologia, taide ja uskonto, ihmisten kulttuurit, valtameri ja luonnontieteet sekä tulivuoret ja maapallon geologia.",
+          "teksti": "Komorien kansallismuseo Moronissa yhdistää eri tieteenaloja. Sen näyttelyaiheisiin kuuluvat historia, arkeologia, taide ja uskonto, ihmisten kulttuurit, valtameri ja luonnontieteet sekä tulivuoret ja maapallon geologia. Museo perustettiin 1900-luvun lopulla. Se sijaitsee Moronin keskustassa, ja sen näyttelyt on jaettu eri tieteenalojen saleihin. Museon ranskankielinen nimi on Musée national des Comores.",
           "tiedosto": "",
           "lyhyt": "",
           "selite": "",
@@ -293,7 +293,7 @@
       "nostot": [
         {
           "otsikko": "Tulivuori, jonka huippu muuttuu",
-          "teksti": "Karthala on kilpitulivuori ja kuuluu Ngazidjan muodostaneisiin tulivuoriin. Sen huipulla on laaja kaldera, jonka muotoa purkaukset ovat muuttaneet. Moronista katsottu vuori voi näyttää pysyvältä taustalta, vaikka sen huipun maisema ei pysy samanlaisena. Karthalan toiminta kuuluu saaren luonnonhistoriaan, ja vuori on edelleen aktiivinen.",
+          "teksti": "Karthala on kilpitulivuori ja kuuluu Ngazidjan muodostaneisiin tulivuoriin. Sen huipulla on laaja kaldera, jonka muotoa purkaukset ovat muuttaneet. Moronista katsottu vuori voi näyttää pysyvältä taustalta, vaikka sen huipun maisema ei pysy samanlaisena. Karthalan toiminta kuuluu saaren luonnonhistoriaan, ja vuori on edelleen aktiivinen. Karthala on Ngazidjan eteläisempi tulivuori.",
           "tiedosto": "Volcan Karthala vue du grand cratere 13 août 2019.jpg",
           "lyhyt": "Karthalan suuri kraatteri.",
           "selite": "Näkymä Karthalan kraatteriin 13. elokuuta 2019.",
@@ -302,7 +302,7 @@
         },
         {
           "otsikko": "Kraatterijärvi katosi",
-          "teksti": "Karthalan kalderassa oli kraatterijärvi, joka katosi 2000-luvun purkauksen yhteydessä. Purkaus muutti kraatteria, ja järven paikalle jäi tummia kiviä, mahdollisesti jäähtynyttä laavaa tai romahtaneen kraatterin ainesta.",
+          "teksti": "Karthalan kalderassa oli kraatterijärvi, joka katosi 2000-luvun purkauksen yhteydessä. Purkaus muutti kraatteria, ja järven paikalle jäi tummia kiviä, mahdollisesti jäähtynyttä laavaa tai romahtaneen kraatterin ainesta. Purkaus levitti kraatterin ympärille harmaata tuhkaa. Kraatterijärvi oli syntynyt edellisen purkauksen jälkeen 1900-luvun lopulla.",
           "tiedosto": "Overviewing to Karthala crater.jpg",
           "lyhyt": "Näkymä Karthalan kraatteriin.",
           "selite": "Karthalan huipun kraatteri vuonna 2018 otetussa retkikuvassa.",
@@ -311,7 +311,7 @@
         },
         {
           "otsikko": "Metsä vaihtuu kanervikkoon",
-          "teksti": "Karthalan rinteillä kasvaa kosteaa ainavihantaa metsää. Ylempänä puut jäävät matalammiksi ja kasvillisuus vaihtuu kanervikoksi, jossa kasvaa myös Erica comorensis -kanervaa. Karthala on myös tärkeä lintujen alue: sen rinteillä elää saaristolle ominaisia lajeja, kuten rillilintuihin kuuluva Zosterops mouroniensis.",
+          "teksti": "Karthalan rinteillä kasvaa kosteaa ainavihantaa metsää. Ylempänä puut jäävät matalammiksi ja kasvillisuus vaihtuu kanervikoksi, jossa kasvaa myös Erica comorensis -kanervaa. Karthala on myös tärkeä lintujen alue: sen rinteillä elää saaristolle ominaisia lajeja, kuten rillilintuihin kuuluva Zosterops mouroniensis. Metsää uhkaavat hakkuut ja maatalouden leviäminen.",
           "tiedosto": "",
           "lyhyt": "",
           "selite": "",
@@ -320,7 +320,7 @@
         },
         {
           "otsikko": "Pääkaupungin rannassa on laavakiveä",
-          "teksti": "Moronin rannikko on vulkaanista ja kallioista; kaupungin ranta ei ole kauttaaltaan hiekkarantaa. Tämä näkyy myös siinä, mihin rantaretki suuntautuu. Moronin pohjoispuolinen Itsandra tunnetaan hiekkarannastaan, kun taas kaupungin rannassa meri kohtaa paljon kivistä maastoa.",
+          "teksti": "Moronin rannikko on vulkaanista ja kallioista; kaupungin ranta ei ole kauttaaltaan hiekkarantaa. Tämä näkyy myös siinä, mihin rantaretki suuntautuu. Moronin pohjoispuolinen Itsandra tunnetaan hiekkarannastaan, kun taas kaupungin rannassa meri kohtaa paljon kivistä maastoa. Itsandrassa on hiekkarannan lisäksi oma medina ja rannalla ravintoloita. Itsandra on Ngazidjan länsirannikon kylä.",
           "tiedosto": "",
           "lyhyt": "",
           "selite": "",
@@ -355,8 +355,8 @@
       "kuvat": [
         {
           "tiedosto": "Hiking to Karthala crater.jpg",
-          "lyhyt": "Retkellä kohti Karthalan kraatteria.",
-          "selite": "Karthalan kraatterille suuntautuva retki kulkee vuoren kasvillisuuden keskellä.",
+          "lyhyt": "Retki Karthalan kraatterille.",
+          "selite": "Patikointia Karthalan kraatterille marraskuussa 2018.",
           "lahde": "Rokaso, Wikimedia Commons (CC BY-SA 4.0)"
         }
       ],

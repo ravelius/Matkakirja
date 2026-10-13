@@ -90,7 +90,7 @@
     }
   ],
   "tiedot": [
-    "Windhoekin varhainen kivikirkko palveli myös kouluna: kaupungin lähteiden äärellä uskonnollinen ja opetuksen tila mahtuivat saman katon alle.",
+    "Goreangabin puhdistamon kehittämisessä yhdistettiin Namibiassa tehtyä tutkimusta ja kansainvälisten asiantuntijoiden työtä.",
     "Gottlieb Redecker suunnitteli Windhoekin Christuskirchen; rakennuksessa yhdistyvät uusromaaniset, uusgoottilaiset ja jugendin vaikutteet.",
     "Windhoekin kansallinen kasvitieteellinen puutarha suojelee paikallista kasvillisuutta aivan pääkaupungin keskellä."
   ],
@@ -138,7 +138,7 @@
         },
         {
           "otsikko": "Asema lainasi tyylinsä etelästä",
-          "teksti": "Windhoekin rautatie rakennettiin saksalaisen siirtomaahallinnon aikana. Bahnhof Streetin asemarakennus edustaa kap-hollantilaista rakennusperinnettä. Kiskot yhdistivät ylängön ensin Swakopmundiin ja myöhemmin myös eteläiseen ja itäiseen Namibiaan. Aseman rautatiemuseon aiheisiin kuuluvat junien lisäksi lento- ja meriliikenne.",
+          "teksti": "Windhoekin rautatie rakennettiin saksalaisen siirtomaahallinnon aikana. Bahnhof Streetin asemarakennus edustaa kap-hollantilaista rakennusperinnettä. Kiskot yhdistivät ylängön ensin Swakopmundiin ja myöhemmin myös eteläiseen ja itäiseen Namibiaan. Aseman rautatiemuseon aiheisiin kuuluvat junien lisäksi lento- ja meriliikenne. Eteläinen ratayhteys tuli Lüderitzistä Keetmanshoopin kautta.",
           "tiedosto": "",
           "lyhyt": "",
           "selite": "",
@@ -147,7 +147,7 @@
         },
         {
           "otsikko": "Puutarha, joka suojelee omaa paikkaansa",
-          "teksti": "Windhoekin kansallinen kasvitieteellinen puutarha tunnetaan myös South West Nature Reservenä. Se sijaitsee kaupungin sydämessä ja suojelee alueelle ominaista kasvillisuutta kallioisine kumpuineen.",
+          "teksti": "Windhoekin kansallinen kasvitieteellinen puutarha tunnetaan myös South West Nature Reservenä. Se sijaitsee kaupungin sydämessä ja suojelee alueelle ominaista kasvillisuutta kallioisine kumpuineen. Kasvitieteellinen tutkimuslaitos muutti alueen viereisiin rakennuksiin 1900-luvun lopulla ja kehitti suojelualueesta puutarhan. Aavikkotalossa kasvaa Lithops-suvun mehikasveja.",
           "tiedosto": "",
           "lyhyt": "",
           "selite": "",
@@ -156,7 +156,7 @@
         },
         {
           "otsikko": "Lentokentän nimi ratkaisee matkan",
-          "teksti": "Windhoekiin lentävä joutuu erottamaan Hosea Kutakon kansainvälisen lentoaseman ja Erosin kentän. Hosea Kutako sijaitsee kaupungin ulkopuolella ja palvelee kansainvälisiä yhteyksiä. Eros on lähempänä keskustaa, ja sillä on tärkeä tehtävä pienkoneiden sekä tilauslentojen tukikohtana.",
+          "teksti": "Windhoekiin lentävä joutuu erottamaan Hosea Kutakon kansainvälisen lentoaseman ja Erosin kentän. Hosea Kutako sijaitsee kaupungin ulkopuolella ja palvelee kansainvälisiä yhteyksiä. Eros on lähempänä keskustaa, ja sillä on tärkeä tehtävä pienkoneiden sekä tilauslentojen tukikohtana. Erosin kasvua suuremmaksi lentoasemaksi ovat rajoittaneet kiitotien pituus, melu ja ilmatilan ruuhkaisuus.",
           "tiedosto": "",
           "lyhyt": "",
           "selite": "",
@@ -171,7 +171,7 @@
           "selite": "",
           "lahde": ""
         },
-        "kappale": "Aloita Windhoekin keskustan rakennuksista ja jätä aikaa myös kansalliselle kasvitieteelliselle puutarhalle. Christuskirche ja Alte Feste kertovat siirtomaakaupungin synnystä eri tavoin.  Kaupungissa liikutaan takseilla. Ruokapaikoissa voi kokeilla mahangua eli helmihirssiä lisukkeena. Kansallisen kasvitieteellisen puutarhan kallioiset kumpareet säilyttävät kaupungin paikallista kasvillisuutta.",
+        "kappale": "Aloita Windhoekin keskustan rakennuksista ja jätä aikaa myös kansalliselle kasvitieteelliselle puutarhalle. Christuskirche ja Alte Feste kertovat siirtomaakaupungin synnystä eri tavoin. Kaupungissa liikutaan takseilla. Ruokapaikoissa voi kokeilla mahangua eli helmihirssiä lisukkeena. Kansallisen kasvitieteellisen puutarhan kallioiset kumpareet säilyttävät kaupungin paikallista kasvillisuutta.",
         "artikkeli": {
           "nimi": "Matkailijan Windhoek",
           "taitto": "opas",
@@ -180,7 +180,7 @@
           "jaksot": [
             {
               "otsikko": "Perille ja liikkeelle",
-              "teksti": "Hosea Kutakon kansainvälinen lentoasema sijaitsee kaupungin ulkopuolella; Erosin pienkonekenttä on lähempänä keskustaa.  Windhoekissa on sekä jaettuja takseja että etukäteen tilattavia kyytejä.",
+              "teksti": "Hosea Kutakon kansainvälinen lentoasema sijaitsee kaupungin ulkopuolella; Erosin pienkonekenttä on lähempänä keskustaa. Windhoekissa on sekä jaettuja takseja että etukäteen tilattavia kyytejä.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -293,8 +293,8 @@
       },
       "nostot": [
         {
-          "otsikko": "Lähde oli ennen pääkaupunkia",
-          "teksti": "Windhoekin ensimmäinen kaupunkikerros alkaa lämpimästä vedestä. Orlamyhteisö asettui 1800-luvun alkupuolella lähteen tuntumaan nykyisen Klein Windhoekin alueella. Yhteisö rakensi kivikirkon, jossa järjestettiin myös opetusta, ja paikalle perustettiin puutarhoja. Varhainen asutus taantui ennen saksalaisen siirtomaakeskuksen rakentamista.",
+          "otsikko": "Uusi puhdistamo jatkaa vanhan työtä",
+          "teksti": "Windhoekin kaupunki rakennutti Goreangabin jäteveden kierrätyslaitoksen 1900-luvun jälkipuoliskolla. Se tuotti kunnallisesta jätevedestä juomavettä kaupungin muista lähteistä saadun veden lisäksi. Uusi Goreangabin laitos valmistui 2000-luvun alussa. Sen suunnittelussa hyödynnettiin vanhan laitoksen kokemuksia, Namibiassa tehtyä tutkimusta ja kansainvälisten asiantuntijoiden tietoa. Kaupungin luonnolliset vesilähteet olivat jo kokonaan käytössä.",
           "tiedosto": "",
           "lyhyt": "",
           "selite": "",
@@ -303,7 +303,7 @@
         },
         {
           "otsikko": "Hanalle palataan puhdistamon kautta",
-          "teksti": "Windhoekissa jo käytetty vesi voi saada uuden tehtävän juomavetenä. Goreangabin laitos puhdistaa kunnallista jätevettä takaisin vesihuollon käyttöön. Menetelmää kutsutaan juomaveden suoraksi uudelleenkäytöksi, koska puhdistettu vesi palautetaan juomavesiverkostoon. Kaupunki on kehittänyt ratkaisua vuosikymmenten ajan vesivarojen niukkuuden vuoksi. Uusi Goreangabin laitos jatkaa vanhan laitoksen työtä.",
+          "teksti": "Windhoekissa jo käytetty vesi voi saada uuden tehtävän juomavetenä. Goreangabin laitos puhdistaa kunnallista jätevettä takaisin vesihuollon käyttöön. Menetelmää kutsutaan juomaveden suoraksi uudelleenkäytöksi, koska puhdistettu vesi palautetaan juomavesiverkostoon. Kaupunki on kehittänyt ratkaisua vuosikymmenten ajan vesivarojen niukkuuden vuoksi. ",
           "tiedosto": "",
           "lyhyt": "",
           "selite": "",
@@ -312,7 +312,7 @@
         },
         {
           "otsikko": "Turva rakennetaan vaihe vaiheelta",
-          "teksti": "Goreangabissa veden käsittely ei perustu yhteen puhdistustemppuun. Prosessiin kuuluvat muun muassa otsonikäsittely, hiukkasten kokoaminen ja erottaminen, suodatus sekä aktiivihiili ja ultrasuodatus. Eri käsittelyvaiheet muodostavat useita esteitä epäpuhtauksille ennen veden palaamista juomavesiverkostoon.",
+          "teksti": "Goreangabissa veden käsittely ei perustu yhteen puhdistustemppuun. Prosessiin kuuluvat muun muassa otsonikäsittely, hiukkasten kokoaminen ja erottaminen, suodatus sekä aktiivihiili ja ultrasuodatus. Eri käsittelyvaiheet muodostavat useita esteitä epäpuhtauksille ennen veden palaamista juomavesiverkostoon. Aktiivihiiltä käytetään sekä biologisessa suodatuksessa että epäpuhtauksien sitomiseen eli adsorptioon.",
           "tiedosto": "",
           "lyhyt": "",
           "selite": "",
@@ -321,7 +321,7 @@
         },
         {
           "otsikko": "Kaupunki ei saa kasvaa mihin tahansa",
-          "teksti": "Windhoekin ympärillä on kallioisia ja vuoristoisia alueita, joiden rakentaminen on vaikeaa ja kallista. Kaupungin eteläpuolella myös maanalaiset vesivarannot rajoittavat teollisuuden sijoittamista. Pohjoisen Brakwaterin alueella on sen sijaan tilaa laajentumiselle.",
+          "teksti": "Windhoekin ympärillä on kallioisia ja vuoristoisia alueita, joiden rakentaminen on vaikeaa ja kallista. Kaupungin eteläpuolella myös maanalaiset vesivarannot rajoittavat teollisuuden sijoittamista. Pohjoisen Brakwaterin alueella on sen sijaan tilaa laajentumiselle. Etelän lisäksi itää ja länttä reunustavat vuoristot; pohjoisen Brakwater on laajentumisen suunta.",
           "tiedosto": "",
           "lyhyt": "",
           "selite": "",
@@ -356,7 +356,7 @@
   "nahtavyydet": {
     "Christuskirche": {
       "aika": "1900-luvun alku",
-      "teksti": "Christuskirche on Windhoekin keskustassa sijaitseva luterilainen kirkko. Gottlieb Redeckerin suunnittelemassa rakennuksessa yhdistyvät uusromaaniset, uusgoottilaiset ja jugendin vaikutteet. Kirkon hiekkakivi saatiin Avisin padon läheltä, mutta sisäänkäynnin Carraran marmori tuotiin Italiasta. Myös kellolaite ja osa katosta kulkivat paikalle Saksasta.\n\nKirkko rakennettiin siirtomaakaudella 1900-luvun alussa.  Christuskirche sijaitsee liikennesaarekkeella Robert Mugabe Avenuen varrella.",
+      "teksti": "Christuskirche on Windhoekin keskustassa sijaitseva luterilainen kirkko. Gottlieb Redeckerin suunnittelemassa rakennuksessa yhdistyvät uusromaaniset, uusgoottilaiset ja jugendin vaikutteet. Kirkon hiekkakivi saatiin Avisin padon läheltä, mutta sisäänkäynnin Carraran marmori tuotiin Italiasta. Myös kellolaite ja osa katosta kulkivat paikalle Saksasta.\n\nKirkko rakennettiin siirtomaakaudella 1900-luvun alussa. Christuskirche sijaitsee liikennesaarekkeella Robert Mugabe Avenuen varrella.",
       "kuvat": [
         {
           "tiedosto": "Iglesia de Cristo, Windhoek, Namibia, 2018-08-04, DD 05.jpg",
@@ -369,7 +369,7 @@
     },
     "Alte Feste": {
       "aika": "1800-luvun loppu ja 1900-luvun alku",
-      "teksti": "Alte Feste eli Vanha linnake rakennettiin saksalaisen siirtomaajoukon päämajaksi Windhoekin keskustaan. Curt von François suunnitteli rakennuksen, jonka kokonaisuutta muutettiin rakentamisen eri vaiheissa. Korkeat seinät, sisäpiha ja kulmatornit muodostavat linnakkeen rungon. Rakennus sijaitsee Robert Mugabe Avenuen varrella.\n\n Sotilaskäytön jälkeen rakennuksessa toimi koulun asuntola ja myöhemmin museon historiallinen kokoelma. Myöhemmät kunnostukset ovat muokanneet rakennuksen käyttöä.",
+      "teksti": "Alte Feste eli Vanha linnake rakennettiin saksalaisen siirtomaajoukon päämajaksi Windhoekin keskustaan. Curt von François suunnitteli rakennuksen, jonka kokonaisuutta muutettiin rakentamisen eri vaiheissa. Korkeat seinät, sisäpiha ja kulmatornit muodostavat linnakkeen rungon. Rakennus sijaitsee Robert Mugabe Avenuen varrella.\n\nSotilaskäytön jälkeen rakennuksessa toimi koulun asuntola ja myöhemmin museon historiallinen kokoelma. Myöhemmät kunnostukset ovat muokanneet rakennuksen käyttöä.",
       "kuvat": [
         {
           "tiedosto": "",

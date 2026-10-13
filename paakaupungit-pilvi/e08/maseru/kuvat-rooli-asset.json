@@ -3,7 +3,7 @@
   "era": "e08",
   "city": "maseru",
   "authorization": "hyväksyn kaikki tekemäsi kuvat. toimita ne claudelle. claudelta saat uusia ohjeita jatkoa varten",
-  "sourceContentAfterSHA256": "5083b240002a7baf72eb8994058053e8d2b242b65dda4e529ee35037e2634487",
+  "sourceContentAfterSHA256": "c1d04ae9fd302078846a3f70a5801ff7a0ac627f9e3cd34a80c48781c13a121c",
   "assets": [
     {
       "era": "e08",
@@ -53,7 +53,7 @@
         1536
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/maseru/sisalto.json",
-      "sourceContentSHA256": "5083b240002a7baf72eb8994058053e8d2b242b65dda4e529ee35037e2634487",
+      "sourceContentSHA256": "c1d04ae9fd302078846a3f70a5801ff7a0ac627f9e3cd34a80c48781c13a121c",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
         "semanticContextSHA256": "bc086422e7be0dbd0e3c4be920cdefecb215747e5572e31fce1095eed1712181",
@@ -239,7 +239,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "5083b240002a7baf72eb8994058053e8d2b242b65dda4e529ee35037e2634487",
+      "sourceContentAfterSHA256": "c1d04ae9fd302078846a3f70a5801ff7a0ac627f9e3cd34a80c48781c13a121c",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
       "contextAfterSHA256": "bc086422e7be0dbd0e3c4be920cdefecb215747e5572e31fce1095eed1712181",
       "ownerApproved": true,
@@ -266,7 +266,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "5083b240002a7baf72eb8994058053e8d2b242b65dda4e529ee35037e2634487",
+        "sourceSHA256": "c1d04ae9fd302078846a3f70a5801ff7a0ac627f9e3cd34a80c48781c13a121c",
         "sameImageNativeSHA256": "95c1dd33bc5a42f6ea1f6d4d10bf99623e94e3567a78254b099edee94f66be5a",
         "sameImageExportSHA256": "af19e9eda20f1f2433e53d7517895b617b6bd7999a9a8d30d9c306c1ebfdd62d",
         "independentNativeQAEvidencePreserved": true,
@@ -325,7 +325,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/maseru/sisalto.json",
-      "sourceContentSHA256": "5083b240002a7baf72eb8994058053e8d2b242b65dda4e529ee35037e2634487",
+      "sourceContentSHA256": "c1d04ae9fd302078846a3f70a5801ff7a0ac627f9e3cd34a80c48781c13a121c",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
         "semanticContextSHA256": "4cc047edfaddf7b1e4f0da5100a244e47fd97a7080535a61a096d2e7162d7629",
@@ -496,7 +496,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "5083b240002a7baf72eb8994058053e8d2b242b65dda4e529ee35037e2634487",
+      "sourceContentAfterSHA256": "c1d04ae9fd302078846a3f70a5801ff7a0ac627f9e3cd34a80c48781c13a121c",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
       "contextAfterSHA256": "4cc047edfaddf7b1e4f0da5100a244e47fd97a7080535a61a096d2e7162d7629",
       "ownerApproved": true,
@@ -523,7 +523,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "5083b240002a7baf72eb8994058053e8d2b242b65dda4e529ee35037e2634487",
+        "sourceSHA256": "c1d04ae9fd302078846a3f70a5801ff7a0ac627f9e3cd34a80c48781c13a121c",
         "sameImageNativeSHA256": "4abd29bb38195a39109caffc81982e4c12196e67e8fde14e90401338ba078660",
         "sameImageExportSHA256": "906d7f2b4542d66e8db046fe136b8ad01d518be04937bb444cae9c71f885eb05",
         "independentNativeQAEvidencePreserved": true,
@@ -582,7 +582,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/maseru/sisalto.json",
-      "sourceContentSHA256": "5083b240002a7baf72eb8994058053e8d2b242b65dda4e529ee35037e2634487",
+      "sourceContentSHA256": "c1d04ae9fd302078846a3f70a5801ff7a0ac627f9e3cd34a80c48781c13a121c",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
         "semanticContextSHA256": "7a4ce6e51db3098715452b1cc93dc1e5d16667bff8178f083229e1f7fd5e6c5e",
@@ -784,7 +784,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "5083b240002a7baf72eb8994058053e8d2b242b65dda4e529ee35037e2634487",
+      "sourceContentAfterSHA256": "c1d04ae9fd302078846a3f70a5801ff7a0ac627f9e3cd34a80c48781c13a121c",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
       "contextAfterSHA256": "7a4ce6e51db3098715452b1cc93dc1e5d16667bff8178f083229e1f7fd5e6c5e",
       "ownerApproved": true,
@@ -811,7 +811,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "5083b240002a7baf72eb8994058053e8d2b242b65dda4e529ee35037e2634487",
+        "sourceSHA256": "c1d04ae9fd302078846a3f70a5801ff7a0ac627f9e3cd34a80c48781c13a121c",
         "sameImageNativeSHA256": "ca55ad6a0f0b338c45aa16cc9ba704989aae30c24484b746580764ecac7943a1",
         "sameImageExportSHA256": "a255a1e16136f73bf919996a6fffc2dcfd6dd35ff17d4443ec63830aef50a5c9",
         "independentNativeQAEvidencePreserved": true,
@@ -867,10 +867,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/maseru/sisalto.json",
-      "sourceContentSHA256": "5083b240002a7baf72eb8994058053e8d2b242b65dda4e529ee35037e2634487",
+      "sourceContentSHA256": "c1d04ae9fd302078846a3f70a5801ff7a0ac627f9e3cd34a80c48781c13a121c",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "ffda758e0dc5ac160f795f62bba394cfcf1d0eb95e432612d95e55c2e0874b13",
-        "semanticContextSHA256": "ffda758e0dc5ac160f795f62bba394cfcf1d0eb95e432612d95e55c2e0874b13",
+        "targetBeforeSHA256": "d4b4e2c6c990bcf935f017a90b0db9a6a344b385b96d38f13f2805126bac3de1",
+        "semanticContextSHA256": "d4b4e2c6c990bcf935f017a90b0db9a6a344b385b96d38f13f2805126bac3de1",
         "subjectTitle": "T-paidan kaupunki",
         "targetState": "existing-target"
       },
@@ -1053,9 +1053,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "5083b240002a7baf72eb8994058053e8d2b242b65dda4e529ee35037e2634487",
-      "targetAfterSHA256": "ffda758e0dc5ac160f795f62bba394cfcf1d0eb95e432612d95e55c2e0874b13",
-      "contextAfterSHA256": "ffda758e0dc5ac160f795f62bba394cfcf1d0eb95e432612d95e55c2e0874b13",
+      "sourceContentAfterSHA256": "c1d04ae9fd302078846a3f70a5801ff7a0ac627f9e3cd34a80c48781c13a121c",
+      "targetAfterSHA256": "d4b4e2c6c990bcf935f017a90b0db9a6a344b385b96d38f13f2805126bac3de1",
+      "contextAfterSHA256": "d4b4e2c6c990bcf935f017a90b0db9a6a344b385b96d38f13f2805126bac3de1",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -1080,7 +1080,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "5083b240002a7baf72eb8994058053e8d2b242b65dda4e529ee35037e2634487",
+        "sourceSHA256": "c1d04ae9fd302078846a3f70a5801ff7a0ac627f9e3cd34a80c48781c13a121c",
         "sameImageNativeSHA256": "0412530a2a8779521707d34e62a7be68ce97b283593228d7019302bd0c353c45",
         "sameImageExportSHA256": "2c99a57aff1b0540d1d87fe67a066a0f5f3fe36d62999de0c4c9a5ddac1ad4d3",
         "independentNativeQAEvidencePreserved": true,
@@ -1136,7 +1136,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/maseru/sisalto.json",
-      "sourceContentSHA256": "5083b240002a7baf72eb8994058053e8d2b242b65dda4e529ee35037e2634487",
+      "sourceContentSHA256": "c1d04ae9fd302078846a3f70a5801ff7a0ac627f9e3cd34a80c48781c13a121c",
       "semanticSourceBind": {
         "targetBeforeSHA256": "36e269c2bd5753e8559a64ded0bf3a95700c12c1a115584160d1d1b5e33b856c",
         "semanticContextSHA256": "36e269c2bd5753e8559a64ded0bf3a95700c12c1a115584160d1d1b5e33b856c",
@@ -1336,7 +1336,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "5083b240002a7baf72eb8994058053e8d2b242b65dda4e529ee35037e2634487",
+      "sourceContentAfterSHA256": "c1d04ae9fd302078846a3f70a5801ff7a0ac627f9e3cd34a80c48781c13a121c",
       "targetAfterSHA256": "36e269c2bd5753e8559a64ded0bf3a95700c12c1a115584160d1d1b5e33b856c",
       "contextAfterSHA256": "36e269c2bd5753e8559a64ded0bf3a95700c12c1a115584160d1d1b5e33b856c",
       "ownerApproved": true,
@@ -1363,7 +1363,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "5083b240002a7baf72eb8994058053e8d2b242b65dda4e529ee35037e2634487",
+        "sourceSHA256": "c1d04ae9fd302078846a3f70a5801ff7a0ac627f9e3cd34a80c48781c13a121c",
         "sameImageNativeSHA256": "13060df45065d7c004a1580b97ddd1bb12ce47d8e53470a812436fb2fb5ad508",
         "sameImageExportSHA256": "9038033e104659a3e54f72d6739c61dc91112218aa483ab62eefd72f16df6edf",
         "independentNativeQAEvidencePreserved": true,
@@ -1419,10 +1419,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/maseru/sisalto.json",
-      "sourceContentSHA256": "5083b240002a7baf72eb8994058053e8d2b242b65dda4e529ee35037e2634487",
+      "sourceContentSHA256": "c1d04ae9fd302078846a3f70a5801ff7a0ac627f9e3cd34a80c48781c13a121c",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "361888237da24e1098f6b922ecb6d7d036ac90167fcd7315814ac50f043310d1",
-        "semanticContextSHA256": "361888237da24e1098f6b922ecb6d7d036ac90167fcd7315814ac50f043310d1",
+        "targetBeforeSHA256": "8fd61a484f916de04569170e369d9882204993142e8fa258d27bf7cf8212cc4f",
+        "semanticContextSHA256": "8fd61a484f916de04569170e369d9882204993142e8fa258d27bf7cf8212cc4f",
         "subjectTitle": "Kiskot tulivat myöhemmin",
         "targetState": "existing-target"
       },
@@ -1605,9 +1605,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "5083b240002a7baf72eb8994058053e8d2b242b65dda4e529ee35037e2634487",
-      "targetAfterSHA256": "361888237da24e1098f6b922ecb6d7d036ac90167fcd7315814ac50f043310d1",
-      "contextAfterSHA256": "361888237da24e1098f6b922ecb6d7d036ac90167fcd7315814ac50f043310d1",
+      "sourceContentAfterSHA256": "c1d04ae9fd302078846a3f70a5801ff7a0ac627f9e3cd34a80c48781c13a121c",
+      "targetAfterSHA256": "8fd61a484f916de04569170e369d9882204993142e8fa258d27bf7cf8212cc4f",
+      "contextAfterSHA256": "8fd61a484f916de04569170e369d9882204993142e8fa258d27bf7cf8212cc4f",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -1632,7 +1632,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "5083b240002a7baf72eb8994058053e8d2b242b65dda4e529ee35037e2634487",
+        "sourceSHA256": "c1d04ae9fd302078846a3f70a5801ff7a0ac627f9e3cd34a80c48781c13a121c",
         "sameImageNativeSHA256": "c82f1722e03e53443fd59b8d4d5b2f254b7252298aea555337fa25550ec5226c",
         "sameImageExportSHA256": "17fae16d8fe0e3db5ccf14088fb2ea40dc32e38908846a91852a009da77ce036",
         "independentNativeQAEvidencePreserved": true,
@@ -1688,10 +1688,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/maseru/sisalto.json",
-      "sourceContentSHA256": "5083b240002a7baf72eb8994058053e8d2b242b65dda4e529ee35037e2634487",
+      "sourceContentSHA256": "c1d04ae9fd302078846a3f70a5801ff7a0ac627f9e3cd34a80c48781c13a121c",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "8ee782ba396e6b34786c8261dfb1b726265c0f85b53b0c34183593a076b35c59",
-        "semanticContextSHA256": "8ee782ba396e6b34786c8261dfb1b726265c0f85b53b0c34183593a076b35c59",
+        "targetBeforeSHA256": "1ca66e34debc611cf4ee67552cd160156cd028f38d741bbb9227c35e60813f39",
+        "semanticContextSHA256": "1ca66e34debc611cf4ee67552cd160156cd028f38d741bbb9227c35e60813f39",
         "subjectTitle": "Peite on myös vaate",
         "targetState": "existing-target"
       },
@@ -1888,9 +1888,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "5083b240002a7baf72eb8994058053e8d2b242b65dda4e529ee35037e2634487",
-      "targetAfterSHA256": "8ee782ba396e6b34786c8261dfb1b726265c0f85b53b0c34183593a076b35c59",
-      "contextAfterSHA256": "8ee782ba396e6b34786c8261dfb1b726265c0f85b53b0c34183593a076b35c59",
+      "sourceContentAfterSHA256": "c1d04ae9fd302078846a3f70a5801ff7a0ac627f9e3cd34a80c48781c13a121c",
+      "targetAfterSHA256": "1ca66e34debc611cf4ee67552cd160156cd028f38d741bbb9227c35e60813f39",
+      "contextAfterSHA256": "1ca66e34debc611cf4ee67552cd160156cd028f38d741bbb9227c35e60813f39",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -1915,7 +1915,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "5083b240002a7baf72eb8994058053e8d2b242b65dda4e529ee35037e2634487",
+        "sourceSHA256": "c1d04ae9fd302078846a3f70a5801ff7a0ac627f9e3cd34a80c48781c13a121c",
         "sameImageNativeSHA256": "a635cf37b1cfd8b33a93c0146cbf00e55c7b54e96a3ed87d4b79081108712de5",
         "sameImageExportSHA256": "db92ad2319381bdc35652d51881c94f1ef34e88d4c29d8270375a8569b6d9d09",
         "independentNativeQAEvidencePreserved": true,
@@ -1940,23 +1940,23 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/maseru/photo-362d6f05a0163bbb38ee.jpg",
         "suora": true,
         "lahde": "Earth Science and Remote Sensing Unit , Lyndon B. Johnson Space Center, Commons (PD)",
-        "selite": "ISS-avaruusasemalta näkyvät Maseru, Mohokare- eli Caledonjoki ja ympäröivä vuorimaasto.",
-        "lyhyt": "Maseru ja Mohokare avaruudesta nähtynä.",
+        "selite": "Lesotho ISS-avaruusasemalta elokuussa 2010.",
+        "lyhyt": "Lesotho avaruudesta.",
         "tiedosto": "ISS024-E-12750 - View of Lesotho - Maseru - Caledon River - mountains Qoaling Quotsaneng Likotsi - Maqalika Lake - Platbergsdrift (cropped).jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Earth Science and Remote Sensing Unit , Lyndon B. Johnson Space Center, Commons (PD)",
-        "selite": "ISS-avaruusasemalta näkyvät Maseru, Mohokare- eli Caledonjoki ja ympäröivä vuorimaasto.",
-        "lyhyt": "Maseru ja Mohokare avaruudesta nähtynä.",
+        "selite": "Lesotho ISS-avaruusasemalta elokuussa 2010.",
+        "lyhyt": "Lesotho avaruudesta.",
         "tiedosto": "ISS024-E-12750 - View of Lesotho - Maseru - Caledon River - mountains Qoaling Quotsaneng Likotsi - Maqalika Lake - Platbergsdrift (cropped).jpg"
       },
       "runtimeMediaFieldPayload": {
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/maseru/photo-362d6f05a0163bbb38ee.jpg",
         "suora": true,
         "lahde": "Earth Science and Remote Sensing Unit , Lyndon B. Johnson Space Center, Commons (PD)",
-        "selite": "ISS-avaruusasemalta näkyvät Maseru, Mohokare- eli Caledonjoki ja ympäröivä vuorimaasto.",
-        "lyhyt": "Maseru ja Mohokare avaruudesta nähtynä.",
+        "selite": "Lesotho ISS-avaruusasemalta elokuussa 2010.",
+        "lyhyt": "Lesotho avaruudesta.",
         "tiedosto": "ISS024-E-12750 - View of Lesotho - Maseru - Caledon River - mountains Qoaling Quotsaneng Likotsi - Maqalika Lake - Platbergsdrift (cropped).jpg"
       },
       "runtimeRemoveMediaKeys": [],
@@ -1971,10 +1971,10 @@
         1546
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/maseru/sisalto.json",
-      "sourceContentSHA256": "5083b240002a7baf72eb8994058053e8d2b242b65dda4e529ee35037e2634487",
+      "sourceContentSHA256": "c1d04ae9fd302078846a3f70a5801ff7a0ac627f9e3cd34a80c48781c13a121c",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "bc64360b8e9655ab0d50999c3b4c0bf1f612c569cd9cfe9063c65f6a9dae56a3",
-        "semanticContextSHA256": "bc64360b8e9655ab0d50999c3b4c0bf1f612c569cd9cfe9063c65f6a9dae56a3",
+        "targetBeforeSHA256": "d4bbfaa559e8cf4da3fba0c133cc0927842d621f282076a280462f86367b98e0",
+        "semanticContextSHA256": "d4bbfaa559e8cf4da3fba0c133cc0927842d621f282076a280462f86367b98e0",
         "subjectTitle": "maseru — aito paikkavalokuva",
         "targetState": "existing-target"
       },
@@ -2121,8 +2121,8 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "ISS024-E-12750 - View of Lesotho - Maseru - Caledon River - mountains Qoaling Quotsaneng Likotsi - Maqalika Lake - Platbergsdrift (cropped).jpg",
-        "lyhyt": "Maseru ja Mohokare avaruudesta nähtynä.",
-        "selite": "ISS-avaruusasemalta näkyvät Maseru, Mohokare- eli Caledonjoki ja ympäröivä vuorimaasto.",
+        "lyhyt": "Lesotho avaruudesta.",
+        "selite": "Lesotho ISS-avaruusasemalta elokuussa 2010.",
         "lahde": "Earth Science and Remote Sensing Unit , Lyndon B. Johnson Space Center, Commons (PD)"
       },
       "preservePreviousMediaObjects": true,
@@ -2149,14 +2149,14 @@
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Earth Science and Remote Sensing Unit , Lyndon B. Johnson Space Center, Commons (PD)",
-        "selite": "ISS-avaruusasemalta näkyvät Maseru, Mohokare- eli Caledonjoki ja ympäröivä vuorimaasto.",
-        "lyhyt": "Maseru ja Mohokare avaruudesta nähtynä.",
+        "selite": "Lesotho ISS-avaruusasemalta elokuussa 2010.",
+        "lyhyt": "Lesotho avaruudesta.",
         "tiedosto": "ISS024-E-12750 - View of Lesotho - Maseru - Caledon River - mountains Qoaling Quotsaneng Likotsi - Maqalika Lake - Platbergsdrift (cropped).jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "5083b240002a7baf72eb8994058053e8d2b242b65dda4e529ee35037e2634487",
-      "targetAfterSHA256": "bc64360b8e9655ab0d50999c3b4c0bf1f612c569cd9cfe9063c65f6a9dae56a3",
-      "contextAfterSHA256": "bc64360b8e9655ab0d50999c3b4c0bf1f612c569cd9cfe9063c65f6a9dae56a3",
+      "sourceContentAfterSHA256": "c1d04ae9fd302078846a3f70a5801ff7a0ac627f9e3cd34a80c48781c13a121c",
+      "targetAfterSHA256": "d4bbfaa559e8cf4da3fba0c133cc0927842d621f282076a280462f86367b98e0",
+      "contextAfterSHA256": "d4bbfaa559e8cf4da3fba0c133cc0927842d621f282076a280462f86367b98e0",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -2181,7 +2181,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "5083b240002a7baf72eb8994058053e8d2b242b65dda4e529ee35037e2634487",
+        "sourceSHA256": "c1d04ae9fd302078846a3f70a5801ff7a0ac627f9e3cd34a80c48781c13a121c",
         "sameImageNativeSHA256": "362d6f05a0163bbb38ee8070b647a332a6f03cc3c9114f4fbe7f5fd88dd5f6ad",
         "sameImageExportSHA256": "362d6f05a0163bbb38ee8070b647a332a6f03cc3c9114f4fbe7f5fd88dd5f6ad",
         "independentNativeQAEvidencePreserved": true,
@@ -2240,7 +2240,7 @@
         3784
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/maseru/sisalto.json",
-      "sourceContentSHA256": "5083b240002a7baf72eb8994058053e8d2b242b65dda4e529ee35037e2634487",
+      "sourceContentSHA256": "c1d04ae9fd302078846a3f70a5801ff7a0ac627f9e3cd34a80c48781c13a121c",
       "semanticSourceBind": {
         "targetBeforeSHA256": "4c7fb4572e0dd36e6b1d06eb60ef4e2a650bbe28793679e4573b1c5404b2274b",
         "semanticContextSHA256": "4c7fb4572e0dd36e6b1d06eb60ef4e2a650bbe28793679e4573b1c5404b2274b",
@@ -2448,7 +2448,7 @@
         "tiedosto": "Maseru Lower Thetsane seen from Greater Heights Guesthouse.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "5083b240002a7baf72eb8994058053e8d2b242b65dda4e529ee35037e2634487",
+      "sourceContentAfterSHA256": "c1d04ae9fd302078846a3f70a5801ff7a0ac627f9e3cd34a80c48781c13a121c",
       "targetAfterSHA256": "4c7fb4572e0dd36e6b1d06eb60ef4e2a650bbe28793679e4573b1c5404b2274b",
       "contextAfterSHA256": "4c7fb4572e0dd36e6b1d06eb60ef4e2a650bbe28793679e4573b1c5404b2274b",
       "ownerApproved": true,
@@ -2475,7 +2475,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "5083b240002a7baf72eb8994058053e8d2b242b65dda4e529ee35037e2634487",
+        "sourceSHA256": "c1d04ae9fd302078846a3f70a5801ff7a0ac627f9e3cd34a80c48781c13a121c",
         "sameImageNativeSHA256": "65557ebd1921fd709adc0617e04f9bd9467b19e33e4f9ed8e6b7ebd568457d9a",
         "sameImageExportSHA256": "65557ebd1921fd709adc0617e04f9bd9467b19e33e4f9ed8e6b7ebd568457d9a",
         "independentNativeQAEvidencePreserved": true,
@@ -2534,7 +2534,7 @@
         4000
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/maseru/sisalto.json",
-      "sourceContentSHA256": "5083b240002a7baf72eb8994058053e8d2b242b65dda4e529ee35037e2634487",
+      "sourceContentSHA256": "c1d04ae9fd302078846a3f70a5801ff7a0ac627f9e3cd34a80c48781c13a121c",
       "semanticSourceBind": {
         "targetBeforeSHA256": "5172ce4b87264682d4d024c40e0f5c3b3c9039d1f647ae5efbc31c1df3430de9",
         "semanticContextSHA256": "5172ce4b87264682d4d024c40e0f5c3b3c9039d1f647ae5efbc31c1df3430de9",
@@ -2742,7 +2742,7 @@
         "tiedosto": "Maseru Moretele Street and Qoaling Mountain seen from Greater Heights Guesthouse.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "5083b240002a7baf72eb8994058053e8d2b242b65dda4e529ee35037e2634487",
+      "sourceContentAfterSHA256": "c1d04ae9fd302078846a3f70a5801ff7a0ac627f9e3cd34a80c48781c13a121c",
       "targetAfterSHA256": "5172ce4b87264682d4d024c40e0f5c3b3c9039d1f647ae5efbc31c1df3430de9",
       "contextAfterSHA256": "5172ce4b87264682d4d024c40e0f5c3b3c9039d1f647ae5efbc31c1df3430de9",
       "ownerApproved": true,
@@ -2769,7 +2769,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "5083b240002a7baf72eb8994058053e8d2b242b65dda4e529ee35037e2634487",
+        "sourceSHA256": "c1d04ae9fd302078846a3f70a5801ff7a0ac627f9e3cd34a80c48781c13a121c",
         "sameImageNativeSHA256": "a0589b122f0d9dad85dffd9cd8d5f5f93ad7f8475977f12436f7ace0583545fc",
         "sameImageExportSHA256": "a0589b122f0d9dad85dffd9cd8d5f5f93ad7f8475977f12436f7ace0583545fc",
         "independentNativeQAEvidencePreserved": true,
@@ -2797,23 +2797,23 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/maseru/c3-a48bcede3c90e17606b2.jpg",
         "suora": true,
         "lahde": "Paramente Phamotse, Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "Maserun lounaisosan Masowe III -asutusalueen kuva; tiedosto julkaistiin vuonna 2010.",
-        "lyhyt": "Masowe III -asutusaluetta Maserussa.",
+        "selite": "Maserun South West Phase III eli Masowe III -asutusalue.",
+        "lyhyt": "Masowe III -asutusalue Maserussa.",
         "tiedosto": "Maseru South West Phase III (Masowe III) Housing Estate - panoramio.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Paramente Phamotse, Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "Maserun lounaisosan Masowe III -asutusalueen kuva; tiedosto julkaistiin vuonna 2010.",
-        "lyhyt": "Masowe III -asutusaluetta Maserussa.",
+        "selite": "Maserun South West Phase III eli Masowe III -asutusalue.",
+        "lyhyt": "Masowe III -asutusalue Maserussa.",
         "tiedosto": "Maseru South West Phase III (Masowe III) Housing Estate - panoramio.jpg"
       },
       "runtimeMediaFieldPayload": {
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/maseru/c3-a48bcede3c90e17606b2.jpg",
         "suora": true,
         "lahde": "Paramente Phamotse, Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "Maserun lounaisosan Masowe III -asutusalueen kuva; tiedosto julkaistiin vuonna 2010.",
-        "lyhyt": "Masowe III -asutusaluetta Maserussa.",
+        "selite": "Maserun South West Phase III eli Masowe III -asutusalue.",
+        "lyhyt": "Masowe III -asutusalue Maserussa.",
         "tiedosto": "Maseru South West Phase III (Masowe III) Housing Estate - panoramio.jpg"
       },
       "runtimeRemoveMediaKeys": [],
@@ -2828,10 +2828,10 @@
         878
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/maseru/sisalto.json",
-      "sourceContentSHA256": "5083b240002a7baf72eb8994058053e8d2b242b65dda4e529ee35037e2634487",
+      "sourceContentSHA256": "c1d04ae9fd302078846a3f70a5801ff7a0ac627f9e3cd34a80c48781c13a121c",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "948fa1ae35f56a6c6e9be73e42338d9a789fb0de4ec18afef83d5c2951b9f48c",
-        "semanticContextSHA256": "948fa1ae35f56a6c6e9be73e42338d9a789fb0de4ec18afef83d5c2951b9f48c",
+        "targetBeforeSHA256": "ecbea01c710405d7c25d707578d2b21704f70170b7fde202442f89a5d625157f",
+        "semanticContextSHA256": "ecbea01c710405d7c25d707578d2b21704f70170b7fde202442f89a5d625157f",
         "subjectTitle": "Maseru",
         "targetState": "existing-target"
       },
@@ -2987,8 +2987,8 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "Maseru South West Phase III (Masowe III) Housing Estate - panoramio.jpg",
-        "lyhyt": "Masowe III -asutusaluetta Maserussa.",
-        "selite": "Maserun lounaisosan Masowe III -asutusalueen kuva; tiedosto julkaistiin vuonna 2010.",
+        "lyhyt": "Masowe III -asutusalue Maserussa.",
+        "selite": "Maserun South West Phase III eli Masowe III -asutusalue.",
         "lahde": "Paramente Phamotse, Wikimedia Commons (CC BY-SA 3.0)"
       },
       "preservePreviousMediaObjects": true,
@@ -3015,14 +3015,14 @@
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Paramente Phamotse, Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "Maserun lounaisosan Masowe III -asutusalueen kuva; tiedosto julkaistiin vuonna 2010.",
-        "lyhyt": "Masowe III -asutusaluetta Maserussa.",
+        "selite": "Maserun South West Phase III eli Masowe III -asutusalue.",
+        "lyhyt": "Masowe III -asutusalue Maserussa.",
         "tiedosto": "Maseru South West Phase III (Masowe III) Housing Estate - panoramio.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "5083b240002a7baf72eb8994058053e8d2b242b65dda4e529ee35037e2634487",
-      "targetAfterSHA256": "948fa1ae35f56a6c6e9be73e42338d9a789fb0de4ec18afef83d5c2951b9f48c",
-      "contextAfterSHA256": "948fa1ae35f56a6c6e9be73e42338d9a789fb0de4ec18afef83d5c2951b9f48c",
+      "sourceContentAfterSHA256": "c1d04ae9fd302078846a3f70a5801ff7a0ac627f9e3cd34a80c48781c13a121c",
+      "targetAfterSHA256": "ecbea01c710405d7c25d707578d2b21704f70170b7fde202442f89a5d625157f",
+      "contextAfterSHA256": "ecbea01c710405d7c25d707578d2b21704f70170b7fde202442f89a5d625157f",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -3047,12 +3047,12 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "5083b240002a7baf72eb8994058053e8d2b242b65dda4e529ee35037e2634487",
+        "sourceSHA256": "c1d04ae9fd302078846a3f70a5801ff7a0ac627f9e3cd34a80c48781c13a121c",
         "sameImageNativeSHA256": "a48bcede3c90e17606b26bc5904f6be334517d9b2b7bf3f257e2b4320bb86c01",
         "sameImageExportSHA256": "a48bcede3c90e17606b26bc5904f6be334517d9b2b7bf3f257e2b4320bb86c01",
         "independentNativeQAEvidencePreserved": true,
         "independentTextResamplePending": true,
-        "captionChanged": false
+        "captionChanged": true
       }
     }
   ],
@@ -3065,9 +3065,9 @@
   "task118TextRevision": true,
   "independentTextResamplePending": true,
   "textAcceptanceVerified": false,
-  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task228/immutable-media-history/e08/maseru/ab9f117e0cc10807ce222001ab490053b6067f9bf55556957f48798e95f7d601.json",
+  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task228/immutable-media-history/e08/maseru/9b65734bdb582f3b1cb1735da8dc187ee4ef2339b4475e7930b497bc86d7e26e.json",
   "task118ReboundAt": "2026-10-13T16:31:25.406909+00:00",
   "task228ExcludedAssets": [],
   "task228TextRevision": true,
-  "task228ReboundAt": "2026-10-13T18:00:30.064763+00:00"
+  "task228ReboundAt": "2026-10-13T18:31:22.936566+00:00"
 }

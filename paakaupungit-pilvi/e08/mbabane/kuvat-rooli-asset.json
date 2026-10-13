@@ -3,7 +3,7 @@
   "era": "e08",
   "city": "mbabane",
   "authorization": "hyväksyn kaikki tekemäsi kuvat. toimita ne claudelle. claudelta saat uusia ohjeita jatkoa varten",
-  "sourceContentAfterSHA256": "01735e7d8728f5a0c9ec6a8289145bfce979ae522aba432859bd1641d93d4cd3",
+  "sourceContentAfterSHA256": "73f21f03e1fdca2d04b2adb2dbfca99a66086c8b312b4ea29fa8ec7f2453bc4d",
   "assets": [
     {
       "era": "e08",
@@ -53,7 +53,7 @@
         1536
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/mbabane/sisalto.json",
-      "sourceContentSHA256": "01735e7d8728f5a0c9ec6a8289145bfce979ae522aba432859bd1641d93d4cd3",
+      "sourceContentSHA256": "73f21f03e1fdca2d04b2adb2dbfca99a66086c8b312b4ea29fa8ec7f2453bc4d",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
         "semanticContextSHA256": "36df36d774f298eafeaffc699b029badd89873b6deb802a940857a92109d8edb",
@@ -239,7 +239,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "01735e7d8728f5a0c9ec6a8289145bfce979ae522aba432859bd1641d93d4cd3",
+      "sourceContentAfterSHA256": "73f21f03e1fdca2d04b2adb2dbfca99a66086c8b312b4ea29fa8ec7f2453bc4d",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
       "contextAfterSHA256": "36df36d774f298eafeaffc699b029badd89873b6deb802a940857a92109d8edb",
       "ownerApproved": true,
@@ -266,7 +266,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "01735e7d8728f5a0c9ec6a8289145bfce979ae522aba432859bd1641d93d4cd3",
+        "sourceSHA256": "73f21f03e1fdca2d04b2adb2dbfca99a66086c8b312b4ea29fa8ec7f2453bc4d",
         "sameImageNativeSHA256": "46192ae5c8c55dcae89647af9dae5e9af27d6be594d6bd1d0486b06607c3c63a",
         "sameImageExportSHA256": "7a4eedf5129fbb63666c42cd0a02e3a80c2cb7b08638cd3cbaf2a9ea20c69e1d",
         "independentNativeQAEvidencePreserved": true,
@@ -325,7 +325,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/mbabane/sisalto.json",
-      "sourceContentSHA256": "01735e7d8728f5a0c9ec6a8289145bfce979ae522aba432859bd1641d93d4cd3",
+      "sourceContentSHA256": "73f21f03e1fdca2d04b2adb2dbfca99a66086c8b312b4ea29fa8ec7f2453bc4d",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
         "semanticContextSHA256": "e96aab35157fd06fd36660037bf1a8288aa02c8f82b022027d2c5ca92462574d",
@@ -496,7 +496,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "01735e7d8728f5a0c9ec6a8289145bfce979ae522aba432859bd1641d93d4cd3",
+      "sourceContentAfterSHA256": "73f21f03e1fdca2d04b2adb2dbfca99a66086c8b312b4ea29fa8ec7f2453bc4d",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
       "contextAfterSHA256": "e96aab35157fd06fd36660037bf1a8288aa02c8f82b022027d2c5ca92462574d",
       "ownerApproved": true,
@@ -523,7 +523,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "01735e7d8728f5a0c9ec6a8289145bfce979ae522aba432859bd1641d93d4cd3",
+        "sourceSHA256": "73f21f03e1fdca2d04b2adb2dbfca99a66086c8b312b4ea29fa8ec7f2453bc4d",
         "sameImageNativeSHA256": "d61e8d78fc341beb3bb3419c83a26275a265600e2e15b359ea132b8877aa51a2",
         "sameImageExportSHA256": "e4d8d282e1588364ffff8bf1417d32531cbef2fba4e78ca04e70dcfd31b34c07",
         "independentNativeQAEvidencePreserved": true,
@@ -582,7 +582,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/mbabane/sisalto.json",
-      "sourceContentSHA256": "01735e7d8728f5a0c9ec6a8289145bfce979ae522aba432859bd1641d93d4cd3",
+      "sourceContentSHA256": "73f21f03e1fdca2d04b2adb2dbfca99a66086c8b312b4ea29fa8ec7f2453bc4d",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
         "semanticContextSHA256": "0e1a3778571ec6f471f5ab8bc9aed7551aec1e55e53063859edb4f847b9187b4",
@@ -778,7 +778,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "01735e7d8728f5a0c9ec6a8289145bfce979ae522aba432859bd1641d93d4cd3",
+      "sourceContentAfterSHA256": "73f21f03e1fdca2d04b2adb2dbfca99a66086c8b312b4ea29fa8ec7f2453bc4d",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
       "contextAfterSHA256": "0e1a3778571ec6f471f5ab8bc9aed7551aec1e55e53063859edb4f847b9187b4",
       "ownerApproved": true,
@@ -805,7 +805,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "01735e7d8728f5a0c9ec6a8289145bfce979ae522aba432859bd1641d93d4cd3",
+        "sourceSHA256": "73f21f03e1fdca2d04b2adb2dbfca99a66086c8b312b4ea29fa8ec7f2453bc4d",
         "sameImageNativeSHA256": "b6bf2b0b110f4448af16f9759d31120a144ffe94bf2efb4516198350c0c201a1",
         "sameImageExportSHA256": "c6284a2afcbae9c959e5e738d5e9283528d6fb716d1bb67f36f8b25c0390a5c5",
         "independentNativeQAEvidencePreserved": true,
@@ -861,10 +861,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/mbabane/sisalto.json",
-      "sourceContentSHA256": "01735e7d8728f5a0c9ec6a8289145bfce979ae522aba432859bd1641d93d4cd3",
+      "sourceContentSHA256": "73f21f03e1fdca2d04b2adb2dbfca99a66086c8b312b4ea29fa8ec7f2453bc4d",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "79d75f0f9591963f186150d5da18be1f40672b3e4f595a0766ef825f4096639b",
-        "semanticContextSHA256": "79d75f0f9591963f186150d5da18be1f40672b3e4f595a0766ef825f4096639b",
+        "targetBeforeSHA256": "1fac342ca73ae254f21a38d414d374e6a04819a01725dd145ccf697fcac0dd81",
+        "semanticContextSHA256": "1fac342ca73ae254f21a38d414d374e6a04819a01725dd145ccf697fcac0dd81",
         "subjectTitle": "Galleria on myös tekstiilien paikka",
         "targetState": "existing-target"
       },
@@ -1047,9 +1047,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "01735e7d8728f5a0c9ec6a8289145bfce979ae522aba432859bd1641d93d4cd3",
-      "targetAfterSHA256": "79d75f0f9591963f186150d5da18be1f40672b3e4f595a0766ef825f4096639b",
-      "contextAfterSHA256": "79d75f0f9591963f186150d5da18be1f40672b3e4f595a0766ef825f4096639b",
+      "sourceContentAfterSHA256": "73f21f03e1fdca2d04b2adb2dbfca99a66086c8b312b4ea29fa8ec7f2453bc4d",
+      "targetAfterSHA256": "1fac342ca73ae254f21a38d414d374e6a04819a01725dd145ccf697fcac0dd81",
+      "contextAfterSHA256": "1fac342ca73ae254f21a38d414d374e6a04819a01725dd145ccf697fcac0dd81",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -1074,7 +1074,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "01735e7d8728f5a0c9ec6a8289145bfce979ae522aba432859bd1641d93d4cd3",
+        "sourceSHA256": "73f21f03e1fdca2d04b2adb2dbfca99a66086c8b312b4ea29fa8ec7f2453bc4d",
         "sameImageNativeSHA256": "3dde883a5043bf865cf510b03f108a248e7d1ac963353984b73a2d0546ab6793",
         "sameImageExportSHA256": "bbc1fdbf11a40b5f493b149431ee1f95cd49143155e27bd0e45bb44a11a99b5d",
         "independentNativeQAEvidencePreserved": true,
@@ -1130,7 +1130,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/mbabane/sisalto.json",
-      "sourceContentSHA256": "01735e7d8728f5a0c9ec6a8289145bfce979ae522aba432859bd1641d93d4cd3",
+      "sourceContentSHA256": "73f21f03e1fdca2d04b2adb2dbfca99a66086c8b312b4ea29fa8ec7f2453bc4d",
       "semanticSourceBind": {
         "targetBeforeSHA256": "4df1934b84866eefd05e35e6f22e6e245a2d5a4cafe6e4cabb0d4f3f1d8c4a61",
         "semanticContextSHA256": "4df1934b84866eefd05e35e6f22e6e245a2d5a4cafe6e4cabb0d4f3f1d8c4a61",
@@ -1301,7 +1301,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "01735e7d8728f5a0c9ec6a8289145bfce979ae522aba432859bd1641d93d4cd3",
+      "sourceContentAfterSHA256": "73f21f03e1fdca2d04b2adb2dbfca99a66086c8b312b4ea29fa8ec7f2453bc4d",
       "targetAfterSHA256": "4df1934b84866eefd05e35e6f22e6e245a2d5a4cafe6e4cabb0d4f3f1d8c4a61",
       "contextAfterSHA256": "4df1934b84866eefd05e35e6f22e6e245a2d5a4cafe6e4cabb0d4f3f1d8c4a61",
       "ownerApproved": true,
@@ -1328,7 +1328,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "01735e7d8728f5a0c9ec6a8289145bfce979ae522aba432859bd1641d93d4cd3",
+        "sourceSHA256": "73f21f03e1fdca2d04b2adb2dbfca99a66086c8b312b4ea29fa8ec7f2453bc4d",
         "sameImageNativeSHA256": "c6d203e65a2ebb0ca709d26e5074d2738c1781bdfd202ab916c787771ee655c4",
         "sameImageExportSHA256": "fd36b84345973d6eec74e3ea11c85a1c8bf13fcc4c7dc90f9ec6d25b54786649",
         "independentNativeQAEvidencePreserved": true,
@@ -1384,10 +1384,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/mbabane/sisalto.json",
-      "sourceContentSHA256": "01735e7d8728f5a0c9ec6a8289145bfce979ae522aba432859bd1641d93d4cd3",
+      "sourceContentSHA256": "73f21f03e1fdca2d04b2adb2dbfca99a66086c8b312b4ea29fa8ec7f2453bc4d",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "b8fc37b32ddd6a9541bef6e96270873f4d24ba57c82eb104def9cf0b54fd6623",
-        "semanticContextSHA256": "b8fc37b32ddd6a9541bef6e96270873f4d24ba57c82eb104def9cf0b54fd6623",
+        "targetBeforeSHA256": "cfb63ab5ed0e11afb17c1b5b19d290ac7260de2074777470886c60fac4d90936",
+        "semanticContextSHA256": "cfb63ab5ed0e11afb17c1b5b19d290ac7260de2074777470886c60fac4d90936",
         "subjectTitle": "Luonto jatkuu valtiorajan yli",
         "targetState": "existing-target"
       },
@@ -1580,9 +1580,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "01735e7d8728f5a0c9ec6a8289145bfce979ae522aba432859bd1641d93d4cd3",
-      "targetAfterSHA256": "b8fc37b32ddd6a9541bef6e96270873f4d24ba57c82eb104def9cf0b54fd6623",
-      "contextAfterSHA256": "b8fc37b32ddd6a9541bef6e96270873f4d24ba57c82eb104def9cf0b54fd6623",
+      "sourceContentAfterSHA256": "73f21f03e1fdca2d04b2adb2dbfca99a66086c8b312b4ea29fa8ec7f2453bc4d",
+      "targetAfterSHA256": "cfb63ab5ed0e11afb17c1b5b19d290ac7260de2074777470886c60fac4d90936",
+      "contextAfterSHA256": "cfb63ab5ed0e11afb17c1b5b19d290ac7260de2074777470886c60fac4d90936",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -1607,7 +1607,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "01735e7d8728f5a0c9ec6a8289145bfce979ae522aba432859bd1641d93d4cd3",
+        "sourceSHA256": "73f21f03e1fdca2d04b2adb2dbfca99a66086c8b312b4ea29fa8ec7f2453bc4d",
         "sameImageNativeSHA256": "7362194c52591517e33c073b4eafe6701c0e41edd17a4aa0c6f9c9cc786f7a21",
         "sameImageExportSHA256": "bc99a032a67c13dc3a3c2ca4f249be547b24af45737763e6ddf018f7842c5999",
         "independentNativeQAEvidencePreserved": true,
@@ -1663,7 +1663,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/mbabane/sisalto.json",
-      "sourceContentSHA256": "01735e7d8728f5a0c9ec6a8289145bfce979ae522aba432859bd1641d93d4cd3",
+      "sourceContentSHA256": "73f21f03e1fdca2d04b2adb2dbfca99a66086c8b312b4ea29fa8ec7f2453bc4d",
       "semanticSourceBind": {
         "targetBeforeSHA256": "8369f76187705ca434e2217fbd887f0e1134ec5deea37a4937cf980bcd2c05eb",
         "semanticContextSHA256": "8369f76187705ca434e2217fbd887f0e1134ec5deea37a4937cf980bcd2c05eb",
@@ -1859,7 +1859,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "01735e7d8728f5a0c9ec6a8289145bfce979ae522aba432859bd1641d93d4cd3",
+      "sourceContentAfterSHA256": "73f21f03e1fdca2d04b2adb2dbfca99a66086c8b312b4ea29fa8ec7f2453bc4d",
       "targetAfterSHA256": "8369f76187705ca434e2217fbd887f0e1134ec5deea37a4937cf980bcd2c05eb",
       "contextAfterSHA256": "8369f76187705ca434e2217fbd887f0e1134ec5deea37a4937cf980bcd2c05eb",
       "ownerApproved": true,
@@ -1886,7 +1886,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "01735e7d8728f5a0c9ec6a8289145bfce979ae522aba432859bd1641d93d4cd3",
+        "sourceSHA256": "73f21f03e1fdca2d04b2adb2dbfca99a66086c8b312b4ea29fa8ec7f2453bc4d",
         "sameImageNativeSHA256": "a38e612b2469ff18ee45176313bbf441cfcc144983c02e41651126bfd19cafa7",
         "sameImageExportSHA256": "d119cf48033dc66eacc36219a26679446992945b7c9a8881501a9cf461c8dae9",
         "independentNativeQAEvidencePreserved": true,
@@ -1942,7 +1942,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/mbabane/sisalto.json",
-      "sourceContentSHA256": "01735e7d8728f5a0c9ec6a8289145bfce979ae522aba432859bd1641d93d4cd3",
+      "sourceContentSHA256": "73f21f03e1fdca2d04b2adb2dbfca99a66086c8b312b4ea29fa8ec7f2453bc4d",
       "semanticSourceBind": {
         "targetBeforeSHA256": "5995ba789c54e5c5cbcb4b78f69a1416cbdb3ee646d67f4a4b5b08503b516f12",
         "semanticContextSHA256": "5995ba789c54e5c5cbcb4b78f69a1416cbdb3ee646d67f4a4b5b08503b516f12",
@@ -2113,7 +2113,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "01735e7d8728f5a0c9ec6a8289145bfce979ae522aba432859bd1641d93d4cd3",
+      "sourceContentAfterSHA256": "73f21f03e1fdca2d04b2adb2dbfca99a66086c8b312b4ea29fa8ec7f2453bc4d",
       "targetAfterSHA256": "5995ba789c54e5c5cbcb4b78f69a1416cbdb3ee646d67f4a4b5b08503b516f12",
       "contextAfterSHA256": "5995ba789c54e5c5cbcb4b78f69a1416cbdb3ee646d67f4a4b5b08503b516f12",
       "ownerApproved": true,
@@ -2140,7 +2140,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "01735e7d8728f5a0c9ec6a8289145bfce979ae522aba432859bd1641d93d4cd3",
+        "sourceSHA256": "73f21f03e1fdca2d04b2adb2dbfca99a66086c8b312b4ea29fa8ec7f2453bc4d",
         "sameImageNativeSHA256": "f850b9cf1d3dc5822e84b8c3514e92d66985dfe7eb4b4c01646a975e5e0eb5bd",
         "sameImageExportSHA256": "7faab32fd96465e25e8531e7297234c8abd5cd5d6063ab9195b4c824540c9b7c",
         "independentNativeQAEvidencePreserved": true,
@@ -2165,23 +2165,23 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/mbabane/photo-4a257150d4b31ab4a142.jpg",
         "suora": true,
         "lahde": "Athena Lao from Bulgaria, Commons (CC BY 2.0)",
-        "selite": "Mbabanen talot ja tiet näkyvät puustoisten rinteiden lomassa heinäkuussa 2011.",
-        "lyhyt": "Mbabanen asutusta ylängön rinteillä.",
+        "selite": "Mbabane heinäkuussa 2011.",
+        "lyhyt": "Mbabane Eswatinissa.",
         "tiedosto": "Mbabane (6035476964).jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Athena Lao from Bulgaria, Commons (CC BY 2.0)",
-        "selite": "Mbabanen talot ja tiet näkyvät puustoisten rinteiden lomassa heinäkuussa 2011.",
-        "lyhyt": "Mbabanen asutusta ylängön rinteillä.",
+        "selite": "Mbabane heinäkuussa 2011.",
+        "lyhyt": "Mbabane Eswatinissa.",
         "tiedosto": "Mbabane (6035476964).jpg"
       },
       "runtimeMediaFieldPayload": {
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/mbabane/photo-4a257150d4b31ab4a142.jpg",
         "suora": true,
         "lahde": "Athena Lao from Bulgaria, Commons (CC BY 2.0)",
-        "selite": "Mbabanen talot ja tiet näkyvät puustoisten rinteiden lomassa heinäkuussa 2011.",
-        "lyhyt": "Mbabanen asutusta ylängön rinteillä.",
+        "selite": "Mbabane heinäkuussa 2011.",
+        "lyhyt": "Mbabane Eswatinissa.",
         "tiedosto": "Mbabane (6035476964).jpg"
       },
       "runtimeRemoveMediaKeys": [],
@@ -2196,10 +2196,10 @@
         3000
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/mbabane/sisalto.json",
-      "sourceContentSHA256": "01735e7d8728f5a0c9ec6a8289145bfce979ae522aba432859bd1641d93d4cd3",
+      "sourceContentSHA256": "73f21f03e1fdca2d04b2adb2dbfca99a66086c8b312b4ea29fa8ec7f2453bc4d",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "a0b45c34f6392971a93d2d4d564568b988689137d9badc53582914e987ba9a35",
-        "semanticContextSHA256": "a0b45c34f6392971a93d2d4d564568b988689137d9badc53582914e987ba9a35",
+        "targetBeforeSHA256": "144e837b93fc320fdcd6e6442c13c3d618051ffd9fa77d980ae8194ccc75f22f",
+        "semanticContextSHA256": "144e837b93fc320fdcd6e6442c13c3d618051ffd9fa77d980ae8194ccc75f22f",
         "subjectTitle": "mbabane — aito paikkavalokuva",
         "targetState": "existing-target"
       },
@@ -2405,8 +2405,8 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "Mbabane (6035476964).jpg",
-        "lyhyt": "Mbabanen asutusta ylängön rinteillä.",
-        "selite": "Mbabanen talot ja tiet näkyvät puustoisten rinteiden lomassa heinäkuussa 2011.",
+        "lyhyt": "Mbabane Eswatinissa.",
+        "selite": "Mbabane heinäkuussa 2011.",
         "lahde": "Athena Lao from Bulgaria, Commons (CC BY 2.0)"
       },
       "preservePreviousMediaObjects": true,
@@ -2433,14 +2433,14 @@
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Athena Lao from Bulgaria, Commons (CC BY 2.0)",
-        "selite": "Mbabanen talot ja tiet näkyvät puustoisten rinteiden lomassa heinäkuussa 2011.",
-        "lyhyt": "Mbabanen asutusta ylängön rinteillä.",
+        "selite": "Mbabane heinäkuussa 2011.",
+        "lyhyt": "Mbabane Eswatinissa.",
         "tiedosto": "Mbabane (6035476964).jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "01735e7d8728f5a0c9ec6a8289145bfce979ae522aba432859bd1641d93d4cd3",
-      "targetAfterSHA256": "a0b45c34f6392971a93d2d4d564568b988689137d9badc53582914e987ba9a35",
-      "contextAfterSHA256": "a0b45c34f6392971a93d2d4d564568b988689137d9badc53582914e987ba9a35",
+      "sourceContentAfterSHA256": "73f21f03e1fdca2d04b2adb2dbfca99a66086c8b312b4ea29fa8ec7f2453bc4d",
+      "targetAfterSHA256": "144e837b93fc320fdcd6e6442c13c3d618051ffd9fa77d980ae8194ccc75f22f",
+      "contextAfterSHA256": "144e837b93fc320fdcd6e6442c13c3d618051ffd9fa77d980ae8194ccc75f22f",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -2465,7 +2465,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "01735e7d8728f5a0c9ec6a8289145bfce979ae522aba432859bd1641d93d4cd3",
+        "sourceSHA256": "73f21f03e1fdca2d04b2adb2dbfca99a66086c8b312b4ea29fa8ec7f2453bc4d",
         "sameImageNativeSHA256": "4a257150d4b31ab4a142e358d9c05c09f12e938b1667f75aea205048f1b0cacb",
         "sameImageExportSHA256": "4a257150d4b31ab4a142e358d9c05c09f12e938b1667f75aea205048f1b0cacb",
         "independentNativeQAEvidencePreserved": true,
@@ -2524,7 +2524,7 @@
         1280
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/mbabane/sisalto.json",
-      "sourceContentSHA256": "01735e7d8728f5a0c9ec6a8289145bfce979ae522aba432859bd1641d93d4cd3",
+      "sourceContentSHA256": "73f21f03e1fdca2d04b2adb2dbfca99a66086c8b312b4ea29fa8ec7f2453bc4d",
       "semanticSourceBind": {
         "targetBeforeSHA256": "56f06822f96cac87aca998c1922998368a9db9109c70d5da1b0f00d97bd1e378",
         "semanticContextSHA256": "56f06822f96cac87aca998c1922998368a9db9109c70d5da1b0f00d97bd1e378",
@@ -2784,7 +2784,7 @@
         "tiedosto": "Mbabane, Eswatini.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "01735e7d8728f5a0c9ec6a8289145bfce979ae522aba432859bd1641d93d4cd3",
+      "sourceContentAfterSHA256": "73f21f03e1fdca2d04b2adb2dbfca99a66086c8b312b4ea29fa8ec7f2453bc4d",
       "targetAfterSHA256": "56f06822f96cac87aca998c1922998368a9db9109c70d5da1b0f00d97bd1e378",
       "contextAfterSHA256": "56f06822f96cac87aca998c1922998368a9db9109c70d5da1b0f00d97bd1e378",
       "ownerApproved": true,
@@ -2811,7 +2811,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "01735e7d8728f5a0c9ec6a8289145bfce979ae522aba432859bd1641d93d4cd3",
+        "sourceSHA256": "73f21f03e1fdca2d04b2adb2dbfca99a66086c8b312b4ea29fa8ec7f2453bc4d",
         "sameImageNativeSHA256": "6df3018135c8c917949548cda4c7ab0527ebb75e56933f21e993eb8f8ffde450",
         "sameImageExportSHA256": "6df3018135c8c917949548cda4c7ab0527ebb75e56933f21e993eb8f8ffde450",
         "independentNativeQAEvidencePreserved": true,
@@ -2839,23 +2839,23 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/mbabane/n1-5ed9110863c5fa0c06c5.jpg",
         "suora": true,
         "lahde": "theswazigirl, Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "Pitkä kävelijäjono nousee ruohomaisen rinteen kautta kohti Sibeben paljasta graniittia lokakuussa 2012.",
-        "lyhyt": "Kävelijöitä Sibeben rinteellä.",
+        "selite": "Kävelijöitä nousemassa Sibeben graniittikalliolle lokakuussa 2012.",
+        "lyhyt": "Kävelijöitä Sibebellä.",
         "tiedosto": "Granite monolith.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "theswazigirl, Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "Pitkä kävelijäjono nousee ruohomaisen rinteen kautta kohti Sibeben paljasta graniittia lokakuussa 2012.",
-        "lyhyt": "Kävelijöitä Sibeben rinteellä.",
+        "selite": "Kävelijöitä nousemassa Sibeben graniittikalliolle lokakuussa 2012.",
+        "lyhyt": "Kävelijöitä Sibebellä.",
         "tiedosto": "Granite monolith.jpg"
       },
       "runtimeMediaFieldPayload": {
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/mbabane/n1-5ed9110863c5fa0c06c5.jpg",
         "suora": true,
         "lahde": "theswazigirl, Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "Pitkä kävelijäjono nousee ruohomaisen rinteen kautta kohti Sibeben paljasta graniittia lokakuussa 2012.",
-        "lyhyt": "Kävelijöitä Sibeben rinteellä.",
+        "selite": "Kävelijöitä nousemassa Sibeben graniittikalliolle lokakuussa 2012.",
+        "lyhyt": "Kävelijöitä Sibebellä.",
         "tiedosto": "Granite monolith.jpg"
       },
       "runtimeRemoveMediaKeys": [],
@@ -2870,10 +2870,10 @@
         1005
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/mbabane/sisalto.json",
-      "sourceContentSHA256": "01735e7d8728f5a0c9ec6a8289145bfce979ae522aba432859bd1641d93d4cd3",
+      "sourceContentSHA256": "73f21f03e1fdca2d04b2adb2dbfca99a66086c8b312b4ea29fa8ec7f2453bc4d",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "3ab7871a498615bda7038f5acbc78445a03fefb2a2a7101a8f2da2acd001ba62",
-        "semanticContextSHA256": "38192189cc66762ef5be65e84311b46126021c8a07f78233b0805e25d31a3ffe",
+        "targetBeforeSHA256": "1d6d17723788f6dc2be83f01f086590832a6184787f5cbe8384151dec1107e96",
+        "semanticContextSHA256": "0ec853ddb85d35329b8d1cfcd5f3d56c91947e6e8c893a7c09d706d94dee3c94",
         "subjectTitle": "Sibeben kallio",
         "targetState": "existing-target"
       },
@@ -3073,8 +3073,8 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "Granite monolith.jpg",
-        "lyhyt": "Kävelijöitä Sibeben rinteellä.",
-        "selite": "Pitkä kävelijäjono nousee ruohomaisen rinteen kautta kohti Sibeben paljasta graniittia lokakuussa 2012.",
+        "lyhyt": "Kävelijöitä Sibebellä.",
+        "selite": "Kävelijöitä nousemassa Sibeben graniittikalliolle lokakuussa 2012.",
         "lahde": "theswazigirl, Wikimedia Commons (CC BY-SA 3.0)"
       },
       "preservePreviousMediaObjects": true,
@@ -3101,14 +3101,14 @@
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "theswazigirl, Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "Pitkä kävelijäjono nousee ruohomaisen rinteen kautta kohti Sibeben paljasta graniittia lokakuussa 2012.",
-        "lyhyt": "Kävelijöitä Sibeben rinteellä.",
+        "selite": "Kävelijöitä nousemassa Sibeben graniittikalliolle lokakuussa 2012.",
+        "lyhyt": "Kävelijöitä Sibebellä.",
         "tiedosto": "Granite monolith.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "01735e7d8728f5a0c9ec6a8289145bfce979ae522aba432859bd1641d93d4cd3",
-      "targetAfterSHA256": "3ab7871a498615bda7038f5acbc78445a03fefb2a2a7101a8f2da2acd001ba62",
-      "contextAfterSHA256": "38192189cc66762ef5be65e84311b46126021c8a07f78233b0805e25d31a3ffe",
+      "sourceContentAfterSHA256": "73f21f03e1fdca2d04b2adb2dbfca99a66086c8b312b4ea29fa8ec7f2453bc4d",
+      "targetAfterSHA256": "1d6d17723788f6dc2be83f01f086590832a6184787f5cbe8384151dec1107e96",
+      "contextAfterSHA256": "0ec853ddb85d35329b8d1cfcd5f3d56c91947e6e8c893a7c09d706d94dee3c94",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -3133,12 +3133,12 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "01735e7d8728f5a0c9ec6a8289145bfce979ae522aba432859bd1641d93d4cd3",
+        "sourceSHA256": "73f21f03e1fdca2d04b2adb2dbfca99a66086c8b312b4ea29fa8ec7f2453bc4d",
         "sameImageNativeSHA256": "5ed9110863c5fa0c06c5c1e4a11c20e5bdd00850803eef54210788385af4a062",
         "sameImageExportSHA256": "5ed9110863c5fa0c06c5c1e4a11c20e5bdd00850803eef54210788385af4a062",
         "independentNativeQAEvidencePreserved": true,
         "independentTextResamplePending": true,
-        "captionChanged": false
+        "captionChanged": true
       }
     }
   ],
@@ -3151,9 +3151,9 @@
   "task118TextRevision": true,
   "independentTextResamplePending": true,
   "textAcceptanceVerified": false,
-  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task228/immutable-media-history/e08/mbabane/1e2a5779733d4645252f7ac287804c8756c551b064eb8267d8cebf3c164d99bb.json",
+  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task228/immutable-media-history/e08/mbabane/0876508d0ef35e058675881808bd4c9f97794dcb5c4285a5d266c36b7cd9b0d3.json",
   "task118ReboundAt": "2026-10-13T16:31:25.431721+00:00",
   "task228ExcludedAssets": [],
   "task228TextRevision": true,
-  "task228ReboundAt": "2026-10-13T18:00:30.104305+00:00"
+  "task228ReboundAt": "2026-10-13T18:31:22.964399+00:00"
 }

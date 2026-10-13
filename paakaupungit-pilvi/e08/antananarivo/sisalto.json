@@ -96,8 +96,8 @@
   ],
   "valokuva": {
     "tiedosto": "Ambanivohitra ao Antananarivo.jpg",
-    "lyhyt": "Viljelyä Antananarivon ympäristössä.",
-    "selite": "Antananarivon ympäristön viljelyalueita ja maaseutuasutusta.",
+    "lyhyt": "Antananarivon maaseutua.",
+    "selite": "Maaseutunäkymä Antananarivossa, lokakuu 2025.",
     "lahde": "Raveloaritiana Mamisoa, Commons (CC0)"
   },
   "kaupunkilehti": [
@@ -120,8 +120,8 @@
         },
         {
           "tiedosto": "Antananarivo (atamari).jpg",
-          "lyhyt": "Antananarivon kukkuloiden asutusta.",
-          "selite": "Asutusta ja kasvillisuutta Antananarivon kukkulamaisemassa vuonna 2004.",
+          "lyhyt": "Antananarivon kaupunkinäkymä.",
+          "selite": "Näkymä Antananarivoon eli Tanaan maaliskuussa 2004.",
           "lahde": "Robin Taylor (robin.elaine) from Washington, DC, USA, Wikimedia Commons (CC BY 2.0)"
         }
       ],
@@ -155,7 +155,7 @@
         },
         {
           "otsikko": "Kolme nimeä samalle kaupungille",
-          "teksti": "Antananarivosta käytetään tuttavallista lyhennystä Tana. Ranskankielisissä vanhoissa aineistoissa kaupunki puolestaan esiintyy usein nimellä Tananarive: siirtomaahallinto kirjoitti nimen siihen muotoon. Vielä varhaisempi paikannimi on Analamanga, ”sininen metsä”, joka kuuluu kuninkaallisen kaupungin alkuvaiheisiin.",
+          "teksti": "Antananarivosta käytetään tuttavallista lyhennystä Tana. Ranskankielisissä vanhoissa aineistoissa kaupunki puolestaan esiintyy usein nimellä Tananarive: siirtomaahallinto kirjoitti nimen siihen muotoon. Vielä varhaisempi paikannimi on Analamanga, ”sininen metsä”, joka kuuluu kuninkaallisen kaupungin alkuvaiheisiin. Antananarivo tarkoittaa tuhannen kaupunkia; nimi annettiin Andrianjakan sotilaiden kunniaksi.",
           "wiki": "Antananarivo",
           "tiedosto": "",
           "lyhyt": "",
@@ -283,9 +283,9 @@
         "kysymys": "Millainen muutos koski ennen hautakammioihin varattua rakennusainetta?",
         "vaihtoehdot": [
           "Sitä alettiin käyttää asuintaloissa",
-          "Se korvattiin kaikissa taloissa lasilla",
-          "Sen käyttö rajattiin vain torikatuihin",
-          "Sitä alettiin viedä junalla satamaan"
+          "Sen käyttö keskitettiin hallintotaloihin",
+          "Se varattiin linnoitusten muureihin",
+          "Sen käyttö kiellettiin hautakammioissa"
         ],
         "oikea": 0,
         "fakta": "Kivirakentamisen rajoitusten lieventyminen muutti pääkaupungin kotien materiaaleja."
@@ -351,7 +351,7 @@
   "nahtavyydet": {
     "Anosy-järvi": {
       "aika": "1800-luvun alkupuoli",
-      "teksti": "Anosy-järvi sijaitsee Antananarivon keskustan eteläpuolella. Se on rakennettu vesialue, jonka paikalla oli aluksi suo. Järven rakentaminen alkoi kuningas Radama I:n aikana 1800-luvun alkupuolella, ja siihen osallistui skotlantilainen James Cameron. Kaupungin historia liittää järven teollisen valmistuksen tarvitsemaan vesivoimaan. \n\nKeskellä järveä on maakaistaleella rantaan liittyvä saari. Se valittiin aluksi sepän työpajan paikaksi, koska työpajan palon ei haluttu leviävän kaupungin puisiin ja kasviaineilla katettuihin taloihin. Järven rannalla kasvaa jakarandoja. Isoisän matkavuoteen 1873 mennessä järvi oli jo rakennettu, mutta ympäröivä kaupunki on muuttunut sen jälkeen.",
+      "teksti": "Anosy-järvi sijaitsee Antananarivon keskustan eteläpuolella. Se on rakennettu vesialue, jonka paikalla oli aluksi suo. Järven rakentaminen alkoi kuningas Radama I:n aikana 1800-luvun alkupuolella, ja siihen osallistui skotlantilainen James Cameron. Kaupungin historia liittää järven teollisen valmistuksen tarvitsemaan vesivoimaan.\n\nKeskellä järveä on maakaistaleella rantaan liittyvä saari. Se valittiin aluksi sepän työpajan paikaksi, koska työpajan palon ei haluttu leviävän kaupungin puisiin ja kasviaineilla katettuihin taloihin. Järven rannalla kasvaa jakarandoja. Isoisän matkavuoteen 1873 mennessä järvi oli jo rakennettu, mutta ympäröivä kaupunki on muuttunut sen jälkeen.",
       "kuvat": [
         {
           "tiedosto": "Lac anosy Antananarivo 2019-10-02 8.jpg",

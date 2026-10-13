@@ -3,7 +3,7 @@
   "era": "e08",
   "city": "gaborone",
   "authorization": "hyväksyn kaikki tekemäsi kuvat. toimita ne claudelle. claudelta saat uusia ohjeita jatkoa varten",
-  "sourceContentAfterSHA256": "46826e0e12b8d63af0082d5eb41f6463b9a44708191430b259470ca38bb3f16d",
+  "sourceContentAfterSHA256": "01f7c60ee29910f5717f9f4a6382af55b9c48a1c6121f393babe27dba510b4dc",
   "assets": [
     {
       "era": "e08",
@@ -53,7 +53,7 @@
         1536
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/gaborone/sisalto.json",
-      "sourceContentSHA256": "46826e0e12b8d63af0082d5eb41f6463b9a44708191430b259470ca38bb3f16d",
+      "sourceContentSHA256": "01f7c60ee29910f5717f9f4a6382af55b9c48a1c6121f393babe27dba510b4dc",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
         "semanticContextSHA256": "027b62bff5b298e882611ceef84449f46fe1a37c589a5a81ed435624cfaeb248",
@@ -291,7 +291,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "46826e0e12b8d63af0082d5eb41f6463b9a44708191430b259470ca38bb3f16d",
+      "sourceContentAfterSHA256": "01f7c60ee29910f5717f9f4a6382af55b9c48a1c6121f393babe27dba510b4dc",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
       "contextAfterSHA256": "027b62bff5b298e882611ceef84449f46fe1a37c589a5a81ed435624cfaeb248",
       "ownerApproved": true,
@@ -318,7 +318,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "46826e0e12b8d63af0082d5eb41f6463b9a44708191430b259470ca38bb3f16d",
+        "sourceSHA256": "01f7c60ee29910f5717f9f4a6382af55b9c48a1c6121f393babe27dba510b4dc",
         "sameImageNativeSHA256": "b3f84524c17f2415a6ccb0a0a98ec4256f891640a62916fa9654acf974618a35",
         "sameImageExportSHA256": "4f644539f8bba76d0951211aff0c276d44b1082f3a706d65d53919f9f55ea175",
         "independentNativeQAEvidencePreserved": true,
@@ -377,7 +377,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/gaborone/sisalto.json",
-      "sourceContentSHA256": "46826e0e12b8d63af0082d5eb41f6463b9a44708191430b259470ca38bb3f16d",
+      "sourceContentSHA256": "01f7c60ee29910f5717f9f4a6382af55b9c48a1c6121f393babe27dba510b4dc",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
         "semanticContextSHA256": "17f45e873f03e7cee3d215312fb0c47084bdfe241787fac90b446300648ead16",
@@ -548,7 +548,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "46826e0e12b8d63af0082d5eb41f6463b9a44708191430b259470ca38bb3f16d",
+      "sourceContentAfterSHA256": "01f7c60ee29910f5717f9f4a6382af55b9c48a1c6121f393babe27dba510b4dc",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
       "contextAfterSHA256": "17f45e873f03e7cee3d215312fb0c47084bdfe241787fac90b446300648ead16",
       "ownerApproved": true,
@@ -575,7 +575,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "46826e0e12b8d63af0082d5eb41f6463b9a44708191430b259470ca38bb3f16d",
+        "sourceSHA256": "01f7c60ee29910f5717f9f4a6382af55b9c48a1c6121f393babe27dba510b4dc",
         "sameImageNativeSHA256": "8dfc9913f79314ffd088c142a3ba0c629d08db215309fc3565ffa7976dcb47b3",
         "sameImageExportSHA256": "f5042b553f7f0a62488a840f20e3a83aa4b95f4ebf02dbbd096fc3dc65ca8624",
         "independentNativeQAEvidencePreserved": true,
@@ -634,7 +634,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/gaborone/sisalto.json",
-      "sourceContentSHA256": "46826e0e12b8d63af0082d5eb41f6463b9a44708191430b259470ca38bb3f16d",
+      "sourceContentSHA256": "01f7c60ee29910f5717f9f4a6382af55b9c48a1c6121f393babe27dba510b4dc",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
         "semanticContextSHA256": "2b94104105c49017279d1ab4cdf547908944648419e59a2fa7025beb82e0324a",
@@ -931,7 +931,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "46826e0e12b8d63af0082d5eb41f6463b9a44708191430b259470ca38bb3f16d",
+      "sourceContentAfterSHA256": "01f7c60ee29910f5717f9f4a6382af55b9c48a1c6121f393babe27dba510b4dc",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
       "contextAfterSHA256": "2b94104105c49017279d1ab4cdf547908944648419e59a2fa7025beb82e0324a",
       "ownerApproved": true,
@@ -958,7 +958,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "46826e0e12b8d63af0082d5eb41f6463b9a44708191430b259470ca38bb3f16d",
+        "sourceSHA256": "01f7c60ee29910f5717f9f4a6382af55b9c48a1c6121f393babe27dba510b4dc",
         "sameImageNativeSHA256": "d805287a89c03aa307aa2ba67826f2b9f578f5ef183611660a6cfb690dbed70a",
         "sameImageExportSHA256": "d22e524503e6aa2916ffec23f8265fad7074a6362c017c1876598f41f0088178",
         "independentNativeQAEvidencePreserved": true,
@@ -1014,10 +1014,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/gaborone/sisalto.json",
-      "sourceContentSHA256": "46826e0e12b8d63af0082d5eb41f6463b9a44708191430b259470ca38bb3f16d",
+      "sourceContentSHA256": "01f7c60ee29910f5717f9f4a6382af55b9c48a1c6121f393babe27dba510b4dc",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "c977343465e6b7e15ddb7451d6ecbd70273733636fd5ca98c34b43ddb541f3c2",
-        "semanticContextSHA256": "c977343465e6b7e15ddb7451d6ecbd70273733636fd5ca98c34b43ddb541f3c2",
+        "targetBeforeSHA256": "9f8edeb565756cf55522d92762ccec668f9d42355e4e4eec1bab4eace712f2ae",
+        "semanticContextSHA256": "9f8edeb565756cf55522d92762ccec668f9d42355e4e4eec1bab4eace712f2ae",
         "subjectTitle": "Vedellä on työ",
         "targetState": "existing-target"
       },
@@ -1185,9 +1185,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "46826e0e12b8d63af0082d5eb41f6463b9a44708191430b259470ca38bb3f16d",
-      "targetAfterSHA256": "c977343465e6b7e15ddb7451d6ecbd70273733636fd5ca98c34b43ddb541f3c2",
-      "contextAfterSHA256": "c977343465e6b7e15ddb7451d6ecbd70273733636fd5ca98c34b43ddb541f3c2",
+      "sourceContentAfterSHA256": "01f7c60ee29910f5717f9f4a6382af55b9c48a1c6121f393babe27dba510b4dc",
+      "targetAfterSHA256": "9f8edeb565756cf55522d92762ccec668f9d42355e4e4eec1bab4eace712f2ae",
+      "contextAfterSHA256": "9f8edeb565756cf55522d92762ccec668f9d42355e4e4eec1bab4eace712f2ae",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -1212,7 +1212,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "46826e0e12b8d63af0082d5eb41f6463b9a44708191430b259470ca38bb3f16d",
+        "sourceSHA256": "01f7c60ee29910f5717f9f4a6382af55b9c48a1c6121f393babe27dba510b4dc",
         "sameImageNativeSHA256": "8118f27100a63a496007a302f217732247f48e07e4d25e2560857eb3f812b9ac",
         "sameImageExportSHA256": "63a4679ac26789feafc9290b8e837a631ae4a0cac2a6e8634ebbbb182dd878d6",
         "independentNativeQAEvidencePreserved": true,
@@ -1268,10 +1268,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/gaborone/sisalto.json",
-      "sourceContentSHA256": "46826e0e12b8d63af0082d5eb41f6463b9a44708191430b259470ca38bb3f16d",
+      "sourceContentSHA256": "01f7c60ee29910f5717f9f4a6382af55b9c48a1c6121f393babe27dba510b4dc",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "7ac511ce9044cbc7a3596132586cdb1a5a34051cc116da0833c401f816b5a059",
-        "semanticContextSHA256": "7ac511ce9044cbc7a3596132586cdb1a5a34051cc116da0833c401f816b5a059",
+        "targetBeforeSHA256": "f47ae17a5b9385fe3c0b2f124080d66f3816706f82e0eb71637cedc20b2dfe80",
+        "semanticContextSHA256": "f47ae17a5b9385fe3c0b2f124080d66f3816706f82e0eb71637cedc20b2dfe80",
         "subjectTitle": "Riistapuisto työpäivän lähellä",
         "targetState": "existing-target"
       },
@@ -1454,9 +1454,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "46826e0e12b8d63af0082d5eb41f6463b9a44708191430b259470ca38bb3f16d",
-      "targetAfterSHA256": "7ac511ce9044cbc7a3596132586cdb1a5a34051cc116da0833c401f816b5a059",
-      "contextAfterSHA256": "7ac511ce9044cbc7a3596132586cdb1a5a34051cc116da0833c401f816b5a059",
+      "sourceContentAfterSHA256": "01f7c60ee29910f5717f9f4a6382af55b9c48a1c6121f393babe27dba510b4dc",
+      "targetAfterSHA256": "f47ae17a5b9385fe3c0b2f124080d66f3816706f82e0eb71637cedc20b2dfe80",
+      "contextAfterSHA256": "f47ae17a5b9385fe3c0b2f124080d66f3816706f82e0eb71637cedc20b2dfe80",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -1481,7 +1481,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "46826e0e12b8d63af0082d5eb41f6463b9a44708191430b259470ca38bb3f16d",
+        "sourceSHA256": "01f7c60ee29910f5717f9f4a6382af55b9c48a1c6121f393babe27dba510b4dc",
         "sameImageNativeSHA256": "a90fe8ae042f48c6005087356a6ada27bc9eceb854bfd22745a4b9e7bd951c98",
         "sameImageExportSHA256": "e4a20c049117a6db8902f8c4027bc3f822278d4a64812603775802813157b34d",
         "independentNativeQAEvidencePreserved": true,
@@ -1537,10 +1537,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/gaborone/sisalto.json",
-      "sourceContentSHA256": "46826e0e12b8d63af0082d5eb41f6463b9a44708191430b259470ca38bb3f16d",
+      "sourceContentSHA256": "01f7c60ee29910f5717f9f4a6382af55b9c48a1c6121f393babe27dba510b4dc",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "44c2446e592b953532c9aa6640aa0fe2cd226b5c59bbfd77cbf62e5686f956e4",
-        "semanticContextSHA256": "44c2446e592b953532c9aa6640aa0fe2cd226b5c59bbfd77cbf62e5686f956e4",
+        "targetBeforeSHA256": "63d98b6220be360405f2e2aaa927eba6423fcd63e7fe529c537b9acb2e5ba867",
+        "semanticContextSHA256": "63d98b6220be360405f2e2aaa927eba6423fcd63e7fe529c537b9acb2e5ba867",
         "subjectTitle": "Vesi ja rata samassa valinnassa",
         "targetState": "existing-target"
       },
@@ -1708,9 +1708,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "46826e0e12b8d63af0082d5eb41f6463b9a44708191430b259470ca38bb3f16d",
-      "targetAfterSHA256": "44c2446e592b953532c9aa6640aa0fe2cd226b5c59bbfd77cbf62e5686f956e4",
-      "contextAfterSHA256": "44c2446e592b953532c9aa6640aa0fe2cd226b5c59bbfd77cbf62e5686f956e4",
+      "sourceContentAfterSHA256": "01f7c60ee29910f5717f9f4a6382af55b9c48a1c6121f393babe27dba510b4dc",
+      "targetAfterSHA256": "63d98b6220be360405f2e2aaa927eba6423fcd63e7fe529c537b9acb2e5ba867",
+      "contextAfterSHA256": "63d98b6220be360405f2e2aaa927eba6423fcd63e7fe529c537b9acb2e5ba867",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -1735,7 +1735,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "46826e0e12b8d63af0082d5eb41f6463b9a44708191430b259470ca38bb3f16d",
+        "sourceSHA256": "01f7c60ee29910f5717f9f4a6382af55b9c48a1c6121f393babe27dba510b4dc",
         "sameImageNativeSHA256": "14069218608f97f2e9d290702882c03c53d30c0679e85a118127524217229114",
         "sameImageExportSHA256": "58c292e7b709804cb82ce650e8d6a12c070557bc9f500449666e5b17330c18c6",
         "independentNativeQAEvidencePreserved": true,
@@ -1794,7 +1794,7 @@
         3120
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/gaborone/sisalto.json",
-      "sourceContentSHA256": "46826e0e12b8d63af0082d5eb41f6463b9a44708191430b259470ca38bb3f16d",
+      "sourceContentSHA256": "01f7c60ee29910f5717f9f4a6382af55b9c48a1c6121f393babe27dba510b4dc",
       "semanticSourceBind": {
         "targetBeforeSHA256": "f10b1a34dc5287035e34c2558d2bbae05edfd8839e64f94a04cb60bbf0b84083",
         "semanticContextSHA256": "f10b1a34dc5287035e34c2558d2bbae05edfd8839e64f94a04cb60bbf0b84083",
@@ -1993,7 +1993,7 @@
         "vuosi": "2020"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "46826e0e12b8d63af0082d5eb41f6463b9a44708191430b259470ca38bb3f16d",
+      "sourceContentAfterSHA256": "01f7c60ee29910f5717f9f4a6382af55b9c48a1c6121f393babe27dba510b4dc",
       "targetAfterSHA256": "f10b1a34dc5287035e34c2558d2bbae05edfd8839e64f94a04cb60bbf0b84083",
       "contextAfterSHA256": "f10b1a34dc5287035e34c2558d2bbae05edfd8839e64f94a04cb60bbf0b84083",
       "ownerApproved": true,
@@ -2020,7 +2020,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "46826e0e12b8d63af0082d5eb41f6463b9a44708191430b259470ca38bb3f16d",
+        "sourceSHA256": "01f7c60ee29910f5717f9f4a6382af55b9c48a1c6121f393babe27dba510b4dc",
         "sameImageNativeSHA256": "357b78329f45872e8936d05a8b6b07a853f22c8f0f13ff0602c37e40c77d2673",
         "sameImageExportSHA256": "357b78329f45872e8936d05a8b6b07a853f22c8f0f13ff0602c37e40c77d2673",
         "independentNativeQAEvidencePreserved": true,
@@ -2079,7 +2079,7 @@
         2736
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/gaborone/sisalto.json",
-      "sourceContentSHA256": "46826e0e12b8d63af0082d5eb41f6463b9a44708191430b259470ca38bb3f16d",
+      "sourceContentSHA256": "01f7c60ee29910f5717f9f4a6382af55b9c48a1c6121f393babe27dba510b4dc",
       "semanticSourceBind": {
         "targetBeforeSHA256": "7fb780d4e704c5a3a260c98a0f4924517047f9d4de0e6a84db5f21ef6a15f178",
         "semanticContextSHA256": "7fb780d4e704c5a3a260c98a0f4924517047f9d4de0e6a84db5f21ef6a15f178",
@@ -2301,7 +2301,7 @@
         "tiedosto": "Gaborone, Botswana desde el aire.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "46826e0e12b8d63af0082d5eb41f6463b9a44708191430b259470ca38bb3f16d",
+      "sourceContentAfterSHA256": "01f7c60ee29910f5717f9f4a6382af55b9c48a1c6121f393babe27dba510b4dc",
       "targetAfterSHA256": "7fb780d4e704c5a3a260c98a0f4924517047f9d4de0e6a84db5f21ef6a15f178",
       "contextAfterSHA256": "7fb780d4e704c5a3a260c98a0f4924517047f9d4de0e6a84db5f21ef6a15f178",
       "ownerApproved": true,
@@ -2328,7 +2328,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "46826e0e12b8d63af0082d5eb41f6463b9a44708191430b259470ca38bb3f16d",
+        "sourceSHA256": "01f7c60ee29910f5717f9f4a6382af55b9c48a1c6121f393babe27dba510b4dc",
         "sameImageNativeSHA256": "c4d9990b796d0b085b46039fe5175846f7344d18f3148ba536867d2727c1681b",
         "sameImageExportSHA256": "c4d9990b796d0b085b46039fe5175846f7344d18f3148ba536867d2727c1681b",
         "independentNativeQAEvidencePreserved": true,
@@ -2387,7 +2387,7 @@
         2266
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/gaborone/sisalto.json",
-      "sourceContentSHA256": "46826e0e12b8d63af0082d5eb41f6463b9a44708191430b259470ca38bb3f16d",
+      "sourceContentSHA256": "01f7c60ee29910f5717f9f4a6382af55b9c48a1c6121f393babe27dba510b4dc",
       "semanticSourceBind": {
         "targetBeforeSHA256": "25ad20dfe52fd54f6b6179f33cc3bfa58350434debeaf5eaae08cf23ec28b9a7",
         "semanticContextSHA256": "25ad20dfe52fd54f6b6179f33cc3bfa58350434debeaf5eaae08cf23ec28b9a7",
@@ -2609,7 +2609,7 @@
         "tiedosto": "Gaborone, Railway 20200329.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "46826e0e12b8d63af0082d5eb41f6463b9a44708191430b259470ca38bb3f16d",
+      "sourceContentAfterSHA256": "01f7c60ee29910f5717f9f4a6382af55b9c48a1c6121f393babe27dba510b4dc",
       "targetAfterSHA256": "25ad20dfe52fd54f6b6179f33cc3bfa58350434debeaf5eaae08cf23ec28b9a7",
       "contextAfterSHA256": "25ad20dfe52fd54f6b6179f33cc3bfa58350434debeaf5eaae08cf23ec28b9a7",
       "ownerApproved": true,
@@ -2636,7 +2636,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "46826e0e12b8d63af0082d5eb41f6463b9a44708191430b259470ca38bb3f16d",
+        "sourceSHA256": "01f7c60ee29910f5717f9f4a6382af55b9c48a1c6121f393babe27dba510b4dc",
         "sameImageNativeSHA256": "caf762e27da06f5d5ca8e25c4d605f166289cdfec54f228ce6d0e8b8790ae1ed",
         "sameImageExportSHA256": "caf762e27da06f5d5ca8e25c4d605f166289cdfec54f228ce6d0e8b8790ae1ed",
         "independentNativeQAEvidencePreserved": true,
@@ -2695,10 +2695,10 @@
         2266
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/gaborone/sisalto.json",
-      "sourceContentSHA256": "46826e0e12b8d63af0082d5eb41f6463b9a44708191430b259470ca38bb3f16d",
+      "sourceContentSHA256": "01f7c60ee29910f5717f9f4a6382af55b9c48a1c6121f393babe27dba510b4dc",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "fa29b41920fcef894d1acfcf6528c0934ddf7dad239db10a52ed02324cd3be85",
-        "semanticContextSHA256": "fa29b41920fcef894d1acfcf6528c0934ddf7dad239db10a52ed02324cd3be85",
+        "targetBeforeSHA256": "3a9e49f46f8856c5dbd8ee4c4e5d83bae52c649cdb8b516020e8e6a5cad0fc34",
+        "semanticContextSHA256": "3a9e49f46f8856c5dbd8ee4c4e5d83bae52c649cdb8b516020e8e6a5cad0fc34",
         "subjectTitle": "Nukkuva jättiläinen",
         "targetState": "existing-target"
       },
@@ -2921,9 +2921,9 @@
         "tiedosto": "Kgale Hill, view east 20200329.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "46826e0e12b8d63af0082d5eb41f6463b9a44708191430b259470ca38bb3f16d",
-      "targetAfterSHA256": "fa29b41920fcef894d1acfcf6528c0934ddf7dad239db10a52ed02324cd3be85",
-      "contextAfterSHA256": "fa29b41920fcef894d1acfcf6528c0934ddf7dad239db10a52ed02324cd3be85",
+      "sourceContentAfterSHA256": "01f7c60ee29910f5717f9f4a6382af55b9c48a1c6121f393babe27dba510b4dc",
+      "targetAfterSHA256": "3a9e49f46f8856c5dbd8ee4c4e5d83bae52c649cdb8b516020e8e6a5cad0fc34",
+      "contextAfterSHA256": "3a9e49f46f8856c5dbd8ee4c4e5d83bae52c649cdb8b516020e8e6a5cad0fc34",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -2948,7 +2948,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "46826e0e12b8d63af0082d5eb41f6463b9a44708191430b259470ca38bb3f16d",
+        "sourceSHA256": "01f7c60ee29910f5717f9f4a6382af55b9c48a1c6121f393babe27dba510b4dc",
         "sameImageNativeSHA256": "8430b7a67475e31d30326338806f80d7a4583f8172a35395c989c80e139ff90d",
         "sameImageExportSHA256": "8430b7a67475e31d30326338806f80d7a4583f8172a35395c989c80e139ff90d",
         "independentNativeQAEvidencePreserved": true,
@@ -3007,7 +3007,7 @@
         2266
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/gaborone/sisalto.json",
-      "sourceContentSHA256": "46826e0e12b8d63af0082d5eb41f6463b9a44708191430b259470ca38bb3f16d",
+      "sourceContentSHA256": "01f7c60ee29910f5717f9f4a6382af55b9c48a1c6121f393babe27dba510b4dc",
       "semanticSourceBind": {
         "targetBeforeSHA256": "a2f1cb82f13e7c416d4a4b9fd7c7d714af3826b76597a4ba220b28be7ef8a0de",
         "semanticContextSHA256": "437a01c9f561ed660f77b8068ceeafe24e6dd4425df5dcbae88d808c0420682a",
@@ -3230,7 +3230,7 @@
         "tiedosto": "Gaborone Dam 20200315a.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "46826e0e12b8d63af0082d5eb41f6463b9a44708191430b259470ca38bb3f16d",
+      "sourceContentAfterSHA256": "01f7c60ee29910f5717f9f4a6382af55b9c48a1c6121f393babe27dba510b4dc",
       "targetAfterSHA256": "a2f1cb82f13e7c416d4a4b9fd7c7d714af3826b76597a4ba220b28be7ef8a0de",
       "contextAfterSHA256": "437a01c9f561ed660f77b8068ceeafe24e6dd4425df5dcbae88d808c0420682a",
       "ownerApproved": true,
@@ -3257,7 +3257,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "46826e0e12b8d63af0082d5eb41f6463b9a44708191430b259470ca38bb3f16d",
+        "sourceSHA256": "01f7c60ee29910f5717f9f4a6382af55b9c48a1c6121f393babe27dba510b4dc",
         "sameImageNativeSHA256": "0db9c6a73fcb7b064b1e713e37ac1a43ee60179c79b1ce36251abb07f5a902bd",
         "sameImageExportSHA256": "0db9c6a73fcb7b064b1e713e37ac1a43ee60179c79b1ce36251abb07f5a902bd",
         "independentNativeQAEvidencePreserved": true,
@@ -3316,7 +3316,7 @@
         3024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/gaborone/sisalto.json",
-      "sourceContentSHA256": "46826e0e12b8d63af0082d5eb41f6463b9a44708191430b259470ca38bb3f16d",
+      "sourceContentSHA256": "01f7c60ee29910f5717f9f4a6382af55b9c48a1c6121f393babe27dba510b4dc",
       "semanticSourceBind": {
         "targetBeforeSHA256": "2c1ed1deccd4840239e705e465da1e756d18aedb2d4c9f8c615e012c3662c444",
         "semanticContextSHA256": "744d79ef68728d19f300f199a6a5c1853ff9f62d279eccec3506c03ca65eb64e",
@@ -3539,7 +3539,7 @@
         "tiedosto": "Kgale Hill area, Walking Trail 20200329.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "46826e0e12b8d63af0082d5eb41f6463b9a44708191430b259470ca38bb3f16d",
+      "sourceContentAfterSHA256": "01f7c60ee29910f5717f9f4a6382af55b9c48a1c6121f393babe27dba510b4dc",
       "targetAfterSHA256": "2c1ed1deccd4840239e705e465da1e756d18aedb2d4c9f8c615e012c3662c444",
       "contextAfterSHA256": "744d79ef68728d19f300f199a6a5c1853ff9f62d279eccec3506c03ca65eb64e",
       "ownerApproved": true,
@@ -3566,7 +3566,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "46826e0e12b8d63af0082d5eb41f6463b9a44708191430b259470ca38bb3f16d",
+        "sourceSHA256": "01f7c60ee29910f5717f9f4a6382af55b9c48a1c6121f393babe27dba510b4dc",
         "sameImageNativeSHA256": "faea6729f7782e220b27b896970550a77e8c24c1b022c70004a03376d3d522d9",
         "sameImageExportSHA256": "faea6729f7782e220b27b896970550a77e8c24c1b022c70004a03376d3d522d9",
         "independentNativeQAEvidencePreserved": true,
@@ -3584,9 +3584,9 @@
   "task118TextRevision": true,
   "independentTextResamplePending": true,
   "textAcceptanceVerified": false,
-  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task228/immutable-media-history/e08/gaborone/204b21bda1cee27fdce811bdeab09ee06fb11d806bffd55a58ed6d6ef63774dd.json",
+  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task228/immutable-media-history/e08/gaborone/e17d198f76631dd616c7e331901e7de0d67fea3584d12666b287df58877d4cc1.json",
   "task118ReboundAt": "2026-10-13T16:31:25.330582+00:00",
   "task228ExcludedAssets": [],
   "task228TextRevision": true,
-  "task228ReboundAt": "2026-10-13T18:00:29.980432+00:00"
+  "task228ReboundAt": "2026-10-13T18:31:22.851504+00:00"
 }
