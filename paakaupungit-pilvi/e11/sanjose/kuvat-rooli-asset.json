@@ -3,7 +3,7 @@
   "era": "e11",
   "city": "sanjose",
   "authorization": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
-  "sourceContentAfterSHA256": "4f9ddd81f3a3baeecd3358fd4577ab40d420ba676e22619bcfffb612d8217813",
+  "sourceContentAfterSHA256": "f61775ade9593a3e794dd870aa8a0b05c256d99dccab6a17463a15020ab36733",
   "assets": [
     {
       "era": "e11",
@@ -412,7 +412,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/sanjose/qa.json",
-            "sha256": "9485f5d294395ca8ff84933c9cee4d177fe3b3d86bff057c8d38b80f816860dc"
+            "sha256": "4cf96b0b82f013fdde0d4c3bcf8eab27ea641ccaa781f880dc23c00a327438bf"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/sanjose/illustration-qa-extra.json",
@@ -499,7 +499,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "4f9ddd81f3a3baeecd3358fd4577ab40d420ba676e22619bcfffb612d8217813",
+      "sourceContentAfterSHA256": "f61775ade9593a3e794dd870aa8a0b05c256d99dccab6a17463a15020ab36733",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
       "contextAfterSHA256": "fdf59aed8c37c5090d91357eff239c1c31c5f3b7139cbfec13b1886cad37bab0"
     },
@@ -711,7 +711,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/sanjose/qa.json",
-            "sha256": "9485f5d294395ca8ff84933c9cee4d177fe3b3d86bff057c8d38b80f816860dc"
+            "sha256": "4cf96b0b82f013fdde0d4c3bcf8eab27ea641ccaa781f880dc23c00a327438bf"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/sanjose/illustration-qa-extra.json",
@@ -798,597 +798,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "4f9ddd81f3a3baeecd3358fd4577ab40d420ba676e22619bcfffb612d8217813",
+      "sourceContentAfterSHA256": "f61775ade9593a3e794dd870aa8a0b05c256d99dccab6a17463a15020ab36733",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
       "contextAfterSHA256": "525f467eafc77f8d78ed13812b3178d7928b3b37e41abfa845a5d02e0ec19f9a"
-    },
-    {
-      "era": "e11",
-      "city": "sanjose",
-      "slot": "K3",
-      "type": "illustration",
-      "assetID": "sanjose-k3-20261012-v1-449dab",
-      "galleryImageID": "sanjose-k3-20261012-v1-449dab",
-      "commonsFile": null,
-      "targetJsonPath": "$.kaupunkilehti[0].nostot[2]",
-      "targetTokens": [
-        "kaupunkilehti",
-        0,
-        "nostot",
-        2
-      ],
-      "operation": "merge-media-fields-preserve-other-content",
-      "CmediaFieldPayload": {
-        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/sanjose/sanjose-k3-20261012-v1-449dab-5d05aa0d2a28.png",
-        "suora": true,
-        "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva kahvin raaka-aineesta ja paahdetuista pavuista; ei tietyn kahvikauppiaan valokuva.",
-        "lyhyt": "Havainnekuva kahvin raaka-aineesta ja paahdetuista pavuista; ei tietyn kahvikauppiaan valokuva."
-      },
-      "removeMediaKeys": [
-        "tiedosto"
-      ],
-      "CvalidatorCompatiblePayload": {},
-      "runtimeMediaFieldPayload": {
-        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/sanjose/sanjose-k3-20261012-v1-449dab-5d05aa0d2a28.png",
-        "suora": true,
-        "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva kahvin raaka-aineesta ja paahdetuista pavuista; ei tietyn kahvikauppiaan valokuva.",
-        "lyhyt": "Havainnekuva kahvin raaka-aineesta ja paahdetuista pavuista; ei tietyn kahvikauppiaan valokuva."
-      },
-      "runtimeRemoveMediaKeys": [
-        "tiedosto"
-      ],
-      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
-      "nativeSHA256": "5d05aa0d2a2834ec4c959428518aa8f7a4f3cf2e37dadffa39d3bc0bb7f7d327",
-      "exportSHA256": "bf1c45dd6455a575b42443a5809fd3b6bb34b8dc8d835c576998867108429128",
-      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/sanjose/sanjose-k3-20261012-v1-449dab-5d05aa0d2a28.png",
-      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/sanjose/sanjose-k3-20261012-v1-449dab-5d05aa0d2a28.png",
-      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e11/sanjose/sanjose-k3-20261012-v1-449dab-5d05aa0d2a28.png",
-      "dimensions": [
-        1536,
-        1024
-      ],
-      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/sanjose/sisalto.json",
-      "sourceContentSHA256": "4f9ddd81f3a3baeecd3358fd4577ab40d420ba676e22619bcfffb612d8217813",
-      "semanticSourceBind": {
-        "targetBeforeSHA256": "cae49fa7172e86d7e2293dc071b6fa56b71cb0ca41254cda4faaf1f9974c487b",
-        "semanticContextSHA256": "cae49fa7172e86d7e2293dc071b6fa56b71cb0ca41254cda4faaf1f9974c487b",
-        "subjectTitle": "Kahvikauppa näkyy taloissa",
-        "targetState": "existing-target"
-      },
-      "attribution": {
-        "author": null,
-        "license": null,
-        "licenseUrl": null,
-        "sourcePage": null,
-        "originalUrl": null,
-        "rightsEvidence": {
-          "production": {
-            "subjectScope": "general original illustration; no exact city/site appearance claim",
-            "noProtectedWorks": true,
-            "noNamedPeople": true,
-            "photoSlot": false
-          },
-          "QA": {
-            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/sanjose/assets/sanjose-k3-20261012-v1-449dab/image.png",
-            "nativeSHA256": "5d05aa0d2a2834ec4c959428518aa8f7a4f3cf2e37dadffa39d3bc0bb7f7d327",
-            "nativeWidth": 1536,
-            "nativeHeight": 1024,
-            "format": "PNG",
-            "pngChunks": [
-              "IHDR",
-              "caBX",
-              "IDAT",
-              "IEND"
-            ],
-            "manifestMatch": true,
-            "captionFi": "Havainnekuva kahvin raaka-aineesta ja paahdetuista pavuista; ei tietyn kahvikauppiaan valokuva.",
-            "sourceEvidence": {
-              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/sanjose/faktapohja.md",
-              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/sanjose/sisalto.json",
-              "contentSha256": "35d2ffc26f60141ecea7437c6cac39bb478751aa02b7153cc8f176dfd394db41",
-              "targetText": "Barrio Amón syntyi Costa Rican pääkaupungin San Josén koillisosaan 1800-luvun lopulla. Nimi tulee ranskalaisesta kahviyrittäjästä Amón Fasileau-Duplantierista, joka kehitti aluetta. Kahvikaupasta vaurastuneiden asukkaiden taloissa näkyy uusklassismia ja viktoriaanisia piirteitä. Julkisivut erottuivat vanhoista saviseinätaloista, mutta niiden takana säilyi usein siirtomaa-ajan huonejärjestys. Uusi tyyli tuli siis toisinaan ennen uutta pohjapiirrosta."
-            },
-            "rightsEvidence": {
-              "subjectScope": "general original illustration; no exact city/site appearance claim",
-              "noProtectedWorks": true,
-              "noNamedPeople": true,
-              "photoSlot": false
-            },
-            "prompt": "Use case: photorealistic-natural. Asset: a Finnish educational city magazine subject illustration, clearly labelled as an illustration outside the pixels. New original image, landscape 3:2, preferably 1536x1024 PNG with sRGB. Natural editorial photography, believable materials, restrained color, soft daylight, realistic scale. No text, logos, watermarks, frames, identifiable people, invented city panorama or copyrighted artwork. Close editorial still life of green unroasted coffee beans in a plain woven sack beside a small pile of roasted brown coffee beans. Two material stages with realistic bean shapes and restrained natural light. No building, logos, readable labels or imagined historical trade scene.",
-            "content": {
-              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/sanjose/sisalto.json",
-              "contentSHA256": "35d2ffc26f60141ecea7437c6cac39bb478751aa02b7153cc8f176dfd394db41",
-              "targetObjectExists": true,
-              "targetContainer": "$.kaupunkilehti[0].nostot[2]",
-              "targetText": {
-                "otsikko": "Kahvikauppa näkyy taloissa",
-                "teksti": "Barrio Amón syntyi Costa Rican pääkaupungin San Josén koillisosaan 1800-luvun lopulla. Nimi tulee ranskalaisesta kahviyrittäjästä Amón Fasileau-Duplantierista, joka kehitti aluetta. Kahvikaupasta vaurastuneiden asukkaiden taloissa näkyy uusklassismia ja viktoriaanisia piirteitä. Julkisivut erottuivat vanhoista saviseinätaloista, mutta niiden takana säilyi usein siirtomaa-ajan huonejärjestys. Uusi tyyli tuli siis toisinaan ennen uutta pohjapiirrosta.",
-                "tiedosto": "",
-                "lyhyt": "",
-                "selite": "",
-                "lahde": "",
-                "wiki": "San José, Costa Rica"
-              },
-              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/sanjose/faktapohja.md",
-              "factSheetExists": true
-            },
-            "otherReviewerVerdicts": [],
-            "visualInspection": {
-              "tool": "view_image",
-              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/sanjose/assets/sanjose-k3-20261012-v1-449dab/image.png",
-              "detail": "original",
-              "observations": "Painamattomassa säkissä vihertäviä paahtamattomia kahvipapuja ja vieressä ruskeita paahdettuja papuja. Uurteet, sävyt ja koot vaihtelevat; säkin kudos ja pöytä luontevia. Ei rakennuksia, ihmisiä, tekstiä tai logoja.",
-              "inspectedBy": "kuvitus-3"
-            },
-            "openConflict": false
-          },
-          "qaReason": "Kahvipavut havainnollistavat K3-noston kahvikaupasta syntynyttä vaurautta. Kuvateksti ei väitä kuvaa tietyn kauppiaan tai Barrio Amónin valokuvaksi. Native-SHA ja mitat täsmäävät."
-        }
-      },
-      "luentaMetadata": {
-        "existingImageLuenta": null,
-        "captionReadingText": "Havainnekuva kahvin raaka-aineesta ja paahdetuista pavuista; ei tietyn kahvikauppiaan valokuva.",
-        "existingArticleAndSectionLuentaPreserved": true,
-        "audioGenerated": false,
-        "audioURL": null,
-        "imageSpecificAudioProvided": false,
-        "reuseAudioAllowedByThisPacket": false
-      },
-      "qaEvidence": {
-        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/sanjose/illustration-qa-extra.json",
-        "fileSHA256": "20cd1ad9dbdef53c8620b54bfe006fbb09a5c5d383b687ea82c0c78ec9dd6e8b",
-        "item": {
-          "slot": "K3",
-          "targetJsonPath": "$.kaupunkilehti[0].nostot[2]",
-          "assetID": "sanjose-k3-20261012-v1-449dab",
-          "sha256": "5d05aa0d2a2834ec4c959428518aa8f7a4f3cf2e37dadffa39d3bc0bb7f7d327",
-          "verdict": "accepted",
-          "reason": "Kahvipavut havainnollistavat K3-noston kahvikaupasta syntynyttä vaurautta. Kuvateksti ei väitä kuvaa tietyn kauppiaan tai Barrio Amónin valokuvaksi. Native-SHA ja mitat täsmäävät.",
-          "evidence": {
-            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/sanjose/assets/sanjose-k3-20261012-v1-449dab/image.png",
-            "nativeSHA256": "5d05aa0d2a2834ec4c959428518aa8f7a4f3cf2e37dadffa39d3bc0bb7f7d327",
-            "nativeWidth": 1536,
-            "nativeHeight": 1024,
-            "format": "PNG",
-            "pngChunks": [
-              "IHDR",
-              "caBX",
-              "IDAT",
-              "IEND"
-            ],
-            "manifestMatch": true,
-            "captionFi": "Havainnekuva kahvin raaka-aineesta ja paahdetuista pavuista; ei tietyn kahvikauppiaan valokuva.",
-            "sourceEvidence": {
-              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/sanjose/faktapohja.md",
-              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/sanjose/sisalto.json",
-              "contentSha256": "35d2ffc26f60141ecea7437c6cac39bb478751aa02b7153cc8f176dfd394db41",
-              "targetText": "Barrio Amón syntyi Costa Rican pääkaupungin San Josén koillisosaan 1800-luvun lopulla. Nimi tulee ranskalaisesta kahviyrittäjästä Amón Fasileau-Duplantierista, joka kehitti aluetta. Kahvikaupasta vaurastuneiden asukkaiden taloissa näkyy uusklassismia ja viktoriaanisia piirteitä. Julkisivut erottuivat vanhoista saviseinätaloista, mutta niiden takana säilyi usein siirtomaa-ajan huonejärjestys. Uusi tyyli tuli siis toisinaan ennen uutta pohjapiirrosta."
-            },
-            "rightsEvidence": {
-              "subjectScope": "general original illustration; no exact city/site appearance claim",
-              "noProtectedWorks": true,
-              "noNamedPeople": true,
-              "photoSlot": false
-            },
-            "prompt": "Use case: photorealistic-natural. Asset: a Finnish educational city magazine subject illustration, clearly labelled as an illustration outside the pixels. New original image, landscape 3:2, preferably 1536x1024 PNG with sRGB. Natural editorial photography, believable materials, restrained color, soft daylight, realistic scale. No text, logos, watermarks, frames, identifiable people, invented city panorama or copyrighted artwork. Close editorial still life of green unroasted coffee beans in a plain woven sack beside a small pile of roasted brown coffee beans. Two material stages with realistic bean shapes and restrained natural light. No building, logos, readable labels or imagined historical trade scene.",
-            "content": {
-              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/sanjose/sisalto.json",
-              "contentSHA256": "35d2ffc26f60141ecea7437c6cac39bb478751aa02b7153cc8f176dfd394db41",
-              "targetObjectExists": true,
-              "targetContainer": "$.kaupunkilehti[0].nostot[2]",
-              "targetText": {
-                "otsikko": "Kahvikauppa näkyy taloissa",
-                "teksti": "Barrio Amón syntyi Costa Rican pääkaupungin San Josén koillisosaan 1800-luvun lopulla. Nimi tulee ranskalaisesta kahviyrittäjästä Amón Fasileau-Duplantierista, joka kehitti aluetta. Kahvikaupasta vaurastuneiden asukkaiden taloissa näkyy uusklassismia ja viktoriaanisia piirteitä. Julkisivut erottuivat vanhoista saviseinätaloista, mutta niiden takana säilyi usein siirtomaa-ajan huonejärjestys. Uusi tyyli tuli siis toisinaan ennen uutta pohjapiirrosta.",
-                "tiedosto": "",
-                "lyhyt": "",
-                "selite": "",
-                "lahde": "",
-                "wiki": "San José, Costa Rica"
-              },
-              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/sanjose/faktapohja.md",
-              "factSheetExists": true
-            },
-            "otherReviewerVerdicts": [],
-            "visualInspection": {
-              "tool": "view_image",
-              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/sanjose/assets/sanjose-k3-20261012-v1-449dab/image.png",
-              "detail": "original",
-              "observations": "Painamattomassa säkissä vihertäviä paahtamattomia kahvipapuja ja vieressä ruskeita paahdettuja papuja. Uurteet, sävyt ja koot vaihtelevat; säkin kudos ja pöytä luontevia. Ei rakennuksia, ihmisiä, tekstiä tai logoja.",
-              "inspectedBy": "kuvitus-3"
-            },
-            "openConflict": false
-          },
-          "reviewedAt": "2026-10-12T18:21:06.374271+00:00"
-        },
-        "allSources": [
-          {
-            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/sanjose/qa.json",
-            "sha256": "9485f5d294395ca8ff84933c9cee4d177fe3b3d86bff057c8d38b80f816860dc"
-          },
-          {
-            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/sanjose/illustration-qa-extra.json",
-            "sha256": "20cd1ad9dbdef53c8620b54bfe006fbb09a5c5d383b687ea82c0c78ec9dd6e8b"
-          }
-        ]
-      },
-      "R2ByteVerification": {
-        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/sanjose/sanjose-k3-20261012-v1-449dab-5d05aa0d2a28.png",
-        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/sanjose/sanjose-k3-20261012-v1-449dab-5d05aa0d2a28.png?t=bf1c45dd6455a575",
-        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/sanjose/sanjose-k3-20261012-v1-449dab-5d05aa0d2a28.png",
-        "sha256": "bf1c45dd6455a575b42443a5809fd3b6bb34b8dc8d835c576998867108429128",
-        "bytes": 2723489,
-        "http": 200,
-        "mime": "image/png",
-        "cors": "https://matkakirja.app",
-        "cacheBustedPreflightHttp": 404,
-        "cacheBustedReadback": true,
-        "byteExactReadback": true,
-        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
-        "conditionalIfNoneMatch": "*",
-        "s3PutHttp": 200,
-        "assetID": "sanjose-k3-20261012-v1-449dab",
-        "nativeSHA256": "5d05aa0d2a2834ec4c959428518aa8f7a4f3cf2e37dadffa39d3bc0bb7f7d327",
-        "canonicalReadbackByteExact": true,
-        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e11/sanjose/sanjose-k3-20261012-v1-449dab-5d05aa0d2a28.png",
-        "pixelIdenticalToQAAcceptedNative": true,
-        "era": "e11",
-        "city": "sanjose",
-        "slot": "K3",
-        "targetJsonPath": "$.kaupunkilehti[0].nostot[2]",
-        "verifiedAt": "2026-10-12T18:23:02.776268+00:00",
-        "ownerAcceptanceVerified": false,
-        "gameIntegrated": false,
-        "galleryVisibleVerified": false
-      },
-      "producerExportProof": null,
-      "technicalExportProof": {
-        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e11/sanjose/sanjose-k3-20261012-v1-449dab-5d05aa0d2a28.png",
-        "sha256": "bf1c45dd6455a575b42443a5809fd3b6bb34b8dc8d835c576998867108429128",
-        "bytes": 2723489,
-        "SHAReadAt": "2026-10-12T18:29:58.873392+00:00",
-        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
-        "width": 1536,
-        "height": 1024,
-        "pixelWidth": 1536,
-        "pixelHeight": 1024,
-        "exifOrientation": 1,
-        "dimensionsBasis": "EXIF-oriented-display",
-        "format": "PNG",
-        "largeOriginalHeaderOnlyRead": false,
-        "nativeSHA256": "5d05aa0d2a2834ec4c959428518aa8f7a4f3cf2e37dadffa39d3bc0bb7f7d327",
-        "rgbPixelSHA256": "f5dc590a997f86fdddb1e54644206ced1bad6cac56e41b32b597fa535426dcec",
-        "pixelIdenticalToQAAcceptedNative": true,
-        "sRGBProfileEmbedded": true,
-        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
-      },
-      "priorMediaFields": {
-        "tiedosto": "",
-        "lahde": "",
-        "selite": "",
-        "lyhyt": ""
-      },
-      "preservePreviousMediaObjects": true,
-      "authorization": {
-        "status": "waived-owner-review",
-        "authorizedByOwner": true,
-        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
-        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
-        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
-        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
-        "ownerAcceptanceImplied": false,
-        "QARequired": true,
-        "R2ByteVerificationRequired": true,
-        "galleryBeforeGameRequired": false,
-        "verifiedHumanMessageSource": {
-          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
-          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
-        }
-      },
-      "ownerAcceptanceVerified": false,
-      "gameIntegrated": false,
-      "gamePublicationVerified": false,
-      "inMemoryMergeVerified": true,
-      "CcommonsMetadataBound": false,
-      "roleManifestBound": true,
-      "sourceContentAfterSHA256": "4f9ddd81f3a3baeecd3358fd4577ab40d420ba676e22619bcfffb612d8217813",
-      "targetAfterSHA256": "cae49fa7172e86d7e2293dc071b6fa56b71cb0ca41254cda4faaf1f9974c487b",
-      "contextAfterSHA256": "cae49fa7172e86d7e2293dc071b6fa56b71cb0ca41254cda4faaf1f9974c487b"
-    },
-    {
-      "era": "e11",
-      "city": "sanjose",
-      "slot": "L4",
-      "type": "illustration",
-      "assetID": "sanjose-l4-20261012-v1-be96f1",
-      "galleryImageID": "sanjose-l4-20261012-v1-be96f1",
-      "commonsFile": null,
-      "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
-      "targetTokens": [
-        "kaupunkilehti",
-        1,
-        "nostot",
-        3
-      ],
-      "operation": "merge-media-fields-preserve-other-content",
-      "CmediaFieldPayload": {
-        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/sanjose/sanjose-l4-20261012-v1-be96f1-53cc7b87d420.png",
-        "suora": true,
-        "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva kultamateriaalista, ei Kultamuseon kokoelman esineistä.",
-        "lyhyt": "Havainnekuva kultamateriaalista, ei Kultamuseon kokoelman esineistä."
-      },
-      "removeMediaKeys": [
-        "tiedosto"
-      ],
-      "CvalidatorCompatiblePayload": {},
-      "runtimeMediaFieldPayload": {
-        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/sanjose/sanjose-l4-20261012-v1-be96f1-53cc7b87d420.png",
-        "suora": true,
-        "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva kultamateriaalista, ei Kultamuseon kokoelman esineistä.",
-        "lyhyt": "Havainnekuva kultamateriaalista, ei Kultamuseon kokoelman esineistä."
-      },
-      "runtimeRemoveMediaKeys": [
-        "tiedosto"
-      ],
-      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
-      "nativeSHA256": "53cc7b87d42017306bf2ee94478ca38db4992cf501a8f8cc69dc67c58068f9e0",
-      "exportSHA256": "35aa02675aa2f000f4bf7338afcc1e975ccee4598bac76ee87431879be37e0b5",
-      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/sanjose/sanjose-l4-20261012-v1-be96f1-53cc7b87d420.png",
-      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/sanjose/sanjose-l4-20261012-v1-be96f1-53cc7b87d420.png",
-      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e11/sanjose/sanjose-l4-20261012-v1-be96f1-53cc7b87d420.png",
-      "dimensions": [
-        1536,
-        1024
-      ],
-      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/sanjose/sisalto.json",
-      "sourceContentSHA256": "4f9ddd81f3a3baeecd3358fd4577ab40d420ba676e22619bcfffb612d8217813",
-      "semanticSourceBind": {
-        "targetBeforeSHA256": "018ad486123424b7d08043720cca829080dbe0ed4286c239ff7ad9c6b5d2bb11",
-        "semanticContextSHA256": "018ad486123424b7d08043720cca829080dbe0ed4286c239ff7ad9c6b5d2bb11",
-        "subjectTitle": "Aukion alla on kultaa",
-        "targetState": "existing-target"
-      },
-      "attribution": {
-        "author": null,
-        "license": null,
-        "licenseUrl": null,
-        "sourcePage": null,
-        "originalUrl": null,
-        "rightsEvidence": {
-          "production": {
-            "subjectScope": "general original illustration; no exact city/site appearance claim",
-            "noProtectedWorks": true,
-            "noNamedPeople": true,
-            "photoSlot": false
-          },
-          "QA": {
-            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/sanjose/assets/sanjose-l4-20261012-v1-be96f1/image.png",
-            "nativeSHA256": "53cc7b87d42017306bf2ee94478ca38db4992cf501a8f8cc69dc67c58068f9e0",
-            "nativeWidth": 1536,
-            "nativeHeight": 1024,
-            "format": "PNG",
-            "pngChunks": [
-              "IHDR",
-              "caBX",
-              "IDAT",
-              "IEND"
-            ],
-            "manifestMatch": true,
-            "captionFi": "Havainnekuva kultamateriaalista, ei Kultamuseon kokoelman esineistä.",
-            "sourceEvidence": {
-              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/sanjose/faktapohja.md",
-              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/sanjose/sisalto.json",
-              "contentSha256": "35d2ffc26f60141ecea7437c6cac39bb478751aa02b7153cc8f176dfd394db41",
-              "targetText": "Esikolumbiaaninen kultamuseo sijaitsee Plaza de la Culturan alla San Josén keskustassa. Museon kokoelmaan kuuluu ennen eurooppalaisten tuloa valmistettuja kultaisia esineitä, kuten eläinhahmoja ja ihmisfiguureja. Museo on Costa Rican keskuspankin hallinnoima. Kulta oli myös vallan tunnus, ja kokoelmassa esitellään aikakauden metallityötä. Katutason alapuolella avautuu näkymä esineisiin, joissa käsityö, eläinaiheet ja eri yhteisöjen elämä kohtaavat."
-            },
-            "rightsEvidence": {
-              "subjectScope": "general original illustration; no exact city/site appearance claim",
-              "noProtectedWorks": true,
-              "noNamedPeople": true,
-              "photoSlot": false
-            },
-            "prompt": "Use case: photorealistic-natural. Asset: a Finnish educational city magazine subject illustration, clearly labelled as an illustration outside the pixels. New original image, landscape 3:2, preferably 1536x1024 PNG with sRGB. Natural editorial photography, believable materials, restrained color, soft daylight, realistic scale. No text, logos, watermarks, frames, identifiable people, invented city panorama or copyrighted artwork. Close editorial material photograph of small irregular pieces of plain gold metal on a neutral dark worktop, natural warm metallic reflections, no coins, figurines, jewellery, engraving, pre-Columbian artifact reproduction or museum scene.",
-            "content": {
-              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/sanjose/sisalto.json",
-              "contentSHA256": "35d2ffc26f60141ecea7437c6cac39bb478751aa02b7153cc8f176dfd394db41",
-              "targetObjectExists": true,
-              "targetContainer": "$.kaupunkilehti[1].nostot[3]",
-              "targetText": {
-                "otsikko": "Aukion alla on kultaa",
-                "teksti": "Esikolumbiaaninen kultamuseo sijaitsee Plaza de la Culturan alla San Josén keskustassa. Museon kokoelmaan kuuluu ennen eurooppalaisten tuloa valmistettuja kultaisia esineitä, kuten eläinhahmoja ja ihmisfiguureja. Museo on Costa Rican keskuspankin hallinnoima. Kulta oli myös vallan tunnus, ja kokoelmassa esitellään aikakauden metallityötä. Katutason alapuolella avautuu näkymä esineisiin, joissa käsityö, eläinaiheet ja eri yhteisöjen elämä kohtaavat.",
-                "tiedosto": "",
-                "lyhyt": "",
-                "selite": "",
-                "lahde": "",
-                "wiki": "Pre-Columbian Gold Museum"
-              },
-              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/sanjose/faktapohja.md",
-              "factSheetExists": true
-            },
-            "otherReviewerVerdicts": [],
-            "visualInspection": {
-              "tool": "view_image",
-              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/sanjose/assets/sanjose-l4-20261012-v1-be96f1/image.png",
-              "detail": "original",
-              "observations": "Tummalla pinnalla erikokoisia epäsäännöllisiä kullanvärisiä metallikappaleita. Kiilto, pienet uurteet ja kappaleiden muodot vaihtelevat, ilman koristehahmoja tai toistokuviota. Ei ihmisiä, tekstiä, logoja tai nimettyä teosta.",
-              "inspectedBy": "kuvitus-3"
-            },
-            "openConflict": false
-          },
-          "qaReason": "Kultamateriaali havainnollistaa L4-noston metallityöaihetta. Kuva ei jäljennä museoesinettä, ja kuvateksti rajaa sen pois Kultamuseon kokoelman dokumentoinnista. Native-SHA ja mitat täsmäävät."
-        }
-      },
-      "luentaMetadata": {
-        "existingImageLuenta": null,
-        "captionReadingText": "Havainnekuva kultamateriaalista, ei Kultamuseon kokoelman esineistä.",
-        "existingArticleAndSectionLuentaPreserved": true,
-        "audioGenerated": false,
-        "audioURL": null,
-        "imageSpecificAudioProvided": false,
-        "reuseAudioAllowedByThisPacket": false
-      },
-      "qaEvidence": {
-        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/sanjose/illustration-qa-extra.json",
-        "fileSHA256": "20cd1ad9dbdef53c8620b54bfe006fbb09a5c5d383b687ea82c0c78ec9dd6e8b",
-        "item": {
-          "slot": "L4",
-          "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
-          "assetID": "sanjose-l4-20261012-v1-be96f1",
-          "sha256": "53cc7b87d42017306bf2ee94478ca38db4992cf501a8f8cc69dc67c58068f9e0",
-          "verdict": "accepted",
-          "reason": "Kultamateriaali havainnollistaa L4-noston metallityöaihetta. Kuva ei jäljennä museoesinettä, ja kuvateksti rajaa sen pois Kultamuseon kokoelman dokumentoinnista. Native-SHA ja mitat täsmäävät.",
-          "evidence": {
-            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/sanjose/assets/sanjose-l4-20261012-v1-be96f1/image.png",
-            "nativeSHA256": "53cc7b87d42017306bf2ee94478ca38db4992cf501a8f8cc69dc67c58068f9e0",
-            "nativeWidth": 1536,
-            "nativeHeight": 1024,
-            "format": "PNG",
-            "pngChunks": [
-              "IHDR",
-              "caBX",
-              "IDAT",
-              "IEND"
-            ],
-            "manifestMatch": true,
-            "captionFi": "Havainnekuva kultamateriaalista, ei Kultamuseon kokoelman esineistä.",
-            "sourceEvidence": {
-              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/sanjose/faktapohja.md",
-              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/sanjose/sisalto.json",
-              "contentSha256": "35d2ffc26f60141ecea7437c6cac39bb478751aa02b7153cc8f176dfd394db41",
-              "targetText": "Esikolumbiaaninen kultamuseo sijaitsee Plaza de la Culturan alla San Josén keskustassa. Museon kokoelmaan kuuluu ennen eurooppalaisten tuloa valmistettuja kultaisia esineitä, kuten eläinhahmoja ja ihmisfiguureja. Museo on Costa Rican keskuspankin hallinnoima. Kulta oli myös vallan tunnus, ja kokoelmassa esitellään aikakauden metallityötä. Katutason alapuolella avautuu näkymä esineisiin, joissa käsityö, eläinaiheet ja eri yhteisöjen elämä kohtaavat."
-            },
-            "rightsEvidence": {
-              "subjectScope": "general original illustration; no exact city/site appearance claim",
-              "noProtectedWorks": true,
-              "noNamedPeople": true,
-              "photoSlot": false
-            },
-            "prompt": "Use case: photorealistic-natural. Asset: a Finnish educational city magazine subject illustration, clearly labelled as an illustration outside the pixels. New original image, landscape 3:2, preferably 1536x1024 PNG with sRGB. Natural editorial photography, believable materials, restrained color, soft daylight, realistic scale. No text, logos, watermarks, frames, identifiable people, invented city panorama or copyrighted artwork. Close editorial material photograph of small irregular pieces of plain gold metal on a neutral dark worktop, natural warm metallic reflections, no coins, figurines, jewellery, engraving, pre-Columbian artifact reproduction or museum scene.",
-            "content": {
-              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/sanjose/sisalto.json",
-              "contentSHA256": "35d2ffc26f60141ecea7437c6cac39bb478751aa02b7153cc8f176dfd394db41",
-              "targetObjectExists": true,
-              "targetContainer": "$.kaupunkilehti[1].nostot[3]",
-              "targetText": {
-                "otsikko": "Aukion alla on kultaa",
-                "teksti": "Esikolumbiaaninen kultamuseo sijaitsee Plaza de la Culturan alla San Josén keskustassa. Museon kokoelmaan kuuluu ennen eurooppalaisten tuloa valmistettuja kultaisia esineitä, kuten eläinhahmoja ja ihmisfiguureja. Museo on Costa Rican keskuspankin hallinnoima. Kulta oli myös vallan tunnus, ja kokoelmassa esitellään aikakauden metallityötä. Katutason alapuolella avautuu näkymä esineisiin, joissa käsityö, eläinaiheet ja eri yhteisöjen elämä kohtaavat.",
-                "tiedosto": "",
-                "lyhyt": "",
-                "selite": "",
-                "lahde": "",
-                "wiki": "Pre-Columbian Gold Museum"
-              },
-              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/sanjose/faktapohja.md",
-              "factSheetExists": true
-            },
-            "otherReviewerVerdicts": [],
-            "visualInspection": {
-              "tool": "view_image",
-              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/sanjose/assets/sanjose-l4-20261012-v1-be96f1/image.png",
-              "detail": "original",
-              "observations": "Tummalla pinnalla erikokoisia epäsäännöllisiä kullanvärisiä metallikappaleita. Kiilto, pienet uurteet ja kappaleiden muodot vaihtelevat, ilman koristehahmoja tai toistokuviota. Ei ihmisiä, tekstiä, logoja tai nimettyä teosta.",
-              "inspectedBy": "kuvitus-3"
-            },
-            "openConflict": false
-          },
-          "reviewedAt": "2026-10-12T18:23:07.396622+00:00"
-        },
-        "allSources": [
-          {
-            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/sanjose/qa.json",
-            "sha256": "9485f5d294395ca8ff84933c9cee4d177fe3b3d86bff057c8d38b80f816860dc"
-          },
-          {
-            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/sanjose/illustration-qa-extra.json",
-            "sha256": "20cd1ad9dbdef53c8620b54bfe006fbb09a5c5d383b687ea82c0c78ec9dd6e8b"
-          }
-        ]
-      },
-      "R2ByteVerification": {
-        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/sanjose/sanjose-l4-20261012-v1-be96f1-53cc7b87d420.png",
-        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/sanjose/sanjose-l4-20261012-v1-be96f1-53cc7b87d420.png?t=35aa02675aa2f000",
-        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/sanjose/sanjose-l4-20261012-v1-be96f1-53cc7b87d420.png",
-        "sha256": "35aa02675aa2f000f4bf7338afcc1e975ccee4598bac76ee87431879be37e0b5",
-        "bytes": 1998087,
-        "http": 200,
-        "mime": "image/png",
-        "cors": "https://matkakirja.app",
-        "cacheBustedPreflightHttp": 404,
-        "cacheBustedReadback": true,
-        "byteExactReadback": true,
-        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
-        "conditionalIfNoneMatch": "*",
-        "s3PutHttp": 200,
-        "assetID": "sanjose-l4-20261012-v1-be96f1",
-        "nativeSHA256": "53cc7b87d42017306bf2ee94478ca38db4992cf501a8f8cc69dc67c58068f9e0",
-        "canonicalReadbackByteExact": true,
-        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e11/sanjose/sanjose-l4-20261012-v1-be96f1-53cc7b87d420.png",
-        "pixelIdenticalToQAAcceptedNative": true,
-        "era": "e11",
-        "city": "sanjose",
-        "slot": "L4",
-        "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
-        "verifiedAt": "2026-10-12T18:28:08.726075+00:00",
-        "ownerAcceptanceVerified": false,
-        "gameIntegrated": false,
-        "galleryVisibleVerified": false
-      },
-      "producerExportProof": null,
-      "technicalExportProof": {
-        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e11/sanjose/sanjose-l4-20261012-v1-be96f1-53cc7b87d420.png",
-        "sha256": "35aa02675aa2f000f4bf7338afcc1e975ccee4598bac76ee87431879be37e0b5",
-        "bytes": 1998087,
-        "SHAReadAt": "2026-10-12T18:29:59.069900+00:00",
-        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
-        "width": 1536,
-        "height": 1024,
-        "pixelWidth": 1536,
-        "pixelHeight": 1024,
-        "exifOrientation": 1,
-        "dimensionsBasis": "EXIF-oriented-display",
-        "format": "PNG",
-        "largeOriginalHeaderOnlyRead": false,
-        "nativeSHA256": "53cc7b87d42017306bf2ee94478ca38db4992cf501a8f8cc69dc67c58068f9e0",
-        "rgbPixelSHA256": "975d42bb9e1da96417f75c8ebffa14f838614db99c4137cdf92a500a8b87f5cd",
-        "pixelIdenticalToQAAcceptedNative": true,
-        "sRGBProfileEmbedded": true,
-        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
-      },
-      "priorMediaFields": {
-        "tiedosto": "",
-        "lahde": "",
-        "selite": "",
-        "lyhyt": ""
-      },
-      "preservePreviousMediaObjects": true,
-      "authorization": {
-        "status": "waived-owner-review",
-        "authorizedByOwner": true,
-        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
-        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
-        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
-        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
-        "ownerAcceptanceImplied": false,
-        "QARequired": true,
-        "R2ByteVerificationRequired": true,
-        "galleryBeforeGameRequired": false,
-        "verifiedHumanMessageSource": {
-          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
-          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
-        }
-      },
-      "ownerAcceptanceVerified": false,
-      "gameIntegrated": false,
-      "gamePublicationVerified": false,
-      "inMemoryMergeVerified": true,
-      "CcommonsMetadataBound": false,
-      "roleManifestBound": true,
-      "sourceContentAfterSHA256": "4f9ddd81f3a3baeecd3358fd4577ab40d420ba676e22619bcfffb612d8217813",
-      "targetAfterSHA256": "018ad486123424b7d08043720cca829080dbe0ed4286c239ff7ad9c6b5d2bb11",
-      "contextAfterSHA256": "018ad486123424b7d08043720cca829080dbe0ed4286c239ff7ad9c6b5d2bb11"
     },
     {
       "era": "e11",
@@ -1593,7 +1005,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/sanjose/qa.json",
-            "sha256": "9485f5d294395ca8ff84933c9cee4d177fe3b3d86bff057c8d38b80f816860dc"
+            "sha256": "4cf96b0b82f013fdde0d4c3bcf8eab27ea641ccaa781f880dc23c00a327438bf"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/sanjose/illustration-qa-extra.json",
@@ -1680,9 +1092,303 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "4f9ddd81f3a3baeecd3358fd4577ab40d420ba676e22619bcfffb612d8217813",
+      "sourceContentAfterSHA256": "f61775ade9593a3e794dd870aa8a0b05c256d99dccab6a17463a15020ab36733",
       "targetAfterSHA256": "424837d3e390f6b00b946136b490dc8c056022a4bd32fadff0294377df020780",
       "contextAfterSHA256": "424837d3e390f6b00b946136b490dc8c056022a4bd32fadff0294377df020780"
+    },
+    {
+      "era": "e11",
+      "city": "sanjose",
+      "slot": "K3",
+      "type": "illustration",
+      "assetID": "sanjose-k3-20261012-v1-449dab",
+      "galleryImageID": "sanjose-k3-20261012-v1-449dab",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].nostot[2]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "nostot",
+        2
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/sanjose/sanjose-k3-20261012-v1-449dab-5d05aa0d2a28.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva kahvin raaka-aineesta ja paahdetuista pavuista; ei tietyn kahvikauppiaan valokuva.",
+        "lyhyt": "Havainnekuva kahvin raaka-aineesta ja paahdetuista pavuista; ei tietyn kahvikauppiaan valokuva."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/sanjose/sanjose-k3-20261012-v1-449dab-5d05aa0d2a28.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva kahvin raaka-aineesta ja paahdetuista pavuista; ei tietyn kahvikauppiaan valokuva.",
+        "lyhyt": "Havainnekuva kahvin raaka-aineesta ja paahdetuista pavuista; ei tietyn kahvikauppiaan valokuva."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "5d05aa0d2a2834ec4c959428518aa8f7a4f3cf2e37dadffa39d3bc0bb7f7d327",
+      "exportSHA256": "bf1c45dd6455a575b42443a5809fd3b6bb34b8dc8d835c576998867108429128",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/sanjose/sanjose-k3-20261012-v1-449dab-5d05aa0d2a28.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/sanjose/sanjose-k3-20261012-v1-449dab-5d05aa0d2a28.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e11/sanjose/sanjose-k3-20261012-v1-449dab-5d05aa0d2a28.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/sanjose/sisalto.json",
+      "sourceContentSHA256": "4f9ddd81f3a3baeecd3358fd4577ab40d420ba676e22619bcfffb612d8217813",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "cae49fa7172e86d7e2293dc071b6fa56b71cb0ca41254cda4faaf1f9974c487b",
+        "semanticContextSHA256": "cae49fa7172e86d7e2293dc071b6fa56b71cb0ca41254cda4faaf1f9974c487b",
+        "subjectTitle": "Kahvikauppa näkyy taloissa",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": {
+            "subjectScope": "general original illustration; no exact city/site appearance claim",
+            "noProtectedWorks": true,
+            "noNamedPeople": true,
+            "photoSlot": false
+          },
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/sanjose/assets/sanjose-k3-20261012-v1-449dab/image.png",
+            "nativeSHA256": "5d05aa0d2a2834ec4c959428518aa8f7a4f3cf2e37dadffa39d3bc0bb7f7d327",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "pngChunks": [
+              "IHDR",
+              "caBX",
+              "IDAT",
+              "IEND"
+            ],
+            "manifestMatch": true,
+            "captionFi": "Havainnekuva kahvin raaka-aineesta ja paahdetuista pavuista; ei tietyn kahvikauppiaan valokuva.",
+            "sourceEvidence": {
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/sanjose/faktapohja.md",
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/sanjose/sisalto.json",
+              "contentSha256": "35d2ffc26f60141ecea7437c6cac39bb478751aa02b7153cc8f176dfd394db41",
+              "targetText": "Barrio Amón syntyi Costa Rican pääkaupungin San Josén koillisosaan 1800-luvun lopulla. Nimi tulee ranskalaisesta kahviyrittäjästä Amón Fasileau-Duplantierista, joka kehitti aluetta. Kahvikaupasta vaurastuneiden asukkaiden taloissa näkyy uusklassismia ja viktoriaanisia piirteitä. Julkisivut erottuivat vanhoista saviseinätaloista, mutta niiden takana säilyi usein siirtomaa-ajan huonejärjestys. Uusi tyyli tuli siis toisinaan ennen uutta pohjapiirrosta."
+            },
+            "rightsEvidence": {
+              "subjectScope": "general original illustration; no exact city/site appearance claim",
+              "noProtectedWorks": true,
+              "noNamedPeople": true,
+              "photoSlot": false
+            },
+            "prompt": "Use case: photorealistic-natural. Asset: a Finnish educational city magazine subject illustration, clearly labelled as an illustration outside the pixels. New original image, landscape 3:2, preferably 1536x1024 PNG with sRGB. Natural editorial photography, believable materials, restrained color, soft daylight, realistic scale. No text, logos, watermarks, frames, identifiable people, invented city panorama or copyrighted artwork. Close editorial still life of green unroasted coffee beans in a plain woven sack beside a small pile of roasted brown coffee beans. Two material stages with realistic bean shapes and restrained natural light. No building, logos, readable labels or imagined historical trade scene.",
+            "content": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/sanjose/sisalto.json",
+              "contentSHA256": "35d2ffc26f60141ecea7437c6cac39bb478751aa02b7153cc8f176dfd394db41",
+              "targetObjectExists": true,
+              "targetContainer": "$.kaupunkilehti[0].nostot[2]",
+              "targetText": {
+                "otsikko": "Kahvikauppa näkyy taloissa",
+                "teksti": "Barrio Amón syntyi Costa Rican pääkaupungin San Josén koillisosaan 1800-luvun lopulla. Nimi tulee ranskalaisesta kahviyrittäjästä Amón Fasileau-Duplantierista, joka kehitti aluetta. Kahvikaupasta vaurastuneiden asukkaiden taloissa näkyy uusklassismia ja viktoriaanisia piirteitä. Julkisivut erottuivat vanhoista saviseinätaloista, mutta niiden takana säilyi usein siirtomaa-ajan huonejärjestys. Uusi tyyli tuli siis toisinaan ennen uutta pohjapiirrosta.",
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": "",
+                "wiki": "San José, Costa Rica"
+              },
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/sanjose/faktapohja.md",
+              "factSheetExists": true
+            },
+            "otherReviewerVerdicts": [],
+            "visualInspection": {
+              "tool": "view_image",
+              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/sanjose/assets/sanjose-k3-20261012-v1-449dab/image.png",
+              "detail": "original",
+              "observations": "Painamattomassa säkissä vihertäviä paahtamattomia kahvipapuja ja vieressä ruskeita paahdettuja papuja. Uurteet, sävyt ja koot vaihtelevat; säkin kudos ja pöytä luontevia. Ei rakennuksia, ihmisiä, tekstiä tai logoja.",
+              "inspectedBy": "kuvitus-3"
+            },
+            "openConflict": false
+          },
+          "qaReason": "Kahvipavut havainnollistavat K3-noston kahvikaupasta syntynyttä vaurautta. Kuvateksti ei väitä kuvaa tietyn kauppiaan tai Barrio Amónin valokuvaksi. Native-SHA ja mitat täsmäävät."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva kahvin raaka-aineesta ja paahdetuista pavuista; ei tietyn kahvikauppiaan valokuva.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/sanjose/illustration-qa-extra.json",
+        "fileSHA256": "20cd1ad9dbdef53c8620b54bfe006fbb09a5c5d383b687ea82c0c78ec9dd6e8b",
+        "item": {
+          "slot": "K3",
+          "targetJsonPath": "$.kaupunkilehti[0].nostot[2]",
+          "assetID": "sanjose-k3-20261012-v1-449dab",
+          "sha256": "5d05aa0d2a2834ec4c959428518aa8f7a4f3cf2e37dadffa39d3bc0bb7f7d327",
+          "verdict": "accepted",
+          "reason": "Kahvipavut havainnollistavat K3-noston kahvikaupasta syntynyttä vaurautta. Kuvateksti ei väitä kuvaa tietyn kauppiaan tai Barrio Amónin valokuvaksi. Native-SHA ja mitat täsmäävät.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/sanjose/assets/sanjose-k3-20261012-v1-449dab/image.png",
+            "nativeSHA256": "5d05aa0d2a2834ec4c959428518aa8f7a4f3cf2e37dadffa39d3bc0bb7f7d327",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "pngChunks": [
+              "IHDR",
+              "caBX",
+              "IDAT",
+              "IEND"
+            ],
+            "manifestMatch": true,
+            "captionFi": "Havainnekuva kahvin raaka-aineesta ja paahdetuista pavuista; ei tietyn kahvikauppiaan valokuva.",
+            "sourceEvidence": {
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/sanjose/faktapohja.md",
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/sanjose/sisalto.json",
+              "contentSha256": "35d2ffc26f60141ecea7437c6cac39bb478751aa02b7153cc8f176dfd394db41",
+              "targetText": "Barrio Amón syntyi Costa Rican pääkaupungin San Josén koillisosaan 1800-luvun lopulla. Nimi tulee ranskalaisesta kahviyrittäjästä Amón Fasileau-Duplantierista, joka kehitti aluetta. Kahvikaupasta vaurastuneiden asukkaiden taloissa näkyy uusklassismia ja viktoriaanisia piirteitä. Julkisivut erottuivat vanhoista saviseinätaloista, mutta niiden takana säilyi usein siirtomaa-ajan huonejärjestys. Uusi tyyli tuli siis toisinaan ennen uutta pohjapiirrosta."
+            },
+            "rightsEvidence": {
+              "subjectScope": "general original illustration; no exact city/site appearance claim",
+              "noProtectedWorks": true,
+              "noNamedPeople": true,
+              "photoSlot": false
+            },
+            "prompt": "Use case: photorealistic-natural. Asset: a Finnish educational city magazine subject illustration, clearly labelled as an illustration outside the pixels. New original image, landscape 3:2, preferably 1536x1024 PNG with sRGB. Natural editorial photography, believable materials, restrained color, soft daylight, realistic scale. No text, logos, watermarks, frames, identifiable people, invented city panorama or copyrighted artwork. Close editorial still life of green unroasted coffee beans in a plain woven sack beside a small pile of roasted brown coffee beans. Two material stages with realistic bean shapes and restrained natural light. No building, logos, readable labels or imagined historical trade scene.",
+            "content": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/sanjose/sisalto.json",
+              "contentSHA256": "35d2ffc26f60141ecea7437c6cac39bb478751aa02b7153cc8f176dfd394db41",
+              "targetObjectExists": true,
+              "targetContainer": "$.kaupunkilehti[0].nostot[2]",
+              "targetText": {
+                "otsikko": "Kahvikauppa näkyy taloissa",
+                "teksti": "Barrio Amón syntyi Costa Rican pääkaupungin San Josén koillisosaan 1800-luvun lopulla. Nimi tulee ranskalaisesta kahviyrittäjästä Amón Fasileau-Duplantierista, joka kehitti aluetta. Kahvikaupasta vaurastuneiden asukkaiden taloissa näkyy uusklassismia ja viktoriaanisia piirteitä. Julkisivut erottuivat vanhoista saviseinätaloista, mutta niiden takana säilyi usein siirtomaa-ajan huonejärjestys. Uusi tyyli tuli siis toisinaan ennen uutta pohjapiirrosta.",
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": "",
+                "wiki": "San José, Costa Rica"
+              },
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/sanjose/faktapohja.md",
+              "factSheetExists": true
+            },
+            "otherReviewerVerdicts": [],
+            "visualInspection": {
+              "tool": "view_image",
+              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/sanjose/assets/sanjose-k3-20261012-v1-449dab/image.png",
+              "detail": "original",
+              "observations": "Painamattomassa säkissä vihertäviä paahtamattomia kahvipapuja ja vieressä ruskeita paahdettuja papuja. Uurteet, sävyt ja koot vaihtelevat; säkin kudos ja pöytä luontevia. Ei rakennuksia, ihmisiä, tekstiä tai logoja.",
+              "inspectedBy": "kuvitus-3"
+            },
+            "openConflict": false
+          },
+          "reviewedAt": "2026-10-12T18:21:06.374271+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/sanjose/qa.json",
+            "sha256": "4cf96b0b82f013fdde0d4c3bcf8eab27ea641ccaa781f880dc23c00a327438bf"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/sanjose/illustration-qa-extra.json",
+            "sha256": "20cd1ad9dbdef53c8620b54bfe006fbb09a5c5d383b687ea82c0c78ec9dd6e8b"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/sanjose/sanjose-k3-20261012-v1-449dab-5d05aa0d2a28.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/sanjose/sanjose-k3-20261012-v1-449dab-5d05aa0d2a28.png?t=bf1c45dd6455a575",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/sanjose/sanjose-k3-20261012-v1-449dab-5d05aa0d2a28.png",
+        "sha256": "bf1c45dd6455a575b42443a5809fd3b6bb34b8dc8d835c576998867108429128",
+        "bytes": 2723489,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "sanjose-k3-20261012-v1-449dab",
+        "nativeSHA256": "5d05aa0d2a2834ec4c959428518aa8f7a4f3cf2e37dadffa39d3bc0bb7f7d327",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e11/sanjose/sanjose-k3-20261012-v1-449dab-5d05aa0d2a28.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e11",
+        "city": "sanjose",
+        "slot": "K3",
+        "targetJsonPath": "$.kaupunkilehti[0].nostot[2]",
+        "verifiedAt": "2026-10-12T18:23:02.776268+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e11/sanjose/sanjose-k3-20261012-v1-449dab-5d05aa0d2a28.png",
+        "sha256": "bf1c45dd6455a575b42443a5809fd3b6bb34b8dc8d835c576998867108429128",
+        "bytes": 2723489,
+        "SHAReadAt": "2026-10-12T18:29:58.873392+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "5d05aa0d2a2834ec4c959428518aa8f7a4f3cf2e37dadffa39d3bc0bb7f7d327",
+        "rgbPixelSHA256": "f5dc590a997f86fdddb1e54644206ced1bad6cac56e41b32b597fa535426dcec",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "f61775ade9593a3e794dd870aa8a0b05c256d99dccab6a17463a15020ab36733",
+      "targetAfterSHA256": "cae49fa7172e86d7e2293dc071b6fa56b71cb0ca41254cda4faaf1f9974c487b",
+      "contextAfterSHA256": "cae49fa7172e86d7e2293dc071b6fa56b71cb0ca41254cda4faaf1f9974c487b"
     },
     {
       "era": "e11",
@@ -1895,7 +1601,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/sanjose/qa.json",
-            "sha256": "9485f5d294395ca8ff84933c9cee4d177fe3b3d86bff057c8d38b80f816860dc"
+            "sha256": "4cf96b0b82f013fdde0d4c3bcf8eab27ea641ccaa781f880dc23c00a327438bf"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/sanjose/illustration-qa-extra.json",
@@ -1982,9 +1688,558 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "4f9ddd81f3a3baeecd3358fd4577ab40d420ba676e22619bcfffb612d8217813",
+      "sourceContentAfterSHA256": "f61775ade9593a3e794dd870aa8a0b05c256d99dccab6a17463a15020ab36733",
       "targetAfterSHA256": "a176463555837728ff186bb4a691ced8eff12d29a4ee9284843d615104fe865a",
       "contextAfterSHA256": "a176463555837728ff186bb4a691ced8eff12d29a4ee9284843d615104fe865a"
+    },
+    {
+      "era": "e11",
+      "city": "sanjose",
+      "slot": "L4",
+      "type": "illustration",
+      "assetID": "sanjose-l4-20261012-v1-be96f1",
+      "galleryImageID": "sanjose-l4-20261012-v1-be96f1",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
+      "targetTokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        3
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/sanjose/sanjose-l4-20261012-v1-be96f1-53cc7b87d420.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva kultamateriaalista, ei Kultamuseon kokoelman esineistä.",
+        "lyhyt": "Havainnekuva kultamateriaalista, ei Kultamuseon kokoelman esineistä."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/sanjose/sanjose-l4-20261012-v1-be96f1-53cc7b87d420.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva kultamateriaalista, ei Kultamuseon kokoelman esineistä.",
+        "lyhyt": "Havainnekuva kultamateriaalista, ei Kultamuseon kokoelman esineistä."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "53cc7b87d42017306bf2ee94478ca38db4992cf501a8f8cc69dc67c58068f9e0",
+      "exportSHA256": "35aa02675aa2f000f4bf7338afcc1e975ccee4598bac76ee87431879be37e0b5",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/sanjose/sanjose-l4-20261012-v1-be96f1-53cc7b87d420.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/sanjose/sanjose-l4-20261012-v1-be96f1-53cc7b87d420.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e11/sanjose/sanjose-l4-20261012-v1-be96f1-53cc7b87d420.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/sanjose/sisalto.json",
+      "sourceContentSHA256": "4f9ddd81f3a3baeecd3358fd4577ab40d420ba676e22619bcfffb612d8217813",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "018ad486123424b7d08043720cca829080dbe0ed4286c239ff7ad9c6b5d2bb11",
+        "semanticContextSHA256": "018ad486123424b7d08043720cca829080dbe0ed4286c239ff7ad9c6b5d2bb11",
+        "subjectTitle": "Aukion alla on kultaa",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": {
+            "subjectScope": "general original illustration; no exact city/site appearance claim",
+            "noProtectedWorks": true,
+            "noNamedPeople": true,
+            "photoSlot": false
+          },
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/sanjose/assets/sanjose-l4-20261012-v1-be96f1/image.png",
+            "nativeSHA256": "53cc7b87d42017306bf2ee94478ca38db4992cf501a8f8cc69dc67c58068f9e0",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "pngChunks": [
+              "IHDR",
+              "caBX",
+              "IDAT",
+              "IEND"
+            ],
+            "manifestMatch": true,
+            "captionFi": "Havainnekuva kultamateriaalista, ei Kultamuseon kokoelman esineistä.",
+            "sourceEvidence": {
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/sanjose/faktapohja.md",
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/sanjose/sisalto.json",
+              "contentSha256": "35d2ffc26f60141ecea7437c6cac39bb478751aa02b7153cc8f176dfd394db41",
+              "targetText": "Esikolumbiaaninen kultamuseo sijaitsee Plaza de la Culturan alla San Josén keskustassa. Museon kokoelmaan kuuluu ennen eurooppalaisten tuloa valmistettuja kultaisia esineitä, kuten eläinhahmoja ja ihmisfiguureja. Museo on Costa Rican keskuspankin hallinnoima. Kulta oli myös vallan tunnus, ja kokoelmassa esitellään aikakauden metallityötä. Katutason alapuolella avautuu näkymä esineisiin, joissa käsityö, eläinaiheet ja eri yhteisöjen elämä kohtaavat."
+            },
+            "rightsEvidence": {
+              "subjectScope": "general original illustration; no exact city/site appearance claim",
+              "noProtectedWorks": true,
+              "noNamedPeople": true,
+              "photoSlot": false
+            },
+            "prompt": "Use case: photorealistic-natural. Asset: a Finnish educational city magazine subject illustration, clearly labelled as an illustration outside the pixels. New original image, landscape 3:2, preferably 1536x1024 PNG with sRGB. Natural editorial photography, believable materials, restrained color, soft daylight, realistic scale. No text, logos, watermarks, frames, identifiable people, invented city panorama or copyrighted artwork. Close editorial material photograph of small irregular pieces of plain gold metal on a neutral dark worktop, natural warm metallic reflections, no coins, figurines, jewellery, engraving, pre-Columbian artifact reproduction or museum scene.",
+            "content": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/sanjose/sisalto.json",
+              "contentSHA256": "35d2ffc26f60141ecea7437c6cac39bb478751aa02b7153cc8f176dfd394db41",
+              "targetObjectExists": true,
+              "targetContainer": "$.kaupunkilehti[1].nostot[3]",
+              "targetText": {
+                "otsikko": "Aukion alla on kultaa",
+                "teksti": "Esikolumbiaaninen kultamuseo sijaitsee Plaza de la Culturan alla San Josén keskustassa. Museon kokoelmaan kuuluu ennen eurooppalaisten tuloa valmistettuja kultaisia esineitä, kuten eläinhahmoja ja ihmisfiguureja. Museo on Costa Rican keskuspankin hallinnoima. Kulta oli myös vallan tunnus, ja kokoelmassa esitellään aikakauden metallityötä. Katutason alapuolella avautuu näkymä esineisiin, joissa käsityö, eläinaiheet ja eri yhteisöjen elämä kohtaavat.",
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": "",
+                "wiki": "Pre-Columbian Gold Museum"
+              },
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/sanjose/faktapohja.md",
+              "factSheetExists": true
+            },
+            "otherReviewerVerdicts": [],
+            "visualInspection": {
+              "tool": "view_image",
+              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/sanjose/assets/sanjose-l4-20261012-v1-be96f1/image.png",
+              "detail": "original",
+              "observations": "Tummalla pinnalla erikokoisia epäsäännöllisiä kullanvärisiä metallikappaleita. Kiilto, pienet uurteet ja kappaleiden muodot vaihtelevat, ilman koristehahmoja tai toistokuviota. Ei ihmisiä, tekstiä, logoja tai nimettyä teosta.",
+              "inspectedBy": "kuvitus-3"
+            },
+            "openConflict": false
+          },
+          "qaReason": "Kultamateriaali havainnollistaa L4-noston metallityöaihetta. Kuva ei jäljennä museoesinettä, ja kuvateksti rajaa sen pois Kultamuseon kokoelman dokumentoinnista. Native-SHA ja mitat täsmäävät."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva kultamateriaalista, ei Kultamuseon kokoelman esineistä.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/sanjose/illustration-qa-extra.json",
+        "fileSHA256": "20cd1ad9dbdef53c8620b54bfe006fbb09a5c5d383b687ea82c0c78ec9dd6e8b",
+        "item": {
+          "slot": "L4",
+          "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
+          "assetID": "sanjose-l4-20261012-v1-be96f1",
+          "sha256": "53cc7b87d42017306bf2ee94478ca38db4992cf501a8f8cc69dc67c58068f9e0",
+          "verdict": "accepted",
+          "reason": "Kultamateriaali havainnollistaa L4-noston metallityöaihetta. Kuva ei jäljennä museoesinettä, ja kuvateksti rajaa sen pois Kultamuseon kokoelman dokumentoinnista. Native-SHA ja mitat täsmäävät.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/sanjose/assets/sanjose-l4-20261012-v1-be96f1/image.png",
+            "nativeSHA256": "53cc7b87d42017306bf2ee94478ca38db4992cf501a8f8cc69dc67c58068f9e0",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "pngChunks": [
+              "IHDR",
+              "caBX",
+              "IDAT",
+              "IEND"
+            ],
+            "manifestMatch": true,
+            "captionFi": "Havainnekuva kultamateriaalista, ei Kultamuseon kokoelman esineistä.",
+            "sourceEvidence": {
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/sanjose/faktapohja.md",
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/sanjose/sisalto.json",
+              "contentSha256": "35d2ffc26f60141ecea7437c6cac39bb478751aa02b7153cc8f176dfd394db41",
+              "targetText": "Esikolumbiaaninen kultamuseo sijaitsee Plaza de la Culturan alla San Josén keskustassa. Museon kokoelmaan kuuluu ennen eurooppalaisten tuloa valmistettuja kultaisia esineitä, kuten eläinhahmoja ja ihmisfiguureja. Museo on Costa Rican keskuspankin hallinnoima. Kulta oli myös vallan tunnus, ja kokoelmassa esitellään aikakauden metallityötä. Katutason alapuolella avautuu näkymä esineisiin, joissa käsityö, eläinaiheet ja eri yhteisöjen elämä kohtaavat."
+            },
+            "rightsEvidence": {
+              "subjectScope": "general original illustration; no exact city/site appearance claim",
+              "noProtectedWorks": true,
+              "noNamedPeople": true,
+              "photoSlot": false
+            },
+            "prompt": "Use case: photorealistic-natural. Asset: a Finnish educational city magazine subject illustration, clearly labelled as an illustration outside the pixels. New original image, landscape 3:2, preferably 1536x1024 PNG with sRGB. Natural editorial photography, believable materials, restrained color, soft daylight, realistic scale. No text, logos, watermarks, frames, identifiable people, invented city panorama or copyrighted artwork. Close editorial material photograph of small irregular pieces of plain gold metal on a neutral dark worktop, natural warm metallic reflections, no coins, figurines, jewellery, engraving, pre-Columbian artifact reproduction or museum scene.",
+            "content": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/sanjose/sisalto.json",
+              "contentSHA256": "35d2ffc26f60141ecea7437c6cac39bb478751aa02b7153cc8f176dfd394db41",
+              "targetObjectExists": true,
+              "targetContainer": "$.kaupunkilehti[1].nostot[3]",
+              "targetText": {
+                "otsikko": "Aukion alla on kultaa",
+                "teksti": "Esikolumbiaaninen kultamuseo sijaitsee Plaza de la Culturan alla San Josén keskustassa. Museon kokoelmaan kuuluu ennen eurooppalaisten tuloa valmistettuja kultaisia esineitä, kuten eläinhahmoja ja ihmisfiguureja. Museo on Costa Rican keskuspankin hallinnoima. Kulta oli myös vallan tunnus, ja kokoelmassa esitellään aikakauden metallityötä. Katutason alapuolella avautuu näkymä esineisiin, joissa käsityö, eläinaiheet ja eri yhteisöjen elämä kohtaavat.",
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": "",
+                "wiki": "Pre-Columbian Gold Museum"
+              },
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/sanjose/faktapohja.md",
+              "factSheetExists": true
+            },
+            "otherReviewerVerdicts": [],
+            "visualInspection": {
+              "tool": "view_image",
+              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/sanjose/assets/sanjose-l4-20261012-v1-be96f1/image.png",
+              "detail": "original",
+              "observations": "Tummalla pinnalla erikokoisia epäsäännöllisiä kullanvärisiä metallikappaleita. Kiilto, pienet uurteet ja kappaleiden muodot vaihtelevat, ilman koristehahmoja tai toistokuviota. Ei ihmisiä, tekstiä, logoja tai nimettyä teosta.",
+              "inspectedBy": "kuvitus-3"
+            },
+            "openConflict": false
+          },
+          "reviewedAt": "2026-10-12T18:23:07.396622+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/sanjose/qa.json",
+            "sha256": "4cf96b0b82f013fdde0d4c3bcf8eab27ea641ccaa781f880dc23c00a327438bf"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/sanjose/illustration-qa-extra.json",
+            "sha256": "20cd1ad9dbdef53c8620b54bfe006fbb09a5c5d383b687ea82c0c78ec9dd6e8b"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/sanjose/sanjose-l4-20261012-v1-be96f1-53cc7b87d420.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/sanjose/sanjose-l4-20261012-v1-be96f1-53cc7b87d420.png?t=35aa02675aa2f000",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/sanjose/sanjose-l4-20261012-v1-be96f1-53cc7b87d420.png",
+        "sha256": "35aa02675aa2f000f4bf7338afcc1e975ccee4598bac76ee87431879be37e0b5",
+        "bytes": 1998087,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "sanjose-l4-20261012-v1-be96f1",
+        "nativeSHA256": "53cc7b87d42017306bf2ee94478ca38db4992cf501a8f8cc69dc67c58068f9e0",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e11/sanjose/sanjose-l4-20261012-v1-be96f1-53cc7b87d420.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e11",
+        "city": "sanjose",
+        "slot": "L4",
+        "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
+        "verifiedAt": "2026-10-12T18:28:08.726075+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e11/sanjose/sanjose-l4-20261012-v1-be96f1-53cc7b87d420.png",
+        "sha256": "35aa02675aa2f000f4bf7338afcc1e975ccee4598bac76ee87431879be37e0b5",
+        "bytes": 1998087,
+        "SHAReadAt": "2026-10-12T18:29:59.069900+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "53cc7b87d42017306bf2ee94478ca38db4992cf501a8f8cc69dc67c58068f9e0",
+        "rgbPixelSHA256": "975d42bb9e1da96417f75c8ebffa14f838614db99c4137cdf92a500a8b87f5cd",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "f61775ade9593a3e794dd870aa8a0b05c256d99dccab6a17463a15020ab36733",
+      "targetAfterSHA256": "018ad486123424b7d08043720cca829080dbe0ed4286c239ff7ad9c6b5d2bb11",
+      "contextAfterSHA256": "018ad486123424b7d08043720cca829080dbe0ed4286c239ff7ad9c6b5d2bb11"
+    },
+    {
+      "era": "e11",
+      "city": "sanjose",
+      "slot": "PHOTO",
+      "type": "commons",
+      "assetID": "capital-cc-e11-sanjose-photo-f7fdf359c2b814c2",
+      "galleryImageID": "capital-cc-e11-sanjose-photo-f7fdf359c2b814c2",
+      "commonsFile": "King Swallowtail (Papilio thoas nealces) (9564832228).jpg",
+      "targetJsonPath": "$.valokuva",
+      "targetTokens": [
+        "valokuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/sanjose/photo-f7fdf359c2b814c28bae.jpg",
+        "suora": true,
+        "lahde": "Bernard DUPONT from FRANCE, Commons (CC BY-SA 2.0)",
+        "selite": "Perhonen Spirogyran perhospuutarhassa San Josén seudulla vuonna 2006.",
+        "lyhyt": "Perhonen Spirogyran perhospuutarhassa San Josén seudulla vuonna 2006.",
+        "tiedosto": "King Swallowtail (Papilio thoas nealces) (9564832228).jpg",
+        "vuosi": "2006"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Bernard DUPONT from FRANCE, Commons (CC BY-SA 2.0)",
+        "selite": "Perhonen Spirogyran perhospuutarhassa San Josén seudulla vuonna 2006.",
+        "lyhyt": "Perhonen Spirogyran perhospuutarhassa San Josén seudulla vuonna 2006.",
+        "tiedosto": "King Swallowtail (Papilio thoas nealces) (9564832228).jpg",
+        "vuosi": "2006"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/sanjose/photo-f7fdf359c2b814c28bae.jpg",
+        "suora": true,
+        "lahde": "Bernard DUPONT from FRANCE, Commons (CC BY-SA 2.0)",
+        "selite": "Perhonen Spirogyran perhospuutarhassa San Josén seudulla vuonna 2006.",
+        "lyhyt": "Perhonen Spirogyran perhospuutarhassa San Josén seudulla vuonna 2006.",
+        "tiedosto": "King Swallowtail (Papilio thoas nealces) (9564832228).jpg",
+        "vuosi": "2006"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "f7fdf359c2b814c28bae0f4ba1ff0368ed034170c6d3a53221fd96a4d5ba95a8",
+      "exportSHA256": "f7fdf359c2b814c28bae0f4ba1ff0368ed034170c6d3a53221fd96a4d5ba95a8",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/sanjose/photo-f7fdf359c2b814c28bae.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/sanjose/photo-f7fdf359c2b814c28bae.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/sanjose/cc-gap-evidence-job19/ead8412a3525608b.jpg",
+      "dimensions": [
+        1600,
+        1200
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/sanjose/sisalto.json",
+      "sourceContentSHA256": "4f9ddd81f3a3baeecd3358fd4577ab40d420ba676e22619bcfffb612d8217813",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "subjectTitle": "sanjose — aito paikkavalokuva",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Bernard DUPONT from FRANCE",
+        "license": "CC BY-SA 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:King_Swallowtail_(Papilio_thoas_nealces)_(9564832228).jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/d/dd/King_Swallowtail_%28Papilio_thoas_nealces%29_%289564832228%29.jpg",
+        "rightsEvidence": {
+          "selection": {
+            "photo": "Bernard DUPONT from FRANCE; nimenomainen Author-krediitti ja CC BY-SA2.0 Commons/Flickr-lisenssivarmennuksesta.",
+            "location": "Spirogyra Butterfly Garden, San Jose, COSTA RICA; puutarhan lähdekategoria San José / Goicoechea. Kuvateksti rajaa seuduksi, ei väitettä luonnonvaraisesta yksilöstä.",
+            "workLayer": "Elävä perhonen ja luonnollisia lehtiä. Ei ihmisen taideteosta, rakennusjäljennöstä tai vesileimaa.",
+            "timeScope": "Valokuva15.10.2006; vuosiluku näkyy kuvatekstissä. PHOTO sallii dokumentaarisen vanhan kuvan; ei opaskäyttöä."
+          },
+          "QA": {
+            "inputManifest": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/sanjose/cc-gap-selection.json",
+            "reviewer": "job-25 independent-image-QA",
+            "reviewedAt": "2026-10-12T20:33:20.941256+00:00",
+            "visualTool": "view_image",
+            "visualDetail": "original",
+            "localOriginal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/sanjose/cc-gap-evidence-job19/ead8412a3525608b.jpg",
+            "actualWidth": 1600,
+            "actualHeight": 1200,
+            "actualFormat": "JPEG",
+            "nativePixelWidth": 1600,
+            "nativePixelHeight": 1200,
+            "exifOrientation": 1,
+            "dimensionsConvention": "actualWidth/Height are correctly oriented display dimensions; native stored pixel dimensions are separately recorded",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:King_Swallowtail_(Papilio_thoas_nealces)_(9564832228).jpg",
+            "savedSourcePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/8573b2a33913c926fd8464db90cf15ed06a4e55ff3b40fa7f06ee055a2a464cb.html",
+            "savedSourceSHA256": "d592f50446b273e430831aa96ad1fbe2b49718b0f1a892dfcc53f17ad7df2c2f",
+            "authorVerified": "Bernard DUPONT from FRANCE",
+            "authorField": "Original Commons Author table, independently read; not inferred from uploader",
+            "licenseVerified": "CC BY-SA 2.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+            "captureDate": "15 October 2006, 21:39",
+            "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/sanjose/sisalto.json",
+            "sourceContentSHA256": "4f9ddd81f3a3baeecd3358fd4577ab40d420ba676e22619bcfffb612d8217813",
+            "captionFi": "Perhonen Spirogyran perhospuutarhassa San Josén seudulla vuonna 2006.",
+            "depictedWorkLayer": "Valokuvakerros: Author Bernard DUPONT from FRANCE ja CC BY-SA2.0Generic luettu alkuperäisestä Commons-sivusta; Flickr9564832228/berniedup sekä FlickreviewR:n5.6.2015lisenssivarmennus todettu. Josve05a on siirtäjä, ei valokuvatekijä. Erillinen teoskerros: elävä perhonen ja luonnollinen lehti, ei veistos, puutarharakennuksen teosjäljennös tai ihmisen kuvataideteos. Täsmäpuutarhan nimeä ei muuteta toiseksi retkikohteeksi eikä kuvaa kutsuta vuoden1873 tai nykyhetken näkymäksi.",
+            "duplicateInCity": false,
+            "sourceRevision": 1134151039,
+            "locationEvidenceVerified": {
+              "description": "Spirogyra Butterfly Garden, San Jose, COSTA RICA",
+              "cameraLocation": [
+                9.940234,
+                -84.070129
+              ],
+              "captionScope": "San José region, garden, 2006; not a wild animal/location/service claim"
+            },
+            "creditForPublication": "Bernard DUPONT / CC BY-SA2.0",
+            "sourceCreatorFlickr": "https://www.flickr.com/photos/65695019@N07/9564832228"
+          },
+          "qaReason": "Aito perhosvalokuva Spirogyran perhospuutarhassa15.10.2006. Alkuperäinen Description Spirogyra Butterfly Garden, San Jose, COSTA RICA ja kamerapaikka9.940234,-84.070129 sitovat paikan kaupunkiseutuun; pelkkä maan nimi ei ole peruste. Kuvateksti rajautuu San Josén seudun puutarhaan ja vuoteen2006, ei luonnonvaraiseen yksilöön tai nykyiseen palvelulupaukseen. PHOTO voi olla lähteellä paikkaan sidottu luontoyksityiskohta. Siivet, tuntosarvet ja lehtipinnat luonnollisia; salamavalaistuksen kiilto on näkyvissä. Ei kasvoja, lisättyä tekstiä, vesileimaa tai kehystä."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Perhonen Spirogyran perhospuutarhassa San Josén seudulla vuonna 2006.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/sanjose/qa.json",
+        "fileSHA256": "4cf96b0b82f013fdde0d4c3bcf8eab27ea641ccaa781f880dc23c00a327438bf",
+        "item": {
+          "slot": "PHOTO",
+          "targetJsonPath": "$.valokuva",
+          "commonsFile": "King Swallowtail (Papilio thoas nealces) (9564832228).jpg",
+          "sha256": "f7fdf359c2b814c28bae0f4ba1ff0368ed034170c6d3a53221fd96a4d5ba95a8",
+          "verdict": "accepted",
+          "reason": "Aito perhosvalokuva Spirogyran perhospuutarhassa15.10.2006. Alkuperäinen Description Spirogyra Butterfly Garden, San Jose, COSTA RICA ja kamerapaikka9.940234,-84.070129 sitovat paikan kaupunkiseutuun; pelkkä maan nimi ei ole peruste. Kuvateksti rajautuu San Josén seudun puutarhaan ja vuoteen2006, ei luonnonvaraiseen yksilöön tai nykyiseen palvelulupaukseen. PHOTO voi olla lähteellä paikkaan sidottu luontoyksityiskohta. Siivet, tuntosarvet ja lehtipinnat luonnollisia; salamavalaistuksen kiilto on näkyvissä. Ei kasvoja, lisättyä tekstiä, vesileimaa tai kehystä.",
+          "evidence": {
+            "inputManifest": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/sanjose/cc-gap-selection.json",
+            "reviewer": "job-25 independent-image-QA",
+            "reviewedAt": "2026-10-12T20:33:20.941256+00:00",
+            "visualTool": "view_image",
+            "visualDetail": "original",
+            "localOriginal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/sanjose/cc-gap-evidence-job19/ead8412a3525608b.jpg",
+            "actualWidth": 1600,
+            "actualHeight": 1200,
+            "actualFormat": "JPEG",
+            "nativePixelWidth": 1600,
+            "nativePixelHeight": 1200,
+            "exifOrientation": 1,
+            "dimensionsConvention": "actualWidth/Height are correctly oriented display dimensions; native stored pixel dimensions are separately recorded",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:King_Swallowtail_(Papilio_thoas_nealces)_(9564832228).jpg",
+            "savedSourcePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/8573b2a33913c926fd8464db90cf15ed06a4e55ff3b40fa7f06ee055a2a464cb.html",
+            "savedSourceSHA256": "d592f50446b273e430831aa96ad1fbe2b49718b0f1a892dfcc53f17ad7df2c2f",
+            "authorVerified": "Bernard DUPONT from FRANCE",
+            "authorField": "Original Commons Author table, independently read; not inferred from uploader",
+            "licenseVerified": "CC BY-SA 2.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+            "captureDate": "15 October 2006, 21:39",
+            "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/sanjose/sisalto.json",
+            "sourceContentSHA256": "4f9ddd81f3a3baeecd3358fd4577ab40d420ba676e22619bcfffb612d8217813",
+            "captionFi": "Perhonen Spirogyran perhospuutarhassa San Josén seudulla vuonna 2006.",
+            "depictedWorkLayer": "Valokuvakerros: Author Bernard DUPONT from FRANCE ja CC BY-SA2.0Generic luettu alkuperäisestä Commons-sivusta; Flickr9564832228/berniedup sekä FlickreviewR:n5.6.2015lisenssivarmennus todettu. Josve05a on siirtäjä, ei valokuvatekijä. Erillinen teoskerros: elävä perhonen ja luonnollinen lehti, ei veistos, puutarharakennuksen teosjäljennös tai ihmisen kuvataideteos. Täsmäpuutarhan nimeä ei muuteta toiseksi retkikohteeksi eikä kuvaa kutsuta vuoden1873 tai nykyhetken näkymäksi.",
+            "duplicateInCity": false,
+            "sourceRevision": 1134151039,
+            "locationEvidenceVerified": {
+              "description": "Spirogyra Butterfly Garden, San Jose, COSTA RICA",
+              "cameraLocation": [
+                9.940234,
+                -84.070129
+              ],
+              "captionScope": "San José region, garden, 2006; not a wild animal/location/service claim"
+            },
+            "creditForPublication": "Bernard DUPONT / CC BY-SA2.0",
+            "sourceCreatorFlickr": "https://www.flickr.com/photos/65695019@N07/9564832228"
+          }
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/sanjose/qa.json",
+            "sha256": "4cf96b0b82f013fdde0d4c3bcf8eab27ea641ccaa781f880dc23c00a327438bf"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/sanjose/illustration-qa-extra.json",
+            "sha256": "20cd1ad9dbdef53c8620b54bfe006fbb09a5c5d383b687ea82c0c78ec9dd6e8b"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e11",
+        "city": "sanjose",
+        "slot": "PHOTO",
+        "targetJsonPath": "$.valokuva",
+        "commonsFile": "King Swallowtail (Papilio thoas nealces) (9564832228).jpg",
+        "sha256": "f7fdf359c2b814c28bae0f4ba1ff0368ed034170c6d3a53221fd96a4d5ba95a8",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:King_Swallowtail_(Papilio_thoas_nealces)_(9564832228).jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/d/dd/King_Swallowtail_%28Papilio_thoas_nealces%29_%289564832228%29.jpg",
+        "author": "Bernard DUPONT from FRANCE",
+        "license": "CC BY-SA 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+        "width": 1600,
+        "height": 1200,
+        "originalSHA256": "f7fdf359c2b814c28bae0f4ba1ff0368ed034170c6d3a53221fd96a4d5ba95a8",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/sanjose/photo-f7fdf359c2b814c28bae.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/sanjose/photo-f7fdf359c2b814c28bae.jpg",
+        "bytes": 593005,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T20:33:46.060759+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Bernard DUPONT from FRANCE, Commons (CC BY-SA 2.0)",
+        "selite": "Perhonen Spirogyran perhospuutarhassa San Josén seudulla vuonna 2006.",
+        "lyhyt": "Perhonen Spirogyran perhospuutarhassa San Josén seudulla vuonna 2006.",
+        "tiedosto": "King Swallowtail (Papilio thoas nealces) (9564832228).jpg",
+        "vuosi": "2006"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "f61775ade9593a3e794dd870aa8a0b05c256d99dccab6a17463a15020ab36733",
+      "targetAfterSHA256": "6370bf51e967b07459d556ff5067496c47c5767aae5791fa36e03fb76ae7fd4a",
+      "contextAfterSHA256": "6370bf51e967b07459d556ff5067496c47c5767aae5791fa36e03fb76ae7fd4a"
     },
     {
       "era": "e11",
@@ -2109,7 +2364,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/sanjose/qa.json",
-        "fileSHA256": "9485f5d294395ca8ff84933c9cee4d177fe3b3d86bff057c8d38b80f816860dc",
+        "fileSHA256": "4cf96b0b82f013fdde0d4c3bcf8eab27ea641ccaa781f880dc23c00a327438bf",
         "item": {
           "slot": "C1",
           "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
@@ -2159,7 +2414,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/sanjose/qa.json",
-            "sha256": "9485f5d294395ca8ff84933c9cee4d177fe3b3d86bff057c8d38b80f816860dc"
+            "sha256": "4cf96b0b82f013fdde0d4c3bcf8eab27ea641ccaa781f880dc23c00a327438bf"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/sanjose/illustration-qa-extra.json",
@@ -2234,7 +2489,7 @@
         "tiedosto": "San Jose, Costa Rica Astronaut Image.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "4f9ddd81f3a3baeecd3358fd4577ab40d420ba676e22619bcfffb612d8217813",
+      "sourceContentAfterSHA256": "f61775ade9593a3e794dd870aa8a0b05c256d99dccab6a17463a15020ab36733",
       "targetAfterSHA256": "de593d9a2f09cfa0e85b2f78d5ea4d44a74430a38aed021c93aed544266a1bc4",
       "contextAfterSHA256": "de593d9a2f09cfa0e85b2f78d5ea4d44a74430a38aed021c93aed544266a1bc4"
     }

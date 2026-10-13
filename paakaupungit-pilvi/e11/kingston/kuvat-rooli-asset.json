@@ -3,7 +3,7 @@
   "era": "e11",
   "city": "kingston",
   "authorization": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
-  "sourceContentAfterSHA256": "f9b89a396555b3f04baf049c201a547f65b0263355d1f76b075951e01e0e70e3",
+  "sourceContentAfterSHA256": "9fb18703b1b6a2fae44ee8fb860983df053fee5bdf7058387d3732f1ce2be99c",
   "assets": [
     {
       "era": "e11",
@@ -412,7 +412,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/kingston/qa.json",
-            "sha256": "a35b849755c94e0a0c266d9cff399cb17204e8eedb104aabb5f956f9eca0196b"
+            "sha256": "1ee742add7c24b9e212a53e0ebc4b56437298d199b6e3a7fbccc43e1be47ec63"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/kingston/illustration-qa-extra.json",
@@ -499,7 +499,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "f9b89a396555b3f04baf049c201a547f65b0263355d1f76b075951e01e0e70e3",
+      "sourceContentAfterSHA256": "9fb18703b1b6a2fae44ee8fb860983df053fee5bdf7058387d3732f1ce2be99c",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
       "contextAfterSHA256": "21c83ed3a79975f3da0414202a813f81f205f0d91b919fd075e19c97f143b57d"
     },
@@ -711,7 +711,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/kingston/qa.json",
-            "sha256": "a35b849755c94e0a0c266d9cff399cb17204e8eedb104aabb5f956f9eca0196b"
+            "sha256": "1ee742add7c24b9e212a53e0ebc4b56437298d199b6e3a7fbccc43e1be47ec63"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/kingston/illustration-qa-extra.json",
@@ -798,7 +798,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "f9b89a396555b3f04baf049c201a547f65b0263355d1f76b075951e01e0e70e3",
+      "sourceContentAfterSHA256": "9fb18703b1b6a2fae44ee8fb860983df053fee5bdf7058387d3732f1ce2be99c",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
       "contextAfterSHA256": "066f6558e83a427e21c15bbefd789846f263f396b438e78abd641bf7260ed674"
     },
@@ -1005,7 +1005,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/kingston/qa.json",
-            "sha256": "a35b849755c94e0a0c266d9cff399cb17204e8eedb104aabb5f956f9eca0196b"
+            "sha256": "1ee742add7c24b9e212a53e0ebc4b56437298d199b6e3a7fbccc43e1be47ec63"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/kingston/illustration-qa-extra.json",
@@ -1092,7 +1092,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "f9b89a396555b3f04baf049c201a547f65b0263355d1f76b075951e01e0e70e3",
+      "sourceContentAfterSHA256": "9fb18703b1b6a2fae44ee8fb860983df053fee5bdf7058387d3732f1ce2be99c",
       "targetAfterSHA256": "0df8b0f96e969917aac48b94bd8ed47fd4b6cf2b240c58fc259902b3534182a1",
       "contextAfterSHA256": "0df8b0f96e969917aac48b94bd8ed47fd4b6cf2b240c58fc259902b3534182a1"
     },
@@ -1299,7 +1299,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/kingston/qa.json",
-            "sha256": "a35b849755c94e0a0c266d9cff399cb17204e8eedb104aabb5f956f9eca0196b"
+            "sha256": "1ee742add7c24b9e212a53e0ebc4b56437298d199b6e3a7fbccc43e1be47ec63"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/kingston/illustration-qa-extra.json",
@@ -1386,7 +1386,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "f9b89a396555b3f04baf049c201a547f65b0263355d1f76b075951e01e0e70e3",
+      "sourceContentAfterSHA256": "9fb18703b1b6a2fae44ee8fb860983df053fee5bdf7058387d3732f1ce2be99c",
       "targetAfterSHA256": "9b54a40c834dc429d37e8607ffe333d405d8abe551858fa3100947fbbbc022a4",
       "contextAfterSHA256": "9b54a40c834dc429d37e8607ffe333d405d8abe551858fa3100947fbbbc022a4"
     },
@@ -1593,7 +1593,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/kingston/qa.json",
-            "sha256": "a35b849755c94e0a0c266d9cff399cb17204e8eedb104aabb5f956f9eca0196b"
+            "sha256": "1ee742add7c24b9e212a53e0ebc4b56437298d199b6e3a7fbccc43e1be47ec63"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/kingston/illustration-qa-extra.json",
@@ -1680,7 +1680,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "f9b89a396555b3f04baf049c201a547f65b0263355d1f76b075951e01e0e70e3",
+      "sourceContentAfterSHA256": "9fb18703b1b6a2fae44ee8fb860983df053fee5bdf7058387d3732f1ce2be99c",
       "targetAfterSHA256": "2512b804edba225f9c8fbd56fb920ce3ff146367a78e7f85ed52a3fb08b80e01",
       "contextAfterSHA256": "2512b804edba225f9c8fbd56fb920ce3ff146367a78e7f85ed52a3fb08b80e01"
     },
@@ -1887,7 +1887,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/kingston/qa.json",
-            "sha256": "a35b849755c94e0a0c266d9cff399cb17204e8eedb104aabb5f956f9eca0196b"
+            "sha256": "1ee742add7c24b9e212a53e0ebc4b56437298d199b6e3a7fbccc43e1be47ec63"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/kingston/illustration-qa-extra.json",
@@ -1974,7 +1974,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "f9b89a396555b3f04baf049c201a547f65b0263355d1f76b075951e01e0e70e3",
+      "sourceContentAfterSHA256": "9fb18703b1b6a2fae44ee8fb860983df053fee5bdf7058387d3732f1ce2be99c",
       "targetAfterSHA256": "0a175906294b8a9df23f1f5d7ae643e675fdd83399aeebd38d214ae8951e5e7e",
       "contextAfterSHA256": "0a175906294b8a9df23f1f5d7ae643e675fdd83399aeebd38d214ae8951e5e7e"
     },
@@ -2181,7 +2181,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/kingston/qa.json",
-            "sha256": "a35b849755c94e0a0c266d9cff399cb17204e8eedb104aabb5f956f9eca0196b"
+            "sha256": "1ee742add7c24b9e212a53e0ebc4b56437298d199b6e3a7fbccc43e1be47ec63"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/kingston/illustration-qa-extra.json",
@@ -2268,7 +2268,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "f9b89a396555b3f04baf049c201a547f65b0263355d1f76b075951e01e0e70e3",
+      "sourceContentAfterSHA256": "9fb18703b1b6a2fae44ee8fb860983df053fee5bdf7058387d3732f1ce2be99c",
       "targetAfterSHA256": "b413d8a563e09c3e3b5a7bf8becd34d33dd0caa948b5df077b07987dcb0dd7c2",
       "contextAfterSHA256": "b413d8a563e09c3e3b5a7bf8becd34d33dd0caa948b5df077b07987dcb0dd7c2"
     },
@@ -2434,7 +2434,29 @@
             "sourceDescriptionExact": "A picture of the Harbour View at the Palisadoes in Kingston, Jamaica, taken in May 2009.",
             "photoNotTraveler": true,
             "depictedWorkAssessment": "Luonnollinen ranta, vesi ja vuoristoinen horisontti pääaiheina; ei tunnistettavaa itsenäistä teospääaihetta.",
-            "manifestFragment": "cc-gap-selection.json"
+            "manifestFragment": "cc-gap-selection.json",
+            "currentContentVersionCheck": {
+              "reviewedContentSHA256": "518a0088c017671fc78592970253bbe9f2cbdce80eec5522b66f67de75721d03",
+              "currentContentSHA256": "f9b89a396555b3f04baf049c201a547f65b0263355d1f76b075951e01e0e70e3",
+              "checkedAt": "2026-10-12T20:36:39.473305+00:00",
+              "personallyViewedAgain": false,
+              "reviewedSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/c-integration/history/e11/kingston/518a0088c017671fc78592970253bbe9f2cbdce80eec5522b66f67de75721d03-sisalto.json",
+              "reviewedSnapshotSHA256": "518a0088c017671fc78592970253bbe9f2cbdce80eec5522b66f67de75721d03",
+              "matches": true,
+              "method": "exact archived content SHA and full nonmedia comparison",
+              "reviewedNonmediaSHA256": "87c6804643be16b9f51772c1172873a61e1e91b263ecc17af78936007ff97cf9",
+              "currentNonmediaSHA256": "87c6804643be16b9f51772c1172873a61e1e91b263ecc17af78936007ff97cf9",
+              "imageFieldsExcludedOnlyAtInventoriedSlots": true
+            },
+            "currentBindingMetadataCheck": {
+              "checkedAt": "2026-10-12T20:36:39.489018+00:00",
+              "contentSHA256": "f9b89a396555b3f04baf049c201a547f65b0263355d1f76b075951e01e0e70e3",
+              "commonsFile": "Jamaica Palisadoes Kingston; Harbor View Photo Katinka Zuchowicz Photography DSC 8572-2(2).jpg",
+              "captionFi": "Kingstonin Palisadoesin rantaa ja Harbor Viewn suunta toukokuussa 2009.",
+              "credit": "Katinka Zuchowicz Photography, Commons (CC BY-SA 3.0)",
+              "captionMatchesReviewed": true,
+              "personallyViewedAgain": false
+            }
           },
           "qaReason": "Aito Palisadoesin ranta ja Harbor Viewn suunta Kingstonissa sopivat PHOTO-paikkaan. Alkuperäinen Description nimeää täsmäpaikan, Author Katinka Zuchowicz Photography, Own work ja CC BY-SA 3.0 todettu. Toukokuun 2009 selite vastaa lähdettä. Alkuperäiset 2400×1608 mitat sekä SHA täsmäävät; ei tunnistettavia kasvoja, teospääaihetta tai vesileimaa."
         }
@@ -2450,7 +2472,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/kingston/qa.json",
-        "fileSHA256": "a35b849755c94e0a0c266d9cff399cb17204e8eedb104aabb5f956f9eca0196b",
+        "fileSHA256": "1ee742add7c24b9e212a53e0ebc4b56437298d199b6e3a7fbccc43e1be47ec63",
         "item": {
           "slot": "PHOTO",
           "targetJsonPath": "$.valokuva",
@@ -2548,7 +2570,29 @@
             "sourceDescriptionExact": "A picture of the Harbour View at the Palisadoes in Kingston, Jamaica, taken in May 2009.",
             "photoNotTraveler": true,
             "depictedWorkAssessment": "Luonnollinen ranta, vesi ja vuoristoinen horisontti pääaiheina; ei tunnistettavaa itsenäistä teospääaihetta.",
-            "manifestFragment": "cc-gap-selection.json"
+            "manifestFragment": "cc-gap-selection.json",
+            "currentContentVersionCheck": {
+              "reviewedContentSHA256": "518a0088c017671fc78592970253bbe9f2cbdce80eec5522b66f67de75721d03",
+              "currentContentSHA256": "f9b89a396555b3f04baf049c201a547f65b0263355d1f76b075951e01e0e70e3",
+              "checkedAt": "2026-10-12T20:36:39.473305+00:00",
+              "personallyViewedAgain": false,
+              "reviewedSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/c-integration/history/e11/kingston/518a0088c017671fc78592970253bbe9f2cbdce80eec5522b66f67de75721d03-sisalto.json",
+              "reviewedSnapshotSHA256": "518a0088c017671fc78592970253bbe9f2cbdce80eec5522b66f67de75721d03",
+              "matches": true,
+              "method": "exact archived content SHA and full nonmedia comparison",
+              "reviewedNonmediaSHA256": "87c6804643be16b9f51772c1172873a61e1e91b263ecc17af78936007ff97cf9",
+              "currentNonmediaSHA256": "87c6804643be16b9f51772c1172873a61e1e91b263ecc17af78936007ff97cf9",
+              "imageFieldsExcludedOnlyAtInventoriedSlots": true
+            },
+            "currentBindingMetadataCheck": {
+              "checkedAt": "2026-10-12T20:36:39.489018+00:00",
+              "contentSHA256": "f9b89a396555b3f04baf049c201a547f65b0263355d1f76b075951e01e0e70e3",
+              "commonsFile": "Jamaica Palisadoes Kingston; Harbor View Photo Katinka Zuchowicz Photography DSC 8572-2(2).jpg",
+              "captionFi": "Kingstonin Palisadoesin rantaa ja Harbor Viewn suunta toukokuussa 2009.",
+              "credit": "Katinka Zuchowicz Photography, Commons (CC BY-SA 3.0)",
+              "captionMatchesReviewed": true,
+              "personallyViewedAgain": false
+            }
           },
           "reviewedAt": "2026-10-12T20:15:13.495122+00:00",
           "sha256": "a4dd2aa111218028028f48cc667159599a9aa9d3a4a0698dabe0f89ea8539a51"
@@ -2556,7 +2600,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/kingston/qa.json",
-            "sha256": "a35b849755c94e0a0c266d9cff399cb17204e8eedb104aabb5f956f9eca0196b"
+            "sha256": "1ee742add7c24b9e212a53e0ebc4b56437298d199b6e3a7fbccc43e1be47ec63"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/kingston/illustration-qa-extra.json",
@@ -2633,9 +2677,745 @@
         "vuosi": "2009"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "f9b89a396555b3f04baf049c201a547f65b0263355d1f76b075951e01e0e70e3",
+      "sourceContentAfterSHA256": "9fb18703b1b6a2fae44ee8fb860983df053fee5bdf7058387d3732f1ce2be99c",
       "targetAfterSHA256": "e0d4b58ec2dc9ea2a24c06350fd85a08435dfe1de9f54edd0f6151572ec71ddf",
       "contextAfterSHA256": "e0d4b58ec2dc9ea2a24c06350fd85a08435dfe1de9f54edd0f6151572ec71ddf"
+    },
+    {
+      "era": "e11",
+      "city": "kingston",
+      "slot": "C1",
+      "type": "commons",
+      "assetID": "capital-cc-e11-kingston-c1-b3fc10255ba217d8",
+      "galleryImageID": "capital-cc-e11-kingston-c1-b3fc10255ba217d8",
+      "commonsFile": "Kingston, Jamaica.JPG",
+      "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "kansikuvat",
+        0
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/kingston/c1-b3fc10255ba217d8fb97.jpg",
+        "suora": true,
+        "lahde": "NASA Astronauts, Wikimedia Commons (PD)",
+        "selite": "Kingstonin kaupunkialue, satamalahti ja Palisadoes avaruusasemalta tammikuussa 2010.",
+        "lyhyt": "Kingstonin kaupunkialue, satamalahti ja Palisadoes avaruusasemalta tammikuussa 2010.",
+        "tiedosto": "Kingston, Jamaica.JPG"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "NASA Astronauts, Wikimedia Commons (PD)",
+        "selite": "Kingstonin kaupunkialue, satamalahti ja Palisadoes avaruusasemalta tammikuussa 2010.",
+        "lyhyt": "Kingstonin kaupunkialue, satamalahti ja Palisadoes avaruusasemalta tammikuussa 2010.",
+        "tiedosto": "Kingston, Jamaica.JPG"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/kingston/c1-b3fc10255ba217d8fb97.jpg",
+        "suora": true,
+        "lahde": "NASA Astronauts, Wikimedia Commons (PD)",
+        "selite": "Kingstonin kaupunkialue, satamalahti ja Palisadoes avaruusasemalta tammikuussa 2010.",
+        "lyhyt": "Kingstonin kaupunkialue, satamalahti ja Palisadoes avaruusasemalta tammikuussa 2010.",
+        "tiedosto": "Kingston, Jamaica.JPG"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "b3fc10255ba217d8fb97c8a965900010d6b0b0505ae5bb7468a70aa9c71430f9",
+      "exportSHA256": "b3fc10255ba217d8fb97c8a965900010d6b0b0505ae5bb7468a70aa9c71430f9",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/kingston/c1-b3fc10255ba217d8fb97.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/kingston/c1-b3fc10255ba217d8fb97.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/kingston/cc-gap-evidence-job19/6c9a675c2c39905f.jpg",
+      "dimensions": [
+        4256,
+        2832
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/kingston/sisalto.json",
+      "sourceContentSHA256": "f9b89a396555b3f04baf049c201a547f65b0263355d1f76b075951e01e0e70e3",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "subjectTitle": "Kingston",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "NASA Astronauts",
+        "license": "Public domain",
+        "licenseUrl": "https://commons.wikimedia.org/wiki/File:Kingston,_Jamaica.JPG#Licensing",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Kingston,_Jamaica.JPG",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/8/8c/Kingston%2C_Jamaica.JPG",
+        "rightsEvidence": {
+          "selection": {
+            "photo": "NASA Astronauts, nimenomainen Author, astronauttikuva ja Public domain -malline sekä NASAn lähdetietue.",
+            "workLayer": "Laaja maantieteellinen ilmakuva: satamalahti, kaupungin kattomassa, Palisadoesin kannas ja lentokenttä. Ei rakennusjulkisivun, veistoksen tai muraalin yksityiskohtaa. Lisäksi Jamaikan virallinen Copyright Act §74(1)-(3), JIPO-PDF sivu74, luettu: rakennusvalokuvien ja kappaleiden julkaisu sallittu. Teoskerrosta ei oletetaPD:ksi.",
+            "primarySource": "https://www.jipo.gov.jm/sites/default/files/PDF_Files/CopyrightAct.pdf",
+            "sourceEvidenceFile": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/kingston/cc-gap-evidence-job19/jamaica-copyright.pdf",
+            "location": "NASA Expedition22 / Kingston Jamaica, nimenomainen Commons Description.",
+            "timeScope": "22.1.2010, vuosi kuvatekstissä. Ei opaskäyttöä tai tuoreusväitettä."
+          },
+          "QA": {
+            "manifestPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/kingston/cc-gap-selection.json",
+            "candidateSnapshot": {
+              "slot": "C1",
+              "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
+              "type": "commons",
+              "commonsFile": "Kingston, Jamaica.JPG",
+              "sourcePage": "https://commons.wikimedia.org/wiki/File:Kingston,_Jamaica.JPG",
+              "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/8/8c/Kingston%2C_Jamaica.JPG",
+              "author": "NASA Astronauts",
+              "artistFieldSource": "Author table",
+              "license": "Public domain",
+              "licenseUrl": "https://commons.wikimedia.org/wiki/File:Kingston,_Jamaica.JPG#Licensing",
+              "width": 4256,
+              "height": 2832,
+              "captionFi": "Kingstonin kaupunkialue, satamalahti ja Palisadoes avaruusasemalta tammikuussa 2010.",
+              "date": "22 January 2010",
+              "sourceEvidence": {
+                "metadata": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/kingston/cc-gap-evidence-job19/6c9a675c2c39905f.metadata.json",
+                "snapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/e36e21a8f64e8a6d7cfcabf2b131bd3340822fba1731cd1f7a74ab327a78ea07.html",
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/kingston/sisalto.json",
+                "contentSha256": "f9b89a396555b3f04baf049c201a547f65b0263355d1f76b075951e01e0e70e3",
+                "description": "English: Astronaut Photo of Kingston, Jamaica taken from the International Space Station (ISS) during Expedition 22 on January 22, 2010.",
+                "source": "http://eol.jsc.nasa.gov/scripts/sseop/photo.pl?mission=ISS022&roll=E&frame=35461"
+              },
+              "rightsEvidence": {
+                "photo": "NASA Astronauts, nimenomainen Author, astronauttikuva ja Public domain -malline sekä NASAn lähdetietue.",
+                "workLayer": "Laaja maantieteellinen ilmakuva: satamalahti, kaupungin kattomassa, Palisadoesin kannas ja lentokenttä. Ei rakennusjulkisivun, veistoksen tai muraalin yksityiskohtaa. Lisäksi Jamaikan virallinen Copyright Act §74(1)-(3), JIPO-PDF sivu74, luettu: rakennusvalokuvien ja kappaleiden julkaisu sallittu. Teoskerrosta ei oletetaPD:ksi.",
+                "primarySource": "https://www.jipo.gov.jm/sites/default/files/PDF_Files/CopyrightAct.pdf",
+                "sourceEvidenceFile": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/kingston/cc-gap-evidence-job19/jamaica-copyright.pdf",
+                "location": "NASA Expedition22 / Kingston Jamaica, nimenomainen Commons Description.",
+                "timeScope": "22.1.2010, vuosi kuvatekstissä. Ei opaskäyttöä tai tuoreusväitettä."
+              },
+              "visualReview": {
+                "observed": "Native4256×2832 katsottu. Aito laaja ilmakuva kaupungista, satamalahdesta, kannaksesta ja ympäröivästä maastosta. Ei ihmisiä, tekstiä, vesileimaa tai erillistä tunnistettavaa taideteosta.",
+                "at": "2026-10-12T20:20:47.307095+00:00"
+              },
+              "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/kingston/cc-gap-evidence-job19/6c9a675c2c39905f.jpg",
+              "nativeSha256": "b3fc10255ba217d8fb97c8a965900010d6b0b0505ae5bb7468a70aa9c71430f9",
+              "sha256": "b3fc10255ba217d8fb97c8a965900010d6b0b0505ae5bb7468a70aa9c71430f9",
+              "claimRecord": "/Volumes/T7 4TB/ChatGPT-Codex-active/coordination/paakaupungit-claims/08391cff28146b17/e11/kingston/C1/owner.json",
+              "reviewState": "candidate",
+              "selectedAt": "2026-10-12T20:20:47.307406+00:00",
+              "selectedByJob": 19
+            },
+            "candidateFingerprintSHA256": "e2b62aff05829ff83b154bcb52d8511f5d375a4f5faa4f5a3c8434f80e818615",
+            "currentContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/kingston/sisalto.json",
+            "currentContentSHA256": "f9b89a396555b3f04baf049c201a547f65b0263355d1f76b075951e01e0e70e3",
+            "targetExists": true,
+            "currentTargetContent": {
+              "tiedosto": "",
+              "lyhyt": "",
+              "selite": "",
+              "lahde": ""
+            },
+            "visualObservation": "Katsoin paikallisen alkuperäisen kokoisen astronauttivalokuvan. Satamalahti, tiheä katu-/kaupunkiverkko, rinteet, lentoasema ja Palisadoesin kannas muodostavat laajan maantieteellisen kokonaisuuden. Osittaiset pienet pilvet eivät peitä kaupunkirakennetta. Ei ihmis- tai julkisivuyksityiskohtia, itsenäistä teosta, lisättyä tekstiä, NASA-logoa, vesileimaa tai kehystä. Tämä on aito paikkakuva eikä AI-panoraama.",
+            "reviewedAt": "2026-10-12T20:36:36.224317+00:00",
+            "pixelsViewed": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/kingston/cc-gap-evidence-job19/6c9a675c2c39905f.jpg",
+            "pixelSHA256": "b3fc10255ba217d8fb97c8a965900010d6b0b0505ae5bb7468a70aa9c71430f9",
+            "sourceEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/e36e21a8f64e8a6d7cfcabf2b131bd3340822fba1731cd1f7a74ab327a78ea07.html",
+            "sourceMetadata": {
+              "author": [
+                "NASA Astronauts"
+              ],
+              "licenses": [
+                "Public domain"
+              ],
+              "dimensions": [
+                4256,
+                2832
+              ],
+              "sourceSHA256": "35a6442f06e62758a6e65f16a83b6c252e36b6cfcdbe953a57a1a99748354ba1"
+            },
+            "sourceLicenseLinks": [
+              "https://creativecommons.org/publicdomain/zero/1.0/",
+              "https://creativecommons.org/licenses/by-sa/4.0/"
+            ],
+            "sourceDescriptionExcerpt": "Descriptions\":{\"search\":true,\"watchlist\":true,\"tagline\":true,\"nearby\":true},\"wgWMESchemaEditAttemptStepOversample\":false,\"wgWMEPageLength\":600,\"wbUserPreferredContentLanguages\":[\"en\"],\"wbUserSpecifiedLanguages\":[\"en\"],\"wbCopyright\":{\"version\":\"wikibase-1\",\"messageHtml\":\"By clicking \\\"publish\\\", you agree to the \\u003Ca href=\\\"/wiki/Commons:Copyrights\\\" class=\\\"mw-redirect\\\" title=\\\"Commons:Copyrights\\\"\\u003Eterms of use\\u003C/a\\u003E, and you irrevocably agree to release your contribution under the \\u003Ca rel=\\\"nofollow\\\" class=\\\"external text\\\" href=\\\"https://creativecommons.org/publicdomain/zero/1.0/\\\"\\u003ECreative Commons CC0 License\\u003C/a\\u003E.\"},\"wbBadgeItems\":[],\"wbMultiLingualStringLimit\":250,\"wbTaintedReferencesEnabled\":false,\"wbEntityId\":\"M17728807\",\"wgEditSubmitButtonLabelPublish\":true,\"wgTestKitchenUserExperiments\":{\"overrides\":[],\"enrolled\":[],\"assigned\":[],\"subject_ids\":[]},\"upwizPropertyTitles\":{\"P180\":\"Main subjects visible in this work\"},\"upwizPropertyPlaceholders\"",
+            "sourceDateExcerpt": "DateFormat\":\"dmy\",\"wgMonthNames\":[\"\",\"January\",\"February\",\"March\",\"April\",\"May\",\"June\",\"July\",\"August\",\"September\",\"October\",\"November\",\"December\"],\"wgRequestId\":\"d77840a0-5ea3-4e7f-9f59-e4e77f7d8690\",\"wgCanonicalNamespace\":\"File\",\"wgCanonicalSpecialPageName\":false,\"wgNamespaceNumber\":6,\"wgPageName\":\"File:Kingston,_Jamaica.JPG\",\"wgTitle\":\"Kingston, Jamaica.JPG\",\"wgCurRevisionId\":1228249709,\"wgRevisionId\":1228249709,\"wgArticleId\":17728807,\"wgIsArticle\":true,\"wgIsRedirect\":false,\"wgAction\":\"view\",\"wgUserName\":null,\"wgUserGroups\":[\"*\"],\"wgCategories\":[\"PD NASA\",\"Taken with Nikon D3\",\"Kingston, Jamaica\",\"Aerial photographs of cities\",\"ISS Expedition 22 Crew Earth Observations\",\"Satellite pictures of Jamaica\"],\"wgPageViewLanguage\":\"en\",\"wgPageContentLanguage\":\"en\",\"wgPageContentModel\":\"wikitext\",\"wgRelevantPageName\":\"File:Kingston,_Jamaica.JPG\",\"wgRelevantArticleId\":17728807,\"wgTempUserName\":null,\"wgIsProbablyEditable\":true,\"wgRelevantPageIsProbablyEditable\":true,\"wgRestrictionEdit\":[],\"wgR",
+            "sourceAuthorExcerpt": "Author NASA Astronauts Licensing [ edit ] Public domain Public domain false false This file is in the public domain in the United States because it was solely created by NASA . NASA copyright policy states that \"NASA material is not protected by copyright unless noted \". (See Template:PD-USGov , NASA copyright policy page or JPL Image Use Policy .) Warnings: Use of NASA logos , insignia and emblems is restricted per U.S. law 14 CFR 1221 . The NASA website hosts a large number of images from the Soviet / Russian space agency , and other non-American space agencies. These are not necessarily in the public domain. Materials based on Hubble Space Telescope data may be copyrighted if they are not explicitly produced by the STScI . [1] See also {{PD-Hubble}} and {{Cc-Hubble}} . The SOHO (ESA & NASA) joint project implies that all materials created by its probe are copyrighted and require permission for commercial non-educational use. [2] Images featured on the Astronomy Picture of the Day (A",
+            "sourceLicensingExcerpt": "Licensing 4 File history 5 File usage on Commons 6 File usage on other wikis 7 Metadata Toggle the table of contents File : Kingston, Jamaica.JPG File Discussion English Read Edit View history Tools Tools move to sidebar hide Actions Read Edit View history General What links here Related changes Permanent link Page information Cite this page Get shortened URL Concept URI Print/export Download as PDF Printable version In other projects Appearance move to sidebar hide From Wikimedia Commons, the free media repository Size of this preview: 960 × 639 pixels . Other resolutions: 330 × 220 pixels | 1,280 × 852 pixels | 3,840 × 2,555 pixels . Original file (4,256 × 2,832 pixels, file size: 1.42 MB, MIME type: image/jpeg ) File information Structured data Captions Captions English Add a one-line explanation of what this file represents Summary [ edit ] Description Kingston, Jamaica.JPG English: Astronaut Photo of Kingston, Jamaica taken from the International Space Station (ISS) during Expedit",
+            "sourceCameralocationExcerpt": null,
+            "actualDimensions": [
+              4256,
+              2832
+            ],
+            "photographedAt": "2010-01-22",
+            "sourceDescriptionExact": "Astronaut Photo of Kingston, Jamaica taken from the International Space Station during Expedition 22 on January 22, 2010.",
+            "photoSourceURL": "http://eol.jsc.nasa.gov/scripts/sseop/photo.pl?mission=ISS022&roll=E&frame=35461",
+            "sourcePublicDomainEvidence": "Named NASA Astronauts and PD-NASA template for material solely created by NASA; no third-party credit or NASA logo observed in this file.",
+            "depictedWorkAssessment": "Geographical city/harbour layout viewed from orbit. Individual building facades or independent artworks are not reproduced as distinct subjects.",
+            "manifestFragment": "cc-gap-selection.json"
+          },
+          "qaReason": "Aito NASA-astronauttikuva ISS-asemalta näyttää Kingstonin kaupunkialueen, satamalahden ja Palisadoesin laajana todellisena asetteluna, joten sopii C1-kanteen. Commonsin Author NASA Astronauts, alkuperäinen ISS022-E-35461-lähdetietue ja PD-NASA-perusta todettu. Natiivit 4256×2832 sekä SHA täsmäävät. Kuvauspäivä 22.1.2010 on selitteessä, ei tuoreusväitettä."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Kingstonin kaupunkialue, satamalahti ja Palisadoes avaruusasemalta tammikuussa 2010.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/kingston/qa.json",
+        "fileSHA256": "1ee742add7c24b9e212a53e0ebc4b56437298d199b6e3a7fbccc43e1be47ec63",
+        "item": {
+          "slot": "C1",
+          "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
+          "commonsFile": "Kingston, Jamaica.JPG",
+          "verdict": "accepted",
+          "reason": "Aito NASA-astronauttikuva ISS-asemalta näyttää Kingstonin kaupunkialueen, satamalahden ja Palisadoesin laajana todellisena asetteluna, joten sopii C1-kanteen. Commonsin Author NASA Astronauts, alkuperäinen ISS022-E-35461-lähdetietue ja PD-NASA-perusta todettu. Natiivit 4256×2832 sekä SHA täsmäävät. Kuvauspäivä 22.1.2010 on selitteessä, ei tuoreusväitettä.",
+          "evidence": {
+            "manifestPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/kingston/cc-gap-selection.json",
+            "candidateSnapshot": {
+              "slot": "C1",
+              "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
+              "type": "commons",
+              "commonsFile": "Kingston, Jamaica.JPG",
+              "sourcePage": "https://commons.wikimedia.org/wiki/File:Kingston,_Jamaica.JPG",
+              "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/8/8c/Kingston%2C_Jamaica.JPG",
+              "author": "NASA Astronauts",
+              "artistFieldSource": "Author table",
+              "license": "Public domain",
+              "licenseUrl": "https://commons.wikimedia.org/wiki/File:Kingston,_Jamaica.JPG#Licensing",
+              "width": 4256,
+              "height": 2832,
+              "captionFi": "Kingstonin kaupunkialue, satamalahti ja Palisadoes avaruusasemalta tammikuussa 2010.",
+              "date": "22 January 2010",
+              "sourceEvidence": {
+                "metadata": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/kingston/cc-gap-evidence-job19/6c9a675c2c39905f.metadata.json",
+                "snapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/e36e21a8f64e8a6d7cfcabf2b131bd3340822fba1731cd1f7a74ab327a78ea07.html",
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/kingston/sisalto.json",
+                "contentSha256": "f9b89a396555b3f04baf049c201a547f65b0263355d1f76b075951e01e0e70e3",
+                "description": "English: Astronaut Photo of Kingston, Jamaica taken from the International Space Station (ISS) during Expedition 22 on January 22, 2010.",
+                "source": "http://eol.jsc.nasa.gov/scripts/sseop/photo.pl?mission=ISS022&roll=E&frame=35461"
+              },
+              "rightsEvidence": {
+                "photo": "NASA Astronauts, nimenomainen Author, astronauttikuva ja Public domain -malline sekä NASAn lähdetietue.",
+                "workLayer": "Laaja maantieteellinen ilmakuva: satamalahti, kaupungin kattomassa, Palisadoesin kannas ja lentokenttä. Ei rakennusjulkisivun, veistoksen tai muraalin yksityiskohtaa. Lisäksi Jamaikan virallinen Copyright Act §74(1)-(3), JIPO-PDF sivu74, luettu: rakennusvalokuvien ja kappaleiden julkaisu sallittu. Teoskerrosta ei oletetaPD:ksi.",
+                "primarySource": "https://www.jipo.gov.jm/sites/default/files/PDF_Files/CopyrightAct.pdf",
+                "sourceEvidenceFile": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/kingston/cc-gap-evidence-job19/jamaica-copyright.pdf",
+                "location": "NASA Expedition22 / Kingston Jamaica, nimenomainen Commons Description.",
+                "timeScope": "22.1.2010, vuosi kuvatekstissä. Ei opaskäyttöä tai tuoreusväitettä."
+              },
+              "visualReview": {
+                "observed": "Native4256×2832 katsottu. Aito laaja ilmakuva kaupungista, satamalahdesta, kannaksesta ja ympäröivästä maastosta. Ei ihmisiä, tekstiä, vesileimaa tai erillistä tunnistettavaa taideteosta.",
+                "at": "2026-10-12T20:20:47.307095+00:00"
+              },
+              "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/kingston/cc-gap-evidence-job19/6c9a675c2c39905f.jpg",
+              "nativeSha256": "b3fc10255ba217d8fb97c8a965900010d6b0b0505ae5bb7468a70aa9c71430f9",
+              "sha256": "b3fc10255ba217d8fb97c8a965900010d6b0b0505ae5bb7468a70aa9c71430f9",
+              "claimRecord": "/Volumes/T7 4TB/ChatGPT-Codex-active/coordination/paakaupungit-claims/08391cff28146b17/e11/kingston/C1/owner.json",
+              "reviewState": "candidate",
+              "selectedAt": "2026-10-12T20:20:47.307406+00:00",
+              "selectedByJob": 19
+            },
+            "candidateFingerprintSHA256": "e2b62aff05829ff83b154bcb52d8511f5d375a4f5faa4f5a3c8434f80e818615",
+            "currentContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/kingston/sisalto.json",
+            "currentContentSHA256": "f9b89a396555b3f04baf049c201a547f65b0263355d1f76b075951e01e0e70e3",
+            "targetExists": true,
+            "currentTargetContent": {
+              "tiedosto": "",
+              "lyhyt": "",
+              "selite": "",
+              "lahde": ""
+            },
+            "visualObservation": "Katsoin paikallisen alkuperäisen kokoisen astronauttivalokuvan. Satamalahti, tiheä katu-/kaupunkiverkko, rinteet, lentoasema ja Palisadoesin kannas muodostavat laajan maantieteellisen kokonaisuuden. Osittaiset pienet pilvet eivät peitä kaupunkirakennetta. Ei ihmis- tai julkisivuyksityiskohtia, itsenäistä teosta, lisättyä tekstiä, NASA-logoa, vesileimaa tai kehystä. Tämä on aito paikkakuva eikä AI-panoraama.",
+            "reviewedAt": "2026-10-12T20:36:36.224317+00:00",
+            "pixelsViewed": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/kingston/cc-gap-evidence-job19/6c9a675c2c39905f.jpg",
+            "pixelSHA256": "b3fc10255ba217d8fb97c8a965900010d6b0b0505ae5bb7468a70aa9c71430f9",
+            "sourceEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/e36e21a8f64e8a6d7cfcabf2b131bd3340822fba1731cd1f7a74ab327a78ea07.html",
+            "sourceMetadata": {
+              "author": [
+                "NASA Astronauts"
+              ],
+              "licenses": [
+                "Public domain"
+              ],
+              "dimensions": [
+                4256,
+                2832
+              ],
+              "sourceSHA256": "35a6442f06e62758a6e65f16a83b6c252e36b6cfcdbe953a57a1a99748354ba1"
+            },
+            "sourceLicenseLinks": [
+              "https://creativecommons.org/publicdomain/zero/1.0/",
+              "https://creativecommons.org/licenses/by-sa/4.0/"
+            ],
+            "sourceDescriptionExcerpt": "Descriptions\":{\"search\":true,\"watchlist\":true,\"tagline\":true,\"nearby\":true},\"wgWMESchemaEditAttemptStepOversample\":false,\"wgWMEPageLength\":600,\"wbUserPreferredContentLanguages\":[\"en\"],\"wbUserSpecifiedLanguages\":[\"en\"],\"wbCopyright\":{\"version\":\"wikibase-1\",\"messageHtml\":\"By clicking \\\"publish\\\", you agree to the \\u003Ca href=\\\"/wiki/Commons:Copyrights\\\" class=\\\"mw-redirect\\\" title=\\\"Commons:Copyrights\\\"\\u003Eterms of use\\u003C/a\\u003E, and you irrevocably agree to release your contribution under the \\u003Ca rel=\\\"nofollow\\\" class=\\\"external text\\\" href=\\\"https://creativecommons.org/publicdomain/zero/1.0/\\\"\\u003ECreative Commons CC0 License\\u003C/a\\u003E.\"},\"wbBadgeItems\":[],\"wbMultiLingualStringLimit\":250,\"wbTaintedReferencesEnabled\":false,\"wbEntityId\":\"M17728807\",\"wgEditSubmitButtonLabelPublish\":true,\"wgTestKitchenUserExperiments\":{\"overrides\":[],\"enrolled\":[],\"assigned\":[],\"subject_ids\":[]},\"upwizPropertyTitles\":{\"P180\":\"Main subjects visible in this work\"},\"upwizPropertyPlaceholders\"",
+            "sourceDateExcerpt": "DateFormat\":\"dmy\",\"wgMonthNames\":[\"\",\"January\",\"February\",\"March\",\"April\",\"May\",\"June\",\"July\",\"August\",\"September\",\"October\",\"November\",\"December\"],\"wgRequestId\":\"d77840a0-5ea3-4e7f-9f59-e4e77f7d8690\",\"wgCanonicalNamespace\":\"File\",\"wgCanonicalSpecialPageName\":false,\"wgNamespaceNumber\":6,\"wgPageName\":\"File:Kingston,_Jamaica.JPG\",\"wgTitle\":\"Kingston, Jamaica.JPG\",\"wgCurRevisionId\":1228249709,\"wgRevisionId\":1228249709,\"wgArticleId\":17728807,\"wgIsArticle\":true,\"wgIsRedirect\":false,\"wgAction\":\"view\",\"wgUserName\":null,\"wgUserGroups\":[\"*\"],\"wgCategories\":[\"PD NASA\",\"Taken with Nikon D3\",\"Kingston, Jamaica\",\"Aerial photographs of cities\",\"ISS Expedition 22 Crew Earth Observations\",\"Satellite pictures of Jamaica\"],\"wgPageViewLanguage\":\"en\",\"wgPageContentLanguage\":\"en\",\"wgPageContentModel\":\"wikitext\",\"wgRelevantPageName\":\"File:Kingston,_Jamaica.JPG\",\"wgRelevantArticleId\":17728807,\"wgTempUserName\":null,\"wgIsProbablyEditable\":true,\"wgRelevantPageIsProbablyEditable\":true,\"wgRestrictionEdit\":[],\"wgR",
+            "sourceAuthorExcerpt": "Author NASA Astronauts Licensing [ edit ] Public domain Public domain false false This file is in the public domain in the United States because it was solely created by NASA . NASA copyright policy states that \"NASA material is not protected by copyright unless noted \". (See Template:PD-USGov , NASA copyright policy page or JPL Image Use Policy .) Warnings: Use of NASA logos , insignia and emblems is restricted per U.S. law 14 CFR 1221 . The NASA website hosts a large number of images from the Soviet / Russian space agency , and other non-American space agencies. These are not necessarily in the public domain. Materials based on Hubble Space Telescope data may be copyrighted if they are not explicitly produced by the STScI . [1] See also {{PD-Hubble}} and {{Cc-Hubble}} . The SOHO (ESA & NASA) joint project implies that all materials created by its probe are copyrighted and require permission for commercial non-educational use. [2] Images featured on the Astronomy Picture of the Day (A",
+            "sourceLicensingExcerpt": "Licensing 4 File history 5 File usage on Commons 6 File usage on other wikis 7 Metadata Toggle the table of contents File : Kingston, Jamaica.JPG File Discussion English Read Edit View history Tools Tools move to sidebar hide Actions Read Edit View history General What links here Related changes Permanent link Page information Cite this page Get shortened URL Concept URI Print/export Download as PDF Printable version In other projects Appearance move to sidebar hide From Wikimedia Commons, the free media repository Size of this preview: 960 × 639 pixels . Other resolutions: 330 × 220 pixels | 1,280 × 852 pixels | 3,840 × 2,555 pixels . Original file (4,256 × 2,832 pixels, file size: 1.42 MB, MIME type: image/jpeg ) File information Structured data Captions Captions English Add a one-line explanation of what this file represents Summary [ edit ] Description Kingston, Jamaica.JPG English: Astronaut Photo of Kingston, Jamaica taken from the International Space Station (ISS) during Expedit",
+            "sourceCameralocationExcerpt": null,
+            "actualDimensions": [
+              4256,
+              2832
+            ],
+            "photographedAt": "2010-01-22",
+            "sourceDescriptionExact": "Astronaut Photo of Kingston, Jamaica taken from the International Space Station during Expedition 22 on January 22, 2010.",
+            "photoSourceURL": "http://eol.jsc.nasa.gov/scripts/sseop/photo.pl?mission=ISS022&roll=E&frame=35461",
+            "sourcePublicDomainEvidence": "Named NASA Astronauts and PD-NASA template for material solely created by NASA; no third-party credit or NASA logo observed in this file.",
+            "depictedWorkAssessment": "Geographical city/harbour layout viewed from orbit. Individual building facades or independent artworks are not reproduced as distinct subjects.",
+            "manifestFragment": "cc-gap-selection.json"
+          },
+          "reviewedAt": "2026-10-12T20:36:36.285435+00:00",
+          "sha256": "b3fc10255ba217d8fb97c8a965900010d6b0b0505ae5bb7468a70aa9c71430f9"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/kingston/qa.json",
+            "sha256": "1ee742add7c24b9e212a53e0ebc4b56437298d199b6e3a7fbccc43e1be47ec63"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/kingston/illustration-qa-extra.json",
+            "sha256": "a8807109eb98d9b9c07ba96de91773c2ddb63a58e0d7c7720e11cca7c87d4cc6"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e11",
+        "city": "kingston",
+        "slot": "C1",
+        "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
+        "commonsFile": "Kingston, Jamaica.JPG",
+        "sha256": "b3fc10255ba217d8fb97c8a965900010d6b0b0505ae5bb7468a70aa9c71430f9",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Kingston,_Jamaica.JPG",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/8/8c/Kingston%2C_Jamaica.JPG",
+        "author": "NASA Astronauts",
+        "license": "Public domain",
+        "licenseUrl": "https://commons.wikimedia.org/wiki/File:Kingston,_Jamaica.JPG#Licensing",
+        "width": 4256,
+        "height": 2832,
+        "originalSHA256": "b3fc10255ba217d8fb97c8a965900010d6b0b0505ae5bb7468a70aa9c71430f9",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/kingston/c1-b3fc10255ba217d8fb97.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/kingston/c1-b3fc10255ba217d8fb97.jpg",
+        "bytes": 1488828,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T20:37:42.751090+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "NASA Astronauts, Wikimedia Commons (PD)",
+        "selite": "Kingstonin kaupunkialue, satamalahti ja Palisadoes avaruusasemalta tammikuussa 2010.",
+        "lyhyt": "Kingstonin kaupunkialue, satamalahti ja Palisadoes avaruusasemalta tammikuussa 2010.",
+        "tiedosto": "Kingston, Jamaica.JPG"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "9fb18703b1b6a2fae44ee8fb860983df053fee5bdf7058387d3732f1ce2be99c",
+      "targetAfterSHA256": "0b32ed3aebb41d0b3c7a3816f2569b6a3af170e4e791c92c777e2db628633a7e",
+      "contextAfterSHA256": "0b32ed3aebb41d0b3c7a3816f2569b6a3af170e4e791c92c777e2db628633a7e"
+    },
+    {
+      "era": "e11",
+      "city": "kingston",
+      "slot": "K1",
+      "type": "commons",
+      "assetID": "capital-cc-e11-kingston-k1-17f497e154ad7bf9",
+      "galleryImageID": "capital-cc-e11-kingston-k1-17f497e154ad7bf9",
+      "commonsFile": "Fort Port Royal Jamaica.JPG",
+      "targetJsonPath": "$.kaupunkilehti[0].nostot[0]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "nostot",
+        0
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/kingston/k1-17f497e154ad7bf9ef5d.jpg",
+        "suora": true,
+        "lahde": "Raychristofer, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Port Royalin linnoituksen tiilimuurit kuuluvat Kingstonin satamaseudun historiaan. Valokuva vuodelta 2011.",
+        "lyhyt": "Port Royalin linnoituksen tiilimuurit kuuluvat Kingstonin satamaseudun historiaan.",
+        "tiedosto": "Fort Port Royal Jamaica.JPG"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Raychristofer, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Port Royalin linnoituksen tiilimuurit kuuluvat Kingstonin satamaseudun historiaan. Valokuva vuodelta 2011.",
+        "lyhyt": "Port Royalin linnoituksen tiilimuurit kuuluvat Kingstonin satamaseudun historiaan.",
+        "tiedosto": "Fort Port Royal Jamaica.JPG"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/kingston/k1-17f497e154ad7bf9ef5d.jpg",
+        "suora": true,
+        "lahde": "Raychristofer, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Port Royalin linnoituksen tiilimuurit kuuluvat Kingstonin satamaseudun historiaan. Valokuva vuodelta 2011.",
+        "lyhyt": "Port Royalin linnoituksen tiilimuurit kuuluvat Kingstonin satamaseudun historiaan.",
+        "tiedosto": "Fort Port Royal Jamaica.JPG"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "17f497e154ad7bf9ef5dc1be56d839bc3f2072218890d786ded241bac25386e1",
+      "exportSHA256": "17f497e154ad7bf9ef5dc1be56d839bc3f2072218890d786ded241bac25386e1",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/kingston/k1-17f497e154ad7bf9ef5d.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/kingston/k1-17f497e154ad7bf9ef5d.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/commons-originals/e11/kingston/2f9d4f1d5dca0989440341259c880575a82d48b9ad25ac6416dcfa434cf36eab.jpg",
+      "dimensions": [
+        3456,
+        2592
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/kingston/sisalto.json",
+      "sourceContentSHA256": "f9b89a396555b3f04baf049c201a547f65b0263355d1f76b075951e01e0e70e3",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "1a96a7e9e0137a6ea4e968a9cd717c998d6c231f4b9c773500954955bc689be8",
+        "semanticContextSHA256": "1a96a7e9e0137a6ea4e968a9cd717c998d6c231f4b9c773500954955bc689be8",
+        "subjectTitle": "Kaupungin alku oli telttaleiri",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Raychristofer",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Fort_Port_Royal_Jamaica.JPG",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Fort_Port_Royal_Jamaica.JPG",
+        "rightsEvidence": {
+          "selection": {
+            "photo": "Nimenomainen Commons Author/Artist ja valokuvan vapaa lisenssimalline tarkistettu; ei uploaderista päätelty tekijä.",
+            "workLayer": "Port Royalin aito linnoituksen ulkokuva, historianoston Port Royal / Kingston -tausta. Jamaikan JIPO Copyright Act 74(1)(a), 74(2)(b) ja 74(3): rakennusten valokuvaaminen ja tällaisen valokuvan kappaleiden julkaisu. Oma säännöstekstin luku paikallisesta alkuperäisen JIPO-PDF:n tekstiversiosta; ei PD-väitettä rakennuksen iästä. Ei veistosta tai muraalia kuvan pääaiheena.",
+            "sources": [
+              "https://www.jipo.gov.jm/sites/default/files/PDF_Files/CopyrightAct.pdf",
+              "https://commons.wikimedia.org/wiki/File:Fort_Port_Royal_Jamaica.JPG"
+            ],
+            "visualReview": "Oma katselu: nurmi ja linnoituksen tiilinen ulkomuuri; ei ihmisiä, overlay-tekstiä, vesileimaa/kehystä tai mainos-/pakkausaihetta.",
+            "reuse": "Ei tiedostonimeä, alaviivamuotoa tai URL-enkoodattua nimeä e11/js:ssä; ei samaa tiedostoa kaupungin omassa tai CC-gap-valinnassa.",
+            "sourceEvidenceFile": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/kingston/cc-gap-evidence-job19/jamaica-copyright.pdf",
+            "nativeVisualReview": "NASin alkuperäinen avattu ja katsottu. Ei tunnistettavia kasvopiirteitä, overlay-tekstiä tai vesileimaa; airport-kuvan näyttöresoluutio4004x2496 (lähde4085x2546), muut natiivimitoissa."
+          },
+          "QA": {
+            "manifestPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/kingston/cc-selection.json",
+            "candidateSnapshot": {
+              "slot": "K1",
+              "targetJsonPath": "$.kaupunkilehti[0].nostot[0]",
+              "type": "commons",
+              "commonsFile": "Fort Port Royal Jamaica.JPG",
+              "sourcePage": "https://commons.wikimedia.org/wiki/File:Fort_Port_Royal_Jamaica.JPG",
+              "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Fort_Port_Royal_Jamaica.JPG",
+              "author": "Raychristofer",
+              "license": "CC BY-SA 4.0",
+              "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+              "width": 3456,
+              "height": 2592,
+              "captureDate": "14 November 2011, 15:04:15",
+              "captionFi": "Port Royalin linnoituksen tiilimuurit kuuluvat Kingstonin satamaseudun historiaan. Valokuva vuodelta 2011.",
+              "rightsEvidence": {
+                "photo": "Nimenomainen Commons Author/Artist ja valokuvan vapaa lisenssimalline tarkistettu; ei uploaderista päätelty tekijä.",
+                "workLayer": "Port Royalin aito linnoituksen ulkokuva, historianoston Port Royal / Kingston -tausta. Jamaikan JIPO Copyright Act 74(1)(a), 74(2)(b) ja 74(3): rakennusten valokuvaaminen ja tällaisen valokuvan kappaleiden julkaisu. Oma säännöstekstin luku paikallisesta alkuperäisen JIPO-PDF:n tekstiversiosta; ei PD-väitettä rakennuksen iästä. Ei veistosta tai muraalia kuvan pääaiheena.",
+                "sources": [
+                  "https://www.jipo.gov.jm/sites/default/files/PDF_Files/CopyrightAct.pdf",
+                  "https://commons.wikimedia.org/wiki/File:Fort_Port_Royal_Jamaica.JPG"
+                ],
+                "visualReview": "Oma katselu: nurmi ja linnoituksen tiilinen ulkomuuri; ei ihmisiä, overlay-tekstiä, vesileimaa/kehystä tai mainos-/pakkausaihetta.",
+                "reuse": "Ei tiedostonimeä, alaviivamuotoa tai URL-enkoodattua nimeä e11/js:ssä; ei samaa tiedostoa kaupungin omassa tai CC-gap-valinnassa.",
+                "sourceEvidenceFile": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/kingston/cc-gap-evidence-job19/jamaica-copyright.pdf",
+                "nativeVisualReview": "NASin alkuperäinen avattu ja katsottu. Ei tunnistettavia kasvopiirteitä, overlay-tekstiä tai vesileimaa; airport-kuvan näyttöresoluutio4004x2496 (lähde4085x2546), muut natiivimitoissa."
+              },
+              "metadataPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/kingston/cc-work/4cbdfbb61898-meta.json",
+              "previewPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/kingston/cc-work/4cbdfbb61898-preview.jpg",
+              "reviewState": "candidate",
+              "nasOriginalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/kingston/cc-work/4cbdfbb61898-original.jpg",
+              "originalSha256": "17f497e154ad7bf9ef5dc1be56d839bc3f2072218890d786ded241bac25386e1",
+              "originalBytes": 4607981
+            },
+            "candidateFingerprintSHA256": "4269d0614e661674e677fe14624c28f23fce5c31317dfc6dbb55ed5c404aba7d",
+            "currentContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/kingston/sisalto.json",
+            "currentContentSHA256": "f9b89a396555b3f04baf049c201a547f65b0263355d1f76b075951e01e0e70e3",
+            "targetExists": true,
+            "currentTargetContent": {
+              "otsikko": "Kaupungin alku oli telttaleiri",
+              "teksti": "Kingston perustettiin 1600-luvun lopulla, kun maanjäristys oli tuhonnut Port Royalia. Selviytyjät asettuivat aluksi rannalle telttaleiriin. Uuden kaupungin suunnitelman piirsi maanmittari John Goffe, jonka ruutukaavaa rajasivat North-, East-, West- ja Harbour-kadut. Sataman ja saaren sisäosien väliset yhteydet kuuluivat suunnitelman tarkoitukseen. Kingstonin alku ei siis ollut yksi valmis palatsi tai juhlallinen pääkaupungin avaus, vaan ihmisten uusi asuinpaikka ja sille vähitellen rakentunut kaupunkiverkko.",
+              "tiedosto": "",
+              "lyhyt": "",
+              "selite": "",
+              "lahde": "",
+              "wiki": "Kingston, Jamaica"
+            },
+            "visualObservation": "Katsoin paikallisen 3456×2592 alkuperäisen. Tiilinen linnoituksen ulkomuuri, ampuma-aukot ja pieni katettu vartiorakenne näkyvät nurmikon takana. Ei yksilöitäviä kasvoja, veistosta, muraalia, lisättyä tekstiä, vesileimaa tai kehystä. Kuva ei väitä vuoden 1692 maanjäristyksen hetkeä eikä alkuperäistä telttaleiriä; vuonna 2011 kuvattu Fort Charles kuuluu rehellisesti Port Royalin historialliseen taustaan.",
+            "reviewedAt": "2026-10-12T20:36:35.780538+00:00",
+            "pixelsViewed": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/kingston/cc-work/4cbdfbb61898-original.jpg",
+            "pixelSHA256": "17f497e154ad7bf9ef5dc1be56d839bc3f2072218890d786ded241bac25386e1",
+            "sourceEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/d0323dc1a18e6a59b9c0e732b697f3f6a931ce04b2cad64846a9cb51df8acde7.html",
+            "sourceMetadata": {
+              "author": [
+                "Raychristofer"
+              ],
+              "licenses": [
+                "CC BY-SA 4.0"
+              ],
+              "dimensions": [
+                3456,
+                2592
+              ],
+              "sourceSHA256": "90347cc059e5124575e908606d55da7f7b745c4e36c0628cac7da0df76cc4c40"
+            },
+            "sourceLicenseLinks": [
+              "//creativecommons.org/licenses/by-sa/4.0/deed.en",
+              "https://creativecommons.org/share-your-work/licensing-considerations/compatible-licenses",
+              "https://creativecommons.org/publicdomain/zero/1.0/",
+              "https://creativecommons.org/licenses/by-sa/4.0/"
+            ],
+            "sourceDescriptionExcerpt": "Descriptions\":{\"search\":true,\"watchlist\":true,\"tagline\":true,\"nearby\":true},\"wgWMESchemaEditAttemptStepOversample\":false,\"wgWMEPageLength\":400,\"wbUserPreferredContentLanguages\":[\"en\"],\"wbUserSpecifiedLanguages\":[\"en\"],\"wbCopyright\":{\"version\":\"wikibase-1\",\"messageHtml\":\"By clicking \\\"publish\\\", you agree to the \\u003Ca href=\\\"/wiki/Commons:Copyrights\\\" class=\\\"mw-redirect\\\" title=\\\"Commons:Copyrights\\\"\\u003Eterms of use\\u003C/a\\u003E, and you irrevocably agree to release your contribution under the \\u003Ca rel=\\\"nofollow\\\" class=\\\"external text\\\" href=\\\"https://creativecommons.org/publicdomain/zero/1.0/\\\"\\u003ECreative Commons CC0 License\\u003C/a\\u003E.\"},\"wbBadgeItems\":[],\"wbMultiLingualStringLimit\":250,\"wbTaintedReferencesEnabled\":false,\"wbEntityId\":\"M41219240\",\"wgEditSubmitButtonLabelPublish\":true,\"wgTestKitchenUserExperiments\":{\"overrides\":[],\"enrolled\":[],\"assigned\":[],\"subject_ids\":[]},\"upwizPropertyTitles\":{\"P180\":\"Main subjects visible in this work\"},\"upwizPropertyPlaceholders\"",
+            "sourceDateExcerpt": "DateFormat\":\"dmy\",\"wgMonthNames\":[\"\",\"January\",\"February\",\"March\",\"April\",\"May\",\"June\",\"July\",\"August\",\"September\",\"October\",\"November\",\"December\"],\"wgRequestId\":\"8c5fce62-9c93-4561-b10a-4203b66d9bf5\",\"wgCanonicalNamespace\":\"File\",\"wgCanonicalSpecialPageName\":false,\"wgNamespaceNumber\":6,\"wgPageName\":\"File:Fort_Port_Royal_Jamaica.JPG\",\"wgTitle\":\"Fort Port Royal Jamaica.JPG\",\"wgCurRevisionId\":1258009117,\"wgRevisionId\":1258009117,\"wgArticleId\":41219240,\"wgIsArticle\":true,\"wgIsRedirect\":false,\"wgAction\":\"view\",\"wgUserName\":null,\"wgUserGroups\":[\"*\"],\"wgCategories\":[\"Files with derivative versions\",\"CC-BY-SA-4.0\",\"Self-published work\",\"Port Royal\",\"Forts in Jamaica\"],\"wgPageViewLanguage\":\"en\",\"wgPageContentLanguage\":\"en\",\"wgPageContentModel\":\"wikitext\",\"wgRelevantPageName\":\"File:Fort_Port_Royal_Jamaica.JPG\",\"wgRelevantArticleId\":41219240,\"wgTempUserName\":null,\"wgIsProbablyEditable\":true,\"wgRelevantPageIsProbablyEditable\":true,\"wgRestrictionEdit\":[],\"wgRestrictionMove\":[],\"wgRestrictionUpload",
+            "sourceAuthorExcerpt": "Author Raychristofer Other versions Derivative works of this file: Port Royal in Tranquility.jpg : Licensing [ edit ] I, the copyright holder of this work, hereby publish it under the following license: This file is licensed under the Creative Commons Attribution-Share Alike 4.0 International license. You are free: to share – to copy, distribute and transmit the work to remix – to adapt the work Under the following conditions: attribution – You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use. share alike – If you remix, transform, or build upon the material, you must distribute your contributions under the same or compatible license as the original. https://creativecommons.org/licenses/by-sa/4.0 CC BY-SA 4.0 Creative Commons Attribution-Share Alike 4.0 true true File history Click on a date/time to view the file as it appeared at",
+            "sourceLicensingExcerpt": "Licensing 4 File history 5 File usage on Commons 6 File usage on other wikis 7 Metadata Toggle the table of contents File : Fort Port Royal Jamaica.JPG File Discussion English Read Edit View history Tools Tools move to sidebar hide Actions Read Edit View history General What links here Related changes Permanent link Page information Cite this page Get shortened URL Concept URI Print/export Download as PDF Printable version In other projects Appearance move to sidebar hide From Wikimedia Commons, the free media repository Size of this preview: 960 × 720 pixels . Other resolutions: 330 × 248 pixels | 1,280 × 960 pixels | 3,456 × 2,592 pixels . Original file (3,456 × 2,592 pixels, file size: 4.39 MB, MIME type: image/jpeg ) File information Structured data Captions Captions English Add a one-line explanation of what this file represents Summary [ edit ] Description Fort Port Royal Jamaica.JPG English: Time seems to stand still for the Impregnable Fort Charles at Port Royal, Jamaica. Date ",
+            "sourceCameralocationExcerpt": null,
+            "actualDimensions": [
+              3456,
+              2592
+            ],
+            "photographedAt": "2011-11-14",
+            "sourceDescriptionExact": "Time seems to stand still for the Impregnable Fort Charles at Port Royal, Jamaica.",
+            "depictedWorkAssessment": "Todellinen linnoituksen ulkorakennus. JIPO Copyright Act §74(1)(a) buildings; §74(2)(b) photographs; §74(3) public issue of such copies. Sovellettu tähän rakennusvalokuvaan, ei rakennusiästä pääteltyä PD:tä tai oletettua koko maan vapautusta. Ei erillistä nykytaideteosta kuvassa.",
+            "primaryLegalSource": {
+              "url": "https://www.jipo.gov.jm/sites/default/files/PDF_Files/CopyrightAct.pdf",
+              "pdfPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/kingston/cc-gap-evidence-job19/jamaica-copyright.pdf",
+              "pdfSHA256": "745b495b9729d0563209301836c58f86921c0189aa54d94850938caac03279a0",
+              "textPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/kingston/cc-gap-evidence-job19/jamaica-copyright.txt",
+              "textSHA256": "b64e7d6f73b7c162437b9dadda5184c056f91953d863541b128ef82bdf9a02d5",
+              "sectionRead": "74(1)(a), 74(2)(b), 74(3)",
+              "method": "Personally read the saved official-source extracted section; original PDF signature and SHA verified."
+            }
+          },
+          "qaReason": "Aito Fort Charlesin tiilimuurien ulkokuva Port Royalissa sopii K1-noston Kingstonin syntyhistoriaan. Alkuperäinen Commons Description nimeää kohteen Port Royalissa; Raychristofer, Own work ja CC BY-SA 4.0 varmennettu. Natiivit 3456×2592 sekä alkuperäisen SHA täsmäävät. Jamaikan virallisen JIPO-lain tallennettu §74(1)(a), §74(2)(b) ja §74(3) sallivat rakennuksen valokuvaamisen ja tällaisen kuvan kappaleiden julkaisemisen; rakennukselle ei väitetä PD:tä sen iän perusteella."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Port Royalin linnoituksen tiilimuurit kuuluvat Kingstonin satamaseudun historiaan. Valokuva vuodelta 2011.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/kingston/qa.json",
+        "fileSHA256": "1ee742add7c24b9e212a53e0ebc4b56437298d199b6e3a7fbccc43e1be47ec63",
+        "item": {
+          "slot": "K1",
+          "targetJsonPath": "$.kaupunkilehti[0].nostot[0]",
+          "commonsFile": "Fort Port Royal Jamaica.JPG",
+          "verdict": "accepted",
+          "reason": "Aito Fort Charlesin tiilimuurien ulkokuva Port Royalissa sopii K1-noston Kingstonin syntyhistoriaan. Alkuperäinen Commons Description nimeää kohteen Port Royalissa; Raychristofer, Own work ja CC BY-SA 4.0 varmennettu. Natiivit 3456×2592 sekä alkuperäisen SHA täsmäävät. Jamaikan virallisen JIPO-lain tallennettu §74(1)(a), §74(2)(b) ja §74(3) sallivat rakennuksen valokuvaamisen ja tällaisen kuvan kappaleiden julkaisemisen; rakennukselle ei väitetä PD:tä sen iän perusteella.",
+          "evidence": {
+            "manifestPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/kingston/cc-selection.json",
+            "candidateSnapshot": {
+              "slot": "K1",
+              "targetJsonPath": "$.kaupunkilehti[0].nostot[0]",
+              "type": "commons",
+              "commonsFile": "Fort Port Royal Jamaica.JPG",
+              "sourcePage": "https://commons.wikimedia.org/wiki/File:Fort_Port_Royal_Jamaica.JPG",
+              "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Fort_Port_Royal_Jamaica.JPG",
+              "author": "Raychristofer",
+              "license": "CC BY-SA 4.0",
+              "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+              "width": 3456,
+              "height": 2592,
+              "captureDate": "14 November 2011, 15:04:15",
+              "captionFi": "Port Royalin linnoituksen tiilimuurit kuuluvat Kingstonin satamaseudun historiaan. Valokuva vuodelta 2011.",
+              "rightsEvidence": {
+                "photo": "Nimenomainen Commons Author/Artist ja valokuvan vapaa lisenssimalline tarkistettu; ei uploaderista päätelty tekijä.",
+                "workLayer": "Port Royalin aito linnoituksen ulkokuva, historianoston Port Royal / Kingston -tausta. Jamaikan JIPO Copyright Act 74(1)(a), 74(2)(b) ja 74(3): rakennusten valokuvaaminen ja tällaisen valokuvan kappaleiden julkaisu. Oma säännöstekstin luku paikallisesta alkuperäisen JIPO-PDF:n tekstiversiosta; ei PD-väitettä rakennuksen iästä. Ei veistosta tai muraalia kuvan pääaiheena.",
+                "sources": [
+                  "https://www.jipo.gov.jm/sites/default/files/PDF_Files/CopyrightAct.pdf",
+                  "https://commons.wikimedia.org/wiki/File:Fort_Port_Royal_Jamaica.JPG"
+                ],
+                "visualReview": "Oma katselu: nurmi ja linnoituksen tiilinen ulkomuuri; ei ihmisiä, overlay-tekstiä, vesileimaa/kehystä tai mainos-/pakkausaihetta.",
+                "reuse": "Ei tiedostonimeä, alaviivamuotoa tai URL-enkoodattua nimeä e11/js:ssä; ei samaa tiedostoa kaupungin omassa tai CC-gap-valinnassa.",
+                "sourceEvidenceFile": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/kingston/cc-gap-evidence-job19/jamaica-copyright.pdf",
+                "nativeVisualReview": "NASin alkuperäinen avattu ja katsottu. Ei tunnistettavia kasvopiirteitä, overlay-tekstiä tai vesileimaa; airport-kuvan näyttöresoluutio4004x2496 (lähde4085x2546), muut natiivimitoissa."
+              },
+              "metadataPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/kingston/cc-work/4cbdfbb61898-meta.json",
+              "previewPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/kingston/cc-work/4cbdfbb61898-preview.jpg",
+              "reviewState": "candidate",
+              "nasOriginalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/kingston/cc-work/4cbdfbb61898-original.jpg",
+              "originalSha256": "17f497e154ad7bf9ef5dc1be56d839bc3f2072218890d786ded241bac25386e1",
+              "originalBytes": 4607981
+            },
+            "candidateFingerprintSHA256": "4269d0614e661674e677fe14624c28f23fce5c31317dfc6dbb55ed5c404aba7d",
+            "currentContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/kingston/sisalto.json",
+            "currentContentSHA256": "f9b89a396555b3f04baf049c201a547f65b0263355d1f76b075951e01e0e70e3",
+            "targetExists": true,
+            "currentTargetContent": {
+              "otsikko": "Kaupungin alku oli telttaleiri",
+              "teksti": "Kingston perustettiin 1600-luvun lopulla, kun maanjäristys oli tuhonnut Port Royalia. Selviytyjät asettuivat aluksi rannalle telttaleiriin. Uuden kaupungin suunnitelman piirsi maanmittari John Goffe, jonka ruutukaavaa rajasivat North-, East-, West- ja Harbour-kadut. Sataman ja saaren sisäosien väliset yhteydet kuuluivat suunnitelman tarkoitukseen. Kingstonin alku ei siis ollut yksi valmis palatsi tai juhlallinen pääkaupungin avaus, vaan ihmisten uusi asuinpaikka ja sille vähitellen rakentunut kaupunkiverkko.",
+              "tiedosto": "",
+              "lyhyt": "",
+              "selite": "",
+              "lahde": "",
+              "wiki": "Kingston, Jamaica"
+            },
+            "visualObservation": "Katsoin paikallisen 3456×2592 alkuperäisen. Tiilinen linnoituksen ulkomuuri, ampuma-aukot ja pieni katettu vartiorakenne näkyvät nurmikon takana. Ei yksilöitäviä kasvoja, veistosta, muraalia, lisättyä tekstiä, vesileimaa tai kehystä. Kuva ei väitä vuoden 1692 maanjäristyksen hetkeä eikä alkuperäistä telttaleiriä; vuonna 2011 kuvattu Fort Charles kuuluu rehellisesti Port Royalin historialliseen taustaan.",
+            "reviewedAt": "2026-10-12T20:36:35.780538+00:00",
+            "pixelsViewed": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/kingston/cc-work/4cbdfbb61898-original.jpg",
+            "pixelSHA256": "17f497e154ad7bf9ef5dc1be56d839bc3f2072218890d786ded241bac25386e1",
+            "sourceEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/d0323dc1a18e6a59b9c0e732b697f3f6a931ce04b2cad64846a9cb51df8acde7.html",
+            "sourceMetadata": {
+              "author": [
+                "Raychristofer"
+              ],
+              "licenses": [
+                "CC BY-SA 4.0"
+              ],
+              "dimensions": [
+                3456,
+                2592
+              ],
+              "sourceSHA256": "90347cc059e5124575e908606d55da7f7b745c4e36c0628cac7da0df76cc4c40"
+            },
+            "sourceLicenseLinks": [
+              "//creativecommons.org/licenses/by-sa/4.0/deed.en",
+              "https://creativecommons.org/share-your-work/licensing-considerations/compatible-licenses",
+              "https://creativecommons.org/publicdomain/zero/1.0/",
+              "https://creativecommons.org/licenses/by-sa/4.0/"
+            ],
+            "sourceDescriptionExcerpt": "Descriptions\":{\"search\":true,\"watchlist\":true,\"tagline\":true,\"nearby\":true},\"wgWMESchemaEditAttemptStepOversample\":false,\"wgWMEPageLength\":400,\"wbUserPreferredContentLanguages\":[\"en\"],\"wbUserSpecifiedLanguages\":[\"en\"],\"wbCopyright\":{\"version\":\"wikibase-1\",\"messageHtml\":\"By clicking \\\"publish\\\", you agree to the \\u003Ca href=\\\"/wiki/Commons:Copyrights\\\" class=\\\"mw-redirect\\\" title=\\\"Commons:Copyrights\\\"\\u003Eterms of use\\u003C/a\\u003E, and you irrevocably agree to release your contribution under the \\u003Ca rel=\\\"nofollow\\\" class=\\\"external text\\\" href=\\\"https://creativecommons.org/publicdomain/zero/1.0/\\\"\\u003ECreative Commons CC0 License\\u003C/a\\u003E.\"},\"wbBadgeItems\":[],\"wbMultiLingualStringLimit\":250,\"wbTaintedReferencesEnabled\":false,\"wbEntityId\":\"M41219240\",\"wgEditSubmitButtonLabelPublish\":true,\"wgTestKitchenUserExperiments\":{\"overrides\":[],\"enrolled\":[],\"assigned\":[],\"subject_ids\":[]},\"upwizPropertyTitles\":{\"P180\":\"Main subjects visible in this work\"},\"upwizPropertyPlaceholders\"",
+            "sourceDateExcerpt": "DateFormat\":\"dmy\",\"wgMonthNames\":[\"\",\"January\",\"February\",\"March\",\"April\",\"May\",\"June\",\"July\",\"August\",\"September\",\"October\",\"November\",\"December\"],\"wgRequestId\":\"8c5fce62-9c93-4561-b10a-4203b66d9bf5\",\"wgCanonicalNamespace\":\"File\",\"wgCanonicalSpecialPageName\":false,\"wgNamespaceNumber\":6,\"wgPageName\":\"File:Fort_Port_Royal_Jamaica.JPG\",\"wgTitle\":\"Fort Port Royal Jamaica.JPG\",\"wgCurRevisionId\":1258009117,\"wgRevisionId\":1258009117,\"wgArticleId\":41219240,\"wgIsArticle\":true,\"wgIsRedirect\":false,\"wgAction\":\"view\",\"wgUserName\":null,\"wgUserGroups\":[\"*\"],\"wgCategories\":[\"Files with derivative versions\",\"CC-BY-SA-4.0\",\"Self-published work\",\"Port Royal\",\"Forts in Jamaica\"],\"wgPageViewLanguage\":\"en\",\"wgPageContentLanguage\":\"en\",\"wgPageContentModel\":\"wikitext\",\"wgRelevantPageName\":\"File:Fort_Port_Royal_Jamaica.JPG\",\"wgRelevantArticleId\":41219240,\"wgTempUserName\":null,\"wgIsProbablyEditable\":true,\"wgRelevantPageIsProbablyEditable\":true,\"wgRestrictionEdit\":[],\"wgRestrictionMove\":[],\"wgRestrictionUpload",
+            "sourceAuthorExcerpt": "Author Raychristofer Other versions Derivative works of this file: Port Royal in Tranquility.jpg : Licensing [ edit ] I, the copyright holder of this work, hereby publish it under the following license: This file is licensed under the Creative Commons Attribution-Share Alike 4.0 International license. You are free: to share – to copy, distribute and transmit the work to remix – to adapt the work Under the following conditions: attribution – You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use. share alike – If you remix, transform, or build upon the material, you must distribute your contributions under the same or compatible license as the original. https://creativecommons.org/licenses/by-sa/4.0 CC BY-SA 4.0 Creative Commons Attribution-Share Alike 4.0 true true File history Click on a date/time to view the file as it appeared at",
+            "sourceLicensingExcerpt": "Licensing 4 File history 5 File usage on Commons 6 File usage on other wikis 7 Metadata Toggle the table of contents File : Fort Port Royal Jamaica.JPG File Discussion English Read Edit View history Tools Tools move to sidebar hide Actions Read Edit View history General What links here Related changes Permanent link Page information Cite this page Get shortened URL Concept URI Print/export Download as PDF Printable version In other projects Appearance move to sidebar hide From Wikimedia Commons, the free media repository Size of this preview: 960 × 720 pixels . Other resolutions: 330 × 248 pixels | 1,280 × 960 pixels | 3,456 × 2,592 pixels . Original file (3,456 × 2,592 pixels, file size: 4.39 MB, MIME type: image/jpeg ) File information Structured data Captions Captions English Add a one-line explanation of what this file represents Summary [ edit ] Description Fort Port Royal Jamaica.JPG English: Time seems to stand still for the Impregnable Fort Charles at Port Royal, Jamaica. Date ",
+            "sourceCameralocationExcerpt": null,
+            "actualDimensions": [
+              3456,
+              2592
+            ],
+            "photographedAt": "2011-11-14",
+            "sourceDescriptionExact": "Time seems to stand still for the Impregnable Fort Charles at Port Royal, Jamaica.",
+            "depictedWorkAssessment": "Todellinen linnoituksen ulkorakennus. JIPO Copyright Act §74(1)(a) buildings; §74(2)(b) photographs; §74(3) public issue of such copies. Sovellettu tähän rakennusvalokuvaan, ei rakennusiästä pääteltyä PD:tä tai oletettua koko maan vapautusta. Ei erillistä nykytaideteosta kuvassa.",
+            "primaryLegalSource": {
+              "url": "https://www.jipo.gov.jm/sites/default/files/PDF_Files/CopyrightAct.pdf",
+              "pdfPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/kingston/cc-gap-evidence-job19/jamaica-copyright.pdf",
+              "pdfSHA256": "745b495b9729d0563209301836c58f86921c0189aa54d94850938caac03279a0",
+              "textPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/kingston/cc-gap-evidence-job19/jamaica-copyright.txt",
+              "textSHA256": "b64e7d6f73b7c162437b9dadda5184c056f91953d863541b128ef82bdf9a02d5",
+              "sectionRead": "74(1)(a), 74(2)(b), 74(3)",
+              "method": "Personally read the saved official-source extracted section; original PDF signature and SHA verified."
+            }
+          },
+          "reviewedAt": "2026-10-12T20:36:35.838047+00:00",
+          "sha256": "17f497e154ad7bf9ef5dc1be56d839bc3f2072218890d786ded241bac25386e1"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/kingston/qa.json",
+            "sha256": "1ee742add7c24b9e212a53e0ebc4b56437298d199b6e3a7fbccc43e1be47ec63"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/kingston/illustration-qa-extra.json",
+            "sha256": "a8807109eb98d9b9c07ba96de91773c2ddb63a58e0d7c7720e11cca7c87d4cc6"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e11",
+        "city": "kingston",
+        "slot": "K1",
+        "targetJsonPath": "$.kaupunkilehti[0].nostot[0]",
+        "commonsFile": "Fort Port Royal Jamaica.JPG",
+        "sha256": "17f497e154ad7bf9ef5dc1be56d839bc3f2072218890d786ded241bac25386e1",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Fort_Port_Royal_Jamaica.JPG",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Fort_Port_Royal_Jamaica.JPG",
+        "author": "Raychristofer",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+        "width": 3456,
+        "height": 2592,
+        "originalSHA256": "17f497e154ad7bf9ef5dc1be56d839bc3f2072218890d786ded241bac25386e1",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/kingston/k1-17f497e154ad7bf9ef5d.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/kingston/k1-17f497e154ad7bf9ef5d.jpg",
+        "bytes": 4607981,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T20:37:45.773017+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Raychristofer, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Port Royalin linnoituksen tiilimuurit kuuluvat Kingstonin satamaseudun historiaan. Valokuva vuodelta 2011.",
+        "lyhyt": "Port Royalin linnoituksen tiilimuurit kuuluvat Kingstonin satamaseudun historiaan.",
+        "tiedosto": "Fort Port Royal Jamaica.JPG"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "9fb18703b1b6a2fae44ee8fb860983df053fee5bdf7058387d3732f1ce2be99c",
+      "targetAfterSHA256": "5a336b7fa67d02832915394f9116738fbe657cb8e323e99bbc165d5e81771925",
+      "contextAfterSHA256": "5a336b7fa67d02832915394f9116738fbe657cb8e323e99bbc165d5e81771925"
     }
   ],
   "runtimeIntegrationPending": true,

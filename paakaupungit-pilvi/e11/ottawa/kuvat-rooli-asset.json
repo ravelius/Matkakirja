@@ -3,7 +3,7 @@
   "era": "e11",
   "city": "ottawa",
   "authorization": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
-  "sourceContentAfterSHA256": "879b9abe6562d2e885b5f7ad3218635e7028e95e5aa20de8845ad9afd187ba1b",
+  "sourceContentAfterSHA256": "a59989d85042421a2c0cac223359909ff07e8de89567d27fe60e51aeeb8deb8f",
   "assets": [
     {
       "era": "e11",
@@ -273,7 +273,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/ottawa/qa.json",
-        "fileSHA256": "d2dd5852f892e64c63c7e6e89bce10c4e9574a9c537829d46eaffaf7d61e2a6b",
+        "fileSHA256": "32ca952a4e6cb85198e20439513e79d218367ed83d7521669cfdae784a8fad53",
         "item": {
           "slot": "TRAVELER",
           "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
@@ -644,7 +644,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/ottawa/qa.json",
-            "sha256": "d2dd5852f892e64c63c7e6e89bce10c4e9574a9c537829d46eaffaf7d61e2a6b"
+            "sha256": "32ca952a4e6cb85198e20439513e79d218367ed83d7521669cfdae784a8fad53"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/ottawa/illustration-qa-extra.json",
@@ -731,9 +731,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "879b9abe6562d2e885b5f7ad3218635e7028e95e5aa20de8845ad9afd187ba1b",
+      "sourceContentAfterSHA256": "a59989d85042421a2c0cac223359909ff07e8de89567d27fe60e51aeeb8deb8f",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "2665217276531360d230f70d289603b81b8d2e79708d31f891ef8b4c8928ac76"
+      "contextAfterSHA256": "fdfdef0b0d91f6196b1ffa3f1e6e5eb976f185d0a6a37cb22e728dd774325f8b"
     },
     {
       "era": "e11",
@@ -896,7 +896,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/ottawa/qa.json",
-        "fileSHA256": "d2dd5852f892e64c63c7e6e89bce10c4e9574a9c537829d46eaffaf7d61e2a6b",
+        "fileSHA256": "32ca952a4e6cb85198e20439513e79d218367ed83d7521669cfdae784a8fad53",
         "item": {
           "slot": "O4",
           "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
@@ -1120,7 +1120,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/ottawa/qa.json",
-            "sha256": "d2dd5852f892e64c63c7e6e89bce10c4e9574a9c537829d46eaffaf7d61e2a6b"
+            "sha256": "32ca952a4e6cb85198e20439513e79d218367ed83d7521669cfdae784a8fad53"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/ottawa/illustration-qa-extra.json",
@@ -1207,7 +1207,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "879b9abe6562d2e885b5f7ad3218635e7028e95e5aa20de8845ad9afd187ba1b",
+      "sourceContentAfterSHA256": "a59989d85042421a2c0cac223359909ff07e8de89567d27fe60e51aeeb8deb8f",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
       "contextAfterSHA256": "373c33ee652358135b925347eadf7a76c1113b97371d87c55e81c300ea41c67f"
     },
@@ -1368,7 +1368,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/ottawa/qa.json",
-        "fileSHA256": "d2dd5852f892e64c63c7e6e89bce10c4e9574a9c537829d46eaffaf7d61e2a6b",
+        "fileSHA256": "32ca952a4e6cb85198e20439513e79d218367ed83d7521669cfdae784a8fad53",
         "item": {
           "slot": "K3",
           "targetJsonPath": "$.kaupunkilehti[0].nostot[2]",
@@ -1589,7 +1589,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/ottawa/qa.json",
-            "sha256": "d2dd5852f892e64c63c7e6e89bce10c4e9574a9c537829d46eaffaf7d61e2a6b"
+            "sha256": "32ca952a4e6cb85198e20439513e79d218367ed83d7521669cfdae784a8fad53"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/ottawa/illustration-qa-extra.json",
@@ -1676,7 +1676,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "879b9abe6562d2e885b5f7ad3218635e7028e95e5aa20de8845ad9afd187ba1b",
+      "sourceContentAfterSHA256": "a59989d85042421a2c0cac223359909ff07e8de89567d27fe60e51aeeb8deb8f",
       "targetAfterSHA256": "ca7f252b9a0dada70c1f3855e1584031065e34c293450690e39c1a7afcd0a66b",
       "contextAfterSHA256": "ca7f252b9a0dada70c1f3855e1584031065e34c293450690e39c1a7afcd0a66b"
     },
@@ -1837,7 +1837,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/ottawa/qa.json",
-        "fileSHA256": "d2dd5852f892e64c63c7e6e89bce10c4e9574a9c537829d46eaffaf7d61e2a6b",
+        "fileSHA256": "32ca952a4e6cb85198e20439513e79d218367ed83d7521669cfdae784a8fad53",
         "item": {
           "slot": "K4",
           "targetJsonPath": "$.kaupunkilehti[0].nostot[3]",
@@ -2058,7 +2058,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/ottawa/qa.json",
-            "sha256": "d2dd5852f892e64c63c7e6e89bce10c4e9574a9c537829d46eaffaf7d61e2a6b"
+            "sha256": "32ca952a4e6cb85198e20439513e79d218367ed83d7521669cfdae784a8fad53"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/ottawa/illustration-qa-extra.json",
@@ -2145,7 +2145,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "879b9abe6562d2e885b5f7ad3218635e7028e95e5aa20de8845ad9afd187ba1b",
+      "sourceContentAfterSHA256": "a59989d85042421a2c0cac223359909ff07e8de89567d27fe60e51aeeb8deb8f",
       "targetAfterSHA256": "a67c886078008c5c505e418fc45f36b34e8059ddfe22e48d2e8e13f6f743ff6b",
       "contextAfterSHA256": "a67c886078008c5c505e418fc45f36b34e8059ddfe22e48d2e8e13f6f743ff6b"
     },
@@ -2306,7 +2306,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/ottawa/qa.json",
-        "fileSHA256": "d2dd5852f892e64c63c7e6e89bce10c4e9574a9c537829d46eaffaf7d61e2a6b",
+        "fileSHA256": "32ca952a4e6cb85198e20439513e79d218367ed83d7521669cfdae784a8fad53",
         "item": {
           "slot": "L2",
           "targetJsonPath": "$.kaupunkilehti[1].nostot[1]",
@@ -2527,7 +2527,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/ottawa/qa.json",
-            "sha256": "d2dd5852f892e64c63c7e6e89bce10c4e9574a9c537829d46eaffaf7d61e2a6b"
+            "sha256": "32ca952a4e6cb85198e20439513e79d218367ed83d7521669cfdae784a8fad53"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/ottawa/illustration-qa-extra.json",
@@ -2614,7 +2614,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "879b9abe6562d2e885b5f7ad3218635e7028e95e5aa20de8845ad9afd187ba1b",
+      "sourceContentAfterSHA256": "a59989d85042421a2c0cac223359909ff07e8de89567d27fe60e51aeeb8deb8f",
       "targetAfterSHA256": "24f31526d78c010f5f03ceea907e4f4edd912af95ad0c81fc31ac38c22d0802b",
       "contextAfterSHA256": "24f31526d78c010f5f03ceea907e4f4edd912af95ad0c81fc31ac38c22d0802b"
     },
@@ -2754,7 +2754,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/ottawa/qa.json",
-        "fileSHA256": "d2dd5852f892e64c63c7e6e89bce10c4e9574a9c537829d46eaffaf7d61e2a6b",
+        "fileSHA256": "32ca952a4e6cb85198e20439513e79d218367ed83d7521669cfdae784a8fad53",
         "item": {
           "slot": "PHOTO",
           "targetJsonPath": "$.valokuva",
@@ -2819,7 +2819,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/ottawa/qa.json",
-            "sha256": "d2dd5852f892e64c63c7e6e89bce10c4e9574a9c537829d46eaffaf7d61e2a6b"
+            "sha256": "32ca952a4e6cb85198e20439513e79d218367ed83d7521669cfdae784a8fad53"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/ottawa/illustration-qa-extra.json",
@@ -2894,7 +2894,7 @@
         "tiedosto": "The Rideau Falls.JPG"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "879b9abe6562d2e885b5f7ad3218635e7028e95e5aa20de8845ad9afd187ba1b",
+      "sourceContentAfterSHA256": "a59989d85042421a2c0cac223359909ff07e8de89567d27fe60e51aeeb8deb8f",
       "targetAfterSHA256": "c4c47d9654899724b6cf7ec1af821298de2a67ca3ea289a2299daccc79985296",
       "contextAfterSHA256": "c4c47d9654899724b6cf7ec1af821298de2a67ca3ea289a2299daccc79985296"
     },
@@ -3050,7 +3050,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/ottawa/qa.json",
-        "fileSHA256": "d2dd5852f892e64c63c7e6e89bce10c4e9574a9c537829d46eaffaf7d61e2a6b",
+        "fileSHA256": "32ca952a4e6cb85198e20439513e79d218367ed83d7521669cfdae784a8fad53",
         "item": {
           "slot": "C1",
           "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
@@ -3128,7 +3128,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/ottawa/qa.json",
-            "sha256": "d2dd5852f892e64c63c7e6e89bce10c4e9574a9c537829d46eaffaf7d61e2a6b"
+            "sha256": "32ca952a4e6cb85198e20439513e79d218367ed83d7521669cfdae784a8fad53"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/ottawa/illustration-qa-extra.json",
@@ -3203,7 +3203,7 @@
         "tiedosto": "Downtown Ottawa 2022.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "879b9abe6562d2e885b5f7ad3218635e7028e95e5aa20de8845ad9afd187ba1b",
+      "sourceContentAfterSHA256": "a59989d85042421a2c0cac223359909ff07e8de89567d27fe60e51aeeb8deb8f",
       "targetAfterSHA256": "5a495a8f3e0ef6408b089348a5300a39f9b4fa0a683bd2a5bcc26d2627bdfed1",
       "contextAfterSHA256": "5a495a8f3e0ef6408b089348a5300a39f9b4fa0a683bd2a5bcc26d2627bdfed1"
     },
@@ -3358,7 +3358,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/ottawa/qa.json",
-        "fileSHA256": "d2dd5852f892e64c63c7e6e89bce10c4e9574a9c537829d46eaffaf7d61e2a6b",
+        "fileSHA256": "32ca952a4e6cb85198e20439513e79d218367ed83d7521669cfdae784a8fad53",
         "item": {
           "slot": "C2",
           "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[1]",
@@ -3435,7 +3435,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/ottawa/qa.json",
-            "sha256": "d2dd5852f892e64c63c7e6e89bce10c4e9574a9c537829d46eaffaf7d61e2a6b"
+            "sha256": "32ca952a4e6cb85198e20439513e79d218367ed83d7521669cfdae784a8fad53"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/ottawa/illustration-qa-extra.json",
@@ -3510,7 +3510,7 @@
         "tiedosto": "Dow's Lake aerial view 2025.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "879b9abe6562d2e885b5f7ad3218635e7028e95e5aa20de8845ad9afd187ba1b",
+      "sourceContentAfterSHA256": "a59989d85042421a2c0cac223359909ff07e8de89567d27fe60e51aeeb8deb8f",
       "targetAfterSHA256": "66b3d02064f7d7553572572077f6676d14032694be10fe8debcd689ba92ca101",
       "contextAfterSHA256": "66b3d02064f7d7553572572077f6676d14032694be10fe8debcd689ba92ca101"
     },
@@ -3658,7 +3658,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/ottawa/qa.json",
-        "fileSHA256": "d2dd5852f892e64c63c7e6e89bce10c4e9574a9c537829d46eaffaf7d61e2a6b",
+        "fileSHA256": "32ca952a4e6cb85198e20439513e79d218367ed83d7521669cfdae784a8fad53",
         "item": {
           "slot": "C3",
           "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[2]",
@@ -3728,7 +3728,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/ottawa/qa.json",
-            "sha256": "d2dd5852f892e64c63c7e6e89bce10c4e9574a9c537829d46eaffaf7d61e2a6b"
+            "sha256": "32ca952a4e6cb85198e20439513e79d218367ed83d7521669cfdae784a8fad53"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/ottawa/illustration-qa-extra.json",
@@ -3803,9 +3803,294 @@
         "tiedosto": "Central Experimental Farm aerial view 2025.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "879b9abe6562d2e885b5f7ad3218635e7028e95e5aa20de8845ad9afd187ba1b",
+      "sourceContentAfterSHA256": "a59989d85042421a2c0cac223359909ff07e8de89567d27fe60e51aeeb8deb8f",
       "targetAfterSHA256": "d4ca9998e1fe9b649dd21428a0e93c1c53988a59fe2cf667eae60f3ed9de9b7c",
       "contextAfterSHA256": "d4ca9998e1fe9b649dd21428a0e93c1c53988a59fe2cf667eae60f3ed9de9b7c"
+    },
+    {
+      "era": "e11",
+      "city": "ottawa",
+      "slot": "O2",
+      "type": "commons",
+      "assetID": "capital-cc-e11-ottawa-o2-9dbb83b331e242bb",
+      "galleryImageID": "capital-cc-e11-ottawa-o2-9dbb83b331e242bb",
+      "commonsFile": "Rideau Falls 20250720 150134.jpg",
+      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[1].kuva",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "matkailijalle",
+        "artikkeli",
+        "jaksot",
+        1,
+        "kuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/ottawa/o2-9dbb83b331e242bbb4df.jpg",
+        "suora": true,
+        "lahde": "R Prazeres, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Rideau-putoukset ja Ottawa-joki heinäkuussa 2025.",
+        "lyhyt": "Rideau-putoukset ja Ottawa-joki heinäkuussa 2025.",
+        "tiedosto": "Rideau Falls 20250720 150134.jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "R Prazeres, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Rideau-putoukset ja Ottawa-joki heinäkuussa 2025.",
+        "lyhyt": "Rideau-putoukset ja Ottawa-joki heinäkuussa 2025.",
+        "tiedosto": "Rideau Falls 20250720 150134.jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/ottawa/o2-9dbb83b331e242bbb4df.jpg",
+        "suora": true,
+        "lahde": "R Prazeres, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Rideau-putoukset ja Ottawa-joki heinäkuussa 2025.",
+        "lyhyt": "Rideau-putoukset ja Ottawa-joki heinäkuussa 2025.",
+        "tiedosto": "Rideau Falls 20250720 150134.jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "9dbb83b331e242bbb4df32273cc10f66dbf52669c3cd426e064497c8a3adecbc",
+      "exportSHA256": "9dbb83b331e242bbb4df32273cc10f66dbf52669c3cd426e064497c8a3adecbc",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/ottawa/o2-9dbb83b331e242bbb4df.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/ottawa/o2-9dbb83b331e242bbb4df.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/ottawa/cc-gap-evidence-job19/90e8f44a453f6110.jpg",
+      "dimensions": [
+        4000,
+        3000
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/ottawa/sisalto.json",
+      "sourceContentSHA256": "879b9abe6562d2e885b5f7ad3218635e7028e95e5aa20de8845ad9afd187ba1b",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "3e8776631a66c5e2702cbc41b94f8ee6329889f6764fc970bfe65c3699650d12",
+        "subjectTitle": "Kauppakortteleista jokirantaan",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "R Prazeres",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Rideau_Falls_20250720_150134.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c9/Rideau_Falls_20250720_150134.jpg",
+        "rightsEvidence": {
+          "selection": {
+            "photo": "R Prazeres; nimenomainen Author/Artist, Own work tai alkuperäiseen Flickr-kuvaan perustuvaCommons-lisenssivarmennus.",
+            "workLayer": "Pääaihe luonnollinen vesi, kallio ja kasvillisuus; tavanomainen pato/silta ja kaukaiset rakennukset erotetaan taiteesta. Kanadan virallisen Copyright Act §32.2(1)(b)(i) rakennuksen valokuvaamista koskeva teksti itse luettu. Ei veistosta tai seinämaalausta pääaiheena eikä rakennusiästä tehtyäPD-väitettä.",
+            "primarySource": "https://laws-lois.justice.gc.ca/eng/acts/C-42/FullText.html",
+            "sourceEvidenceFile": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/ottawa/cc-work/canada-copyright.html",
+            "location": "English: Rideau Falls, Ottawa (eastern branch of the falls); tiedoston tarkka paikannimi ja Commons-paikkaluokitus Ottawa/RideauFalls tai DowsLake.",
+            "timeScope": "20 July 2025, 15:01:34; kuvausvuosi kirjattu. O2-kuvaus2025, ei menneeseen tilanteeseen sidottuja palvelu-/aukioloväitteitä."
+          },
+          "QA": {
+            "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/ottawa/cc-gap-evidence-job19/90e8f44a453f6110.jpg",
+            "width": 4000,
+            "height": 3000,
+            "sha256": "9dbb83b331e242bbb4df32273cc10f66dbf52669c3cd426e064497c8a3adecbc",
+            "nativeGeometry": {
+              "rawWidth": 4000,
+              "rawHeight": 3000,
+              "exifOrientation": 1,
+              "width": 4000,
+              "height": 3000
+            },
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Rideau_Falls_20250720_150134.jpg",
+            "sourcePagePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/ottawa/qa-evidence/cc-source-snapshots/02d8b0d4fe1b3bec538a510f103904347477f5b879b7c7025f9617853d519539.html",
+            "sourcePageSHA256": "02d8b0d4fe1b3bec538a510f103904347477f5b879b7c7025f9617853d519539",
+            "upstreamSourcePagePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/df3f41e8fe328759e079d85e98e7c2540c7193a2ff49d1a5a09eeb3ad90e49da.html",
+            "sourceFields": {
+              "Date": "20 July 2025, 15:01:34",
+              "Source": "Own work",
+              "Author": "R Prazeres"
+            },
+            "authors": [
+              "R Prazeres"
+            ],
+            "authorOrigin": "Author table",
+            "licenseChoices": [
+              "CC BY-SA 4.0"
+            ],
+            "license": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "existingGameUse": [],
+            "sameCityOtherSlots": [],
+            "sameCityAcceptedQASlots": [],
+            "sameCityAcceptedNativeSHASlots": [],
+            "auditEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/ottawa/qa-evidence/898b537746ea-technical-source.json",
+            "visualViewedByThisSession": true,
+            "nativeOriginalViewed": true,
+            "visualObservation": "Alkuperäinen 4000×3000 itse katsottu: Rideau-putouksen itäisen haaran vesi ja kallio sekä Ottawa-joen laaja vesialue; taustalla silta ja kaukaista rakennusmassaa. Veneen ihmiset ovat pieniä eikä kasvonpiirteitä erotu. Ei lisättyä tekstiä, vesileimaa, taideteosta tai mainoskuvan pääaihetta. R Prazeres, Own work, CC BY-SA 4.0, 20.7.2025 ja Rideau Falls (eastern branch) suoraan lähdesivusta. Taustarakennusten valokuvaamista arvioitu itse luetun Kanadan Copyright Act §32.2(1)(b)(i):n perusteella. Kuva ei lupaa nykyisiä palveluja/aukioloa.",
+            "workLayerAssessment": "Alkuperäinen 4000×3000 itse katsottu: Rideau-putouksen itäisen haaran vesi ja kallio sekä Ottawa-joen laaja vesialue; taustalla silta ja kaukaista rakennusmassaa. Veneen ihmiset ovat pieniä eikä kasvonpiirteitä erotu. Ei lisättyä tekstiä, vesileimaa, taideteosta tai mainoskuvan pääaihetta. R Prazeres, Own work, CC BY-SA 4.0, 20.7.2025 ja Rideau Falls (eastern branch) suoraan lähdesivusta. Taustarakennusten valokuvaamista arvioitu itse luetun Kanadan Copyright Act §32.2(1)(b)(i):n perusteella. Kuva ei lupaa nykyisiä palveluja/aukioloa.",
+            "ccFragment": "cc-gap-selection.json",
+            "canonicalCaptureDate": "20 July 2025, 15:01:34",
+            "primaryArchitectureLaw": {
+              "url": "https://laws-lois.justice.gc.ca/eng/acts/C-42/section-32.2.html",
+              "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/ottawa/qa-evidence/canada-copyright-section-32-2.html",
+              "sha256": "ac7abb16bf5171629389d54912980a8cd5879fb6e2ed52d016b454ac63134124",
+              "clause": "32.2(1)(b)(i)",
+              "readByThisSession": true
+            }
+          },
+          "qaReason": "Alkuperäinen 4000×3000 itse katsottu: Rideau-putouksen itäisen haaran vesi ja kallio sekä Ottawa-joen laaja vesialue; taustalla silta ja kaukaista rakennusmassaa. Veneen ihmiset ovat pieniä eikä kasvonpiirteitä erotu. Ei lisättyä tekstiä, vesileimaa, taideteosta tai mainoskuvan pääaihetta. R Prazeres, Own work, CC BY-SA 4.0, 20.7.2025 ja Rideau Falls (eastern branch) suoraan lähdesivusta. Taustarakennusten valokuvaamista arvioitu itse luetun Kanadan Copyright Act §32.2(1)(b)(i):n perusteella. Kuva ei lupaa nykyisiä palveluja/aukioloa."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Rideau-putoukset ja Ottawa-joki heinäkuussa 2025.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/ottawa/qa.json",
+        "fileSHA256": "32ca952a4e6cb85198e20439513e79d218367ed83d7521669cfdae784a8fad53",
+        "item": {
+          "slot": "O2",
+          "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[1].kuva",
+          "commonsFile": "Rideau Falls 20250720 150134.jpg",
+          "type": "commons",
+          "sha256": "9dbb83b331e242bbb4df32273cc10f66dbf52669c3cd426e064497c8a3adecbc",
+          "nativeSHA256": "9dbb83b331e242bbb4df32273cc10f66dbf52669c3cd426e064497c8a3adecbc",
+          "nativeOriginalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/ottawa/cc-gap-evidence-job19/90e8f44a453f6110.jpg",
+          "verdict": "accepted",
+          "reason": "Alkuperäinen 4000×3000 itse katsottu: Rideau-putouksen itäisen haaran vesi ja kallio sekä Ottawa-joen laaja vesialue; taustalla silta ja kaukaista rakennusmassaa. Veneen ihmiset ovat pieniä eikä kasvonpiirteitä erotu. Ei lisättyä tekstiä, vesileimaa, taideteosta tai mainoskuvan pääaihetta. R Prazeres, Own work, CC BY-SA 4.0, 20.7.2025 ja Rideau Falls (eastern branch) suoraan lähdesivusta. Taustarakennusten valokuvaamista arvioitu itse luetun Kanadan Copyright Act §32.2(1)(b)(i):n perusteella. Kuva ei lupaa nykyisiä palveluja/aukioloa.",
+          "evidence": {
+            "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/ottawa/cc-gap-evidence-job19/90e8f44a453f6110.jpg",
+            "width": 4000,
+            "height": 3000,
+            "sha256": "9dbb83b331e242bbb4df32273cc10f66dbf52669c3cd426e064497c8a3adecbc",
+            "nativeGeometry": {
+              "rawWidth": 4000,
+              "rawHeight": 3000,
+              "exifOrientation": 1,
+              "width": 4000,
+              "height": 3000
+            },
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Rideau_Falls_20250720_150134.jpg",
+            "sourcePagePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/ottawa/qa-evidence/cc-source-snapshots/02d8b0d4fe1b3bec538a510f103904347477f5b879b7c7025f9617853d519539.html",
+            "sourcePageSHA256": "02d8b0d4fe1b3bec538a510f103904347477f5b879b7c7025f9617853d519539",
+            "upstreamSourcePagePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/df3f41e8fe328759e079d85e98e7c2540c7193a2ff49d1a5a09eeb3ad90e49da.html",
+            "sourceFields": {
+              "Date": "20 July 2025, 15:01:34",
+              "Source": "Own work",
+              "Author": "R Prazeres"
+            },
+            "authors": [
+              "R Prazeres"
+            ],
+            "authorOrigin": "Author table",
+            "licenseChoices": [
+              "CC BY-SA 4.0"
+            ],
+            "license": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "existingGameUse": [],
+            "sameCityOtherSlots": [],
+            "sameCityAcceptedQASlots": [],
+            "sameCityAcceptedNativeSHASlots": [],
+            "auditEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/ottawa/qa-evidence/898b537746ea-technical-source.json",
+            "visualViewedByThisSession": true,
+            "nativeOriginalViewed": true,
+            "visualObservation": "Alkuperäinen 4000×3000 itse katsottu: Rideau-putouksen itäisen haaran vesi ja kallio sekä Ottawa-joen laaja vesialue; taustalla silta ja kaukaista rakennusmassaa. Veneen ihmiset ovat pieniä eikä kasvonpiirteitä erotu. Ei lisättyä tekstiä, vesileimaa, taideteosta tai mainoskuvan pääaihetta. R Prazeres, Own work, CC BY-SA 4.0, 20.7.2025 ja Rideau Falls (eastern branch) suoraan lähdesivusta. Taustarakennusten valokuvaamista arvioitu itse luetun Kanadan Copyright Act §32.2(1)(b)(i):n perusteella. Kuva ei lupaa nykyisiä palveluja/aukioloa.",
+            "workLayerAssessment": "Alkuperäinen 4000×3000 itse katsottu: Rideau-putouksen itäisen haaran vesi ja kallio sekä Ottawa-joen laaja vesialue; taustalla silta ja kaukaista rakennusmassaa. Veneen ihmiset ovat pieniä eikä kasvonpiirteitä erotu. Ei lisättyä tekstiä, vesileimaa, taideteosta tai mainoskuvan pääaihetta. R Prazeres, Own work, CC BY-SA 4.0, 20.7.2025 ja Rideau Falls (eastern branch) suoraan lähdesivusta. Taustarakennusten valokuvaamista arvioitu itse luetun Kanadan Copyright Act §32.2(1)(b)(i):n perusteella. Kuva ei lupaa nykyisiä palveluja/aukioloa.",
+            "ccFragment": "cc-gap-selection.json",
+            "canonicalCaptureDate": "20 July 2025, 15:01:34",
+            "primaryArchitectureLaw": {
+              "url": "https://laws-lois.justice.gc.ca/eng/acts/C-42/section-32.2.html",
+              "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/ottawa/qa-evidence/canada-copyright-section-32-2.html",
+              "sha256": "ac7abb16bf5171629389d54912980a8cd5879fb6e2ed52d016b454ac63134124",
+              "clause": "32.2(1)(b)(i)",
+              "readByThisSession": true
+            }
+          },
+          "checkedAt": "2026-10-12T20:44:59.667749+00:00",
+          "contentSHA256": "879b9abe6562d2e885b5f7ad3218635e7028e95e5aa20de8845ad9afd187ba1b",
+          "targetSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/ottawa/qa.json",
+            "sha256": "32ca952a4e6cb85198e20439513e79d218367ed83d7521669cfdae784a8fad53"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/ottawa/illustration-qa-extra.json",
+            "sha256": "5bd63a7a096a3238c115d5358d1168ded63aa242fb453593f6c31a21f6461ab1"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e11",
+        "city": "ottawa",
+        "slot": "O2",
+        "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[1].kuva",
+        "commonsFile": "Rideau Falls 20250720 150134.jpg",
+        "sha256": "9dbb83b331e242bbb4df32273cc10f66dbf52669c3cd426e064497c8a3adecbc",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Rideau_Falls_20250720_150134.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c9/Rideau_Falls_20250720_150134.jpg",
+        "author": "R Prazeres",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "width": 4000,
+        "height": 3000,
+        "originalSHA256": "9dbb83b331e242bbb4df32273cc10f66dbf52669c3cd426e064497c8a3adecbc",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/ottawa/o2-9dbb83b331e242bbb4df.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/ottawa/o2-9dbb83b331e242bbb4df.jpg",
+        "bytes": 4615166,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T20:45:48.025426+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "R Prazeres, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Rideau-putoukset ja Ottawa-joki heinäkuussa 2025.",
+        "lyhyt": "Rideau-putoukset ja Ottawa-joki heinäkuussa 2025.",
+        "tiedosto": "Rideau Falls 20250720 150134.jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "a59989d85042421a2c0cac223359909ff07e8de89567d27fe60e51aeeb8deb8f",
+      "targetAfterSHA256": "d3a5705ee6a0c3317e8caf1403ce7cb7e548b64d96a970e1da40449c1dd27782",
+      "contextAfterSHA256": "7d01add76703f34257c584da8dff8d86c981a68abb9b9c23628f8466315c5731"
     },
     {
       "era": "e11",
@@ -3961,7 +4246,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/ottawa/qa.json",
-        "fileSHA256": "d2dd5852f892e64c63c7e6e89bce10c4e9574a9c537829d46eaffaf7d61e2a6b",
+        "fileSHA256": "32ca952a4e6cb85198e20439513e79d218367ed83d7521669cfdae784a8fad53",
         "item": {
           "slot": "K2",
           "targetJsonPath": "$.kaupunkilehti[0].nostot[1]",
@@ -4041,7 +4326,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/ottawa/qa.json",
-            "sha256": "d2dd5852f892e64c63c7e6e89bce10c4e9574a9c537829d46eaffaf7d61e2a6b"
+            "sha256": "32ca952a4e6cb85198e20439513e79d218367ed83d7521669cfdae784a8fad53"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/ottawa/illustration-qa-extra.json",
@@ -4116,7 +4401,7 @@
         "tiedosto": "Ottawa - ON - Library of Parliament.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "879b9abe6562d2e885b5f7ad3218635e7028e95e5aa20de8845ad9afd187ba1b",
+      "sourceContentAfterSHA256": "a59989d85042421a2c0cac223359909ff07e8de89567d27fe60e51aeeb8deb8f",
       "targetAfterSHA256": "5992d4e90f37d0897ad83ba3c9aa372182e7df468226596ee49034f7791b5404",
       "contextAfterSHA256": "5992d4e90f37d0897ad83ba3c9aa372182e7df468226596ee49034f7791b5404"
     },
@@ -4251,7 +4536,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/ottawa/qa.json",
-        "fileSHA256": "d2dd5852f892e64c63c7e6e89bce10c4e9574a9c537829d46eaffaf7d61e2a6b",
+        "fileSHA256": "32ca952a4e6cb85198e20439513e79d218367ed83d7521669cfdae784a8fad53",
         "item": {
           "slot": "N2",
           "targetJsonPath": "$.nahtavyydet[\"Dominion Arboretum\"].kuvat[0]",
@@ -4308,7 +4593,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/ottawa/qa.json",
-            "sha256": "d2dd5852f892e64c63c7e6e89bce10c4e9574a9c537829d46eaffaf7d61e2a6b"
+            "sha256": "32ca952a4e6cb85198e20439513e79d218367ed83d7521669cfdae784a8fad53"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/ottawa/illustration-qa-extra.json",
@@ -4383,9 +4668,573 @@
         "tiedosto": "Dominion Arboretum 2025.JPG"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "879b9abe6562d2e885b5f7ad3218635e7028e95e5aa20de8845ad9afd187ba1b",
+      "sourceContentAfterSHA256": "a59989d85042421a2c0cac223359909ff07e8de89567d27fe60e51aeeb8deb8f",
       "targetAfterSHA256": "ca08faaedfb6fe72e1c0c8e696e9c430cda3e7c663419a66adc1456f2cd42b30",
       "contextAfterSHA256": "c95cd993de32a19a18c28b41be33f7643f8032c5caf1f82cc213819e9ec9470f"
+    },
+    {
+      "era": "e11",
+      "city": "ottawa",
+      "slot": "N3",
+      "type": "commons",
+      "assetID": "capital-cc-e11-ottawa-n3-7a95856475c338c4",
+      "galleryImageID": "capital-cc-e11-ottawa-n3-7a95856475c338c4",
+      "commonsFile": "Dow’s Lake, off the Rideau Canal (48363469826).jpg",
+      "targetJsonPath": "$.nahtavyydet[\"Dows Lake\"].kuvat[0]",
+      "targetTokens": [
+        "nahtavyydet",
+        "Dows Lake",
+        "kuvat",
+        0
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/ottawa/n3-7a95856475c338c42fdb.jpg",
+        "suora": true,
+        "lahde": "Ross Dunn, Wikimedia Commons (CC BY-SA 2.0)",
+        "selite": "Dows Laken vettä ja rantakasvillisuutta heinäkuussa 2019.",
+        "lyhyt": "Dows Laken vettä ja rantakasvillisuutta heinäkuussa 2019.",
+        "tiedosto": "Dow’s Lake, off the Rideau Canal (48363469826).jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Ross Dunn, Wikimedia Commons (CC BY-SA 2.0)",
+        "selite": "Dows Laken vettä ja rantakasvillisuutta heinäkuussa 2019.",
+        "lyhyt": "Dows Laken vettä ja rantakasvillisuutta heinäkuussa 2019.",
+        "tiedosto": "Dow’s Lake, off the Rideau Canal (48363469826).jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/ottawa/n3-7a95856475c338c42fdb.jpg",
+        "suora": true,
+        "lahde": "Ross Dunn, Wikimedia Commons (CC BY-SA 2.0)",
+        "selite": "Dows Laken vettä ja rantakasvillisuutta heinäkuussa 2019.",
+        "lyhyt": "Dows Laken vettä ja rantakasvillisuutta heinäkuussa 2019.",
+        "tiedosto": "Dow’s Lake, off the Rideau Canal (48363469826).jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "7a95856475c338c42fdb650c33d50fcabf85ddd5806c8f579ef7b70a93dae7d3",
+      "exportSHA256": "7a95856475c338c42fdb650c33d50fcabf85ddd5806c8f579ef7b70a93dae7d3",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/ottawa/n3-7a95856475c338c42fdb.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/ottawa/n3-7a95856475c338c42fdb.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/ottawa/cc-gap-evidence-job19/233cc91b90b13896.jpg",
+      "dimensions": [
+        3434,
+        2896
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/ottawa/sisalto.json",
+      "sourceContentSHA256": "879b9abe6562d2e885b5f7ad3218635e7028e95e5aa20de8845ad9afd187ba1b",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "09277119a018f466bb6c8b90f34368da5a2d6824b80f4cc1955ae209fde6df2b",
+        "subjectTitle": "Dows Lake",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Ross Dunn",
+        "license": "CC BY-SA 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Dow%E2%80%99s_Lake,_off_the_Rideau_Canal_(48363469826).jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/b/bb/Dow%E2%80%99s_Lake%2C_off_the_Rideau_Canal_%2848363469826%29.jpg",
+        "rightsEvidence": {
+          "selection": {
+            "photo": "Ross Dunn; nimenomainen Author/Artist, Own work tai alkuperäiseen Flickr-kuvaan perustuvaCommons-lisenssivarmennus.",
+            "workLayer": "Pääaihe luonnollinen vesi, kallio ja kasvillisuus; tavanomainen pato/silta ja kaukaiset rakennukset erotetaan taiteesta. Kanadan virallisen Copyright Act §32.2(1)(b)(i) rakennuksen valokuvaamista koskeva teksti itse luettu. Ei veistosta tai seinämaalausta pääaiheena eikä rakennusiästä tehtyäPD-väitettä.",
+            "primarySource": "https://laws-lois.justice.gc.ca/eng/acts/C-42/FullText.html",
+            "sourceEvidenceFile": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/ottawa/cc-work/canada-copyright.html",
+            "location": "Ottawa, Canada; tiedoston tarkka paikannimi ja Commons-paikkaluokitus Ottawa/RideauFalls tai DowsLake.",
+            "timeScope": "22 July 2019, 13:24; kuvausvuosi kirjattu. O2-kuvaus2025, ei menneeseen tilanteeseen sidottuja palvelu-/aukioloväitteitä."
+          },
+          "QA": {
+            "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/ottawa/cc-gap-evidence-job19/233cc91b90b13896.jpg",
+            "width": 3434,
+            "height": 2896,
+            "sha256": "7a95856475c338c42fdb650c33d50fcabf85ddd5806c8f579ef7b70a93dae7d3",
+            "nativeGeometry": {
+              "rawWidth": 3434,
+              "rawHeight": 2896,
+              "exifOrientation": 1,
+              "width": 3434,
+              "height": 2896
+            },
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Dow%E2%80%99s_Lake,_off_the_Rideau_Canal_(48363469826).jpg",
+            "sourcePagePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/ottawa/qa-evidence/cc-source-snapshots/edec13932697a272f1ab74f2caa7653f698cebf4a2795b0defd5c1107212c62d.html",
+            "sourcePageSHA256": "edec13932697a272f1ab74f2caa7653f698cebf4a2795b0defd5c1107212c62d",
+            "upstreamSourcePagePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/1bff5a577715dcf431056101c6444da2a833fa87d074869604ca10d03cb0061b.html",
+            "sourceFields": {
+              "Date": "22 July 2019, 13:24",
+              "Source": "Dow’s Lake, off the Rideau Canal",
+              "Author": "Ross Dunn"
+            },
+            "authors": [
+              "Ross Dunn"
+            ],
+            "authorOrigin": "Author table",
+            "licenseChoices": [
+              "CC BY-SA 2.0"
+            ],
+            "license": "CC BY-SA 2.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+            "existingGameUse": [],
+            "sameCityOtherSlots": [],
+            "sameCityAcceptedQASlots": [],
+            "sameCityAcceptedNativeSHASlots": [],
+            "auditEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/ottawa/qa-evidence/6204537590fa-technical-source.json",
+            "visualViewedByThisSession": true,
+            "nativeOriginalViewed": true,
+            "visualObservation": "Alkuperäinen 3434×2896 itse katsottu: Dow’s Laken rantakaislat, kasvillisuus, kivi ja vesi; kaukaiset taustarakennukset ovat pieni osa yleistä ympäristöä. Ei näkyviä kasvonpiirteitä, lisättyä tekstiä, vesileimaa tai taideteosta. Alkuperäisen Source-tiedoston nimi yksilöi Dow’s Lake, off the Rideau Canal ja Description Ottawa, Canada. Ross Dunn, CC BY-SA 2.0 ja 22.7.2019 lähdesivusta; Flickr-varmennus 2022 ei kuvausaika. Pääaihe luonto, taustarakennusten valokuvaamisen kerros tarkistettu myös Kanadan Copyright Act §32.2(1)(b)(i):stä.",
+            "workLayerAssessment": "Alkuperäinen 3434×2896 itse katsottu: Dow’s Laken rantakaislat, kasvillisuus, kivi ja vesi; kaukaiset taustarakennukset ovat pieni osa yleistä ympäristöä. Ei näkyviä kasvonpiirteitä, lisättyä tekstiä, vesileimaa tai taideteosta. Alkuperäisen Source-tiedoston nimi yksilöi Dow’s Lake, off the Rideau Canal ja Description Ottawa, Canada. Ross Dunn, CC BY-SA 2.0 ja 22.7.2019 lähdesivusta; Flickr-varmennus 2022 ei kuvausaika. Pääaihe luonto, taustarakennusten valokuvaamisen kerros tarkistettu myös Kanadan Copyright Act §32.2(1)(b)(i):stä.",
+            "ccFragment": "cc-gap-selection.json",
+            "canonicalCaptureDate": "22 July 2019, 13:24",
+            "primaryArchitectureLaw": {
+              "url": "https://laws-lois.justice.gc.ca/eng/acts/C-42/section-32.2.html",
+              "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/ottawa/qa-evidence/canada-copyright-section-32-2.html",
+              "sha256": "ac7abb16bf5171629389d54912980a8cd5879fb6e2ed52d016b454ac63134124",
+              "clause": "32.2(1)(b)(i)",
+              "readByThisSession": true
+            }
+          },
+          "qaReason": "Alkuperäinen 3434×2896 itse katsottu: Dow’s Laken rantakaislat, kasvillisuus, kivi ja vesi; kaukaiset taustarakennukset ovat pieni osa yleistä ympäristöä. Ei näkyviä kasvonpiirteitä, lisättyä tekstiä, vesileimaa tai taideteosta. Alkuperäisen Source-tiedoston nimi yksilöi Dow’s Lake, off the Rideau Canal ja Description Ottawa, Canada. Ross Dunn, CC BY-SA 2.0 ja 22.7.2019 lähdesivusta; Flickr-varmennus 2022 ei kuvausaika. Pääaihe luonto, taustarakennusten valokuvaamisen kerros tarkistettu myös Kanadan Copyright Act §32.2(1)(b)(i):stä."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Dows Laken vettä ja rantakasvillisuutta heinäkuussa 2019.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/ottawa/qa.json",
+        "fileSHA256": "32ca952a4e6cb85198e20439513e79d218367ed83d7521669cfdae784a8fad53",
+        "item": {
+          "slot": "N3",
+          "targetJsonPath": "$.nahtavyydet[\"Dows Lake\"].kuvat[0]",
+          "commonsFile": "Dow’s Lake, off the Rideau Canal (48363469826).jpg",
+          "type": "commons",
+          "sha256": "7a95856475c338c42fdb650c33d50fcabf85ddd5806c8f579ef7b70a93dae7d3",
+          "nativeSHA256": "7a95856475c338c42fdb650c33d50fcabf85ddd5806c8f579ef7b70a93dae7d3",
+          "nativeOriginalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/ottawa/cc-gap-evidence-job19/233cc91b90b13896.jpg",
+          "verdict": "accepted",
+          "reason": "Alkuperäinen 3434×2896 itse katsottu: Dow’s Laken rantakaislat, kasvillisuus, kivi ja vesi; kaukaiset taustarakennukset ovat pieni osa yleistä ympäristöä. Ei näkyviä kasvonpiirteitä, lisättyä tekstiä, vesileimaa tai taideteosta. Alkuperäisen Source-tiedoston nimi yksilöi Dow’s Lake, off the Rideau Canal ja Description Ottawa, Canada. Ross Dunn, CC BY-SA 2.0 ja 22.7.2019 lähdesivusta; Flickr-varmennus 2022 ei kuvausaika. Pääaihe luonto, taustarakennusten valokuvaamisen kerros tarkistettu myös Kanadan Copyright Act §32.2(1)(b)(i):stä.",
+          "evidence": {
+            "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/ottawa/cc-gap-evidence-job19/233cc91b90b13896.jpg",
+            "width": 3434,
+            "height": 2896,
+            "sha256": "7a95856475c338c42fdb650c33d50fcabf85ddd5806c8f579ef7b70a93dae7d3",
+            "nativeGeometry": {
+              "rawWidth": 3434,
+              "rawHeight": 2896,
+              "exifOrientation": 1,
+              "width": 3434,
+              "height": 2896
+            },
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Dow%E2%80%99s_Lake,_off_the_Rideau_Canal_(48363469826).jpg",
+            "sourcePagePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/ottawa/qa-evidence/cc-source-snapshots/edec13932697a272f1ab74f2caa7653f698cebf4a2795b0defd5c1107212c62d.html",
+            "sourcePageSHA256": "edec13932697a272f1ab74f2caa7653f698cebf4a2795b0defd5c1107212c62d",
+            "upstreamSourcePagePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/1bff5a577715dcf431056101c6444da2a833fa87d074869604ca10d03cb0061b.html",
+            "sourceFields": {
+              "Date": "22 July 2019, 13:24",
+              "Source": "Dow’s Lake, off the Rideau Canal",
+              "Author": "Ross Dunn"
+            },
+            "authors": [
+              "Ross Dunn"
+            ],
+            "authorOrigin": "Author table",
+            "licenseChoices": [
+              "CC BY-SA 2.0"
+            ],
+            "license": "CC BY-SA 2.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+            "existingGameUse": [],
+            "sameCityOtherSlots": [],
+            "sameCityAcceptedQASlots": [],
+            "sameCityAcceptedNativeSHASlots": [],
+            "auditEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/ottawa/qa-evidence/6204537590fa-technical-source.json",
+            "visualViewedByThisSession": true,
+            "nativeOriginalViewed": true,
+            "visualObservation": "Alkuperäinen 3434×2896 itse katsottu: Dow’s Laken rantakaislat, kasvillisuus, kivi ja vesi; kaukaiset taustarakennukset ovat pieni osa yleistä ympäristöä. Ei näkyviä kasvonpiirteitä, lisättyä tekstiä, vesileimaa tai taideteosta. Alkuperäisen Source-tiedoston nimi yksilöi Dow’s Lake, off the Rideau Canal ja Description Ottawa, Canada. Ross Dunn, CC BY-SA 2.0 ja 22.7.2019 lähdesivusta; Flickr-varmennus 2022 ei kuvausaika. Pääaihe luonto, taustarakennusten valokuvaamisen kerros tarkistettu myös Kanadan Copyright Act §32.2(1)(b)(i):stä.",
+            "workLayerAssessment": "Alkuperäinen 3434×2896 itse katsottu: Dow’s Laken rantakaislat, kasvillisuus, kivi ja vesi; kaukaiset taustarakennukset ovat pieni osa yleistä ympäristöä. Ei näkyviä kasvonpiirteitä, lisättyä tekstiä, vesileimaa tai taideteosta. Alkuperäisen Source-tiedoston nimi yksilöi Dow’s Lake, off the Rideau Canal ja Description Ottawa, Canada. Ross Dunn, CC BY-SA 2.0 ja 22.7.2019 lähdesivusta; Flickr-varmennus 2022 ei kuvausaika. Pääaihe luonto, taustarakennusten valokuvaamisen kerros tarkistettu myös Kanadan Copyright Act §32.2(1)(b)(i):stä.",
+            "ccFragment": "cc-gap-selection.json",
+            "canonicalCaptureDate": "22 July 2019, 13:24",
+            "primaryArchitectureLaw": {
+              "url": "https://laws-lois.justice.gc.ca/eng/acts/C-42/section-32.2.html",
+              "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/ottawa/qa-evidence/canada-copyright-section-32-2.html",
+              "sha256": "ac7abb16bf5171629389d54912980a8cd5879fb6e2ed52d016b454ac63134124",
+              "clause": "32.2(1)(b)(i)",
+              "readByThisSession": true
+            }
+          },
+          "checkedAt": "2026-10-12T20:44:59.731614+00:00",
+          "contentSHA256": "879b9abe6562d2e885b5f7ad3218635e7028e95e5aa20de8845ad9afd187ba1b",
+          "targetSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/ottawa/qa.json",
+            "sha256": "32ca952a4e6cb85198e20439513e79d218367ed83d7521669cfdae784a8fad53"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/ottawa/illustration-qa-extra.json",
+            "sha256": "5bd63a7a096a3238c115d5358d1168ded63aa242fb453593f6c31a21f6461ab1"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e11",
+        "city": "ottawa",
+        "slot": "N3",
+        "targetJsonPath": "$.nahtavyydet[\"Dows Lake\"].kuvat[0]",
+        "commonsFile": "Dow’s Lake, off the Rideau Canal (48363469826).jpg",
+        "sha256": "7a95856475c338c42fdb650c33d50fcabf85ddd5806c8f579ef7b70a93dae7d3",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Dow%E2%80%99s_Lake,_off_the_Rideau_Canal_(48363469826).jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/b/bb/Dow%E2%80%99s_Lake%2C_off_the_Rideau_Canal_%2848363469826%29.jpg",
+        "author": "Ross Dunn",
+        "license": "CC BY-SA 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+        "width": 3434,
+        "height": 2896,
+        "originalSHA256": "7a95856475c338c42fdb650c33d50fcabf85ddd5806c8f579ef7b70a93dae7d3",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/ottawa/n3-7a95856475c338c42fdb.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/ottawa/n3-7a95856475c338c42fdb.jpg",
+        "bytes": 5441027,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T20:45:49.946415+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Ross Dunn, Wikimedia Commons (CC BY-SA 2.0)",
+        "selite": "Dows Laken vettä ja rantakasvillisuutta heinäkuussa 2019.",
+        "lyhyt": "Dows Laken vettä ja rantakasvillisuutta heinäkuussa 2019.",
+        "tiedosto": "Dow’s Lake, off the Rideau Canal (48363469826).jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "a59989d85042421a2c0cac223359909ff07e8de89567d27fe60e51aeeb8deb8f",
+      "targetAfterSHA256": "133170ef91601b01b85fc1153526a8aa990d91e26f4fe71e9570fc2eaf986bdc",
+      "contextAfterSHA256": "3d331890e00e5b94b865aabe7c956572c1e01a4c2dab1766a960d7b6a790ad19"
+    },
+    {
+      "era": "e11",
+      "city": "ottawa",
+      "slot": "N1",
+      "type": "commons",
+      "assetID": "capital-cc-e11-ottawa-n1-15a6333771ef2708",
+      "galleryImageID": "capital-cc-e11-ottawa-n1-15a6333771ef2708",
+      "commonsFile": "Rideau Falls - 01.jpg",
+      "targetJsonPath": "$.nahtavyydet[\"Rideau-putoukset\"].kuvat[0]",
+      "targetTokens": [
+        "nahtavyydet",
+        "Rideau-putoukset",
+        "kuvat",
+        0
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/ottawa/n1-15a6333771ef270822fc.jpg",
+        "suora": true,
+        "lahde": "Jeangagnon, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Rideau-putousten vettä ja kallioita vuonna 2016.",
+        "lyhyt": "Rideau-putousten vettä ja kallioita vuonna 2016.",
+        "tiedosto": "Rideau Falls - 01.jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Jeangagnon, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Rideau-putousten vettä ja kallioita vuonna 2016.",
+        "lyhyt": "Rideau-putousten vettä ja kallioita vuonna 2016.",
+        "tiedosto": "Rideau Falls - 01.jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/ottawa/n1-15a6333771ef270822fc.jpg",
+        "suora": true,
+        "lahde": "Jeangagnon, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Rideau-putousten vettä ja kallioita vuonna 2016.",
+        "lyhyt": "Rideau-putousten vettä ja kallioita vuonna 2016.",
+        "tiedosto": "Rideau Falls - 01.jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "15a6333771ef270822fc34c2fcbb32c253df608398dec7e2c9bf5d6e4e56f4e7",
+      "exportSHA256": "15a6333771ef270822fc34c2fcbb32c253df608398dec7e2c9bf5d6e4e56f4e7",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/ottawa/n1-15a6333771ef270822fc.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/ottawa/n1-15a6333771ef270822fc.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/ottawa/cc-gap-evidence-job19/3aab8b76b5e8245f.jpg",
+      "dimensions": [
+        3648,
+        2736
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/ottawa/sisalto.json",
+      "sourceContentSHA256": "879b9abe6562d2e885b5f7ad3218635e7028e95e5aa20de8845ad9afd187ba1b",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "182ecf5b9097a0f348caf3ad7c97b5ff46fc72cd108bb0d95dcf95986148a1cb",
+        "subjectTitle": "Rideau-putoukset",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Jeangagnon",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Rideau_Falls_-_01.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/5/58/Rideau_Falls_-_01.jpg",
+        "rightsEvidence": {
+          "selection": {
+            "photo": "Jeangagnon; nimenomainen Author/Artist, Own work tai alkuperäiseen Flickr-kuvaan perustuvaCommons-lisenssivarmennus.",
+            "workLayer": "Pääaihe luonnollinen vesi, kallio ja kasvillisuus; tavanomainen pato/silta ja kaukaiset rakennukset erotetaan taiteesta. Kanadan virallisen Copyright Act §32.2(1)(b)(i) rakennuksen valokuvaamista koskeva teksti itse luettu. Ei veistosta tai seinämaalausta pääaiheena eikä rakennusiästä tehtyäPD-väitettä.",
+            "primarySource": "https://laws-lois.justice.gc.ca/eng/acts/C-42/FullText.html",
+            "sourceEvidenceFile": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/ottawa/cc-work/canada-copyright.html",
+            "location": "English: Rideau Falls, Ottawa Français : Chutes de la rivière Rideau, Ottawa; tiedoston tarkka paikannimi ja Commons-paikkaluokitus Ottawa/RideauFalls tai DowsLake.",
+            "timeScope": "3 September 2016; kuvausvuosi kirjattu. O2-kuvaus2025, ei menneeseen tilanteeseen sidottuja palvelu-/aukioloväitteitä."
+          },
+          "QA": {
+            "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/ottawa/cc-gap-evidence-job19/3aab8b76b5e8245f.jpg",
+            "width": 3648,
+            "height": 2736,
+            "sha256": "15a6333771ef270822fc34c2fcbb32c253df608398dec7e2c9bf5d6e4e56f4e7",
+            "nativeGeometry": {
+              "rawWidth": 3648,
+              "rawHeight": 2736,
+              "exifOrientation": 1,
+              "width": 3648,
+              "height": 2736
+            },
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Rideau_Falls_-_01.jpg",
+            "sourcePagePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/ottawa/qa-evidence/cc-source-snapshots/b9c0415240c81b2d328550b377214a0736e6bbdbc2781331b2c3d20fdb47e023.html",
+            "sourcePageSHA256": "b9c0415240c81b2d328550b377214a0736e6bbdbc2781331b2c3d20fdb47e023",
+            "upstreamSourcePagePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/9bd7b9fa1efc595e444e5a39dd7c951831609eaab43c91e1396d0e1589a3e1cd.html",
+            "sourceFields": {
+              "Date": "3 September 2016",
+              "Source": "Own work",
+              "Author": "Jeangagnon"
+            },
+            "authors": [
+              "Jeangagnon"
+            ],
+            "authorOrigin": "Author table",
+            "licenseChoices": [
+              "CC BY-SA 4.0"
+            ],
+            "license": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "existingGameUse": [],
+            "sameCityOtherSlots": [],
+            "sameCityAcceptedQASlots": [],
+            "sameCityAcceptedNativeSHASlots": [],
+            "auditEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/ottawa/qa-evidence/9710b35db095-technical-source.json",
+            "visualViewedByThisSession": true,
+            "nativeOriginalViewed": true,
+            "visualObservation": "Alkuperäinen 3648×2736 itse katsottu: Rideau-putouksen vesiverho, luonnonkallio, kasvillisuus ja padon toiminnallinen rakenne; taustalla tavanomainen rakennus. Ei erotettavia kasvonpiirteitä, veistosta, muraalia, overlayta tai vesileimaa. Lähde Description nimeää Rideau Falls, Ottawa; Jeangagnon, Own work, CC BY-SA 4.0 ja 3.9.2016 tarkistettu lähdesivusta. Taustarakennuksen valokuvaamista arvioitu myös itse luetun Kanadan Copyright Act §32.2(1)(b)(i):n perusteella, ei rakennusiästä.",
+            "workLayerAssessment": "Alkuperäinen 3648×2736 itse katsottu: Rideau-putouksen vesiverho, luonnonkallio, kasvillisuus ja padon toiminnallinen rakenne; taustalla tavanomainen rakennus. Ei erotettavia kasvonpiirteitä, veistosta, muraalia, overlayta tai vesileimaa. Lähde Description nimeää Rideau Falls, Ottawa; Jeangagnon, Own work, CC BY-SA 4.0 ja 3.9.2016 tarkistettu lähdesivusta. Taustarakennuksen valokuvaamista arvioitu myös itse luetun Kanadan Copyright Act §32.2(1)(b)(i):n perusteella, ei rakennusiästä.",
+            "ccFragment": "cc-gap-selection.json",
+            "canonicalCaptureDate": "3 September 2016",
+            "primaryArchitectureLaw": {
+              "url": "https://laws-lois.justice.gc.ca/eng/acts/C-42/section-32.2.html",
+              "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/ottawa/qa-evidence/canada-copyright-section-32-2.html",
+              "sha256": "ac7abb16bf5171629389d54912980a8cd5879fb6e2ed52d016b454ac63134124",
+              "clause": "32.2(1)(b)(i)",
+              "readByThisSession": true
+            }
+          },
+          "qaReason": "Alkuperäinen 3648×2736 itse katsottu: Rideau-putouksen vesiverho, luonnonkallio, kasvillisuus ja padon toiminnallinen rakenne; taustalla tavanomainen rakennus. Ei erotettavia kasvonpiirteitä, veistosta, muraalia, overlayta tai vesileimaa. Lähde Description nimeää Rideau Falls, Ottawa; Jeangagnon, Own work, CC BY-SA 4.0 ja 3.9.2016 tarkistettu lähdesivusta. Taustarakennuksen valokuvaamista arvioitu myös itse luetun Kanadan Copyright Act §32.2(1)(b)(i):n perusteella, ei rakennusiästä."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Rideau-putousten vettä ja kallioita vuonna 2016.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/ottawa/qa.json",
+        "fileSHA256": "32ca952a4e6cb85198e20439513e79d218367ed83d7521669cfdae784a8fad53",
+        "item": {
+          "slot": "N1",
+          "targetJsonPath": "$.nahtavyydet[\"Rideau-putoukset\"].kuvat[0]",
+          "commonsFile": "Rideau Falls - 01.jpg",
+          "type": "commons",
+          "sha256": "15a6333771ef270822fc34c2fcbb32c253df608398dec7e2c9bf5d6e4e56f4e7",
+          "nativeSHA256": "15a6333771ef270822fc34c2fcbb32c253df608398dec7e2c9bf5d6e4e56f4e7",
+          "nativeOriginalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/ottawa/cc-gap-evidence-job19/3aab8b76b5e8245f.jpg",
+          "verdict": "accepted",
+          "reason": "Alkuperäinen 3648×2736 itse katsottu: Rideau-putouksen vesiverho, luonnonkallio, kasvillisuus ja padon toiminnallinen rakenne; taustalla tavanomainen rakennus. Ei erotettavia kasvonpiirteitä, veistosta, muraalia, overlayta tai vesileimaa. Lähde Description nimeää Rideau Falls, Ottawa; Jeangagnon, Own work, CC BY-SA 4.0 ja 3.9.2016 tarkistettu lähdesivusta. Taustarakennuksen valokuvaamista arvioitu myös itse luetun Kanadan Copyright Act §32.2(1)(b)(i):n perusteella, ei rakennusiästä.",
+          "evidence": {
+            "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/ottawa/cc-gap-evidence-job19/3aab8b76b5e8245f.jpg",
+            "width": 3648,
+            "height": 2736,
+            "sha256": "15a6333771ef270822fc34c2fcbb32c253df608398dec7e2c9bf5d6e4e56f4e7",
+            "nativeGeometry": {
+              "rawWidth": 3648,
+              "rawHeight": 2736,
+              "exifOrientation": 1,
+              "width": 3648,
+              "height": 2736
+            },
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Rideau_Falls_-_01.jpg",
+            "sourcePagePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/ottawa/qa-evidence/cc-source-snapshots/b9c0415240c81b2d328550b377214a0736e6bbdbc2781331b2c3d20fdb47e023.html",
+            "sourcePageSHA256": "b9c0415240c81b2d328550b377214a0736e6bbdbc2781331b2c3d20fdb47e023",
+            "upstreamSourcePagePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/9bd7b9fa1efc595e444e5a39dd7c951831609eaab43c91e1396d0e1589a3e1cd.html",
+            "sourceFields": {
+              "Date": "3 September 2016",
+              "Source": "Own work",
+              "Author": "Jeangagnon"
+            },
+            "authors": [
+              "Jeangagnon"
+            ],
+            "authorOrigin": "Author table",
+            "licenseChoices": [
+              "CC BY-SA 4.0"
+            ],
+            "license": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "existingGameUse": [],
+            "sameCityOtherSlots": [],
+            "sameCityAcceptedQASlots": [],
+            "sameCityAcceptedNativeSHASlots": [],
+            "auditEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/ottawa/qa-evidence/9710b35db095-technical-source.json",
+            "visualViewedByThisSession": true,
+            "nativeOriginalViewed": true,
+            "visualObservation": "Alkuperäinen 3648×2736 itse katsottu: Rideau-putouksen vesiverho, luonnonkallio, kasvillisuus ja padon toiminnallinen rakenne; taustalla tavanomainen rakennus. Ei erotettavia kasvonpiirteitä, veistosta, muraalia, overlayta tai vesileimaa. Lähde Description nimeää Rideau Falls, Ottawa; Jeangagnon, Own work, CC BY-SA 4.0 ja 3.9.2016 tarkistettu lähdesivusta. Taustarakennuksen valokuvaamista arvioitu myös itse luetun Kanadan Copyright Act §32.2(1)(b)(i):n perusteella, ei rakennusiästä.",
+            "workLayerAssessment": "Alkuperäinen 3648×2736 itse katsottu: Rideau-putouksen vesiverho, luonnonkallio, kasvillisuus ja padon toiminnallinen rakenne; taustalla tavanomainen rakennus. Ei erotettavia kasvonpiirteitä, veistosta, muraalia, overlayta tai vesileimaa. Lähde Description nimeää Rideau Falls, Ottawa; Jeangagnon, Own work, CC BY-SA 4.0 ja 3.9.2016 tarkistettu lähdesivusta. Taustarakennuksen valokuvaamista arvioitu myös itse luetun Kanadan Copyright Act §32.2(1)(b)(i):n perusteella, ei rakennusiästä.",
+            "ccFragment": "cc-gap-selection.json",
+            "canonicalCaptureDate": "3 September 2016",
+            "primaryArchitectureLaw": {
+              "url": "https://laws-lois.justice.gc.ca/eng/acts/C-42/section-32.2.html",
+              "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/ottawa/qa-evidence/canada-copyright-section-32-2.html",
+              "sha256": "ac7abb16bf5171629389d54912980a8cd5879fb6e2ed52d016b454ac63134124",
+              "clause": "32.2(1)(b)(i)",
+              "readByThisSession": true
+            }
+          },
+          "checkedAt": "2026-10-12T20:44:59.603470+00:00",
+          "contentSHA256": "879b9abe6562d2e885b5f7ad3218635e7028e95e5aa20de8845ad9afd187ba1b",
+          "targetSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/ottawa/qa.json",
+            "sha256": "32ca952a4e6cb85198e20439513e79d218367ed83d7521669cfdae784a8fad53"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/ottawa/illustration-qa-extra.json",
+            "sha256": "5bd63a7a096a3238c115d5358d1168ded63aa242fb453593f6c31a21f6461ab1"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e11",
+        "city": "ottawa",
+        "slot": "N1",
+        "targetJsonPath": "$.nahtavyydet[\"Rideau-putoukset\"].kuvat[0]",
+        "commonsFile": "Rideau Falls - 01.jpg",
+        "sha256": "15a6333771ef270822fc34c2fcbb32c253df608398dec7e2c9bf5d6e4e56f4e7",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Rideau_Falls_-_01.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/5/58/Rideau_Falls_-_01.jpg",
+        "author": "Jeangagnon",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "width": 3648,
+        "height": 2736,
+        "originalSHA256": "15a6333771ef270822fc34c2fcbb32c253df608398dec7e2c9bf5d6e4e56f4e7",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/ottawa/n1-15a6333771ef270822fc.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/ottawa/n1-15a6333771ef270822fc.jpg",
+        "bytes": 2165654,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T20:45:51.381996+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Jeangagnon, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Rideau-putousten vettä ja kallioita vuonna 2016.",
+        "lyhyt": "Rideau-putousten vettä ja kallioita vuonna 2016.",
+        "tiedosto": "Rideau Falls - 01.jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "a59989d85042421a2c0cac223359909ff07e8de89567d27fe60e51aeeb8deb8f",
+      "targetAfterSHA256": "8608b56e5f51d00d3e0c921443e2a1e4bbd9dde5af30fcc980a7e129bb9ebee1",
+      "contextAfterSHA256": "cc12b2ae707e994c521f12d00c78e3f67969b8be593e0893499e1262ca8b8a5d"
     }
   ],
   "runtimeIntegrationPending": true,

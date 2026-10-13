@@ -3,7 +3,7 @@
   "era": "e11",
   "city": "portauprince",
   "authorization": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
-  "sourceContentAfterSHA256": "984cc5837fec83ba9b86638b13dae4ce1c9a5b03bbde6a4b1b5faf7033c4034a",
+  "sourceContentAfterSHA256": "df4aa3e7c1ff3fa90ce354e6914787aa1c2ed629435e8d6a80960453cad52186",
   "assets": [
     {
       "era": "e11",
@@ -412,7 +412,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/portauprince/qa.json",
-            "sha256": "6f470b65e941cd9063ab78db3d28caaeb67357ee1e1dcbeca85bf178ba316f44"
+            "sha256": "ee4ce6412d813f790275507f263051bca84742921cadb24b4061d719e73540e4"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/portauprince/illustration-qa-extra.json",
@@ -499,7 +499,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "984cc5837fec83ba9b86638b13dae4ce1c9a5b03bbde6a4b1b5faf7033c4034a",
+      "sourceContentAfterSHA256": "df4aa3e7c1ff3fa90ce354e6914787aa1c2ed629435e8d6a80960453cad52186",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
       "contextAfterSHA256": "fc70c9408b6a33c91b91c530c356dd4233a1dc9c794596f9a87083a8ddfffa01"
     },
@@ -711,7 +711,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/portauprince/qa.json",
-            "sha256": "6f470b65e941cd9063ab78db3d28caaeb67357ee1e1dcbeca85bf178ba316f44"
+            "sha256": "ee4ce6412d813f790275507f263051bca84742921cadb24b4061d719e73540e4"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/portauprince/illustration-qa-extra.json",
@@ -798,7 +798,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "984cc5837fec83ba9b86638b13dae4ce1c9a5b03bbde6a4b1b5faf7033c4034a",
+      "sourceContentAfterSHA256": "df4aa3e7c1ff3fa90ce354e6914787aa1c2ed629435e8d6a80960453cad52186",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
       "contextAfterSHA256": "665549bf6f6e1bcee9766a1aa8e5889a2b282d9cca0a7012a859114ee0ee3ef4"
     },
@@ -1005,7 +1005,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/portauprince/qa.json",
-            "sha256": "6f470b65e941cd9063ab78db3d28caaeb67357ee1e1dcbeca85bf178ba316f44"
+            "sha256": "ee4ce6412d813f790275507f263051bca84742921cadb24b4061d719e73540e4"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/portauprince/illustration-qa-extra.json",
@@ -1092,7 +1092,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "984cc5837fec83ba9b86638b13dae4ce1c9a5b03bbde6a4b1b5faf7033c4034a",
+      "sourceContentAfterSHA256": "df4aa3e7c1ff3fa90ce354e6914787aa1c2ed629435e8d6a80960453cad52186",
       "targetAfterSHA256": "ad7e82fcf9fc7c2b8bf6d6498d3f0a9e3cb9696afbf24758c1c58d726d724c20",
       "contextAfterSHA256": "ad7e82fcf9fc7c2b8bf6d6498d3f0a9e3cb9696afbf24758c1c58d726d724c20"
     },
@@ -1299,7 +1299,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/portauprince/qa.json",
-            "sha256": "6f470b65e941cd9063ab78db3d28caaeb67357ee1e1dcbeca85bf178ba316f44"
+            "sha256": "ee4ce6412d813f790275507f263051bca84742921cadb24b4061d719e73540e4"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/portauprince/illustration-qa-extra.json",
@@ -1386,7 +1386,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "984cc5837fec83ba9b86638b13dae4ce1c9a5b03bbde6a4b1b5faf7033c4034a",
+      "sourceContentAfterSHA256": "df4aa3e7c1ff3fa90ce354e6914787aa1c2ed629435e8d6a80960453cad52186",
       "targetAfterSHA256": "7cb9003fbe89cf0610ff5bfc54c68c93b8478ce2379471ee4e7e85eaa19f58be",
       "contextAfterSHA256": "7cb9003fbe89cf0610ff5bfc54c68c93b8478ce2379471ee4e7e85eaa19f58be"
     },
@@ -1593,7 +1593,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/portauprince/qa.json",
-            "sha256": "6f470b65e941cd9063ab78db3d28caaeb67357ee1e1dcbeca85bf178ba316f44"
+            "sha256": "ee4ce6412d813f790275507f263051bca84742921cadb24b4061d719e73540e4"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/portauprince/illustration-qa-extra.json",
@@ -1680,7 +1680,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "984cc5837fec83ba9b86638b13dae4ce1c9a5b03bbde6a4b1b5faf7033c4034a",
+      "sourceContentAfterSHA256": "df4aa3e7c1ff3fa90ce354e6914787aa1c2ed629435e8d6a80960453cad52186",
       "targetAfterSHA256": "66c60e831bf777efd7394c800ecd758c37ae924c1c4b17971c2823f6c130c1db",
       "contextAfterSHA256": "66c60e831bf777efd7394c800ecd758c37ae924c1c4b17971c2823f6c130c1db"
     },
@@ -1887,7 +1887,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/portauprince/qa.json",
-            "sha256": "6f470b65e941cd9063ab78db3d28caaeb67357ee1e1dcbeca85bf178ba316f44"
+            "sha256": "ee4ce6412d813f790275507f263051bca84742921cadb24b4061d719e73540e4"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/portauprince/illustration-qa-extra.json",
@@ -1974,7 +1974,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "984cc5837fec83ba9b86638b13dae4ce1c9a5b03bbde6a4b1b5faf7033c4034a",
+      "sourceContentAfterSHA256": "df4aa3e7c1ff3fa90ce354e6914787aa1c2ed629435e8d6a80960453cad52186",
       "targetAfterSHA256": "611eda182da707303eabe25f65730a3b573f1fe68597b49ce3e26b5e4247e1ac",
       "contextAfterSHA256": "611eda182da707303eabe25f65730a3b573f1fe68597b49ce3e26b5e4247e1ac"
     },
@@ -2181,7 +2181,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/portauprince/qa.json",
-            "sha256": "6f470b65e941cd9063ab78db3d28caaeb67357ee1e1dcbeca85bf178ba316f44"
+            "sha256": "ee4ce6412d813f790275507f263051bca84742921cadb24b4061d719e73540e4"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/portauprince/illustration-qa-extra.json",
@@ -2268,7 +2268,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "984cc5837fec83ba9b86638b13dae4ce1c9a5b03bbde6a4b1b5faf7033c4034a",
+      "sourceContentAfterSHA256": "df4aa3e7c1ff3fa90ce354e6914787aa1c2ed629435e8d6a80960453cad52186",
       "targetAfterSHA256": "bf251517049d0d9e13b493a7aff924bffcb46572be5fe0e64d39e45f4afb2817",
       "contextAfterSHA256": "bf251517049d0d9e13b493a7aff924bffcb46572be5fe0e64d39e45f4afb2817"
     },
@@ -2475,7 +2475,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/portauprince/qa.json",
-            "sha256": "6f470b65e941cd9063ab78db3d28caaeb67357ee1e1dcbeca85bf178ba316f44"
+            "sha256": "ee4ce6412d813f790275507f263051bca84742921cadb24b4061d719e73540e4"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/portauprince/illustration-qa-extra.json",
@@ -2562,9 +2562,1145 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "984cc5837fec83ba9b86638b13dae4ce1c9a5b03bbde6a4b1b5faf7033c4034a",
+      "sourceContentAfterSHA256": "df4aa3e7c1ff3fa90ce354e6914787aa1c2ed629435e8d6a80960453cad52186",
       "targetAfterSHA256": "fba1d4d1f173a831f8382a535b35dc2aea108726628455e8660f07958253e617",
       "contextAfterSHA256": "fba1d4d1f173a831f8382a535b35dc2aea108726628455e8660f07958253e617"
+    },
+    {
+      "era": "e11",
+      "city": "portauprince",
+      "slot": "PHOTO",
+      "type": "commons",
+      "assetID": "capital-cc-e11-portauprince-photo-89ec8957c2f38bb6",
+      "galleryImageID": "capital-cc-e11-portauprince-photo-89ec8957c2f38bb6",
+      "commonsFile": "Aerial view of PAP 2010-01-26 2.JPG",
+      "targetJsonPath": "$.valokuva",
+      "targetTokens": [
+        "valokuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/portauprince/photo-89ec8957c2f38bb69614.jpg",
+        "suora": true,
+        "lahde": "Tech. Sgt. James L. Harper , USAF, Commons (PD)",
+        "selite": "Toussaint Louverturen kansainvälisen lentoaseman kiitotie Port-au-Princessä 26. tammikuuta 2010. Historiallinen ilmakuva.",
+        "lyhyt": "Toussaint Louverturen kansainvälisen lentoaseman kiitotie Port-au-Princessä 26.",
+        "tiedosto": "Aerial view of PAP 2010-01-26 2.JPG"
+      },
+      "removeMediaKeys": [
+        "vuosi"
+      ],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Tech. Sgt. James L. Harper , USAF, Commons (PD)",
+        "selite": "Toussaint Louverturen kansainvälisen lentoaseman kiitotie Port-au-Princessä 26. tammikuuta 2010. Historiallinen ilmakuva.",
+        "lyhyt": "Toussaint Louverturen kansainvälisen lentoaseman kiitotie Port-au-Princessä 26.",
+        "tiedosto": "Aerial view of PAP 2010-01-26 2.JPG"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/portauprince/photo-89ec8957c2f38bb69614.jpg",
+        "suora": true,
+        "lahde": "Tech. Sgt. James L. Harper , USAF, Commons (PD)",
+        "selite": "Toussaint Louverturen kansainvälisen lentoaseman kiitotie Port-au-Princessä 26. tammikuuta 2010. Historiallinen ilmakuva.",
+        "lyhyt": "Toussaint Louverturen kansainvälisen lentoaseman kiitotie Port-au-Princessä 26.",
+        "tiedosto": "Aerial view of PAP 2010-01-26 2.JPG"
+      },
+      "runtimeRemoveMediaKeys": [
+        "vuosi"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "89ec8957c2f38bb6961424cc21345ff9494e5a6986d79e440ac1353057784b00",
+      "exportSHA256": "89ec8957c2f38bb6961424cc21345ff9494e5a6986d79e440ac1353057784b00",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/portauprince/photo-89ec8957c2f38bb69614.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/portauprince/photo-89ec8957c2f38bb69614.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/commons-originals/e11/portauprince/d52b49fe4a98c21d8eb36eeae7497d5766b898307787925b966608a3604c4e13.jpg",
+      "dimensions": [
+        4085,
+        2546
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/portauprince/sisalto.json",
+      "sourceContentSHA256": "984cc5837fec83ba9b86638b13dae4ce1c9a5b03bbde6a4b1b5faf7033c4034a",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "subjectTitle": "portauprince — aito paikkavalokuva",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Tech. Sgt. James L. Harper , USAF",
+        "license": "Public domain",
+        "licenseUrl": "https://commons.wikimedia.org/wiki/File:Aerial_view_of_PAP_2010-01-26_2.JPG#Licensing",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Aerial_view_of_PAP_2010-01-26_2.JPG",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Aerial_view_of_PAP_2010-01-26_2.JPG",
+        "rightsEvidence": {
+          "selection": {
+            "photo": "Nimenomainen Commons Author/Artist ja valokuvan vapaa lisenssimalline tarkistettu; ei uploaderista päätelty tekijä.",
+            "workLayer": "Pääaihe toiminnallinen kiitotie, nurmi ja lentokentän maantieteellinen asettelu; ei terminaalin koristeellista julkisivua tai itsenäistä nykytaideteosta pääaiheena. Luonnolliset kiitotiemerkinnät kuuluvat kohteeseen, eivät päälle lisättyä tekstiä. Vuosi 2010 ilmaistaan, ei väitettä nykyisestä lentoliikenteestä tai opastilanteesta.",
+            "sources": [
+              "https://commons.wikimedia.org/wiki/File:Aerial_view_of_PAP_2010-01-26_2.JPG",
+              "https://commons.wikimedia.org/wiki/File:Aerial_view_of_PAP_2010-01-26_2.JPG"
+            ],
+            "visualReview": "Oma katselu: aito kiitotie ja kaupungin ympäristö, ei näkyviä kasvopiirteitä, lisättyjä tekstejä/vesileimaa/kehystä. Pääaihe ei poliittinen tapahtuma, tuote/pakkaus tai taideteos.",
+            "reuse": "Ei tiedostonimeä, alaviivamuotoa tai URL-enkoodattua nimeä e11/js:ssä; ei samaa tiedostoa kaupungin omassa tai CC-gap-valinnassa.",
+            "nativeVisualReview": "NASin alkuperäinen avattu ja katsottu. Ei tunnistettavia kasvopiirteitä, overlay-tekstiä tai vesileimaa; airport-kuvan näyttöresoluutio4004x2496 (lähde4085x2546), muut natiivimitoissa."
+          },
+          "QA": {
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Aerial_view_of_PAP_2010-01-26_2.JPG",
+            "savedSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/7fbd62c10024166398cca7bc4b0a171e6a356b024bb4ce0141f13c19bdf57923.html",
+            "sourceSHA256": "6b762a5947b488fb465de7abdcbec7b771aac83bdee1a98b28d67b22f0b8158a",
+            "directAuthors": [
+              "Tech. Sgt. James L. Harper , USAF"
+            ],
+            "directLicenses": [
+              "Public domain"
+            ],
+            "directRows": {
+              "Date": "26 January 2010"
+            },
+            "sourceOriginalDimensions": [
+              4085,
+              2546
+            ],
+            "localDimensions": [
+              4085,
+              2546
+            ],
+            "mediaPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/portauprince/cc-work/66b048f31782-original.jpg",
+            "mediaSHA256": "89ec8957c2f38bb6961424cc21345ff9494e5a6986d79e440ac1353057784b00",
+            "authorMatches": true,
+            "licenseMatches": true,
+            "dimensionsMatch": true,
+            "licenseUrl": "https://commons.wikimedia.org/wiki/File:Aerial_view_of_PAP_2010-01-26_2.JPG#Licensing",
+            "descriptions": [
+              "English: An aerial view of the Toussaint L'Ouverture International Airport in Port-au-Prince, Haiti, is shown Jan. 26, 2010.",
+              "This image or file is a work of a U.S. Air Force Airman or employee, taken or made as part of that person's official duties. As a work of the U.S. federal government , the image or file is in the public domain in the United States."
+            ],
+            "sourceCategories": [
+              "Category:Toussaint Louverture International Airport",
+              "2010 in Toussaint Louverture International Airport",
+              "2010 Haiti earthquake relief efforts in Port-au-Prince",
+              "Aerial photographs of airports in Haiti",
+              "January 2010 in Port-au-Prince",
+              "Paved runways",
+              "Runway markings",
+              "Aerial photographs of Port-au-Prince",
+              "Runways numbered 28",
+              "PD US Air Force",
+              "Files by User:BrokenSphere",
+              "Taken with Nikon D3"
+            ],
+            "sourceProofPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/portauprince/qa-evidence/source-PHOTO-cc-selection.json",
+            "sourceProofSHA256": "413a4107239059027df6acae8082467b8dd16f973583c2153e5847b23614f72f",
+            "nativeOriginalViewedByJob27": true,
+            "fullFrameInspected": true,
+            "fullFrameDisplay": "Full original opened via view_image(detail=high), viewer scaled whole frame where larger than display; no claim of inspecting every native pixel.",
+            "captionFi": "Toussaint Louverturen kansainvälisen lentoaseman kiitotie Port-au-Princessä 26. tammikuuta 2010. Historiallinen ilmakuva.",
+            "currentManifestPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/portauprince/cc-selection.json",
+            "currentManifestSHA256": "51cb76f5b85fcd1a388a9e8ffca03fd594715c046738d72439ba584b1eb79c3f",
+            "depictedWorkReason": "Aito Toussaint Louverturen lentoaseman ilmakuva Port-au-Princessä26.1.2010. Natiivi4085x2546 itse katsottu. Kiitotie ja toiminnallinen kenttäympäristö vastaavat selitettä; luonnolliset kiitotiemaalaukset eivät ole lisätty peittoteksti. Ei tunnistettavia kasvoja tai yksilöitävää hallitsevaa nykyteosta. Tech.Sgt.James L.Harper/USAF ja tiedostokohtainen virkatehtävässä tehty US Air Force PD -todiste luettu. Historiallinen, ei nykytilanneväitettä.",
+            "currentContentSHA256": "984cc5837fec83ba9b86638b13dae4ce1c9a5b03bbde6a4b1b5faf7033c4034a",
+            "targetStillExists": true
+          },
+          "qaReason": "Aito Toussaint Louverturen lentoaseman ilmakuva Port-au-Princessä26.1.2010. Natiivi4085x2546 itse katsottu. Kiitotie ja toiminnallinen kenttäympäristö vastaavat selitettä; luonnolliset kiitotiemaalaukset eivät ole lisätty peittoteksti. Ei tunnistettavia kasvoja tai yksilöitävää hallitsevaa nykyteosta. Tech.Sgt.James L.Harper/USAF ja tiedostokohtainen virkatehtävässä tehty US Air Force PD -todiste luettu. Historiallinen, ei nykytilanneväitettä."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Toussaint Louverturen kansainvälisen lentoaseman kiitotie Port-au-Princessä 26. tammikuuta 2010. Historiallinen ilmakuva.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/portauprince/qa.json",
+        "fileSHA256": "ee4ce6412d813f790275507f263051bca84742921cadb24b4061d719e73540e4",
+        "item": {
+          "slot": "PHOTO",
+          "targetJsonPath": "$.valokuva",
+          "verdict": "accepted",
+          "reason": "Aito Toussaint Louverturen lentoaseman ilmakuva Port-au-Princessä26.1.2010. Natiivi4085x2546 itse katsottu. Kiitotie ja toiminnallinen kenttäympäristö vastaavat selitettä; luonnolliset kiitotiemaalaukset eivät ole lisätty peittoteksti. Ei tunnistettavia kasvoja tai yksilöitävää hallitsevaa nykyteosta. Tech.Sgt.James L.Harper/USAF ja tiedostokohtainen virkatehtävässä tehty US Air Force PD -todiste luettu. Historiallinen, ei nykytilanneväitettä.",
+          "evidence": {
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Aerial_view_of_PAP_2010-01-26_2.JPG",
+            "savedSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/7fbd62c10024166398cca7bc4b0a171e6a356b024bb4ce0141f13c19bdf57923.html",
+            "sourceSHA256": "6b762a5947b488fb465de7abdcbec7b771aac83bdee1a98b28d67b22f0b8158a",
+            "directAuthors": [
+              "Tech. Sgt. James L. Harper , USAF"
+            ],
+            "directLicenses": [
+              "Public domain"
+            ],
+            "directRows": {
+              "Date": "26 January 2010"
+            },
+            "sourceOriginalDimensions": [
+              4085,
+              2546
+            ],
+            "localDimensions": [
+              4085,
+              2546
+            ],
+            "mediaPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/portauprince/cc-work/66b048f31782-original.jpg",
+            "mediaSHA256": "89ec8957c2f38bb6961424cc21345ff9494e5a6986d79e440ac1353057784b00",
+            "authorMatches": true,
+            "licenseMatches": true,
+            "dimensionsMatch": true,
+            "licenseUrl": "https://commons.wikimedia.org/wiki/File:Aerial_view_of_PAP_2010-01-26_2.JPG#Licensing",
+            "descriptions": [
+              "English: An aerial view of the Toussaint L'Ouverture International Airport in Port-au-Prince, Haiti, is shown Jan. 26, 2010.",
+              "This image or file is a work of a U.S. Air Force Airman or employee, taken or made as part of that person's official duties. As a work of the U.S. federal government , the image or file is in the public domain in the United States."
+            ],
+            "sourceCategories": [
+              "Category:Toussaint Louverture International Airport",
+              "2010 in Toussaint Louverture International Airport",
+              "2010 Haiti earthquake relief efforts in Port-au-Prince",
+              "Aerial photographs of airports in Haiti",
+              "January 2010 in Port-au-Prince",
+              "Paved runways",
+              "Runway markings",
+              "Aerial photographs of Port-au-Prince",
+              "Runways numbered 28",
+              "PD US Air Force",
+              "Files by User:BrokenSphere",
+              "Taken with Nikon D3"
+            ],
+            "sourceProofPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/portauprince/qa-evidence/source-PHOTO-cc-selection.json",
+            "sourceProofSHA256": "413a4107239059027df6acae8082467b8dd16f973583c2153e5847b23614f72f",
+            "nativeOriginalViewedByJob27": true,
+            "fullFrameInspected": true,
+            "fullFrameDisplay": "Full original opened via view_image(detail=high), viewer scaled whole frame where larger than display; no claim of inspecting every native pixel.",
+            "captionFi": "Toussaint Louverturen kansainvälisen lentoaseman kiitotie Port-au-Princessä 26. tammikuuta 2010. Historiallinen ilmakuva.",
+            "currentManifestPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/portauprince/cc-selection.json",
+            "currentManifestSHA256": "51cb76f5b85fcd1a388a9e8ffca03fd594715c046738d72439ba584b1eb79c3f",
+            "depictedWorkReason": "Aito Toussaint Louverturen lentoaseman ilmakuva Port-au-Princessä26.1.2010. Natiivi4085x2546 itse katsottu. Kiitotie ja toiminnallinen kenttäympäristö vastaavat selitettä; luonnolliset kiitotiemaalaukset eivät ole lisätty peittoteksti. Ei tunnistettavia kasvoja tai yksilöitävää hallitsevaa nykyteosta. Tech.Sgt.James L.Harper/USAF ja tiedostokohtainen virkatehtävässä tehty US Air Force PD -todiste luettu. Historiallinen, ei nykytilanneväitettä.",
+            "currentContentSHA256": "984cc5837fec83ba9b86638b13dae4ce1c9a5b03bbde6a4b1b5faf7033c4034a",
+            "targetStillExists": true
+          },
+          "reviewedAt": "2026-10-13T05:56:32.313044+00:00",
+          "commonsFile": "Aerial view of PAP 2010-01-26 2.JPG",
+          "sha256": "89ec8957c2f38bb6961424cc21345ff9494e5a6986d79e440ac1353057784b00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/portauprince/qa.json",
+            "sha256": "ee4ce6412d813f790275507f263051bca84742921cadb24b4061d719e73540e4"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/portauprince/illustration-qa-extra.json",
+            "sha256": "ae5114e00860f976df4edf9f734a3b8ff9af9eea3962e5c72b16ca266ab81903"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e11",
+        "city": "portauprince",
+        "slot": "PHOTO",
+        "targetJsonPath": "$.valokuva",
+        "commonsFile": "Aerial view of PAP 2010-01-26 2.JPG",
+        "sha256": "89ec8957c2f38bb6961424cc21345ff9494e5a6986d79e440ac1353057784b00",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Aerial_view_of_PAP_2010-01-26_2.JPG",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Aerial_view_of_PAP_2010-01-26_2.JPG",
+        "author": "Tech. Sgt. James L. Harper , USAF",
+        "license": "Public domain",
+        "licenseUrl": "https://commons.wikimedia.org/wiki/File:Aerial_view_of_PAP_2010-01-26_2.JPG#Licensing",
+        "width": 4085,
+        "height": 2546,
+        "originalSHA256": "89ec8957c2f38bb6961424cc21345ff9494e5a6986d79e440ac1353057784b00",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/portauprince/photo-89ec8957c2f38bb69614.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/portauprince/photo-89ec8957c2f38bb69614.jpg",
+        "bytes": 2378173,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-13T05:56:51.248153+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Tech. Sgt. James L. Harper , USAF, Commons (PD)",
+        "selite": "Toussaint Louverturen kansainvälisen lentoaseman kiitotie Port-au-Princessä 26. tammikuuta 2010. Historiallinen ilmakuva.",
+        "lyhyt": "Toussaint Louverturen kansainvälisen lentoaseman kiitotie Port-au-Princessä 26.",
+        "tiedosto": "Aerial view of PAP 2010-01-26 2.JPG"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "df4aa3e7c1ff3fa90ce354e6914787aa1c2ed629435e8d6a80960453cad52186",
+      "targetAfterSHA256": "ab1b6a8f0589af918a786ed76d75aafbd0df4443f1f24d65363e05d525c352e7",
+      "contextAfterSHA256": "ab1b6a8f0589af918a786ed76d75aafbd0df4443f1f24d65363e05d525c352e7"
+    },
+    {
+      "era": "e11",
+      "city": "portauprince",
+      "slot": "C1",
+      "type": "commons",
+      "assetID": "capital-cc-e11-portauprince-c1-bd1040489a9f0ad7",
+      "galleryImageID": "capital-cc-e11-portauprince-c1-bd1040489a9f0ad7",
+      "commonsFile": "Port-Au-Prince, Haiti from the Black Mountains.jpg",
+      "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "kansikuvat",
+        0
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/portauprince/c1-bd1040489a9f0ad78d85.jpg",
+        "suora": true,
+        "lahde": "Sharmoreland, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Port-au-Princen kaupunkitasankoa Black Mountains -vuorilta vuonna 2016.",
+        "lyhyt": "Port-au-Princen kaupunkitasankoa Black Mountains -vuorilta vuonna 2016.",
+        "tiedosto": "Port-Au-Prince, Haiti from the Black Mountains.jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Sharmoreland, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Port-au-Princen kaupunkitasankoa Black Mountains -vuorilta vuonna 2016.",
+        "lyhyt": "Port-au-Princen kaupunkitasankoa Black Mountains -vuorilta vuonna 2016.",
+        "tiedosto": "Port-Au-Prince, Haiti from the Black Mountains.jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/portauprince/c1-bd1040489a9f0ad78d85.jpg",
+        "suora": true,
+        "lahde": "Sharmoreland, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Port-au-Princen kaupunkitasankoa Black Mountains -vuorilta vuonna 2016.",
+        "lyhyt": "Port-au-Princen kaupunkitasankoa Black Mountains -vuorilta vuonna 2016.",
+        "tiedosto": "Port-Au-Prince, Haiti from the Black Mountains.jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "bd1040489a9f0ad78d85304ce1a252305f7f32f3809d24a3c022625fcf14f6e1",
+      "exportSHA256": "bd1040489a9f0ad78d85304ce1a252305f7f32f3809d24a3c022625fcf14f6e1",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/portauprince/c1-bd1040489a9f0ad78d85.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/portauprince/c1-bd1040489a9f0ad78d85.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/portauprince/cc-gap-evidence-job19/6558d449131e2dd3.jpg",
+      "dimensions": [
+        2048,
+        1365
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/portauprince/sisalto.json",
+      "sourceContentSHA256": "984cc5837fec83ba9b86638b13dae4ce1c9a5b03bbde6a4b1b5faf7033c4034a",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "subjectTitle": "Port-au-Prince",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Sharmoreland",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Port-Au-Prince,_Haiti_from_the_Black_Mountains.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c6/Port-Au-Prince%2C_Haiti_from_the_Black_Mountains.jpg",
+        "rightsEvidence": {
+          "selection": {
+            "photo": "Sharmoreland / CC BY-SA4.0, nimenomainen Author, Own work.",
+            "location": "Alkuperäinen Description yksilöi Black Mountainsista otetun näkymän Port-au-Princeen.",
+            "workLayer": "Etualan rinne, kasvillisuus, vuoret ja etäinen kaupunkitasanko. Omassa kuvakatselussa ei tunnistettavaa rakennusteosta, veistosta tai muraalia. Saman nativeSHA-version riippumaton oikeustukihavainto025 tukee rajausta. Art15-primäärikysymys jätetään erikseen avoimeksi eikä siihen vedota; ei kokoHaitinFOP-lupaa.",
+            "rightsMemo": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/rights-support/amerikat-oseania/amerikat-oseania-rights-025.json",
+            "timeScope": "19.10.2016, vuosi kuvatekstissä; ei tuoreus- tai1873väitettä."
+          },
+          "QA": {
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Port-Au-Prince,_Haiti_from_the_Black_Mountains.jpg",
+            "savedSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/9236032c63a117aa92eefe1dd118e771ceaca9d95fef0cd8489d9f44ccb08143.html",
+            "sourceSHA256": "7e0f70e3c0e8cb8a66002e48a52c2f4842c6aed69cef60e32971003668335522",
+            "directAuthors": [
+              "Sharmoreland"
+            ],
+            "directLicenses": [
+              "CC BY-SA 4.0"
+            ],
+            "directRows": {
+              "Date": "19 October 2016"
+            },
+            "sourceOriginalDimensions": [
+              2048,
+              1365
+            ],
+            "localDimensions": [
+              2048,
+              1365
+            ],
+            "mediaPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/portauprince/cc-gap-evidence-job19/6558d449131e2dd3.jpg",
+            "mediaSHA256": "bd1040489a9f0ad78d85304ce1a252305f7f32f3809d24a3c022625fcf14f6e1",
+            "authorMatches": true,
+            "licenseMatches": true,
+            "dimensionsMatch": true,
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "descriptions": [
+              "English: This is a photo taken from the Black Mountains of Haiti, of Port-Au-Prince.",
+              "I, the copyright holder of this work, hereby publish it under the following license:"
+            ],
+            "sourceCategories": [
+              "Views of Port-au-Prince",
+              "CC-BY-SA-4.0",
+              "Self-published work"
+            ],
+            "sourceProofPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/portauprince/qa-evidence/source-C1-cc-gap-selection.json",
+            "sourceProofSHA256": "01f70b4e94b60192e303f276ea72a298ded586318d69b76bce1ba585d71c7d1a",
+            "nativeOriginalViewedByJob27": true,
+            "fullFrameInspected": true,
+            "fullFrameDisplay": "Full original opened via view_image(detail=high), viewer scaled whole frame where larger than display; no claim of inspecting every native pixel.",
+            "captionFi": "Port-au-Princen kaupunkitasankoa Black Mountains -vuorilta vuonna 2016.",
+            "currentManifestPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/portauprince/cc-gap-selection.json",
+            "currentManifestSHA256": "a7b743c3c9af0f52205b676ce031da0870a39d9cf9c305b559d9a5c1bcde61f4",
+            "depictedWorkReason": "Aito laaja Port-au-Princen kaupunkitasanko Black Mountains -vuorilta19.10.2016. Sharmoreland Own work /CC BY-SA4.0 ja2048x1365 tarkistettu alkuperäislähteestä/natiivista. Kaupungin laajuus ja taustavuoret näkyvät hieman utuisina mutta todellisina; ei läheistä yksilöitävää suojattua pääteosta, kasvoja tai lisättyä tekstiä. Ei Haiti-lain tai FOP:n yleistä hyväksyntäoletusta.",
+            "currentContentSHA256": "984cc5837fec83ba9b86638b13dae4ce1c9a5b03bbde6a4b1b5faf7033c4034a",
+            "targetStillExists": true
+          },
+          "qaReason": "Aito laaja Port-au-Princen kaupunkitasanko Black Mountains -vuorilta19.10.2016. Sharmoreland Own work /CC BY-SA4.0 ja2048x1365 tarkistettu alkuperäislähteestä/natiivista. Kaupungin laajuus ja taustavuoret näkyvät hieman utuisina mutta todellisina; ei läheistä yksilöitävää suojattua pääteosta, kasvoja tai lisättyä tekstiä. Ei Haiti-lain tai FOP:n yleistä hyväksyntäoletusta."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Port-au-Princen kaupunkitasankoa Black Mountains -vuorilta vuonna 2016.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/portauprince/qa.json",
+        "fileSHA256": "ee4ce6412d813f790275507f263051bca84742921cadb24b4061d719e73540e4",
+        "item": {
+          "slot": "C1",
+          "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
+          "verdict": "accepted",
+          "reason": "Aito laaja Port-au-Princen kaupunkitasanko Black Mountains -vuorilta19.10.2016. Sharmoreland Own work /CC BY-SA4.0 ja2048x1365 tarkistettu alkuperäislähteestä/natiivista. Kaupungin laajuus ja taustavuoret näkyvät hieman utuisina mutta todellisina; ei läheistä yksilöitävää suojattua pääteosta, kasvoja tai lisättyä tekstiä. Ei Haiti-lain tai FOP:n yleistä hyväksyntäoletusta.",
+          "evidence": {
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Port-Au-Prince,_Haiti_from_the_Black_Mountains.jpg",
+            "savedSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/9236032c63a117aa92eefe1dd118e771ceaca9d95fef0cd8489d9f44ccb08143.html",
+            "sourceSHA256": "7e0f70e3c0e8cb8a66002e48a52c2f4842c6aed69cef60e32971003668335522",
+            "directAuthors": [
+              "Sharmoreland"
+            ],
+            "directLicenses": [
+              "CC BY-SA 4.0"
+            ],
+            "directRows": {
+              "Date": "19 October 2016"
+            },
+            "sourceOriginalDimensions": [
+              2048,
+              1365
+            ],
+            "localDimensions": [
+              2048,
+              1365
+            ],
+            "mediaPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/portauprince/cc-gap-evidence-job19/6558d449131e2dd3.jpg",
+            "mediaSHA256": "bd1040489a9f0ad78d85304ce1a252305f7f32f3809d24a3c022625fcf14f6e1",
+            "authorMatches": true,
+            "licenseMatches": true,
+            "dimensionsMatch": true,
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "descriptions": [
+              "English: This is a photo taken from the Black Mountains of Haiti, of Port-Au-Prince.",
+              "I, the copyright holder of this work, hereby publish it under the following license:"
+            ],
+            "sourceCategories": [
+              "Views of Port-au-Prince",
+              "CC-BY-SA-4.0",
+              "Self-published work"
+            ],
+            "sourceProofPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/portauprince/qa-evidence/source-C1-cc-gap-selection.json",
+            "sourceProofSHA256": "01f70b4e94b60192e303f276ea72a298ded586318d69b76bce1ba585d71c7d1a",
+            "nativeOriginalViewedByJob27": true,
+            "fullFrameInspected": true,
+            "fullFrameDisplay": "Full original opened via view_image(detail=high), viewer scaled whole frame where larger than display; no claim of inspecting every native pixel.",
+            "captionFi": "Port-au-Princen kaupunkitasankoa Black Mountains -vuorilta vuonna 2016.",
+            "currentManifestPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/portauprince/cc-gap-selection.json",
+            "currentManifestSHA256": "a7b743c3c9af0f52205b676ce031da0870a39d9cf9c305b559d9a5c1bcde61f4",
+            "depictedWorkReason": "Aito laaja Port-au-Princen kaupunkitasanko Black Mountains -vuorilta19.10.2016. Sharmoreland Own work /CC BY-SA4.0 ja2048x1365 tarkistettu alkuperäislähteestä/natiivista. Kaupungin laajuus ja taustavuoret näkyvät hieman utuisina mutta todellisina; ei läheistä yksilöitävää suojattua pääteosta, kasvoja tai lisättyä tekstiä. Ei Haiti-lain tai FOP:n yleistä hyväksyntäoletusta.",
+            "currentContentSHA256": "984cc5837fec83ba9b86638b13dae4ce1c9a5b03bbde6a4b1b5faf7033c4034a",
+            "targetStillExists": true
+          },
+          "reviewedAt": "2026-10-13T05:56:32.391229+00:00",
+          "commonsFile": "Port-Au-Prince, Haiti from the Black Mountains.jpg",
+          "sha256": "bd1040489a9f0ad78d85304ce1a252305f7f32f3809d24a3c022625fcf14f6e1"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/portauprince/qa.json",
+            "sha256": "ee4ce6412d813f790275507f263051bca84742921cadb24b4061d719e73540e4"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/portauprince/illustration-qa-extra.json",
+            "sha256": "ae5114e00860f976df4edf9f734a3b8ff9af9eea3962e5c72b16ca266ab81903"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e11",
+        "city": "portauprince",
+        "slot": "C1",
+        "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
+        "commonsFile": "Port-Au-Prince, Haiti from the Black Mountains.jpg",
+        "sha256": "bd1040489a9f0ad78d85304ce1a252305f7f32f3809d24a3c022625fcf14f6e1",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Port-Au-Prince,_Haiti_from_the_Black_Mountains.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c6/Port-Au-Prince%2C_Haiti_from_the_Black_Mountains.jpg",
+        "author": "Sharmoreland",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "width": 2048,
+        "height": 1365,
+        "originalSHA256": "bd1040489a9f0ad78d85304ce1a252305f7f32f3809d24a3c022625fcf14f6e1",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/portauprince/c1-bd1040489a9f0ad78d85.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/portauprince/c1-bd1040489a9f0ad78d85.jpg",
+        "bytes": 316154,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-13T05:56:59.167412+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Sharmoreland, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Port-au-Princen kaupunkitasankoa Black Mountains -vuorilta vuonna 2016.",
+        "lyhyt": "Port-au-Princen kaupunkitasankoa Black Mountains -vuorilta vuonna 2016.",
+        "tiedosto": "Port-Au-Prince, Haiti from the Black Mountains.jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "df4aa3e7c1ff3fa90ce354e6914787aa1c2ed629435e8d6a80960453cad52186",
+      "targetAfterSHA256": "573713d5a90f4e71ffb6158131e6063320f14472c191e78adbddb9ce3ec5e5bc",
+      "contextAfterSHA256": "573713d5a90f4e71ffb6158131e6063320f14472c191e78adbddb9ce3ec5e5bc"
+    },
+    {
+      "era": "e11",
+      "city": "portauprince",
+      "slot": "C2",
+      "type": "commons",
+      "assetID": "capital-cc-e11-portauprince-c2-5f8a4a3bea7bf02d",
+      "galleryImageID": "capital-cc-e11-portauprince-c2-5f8a4a3bea7bf02d",
+      "commonsFile": "Commune of Port-au-Prince, Haiti.jpg",
+      "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[1]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "kansikuvat",
+        1
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/portauprince/c2-5f8a4a3bea7bf02da5f6.jpg",
+        "suora": true,
+        "lahde": "NASA, Wikimedia Commons (PD)",
+        "selite": "Port-au-Princen rannikko, kaupunkialue ja vuorten rinteet NASAn astronauttikuvassa 4. tammikuuta 2021.",
+        "lyhyt": "Port-au-Princen rannikko, kaupunkialue ja vuorten rinteet NASAn astronauttikuvassa 4.",
+        "tiedosto": "Commune of Port-au-Prince, Haiti.jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "NASA, Wikimedia Commons (PD)",
+        "selite": "Port-au-Princen rannikko, kaupunkialue ja vuorten rinteet NASAn astronauttikuvassa 4. tammikuuta 2021.",
+        "lyhyt": "Port-au-Princen rannikko, kaupunkialue ja vuorten rinteet NASAn astronauttikuvassa 4.",
+        "tiedosto": "Commune of Port-au-Prince, Haiti.jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/portauprince/c2-5f8a4a3bea7bf02da5f6.jpg",
+        "suora": true,
+        "lahde": "NASA, Wikimedia Commons (PD)",
+        "selite": "Port-au-Princen rannikko, kaupunkialue ja vuorten rinteet NASAn astronauttikuvassa 4. tammikuuta 2021.",
+        "lyhyt": "Port-au-Princen rannikko, kaupunkialue ja vuorten rinteet NASAn astronauttikuvassa 4.",
+        "tiedosto": "Commune of Port-au-Prince, Haiti.jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "5f8a4a3bea7bf02da5f6bf2f35d09553b088b0abd4d33b4ddfd8ecf9161c3009",
+      "exportSHA256": "5f8a4a3bea7bf02da5f6bf2f35d09553b088b0abd4d33b4ddfd8ecf9161c3009",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/portauprince/c2-5f8a4a3bea7bf02da5f6.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/portauprince/c2-5f8a4a3bea7bf02da5f6.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/commons-originals/e11/portauprince/4555b3fe1d021f29f798a691a9f531f940f2367d2d45da33ae754ecc4f1094a6.jpg",
+      "dimensions": [
+        5568,
+        3712
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/portauprince/sisalto.json",
+      "sourceContentSHA256": "984cc5837fec83ba9b86638b13dae4ce1c9a5b03bbde6a4b1b5faf7033c4034a",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "subjectTitle": "Port-au-Prince",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "NASA",
+        "license": "Public domain",
+        "licenseUrl": "https://commons.wikimedia.org/wiki/File:Commune_of_Port-au-Prince,_Haiti.jpg#Licensing",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Commune_of_Port-au-Prince,_Haiti.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e1/Commune_of_Port-au-Prince%2C_Haiti.jpg",
+        "rightsEvidence": {
+          "selection": {
+            "photo": "Nimenomainen Commons Author/Artist ja valokuvan vapaa lisenssimalline tarkistettu; ei uploaderista päätelty tekijä.",
+            "workLayer": "Laaja todellinen maantieteellinen kaupungin ja ympäröivien rinteiden näkymä. Pienet kattopinnat eivät jäljennä rakennusjulkisivuja, modernia veistosta tai muraalia. Ei yksittäistä nimettyä nykyteosta pääaiheena eikä Haitin yleisen FoP:n väitettä. NASA Source ISS064-E-19499 yksilöi kuvan, eikä käyttöoikeutta päätellä pelkästä NASA-hostista.",
+            "sources": [
+              "https://eol.jsc.nasa.gov/SearchPhotos/photo.pl?mission=ISS064&roll=E&frame=19499",
+              "https://commons.wikimedia.org/wiki/File:Commune_of_Port-au-Prince,_Haiti.jpg"
+            ],
+            "visualReview": "Oma katselu: kaupungin rannikko/laaksot näkyvät kokonaisuutena. Ei overlay-tekstiä, vesileimaa, kehystä eikä havaittavia ihmisiä.",
+            "reuse": "Ei tiedostonimeä, alaviivamuotoa tai URL-enkoodattua nimeä e11/js:ssä; ei samaa tiedostoa kaupungin omassa tai CC-gap-valinnassa.",
+            "nativeVisualReview": "NASin alkuperäinen5568x3712avattu (näytetty3888x2592). Oma katselu vahvistaa rannan, laaksot, kaupungin kattomassan ja vuoristot, ei päälle lisättyjä merkintöjä tai erillisen nykyteoksen julkisivun/veistoksen yksityiskohtia; ihmisiä ei havaittavissa."
+          },
+          "QA": {
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Commune_of_Port-au-Prince,_Haiti.jpg",
+            "savedSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/7bdbe1f94382e4c64b71cd822311034c479f5e4eff069cef14d6a12a1f12390a.html",
+            "sourceSHA256": "21ac2d5aded8baac87934c7f757e102b9c9394c8d46a075eabd31dd42c502184",
+            "directAuthors": [
+              "NASA"
+            ],
+            "directLicenses": [
+              "Public domain"
+            ],
+            "directRows": {
+              "Date": "4 January 2021"
+            },
+            "sourceOriginalDimensions": [
+              5568,
+              3712
+            ],
+            "localDimensions": [
+              5568,
+              3712
+            ],
+            "mediaPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/portauprince/cc-work/ced9912b3903-original.jpg",
+            "mediaSHA256": "5f8a4a3bea7bf02da5f6bf2f35d09553b088b0abd4d33b4ddfd8ecf9161c3009",
+            "authorMatches": true,
+            "licenseMatches": true,
+            "dimensionsMatch": true,
+            "licenseUrl": "https://commons.wikimedia.org/wiki/File:Commune_of_Port-au-Prince,_Haiti.jpg#Licensing",
+            "descriptions": [
+              "English: This is a picture taken by NASA overlooking the capital city of Haiti."
+            ],
+            "sourceCategories": [
+              "Port-au-Prince",
+              "PD NASA"
+            ],
+            "sourceProofPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/portauprince/qa-evidence/source-C2-cc-selection.json",
+            "sourceProofSHA256": "c0d2d9949348a496b75633a861b951fb34c8a89c3fe4786b4e11b7692228bfd5",
+            "nativeOriginalViewedByJob27": true,
+            "fullFrameInspected": true,
+            "fullFrameDisplay": "Full original opened via view_image(detail=high), viewer scaled whole frame where larger than display; no claim of inspecting every native pixel.",
+            "captionFi": "Port-au-Princen rannikko, kaupunkialue ja vuorten rinteet NASAn astronauttikuvassa 4. tammikuuta 2021.",
+            "currentManifestPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/portauprince/cc-selection.json",
+            "currentManifestSHA256": "51cb76f5b85fcd1a388a9e8ffca03fd594715c046738d72439ba584b1eb79c3f",
+            "depictedWorkReason": "NASAn todellinen laaja astronauttikuva4.1.2021: Port-au-Princen kaupunkitasanko, rantaviiva, lentoasema ja rinteet. Natiivi5568x3712 itse katsottu, ei tekstiä/kehystä/vesileimaa tai tunnistettavia kasvoja. Yksittäisen rakennustaiteellisen kohteen sijasta alueen asettelu. Commons Author NASA ja täsmätiedoston solely created by NASA /PD-NASA -kerros luettu, ei yleistä kaikkien NASA-sivun kuvien PD-oletusta.",
+            "currentContentSHA256": "984cc5837fec83ba9b86638b13dae4ce1c9a5b03bbde6a4b1b5faf7033c4034a",
+            "targetStillExists": true
+          },
+          "qaReason": "NASAn todellinen laaja astronauttikuva4.1.2021: Port-au-Princen kaupunkitasanko, rantaviiva, lentoasema ja rinteet. Natiivi5568x3712 itse katsottu, ei tekstiä/kehystä/vesileimaa tai tunnistettavia kasvoja. Yksittäisen rakennustaiteellisen kohteen sijasta alueen asettelu. Commons Author NASA ja täsmätiedoston solely created by NASA /PD-NASA -kerros luettu, ei yleistä kaikkien NASA-sivun kuvien PD-oletusta."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Port-au-Princen rannikko, kaupunkialue ja vuorten rinteet NASAn astronauttikuvassa 4. tammikuuta 2021.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/portauprince/qa.json",
+        "fileSHA256": "ee4ce6412d813f790275507f263051bca84742921cadb24b4061d719e73540e4",
+        "item": {
+          "slot": "C2",
+          "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[1]",
+          "verdict": "accepted",
+          "reason": "NASAn todellinen laaja astronauttikuva4.1.2021: Port-au-Princen kaupunkitasanko, rantaviiva, lentoasema ja rinteet. Natiivi5568x3712 itse katsottu, ei tekstiä/kehystä/vesileimaa tai tunnistettavia kasvoja. Yksittäisen rakennustaiteellisen kohteen sijasta alueen asettelu. Commons Author NASA ja täsmätiedoston solely created by NASA /PD-NASA -kerros luettu, ei yleistä kaikkien NASA-sivun kuvien PD-oletusta.",
+          "evidence": {
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Commune_of_Port-au-Prince,_Haiti.jpg",
+            "savedSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/7bdbe1f94382e4c64b71cd822311034c479f5e4eff069cef14d6a12a1f12390a.html",
+            "sourceSHA256": "21ac2d5aded8baac87934c7f757e102b9c9394c8d46a075eabd31dd42c502184",
+            "directAuthors": [
+              "NASA"
+            ],
+            "directLicenses": [
+              "Public domain"
+            ],
+            "directRows": {
+              "Date": "4 January 2021"
+            },
+            "sourceOriginalDimensions": [
+              5568,
+              3712
+            ],
+            "localDimensions": [
+              5568,
+              3712
+            ],
+            "mediaPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/portauprince/cc-work/ced9912b3903-original.jpg",
+            "mediaSHA256": "5f8a4a3bea7bf02da5f6bf2f35d09553b088b0abd4d33b4ddfd8ecf9161c3009",
+            "authorMatches": true,
+            "licenseMatches": true,
+            "dimensionsMatch": true,
+            "licenseUrl": "https://commons.wikimedia.org/wiki/File:Commune_of_Port-au-Prince,_Haiti.jpg#Licensing",
+            "descriptions": [
+              "English: This is a picture taken by NASA overlooking the capital city of Haiti."
+            ],
+            "sourceCategories": [
+              "Port-au-Prince",
+              "PD NASA"
+            ],
+            "sourceProofPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/portauprince/qa-evidence/source-C2-cc-selection.json",
+            "sourceProofSHA256": "c0d2d9949348a496b75633a861b951fb34c8a89c3fe4786b4e11b7692228bfd5",
+            "nativeOriginalViewedByJob27": true,
+            "fullFrameInspected": true,
+            "fullFrameDisplay": "Full original opened via view_image(detail=high), viewer scaled whole frame where larger than display; no claim of inspecting every native pixel.",
+            "captionFi": "Port-au-Princen rannikko, kaupunkialue ja vuorten rinteet NASAn astronauttikuvassa 4. tammikuuta 2021.",
+            "currentManifestPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/portauprince/cc-selection.json",
+            "currentManifestSHA256": "51cb76f5b85fcd1a388a9e8ffca03fd594715c046738d72439ba584b1eb79c3f",
+            "depictedWorkReason": "NASAn todellinen laaja astronauttikuva4.1.2021: Port-au-Princen kaupunkitasanko, rantaviiva, lentoasema ja rinteet. Natiivi5568x3712 itse katsottu, ei tekstiä/kehystä/vesileimaa tai tunnistettavia kasvoja. Yksittäisen rakennustaiteellisen kohteen sijasta alueen asettelu. Commons Author NASA ja täsmätiedoston solely created by NASA /PD-NASA -kerros luettu, ei yleistä kaikkien NASA-sivun kuvien PD-oletusta.",
+            "currentContentSHA256": "984cc5837fec83ba9b86638b13dae4ce1c9a5b03bbde6a4b1b5faf7033c4034a",
+            "targetStillExists": true
+          },
+          "reviewedAt": "2026-10-13T05:56:32.364691+00:00",
+          "commonsFile": "Commune of Port-au-Prince, Haiti.jpg",
+          "sha256": "5f8a4a3bea7bf02da5f6bf2f35d09553b088b0abd4d33b4ddfd8ecf9161c3009"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/portauprince/qa.json",
+            "sha256": "ee4ce6412d813f790275507f263051bca84742921cadb24b4061d719e73540e4"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/portauprince/illustration-qa-extra.json",
+            "sha256": "ae5114e00860f976df4edf9f734a3b8ff9af9eea3962e5c72b16ca266ab81903"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e11",
+        "city": "portauprince",
+        "slot": "C2",
+        "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[1]",
+        "commonsFile": "Commune of Port-au-Prince, Haiti.jpg",
+        "sha256": "5f8a4a3bea7bf02da5f6bf2f35d09553b088b0abd4d33b4ddfd8ecf9161c3009",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Commune_of_Port-au-Prince,_Haiti.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e1/Commune_of_Port-au-Prince%2C_Haiti.jpg",
+        "author": "NASA",
+        "license": "Public domain",
+        "licenseUrl": "https://commons.wikimedia.org/wiki/File:Commune_of_Port-au-Prince,_Haiti.jpg#Licensing",
+        "width": 5568,
+        "height": 3712,
+        "originalSHA256": "5f8a4a3bea7bf02da5f6bf2f35d09553b088b0abd4d33b4ddfd8ecf9161c3009",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/portauprince/c2-5f8a4a3bea7bf02da5f6.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/portauprince/c2-5f8a4a3bea7bf02da5f6.jpg",
+        "bytes": 4402755,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-13T05:57:00.597792+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "NASA, Wikimedia Commons (PD)",
+        "selite": "Port-au-Princen rannikko, kaupunkialue ja vuorten rinteet NASAn astronauttikuvassa 4. tammikuuta 2021.",
+        "lyhyt": "Port-au-Princen rannikko, kaupunkialue ja vuorten rinteet NASAn astronauttikuvassa 4.",
+        "tiedosto": "Commune of Port-au-Prince, Haiti.jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "df4aa3e7c1ff3fa90ce354e6914787aa1c2ed629435e8d6a80960453cad52186",
+      "targetAfterSHA256": "2c21652c5201cb5dab097e765178efdebf1b3e3d29494b7363d2079ed7a5a6c5",
+      "contextAfterSHA256": "2c21652c5201cb5dab097e765178efdebf1b3e3d29494b7363d2079ed7a5a6c5"
+    },
+    {
+      "era": "e11",
+      "city": "portauprince",
+      "slot": "C3",
+      "type": "commons",
+      "assetID": "capital-cc-e11-portauprince-c3-3aa9671d46c365f5",
+      "galleryImageID": "capital-cc-e11-portauprince-c3-3aa9671d46c365f5",
+      "commonsFile": "ISS030-E-35604 - View of Haiti.jpg",
+      "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[2]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "kansikuvat",
+        2
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/portauprince/c3-3aa9671d46c365f55d14.jpg",
+        "suora": true,
+        "lahde": "Earth Science and Remote Sensing Unit , Lyndon B. Johnson Space Center, Wikimedia Commons (PD)",
+        "selite": "Port-au-Princen seutua ja Gonâvenlahtea avaruusasemalta tammikuussa 2012.",
+        "lyhyt": "Port-au-Princen seutua ja Gonâvenlahtea avaruusasemalta tammikuussa 2012.",
+        "tiedosto": "ISS030-E-35604 - View of Haiti.jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Earth Science and Remote Sensing Unit , Lyndon B. Johnson Space Center, Wikimedia Commons (PD)",
+        "selite": "Port-au-Princen seutua ja Gonâvenlahtea avaruusasemalta tammikuussa 2012.",
+        "lyhyt": "Port-au-Princen seutua ja Gonâvenlahtea avaruusasemalta tammikuussa 2012.",
+        "tiedosto": "ISS030-E-35604 - View of Haiti.jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/portauprince/c3-3aa9671d46c365f55d14.jpg",
+        "suora": true,
+        "lahde": "Earth Science and Remote Sensing Unit , Lyndon B. Johnson Space Center, Wikimedia Commons (PD)",
+        "selite": "Port-au-Princen seutua ja Gonâvenlahtea avaruusasemalta tammikuussa 2012.",
+        "lyhyt": "Port-au-Princen seutua ja Gonâvenlahtea avaruusasemalta tammikuussa 2012.",
+        "tiedosto": "ISS030-E-35604 - View of Haiti.jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "3aa9671d46c365f55d14b236f93906cfdfc366b4828650b017b7c75aa0354077",
+      "exportSHA256": "3aa9671d46c365f55d14b236f93906cfdfc366b4828650b017b7c75aa0354077",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/portauprince/c3-3aa9671d46c365f55d14.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/portauprince/c3-3aa9671d46c365f55d14.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/portauprince/cc-gap-evidence-job19/fd4b6c8c149cb2c7.jpg",
+      "dimensions": [
+        4288,
+        2848
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/portauprince/sisalto.json",
+      "sourceContentSHA256": "984cc5837fec83ba9b86638b13dae4ce1c9a5b03bbde6a4b1b5faf7033c4034a",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "subjectTitle": "Port-au-Prince",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Earth Science and Remote Sensing Unit , Lyndon B. Johnson Space Center",
+        "license": "Public domain",
+        "licenseUrl": "https://commons.wikimedia.org/wiki/File:ISS030-E-35604_-_View_of_Haiti.jpg#Licensing",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:ISS030-E-35604_-_View_of_Haiti.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c2/ISS030-E-35604_-_View_of_Haiti.jpg",
+        "rightsEvidence": {
+          "selection": {
+            "photo": "Earth Science and Remote Sensing Unit, Lyndon B. Johnson Space Center; tarkka Commons Author/Artist, Public domain / NASA-avaruusasemakuva.",
+            "location": "Commons-paikkakategoriaSatellite pictures ofPort-au-Prince ja nimenomainen Object location18°30′N,72°18′W sitovat kohteen pääkaupungin seutuun. Omassa katselussa sen rannikkotasanko, pitkä lentoaseman kiitotie ja Gonâvenlahden pää erottuvat. NASAn vanha kuvaustietuepalvelu vastasiSQL failed; sitä ei raportoida onnistuneeksi primääripaikkavarmennukseksi. Commonsin paikka-/kuvatiedot ja oma maantieteellinen katselu ovat tämän rajatun seutukuvan näyttö.",
+            "workLayer": "Laaja luonnon/topografian ja kaupunkialueen avaruuskuva. Ei tunnistettavaa rakennusjulkisivua, veistosta tai muraalia. EiHaitinFOP-väitettä.",
+            "timeScope": "14.1.2012, lähdevuosi kuvatekstissä. Ei opas-tuoreusväitettä.",
+            "sourceLimitation": "NASA EOL source snapshot contains SQL failed; preserve that failed primary lookup honestly.",
+            "nasaSourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/portauprince/cc-gap-evidence-job19/nasa-native-location.html"
+          },
+          "QA": {
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:ISS030-E-35604_-_View_of_Haiti.jpg",
+            "savedSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/11cfd708cce93dafb9ea6f743be78636fb918ca68f93a646ea291013ea1b285d.html",
+            "sourceSHA256": "60152aac3852a6bc074d90d17185d60ba00674fd398fe70570d3ebc0daf576ce",
+            "directAuthors": [
+              "Earth Science and Remote Sensing Unit , Lyndon B. Johnson Space Center"
+            ],
+            "directLicenses": [
+              "Public domain"
+            ],
+            "directRows": {
+              "Date": "14 January 2012, 19:58:22",
+              "Object location": "18° 30′ N, 72° 18′ W",
+              "Camera location": "18° 30′ N, 72° 06′ W"
+            },
+            "sourceOriginalDimensions": [
+              4288,
+              2848
+            ],
+            "localDimensions": [
+              4288,
+              2848
+            ],
+            "mediaPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/portauprince/cc-gap-evidence-job19/fd4b6c8c149cb2c7.jpg",
+            "mediaSHA256": "3aa9671d46c365f55d14b236f93906cfdfc366b4828650b017b7c75aa0354077",
+            "authorMatches": true,
+            "licenseMatches": true,
+            "dimensionsMatch": true,
+            "licenseUrl": "https://commons.wikimedia.org/wiki/File:ISS030-E-35604_-_View_of_Haiti.jpg#Licensing",
+            "descriptions": [
+              "English: View of Haiti taken during ISS Expedition 30.",
+              "This image or video was catalogued by Lyndon B. Johnson Space Center of the United States National Aeronautics and Space Administration (NASA) under Photo ID: ISS030-E-35604 ."
+            ],
+            "sourceCategories": [
+              "Satellite pictures of Port-au-Prince",
+              "ISS Expedition 30 Crew Earth Observations (dump)",
+              "Images from the Earth Science and Remote Sensing Unit, Lyndon B. Johnson Space Center",
+              "Files from NASA with known IDs",
+              "PD NASA",
+              "Taken with Nikon D2Xs",
+              "ISS photographs taken on 2012-01-14"
+            ],
+            "sourceProofPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/portauprince/qa-evidence/source-C3-cc-gap-selection.json",
+            "sourceProofSHA256": "3b136150bdad4fbe5bb188f368026dbd191df4c24a39ef1d129d7653eb80e62f",
+            "nativeOriginalViewedByJob27": true,
+            "fullFrameInspected": true,
+            "fullFrameDisplay": "Full original opened via view_image(detail=high), viewer scaled whole frame where larger than display; no claim of inspecting every native pixel.",
+            "captionFi": "Port-au-Princen seutua ja Gonâvenlahtea avaruusasemalta tammikuussa 2012.",
+            "currentManifestPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/portauprince/cc-gap-selection.json",
+            "currentManifestSHA256": "a7b743c3c9af0f52205b676ce031da0870a39d9cf9c305b559d9a5c1bcde61f4",
+            "depictedWorkReason": "Todellinen ISS30-astronauttikuva14.1.2012 Port-au-Princen seudusta/Gonâvenlahdesta. Commonsin kohdekoordinaatit18°30′N72°18′W ja Satellite pictures of Port-au-Prince -luokka sitovat yleisen Haiti-otsikon seutuun; omassa koko natiivin katselussa erottuvat kaupunkitasanko, pitkä kiitotie, rannikko ja vuoristo. Tiedostokohtainen NASAn tekijä/PhotoID/PD-NASA todiste luettu. NASA-EOL:n ensisijainen sijaintusivu palautti SQL-virheen, joten sitä ei väitetä varmennetuksi. Selite rajataan seutuun, ei yksittäiseen kaupunginosaan.",
+            "primaryNASALocationVerified": false,
+            "sourceLocationLimitation": "NASA EOL SQL lookup failure retained; Commons object coordinates/category and viewed land/city layout support bounded regional caption.",
+            "currentContentSHA256": "984cc5837fec83ba9b86638b13dae4ce1c9a5b03bbde6a4b1b5faf7033c4034a",
+            "targetStillExists": true
+          },
+          "qaReason": "Todellinen ISS30-astronauttikuva14.1.2012 Port-au-Princen seudusta/Gonâvenlahdesta. Commonsin kohdekoordinaatit18°30′N72°18′W ja Satellite pictures of Port-au-Prince -luokka sitovat yleisen Haiti-otsikon seutuun; omassa koko natiivin katselussa erottuvat kaupunkitasanko, pitkä kiitotie, rannikko ja vuoristo. Tiedostokohtainen NASAn tekijä/PhotoID/PD-NASA todiste luettu. NASA-EOL:n ensisijainen sijaintusivu palautti SQL-virheen, joten sitä ei väitetä varmennetuksi. Selite rajataan seutuun, ei yksittäiseen kaupunginosaan."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Port-au-Princen seutua ja Gonâvenlahtea avaruusasemalta tammikuussa 2012.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/portauprince/qa.json",
+        "fileSHA256": "ee4ce6412d813f790275507f263051bca84742921cadb24b4061d719e73540e4",
+        "item": {
+          "slot": "C3",
+          "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[2]",
+          "verdict": "accepted",
+          "reason": "Todellinen ISS30-astronauttikuva14.1.2012 Port-au-Princen seudusta/Gonâvenlahdesta. Commonsin kohdekoordinaatit18°30′N72°18′W ja Satellite pictures of Port-au-Prince -luokka sitovat yleisen Haiti-otsikon seutuun; omassa koko natiivin katselussa erottuvat kaupunkitasanko, pitkä kiitotie, rannikko ja vuoristo. Tiedostokohtainen NASAn tekijä/PhotoID/PD-NASA todiste luettu. NASA-EOL:n ensisijainen sijaintusivu palautti SQL-virheen, joten sitä ei väitetä varmennetuksi. Selite rajataan seutuun, ei yksittäiseen kaupunginosaan.",
+          "evidence": {
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:ISS030-E-35604_-_View_of_Haiti.jpg",
+            "savedSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/11cfd708cce93dafb9ea6f743be78636fb918ca68f93a646ea291013ea1b285d.html",
+            "sourceSHA256": "60152aac3852a6bc074d90d17185d60ba00674fd398fe70570d3ebc0daf576ce",
+            "directAuthors": [
+              "Earth Science and Remote Sensing Unit , Lyndon B. Johnson Space Center"
+            ],
+            "directLicenses": [
+              "Public domain"
+            ],
+            "directRows": {
+              "Date": "14 January 2012, 19:58:22",
+              "Object location": "18° 30′ N, 72° 18′ W",
+              "Camera location": "18° 30′ N, 72° 06′ W"
+            },
+            "sourceOriginalDimensions": [
+              4288,
+              2848
+            ],
+            "localDimensions": [
+              4288,
+              2848
+            ],
+            "mediaPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/portauprince/cc-gap-evidence-job19/fd4b6c8c149cb2c7.jpg",
+            "mediaSHA256": "3aa9671d46c365f55d14b236f93906cfdfc366b4828650b017b7c75aa0354077",
+            "authorMatches": true,
+            "licenseMatches": true,
+            "dimensionsMatch": true,
+            "licenseUrl": "https://commons.wikimedia.org/wiki/File:ISS030-E-35604_-_View_of_Haiti.jpg#Licensing",
+            "descriptions": [
+              "English: View of Haiti taken during ISS Expedition 30.",
+              "This image or video was catalogued by Lyndon B. Johnson Space Center of the United States National Aeronautics and Space Administration (NASA) under Photo ID: ISS030-E-35604 ."
+            ],
+            "sourceCategories": [
+              "Satellite pictures of Port-au-Prince",
+              "ISS Expedition 30 Crew Earth Observations (dump)",
+              "Images from the Earth Science and Remote Sensing Unit, Lyndon B. Johnson Space Center",
+              "Files from NASA with known IDs",
+              "PD NASA",
+              "Taken with Nikon D2Xs",
+              "ISS photographs taken on 2012-01-14"
+            ],
+            "sourceProofPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/portauprince/qa-evidence/source-C3-cc-gap-selection.json",
+            "sourceProofSHA256": "3b136150bdad4fbe5bb188f368026dbd191df4c24a39ef1d129d7653eb80e62f",
+            "nativeOriginalViewedByJob27": true,
+            "fullFrameInspected": true,
+            "fullFrameDisplay": "Full original opened via view_image(detail=high), viewer scaled whole frame where larger than display; no claim of inspecting every native pixel.",
+            "captionFi": "Port-au-Princen seutua ja Gonâvenlahtea avaruusasemalta tammikuussa 2012.",
+            "currentManifestPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/portauprince/cc-gap-selection.json",
+            "currentManifestSHA256": "a7b743c3c9af0f52205b676ce031da0870a39d9cf9c305b559d9a5c1bcde61f4",
+            "depictedWorkReason": "Todellinen ISS30-astronauttikuva14.1.2012 Port-au-Princen seudusta/Gonâvenlahdesta. Commonsin kohdekoordinaatit18°30′N72°18′W ja Satellite pictures of Port-au-Prince -luokka sitovat yleisen Haiti-otsikon seutuun; omassa koko natiivin katselussa erottuvat kaupunkitasanko, pitkä kiitotie, rannikko ja vuoristo. Tiedostokohtainen NASAn tekijä/PhotoID/PD-NASA todiste luettu. NASA-EOL:n ensisijainen sijaintusivu palautti SQL-virheen, joten sitä ei väitetä varmennetuksi. Selite rajataan seutuun, ei yksittäiseen kaupunginosaan.",
+            "primaryNASALocationVerified": false,
+            "sourceLocationLimitation": "NASA EOL SQL lookup failure retained; Commons object coordinates/category and viewed land/city layout support bounded regional caption.",
+            "currentContentSHA256": "984cc5837fec83ba9b86638b13dae4ce1c9a5b03bbde6a4b1b5faf7033c4034a",
+            "targetStillExists": true
+          },
+          "reviewedAt": "2026-10-13T05:56:32.418473+00:00",
+          "commonsFile": "ISS030-E-35604 - View of Haiti.jpg",
+          "sha256": "3aa9671d46c365f55d14b236f93906cfdfc366b4828650b017b7c75aa0354077"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/portauprince/qa.json",
+            "sha256": "ee4ce6412d813f790275507f263051bca84742921cadb24b4061d719e73540e4"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/portauprince/illustration-qa-extra.json",
+            "sha256": "ae5114e00860f976df4edf9f734a3b8ff9af9eea3962e5c72b16ca266ab81903"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e11",
+        "city": "portauprince",
+        "slot": "C3",
+        "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[2]",
+        "commonsFile": "ISS030-E-35604 - View of Haiti.jpg",
+        "sha256": "3aa9671d46c365f55d14b236f93906cfdfc366b4828650b017b7c75aa0354077",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:ISS030-E-35604_-_View_of_Haiti.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c2/ISS030-E-35604_-_View_of_Haiti.jpg",
+        "author": "Earth Science and Remote Sensing Unit , Lyndon B. Johnson Space Center",
+        "license": "Public domain",
+        "licenseUrl": "https://commons.wikimedia.org/wiki/File:ISS030-E-35604_-_View_of_Haiti.jpg#Licensing",
+        "width": 4288,
+        "height": 2848,
+        "originalSHA256": "3aa9671d46c365f55d14b236f93906cfdfc366b4828650b017b7c75aa0354077",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/portauprince/c3-3aa9671d46c365f55d14.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/portauprince/c3-3aa9671d46c365f55d14.jpg",
+        "bytes": 1331625,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-13T05:57:01.872342+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Earth Science and Remote Sensing Unit , Lyndon B. Johnson Space Center, Wikimedia Commons (PD)",
+        "selite": "Port-au-Princen seutua ja Gonâvenlahtea avaruusasemalta tammikuussa 2012.",
+        "lyhyt": "Port-au-Princen seutua ja Gonâvenlahtea avaruusasemalta tammikuussa 2012.",
+        "tiedosto": "ISS030-E-35604 - View of Haiti.jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "df4aa3e7c1ff3fa90ce354e6914787aa1c2ed629435e8d6a80960453cad52186",
+      "targetAfterSHA256": "6492743ffc45339da21375efc7eb34a9f67b3cd50272d01ceafdbcbd0b7585c2",
+      "contextAfterSHA256": "6492743ffc45339da21375efc7eb34a9f67b3cd50272d01ceafdbcbd0b7585c2"
     }
   ],
   "runtimeIntegrationPending": true,
