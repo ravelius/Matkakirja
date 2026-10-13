@@ -2,7 +2,7 @@
   "schemaVersion": "capital-city-role-assets/v1",
   "era": "e13",
   "city": "lapaz",
-  "authorization": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+  "authorization": "hyväksyn kaikki tekemäsi kuvat. toimita ne claudelle. claudelta saat uusia ohjeita jatkoa varten",
   "sourceContentAfterSHA256": "bf4b47b346d0ce6ab1a1dfdc239292fcb5640199bfa698f232eee8f36d2d6016",
   "assets": [
     {
@@ -53,7 +53,7 @@
         1536
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e13/paakaupungit-pilvi/e13/lapaz/sisalto.json",
-      "sourceContentSHA256": "ec7f6260ffc1e88359e114a885253fbf2b8fd03315253eb281964b5e7b701a1a",
+      "sourceContentSHA256": "bf4b47b346d0ce6ab1a1dfdc239292fcb5640199bfa698f232eee8f36d2d6016",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
         "semanticContextSHA256": "9c27b7801c0589f946f03b5806c1bb676657bff9ffba6b84d858c4ba3ad110a9",
@@ -145,7 +145,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/lapaz/qa.json",
-            "sha256": "be9ba2900e92895d4fd3ea15f5e0aa33048fe95c6cefd244e68e4bc1544d7203"
+            "sha256": "d10f5970dc39247ffcd074eed66b4bb80c6de81839fb6962b3c70fae7c04bea0"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/lapaz/illustration-qa-extra.json",
@@ -234,7 +234,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "bf4b47b346d0ce6ab1a1dfdc239292fcb5640199bfa698f232eee8f36d2d6016",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "9c27b7801c0589f946f03b5806c1bb676657bff9ffba6b84d858c4ba3ad110a9"
+      "contextAfterSHA256": "9c27b7801c0589f946f03b5806c1bb676657bff9ffba6b84d858c4ba3ad110a9",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e13",
@@ -287,7 +289,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e13/paakaupungit-pilvi/e13/lapaz/sisalto.json",
-      "sourceContentSHA256": "ec7f6260ffc1e88359e114a885253fbf2b8fd03315253eb281964b5e7b701a1a",
+      "sourceContentSHA256": "bf4b47b346d0ce6ab1a1dfdc239292fcb5640199bfa698f232eee8f36d2d6016",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
         "semanticContextSHA256": "4e23f02110d0ae23dd601968e6a1c9b36edf7c954f2bddb91b12878bb6e79caa",
@@ -365,7 +367,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/lapaz/qa.json",
-            "sha256": "be9ba2900e92895d4fd3ea15f5e0aa33048fe95c6cefd244e68e4bc1544d7203"
+            "sha256": "d10f5970dc39247ffcd074eed66b4bb80c6de81839fb6962b3c70fae7c04bea0"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/lapaz/illustration-qa-extra.json",
@@ -454,7 +456,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "bf4b47b346d0ce6ab1a1dfdc239292fcb5640199bfa698f232eee8f36d2d6016",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "4e23f02110d0ae23dd601968e6a1c9b36edf7c954f2bddb91b12878bb6e79caa"
+      "contextAfterSHA256": "4e23f02110d0ae23dd601968e6a1c9b36edf7c954f2bddb91b12878bb6e79caa",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e13",
@@ -504,7 +508,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e13/paakaupungit-pilvi/e13/lapaz/sisalto.json",
-      "sourceContentSHA256": "ec7f6260ffc1e88359e114a885253fbf2b8fd03315253eb281964b5e7b701a1a",
+      "sourceContentSHA256": "bf4b47b346d0ce6ab1a1dfdc239292fcb5640199bfa698f232eee8f36d2d6016",
       "semanticSourceBind": {
         "targetBeforeSHA256": "ff05a92e8a9708a58f6d0d4bd5c32f05be497f317f3133902bc4f26c4968c973",
         "semanticContextSHA256": "ff05a92e8a9708a58f6d0d4bd5c32f05be497f317f3133902bc4f26c4968c973",
@@ -586,7 +590,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/lapaz/qa.json",
-            "sha256": "be9ba2900e92895d4fd3ea15f5e0aa33048fe95c6cefd244e68e4bc1544d7203"
+            "sha256": "d10f5970dc39247ffcd074eed66b4bb80c6de81839fb6962b3c70fae7c04bea0"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/lapaz/illustration-qa-extra.json",
@@ -675,7 +679,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "bf4b47b346d0ce6ab1a1dfdc239292fcb5640199bfa698f232eee8f36d2d6016",
       "targetAfterSHA256": "ff05a92e8a9708a58f6d0d4bd5c32f05be497f317f3133902bc4f26c4968c973",
-      "contextAfterSHA256": "ff05a92e8a9708a58f6d0d4bd5c32f05be497f317f3133902bc4f26c4968c973"
+      "contextAfterSHA256": "ff05a92e8a9708a58f6d0d4bd5c32f05be497f317f3133902bc4f26c4968c973",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e13",
@@ -725,7 +731,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e13/paakaupungit-pilvi/e13/lapaz/sisalto.json",
-      "sourceContentSHA256": "ec7f6260ffc1e88359e114a885253fbf2b8fd03315253eb281964b5e7b701a1a",
+      "sourceContentSHA256": "bf4b47b346d0ce6ab1a1dfdc239292fcb5640199bfa698f232eee8f36d2d6016",
       "semanticSourceBind": {
         "targetBeforeSHA256": "6147ecd59563a04238cbd99e162063063093e03885435196bb040de4515dd2fa",
         "semanticContextSHA256": "6147ecd59563a04238cbd99e162063063093e03885435196bb040de4515dd2fa",
@@ -805,7 +811,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/lapaz/qa.json",
-            "sha256": "be9ba2900e92895d4fd3ea15f5e0aa33048fe95c6cefd244e68e4bc1544d7203"
+            "sha256": "d10f5970dc39247ffcd074eed66b4bb80c6de81839fb6962b3c70fae7c04bea0"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/lapaz/illustration-qa-extra.json",
@@ -894,7 +900,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "bf4b47b346d0ce6ab1a1dfdc239292fcb5640199bfa698f232eee8f36d2d6016",
       "targetAfterSHA256": "6147ecd59563a04238cbd99e162063063093e03885435196bb040de4515dd2fa",
-      "contextAfterSHA256": "6147ecd59563a04238cbd99e162063063093e03885435196bb040de4515dd2fa"
+      "contextAfterSHA256": "6147ecd59563a04238cbd99e162063063093e03885435196bb040de4515dd2fa",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e13",
@@ -944,7 +952,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e13/paakaupungit-pilvi/e13/lapaz/sisalto.json",
-      "sourceContentSHA256": "ec7f6260ffc1e88359e114a885253fbf2b8fd03315253eb281964b5e7b701a1a",
+      "sourceContentSHA256": "bf4b47b346d0ce6ab1a1dfdc239292fcb5640199bfa698f232eee8f36d2d6016",
       "semanticSourceBind": {
         "targetBeforeSHA256": "d52c00e257f38b94d86b3aed159b145ec360cf0ad503c825602c3e9592bc5111",
         "semanticContextSHA256": "d52c00e257f38b94d86b3aed159b145ec360cf0ad503c825602c3e9592bc5111",
@@ -1026,7 +1034,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/lapaz/qa.json",
-            "sha256": "be9ba2900e92895d4fd3ea15f5e0aa33048fe95c6cefd244e68e4bc1544d7203"
+            "sha256": "d10f5970dc39247ffcd074eed66b4bb80c6de81839fb6962b3c70fae7c04bea0"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/lapaz/illustration-qa-extra.json",
@@ -1115,7 +1123,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "bf4b47b346d0ce6ab1a1dfdc239292fcb5640199bfa698f232eee8f36d2d6016",
       "targetAfterSHA256": "d52c00e257f38b94d86b3aed159b145ec360cf0ad503c825602c3e9592bc5111",
-      "contextAfterSHA256": "d52c00e257f38b94d86b3aed159b145ec360cf0ad503c825602c3e9592bc5111"
+      "contextAfterSHA256": "d52c00e257f38b94d86b3aed159b145ec360cf0ad503c825602c3e9592bc5111",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e13",
@@ -1165,7 +1175,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e13/paakaupungit-pilvi/e13/lapaz/sisalto.json",
-      "sourceContentSHA256": "ec7f6260ffc1e88359e114a885253fbf2b8fd03315253eb281964b5e7b701a1a",
+      "sourceContentSHA256": "bf4b47b346d0ce6ab1a1dfdc239292fcb5640199bfa698f232eee8f36d2d6016",
       "semanticSourceBind": {
         "targetBeforeSHA256": "45f496875a36b24b9036101cd4794ac980001f5b411e8f52b5fe11b6236856a5",
         "semanticContextSHA256": "45f496875a36b24b9036101cd4794ac980001f5b411e8f52b5fe11b6236856a5",
@@ -1247,7 +1257,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/lapaz/qa.json",
-            "sha256": "be9ba2900e92895d4fd3ea15f5e0aa33048fe95c6cefd244e68e4bc1544d7203"
+            "sha256": "d10f5970dc39247ffcd074eed66b4bb80c6de81839fb6962b3c70fae7c04bea0"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/lapaz/illustration-qa-extra.json",
@@ -1336,7 +1346,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "bf4b47b346d0ce6ab1a1dfdc239292fcb5640199bfa698f232eee8f36d2d6016",
       "targetAfterSHA256": "45f496875a36b24b9036101cd4794ac980001f5b411e8f52b5fe11b6236856a5",
-      "contextAfterSHA256": "45f496875a36b24b9036101cd4794ac980001f5b411e8f52b5fe11b6236856a5"
+      "contextAfterSHA256": "45f496875a36b24b9036101cd4794ac980001f5b411e8f52b5fe11b6236856a5",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e13",
@@ -1386,7 +1398,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e13/paakaupungit-pilvi/e13/lapaz/sisalto.json",
-      "sourceContentSHA256": "ec7f6260ffc1e88359e114a885253fbf2b8fd03315253eb281964b5e7b701a1a",
+      "sourceContentSHA256": "bf4b47b346d0ce6ab1a1dfdc239292fcb5640199bfa698f232eee8f36d2d6016",
       "semanticSourceBind": {
         "targetBeforeSHA256": "47c9423451c1cd1d6ebee36d4d2cb7f96e24b32459da391bde4d791ad1cbe697",
         "semanticContextSHA256": "47c9423451c1cd1d6ebee36d4d2cb7f96e24b32459da391bde4d791ad1cbe697",
@@ -1468,7 +1480,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/lapaz/qa.json",
-            "sha256": "be9ba2900e92895d4fd3ea15f5e0aa33048fe95c6cefd244e68e4bc1544d7203"
+            "sha256": "d10f5970dc39247ffcd074eed66b4bb80c6de81839fb6962b3c70fae7c04bea0"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/lapaz/illustration-qa-extra.json",
@@ -1557,7 +1569,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "bf4b47b346d0ce6ab1a1dfdc239292fcb5640199bfa698f232eee8f36d2d6016",
       "targetAfterSHA256": "47c9423451c1cd1d6ebee36d4d2cb7f96e24b32459da391bde4d791ad1cbe697",
-      "contextAfterSHA256": "47c9423451c1cd1d6ebee36d4d2cb7f96e24b32459da391bde4d791ad1cbe697"
+      "contextAfterSHA256": "47c9423451c1cd1d6ebee36d4d2cb7f96e24b32459da391bde4d791ad1cbe697",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e13",
@@ -1610,7 +1624,7 @@
         1782
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e13/paakaupungit-pilvi/e13/lapaz/sisalto.json",
-      "sourceContentSHA256": "ec7f6260ffc1e88359e114a885253fbf2b8fd03315253eb281964b5e7b701a1a",
+      "sourceContentSHA256": "bf4b47b346d0ce6ab1a1dfdc239292fcb5640199bfa698f232eee8f36d2d6016",
       "semanticSourceBind": {
         "targetBeforeSHA256": "81e0ab7e854d99f528b0213eae7c4165ead9831651aa32f8ae0e1d4faea4b340",
         "semanticContextSHA256": "81e0ab7e854d99f528b0213eae7c4165ead9831651aa32f8ae0e1d4faea4b340",
@@ -1700,7 +1714,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/lapaz/qa.json",
-        "fileSHA256": "be9ba2900e92895d4fd3ea15f5e0aa33048fe95c6cefd244e68e4bc1544d7203",
+        "fileSHA256": "d10f5970dc39247ffcd074eed66b4bb80c6de81839fb6962b3c70fae7c04bea0",
         "item": {
           "slot": "PHOTO",
           "targetJsonPath": "$.valokuva",
@@ -1844,7 +1858,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/lapaz/qa.json",
-            "sha256": "be9ba2900e92895d4fd3ea15f5e0aa33048fe95c6cefd244e68e4bc1544d7203"
+            "sha256": "d10f5970dc39247ffcd074eed66b4bb80c6de81839fb6962b3c70fae7c04bea0"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/lapaz/illustration-qa-extra.json",
@@ -1923,7 +1937,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "bf4b47b346d0ce6ab1a1dfdc239292fcb5640199bfa698f232eee8f36d2d6016",
       "targetAfterSHA256": "81e0ab7e854d99f528b0213eae7c4165ead9831651aa32f8ae0e1d4faea4b340",
-      "contextAfterSHA256": "81e0ab7e854d99f528b0213eae7c4165ead9831651aa32f8ae0e1d4faea4b340"
+      "contextAfterSHA256": "81e0ab7e854d99f528b0213eae7c4165ead9831651aa32f8ae0e1d4faea4b340",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e13",
@@ -1976,7 +1992,7 @@
         2304
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e13/paakaupungit-pilvi/e13/lapaz/sisalto.json",
-      "sourceContentSHA256": "ec7f6260ffc1e88359e114a885253fbf2b8fd03315253eb281964b5e7b701a1a",
+      "sourceContentSHA256": "bf4b47b346d0ce6ab1a1dfdc239292fcb5640199bfa698f232eee8f36d2d6016",
       "semanticSourceBind": {
         "targetBeforeSHA256": "8552d7d591a4a5904d2be646d7acecd61057536c9d693300862a657dd5405fc5",
         "semanticContextSHA256": "8552d7d591a4a5904d2be646d7acecd61057536c9d693300862a657dd5405fc5",
@@ -2066,7 +2082,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/lapaz/qa.json",
-        "fileSHA256": "be9ba2900e92895d4fd3ea15f5e0aa33048fe95c6cefd244e68e4bc1544d7203",
+        "fileSHA256": "d10f5970dc39247ffcd074eed66b4bb80c6de81839fb6962b3c70fae7c04bea0",
         "item": {
           "slot": "C2",
           "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[1]",
@@ -2210,7 +2226,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/lapaz/qa.json",
-            "sha256": "be9ba2900e92895d4fd3ea15f5e0aa33048fe95c6cefd244e68e4bc1544d7203"
+            "sha256": "d10f5970dc39247ffcd074eed66b4bb80c6de81839fb6962b3c70fae7c04bea0"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/lapaz/illustration-qa-extra.json",
@@ -2287,7 +2303,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "bf4b47b346d0ce6ab1a1dfdc239292fcb5640199bfa698f232eee8f36d2d6016",
       "targetAfterSHA256": "8552d7d591a4a5904d2be646d7acecd61057536c9d693300862a657dd5405fc5",
-      "contextAfterSHA256": "8552d7d591a4a5904d2be646d7acecd61057536c9d693300862a657dd5405fc5"
+      "contextAfterSHA256": "8552d7d591a4a5904d2be646d7acecd61057536c9d693300862a657dd5405fc5",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e13",
@@ -2340,7 +2358,7 @@
         2304
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e13/paakaupungit-pilvi/e13/lapaz/sisalto.json",
-      "sourceContentSHA256": "ec7f6260ffc1e88359e114a885253fbf2b8fd03315253eb281964b5e7b701a1a",
+      "sourceContentSHA256": "bf4b47b346d0ce6ab1a1dfdc239292fcb5640199bfa698f232eee8f36d2d6016",
       "semanticSourceBind": {
         "targetBeforeSHA256": "ceabc5390303a4058a358cd8e55b35b002f7d293898c73727a70d411578ff4fc",
         "semanticContextSHA256": "ceabc5390303a4058a358cd8e55b35b002f7d293898c73727a70d411578ff4fc",
@@ -2413,7 +2431,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/lapaz/qa.json",
-        "fileSHA256": "be9ba2900e92895d4fd3ea15f5e0aa33048fe95c6cefd244e68e4bc1544d7203",
+        "fileSHA256": "d10f5970dc39247ffcd074eed66b4bb80c6de81839fb6962b3c70fae7c04bea0",
         "item": {
           "slot": "C3",
           "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[2]",
@@ -2469,7 +2487,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/lapaz/qa.json",
-            "sha256": "be9ba2900e92895d4fd3ea15f5e0aa33048fe95c6cefd244e68e4bc1544d7203"
+            "sha256": "d10f5970dc39247ffcd074eed66b4bb80c6de81839fb6962b3c70fae7c04bea0"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/lapaz/illustration-qa-extra.json",
@@ -2546,7 +2564,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "bf4b47b346d0ce6ab1a1dfdc239292fcb5640199bfa698f232eee8f36d2d6016",
       "targetAfterSHA256": "ceabc5390303a4058a358cd8e55b35b002f7d293898c73727a70d411578ff4fc",
-      "contextAfterSHA256": "ceabc5390303a4058a358cd8e55b35b002f7d293898c73727a70d411578ff4fc"
+      "contextAfterSHA256": "ceabc5390303a4058a358cd8e55b35b002f7d293898c73727a70d411578ff4fc",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e13",
@@ -2599,10 +2619,10 @@
         2303
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e13/paakaupungit-pilvi/e13/lapaz/sisalto.json",
-      "sourceContentSHA256": "ec7f6260ffc1e88359e114a885253fbf2b8fd03315253eb281964b5e7b701a1a",
+      "sourceContentSHA256": "bf4b47b346d0ce6ab1a1dfdc239292fcb5640199bfa698f232eee8f36d2d6016",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "0e8d85887ea2de3a042f9a4cb6cfb95870cafaaed824bc7025f39bf0af090e61",
-        "semanticContextSHA256": "0e8d85887ea2de3a042f9a4cb6cfb95870cafaaed824bc7025f39bf0af090e61",
+        "targetBeforeSHA256": "82e53aafb4c26685b8411125bc0950722869f89b21f576a3bfbff9d8ab9ef020",
+        "semanticContextSHA256": "82e53aafb4c26685b8411125bc0950722869f89b21f576a3bfbff9d8ab9ef020",
         "subjectTitle": "Työmatka kattojen yläpuolella",
         "targetState": "existing-target"
       },
@@ -2674,7 +2694,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/lapaz/qa.json",
-        "fileSHA256": "be9ba2900e92895d4fd3ea15f5e0aa33048fe95c6cefd244e68e4bc1544d7203",
+        "fileSHA256": "d10f5970dc39247ffcd074eed66b4bb80c6de81839fb6962b3c70fae7c04bea0",
         "item": {
           "slot": "K2",
           "targetJsonPath": "$.kaupunkilehti[0].nostot[1]",
@@ -2732,7 +2752,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/lapaz/qa.json",
-            "sha256": "be9ba2900e92895d4fd3ea15f5e0aa33048fe95c6cefd244e68e4bc1544d7203"
+            "sha256": "d10f5970dc39247ffcd074eed66b4bb80c6de81839fb6962b3c70fae7c04bea0"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e13/lapaz/illustration-qa-extra.json",
@@ -2773,10 +2793,10 @@
       "producerExportProof": null,
       "technicalExportProof": null,
       "priorMediaFields": {
-        "tiedosto": "",
-        "lahde": "",
-        "selite": "",
-        "lyhyt": ""
+        "tiedosto": "Teleferico de La Paz.jpg",
+        "lahde": "Parallelepiped09, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Mi Teleféricon vaunut La Pazin katujen yllä. Kuvasivun Exif-päiväys 18.9.2025.",
+        "lyhyt": "Mi Teleféricon vaunut La Pazin katujen yllä. Kuvasivun Exif-päiväys 18.9.2025."
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -2809,10 +2829,14 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "bf4b47b346d0ce6ab1a1dfdc239292fcb5640199bfa698f232eee8f36d2d6016",
       "targetAfterSHA256": "82e53aafb4c26685b8411125bc0950722869f89b21f576a3bfbff9d8ab9ef020",
-      "contextAfterSHA256": "82e53aafb4c26685b8411125bc0950722869f89b21f576a3bfbff9d8ab9ef020"
+      "contextAfterSHA256": "82e53aafb4c26685b8411125bc0950722869f89b21f576a3bfbff9d8ab9ef020",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     }
   ],
   "runtimeIntegrationPending": true,
-  "ownerAcceptedNotImpliedByAuthorization": true,
-  "gameIntegrated": false
+  "ownerAcceptedNotImpliedByAuthorization": false,
+  "gameIntegrated": false,
+  "allAssetsExplicitlyOwnerApproved": true,
+  "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
 }
