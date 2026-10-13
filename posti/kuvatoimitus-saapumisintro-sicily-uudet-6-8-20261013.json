@@ -1,0 +1,320 @@
+{
+  "schemaVersion": 1,
+  "cityName": "SISILIA",
+  "gameCityId": "sisilia",
+  "mediaSlug": "sicily",
+  "taskNumbers": [
+    183,
+    184
+  ],
+  "updatedAt": "2026-10-13T19:00:07.740273+00:00",
+  "sourcePath": "posti/fable-codex-saapumisintro-uudet-6-8-loput-2-20261013.md",
+  "sourceCommit": "dbdaff9a39fa0e5052f176c890c85836e1a69a1f",
+  "sourceBlob": "2e5adc4cb04a23fcb4cd8fdd75426ac78afdcc9d",
+  "sourceReadInFull": true,
+  "sourceReadBy": "/root/intro_owner_rejection_inventory",
+  "sourceReadReceiptPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/source-read-receipt.json",
+  "assets": [
+    {
+      "taskNumber": 183,
+      "mediaSlug": "sicily",
+      "slot": 6,
+      "filename": "sicily-6-nakoala-intro-v1.png",
+      "title": "koko kaupunki tunnetulta näköalapaikalta päivällä — Taorminan katot ja Giardini Naxosin lahti Piazza IX Aprilelta lounaaseen, taustalla Etna.",
+      "fullDeliveryRequirement": "**6 / koko kaupunki tunnetulta näköalapaikalta päivällä — Taorminan katot ja Giardini Naxosin lahti Piazza IX Aprilelta lounaaseen, taustalla Etna.** Tiedosto `sicily-6-nakoala-intro-v1.png`.\nMitä kuvataan: Taorminan kattomaisema ja Sisilian itärannikko päivänvalossa Piazza IX Aprilen näköalaterassilta (nykyaikainen värikuva): alhaalla rinteessä terrakottakattoja, valkoisia ja okranvärisiä taloja ja kapeita kujia, joukossa palmuja, sypressejä ja agaveja; sen alla rannikko kaareutuu etelään, vasemmalla tumman sininen Joonianmeri ja pitkä vehreä niemeke (Capo Schisò) merelle, niemen kaarella Giardini Naxosin matalat vaaleat rakennukset ja hiekkaranta; oikealla taustalla, kaukana ja hieman utuisena, Etnan laaja, loiva tulivuorenkartio, jonka huipulla voi olla ohut höyrypilvi; Etna on selvästi tunnistettava mutta pieni osa kuvasta (noin viidesosa leveydestä, kaukainen). Etualalla alareunassa vain kapea kaistale vaaleaa kivikaidetta terassin eteläpäässä ja pari kasvin lehteä, ei ihmisiä lähellä, ei rakennuksia etualalla. Kulma: vaakakuva, terassin eteläpäästä kaiteen takaa silmänkorkeudelta, kamera suunnattu lounaaseen (keskisuunta noin 225 astetta; vaakasuuntainen näkökulma noin 65 astetta, siis kuvassa suunnat noin 192-258 astetta): Capo Schisò suunnassa noin 208 astetta vasemmassa kolmanneksessa, Giardini Naxosin lahti ja kaupunki suunnissa noin 203-216 astetta vasemmalla ja keskellä, Etna noin 247 astetta oikeassa viidenneksessä. Antiikkinen teatteri (idässä, noin 84 astetta), Isola Bella ja Mazzarò (kaakossa, noin 115-121 astetta), Monte Tauron rinne (noin 160 astetta) ja Castelmola (pohjoisessa) jäävät kuvan ulkopuolelle, eli niiden ei pidä näkyä; älä käännä kameraa itään kohti merta ja teatteria. Valo: kirkas aamupäivä, aurinko kameran takana vasemmalla (idässä), pehmeä valo, ohut kaukainen utu Etnan edessä, luonnolliset vaimeat värit, ei HDR:ää. Ei saa näkyä: ihmisiä lähellä tai tunnistettavia kasvoja, antiikkista teatteria, kirkkoja ja kellotorneja erottuvina, linnoja, köysiradan vaunuja ja pylväitä, risteilyaluksia (kaukana enintään muutama pieni vene), pilvenpiirtäjiä, tekstiä, kylttejä, mainoksia, logoja, vesileimaa eikä kehystä. Fotorealistinen havainnekuva, vaimeat värit, 1536 x 1024.\nKuvateksti-ehdotus (loppuu sanaan Havainnekuva.): Taorminan katot ja Giardini Naxosin lahti Piazza IX Aprilelta lounaaseen, taustalla Etna. Havainnekuva.\n\n",
+      "sourceVersions": [
+        {
+          "path": "posti/fable-codex-saapumisintro-uudet-6-8-loput-2-20261013.md",
+          "commit": "dbdaff9a39fa0e5052f176c890c85836e1a69a1f",
+          "blob": "2e5adc4cb04a23fcb4cd8fdd75426ac78afdcc9d",
+          "readInFull": true
+        }
+      ],
+      "ownerThreadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+      "hostId": "local",
+      "generationCap": 1,
+      "status": "QA-R2-delivered-for-PT-review",
+      "productionStarted": false,
+      "delivered": true,
+      "city": "SISILIA",
+      "gameID": "sisilia",
+      "part": 2,
+      "sourceBlob": "2e5adc4cb04a23fcb4cd8fdd75426ac78afdcc9d",
+      "sourceCommit": "dbdaff9a39fa0e5052f176c890c85836e1a69a1f",
+      "sourcePath": "posti/fable-codex-saapumisintro-uudet-6-8-loput-2-20261013.md",
+      "sourceNasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/sources/fable-codex-saapumisintro-uudet-6-8-loput-2-20261013.md",
+      "sourceCharacterSpan": [
+        7802,
+        10190
+      ],
+      "sourceByteSpan": [
+        8085,
+        10559
+      ],
+      "fullDeliveryRequirementSHA256": "e26de3a25970d2e465a79e7f75117cbebe6648564335e456d9f5acb17442ab95",
+      "fullDirective": "Taorminan kattomaisema ja Sisilian itärannikko päivänvalossa Piazza IX Aprilen näköalaterassilta (nykyaikainen värikuva): alhaalla rinteessä terrakottakattoja, valkoisia ja okranvärisiä taloja ja kapeita kujia, joukossa palmuja, sypressejä ja agaveja; sen alla rannikko kaareutuu etelään, vasemmalla tumman sininen Joonianmeri ja pitkä vehreä niemeke (Capo Schisò) merelle, niemen kaarella Giardini Naxosin matalat vaaleat rakennukset ja hiekkaranta; oikealla taustalla, kaukana ja hieman utuisena, Etnan laaja, loiva tulivuorenkartio, jonka huipulla voi olla ohut höyrypilvi; Etna on selvästi tunnistettava mutta pieni osa kuvasta (noin viidesosa leveydestä, kaukainen). Etualalla alareunassa vain kapea kaistale vaaleaa kivikaidetta terassin eteläpäässä ja pari kasvin lehteä, ei ihmisiä lähellä, ei rakennuksia etualalla. Kulma: vaakakuva, terassin eteläpäästä kaiteen takaa silmänkorkeudelta, kamera suunnattu lounaaseen (keskisuunta noin 225 astetta; vaakasuuntainen näkökulma noin 65 astetta, siis kuvassa suunnat noin 192-258 astetta): Capo Schisò suunnassa noin 208 astetta vasemmassa kolmanneksessa, Giardini Naxosin lahti ja kaupunki suunnissa noin 203-216 astetta vasemmalla ja keskellä, Etna noin 247 astetta oikeassa viidenneksessä. Antiikkinen teatteri (idässä, noin 84 astetta), Isola Bella ja Mazzarò (kaakossa, noin 115-121 astetta), Monte Tauron rinne (noin 160 astetta) ja Castelmola (pohjoisessa) jäävät kuvan ulkopuolelle, eli niiden ei pidä näkyä; älä käännä kameraa itään kohti merta ja teatteria. Valo: kirkas aamupäivä, aurinko kameran takana vasemmalla (idässä), pehmeä valo, ohut kaukainen utu Etnan edessä, luonnolliset vaimeat värit, ei HDR:ää. Ei saa näkyä: ihmisiä lähellä tai tunnistettavia kasvoja, antiikkista teatteria, kirkkoja ja kellotorneja erottuvina, linnoja, köysiradan vaunuja ja pylväitä, risteilyaluksia (kaukana enintään muutama pieni vene), pilvenpiirtäjiä, tekstiä, kylttejä, mainoksia, logoja, vesileimaa eikä kehystä. Fotorealistinen havainnekuva, vaimeat värit, 1536 x 1024.",
+      "caption": "Taorminan katot ja Giardini Naxosin lahti Piazza IX Aprilelta lounaaseen, taustalla Etna. Havainnekuva.",
+      "sourceReadInFullVerified": true,
+      "mappingBlockExactSourceMatch": true,
+      "r2Prefix": "julisteet/saapumisintro/sicily/20261013-uudet-6-8/",
+      "deliveryManifestPath": "posti/kuvatoimitus-saapumisintro-sicily-uudet-6-8-20261013.json",
+      "partDeliveryReportPath": "posti/codex-fable-saapumisintro-uudet-6-8-loput-2-20261013.md",
+      "generationCallsRecorded": 0,
+      "qaAcceptedVerified": true,
+      "r2BytesVerified": true,
+      "mailboxDeliveryVerified": false,
+      "ownerAcceptanceVerified": false,
+      "acceptanceRoute": "PT acts for owner; source authorizes direct delivery. Actual PT acceptance remains evidence-dependent.",
+      "gameIntegrated": false,
+      "published": false,
+      "r2Key": "julisteet/saapumisintro/sicily/20261013-uudet-6-8/sicily-6-nakoala-intro-v1.png",
+      "historical": false,
+      "id": "sicily-6-nakoala-intro-v1",
+      "sourceReadInFull": true,
+      "cityName": "SISILIA",
+      "gameCityId": "sisilia",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/sicily/native-6.png",
+      "nativeSHA256": "ba0b8813c81abba0de6af71985d2f07982367f0e6fe19f6e2b27f816d348219f",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/sicily/sicily-6-nakoala-intro-v1.png",
+      "workspacePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/eurooppa-introt-uudet68-loput-20261013/sicily/sicily-6-nakoala-intro-v1.png",
+      "sha256": "6458c3ca14245e94151603e3aa392826ddde5a57f8c9115167e3b5378d1afd83",
+      "width": 1536,
+      "height": 1024,
+      "opaque": true,
+      "sRGB": true,
+      "neutralGrayscale": false,
+      "pixelIdentityAfterMetadataExport": true,
+      "pixelIdentityToNative": true,
+      "historicalGrayscaleEncodingNormalized": false,
+      "exportProcessing": "Metadata/sRGB only; pixels unchanged",
+      "generationPrompt": "Use case: photorealistic-natural.\nAsset: one NEW current-day full-color camera-photograph-like European city arrival image, exactly 1536 x 1024 pixels, landscape 3:2, opaque PNG. One image only, no collage or contact sheet.\nSubject: koko kaupunki tunnetulta näköalapaikalta päivällä — Taorminan katot ja Giardini Naxosin lahti Piazza IX Aprilelta lounaaseen, taustalla Etna.\n\nEXACT SCENE, VIEWPOINT, GEOMETRY, LIGHT AND EXCLUSIONS (the following Finnish source description is the controlling composition brief; follow every detail including bearing/FOV, relative left/right position, travel direction, scale, and exclusions):\nTaorminan kattomaisema ja Sisilian itärannikko päivänvalossa Piazza IX Aprilen näköalaterassilta (nykyaikainen värikuva): alhaalla rinteessä terrakottakattoja, valkoisia ja okranvärisiä taloja ja kapeita kujia, joukossa palmuja, sypressejä ja agaveja; sen alla rannikko kaareutuu etelään, vasemmalla tumman sininen Joonianmeri ja pitkä vehreä niemeke (Capo Schisò) merelle, niemen kaarella Giardini Naxosin matalat vaaleat rakennukset ja hiekkaranta; oikealla taustalla, kaukana ja hieman utuisena, Etnan laaja, loiva tulivuorenkartio, jonka huipulla voi olla ohut höyrypilvi; Etna on selvästi tunnistettava mutta pieni osa kuvasta (noin viidesosa leveydestä, kaukainen). Etualalla alareunassa vain kapea kaistale vaaleaa kivikaidetta terassin eteläpäässä ja pari kasvin lehteä, ei ihmisiä lähellä, ei rakennuksia etualalla. Kulma: vaakakuva, terassin eteläpäästä kaiteen takaa silmänkorkeudelta, kamera suunnattu lounaaseen (keskisuunta noin 225 astetta; vaakasuuntainen näkökulma noin 65 astetta, siis kuvassa suunnat noin 192-258 astetta): Capo Schisò suunnassa noin 208 astetta vasemmassa kolmanneksessa, Giardini Naxosin lahti ja kaupunki suunnissa noin 203-216 astetta vasemmalla ja keskellä, Etna noin 247 astetta oikeassa viidenneksessä. Antiikkinen teatteri (idässä, noin 84 astetta), Isola Bella ja Mazzarò (kaakossa, noin 115-121 astetta), Monte Tauron rinne (noin 160 astetta) ja Castelmola (pohjoisessa) jäävät kuvan ulkopuolelle, eli niiden ei pidä näkyä; älä käännä kameraa itään kohti merta ja teatteria. Valo: kirkas aamupäivä, aurinko kameran takana vasemmalla (idässä), pehmeä valo, ohut kaukainen utu Etnan edessä, luonnolliset vaimeat värit, ei HDR:ää. Ei saa näkyä: ihmisiä lähellä tai tunnistettavia kasvoja, antiikkista teatteria, kirkkoja ja kellotorneja erottuvina, linnoja, köysiradan vaunuja ja pylväitä, risteilyaluksia (kaukana enintään muutama pieni vene), pilvenpiirtäjiä, tekstiä, kylttejä, mainoksia, logoja, vesileimaa eikä kehystä. Fotorealistinen havainnekuva, vaimeat värit, 1536 x 1024.\n\nFinal photographic requirements: Natural real-camera appearance with restrained ordinary exposure, soft realistic light and subdued COLOR; this is PRESENT DAY, not a historical reconstruction and not a youth party. Respect the exact stated transport form and uniformly neutral unmarked paint. Do not restore brand colors, stripes, vehicle identifiers, flags, signs, letters, numbers, logos, advertisements or clothing trademarks. Faces remain tiny anonymous silhouettes or back-facing at a distance as specified. No extra landmarks, sculpture, architecture, vehicles or geographic features beyond those the controlling description allows. Correct real-looking structural geometry and coherent physics. Irregular leaves, non-repeating water ripples, naturally varying worn stone/plaster, realistic glass and metal; no plastic AI surfaces, pattern stamping, HDR, cinematic oversaturation or CGI look. Any locomotive or boat motion is shown only as described, never with added drawn motion graphics. Frame native 1536 x 1024 from the start; do not create any in-image caption, disclaimer, filename, overlay, UI, frame or watermark.\n",
+      "sourceReadReceiptPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/source-read-receipt.json",
+      "references": [
+        {
+          "kind": "authorized-scene-commission",
+          "path": "posti/fable-codex-saapumisintro-uudet-6-8-loput-2-20261013.md",
+          "commit": "dbdaff9a39fa0e5052f176c890c85836e1a69a1f",
+          "blob": "2e5adc4cb04a23fcb4cd8fdd75426ac78afdcc9d",
+          "use": "Exact assigned source card read in full. Camera direction, FOV, landmark positions, transport geometry and exclusions are preserved; this is commission evidence, not a separate visual photograph reference."
+        }
+      ],
+      "url": "https://media.matkakirja.app/julisteet/saapumisintro/sicily/20261013-uudet-6-8/sicily-6-nakoala-intro-v1.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/sicily/20261013-uudet-6-8/sicily-6-nakoala-intro-v1.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "QA": {
+        "slot": 6,
+        "taskNumber": 183,
+        "assetID": "sicily-6-nakoala-intro-v1",
+        "targetJsonPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/sicily/asset-6.json",
+        "nativeSHA256": "ba0b8813c81abba0de6af71985d2f07982367f0e6fe19f6e2b27f816d348219f",
+        "finalSHA256": "6458c3ca14245e94151603e3aa392826ddde5a57f8c9115167e3b5378d1afd83",
+        "verdict": "accepted",
+        "reason": "Joonianmeri vasemmalla, Giardini Naxosin rannikkokaari ja Capo Schisò sekä kaukainen Etna oikealla näkyvät. Ei antiikkista teatteria, erottuvia kirkkoja tai linnoja. Etnan kaukainen loiva siluetti on osa kokonaisuutta.",
+        "reviewer": "/root",
+        "reviewedAt": "2026-10-13T18:59:36.137492+00:00",
+        "nativeViewedInFull": true,
+        "assignedSourceCardReadInFull": true,
+        "nativePixelsEqualFinalVerified": true,
+        "technicalPassed": true,
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "published": false
+      },
+      "R2Proof": {
+        "slot": 6,
+        "r2Key": "julisteet/saapumisintro/sicily/20261013-uudet-6-8/sicily-6-nakoala-intro-v1.png",
+        "url": "https://media.matkakirja.app/julisteet/saapumisintro/sicily/20261013-uudet-6-8/sicily-6-nakoala-intro-v1.png",
+        "sha256": "6458c3ca14245e94151603e3aa392826ddde5a57f8c9115167e3b5378d1afd83",
+        "nativeSHA256": "ba0b8813c81abba0de6af71985d2f07982367f0e6fe19f6e2b27f816d348219f",
+        "bytes": 2696991,
+        "readbacks": [
+          {
+            "http": 200,
+            "byteExact": true,
+            "sha256": "6458c3ca14245e94151603e3aa392826ddde5a57f8c9115167e3b5378d1afd83",
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "cacheBusted": false
+          },
+          {
+            "http": 200,
+            "byteExact": true,
+            "sha256": "6458c3ca14245e94151603e3aa392826ddde5a57f8c9115167e3b5378d1afd83",
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "cacheBusted": true
+          }
+        ],
+        "byteExactReadback": true,
+        "verifiedAt": "2026-10-13T19:00:05.248748+00:00"
+      },
+      "FableReceiptVerified": false
+    },
+    {
+      "taskNumber": 184,
+      "mediaSlug": "sicily",
+      "slot": 8,
+      "filename": "sicily-8-kulkuneuvo-intro-v1.png",
+      "title": "kaupungin oma kulkuneuvo liikkeessä — Taorminan köysirata laskeutuu Monte Tauron rinnettä merelle Mazzaròn suuntaan.",
+      "fullDeliveryRequirement": "**8 / kaupungin oma kulkuneuvo liikkeessä — Taorminan köysirata laskeutuu Monte Tauron rinnettä merelle Mazzaròn suuntaan.** Tiedosto `sicily-8-kulkuneuvo-intro-v1.png`.\nMitä kuvataan: Taorminan ja Mazzaròn välinen nykyaikainen köysiratavaunu (pieni suljettu, pyöreälinjainen kuplamainen matkustajakoppi kahdeksalle hengelle, ripustettu kantokaapeliin) liikkeessä alas jyrkkää Monte Tauron rinnettä kohti merta, päivällä (nykyaikainen värikuva). Kaapelit ja yksinkertaiset teräspylväät kulkevat vinosti rinnettä alas; rinteessä agaveja, viikunakaktuksia (opuntioita), oliivi- ja mäntypuita, kuivaa ruohoa, matalia kivimuureja ja yksittäisiä valkoisia huviloita pensaiden lomassa; kaukana alhaalla Mazzaròn lahden turkoosi meri, sen vaalea kivikkoranta ja pari pientä venettä pisteinä, kaukana taivaanranta ja pehmeä utu. Kopissa mahdolliset ihmiset vain tummien ikkunoiden takana siluetteina, ei tunnistettavia kasvoja; rinteellä ei ihmisiä. Kulkuneuvon värit: yksivärinen vaalea harmaa-valkoinen kori ja tummat ikkunat, ei raitoja, ei brändimaalauksia, ei mainoksia, ei logoja, ei numeroita eikä mitään tekstiä (ei ovissa eikä katossa). Kulma: vaakakuva, kamera rinteen sivusta hieman alempaa kohti koillista (suunta noin 40 astetta, kohtisuoraan rataan nähden), köysirata laskee viistosti kuvan poikki vasemmasta yläkulmasta oikealle alas kohti merta (meri oikealla kaukana alhaalla), koppi kuvan keskikolmanneksessa kolmen neljänneksen sivukuvassa ja noin viidesosan kuvan leveydestä, koppi ja kaapeli terävinä, tausta pehmeästi epätarkka. Valo: kirkas aamupäivä tai iltapäivä, sininen taivas, luonnolliset värit, ei HDR:ää. Ei saa näkyä: ylä- tai ala-asemaa, rakennusten kylttejä, Isola Bellaa erottuvana, antiikkista teatteria, kirkkoja tai kellotorneja, linnaa, Etnaa, tekstiä, kylttejä, mainoksia, logoja, numeroita, vesileimaa eikä kehystä, ei muita kulkuneuvoja eikä autoja. Fotorealistinen havainnekuva, vaimeat värit, 1536 x 1024.\nKuvateksti-ehdotus (loppuu sanaan Havainnekuva.): Taorminan köysirata laskeutuu Monte Tauron rinnettä merelle Mazzaròn suuntaan. Havainnekuva.\n\n",
+      "sourceVersions": [
+        {
+          "path": "posti/fable-codex-saapumisintro-uudet-6-8-loput-2-20261013.md",
+          "commit": "dbdaff9a39fa0e5052f176c890c85836e1a69a1f",
+          "blob": "2e5adc4cb04a23fcb4cd8fdd75426ac78afdcc9d",
+          "readInFull": true
+        }
+      ],
+      "ownerThreadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+      "hostId": "local",
+      "generationCap": 1,
+      "status": "QA-R2-delivered-for-PT-review",
+      "productionStarted": false,
+      "delivered": true,
+      "city": "SISILIA",
+      "gameID": "sisilia",
+      "part": 2,
+      "sourceBlob": "2e5adc4cb04a23fcb4cd8fdd75426ac78afdcc9d",
+      "sourceCommit": "dbdaff9a39fa0e5052f176c890c85836e1a69a1f",
+      "sourcePath": "posti/fable-codex-saapumisintro-uudet-6-8-loput-2-20261013.md",
+      "sourceNasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/sources/fable-codex-saapumisintro-uudet-6-8-loput-2-20261013.md",
+      "sourceCharacterSpan": [
+        10190,
+        12276
+      ],
+      "sourceByteSpan": [
+        10559,
+        12717
+      ],
+      "fullDeliveryRequirementSHA256": "d4ed96937634604d756a8e44a90e3e3f429829959136297080ea508bd7d03f32",
+      "fullDirective": "Taorminan ja Mazzaròn välinen nykyaikainen köysiratavaunu (pieni suljettu, pyöreälinjainen kuplamainen matkustajakoppi kahdeksalle hengelle, ripustettu kantokaapeliin) liikkeessä alas jyrkkää Monte Tauron rinnettä kohti merta, päivällä (nykyaikainen värikuva). Kaapelit ja yksinkertaiset teräspylväät kulkevat vinosti rinnettä alas; rinteessä agaveja, viikunakaktuksia (opuntioita), oliivi- ja mäntypuita, kuivaa ruohoa, matalia kivimuureja ja yksittäisiä valkoisia huviloita pensaiden lomassa; kaukana alhaalla Mazzaròn lahden turkoosi meri, sen vaalea kivikkoranta ja pari pientä venettä pisteinä, kaukana taivaanranta ja pehmeä utu. Kopissa mahdolliset ihmiset vain tummien ikkunoiden takana siluetteina, ei tunnistettavia kasvoja; rinteellä ei ihmisiä. Kulkuneuvon värit: yksivärinen vaalea harmaa-valkoinen kori ja tummat ikkunat, ei raitoja, ei brändimaalauksia, ei mainoksia, ei logoja, ei numeroita eikä mitään tekstiä (ei ovissa eikä katossa). Kulma: vaakakuva, kamera rinteen sivusta hieman alempaa kohti koillista (suunta noin 40 astetta, kohtisuoraan rataan nähden), köysirata laskee viistosti kuvan poikki vasemmasta yläkulmasta oikealle alas kohti merta (meri oikealla kaukana alhaalla), koppi kuvan keskikolmanneksessa kolmen neljänneksen sivukuvassa ja noin viidesosan kuvan leveydestä, koppi ja kaapeli terävinä, tausta pehmeästi epätarkka. Valo: kirkas aamupäivä tai iltapäivä, sininen taivas, luonnolliset värit, ei HDR:ää. Ei saa näkyä: ylä- tai ala-asemaa, rakennusten kylttejä, Isola Bellaa erottuvana, antiikkista teatteria, kirkkoja tai kellotorneja, linnaa, Etnaa, tekstiä, kylttejä, mainoksia, logoja, numeroita, vesileimaa eikä kehystä, ei muita kulkuneuvoja eikä autoja. Fotorealistinen havainnekuva, vaimeat värit, 1536 x 1024.",
+      "caption": "Taorminan köysirata laskeutuu Monte Tauron rinnettä merelle Mazzaròn suuntaan. Havainnekuva.",
+      "sourceReadInFullVerified": true,
+      "mappingBlockExactSourceMatch": true,
+      "r2Prefix": "julisteet/saapumisintro/sicily/20261013-uudet-6-8/",
+      "deliveryManifestPath": "posti/kuvatoimitus-saapumisintro-sicily-uudet-6-8-20261013.json",
+      "partDeliveryReportPath": "posti/codex-fable-saapumisintro-uudet-6-8-loput-2-20261013.md",
+      "generationCallsRecorded": 0,
+      "qaAcceptedVerified": true,
+      "r2BytesVerified": true,
+      "mailboxDeliveryVerified": false,
+      "ownerAcceptanceVerified": false,
+      "acceptanceRoute": "PT acts for owner; source authorizes direct delivery. Actual PT acceptance remains evidence-dependent.",
+      "gameIntegrated": false,
+      "published": false,
+      "r2Key": "julisteet/saapumisintro/sicily/20261013-uudet-6-8/sicily-8-kulkuneuvo-intro-v1.png",
+      "historical": false,
+      "id": "sicily-8-kulkuneuvo-intro-v1",
+      "sourceReadInFull": true,
+      "cityName": "SISILIA",
+      "gameCityId": "sisilia",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/sicily/native-8.png",
+      "nativeSHA256": "639f944f7a037cc0a4f728fb17c6c2ff602f2cdbbf3a8d40307843a2a49ff1d7",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/sicily/sicily-8-kulkuneuvo-intro-v1.png",
+      "workspacePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/eurooppa-introt-uudet68-loput-20261013/sicily/sicily-8-kulkuneuvo-intro-v1.png",
+      "sha256": "a1d3343eae34fe0f8b590d2edf318399c50ffcd8a9435248b6085995f1ab183b",
+      "width": 1536,
+      "height": 1024,
+      "opaque": true,
+      "sRGB": true,
+      "neutralGrayscale": false,
+      "pixelIdentityAfterMetadataExport": true,
+      "pixelIdentityToNative": true,
+      "historicalGrayscaleEncodingNormalized": false,
+      "exportProcessing": "Metadata/sRGB only; pixels unchanged",
+      "generationPrompt": "Use case: photorealistic-natural.\nAsset: one NEW current-day full-color camera-photograph-like European city arrival image, exactly 1536 x 1024 pixels, landscape 3:2, opaque PNG. One image only, no collage or contact sheet.\nSubject: kaupungin oma kulkuneuvo liikkeessä — Taorminan köysirata laskeutuu Monte Tauron rinnettä merelle Mazzaròn suuntaan.\n\nEXACT SCENE, VIEWPOINT, GEOMETRY, LIGHT AND EXCLUSIONS (the following Finnish source description is the controlling composition brief; follow every detail including bearing/FOV, relative left/right position, travel direction, scale, and exclusions):\nTaorminan ja Mazzaròn välinen nykyaikainen köysiratavaunu (pieni suljettu, pyöreälinjainen kuplamainen matkustajakoppi kahdeksalle hengelle, ripustettu kantokaapeliin) liikkeessä alas jyrkkää Monte Tauron rinnettä kohti merta, päivällä (nykyaikainen värikuva). Kaapelit ja yksinkertaiset teräspylväät kulkevat vinosti rinnettä alas; rinteessä agaveja, viikunakaktuksia (opuntioita), oliivi- ja mäntypuita, kuivaa ruohoa, matalia kivimuureja ja yksittäisiä valkoisia huviloita pensaiden lomassa; kaukana alhaalla Mazzaròn lahden turkoosi meri, sen vaalea kivikkoranta ja pari pientä venettä pisteinä, kaukana taivaanranta ja pehmeä utu. Kopissa mahdolliset ihmiset vain tummien ikkunoiden takana siluetteina, ei tunnistettavia kasvoja; rinteellä ei ihmisiä. Kulkuneuvon värit: yksivärinen vaalea harmaa-valkoinen kori ja tummat ikkunat, ei raitoja, ei brändimaalauksia, ei mainoksia, ei logoja, ei numeroita eikä mitään tekstiä (ei ovissa eikä katossa). Kulma: vaakakuva, kamera rinteen sivusta hieman alempaa kohti koillista (suunta noin 40 astetta, kohtisuoraan rataan nähden), köysirata laskee viistosti kuvan poikki vasemmasta yläkulmasta oikealle alas kohti merta (meri oikealla kaukana alhaalla), koppi kuvan keskikolmanneksessa kolmen neljänneksen sivukuvassa ja noin viidesosan kuvan leveydestä, koppi ja kaapeli terävinä, tausta pehmeästi epätarkka. Valo: kirkas aamupäivä tai iltapäivä, sininen taivas, luonnolliset värit, ei HDR:ää. Ei saa näkyä: ylä- tai ala-asemaa, rakennusten kylttejä, Isola Bellaa erottuvana, antiikkista teatteria, kirkkoja tai kellotorneja, linnaa, Etnaa, tekstiä, kylttejä, mainoksia, logoja, numeroita, vesileimaa eikä kehystä, ei muita kulkuneuvoja eikä autoja. Fotorealistinen havainnekuva, vaimeat värit, 1536 x 1024.\n\nFinal photographic requirements: Natural real-camera appearance with restrained ordinary exposure, soft realistic light and subdued COLOR; this is PRESENT DAY, not a historical reconstruction and not a youth party. Respect the exact stated transport form and uniformly neutral unmarked paint. Do not restore brand colors, stripes, vehicle identifiers, flags, signs, letters, numbers, logos, advertisements or clothing trademarks. Faces remain tiny anonymous silhouettes or back-facing at a distance as specified. No extra landmarks, sculpture, architecture, vehicles or geographic features beyond those the controlling description allows. Correct real-looking structural geometry and coherent physics. Irregular leaves, non-repeating water ripples, naturally varying worn stone/plaster, realistic glass and metal; no plastic AI surfaces, pattern stamping, HDR, cinematic oversaturation or CGI look. Any locomotive or boat motion is shown only as described, never with added drawn motion graphics. Frame native 1536 x 1024 from the start; do not create any in-image caption, disclaimer, filename, overlay, UI, frame or watermark.\n\nTransport composition reinforcement: Respect the source's approximate subject size, one FIFTH of the full image WIDTH, not merely of a crop or small center area. The cabin descends from upper LEFT to lower RIGHT toward the distant sea, not an ascending mirrored scene. \n",
+      "sourceReadReceiptPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/source-read-receipt.json",
+      "references": [
+        {
+          "kind": "authorized-scene-commission",
+          "path": "posti/fable-codex-saapumisintro-uudet-6-8-loput-2-20261013.md",
+          "commit": "dbdaff9a39fa0e5052f176c890c85836e1a69a1f",
+          "blob": "2e5adc4cb04a23fcb4cd8fdd75426ac78afdcc9d",
+          "use": "Exact assigned source card read in full. Camera direction, FOV, landmark positions, transport geometry and exclusions are preserved; this is commission evidence, not a separate visual photograph reference."
+        }
+      ],
+      "url": "https://media.matkakirja.app/julisteet/saapumisintro/sicily/20261013-uudet-6-8/sicily-8-kulkuneuvo-intro-v1.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/sicily/20261013-uudet-6-8/sicily-8-kulkuneuvo-intro-v1.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "QA": {
+        "slot": 8,
+        "taskNumber": 184,
+        "assetID": "sicily-8-kulkuneuvo-intro-v1",
+        "targetJsonPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/sicily/asset-8.json",
+        "nativeSHA256": "639f944f7a037cc0a4f728fb17c6c2ff602f2cdbbf3a8d40307843a2a49ff1d7",
+        "finalSHA256": "a1d3343eae34fe0f8b590d2edf318399c50ffcd8a9435248b6085995f1ab183b",
+        "verdict": "accepted",
+        "reason": "Merkitön kuplamainen koppi on kiinni kannatinkaapelissa, joka laskee vasemmalta ylhäältä oikealle alas. Agavet, opuntiat, matalat kivimuurit ja meri muodostavat kameramaisen maiseman. Koppi on noin12%kuvaleveydestä, pyydettyä likimääräistä viidesosaa pienempi; tämä hyväksytään laajana ympäristönä ja kirjataan PT:n arvioon.",
+        "reviewer": "/root",
+        "reviewedAt": "2026-10-13T18:59:36.137492+00:00",
+        "nativeViewedInFull": true,
+        "assignedSourceCardReadInFull": true,
+        "nativePixelsEqualFinalVerified": true,
+        "technicalPassed": true,
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "published": false
+      },
+      "R2Proof": {
+        "slot": 8,
+        "r2Key": "julisteet/saapumisintro/sicily/20261013-uudet-6-8/sicily-8-kulkuneuvo-intro-v1.png",
+        "url": "https://media.matkakirja.app/julisteet/saapumisintro/sicily/20261013-uudet-6-8/sicily-8-kulkuneuvo-intro-v1.png",
+        "sha256": "a1d3343eae34fe0f8b590d2edf318399c50ffcd8a9435248b6085995f1ab183b",
+        "nativeSHA256": "639f944f7a037cc0a4f728fb17c6c2ff602f2cdbbf3a8d40307843a2a49ff1d7",
+        "bytes": 2834357,
+        "readbacks": [
+          {
+            "http": 200,
+            "byteExact": true,
+            "sha256": "a1d3343eae34fe0f8b590d2edf318399c50ffcd8a9435248b6085995f1ab183b",
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "cacheBusted": false
+          },
+          {
+            "http": 200,
+            "byteExact": true,
+            "sha256": "a1d3343eae34fe0f8b590d2edf318399c50ffcd8a9435248b6085995f1ab183b",
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "cacheBusted": true
+          }
+        ],
+        "byteExactReadback": true,
+        "verifiedAt": "2026-10-13T19:00:07.656114+00:00"
+      },
+      "FableReceiptVerified": false
+    }
+  ],
+  "omittedItems": [],
+  "actualCalls": 2,
+  "maximumGenerationCalls": 2,
+  "allRequestedItemsHandled": true,
+  "allRequestedImagesDelivered": true,
+  "productionCompleteWithinSourceLimit": true,
+  "directMailboxDeliveryAuthorized": true,
+  "acceptanceRoute": "Päätoimittaja reviews on the owner authority in the exact source. This authorization is not yet an actual acceptance receipt.",
+  "ownerAcceptanceVerified": false,
+  "FableReceiptVerified": false,
+  "gameIntegrated": false,
+  "published": false,
+  "oldFiveApprovedPilotImagesPreserved": true,
+  "oldCelebrationAnd1873TopicsRemainWithdrawn": true,
+  "existingHeroSlotsPreserved": [
+    1,
+    2,
+    3
+  ],
+  "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+  "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+  "newTopics": {
+    "6": "daytime-city-panorama",
+    "8": "local-transport-in-motion"
+  }
+}
