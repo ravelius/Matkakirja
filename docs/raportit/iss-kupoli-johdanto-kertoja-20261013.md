@@ -1,10 +1,10 @@
 # ISS-kupolin kertoja: johdanto, 8 jaksoa (Sisältökirjuri 13.10.2026, LUONNOS)
 
-Tilaus: PT (omistajan hyväksymä ISS-kupolin kertoja + aikasiirto, PK vetää). Kertoja William, sama tyyli kuin taidemuseossa. Määrä: 8 jaksoa, 181 sanaa, noin 76 s. JSON (Äänittäjälle hyväksynnän jälkeen): `proto-3d/_tyo/sisaltokirjuri/iss-kupoli-kertoja-20261013/iss-kupoli-johdanto.json`.
+PT hyväksyi 13.10.: jaksot 1 ja 3-7 (pikkukorjauksin, tehty); 2 ja 8 odottavat PK:n suunnitelmaa. Tilaus: PT (omistajan hyväksymä ISS-kupolin kertoja + aikasiirto, PK vetää). Kertoja William, sama tyyli kuin taidemuseossa. Määrä: 8 jaksoa, 181 sanaa, noin 76 s. JSON (Äänittäjälle hyväksynnän jälkeen): `proto-3d/_tyo/sisaltokirjuri/iss-kupoli-kertoja-20261013/iss-kupoli-johdanto.json`.
 
 ## Cupola (iss-johdanto-1-cupola, 23 sanaa, ~10 s)
 
-Istut Cupolassa, avaruusaseman havaintokupolissa. Siinä on seitsemän ikkunaa, ja keskimmäinen on halkaisijaltaan 80 senttiä, suurin avaruuteen lennetty ikkuna. Kupoli asennettiin asemaan helmikuussa 2010.
+Istut avaruusaseman Cupola-havaintokupolissa. Siinä on seitsemän ikkunaa, ja keskimmäinen on halkaisijaltaan 80 senttimetriä, suurin avaruuteen lennetty ikkuna. Kupoli asennettiin asemaan helmikuussa 2010.
 
 Lähteet: [ESA: Cupola](https://www.esa.int/Our_Activities/Human_and_Robotic_Exploration/Node-3_Cupola/Cupola); [Wikipedia: Cupola (ISS module)](https://en.wikipedia.org/wiki/Cupola_(ISS_module))
 
