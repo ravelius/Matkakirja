@@ -1,6 +1,6 @@
 # Euroopan uudet saapumisintroaiheet — osa 1/2, 13.10.2026
 
-6 QA/R2-varmennettua kuvaa toimitettu, 8 perusteltua lopullista poisjättöä. Käsitelty 14/48 tämän osan nimetyistä kuvista; 14 generointikutsua. Tilaus on kesken, kun kaikki nimetyt kohteet eivät vielä ole käsitelty.
+7 QA/R2-varmennettua kuvaa toimitettu, 9 perusteltua lopullista poisjättöä. Käsitelty 16/48 tämän osan nimetyistä kuvista; 16 generointikutsua. Tilaus on kesken, kun kaikki nimetyt kohteet eivät vielä ole käsitelty.
 
 Koko laajennus käsittää 95 nimettyä kuvaa (#133–227): osa 1 sisältää 48 ja osa 2 47 kuvaa. Aiempi 88+1 arvio ei korvaa lähteiden nimettyä inventaariota. Yksi uusi sisäänrakennettu generointi per kuva; ei uusintoja, vertailuottoja, inpaintingia tai rajauksia.
 
@@ -31,6 +31,13 @@ Manifesti: `posti/kuvatoimitus-saapumisintro-oslo-uudet-6-8-20261013.json`. Toim
 
 - #139, slot 6: Ekebergin rinne: Oslon keskusta ja Oslovuonon pohjukka päivällä. Havainnekuva.
 - Poisjättö #140, slot 8: Lähde pyytää liikettä vasemmalta oikealle. Kuvan suurin ohjaamo ja palavat ajovalot ovat vasemmassa päässä; kuvallinen liikesuunta on vastakkainen. Kaksisuuntaisen junan todellista liikettä ei päätellä varmasti yhdestä ruudusta, mutta vaadittu suunta ei välity.
+
+## DUBLIN
+
+Manifesti: `posti/kuvatoimitus-saapumisintro-dublin-uudet-6-8-20261013.json`. Toimitettu 1/2; kutsuja 2.
+
+- #142, slot 8: DART-lähijuna Dublin Bayn rannikkoradalla meren tuntumassa. Havainnekuva.
+- Poisjättö #141, slot 6: Poolbegin piiput ja Howth näkyvät laadukkaasti, mutta taivas ja läheinen kanervarinne vievät valtaosan ruudusta. Rakennettu kaupunki ja lahti jäävät noin keskimmäiseen kolmannekseen; lähteen vähintään puolen kuvan kaupunki/lahtiosuus ei toteudu.
 
 ## BERLIINI
 
