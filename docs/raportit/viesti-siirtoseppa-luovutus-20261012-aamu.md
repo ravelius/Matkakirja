@@ -122,3 +122,13 @@ Olavinlinna junaan 183 (PT): **BOTTI 17/17 v48k:lla** (koostettu: täysi ajo 15/
   (kulho tuvassa ja kädessä, kappelin holvi ja sivualttari taka-suunnasta).
 - Uusi testikomento katso p:x,y,z [d] [taka] (cbad45ba9). Vartija2:n vika: siirto muurikäytävään käynnistää kaukokuvan K3.
 - Porttikäytävän äänimaisema: Linssiseppä 2 kytkee (ei linnahaaraan), omistaja ei vielä kuunnellut.
+
+## PÄIVITYS 13.10. 03.2x
+
+- Paketit: v48w 401545643 (lamput 0,85/1,9), **v48x 1f6c43ec4** (pikkupihan lyhtytolppa pois, vesiportin katto, harjan trimmaus 90). Vahdissa v48x.
+- Botti cbad45ba9 + v48w 15/17 (86, 90) → cbad45ba9 + v48x **16/17**: 90 korjaantui (vanhan dioraaman seinäpalat kameran edessä).
+  Jäljellä muurikäytävä **86**: täysi ruutu (lokit/siirtoseppa-v48tu-kuvat/v48x-botti-86-ruutu.png) vasen kolmannes täysin musta → LR selvittää.
+  186:n paketti auki: v48x kun 86 korjattu (tai PT:n päätös), varalla v48s.
+- Vesipojan rintakaista = varjo (kolme valoa), ei mallia; LR vie pehmennyksen PT:lle. Vartija2: siirto muurikäytävään käynnistää K3:n (mh-tarkistus
+  odottaa 12 s); vartija2-kuva yhä huono, istuva vartija ok.
+- Skenaariot: botti-mustat (täysi ruutu botin saapuessa 86/90), mh-tarkistus, v48x-kappeli; odottajapohja lokit/siirtoseppa-botti-nakyma/odota-v48x.sh.
