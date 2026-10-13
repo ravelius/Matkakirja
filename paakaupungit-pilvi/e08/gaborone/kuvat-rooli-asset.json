@@ -2025,7 +2025,7 @@
         "sameImageExportSHA256": "357b78329f45872e8936d05a8b6b07a853f22c8f0f13ff0602c37e40c77d2673",
         "independentNativeQAEvidencePreserved": true,
         "independentTextResamplePending": true,
-        "captionChanged": true
+        "captionChanged": false
       }
     },
     {
@@ -2333,7 +2333,7 @@
         "sameImageExportSHA256": "c4d9990b796d0b085b46039fe5175846f7344d18f3148ba536867d2727c1681b",
         "independentNativeQAEvidencePreserved": true,
         "independentTextResamplePending": true,
-        "captionChanged": true
+        "captionChanged": false
       }
     },
     {
@@ -2641,7 +2641,7 @@
         "sameImageExportSHA256": "caf762e27da06f5d5ca8e25c4d605f166289cdfec54f228ce6d0e8b8790ae1ed",
         "independentNativeQAEvidencePreserved": true,
         "independentTextResamplePending": true,
-        "captionChanged": true
+        "captionChanged": false
       }
     },
     {
@@ -2953,7 +2953,7 @@
         "sameImageExportSHA256": "8430b7a67475e31d30326338806f80d7a4583f8172a35395c989c80e139ff90d",
         "independentNativeQAEvidencePreserved": true,
         "independentTextResamplePending": true,
-        "captionChanged": true
+        "captionChanged": false
       }
     },
     {
@@ -3262,7 +3262,7 @@
         "sameImageExportSHA256": "0db9c6a73fcb7b064b1e713e37ac1a43ee60179c79b1ce36251abb07f5a902bd",
         "independentNativeQAEvidencePreserved": true,
         "independentTextResamplePending": true,
-        "captionChanged": true
+        "captionChanged": false
       }
     },
     {
@@ -3571,7 +3571,7 @@
         "sameImageExportSHA256": "faea6729f7782e220b27b896970550a77e8c24c1b022c70004a03376d3d522d9",
         "independentNativeQAEvidencePreserved": true,
         "independentTextResamplePending": true,
-        "captionChanged": true
+        "captionChanged": false
       }
     }
   ],
@@ -3584,9 +3584,9 @@
   "task118TextRevision": true,
   "independentTextResamplePending": true,
   "textAcceptanceVerified": false,
-  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task228/immutable-media-history/e08/gaborone/2f96efcbd722a473e262450b54809ed1e10615c7b6771de56ebeb26355d11200.json",
+  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task228/immutable-media-history/e08/gaborone/204b21bda1cee27fdce811bdeab09ee06fb11d806bffd55a58ed6d6ef63774dd.json",
   "task118ReboundAt": "2026-10-13T16:31:25.330582+00:00",
   "task228ExcludedAssets": [],
   "task228TextRevision": true,
-  "task228ReboundAt": "2026-10-13T17:52:01.856518+00:00"
+  "task228ReboundAt": "2026-10-13T18:00:29.980432+00:00"
 }

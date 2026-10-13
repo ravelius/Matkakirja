@@ -109,7 +109,7 @@
         {
           "tiedosto": "The Champ de Mars Racecourse.JPG",
           "lyhyt": "Champ de Marsin laukkarata Port Louis’ssa.",
-          "selite": "Ovaalia laukkarataa ympäröivät kaupungin talot ja vuorenrinne vuonna 2015 otetussa kuvassa.",
+          "selite": "Ovaalia laukkarataa ympäröivät kaupungin talot ja vuorenrinne vuonna 2015.",
           "lahde": "Martin Falbisoner, Wikimedia Commons (CC BY-SA 4.0)"
         },
         {
@@ -128,7 +128,7 @@
       "nostot": [
         {
           "otsikko": "Satama antoi kaupungille työn",
-          "teksti": "Port Louis kasvoi 1700-luvulla ranskalaisen siirtomaan hallintokeskukseksi ja laivojen huoltosatamaksi. Euroopan ja Aasian väliä purjehtivat alukset kiersivät Afrikan eteläkärjen, joten Mauritiuksella saattoi täydentää varastoja kesken pitkän matkan. Kaupungin nimi kunnioittaa Ranskan kuningasta Ludvig XV:tä. Nykyinen satama hoitaa saaren meriliikennettä, ja Caudan Waterfrontin kaupat ja ravintolat ovat tuoneet rantaan myös vapaa-ajan kaupungin. Sama ranta palvelee sekä kuljetuksia että kaupunkikävelyä.",
+          "teksti": "Port Louis kasvoi 1700-luvulla ranskalaisen siirtomaan hallintokeskukseksi ja laivojen huoltosatamaksi. Euroopan ja Aasian väliä purjehtivat alukset kiersivät Afrikan eteläkärjen, joten Mauritiuksella saattoi täydentää varastoja kesken pitkän matkan. Kaupungin nimi kunnioittaa Ranskan kuningasta Ludvig XV:tä. Nykyinen satama hoitaa saaren meriliikennettä, ja Caudan Waterfrontin kaupat ja ravintolat ovat tuoneet rantaan myös vapaa-ajan kaupungin.",
           "wiki": "Port Louis",
           "tiedosto": "",
           "lyhyt": "",
@@ -137,7 +137,7 @@
         },
         {
           "otsikko": "Portaat uuteen elämään",
-          "teksti": "Aapravasi Ghatin kiviset portaat kuuluivat sopimustyöläisten vastaanottopaikkaan. Tänne saapui etenkin Intiasta ihmisiä, jotka jatkoivat Mauritiuksen sokeritiloille tai muihin siirtomaihin. Alueella oli majoitustiloja, keittiöitä ja sairaala; jäljellä on vain osa kokonaisuudesta. Kyse on samalla perheiden historiasta: tulijat toivat mukanaan kieliä, tapoja ja muistoja. Unescon maailmanperintökohde kertoo työvoiman muuttoliikkeestä rakennusten ja arkisten tilojen kautta, eikä pelkästään hallitsijoiden nimillä.",
+          "teksti": "Aapravasi Ghatin kiviset portaat kuuluivat sopimustyöläisten vastaanottopaikkaan. Tänne saapui etenkin Intiasta ihmisiä, jotka jatkoivat Mauritiuksen sokeritiloille tai muihin siirtomaihin. Alueella oli majoitustiloja, keittiöitä ja sairaala; jäljellä on vain osa kokonaisuudesta.",
           "wiki": "Aapravasi Ghat",
           "tiedosto": "",
           "lyhyt": "",
@@ -146,7 +146,7 @@
         },
         {
           "otsikko": "Sotilaskentästä laukkaradaksi",
-          "teksti": "Champ de Marsin nimi kuuluu nykyään hevosurheiluun, mutta paikka oli ensin ranskalaisten joukkojen harjoituskenttä. Laukkakilpailut alkoivat 1800-luvun alussa. Rata kiertää oikealle, ja loppusuora nousee ylämäkeen: kilpailua ei siis ratkaista täysin tasaisella suoralla. Varhaisilla kilpailupäivillä osa katsomopaikoista rakennettiin tilapäisesti. Myöhemmin paikalle tuli pysyviä katsomoita. Kenttä on saanut myös juhlatehtävän, sillä Mauritiuksen itsenäistymisen lipunnosto järjestettiin täällä.",
+          "teksti": "Champ de Marsin nimi kuuluu nykyään hevosurheiluun, mutta paikka oli ensin ranskalaisten joukkojen harjoituskenttä. Laukkakilpailut alkoivat 1800-luvun alussa. Rata kiertää oikealle, ja loppusuora nousee ylämäkeen. Varhaisilla kilpailupäivillä osa katsomopaikoista rakennettiin tilapäisesti. Myöhemmin paikalle tuli pysyviä katsomoita. Kenttä on saanut myös juhlatehtävän, sillä Mauritiuksen itsenäistymisen lipunnosto järjestettiin täällä.",
           "wiki": "Champ de Mars Racecourse",
           "tiedosto": "",
           "lyhyt": "",
@@ -155,7 +155,7 @@
         },
         {
           "otsikko": "Saari mahtuu museoon",
-          "teksti": "Caudan Waterfrontin Blue Penny Museum esittelee Mauritiuksen historiaa ja taidetta. Kokoelmassa on vanhoja merikarttoja, maalauksia, kaiverruksia ja postimerkkejä. Ne kertovat saaresta eri mittakaavoissa: kartalla Mauritius on osa merireittejä, kun taas kirjeen kulku tallentuu pieneen paperinpalaan. Museon nimi viittaa kuuluisaan siniseen postimerkkiin, mutta kokoelma ulottuu postihistoriaa laajemmalle. Alkuperäisiä postimerkkejä valaistaan säilymisen vuoksi vain ajoittain; muun ajan esillä ovat kopiot.",
+          "teksti": "Caudan Waterfrontin Blue Penny Museum esittelee Mauritiuksen historiaa ja taidetta. Kokoelmassa on vanhoja merikarttoja, maalauksia, kaiverruksia ja postimerkkejä. Museon nimi viittaa kuuluisaan siniseen postimerkkiin, mutta kokoelma ulottuu postihistoriaa laajemmalle. ",
           "wiki": "Blue Penny Museum",
           "tiedosto": "",
           "lyhyt": "",
@@ -170,7 +170,7 @@
           "selite": "",
           "lahde": ""
         },
-        "kappale": "Aloita Port Louis’n kierros Caudan Waterfrontista ja yhdistä siihen vanhan keskustan kävely. Aapravasi Ghat avaa sopimustyöläisten historiaa, ja Blue Penny Museum kertoo merireiteistä sekä saaren kuvista. Keskustorin itäpuolella on Chinatownin kauppoja ja ravintoloita. Champ de Mars puolestaan johdattaa kaupungin urheiluhistoriaan. Keskustan vilkkaaseen liikenteeseen kannattaa varata aikaa.",
+        "kappale": "Aloita Port Louis’n kierros Caudan Waterfrontista ja yhdistä siihen vanhan keskustan kävely. Aapravasi Ghat avaa sopimustyöläisten historiaa, ja Blue Penny Museum kertoo merireiteistä sekä saaren kuvista. Keskustorin itäpuolella on Chinatownin kauppoja ja ravintoloita. Champ de Mars puolestaan johdattaa kaupungin urheiluhistoriaan.",
         "artikkeli": {
           "nimi": "Matkailijan Port Louis",
           "taitto": "opas",
@@ -189,7 +189,7 @@
             },
             {
               "otsikko": "Sataman historia jalan",
-              "teksti": "Aapravasi Ghatissa kannattaa kiinnittää huomiota vastaanottopaikan arkisiin tiloihin. Portaiden, majoituksen ja sairaalan jäänteet kertovat tulijoiden käsittelystä ennen matkaa työpaikalle. Caudan Waterfrontissa voi jatkaa Blue Penny Museumiin, jonka merikartat ja muut historialliset aineistot laajentavat tarinan saaren ulkopuolelle. Kohteet käsittelevät eri puolia meritse liikkumisesta.",
+              "teksti": "Aapravasi Ghatissa kannattaa kiinnittää huomiota vastaanottopaikan arkisiin tiloihin. Portaiden, majoituksen ja sairaalan jäänteet kertovat tulijoiden käsittelystä ennen matkaa työpaikalle. Caudan Waterfrontissa voi jatkaa Blue Penny Museumiin, jonka merikartat ja muut historialliset aineistot laajentavat tarinan saaren ulkopuolelle.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -199,7 +199,7 @@
             },
             {
               "otsikko": "Tori, Chinatown ja kenttä",
-              "teksti": "Keskustori ja sen itäpuolen Chinatown sopivat samaan kävelyyn. Pienet kaupat ja ravintolat tekevät kiinalaisen yhteisön historiasta myös nykyistä kaupunkielämää. Champ de Mars taas on laukkarata kukkuloiden juurella. Kilpailukalenteri on tarkistettava erikseen; rata-alueen historiallinen merkitys ei riipu siitä, osuuko vierailu kilpailupäivälle.",
+              "teksti": "Keskustori ja sen itäpuolen Chinatown sopivat samaan kävelyyn. Pienet kaupat ja ravintolat tekevät kiinalaisen yhteisön historiasta myös nykyistä kaupunkielämää. Champ de Mars taas on laukkarata kukkuloiden juurella.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -209,7 +209,7 @@
             },
             {
               "otsikko": "Mitä täällä syödään",
-              "teksti": "Port Louis’n ruokakulttuurissa kohtaavat intialaiset, kiinalaiset ja kreoliperinteet. Pieneksi välipalaksi voi kokeilla samosaa tai gâteaux piments -chilikakkuja. Alouda on paikallinen kylmä maitopohjainen juoma. Chinatownissa on kiinalaisia ravintoloita, keskustorilla hedelmiä ja välipaloja ja Caudan Waterfrontissa ravintoloita sekä ruokatori. Yhteisöjen historia näkyy kaupungissa myös ruokapaikkojen kautta.",
+              "teksti": "Port Louis’n ruokakulttuurissa kohtaavat intialaiset, kiinalaiset ja kreoliperinteet. Pieneksi välipalaksi voi kokeilla samosaa tai gâteaux piments -chilikakkuja. Alouda on paikallinen kylmä maitopohjainen juoma. Chinatownissa on kiinalaisia ravintoloita, keskustorilla hedelmiä ja välipaloja ja Caudan Waterfrontissa ravintoloita sekä ruokatori.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -219,7 +219,7 @@
             },
             {
               "otsikko": "Milloin kannattaa tulla",
-              "teksti": "Port Louis’n lämpimään kesäkauteen liittyy sateisempi jakso. Eteläisen pallonpuoliskon talvella sää on viileämpää ja kuivempaa. Torin, Chinatownin ja Champ de Marsin kierrokset kulkevat ulkona; Blue Penny Museumissa voi tutustua saaren historiaan sisätiloissa. Satamarannan ja vanhojen korttelien välille saa rakennettua sekä kävely- että museopäivän.",
+              "teksti": "Port Louis’n lämpimään kesäkauteen liittyy sateisempi jakso. Eteläisen pallonpuoliskon talvella sää on viileämpää ja kuivempaa. Torin, Chinatownin ja Champ de Marsin kierrokset kulkevat ulkona; Blue Penny Museumissa voi tutustua saaren historiaan sisätiloissa.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -238,7 +238,7 @@
               {
                 "mita": "Blue Penny Museum",
                 "tahdet": 3,
-                "selite": "Merikartat kertovat merireiteistä; alkuperäisiä postimerkkejä näytetään vain ajoittain, muun ajan kopioita."
+                "selite": "Museon kokoelmissa on merikarttoja, maalauksia, kaiverruksia ja postimerkkejä."
               },
               {
                 "mita": "Chinatown",
@@ -258,16 +258,16 @@
             ],
             "hyvaTietaa": [
               {
-                "otsikko": "Liikenne",
-                "teksti": "Keskustan työmatkaliikenne voi olla vilkasta; varaa aikaa siirtymille."
-              },
-              {
-                "otsikko": "Kilpailupäivä",
-                "teksti": "Tarkista Champ de Marsin tapahtumat erikseen ennen vierailua."
+                "otsikko": "Kaksi bussikeskusta",
+                "teksti": "Gare du Nord palvelee pohjoisia reittejä, Victoria-asema etelän ja ylängön suuntia."
               },
               {
                 "otsikko": "Valuutta",
                 "teksti": "Mauritiuksella käytetään Mauritiuksen rupiaa; Seychellien rupia on eri valuutta."
+              },
+              {
+                "otsikko": "Postimerkit",
+                "teksti": "Alkuperäisiä Post Office -merkkejä valaistaan museossa vain ajoittain; muulloin esillä ovat kopiot."
               }
             ]
           },
@@ -311,7 +311,7 @@
         },
         {
           "otsikko": "Veranta ja lasitorni",
-          "teksti": "Port Louis’n vanhoissa taloissa on puisia rakenteita, ikkunaluukkuja ja leveitä kuisteja. Keskustassa säilyy myös ranskalaisajan rakennuksia, kuten Government House, ja eri yhteisöjen uskonnollisia rakennuksia. Niiden rinnalle on noussut lasisia ja betonisia liike- ja asuintaloja. Osa vanhasta rakennuskannasta on huonossa kunnossa, ja sitä on korvattu uudella. Kaupunkikävelyllä huomio voi siksi siirtyä maamerkistä tavalliseen taloon: myös kuistin ja ikkunan rakenne kuuluu Port Louis’n rakennushistoriaan.",
+          "teksti": "Port Louis’n vanhoissa taloissa on puisia rakenteita, ikkunaluukkuja ja leveitä kuisteja. Keskustassa säilyy myös ranskalaisajan rakennuksia, kuten Government House, ja eri yhteisöjen uskonnollisia rakennuksia. Niiden rinnalle on noussut lasisia ja betonisia liike- ja asuintaloja. Osa vanhasta rakennuskannasta on huonossa kunnossa, ja sitä on korvattu uudella.",
           "wiki": "Port Louis",
           "tiedosto": "",
           "lyhyt": "",
@@ -320,7 +320,7 @@
         },
         {
           "otsikko": "Kirjasto säilyttää muutakin kuin kirjoja",
-          "teksti": "Mauritiuksen kansalliskirjaston kokoelmiin kuuluu kirjojen lisäksi käsikirjoituksia, sanomalehtiä ja aikakauslehtiä. Se säilyttää myös nuotteja, valokuvia, karttoja, piirroksia sekä ääni- ja kuva-aineistoja. Port Louis’n historiaa voi siis etsiä sekä luettavasta tekstistä että kuvasta ja äänestä. Kirjasto palvelee kaupungin asukkaita, mutta sen säilyttämät aineistot koskevat koko saarta. Muistin paikka ei tällöin ole yksi muistomerkki: se on monenlaisten dokumenttien kokoelma, jota voi tutkia eri kysymyksillä.",
+          "teksti": "Mauritiuksen kansalliskirjaston kokoelmiin kuuluu kirjojen lisäksi käsikirjoituksia, sanomalehtiä ja aikakauslehtiä. Se säilyttää myös nuotteja, valokuvia, karttoja, piirroksia sekä ääni- ja kuva-aineistoja. Kirjasto palvelee kaupungin asukkaita, mutta sen säilyttämät aineistot koskevat koko saarta.",
           "wiki": "Port Louis",
           "tiedosto": "",
           "lyhyt": "",
@@ -355,7 +355,7 @@
   "nahtavyydet": {
     "Aapravasi Ghat": {
       "aika": "1800-luku",
-      "teksti": "Aapravasi Ghat on Trou Fanfaronin lahden tuntumassa säilynyt osa sopimustyöläisten vastaanottopaikkaa. Meritse saapuneet ihmiset ohjattiin satamasta kivisiä portaita pitkin vastaanottokeskukseen. Kokonaisuuteen kuului majoitustiloja, keittiöitä, peseytymistiloja ja sairaala. Nykyiset jäänteet edustavat vain osaa aikaisemmasta alueesta.\n\nIsoisän matkavuonna 1873 vastaanottopaikka kuului jo Port Louis’n toimintaan. Monet tulijat jatkoivat Mauritiuksen sokeritiloille, osa puolestaan muihin siirtomaihin. Vastaanottopaikan historia liittyy sekä työn järjestämiseen että muuttajien mukanaan tuomiin tapoihin ja perheiden muistoihin. Unescon maailmanperintökohteen merkitys ulottuu siksi kiviseiniä laajemmalle: se on muuttoliikkeen ja sen jälkeläisten historian paikka.",
+      "teksti": "Aapravasi Ghat on Trou Fanfaronin lahden tuntumassa säilynyt osa sopimustyöläisten vastaanottopaikkaa. Meritse saapuneet ihmiset ohjattiin satamasta kivisiä portaita pitkin vastaanottokeskukseen. Kokonaisuuteen kuului majoitustiloja, keittiöitä, peseytymistiloja ja sairaala. Nykyiset jäänteet edustavat vain osaa aikaisemmasta alueesta.\n\n Monet tulijat jatkoivat Mauritiuksen sokeritiloille, osa puolestaan muihin siirtomaihin. Vastaanottopaikan historia liittyy sekä työn järjestämiseen että muuttajien mukanaan tuomiin tapoihin ja perheiden muistoihin.",
       "kuvat": [
         {
           "tiedosto": "",
@@ -368,7 +368,7 @@
     },
     "Champ de Marsin laukkarata": {
       "aika": "1800-luvun alku",
-      "teksti": "Champ de Mars on Port Louis’n kukkuloiden juurella sijaitseva laukkarata. Ennen hevoskilpailuja aluetta käyttivät ranskalaiset joukot harjoituskenttänä. Laukkakilpailut alkoivat 1800-luvun alussa, joten rata oli toiminnassa jo isoisän matkavuonna 1873. Ovaali kiertää oikealle ja päättyy ylämäkeen nousevaan loppusuoraan.\n\nVarhaisilla kilpailupäivillä paikalle rakennettiin ja vuokrattiin tilapäisiä aitioita. Pysyvät katsomot tulivat myöhemmin. Katsomoiden rakentaminen muutti kentän aiempaa ilmettä. Paikka kuuluu myös Mauritiuksen juhlahistoriaan: itsenäistymisen lipunnosto järjestettiin tällä kentällä. Laukkarata, sotilaskenttä ja juhla-alue ovat näin saman paikan eri käyttötapoja.",
+      "teksti": "Champ de Mars on Port Louis’n kukkuloiden juurella sijaitseva laukkarata. Ennen hevoskilpailuja aluetta käyttivät ranskalaiset joukot harjoituskenttänä. Laukkakilpailut alkoivat 1800-luvun alussa, joten rata oli toiminnassa jo isoisän matkavuonna 1873. Ovaali kiertää oikealle ja päättyy ylämäkeen nousevaan loppusuoraan.\n\nVarhaisilla kilpailupäivillä paikalle rakennettiin ja vuokrattiin tilapäisiä aitioita. Pysyvät katsomot tulivat myöhemmin. Paikka kuuluu myös Mauritiuksen juhlahistoriaan: itsenäistymisen lipunnosto järjestettiin tällä kentällä.",
       "kuvat": [
         {
           "tiedosto": "Pferderennbahn port Louis 2019-09-27.jpg",
@@ -383,12 +383,6 @@
   "saatiedot": null,
   "ehdotukset": {
     "lentoasema": "Sir Seewoosagur Ramgoolam International Airport (MRU)",
-    "huomiot": [
-      "Task118 C-tekstikorjaus valmis 13.10.2026. Nykyisessä C:ssä 4 täytettyä kuvaroolia; erilliset B/media-, kartta-, sää-, D/E/F- ja pelikytkentäportit eivät ole tämän tekstikorjauksen hyväksyntä.",
-      "Sääauditointi 48/48 ei ole valmis: saatiedot null, ei ilmastolukuja.",
-      "Kevyen pisteen Champ de Mars on nimetty raviradaksi. Lähde kuvaa thoroughbred flat racing -laukkarataa; esitetään laukkaratana.",
-      "Port Louis’n väestöä ei käytetä tekstissä; kontekstiluku koskee Municipal Council Area -rajausta, ei pelkkää Port Louis District -piiriä.",
-      "D/E/F, oikeusketjut, täydentävä kartta ja pelikytkentä ovat avoimia."
-    ]
+    "huomiot": []
   }
 }

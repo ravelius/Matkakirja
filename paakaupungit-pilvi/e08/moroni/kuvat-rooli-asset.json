@@ -3,7 +3,7 @@
   "era": "e08",
   "city": "moroni",
   "authorization": "hyväksyn kaikki tekemäsi kuvat. toimita ne claudelle. claudelta saat uusia ohjeita jatkoa varten",
-  "sourceContentAfterSHA256": "5cce35c38c44314b88f936253db554f7af63f9e7097a473938da27bdfd26f192",
+  "sourceContentAfterSHA256": "566591b68fd6908b03f7865e71f6693a4c6502424bff9f3b3ff20f87cd372768",
   "assets": [
     {
       "era": "e08",
@@ -53,10 +53,10 @@
         1536
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/moroni/sisalto.json",
-      "sourceContentSHA256": "5cce35c38c44314b88f936253db554f7af63f9e7097a473938da27bdfd26f192",
+      "sourceContentSHA256": "566591b68fd6908b03f7865e71f6693a4c6502424bff9f3b3ff20f87cd372768",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "ec4be507189c8d632dbf827057cbf39e6e83109e0b82f6db524a91ad608a766c",
+        "semanticContextSHA256": "989415e6bb388e5f3b2bea811ef83ae89370cd5cdbd1a42c8f4ca729db4e2b5c",
         "subjectTitle": "Matkailijalle",
         "targetState": "existing-target"
       },
@@ -239,9 +239,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "5cce35c38c44314b88f936253db554f7af63f9e7097a473938da27bdfd26f192",
+      "sourceContentAfterSHA256": "566591b68fd6908b03f7865e71f6693a4c6502424bff9f3b3ff20f87cd372768",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "ec4be507189c8d632dbf827057cbf39e6e83109e0b82f6db524a91ad608a766c",
+      "contextAfterSHA256": "989415e6bb388e5f3b2bea811ef83ae89370cd5cdbd1a42c8f4ca729db4e2b5c",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -264,7 +264,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "566591b68fd6908b03f7865e71f6693a4c6502424bff9f3b3ff20f87cd372768",
+        "sameImageNativeSHA256": "5e11413e37507a64eee4cd302ce58eaa4b5486a411c42e19a43a5ad1c634ed48",
+        "sameImageExportSHA256": "377a79d50adcd465e66bc294ae16d4139233413060feb297c730be2bdfbd8e7d",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e08",
@@ -317,7 +325,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/moroni/sisalto.json",
-      "sourceContentSHA256": "5cce35c38c44314b88f936253db554f7af63f9e7097a473938da27bdfd26f192",
+      "sourceContentSHA256": "566591b68fd6908b03f7865e71f6693a4c6502424bff9f3b3ff20f87cd372768",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
         "semanticContextSHA256": "aa4b90734a72d7e8561d7cd1a188648552b22afde2bf80c0157682763ddca9fa",
@@ -488,7 +496,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "5cce35c38c44314b88f936253db554f7af63f9e7097a473938da27bdfd26f192",
+      "sourceContentAfterSHA256": "566591b68fd6908b03f7865e71f6693a4c6502424bff9f3b3ff20f87cd372768",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
       "contextAfterSHA256": "aa4b90734a72d7e8561d7cd1a188648552b22afde2bf80c0157682763ddca9fa",
       "ownerApproved": true,
@@ -513,7 +521,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "566591b68fd6908b03f7865e71f6693a4c6502424bff9f3b3ff20f87cd372768",
+        "sameImageNativeSHA256": "1ec1e2dcdf604adb3847191b5948bccb41b8e0263cef9eabd8ffa6e797570f96",
+        "sameImageExportSHA256": "eededb83e278c78c48ba08eb70258019446d6fd26de841546f482f3e7ba86429",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e08",
@@ -566,10 +582,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/moroni/sisalto.json",
-      "sourceContentSHA256": "5cce35c38c44314b88f936253db554f7af63f9e7097a473938da27bdfd26f192",
+      "sourceContentSHA256": "566591b68fd6908b03f7865e71f6693a4c6502424bff9f3b3ff20f87cd372768",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "3a74a54dbdd9ba59c941d81d39d98859b63f4f92d565a2b89a22f2ce3a49cf8e",
+        "semanticContextSHA256": "05eae739c456c238fba92546bee2b0800cdf5ad979658f6bc2c3d93283e08564",
         "subjectTitle": "Mitä täällä syödään",
         "targetState": "existing-target"
       },
@@ -764,9 +780,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "5cce35c38c44314b88f936253db554f7af63f9e7097a473938da27bdfd26f192",
+      "sourceContentAfterSHA256": "566591b68fd6908b03f7865e71f6693a4c6502424bff9f3b3ff20f87cd372768",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "3a74a54dbdd9ba59c941d81d39d98859b63f4f92d565a2b89a22f2ce3a49cf8e",
+      "contextAfterSHA256": "05eae739c456c238fba92546bee2b0800cdf5ad979658f6bc2c3d93283e08564",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -789,7 +805,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "566591b68fd6908b03f7865e71f6693a4c6502424bff9f3b3ff20f87cd372768",
+        "sameImageNativeSHA256": "2361faf47cfcf5179d98554349d7abf424b267d8522664e049d6e372003bd0b4",
+        "sameImageExportSHA256": "4bf0b2695d46703f3eb8ff52becb7239a14ee1ba721d36cf9114ab206a74f396",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e08",
@@ -839,10 +863,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/moroni/sisalto.json",
-      "sourceContentSHA256": "5cce35c38c44314b88f936253db554f7af63f9e7097a473938da27bdfd26f192",
+      "sourceContentSHA256": "566591b68fd6908b03f7865e71f6693a4c6502424bff9f3b3ff20f87cd372768",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "8f569487ae24d36c41e70427b551e9d12d170b5dc539aa9692dce26fb1991472",
-        "semanticContextSHA256": "8f569487ae24d36c41e70427b551e9d12d170b5dc539aa9692dce26fb1991472",
+        "targetBeforeSHA256": "6c8a9cce1d922778fcc379fbb935b0d4664d1f427043eeee832b6104b09c6966",
+        "semanticContextSHA256": "6c8a9cce1d922778fcc379fbb935b0d4664d1f427043eeee832b6104b09c6966",
         "subjectTitle": "Tori ruokkii kaupunkia kahdesti",
         "targetState": "existing-target"
       },
@@ -1010,9 +1034,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "5cce35c38c44314b88f936253db554f7af63f9e7097a473938da27bdfd26f192",
-      "targetAfterSHA256": "8f569487ae24d36c41e70427b551e9d12d170b5dc539aa9692dce26fb1991472",
-      "contextAfterSHA256": "8f569487ae24d36c41e70427b551e9d12d170b5dc539aa9692dce26fb1991472",
+      "sourceContentAfterSHA256": "566591b68fd6908b03f7865e71f6693a4c6502424bff9f3b3ff20f87cd372768",
+      "targetAfterSHA256": "6c8a9cce1d922778fcc379fbb935b0d4664d1f427043eeee832b6104b09c6966",
+      "contextAfterSHA256": "6c8a9cce1d922778fcc379fbb935b0d4664d1f427043eeee832b6104b09c6966",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -1035,7 +1059,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "566591b68fd6908b03f7865e71f6693a4c6502424bff9f3b3ff20f87cd372768",
+        "sameImageNativeSHA256": "e4e25ddfa1f47f0d189fba2d7bfa9b9da751f96c6f4e1502ac24ef8d1d9a3770",
+        "sameImageExportSHA256": "6cdf3a447b39cfc45562f9ca841050bb289a570c01724eb012e41b4d26f0018c",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e08",
@@ -1085,10 +1117,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/moroni/sisalto.json",
-      "sourceContentSHA256": "5cce35c38c44314b88f936253db554f7af63f9e7097a473938da27bdfd26f192",
+      "sourceContentSHA256": "566591b68fd6908b03f7865e71f6693a4c6502424bff9f3b3ff20f87cd372768",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "2db2e9db4b327c18123a488b15a44e811dbf0b9ce0f49c3bd3ce0c1d127b3030",
-        "semanticContextSHA256": "2db2e9db4b327c18123a488b15a44e811dbf0b9ce0f49c3bd3ce0c1d127b3030",
+        "targetBeforeSHA256": "3f5fcc6a95fb81c4affa8e2193f835068859a2d0179bcddf1ba5a49be3893cbd",
+        "semanticContextSHA256": "3f5fcc6a95fb81c4affa8e2193f835068859a2d0179bcddf1ba5a49be3893cbd",
         "subjectTitle": "Satama vie muutakin kuin tuoksuja",
         "targetState": "existing-target"
       },
@@ -1271,9 +1303,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "5cce35c38c44314b88f936253db554f7af63f9e7097a473938da27bdfd26f192",
-      "targetAfterSHA256": "2db2e9db4b327c18123a488b15a44e811dbf0b9ce0f49c3bd3ce0c1d127b3030",
-      "contextAfterSHA256": "2db2e9db4b327c18123a488b15a44e811dbf0b9ce0f49c3bd3ce0c1d127b3030",
+      "sourceContentAfterSHA256": "566591b68fd6908b03f7865e71f6693a4c6502424bff9f3b3ff20f87cd372768",
+      "targetAfterSHA256": "3f5fcc6a95fb81c4affa8e2193f835068859a2d0179bcddf1ba5a49be3893cbd",
+      "contextAfterSHA256": "3f5fcc6a95fb81c4affa8e2193f835068859a2d0179bcddf1ba5a49be3893cbd",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -1296,7 +1328,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "566591b68fd6908b03f7865e71f6693a4c6502424bff9f3b3ff20f87cd372768",
+        "sameImageNativeSHA256": "308bd989e21cb691a460086ff966308349b232c1851d3c537f8ff56d8bb77488",
+        "sameImageExportSHA256": "6c644cfbf409870c140a908361479f342b5490b9605c4b9b1c65f706ce32fe5b",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e08",
@@ -1346,10 +1386,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/moroni/sisalto.json",
-      "sourceContentSHA256": "5cce35c38c44314b88f936253db554f7af63f9e7097a473938da27bdfd26f192",
+      "sourceContentSHA256": "566591b68fd6908b03f7865e71f6693a4c6502424bff9f3b3ff20f87cd372768",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "69dbc4b65e1bc36881711eeda1e0bb66a9f28892ac32faa5115dece02ee578ab",
-        "semanticContextSHA256": "69dbc4b65e1bc36881711eeda1e0bb66a9f28892ac32faa5115dece02ee578ab",
+        "targetBeforeSHA256": "4315ca0591eb633ce93bec33033fc8fae4ea010f7289eba6cb2480724b49073e",
+        "semanticContextSHA256": "4315ca0591eb633ce93bec33033fc8fae4ea010f7289eba6cb2480724b49073e",
         "subjectTitle": "Tulivuori mahtuu myös museoon",
         "targetState": "existing-target"
       },
@@ -1517,9 +1557,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "5cce35c38c44314b88f936253db554f7af63f9e7097a473938da27bdfd26f192",
-      "targetAfterSHA256": "69dbc4b65e1bc36881711eeda1e0bb66a9f28892ac32faa5115dece02ee578ab",
-      "contextAfterSHA256": "69dbc4b65e1bc36881711eeda1e0bb66a9f28892ac32faa5115dece02ee578ab",
+      "sourceContentAfterSHA256": "566591b68fd6908b03f7865e71f6693a4c6502424bff9f3b3ff20f87cd372768",
+      "targetAfterSHA256": "4315ca0591eb633ce93bec33033fc8fae4ea010f7289eba6cb2480724b49073e",
+      "contextAfterSHA256": "4315ca0591eb633ce93bec33033fc8fae4ea010f7289eba6cb2480724b49073e",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -1542,7 +1582,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "566591b68fd6908b03f7865e71f6693a4c6502424bff9f3b3ff20f87cd372768",
+        "sameImageNativeSHA256": "a6468780cc000d899cd4b981a9d5081eb187247b33884c24a6fec03e38eb700a",
+        "sameImageExportSHA256": "c3ea54481751dbcbc34f76073a80f5e8668821bbf99cd797c03127ebca59379b",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e08",
@@ -1592,10 +1640,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/moroni/sisalto.json",
-      "sourceContentSHA256": "5cce35c38c44314b88f936253db554f7af63f9e7097a473938da27bdfd26f192",
+      "sourceContentSHA256": "566591b68fd6908b03f7865e71f6693a4c6502424bff9f3b3ff20f87cd372768",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "5edc3ee015fa676dbb92ad668c6e74d1549d6efe93ea7e0ea98a29cd040b2d5f",
-        "semanticContextSHA256": "5edc3ee015fa676dbb92ad668c6e74d1549d6efe93ea7e0ea98a29cd040b2d5f",
+        "targetBeforeSHA256": "3524d131b00b0e5208614fe91ea41752b3e48537d5ded1fc3bc1d67c83e182d0",
+        "semanticContextSHA256": "3524d131b00b0e5208614fe91ea41752b3e48537d5ded1fc3bc1d67c83e182d0",
         "subjectTitle": "Metsä vaihtuu kanervikkoon",
         "targetState": "existing-target"
       },
@@ -1763,9 +1811,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "5cce35c38c44314b88f936253db554f7af63f9e7097a473938da27bdfd26f192",
-      "targetAfterSHA256": "5edc3ee015fa676dbb92ad668c6e74d1549d6efe93ea7e0ea98a29cd040b2d5f",
-      "contextAfterSHA256": "5edc3ee015fa676dbb92ad668c6e74d1549d6efe93ea7e0ea98a29cd040b2d5f",
+      "sourceContentAfterSHA256": "566591b68fd6908b03f7865e71f6693a4c6502424bff9f3b3ff20f87cd372768",
+      "targetAfterSHA256": "3524d131b00b0e5208614fe91ea41752b3e48537d5ded1fc3bc1d67c83e182d0",
+      "contextAfterSHA256": "3524d131b00b0e5208614fe91ea41752b3e48537d5ded1fc3bc1d67c83e182d0",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -1788,7 +1836,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "566591b68fd6908b03f7865e71f6693a4c6502424bff9f3b3ff20f87cd372768",
+        "sameImageNativeSHA256": "10a3a884120c1a5ccb3475dd24f577c71ada753bff3ce2056dab6c705c669623",
+        "sameImageExportSHA256": "48ba614ddb93be1c86ebef1d62e0310f9780d0952edf7607fecd783c80630180",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e08",
@@ -1838,10 +1894,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/moroni/sisalto.json",
-      "sourceContentSHA256": "5cce35c38c44314b88f936253db554f7af63f9e7097a473938da27bdfd26f192",
+      "sourceContentSHA256": "566591b68fd6908b03f7865e71f6693a4c6502424bff9f3b3ff20f87cd372768",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "0dfb6915d2a493c46ca043b07907a7054e8574b0c4ccc6d70bdf43511f18b1eb",
-        "semanticContextSHA256": "0dfb6915d2a493c46ca043b07907a7054e8574b0c4ccc6d70bdf43511f18b1eb",
+        "targetBeforeSHA256": "9c9ec71dbd9dec0a5e1d18515e542184ce0dbadc9e8c7aaee7d97c9fa795d082",
+        "semanticContextSHA256": "9c9ec71dbd9dec0a5e1d18515e542184ce0dbadc9e8c7aaee7d97c9fa795d082",
         "subjectTitle": "Pääkaupungin rannassa on laavakiveä",
         "targetState": "existing-target"
       },
@@ -2036,9 +2092,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "5cce35c38c44314b88f936253db554f7af63f9e7097a473938da27bdfd26f192",
-      "targetAfterSHA256": "0dfb6915d2a493c46ca043b07907a7054e8574b0c4ccc6d70bdf43511f18b1eb",
-      "contextAfterSHA256": "0dfb6915d2a493c46ca043b07907a7054e8574b0c4ccc6d70bdf43511f18b1eb",
+      "sourceContentAfterSHA256": "566591b68fd6908b03f7865e71f6693a4c6502424bff9f3b3ff20f87cd372768",
+      "targetAfterSHA256": "9c9ec71dbd9dec0a5e1d18515e542184ce0dbadc9e8c7aaee7d97c9fa795d082",
+      "contextAfterSHA256": "9c9ec71dbd9dec0a5e1d18515e542184ce0dbadc9e8c7aaee7d97c9fa795d082",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -2061,7 +2117,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "566591b68fd6908b03f7865e71f6693a4c6502424bff9f3b3ff20f87cd372768",
+        "sameImageNativeSHA256": "e70f4080f232f7ff425ca381f308c40c7cb31e941299ffd17a324564e528585d",
+        "sameImageExportSHA256": "03468efdf4f9473bca93077dbaf1454043fdfb35f7887fc6c90b4e5af8909fef",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e08",
@@ -2080,14 +2144,14 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/moroni/photo-d4eaf30a13ce56acca1e.jpg",
         "suora": true,
         "lahde": "Radosław Botev, Commons (CC BY-SA 4.0)",
-        "selite": "Moronin rannikon palmuja auringonlaskun aikaan vuonna 2019 otetussa kuvassa.",
+        "selite": "Moronin rannikon palmuja auringonlaskun aikaan vuonna 2019.",
         "lyhyt": "Palmuja Moronin rannikon iltavalossa.",
         "tiedosto": "Moroni sunset palm trees.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Radosław Botev, Commons (CC BY-SA 4.0)",
-        "selite": "Moronin rannikon palmuja auringonlaskun aikaan vuonna 2019 otetussa kuvassa.",
+        "selite": "Moronin rannikon palmuja auringonlaskun aikaan vuonna 2019.",
         "lyhyt": "Palmuja Moronin rannikon iltavalossa.",
         "tiedosto": "Moroni sunset palm trees.jpg"
       },
@@ -2095,7 +2159,7 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/moroni/photo-d4eaf30a13ce56acca1e.jpg",
         "suora": true,
         "lahde": "Radosław Botev, Commons (CC BY-SA 4.0)",
-        "selite": "Moronin rannikon palmuja auringonlaskun aikaan vuonna 2019 otetussa kuvassa.",
+        "selite": "Moronin rannikon palmuja auringonlaskun aikaan vuonna 2019.",
         "lyhyt": "Palmuja Moronin rannikon iltavalossa.",
         "tiedosto": "Moroni sunset palm trees.jpg"
       },
@@ -2111,10 +2175,10 @@
         3000
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/moroni/sisalto.json",
-      "sourceContentSHA256": "5cce35c38c44314b88f936253db554f7af63f9e7097a473938da27bdfd26f192",
+      "sourceContentSHA256": "566591b68fd6908b03f7865e71f6693a4c6502424bff9f3b3ff20f87cd372768",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "c16eb71d665db52a4a34453446ff2e44419f77ff9337775a8ab33e436bf10011",
-        "semanticContextSHA256": "c16eb71d665db52a4a34453446ff2e44419f77ff9337775a8ab33e436bf10011",
+        "targetBeforeSHA256": "1566332db7f473f5ed5090765c91b61d538ba03177b4030ef2faae3e8b32db3e",
+        "semanticContextSHA256": "1566332db7f473f5ed5090765c91b61d538ba03177b4030ef2faae3e8b32db3e",
         "subjectTitle": "moroni — aito paikkavalokuva",
         "targetState": "existing-target"
       },
@@ -2304,7 +2368,7 @@
       "priorMediaFields": {
         "tiedosto": "Moroni sunset palm trees.jpg",
         "lyhyt": "Palmuja Moronin rannikon iltavalossa.",
-        "selite": "Moronin rannikon palmuja auringonlaskun aikaan vuonna 2019 otetussa kuvassa.",
+        "selite": "Moronin rannikon palmuja auringonlaskun aikaan vuonna 2019.",
         "lahde": "Radosław Botev, Commons (CC BY-SA 4.0)"
       },
       "preservePreviousMediaObjects": true,
@@ -2331,14 +2395,14 @@
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Radosław Botev, Commons (CC BY-SA 4.0)",
-        "selite": "Moronin rannikon palmuja auringonlaskun aikaan vuonna 2019 otetussa kuvassa.",
+        "selite": "Moronin rannikon palmuja auringonlaskun aikaan vuonna 2019.",
         "lyhyt": "Palmuja Moronin rannikon iltavalossa.",
         "tiedosto": "Moroni sunset palm trees.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "5cce35c38c44314b88f936253db554f7af63f9e7097a473938da27bdfd26f192",
-      "targetAfterSHA256": "c16eb71d665db52a4a34453446ff2e44419f77ff9337775a8ab33e436bf10011",
-      "contextAfterSHA256": "c16eb71d665db52a4a34453446ff2e44419f77ff9337775a8ab33e436bf10011",
+      "sourceContentAfterSHA256": "566591b68fd6908b03f7865e71f6693a4c6502424bff9f3b3ff20f87cd372768",
+      "targetAfterSHA256": "1566332db7f473f5ed5090765c91b61d538ba03177b4030ef2faae3e8b32db3e",
+      "contextAfterSHA256": "1566332db7f473f5ed5090765c91b61d538ba03177b4030ef2faae3e8b32db3e",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -2361,7 +2425,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "566591b68fd6908b03f7865e71f6693a4c6502424bff9f3b3ff20f87cd372768",
+        "sameImageNativeSHA256": "d4eaf30a13ce56acca1e69b10ed4e5aacda71abcd99c18302e19c8a6dca7c980",
+        "sameImageExportSHA256": "d4eaf30a13ce56acca1e69b10ed4e5aacda71abcd99c18302e19c8a6dca7c980",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": true
+      }
     },
     {
       "era": "e08",
@@ -2383,14 +2455,14 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/moroni/c1-13c766767964f582d625.jpg",
         "suora": true,
         "lahde": "Radosław Botev, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Itsandran hiekkarantaa Moronin pohjoispuolella vuonna 2019 otetussa kuvassa.",
+        "selite": "Itsandran hiekkarantaa Moronin pohjoispuolella vuonna 2019.",
         "lyhyt": "Itsandran rantaa Moronin lähellä.",
         "tiedosto": "Moroni beach.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Radosław Botev, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Itsandran hiekkarantaa Moronin pohjoispuolella vuonna 2019 otetussa kuvassa.",
+        "selite": "Itsandran hiekkarantaa Moronin pohjoispuolella vuonna 2019.",
         "lyhyt": "Itsandran rantaa Moronin lähellä.",
         "tiedosto": "Moroni beach.jpg"
       },
@@ -2398,7 +2470,7 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/moroni/c1-13c766767964f582d625.jpg",
         "suora": true,
         "lahde": "Radosław Botev, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Itsandran hiekkarantaa Moronin pohjoispuolella vuonna 2019 otetussa kuvassa.",
+        "selite": "Itsandran hiekkarantaa Moronin pohjoispuolella vuonna 2019.",
         "lyhyt": "Itsandran rantaa Moronin lähellä.",
         "tiedosto": "Moroni beach.jpg"
       },
@@ -2414,10 +2486,10 @@
         3000
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/moroni/sisalto.json",
-      "sourceContentSHA256": "5cce35c38c44314b88f936253db554f7af63f9e7097a473938da27bdfd26f192",
+      "sourceContentSHA256": "566591b68fd6908b03f7865e71f6693a4c6502424bff9f3b3ff20f87cd372768",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "fe35e0b58a1a8bf45385016ddc01217b9c5d9e25ac97f148f437312696389a5a",
-        "semanticContextSHA256": "fe35e0b58a1a8bf45385016ddc01217b9c5d9e25ac97f148f437312696389a5a",
+        "targetBeforeSHA256": "8d688c8a4ca5099ccc336fdee0d35ed2cc435500c930743333317173b1893de7",
+        "semanticContextSHA256": "8d688c8a4ca5099ccc336fdee0d35ed2cc435500c930743333317173b1893de7",
         "subjectTitle": "Moroni",
         "targetState": "existing-target"
       },
@@ -2607,7 +2679,7 @@
       "priorMediaFields": {
         "tiedosto": "Moroni beach.jpg",
         "lyhyt": "Itsandran rantaa Moronin lähellä.",
-        "selite": "Itsandran hiekkarantaa Moronin pohjoispuolella vuonna 2019 otetussa kuvassa.",
+        "selite": "Itsandran hiekkarantaa Moronin pohjoispuolella vuonna 2019.",
         "lahde": "Radosław Botev, Wikimedia Commons (CC BY-SA 4.0)"
       },
       "preservePreviousMediaObjects": true,
@@ -2634,14 +2706,14 @@
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Radosław Botev, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Itsandran hiekkarantaa Moronin pohjoispuolella vuonna 2019 otetussa kuvassa.",
+        "selite": "Itsandran hiekkarantaa Moronin pohjoispuolella vuonna 2019.",
         "lyhyt": "Itsandran rantaa Moronin lähellä.",
         "tiedosto": "Moroni beach.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "5cce35c38c44314b88f936253db554f7af63f9e7097a473938da27bdfd26f192",
-      "targetAfterSHA256": "fe35e0b58a1a8bf45385016ddc01217b9c5d9e25ac97f148f437312696389a5a",
-      "contextAfterSHA256": "fe35e0b58a1a8bf45385016ddc01217b9c5d9e25ac97f148f437312696389a5a",
+      "sourceContentAfterSHA256": "566591b68fd6908b03f7865e71f6693a4c6502424bff9f3b3ff20f87cd372768",
+      "targetAfterSHA256": "8d688c8a4ca5099ccc336fdee0d35ed2cc435500c930743333317173b1893de7",
+      "contextAfterSHA256": "8d688c8a4ca5099ccc336fdee0d35ed2cc435500c930743333317173b1893de7",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -2664,7 +2736,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "566591b68fd6908b03f7865e71f6693a4c6502424bff9f3b3ff20f87cd372768",
+        "sameImageNativeSHA256": "13c766767964f582d6256c0ea7097ba2c672adcafc65f3ba419fea9188293ec2",
+        "sameImageExportSHA256": "13c766767964f582d6256c0ea7097ba2c672adcafc65f3ba419fea9188293ec2",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": true
+      }
     },
     {
       "era": "e08",
@@ -2686,14 +2766,14 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/moroni/l1-0b81e7b7e4a1077b9cfe.jpg",
         "suora": true,
         "lahde": "Lolodevenelles, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Näkymä Karthalan kraatteriin 13. elokuuta 2019 otetussa kuvassa.",
+        "selite": "Näkymä Karthalan kraatteriin 13. elokuuta 2019.",
         "lyhyt": "Karthalan suuri kraatteri.",
         "tiedosto": "Volcan Karthala vue du grand cratere 13 août 2019.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Lolodevenelles, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Näkymä Karthalan kraatteriin 13. elokuuta 2019 otetussa kuvassa.",
+        "selite": "Näkymä Karthalan kraatteriin 13. elokuuta 2019.",
         "lyhyt": "Karthalan suuri kraatteri.",
         "tiedosto": "Volcan Karthala vue du grand cratere 13 août 2019.jpg"
       },
@@ -2701,7 +2781,7 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/moroni/l1-0b81e7b7e4a1077b9cfe.jpg",
         "suora": true,
         "lahde": "Lolodevenelles, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Näkymä Karthalan kraatteriin 13. elokuuta 2019 otetussa kuvassa.",
+        "selite": "Näkymä Karthalan kraatteriin 13. elokuuta 2019.",
         "lyhyt": "Karthalan suuri kraatteri.",
         "tiedosto": "Volcan Karthala vue du grand cratere 13 août 2019.jpg"
       },
@@ -2717,10 +2797,10 @@
         4032
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/moroni/sisalto.json",
-      "sourceContentSHA256": "5cce35c38c44314b88f936253db554f7af63f9e7097a473938da27bdfd26f192",
+      "sourceContentSHA256": "566591b68fd6908b03f7865e71f6693a4c6502424bff9f3b3ff20f87cd372768",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "4da99d1963ea1640523bfcd388ee948500029f72b9e705c2ef9f3fcd5aadff4b",
-        "semanticContextSHA256": "4da99d1963ea1640523bfcd388ee948500029f72b9e705c2ef9f3fcd5aadff4b",
+        "targetBeforeSHA256": "6842e0553d8c7b6f80e7551b5e0a58394220f7764ca35f9c32c721ca46af89c4",
+        "semanticContextSHA256": "6842e0553d8c7b6f80e7551b5e0a58394220f7764ca35f9c32c721ca46af89c4",
         "subjectTitle": "Tulivuori, jonka huippu muuttuu",
         "targetState": "existing-target"
       },
@@ -2926,7 +3006,7 @@
       "priorMediaFields": {
         "tiedosto": "Volcan Karthala vue du grand cratere 13 août 2019.jpg",
         "lyhyt": "Karthalan suuri kraatteri.",
-        "selite": "Näkymä Karthalan kraatteriin 13. elokuuta 2019 otetussa kuvassa.",
+        "selite": "Näkymä Karthalan kraatteriin 13. elokuuta 2019.",
         "lahde": "Lolodevenelles, Wikimedia Commons (CC BY-SA 4.0)"
       },
       "preservePreviousMediaObjects": true,
@@ -2953,14 +3033,14 @@
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Lolodevenelles, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Näkymä Karthalan kraatteriin 13. elokuuta 2019 otetussa kuvassa.",
+        "selite": "Näkymä Karthalan kraatteriin 13. elokuuta 2019.",
         "lyhyt": "Karthalan suuri kraatteri.",
         "tiedosto": "Volcan Karthala vue du grand cratere 13 août 2019.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "5cce35c38c44314b88f936253db554f7af63f9e7097a473938da27bdfd26f192",
-      "targetAfterSHA256": "4da99d1963ea1640523bfcd388ee948500029f72b9e705c2ef9f3fcd5aadff4b",
-      "contextAfterSHA256": "4da99d1963ea1640523bfcd388ee948500029f72b9e705c2ef9f3fcd5aadff4b",
+      "sourceContentAfterSHA256": "566591b68fd6908b03f7865e71f6693a4c6502424bff9f3b3ff20f87cd372768",
+      "targetAfterSHA256": "6842e0553d8c7b6f80e7551b5e0a58394220f7764ca35f9c32c721ca46af89c4",
+      "contextAfterSHA256": "6842e0553d8c7b6f80e7551b5e0a58394220f7764ca35f9c32c721ca46af89c4",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -2983,7 +3063,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "566591b68fd6908b03f7865e71f6693a4c6502424bff9f3b3ff20f87cd372768",
+        "sameImageNativeSHA256": "0b81e7b7e4a1077b9cfed958ea12bbb3acd8edf0e437971bec48825d303fa2b4",
+        "sameImageExportSHA256": "0b81e7b7e4a1077b9cfed958ea12bbb3acd8edf0e437971bec48825d303fa2b4",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": true
+      }
     },
     {
       "era": "e08",
@@ -3036,10 +3124,10 @@
         2444
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/moroni/sisalto.json",
-      "sourceContentSHA256": "5cce35c38c44314b88f936253db554f7af63f9e7097a473938da27bdfd26f192",
+      "sourceContentSHA256": "566591b68fd6908b03f7865e71f6693a4c6502424bff9f3b3ff20f87cd372768",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "8ddb14c23fb40b9d57a16496579070000ffef145bbfa3d9cc0eba344afa486f3",
-        "semanticContextSHA256": "8ddb14c23fb40b9d57a16496579070000ffef145bbfa3d9cc0eba344afa486f3",
+        "targetBeforeSHA256": "467643201840562e857c5c0f57536940a58bab908fb2e473eba755bf70abfaad",
+        "semanticContextSHA256": "467643201840562e857c5c0f57536940a58bab908fb2e473eba755bf70abfaad",
         "subjectTitle": "Kraatterijärvi katosi",
         "targetState": "existing-target"
       },
@@ -3265,9 +3353,9 @@
         "tiedosto": "Overviewing to Karthala crater.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "5cce35c38c44314b88f936253db554f7af63f9e7097a473938da27bdfd26f192",
-      "targetAfterSHA256": "8ddb14c23fb40b9d57a16496579070000ffef145bbfa3d9cc0eba344afa486f3",
-      "contextAfterSHA256": "8ddb14c23fb40b9d57a16496579070000ffef145bbfa3d9cc0eba344afa486f3",
+      "sourceContentAfterSHA256": "566591b68fd6908b03f7865e71f6693a4c6502424bff9f3b3ff20f87cd372768",
+      "targetAfterSHA256": "467643201840562e857c5c0f57536940a58bab908fb2e473eba755bf70abfaad",
+      "contextAfterSHA256": "467643201840562e857c5c0f57536940a58bab908fb2e473eba755bf70abfaad",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -3290,7 +3378,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "566591b68fd6908b03f7865e71f6693a4c6502424bff9f3b3ff20f87cd372768",
+        "sameImageNativeSHA256": "24550644cd83bd549bbce4254b89bfa226bee0edf967704ee3c2ff52c726c102",
+        "sameImageExportSHA256": "24550644cd83bd549bbce4254b89bfa226bee0edf967704ee3c2ff52c726c102",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e08",
@@ -3343,10 +3439,10 @@
         3264
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/moroni/sisalto.json",
-      "sourceContentSHA256": "5cce35c38c44314b88f936253db554f7af63f9e7097a473938da27bdfd26f192",
+      "sourceContentSHA256": "566591b68fd6908b03f7865e71f6693a4c6502424bff9f3b3ff20f87cd372768",
       "semanticSourceBind": {
         "targetBeforeSHA256": "ec70af628cff3b93f24aea7b4738e20c64fd9205e38ea1cb5707e5bfe306c0c1",
-        "semanticContextSHA256": "329d8b078dc01705fddcc900f4e4a504a2178009cf89bf19d6ca6b9721666340",
+        "semanticContextSHA256": "58714005579e36e85f75223afb1d553633764f40f59fb3c1c613c3bd73d63f47",
         "subjectTitle": "Karthala",
         "targetState": "existing-target"
       },
@@ -3576,9 +3672,9 @@
         "tiedosto": "Hiking to Karthala crater.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "5cce35c38c44314b88f936253db554f7af63f9e7097a473938da27bdfd26f192",
+      "sourceContentAfterSHA256": "566591b68fd6908b03f7865e71f6693a4c6502424bff9f3b3ff20f87cd372768",
       "targetAfterSHA256": "ec70af628cff3b93f24aea7b4738e20c64fd9205e38ea1cb5707e5bfe306c0c1",
-      "contextAfterSHA256": "329d8b078dc01705fddcc900f4e4a504a2178009cf89bf19d6ca6b9721666340",
+      "contextAfterSHA256": "58714005579e36e85f75223afb1d553633764f40f59fb3c1c613c3bd73d63f47",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -3601,7 +3697,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "566591b68fd6908b03f7865e71f6693a4c6502424bff9f3b3ff20f87cd372768",
+        "sameImageNativeSHA256": "b36833eeb8fe3e61d53408234054da6a69fd2c915853437095bc1057596160c8",
+        "sameImageExportSHA256": "b36833eeb8fe3e61d53408234054da6a69fd2c915853437095bc1057596160c8",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     }
   ],
   "runtimeIntegrationPending": true,
@@ -3613,6 +3717,9 @@
   "task118TextRevision": true,
   "independentTextResamplePending": true,
   "textAcceptanceVerified": false,
-  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task118/immutable-media-history/e08/moroni/461ccdf57f629679d5a6b077903f3652f7e6ca1ccef104c91a906c63ff679760.json",
-  "task118ReboundAt": "2026-10-13T16:31:25.462118+00:00"
+  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task228/immutable-media-history/e08/moroni/f5e13403d59331ea1f0b3ead7e8cf48c9247f92bd7ccb2c1b107f7ebc5e471de.json",
+  "task118ReboundAt": "2026-10-13T16:31:25.462118+00:00",
+  "task228ExcludedAssets": [],
+  "task228TextRevision": true,
+  "task228ReboundAt": "2026-10-13T18:00:30.133540+00:00"
 }

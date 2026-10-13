@@ -3,7 +3,7 @@
   "era": "e08",
   "city": "victoria",
   "authorization": "hyväksyn kaikki tekemäsi kuvat. toimita ne claudelle. claudelta saat uusia ohjeita jatkoa varten",
-  "sourceContentAfterSHA256": "14ba341c2a98f447610cb2ff6f578409cf7cd6b4f0ad32c62436c8cca3304bf4",
+  "sourceContentAfterSHA256": "078a98112fc6f45de59f66dff95be175439a4e868693bdd06adcaa4015b8aee0",
   "assets": [
     {
       "era": "e08",
@@ -53,10 +53,10 @@
         1536
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/victoria/sisalto.json",
-      "sourceContentSHA256": "14ba341c2a98f447610cb2ff6f578409cf7cd6b4f0ad32c62436c8cca3304bf4",
+      "sourceContentSHA256": "078a98112fc6f45de59f66dff95be175439a4e868693bdd06adcaa4015b8aee0",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "028525f8f452121855480342dd5388d193c48f62d038c48cca491af49cd7a375",
+        "semanticContextSHA256": "c643f4a4a996ff63cbe0bef4a689295cdc2c0a283ef20ba7378715a7ac59cd25",
         "subjectTitle": "Matkailijalle",
         "targetState": "existing-target"
       },
@@ -239,9 +239,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "14ba341c2a98f447610cb2ff6f578409cf7cd6b4f0ad32c62436c8cca3304bf4",
+      "sourceContentAfterSHA256": "078a98112fc6f45de59f66dff95be175439a4e868693bdd06adcaa4015b8aee0",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "028525f8f452121855480342dd5388d193c48f62d038c48cca491af49cd7a375",
+      "contextAfterSHA256": "c643f4a4a996ff63cbe0bef4a689295cdc2c0a283ef20ba7378715a7ac59cd25",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -264,7 +264,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "078a98112fc6f45de59f66dff95be175439a4e868693bdd06adcaa4015b8aee0",
+        "sameImageNativeSHA256": "ef230781c539527926fe5ada5d40be2926da8c15254ef57f3098d6ecd6354de3",
+        "sameImageExportSHA256": "7387dda5c1611d0c1f4b976cfab137a9bd4970b6ad13cfd0e66376aaf43a3303",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e08",
@@ -317,7 +325,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/victoria/sisalto.json",
-      "sourceContentSHA256": "14ba341c2a98f447610cb2ff6f578409cf7cd6b4f0ad32c62436c8cca3304bf4",
+      "sourceContentSHA256": "078a98112fc6f45de59f66dff95be175439a4e868693bdd06adcaa4015b8aee0",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
         "semanticContextSHA256": "54bae3417cfca1a3f83f58184dacb5b5cdc02d65ea9bbefa0e62e0d26df83871",
@@ -488,7 +496,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "14ba341c2a98f447610cb2ff6f578409cf7cd6b4f0ad32c62436c8cca3304bf4",
+      "sourceContentAfterSHA256": "078a98112fc6f45de59f66dff95be175439a4e868693bdd06adcaa4015b8aee0",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
       "contextAfterSHA256": "54bae3417cfca1a3f83f58184dacb5b5cdc02d65ea9bbefa0e62e0d26df83871",
       "ownerApproved": true,
@@ -513,7 +521,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "078a98112fc6f45de59f66dff95be175439a4e868693bdd06adcaa4015b8aee0",
+        "sameImageNativeSHA256": "7707da227cf1a8dcc0ea180ac6b1b9fa25fb93ef4efb113e0f26d9f835a0c1cc",
+        "sameImageExportSHA256": "2bbf3bdcce65f793c3ba3b2cea81b4aeddaf95aba4fc6d3e1fc0e12cf75ca162",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e08",
@@ -566,10 +582,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/victoria/sisalto.json",
-      "sourceContentSHA256": "14ba341c2a98f447610cb2ff6f578409cf7cd6b4f0ad32c62436c8cca3304bf4",
+      "sourceContentSHA256": "078a98112fc6f45de59f66dff95be175439a4e868693bdd06adcaa4015b8aee0",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "6c804bd58e894e00191ff9bc819127b9389ef9ee180bc2ff7b86e763320811af",
+        "semanticContextSHA256": "b3fde1de4e8a15d4790457af590222b665a646d4f75043dfc9a60153e2bab318",
         "subjectTitle": "Mitä täällä syödään",
         "targetState": "existing-target"
       },
@@ -738,9 +754,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "14ba341c2a98f447610cb2ff6f578409cf7cd6b4f0ad32c62436c8cca3304bf4",
+      "sourceContentAfterSHA256": "078a98112fc6f45de59f66dff95be175439a4e868693bdd06adcaa4015b8aee0",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "6c804bd58e894e00191ff9bc819127b9389ef9ee180bc2ff7b86e763320811af",
+      "contextAfterSHA256": "b3fde1de4e8a15d4790457af590222b665a646d4f75043dfc9a60153e2bab318",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -763,7 +779,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "078a98112fc6f45de59f66dff95be175439a4e868693bdd06adcaa4015b8aee0",
+        "sameImageNativeSHA256": "b4c6e684e51357d7070a7130286f9d454979c01b9327224a37fa13165745b0b5",
+        "sameImageExportSHA256": "d31b839857d359c089e7611c2f2400e7a92f1890511f8eebb09b2d9519e99482",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e08",
@@ -813,10 +837,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/victoria/sisalto.json",
-      "sourceContentSHA256": "14ba341c2a98f447610cb2ff6f578409cf7cd6b4f0ad32c62436c8cca3304bf4",
+      "sourceContentSHA256": "078a98112fc6f45de59f66dff95be175439a4e868693bdd06adcaa4015b8aee0",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "dcad4076a5efddaffb22fb167844199b993ccc65b64cbcbe17a9e64b295ea4e6",
-        "semanticContextSHA256": "dcad4076a5efddaffb22fb167844199b993ccc65b64cbcbe17a9e64b295ea4e6",
+        "targetBeforeSHA256": "6c5bac362c8ffee00f26a098a1b11436e620073f78dbdb28ab4816907cc7297a",
+        "semanticContextSHA256": "6c5bac362c8ffee00f26a098a1b11436e620073f78dbdb28ab4816907cc7297a",
         "subjectTitle": "Puutarha aloitti työasemana",
         "targetState": "existing-target"
       },
@@ -984,9 +1008,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "14ba341c2a98f447610cb2ff6f578409cf7cd6b4f0ad32c62436c8cca3304bf4",
-      "targetAfterSHA256": "dcad4076a5efddaffb22fb167844199b993ccc65b64cbcbe17a9e64b295ea4e6",
-      "contextAfterSHA256": "dcad4076a5efddaffb22fb167844199b993ccc65b64cbcbe17a9e64b295ea4e6",
+      "sourceContentAfterSHA256": "078a98112fc6f45de59f66dff95be175439a4e868693bdd06adcaa4015b8aee0",
+      "targetAfterSHA256": "6c5bac362c8ffee00f26a098a1b11436e620073f78dbdb28ab4816907cc7297a",
+      "contextAfterSHA256": "6c5bac362c8ffee00f26a098a1b11436e620073f78dbdb28ab4816907cc7297a",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -1009,7 +1033,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "078a98112fc6f45de59f66dff95be175439a4e868693bdd06adcaa4015b8aee0",
+        "sameImageNativeSHA256": "7318d02b7810ce64b76a802dec9fbd5f64afa3fde35778c99a3dd0d132f9a6e5",
+        "sameImageExportSHA256": "f2040fe58299cce0a29c2ce4dc7cfff5a83e6640553d1018cdc2904c9c73336e",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e08",
@@ -1059,10 +1091,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/victoria/sisalto.json",
-      "sourceContentSHA256": "14ba341c2a98f447610cb2ff6f578409cf7cd6b4f0ad32c62436c8cca3304bf4",
+      "sourceContentSHA256": "078a98112fc6f45de59f66dff95be175439a4e868693bdd06adcaa4015b8aee0",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "107b76c40703de1d53305c26413db100153d41d25967f010c59ea4083cc31f78",
-        "semanticContextSHA256": "107b76c40703de1d53305c26413db100153d41d25967f010c59ea4083cc31f78",
+        "targetBeforeSHA256": "8c70c4025f385dd83ae3c333b672b7299e632d4d46f6edee2bed0bdd7eafc327",
+        "semanticContextSHA256": "8c70c4025f385dd83ae3c333b672b7299e632d4d46f6edee2bed0bdd7eafc327",
         "subjectTitle": "Satama tekee töitä",
         "targetState": "existing-target"
       },
@@ -1230,9 +1262,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "14ba341c2a98f447610cb2ff6f578409cf7cd6b4f0ad32c62436c8cca3304bf4",
-      "targetAfterSHA256": "107b76c40703de1d53305c26413db100153d41d25967f010c59ea4083cc31f78",
-      "contextAfterSHA256": "107b76c40703de1d53305c26413db100153d41d25967f010c59ea4083cc31f78",
+      "sourceContentAfterSHA256": "078a98112fc6f45de59f66dff95be175439a4e868693bdd06adcaa4015b8aee0",
+      "targetAfterSHA256": "8c70c4025f385dd83ae3c333b672b7299e632d4d46f6edee2bed0bdd7eafc327",
+      "contextAfterSHA256": "8c70c4025f385dd83ae3c333b672b7299e632d4d46f6edee2bed0bdd7eafc327",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -1255,7 +1287,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "078a98112fc6f45de59f66dff95be175439a4e868693bdd06adcaa4015b8aee0",
+        "sameImageNativeSHA256": "a24dd12f5010267f9c829b6f8f83012865bc30ff5c426cea32ca9db46847ca42",
+        "sameImageExportSHA256": "0c9f3f8d8de0a33f492d2c0321ee47459a8032890115577182d45abce7210cac",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e08",
@@ -1305,10 +1345,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/victoria/sisalto.json",
-      "sourceContentSHA256": "14ba341c2a98f447610cb2ff6f578409cf7cd6b4f0ad32c62436c8cca3304bf4",
+      "sourceContentSHA256": "078a98112fc6f45de59f66dff95be175439a4e868693bdd06adcaa4015b8aee0",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "80750c0dad7599f80f05920adbd0527f17c89d1c69c2e142e55f54bc5936574e",
-        "semanticContextSHA256": "80750c0dad7599f80f05920adbd0527f17c89d1c69c2e142e55f54bc5936574e",
+        "targetBeforeSHA256": "091be993a612accd6303715332e7ab75c0b839861a52381ef274cebf0dc7b5cc",
+        "semanticContextSHA256": "091be993a612accd6303715332e7ab75c0b839861a52381ef274cebf0dc7b5cc",
         "subjectTitle": "Torin osoite voi vaihtua",
         "targetState": "existing-target"
       },
@@ -1476,9 +1516,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "14ba341c2a98f447610cb2ff6f578409cf7cd6b4f0ad32c62436c8cca3304bf4",
-      "targetAfterSHA256": "80750c0dad7599f80f05920adbd0527f17c89d1c69c2e142e55f54bc5936574e",
-      "contextAfterSHA256": "80750c0dad7599f80f05920adbd0527f17c89d1c69c2e142e55f54bc5936574e",
+      "sourceContentAfterSHA256": "078a98112fc6f45de59f66dff95be175439a4e868693bdd06adcaa4015b8aee0",
+      "targetAfterSHA256": "091be993a612accd6303715332e7ab75c0b839861a52381ef274cebf0dc7b5cc",
+      "contextAfterSHA256": "091be993a612accd6303715332e7ab75c0b839861a52381ef274cebf0dc7b5cc",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -1501,7 +1541,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "078a98112fc6f45de59f66dff95be175439a4e868693bdd06adcaa4015b8aee0",
+        "sameImageNativeSHA256": "ff12de497f058bbe5371198f16726c84e3024e17af572df3054549b87d74dc72",
+        "sameImageExportSHA256": "e25576e23e236ac402668c9b7fbea6746ba78fb2ea1853b5ce8104393b09616e",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e08",
@@ -1551,7 +1599,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/victoria/sisalto.json",
-      "sourceContentSHA256": "14ba341c2a98f447610cb2ff6f578409cf7cd6b4f0ad32c62436c8cca3304bf4",
+      "sourceContentSHA256": "078a98112fc6f45de59f66dff95be175439a4e868693bdd06adcaa4015b8aee0",
       "semanticSourceBind": {
         "targetBeforeSHA256": "ccc644ebbf7ecd0174a04c2995c53d6a4cc5aab3990e0bd8ee42b42dd8e1674f",
         "semanticContextSHA256": "ccc644ebbf7ecd0174a04c2995c53d6a4cc5aab3990e0bd8ee42b42dd8e1674f",
@@ -1751,7 +1799,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "14ba341c2a98f447610cb2ff6f578409cf7cd6b4f0ad32c62436c8cca3304bf4",
+      "sourceContentAfterSHA256": "078a98112fc6f45de59f66dff95be175439a4e868693bdd06adcaa4015b8aee0",
       "targetAfterSHA256": "ccc644ebbf7ecd0174a04c2995c53d6a4cc5aab3990e0bd8ee42b42dd8e1674f",
       "contextAfterSHA256": "ccc644ebbf7ecd0174a04c2995c53d6a4cc5aab3990e0bd8ee42b42dd8e1674f",
       "ownerApproved": true,
@@ -1776,7 +1824,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "078a98112fc6f45de59f66dff95be175439a4e868693bdd06adcaa4015b8aee0",
+        "sameImageNativeSHA256": "be63cf928c9d6a63ecc1ac6b5fc6efd554f9a6f5f295cc72c9d2ca2090ee4b53",
+        "sameImageExportSHA256": "7563d70495265b5ac108eb7d20946f69c8488208bbfeda42f0770904846f26ec",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e08",
@@ -1826,10 +1882,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/victoria/sisalto.json",
-      "sourceContentSHA256": "14ba341c2a98f447610cb2ff6f578409cf7cd6b4f0ad32c62436c8cca3304bf4",
+      "sourceContentSHA256": "078a98112fc6f45de59f66dff95be175439a4e868693bdd06adcaa4015b8aee0",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "68b1e36a022117b6a4b95e6881b72c21208a47ce36a51edba1f74ef43403aa85",
-        "semanticContextSHA256": "68b1e36a022117b6a4b95e6881b72c21208a47ce36a51edba1f74ef43403aa85",
+        "targetBeforeSHA256": "74ab01ef8fb8c20743a8a7f24ab07122a45fff24cb091193e80b3b8078570221",
+        "semanticContextSHA256": "74ab01ef8fb8c20743a8a7f24ab07122a45fff24cb091193e80b3b8078570221",
         "subjectTitle": "Palmu kerää sadetta suppilolla",
         "targetState": "existing-target"
       },
@@ -2026,9 +2082,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "14ba341c2a98f447610cb2ff6f578409cf7cd6b4f0ad32c62436c8cca3304bf4",
-      "targetAfterSHA256": "68b1e36a022117b6a4b95e6881b72c21208a47ce36a51edba1f74ef43403aa85",
-      "contextAfterSHA256": "68b1e36a022117b6a4b95e6881b72c21208a47ce36a51edba1f74ef43403aa85",
+      "sourceContentAfterSHA256": "078a98112fc6f45de59f66dff95be175439a4e868693bdd06adcaa4015b8aee0",
+      "targetAfterSHA256": "74ab01ef8fb8c20743a8a7f24ab07122a45fff24cb091193e80b3b8078570221",
+      "contextAfterSHA256": "74ab01ef8fb8c20743a8a7f24ab07122a45fff24cb091193e80b3b8078570221",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -2051,7 +2107,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "078a98112fc6f45de59f66dff95be175439a4e868693bdd06adcaa4015b8aee0",
+        "sameImageNativeSHA256": "011b86511da87c6e20ca1d873e1ab31f31f5b74d53ea5f053a828d40b48c485b",
+        "sameImageExportSHA256": "27150a8aa001ce0e912e6dd410c0e3391b3aaff4834e6d9e08745d9e38739737",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e08",
@@ -2101,10 +2165,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/victoria/sisalto.json",
-      "sourceContentSHA256": "14ba341c2a98f447610cb2ff6f578409cf7cd6b4f0ad32c62436c8cca3304bf4",
+      "sourceContentSHA256": "078a98112fc6f45de59f66dff95be175439a4e868693bdd06adcaa4015b8aee0",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "28338576ce94b44e652f5e8a68fecf3166db544f7bf04ce7bd6edd093a872773",
-        "semanticContextSHA256": "28338576ce94b44e652f5e8a68fecf3166db544f7bf04ce7bd6edd093a872773",
+        "targetBeforeSHA256": "6c1ea21237b23c1b9a1cc8718907cecd0e8cfa9d992877fa8443909dd9eed4a8",
+        "semanticContextSHA256": "6c1ea21237b23c1b9a1cc8718907cecd0e8cfa9d992877fa8443909dd9eed4a8",
         "subjectTitle": "Pitkä kaula on työväline",
         "targetState": "existing-target"
       },
@@ -2301,9 +2365,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "14ba341c2a98f447610cb2ff6f578409cf7cd6b4f0ad32c62436c8cca3304bf4",
-      "targetAfterSHA256": "28338576ce94b44e652f5e8a68fecf3166db544f7bf04ce7bd6edd093a872773",
-      "contextAfterSHA256": "28338576ce94b44e652f5e8a68fecf3166db544f7bf04ce7bd6edd093a872773",
+      "sourceContentAfterSHA256": "078a98112fc6f45de59f66dff95be175439a4e868693bdd06adcaa4015b8aee0",
+      "targetAfterSHA256": "6c1ea21237b23c1b9a1cc8718907cecd0e8cfa9d992877fa8443909dd9eed4a8",
+      "contextAfterSHA256": "6c1ea21237b23c1b9a1cc8718907cecd0e8cfa9d992877fa8443909dd9eed4a8",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -2326,7 +2390,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "078a98112fc6f45de59f66dff95be175439a4e868693bdd06adcaa4015b8aee0",
+        "sameImageNativeSHA256": "cfb0686b4c2d9e1f33766ae4be46c95fa1fd58ab81cd305e198242c3d22f2cc1",
+        "sameImageExportSHA256": "f886d3a8edfc0e8fb9350312113b534e73f82eff2dcc8e9d7a1e90719223a646",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e08",
@@ -2376,10 +2448,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/victoria/sisalto.json",
-      "sourceContentSHA256": "14ba341c2a98f447610cb2ff6f578409cf7cd6b4f0ad32c62436c8cca3304bf4",
+      "sourceContentSHA256": "078a98112fc6f45de59f66dff95be175439a4e868693bdd06adcaa4015b8aee0",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "bdb73a5df7b8612bc97df964b16d57c7ada3d29eb6f30a0881cb5e51626ce205",
-        "semanticContextSHA256": "bdb73a5df7b8612bc97df964b16d57c7ada3d29eb6f30a0881cb5e51626ce205",
+        "targetBeforeSHA256": "b610fb8d150bca706038e2180021029ee315fe87e19f2eced03cec371217e795",
+        "semanticContextSHA256": "b610fb8d150bca706038e2180021029ee315fe87e19f2eced03cec371217e795",
         "subjectTitle": "Luonto tulee postin naapuriin",
         "targetState": "existing-target"
       },
@@ -2576,9 +2648,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "14ba341c2a98f447610cb2ff6f578409cf7cd6b4f0ad32c62436c8cca3304bf4",
-      "targetAfterSHA256": "bdb73a5df7b8612bc97df964b16d57c7ada3d29eb6f30a0881cb5e51626ce205",
-      "contextAfterSHA256": "bdb73a5df7b8612bc97df964b16d57c7ada3d29eb6f30a0881cb5e51626ce205",
+      "sourceContentAfterSHA256": "078a98112fc6f45de59f66dff95be175439a4e868693bdd06adcaa4015b8aee0",
+      "targetAfterSHA256": "b610fb8d150bca706038e2180021029ee315fe87e19f2eced03cec371217e795",
+      "contextAfterSHA256": "b610fb8d150bca706038e2180021029ee315fe87e19f2eced03cec371217e795",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -2601,7 +2673,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "078a98112fc6f45de59f66dff95be175439a4e868693bdd06adcaa4015b8aee0",
+        "sameImageNativeSHA256": "be1fb7d4f1a2e8d8f594beed3d56b9c801b1343c22f4472e2cc513e237f82470",
+        "sameImageExportSHA256": "0b25e308d6d1c28df37e3fe88e3d5facb8db634b27b09b2f55c12282940a94bb",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e08",
@@ -2654,7 +2734,7 @@
         4000
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/victoria/sisalto.json",
-      "sourceContentSHA256": "14ba341c2a98f447610cb2ff6f578409cf7cd6b4f0ad32c62436c8cca3304bf4",
+      "sourceContentSHA256": "078a98112fc6f45de59f66dff95be175439a4e868693bdd06adcaa4015b8aee0",
       "semanticSourceBind": {
         "targetBeforeSHA256": "323235f6368fba9180cb20620bc23bdb5813380c1d3335af43808ab04dbfa717",
         "semanticContextSHA256": "323235f6368fba9180cb20620bc23bdb5813380c1d3335af43808ab04dbfa717",
@@ -3003,7 +3083,7 @@
         "vuosi": "2009"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "14ba341c2a98f447610cb2ff6f578409cf7cd6b4f0ad32c62436c8cca3304bf4",
+      "sourceContentAfterSHA256": "078a98112fc6f45de59f66dff95be175439a4e868693bdd06adcaa4015b8aee0",
       "targetAfterSHA256": "323235f6368fba9180cb20620bc23bdb5813380c1d3335af43808ab04dbfa717",
       "contextAfterSHA256": "323235f6368fba9180cb20620bc23bdb5813380c1d3335af43808ab04dbfa717",
       "ownerApproved": true,
@@ -3028,7 +3108,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "078a98112fc6f45de59f66dff95be175439a4e868693bdd06adcaa4015b8aee0",
+        "sameImageNativeSHA256": "0bc499a145e05f20392f53bef598b6a64ec33c50c7f2c97cf3955497a8b85de3",
+        "sameImageExportSHA256": "0bc499a145e05f20392f53bef598b6a64ec33c50c7f2c97cf3955497a8b85de3",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e08",
@@ -3081,7 +3169,7 @@
         1201
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/victoria/sisalto.json",
-      "sourceContentSHA256": "14ba341c2a98f447610cb2ff6f578409cf7cd6b4f0ad32c62436c8cca3304bf4",
+      "sourceContentSHA256": "078a98112fc6f45de59f66dff95be175439a4e868693bdd06adcaa4015b8aee0",
       "semanticSourceBind": {
         "targetBeforeSHA256": "621a07e115d15c4184248bc0fb6009dc47ace0060d1ba67ea09ecbd5d89de0fe",
         "semanticContextSHA256": "621a07e115d15c4184248bc0fb6009dc47ace0060d1ba67ea09ecbd5d89de0fe",
@@ -3424,7 +3512,7 @@
         "tiedosto": "Ile de Mahe - Victoria (1).JPG"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "14ba341c2a98f447610cb2ff6f578409cf7cd6b4f0ad32c62436c8cca3304bf4",
+      "sourceContentAfterSHA256": "078a98112fc6f45de59f66dff95be175439a4e868693bdd06adcaa4015b8aee0",
       "targetAfterSHA256": "621a07e115d15c4184248bc0fb6009dc47ace0060d1ba67ea09ecbd5d89de0fe",
       "contextAfterSHA256": "621a07e115d15c4184248bc0fb6009dc47ace0060d1ba67ea09ecbd5d89de0fe",
       "ownerApproved": true,
@@ -3449,7 +3537,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "078a98112fc6f45de59f66dff95be175439a4e868693bdd06adcaa4015b8aee0",
+        "sameImageNativeSHA256": "948b9aae92fb23c77c9e4a7fdfbd20d24ccc4b6987506c53fbc27787e0b426f5",
+        "sameImageExportSHA256": "948b9aae92fb23c77c9e4a7fdfbd20d24ccc4b6987506c53fbc27787e0b426f5",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e08",
@@ -3471,14 +3567,14 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/victoria/c2-18d6f3e19c0e0938127e.jpg",
         "suora": true,
         "lahde": "Remi Jouan, Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "Mahén rannikon asutusta Victorian ympäristössä vuonna 2015 otetussa kuvassa.",
+        "selite": "Mahén rannikon asutusta Victorian ympäristössä vuonna 2015.",
         "lyhyt": "Victorian rannikkoaluetta Mahélla.",
         "tiedosto": "Ile de Mahe - Victoria (7).JPG"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Remi Jouan, Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "Mahén rannikon asutusta Victorian ympäristössä vuonna 2015 otetussa kuvassa.",
+        "selite": "Mahén rannikon asutusta Victorian ympäristössä vuonna 2015.",
         "lyhyt": "Victorian rannikkoaluetta Mahélla.",
         "tiedosto": "Ile de Mahe - Victoria (7).JPG"
       },
@@ -3486,7 +3582,7 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/victoria/c2-18d6f3e19c0e0938127e.jpg",
         "suora": true,
         "lahde": "Remi Jouan, Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "Mahén rannikon asutusta Victorian ympäristössä vuonna 2015 otetussa kuvassa.",
+        "selite": "Mahén rannikon asutusta Victorian ympäristössä vuonna 2015.",
         "lyhyt": "Victorian rannikkoaluetta Mahélla.",
         "tiedosto": "Ile de Mahe - Victoria (7).JPG"
       },
@@ -3502,10 +3598,10 @@
         1068
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/victoria/sisalto.json",
-      "sourceContentSHA256": "14ba341c2a98f447610cb2ff6f578409cf7cd6b4f0ad32c62436c8cca3304bf4",
+      "sourceContentSHA256": "078a98112fc6f45de59f66dff95be175439a4e868693bdd06adcaa4015b8aee0",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "579f24e17e233463840ef27a7116ba5fde2eb9ec0901b7e5fa30169cb6d7eb8c",
-        "semanticContextSHA256": "579f24e17e233463840ef27a7116ba5fde2eb9ec0901b7e5fa30169cb6d7eb8c",
+        "targetBeforeSHA256": "0ac928babfafb04eed091b14cb3aabaf82973bb123ae567ac47efe3419407945",
+        "semanticContextSHA256": "0ac928babfafb04eed091b14cb3aabaf82973bb123ae567ac47efe3419407945",
         "subjectTitle": "Victoria",
         "targetState": "existing-target"
       },
@@ -3813,7 +3909,7 @@
       "priorMediaFields": {
         "tiedosto": "Ile de Mahe - Victoria (7).JPG",
         "lyhyt": "Victorian rannikkoaluetta Mahélla.",
-        "selite": "Mahén rannikon asutusta Victorian ympäristössä vuonna 2015 otetussa kuvassa.",
+        "selite": "Mahén rannikon asutusta Victorian ympäristössä vuonna 2015.",
         "lahde": "Remi Jouan, Wikimedia Commons (CC BY-SA 3.0)"
       },
       "preservePreviousMediaObjects": true,
@@ -3840,14 +3936,14 @@
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Remi Jouan, Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "Mahén rannikon asutusta Victorian ympäristössä vuonna 2015 otetussa kuvassa.",
+        "selite": "Mahén rannikon asutusta Victorian ympäristössä vuonna 2015.",
         "lyhyt": "Victorian rannikkoaluetta Mahélla.",
         "tiedosto": "Ile de Mahe - Victoria (7).JPG"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "14ba341c2a98f447610cb2ff6f578409cf7cd6b4f0ad32c62436c8cca3304bf4",
-      "targetAfterSHA256": "579f24e17e233463840ef27a7116ba5fde2eb9ec0901b7e5fa30169cb6d7eb8c",
-      "contextAfterSHA256": "579f24e17e233463840ef27a7116ba5fde2eb9ec0901b7e5fa30169cb6d7eb8c",
+      "sourceContentAfterSHA256": "078a98112fc6f45de59f66dff95be175439a4e868693bdd06adcaa4015b8aee0",
+      "targetAfterSHA256": "0ac928babfafb04eed091b14cb3aabaf82973bb123ae567ac47efe3419407945",
+      "contextAfterSHA256": "0ac928babfafb04eed091b14cb3aabaf82973bb123ae567ac47efe3419407945",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -3870,7 +3966,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "078a98112fc6f45de59f66dff95be175439a4e868693bdd06adcaa4015b8aee0",
+        "sameImageNativeSHA256": "18d6f3e19c0e0938127eeeb2cc5db506b8a3a08bbe268d038ad7cce772131167",
+        "sameImageExportSHA256": "18d6f3e19c0e0938127eeeb2cc5db506b8a3a08bbe268d038ad7cce772131167",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": true
+      }
     },
     {
       "era": "e08",
@@ -3923,7 +4027,7 @@
         1067
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/victoria/sisalto.json",
-      "sourceContentSHA256": "14ba341c2a98f447610cb2ff6f578409cf7cd6b4f0ad32c62436c8cca3304bf4",
+      "sourceContentSHA256": "078a98112fc6f45de59f66dff95be175439a4e868693bdd06adcaa4015b8aee0",
       "semanticSourceBind": {
         "targetBeforeSHA256": "2479e254d05f4db088af7ec9111244e16cb8c5c0279f19ebd418753c43de6303",
         "semanticContextSHA256": "2479e254d05f4db088af7ec9111244e16cb8c5c0279f19ebd418753c43de6303",
@@ -4266,7 +4370,7 @@
         "tiedosto": "Ile de Mahe - Victoria (10).JPG"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "14ba341c2a98f447610cb2ff6f578409cf7cd6b4f0ad32c62436c8cca3304bf4",
+      "sourceContentAfterSHA256": "078a98112fc6f45de59f66dff95be175439a4e868693bdd06adcaa4015b8aee0",
       "targetAfterSHA256": "2479e254d05f4db088af7ec9111244e16cb8c5c0279f19ebd418753c43de6303",
       "contextAfterSHA256": "2479e254d05f4db088af7ec9111244e16cb8c5c0279f19ebd418753c43de6303",
       "ownerApproved": true,
@@ -4291,7 +4395,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "078a98112fc6f45de59f66dff95be175439a4e868693bdd06adcaa4015b8aee0",
+        "sameImageNativeSHA256": "84e6a237cba3f4e5ec34345fa21047041d868c9e5feb0ca0ff6936218ba3e637",
+        "sameImageExportSHA256": "84e6a237cba3f4e5ec34345fa21047041d868c9e5feb0ca0ff6936218ba3e637",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e08",
@@ -4344,10 +4456,10 @@
         3072
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/victoria/sisalto.json",
-      "sourceContentSHA256": "14ba341c2a98f447610cb2ff6f578409cf7cd6b4f0ad32c62436c8cca3304bf4",
+      "sourceContentSHA256": "078a98112fc6f45de59f66dff95be175439a4e868693bdd06adcaa4015b8aee0",
       "semanticSourceBind": {
         "targetBeforeSHA256": "6d7bbe851892365afdc096bf038caf2d676a8d9d61079c86bf744bf6362ade4f",
-        "semanticContextSHA256": "be4864143e1428aa0cdcd953918312d2509b363b00f14cc01ad3078d9581f4c8",
+        "semanticContextSHA256": "ca1bd48fadb31fe4097d2c63c6ae0ba3cc95f4d8d29f10d5d5b87b2abcb04100",
         "subjectTitle": "Mont Fleurin kasvitieteellinen puutarha",
         "targetState": "existing-target"
       },
@@ -4679,9 +4791,9 @@
         "tiedosto": "Giant alocasia.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "14ba341c2a98f447610cb2ff6f578409cf7cd6b4f0ad32c62436c8cca3304bf4",
+      "sourceContentAfterSHA256": "078a98112fc6f45de59f66dff95be175439a4e868693bdd06adcaa4015b8aee0",
       "targetAfterSHA256": "6d7bbe851892365afdc096bf038caf2d676a8d9d61079c86bf744bf6362ade4f",
-      "contextAfterSHA256": "be4864143e1428aa0cdcd953918312d2509b363b00f14cc01ad3078d9581f4c8",
+      "contextAfterSHA256": "ca1bd48fadb31fe4097d2c63c6ae0ba3cc95f4d8d29f10d5d5b87b2abcb04100",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -4704,7 +4816,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "078a98112fc6f45de59f66dff95be175439a4e868693bdd06adcaa4015b8aee0",
+        "sameImageNativeSHA256": "f1d3e9001b1b1e0e69da7f55d16cc466c6e3c00a19e16b8a419033545d200909",
+        "sameImageExportSHA256": "f1d3e9001b1b1e0e69da7f55d16cc466c6e3c00a19e16b8a419033545d200909",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     }
   ],
   "runtimeIntegrationPending": true,
@@ -4716,6 +4836,9 @@
   "task118TextRevision": true,
   "independentTextResamplePending": true,
   "textAcceptanceVerified": false,
-  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task118/immutable-media-history/e08/victoria/28f40d23a50382a147c26a49c6adccd0fb7497dd762aa862aeb109bfbbb792f7.json",
-  "task118ReboundAt": "2026-10-13T16:31:25.513439+00:00"
+  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task228/immutable-media-history/e08/victoria/c1865bce62db49bc0ed014d71d7f1bf243a0699680f1184a65a25ff945cfbff3.json",
+  "task118ReboundAt": "2026-10-13T16:31:25.513439+00:00",
+  "task228ExcludedAssets": [],
+  "task228TextRevision": true,
+  "task228ReboundAt": "2026-10-13T18:00:30.192215+00:00"
 }

@@ -3391,7 +3391,7 @@
         "sameImageExportSHA256": "544682655e9263422cbea1f6d30cdaf562e765738bba8d63a80fc22e6bf04a92",
         "independentNativeQAEvidencePreserved": true,
         "independentTextResamplePending": true,
-        "captionChanged": true
+        "captionChanged": false
       }
     },
     {
@@ -4008,7 +4008,7 @@
         "sameImageExportSHA256": "339e419e9c7f59e3e985d682eb669d36a64e45336a190e872fff1d70cc905c87",
         "independentNativeQAEvidencePreserved": true,
         "independentTextResamplePending": true,
-        "captionChanged": true
+        "captionChanged": false
       }
     }
   ],
@@ -4021,9 +4021,9 @@
   "task118TextRevision": true,
   "independentTextResamplePending": true,
   "textAcceptanceVerified": false,
-  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task228/immutable-media-history/e08/antananarivo/c5bf81031ff9757b93f24f48e0ef4db8130aa867bc94a50bfd86664faa7d4eec.json",
+  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task228/immutable-media-history/e08/antananarivo/63692803c2d5a42c026ed23b799ec0ed9daaa744b853eb0d01f97759cf2fa445.json",
   "task118ReboundAt": "2026-10-13T16:31:25.303700+00:00",
   "task228ExcludedAssets": [],
   "task228TextRevision": true,
-  "task228ReboundAt": "2026-10-13T17:52:01.833544+00:00"
+  "task228ReboundAt": "2026-10-13T18:00:29.952652+00:00"
 }

@@ -97,7 +97,7 @@
   "valokuva": {
     "tiedosto": "ISS024-E-12750 - View of Lesotho - Maseru - Caledon River - mountains Qoaling Quotsaneng Likotsi - Maqalika Lake - Platbergsdrift (cropped).jpg",
     "lyhyt": "Maseru ja Mohokare avaruudesta nähtynä.",
-    "selite": "ISS-avaruusasemalta otetussa kuvassa näkyvät Maseru, Mohokare- eli Caledonjoki ja ympäröivä vuorimaasto.",
+    "selite": "ISS-avaruusasemalta näkyvät Maseru, Mohokare- eli Caledonjoki ja ympäröivä vuorimaasto.",
     "lahde": "Earth Science and Remote Sensing Unit , Lyndon B. Johnson Space Center, Commons (PD)"
   },
   "kaupunkilehti": [
@@ -128,7 +128,7 @@
       "nostot": [
         {
           "otsikko": "Joella on kaksi nimeä",
-          "teksti": "Mohokare ja Caledon ovat sama joki. Maserussa se erottaa Lesothon Etelä-Afrikasta, mutta sillan kohdalla raja myös yhdistää: sen yli kulkee tie naapurimaan Ladybrandin suuntaan. Kaupunki on matalassa laaksossa Maloti-vuoriston reunalla. Maan pääkaupunki ei siis sijaitse valtionsa keskellä vaan aivan sen laidassa. Maseru Bridge on sekä joen ylitys että maantien raja-asema. Samalla joella on siis paikallinen sesothonkielinen ja englanninkielinen nimi.",
+          "teksti": "Mohokare ja Caledon ovat sama joki. Maserussa se erottaa Lesothon Etelä-Afrikasta, mutta sillan kohdalla raja myös yhdistää: sen yli kulkee tie naapurimaan Ladybrandin suuntaan. Kaupunki on matalassa laaksossa Maloti-vuoriston reunalla. Maseru Bridge on sekä joen ylitys että maantien raja-asema.",
           "tiedosto": "",
           "lyhyt": "",
           "selite": "",
@@ -137,7 +137,7 @@
         },
         {
           "otsikko": "Kauppa vaihtaa mittakaavaa",
-          "teksti": "Kingswayn ympärille on kasvanut vierekkäisiä liikekeskuksia, joilla on erilaiset kasvot. Läntisellä puolella ovat suuret toimistorakennukset, tavaratalot ja pankit; idempänä pienemmät liikkeet, torit ja katukauppiaat. Samasta keskustasta löytyy siten sekä virallisten asioiden kaupunki että arkisten ostosten kaupunki. Kingsway ei ole vain läpikulkutie: sen ympäristö kokoaa yhteen Maserun työpaikkoja ja palveluja. Basotho Hat -käsityökauppa sijaitsee samalla Kingswayn kauppa-alueella.",
+          "teksti": "Kingswayn ympärille on kasvanut vierekkäisiä liikekeskuksia, joilla on erilaiset kasvot. Läntisellä puolella ovat suuret toimistorakennukset, tavaratalot ja pankit; idempänä pienemmät liikkeet, torit ja katukauppiaat. Basotho Hat -käsityökauppa sijaitsee samalla Kingswayn kauppa-alueella.",
           "tiedosto": "",
           "lyhyt": "",
           "selite": "",
@@ -146,7 +146,7 @@
         },
         {
           "otsikko": "T-paidan kaupunki",
-          "teksti": "Thetsanen alueella Maserun eteläosassa toimii tekstiili- ja jalkineteollisuutta. Vuoristomaan pääkaupungin arkeen kuuluvat siis myös tehtaat ja vaatteiden valmistus. Kaupungin teollisuus ei kuitenkaan ole pelkkää ompelua: Moshoeshoe Roadin suunnalla on myllyjä ja muita yrityksiä. Palvelut ja valmistava teollisuus ovat molemmat osa Maserun taloutta. Matkailija voi tulla Lesothoon vuorten vuoksi, mutta pääkaupungin työelämästä löytyy toisenlainen näkymä samaan maahan.",
+          "teksti": "Thetsanen alueella Maserun eteläosassa toimii tekstiili- ja jalkineteollisuutta. Kaupungin teollisuus ei kuitenkaan ole pelkkää ompelua: Moshoeshoe Roadin suunnalla on myllyjä ja muita yrityksiä. Palvelut ja valmistava teollisuus ovat molemmat osa Maserun taloutta.",
           "tiedosto": "",
           "lyhyt": "",
           "selite": "",
@@ -155,7 +155,7 @@
         },
         {
           "otsikko": "Hattu, joka antaa muodon",
-          "teksti": "Mokorotlo on basothojen kartiomainen olkihattu ja Lesothon kansallinen tunnus. Se esiintyy lipussa ja ajoneuvojen rekisterikilvissä, ja Maserussa hatun muoto on lainattu myös Basotho Hat -käsityökaupan rakennukseen. Kingswaylla sijaitsevassa kaupassa myydään paikallisia käsitöitä. Hatun muoto yhdistetään perinteessä Thaba Bosiun lähellä kohoavaan Qiloane-vuoreen. Pieni käyttöesine kulkee näin maisemasta kansalliseen tunnukseen ja edelleen kaupungin arkkitehtuuriin.",
+          "teksti": "Mokorotlo on basothojen kartiomainen olkihattu ja Lesothon kansallinen tunnus. Se esiintyy lipussa ja ajoneuvojen rekisterikilvissä, ja Maserussa hatun muoto on lainattu myös Basotho Hat -käsityökaupan rakennukseen. Kingswaylla sijaitsevassa kaupassa myydään paikallisia käsitöitä. Hatun muoto yhdistetään perinteessä Thaba Bosiun lähellä kohoavaan Qiloane-vuoreen.",
           "tiedosto": "",
           "lyhyt": "",
           "selite": "",
@@ -170,7 +170,7 @@
           "selite": "",
           "lahde": ""
         },
-        "kappale": "Maserun keskusta rakentuu Kingswayn kauppa-alueiden ympärille. Basotho Hat -kaupassa voi tutustua paikallisiin käsitöihin. Rajasilta yhdistää kaupungin Etelä-Afrikan maanteihin, ja minibusseilla jatketaan Lesothon muihin osiin. Thaba Bosiu kuuluu kaupungin ulkopuoliseen retkipäivään. Talvella myös pääkaupungissa voi olla pakkasta, joten vuoristoon jatkavan kannattaa varautua lämpimiin vaatteisiin.",
+        "kappale": "Maserun keskusta rakentuu Kingswayn kauppa-alueiden ympärille. Basotho Hat -kaupassa voi tutustua paikallisiin käsitöihin. Rajasilta yhdistää kaupungin Etelä-Afrikan maanteihin, ja minibusseilla jatketaan Lesothon muihin osiin. Thaba Bosiu kuuluu kaupungin ulkopuoliseen retkipäivään.",
         "artikkeli": {
           "nimi": "Matkailijan Maseru",
           "taitto": "opas",
@@ -179,7 +179,7 @@
           "jaksot": [
             {
               "otsikko": "Perille ja liikkeelle",
-              "teksti": "Maserua palvelee Moshoeshoe I:n kansainvälinen lentoasema Mazenodissa. Etelä-Afrikasta tuleva maantie kulkee Maseru Bridgen raja-aseman kautta. Kaupungissa ja Lesothon maanteillä liikennöi minibusseja ja takseja. Selvitä ennen lähtöä, palveleeko valittu auto paikallista reittiä vai pidempää matkaa, ja sovi määränpäästä kuljettajan kanssa. Maserun rautatieyhteys on tavaraliikennettä, joten junalla saapumisen varaan ei voi rakentaa matkaa.",
+              "teksti": "Maserua palvelee Moshoeshoe I:n kansainvälinen lentoasema Mazenodissa. Etelä-Afrikasta tuleva maantie kulkee Maseru Bridgen raja-aseman kautta. Kaupungissa ja Lesothon maanteillä liikennöi minibusseja ja takseja.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -189,7 +189,7 @@
             },
             {
               "otsikko": "Kingsway ja käsityöt",
-              "teksti": "Keskustan kauppa-alueet ovat kehittyneet Kingswayn ympärille. Suuret toimistot ja pankit painottuvat läntiseen liikekeskukseen, pienet yritykset, torit ja katukauppa itäiseen. Basotho Hat -kauppa tarjoaa paikallisia käsitöitä samannimisessä, hatun muotoa lainaavassa rakennuksessa. Mokorotlo ja basothojen peitteet auttavat tunnistamaan paikallista vaatetusperinnettä, mutta kysy tuotteiden materiaaleista ja tekijöistä: perinne ei tarkoita, että kaikki myytävä olisi samanlaista.",
+              "teksti": "Keskustan kauppa-alueet ovat kehittyneet Kingswayn ympärille. Suuret toimistot ja pankit painottuvat läntiseen liikekeskukseen, pienet yritykset, torit ja katukauppa itäiseen. Basotho Hat -kauppa tarjoaa paikallisia käsitöitä samannimisessä, hatun muotoa lainaavassa rakennuksessa.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -199,7 +199,7 @@
             },
             {
               "otsikko": "Retki vanhaan keskukseen",
-              "teksti": "Thaba Bosiu on erillinen retkikohde Maserun itäpuolella. Historiallinen paikka sijaitsee vuorentasanteella; juurella oleva kulttuurikylä on eri osa vierailua. Tasanteelle järjestetään kävelykierroksia, ja vierailukeskuksesta voi tiedustella opasta. Moshoeshoe I:n hauta ja vanhan keskuksen jäänteet kuuluvat alueen historiaan. Kaupungin kahvilakierroksen ja vuorelle nousun väliin kannattaa jättää aikaa siirtymälle ja kävelylle.",
+              "teksti": "Thaba Bosiu on erillinen retkikohde Maserun itäpuolella. Historiallinen paikka sijaitsee vuorentasanteella; juurella oleva kulttuurikylä on eri osa vierailua. Tasanteelle järjestetään kävelykierroksia, ja vierailukeskuksesta voi tiedustella opasta. Moshoeshoe I:n hauta ja vanhan keskuksen jäänteet kuuluvat alueen historiaan.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -209,7 +209,7 @@
             },
             {
               "otsikko": "Mitä täällä syödään",
-              "teksti": "Maserun lounasarkeen kuuluvat mukaan pakatut ruoka-annokset. Kingswayn ruokamyyjiltä on tarjolla esimerkiksi kanaa, sianlihaa, riisiä ja papaa. Papa on maissista tehtyä puuroa, jota syödään muun ruoan rinnalla. Näissä annoksissa pääkaupunki näkyy työpaikkana: ruokaa ostavat myös keskustan toimistojen työntekijät. Papa on aterian lisäke; kanan ja sianlihan kaltaiset pääruoat tekevät annoksista erilaisia.",
+              "teksti": "Maserun lounasarkeen kuuluvat mukaan pakatut ruoka-annokset. Kingswayn ruokamyyjiltä on tarjolla esimerkiksi kanaa, sianlihaa, riisiä ja papaa. Papa on maissista tehtyä puuroa, jota syödään muun ruoan rinnalla. Näissä annoksissa pääkaupunki näkyy työpaikkana: ruokaa ostavat myös keskustan toimistojen työntekijät.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -219,7 +219,7 @@
             },
             {
               "otsikko": "Milloin kannattaa tulla",
-              "teksti": "Maserussa kesät ovat lämpimiä ja sateisia, talvet viileitä ja kuivempia. Eteläisen pallonpuoliskon vuodenaikojen rytmi poikkeaa Suomen kalenterista: keskikesä osuu Suomen talveen. Talvella kaupungissakin esiintyy pakkasta, ja vuoristoon jatkuva matka tarvitsee oman sääarvionsa. Ota mukaan lämpimiä kerroksia ja tarkista ajankohtainen ennuste ennen Thaba Bosiun kaltaista kävelyretkeä. Thaba Bosiun tasanteelle noustaan jalan, joten sen retkipäivä eroaa Kingswayn kauppakierroksesta.",
+              "teksti": "Maserussa kesät ovat lämpimiä ja sateisia, talvet viileitä ja kuivempia. Eteläisen pallonpuoliskon vuodenaikojen rytmi poikkeaa Suomen kalenterista: keskikesä osuu Suomen talveen.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -258,16 +258,16 @@
             ],
             "hyvaTietaa": [
               {
-                "otsikko": "Rajakaupunki",
-                "teksti": "Etelä-Afrikan puolelta saapuva ylittää valtakunnanrajan, joten tarkista maahantuloehdot matkasi mukaan."
+                "otsikko": "Rajajoki",
+                "teksti": "Mohokare erottaa Lesothon Etelä-Afrikasta."
               },
               {
-                "otsikko": "Rata ei ole matkustajareitti",
-                "teksti": "Maserun rautatie palvelee tavaraa; suunnittele saapuminen lentäen tai maanteitse."
+                "otsikko": "Kingsway",
+                "teksti": "Kingswayn länsipuolella on suuria liikkeitä ja pankkeja, itäpuolella pienyrityksiä ja toreja."
               },
               {
-                "otsikko": "Kaupunki ja vuoristo",
-                "teksti": "Maserun jälkeen korkeammalle jatkuvan matkan sää ja kuljetus on suunniteltava erikseen."
+                "otsikko": "Thaba Bosiu",
+                "teksti": "Thaba Bosiu sijaitsee kaupungin itäpuolella."
               }
             ]
           },
@@ -293,7 +293,7 @@
       "nostot": [
         {
           "otsikko": "Kaupunki vuonna 1873",
-          "teksti": "Isoisän matkavuonna 1873 Maseru oli jo olemassa, mutta paikka oli paljon nykyistä pienempi. Paikka oli kasvanut pienen poliisileirin ympärille, ja Basutomaan hallinto oli tuolloin Kapsiirtomaan yhteydessä. Myöhemmin Maseru sai jälleen pääkaupungin aseman. Joenvarsipaikan historia kulkee siis hallinnollisten muutosten kautta. Lesothon itsenäistyessä kaupunki säilyi pääkaupunkina, mutta sen varhainen mittakaava oli aivan toinen kuin nykyinen.",
+          "teksti": "Isoisän matkavuonna 1873 Maseru oli jo olemassa, mutta paikka oli paljon nykyistä pienempi. Paikka oli kasvanut pienen poliisileirin ympärille, ja Basutomaan hallinto oli tuolloin Kapsiirtomaan yhteydessä. Myöhemmin Maseru sai jälleen pääkaupungin aseman. Lesothon itsenäistyessä kaupunki säilyi pääkaupunkina, mutta sen varhainen mittakaava oli aivan toinen kuin nykyinen.",
           "tiedosto": "",
           "lyhyt": "",
           "selite": "",
@@ -302,7 +302,7 @@
         },
         {
           "otsikko": "Pääkaupunki tasanteella",
-          "teksti": "Ennen Maserua basothojen keskus oli Thaba Bosiu, tasalakinen vuori kaupungin itäpuolella. Moshoeshoe I asettui sinne väkensä kanssa 1800-luvun alkupuolella. Jyrkät reunat tekivät tasanteesta luonnollisen suojapaikan, ja sen laelle voitiin koota myös karjaa ja elintarvikkeita. Sinne tuli ihmisiä, joille annettiin ruokaa ja suojaa. Vuori liittyy siksi sekä puolustukseen että basothojen yhteisön muodostumiseen. Nykyinen pääkaupunki ja vanha vuoristokeskus kertovat eri vaiheista.",
+          "teksti": "Ennen Maserua basothojen keskus oli Thaba Bosiu, tasalakinen vuori kaupungin itäpuolella. Moshoeshoe I asettui sinne väkensä kanssa 1800-luvun alkupuolella. Jyrkät reunat tekivät tasanteesta luonnollisen suojapaikan, ja sen laelle voitiin koota myös karjaa ja elintarvikkeita. Sinne tuli ihmisiä, joille annettiin ruokaa ja suojaa. Vuori liittyy siksi sekä puolustukseen että basothojen yhteisön muodostumiseen.",
           "tiedosto": "",
           "lyhyt": "",
           "selite": "",
@@ -311,7 +311,7 @@
         },
         {
           "otsikko": "Kiskot tulivat myöhemmin",
-          "teksti": "Maserun rautatieasemalla rata päättyy. Se liittyy Mohokaren ylittävän sillan kautta Etelä-Afrikan rataverkkoon, ja Lesothon puoleinen osuus on lyhyt. Yhteys rakennettiin 1900-luvun alussa, joten isoisän matkavuonna 1873 sitä ei vielä ollut. Kaupungin raideliikenne palvelee tavaraa eikä matkustajia. Lesothon vuoristoon ei siis lähdetä Maserusta junalla. Aseman merkitys on toisenlainen: se tuo pääkaupungin osaksi rajan yli jatkuvaa kuljetusverkkoa, vaikka maan oma rata on pieni.",
+          "teksti": "Maserun rautatieasemalla rata päättyy. Se liittyy Mohokaren ylittävän sillan kautta Etelä-Afrikan rataverkkoon, ja Lesothon puoleinen osuus on lyhyt. Yhteys rakennettiin 1900-luvun alussa. Kaupungin raideliikenne palvelee tavaraa eikä matkustajia.",
           "tiedosto": "",
           "lyhyt": "",
           "selite": "",
@@ -320,7 +320,7 @@
         },
         {
           "otsikko": "Peite on myös vaate",
-          "teksti": "Basothojen peite on Lesothossa myös hartioilla kannettava vaate. Sen käyttötavat liittyvät arkeen ja erilaisiin elämänvaiheisiin, eivät vain nukkumiseen. Perinteisen eläimennahkaisen viitan rinnalle ja tilalle tuli kudottuja tekstiilejä, ja peitteen historia kuuluu siten myös valmistuksen ja kaupankäynnin historiaan. Maserun kaupoissa näitä vaatteita myydään edelleen. Kaikki peitteet eivät ole samaa mallia tai materiaalia, eikä yksi kuvio edusta koko basothojen vaatetusperinnettä.",
+          "teksti": "Basothojen peite on Lesothossa myös hartioilla kannettava vaate. Sen käyttötavat liittyvät arkeen ja erilaisiin elämänvaiheisiin, eivät vain nukkumiseen. Perinteisen eläimennahkaisen viitan rinnalle ja tilalle tuli kudottuja tekstiilejä. Maserun kaupoissa näitä vaatteita myydään edelleen.",
           "tiedosto": "",
           "lyhyt": "",
           "selite": "",
@@ -345,13 +345,6 @@
   "saatiedot": null,
   "ehdotukset": {
     "lentoasema": "Moshoeshoe I International Airport (MSU)",
-    "huomiot": [
-      "Task118 C-tekstikorjaus valmis 13.10.2026. Nykyisessä C:ssä 4 täytettyä kuvaroolia; erilliset B/media-, kartta-, sää-, D/E/F- ja pelikytkentäportit eivät ole tämän tekstikorjauksen hyväksyntä.",
-      "Kartta partial: ei hyväksyttyjä kohdepisteitä; rajat ovat kontekstin ympärille tehty alustava rajausehdotus. Thaba Bosiu jää kaupungin ydinkartan ulkopuolelle.",
-      "Sääauditointi avoin: saatiedot null; saa.json säilytetty koskemattomana.",
-      "Väestö jätetty tekstistä pois: kontekstin urban/peri-urban 343541 (2016) ei vastaa WP:n 330760-lukua.",
-      "Britannica nimeää perustajaksi Moshoeshoen, WP brittiläisen poliisileirin. Henkilöä ei päätetty; luonnos kertoo leirin ympärille syntyneestä kaupungista.",
-      "Riippumaton D, E ja pääsession F tekemättä."
-    ]
+    "huomiot": []
   }
 }
