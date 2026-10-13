@@ -14,8 +14,8 @@
     }
   },
   "artikkeli": {
-    "intro": "Niamey on Nigerin pääkaupunki, jonka läpi kulkee **Nigerjoki**. Vasemmalla rannalla kaupunki nousee ylängölle, oikealla avautuu tulvatasanko. Joen saaretkin ovat asuttuja, ja kaupungin historia alkaa jokivarren kylistä. Goudel ja Gamkalé kuuluivat paikalliseen maisemaan jo ennen nykyisen pääkaupungin kasvua. Vuonna 1873 täällä oli kyläasutusta; Ranskan siirtomaa-asema tuli myöhemmin. Kaupungin nimeä selitetään useissa suullisissa perinteissä eri tavoin. **Grand Marché** kokoaa yhteen tukku- ja vähittäiskaupan, ja jokivarren saviastioita tuodaan myyntiin Boubonista. Ga’ruwa-vedenkuljettajien kärryt puolestaan yhdistävät vesipisteet kotitalouksiin. Niameyn luontoa ovat myös kausittainen Gounti Yénan uoma, asukkaiden hoitamat puut ja Trois Sœursin paljaat lateriittikukkulat.",
-    "teksti": "Nykyisen Niameyn alueella eli eri yhteisöjä jokivarren kylissä, ja kaupungin nimestä kerrotaan toisistaan poikkeavia suullisia selityksiä. Hallintokeskus kasvoi tähän asutukseen myöhemmin. Niger on kaupungin pysyvä joki. Gounti Yéna taas on kausittainen uoma, joka kerää valumavesiä kaupunginosista ja laskee Nigeriin keskustassa. Sen varrella viljellään hedelmiä ja vihanneksia; jokilaakso kuuluu samalla kaupungin maantieteeseen ja työn arkeen. Grand Marchén kaupankäynti, vedenkuljettajien reitit ja Boubonin saviastiat näyttävät erilaisia yhteyksiä kaupungin sisällä ja sen ympärille. Boubou Haman kansallismuseo esittelee alueen kulttuuria ja arkeologiaa. Jokisaarella asutaan, torilla käydään kauppaa ja puiden varjossa kokoonnutaan keskustelemaan."
+    "intro": "Niamey on Nigerin pääkaupunki, jonka läpi kulkee **Nigerjoki**. Vasemmalla rannalla kaupunki nousee ylängölle, oikealla avautuu tulvatasanko. Joen saaretkin ovat asuttuja, ja kaupungin historia alkaa jokivarren kylistä. Goudel ja Gamkalé kuuluivat paikalliseen maisemaan jo ennen nykyisen pääkaupungin kasvua.\n\nVuonna 1873 täällä oli kyläasutusta; Ranskan siirtomaa-asema tuli myöhemmin. Kaupungin nimeä selitetään useissa suullisissa perinteissä eri tavoin. **Grand Marché** kokoaa yhteen tukku- ja vähittäiskaupan, ja jokivarren saviastioita tuodaan myyntiin Boubonista. Ga’ruwa-vedenkuljettajien kärryt puolestaan yhdistävät vesipisteet kotitalouksiin. Niameyn luontoa ovat myös kausittainen Gounti Yénan uoma, asukkaiden hoitamat puut ja Trois Sœursin paljaat lateriittikukkulat.",
+    "teksti": "Nykyisen Niameyn alueella eli eri yhteisöjä jokivarren kylissä, ja kaupungin nimestä kerrotaan toisistaan poikkeavia suullisia selityksiä. Hallintokeskus kasvoi tähän asutukseen myöhemmin.\n\nNiger on kaupungin pysyvä joki. Gounti Yéna taas on kausittainen uoma, joka kerää valumavesiä kaupunginosista ja laskee Nigeriin keskustassa. Sen varrella viljellään hedelmiä ja vihanneksia; jokilaakso kuuluu samalla kaupungin maantieteeseen ja työn arkeen.\n\nGrand Marchén kaupankäynti, vedenkuljettajien reitit ja Boubonin saviastiat näyttävät erilaisia yhteyksiä kaupungin sisällä ja sen ympärille. Boubou Haman kansallismuseo esittelee alueen kulttuuria ja arkeologiaa. Jokisaarella asutaan, torilla käydään kauppaa ja puiden varjossa kokoonnutaan keskustelemaan."
   },
   "kysymykset": [
     {
@@ -96,8 +96,8 @@
   ],
   "valokuva": {
     "tiedosto": "Niamey from the sky.jpg",
-    "lyhyt": "Niameyn asutusta ilmasta.",
-    "selite": "Niameyn asuinkortteleita ilmasta nähtynä.",
+    "lyhyt": "Niamey ilmasta.",
+    "selite": "Niameyn Saga Kourteyn alue ilmasta vuonna 2011.",
     "lahde": "Jean Rebiffé, Commons (CC BY 3.0)",
     "vuosi": "2011"
   },
@@ -109,14 +109,14 @@
       "kansikuvat": [
         {
           "tiedosto": "Blvd Mali Bero from grand mosquee niamey.jpg",
-          "lyhyt": "Mali Bero -bulevardia ja Niameyn kaupunkirakennetta.",
-          "selite": "Mali Bero -bulevardia ja Niameyn kaupunkirakennetta vuonna 2006.",
+          "lyhyt": "Mali Bero -bulevardi Niameyssä.",
+          "selite": "Mali Bero -bulevardi Niameyn suurelta moskeijalta luoteeseen nähtynä vuonna 2006.",
           "lahde": "Roland Huziaker, Wikimedia Commons (CC BY-SA 2.0)"
         },
         {
           "tiedosto": "Le majestueux fleuve Niger serpente à travers la capitale du Niger Niamey , offrant un spectacle captivant.jpg",
-          "lyhyt": "Nigerjoki ja Niameyn rantakorttelit ilmasta.",
-          "selite": "Nigerjoki ja Niameyn rantakorttelit ilmasta vuonna 2023.",
+          "lyhyt": "Nigerjoki Niameyssä.",
+          "selite": "Nigerjoen näkymä korkealta paikalta Niameyssä heinäkuussa 2023.",
           "lahde": "Fhadel ALOU, Wikimedia Commons (CC BY-SA 4.0)"
         },
         {
@@ -129,7 +129,7 @@
       "nostot": [
         {
           "otsikko": "Kylät ennen pääkaupunkia",
-          "teksti": "Niameyn varhaisessa historiassa on monta kylää ja monta kertomusta. Goudel ja Gamkalé sijaitsivat Nigerin vasemmalla rannalla, Lamordé ja Nogaré oikealla. Niiden väliin ja rinnalle syntyi lisää asutusta, josta myöhempi pääkaupunki kasvoi. Kaupungin nimen alkuperästä kerrotaan eri yhteisöissä erilaisia tarinoita. Myös vuoden 1873 maisemassa oli jokivarren kyliä: siirtomaa-asema ja laajeneva hallintokeskus kuuluivat vasta myöhempään vaiheeseen. Kaupunki ei siis aloittanut historiaansa ensimmäisestä virastosta.",
+          "teksti": "Niameyn varhaisessa historiassa on monta kylää ja monta kertomusta. Goudel ja Gamkalé sijaitsivat Nigerin vasemmalla rannalla, Lamordé ja Nogaré oikealla. Niiden väliin ja rinnalle syntyi lisää asutusta, josta myöhempi pääkaupunki kasvoi. Kaupungin nimen alkuperästä kerrotaan eri yhteisöissä erilaisia tarinoita. Alueella asui fula-, zarma-, maouri- ja songhai-yhteisöjä.",
           "wiki": "Niamey",
           "tiedosto": "",
           "lyhyt": "",
@@ -138,7 +138,7 @@
         },
         {
           "otsikko": "Torilla tavara vaihtaa mittakaavaa",
-          "teksti": "Grand Marché palvelee sekä suuria tavaraeriä ostavia kauppiaita että omia ostoksiaan tekeviä kotitalouksia. Keskustan kauppapaikka on antanut nimensä myös ympäröivälle kaupunginosalle. Tori sijaitsee Plateau-alueen lähellä Boulevard de l’Independencen laidalla, ja sen takana on kuljetusten lähtöpaikka. Myynnissä on myös käsityötä. Torirakennuksia on jouduttu rakentamaan uudelleen palojen jälkeen, mutta paikan rooli on sama: täällä kaupungin hankinnat ja laajemmat kauppayhteydet kohtaavat.",
+          "teksti": "Grand Marché palvelee sekä suuria tavaraeriä ostavia kauppiaita että omia ostoksiaan tekeviä kotitalouksia. Keskustan kauppapaikka on antanut nimensä myös ympäröivälle kaupunginosalle. Tori sijaitsee Plateau-alueen lähellä Boulevard de l’Independencen laidalla, ja sen takana on kuljetusten lähtöpaikka. Myynnissä on myös käsityötä. Torirakennuksia on jouduttu rakentamaan uudelleen palojen jälkeen,",
           "wiki": "Niamey Grand Market",
           "tiedosto": "",
           "lyhyt": "",
@@ -147,7 +147,7 @@
         },
         {
           "otsikko": "Vesi kulkee työntökärryssä",
-          "teksti": "Ga’ruwa-vedenkuljettajan työ alkaa vesipisteeltä. Hän ostaa vettä, nostaa astiat työntökärryyn ja vie kuorman kotitalouksille omaa vakiintunutta reittiään pitkin. Työtä opitaan myös oppipoikana, ja kuljettajilla on epävirallisia ammattiyhteisöjä. Kotona vettä voidaan säilyttää saviruukuissa. Niameyn vesihuollon arkeen kuuluu siis putkien ja vesipisteiden lisäksi ihmisiä, jotka tuntevat asiakkaansa ja kulkureittinsä. Tavallinen kärry on samalla veden jakelun työväline.",
+          "teksti": "Ga’ruwa-vedenkuljettajan työ alkaa vesipisteeltä. Hän ostaa vettä, nostaa astiat työntökärryyn ja vie kuorman kotitalouksille omaa vakiintunutta reittiään pitkin. Työtä opitaan myös oppipoikana, ja kuljettajilla on epävirallisia ammattiyhteisöjä. Kotona vettä voidaan säilyttää saviruukuissa. Hausankielinen ga’ruwa tarkoittaa ”vettä on”. Kuljettajilla on kaupungin myöntämä vuosittainen lupa.",
           "wiki": "Niamey",
           "tiedosto": "",
           "lyhyt": "",
@@ -156,7 +156,7 @@
         },
         {
           "otsikko": "Saviruukun matka jokivartta",
-          "teksti": "Niameyn keramiikkakauppa ulottuu pääkaupungin ulkopuolelle. Boubonin jokivarsikylässä naiset valmistavat astioita kotitalouksissa, ja kylän viikkomarkkinoilla myydään keramiikan ohella muitakin tavaroita. Niameyssä puolestaan on omia keramiikan kauppapaikkoja. Näin astian valmistuspaikka ja myyntipaikka voivat olla eri yhteisöissä saman joen varrella. Savityön tarina löytyy tekijöiden kodeista, markkinoilta ja tavaran liikkeestä; suuren tehtaan porttia ei tämän tuotantoketjun ymmärtämiseen tarvita.",
+          "teksti": "Niameyn keramiikkakauppa ulottuu pääkaupungin ulkopuolelle. Boubonin jokivarsikylässä naiset valmistavat astioita kotitalouksissa, ja kylän viikkomarkkinoilla myydään keramiikan ohella muitakin tavaroita. Niameyssä puolestaan on omia keramiikan kauppapaikkoja. Boubon sijaitsee Niameystä luoteeseen Nigerin vasemmalla rannalla. Kylään johtaa päällystetty tie pääkaupungista.",
           "wiki": "Boubon",
           "tiedosto": "",
           "lyhyt": "",
@@ -180,7 +180,7 @@
           "jaksot": [
             {
               "otsikko": "Perille ja liikkeelle",
-              "teksti": "Niameyn lentoasema on Diori Hamanin kansainvälinen lentoasema. Kaupungissa liikutaan takseilla ja jaetuilla kyydeillä. Varmista käytettävän yhteyden reitti ja aikataulu liikennöitsijältä.",
+              "teksti": "Niameyn lentoasema on Diori Hamanin kansainvälinen lentoasema. Kaupungissa liikutaan takseilla ja jaetuilla kyydeillä.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -190,7 +190,7 @@
             },
             {
               "otsikko": "Joki, uoma ja kukkulat",
-              "teksti": "Nigerjoen rinnalla Niameyssä on kausittainen Gounti Yénan uoma. Trois Sœursin kukkulat näyttävät kaupungin lateriittista maastoa,  Néini Goungou on jokisaarella sijaitseva asuttu kylä, jonka vastarannalla on Gamkalé.",
+              "teksti": "Nigerjoen rinnalla Niameyssä on kausittainen Gounti Yénan uoma. Trois Sœursin kukkulat näyttävät kaupungin lateriittista maastoa. Néini Goungou on jokisaarella sijaitseva asuttu kylä, jonka vastarannalla on Goudel.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -259,20 +259,16 @@
             ],
             "hyvaTietaa": [
               {
-                "otsikko": "Ennen matkapäätöstä",
-                "teksti": "Tarkista Nigerin ajantasainen matkustustiedote Suomen ulkoministeriöstä ja noudata sen ohjeita."
-              },
-              {
-                "otsikko": "Ennen matkapäätöstä",
-                "teksti": "Tarkista Nigerin ajantasainen matkustustiedote Suomen ulkoministeriöstä ja noudata sen ohjeita."
-              },
-              {
-                "otsikko": "Kaksi erilaista uomaa",
+                "otsikko": "Kaksi uomaa",
                 "teksti": "Niger on pysyvä joki, Gounti Yéna kausittainen uoma."
               },
               {
-                "otsikko": "Asutut saaret",
-                "teksti": "Vierailun ja kuljetuksen mahdollisuudet pitää selvittää erikseen."
+                "otsikko": "Saaret",
+                "teksti": "Nigerjoen Néini Goungou on asuttu saari."
+              },
+              {
+                "otsikko": "Metropolialue",
+                "teksti": "Niameyn kaupunkialue jatkuu joen molemmilla rannoilla."
               }
             ]
           },
@@ -298,7 +294,7 @@
       "nostot": [
         {
           "otsikko": "Uoma, joka herää sateesta",
-          "teksti": "Gounti Yéna kulkee Niameyn kaupunginosien läpi ja päättyy Nigerjokeen keskustassa. Se on kausittainen uoma, johon kertyy sade- ja valumavesiä. Sen varrella kasvatetaan hedelmiä ja vihanneksia. Ennen pääkaupungin kasvua laakso erotti Goudelin ja Gamkalén kylien viljelymaita, ja myöhemmin sillä oli merkitystä myös kaupunginosien rajana. Sama maaston painanne on siten ollut veden reitti, viljelypaikka ja asutuksen jäsentäjä. Kuivana näkyvä laakso kuuluu silti kaupungin vesimaisemaan.",
+          "teksti": "Gounti Yéna kulkee Niameyn kaupunginosien läpi ja päättyy Nigerjokeen keskustassa. Se on kausittainen uoma, johon kertyy sade- ja valumavesiä. Sen varrella kasvatetaan hedelmiä ja vihanneksia. Ennen pääkaupungin kasvua laakso erotti Goudelin ja Gamkalén kylien viljelymaita, ja myöhemmin sillä oli merkitystä myös kaupunginosien rajana. Uoma laskee Nigeriin Hôtel Gawèyen luona.",
           "wiki": "Gounti Yéna",
           "tiedosto": "",
           "lyhyt": "",
@@ -307,7 +303,7 @@
         },
         {
           "otsikko": "Kolme sisarta kaupungin laidalla",
-          "teksti": "Trois Sœurs tarkoittaa kolmea sisarta. Nimi kuuluu Niameyn rakentamattomalle kukkulajonolle, jonka pinnassa näkyy paljasta lateriittia. Kukkulat asettuvat suunnilleen itä–länsisuuntaan, ja niiden pohjoispuolella maasto avautuu kohti Nigerjoen tasankoa. Ne kuuluvat Niamey V:n alueeseen.  Pääkaupungin maisemaan mahtuu siis hallintorakennusten ja katujen lisäksi kukkuloita, joilla maaperä itse on näkyvin maamerkki.",
+          "teksti": "Trois Sœurs tarkoittaa kolmea sisarta. Nimi kuuluu Niameyn rakentamattomalle kukkulajonolle, jonka pinnassa näkyy paljasta lateriittia. Kukkulat asettuvat suunnilleen itä–länsisuuntaan, ja niiden pohjoispuolella maasto avautuu kohti Nigerjoen tasankoa. Ne kuuluvat Niamey V:n alueeseen. Naapurikaupunginosia ovat Diamowé pohjoisessa, Nordiré idässä ja Lokoto kaakossa.",
           "wiki": "Trois Sœurs",
           "tiedosto": "",
           "lyhyt": "",
@@ -316,7 +312,7 @@
         },
         {
           "otsikko": "Varjo on asukkaiden työtä",
-          "teksti": "Niameyn kaupunkipuista moni on asukkaiden istuttama ja hoitama. Kaupungissa kasvaa esimerkiksi mangoa ja neemiä, ja osa puulajeista on tuotu alueelle muualta. Istutettu vehreys eroaa ylängön luontaisesta pensaikosta ja laaksojen viljelymaisemasta. Puiden varjo antaa tilaa myös ulkoilmatapahtumille ja kokoontumisille. Kadun puu on siten enemmän kuin maiseman koriste: sen kasvattaminen kuuluu asukkaiden työhön, ja sen ympärille voi muodostua paikka, jossa kaupungin sosiaalinen elämä saa tilaa.",
+          "teksti": "Niameyn kaupunkipuista moni on asukkaiden istuttama ja hoitama. Kaupungissa kasvaa esimerkiksi mangopuita ja neempuita, ja osa puulajeista on tuotu alueelle muualta. Istutettu vehreys eroaa ylängön luontaisesta pensaikosta ja laaksojen viljelymaisemasta. Puiden varjo antaa tilaa myös ulkoilmatapahtumille ja kokoontumisille. Asukkaat hyödyntävät puita myös hedelmäsadon vuoksi.",
           "wiki": "Niamey",
           "tiedosto": "",
           "lyhyt": "",
@@ -325,7 +321,7 @@
         },
         {
           "otsikko": "Saarella on oma kylä",
-          "teksti": "Néini Goungou on Nigerjoen saari ja asuttu kylä Niamey V:n alueella. Goudel sijaitsee vastarannalla ja Lamordé kaakossa. Kylällä on oma paikallisen päällikön johtama yhteisö, ja saaresta on tietoja jo 1800-luvulta. Joen tulvat ovat myöhemmin muuttaneet asukkaiden elämää ja vaatineet osalta muuttoa. Saari kuuluu pääkaupunkiin, vaikka sen ympärillä kulkee joki. Maisemaa katsellessa on hyvä muistaa tämä mittakaava: rannasta näkyvä saari on samalla ihmisten koti ja osa kaupungin asutushistoriaa.",
+          "teksti": "Néini Goungou on Nigerjoen saari ja asuttu kylä Niamey V:n alueella. Goudel sijaitsee vastarannalla ja Lamordé kaakossa. Kylällä on oma paikallisen päällikön johtama yhteisö, ja saaresta on tietoja jo 1800-luvulta. Joen tulvat ovat myöhemmin muuttaneet asukkaiden elämää ja vaatineet osalta muuttoa. Saari kuuluu pääkaupunkiin, vaikka sen ympärillä kulkee joki.",
           "wiki": "Néini Goungou",
           "tiedosto": "",
           "lyhyt": "",
@@ -368,7 +364,7 @@
   "nahtavyydet": {
     "Gounti Yénan suu": {
       "aika": "Luonnonuoma",
-      "teksti": "Gounti Yéna laskee Nigeriin Niameyn keskustassa. Joen vasemmalle rannalle päättyvä uoma kokoaa sade- ja valumavesiä ylempänä sijaitsevista kaupunginosista. Sen virtaus on kausittaista, joten laakso voi näyttää hyvin erilaiselta eri oloissa. Uoman varrella harjoitetaan hedelmä- ja vihannesviljelyä. Laakso kuului alueen maantieteeseen jo ennen nykyisen pääkaupungin kasvua. Se erotti Goudelin ja Gamkalén kylien viljelymaita, ja myöhemmin sen kohdalle asettui myös siirtomaa-ajan asuinalueiden raja. Vuoden 1873 ympäristöä ajatellessa jokivarren kylät ja niiden maat ovat keskeisiä.",
+      "teksti": "Gounti Yéna laskee Nigeriin Niameyn keskustassa. Joen vasemmalle rannalle päättyvä uoma kokoaa sade- ja valumavesiä ylempänä sijaitsevista kaupunginosista. Sen virtaus on kausittaista, joten laakso voi näyttää hyvin erilaiselta eri oloissa. Uoman varrella harjoitetaan hedelmä- ja vihannesviljelyä.\n\nLaakso kuului alueen maantieteeseen jo ennen nykyisen pääkaupungin kasvua. Se erotti Goudelin ja Gamkalén kylien viljelymaita, ja myöhemmin sen kohdalle asettui myös siirtomaa-ajan asuinalueiden raja.",
       "kuvat": [
         {
           "tiedosto": "",
@@ -381,7 +377,7 @@
     },
     "Néini Goungoun saari": {
       "aika": "Luonnonsaari ja vanha kylä",
-      "teksti": "Néini Goungou on Nigerjoen saarella sijaitseva kylä Niamey V:n alueella. Goudel on vastarannalla, Lamordé saaresta kaakkoon ja Kourtéré Samboro lounaaseen. Saari kuuluu pääkaupungin asuttuihin jokimaisemiin. Kyläyhteisöä johtaa paikallinen päällikkö. Saaresta tunnetaan tietoja jo 1800-luvulta, ennen nykyisen pääkaupungin kasvua. Myöhemmät tulvat ovat muuttaneet asukkaiden elämää, ja osa on joutunut muuttamaan.",
+      "teksti": "Néini Goungou on Nigerjoen saarella sijaitseva kylä Niamey V:n alueella. Goudel on vastarannalla, Lamordé saaresta kaakkoon ja Kourtéré Samboro lounaaseen. Saari kuuluu pääkaupungin asuttuihin jokimaisemiin. Kyläyhteisöä johtaa paikallinen päällikkö.\n\nSaaresta tunnetaan tietoja jo 1800-luvulta, ennen nykyisen pääkaupungin kasvua. Myöhemmät tulvat ovat muuttaneet asukkaiden elämää, ja osa on joutunut muuttamaan.",
       "kuvat": [
         {
           "tiedosto": "",
@@ -394,7 +390,7 @@
     },
     "Trois Sœursin kukkulat": {
       "aika": "Luonnonmuodostuma",
-      "teksti": "Trois Sœursin kukkulajono sijaitsee Niamey V:n alueella. Ranskankielinen nimi tarkoittaa kolmea sisarta. Rakentamattomien kukkuloiden pinnassa näkyy paljasta lateriittia, ja kokonaisuus asettuu suunnilleen itä–länsisuuntaan. Pohjoisessa maasto viettää kohti Nigerjoen kaupunkitasankoa. Kukkulat ovat luonnonmuodostuma, jonka olemassaolo edeltää pääkaupungin kasvua. Vuoden 1873 kaupunkirakennusten sijasta niiden historiaa jäsentää alueen maasto. Lähialueisiin kuuluvat Diamowé, Nordiré ja Lokoto, ja kukkuloilta on kirjattu myös linnustohavaintoja.",
+      "teksti": "Trois Sœursin kukkulajono sijaitsee Niamey V:n alueella. Ranskankielinen nimi tarkoittaa kolmea sisarta. Rakentamattomien kukkuloiden pinnassa näkyy paljasta lateriittia, ja kokonaisuus asettuu suunnilleen itä–länsisuuntaan. Pohjoisessa maasto viettää kohti Nigerjoen kaupunkitasankoa.\n\nKukkulat ovat luonnonmuodostuma, jonka olemassaolo edeltää pääkaupungin kasvua. Lähialueisiin kuuluvat Diamowé, Nordiré ja Lokoto, ja kukkuloilta on kirjattu myös linnustohavaintoja.",
       "kuvat": [
         {
           "tiedosto": "",

@@ -1,7 +1,7 @@
 # Korjauskierros 2 — lome
 
-Tehtävät 228 ja 229; lähde b1b84a6c8a34e8e459aa1cb5afd704c6fe92be36.
+Tehtävät 228/229 sekä lisäohjeet 235/236. Lähteet b1b84a6c8a34e8e459aa1cb5afd704c6fe92be36 ja b0d92e3e38ecfe4e58466f02133c6da96b4aafba.
 
-Tekstin työversio korjattu. Tämä on välitallennus, ei Sisältökirjurin hyväksyntä eikä pelikytkentä. Nykyiset kuvat säilyvät; kuvatekstien sidokset seuraavat tätä C-versiota. Legacy-kuva- ja karttaportit eivät kuulu kierrokseen.
+Tekstin korjausversio valmis lähdehaaran toimitukseen. Kanoninen postikuitti toimitetaan erikseen; Sisältökirjurin pistokoe sekä PK/PT-hyväksyntä ja pelikytkentä odottavat. Nykyiset kuvat säilyvät; kuvatekstien sidokset seuraavat tätä C-versiota. Legacy-kuva- ja karttaportit eivät kuulu kierrokseen.
 
-C SHA256: f23ab5e7f9f7fd2bb82e58768c26927ace51248dae5b82040e7dd569c7086d6d
+C SHA256: cfda83283c1145f24ee9aca4558d1892d9c80acc01268198379a87042905396a

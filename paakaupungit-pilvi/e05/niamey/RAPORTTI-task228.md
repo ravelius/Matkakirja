@@ -1,7 +1,7 @@
 # Korjauskierros 2 — niamey
 
-Tehtävät 228 ja 229; lähde b1b84a6c8a34e8e459aa1cb5afd704c6fe92be36.
+Tehtävät 228/229 sekä lisäohjeet 235/236. Lähteet b1b84a6c8a34e8e459aa1cb5afd704c6fe92be36 ja b0d92e3e38ecfe4e58466f02133c6da96b4aafba.
 
-Tekstin työversio korjattu. Tämä on välitallennus, ei Sisältökirjurin hyväksyntä eikä pelikytkentä. Nykyiset kuvat säilyvät; kuvatekstien sidokset seuraavat tätä C-versiota. Legacy-kuva- ja karttaportit eivät kuulu kierrokseen.
+Tekstin korjausversio valmis lähdehaaran toimitukseen. Kanoninen postikuitti toimitetaan erikseen; Sisältökirjurin pistokoe sekä PK/PT-hyväksyntä ja pelikytkentä odottavat. Nykyiset kuvat säilyvät; kuvatekstien sidokset seuraavat tätä C-versiota. Legacy-kuva- ja karttaportit eivät kuulu kierrokseen.
 
-C SHA256: 50c209b3a873521809e5d9bc3f876d568411ed804968e30578c408bc4bdbb545
+C SHA256: 169b7cd1ece929a9342d8514882827a4dbdefcd64f225810463776fcfe74abc9

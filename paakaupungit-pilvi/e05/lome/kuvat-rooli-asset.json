@@ -3,7 +3,7 @@
   "era": "e05",
   "city": "lome",
   "authorization": "hyväksyn kaikki tekemäsi kuvat. toimita ne claudelle. claudelta saat uusia ohjeita jatkoa varten",
-  "sourceContentAfterSHA256": "f23ab5e7f9f7fd2bb82e58768c26927ace51248dae5b82040e7dd569c7086d6d",
+  "sourceContentAfterSHA256": "cfda83283c1145f24ee9aca4558d1892d9c80acc01268198379a87042905396a",
   "assets": [
     {
       "era": "e05",
@@ -53,10 +53,10 @@
         1536
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/lome/sisalto.json",
-      "sourceContentSHA256": "f23ab5e7f9f7fd2bb82e58768c26927ace51248dae5b82040e7dd569c7086d6d",
+      "sourceContentSHA256": "cfda83283c1145f24ee9aca4558d1892d9c80acc01268198379a87042905396a",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "44a88b5025cfca854b00543c0b8cf7f05f921b70b537b23dfa2b0f8a0b17d464",
+        "semanticContextSHA256": "237231824027786344131dabf7f3d9877e85b6cdeae490a6b85682341ba85d0e",
         "subjectTitle": "Matkailijalle",
         "targetState": "existing-target"
       },
@@ -232,9 +232,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "f23ab5e7f9f7fd2bb82e58768c26927ace51248dae5b82040e7dd569c7086d6d",
+      "sourceContentAfterSHA256": "cfda83283c1145f24ee9aca4558d1892d9c80acc01268198379a87042905396a",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "44a88b5025cfca854b00543c0b8cf7f05f921b70b537b23dfa2b0f8a0b17d464",
+      "contextAfterSHA256": "237231824027786344131dabf7f3d9877e85b6cdeae490a6b85682341ba85d0e",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -259,7 +259,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "f23ab5e7f9f7fd2bb82e58768c26927ace51248dae5b82040e7dd569c7086d6d",
+        "sourceSHA256": "cfda83283c1145f24ee9aca4558d1892d9c80acc01268198379a87042905396a",
         "sameImageNativeSHA256": "5b3577a1df8586a5097311355849c779d69fd49a461f6a60be6e6e711ff5ccae",
         "sameImageExportSHA256": "e4598c785f1ba9dfcbfe730b2075e8dd832f7d9be06fb86a40c757b9c1768329",
         "independentNativeQAEvidencePreserved": true,
@@ -318,10 +318,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/lome/sisalto.json",
-      "sourceContentSHA256": "f23ab5e7f9f7fd2bb82e58768c26927ace51248dae5b82040e7dd569c7086d6d",
+      "sourceContentSHA256": "cfda83283c1145f24ee9aca4558d1892d9c80acc01268198379a87042905396a",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "37c1a0c8bf2347dccd37f62b42eff91d8b0d26e02c1780828e374eb1913e44dc",
+        "semanticContextSHA256": "9894554194007c5c20c7b9fa465812a085dbffc8430dafde2c18db86002b5a83",
         "subjectTitle": "Markkinat",
         "targetState": "existing-target"
       },
@@ -544,9 +544,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "f23ab5e7f9f7fd2bb82e58768c26927ace51248dae5b82040e7dd569c7086d6d",
+      "sourceContentAfterSHA256": "cfda83283c1145f24ee9aca4558d1892d9c80acc01268198379a87042905396a",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "37c1a0c8bf2347dccd37f62b42eff91d8b0d26e02c1780828e374eb1913e44dc",
+      "contextAfterSHA256": "9894554194007c5c20c7b9fa465812a085dbffc8430dafde2c18db86002b5a83",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -571,7 +571,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "f23ab5e7f9f7fd2bb82e58768c26927ace51248dae5b82040e7dd569c7086d6d",
+        "sourceSHA256": "cfda83283c1145f24ee9aca4558d1892d9c80acc01268198379a87042905396a",
         "sameImageNativeSHA256": "ffdbe30cc6d4a8dbf55ac8914c32dafcdb72f5f7ca266533e7e74b5c4e946ee8",
         "sameImageExportSHA256": "d320c6cb188b0ba7f7dc12c735f8d949b1e514a09efc70eaf99ec79351bd4ad2",
         "independentNativeQAEvidencePreserved": true,
@@ -630,7 +630,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/lome/sisalto.json",
-      "sourceContentSHA256": "f23ab5e7f9f7fd2bb82e58768c26927ace51248dae5b82040e7dd569c7086d6d",
+      "sourceContentSHA256": "cfda83283c1145f24ee9aca4558d1892d9c80acc01268198379a87042905396a",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
         "semanticContextSHA256": "7b056bbe8dfc4bd76e5ba738b2af5d24da68aa7e69c1ebc01813511656076459",
@@ -860,7 +860,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "f23ab5e7f9f7fd2bb82e58768c26927ace51248dae5b82040e7dd569c7086d6d",
+      "sourceContentAfterSHA256": "cfda83283c1145f24ee9aca4558d1892d9c80acc01268198379a87042905396a",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
       "contextAfterSHA256": "7b056bbe8dfc4bd76e5ba738b2af5d24da68aa7e69c1ebc01813511656076459",
       "ownerApproved": true,
@@ -887,7 +887,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "f23ab5e7f9f7fd2bb82e58768c26927ace51248dae5b82040e7dd569c7086d6d",
+        "sourceSHA256": "cfda83283c1145f24ee9aca4558d1892d9c80acc01268198379a87042905396a",
         "sameImageNativeSHA256": "0f2642cf0bd836a3bddeba3faa19f0703662a40616115a79b96c1230f4d8e694",
         "sameImageExportSHA256": "b60449a3c2e353647e6a20d8dce83d94e26e96b5c223a8d0b6825801a56a8093",
         "independentNativeQAEvidencePreserved": true,
@@ -943,10 +943,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/lome/sisalto.json",
-      "sourceContentSHA256": "f23ab5e7f9f7fd2bb82e58768c26927ace51248dae5b82040e7dd569c7086d6d",
+      "sourceContentSHA256": "cfda83283c1145f24ee9aca4558d1892d9c80acc01268198379a87042905396a",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "9aeeb68cce6e25e50bcecab6ec689f4e76b068d32e6d18f6e10876fe1a94dc84",
-        "semanticContextSHA256": "9aeeb68cce6e25e50bcecab6ec689f4e76b068d32e6d18f6e10876fe1a94dc84",
+        "targetBeforeSHA256": "55fd4ca5e29a92fa4143455dbc4b6b0a94f25132bec92cd921f1a5340be5da1c",
+        "semanticContextSHA256": "55fd4ca5e29a92fa4143455dbc4b6b0a94f25132bec92cd921f1a5340be5da1c",
         "subjectTitle": "Markkina täyttää korttelin",
         "targetState": "existing-target"
       },
@@ -1120,9 +1120,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "f23ab5e7f9f7fd2bb82e58768c26927ace51248dae5b82040e7dd569c7086d6d",
-      "targetAfterSHA256": "9aeeb68cce6e25e50bcecab6ec689f4e76b068d32e6d18f6e10876fe1a94dc84",
-      "contextAfterSHA256": "9aeeb68cce6e25e50bcecab6ec689f4e76b068d32e6d18f6e10876fe1a94dc84",
+      "sourceContentAfterSHA256": "cfda83283c1145f24ee9aca4558d1892d9c80acc01268198379a87042905396a",
+      "targetAfterSHA256": "55fd4ca5e29a92fa4143455dbc4b6b0a94f25132bec92cd921f1a5340be5da1c",
+      "contextAfterSHA256": "55fd4ca5e29a92fa4143455dbc4b6b0a94f25132bec92cd921f1a5340be5da1c",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -1147,7 +1147,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "f23ab5e7f9f7fd2bb82e58768c26927ace51248dae5b82040e7dd569c7086d6d",
+        "sourceSHA256": "cfda83283c1145f24ee9aca4558d1892d9c80acc01268198379a87042905396a",
         "sameImageNativeSHA256": "c56160e6c5f41b6fa506a8381966d8e9991b4ea4ba4dcc2095222ab55a45756d",
         "sameImageExportSHA256": "81fd5072d25f23aca07c6b4edb503f002af86e9e09438dcc99f81fee182ce380",
         "independentNativeQAEvidencePreserved": true,
@@ -1203,10 +1203,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/lome/sisalto.json",
-      "sourceContentSHA256": "f23ab5e7f9f7fd2bb82e58768c26927ace51248dae5b82040e7dd569c7086d6d",
+      "sourceContentSHA256": "cfda83283c1145f24ee9aca4558d1892d9c80acc01268198379a87042905396a",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "a61a4a212c49e9bb7055f9a61f868f948ea12371966d8d0ac7898f7dc6a8aea1",
-        "semanticContextSHA256": "a61a4a212c49e9bb7055f9a61f868f948ea12371966d8d0ac7898f7dc6a8aea1",
+        "targetBeforeSHA256": "c333300e7e15e3d0340d1396e79bde467776cd1e64c38cbd0f14c941f48d73eb",
+        "semanticContextSHA256": "c333300e7e15e3d0340d1396e79bde467776cd1e64c38cbd0f14c941f48d73eb",
         "subjectTitle": "Rannalla tehdään työtä ja vietetään aikaa",
         "targetState": "existing-target"
       },
@@ -1380,9 +1380,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "f23ab5e7f9f7fd2bb82e58768c26927ace51248dae5b82040e7dd569c7086d6d",
-      "targetAfterSHA256": "a61a4a212c49e9bb7055f9a61f868f948ea12371966d8d0ac7898f7dc6a8aea1",
-      "contextAfterSHA256": "a61a4a212c49e9bb7055f9a61f868f948ea12371966d8d0ac7898f7dc6a8aea1",
+      "sourceContentAfterSHA256": "cfda83283c1145f24ee9aca4558d1892d9c80acc01268198379a87042905396a",
+      "targetAfterSHA256": "c333300e7e15e3d0340d1396e79bde467776cd1e64c38cbd0f14c941f48d73eb",
+      "contextAfterSHA256": "c333300e7e15e3d0340d1396e79bde467776cd1e64c38cbd0f14c941f48d73eb",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -1407,7 +1407,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "f23ab5e7f9f7fd2bb82e58768c26927ace51248dae5b82040e7dd569c7086d6d",
+        "sourceSHA256": "cfda83283c1145f24ee9aca4558d1892d9c80acc01268198379a87042905396a",
         "sameImageNativeSHA256": "c04ed4d9040203eea9ab64a9390b5a7293a4f32856c57dd27189ff745631aeac",
         "sameImageExportSHA256": "62959fe4f9492f00ecbfdba1fb5dc59d8a7b3a92e31d863c3786406a6f25a1f4",
         "independentNativeQAEvidencePreserved": true,
@@ -1463,10 +1463,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/lome/sisalto.json",
-      "sourceContentSHA256": "f23ab5e7f9f7fd2bb82e58768c26927ace51248dae5b82040e7dd569c7086d6d",
+      "sourceContentSHA256": "cfda83283c1145f24ee9aca4558d1892d9c80acc01268198379a87042905396a",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "c85cd8eb587092d2ccfc2bca66e7335b2a3a66b38a402a2d7c438efeab3092ec",
-        "semanticContextSHA256": "c85cd8eb587092d2ccfc2bca66e7335b2a3a66b38a402a2d7c438efeab3092ec",
+        "targetBeforeSHA256": "738e3d38c353ee5081930f1c25297ade1797b21e32e1ef0eb20906f9c980f701",
+        "semanticContextSHA256": "738e3d38c353ee5081930f1c25297ade1797b21e32e1ef0eb20906f9c980f701",
         "subjectTitle": "Puutarha vanhan palatsin ympärillä",
         "targetState": "existing-target"
       },
@@ -1644,9 +1644,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "f23ab5e7f9f7fd2bb82e58768c26927ace51248dae5b82040e7dd569c7086d6d",
-      "targetAfterSHA256": "c85cd8eb587092d2ccfc2bca66e7335b2a3a66b38a402a2d7c438efeab3092ec",
-      "contextAfterSHA256": "c85cd8eb587092d2ccfc2bca66e7335b2a3a66b38a402a2d7c438efeab3092ec",
+      "sourceContentAfterSHA256": "cfda83283c1145f24ee9aca4558d1892d9c80acc01268198379a87042905396a",
+      "targetAfterSHA256": "738e3d38c353ee5081930f1c25297ade1797b21e32e1ef0eb20906f9c980f701",
+      "contextAfterSHA256": "738e3d38c353ee5081930f1c25297ade1797b21e32e1ef0eb20906f9c980f701",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -1671,7 +1671,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "f23ab5e7f9f7fd2bb82e58768c26927ace51248dae5b82040e7dd569c7086d6d",
+        "sourceSHA256": "cfda83283c1145f24ee9aca4558d1892d9c80acc01268198379a87042905396a",
         "sameImageNativeSHA256": "5b2f3297c1d9d50ed52829d2b592581c368a84c996593bdebbad52b132305fd7",
         "sameImageExportSHA256": "0c1ea1fbab5289252739e340c31d05fa350eaa9751113a10ab2f35ddefc40f34",
         "independentNativeQAEvidencePreserved": true,
@@ -1727,10 +1727,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/lome/sisalto.json",
-      "sourceContentSHA256": "f23ab5e7f9f7fd2bb82e58768c26927ace51248dae5b82040e7dd569c7086d6d",
+      "sourceContentSHA256": "cfda83283c1145f24ee9aca4558d1892d9c80acc01268198379a87042905396a",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "a04a77a78416b18387eda3fa8b8cff4d2324e0c816fd535f9b82549be47e1499",
-        "semanticContextSHA256": "a04a77a78416b18387eda3fa8b8cff4d2324e0c816fd535f9b82549be47e1499",
+        "targetBeforeSHA256": "948128fb1b29f41263186a40f424c76f909a6aabb0d5ca14a3634c9e866fb5c6",
+        "semanticContextSHA256": "948128fb1b29f41263186a40f424c76f909a6aabb0d5ca14a3634c9e866fb5c6",
         "subjectTitle": "Vihanneksia kaupungissa",
         "targetState": "existing-target"
       },
@@ -1904,9 +1904,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "f23ab5e7f9f7fd2bb82e58768c26927ace51248dae5b82040e7dd569c7086d6d",
-      "targetAfterSHA256": "a04a77a78416b18387eda3fa8b8cff4d2324e0c816fd535f9b82549be47e1499",
-      "contextAfterSHA256": "a04a77a78416b18387eda3fa8b8cff4d2324e0c816fd535f9b82549be47e1499",
+      "sourceContentAfterSHA256": "cfda83283c1145f24ee9aca4558d1892d9c80acc01268198379a87042905396a",
+      "targetAfterSHA256": "948128fb1b29f41263186a40f424c76f909a6aabb0d5ca14a3634c9e866fb5c6",
+      "contextAfterSHA256": "948128fb1b29f41263186a40f424c76f909a6aabb0d5ca14a3634c9e866fb5c6",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -1931,7 +1931,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "f23ab5e7f9f7fd2bb82e58768c26927ace51248dae5b82040e7dd569c7086d6d",
+        "sourceSHA256": "cfda83283c1145f24ee9aca4558d1892d9c80acc01268198379a87042905396a",
         "sameImageNativeSHA256": "4f4259bcb7ccb4a4d20c9ca39e4ea00cfe763eb9862e228be6a828a646f50dc7",
         "sameImageExportSHA256": "2e18ac978302570bf6674ad6b692990cc76cb3fb107fc8be50b8a8fee7552d49",
         "independentNativeQAEvidencePreserved": true,
@@ -1956,23 +1956,23 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/lome/photo-0bd321e7faeadfe5720c.jpg",
         "suora": true,
         "lahde": "Aboukey, Commons (CC BY-SA 4.0)",
-        "selite": "Mangrovekasvillisuutta Loméssa.",
-        "lyhyt": "Lomén mangrovekasvillisuutta.",
+        "selite": "Mangrovekasvillisuutta helmikuussa 2022.",
+        "lyhyt": "Mangrovekasvillisuutta.",
         "tiedosto": "Aboukey Mangrove5.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Aboukey, Commons (CC BY-SA 4.0)",
-        "selite": "Mangrovekasvillisuutta Loméssa.",
-        "lyhyt": "Lomén mangrovekasvillisuutta.",
+        "selite": "Mangrovekasvillisuutta helmikuussa 2022.",
+        "lyhyt": "Mangrovekasvillisuutta.",
         "tiedosto": "Aboukey Mangrove5.jpg"
       },
       "runtimeMediaFieldPayload": {
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/lome/photo-0bd321e7faeadfe5720c.jpg",
         "suora": true,
         "lahde": "Aboukey, Commons (CC BY-SA 4.0)",
-        "selite": "Mangrovekasvillisuutta Loméssa.",
-        "lyhyt": "Lomén mangrovekasvillisuutta.",
+        "selite": "Mangrovekasvillisuutta helmikuussa 2022.",
+        "lyhyt": "Mangrovekasvillisuutta.",
         "tiedosto": "Aboukey Mangrove5.jpg"
       },
       "runtimeRemoveMediaKeys": [],
@@ -1987,10 +1987,10 @@
         3456
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/lome/sisalto.json",
-      "sourceContentSHA256": "f23ab5e7f9f7fd2bb82e58768c26927ace51248dae5b82040e7dd569c7086d6d",
+      "sourceContentSHA256": "cfda83283c1145f24ee9aca4558d1892d9c80acc01268198379a87042905396a",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "a94b3efcbe73b651018dc39464bc52be2c52e4ee37a898bbd5e1fc3b2a7bd1eb",
-        "semanticContextSHA256": "a94b3efcbe73b651018dc39464bc52be2c52e4ee37a898bbd5e1fc3b2a7bd1eb",
+        "targetBeforeSHA256": "832eb4fc4315a941ee6da52a823a44dad3ff4562893a09825123a3e4ee77da00",
+        "semanticContextSHA256": "832eb4fc4315a941ee6da52a823a44dad3ff4562893a09825123a3e4ee77da00",
         "subjectTitle": "lome — aito paikkavalokuva",
         "targetState": "existing-target"
       },
@@ -2203,8 +2203,8 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "Aboukey Mangrove5.jpg",
-        "lyhyt": "Lomén mangrovekasvillisuutta.",
-        "selite": "Mangrovekasvillisuutta Loméssa.",
+        "lyhyt": "Mangrovekasvillisuutta.",
+        "selite": "Mangrovekasvillisuutta helmikuussa 2022.",
         "lahde": "Aboukey, Commons (CC BY-SA 4.0)"
       },
       "preservePreviousMediaObjects": true,
@@ -2231,14 +2231,14 @@
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Aboukey, Commons (CC BY-SA 4.0)",
-        "selite": "Mangrovekasvillisuutta Loméssa.",
-        "lyhyt": "Lomén mangrovekasvillisuutta.",
+        "selite": "Mangrovekasvillisuutta helmikuussa 2022.",
+        "lyhyt": "Mangrovekasvillisuutta.",
         "tiedosto": "Aboukey Mangrove5.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "f23ab5e7f9f7fd2bb82e58768c26927ace51248dae5b82040e7dd569c7086d6d",
-      "targetAfterSHA256": "a94b3efcbe73b651018dc39464bc52be2c52e4ee37a898bbd5e1fc3b2a7bd1eb",
-      "contextAfterSHA256": "a94b3efcbe73b651018dc39464bc52be2c52e4ee37a898bbd5e1fc3b2a7bd1eb",
+      "sourceContentAfterSHA256": "cfda83283c1145f24ee9aca4558d1892d9c80acc01268198379a87042905396a",
+      "targetAfterSHA256": "832eb4fc4315a941ee6da52a823a44dad3ff4562893a09825123a3e4ee77da00",
+      "contextAfterSHA256": "832eb4fc4315a941ee6da52a823a44dad3ff4562893a09825123a3e4ee77da00",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -2263,12 +2263,12 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "f23ab5e7f9f7fd2bb82e58768c26927ace51248dae5b82040e7dd569c7086d6d",
+        "sourceSHA256": "cfda83283c1145f24ee9aca4558d1892d9c80acc01268198379a87042905396a",
         "sameImageNativeSHA256": "0bd321e7faeadfe5720cdcd9d954371f0d6e8d58ae8918b4a54e0ca87b3afe5e",
         "sameImageExportSHA256": "0bd321e7faeadfe5720cdcd9d954371f0d6e8d58ae8918b4a54e0ca87b3afe5e",
         "independentNativeQAEvidencePreserved": true,
         "independentTextResamplePending": true,
-        "captionChanged": false
+        "captionChanged": true
       }
     },
     {
@@ -2291,23 +2291,23 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/lome/c1-001f398fbfba77ecae8e.jpg",
         "suora": true,
         "lahde": "Edison McCullen, Wikimedia Commons (CC BY 4.0)",
-        "selite": "Lomén Lac Ouest -järveä ja sen rantakortteleita tammikuussa 2025.",
-        "lyhyt": "Lomén Lac Ouest -järveä ja sen rantakortteleita.",
+        "selite": "Lac Ouest -järvi Loméssa tammikuussa 2025.",
+        "lyhyt": "Lomén Lac Ouest.",
         "tiedosto": "Lac Ouest – Lomé.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Edison McCullen, Wikimedia Commons (CC BY 4.0)",
-        "selite": "Lomén Lac Ouest -järveä ja sen rantakortteleita tammikuussa 2025.",
-        "lyhyt": "Lomén Lac Ouest -järveä ja sen rantakortteleita.",
+        "selite": "Lac Ouest -järvi Loméssa tammikuussa 2025.",
+        "lyhyt": "Lomén Lac Ouest.",
         "tiedosto": "Lac Ouest – Lomé.jpg"
       },
       "runtimeMediaFieldPayload": {
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/lome/c1-001f398fbfba77ecae8e.jpg",
         "suora": true,
         "lahde": "Edison McCullen, Wikimedia Commons (CC BY 4.0)",
-        "selite": "Lomén Lac Ouest -järveä ja sen rantakortteleita tammikuussa 2025.",
-        "lyhyt": "Lomén Lac Ouest -järveä ja sen rantakortteleita.",
+        "selite": "Lac Ouest -järvi Loméssa tammikuussa 2025.",
+        "lyhyt": "Lomén Lac Ouest.",
         "tiedosto": "Lac Ouest – Lomé.jpg"
       },
       "runtimeRemoveMediaKeys": [],
@@ -2322,10 +2322,10 @@
         2484
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/lome/sisalto.json",
-      "sourceContentSHA256": "f23ab5e7f9f7fd2bb82e58768c26927ace51248dae5b82040e7dd569c7086d6d",
+      "sourceContentSHA256": "cfda83283c1145f24ee9aca4558d1892d9c80acc01268198379a87042905396a",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "e49aba7869060c386ce86412ab54c0784a121522f071906d93bdb4f7d1a3ea35",
-        "semanticContextSHA256": "e49aba7869060c386ce86412ab54c0784a121522f071906d93bdb4f7d1a3ea35",
+        "targetBeforeSHA256": "eb309b2927188d272c8d06adfd45008d64c99c9c7ebd466d3fa34356c9613f6e",
+        "semanticContextSHA256": "eb309b2927188d272c8d06adfd45008d64c99c9c7ebd466d3fa34356c9613f6e",
         "subjectTitle": "Lomé",
         "targetState": "existing-target"
       },
@@ -2579,8 +2579,8 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "Lac Ouest – Lomé.jpg",
-        "lyhyt": "Lomén Lac Ouest -järveä ja sen rantakortteleita.",
-        "selite": "Lomén Lac Ouest -järveä ja sen rantakortteleita tammikuussa 2025.",
+        "lyhyt": "Lomén Lac Ouest.",
+        "selite": "Lac Ouest -järvi Loméssa tammikuussa 2025.",
         "lahde": "Edison McCullen, Wikimedia Commons (CC BY 4.0)"
       },
       "preservePreviousMediaObjects": true,
@@ -2607,14 +2607,14 @@
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Edison McCullen, Wikimedia Commons (CC BY 4.0)",
-        "selite": "Lomén Lac Ouest -järveä ja sen rantakortteleita tammikuussa 2025.",
-        "lyhyt": "Lomén Lac Ouest -järveä ja sen rantakortteleita.",
+        "selite": "Lac Ouest -järvi Loméssa tammikuussa 2025.",
+        "lyhyt": "Lomén Lac Ouest.",
         "tiedosto": "Lac Ouest – Lomé.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "f23ab5e7f9f7fd2bb82e58768c26927ace51248dae5b82040e7dd569c7086d6d",
-      "targetAfterSHA256": "e49aba7869060c386ce86412ab54c0784a121522f071906d93bdb4f7d1a3ea35",
-      "contextAfterSHA256": "e49aba7869060c386ce86412ab54c0784a121522f071906d93bdb4f7d1a3ea35",
+      "sourceContentAfterSHA256": "cfda83283c1145f24ee9aca4558d1892d9c80acc01268198379a87042905396a",
+      "targetAfterSHA256": "eb309b2927188d272c8d06adfd45008d64c99c9c7ebd466d3fa34356c9613f6e",
+      "contextAfterSHA256": "eb309b2927188d272c8d06adfd45008d64c99c9c7ebd466d3fa34356c9613f6e",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -2639,12 +2639,12 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "f23ab5e7f9f7fd2bb82e58768c26927ace51248dae5b82040e7dd569c7086d6d",
+        "sourceSHA256": "cfda83283c1145f24ee9aca4558d1892d9c80acc01268198379a87042905396a",
         "sameImageNativeSHA256": "001f398fbfba77ecae8eb7edaead1afe984b7728676581ad1f607f181449ee14",
         "sameImageExportSHA256": "001f398fbfba77ecae8eb7edaead1afe984b7728676581ad1f607f181449ee14",
         "independentNativeQAEvidencePreserved": true,
         "independentTextResamplePending": true,
-        "captionChanged": false
+        "captionChanged": true
       }
     }
   ],
@@ -2657,9 +2657,9 @@
   "task118TextRevision": true,
   "independentTextResamplePending": true,
   "textAcceptanceVerified": false,
-  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task228/immutable-media-history/e05/lome/fc44ad959ea8f4ed27b29eaefe1703c4f0662e43835e52657d140f283d82b818.json",
+  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task228/immutable-media-history/e05/lome/a2afc77ef8c3be4a0baf31de1d2a0588f559ac4fe04c873ad2f50c596ffc33ef.json",
   "task118ReboundAt": "2026-10-13T16:31:24.640179+00:00",
   "task228ExcludedAssets": [],
   "task228TextRevision": true,
-  "task228ReboundAt": "2026-10-13T18:00:23.865337+00:00"
+  "task228ReboundAt": "2026-10-13T19:35:44.039056+00:00"
 }

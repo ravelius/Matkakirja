@@ -128,7 +128,7 @@
       "nostot": [
         {
           "otsikko": "Kylä jäi nimeen",
-          "teksti": "Yamoussoukron nimi kantaa mukanaan paikallista historiaa. Kaupunkia edeltäneen kylän nimi oli N’Gokro, ja nykyinen nimi liittyy baoulé-kuningattareen Yamoussoon. Kro on kylää tai paikkaa tarkoittava pääte. Seudun baoulé-asutus ja vanha maatalouskylä edelsivät nykyistä pääkaupunkirakentamista.",
+          "teksti": "Yamoussoukron nimi kantaa mukanaan paikallista historiaa. Kaupunkia edeltäneen kylän nimi oli N’Gokro, ja nykyinen nimi liittyy baoulé-kuningattareen Yamoussoon. Kro on kylää tai paikkaa tarkoittava pääte. Seudun baoulé-asutus ja vanha maatalouskylä edelsivät nykyistä pääkaupunkirakentamista. Arkikielessä Yamoussoukroa kutsutaan usein myös lyhyellä nimellä Yakro.",
           "wiki": "Yamoussoukro",
           "tiedosto": "",
           "lyhyt": "",
@@ -146,7 +146,7 @@
         },
         {
           "otsikko": "Korkeakoulu yhdistää ammattialat",
-          "teksti": "Institut National Polytechnique Félix Houphouët-Boigny muodostui aiempien korkeakoulujen yhdistymisestä. Sen aloihin kuuluvat agronomia ja agroteollisuus, tekniikka ja tietotekniikka sekä kaivokset ja geologia. Lisäksi siellä koulutetaan rakentamisen, infrastruktuurin, kaupan ja yrityshallinnon osaajia. Mukana on jatko- ja täydennyskoulutusta.",
+          "teksti": "Institut National Polytechnique Félix Houphouët-Boigny muodostui aiempien korkeakoulujen yhdistymisestä. Sen aloihin kuuluvat agronomia ja agroteollisuus, tekniikka ja tietotekniikka sekä kaivokset ja geologia. Lisäksi siellä koulutetaan rakentamisen, infrastruktuurin, kaupan ja yrityshallinnon osaajia. Mukana on jatko- ja täydennyskoulutusta. Korkeakoulun lyhenne on INP-HB.",
           "wiki": "Institut National Polytechnique Félix Houphouët-Boigny",
           "tiedosto": "Biology microscope.jpg",
           "lyhyt": "Laboratorion valomikroskooppi.",
@@ -258,10 +258,6 @@
             ],
             "hyvaTietaa": [
               {
-                "otsikko": "Ennen matkapäätöstä",
-                "teksti": "Tarkista Norsunluurannikon ajantasainen matkustustiedote Suomen ulkoministeriöstä ja noudata sen ohjeita."
-              },
-              {
                 "otsikko": "Koulutus",
                 "teksti": "Kaupungin polyteknillinen korkeakoulu kouluttaa muun muassa agronomian, rakentamisen ja tekniikan aloille."
               }
@@ -298,7 +294,7 @@
         },
         {
           "otsikko": "Banaani kuuluu myös kattilaan",
-          "teksti": "Yamoussoukron seudulla viljellään ruokabanaania. Tärkkelyspitoisia banaanilajikkeita käytetään kypsennettyinä, esimerkiksi keitettyinä tai paistettuina. Kypsyminen muuttaa hedelmän rakennetta ja makua: kypsä banaani on vihreää pehmeämpi ja makeampi. Ruokabanaani tai plantain tarkoittaa erilaisia Musa-ryhmän lajikkeita.",
+          "teksti": "Yamoussoukron seudulla viljellään ruokabanaania. Tärkkelyspitoisia banaanilajikkeita käytetään kypsennettyinä, esimerkiksi keitettyinä tai paistettuina. Kypsyminen muuttaa hedelmän rakennetta ja makua: kypsä banaani on vihreää pehmeämpi ja makeampi. Ruokabanaani tai plantain tarkoittaa erilaisia Musa-ryhmän lajikkeita. Banaanista tehdään myös jauhoja ja taikinaa.",
           "wiki": "Cooking banana",
           "tiedosto": "",
           "lyhyt": "",
@@ -307,7 +303,7 @@
         },
         {
           "otsikko": "Jamssi kasvaa maan alla",
-          "teksti": "Jamssi kuuluu Yamoussoukron seudun viljelykasveihin. Nimi viittaa Dioscorea-suvun kasveihin, joiden syötävä osa on maanalainen mukula. Kasvit itse ovat kiipeäviä köynnöksiä, ja niitä viljellään tropiikissa. Jamssi ja bataatti sekoitetaan joskus nimissä, mutta bataatti kuuluu toiseen kasvisukuun.",
+          "teksti": "Jamssi kuuluu Yamoussoukron seudun viljelykasveihin. Nimi viittaa Dioscorea-suvun kasveihin, joiden syötävä osa on maanalainen mukula. Kasvit itse ovat kiipeäviä köynnöksiä, ja niitä viljellään tropiikissa. Jamssi ja bataatti sekoitetaan joskus nimissä, mutta bataatti kuuluu toiseen kasvisukuun. Mukulan malto voi olla valkoista, keltaista, violettia tai vaaleanpunaista.",
           "wiki": "Yam (vegetable)",
           "tiedosto": "",
           "lyhyt": "",
@@ -316,7 +312,7 @@
         },
         {
           "otsikko": "Kala tulee myös tekojärvestä",
-          "teksti": "Kossoun järvi kuuluu Bandamajoen vesistöön Yamoussoukron lähialueella. Se on padon synnyttämä allas, jonka hyötyihin liitettiin myös kalastus. Seudun kalankulutuksessa mainitaan karpit ja capitaine-nimellä tunnettu kala.",
+          "teksti": "Kossoun järvi kuuluu Bandamajoen vesistöön Yamoussoukron lähialueella. Se on padon synnyttämä allas, jonka hyötyihin liitettiin myös kalastus. Seudun kalankulutuksessa mainitaan karpit ja capitaine-nimellä tunnettu kala. Padon vesi tuottaa myös sähköä. Vesihankkeen tavoitteisiin kuuluivat kalastuksen ohella viljelmien kastelu ja maaseudun elinkeinojen kehittäminen.",
           "wiki": "Lake Kossou",
           "tiedosto": "",
           "lyhyt": "",

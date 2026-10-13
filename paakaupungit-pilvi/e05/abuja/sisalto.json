@@ -138,7 +138,7 @@
         },
         {
           "otsikko": "Alueella oli jo asukkaita",
-          "teksti": "Abujan seudulla asui useita paikallisia yhteisöjä jo ennen pääkaupungin rakentamista. Abujan seudun paikallisiin yhteisöihin kuuluvat gbagyit eli gwarit sekä basat, gwandarat ja muut ryhmät. Kylät ja asutuspaikat edelsivät suunniteltua kaupunkia, ja paikalliset yhteisöt ovat edelleen olemassa. Kaupungin nimissäkin säilyy vanhempia paikannimiä. Vuonna 1873 nykyistä pääkaupunkia ei ollut, mutta seudulla oli asukkaiden oma elämä ja historia.",
+          "teksti": "Abujan seudun paikallisiin yhteisöihin kuuluvat gbagyit eli gwarit, basat, gwandarat, ganaganat, egburrat, nupet ja korot. Gwandarankielistä asutusta on erityisesti AMACin ja Bwarin alueilla. Paikallisia asutuspaikkoja ovat esimerkiksi Karshi, Kurudu, Nyanya, Gwagwa, Jiwa ja Karmo. Wusen ja Asokoron vanhoja yhteisöjä siirrettiin uuden pääkaupungin rakentamisen yhteydessä muun muassa Sabon Wuseen.",
           "wiki": "Abuja",
           "tiedosto": "",
           "lyhyt": "",
@@ -147,7 +147,7 @@
         },
         {
           "otsikko": "Wusen markkina palvelee arkea",
-          "teksti": "Wuse on Abujan luoteinen kaupunginosa ja keskeisen markkinapaikan sijainti. Siellä myydään tuoretta ruokaa, vaatteita, elektroniikkaa ja muita tavaroita. Kaupungin eri alueilla on lisäksi omia markkinoitaan. Wuse on keskustan pohjoispuolella, Garki sen eteläpuolella. Kaupunki jakautuu asuin- ja kauppa-alueisiin, joilla on omat paikannimensä.",
+          "teksti": "Wuse on Abujan luoteinen kaupunginosa ja keskeisen markkinapaikan sijainti. Siellä myydään tuoretta ruokaa, vaatteita, elektroniikkaa ja muita tavaroita. Kaupungin eri alueilla on lisäksi omia markkinoitaan. Wuse on keskustan pohjoispuolella, Garki sen eteläpuolella. Kaupunki jakautuu asuin- ja kauppa-alueisiin, joilla on omat paikannimensä. Garkin kauppapaikkoihin kuuluvat Area 1 Shopping Complex ja Area 10 Market.",
           "wiki": "Abuja",
           "tiedosto": "",
           "lyhyt": "",
@@ -156,7 +156,7 @@
         },
         {
           "otsikko": "Kaupunginosien välillä ja kauemmas",
-          "teksti": "Abujan Nnamdi Azikiwe -lentoasema yhdistää pääkaupungin kaukaisempiin paikkoihin. Tieverkko ulottuu seudun muihin osavaltioihin, ja Idussa sijaitsee rautatien asemapaikka. Kaupungin sisällä kuljetaan takseilla, ja nimet kuten Jabi, Wuse ja Garki jäsentävät liikkumista eri alueiden välillä. Liikenteen historiaan kuuluu myös Abuja–Kaduna-ratayhteys.",
+          "teksti": "Abujan Nnamdi Azikiwe -lentoasema yhdistää pääkaupungin kaukaisempiin paikkoihin. Tieverkko ulottuu seudun muihin osavaltioihin, ja Idussa sijaitsee rautatien asemapaikka. Kaupungin sisällä kuljetaan takseilla, ja nimet kuten Jabi, Wuse ja Garki jäsentävät liikkumista eri alueiden välillä. Liikenteen historiaan kuuluu myös Abuja–Kaduna-ratayhteys. Idu on myös kaupungin tärkeä teollisuusalue.",
           "wiki": "Abuja",
           "tiedosto": "",
           "lyhyt": "",
@@ -261,10 +261,6 @@
               {
                 "otsikko": "Kohteiden nimet",
                 "teksti": "Aso Rock ja Aso Villa ovat eri kohteet."
-              },
-              {
-                "otsikko": "Ennen matkapäätöstä",
-                "teksti": "Tarkista Nigerian ajantasainen matkustustiedote Suomen ulkoministeriöstä ennen matkapäätöstä."
               }
             ]
           },
@@ -290,7 +286,7 @@
       "nostot": [
         {
           "otsikko": "Aso on kallio",
-          "teksti": "Aso Rock on suuri graniittinen paljastuma Abujan reunassa. Monoliitti kuuluu paikan luontoon, ja kaupungin rakennettu keskusta sijaitsee pääosin sen eteläpuolella. Lähellä on valtion rakennuksia, mutta Aso-kallio ja Aso Villa -palatsi ovat eri kohteet. Luonnonmaamerkki edeltää pääkaupunkiprojektia ja liittyy myös alueen Asokoro-paikannimeen.",
+          "teksti": "Aso Rock on suuri graniittinen paljastuma Abujan reunassa. Monoliitti kuuluu paikan luontoon, ja kaupungin rakennettu keskusta sijaitsee pääosin sen eteläpuolella. Lähellä on valtion rakennuksia, mutta Aso-kallio ja Aso Villa -palatsi ovat eri kohteet. Luonnonmaamerkki edeltää pääkaupunkiprojektia ja liittyy myös alueen Asokoro-paikannimeen. Keskustan alue ulottuu Aso-kalliolta kansallisstadionin suuntaan.",
           "wiki": "Aso Rock",
           "tiedosto": "",
           "lyhyt": "",
@@ -299,7 +295,7 @@
         },
         {
           "otsikko": "Jabi aloitti vesivarastona",
-          "teksti": "Jabin järvi on maapadon synnyttämä tekojärvi Abujassa. Sen alkuperäinen tehtävä oli vedenhankinta, ja myöhemmin suurempi Usuma-järjestelmä muutti sen roolia kaupungin vesihuollossa. Jabin vesialuetta käytetään myös kalastukseen ja virkistykseen, ja rannalla on ulkoilu- sekä kohtaamispaikkoja. Järvellä myös veneillään.",
+          "teksti": "Jabin järvi on maapadon synnyttämä tekojärvi Abujassa. Sen alkuperäinen tehtävä oli vedenhankinta, ja myöhemmin suurempi Usuma-järjestelmä muutti sen roolia kaupungin vesihuollossa. Jabin vesialuetta käytetään myös kalastukseen ja virkistykseen, ja rannalla on ulkoilu- sekä kohtaamispaikkoja. Järvellä myös veneillään. Rannalla on mahdollista myös ratsastaa.",
           "wiki": "Jabi Lake",
           "tiedosto": "",
           "lyhyt": "",
@@ -308,7 +304,7 @@
         },
         {
           "otsikko": "Kaupungin ympärillä on mosaiikki",
-          "teksti": "Abujaa ympäröivä Federal Capital Territory kuuluu guinealaisen metsän ja savannin mosaiikkivyöhykkeeseen. Gwagwan tasangolla ja alueen kaakkoisosan karummassa maastossa on metsälaikkuja; ympäristöön kuuluu myös laaksoja ja epätasaista maata.",
+          "teksti": "Abujaa ympäröivä Federal Capital Territory kuuluu guinealaisen metsän ja savannin mosaiikkivyöhykkeeseen. Gwagwan tasangolla ja alueen kaakkoisosan karummassa maastossa on metsälaikkuja; ympäristöön kuuluu myös laaksoja ja epätasaista maata. Laikuissa kasvaa myös kosteaa sademetsää. Kaakkoisosan metsät kuuluvat Nigerian säilyneisiin varttuneisiin metsäympäristöihin.",
           "wiki": "Abuja",
           "tiedosto": "A view of a Stream and forest in Karu.jpg",
           "lyhyt": "Karu Abujan lähellä.",
@@ -317,7 +313,7 @@
         },
         {
           "otsikko": "Puisto on myös pelipaikka",
-          "teksti": "Abujan avoimiin virkistysalueisiin kuuluu puistoja, joissa urheillaan. Lifecamp Gwarinpan puisto sijaitsee hieman kohoavalla kukkulalla, ja sen liikuntapaikkoihin kuuluu koripallo- ja sulkapallokenttiä. Wuse 2:n City Parkissa puolestaan on esimerkiksi tenniskenttä, tekonurmi ja paintball-alue sekä sisäaktiviteetteja.",
+          "teksti": "Abujan avoimiin virkistysalueisiin kuuluu puistoja, joissa urheillaan. Lifecamp Gwarinpan puisto sijaitsee hieman kohoavalla kukkulalla, ja sen liikuntapaikkoihin kuuluu koripallo- ja sulkapallokenttiä. Wuse 2:n City Parkissa puolestaan on esimerkiksi tenniskenttä, tekonurmi ja paintball-alue sekä sisäaktiviteetteja. Panorama Recreational Parkissa on jalkapallokenttiä.",
           "wiki": "Abuja",
           "tiedosto": "",
           "lyhyt": "",
@@ -354,7 +350,7 @@
   "nahtavyydet": {
     "Aso-kallio": {
       "aika": "Luonnonmuodostuma",
-      "teksti": "Aso-kallio on suuri graniittinen monoliitti Abujan reunassa. Kaupunki levittäytyy pääosin sen eteläpuolelle, ja kallio toimii tunnistettavana luonnonmaamerkkinä. Alueeseen liittyy myös Asokoro-paikannimi. Läheiset valtion rakennukset kuuluvat rakennettuun ympäristöön; kallio ja Aso Villa -palatsi ovat eri kohteet.\n\nLuonnonmuodostuma edeltää nykyistä pääkaupunkia. Vuonna 1873 tätä suunniteltua kaupunkia ei ollut, mutta seudulla eli paikallisia yhteisöjä. Nykyinen Abuja rakentui 1900-luvun loppupuoliskolla Ason ympärille, joten kaupungin ja luonnonmaamerkin historia kulkevat hyvin eri aikamittakaavoissa.",
+      "teksti": "Aso-kallio on suuri graniittinen monoliitti Abujan reunassa. Kaupunki levittäytyy pääosin sen eteläpuolelle, ja kallio toimii tunnistettavana luonnonmaamerkkinä. Alueeseen liittyy myös Asokoro-paikannimi. Läheiset valtion rakennukset kuuluvat rakennettuun ympäristöön; kallio ja Aso Villa -palatsi ovat eri kohteet.\n\nKallio kohoaa noin 400 metriä ympäröivän maan yläpuolelle. Sen ympärillä sijaitsevat presidentin hallintokompleksi, parlamentti ja korkein oikeus. Asokoro-yhteisön kielessä Aso merkitsee voitokasta. Aso-kallion mukaan nimettiin myös Kansainyhteisön vuonna 2003 antama julistus, joka painotti demokratiaa ja kehitystä.",
       "kuvat": [
         {
           "tiedosto": "Aso Rock Nigeria.jpg",
@@ -367,7 +363,7 @@
     },
     "Jabin järvi": {
       "aika": "Tekojärvi",
-      "teksti": "Jabin järvi sijaitsee Abujan Jabin alueella. Se on maapadon synnyttämä vesialue, jonka alkuperäinen käyttötarkoitus liittyi kaupungin vedenhankintaan. Suurempi Usuma-järjestelmä muutti myöhemmin sen vesihuollollista roolia. Järvellä harjoitetaan myös kalastusta, ja rantaan liittyy virkistyskäyttöä.\n\nRantapuisto toimii ulkoilun ja sosiaalisten tapahtumien paikkana. Vesialueella on myös veneilykäyttöä. Vuonna 1873 alueella ei vielä ollut nykyistä suunniteltua pääkaupunkia.",
+      "teksti": "Jabin järvi sijaitsee Abujan Jabin alueella. Se on maapadon synnyttämä vesialue, jonka alkuperäinen käyttötarkoitus liittyi kaupungin vedenhankintaan. Suurempi Usuma-järjestelmä muutti myöhemmin sen vesihuollollista roolia. Järvellä harjoitetaan myös kalastusta, ja rantaan liittyy virkistyskäyttöä.\n\nRantapuisto toimii ulkoilun ja sosiaalisten tapahtumien paikkana. Vesialueella on myös veneilykäyttöä. Rannalla voi ratsastaa ja ostaa tuoretta kalaa. Puistoalue nimettiin Jabi Lake Parkiksi vuonna 2007.",
       "kuvat": [
         {
           "tiedosto": "",

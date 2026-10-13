@@ -3,7 +3,7 @@
   "era": "e05",
   "city": "ouagadougou",
   "authorization": "hyväksyn kaikki tekemäsi kuvat. toimita ne claudelle. claudelta saat uusia ohjeita jatkoa varten",
-  "sourceContentAfterSHA256": "bdb11116534cb2b23489f277bb8042e3fdc5269b738fef04d3b8e1d4480c6a9b",
+  "sourceContentAfterSHA256": "6a0b4ab2e8ee4de37f13300d2ff0c256e9c7c7b0ab533e68c2644a2e4c5b40df",
   "assets": [
     {
       "era": "e05",
@@ -53,10 +53,10 @@
         1536
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/ouagadougou/sisalto.json",
-      "sourceContentSHA256": "bdb11116534cb2b23489f277bb8042e3fdc5269b738fef04d3b8e1d4480c6a9b",
+      "sourceContentSHA256": "6a0b4ab2e8ee4de37f13300d2ff0c256e9c7c7b0ab533e68c2644a2e4c5b40df",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "61bae7cbd56742b707edc505353b1d41a391f2eb8fc7d0405b37840889bfa327",
+        "semanticContextSHA256": "3483d3ab28985ff7d5734281f7c439ea3ff16913221a2e690c99d6efd10d8010",
         "subjectTitle": "Matkailijalle",
         "targetState": "existing-target"
       },
@@ -237,9 +237,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "bdb11116534cb2b23489f277bb8042e3fdc5269b738fef04d3b8e1d4480c6a9b",
+      "sourceContentAfterSHA256": "6a0b4ab2e8ee4de37f13300d2ff0c256e9c7c7b0ab533e68c2644a2e4c5b40df",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "61bae7cbd56742b707edc505353b1d41a391f2eb8fc7d0405b37840889bfa327",
+      "contextAfterSHA256": "3483d3ab28985ff7d5734281f7c439ea3ff16913221a2e690c99d6efd10d8010",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -264,7 +264,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "bdb11116534cb2b23489f277bb8042e3fdc5269b738fef04d3b8e1d4480c6a9b",
+        "sourceSHA256": "6a0b4ab2e8ee4de37f13300d2ff0c256e9c7c7b0ab533e68c2644a2e4c5b40df",
         "sameImageNativeSHA256": "f0148882280ba1b8ec6ebe2c8728dd778ebb637fbc9a69dd32b741a541d59fe2",
         "sameImageExportSHA256": "2eaa2f97fd23220af0365af5418258c30b8e6d33fcb74f5ba46df934d1fe75a2",
         "independentNativeQAEvidencePreserved": true,
@@ -323,7 +323,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/ouagadougou/sisalto.json",
-      "sourceContentSHA256": "bdb11116534cb2b23489f277bb8042e3fdc5269b738fef04d3b8e1d4480c6a9b",
+      "sourceContentSHA256": "6a0b4ab2e8ee4de37f13300d2ff0c256e9c7c7b0ab533e68c2644a2e4c5b40df",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
         "semanticContextSHA256": "ff56eb775e3460a1a8b3cb93c2f71846a043e1b319b6db0211d015073a743930",
@@ -510,7 +510,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "bdb11116534cb2b23489f277bb8042e3fdc5269b738fef04d3b8e1d4480c6a9b",
+      "sourceContentAfterSHA256": "6a0b4ab2e8ee4de37f13300d2ff0c256e9c7c7b0ab533e68c2644a2e4c5b40df",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
       "contextAfterSHA256": "ff56eb775e3460a1a8b3cb93c2f71846a043e1b319b6db0211d015073a743930",
       "ownerApproved": true,
@@ -537,7 +537,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "bdb11116534cb2b23489f277bb8042e3fdc5269b738fef04d3b8e1d4480c6a9b",
+        "sourceSHA256": "6a0b4ab2e8ee4de37f13300d2ff0c256e9c7c7b0ab533e68c2644a2e4c5b40df",
         "sameImageNativeSHA256": "54ec96f9752fb50bfc7d59c0ee8e33f80e735184c2edb88e617e79e82dfcd64f",
         "sameImageExportSHA256": "29b6dd32685e4de3afbc729d0fabf85837955f80aa00968e57712801cbd8243f",
         "independentNativeQAEvidencePreserved": true,
@@ -596,7 +596,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/ouagadougou/sisalto.json",
-      "sourceContentSHA256": "bdb11116534cb2b23489f277bb8042e3fdc5269b738fef04d3b8e1d4480c6a9b",
+      "sourceContentSHA256": "6a0b4ab2e8ee4de37f13300d2ff0c256e9c7c7b0ab533e68c2644a2e4c5b40df",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
         "semanticContextSHA256": "ba6229373407a71610ec58d75296d3381c704cc7def8c86ed219f4dea2968f7b",
@@ -776,7 +776,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "bdb11116534cb2b23489f277bb8042e3fdc5269b738fef04d3b8e1d4480c6a9b",
+      "sourceContentAfterSHA256": "6a0b4ab2e8ee4de37f13300d2ff0c256e9c7c7b0ab533e68c2644a2e4c5b40df",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
       "contextAfterSHA256": "ba6229373407a71610ec58d75296d3381c704cc7def8c86ed219f4dea2968f7b",
       "ownerApproved": true,
@@ -803,7 +803,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "bdb11116534cb2b23489f277bb8042e3fdc5269b738fef04d3b8e1d4480c6a9b",
+        "sourceSHA256": "6a0b4ab2e8ee4de37f13300d2ff0c256e9c7c7b0ab533e68c2644a2e4c5b40df",
         "sameImageNativeSHA256": "cb6c011e305a88d3e77e5f96184c3124e467a8f9dcda3ac70fe413d7f9a0fefb",
         "sameImageExportSHA256": "f5298ff9b2441d19253a2c0e11465890be0574cf8701b296b4aee3b2afe8fe5c",
         "independentNativeQAEvidencePreserved": true,
@@ -859,10 +859,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/ouagadougou/sisalto.json",
-      "sourceContentSHA256": "bdb11116534cb2b23489f277bb8042e3fdc5269b738fef04d3b8e1d4480c6a9b",
+      "sourceContentSHA256": "6a0b4ab2e8ee4de37f13300d2ff0c256e9c7c7b0ab533e68c2644a2e4c5b40df",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "071658e9d103c69422a7fa3a5630413a49bf5805052d3171cc882c8a3fa07c61",
-        "semanticContextSHA256": "071658e9d103c69422a7fa3a5630413a49bf5805052d3171cc882c8a3fa07c61",
+        "targetBeforeSHA256": "b976ab9de325d9cac72a1e4e260555bab53e92568244c783e09c46098bbcbab1",
+        "semanticContextSHA256": "b976ab9de325d9cac72a1e4e260555bab53e92568244c783e09c46098bbcbab1",
         "subjectTitle": "Tori jatkuu kaupunginosiin",
         "targetState": "existing-target"
       },
@@ -1040,9 +1040,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "bdb11116534cb2b23489f277bb8042e3fdc5269b738fef04d3b8e1d4480c6a9b",
-      "targetAfterSHA256": "071658e9d103c69422a7fa3a5630413a49bf5805052d3171cc882c8a3fa07c61",
-      "contextAfterSHA256": "071658e9d103c69422a7fa3a5630413a49bf5805052d3171cc882c8a3fa07c61",
+      "sourceContentAfterSHA256": "6a0b4ab2e8ee4de37f13300d2ff0c256e9c7c7b0ab533e68c2644a2e4c5b40df",
+      "targetAfterSHA256": "b976ab9de325d9cac72a1e4e260555bab53e92568244c783e09c46098bbcbab1",
+      "contextAfterSHA256": "b976ab9de325d9cac72a1e4e260555bab53e92568244c783e09c46098bbcbab1",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -1067,7 +1067,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "bdb11116534cb2b23489f277bb8042e3fdc5269b738fef04d3b8e1d4480c6a9b",
+        "sourceSHA256": "6a0b4ab2e8ee4de37f13300d2ff0c256e9c7c7b0ab533e68c2644a2e4c5b40df",
         "sameImageNativeSHA256": "af930c2bad419f36adc88ed2ac8863ed05904dfe0153d01ff5e60a9aa0064cd6",
         "sameImageExportSHA256": "04ffb29afd52dbd42a0723be5895ea737a88e63eeaca761f3ded4b70715c6392",
         "independentNativeQAEvidencePreserved": true,
@@ -1123,10 +1123,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/ouagadougou/sisalto.json",
-      "sourceContentSHA256": "bdb11116534cb2b23489f277bb8042e3fdc5269b738fef04d3b8e1d4480c6a9b",
+      "sourceContentSHA256": "6a0b4ab2e8ee4de37f13300d2ff0c256e9c7c7b0ab533e68c2644a2e4c5b40df",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "c08451789ca32c2bff9d237cfbe0d5b8689398fd8bee0595e6b8a1388dd20303",
-        "semanticContextSHA256": "c08451789ca32c2bff9d237cfbe0d5b8689398fd8bee0595e6b8a1388dd20303",
+        "targetBeforeSHA256": "162e694bf08f0f04d58c7bcb7475e82676ec5b6c30b828040c456c54bf83014f",
+        "semanticContextSHA256": "162e694bf08f0f04d58c7bcb7475e82676ec5b6c30b828040c456c54bf83014f",
         "subjectTitle": "Käsityö tarvitsee kohtaamispaikan",
         "targetState": "existing-target"
       },
@@ -1303,9 +1303,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "bdb11116534cb2b23489f277bb8042e3fdc5269b738fef04d3b8e1d4480c6a9b",
-      "targetAfterSHA256": "c08451789ca32c2bff9d237cfbe0d5b8689398fd8bee0595e6b8a1388dd20303",
-      "contextAfterSHA256": "c08451789ca32c2bff9d237cfbe0d5b8689398fd8bee0595e6b8a1388dd20303",
+      "sourceContentAfterSHA256": "6a0b4ab2e8ee4de37f13300d2ff0c256e9c7c7b0ab533e68c2644a2e4c5b40df",
+      "targetAfterSHA256": "162e694bf08f0f04d58c7bcb7475e82676ec5b6c30b828040c456c54bf83014f",
+      "contextAfterSHA256": "162e694bf08f0f04d58c7bcb7475e82676ec5b6c30b828040c456c54bf83014f",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -1330,7 +1330,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "bdb11116534cb2b23489f277bb8042e3fdc5269b738fef04d3b8e1d4480c6a9b",
+        "sourceSHA256": "6a0b4ab2e8ee4de37f13300d2ff0c256e9c7c7b0ab533e68c2644a2e4c5b40df",
         "sameImageNativeSHA256": "af44f74663cc0d3492c9721380f7f125539a791e00a81c3f4ac9cefef9839940",
         "sameImageExportSHA256": "2ca915212030a6feacd9654ae71fd8c6999ffd886cd3679a2f20889465a1d709",
         "independentNativeQAEvidencePreserved": true,
@@ -1386,10 +1386,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/ouagadougou/sisalto.json",
-      "sourceContentSHA256": "bdb11116534cb2b23489f277bb8042e3fdc5269b738fef04d3b8e1d4480c6a9b",
+      "sourceContentSHA256": "6a0b4ab2e8ee4de37f13300d2ff0c256e9c7c7b0ab533e68c2644a2e4c5b40df",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "07a6957c0de6b8c460e7c14136be53204e6649e7029f96133cb4b70690cabf3c",
-        "semanticContextSHA256": "07a6957c0de6b8c460e7c14136be53204e6649e7029f96133cb4b70690cabf3c",
+        "targetBeforeSHA256": "0a58bc1a8fdb2026c28e60db6e2cd6b2ffe6134e7f13b7a2cadde8cc636e0b94",
+        "semanticContextSHA256": "0a58bc1a8fdb2026c28e60db6e2cd6b2ffe6134e7f13b7a2cadde8cc636e0b94",
         "subjectTitle": "Tiedon metsällä on pitkä muisti",
         "targetState": "existing-target"
       },
@@ -1567,9 +1567,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "bdb11116534cb2b23489f277bb8042e3fdc5269b738fef04d3b8e1d4480c6a9b",
-      "targetAfterSHA256": "07a6957c0de6b8c460e7c14136be53204e6649e7029f96133cb4b70690cabf3c",
-      "contextAfterSHA256": "07a6957c0de6b8c460e7c14136be53204e6649e7029f96133cb4b70690cabf3c",
+      "sourceContentAfterSHA256": "6a0b4ab2e8ee4de37f13300d2ff0c256e9c7c7b0ab533e68c2644a2e4c5b40df",
+      "targetAfterSHA256": "0a58bc1a8fdb2026c28e60db6e2cd6b2ffe6134e7f13b7a2cadde8cc636e0b94",
+      "contextAfterSHA256": "0a58bc1a8fdb2026c28e60db6e2cd6b2ffe6134e7f13b7a2cadde8cc636e0b94",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -1594,7 +1594,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "bdb11116534cb2b23489f277bb8042e3fdc5269b738fef04d3b8e1d4480c6a9b",
+        "sourceSHA256": "6a0b4ab2e8ee4de37f13300d2ff0c256e9c7c7b0ab533e68c2644a2e4c5b40df",
         "sameImageNativeSHA256": "9bb362ad36da14abdb9ee57c95ca95037eac16be548a4fc1276d5bc0bb12e268",
         "sameImageExportSHA256": "3af45f1e6288c40a91974f453d8b79232e76945ad589bf7278c1f52d25f7303a",
         "independentNativeQAEvidencePreserved": true,
@@ -1650,10 +1650,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/ouagadougou/sisalto.json",
-      "sourceContentSHA256": "bdb11116534cb2b23489f277bb8042e3fdc5269b738fef04d3b8e1d4480c6a9b",
+      "sourceContentSHA256": "6a0b4ab2e8ee4de37f13300d2ff0c256e9c7c7b0ab533e68c2644a2e4c5b40df",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "63201efb9cc50c223fa1fb93d3149383c5d0a4535b2566ae31d05951ffd79a23",
-        "semanticContextSHA256": "63201efb9cc50c223fa1fb93d3149383c5d0a4535b2566ae31d05951ffd79a23",
+        "targetBeforeSHA256": "d85ce8f0326241186c1012c650c93b3d94f510a55a00ee9532d3fb5491537502",
+        "semanticContextSHA256": "d85ce8f0326241186c1012c650c93b3d94f510a55a00ee9532d3fb5491537502",
         "subjectTitle": "Festivaalista tulee kaupungin kieli",
         "targetState": "existing-target"
       },
@@ -1851,9 +1851,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "bdb11116534cb2b23489f277bb8042e3fdc5269b738fef04d3b8e1d4480c6a9b",
-      "targetAfterSHA256": "63201efb9cc50c223fa1fb93d3149383c5d0a4535b2566ae31d05951ffd79a23",
-      "contextAfterSHA256": "63201efb9cc50c223fa1fb93d3149383c5d0a4535b2566ae31d05951ffd79a23",
+      "sourceContentAfterSHA256": "6a0b4ab2e8ee4de37f13300d2ff0c256e9c7c7b0ab533e68c2644a2e4c5b40df",
+      "targetAfterSHA256": "d85ce8f0326241186c1012c650c93b3d94f510a55a00ee9532d3fb5491537502",
+      "contextAfterSHA256": "d85ce8f0326241186c1012c650c93b3d94f510a55a00ee9532d3fb5491537502",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -1878,7 +1878,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "bdb11116534cb2b23489f277bb8042e3fdc5269b738fef04d3b8e1d4480c6a9b",
+        "sourceSHA256": "6a0b4ab2e8ee4de37f13300d2ff0c256e9c7c7b0ab533e68c2644a2e4c5b40df",
         "sameImageNativeSHA256": "262a7b331526b534cafa17aeb01480a88e12e7dce8a229aab6e5f2caa1e541ee",
         "sameImageExportSHA256": "1e32661567ea54220d0e7ff2b3882539640f2bb237c6ac70d4b4c54c3b6b9f78",
         "independentNativeQAEvidencePreserved": true,
@@ -1934,10 +1934,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/ouagadougou/sisalto.json",
-      "sourceContentSHA256": "bdb11116534cb2b23489f277bb8042e3fdc5269b738fef04d3b8e1d4480c6a9b",
+      "sourceContentSHA256": "6a0b4ab2e8ee4de37f13300d2ff0c256e9c7c7b0ab533e68c2644a2e4c5b40df",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "a8fbca3e2bad3ac3f31a4ea1ddc08c8cc9ca6f4b3d992c2e481dc7cb661811ab",
-        "semanticContextSHA256": "a8fbca3e2bad3ac3f31a4ea1ddc08c8cc9ca6f4b3d992c2e481dc7cb661811ab",
+        "targetBeforeSHA256": "17e9252afff873f22bc6c294b434ee8250f26f1959ace9360f861c6f1818da10",
+        "semanticContextSHA256": "17e9252afff873f22bc6c294b434ee8250f26f1959ace9360f861c6f1818da10",
         "subjectTitle": "Näytös voi liikkua yleisön luo",
         "targetState": "existing-target"
       },
@@ -2114,9 +2114,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "bdb11116534cb2b23489f277bb8042e3fdc5269b738fef04d3b8e1d4480c6a9b",
-      "targetAfterSHA256": "a8fbca3e2bad3ac3f31a4ea1ddc08c8cc9ca6f4b3d992c2e481dc7cb661811ab",
-      "contextAfterSHA256": "a8fbca3e2bad3ac3f31a4ea1ddc08c8cc9ca6f4b3d992c2e481dc7cb661811ab",
+      "sourceContentAfterSHA256": "6a0b4ab2e8ee4de37f13300d2ff0c256e9c7c7b0ab533e68c2644a2e4c5b40df",
+      "targetAfterSHA256": "17e9252afff873f22bc6c294b434ee8250f26f1959ace9360f861c6f1818da10",
+      "contextAfterSHA256": "17e9252afff873f22bc6c294b434ee8250f26f1959ace9360f861c6f1818da10",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -2141,7 +2141,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "bdb11116534cb2b23489f277bb8042e3fdc5269b738fef04d3b8e1d4480c6a9b",
+        "sourceSHA256": "6a0b4ab2e8ee4de37f13300d2ff0c256e9c7c7b0ab533e68c2644a2e4c5b40df",
         "sameImageNativeSHA256": "038639885e58b484b03c1ea0da6f004470b2564b4fc7413b038f243f53539438",
         "sameImageExportSHA256": "27fecd17e5d1aa1a16db72797a2d1a69710fa6e426593485fe0c83523bf0accf",
         "independentNativeQAEvidencePreserved": true,
@@ -2200,7 +2200,7 @@
         4000
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/ouagadougou/sisalto.json",
-      "sourceContentSHA256": "bdb11116534cb2b23489f277bb8042e3fdc5269b738fef04d3b8e1d4480c6a9b",
+      "sourceContentSHA256": "6a0b4ab2e8ee4de37f13300d2ff0c256e9c7c7b0ab533e68c2644a2e4c5b40df",
       "semanticSourceBind": {
         "targetBeforeSHA256": "d5b557022c40836fe8d8c31436e6b1a8121f2da03c3115143ba467ba9ac71528",
         "semanticContextSHA256": "d5b557022c40836fe8d8c31436e6b1a8121f2da03c3115143ba467ba9ac71528",
@@ -2380,7 +2380,7 @@
         "vuosi": "2011"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "bdb11116534cb2b23489f277bb8042e3fdc5269b738fef04d3b8e1d4480c6a9b",
+      "sourceContentAfterSHA256": "6a0b4ab2e8ee4de37f13300d2ff0c256e9c7c7b0ab533e68c2644a2e4c5b40df",
       "targetAfterSHA256": "d5b557022c40836fe8d8c31436e6b1a8121f2da03c3115143ba467ba9ac71528",
       "contextAfterSHA256": "d5b557022c40836fe8d8c31436e6b1a8121f2da03c3115143ba467ba9ac71528",
       "ownerApproved": true,
@@ -2407,7 +2407,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "bdb11116534cb2b23489f277bb8042e3fdc5269b738fef04d3b8e1d4480c6a9b",
+        "sourceSHA256": "6a0b4ab2e8ee4de37f13300d2ff0c256e9c7c7b0ab533e68c2644a2e4c5b40df",
         "sameImageNativeSHA256": "c68992f5c95e4712a1b877a5df2a7353dddf5f377dcc42055eb34fd293ef020d",
         "sameImageExportSHA256": "c68992f5c95e4712a1b877a5df2a7353dddf5f377dcc42055eb34fd293ef020d",
         "independentNativeQAEvidencePreserved": true,
@@ -2466,7 +2466,7 @@
         1944
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/ouagadougou/sisalto.json",
-      "sourceContentSHA256": "bdb11116534cb2b23489f277bb8042e3fdc5269b738fef04d3b8e1d4480c6a9b",
+      "sourceContentSHA256": "6a0b4ab2e8ee4de37f13300d2ff0c256e9c7c7b0ab533e68c2644a2e4c5b40df",
       "semanticSourceBind": {
         "targetBeforeSHA256": "a154c4993f87805889cc2d1f1e032c79d4512d916e3887790796ed1576e729fa",
         "semanticContextSHA256": "a154c4993f87805889cc2d1f1e032c79d4512d916e3887790796ed1576e729fa",
@@ -2657,7 +2657,7 @@
         "tiedosto": "Ouaga aerial view.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "bdb11116534cb2b23489f277bb8042e3fdc5269b738fef04d3b8e1d4480c6a9b",
+      "sourceContentAfterSHA256": "6a0b4ab2e8ee4de37f13300d2ff0c256e9c7c7b0ab533e68c2644a2e4c5b40df",
       "targetAfterSHA256": "a154c4993f87805889cc2d1f1e032c79d4512d916e3887790796ed1576e729fa",
       "contextAfterSHA256": "a154c4993f87805889cc2d1f1e032c79d4512d916e3887790796ed1576e729fa",
       "ownerApproved": true,
@@ -2684,7 +2684,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "bdb11116534cb2b23489f277bb8042e3fdc5269b738fef04d3b8e1d4480c6a9b",
+        "sourceSHA256": "6a0b4ab2e8ee4de37f13300d2ff0c256e9c7c7b0ab533e68c2644a2e4c5b40df",
         "sameImageNativeSHA256": "f64410cec37855919dc0fc36d5e390201f0824f03bebdbc365aaf49bcc6bee82",
         "sameImageExportSHA256": "f64410cec37855919dc0fc36d5e390201f0824f03bebdbc365aaf49bcc6bee82",
         "independentNativeQAEvidencePreserved": true,
@@ -2743,7 +2743,7 @@
         1944
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/ouagadougou/sisalto.json",
-      "sourceContentSHA256": "bdb11116534cb2b23489f277bb8042e3fdc5269b738fef04d3b8e1d4480c6a9b",
+      "sourceContentSHA256": "6a0b4ab2e8ee4de37f13300d2ff0c256e9c7c7b0ab533e68c2644a2e4c5b40df",
       "semanticSourceBind": {
         "targetBeforeSHA256": "f973f1dcdbd0140f8f4c07b97f23c46c16464047c93039ed06ac2b9a256a1df2",
         "semanticContextSHA256": "f973f1dcdbd0140f8f4c07b97f23c46c16464047c93039ed06ac2b9a256a1df2",
@@ -2930,7 +2930,7 @@
         "tiedosto": "Aerialview ouaga.png"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "bdb11116534cb2b23489f277bb8042e3fdc5269b738fef04d3b8e1d4480c6a9b",
+      "sourceContentAfterSHA256": "6a0b4ab2e8ee4de37f13300d2ff0c256e9c7c7b0ab533e68c2644a2e4c5b40df",
       "targetAfterSHA256": "f973f1dcdbd0140f8f4c07b97f23c46c16464047c93039ed06ac2b9a256a1df2",
       "contextAfterSHA256": "f973f1dcdbd0140f8f4c07b97f23c46c16464047c93039ed06ac2b9a256a1df2",
       "ownerApproved": true,
@@ -2957,7 +2957,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "bdb11116534cb2b23489f277bb8042e3fdc5269b738fef04d3b8e1d4480c6a9b",
+        "sourceSHA256": "6a0b4ab2e8ee4de37f13300d2ff0c256e9c7c7b0ab533e68c2644a2e4c5b40df",
         "sameImageNativeSHA256": "0498439cb50392cfd98fac67e29d15816e445e2af53b0c6ae70b98b5a5e67db4",
         "sameImageExportSHA256": "0498439cb50392cfd98fac67e29d15816e445e2af53b0c6ae70b98b5a5e67db4",
         "independentNativeQAEvidencePreserved": true,
@@ -3016,7 +3016,7 @@
         1727
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/ouagadougou/sisalto.json",
-      "sourceContentSHA256": "bdb11116534cb2b23489f277bb8042e3fdc5269b738fef04d3b8e1d4480c6a9b",
+      "sourceContentSHA256": "6a0b4ab2e8ee4de37f13300d2ff0c256e9c7c7b0ab533e68c2644a2e4c5b40df",
       "semanticSourceBind": {
         "targetBeforeSHA256": "ea357ba9484158e1723480f86a86537ed12d652ed525ad5de1a20993a15de077",
         "semanticContextSHA256": "ea357ba9484158e1723480f86a86537ed12d652ed525ad5de1a20993a15de077",
@@ -3207,7 +3207,7 @@
         "tiedosto": "Ouagaaerialview.png"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "bdb11116534cb2b23489f277bb8042e3fdc5269b738fef04d3b8e1d4480c6a9b",
+      "sourceContentAfterSHA256": "6a0b4ab2e8ee4de37f13300d2ff0c256e9c7c7b0ab533e68c2644a2e4c5b40df",
       "targetAfterSHA256": "ea357ba9484158e1723480f86a86537ed12d652ed525ad5de1a20993a15de077",
       "contextAfterSHA256": "ea357ba9484158e1723480f86a86537ed12d652ed525ad5de1a20993a15de077",
       "ownerApproved": true,
@@ -3234,7 +3234,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "bdb11116534cb2b23489f277bb8042e3fdc5269b738fef04d3b8e1d4480c6a9b",
+        "sourceSHA256": "6a0b4ab2e8ee4de37f13300d2ff0c256e9c7c7b0ab533e68c2644a2e4c5b40df",
         "sameImageNativeSHA256": "a17e67ca10401031c66a55d9d5944351d64572b9c281c0983846c33add7cc13d",
         "sameImageExportSHA256": "a17e67ca10401031c66a55d9d5944351d64572b9c281c0983846c33add7cc13d",
         "independentNativeQAEvidencePreserved": true,
@@ -3262,23 +3262,23 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/ouagadougou/n1-de14e7d74a573a5e4496.jpg",
         "suora": true,
         "lahde": "Arzantiga, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Bangr Weogon kosteikon vettä ja rannan puustoa Ouagadougoussa.",
-        "lyhyt": "Vettä ja kasvillisuutta Bangr Weogon kaupunkipuistossa.",
+        "selite": "Bangr Weogon puiston krokotiilijärvi marraskuussa 2022.",
+        "lyhyt": "Bangr Weogon krokotiilijärvi.",
         "tiedosto": "Crocodile lake at Parc Urbain Bangr-Weoogo.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Arzantiga, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Bangr Weogon kosteikon vettä ja rannan puustoa Ouagadougoussa.",
-        "lyhyt": "Vettä ja kasvillisuutta Bangr Weogon kaupunkipuistossa.",
+        "selite": "Bangr Weogon puiston krokotiilijärvi marraskuussa 2022.",
+        "lyhyt": "Bangr Weogon krokotiilijärvi.",
         "tiedosto": "Crocodile lake at Parc Urbain Bangr-Weoogo.jpg"
       },
       "runtimeMediaFieldPayload": {
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/ouagadougou/n1-de14e7d74a573a5e4496.jpg",
         "suora": true,
         "lahde": "Arzantiga, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Bangr Weogon kosteikon vettä ja rannan puustoa Ouagadougoussa.",
-        "lyhyt": "Vettä ja kasvillisuutta Bangr Weogon kaupunkipuistossa.",
+        "selite": "Bangr Weogon puiston krokotiilijärvi marraskuussa 2022.",
+        "lyhyt": "Bangr Weogon krokotiilijärvi.",
         "tiedosto": "Crocodile lake at Parc Urbain Bangr-Weoogo.jpg"
       },
       "runtimeRemoveMediaKeys": [],
@@ -3293,10 +3293,10 @@
         4032
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/ouagadougou/sisalto.json",
-      "sourceContentSHA256": "bdb11116534cb2b23489f277bb8042e3fdc5269b738fef04d3b8e1d4480c6a9b",
+      "sourceContentSHA256": "6a0b4ab2e8ee4de37f13300d2ff0c256e9c7c7b0ab533e68c2644a2e4c5b40df",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "5d9ac915f15d852b4d861b88007a0bbab121334c5868dac7c5dc343e94d4c921",
-        "semanticContextSHA256": "a8c97f28d6c5817d1a624943ad436f5bd14c1038702209fbc910435fb2964bf9",
+        "targetBeforeSHA256": "ab0818d948b72aa4b80158e44a89e59df27de5cd13b9a451740861e6a84a5728",
+        "semanticContextSHA256": "0a2f2d94bc3ba99800f6a2a82bd7c7f3e1a5f4954d884af67e862cd458bdd1d1",
         "subjectTitle": "Bangr Weogon kaupunkimetsä",
         "targetState": "existing-target"
       },
@@ -3461,8 +3461,8 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "lahde": "Arzantiga, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Bangr Weogon kosteikon vettä ja rannan puustoa Ouagadougoussa.",
-        "lyhyt": "Vettä ja kasvillisuutta Bangr Weogon kaupunkipuistossa.",
+        "selite": "Bangr Weogon puiston krokotiilijärvi marraskuussa 2022.",
+        "lyhyt": "Bangr Weogon krokotiilijärvi.",
         "tiedosto": "Crocodile lake at Parc Urbain Bangr-Weoogo.jpg"
       },
       "preservePreviousMediaObjects": true,
@@ -3489,14 +3489,14 @@
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Arzantiga, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Bangr Weogon kosteikon vettä ja rannan puustoa Ouagadougoussa.",
-        "lyhyt": "Vettä ja kasvillisuutta Bangr Weogon kaupunkipuistossa.",
+        "selite": "Bangr Weogon puiston krokotiilijärvi marraskuussa 2022.",
+        "lyhyt": "Bangr Weogon krokotiilijärvi.",
         "tiedosto": "Crocodile lake at Parc Urbain Bangr-Weoogo.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "bdb11116534cb2b23489f277bb8042e3fdc5269b738fef04d3b8e1d4480c6a9b",
-      "targetAfterSHA256": "5d9ac915f15d852b4d861b88007a0bbab121334c5868dac7c5dc343e94d4c921",
-      "contextAfterSHA256": "a8c97f28d6c5817d1a624943ad436f5bd14c1038702209fbc910435fb2964bf9",
+      "sourceContentAfterSHA256": "6a0b4ab2e8ee4de37f13300d2ff0c256e9c7c7b0ab533e68c2644a2e4c5b40df",
+      "targetAfterSHA256": "ab0818d948b72aa4b80158e44a89e59df27de5cd13b9a451740861e6a84a5728",
+      "contextAfterSHA256": "0a2f2d94bc3ba99800f6a2a82bd7c7f3e1a5f4954d884af67e862cd458bdd1d1",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -3521,12 +3521,12 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "bdb11116534cb2b23489f277bb8042e3fdc5269b738fef04d3b8e1d4480c6a9b",
+        "sourceSHA256": "6a0b4ab2e8ee4de37f13300d2ff0c256e9c7c7b0ab533e68c2644a2e4c5b40df",
         "sameImageNativeSHA256": "de14e7d74a573a5e44967cc9a55cc8e77068ed490c97915a7b92ed9ba601fc9e",
         "sameImageExportSHA256": "de14e7d74a573a5e44967cc9a55cc8e77068ed490c97915a7b92ed9ba601fc9e",
         "independentNativeQAEvidencePreserved": true,
         "independentTextResamplePending": true,
-        "captionChanged": false
+        "captionChanged": true
       }
     }
   ],
@@ -3807,7 +3807,7 @@
   "task118TextRevision": true,
   "independentTextResamplePending": true,
   "textAcceptanceVerified": false,
-  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task228/immutable-media-history/e05/ouagadougou/d3b1ea0a78d0269b54890c306c8a90543023be724540763976b159113a522dcc.json",
+  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task228/immutable-media-history/e05/ouagadougou/28755e5e65cd68cf8420a5c8c33dc9d82af213b7adb2ad5cb0fe1dfc4a5d117a.json",
   "task118ReboundAt": "2026-10-13T16:31:24.713408+00:00",
   "task228ExcludedAssets": [
     {
@@ -4079,5 +4079,5 @@
     }
   ],
   "task228TextRevision": true,
-  "task228ReboundAt": "2026-10-13T18:00:23.946068+00:00"
+  "task228ReboundAt": "2026-10-13T19:35:44.106353+00:00"
 }

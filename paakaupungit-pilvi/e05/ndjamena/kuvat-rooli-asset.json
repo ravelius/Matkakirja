@@ -3,7 +3,7 @@
   "era": "e05",
   "city": "ndjamena",
   "authorization": "hyväksyn kaikki tekemäsi kuvat. toimita ne claudelle. claudelta saat uusia ohjeita jatkoa varten",
-  "sourceContentAfterSHA256": "34d7b926e5d0291abe12e7f05a9c2f26ffac0daa71a83173a5e66ec485f43be0",
+  "sourceContentAfterSHA256": "3b78a8afc18c73bf17965f39b93a4e7496d1b95510da06ed92e4bff529bc5fbe",
   "assets": [
     {
       "era": "e05",
@@ -56,7 +56,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/ndjamena/sisalto.json",
-      "sourceContentSHA256": "34d7b926e5d0291abe12e7f05a9c2f26ffac0daa71a83173a5e66ec485f43be0",
+      "sourceContentSHA256": "3b78a8afc18c73bf17965f39b93a4e7496d1b95510da06ed92e4bff529bc5fbe",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
         "semanticContextSHA256": "6f6c6d65dfc3c029940a6a2730b2ab84898f55b0dfda35d966e1a1177c6531b6",
@@ -236,7 +236,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "34d7b926e5d0291abe12e7f05a9c2f26ffac0daa71a83173a5e66ec485f43be0",
+      "sourceContentAfterSHA256": "3b78a8afc18c73bf17965f39b93a4e7496d1b95510da06ed92e4bff529bc5fbe",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
       "contextAfterSHA256": "6f6c6d65dfc3c029940a6a2730b2ab84898f55b0dfda35d966e1a1177c6531b6",
       "ownerApproved": true,
@@ -263,7 +263,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "34d7b926e5d0291abe12e7f05a9c2f26ffac0daa71a83173a5e66ec485f43be0",
+        "sourceSHA256": "3b78a8afc18c73bf17965f39b93a4e7496d1b95510da06ed92e4bff529bc5fbe",
         "sameImageNativeSHA256": "3b50f46b215da0bc1e910223d338f60660f03805878a444b8295581ac69adcd8",
         "sameImageExportSHA256": "051d3804460e4a0243c534cfdf0d8e052c53d9dc95bc67a0ca09bfc8e92f370a",
         "independentNativeQAEvidencePreserved": true,
@@ -319,10 +319,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/ndjamena/sisalto.json",
-      "sourceContentSHA256": "34d7b926e5d0291abe12e7f05a9c2f26ffac0daa71a83173a5e66ec485f43be0",
+      "sourceContentSHA256": "3b78a8afc18c73bf17965f39b93a4e7496d1b95510da06ed92e4bff529bc5fbe",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "50b2940b1cf4867c663cbfea32f0e3aa6f0e8774ff0397c0d77ce6151886c924",
-        "semanticContextSHA256": "50b2940b1cf4867c663cbfea32f0e3aa6f0e8774ff0397c0d77ce6151886c924",
+        "targetBeforeSHA256": "50095745746d00457f8d4de475c6690765d3611fbe4df66d902acd8bfdc67dcb",
+        "semanticContextSHA256": "50095745746d00457f8d4de475c6690765d3611fbe4df66d902acd8bfdc67dcb",
         "subjectTitle": "Tori kokoaa seudun tuotteita",
         "targetState": "existing-target"
       },
@@ -496,9 +496,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "34d7b926e5d0291abe12e7f05a9c2f26ffac0daa71a83173a5e66ec485f43be0",
-      "targetAfterSHA256": "50b2940b1cf4867c663cbfea32f0e3aa6f0e8774ff0397c0d77ce6151886c924",
-      "contextAfterSHA256": "50b2940b1cf4867c663cbfea32f0e3aa6f0e8774ff0397c0d77ce6151886c924",
+      "sourceContentAfterSHA256": "3b78a8afc18c73bf17965f39b93a4e7496d1b95510da06ed92e4bff529bc5fbe",
+      "targetAfterSHA256": "50095745746d00457f8d4de475c6690765d3611fbe4df66d902acd8bfdc67dcb",
+      "contextAfterSHA256": "50095745746d00457f8d4de475c6690765d3611fbe4df66d902acd8bfdc67dcb",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -523,7 +523,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "34d7b926e5d0291abe12e7f05a9c2f26ffac0daa71a83173a5e66ec485f43be0",
+        "sourceSHA256": "3b78a8afc18c73bf17965f39b93a4e7496d1b95510da06ed92e4bff529bc5fbe",
         "sameImageNativeSHA256": "dfbabd883102cdc501b914f554a85c158bd71ded39d760529e20e02232c259b7",
         "sameImageExportSHA256": "39ffdc120afe39bdb24de7931952a76421cd5c11663db324a4d431f5421ec68d",
         "independentNativeQAEvidencePreserved": true,
@@ -579,10 +579,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/ndjamena/sisalto.json",
-      "sourceContentSHA256": "34d7b926e5d0291abe12e7f05a9c2f26ffac0daa71a83173a5e66ec485f43be0",
+      "sourceContentSHA256": "3b78a8afc18c73bf17965f39b93a4e7496d1b95510da06ed92e4bff529bc5fbe",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "ef86d4234ca050d62b54f0d0914afd95cabd3fd153ff0e28a943fe0bce5bc9cc",
-        "semanticContextSHA256": "ef86d4234ca050d62b54f0d0914afd95cabd3fd153ff0e28a943fe0bce5bc9cc",
+        "targetBeforeSHA256": "99c1f5a37ef412c7701aa9cee687d8bcdae10d24272fefee9b5be34b828dd455",
+        "semanticContextSHA256": "99c1f5a37ef412c7701aa9cee687d8bcdae10d24272fefee9b5be34b828dd455",
         "subjectTitle": "Jokiväylästä lentoasemalle",
         "targetState": "existing-target"
       },
@@ -760,9 +760,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "34d7b926e5d0291abe12e7f05a9c2f26ffac0daa71a83173a5e66ec485f43be0",
-      "targetAfterSHA256": "ef86d4234ca050d62b54f0d0914afd95cabd3fd153ff0e28a943fe0bce5bc9cc",
-      "contextAfterSHA256": "ef86d4234ca050d62b54f0d0914afd95cabd3fd153ff0e28a943fe0bce5bc9cc",
+      "sourceContentAfterSHA256": "3b78a8afc18c73bf17965f39b93a4e7496d1b95510da06ed92e4bff529bc5fbe",
+      "targetAfterSHA256": "99c1f5a37ef412c7701aa9cee687d8bcdae10d24272fefee9b5be34b828dd455",
+      "contextAfterSHA256": "99c1f5a37ef412c7701aa9cee687d8bcdae10d24272fefee9b5be34b828dd455",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -787,7 +787,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "34d7b926e5d0291abe12e7f05a9c2f26ffac0daa71a83173a5e66ec485f43be0",
+        "sourceSHA256": "3b78a8afc18c73bf17965f39b93a4e7496d1b95510da06ed92e4bff529bc5fbe",
         "sameImageNativeSHA256": "6f578e938711618b178d0471cf1240a1515c390fb40605f27232c72272418912",
         "sameImageExportSHA256": "ae7bf6cd1a618e1e3c00d6d66eedf767904a0b20c1add8b75852bdda344e4c77",
         "independentNativeQAEvidencePreserved": true,
@@ -812,16 +812,16 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/ndjamena/photo-ca89f597113701392129.jpg",
         "suora": true,
         "lahde": "Earth Science and Remote Sensing Unit , Lyndon B. Johnson Space Center, Commons (PD)",
-        "selite": "N’Djamenan seutua avaruudesta kuvattuna.",
-        "lyhyt": "N’Djamena avaruudesta.",
+        "selite": "Tšad ISS-avaruusasemalta marraskuussa 2009.",
+        "lyhyt": "Tšad avaruudesta.",
         "tiedosto": "ISS021-E-26414 - View of Chad.jpg",
         "vuosi": "2009"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Earth Science and Remote Sensing Unit , Lyndon B. Johnson Space Center, Commons (PD)",
-        "selite": "N’Djamenan seutua avaruudesta kuvattuna.",
-        "lyhyt": "N’Djamena avaruudesta.",
+        "selite": "Tšad ISS-avaruusasemalta marraskuussa 2009.",
+        "lyhyt": "Tšad avaruudesta.",
         "tiedosto": "ISS021-E-26414 - View of Chad.jpg",
         "vuosi": "2009"
       },
@@ -829,8 +829,8 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/ndjamena/photo-ca89f597113701392129.jpg",
         "suora": true,
         "lahde": "Earth Science and Remote Sensing Unit , Lyndon B. Johnson Space Center, Commons (PD)",
-        "selite": "N’Djamenan seutua avaruudesta kuvattuna.",
-        "lyhyt": "N’Djamena avaruudesta.",
+        "selite": "Tšad ISS-avaruusasemalta marraskuussa 2009.",
+        "lyhyt": "Tšad avaruudesta.",
         "tiedosto": "ISS021-E-26414 - View of Chad.jpg",
         "vuosi": "2009"
       },
@@ -846,10 +846,10 @@
         2848
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/ndjamena/sisalto.json",
-      "sourceContentSHA256": "34d7b926e5d0291abe12e7f05a9c2f26ffac0daa71a83173a5e66ec485f43be0",
+      "sourceContentSHA256": "3b78a8afc18c73bf17965f39b93a4e7496d1b95510da06ed92e4bff529bc5fbe",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "38c4db0a4d2f89185bd72d3a5db19b65293d63ed2734d08a04be6a612d510f1b",
-        "semanticContextSHA256": "38c4db0a4d2f89185bd72d3a5db19b65293d63ed2734d08a04be6a612d510f1b",
+        "targetBeforeSHA256": "69eed2d7fbb9cd34fbe6f1d98464e2b8b71051082d78dc7403521c24b3e937ef",
+        "semanticContextSHA256": "69eed2d7fbb9cd34fbe6f1d98464e2b8b71051082d78dc7403521c24b3e937ef",
         "subjectTitle": "ndjamena — aito paikkavalokuva",
         "targetState": "existing-target"
       },
@@ -1035,8 +1035,8 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "ISS021-E-26414 - View of Chad.jpg",
-        "lyhyt": "N’Djamena avaruudesta.",
-        "selite": "N’Djamenan seutua avaruudesta kuvattuna.",
+        "lyhyt": "Tšad avaruudesta.",
+        "selite": "Tšad ISS-avaruusasemalta marraskuussa 2009.",
         "lahde": "Earth Science and Remote Sensing Unit , Lyndon B. Johnson Space Center, Commons (PD)",
         "vuosi": "2009"
       },
@@ -1064,15 +1064,15 @@
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Earth Science and Remote Sensing Unit , Lyndon B. Johnson Space Center, Commons (PD)",
-        "selite": "N’Djamenan seutua avaruudesta kuvattuna.",
-        "lyhyt": "N’Djamena avaruudesta.",
+        "selite": "Tšad ISS-avaruusasemalta marraskuussa 2009.",
+        "lyhyt": "Tšad avaruudesta.",
         "tiedosto": "ISS021-E-26414 - View of Chad.jpg",
         "vuosi": "2009"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "34d7b926e5d0291abe12e7f05a9c2f26ffac0daa71a83173a5e66ec485f43be0",
-      "targetAfterSHA256": "38c4db0a4d2f89185bd72d3a5db19b65293d63ed2734d08a04be6a612d510f1b",
-      "contextAfterSHA256": "38c4db0a4d2f89185bd72d3a5db19b65293d63ed2734d08a04be6a612d510f1b",
+      "sourceContentAfterSHA256": "3b78a8afc18c73bf17965f39b93a4e7496d1b95510da06ed92e4bff529bc5fbe",
+      "targetAfterSHA256": "69eed2d7fbb9cd34fbe6f1d98464e2b8b71051082d78dc7403521c24b3e937ef",
+      "contextAfterSHA256": "69eed2d7fbb9cd34fbe6f1d98464e2b8b71051082d78dc7403521c24b3e937ef",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -1097,12 +1097,12 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "34d7b926e5d0291abe12e7f05a9c2f26ffac0daa71a83173a5e66ec485f43be0",
+        "sourceSHA256": "3b78a8afc18c73bf17965f39b93a4e7496d1b95510da06ed92e4bff529bc5fbe",
         "sameImageNativeSHA256": "ca89f59711370139212958bd9e26e9278fae6b642b50a1ca6b96ce8073a872c0",
         "sameImageExportSHA256": "ca89f59711370139212958bd9e26e9278fae6b642b50a1ca6b96ce8073a872c0",
         "independentNativeQAEvidencePreserved": true,
         "independentTextResamplePending": true,
-        "captionChanged": false
+        "captionChanged": true
       }
     },
     {
@@ -1156,7 +1156,7 @@
         2832
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/ndjamena/sisalto.json",
-      "sourceContentSHA256": "34d7b926e5d0291abe12e7f05a9c2f26ffac0daa71a83173a5e66ec485f43be0",
+      "sourceContentSHA256": "3b78a8afc18c73bf17965f39b93a4e7496d1b95510da06ed92e4bff529bc5fbe",
       "semanticSourceBind": {
         "targetBeforeSHA256": "d8b6dbed04f5cb85a39ebf1f0f01517ab8e8eacc143de5ffa1137b16bbbbc86f",
         "semanticContextSHA256": "d8b6dbed04f5cb85a39ebf1f0f01517ab8e8eacc143de5ffa1137b16bbbbc86f",
@@ -1351,7 +1351,7 @@
         "tiedosto": "NDjamena, Chad.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "34d7b926e5d0291abe12e7f05a9c2f26ffac0daa71a83173a5e66ec485f43be0",
+      "sourceContentAfterSHA256": "3b78a8afc18c73bf17965f39b93a4e7496d1b95510da06ed92e4bff529bc5fbe",
       "targetAfterSHA256": "d8b6dbed04f5cb85a39ebf1f0f01517ab8e8eacc143de5ffa1137b16bbbbc86f",
       "contextAfterSHA256": "d8b6dbed04f5cb85a39ebf1f0f01517ab8e8eacc143de5ffa1137b16bbbbc86f",
       "ownerApproved": true,
@@ -1378,7 +1378,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "34d7b926e5d0291abe12e7f05a9c2f26ffac0daa71a83173a5e66ec485f43be0",
+        "sourceSHA256": "3b78a8afc18c73bf17965f39b93a4e7496d1b95510da06ed92e4bff529bc5fbe",
         "sameImageNativeSHA256": "bad6fffdaf8c183384fbd453a9d6a55e2692821b647d82d2e166608a9e0734f1",
         "sameImageExportSHA256": "bad6fffdaf8c183384fbd453a9d6a55e2692821b647d82d2e166608a9e0734f1",
         "independentNativeQAEvidencePreserved": true,
@@ -1406,23 +1406,23 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/ndjamena/c2-68440302e17384735230.jpg",
         "suora": true,
         "lahde": "Earth Science and Remote Sensing Unit , Lyndon B. Johnson Space Center, Wikimedia Commons (PD)",
-        "selite": "N’Djamenan kaupunkialuetta avaruudesta marraskuussa 2009.",
-        "lyhyt": "N’Djamenan kaupunkialuetta avaruudesta.",
+        "selite": "Tšad ISS-avaruusasemalta marraskuussa 2009.",
+        "lyhyt": "Tšadin näkymä avaruudesta.",
         "tiedosto": "ISS021-E-26415 - View of Chad.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Earth Science and Remote Sensing Unit , Lyndon B. Johnson Space Center, Wikimedia Commons (PD)",
-        "selite": "N’Djamenan kaupunkialuetta avaruudesta marraskuussa 2009.",
-        "lyhyt": "N’Djamenan kaupunkialuetta avaruudesta.",
+        "selite": "Tšad ISS-avaruusasemalta marraskuussa 2009.",
+        "lyhyt": "Tšadin näkymä avaruudesta.",
         "tiedosto": "ISS021-E-26415 - View of Chad.jpg"
       },
       "runtimeMediaFieldPayload": {
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/ndjamena/c2-68440302e17384735230.jpg",
         "suora": true,
         "lahde": "Earth Science and Remote Sensing Unit , Lyndon B. Johnson Space Center, Wikimedia Commons (PD)",
-        "selite": "N’Djamenan kaupunkialuetta avaruudesta marraskuussa 2009.",
-        "lyhyt": "N’Djamenan kaupunkialuetta avaruudesta.",
+        "selite": "Tšad ISS-avaruusasemalta marraskuussa 2009.",
+        "lyhyt": "Tšadin näkymä avaruudesta.",
         "tiedosto": "ISS021-E-26415 - View of Chad.jpg"
       },
       "runtimeRemoveMediaKeys": [],
@@ -1437,10 +1437,10 @@
         2848
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/ndjamena/sisalto.json",
-      "sourceContentSHA256": "34d7b926e5d0291abe12e7f05a9c2f26ffac0daa71a83173a5e66ec485f43be0",
+      "sourceContentSHA256": "3b78a8afc18c73bf17965f39b93a4e7496d1b95510da06ed92e4bff529bc5fbe",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "0dc7ef41fc8cc4092d6714889c66cdb82e11010001fed78d2a92408604098f3e",
-        "semanticContextSHA256": "0dc7ef41fc8cc4092d6714889c66cdb82e11010001fed78d2a92408604098f3e",
+        "targetBeforeSHA256": "7920c10842ac5ac291d0493ce0295728a609bc3912e3ab9a3c4371e76b0ffb33",
+        "semanticContextSHA256": "7920c10842ac5ac291d0493ce0295728a609bc3912e3ab9a3c4371e76b0ffb33",
         "subjectTitle": "N'Djamena",
         "targetState": "existing-target"
       },
@@ -1641,8 +1641,8 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "ISS021-E-26415 - View of Chad.jpg",
-        "lyhyt": "N’Djamenan kaupunkialuetta avaruudesta.",
-        "selite": "N’Djamenan kaupunkialuetta avaruudesta marraskuussa 2009.",
+        "lyhyt": "Tšadin näkymä avaruudesta.",
+        "selite": "Tšad ISS-avaruusasemalta marraskuussa 2009.",
         "lahde": "Earth Science and Remote Sensing Unit , Lyndon B. Johnson Space Center, Wikimedia Commons (PD)"
       },
       "preservePreviousMediaObjects": true,
@@ -1669,14 +1669,14 @@
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Earth Science and Remote Sensing Unit , Lyndon B. Johnson Space Center, Wikimedia Commons (PD)",
-        "selite": "N’Djamenan kaupunkialuetta avaruudesta marraskuussa 2009.",
-        "lyhyt": "N’Djamenan kaupunkialuetta avaruudesta.",
+        "selite": "Tšad ISS-avaruusasemalta marraskuussa 2009.",
+        "lyhyt": "Tšadin näkymä avaruudesta.",
         "tiedosto": "ISS021-E-26415 - View of Chad.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "34d7b926e5d0291abe12e7f05a9c2f26ffac0daa71a83173a5e66ec485f43be0",
-      "targetAfterSHA256": "0dc7ef41fc8cc4092d6714889c66cdb82e11010001fed78d2a92408604098f3e",
-      "contextAfterSHA256": "0dc7ef41fc8cc4092d6714889c66cdb82e11010001fed78d2a92408604098f3e",
+      "sourceContentAfterSHA256": "3b78a8afc18c73bf17965f39b93a4e7496d1b95510da06ed92e4bff529bc5fbe",
+      "targetAfterSHA256": "7920c10842ac5ac291d0493ce0295728a609bc3912e3ab9a3c4371e76b0ffb33",
+      "contextAfterSHA256": "7920c10842ac5ac291d0493ce0295728a609bc3912e3ab9a3c4371e76b0ffb33",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -1701,12 +1701,12 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "34d7b926e5d0291abe12e7f05a9c2f26ffac0daa71a83173a5e66ec485f43be0",
+        "sourceSHA256": "3b78a8afc18c73bf17965f39b93a4e7496d1b95510da06ed92e4bff529bc5fbe",
         "sameImageNativeSHA256": "68440302e17384735230368db5c2525c6f79416f8ed487efdb99e493b48c6a77",
         "sameImageExportSHA256": "68440302e17384735230368db5c2525c6f79416f8ed487efdb99e493b48c6a77",
         "independentNativeQAEvidencePreserved": true,
         "independentTextResamplePending": true,
-        "captionChanged": false
+        "captionChanged": true
       }
     },
     {
@@ -1729,23 +1729,23 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/ndjamena/c3-f046d5869c57c0f8d681.jpg",
         "suora": true,
         "lahde": "Earth Science and Remote Sensing Unit , Lyndon B. Johnson Space Center, Wikimedia Commons (PD)",
-        "selite": "N’Djamenan jokivarsia ja kaupunkialuetta avaruudesta marraskuussa 2009.",
-        "lyhyt": "N’Djamenan jokivarsia ja kaupunkialuetta avaruudesta.",
+        "selite": "Tšadin näkymä ISS-avaruusasemalta marraskuussa 2009.",
+        "lyhyt": "Tšad ISS-avaruusasemalta.",
         "tiedosto": "ISS021-E-26419 - View of Chad.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Earth Science and Remote Sensing Unit , Lyndon B. Johnson Space Center, Wikimedia Commons (PD)",
-        "selite": "N’Djamenan jokivarsia ja kaupunkialuetta avaruudesta marraskuussa 2009.",
-        "lyhyt": "N’Djamenan jokivarsia ja kaupunkialuetta avaruudesta.",
+        "selite": "Tšadin näkymä ISS-avaruusasemalta marraskuussa 2009.",
+        "lyhyt": "Tšad ISS-avaruusasemalta.",
         "tiedosto": "ISS021-E-26419 - View of Chad.jpg"
       },
       "runtimeMediaFieldPayload": {
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/ndjamena/c3-f046d5869c57c0f8d681.jpg",
         "suora": true,
         "lahde": "Earth Science and Remote Sensing Unit , Lyndon B. Johnson Space Center, Wikimedia Commons (PD)",
-        "selite": "N’Djamenan jokivarsia ja kaupunkialuetta avaruudesta marraskuussa 2009.",
-        "lyhyt": "N’Djamenan jokivarsia ja kaupunkialuetta avaruudesta.",
+        "selite": "Tšadin näkymä ISS-avaruusasemalta marraskuussa 2009.",
+        "lyhyt": "Tšad ISS-avaruusasemalta.",
         "tiedosto": "ISS021-E-26419 - View of Chad.jpg"
       },
       "runtimeRemoveMediaKeys": [],
@@ -1760,10 +1760,10 @@
         2848
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/ndjamena/sisalto.json",
-      "sourceContentSHA256": "34d7b926e5d0291abe12e7f05a9c2f26ffac0daa71a83173a5e66ec485f43be0",
+      "sourceContentSHA256": "3b78a8afc18c73bf17965f39b93a4e7496d1b95510da06ed92e4bff529bc5fbe",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "281bf12f36bc09dd9c04898eb8ffbeb5a3c007794952a56e725eb376319bc5a6",
-        "semanticContextSHA256": "281bf12f36bc09dd9c04898eb8ffbeb5a3c007794952a56e725eb376319bc5a6",
+        "targetBeforeSHA256": "4814dc8d4979d83bed6d9c979467c9957632fd31c863d2907814ceb200605b18",
+        "semanticContextSHA256": "4814dc8d4979d83bed6d9c979467c9957632fd31c863d2907814ceb200605b18",
         "subjectTitle": "N'Djamena",
         "targetState": "existing-target"
       },
@@ -1984,8 +1984,8 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "ISS021-E-26419 - View of Chad.jpg",
-        "lyhyt": "N’Djamenan jokivarsia ja kaupunkialuetta avaruudesta.",
-        "selite": "N’Djamenan jokivarsia ja kaupunkialuetta avaruudesta marraskuussa 2009.",
+        "lyhyt": "Tšad ISS-avaruusasemalta.",
+        "selite": "Tšadin näkymä ISS-avaruusasemalta marraskuussa 2009.",
         "lahde": "Earth Science and Remote Sensing Unit , Lyndon B. Johnson Space Center, Wikimedia Commons (PD)"
       },
       "preservePreviousMediaObjects": true,
@@ -2012,14 +2012,14 @@
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Earth Science and Remote Sensing Unit , Lyndon B. Johnson Space Center, Wikimedia Commons (PD)",
-        "selite": "N’Djamenan jokivarsia ja kaupunkialuetta avaruudesta marraskuussa 2009.",
-        "lyhyt": "N’Djamenan jokivarsia ja kaupunkialuetta avaruudesta.",
+        "selite": "Tšadin näkymä ISS-avaruusasemalta marraskuussa 2009.",
+        "lyhyt": "Tšad ISS-avaruusasemalta.",
         "tiedosto": "ISS021-E-26419 - View of Chad.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "34d7b926e5d0291abe12e7f05a9c2f26ffac0daa71a83173a5e66ec485f43be0",
-      "targetAfterSHA256": "281bf12f36bc09dd9c04898eb8ffbeb5a3c007794952a56e725eb376319bc5a6",
-      "contextAfterSHA256": "281bf12f36bc09dd9c04898eb8ffbeb5a3c007794952a56e725eb376319bc5a6",
+      "sourceContentAfterSHA256": "3b78a8afc18c73bf17965f39b93a4e7496d1b95510da06ed92e4bff529bc5fbe",
+      "targetAfterSHA256": "4814dc8d4979d83bed6d9c979467c9957632fd31c863d2907814ceb200605b18",
+      "contextAfterSHA256": "4814dc8d4979d83bed6d9c979467c9957632fd31c863d2907814ceb200605b18",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -2044,12 +2044,12 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "34d7b926e5d0291abe12e7f05a9c2f26ffac0daa71a83173a5e66ec485f43be0",
+        "sourceSHA256": "3b78a8afc18c73bf17965f39b93a4e7496d1b95510da06ed92e4bff529bc5fbe",
         "sameImageNativeSHA256": "f046d5869c57c0f8d681106e1249bf2b22c4cff1923afa44958e9bf9c7c46e45",
         "sameImageExportSHA256": "f046d5869c57c0f8d681106e1249bf2b22c4cff1923afa44958e9bf9c7c46e45",
         "independentNativeQAEvidencePreserved": true,
         "independentTextResamplePending": true,
-        "captionChanged": false
+        "captionChanged": true
       }
     },
     {
@@ -2072,23 +2072,23 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/ndjamena/traveler-557cea7c2044f78bef07.jpg",
         "suora": true,
         "lahde": "MAKIA ANNAELLE Hyacinthe, Wikimedia Commons (CC0)",
-        "selite": "Kasvillisuutta Chari-joen rannalla N’Djamenassa.",
-        "lyhyt": "Charin rantakasvillisuutta.",
+        "selite": "Charin auringonlasku N’Djamenassa syyskuussa 2026.",
+        "lyhyt": "Auringonlasku Charilla.",
         "tiedosto": "La verdure autour du fleuve Chari de N'Djamena.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "MAKIA ANNAELLE Hyacinthe, Wikimedia Commons (CC0)",
-        "selite": "Kasvillisuutta Chari-joen rannalla N’Djamenassa.",
-        "lyhyt": "Charin rantakasvillisuutta.",
+        "selite": "Charin auringonlasku N’Djamenassa syyskuussa 2026.",
+        "lyhyt": "Auringonlasku Charilla.",
         "tiedosto": "La verdure autour du fleuve Chari de N'Djamena.jpg"
       },
       "runtimeMediaFieldPayload": {
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/ndjamena/traveler-557cea7c2044f78bef07.jpg",
         "suora": true,
         "lahde": "MAKIA ANNAELLE Hyacinthe, Wikimedia Commons (CC0)",
-        "selite": "Kasvillisuutta Chari-joen rannalla N’Djamenassa.",
-        "lyhyt": "Charin rantakasvillisuutta.",
+        "selite": "Charin auringonlasku N’Djamenassa syyskuussa 2026.",
+        "lyhyt": "Auringonlasku Charilla.",
         "tiedosto": "La verdure autour du fleuve Chari de N'Djamena.jpg"
       },
       "runtimeRemoveMediaKeys": [],
@@ -2103,10 +2103,10 @@
         4064
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/ndjamena/sisalto.json",
-      "sourceContentSHA256": "34d7b926e5d0291abe12e7f05a9c2f26ffac0daa71a83173a5e66ec485f43be0",
+      "sourceContentSHA256": "3b78a8afc18c73bf17965f39b93a4e7496d1b95510da06ed92e4bff529bc5fbe",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "f06ccb047a01e3c7c028b837b72bf95094e1dd1326fabc5d76dd76f6fc56aaee",
-        "semanticContextSHA256": "299bdfd517897d9b8ba2d424c80c2c9f2552d95e49557c527e2f1f45830b1eb8",
+        "targetBeforeSHA256": "213b864ea316348e2cd003a9fdb4cd18fc32902a8ddd00e171ce8f17a683fc4c",
+        "semanticContextSHA256": "daf096470a002c6f8a343f9f9a0585309cd5e7c17332f621831bcd585c1d40d1",
         "subjectTitle": "Matkailijalle",
         "targetState": "existing-target"
       },
@@ -2255,8 +2255,8 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "La verdure autour du fleuve Chari de N'Djamena.jpg",
-        "lyhyt": "Charin rantakasvillisuutta.",
-        "selite": "Kasvillisuutta Chari-joen rannalla N’Djamenassa.",
+        "lyhyt": "Auringonlasku Charilla.",
+        "selite": "Charin auringonlasku N’Djamenassa syyskuussa 2026.",
         "lahde": "MAKIA ANNAELLE Hyacinthe, Wikimedia Commons (CC0)"
       },
       "preservePreviousMediaObjects": true,
@@ -2283,14 +2283,14 @@
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "MAKIA ANNAELLE Hyacinthe, Wikimedia Commons (CC0)",
-        "selite": "Kasvillisuutta Chari-joen rannalla N’Djamenassa.",
-        "lyhyt": "Charin rantakasvillisuutta.",
+        "selite": "Charin auringonlasku N’Djamenassa syyskuussa 2026.",
+        "lyhyt": "Auringonlasku Charilla.",
         "tiedosto": "La verdure autour du fleuve Chari de N'Djamena.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "34d7b926e5d0291abe12e7f05a9c2f26ffac0daa71a83173a5e66ec485f43be0",
-      "targetAfterSHA256": "f06ccb047a01e3c7c028b837b72bf95094e1dd1326fabc5d76dd76f6fc56aaee",
-      "contextAfterSHA256": "299bdfd517897d9b8ba2d424c80c2c9f2552d95e49557c527e2f1f45830b1eb8",
+      "sourceContentAfterSHA256": "3b78a8afc18c73bf17965f39b93a4e7496d1b95510da06ed92e4bff529bc5fbe",
+      "targetAfterSHA256": "213b864ea316348e2cd003a9fdb4cd18fc32902a8ddd00e171ce8f17a683fc4c",
+      "contextAfterSHA256": "daf096470a002c6f8a343f9f9a0585309cd5e7c17332f621831bcd585c1d40d1",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -2315,12 +2315,12 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "34d7b926e5d0291abe12e7f05a9c2f26ffac0daa71a83173a5e66ec485f43be0",
+        "sourceSHA256": "3b78a8afc18c73bf17965f39b93a4e7496d1b95510da06ed92e4bff529bc5fbe",
         "sameImageNativeSHA256": "557cea7c2044f78bef070e789257045acd73e6a3dd710c5327dc0e29a3821b93",
         "sameImageExportSHA256": "557cea7c2044f78bef070e789257045acd73e6a3dd710c5327dc0e29a3821b93",
         "independentNativeQAEvidencePreserved": true,
         "independentTextResamplePending": true,
-        "captionChanged": false
+        "captionChanged": true
       }
     }
   ],
@@ -2333,9 +2333,9 @@
   "task118TextRevision": true,
   "independentTextResamplePending": true,
   "textAcceptanceVerified": false,
-  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task228/immutable-media-history/e05/ndjamena/a38e759a9c23b2f010f869512fb0384b0aec1d8d489d79e2abbbf736974abe36.json",
+  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task228/immutable-media-history/e05/ndjamena/ef0462d3f4dfcee61da96383095b52644559b8676c309f7ab2e40e4e913a5631.json",
   "task118ReboundAt": "2026-10-13T16:31:24.662928+00:00",
   "task228ExcludedAssets": [],
   "task228TextRevision": true,
-  "task228ReboundAt": "2026-10-13T18:00:23.892200+00:00"
+  "task228ReboundAt": "2026-10-13T19:35:44.059970+00:00"
 }

@@ -14,8 +14,8 @@
     }
   },
   "artikkeli": {
-    "intro": "Yaoundé on Kamerunin pääkaupunki sisämaassa, **kukkuloiden ja laaksojen** ympäristössä. Maasto jäsentää kaupunginosia, ja pieni Mfoundijoki kulkee kaupungin läpi. Alue oli ewondo-yhteisöjen asuttama ennen saksalaisen tutkimusaseman perustamista 1800-luvun lopulla. Vuonna 1873 tätä myöhempää asemaa ja kaupunkia ei vielä ollut. Yaoundésta tuli sittemmin ranskalainen hallintokeskus ja nykyisen Kamerunin pääkaupunki. **Mokolon ja Mfoundin markkinoilla** myydään ruokaa, vaatteita ja kodin tavaroita. Kaupungissa myös valmistetaan esimerkiksi maitotuotteita, olutta, savi- ja lasituotteita sekä puutavaraa. Yliopistot ja ammatilliset oppilaitokset kouluttavat muun muassa opettajia, insinöörejä ja terveysalan osaajia.",
-    "teksti": "Yaoundén seudulla asui paikallisia ewondo-yhteisöjä ennen 1800-luvun lopun saksalaista asemaa. Aseman paikasta sovittiin paikallisten päälliköiden kanssa. Sen varhaiseen työhön liittyi luonnontutkimusta, ennen myöhempää sotilaallista ja hallinnollista roolia. Kaupungin maastossa on kukkuloita, ylänköjä ja laaksoja. Korkeammilla kohdilla kulkevat tiet ja rakennukset, kun taas laaksoissa on myös kasvillisuutta ja viljelyä. Pienet vesiväylät kuuluvat tähän sisämaan kaupunkimaisemaan. Mokolo, Mfoundi ja pienemmät kaupunginosamarkkinat palvelevat päivittäisiä hankintoja. Koulutuksen kirjo puolestaan ulottuu yliopistoista opettaja-, insinööri- ja terveysalan koulutukseen. Blackitude-museon kokoelmat kertovat myös siitä, miten kulttuuriaineistoa on peritty, hankittu ja säilytetty eri vaiheissa."
+    "intro": "Yaoundé on Kamerunin pääkaupunki sisämaassa, **kukkuloiden ja laaksojen** ympäristössä. Maasto jäsentää kaupunginosia, ja pieni Mfoundijoki kulkee kaupungin läpi. Alue oli ewondo-yhteisöjen asuttama ennen saksalaisen tutkimusaseman perustamista 1800-luvun lopulla. Vuonna 1873 tätä myöhempää asemaa ja kaupunkia ei vielä ollut.\n\nYaoundésta tuli sittemmin ranskalainen hallintokeskus ja nykyisen Kamerunin pääkaupunki. **Mokolon ja Mfoundin markkinoilla** myydään ruokaa, vaatteita ja kodin tavaroita. Kaupungissa myös valmistetaan esimerkiksi maitotuotteita, olutta, savi- ja lasituotteita sekä puutavaraa. Yliopistot ja ammatilliset oppilaitokset kouluttavat muun muassa opettajia, insinöörejä ja terveysalan osaajia.",
+    "teksti": "Yaoundén seudulla asui paikallisia ewondo-yhteisöjä ennen 1800-luvun lopun saksalaista asemaa. Aseman paikasta sovittiin paikallisten päälliköiden kanssa. Sen varhaiseen työhön liittyi luonnontutkimusta, ennen myöhempää sotilaallista ja hallinnollista roolia.\n\nKaupungin maastossa on kukkuloita, ylänköjä ja laaksoja. Korkeammilla kohdilla kulkevat tiet ja rakennukset, kun taas laaksoissa on myös kasvillisuutta ja viljelyä. Pienet vesiväylät kuuluvat tähän sisämaan kaupunkimaisemaan.\n\nMokolo, Mfoundi ja pienemmät kaupunginosamarkkinat palvelevat päivittäisiä hankintoja. Koulutuksen kirjo puolestaan ulottuu yliopistoista opettaja-, insinööri- ja terveysalan koulutukseen. Blackitude-museon kokoelmat kertovat myös siitä, miten kulttuuriaineistoa on peritty, hankittu ja säilytetty eri vaiheissa."
   },
   "kysymykset": [
     {
@@ -96,8 +96,8 @@
   ],
   "valokuva": {
     "tiedosto": "Clouds surround hill.jpg",
-    "lyhyt": "Pilviä Yaoundén kukkulalla.",
-    "selite": "Yaoundén kukkulamaisemaa pilvien keskellä.",
+    "lyhyt": "Pilvimaisema Kamerunissa.",
+    "selite": "Kamerunin pilvimaisema heinäkuussa 2020.",
     "lahde": "Thetaxiphotographer, Commons (CC BY-SA 4.0)",
     "vuosi": "2020"
   },
@@ -109,8 +109,8 @@
       "kansikuvat": [
         {
           "tiedosto": "Cloudy valley covering human habitat.png",
-          "lyhyt": "Yaoundén asutusta ja pilviä.",
-          "selite": "Yaoundén kukkuloita ja asutusta pilvisessä maisemassa.",
+          "lyhyt": "Pilvinen laakso Yaoundéssa.",
+          "selite": "Simbockin ja Mendongin ympäristöä Yaoundéssa sadekauden alun aamuna.",
           "lahde": "JusatTop, Wikimedia Commons (CC BY-SA 4.0)"
         },
         {
@@ -129,7 +129,7 @@
       "nostot": [
         {
           "otsikko": "Tiet nousevat, laaksot vihertyvät",
-          "teksti": "Yaoundén maastoon kuuluvat kukkulat, ylängöt ja laaksot, ja alueen kallioperässä on gneissiä. Tiet ja rakennukset sijaitsevat usein korkeammilla kohdilla. Laaksoissa on puolestaan kasvillisuutta ja viljelyä, ja kaupungin ympäristöä halkovat pienet vesiväylät, kuten Mfoundi, Ekozoa ja Biyeme. Maastonmuodot ovat siis osa kaupunginosien rakennetta. Mfoundin varrella kasvillisuus ja viljely täyttävät alavaa maata, kun taas rinteet ja kukkulat nostavat tiet sekä asuinalueet ylemmäs.",
+          "teksti": "Yaoundén maastoon kuuluvat kukkulat, ylängöt ja laaksot, ja alueen kallioperässä on gneissiä. Tiet ja rakennukset sijaitsevat usein korkeammilla kohdilla. Laaksoissa on puolestaan kasvillisuutta ja viljelyä, ja kaupungin ympäristöä halkovat pienet vesiväylät, kuten Mfoundi, Ekozoa ja Biyeme. Mfoundi virtaa kaupungin läpi pohjoisesta etelään. Kaupunkia ympäröi myös kosteikkoja.",
           "wiki": "Yaoundé",
           "tiedosto": "",
           "lyhyt": "",
@@ -138,7 +138,7 @@
         },
         {
           "otsikko": "Markkinoilla hankitaan arjen tavarat",
-          "teksti": "Mokolo ja Mfoundi ovat Yaoundén markkinapaikkoja, ja niiden rinnalla on keskustori sekä pienempiä kaupunginosamarkkinoita. Myynnissä on ruokaa, vaatteita, kenkiä ja kodin käyttöesineitä. Kaupungin katukauppaan kuuluvat myös maapähkinät ja juomat. Erilaiset kauppapaikat muodostavat näin arkisten hankintojen verkoston. Torilla käyvä ihminen voi etsiä niin aterian raaka-aineita kuin vaatetta tai kotiin tarvittavaa tavaraa. Markkinoiden nimet kuuluvat samalla kaupungin paikalliseen suunnistukseen ja asukkaiden päivittäiseen arkeen.",
+          "teksti": "Mokolo ja Mfoundi ovat Yaoundén markkinapaikkoja, ja niiden rinnalla on keskustori sekä pienempiä kaupunginosamarkkinoita. Myynnissä on ruokaa, vaatteita, kenkiä ja kodin käyttöesineitä. Kaupungin katukauppaan kuuluvat myös maapähkinät ja juomat. Mokolo on keskustan itäpuolinen teollisuusalue. Keskustori sijaitsee samassa keskusta-alueessa kuin hallinnon virastot ja monet hotellit.",
           "wiki": "Yaoundé",
           "tiedosto": "",
           "lyhyt": "",
@@ -147,7 +147,7 @@
         },
         {
           "otsikko": "Koulutus jatkuu moneen ammattiin",
-          "teksti": "Yaoundén koulutustarjontaan kuuluvat Yaoundé I -yliopisto ja katolinen UCAC sekä opettaja-, insinööri- ja terveysalan koulutus. Yaoundé II:n kampus sijaitsee kaupungin ulkopuolella, joten oppilaitoksen nimi ei yksin kerro sen tarkkaa paikkaa. Koulutusjärjestelmissä on sekä ranskan- että englanninkielisiä linjoja. Pääkaupungin opiskeluelämä ulottuu näin erilaisiin laitoksiin ja ammatteihin. Samassa seudullisessa kokonaisuudessa koulutetaan luokkahuoneiden, tekniikan ja terveydenhuollon tulevia osaajia.",
+          "teksti": "Yaoundén koulutustarjontaan kuuluvat Yaoundé I -yliopisto ja katolinen UCAC sekä opettaja-, insinööri- ja terveysalan koulutus. Yaoundé II:n kampus sijaitsee kaupungin ulkopuolella. Koulutusjärjestelmissä on sekä ranskan- että englanninkielisiä linjoja. Kaupungissa toimii myös protestanttinen Keski-Afrikan yliopisto UPAC. Myös diplomaatteja koulutetaan kaupungissa.",
           "wiki": "Yaoundé",
           "tiedosto": "",
           "lyhyt": "",
@@ -156,7 +156,7 @@
         },
         {
           "otsikko": "Pääkaupungissa myös valmistetaan",
-          "teksti": "Yaoundén tuotannossa on maitotuotteita, olutta, savi- ja lasituotteita sekä puutavaraa. Kaupunki toimii myös alueellisena maataloustuotteiden jakelupaikkana, ja paikallisiin elinkeinoihin kuuluu kaupunkiviljelyä. Hallintokeskuksen arjessa näkyy siten virastojen lisäksi tavaroiden valmistamista ja käsittelyä. Eri tuotteet kertovat erilaisista materiaaleista ja työn vaiheista: ruoan valmistus, saven ja lasin käyttö sekä puutavaran työstäminen ovat osa kaupungin taloutta markkinakaupan ja koulutuksen rinnalla.",
+          "teksti": "Yaoundén tuotannossa on maitotuotteita, olutta, savi- ja lasituotteita sekä puutavaraa. Kaupunki toimii myös alueellisena maataloustuotteiden jakelupaikkana, ja paikallisiin elinkeinoihin kuuluu kaupunkiviljelyä. Yaoundésta jaetaan alueelle myös kahvia, kaakaota, kopraa, sokeriruokoa ja kumia. Paikalliseen teollisuuteen kuuluu lisäksi tupakkatuotteita.",
           "wiki": "Yaoundé",
           "tiedosto": "",
           "lyhyt": "",
@@ -171,7 +171,7 @@
           "selite": "",
           "lahde": ""
         },
-        "kappale": "Yaoundén maisemaan kuuluvat kukkulat, laaksot ja pienet vesiväylät. Markkinoilla näkyvät kaupungin arjen hankinnat. Fébé ja Eloundem kuuluvat pääkaupunkiseudun kukkulamaisemaan. Museon, puiston ja näköalapaikkojen nykyiset vierailumahdollisuudet selvitetään erikseen.",
+        "kappale": "Yaoundén maisemaan kuuluvat kukkulat, laaksot ja pienet vesiväylät. Markkinoilla näkyvät kaupungin arjen hankinnat. Fébé ja Eloundem kuuluvat pääkaupunkiseudun kukkulamaisemaan.",
         "artikkeli": {
           "nimi": "Matkailijan Yaoundé",
           "taitto": "opas",
@@ -180,7 +180,7 @@
           "jaksot": [
             {
               "otsikko": "Perille ja liikkeelle",
-              "teksti": "Yaoundé Nsimalen on kaupungin kansainvälinen lentoasema. Se on eri paikka kuin keskustan pienempi lentoasema. Kaupungissa liikutaan takseilla ja moottoripyörätakseilla; nykyiset yhteydet selvitetään matkan ajankohtana.",
+              "teksti": "Yaoundé Nsimalen on kaupungin kansainvälinen lentoasema. Se on eri paikka kuin keskustan pienempi lentoasema. Kaupungissa liikutaan takseilla ja moottoripyörätakseilla.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -190,7 +190,7 @@
             },
             {
               "otsikko": "Kukkulamaisemat",
-              "teksti": "Mont Fébé ja Mont Eloundem kuuluvat Yaoundén seudun kukkuloihin. Niiltä avautuvat kaupungin maisemat, mutta reittien nykyinen tila ja pääsy selvitetään erikseen. Alueen hotellit ja luostarit ovat omia vierailukohteitaan.",
+              "teksti": "Mont Fébé ja Mont Eloundem kuuluvat Yaoundén seudun kukkuloihin. Alueen hotellit ja luostarit ovat omia vierailukohteitaan.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -200,7 +200,7 @@
             },
             {
               "otsikko": "Vesi ja puusto",
-              "teksti": "Yaoundén kunnallinen järvi on tekojärvi hallintokeskuksen lähellä. Mvog-Betsin zoo-botaanisen puiston historiaan kuuluu tutkimus-, opetus- ja virkistystoimintaa. Ajantasainen pääsy ja puiston nykyinen toiminta selvitetään erikseen.",
+              "teksti": "Yaoundén kunnallinen järvi on tekojärvi hallintokeskuksen lähellä. Mvog-Betsin zoo-botaanisen puiston historiaan kuuluu tutkimus-, opetus- ja virkistystoimintaa.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -210,7 +210,7 @@
             },
             {
               "otsikko": "Mitä täällä syödään",
-              "teksti": "Kaupungin ruokatarjonnassa on paikallista ja ranskalaista ravintolaruokaa. Katumyynnissä ja ruokapaikoissa mainitaan leipä, paahdettu maissi, grillattu kala ja vartaat. Yksittäisen paikan tämänhetkinen tarjonta selvitetään paikan päällä.",
+              "teksti": "Kaupungin ruokatarjonnassa on paikallista ja ranskalaista ravintolaruokaa. Katumyynnissä ja ruokapaikoissa mainitaan leipä, paahdettu maissi, grillattu kala ja vartaat.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -220,7 +220,7 @@
             },
             {
               "otsikko": "Kaksi lentoasemaa",
-              "teksti": "Yaoundé Nsimalen on kansainvälinen lentoasema kaupungin ulkopuolella. Keskustaa palveleva pienempi lentoasema on eri paikka. Varmista saapumiskentän nimi ennen kyydin sopimista.",
+              "teksti": "Yaoundé Nsimalen on kansainvälinen lentoasema kaupungin ulkopuolella. Keskustaa palveleva pienempi lentoasema on eri paikka.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -259,12 +259,16 @@
             ],
             "hyvaTietaa": [
               {
-                "otsikko": "Ennen matkapäätöstä",
-                "teksti": "Tarkista Kamerunin ajantasainen matkustustiedote Suomen ulkoministeriöstä ja noudata sen ohjeita."
+                "otsikko": "Kaksi lentoasemaa",
+                "teksti": "Yaoundé Nsimalen on kansainvälinen lentoasema, keskustan pienempi lentoasema on eri paikka."
               },
               {
-                "otsikko": "Ennen matkapäätöstä",
-                "teksti": "Tarkista Kamerunin ajantasainen matkustustiedote Suomen ulkoministeriöstä ja noudata sen ohjeita."
+                "otsikko": "Mfoundi",
+                "teksti": "Mfoundijoki kulkee Yaoundén läpi."
+              },
+              {
+                "otsikko": "Markkinat",
+                "teksti": "Mokolo ja Mfoundi ovat kaupungin markkinapaikkoja."
               }
             ]
           },
@@ -290,7 +294,7 @@
       "nostot": [
         {
           "otsikko": "Nimitarinoita on useita",
-          "teksti": "Yaoundén nimi liittyy ewondo- eli yaunde-kansaan, ja vanhoissa kirjoitusasuissa esiintyvät myös Jaunde ja Jeundo. Suosittu kertomus selittää nimeä maapähkinän kylväjillä, mutta tätä nimitarinaa ei ole todistettu. Ongola-nimi puolestaan liittyy aitaukseen, ja siitäkin tunnetaan erilaisia paikallisia tulkintoja. Ongola on yhä kaupungista käytetty paikallinen nimitys Yaoundén rinnalla. Rinnakkaiset nimet ja kirjoitusasut kertovat paikallisen kielen sekä kaupungista kertomisen eri vaiheista.",
+          "teksti": "Yaoundén nimi liittyy ewondo- eli yaunde-kansaan, ja vanhoissa kirjoitusasuissa esiintyvät myös Jaunde ja Jeundo. Suosittu kertomus selittää nimeä maapähkinän kylväjillä, mutta tätä nimitarinaa ei ole todistettu. Ongola-nimi puolestaan liittyy aitaukseen, ja siitäkin tunnetaan erilaisia paikallisia tulkintoja. Ongola on yhä kaupungista käytetty paikallinen nimitys Yaoundén rinnalla.",
           "wiki": "Yaoundé",
           "tiedosto": "",
           "lyhyt": "",
@@ -299,7 +303,7 @@
         },
         {
           "otsikko": "Asemalla kerättiin näytteitä",
-          "teksti": "Yaoundén saksalainen asema perustettiin 1800-luvun lopulla paikallisten päälliköiden kanssa sovittuun paikkaan. Puutarhuri ja luonnontutkija Georg August Zenker osallistui aseman valmistelu- ja tutkimustyöhön. Hän kokosi kasvi- ja eläinaineistoa, ja näytteitä päätyi herbaarioihin. Aseman myöhempi rooli oli myös sotilaallinen. Varhainen luonnontutkimus kuuluu näin kaupungin historiaan, mutta paikalliset asukkaat olivat alueella jo ennen asemaa: tutkimuspaikan synty ei ollut seudun asutuksen alku.",
+          "teksti": "Yaoundén saksalainen asema perustettiin 1800-luvun lopulla paikallisten päälliköiden kanssa sovittuun paikkaan. Puutarhuri ja luonnontutkija Georg August Zenker osallistui aseman valmistelu- ja tutkimustyöhön. Hän kokosi kasvi- ja eläinaineistoa, ja näytteitä päätyi herbaarioihin. Aseman myöhempi rooli oli myös sotilaallinen. Zenker kokosi kasvien ja eläinten lisäksi kansatieteellistä aineistoa.",
           "wiki": "Georg August Zenker",
           "tiedosto": "",
           "lyhyt": "",
@@ -308,7 +312,7 @@
         },
         {
           "otsikko": "Asemasta hallintokaupungiksi",
-          "teksti": "Yaoundén historian vaiheisiin kuuluvat saksalainen asema, myöhempi ranskalainen hallintokeskus ja nykyisen Kamerunin pääkaupunkiasema. Kaupungin taloudessa hallinnon ja edustustojen työpaikoilla on oma roolinsa. Sisämaassa sijaitseva pääkaupunki on myös maantieteeltään erilainen kuin rannikon Douala. Hallintokeskuksen eri vaiheet eivät poista paikallista nimikerrosta, joka säilyy Yaoundén nimessä. Kaupunkia tarkastellessa kohtaavat siten seudun aiempi asutus, vaihtuneet hallintovaiheet ja nykyinen pääkaupungin tehtävä.",
+          "teksti": "Yaoundén historian vaiheisiin kuuluvat saksalainen asema, myöhempi ranskalainen hallintokeskus ja nykyisen Kamerunin pääkaupunkiasema. Kaupungin taloudessa hallinnon ja edustustojen työpaikoilla on oma roolinsa. Sisämaassa sijaitseva pääkaupunki on myös maantieteeltään erilainen kuin rannikon Douala. Ranskan hallintovaihe liittyi Kansainliiton mandaattialueeseen Kamerunin itäosassa.",
           "wiki": "Yaoundé",
           "tiedosto": "",
           "lyhyt": "",
@@ -317,7 +321,7 @@
         },
         {
           "otsikko": "Kokoelma ei synny kerralla",
-          "teksti": "Blackitude-museon yksityisen kulttuurikokoelman taustalla on Nana Agnèsin perheestä perittyä aineistoa sekä myöhempiä lahjoituksia ja hankintoja. Esineitä on eri Kamerunin alueilta, ja rakennusta on muokattu näyttelykäyttöön. Museon työhön kuuluu myös säilyttämistä ja restaurointia. Osa kokoelman kuvatuista esihistoriallisista työkaluista on kopioita. Museossa esineen tarinaan kuuluu siis myös kokoelman historia: mistä aineisto tuli, miten sitä on säilytetty ja onko esillä alkuperäinen esine vai sen jäljennös.",
+          "teksti": "Blackitude-museon yksityisen kulttuurikokoelman taustalla on Nana Agnèsin perheestä perittyä aineistoa sekä myöhempiä lahjoituksia ja hankintoja. Esineitä on eri Kamerunin alueilta, ja rakennusta on muokattu näyttelykäyttöön. Museon työhön kuuluu myös säilyttämistä ja restaurointia. Osa kokoelman kuvatuista esihistoriallisista työkaluista on kopioita.",
           "wiki": "Blackitude Museum",
           "tiedosto": "",
           "lyhyt": "",
@@ -366,7 +370,7 @@
   "nahtavyydet": {
     "Mont Fébé": {
       "aika": "Luonnonkukkula",
-      "teksti": "Mont Fébé on Kamerunin Centre-alueella, Mfoundin hallintoalueessa sijaitseva luonnonkukkula Yaoundén lähellä. Se kuuluu pääkaupunkiseudun kukkulamaisemaan, ja paikasta tunnetaan näkymä kaupunkiin. Sen ympäristössä on myös luostari, hotelli ja golfkenttä, jotka ovat luonnonpaikasta erillisiä rakennettuja ympäristöjä. Kukkula oli olemassa ennen nykyisen kaupungin kasvua. Vuonna 1873 täällä ei vielä ollut myöhemmin tutkimusasemasta kasvanutta kaupunkia.",
+      "teksti": "Mont Fébé on Kamerunin Centre-alueella, Mfoundin hallintoalueessa sijaitseva luonnonkukkula Yaoundén lähellä. Se kuuluu pääkaupunkiseudun kukkulamaisemaan, ja paikasta tunnetaan näkymä kaupunkiin.\n\nSen ympäristössä on myös luostari, hotelli ja golfkenttä, jotka ovat luonnonpaikasta erillisiä rakennettuja ympäristöjä. Kukkula oli olemassa ennen nykyisen kaupungin kasvua. Luostarin yhteydessä on myös pieni museo.",
       "kuvat": [
         {
           "tiedosto": "",
@@ -379,7 +383,7 @@
     },
     "Mont Eloundem": {
       "aika": "Luonnonkukkula",
-      "teksti": "Mont Eloundem sijaitsee Yaoundén lounaisessa lähialueessa, Mbankomon koillispuolella. Se kuuluu Kamerunin Centre-alueen ja Mfoundin hallintoalueen kukkulamaisemaan. Kukkulalta tunnetaan näkymä kaupunkiin, ja se liittyy pääkaupungin lounaispuolen erillisiin kalliokohoumiin. Eloundem on luonnonmuodostuma, joka edeltää Yaoundén tutkimusasemaa ja myöhempää pääkaupunkia. Vuonna 1873 nykyistä tutkimusasemasta kasvanutta kaupunkia ei vielä ollut. Kukkulan rinteet ja laaksot ovat osa Yaoundén ympäröivää maastoa, jossa asutus ja kasvillisuus vuorottelevat.",
+      "teksti": "Mont Eloundem sijaitsee Yaoundén lounaisessa lähialueessa, Mbankomon koillispuolella. Se kuuluu Kamerunin Centre-alueen ja Mfoundin hallintoalueen kukkulamaisemaan. Kukkulalta tunnetaan näkymä kaupunkiin, ja se liittyy pääkaupungin lounaispuolen erillisiin kalliokohoumiin.\n\nEloundem on luonnonmuodostuma, joka edeltää Yaoundén tutkimusasemaa ja myöhempää pääkaupunkia. Kukkulan rinteet ja laaksot ovat osa Yaoundén ympäröivää maastoa, jossa asutus ja kasvillisuus vuorottelevat.",
       "kuvat": [
         {
           "tiedosto": "",
@@ -392,7 +396,7 @@
     },
     "Yaoundén kunnallinen järvi": {
       "aika": "1900-luvun tekojärvi",
-      "teksti": "Yaoundén kunnallinen järvi on tekojärvi hallintokeskuksen lähellä. Se sijaitsee Atemenguen ylängön laaksossa vanhan hallinto- ja asuinalueen välissä. Järven hankehistoriassa mainitaan Georges Kyriakidès, ja vesialueeseen liittyi aikanaan veneilyä sekä vapaa-ajan käyttöä. Tämä järvi syntyi 1900-luvulla, joten sitä ei ollut vuoden 1873 maisemassa. Sen myöhempään historiaan kuuluu erilaisia kunnostus- ja uudistushankkeita.",
+      "teksti": "Yaoundén kunnallinen järvi on tekojärvi hallintokeskuksen lähellä. Se sijaitsee Atemenguen ylängön laaksossa vanhan hallinto- ja asuinalueen välissä. Kreikkalaissyntyinen kauppias Georges Kyriakidès ehdotti kaupungille järveä saatuaan lahjaksi perämoottoriveneen. Järvi rakennettiin 1900-luvun puolivälissä, ja myöhemmin Kyriakidèsin vene kulki sen vesillä.\n\nSen myöhempään historiaan kuuluu erilaisia kunnostus- ja uudistushankkeita.",
       "kuvat": [
         {
           "tiedosto": "",
@@ -405,7 +409,7 @@
     },
     "Mvog-Betsin zoo-botaaninen puisto": {
       "aika": "1900-luvun laitos",
-      "teksti": "Mvog-Betsin zoo-botaaninen puisto sijaitsee Yaoundé VI:n alueella. Sen historia alkoi elävien villieläinten pitopaikkana, ja toimintaan kuului myös karanteenitehtävä. Myöhemmin paikka siirtyi valtion hallintoon ja sen kunnostettuun toimintaan liitettiin tutkimusta, opetusta sekä virkistystä. Puisto on 1900-luvun laitos, joten sitä ei ollut vuonna 1873. Puiston vaiheisiin kuuluvat eläinten hoito, kasvien kasvattaminen, opetus ja luonnontutkimus.",
+      "teksti": "Mvog-Betsin zoo-botaaninen puisto sijaitsee Yaoundé VI:n alueella. Sen historia alkoi elävien villieläinten pitopaikkana, ja toimintaan kuului myös karanteenitehtävä.\n\nMyöhemmin paikka siirtyi valtion hallintoon ja sen kunnostettuun toimintaan liitettiin tutkimusta, opetusta sekä virkistystä. Puiston vaiheisiin kuuluvat eläinten hoito, kasvien kasvattaminen, opetus ja luonnontutkimus. Eläimistöön on kuulunut esimerkiksi kädellisiä ja suuria kissaeläimiä.",
       "kuvat": [
         {
           "tiedosto": "",
