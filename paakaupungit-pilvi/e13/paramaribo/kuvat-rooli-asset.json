@@ -3013,7 +3013,7 @@
         "sameImageExportSHA256": "db713574036433a12c063be4cdd55f5898526a6a43ace5cd708c871017a1c66b",
         "independentNativeQAEvidencePreserved": true,
         "independentTextResamplePending": true,
-        "captionChanged": true
+        "captionChanged": false
       }
     },
     {
@@ -3249,7 +3249,7 @@
         "sameImageExportSHA256": "00ebaf15eda6080ac5cdfc55c4e6354623b2ca4873a27bb235bb49c0cf513f78",
         "independentNativeQAEvidencePreserved": true,
         "independentTextResamplePending": true,
-        "captionChanged": true
+        "captionChanged": false
       }
     },
     {
@@ -3491,7 +3491,7 @@
         "sameImageExportSHA256": "c8a86f2ebaf96290bfceb8fa5649741a86a7517458d29b86711f83b1f2826885",
         "independentNativeQAEvidencePreserved": true,
         "independentTextResamplePending": true,
-        "captionChanged": true
+        "captionChanged": false
       }
     },
     {
@@ -3735,7 +3735,7 @@
         "sameImageExportSHA256": "c51944a2ace800be9e70b5bb8676dc0343ac7281d817563cd64ece34982abf7b",
         "independentNativeQAEvidencePreserved": true,
         "independentTextResamplePending": true,
-        "captionChanged": true
+        "captionChanged": false
       }
     },
     {
@@ -3977,7 +3977,7 @@
         "sameImageExportSHA256": "c57919ca412d5bbef098c02fedbaa7797ae87665132064ad5bc9cd87eda622c8",
         "independentNativeQAEvidencePreserved": true,
         "independentTextResamplePending": true,
-        "captionChanged": true
+        "captionChanged": false
       }
     },
     {
@@ -4226,9 +4226,9 @@
   "task118TextRevision": true,
   "independentTextResamplePending": true,
   "textAcceptanceVerified": false,
-  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task228/immutable-media-history/e13/paramaribo/f2a5c2dfac0ca73e6dca9ccb2193ebef7c9545fe437ec2517c834e7da80c5c1a.json",
+  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task228/immutable-media-history/e13/paramaribo/287347614da9712a289327bdf24da919636632d05502152ea1dfafb18b862092.json",
   "task118ReboundAt": "2026-10-13T16:31:26.559708+00:00",
   "task228ExcludedAssets": [],
   "task228TextRevision": true,
-  "task228ReboundAt": "2026-10-13T18:32:54.213747+00:00"
+  "task228ReboundAt": "2026-10-13T19:32:48.983231+00:00"
 }

@@ -2823,7 +2823,7 @@
         "sameImageExportSHA256": "afcc89f35623f93067d7533794c9e0761a0213cb6f8c85559a18fd5401790daa",
         "independentNativeQAEvidencePreserved": true,
         "independentTextResamplePending": true,
-        "captionChanged": true
+        "captionChanged": false
       }
     }
   ],
@@ -2836,9 +2836,9 @@
   "task118TextRevision": true,
   "independentTextResamplePending": true,
   "textAcceptanceVerified": false,
-  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task228/immutable-media-history/e13/santiagodechile/42f7d0de6235d487002d3622cfca12f577b367d7e20962530df4626ddb49f5fa.json",
+  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task228/immutable-media-history/e13/santiagodechile/32caefef9751e6f9b9077b74a42848b08a023712f045f50b4631648df49836b8.json",
   "task118ReboundAt": "2026-10-13T16:31:26.585543+00:00",
   "task228ExcludedAssets": [],
   "task228TextRevision": true,
-  "task228ReboundAt": "2026-10-13T18:32:54.240487+00:00"
+  "task228ReboundAt": "2026-10-13T19:32:49.010133+00:00"
 }

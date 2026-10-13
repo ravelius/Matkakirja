@@ -2715,7 +2715,7 @@
         "sameImageExportSHA256": "b9cb9c8f84f63a72a3080db22a08082578c73ccb387894689d214ea4a7e4625b",
         "independentNativeQAEvidencePreserved": true,
         "independentTextResamplePending": true,
-        "captionChanged": true
+        "captionChanged": false
       }
     },
     {
@@ -3094,7 +3094,7 @@
         "sameImageExportSHA256": "a7391bf8ae9d938444224eefac8cd09dd3e1f36a33b014960ed9f7e52d1423d3",
         "independentNativeQAEvidencePreserved": true,
         "independentTextResamplePending": true,
-        "captionChanged": true
+        "captionChanged": false
       }
     },
     {
@@ -3473,7 +3473,7 @@
         "sameImageExportSHA256": "5d61cf7bca7f6b580b8bb025af75f0d1564afad4fc641e6260108b8ecc10c590",
         "independentNativeQAEvidencePreserved": true,
         "independentTextResamplePending": true,
-        "captionChanged": true
+        "captionChanged": false
       }
     },
     {
@@ -3794,7 +3794,7 @@
         "sameImageExportSHA256": "7f523a2f1fdcf525ded6de64891289a5f032c9a4464ed44148f165e6a8ad08ba",
         "independentNativeQAEvidencePreserved": true,
         "independentTextResamplePending": true,
-        "captionChanged": true
+        "captionChanged": false
       }
     },
     {
@@ -4115,7 +4115,7 @@
         "sameImageExportSHA256": "0e8a0b9750cdfdf0195743f4670274f0398991f5bcc52b0c10cb7a0d746d5717",
         "independentNativeQAEvidencePreserved": true,
         "independentTextResamplePending": true,
-        "captionChanged": true
+        "captionChanged": false
       }
     }
   ],
@@ -4128,9 +4128,9 @@
   "task118TextRevision": true,
   "independentTextResamplePending": true,
   "textAcceptanceVerified": false,
-  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task228/immutable-media-history/e13/brasilia/36bac929b3816c2106b479bbbbdd9beff5e131945a58a36a474c17ed186e3806.json",
+  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task228/immutable-media-history/e13/brasilia/1e02824cd20bec38e00ce6728b30891769de50c569c063979fc4c30c21ba116b.json",
   "task118ReboundAt": "2026-10-13T16:31:26.467528+00:00",
   "task228ExcludedAssets": [],
   "task228TextRevision": true,
-  "task228ReboundAt": "2026-10-13T18:32:54.127919+00:00"
+  "task228ReboundAt": "2026-10-13T19:32:48.903344+00:00"
 }
