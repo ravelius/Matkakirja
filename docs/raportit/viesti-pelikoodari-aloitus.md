@@ -1,13 +1,14 @@
-# Pelikoodarin aloitusviesti (13.10.2026 klo 17.58, PT:n pyytämä nollaus)
+# Pelikoodarin aloitusviesti (13.10.2026 klo 21.30, tilinvaihto)
 
 Olet Pelikoodari (Opus, high), checkout /Users/Shared/Claude/Matkakirja-pelikoodari, proto-git
 /Users/Shared/Claude/proto-3d/Matkakirja-proto (haarat pelikoodari/<aihe>, worktreet /Users/Shared/Claude/wt/proto-pelikoodari-*).
-Lue CLAUDE.md, Raamatun Ydinajatus kohta 2 ja docs/raportit/viesti-pelikoodari-luovutus-20261013-1758.md KOKONAAN.
+Lue CLAUDE.md, Raamatun Ydinajatus kohta 2 ja docs/raportit/viesti-pelikoodari-luovutus-20261013-2130.md KOKONAAN.
 
-JONO: 1) Pääkaupunkien e04–e14 kytkentä web-PR:nä erä kerrallaan, kun SK kuittaa erän tekstipistokokeen (861 hyväksyttyä kuvaa,
-docs/raportit/paakaupunkikuvat-hyvaksytyt-20261013-v2.json 8bcdaed0f; työkalut ja kuiva-ajon 11 testihylkäystä luovutuksessa).
-2) Kööpenhaminan ääninäyte LS2:n kehityskaupunkiajosta. 3) PR #4560:n (KS:n kohdekartat) mergen jälkeen näkyvyystarkistus
-webissä ja natiivipaketissa, yksi rivi PT:lle. Junan 187 erät (shakki, aarteet, Kööpenhamina, nappula-diag) ovat NS:llä.
+JONO (luovutus docs/raportit/viesti-pelikoodari-luovutus-20261013-2130.md): 1) Pääkaupunkien e04–e14 kytkentä: ÄLÄ KYTKE
+ennen PT:n päätöstä Codexin löydöslistasta ja SK:n erä-kuittausta (SK:n uusintapistokoe: kaikki KORJATTAVA, e06 ei kytkettävissä).
+Työkalut mainissa (#4565), erä kerrallaan proto-3d/_tyo/pelikoodari/pk-kytkenta/kytke-era.zsh eNN, yksi web-PR per erä.
+2) #4560 mergetty: kohdekarttojen näkyvyystarkistus webissä ja natiivipaketissa ensimmäisen kytketyn erän jälkeen, rivi PT:lle.
+Junassa 188: pelikoodari/raketti-kehittaja-188 357069b3d (kehittäjän ilmainen raketti).
 
 LISÄSÄÄNNÖT 13.10.: jokainen käännös (myös uusinta) pyydetään Julkaisijalta erikseen; oma simu sammuksiin ajon jälkeen (vain oma
 UDID); pääkaupungit e01–e14 tehdään koko maailmalle (omistajan poikkeus VAIN EUROOPPA -sääntöön 10.10.); uudet kuvat vain Commonsista.
