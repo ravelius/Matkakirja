@@ -1,6 +1,6 @@
 # Euroopan uudet saapumisintroaiheet — osa 2/2, 13.10.2026
 
-23 QA/R2-varmennettua kuvaa toimitettu, 5 perusteltua lopullista poisjättöä. Käsitelty 28/47 tämän osan nimetyistä kuvista; 28 generointikutsua. Tilaus on kesken, kun kaikki nimetyt kohteet eivät vielä ole käsitelty.
+24 QA/R2-varmennettua kuvaa toimitettu, 6 perusteltua lopullista poisjättöä. Käsitelty 30/47 tämän osan nimetyistä kuvista; 30 generointikutsua. Tilaus on kesken, kun kaikki nimetyt kohteet eivät vielä ole käsitelty.
 
 Koko laajennus käsittää 95 nimettyä kuvaa (#133–227): osa 1 sisältää 48 ja osa 2 47 kuvaa. Aiempi 88+1 arvio ei korvaa lähteiden nimettyä inventaariota. Yksi uusi sisäänrakennettu generointi per kuva; ei uusintoja, vertailuottoja, inpaintingia tai rajauksia.
 
@@ -45,6 +45,13 @@ Manifesti: `posti/kuvatoimitus-saapumisintro-dubrovnik-uudet-6-8-20261013.json`.
 
 - #191, slot 6: Dubrovnikin Vanhakaupunki ja Lokrum Srđ-kukkulan näköalatasanteelta etelään päivällä. Havainnekuva.
 - #192, slot 8: Dubrovnikin köysirata Srđ-kukkulan kalkkikivirinteen yllä, vaunu liikkeessä. Havainnekuva.
+
+## KIOVA
+
+Manifesti: `posti/kuvatoimitus-saapumisintro-kyiv-uudet-6-8-20261013.json`. Toimitettu 1/2; kutsuja 2.
+
+- #193, slot 6: Kiovan Dnipr-joki, vasen ranta ja Trukhanivin saari Volodymyrin kukkulalta itä-kaakkoon päivällä. Havainnekuva.
+- Poisjättö #194, slot 8: Raiteet laskevat kuvan vasemmasta yläosasta oikealle alas. Siksi ylöspäin kulku olisi oikealta vasemmalle; se ei täytä lähteen nimenomaista vasemmalta oikealle ylöspäin -ohjetta. Kuvaa ei peilata eikä korjata uudella generoinnilla.
 
 ## KRAKOVA
 

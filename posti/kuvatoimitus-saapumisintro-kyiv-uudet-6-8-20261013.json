@@ -1,0 +1,192 @@
+{
+  "schemaVersion": 1,
+  "cityName": "KIOVA",
+  "gameCityId": "kiova",
+  "mediaSlug": "kyiv",
+  "taskNumbers": [
+    193,
+    194
+  ],
+  "updatedAt": "2026-10-13T19:55:39.691771+00:00",
+  "sourcePath": "posti/fable-codex-saapumisintro-uudet-6-8-loput-2-20261013.md",
+  "sourceCommit": "dbdaff9a39fa0e5052f176c890c85836e1a69a1f",
+  "sourceBlob": "2e5adc4cb04a23fcb4cd8fdd75426ac78afdcc9d",
+  "sourceReadInFull": true,
+  "sourceReadBy": "/root/intro_owner_rejection_inventory",
+  "sourceReadReceiptPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/source-read-receipt.json",
+  "assets": [
+    {
+      "taskNumber": 193,
+      "mediaSlug": "kyiv",
+      "slot": 6,
+      "filename": "kyiv-6-nakoala-intro-v1.png",
+      "title": "koko kaupunki tunnetulta näköalapaikalta päivällä — Kiovan Dnipr-joki, vasen ranta ja Trukhanivin saari Volodymyrin kukkulalta itä-kaakkoon päivällä.",
+      "fullDeliveryRequirement": "**6 / koko kaupunki tunnetulta näköalapaikalta päivällä — Kiovan Dnipr-joki, vasen ranta ja Trukhanivin saari Volodymyrin kukkulalta itä-kaakkoon päivällä.** Tiedosto `kyiv-6-nakoala-intro-v1.png`.\nMitä kuvataan: Kiovan kaupunki ja Dnipr-joki päivänvalossa Volodymyrin kukkulan (Volodymyrska hirka) ylätasanteelta nähtynä: etualalla vehreä, puiden peittämä jyrkkä jokirinne ja tasanteen reuna lehtipuineen (kastanjat, vaahterat, lehmukset), rinteen alla kaukana matalia kerrostalojen ja liikerakennusten kattoja sekä rantatie pienenä; keskellä Dnipr-joen leveä sinertävänharmaa vesi, jolla muutama pieni kaukainen vene; vastarannalla Trukhanivin saaren takana Kiovan vasen ranta leveänä kaupunkinauhana: vaaleita ja harmaita asuinkerrostaloja eri korkuisina, matalampia kortteleita ja puiden vihreää välissä; joen takana ja oikealla Trukhanivin saari matalana, metsäisenä ja hiekkarantaisena nauhana, jonka takana kaukana horisontissa vaaleita kerrostaloja. Kaupunki, joki ja saari jakavat kuvan suunnilleen tasan. Värikuva, nykyaika, ei ihmisiä lähellä (korkeintaan yksittäisiä pieniä hahmoja kaukana rannalla). Kulma: vaakakuva, tasanteen reunalta ja hieman koholta, kamera suunnattu itä-kaakkoon (suunta noin 100 astetta; näkökulma enintään noin 60 astetta, eli kuvassa on suuntia noin 70–130 astetta). Vasemmassa laidassa avoin vesi ja kaukainen vasen ranta, keskellä Dnipr-joen leveä virta, oikeassa laidassa Trukhanivin saari (saaren suunta noin 70-130 astetta). Pohjoisessa oleva Podil ja kaakossa oleva Pecherskin kukkulan Lavra-alue sekä sen takana oleva korkea monumentti jäävät kuvan ulkopuolelle: oikea reuna päättyy Trukhanivin saareen eikä siitä eteenpäin kaakkoon. Valo: kirkas päivä, pehmeä keskipäivän tai iltapäivän valo, hieman pilviä, luonnolliset vaimeat värit, ei HDR:ää. Ei saa näkyä: mitään sota- tai propagandakuvastoa, lippuja, sotilaita, sotilasajoneuvoja, sota-aiheisia tai neuvostoaikaisia muistomerkkejä, ei Isänmaan äiti -patsasta, ei Kansojen ystävyyden kaarta tai muuta isoa teräs- tai pronssiveistosta, ei Volodymyr Suuren patsasta eikä muitakaan patsaita, ei kirkkoja tai kupoleita erottuvina, ei pilvenpiirtäjiä, ei tekstiä, kylttejä, mainoksia, logoja, vesileimaa eikä kehystä, ei siltoja (ei lasista jalankulkusiltaa eikä Dnipr-siltoja) erottuvina, ei kaidetta tai verkkoaitaa lähietualalla, ei kasvoja. Fotorealistinen havainnekuva, vaimeat värit, 1536 x 1024.\nKuvateksti-ehdotus (loppuu sanaan Havainnekuva.): Kiovan Dnipr-joki, vasen ranta ja Trukhanivin saari Volodymyrin kukkulalta itä-kaakkoon päivällä. Havainnekuva.\n\n",
+      "sourceVersions": [
+        {
+          "path": "posti/fable-codex-saapumisintro-uudet-6-8-loput-2-20261013.md",
+          "commit": "dbdaff9a39fa0e5052f176c890c85836e1a69a1f",
+          "blob": "2e5adc4cb04a23fcb4cd8fdd75426ac78afdcc9d",
+          "readInFull": true
+        }
+      ],
+      "ownerThreadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+      "hostId": "local",
+      "generationCap": 1,
+      "status": "QA-R2-delivered-for-PT-review",
+      "productionStarted": false,
+      "delivered": true,
+      "city": "KIOVA",
+      "gameID": "kiova",
+      "part": 2,
+      "sourceBlob": "2e5adc4cb04a23fcb4cd8fdd75426ac78afdcc9d",
+      "sourceCommit": "dbdaff9a39fa0e5052f176c890c85836e1a69a1f",
+      "sourcePath": "posti/fable-codex-saapumisintro-uudet-6-8-loput-2-20261013.md",
+      "sourceNasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/sources/fable-codex-saapumisintro-uudet-6-8-loput-2-20261013.md",
+      "sourceCharacterSpan": [
+        31487,
+        34050
+      ],
+      "sourceByteSpan": [
+        32668,
+        35325
+      ],
+      "fullDeliveryRequirementSHA256": "1e75a6568c69907d48cf5a7618d8f4645721ebf55ec1675d7ba8bdf61c8057da",
+      "fullDirective": "Kiovan kaupunki ja Dnipr-joki päivänvalossa Volodymyrin kukkulan (Volodymyrska hirka) ylätasanteelta nähtynä: etualalla vehreä, puiden peittämä jyrkkä jokirinne ja tasanteen reuna lehtipuineen (kastanjat, vaahterat, lehmukset), rinteen alla kaukana matalia kerrostalojen ja liikerakennusten kattoja sekä rantatie pienenä; keskellä Dnipr-joen leveä sinertävänharmaa vesi, jolla muutama pieni kaukainen vene; vastarannalla Trukhanivin saaren takana Kiovan vasen ranta leveänä kaupunkinauhana: vaaleita ja harmaita asuinkerrostaloja eri korkuisina, matalampia kortteleita ja puiden vihreää välissä; joen takana ja oikealla Trukhanivin saari matalana, metsäisenä ja hiekkarantaisena nauhana, jonka takana kaukana horisontissa vaaleita kerrostaloja. Kaupunki, joki ja saari jakavat kuvan suunnilleen tasan. Värikuva, nykyaika, ei ihmisiä lähellä (korkeintaan yksittäisiä pieniä hahmoja kaukana rannalla). Kulma: vaakakuva, tasanteen reunalta ja hieman koholta, kamera suunnattu itä-kaakkoon (suunta noin 100 astetta; näkökulma enintään noin 60 astetta, eli kuvassa on suuntia noin 70–130 astetta). Vasemmassa laidassa avoin vesi ja kaukainen vasen ranta, keskellä Dnipr-joen leveä virta, oikeassa laidassa Trukhanivin saari (saaren suunta noin 70-130 astetta). Pohjoisessa oleva Podil ja kaakossa oleva Pecherskin kukkulan Lavra-alue sekä sen takana oleva korkea monumentti jäävät kuvan ulkopuolelle: oikea reuna päättyy Trukhanivin saareen eikä siitä eteenpäin kaakkoon. Valo: kirkas päivä, pehmeä keskipäivän tai iltapäivän valo, hieman pilviä, luonnolliset vaimeat värit, ei HDR:ää. Ei saa näkyä: mitään sota- tai propagandakuvastoa, lippuja, sotilaita, sotilasajoneuvoja, sota-aiheisia tai neuvostoaikaisia muistomerkkejä, ei Isänmaan äiti -patsasta, ei Kansojen ystävyyden kaarta tai muuta isoa teräs- tai pronssiveistosta, ei Volodymyr Suuren patsasta eikä muitakaan patsaita, ei kirkkoja tai kupoleita erottuvina, ei pilvenpiirtäjiä, ei tekstiä, kylttejä, mainoksia, logoja, vesileimaa eikä kehystä, ei siltoja (ei lasista jalankulkusiltaa eikä Dnipr-siltoja) erottuvina, ei kaidetta tai verkkoaitaa lähietualalla, ei kasvoja. Fotorealistinen havainnekuva, vaimeat värit, 1536 x 1024.",
+      "caption": "Kiovan Dnipr-joki, vasen ranta ja Trukhanivin saari Volodymyrin kukkulalta itä-kaakkoon päivällä. Havainnekuva.",
+      "sourceReadInFullVerified": true,
+      "mappingBlockExactSourceMatch": true,
+      "r2Prefix": "julisteet/saapumisintro/kyiv/20261013-uudet-6-8/",
+      "deliveryManifestPath": "posti/kuvatoimitus-saapumisintro-kyiv-uudet-6-8-20261013.json",
+      "partDeliveryReportPath": "posti/codex-fable-saapumisintro-uudet-6-8-loput-2-20261013.md",
+      "generationCallsRecorded": 0,
+      "qaAcceptedVerified": true,
+      "r2BytesVerified": true,
+      "mailboxDeliveryVerified": false,
+      "ownerAcceptanceVerified": false,
+      "acceptanceRoute": "PT acts for owner; source authorizes direct delivery. Actual PT acceptance remains evidence-dependent.",
+      "gameIntegrated": false,
+      "published": false,
+      "r2Key": "julisteet/saapumisintro/kyiv/20261013-uudet-6-8/kyiv-6-nakoala-intro-v1.png",
+      "historical": false,
+      "id": "kyiv-6-nakoala-intro-v1",
+      "sourceReadInFull": true,
+      "cityName": "KIOVA",
+      "gameCityId": "kiova",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/kyiv/native-6.png",
+      "nativeSHA256": "f3a490530ccef7fffca9c9ce54beb62feaf49e8c1cd0b061690f896f15762389",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/kyiv/kyiv-6-nakoala-intro-v1.png",
+      "workspacePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/eurooppa-introt-uudet68-loput-20261013/kyiv/kyiv-6-nakoala-intro-v1.png",
+      "sha256": "c89d64d00593b91532ddb0dd7afd429aa120fc797198314c413efad5cf72a3bf",
+      "width": 1536,
+      "height": 1024,
+      "opaque": true,
+      "sRGB": true,
+      "neutralGrayscale": false,
+      "pixelIdentityAfterMetadataExport": true,
+      "pixelIdentityToNative": true,
+      "historicalGrayscaleEncodingNormalized": false,
+      "exportProcessing": "Metadata/sRGB only; pixels unchanged",
+      "generationPrompt": "Use case: photorealistic-natural.\nAsset: one NEW current-day full-color camera-photograph-like European city arrival image, exactly 1536 x 1024 pixels, landscape 3:2, opaque PNG. One image only, no collage or contact sheet.\nSubject: koko kaupunki tunnetulta näköalapaikalta päivällä — Kiovan Dnipr-joki, vasen ranta ja Trukhanivin saari Volodymyrin kukkulalta itä-kaakkoon päivällä.\n\nEXACT SCENE, VIEWPOINT, GEOMETRY, LIGHT AND EXCLUSIONS (the following Finnish source description is the controlling composition brief; follow every detail including bearing/FOV, relative left/right position, travel direction, scale, and exclusions):\nKiovan kaupunki ja Dnipr-joki päivänvalossa Volodymyrin kukkulan (Volodymyrska hirka) ylätasanteelta nähtynä: etualalla vehreä, puiden peittämä jyrkkä jokirinne ja tasanteen reuna lehtipuineen (kastanjat, vaahterat, lehmukset), rinteen alla kaukana matalia kerrostalojen ja liikerakennusten kattoja sekä rantatie pienenä; keskellä Dnipr-joen leveä sinertävänharmaa vesi, jolla muutama pieni kaukainen vene; vastarannalla Trukhanivin saaren takana Kiovan vasen ranta leveänä kaupunkinauhana: vaaleita ja harmaita asuinkerrostaloja eri korkuisina, matalampia kortteleita ja puiden vihreää välissä; joen takana ja oikealla Trukhanivin saari matalana, metsäisenä ja hiekkarantaisena nauhana, jonka takana kaukana horisontissa vaaleita kerrostaloja. Kaupunki, joki ja saari jakavat kuvan suunnilleen tasan. Värikuva, nykyaika, ei ihmisiä lähellä (korkeintaan yksittäisiä pieniä hahmoja kaukana rannalla). Kulma: vaakakuva, tasanteen reunalta ja hieman koholta, kamera suunnattu itä-kaakkoon (suunta noin 100 astetta; näkökulma enintään noin 60 astetta, eli kuvassa on suuntia noin 70–130 astetta). Vasemmassa laidassa avoin vesi ja kaukainen vasen ranta, keskellä Dnipr-joen leveä virta, oikeassa laidassa Trukhanivin saari (saaren suunta noin 70-130 astetta). Pohjoisessa oleva Podil ja kaakossa oleva Pecherskin kukkulan Lavra-alue sekä sen takana oleva korkea monumentti jäävät kuvan ulkopuolelle: oikea reuna päättyy Trukhanivin saareen eikä siitä eteenpäin kaakkoon. Valo: kirkas päivä, pehmeä keskipäivän tai iltapäivän valo, hieman pilviä, luonnolliset vaimeat värit, ei HDR:ää. Ei saa näkyä: mitään sota- tai propagandakuvastoa, lippuja, sotilaita, sotilasajoneuvoja, sota-aiheisia tai neuvostoaikaisia muistomerkkejä, ei Isänmaan äiti -patsasta, ei Kansojen ystävyyden kaarta tai muuta isoa teräs- tai pronssiveistosta, ei Volodymyr Suuren patsasta eikä muitakaan patsaita, ei kirkkoja tai kupoleita erottuvina, ei pilvenpiirtäjiä, ei tekstiä, kylttejä, mainoksia, logoja, vesileimaa eikä kehystä, ei siltoja (ei lasista jalankulkusiltaa eikä Dnipr-siltoja) erottuvina, ei kaidetta tai verkkoaitaa lähietualalla, ei kasvoja. Fotorealistinen havainnekuva, vaimeat värit, 1536 x 1024.\n\nFinal photographic requirements: Natural real-camera appearance with restrained ordinary exposure, soft realistic light and subdued COLOR; this is PRESENT DAY, not a historical reconstruction and not a youth party. Respect the exact stated transport form and uniformly neutral unmarked paint. Do not restore brand colors, stripes, vehicle identifiers, flags, signs, letters, numbers, logos, advertisements or clothing trademarks. Faces remain tiny anonymous silhouettes or back-facing at a distance as specified. No extra landmarks, sculpture, architecture, vehicles or geographic features beyond those the controlling description allows. Correct real-looking structural geometry and coherent physics. Irregular leaves, non-repeating water ripples, naturally varying worn stone/plaster, realistic glass and metal; no plastic AI surfaces, pattern stamping, HDR, cinematic oversaturation or CGI look. Any locomotive or boat motion is shown only as described, never with added drawn motion graphics. Frame native 1536 x 1024 from the start; do not create any in-image caption, disclaimer, filename, overlay, UI, frame or watermark.\n",
+      "sourceReadReceiptPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/source-read-receipt.json",
+      "references": [
+        {
+          "kind": "authorized-scene-commission",
+          "path": "posti/fable-codex-saapumisintro-uudet-6-8-loput-2-20261013.md",
+          "commit": "dbdaff9a39fa0e5052f176c890c85836e1a69a1f",
+          "blob": "2e5adc4cb04a23fcb4cd8fdd75426ac78afdcc9d",
+          "use": "Exact assigned source card read in full. Camera direction, FOV, landmark positions, transport geometry and exclusions are preserved; this is commission evidence, not a separate visual photograph reference."
+        }
+      ],
+      "url": "https://media.matkakirja.app/julisteet/saapumisintro/kyiv/20261013-uudet-6-8/kyiv-6-nakoala-intro-v1.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/kyiv/20261013-uudet-6-8/kyiv-6-nakoala-intro-v1.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "QA": {
+        "slot": 6,
+        "taskNumber": 193,
+        "assetID": "kyiv-6-nakoala-intro-v1",
+        "targetJsonPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/kyiv/asset-6.json",
+        "nativeSHA256": "f3a490530ccef7fffca9c9ce54beb62feaf49e8c1cd0b061690f896f15762389",
+        "finalSHA256": "c89d64d00593b91532ddb0dd7afd429aa120fc797198314c413efad5cf72a3bf",
+        "verdict": "accepted",
+        "reason": "Leveä Dnipr, metsäinen saari oikealla ja vasemman rannan asuinkerrostalovyöhyke, vehreä jokirinne. Ei tunnistettavia kiellettyjä muistomerkkejä, siltoja, kupoleita, lippuja tai sotakuvastoa. Kaupunki on tasajakoa kapeampi taustanauha; sommitteluraja kirjattu eikä panoraaman suuntaa väitetä mitatuksi.",
+        "reviewer": "/root",
+        "reviewedAt": "2026-10-13T19:55:15.238769+00:00",
+        "nativeViewedInFull": true,
+        "assignedSourceCardReadInFull": true,
+        "nativePixelsEqualFinalVerified": true,
+        "technicalPassed": true,
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "published": false
+      },
+      "R2Proof": {
+        "slot": 6,
+        "r2Key": "julisteet/saapumisintro/kyiv/20261013-uudet-6-8/kyiv-6-nakoala-intro-v1.png",
+        "url": "https://media.matkakirja.app/julisteet/saapumisintro/kyiv/20261013-uudet-6-8/kyiv-6-nakoala-intro-v1.png",
+        "sha256": "c89d64d00593b91532ddb0dd7afd429aa120fc797198314c413efad5cf72a3bf",
+        "nativeSHA256": "f3a490530ccef7fffca9c9ce54beb62feaf49e8c1cd0b061690f896f15762389",
+        "bytes": 2718043,
+        "readbacks": [
+          {
+            "http": 200,
+            "byteExact": true,
+            "sha256": "c89d64d00593b91532ddb0dd7afd429aa120fc797198314c413efad5cf72a3bf",
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "cacheBusted": false
+          },
+          {
+            "http": 200,
+            "byteExact": true,
+            "sha256": "c89d64d00593b91532ddb0dd7afd429aa120fc797198314c413efad5cf72a3bf",
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "cacheBusted": true
+          }
+        ],
+        "byteExactReadback": true,
+        "verifiedAt": "2026-10-13T19:55:39.608280+00:00"
+      },
+      "FableReceiptVerified": false
+    }
+  ],
+  "omittedItems": [
+    {
+      "taskNumber": 194,
+      "slot": 8,
+      "reason": "Raiteet laskevat kuvan vasemmasta yläosasta oikealle alas. Siksi ylöspäin kulku olisi oikealta vasemmalle; se ei täytä lähteen nimenomaista vasemmalta oikealle ylöspäin -ohjetta. Kuvaa ei peilata eikä korjata uudella generoinnilla.",
+      "stage": "independent-QA",
+      "additionalGenerationAllowed": false,
+      "nativeSHA256": "3d12a0bbf87c7ca65f31cd93165867d691ba0858fa09395e19c8fbc5ea261c4a",
+      "finalSHA256": "0a2217fb8fae55d03c9081cda54ecd1055e9c3c211f8464ee85328b572f4b630"
+    }
+  ],
+  "actualCalls": 2,
+  "maximumGenerationCalls": 2,
+  "allRequestedItemsHandled": true,
+  "allRequestedImagesDelivered": false,
+  "productionCompleteWithinSourceLimit": true,
+  "directMailboxDeliveryAuthorized": true,
+  "acceptanceRoute": "Päätoimittaja reviews on the owner authority in the exact source. This authorization is not yet an actual acceptance receipt.",
+  "ownerAcceptanceVerified": false,
+  "FableReceiptVerified": false,
+  "gameIntegrated": false,
+  "published": false,
+  "oldFiveApprovedPilotImagesPreserved": true,
+  "oldCelebrationAnd1873TopicsRemainWithdrawn": true,
+  "existingHeroSlotsPreserved": [
+    1,
+    2,
+    3
+  ],
+  "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+  "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+  "newTopics": {
+    "6": "daytime-city-panorama",
+    "8": "local-transport-in-motion"
+  }
+}
