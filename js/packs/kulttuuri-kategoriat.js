@@ -2863,6 +2863,19 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           /*
+           * SAAPUMISINTRON KUVA 6 (näköalakuva, 13.10.2026, Codex eurooppa-introt-uudet68,
+           * PT hyväksyi omistajan puolesta): havainnekuva, tekstit tarkistettu
+           * kahdella Sonnet-vaiheella.
+           */
+          ampari: 'saapumisintro/vienna/20261013-uudet-6-8/vienna-6-nakoala-intro-v1.png',
+          lyhyt: 'Kahlenbergin terassilta näkee Tonavan, Tonavatornin ja Tapanin tuomiokirkon.',
+          selite: 'Kahlenberg on 484 metriä korkea kukkula Wienin pohjoisreunalla, ja sen '
+            + 'näköalaterassille pääsee bussilla 38A. Sieltä näkee Tonavan, Tonavatornin ja Pyhän '
+            + 'Tapanin tuomiokirkon.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          /*
            * SAAPUMISINTRON KUVA 7 (13.10.2026, Codex eurooppa-introt-kaikki,
            * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
            * kahdella Sonnet-vaiheella.
@@ -2872,6 +2885,18 @@ export const KULTTUURI_KATEGORIAT = {
             + 'syntymäkoti.',
           selite: 'Amerling syntyi talossa osoitteessa Stiftgasse 8 vuonna 1803. Talossa on '
             + 'toiminut vuodesta 1978 kulttuuri- ja asukaskeskus.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          /*
+           * SAAPUMISINTRON KUVA 8 (kulkuneuvokuva, 13.10.2026, Codex eurooppa-introt-uudet68,
+           * PT hyväksyi omistajan puolesta): havainnekuva, tekstit tarkistettu
+           * kahdella Sonnet-vaiheella.
+           */
+          ampari: 'saapumisintro/vienna/20261013-uudet-6-8/vienna-8-kulkuneuvo-intro-v1.png',
+          lyhyt: 'Wienin sähköraitiovaunut ovat ajaneet vuodesta 1897 ja kiertävät osin Ringiä.',
+          selite: 'Wienin sähköraitiovaunut aloittivat liikenteen 28.1.1897, ja verkko on yksi maailman '
+            + 'suurimmista. Useat linjat kulkevat osan matkaa Ringstrassea pitkin.',
           lahde: 'Matkakirjan havainnekuva',
         },
       ],
@@ -5204,6 +5229,18 @@ export const KULTTUURI_KATEGORIAT = {
             + 'vihanneksistaan.',
           selite: 'Saaren tasainen, hedelmällinen maa on tuottanut Venetsialle vihanneksia '
             + 'vuosisatojen ajan. Tunnetuin tuote on pieni violetti artisokka.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          /*
+           * SAAPUMISINTRON KUVA 6 (näköalakuva, 13.10.2026, Codex eurooppa-introt-uudet68,
+           * PT hyväksyi omistajan puolesta): havainnekuva, tekstit tarkistettu
+           * kahdella Sonnet-vaiheella.
+           */
+          ampari: 'saapumisintro/venice/20261013-uudet-6-8/venice-6-nakoala-intro-v1.png',
+          lyhyt: 'San Giorgio Maggioren kellotornista näkyy San Marcon allas ja Dogen palatsi.',
+          selite: 'San Giorgio Maggioren kellotorniin pääsee hissillä tai portaita pitkin. Ylhäältä '
+            + 'näkyy veden yli Dogen palatsi ja San Marcon alue sekä laguuni.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
@@ -8915,6 +8952,19 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           /*
+           * SAAPUMISINTRON KUVA 6 (näköalakuva, 13.10.2026, Codex eurooppa-introt-uudet68,
+           * PT hyväksyi omistajan puolesta): havainnekuva, tekstit tarkistettu
+           * kahdella Sonnet-vaiheella.
+           */
+          ampari: 'saapumisintro/istanbul/20261013-uudet-6-8/istanbul-6-nakoala-intro-v1.png',
+          lyhyt: 'Galatan tornin tasanteelta näkyvät Kultainen sarvi, Hagia Sofia ja Sininen moskeija.',
+          selite: 'Genovalaiset rakensivat Galatan tornin vartiotorniksi vuonna 1348. Sen huipulta '
+            + 'avautuu näkymä Kultaiselle sarvelle, Bosporille ja Istanbulin historialliselle '
+            + 'niemimaalle.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          /*
            * SAAPUMISINTRON KUVA 7 (13.10.2026, Codex eurooppa-introt-kaikki,
            * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
            * kahdella Sonnet-vaiheella.
@@ -12343,6 +12393,19 @@ export const KULTTUURI_KATEGORIAT = {
           selite: 'Kaupunginosan ensimmäiset talot rakennettiin 1750-luvulla Ciutadellan '
             + 'tieltä häädetyille asukkaille, ja rantaa uudistettiin 1992 olympialaisten '
             + 'yhteydessä.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          /*
+           * SAAPUMISINTRON KUVA 6 (näköalakuva, 13.10.2026, Codex eurooppa-introt-uudet68,
+           * PT hyväksyi omistajan puolesta): havainnekuva, tekstit tarkistettu
+           * kahdella Sonnet-vaiheella.
+           */
+          ampari: 'saapumisintro/barcelona/20261013-uudet-6-8/barcelona-6-nakoala-intro-v1.png',
+          lyhyt: 'Bunkers del Carmelilta näkyy koko Barcelona Sagrada Famíliasta mereen.',
+          selite: 'Turó de la Roviran huipulla noin 262 metrin korkeudessa on sisällissodan aikaisen '
+            + 'ilmatorjuntapatterin betonialustoja. Ylhäältä näkyvät Eixamplen ruudukko, Sagrada '
+            + 'Família, Torre Glòries ja meri.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
@@ -17848,6 +17911,19 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           /*
+           * SAAPUMISINTRON KUVA 6 (näköalakuva, 13.10.2026, Codex eurooppa-introt-uudet68,
+           * PT hyväksyi omistajan puolesta): havainnekuva, tekstit tarkistettu
+           * kahdella Sonnet-vaiheella.
+           */
+          ampari: 'saapumisintro/kyiv/20261013-uudet-6-8/kyiv-6-nakoala-intro-v1.png',
+          lyhyt: 'Volodymyrin kukkulalta näkyvät Dnipr, Trukhanivin saari ja joen vasen ranta.',
+          selite: 'Volodymyrin kukkulan puisto on Dnipr-joen jyrkällä oikealla rannalla Kiovan '
+            + 'keskustassa. Sieltä avautuu näkymä joelle, vasemmalle rannalle ja Trukhanivin '
+            + 'saarelle.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          /*
            * SAAPUMISINTRON KUVA 7 (13.10.2026, Codex eurooppa-introt-kaikki,
            * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
            * kahdella Sonnet-vaiheella.
@@ -20331,6 +20407,18 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           /*
+           * SAAPUMISINTRON KUVA 6 (näköalakuva, 13.10.2026, Codex eurooppa-introt-uudet68,
+           * PT hyväksyi omistajan puolesta): havainnekuva, tekstit tarkistettu
+           * kahdella Sonnet-vaiheella.
+           */
+          ampari: 'saapumisintro/bucharest/20261013-uudet-6-8/bucharest-6-nakoala-intro-v1.png',
+          lyhyt: 'Riemukaaren yläterassilta avautuu näkymä Bukarestin ylle.',
+          selite: 'Bukarestin Riemukaari on 27 metriä korkea, ja sen yläterassi avattiin kävijöille '
+            + 'maaliskuussa 2025. Terassilta näkee kaupungin panoraaman.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          /*
            * SAAPUMISINTRON KUVA 7 (13.10.2026, Codex eurooppa-introt-kaikki,
            * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
            * kahdella Sonnet-vaiheella.
@@ -20348,6 +20436,18 @@ export const KULTTUURI_KATEGORIAT = {
           selite: 'CEC-palatsi valmistui 1900 säästöpankin päärakennukseksi '
             + 'Calea Victoriellen — beaux-arts-tyylinen talo, jonka keskellä '
             + 'kaartuu suuri lasi- ja metallikupoli.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          /*
+           * SAAPUMISINTRON KUVA 8 (kulkuneuvokuva, 13.10.2026, Codex eurooppa-introt-uudet68,
+           * PT hyväksyi omistajan puolesta): havainnekuva, tekstit tarkistettu
+           * kahdella Sonnet-vaiheella.
+           */
+          ampari: 'saapumisintro/bucharest/20261013-uudet-6-8/bucharest-8-kulkuneuvo-intro-v1.png',
+          lyhyt: 'Bukarestin raitiovaunulinja 41 kulkee kaupungin länsiosassa erillisellä raiteella.',
+          selite: 'Bukarestin linjalle 41 tuli joulukuussa 2022 uusia Imperio-raitiovaunuja. Linja '
+            + 'kulkee Ghencean ja Piața Presein välillä kaupungin länsiosassa.',
           lahde: 'Matkakirjan havainnekuva',
         },
       ],
@@ -25908,6 +26008,19 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           /*
+           * SAAPUMISINTRON KUVA 6 (näköalakuva, 13.10.2026, Codex eurooppa-introt-uudet68,
+           * PT hyväksyi omistajan puolesta): havainnekuva, tekstit tarkistettu
+           * kahdella Sonnet-vaiheella.
+           */
+          ampari: 'saapumisintro/tromso/20261013-uudet-6-8/tromso-6-nakoala-intro-v1.png',
+          lyhyt: 'Storsteinenin tasanteelta näkyvät Tromssan saari, Tromsøbrua ja Arktinen katedraali.',
+          selite: 'Storsteinen on Tromsdalenin puolella noin 420 metrin korkeudessa, ja sinne nousee '
+            + 'Fjellheisen-köysirata neljässä minuutissa. Tasanteelta näkee Tromssan saaren, '
+            + 'Tromsøbrua-sillan ja Arktisen katedraalin.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          /*
            * SAAPUMISINTRON KUVA 7 (13.10.2026, Codex eurooppa-introt-kaikki,
            * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
            * kahdella Sonnet-vaiheella.
@@ -25916,6 +26029,19 @@ export const KULTTUURI_KATEGORIAT = {
           lyhyt: 'Tromssa sai kaupunkioikeudet kesäkuussa 1794.',
           selite: 'Kuningas Christian VII myönsi kaupunkioikeudet sen jälkeen, kun Bergenin '
             + 'kauppamonopoli Pohjois-Norjassa oli lakkautettu 1789.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          /*
+           * SAAPUMISINTRON KUVA 8 (kulkuneuvokuva, 13.10.2026, Codex eurooppa-introt-uudet68,
+           * PT hyväksyi omistajan puolesta): havainnekuva, tekstit tarkistettu
+           * kahdella Sonnet-vaiheella.
+           */
+          ampari: 'saapumisintro/tromso/20261013-uudet-6-8/tromso-8-kulkuneuvo-intro-v1.png',
+          lyhyt: 'Hurtigruten-rannikkolaivat pysähtyvät Tromssassa Bergen–Kirkenes-reitillä.',
+          selite: 'Rannikkoreitin laivat pysähtyvät Tromssan satamassa muutaman minuutin kävelymatkan '
+            + 'päässä keskustasta Tromssan saarella. Tromssa on yksi pysähdyspaikoista Bergenin ja '
+            + 'Kirkkoniemen välisellä reitillä.',
           lahde: 'Matkakirjan havainnekuva',
         },
       ],
@@ -29506,6 +29632,30 @@ export const KULTTUURI_KATEGORIAT = {
             + 'rakensi nykyisen barokkikirkon 1715 edellisen palettua 1706; '
             + 'sen edessä seisoo Orlandon pylväs vuodelta 1418, Dubrovnikin '
             + 'vanhin säilynyt julkinen veistos.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          /*
+           * SAAPUMISINTRON KUVA 6 (näköalakuva, 13.10.2026, Codex eurooppa-introt-uudet68,
+           * PT hyväksyi omistajan puolesta): havainnekuva, tekstit tarkistettu
+           * kahdella Sonnet-vaiheella.
+           */
+          ampari: 'saapumisintro/dubrovnik/20261013-uudet-6-8/dubrovnik-6-nakoala-intro-v1.png',
+          lyhyt: 'Srđ-kukkulalta näkyvät Vanhakaupunki, Lokrum ja Adrianmeri.',
+          selite: 'Srđ-kukkulan köysiradan yläasemalta, 405 metrin korkeudelta, näkyvät Vanhankaupungin '
+            + 'terrakottakatot ja muuri, Lokrumin saari ja Adrianmeri.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          /*
+           * SAAPUMISINTRON KUVA 8 (kulkuneuvokuva, 13.10.2026, Codex eurooppa-introt-uudet68,
+           * PT hyväksyi omistajan puolesta): havainnekuva, tekstit tarkistettu
+           * kahdella Sonnet-vaiheella.
+           */
+          ampari: 'saapumisintro/dubrovnik/20261013-uudet-6-8/dubrovnik-8-kulkuneuvo-intro-v1.png',
+          lyhyt: 'Dubrovnikin köysirata nousee Srđ-kukkulalle 405 metrin korkeuteen.',
+          selite: 'Dubrovnikin köysirata nousee 778 metrin matkan Srđ-kukkulan 405 metrin korkeudelle. '
+            + 'Ensimmäinen köysirata avattiin 1969 ja nykyinen vuonna 2010.',
           lahde: 'Matkakirjan havainnekuva',
         },
       ],
@@ -33689,6 +33839,20 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kauneimmaksi parvekkeeksi.',
           selite: 'Kävelytie kulkee Bock-niemeltä Pyhän Hengen linnakkeen alaosaan, ja sieltä näkyy '
             + 'Grundin kaupunginosa ja Rham-ylänkö. Nimitys liitetään kirjailija Batty Weberiin.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          /*
+           * SAAPUMISINTRON KUVA 8 (kulkuneuvokuva, 13.10.2026, Codex eurooppa-introt-uudet68,
+           * PT hyväksyi omistajan puolesta): havainnekuva, tekstit tarkistettu
+           * kahdella Sonnet-vaiheella.
+           */
+          ampari: 'saapumisintro/luxembourg/20261013-uudet-6-8/luxembourg-8-kulkuneuvo-intro-v1.png',
+          lyhyt: 'Luxemburgin raitiovaunu palasi kadulle 10.12.2017 yli viidenkymmenen vuoden tauon '
+            + 'jälkeen.',
+          selite: 'Luxemburgin vanha raitiotie lakkautettiin 5.9.1964, ja uusi Luxtram aloitti '
+            + 'liikenteen 10.12.2017. Nykyinen linja on noin 16 kilometriä pitkä ja siinä on 24 '
+            + 'pysäkkiä.',
           lahde: 'Matkakirjan havainnekuva',
         },
       ],
@@ -67422,6 +67586,18 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           /*
+           * SAAPUMISINTRON KUVA 6 (näköalakuva, 13.10.2026, Codex eurooppa-introt-uudet68,
+           * PT hyväksyi omistajan puolesta): havainnekuva, tekstit tarkistettu
+           * kahdella Sonnet-vaiheella.
+           */
+          ampari: 'saapumisintro/seville/20261013-uudet-6-8/seville-6-nakoala-intro-v1.png',
+          lyhyt: 'Giraldan tornista näkyvät Sevillan katedraalin katto ja vanha kaupunki.',
+          selite: 'Giralda on Sevillan katedraalin kellotorni, jonka näköalatasolle noustaan portaiden '
+            + 'sijaan 35 rampilla. Ylhäältä näkyy suuri osa Sevillaa, myös Alcázar puutarhoineen.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          /*
            * SAAPUMISINTRON KUVA 7 (13.10.2026, Codex eurooppa-introt-kaikki,
            * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
            * kahdella Sonnet-vaiheella.
@@ -67454,6 +67630,19 @@ export const KULTTUURI_KATEGORIAT = {
             + 'keskimäärin seitsemän metriä merenpinnan yläpuolelle, ja '
             + 'kunnan pinta-ala on 141 neliökilometriä.',
           lahde: 'Michiel1972, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          /*
+           * SAAPUMISINTRON KUVA 8 (kulkuneuvokuva, 13.10.2026, Codex eurooppa-introt-uudet68,
+           * PT hyväksyi omistajan puolesta): havainnekuva, tekstit tarkistettu
+           * kahdella Sonnet-vaiheella.
+           */
+          ampari: 'saapumisintro/seville/20261013-uudet-6-8/seville-8-kulkuneuvo-intro-v1.png',
+          lyhyt: 'Sevillan Metrocentro-raitiovaunu kulkee vanhan kaupungin halki ilman ajojohtoa.',
+          selite: 'Sevillan Metrocentro-raitiotie avattiin lokakuussa 2007, ja se kulkee Plaza Nuevalta '
+            + 'Avenida de la Constitución -kadun kautta San Bernardoon. Katedraalin ympäristössä '
+            + 'vaunut kulkevat ilman ajojohtoa akkujen varassa.',
+          lahde: 'Matkakirjan havainnekuva',
         },
       ],
       nostot: [
@@ -68098,6 +68287,19 @@ export const KULTTUURI_KATEGORIAT = {
           selite: 'Saksalainen puutarha-arkkitehti Édouard Keilig voitti suunnittelukilpailun 1862 ja '
             + 'suunnitteli puiston englantilaiseen maisemapuistotyyliin. Työt tehtiin pääosin '
             + 'viidessä vuodessa.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          /*
+           * SAAPUMISINTRON KUVA 6 (näköalakuva, 13.10.2026, Codex eurooppa-introt-uudet68,
+           * PT hyväksyi omistajan puolesta): havainnekuva, tekstit tarkistettu
+           * kahdella Sonnet-vaiheella.
+           */
+          ampari: 'saapumisintro/brussels/20261013-uudet-6-8/brussels-6-nakoala-intro-v1.png',
+          lyhyt: 'Place Poelaertilta näkee Marollesin kattojen yli kaupungintalon 96-metrisen tornin.',
+          selite: 'Place Poelaert on korkealla sijaitseva näköalapaikka Marollesin yläpuolella, ja '
+            + 'sieltä näkyy Brysselin kaupungintalon 96-metrinen torni. Selkeänä päivänä '
+            + 'horisontissa erottuu myös Koekelbergin basilika.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
@@ -68877,6 +69079,19 @@ export const KULTTUURI_KATEGORIAT = {
             + 'maanjäristys tuhosi vanhoja taloja.',
           selite: 'Maaliskuussa 1511 maanjäristys vaurioitti Ljubljanaa pahoin. Monen tuhoutuneen '
             + 'keskiaikaisen rakennuksen tilalle nousi renessanssi- ja barokkitaloja.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          /*
+           * SAAPUMISINTRON KUVA 8 (kulkuneuvokuva, 13.10.2026, Codex eurooppa-introt-uudet68,
+           * PT hyväksyi omistajan puolesta): havainnekuva, tekstit tarkistettu
+           * kahdella Sonnet-vaiheella.
+           */
+          ampari: 'saapumisintro/ljubljana/20261013-uudet-6-8/ljubljana-8-kulkuneuvo-intro-v1.png',
+          lyhyt: 'Ljubljanan linnavuoren funikulaari on kulkenut joulukuusta 2006 ja nousee '
+            + 'minuutissa.',
+          selite: 'Funikulaari avattiin 28.12.2006, ja sen rata on noin 118 metriä pitkä ja nousee noin '
+            + '70 metriä. Matka alhaalta Krekovin aukiolta linnalle kestää noin minuutin.',
           lahde: 'Matkakirjan havainnekuva',
         },
       ],
@@ -70594,6 +70809,21 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           /*
+           * SAAPUMISINTRON KUVA 6 (näköalakuva, 13.10.2026, Codex eurooppa-introt-uudet68,
+           * PT hyväksyi omistajan puolesta): havainnekuva, tekstit tarkistettu
+           * kahdella Sonnet-vaiheella.
+           */
+          ampari: 'saapumisintro/valletta/20261013-uudet-6-8/valletta-6-nakoala-intro-v1.png',
+          lyhyt: 'Sliemen rannalta näkee Vallettan siluetin: Karmeliittakirkon kupolin ja '
+            + 'kaupunginmuurit.',
+          selite: 'Karmeliittakirkon soikea kupoli on 42 metriä korkea, ja sen vieressä kohoaa '
+            + 'anglikaanisen pro-katedraalin torni; ne erottuvat Vallettan siluetista Marsamxettin '
+            + 'sataman puolella. Nykyinen Karmeliittakirkko rakennettiin 1958-1981 sodassa '
+            + 'vaurioituneen tilalle.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          /*
            * SAAPUMISINTRON KUVA 7 (13.10.2026, Codex eurooppa-introt-kaikki,
            * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
            * kahdella Sonnet-vaiheella.
@@ -70651,6 +70881,19 @@ export const KULTTUURI_KATEGORIAT = {
           selite: 'Ritarikunta asettui Birguun 1530, ja Valletta rakennettiin Grand Harbourin '
             + 'vastarannalle Birgua vastapäätä. Unesco merkitsi Vallettan maailmanperintökohteeksi '
             + '1980.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          /*
+           * SAAPUMISINTRON KUVA 8 (kulkuneuvokuva, 13.10.2026, Codex eurooppa-introt-uudet68,
+           * PT hyväksyi omistajan puolesta): havainnekuva, tekstit tarkistettu
+           * kahdella Sonnet-vaiheella.
+           */
+          ampari: 'saapumisintro/valletta/20261013-uudet-6-8/valletta-8-kulkuneuvo-intro-v1.png',
+          lyhyt: 'Dgħajsa-vene on kuljettanut matkustajia Maltan satamissa 1600-luvulta lähtien.',
+          selite: 'Dgħajsa tal-pass on perinteinen maltalainen satamavene, joka kehittyi 1600-luvun '
+            + 'alussa kuljettamaan matkustajia Grand Harbourin yli. Nykyään harvat jäljellä olevat '
+            + 'veneet kuljettavat enimmäkseen matkailijoita.',
           lahde: 'Matkakirjan havainnekuva',
         },
       ],
