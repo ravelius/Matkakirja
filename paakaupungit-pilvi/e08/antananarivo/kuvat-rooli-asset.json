@@ -3,7 +3,7 @@
   "era": "e08",
   "city": "antananarivo",
   "authorization": "hyväksyn kaikki tekemäsi kuvat. toimita ne claudelle. claudelta saat uusia ohjeita jatkoa varten",
-  "sourceContentAfterSHA256": "9f6e4a42a4c1bf17b635a090122cd8dad52e523b4381d3da887add80ccee287f",
+  "sourceContentAfterSHA256": "0386cac0597bb09f2e0d5b6315c1afbb0ce06819f9ee2d1ff66f43e3dd61ddbd",
   "assets": [
     {
       "era": "e08",
@@ -53,10 +53,10 @@
         1536
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/antananarivo/sisalto.json",
-      "sourceContentSHA256": "9f6e4a42a4c1bf17b635a090122cd8dad52e523b4381d3da887add80ccee287f",
+      "sourceContentSHA256": "0386cac0597bb09f2e0d5b6315c1afbb0ce06819f9ee2d1ff66f43e3dd61ddbd",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "4f3c25e5895ca1b12b8f207fa58e7ffd4de9eee404ca8a457b7c3befe462dfec",
+        "semanticContextSHA256": "82e6ab7cb67488c739b7099ab4e729972080747fdf4ab7b943122233ed78adc0",
         "subjectTitle": "Matkailijalle",
         "targetState": "existing-target"
       },
@@ -342,9 +342,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "9f6e4a42a4c1bf17b635a090122cd8dad52e523b4381d3da887add80ccee287f",
+      "sourceContentAfterSHA256": "0386cac0597bb09f2e0d5b6315c1afbb0ce06819f9ee2d1ff66f43e3dd61ddbd",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "4f3c25e5895ca1b12b8f207fa58e7ffd4de9eee404ca8a457b7c3befe462dfec",
+      "contextAfterSHA256": "82e6ab7cb67488c739b7099ab4e729972080747fdf4ab7b943122233ed78adc0",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -367,7 +367,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "0386cac0597bb09f2e0d5b6315c1afbb0ce06819f9ee2d1ff66f43e3dd61ddbd",
+        "sameImageNativeSHA256": "11bbb765553ec58842cbc042c96c0495e0c387e5deaff1256424c69fa1b09f3e",
+        "sameImageExportSHA256": "ebe21f4e3f0f1211edb3f55d4a928b417892a36da6ab05ece098dd0c1f51ad4b",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e08",
@@ -420,10 +428,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/antananarivo/sisalto.json",
-      "sourceContentSHA256": "9f6e4a42a4c1bf17b635a090122cd8dad52e523b4381d3da887add80ccee287f",
+      "sourceContentSHA256": "0386cac0597bb09f2e0d5b6315c1afbb0ce06819f9ee2d1ff66f43e3dd61ddbd",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "3bd2a72ccf39b55dd3813f1e9aeb941dea49b6fc310d1eb398602f8af0e30bfa",
+        "semanticContextSHA256": "0513d5dfe51d2242184d720c1d2c403fc428bdeaef77333de408382a45860cd7",
         "subjectTitle": "Anosy ja vanhat asuinkorttelit",
         "targetState": "existing-target"
       },
@@ -591,9 +599,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "9f6e4a42a4c1bf17b635a090122cd8dad52e523b4381d3da887add80ccee287f",
+      "sourceContentAfterSHA256": "0386cac0597bb09f2e0d5b6315c1afbb0ce06819f9ee2d1ff66f43e3dd61ddbd",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "3bd2a72ccf39b55dd3813f1e9aeb941dea49b6fc310d1eb398602f8af0e30bfa",
+      "contextAfterSHA256": "0513d5dfe51d2242184d720c1d2c403fc428bdeaef77333de408382a45860cd7",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -616,7 +624,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "0386cac0597bb09f2e0d5b6315c1afbb0ce06819f9ee2d1ff66f43e3dd61ddbd",
+        "sameImageNativeSHA256": "7e99148f4e48c3062ef1db2e2b94d7453b7f9b5b0ee8cca05940d0032f59a4eb",
+        "sameImageExportSHA256": "0da62ad5e4a2e0cf5348ba3cbb5b55abe150af925e9b7d6bf9e91552b6a91cba",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e08",
@@ -669,10 +685,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/antananarivo/sisalto.json",
-      "sourceContentSHA256": "9f6e4a42a4c1bf17b635a090122cd8dad52e523b4381d3da887add80ccee287f",
+      "sourceContentSHA256": "0386cac0597bb09f2e0d5b6315c1afbb0ce06819f9ee2d1ff66f43e3dd61ddbd",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "57843b3a767eb94452f127494937538981cf12583a65f4d24bfdf3e798407af2",
+        "semanticContextSHA256": "5e04dc13339ffa166cae11e3e57927d5c44c5226ba34397531eb3235e8277af2",
         "subjectTitle": "Mitä täällä syödään",
         "targetState": "existing-target"
       },
@@ -973,9 +989,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "9f6e4a42a4c1bf17b635a090122cd8dad52e523b4381d3da887add80ccee287f",
+      "sourceContentAfterSHA256": "0386cac0597bb09f2e0d5b6315c1afbb0ce06819f9ee2d1ff66f43e3dd61ddbd",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "57843b3a767eb94452f127494937538981cf12583a65f4d24bfdf3e798407af2",
+      "contextAfterSHA256": "5e04dc13339ffa166cae11e3e57927d5c44c5226ba34397531eb3235e8277af2",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -998,7 +1014,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "0386cac0597bb09f2e0d5b6315c1afbb0ce06819f9ee2d1ff66f43e3dd61ddbd",
+        "sameImageNativeSHA256": "5ddbd5d5bbe259eb13d40850d92e939d1d8d1802f268d20a0c7fb838ac556dc6",
+        "sameImageExportSHA256": "d9285a7954da1faba6deb349a889740e81427ef462447e77b9bd83c3b3d017ca",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e08",
@@ -1048,7 +1072,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/antananarivo/sisalto.json",
-      "sourceContentSHA256": "9f6e4a42a4c1bf17b635a090122cd8dad52e523b4381d3da887add80ccee287f",
+      "sourceContentSHA256": "0386cac0597bb09f2e0d5b6315c1afbb0ce06819f9ee2d1ff66f43e3dd61ddbd",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e12c7218f7f96beb38d791abfd33940065fe2bad7c6ecce7686fc37f92661517",
         "semanticContextSHA256": "e12c7218f7f96beb38d791abfd33940065fe2bad7c6ecce7686fc37f92661517",
@@ -1219,7 +1243,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "9f6e4a42a4c1bf17b635a090122cd8dad52e523b4381d3da887add80ccee287f",
+      "sourceContentAfterSHA256": "0386cac0597bb09f2e0d5b6315c1afbb0ce06819f9ee2d1ff66f43e3dd61ddbd",
       "targetAfterSHA256": "e12c7218f7f96beb38d791abfd33940065fe2bad7c6ecce7686fc37f92661517",
       "contextAfterSHA256": "e12c7218f7f96beb38d791abfd33940065fe2bad7c6ecce7686fc37f92661517",
       "ownerApproved": true,
@@ -1244,7 +1268,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "0386cac0597bb09f2e0d5b6315c1afbb0ce06819f9ee2d1ff66f43e3dd61ddbd",
+        "sameImageNativeSHA256": "8ff222a4147cfd6fa2758e38f1b4a97b34307a3a0d5eb2eff2828db3a39e1e97",
+        "sameImageExportSHA256": "dc36dbc6e3279f4b6ed664c40886ca7262439690edceafa267d2bd6fd4901f1f",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e08",
@@ -1294,10 +1326,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/antananarivo/sisalto.json",
-      "sourceContentSHA256": "9f6e4a42a4c1bf17b635a090122cd8dad52e523b4381d3da887add80ccee287f",
+      "sourceContentSHA256": "0386cac0597bb09f2e0d5b6315c1afbb0ce06819f9ee2d1ff66f43e3dd61ddbd",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "7680619c36cad7a005a93b2e61946f6c23877c2c1e4f26423789f0cd3cd3f7a1",
-        "semanticContextSHA256": "7680619c36cad7a005a93b2e61946f6c23877c2c1e4f26423789f0cd3cd3f7a1",
+        "targetBeforeSHA256": "270a9f84db7859b8bfb778840475121e1e5a57ce88d28119d10aa759a6d32451",
+        "semanticContextSHA256": "270a9f84db7859b8bfb778840475121e1e5a57ce88d28119d10aa759a6d32451",
         "subjectTitle": "Kivi kuului aluksi vainajille",
         "targetState": "existing-target"
       },
@@ -1598,9 +1630,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "9f6e4a42a4c1bf17b635a090122cd8dad52e523b4381d3da887add80ccee287f",
-      "targetAfterSHA256": "7680619c36cad7a005a93b2e61946f6c23877c2c1e4f26423789f0cd3cd3f7a1",
-      "contextAfterSHA256": "7680619c36cad7a005a93b2e61946f6c23877c2c1e4f26423789f0cd3cd3f7a1",
+      "sourceContentAfterSHA256": "0386cac0597bb09f2e0d5b6315c1afbb0ce06819f9ee2d1ff66f43e3dd61ddbd",
+      "targetAfterSHA256": "270a9f84db7859b8bfb778840475121e1e5a57ce88d28119d10aa759a6d32451",
+      "contextAfterSHA256": "270a9f84db7859b8bfb778840475121e1e5a57ce88d28119d10aa759a6d32451",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -1623,7 +1655,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "0386cac0597bb09f2e0d5b6315c1afbb0ce06819f9ee2d1ff66f43e3dd61ddbd",
+        "sameImageNativeSHA256": "ef177889303a2f224584d8575693659db72a6bb99f67b059927084d253ec563c",
+        "sameImageExportSHA256": "003d811b370358e3cbd28627212875391e7d150ec6e92c9383c9dc26cf3fe0df",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e08",
@@ -1673,10 +1713,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/antananarivo/sisalto.json",
-      "sourceContentSHA256": "9f6e4a42a4c1bf17b635a090122cd8dad52e523b4381d3da887add80ccee287f",
+      "sourceContentSHA256": "0386cac0597bb09f2e0d5b6315c1afbb0ce06819f9ee2d1ff66f43e3dd61ddbd",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "c3a0886069f4269e5fcc8d018da18d58f4a57dbe55c4737649511b2c95554dc3",
-        "semanticContextSHA256": "c3a0886069f4269e5fcc8d018da18d58f4a57dbe55c4737649511b2c95554dc3",
+        "targetBeforeSHA256": "bf033d06a45e53cdb0438ec2b678a0d6cb350fcfa3a03fd3cf82850d03914cf0",
+        "semanticContextSHA256": "bf033d06a45e53cdb0438ec2b678a0d6cb350fcfa3a03fd3cf82850d03914cf0",
         "subjectTitle": "Veranta kertoo vaikutteiden matkasta",
         "targetState": "existing-target"
       },
@@ -1977,9 +2017,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "9f6e4a42a4c1bf17b635a090122cd8dad52e523b4381d3da887add80ccee287f",
-      "targetAfterSHA256": "c3a0886069f4269e5fcc8d018da18d58f4a57dbe55c4737649511b2c95554dc3",
-      "contextAfterSHA256": "c3a0886069f4269e5fcc8d018da18d58f4a57dbe55c4737649511b2c95554dc3",
+      "sourceContentAfterSHA256": "0386cac0597bb09f2e0d5b6315c1afbb0ce06819f9ee2d1ff66f43e3dd61ddbd",
+      "targetAfterSHA256": "bf033d06a45e53cdb0438ec2b678a0d6cb350fcfa3a03fd3cf82850d03914cf0",
+      "contextAfterSHA256": "bf033d06a45e53cdb0438ec2b678a0d6cb350fcfa3a03fd3cf82850d03914cf0",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -2002,7 +2042,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "0386cac0597bb09f2e0d5b6315c1afbb0ce06819f9ee2d1ff66f43e3dd61ddbd",
+        "sameImageNativeSHA256": "7cee3eb10673f799acb3e9d24657ab37bd429199b42f6be1ce5f333286689682",
+        "sameImageExportSHA256": "8a4a11e47b2992f2d7e63aa5cd2f39ae3b8f4ebfc6f3e47e0d13a401b8682b1d",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e08",
@@ -2052,10 +2100,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/antananarivo/sisalto.json",
-      "sourceContentSHA256": "9f6e4a42a4c1bf17b635a090122cd8dad52e523b4381d3da887add80ccee287f",
+      "sourceContentSHA256": "0386cac0597bb09f2e0d5b6315c1afbb0ce06819f9ee2d1ff66f43e3dd61ddbd",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "d72212096727b0711a2bfff0fc45307ad32ab8da07b9a3747dd6fa14adf044f6",
-        "semanticContextSHA256": "d72212096727b0711a2bfff0fc45307ad32ab8da07b9a3747dd6fa14adf044f6",
+        "targetBeforeSHA256": "0f0693b3b916eb7e210692c442377e59f5af6e31cf8c0bc2c353e930aab81055",
+        "semanticContextSHA256": "0f0693b3b916eb7e210692c442377e59f5af6e31cf8c0bc2c353e930aab81055",
         "subjectTitle": "Koulut tulivat käsityöläisten mukana",
         "targetState": "existing-target"
       },
@@ -2356,9 +2404,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "9f6e4a42a4c1bf17b635a090122cd8dad52e523b4381d3da887add80ccee287f",
-      "targetAfterSHA256": "d72212096727b0711a2bfff0fc45307ad32ab8da07b9a3747dd6fa14adf044f6",
-      "contextAfterSHA256": "d72212096727b0711a2bfff0fc45307ad32ab8da07b9a3747dd6fa14adf044f6",
+      "sourceContentAfterSHA256": "0386cac0597bb09f2e0d5b6315c1afbb0ce06819f9ee2d1ff66f43e3dd61ddbd",
+      "targetAfterSHA256": "0f0693b3b916eb7e210692c442377e59f5af6e31cf8c0bc2c353e930aab81055",
+      "contextAfterSHA256": "0f0693b3b916eb7e210692c442377e59f5af6e31cf8c0bc2c353e930aab81055",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -2381,7 +2429,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "0386cac0597bb09f2e0d5b6315c1afbb0ce06819f9ee2d1ff66f43e3dd61ddbd",
+        "sameImageNativeSHA256": "324d681be4396b457370ff1bec0866b76d7d7ca94f3970e866a3cc49f74021a0",
+        "sameImageExportSHA256": "5771a6764debe7f69d007840d17487d07bc8d8962f365c4b7fe2ad0a3ef6868f",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e08",
@@ -2431,7 +2487,7 @@
         1536
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/antananarivo/sisalto.json",
-      "sourceContentSHA256": "9f6e4a42a4c1bf17b635a090122cd8dad52e523b4381d3da887add80ccee287f",
+      "sourceContentSHA256": "0386cac0597bb09f2e0d5b6315c1afbb0ce06819f9ee2d1ff66f43e3dd61ddbd",
       "semanticSourceBind": {
         "targetBeforeSHA256": "4a42cdcd5228154f6ea662fbb6efce9540baffc16d10ec16d7ef94d64ccd4f32",
         "semanticContextSHA256": "4a42cdcd5228154f6ea662fbb6efce9540baffc16d10ec16d7ef94d64ccd4f32",
@@ -2644,7 +2700,7 @@
         "tiedosto": "Ambanivohitra ao Antananarivo.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "9f6e4a42a4c1bf17b635a090122cd8dad52e523b4381d3da887add80ccee287f",
+      "sourceContentAfterSHA256": "0386cac0597bb09f2e0d5b6315c1afbb0ce06819f9ee2d1ff66f43e3dd61ddbd",
       "targetAfterSHA256": "4a42cdcd5228154f6ea662fbb6efce9540baffc16d10ec16d7ef94d64ccd4f32",
       "contextAfterSHA256": "4a42cdcd5228154f6ea662fbb6efce9540baffc16d10ec16d7ef94d64ccd4f32",
       "ownerApproved": true,
@@ -2669,7 +2725,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "0386cac0597bb09f2e0d5b6315c1afbb0ce06819f9ee2d1ff66f43e3dd61ddbd",
+        "sameImageNativeSHA256": "16a8ea20880a8414989e7eb19eeaf2f3664d9d8411b5561da04f5fc9cecad035",
+        "sameImageExportSHA256": "16a8ea20880a8414989e7eb19eeaf2f3664d9d8411b5561da04f5fc9cecad035",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e08",
@@ -2722,7 +2786,7 @@
         3765
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/antananarivo/sisalto.json",
-      "sourceContentSHA256": "9f6e4a42a4c1bf17b635a090122cd8dad52e523b4381d3da887add80ccee287f",
+      "sourceContentSHA256": "0386cac0597bb09f2e0d5b6315c1afbb0ce06819f9ee2d1ff66f43e3dd61ddbd",
       "semanticSourceBind": {
         "targetBeforeSHA256": "f5bee518ea5127b601553c7cd72211a62ba8376c80c12fedd30e0d7da00ced36",
         "semanticContextSHA256": "f5bee518ea5127b601553c7cd72211a62ba8376c80c12fedd30e0d7da00ced36",
@@ -2983,7 +3047,7 @@
         "tiedosto": "Antananarivo in Madagascar ESA23267313.jpeg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "9f6e4a42a4c1bf17b635a090122cd8dad52e523b4381d3da887add80ccee287f",
+      "sourceContentAfterSHA256": "0386cac0597bb09f2e0d5b6315c1afbb0ce06819f9ee2d1ff66f43e3dd61ddbd",
       "targetAfterSHA256": "f5bee518ea5127b601553c7cd72211a62ba8376c80c12fedd30e0d7da00ced36",
       "contextAfterSHA256": "f5bee518ea5127b601553c7cd72211a62ba8376c80c12fedd30e0d7da00ced36",
       "ownerApproved": true,
@@ -3008,7 +3072,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "0386cac0597bb09f2e0d5b6315c1afbb0ce06819f9ee2d1ff66f43e3dd61ddbd",
+        "sameImageNativeSHA256": "4ee143522131beeb27279e0804efd71d1fddc873b1d36cf7db014d02143c167a",
+        "sameImageExportSHA256": "4ee143522131beeb27279e0804efd71d1fddc873b1d36cf7db014d02143c167a",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e08",
@@ -3030,14 +3102,14 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/antananarivo/c2-544682655e9263422cbe.jpg",
         "suora": true,
         "lahde": "Smiley.toerist, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Rovan suunnasta avautuva laaja näkymä Antananarivoon vuonna 2013 otetussa kuvassa.",
+        "selite": "Rovan suunnasta avautuva laaja näkymä Antananarivoon vuonna 2013.",
         "lyhyt": "Antananarivon kaupunkinäkymää.",
         "tiedosto": "Antananarivo 2013 1.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Smiley.toerist, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Rovan suunnasta avautuva laaja näkymä Antananarivoon vuonna 2013 otetussa kuvassa.",
+        "selite": "Rovan suunnasta avautuva laaja näkymä Antananarivoon vuonna 2013.",
         "lyhyt": "Antananarivon kaupunkinäkymää.",
         "tiedosto": "Antananarivo 2013 1.jpg"
       },
@@ -3045,7 +3117,7 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/antananarivo/c2-544682655e9263422cbe.jpg",
         "suora": true,
         "lahde": "Smiley.toerist, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Rovan suunnasta avautuva laaja näkymä Antananarivoon vuonna 2013 otetussa kuvassa.",
+        "selite": "Rovan suunnasta avautuva laaja näkymä Antananarivoon vuonna 2013.",
         "lyhyt": "Antananarivon kaupunkinäkymää.",
         "tiedosto": "Antananarivo 2013 1.jpg"
       },
@@ -3061,10 +3133,10 @@
         3216
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/antananarivo/sisalto.json",
-      "sourceContentSHA256": "9f6e4a42a4c1bf17b635a090122cd8dad52e523b4381d3da887add80ccee287f",
+      "sourceContentSHA256": "0386cac0597bb09f2e0d5b6315c1afbb0ce06819f9ee2d1ff66f43e3dd61ddbd",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "9710fc498dbfdc1d17115629da52ebb13856ccce156f57ad3ccb2018086f6939",
-        "semanticContextSHA256": "9710fc498dbfdc1d17115629da52ebb13856ccce156f57ad3ccb2018086f6939",
+        "targetBeforeSHA256": "771cd3fd20c3249bbd967f0dcdb68dc05fa0ebfef63296069ba8f917f8f987d3",
+        "semanticContextSHA256": "771cd3fd20c3249bbd967f0dcdb68dc05fa0ebfef63296069ba8f917f8f987d3",
         "subjectTitle": "Antananarivo",
         "targetState": "existing-target"
       },
@@ -3255,7 +3327,7 @@
       "priorMediaFields": {
         "tiedosto": "Antananarivo 2013 1.jpg",
         "lyhyt": "Antananarivon kaupunkinäkymää.",
-        "selite": "Rovan suunnasta avautuva laaja näkymä Antananarivoon vuonna 2013 otetussa kuvassa.",
+        "selite": "Rovan suunnasta avautuva laaja näkymä Antananarivoon vuonna 2013.",
         "lahde": "Smiley.toerist, Wikimedia Commons (CC BY-SA 4.0)"
       },
       "preservePreviousMediaObjects": true,
@@ -3282,14 +3354,14 @@
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Smiley.toerist, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Rovan suunnasta avautuva laaja näkymä Antananarivoon vuonna 2013 otetussa kuvassa.",
+        "selite": "Rovan suunnasta avautuva laaja näkymä Antananarivoon vuonna 2013.",
         "lyhyt": "Antananarivon kaupunkinäkymää.",
         "tiedosto": "Antananarivo 2013 1.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "9f6e4a42a4c1bf17b635a090122cd8dad52e523b4381d3da887add80ccee287f",
-      "targetAfterSHA256": "9710fc498dbfdc1d17115629da52ebb13856ccce156f57ad3ccb2018086f6939",
-      "contextAfterSHA256": "9710fc498dbfdc1d17115629da52ebb13856ccce156f57ad3ccb2018086f6939",
+      "sourceContentAfterSHA256": "0386cac0597bb09f2e0d5b6315c1afbb0ce06819f9ee2d1ff66f43e3dd61ddbd",
+      "targetAfterSHA256": "771cd3fd20c3249bbd967f0dcdb68dc05fa0ebfef63296069ba8f917f8f987d3",
+      "contextAfterSHA256": "771cd3fd20c3249bbd967f0dcdb68dc05fa0ebfef63296069ba8f917f8f987d3",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -3312,7 +3384,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "0386cac0597bb09f2e0d5b6315c1afbb0ce06819f9ee2d1ff66f43e3dd61ddbd",
+        "sameImageNativeSHA256": "544682655e9263422cbea1f6d30cdaf562e765738bba8d63a80fc22e6bf04a92",
+        "sameImageExportSHA256": "544682655e9263422cbea1f6d30cdaf562e765738bba8d63a80fc22e6bf04a92",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": true
+      }
     },
     {
       "era": "e08",
@@ -3365,7 +3445,7 @@
         1200
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/antananarivo/sisalto.json",
-      "sourceContentSHA256": "9f6e4a42a4c1bf17b635a090122cd8dad52e523b4381d3da887add80ccee287f",
+      "sourceContentSHA256": "0386cac0597bb09f2e0d5b6315c1afbb0ce06819f9ee2d1ff66f43e3dd61ddbd",
       "semanticSourceBind": {
         "targetBeforeSHA256": "c4a4cad2a377ca22361f5618d12e6dbdd62b4f66b65ccfd2555a5a74cde10607",
         "semanticContextSHA256": "c4a4cad2a377ca22361f5618d12e6dbdd62b4f66b65ccfd2555a5a74cde10607",
@@ -3593,7 +3673,7 @@
         "tiedosto": "Antananarivo (atamari).jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "9f6e4a42a4c1bf17b635a090122cd8dad52e523b4381d3da887add80ccee287f",
+      "sourceContentAfterSHA256": "0386cac0597bb09f2e0d5b6315c1afbb0ce06819f9ee2d1ff66f43e3dd61ddbd",
       "targetAfterSHA256": "c4a4cad2a377ca22361f5618d12e6dbdd62b4f66b65ccfd2555a5a74cde10607",
       "contextAfterSHA256": "c4a4cad2a377ca22361f5618d12e6dbdd62b4f66b65ccfd2555a5a74cde10607",
       "ownerApproved": true,
@@ -3618,7 +3698,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "0386cac0597bb09f2e0d5b6315c1afbb0ce06819f9ee2d1ff66f43e3dd61ddbd",
+        "sameImageNativeSHA256": "f5681bbb8796f5395ea18e8f028968c2f6fc9a1ca4883fba3b22e1a980f84923",
+        "sameImageExportSHA256": "f5681bbb8796f5395ea18e8f028968c2f6fc9a1ca4883fba3b22e1a980f84923",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e08",
@@ -3640,14 +3728,14 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/antananarivo/n1-339e419e9c7f59e3e985.jpg",
         "suora": true,
         "lahde": "Z thomas, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Antananarivon Anosy-järven ranta 2. lokakuuta 2019 otetussa kuvassa.",
+        "selite": "Antananarivon Anosy-järven ranta 2. lokakuuta 2019.",
         "lyhyt": "Anosy-järven rantaa.",
         "tiedosto": "Lac anosy Antananarivo 2019-10-02 8.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Z thomas, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Antananarivon Anosy-järven ranta 2. lokakuuta 2019 otetussa kuvassa.",
+        "selite": "Antananarivon Anosy-järven ranta 2. lokakuuta 2019.",
         "lyhyt": "Anosy-järven rantaa.",
         "tiedosto": "Lac anosy Antananarivo 2019-10-02 8.jpg"
       },
@@ -3655,7 +3743,7 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/antananarivo/n1-339e419e9c7f59e3e985.jpg",
         "suora": true,
         "lahde": "Z thomas, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Antananarivon Anosy-järven ranta 2. lokakuuta 2019 otetussa kuvassa.",
+        "selite": "Antananarivon Anosy-järven ranta 2. lokakuuta 2019.",
         "lyhyt": "Anosy-järven rantaa.",
         "tiedosto": "Lac anosy Antananarivo 2019-10-02 8.jpg"
       },
@@ -3671,10 +3759,10 @@
         2736
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/antananarivo/sisalto.json",
-      "sourceContentSHA256": "9f6e4a42a4c1bf17b635a090122cd8dad52e523b4381d3da887add80ccee287f",
+      "sourceContentSHA256": "0386cac0597bb09f2e0d5b6315c1afbb0ce06819f9ee2d1ff66f43e3dd61ddbd",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "142d8758042f4890d460168b391d77062e5d4e4f5ef7ab507a65d6d3da622080",
-        "semanticContextSHA256": "cb05be365691cbf7686de7c98f76dfa45bff94cb5ec03775acae7b1b619c2167",
+        "targetBeforeSHA256": "31a4b1324b74a0d5821484a71071f4a11b13a53e220205f5346bc25bc9d247da",
+        "semanticContextSHA256": "1e427d3e3251b92420312cb42aa8d8c4df8a9fb009fe7b7854622bb8c5472397",
         "subjectTitle": "Anosy-järvi",
         "targetState": "existing-target"
       },
@@ -3856,7 +3944,7 @@
       "priorMediaFields": {
         "tiedosto": "Lac anosy Antananarivo 2019-10-02 8.jpg",
         "lyhyt": "Anosy-järven rantaa.",
-        "selite": "Antananarivon Anosy-järven ranta 2. lokakuuta 2019 otetussa kuvassa.",
+        "selite": "Antananarivon Anosy-järven ranta 2. lokakuuta 2019.",
         "lahde": "Z thomas, Wikimedia Commons (CC BY-SA 4.0)"
       },
       "preservePreviousMediaObjects": true,
@@ -3883,14 +3971,14 @@
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Z thomas, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Antananarivon Anosy-järven ranta 2. lokakuuta 2019 otetussa kuvassa.",
+        "selite": "Antananarivon Anosy-järven ranta 2. lokakuuta 2019.",
         "lyhyt": "Anosy-järven rantaa.",
         "tiedosto": "Lac anosy Antananarivo 2019-10-02 8.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "9f6e4a42a4c1bf17b635a090122cd8dad52e523b4381d3da887add80ccee287f",
-      "targetAfterSHA256": "142d8758042f4890d460168b391d77062e5d4e4f5ef7ab507a65d6d3da622080",
-      "contextAfterSHA256": "cb05be365691cbf7686de7c98f76dfa45bff94cb5ec03775acae7b1b619c2167",
+      "sourceContentAfterSHA256": "0386cac0597bb09f2e0d5b6315c1afbb0ce06819f9ee2d1ff66f43e3dd61ddbd",
+      "targetAfterSHA256": "31a4b1324b74a0d5821484a71071f4a11b13a53e220205f5346bc25bc9d247da",
+      "contextAfterSHA256": "1e427d3e3251b92420312cb42aa8d8c4df8a9fb009fe7b7854622bb8c5472397",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -3913,7 +4001,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "0386cac0597bb09f2e0d5b6315c1afbb0ce06819f9ee2d1ff66f43e3dd61ddbd",
+        "sameImageNativeSHA256": "339e419e9c7f59e3e985d682eb669d36a64e45336a190e872fff1d70cc905c87",
+        "sameImageExportSHA256": "339e419e9c7f59e3e985d682eb669d36a64e45336a190e872fff1d70cc905c87",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": true
+      }
     }
   ],
   "runtimeIntegrationPending": true,
@@ -3925,6 +4021,9 @@
   "task118TextRevision": true,
   "independentTextResamplePending": true,
   "textAcceptanceVerified": false,
-  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task118/immutable-media-history/e08/antananarivo/6caf248e0fd56038004f58bab5d4db078be7857ccb3489f0adb52b3fb16d364e.json",
-  "task118ReboundAt": "2026-10-13T16:31:25.303700+00:00"
+  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task228/immutable-media-history/e08/antananarivo/c5bf81031ff9757b93f24f48e0ef4db8130aa867bc94a50bfd86664faa7d4eec.json",
+  "task118ReboundAt": "2026-10-13T16:31:25.303700+00:00",
+  "task228ExcludedAssets": [],
+  "task228TextRevision": true,
+  "task228ReboundAt": "2026-10-13T17:52:01.833544+00:00"
 }

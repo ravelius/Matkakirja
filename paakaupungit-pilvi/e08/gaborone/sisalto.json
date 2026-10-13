@@ -14,8 +14,8 @@
     }
   },
   "artikkeli": {
-    "intro": "Gaboronen keskustan **Main Mall** on pitkä ulkona kulkeva kävely- ja kauppa-alue. Sen yhteyteen järjestetty hallintokeskus kertoo kaupungin suunnitellusta synnystä. Botswanan pääkaupunki rakennettiin 1960-luvulla maan itsenäistymisen yhteydessä. Isoisän matkavuonna 1873 tätä kaupunkia ei vielä ollut, mutta Notwane-joen seudulla oli vanhempaa asutusta. Kaupungin nimi säilyttää tlokwa-päällikkö Gaboronen muiston.\n\nArjen kannalta tärkeä maamerkki on **Notwanen pato**, joka palvelee vesihuoltoa kaupungin eteläpuolella. Kgale Hillin laelta avautuu näkymä Gaboroneen, ja itäpuolen riistapuistossa elää muun muassa antilooppeja ja seeproja. Kansallismuseon yhteydessä tutustutaan kulttuuriin, ja sen kasvitieteellinen puutarha vaalii Botswanan omaa kasvistoa. Suunniteltu pääkaupunki liittyy siten sekä vanhempaan paikallishistoriaan että sitä ympäröivään luontoon.",
-    "teksti": "Gaborone sijaitsee Botswanan kaakkoisosassa Notwane-joen seudulla. Paikan valinnassa uuden pääkaupungin sijainniksi painoivat veden ja rautatieyhteyden läheisyys. Kaupunki rakennettiin maan itsenäistymisen yhteydessä 1960-luvulla.\n\nNykyistä kaupunkia vanhempi Gaberones tunnetaan The Village -alueena. Nimi Gaborone liittyy tlokwa-yhteisön päällikköön. Hallintopaikkaa kutsuttiin nimellä Government Camp, josta kaupungin lempinimi GC on peräisin.\n\nMain Mallin kävelyalue, museot ja hallintokorttelit ovat osa kaupunkia, jossa luontokohteet ovat lähellä. Kgale Hill on ulkoilupaikka, Gaborone Game Reserve eläinten ja lintujen elinympäristö. Notwanen pato puolestaan yhdistää ympäristön kaupungin veden saantiin. Kasvitieteellinen puutarha tuo maan omaa kasvistoa kaupunkilaisten ulottuville."
+    "intro": "Gaboronen keskustan **Main Mall** on pitkä ulkona kulkeva kävely- ja kauppa-alue. Hallintorakennukset muodostavat sen yhteydessä oman alueensa. Botswanan pääkaupunki rakennettiin 1960-luvulla maan itsenäistymisen yhteydessä. Isoisän matkavuonna 1873 tätä kaupunkia ei vielä ollut, mutta Notwane-joen seudulla oli vanhempaa asutusta. Kaupungin nimi säilyttää tlokwa-päällikkö Gaboronen muiston.\n\nArjen kannalta tärkeä maamerkki on **Gaboronen pato**, joka palvelee vesihuoltoa kaupungin eteläpuolella. Kgale Hillin laelta avautuu näkymä Gaboroneen, ja itäpuolen riistapuistossa elää muun muassa antilooppeja ja seeproja. Kansallismuseo esittelee kulttuuriperintöä ja ylläpitää Botswanan alkuperäiskasvien puutarhaa.",
+    "teksti": "Gaborone sijaitsee Botswanan kaakkoisosassa Notwane-joen seudulla. Paikan valinnassa uuden pääkaupungin sijainniksi painoivat veden ja rautatieyhteyden läheisyys. Kaupunki rakennettiin maan itsenäistymisen yhteydessä 1960-luvulla.\n\nNykyistä kaupunkia vanhempi Gaberones tunnetaan The Village -alueena. Nimi Gaborone liittyy tlokwa-yhteisön päällikköön. \n\nMain Mallin kävelyalue, museot ja hallintokorttelit ovat osa kaupunkia, jossa luontokohteet ovat lähellä. Kgale Hill on ulkoilupaikka, Gaborone Game Reserve eläinten ja lintujen elinympäristö. Gaboronen pato puolestaan yhdistää ympäristön kaupungin veden saantiin. Kasvitieteellinen puutarha tuo maan omaa kasvistoa kaupunkilaisten ulottuville."
   },
   "kysymykset": [
     {
@@ -42,7 +42,7 @@
       ],
       "correct": 0,
       "level": 3,
-      "hint": "Nimi kuuluu seudun paikallishistoriaan.",
+      "hint": "Pääkaupungin nimi oli käytössä seudulla jo ennen sen rakentamista.",
       "fact": "Nimi tulee tlokwa-yhteisön päällikkö Gaboronelta.",
       "source": "https://en.wikipedia.org/wiki/Gaborone"
     },
@@ -56,7 +56,7 @@
       ],
       "correct": 0,
       "level": 2,
-      "hint": "Pato palvelee sekä Gaboronen että Lobatsen vesihuoltoa.",
+      "hint": "Vesihuolto liittyy kaupungin kaakkoiseen sijaintiin, kaukana Botswanan pohjoisista vesistöistä.",
       "fact": "Gaboronen pato varastoi Notwane-joen vettä kaupungin vesihuoltoon.",
       "source": "https://en.wikipedia.org/wiki/Gaborone_Dam"
     },
@@ -70,7 +70,7 @@
       ],
       "correct": 0,
       "level": 1,
-      "hint": "Alue kuului pääkaupungin alkuperäiseen suunnitelmaan.",
+      "hint": "Englannin mall-sana voi tarkoittaa myös kaupunkitilaa ilman kattoa.",
       "fact": "Main Mall on keskustan pitkä, autoton kauppa- ja kävelyalue.",
       "source": "https://en.wikipedia.org/wiki/Gaborone"
     },
@@ -90,14 +90,14 @@
     }
   ],
   "tiedot": [
-    "Lempinimi GC säilyttää vanhan nimityksen Government Camp eli hallintoleiri.",
+    "Kgale Hillin juurelle rakennettua televisiosarjan kuvauspaikkaa kutsuttiin leikillisesti Kgalewoodiksi.",
     "Gaboronen kansallismuseo ylläpitää myös Botswanan alkuperäiskasveja esittelevää kasvitieteellistä puutarhaa.",
-    "Kgale Hill on ollut myös televisiotoistimen paikka, joten kukkulalla on luontoretkeilyn lisäksi viestinnän historiaa."
+    "Kgale Hillillä on toiminut televisiotoistin."
   ],
   "valokuva": {
     "tiedosto": "Gaborone dam.jpg",
     "lyhyt": "Gaboronen tekojärvi Kgale Hilliltä nähtynä.",
-    "selite": "Kgale Hilliltä näkyy Gaboronen padon vesiallas ja sen pensaikkoinen ranta lokakuussa 2020 otetussa kuvassa.",
+    "selite": "Gaboronen pato Kgale Hilliltä nähtynä, lokakuu 2020.",
     "lahde": "Mothusi Sekhomba, Commons (CC BY-SA 4.0)",
     "vuosi": "2020"
   },
@@ -110,13 +110,13 @@
         {
           "tiedosto": "Gaborone, Botswana desde el aire.jpg",
           "lyhyt": "Gaboronen kortteleita ilmasta nähtynä.",
-          "selite": "Vuoden 2011 ilmakuvassa näkyvät Gaboronen katuverkko, asuinkorttelit ja suuret varastorakennukset.",
+          "selite": "Gaborone ilmasta vuonna 2011.",
           "lahde": "Shosholoza, Wikimedia Commons (CC BY-SA 3.0)"
         },
         {
           "tiedosto": "Gaborone, Railway 20200329.jpg",
           "lyhyt": "Rautatie ja Kgale Hill Gaboronessa.",
-          "selite": "Rautatien haarautuvat raiteet kulkevat pensaikon läpi, ja Kgale Hill kohoaa taustalla maaliskuussa 2020.",
+          "selite": "Gaboronen rautatie ja taustalla Kgale Hill, maaliskuu 2020.",
           "lahde": "CNJerem, Wikimedia Commons (CC BY 4.0)"
         },
         {
@@ -129,7 +129,7 @@
       "nostot": [
         {
           "otsikko": "Mall ilman kattoa",
-          "teksti": "Main Mall on Gaboronen keskustan pitkä kävely- ja kauppa-alue. Nimi saattaa tuoda mieleen ostoskeskuksen, mutta täällä kaupunkitila jatkuu ulkona, liikkeiden ja toimistojen välissä. Hallinnon alue liittyy samaan keskustakokonaisuuteen. Kävelyreitit ja avoimet tilat kuuluivat uuden pääkaupungin suunnitelmaan jo alusta lähtien. Kaupungin syntyä voi siksi lukea myös jaloillaan: pitkän kauppa-alueen ja hallintokeskuksen suhde kertoo, millaista arkea suunnittelijat tavoittelivat.",
+          "teksti": "Main Mall on Gaboronen keskustan pitkä kävely- ja kauppa-alue. Nimi saattaa tuoda mieleen ostoskeskuksen, mutta täällä kaupunkitila jatkuu ulkona, liikkeiden ja toimistojen välissä. Hallinnon alue liittyy samaan keskustakokonaisuuteen. Kävelyreitit ja avoimet tilat kuuluivat uuden pääkaupungin suunnitelmaan jo alusta lähtien.",
           "tiedosto": "",
           "lyhyt": "",
           "selite": "",
@@ -138,7 +138,7 @@
         },
         {
           "otsikko": "Vedellä on työ",
-          "teksti": "Gaboronen eteläpuolella Notwane-joen vesi kootaan padon taakse. Tekojärvi palvelee pääkaupungin vesihuoltoa ja myös Lobatsen veden saantia. Pato rakennettiin uuden Gaboronen suunnittelun aikaan ja sitä korotettiin myöhemmin. Kuivuus ja vedenkulutuksen kasvu ovat vaikuttaneet altaan vesitilanteeseen. Rannalla on myös virkistyskäyttöä, mutta maiseman takana on arkinen tehtävä: kaupunki tarvitsee vettä. Pato kertoo pääkaupungin elämästä yhtä konkreettisesti kuin sen kauppakadut.",
+          "teksti": "Gaboronen eteläpuolella Notwane-joen vesi kootaan padon taakse. Tekojärvi palvelee pääkaupungin vesihuoltoa ja myös Lobatsen veden saantia. Pato rakennettiin uuden Gaboronen suunnittelun aikaan ja sitä korotettiin myöhemmin. Kuivuus ja vedenkulutuksen kasvu ovat vaikuttaneet altaan vesitilanteeseen.",
           "tiedosto": "",
           "lyhyt": "",
           "selite": "",
@@ -147,16 +147,16 @@
         },
         {
           "otsikko": "Nukkuva jättiläinen",
-          "teksti": "Kgale Hill tunnetaan lempinimellä Nukkuva jättiläinen. Setswanankielinen nimi Kgale viittaa kuivuneeseen paikkaan. Kukkula kuuluu Gaboronen maisemaan, ja sen laelta avautuu näkymä kaupunkiin ja ympäristöön. Ylös johtaa useita kävelyreittejä, joilla voi kohdata paviaaneja. Paikalla on ollut myös televisiotoistin. Luontokohde on siten palvellut sekä ulkoilua että viestintää. Kaupunkia voi tarkastella hetken ylhäältä ennen kuin palaa takaisin sen katujen ja korttelien tasolle.",
+          "teksti": "Kgale Hill tunnetaan lempinimellä Nukkuva jättiläinen. Setswanankielinen nimi Kgale viittaa kuivuneeseen paikkaan. Kukkula kuuluu Gaboronen maisemaan, ja sen laelta avautuu näkymä kaupunkiin ja ympäristöön. Ylös johtaa useita kävelyreittejä, joilla voi kohdata paviaaneja. Paikalla on ollut myös televisiotoistin.",
           "tiedosto": "Kgale Hill, view east 20200329.jpg",
           "lyhyt": "Näkymä Kgale Hilliltä itään.",
-          "selite": "Kukkulan kallioiselta rinteeltä näkyy Gaboronen tekojärvi maaliskuussa 2020. Kuvassa katsotaan kukkulalta, ei kukkulaa.",
+          "selite": "Näkymä Kgale Hillin huipun alapuolelta itään; taustalla Gaboronen pato, maaliskuu 2020.",
           "lahde": "CNJerem, Wikimedia Commons (CC BY 4.0)",
           "wiki": "Kgale_Hill"
         },
         {
-          "otsikko": "Riistapuisto työpäivän lähellä",
-          "teksti": "Gaborone Game Reserve sijaitsee kaupungin itäpuolella lähellä Notwanea. Sen maisemaan kuuluvat pensaikot, savanni ja kuivahko ruohosto, ja eläimistössä on muun muassa impaloja, kudu-antilooppeja ja seeproja. Puisto tunnetaan myös linnustostaan, jonka havainnointi täydentää nisäkkäiden tarkkailua. Puistossa liikutaan sen omia teitä pitkin. Riistaretken ei siis tarvitse tarkoittaa matkaa Botswanan kaukaisille luontoalueille: pääkaupungin lähelläkin voi tarkastella eläimiä niiden ympäristössä.",
+          "otsikko": "Riistapuisto kaupungin kupeessa",
+          "teksti": "Gaborone Game Reserve sijaitsee kaupungin itäpuolella lähellä Notwanea. Sen maisemaan kuuluvat pensaikot, savanni ja kuivahko ruohosto, ja eläimistössä on muun muassa impaloja, kudu-antilooppeja ja seeproja. Puisto tunnetaan myös linnustostaan, jonka havainnointi täydentää nisäkkäiden tarkkailua. Puistossa liikutaan sen omia teitä pitkin.",
           "tiedosto": "",
           "lyhyt": "",
           "selite": "",
@@ -171,7 +171,7 @@
           "selite": "",
           "lahde": ""
         },
-        "kappale": "Gaboronen keskustaan voi tutustua Main Mallin kävelyalueelta käsin. Kansallismuseo ja kasvitieteellinen puutarha tuovat mukaan kulttuurin ja kasvit. Kgale Hill ja Gaborone Game Reserve ovat erillisiä luontoretkiä kaupungin tuntumassa. Kaupungissa liikutaan myös takseilla ja combi-minibusseilla, joiden reitti kannattaa varmistaa kuljettajalta. Kuuma kesä ja talven kylmät yöt vaikuttavat retkipäivän varusteisiin.",
+        "kappale": "Gaboronen keskustaan voi tutustua Main Mallin kävelyalueelta käsin. Kansallismuseo ja kasvitieteellinen puutarha tuovat mukaan kulttuurin ja kasvit. Kgale Hill ja Gaborone Game Reserve ovat erillisiä luontoretkiä kaupungin tuntumassa. Kaupungissa liikutaan myös takseilla ja combi-minibusseilla.",
         "artikkeli": {
           "nimi": "Matkailijan Gaborone",
           "taitto": "opas",
@@ -180,7 +180,7 @@
           "jaksot": [
             {
               "otsikko": "Perille ja liikkeelle",
-              "teksti": "Gaboronea palvelee Sir Seretse Khaman kansainvälinen lentoasema. Kaupungissa liikutaan takseilla ja combi-minibusseilla. Osa takseista ajaa määrättyjä reittejä, kun taas yksityinen kyyti vie sovittuun määränpäähän. Kerro kuljettajalle helposti tunnistettava paikka tai osoitteen plot-numero, ja varmista combista, kulkeeko se oikeaan suuntaan. Main Mallin keskustakokonaisuudessa kävely kuuluu paikan luonteeseen, mutta koko laajaa kaupunkia ei tarvitse yrittää hoitaa jalan.",
+              "teksti": "Gaboronea palvelee Sir Seretse Khaman kansainvälinen lentoasema. Kaupungissa liikutaan takseilla ja combi-minibusseilla. Osa takseista ajaa määrättyjä reittejä, kun taas yksityinen kyyti vie sovittuun määränpäähän.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -190,7 +190,7 @@
             },
             {
               "otsikko": "Keskusta, museo ja kasvit",
-              "teksti": "Aloita Main Mallin kävely- ja kauppa-alueelta. Kansallismuseon tehtäviin kuuluvat paikallisten taiteilijoiden työt, perinteiset käsityöt ja maan kulttuuriperinnön säilyttäminen. Sen ylläpitämä kasvitieteellinen puutarha on erillinen kohde, jossa esitellään Botswanan alkuperäiskasveja eri luontoympäristöistä. Museo ja puutarha antavat kaupunkipäivälle erilaiset aiheet: toinen painottaa kulttuuria, toinen kasveja. Puutarhan eri osastot seuraavat Botswanan ekologisia alueita Kalaharista Okavangoon.",
+              "teksti": "Aloita Main Mallin kävely- ja kauppa-alueelta. Kansallismuseon tehtäviin kuuluvat paikallisten taiteilijoiden työt, perinteiset käsityöt ja maan kulttuuriperinnön säilyttäminen. Sen ylläpitämä kasvitieteellinen puutarha on erillinen kohde, jossa esitellään Botswanan alkuperäiskasveja eri luontoympäristöistä. Puutarhan eri osastot seuraavat Botswanan ekologisia alueita Kalaharista Okavangoon.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -200,7 +200,7 @@
             },
             {
               "otsikko": "Kukkula, vesi ja eläimet",
-              "teksti": "Kgale Hilliltä voi katsella Gaboronea ja sen ympäristöä. Valitse kävelyreitti kunnon ja sään mukaan ja anna paviaanien olla rauhassa. Gaborone Game Reserve puolestaan on päiväretkikohde, jossa kuljetaan puiston teitä ja tarkkaillaan esimerkiksi antilooppeja, seeproja ja lintuja. Gaboronen padon ympäristö liittyy sekä vesihuoltoon että virkistykseen. Seuraa kunkin kohteen paikallisia kulku- ja käyttöohjeita; kukkula, riistapuisto ja pato ovat erillisiä käyntipaikkoja.",
+              "teksti": "Kgale Hilliltä voi katsella Gaboronea ja sen ympäristöä. Gaborone Game Reserve puolestaan on päiväretkikohde, jossa kuljetaan puiston teitä ja tarkkaillaan esimerkiksi antilooppeja, seeproja ja lintuja. Gaboronen padon ympäristö liittyy sekä vesihuoltoon että virkistykseen.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -210,7 +210,7 @@
             },
             {
               "otsikko": "Mitä täällä syödään",
-              "teksti": "Gaboronessa on sekä paikallista ruokaa että eri maiden keittiöitä tarjoavia ravintoloita. Botswanalaisen ruoan nimistä kannattaa tunnistaa seswaa: pitkään kypsennetty liha hajotetaan tai nuijitaan pieniksi säikeiksi. Bogobe on viljasta tehtyä puuroa, jonka raaka-aine voi olla esimerkiksi durra, hirssi tai maissi. Molemmat kuuluvat maan ruokaperinteeseen. Kysy päivän ruokalistaa, sillä pääkaupungin ateriat eivät rajoitu yhteen kansallisruokaan eikä tietyn annoksen saatavuus ole kaikkialla sama.",
+              "teksti": "Gaboronessa on sekä paikallista ruokaa että eri maiden keittiöitä tarjoavia ravintoloita. Botswanalaisen ruoan nimistä kannattaa tunnistaa seswaa: pitkään kypsennetty liha hajotetaan tai nuijitaan pieniksi säikeiksi. Bogobe on viljasta tehtyä puuroa, jonka raaka-aine voi olla esimerkiksi durra, hirssi tai maissi. Molemmat kuuluvat maan ruokaperinteeseen.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -220,7 +220,7 @@
             },
             {
               "otsikko": "Milloin kannattaa tulla",
-              "teksti": "Gaboronen kesä on kuuma, ja suurin osa sateista osuu kesäkauteen. Talvella päivät voivat olla lämpimiä, mutta yöt ovat kylmiä. Sateiden määrä vaihtelee, joten pelkkä vuodenaika ei kerro yksittäisen retkipäivän säästä. Kukkulalle ja riistapuistoon lähtiessä tarkista ennuste ja ota mukaan sekä aurinkosuojaa että juotavaa. Iltaa varten lämmin vaate on hyödyllinen. Eteläisen pallonpuoliskon kesä ajoittuu Suomen talveen.",
+              "teksti": "Gaboronen kesä on kuuma, ja suurin osa sateista osuu kesäkauteen. Talvella päivät voivat olla lämpimiä, mutta yöt ovat kylmiä. Eteläisen pallonpuoliskon kesä ajoittuu Suomen talveen.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -259,20 +259,16 @@
             ],
             "hyvaTietaa": [
               {
-                "otsikko": "Reittiauto vai oma kyyti",
-                "teksti": "Varmista combi-minibussin tai reittitaksin määränpää kuljettajalta."
+                "otsikko": "Combit ja taksit",
+                "teksti": "Combi-minibussit ja reittitaksit kulkevat määrättyjä reittejä; yksityistaksi vie sovittuun määränpäähän."
               },
               {
-                "otsikko": "Plot-numero auttaa",
-                "teksti": "Taksissa osoitteen tonttinumero tai tunnistettava maamerkki voi toimia paremmin kuin kadunnimi."
+                "otsikko": "Plot-numero",
+                "teksti": "Osoitteissa käytetään tonttinumeroa eli plot-numeroa."
               },
               {
-                "otsikko": "Kohteet eri paikoissa",
-                "teksti": "Kukkula, riistapuisto, puutarha ja pato tarvitsevat omat siirtymänsä."
-              },
-              {
-                "otsikko": "Museon nykytilanne",
-                "teksti": "Tarkista kansallismuseon aukiolo ja näyttelyt museon omilta sivuilta ennen käyntiä."
+                "otsikko": "Erilliset luontokohteet",
+                "teksti": "Kgale Hill on kukkula, Gaborone Game Reserve riistapuisto ja Gaboronen pato vesihuollon allas."
               }
             ]
           },
@@ -316,7 +312,7 @@
         },
         {
           "otsikko": "Kaupunki jalankulkijalle",
-          "teksti": "Uuden Gaboronen suunnittelussa sovellettiin puutarhakaupungin ajatuksia. Kävelyreittejä ja avoimia tiloja oli paljon, ja kaupallinen keskus järjestettiin pitkäksi Main Mall -alueeksi. Hallintorakennukset muodostivat sen yhteyteen oman kokonaisuutensa. Suunnitelmassa pääkaupunki oli samalla paikka asioinnille, kaupalle ja kulkemiselle. Gaboronen historia näkyy siis myös tilojen välisissä suhteissa. Kävelyalueen hahmo kertoo suunnitteluperiaatteista, vaikka kaupunki on sittemmin laajentunut.",
+          "teksti": "Uuden Gaboronen suunnittelussa sovellettiin puutarhakaupungin ajatuksia. Kävelyreittejä ja avoimia tiloja oli paljon, ja kaupallinen keskus järjestettiin pitkäksi Main Mall -alueeksi. Hallintorakennukset muodostivat sen yhteyteen oman kokonaisuutensa. Suunnitelmassa pääkaupunki oli samalla paikka asioinnille, kaupalle ja kulkemiselle.",
           "tiedosto": "",
           "lyhyt": "",
           "selite": "",
@@ -325,7 +321,7 @@
         },
         {
           "otsikko": "Vesi ja rata samassa valinnassa",
-          "teksti": "Uuden pääkaupungin sijaintia valittaessa makean veden läheisyys ja rautatieyhteys kuuluivat perusteisiin. Bechuanamaan hallintokeskus oli aiemmin Mafekingissa, josta hallinto siirtyi uuteen keskukseen. Gaboroneen rakennettiin oma keskus maan itsenäistymisen yhteydessä. Notwanen pato tehtiin samaan aikaan kun uutta kaupunkia suunniteltiin. Kaupungin synty oli siten myös käytännön tarpeiden ratkaisemista: hallinnolle tarvittiin paikka, mutta asukkaille tarvittiin vettä ja kuljetuksille yhteyksiä.",
+          "teksti": "Uuden pääkaupungin sijaintia valittaessa makean veden läheisyys ja rautatieyhteys kuuluivat perusteisiin. Bechuanamaan hallintokeskus oli aiemmin Mafekingissa, josta hallinto siirtyi uuteen keskukseen. Gaboroneen rakennettiin oma keskus maan itsenäistymisen yhteydessä. Gaboronen pato tehtiin samaan aikaan kun uutta kaupunkia suunniteltiin.",
           "tiedosto": "",
           "lyhyt": "",
           "selite": "",
@@ -337,7 +333,7 @@
   ],
   "kohdekartta": {
     "numeroympyrat": true,
-    "esittely": "Kgale Hill tarjoaa kaupunkinäkymän, Notwanen pato palvelee vesihuoltoa ja kasvitieteellinen puutarha esittelee maan omaa kasvistoa.",
+    "esittely": "Kgale Hill tarjoaa kaupunkinäkymän, Gaboronen pato palvelee vesihuoltoa ja kasvitieteellinen puutarha esittelee maan omaa kasvistoa.",
     "rajat": {
       "pohjoinen": -24.6539,
       "etela": -24.70316,
@@ -367,12 +363,12 @@
   "nahtavyydet": {
     "Kgale Hill": {
       "aika": "Luontokohde",
-      "teksti": "Kgale Hill on Gaboronen maisemaan kuuluva kukkula, joka tunnetaan lempinimellä Nukkuva jättiläinen. Setswanankielinen nimi viittaa kuivuneeseen paikkaan. Laelta avautuu näkymä kaupunkiin ja ympäristöön, ja ylös johtaa useita kävelyreittejä. Reiteillä voi nähdä paviaaneja.\n\nKukkulalla on toiminut myös televisiotoistin. Sen juurella kuvattiin televisiosarjaa The No. 1 Ladies’ Detective Agency. Luontopaikan historiaan liittyvät siten myös viestintä ja kuvitteellisesta etsivästä kertova tuotanto, vaikka itse kukkula on oikea maantieteellinen kohde.\n\nKävelyreitit kulkevat kukkulan luonnonmaastossa. Ylös nouseva kohtaa Gaboronen rakentamisen pitkän historian sijaan nopeasti kasvaneen pääkaupungin: kaupunki rakennettiin 1960-luvulla, ja nykyinen näköala on muodostunut vasta sen jälkeen.",
+      "teksti": "Kgale Hill on Gaboronen maisemaan kuuluva kukkula, joka tunnetaan lempinimellä Nukkuva jättiläinen. Setswanankielinen nimi viittaa kuivuneeseen paikkaan. Laelta avautuu näkymä kaupunkiin ja ympäristöön, ja ylös johtaa kolme kävelyreittiä. Reiteillä voi nähdä paviaaneja.\n\nKukkulalla on toiminut myös televisiotoistin. Sen juurella kuvattiin televisiosarjaa The No. 1 Ladies’ Detective Agency, ja kuvauspaikkaa kutsuttiin leikillisesti Kgalewoodiksi.",
       "kuvat": [
         {
           "tiedosto": "Kgale Hill area, Walking Trail 20200329.jpg",
           "lyhyt": "Kävelypolku Kgale Hillin ympäristössä.",
-          "selite": "Polku kulkee marulapuiden ja ruohikon lomassa maaliskuussa 2020 otetussa kuvassa.",
+          "selite": "Kävelyreitti Kgale Hillin ympäristössä maaliskuussa 2020.",
           "lahde": "CNJerem, Wikimedia Commons (CC BY 4.0)"
         }
       ],
@@ -380,12 +376,12 @@
     },
     "Gaboronen pato": {
       "aika": "1960-luku; myöhempi korotus 1980-luvulla",
-      "teksti": "Gaboronen pato kokoaa Notwane-joen vettä kaupungin eteläpuolella. Vesihuolto palvelee Gaboronen lisäksi Lobatsea. Altaan valuma-alueeseen kuuluvat Notwanen ohella Taungin, Metsemaswaanen ja Nywanen jokien vedet. Pato on maatäyttöpato, ja sitä korotettiin myöhemmin varastointikyvyn lisäämiseksi.\n\nRakentaminen alkoi 1960-luvulla, kun uutta pääkaupunkia suunniteltiin. Altaan historia kuuluu modernin pääkaupungin rakentamiseen. Altaan vesitilanteeseen ovat vaikuttaneet sekä vaihtelevat sateet ja haihtuminen että vedenkulutuksen kasvu.\n\nTekojärven ympäristössä harrastetaan myös lintujen tarkkailua, purjehdusta ja kalastusta. Vesihuollon ja virkistyksen tehtävät kohtaavat saman altaan äärellä. Padon rakentaminen ja myöhempi korotus muuttivat veden varastointia, ja altaan ympäristö sai myös virkistyksen tehtäviä.",
+      "teksti": "Gaboronen pato kokoaa Notwane-joen vettä kaupungin eteläpuolella. Vesihuolto palvelee Gaboronen lisäksi Lobatsea. Altaan valuma-alueeseen kuuluvat Notwanen ohella Taungin, Metsemaswaanen ja Nywanen jokien vedet. Pato on maatäyttöpato, ja sitä korotettiin myöhemmin varastointikyvyn lisäämiseksi.\n\nRakentaminen alkoi 1960-luvulla, kun uutta pääkaupunkia suunniteltiin. Altaan historia kuuluu modernin pääkaupungin rakentamiseen. Altaan vesitilanteeseen ovat vaikuttaneet sekä vaihtelevat sateet ja haihtuminen että vedenkulutuksen kasvu.\n\nTekojärven ympäristössä harrastetaan myös lintujen tarkkailua, purjehdusta ja kalastusta.",
       "kuvat": [
         {
           "tiedosto": "Gaborone Dam 20200315a.jpg",
-          "lyhyt": "Kallioista rantaa Gaboronen tekojärvellä.",
-          "selite": "Vesi ympäröi rannan kivilohkareita; etualalla kasvaa pensaita maaliskuussa 2020 otetussa kuvassa.",
+          "lyhyt": "Gaboronen tekojärvi.",
+          "selite": "Gaboronen patoallas maaliskuussa 2020.",
           "lahde": "CNJerem, Wikimedia Commons (CC BY 4.0)"
         }
       ],
@@ -393,7 +389,7 @@
     },
     "Kansallinen kasvitieteellinen puutarha": {
       "aika": "2000-luku",
-      "teksti": "Kansallinen kasvitieteellinen puutarha sijaitsee Okwa Roadin varrella The Village -alueella Notwanen ympäristössä. Se kuuluu Botswanan kansallismuseon luonnonhistorian yksikölle. Puutarhaan on koottu maan alkuperäiskasveja, ja sen tehtävä liittyy Botswanan kasviperinnön suojelemiseen.\n\nOsastot seuraavat maan erilaisia ekologisia alueita. Mukana ovat esimerkiksi Choben kasvisto, Okavangon ja suola-altaiden ympäristöihin liittyvät palmut sekä mopanemetsien kasvit. Lounaisen Kalaharin osastossa esitellään muun muassa ruohoja ja Hoodia-suvun kasveja. Yhden kaupungin puutarhassa voi siten tutustua keskenään erilaisiin kasvuympäristöihin.\n\nNykyinen puutarha avattiin 2000-luvulla. Se liittyy modernin pääkaupungin kulttuuri- ja luonnonhistoriallisiin laitoksiin: sama museo, joka säilyttää käsityöperinnettä, huolehtii myös elävästä kasvikokoelmasta.",
+      "teksti": "Kansallinen kasvitieteellinen puutarha sijaitsee Okwa Roadin varrella The Village -alueella Notwanen ympäristössä. Se kuuluu Botswanan kansallismuseon luonnonhistorian yksikölle. Puutarhaan on koottu maan alkuperäiskasveja, ja sen tehtävä liittyy Botswanan kasviperinnön suojelemiseen.\n\nOsastot seuraavat maan erilaisia ekologisia alueita. Mukana ovat esimerkiksi Choben kasvisto, Okavangon ja suola-altaiden ympäristöihin liittyvät palmut sekä mopanemetsien kasvit. Lounaisen Kalaharin osastossa esitellään muun muassa ruohoja ja Hoodia-suvun kasveja. \n\nNykyinen puutarha avattiin 2000-luvulla. Se liittyy modernin pääkaupungin kulttuuri- ja luonnonhistoriallisiin laitoksiin: sama museo, joka säilyttää käsityöperinnettä, huolehtii myös elävästä kasvikokoelmasta.",
       "kuvat": [
         {
           "tiedosto": "",
@@ -408,15 +404,6 @@
   "saatiedot": null,
   "ehdotukset": {
     "lentoasema": "Sir Seretse Khama International Airport (GBE)",
-    "huomiot": [
-      "Task118 C-tekstikorjaus valmis 13.10.2026. Nykyisessä C:ssä 6 täytettyä kuvaroolia; erilliset B/media-, kartta-, sää-, D/E/F- ja pelikytkentäportit eivät ole tämän tekstikorjauksen hyväksyntä.",
-      "Kohdekartta partial 3/6–8: oman WP-artikkelin pisteet Kgale Hill, Gaboronen pato ja kasvitieteellinen puutarha. Historiallinen keskustaydin ja lisäkohteet avoimet.",
-      "Pato on infrastruktuurikohde omalla nimellään, ei luontopaikaksi uudelleennimetty suojattu rakennus.",
-      "Suojatut muistomerkit, veistokset ja museoteokset jätetty kohdekartan ja kuvatilausten ulkopuolelle.",
-      "Sääauditointi avoin: saatiedot null; saa.json säilytetty koskemattomana.",
-      "Väestöluvut ja tarkat perustamis-/rakennusvuodet jätetty pois. Vuoden 1873 kehys ei väitä koko seutua asumattomaksi.",
-      "Nykyinen matkustusturvallisuuslähde sekä museon nykyinen aukiolo/pääsy avoimia; ei hintoja tai aikatauluja.",
-      "Riippumaton D, E ja pääsession F tekemättä."
-    ]
+    "huomiot": []
   }
 }

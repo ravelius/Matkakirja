@@ -3,7 +3,7 @@
   "era": "e08",
   "city": "windhoek",
   "authorization": "hyväksyn kaikki tekemäsi kuvat. toimita ne claudelle. claudelta saat uusia ohjeita jatkoa varten",
-  "sourceContentAfterSHA256": "7e91e4fba1a8a1eee31b4c0e573fcebfd23d205cb1628e1b906782b37c80b78b",
+  "sourceContentAfterSHA256": "675e1e2f24c94cca0d8ebacfe7269b2f533ac6ef81ee72a27bdd17ab6808d277",
   "assets": [
     {
       "era": "e08",
@@ -53,10 +53,10 @@
         1536
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/windhoek/sisalto.json",
-      "sourceContentSHA256": "7e91e4fba1a8a1eee31b4c0e573fcebfd23d205cb1628e1b906782b37c80b78b",
+      "sourceContentSHA256": "675e1e2f24c94cca0d8ebacfe7269b2f533ac6ef81ee72a27bdd17ab6808d277",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "81827286798cfcd3d7f1e213367cb0fd039483391e43076d30bcfbc525cdfd42",
+        "semanticContextSHA256": "16cef646363f941e8dc1e23c6e676022d934739ebda62ad0546af792a3f4835a",
         "subjectTitle": "Matkailijalle",
         "targetState": "existing-target"
       },
@@ -239,9 +239,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "7e91e4fba1a8a1eee31b4c0e573fcebfd23d205cb1628e1b906782b37c80b78b",
+      "sourceContentAfterSHA256": "675e1e2f24c94cca0d8ebacfe7269b2f533ac6ef81ee72a27bdd17ab6808d277",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "81827286798cfcd3d7f1e213367cb0fd039483391e43076d30bcfbc525cdfd42",
+      "contextAfterSHA256": "16cef646363f941e8dc1e23c6e676022d934739ebda62ad0546af792a3f4835a",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -264,7 +264,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "675e1e2f24c94cca0d8ebacfe7269b2f533ac6ef81ee72a27bdd17ab6808d277",
+        "sameImageNativeSHA256": "3b165ee300e1d6f55d1ef5afe0c4aa21123fbce5ac31e205cbc96f08632a89ca",
+        "sameImageExportSHA256": "b0af941ed194c41d44c300a65c3645391212922e58dcb3d5e71b2421bea6ced3",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e08",
@@ -317,10 +325,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/windhoek/sisalto.json",
-      "sourceContentSHA256": "7e91e4fba1a8a1eee31b4c0e573fcebfd23d205cb1628e1b906782b37c80b78b",
+      "sourceContentSHA256": "675e1e2f24c94cca0d8ebacfe7269b2f533ac6ef81ee72a27bdd17ab6808d277",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "255b09f01a5246eda0a67d976eccaf96e8c71607f0d6e2638eff76021efe531d",
+        "semanticContextSHA256": "523b439364956b073ef0da0f95fb1e080c4643ffa3ccdb8212adec795bab3443",
         "subjectTitle": "Kiveä ja siirtomaahistoriaa",
         "targetState": "existing-target"
       },
@@ -488,9 +496,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "7e91e4fba1a8a1eee31b4c0e573fcebfd23d205cb1628e1b906782b37c80b78b",
+      "sourceContentAfterSHA256": "675e1e2f24c94cca0d8ebacfe7269b2f533ac6ef81ee72a27bdd17ab6808d277",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "255b09f01a5246eda0a67d976eccaf96e8c71607f0d6e2638eff76021efe531d",
+      "contextAfterSHA256": "523b439364956b073ef0da0f95fb1e080c4643ffa3ccdb8212adec795bab3443",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -513,7 +521,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "675e1e2f24c94cca0d8ebacfe7269b2f533ac6ef81ee72a27bdd17ab6808d277",
+        "sameImageNativeSHA256": "298f47a691830273cda77548b61ca35f9a398b7e04ea8521b24dbcaa90b6c289",
+        "sameImageExportSHA256": "29c1b49a0f0b1a279556d1c79678ea4c90dc9c58e34259164bbaff7830542adb",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e08",
@@ -566,10 +582,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/windhoek/sisalto.json",
-      "sourceContentSHA256": "7e91e4fba1a8a1eee31b4c0e573fcebfd23d205cb1628e1b906782b37c80b78b",
+      "sourceContentSHA256": "675e1e2f24c94cca0d8ebacfe7269b2f533ac6ef81ee72a27bdd17ab6808d277",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "5df284f48f94507bd8df4509a3f3cdab93bdb2d8d8fb82e26073539081bd49db",
+        "semanticContextSHA256": "ee6bff59a50d1668dc317c7a63e4d477c1ee6ff9a3e06198dc353f47e4f017c3",
         "subjectTitle": "Ylänkö kasvaa keskellä kaupunkia",
         "targetState": "existing-target"
       },
@@ -737,9 +753,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "7e91e4fba1a8a1eee31b4c0e573fcebfd23d205cb1628e1b906782b37c80b78b",
+      "sourceContentAfterSHA256": "675e1e2f24c94cca0d8ebacfe7269b2f533ac6ef81ee72a27bdd17ab6808d277",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "5df284f48f94507bd8df4509a3f3cdab93bdb2d8d8fb82e26073539081bd49db",
+      "contextAfterSHA256": "ee6bff59a50d1668dc317c7a63e4d477c1ee6ff9a3e06198dc353f47e4f017c3",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -762,7 +778,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "675e1e2f24c94cca0d8ebacfe7269b2f533ac6ef81ee72a27bdd17ab6808d277",
+        "sameImageNativeSHA256": "7e5f06ce7c7c630b33be0047848204433b269b36247111e18d945714ca24f32b",
+        "sameImageExportSHA256": "db8f336ff98a13bbb407632df7798d869b835ab862c4e7ef3539ac3828ba1a9e",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e08",
@@ -815,10 +839,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/windhoek/sisalto.json",
-      "sourceContentSHA256": "7e91e4fba1a8a1eee31b4c0e573fcebfd23d205cb1628e1b906782b37c80b78b",
+      "sourceContentSHA256": "675e1e2f24c94cca0d8ebacfe7269b2f533ac6ef81ee72a27bdd17ab6808d277",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "94bbc80668c9e4aa7aa4f24c92ddc61aa8af99e076481aa74f78c5320a2c2c0d",
+        "semanticContextSHA256": "da8dadb4769340448fc5e2aa734767fca58d8aac53ee5b71a5ea1419245c8588",
         "subjectTitle": "Mitä täällä syödään",
         "targetState": "existing-target"
       },
@@ -1011,9 +1035,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "7e91e4fba1a8a1eee31b4c0e573fcebfd23d205cb1628e1b906782b37c80b78b",
+      "sourceContentAfterSHA256": "675e1e2f24c94cca0d8ebacfe7269b2f533ac6ef81ee72a27bdd17ab6808d277",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "94bbc80668c9e4aa7aa4f24c92ddc61aa8af99e076481aa74f78c5320a2c2c0d",
+      "contextAfterSHA256": "da8dadb4769340448fc5e2aa734767fca58d8aac53ee5b71a5ea1419245c8588",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -1036,7 +1060,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "675e1e2f24c94cca0d8ebacfe7269b2f533ac6ef81ee72a27bdd17ab6808d277",
+        "sameImageNativeSHA256": "8761f088f13a86d694b4c796cb34a36dee5e6e5f025d680d35813b7df90a0e01",
+        "sameImageExportSHA256": "4224f8b4aca0d3d531979c803d86574e3839c8b4825c1e4d44e800dea513d85b",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e08",
@@ -1086,10 +1118,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/windhoek/sisalto.json",
-      "sourceContentSHA256": "7e91e4fba1a8a1eee31b4c0e573fcebfd23d205cb1628e1b906782b37c80b78b",
+      "sourceContentSHA256": "675e1e2f24c94cca0d8ebacfe7269b2f533ac6ef81ee72a27bdd17ab6808d277",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "850436854fe5c7b9182223177c50f626912bf6ac14ae2418cef92aee10d98ba0",
-        "semanticContextSHA256": "850436854fe5c7b9182223177c50f626912bf6ac14ae2418cef92aee10d98ba0",
+        "targetBeforeSHA256": "1cae6ed5a8c36d8f4b6ee148a1053a9ee33035c4a81f26c7a9db66bd4479f060",
+        "semanticContextSHA256": "1cae6ed5a8c36d8f4b6ee148a1053a9ee33035c4a81f26c7a9db66bd4479f060",
         "subjectTitle": "Kirkko koottiin läheltä ja kaukaa",
         "targetState": "existing-target"
       },
@@ -1257,9 +1289,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "7e91e4fba1a8a1eee31b4c0e573fcebfd23d205cb1628e1b906782b37c80b78b",
-      "targetAfterSHA256": "850436854fe5c7b9182223177c50f626912bf6ac14ae2418cef92aee10d98ba0",
-      "contextAfterSHA256": "850436854fe5c7b9182223177c50f626912bf6ac14ae2418cef92aee10d98ba0",
+      "sourceContentAfterSHA256": "675e1e2f24c94cca0d8ebacfe7269b2f533ac6ef81ee72a27bdd17ab6808d277",
+      "targetAfterSHA256": "1cae6ed5a8c36d8f4b6ee148a1053a9ee33035c4a81f26c7a9db66bd4479f060",
+      "contextAfterSHA256": "1cae6ed5a8c36d8f4b6ee148a1053a9ee33035c4a81f26c7a9db66bd4479f060",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -1282,7 +1314,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "675e1e2f24c94cca0d8ebacfe7269b2f533ac6ef81ee72a27bdd17ab6808d277",
+        "sameImageNativeSHA256": "616da4f96356147a5117b59538af9c1693396df3d6262e36304089c8eaa21cae",
+        "sameImageExportSHA256": "c4edff289ffccd815b7d0d6882fb134ffb9236f2b39455f795e93eabaed5fbed",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e08",
@@ -1332,10 +1372,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/windhoek/sisalto.json",
-      "sourceContentSHA256": "7e91e4fba1a8a1eee31b4c0e573fcebfd23d205cb1628e1b906782b37c80b78b",
+      "sourceContentSHA256": "675e1e2f24c94cca0d8ebacfe7269b2f533ac6ef81ee72a27bdd17ab6808d277",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "2c181124942415ab8c318aba215d2496c61b2ee47bf60aaa2e9dc6938bc84691",
-        "semanticContextSHA256": "2c181124942415ab8c318aba215d2496c61b2ee47bf60aaa2e9dc6938bc84691",
+        "targetBeforeSHA256": "b41d75884cd3d35fa255ca58d38ebbc2f15fa1f2dbc5dd57334afc770cf41378",
+        "semanticContextSHA256": "b41d75884cd3d35fa255ca58d38ebbc2f15fa1f2dbc5dd57334afc770cf41378",
         "subjectTitle": "Puutarha, joka suojelee omaa paikkaansa",
         "targetState": "existing-target"
       },
@@ -1503,9 +1543,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "7e91e4fba1a8a1eee31b4c0e573fcebfd23d205cb1628e1b906782b37c80b78b",
-      "targetAfterSHA256": "2c181124942415ab8c318aba215d2496c61b2ee47bf60aaa2e9dc6938bc84691",
-      "contextAfterSHA256": "2c181124942415ab8c318aba215d2496c61b2ee47bf60aaa2e9dc6938bc84691",
+      "sourceContentAfterSHA256": "675e1e2f24c94cca0d8ebacfe7269b2f533ac6ef81ee72a27bdd17ab6808d277",
+      "targetAfterSHA256": "b41d75884cd3d35fa255ca58d38ebbc2f15fa1f2dbc5dd57334afc770cf41378",
+      "contextAfterSHA256": "b41d75884cd3d35fa255ca58d38ebbc2f15fa1f2dbc5dd57334afc770cf41378",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -1528,7 +1568,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "675e1e2f24c94cca0d8ebacfe7269b2f533ac6ef81ee72a27bdd17ab6808d277",
+        "sameImageNativeSHA256": "9e085a98308c5230222f2f950cddc38d1e4850fff45c600f539750047fa49c3f",
+        "sameImageExportSHA256": "16dd3729087702382ea0e7212b53e0ab72aee9261d04d8c0ee8027ee4799a3ee",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e08",
@@ -1578,10 +1626,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/windhoek/sisalto.json",
-      "sourceContentSHA256": "7e91e4fba1a8a1eee31b4c0e573fcebfd23d205cb1628e1b906782b37c80b78b",
+      "sourceContentSHA256": "675e1e2f24c94cca0d8ebacfe7269b2f533ac6ef81ee72a27bdd17ab6808d277",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "61d64f78452f7c5f1231458069d51844da47a95d77f1f292f61b7b0521666006",
-        "semanticContextSHA256": "61d64f78452f7c5f1231458069d51844da47a95d77f1f292f61b7b0521666006",
+        "targetBeforeSHA256": "77c548fbaae5e0358b352d26d563306fb567aac221443be076f18c169a3d0701",
+        "semanticContextSHA256": "77c548fbaae5e0358b352d26d563306fb567aac221443be076f18c169a3d0701",
         "subjectTitle": "Lähde oli ennen pääkaupunkia",
         "targetState": "existing-target"
       },
@@ -1764,9 +1812,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "7e91e4fba1a8a1eee31b4c0e573fcebfd23d205cb1628e1b906782b37c80b78b",
-      "targetAfterSHA256": "61d64f78452f7c5f1231458069d51844da47a95d77f1f292f61b7b0521666006",
-      "contextAfterSHA256": "61d64f78452f7c5f1231458069d51844da47a95d77f1f292f61b7b0521666006",
+      "sourceContentAfterSHA256": "675e1e2f24c94cca0d8ebacfe7269b2f533ac6ef81ee72a27bdd17ab6808d277",
+      "targetAfterSHA256": "77c548fbaae5e0358b352d26d563306fb567aac221443be076f18c169a3d0701",
+      "contextAfterSHA256": "77c548fbaae5e0358b352d26d563306fb567aac221443be076f18c169a3d0701",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -1789,7 +1837,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "675e1e2f24c94cca0d8ebacfe7269b2f533ac6ef81ee72a27bdd17ab6808d277",
+        "sameImageNativeSHA256": "0657df0ebad7dc2051e7c1015285047d0625e2373dcdd2cf09ed07be840eb2f4",
+        "sameImageExportSHA256": "70fea44c7247163cd2a9b5505d05576408781b7f8f1eee43eecffce1870315dd",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e08",
@@ -1839,10 +1895,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/windhoek/sisalto.json",
-      "sourceContentSHA256": "7e91e4fba1a8a1eee31b4c0e573fcebfd23d205cb1628e1b906782b37c80b78b",
+      "sourceContentSHA256": "675e1e2f24c94cca0d8ebacfe7269b2f533ac6ef81ee72a27bdd17ab6808d277",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "be2dd7d7348e1dc67b2161e0f77cad7edcb2ddec82e046e5f2a23cc5e80afc08",
-        "semanticContextSHA256": "be2dd7d7348e1dc67b2161e0f77cad7edcb2ddec82e046e5f2a23cc5e80afc08",
+        "targetBeforeSHA256": "76457c358e4fa7eb3a849657cd2e0618f08537b2e82e1eed0c671ba57368b977",
+        "semanticContextSHA256": "76457c358e4fa7eb3a849657cd2e0618f08537b2e82e1eed0c671ba57368b977",
         "subjectTitle": "Hanalle palataan puhdistamon kautta",
         "targetState": "existing-target"
       },
@@ -2035,9 +2091,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "7e91e4fba1a8a1eee31b4c0e573fcebfd23d205cb1628e1b906782b37c80b78b",
-      "targetAfterSHA256": "be2dd7d7348e1dc67b2161e0f77cad7edcb2ddec82e046e5f2a23cc5e80afc08",
-      "contextAfterSHA256": "be2dd7d7348e1dc67b2161e0f77cad7edcb2ddec82e046e5f2a23cc5e80afc08",
+      "sourceContentAfterSHA256": "675e1e2f24c94cca0d8ebacfe7269b2f533ac6ef81ee72a27bdd17ab6808d277",
+      "targetAfterSHA256": "76457c358e4fa7eb3a849657cd2e0618f08537b2e82e1eed0c671ba57368b977",
+      "contextAfterSHA256": "76457c358e4fa7eb3a849657cd2e0618f08537b2e82e1eed0c671ba57368b977",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -2060,7 +2116,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "675e1e2f24c94cca0d8ebacfe7269b2f533ac6ef81ee72a27bdd17ab6808d277",
+        "sameImageNativeSHA256": "68a4f852531a2a15fb5d7ca68bd5755c397ae2962abe3eab6544f936f7b8e3e0",
+        "sameImageExportSHA256": "fc52e38e5e5082420f0538068b59e5380d3aaa155c5103cab632b4d01538df58",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e08",
@@ -2110,10 +2174,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/windhoek/sisalto.json",
-      "sourceContentSHA256": "7e91e4fba1a8a1eee31b4c0e573fcebfd23d205cb1628e1b906782b37c80b78b",
+      "sourceContentSHA256": "675e1e2f24c94cca0d8ebacfe7269b2f533ac6ef81ee72a27bdd17ab6808d277",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "a0cb7dcdef642c1d4846a5a6541b190d1f9786eb5420e00ddf2cbff4997bdf53",
-        "semanticContextSHA256": "a0cb7dcdef642c1d4846a5a6541b190d1f9786eb5420e00ddf2cbff4997bdf53",
+        "targetBeforeSHA256": "1ffb7220b9b9fcf8ab49914106e8195580625451e8d4752dfebfb4d5f6aa13d7",
+        "semanticContextSHA256": "1ffb7220b9b9fcf8ab49914106e8195580625451e8d4752dfebfb4d5f6aa13d7",
         "subjectTitle": "Turva rakennetaan vaihe vaiheelta",
         "targetState": "existing-target"
       },
@@ -2306,9 +2370,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "7e91e4fba1a8a1eee31b4c0e573fcebfd23d205cb1628e1b906782b37c80b78b",
-      "targetAfterSHA256": "a0cb7dcdef642c1d4846a5a6541b190d1f9786eb5420e00ddf2cbff4997bdf53",
-      "contextAfterSHA256": "a0cb7dcdef642c1d4846a5a6541b190d1f9786eb5420e00ddf2cbff4997bdf53",
+      "sourceContentAfterSHA256": "675e1e2f24c94cca0d8ebacfe7269b2f533ac6ef81ee72a27bdd17ab6808d277",
+      "targetAfterSHA256": "1ffb7220b9b9fcf8ab49914106e8195580625451e8d4752dfebfb4d5f6aa13d7",
+      "contextAfterSHA256": "1ffb7220b9b9fcf8ab49914106e8195580625451e8d4752dfebfb4d5f6aa13d7",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -2331,7 +2395,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "675e1e2f24c94cca0d8ebacfe7269b2f533ac6ef81ee72a27bdd17ab6808d277",
+        "sameImageNativeSHA256": "dc568182c341ccc611a9ef398ce001a656c3cc41db21bad627c59572c9a8915d",
+        "sameImageExportSHA256": "db706a63b907032dfa63dcacaf49175d839c2539f9607783acca71d13b3e07e0",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e08",
@@ -2381,10 +2453,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/windhoek/sisalto.json",
-      "sourceContentSHA256": "7e91e4fba1a8a1eee31b4c0e573fcebfd23d205cb1628e1b906782b37c80b78b",
+      "sourceContentSHA256": "675e1e2f24c94cca0d8ebacfe7269b2f533ac6ef81ee72a27bdd17ab6808d277",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "596ac0bfd212717274cebcb8c93caf5db03e245074a2fc13cead396d02bedeb1",
-        "semanticContextSHA256": "596ac0bfd212717274cebcb8c93caf5db03e245074a2fc13cead396d02bedeb1",
+        "targetBeforeSHA256": "8f69c78000ffa42cb80dba3d6525d72e6ee4bb13b05b3c26e3c33a4586d41288",
+        "semanticContextSHA256": "8f69c78000ffa42cb80dba3d6525d72e6ee4bb13b05b3c26e3c33a4586d41288",
         "subjectTitle": "Kaupunki ei saa kasvaa mihin tahansa",
         "targetState": "existing-target"
       },
@@ -2577,9 +2649,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "7e91e4fba1a8a1eee31b4c0e573fcebfd23d205cb1628e1b906782b37c80b78b",
-      "targetAfterSHA256": "596ac0bfd212717274cebcb8c93caf5db03e245074a2fc13cead396d02bedeb1",
-      "contextAfterSHA256": "596ac0bfd212717274cebcb8c93caf5db03e245074a2fc13cead396d02bedeb1",
+      "sourceContentAfterSHA256": "675e1e2f24c94cca0d8ebacfe7269b2f533ac6ef81ee72a27bdd17ab6808d277",
+      "targetAfterSHA256": "8f69c78000ffa42cb80dba3d6525d72e6ee4bb13b05b3c26e3c33a4586d41288",
+      "contextAfterSHA256": "8f69c78000ffa42cb80dba3d6525d72e6ee4bb13b05b3c26e3c33a4586d41288",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -2602,7 +2674,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "675e1e2f24c94cca0d8ebacfe7269b2f533ac6ef81ee72a27bdd17ab6808d277",
+        "sameImageNativeSHA256": "47c32362075ddf2a6e80eda64b0a63610822f225a7ae8f00d22c01d6c85d9e68",
+        "sameImageExportSHA256": "5090717b836fedc54fb59bd86f1fbe3d707597fd4a728bd67e94365d6ce94dc2",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e08",
@@ -2655,7 +2735,7 @@
         4032
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/windhoek/sisalto.json",
-      "sourceContentSHA256": "7e91e4fba1a8a1eee31b4c0e573fcebfd23d205cb1628e1b906782b37c80b78b",
+      "sourceContentSHA256": "675e1e2f24c94cca0d8ebacfe7269b2f533ac6ef81ee72a27bdd17ab6808d277",
       "semanticSourceBind": {
         "targetBeforeSHA256": "ca67cb45db4044bb8fa6d13958fed1faece323a2dd18d7082c849cce1e7f39ed",
         "semanticContextSHA256": "ca67cb45db4044bb8fa6d13958fed1faece323a2dd18d7082c849cce1e7f39ed",
@@ -2857,7 +2937,7 @@
         "vuosi": "2023"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "7e91e4fba1a8a1eee31b4c0e573fcebfd23d205cb1628e1b906782b37c80b78b",
+      "sourceContentAfterSHA256": "675e1e2f24c94cca0d8ebacfe7269b2f533ac6ef81ee72a27bdd17ab6808d277",
       "targetAfterSHA256": "ca67cb45db4044bb8fa6d13958fed1faece323a2dd18d7082c849cce1e7f39ed",
       "contextAfterSHA256": "ca67cb45db4044bb8fa6d13958fed1faece323a2dd18d7082c849cce1e7f39ed",
       "ownerApproved": true,
@@ -2882,7 +2962,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "675e1e2f24c94cca0d8ebacfe7269b2f533ac6ef81ee72a27bdd17ab6808d277",
+        "sameImageNativeSHA256": "7d6315ffa81325566e3b1914db80689cbcac3b96d3ad878db1a3820701a9c841",
+        "sameImageExportSHA256": "7d6315ffa81325566e3b1914db80689cbcac3b96d3ad878db1a3820701a9c841",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e08",
@@ -2903,23 +2991,23 @@
       "CmediaFieldPayload": {
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/windhoek/c1-5927aabb38d4d5506a83.jpg",
         "suora": true,
-        "lahde": ":Benutzer:Chtrede, Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "Näkymä Windhoekin Katuturan asutukseen vuonna 2007 otetussa kuvassa.",
+        "lahde": "Chtrede, Wikimedia Commons (CC BY-SA 3.0)",
+        "selite": "Näkymä Windhoekin Katuturan asutukseen vuonna 2007.",
         "lyhyt": "Katuturaa Windhoekissa.",
         "tiedosto": "Blick auf Katutura.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
-        "lahde": ":Benutzer:Chtrede, Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "Näkymä Windhoekin Katuturan asutukseen vuonna 2007 otetussa kuvassa.",
+        "lahde": "Chtrede, Wikimedia Commons (CC BY-SA 3.0)",
+        "selite": "Näkymä Windhoekin Katuturan asutukseen vuonna 2007.",
         "lyhyt": "Katuturaa Windhoekissa.",
         "tiedosto": "Blick auf Katutura.jpg"
       },
       "runtimeMediaFieldPayload": {
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/windhoek/c1-5927aabb38d4d5506a83.jpg",
         "suora": true,
-        "lahde": ":Benutzer:Chtrede, Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "Näkymä Windhoekin Katuturan asutukseen vuonna 2007 otetussa kuvassa.",
+        "lahde": "Chtrede, Wikimedia Commons (CC BY-SA 3.0)",
+        "selite": "Näkymä Windhoekin Katuturan asutukseen vuonna 2007.",
         "lyhyt": "Katuturaa Windhoekissa.",
         "tiedosto": "Blick auf Katutura.jpg"
       },
@@ -2935,10 +3023,10 @@
         1920
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/windhoek/sisalto.json",
-      "sourceContentSHA256": "7e91e4fba1a8a1eee31b4c0e573fcebfd23d205cb1628e1b906782b37c80b78b",
+      "sourceContentSHA256": "675e1e2f24c94cca0d8ebacfe7269b2f533ac6ef81ee72a27bdd17ab6808d277",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "d601208f15b2f95efc2c213a2ee9fab6179de97cd9d687b17236bee422b21df2",
-        "semanticContextSHA256": "d601208f15b2f95efc2c213a2ee9fab6179de97cd9d687b17236bee422b21df2",
+        "targetBeforeSHA256": "d88ccd89f5c2ce32280d10d7f31a657bf5c80361838e23e29669607c877c67f3",
+        "semanticContextSHA256": "d88ccd89f5c2ce32280d10d7f31a657bf5c80361838e23e29669607c877c67f3",
         "subjectTitle": "Windhoek",
         "targetState": "existing-target"
       },
@@ -3126,8 +3214,8 @@
       "priorMediaFields": {
         "tiedosto": "Blick auf Katutura.jpg",
         "lyhyt": "Katuturaa Windhoekissa.",
-        "selite": "Näkymä Windhoekin Katuturan asutukseen vuonna 2007 otetussa kuvassa.",
-        "lahde": ":Benutzer:Chtrede, Wikimedia Commons (CC BY-SA 3.0)"
+        "selite": "Näkymä Windhoekin Katuturan asutukseen vuonna 2007.",
+        "lahde": "Chtrede, Wikimedia Commons (CC BY-SA 3.0)"
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -3152,15 +3240,15 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
-        "lahde": ":Benutzer:Chtrede, Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "Näkymä Windhoekin Katuturan asutukseen vuonna 2007 otetussa kuvassa.",
+        "lahde": "Chtrede, Wikimedia Commons (CC BY-SA 3.0)",
+        "selite": "Näkymä Windhoekin Katuturan asutukseen vuonna 2007.",
         "lyhyt": "Katuturaa Windhoekissa.",
         "tiedosto": "Blick auf Katutura.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "7e91e4fba1a8a1eee31b4c0e573fcebfd23d205cb1628e1b906782b37c80b78b",
-      "targetAfterSHA256": "d601208f15b2f95efc2c213a2ee9fab6179de97cd9d687b17236bee422b21df2",
-      "contextAfterSHA256": "d601208f15b2f95efc2c213a2ee9fab6179de97cd9d687b17236bee422b21df2",
+      "sourceContentAfterSHA256": "675e1e2f24c94cca0d8ebacfe7269b2f533ac6ef81ee72a27bdd17ab6808d277",
+      "targetAfterSHA256": "d88ccd89f5c2ce32280d10d7f31a657bf5c80361838e23e29669607c877c67f3",
+      "contextAfterSHA256": "d88ccd89f5c2ce32280d10d7f31a657bf5c80361838e23e29669607c877c67f3",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -3183,7 +3271,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "675e1e2f24c94cca0d8ebacfe7269b2f533ac6ef81ee72a27bdd17ab6808d277",
+        "sameImageNativeSHA256": "5927aabb38d4d5506a834d12c5415907ec5a9089cb0670ebae922f382a411546",
+        "sameImageExportSHA256": "5927aabb38d4d5506a834d12c5415907ec5a9089cb0670ebae922f382a411546",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": true
+      }
     },
     {
       "era": "e08",
@@ -3205,14 +3301,14 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/windhoek/c2-2f6feb11574057e22e81.jpg",
         "suora": true,
         "lahde": "Oshilumbu5, Wikimedia Commons (PD)",
-        "selite": "Windhoekin Hakahanan alue vuonna 2011 otetussa kuvassa.",
+        "selite": "Windhoekin Hakahanan alue vuonna 2011.",
         "lyhyt": "Hakahanan asutusta Windhoekissa.",
         "tiedosto": "Hakahana.JPG"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Oshilumbu5, Wikimedia Commons (PD)",
-        "selite": "Windhoekin Hakahanan alue vuonna 2011 otetussa kuvassa.",
+        "selite": "Windhoekin Hakahanan alue vuonna 2011.",
         "lyhyt": "Hakahanan asutusta Windhoekissa.",
         "tiedosto": "Hakahana.JPG"
       },
@@ -3220,7 +3316,7 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/windhoek/c2-2f6feb11574057e22e81.jpg",
         "suora": true,
         "lahde": "Oshilumbu5, Wikimedia Commons (PD)",
-        "selite": "Windhoekin Hakahanan alue vuonna 2011 otetussa kuvassa.",
+        "selite": "Windhoekin Hakahanan alue vuonna 2011.",
         "lyhyt": "Hakahanan asutusta Windhoekissa.",
         "tiedosto": "Hakahana.JPG"
       },
@@ -3236,10 +3332,10 @@
         2280
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/windhoek/sisalto.json",
-      "sourceContentSHA256": "7e91e4fba1a8a1eee31b4c0e573fcebfd23d205cb1628e1b906782b37c80b78b",
+      "sourceContentSHA256": "675e1e2f24c94cca0d8ebacfe7269b2f533ac6ef81ee72a27bdd17ab6808d277",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "7346fa3c1ab9684bc2073f16ea62e3ddccdd8b68acabc7b3e8ff3c217f5764e7",
-        "semanticContextSHA256": "7346fa3c1ab9684bc2073f16ea62e3ddccdd8b68acabc7b3e8ff3c217f5764e7",
+        "targetBeforeSHA256": "cfe0beb928e7be361ff243b5eb4cd9fd05fce96445b1cc40804e460070c1a145",
+        "semanticContextSHA256": "cfe0beb928e7be361ff243b5eb4cd9fd05fce96445b1cc40804e460070c1a145",
         "subjectTitle": "Windhoek",
         "targetState": "existing-target"
       },
@@ -3405,7 +3501,7 @@
       "priorMediaFields": {
         "tiedosto": "Hakahana.JPG",
         "lyhyt": "Hakahanan asutusta Windhoekissa.",
-        "selite": "Windhoekin Hakahanan alue vuonna 2011 otetussa kuvassa.",
+        "selite": "Windhoekin Hakahanan alue vuonna 2011.",
         "lahde": "Oshilumbu5, Wikimedia Commons (PD)"
       },
       "preservePreviousMediaObjects": true,
@@ -3432,14 +3528,14 @@
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Oshilumbu5, Wikimedia Commons (PD)",
-        "selite": "Windhoekin Hakahanan alue vuonna 2011 otetussa kuvassa.",
+        "selite": "Windhoekin Hakahanan alue vuonna 2011.",
         "lyhyt": "Hakahanan asutusta Windhoekissa.",
         "tiedosto": "Hakahana.JPG"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "7e91e4fba1a8a1eee31b4c0e573fcebfd23d205cb1628e1b906782b37c80b78b",
-      "targetAfterSHA256": "7346fa3c1ab9684bc2073f16ea62e3ddccdd8b68acabc7b3e8ff3c217f5764e7",
-      "contextAfterSHA256": "7346fa3c1ab9684bc2073f16ea62e3ddccdd8b68acabc7b3e8ff3c217f5764e7",
+      "sourceContentAfterSHA256": "675e1e2f24c94cca0d8ebacfe7269b2f533ac6ef81ee72a27bdd17ab6808d277",
+      "targetAfterSHA256": "cfe0beb928e7be361ff243b5eb4cd9fd05fce96445b1cc40804e460070c1a145",
+      "contextAfterSHA256": "cfe0beb928e7be361ff243b5eb4cd9fd05fce96445b1cc40804e460070c1a145",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -3462,7 +3558,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "675e1e2f24c94cca0d8ebacfe7269b2f533ac6ef81ee72a27bdd17ab6808d277",
+        "sameImageNativeSHA256": "2f6feb11574057e22e8194c76b0c283f6e7ea45d6474a74a2daa21d255f8e9f2",
+        "sameImageExportSHA256": "2f6feb11574057e22e8194c76b0c283f6e7ea45d6474a74a2daa21d255f8e9f2",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": true
+      }
     },
     {
       "era": "e08",
@@ -3483,23 +3587,23 @@
       "CmediaFieldPayload": {
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/windhoek/c3-b5ec7d1bdfba4287ba2d.jpg",
         "suora": true,
-        "lahde": ":Benutzer:Chtrede, Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "Näkymä Klein Windhoekiin vuonna 2010 otetussa kuvassa.",
+        "lahde": "Chtrede, Wikimedia Commons (CC BY-SA 3.0)",
+        "selite": "Näkymä Klein Windhoekiin vuonna 2010.",
         "lyhyt": "Klein Windhoekin asuinaluetta.",
         "tiedosto": "Klein-Windhoek 01.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
-        "lahde": ":Benutzer:Chtrede, Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "Näkymä Klein Windhoekiin vuonna 2010 otetussa kuvassa.",
+        "lahde": "Chtrede, Wikimedia Commons (CC BY-SA 3.0)",
+        "selite": "Näkymä Klein Windhoekiin vuonna 2010.",
         "lyhyt": "Klein Windhoekin asuinaluetta.",
         "tiedosto": "Klein-Windhoek 01.jpg"
       },
       "runtimeMediaFieldPayload": {
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/windhoek/c3-b5ec7d1bdfba4287ba2d.jpg",
         "suora": true,
-        "lahde": ":Benutzer:Chtrede, Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "Näkymä Klein Windhoekiin vuonna 2010 otetussa kuvassa.",
+        "lahde": "Chtrede, Wikimedia Commons (CC BY-SA 3.0)",
+        "selite": "Näkymä Klein Windhoekiin vuonna 2010.",
         "lyhyt": "Klein Windhoekin asuinaluetta.",
         "tiedosto": "Klein-Windhoek 01.jpg"
       },
@@ -3515,10 +3619,10 @@
         2304
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/windhoek/sisalto.json",
-      "sourceContentSHA256": "7e91e4fba1a8a1eee31b4c0e573fcebfd23d205cb1628e1b906782b37c80b78b",
+      "sourceContentSHA256": "675e1e2f24c94cca0d8ebacfe7269b2f533ac6ef81ee72a27bdd17ab6808d277",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "d83f1de87657196a8140ec7857f0e7fb4dd04a38c0f221b2036433f49aff4af4",
-        "semanticContextSHA256": "d83f1de87657196a8140ec7857f0e7fb4dd04a38c0f221b2036433f49aff4af4",
+        "targetBeforeSHA256": "6900134a01922fde2599c1f24e74f47bee98ea45a5076070ed1510e87e2a480e",
+        "semanticContextSHA256": "6900134a01922fde2599c1f24e74f47bee98ea45a5076070ed1510e87e2a480e",
         "subjectTitle": "Windhoek",
         "targetState": "existing-target"
       },
@@ -3706,8 +3810,8 @@
       "priorMediaFields": {
         "tiedosto": "Klein-Windhoek 01.jpg",
         "lyhyt": "Klein Windhoekin asuinaluetta.",
-        "selite": "Näkymä Klein Windhoekiin vuonna 2010 otetussa kuvassa.",
-        "lahde": ":Benutzer:Chtrede, Wikimedia Commons (CC BY-SA 3.0)"
+        "selite": "Näkymä Klein Windhoekiin vuonna 2010.",
+        "lahde": "Chtrede, Wikimedia Commons (CC BY-SA 3.0)"
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -3732,15 +3836,15 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
-        "lahde": ":Benutzer:Chtrede, Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "Näkymä Klein Windhoekiin vuonna 2010 otetussa kuvassa.",
+        "lahde": "Chtrede, Wikimedia Commons (CC BY-SA 3.0)",
+        "selite": "Näkymä Klein Windhoekiin vuonna 2010.",
         "lyhyt": "Klein Windhoekin asuinaluetta.",
         "tiedosto": "Klein-Windhoek 01.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "7e91e4fba1a8a1eee31b4c0e573fcebfd23d205cb1628e1b906782b37c80b78b",
-      "targetAfterSHA256": "d83f1de87657196a8140ec7857f0e7fb4dd04a38c0f221b2036433f49aff4af4",
-      "contextAfterSHA256": "d83f1de87657196a8140ec7857f0e7fb4dd04a38c0f221b2036433f49aff4af4",
+      "sourceContentAfterSHA256": "675e1e2f24c94cca0d8ebacfe7269b2f533ac6ef81ee72a27bdd17ab6808d277",
+      "targetAfterSHA256": "6900134a01922fde2599c1f24e74f47bee98ea45a5076070ed1510e87e2a480e",
+      "contextAfterSHA256": "6900134a01922fde2599c1f24e74f47bee98ea45a5076070ed1510e87e2a480e",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -3763,7 +3867,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "675e1e2f24c94cca0d8ebacfe7269b2f533ac6ef81ee72a27bdd17ab6808d277",
+        "sameImageNativeSHA256": "b5ec7d1bdfba4287ba2d2181c7c4059da778b9392fdde02b5950e551135782a7",
+        "sameImageExportSHA256": "b5ec7d1bdfba4287ba2d2181c7c4059da778b9392fdde02b5950e551135782a7",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": true
+      }
     },
     {
       "era": "e08",
@@ -3785,14 +3897,14 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/windhoek/n1-2e1d8ed267280c5ce11a.jpg",
         "suora": true,
         "lahde": "Diego Delso, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Christuskirchen kirkko Windhoekissa 4. elokuuta 2018 otetussa kuvassa.",
+        "selite": "Windhoekin Christuskirche 4. elokuuta 2018.",
         "lyhyt": "Windhoekin Christuskirche.",
         "tiedosto": "Iglesia de Cristo, Windhoek, Namibia, 2018-08-04, DD 05.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Diego Delso, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Christuskirchen kirkko Windhoekissa 4. elokuuta 2018 otetussa kuvassa.",
+        "selite": "Windhoekin Christuskirche 4. elokuuta 2018.",
         "lyhyt": "Windhoekin Christuskirche.",
         "tiedosto": "Iglesia de Cristo, Windhoek, Namibia, 2018-08-04, DD 05.jpg"
       },
@@ -3800,7 +3912,7 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/windhoek/n1-2e1d8ed267280c5ce11a.jpg",
         "suora": true,
         "lahde": "Diego Delso, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Christuskirchen kirkko Windhoekissa 4. elokuuta 2018 otetussa kuvassa.",
+        "selite": "Windhoekin Christuskirche 4. elokuuta 2018.",
         "lyhyt": "Windhoekin Christuskirche.",
         "tiedosto": "Iglesia de Cristo, Windhoek, Namibia, 2018-08-04, DD 05.jpg"
       },
@@ -3816,10 +3928,10 @@
         4935
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/windhoek/sisalto.json",
-      "sourceContentSHA256": "7e91e4fba1a8a1eee31b4c0e573fcebfd23d205cb1628e1b906782b37c80b78b",
+      "sourceContentSHA256": "675e1e2f24c94cca0d8ebacfe7269b2f533ac6ef81ee72a27bdd17ab6808d277",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "c19c0c8cd0567a49cdb510449f028cad169470e04f64ca19fa0ef26c9d68c045",
-        "semanticContextSHA256": "a31497508ef48c41006330d4277a5b789102c3acdf84423b7865eaaf8f94969c",
+        "targetBeforeSHA256": "1e6786a13ebc0230d243dbb012bd6c84b13b5e8ddff0f3e4015bd5cb89ab3561",
+        "semanticContextSHA256": "524d567fed52afbfb558abbf1924be8dfe392e6d9891da790cb408ae4e101f34",
         "subjectTitle": "Christuskirche",
         "targetState": "existing-target"
       },
@@ -4036,7 +4148,7 @@
       "priorMediaFields": {
         "tiedosto": "Iglesia de Cristo, Windhoek, Namibia, 2018-08-04, DD 05.jpg",
         "lyhyt": "Windhoekin Christuskirche.",
-        "selite": "Christuskirchen kirkko Windhoekissa 4. elokuuta 2018 otetussa kuvassa.",
+        "selite": "Windhoekin Christuskirche 4. elokuuta 2018.",
         "lahde": "Diego Delso, Wikimedia Commons (CC BY-SA 4.0)"
       },
       "preservePreviousMediaObjects": true,
@@ -4063,14 +4175,14 @@
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Diego Delso, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Christuskirchen kirkko Windhoekissa 4. elokuuta 2018 otetussa kuvassa.",
+        "selite": "Windhoekin Christuskirche 4. elokuuta 2018.",
         "lyhyt": "Windhoekin Christuskirche.",
         "tiedosto": "Iglesia de Cristo, Windhoek, Namibia, 2018-08-04, DD 05.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "7e91e4fba1a8a1eee31b4c0e573fcebfd23d205cb1628e1b906782b37c80b78b",
-      "targetAfterSHA256": "c19c0c8cd0567a49cdb510449f028cad169470e04f64ca19fa0ef26c9d68c045",
-      "contextAfterSHA256": "a31497508ef48c41006330d4277a5b789102c3acdf84423b7865eaaf8f94969c",
+      "sourceContentAfterSHA256": "675e1e2f24c94cca0d8ebacfe7269b2f533ac6ef81ee72a27bdd17ab6808d277",
+      "targetAfterSHA256": "1e6786a13ebc0230d243dbb012bd6c84b13b5e8ddff0f3e4015bd5cb89ab3561",
+      "contextAfterSHA256": "524d567fed52afbfb558abbf1924be8dfe392e6d9891da790cb408ae4e101f34",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -4093,7 +4205,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "675e1e2f24c94cca0d8ebacfe7269b2f533ac6ef81ee72a27bdd17ab6808d277",
+        "sameImageNativeSHA256": "2e1d8ed267280c5ce11aec56794c55700ecebea7eb3d13e7210f3a641c10cdd0",
+        "sameImageExportSHA256": "2e1d8ed267280c5ce11aec56794c55700ecebea7eb3d13e7210f3a641c10cdd0",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": true
+      }
     }
   ],
   "runtimeIntegrationPending": true,
@@ -4105,6 +4225,9 @@
   "task118TextRevision": true,
   "independentTextResamplePending": true,
   "textAcceptanceVerified": false,
-  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task118/immutable-media-history/e08/windhoek/755936e809d4c0f83f6c2c6738d96d6b8f6eda2fb104b776650fb9b6b38bc330.json",
-  "task118ReboundAt": "2026-10-13T16:31:25.538384+00:00"
+  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task228/immutable-media-history/e08/windhoek/dae6ef642c52f796d86cfe718ac7ef094515b765ed5d88587c9072761aed0ee1.json",
+  "task118ReboundAt": "2026-10-13T16:31:25.538384+00:00",
+  "task228ExcludedAssets": [],
+  "task228TextRevision": true,
+  "task228ReboundAt": "2026-10-13T17:52:01.900912+00:00"
 }

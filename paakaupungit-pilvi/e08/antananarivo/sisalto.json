@@ -15,7 +15,7 @@
   },
   "artikkeli": {
     "intro": "Antananarivossa kaupunginosan osoite kertoo vain osan matkasta: **korkeusero on toinen puoli**. Madagaskarin pääkaupunki levittäytyy keskiylängön kukkuloille ja niiden välisiin laaksoihin. Yläkaupungin vanhojen asuintalojen rinnalla alempana ovat Analakelyn kauppakorttelit. Rinteitä yhdistävät kadut ja portaikot, mutta kaupungissa on myös kukkuloiden läpi kulkevia tunneleita.\n\nAntananarivo oli Merinan valtakunnan pääkaupunki jo ennen Ranskan siirtomaakautta. Andohalon aukiolla hallitsijat esittivät julkisia puheitaan, ja 1800-luvulla kaupunkiin perustettiin kouluja sekä käsityöteollisuutta. Samalla rakennusmateriaalien vanha raja alkoi murtua: aiemmin hautoihin varattu kivi kelpasi vähitellen myös koteihin. **Trano gasy**, tiilinen talo verantoineen, jäi osaksi kaupungin rakennuskulttuuria. Nykyisessä Tanassa ostoksia tehdään Analakelyssä, kahviloita löytyy keskustan pääkadulta ja vanhan rautatieaseman luona kulkija kohtaa kaupankäyntiä junaliikenteen sijasta.",
-    "teksti": "Antananarivon historiaa voi lukea kaupungin korkeuseroista. Kukkuloiden yläosissa ovat kuninkaallisen kaupungin vanhat alueet, rinteillä asuin- ja liikekorttelit ja laaksossa Analakelyn kauppakeskus. Yläkaupunki, keskikaupunki ja alakaupunki ovat käyttökelpoisia nimiä aivan konkreettisille maisemille.\n\nRakennustapa muuttui 1800-luvulla. Vanha käsitys liitti kiven vainajiin ja kasviaineista rakennetut talot eläviin. Kun kivirakentamisen rajoituksia lievennettiin, tiilitalot yleistyivät. Trano gasy -talossa paikalliset ja ulkomailta tulleet vaikutteet yhdistyivät verantoihin ja kerrokselliseen asumiseen.\n\nAlakaupungin suorat pääkadut ja kaupparakennukset kuuluvat myöhempään kaupunkisuunnitteluun. Analakelyn suuri perjantaitori siirrettiin viime vuosisadan lopulla useaan paikkaan, mutta alue on edelleen kaupan keskus. Soaranon asema päättää Avenue de l’Indépendancen: vanhan aseman sisällä on nykyään liikkeitä, eikä rakennus itsessään takaa junamatkaa."
+    "teksti": "Antananarivon historiaa voi lukea kaupungin korkeuseroista. Kukkuloiden yläosissa ovat kuninkaallisen kaupungin vanhat alueet, rinteillä asuin- ja liikekorttelit ja laaksossa Analakelyn kauppakeskus. Yläkaupunki, keskikaupunki ja alakaupunki ovat käyttökelpoisia nimiä aivan konkreettisille maisemille.\n\nRakennustapa muuttui 1800-luvulla. Vanha käsitys liitti kiven vainajiin ja kasviaineista rakennetut talot eläviin. Kun kivirakentamisen rajoituksia lievennettiin, tiilitalot yleistyivät. Trano gasy -talossa paikalliset ja ulkomailta tulleet vaikutteet yhdistyivät verantoihin ja kerrokselliseen asumiseen.\n\nAlakaupungin suorat pääkadut ja kaupparakennukset kuuluvat myöhempään kaupunkisuunnitteluun. Analakelyn suuri perjantaitori siirrettiin viime vuosisadan lopulla useaan paikkaan, mutta alue on edelleen kaupan keskus. Soaranon asema päättää Avenue de l’Indépendancen: vanhan aseman sisällä on nykyään liikkeitä."
   },
   "kysymykset": [
     {
@@ -28,7 +28,7 @@
       ],
       "correct": 0,
       "level": 1,
-      "hint": "Kyseessä on suuri saari Afrikan itäpuolella.",
+      "hint": "Kaupungin tuttu lyhyt nimi on Tana.",
       "fact": "Antananarivo on Madagaskarin pääkaupunki keskiylängöllä.",
       "source": "https://en.wikipedia.org/wiki/Antananarivo"
     },
@@ -115,7 +115,7 @@
         {
           "tiedosto": "Antananarivo 2013 1.jpg",
           "lyhyt": "Antananarivon kaupunkinäkymää.",
-          "selite": "Rovan suunnasta avautuva laaja näkymä Antananarivoon vuonna 2013 otetussa kuvassa.",
+          "selite": "Rovan suunnasta avautuva laaja näkymä Antananarivoon vuonna 2013.",
           "lahde": "Smiley.toerist, Wikimedia Commons (CC BY-SA 4.0)"
         },
         {
@@ -146,7 +146,7 @@
         },
         {
           "otsikko": "Kukkulan voi myös läpäistä",
-          "teksti": "Antananarivon korkeat ja matalat kaupunginosat eivät yhdisty pelkillä portailla. Ranskan siirtomaakaudella kukkuloihin rakennettiin tunneleita, jotta kaupunginosien välillä pääsi kulkemaan. Ambohijatovon suunnalta tunneli johtaa eteläisiin asuinalueisiin, ja toinen yhteys avautuu Anosy-järven suuntaan. Ne kuuluvat samaan kaupungin muutokseen kuin päällystetyt kadut ja alakaupungin suunnitellut korttelit. Jyrkkä rinne voi siis näkyä katukuvassa myös aukona kalliossa.",
+          "teksti": "Antananarivon korkeat ja matalat kaupunginosat eivät yhdisty pelkillä portailla. Ranskan siirtomaakaudella kukkuloihin rakennettiin tunneleita, jotta kaupunginosien välillä pääsi kulkemaan. Ambohijatovon suunnalta tunneli johtaa eteläisiin asuinalueisiin, ja toinen yhteys avautuu Anosy-järven suuntaan. Ne kuuluvat samaan kaupungin muutokseen kuin päällystetyt kadut ja alakaupungin suunnitellut korttelit.",
           "wiki": "Antananarivo",
           "tiedosto": "",
           "lyhyt": "",
@@ -155,7 +155,7 @@
         },
         {
           "otsikko": "Kolme nimeä samalle kaupungille",
-          "teksti": "Antananarivosta käytetään tuttavallista lyhennystä Tana. Ranskankielisissä vanhoissa aineistoissa kaupunki puolestaan esiintyy usein nimellä Tananarive: siirtomaahallinto kirjoitti nimen siihen muotoon. Vielä varhaisempi paikannimi on Analamanga, ”sininen metsä”, joka kuuluu kuninkaallisen kaupungin alkuvaiheisiin. Nimet eivät tarkoita kolmea eri paikkakuntaa. Ne kertovat saman kaupungin pitkästä historiasta, eri kielistä ja siitä, miten pitkä nimi lyhenee arkisessa puheessa.",
+          "teksti": "Antananarivosta käytetään tuttavallista lyhennystä Tana. Ranskankielisissä vanhoissa aineistoissa kaupunki puolestaan esiintyy usein nimellä Tananarive: siirtomaahallinto kirjoitti nimen siihen muotoon. Vielä varhaisempi paikannimi on Analamanga, ”sininen metsä”, joka kuuluu kuninkaallisen kaupungin alkuvaiheisiin.",
           "wiki": "Antananarivo",
           "tiedosto": "",
           "lyhyt": "",
@@ -170,7 +170,7 @@
           "selite": "",
           "lahde": ""
         },
-        "kappale": "Antananarivoon saavutaan Ivaton lentoaseman kautta. Keskustaan siirtymiseen kannattaa varata aikaa ruuhkien vuoksi. Analakelyn ympäristössä voi kulkea kävellen, ja pidempiin matkoihin on takseja sekä paikallisbusseja. Rinteillä portaat ovat osa reittiä. Kaupunkipäivään sopivat kauppakorttelit, vanhat asuintalot ja Anosy-järven ympäristö.",
+        "kappale": "Antananarivoon saavutaan Ivaton lentoaseman kautta. Analakelyn ympäristössä voi kulkea kävellen, ja pidempiin matkoihin on takseja sekä paikallisbusseja. Rinteillä portaat ovat osa reittiä. Kaupunkipäivään sopivat kauppakorttelit, vanhat asuintalot ja Anosy-järven ympäristö.",
         "artikkeli": {
           "nimi": "Matkailijan Antananarivo",
           "taitto": "opas",
@@ -179,7 +179,7 @@
           "jaksot": [
             {
               "otsikko": "Perille ja liikkeelle",
-              "teksti": "Ivato on Antananarivon lentoasema. Keskustan ruuhkat voivat pidentää matkaa, joten sovittu lentokenttäkuljetus helpottaa saapumista. Kaupungissa kuljetaan taksilla, paikallisbusseilla ja kävellen. Takseissa ei yleensä ole mittaria: sovi hinta ennen lähtöä. Avenue de l’Indépendance päättyy Soaranon vanhan aseman luo.",
+              "teksti": "Ivato on Antananarivon lentoasema. Kaupungissa kuljetaan taksilla, paikallisbusseilla ja kävellen. Avenue de l’Indépendance päättyy Soaranon vanhan aseman luo.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -199,7 +199,7 @@
             },
             {
               "otsikko": "Anosy ja vanhat asuinkorttelit",
-              "teksti": "Anosy-järvi on rakennettu järvi keskustan eteläpuolella. Sen saari ja rantaa reunustavat jakarandat kuuluvat kaupungin maisemaan. Yläkaupungissa taas kannattaa tarkastella asuintalojen tiiltä ja verantoja: trano gasy on paikallisen rakennustavan nimi. Järvi, kauppakeskusta ja yläkaupunki tarjoavat erilaiset näkymät saman kaupungin arkeen.",
+              "teksti": "Anosy-järvi on rakennettu järvi keskustan eteläpuolella. Sen saari ja rantaa reunustavat jakarandat kuuluvat kaupungin maisemaan. Yläkaupungissa taas kannattaa tarkastella asuintalojen tiiltä ja verantoja: trano gasy on paikallisen rakennustavan nimi.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -209,7 +209,7 @@
             },
             {
               "otsikko": "Mitä täällä syödään",
-              "teksti": "Antananarivossa voi etsiä malagassikeittiötä tai ranskalaisia vaikutteita yhdistelevän ravintolan. Kaupungissa on myös kasvisruokaa tarjoavia ravintoloita. Isorakan taloja on muutettu ravintoloiksi ja majataloiksi; ruokailuun voi siten yhdistää tutustumisen asuinkortteliin. Juomavedeksi kannattaa valita pullotettu vesi.",
+              "teksti": "Antananarivossa voi etsiä malagassikeittiötä tai ranskalaisia vaikutteita yhdistelevän ravintolan. Kaupungissa on myös kasvisruokaa tarjoavia ravintoloita. Isorakan taloja on muutettu ravintoloiksi ja majataloiksi; ruokailuun voi siten yhdistää tutustumisen asuinkortteliin.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -219,7 +219,7 @@
             },
             {
               "otsikko": "Milloin kannattaa tulla",
-              "teksti": "Keskiylängöllä illat voivat olla viileitä, vaikka Madagaskar sijaitsee tropiikissa. Kuiva kausi on miellyttävä aika kaupunkikävelyille; sateisempi osa vuotta painottuu lämpimään kauteen. Kevyt lisäkerros sopii iltoihin. Jakarandojen kukinta voi tuoda järven rannoille lisää väriä, mutta matkasuunnitelmaa ei kannata rakentaa yhden kukintapäivän varaan.",
+              "teksti": "Keskiylängöllä illat voivat olla viileitä, vaikka Madagaskar sijaitsee tropiikissa. Kuiva kausi on miellyttävä aika kaupunkikävelyille; sateisempi osa vuotta painottuu lämpimään kauteen.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -262,16 +262,12 @@
                 "teksti": "Sovi hinta etukäteen, sillä takseissa ei yleensä ole mittaria."
               },
               {
-                "otsikko": "Lentokenttämatka",
-                "teksti": "Keskustan ruuhkat voivat pidentää siirtymistä Ivatoon."
+                "otsikko": "Korkeuserot",
+                "teksti": "Keskustan kaupunginosia yhdistävät kadut, portaat ja tunnelit."
               },
               {
-                "otsikko": "Junat",
-                "teksti": "Soaranon asema ei takaa matkustajajunaliikennettä; selvitä kulkuyhteys erikseen."
-              },
-              {
-                "otsikko": "Juomavesi",
-                "teksti": "Valitse pullotettu juomavesi."
+                "otsikko": "Soarano",
+                "teksti": "Vanhassa asemarakennuksessa on liikkeitä."
               }
             ]
           },
@@ -297,7 +293,7 @@
       "nostot": [
         {
           "otsikko": "Kivi kuului aluksi vainajille",
-          "teksti": "Vanhan Antananarivon taloissa käytettiin puuta, ruohoa ja ruokoa. Kivi taas kuului sukujen hautakammioihin: elävien ja vainajien rakennukset tehtiin eri aineista. Kyse ei ollut pelkästä materiaalin saatavuudesta, vaan siitä, millainen aine sopi kullekin rakennukselle. Kun rakentamisen rajoituksia lievennettiin 1800-luvun jälkipuoliskolla, kivi ja tiili yleistyivät myös asuintaloissa. Kaupungin tiiliset kodit kantavat siten rakennustavan muutosta, eivät vain yhden ajan muotia.",
+          "teksti": "Vanhan Antananarivon taloissa käytettiin puuta, ruohoa ja ruokoa. Kivi taas kuului sukujen hautakammioihin: elävien ja vainajien rakennukset tehtiin eri aineista. Kyse ei ollut pelkästä materiaalin saatavuudesta, vaan siitä, millainen aine sopi kullekin rakennukselle. Kun rakentamisen rajoituksia lievennettiin 1800-luvun jälkipuoliskolla, kivi ja tiili yleistyivät myös asuintaloissa.",
           "wiki": "Antananarivo",
           "tiedosto": "",
           "lyhyt": "",
@@ -306,7 +302,7 @@
         },
         {
           "otsikko": "Veranta kertoo vaikutteiden matkasta",
-          "teksti": "Trano gasy tarkoittaa malagassitaloa, mutta sen historia ei mahdu yhden maan rajojen sisään. Antananarivon 1800-luvun tiilitaloissa yhdistyivät paikalliset, englantilaiset ja kreolilaiset rakennusvaikutteet. Tunnusomainen talo on kerroksellinen, ja sen edessä on puinen veranta. Lähetyssaarnaajien rakennuksista otettu malli levisi pääkaupungin asuintaloihin ja edelleen keskiylängölle. Omaleimainen kaupunkikuva syntyi siis myös lainattujen ideoiden muuttamisesta paikallisiksi.",
+          "teksti": "Trano gasy tarkoittaa malagassitaloa, mutta sen historia ei mahdu yhden maan rajojen sisään. Antananarivon 1800-luvun tiilitaloissa yhdistyivät paikalliset, englantilaiset ja kreolilaiset rakennusvaikutteet. Tunnusomainen talo on kerroksellinen, ja sen edessä on puinen veranta. Lähetyssaarnaajien rakennuksista otettu malli levisi pääkaupungin asuintaloihin ja edelleen keskiylängölle.",
           "wiki": "Antananarivo",
           "tiedosto": "",
           "lyhyt": "",
@@ -315,7 +311,7 @@
         },
         {
           "otsikko": "Aukio oli julkinen puhujapaikka",
-          "teksti": "Andohalon aukio sijaitsi kuninkaallisen kaupungin portin ulkopuolella. Merinan hallitsijat käyttivät sitä puheiden ja julkisten ilmoitusten paikkana, joten sillä oli muutakin tehtävää kuin tarjota tilaa rakennusten välissä. Kuningas Andriamasinavalona perusti aukion osaksi kasvavaa pääkaupunkia. Myöhemmin siirtomaakauden kaupunkisuunnittelu toi sinne istutuksia ja kävelyväyliä. Samaa nimeä kantava paikka on ollut sekä hallitsijan puhujapaikka että uudelleen järjestetty kaupunkitila.",
+          "teksti": "Andohalon aukio sijaitsi kuninkaallisen kaupungin portin ulkopuolella. Merinan hallitsijat käyttivät sitä puheiden ja julkisten ilmoitusten paikkana, joten sillä oli muutakin tehtävää kuin tarjota tilaa rakennusten välissä. Kuningas Andriamasinavalona perusti aukion osaksi kasvavaa pääkaupunkia. Myöhemmin siirtomaakauden kaupunkisuunnittelu toi sinne istutuksia ja kävelyväyliä.",
           "wiki": "Antananarivo",
           "tiedosto": "",
           "lyhyt": "",
@@ -324,7 +320,7 @@
         },
         {
           "otsikko": "Koulut tulivat käsityöläisten mukana",
-          "teksti": "Lontoon lähetysseuran tulijat eivät toimineet Antananarivossa vain uskonnon parissa. Heidän joukossaan oli käsityöläisiä, jotka osallistuivat teollisen valmistuksen ja rakennustekniikan kehittämiseen, ja kaupunkiin perustettiin julkisia kouluja. Myöhemmin 1800-luvulla koulutuksen laajentaminen toi lisää kouluja ja opettajankoulutusta. Kaupunkiin tuli myös lääketieteen opetusta. Pääkaupungin muutos näkyi siis tiiliseinien lisäksi siinä, missä ja millaisia taitoja saattoi opiskella.",
+          "teksti": "Lontoon lähetysseuran tulijat eivät toimineet Antananarivossa vain uskonnon parissa. Heidän joukossaan oli käsityöläisiä, jotka osallistuivat teollisen valmistuksen ja rakennustekniikan kehittämiseen, ja kaupunkiin perustettiin julkisia kouluja. Myöhemmin 1800-luvulla koulutuksen laajentaminen toi lisää kouluja ja opettajankoulutusta. Kaupunkiin tuli myös lääketieteen opetusta.",
           "wiki": "Antananarivo",
           "tiedosto": "",
           "lyhyt": "",
@@ -355,12 +351,12 @@
   "nahtavyydet": {
     "Anosy-järvi": {
       "aika": "1800-luvun alkupuoli",
-      "teksti": "Anosy-järvi sijaitsee Antananarivon keskustan eteläpuolella. Se on rakennettu vesialue, jonka paikalla oli aluksi suo. Järven rakentaminen alkoi kuningas Radama I:n aikana 1800-luvun alkupuolella, ja siihen osallistui skotlantilainen James Cameron. Kaupungin historia liittää järven teollisen valmistuksen tarvitsemaan vesivoimaan. Nykyinen järvi ei siten ole vain luonnon kaupungille jättämä vesialue.\n\nKeskellä järveä on maakaistaleella rantaan liittyvä saari. Se valittiin aluksi sepän työpajan paikaksi, koska työpajan palon ei haluttu leviävän kaupungin puisiin ja kasviaineilla katettuihin taloihin. Järven rannalla kasvaa jakarandoja. Isoisän matkavuoteen 1873 mennessä järvi oli jo rakennettu, mutta ympäröivä kaupunki on muuttunut sen jälkeen. Veden, teollisen työn ja kaupungin asumisen historiat kohtaavat tällä samalla paikalla.",
+      "teksti": "Anosy-järvi sijaitsee Antananarivon keskustan eteläpuolella. Se on rakennettu vesialue, jonka paikalla oli aluksi suo. Järven rakentaminen alkoi kuningas Radama I:n aikana 1800-luvun alkupuolella, ja siihen osallistui skotlantilainen James Cameron. Kaupungin historia liittää järven teollisen valmistuksen tarvitsemaan vesivoimaan. \n\nKeskellä järveä on maakaistaleella rantaan liittyvä saari. Se valittiin aluksi sepän työpajan paikaksi, koska työpajan palon ei haluttu leviävän kaupungin puisiin ja kasviaineilla katettuihin taloihin. Järven rannalla kasvaa jakarandoja. Isoisän matkavuoteen 1873 mennessä järvi oli jo rakennettu, mutta ympäröivä kaupunki on muuttunut sen jälkeen.",
       "kuvat": [
         {
           "tiedosto": "Lac anosy Antananarivo 2019-10-02 8.jpg",
           "lyhyt": "Anosy-järven rantaa.",
-          "selite": "Antananarivon Anosy-järven ranta 2. lokakuuta 2019 otetussa kuvassa.",
+          "selite": "Antananarivon Anosy-järven ranta 2. lokakuuta 2019.",
           "lahde": "Z thomas, Wikimedia Commons (CC BY-SA 4.0)"
         }
       ],
@@ -370,12 +366,6 @@
   "saatiedot": null,
   "ehdotukset": {
     "lentoasema": "Ivato (TNR)",
-    "huomiot": [
-      "Task118 C-tekstikorjaus valmis 13.10.2026. Nykyisessä C:ssä 5 täytettyä kuvaroolia; erilliset B/media-, kartta-, sää-, D/E/F- ja pelikytkentäportit eivät ole tämän tekstikorjauksen hyväksyntä.",
-      "Kuvat odottavat erillistä kuvaputkea; kaikkien kuvaroolien neljä kenttää on jätetty tyhjiksi.",
-      "Sääpoiminnan 48/48-primäärivarmennus avoin; saatiedot:null, saa.json ei muutettu.",
-      "Anosyn saaren muistomerkki ei kuulu karttakohteeseen eikä kuva-aiheeseen.",
-      "1873-paikallista ulkoasua tai isoisän toimintaa ei keksitty."
-    ]
+    "huomiot": []
   }
 }

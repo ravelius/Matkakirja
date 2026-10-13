@@ -3,7 +3,7 @@
   "era": "e08",
   "city": "gaborone",
   "authorization": "hyväksyn kaikki tekemäsi kuvat. toimita ne claudelle. claudelta saat uusia ohjeita jatkoa varten",
-  "sourceContentAfterSHA256": "04845ed6c138bfb44cccb188c65102e2dd060c12b8bbdeed35af8a5f3938d6ed",
+  "sourceContentAfterSHA256": "46826e0e12b8d63af0082d5eb41f6463b9a44708191430b259470ca38bb3f16d",
   "assets": [
     {
       "era": "e08",
@@ -53,10 +53,10 @@
         1536
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/gaborone/sisalto.json",
-      "sourceContentSHA256": "04845ed6c138bfb44cccb188c65102e2dd060c12b8bbdeed35af8a5f3938d6ed",
+      "sourceContentSHA256": "46826e0e12b8d63af0082d5eb41f6463b9a44708191430b259470ca38bb3f16d",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "dd67be3cf5a7ddbfe473d30274a15b185b9504d9b8bb958a9b635d1d84d43857",
+        "semanticContextSHA256": "027b62bff5b298e882611ceef84449f46fe1a37c589a5a81ed435624cfaeb248",
         "subjectTitle": "Matkailijalle",
         "targetState": "existing-target"
       },
@@ -291,9 +291,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "04845ed6c138bfb44cccb188c65102e2dd060c12b8bbdeed35af8a5f3938d6ed",
+      "sourceContentAfterSHA256": "46826e0e12b8d63af0082d5eb41f6463b9a44708191430b259470ca38bb3f16d",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "dd67be3cf5a7ddbfe473d30274a15b185b9504d9b8bb958a9b635d1d84d43857",
+      "contextAfterSHA256": "027b62bff5b298e882611ceef84449f46fe1a37c589a5a81ed435624cfaeb248",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -316,7 +316,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "46826e0e12b8d63af0082d5eb41f6463b9a44708191430b259470ca38bb3f16d",
+        "sameImageNativeSHA256": "b3f84524c17f2415a6ccb0a0a98ec4256f891640a62916fa9654acf974618a35",
+        "sameImageExportSHA256": "4f644539f8bba76d0951211aff0c276d44b1082f3a706d65d53919f9f55ea175",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e08",
@@ -369,10 +377,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/gaborone/sisalto.json",
-      "sourceContentSHA256": "04845ed6c138bfb44cccb188c65102e2dd060c12b8bbdeed35af8a5f3938d6ed",
+      "sourceContentSHA256": "46826e0e12b8d63af0082d5eb41f6463b9a44708191430b259470ca38bb3f16d",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "6e3830817033e326b0e1e3721df05f37df4f619e3c78f63e658186a6b9fd6ba1",
+        "semanticContextSHA256": "17f45e873f03e7cee3d215312fb0c47084bdfe241787fac90b446300648ead16",
         "subjectTitle": "Kukkula, vesi ja eläimet",
         "targetState": "existing-target"
       },
@@ -540,9 +548,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "04845ed6c138bfb44cccb188c65102e2dd060c12b8bbdeed35af8a5f3938d6ed",
+      "sourceContentAfterSHA256": "46826e0e12b8d63af0082d5eb41f6463b9a44708191430b259470ca38bb3f16d",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "6e3830817033e326b0e1e3721df05f37df4f619e3c78f63e658186a6b9fd6ba1",
+      "contextAfterSHA256": "17f45e873f03e7cee3d215312fb0c47084bdfe241787fac90b446300648ead16",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -565,7 +573,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "46826e0e12b8d63af0082d5eb41f6463b9a44708191430b259470ca38bb3f16d",
+        "sameImageNativeSHA256": "8dfc9913f79314ffd088c142a3ba0c629d08db215309fc3565ffa7976dcb47b3",
+        "sameImageExportSHA256": "f5042b553f7f0a62488a840f20e3a83aa4b95f4ebf02dbbd096fc3dc65ca8624",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e08",
@@ -618,10 +634,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/gaborone/sisalto.json",
-      "sourceContentSHA256": "04845ed6c138bfb44cccb188c65102e2dd060c12b8bbdeed35af8a5f3938d6ed",
+      "sourceContentSHA256": "46826e0e12b8d63af0082d5eb41f6463b9a44708191430b259470ca38bb3f16d",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "04ed261874e499a607a7f7d3853cb87a5b1418512c31362ad3ce36754e21caff",
+        "semanticContextSHA256": "2b94104105c49017279d1ab4cdf547908944648419e59a2fa7025beb82e0324a",
         "subjectTitle": "Mitä täällä syödään",
         "targetState": "existing-target"
       },
@@ -915,9 +931,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "04845ed6c138bfb44cccb188c65102e2dd060c12b8bbdeed35af8a5f3938d6ed",
+      "sourceContentAfterSHA256": "46826e0e12b8d63af0082d5eb41f6463b9a44708191430b259470ca38bb3f16d",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "04ed261874e499a607a7f7d3853cb87a5b1418512c31362ad3ce36754e21caff",
+      "contextAfterSHA256": "2b94104105c49017279d1ab4cdf547908944648419e59a2fa7025beb82e0324a",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -940,7 +956,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "46826e0e12b8d63af0082d5eb41f6463b9a44708191430b259470ca38bb3f16d",
+        "sameImageNativeSHA256": "d805287a89c03aa307aa2ba67826f2b9f578f5ef183611660a6cfb690dbed70a",
+        "sameImageExportSHA256": "d22e524503e6aa2916ffec23f8265fad7074a6362c017c1876598f41f0088178",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e08",
@@ -990,10 +1014,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/gaborone/sisalto.json",
-      "sourceContentSHA256": "04845ed6c138bfb44cccb188c65102e2dd060c12b8bbdeed35af8a5f3938d6ed",
+      "sourceContentSHA256": "46826e0e12b8d63af0082d5eb41f6463b9a44708191430b259470ca38bb3f16d",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "0ea82e9800ce15cb356d26282b4410587d2a5960ae89e91a8706794e7e5ecf03",
-        "semanticContextSHA256": "0ea82e9800ce15cb356d26282b4410587d2a5960ae89e91a8706794e7e5ecf03",
+        "targetBeforeSHA256": "c977343465e6b7e15ddb7451d6ecbd70273733636fd5ca98c34b43ddb541f3c2",
+        "semanticContextSHA256": "c977343465e6b7e15ddb7451d6ecbd70273733636fd5ca98c34b43ddb541f3c2",
         "subjectTitle": "Vedellä on työ",
         "targetState": "existing-target"
       },
@@ -1161,9 +1185,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "04845ed6c138bfb44cccb188c65102e2dd060c12b8bbdeed35af8a5f3938d6ed",
-      "targetAfterSHA256": "0ea82e9800ce15cb356d26282b4410587d2a5960ae89e91a8706794e7e5ecf03",
-      "contextAfterSHA256": "0ea82e9800ce15cb356d26282b4410587d2a5960ae89e91a8706794e7e5ecf03",
+      "sourceContentAfterSHA256": "46826e0e12b8d63af0082d5eb41f6463b9a44708191430b259470ca38bb3f16d",
+      "targetAfterSHA256": "c977343465e6b7e15ddb7451d6ecbd70273733636fd5ca98c34b43ddb541f3c2",
+      "contextAfterSHA256": "c977343465e6b7e15ddb7451d6ecbd70273733636fd5ca98c34b43ddb541f3c2",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -1186,7 +1210,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "46826e0e12b8d63af0082d5eb41f6463b9a44708191430b259470ca38bb3f16d",
+        "sameImageNativeSHA256": "8118f27100a63a496007a302f217732247f48e07e4d25e2560857eb3f812b9ac",
+        "sameImageExportSHA256": "63a4679ac26789feafc9290b8e837a631ae4a0cac2a6e8634ebbbb182dd878d6",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e08",
@@ -1236,10 +1268,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/gaborone/sisalto.json",
-      "sourceContentSHA256": "04845ed6c138bfb44cccb188c65102e2dd060c12b8bbdeed35af8a5f3938d6ed",
+      "sourceContentSHA256": "46826e0e12b8d63af0082d5eb41f6463b9a44708191430b259470ca38bb3f16d",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "2b9a51c56e2582e45862e25e5e1ebf7e707a8f79e27b8aa8652ad91dee08b385",
-        "semanticContextSHA256": "2b9a51c56e2582e45862e25e5e1ebf7e707a8f79e27b8aa8652ad91dee08b385",
+        "targetBeforeSHA256": "7ac511ce9044cbc7a3596132586cdb1a5a34051cc116da0833c401f816b5a059",
+        "semanticContextSHA256": "7ac511ce9044cbc7a3596132586cdb1a5a34051cc116da0833c401f816b5a059",
         "subjectTitle": "Riistapuisto työpäivän lähellä",
         "targetState": "existing-target"
       },
@@ -1422,9 +1454,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "04845ed6c138bfb44cccb188c65102e2dd060c12b8bbdeed35af8a5f3938d6ed",
-      "targetAfterSHA256": "2b9a51c56e2582e45862e25e5e1ebf7e707a8f79e27b8aa8652ad91dee08b385",
-      "contextAfterSHA256": "2b9a51c56e2582e45862e25e5e1ebf7e707a8f79e27b8aa8652ad91dee08b385",
+      "sourceContentAfterSHA256": "46826e0e12b8d63af0082d5eb41f6463b9a44708191430b259470ca38bb3f16d",
+      "targetAfterSHA256": "7ac511ce9044cbc7a3596132586cdb1a5a34051cc116da0833c401f816b5a059",
+      "contextAfterSHA256": "7ac511ce9044cbc7a3596132586cdb1a5a34051cc116da0833c401f816b5a059",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -1447,7 +1479,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "46826e0e12b8d63af0082d5eb41f6463b9a44708191430b259470ca38bb3f16d",
+        "sameImageNativeSHA256": "a90fe8ae042f48c6005087356a6ada27bc9eceb854bfd22745a4b9e7bd951c98",
+        "sameImageExportSHA256": "e4a20c049117a6db8902f8c4027bc3f822278d4a64812603775802813157b34d",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e08",
@@ -1497,10 +1537,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/gaborone/sisalto.json",
-      "sourceContentSHA256": "04845ed6c138bfb44cccb188c65102e2dd060c12b8bbdeed35af8a5f3938d6ed",
+      "sourceContentSHA256": "46826e0e12b8d63af0082d5eb41f6463b9a44708191430b259470ca38bb3f16d",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "2fbeb0f078215e851a9d7bc8354a256a615260e0b0469f8fe08981a632eb5605",
-        "semanticContextSHA256": "2fbeb0f078215e851a9d7bc8354a256a615260e0b0469f8fe08981a632eb5605",
+        "targetBeforeSHA256": "44c2446e592b953532c9aa6640aa0fe2cd226b5c59bbfd77cbf62e5686f956e4",
+        "semanticContextSHA256": "44c2446e592b953532c9aa6640aa0fe2cd226b5c59bbfd77cbf62e5686f956e4",
         "subjectTitle": "Vesi ja rata samassa valinnassa",
         "targetState": "existing-target"
       },
@@ -1668,9 +1708,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "04845ed6c138bfb44cccb188c65102e2dd060c12b8bbdeed35af8a5f3938d6ed",
-      "targetAfterSHA256": "2fbeb0f078215e851a9d7bc8354a256a615260e0b0469f8fe08981a632eb5605",
-      "contextAfterSHA256": "2fbeb0f078215e851a9d7bc8354a256a615260e0b0469f8fe08981a632eb5605",
+      "sourceContentAfterSHA256": "46826e0e12b8d63af0082d5eb41f6463b9a44708191430b259470ca38bb3f16d",
+      "targetAfterSHA256": "44c2446e592b953532c9aa6640aa0fe2cd226b5c59bbfd77cbf62e5686f956e4",
+      "contextAfterSHA256": "44c2446e592b953532c9aa6640aa0fe2cd226b5c59bbfd77cbf62e5686f956e4",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -1693,7 +1733,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "46826e0e12b8d63af0082d5eb41f6463b9a44708191430b259470ca38bb3f16d",
+        "sameImageNativeSHA256": "14069218608f97f2e9d290702882c03c53d30c0679e85a118127524217229114",
+        "sameImageExportSHA256": "58c292e7b709804cb82ce650e8d6a12c070557bc9f500449666e5b17330c18c6",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e08",
@@ -1712,7 +1760,7 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/gaborone/photo-357b78329f45872e8936.jpg",
         "suora": true,
         "lahde": "Mothusi Sekhomba, Commons (CC BY-SA 4.0)",
-        "selite": "Kgale Hilliltä näkyy Gaboronen padon vesiallas ja sen pensaikkoinen ranta lokakuussa 2020 otetussa kuvassa.",
+        "selite": "Gaboronen pato Kgale Hilliltä nähtynä, lokakuu 2020.",
         "lyhyt": "Gaboronen tekojärvi Kgale Hilliltä nähtynä.",
         "tiedosto": "Gaborone dam.jpg",
         "vuosi": "2020"
@@ -1720,7 +1768,7 @@
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Mothusi Sekhomba, Commons (CC BY-SA 4.0)",
-        "selite": "Kgale Hilliltä näkyy Gaboronen padon vesiallas ja sen pensaikkoinen ranta lokakuussa 2020 otetussa kuvassa.",
+        "selite": "Gaboronen pato Kgale Hilliltä nähtynä, lokakuu 2020.",
         "lyhyt": "Gaboronen tekojärvi Kgale Hilliltä nähtynä.",
         "tiedosto": "Gaborone dam.jpg",
         "vuosi": "2020"
@@ -1729,7 +1777,7 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/gaborone/photo-357b78329f45872e8936.jpg",
         "suora": true,
         "lahde": "Mothusi Sekhomba, Commons (CC BY-SA 4.0)",
-        "selite": "Kgale Hilliltä näkyy Gaboronen padon vesiallas ja sen pensaikkoinen ranta lokakuussa 2020 otetussa kuvassa.",
+        "selite": "Gaboronen pato Kgale Hilliltä nähtynä, lokakuu 2020.",
         "lyhyt": "Gaboronen tekojärvi Kgale Hilliltä nähtynä.",
         "tiedosto": "Gaborone dam.jpg",
         "vuosi": "2020"
@@ -1746,10 +1794,10 @@
         3120
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/gaborone/sisalto.json",
-      "sourceContentSHA256": "04845ed6c138bfb44cccb188c65102e2dd060c12b8bbdeed35af8a5f3938d6ed",
+      "sourceContentSHA256": "46826e0e12b8d63af0082d5eb41f6463b9a44708191430b259470ca38bb3f16d",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "2ba132b17943bf85e126edc2a4a673938025a7d4907dd54a916e7476384961e3",
-        "semanticContextSHA256": "2ba132b17943bf85e126edc2a4a673938025a7d4907dd54a916e7476384961e3",
+        "targetBeforeSHA256": "f10b1a34dc5287035e34c2558d2bbae05edfd8839e64f94a04cb60bbf0b84083",
+        "semanticContextSHA256": "f10b1a34dc5287035e34c2558d2bbae05edfd8839e64f94a04cb60bbf0b84083",
         "subjectTitle": "gaborone — aito paikkavalokuva",
         "targetState": "existing-target"
       },
@@ -1911,7 +1959,7 @@
       "priorMediaFields": {
         "tiedosto": "Gaborone dam.jpg",
         "lyhyt": "Gaboronen tekojärvi Kgale Hilliltä nähtynä.",
-        "selite": "Kgale Hilliltä näkyy Gaboronen padon vesiallas ja sen pensaikkoinen ranta lokakuussa 2020 otetussa kuvassa.",
+        "selite": "Gaboronen pato Kgale Hilliltä nähtynä, lokakuu 2020.",
         "lahde": "Mothusi Sekhomba, Commons (CC BY-SA 4.0)",
         "vuosi": "2020"
       },
@@ -1939,15 +1987,15 @@
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Mothusi Sekhomba, Commons (CC BY-SA 4.0)",
-        "selite": "Kgale Hilliltä näkyy Gaboronen padon vesiallas ja sen pensaikkoinen ranta lokakuussa 2020 otetussa kuvassa.",
+        "selite": "Gaboronen pato Kgale Hilliltä nähtynä, lokakuu 2020.",
         "lyhyt": "Gaboronen tekojärvi Kgale Hilliltä nähtynä.",
         "tiedosto": "Gaborone dam.jpg",
         "vuosi": "2020"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "04845ed6c138bfb44cccb188c65102e2dd060c12b8bbdeed35af8a5f3938d6ed",
-      "targetAfterSHA256": "2ba132b17943bf85e126edc2a4a673938025a7d4907dd54a916e7476384961e3",
-      "contextAfterSHA256": "2ba132b17943bf85e126edc2a4a673938025a7d4907dd54a916e7476384961e3",
+      "sourceContentAfterSHA256": "46826e0e12b8d63af0082d5eb41f6463b9a44708191430b259470ca38bb3f16d",
+      "targetAfterSHA256": "f10b1a34dc5287035e34c2558d2bbae05edfd8839e64f94a04cb60bbf0b84083",
+      "contextAfterSHA256": "f10b1a34dc5287035e34c2558d2bbae05edfd8839e64f94a04cb60bbf0b84083",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -1970,7 +2018,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "46826e0e12b8d63af0082d5eb41f6463b9a44708191430b259470ca38bb3f16d",
+        "sameImageNativeSHA256": "357b78329f45872e8936d05a8b6b07a853f22c8f0f13ff0602c37e40c77d2673",
+        "sameImageExportSHA256": "357b78329f45872e8936d05a8b6b07a853f22c8f0f13ff0602c37e40c77d2673",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": true
+      }
     },
     {
       "era": "e08",
@@ -1992,14 +2048,14 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/gaborone/c1-c4d9990b796d0b085b46.jpg",
         "suora": true,
         "lahde": "Shosholoza, Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "Vuoden 2011 ilmakuvassa näkyvät Gaboronen katuverkko, asuinkorttelit ja suuret varastorakennukset.",
+        "selite": "Gaborone ilmasta vuonna 2011.",
         "lyhyt": "Gaboronen kortteleita ilmasta nähtynä.",
         "tiedosto": "Gaborone, Botswana desde el aire.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Shosholoza, Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "Vuoden 2011 ilmakuvassa näkyvät Gaboronen katuverkko, asuinkorttelit ja suuret varastorakennukset.",
+        "selite": "Gaborone ilmasta vuonna 2011.",
         "lyhyt": "Gaboronen kortteleita ilmasta nähtynä.",
         "tiedosto": "Gaborone, Botswana desde el aire.jpg"
       },
@@ -2007,7 +2063,7 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/gaborone/c1-c4d9990b796d0b085b46.jpg",
         "suora": true,
         "lahde": "Shosholoza, Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "Vuoden 2011 ilmakuvassa näkyvät Gaboronen katuverkko, asuinkorttelit ja suuret varastorakennukset.",
+        "selite": "Gaborone ilmasta vuonna 2011.",
         "lyhyt": "Gaboronen kortteleita ilmasta nähtynä.",
         "tiedosto": "Gaborone, Botswana desde el aire.jpg"
       },
@@ -2023,10 +2079,10 @@
         2736
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/gaborone/sisalto.json",
-      "sourceContentSHA256": "04845ed6c138bfb44cccb188c65102e2dd060c12b8bbdeed35af8a5f3938d6ed",
+      "sourceContentSHA256": "46826e0e12b8d63af0082d5eb41f6463b9a44708191430b259470ca38bb3f16d",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "d174dfd87dd7b1f7e41a3d5cf0ea1597d451eb89bd833ca97011a5a498b4d4e4",
-        "semanticContextSHA256": "d174dfd87dd7b1f7e41a3d5cf0ea1597d451eb89bd833ca97011a5a498b4d4e4",
+        "targetBeforeSHA256": "7fb780d4e704c5a3a260c98a0f4924517047f9d4de0e6a84db5f21ef6a15f178",
+        "semanticContextSHA256": "7fb780d4e704c5a3a260c98a0f4924517047f9d4de0e6a84db5f21ef6a15f178",
         "subjectTitle": "Gaborone",
         "targetState": "existing-target"
       },
@@ -2213,7 +2269,7 @@
       "priorMediaFields": {
         "tiedosto": "Gaborone, Botswana desde el aire.jpg",
         "lyhyt": "Gaboronen kortteleita ilmasta nähtynä.",
-        "selite": "Vuoden 2011 ilmakuvassa näkyvät Gaboronen katuverkko, asuinkorttelit ja suuret varastorakennukset.",
+        "selite": "Gaborone ilmasta vuonna 2011.",
         "lahde": "Shosholoza, Wikimedia Commons (CC BY-SA 3.0)"
       },
       "preservePreviousMediaObjects": true,
@@ -2240,14 +2296,14 @@
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Shosholoza, Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "Vuoden 2011 ilmakuvassa näkyvät Gaboronen katuverkko, asuinkorttelit ja suuret varastorakennukset.",
+        "selite": "Gaborone ilmasta vuonna 2011.",
         "lyhyt": "Gaboronen kortteleita ilmasta nähtynä.",
         "tiedosto": "Gaborone, Botswana desde el aire.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "04845ed6c138bfb44cccb188c65102e2dd060c12b8bbdeed35af8a5f3938d6ed",
-      "targetAfterSHA256": "d174dfd87dd7b1f7e41a3d5cf0ea1597d451eb89bd833ca97011a5a498b4d4e4",
-      "contextAfterSHA256": "d174dfd87dd7b1f7e41a3d5cf0ea1597d451eb89bd833ca97011a5a498b4d4e4",
+      "sourceContentAfterSHA256": "46826e0e12b8d63af0082d5eb41f6463b9a44708191430b259470ca38bb3f16d",
+      "targetAfterSHA256": "7fb780d4e704c5a3a260c98a0f4924517047f9d4de0e6a84db5f21ef6a15f178",
+      "contextAfterSHA256": "7fb780d4e704c5a3a260c98a0f4924517047f9d4de0e6a84db5f21ef6a15f178",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -2270,7 +2326,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "46826e0e12b8d63af0082d5eb41f6463b9a44708191430b259470ca38bb3f16d",
+        "sameImageNativeSHA256": "c4d9990b796d0b085b46039fe5175846f7344d18f3148ba536867d2727c1681b",
+        "sameImageExportSHA256": "c4d9990b796d0b085b46039fe5175846f7344d18f3148ba536867d2727c1681b",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": true
+      }
     },
     {
       "era": "e08",
@@ -2292,14 +2356,14 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/gaborone/c2-caf762e27da06f5d5ca8.jpg",
         "suora": true,
         "lahde": "CNJerem, Wikimedia Commons (CC BY 4.0)",
-        "selite": "Rautatien haarautuvat raiteet kulkevat pensaikon läpi, ja Kgale Hill kohoaa taustalla maaliskuussa 2020.",
+        "selite": "Gaboronen rautatie ja taustalla Kgale Hill, maaliskuu 2020.",
         "lyhyt": "Rautatie ja Kgale Hill Gaboronessa.",
         "tiedosto": "Gaborone, Railway 20200329.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "CNJerem, Wikimedia Commons (CC BY 4.0)",
-        "selite": "Rautatien haarautuvat raiteet kulkevat pensaikon läpi, ja Kgale Hill kohoaa taustalla maaliskuussa 2020.",
+        "selite": "Gaboronen rautatie ja taustalla Kgale Hill, maaliskuu 2020.",
         "lyhyt": "Rautatie ja Kgale Hill Gaboronessa.",
         "tiedosto": "Gaborone, Railway 20200329.jpg"
       },
@@ -2307,7 +2371,7 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/gaborone/c2-caf762e27da06f5d5ca8.jpg",
         "suora": true,
         "lahde": "CNJerem, Wikimedia Commons (CC BY 4.0)",
-        "selite": "Rautatien haarautuvat raiteet kulkevat pensaikon läpi, ja Kgale Hill kohoaa taustalla maaliskuussa 2020.",
+        "selite": "Gaboronen rautatie ja taustalla Kgale Hill, maaliskuu 2020.",
         "lyhyt": "Rautatie ja Kgale Hill Gaboronessa.",
         "tiedosto": "Gaborone, Railway 20200329.jpg"
       },
@@ -2323,10 +2387,10 @@
         2266
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/gaborone/sisalto.json",
-      "sourceContentSHA256": "04845ed6c138bfb44cccb188c65102e2dd060c12b8bbdeed35af8a5f3938d6ed",
+      "sourceContentSHA256": "46826e0e12b8d63af0082d5eb41f6463b9a44708191430b259470ca38bb3f16d",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "353c6255a9de6ae41410f7a057ce34e11078ebe8300928679b35bbdb228ade7d",
-        "semanticContextSHA256": "353c6255a9de6ae41410f7a057ce34e11078ebe8300928679b35bbdb228ade7d",
+        "targetBeforeSHA256": "25ad20dfe52fd54f6b6179f33cc3bfa58350434debeaf5eaae08cf23ec28b9a7",
+        "semanticContextSHA256": "25ad20dfe52fd54f6b6179f33cc3bfa58350434debeaf5eaae08cf23ec28b9a7",
         "subjectTitle": "Gaborone",
         "targetState": "existing-target"
       },
@@ -2513,7 +2577,7 @@
       "priorMediaFields": {
         "tiedosto": "Gaborone, Railway 20200329.jpg",
         "lyhyt": "Rautatie ja Kgale Hill Gaboronessa.",
-        "selite": "Rautatien haarautuvat raiteet kulkevat pensaikon läpi, ja Kgale Hill kohoaa taustalla maaliskuussa 2020.",
+        "selite": "Gaboronen rautatie ja taustalla Kgale Hill, maaliskuu 2020.",
         "lahde": "CNJerem, Wikimedia Commons (CC BY 4.0)"
       },
       "preservePreviousMediaObjects": true,
@@ -2540,14 +2604,14 @@
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "CNJerem, Wikimedia Commons (CC BY 4.0)",
-        "selite": "Rautatien haarautuvat raiteet kulkevat pensaikon läpi, ja Kgale Hill kohoaa taustalla maaliskuussa 2020.",
+        "selite": "Gaboronen rautatie ja taustalla Kgale Hill, maaliskuu 2020.",
         "lyhyt": "Rautatie ja Kgale Hill Gaboronessa.",
         "tiedosto": "Gaborone, Railway 20200329.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "04845ed6c138bfb44cccb188c65102e2dd060c12b8bbdeed35af8a5f3938d6ed",
-      "targetAfterSHA256": "353c6255a9de6ae41410f7a057ce34e11078ebe8300928679b35bbdb228ade7d",
-      "contextAfterSHA256": "353c6255a9de6ae41410f7a057ce34e11078ebe8300928679b35bbdb228ade7d",
+      "sourceContentAfterSHA256": "46826e0e12b8d63af0082d5eb41f6463b9a44708191430b259470ca38bb3f16d",
+      "targetAfterSHA256": "25ad20dfe52fd54f6b6179f33cc3bfa58350434debeaf5eaae08cf23ec28b9a7",
+      "contextAfterSHA256": "25ad20dfe52fd54f6b6179f33cc3bfa58350434debeaf5eaae08cf23ec28b9a7",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -2570,7 +2634,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "46826e0e12b8d63af0082d5eb41f6463b9a44708191430b259470ca38bb3f16d",
+        "sameImageNativeSHA256": "caf762e27da06f5d5ca8e25c4d605f166289cdfec54f228ce6d0e8b8790ae1ed",
+        "sameImageExportSHA256": "caf762e27da06f5d5ca8e25c4d605f166289cdfec54f228ce6d0e8b8790ae1ed",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": true
+      }
     },
     {
       "era": "e08",
@@ -2592,14 +2664,14 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/gaborone/k3-8430b7a67475e31d3032.jpg",
         "suora": true,
         "lahde": "CNJerem, Wikimedia Commons (CC BY 4.0)",
-        "selite": "Kukkulan kallioiselta rinteeltä näkyy Gaboronen tekojärvi maaliskuussa 2020. Kuvassa katsotaan kukkulalta, ei kukkulaa.",
+        "selite": "Näkymä Kgale Hillin huipun alapuolelta itään; taustalla Gaboronen pato, maaliskuu 2020.",
         "lyhyt": "Näkymä Kgale Hilliltä itään.",
         "tiedosto": "Kgale Hill, view east 20200329.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "CNJerem, Wikimedia Commons (CC BY 4.0)",
-        "selite": "Kukkulan kallioiselta rinteeltä näkyy Gaboronen tekojärvi maaliskuussa 2020. Kuvassa katsotaan kukkulalta, ei kukkulaa.",
+        "selite": "Näkymä Kgale Hillin huipun alapuolelta itään; taustalla Gaboronen pato, maaliskuu 2020.",
         "lyhyt": "Näkymä Kgale Hilliltä itään.",
         "tiedosto": "Kgale Hill, view east 20200329.jpg"
       },
@@ -2607,7 +2679,7 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/gaborone/k3-8430b7a67475e31d3032.jpg",
         "suora": true,
         "lahde": "CNJerem, Wikimedia Commons (CC BY 4.0)",
-        "selite": "Kukkulan kallioiselta rinteeltä näkyy Gaboronen tekojärvi maaliskuussa 2020. Kuvassa katsotaan kukkulalta, ei kukkulaa.",
+        "selite": "Näkymä Kgale Hillin huipun alapuolelta itään; taustalla Gaboronen pato, maaliskuu 2020.",
         "lyhyt": "Näkymä Kgale Hilliltä itään.",
         "tiedosto": "Kgale Hill, view east 20200329.jpg"
       },
@@ -2623,10 +2695,10 @@
         2266
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/gaborone/sisalto.json",
-      "sourceContentSHA256": "04845ed6c138bfb44cccb188c65102e2dd060c12b8bbdeed35af8a5f3938d6ed",
+      "sourceContentSHA256": "46826e0e12b8d63af0082d5eb41f6463b9a44708191430b259470ca38bb3f16d",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "4214b3282a846bdaee9f438d18e9c4899d44f2e540204c69a008af951d6f392e",
-        "semanticContextSHA256": "4214b3282a846bdaee9f438d18e9c4899d44f2e540204c69a008af951d6f392e",
+        "targetBeforeSHA256": "fa29b41920fcef894d1acfcf6528c0934ddf7dad239db10a52ed02324cd3be85",
+        "semanticContextSHA256": "fa29b41920fcef894d1acfcf6528c0934ddf7dad239db10a52ed02324cd3be85",
         "subjectTitle": "Nukkuva jättiläinen",
         "targetState": "existing-target"
       },
@@ -2817,7 +2889,7 @@
       "priorMediaFields": {
         "tiedosto": "Kgale Hill, view east 20200329.jpg",
         "lyhyt": "Näkymä Kgale Hilliltä itään.",
-        "selite": "Kukkulan kallioiselta rinteeltä näkyy Gaboronen tekojärvi maaliskuussa 2020. Kuvassa katsotaan kukkulalta, ei kukkulaa.",
+        "selite": "Näkymä Kgale Hillin huipun alapuolelta itään; taustalla Gaboronen pato, maaliskuu 2020.",
         "lahde": "CNJerem, Wikimedia Commons (CC BY 4.0)"
       },
       "preservePreviousMediaObjects": true,
@@ -2844,14 +2916,14 @@
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "CNJerem, Wikimedia Commons (CC BY 4.0)",
-        "selite": "Kukkulan kallioiselta rinteeltä näkyy Gaboronen tekojärvi maaliskuussa 2020. Kuvassa katsotaan kukkulalta, ei kukkulaa.",
+        "selite": "Näkymä Kgale Hillin huipun alapuolelta itään; taustalla Gaboronen pato, maaliskuu 2020.",
         "lyhyt": "Näkymä Kgale Hilliltä itään.",
         "tiedosto": "Kgale Hill, view east 20200329.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "04845ed6c138bfb44cccb188c65102e2dd060c12b8bbdeed35af8a5f3938d6ed",
-      "targetAfterSHA256": "4214b3282a846bdaee9f438d18e9c4899d44f2e540204c69a008af951d6f392e",
-      "contextAfterSHA256": "4214b3282a846bdaee9f438d18e9c4899d44f2e540204c69a008af951d6f392e",
+      "sourceContentAfterSHA256": "46826e0e12b8d63af0082d5eb41f6463b9a44708191430b259470ca38bb3f16d",
+      "targetAfterSHA256": "fa29b41920fcef894d1acfcf6528c0934ddf7dad239db10a52ed02324cd3be85",
+      "contextAfterSHA256": "fa29b41920fcef894d1acfcf6528c0934ddf7dad239db10a52ed02324cd3be85",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -2874,7 +2946,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "46826e0e12b8d63af0082d5eb41f6463b9a44708191430b259470ca38bb3f16d",
+        "sameImageNativeSHA256": "8430b7a67475e31d30326338806f80d7a4583f8172a35395c989c80e139ff90d",
+        "sameImageExportSHA256": "8430b7a67475e31d30326338806f80d7a4583f8172a35395c989c80e139ff90d",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": true
+      }
     },
     {
       "era": "e08",
@@ -2896,23 +2976,23 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/gaborone/n2-0db9c6a73fcb7b064b1e.jpg",
         "suora": true,
         "lahde": "CNJerem, Wikimedia Commons (CC BY 4.0)",
-        "selite": "Vesi ympäröi rannan kivilohkareita; etualalla kasvaa pensaita maaliskuussa 2020 otetussa kuvassa.",
-        "lyhyt": "Kallioista rantaa Gaboronen tekojärvellä.",
+        "selite": "Gaboronen patoallas maaliskuussa 2020.",
+        "lyhyt": "Gaboronen tekojärvi.",
         "tiedosto": "Gaborone Dam 20200315a.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "CNJerem, Wikimedia Commons (CC BY 4.0)",
-        "selite": "Vesi ympäröi rannan kivilohkareita; etualalla kasvaa pensaita maaliskuussa 2020 otetussa kuvassa.",
-        "lyhyt": "Kallioista rantaa Gaboronen tekojärvellä.",
+        "selite": "Gaboronen patoallas maaliskuussa 2020.",
+        "lyhyt": "Gaboronen tekojärvi.",
         "tiedosto": "Gaborone Dam 20200315a.jpg"
       },
       "runtimeMediaFieldPayload": {
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/gaborone/n2-0db9c6a73fcb7b064b1e.jpg",
         "suora": true,
         "lahde": "CNJerem, Wikimedia Commons (CC BY 4.0)",
-        "selite": "Vesi ympäröi rannan kivilohkareita; etualalla kasvaa pensaita maaliskuussa 2020 otetussa kuvassa.",
-        "lyhyt": "Kallioista rantaa Gaboronen tekojärvellä.",
+        "selite": "Gaboronen patoallas maaliskuussa 2020.",
+        "lyhyt": "Gaboronen tekojärvi.",
         "tiedosto": "Gaborone Dam 20200315a.jpg"
       },
       "runtimeRemoveMediaKeys": [],
@@ -2927,10 +3007,10 @@
         2266
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/gaborone/sisalto.json",
-      "sourceContentSHA256": "04845ed6c138bfb44cccb188c65102e2dd060c12b8bbdeed35af8a5f3938d6ed",
+      "sourceContentSHA256": "46826e0e12b8d63af0082d5eb41f6463b9a44708191430b259470ca38bb3f16d",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "96ffc3388d27a6e6f90788689474879093a0db174132e1f8a6e1521a0802076c",
-        "semanticContextSHA256": "50554328db67c4eb0e3add79ac6ea31f24d1dc4a374620838767e8aeaa024695",
+        "targetBeforeSHA256": "a2f1cb82f13e7c416d4a4b9fd7c7d714af3826b76597a4ba220b28be7ef8a0de",
+        "semanticContextSHA256": "437a01c9f561ed660f77b8068ceeafe24e6dd4425df5dcbae88d808c0420682a",
         "subjectTitle": "Gaboronen pato",
         "targetState": "existing-target"
       },
@@ -3117,8 +3197,8 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "Gaborone Dam 20200315a.jpg",
-        "lyhyt": "Kallioista rantaa Gaboronen tekojärvellä.",
-        "selite": "Vesi ympäröi rannan kivilohkareita; etualalla kasvaa pensaita maaliskuussa 2020 otetussa kuvassa.",
+        "lyhyt": "Gaboronen tekojärvi.",
+        "selite": "Gaboronen patoallas maaliskuussa 2020.",
         "lahde": "CNJerem, Wikimedia Commons (CC BY 4.0)"
       },
       "preservePreviousMediaObjects": true,
@@ -3145,14 +3225,14 @@
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "CNJerem, Wikimedia Commons (CC BY 4.0)",
-        "selite": "Vesi ympäröi rannan kivilohkareita; etualalla kasvaa pensaita maaliskuussa 2020 otetussa kuvassa.",
-        "lyhyt": "Kallioista rantaa Gaboronen tekojärvellä.",
+        "selite": "Gaboronen patoallas maaliskuussa 2020.",
+        "lyhyt": "Gaboronen tekojärvi.",
         "tiedosto": "Gaborone Dam 20200315a.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "04845ed6c138bfb44cccb188c65102e2dd060c12b8bbdeed35af8a5f3938d6ed",
-      "targetAfterSHA256": "96ffc3388d27a6e6f90788689474879093a0db174132e1f8a6e1521a0802076c",
-      "contextAfterSHA256": "50554328db67c4eb0e3add79ac6ea31f24d1dc4a374620838767e8aeaa024695",
+      "sourceContentAfterSHA256": "46826e0e12b8d63af0082d5eb41f6463b9a44708191430b259470ca38bb3f16d",
+      "targetAfterSHA256": "a2f1cb82f13e7c416d4a4b9fd7c7d714af3826b76597a4ba220b28be7ef8a0de",
+      "contextAfterSHA256": "437a01c9f561ed660f77b8068ceeafe24e6dd4425df5dcbae88d808c0420682a",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -3175,7 +3255,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "46826e0e12b8d63af0082d5eb41f6463b9a44708191430b259470ca38bb3f16d",
+        "sameImageNativeSHA256": "0db9c6a73fcb7b064b1e713e37ac1a43ee60179c79b1ce36251abb07f5a902bd",
+        "sameImageExportSHA256": "0db9c6a73fcb7b064b1e713e37ac1a43ee60179c79b1ce36251abb07f5a902bd",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": true
+      }
     },
     {
       "era": "e08",
@@ -3197,14 +3285,14 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/gaborone/n1-faea6729f7782e220b27.jpg",
         "suora": true,
         "lahde": "CNJerem, Wikimedia Commons (CC BY 4.0)",
-        "selite": "Polku kulkee marulapuiden ja ruohikon lomassa maaliskuussa 2020 otetussa kuvassa.",
+        "selite": "Kävelyreitti Kgale Hillin ympäristössä maaliskuussa 2020.",
         "lyhyt": "Kävelypolku Kgale Hillin ympäristössä.",
         "tiedosto": "Kgale Hill area, Walking Trail 20200329.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "CNJerem, Wikimedia Commons (CC BY 4.0)",
-        "selite": "Polku kulkee marulapuiden ja ruohikon lomassa maaliskuussa 2020 otetussa kuvassa.",
+        "selite": "Kävelyreitti Kgale Hillin ympäristössä maaliskuussa 2020.",
         "lyhyt": "Kävelypolku Kgale Hillin ympäristössä.",
         "tiedosto": "Kgale Hill area, Walking Trail 20200329.jpg"
       },
@@ -3212,7 +3300,7 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/gaborone/n1-faea6729f7782e220b27.jpg",
         "suora": true,
         "lahde": "CNJerem, Wikimedia Commons (CC BY 4.0)",
-        "selite": "Polku kulkee marulapuiden ja ruohikon lomassa maaliskuussa 2020 otetussa kuvassa.",
+        "selite": "Kävelyreitti Kgale Hillin ympäristössä maaliskuussa 2020.",
         "lyhyt": "Kävelypolku Kgale Hillin ympäristössä.",
         "tiedosto": "Kgale Hill area, Walking Trail 20200329.jpg"
       },
@@ -3228,10 +3316,10 @@
         3024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/gaborone/sisalto.json",
-      "sourceContentSHA256": "04845ed6c138bfb44cccb188c65102e2dd060c12b8bbdeed35af8a5f3938d6ed",
+      "sourceContentSHA256": "46826e0e12b8d63af0082d5eb41f6463b9a44708191430b259470ca38bb3f16d",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "ae7b990ba8e7579ab88a43dd1d0d356bdfcbe4ecf01253f12d2e3a71f57d65e3",
-        "semanticContextSHA256": "1e93058f5949b53e7d974d7dee075895c32064b2023427696f23ebccaf65c83d",
+        "targetBeforeSHA256": "2c1ed1deccd4840239e705e465da1e756d18aedb2d4c9f8c615e012c3662c444",
+        "semanticContextSHA256": "744d79ef68728d19f300f199a6a5c1853ff9f62d279eccec3506c03ca65eb64e",
         "subjectTitle": "Kgale Hill",
         "targetState": "existing-target"
       },
@@ -3419,7 +3507,7 @@
       "priorMediaFields": {
         "tiedosto": "Kgale Hill area, Walking Trail 20200329.jpg",
         "lyhyt": "Kävelypolku Kgale Hillin ympäristössä.",
-        "selite": "Polku kulkee marulapuiden ja ruohikon lomassa maaliskuussa 2020 otetussa kuvassa.",
+        "selite": "Kävelyreitti Kgale Hillin ympäristössä maaliskuussa 2020.",
         "lahde": "CNJerem, Wikimedia Commons (CC BY 4.0)"
       },
       "preservePreviousMediaObjects": true,
@@ -3446,14 +3534,14 @@
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "CNJerem, Wikimedia Commons (CC BY 4.0)",
-        "selite": "Polku kulkee marulapuiden ja ruohikon lomassa maaliskuussa 2020 otetussa kuvassa.",
+        "selite": "Kävelyreitti Kgale Hillin ympäristössä maaliskuussa 2020.",
         "lyhyt": "Kävelypolku Kgale Hillin ympäristössä.",
         "tiedosto": "Kgale Hill area, Walking Trail 20200329.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "04845ed6c138bfb44cccb188c65102e2dd060c12b8bbdeed35af8a5f3938d6ed",
-      "targetAfterSHA256": "ae7b990ba8e7579ab88a43dd1d0d356bdfcbe4ecf01253f12d2e3a71f57d65e3",
-      "contextAfterSHA256": "1e93058f5949b53e7d974d7dee075895c32064b2023427696f23ebccaf65c83d",
+      "sourceContentAfterSHA256": "46826e0e12b8d63af0082d5eb41f6463b9a44708191430b259470ca38bb3f16d",
+      "targetAfterSHA256": "2c1ed1deccd4840239e705e465da1e756d18aedb2d4c9f8c615e012c3662c444",
+      "contextAfterSHA256": "744d79ef68728d19f300f199a6a5c1853ff9f62d279eccec3506c03ca65eb64e",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -3476,7 +3564,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "46826e0e12b8d63af0082d5eb41f6463b9a44708191430b259470ca38bb3f16d",
+        "sameImageNativeSHA256": "faea6729f7782e220b27b896970550a77e8c24c1b022c70004a03376d3d522d9",
+        "sameImageExportSHA256": "faea6729f7782e220b27b896970550a77e8c24c1b022c70004a03376d3d522d9",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": true
+      }
     }
   ],
   "runtimeIntegrationPending": true,
@@ -3488,6 +3584,9 @@
   "task118TextRevision": true,
   "independentTextResamplePending": true,
   "textAcceptanceVerified": false,
-  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task118/immutable-media-history/e08/gaborone/de90452e6faf5effdf94515283b4e9e094306c8c2b03e632413f861f5a51b3c0.json",
-  "task118ReboundAt": "2026-10-13T16:31:25.330582+00:00"
+  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task228/immutable-media-history/e08/gaborone/2f96efcbd722a473e262450b54809ed1e10615c7b6771de56ebeb26355d11200.json",
+  "task118ReboundAt": "2026-10-13T16:31:25.330582+00:00",
+  "task228ExcludedAssets": [],
+  "task228TextRevision": true,
+  "task228ReboundAt": "2026-10-13T17:52:01.856518+00:00"
 }

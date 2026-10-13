@@ -42,7 +42,7 @@
       ],
       "correct": 0,
       "level": 1,
-      "hint": "Tavaraa tuodaan markkinoille viljelijöiltä.",
+      "hint": "Mbare Musika on samalla maaseutubussien solmukohta.",
       "fact": "Mbare Musika on maataloustuotteiden kauppa- ja jakelupaikka.",
       "source": "https://en.wikipedia.org/wiki/Mbare_Musika"
     },
@@ -84,7 +84,7 @@
       ],
       "correct": 0,
       "level": 3,
-      "hint": "Ohjelma tallentaa vähän dokumentoituja kokemuksia.",
+      "hint": "Kansallisarkistossa säilytetään myös muuta kuin viranomaisten asiakirjoja.",
       "fact": "Suullisen historian ohjelmassa säilytetään ihmisten kertomuksia haastatteluina.",
       "source": "https://en.wikipedia.org/wiki/National_Archives_of_Zimbabwe"
     }
@@ -97,7 +97,7 @@
   "valokuva": {
     "tiedosto": "Harare 2024 1.jpg",
     "lyhyt": "Hararen puukujannetta.",
-    "selite": "Hararen kaupunkimaisemaa ja katupuustoa vuonna 2024 otetussa kuvassa.",
+    "selite": "Hararen kaupunkimaisemaa ja katupuustoa vuonna 2024.",
     "lahde": "Peter in s, Commons (CC BY-SA 4.0)",
     "vuosi": "2024"
   },
@@ -110,7 +110,7 @@
         {
           "tiedosto": "Planting season in Harare.jpg",
           "lyhyt": "Kaupunkiviljelyä Hararessa.",
-          "selite": "Istutuskauden viljelyä Hararen asutuksen lomassa vuonna 2020 otetussa kuvassa.",
+          "selite": "Istutuskauden viljelyä Hararen asutuksen lomassa vuonna 2020.",
           "lahde": "Itaisibanda, Wikimedia Commons (CC BY-SA 4.0)"
         },
         {
@@ -129,7 +129,7 @@
       "nostot": [
         {
           "otsikko": "Torilta lähdetään maaseudulle",
-          "teksti": "Mbare Musika sijaitsee Hararen Mbaren kaupunginosassa keskustan eteläpuolella. Siellä myydään vihanneksia ja hedelmiä, ja viljelijät tuovat maataloustuotteita eri puolilta maata jakeluun ja kauppaan. Sama paikka on myös maaseudulle suuntautuvan ja sieltä tulevan bussiliikenteen solmukohta. Torin ja liikenteen rinnakkaisuus tekee kaupungin yhteyden ympäröivään maaseutuun näkyväksi. Mbare tunnettiin aiemmin Hararina; kaupunginosan nimihistoria on oma kerroksensa modernin pääkaupungin sisällä.",
+          "teksti": "Mbare Musika sijaitsee Hararen Mbaren kaupunginosassa keskustan eteläpuolella. Siellä myydään vihanneksia ja hedelmiä, ja viljelijät tuovat maataloustuotteita eri puolilta maata jakeluun ja kauppaan. Sama paikka on myös maaseudulle suuntautuvan ja sieltä tulevan bussiliikenteen solmukohta. Mbare tunnettiin aiemmin Hararina; kaupunginosan nimihistoria on oma kerroksensa modernin pääkaupungin sisällä.",
           "wiki": "Mbare Musika",
           "tiedosto": "",
           "lyhyt": "",
@@ -138,7 +138,7 @@
         },
         {
           "otsikko": "Arkistoon mahtuu myös ääni",
-          "teksti": "Zimbabwen kansallisarkisto säilyttää maan dokumentoitua historiaa, myös entisen Etelä-Rhodesian asiakirjoja. Sen audiovisuaalinen yksikkö käsittelee kuvan ja tekstin lisäksi ääntä sekä liikkuvaa kuvaa. Suullisen historian ohjelma kerää haastatteluja ihmisiltä, joiden panos on jäänyt vähälle dokumentoinnille. Arkistoon kuuluu myös yhteisöarkistojen toimintaa. Menneisyyden lähde voi siis olla virallisen paperin ohella ihmisen kertoma kokemus; muistamisen erilaiset välineet täydentävät kokoelmien kuvaa.",
+          "teksti": "Zimbabwen kansallisarkisto säilyttää maan dokumentoitua historiaa, myös entisen Etelä-Rhodesian asiakirjoja. Sen audiovisuaalinen yksikkö käsittelee kuvan ja tekstin lisäksi ääntä sekä liikkuvaa kuvaa. Suullisen historian ohjelma kerää haastatteluja ihmisiltä, joiden panos on jäänyt vähälle dokumentoinnille. Arkistoon kuuluu myös yhteisöarkistojen toimintaa.",
           "wiki": "National Archives of Zimbabwe",
           "tiedosto": "",
           "lyhyt": "",
@@ -147,7 +147,7 @@
         },
         {
           "otsikko": "Teatteria tehdään myös näyttämön takana",
-          "teksti": "Reps eli The Repertory Players kasvoi näytelmien lukuryhmästä teatteriseuraksi. Esityspaikat vaihtuivat ennen nykyistä teatteria, ja käytössä oli esimerkiksi koulun sali sekä näyttelyalueen halli. Näyttelijöissä ja teknisissä tekijöissä on vapaaehtoisia, joiden rinnalla toimii palkattuja työntekijöitä. Nykyiseen toimintaan kuuluu puvusto, erikokoisia näyttämö- ja harjoitustiloja sekä nuorten ryhmiä. Harrastajateatterin esitys syntyy näin monenlaisesta työstä, jota yleisö näkee vain osittain lavalla.",
+          "teksti": "Reps eli The Repertory Players kasvoi näytelmien lukuryhmästä teatteriseuraksi. Esityspaikat vaihtuivat ennen nykyistä teatteria, ja käytössä oli esimerkiksi koulun sali sekä näyttelyalueen halli. Näyttelijöissä ja teknisissä tekijöissä on vapaaehtoisia, joiden rinnalla toimii palkattuja työntekijöitä. Nykyiseen toimintaan kuuluu puvusto, erikokoisia näyttämö- ja harjoitustiloja sekä nuorten ryhmiä.",
           "wiki": "Reps Theatre",
           "tiedosto": "",
           "lyhyt": "",
@@ -156,7 +156,7 @@
         },
         {
           "otsikko": "Kaupunki on kokoelmiaan nuorempi",
-          "teksti": "Zimbabwe Museum of Human Sciences tarkastelee antropologiaa ja arkeologiaa. Museon aiempi nimi oli Queen Victoria Museum, ja nimi vaihtui itsenäisyyden jälkeen. Kokoelmissa on etnografista ja arkeologista aineistoa, jonka historia ulottuu modernin Hararen perustamista kauemmas. Museoon kuuluu kirjasto ja näyttelygallerioita sekä Shona-kylän malli, joka havainnollistaa perinteistä asumista museon näyttelyssä. Museon kokoelma ja kaupunki kertovat siten eri pituisista aikajanoista.",
+          "teksti": "Zimbabwe Museum of Human Sciences tarkastelee antropologiaa ja arkeologiaa. Museon aiempi nimi oli Queen Victoria Museum, ja nimi vaihtui itsenäisyyden jälkeen. Kokoelmissa on etnografista ja arkeologista aineistoa, jonka historia ulottuu modernin Hararen perustamista kauemmas. Museoon kuuluu kirjasto ja näyttelygallerioita sekä Shona-kylän malli, joka havainnollistaa perinteistä asumista museon näyttelyssä.",
           "wiki": "Zimbabwe Museum of Human Sciences",
           "tiedosto": "",
           "lyhyt": "",
@@ -180,7 +180,7 @@
           "jaksot": [
             {
               "otsikko": "Perille ja liikkeelle",
-              "teksti": "Robert Gabriel Mugabe International Airport on Hararen kansainvälinen lentoasema. Kentällä on kansainväliset ja kotimaan terminaalit sekä kuljetuspalveluja. Sovi kuljetus luotettavan toimijan tai majoituksen kanssa. Liikenne on vasemmanpuoleista.",
+              "teksti": "Robert Gabriel Mugabe International Airport on Hararen kansainvälinen lentoasema. Kentällä on kansainväliset ja kotimaan terminaalit sekä kuljetuspalveluja. Liikenne on vasemmanpuoleista.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -190,7 +190,7 @@
             },
             {
               "otsikko": "Keskustan muistipaikat",
-              "teksti": "Africa Unity Square, Harare Gardens ja Kopje kuuluvat kaupungin keskisen alueen paikkoihin. Human Sciences -museon aiheita ovat arkeologia ja antropologia, ja Repsissä järjestetään teatteritoimintaa. Vierailun, ohjelman ja kuvaamisen nykyinen tilanne selvitetään kohteelta.",
+              "teksti": "Africa Unity Square, Harare Gardens ja Kopje kuuluvat kaupungin keskisen alueen paikkoihin. Human Sciences -museon aiheita ovat arkeologia ja antropologia, ja Repsissä järjestetään teatteritoimintaa.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -200,7 +200,7 @@
             },
             {
               "otsikko": "Puita ja luontokäynti",
-              "teksti": "Kansallinen kasvitieteellinen puutarha on Alexandra Parkissa keskustan pohjoispuolella. Mukuvisi Woodlands sijaitsee idempänä, ja sen paikalliseen kasvillisuuteen kuuluu msasaa sekä miombopuustoa. Alueella on polkuja ja eläinten katselulava. Opastus ja pääsyjärjestelyt selvitetään erikseen.",
+              "teksti": "Kansallinen kasvitieteellinen puutarha on Alexandra Parkissa keskustan pohjoispuolella. Mukuvisi Woodlands sijaitsee idempänä, ja sen paikalliseen kasvillisuuteen kuuluu msasaa sekä miombopuustoa. Alueella on polkuja ja eläinten katselulava.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -210,7 +210,7 @@
             },
             {
               "otsikko": "Syöminen ja asiointi",
-              "teksti": "Hararen ruokapaikoissa tarjotaan Zimbabwen tuttuja ruokia ja muiden keittiöiden annoksia. Sadza kuuluu paikallisiin aterioihin. Käytä pullotettua juomavettä ja huolehdi käsihygieniasta. Varaa asiointiin käteistä, sillä korttimaksu tai käteisnosto ei onnistu kaikkialla.",
+              "teksti": "Hararen ruokapaikoissa tarjotaan Zimbabwen tuttuja ruokia ja muiden keittiöiden annoksia. Sadza kuuluu paikallisiin aterioihin.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -259,16 +259,12 @@
             ],
             "hyvaTietaa": [
               {
-                "otsikko": "Matkan valmistelu",
-                "teksti": "Tarkista Ulkoministeriön ajantasainen matkustustiedote ennen matkaa. Sovi siirtymät ja paluu päiväsaikaan."
+                "otsikko": "Liikenne",
+                "teksti": "Liikenne on vasemmanpuoleista."
               },
               {
-                "otsikko": "Asiointi",
-                "teksti": "Käteistä tarvitaan, eikä kortin toimintaan voi luottaa kaikkialla."
-              },
-              {
-                "otsikko": "Vierailut ja kuvaaminen",
-                "teksti": "Kohteiden pääsy ja kuvaussäännöt selvitetään erikseen."
+                "otsikko": "Kasvikokoelmat",
+                "teksti": "Alexandra Parkin kasvitieteellisen puutarhan rinnalla toimii kansallinen herbaario."
               },
               {
                 "otsikko": "Juomavesi",
@@ -298,7 +294,7 @@
       "nostot": [
         {
           "otsikko": "Punainen msasa tekee uusia lehtiä",
-          "teksti": "Msasa eli Brachystegia spiciformis kuuluu Hararen ympäristön avointen metsien puustoon. Sen uudet lehdet voivat olla viininpunaisia, meripihkan värisiä tai ruskehtavia ennen vihertymistään. Kaukaa nähty punainen puu voi siis olla tekemässä uutta lehdistöä. Msasan lehdet ovat yhdistelmälehtiä, sen pienet vihreät kukat ovat tuoksuvia ja palot avautuvat levittämään siemeniä. Nuori lehti, kukka ja palko ovat saman puun eri osia; näyttävä väri ei aina tarkoita, että puu on kukassa.",
+          "teksti": "Msasa eli Brachystegia spiciformis kuuluu Hararen ympäristön avointen metsien puustoon. Sen uudet lehdet voivat olla viininpunaisia, meripihkan värisiä tai ruskehtavia ennen vihertymistään. Msasan lehdet ovat yhdistelmälehtiä, sen pienet vihreät kukat ovat tuoksuvia ja palot avautuvat levittämään siemeniä.",
           "wiki": "Brachystegia spiciformis",
           "tiedosto": "",
           "lyhyt": "",
@@ -307,20 +303,20 @@
         },
         {
           "otsikko": "Violetti katuvieras Etelä-Amerikasta",
-          "teksti": "Sinijakaranda eli Jacaranda mimosifolia on alkuperältään Etelä-Amerikasta. Hararen katujen jakarandat ovat istutettuja koristepuita, jotka tunnetaan violeteista kukistaan. Lehdet jakautuvat moniin hentoihin lehdyköihin, ja kukinnan jälkeen muodostuu puutuneita siemenkotia. Niiden sisällä on litteitä siivellisiä siemeniä. Kaupungin runsas istutus ja lajin luonnollinen kotiseutu ovat eri asioita: Hararessa tuttu puu ei ole paikallinen miombolaji, vaan kaupunkimaisemaan tuotu kasvi.",
+          "teksti": "Sinijakaranda eli Jacaranda mimosifolia on alkuperältään Etelä-Amerikasta. Hararen katujen jakarandat ovat istutettuja koristepuita, jotka tunnetaan violeteista kukistaan. Lehdet jakautuvat moniin hentoihin lehdyköihin, ja kukinnan jälkeen muodostuu puutuneita siemenkotia. Niiden sisällä on litteitä siivellisiä siemeniä.",
           "wiki": "Jacaranda mimosifolia",
           "tiedosto": "Jacaranda1212.jpg",
           "lyhyt": "Sinijakarandan violetteja kukkia.",
-          "selite": "Sinijakaranda (Jacaranda mimosifolia) kukkii violettina tässä lajin esittelykuvassa.",
+          "selite": "Sinijakaranda (Jacaranda mimosifolia).",
           "lahde": "Kahuroa, Wikimedia Commons (PD)"
         },
         {
           "otsikko": "Liekkipuu kasvattaa tummat palot",
-          "teksti": "Liekkipuu eli Delonix regia on alkuperältään Madagaskarista. Hararen katujen koristepuissa sitä tavataan jakarandan rinnalla, mutta kyse on eri lajista. Sen kukat ovat tavallisesti oranssinpunaisia tai punaisia, ja höyhenmäiset lehdet koostuvat monista pienistä lehdyköistä. Pitkät palot muuttuvat kypsyessään tummiksi ja puutuneiksi. Puun tunnistamisessa kukka, lehti ja hedelmä antavat eri tuntomerkkejä. Punainen liekkipuu, violetti jakaranda ja uuden lehdistönsä värittämä msasa ovat kolme erilaista kasvitarinaa.",
+          "teksti": "Liekkipuu eli Delonix regia on alkuperältään Madagaskarista. Hararen katujen koristepuissa sitä tavataan jakarandan rinnalla, mutta kyse on eri lajista. Sen kukat ovat tavallisesti oranssinpunaisia tai punaisia, ja höyhenmäiset lehdet koostuvat monista pienistä lehdyköistä. Pitkät palot muuttuvat kypsyessään tummiksi ja puutuneiksi.",
           "wiki": "Delonix regia",
           "tiedosto": "Royal Poinciana.jpg",
           "lyhyt": "Liekkipuun punaisia kukkia.",
-          "selite": "Liekkipuu (Delonix regia) on Madagaskarista lähtöisin oleva koristepuu. Kuvassa on laji, ei Hararen kasvupaikka.",
+          "selite": "Delonix regia, Madagaskarista lähtöisin oleva puulaji.",
           "lahde": "Averette, Wikimedia Commons (CC BY-SA 3.0)"
         },
         {
@@ -350,13 +346,6 @@
   "saatiedot": null,
   "ehdotukset": {
     "lentoasema": "Robert Gabriel Mugabe International Airport (HRE)",
-    "huomiot": [
-      "Task118 C-tekstikorjaus valmis 13.10.2026. Nykyisessä C:ssä 5 täytettyä kuvaroolia; erilliset B/media-, kartta-, sää-, D/E/F- ja pelikytkentäportit eivät ole tämän tekstikorjauksen hyväksyntä.",
-      "Museon, katedraalin ja gallerian nykyisten rakennusosien tekijä-/teosketjut avoinna; ei kohteita.",
-      "Botanicin ja Mukuvisin omat luontopisteet eivät korvaa historiallisen keskustan aukio-/puistopisteitä; käsitelty vain oppaassa.",
-      "WMO-sääauditointi 36/48, NOAA-keskilämpö/asema 12 arvolle avoin; saatiedot:null, ei numeromuotoisia ilmastoväitteitä.",
-      "Maalehden veistäjä-, musiikki-, ruoka-, urheilu-, Nehanda- ja Rudd-tarinoita ei toistettu.",
-      "Nykyopas perustuu A:n 12.10.2026 luettuihin lähteisiin, UM-tiedote 18.9.2026; palvelut ja vierailut tarkistettava D/F:ssä."
-    ]
+    "huomiot": []
   }
 }
