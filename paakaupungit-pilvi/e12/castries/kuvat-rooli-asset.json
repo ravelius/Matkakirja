@@ -146,7 +146,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/castries/illustration-qa-extra.json",
-        "fileSHA256": "f9b65d0d9e4b191bcb66d83dfc378912bf6a498a999e2fa2180d7161d38de280",
+        "fileSHA256": "668ce214c2e04188c6697330beefe8680ab72329e0abc35ddb8cb6254f3863fb",
         "item": {
           "slot": "O4",
           "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
@@ -220,11 +220,11 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/castries/qa.json",
-            "sha256": "5250cb357eb5adb34902ca3f94edc4c1572245b5d85aab7738bc0d8e965bfe98"
+            "sha256": "6d0e44d035008f2d8c23a7f23c0be4f5525f33366256195807b4b87f1c5f81b1"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/castries/illustration-qa-extra.json",
-            "sha256": "f9b65d0d9e4b191bcb66d83dfc378912bf6a498a999e2fa2180d7161d38de280"
+            "sha256": "668ce214c2e04188c6697330beefe8680ab72329e0abc35ddb8cb6254f3863fb"
           }
         ]
       },
@@ -310,6 +310,312 @@
       "sourceContentAfterSHA256": "e5b0612495f534dceb34a7e5cfa90989717b0ab7460572daa1144dab27e7391c",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
       "contextAfterSHA256": "823467df31beb8957d64ed1517151e74952e797f65feacbaf75cebb1c3fb0467"
+    },
+    {
+      "era": "e12",
+      "city": "castries",
+      "slot": "K1",
+      "type": "illustration",
+      "assetID": "e12-castries-K1-9e3589437f",
+      "galleryImageID": "e12-castries-K1-9e3589437f",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].nostot[0]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "nostot",
+        0
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/castries/e12-castries-K1-9e3589437f-de9b4c3c6388.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Kivihiilen materiaalihavainne Castriesin sataman polttoainekaupan aiheeseen.",
+        "lyhyt": "Kivihiilen materiaalihavainne Castriesin sataman polttoainekaupan aiheeseen."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/castries/e12-castries-K1-9e3589437f-de9b4c3c6388.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Kivihiilen materiaalihavainne Castriesin sataman polttoainekaupan aiheeseen.",
+        "lyhyt": "Kivihiilen materiaalihavainne Castriesin sataman polttoainekaupan aiheeseen."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "de9b4c3c63886ad70c3f9377be37d54575a7d182162c1083debe1d8467254540",
+      "exportSHA256": "98768bacf35862757dedb9af662b25750e48851c911747e9a0143df6869c63a1",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/castries/e12-castries-K1-9e3589437f-de9b4c3c6388.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/castries/e12-castries-K1-9e3589437f-de9b4c3c6388.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e12/castries/e12-castries-K1-9e3589437f-de9b4c3c6388.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/castries/sisalto.json",
+      "sourceContentSHA256": "e5b0612495f534dceb34a7e5cfa90989717b0ab7460572daa1144dab27e7391c",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "7a619f00b361e557da64e0479bd103f256113241d7a577295c5c4e1ad9887bdc",
+        "semanticContextSHA256": "7a619f00b361e557da64e0479bd103f256113241d7a577295c5c4e1ad9887bdc",
+        "subjectTitle": "Höyrylaivan ostoslista",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Tavallisia kivihiilen paloja; ei satama-, laiva- tai arkkitehtuurirekonstruktiota.",
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/castries/assets/e12-castries-K1-9e3589437f/original.png",
+            "nativeSHA256": "de9b4c3c63886ad70c3f9377be37d54575a7d182162c1083debe1d8467254540",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "nativeAspectRatio": 1.5,
+            "format": "PNG",
+            "pngChunks": [
+              "IHDR",
+              "caBX",
+              "IDAT",
+              "IEND"
+            ],
+            "manifestMatch": true,
+            "captionFi": "Kivihiilen materiaalihavainne Castriesin sataman polttoainekaupan aiheeseen.",
+            "sourceEvidence": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/castries/sisalto.json",
+              "contentSHA256": "1c2d97f69e8f14e2f86832dd5868d4d61aba2d1b666a17d0cba56c5774376371",
+              "sourceText": "Höyrylaivan oli saatava matkan varrella lisää hiiltä, ja Castriesin sataman historiaan kuuluu juuri tämä kauppa. Kaupunkiin rakennettiin läntinen laituri hiililiikennettä varten, ja satamassa alettiin vastaanottaa höyrylaivoja. Nyt Castriesiin tullaan myös risteilyaluksilla, jotka käyttävät Pointe Seraphinen satama-aluetta. Samassa lahdessa kohtaavat siten hyvin erilaiset merimatkojen tarpeet: aikaisempi polttoainehuolto ja nykyinen matkustajaliikenne. Kaupungin historiaan kuuluu tavaraa yhtä olennaisesti kuin matkustajia.",
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/castries/faktapohja.md",
+              "originalSources": [
+                "https://en.wikipedia.org/wiki/Castries"
+              ],
+              "ccRelease": {},
+              "generationAuthorization": {
+                "rule": "OHJEET: turvallinen yleishavainnollistus ilman CC-odotusta",
+                "sharedReservationRecord": "/Volumes/T7 4TB/ChatGPT-Codex-active/coordination/paakaupungit-claims/08391cff28146b17/e12/castries/K1/owner.json",
+                "ccReleaseRequired": false,
+                "scope": "lähdeperustainen turvallinen avoin mixed; ei PHOTO/C1-C3 tai nimetty kaupunkiasettelu"
+              }
+            },
+            "rightsEvidence": "Tavallisia kivihiilen paloja; ei satama-, laiva- tai arkkitehtuurirekonstruktiota.",
+            "content": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/castries/sisalto.json",
+              "contentSHA256": "e5b0612495f534dceb34a7e5cfa90989717b0ab7460572daa1144dab27e7391c",
+              "targetObjectExists": true,
+              "targetContainer": "$.kaupunkilehti[0].nostot[0]",
+              "targetText": {
+                "otsikko": "Höyrylaivan ostoslista",
+                "teksti": "Höyrylaivan oli saatava matkan varrella lisää hiiltä, ja Castriesin sataman historiaan kuuluu juuri tämä kauppa. Kaupunkiin rakennettiin läntinen laituri hiililiikennettä varten, ja satamassa alettiin vastaanottaa höyrylaivoja. Nyt Castriesiin tullaan myös risteilyaluksilla, jotka käyttävät Pointe Seraphinen satama-aluetta. Samassa lahdessa kohtaavat siten hyvin erilaiset merimatkojen tarpeet: aikaisempi polttoainehuolto ja nykyinen matkustajaliikenne. Kaupungin historiaan kuuluu tavaraa yhtä olennaisesti kuin matkustajia.",
+                "wiki": "Castries",
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              },
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/castries/faktapohja.md",
+              "factSheetSHA256": "843decf98982de5311ae5c2f8f5ca9688c3d8a48e87445f3b17c3fda7618c6a8",
+              "factAssessment": "faktapohja.md kansi 1: hiilikauppa ja höyrylaivojen saapuminen C1/C2."
+            },
+            "visualInspection": {
+              "tool": "view_image",
+              "detail": "original",
+              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/castries/assets/e12-castries-K1-9e3589437f/original.png",
+              "inspectedBy": "qa-e12",
+              "inspectedAt": "2026-10-12 20:45:48 UTC",
+              "observations": "Kuusi epäsäännöllistä mustaa hiilenpalaa kivipinnalla ja pieniä hiilimuruja. Lohkeamien matta ja mineraalikiilto vaihtelevat; paino, kontaktivarjot ja murut uskottavia. Ei ihmisiä, tekstiä, logoja, laivoja tai rakennuksia."
+            },
+            "otherReviewerVerdicts": [],
+            "openConflict": false,
+            "ownershipMarker": "qa-handoff-kuvitus-3.json"
+          },
+          "qaReason": "Kivihiilen materiaalihavainne vastaa K1-noston höyrylaivojen polttoainehuoltoa. Kuva ei rekonstruoi Castriesin historiallista laituria. Native-SHA ja toteutuneet mitat täsmäävät."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Kivihiilen materiaalihavainne Castriesin sataman polttoainekaupan aiheeseen.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/castries/illustration-qa-extra.json",
+        "fileSHA256": "668ce214c2e04188c6697330beefe8680ab72329e0abc35ddb8cb6254f3863fb",
+        "item": {
+          "slot": "K1",
+          "targetJsonPath": "$.kaupunkilehti[0].nostot[0]",
+          "assetID": "e12-castries-K1-9e3589437f",
+          "sha256": "de9b4c3c63886ad70c3f9377be37d54575a7d182162c1083debe1d8467254540",
+          "verdict": "accepted",
+          "reason": "Kivihiilen materiaalihavainne vastaa K1-noston höyrylaivojen polttoainehuoltoa. Kuva ei rekonstruoi Castriesin historiallista laituria. Native-SHA ja toteutuneet mitat täsmäävät.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/castries/assets/e12-castries-K1-9e3589437f/original.png",
+            "nativeSHA256": "de9b4c3c63886ad70c3f9377be37d54575a7d182162c1083debe1d8467254540",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "nativeAspectRatio": 1.5,
+            "format": "PNG",
+            "pngChunks": [
+              "IHDR",
+              "caBX",
+              "IDAT",
+              "IEND"
+            ],
+            "manifestMatch": true,
+            "captionFi": "Kivihiilen materiaalihavainne Castriesin sataman polttoainekaupan aiheeseen.",
+            "sourceEvidence": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/castries/sisalto.json",
+              "contentSHA256": "1c2d97f69e8f14e2f86832dd5868d4d61aba2d1b666a17d0cba56c5774376371",
+              "sourceText": "Höyrylaivan oli saatava matkan varrella lisää hiiltä, ja Castriesin sataman historiaan kuuluu juuri tämä kauppa. Kaupunkiin rakennettiin läntinen laituri hiililiikennettä varten, ja satamassa alettiin vastaanottaa höyrylaivoja. Nyt Castriesiin tullaan myös risteilyaluksilla, jotka käyttävät Pointe Seraphinen satama-aluetta. Samassa lahdessa kohtaavat siten hyvin erilaiset merimatkojen tarpeet: aikaisempi polttoainehuolto ja nykyinen matkustajaliikenne. Kaupungin historiaan kuuluu tavaraa yhtä olennaisesti kuin matkustajia.",
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/castries/faktapohja.md",
+              "originalSources": [
+                "https://en.wikipedia.org/wiki/Castries"
+              ],
+              "ccRelease": {},
+              "generationAuthorization": {
+                "rule": "OHJEET: turvallinen yleishavainnollistus ilman CC-odotusta",
+                "sharedReservationRecord": "/Volumes/T7 4TB/ChatGPT-Codex-active/coordination/paakaupungit-claims/08391cff28146b17/e12/castries/K1/owner.json",
+                "ccReleaseRequired": false,
+                "scope": "lähdeperustainen turvallinen avoin mixed; ei PHOTO/C1-C3 tai nimetty kaupunkiasettelu"
+              }
+            },
+            "rightsEvidence": "Tavallisia kivihiilen paloja; ei satama-, laiva- tai arkkitehtuurirekonstruktiota.",
+            "content": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/castries/sisalto.json",
+              "contentSHA256": "e5b0612495f534dceb34a7e5cfa90989717b0ab7460572daa1144dab27e7391c",
+              "targetObjectExists": true,
+              "targetContainer": "$.kaupunkilehti[0].nostot[0]",
+              "targetText": {
+                "otsikko": "Höyrylaivan ostoslista",
+                "teksti": "Höyrylaivan oli saatava matkan varrella lisää hiiltä, ja Castriesin sataman historiaan kuuluu juuri tämä kauppa. Kaupunkiin rakennettiin läntinen laituri hiililiikennettä varten, ja satamassa alettiin vastaanottaa höyrylaivoja. Nyt Castriesiin tullaan myös risteilyaluksilla, jotka käyttävät Pointe Seraphinen satama-aluetta. Samassa lahdessa kohtaavat siten hyvin erilaiset merimatkojen tarpeet: aikaisempi polttoainehuolto ja nykyinen matkustajaliikenne. Kaupungin historiaan kuuluu tavaraa yhtä olennaisesti kuin matkustajia.",
+                "wiki": "Castries",
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              },
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/castries/faktapohja.md",
+              "factSheetSHA256": "843decf98982de5311ae5c2f8f5ca9688c3d8a48e87445f3b17c3fda7618c6a8",
+              "factAssessment": "faktapohja.md kansi 1: hiilikauppa ja höyrylaivojen saapuminen C1/C2."
+            },
+            "visualInspection": {
+              "tool": "view_image",
+              "detail": "original",
+              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/castries/assets/e12-castries-K1-9e3589437f/original.png",
+              "inspectedBy": "qa-e12",
+              "inspectedAt": "2026-10-12 20:45:48 UTC",
+              "observations": "Kuusi epäsäännöllistä mustaa hiilenpalaa kivipinnalla ja pieniä hiilimuruja. Lohkeamien matta ja mineraalikiilto vaihtelevat; paino, kontaktivarjot ja murut uskottavia. Ei ihmisiä, tekstiä, logoja, laivoja tai rakennuksia."
+            },
+            "otherReviewerVerdicts": [],
+            "openConflict": false,
+            "ownershipMarker": "qa-handoff-kuvitus-3.json"
+          },
+          "reviewedAt": "2026-10-12T20:45:48.819449+00:00",
+          "reviewerGroup": "qa-e12"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/castries/qa.json",
+            "sha256": "6d0e44d035008f2d8c23a7f23c0be4f5525f33366256195807b4b87f1c5f81b1"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/castries/illustration-qa-extra.json",
+            "sha256": "668ce214c2e04188c6697330beefe8680ab72329e0abc35ddb8cb6254f3863fb"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/castries/e12-castries-K1-9e3589437f-de9b4c3c6388.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/castries/e12-castries-K1-9e3589437f-de9b4c3c6388.png?t=98768bacf3586275",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/castries/e12-castries-K1-9e3589437f-de9b4c3c6388.png",
+        "sha256": "98768bacf35862757dedb9af662b25750e48851c911747e9a0143df6869c63a1",
+        "bytes": 2943127,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e12-castries-K1-9e3589437f",
+        "nativeSHA256": "de9b4c3c63886ad70c3f9377be37d54575a7d182162c1083debe1d8467254540",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e12/castries/e12-castries-K1-9e3589437f-de9b4c3c6388.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e12",
+        "city": "castries",
+        "slot": "K1",
+        "targetJsonPath": "$.kaupunkilehti[0].nostot[0]",
+        "verifiedAt": "2026-10-12T20:47:11.914962+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e12/castries/e12-castries-K1-9e3589437f-de9b4c3c6388.png",
+        "sha256": "98768bacf35862757dedb9af662b25750e48851c911747e9a0143df6869c63a1",
+        "bytes": 2943127,
+        "SHAReadAt": "2026-10-12T20:45:55.478238+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "de9b4c3c63886ad70c3f9377be37d54575a7d182162c1083debe1d8467254540",
+        "rgbPixelSHA256": "26d58fa91acd142878cfe74aa1c6183dd84ce8ecae1b90d275c715f9e97c0354",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "e5b0612495f534dceb34a7e5cfa90989717b0ab7460572daa1144dab27e7391c",
+      "targetAfterSHA256": "7a619f00b361e557da64e0479bd103f256113241d7a577295c5c4e1ad9887bdc",
+      "contextAfterSHA256": "7a619f00b361e557da64e0479bd103f256113241d7a577295c5c4e1ad9887bdc"
     },
     {
       "era": "e12",
@@ -449,7 +755,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/castries/illustration-qa-extra.json",
-        "fileSHA256": "f9b65d0d9e4b191bcb66d83dfc378912bf6a498a999e2fa2180d7161d38de280",
+        "fileSHA256": "668ce214c2e04188c6697330beefe8680ab72329e0abc35ddb8cb6254f3863fb",
         "item": {
           "slot": "L3",
           "targetJsonPath": "$.kaupunkilehti[1].nostot[2]",
@@ -523,11 +829,11 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/castries/qa.json",
-            "sha256": "5250cb357eb5adb34902ca3f94edc4c1572245b5d85aab7738bc0d8e965bfe98"
+            "sha256": "6d0e44d035008f2d8c23a7f23c0be4f5525f33366256195807b4b87f1c5f81b1"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/castries/illustration-qa-extra.json",
-            "sha256": "f9b65d0d9e4b191bcb66d83dfc378912bf6a498a999e2fa2180d7161d38de280"
+            "sha256": "668ce214c2e04188c6697330beefe8680ab72329e0abc35ddb8cb6254f3863fb"
           }
         ]
       },
@@ -613,6 +919,312 @@
       "sourceContentAfterSHA256": "e5b0612495f534dceb34a7e5cfa90989717b0ab7460572daa1144dab27e7391c",
       "targetAfterSHA256": "a74a6461b7f89da8a523944f360c056474e264fbc7f63b895c353acbb1087947",
       "contextAfterSHA256": "a74a6461b7f89da8a523944f360c056474e264fbc7f63b895c353acbb1087947"
+    },
+    {
+      "era": "e12",
+      "city": "castries",
+      "slot": "L4",
+      "type": "illustration",
+      "assetID": "e12-castries-L4-44fd139707",
+      "galleryImageID": "e12-castries-L4-44fd139707",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
+      "targetTokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        3
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/castries/e12-castries-L4-44fd139707-08086e93e518.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Kirjahavainnekuva Derek Walcottin ensimmäisen julkaisun aiheeseen.",
+        "lyhyt": "Kirjahavainnekuva Derek Walcottin ensimmäisen julkaisun aiheeseen."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/castries/e12-castries-L4-44fd139707-08086e93e518.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Kirjahavainnekuva Derek Walcottin ensimmäisen julkaisun aiheeseen.",
+        "lyhyt": "Kirjahavainnekuva Derek Walcottin ensimmäisen julkaisun aiheeseen."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "08086e93e518286ab3805a832c786648017cc1ec258231af60c1c18fac1d83db",
+      "exportSHA256": "183e71edf7108652a77aa3e1f3161e989cd324e6499b262748f8963fd97ab8d7",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/castries/e12-castries-L4-44fd139707-08086e93e518.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/castries/e12-castries-L4-44fd139707-08086e93e518.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e12/castries/e12-castries-L4-44fd139707-08086e93e518.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/castries/sisalto.json",
+      "sourceContentSHA256": "e5b0612495f534dceb34a7e5cfa90989717b0ab7460572daa1144dab27e7391c",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "11c4bcaa392537008485febb4ccb287b8c4180c76f2e5a417351a62a67487fee",
+        "semanticContextSHA256": "11c4bcaa392537008485febb4ccb287b8c4180c76f2e5a417351a62a67487fee",
+        "subjectTitle": "Runokirja äidin avustuksella",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Tavallinen lähteessä nimetty kasvi, eläin, materiaali tai arkiesine; yleistetty havainnollistus, ei nimetyn paikan valokuva tai suojatun teoksen jäljennös.",
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/castries/assets/e12-castries-L4-44fd139707/original.png",
+            "nativeSHA256": "08086e93e518286ab3805a832c786648017cc1ec258231af60c1c18fac1d83db",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "nativeAspectRatio": 1.5,
+            "format": "PNG",
+            "pngChunks": [
+              "IHDR",
+              "caBX",
+              "IDAT",
+              "IEND"
+            ],
+            "manifestMatch": true,
+            "captionFi": "Kirjahavainnekuva Derek Walcottin ensimmäisen julkaisun aiheeseen.",
+            "sourceEvidence": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/castries/sisalto.json",
+              "contentSHA256": "1c2d97f69e8f14e2f86832dd5868d4d61aba2d1b666a17d0cba56c5774376371",
+              "sourceText": "Derek Walcott kasvoi Castriesissa kodissa, jossa hänen opettajaäitinsä lausui runoja. Nuori kirjoittaja halusi julkaista oman runokirjan, ja äiti hankki rahat sen painamiseen. Kirja painettiin Trinidadissa, minkä jälkeen Walcott myi kappaleita ystävilleen ja sai kulut takaisin. Kirjallisuuden tulevan nobelistin alkuun kuului siis myös hyvin käytännöllinen kirjakauppa. Hänen uransa jatkui runoina, näytelminä ja opetuksena, mutta ensimmäisen kirjan takana olivat kodin tuki ja oma pieni lukijapiiri.",
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/castries/faktapohja.md",
+              "originalSources": [
+                "https://en.wikipedia.org/wiki/Derek_Walcott"
+              ],
+              "ccRelease": {},
+              "generationAuthorization": {
+                "rule": "OHJEET: turvallinen yleishavainnollistus ilman CC-odotusta",
+                "sharedReservationRecord": "/Volumes/T7 4TB/ChatGPT-Codex-active/coordination/paakaupungit-claims/08391cff28146b17/e12/castries/L4/owner.json",
+                "ccReleaseRequired": false,
+                "scope": "lähdeperustainen turvallinen avoin mixed; ei PHOTO/C1-C3 tai nimetty kaupunkiasettelu"
+              }
+            },
+            "rightsEvidence": "Tavallinen lähteessä nimetty kasvi, eläin, materiaali tai arkiesine; yleistetty havainnollistus, ei nimetyn paikan valokuva tai suojatun teoksen jäljennös.",
+            "content": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/castries/sisalto.json",
+              "contentSHA256": "e5b0612495f534dceb34a7e5cfa90989717b0ab7460572daa1144dab27e7391c",
+              "targetObjectExists": true,
+              "targetContainer": "$.kaupunkilehti[1].nostot[3]",
+              "targetText": {
+                "otsikko": "Runokirja äidin avustuksella",
+                "teksti": "Derek Walcott kasvoi Castriesissa kodissa, jossa hänen opettajaäitinsä lausui runoja. Nuori kirjoittaja halusi julkaista oman runokirjan, ja äiti hankki rahat sen painamiseen. Kirja painettiin Trinidadissa, minkä jälkeen Walcott myi kappaleita ystävilleen ja sai kulut takaisin. Kirjallisuuden tulevan nobelistin alkuun kuului siis myös hyvin käytännöllinen kirjakauppa. Hänen uransa jatkui runoina, näytelminä ja opetuksena, mutta ensimmäisen kirjan takana olivat kodin tuki ja oma pieni lukijapiiri.",
+                "wiki": "Derek_Walcott",
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              },
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/castries/faktapohja.md",
+              "factSheetSHA256": "843decf98982de5311ae5c2f8f5ca9688c3d8a48e87445f3b17c3fda7618c6a8",
+              "factAssessment": "faktapohja.md teema 4: äiti rahoitti kirjan painamisen Trinidadissa, kirjoja myytiin ystäville; C7/C9."
+            },
+            "visualInspection": {
+              "tool": "view_image",
+              "detail": "original",
+              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/castries/assets/e12-castries-L4-44fd139707/original.png",
+              "inspectedBy": "qa-e12",
+              "inspectedAt": "2026-10-12 20:45:48 UTC",
+              "observations": "Pöydällä viisi suljettua kirjaa, kolme pinossa ja kaksi erillään. Kansissa ja selkämyksissä ei tekstiä; sidonta, sivublokit, kangas ja puupöytä luontevia. Sivussa kahvikuppi ja maljakko. Ei logoja, ihmisiä tai suojattua kansitaidetta."
+            },
+            "otherReviewerVerdicts": [],
+            "openConflict": false,
+            "ownershipMarker": "qa-handoff-kuvitus-3.json"
+          },
+          "qaReason": "Tyhjät sidotut kirjat havainnollistavat L4-noston ensimmäisen runokirjan painamista ja myyntiä. Kuvassa ei jäljennetä Walcottin teoksen kantta tai tekstiä. Native-SHA ja toteutuneet mitat täsmäävät."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Kirjahavainnekuva Derek Walcottin ensimmäisen julkaisun aiheeseen.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/castries/illustration-qa-extra.json",
+        "fileSHA256": "668ce214c2e04188c6697330beefe8680ab72329e0abc35ddb8cb6254f3863fb",
+        "item": {
+          "slot": "L4",
+          "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
+          "assetID": "e12-castries-L4-44fd139707",
+          "sha256": "08086e93e518286ab3805a832c786648017cc1ec258231af60c1c18fac1d83db",
+          "verdict": "accepted",
+          "reason": "Tyhjät sidotut kirjat havainnollistavat L4-noston ensimmäisen runokirjan painamista ja myyntiä. Kuvassa ei jäljennetä Walcottin teoksen kantta tai tekstiä. Native-SHA ja toteutuneet mitat täsmäävät.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/castries/assets/e12-castries-L4-44fd139707/original.png",
+            "nativeSHA256": "08086e93e518286ab3805a832c786648017cc1ec258231af60c1c18fac1d83db",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "nativeAspectRatio": 1.5,
+            "format": "PNG",
+            "pngChunks": [
+              "IHDR",
+              "caBX",
+              "IDAT",
+              "IEND"
+            ],
+            "manifestMatch": true,
+            "captionFi": "Kirjahavainnekuva Derek Walcottin ensimmäisen julkaisun aiheeseen.",
+            "sourceEvidence": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/castries/sisalto.json",
+              "contentSHA256": "1c2d97f69e8f14e2f86832dd5868d4d61aba2d1b666a17d0cba56c5774376371",
+              "sourceText": "Derek Walcott kasvoi Castriesissa kodissa, jossa hänen opettajaäitinsä lausui runoja. Nuori kirjoittaja halusi julkaista oman runokirjan, ja äiti hankki rahat sen painamiseen. Kirja painettiin Trinidadissa, minkä jälkeen Walcott myi kappaleita ystävilleen ja sai kulut takaisin. Kirjallisuuden tulevan nobelistin alkuun kuului siis myös hyvin käytännöllinen kirjakauppa. Hänen uransa jatkui runoina, näytelminä ja opetuksena, mutta ensimmäisen kirjan takana olivat kodin tuki ja oma pieni lukijapiiri.",
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/castries/faktapohja.md",
+              "originalSources": [
+                "https://en.wikipedia.org/wiki/Derek_Walcott"
+              ],
+              "ccRelease": {},
+              "generationAuthorization": {
+                "rule": "OHJEET: turvallinen yleishavainnollistus ilman CC-odotusta",
+                "sharedReservationRecord": "/Volumes/T7 4TB/ChatGPT-Codex-active/coordination/paakaupungit-claims/08391cff28146b17/e12/castries/L4/owner.json",
+                "ccReleaseRequired": false,
+                "scope": "lähdeperustainen turvallinen avoin mixed; ei PHOTO/C1-C3 tai nimetty kaupunkiasettelu"
+              }
+            },
+            "rightsEvidence": "Tavallinen lähteessä nimetty kasvi, eläin, materiaali tai arkiesine; yleistetty havainnollistus, ei nimetyn paikan valokuva tai suojatun teoksen jäljennös.",
+            "content": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/castries/sisalto.json",
+              "contentSHA256": "e5b0612495f534dceb34a7e5cfa90989717b0ab7460572daa1144dab27e7391c",
+              "targetObjectExists": true,
+              "targetContainer": "$.kaupunkilehti[1].nostot[3]",
+              "targetText": {
+                "otsikko": "Runokirja äidin avustuksella",
+                "teksti": "Derek Walcott kasvoi Castriesissa kodissa, jossa hänen opettajaäitinsä lausui runoja. Nuori kirjoittaja halusi julkaista oman runokirjan, ja äiti hankki rahat sen painamiseen. Kirja painettiin Trinidadissa, minkä jälkeen Walcott myi kappaleita ystävilleen ja sai kulut takaisin. Kirjallisuuden tulevan nobelistin alkuun kuului siis myös hyvin käytännöllinen kirjakauppa. Hänen uransa jatkui runoina, näytelminä ja opetuksena, mutta ensimmäisen kirjan takana olivat kodin tuki ja oma pieni lukijapiiri.",
+                "wiki": "Derek_Walcott",
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              },
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/castries/faktapohja.md",
+              "factSheetSHA256": "843decf98982de5311ae5c2f8f5ca9688c3d8a48e87445f3b17c3fda7618c6a8",
+              "factAssessment": "faktapohja.md teema 4: äiti rahoitti kirjan painamisen Trinidadissa, kirjoja myytiin ystäville; C7/C9."
+            },
+            "visualInspection": {
+              "tool": "view_image",
+              "detail": "original",
+              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/castries/assets/e12-castries-L4-44fd139707/original.png",
+              "inspectedBy": "qa-e12",
+              "inspectedAt": "2026-10-12 20:45:48 UTC",
+              "observations": "Pöydällä viisi suljettua kirjaa, kolme pinossa ja kaksi erillään. Kansissa ja selkämyksissä ei tekstiä; sidonta, sivublokit, kangas ja puupöytä luontevia. Sivussa kahvikuppi ja maljakko. Ei logoja, ihmisiä tai suojattua kansitaidetta."
+            },
+            "otherReviewerVerdicts": [],
+            "openConflict": false,
+            "ownershipMarker": "qa-handoff-kuvitus-3.json"
+          },
+          "reviewedAt": "2026-10-12T20:45:48.749524+00:00",
+          "reviewerGroup": "qa-e12"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/castries/qa.json",
+            "sha256": "6d0e44d035008f2d8c23a7f23c0be4f5525f33366256195807b4b87f1c5f81b1"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/castries/illustration-qa-extra.json",
+            "sha256": "668ce214c2e04188c6697330beefe8680ab72329e0abc35ddb8cb6254f3863fb"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/castries/e12-castries-L4-44fd139707-08086e93e518.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/castries/e12-castries-L4-44fd139707-08086e93e518.png?t=183e71edf7108652",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/castries/e12-castries-L4-44fd139707-08086e93e518.png",
+        "sha256": "183e71edf7108652a77aa3e1f3161e989cd324e6499b262748f8963fd97ab8d7",
+        "bytes": 2261944,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e12-castries-L4-44fd139707",
+        "nativeSHA256": "08086e93e518286ab3805a832c786648017cc1ec258231af60c1c18fac1d83db",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e12/castries/e12-castries-L4-44fd139707-08086e93e518.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e12",
+        "city": "castries",
+        "slot": "L4",
+        "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
+        "verifiedAt": "2026-10-12T20:47:13.028282+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e12/castries/e12-castries-L4-44fd139707-08086e93e518.png",
+        "sha256": "183e71edf7108652a77aa3e1f3161e989cd324e6499b262748f8963fd97ab8d7",
+        "bytes": 2261944,
+        "SHAReadAt": "2026-10-12T20:45:55.210042+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "08086e93e518286ab3805a832c786648017cc1ec258231af60c1c18fac1d83db",
+        "rgbPixelSHA256": "e51bc793d2884ac5893fc663f406fcaa951472080a08c1579b3b0cea58f7757a",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "e5b0612495f534dceb34a7e5cfa90989717b0ab7460572daa1144dab27e7391c",
+      "targetAfterSHA256": "11c4bcaa392537008485febb4ccb287b8c4180c76f2e5a417351a62a67487fee",
+      "contextAfterSHA256": "11c4bcaa392537008485febb4ccb287b8c4180c76f2e5a417351a62a67487fee"
     },
     {
       "era": "e12",
@@ -743,7 +1355,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/castries/qa.json",
-        "fileSHA256": "5250cb357eb5adb34902ca3f94edc4c1572245b5d85aab7738bc0d8e965bfe98",
+        "fileSHA256": "6d0e44d035008f2d8c23a7f23c0be4f5525f33366256195807b4b87f1c5f81b1",
         "item": {
           "slot": "PHOTO",
           "targetJsonPath": "$.valokuva",
@@ -796,11 +1408,11 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/castries/qa.json",
-            "sha256": "5250cb357eb5adb34902ca3f94edc4c1572245b5d85aab7738bc0d8e965bfe98"
+            "sha256": "6d0e44d035008f2d8c23a7f23c0be4f5525f33366256195807b4b87f1c5f81b1"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/castries/illustration-qa-extra.json",
-            "sha256": "f9b65d0d9e4b191bcb66d83dfc378912bf6a498a999e2fa2180d7161d38de280"
+            "sha256": "668ce214c2e04188c6697330beefe8680ab72329e0abc35ddb8cb6254f3863fb"
           }
         ]
       },
@@ -997,7 +1609,17 @@
               "sha256": "d7bc72830502f4bce0193941c1e4314ffd0c1c87d773457f08ea483aaea11423",
               "readEvidence": "Credit creator as Matt H.Wade at Wikipedia near image, creator name to userpage and license to CC BY-SA3.0; native QA is separate from actual downstream credit placement."
             },
-            "producerMetadataCorrection": "Julkaisukrediitti täydennettävä Matt H.Wade -nimellä ja tekijä-/lisenssilinkillä; UpstateNYer on alkuperäinen tilialias, ei tuntemattoman uploaderin tekijyys."
+            "producerMetadataCorrection": "Julkaisukrediitti täydennettävä Matt H.Wade -nimellä ja tekijä-/lisenssilinkillä; UpstateNYer on alkuperäinen tilialias, ei tuntemattoman uploaderin tekijyys.",
+            "currentBindingCreditAudit": {
+              "checkedAt": "2026-10-12T20:24:51.064810+00:00",
+              "contentSHA256": "e5b0612495f534dceb34a7e5cfa90989717b0ab7460572daa1144dab27e7391c",
+              "observedCredit": "UpstateNYer, Wikimedia Commons (CC BY-SA 3.0)",
+              "status": "needs_correction",
+              "requiredCredit": "CC-BY-SA-3.0 / Matt H. Wade at Wikipedia",
+              "requiredCreatorLink": "https://en.wikipedia.org/wiki/User:UpstateNYer",
+              "requiredLicenseLink": "https://creativecommons.org/licenses/by-sa/3.0/",
+              "nativeImageAcceptanceUnchanged": true
+            }
           },
           "qaReason": "Silmin katsottu alkuperäinen2592×1944: laaja Castriesin satama, risteilyalus, kaupungin rakennuskanta ja rinteet. Todellinen kaupungin ja sataman asettelu näkyy eri puolille kuvaa; alus on satamaliikenteen toiminnallinen osa. Ei tunnistettavia kasvoja, lisättyä tekstiä, vesileimaa tai kehystä. LähdeDescription Port of Castries, Saint Lucia ja kamerapaikka14.006806,-60.998333 yksilöivät paikan. Nykyinen intro käsittelee luonnonsatamaa, risteilyliikennettä ja rinnemaisemaa. Kuvausvuosi2008 kirjattu, ei nykyisten alusten tai tämän päivän palvelujen väitettä."
         }
@@ -1013,7 +1635,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/castries/qa.json",
-        "fileSHA256": "5250cb357eb5adb34902ca3f94edc4c1572245b5d85aab7738bc0d8e965bfe98",
+        "fileSHA256": "6d0e44d035008f2d8c23a7f23c0be4f5525f33366256195807b4b87f1c5f81b1",
         "item": {
           "slot": "C1",
           "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
@@ -1067,17 +1689,27 @@
               "sha256": "d7bc72830502f4bce0193941c1e4314ffd0c1c87d773457f08ea483aaea11423",
               "readEvidence": "Credit creator as Matt H.Wade at Wikipedia near image, creator name to userpage and license to CC BY-SA3.0; native QA is separate from actual downstream credit placement."
             },
-            "producerMetadataCorrection": "Julkaisukrediitti täydennettävä Matt H.Wade -nimellä ja tekijä-/lisenssilinkillä; UpstateNYer on alkuperäinen tilialias, ei tuntemattoman uploaderin tekijyys."
+            "producerMetadataCorrection": "Julkaisukrediitti täydennettävä Matt H.Wade -nimellä ja tekijä-/lisenssilinkillä; UpstateNYer on alkuperäinen tilialias, ei tuntemattoman uploaderin tekijyys.",
+            "currentBindingCreditAudit": {
+              "checkedAt": "2026-10-12T20:24:51.064810+00:00",
+              "contentSHA256": "e5b0612495f534dceb34a7e5cfa90989717b0ab7460572daa1144dab27e7391c",
+              "observedCredit": "UpstateNYer, Wikimedia Commons (CC BY-SA 3.0)",
+              "status": "needs_correction",
+              "requiredCredit": "CC-BY-SA-3.0 / Matt H. Wade at Wikipedia",
+              "requiredCreatorLink": "https://en.wikipedia.org/wiki/User:UpstateNYer",
+              "requiredLicenseLink": "https://creativecommons.org/licenses/by-sa/3.0/",
+              "nativeImageAcceptanceUnchanged": true
+            }
           }
         },
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/castries/qa.json",
-            "sha256": "5250cb357eb5adb34902ca3f94edc4c1572245b5d85aab7738bc0d8e965bfe98"
+            "sha256": "6d0e44d035008f2d8c23a7f23c0be4f5525f33366256195807b4b87f1c5f81b1"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/castries/illustration-qa-extra.json",
-            "sha256": "f9b65d0d9e4b191bcb66d83dfc378912bf6a498a999e2fa2180d7161d38de280"
+            "sha256": "668ce214c2e04188c6697330beefe8680ab72329e0abc35ddb8cb6254f3863fb"
           }
         ]
       },

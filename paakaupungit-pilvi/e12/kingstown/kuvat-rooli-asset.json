@@ -8,6 +8,641 @@
     {
       "era": "e12",
       "city": "kingstown",
+      "slot": "O4",
+      "type": "illustration",
+      "assetID": "e12-kingstown-O4-8c82c1df26",
+      "galleryImageID": "e12-kingstown-O4-8c82c1df26",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "matkailijalle",
+        "artikkeli",
+        "jaksot",
+        3,
+        "kuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/kingstown/e12-kingstown-O4-8c82c1df26-ea952842b552.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Roti-leivän havainne keskustan ruokatarjonnan aiheeseen.",
+        "lyhyt": "Roti-leivän havainne keskustan ruokatarjonnan aiheeseen."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/kingstown/e12-kingstown-O4-8c82c1df26-ea952842b552.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Roti-leivän havainne keskustan ruokatarjonnan aiheeseen.",
+        "lyhyt": "Roti-leivän havainne keskustan ruokatarjonnan aiheeseen."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "ea952842b55221653bbca8014352dbbc454de9df57160ac2464151ddbcdbed62",
+      "exportSHA256": "10bf9547c0a033c1ab5044d1eec1a4514cbeca4b066f2ec4af267a4d0d081849",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/kingstown/e12-kingstown-O4-8c82c1df26-ea952842b552.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/kingstown/e12-kingstown-O4-8c82c1df26-ea952842b552.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e12/kingstown/e12-kingstown-O4-8c82c1df26-ea952842b552.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/kingstown/sisalto.json",
+      "sourceContentSHA256": "d32acbf1cdb20106854a566e67882358ac25f05ebd6837284edd3ac88bd72dce",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "efdbfe15f323b039e4afe88a7d366bddfa8c902be0db997d81ea3383b06d12a9",
+        "subjectTitle": "Mitä täällä syödään",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Yleinen roti-leipä ilman nimettyä täytettä, ravintolaa tai reseptiväitettä.",
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/kingstown/assets/e12-kingstown-O4-8c82c1df26/original.png",
+            "nativeSHA256": "ea952842b55221653bbca8014352dbbc454de9df57160ac2464151ddbcdbed62",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "nativeAspectRatio": 1.5,
+            "format": "PNG",
+            "pngChunks": [
+              "IHDR",
+              "caBX",
+              "IDAT",
+              "IEND"
+            ],
+            "manifestMatch": true,
+            "captionFi": "Roti-leivän havainne keskustan ruokatarjonnan aiheeseen.",
+            "sourceEvidence": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/kingstown/sisalto.json",
+              "contentSHA256": "67ce65f3eeddc85f42ceb176d3b94195787bc4af84071a62127b3b13e99b1fae",
+              "sourceText": "Kingstownin keskustan ruokapaikkojen tarjonnassa on esimerkiksi rotia ja keittoja. Myös kasvisruokaa ja mehuja on mainittu keskustan tarjonnassa. Valitse ruokapaikan päivän listalta; saatavuus voi muuttua, joten yksittäisen vanhan ruokalistan sijaan kannattaa katsoa paikan omaa tarjontaa.",
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/kingstown/faktapohja.md",
+              "originalSources": [
+                "https://en.wikivoyage.org/wiki/Kingstown"
+              ],
+              "ccRelease": {
+                "O4": {
+                  "subject": "yleinen nimetön roti-ruokahavainne, ei tietyn ravintolan annoskuva",
+                  "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/kingstown/sisalto.json",
+                  "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+                  "sourceText": "Kingstownin keskustan ruokapaikkojen tarjonnassa on esimerkiksi rotia ja keittoja.",
+                  "originalSource": "https://en.wikivoyage.org/wiki/Kingstown",
+                  "constraints": "Ei lisättyä tekstiä, logoja, pakkauksia, kasvoja tai nimettyä paikkarakennusta; havainnollistuksen nimitys. Yhteinen reserve ennen gen-kutsua."
+                }
+              },
+              "generationAuthorization": {
+                "rule": "OHJEET: turvallinen yleishavainnollistus ilman CC-odotusta",
+                "sharedReservationRecord": "/Volumes/T7 4TB/ChatGPT-Codex-active/coordination/paakaupungit-claims/08391cff28146b17/e12/kingstown/O4/owner.json",
+                "ccReleaseRequired": false,
+                "scope": "lähdeperustainen turvallinen avoin mixed; ei PHOTO/C1-C3 tai nimetty kaupunkiasettelu"
+              }
+            },
+            "rightsEvidence": "Yleinen roti-leipä ilman nimettyä täytettä, ravintolaa tai reseptiväitettä.",
+            "content": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/kingstown/sisalto.json",
+              "contentSHA256": "d32acbf1cdb20106854a566e67882358ac25f05ebd6837284edd3ac88bd72dce",
+              "targetObjectExists": true,
+              "targetContainer": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3]",
+              "targetText": {
+                "otsikko": "Mitä täällä syödään",
+                "teksti": "Kingstownin keskustan ruokapaikkojen tarjonnassa on esimerkiksi rotia ja keittoja. Myös kasvisruokaa ja mehuja on mainittu keskustan tarjonnassa. Valitse ruokapaikan päivän listalta; saatavuus voi muuttua, joten yksittäisen vanhan ruokalistan sijaan kannattaa katsoa paikan omaa tarjontaa.",
+                "kuva": {
+                  "tiedosto": "",
+                  "lyhyt": "",
+                  "selite": "",
+                  "lahde": ""
+                }
+              },
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/kingstown/faktapohja.md",
+              "factSheetSHA256": "c668716c2a51509cefcbaccba306543782e86acc682f5078130529a6a0680d48",
+              "factAssessment": "faktapohja.md opas 4: keskustan roti, keitot, kasvisruoka ja mehut K2 Eat."
+            },
+            "visualInspection": {
+              "tool": "view_image",
+              "detail": "original",
+              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/kingstown/assets/e12-kingstown-O4-8c82c1df26/original.png",
+              "inspectedBy": "qa-e12",
+              "inspectedAt": "2026-10-12 20:45:48 UTC",
+              "observations": "Valkoisella ehjällä lautasella taitettu ohut leipä. Paistopilkkujen koko ja sävy vaihtelevat, taitteen reunat ja kerrokset luonnollisia; täytettä ei näy. Ei tekstiä, logoja, käsiä tai pakkauksia."
+            },
+            "otherReviewerVerdicts": [],
+            "openConflict": false,
+            "ownershipMarker": "qa-handoff-kuvitus-3.json"
+          },
+          "qaReason": "Roti-leivän yleishavainne vastaa O4-ruokajakson nimettyä roti-aihetta. Kuva ja kuvateksti eivät lupaa nimettyä ravintolaa tai erityistä paikallista täytettä. Native-SHA ja toteutuneet mitat täsmäävät."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Roti-leivän havainne keskustan ruokatarjonnan aiheeseen.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/kingstown/illustration-qa-extra.json",
+        "fileSHA256": "88b01cb26d61ac88b9bddbb72b62353199976a5ed218f71f73fb6e99701d61b9",
+        "item": {
+          "slot": "O4",
+          "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+          "assetID": "e12-kingstown-O4-8c82c1df26",
+          "sha256": "ea952842b55221653bbca8014352dbbc454de9df57160ac2464151ddbcdbed62",
+          "verdict": "accepted",
+          "reason": "Roti-leivän yleishavainne vastaa O4-ruokajakson nimettyä roti-aihetta. Kuva ja kuvateksti eivät lupaa nimettyä ravintolaa tai erityistä paikallista täytettä. Native-SHA ja toteutuneet mitat täsmäävät.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/kingstown/assets/e12-kingstown-O4-8c82c1df26/original.png",
+            "nativeSHA256": "ea952842b55221653bbca8014352dbbc454de9df57160ac2464151ddbcdbed62",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "nativeAspectRatio": 1.5,
+            "format": "PNG",
+            "pngChunks": [
+              "IHDR",
+              "caBX",
+              "IDAT",
+              "IEND"
+            ],
+            "manifestMatch": true,
+            "captionFi": "Roti-leivän havainne keskustan ruokatarjonnan aiheeseen.",
+            "sourceEvidence": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/kingstown/sisalto.json",
+              "contentSHA256": "67ce65f3eeddc85f42ceb176d3b94195787bc4af84071a62127b3b13e99b1fae",
+              "sourceText": "Kingstownin keskustan ruokapaikkojen tarjonnassa on esimerkiksi rotia ja keittoja. Myös kasvisruokaa ja mehuja on mainittu keskustan tarjonnassa. Valitse ruokapaikan päivän listalta; saatavuus voi muuttua, joten yksittäisen vanhan ruokalistan sijaan kannattaa katsoa paikan omaa tarjontaa.",
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/kingstown/faktapohja.md",
+              "originalSources": [
+                "https://en.wikivoyage.org/wiki/Kingstown"
+              ],
+              "ccRelease": {
+                "O4": {
+                  "subject": "yleinen nimetön roti-ruokahavainne, ei tietyn ravintolan annoskuva",
+                  "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/kingstown/sisalto.json",
+                  "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+                  "sourceText": "Kingstownin keskustan ruokapaikkojen tarjonnassa on esimerkiksi rotia ja keittoja.",
+                  "originalSource": "https://en.wikivoyage.org/wiki/Kingstown",
+                  "constraints": "Ei lisättyä tekstiä, logoja, pakkauksia, kasvoja tai nimettyä paikkarakennusta; havainnollistuksen nimitys. Yhteinen reserve ennen gen-kutsua."
+                }
+              },
+              "generationAuthorization": {
+                "rule": "OHJEET: turvallinen yleishavainnollistus ilman CC-odotusta",
+                "sharedReservationRecord": "/Volumes/T7 4TB/ChatGPT-Codex-active/coordination/paakaupungit-claims/08391cff28146b17/e12/kingstown/O4/owner.json",
+                "ccReleaseRequired": false,
+                "scope": "lähdeperustainen turvallinen avoin mixed; ei PHOTO/C1-C3 tai nimetty kaupunkiasettelu"
+              }
+            },
+            "rightsEvidence": "Yleinen roti-leipä ilman nimettyä täytettä, ravintolaa tai reseptiväitettä.",
+            "content": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/kingstown/sisalto.json",
+              "contentSHA256": "d32acbf1cdb20106854a566e67882358ac25f05ebd6837284edd3ac88bd72dce",
+              "targetObjectExists": true,
+              "targetContainer": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3]",
+              "targetText": {
+                "otsikko": "Mitä täällä syödään",
+                "teksti": "Kingstownin keskustan ruokapaikkojen tarjonnassa on esimerkiksi rotia ja keittoja. Myös kasvisruokaa ja mehuja on mainittu keskustan tarjonnassa. Valitse ruokapaikan päivän listalta; saatavuus voi muuttua, joten yksittäisen vanhan ruokalistan sijaan kannattaa katsoa paikan omaa tarjontaa.",
+                "kuva": {
+                  "tiedosto": "",
+                  "lyhyt": "",
+                  "selite": "",
+                  "lahde": ""
+                }
+              },
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/kingstown/faktapohja.md",
+              "factSheetSHA256": "c668716c2a51509cefcbaccba306543782e86acc682f5078130529a6a0680d48",
+              "factAssessment": "faktapohja.md opas 4: keskustan roti, keitot, kasvisruoka ja mehut K2 Eat."
+            },
+            "visualInspection": {
+              "tool": "view_image",
+              "detail": "original",
+              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/kingstown/assets/e12-kingstown-O4-8c82c1df26/original.png",
+              "inspectedBy": "qa-e12",
+              "inspectedAt": "2026-10-12 20:45:48 UTC",
+              "observations": "Valkoisella ehjällä lautasella taitettu ohut leipä. Paistopilkkujen koko ja sävy vaihtelevat, taitteen reunat ja kerrokset luonnollisia; täytettä ei näy. Ei tekstiä, logoja, käsiä tai pakkauksia."
+            },
+            "otherReviewerVerdicts": [],
+            "openConflict": false,
+            "ownershipMarker": "qa-handoff-kuvitus-3.json"
+          },
+          "reviewedAt": "2026-10-12T20:45:48.943705+00:00",
+          "reviewerGroup": "qa-e12"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/kingstown/qa.json",
+            "sha256": "22a9f0fd7dbd79f1fec05058d3b447a67fe789f679469212109716c28578ab5c"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/kingstown/illustration-qa-extra.json",
+            "sha256": "88b01cb26d61ac88b9bddbb72b62353199976a5ed218f71f73fb6e99701d61b9"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/kingstown/e12-kingstown-O4-8c82c1df26-ea952842b552.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/kingstown/e12-kingstown-O4-8c82c1df26-ea952842b552.png?t=10bf9547c0a033c1",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/kingstown/e12-kingstown-O4-8c82c1df26-ea952842b552.png",
+        "sha256": "10bf9547c0a033c1ab5044d1eec1a4514cbeca4b066f2ec4af267a4d0d081849",
+        "bytes": 2210343,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e12-kingstown-O4-8c82c1df26",
+        "nativeSHA256": "ea952842b55221653bbca8014352dbbc454de9df57160ac2464151ddbcdbed62",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e12/kingstown/e12-kingstown-O4-8c82c1df26-ea952842b552.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e12",
+        "city": "kingstown",
+        "slot": "O4",
+        "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+        "verifiedAt": "2026-10-12T20:47:14.303489+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e12/kingstown/e12-kingstown-O4-8c82c1df26-ea952842b552.png",
+        "sha256": "10bf9547c0a033c1ab5044d1eec1a4514cbeca4b066f2ec4af267a4d0d081849",
+        "bytes": 2210343,
+        "SHAReadAt": "2026-10-12T20:45:56.143182+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "ea952842b55221653bbca8014352dbbc454de9df57160ac2464151ddbcdbed62",
+        "rgbPixelSHA256": "a14795aec848c2ed2cc60c22609788a48a221312daa1653cdc6af7d5b1a06f48",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "d32acbf1cdb20106854a566e67882358ac25f05ebd6837284edd3ac88bd72dce",
+      "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+      "contextAfterSHA256": "efdbfe15f323b039e4afe88a7d366bddfa8c902be0db997d81ea3383b06d12a9"
+    },
+    {
+      "era": "e12",
+      "city": "kingstown",
+      "slot": "L1",
+      "type": "illustration",
+      "assetID": "e12-kingstown-L1-46ce13e5a6",
+      "galleryImageID": "e12-kingstown-L1-46ce13e5a6",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[1].nostot[0]",
+      "targetTokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        0
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/kingstown/e12-kingstown-L1-46ce13e5a6-b15c6cba3b93.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Puuvillan havainnekuva Kingstownin puutarhan koeviljelyjen aiheeseen.",
+        "lyhyt": "Puuvillan havainnekuva Kingstownin puutarhan koeviljelyjen aiheeseen."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/kingstown/e12-kingstown-L1-46ce13e5a6-b15c6cba3b93.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Puuvillan havainnekuva Kingstownin puutarhan koeviljelyjen aiheeseen.",
+        "lyhyt": "Puuvillan havainnekuva Kingstownin puutarhan koeviljelyjen aiheeseen."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "b15c6cba3b93c16d58fac86931669b013f0f214fe31bfea9a0c3cb7b4a50b90c",
+      "exportSHA256": "3192e66ded016fc8d0d940837381016821415967a76a70fb27dba94b6cab4124",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/kingstown/e12-kingstown-L1-46ce13e5a6-b15c6cba3b93.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/kingstown/e12-kingstown-L1-46ce13e5a6-b15c6cba3b93.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e12/kingstown/e12-kingstown-L1-46ce13e5a6-b15c6cba3b93.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/kingstown/sisalto.json",
+      "sourceContentSHA256": "d32acbf1cdb20106854a566e67882358ac25f05ebd6837284edd3ac88bd72dce",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "99c6f881f29b3af365cf14f814fc51abbf3cf351de009794e8fd6534b9427f15",
+        "semanticContextSHA256": "99c6f881f29b3af365cf14f814fc51abbf3cf351de009794e8fd6534b9427f15",
+        "subjectTitle": "Puutarha lääkkeitä ja ruokaa varten",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Tavallinen lähteessä nimetty kasvi, eläin, materiaali tai arkiesine; yleistetty havainnollistus, ei nimetyn paikan valokuva tai suojatun teoksen jäljennös.",
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/kingstown/assets/e12-kingstown-L1-46ce13e5a6/original.png",
+            "nativeSHA256": "b15c6cba3b93c16d58fac86931669b013f0f214fe31bfea9a0c3cb7b4a50b90c",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "nativeAspectRatio": 1.5,
+            "format": "PNG",
+            "pngChunks": [
+              "IHDR",
+              "caBX",
+              "IDAT",
+              "IEND"
+            ],
+            "manifestMatch": true,
+            "captionFi": "Puuvillan havainnekuva Kingstownin puutarhan koeviljelyjen aiheeseen.",
+            "sourceEvidence": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/kingstown/sisalto.json",
+              "contentSHA256": "67ce65f3eeddc85f42ceb176d3b94195787bc4af84071a62127b3b13e99b1fae",
+              "sourceText": "Kingstownin kasvitieteellinen puutarha perustettiin 1700-luvulla hyötykasvien kokeilu- ja kasvatuspaikaksi. Taustalla olivat sekä lääkekasvien tarve että uusien ravinto- ja kauppakasvien etsiminen. Puutarhan varhaiseen historiaan kuuluivat sotilaslääkäri George Young ja Robert Melville. Alue ei ollut vain koristeellinen kävelypaikka: kasvien käyttöä tutkittiin ja niiden kasvattamista kokeiltiin paikallisissa oloissa. Myöhemmin puutarhassa tehtiin myös kokeita esimerkiksi kaakaolla, puuvillalla, sokeriruo’olla ja nuolijuurella.",
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/kingstown/faktapohja.md",
+              "originalSources": [
+                "https://en.wikipedia.org/wiki/Saint_Vincent_and_the_Grenadines_Botanic_Gardens"
+              ],
+              "ccRelease": {},
+              "generationAuthorization": {
+                "rule": "OHJEET: turvallinen yleishavainnollistus ilman CC-odotusta",
+                "sharedReservationRecord": "/Volumes/T7 4TB/ChatGPT-Codex-active/coordination/paakaupungit-claims/08391cff28146b17/e12/kingstown/L1/owner.json",
+                "ccReleaseRequired": false,
+                "scope": "lähdeperustainen turvallinen avoin mixed; ei PHOTO/C1-C3 tai nimetty kaupunkiasettelu"
+              }
+            },
+            "rightsEvidence": "Tavallinen lähteessä nimetty kasvi, eläin, materiaali tai arkiesine; yleistetty havainnollistus, ei nimetyn paikan valokuva tai suojatun teoksen jäljennös.",
+            "content": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/kingstown/sisalto.json",
+              "contentSHA256": "d32acbf1cdb20106854a566e67882358ac25f05ebd6837284edd3ac88bd72dce",
+              "targetObjectExists": true,
+              "targetContainer": "$.kaupunkilehti[1].nostot[0]",
+              "targetText": {
+                "otsikko": "Puutarha lääkkeitä ja ruokaa varten",
+                "teksti": "Kingstownin kasvitieteellinen puutarha perustettiin 1700-luvulla hyötykasvien kokeilu- ja kasvatuspaikaksi. Taustalla olivat sekä lääkekasvien tarve että uusien ravinto- ja kauppakasvien etsiminen. Puutarhan varhaiseen historiaan kuuluivat sotilaslääkäri George Young ja Robert Melville. Alue ei ollut vain koristeellinen kävelypaikka: kasvien käyttöä tutkittiin ja niiden kasvattamista kokeiltiin paikallisissa oloissa. Myöhemmin puutarhassa tehtiin myös kokeita esimerkiksi kaakaolla, puuvillalla, sokeriruo’olla ja nuolijuurella.",
+                "wiki": "Saint_Vincent_and_the_Grenadines_Botanic_Gardens",
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              },
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/kingstown/faktapohja.md",
+              "factSheetSHA256": "c668716c2a51509cefcbaccba306543782e86acc682f5078130529a6a0680d48",
+              "factAssessment": "faktapohja.md teema 1: koeviljelykasveina puuvilla, kaakao, sokeriruoko ja nuolijuuri; K3 History."
+            },
+            "visualInspection": {
+              "tool": "view_image",
+              "detail": "original",
+              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/kingstown/assets/e12-kingstown-L1-46ce13e5a6/original.png",
+              "inspectedBy": "qa-e12",
+              "inspectedAt": "2026-10-12 20:45:48 UTC",
+              "observations": "Oksassa avautuneita ruskeita puuvillakotia, joista valkoiset kuitulohkot työntyvät. Kodat, kuivat suojuslehdet ja oksaliittymät johdonmukaisia; kuiduissa epäsäännöllistä hienoa nukkaa. Ei tekstiä, logoja, ihmisiä tai nimettyä puutarhanäkymää."
+            },
+            "otherReviewerVerdicts": [],
+            "openConflict": false,
+            "ownershipMarker": "qa-handoff-kuvitus-3.json"
+          },
+          "qaReason": "Avautuneet puuvillakodat havainnollistavat L1-nostossa nimettyä koeviljelykasvia. Kuvateksti ei väitä niitä Kingstownin puutarhan todellisiksi näytteiksi. Native-SHA ja toteutuneet mitat täsmäävät."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Puuvillan havainnekuva Kingstownin puutarhan koeviljelyjen aiheeseen.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/kingstown/illustration-qa-extra.json",
+        "fileSHA256": "88b01cb26d61ac88b9bddbb72b62353199976a5ed218f71f73fb6e99701d61b9",
+        "item": {
+          "slot": "L1",
+          "targetJsonPath": "$.kaupunkilehti[1].nostot[0]",
+          "assetID": "e12-kingstown-L1-46ce13e5a6",
+          "sha256": "b15c6cba3b93c16d58fac86931669b013f0f214fe31bfea9a0c3cb7b4a50b90c",
+          "verdict": "accepted",
+          "reason": "Avautuneet puuvillakodat havainnollistavat L1-nostossa nimettyä koeviljelykasvia. Kuvateksti ei väitä niitä Kingstownin puutarhan todellisiksi näytteiksi. Native-SHA ja toteutuneet mitat täsmäävät.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/kingstown/assets/e12-kingstown-L1-46ce13e5a6/original.png",
+            "nativeSHA256": "b15c6cba3b93c16d58fac86931669b013f0f214fe31bfea9a0c3cb7b4a50b90c",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "nativeAspectRatio": 1.5,
+            "format": "PNG",
+            "pngChunks": [
+              "IHDR",
+              "caBX",
+              "IDAT",
+              "IEND"
+            ],
+            "manifestMatch": true,
+            "captionFi": "Puuvillan havainnekuva Kingstownin puutarhan koeviljelyjen aiheeseen.",
+            "sourceEvidence": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/kingstown/sisalto.json",
+              "contentSHA256": "67ce65f3eeddc85f42ceb176d3b94195787bc4af84071a62127b3b13e99b1fae",
+              "sourceText": "Kingstownin kasvitieteellinen puutarha perustettiin 1700-luvulla hyötykasvien kokeilu- ja kasvatuspaikaksi. Taustalla olivat sekä lääkekasvien tarve että uusien ravinto- ja kauppakasvien etsiminen. Puutarhan varhaiseen historiaan kuuluivat sotilaslääkäri George Young ja Robert Melville. Alue ei ollut vain koristeellinen kävelypaikka: kasvien käyttöä tutkittiin ja niiden kasvattamista kokeiltiin paikallisissa oloissa. Myöhemmin puutarhassa tehtiin myös kokeita esimerkiksi kaakaolla, puuvillalla, sokeriruo’olla ja nuolijuurella.",
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/kingstown/faktapohja.md",
+              "originalSources": [
+                "https://en.wikipedia.org/wiki/Saint_Vincent_and_the_Grenadines_Botanic_Gardens"
+              ],
+              "ccRelease": {},
+              "generationAuthorization": {
+                "rule": "OHJEET: turvallinen yleishavainnollistus ilman CC-odotusta",
+                "sharedReservationRecord": "/Volumes/T7 4TB/ChatGPT-Codex-active/coordination/paakaupungit-claims/08391cff28146b17/e12/kingstown/L1/owner.json",
+                "ccReleaseRequired": false,
+                "scope": "lähdeperustainen turvallinen avoin mixed; ei PHOTO/C1-C3 tai nimetty kaupunkiasettelu"
+              }
+            },
+            "rightsEvidence": "Tavallinen lähteessä nimetty kasvi, eläin, materiaali tai arkiesine; yleistetty havainnollistus, ei nimetyn paikan valokuva tai suojatun teoksen jäljennös.",
+            "content": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/kingstown/sisalto.json",
+              "contentSHA256": "d32acbf1cdb20106854a566e67882358ac25f05ebd6837284edd3ac88bd72dce",
+              "targetObjectExists": true,
+              "targetContainer": "$.kaupunkilehti[1].nostot[0]",
+              "targetText": {
+                "otsikko": "Puutarha lääkkeitä ja ruokaa varten",
+                "teksti": "Kingstownin kasvitieteellinen puutarha perustettiin 1700-luvulla hyötykasvien kokeilu- ja kasvatuspaikaksi. Taustalla olivat sekä lääkekasvien tarve että uusien ravinto- ja kauppakasvien etsiminen. Puutarhan varhaiseen historiaan kuuluivat sotilaslääkäri George Young ja Robert Melville. Alue ei ollut vain koristeellinen kävelypaikka: kasvien käyttöä tutkittiin ja niiden kasvattamista kokeiltiin paikallisissa oloissa. Myöhemmin puutarhassa tehtiin myös kokeita esimerkiksi kaakaolla, puuvillalla, sokeriruo’olla ja nuolijuurella.",
+                "wiki": "Saint_Vincent_and_the_Grenadines_Botanic_Gardens",
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              },
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/kingstown/faktapohja.md",
+              "factSheetSHA256": "c668716c2a51509cefcbaccba306543782e86acc682f5078130529a6a0680d48",
+              "factAssessment": "faktapohja.md teema 1: koeviljelykasveina puuvilla, kaakao, sokeriruoko ja nuolijuuri; K3 History."
+            },
+            "visualInspection": {
+              "tool": "view_image",
+              "detail": "original",
+              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/kingstown/assets/e12-kingstown-L1-46ce13e5a6/original.png",
+              "inspectedBy": "qa-e12",
+              "inspectedAt": "2026-10-12 20:45:48 UTC",
+              "observations": "Oksassa avautuneita ruskeita puuvillakotia, joista valkoiset kuitulohkot työntyvät. Kodat, kuivat suojuslehdet ja oksaliittymät johdonmukaisia; kuiduissa epäsäännöllistä hienoa nukkaa. Ei tekstiä, logoja, ihmisiä tai nimettyä puutarhanäkymää."
+            },
+            "otherReviewerVerdicts": [],
+            "openConflict": false,
+            "ownershipMarker": "qa-handoff-kuvitus-3.json"
+          },
+          "reviewedAt": "2026-10-12T20:45:48.875501+00:00",
+          "reviewerGroup": "qa-e12"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/kingstown/qa.json",
+            "sha256": "22a9f0fd7dbd79f1fec05058d3b447a67fe789f679469212109716c28578ab5c"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/kingstown/illustration-qa-extra.json",
+            "sha256": "88b01cb26d61ac88b9bddbb72b62353199976a5ed218f71f73fb6e99701d61b9"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/kingstown/e12-kingstown-L1-46ce13e5a6-b15c6cba3b93.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/kingstown/e12-kingstown-L1-46ce13e5a6-b15c6cba3b93.png?t=3192e66ded016fc8",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/kingstown/e12-kingstown-L1-46ce13e5a6-b15c6cba3b93.png",
+        "sha256": "3192e66ded016fc8d0d940837381016821415967a76a70fb27dba94b6cab4124",
+        "bytes": 2169173,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e12-kingstown-L1-46ce13e5a6",
+        "nativeSHA256": "b15c6cba3b93c16d58fac86931669b013f0f214fe31bfea9a0c3cb7b4a50b90c",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e12/kingstown/e12-kingstown-L1-46ce13e5a6-b15c6cba3b93.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e12",
+        "city": "kingstown",
+        "slot": "L1",
+        "targetJsonPath": "$.kaupunkilehti[1].nostot[0]",
+        "verifiedAt": "2026-10-12T20:47:15.920040+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e12/kingstown/e12-kingstown-L1-46ce13e5a6-b15c6cba3b93.png",
+        "sha256": "3192e66ded016fc8d0d940837381016821415967a76a70fb27dba94b6cab4124",
+        "bytes": 2169173,
+        "SHAReadAt": "2026-10-12T20:45:55.912870+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "b15c6cba3b93c16d58fac86931669b013f0f214fe31bfea9a0c3cb7b4a50b90c",
+        "rgbPixelSHA256": "7ffb69895b69af26716529f73771172654cb28ddbf45ef386c578b1dbda1f757",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "d32acbf1cdb20106854a566e67882358ac25f05ebd6837284edd3ac88bd72dce",
+      "targetAfterSHA256": "99c6f881f29b3af365cf14f814fc51abbf3cf351de009794e8fd6534b9427f15",
+      "contextAfterSHA256": "99c6f881f29b3af365cf14f814fc51abbf3cf351de009794e8fd6534b9427f15"
+    },
+    {
+      "era": "e12",
+      "city": "kingstown",
       "slot": "L2",
       "type": "illustration",
       "assetID": "e12-kingstown-L2-d08ff60aa1",
@@ -143,7 +778,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/kingstown/illustration-qa-extra.json",
-        "fileSHA256": "f8c511b654b3a91f4f23253c4aed5e3d30415fedb742ffd41c5258d04b619f06",
+        "fileSHA256": "88b01cb26d61ac88b9bddbb72b62353199976a5ed218f71f73fb6e99701d61b9",
         "item": {
           "slot": "L2",
           "targetJsonPath": "$.kaupunkilehti[1].nostot[1]",
@@ -221,7 +856,7 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/kingstown/illustration-qa-extra.json",
-            "sha256": "f8c511b654b3a91f4f23253c4aed5e3d30415fedb742ffd41c5258d04b619f06"
+            "sha256": "88b01cb26d61ac88b9bddbb72b62353199976a5ed218f71f73fb6e99701d61b9"
           }
         ]
       },
@@ -445,7 +1080,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/kingstown/illustration-qa-extra.json",
-        "fileSHA256": "f8c511b654b3a91f4f23253c4aed5e3d30415fedb742ffd41c5258d04b619f06",
+        "fileSHA256": "88b01cb26d61ac88b9bddbb72b62353199976a5ed218f71f73fb6e99701d61b9",
         "item": {
           "slot": "L3",
           "targetJsonPath": "$.kaupunkilehti[1].nostot[2]",
@@ -522,7 +1157,7 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/kingstown/illustration-qa-extra.json",
-            "sha256": "f8c511b654b3a91f4f23253c4aed5e3d30415fedb742ffd41c5258d04b619f06"
+            "sha256": "88b01cb26d61ac88b9bddbb72b62353199976a5ed218f71f73fb6e99701d61b9"
           }
         ]
       },
@@ -608,6 +1243,348 @@
       "sourceContentAfterSHA256": "d32acbf1cdb20106854a566e67882358ac25f05ebd6837284edd3ac88bd72dce",
       "targetAfterSHA256": "0b559b7316c229aaf7c7cb4c746ad3efe9ea3478bdce75dcc22ad4955e2ec450",
       "contextAfterSHA256": "0b559b7316c229aaf7c7cb4c746ad3efe9ea3478bdce75dcc22ad4955e2ec450"
+    },
+    {
+      "era": "e12",
+      "city": "kingstown",
+      "slot": "L4",
+      "type": "illustration",
+      "assetID": "e12-kingstown-L4-a777be4bbb",
+      "galleryImageID": "e12-kingstown-L4-a777be4bbb",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
+      "targetTokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        3
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/kingstown/e12-kingstown-L4-a777be4bbb-fffa10cdd61e.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Saint Vincentin papukaijan (Amazona guildingii) lajikohtainen havainne.",
+        "lyhyt": "Saint Vincentin papukaijan (Amazona guildingii) lajikohtainen havainne."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/kingstown/e12-kingstown-L4-a777be4bbb-fffa10cdd61e.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Saint Vincentin papukaijan (Amazona guildingii) lajikohtainen havainne.",
+        "lyhyt": "Saint Vincentin papukaijan (Amazona guildingii) lajikohtainen havainne."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "fffa10cdd61e0f4d61a584ba564aaab21d17e37c20719e63d67cb20f4177a140",
+      "exportSHA256": "0397aeab58816dbd7c1864062576a6a9bd33ec1c3aea81dcbbf39ed953bdbf37",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/kingstown/e12-kingstown-L4-a777be4bbb-fffa10cdd61e.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/kingstown/e12-kingstown-L4-a777be4bbb-fffa10cdd61e.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e12/kingstown/e12-kingstown-L4-a777be4bbb-fffa10cdd61e.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/kingstown/sisalto.json",
+      "sourceContentSHA256": "d32acbf1cdb20106854a566e67882358ac25f05ebd6837284edd3ac88bd72dce",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "efaa31ad94d3d2c6f24a8d1da9319eda9631e1603f4432b4bc5077c20292d426",
+        "semanticContextSHA256": "efaa31ad94d3d2c6f24a8d1da9319eda9631e1603f4432b4bc5077c20292d426",
+        "subjectTitle": "Kasvien keskellä kasvatetaan lintua",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Eläinlaji ei suojattu teos. Lajireferenssin väritys ja anatomia katsottu; uusi sommitelma ja yleinen oksa, ei nimetyn lintutarhan yksilö- tai tilarekonstruktiota. Referenssi: Chennette/Snowmanradio CC BY-SA2.0, erillinen viitetietue NASilla.",
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/kingstown/assets/e12-kingstown-L4-a777be4bbb/original.png",
+            "nativeSHA256": "fffa10cdd61e0f4d61a584ba564aaab21d17e37c20719e63d67cb20f4177a140",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "nativeAspectRatio": 1.5,
+            "format": "PNG",
+            "pngChunks": [
+              "IHDR",
+              "caBX",
+              "IDAT",
+              "IEND"
+            ],
+            "manifestMatch": true,
+            "captionFi": "Saint Vincentin papukaijan (Amazona guildingii) lajikohtainen havainne.",
+            "sourceEvidence": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/kingstown/sisalto.json",
+              "contentSHA256": "67ce65f3eeddc85f42ceb176d3b94195787bc4af84071a62127b3b13e99b1fae",
+              "sourceText": "Kingstownin puutarhassa on myös lintutarha, jonka kasvatusohjelma auttaa säilyttämään Saint Vincentin kotoperäistä papukaijaa (Amazona guildingii). Se on valtion kansallislintu. Lajia elää luonnossa Saint Vincentin saarella, ja puutarhan lintutarha tuo sen osaksi kaupungin luontokohdetta. Kasvitieteellisen puutarhan toiminta ulottuu näin kasvikokoelmaa laajemmalle. Historiallisen hyötykasvien kasvatuspaikan rinnalla tehdään nykyistä suojelutyötä, jonka kohteena on juuri tämän saaren eläinlaji.",
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/kingstown/faktapohja.md",
+              "originalSources": [
+                "https://en.wikipedia.org/wiki/Saint_Vincent_amazon",
+                "https://nationalparks.gov.vc/nationalparks/index.php/heritage/16-heritage-and-culture/8-the-botanical-gardens/",
+                "https://commons.wikimedia.org/wiki/File:Amazona_guildingii_-Botanical_Gardens_-Kingstown_-Saint_Vincent-8a-4c.jpg"
+              ],
+              "ccRelease": {
+                "O4": {
+                  "subject": "yleinen nimetön roti-ruokahavainne, ei tietyn ravintolan annoskuva",
+                  "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/kingstown/sisalto.json",
+                  "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+                  "sourceText": "Kingstownin keskustan ruokapaikkojen tarjonnassa on esimerkiksi rotia ja keittoja.",
+                  "originalSource": "https://en.wikivoyage.org/wiki/Kingstown",
+                  "constraints": "Ei lisättyä tekstiä, logoja, pakkauksia, kasvoja tai nimettyä paikkarakennusta; havainnollistuksen nimitys. Yhteinen reserve ennen gen-kutsua."
+                }
+              },
+              "generationAuthorization": {
+                "rule": "OHJEET: turvallinen yleishavainnollistus ilman CC-odotusta",
+                "sharedReservationRecord": "/Volumes/T7 4TB/ChatGPT-Codex-active/coordination/paakaupungit-claims/08391cff28146b17/e12/kingstown/L4/owner.json",
+                "ccReleaseRequired": false,
+                "scope": "lähdeperustainen turvallinen avoin mixed; ei PHOTO/C1-C3 tai nimetty kaupunkiasettelu"
+              }
+            },
+            "rightsEvidence": "Eläinlaji ei suojattu teos. Lajireferenssin väritys ja anatomia katsottu; uusi sommitelma ja yleinen oksa, ei nimetyn lintutarhan yksilö- tai tilarekonstruktiota. Referenssi: Chennette/Snowmanradio CC BY-SA2.0, erillinen viitetietue NASilla.",
+            "content": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/kingstown/sisalto.json",
+              "contentSHA256": "d32acbf1cdb20106854a566e67882358ac25f05ebd6837284edd3ac88bd72dce",
+              "targetObjectExists": true,
+              "targetContainer": "$.kaupunkilehti[1].nostot[3]",
+              "targetText": {
+                "otsikko": "Kasvien keskellä kasvatetaan lintua",
+                "teksti": "Kingstownin puutarhassa on myös lintutarha, jonka kasvatusohjelma auttaa säilyttämään Saint Vincentin kotoperäistä papukaijaa (Amazona guildingii). Se on valtion kansallislintu. Lajia elää luonnossa Saint Vincentin saarella, ja puutarhan lintutarha tuo sen osaksi kaupungin luontokohdetta. Kasvitieteellisen puutarhan toiminta ulottuu näin kasvikokoelmaa laajemmalle. Historiallisen hyötykasvien kasvatuspaikan rinnalla tehdään nykyistä suojelutyötä, jonka kohteena on juuri tämän saaren eläinlaji.",
+                "wiki": "Saint_Vincent_and_the_Grenadines_Botanic_Gardens",
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              },
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/kingstown/faktapohja.md",
+              "factSheetSHA256": "c668716c2a51509cefcbaccba306543782e86acc682f5078130529a6a0680d48",
+              "factAssessment": "faktapohja.md teema 4: Amazona guildingii -kasvatusohjelma K3/K6/K8. Lajivertailu: katsottu Commons-lähde amazona-guildingii-reference.jpg, SHA c5e5b3d6eaac9c41c50094619cbbdbb462a15919124ba482d6903f3de8083483; sama vaalea pää/keltainen poski, sinivihreä niska, pronssinen hartia, sinivioletti siipi ja keltainen häntäkärki. Lähdesivun tallenne nimeää lajin, Chennetten/Snowmanradion ja CC BY-SA2.0."
+            },
+            "visualInspection": {
+              "tool": "view_image",
+              "detail": "original",
+              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/kingstown/assets/e12-kingstown-L4-a777be4bbb/original.png",
+              "inspectedBy": "qa-e12",
+              "inspectedAt": "2026-10-12 20:45:48 UTC",
+              "observations": "Yksi tukeva papukaija oksalla, siivet laskettuina. Kermanvaalea otsa, keltainen poski, sinivihreä niska, pronssinvihreä rinta/hartia, sinivioletit siipisulat ja sininen lyhyt häntä leveällä keltaisella kärjellä. Harmaa koukkunokka, kaksi oksaan tarttuvaa jalkaa; näkyvät varpaat kaareutuvat oksan ympäri, eikä ilmassa kelluvia tai yhteen sulautuneita osia näy. Höyhenkerrokset seuraavat kehoa. Ei häkkiä, renkaita, tekstiä tai logoja."
+            },
+            "otherReviewerVerdicts": [],
+            "openConflict": false,
+            "ownershipMarker": "qa-handoff-kuvitus-3.json",
+            "visualReference": {
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/kingstown/illustration-references/amazona-guildingii-reference.jpg",
+              "sha256": "c5e5b3d6eaac9c41c50094619cbbdbb462a15919124ba482d6903f3de8083483",
+              "sourcePage": "https://commons.wikimedia.org/wiki/File:Amazona_guildingii_-Botanical_Gardens_-Kingstown_-Saint_Vincent-8a-4c.jpg",
+              "inspectedBy": "qa-e12",
+              "view": "view_image original; cached Commons source HTML read"
+            }
+          },
+          "qaReason": "Saint Vincentin papukaijan lajipiirteet vastaavat katsottua Amazona guildingii -lähdekuvaa. Lyhyt häntä ja värialueet erottavat havainteen arasta; kuva ei väitä esittävänsä puutarhan nimettyä yksilöä. Native-SHA ja toteutuneet mitat täsmäävät."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Saint Vincentin papukaijan (Amazona guildingii) lajikohtainen havainne.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/kingstown/illustration-qa-extra.json",
+        "fileSHA256": "88b01cb26d61ac88b9bddbb72b62353199976a5ed218f71f73fb6e99701d61b9",
+        "item": {
+          "slot": "L4",
+          "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
+          "assetID": "e12-kingstown-L4-a777be4bbb",
+          "sha256": "fffa10cdd61e0f4d61a584ba564aaab21d17e37c20719e63d67cb20f4177a140",
+          "verdict": "accepted",
+          "reason": "Saint Vincentin papukaijan lajipiirteet vastaavat katsottua Amazona guildingii -lähdekuvaa. Lyhyt häntä ja värialueet erottavat havainteen arasta; kuva ei väitä esittävänsä puutarhan nimettyä yksilöä. Native-SHA ja toteutuneet mitat täsmäävät.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/kingstown/assets/e12-kingstown-L4-a777be4bbb/original.png",
+            "nativeSHA256": "fffa10cdd61e0f4d61a584ba564aaab21d17e37c20719e63d67cb20f4177a140",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "nativeAspectRatio": 1.5,
+            "format": "PNG",
+            "pngChunks": [
+              "IHDR",
+              "caBX",
+              "IDAT",
+              "IEND"
+            ],
+            "manifestMatch": true,
+            "captionFi": "Saint Vincentin papukaijan (Amazona guildingii) lajikohtainen havainne.",
+            "sourceEvidence": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/kingstown/sisalto.json",
+              "contentSHA256": "67ce65f3eeddc85f42ceb176d3b94195787bc4af84071a62127b3b13e99b1fae",
+              "sourceText": "Kingstownin puutarhassa on myös lintutarha, jonka kasvatusohjelma auttaa säilyttämään Saint Vincentin kotoperäistä papukaijaa (Amazona guildingii). Se on valtion kansallislintu. Lajia elää luonnossa Saint Vincentin saarella, ja puutarhan lintutarha tuo sen osaksi kaupungin luontokohdetta. Kasvitieteellisen puutarhan toiminta ulottuu näin kasvikokoelmaa laajemmalle. Historiallisen hyötykasvien kasvatuspaikan rinnalla tehdään nykyistä suojelutyötä, jonka kohteena on juuri tämän saaren eläinlaji.",
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/kingstown/faktapohja.md",
+              "originalSources": [
+                "https://en.wikipedia.org/wiki/Saint_Vincent_amazon",
+                "https://nationalparks.gov.vc/nationalparks/index.php/heritage/16-heritage-and-culture/8-the-botanical-gardens/",
+                "https://commons.wikimedia.org/wiki/File:Amazona_guildingii_-Botanical_Gardens_-Kingstown_-Saint_Vincent-8a-4c.jpg"
+              ],
+              "ccRelease": {
+                "O4": {
+                  "subject": "yleinen nimetön roti-ruokahavainne, ei tietyn ravintolan annoskuva",
+                  "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/kingstown/sisalto.json",
+                  "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+                  "sourceText": "Kingstownin keskustan ruokapaikkojen tarjonnassa on esimerkiksi rotia ja keittoja.",
+                  "originalSource": "https://en.wikivoyage.org/wiki/Kingstown",
+                  "constraints": "Ei lisättyä tekstiä, logoja, pakkauksia, kasvoja tai nimettyä paikkarakennusta; havainnollistuksen nimitys. Yhteinen reserve ennen gen-kutsua."
+                }
+              },
+              "generationAuthorization": {
+                "rule": "OHJEET: turvallinen yleishavainnollistus ilman CC-odotusta",
+                "sharedReservationRecord": "/Volumes/T7 4TB/ChatGPT-Codex-active/coordination/paakaupungit-claims/08391cff28146b17/e12/kingstown/L4/owner.json",
+                "ccReleaseRequired": false,
+                "scope": "lähdeperustainen turvallinen avoin mixed; ei PHOTO/C1-C3 tai nimetty kaupunkiasettelu"
+              }
+            },
+            "rightsEvidence": "Eläinlaji ei suojattu teos. Lajireferenssin väritys ja anatomia katsottu; uusi sommitelma ja yleinen oksa, ei nimetyn lintutarhan yksilö- tai tilarekonstruktiota. Referenssi: Chennette/Snowmanradio CC BY-SA2.0, erillinen viitetietue NASilla.",
+            "content": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/kingstown/sisalto.json",
+              "contentSHA256": "d32acbf1cdb20106854a566e67882358ac25f05ebd6837284edd3ac88bd72dce",
+              "targetObjectExists": true,
+              "targetContainer": "$.kaupunkilehti[1].nostot[3]",
+              "targetText": {
+                "otsikko": "Kasvien keskellä kasvatetaan lintua",
+                "teksti": "Kingstownin puutarhassa on myös lintutarha, jonka kasvatusohjelma auttaa säilyttämään Saint Vincentin kotoperäistä papukaijaa (Amazona guildingii). Se on valtion kansallislintu. Lajia elää luonnossa Saint Vincentin saarella, ja puutarhan lintutarha tuo sen osaksi kaupungin luontokohdetta. Kasvitieteellisen puutarhan toiminta ulottuu näin kasvikokoelmaa laajemmalle. Historiallisen hyötykasvien kasvatuspaikan rinnalla tehdään nykyistä suojelutyötä, jonka kohteena on juuri tämän saaren eläinlaji.",
+                "wiki": "Saint_Vincent_and_the_Grenadines_Botanic_Gardens",
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              },
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/kingstown/faktapohja.md",
+              "factSheetSHA256": "c668716c2a51509cefcbaccba306543782e86acc682f5078130529a6a0680d48",
+              "factAssessment": "faktapohja.md teema 4: Amazona guildingii -kasvatusohjelma K3/K6/K8. Lajivertailu: katsottu Commons-lähde amazona-guildingii-reference.jpg, SHA c5e5b3d6eaac9c41c50094619cbbdbb462a15919124ba482d6903f3de8083483; sama vaalea pää/keltainen poski, sinivihreä niska, pronssinen hartia, sinivioletti siipi ja keltainen häntäkärki. Lähdesivun tallenne nimeää lajin, Chennetten/Snowmanradion ja CC BY-SA2.0."
+            },
+            "visualInspection": {
+              "tool": "view_image",
+              "detail": "original",
+              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/kingstown/assets/e12-kingstown-L4-a777be4bbb/original.png",
+              "inspectedBy": "qa-e12",
+              "inspectedAt": "2026-10-12 20:45:48 UTC",
+              "observations": "Yksi tukeva papukaija oksalla, siivet laskettuina. Kermanvaalea otsa, keltainen poski, sinivihreä niska, pronssinvihreä rinta/hartia, sinivioletit siipisulat ja sininen lyhyt häntä leveällä keltaisella kärjellä. Harmaa koukkunokka, kaksi oksaan tarttuvaa jalkaa; näkyvät varpaat kaareutuvat oksan ympäri, eikä ilmassa kelluvia tai yhteen sulautuneita osia näy. Höyhenkerrokset seuraavat kehoa. Ei häkkiä, renkaita, tekstiä tai logoja."
+            },
+            "otherReviewerVerdicts": [],
+            "openConflict": false,
+            "ownershipMarker": "qa-handoff-kuvitus-3.json",
+            "visualReference": {
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/kingstown/illustration-references/amazona-guildingii-reference.jpg",
+              "sha256": "c5e5b3d6eaac9c41c50094619cbbdbb462a15919124ba482d6903f3de8083483",
+              "sourcePage": "https://commons.wikimedia.org/wiki/File:Amazona_guildingii_-Botanical_Gardens_-Kingstown_-Saint_Vincent-8a-4c.jpg",
+              "inspectedBy": "qa-e12",
+              "view": "view_image original; cached Commons source HTML read"
+            }
+          },
+          "reviewedAt": "2026-10-12T20:45:49.447774+00:00",
+          "reviewerGroup": "qa-e12"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/kingstown/qa.json",
+            "sha256": "22a9f0fd7dbd79f1fec05058d3b447a67fe789f679469212109716c28578ab5c"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/kingstown/illustration-qa-extra.json",
+            "sha256": "88b01cb26d61ac88b9bddbb72b62353199976a5ed218f71f73fb6e99701d61b9"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/kingstown/e12-kingstown-L4-a777be4bbb-fffa10cdd61e.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/kingstown/e12-kingstown-L4-a777be4bbb-fffa10cdd61e.png?t=0397aeab58816dbd",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/kingstown/e12-kingstown-L4-a777be4bbb-fffa10cdd61e.png",
+        "sha256": "0397aeab58816dbd7c1864062576a6a9bd33ec1c3aea81dcbbf39ed953bdbf37",
+        "bytes": 2176471,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e12-kingstown-L4-a777be4bbb",
+        "nativeSHA256": "fffa10cdd61e0f4d61a584ba564aaab21d17e37c20719e63d67cb20f4177a140",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e12/kingstown/e12-kingstown-L4-a777be4bbb-fffa10cdd61e.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e12",
+        "city": "kingstown",
+        "slot": "L4",
+        "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
+        "verifiedAt": "2026-10-12T20:47:17.376859+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e12/kingstown/e12-kingstown-L4-a777be4bbb-fffa10cdd61e.png",
+        "sha256": "0397aeab58816dbd7c1864062576a6a9bd33ec1c3aea81dcbbf39ed953bdbf37",
+        "bytes": 2176471,
+        "SHAReadAt": "2026-10-12T20:45:56.371765+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "fffa10cdd61e0f4d61a584ba564aaab21d17e37c20719e63d67cb20f4177a140",
+        "rgbPixelSHA256": "09c6616a9604bd8263f43c8596c72a3569a287fe0bba48fa9e38b0859507abab",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "d32acbf1cdb20106854a566e67882358ac25f05ebd6837284edd3ac88bd72dce",
+      "targetAfterSHA256": "efaa31ad94d3d2c6f24a8d1da9319eda9631e1603f4432b4bc5077c20292d426",
+      "contextAfterSHA256": "efaa31ad94d3d2c6f24a8d1da9319eda9631e1603f4432b4bc5077c20292d426"
     },
     {
       "era": "e12",
@@ -818,7 +1795,7 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/kingstown/illustration-qa-extra.json",
-            "sha256": "f8c511b654b3a91f4f23253c4aed5e3d30415fedb742ffd41c5258d04b619f06"
+            "sha256": "88b01cb26d61ac88b9bddbb72b62353199976a5ed218f71f73fb6e99701d61b9"
           }
         ]
       },
@@ -1107,7 +2084,7 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/kingstown/illustration-qa-extra.json",
-            "sha256": "f8c511b654b3a91f4f23253c4aed5e3d30415fedb742ffd41c5258d04b619f06"
+            "sha256": "88b01cb26d61ac88b9bddbb72b62353199976a5ed218f71f73fb6e99701d61b9"
           }
         ]
       },
@@ -1394,7 +2371,7 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/kingstown/illustration-qa-extra.json",
-            "sha256": "f8c511b654b3a91f4f23253c4aed5e3d30415fedb742ffd41c5258d04b619f06"
+            "sha256": "88b01cb26d61ac88b9bddbb72b62353199976a5ed218f71f73fb6e99701d61b9"
           }
         ]
       },

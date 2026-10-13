@@ -118,7 +118,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/roseau/qa.json",
-        "fileSHA256": "63a2b92f75ee498044198ce9d7ec1734bd56e33a0a5104ab5d4579e39456b952",
+        "fileSHA256": "39d3f7c3fa52aa1adc9e4e698772c72b8278c4681e0ac981697755a6f2d0996c",
         "item": {
           "slot": "O4",
           "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
@@ -250,11 +250,11 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/roseau/qa.json",
-            "sha256": "63a2b92f75ee498044198ce9d7ec1734bd56e33a0a5104ab5d4579e39456b952"
+            "sha256": "39d3f7c3fa52aa1adc9e4e698772c72b8278c4681e0ac981697755a6f2d0996c"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/roseau/illustration-qa-extra.json",
-            "sha256": "c271ee50b1063f40052a5310b79c088741bcbe0d2bae949dc18bec98288e4970"
+            "sha256": "4c406f2aafa583047ee17b7f27d0feed6a55ba0d019f00076ebefc4e37593947"
           }
         ]
       },
@@ -451,7 +451,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/roseau/qa.json",
-        "fileSHA256": "63a2b92f75ee498044198ce9d7ec1734bd56e33a0a5104ab5d4579e39456b952",
+        "fileSHA256": "39d3f7c3fa52aa1adc9e4e698772c72b8278c4681e0ac981697755a6f2d0996c",
         "item": {
           "slot": "K3",
           "targetJsonPath": "$.kaupunkilehti[0].nostot[2]",
@@ -582,11 +582,11 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/roseau/qa.json",
-            "sha256": "63a2b92f75ee498044198ce9d7ec1734bd56e33a0a5104ab5d4579e39456b952"
+            "sha256": "39d3f7c3fa52aa1adc9e4e698772c72b8278c4681e0ac981697755a6f2d0996c"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/roseau/illustration-qa-extra.json",
-            "sha256": "c271ee50b1063f40052a5310b79c088741bcbe0d2bae949dc18bec98288e4970"
+            "sha256": "4c406f2aafa583047ee17b7f27d0feed6a55ba0d019f00076ebefc4e37593947"
           }
         ]
       },
@@ -672,6 +672,312 @@
       "sourceContentAfterSHA256": "08f2445e73fd7b69a552fd0b7657f298cf29a78a73b63118064bd69fee6e9fe9",
       "targetAfterSHA256": "15ec1f1b3991ce644c915e8fa4a3102586064882ad9e11e4f0d9a443095eb037",
       "contextAfterSHA256": "15ec1f1b3991ce644c915e8fa4a3102586064882ad9e11e4f0d9a443095eb037"
+    },
+    {
+      "era": "e12",
+      "city": "roseau",
+      "slot": "L1",
+      "type": "illustration",
+      "assetID": "e12-roseau-L1-b264dd292c",
+      "galleryImageID": "e12-roseau-L1-b264dd292c",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[1].nostot[0]",
+      "targetTokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        0
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/roseau/e12-roseau-L1-b264dd292c-da6040f9c432.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Taimikasvatuksen havainnekuva Dominican puutarhan viljelytehtävän aiheeseen.",
+        "lyhyt": "Taimikasvatuksen havainnekuva Dominican puutarhan viljelytehtävän aiheeseen."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/roseau/e12-roseau-L1-b264dd292c-da6040f9c432.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Taimikasvatuksen havainnekuva Dominican puutarhan viljelytehtävän aiheeseen.",
+        "lyhyt": "Taimikasvatuksen havainnekuva Dominican puutarhan viljelytehtävän aiheeseen."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "da6040f9c432100aa4a986745c5ab65c6d902e8e4316d180b62e8f0dec89cfba",
+      "exportSHA256": "6c6b467265f26d35fd12232065201070bc1475fad1045ebdd4c2e395c5963295",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/roseau/e12-roseau-L1-b264dd292c-da6040f9c432.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/roseau/e12-roseau-L1-b264dd292c-da6040f9c432.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e12/roseau/e12-roseau-L1-b264dd292c-da6040f9c432.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/roseau/sisalto.json",
+      "sourceContentSHA256": "08f2445e73fd7b69a552fd0b7657f298cf29a78a73b63118064bd69fee6e9fe9",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "2bf5f66ae45f98a0f486388563432670b12e42694634a0494d062cacbfb4424f",
+        "semanticContextSHA256": "2bf5f66ae45f98a0f486388563432670b12e42694634a0494d062cacbfb4424f",
+        "subjectTitle": "Puutarha tehtiin myös viljelijöille",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Tavallinen lähteessä nimetty kasvi, eläin, materiaali tai arkiesine; yleistetty havainnollistus, ei nimetyn paikan valokuva tai suojatun teoksen jäljennös.",
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/roseau/assets/e12-roseau-L1-b264dd292c/original.png",
+            "nativeSHA256": "da6040f9c432100aa4a986745c5ab65c6d902e8e4316d180b62e8f0dec89cfba",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "nativeAspectRatio": 1.5,
+            "format": "PNG",
+            "pngChunks": [
+              "IHDR",
+              "caBX",
+              "IDAT",
+              "IEND"
+            ],
+            "manifestMatch": true,
+            "captionFi": "Taimikasvatuksen havainnekuva Dominican puutarhan viljelytehtävän aiheeseen.",
+            "sourceEvidence": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/roseau/sisalto.json",
+              "contentSHA256": "39f90ae79f55ea000220f39bcb301e96ef8e185495c29d0cd4640a04b613ea60",
+              "sourceText": "Dominican kasvitieteellinen puutarha perustettiin 1800-luvun lopulla entiselle sokeriviljelmälle. Tarkoituksena oli monipuolistaa saaren viljelyä ja tuottaa viljelijöille oikein lisättyjä taimia. Kasveja saatiin myös Englannin Kew Gardensista. Hyötykasvien kokeilualueelle istutettiin samalla koristekasveja, joten tutkimus ja viihtyisä ympäristö kasvoivat rinnakkain. Hurrikaani David vaurioitti myöhemmin puutarhaa pahoin: kaatunut afrikkalainen apinanleipäpuu murskasi tyhjän koulubussin. Tämä puun ja bussin pari jäi osaksi paikan muistia.",
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/roseau/faktapohja.md",
+              "originalSources": [
+                "https://en.wikipedia.org/wiki/Dominica_Botanic_Gardens"
+              ],
+              "ccRelease": {},
+              "generationAuthorization": {
+                "rule": "OHJEET: turvallinen yleishavainnollistus ilman CC-odotusta",
+                "sharedReservationRecord": "/Volumes/T7 4TB/ChatGPT-Codex-active/coordination/paakaupungit-claims/08391cff28146b17/e12/roseau/L1/owner.json",
+                "ccReleaseRequired": false,
+                "scope": "lähdeperustainen turvallinen avoin mixed; ei PHOTO/C1-C3 tai nimetty kaupunkiasettelu"
+              }
+            },
+            "rightsEvidence": "Tavallinen lähteessä nimetty kasvi, eläin, materiaali tai arkiesine; yleistetty havainnollistus, ei nimetyn paikan valokuva tai suojatun teoksen jäljennös.",
+            "content": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/roseau/sisalto.json",
+              "contentSHA256": "08f2445e73fd7b69a552fd0b7657f298cf29a78a73b63118064bd69fee6e9fe9",
+              "targetObjectExists": true,
+              "targetContainer": "$.kaupunkilehti[1].nostot[0]",
+              "targetText": {
+                "otsikko": "Puutarha tehtiin myös viljelijöille",
+                "teksti": "Dominican kasvitieteellinen puutarha perustettiin 1800-luvun lopulla entiselle sokeriviljelmälle. Tarkoituksena oli monipuolistaa saaren viljelyä ja tuottaa viljelijöille oikein lisättyjä taimia. Kasveja saatiin myös Englannin Kew Gardensista. Hyötykasvien kokeilualueelle istutettiin samalla koristekasveja, joten tutkimus ja viihtyisä ympäristö kasvoivat rinnakkain. Hurrikaani David vaurioitti myöhemmin puutarhaa pahoin: kaatunut afrikkalainen apinanleipäpuu murskasi tyhjän koulubussin. Tämä puun ja bussin pari jäi osaksi paikan muistia.",
+                "wiki": "Dominica Botanical Gardens",
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              },
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/roseau/faktapohja.md",
+              "factSheetSHA256": "26373dbdc945310601615a91b11b12d49e338e91836ce88989d5b2ebe61a2fa8",
+              "factAssessment": "faktapohja.md teema 1/rivi 38: taimien tuottaminen viljelijöille, viljelyn monipuolistaminen ja Kew, R3 History."
+            },
+            "visualInspection": {
+              "tool": "view_image",
+              "detail": "original",
+              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/roseau/assets/e12-roseau-L1-b264dd292c/original.png",
+              "inspectedBy": "qa-e12",
+              "inspectedAt": "2026-10-12 20:45:48 UTC",
+              "observations": "Kolme erikokoista lehtevää tainta omissa saviruukuissaan puupöydällä, multaa ja lapio, taustalla kastelukannu. Lehdet kiinnittyvät varsien kautta, ruukkujen suuaukot ja pohjat jatkuvia; maa, savi ja puu luonnollisia. Ei tekstiä, kylttejä, ihmisiä tai nimettyjä rakennuksia."
+            },
+            "otherReviewerVerdicts": [],
+            "openConflict": false,
+            "ownershipMarker": "qa-handoff-kuvitus-3.json"
+          },
+          "qaReason": "Taimikasvatuksen yleishavainne sopii L1-noston viljelijöille tuottamien taimien aiheeseen. Kasveja tai ympäristöä ei nimetä puutarhan todellisiksi näytteiksi. Native-SHA ja toteutuneet mitat täsmäävät."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Taimikasvatuksen havainnekuva Dominican puutarhan viljelytehtävän aiheeseen.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/roseau/illustration-qa-extra.json",
+        "fileSHA256": "4c406f2aafa583047ee17b7f27d0feed6a55ba0d019f00076ebefc4e37593947",
+        "item": {
+          "slot": "L1",
+          "targetJsonPath": "$.kaupunkilehti[1].nostot[0]",
+          "assetID": "e12-roseau-L1-b264dd292c",
+          "sha256": "da6040f9c432100aa4a986745c5ab65c6d902e8e4316d180b62e8f0dec89cfba",
+          "verdict": "accepted",
+          "reason": "Taimikasvatuksen yleishavainne sopii L1-noston viljelijöille tuottamien taimien aiheeseen. Kasveja tai ympäristöä ei nimetä puutarhan todellisiksi näytteiksi. Native-SHA ja toteutuneet mitat täsmäävät.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/roseau/assets/e12-roseau-L1-b264dd292c/original.png",
+            "nativeSHA256": "da6040f9c432100aa4a986745c5ab65c6d902e8e4316d180b62e8f0dec89cfba",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "nativeAspectRatio": 1.5,
+            "format": "PNG",
+            "pngChunks": [
+              "IHDR",
+              "caBX",
+              "IDAT",
+              "IEND"
+            ],
+            "manifestMatch": true,
+            "captionFi": "Taimikasvatuksen havainnekuva Dominican puutarhan viljelytehtävän aiheeseen.",
+            "sourceEvidence": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/roseau/sisalto.json",
+              "contentSHA256": "39f90ae79f55ea000220f39bcb301e96ef8e185495c29d0cd4640a04b613ea60",
+              "sourceText": "Dominican kasvitieteellinen puutarha perustettiin 1800-luvun lopulla entiselle sokeriviljelmälle. Tarkoituksena oli monipuolistaa saaren viljelyä ja tuottaa viljelijöille oikein lisättyjä taimia. Kasveja saatiin myös Englannin Kew Gardensista. Hyötykasvien kokeilualueelle istutettiin samalla koristekasveja, joten tutkimus ja viihtyisä ympäristö kasvoivat rinnakkain. Hurrikaani David vaurioitti myöhemmin puutarhaa pahoin: kaatunut afrikkalainen apinanleipäpuu murskasi tyhjän koulubussin. Tämä puun ja bussin pari jäi osaksi paikan muistia.",
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/roseau/faktapohja.md",
+              "originalSources": [
+                "https://en.wikipedia.org/wiki/Dominica_Botanic_Gardens"
+              ],
+              "ccRelease": {},
+              "generationAuthorization": {
+                "rule": "OHJEET: turvallinen yleishavainnollistus ilman CC-odotusta",
+                "sharedReservationRecord": "/Volumes/T7 4TB/ChatGPT-Codex-active/coordination/paakaupungit-claims/08391cff28146b17/e12/roseau/L1/owner.json",
+                "ccReleaseRequired": false,
+                "scope": "lähdeperustainen turvallinen avoin mixed; ei PHOTO/C1-C3 tai nimetty kaupunkiasettelu"
+              }
+            },
+            "rightsEvidence": "Tavallinen lähteessä nimetty kasvi, eläin, materiaali tai arkiesine; yleistetty havainnollistus, ei nimetyn paikan valokuva tai suojatun teoksen jäljennös.",
+            "content": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/roseau/sisalto.json",
+              "contentSHA256": "08f2445e73fd7b69a552fd0b7657f298cf29a78a73b63118064bd69fee6e9fe9",
+              "targetObjectExists": true,
+              "targetContainer": "$.kaupunkilehti[1].nostot[0]",
+              "targetText": {
+                "otsikko": "Puutarha tehtiin myös viljelijöille",
+                "teksti": "Dominican kasvitieteellinen puutarha perustettiin 1800-luvun lopulla entiselle sokeriviljelmälle. Tarkoituksena oli monipuolistaa saaren viljelyä ja tuottaa viljelijöille oikein lisättyjä taimia. Kasveja saatiin myös Englannin Kew Gardensista. Hyötykasvien kokeilualueelle istutettiin samalla koristekasveja, joten tutkimus ja viihtyisä ympäristö kasvoivat rinnakkain. Hurrikaani David vaurioitti myöhemmin puutarhaa pahoin: kaatunut afrikkalainen apinanleipäpuu murskasi tyhjän koulubussin. Tämä puun ja bussin pari jäi osaksi paikan muistia.",
+                "wiki": "Dominica Botanical Gardens",
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              },
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/roseau/faktapohja.md",
+              "factSheetSHA256": "26373dbdc945310601615a91b11b12d49e338e91836ce88989d5b2ebe61a2fa8",
+              "factAssessment": "faktapohja.md teema 1/rivi 38: taimien tuottaminen viljelijöille, viljelyn monipuolistaminen ja Kew, R3 History."
+            },
+            "visualInspection": {
+              "tool": "view_image",
+              "detail": "original",
+              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/roseau/assets/e12-roseau-L1-b264dd292c/original.png",
+              "inspectedBy": "qa-e12",
+              "inspectedAt": "2026-10-12 20:45:48 UTC",
+              "observations": "Kolme erikokoista lehtevää tainta omissa saviruukuissaan puupöydällä, multaa ja lapio, taustalla kastelukannu. Lehdet kiinnittyvät varsien kautta, ruukkujen suuaukot ja pohjat jatkuvia; maa, savi ja puu luonnollisia. Ei tekstiä, kylttejä, ihmisiä tai nimettyjä rakennuksia."
+            },
+            "otherReviewerVerdicts": [],
+            "openConflict": false,
+            "ownershipMarker": "qa-handoff-kuvitus-3.json"
+          },
+          "reviewedAt": "2026-10-12T20:45:49.047117+00:00",
+          "reviewerGroup": "qa-e12"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/roseau/qa.json",
+            "sha256": "39d3f7c3fa52aa1adc9e4e698772c72b8278c4681e0ac981697755a6f2d0996c"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/roseau/illustration-qa-extra.json",
+            "sha256": "4c406f2aafa583047ee17b7f27d0feed6a55ba0d019f00076ebefc4e37593947"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/roseau/e12-roseau-L1-b264dd292c-da6040f9c432.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/roseau/e12-roseau-L1-b264dd292c-da6040f9c432.png?t=6c6b467265f26d35",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/roseau/e12-roseau-L1-b264dd292c-da6040f9c432.png",
+        "sha256": "6c6b467265f26d35fd12232065201070bc1475fad1045ebdd4c2e395c5963295",
+        "bytes": 2599234,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e12-roseau-L1-b264dd292c",
+        "nativeSHA256": "da6040f9c432100aa4a986745c5ab65c6d902e8e4316d180b62e8f0dec89cfba",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e12/roseau/e12-roseau-L1-b264dd292c-da6040f9c432.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e12",
+        "city": "roseau",
+        "slot": "L1",
+        "targetJsonPath": "$.kaupunkilehti[1].nostot[0]",
+        "verifiedAt": "2026-10-12T20:47:19.892677+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e12/roseau/e12-roseau-L1-b264dd292c-da6040f9c432.png",
+        "sha256": "6c6b467265f26d35fd12232065201070bc1475fad1045ebdd4c2e395c5963295",
+        "bytes": 2599234,
+        "SHAReadAt": "2026-10-12T20:45:56.830518+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "da6040f9c432100aa4a986745c5ab65c6d902e8e4316d180b62e8f0dec89cfba",
+        "rgbPixelSHA256": "e4f9d518cca28203bba094dd4e10afccd6cb1ad3355e94b58c5a0d48056b8245",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "08f2445e73fd7b69a552fd0b7657f298cf29a78a73b63118064bd69fee6e9fe9",
+      "targetAfterSHA256": "2bf5f66ae45f98a0f486388563432670b12e42694634a0494d062cacbfb4424f",
+      "contextAfterSHA256": "2bf5f66ae45f98a0f486388563432670b12e42694634a0494d062cacbfb4424f"
     },
     {
       "era": "e12",
@@ -809,7 +1115,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/roseau/qa.json",
-        "fileSHA256": "63a2b92f75ee498044198ce9d7ec1734bd56e33a0a5104ab5d4579e39456b952",
+        "fileSHA256": "39d3f7c3fa52aa1adc9e4e698772c72b8278c4681e0ac981697755a6f2d0996c",
         "item": {
           "slot": "PHOTO",
           "targetJsonPath": "$.valokuva",
@@ -872,11 +1178,11 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/roseau/qa.json",
-            "sha256": "63a2b92f75ee498044198ce9d7ec1734bd56e33a0a5104ab5d4579e39456b952"
+            "sha256": "39d3f7c3fa52aa1adc9e4e698772c72b8278c4681e0ac981697755a6f2d0996c"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/roseau/illustration-qa-extra.json",
-            "sha256": "c271ee50b1063f40052a5310b79c088741bcbe0d2bae949dc18bec98288e4970"
+            "sha256": "4c406f2aafa583047ee17b7f27d0feed6a55ba0d019f00076ebefc4e37593947"
           }
         ]
       },
@@ -952,664 +1258,6 @@
       "sourceContentAfterSHA256": "08f2445e73fd7b69a552fd0b7657f298cf29a78a73b63118064bd69fee6e9fe9",
       "targetAfterSHA256": "10601a8d459273e2d36ead5759d1ed0d62b4022e0dfade7ac60cce91da086df3",
       "contextAfterSHA256": "10601a8d459273e2d36ead5759d1ed0d62b4022e0dfade7ac60cce91da086df3"
-    },
-    {
-      "era": "e12",
-      "city": "roseau",
-      "slot": "TRAVELER",
-      "type": "commons",
-      "assetID": "capital-cc-e12-roseau-traveler-a08dd906dab52152",
-      "galleryImageID": "capital-cc-e12-roseau-traveler-a08dd906dab52152",
-      "commonsFile": "Dominica Botanic Gardens 02 2025 04.jpg",
-      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
-      "targetTokens": [
-        "kaupunkilehti",
-        0,
-        "matkailijalle",
-        "kuva"
-      ],
-      "operation": "merge-media-fields-preserve-other-content",
-      "CmediaFieldPayload": {
-        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/roseau/traveler-a08dd906dab52152745f.jpg",
-        "suora": true,
-        "lahde": "Concord, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Puu ja hurrikaanin murskaama koulubussi Roseaun kasvitieteellisessä puutarhassa helmikuussa 2025.",
-        "lyhyt": "Puu ja hurrikaanin murskaama koulubussi Roseaun kasvitieteellisessä puutarhassa helmikuussa 2025.",
-        "tiedosto": "Dominica Botanic Gardens 02 2025 04.jpg"
-      },
-      "removeMediaKeys": [],
-      "CvalidatorCompatiblePayload": {
-        "lahde": "Concord, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Puu ja hurrikaanin murskaama koulubussi Roseaun kasvitieteellisessä puutarhassa helmikuussa 2025.",
-        "lyhyt": "Puu ja hurrikaanin murskaama koulubussi Roseaun kasvitieteellisessä puutarhassa helmikuussa 2025.",
-        "tiedosto": "Dominica Botanic Gardens 02 2025 04.jpg"
-      },
-      "runtimeMediaFieldPayload": {
-        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/roseau/traveler-a08dd906dab52152745f.jpg",
-        "suora": true,
-        "lahde": "Concord, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Puu ja hurrikaanin murskaama koulubussi Roseaun kasvitieteellisessä puutarhassa helmikuussa 2025.",
-        "lyhyt": "Puu ja hurrikaanin murskaama koulubussi Roseaun kasvitieteellisessä puutarhassa helmikuussa 2025.",
-        "tiedosto": "Dominica Botanic Gardens 02 2025 04.jpg"
-      },
-      "runtimeRemoveMediaKeys": [],
-      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
-      "nativeSHA256": "a08dd906dab52152745f816f692e892997b910bb67b11c2b70196473f8f703d8",
-      "exportSHA256": "a08dd906dab52152745f816f692e892997b910bb67b11c2b70196473f8f703d8",
-      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/roseau/traveler-a08dd906dab52152745f.jpg",
-      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/roseau/traveler-a08dd906dab52152745f.jpg",
-      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/roseau/cc-search/96fce79a7c99-original.jpg",
-      "dimensions": [
-        3072,
-        4080
-      ],
-      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/roseau/sisalto.json",
-      "sourceContentSHA256": "08f2445e73fd7b69a552fd0b7657f298cf29a78a73b63118064bd69fee6e9fe9",
-      "semanticSourceBind": {
-        "targetBeforeSHA256": "0b8efa902b8223d75cd9918288b699373b74aabef48fd6985de7b751e92de5a0",
-        "semanticContextSHA256": "15fdfb7a634d53f85e227f1ed597ff0d3fc516da4cf8b8ac1c36c3fab1a9ece8",
-        "subjectTitle": "Matkailijalle",
-        "targetState": "existing-target"
-      },
-      "attribution": {
-        "author": "Concord",
-        "license": "CC BY-SA 4.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
-        "sourcePage": "https://commons.wikimedia.org/wiki/File:Dominica_Botanic_Gardens_02_2025_04.jpg",
-        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f8/Dominica_Botanic_Gardens_02_2025_04.jpg",
-        "rightsEvidence": {
-          "selection": {
-            "photoLicense": "Tekijä Concord alkuperäisen tiedostosivun Author table -kentästä, ei uploaderista päätelty. Lisenssi CC BY-SA 4.0 tiedostosivusta.",
-            "placeEvidence": "English: Dominica Botanic Gardens, Roseau",
-            "workLayer": "Pääkohteena kasvi ja säilynyt käytännöllinen koulubussin romu, ei taideteos eikä mainos. Puutarhan takana oleva tavanomainen huoltorakennus jää sivuosaksi; ei arkkitehtuuria pääaiheena. Lähteen Description osoittaa Dominica Botanic Gardens,Roseau; vuoden2025 kuva liittyy nykytekstin puun ja1979hurrikaanin murskaaman bussin kohteeseen. Ei väitetä valmistajan muotoilun PD-statusta.",
-            "visualInspection": "Alkuperäinen katsottu kokonaan: ehjät lehtimuodot, rungon ja ruosteisen bussin pinnat terävät. Ei ihmisiä, kasvoja, mainoksia, lisättyä tekstiä/vesileimaa/kehystä. Luonnollisia arkisia liikenne-esineitä vain taustalla. Pysty0.753,3072×4080 ja kuvaus14.2.2025.",
-            "previousGameUse": [],
-            "sourceHtml": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/roseau/cc-search/96fce79a7c99.html",
-            "sourceSha256": "cab381af9bb237fd44ce1814963f6b6cc74edab3b7fe73ce16b55d9bdcd1944d"
-          },
-          "QA": {
-            "author": "Concord",
-            "license": "CC BY-SA 4.0",
-            "width": 3072,
-            "height": 4080,
-            "localOriginal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/roseau/cc-search/96fce79a7c99-original.jpg",
-            "nativeSHA256": "a08dd906dab52152745f816f692e892997b910bb67b11c2b70196473f8f703d8",
-            "sourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/roseau/qa-evidence/cab381af9bb237fd44ce1814963f6b6cc74edab3b7fe73ce16b55d9bdcd1944d.html",
-            "sourceSnapshotSHA256": "cab381af9bb237fd44ce1814963f6b6cc74edab3b7fe73ce16b55d9bdcd1944d",
-            "sourceRowsRead": {
-              "Description Dominica Botanic Gardens 02 2025 04.jpg": "English: Dominica Botanic Gardens, Roseau",
-              "Date": "14 February 2025, 11:58:02",
-              "Source": "Own work",
-              "Author": "Concord",
-              "Camera location": "15° 17′ 54.33″ N, 61° 22′ 57.86″ W"
-            },
-            "licenseTemplatesRead": [
-              "CC BY-SA 4.0"
-            ],
-            "sourceOriginalFileDimensions": [
-              "3,072",
-              "4,080"
-            ],
-            "nativeDimensionsOutput": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/roseau/cc-search/96fce79a7c99-original.jpg\n  pixelWidth: 3072\n  pixelHeight: 4080\n  format: jpeg\n  profile: sRGB IEC61966-2.1\n",
-            "nativeEncodedDimensions": [
-              3072,
-              4080
-            ],
-            "exifOrientation": 1,
-            "orientationAppliedDimensions": [
-              3072,
-              4080
-            ],
-            "sourceDateRaw": "14 February 2025, 11:58:02",
-            "gameReuseIndependentlyChecked": true,
-            "gameReuseSearchRoot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/js/packs",
-            "gameReuseFilesRead": 373,
-            "gameReuseMatches": [],
-            "duplicateCitySlots": [],
-            "visualReview": "Oma natiivin silmätarkistus: puun lehdet, runko ja ruosteisen murskaantuneen koulubussin pinnat erottuvat terävästi. Ei kasvoja, overlayta, vesileimaa tai mainos-/pakkauskuvaa; tavallinen osin peittyvä huoltorakennus ja taustan arkinen liikenne sivuosia. Luonnonpuu ja käytännöllinen bussin romu eivät tässä esitä nimettyä suojattua taide-/muotoiluteosta; ei valmistajan yleistä PD-lupaa. Lähteen Description ja GPS yksilöivät Dominica Botanic Gardens,Roseau; gardens-wp History luettu puun ja tyhjän bussin hurrikaanitarinan yhteyden todistamiseksi. Concord/CC BY-SA4.0 Author/licensetpl,3072×4080/suhde0.753, kuvaus14.2.2025. Korvaa hylätyn epäterävän01-ehdokkaan; vanha säilyy historiassa.",
-            "depictedWorkLayerIndependentlyReviewed": true,
-            "topicSourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/roseau/qa-evidence/bus-topic-a37422188e0ba9926eaac96cb55a117d15ad3773a17a0473cb1edcd1de704ff9.txt",
-            "topicSourceSHA256": "a37422188e0ba9926eaac96cb55a117d15ad3773a17a0473cb1edcd1de704ff9",
-            "topicSource": "https://en.wikipedia.org/wiki/Dominica_Botanic_Gardens",
-            "visuallyReviewed": true,
-            "originalPixelsViewed": true,
-            "sourcePage": "https://commons.wikimedia.org/wiki/File:Dominica_Botanic_Gardens_02_2025_04.jpg",
-            "sourceManifest": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/roseau/cc-selection.json",
-            "currentContentSHA256": "39f90ae79f55ea000220f39bcb301e96ef8e185495c29d0cd4640a04b613ea60",
-            "photoDate": "14 February 2025, 11:58:02",
-            "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f8/Dominica_Botanic_Gardens_02_2025_04.jpg",
-            "captionFi": "Puu ja hurrikaanin murskaama koulubussi Roseaun kasvitieteellisessä puutarhassa helmikuussa2025.",
-            "checkedAt": "2026-10-12T19:43:33.728601+00:00",
-            "published": false,
-            "gameIntegrated": false,
-            "ownerAcceptance": false,
-            "reasonTextCorrectionAt": "2026-10-12T19:44:05.300246+00:00",
-            "sourceTitlePersonallyRead": "Dominica Botanic Gardens 02 2025 04.jpg",
-            "sourceOriginalMediaUrlPersonallyRead": "https://upload.wikimedia.org/wikipedia/commons/f/f8/Dominica_Botanic_Gardens_02_2025_04.jpg",
-            "exactCommonsFileSourcePointerVerified": true
-          },
-          "qaReason": "Oma natiivin silmätarkistus: puun lehdet, runko ja ruosteisen murskaantuneen koulubussin pinnat erottuvat terävästi. Ei kasvoja, overlayta, vesileimaa tai mainos-/pakkauskuvaa; tavallinen osin peittyvä huoltorakennus ja taustan arkinen liikenne sivuosia. Luonnonpuu ja käytännöllinen bussin romu eivät tässä esitä nimettyä suojattua taide-/muotoiluteosta; ei valmistajan yleistä PD-lupaa. Lähteen Description ja GPS yksilöivät Dominica Botanic Gardens,Roseau; gardens-wp History luettu puun ja tyhjän bussin hurrikaanitarinan yhteyden todistamiseksi. Concord/CC BY-SA4.0 Author/licensetpl,3072×4080/suhde0.753, kuvaus14.2.2025. Korvaa hylätyn epäterävän01-ehdokkaan; vanha säilyy historiassa."
-        }
-      },
-      "luentaMetadata": {
-        "existingImageLuenta": null,
-        "captionReadingText": "Puu ja hurrikaanin murskaama koulubussi Roseaun kasvitieteellisessä puutarhassa helmikuussa 2025.",
-        "existingArticleAndSectionLuentaPreserved": true,
-        "audioGenerated": false,
-        "audioURL": null,
-        "imageSpecificAudioProvided": false,
-        "reuseAudioAllowedByThisPacket": false
-      },
-      "qaEvidence": {
-        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/roseau/qa.json",
-        "fileSHA256": "63a2b92f75ee498044198ce9d7ec1734bd56e33a0a5104ab5d4579e39456b952",
-        "item": {
-          "slot": "TRAVELER",
-          "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
-          "assetID": null,
-          "commonsFile": "Dominica Botanic Gardens 02 2025 04.jpg",
-          "sha256": "a08dd906dab52152745f816f692e892997b910bb67b11c2b70196473f8f703d8",
-          "verdict": "accepted",
-          "reason": "Oma natiivin silmätarkistus: puun lehdet, runko ja ruosteisen murskaantuneen koulubussin pinnat erottuvat terävästi. Ei kasvoja, overlayta, vesileimaa tai mainos-/pakkauskuvaa; tavallinen osin peittyvä huoltorakennus ja taustan arkinen liikenne sivuosia. Luonnonpuu ja käytännöllinen bussin romu eivät tässä esitä nimettyä suojattua taide-/muotoiluteosta; ei valmistajan yleistä PD-lupaa. Lähteen Description ja GPS yksilöivät Dominica Botanic Gardens,Roseau; gardens-wp History luettu puun ja tyhjän bussin hurrikaanitarinan yhteyden todistamiseksi. Concord/CC BY-SA4.0 Author/licensetpl,3072×4080/suhde0.753, kuvaus14.2.2025. Korvaa hylätyn epäterävän01-ehdokkaan; vanha säilyy historiassa.",
-          "required": true,
-          "status": "reviewed",
-          "evidence": {
-            "author": "Concord",
-            "license": "CC BY-SA 4.0",
-            "width": 3072,
-            "height": 4080,
-            "localOriginal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/roseau/cc-search/96fce79a7c99-original.jpg",
-            "nativeSHA256": "a08dd906dab52152745f816f692e892997b910bb67b11c2b70196473f8f703d8",
-            "sourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/roseau/qa-evidence/cab381af9bb237fd44ce1814963f6b6cc74edab3b7fe73ce16b55d9bdcd1944d.html",
-            "sourceSnapshotSHA256": "cab381af9bb237fd44ce1814963f6b6cc74edab3b7fe73ce16b55d9bdcd1944d",
-            "sourceRowsRead": {
-              "Description Dominica Botanic Gardens 02 2025 04.jpg": "English: Dominica Botanic Gardens, Roseau",
-              "Date": "14 February 2025, 11:58:02",
-              "Source": "Own work",
-              "Author": "Concord",
-              "Camera location": "15° 17′ 54.33″ N, 61° 22′ 57.86″ W"
-            },
-            "licenseTemplatesRead": [
-              "CC BY-SA 4.0"
-            ],
-            "sourceOriginalFileDimensions": [
-              "3,072",
-              "4,080"
-            ],
-            "nativeDimensionsOutput": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/roseau/cc-search/96fce79a7c99-original.jpg\n  pixelWidth: 3072\n  pixelHeight: 4080\n  format: jpeg\n  profile: sRGB IEC61966-2.1\n",
-            "nativeEncodedDimensions": [
-              3072,
-              4080
-            ],
-            "exifOrientation": 1,
-            "orientationAppliedDimensions": [
-              3072,
-              4080
-            ],
-            "sourceDateRaw": "14 February 2025, 11:58:02",
-            "gameReuseIndependentlyChecked": true,
-            "gameReuseSearchRoot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/js/packs",
-            "gameReuseFilesRead": 373,
-            "gameReuseMatches": [],
-            "duplicateCitySlots": [],
-            "visualReview": "Oma natiivin silmätarkistus: puun lehdet, runko ja ruosteisen murskaantuneen koulubussin pinnat erottuvat terävästi. Ei kasvoja, overlayta, vesileimaa tai mainos-/pakkauskuvaa; tavallinen osin peittyvä huoltorakennus ja taustan arkinen liikenne sivuosia. Luonnonpuu ja käytännöllinen bussin romu eivät tässä esitä nimettyä suojattua taide-/muotoiluteosta; ei valmistajan yleistä PD-lupaa. Lähteen Description ja GPS yksilöivät Dominica Botanic Gardens,Roseau; gardens-wp History luettu puun ja tyhjän bussin hurrikaanitarinan yhteyden todistamiseksi. Concord/CC BY-SA4.0 Author/licensetpl,3072×4080/suhde0.753, kuvaus14.2.2025. Korvaa hylätyn epäterävän01-ehdokkaan; vanha säilyy historiassa.",
-            "depictedWorkLayerIndependentlyReviewed": true,
-            "topicSourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/roseau/qa-evidence/bus-topic-a37422188e0ba9926eaac96cb55a117d15ad3773a17a0473cb1edcd1de704ff9.txt",
-            "topicSourceSHA256": "a37422188e0ba9926eaac96cb55a117d15ad3773a17a0473cb1edcd1de704ff9",
-            "topicSource": "https://en.wikipedia.org/wiki/Dominica_Botanic_Gardens",
-            "visuallyReviewed": true,
-            "originalPixelsViewed": true,
-            "sourcePage": "https://commons.wikimedia.org/wiki/File:Dominica_Botanic_Gardens_02_2025_04.jpg",
-            "sourceManifest": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/roseau/cc-selection.json",
-            "currentContentSHA256": "39f90ae79f55ea000220f39bcb301e96ef8e185495c29d0cd4640a04b613ea60",
-            "photoDate": "14 February 2025, 11:58:02",
-            "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f8/Dominica_Botanic_Gardens_02_2025_04.jpg",
-            "captionFi": "Puu ja hurrikaanin murskaama koulubussi Roseaun kasvitieteellisessä puutarhassa helmikuussa2025.",
-            "checkedAt": "2026-10-12T19:43:33.728601+00:00",
-            "published": false,
-            "gameIntegrated": false,
-            "ownerAcceptance": false,
-            "reasonTextCorrectionAt": "2026-10-12T19:44:05.300246+00:00",
-            "sourceTitlePersonallyRead": "Dominica Botanic Gardens 02 2025 04.jpg",
-            "sourceOriginalMediaUrlPersonallyRead": "https://upload.wikimedia.org/wikipedia/commons/f/f8/Dominica_Botanic_Gardens_02_2025_04.jpg",
-            "exactCommonsFileSourcePointerVerified": true
-          },
-          "previousCandidateReviews": [
-            {
-              "slot": "TRAVELER",
-              "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
-              "assetID": null,
-              "commonsFile": "Dominica Botanic Gardens 02 2025 01.jpg",
-              "sha256": "38563034567ee5bc4325e5a057edc6e0e44da0345be283d7c17a81e485932e1a",
-              "verdict": "rejected",
-              "reason": "REJECTED oman natiivin silmätarkistuksen perusteella: selitteen pääaiheena olevat punakeltaiset kukat ovat selvästi epäterävät ja yksityiskohdat sulautuvat, kun taustan kivipilarin pinta on terävämpi. Tämä ei ole pelkkää makrokuvan taustan tarkoituksellista pehmeyttä; itse pääaiheen tarkennus on väärässä tasossa. PILVIOHJEen epäterävien kielto, ei kuvasuhde-/paikka-/oikeusperusteinen hylkäys. Concord/CC BY-SA4.0, Description Dominica Botanic Gardens,Roseau, kuvaus14.2.2025 ja3072×4080/suhde0.753 ovat muuten kunnossa. Tarvitaan uusi erillinen terävä pystykuva hyväksyttävänä paikallisena CC-kuvana; vanha säilytetään eikä terävöitetä QA:ssa.",
-              "required": true,
-              "status": "reviewed",
-              "evidence": {
-                "author": "Concord",
-                "license": "CC BY-SA 4.0",
-                "width": 3072,
-                "height": 4080,
-                "localOriginal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/roseau/cc-search/61f8782a8e24-original.jpg",
-                "nativeSHA256": "38563034567ee5bc4325e5a057edc6e0e44da0345be283d7c17a81e485932e1a",
-                "sourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/roseau/qa-evidence/882d6b0fa7f4aa65eba5a772e3376b612a15464021cb1c54e82bb04306c5a91f.html",
-                "sourceSnapshotSHA256": "882d6b0fa7f4aa65eba5a772e3376b612a15464021cb1c54e82bb04306c5a91f",
-                "sourceRowsRead": {
-                  "Description Dominica Botanic Gardens 02 2025 01.jpg": "English: Dominica Botanic Gardens, Roseau",
-                  "Date": "14 February 2025, 12:03:23",
-                  "Source": "Own work",
-                  "Author": "Concord",
-                  "Camera location": "15° 17′ 50.31″ N, 61° 22′ 58.66″ W"
-                },
-                "licenseTemplatesRead": [
-                  "CC BY-SA 4.0"
-                ],
-                "sourceOriginalFileDimensions": [
-                  "3,072",
-                  "4,080"
-                ],
-                "nativeDimensionsOutput": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/roseau/cc-search/61f8782a8e24-original.jpg\n  pixelWidth: 3072\n  pixelHeight: 4080\n  format: jpeg\n  profile: sRGB IEC61966-2.1\n",
-                "sourceDateRaw": "14 February 2025, 12:03:23",
-                "gameReuseIndependentlyChecked": true,
-                "gameReuseSearchRoot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/js/packs",
-                "gameReuseFilesRead": 373,
-                "gameReuseMatches": [],
-                "duplicateCitySlots": [],
-                "visualReview": "REJECTED oman natiivin silmätarkistuksen perusteella: selitteen pääaiheena olevat punakeltaiset kukat ovat selvästi epäterävät ja yksityiskohdat sulautuvat, kun taustan kivipilarin pinta on terävämpi. Tämä ei ole pelkkää makrokuvan taustan tarkoituksellista pehmeyttä; itse pääaiheen tarkennus on väärässä tasossa. PILVIOHJEen epäterävien kielto, ei kuvasuhde-/paikka-/oikeusperusteinen hylkäys. Concord/CC BY-SA4.0, Description Dominica Botanic Gardens,Roseau, kuvaus14.2.2025 ja3072×4080/suhde0.753 ovat muuten kunnossa. Tarvitaan uusi erillinen terävä pystykuva hyväksyttävänä paikallisena CC-kuvana; vanha säilytetään eikä terävöitetä QA:ssa.",
-                "depictedWorkLayerIndependentlyReviewed": true,
-                "visuallyReviewed": true,
-                "originalPixelsViewed": true,
-                "sourcePage": "https://commons.wikimedia.org/wiki/File:Dominica_Botanic_Gardens_02_2025_01.jpg",
-                "sourceManifest": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/roseau/cc-selection.json",
-                "currentContentSHA256": "39f90ae79f55ea000220f39bcb301e96ef8e185495c29d0cd4640a04b613ea60",
-                "photoDate": "14 February 2025, 12:03:23",
-                "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/2/29/Dominica_Botanic_Gardens_02_2025_01.jpg",
-                "captionFi": "Kukkiva kasvi Roseaun kasvitieteellisessä puutarhassa helmikuussa 2025.",
-                "checkedAt": "2026-10-12T19:37:52.709073+00:00",
-                "published": false,
-                "gameIntegrated": false,
-                "ownerAcceptance": false
-              }
-            }
-          ]
-        },
-        "allSources": [
-          {
-            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/roseau/qa.json",
-            "sha256": "63a2b92f75ee498044198ce9d7ec1734bd56e33a0a5104ab5d4579e39456b952"
-          },
-          {
-            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/roseau/illustration-qa-extra.json",
-            "sha256": "c271ee50b1063f40052a5310b79c088741bcbe0d2bae949dc18bec98288e4970"
-          }
-        ]
-      },
-      "R2ByteVerification": {
-        "era": "e12",
-        "city": "roseau",
-        "slot": "TRAVELER",
-        "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
-        "commonsFile": "Dominica Botanic Gardens 02 2025 04.jpg",
-        "sha256": "a08dd906dab52152745f816f692e892997b910bb67b11c2b70196473f8f703d8",
-        "sourcePage": "https://commons.wikimedia.org/wiki/File:Dominica_Botanic_Gardens_02_2025_04.jpg",
-        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f8/Dominica_Botanic_Gardens_02_2025_04.jpg",
-        "author": "Concord",
-        "license": "CC BY-SA 4.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
-        "width": 3072,
-        "height": 4080,
-        "originalSHA256": "a08dd906dab52152745f816f692e892997b910bb67b11c2b70196473f8f703d8",
-        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/roseau/traveler-a08dd906dab52152745f.jpg",
-        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/roseau/traveler-a08dd906dab52152745f.jpg",
-        "bytes": 6187235,
-        "http": 200,
-        "mime": "image/jpeg",
-        "cors": "https://matkakirja.app",
-        "byteExactReadback": true,
-        "canonicalReadbackByteExact": true,
-        "conditionalIfNoneMatch": "*",
-        "s3PutHttp": 200,
-        "verifiedAt": "2026-10-12T19:44:31.666752+00:00",
-        "ownerAcceptanceVerified": false,
-        "gameIntegrated": false,
-        "attributionSource": "current-exact-QA-and-source-manifest"
-      },
-      "producerExportProof": null,
-      "technicalExportProof": null,
-      "priorMediaFields": {
-        "tiedosto": "Dominica Botanic Gardens 02 2025 04.jpg",
-        "lahde": "Concord, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Puu ja hurrikaanin murskaama koulubussi Roseaun kasvitieteellisessä puutarhassa helmikuussa 2025.",
-        "lyhyt": "Puu ja hurrikaanin murskaama koulubussi Roseaun kasvitieteellisessä puutarhassa helmikuussa 2025."
-      },
-      "preservePreviousMediaObjects": true,
-      "authorization": {
-        "status": "waived-owner-review",
-        "authorizedByOwner": true,
-        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
-        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
-        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
-        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
-        "ownerAcceptanceImplied": false,
-        "QARequired": true,
-        "R2ByteVerificationRequired": true,
-        "galleryBeforeGameRequired": false,
-        "verifiedHumanMessageSource": {
-          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
-          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
-        }
-      },
-      "ownerAcceptanceVerified": false,
-      "gameIntegrated": false,
-      "gamePublicationVerified": false,
-      "inMemoryMergeVerified": true,
-      "CcommonsMetadataBound": true,
-      "CcommonsFieldPayload": {
-        "lahde": "Concord, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Puu ja hurrikaanin murskaama koulubussi Roseaun kasvitieteellisessä puutarhassa helmikuussa 2025.",
-        "lyhyt": "Puu ja hurrikaanin murskaama koulubussi Roseaun kasvitieteellisessä puutarhassa helmikuussa 2025.",
-        "tiedosto": "Dominica Botanic Gardens 02 2025 04.jpg"
-      },
-      "roleManifestBound": true,
-      "sourceContentAfterSHA256": "08f2445e73fd7b69a552fd0b7657f298cf29a78a73b63118064bd69fee6e9fe9",
-      "targetAfterSHA256": "0b8efa902b8223d75cd9918288b699373b74aabef48fd6985de7b751e92de5a0",
-      "contextAfterSHA256": "15fdfb7a634d53f85e227f1ed597ff0d3fc516da4cf8b8ac1c36c3fab1a9ece8"
-    },
-    {
-      "era": "e12",
-      "city": "roseau",
-      "slot": "N2",
-      "type": "commons",
-      "assetID": "capital-cc-e12-roseau-n2-049ae1bde5689490",
-      "galleryImageID": "capital-cc-e12-roseau-n2-049ae1bde5689490",
-      "commonsFile": "Dominica Botanic Gardens 02 2025 08.jpg",
-      "targetJsonPath": "$.nahtavyydet[\"Dominican kasvitieteellinen puutarha\"].kuvat[0]",
-      "targetTokens": [
-        "nahtavyydet",
-        "Dominican kasvitieteellinen puutarha",
-        "kuvat",
-        0
-      ],
-      "operation": "merge-media-fields-preserve-other-content",
-      "CmediaFieldPayload": {
-        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/roseau/n2-049ae1bde568949060ac.jpg",
-        "suora": true,
-        "lahde": "Concord, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Kasvillisuutta Roseaun kasvitieteellisessä puutarhassa helmikuussa 2025.",
-        "lyhyt": "Kasvillisuutta Roseaun kasvitieteellisessä puutarhassa helmikuussa 2025.",
-        "tiedosto": "Dominica Botanic Gardens 02 2025 08.jpg"
-      },
-      "removeMediaKeys": [],
-      "CvalidatorCompatiblePayload": {
-        "lahde": "Concord, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Kasvillisuutta Roseaun kasvitieteellisessä puutarhassa helmikuussa 2025.",
-        "lyhyt": "Kasvillisuutta Roseaun kasvitieteellisessä puutarhassa helmikuussa 2025.",
-        "tiedosto": "Dominica Botanic Gardens 02 2025 08.jpg"
-      },
-      "runtimeMediaFieldPayload": {
-        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/roseau/n2-049ae1bde568949060ac.jpg",
-        "suora": true,
-        "lahde": "Concord, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Kasvillisuutta Roseaun kasvitieteellisessä puutarhassa helmikuussa 2025.",
-        "lyhyt": "Kasvillisuutta Roseaun kasvitieteellisessä puutarhassa helmikuussa 2025.",
-        "tiedosto": "Dominica Botanic Gardens 02 2025 08.jpg"
-      },
-      "runtimeRemoveMediaKeys": [],
-      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
-      "nativeSHA256": "049ae1bde568949060aca7cf45814ae021718c337850c5d293926d056465ad0c",
-      "exportSHA256": "049ae1bde568949060aca7cf45814ae021718c337850c5d293926d056465ad0c",
-      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/roseau/n2-049ae1bde568949060ac.jpg",
-      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/roseau/n2-049ae1bde568949060ac.jpg",
-      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/roseau/cc-search/7b2109fc4c90-original.jpg",
-      "dimensions": [
-        3072,
-        4080
-      ],
-      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/roseau/sisalto.json",
-      "sourceContentSHA256": "08f2445e73fd7b69a552fd0b7657f298cf29a78a73b63118064bd69fee6e9fe9",
-      "semanticSourceBind": {
-        "targetBeforeSHA256": "52db893d739ea3c9d17e0a22d98edf3ac386f06b27008f09c9c766c7e0ab22be",
-        "semanticContextSHA256": "a2ed3ae0997de9c1f874545c44282e99a435a2eca9d82cb3af373f5ac390ed96",
-        "subjectTitle": "Dominican kasvitieteellinen puutarha",
-        "targetState": "existing-target"
-      },
-      "attribution": {
-        "author": "Concord",
-        "license": "CC BY-SA 4.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
-        "sourcePage": "https://commons.wikimedia.org/wiki/File:Dominica_Botanic_Gardens_02_2025_08.jpg",
-        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Dominica_Botanic_Gardens_02_2025_08.jpg",
-        "rightsEvidence": {
-          "selection": {
-            "photoLicense": "Tekijä Concord alkuperäisen tiedostosivun Author table -kentästä, ei uploaderista päätelty. Lisenssi CC BY-SA 4.0 tiedostosivusta.",
-            "placeEvidence": "English: Dominica Botanic Gardens, Roseau",
-            "workLayer": "Pääkohteena luonnollinen kukkiva kasvi ja palmu; ei suojattua taideteosta tai rakennusta. Alkuperäinen Description Dominica Botanic Gardens,Roseau nimeää täsmälleen edelleen nykyisessä sisalto.jsonissa olevan Dominican kasvitieteellisen puutarhan. Ei arvattua kasvilajin nimeä.",
-            "visualInspection": "Alkuperäinen3072×4080 katsottu: terävät kukat, lehdet ja palmu; ei ihmisiä, kasvoja, mainosta, lisättyä tekstiä, vesileimaa tai kehystä. Kuvaus14.2.2025; pysty sallittu N-roolissa.",
-            "previousGameUse": [],
-            "sourceHtml": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/roseau/cc-search/7b2109fc4c90.html",
-            "sourceSha256": "57dd343a03f385665850a013fe4143c9058186e9a8773637a7763a958bfe6ebd"
-          },
-          "QA": {
-            "author": "Concord",
-            "license": "CC BY-SA 4.0",
-            "width": 3072,
-            "height": 4080,
-            "localOriginal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/roseau/cc-search/7b2109fc4c90-original.jpg",
-            "nativeSHA256": "049ae1bde568949060aca7cf45814ae021718c337850c5d293926d056465ad0c",
-            "sourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/roseau/qa-evidence/57dd343a03f385665850a013fe4143c9058186e9a8773637a7763a958bfe6ebd.html",
-            "sourceSnapshotSHA256": "57dd343a03f385665850a013fe4143c9058186e9a8773637a7763a958bfe6ebd",
-            "sourceRowsRead": {
-              "Description Dominica Botanic Gardens 02 2025 08.jpg": "English: Dominica Botanic Gardens, Roseau",
-              "Date": "14 February 2025, 11:35:35",
-              "Source": "Own work",
-              "Author": "Concord",
-              "Camera location": "15° 18′ 01.36″ N, 61° 22′ 59.49″ W"
-            },
-            "licenseTemplatesRead": [
-              "CC BY-SA 4.0"
-            ],
-            "sourceOriginalFileDimensions": [
-              "3,072",
-              "4,080"
-            ],
-            "nativeDimensionsOutput": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/roseau/cc-search/7b2109fc4c90-original.jpg\n  pixelWidth: 3072\n  pixelHeight: 4080\n  format: jpeg\n  profile: sRGB IEC61966-2.1\n",
-            "nativeEncodedDimensions": [
-              3072,
-              4080
-            ],
-            "exifOrientation": 1,
-            "orientationAppliedDimensions": [
-              3072,
-              4080
-            ],
-            "sourceDateRaw": "14 February 2025, 11:35:35",
-            "gameReuseIndependentlyChecked": true,
-            "gameReuseSearchRoot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/js/packs",
-            "gameReuseFilesRead": 373,
-            "gameReuseMatches": [],
-            "duplicateCitySlots": [],
-            "visualReview": "Oma natiivin silmätarkistus: kukkivan kasvin yksityiskohdat, lehdet ja palmu erottuvat terävinä, taivas ja puusto ympäristöä. Ei tunnistettavia kasvoja, overlayta, vesileimaa, mainoskuvaa tai nimettyä suojattua taide-/rakennuspääaihetta. Description ja GPS yksilöivät Dominica Botanic Gardens,Roseau; vastaa nykyistä Dominican kasvitieteellinen puutarha -N2-kohdetta. Kasvilajia ei arvata. Concord/CC BY-SA4.0 Author/licensetpl luettu itse. Native3072×4080 ja SHA tarkistettu, pysty sallittuN-roolissa; kuvaus14.2.2025. Eri tiedosto kuin PHOTO-anolislisko ja TRAVELER-puu/bussi.",
-            "depictedWorkLayerIndependentlyReviewed": true,
-            "visuallyReviewed": true,
-            "originalPixelsViewed": true,
-            "sourcePage": "https://commons.wikimedia.org/wiki/File:Dominica_Botanic_Gardens_02_2025_08.jpg",
-            "sourceManifest": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/roseau/cc-selection.json",
-            "currentContentSHA256": "39f90ae79f55ea000220f39bcb301e96ef8e185495c29d0cd4640a04b613ea60",
-            "photoDate": "14 February 2025, 11:35:35",
-            "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Dominica_Botanic_Gardens_02_2025_08.jpg",
-            "captionFi": "Kasvillisuutta Roseaun kasvitieteellisessä puutarhassa helmikuussa2025.",
-            "checkedAt": "2026-10-12T19:47:05.534180+00:00",
-            "published": false,
-            "gameIntegrated": false,
-            "ownerAcceptance": false,
-            "sourceTitlePersonallyRead": "Dominica Botanic Gardens 02 2025 08.jpg",
-            "sourceOriginalMediaUrlPersonallyRead": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Dominica_Botanic_Gardens_02_2025_08.jpg",
-            "exactCommonsFileSourcePointerVerified": true
-          },
-          "qaReason": "Oma natiivin silmätarkistus: kukkivan kasvin yksityiskohdat, lehdet ja palmu erottuvat terävinä, taivas ja puusto ympäristöä. Ei tunnistettavia kasvoja, overlayta, vesileimaa, mainoskuvaa tai nimettyä suojattua taide-/rakennuspääaihetta. Description ja GPS yksilöivät Dominica Botanic Gardens,Roseau; vastaa nykyistä Dominican kasvitieteellinen puutarha -N2-kohdetta. Kasvilajia ei arvata. Concord/CC BY-SA4.0 Author/licensetpl luettu itse. Native3072×4080 ja SHA tarkistettu, pysty sallittuN-roolissa; kuvaus14.2.2025. Eri tiedosto kuin PHOTO-anolislisko ja TRAVELER-puu/bussi."
-        }
-      },
-      "luentaMetadata": {
-        "existingImageLuenta": null,
-        "captionReadingText": "Kasvillisuutta Roseaun kasvitieteellisessä puutarhassa helmikuussa 2025.",
-        "existingArticleAndSectionLuentaPreserved": true,
-        "audioGenerated": false,
-        "audioURL": null,
-        "imageSpecificAudioProvided": false,
-        "reuseAudioAllowedByThisPacket": false
-      },
-      "qaEvidence": {
-        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/roseau/qa.json",
-        "fileSHA256": "63a2b92f75ee498044198ce9d7ec1734bd56e33a0a5104ab5d4579e39456b952",
-        "item": {
-          "slot": "N2",
-          "targetJsonPath": "$.nahtavyydet[\"Dominican kasvitieteellinen puutarha\"].kuvat[0]",
-          "assetID": null,
-          "commonsFile": "Dominica Botanic Gardens 02 2025 08.jpg",
-          "sha256": "049ae1bde568949060aca7cf45814ae021718c337850c5d293926d056465ad0c",
-          "verdict": "accepted",
-          "reason": "Oma natiivin silmätarkistus: kukkivan kasvin yksityiskohdat, lehdet ja palmu erottuvat terävinä, taivas ja puusto ympäristöä. Ei tunnistettavia kasvoja, overlayta, vesileimaa, mainoskuvaa tai nimettyä suojattua taide-/rakennuspääaihetta. Description ja GPS yksilöivät Dominica Botanic Gardens,Roseau; vastaa nykyistä Dominican kasvitieteellinen puutarha -N2-kohdetta. Kasvilajia ei arvata. Concord/CC BY-SA4.0 Author/licensetpl luettu itse. Native3072×4080 ja SHA tarkistettu, pysty sallittuN-roolissa; kuvaus14.2.2025. Eri tiedosto kuin PHOTO-anolislisko ja TRAVELER-puu/bussi.",
-          "required": true,
-          "status": "reviewed",
-          "evidence": {
-            "author": "Concord",
-            "license": "CC BY-SA 4.0",
-            "width": 3072,
-            "height": 4080,
-            "localOriginal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/roseau/cc-search/7b2109fc4c90-original.jpg",
-            "nativeSHA256": "049ae1bde568949060aca7cf45814ae021718c337850c5d293926d056465ad0c",
-            "sourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/roseau/qa-evidence/57dd343a03f385665850a013fe4143c9058186e9a8773637a7763a958bfe6ebd.html",
-            "sourceSnapshotSHA256": "57dd343a03f385665850a013fe4143c9058186e9a8773637a7763a958bfe6ebd",
-            "sourceRowsRead": {
-              "Description Dominica Botanic Gardens 02 2025 08.jpg": "English: Dominica Botanic Gardens, Roseau",
-              "Date": "14 February 2025, 11:35:35",
-              "Source": "Own work",
-              "Author": "Concord",
-              "Camera location": "15° 18′ 01.36″ N, 61° 22′ 59.49″ W"
-            },
-            "licenseTemplatesRead": [
-              "CC BY-SA 4.0"
-            ],
-            "sourceOriginalFileDimensions": [
-              "3,072",
-              "4,080"
-            ],
-            "nativeDimensionsOutput": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/roseau/cc-search/7b2109fc4c90-original.jpg\n  pixelWidth: 3072\n  pixelHeight: 4080\n  format: jpeg\n  profile: sRGB IEC61966-2.1\n",
-            "nativeEncodedDimensions": [
-              3072,
-              4080
-            ],
-            "exifOrientation": 1,
-            "orientationAppliedDimensions": [
-              3072,
-              4080
-            ],
-            "sourceDateRaw": "14 February 2025, 11:35:35",
-            "gameReuseIndependentlyChecked": true,
-            "gameReuseSearchRoot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/js/packs",
-            "gameReuseFilesRead": 373,
-            "gameReuseMatches": [],
-            "duplicateCitySlots": [],
-            "visualReview": "Oma natiivin silmätarkistus: kukkivan kasvin yksityiskohdat, lehdet ja palmu erottuvat terävinä, taivas ja puusto ympäristöä. Ei tunnistettavia kasvoja, overlayta, vesileimaa, mainoskuvaa tai nimettyä suojattua taide-/rakennuspääaihetta. Description ja GPS yksilöivät Dominica Botanic Gardens,Roseau; vastaa nykyistä Dominican kasvitieteellinen puutarha -N2-kohdetta. Kasvilajia ei arvata. Concord/CC BY-SA4.0 Author/licensetpl luettu itse. Native3072×4080 ja SHA tarkistettu, pysty sallittuN-roolissa; kuvaus14.2.2025. Eri tiedosto kuin PHOTO-anolislisko ja TRAVELER-puu/bussi.",
-            "depictedWorkLayerIndependentlyReviewed": true,
-            "visuallyReviewed": true,
-            "originalPixelsViewed": true,
-            "sourcePage": "https://commons.wikimedia.org/wiki/File:Dominica_Botanic_Gardens_02_2025_08.jpg",
-            "sourceManifest": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/roseau/cc-selection.json",
-            "currentContentSHA256": "39f90ae79f55ea000220f39bcb301e96ef8e185495c29d0cd4640a04b613ea60",
-            "photoDate": "14 February 2025, 11:35:35",
-            "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Dominica_Botanic_Gardens_02_2025_08.jpg",
-            "captionFi": "Kasvillisuutta Roseaun kasvitieteellisessä puutarhassa helmikuussa2025.",
-            "checkedAt": "2026-10-12T19:47:05.534180+00:00",
-            "published": false,
-            "gameIntegrated": false,
-            "ownerAcceptance": false,
-            "sourceTitlePersonallyRead": "Dominica Botanic Gardens 02 2025 08.jpg",
-            "sourceOriginalMediaUrlPersonallyRead": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Dominica_Botanic_Gardens_02_2025_08.jpg",
-            "exactCommonsFileSourcePointerVerified": true
-          }
-        },
-        "allSources": [
-          {
-            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/roseau/qa.json",
-            "sha256": "63a2b92f75ee498044198ce9d7ec1734bd56e33a0a5104ab5d4579e39456b952"
-          },
-          {
-            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/roseau/illustration-qa-extra.json",
-            "sha256": "c271ee50b1063f40052a5310b79c088741bcbe0d2bae949dc18bec98288e4970"
-          }
-        ]
-      },
-      "R2ByteVerification": {
-        "era": "e12",
-        "city": "roseau",
-        "slot": "N2",
-        "targetJsonPath": "$.nahtavyydet[\"Dominican kasvitieteellinen puutarha\"].kuvat[0]",
-        "commonsFile": "Dominica Botanic Gardens 02 2025 08.jpg",
-        "sha256": "049ae1bde568949060aca7cf45814ae021718c337850c5d293926d056465ad0c",
-        "sourcePage": "https://commons.wikimedia.org/wiki/File:Dominica_Botanic_Gardens_02_2025_08.jpg",
-        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Dominica_Botanic_Gardens_02_2025_08.jpg",
-        "author": "Concord",
-        "license": "CC BY-SA 4.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
-        "width": 3072,
-        "height": 4080,
-        "originalSHA256": "049ae1bde568949060aca7cf45814ae021718c337850c5d293926d056465ad0c",
-        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/roseau/n2-049ae1bde568949060ac.jpg",
-        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/roseau/n2-049ae1bde568949060ac.jpg",
-        "bytes": 5965750,
-        "http": 200,
-        "mime": "image/jpeg",
-        "cors": "https://matkakirja.app",
-        "byteExactReadback": true,
-        "canonicalReadbackByteExact": true,
-        "conditionalIfNoneMatch": "*",
-        "s3PutHttp": 200,
-        "verifiedAt": "2026-10-12T19:47:54.642524+00:00",
-        "ownerAcceptanceVerified": false,
-        "gameIntegrated": false,
-        "attributionSource": "current-exact-QA-and-source-manifest"
-      },
-      "producerExportProof": null,
-      "technicalExportProof": null,
-      "priorMediaFields": {
-        "tiedosto": "Dominica Botanic Gardens 02 2025 08.jpg",
-        "lahde": "Concord, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Kasvillisuutta Roseaun kasvitieteellisessä puutarhassa helmikuussa 2025.",
-        "lyhyt": "Kasvillisuutta Roseaun kasvitieteellisessä puutarhassa helmikuussa 2025."
-      },
-      "preservePreviousMediaObjects": true,
-      "authorization": {
-        "status": "waived-owner-review",
-        "authorizedByOwner": true,
-        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
-        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
-        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
-        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
-        "ownerAcceptanceImplied": false,
-        "QARequired": true,
-        "R2ByteVerificationRequired": true,
-        "galleryBeforeGameRequired": false,
-        "verifiedHumanMessageSource": {
-          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
-          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
-        }
-      },
-      "ownerAcceptanceVerified": false,
-      "gameIntegrated": false,
-      "gamePublicationVerified": false,
-      "inMemoryMergeVerified": true,
-      "CcommonsMetadataBound": true,
-      "CcommonsFieldPayload": {
-        "lahde": "Concord, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Kasvillisuutta Roseaun kasvitieteellisessä puutarhassa helmikuussa 2025.",
-        "lyhyt": "Kasvillisuutta Roseaun kasvitieteellisessä puutarhassa helmikuussa 2025.",
-        "tiedosto": "Dominica Botanic Gardens 02 2025 08.jpg"
-      },
-      "roleManifestBound": true,
-      "sourceContentAfterSHA256": "08f2445e73fd7b69a552fd0b7657f298cf29a78a73b63118064bd69fee6e9fe9",
-      "targetAfterSHA256": "52db893d739ea3c9d17e0a22d98edf3ac386f06b27008f09c9c766c7e0ab22be",
-      "contextAfterSHA256": "a2ed3ae0997de9c1f874545c44282e99a435a2eca9d82cb3af373f5ac390ed96"
     },
     {
       "era": "e12",
@@ -1775,7 +1423,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/roseau/qa.json",
-        "fileSHA256": "63a2b92f75ee498044198ce9d7ec1734bd56e33a0a5104ab5d4579e39456b952",
+        "fileSHA256": "39d3f7c3fa52aa1adc9e4e698772c72b8278c4681e0ac981697755a6f2d0996c",
         "item": {
           "slot": "C1",
           "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
@@ -1864,11 +1512,11 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/roseau/qa.json",
-            "sha256": "63a2b92f75ee498044198ce9d7ec1734bd56e33a0a5104ab5d4579e39456b952"
+            "sha256": "39d3f7c3fa52aa1adc9e4e698772c72b8278c4681e0ac981697755a6f2d0996c"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/roseau/illustration-qa-extra.json",
-            "sha256": "c271ee50b1063f40052a5310b79c088741bcbe0d2bae949dc18bec98288e4970"
+            "sha256": "4c406f2aafa583047ee17b7f27d0feed6a55ba0d019f00076ebefc4e37593947"
           }
         ]
       },
@@ -2107,7 +1755,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/roseau/qa.json",
-        "fileSHA256": "63a2b92f75ee498044198ce9d7ec1734bd56e33a0a5104ab5d4579e39456b952",
+        "fileSHA256": "39d3f7c3fa52aa1adc9e4e698772c72b8278c4681e0ac981697755a6f2d0996c",
         "item": {
           "slot": "C2",
           "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[1]",
@@ -2196,11 +1844,11 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/roseau/qa.json",
-            "sha256": "63a2b92f75ee498044198ce9d7ec1734bd56e33a0a5104ab5d4579e39456b952"
+            "sha256": "39d3f7c3fa52aa1adc9e4e698772c72b8278c4681e0ac981697755a6f2d0996c"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/roseau/illustration-qa-extra.json",
-            "sha256": "c271ee50b1063f40052a5310b79c088741bcbe0d2bae949dc18bec98288e4970"
+            "sha256": "4c406f2aafa583047ee17b7f27d0feed6a55ba0d019f00076ebefc4e37593947"
           }
         ]
       },
@@ -2439,7 +2087,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/roseau/qa.json",
-        "fileSHA256": "63a2b92f75ee498044198ce9d7ec1734bd56e33a0a5104ab5d4579e39456b952",
+        "fileSHA256": "39d3f7c3fa52aa1adc9e4e698772c72b8278c4681e0ac981697755a6f2d0996c",
         "item": {
           "slot": "C3",
           "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[2]",
@@ -2528,11 +2176,11 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/roseau/qa.json",
-            "sha256": "63a2b92f75ee498044198ce9d7ec1734bd56e33a0a5104ab5d4579e39456b952"
+            "sha256": "39d3f7c3fa52aa1adc9e4e698772c72b8278c4681e0ac981697755a6f2d0996c"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/roseau/illustration-qa-extra.json",
-            "sha256": "c271ee50b1063f40052a5310b79c088741bcbe0d2bae949dc18bec98288e4970"
+            "sha256": "4c406f2aafa583047ee17b7f27d0feed6a55ba0d019f00076ebefc4e37593947"
           }
         ]
       },
@@ -2606,6 +2254,368 @@
       "sourceContentAfterSHA256": "08f2445e73fd7b69a552fd0b7657f298cf29a78a73b63118064bd69fee6e9fe9",
       "targetAfterSHA256": "7c711ff4811c4030a7c08d6969a524a949ccb40e1e90bd06015d2ef1ce3f3387",
       "contextAfterSHA256": "7c711ff4811c4030a7c08d6969a524a949ccb40e1e90bd06015d2ef1ce3f3387"
+    },
+    {
+      "era": "e12",
+      "city": "roseau",
+      "slot": "TRAVELER",
+      "type": "commons",
+      "assetID": "capital-cc-e12-roseau-traveler-a08dd906dab52152",
+      "galleryImageID": "capital-cc-e12-roseau-traveler-a08dd906dab52152",
+      "commonsFile": "Dominica Botanic Gardens 02 2025 04.jpg",
+      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "matkailijalle",
+        "kuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/roseau/traveler-a08dd906dab52152745f.jpg",
+        "suora": true,
+        "lahde": "Concord, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Puu ja hurrikaanin murskaama koulubussi Roseaun kasvitieteellisessä puutarhassa helmikuussa 2025.",
+        "lyhyt": "Puu ja hurrikaanin murskaama koulubussi Roseaun kasvitieteellisessä puutarhassa helmikuussa 2025.",
+        "tiedosto": "Dominica Botanic Gardens 02 2025 04.jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Concord, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Puu ja hurrikaanin murskaama koulubussi Roseaun kasvitieteellisessä puutarhassa helmikuussa 2025.",
+        "lyhyt": "Puu ja hurrikaanin murskaama koulubussi Roseaun kasvitieteellisessä puutarhassa helmikuussa 2025.",
+        "tiedosto": "Dominica Botanic Gardens 02 2025 04.jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/roseau/traveler-a08dd906dab52152745f.jpg",
+        "suora": true,
+        "lahde": "Concord, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Puu ja hurrikaanin murskaama koulubussi Roseaun kasvitieteellisessä puutarhassa helmikuussa 2025.",
+        "lyhyt": "Puu ja hurrikaanin murskaama koulubussi Roseaun kasvitieteellisessä puutarhassa helmikuussa 2025.",
+        "tiedosto": "Dominica Botanic Gardens 02 2025 04.jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "a08dd906dab52152745f816f692e892997b910bb67b11c2b70196473f8f703d8",
+      "exportSHA256": "a08dd906dab52152745f816f692e892997b910bb67b11c2b70196473f8f703d8",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/roseau/traveler-a08dd906dab52152745f.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/roseau/traveler-a08dd906dab52152745f.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/roseau/cc-search/96fce79a7c99-original.jpg",
+      "dimensions": [
+        3072,
+        4080
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/roseau/sisalto.json",
+      "sourceContentSHA256": "08f2445e73fd7b69a552fd0b7657f298cf29a78a73b63118064bd69fee6e9fe9",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "0b8efa902b8223d75cd9918288b699373b74aabef48fd6985de7b751e92de5a0",
+        "semanticContextSHA256": "15fdfb7a634d53f85e227f1ed597ff0d3fc516da4cf8b8ac1c36c3fab1a9ece8",
+        "subjectTitle": "Matkailijalle",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Concord",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Dominica_Botanic_Gardens_02_2025_04.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f8/Dominica_Botanic_Gardens_02_2025_04.jpg",
+        "rightsEvidence": {
+          "selection": {
+            "photoLicense": "Tekijä Concord alkuperäisen tiedostosivun Author table -kentästä, ei uploaderista päätelty. Lisenssi CC BY-SA 4.0 tiedostosivusta.",
+            "placeEvidence": "English: Dominica Botanic Gardens, Roseau",
+            "workLayer": "Pääkohteena kasvi ja säilynyt käytännöllinen koulubussin romu, ei taideteos eikä mainos. Puutarhan takana oleva tavanomainen huoltorakennus jää sivuosaksi; ei arkkitehtuuria pääaiheena. Lähteen Description osoittaa Dominica Botanic Gardens,Roseau; vuoden2025 kuva liittyy nykytekstin puun ja1979hurrikaanin murskaaman bussin kohteeseen. Ei väitetä valmistajan muotoilun PD-statusta.",
+            "visualInspection": "Alkuperäinen katsottu kokonaan: ehjät lehtimuodot, rungon ja ruosteisen bussin pinnat terävät. Ei ihmisiä, kasvoja, mainoksia, lisättyä tekstiä/vesileimaa/kehystä. Luonnollisia arkisia liikenne-esineitä vain taustalla. Pysty0.753,3072×4080 ja kuvaus14.2.2025.",
+            "previousGameUse": [],
+            "sourceHtml": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/roseau/cc-search/96fce79a7c99.html",
+            "sourceSha256": "cab381af9bb237fd44ce1814963f6b6cc74edab3b7fe73ce16b55d9bdcd1944d"
+          },
+          "QA": {
+            "author": "Concord",
+            "license": "CC BY-SA 4.0",
+            "width": 3072,
+            "height": 4080,
+            "localOriginal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/roseau/cc-search/96fce79a7c99-original.jpg",
+            "nativeSHA256": "a08dd906dab52152745f816f692e892997b910bb67b11c2b70196473f8f703d8",
+            "sourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/roseau/qa-evidence/cab381af9bb237fd44ce1814963f6b6cc74edab3b7fe73ce16b55d9bdcd1944d.html",
+            "sourceSnapshotSHA256": "cab381af9bb237fd44ce1814963f6b6cc74edab3b7fe73ce16b55d9bdcd1944d",
+            "sourceRowsRead": {
+              "Description Dominica Botanic Gardens 02 2025 04.jpg": "English: Dominica Botanic Gardens, Roseau",
+              "Date": "14 February 2025, 11:58:02",
+              "Source": "Own work",
+              "Author": "Concord",
+              "Camera location": "15° 17′ 54.33″ N, 61° 22′ 57.86″ W"
+            },
+            "licenseTemplatesRead": [
+              "CC BY-SA 4.0"
+            ],
+            "sourceOriginalFileDimensions": [
+              "3,072",
+              "4,080"
+            ],
+            "nativeDimensionsOutput": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/roseau/cc-search/96fce79a7c99-original.jpg\n  pixelWidth: 3072\n  pixelHeight: 4080\n  format: jpeg\n  profile: sRGB IEC61966-2.1\n",
+            "nativeEncodedDimensions": [
+              3072,
+              4080
+            ],
+            "exifOrientation": 1,
+            "orientationAppliedDimensions": [
+              3072,
+              4080
+            ],
+            "sourceDateRaw": "14 February 2025, 11:58:02",
+            "gameReuseIndependentlyChecked": true,
+            "gameReuseSearchRoot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/js/packs",
+            "gameReuseFilesRead": 373,
+            "gameReuseMatches": [],
+            "duplicateCitySlots": [],
+            "visualReview": "Oma natiivin silmätarkistus: puun lehdet, runko ja ruosteisen murskaantuneen koulubussin pinnat erottuvat terävästi. Ei kasvoja, overlayta, vesileimaa tai mainos-/pakkauskuvaa; tavallinen osin peittyvä huoltorakennus ja taustan arkinen liikenne sivuosia. Luonnonpuu ja käytännöllinen bussin romu eivät tässä esitä nimettyä suojattua taide-/muotoiluteosta; ei valmistajan yleistä PD-lupaa. Lähteen Description ja GPS yksilöivät Dominica Botanic Gardens,Roseau; gardens-wp History luettu puun ja tyhjän bussin hurrikaanitarinan yhteyden todistamiseksi. Concord/CC BY-SA4.0 Author/licensetpl,3072×4080/suhde0.753, kuvaus14.2.2025. Korvaa hylätyn epäterävän01-ehdokkaan; vanha säilyy historiassa.",
+            "depictedWorkLayerIndependentlyReviewed": true,
+            "topicSourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/roseau/qa-evidence/bus-topic-a37422188e0ba9926eaac96cb55a117d15ad3773a17a0473cb1edcd1de704ff9.txt",
+            "topicSourceSHA256": "a37422188e0ba9926eaac96cb55a117d15ad3773a17a0473cb1edcd1de704ff9",
+            "topicSource": "https://en.wikipedia.org/wiki/Dominica_Botanic_Gardens",
+            "visuallyReviewed": true,
+            "originalPixelsViewed": true,
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Dominica_Botanic_Gardens_02_2025_04.jpg",
+            "sourceManifest": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/roseau/cc-selection.json",
+            "currentContentSHA256": "39f90ae79f55ea000220f39bcb301e96ef8e185495c29d0cd4640a04b613ea60",
+            "photoDate": "14 February 2025, 11:58:02",
+            "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f8/Dominica_Botanic_Gardens_02_2025_04.jpg",
+            "captionFi": "Puu ja hurrikaanin murskaama koulubussi Roseaun kasvitieteellisessä puutarhassa helmikuussa2025.",
+            "checkedAt": "2026-10-12T19:43:33.728601+00:00",
+            "published": false,
+            "gameIntegrated": false,
+            "ownerAcceptance": false,
+            "reasonTextCorrectionAt": "2026-10-12T19:44:05.300246+00:00",
+            "sourceTitlePersonallyRead": "Dominica Botanic Gardens 02 2025 04.jpg",
+            "sourceOriginalMediaUrlPersonallyRead": "https://upload.wikimedia.org/wikipedia/commons/f/f8/Dominica_Botanic_Gardens_02_2025_04.jpg",
+            "exactCommonsFileSourcePointerVerified": true
+          },
+          "qaReason": "Oma natiivin silmätarkistus: puun lehdet, runko ja ruosteisen murskaantuneen koulubussin pinnat erottuvat terävästi. Ei kasvoja, overlayta, vesileimaa tai mainos-/pakkauskuvaa; tavallinen osin peittyvä huoltorakennus ja taustan arkinen liikenne sivuosia. Luonnonpuu ja käytännöllinen bussin romu eivät tässä esitä nimettyä suojattua taide-/muotoiluteosta; ei valmistajan yleistä PD-lupaa. Lähteen Description ja GPS yksilöivät Dominica Botanic Gardens,Roseau; gardens-wp History luettu puun ja tyhjän bussin hurrikaanitarinan yhteyden todistamiseksi. Concord/CC BY-SA4.0 Author/licensetpl,3072×4080/suhde0.753, kuvaus14.2.2025. Korvaa hylätyn epäterävän01-ehdokkaan; vanha säilyy historiassa."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Puu ja hurrikaanin murskaama koulubussi Roseaun kasvitieteellisessä puutarhassa helmikuussa 2025.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/roseau/qa.json",
+        "fileSHA256": "39d3f7c3fa52aa1adc9e4e698772c72b8278c4681e0ac981697755a6f2d0996c",
+        "item": {
+          "slot": "TRAVELER",
+          "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
+          "assetID": null,
+          "commonsFile": "Dominica Botanic Gardens 02 2025 04.jpg",
+          "sha256": "a08dd906dab52152745f816f692e892997b910bb67b11c2b70196473f8f703d8",
+          "verdict": "accepted",
+          "reason": "Oma natiivin silmätarkistus: puun lehdet, runko ja ruosteisen murskaantuneen koulubussin pinnat erottuvat terävästi. Ei kasvoja, overlayta, vesileimaa tai mainos-/pakkauskuvaa; tavallinen osin peittyvä huoltorakennus ja taustan arkinen liikenne sivuosia. Luonnonpuu ja käytännöllinen bussin romu eivät tässä esitä nimettyä suojattua taide-/muotoiluteosta; ei valmistajan yleistä PD-lupaa. Lähteen Description ja GPS yksilöivät Dominica Botanic Gardens,Roseau; gardens-wp History luettu puun ja tyhjän bussin hurrikaanitarinan yhteyden todistamiseksi. Concord/CC BY-SA4.0 Author/licensetpl,3072×4080/suhde0.753, kuvaus14.2.2025. Korvaa hylätyn epäterävän01-ehdokkaan; vanha säilyy historiassa.",
+          "required": true,
+          "status": "reviewed",
+          "evidence": {
+            "author": "Concord",
+            "license": "CC BY-SA 4.0",
+            "width": 3072,
+            "height": 4080,
+            "localOriginal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/roseau/cc-search/96fce79a7c99-original.jpg",
+            "nativeSHA256": "a08dd906dab52152745f816f692e892997b910bb67b11c2b70196473f8f703d8",
+            "sourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/roseau/qa-evidence/cab381af9bb237fd44ce1814963f6b6cc74edab3b7fe73ce16b55d9bdcd1944d.html",
+            "sourceSnapshotSHA256": "cab381af9bb237fd44ce1814963f6b6cc74edab3b7fe73ce16b55d9bdcd1944d",
+            "sourceRowsRead": {
+              "Description Dominica Botanic Gardens 02 2025 04.jpg": "English: Dominica Botanic Gardens, Roseau",
+              "Date": "14 February 2025, 11:58:02",
+              "Source": "Own work",
+              "Author": "Concord",
+              "Camera location": "15° 17′ 54.33″ N, 61° 22′ 57.86″ W"
+            },
+            "licenseTemplatesRead": [
+              "CC BY-SA 4.0"
+            ],
+            "sourceOriginalFileDimensions": [
+              "3,072",
+              "4,080"
+            ],
+            "nativeDimensionsOutput": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/roseau/cc-search/96fce79a7c99-original.jpg\n  pixelWidth: 3072\n  pixelHeight: 4080\n  format: jpeg\n  profile: sRGB IEC61966-2.1\n",
+            "nativeEncodedDimensions": [
+              3072,
+              4080
+            ],
+            "exifOrientation": 1,
+            "orientationAppliedDimensions": [
+              3072,
+              4080
+            ],
+            "sourceDateRaw": "14 February 2025, 11:58:02",
+            "gameReuseIndependentlyChecked": true,
+            "gameReuseSearchRoot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/js/packs",
+            "gameReuseFilesRead": 373,
+            "gameReuseMatches": [],
+            "duplicateCitySlots": [],
+            "visualReview": "Oma natiivin silmätarkistus: puun lehdet, runko ja ruosteisen murskaantuneen koulubussin pinnat erottuvat terävästi. Ei kasvoja, overlayta, vesileimaa tai mainos-/pakkauskuvaa; tavallinen osin peittyvä huoltorakennus ja taustan arkinen liikenne sivuosia. Luonnonpuu ja käytännöllinen bussin romu eivät tässä esitä nimettyä suojattua taide-/muotoiluteosta; ei valmistajan yleistä PD-lupaa. Lähteen Description ja GPS yksilöivät Dominica Botanic Gardens,Roseau; gardens-wp History luettu puun ja tyhjän bussin hurrikaanitarinan yhteyden todistamiseksi. Concord/CC BY-SA4.0 Author/licensetpl,3072×4080/suhde0.753, kuvaus14.2.2025. Korvaa hylätyn epäterävän01-ehdokkaan; vanha säilyy historiassa.",
+            "depictedWorkLayerIndependentlyReviewed": true,
+            "topicSourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/roseau/qa-evidence/bus-topic-a37422188e0ba9926eaac96cb55a117d15ad3773a17a0473cb1edcd1de704ff9.txt",
+            "topicSourceSHA256": "a37422188e0ba9926eaac96cb55a117d15ad3773a17a0473cb1edcd1de704ff9",
+            "topicSource": "https://en.wikipedia.org/wiki/Dominica_Botanic_Gardens",
+            "visuallyReviewed": true,
+            "originalPixelsViewed": true,
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Dominica_Botanic_Gardens_02_2025_04.jpg",
+            "sourceManifest": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/roseau/cc-selection.json",
+            "currentContentSHA256": "39f90ae79f55ea000220f39bcb301e96ef8e185495c29d0cd4640a04b613ea60",
+            "photoDate": "14 February 2025, 11:58:02",
+            "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f8/Dominica_Botanic_Gardens_02_2025_04.jpg",
+            "captionFi": "Puu ja hurrikaanin murskaama koulubussi Roseaun kasvitieteellisessä puutarhassa helmikuussa2025.",
+            "checkedAt": "2026-10-12T19:43:33.728601+00:00",
+            "published": false,
+            "gameIntegrated": false,
+            "ownerAcceptance": false,
+            "reasonTextCorrectionAt": "2026-10-12T19:44:05.300246+00:00",
+            "sourceTitlePersonallyRead": "Dominica Botanic Gardens 02 2025 04.jpg",
+            "sourceOriginalMediaUrlPersonallyRead": "https://upload.wikimedia.org/wikipedia/commons/f/f8/Dominica_Botanic_Gardens_02_2025_04.jpg",
+            "exactCommonsFileSourcePointerVerified": true
+          },
+          "previousCandidateReviews": [
+            {
+              "slot": "TRAVELER",
+              "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
+              "assetID": null,
+              "commonsFile": "Dominica Botanic Gardens 02 2025 01.jpg",
+              "sha256": "38563034567ee5bc4325e5a057edc6e0e44da0345be283d7c17a81e485932e1a",
+              "verdict": "rejected",
+              "reason": "REJECTED oman natiivin silmätarkistuksen perusteella: selitteen pääaiheena olevat punakeltaiset kukat ovat selvästi epäterävät ja yksityiskohdat sulautuvat, kun taustan kivipilarin pinta on terävämpi. Tämä ei ole pelkkää makrokuvan taustan tarkoituksellista pehmeyttä; itse pääaiheen tarkennus on väärässä tasossa. PILVIOHJEen epäterävien kielto, ei kuvasuhde-/paikka-/oikeusperusteinen hylkäys. Concord/CC BY-SA4.0, Description Dominica Botanic Gardens,Roseau, kuvaus14.2.2025 ja3072×4080/suhde0.753 ovat muuten kunnossa. Tarvitaan uusi erillinen terävä pystykuva hyväksyttävänä paikallisena CC-kuvana; vanha säilytetään eikä terävöitetä QA:ssa.",
+              "required": true,
+              "status": "reviewed",
+              "evidence": {
+                "author": "Concord",
+                "license": "CC BY-SA 4.0",
+                "width": 3072,
+                "height": 4080,
+                "localOriginal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/roseau/cc-search/61f8782a8e24-original.jpg",
+                "nativeSHA256": "38563034567ee5bc4325e5a057edc6e0e44da0345be283d7c17a81e485932e1a",
+                "sourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/roseau/qa-evidence/882d6b0fa7f4aa65eba5a772e3376b612a15464021cb1c54e82bb04306c5a91f.html",
+                "sourceSnapshotSHA256": "882d6b0fa7f4aa65eba5a772e3376b612a15464021cb1c54e82bb04306c5a91f",
+                "sourceRowsRead": {
+                  "Description Dominica Botanic Gardens 02 2025 01.jpg": "English: Dominica Botanic Gardens, Roseau",
+                  "Date": "14 February 2025, 12:03:23",
+                  "Source": "Own work",
+                  "Author": "Concord",
+                  "Camera location": "15° 17′ 50.31″ N, 61° 22′ 58.66″ W"
+                },
+                "licenseTemplatesRead": [
+                  "CC BY-SA 4.0"
+                ],
+                "sourceOriginalFileDimensions": [
+                  "3,072",
+                  "4,080"
+                ],
+                "nativeDimensionsOutput": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/roseau/cc-search/61f8782a8e24-original.jpg\n  pixelWidth: 3072\n  pixelHeight: 4080\n  format: jpeg\n  profile: sRGB IEC61966-2.1\n",
+                "sourceDateRaw": "14 February 2025, 12:03:23",
+                "gameReuseIndependentlyChecked": true,
+                "gameReuseSearchRoot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/js/packs",
+                "gameReuseFilesRead": 373,
+                "gameReuseMatches": [],
+                "duplicateCitySlots": [],
+                "visualReview": "REJECTED oman natiivin silmätarkistuksen perusteella: selitteen pääaiheena olevat punakeltaiset kukat ovat selvästi epäterävät ja yksityiskohdat sulautuvat, kun taustan kivipilarin pinta on terävämpi. Tämä ei ole pelkkää makrokuvan taustan tarkoituksellista pehmeyttä; itse pääaiheen tarkennus on väärässä tasossa. PILVIOHJEen epäterävien kielto, ei kuvasuhde-/paikka-/oikeusperusteinen hylkäys. Concord/CC BY-SA4.0, Description Dominica Botanic Gardens,Roseau, kuvaus14.2.2025 ja3072×4080/suhde0.753 ovat muuten kunnossa. Tarvitaan uusi erillinen terävä pystykuva hyväksyttävänä paikallisena CC-kuvana; vanha säilytetään eikä terävöitetä QA:ssa.",
+                "depictedWorkLayerIndependentlyReviewed": true,
+                "visuallyReviewed": true,
+                "originalPixelsViewed": true,
+                "sourcePage": "https://commons.wikimedia.org/wiki/File:Dominica_Botanic_Gardens_02_2025_01.jpg",
+                "sourceManifest": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/roseau/cc-selection.json",
+                "currentContentSHA256": "39f90ae79f55ea000220f39bcb301e96ef8e185495c29d0cd4640a04b613ea60",
+                "photoDate": "14 February 2025, 12:03:23",
+                "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/2/29/Dominica_Botanic_Gardens_02_2025_01.jpg",
+                "captionFi": "Kukkiva kasvi Roseaun kasvitieteellisessä puutarhassa helmikuussa 2025.",
+                "checkedAt": "2026-10-12T19:37:52.709073+00:00",
+                "published": false,
+                "gameIntegrated": false,
+                "ownerAcceptance": false
+              }
+            }
+          ]
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/roseau/qa.json",
+            "sha256": "39d3f7c3fa52aa1adc9e4e698772c72b8278c4681e0ac981697755a6f2d0996c"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/roseau/illustration-qa-extra.json",
+            "sha256": "4c406f2aafa583047ee17b7f27d0feed6a55ba0d019f00076ebefc4e37593947"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e12",
+        "city": "roseau",
+        "slot": "TRAVELER",
+        "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
+        "commonsFile": "Dominica Botanic Gardens 02 2025 04.jpg",
+        "sha256": "a08dd906dab52152745f816f692e892997b910bb67b11c2b70196473f8f703d8",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Dominica_Botanic_Gardens_02_2025_04.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f8/Dominica_Botanic_Gardens_02_2025_04.jpg",
+        "author": "Concord",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+        "width": 3072,
+        "height": 4080,
+        "originalSHA256": "a08dd906dab52152745f816f692e892997b910bb67b11c2b70196473f8f703d8",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/roseau/traveler-a08dd906dab52152745f.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/roseau/traveler-a08dd906dab52152745f.jpg",
+        "bytes": 6187235,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T19:44:31.666752+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "Dominica Botanic Gardens 02 2025 04.jpg",
+        "lahde": "Concord, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Puu ja hurrikaanin murskaama koulubussi Roseaun kasvitieteellisessä puutarhassa helmikuussa 2025.",
+        "lyhyt": "Puu ja hurrikaanin murskaama koulubussi Roseaun kasvitieteellisessä puutarhassa helmikuussa 2025."
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Concord, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Puu ja hurrikaanin murskaama koulubussi Roseaun kasvitieteellisessä puutarhassa helmikuussa 2025.",
+        "lyhyt": "Puu ja hurrikaanin murskaama koulubussi Roseaun kasvitieteellisessä puutarhassa helmikuussa 2025.",
+        "tiedosto": "Dominica Botanic Gardens 02 2025 04.jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "08f2445e73fd7b69a552fd0b7657f298cf29a78a73b63118064bd69fee6e9fe9",
+      "targetAfterSHA256": "0b8efa902b8223d75cd9918288b699373b74aabef48fd6985de7b751e92de5a0",
+      "contextAfterSHA256": "15fdfb7a634d53f85e227f1ed597ff0d3fc516da4cf8b8ac1c36c3fab1a9ece8"
     },
     {
       "era": "e12",
@@ -2774,7 +2784,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/roseau/qa.json",
-        "fileSHA256": "63a2b92f75ee498044198ce9d7ec1734bd56e33a0a5104ab5d4579e39456b952",
+        "fileSHA256": "39d3f7c3fa52aa1adc9e4e698772c72b8278c4681e0ac981697755a6f2d0996c",
         "item": {
           "slot": "O3",
           "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[2].kuva",
@@ -2863,11 +2873,11 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/roseau/qa.json",
-            "sha256": "63a2b92f75ee498044198ce9d7ec1734bd56e33a0a5104ab5d4579e39456b952"
+            "sha256": "39d3f7c3fa52aa1adc9e4e698772c72b8278c4681e0ac981697755a6f2d0996c"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/roseau/illustration-qa-extra.json",
-            "sha256": "c271ee50b1063f40052a5310b79c088741bcbe0d2bae949dc18bec98288e4970"
+            "sha256": "4c406f2aafa583047ee17b7f27d0feed6a55ba0d019f00076ebefc4e37593947"
           }
         ]
       },
@@ -2941,6 +2951,302 @@
       "sourceContentAfterSHA256": "08f2445e73fd7b69a552fd0b7657f298cf29a78a73b63118064bd69fee6e9fe9",
       "targetAfterSHA256": "7b66948e4f1f77b451bbd1ca9daf69c2ded50593c177a7d5ea7eb9834ec67ace",
       "contextAfterSHA256": "2a0d4f173f7335b1f2c3822a16f548011d50f27c8baf78d99c807e8d1f63e299"
+    },
+    {
+      "era": "e12",
+      "city": "roseau",
+      "slot": "N2",
+      "type": "commons",
+      "assetID": "capital-cc-e12-roseau-n2-049ae1bde5689490",
+      "galleryImageID": "capital-cc-e12-roseau-n2-049ae1bde5689490",
+      "commonsFile": "Dominica Botanic Gardens 02 2025 08.jpg",
+      "targetJsonPath": "$.nahtavyydet[\"Dominican kasvitieteellinen puutarha\"].kuvat[0]",
+      "targetTokens": [
+        "nahtavyydet",
+        "Dominican kasvitieteellinen puutarha",
+        "kuvat",
+        0
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/roseau/n2-049ae1bde568949060ac.jpg",
+        "suora": true,
+        "lahde": "Concord, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Kasvillisuutta Roseaun kasvitieteellisessä puutarhassa helmikuussa 2025.",
+        "lyhyt": "Kasvillisuutta Roseaun kasvitieteellisessä puutarhassa helmikuussa 2025.",
+        "tiedosto": "Dominica Botanic Gardens 02 2025 08.jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Concord, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Kasvillisuutta Roseaun kasvitieteellisessä puutarhassa helmikuussa 2025.",
+        "lyhyt": "Kasvillisuutta Roseaun kasvitieteellisessä puutarhassa helmikuussa 2025.",
+        "tiedosto": "Dominica Botanic Gardens 02 2025 08.jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/roseau/n2-049ae1bde568949060ac.jpg",
+        "suora": true,
+        "lahde": "Concord, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Kasvillisuutta Roseaun kasvitieteellisessä puutarhassa helmikuussa 2025.",
+        "lyhyt": "Kasvillisuutta Roseaun kasvitieteellisessä puutarhassa helmikuussa 2025.",
+        "tiedosto": "Dominica Botanic Gardens 02 2025 08.jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "049ae1bde568949060aca7cf45814ae021718c337850c5d293926d056465ad0c",
+      "exportSHA256": "049ae1bde568949060aca7cf45814ae021718c337850c5d293926d056465ad0c",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/roseau/n2-049ae1bde568949060ac.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/roseau/n2-049ae1bde568949060ac.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/roseau/cc-search/7b2109fc4c90-original.jpg",
+      "dimensions": [
+        3072,
+        4080
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/roseau/sisalto.json",
+      "sourceContentSHA256": "08f2445e73fd7b69a552fd0b7657f298cf29a78a73b63118064bd69fee6e9fe9",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "52db893d739ea3c9d17e0a22d98edf3ac386f06b27008f09c9c766c7e0ab22be",
+        "semanticContextSHA256": "a2ed3ae0997de9c1f874545c44282e99a435a2eca9d82cb3af373f5ac390ed96",
+        "subjectTitle": "Dominican kasvitieteellinen puutarha",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Concord",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Dominica_Botanic_Gardens_02_2025_08.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Dominica_Botanic_Gardens_02_2025_08.jpg",
+        "rightsEvidence": {
+          "selection": {
+            "photoLicense": "Tekijä Concord alkuperäisen tiedostosivun Author table -kentästä, ei uploaderista päätelty. Lisenssi CC BY-SA 4.0 tiedostosivusta.",
+            "placeEvidence": "English: Dominica Botanic Gardens, Roseau",
+            "workLayer": "Pääkohteena luonnollinen kukkiva kasvi ja palmu; ei suojattua taideteosta tai rakennusta. Alkuperäinen Description Dominica Botanic Gardens,Roseau nimeää täsmälleen edelleen nykyisessä sisalto.jsonissa olevan Dominican kasvitieteellisen puutarhan. Ei arvattua kasvilajin nimeä.",
+            "visualInspection": "Alkuperäinen3072×4080 katsottu: terävät kukat, lehdet ja palmu; ei ihmisiä, kasvoja, mainosta, lisättyä tekstiä, vesileimaa tai kehystä. Kuvaus14.2.2025; pysty sallittu N-roolissa.",
+            "previousGameUse": [],
+            "sourceHtml": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/roseau/cc-search/7b2109fc4c90.html",
+            "sourceSha256": "57dd343a03f385665850a013fe4143c9058186e9a8773637a7763a958bfe6ebd"
+          },
+          "QA": {
+            "author": "Concord",
+            "license": "CC BY-SA 4.0",
+            "width": 3072,
+            "height": 4080,
+            "localOriginal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/roseau/cc-search/7b2109fc4c90-original.jpg",
+            "nativeSHA256": "049ae1bde568949060aca7cf45814ae021718c337850c5d293926d056465ad0c",
+            "sourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/roseau/qa-evidence/57dd343a03f385665850a013fe4143c9058186e9a8773637a7763a958bfe6ebd.html",
+            "sourceSnapshotSHA256": "57dd343a03f385665850a013fe4143c9058186e9a8773637a7763a958bfe6ebd",
+            "sourceRowsRead": {
+              "Description Dominica Botanic Gardens 02 2025 08.jpg": "English: Dominica Botanic Gardens, Roseau",
+              "Date": "14 February 2025, 11:35:35",
+              "Source": "Own work",
+              "Author": "Concord",
+              "Camera location": "15° 18′ 01.36″ N, 61° 22′ 59.49″ W"
+            },
+            "licenseTemplatesRead": [
+              "CC BY-SA 4.0"
+            ],
+            "sourceOriginalFileDimensions": [
+              "3,072",
+              "4,080"
+            ],
+            "nativeDimensionsOutput": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/roseau/cc-search/7b2109fc4c90-original.jpg\n  pixelWidth: 3072\n  pixelHeight: 4080\n  format: jpeg\n  profile: sRGB IEC61966-2.1\n",
+            "nativeEncodedDimensions": [
+              3072,
+              4080
+            ],
+            "exifOrientation": 1,
+            "orientationAppliedDimensions": [
+              3072,
+              4080
+            ],
+            "sourceDateRaw": "14 February 2025, 11:35:35",
+            "gameReuseIndependentlyChecked": true,
+            "gameReuseSearchRoot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/js/packs",
+            "gameReuseFilesRead": 373,
+            "gameReuseMatches": [],
+            "duplicateCitySlots": [],
+            "visualReview": "Oma natiivin silmätarkistus: kukkivan kasvin yksityiskohdat, lehdet ja palmu erottuvat terävinä, taivas ja puusto ympäristöä. Ei tunnistettavia kasvoja, overlayta, vesileimaa, mainoskuvaa tai nimettyä suojattua taide-/rakennuspääaihetta. Description ja GPS yksilöivät Dominica Botanic Gardens,Roseau; vastaa nykyistä Dominican kasvitieteellinen puutarha -N2-kohdetta. Kasvilajia ei arvata. Concord/CC BY-SA4.0 Author/licensetpl luettu itse. Native3072×4080 ja SHA tarkistettu, pysty sallittuN-roolissa; kuvaus14.2.2025. Eri tiedosto kuin PHOTO-anolislisko ja TRAVELER-puu/bussi.",
+            "depictedWorkLayerIndependentlyReviewed": true,
+            "visuallyReviewed": true,
+            "originalPixelsViewed": true,
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Dominica_Botanic_Gardens_02_2025_08.jpg",
+            "sourceManifest": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/roseau/cc-selection.json",
+            "currentContentSHA256": "39f90ae79f55ea000220f39bcb301e96ef8e185495c29d0cd4640a04b613ea60",
+            "photoDate": "14 February 2025, 11:35:35",
+            "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Dominica_Botanic_Gardens_02_2025_08.jpg",
+            "captionFi": "Kasvillisuutta Roseaun kasvitieteellisessä puutarhassa helmikuussa2025.",
+            "checkedAt": "2026-10-12T19:47:05.534180+00:00",
+            "published": false,
+            "gameIntegrated": false,
+            "ownerAcceptance": false,
+            "sourceTitlePersonallyRead": "Dominica Botanic Gardens 02 2025 08.jpg",
+            "sourceOriginalMediaUrlPersonallyRead": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Dominica_Botanic_Gardens_02_2025_08.jpg",
+            "exactCommonsFileSourcePointerVerified": true
+          },
+          "qaReason": "Oma natiivin silmätarkistus: kukkivan kasvin yksityiskohdat, lehdet ja palmu erottuvat terävinä, taivas ja puusto ympäristöä. Ei tunnistettavia kasvoja, overlayta, vesileimaa, mainoskuvaa tai nimettyä suojattua taide-/rakennuspääaihetta. Description ja GPS yksilöivät Dominica Botanic Gardens,Roseau; vastaa nykyistä Dominican kasvitieteellinen puutarha -N2-kohdetta. Kasvilajia ei arvata. Concord/CC BY-SA4.0 Author/licensetpl luettu itse. Native3072×4080 ja SHA tarkistettu, pysty sallittuN-roolissa; kuvaus14.2.2025. Eri tiedosto kuin PHOTO-anolislisko ja TRAVELER-puu/bussi."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Kasvillisuutta Roseaun kasvitieteellisessä puutarhassa helmikuussa 2025.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/roseau/qa.json",
+        "fileSHA256": "39d3f7c3fa52aa1adc9e4e698772c72b8278c4681e0ac981697755a6f2d0996c",
+        "item": {
+          "slot": "N2",
+          "targetJsonPath": "$.nahtavyydet[\"Dominican kasvitieteellinen puutarha\"].kuvat[0]",
+          "assetID": null,
+          "commonsFile": "Dominica Botanic Gardens 02 2025 08.jpg",
+          "sha256": "049ae1bde568949060aca7cf45814ae021718c337850c5d293926d056465ad0c",
+          "verdict": "accepted",
+          "reason": "Oma natiivin silmätarkistus: kukkivan kasvin yksityiskohdat, lehdet ja palmu erottuvat terävinä, taivas ja puusto ympäristöä. Ei tunnistettavia kasvoja, overlayta, vesileimaa, mainoskuvaa tai nimettyä suojattua taide-/rakennuspääaihetta. Description ja GPS yksilöivät Dominica Botanic Gardens,Roseau; vastaa nykyistä Dominican kasvitieteellinen puutarha -N2-kohdetta. Kasvilajia ei arvata. Concord/CC BY-SA4.0 Author/licensetpl luettu itse. Native3072×4080 ja SHA tarkistettu, pysty sallittuN-roolissa; kuvaus14.2.2025. Eri tiedosto kuin PHOTO-anolislisko ja TRAVELER-puu/bussi.",
+          "required": true,
+          "status": "reviewed",
+          "evidence": {
+            "author": "Concord",
+            "license": "CC BY-SA 4.0",
+            "width": 3072,
+            "height": 4080,
+            "localOriginal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/roseau/cc-search/7b2109fc4c90-original.jpg",
+            "nativeSHA256": "049ae1bde568949060aca7cf45814ae021718c337850c5d293926d056465ad0c",
+            "sourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/roseau/qa-evidence/57dd343a03f385665850a013fe4143c9058186e9a8773637a7763a958bfe6ebd.html",
+            "sourceSnapshotSHA256": "57dd343a03f385665850a013fe4143c9058186e9a8773637a7763a958bfe6ebd",
+            "sourceRowsRead": {
+              "Description Dominica Botanic Gardens 02 2025 08.jpg": "English: Dominica Botanic Gardens, Roseau",
+              "Date": "14 February 2025, 11:35:35",
+              "Source": "Own work",
+              "Author": "Concord",
+              "Camera location": "15° 18′ 01.36″ N, 61° 22′ 59.49″ W"
+            },
+            "licenseTemplatesRead": [
+              "CC BY-SA 4.0"
+            ],
+            "sourceOriginalFileDimensions": [
+              "3,072",
+              "4,080"
+            ],
+            "nativeDimensionsOutput": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/roseau/cc-search/7b2109fc4c90-original.jpg\n  pixelWidth: 3072\n  pixelHeight: 4080\n  format: jpeg\n  profile: sRGB IEC61966-2.1\n",
+            "nativeEncodedDimensions": [
+              3072,
+              4080
+            ],
+            "exifOrientation": 1,
+            "orientationAppliedDimensions": [
+              3072,
+              4080
+            ],
+            "sourceDateRaw": "14 February 2025, 11:35:35",
+            "gameReuseIndependentlyChecked": true,
+            "gameReuseSearchRoot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/js/packs",
+            "gameReuseFilesRead": 373,
+            "gameReuseMatches": [],
+            "duplicateCitySlots": [],
+            "visualReview": "Oma natiivin silmätarkistus: kukkivan kasvin yksityiskohdat, lehdet ja palmu erottuvat terävinä, taivas ja puusto ympäristöä. Ei tunnistettavia kasvoja, overlayta, vesileimaa, mainoskuvaa tai nimettyä suojattua taide-/rakennuspääaihetta. Description ja GPS yksilöivät Dominica Botanic Gardens,Roseau; vastaa nykyistä Dominican kasvitieteellinen puutarha -N2-kohdetta. Kasvilajia ei arvata. Concord/CC BY-SA4.0 Author/licensetpl luettu itse. Native3072×4080 ja SHA tarkistettu, pysty sallittuN-roolissa; kuvaus14.2.2025. Eri tiedosto kuin PHOTO-anolislisko ja TRAVELER-puu/bussi.",
+            "depictedWorkLayerIndependentlyReviewed": true,
+            "visuallyReviewed": true,
+            "originalPixelsViewed": true,
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Dominica_Botanic_Gardens_02_2025_08.jpg",
+            "sourceManifest": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/roseau/cc-selection.json",
+            "currentContentSHA256": "39f90ae79f55ea000220f39bcb301e96ef8e185495c29d0cd4640a04b613ea60",
+            "photoDate": "14 February 2025, 11:35:35",
+            "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Dominica_Botanic_Gardens_02_2025_08.jpg",
+            "captionFi": "Kasvillisuutta Roseaun kasvitieteellisessä puutarhassa helmikuussa2025.",
+            "checkedAt": "2026-10-12T19:47:05.534180+00:00",
+            "published": false,
+            "gameIntegrated": false,
+            "ownerAcceptance": false,
+            "sourceTitlePersonallyRead": "Dominica Botanic Gardens 02 2025 08.jpg",
+            "sourceOriginalMediaUrlPersonallyRead": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Dominica_Botanic_Gardens_02_2025_08.jpg",
+            "exactCommonsFileSourcePointerVerified": true
+          }
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/roseau/qa.json",
+            "sha256": "39d3f7c3fa52aa1adc9e4e698772c72b8278c4681e0ac981697755a6f2d0996c"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/roseau/illustration-qa-extra.json",
+            "sha256": "4c406f2aafa583047ee17b7f27d0feed6a55ba0d019f00076ebefc4e37593947"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e12",
+        "city": "roseau",
+        "slot": "N2",
+        "targetJsonPath": "$.nahtavyydet[\"Dominican kasvitieteellinen puutarha\"].kuvat[0]",
+        "commonsFile": "Dominica Botanic Gardens 02 2025 08.jpg",
+        "sha256": "049ae1bde568949060aca7cf45814ae021718c337850c5d293926d056465ad0c",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Dominica_Botanic_Gardens_02_2025_08.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Dominica_Botanic_Gardens_02_2025_08.jpg",
+        "author": "Concord",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+        "width": 3072,
+        "height": 4080,
+        "originalSHA256": "049ae1bde568949060aca7cf45814ae021718c337850c5d293926d056465ad0c",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/roseau/n2-049ae1bde568949060ac.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/roseau/n2-049ae1bde568949060ac.jpg",
+        "bytes": 5965750,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T19:47:54.642524+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "Dominica Botanic Gardens 02 2025 08.jpg",
+        "lahde": "Concord, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Kasvillisuutta Roseaun kasvitieteellisessä puutarhassa helmikuussa 2025.",
+        "lyhyt": "Kasvillisuutta Roseaun kasvitieteellisessä puutarhassa helmikuussa 2025."
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Concord, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Kasvillisuutta Roseaun kasvitieteellisessä puutarhassa helmikuussa 2025.",
+        "lyhyt": "Kasvillisuutta Roseaun kasvitieteellisessä puutarhassa helmikuussa 2025.",
+        "tiedosto": "Dominica Botanic Gardens 02 2025 08.jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "08f2445e73fd7b69a552fd0b7657f298cf29a78a73b63118064bd69fee6e9fe9",
+      "targetAfterSHA256": "52db893d739ea3c9d17e0a22d98edf3ac386f06b27008f09c9c766c7e0ab22be",
+      "contextAfterSHA256": "a2ed3ae0997de9c1f874545c44282e99a435a2eca9d82cb3af373f5ac390ed96"
     }
   ],
   "runtimeIntegrationPending": true,

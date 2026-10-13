@@ -3,7 +3,7 @@
   "era": "e12",
   "city": "nassau",
   "authorization": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
-  "sourceContentAfterSHA256": "836a23b7047697263a30d535db52048cb05e0ee77bc09253cb62d84b11edcb68",
+  "sourceContentAfterSHA256": "9ee0363e287ef499d1c26c8ac5bc77a947c54e226ed1e58757fbe0b69d1a88de",
   "assets": [
     {
       "era": "e12",
@@ -98,7 +98,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/nassau/qa.json",
-        "fileSHA256": "e6b0a3df70b7ce166906c6522b1277169f7c8424dcda59e51fc65170585e49fd",
+        "fileSHA256": "63a1804b12b5f5c8cbcf5ce164b62a61fbae656b704c2d6e49e085586624d716",
         "item": {
           "slot": "O4",
           "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
@@ -376,7 +376,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/nassau/qa.json",
-            "sha256": "e6b0a3df70b7ce166906c6522b1277169f7c8424dcda59e51fc65170585e49fd"
+            "sha256": "63a1804b12b5f5c8cbcf5ce164b62a61fbae656b704c2d6e49e085586624d716"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/nassau/illustration-qa-extra.json",
@@ -463,7 +463,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "836a23b7047697263a30d535db52048cb05e0ee77bc09253cb62d84b11edcb68",
+      "sourceContentAfterSHA256": "9ee0363e287ef499d1c26c8ac5bc77a947c54e226ed1e58757fbe0b69d1a88de",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
       "contextAfterSHA256": "4dfad821d791c0785aedaa9e84722bdf282dcea98f29f177f6e8c55b9ce32d9c"
     },
@@ -566,7 +566,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/nassau/qa.json",
-        "fileSHA256": "e6b0a3df70b7ce166906c6522b1277169f7c8424dcda59e51fc65170585e49fd",
+        "fileSHA256": "63a1804b12b5f5c8cbcf5ce164b62a61fbae656b704c2d6e49e085586624d716",
         "item": {
           "slot": "K1",
           "targetJsonPath": "$.kaupunkilehti[0].nostot[0]",
@@ -793,7 +793,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/nassau/qa.json",
-            "sha256": "e6b0a3df70b7ce166906c6522b1277169f7c8424dcda59e51fc65170585e49fd"
+            "sha256": "63a1804b12b5f5c8cbcf5ce164b62a61fbae656b704c2d6e49e085586624d716"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/nassau/illustration-qa-extra.json",
@@ -880,7 +880,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "836a23b7047697263a30d535db52048cb05e0ee77bc09253cb62d84b11edcb68",
+      "sourceContentAfterSHA256": "9ee0363e287ef499d1c26c8ac5bc77a947c54e226ed1e58757fbe0b69d1a88de",
       "targetAfterSHA256": "0f28b2e98056d3f8112bfdaad789ef9205754af7b7243d1ea6474bc5da8a3359",
       "contextAfterSHA256": "0f28b2e98056d3f8112bfdaad789ef9205754af7b7243d1ea6474bc5da8a3359"
     },
@@ -1004,7 +1004,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/nassau/qa.json",
-        "fileSHA256": "e6b0a3df70b7ce166906c6522b1277169f7c8424dcda59e51fc65170585e49fd",
+        "fileSHA256": "63a1804b12b5f5c8cbcf5ce164b62a61fbae656b704c2d6e49e085586624d716",
         "item": {
           "slot": "PHOTO",
           "targetJsonPath": "$.valokuva",
@@ -1055,7 +1055,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/nassau/qa.json",
-            "sha256": "e6b0a3df70b7ce166906c6522b1277169f7c8424dcda59e51fc65170585e49fd"
+            "sha256": "63a1804b12b5f5c8cbcf5ce164b62a61fbae656b704c2d6e49e085586624d716"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/nassau/illustration-qa-extra.json",
@@ -1130,9 +1130,292 @@
         "tiedosto": "Nassau - conch shells.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "836a23b7047697263a30d535db52048cb05e0ee77bc09253cb62d84b11edcb68",
+      "sourceContentAfterSHA256": "9ee0363e287ef499d1c26c8ac5bc77a947c54e226ed1e58757fbe0b69d1a88de",
       "targetAfterSHA256": "cac6e12bd4e5c88d5c5d180c2fd6f44cebb81d5ff9926ee36737315116d3a115",
       "contextAfterSHA256": "cac6e12bd4e5c88d5c5d180c2fd6f44cebb81d5ff9926ee36737315116d3a115"
+    },
+    {
+      "era": "e12",
+      "city": "nassau",
+      "slot": "C1",
+      "type": "commons",
+      "assetID": "capital-cc-e12-nassau-c1-a63ccb494b6c1a66",
+      "galleryImageID": "capital-cc-e12-nassau-c1-a63ccb494b6c1a66",
+      "commonsFile": "Nassau, The Bahamas (satellite view).jpg",
+      "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "kansikuvat",
+        0
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/nassau/c1-a63ccb494b6c1a669a46.jpg",
+        "suora": true,
+        "lahde": "Axelspace Corporation, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Nassau ja New Providencen itäosa Hodoyoshi-1-satelliitista heinäkuussa 2017.",
+        "lyhyt": "Nassau ja New Providencen itäosa Hodoyoshi-1-satelliitista heinäkuussa 2017.",
+        "tiedosto": "Nassau, The Bahamas (satellite view).jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Axelspace Corporation, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Nassau ja New Providencen itäosa Hodoyoshi-1-satelliitista heinäkuussa 2017.",
+        "lyhyt": "Nassau ja New Providencen itäosa Hodoyoshi-1-satelliitista heinäkuussa 2017.",
+        "tiedosto": "Nassau, The Bahamas (satellite view).jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/nassau/c1-a63ccb494b6c1a669a46.jpg",
+        "suora": true,
+        "lahde": "Axelspace Corporation, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Nassau ja New Providencen itäosa Hodoyoshi-1-satelliitista heinäkuussa 2017.",
+        "lyhyt": "Nassau ja New Providencen itäosa Hodoyoshi-1-satelliitista heinäkuussa 2017.",
+        "tiedosto": "Nassau, The Bahamas (satellite view).jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "a63ccb494b6c1a669a46d533309d4c2c1ae12aa08d10e55833265a4ee827b2f0",
+      "exportSHA256": "a63ccb494b6c1a669a46d533309d4c2c1ae12aa08d10e55833265a4ee827b2f0",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/nassau/c1-a63ccb494b6c1a669a46.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/nassau/c1-a63ccb494b6c1a669a46.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/commons-originals/e12/nassau/f1a61afac43bb054e0a59ecbe16d6e55bdb5709e31d38769f23d6e37c2fe1903.jpg",
+      "dimensions": [
+        2048,
+        1280
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/nassau/sisalto.json",
+      "sourceContentSHA256": "836a23b7047697263a30d535db52048cb05e0ee77bc09253cb62d84b11edcb68",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "subjectTitle": "Nassau",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Axelspace Corporation",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Nassau,_The_Bahamas_(satellite_view).jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/6/61/Nassau%2C_The_Bahamas_%28satellite_view%29.jpg",
+        "rightsEvidence": {
+          "selection": {
+            "photoLicense": "Tekijä Axelspace Corporation alkuperäisen tiedostosivun Author table -kentästä, ei uploaderista päätelty. Lisenssi CC BY-SA 4.0 tiedostosivusta.",
+            "placeEvidence": "English: Nassau, the Bahamas, as viewed by Hodoyoshi-1 satellite.",
+            "workLayer": "Alkuperäisen valokuvan tekijä on Axelspace Corporation, ei NASA eikä uploaderista päätelty. Commonsin tiedostosivun explicitAuthor/Attribution ja CC BY-SA4.0 sekä Source Axelspacen Hodoyoshi-1-kuva osoittavat kuvakohtaisen oikeuden. Aito ylhäältä otettu valokuva näyttää kaupungin katuverkon, sataman ja rannikon laajana; rakennukset näkyvät pieninä maanpinnan osina, ei suojattua rakennus- tai taideteosta pääaiheena. Ei rakennusiän PD- tai maa-FoP-oletusta. Description nimeää Nassau,the Bahamas,as viewed byHodoyoshi-1satellite.",
+            "visualInspection": "Alkuperäinen2048×1280 katsottu: kaupungin katuverkko, satama, rannikko ja matalat vesialueet näkyvät laajana todellisena asetteluna. Joitakin luonnollisia pilviä ja varjoja; kaupunki luettavissa. Ei ihmiskasvoja, lisättyä nimilappua/tekstiä, vesileimaa/logoja/kehyksiä tai graafista karttamerkintää. Kuva7.7.2017, ei tuoreeksi oppaaseen.",
+            "previousGameUse": [],
+            "sourceHtml": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/nassau/cc-search/da6b7887c834.html",
+            "sourceSha256": "f5abbd37a3cb898099b519856f6330d46b03a3e3d9fc72732a944b16694b341d",
+            "currentContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/nassau/sisalto.json",
+            "currentContentSHA256": "76571e04610b6d59a6d3b99ce50e59f317ffdafeca3c74af4e8d0f557111836d"
+          },
+          "QA": {
+            "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/nassau/cc-search/da6b7887c834-original.jpg",
+            "width": 2048,
+            "height": 1280,
+            "sha256": "a63ccb494b6c1a669a46d533309d4c2c1ae12aa08d10e55833265a4ee827b2f0",
+            "nativeGeometry": {
+              "rawWidth": 2048,
+              "rawHeight": 1280,
+              "exifOrientation": 1,
+              "width": 2048,
+              "height": 1280
+            },
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Nassau,_The_Bahamas_(satellite_view).jpg",
+            "sourcePagePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/nassau/qa-evidence/cc-source-snapshots/f5abbd37a3cb898099b519856f6330d46b03a3e3d9fc72732a944b16694b341d.html",
+            "sourcePageSHA256": "f5abbd37a3cb898099b519856f6330d46b03a3e3d9fc72732a944b16694b341d",
+            "upstreamSourcePagePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/lahdevarasto/feaf6151502a0e5db1feaaf8cddf2067dff0e338410dbba5dc752b14518db370.body",
+            "sourceFields": {
+              "Date": "7 July 2017",
+              "Source": "https://www.axelspace.com/en/hodoyoshi-1-images/nassau-bahamas_/",
+              "Author": "Axelspace Corp."
+            },
+            "authors": [
+              "Axelspace Corporation",
+              "Axelspace Corp."
+            ],
+            "authorOrigin": "Author table",
+            "licenseChoices": [
+              "CC BY-SA 4.0"
+            ],
+            "license": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+            "existingGameUse": [],
+            "sameCityOtherSlots": [],
+            "sameCityAcceptedQASlots": [],
+            "sameCityAcceptedNativeSHASlots": [],
+            "auditEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/nassau/qa-evidence/2e749b3d9a9c-technical-source.json",
+            "visualViewedByThisSession": true,
+            "nativeOriginalViewed": true,
+            "visualObservation": "Alkuperäinen 2048×1280 itse katsottu: Nassau/New Providencen laaja katuverkko, rannikko, satama ja matalat vesialueet Hodoyoshi-1-satelliitista. Pilviä ja varjoja on osin maan päällä, mutta todellisen kaupungin asettelu näkyy selvästi. Ei kasvoja, lisättyjä nimilappuja, vesileimaa, logoa tai kehystä. Pienet rakennukset ovat kaupunkikudosta, eivät yhden arkkitehtuuriteoksen pääaihe. Description yksilöi Nassau, the Bahamas, as viewed by Hodoyoshi-1 satellite; Author/Attribution Axelspace Corporation (metatietojen Axelspace Corp. sama yhtiö), CC BY-SA 4.0 ja Date 7.7.2017 lähdesivusta. Ei NASA-PD-oletusta eikä kuvaa merkitä nykytilaksi.",
+            "workLayerAssessment": "Alkuperäinen 2048×1280 itse katsottu: Nassau/New Providencen laaja katuverkko, rannikko, satama ja matalat vesialueet Hodoyoshi-1-satelliitista. Pilviä ja varjoja on osin maan päällä, mutta todellisen kaupungin asettelu näkyy selvästi. Ei kasvoja, lisättyjä nimilappuja, vesileimaa, logoa tai kehystä. Pienet rakennukset ovat kaupunkikudosta, eivät yhden arkkitehtuuriteoksen pääaihe. Description yksilöi Nassau, the Bahamas, as viewed by Hodoyoshi-1 satellite; Author/Attribution Axelspace Corporation (metatietojen Axelspace Corp. sama yhtiö), CC BY-SA 4.0 ja Date 7.7.2017 lähdesivusta. Ei NASA-PD-oletusta eikä kuvaa merkitä nykytilaksi.",
+            "ccFragment": "cc-selection.json",
+            "canonicalCaptureDate": "7 July 2017",
+            "coverLayoutAssessment": {
+              "passes": true,
+              "required": "broad real city/place view",
+              "observed": "Alkuperäinen 2048×1280 itse katsottu: Nassau/New Providencen laaja katuverkko, rannikko, satama ja matalat vesialueet Hodoyoshi-1-satelliitista. Pilviä ja varjoja on osin maan päällä, mutta todellisen kaupungin asettelu näkyy selvästi. Ei kasvoja, lisättyjä nimilappuja, vesileimaa, logoa tai kehystä. Pienet rakennukset ovat kaupunkikudosta, eivät yhden arkkitehtuuriteoksen pääaihe. Description yksilöi Nassau, the Bahamas, as viewed by Hodoyoshi-1 satellite; Author/Attribution Axelspace Corporation (metatietojen Axelspace Corp. sama yhtiö), CC BY-SA 4.0 ja Date 7.7.2017 lähdesivusta. Ei NASA-PD-oletusta eikä kuvaa merkitä nykytilaksi."
+            }
+          },
+          "qaReason": "Alkuperäinen 2048×1280 itse katsottu: Nassau/New Providencen laaja katuverkko, rannikko, satama ja matalat vesialueet Hodoyoshi-1-satelliitista. Pilviä ja varjoja on osin maan päällä, mutta todellisen kaupungin asettelu näkyy selvästi. Ei kasvoja, lisättyjä nimilappuja, vesileimaa, logoa tai kehystä. Pienet rakennukset ovat kaupunkikudosta, eivät yhden arkkitehtuuriteoksen pääaihe. Description yksilöi Nassau, the Bahamas, as viewed by Hodoyoshi-1 satellite; Author/Attribution Axelspace Corporation (metatietojen Axelspace Corp. sama yhtiö), CC BY-SA 4.0 ja Date 7.7.2017 lähdesivusta. Ei NASA-PD-oletusta eikä kuvaa merkitä nykytilaksi."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Nassau ja New Providencen itäosa Hodoyoshi-1-satelliitista heinäkuussa 2017.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/nassau/qa.json",
+        "fileSHA256": "63a1804b12b5f5c8cbcf5ce164b62a61fbae656b704c2d6e49e085586624d716",
+        "item": {
+          "slot": "C1",
+          "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
+          "commonsFile": "Nassau, The Bahamas (satellite view).jpg",
+          "type": "commons",
+          "sha256": "a63ccb494b6c1a669a46d533309d4c2c1ae12aa08d10e55833265a4ee827b2f0",
+          "nativeSHA256": "a63ccb494b6c1a669a46d533309d4c2c1ae12aa08d10e55833265a4ee827b2f0",
+          "nativeOriginalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/nassau/cc-search/da6b7887c834-original.jpg",
+          "verdict": "accepted",
+          "reason": "Alkuperäinen 2048×1280 itse katsottu: Nassau/New Providencen laaja katuverkko, rannikko, satama ja matalat vesialueet Hodoyoshi-1-satelliitista. Pilviä ja varjoja on osin maan päällä, mutta todellisen kaupungin asettelu näkyy selvästi. Ei kasvoja, lisättyjä nimilappuja, vesileimaa, logoa tai kehystä. Pienet rakennukset ovat kaupunkikudosta, eivät yhden arkkitehtuuriteoksen pääaihe. Description yksilöi Nassau, the Bahamas, as viewed by Hodoyoshi-1 satellite; Author/Attribution Axelspace Corporation (metatietojen Axelspace Corp. sama yhtiö), CC BY-SA 4.0 ja Date 7.7.2017 lähdesivusta. Ei NASA-PD-oletusta eikä kuvaa merkitä nykytilaksi.",
+          "evidence": {
+            "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/nassau/cc-search/da6b7887c834-original.jpg",
+            "width": 2048,
+            "height": 1280,
+            "sha256": "a63ccb494b6c1a669a46d533309d4c2c1ae12aa08d10e55833265a4ee827b2f0",
+            "nativeGeometry": {
+              "rawWidth": 2048,
+              "rawHeight": 1280,
+              "exifOrientation": 1,
+              "width": 2048,
+              "height": 1280
+            },
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Nassau,_The_Bahamas_(satellite_view).jpg",
+            "sourcePagePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/nassau/qa-evidence/cc-source-snapshots/f5abbd37a3cb898099b519856f6330d46b03a3e3d9fc72732a944b16694b341d.html",
+            "sourcePageSHA256": "f5abbd37a3cb898099b519856f6330d46b03a3e3d9fc72732a944b16694b341d",
+            "upstreamSourcePagePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/lahdevarasto/feaf6151502a0e5db1feaaf8cddf2067dff0e338410dbba5dc752b14518db370.body",
+            "sourceFields": {
+              "Date": "7 July 2017",
+              "Source": "https://www.axelspace.com/en/hodoyoshi-1-images/nassau-bahamas_/",
+              "Author": "Axelspace Corp."
+            },
+            "authors": [
+              "Axelspace Corporation",
+              "Axelspace Corp."
+            ],
+            "authorOrigin": "Author table",
+            "licenseChoices": [
+              "CC BY-SA 4.0"
+            ],
+            "license": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+            "existingGameUse": [],
+            "sameCityOtherSlots": [],
+            "sameCityAcceptedQASlots": [],
+            "sameCityAcceptedNativeSHASlots": [],
+            "auditEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/nassau/qa-evidence/2e749b3d9a9c-technical-source.json",
+            "visualViewedByThisSession": true,
+            "nativeOriginalViewed": true,
+            "visualObservation": "Alkuperäinen 2048×1280 itse katsottu: Nassau/New Providencen laaja katuverkko, rannikko, satama ja matalat vesialueet Hodoyoshi-1-satelliitista. Pilviä ja varjoja on osin maan päällä, mutta todellisen kaupungin asettelu näkyy selvästi. Ei kasvoja, lisättyjä nimilappuja, vesileimaa, logoa tai kehystä. Pienet rakennukset ovat kaupunkikudosta, eivät yhden arkkitehtuuriteoksen pääaihe. Description yksilöi Nassau, the Bahamas, as viewed by Hodoyoshi-1 satellite; Author/Attribution Axelspace Corporation (metatietojen Axelspace Corp. sama yhtiö), CC BY-SA 4.0 ja Date 7.7.2017 lähdesivusta. Ei NASA-PD-oletusta eikä kuvaa merkitä nykytilaksi.",
+            "workLayerAssessment": "Alkuperäinen 2048×1280 itse katsottu: Nassau/New Providencen laaja katuverkko, rannikko, satama ja matalat vesialueet Hodoyoshi-1-satelliitista. Pilviä ja varjoja on osin maan päällä, mutta todellisen kaupungin asettelu näkyy selvästi. Ei kasvoja, lisättyjä nimilappuja, vesileimaa, logoa tai kehystä. Pienet rakennukset ovat kaupunkikudosta, eivät yhden arkkitehtuuriteoksen pääaihe. Description yksilöi Nassau, the Bahamas, as viewed by Hodoyoshi-1 satellite; Author/Attribution Axelspace Corporation (metatietojen Axelspace Corp. sama yhtiö), CC BY-SA 4.0 ja Date 7.7.2017 lähdesivusta. Ei NASA-PD-oletusta eikä kuvaa merkitä nykytilaksi.",
+            "ccFragment": "cc-selection.json",
+            "canonicalCaptureDate": "7 July 2017",
+            "coverLayoutAssessment": {
+              "passes": true,
+              "required": "broad real city/place view",
+              "observed": "Alkuperäinen 2048×1280 itse katsottu: Nassau/New Providencen laaja katuverkko, rannikko, satama ja matalat vesialueet Hodoyoshi-1-satelliitista. Pilviä ja varjoja on osin maan päällä, mutta todellisen kaupungin asettelu näkyy selvästi. Ei kasvoja, lisättyjä nimilappuja, vesileimaa, logoa tai kehystä. Pienet rakennukset ovat kaupunkikudosta, eivät yhden arkkitehtuuriteoksen pääaihe. Description yksilöi Nassau, the Bahamas, as viewed by Hodoyoshi-1 satellite; Author/Attribution Axelspace Corporation (metatietojen Axelspace Corp. sama yhtiö), CC BY-SA 4.0 ja Date 7.7.2017 lähdesivusta. Ei NASA-PD-oletusta eikä kuvaa merkitä nykytilaksi."
+            }
+          },
+          "checkedAt": "2026-10-12T20:46:54.068953+00:00",
+          "contentSHA256": "836a23b7047697263a30d535db52048cb05e0ee77bc09253cb62d84b11edcb68",
+          "targetSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/nassau/qa.json",
+            "sha256": "63a1804b12b5f5c8cbcf5ce164b62a61fbae656b704c2d6e49e085586624d716"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/nassau/illustration-qa-extra.json",
+            "sha256": "90a3935f9c49a641c384f0dc375b4266e0dd746d3a555336f208e0dcdd5e668d"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e12",
+        "city": "nassau",
+        "slot": "C1",
+        "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
+        "commonsFile": "Nassau, The Bahamas (satellite view).jpg",
+        "sha256": "a63ccb494b6c1a669a46d533309d4c2c1ae12aa08d10e55833265a4ee827b2f0",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Nassau,_The_Bahamas_(satellite_view).jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/6/61/Nassau%2C_The_Bahamas_%28satellite_view%29.jpg",
+        "author": "Axelspace Corporation",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+        "width": 2048,
+        "height": 1280,
+        "originalSHA256": "a63ccb494b6c1a669a46d533309d4c2c1ae12aa08d10e55833265a4ee827b2f0",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/nassau/c1-a63ccb494b6c1a669a46.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/nassau/c1-a63ccb494b6c1a669a46.jpg",
+        "bytes": 826119,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T20:47:34.583335+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Axelspace Corporation, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Nassau ja New Providencen itäosa Hodoyoshi-1-satelliitista heinäkuussa 2017.",
+        "lyhyt": "Nassau ja New Providencen itäosa Hodoyoshi-1-satelliitista heinäkuussa 2017.",
+        "tiedosto": "Nassau, The Bahamas (satellite view).jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "9ee0363e287ef499d1c26c8ac5bc77a947c54e226ed1e58757fbe0b69d1a88de",
+      "targetAfterSHA256": "57e7cc6ac3b2c19da2514841987e79f90d8662bcc310c0a4c97d3cb24d06524c",
+      "contextAfterSHA256": "57e7cc6ac3b2c19da2514841987e79f90d8662bcc310c0a4c97d3cb24d06524c"
     },
     {
       "era": "e12",
@@ -1267,7 +1550,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/nassau/qa.json",
-        "fileSHA256": "e6b0a3df70b7ce166906c6522b1277169f7c8424dcda59e51fc65170585e49fd",
+        "fileSHA256": "63a1804b12b5f5c8cbcf5ce164b62a61fbae656b704c2d6e49e085586624d716",
         "item": {
           "slot": "C2",
           "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[1]",
@@ -1330,7 +1613,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/nassau/qa.json",
-            "sha256": "e6b0a3df70b7ce166906c6522b1277169f7c8424dcda59e51fc65170585e49fd"
+            "sha256": "63a1804b12b5f5c8cbcf5ce164b62a61fbae656b704c2d6e49e085586624d716"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/nassau/illustration-qa-extra.json",
@@ -1405,7 +1688,7 @@
         "tiedosto": "Nassau, The Bahamas (Unsplash 6ieXV38E3h8).jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "836a23b7047697263a30d535db52048cb05e0ee77bc09253cb62d84b11edcb68",
+      "sourceContentAfterSHA256": "9ee0363e287ef499d1c26c8ac5bc77a947c54e226ed1e58757fbe0b69d1a88de",
       "targetAfterSHA256": "e64115ed0a6ddb7248578efedfed722ef0d2ff504277404aa9d278281d3e4924",
       "contextAfterSHA256": "e64115ed0a6ddb7248578efedfed722ef0d2ff504277404aa9d278281d3e4924"
     },
@@ -1546,7 +1829,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/nassau/qa.json",
-        "fileSHA256": "e6b0a3df70b7ce166906c6522b1277169f7c8424dcda59e51fc65170585e49fd",
+        "fileSHA256": "63a1804b12b5f5c8cbcf5ce164b62a61fbae656b704c2d6e49e085586624d716",
         "item": {
           "slot": "C3",
           "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[2]",
@@ -1613,7 +1896,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/nassau/qa.json",
-            "sha256": "e6b0a3df70b7ce166906c6522b1277169f7c8424dcda59e51fc65170585e49fd"
+            "sha256": "63a1804b12b5f5c8cbcf5ce164b62a61fbae656b704c2d6e49e085586624d716"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/nassau/illustration-qa-extra.json",
@@ -1688,7 +1971,7 @@
         "tiedosto": "Nirvanha Beach - panoramio.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "836a23b7047697263a30d535db52048cb05e0ee77bc09253cb62d84b11edcb68",
+      "sourceContentAfterSHA256": "9ee0363e287ef499d1c26c8ac5bc77a947c54e226ed1e58757fbe0b69d1a88de",
       "targetAfterSHA256": "4622f7699dc484e79d595ed6f21a4688899296d97e09a74b6b59516703b1f2d5",
       "contextAfterSHA256": "4622f7699dc484e79d595ed6f21a4688899296d97e09a74b6b59516703b1f2d5"
     }

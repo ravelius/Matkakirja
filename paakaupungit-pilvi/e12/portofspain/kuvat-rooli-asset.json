@@ -3,7 +3,7 @@
   "era": "e12",
   "city": "portofspain",
   "authorization": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
-  "sourceContentAfterSHA256": "c3ea2c54ea6afadcf4eb81779ab41f1c5254a5c42114bdc0ac959ce0ff155c74",
+  "sourceContentAfterSHA256": "76311394847cd4a923031a237ebda82e6df27cbd26922ac6965cac714eff7900",
   "assets": [
     {
       "era": "e12",
@@ -166,7 +166,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/portofspain/qa.json",
-        "fileSHA256": "bc36b5925bc6551fcbd73287c8950e3aa3031716e205fe26920f3baec919123b",
+        "fileSHA256": "ee06a8a063e9ead493eba8d98236f902b4cc776df48546fd13daa73888d52cbd",
         "item": {
           "slot": "O4",
           "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
@@ -474,11 +474,11 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/portofspain/qa.json",
-            "sha256": "bc36b5925bc6551fcbd73287c8950e3aa3031716e205fe26920f3baec919123b"
+            "sha256": "ee06a8a063e9ead493eba8d98236f902b4cc776df48546fd13daa73888d52cbd"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/portofspain/illustration-qa-extra.json",
-            "sha256": "e381bd27e0ec04ccd27d44e508394aa886b5f8105c5894fd62d2cb3a2e3a88a3"
+            "sha256": "164a01f817bcc680b22d37e27b1ef52656493db0be817e2ccf497f3859478a97"
           }
         ]
       },
@@ -561,7 +561,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "c3ea2c54ea6afadcf4eb81779ab41f1c5254a5c42114bdc0ac959ce0ff155c74",
+      "sourceContentAfterSHA256": "76311394847cd4a923031a237ebda82e6df27cbd26922ac6965cac714eff7900",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
       "contextAfterSHA256": "921b884901694ef5e2b1ab3e7d744e4b738de45397e85d1b782badde0c54d0b0"
     },
@@ -729,7 +729,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/portofspain/qa.json",
-        "fileSHA256": "bc36b5925bc6551fcbd73287c8950e3aa3031716e205fe26920f3baec919123b",
+        "fileSHA256": "ee06a8a063e9ead493eba8d98236f902b4cc776df48546fd13daa73888d52cbd",
         "item": {
           "slot": "L3",
           "targetJsonPath": "$.kaupunkilehti[1].nostot[2]",
@@ -972,11 +972,11 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/portofspain/qa.json",
-            "sha256": "bc36b5925bc6551fcbd73287c8950e3aa3031716e205fe26920f3baec919123b"
+            "sha256": "ee06a8a063e9ead493eba8d98236f902b4cc776df48546fd13daa73888d52cbd"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/portofspain/illustration-qa-extra.json",
-            "sha256": "e381bd27e0ec04ccd27d44e508394aa886b5f8105c5894fd62d2cb3a2e3a88a3"
+            "sha256": "164a01f817bcc680b22d37e27b1ef52656493db0be817e2ccf497f3859478a97"
           }
         ]
       },
@@ -1059,9 +1059,452 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "c3ea2c54ea6afadcf4eb81779ab41f1c5254a5c42114bdc0ac959ce0ff155c74",
+      "sourceContentAfterSHA256": "76311394847cd4a923031a237ebda82e6df27cbd26922ac6965cac714eff7900",
       "targetAfterSHA256": "0f7545410f18a373168312d864f0707e49902a3eae44e74669dd0f49039aedc1",
       "contextAfterSHA256": "0f7545410f18a373168312d864f0707e49902a3eae44e74669dd0f49039aedc1"
+    },
+    {
+      "era": "e12",
+      "city": "portofspain",
+      "slot": "L4",
+      "type": "illustration",
+      "assetID": "e12-portofspain-L4-1eb9a5d265",
+      "galleryImageID": "e12-portofspain-L4-1eb9a5d265",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
+      "targetTokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        3
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/portofspain/e12-portofspain-L4-1eb9a5d265-22830aa74741.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Puun ja tiilen havainnekuva Port of Spainin rakennustavan muutoksen aiheeseen.",
+        "lyhyt": "Puun ja tiilen havainnekuva Port of Spainin rakennustavan muutoksen aiheeseen."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/portofspain/e12-portofspain-L4-1eb9a5d265-22830aa74741.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Puun ja tiilen havainnekuva Port of Spainin rakennustavan muutoksen aiheeseen.",
+        "lyhyt": "Puun ja tiilen havainnekuva Port of Spainin rakennustavan muutoksen aiheeseen."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "22830aa74741c957625dab32cf99a8178ffd659b52ec805cc529271e00eadde5",
+      "exportSHA256": "981f5fd4d77d21b57c564bb57c1366fe229868cac175fbdf513e9b4eb803eb03",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/portofspain/e12-portofspain-L4-1eb9a5d265-22830aa74741.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/portofspain/e12-portofspain-L4-1eb9a5d265-22830aa74741.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e12/portofspain/e12-portofspain-L4-1eb9a5d265-22830aa74741.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/portofspain/sisalto.json",
+      "sourceContentSHA256": "c3ea2c54ea6afadcf4eb81779ab41f1c5254a5c42114bdc0ac959ce0ff155c74",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "be4a276756130fa70a274cd7730161528852ac981bf403e68ddeecc26e9cfe56",
+        "semanticContextSHA256": "be4a276756130fa70a274cd7730161528852ac981bf403e68ddeecc26e9cfe56",
+        "subjectTitle": "Tulipalo muutti rakennustapaa",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Tavallinen lähteessä nimetty kasvi, eläin, materiaali tai arkiesine; yleistetty havainnollistus, ei nimetyn paikan valokuva tai suojatun teoksen jäljennös.",
+          "QA": {
+            "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/portofspain/assets/e12-portofspain-L4-1eb9a5d265/original.png",
+            "width": 1536,
+            "height": 1024,
+            "sha256": "22830aa74741c957625dab32cf99a8178ffd659b52ec805cc529271e00eadde5",
+            "nativeGeometry": {
+              "rawWidth": 1536,
+              "rawHeight": 1024,
+              "exifOrientation": 1,
+              "width": 1536,
+              "height": 1024
+            },
+            "auditEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/portofspain/qa-evidence/3c5e5a04658f-technical-source.json",
+            "visualViewedByThisSession": false,
+            "visualReviewSource": "independent extra reviewer; not personally viewed here",
+            "independentReview": {
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/portofspain/illustration-qa-extra.json",
+              "sha256": "164a01f817bcc680b22d37e27b1ef52656493db0be817e2ccf497f3859478a97",
+              "reviewerGroup": "kuvitus-3",
+              "assetID": "e12-portofspain-L4-1eb9a5d265",
+              "nativeSHA256": "22830aa74741c957625dab32cf99a8178ffd659b52ec805cc529271e00eadde5",
+              "verdict": "accepted",
+              "reason": "Puutavaran ja tiilen materiaalihavainne vastaa L4-noston rakentamistavan muutosta. Yleistetty kuvateksti ei esitä keksittyä Port of Spainin rakennusta. Native-SHA ja toteutuneet mitat täsmäävät.",
+              "evidence": {
+                "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/portofspain/assets/e12-portofspain-L4-1eb9a5d265/original.png",
+                "nativeSHA256": "22830aa74741c957625dab32cf99a8178ffd659b52ec805cc529271e00eadde5",
+                "nativeWidth": 1536,
+                "nativeHeight": 1024,
+                "nativeAspectRatio": 1.5,
+                "format": "PNG",
+                "pngChunks": [
+                  "IHDR",
+                  "caBX",
+                  "IDAT",
+                  "IEND"
+                ],
+                "manifestMatch": true,
+                "captionFi": "Puun ja tiilen havainnekuva Port of Spainin rakennustavan muutoksen aiheeseen.",
+                "sourceEvidence": {
+                  "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/portofspain/sisalto.json",
+                  "contentSHA256": "07e34b9ccb7525f4b0410b0b7b15808fd1969b1e81b2d73c38f5e056977f6360",
+                  "sourceText": "Port of Spain kasvoi pitkään puutalojen kaupunkina. Suuri tulipalo 1800-luvun alussa tuhosi kaupunkia, minkä jälkeen rakentamista alettiin säädellä tarkemmin ja uusia hallintorakennuksia tehtiin tiilestä. Tapahtuma muutti muutakin kuin yksittäisiä taloja: siitä tuli raja vanhan ja uuden rakennustavan välille. Kaupungin nykyisessä arkkitehtuurissa puu ei silti kadonnut. Koristeellinen puutyö ja rautaiset kaiteet kuuluvat edelleen talojen ilmeeseen, vaikka niiden rinnalla ovat kivikirkot ja korkeat toimistorakennukset.",
+                  "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/portofspain/faktapohja.md",
+                  "originalSources": [
+                    "https://en.wikipedia.org/wiki/Port_of_Spain"
+                  ],
+                  "ccRelease": {},
+                  "generationAuthorization": {
+                    "rule": "OHJEET: turvallinen yleishavainnollistus ilman CC-odotusta",
+                    "sharedReservationRecord": "/Volumes/T7 4TB/ChatGPT-Codex-active/coordination/paakaupungit-claims/08391cff28146b17/e12/portofspain/L4/owner.json",
+                    "ccReleaseRequired": false,
+                    "scope": "lähdeperustainen turvallinen avoin mixed; ei PHOTO/C1-C3 tai nimetty kaupunkiasettelu"
+                  }
+                },
+                "rightsEvidence": "Tavallinen lähteessä nimetty kasvi, eläin, materiaali tai arkiesine; yleistetty havainnollistus, ei nimetyn paikan valokuva tai suojatun teoksen jäljennös.",
+                "content": {
+                  "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/portofspain/sisalto.json",
+                  "contentSHA256": "c3ea2c54ea6afadcf4eb81779ab41f1c5254a5c42114bdc0ac959ce0ff155c74",
+                  "targetObjectExists": true,
+                  "targetContainer": "$.kaupunkilehti[1].nostot[3]",
+                  "targetText": {
+                    "otsikko": "Tulipalo muutti rakennustapaa",
+                    "teksti": "Port of Spain kasvoi pitkään puutalojen kaupunkina. Suuri tulipalo 1800-luvun alussa tuhosi kaupunkia, minkä jälkeen rakentamista alettiin säädellä tarkemmin ja uusia hallintorakennuksia tehtiin tiilestä. Tapahtuma muutti muutakin kuin yksittäisiä taloja: siitä tuli raja vanhan ja uuden rakennustavan välille. Kaupungin nykyisessä arkkitehtuurissa puu ei silti kadonnut. Koristeellinen puutyö ja rautaiset kaiteet kuuluvat edelleen talojen ilmeeseen, vaikka niiden rinnalla ovat kivikirkot ja korkeat toimistorakennukset.",
+                    "tiedosto": "",
+                    "lyhyt": "",
+                    "selite": "",
+                    "lahde": "",
+                    "wiki": "Port of Spain"
+                  },
+                  "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/portofspain/faktapohja.md",
+                  "factSheetSHA256": "4a4d3821d8b3bcfe4428b5c7ebb5528498c49347d8e19df2bc3913604cf280d5",
+                  "factAssessment": "faktapohja.md rivi 37: tulipalo, rakentamisen sääntely ja hallintorakennusten tiili, S1 History/Culture."
+                },
+                "visualInspection": {
+                  "tool": "view_image",
+                  "detail": "original",
+                  "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/portofspain/assets/e12-portofspain-L4-1eb9a5d265/original.png",
+                  "inspectedBy": "qa-e12",
+                  "inspectedAt": "2026-10-12 20:45:48 UTC",
+                  "observations": "Yksi suorakulmainen puupala ja yksi punainen huokoinen tiili neutraalilla pinnalla. Päätypinnan vuosirenkaat jatkuvat loogisesti sivun syihin; halkeama jatkuu päädystä sivuun. Tiilen huokoset ja kulumat vaihtelevat. Ei tekstiä, logoja, ihmisiä tai rakennusta."
+                },
+                "otherReviewerVerdicts": [],
+                "openConflict": false,
+                "ownershipMarker": "qa-handoff-kuvitus-3.json"
+              },
+              "opinionSHA256": "ffec60bec1b156893baf94e45e9bff63cef518a54e33067eee8ce6fc65374bc4",
+              "capturedSourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/portofspain/qa-evidence/extra-review-snapshots/164a01f817bcc680b22d37e27b1ef52656493db0be817e2ccf497f3859478a97.json"
+            },
+            "imageType": "illustration",
+            "captionFi": "Puun ja tiilen havainnekuva Port of Spainin rakennustavan muutoksen aiheeseen.",
+            "realPlacePhotograph": false
+          },
+          "qaReason": "Lisätarkistajan kuvitus-3 dokumentoitu arvio täsmälleen samasta assetID/nativeSHA-versiosta: Puutavaran ja tiilen materiaalihavainne vastaa L4-noston rakentamistavan muutosta. Yleistetty kuvateksti ei esitä keksittyä Port of Spainin rakennusta. Native-SHA ja toteutuneet mitat täsmäävät."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Puun ja tiilen havainnekuva Port of Spainin rakennustavan muutoksen aiheeseen.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/portofspain/qa.json",
+        "fileSHA256": "ee06a8a063e9ead493eba8d98236f902b4cc776df48546fd13daa73888d52cbd",
+        "item": {
+          "slot": "L4",
+          "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
+          "assetID": "e12-portofspain-L4-1eb9a5d265",
+          "sha256": "22830aa74741c957625dab32cf99a8178ffd659b52ec805cc529271e00eadde5",
+          "verdict": "accepted",
+          "reason": "Lisätarkistajan kuvitus-3 dokumentoitu arvio täsmälleen samasta assetID/nativeSHA-versiosta: Puutavaran ja tiilen materiaalihavainne vastaa L4-noston rakentamistavan muutosta. Yleistetty kuvateksti ei esitä keksittyä Port of Spainin rakennusta. Native-SHA ja toteutuneet mitat täsmäävät.",
+          "evidence": {
+            "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/portofspain/assets/e12-portofspain-L4-1eb9a5d265/original.png",
+            "width": 1536,
+            "height": 1024,
+            "sha256": "22830aa74741c957625dab32cf99a8178ffd659b52ec805cc529271e00eadde5",
+            "nativeGeometry": {
+              "rawWidth": 1536,
+              "rawHeight": 1024,
+              "exifOrientation": 1,
+              "width": 1536,
+              "height": 1024
+            },
+            "auditEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/portofspain/qa-evidence/3c5e5a04658f-technical-source.json",
+            "visualViewedByThisSession": false,
+            "visualReviewSource": "independent extra reviewer; not personally viewed here",
+            "independentReview": {
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/portofspain/illustration-qa-extra.json",
+              "sha256": "164a01f817bcc680b22d37e27b1ef52656493db0be817e2ccf497f3859478a97",
+              "reviewerGroup": "kuvitus-3",
+              "assetID": "e12-portofspain-L4-1eb9a5d265",
+              "nativeSHA256": "22830aa74741c957625dab32cf99a8178ffd659b52ec805cc529271e00eadde5",
+              "verdict": "accepted",
+              "reason": "Puutavaran ja tiilen materiaalihavainne vastaa L4-noston rakentamistavan muutosta. Yleistetty kuvateksti ei esitä keksittyä Port of Spainin rakennusta. Native-SHA ja toteutuneet mitat täsmäävät.",
+              "evidence": {
+                "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/portofspain/assets/e12-portofspain-L4-1eb9a5d265/original.png",
+                "nativeSHA256": "22830aa74741c957625dab32cf99a8178ffd659b52ec805cc529271e00eadde5",
+                "nativeWidth": 1536,
+                "nativeHeight": 1024,
+                "nativeAspectRatio": 1.5,
+                "format": "PNG",
+                "pngChunks": [
+                  "IHDR",
+                  "caBX",
+                  "IDAT",
+                  "IEND"
+                ],
+                "manifestMatch": true,
+                "captionFi": "Puun ja tiilen havainnekuva Port of Spainin rakennustavan muutoksen aiheeseen.",
+                "sourceEvidence": {
+                  "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/portofspain/sisalto.json",
+                  "contentSHA256": "07e34b9ccb7525f4b0410b0b7b15808fd1969b1e81b2d73c38f5e056977f6360",
+                  "sourceText": "Port of Spain kasvoi pitkään puutalojen kaupunkina. Suuri tulipalo 1800-luvun alussa tuhosi kaupunkia, minkä jälkeen rakentamista alettiin säädellä tarkemmin ja uusia hallintorakennuksia tehtiin tiilestä. Tapahtuma muutti muutakin kuin yksittäisiä taloja: siitä tuli raja vanhan ja uuden rakennustavan välille. Kaupungin nykyisessä arkkitehtuurissa puu ei silti kadonnut. Koristeellinen puutyö ja rautaiset kaiteet kuuluvat edelleen talojen ilmeeseen, vaikka niiden rinnalla ovat kivikirkot ja korkeat toimistorakennukset.",
+                  "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/portofspain/faktapohja.md",
+                  "originalSources": [
+                    "https://en.wikipedia.org/wiki/Port_of_Spain"
+                  ],
+                  "ccRelease": {},
+                  "generationAuthorization": {
+                    "rule": "OHJEET: turvallinen yleishavainnollistus ilman CC-odotusta",
+                    "sharedReservationRecord": "/Volumes/T7 4TB/ChatGPT-Codex-active/coordination/paakaupungit-claims/08391cff28146b17/e12/portofspain/L4/owner.json",
+                    "ccReleaseRequired": false,
+                    "scope": "lähdeperustainen turvallinen avoin mixed; ei PHOTO/C1-C3 tai nimetty kaupunkiasettelu"
+                  }
+                },
+                "rightsEvidence": "Tavallinen lähteessä nimetty kasvi, eläin, materiaali tai arkiesine; yleistetty havainnollistus, ei nimetyn paikan valokuva tai suojatun teoksen jäljennös.",
+                "content": {
+                  "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/portofspain/sisalto.json",
+                  "contentSHA256": "c3ea2c54ea6afadcf4eb81779ab41f1c5254a5c42114bdc0ac959ce0ff155c74",
+                  "targetObjectExists": true,
+                  "targetContainer": "$.kaupunkilehti[1].nostot[3]",
+                  "targetText": {
+                    "otsikko": "Tulipalo muutti rakennustapaa",
+                    "teksti": "Port of Spain kasvoi pitkään puutalojen kaupunkina. Suuri tulipalo 1800-luvun alussa tuhosi kaupunkia, minkä jälkeen rakentamista alettiin säädellä tarkemmin ja uusia hallintorakennuksia tehtiin tiilestä. Tapahtuma muutti muutakin kuin yksittäisiä taloja: siitä tuli raja vanhan ja uuden rakennustavan välille. Kaupungin nykyisessä arkkitehtuurissa puu ei silti kadonnut. Koristeellinen puutyö ja rautaiset kaiteet kuuluvat edelleen talojen ilmeeseen, vaikka niiden rinnalla ovat kivikirkot ja korkeat toimistorakennukset.",
+                    "tiedosto": "",
+                    "lyhyt": "",
+                    "selite": "",
+                    "lahde": "",
+                    "wiki": "Port of Spain"
+                  },
+                  "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/portofspain/faktapohja.md",
+                  "factSheetSHA256": "4a4d3821d8b3bcfe4428b5c7ebb5528498c49347d8e19df2bc3913604cf280d5",
+                  "factAssessment": "faktapohja.md rivi 37: tulipalo, rakentamisen sääntely ja hallintorakennusten tiili, S1 History/Culture."
+                },
+                "visualInspection": {
+                  "tool": "view_image",
+                  "detail": "original",
+                  "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/portofspain/assets/e12-portofspain-L4-1eb9a5d265/original.png",
+                  "inspectedBy": "qa-e12",
+                  "inspectedAt": "2026-10-12 20:45:48 UTC",
+                  "observations": "Yksi suorakulmainen puupala ja yksi punainen huokoinen tiili neutraalilla pinnalla. Päätypinnan vuosirenkaat jatkuvat loogisesti sivun syihin; halkeama jatkuu päädystä sivuun. Tiilen huokoset ja kulumat vaihtelevat. Ei tekstiä, logoja, ihmisiä tai rakennusta."
+                },
+                "otherReviewerVerdicts": [],
+                "openConflict": false,
+                "ownershipMarker": "qa-handoff-kuvitus-3.json"
+              },
+              "opinionSHA256": "ffec60bec1b156893baf94e45e9bff63cef518a54e33067eee8ce6fc65374bc4",
+              "capturedSourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/portofspain/qa-evidence/extra-review-snapshots/164a01f817bcc680b22d37e27b1ef52656493db0be817e2ccf497f3859478a97.json"
+            },
+            "imageType": "illustration",
+            "captionFi": "Puun ja tiilen havainnekuva Port of Spainin rakennustavan muutoksen aiheeseen.",
+            "realPlacePhotograph": false
+          },
+          "importedIndependentReview": true,
+          "independentReviews": [
+            {
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/portofspain/illustration-qa-extra.json",
+              "sha256": "164a01f817bcc680b22d37e27b1ef52656493db0be817e2ccf497f3859478a97",
+              "reviewerGroup": "kuvitus-3",
+              "assetID": "e12-portofspain-L4-1eb9a5d265",
+              "nativeSHA256": "22830aa74741c957625dab32cf99a8178ffd659b52ec805cc529271e00eadde5",
+              "verdict": "accepted",
+              "reason": "Puutavaran ja tiilen materiaalihavainne vastaa L4-noston rakentamistavan muutosta. Yleistetty kuvateksti ei esitä keksittyä Port of Spainin rakennusta. Native-SHA ja toteutuneet mitat täsmäävät.",
+              "evidence": {
+                "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/portofspain/assets/e12-portofspain-L4-1eb9a5d265/original.png",
+                "nativeSHA256": "22830aa74741c957625dab32cf99a8178ffd659b52ec805cc529271e00eadde5",
+                "nativeWidth": 1536,
+                "nativeHeight": 1024,
+                "nativeAspectRatio": 1.5,
+                "format": "PNG",
+                "pngChunks": [
+                  "IHDR",
+                  "caBX",
+                  "IDAT",
+                  "IEND"
+                ],
+                "manifestMatch": true,
+                "captionFi": "Puun ja tiilen havainnekuva Port of Spainin rakennustavan muutoksen aiheeseen.",
+                "sourceEvidence": {
+                  "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/portofspain/sisalto.json",
+                  "contentSHA256": "07e34b9ccb7525f4b0410b0b7b15808fd1969b1e81b2d73c38f5e056977f6360",
+                  "sourceText": "Port of Spain kasvoi pitkään puutalojen kaupunkina. Suuri tulipalo 1800-luvun alussa tuhosi kaupunkia, minkä jälkeen rakentamista alettiin säädellä tarkemmin ja uusia hallintorakennuksia tehtiin tiilestä. Tapahtuma muutti muutakin kuin yksittäisiä taloja: siitä tuli raja vanhan ja uuden rakennustavan välille. Kaupungin nykyisessä arkkitehtuurissa puu ei silti kadonnut. Koristeellinen puutyö ja rautaiset kaiteet kuuluvat edelleen talojen ilmeeseen, vaikka niiden rinnalla ovat kivikirkot ja korkeat toimistorakennukset.",
+                  "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/portofspain/faktapohja.md",
+                  "originalSources": [
+                    "https://en.wikipedia.org/wiki/Port_of_Spain"
+                  ],
+                  "ccRelease": {},
+                  "generationAuthorization": {
+                    "rule": "OHJEET: turvallinen yleishavainnollistus ilman CC-odotusta",
+                    "sharedReservationRecord": "/Volumes/T7 4TB/ChatGPT-Codex-active/coordination/paakaupungit-claims/08391cff28146b17/e12/portofspain/L4/owner.json",
+                    "ccReleaseRequired": false,
+                    "scope": "lähdeperustainen turvallinen avoin mixed; ei PHOTO/C1-C3 tai nimetty kaupunkiasettelu"
+                  }
+                },
+                "rightsEvidence": "Tavallinen lähteessä nimetty kasvi, eläin, materiaali tai arkiesine; yleistetty havainnollistus, ei nimetyn paikan valokuva tai suojatun teoksen jäljennös.",
+                "content": {
+                  "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/portofspain/sisalto.json",
+                  "contentSHA256": "c3ea2c54ea6afadcf4eb81779ab41f1c5254a5c42114bdc0ac959ce0ff155c74",
+                  "targetObjectExists": true,
+                  "targetContainer": "$.kaupunkilehti[1].nostot[3]",
+                  "targetText": {
+                    "otsikko": "Tulipalo muutti rakennustapaa",
+                    "teksti": "Port of Spain kasvoi pitkään puutalojen kaupunkina. Suuri tulipalo 1800-luvun alussa tuhosi kaupunkia, minkä jälkeen rakentamista alettiin säädellä tarkemmin ja uusia hallintorakennuksia tehtiin tiilestä. Tapahtuma muutti muutakin kuin yksittäisiä taloja: siitä tuli raja vanhan ja uuden rakennustavan välille. Kaupungin nykyisessä arkkitehtuurissa puu ei silti kadonnut. Koristeellinen puutyö ja rautaiset kaiteet kuuluvat edelleen talojen ilmeeseen, vaikka niiden rinnalla ovat kivikirkot ja korkeat toimistorakennukset.",
+                    "tiedosto": "",
+                    "lyhyt": "",
+                    "selite": "",
+                    "lahde": "",
+                    "wiki": "Port of Spain"
+                  },
+                  "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/portofspain/faktapohja.md",
+                  "factSheetSHA256": "4a4d3821d8b3bcfe4428b5c7ebb5528498c49347d8e19df2bc3913604cf280d5",
+                  "factAssessment": "faktapohja.md rivi 37: tulipalo, rakentamisen sääntely ja hallintorakennusten tiili, S1 History/Culture."
+                },
+                "visualInspection": {
+                  "tool": "view_image",
+                  "detail": "original",
+                  "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/portofspain/assets/e12-portofspain-L4-1eb9a5d265/original.png",
+                  "inspectedBy": "qa-e12",
+                  "inspectedAt": "2026-10-12 20:45:48 UTC",
+                  "observations": "Yksi suorakulmainen puupala ja yksi punainen huokoinen tiili neutraalilla pinnalla. Päätypinnan vuosirenkaat jatkuvat loogisesti sivun syihin; halkeama jatkuu päädystä sivuun. Tiilen huokoset ja kulumat vaihtelevat. Ei tekstiä, logoja, ihmisiä tai rakennusta."
+                },
+                "otherReviewerVerdicts": [],
+                "openConflict": false,
+                "ownershipMarker": "qa-handoff-kuvitus-3.json"
+              },
+              "opinionSHA256": "ffec60bec1b156893baf94e45e9bff63cef518a54e33067eee8ce6fc65374bc4",
+              "capturedSourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/portofspain/qa-evidence/extra-review-snapshots/164a01f817bcc680b22d37e27b1ef52656493db0be817e2ccf497f3859478a97.json"
+            }
+          ],
+          "checkedAt": "2026-10-12T20:45:56.689199+00:00",
+          "contentSHA256": "c3ea2c54ea6afadcf4eb81779ab41f1c5254a5c42114bdc0ac959ce0ff155c74",
+          "targetSHA256": "be4a276756130fa70a274cd7730161528852ac981bf403e68ddeecc26e9cfe56"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/portofspain/qa.json",
+            "sha256": "ee06a8a063e9ead493eba8d98236f902b4cc776df48546fd13daa73888d52cbd"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/portofspain/illustration-qa-extra.json",
+            "sha256": "164a01f817bcc680b22d37e27b1ef52656493db0be817e2ccf497f3859478a97"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/portofspain/e12-portofspain-L4-1eb9a5d265-22830aa74741.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/portofspain/e12-portofspain-L4-1eb9a5d265-22830aa74741.png?t=981f5fd4d77d21b5",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/portofspain/e12-portofspain-L4-1eb9a5d265-22830aa74741.png",
+        "sha256": "981f5fd4d77d21b57c564bb57c1366fe229868cac175fbdf513e9b4eb803eb03",
+        "bytes": 2414552,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e12-portofspain-L4-1eb9a5d265",
+        "nativeSHA256": "22830aa74741c957625dab32cf99a8178ffd659b52ec805cc529271e00eadde5",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e12/portofspain/e12-portofspain-L4-1eb9a5d265-22830aa74741.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e12",
+        "city": "portofspain",
+        "slot": "L4",
+        "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
+        "verifiedAt": "2026-10-12T20:47:18.447692+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e12/portofspain/e12-portofspain-L4-1eb9a5d265-22830aa74741.png",
+        "sha256": "981f5fd4d77d21b57c564bb57c1366fe229868cac175fbdf513e9b4eb803eb03",
+        "bytes": 2414552,
+        "SHAReadAt": "2026-10-12T20:45:56.610599+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "22830aa74741c957625dab32cf99a8178ffd659b52ec805cc529271e00eadde5",
+        "rgbPixelSHA256": "e871e3dc93c7873f66659e7fec05526e25f5061a3ba6afc0ff8193a22e9ec75b",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "76311394847cd4a923031a237ebda82e6df27cbd26922ac6965cac714eff7900",
+      "targetAfterSHA256": "be4a276756130fa70a274cd7730161528852ac981bf403e68ddeecc26e9cfe56",
+      "contextAfterSHA256": "be4a276756130fa70a274cd7730161528852ac981bf403e68ddeecc26e9cfe56"
     },
     {
       "era": "e12",
@@ -1202,7 +1645,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/portofspain/qa.json",
-        "fileSHA256": "bc36b5925bc6551fcbd73287c8950e3aa3031716e205fe26920f3baec919123b",
+        "fileSHA256": "ee06a8a063e9ead493eba8d98236f902b4cc776df48546fd13daa73888d52cbd",
         "item": {
           "slot": "PHOTO",
           "targetJsonPath": "$.valokuva",
@@ -1273,11 +1716,11 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/portofspain/qa.json",
-            "sha256": "bc36b5925bc6551fcbd73287c8950e3aa3031716e205fe26920f3baec919123b"
+            "sha256": "ee06a8a063e9ead493eba8d98236f902b4cc776df48546fd13daa73888d52cbd"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/portofspain/illustration-qa-extra.json",
-            "sha256": "e381bd27e0ec04ccd27d44e508394aa886b5f8105c5894fd62d2cb3a2e3a88a3"
+            "sha256": "164a01f817bcc680b22d37e27b1ef52656493db0be817e2ccf497f3859478a97"
           }
         ]
       },
@@ -1348,7 +1791,7 @@
         "tiedosto": "Overview of Port of Spain.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "c3ea2c54ea6afadcf4eb81779ab41f1c5254a5c42114bdc0ac959ce0ff155c74",
+      "sourceContentAfterSHA256": "76311394847cd4a923031a237ebda82e6df27cbd26922ac6965cac714eff7900",
       "targetAfterSHA256": "1147747ecff88a33ef826d0060e2071cbbb36e9c38d29911d3a9669ab51b04ba",
       "contextAfterSHA256": "1147747ecff88a33ef826d0060e2071cbbb36e9c38d29911d3a9669ab51b04ba"
     },
@@ -1504,7 +1947,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/portofspain/qa.json",
-        "fileSHA256": "bc36b5925bc6551fcbd73287c8950e3aa3031716e205fe26920f3baec919123b",
+        "fileSHA256": "ee06a8a063e9ead493eba8d98236f902b4cc776df48546fd13daa73888d52cbd",
         "item": {
           "slot": "C1",
           "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
@@ -1585,11 +2028,11 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/portofspain/qa.json",
-            "sha256": "bc36b5925bc6551fcbd73287c8950e3aa3031716e205fe26920f3baec919123b"
+            "sha256": "ee06a8a063e9ead493eba8d98236f902b4cc776df48546fd13daa73888d52cbd"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/portofspain/illustration-qa-extra.json",
-            "sha256": "e381bd27e0ec04ccd27d44e508394aa886b5f8105c5894fd62d2cb3a2e3a88a3"
+            "sha256": "164a01f817bcc680b22d37e27b1ef52656493db0be817e2ccf497f3859478a97"
           }
         ]
       },
@@ -1660,9 +2103,547 @@
         "tiedosto": "PanoramaofPOSwest.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "c3ea2c54ea6afadcf4eb81779ab41f1c5254a5c42114bdc0ac959ce0ff155c74",
+      "sourceContentAfterSHA256": "76311394847cd4a923031a237ebda82e6df27cbd26922ac6965cac714eff7900",
       "targetAfterSHA256": "3b2d4fdfcdd99989f3513bdf93f22286c6ee9e744d2905b032aa8f39b3ab8e69",
       "contextAfterSHA256": "3b2d4fdfcdd99989f3513bdf93f22286c6ee9e744d2905b032aa8f39b3ab8e69"
+    },
+    {
+      "era": "e12",
+      "city": "portofspain",
+      "slot": "C2",
+      "type": "commons",
+      "assetID": "capital-cc-e12-portofspain-c2-87b6e67c435cab75",
+      "galleryImageID": "capital-cc-e12-portofspain-c2-87b6e67c435cab75",
+      "commonsFile": "TnT PoS Queen's Park Savannah.jpg",
+      "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[1]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "kansikuvat",
+        1
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/portofspain/c2-87b6e67c435cab7563cd.jpg",
+        "suora": true,
+        "lahde": "Grueslayer, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Queen’s Park Savannahin pohjoisosan puut ja avoin nurmi vuonna 2014.",
+        "lyhyt": "Queen’s Park Savannahin pohjoisosan puut ja avoin nurmi vuonna 2014.",
+        "tiedosto": "TnT PoS Queen's Park Savannah.jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Grueslayer, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Queen’s Park Savannahin pohjoisosan puut ja avoin nurmi vuonna 2014.",
+        "lyhyt": "Queen’s Park Savannahin pohjoisosan puut ja avoin nurmi vuonna 2014.",
+        "tiedosto": "TnT PoS Queen's Park Savannah.jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/portofspain/c2-87b6e67c435cab7563cd.jpg",
+        "suora": true,
+        "lahde": "Grueslayer, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Queen’s Park Savannahin pohjoisosan puut ja avoin nurmi vuonna 2014.",
+        "lyhyt": "Queen’s Park Savannahin pohjoisosan puut ja avoin nurmi vuonna 2014.",
+        "tiedosto": "TnT PoS Queen's Park Savannah.jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "87b6e67c435cab7563cd93c27378879d304f1884846e6035ba903d2763075aab",
+      "exportSHA256": "87b6e67c435cab7563cd93c27378879d304f1884846e6035ba903d2763075aab",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/portofspain/c2-87b6e67c435cab7563cd.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/portofspain/c2-87b6e67c435cab7563cd.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/commons-originals/e12/portofspain/3ab8f232a594c7539f823ee2b91291b6c7144afe9973da33f4b8e7fc2917b9f6.jpg",
+      "dimensions": [
+        4320,
+        3240
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/portofspain/sisalto.json",
+      "sourceContentSHA256": "c3ea2c54ea6afadcf4eb81779ab41f1c5254a5c42114bdc0ac959ce0ff155c74",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "subjectTitle": "Port of Spain",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Grueslayer",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:TnT_PoS_Queen%27s_Park_Savannah.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/6/60/TnT_PoS_Queen%27s_Park_Savannah.jpg",
+        "rightsEvidence": {
+          "selection": "Explicit Author Grueslayer, Own work, CC BY-SA4.0, tarkka lisenssi/lähdelinkki varmennettu. Description yksilöi Northern part of Queen’s Park Savannah, Port of Spain, Trinidad and Tobago. Koko laajan näkymän pääaihe luonnollinen puusto, avoin nurmi ja taustakukkulat. Tavallinen aita käyttöosa; kaukaiset talot pieninä hajautuneina rinteellä, ei yksi nimetty nykyteos pääaiheena tai erillistä veistosta/reliefiä. Ei oletettua rakennusikä-PD:tä, koko maan FOP-lupaa tai eristettyjen taustatalojen rajauslupaa. Date16.1.2014 säilyy; ei nykyisen palvelun/opastuksen väitettä.",
+          "QA": {
+            "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/portofspain/qa-evidence/0bbf4d0f997d-original.jpg",
+            "width": 4320,
+            "height": 3240,
+            "sha256": "87b6e67c435cab7563cd93c27378879d304f1884846e6035ba903d2763075aab",
+            "nativeGeometry": {
+              "rawWidth": 4320,
+              "rawHeight": 3240,
+              "exifOrientation": 1,
+              "width": 4320,
+              "height": 3240
+            },
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:TnT_PoS_Queen%27s_Park_Savannah.jpg",
+            "sourcePagePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/portofspain/qa-evidence/cc-source-snapshots/e1f009ba137a4734697441351494fb10a53f4292ed155f99d10e86e17fb6d209.html",
+            "sourcePageSHA256": "e1f009ba137a4734697441351494fb10a53f4292ed155f99d10e86e17fb6d209",
+            "upstreamSourcePagePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/lahdevarasto/d5cdd6b274f1e6242fce4d7b104080f457e0834da4bce9aa7e146756d33a482f.body",
+            "sourceFields": {
+              "Date": "16 January 2014, 10:10:18",
+              "Source": "Own work",
+              "Author": "Grueslayer"
+            },
+            "authors": [
+              "Grueslayer",
+              "Grueslayer"
+            ],
+            "authorOrigin": "Author table",
+            "licenseChoices": [
+              "CC BY-SA 4.0"
+            ],
+            "license": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "existingGameUse": [],
+            "sameCityOtherSlots": [],
+            "sameCityAcceptedQASlots": [],
+            "sameCityAcceptedNativeSHASlots": [],
+            "auditEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/portofspain/qa-evidence/0bbf4d0f997d-technical-source.json",
+            "visualViewedByThisSession": true,
+            "nativeOriginalViewed": true,
+            "visualObservation": "Alkuperäinen 4320×3240 itse katsottu: Queen’s Park Savannahin laaja avoin nurmi, hajallaan olevat luonnolliset puut ja taustalla kukkulat/asuinalue; kuva näyttää aidon kaupungin suuren viheralueen asettelun. Ei yksittäistä rakennuksen pääteosta, veistosta, muraalia, lisättyä tekstiä, vesileimaa tai erotettavia kasvonpiirteitä. Pienet kaukaiset talot ovat rinteelle hajautunutta ympäristöä; etualan aita tavanomainen käyttöesine. Northern part of Queen’s Park Savannah, Port of Spain lähdekuvauksessa; Grueslayer, Own work, CC BY-SA 4.0 ja 16.1.2014 suoraan lähdesivusta. Ei nimettyä hautapaikkaa tai yksittäistä suojattua julkisivua kuvassa, ei blanket-FOP- tai rakennusikä-PD-oletusta.",
+            "workLayerAssessment": "Alkuperäinen 4320×3240 itse katsottu: Queen’s Park Savannahin laaja avoin nurmi, hajallaan olevat luonnolliset puut ja taustalla kukkulat/asuinalue; kuva näyttää aidon kaupungin suuren viheralueen asettelun. Ei yksittäistä rakennuksen pääteosta, veistosta, muraalia, lisättyä tekstiä, vesileimaa tai erotettavia kasvonpiirteitä. Pienet kaukaiset talot ovat rinteelle hajautunutta ympäristöä; etualan aita tavanomainen käyttöesine. Northern part of Queen’s Park Savannah, Port of Spain lähdekuvauksessa; Grueslayer, Own work, CC BY-SA 4.0 ja 16.1.2014 suoraan lähdesivusta. Ei nimettyä hautapaikkaa tai yksittäistä suojattua julkisivua kuvassa, ei blanket-FOP- tai rakennusikä-PD-oletusta.",
+            "ccFragment": "cc-gap-selection.json",
+            "canonicalCaptureDate": "16 January 2014, 10:10:18",
+            "coverLayoutAssessment": {
+              "passes": true,
+              "required": "broad real city/place view",
+              "observed": "Alkuperäinen 4320×3240 itse katsottu: Queen’s Park Savannahin laaja avoin nurmi, hajallaan olevat luonnolliset puut ja taustalla kukkulat/asuinalue; kuva näyttää aidon kaupungin suuren viheralueen asettelun. Ei yksittäistä rakennuksen pääteosta, veistosta, muraalia, lisättyä tekstiä, vesileimaa tai erotettavia kasvonpiirteitä. Pienet kaukaiset talot ovat rinteelle hajautunutta ympäristöä; etualan aita tavanomainen käyttöesine. Northern part of Queen’s Park Savannah, Port of Spain lähdekuvauksessa; Grueslayer, Own work, CC BY-SA 4.0 ja 16.1.2014 suoraan lähdesivusta. Ei nimettyä hautapaikkaa tai yksittäistä suojattua julkisivua kuvassa, ei blanket-FOP- tai rakennusikä-PD-oletusta."
+            }
+          },
+          "qaReason": "Alkuperäinen 4320×3240 itse katsottu: Queen’s Park Savannahin laaja avoin nurmi, hajallaan olevat luonnolliset puut ja taustalla kukkulat/asuinalue; kuva näyttää aidon kaupungin suuren viheralueen asettelun. Ei yksittäistä rakennuksen pääteosta, veistosta, muraalia, lisättyä tekstiä, vesileimaa tai erotettavia kasvonpiirteitä. Pienet kaukaiset talot ovat rinteelle hajautunutta ympäristöä; etualan aita tavanomainen käyttöesine. Northern part of Queen’s Park Savannah, Port of Spain lähdekuvauksessa; Grueslayer, Own work, CC BY-SA 4.0 ja 16.1.2014 suoraan lähdesivusta. Ei nimettyä hautapaikkaa tai yksittäistä suojattua julkisivua kuvassa, ei blanket-FOP- tai rakennusikä-PD-oletusta."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Queen’s Park Savannahin pohjoisosan puut ja avoin nurmi vuonna 2014.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/portofspain/qa.json",
+        "fileSHA256": "ee06a8a063e9ead493eba8d98236f902b4cc776df48546fd13daa73888d52cbd",
+        "item": {
+          "slot": "C2",
+          "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[1]",
+          "commonsFile": "TnT PoS Queen's Park Savannah.jpg",
+          "type": "commons",
+          "sha256": "87b6e67c435cab7563cd93c27378879d304f1884846e6035ba903d2763075aab",
+          "nativeSHA256": "87b6e67c435cab7563cd93c27378879d304f1884846e6035ba903d2763075aab",
+          "nativeOriginalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/portofspain/qa-evidence/0bbf4d0f997d-original.jpg",
+          "verdict": "accepted",
+          "reason": "Alkuperäinen 4320×3240 itse katsottu: Queen’s Park Savannahin laaja avoin nurmi, hajallaan olevat luonnolliset puut ja taustalla kukkulat/asuinalue; kuva näyttää aidon kaupungin suuren viheralueen asettelun. Ei yksittäistä rakennuksen pääteosta, veistosta, muraalia, lisättyä tekstiä, vesileimaa tai erotettavia kasvonpiirteitä. Pienet kaukaiset talot ovat rinteelle hajautunutta ympäristöä; etualan aita tavanomainen käyttöesine. Northern part of Queen’s Park Savannah, Port of Spain lähdekuvauksessa; Grueslayer, Own work, CC BY-SA 4.0 ja 16.1.2014 suoraan lähdesivusta. Ei nimettyä hautapaikkaa tai yksittäistä suojattua julkisivua kuvassa, ei blanket-FOP- tai rakennusikä-PD-oletusta.",
+          "evidence": {
+            "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/portofspain/qa-evidence/0bbf4d0f997d-original.jpg",
+            "width": 4320,
+            "height": 3240,
+            "sha256": "87b6e67c435cab7563cd93c27378879d304f1884846e6035ba903d2763075aab",
+            "nativeGeometry": {
+              "rawWidth": 4320,
+              "rawHeight": 3240,
+              "exifOrientation": 1,
+              "width": 4320,
+              "height": 3240
+            },
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:TnT_PoS_Queen%27s_Park_Savannah.jpg",
+            "sourcePagePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/portofspain/qa-evidence/cc-source-snapshots/e1f009ba137a4734697441351494fb10a53f4292ed155f99d10e86e17fb6d209.html",
+            "sourcePageSHA256": "e1f009ba137a4734697441351494fb10a53f4292ed155f99d10e86e17fb6d209",
+            "upstreamSourcePagePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/lahdevarasto/d5cdd6b274f1e6242fce4d7b104080f457e0834da4bce9aa7e146756d33a482f.body",
+            "sourceFields": {
+              "Date": "16 January 2014, 10:10:18",
+              "Source": "Own work",
+              "Author": "Grueslayer"
+            },
+            "authors": [
+              "Grueslayer",
+              "Grueslayer"
+            ],
+            "authorOrigin": "Author table",
+            "licenseChoices": [
+              "CC BY-SA 4.0"
+            ],
+            "license": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "existingGameUse": [],
+            "sameCityOtherSlots": [],
+            "sameCityAcceptedQASlots": [],
+            "sameCityAcceptedNativeSHASlots": [],
+            "auditEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/portofspain/qa-evidence/0bbf4d0f997d-technical-source.json",
+            "visualViewedByThisSession": true,
+            "nativeOriginalViewed": true,
+            "visualObservation": "Alkuperäinen 4320×3240 itse katsottu: Queen’s Park Savannahin laaja avoin nurmi, hajallaan olevat luonnolliset puut ja taustalla kukkulat/asuinalue; kuva näyttää aidon kaupungin suuren viheralueen asettelun. Ei yksittäistä rakennuksen pääteosta, veistosta, muraalia, lisättyä tekstiä, vesileimaa tai erotettavia kasvonpiirteitä. Pienet kaukaiset talot ovat rinteelle hajautunutta ympäristöä; etualan aita tavanomainen käyttöesine. Northern part of Queen’s Park Savannah, Port of Spain lähdekuvauksessa; Grueslayer, Own work, CC BY-SA 4.0 ja 16.1.2014 suoraan lähdesivusta. Ei nimettyä hautapaikkaa tai yksittäistä suojattua julkisivua kuvassa, ei blanket-FOP- tai rakennusikä-PD-oletusta.",
+            "workLayerAssessment": "Alkuperäinen 4320×3240 itse katsottu: Queen’s Park Savannahin laaja avoin nurmi, hajallaan olevat luonnolliset puut ja taustalla kukkulat/asuinalue; kuva näyttää aidon kaupungin suuren viheralueen asettelun. Ei yksittäistä rakennuksen pääteosta, veistosta, muraalia, lisättyä tekstiä, vesileimaa tai erotettavia kasvonpiirteitä. Pienet kaukaiset talot ovat rinteelle hajautunutta ympäristöä; etualan aita tavanomainen käyttöesine. Northern part of Queen’s Park Savannah, Port of Spain lähdekuvauksessa; Grueslayer, Own work, CC BY-SA 4.0 ja 16.1.2014 suoraan lähdesivusta. Ei nimettyä hautapaikkaa tai yksittäistä suojattua julkisivua kuvassa, ei blanket-FOP- tai rakennusikä-PD-oletusta.",
+            "ccFragment": "cc-gap-selection.json",
+            "canonicalCaptureDate": "16 January 2014, 10:10:18",
+            "coverLayoutAssessment": {
+              "passes": true,
+              "required": "broad real city/place view",
+              "observed": "Alkuperäinen 4320×3240 itse katsottu: Queen’s Park Savannahin laaja avoin nurmi, hajallaan olevat luonnolliset puut ja taustalla kukkulat/asuinalue; kuva näyttää aidon kaupungin suuren viheralueen asettelun. Ei yksittäistä rakennuksen pääteosta, veistosta, muraalia, lisättyä tekstiä, vesileimaa tai erotettavia kasvonpiirteitä. Pienet kaukaiset talot ovat rinteelle hajautunutta ympäristöä; etualan aita tavanomainen käyttöesine. Northern part of Queen’s Park Savannah, Port of Spain lähdekuvauksessa; Grueslayer, Own work, CC BY-SA 4.0 ja 16.1.2014 suoraan lähdesivusta. Ei nimettyä hautapaikkaa tai yksittäistä suojattua julkisivua kuvassa, ei blanket-FOP- tai rakennusikä-PD-oletusta."
+            }
+          },
+          "checkedAt": "2026-10-12T20:46:54.136682+00:00",
+          "contentSHA256": "c3ea2c54ea6afadcf4eb81779ab41f1c5254a5c42114bdc0ac959ce0ff155c74",
+          "targetSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/portofspain/qa.json",
+            "sha256": "ee06a8a063e9ead493eba8d98236f902b4cc776df48546fd13daa73888d52cbd"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/portofspain/illustration-qa-extra.json",
+            "sha256": "164a01f817bcc680b22d37e27b1ef52656493db0be817e2ccf497f3859478a97"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e12",
+        "city": "portofspain",
+        "slot": "C2",
+        "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[1]",
+        "commonsFile": "TnT PoS Queen's Park Savannah.jpg",
+        "sha256": "87b6e67c435cab7563cd93c27378879d304f1884846e6035ba903d2763075aab",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:TnT_PoS_Queen%27s_Park_Savannah.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/6/60/TnT_PoS_Queen%27s_Park_Savannah.jpg",
+        "author": "Grueslayer",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "width": 4320,
+        "height": 3240,
+        "originalSHA256": "87b6e67c435cab7563cd93c27378879d304f1884846e6035ba903d2763075aab",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/portofspain/c2-87b6e67c435cab7563cd.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/portofspain/c2-87b6e67c435cab7563cd.jpg",
+        "bytes": 6183612,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T20:47:36.042255+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Grueslayer, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Queen’s Park Savannahin pohjoisosan puut ja avoin nurmi vuonna 2014.",
+        "lyhyt": "Queen’s Park Savannahin pohjoisosan puut ja avoin nurmi vuonna 2014.",
+        "tiedosto": "TnT PoS Queen's Park Savannah.jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "76311394847cd4a923031a237ebda82e6df27cbd26922ac6965cac714eff7900",
+      "targetAfterSHA256": "c63be3bb4edee42ea67dcd58589a9bc721420f6c53e7cd2fca7292347807a713",
+      "contextAfterSHA256": "c63be3bb4edee42ea67dcd58589a9bc721420f6c53e7cd2fca7292347807a713"
+    },
+    {
+      "era": "e12",
+      "city": "portofspain",
+      "slot": "K1",
+      "type": "commons",
+      "assetID": "capital-cc-e12-portofspain-k1-ffc7f4b3aabd3cee",
+      "galleryImageID": "capital-cc-e12-portofspain-k1-ffc7f4b3aabd3cee",
+      "commonsFile": "Queen's Park Savannah - panoramio.jpg",
+      "targetJsonPath": "$.kaupunkilehti[0].nostot[0]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "nostot",
+        0
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/portofspain/k1-ffc7f4b3aabd3ceed1e5.jpg",
+        "suora": true,
+        "lahde": "James Roberts (Jampp…, Wikimedia Commons (CC BY-SA 3.0)",
+        "selite": "Queen’s Park Savannahin avointa nurmialuetta vuonna 2011.",
+        "lyhyt": "Queen’s Park Savannahin avointa nurmialuetta vuonna 2011.",
+        "tiedosto": "Queen's Park Savannah - panoramio.jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "James Roberts (Jampp…, Wikimedia Commons (CC BY-SA 3.0)",
+        "selite": "Queen’s Park Savannahin avointa nurmialuetta vuonna 2011.",
+        "lyhyt": "Queen’s Park Savannahin avointa nurmialuetta vuonna 2011.",
+        "tiedosto": "Queen's Park Savannah - panoramio.jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/portofspain/k1-ffc7f4b3aabd3ceed1e5.jpg",
+        "suora": true,
+        "lahde": "James Roberts (Jampp…, Wikimedia Commons (CC BY-SA 3.0)",
+        "selite": "Queen’s Park Savannahin avointa nurmialuetta vuonna 2011.",
+        "lyhyt": "Queen’s Park Savannahin avointa nurmialuetta vuonna 2011.",
+        "tiedosto": "Queen's Park Savannah - panoramio.jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "ffc7f4b3aabd3ceed1e5134da9392f2e452033055eeb81a72531765e2c356af8",
+      "exportSHA256": "ffc7f4b3aabd3ceed1e5134da9392f2e452033055eeb81a72531765e2c356af8",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/portofspain/k1-ffc7f4b3aabd3ceed1e5.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/portofspain/k1-ffc7f4b3aabd3ceed1e5.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/commons-originals/e12/portofspain/06621fbffd9d58ff90670d4bd0e4968f22196b142304a8f2e1179c7173ec7820.jpg",
+      "dimensions": [
+        3219,
+        2414
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/portofspain/sisalto.json",
+      "sourceContentSHA256": "c3ea2c54ea6afadcf4eb81779ab41f1c5254a5c42114bdc0ac959ce0ff155c74",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "494b950d95e3fe6dbb59d57bb4ad63b91eaadc4c426f0462ecd81f238612e412",
+        "semanticContextSHA256": "494b950d95e3fe6dbb59d57bb4ad63b91eaadc4c426f0462ecd81f238612e412",
+        "subjectTitle": "Puiston keskelle jäi suvun pala",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "James Roberts (Jampp…",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Queen%27s_Park_Savannah_-_panoramio.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/d/dc/Queen%27s_Park_Savannah_-_panoramio.jpg",
+        "rightsEvidence": {
+          "selection": "Valokuvan nimenomainen Author on James Roberts (Jampp…); täydellinen James Roberts -nimi on näkyvässä Author-krediitissä, alias katkeaa lähteessä. Ei uploaderista pääteltyä nimeä. CC BY-SA3.0 ja kuvakohtainen lisenssilinkki varmennettu. DescriptionQueen’s Park Savannah, Port of Spain yksilöi nykyisenK1-aiheen viheralueen. Luonnolliset puut, avoin nurmi ja vihreät kukkulat koko kuvan pääaiheena; tavalliset kaukaiset maalit/aidat ja hajautuneet rinnerakennukset sivuosia. Ei erillistä nykytaideteosta, veistosta tai nimeämätöntä suojattua julkisivua pääaiheena; ei blanket-FOP-lupaa. Hautausmaata tai suvun yksityistä osaa ei väitetä näkyväksi.25.10.2011, ei nykypäivän opastus- tai puistopalveluväite.",
+          "QA": {
+            "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/portofspain/qa-evidence/7ceff62bd40f-original.jpg",
+            "width": 3219,
+            "height": 2414,
+            "sha256": "ffc7f4b3aabd3ceed1e5134da9392f2e452033055eeb81a72531765e2c356af8",
+            "nativeGeometry": {
+              "rawWidth": 3219,
+              "rawHeight": 2414,
+              "exifOrientation": 1,
+              "width": 3219,
+              "height": 2414
+            },
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Queen%27s_Park_Savannah_-_panoramio.jpg",
+            "sourcePagePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/portofspain/qa-evidence/cc-source-snapshots/7af29e2b6c084afe75d379f57d9939e608da40ddfcdba76059b64200cc3599b6.html",
+            "sourcePageSHA256": "7af29e2b6c084afe75d379f57d9939e608da40ddfcdba76059b64200cc3599b6",
+            "upstreamSourcePagePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/lahdevarasto/443dedf2c7837c06d3cfb73453087758d662e43957fbf81709ecb198133648ea.body",
+            "sourceFields": {
+              "Date": "Taken on 25 October 2011",
+              "Source": "https://web.archive.org/web/20161020230522/http://www.panoramio.com/photo/61781790",
+              "Author": "James Roberts (Jampp…"
+            },
+            "authors": [
+              "James Roberts (Jampp…"
+            ],
+            "authorOrigin": "Author table",
+            "licenseChoices": [
+              "CC BY-SA 3.0"
+            ],
+            "license": "CC BY-SA 3.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+            "existingGameUse": [],
+            "sameCityOtherSlots": [],
+            "sameCityAcceptedQASlots": [],
+            "sameCityAcceptedNativeSHASlots": [],
+            "auditEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/portofspain/qa-evidence/7ceff62bd40f-technical-source.json",
+            "visualViewedByThisSession": true,
+            "nativeOriginalViewed": true,
+            "visualObservation": "Alkuperäinen 3219×2414 itse katsottu: Queen’s Park Savannahin avoin nurmi, luonnolliset puut, taustakukkulat ja pienet kaukaiset rakennukset. Ei kasvonpiirteitä, lisättyä tekstiä, vesileimaa tai yksittäistä rakennus-/taideteosta pääaiheena. Description yksilöi Queen’s Park Savannah, Port of Spain; vastaa nykyisen K1-noston viheralueaihetta, yksityistä suvun hautapaikkaa ei väitetä näkyväksi. Tekijäkrediitti lähteessä James Roberts (Jampp…; koko James Roberts -nimi näkyy, aliaksen loppua ei keksitä. CC BY-SA 3.0 Author/Permission-taulukosta, Panoramio-varmennus 2016 ei kuvausaika. Kuvattu 25.10.2011; ei nykyisiä puistopalveluväitteitä.",
+            "workLayerAssessment": "Alkuperäinen 3219×2414 itse katsottu: Queen’s Park Savannahin avoin nurmi, luonnolliset puut, taustakukkulat ja pienet kaukaiset rakennukset. Ei kasvonpiirteitä, lisättyä tekstiä, vesileimaa tai yksittäistä rakennus-/taideteosta pääaiheena. Description yksilöi Queen’s Park Savannah, Port of Spain; vastaa nykyisen K1-noston viheralueaihetta, yksityistä suvun hautapaikkaa ei väitetä näkyväksi. Tekijäkrediitti lähteessä James Roberts (Jampp…; koko James Roberts -nimi näkyy, aliaksen loppua ei keksitä. CC BY-SA 3.0 Author/Permission-taulukosta, Panoramio-varmennus 2016 ei kuvausaika. Kuvattu 25.10.2011; ei nykyisiä puistopalveluväitteitä.",
+            "ccFragment": "cc-gap-selection.json",
+            "canonicalCaptureDate": "Taken on 25 October 2011",
+            "canonicalAttribution": "James Roberts (Jampp…",
+            "authorAliasUnexpanded": "Source literal alias is truncated; no uploader inference."
+          },
+          "qaReason": "Alkuperäinen 3219×2414 itse katsottu: Queen’s Park Savannahin avoin nurmi, luonnolliset puut, taustakukkulat ja pienet kaukaiset rakennukset. Ei kasvonpiirteitä, lisättyä tekstiä, vesileimaa tai yksittäistä rakennus-/taideteosta pääaiheena. Description yksilöi Queen’s Park Savannah, Port of Spain; vastaa nykyisen K1-noston viheralueaihetta, yksityistä suvun hautapaikkaa ei väitetä näkyväksi. Tekijäkrediitti lähteessä James Roberts (Jampp…; koko James Roberts -nimi näkyy, aliaksen loppua ei keksitä. CC BY-SA 3.0 Author/Permission-taulukosta, Panoramio-varmennus 2016 ei kuvausaika. Kuvattu 25.10.2011; ei nykyisiä puistopalveluväitteitä."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Queen’s Park Savannahin avointa nurmialuetta vuonna 2011.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/portofspain/qa.json",
+        "fileSHA256": "ee06a8a063e9ead493eba8d98236f902b4cc776df48546fd13daa73888d52cbd",
+        "item": {
+          "slot": "K1",
+          "targetJsonPath": "$.kaupunkilehti[0].nostot[0]",
+          "commonsFile": "Queen's Park Savannah - panoramio.jpg",
+          "type": "commons",
+          "sha256": "ffc7f4b3aabd3ceed1e5134da9392f2e452033055eeb81a72531765e2c356af8",
+          "nativeSHA256": "ffc7f4b3aabd3ceed1e5134da9392f2e452033055eeb81a72531765e2c356af8",
+          "nativeOriginalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/portofspain/qa-evidence/7ceff62bd40f-original.jpg",
+          "verdict": "accepted",
+          "reason": "Alkuperäinen 3219×2414 itse katsottu: Queen’s Park Savannahin avoin nurmi, luonnolliset puut, taustakukkulat ja pienet kaukaiset rakennukset. Ei kasvonpiirteitä, lisättyä tekstiä, vesileimaa tai yksittäistä rakennus-/taideteosta pääaiheena. Description yksilöi Queen’s Park Savannah, Port of Spain; vastaa nykyisen K1-noston viheralueaihetta, yksityistä suvun hautapaikkaa ei väitetä näkyväksi. Tekijäkrediitti lähteessä James Roberts (Jampp…; koko James Roberts -nimi näkyy, aliaksen loppua ei keksitä. CC BY-SA 3.0 Author/Permission-taulukosta, Panoramio-varmennus 2016 ei kuvausaika. Kuvattu 25.10.2011; ei nykyisiä puistopalveluväitteitä.",
+          "evidence": {
+            "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/portofspain/qa-evidence/7ceff62bd40f-original.jpg",
+            "width": 3219,
+            "height": 2414,
+            "sha256": "ffc7f4b3aabd3ceed1e5134da9392f2e452033055eeb81a72531765e2c356af8",
+            "nativeGeometry": {
+              "rawWidth": 3219,
+              "rawHeight": 2414,
+              "exifOrientation": 1,
+              "width": 3219,
+              "height": 2414
+            },
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Queen%27s_Park_Savannah_-_panoramio.jpg",
+            "sourcePagePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/portofspain/qa-evidence/cc-source-snapshots/7af29e2b6c084afe75d379f57d9939e608da40ddfcdba76059b64200cc3599b6.html",
+            "sourcePageSHA256": "7af29e2b6c084afe75d379f57d9939e608da40ddfcdba76059b64200cc3599b6",
+            "upstreamSourcePagePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/lahdevarasto/443dedf2c7837c06d3cfb73453087758d662e43957fbf81709ecb198133648ea.body",
+            "sourceFields": {
+              "Date": "Taken on 25 October 2011",
+              "Source": "https://web.archive.org/web/20161020230522/http://www.panoramio.com/photo/61781790",
+              "Author": "James Roberts (Jampp…"
+            },
+            "authors": [
+              "James Roberts (Jampp…"
+            ],
+            "authorOrigin": "Author table",
+            "licenseChoices": [
+              "CC BY-SA 3.0"
+            ],
+            "license": "CC BY-SA 3.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+            "existingGameUse": [],
+            "sameCityOtherSlots": [],
+            "sameCityAcceptedQASlots": [],
+            "sameCityAcceptedNativeSHASlots": [],
+            "auditEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/portofspain/qa-evidence/7ceff62bd40f-technical-source.json",
+            "visualViewedByThisSession": true,
+            "nativeOriginalViewed": true,
+            "visualObservation": "Alkuperäinen 3219×2414 itse katsottu: Queen’s Park Savannahin avoin nurmi, luonnolliset puut, taustakukkulat ja pienet kaukaiset rakennukset. Ei kasvonpiirteitä, lisättyä tekstiä, vesileimaa tai yksittäistä rakennus-/taideteosta pääaiheena. Description yksilöi Queen’s Park Savannah, Port of Spain; vastaa nykyisen K1-noston viheralueaihetta, yksityistä suvun hautapaikkaa ei väitetä näkyväksi. Tekijäkrediitti lähteessä James Roberts (Jampp…; koko James Roberts -nimi näkyy, aliaksen loppua ei keksitä. CC BY-SA 3.0 Author/Permission-taulukosta, Panoramio-varmennus 2016 ei kuvausaika. Kuvattu 25.10.2011; ei nykyisiä puistopalveluväitteitä.",
+            "workLayerAssessment": "Alkuperäinen 3219×2414 itse katsottu: Queen’s Park Savannahin avoin nurmi, luonnolliset puut, taustakukkulat ja pienet kaukaiset rakennukset. Ei kasvonpiirteitä, lisättyä tekstiä, vesileimaa tai yksittäistä rakennus-/taideteosta pääaiheena. Description yksilöi Queen’s Park Savannah, Port of Spain; vastaa nykyisen K1-noston viheralueaihetta, yksityistä suvun hautapaikkaa ei väitetä näkyväksi. Tekijäkrediitti lähteessä James Roberts (Jampp…; koko James Roberts -nimi näkyy, aliaksen loppua ei keksitä. CC BY-SA 3.0 Author/Permission-taulukosta, Panoramio-varmennus 2016 ei kuvausaika. Kuvattu 25.10.2011; ei nykyisiä puistopalveluväitteitä.",
+            "ccFragment": "cc-gap-selection.json",
+            "canonicalCaptureDate": "Taken on 25 October 2011",
+            "canonicalAttribution": "James Roberts (Jampp…",
+            "authorAliasUnexpanded": "Source literal alias is truncated; no uploader inference."
+          },
+          "checkedAt": "2026-10-12T20:46:54.213578+00:00",
+          "contentSHA256": "c3ea2c54ea6afadcf4eb81779ab41f1c5254a5c42114bdc0ac959ce0ff155c74",
+          "targetSHA256": "494b950d95e3fe6dbb59d57bb4ad63b91eaadc4c426f0462ecd81f238612e412"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/portofspain/qa.json",
+            "sha256": "ee06a8a063e9ead493eba8d98236f902b4cc776df48546fd13daa73888d52cbd"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/portofspain/illustration-qa-extra.json",
+            "sha256": "164a01f817bcc680b22d37e27b1ef52656493db0be817e2ccf497f3859478a97"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e12",
+        "city": "portofspain",
+        "slot": "K1",
+        "targetJsonPath": "$.kaupunkilehti[0].nostot[0]",
+        "commonsFile": "Queen's Park Savannah - panoramio.jpg",
+        "sha256": "ffc7f4b3aabd3ceed1e5134da9392f2e452033055eeb81a72531765e2c356af8",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Queen%27s_Park_Savannah_-_panoramio.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/d/dc/Queen%27s_Park_Savannah_-_panoramio.jpg",
+        "author": "James Roberts (Jampp…",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+        "width": 3219,
+        "height": 2414,
+        "originalSHA256": "ffc7f4b3aabd3ceed1e5134da9392f2e452033055eeb81a72531765e2c356af8",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/portofspain/k1-ffc7f4b3aabd3ceed1e5.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/portofspain/k1-ffc7f4b3aabd3ceed1e5.jpg",
+        "bytes": 6871508,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T20:47:42.903897+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "James Roberts (Jampp…, Wikimedia Commons (CC BY-SA 3.0)",
+        "selite": "Queen’s Park Savannahin avointa nurmialuetta vuonna 2011.",
+        "lyhyt": "Queen’s Park Savannahin avointa nurmialuetta vuonna 2011.",
+        "tiedosto": "Queen's Park Savannah - panoramio.jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "76311394847cd4a923031a237ebda82e6df27cbd26922ac6965cac714eff7900",
+      "targetAfterSHA256": "ff82974655e46137892fe3e895cd627ba328c4fa1ece57b0ef927b38b3a054ec",
+      "contextAfterSHA256": "ff82974655e46137892fe3e895cd627ba328c4fa1ece57b0ef927b38b3a054ec"
     }
   ],
   "runtimeIntegrationPending": true,

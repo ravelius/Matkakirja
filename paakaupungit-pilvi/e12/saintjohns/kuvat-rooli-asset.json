@@ -146,7 +146,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/saintjohns/illustration-qa-extra.json",
-        "fileSHA256": "30fd907dc00b07b67d3ce14dedd16cc64c66479ee0ee86736cec06df1beb5e0a",
+        "fileSHA256": "a4bc491778aba177fa9878021beb3ec71f86cb0a321d27f19e449da3aca50e86",
         "item": {
           "slot": "O4",
           "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
@@ -220,11 +220,11 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/saintjohns/qa.json",
-            "sha256": "01e9c405e86cf678d2e03ac1f2349c5098c28839cb7ffb0bf25f1db5b0e67f0a"
+            "sha256": "4c285432161e22d461eb739164924691c5c37820eeb1a87bbab8ab19bd8a117e"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/saintjohns/illustration-qa-extra.json",
-            "sha256": "30fd907dc00b07b67d3ce14dedd16cc64c66479ee0ee86736cec06df1beb5e0a"
+            "sha256": "a4bc491778aba177fa9878021beb3ec71f86cb0a321d27f19e449da3aca50e86"
           }
         ]
       },
@@ -310,6 +310,926 @@
       "sourceContentAfterSHA256": "166dc94921e2aa33bf3ddf2c42518d76eeed26d64ef95b72811effedd4aea96a",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
       "contextAfterSHA256": "9f03f859e6a3cd56e816fffb17ff2baa4009397f857d852fac7f467d60e6546b"
+    },
+    {
+      "era": "e12",
+      "city": "saintjohns",
+      "slot": "K1",
+      "type": "illustration",
+      "assetID": "e12-saintjohns-K1-4f2dd3f6f1",
+      "galleryImageID": "e12-saintjohns-K1-4f2dd3f6f1",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].nostot[0]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "nostot",
+        0
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/saintjohns/e12-saintjohns-K1-4f2dd3f6f1-ef31ca033f5a.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Mäntypuun ja kiven materiaalihavainne katedraalin rakentamisen aiheeseen.",
+        "lyhyt": "Mäntypuun ja kiven materiaalihavainne katedraalin rakentamisen aiheeseen."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/saintjohns/e12-saintjohns-K1-4f2dd3f6f1-ef31ca033f5a.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Mäntypuun ja kiven materiaalihavainne katedraalin rakentamisen aiheeseen.",
+        "lyhyt": "Mäntypuun ja kiven materiaalihavainne katedraalin rakentamisen aiheeseen."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "ef31ca033f5aa40be50d9fed302add5dff6682e8cd42794da02f34a5db9bcf60",
+      "exportSHA256": "dc4e0c7674baf9a8d10793c4782f72bcb385d1320f8cbff3da5c93eb8e44d622",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/saintjohns/e12-saintjohns-K1-4f2dd3f6f1-ef31ca033f5a.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/saintjohns/e12-saintjohns-K1-4f2dd3f6f1-ef31ca033f5a.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e12/saintjohns/e12-saintjohns-K1-4f2dd3f6f1-ef31ca033f5a.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/saintjohns/sisalto.json",
+      "sourceContentSHA256": "166dc94921e2aa33bf3ddf2c42518d76eeed26d64ef95b72811effedd4aea96a",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "2db94c44996a3837c4689e86b10ca5d9f8402de1b2aed1d2fdc7fd72f5d3c342",
+        "semanticContextSHA256": "2db94c44996a3837c4689e86b10ca5d9f8402de1b2aed1d2fdc7fd72f5d3c342",
+        "subjectTitle": "Rakennus rakennuksen sisällä",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Tavallinen mäntypuumateriaali ja kivi, ei nimetyn katedraalin muotoilu, sisätila tai paikallinen näkymä.",
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/saintjohns/assets/e12-saintjohns-K1-4f2dd3f6f1/original.png",
+            "nativeSHA256": "ef31ca033f5aa40be50d9fed302add5dff6682e8cd42794da02f34a5db9bcf60",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "nativeAspectRatio": 1.5,
+            "format": "PNG",
+            "pngChunks": [
+              "IHDR",
+              "caBX",
+              "IDAT",
+              "IEND"
+            ],
+            "manifestMatch": true,
+            "captionFi": "Mäntypuun ja kiven materiaalihavainne katedraalin rakentamisen aiheeseen.",
+            "sourceEvidence": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/saintjohns/sisalto.json",
+              "contentSHA256": "1b4e08c38ad9594c5a640eebfa0a08d4a11432a4e6c9ec0fba9b1657283732be",
+              "sourceText": "Saint John’sin katedraalin kivikuoren sisällä on pitch pine -mäntypuusta tehty rakenne ja verhoilu. Ne tukevat rakennusta maanjäristysten ja myrskyjen kuormaa vastaan. Kirkkoa onkin kutsuttu rakennukseksi rakennuksen sisällä. Samalla paikalla on ollut sekä puukirkko että tiilikirkko ennen nykyistä katedraalia, jonka suunnitteli Thomas Fuller. Kaupungin tornit kertovat siis myös rakentamisen ongelmasta: miten kirkko tehdään paikkaan, jossa maa ja sää voivat ravistella sitä.",
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/saintjohns/faktapohja.md",
+              "originalSources": [
+                "https://en.wikipedia.org/wiki/St._John%27s_Cathedral_(Antigua_and_Barbuda)"
+              ],
+              "ccRelease": {},
+              "generationAuthorization": {
+                "rule": "OHJEET: turvallinen yleishavainnollistus ilman CC-odotusta",
+                "sharedReservationRecord": "/Volumes/T7 4TB/ChatGPT-Codex-active/coordination/paakaupungit-claims/08391cff28146b17/e12/saintjohns/K1/owner.json",
+                "ccReleaseRequired": false,
+                "scope": "lähdeperustainen turvallinen avoin mixed; ei PHOTO/C1-C3 tai nimetty kaupunkiasettelu"
+              }
+            },
+            "rightsEvidence": "Tavallinen mäntypuumateriaali ja kivi, ei nimetyn katedraalin muotoilu, sisätila tai paikallinen näkymä.",
+            "content": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/saintjohns/sisalto.json",
+              "contentSHA256": "166dc94921e2aa33bf3ddf2c42518d76eeed26d64ef95b72811effedd4aea96a",
+              "targetObjectExists": true,
+              "targetContainer": "$.kaupunkilehti[0].nostot[0]",
+              "targetText": {
+                "otsikko": "Rakennus rakennuksen sisällä",
+                "teksti": "Saint John’sin katedraalin kivikuoren sisällä on pitch pine -mäntypuusta tehty rakenne ja verhoilu. Ne tukevat rakennusta maanjäristysten ja myrskyjen kuormaa vastaan. Kirkkoa onkin kutsuttu rakennukseksi rakennuksen sisällä. Samalla paikalla on ollut sekä puukirkko että tiilikirkko ennen nykyistä katedraalia, jonka suunnitteli Thomas Fuller. Kaupungin tornit kertovat siis myös rakentamisen ongelmasta: miten kirkko tehdään paikkaan, jossa maa ja sää voivat ravistella sitä.",
+                "wiki": "St. John's Cathedral (Antigua and Barbuda)",
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              },
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/saintjohns/faktapohja.md",
+              "factSheetSHA256": "0c8b1c7f23f50a9e73ea7718627e45e6300bebcf23625152cec6bb40ad1035d2",
+              "factAssessment": "faktapohja.md kansi/rivi 33: pitch pine -sisärakenne ja kivikuori S2 Architecture/S10 See. Yleistetty mäntypuumateriaali, ei lajimääritysväite esineestä."
+            },
+            "visualInspection": {
+              "tool": "view_image",
+              "detail": "original",
+              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/saintjohns/assets/e12-saintjohns-K1-4f2dd3f6f1/original.png",
+              "inspectedBy": "qa-e12",
+              "inspectedAt": "2026-10-12 20:45:48 UTC",
+              "observations": "Sahattu vaalea havupuupala ja harmaa epäsäännöllinen kivi neutraalilla pinnalla. Päädyn vuosirenkaat, syyt ja halkeamat johdonmukaisia; kiven pinta epäsäännöllinen. Ei uskonnollista taidetta, rakennusta, tekstiä, logoja tai ihmisiä."
+            },
+            "otherReviewerVerdicts": [],
+            "openConflict": false,
+            "ownershipMarker": "qa-handoff-kuvitus-3.json"
+          },
+          "qaReason": "Mäntypuun ja kiven yleinen materiaalihavainne liittyy K1-noston katedraalin kivikuoren sisäiseen puurakenteeseen. Se ei esitä rakennuksen geometriaa tai nimettyä sisätilaa. Native-SHA ja toteutuneet mitat täsmäävät."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Mäntypuun ja kiven materiaalihavainne katedraalin rakentamisen aiheeseen.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/saintjohns/illustration-qa-extra.json",
+        "fileSHA256": "a4bc491778aba177fa9878021beb3ec71f86cb0a321d27f19e449da3aca50e86",
+        "item": {
+          "slot": "K1",
+          "targetJsonPath": "$.kaupunkilehti[0].nostot[0]",
+          "assetID": "e12-saintjohns-K1-4f2dd3f6f1",
+          "sha256": "ef31ca033f5aa40be50d9fed302add5dff6682e8cd42794da02f34a5db9bcf60",
+          "verdict": "accepted",
+          "reason": "Mäntypuun ja kiven yleinen materiaalihavainne liittyy K1-noston katedraalin kivikuoren sisäiseen puurakenteeseen. Se ei esitä rakennuksen geometriaa tai nimettyä sisätilaa. Native-SHA ja toteutuneet mitat täsmäävät.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/saintjohns/assets/e12-saintjohns-K1-4f2dd3f6f1/original.png",
+            "nativeSHA256": "ef31ca033f5aa40be50d9fed302add5dff6682e8cd42794da02f34a5db9bcf60",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "nativeAspectRatio": 1.5,
+            "format": "PNG",
+            "pngChunks": [
+              "IHDR",
+              "caBX",
+              "IDAT",
+              "IEND"
+            ],
+            "manifestMatch": true,
+            "captionFi": "Mäntypuun ja kiven materiaalihavainne katedraalin rakentamisen aiheeseen.",
+            "sourceEvidence": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/saintjohns/sisalto.json",
+              "contentSHA256": "1b4e08c38ad9594c5a640eebfa0a08d4a11432a4e6c9ec0fba9b1657283732be",
+              "sourceText": "Saint John’sin katedraalin kivikuoren sisällä on pitch pine -mäntypuusta tehty rakenne ja verhoilu. Ne tukevat rakennusta maanjäristysten ja myrskyjen kuormaa vastaan. Kirkkoa onkin kutsuttu rakennukseksi rakennuksen sisällä. Samalla paikalla on ollut sekä puukirkko että tiilikirkko ennen nykyistä katedraalia, jonka suunnitteli Thomas Fuller. Kaupungin tornit kertovat siis myös rakentamisen ongelmasta: miten kirkko tehdään paikkaan, jossa maa ja sää voivat ravistella sitä.",
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/saintjohns/faktapohja.md",
+              "originalSources": [
+                "https://en.wikipedia.org/wiki/St._John%27s_Cathedral_(Antigua_and_Barbuda)"
+              ],
+              "ccRelease": {},
+              "generationAuthorization": {
+                "rule": "OHJEET: turvallinen yleishavainnollistus ilman CC-odotusta",
+                "sharedReservationRecord": "/Volumes/T7 4TB/ChatGPT-Codex-active/coordination/paakaupungit-claims/08391cff28146b17/e12/saintjohns/K1/owner.json",
+                "ccReleaseRequired": false,
+                "scope": "lähdeperustainen turvallinen avoin mixed; ei PHOTO/C1-C3 tai nimetty kaupunkiasettelu"
+              }
+            },
+            "rightsEvidence": "Tavallinen mäntypuumateriaali ja kivi, ei nimetyn katedraalin muotoilu, sisätila tai paikallinen näkymä.",
+            "content": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/saintjohns/sisalto.json",
+              "contentSHA256": "166dc94921e2aa33bf3ddf2c42518d76eeed26d64ef95b72811effedd4aea96a",
+              "targetObjectExists": true,
+              "targetContainer": "$.kaupunkilehti[0].nostot[0]",
+              "targetText": {
+                "otsikko": "Rakennus rakennuksen sisällä",
+                "teksti": "Saint John’sin katedraalin kivikuoren sisällä on pitch pine -mäntypuusta tehty rakenne ja verhoilu. Ne tukevat rakennusta maanjäristysten ja myrskyjen kuormaa vastaan. Kirkkoa onkin kutsuttu rakennukseksi rakennuksen sisällä. Samalla paikalla on ollut sekä puukirkko että tiilikirkko ennen nykyistä katedraalia, jonka suunnitteli Thomas Fuller. Kaupungin tornit kertovat siis myös rakentamisen ongelmasta: miten kirkko tehdään paikkaan, jossa maa ja sää voivat ravistella sitä.",
+                "wiki": "St. John's Cathedral (Antigua and Barbuda)",
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              },
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/saintjohns/faktapohja.md",
+              "factSheetSHA256": "0c8b1c7f23f50a9e73ea7718627e45e6300bebcf23625152cec6bb40ad1035d2",
+              "factAssessment": "faktapohja.md kansi/rivi 33: pitch pine -sisärakenne ja kivikuori S2 Architecture/S10 See. Yleistetty mäntypuumateriaali, ei lajimääritysväite esineestä."
+            },
+            "visualInspection": {
+              "tool": "view_image",
+              "detail": "original",
+              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/saintjohns/assets/e12-saintjohns-K1-4f2dd3f6f1/original.png",
+              "inspectedBy": "qa-e12",
+              "inspectedAt": "2026-10-12 20:45:48 UTC",
+              "observations": "Sahattu vaalea havupuupala ja harmaa epäsäännöllinen kivi neutraalilla pinnalla. Päädyn vuosirenkaat, syyt ja halkeamat johdonmukaisia; kiven pinta epäsäännöllinen. Ei uskonnollista taidetta, rakennusta, tekstiä, logoja tai ihmisiä."
+            },
+            "otherReviewerVerdicts": [],
+            "openConflict": false,
+            "ownershipMarker": "qa-handoff-kuvitus-3.json"
+          },
+          "reviewedAt": "2026-10-12T20:45:49.220312+00:00",
+          "reviewerGroup": "qa-e12"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/saintjohns/qa.json",
+            "sha256": "4c285432161e22d461eb739164924691c5c37820eeb1a87bbab8ab19bd8a117e"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/saintjohns/illustration-qa-extra.json",
+            "sha256": "a4bc491778aba177fa9878021beb3ec71f86cb0a321d27f19e449da3aca50e86"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/saintjohns/e12-saintjohns-K1-4f2dd3f6f1-ef31ca033f5a.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/saintjohns/e12-saintjohns-K1-4f2dd3f6f1-ef31ca033f5a.png?t=dc4e0c7674baf9a8",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/saintjohns/e12-saintjohns-K1-4f2dd3f6f1-ef31ca033f5a.png",
+        "sha256": "dc4e0c7674baf9a8d10793c4782f72bcb385d1320f8cbff3da5c93eb8e44d622",
+        "bytes": 2567333,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e12-saintjohns-K1-4f2dd3f6f1",
+        "nativeSHA256": "ef31ca033f5aa40be50d9fed302add5dff6682e8cd42794da02f34a5db9bcf60",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e12/saintjohns/e12-saintjohns-K1-4f2dd3f6f1-ef31ca033f5a.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e12",
+        "city": "saintjohns",
+        "slot": "K1",
+        "targetJsonPath": "$.kaupunkilehti[0].nostot[0]",
+        "verifiedAt": "2026-10-12T20:47:21.455910+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e12/saintjohns/e12-saintjohns-K1-4f2dd3f6f1-ef31ca033f5a.png",
+        "sha256": "dc4e0c7674baf9a8d10793c4782f72bcb385d1320f8cbff3da5c93eb8e44d622",
+        "bytes": 2567333,
+        "SHAReadAt": "2026-10-12T20:45:57.564353+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "ef31ca033f5aa40be50d9fed302add5dff6682e8cd42794da02f34a5db9bcf60",
+        "rgbPixelSHA256": "84bfa0c735e3d7f7d7a88738740f0b1abc821ec15be39f1b205d7c01ae05fd51",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "166dc94921e2aa33bf3ddf2c42518d76eeed26d64ef95b72811effedd4aea96a",
+      "targetAfterSHA256": "2db94c44996a3837c4689e86b10ca5d9f8402de1b2aed1d2fdc7fd72f5d3c342",
+      "contextAfterSHA256": "2db94c44996a3837c4689e86b10ca5d9f8402de1b2aed1d2fdc7fd72f5d3c342"
+    },
+    {
+      "era": "e12",
+      "city": "saintjohns",
+      "slot": "L2",
+      "type": "illustration",
+      "assetID": "e12-saintjohns-L2-e6bc61a3ba",
+      "galleryImageID": "e12-saintjohns-L2-e6bc61a3ba",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[1].nostot[1]",
+      "targetTokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        1
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/saintjohns/e12-saintjohns-L2-e6bc61a3ba-0fc2b0aa4490.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Tiilen ja liuskekiven havainnekuva Saint John’sin rakennusmääräysten aiheeseen.",
+        "lyhyt": "Tiilen ja liuskekiven havainnekuva Saint John’sin rakennusmääräysten aiheeseen."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/saintjohns/e12-saintjohns-L2-e6bc61a3ba-0fc2b0aa4490.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Tiilen ja liuskekiven havainnekuva Saint John’sin rakennusmääräysten aiheeseen.",
+        "lyhyt": "Tiilen ja liuskekiven havainnekuva Saint John’sin rakennusmääräysten aiheeseen."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "0fc2b0aa4490f032c8d788e576e4bac5caaad4fa075ea8abbcfd53dc185f2f19",
+      "exportSHA256": "e4d7b066e1c33fcffcf6435a87902506f94883e07a06b96fa9d9dc5f6168b93a",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/saintjohns/e12-saintjohns-L2-e6bc61a3ba-0fc2b0aa4490.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/saintjohns/e12-saintjohns-L2-e6bc61a3ba-0fc2b0aa4490.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e12/saintjohns/e12-saintjohns-L2-e6bc61a3ba-0fc2b0aa4490.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/saintjohns/sisalto.json",
+      "sourceContentSHA256": "166dc94921e2aa33bf3ddf2c42518d76eeed26d64ef95b72811effedd4aea96a",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "8d148180847c1ecf50ffbbc0032c55a7915c490d081310d7d3535e1690c4891b",
+        "semanticContextSHA256": "8d148180847c1ecf50ffbbc0032c55a7915c490d081310d7d3535e1690c4891b",
+        "subjectTitle": "Palosta seurasi määräys katolle",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Tavallinen lähteessä nimetty kasvi, eläin, materiaali tai arkiesine; yleistetty havainnollistus, ei nimetyn paikan valokuva tai suojatun teoksen jäljennös.",
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/saintjohns/assets/e12-saintjohns-L2-e6bc61a3ba/original.png",
+            "nativeSHA256": "0fc2b0aa4490f032c8d788e576e4bac5caaad4fa075ea8abbcfd53dc185f2f19",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "nativeAspectRatio": 1.5,
+            "format": "PNG",
+            "pngChunks": [
+              "IHDR",
+              "caBX",
+              "IDAT",
+              "IEND"
+            ],
+            "manifestMatch": true,
+            "captionFi": "Tiilen ja liuskekiven havainnekuva Saint John’sin rakennusmääräysten aiheeseen.",
+            "sourceEvidence": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/saintjohns/sisalto.json",
+              "contentSHA256": "1b4e08c38ad9594c5a640eebfa0a08d4a11432a4e6c9ec0fba9b1657283732be",
+              "sourceText": "Saint John’s kärsi useista suurista tulipaloista 1700-luvulla. Yhden palon jälkeen kaupungin rakennussääntöjä tiukennettiin: useimpien julkisten rakennusten seinien piti olla tiiltä ja kattojen tiiltä tai liuskekiveä. Tavoitteena oli ehkäistä uusi tulipalo. Samalla kaupungille järjestettiin yövahti, jonka ylläpitoa varten asukkailta kerättiin veroa. Palohistoria näkyy siis sekä rakennusmateriaaleihin kohdistuneissa määräyksissä että uudessa valvontajärjestelyssä, ei vain tuhoutuneiden talojen luettelossa.",
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/saintjohns/faktapohja.md",
+              "originalSources": [
+                "https://en.wikipedia.org/wiki/St._John%27s,_Antigua_and_Barbuda"
+              ],
+              "ccRelease": {},
+              "generationAuthorization": {
+                "rule": "OHJEET: turvallinen yleishavainnollistus ilman CC-odotusta",
+                "sharedReservationRecord": "/Volumes/T7 4TB/ChatGPT-Codex-active/coordination/paakaupungit-claims/08391cff28146b17/e12/saintjohns/L2/owner.json",
+                "ccReleaseRequired": false,
+                "scope": "lähdeperustainen turvallinen avoin mixed; ei PHOTO/C1-C3 tai nimetty kaupunkiasettelu"
+              }
+            },
+            "rightsEvidence": "Tavallinen lähteessä nimetty kasvi, eläin, materiaali tai arkiesine; yleistetty havainnollistus, ei nimetyn paikan valokuva tai suojatun teoksen jäljennös.",
+            "content": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/saintjohns/sisalto.json",
+              "contentSHA256": "166dc94921e2aa33bf3ddf2c42518d76eeed26d64ef95b72811effedd4aea96a",
+              "targetObjectExists": true,
+              "targetContainer": "$.kaupunkilehti[1].nostot[1]",
+              "targetText": {
+                "otsikko": "Palosta seurasi määräys katolle",
+                "teksti": "Saint John’s kärsi useista suurista tulipaloista 1700-luvulla. Yhden palon jälkeen kaupungin rakennussääntöjä tiukennettiin: useimpien julkisten rakennusten seinien piti olla tiiltä ja kattojen tiiltä tai liuskekiveä. Tavoitteena oli ehkäistä uusi tulipalo. Samalla kaupungille järjestettiin yövahti, jonka ylläpitoa varten asukkailta kerättiin veroa. Palohistoria näkyy siis sekä rakennusmateriaaleihin kohdistuneissa määräyksissä että uudessa valvontajärjestelyssä, ei vain tuhoutuneiden talojen luettelossa.",
+                "wiki": "St. John's, Antigua and Barbuda",
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              },
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/saintjohns/faktapohja.md",
+              "factSheetSHA256": "0c8b1c7f23f50a9e73ea7718627e45e6300bebcf23625152cec6bb40ad1035d2",
+              "factAssessment": "faktapohja.md teema 2/rivi 41: tiiliseinät ja tiili-/liuskekivikatot, S1 History."
+            },
+            "visualInspection": {
+              "tool": "view_image",
+              "detail": "original",
+              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/saintjohns/assets/e12-saintjohns-L2-e6bc61a3ba/original.png",
+              "inspectedBy": "qa-e12",
+              "inspectedAt": "2026-10-12 20:45:48 UTC",
+              "observations": "Punainen savitiili ja kolme tummaa litteää liuskekiven kappaletta. Kivien ohuet kerrostuneet murtoreunat, pinnan suonet ja tiilen huokoisuus luontevia. Ei tekstiä, logoja, ihmisiä tai rakennusta."
+            },
+            "otherReviewerVerdicts": [],
+            "openConflict": false,
+            "ownershipMarker": "qa-handoff-kuvitus-3.json"
+          },
+          "qaReason": "Tiili ja liuskekivi vastaavat L2-noston rakentamismääräyksissä nimettyjä materiaaleja. Kuva ei keksi historiallista kattoa tai tulipalokohtausta. Native-SHA ja toteutuneet mitat täsmäävät."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Tiilen ja liuskekiven havainnekuva Saint John’sin rakennusmääräysten aiheeseen.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/saintjohns/illustration-qa-extra.json",
+        "fileSHA256": "a4bc491778aba177fa9878021beb3ec71f86cb0a321d27f19e449da3aca50e86",
+        "item": {
+          "slot": "L2",
+          "targetJsonPath": "$.kaupunkilehti[1].nostot[1]",
+          "assetID": "e12-saintjohns-L2-e6bc61a3ba",
+          "sha256": "0fc2b0aa4490f032c8d788e576e4bac5caaad4fa075ea8abbcfd53dc185f2f19",
+          "verdict": "accepted",
+          "reason": "Tiili ja liuskekivi vastaavat L2-noston rakentamismääräyksissä nimettyjä materiaaleja. Kuva ei keksi historiallista kattoa tai tulipalokohtausta. Native-SHA ja toteutuneet mitat täsmäävät.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/saintjohns/assets/e12-saintjohns-L2-e6bc61a3ba/original.png",
+            "nativeSHA256": "0fc2b0aa4490f032c8d788e576e4bac5caaad4fa075ea8abbcfd53dc185f2f19",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "nativeAspectRatio": 1.5,
+            "format": "PNG",
+            "pngChunks": [
+              "IHDR",
+              "caBX",
+              "IDAT",
+              "IEND"
+            ],
+            "manifestMatch": true,
+            "captionFi": "Tiilen ja liuskekiven havainnekuva Saint John’sin rakennusmääräysten aiheeseen.",
+            "sourceEvidence": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/saintjohns/sisalto.json",
+              "contentSHA256": "1b4e08c38ad9594c5a640eebfa0a08d4a11432a4e6c9ec0fba9b1657283732be",
+              "sourceText": "Saint John’s kärsi useista suurista tulipaloista 1700-luvulla. Yhden palon jälkeen kaupungin rakennussääntöjä tiukennettiin: useimpien julkisten rakennusten seinien piti olla tiiltä ja kattojen tiiltä tai liuskekiveä. Tavoitteena oli ehkäistä uusi tulipalo. Samalla kaupungille järjestettiin yövahti, jonka ylläpitoa varten asukkailta kerättiin veroa. Palohistoria näkyy siis sekä rakennusmateriaaleihin kohdistuneissa määräyksissä että uudessa valvontajärjestelyssä, ei vain tuhoutuneiden talojen luettelossa.",
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/saintjohns/faktapohja.md",
+              "originalSources": [
+                "https://en.wikipedia.org/wiki/St._John%27s,_Antigua_and_Barbuda"
+              ],
+              "ccRelease": {},
+              "generationAuthorization": {
+                "rule": "OHJEET: turvallinen yleishavainnollistus ilman CC-odotusta",
+                "sharedReservationRecord": "/Volumes/T7 4TB/ChatGPT-Codex-active/coordination/paakaupungit-claims/08391cff28146b17/e12/saintjohns/L2/owner.json",
+                "ccReleaseRequired": false,
+                "scope": "lähdeperustainen turvallinen avoin mixed; ei PHOTO/C1-C3 tai nimetty kaupunkiasettelu"
+              }
+            },
+            "rightsEvidence": "Tavallinen lähteessä nimetty kasvi, eläin, materiaali tai arkiesine; yleistetty havainnollistus, ei nimetyn paikan valokuva tai suojatun teoksen jäljennös.",
+            "content": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/saintjohns/sisalto.json",
+              "contentSHA256": "166dc94921e2aa33bf3ddf2c42518d76eeed26d64ef95b72811effedd4aea96a",
+              "targetObjectExists": true,
+              "targetContainer": "$.kaupunkilehti[1].nostot[1]",
+              "targetText": {
+                "otsikko": "Palosta seurasi määräys katolle",
+                "teksti": "Saint John’s kärsi useista suurista tulipaloista 1700-luvulla. Yhden palon jälkeen kaupungin rakennussääntöjä tiukennettiin: useimpien julkisten rakennusten seinien piti olla tiiltä ja kattojen tiiltä tai liuskekiveä. Tavoitteena oli ehkäistä uusi tulipalo. Samalla kaupungille järjestettiin yövahti, jonka ylläpitoa varten asukkailta kerättiin veroa. Palohistoria näkyy siis sekä rakennusmateriaaleihin kohdistuneissa määräyksissä että uudessa valvontajärjestelyssä, ei vain tuhoutuneiden talojen luettelossa.",
+                "wiki": "St. John's, Antigua and Barbuda",
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              },
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/saintjohns/faktapohja.md",
+              "factSheetSHA256": "0c8b1c7f23f50a9e73ea7718627e45e6300bebcf23625152cec6bb40ad1035d2",
+              "factAssessment": "faktapohja.md teema 2/rivi 41: tiiliseinät ja tiili-/liuskekivikatot, S1 History."
+            },
+            "visualInspection": {
+              "tool": "view_image",
+              "detail": "original",
+              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/saintjohns/assets/e12-saintjohns-L2-e6bc61a3ba/original.png",
+              "inspectedBy": "qa-e12",
+              "inspectedAt": "2026-10-12 20:45:48 UTC",
+              "observations": "Punainen savitiili ja kolme tummaa litteää liuskekiven kappaletta. Kivien ohuet kerrostuneet murtoreunat, pinnan suonet ja tiilen huokoisuus luontevia. Ei tekstiä, logoja, ihmisiä tai rakennusta."
+            },
+            "otherReviewerVerdicts": [],
+            "openConflict": false,
+            "ownershipMarker": "qa-handoff-kuvitus-3.json"
+          },
+          "reviewedAt": "2026-10-12T20:45:49.155238+00:00",
+          "reviewerGroup": "qa-e12"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/saintjohns/qa.json",
+            "sha256": "4c285432161e22d461eb739164924691c5c37820eeb1a87bbab8ab19bd8a117e"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/saintjohns/illustration-qa-extra.json",
+            "sha256": "a4bc491778aba177fa9878021beb3ec71f86cb0a321d27f19e449da3aca50e86"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/saintjohns/e12-saintjohns-L2-e6bc61a3ba-0fc2b0aa4490.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/saintjohns/e12-saintjohns-L2-e6bc61a3ba-0fc2b0aa4490.png?t=e4d7b066e1c33fcf",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/saintjohns/e12-saintjohns-L2-e6bc61a3ba-0fc2b0aa4490.png",
+        "sha256": "e4d7b066e1c33fcffcf6435a87902506f94883e07a06b96fa9d9dc5f6168b93a",
+        "bytes": 2957230,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e12-saintjohns-L2-e6bc61a3ba",
+        "nativeSHA256": "0fc2b0aa4490f032c8d788e576e4bac5caaad4fa075ea8abbcfd53dc185f2f19",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e12/saintjohns/e12-saintjohns-L2-e6bc61a3ba-0fc2b0aa4490.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e12",
+        "city": "saintjohns",
+        "slot": "L2",
+        "targetJsonPath": "$.kaupunkilehti[1].nostot[1]",
+        "verifiedAt": "2026-10-12T20:47:22.714518+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e12/saintjohns/e12-saintjohns-L2-e6bc61a3ba-0fc2b0aa4490.png",
+        "sha256": "e4d7b066e1c33fcffcf6435a87902506f94883e07a06b96fa9d9dc5f6168b93a",
+        "bytes": 2957230,
+        "SHAReadAt": "2026-10-12T20:45:57.309379+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "0fc2b0aa4490f032c8d788e576e4bac5caaad4fa075ea8abbcfd53dc185f2f19",
+        "rgbPixelSHA256": "f74558fdea833c2c3ddaf73ecd1bbe67942fe5ad1faa5f5eabb77a547eea7c3b",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "166dc94921e2aa33bf3ddf2c42518d76eeed26d64ef95b72811effedd4aea96a",
+      "targetAfterSHA256": "8d148180847c1ecf50ffbbc0032c55a7915c490d081310d7d3535e1690c4891b",
+      "contextAfterSHA256": "8d148180847c1ecf50ffbbc0032c55a7915c490d081310d7d3535e1690c4891b"
+    },
+    {
+      "era": "e12",
+      "city": "saintjohns",
+      "slot": "L3",
+      "type": "illustration",
+      "assetID": "e12-saintjohns-L3-63400a3c3b",
+      "galleryImageID": "e12-saintjohns-L3-63400a3c3b",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[1].nostot[2]",
+      "targetTokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        2
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/saintjohns/e12-saintjohns-L3-63400a3c3b-1e96a7cfb1c7.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva opuntiakaktuksen piikikkäistä varsista.",
+        "lyhyt": "Havainnekuva opuntiakaktuksen piikikkäistä varsista."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/saintjohns/e12-saintjohns-L3-63400a3c3b-1e96a7cfb1c7.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva opuntiakaktuksen piikikkäistä varsista.",
+        "lyhyt": "Havainnekuva opuntiakaktuksen piikikkäistä varsista."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "1e96a7cfb1c755577f65eea53ec1109ea93c0312c412bf291e0adaa9df3ac86a",
+      "exportSHA256": "02f0844ce8ec3719db1f47070f204f1b88d3d4a1426a4ecb29dfb1e971510c48",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/saintjohns/e12-saintjohns-L3-63400a3c3b-1e96a7cfb1c7.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/saintjohns/e12-saintjohns-L3-63400a3c3b-1e96a7cfb1c7.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e12/saintjohns/e12-saintjohns-L3-63400a3c3b-1e96a7cfb1c7.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/saintjohns/sisalto.json",
+      "sourceContentSHA256": "166dc94921e2aa33bf3ddf2c42518d76eeed26d64ef95b72811effedd4aea96a",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "a1e341f7d2642d0f6b4656d6111e71bc050fd7915043e0b160aebbfc7347c112",
+        "semanticContextSHA256": "a1e341f7d2642d0f6b4656d6111e71bc050fd7915043e0b160aebbfc7347c112",
+        "subjectTitle": "Kaktuksista tuli veron aihe",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Yleistetty lähteeseen perustuva aihehavainne; ei nimetyn paikan todistuskuva, henkilö, pakkaus tai suojattu teos. PHOTO-rooliin ei käytetä.",
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/saintjohns/assets/e12-saintjohns-L3-63400a3c3b/original.png",
+            "nativeSHA256": "1e96a7cfb1c755577f65eea53ec1109ea93c0312c412bf291e0adaa9df3ac86a",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "nativeAspectRatio": 1.5,
+            "format": "PNG",
+            "pngChunks": [
+              "IHDR",
+              "caBX",
+              "IDAT",
+              "IEND"
+            ],
+            "manifestMatch": true,
+            "captionFi": "Havainnekuva opuntiakaktuksen piikikkäistä varsista.",
+            "sourceEvidence": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/saintjohns/sisalto.json",
+              "contentSHA256": "1b4e08c38ad9594c5a640eebfa0a08d4a11432a4e6c9ec0fba9b1657283732be",
+              "sourceText": "1700-luvun lopun Saint John’sissa katuja ei vielä päällystetty eikä pidetty puhtaina. Haittaeläimet, matelijat ja katujen varsilla kasvavat piikikkäät opuntiakaktukset mainittiin syinä uudelle verolle. Kaupungin järjestäminen tarkoitti siis myös arkisia ongelmia teiden reunoilla. Samalla aikakaudella seurakunnan hallinnolle annettiin oikeus verottaa kauppiaita, sillä Saint John’s oli alueensa taloudellinen keskus. Vanhan satamakaupungin historiassa verot liittyivät sekä kauppaan että ympäristön kunnossapitoon.",
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/saintjohns/faktapohja.md",
+              "originalSources": [
+                "https://en.wikipedia.org/wiki/St._John%27s,_Antigua_and_Barbuda"
+              ],
+              "ccRelease": {},
+              "generationAuthorization": {
+                "rule": "OHJEET: turvallinen yleishavainnollistus ilman CC-odotusta",
+                "sharedReservationRecord": "/Volumes/T7 4TB/ChatGPT-Codex-active/coordination/paakaupungit-claims/08391cff28146b17/e12/saintjohns/L3/owner.json",
+                "clarifiedAt": "2026-10-12T18:16:50.716559+00:00",
+                "ccReleaseRequired": false,
+                "scope": "lähdeperustainen turvallinen avoin mixed, ei PHOTO/C1-C3 eikä keksitty nimetty kaupunkiasettelu"
+              }
+            },
+            "rightsEvidence": "Yleistetty lähteeseen perustuva aihehavainne; ei nimetyn paikan todistuskuva, henkilö, pakkaus tai suojattu teos. PHOTO-rooliin ei käytetä.",
+            "content": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/saintjohns/sisalto.json",
+              "contentSHA256": "166dc94921e2aa33bf3ddf2c42518d76eeed26d64ef95b72811effedd4aea96a",
+              "targetObjectExists": true,
+              "targetContainer": "$.kaupunkilehti[1].nostot[2]",
+              "targetText": {
+                "otsikko": "Kaktuksista tuli veron aihe",
+                "teksti": "1700-luvun lopun Saint John’sissa katuja ei vielä päällystetty eikä pidetty puhtaina. Haittaeläimet, matelijat ja katujen varsilla kasvavat piikikkäät opuntiakaktukset mainittiin syinä uudelle verolle. Kaupungin järjestäminen tarkoitti siis myös arkisia ongelmia teiden reunoilla. Samalla aikakaudella seurakunnan hallinnolle annettiin oikeus verottaa kauppiaita, sillä Saint John’s oli alueensa taloudellinen keskus. Vanhan satamakaupungin historiassa verot liittyivät sekä kauppaan että ympäristön kunnossapitoon.",
+                "wiki": "St. John's, Antigua and Barbuda",
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              },
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/saintjohns/faktapohja.md",
+              "factSheetSHA256": "0c8b1c7f23f50a9e73ea7718627e45e6300bebcf23625152cec6bb40ad1035d2",
+              "factAssessment": "faktapohja.md teema 3: piikikkäät prickly pear -kaktukset ja katujen kunnossapidon verotus S1 History."
+            },
+            "visualInspection": {
+              "tool": "view_image",
+              "detail": "original",
+              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/saintjohns/assets/e12-saintjohns-L3-63400a3c3b/original.png",
+              "inspectedBy": "qa-e12",
+              "inspectedAt": "2026-10-12 20:45:48 UTC",
+              "observations": "Useita vihreitä litteitä opuntian varsia, piikikkäitä areoleja ja eri kypsyysvaiheen hedelmiä. Nivelten liittymät, piikit ja varren pinta johdonmukaisia; varjot ja pienet vauriot vaihtelevat. Epäterävä rannikkotausta, ei tunnistettavaa rakennusta, tekstiä, logoja tai ihmisiä."
+            },
+            "otherReviewerVerdicts": [],
+            "openConflict": false,
+            "ownershipMarker": "qa-handoff-kuvitus-3.json"
+          },
+          "qaReason": "Opuntian nivelikkäät laakeat varret havainnollistavat L3-noston katujen piikikkäitä kaktuksia. Taustaa ei esitetä Saint John’sin dokumentaarisena näkymänä. Native-SHA ja toteutuneet mitat täsmäävät."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva opuntiakaktuksen piikikkäistä varsista.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/saintjohns/illustration-qa-extra.json",
+        "fileSHA256": "a4bc491778aba177fa9878021beb3ec71f86cb0a321d27f19e449da3aca50e86",
+        "item": {
+          "slot": "L3",
+          "targetJsonPath": "$.kaupunkilehti[1].nostot[2]",
+          "assetID": "e12-saintjohns-L3-63400a3c3b",
+          "sha256": "1e96a7cfb1c755577f65eea53ec1109ea93c0312c412bf291e0adaa9df3ac86a",
+          "verdict": "accepted",
+          "reason": "Opuntian nivelikkäät laakeat varret havainnollistavat L3-noston katujen piikikkäitä kaktuksia. Taustaa ei esitetä Saint John’sin dokumentaarisena näkymänä. Native-SHA ja toteutuneet mitat täsmäävät.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/saintjohns/assets/e12-saintjohns-L3-63400a3c3b/original.png",
+            "nativeSHA256": "1e96a7cfb1c755577f65eea53ec1109ea93c0312c412bf291e0adaa9df3ac86a",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "nativeAspectRatio": 1.5,
+            "format": "PNG",
+            "pngChunks": [
+              "IHDR",
+              "caBX",
+              "IDAT",
+              "IEND"
+            ],
+            "manifestMatch": true,
+            "captionFi": "Havainnekuva opuntiakaktuksen piikikkäistä varsista.",
+            "sourceEvidence": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/saintjohns/sisalto.json",
+              "contentSHA256": "1b4e08c38ad9594c5a640eebfa0a08d4a11432a4e6c9ec0fba9b1657283732be",
+              "sourceText": "1700-luvun lopun Saint John’sissa katuja ei vielä päällystetty eikä pidetty puhtaina. Haittaeläimet, matelijat ja katujen varsilla kasvavat piikikkäät opuntiakaktukset mainittiin syinä uudelle verolle. Kaupungin järjestäminen tarkoitti siis myös arkisia ongelmia teiden reunoilla. Samalla aikakaudella seurakunnan hallinnolle annettiin oikeus verottaa kauppiaita, sillä Saint John’s oli alueensa taloudellinen keskus. Vanhan satamakaupungin historiassa verot liittyivät sekä kauppaan että ympäristön kunnossapitoon.",
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/saintjohns/faktapohja.md",
+              "originalSources": [
+                "https://en.wikipedia.org/wiki/St._John%27s,_Antigua_and_Barbuda"
+              ],
+              "ccRelease": {},
+              "generationAuthorization": {
+                "rule": "OHJEET: turvallinen yleishavainnollistus ilman CC-odotusta",
+                "sharedReservationRecord": "/Volumes/T7 4TB/ChatGPT-Codex-active/coordination/paakaupungit-claims/08391cff28146b17/e12/saintjohns/L3/owner.json",
+                "clarifiedAt": "2026-10-12T18:16:50.716559+00:00",
+                "ccReleaseRequired": false,
+                "scope": "lähdeperustainen turvallinen avoin mixed, ei PHOTO/C1-C3 eikä keksitty nimetty kaupunkiasettelu"
+              }
+            },
+            "rightsEvidence": "Yleistetty lähteeseen perustuva aihehavainne; ei nimetyn paikan todistuskuva, henkilö, pakkaus tai suojattu teos. PHOTO-rooliin ei käytetä.",
+            "content": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/saintjohns/sisalto.json",
+              "contentSHA256": "166dc94921e2aa33bf3ddf2c42518d76eeed26d64ef95b72811effedd4aea96a",
+              "targetObjectExists": true,
+              "targetContainer": "$.kaupunkilehti[1].nostot[2]",
+              "targetText": {
+                "otsikko": "Kaktuksista tuli veron aihe",
+                "teksti": "1700-luvun lopun Saint John’sissa katuja ei vielä päällystetty eikä pidetty puhtaina. Haittaeläimet, matelijat ja katujen varsilla kasvavat piikikkäät opuntiakaktukset mainittiin syinä uudelle verolle. Kaupungin järjestäminen tarkoitti siis myös arkisia ongelmia teiden reunoilla. Samalla aikakaudella seurakunnan hallinnolle annettiin oikeus verottaa kauppiaita, sillä Saint John’s oli alueensa taloudellinen keskus. Vanhan satamakaupungin historiassa verot liittyivät sekä kauppaan että ympäristön kunnossapitoon.",
+                "wiki": "St. John's, Antigua and Barbuda",
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              },
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/saintjohns/faktapohja.md",
+              "factSheetSHA256": "0c8b1c7f23f50a9e73ea7718627e45e6300bebcf23625152cec6bb40ad1035d2",
+              "factAssessment": "faktapohja.md teema 3: piikikkäät prickly pear -kaktukset ja katujen kunnossapidon verotus S1 History."
+            },
+            "visualInspection": {
+              "tool": "view_image",
+              "detail": "original",
+              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/saintjohns/assets/e12-saintjohns-L3-63400a3c3b/original.png",
+              "inspectedBy": "qa-e12",
+              "inspectedAt": "2026-10-12 20:45:48 UTC",
+              "observations": "Useita vihreitä litteitä opuntian varsia, piikikkäitä areoleja ja eri kypsyysvaiheen hedelmiä. Nivelten liittymät, piikit ja varren pinta johdonmukaisia; varjot ja pienet vauriot vaihtelevat. Epäterävä rannikkotausta, ei tunnistettavaa rakennusta, tekstiä, logoja tai ihmisiä."
+            },
+            "otherReviewerVerdicts": [],
+            "openConflict": false,
+            "ownershipMarker": "qa-handoff-kuvitus-3.json"
+          },
+          "reviewedAt": "2026-10-12T20:45:49.093228+00:00",
+          "reviewerGroup": "qa-e12"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/saintjohns/qa.json",
+            "sha256": "4c285432161e22d461eb739164924691c5c37820eeb1a87bbab8ab19bd8a117e"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/saintjohns/illustration-qa-extra.json",
+            "sha256": "a4bc491778aba177fa9878021beb3ec71f86cb0a321d27f19e449da3aca50e86"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/saintjohns/e12-saintjohns-L3-63400a3c3b-1e96a7cfb1c7.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/saintjohns/e12-saintjohns-L3-63400a3c3b-1e96a7cfb1c7.png?t=02f0844ce8ec3719",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/saintjohns/e12-saintjohns-L3-63400a3c3b-1e96a7cfb1c7.png",
+        "sha256": "02f0844ce8ec3719db1f47070f204f1b88d3d4a1426a4ecb29dfb1e971510c48",
+        "bytes": 2464254,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e12-saintjohns-L3-63400a3c3b",
+        "nativeSHA256": "1e96a7cfb1c755577f65eea53ec1109ea93c0312c412bf291e0adaa9df3ac86a",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e12/saintjohns/e12-saintjohns-L3-63400a3c3b-1e96a7cfb1c7.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e12",
+        "city": "saintjohns",
+        "slot": "L3",
+        "targetJsonPath": "$.kaupunkilehti[1].nostot[2]",
+        "verifiedAt": "2026-10-12T20:47:23.878842+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e12/saintjohns/e12-saintjohns-L3-63400a3c3b-1e96a7cfb1c7.png",
+        "sha256": "02f0844ce8ec3719db1f47070f204f1b88d3d4a1426a4ecb29dfb1e971510c48",
+        "bytes": 2464254,
+        "SHAReadAt": "2026-10-12T20:45:57.095931+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "1e96a7cfb1c755577f65eea53ec1109ea93c0312c412bf291e0adaa9df3ac86a",
+        "rgbPixelSHA256": "1c9e0e432c945406fafb6664edf84a4046549bd4c42a5d9e6c1c445fd983ed12",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "166dc94921e2aa33bf3ddf2c42518d76eeed26d64ef95b72811effedd4aea96a",
+      "targetAfterSHA256": "a1e341f7d2642d0f6b4656d6111e71bc050fd7915043e0b160aebbfc7347c112",
+      "contextAfterSHA256": "a1e341f7d2642d0f6b4656d6111e71bc050fd7915043e0b160aebbfc7347c112"
     },
     {
       "era": "e12",
@@ -428,7 +1348,7 @@
               ]
             ],
             "currentContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/saintjohns/sisalto.json",
-            "currentContentSHA256": "1b4e08c38ad9594c5a640eebfa0a08d4a11432a4e6c9ec0fba9b1657283732be",
+            "currentContentSHA256": "166dc94921e2aa33bf3ddf2c42518d76eeed26d64ef95b72811effedd4aea96a",
             "sourceChecks": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/saintjohns/qa-evidence/current-commons-source-checks.json",
             "usedInGameCheck": {
               "status": "no hits",
@@ -446,7 +1366,16 @@
                 "change": "Only spacing before the year; source, credit, license, dimensions and visually inspected bytes unchanged."
               }
             ],
-            "captionFiReviewed": "Saint John’sin Deepwater Harbourin merimaisemaa vuonna 2015."
+            "captionFiReviewed": "Saint John’sin Deepwater Harbourin merimaisemaa vuonna 2015.",
+            "contentRevalidations": [
+              {
+                "checkedAt": "2026-10-12T20:39:10.135870+00:00",
+                "previousContentSHA256": "1b4e08c38ad9594c5a640eebfa0a08d4a11432a4e6c9ec0fba9b1657283732be",
+                "currentContentSHA256": "166dc94921e2aa33bf3ddf2c42518d76eeed26d64ef95b72811effedd4aea96a",
+                "proof": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/saintjohns/qa-evidence/content-revalidation-1b4e08c38ad9-166dc94921e2.json",
+                "result": "Only planned image fields and image year/credit/caption metadata changed; all topic text, names, objects, questions, map and weather data unchanged."
+              }
+            ]
           },
           "qaReason": "Aito Saint John’sin Deepwater Harbourin meri-/satamanäkymä katsottu. Vesi, työvene, laiturit ja käyttörakenteet pääaiheina; linnakerakenteet pienellä etäisellä kukkulalla sivuosassa, ei erillisen rakennus-/taideteoksen pääaihekuva. Ei luettavia kasvoja, lisättyä tekstiä, watermarkia tai kehystä. Veneen nimi ja konttien fyysiset kuljetusyhtiömerkinnät kuuluvat satamaympäristöön; tämä ei ole mainos-/tuotepakkauskuva. Description nimeää St.John’sin Deepwater Harbourin pohjoispuolisen niemen. Fort James -tiedostonimi ei yksin todista näkyvän linnakkeen identiteettiä; kuvateksti pysyy todetussa merimaisemassa. Balou46/Own work/CC BY-SA4.0,4672×3104 ja29.11.2015 varmennettu. PHOTOssa ei tuoreuspakkoa, eikä kuvaa nimetä nykyiseksi opas- tai linnakenäkymäksi."
         }
@@ -462,7 +1391,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/saintjohns/qa.json",
-        "fileSHA256": "01e9c405e86cf678d2e03ac1f2349c5098c28839cb7ffb0bf25f1db5b0e67f0a",
+        "fileSHA256": "4c285432161e22d461eb739164924691c5c37820eeb1a87bbab8ab19bd8a117e",
         "item": {
           "slot": "PHOTO",
           "targetJsonPath": "$.valokuva",
@@ -516,7 +1445,7 @@
               ]
             ],
             "currentContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/saintjohns/sisalto.json",
-            "currentContentSHA256": "1b4e08c38ad9594c5a640eebfa0a08d4a11432a4e6c9ec0fba9b1657283732be",
+            "currentContentSHA256": "166dc94921e2aa33bf3ddf2c42518d76eeed26d64ef95b72811effedd4aea96a",
             "sourceChecks": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/saintjohns/qa-evidence/current-commons-source-checks.json",
             "usedInGameCheck": {
               "status": "no hits",
@@ -534,18 +1463,27 @@
                 "change": "Only spacing before the year; source, credit, license, dimensions and visually inspected bytes unchanged."
               }
             ],
-            "captionFiReviewed": "Saint John’sin Deepwater Harbourin merimaisemaa vuonna 2015."
+            "captionFiReviewed": "Saint John’sin Deepwater Harbourin merimaisemaa vuonna 2015.",
+            "contentRevalidations": [
+              {
+                "checkedAt": "2026-10-12T20:39:10.135870+00:00",
+                "previousContentSHA256": "1b4e08c38ad9594c5a640eebfa0a08d4a11432a4e6c9ec0fba9b1657283732be",
+                "currentContentSHA256": "166dc94921e2aa33bf3ddf2c42518d76eeed26d64ef95b72811effedd4aea96a",
+                "proof": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/saintjohns/qa-evidence/content-revalidation-1b4e08c38ad9-166dc94921e2.json",
+                "result": "Only planned image fields and image year/credit/caption metadata changed; all topic text, names, objects, questions, map and weather data unchanged."
+              }
+            ]
           },
           "reviewedAt": "2026-10-12T19:43:33.681168+00:00"
         },
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/saintjohns/qa.json",
-            "sha256": "01e9c405e86cf678d2e03ac1f2349c5098c28839cb7ffb0bf25f1db5b0e67f0a"
+            "sha256": "4c285432161e22d461eb739164924691c5c37820eeb1a87bbab8ab19bd8a117e"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/saintjohns/illustration-qa-extra.json",
-            "sha256": "30fd907dc00b07b67d3ce14dedd16cc64c66479ee0ee86736cec06df1beb5e0a"
+            "sha256": "a4bc491778aba177fa9878021beb3ec71f86cb0a321d27f19e449da3aca50e86"
           }
         ]
       },
@@ -742,7 +1680,7 @@
               ]
             ],
             "currentContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/saintjohns/sisalto.json",
-            "currentContentSHA256": "1b4e08c38ad9594c5a640eebfa0a08d4a11432a4e6c9ec0fba9b1657283732be",
+            "currentContentSHA256": "166dc94921e2aa33bf3ddf2c42518d76eeed26d64ef95b72811effedd4aea96a",
             "sourceChecks": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/saintjohns/qa-evidence/current-commons-source-checks.json",
             "usedInGameCheck": {
               "status": "no hits",
@@ -760,7 +1698,16 @@
                 "change": "Only spacing before the year; source, credit, license, dimensions and visually inspected bytes unchanged."
               }
             ],
-            "captionFiReviewed": "Saint John’sin laaja kaupunkipanoraama marraskuussa 2015."
+            "captionFiReviewed": "Saint John’sin laaja kaupunkipanoraama marraskuussa 2015.",
+            "contentRevalidations": [
+              {
+                "checkedAt": "2026-10-12T20:39:10.136013+00:00",
+                "previousContentSHA256": "1b4e08c38ad9594c5a640eebfa0a08d4a11432a4e6c9ec0fba9b1657283732be",
+                "currentContentSHA256": "166dc94921e2aa33bf3ddf2c42518d76eeed26d64ef95b72811effedd4aea96a",
+                "proof": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/saintjohns/qa-evidence/content-revalidation-1b4e08c38ad9-166dc94921e2.json",
+                "result": "Only planned image fields and image year/credit/caption metadata changed; all topic text, names, objects, questions, map and weather data unchanged."
+              }
+            ]
           },
           "qaReason": "Kokonainen laaja aito Saint John’sin kaupunkipanoraama katsottu. Satama, kadut, katot, puusto ja kaupungin ympäröivät kukkulat näyttävät todellisen maantieteellisen asettelun; rakennukset muodostavat hajautuneen kokonaisuuden, eikä yksittäinen nimetty omaperäinen nykyteos ole jäljennöspääaiheena. Ei luettavia kasvopiirteitä, päälle lisättyä tekstiä, watermarkia tai kehystä. Kaukaiset fyysiset liikekyltit ovat kaupunkiympäristön osia, ei mainos-/pakkauskuva. Description Pano St.John’s ja kaupungin lähdeluokittelu tukevat paikkaa. Balou46/Own work/CC BY-SA4.0,11008×2522 ja29.11.2015 varmennettu. Äärimmäinen panoraamasuhde ei ole C1:n automaattinen hylkäysperuste; hyväksyntä koskee tätä koko laajaa sommittelua. Yksittäisen rakennuksen/kyltin eristävä suurennus tarvitsee erillisen arvion. Ei nykytilan tuoreusväitettä eikä blanket-lupaa taustatalojen tekijänoikeuksista."
         }
@@ -776,7 +1723,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/saintjohns/qa.json",
-        "fileSHA256": "01e9c405e86cf678d2e03ac1f2349c5098c28839cb7ffb0bf25f1db5b0e67f0a",
+        "fileSHA256": "4c285432161e22d461eb739164924691c5c37820eeb1a87bbab8ab19bd8a117e",
         "item": {
           "slot": "C1",
           "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
@@ -830,7 +1777,7 @@
               ]
             ],
             "currentContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/saintjohns/sisalto.json",
-            "currentContentSHA256": "1b4e08c38ad9594c5a640eebfa0a08d4a11432a4e6c9ec0fba9b1657283732be",
+            "currentContentSHA256": "166dc94921e2aa33bf3ddf2c42518d76eeed26d64ef95b72811effedd4aea96a",
             "sourceChecks": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/saintjohns/qa-evidence/current-commons-source-checks.json",
             "usedInGameCheck": {
               "status": "no hits",
@@ -848,18 +1795,27 @@
                 "change": "Only spacing before the year; source, credit, license, dimensions and visually inspected bytes unchanged."
               }
             ],
-            "captionFiReviewed": "Saint John’sin laaja kaupunkipanoraama marraskuussa 2015."
+            "captionFiReviewed": "Saint John’sin laaja kaupunkipanoraama marraskuussa 2015.",
+            "contentRevalidations": [
+              {
+                "checkedAt": "2026-10-12T20:39:10.136013+00:00",
+                "previousContentSHA256": "1b4e08c38ad9594c5a640eebfa0a08d4a11432a4e6c9ec0fba9b1657283732be",
+                "currentContentSHA256": "166dc94921e2aa33bf3ddf2c42518d76eeed26d64ef95b72811effedd4aea96a",
+                "proof": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/saintjohns/qa-evidence/content-revalidation-1b4e08c38ad9-166dc94921e2.json",
+                "result": "Only planned image fields and image year/credit/caption metadata changed; all topic text, names, objects, questions, map and weather data unchanged."
+              }
+            ]
           },
           "reviewedAt": "2026-10-12T19:50:15.629835+00:00"
         },
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/saintjohns/qa.json",
-            "sha256": "01e9c405e86cf678d2e03ac1f2349c5098c28839cb7ffb0bf25f1db5b0e67f0a"
+            "sha256": "4c285432161e22d461eb739164924691c5c37820eeb1a87bbab8ab19bd8a117e"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/saintjohns/illustration-qa-extra.json",
-            "sha256": "30fd907dc00b07b67d3ce14dedd16cc64c66479ee0ee86736cec06df1beb5e0a"
+            "sha256": "a4bc491778aba177fa9878021beb3ec71f86cb0a321d27f19e449da3aca50e86"
           }
         ]
       },

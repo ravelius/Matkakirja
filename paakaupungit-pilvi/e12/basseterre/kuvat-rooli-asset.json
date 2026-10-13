@@ -3,7 +3,7 @@
   "era": "e12",
   "city": "basseterre",
   "authorization": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
-  "sourceContentAfterSHA256": "505614d583facb582a8cff8784048c501319709a57572391a5fa132f7f3935d8",
+  "sourceContentAfterSHA256": "2143fbd9c01c2db6d84138496c1a40ed07dfe368a1a845fba4eb629bfa8695d1",
   "assets": [
     {
       "era": "e12",
@@ -146,7 +146,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/basseterre/illustration-qa-extra.json",
-        "fileSHA256": "2a120275e1a5bb6281735bd019dfb757ddc5a5566c3b09d1fc277dbcedd03bbd",
+        "fileSHA256": "dc329bb963e6f97bc24360a3d3612ff6b765cdfb27dbb118679737b9801d1e9c",
         "item": {
           "slot": "O4",
           "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
@@ -220,11 +220,11 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/basseterre/qa.json",
-            "sha256": "769df3513d67001d6179f7fce87c17421f6f735aabd193d993f4d7dd22a342bb"
+            "sha256": "6c11eb70eedfadfafcf58c43df16523c23d1d8f59722d962995251905df420a4"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/basseterre/illustration-qa-extra.json",
-            "sha256": "2a120275e1a5bb6281735bd019dfb757ddc5a5566c3b09d1fc277dbcedd03bbd"
+            "sha256": "dc329bb963e6f97bc24360a3d3612ff6b765cdfb27dbb118679737b9801d1e9c"
           }
         ]
       },
@@ -307,7 +307,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "505614d583facb582a8cff8784048c501319709a57572391a5fa132f7f3935d8",
+      "sourceContentAfterSHA256": "2143fbd9c01c2db6d84138496c1a40ed07dfe368a1a845fba4eb629bfa8695d1",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
       "contextAfterSHA256": "a6b757272031e1d427b592c8688718f733e180c96a67a55308ae6c1fa6a16112"
     },
@@ -447,7 +447,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/basseterre/illustration-qa-extra.json",
-        "fileSHA256": "2a120275e1a5bb6281735bd019dfb757ddc5a5566c3b09d1fc277dbcedd03bbd",
+        "fileSHA256": "dc329bb963e6f97bc24360a3d3612ff6b765cdfb27dbb118679737b9801d1e9c",
         "item": {
           "slot": "K3",
           "targetJsonPath": "$.kaupunkilehti[0].nostot[2]",
@@ -519,11 +519,11 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/basseterre/qa.json",
-            "sha256": "769df3513d67001d6179f7fce87c17421f6f735aabd193d993f4d7dd22a342bb"
+            "sha256": "6c11eb70eedfadfafcf58c43df16523c23d1d8f59722d962995251905df420a4"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/basseterre/illustration-qa-extra.json",
-            "sha256": "2a120275e1a5bb6281735bd019dfb757ddc5a5566c3b09d1fc277dbcedd03bbd"
+            "sha256": "dc329bb963e6f97bc24360a3d3612ff6b765cdfb27dbb118679737b9801d1e9c"
           }
         ]
       },
@@ -606,9 +606,933 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "505614d583facb582a8cff8784048c501319709a57572391a5fa132f7f3935d8",
+      "sourceContentAfterSHA256": "2143fbd9c01c2db6d84138496c1a40ed07dfe368a1a845fba4eb629bfa8695d1",
       "targetAfterSHA256": "baf55651cd00d82bd8517f6e3ba60649dbe4d769f72d6d4a5446368a6f88f320",
       "contextAfterSHA256": "baf55651cd00d82bd8517f6e3ba60649dbe4d769f72d6d4a5446368a6f88f320"
+    },
+    {
+      "era": "e12",
+      "city": "basseterre",
+      "slot": "K4",
+      "type": "illustration",
+      "assetID": "e12-basseterre-K4-bd3a536d7d",
+      "galleryImageID": "e12-basseterre-K4-bd3a536d7d",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].nostot[3]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "nostot",
+        3
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/basseterre/e12-basseterre-K4-bd3a536d7d-268ec2cdfbce.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Krikettivälineiden havainnekuva Warner Parkin urheiluaiheeseen.",
+        "lyhyt": "Krikettivälineiden havainnekuva Warner Parkin urheiluaiheeseen."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/basseterre/e12-basseterre-K4-bd3a536d7d-268ec2cdfbce.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Krikettivälineiden havainnekuva Warner Parkin urheiluaiheeseen.",
+        "lyhyt": "Krikettivälineiden havainnekuva Warner Parkin urheiluaiheeseen."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "268ec2cdfbcea4e3620b5c0c7d913837924227d80e0b23e67e694cf7a5b43cac",
+      "exportSHA256": "4bff76274db2485c625e918a7d9fe34ccfcbe3ba020322803156a00e88625d4b",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/basseterre/e12-basseterre-K4-bd3a536d7d-268ec2cdfbce.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/basseterre/e12-basseterre-K4-bd3a536d7d-268ec2cdfbce.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e12/basseterre/e12-basseterre-K4-bd3a536d7d-268ec2cdfbce.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/basseterre/sisalto.json",
+      "sourceContentSHA256": "505614d583facb582a8cff8784048c501319709a57572391a5fa132f7f3935d8",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "c984a3c76e67cf493e9b2f51a4d6af55c1700497b2c297bb25a9153aa92f2530",
+        "semanticContextSHA256": "c984a3c76e67cf493e9b2f51a4d6af55c1700497b2c297bb25a9153aa92f2530",
+        "subjectTitle": "Pieni pääkaupunki, kansainvälinen kenttä",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Tavallinen lähteessä nimetty kasvi, eläin, materiaali tai arkiesine; yleistetty havainnollistus, ei nimetyn paikan valokuva tai suojatun teoksen jäljennös.",
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/basseterre/assets/e12-basseterre-K4-bd3a536d7d/original.png",
+            "nativeSHA256": "268ec2cdfbcea4e3620b5c0c7d913837924227d80e0b23e67e694cf7a5b43cac",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "nativeAspectRatio": 1.5,
+            "format": "PNG",
+            "pngChunks": [
+              "IHDR",
+              "caBX",
+              "IDAT",
+              "IEND"
+            ],
+            "manifestMatch": true,
+            "captionFi": "Krikettivälineiden havainnekuva Warner Parkin urheiluaiheeseen.",
+            "sourceEvidence": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/basseterre/sisalto.json",
+              "contentSHA256": "b1cdd250aba418c97319c1b8694863604db679447f81eff45bcbe7fe46ad875a",
+              "sourceText": "Warner Parkin urheilukokonaisuus on isännöinyt kriketin maailmanmestaruusturnauksen otteluita. Basseterreen koko ei siis kerro, millaiselle yleisölle kaupungissa on pelattu. Alueeseen kuuluu krikettistadionin lisäksi jalkapallostadion, ja siellä harrastetaan myös yleisurheilua. Krikettiä seuraava matkailija voi etsiä kaupungin ohjelmasta ottelupäivän aivan kuten musiikista kiinnostunut etsii konserttia. Warner Park tuo keskustan historiaan toisen mittakaavan: hallinto- ja satamakaupungissa on myös tilaa kansainväliselle urheilulle.",
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/basseterre/faktapohja.md",
+              "originalSources": [
+                "https://en.wikipedia.org/wiki/Warner_Park_Sporting_Complex"
+              ],
+              "ccRelease": {},
+              "generationAuthorization": {
+                "rule": "OHJEET: turvallinen yleishavainnollistus ilman CC-odotusta",
+                "sharedReservationRecord": "/Volumes/T7 4TB/ChatGPT-Codex-active/coordination/paakaupungit-claims/08391cff28146b17/e12/basseterre/K4/owner.json",
+                "ccReleaseRequired": false,
+                "scope": "lähdeperustainen turvallinen avoin mixed; ei PHOTO/C1-C3 tai nimetty kaupunkiasettelu"
+              }
+            },
+            "rightsEvidence": "Tavallinen lähteessä nimetty kasvi, eläin, materiaali tai arkiesine; yleistetty havainnollistus, ei nimetyn paikan valokuva tai suojatun teoksen jäljennös.",
+            "content": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/basseterre/sisalto.json",
+              "contentSHA256": "505614d583facb582a8cff8784048c501319709a57572391a5fa132f7f3935d8",
+              "targetObjectExists": true,
+              "targetContainer": "$.kaupunkilehti[0].nostot[3]",
+              "targetText": {
+                "otsikko": "Pieni pääkaupunki, kansainvälinen kenttä",
+                "teksti": "Warner Parkin urheilukokonaisuus on isännöinyt kriketin maailmanmestaruusturnauksen otteluita. Basseterreen koko ei siis kerro, millaiselle yleisölle kaupungissa on pelattu. Alueeseen kuuluu krikettistadionin lisäksi jalkapallostadion, ja siellä harrastetaan myös yleisurheilua. Krikettiä seuraava matkailija voi etsiä kaupungin ohjelmasta ottelupäivän aivan kuten musiikista kiinnostunut etsii konserttia. Warner Park tuo keskustan historiaan toisen mittakaavan: hallinto- ja satamakaupungissa on myös tilaa kansainväliselle urheilulle.",
+                "wiki": "Basseterre",
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              },
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/basseterre/faktapohja.md",
+              "factSheetSHA256": "8bce15fe58267c9838c37b4f8e1a9d137163cc405f405c6b37ae448851fc4888",
+              "factAssessment": "faktapohja.md kannen Warner Park -rivi: kriketti B1/B5, stadioneja ja yleisurheilu B2 Do."
+            },
+            "visualInspection": {
+              "tool": "view_image",
+              "detail": "original",
+              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/basseterre/assets/e12-basseterre-K4-bd3a536d7d/original.png",
+              "inspectedBy": "qa-e12",
+              "inspectedAt": "2026-10-12 20:45:48 UTC",
+              "observations": "Nurmella yksi merkitsemätön puinen krikettimaila ja punainen nahkapallo. Mailan lapa, kahva ja grippi muodostavat jatkuvan uskottavan rakenteen; pallon sauma ja materiaalit näkyvät luonnollisesti. Ei tekstiä, logoja, ihmisiä tai stadionrekonstruktiota."
+            },
+            "otherReviewerVerdicts": [],
+            "openConflict": false,
+            "ownershipMarker": "qa-handoff-kuvitus-3.json"
+          },
+          "qaReason": "Krikettimaila ja saumallinen pallo vastaavat K4-noston Warner Parkin krikettiaihetta. Kuvateksti rajaa kuvan välineiden havainnekuvaksi. Native-SHA ja toteutuneet mitat täsmäävät."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Krikettivälineiden havainnekuva Warner Parkin urheiluaiheeseen.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/basseterre/illustration-qa-extra.json",
+        "fileSHA256": "dc329bb963e6f97bc24360a3d3612ff6b765cdfb27dbb118679737b9801d1e9c",
+        "item": {
+          "slot": "K4",
+          "targetJsonPath": "$.kaupunkilehti[0].nostot[3]",
+          "assetID": "e12-basseterre-K4-bd3a536d7d",
+          "sha256": "268ec2cdfbcea4e3620b5c0c7d913837924227d80e0b23e67e694cf7a5b43cac",
+          "verdict": "accepted",
+          "reason": "Krikettimaila ja saumallinen pallo vastaavat K4-noston Warner Parkin krikettiaihetta. Kuvateksti rajaa kuvan välineiden havainnekuvaksi. Native-SHA ja toteutuneet mitat täsmäävät.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/basseterre/assets/e12-basseterre-K4-bd3a536d7d/original.png",
+            "nativeSHA256": "268ec2cdfbcea4e3620b5c0c7d913837924227d80e0b23e67e694cf7a5b43cac",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "nativeAspectRatio": 1.5,
+            "format": "PNG",
+            "pngChunks": [
+              "IHDR",
+              "caBX",
+              "IDAT",
+              "IEND"
+            ],
+            "manifestMatch": true,
+            "captionFi": "Krikettivälineiden havainnekuva Warner Parkin urheiluaiheeseen.",
+            "sourceEvidence": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/basseterre/sisalto.json",
+              "contentSHA256": "b1cdd250aba418c97319c1b8694863604db679447f81eff45bcbe7fe46ad875a",
+              "sourceText": "Warner Parkin urheilukokonaisuus on isännöinyt kriketin maailmanmestaruusturnauksen otteluita. Basseterreen koko ei siis kerro, millaiselle yleisölle kaupungissa on pelattu. Alueeseen kuuluu krikettistadionin lisäksi jalkapallostadion, ja siellä harrastetaan myös yleisurheilua. Krikettiä seuraava matkailija voi etsiä kaupungin ohjelmasta ottelupäivän aivan kuten musiikista kiinnostunut etsii konserttia. Warner Park tuo keskustan historiaan toisen mittakaavan: hallinto- ja satamakaupungissa on myös tilaa kansainväliselle urheilulle.",
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/basseterre/faktapohja.md",
+              "originalSources": [
+                "https://en.wikipedia.org/wiki/Warner_Park_Sporting_Complex"
+              ],
+              "ccRelease": {},
+              "generationAuthorization": {
+                "rule": "OHJEET: turvallinen yleishavainnollistus ilman CC-odotusta",
+                "sharedReservationRecord": "/Volumes/T7 4TB/ChatGPT-Codex-active/coordination/paakaupungit-claims/08391cff28146b17/e12/basseterre/K4/owner.json",
+                "ccReleaseRequired": false,
+                "scope": "lähdeperustainen turvallinen avoin mixed; ei PHOTO/C1-C3 tai nimetty kaupunkiasettelu"
+              }
+            },
+            "rightsEvidence": "Tavallinen lähteessä nimetty kasvi, eläin, materiaali tai arkiesine; yleistetty havainnollistus, ei nimetyn paikan valokuva tai suojatun teoksen jäljennös.",
+            "content": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/basseterre/sisalto.json",
+              "contentSHA256": "505614d583facb582a8cff8784048c501319709a57572391a5fa132f7f3935d8",
+              "targetObjectExists": true,
+              "targetContainer": "$.kaupunkilehti[0].nostot[3]",
+              "targetText": {
+                "otsikko": "Pieni pääkaupunki, kansainvälinen kenttä",
+                "teksti": "Warner Parkin urheilukokonaisuus on isännöinyt kriketin maailmanmestaruusturnauksen otteluita. Basseterreen koko ei siis kerro, millaiselle yleisölle kaupungissa on pelattu. Alueeseen kuuluu krikettistadionin lisäksi jalkapallostadion, ja siellä harrastetaan myös yleisurheilua. Krikettiä seuraava matkailija voi etsiä kaupungin ohjelmasta ottelupäivän aivan kuten musiikista kiinnostunut etsii konserttia. Warner Park tuo keskustan historiaan toisen mittakaavan: hallinto- ja satamakaupungissa on myös tilaa kansainväliselle urheilulle.",
+                "wiki": "Basseterre",
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              },
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/basseterre/faktapohja.md",
+              "factSheetSHA256": "8bce15fe58267c9838c37b4f8e1a9d137163cc405f405c6b37ae448851fc4888",
+              "factAssessment": "faktapohja.md kannen Warner Park -rivi: kriketti B1/B5, stadioneja ja yleisurheilu B2 Do."
+            },
+            "visualInspection": {
+              "tool": "view_image",
+              "detail": "original",
+              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/basseterre/assets/e12-basseterre-K4-bd3a536d7d/original.png",
+              "inspectedBy": "qa-e12",
+              "inspectedAt": "2026-10-12 20:45:48 UTC",
+              "observations": "Nurmella yksi merkitsemätön puinen krikettimaila ja punainen nahkapallo. Mailan lapa, kahva ja grippi muodostavat jatkuvan uskottavan rakenteen; pallon sauma ja materiaalit näkyvät luonnollisesti. Ei tekstiä, logoja, ihmisiä tai stadionrekonstruktiota."
+            },
+            "otherReviewerVerdicts": [],
+            "openConflict": false,
+            "ownershipMarker": "qa-handoff-kuvitus-3.json"
+          },
+          "reviewedAt": "2026-10-12T20:45:48.421667+00:00",
+          "reviewerGroup": "qa-e12"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/basseterre/qa.json",
+            "sha256": "6c11eb70eedfadfafcf58c43df16523c23d1d8f59722d962995251905df420a4"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/basseterre/illustration-qa-extra.json",
+            "sha256": "dc329bb963e6f97bc24360a3d3612ff6b765cdfb27dbb118679737b9801d1e9c"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/basseterre/e12-basseterre-K4-bd3a536d7d-268ec2cdfbce.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/basseterre/e12-basseterre-K4-bd3a536d7d-268ec2cdfbce.png?t=4bff76274db2485c",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/basseterre/e12-basseterre-K4-bd3a536d7d-268ec2cdfbce.png",
+        "sha256": "4bff76274db2485c625e918a7d9fe34ccfcbe3ba020322803156a00e88625d4b",
+        "bytes": 2273322,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e12-basseterre-K4-bd3a536d7d",
+        "nativeSHA256": "268ec2cdfbcea4e3620b5c0c7d913837924227d80e0b23e67e694cf7a5b43cac",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e12/basseterre/e12-basseterre-K4-bd3a536d7d-268ec2cdfbce.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e12",
+        "city": "basseterre",
+        "slot": "K4",
+        "targetJsonPath": "$.kaupunkilehti[0].nostot[3]",
+        "verifiedAt": "2026-10-12T20:47:06.711431+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e12/basseterre/e12-basseterre-K4-bd3a536d7d-268ec2cdfbce.png",
+        "sha256": "4bff76274db2485c625e918a7d9fe34ccfcbe3ba020322803156a00e88625d4b",
+        "bytes": 2273322,
+        "SHAReadAt": "2026-10-12T20:45:54.191462+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "268ec2cdfbcea4e3620b5c0c7d913837924227d80e0b23e67e694cf7a5b43cac",
+        "rgbPixelSHA256": "aa4ec16ee68c2f1bc2ab9acf480ef9ecccc4ee3208ad518cf26b6b5c978c13ef",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "2143fbd9c01c2db6d84138496c1a40ed07dfe368a1a845fba4eb629bfa8695d1",
+      "targetAfterSHA256": "c984a3c76e67cf493e9b2f51a4d6af55c1700497b2c297bb25a9153aa92f2530",
+      "contextAfterSHA256": "c984a3c76e67cf493e9b2f51a4d6af55c1700497b2c297bb25a9153aa92f2530"
+    },
+    {
+      "era": "e12",
+      "city": "basseterre",
+      "slot": "L1",
+      "type": "illustration",
+      "assetID": "e12-basseterre-L1-e3eee2c537",
+      "galleryImageID": "e12-basseterre-L1-e3eee2c537",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[1].nostot[0]",
+      "targetTokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        0
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/basseterre/e12-basseterre-L1-e3eee2c537-e89afa3d012f.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Sokeriruo’on havainnekuva Basseterreen sokerikuljetusten aiheeseen.",
+        "lyhyt": "Sokeriruo’on havainnekuva Basseterreen sokerikuljetusten aiheeseen."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/basseterre/e12-basseterre-L1-e3eee2c537-e89afa3d012f.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Sokeriruo’on havainnekuva Basseterreen sokerikuljetusten aiheeseen.",
+        "lyhyt": "Sokeriruo’on havainnekuva Basseterreen sokerikuljetusten aiheeseen."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "e89afa3d012fb71ac34c67e864dc5ef7b7ef12d1af4feb1a4f213c521740e8d1",
+      "exportSHA256": "953a1b7a29621ad6163537aaa2926cb1b00a0cf8abfcf0d4e82a4f47d4a34ab2",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/basseterre/e12-basseterre-L1-e3eee2c537-e89afa3d012f.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/basseterre/e12-basseterre-L1-e3eee2c537-e89afa3d012f.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e12/basseterre/e12-basseterre-L1-e3eee2c537-e89afa3d012f.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/basseterre/sisalto.json",
+      "sourceContentSHA256": "505614d583facb582a8cff8784048c501319709a57572391a5fa132f7f3935d8",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "447c3b49ba7bee7ce45bd416607865931db10b932b24b1ee2d048ec464720303",
+        "semanticContextSHA256": "447c3b49ba7bee7ce45bd416607865931db10b932b24b1ee2d048ec464720303",
+        "subjectTitle": "Sokeriruoko vaihtui matkustajiin",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Tavallinen lähteessä nimetty kasvi, eläin, materiaali tai arkiesine; yleistetty havainnollistus, ei nimetyn paikan valokuva tai suojatun teoksen jäljennös.",
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/basseterre/assets/e12-basseterre-L1-e3eee2c537/original.png",
+            "nativeSHA256": "e89afa3d012fb71ac34c67e864dc5ef7b7ef12d1af4feb1a4f213c521740e8d1",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "nativeAspectRatio": 1.5,
+            "format": "PNG",
+            "pngChunks": [
+              "IHDR",
+              "caBX",
+              "IDAT",
+              "IEND"
+            ],
+            "manifestMatch": true,
+            "captionFi": "Sokeriruo’on havainnekuva Basseterreen sokerikuljetusten aiheeseen.",
+            "sourceEvidence": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/basseterre/sisalto.json",
+              "contentSHA256": "b1cdd250aba418c97319c1b8694863604db679447f81eff45bcbe7fe46ad875a",
+              "sourceText": "Saint Kittsin rannikkoa kiertävä kapearaiteinen rata rakennettiin 1900-luvun alussa tuomaan sokeriruokoa plantaaseilta Basseterreen keskitettyyn sokeritehtaaseen. Nykyinen Scenic Railway kuljettaa matkailijoita. Radan dieselveturit valmistettiin Romaniassa, ja ne päätyivät Karibialle puolalaisen sokeritehtaan rautatieltä. Myös vaunut ovat epätavallisia: alempi kerros on suljettu salonki, ylempi avoin katselutasanne, jonne noustaan kierreportaita. Sokerin kuljetusketjusta on tullut myös kaluston kansainvälinen matkakertomus.",
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/basseterre/faktapohja.md",
+              "originalSources": [
+                "https://en.wikipedia.org/wiki/St._Kitts_Scenic_Railway"
+              ],
+              "ccRelease": {},
+              "generationAuthorization": {
+                "rule": "OHJEET: turvallinen yleishavainnollistus ilman CC-odotusta",
+                "sharedReservationRecord": "/Volumes/T7 4TB/ChatGPT-Codex-active/coordination/paakaupungit-claims/08391cff28146b17/e12/basseterre/L1/owner.json",
+                "ccReleaseRequired": false,
+                "scope": "lähdeperustainen turvallinen avoin mixed; ei PHOTO/C1-C3 tai nimetty kaupunkiasettelu"
+              }
+            },
+            "rightsEvidence": "Tavallinen lähteessä nimetty kasvi, eläin, materiaali tai arkiesine; yleistetty havainnollistus, ei nimetyn paikan valokuva tai suojatun teoksen jäljennös.",
+            "content": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/basseterre/sisalto.json",
+              "contentSHA256": "505614d583facb582a8cff8784048c501319709a57572391a5fa132f7f3935d8",
+              "targetObjectExists": true,
+              "targetContainer": "$.kaupunkilehti[1].nostot[0]",
+              "targetText": {
+                "otsikko": "Sokeriruoko vaihtui matkustajiin",
+                "teksti": "Saint Kittsin rannikkoa kiertävä kapearaiteinen rata rakennettiin 1900-luvun alussa tuomaan sokeriruokoa plantaaseilta Basseterreen keskitettyyn sokeritehtaaseen. Nykyinen Scenic Railway kuljettaa matkailijoita. Radan dieselveturit valmistettiin Romaniassa, ja ne päätyivät Karibialle puolalaisen sokeritehtaan rautatieltä. Myös vaunut ovat epätavallisia: alempi kerros on suljettu salonki, ylempi avoin katselutasanne, jonne noustaan kierreportaita. Sokerin kuljetusketjusta on tullut myös kaluston kansainvälinen matkakertomus.",
+                "wiki": "St. Kitts Scenic Railway",
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              },
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/basseterre/faktapohja.md",
+              "factSheetSHA256": "8bce15fe58267c9838c37b4f8e1a9d137163cc405f405c6b37ae448851fc4888",
+              "factAssessment": "faktapohja.md teema 1: sokerirata plantaaseilta Basseterreen keskussokeritehtaaseen, B7."
+            },
+            "visualInspection": {
+              "tool": "view_image",
+              "detail": "original",
+              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/basseterre/assets/e12-basseterre-L1-e3eee2c537/original.png",
+              "inspectedBy": "qa-e12",
+              "inspectedAt": "2026-10-12 20:45:48 UTC",
+              "observations": "Katkaistuja nivelikkäitä sokeriruokovarsia ja pitkiä kapeita lehtiä. Leikkuupinnoissa vaalea kuituinen sisus, varsissa vaihteleva luonnollinen väri ja pintakuluminen. Ei tekstiä, merkkejä, ihmisiä tai rakennuksia."
+            },
+            "otherReviewerVerdicts": [],
+            "openConflict": false,
+            "ownershipMarker": "qa-handoff-kuvitus-3.json"
+          },
+          "qaReason": "Sokeriruoko havainnollistaa L1-noston sokeritehtaan rautatiekuljetusten aihetta ilman keksittyä rataa tai plantaasipaikkaa. Native-SHA ja toteutuneet mitat täsmäävät."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Sokeriruo’on havainnekuva Basseterreen sokerikuljetusten aiheeseen.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/basseterre/illustration-qa-extra.json",
+        "fileSHA256": "dc329bb963e6f97bc24360a3d3612ff6b765cdfb27dbb118679737b9801d1e9c",
+        "item": {
+          "slot": "L1",
+          "targetJsonPath": "$.kaupunkilehti[1].nostot[0]",
+          "assetID": "e12-basseterre-L1-e3eee2c537",
+          "sha256": "e89afa3d012fb71ac34c67e864dc5ef7b7ef12d1af4feb1a4f213c521740e8d1",
+          "verdict": "accepted",
+          "reason": "Sokeriruoko havainnollistaa L1-noston sokeritehtaan rautatiekuljetusten aihetta ilman keksittyä rataa tai plantaasipaikkaa. Native-SHA ja toteutuneet mitat täsmäävät.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/basseterre/assets/e12-basseterre-L1-e3eee2c537/original.png",
+            "nativeSHA256": "e89afa3d012fb71ac34c67e864dc5ef7b7ef12d1af4feb1a4f213c521740e8d1",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "nativeAspectRatio": 1.5,
+            "format": "PNG",
+            "pngChunks": [
+              "IHDR",
+              "caBX",
+              "IDAT",
+              "IEND"
+            ],
+            "manifestMatch": true,
+            "captionFi": "Sokeriruo’on havainnekuva Basseterreen sokerikuljetusten aiheeseen.",
+            "sourceEvidence": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/basseterre/sisalto.json",
+              "contentSHA256": "b1cdd250aba418c97319c1b8694863604db679447f81eff45bcbe7fe46ad875a",
+              "sourceText": "Saint Kittsin rannikkoa kiertävä kapearaiteinen rata rakennettiin 1900-luvun alussa tuomaan sokeriruokoa plantaaseilta Basseterreen keskitettyyn sokeritehtaaseen. Nykyinen Scenic Railway kuljettaa matkailijoita. Radan dieselveturit valmistettiin Romaniassa, ja ne päätyivät Karibialle puolalaisen sokeritehtaan rautatieltä. Myös vaunut ovat epätavallisia: alempi kerros on suljettu salonki, ylempi avoin katselutasanne, jonne noustaan kierreportaita. Sokerin kuljetusketjusta on tullut myös kaluston kansainvälinen matkakertomus.",
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/basseterre/faktapohja.md",
+              "originalSources": [
+                "https://en.wikipedia.org/wiki/St._Kitts_Scenic_Railway"
+              ],
+              "ccRelease": {},
+              "generationAuthorization": {
+                "rule": "OHJEET: turvallinen yleishavainnollistus ilman CC-odotusta",
+                "sharedReservationRecord": "/Volumes/T7 4TB/ChatGPT-Codex-active/coordination/paakaupungit-claims/08391cff28146b17/e12/basseterre/L1/owner.json",
+                "ccReleaseRequired": false,
+                "scope": "lähdeperustainen turvallinen avoin mixed; ei PHOTO/C1-C3 tai nimetty kaupunkiasettelu"
+              }
+            },
+            "rightsEvidence": "Tavallinen lähteessä nimetty kasvi, eläin, materiaali tai arkiesine; yleistetty havainnollistus, ei nimetyn paikan valokuva tai suojatun teoksen jäljennös.",
+            "content": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/basseterre/sisalto.json",
+              "contentSHA256": "505614d583facb582a8cff8784048c501319709a57572391a5fa132f7f3935d8",
+              "targetObjectExists": true,
+              "targetContainer": "$.kaupunkilehti[1].nostot[0]",
+              "targetText": {
+                "otsikko": "Sokeriruoko vaihtui matkustajiin",
+                "teksti": "Saint Kittsin rannikkoa kiertävä kapearaiteinen rata rakennettiin 1900-luvun alussa tuomaan sokeriruokoa plantaaseilta Basseterreen keskitettyyn sokeritehtaaseen. Nykyinen Scenic Railway kuljettaa matkailijoita. Radan dieselveturit valmistettiin Romaniassa, ja ne päätyivät Karibialle puolalaisen sokeritehtaan rautatieltä. Myös vaunut ovat epätavallisia: alempi kerros on suljettu salonki, ylempi avoin katselutasanne, jonne noustaan kierreportaita. Sokerin kuljetusketjusta on tullut myös kaluston kansainvälinen matkakertomus.",
+                "wiki": "St. Kitts Scenic Railway",
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              },
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/basseterre/faktapohja.md",
+              "factSheetSHA256": "8bce15fe58267c9838c37b4f8e1a9d137163cc405f405c6b37ae448851fc4888",
+              "factAssessment": "faktapohja.md teema 1: sokerirata plantaaseilta Basseterreen keskussokeritehtaaseen, B7."
+            },
+            "visualInspection": {
+              "tool": "view_image",
+              "detail": "original",
+              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/basseterre/assets/e12-basseterre-L1-e3eee2c537/original.png",
+              "inspectedBy": "qa-e12",
+              "inspectedAt": "2026-10-12 20:45:48 UTC",
+              "observations": "Katkaistuja nivelikkäitä sokeriruokovarsia ja pitkiä kapeita lehtiä. Leikkuupinnoissa vaalea kuituinen sisus, varsissa vaihteleva luonnollinen väri ja pintakuluminen. Ei tekstiä, merkkejä, ihmisiä tai rakennuksia."
+            },
+            "otherReviewerVerdicts": [],
+            "openConflict": false,
+            "ownershipMarker": "qa-handoff-kuvitus-3.json"
+          },
+          "reviewedAt": "2026-10-12T20:45:48.480216+00:00",
+          "reviewerGroup": "qa-e12"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/basseterre/qa.json",
+            "sha256": "6c11eb70eedfadfafcf58c43df16523c23d1d8f59722d962995251905df420a4"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/basseterre/illustration-qa-extra.json",
+            "sha256": "dc329bb963e6f97bc24360a3d3612ff6b765cdfb27dbb118679737b9801d1e9c"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/basseterre/e12-basseterre-L1-e3eee2c537-e89afa3d012f.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/basseterre/e12-basseterre-L1-e3eee2c537-e89afa3d012f.png?t=953a1b7a29621ad6",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/basseterre/e12-basseterre-L1-e3eee2c537-e89afa3d012f.png",
+        "sha256": "953a1b7a29621ad6163537aaa2926cb1b00a0cf8abfcf0d4e82a4f47d4a34ab2",
+        "bytes": 2630702,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e12-basseterre-L1-e3eee2c537",
+        "nativeSHA256": "e89afa3d012fb71ac34c67e864dc5ef7b7ef12d1af4feb1a4f213c521740e8d1",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e12/basseterre/e12-basseterre-L1-e3eee2c537-e89afa3d012f.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e12",
+        "city": "basseterre",
+        "slot": "L1",
+        "targetJsonPath": "$.kaupunkilehti[1].nostot[0]",
+        "verifiedAt": "2026-10-12T20:47:08.071489+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e12/basseterre/e12-basseterre-L1-e3eee2c537-e89afa3d012f.png",
+        "sha256": "953a1b7a29621ad6163537aaa2926cb1b00a0cf8abfcf0d4e82a4f47d4a34ab2",
+        "bytes": 2630702,
+        "SHAReadAt": "2026-10-12T20:45:54.464966+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "e89afa3d012fb71ac34c67e864dc5ef7b7ef12d1af4feb1a4f213c521740e8d1",
+        "rgbPixelSHA256": "0f264c0ab75e54597e67b4fbdb5a1acd76736a0bb8d6d0ba277d6d7e93ee9d6f",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "2143fbd9c01c2db6d84138496c1a40ed07dfe368a1a845fba4eb629bfa8695d1",
+      "targetAfterSHA256": "447c3b49ba7bee7ce45bd416607865931db10b932b24b1ee2d048ec464720303",
+      "contextAfterSHA256": "447c3b49ba7bee7ce45bd416607865931db10b932b24b1ee2d048ec464720303"
+    },
+    {
+      "era": "e12",
+      "city": "basseterre",
+      "slot": "L4",
+      "type": "illustration",
+      "assetID": "e12-basseterre-L4-df2ddcc84a",
+      "galleryImageID": "e12-basseterre-L4-df2ddcc84a",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
+      "targetTokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        3
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/basseterre/e12-basseterre-L4-df2ddcc84a-9f255d4384d8.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Tanssissa käytettävien puujalkojen yleinen rakennehavainne jalkatasoineen.",
+        "lyhyt": "Tanssissa käytettävien puujalkojen yleinen rakennehavainne jalkatasoineen."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/basseterre/e12-basseterre-L4-df2ddcc84a-9f255d4384d8.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Tanssissa käytettävien puujalkojen yleinen rakennehavainne jalkatasoineen.",
+        "lyhyt": "Tanssissa käytettävien puujalkojen yleinen rakennehavainne jalkatasoineen."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "9f255d4384d8f4097c2b9394150f67cca1c0d84ac5df8baf6f9924133f5a4f2e",
+      "exportSHA256": "b206b1da4d94d6331351412a41676f132bdcd6fd45ff6451f28f27fcd250fbbb",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/basseterre/e12-basseterre-L4-df2ddcc84a-9f255d4384d8.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/basseterre/e12-basseterre-L4-df2ddcc84a-9f255d4384d8.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e12/basseterre/e12-basseterre-L4-df2ddcc84a-9f255d4384d8.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/basseterre/sisalto.json",
+      "sourceContentSHA256": "505614d583facb582a8cff8784048c501319709a57572391a5fa132f7f3935d8",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "153e610333a5d833ad970559e2fcbc259714b255b74918d9f9b55664366f4a4b",
+        "semanticContextSHA256": "153e610333a5d833ad970559e2fcbc259714b255b74918d9f9b55664366f4a4b",
+        "subjectTitle": "Juhla kulkee puujaloilla",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Yleisen teknisen puujalkarakenteen materiaalit ja toiminta, ei tanssijan asua, kasvoja, koreografiaa tai suojattua kuviota. Visuaaliset viitteet vain puupylvään/jalkatason rakenteeseen; peg-tyypin tanssikäyttö ja kiinnitys erillisestä tyyppilähteestä. Ei väitettä lähdekuvien esineiden Saint Kitts -alkuperästä. Dquai ja WAVRIK CC BY-SA4.0; erillinen viitetietue NASilla.",
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/basseterre/assets/e12-basseterre-L4-df2ddcc84a/original.png",
+            "nativeSHA256": "9f255d4384d8f4097c2b9394150f67cca1c0d84ac5df8baf6f9924133f5a4f2e",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "nativeAspectRatio": 1.5,
+            "format": "PNG",
+            "pngChunks": [
+              "IHDR",
+              "caBX",
+              "IDAT",
+              "IEND"
+            ],
+            "manifestMatch": true,
+            "captionFi": "Tanssissa käytettävien puujalkojen yleinen rakennehavainne jalkatasoineen.",
+            "sourceEvidence": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/basseterre/sisalto.json",
+              "contentSHA256": "505614d583facb582a8cff8784048c501319709a57572391a5fa132f7f3935d8",
+              "sourceText": "Saint Kittsin karnevaali levittäytyy joulun ja vuodenvaihteen ympärille. Masquerade-tanssijoiden puvuissa on nauhoja, peilejä ja sulkapäähineitä; tansseissa kohtaavat afrikkalaiset ja eurooppalaiset perinteet. Kulkueen yläpuolella liikkuvat moko-jumbiet, puujaloilla tanssivat hahmot. Ne eivät ole sama asia kuin tavalliset naamioituneet tanssijat, vaikka asuissa on yhteisiä piirteitä. Karnevaali tuo tuttuun katutilaan sekä musiikkia että uuden korkeuden. Ohjelma sisältää myös calypsolaulua ja eri ikäisten esiintyjien kilpailuja.",
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/basseterre/faktapohja.md",
+              "originalSources": [
+                "https://en.wikipedia.org/wiki/Culture_of_Saint_Kitts_and_Nevis",
+                "https://en.wikipedia.org/wiki/Stilts",
+                "https://commons.wikimedia.org/wiki/File:Stilts_in_Koiwai_Farm.jpg",
+                "https://commons.wikimedia.org/wiki/File:Ethiopia_Banna_tribe_kids.jpg"
+              ],
+              "ccRelease": {},
+              "generationAuthorization": {
+                "rule": "OHJEET: turvallinen yleishavainnollistus ilman CC-odotusta",
+                "sharedReservationRecord": "/Volumes/T7 4TB/ChatGPT-Codex-active/coordination/paakaupungit-claims/08391cff28146b17/e12/basseterre/L4/owner.json",
+                "ccReleaseRequired": false,
+                "scope": "lähdeperustainen turvallinen avoin mixed; ei PHOTO/C1-C3 tai nimetty kaupunkiasettelu"
+              }
+            },
+            "rightsEvidence": "Yleisen teknisen puujalkarakenteen materiaalit ja toiminta, ei tanssijan asua, kasvoja, koreografiaa tai suojattua kuviota. Visuaaliset viitteet vain puupylvään/jalkatason rakenteeseen; peg-tyypin tanssikäyttö ja kiinnitys erillisestä tyyppilähteestä. Ei väitettä lähdekuvien esineiden Saint Kitts -alkuperästä. Dquai ja WAVRIK CC BY-SA4.0; erillinen viitetietue NASilla.",
+            "content": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/basseterre/sisalto.json",
+              "contentSHA256": "505614d583facb582a8cff8784048c501319709a57572391a5fa132f7f3935d8",
+              "targetObjectExists": true,
+              "targetContainer": "$.kaupunkilehti[1].nostot[3]",
+              "targetText": {
+                "otsikko": "Juhla kulkee puujaloilla",
+                "teksti": "Saint Kittsin karnevaali levittäytyy joulun ja vuodenvaihteen ympärille. Masquerade-tanssijoiden puvuissa on nauhoja, peilejä ja sulkapäähineitä; tansseissa kohtaavat afrikkalaiset ja eurooppalaiset perinteet. Kulkueen yläpuolella liikkuvat moko-jumbiet, puujaloilla tanssivat hahmot. Ne eivät ole sama asia kuin tavalliset naamioituneet tanssijat, vaikka asuissa on yhteisiä piirteitä. Karnevaali tuo tuttuun katutilaan sekä musiikkia että uuden korkeuden. Ohjelma sisältää myös calypsolaulua ja eri ikäisten esiintyjien kilpailuja.",
+                "wiki": "Culture of Saint Kitts and Nevis",
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              },
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/basseterre/faktapohja.md",
+              "factSheetSHA256": "8bce15fe58267c9838c37b4f8e1a9d137163cc405f405c6b37ae448851fc4888",
+              "factAssessment": "faktapohja.md teema 4: puujalkaiset moko-jumbiet, B10. Yleistetty rakenne, ei kulttuurisen puvun tai nimetyn esineen jäljennös."
+            },
+            "visualInspection": {
+              "tool": "view_image",
+              "detail": "original",
+              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/basseterre/assets/e12-basseterre-L4-df2ddcc84a/original.png",
+              "inspectedBy": "qa-e12",
+              "inspectedAt": "2026-10-12 20:45:48 UTC",
+              "observations": "Kaksi erillistä puista puujalkaa seinää vasten. Jatkuvat pystypuut, vaakasuorat kengänkokoiset jalkatasot, tasoja tukevat vinokolmiot, näkyvät pultit, jalka- ja pohjehihnat sekä alhaalla kumitassut. Liitokset ja puunsyy luontevia. Ei ihmisiä, tekstiä tai koristekuvioita."
+            },
+            "otherReviewerVerdicts": [],
+            "openConflict": false,
+            "ownershipMarker": "qa-handoff-kuvitus-3.json"
+          },
+          "qaReason": "Puujalkojen rakennehavainne liittyy L4-noston moko-jumbie-tanssiin. Molemmissa välineissä jalkataso, alapuolinen tuki ja kiinnityshihnat ovat fyysisesti uskottavia; kyse ei ole nimetyn ryhmän täsmävälineistä. Native-SHA ja toteutuneet mitat täsmäävät."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Tanssissa käytettävien puujalkojen yleinen rakennehavainne jalkatasoineen.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/basseterre/illustration-qa-extra.json",
+        "fileSHA256": "dc329bb963e6f97bc24360a3d3612ff6b765cdfb27dbb118679737b9801d1e9c",
+        "item": {
+          "slot": "L4",
+          "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
+          "assetID": "e12-basseterre-L4-df2ddcc84a",
+          "sha256": "9f255d4384d8f4097c2b9394150f67cca1c0d84ac5df8baf6f9924133f5a4f2e",
+          "verdict": "accepted",
+          "reason": "Puujalkojen rakennehavainne liittyy L4-noston moko-jumbie-tanssiin. Molemmissa välineissä jalkataso, alapuolinen tuki ja kiinnityshihnat ovat fyysisesti uskottavia; kyse ei ole nimetyn ryhmän täsmävälineistä. Native-SHA ja toteutuneet mitat täsmäävät.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/basseterre/assets/e12-basseterre-L4-df2ddcc84a/original.png",
+            "nativeSHA256": "9f255d4384d8f4097c2b9394150f67cca1c0d84ac5df8baf6f9924133f5a4f2e",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "nativeAspectRatio": 1.5,
+            "format": "PNG",
+            "pngChunks": [
+              "IHDR",
+              "caBX",
+              "IDAT",
+              "IEND"
+            ],
+            "manifestMatch": true,
+            "captionFi": "Tanssissa käytettävien puujalkojen yleinen rakennehavainne jalkatasoineen.",
+            "sourceEvidence": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/basseterre/sisalto.json",
+              "contentSHA256": "505614d583facb582a8cff8784048c501319709a57572391a5fa132f7f3935d8",
+              "sourceText": "Saint Kittsin karnevaali levittäytyy joulun ja vuodenvaihteen ympärille. Masquerade-tanssijoiden puvuissa on nauhoja, peilejä ja sulkapäähineitä; tansseissa kohtaavat afrikkalaiset ja eurooppalaiset perinteet. Kulkueen yläpuolella liikkuvat moko-jumbiet, puujaloilla tanssivat hahmot. Ne eivät ole sama asia kuin tavalliset naamioituneet tanssijat, vaikka asuissa on yhteisiä piirteitä. Karnevaali tuo tuttuun katutilaan sekä musiikkia että uuden korkeuden. Ohjelma sisältää myös calypsolaulua ja eri ikäisten esiintyjien kilpailuja.",
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/basseterre/faktapohja.md",
+              "originalSources": [
+                "https://en.wikipedia.org/wiki/Culture_of_Saint_Kitts_and_Nevis",
+                "https://en.wikipedia.org/wiki/Stilts",
+                "https://commons.wikimedia.org/wiki/File:Stilts_in_Koiwai_Farm.jpg",
+                "https://commons.wikimedia.org/wiki/File:Ethiopia_Banna_tribe_kids.jpg"
+              ],
+              "ccRelease": {},
+              "generationAuthorization": {
+                "rule": "OHJEET: turvallinen yleishavainnollistus ilman CC-odotusta",
+                "sharedReservationRecord": "/Volumes/T7 4TB/ChatGPT-Codex-active/coordination/paakaupungit-claims/08391cff28146b17/e12/basseterre/L4/owner.json",
+                "ccReleaseRequired": false,
+                "scope": "lähdeperustainen turvallinen avoin mixed; ei PHOTO/C1-C3 tai nimetty kaupunkiasettelu"
+              }
+            },
+            "rightsEvidence": "Yleisen teknisen puujalkarakenteen materiaalit ja toiminta, ei tanssijan asua, kasvoja, koreografiaa tai suojattua kuviota. Visuaaliset viitteet vain puupylvään/jalkatason rakenteeseen; peg-tyypin tanssikäyttö ja kiinnitys erillisestä tyyppilähteestä. Ei väitettä lähdekuvien esineiden Saint Kitts -alkuperästä. Dquai ja WAVRIK CC BY-SA4.0; erillinen viitetietue NASilla.",
+            "content": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/basseterre/sisalto.json",
+              "contentSHA256": "505614d583facb582a8cff8784048c501319709a57572391a5fa132f7f3935d8",
+              "targetObjectExists": true,
+              "targetContainer": "$.kaupunkilehti[1].nostot[3]",
+              "targetText": {
+                "otsikko": "Juhla kulkee puujaloilla",
+                "teksti": "Saint Kittsin karnevaali levittäytyy joulun ja vuodenvaihteen ympärille. Masquerade-tanssijoiden puvuissa on nauhoja, peilejä ja sulkapäähineitä; tansseissa kohtaavat afrikkalaiset ja eurooppalaiset perinteet. Kulkueen yläpuolella liikkuvat moko-jumbiet, puujaloilla tanssivat hahmot. Ne eivät ole sama asia kuin tavalliset naamioituneet tanssijat, vaikka asuissa on yhteisiä piirteitä. Karnevaali tuo tuttuun katutilaan sekä musiikkia että uuden korkeuden. Ohjelma sisältää myös calypsolaulua ja eri ikäisten esiintyjien kilpailuja.",
+                "wiki": "Culture of Saint Kitts and Nevis",
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              },
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/basseterre/faktapohja.md",
+              "factSheetSHA256": "8bce15fe58267c9838c37b4f8e1a9d137163cc405f405c6b37ae448851fc4888",
+              "factAssessment": "faktapohja.md teema 4: puujalkaiset moko-jumbiet, B10. Yleistetty rakenne, ei kulttuurisen puvun tai nimetyn esineen jäljennös."
+            },
+            "visualInspection": {
+              "tool": "view_image",
+              "detail": "original",
+              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/basseterre/assets/e12-basseterre-L4-df2ddcc84a/original.png",
+              "inspectedBy": "qa-e12",
+              "inspectedAt": "2026-10-12 20:45:48 UTC",
+              "observations": "Kaksi erillistä puista puujalkaa seinää vasten. Jatkuvat pystypuut, vaakasuorat kengänkokoiset jalkatasot, tasoja tukevat vinokolmiot, näkyvät pultit, jalka- ja pohjehihnat sekä alhaalla kumitassut. Liitokset ja puunsyy luontevia. Ei ihmisiä, tekstiä tai koristekuvioita."
+            },
+            "otherReviewerVerdicts": [],
+            "openConflict": false,
+            "ownershipMarker": "qa-handoff-kuvitus-3.json"
+          },
+          "reviewedAt": "2026-10-12T20:45:48.542431+00:00",
+          "reviewerGroup": "qa-e12"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/basseterre/qa.json",
+            "sha256": "6c11eb70eedfadfafcf58c43df16523c23d1d8f59722d962995251905df420a4"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/basseterre/illustration-qa-extra.json",
+            "sha256": "dc329bb963e6f97bc24360a3d3612ff6b765cdfb27dbb118679737b9801d1e9c"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/basseterre/e12-basseterre-L4-df2ddcc84a-9f255d4384d8.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/basseterre/e12-basseterre-L4-df2ddcc84a-9f255d4384d8.png?t=b206b1da4d94d633",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/basseterre/e12-basseterre-L4-df2ddcc84a-9f255d4384d8.png",
+        "sha256": "b206b1da4d94d6331351412a41676f132bdcd6fd45ff6451f28f27fcd250fbbb",
+        "bytes": 2234446,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e12-basseterre-L4-df2ddcc84a",
+        "nativeSHA256": "9f255d4384d8f4097c2b9394150f67cca1c0d84ac5df8baf6f9924133f5a4f2e",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e12/basseterre/e12-basseterre-L4-df2ddcc84a-9f255d4384d8.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e12",
+        "city": "basseterre",
+        "slot": "L4",
+        "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
+        "verifiedAt": "2026-10-12T20:47:09.384894+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e12/basseterre/e12-basseterre-L4-df2ddcc84a-9f255d4384d8.png",
+        "sha256": "b206b1da4d94d6331351412a41676f132bdcd6fd45ff6451f28f27fcd250fbbb",
+        "bytes": 2234446,
+        "SHAReadAt": "2026-10-12T20:45:54.689420+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "9f255d4384d8f4097c2b9394150f67cca1c0d84ac5df8baf6f9924133f5a4f2e",
+        "rgbPixelSHA256": "eac6dfc5ce6182c0628fa832de7944a699ab2b8b3617c4d847b8fd2d367c49ec",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "2143fbd9c01c2db6d84138496c1a40ed07dfe368a1a845fba4eb629bfa8695d1",
+      "targetAfterSHA256": "153e610333a5d833ad970559e2fcbc259714b255b74918d9f9b55664366f4a4b",
+      "contextAfterSHA256": "153e610333a5d833ad970559e2fcbc259714b255b74918d9f9b55664366f4a4b"
     },
     {
       "era": "e12",
@@ -723,7 +1647,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/basseterre/qa.json",
-        "fileSHA256": "769df3513d67001d6179f7fce87c17421f6f735aabd193d993f4d7dd22a342bb",
+        "fileSHA256": "6c11eb70eedfadfafcf58c43df16523c23d1d8f59722d962995251905df420a4",
         "item": {
           "slot": "PHOTO",
           "targetJsonPath": "$.valokuva",
@@ -763,11 +1687,11 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/basseterre/qa.json",
-            "sha256": "769df3513d67001d6179f7fce87c17421f6f735aabd193d993f4d7dd22a342bb"
+            "sha256": "6c11eb70eedfadfafcf58c43df16523c23d1d8f59722d962995251905df420a4"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/basseterre/illustration-qa-extra.json",
-            "sha256": "2a120275e1a5bb6281735bd019dfb757ddc5a5566c3b09d1fc277dbcedd03bbd"
+            "sha256": "dc329bb963e6f97bc24360a3d3612ff6b765cdfb27dbb118679737b9801d1e9c"
           }
         ]
       },
@@ -838,9 +1762,479 @@
         "tiedosto": "Basseterre from sea.JPG"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "505614d583facb582a8cff8784048c501319709a57572391a5fa132f7f3935d8",
+      "sourceContentAfterSHA256": "2143fbd9c01c2db6d84138496c1a40ed07dfe368a1a845fba4eb629bfa8695d1",
       "targetAfterSHA256": "91af33db09f50f062cfc34925872fea8b134d7250323032d0cb213067695b8cb",
       "contextAfterSHA256": "91af33db09f50f062cfc34925872fea8b134d7250323032d0cb213067695b8cb"
+    },
+    {
+      "era": "e12",
+      "city": "basseterre",
+      "slot": "C1",
+      "type": "commons",
+      "assetID": "capital-cc-e12-basseterre-c1-75657f547c509f6d",
+      "galleryImageID": "capital-cc-e12-basseterre-c1-75657f547c509f6d",
+      "commonsFile": "Basseterre from sea 3.JPG",
+      "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "kansikuvat",
+        0
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/basseterre/c1-75657f547c509f6d042b.jpg",
+        "suora": true,
+        "lahde": "Gertjan R., Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Basseterre ja sen takaiset rinteet mereltä nähtyinä heinäkuussa 2014.",
+        "lyhyt": "Basseterre ja sen takaiset rinteet mereltä nähtyinä heinäkuussa 2014.",
+        "tiedosto": "Basseterre from sea 3.JPG"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Gertjan R., Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Basseterre ja sen takaiset rinteet mereltä nähtyinä heinäkuussa 2014.",
+        "lyhyt": "Basseterre ja sen takaiset rinteet mereltä nähtyinä heinäkuussa 2014.",
+        "tiedosto": "Basseterre from sea 3.JPG"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/basseterre/c1-75657f547c509f6d042b.jpg",
+        "suora": true,
+        "lahde": "Gertjan R., Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Basseterre ja sen takaiset rinteet mereltä nähtyinä heinäkuussa 2014.",
+        "lyhyt": "Basseterre ja sen takaiset rinteet mereltä nähtyinä heinäkuussa 2014.",
+        "tiedosto": "Basseterre from sea 3.JPG"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "75657f547c509f6d042b0494fd94e7d16059fe0fb326fb2d3a1ac9c4e2583614",
+      "exportSHA256": "75657f547c509f6d042b0494fd94e7d16059fe0fb326fb2d3a1ac9c4e2583614",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/basseterre/c1-75657f547c509f6d042b.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/basseterre/c1-75657f547c509f6d042b.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/commons-originals/e12/basseterre/01e1fa5405699c5ac54451e13b103ea69a1b4f1a27ad2b4f33d59d231d7f3804.jpg",
+      "dimensions": [
+        4320,
+        3240
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/basseterre/sisalto.json",
+      "sourceContentSHA256": "505614d583facb582a8cff8784048c501319709a57572391a5fa132f7f3935d8",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "subjectTitle": "Basseterre",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Gertjan R.",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Basseterre_from_sea_3.JPG",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/3/34/Basseterre_from_sea_3.JPG",
+        "rightsEvidence": {
+          "selection": {
+            "photoLicense": "Tekijä Gertjan R. alkuperäisen tiedostosivun Author table -kentästä, ei uploaderista päätelty. Lisenssi CC BY-SA 4.0 tiedostosivusta.",
+            "placeEvidence": "English: View from the water of Basseterre, Saint Kitts and Nevis",
+            "workLayer": "Laaja todellinen kaupungin rantaviivan, meriveden ja takana olevien rinteiden asettelu. Kaupungin talot pieniä hajautuneita osia maisemassa, ei yksittäisen nimetyn rakennus- tai nykytaideteoksen pääaiheista jäljennöstä. Description/Author/Licensing alkuperäissivusta todistavat nimenomaisen Basseterre, Saint Kitts and Nevis -kuvauspaikan ja Gertjan R./CC BY-SA4.0-oikeuden. Ei rakennusiästä pääteltyä PD:tä tai yleistä maa-FoP-oletusta.",
+            "visualInspection": "Alkuperäinen4320×3240 katsottu: koko rannikon ja kaupungin asettelu luettavissa, meripinta, luonnollisesti pilvinen tumma taivas ja vuoristorinne. Pienet kaupungin yksityiskohdat pehmeitä; kokonaispaikkamaisema näkyy. Ei tunnistettavia kasvoja, lisättyä tekstiä/vesileimaa/kehystä tai pääaiheista mainosta.5.7.2014, ei tämänhetkinen opaskuva. Eri alkuperäistiedosto kuin nykyinen PHOTO.",
+            "previousGameUse": [],
+            "sourceHtml": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/basseterre/cc-search/8cf74407d6aa.html",
+            "sourceSha256": "ebc6cff25445702dad418e74d3b075bd8fddd3982bc756aafb2b19de2b54bfd8",
+            "currentContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/basseterre/sisalto.json",
+            "currentContentSHA256": "505614d583facb582a8cff8784048c501319709a57572391a5fa132f7f3935d8"
+          },
+          "QA": {
+            "visualViewed": true,
+            "viewedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/basseterre/qa-evidence/cc-5db79c1a60ad3a4d/original-75657f547c509f6d042b0494fd94e7d16059fe0fb326fb2d3a1ac9c4e2583614.JPG",
+            "sourceHTML": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/basseterre/qa-evidence/cc-5db79c1a60ad3a4d/source-ebc6cff25445702dad418e74d3b075bd8fddd3982bc756aafb2b19de2b54bfd8.html",
+            "sourceHTMLSHA256": "ebc6cff25445702dad418e74d3b075bd8fddd3982bc756aafb2b19de2b54bfd8",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Basseterre_from_sea_3.JPG",
+            "sourceDescription": "English: View from the water of Basseterre, Saint Kitts and Nevis",
+            "sourceDate": "5 July 2014, 13:10:11",
+            "author": "Gertjan R.",
+            "license": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+            "width": 4320,
+            "height": 3240,
+            "rightsEvidence": {
+              "photoLicense": "Tekijä Gertjan R. alkuperäisen tiedostosivun Author table -kentästä, ei uploaderista päätelty. Lisenssi CC BY-SA 4.0 tiedostosivusta.",
+              "placeEvidence": "English: View from the water of Basseterre, Saint Kitts and Nevis",
+              "workLayer": "Laaja todellinen kaupungin rantaviivan, meriveden ja takana olevien rinteiden asettelu. Kaupungin talot pieniä hajautuneita osia maisemassa, ei yksittäisen nimetyn rakennus- tai nykytaideteoksen pääaiheista jäljennöstä. Description/Author/Licensing alkuperäissivusta todistavat nimenomaisen Basseterre, Saint Kitts and Nevis -kuvauspaikan ja Gertjan R./CC BY-SA4.0-oikeuden. Ei rakennusiästä pääteltyä PD:tä tai yleistä maa-FoP-oletusta.",
+              "visualInspection": "Alkuperäinen4320×3240 katsottu: koko rannikon ja kaupungin asettelu luettavissa, meripinta, luonnollisesti pilvinen tumma taivas ja vuoristorinne. Pienet kaupungin yksityiskohdat pehmeitä; kokonaispaikkamaisema näkyy. Ei tunnistettavia kasvoja, lisättyä tekstiä/vesileimaa/kehystä tai pääaiheista mainosta.5.7.2014, ei tämänhetkinen opaskuva. Eri alkuperäistiedosto kuin nykyinen PHOTO.",
+              "previousGameUse": [],
+              "sourceHtml": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/basseterre/cc-search/8cf74407d6aa.html",
+              "sourceSha256": "ebc6cff25445702dad418e74d3b075bd8fddd3982bc756aafb2b19de2b54bfd8",
+              "currentContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/basseterre/sisalto.json",
+              "currentContentSHA256": "505614d583facb582a8cff8784048c501319709a57572391a5fa132f7f3935d8"
+            },
+            "sourceContentSHA256": "505614d583facb582a8cff8784048c501319709a57572391a5fa132f7f3935d8",
+            "reviewedAt": "2026-10-12T20:30:03.677447+00:00",
+            "inputFragment": "cc-selection.json",
+            "selectionPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/basseterre/cc-selection.json",
+            "selectionSHA256": "6d53181bf27c8e32498f9c46c28caea223ef9f2700fa59afdbe69d055dcbc647"
+          },
+          "qaReason": "Alkuperäinen4320×3240 katsottu itse: todellinen laaja Basseterren rannikon, satamakaupungin rakennusrintaman, meren ja rinteiden asettelu. Luonnolliset tummat pilvet ja pehmeät pienet yksityiskohdat eivät peitä koko paikkamaisemaa; ei kasvoja, lisättyä tekstiä/vesileimaa/kehystä tai yhden nykytaideteoksen luovia detaljeja pääaiheena. Source Description nimeää Basseterre, Saint Kitts and Nevis, Author Gertjan R. ja CC BY-SA4.0 tarkistettu tiedostosivulta.5.7.2014 on kuvatekstissä, ei nykyopas-/sääväite. Kaupunkikokonaisuutta ei muuteta kaikkien talojen ikään/FOP:iin perustuvaksi blanketluvaksi. NativeSHA varmistettu, eri JPEG/suunta/kuvaushetki kuin hyväksytyssä PHOTO Basseterre from sea.JPG; samaa tiedostoa ei käytetä kahdesti."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Basseterre ja sen takaiset rinteet mereltä nähtyinä heinäkuussa 2014.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/basseterre/qa.json",
+        "fileSHA256": "6c11eb70eedfadfafcf58c43df16523c23d1d8f59722d962995251905df420a4",
+        "item": {
+          "slot": "C1",
+          "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
+          "commonsFile": "Basseterre from sea 3.JPG",
+          "sha256": "75657f547c509f6d042b0494fd94e7d16059fe0fb326fb2d3a1ac9c4e2583614",
+          "verdict": "accepted",
+          "reason": "Alkuperäinen4320×3240 katsottu itse: todellinen laaja Basseterren rannikon, satamakaupungin rakennusrintaman, meren ja rinteiden asettelu. Luonnolliset tummat pilvet ja pehmeät pienet yksityiskohdat eivät peitä koko paikkamaisemaa; ei kasvoja, lisättyä tekstiä/vesileimaa/kehystä tai yhden nykytaideteoksen luovia detaljeja pääaiheena. Source Description nimeää Basseterre, Saint Kitts and Nevis, Author Gertjan R. ja CC BY-SA4.0 tarkistettu tiedostosivulta.5.7.2014 on kuvatekstissä, ei nykyopas-/sääväite. Kaupunkikokonaisuutta ei muuteta kaikkien talojen ikään/FOP:iin perustuvaksi blanketluvaksi. NativeSHA varmistettu, eri JPEG/suunta/kuvaushetki kuin hyväksytyssä PHOTO Basseterre from sea.JPG; samaa tiedostoa ei käytetä kahdesti.",
+          "evidence": {
+            "visualViewed": true,
+            "viewedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/basseterre/qa-evidence/cc-5db79c1a60ad3a4d/original-75657f547c509f6d042b0494fd94e7d16059fe0fb326fb2d3a1ac9c4e2583614.JPG",
+            "sourceHTML": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/basseterre/qa-evidence/cc-5db79c1a60ad3a4d/source-ebc6cff25445702dad418e74d3b075bd8fddd3982bc756aafb2b19de2b54bfd8.html",
+            "sourceHTMLSHA256": "ebc6cff25445702dad418e74d3b075bd8fddd3982bc756aafb2b19de2b54bfd8",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Basseterre_from_sea_3.JPG",
+            "sourceDescription": "English: View from the water of Basseterre, Saint Kitts and Nevis",
+            "sourceDate": "5 July 2014, 13:10:11",
+            "author": "Gertjan R.",
+            "license": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+            "width": 4320,
+            "height": 3240,
+            "rightsEvidence": {
+              "photoLicense": "Tekijä Gertjan R. alkuperäisen tiedostosivun Author table -kentästä, ei uploaderista päätelty. Lisenssi CC BY-SA 4.0 tiedostosivusta.",
+              "placeEvidence": "English: View from the water of Basseterre, Saint Kitts and Nevis",
+              "workLayer": "Laaja todellinen kaupungin rantaviivan, meriveden ja takana olevien rinteiden asettelu. Kaupungin talot pieniä hajautuneita osia maisemassa, ei yksittäisen nimetyn rakennus- tai nykytaideteoksen pääaiheista jäljennöstä. Description/Author/Licensing alkuperäissivusta todistavat nimenomaisen Basseterre, Saint Kitts and Nevis -kuvauspaikan ja Gertjan R./CC BY-SA4.0-oikeuden. Ei rakennusiästä pääteltyä PD:tä tai yleistä maa-FoP-oletusta.",
+              "visualInspection": "Alkuperäinen4320×3240 katsottu: koko rannikon ja kaupungin asettelu luettavissa, meripinta, luonnollisesti pilvinen tumma taivas ja vuoristorinne. Pienet kaupungin yksityiskohdat pehmeitä; kokonaispaikkamaisema näkyy. Ei tunnistettavia kasvoja, lisättyä tekstiä/vesileimaa/kehystä tai pääaiheista mainosta.5.7.2014, ei tämänhetkinen opaskuva. Eri alkuperäistiedosto kuin nykyinen PHOTO.",
+              "previousGameUse": [],
+              "sourceHtml": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/basseterre/cc-search/8cf74407d6aa.html",
+              "sourceSha256": "ebc6cff25445702dad418e74d3b075bd8fddd3982bc756aafb2b19de2b54bfd8",
+              "currentContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/basseterre/sisalto.json",
+              "currentContentSHA256": "505614d583facb582a8cff8784048c501319709a57572391a5fa132f7f3935d8"
+            },
+            "sourceContentSHA256": "505614d583facb582a8cff8784048c501319709a57572391a5fa132f7f3935d8",
+            "reviewedAt": "2026-10-12T20:30:03.677447+00:00",
+            "inputFragment": "cc-selection.json",
+            "selectionPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/basseterre/cc-selection.json",
+            "selectionSHA256": "6d53181bf27c8e32498f9c46c28caea223ef9f2700fa59afdbe69d055dcbc647"
+          }
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/basseterre/qa.json",
+            "sha256": "6c11eb70eedfadfafcf58c43df16523c23d1d8f59722d962995251905df420a4"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/basseterre/illustration-qa-extra.json",
+            "sha256": "dc329bb963e6f97bc24360a3d3612ff6b765cdfb27dbb118679737b9801d1e9c"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e12",
+        "city": "basseterre",
+        "slot": "C1",
+        "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
+        "commonsFile": "Basseterre from sea 3.JPG",
+        "sha256": "75657f547c509f6d042b0494fd94e7d16059fe0fb326fb2d3a1ac9c4e2583614",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Basseterre_from_sea_3.JPG",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/3/34/Basseterre_from_sea_3.JPG",
+        "author": "Gertjan R.",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+        "width": 4320,
+        "height": 3240,
+        "originalSHA256": "75657f547c509f6d042b0494fd94e7d16059fe0fb326fb2d3a1ac9c4e2583614",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/basseterre/c1-75657f547c509f6d042b.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/basseterre/c1-75657f547c509f6d042b.jpg",
+        "bytes": 3080644,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T20:31:24.313393+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Gertjan R., Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Basseterre ja sen takaiset rinteet mereltä nähtyinä heinäkuussa 2014.",
+        "lyhyt": "Basseterre ja sen takaiset rinteet mereltä nähtyinä heinäkuussa 2014.",
+        "tiedosto": "Basseterre from sea 3.JPG"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "2143fbd9c01c2db6d84138496c1a40ed07dfe368a1a845fba4eb629bfa8695d1",
+      "targetAfterSHA256": "8f4fe89df992460d09eefdc091f26a0dcf8d6be4a8669ee263b93af8a5d640b7",
+      "contextAfterSHA256": "8f4fe89df992460d09eefdc091f26a0dcf8d6be4a8669ee263b93af8a5d640b7"
+    },
+    {
+      "era": "e12",
+      "city": "basseterre",
+      "slot": "C2",
+      "type": "commons",
+      "assetID": "capital-cc-e12-basseterre-c2-c2c591632921db4b",
+      "galleryImageID": "capital-cc-e12-basseterre-c2-c2c591632921db4b",
+      "commonsFile": "Stkitts-pano.jpg",
+      "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[1]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "kansikuvat",
+        1
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/basseterre/c2-c2c591632921db4b47dc.jpg",
+        "suora": true,
+        "lahde": "Balou46, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Basseterreen satama, kaupunkikorttelit ja ympäröivät rinteet tammikuussa 2022.",
+        "lyhyt": "Basseterreen satama, kaupunkikorttelit ja ympäröivät rinteet tammikuussa 2022.",
+        "tiedosto": "Stkitts-pano.jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Balou46, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Basseterreen satama, kaupunkikorttelit ja ympäröivät rinteet tammikuussa 2022.",
+        "lyhyt": "Basseterreen satama, kaupunkikorttelit ja ympäröivät rinteet tammikuussa 2022.",
+        "tiedosto": "Stkitts-pano.jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/basseterre/c2-c2c591632921db4b47dc.jpg",
+        "suora": true,
+        "lahde": "Balou46, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Basseterreen satama, kaupunkikorttelit ja ympäröivät rinteet tammikuussa 2022.",
+        "lyhyt": "Basseterreen satama, kaupunkikorttelit ja ympäröivät rinteet tammikuussa 2022.",
+        "tiedosto": "Stkitts-pano.jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "c2c591632921db4b47dc32e2a3866e8e16ca19780106acbab8567c3bdb66ca14",
+      "exportSHA256": "c2c591632921db4b47dc32e2a3866e8e16ca19780106acbab8567c3bdb66ca14",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/basseterre/c2-c2c591632921db4b47dc.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/basseterre/c2-c2c591632921db4b47dc.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/commons-originals/e12/basseterre/b34b63155b1f15bbf3984c7a97febfdb357320d3a33e1949e885bb79e026c1d3.jpg",
+      "dimensions": [
+        8505,
+        2348
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/basseterre/sisalto.json",
+      "sourceContentSHA256": "505614d583facb582a8cff8784048c501319709a57572391a5fa132f7f3935d8",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "subjectTitle": "Basseterre",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Balou46",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Stkitts-pano.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4b/Stkitts-pano.jpg",
+        "rightsEvidence": {
+          "selection": "Explicit Author Balou46/Own work, CC BY-SA4.0, tarkka lisenssiversio/lähdelinkki varmennettu. Description Panorama Basseterre vom Schiff gesehen yksilöi paikan. Kokonainen8505×2348 näkymä näyttää sataman, kaupunkikudoksen, puuston ja ympäröivän maaston todellisen asettelun. Rakennukset hajautuneena laajana kokonaisuutena; ei yksittäisen suojatun nykyteoksen reproduktio tai erillistä veistosta pääaiheena. Ei blanket-PD/FOP-väitettä taustataloista; arvio koskee koko sommittelua ja yksittäisen rakennuksen eristys vaatii uuden arvion. Fyysiset pienetWelcome-/alus-/kauppamerkit ympäristön osia. Kuva24.1.2022, ei nykytilaväitettä.",
+          "QA": {
+            "visualViewed": true,
+            "viewedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/basseterre/qa-evidence/cc-0e50635711b806d6/original-c2c591632921db4b47dc32e2a3866e8e16ca19780106acbab8567c3bdb66ca14.jpg",
+            "sourceHTML": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/basseterre/qa-evidence/cc-0e50635711b806d6/source-558fc839d6d664fc3df77f851f6679c206ca025419ae1b07b0ff79adcabb2b9f.html",
+            "sourceHTMLSHA256": "558fc839d6d664fc3df77f851f6679c206ca025419ae1b07b0ff79adcabb2b9f",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Stkitts-pano.jpg",
+            "sourceDescription": "Deutsch: Panorama Basseterre vom Schiff gesehen",
+            "sourceDate": "24 January 2022, 14:11:05",
+            "author": "Balou46",
+            "license": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "width": 8505,
+            "height": 2348,
+            "rightsEvidence": "Explicit Author Balou46/Own work, CC BY-SA4.0, tarkka lisenssiversio/lähdelinkki varmennettu. Description Panorama Basseterre vom Schiff gesehen yksilöi paikan. Kokonainen8505×2348 näkymä näyttää sataman, kaupunkikudoksen, puuston ja ympäröivän maaston todellisen asettelun. Rakennukset hajautuneena laajana kokonaisuutena; ei yksittäisen suojatun nykyteoksen reproduktio tai erillistä veistosta pääaiheena. Ei blanket-PD/FOP-väitettä taustataloista; arvio koskee koko sommittelua ja yksittäisen rakennuksen eristys vaatii uuden arvion. Fyysiset pienetWelcome-/alus-/kauppamerkit ympäristön osia. Kuva24.1.2022, ei nykytilaväitettä.",
+            "sourceContentSHA256": "505614d583facb582a8cff8784048c501319709a57572391a5fa132f7f3935d8",
+            "reviewedAt": "2026-10-12T20:45:25.976889+00:00",
+            "inputFragment": "cc-gap-selection.json",
+            "selectionPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/basseterre/cc-gap-selection.json",
+            "selectionSHA256": "ec78df06087734eba55b4898bf8bf7a547a95453113e581708dfb2015c8c3b72",
+            "pixelInspection": {
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/basseterre/qa-evidence/C2-pier-people-c2c591632921db4b.png",
+              "sourceSHA256": "c2c591632921db4b47dc32e2a3866e8e16ca19780106acbab8567c3bdb66ca14",
+              "cropHeight": 450,
+              "cropWidth": 550,
+              "cropOffsetY": 1850,
+              "cropOffsetX": 4350,
+              "method": "native sips PNG-katseluote; lähdeassetia ei muokattu"
+            }
+          },
+          "qaReason": "Alkuperäinen8505×2348 ja laiturin jalankulkijoiden natiivipikseliote katsottu itse: aito laaja Basseterren satama/korttelit/rinteet, oikea kaupungin asettelu. Lähteen Description Panorama Basseterre vom Schiff gesehen yksilöi kaupungin. Pienissä ihmispäissä ei luettavia kasvonpiirteitä; laivan, kauppojen jaWelcome-kylttien luonnolliset merkinnät ovat ympäristön sivuosia, eivät mainos-/pakkauskuvan pääaihe tai lisätty vesileima. Ei yksittäisen nykyteoksen luovaa detaljia päämotiivina; citykokonaisuus ei tarkoita kaikkien taustatalojen FOP/PD-lupaa. Author Balou46 ja CC BY-SA4.0 luettu tiedostosivulta, kuvaus24.1.2022/kuvateksti2022 rehellinen. Erittäin laaja suhde sallittu C2:ssa. NativeSHA varmistettu, eri tiedosto/näkökulma kuin C1 ja PHOTO."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Basseterreen satama, kaupunkikorttelit ja ympäröivät rinteet tammikuussa 2022.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/basseterre/qa.json",
+        "fileSHA256": "6c11eb70eedfadfafcf58c43df16523c23d1d8f59722d962995251905df420a4",
+        "item": {
+          "slot": "C2",
+          "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[1]",
+          "commonsFile": "Stkitts-pano.jpg",
+          "sha256": "c2c591632921db4b47dc32e2a3866e8e16ca19780106acbab8567c3bdb66ca14",
+          "verdict": "accepted",
+          "reason": "Alkuperäinen8505×2348 ja laiturin jalankulkijoiden natiivipikseliote katsottu itse: aito laaja Basseterren satama/korttelit/rinteet, oikea kaupungin asettelu. Lähteen Description Panorama Basseterre vom Schiff gesehen yksilöi kaupungin. Pienissä ihmispäissä ei luettavia kasvonpiirteitä; laivan, kauppojen jaWelcome-kylttien luonnolliset merkinnät ovat ympäristön sivuosia, eivät mainos-/pakkauskuvan pääaihe tai lisätty vesileima. Ei yksittäisen nykyteoksen luovaa detaljia päämotiivina; citykokonaisuus ei tarkoita kaikkien taustatalojen FOP/PD-lupaa. Author Balou46 ja CC BY-SA4.0 luettu tiedostosivulta, kuvaus24.1.2022/kuvateksti2022 rehellinen. Erittäin laaja suhde sallittu C2:ssa. NativeSHA varmistettu, eri tiedosto/näkökulma kuin C1 ja PHOTO.",
+          "evidence": {
+            "visualViewed": true,
+            "viewedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/basseterre/qa-evidence/cc-0e50635711b806d6/original-c2c591632921db4b47dc32e2a3866e8e16ca19780106acbab8567c3bdb66ca14.jpg",
+            "sourceHTML": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/basseterre/qa-evidence/cc-0e50635711b806d6/source-558fc839d6d664fc3df77f851f6679c206ca025419ae1b07b0ff79adcabb2b9f.html",
+            "sourceHTMLSHA256": "558fc839d6d664fc3df77f851f6679c206ca025419ae1b07b0ff79adcabb2b9f",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Stkitts-pano.jpg",
+            "sourceDescription": "Deutsch: Panorama Basseterre vom Schiff gesehen",
+            "sourceDate": "24 January 2022, 14:11:05",
+            "author": "Balou46",
+            "license": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "width": 8505,
+            "height": 2348,
+            "rightsEvidence": "Explicit Author Balou46/Own work, CC BY-SA4.0, tarkka lisenssiversio/lähdelinkki varmennettu. Description Panorama Basseterre vom Schiff gesehen yksilöi paikan. Kokonainen8505×2348 näkymä näyttää sataman, kaupunkikudoksen, puuston ja ympäröivän maaston todellisen asettelun. Rakennukset hajautuneena laajana kokonaisuutena; ei yksittäisen suojatun nykyteoksen reproduktio tai erillistä veistosta pääaiheena. Ei blanket-PD/FOP-väitettä taustataloista; arvio koskee koko sommittelua ja yksittäisen rakennuksen eristys vaatii uuden arvion. Fyysiset pienetWelcome-/alus-/kauppamerkit ympäristön osia. Kuva24.1.2022, ei nykytilaväitettä.",
+            "sourceContentSHA256": "505614d583facb582a8cff8784048c501319709a57572391a5fa132f7f3935d8",
+            "reviewedAt": "2026-10-12T20:45:25.976889+00:00",
+            "inputFragment": "cc-gap-selection.json",
+            "selectionPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/basseterre/cc-gap-selection.json",
+            "selectionSHA256": "ec78df06087734eba55b4898bf8bf7a547a95453113e581708dfb2015c8c3b72",
+            "pixelInspection": {
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/basseterre/qa-evidence/C2-pier-people-c2c591632921db4b.png",
+              "sourceSHA256": "c2c591632921db4b47dc32e2a3866e8e16ca19780106acbab8567c3bdb66ca14",
+              "cropHeight": 450,
+              "cropWidth": 550,
+              "cropOffsetY": 1850,
+              "cropOffsetX": 4350,
+              "method": "native sips PNG-katseluote; lähdeassetia ei muokattu"
+            }
+          }
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/basseterre/qa.json",
+            "sha256": "6c11eb70eedfadfafcf58c43df16523c23d1d8f59722d962995251905df420a4"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/basseterre/illustration-qa-extra.json",
+            "sha256": "dc329bb963e6f97bc24360a3d3612ff6b765cdfb27dbb118679737b9801d1e9c"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e12",
+        "city": "basseterre",
+        "slot": "C2",
+        "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[1]",
+        "commonsFile": "Stkitts-pano.jpg",
+        "sha256": "c2c591632921db4b47dc32e2a3866e8e16ca19780106acbab8567c3bdb66ca14",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Stkitts-pano.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4b/Stkitts-pano.jpg",
+        "author": "Balou46",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "width": 8505,
+        "height": 2348,
+        "originalSHA256": "c2c591632921db4b47dc32e2a3866e8e16ca19780106acbab8567c3bdb66ca14",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/basseterre/c2-c2c591632921db4b47dc.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/basseterre/c2-c2c591632921db4b47dc.jpg",
+        "bytes": 5949889,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T20:45:46.351781+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Balou46, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Basseterreen satama, kaupunkikorttelit ja ympäröivät rinteet tammikuussa 2022.",
+        "lyhyt": "Basseterreen satama, kaupunkikorttelit ja ympäröivät rinteet tammikuussa 2022.",
+        "tiedosto": "Stkitts-pano.jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "2143fbd9c01c2db6d84138496c1a40ed07dfe368a1a845fba4eb629bfa8695d1",
+      "targetAfterSHA256": "d4200be0ccd1f20d87df1c4ef7ada6f7ed2dc57b7155a76e19f15dd15bc067a0",
+      "contextAfterSHA256": "d4200be0ccd1f20d87df1c4ef7ada6f7ed2dc57b7155a76e19f15dd15bc067a0"
     }
   ],
   "runtimeIntegrationPending": true,
