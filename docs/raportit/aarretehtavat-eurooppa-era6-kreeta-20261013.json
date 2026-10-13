@@ -1,7 +1,7 @@
 {
  "versio": 1,
  "laatija": "Sisältökirjuri 13.10.2026",
- "huomio": "Aarretehtävät, erä 6: Kreeta (GRC), viimeinen puuttuva Euroopan kaupunki. Katso (Pyhän Menaksen katedraali, Heraklion: sallitut-3d-alue on Heraklionin keskusta r = 15 km, joten Hania ei kelpaa Katso-kohteeksi) + Vanha kartta (Britannian amiraliteetin Hanian merikartta, PD; hahmo on kotoisin Haniasta). Palkkiot kuten erässä 3 (Katso 25, Kartta 35); vihje ei muuta aarremekaniikkaa, ei bonuksia. muistomerkki: false molemmissa (katedraali on kirkon omistama 1862-1895 rakennettu kirkko, ei antiikin eikä valtion muinaismuistomerkki; kartta ei ole kuva muistomerkistä; ks. md huomio 1). Maa-vihje GRC mukana, koska GRC:llä on paikallisaarrepari (Hymettoksen hunaja + Antikytheran kone) eikä yhdessäkään aiemmassa erässä ole GRC-vihjettä. Faktat kahdesta lähteestä (liite). TARKISTETTU 13.10.2026 (riippumaton Sonnet-tarkistus): korjaukset a.tiesitko, b.kysymys, b.tiesitko, b.oikea_piste_px/toleranssi, GRC-paikan koordinaatti ja vihjerivi 3; ks. tarkistusloki.",
+ "huomio": "Aarretehtävät, erä 6: Kreeta (GRC), viimeinen puuttuva Euroopan kaupunki. Katso (Pyhän Menaksen katedraali, Heraklion: sallitut-3d-alue on Heraklionin keskusta r = 15 km, joten Hania ei kelpaa Katso-kohteeksi) + Vanha kartta (Britannian amiraliteetin Hanian merikartta, PD; hahmo on kotoisin Haniasta). Palkkiot kuten erässä 3 (Katso 25, Kartta 35); vihje ei muuta aarremekaniikkaa, ei bonuksia. muistomerkki: false molemmissa (katedraali on kirkon omistama 1862-1895 rakennettu kirkko, ei antiikin eikä valtion muinaismuistomerkki; kartta ei ole kuva muistomerkistä; ks. md huomio 1). Maa-vihje GRC mukana, koska GRC:llä on paikallisaarrepari (Hymettoksen hunaja + Antikytheran kone) eikä yhdessäkään aiemmassa erässä ole GRC-vihjettä. Faktat kahdesta lähteestä (liite). TARKISTETTU 13.10.2026 (riippumaton Sonnet-tarkistus): korjaukset a.tiesitko, b.kysymys, b.tiesitko, b.oikea_piste_px/toleranssi, GRC-paikan koordinaatti ja vihjerivi 3; ks. tarkistusloki. PT 13.10.: muistomerkki=true tehtävälle a (Pyhän Menaksen katedraali; nollariski Kreikan alueella), false tehtävälle b.",
  "kaupungit": [
   {
    "versio": 1,
@@ -18,7 +18,7 @@
    "a": {
     "laji": "katso",
     "palkkio": 25,
-    "muistomerkki": false,
+    "muistomerkki": true,
     "vihjelause": "Verkkoni kuivuvat laiturilla, mutta katson aina lounaaseen vanhan kaupungin kattojen yli: siellä kohoaa kirkko, jonka keskellä on kupoli ja jota reunustaa kaksi kellotornia. Etsi se.",
     "kohde": {
      "nimi": "Pyhän Menaksen katedraali (Agios Minas)",
