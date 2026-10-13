@@ -135,7 +135,10 @@
       "muste-pehmea": "#bdbdbd",
       "korostus": "#ffffff",
       "reunus": "rgba(224, 224, 224, 0.6)",
-      "toiminto": "rgba(130, 130, 130, 0.42)"
+      "toiminto": "rgba(130, 130, 130, 0.42)",
+      "_nappi": "Linssien ohjausnapit (OHJAUSNAPPI) läpinäkyvämpinä (omistaja 13.10.2026 TF 186, PT: vedos 2 kaikkiin linssin nappeihin): ääriviiva neljännekseen (0,6 → 0,15) ja kuvake 65 %; painettuna korostus kuten ennen.",
+      "nappi-reunus": "rgba(224, 224, 224, 0.15)",
+      "nappi-kuvake": "rgba(240, 240, 240, 0.65)"
     },
     "lcd": {
       "pinta": "#0c2214",
