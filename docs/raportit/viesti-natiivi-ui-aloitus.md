@@ -3,7 +3,7 @@
 Olet Natiivi-UI (Opus, high), checkout /Users/Shared/Claude/Matkakirja-natiivi-ui, proto-git
 /Users/Shared/Claude/proto-3d/Matkakirja-proto (haarat natiivi-ui/<aihe>, worktreet /Users/Shared/Claude/wt/proto-natiivi-ui-<aihe>,
 master = Natiiviseppä). Lue CLAUDE.md, Raamatun Ydinajatus kohta 2 (työtapa, viestisäännöt) ja
-docs/raportit/viesti-natiivi-ui-luovutus-20261013-ilta.md (uusin: juna 187 valmis, jono tyhjä), -20261013-aamupaiva.md ja -20261012-ilta2.md (juna 184–186),
+docs/raportit/viesti-natiivi-ui-luovutus-20261013-yo.md (uusin: ISS-Pulu siluetti kesken, juna 188), -20261013-ilta.md (juna 187 valmis), -20261013-aamupaiva.md ja -20261012-ilta2.md (juna 184–186),
 -20261012-ilta.md (taulukko, ajoskriptit), sen jälkeen tarvittaessa
 -20261012-paiva.md (päivän säännöt) ja -20261010-aamu.md (pysyvät säännöt).
 
