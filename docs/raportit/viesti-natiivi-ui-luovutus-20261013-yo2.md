@@ -52,7 +52,10 @@ Ajo 1 (a1381238b, 21.07): pallo aikarajassa (koko ruudun yhdistäminen hidas), l
 ☰ +10 pt = nappi häivytyksessä → kolmas kuva. Lokit kaannospalvelu/20261013-2107*-pallo-keskitys.log(.unity.log), -2113*-linna-keskitys.
 Ajo 2 (e309de773) käynnissä linjalla 2 (Julkaisijan LUKKO NYT 21.26): `keskitys188.sh` → keskitys188b-pallo.log / -linna.log,
 lopuksi "LUKKO VAPAA keskitys188b" → ilmoita Julkaisijalle LUKKO VAPAA linja 2.
-SEURAAVAKSI: lue VIKA KESKITYS -rivit (grep "KESKITYS\|keskitys " kaannospalvelu/*keskitys*.unity.log), ryhmittele luokittain
+AJO 2 VALMIS 21.36 (LUKKO VAPAA lähetetty): linna 20 VIKAA, pallo aikarajassa (iPhone pysty, iPhone vaaka ja iPad pysty ehtivät).
+LÖYDÖSLISTA LÄHETETTY PT:LLE 21.4x: lokit/natiivi-ui-keskitys188-loydokset.md (A aidot luokittain, B mittausepäilyt). Seuraavaksi
+listan kohdat 1–3 (B-mittausviat testiin, pallo kahteen varaukseen MATKAKIRJA_ASETTELU_KOOT=iphone / ipad, sitten A-korjaukset).
+VANHA OHJE: lue VIKA KESKITYS -rivit (grep "KESKITYS\|keskitys " kaannospalvelu/*keskitys*.unity.log), ryhmittele luokittain
 (mk-linssivalikko__kohta, mk-chat__siru, mk-ohjausnappi, mk-issohjaamo__lcdnappi …), tarkista epäilyttävät (esim. "⟨Huoneet⟩"
 muste 56×30 = ohjausnappi--iso, "⟨Linssit⟩" 3×5) ja lähetä PT:lle löydöslista ennen korjauksia. Korjaukset tyylikirjan arvoilla
 (UI-POHJAT: puuttuva pohja → PT). Tavoite: testi läpi ja pysyvä osa ui-asettelutesti.sh:ta.
