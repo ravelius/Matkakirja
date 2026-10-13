@@ -46,6 +46,8 @@ Skenaariopohja: sk-kaupungit187e-ipad.txt.
 ## 5. KATSO JA LÖYDÄ (Pelikoodari) – linssiseppa/katso-kohteet-187 25e2bdf72 (wt proto-linssiseppa-katso187)
 34 uutta kohdetta (33 + kreeta) TehtavaKohteet.Kaikki; koordinaattikorjaukset PK vei eurooppa.json:iin (107cce88c). Simu katso187
 (6 kaupunkia) 6/6 löytyi, lähetetty PK:lle 12.0x; PK kokoaa PT:n kuvat.
+**Avoin:** Lontoon saapumispiste (51.50389, -0.08960) on Shardin vieressä → Tower Bridge peittyy. SK antaa uuden pisteen (PK pyysi) →
+vaihda TehtavaKohteet.cs katso:lontoo SaapumisLat/Lon (PK päivittää eurooppa.json samaksi), testit, SHA PK:lle.
 
 ## 6. MUUTA
 - Appikopiot lokit/linssiseppa-app/ siivottu (PT levy): pidä 3 uusinta + käytössä olevat.
