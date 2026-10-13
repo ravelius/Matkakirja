@@ -12,9 +12,9 @@ Julkaisija antaa `kaannos-<nimi>.nyt` / `simu-<nimi>.nyt`, irrotus perl setsid).
 - **Värikorjaus** `linssiseppa/museo-maa-188` b8e712a87 (SaliMateriaali c.gamma vain maakohtaisille saleille; LR:n löydös): PT kuittasi
   Ranskaan (juna 189). Arkit lokit/gamma188-pt/.
 
-## 2. ODOTTAA PT:N KUITTAUSTA
+## 2. KUITATTU JUNAAN 189 (PT 23.3x)
 - **Vesi index-v21** `linssiseppa/vesi-v21-189` 2b5ac0903 (Tampere KS vesi-v9, tampere4: Näsijärvi +1,0 m, Särkänniemen läiskä lähes
-  poissa; vesi19f; v10 ei parantanut, vesi19g). Paketti _valmiit/vesi-v21-vienti-20261013 → kuittauksen jälkeen vienti Julkaisijalta + NS.
+  poissa; vesi19f; v10 ei parantanut, vesi19g). Paketti _valmiit/vesi-v21-vienti-20261013: vienti pyydetty Julkaisijalta, NS:lle ilmoitettu → TARKISTA vesi/index-v21.json 200.
 
 ## 3. KESKEN: YÖVARTIO-SALIN KERTOJA (PT 22.3x, junaan kun äänet tulevat)
 - museo-palaute-188 bc5057477: kierros.json + mauritshuis-146, -840, -92, -670 SK-C-5:n jälkeen (testi 37 pysähdystä). EI vielä NS:lle.
