@@ -1,6 +1,6 @@
 # Euroopan uudet saapumisintroaiheet — osa 1/2, 13.10.2026
 
-14 QA/R2-varmennettua kuvaa toimitettu, 18 perusteltua lopullista poisjättöä. Käsitelty 32/48 tämän osan nimetyistä kuvista; 31 generointikutsua. Tilaus on kesken, kun kaikki nimetyt kohteet eivät vielä ole käsitelty.
+14 QA/R2-varmennettua kuvaa toimitettu, 20 perusteltua lopullista poisjättöä. Käsitelty 34/48 tämän osan nimetyistä kuvista; 33 generointikutsua. Tilaus on kesken, kun kaikki nimetyt kohteet eivät vielä ole käsitelty.
 
 Koko laajennus käsittää 95 nimettyä kuvaa (#133–227): osa 1 sisältää 48 ja osa 2 47 kuvaa. Aiempi 88+1 arvio ei korvaa lähteiden nimettyä inventaariota. Yksi uusi sisäänrakennettu generointi per kuva; ei uusintoja, vertailuottoja, inpaintingia tai rajauksia.
 
@@ -73,6 +73,13 @@ Manifesti: `posti/kuvatoimitus-saapumisintro-tallinn-uudet-6-8-20261013.json`. T
 
 - #151, slot 6: Kohtuotsan näköalatasanne Toompealla: Tallinnan vanhankaupungin kattomeri, Pyhän Olavin kirkon torni ja meri päivällä. Havainnekuva.
 - Poisjättö #152, slot 8: Vaunu täyttää noin78%leveydestä pyydetyn noin60% sijasta ja jalkakäytävän lähimmät kävelijät ovat varsin suuria. Pyydetty ympäristö ja pienet kaukaiset hahmot eivät toteudu riittävästi.
+
+## ISLANTI (REYKJAVÍK)
+
+Manifesti: `posti/kuvatoimitus-saapumisintro-iceland-uudet-6-8-20261013.json`. Toimitettu 0/2; kutsuja 2.
+
+- Poisjättö #153, slot 6: Kuvassa näkyvä kirkontorni ei vastaa riittävän tunnistettavasti Hallgrímskirkjan porrastettuja basalttipylväsmäisiä siipiä. Tunnistettavuuden lähde-ehto jää epävarmaksi, vaikka kaupunki, lahti ja Esja ovat kameramaisia.
+- Poisjättö #154, slot 8: Bussissa näkyy kolme selvää oviparia, vaikka lähde edellyttää kahta ovea. Tästä rakennepoikkeamasta tehdään lopullinen poisjättö; oikea suunta ja neutraali maalaus eivät korvaa ovirakennetta.
 
 ## BERLIINI
 

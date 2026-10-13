@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 1,
+  "cityName": "ISLANTI (REYKJAVÍK)",
+  "gameCityId": "islanti",
+  "mediaSlug": "iceland",
+  "taskNumbers": [
+    153,
+    154
+  ],
+  "updatedAt": "2026-10-13T18:43:26.938125+00:00",
+  "sourcePath": "posti/fable-codex-saapumisintro-uudet-6-8-loput-1-20261013.md",
+  "sourceCommit": "dbdaff9a39fa0e5052f176c890c85836e1a69a1f",
+  "sourceBlob": "1f499828d63779dfd3af7c99a4db2c4fa186e034",
+  "sourceReadInFull": true,
+  "sourceReadBy": "/root/intro_owner_rejection_inventory",
+  "sourceReadReceiptPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/source-read-receipt.json",
+  "assets": [],
+  "omittedItems": [
+    {
+      "taskNumber": 153,
+      "slot": 6,
+      "reason": "Kuvassa näkyvä kirkontorni ei vastaa riittävän tunnistettavasti Hallgrímskirkjan porrastettuja basalttipylväsmäisiä siipiä. Tunnistettavuuden lähde-ehto jää epävarmaksi, vaikka kaupunki, lahti ja Esja ovat kameramaisia.",
+      "stage": "independent-QA",
+      "additionalGenerationAllowed": false,
+      "nativeSHA256": "9ae71b306a10462f8fe07497e89b3611b8a54bfc42db72011db8ea4d65d7da77",
+      "finalSHA256": "f267106c6a07384784aac58c83720f422451c89a23e9cbc6e204d17ac7e17094"
+    },
+    {
+      "taskNumber": 154,
+      "slot": 8,
+      "reason": "Bussissa näkyy kolme selvää oviparia, vaikka lähde edellyttää kahta ovea. Tästä rakennepoikkeamasta tehdään lopullinen poisjättö; oikea suunta ja neutraali maalaus eivät korvaa ovirakennetta.",
+      "stage": "independent-QA",
+      "additionalGenerationAllowed": false,
+      "nativeSHA256": "50fd16c4440dc1d3cab50f73ba17327bfedb34552f5ef74db54915f7f56ad4c1",
+      "finalSHA256": "d1e0714c2d53bdff28d1b7c11a4422c4cfbbf624ed0bb655799469eb6341211e"
+    }
+  ],
+  "actualCalls": 2,
+  "maximumGenerationCalls": 2,
+  "allRequestedItemsHandled": true,
+  "allRequestedImagesDelivered": false,
+  "productionCompleteWithinSourceLimit": true,
+  "directMailboxDeliveryAuthorized": true,
+  "acceptanceRoute": "Päätoimittaja reviews on the owner authority in the exact source. This authorization is not yet an actual acceptance receipt.",
+  "ownerAcceptanceVerified": false,
+  "FableReceiptVerified": false,
+  "gameIntegrated": false,
+  "published": false,
+  "oldFiveApprovedPilotImagesPreserved": true,
+  "oldCelebrationAnd1873TopicsRemainWithdrawn": true,
+  "existingHeroSlotsPreserved": [
+    1,
+    2,
+    3
+  ],
+  "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+  "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+  "newTopics": {
+    "6": "daytime-city-panorama",
+    "8": "local-transport-in-motion"
+  }
+}
