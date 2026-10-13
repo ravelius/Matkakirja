@@ -1,6 +1,6 @@
 # Euroopan uudet saapumisintroaiheet — osa 1/2, 13.10.2026
 
-13 QA/R2-varmennettua kuvaa toimitettu, 17 perusteltua lopullista poisjättöä. Käsitelty 30/48 tämän osan nimetyistä kuvista; 29 generointikutsua. Tilaus on kesken, kun kaikki nimetyt kohteet eivät vielä ole käsitelty.
+14 QA/R2-varmennettua kuvaa toimitettu, 18 perusteltua lopullista poisjättöä. Käsitelty 32/48 tämän osan nimetyistä kuvista; 31 generointikutsua. Tilaus on kesken, kun kaikki nimetyt kohteet eivät vielä ole käsitelty.
 
 Koko laajennus käsittää 95 nimettyä kuvaa (#133–227): osa 1 sisältää 48 ja osa 2 47 kuvaa. Aiempi 88+1 arvio ei korvaa lähteiden nimettyä inventaariota. Yksi uusi sisäänrakennettu generointi per kuva; ei uusintoja, vertailuottoja, inpaintingia tai rajauksia.
 
@@ -66,6 +66,13 @@ Manifesti: `posti/kuvatoimitus-saapumisintro-london-uudet-6-8-20261013.json`. To
 
 - #149, slot 6: Sky Gardenin ulkoterassi: Thames, Tower Bridge ja Tower of London päivällä kaakkoon. Havainnekuva.
 - Poisjättö #150, slot 8: Parlamentin katolla näkyy pieni lipputangossa oleva kangaslippu lähteen nimenomaisen kaikkien lippujen kiellon vastaisesti. Tätä ei retusoida; lähteen sallima lopullinen poisjättö.
+
+## TALLINNA
+
+Manifesti: `posti/kuvatoimitus-saapumisintro-tallinn-uudet-6-8-20261013.json`. Toimitettu 1/2; kutsuja 2.
+
+- #151, slot 6: Kohtuotsan näköalatasanne Toompealla: Tallinnan vanhankaupungin kattomeri, Pyhän Olavin kirkon torni ja meri päivällä. Havainnekuva.
+- Poisjättö #152, slot 8: Vaunu täyttää noin78%leveydestä pyydetyn noin60% sijasta ja jalkakäytävän lähimmät kävelijät ovat varsin suuria. Pyydetty ympäristö ja pienet kaukaiset hahmot eivät toteudu riittävästi.
 
 ## BERLIINI
 
