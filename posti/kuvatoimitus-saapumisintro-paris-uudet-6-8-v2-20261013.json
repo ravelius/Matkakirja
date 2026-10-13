@@ -1,0 +1,344 @@
+{
+  "cityName": "Pariisi",
+  "gameCityId": "pariisi",
+  "mediaSlug": "paris",
+  "taskNumbers": [
+    114,
+    115
+  ],
+  "updatedAt": "2026-10-13T14:26:12.136875+00:00",
+  "requestedNewSlots": [
+    6,
+    8
+  ],
+  "existingHeroSlotsPreserved": [
+    1,
+    2,
+    3
+  ],
+  "assets": [
+    {
+      "slot": 6,
+      "title": "Näköala",
+      "caption": "Arc de Triomphen kattoterassi: näköala Champs-Élysées'lle ja kattomerelle iltapäivän valossa. Havainnekuva.",
+      "historical": false,
+      "topic": "daytime-city-panorama",
+      "newTopic": true,
+      "taskNumber": 114,
+      "sceneSpec": " Arc de Triomphen kattoterassi: näköala Champs-Élysées'lle ja kattomerelle iltapäivän valossa\n\nmediaSlug `paris`.\n\n**Alkuperäinen ohje:**\nMitä kuvataan: Pariisin panoraama Arc de Triomphen kattoterassilta kirkkaana päivänä (nykyaikainen värivalokuva). Etualalla kuvan alareunassa vain kapea kaistale vaaleaa kalkkikivikaidetta, ei ihmisiä lähellä, ei turvaverkkoja eikä kylttejä. Alhaalla pienenä Place Charles-de-Gaullen aukio ja siitä tähtenä lähtevät avenuet; keskellä Champs-Élysées'n puurivit ja suora, syvä perspektiivi kohti Place de la Concorden egyptiläistä obeliskia, kaukana utuisena Tuileries'n puutarha ja Louvren siipien matala siluetti. Joka puolella haussmannilaisten kerrostalojen vaaleat kivijulkisivut ja harmaat sinkkikatot savupiippuineen (kattomeri). Oikealla keskimatkalla Grand Palais'n lasikatto pienenä. Autot ja kävelijät vain pieninä pisteinä alhaalla kaukana. Seinen ei tarvitse näkyä. Kulma: vaakakuva, katse itäkaakkoon (noin 115 astetta, idän ja kaakon välille) pitkin Champs-Élysées'ta, kamera kaiteen takana silmänkorkeudelta, hieman alaspäin, kohtalainen kuvakulma (noin 40 asteen vaakakulma, ei ultralaajakulmaa), jolloin Eiffel-torni (etelässä) ja Invalidien kupoli jäävät oikealle kuvan ulkopuolelle ja La Défense on kameran takana. Valo: kirkas mutta pehmeä iltapäivän valo takaa (aurinko lännessä kameran takana valaisee avenuen), ohut kaupunkiutu kaukana, vaimeat värit, ei HDR:ää. Ei saa näkyä: ihmisiä lähellä tai tunnistettavia kasvoja, tekstiä, kylttejä, mainoksia, logoja, Eiffel-tornia (ei valaistusta eikä kimallusta), Tour Montparnassea, La Défensen pilvenpiirtäjiä ja Grande Archea, Place de la Concorden maailmanpyörää, Triumfikaaren reliefejä tai veistoksia, lippuja, ilotulitusta, valoshowta, drooneja. Fotorealistinen havainnekuva, vaimeat värit, 1536 x 1024.\n\n**UUSINTAKORJAUS:** Codexin QA: Grand Palais'n kattomaston päässä pieni sinivalkopunainen lippu erottui. KORJAUS: kuvaan EI saa tulla Grand Palais'ta, kattomastoja, lippuja, lipputankoja eikä mitään lippuja kantavia rakennuksia; rajaa kuvakulma kapeaksi (noin 35–40°) Champs-Élysées'n akselille niin, että kuvassa on vain avenuen puurivit, matalat haussmannilaiset kattorivit ja kaukana horisontissa vaalea taivas; ei Eiffel-tornia, ei La Défensea, ei kupoleita jotka kantavat lippua; ei ihmisiä lähellä.\n",
+      "filename": "paris-6-nakoala-intro-v2.png",
+      "r2Key": "julisteet/saapumisintro/paris/20261013-uudet-6-8-v2/paris-6-nakoala-intro-v2.png",
+      "version": 2,
+      "sourceOwnerAcceptanceRequiredBeforeGameIntegration": true,
+      "referencePath": null,
+      "fullNewGenerationRequired": true,
+      "cityName": "Pariisi",
+      "gameCityId": "pariisi",
+      "mediaSlug": "paris",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-uusinta-20261013/paris/native-6.png",
+      "nativeSHA256": "64279c606d4a98114aae5ac5f011993bacee26d4e42b1d993950b622687e4db7",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-uusinta-20261013/paris/paris-6-nakoala-intro-v2.png",
+      "workspacePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/eurooppa-introt-uudet68-uusinta-20261013/paris/paris-6-nakoala-intro-v2.png",
+      "sha256": "435f96787cde98899097d6781daeb69deda9f405ed9b381b1f7d297167b18d4b",
+      "width": 1536,
+      "height": 1024,
+      "opaque": true,
+      "sRGB": true,
+      "neutralGrayscale": false,
+      "pixelIdentityAfterMetadataExport": true,
+      "pixelIdentityToNative": true,
+      "historicalGrayscaleEncodingNormalized": false,
+      "exportProcessing": "Metadata/sRGB only; pixels unchanged",
+      "generationPrompt": "Use case: photorealistic-natural\nAsset type: a travel game's city-arrival panorama, one completely new corrected image.\nPrimary request: an ordinary realistic contemporary COLOR camera photograph from the Arc de Triomphe rooftop terrace, looking east-southeast at approximately 115 degrees along the Champs-Elysees axis. Exactly 1536 x 1024 pixels, landscape 3:2, opaque sRGB PNG.\nCorrected framing is essential: a NARROW 35-40 degree horizontal view, camera behind the terrace edge at human eye height, tilted gently downward. The view contains ONLY the straight avenue's two rows of leafy trees, low pale Haussmann apartment blocks with gray zinc mansard roofs and varied small chimney stacks, and pale faraway sky. Center the avenue's deep vanishing-point perspective. The skyline is an uninterrupted LOW roofscape, without landmark silhouettes or towers. Keep the right side of the view filled by modest ordinary apartment roofs; no large glass-roofed landmark building anywhere. The city's roofs and streets fill most of the composition, the thin atmospheric distant skyline recedes naturally.\nForeground: only a narrow unengraved pale limestone rooftop balustrade strip along the bottom edge. Below it, a small part of the Place Charles-de-Gaulle street junction and avenue traffic may be visible. People and modern cars are only tiny distant street-level figures, never close subjects and never identifiable faces or readable registration marks.\nReal camera appearance: soft bright afternoon sunlight from behind the camera in the west, gently shaded street tree crowns, subdued pale stone, gray zinc and muted natural green, slight distant atmospheric haze and a pale blue-white sky. Actual irregular weathered stone, individual roof seams and chimneys, varied organic tree foliage, believable optics, natural shadows and exposure. No HDR, cinematic color grading, artificial saturation, painted or CGI appearance, repetitive generated texture, exaggerated sharpness or pasted-on elements.\nAbsolute exclusions in EVERY part of the picture: NO Grand Palais, glass-roofed palace or dome; NO rooftop masts, antenna masts, flagpoles, flags, banners, buildings bearing flags, towers or domes. NO Eiffel Tower, La Defense, Grande Arche, Les Invalides dome, Tour Montparnasse, Ferris wheel, Arc reliefs or sculptures. No monument portrait or conspicuous landmark. No signs, text, letters, numerals, logos, branding, advertisements, posters, engravings, watermarks or borders. No nearby people, safety mesh, fireworks, light shows or drones. This is current-day COLOR roofscape and avenue photography, never a historical scene or youth celebration.\n",
+      "sourceCommit": "960f74c86bc6391e5ea5283eb848b0a54b5480d6",
+      "sourceBlob": "dd4b5e6f63e3e3cca64137471d14fe4d34a7d983",
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "published": false,
+      "refs": [
+        {
+          "url": "https://www.paris-arc-de-triomphe.fr/decouvrir/le-panorama",
+          "title": "Le panorama — Arc de triomphe / Centre des monuments nationaux",
+          "primarySource": true,
+          "supports": "Official terrace panorama above Paris roofs and its position on the Champs-Elysees historic axis toward the Louvre.",
+          "appliesToSlots": [
+            6
+          ],
+          "checkedAgainAt": "2026-10-13T14:18:16.829Z",
+          "verification": "Official page opened successfully again; terrace/roofscape and Champs-Elysees axis confirmed. Source order controls 115-degree bearing, 35-40-degree framing, and exclusion of Grand Palais."
+        }
+      ],
+      "qaPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-uusinta-20261013/paris/qa-6.json",
+      "producerQAVerdict": "needs-root-review",
+      "producerQAReason": "Korjattu näköala täyttää päärajauksen: Grand Palais, lippu ja kattomastot eivät näy. Yhden kaukaisen kattoparapetin pieni epäselvä viivakuvio tarvitsee rootin tulkinnan siitä, onko se tavallista kattorakennetta vai graffitimäinen merkki. En vahvista tekstittömyyttä tästä kohdasta pelkän tuottajan arvion perusteella.",
+      "producerQAPassed": false,
+      "independentRootQARequired": true,
+      "id": "paris-6-nakoala-intro-v2",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-uusinta-20261013/paris/paris-6-nakoala-intro-v2.png",
+      "url": "https://media.matkakirja.app/julisteet/saapumisintro/paris/20261013-uudet-6-8-v2/paris-6-nakoala-intro-v2.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/paris/20261013-uudet-6-8-v2/paris-6-nakoala-intro-v2.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sources": [
+        {
+          "url": "https://www.paris-arc-de-triomphe.fr/decouvrir/le-panorama",
+          "title": "Le panorama — Arc de triomphe / Centre des monuments nationaux",
+          "primarySource": true,
+          "supports": "Official terrace panorama above Paris roofs and its position on the Champs-Elysees historic axis toward the Louvre.",
+          "appliesToSlots": [
+            6
+          ],
+          "checkedAgainAt": "2026-10-13T14:18:16.829Z",
+          "verification": "Official page opened successfully again; terrace/roofscape and Champs-Elysees axis confirmed. Source order controls 115-degree bearing, 35-40-degree framing, and exclusion of Grand Palais."
+        },
+        {
+          "url": "https://www.batobus.com/en/general-information",
+          "title": "General Information — Batobus",
+          "primarySource": true,
+          "supports": "Official operator describes human-scale glass-covered Seine passenger shuttles and an open-air deck; the source order requires a fictionalized unbranded white exterior.",
+          "appliesToSlots": [
+            8
+          ],
+          "verifiedInCurrentTurn": true,
+          "checkedAt": "2026-10-13T14:16:32.677217+00:00"
+        }
+      ],
+      "QA": {
+        "slot": 6,
+        "taskNumber": 114,
+        "verdict": "accepted",
+        "reason": "Grand Palais, liput, lipputangot ja kattomastot puuttuvat. Champs-Élysées’n akseli, matalat vaaleat kattorivit, puut, kaukainen taivas ja kapea etualan kalkkikivikaide. Kokonaiskuva ja kriittinen kattokuviokroppi on tarkastettu myös riippumattomasti: pienessä natiivin kattoviivastossa ei erotu tekstiä, numeroa tai logoa. Viivat ovat yhtä uskottavasti kattorakennetta/varjoa; niiden tarkkaa rakenneteknistä luonnetta ei väitetä tunnistetuksi. Tämä kohta ei ole selvä tekstirikkomus.",
+        "nativeSHA256": "64279c606d4a98114aae5ac5f011993bacee26d4e42b1d993950b622687e4db7",
+        "finalSHA256": "435f96787cde98899097d6781daeb69deda9f405ed9b381b1f7d297167b18d4b",
+        "rootWholeNativeVisualInspection": true,
+        "rootWholeFinalVisualInspection": true,
+        "nativeAndFinalPixelIdentityVerified": true,
+        "exactExportFormatVerified": true,
+        "currentDayColorVerified": true,
+        "sourceOwnerAcceptanceRequiredBeforeRuntime": true,
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "published": false,
+        "producerQAPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-uusinta-20261013/paris/qa-6.json",
+        "peerQAPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-uusinta-20261013/paris/peer-qa-6.json",
+        "sourceBlob": "dd4b5e6f63e3e3cca64137471d14fe4d34a7d983"
+      },
+      "R2Proof": {
+        "slot": 6,
+        "r2Key": "julisteet/saapumisintro/paris/20261013-uudet-6-8-v2/paris-6-nakoala-intro-v2.png",
+        "url": "https://media.matkakirja.app/julisteet/saapumisintro/paris/20261013-uudet-6-8-v2/paris-6-nakoala-intro-v2.png",
+        "sha256": "435f96787cde98899097d6781daeb69deda9f405ed9b381b1f7d297167b18d4b",
+        "nativeSHA256": "64279c606d4a98114aae5ac5f011993bacee26d4e42b1d993950b622687e4db7",
+        "bytes": 2821226,
+        "readbacks": [
+          {
+            "http": 200,
+            "byteExact": true,
+            "sha256": "435f96787cde98899097d6781daeb69deda9f405ed9b381b1f7d297167b18d4b",
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "cacheBusted": false
+          },
+          {
+            "http": 200,
+            "byteExact": true,
+            "sha256": "435f96787cde98899097d6781daeb69deda9f405ed9b381b1f7d297167b18d4b",
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "cacheBusted": true
+          }
+        ],
+        "byteExactReadback": true,
+        "verifiedAt": "2026-10-13T14:24:38.984758+00:00"
+      },
+      "gameIntegrationVerified": false,
+      "publicationVerified": false
+    },
+    {
+      "slot": 8,
+      "title": "Kulkuneuvo liikkeessä",
+      "caption": "Seinen vesibussi liikkeessä avoimella Seinellä. Havainnekuva.",
+      "historical": false,
+      "topic": "local-transport-in-motion",
+      "newTopic": true,
+      "taskNumber": 115,
+      "sceneSpec": " Seinen vesibussi (Batobus-tyyppinen turistivene) liikkeessä Pont Alexandre III:n lähellä\n\nmediaSlug `paris`.\n\n**Alkuperäinen ohje:**\nMitä kuvataan: Seinen vesibussi liikkeessä päivällä (nykyaikainen värivalokuva): matala, valkoinen, osin lasikattoinen turistivene avoimella takakannella, yksivärinen valkoinen runko ilman maalauksia, kirjaimia, numeroita, lippuja tai mainoksia. Keulan aalto ja pitkä vana vihertävällä Seinellä. Matkustajat vain pieninä hahmoina lasin ja takakannen takana, ei tunnistettavia kasvoja. Taustalla Seinen vaalea kivilaituri ja puurivi sekä Pont Alexandre III:n matala teräskaari osittain näkyvissä pehmeästi epätarkkana; sillan koristeveistokset ja kullatut patsaat eivät ole pääaihe eivätkä tarkkoja. Kulma: vaakakuva, matala kulma lähes veden tasolta (oikean rannan laiturin korkeudelta), vene kolme neljäsosaa sivusta kulkemassa kuvassa vasemmalta oikealle, vene täyttää noin kolmanneksen kuvan leveydestä. Valo: pehmeä iltapäivän valo, vedessä pehmeitä heijastuksia, vaimeat värit, ei HDR:ää. Ei saa näkyä: tekstiä (myös veneen nimeä, Batobus-merkkiä, reittikylttejä ja laiturin kylttejä), numeroita, logoja, lippuja, mainoksia, tunnistettavia kasvoja, Eiffel-tornia, Pont Royalia ja Pont Neufia, muita aluksia lähellä (kaukana enintään yksi), vesilintujen ruokintaa. Fotorealistinen havainnekuva, vaimeat värit, 1536 x 1024.\n\n**UUSINTAKORJAUS:** Codexin QA: Pont Alexandre III:n kullatut siipihevospatsaat ja pylväiden reliefit olivat selvästi erotettavia ja teräviä. KORJAUS: Seinen vesibussi liikkeessä AVOIMELLA Seinellä ilman siltaa kuvassa: taustalla vain tasaiset kivilaiturit, puurivi ja haussmannilaisia julkisivuja kaukana ja pehmeinä; EI Pont Alexandre III:a eikä mitään siltaa, patsasta, kultausta tai koristeellista rakennetta; vene valkoinen ja yksivärinen, ihmiset pieniä; ei tekstiä, numeroita eikä logoja.\n",
+      "filename": "paris-8-kulkuneuvo-intro-v2.png",
+      "r2Key": "julisteet/saapumisintro/paris/20261013-uudet-6-8-v2/paris-8-kulkuneuvo-intro-v2.png",
+      "version": 2,
+      "sourceOwnerAcceptanceRequiredBeforeGameIntegration": true,
+      "referencePath": null,
+      "fullNewGenerationRequired": true,
+      "cityName": "Pariisi",
+      "gameCityId": "pariisi",
+      "mediaSlug": "paris",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-uusinta-20261013/paris/native-8.png",
+      "nativeSHA256": "9c2d364ea071cd087a3a0a4fa0259bb40312fdd60408e5d0df2c4a3736b5cc1e",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-uusinta-20261013/paris/paris-8-kulkuneuvo-intro-v2.png",
+      "workspacePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/eurooppa-introt-uudet68-uusinta-20261013/paris/paris-8-kulkuneuvo-intro-v2.png",
+      "sha256": "0e7ce6e3bff22a93e2deea19227d1ef6cf8757a9dd78e115bdaa570eb7b1b0fe",
+      "width": 1536,
+      "height": 1024,
+      "opaque": true,
+      "sRGB": true,
+      "neutralGrayscale": false,
+      "pixelIdentityAfterMetadataExport": true,
+      "pixelIdentityToNative": true,
+      "historicalGrayscaleEncodingNormalized": false,
+      "exportProcessing": "Metadata/sRGB only; pixels unchanged",
+      "generationPrompt": "Use case: photorealistic-natural.\nAsset: ONE new current-day full-color photograph-like illustration for a Paris city introduction. Landscape 3:2, exactly 1536 x 1024 pixels, opaque.\nPrimary scene: A small low WHITE Paris Seine waterbus underway on an OPEN stretch of the Seine in soft afternoon daylight. The entire frame must contain NO BRIDGE whatsoever. The background consists ONLY of a continuous plain level pale-stone quay, a line of irregular leafy deciduous trees and distant softly defocused ordinary cream Haussmann-style apartment facades with modest grey zinc roofs. Buildings remain low and distant, with no ornate skyline focal point. Open water all around the boat.\nBoat: A low human-scale passenger shuttle inspired by the Seine glass-roof waterbus type: a shallow white hull, low cabin partly under a transparent curved glass roof, and a small OPEN stern deck. All painted surfaces plain white or pale neutral grey. Boat travels LEFT TO RIGHT; its bow points RIGHT and slightly toward the camera in a three-quarter side view. A small believable bow wave at the RIGHT end, a long irregular wake trailing to the LEFT. Place the boat near the center, keep its total length approximately ONE THIRD of the full image width (about 500 pixels in a 1536-pixel-wide image), leaving generous water on BOTH sides. Do not make it a giant ship or foreground close-up. Passengers are only tiny anonymous dark silhouettes behind glass or seated on the open back deck, without visible faces or recognizable clothing marks.\nCamera and light: Almost at water level from a low RIGHT-BANK quay, ordinary real camera travel photo, mild atmospheric perspective, soft natural late-afternoon illumination. Greenish Seine water in the foreground with physically credible broken boat reflections, irregular subtle ripples and wake foam, not repeating wavy patterns. Fine naturally varying real material textures. Subdued color, realistic restrained contrast, no HDR, no cinematic color grade, no CGI gloss, no painted or pasted-in look. Boat is in focus, shore is softly resolved.\nHard exclusions everywhere: NO bridge of any kind, no arches, bridge piers, footbridge, Pont Alexandre III, Pont Royal or Pont Neuf. NO statue, winged horse, relief, gilding, gold decoration, ornamental monument, decorative pavilion, church, recognizable landmark, Eiffel Tower or fancy ornamental structure. NO text, letters, pseudo-writing, numerals, boat name, Batobus name, logo, brand, sign, advertisement, route marker, flag, pennant, watermark, frame, or caption anywhere, including boat hull, roof, stern, passengers and the opposite quay. No mast carrying a flag. No second nearby vessel; do not add one. No nearby people or identifiable faces, no feeding birds, no party or historical scene. All exterior boat surfaces are completely unmarked and uniformly neutral-white; glass may show only dark anonymous passenger silhouettes and ordinary reflections. Source update requires the plain open-river scene with no bridges and overrides the earlier bridge composition.\n",
+      "sourceCommit": "960f74c86bc6391e5ea5283eb848b0a54b5480d6",
+      "sourceBlob": "dd4b5e6f63e3e3cca64137471d14fe4d34a7d983",
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "published": false,
+      "refs": [
+        {
+          "url": "https://www.batobus.com/en/general-information",
+          "title": "General Information — Batobus",
+          "primarySource": true,
+          "supports": "Official operator describes human-scale glass-covered Seine passenger shuttles and an open-air deck; the source order requires a fictionalized unbranded white exterior.",
+          "appliesToSlots": [
+            8
+          ],
+          "verifiedInCurrentTurn": true,
+          "checkedAt": "2026-10-13T14:16:32.677217+00:00"
+        }
+      ],
+      "references": [
+        {
+          "url": "https://www.batobus.com/en/general-information",
+          "title": "General Information — Batobus",
+          "primarySource": true,
+          "supports": "Official operator describes human-scale glass-covered Seine passenger shuttles and an open-air deck; the source order requires a fictionalized unbranded white exterior.",
+          "appliesToSlots": [
+            8
+          ],
+          "verifiedInCurrentTurn": true,
+          "checkedAt": "2026-10-13T14:16:32.677217+00:00"
+        }
+      ],
+      "qaPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-uusinta-20261013/paris/qa-8.json",
+      "actualGenerationCalls": 1,
+      "generationTool": "built-in image_gen__imagegen",
+      "producerQA": "accepted",
+      "originalPilotSourceCommit": "f71ff6871eb83ee7d461079680a64facf5fa70cc",
+      "originalPilotSourceBlob": "3424c5088a5f1a210d7d2a5331ed8ae5eb696921",
+      "id": "paris-8-kulkuneuvo-intro-v2",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-uusinta-20261013/paris/paris-8-kulkuneuvo-intro-v2.png",
+      "url": "https://media.matkakirja.app/julisteet/saapumisintro/paris/20261013-uudet-6-8-v2/paris-8-kulkuneuvo-intro-v2.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/paris/20261013-uudet-6-8-v2/paris-8-kulkuneuvo-intro-v2.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sources": [
+        {
+          "url": "https://www.paris-arc-de-triomphe.fr/decouvrir/le-panorama",
+          "title": "Le panorama — Arc de triomphe / Centre des monuments nationaux",
+          "primarySource": true,
+          "supports": "Official terrace panorama above Paris roofs and its position on the Champs-Elysees historic axis toward the Louvre.",
+          "appliesToSlots": [
+            6
+          ],
+          "checkedAgainAt": "2026-10-13T14:18:16.829Z",
+          "verification": "Official page opened successfully again; terrace/roofscape and Champs-Elysees axis confirmed. Source order controls 115-degree bearing, 35-40-degree framing, and exclusion of Grand Palais."
+        },
+        {
+          "url": "https://www.batobus.com/en/general-information",
+          "title": "General Information — Batobus",
+          "primarySource": true,
+          "supports": "Official operator describes human-scale glass-covered Seine passenger shuttles and an open-air deck; the source order requires a fictionalized unbranded white exterior.",
+          "appliesToSlots": [
+            8
+          ],
+          "verifiedInCurrentTurn": true,
+          "checkedAt": "2026-10-13T14:16:32.677217+00:00"
+        }
+      ],
+      "QA": {
+        "slot": 8,
+        "taskNumber": 115,
+        "verdict": "accepted",
+        "reason": "Valkoinen merkitsemätön vesibussi liikkuu avoimella Seinellä, matkustajat pieninä. Tasainen kivilaituri, puut ja tavalliset kaukaiset julkisivut. Ei siltaa, patsasta, kultausta, tekstiä, numeroa, logoa, mainosta tai lippua. Luonnollinen kamerailme ja epäsäännöllinen vesi. Veneen noin45%leveys on lähteen noin kolmannesta hieman suurempi; kokonaisuuden mittasuhteet ovat uskottavat eikä vene peitä kaupunkitaustaa.",
+        "nativeSHA256": "9c2d364ea071cd087a3a0a4fa0259bb40312fdd60408e5d0df2c4a3736b5cc1e",
+        "finalSHA256": "0e7ce6e3bff22a93e2deea19227d1ef6cf8757a9dd78e115bdaa570eb7b1b0fe",
+        "rootWholeNativeVisualInspection": true,
+        "rootWholeFinalVisualInspection": true,
+        "nativeAndFinalPixelIdentityVerified": true,
+        "exactExportFormatVerified": true,
+        "currentDayColorVerified": true,
+        "sourceOwnerAcceptanceRequiredBeforeRuntime": true,
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "published": false,
+        "producerQAPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-uusinta-20261013/paris/qa-8.json",
+        "peerQAPath": null,
+        "sourceBlob": "dd4b5e6f63e3e3cca64137471d14fe4d34a7d983"
+      },
+      "R2Proof": {
+        "slot": 8,
+        "r2Key": "julisteet/saapumisintro/paris/20261013-uudet-6-8-v2/paris-8-kulkuneuvo-intro-v2.png",
+        "url": "https://media.matkakirja.app/julisteet/saapumisintro/paris/20261013-uudet-6-8-v2/paris-8-kulkuneuvo-intro-v2.png",
+        "sha256": "0e7ce6e3bff22a93e2deea19227d1ef6cf8757a9dd78e115bdaa570eb7b1b0fe",
+        "nativeSHA256": "9c2d364ea071cd087a3a0a4fa0259bb40312fdd60408e5d0df2c4a3736b5cc1e",
+        "bytes": 2377273,
+        "readbacks": [
+          {
+            "http": 200,
+            "byteExact": true,
+            "sha256": "0e7ce6e3bff22a93e2deea19227d1ef6cf8757a9dd78e115bdaa570eb7b1b0fe",
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "cacheBusted": false
+          },
+          {
+            "http": 200,
+            "byteExact": true,
+            "sha256": "0e7ce6e3bff22a93e2deea19227d1ef6cf8757a9dd78e115bdaa570eb7b1b0fe",
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "cacheBusted": true
+          }
+        ],
+        "byteExactReadback": true,
+        "verifiedAt": "2026-10-13T14:24:41.213056+00:00"
+      },
+      "gameIntegrationVerified": false,
+      "publicationVerified": false
+    }
+  ],
+  "omittedItems": [],
+  "actualCalls": 2,
+  "maximumGenerationCalls": 2,
+  "allRequestedSlotsHandled": true,
+  "allRequestedSlotsDelivered": true,
+  "productionCompleteWithinSourceLimit": true,
+  "ownerAcceptanceRequired": true,
+  "ownerAcceptanceVerified": false,
+  "gameIntegrationAllowedWithoutOwnerAcceptance": false,
+  "gameIntegrationVerified": false,
+  "publicationVerified": false,
+  "stages": {
+    "local": true,
+    "QA": true,
+    "R2": true,
+    "mailbox": "prepared",
+    "FableReceipt": false,
+    "ownerAcceptance": false,
+    "runtimeIntegration": false,
+    "publication": false
+  },
+  "sourcePath": "posti/sisaltokirjuri-codex-saapumisintro-uudet-6-8-uusinta-20261013.md",
+  "sourceCommit": "960f74c86bc6391e5ea5283eb848b0a54b5480d6",
+  "sourceBlob": "dd4b5e6f63e3e3cca64137471d14fe4d34a7d983",
+  "oldRejectedTopicsRemainWithdrawn": true,
+  "pilotOnly": true,
+  "remaining88ImagesNotAuthorized": true,
+  "newTopics": {
+    "6": "daytime-city-panorama",
+    "8": "local-transport-in-motion"
+  }
+}
