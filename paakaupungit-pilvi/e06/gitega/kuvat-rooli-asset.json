@@ -2,7 +2,7 @@
   "schemaVersion": "capital-city-role-assets/v1",
   "era": "e06",
   "city": "gitega",
-  "authorization": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+  "authorization": "hyväksyn kaikki tekemäsi kuvat. toimita ne claudelle. claudelta saat uusia ohjeita jatkoa varten",
   "sourceContentAfterSHA256": "7b788bcb85e86c8dd4cd4c786b46c05e0c89f772e394b443ea6391ae3411dfc9",
   "assets": [
     {
@@ -129,7 +129,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/gitega/illustration-qa-extra.json",
-        "fileSHA256": "4c0e30c6a646104d78ec9030b888160bcbc3b8bfcc969a7e01cb3ab8d163b1c6",
+        "fileSHA256": "828d828f930b293f9cce5b7a9a91861197b4ee5aef9809dca85c59a62b9e0f05",
         "item": {
           "slot": "O2",
           "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[1].kuva",
@@ -190,7 +190,7 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/gitega/illustration-qa-extra.json",
-            "sha256": "4c0e30c6a646104d78ec9030b888160bcbc3b8bfcc969a7e01cb3ab8d163b1c6"
+            "sha256": "828d828f930b293f9cce5b7a9a91861197b4ee5aef9809dca85c59a62b9e0f05"
           }
         ]
       },
@@ -275,7 +275,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "7b788bcb85e86c8dd4cd4c786b46c05e0c89f772e394b443ea6391ae3411dfc9",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "04bc65c35c39af26c664a0dce245beb1653fb129a2938b236aff06e84cd20544"
+      "contextAfterSHA256": "04bc65c35c39af26c664a0dce245beb1653fb129a2938b236aff06e84cd20544",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e06",
@@ -387,7 +389,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/gitega/illustration-qa-extra.json",
-        "fileSHA256": "4c0e30c6a646104d78ec9030b888160bcbc3b8bfcc969a7e01cb3ab8d163b1c6",
+        "fileSHA256": "828d828f930b293f9cce5b7a9a91861197b4ee5aef9809dca85c59a62b9e0f05",
         "item": {
           "slot": "O4",
           "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
@@ -434,7 +436,7 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/gitega/illustration-qa-extra.json",
-            "sha256": "4c0e30c6a646104d78ec9030b888160bcbc3b8bfcc969a7e01cb3ab8d163b1c6"
+            "sha256": "828d828f930b293f9cce5b7a9a91861197b4ee5aef9809dca85c59a62b9e0f05"
           }
         ]
       },
@@ -519,7 +521,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "7b788bcb85e86c8dd4cd4c786b46c05e0c89f772e394b443ea6391ae3411dfc9",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "4a874ecc548bda5b90b303008832f2a4bddf16db88f207d72a4383926d48c422"
+      "contextAfterSHA256": "4a874ecc548bda5b90b303008832f2a4bddf16db88f207d72a4383926d48c422",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e06",
@@ -642,7 +646,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/gitega/illustration-qa-extra.json",
-        "fileSHA256": "4c0e30c6a646104d78ec9030b888160bcbc3b8bfcc969a7e01cb3ab8d163b1c6",
+        "fileSHA256": "828d828f930b293f9cce5b7a9a91861197b4ee5aef9809dca85c59a62b9e0f05",
         "item": {
           "slot": "K2",
           "targetJsonPath": "$.kaupunkilehti[0].nostot[1]",
@@ -703,7 +707,7 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/gitega/illustration-qa-extra.json",
-            "sha256": "4c0e30c6a646104d78ec9030b888160bcbc3b8bfcc969a7e01cb3ab8d163b1c6"
+            "sha256": "828d828f930b293f9cce5b7a9a91861197b4ee5aef9809dca85c59a62b9e0f05"
           }
         ]
       },
@@ -788,7 +792,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "7b788bcb85e86c8dd4cd4c786b46c05e0c89f772e394b443ea6391ae3411dfc9",
       "targetAfterSHA256": "e46d438259076d86927af802b9362a2bcf1e6e6216a8c5d3dda058abce547e7d",
-      "contextAfterSHA256": "e46d438259076d86927af802b9362a2bcf1e6e6216a8c5d3dda058abce547e7d"
+      "contextAfterSHA256": "e46d438259076d86927af802b9362a2bcf1e6e6216a8c5d3dda058abce547e7d",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e06",
@@ -897,7 +903,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/gitega/illustration-qa-extra.json",
-        "fileSHA256": "4c0e30c6a646104d78ec9030b888160bcbc3b8bfcc969a7e01cb3ab8d163b1c6",
+        "fileSHA256": "828d828f930b293f9cce5b7a9a91861197b4ee5aef9809dca85c59a62b9e0f05",
         "item": {
           "slot": "K3",
           "targetJsonPath": "$.kaupunkilehti[0].nostot[2]",
@@ -944,7 +950,7 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/gitega/illustration-qa-extra.json",
-            "sha256": "4c0e30c6a646104d78ec9030b888160bcbc3b8bfcc969a7e01cb3ab8d163b1c6"
+            "sha256": "828d828f930b293f9cce5b7a9a91861197b4ee5aef9809dca85c59a62b9e0f05"
           }
         ]
       },
@@ -1029,7 +1035,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "7b788bcb85e86c8dd4cd4c786b46c05e0c89f772e394b443ea6391ae3411dfc9",
       "targetAfterSHA256": "b0066c1f4e36fd112047cb861da7a00d5fece08f5929eb4e953cfe0cbde9ec53",
-      "contextAfterSHA256": "b0066c1f4e36fd112047cb861da7a00d5fece08f5929eb4e953cfe0cbde9ec53"
+      "contextAfterSHA256": "b0066c1f4e36fd112047cb861da7a00d5fece08f5929eb4e953cfe0cbde9ec53",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e06",
@@ -1152,7 +1160,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/gitega/illustration-qa-extra.json",
-        "fileSHA256": "4c0e30c6a646104d78ec9030b888160bcbc3b8bfcc969a7e01cb3ab8d163b1c6",
+        "fileSHA256": "828d828f930b293f9cce5b7a9a91861197b4ee5aef9809dca85c59a62b9e0f05",
         "item": {
           "slot": "L1",
           "targetJsonPath": "$.kaupunkilehti[1].nostot[0]",
@@ -1213,7 +1221,7 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/gitega/illustration-qa-extra.json",
-            "sha256": "4c0e30c6a646104d78ec9030b888160bcbc3b8bfcc969a7e01cb3ab8d163b1c6"
+            "sha256": "828d828f930b293f9cce5b7a9a91861197b4ee5aef9809dca85c59a62b9e0f05"
           }
         ]
       },
@@ -1298,7 +1306,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "7b788bcb85e86c8dd4cd4c786b46c05e0c89f772e394b443ea6391ae3411dfc9",
       "targetAfterSHA256": "2483c1c9aa5a90f0f54e50adc30dadaf5c24a05016ea65aca7c8bfe02c688175",
-      "contextAfterSHA256": "2483c1c9aa5a90f0f54e50adc30dadaf5c24a05016ea65aca7c8bfe02c688175"
+      "contextAfterSHA256": "2483c1c9aa5a90f0f54e50adc30dadaf5c24a05016ea65aca7c8bfe02c688175",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e06",
@@ -1407,7 +1417,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/gitega/illustration-qa-extra.json",
-        "fileSHA256": "4c0e30c6a646104d78ec9030b888160bcbc3b8bfcc969a7e01cb3ab8d163b1c6",
+        "fileSHA256": "828d828f930b293f9cce5b7a9a91861197b4ee5aef9809dca85c59a62b9e0f05",
         "item": {
           "slot": "L2",
           "targetJsonPath": "$.kaupunkilehti[1].nostot[1]",
@@ -1454,7 +1464,7 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/gitega/illustration-qa-extra.json",
-            "sha256": "4c0e30c6a646104d78ec9030b888160bcbc3b8bfcc969a7e01cb3ab8d163b1c6"
+            "sha256": "828d828f930b293f9cce5b7a9a91861197b4ee5aef9809dca85c59a62b9e0f05"
           }
         ]
       },
@@ -1539,7 +1549,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "7b788bcb85e86c8dd4cd4c786b46c05e0c89f772e394b443ea6391ae3411dfc9",
       "targetAfterSHA256": "3c0ca4279c52a66f9ea6817cc324dcf10456a673ebda0a6dede3fb75ab7f4b03",
-      "contextAfterSHA256": "3c0ca4279c52a66f9ea6817cc324dcf10456a673ebda0a6dede3fb75ab7f4b03"
+      "contextAfterSHA256": "3c0ca4279c52a66f9ea6817cc324dcf10456a673ebda0a6dede3fb75ab7f4b03",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e06",
@@ -1648,7 +1660,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/gitega/illustration-qa-extra.json",
-        "fileSHA256": "4c0e30c6a646104d78ec9030b888160bcbc3b8bfcc969a7e01cb3ab8d163b1c6",
+        "fileSHA256": "828d828f930b293f9cce5b7a9a91861197b4ee5aef9809dca85c59a62b9e0f05",
         "item": {
           "slot": "L3",
           "targetJsonPath": "$.kaupunkilehti[1].nostot[2]",
@@ -1695,7 +1707,7 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/gitega/illustration-qa-extra.json",
-            "sha256": "4c0e30c6a646104d78ec9030b888160bcbc3b8bfcc969a7e01cb3ab8d163b1c6"
+            "sha256": "828d828f930b293f9cce5b7a9a91861197b4ee5aef9809dca85c59a62b9e0f05"
           }
         ]
       },
@@ -1780,7 +1792,468 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "7b788bcb85e86c8dd4cd4c786b46c05e0c89f772e394b443ea6391ae3411dfc9",
       "targetAfterSHA256": "28b213030f6409d6e146ae3257fa18c01c5a3f4cbe914dd09acab054aa562698",
-      "contextAfterSHA256": "28b213030f6409d6e146ae3257fa18c01c5a3f4cbe914dd09acab054aa562698"
+      "contextAfterSHA256": "28b213030f6409d6e146ae3257fa18c01c5a3f4cbe914dd09acab054aa562698",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+    },
+    {
+      "era": "e06",
+      "city": "gitega",
+      "slot": "TRAVELER",
+      "type": "illustration",
+      "assetID": "job14-e06-gitega-traveler-v01",
+      "galleryImageID": "job14-e06-gitega-traveler-v01",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "matkailijalle",
+        "kuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/gitega/job14-e06-gitega-traveler-v01-9baa2f344d59.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva oppaassa mainituista Burundin ruokaraaka-aineista.",
+        "lyhyt": "Havainnekuva oppaassa mainituista Burundin ruokaraaka-aineista."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/gitega/job14-e06-gitega-traveler-v01-9baa2f344d59.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva oppaassa mainituista Burundin ruokaraaka-aineista.",
+        "lyhyt": "Havainnekuva oppaassa mainituista Burundin ruokaraaka-aineista."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "9baa2f344d593148e96466467a8524f6c5634c1138031b5ffba750fc8e156845",
+      "exportSHA256": "7b91b9932161b3f782446bd6ed42d5d8bdac6c7ba61878f89cde40ddfd64358d",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/gitega/job14-e06-gitega-traveler-v01-9baa2f344d59.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/gitega/job14-e06-gitega-traveler-v01-9baa2f344d59.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e06/gitega/job14-e06-gitega-traveler-v01-9baa2f344d59.png",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/gitega/sisalto.json",
+      "sourceContentSHA256": "7b788bcb85e86c8dd4cd4c786b46c05e0c89f772e394b443ea6391ae3411dfc9",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "85f5ecf2b7c5c5c6e77d111a4d21f6c772cecfec0f1a12a9a9aded13b69091d6",
+        "subjectTitle": "Matkailijalle",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Yleistetty lähteistetty ruoka-/raaka-aineaihe ilman kuva-inputtia, ihmistä, suojattua teosta tai nimettyä paikkasommittelua. Rehellinen havainnekuva, ei autenttinen kaupunkivalokuva.",
+          "QA": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/gitega/assets/job14-e06-gitega-traveler-v01/image.png",
+            "nativeSHA256": "9baa2f344d593148e96466467a8524f6c5634c1138031b5ffba750fc8e156845",
+            "nativeDimensions": [
+              1024,
+              1536
+            ],
+            "nativeRatio": 0.6666666666666666,
+            "manifestHashMatches": true,
+            "personallyViewed": true,
+            "viewTool": "view_image",
+            "viewedAt": "2026-10-13T13:41:12.817Z",
+            "visualFindingsFi": "Keltainen banaaniterttu ja kolme punaruskeaa bataattia neutraalilla pinnalla. Banaanit liittyvät tertun kantaan luontevasti, kärjet ja kuorien vaihtelevat kolhut uskottavia; bataattien kuori, juurijäljet ja muodot luonnollisia. Ei synteettistä pintatoistoa, ihmisiä, tekstiä, logoja tai kehystä. Natiivikoko 1024×1536, suhde 0.667.",
+            "captionFi": "Havainnekuva oppaassa mainituista Burundin ruokaraaka-aineista.",
+            "sourceAndTargetCheckFi": "Luettu nykyinen Matkailijalle-objekti/Burundin ruoka taustaksi -jakso ja faktapohjan H12/rivi71: banaanit ja bataatti ovat Burundin yleiskeittiön raaka-aineita. Continuation-tilauksen e06/gitega/TRAVELER-rivi nimeää juuri tämän aiheen. Kuvateksti sanoo oppaassa mainitut Burundin ruokaraaka-aineet eikä keksi Gitegan erikoisannosta, paikallista lajiketta, ravintolaa tai saatavuutta. Natiivi pysty täyttää 0.60–0.85; CC-leveyttä ei sovelleta gen-natiiviin.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/gitega/sisalto.json",
+            "contentSHA256": "7b788bcb85e86c8dd4cd4c786b46c05e0c89f772e394b443ea6391ae3411dfc9",
+            "textJsonPath": "$.kaupunkilehti[0].matkailijalle",
+            "currentText": {
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              },
+              "kappale": "Tarpeetonta matkustamista Burundiin kannattaa tällä hetkellä välttää. Gitegan paikkahistoriaa voi lähestyä ylängön kaupungin, museokokoelman ja rumpuperinteen kautta. Kansainvälisen saapumisen lentoasema on Bujumburassa, josta Gitegaan on tieyhteys. Gitegan oma kenttä ei ole vahvistettu nykyinen reittilentokenttä. Gishoran käynti ja mahdollinen esitys järjestetään paikallisesti.",
+              "artikkeli": {
+                "nimi": "Matkailijan Gitega",
+                "taitto": "opas",
+                "teksti": "Tutustu ylängön kaupunkiin ja rumpuperinteeseen matkan nykyiset rajoitukset huomioiden.",
+                "nosto": "Kaupunkihistoria ja elävä perinne ovat eri kokemuksia; tarpeetonta matkustamista kannattaa välttää.",
+                "jaksot": [
+                  {
+                    "otsikko": "Perille ja liikkeelle",
+                    "teksti": "Kansainvälisen saapumisen kenttä on Melchior Ndadayen lentoasema Bujumburassa, koodi BJM. Bujumburasta on tieyhteys Gitegaan. Gitegan GID-kentän nimeä ei pidä tulkita varmaksi matkustajareitiksi.",
+                    "kuva": {
+                      "tiedosto": "",
+                      "lyhyt": "",
+                      "selite": "",
+                      "lahde": ""
+                    }
+                  },
+                  {
+                    "otsikko": "Kuninkaallisten paikkojen historia",
+                    "teksti": "Gishoran vastaanotto- ja pihapaikat liittyvät rumpuperinteen historiaan. Gitegan kansallismuseo säilyttää arjen sekä hovin aineistoa. Museon nykyinen toiminta ja Gishoran käyntijärjestelyt varmistetaan paikallisesti.",
+                    "kuva": {
+                      "tiedosto": "",
+                      "lyhyt": "",
+                      "selite": "",
+                      "lahde": ""
+                    }
+                  },
+                  {
+                    "otsikko": "Ylängön kaupunkimaisema",
+                    "teksti": "Gitega on kukkuloiden ympäröimällä tasangolla. Kaupallinen keskusta ja tori kuuluvat sen kaupunkitilaan. Ruvubun kansallispuisto ja Kareran putoukset ovat muiden alueiden retkikohteita, eivät Gitegan keskustan kävelypaikkoja.",
+                    "kuva": {
+                      "tiedosto": "",
+                      "lyhyt": "",
+                      "selite": "",
+                      "lahde": ""
+                    }
+                  },
+                  {
+                    "otsikko": "Burundin ruoka taustaksi",
+                    "teksti": "Burundin yleiskeittiössä käytetään papuja, banaaneja, bataattia ja maniokkia. Ugali mainitaan maissi- tai maniokkijauhosta tehtävänä ruokana. Nämä ovat maan ruoka-aiheita, eivät vahvistettuja Gitegan erikoisannoksia tai tietyn kaupungin ravintolan nykyinen ruokalista.",
+                    "kuva": {
+                      "tiedosto": "",
+                      "lyhyt": "",
+                      "selite": "",
+                      "lahde": ""
+                    }
+                  },
+                  {
+                    "otsikko": "Matkustamisen nykyiset rajat",
+                    "teksti": "Tarpeetonta matkustamista Burundiin kannattaa tällä hetkellä välttää. Mahdollinen käynti tai rumpuesitys sovitaan paikallisesti; vanha kuvaus ei takaa esityksen ajankohtaa. Kaukaista kansallispuistoa ei pidä liittää kaupunkikierrokseen ilman erillisiä järjestelyjä.",
+                    "kuva": {
+                      "tiedosto": "",
+                      "lyhyt": "",
+                      "selite": "",
+                      "lahde": ""
+                    }
+                  }
+                ],
+                "matkailu": {
+                  "parasta": [],
+                  "hyvaTietaa": [
+                    {
+                      "otsikko": "Lentoasemien ero",
+                      "teksti": "BJM on Bujumburassa; Gitegan GID ei vahvista nykyistä reittipalvelua."
+                    },
+                    {
+                      "otsikko": "Matkaa harkitaan",
+                      "teksti": "Tarpeetonta matkustamista Burundiin kannattaa välttää."
+                    },
+                    {
+                      "otsikko": "Perinne ja esitys",
+                      "teksti": "Gishoran historiakuvaus ei ole esitysaikataulu."
+                    },
+                    {
+                      "otsikko": "Museon toiminta",
+                      "teksti": "Näyttelyn tämänhetkiset käyntijärjestelyt varmistetaan museolta."
+                    }
+                  ]
+                },
+                "lahde": "Wikipedia"
+              }
+            },
+            "factPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/gitega/faktapohja.md",
+            "factSHA256": "cf5f7aea275aae978ca52e7a166c46b0276fd1c093a4ad36c01d0056ddaa4c85",
+            "sourceEvidence": [
+              {
+                "type": "currentContent",
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/gitega/sisalto.json",
+                "sha256": "7b788bcb85e86c8dd4cd4c786b46c05e0c89f772e394b443ea6391ae3411dfc9",
+                "jsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3]",
+                "text": "Burundin yleiskeittiössä käytetään papuja, banaaneja, bataattia ja maniokkia. Ugali mainitaan maissi- tai maniokkijauhosta tehtävänä ruokana. Nämä ovat maan ruoka-aiheita, eivät vahvistettuja Gitegan erikoisannoksia tai tietyn kaupungin ravintolan nykyinen ruokalista."
+              },
+              {
+                "type": "factSheet",
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/gitega/faktapohja.md",
+                "sha256": "cf5f7aea275aae978ca52e7a166c46b0276fd1c093a4ad36c01d0056ddaa4c85",
+                "sourceUrl": "https://en.wikipedia.org/wiki/Burundian_cuisine"
+              },
+              {
+                "type": "sourceScoutingAudit",
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/source-scout/continuation-20261013/safe-topic-production-priorities.json",
+                "sha256": "b5fd12034028af4a090b68a5ac0644b7a6d737a177b35b838ab6b3974c772dc0",
+                "rowIdentity": {
+                  "era": "e06",
+                  "city": "gitega",
+                  "slot": "TRAVELER",
+                  "originalOwnerJob": 14
+                }
+              }
+            ],
+            "reviewedBy": "exclusive-e06-extra-QA",
+            "rightsCheckFi": "Turvallinen tavallinen esine-/luonto-/materiaalihavainne, ei nimettyä teosta tai rakennuksen/asettelun jäljennöstä."
+          },
+          "qaReason": "Natiivi banaani-/bataattipysty vastaa Gitegan oppaan selvästi maan ruokataustaksi rajattua aihetta."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva oppaassa mainituista Burundin ruokaraaka-aineista.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/gitega/illustration-qa-extra.json",
+        "fileSHA256": "828d828f930b293f9cce5b7a9a91861197b4ee5aef9809dca85c59a62b9e0f05",
+        "item": {
+          "slot": "TRAVELER",
+          "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
+          "assetID": "job14-e06-gitega-traveler-v01",
+          "sha256": "9baa2f344d593148e96466467a8524f6c5634c1138031b5ffba750fc8e156845",
+          "verdict": "accepted",
+          "reason": "Natiivi banaani-/bataattipysty vastaa Gitegan oppaan selvästi maan ruokataustaksi rajattua aihetta.",
+          "evidence": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/gitega/assets/job14-e06-gitega-traveler-v01/image.png",
+            "nativeSHA256": "9baa2f344d593148e96466467a8524f6c5634c1138031b5ffba750fc8e156845",
+            "nativeDimensions": [
+              1024,
+              1536
+            ],
+            "nativeRatio": 0.6666666666666666,
+            "manifestHashMatches": true,
+            "personallyViewed": true,
+            "viewTool": "view_image",
+            "viewedAt": "2026-10-13T13:41:12.817Z",
+            "visualFindingsFi": "Keltainen banaaniterttu ja kolme punaruskeaa bataattia neutraalilla pinnalla. Banaanit liittyvät tertun kantaan luontevasti, kärjet ja kuorien vaihtelevat kolhut uskottavia; bataattien kuori, juurijäljet ja muodot luonnollisia. Ei synteettistä pintatoistoa, ihmisiä, tekstiä, logoja tai kehystä. Natiivikoko 1024×1536, suhde 0.667.",
+            "captionFi": "Havainnekuva oppaassa mainituista Burundin ruokaraaka-aineista.",
+            "sourceAndTargetCheckFi": "Luettu nykyinen Matkailijalle-objekti/Burundin ruoka taustaksi -jakso ja faktapohjan H12/rivi71: banaanit ja bataatti ovat Burundin yleiskeittiön raaka-aineita. Continuation-tilauksen e06/gitega/TRAVELER-rivi nimeää juuri tämän aiheen. Kuvateksti sanoo oppaassa mainitut Burundin ruokaraaka-aineet eikä keksi Gitegan erikoisannosta, paikallista lajiketta, ravintolaa tai saatavuutta. Natiivi pysty täyttää 0.60–0.85; CC-leveyttä ei sovelleta gen-natiiviin.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/gitega/sisalto.json",
+            "contentSHA256": "7b788bcb85e86c8dd4cd4c786b46c05e0c89f772e394b443ea6391ae3411dfc9",
+            "textJsonPath": "$.kaupunkilehti[0].matkailijalle",
+            "currentText": {
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              },
+              "kappale": "Tarpeetonta matkustamista Burundiin kannattaa tällä hetkellä välttää. Gitegan paikkahistoriaa voi lähestyä ylängön kaupungin, museokokoelman ja rumpuperinteen kautta. Kansainvälisen saapumisen lentoasema on Bujumburassa, josta Gitegaan on tieyhteys. Gitegan oma kenttä ei ole vahvistettu nykyinen reittilentokenttä. Gishoran käynti ja mahdollinen esitys järjestetään paikallisesti.",
+              "artikkeli": {
+                "nimi": "Matkailijan Gitega",
+                "taitto": "opas",
+                "teksti": "Tutustu ylängön kaupunkiin ja rumpuperinteeseen matkan nykyiset rajoitukset huomioiden.",
+                "nosto": "Kaupunkihistoria ja elävä perinne ovat eri kokemuksia; tarpeetonta matkustamista kannattaa välttää.",
+                "jaksot": [
+                  {
+                    "otsikko": "Perille ja liikkeelle",
+                    "teksti": "Kansainvälisen saapumisen kenttä on Melchior Ndadayen lentoasema Bujumburassa, koodi BJM. Bujumburasta on tieyhteys Gitegaan. Gitegan GID-kentän nimeä ei pidä tulkita varmaksi matkustajareitiksi.",
+                    "kuva": {
+                      "tiedosto": "",
+                      "lyhyt": "",
+                      "selite": "",
+                      "lahde": ""
+                    }
+                  },
+                  {
+                    "otsikko": "Kuninkaallisten paikkojen historia",
+                    "teksti": "Gishoran vastaanotto- ja pihapaikat liittyvät rumpuperinteen historiaan. Gitegan kansallismuseo säilyttää arjen sekä hovin aineistoa. Museon nykyinen toiminta ja Gishoran käyntijärjestelyt varmistetaan paikallisesti.",
+                    "kuva": {
+                      "tiedosto": "",
+                      "lyhyt": "",
+                      "selite": "",
+                      "lahde": ""
+                    }
+                  },
+                  {
+                    "otsikko": "Ylängön kaupunkimaisema",
+                    "teksti": "Gitega on kukkuloiden ympäröimällä tasangolla. Kaupallinen keskusta ja tori kuuluvat sen kaupunkitilaan. Ruvubun kansallispuisto ja Kareran putoukset ovat muiden alueiden retkikohteita, eivät Gitegan keskustan kävelypaikkoja.",
+                    "kuva": {
+                      "tiedosto": "",
+                      "lyhyt": "",
+                      "selite": "",
+                      "lahde": ""
+                    }
+                  },
+                  {
+                    "otsikko": "Burundin ruoka taustaksi",
+                    "teksti": "Burundin yleiskeittiössä käytetään papuja, banaaneja, bataattia ja maniokkia. Ugali mainitaan maissi- tai maniokkijauhosta tehtävänä ruokana. Nämä ovat maan ruoka-aiheita, eivät vahvistettuja Gitegan erikoisannoksia tai tietyn kaupungin ravintolan nykyinen ruokalista.",
+                    "kuva": {
+                      "tiedosto": "",
+                      "lyhyt": "",
+                      "selite": "",
+                      "lahde": ""
+                    }
+                  },
+                  {
+                    "otsikko": "Matkustamisen nykyiset rajat",
+                    "teksti": "Tarpeetonta matkustamista Burundiin kannattaa tällä hetkellä välttää. Mahdollinen käynti tai rumpuesitys sovitaan paikallisesti; vanha kuvaus ei takaa esityksen ajankohtaa. Kaukaista kansallispuistoa ei pidä liittää kaupunkikierrokseen ilman erillisiä järjestelyjä.",
+                    "kuva": {
+                      "tiedosto": "",
+                      "lyhyt": "",
+                      "selite": "",
+                      "lahde": ""
+                    }
+                  }
+                ],
+                "matkailu": {
+                  "parasta": [],
+                  "hyvaTietaa": [
+                    {
+                      "otsikko": "Lentoasemien ero",
+                      "teksti": "BJM on Bujumburassa; Gitegan GID ei vahvista nykyistä reittipalvelua."
+                    },
+                    {
+                      "otsikko": "Matkaa harkitaan",
+                      "teksti": "Tarpeetonta matkustamista Burundiin kannattaa välttää."
+                    },
+                    {
+                      "otsikko": "Perinne ja esitys",
+                      "teksti": "Gishoran historiakuvaus ei ole esitysaikataulu."
+                    },
+                    {
+                      "otsikko": "Museon toiminta",
+                      "teksti": "Näyttelyn tämänhetkiset käyntijärjestelyt varmistetaan museolta."
+                    }
+                  ]
+                },
+                "lahde": "Wikipedia"
+              }
+            },
+            "factPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/gitega/faktapohja.md",
+            "factSHA256": "cf5f7aea275aae978ca52e7a166c46b0276fd1c093a4ad36c01d0056ddaa4c85",
+            "sourceEvidence": [
+              {
+                "type": "currentContent",
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/gitega/sisalto.json",
+                "sha256": "7b788bcb85e86c8dd4cd4c786b46c05e0c89f772e394b443ea6391ae3411dfc9",
+                "jsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3]",
+                "text": "Burundin yleiskeittiössä käytetään papuja, banaaneja, bataattia ja maniokkia. Ugali mainitaan maissi- tai maniokkijauhosta tehtävänä ruokana. Nämä ovat maan ruoka-aiheita, eivät vahvistettuja Gitegan erikoisannoksia tai tietyn kaupungin ravintolan nykyinen ruokalista."
+              },
+              {
+                "type": "factSheet",
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/gitega/faktapohja.md",
+                "sha256": "cf5f7aea275aae978ca52e7a166c46b0276fd1c093a4ad36c01d0056ddaa4c85",
+                "sourceUrl": "https://en.wikipedia.org/wiki/Burundian_cuisine"
+              },
+              {
+                "type": "sourceScoutingAudit",
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/source-scout/continuation-20261013/safe-topic-production-priorities.json",
+                "sha256": "b5fd12034028af4a090b68a5ac0644b7a6d737a177b35b838ab6b3974c772dc0",
+                "rowIdentity": {
+                  "era": "e06",
+                  "city": "gitega",
+                  "slot": "TRAVELER",
+                  "originalOwnerJob": 14
+                }
+              }
+            ],
+            "reviewedBy": "exclusive-e06-extra-QA",
+            "rightsCheckFi": "Turvallinen tavallinen esine-/luonto-/materiaalihavainne, ei nimettyä teosta tai rakennuksen/asettelun jäljennöstä."
+          },
+          "reviewedAt": "2026-10-13T13:41:55.997933+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/gitega/qa.json",
+            "sha256": "3edb39646e9a18d3e65e17429cb4e460f8ec1ca7975670134044a668b8af34f3"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/gitega/illustration-qa-extra.json",
+            "sha256": "828d828f930b293f9cce5b7a9a91861197b4ee5aef9809dca85c59a62b9e0f05"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/gitega/job14-e06-gitega-traveler-v01-9baa2f344d59.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/gitega/job14-e06-gitega-traveler-v01-9baa2f344d59.png?t=7b91b9932161b3f7",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/gitega/job14-e06-gitega-traveler-v01-9baa2f344d59.png",
+        "sha256": "7b91b9932161b3f782446bd6ed42d5d8bdac6c7ba61878f89cde40ddfd64358d",
+        "bytes": 2390041,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "job14-e06-gitega-traveler-v01",
+        "nativeSHA256": "9baa2f344d593148e96466467a8524f6c5634c1138031b5ffba750fc8e156845",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e06/gitega/job14-e06-gitega-traveler-v01-9baa2f344d59.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e06",
+        "city": "gitega",
+        "slot": "TRAVELER",
+        "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
+        "verifiedAt": "2026-10-13T13:42:53.568870+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e06/gitega/job14-e06-gitega-traveler-v01-9baa2f344d59.png",
+        "sha256": "7b91b9932161b3f782446bd6ed42d5d8bdac6c7ba61878f89cde40ddfd64358d",
+        "bytes": 2390041,
+        "SHAReadAt": "2026-10-13T13:41:57.664721+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1024,
+        "height": 1536,
+        "pixelWidth": 1024,
+        "pixelHeight": 1536,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "9baa2f344d593148e96466467a8524f6c5634c1138031b5ffba750fc8e156845",
+        "rgbPixelSHA256": "da8ac9a5b5a22a9ab6383d1f3b0fa0098247077d649e731873a5b5f39d15d31c",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "7b788bcb85e86c8dd4cd4c786b46c05e0c89f772e394b443ea6391ae3411dfc9",
+      "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+      "contextAfterSHA256": "85f5ecf2b7c5c5c6e77d111a4d21f6c772cecfec0f1a12a9a9aded13b69091d6",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e06",
@@ -1960,7 +2433,7 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/gitega/illustration-qa-extra.json",
-            "sha256": "4c0e30c6a646104d78ec9030b888160bcbc3b8bfcc969a7e01cb3ab8d163b1c6"
+            "sha256": "828d828f930b293f9cce5b7a9a91861197b4ee5aef9809dca85c59a62b9e0f05"
           }
         ]
       },
@@ -2035,10 +2508,14 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "7b788bcb85e86c8dd4cd4c786b46c05e0c89f772e394b443ea6391ae3411dfc9",
       "targetAfterSHA256": "a10e49f7f3dd1d2f0cb3bc4bd9b6aa9ffda796e5f12a4f0d3d5a5d69079e96c0",
-      "contextAfterSHA256": "a10e49f7f3dd1d2f0cb3bc4bd9b6aa9ffda796e5f12a4f0d3d5a5d69079e96c0"
+      "contextAfterSHA256": "a10e49f7f3dd1d2f0cb3bc4bd9b6aa9ffda796e5f12a4f0d3d5a5d69079e96c0",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     }
   ],
   "runtimeIntegrationPending": true,
-  "ownerAcceptedNotImpliedByAuthorization": true,
-  "gameIntegrated": false
+  "ownerAcceptedNotImpliedByAuthorization": false,
+  "gameIntegrated": false,
+  "allAssetsExplicitlyOwnerApproved": true,
+  "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
 }

@@ -2,7 +2,7 @@
   "schemaVersion": "capital-city-role-assets/v1",
   "era": "e06",
   "city": "saotome",
-  "authorization": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+  "authorization": "hyväksyn kaikki tekemäsi kuvat. toimita ne claudelle. claudelta saat uusia ohjeita jatkoa varten",
   "sourceContentAfterSHA256": "072ecd7cba3831c781aba16ffcc2cce37491eb78b7d08db1054803888dc3aa6f",
   "assets": [
     {
@@ -56,7 +56,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/saotome/sisalto.json",
-      "sourceContentSHA256": "e36dbd56f1336baa2ff4a3a76e2ec5d4c045dc562a2feaa9494595e66c23e818",
+      "sourceContentSHA256": "072ecd7cba3831c781aba16ffcc2cce37491eb78b7d08db1054803888dc3aa6f",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
         "semanticContextSHA256": "7d7c584cc2d8467c506393084729d30c148a484c0bd092ca3166621376e4ec2b",
@@ -115,7 +115,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/saotome/illustration-qa-extra.json",
-        "fileSHA256": "76f7ede5adfe6ab84293755212b546a8c6990f4095fe54876e1e2e47d21a2d68",
+        "fileSHA256": "a2309676afa4b7b5029aa86559f81e6c4a499814a9cee063650d6d3372b75ad2",
         "item": {
           "slot": "O3",
           "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[2].kuva",
@@ -158,11 +158,11 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/saotome/qa.json",
-            "sha256": "6b5fe83447472d9c4f7a9c5e5b21652e13c65dc420eeb05adfb4102c5936f9f2"
+            "sha256": "2aa17f97234828a3f57edf815faed1c6dd55e861c1c33cf0a67f8f573e9a25b2"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/saotome/illustration-qa-extra.json",
-            "sha256": "76f7ede5adfe6ab84293755212b546a8c6990f4095fe54876e1e2e47d21a2d68"
+            "sha256": "a2309676afa4b7b5029aa86559f81e6c4a499814a9cee063650d6d3372b75ad2"
           }
         ]
       },
@@ -247,7 +247,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "072ecd7cba3831c781aba16ffcc2cce37491eb78b7d08db1054803888dc3aa6f",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "7d7c584cc2d8467c506393084729d30c148a484c0bd092ca3166621376e4ec2b"
+      "contextAfterSHA256": "7d7c584cc2d8467c506393084729d30c148a484c0bd092ca3166621376e4ec2b",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e06",
@@ -300,7 +302,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/saotome/sisalto.json",
-      "sourceContentSHA256": "e36dbd56f1336baa2ff4a3a76e2ec5d4c045dc562a2feaa9494595e66c23e818",
+      "sourceContentSHA256": "072ecd7cba3831c781aba16ffcc2cce37491eb78b7d08db1054803888dc3aa6f",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
         "semanticContextSHA256": "67e964cf7b56eb91ef664974b2e2e31328f2aaf872de702f90a21eb61bd8f0ec",
@@ -384,8 +386,8 @@
             "pngColorType": 2,
             "currentContentVersionCheck": {
               "reviewedContentSHA256": "fcf6c23fa1c4f54f46f63351e7cb459f3c218615171ff9f1e9514565c06f832f",
-              "currentContentSHA256": "e36dbd56f1336baa2ff4a3a76e2ec5d4c045dc562a2feaa9494595e66c23e818",
-              "checkedAt": "2026-10-13T05:48:16.863970+00:00",
+              "currentContentSHA256": "072ecd7cba3831c781aba16ffcc2cce37491eb78b7d08db1054803888dc3aa6f",
+              "checkedAt": "2026-10-13T14:14:45.844727+00:00",
               "personallyViewedAgain": false,
               "reviewedSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/c-integration/history/e06/saotome/fcf6c23fa1c4f54f46f63351e7cb459f3c218615171ff9f1e9514565c06f832f-sisalto.json",
               "reviewedSnapshotSHA256": "fcf6c23fa1c4f54f46f63351e7cb459f3c218615171ff9f1e9514565c06f832f",
@@ -410,7 +412,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/saotome/qa.json",
-        "fileSHA256": "6b5fe83447472d9c4f7a9c5e5b21652e13c65dc420eeb05adfb4102c5936f9f2",
+        "fileSHA256": "2aa17f97234828a3f57edf815faed1c6dd55e861c1c33cf0a67f8f573e9a25b2",
         "item": {
           "slot": "O4",
           "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
@@ -486,8 +488,8 @@
             "pngColorType": 2,
             "currentContentVersionCheck": {
               "reviewedContentSHA256": "fcf6c23fa1c4f54f46f63351e7cb459f3c218615171ff9f1e9514565c06f832f",
-              "currentContentSHA256": "e36dbd56f1336baa2ff4a3a76e2ec5d4c045dc562a2feaa9494595e66c23e818",
-              "checkedAt": "2026-10-13T05:48:16.863970+00:00",
+              "currentContentSHA256": "072ecd7cba3831c781aba16ffcc2cce37491eb78b7d08db1054803888dc3aa6f",
+              "checkedAt": "2026-10-13T14:14:45.844727+00:00",
               "personallyViewedAgain": false,
               "reviewedSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/c-integration/history/e06/saotome/fcf6c23fa1c4f54f46f63351e7cb459f3c218615171ff9f1e9514565c06f832f-sisalto.json",
               "reviewedSnapshotSHA256": "fcf6c23fa1c4f54f46f63351e7cb459f3c218615171ff9f1e9514565c06f832f",
@@ -504,11 +506,11 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/saotome/qa.json",
-            "sha256": "6b5fe83447472d9c4f7a9c5e5b21652e13c65dc420eeb05adfb4102c5936f9f2"
+            "sha256": "2aa17f97234828a3f57edf815faed1c6dd55e861c1c33cf0a67f8f573e9a25b2"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/saotome/illustration-qa-extra.json",
-            "sha256": "76f7ede5adfe6ab84293755212b546a8c6990f4095fe54876e1e2e47d21a2d68"
+            "sha256": "a2309676afa4b7b5029aa86559f81e6c4a499814a9cee063650d6d3372b75ad2"
           }
         ]
       },
@@ -593,7 +595,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "072ecd7cba3831c781aba16ffcc2cce37491eb78b7d08db1054803888dc3aa6f",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "67e964cf7b56eb91ef664974b2e2e31328f2aaf872de702f90a21eb61bd8f0ec"
+      "contextAfterSHA256": "67e964cf7b56eb91ef664974b2e2e31328f2aaf872de702f90a21eb61bd8f0ec",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e06",
@@ -643,7 +647,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/saotome/sisalto.json",
-      "sourceContentSHA256": "e36dbd56f1336baa2ff4a3a76e2ec5d4c045dc562a2feaa9494595e66c23e818",
+      "sourceContentSHA256": "072ecd7cba3831c781aba16ffcc2cce37491eb78b7d08db1054803888dc3aa6f",
       "semanticSourceBind": {
         "targetBeforeSHA256": "a7ab315317e8344b39cd211b3083c5299f0c3f64b8778f92cf9f0232f97365b1",
         "semanticContextSHA256": "a7ab315317e8344b39cd211b3083c5299f0c3f64b8778f92cf9f0232f97365b1",
@@ -723,7 +727,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/saotome/illustration-qa-extra.json",
-        "fileSHA256": "76f7ede5adfe6ab84293755212b546a8c6990f4095fe54876e1e2e47d21a2d68",
+        "fileSHA256": "a2309676afa4b7b5029aa86559f81e6c4a499814a9cee063650d6d3372b75ad2",
         "item": {
           "slot": "K4",
           "targetJsonPath": "$.kaupunkilehti[0].nostot[3]",
@@ -787,11 +791,11 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/saotome/qa.json",
-            "sha256": "6b5fe83447472d9c4f7a9c5e5b21652e13c65dc420eeb05adfb4102c5936f9f2"
+            "sha256": "2aa17f97234828a3f57edf815faed1c6dd55e861c1c33cf0a67f8f573e9a25b2"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/saotome/illustration-qa-extra.json",
-            "sha256": "76f7ede5adfe6ab84293755212b546a8c6990f4095fe54876e1e2e47d21a2d68"
+            "sha256": "a2309676afa4b7b5029aa86559f81e6c4a499814a9cee063650d6d3372b75ad2"
           }
         ]
       },
@@ -876,7 +880,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "072ecd7cba3831c781aba16ffcc2cce37491eb78b7d08db1054803888dc3aa6f",
       "targetAfterSHA256": "a7ab315317e8344b39cd211b3083c5299f0c3f64b8778f92cf9f0232f97365b1",
-      "contextAfterSHA256": "a7ab315317e8344b39cd211b3083c5299f0c3f64b8778f92cf9f0232f97365b1"
+      "contextAfterSHA256": "a7ab315317e8344b39cd211b3083c5299f0c3f64b8778f92cf9f0232f97365b1",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e06",
@@ -926,7 +932,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/saotome/sisalto.json",
-      "sourceContentSHA256": "e36dbd56f1336baa2ff4a3a76e2ec5d4c045dc562a2feaa9494595e66c23e818",
+      "sourceContentSHA256": "072ecd7cba3831c781aba16ffcc2cce37491eb78b7d08db1054803888dc3aa6f",
       "semanticSourceBind": {
         "targetBeforeSHA256": "47d9f842b85b9e441b19cf92de842061e53d357b92906c5b24b98fd49fe42c9e",
         "semanticContextSHA256": "47d9f842b85b9e441b19cf92de842061e53d357b92906c5b24b98fd49fe42c9e",
@@ -985,7 +991,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/saotome/illustration-qa-extra.json",
-        "fileSHA256": "76f7ede5adfe6ab84293755212b546a8c6990f4095fe54876e1e2e47d21a2d68",
+        "fileSHA256": "a2309676afa4b7b5029aa86559f81e6c4a499814a9cee063650d6d3372b75ad2",
         "item": {
           "slot": "L2",
           "targetJsonPath": "$.kaupunkilehti[1].nostot[1]",
@@ -1028,11 +1034,11 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/saotome/qa.json",
-            "sha256": "6b5fe83447472d9c4f7a9c5e5b21652e13c65dc420eeb05adfb4102c5936f9f2"
+            "sha256": "2aa17f97234828a3f57edf815faed1c6dd55e861c1c33cf0a67f8f573e9a25b2"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/saotome/illustration-qa-extra.json",
-            "sha256": "76f7ede5adfe6ab84293755212b546a8c6990f4095fe54876e1e2e47d21a2d68"
+            "sha256": "a2309676afa4b7b5029aa86559f81e6c4a499814a9cee063650d6d3372b75ad2"
           }
         ]
       },
@@ -1117,7 +1123,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "072ecd7cba3831c781aba16ffcc2cce37491eb78b7d08db1054803888dc3aa6f",
       "targetAfterSHA256": "47d9f842b85b9e441b19cf92de842061e53d357b92906c5b24b98fd49fe42c9e",
-      "contextAfterSHA256": "47d9f842b85b9e441b19cf92de842061e53d357b92906c5b24b98fd49fe42c9e"
+      "contextAfterSHA256": "47d9f842b85b9e441b19cf92de842061e53d357b92906c5b24b98fd49fe42c9e",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e06",
@@ -1167,7 +1175,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/saotome/sisalto.json",
-      "sourceContentSHA256": "e36dbd56f1336baa2ff4a3a76e2ec5d4c045dc562a2feaa9494595e66c23e818",
+      "sourceContentSHA256": "072ecd7cba3831c781aba16ffcc2cce37491eb78b7d08db1054803888dc3aa6f",
       "semanticSourceBind": {
         "targetBeforeSHA256": "c7d1ed7c2a94f602c9b929aae89c2599a01f16fb805104e18794058e1e8f901d",
         "semanticContextSHA256": "c7d1ed7c2a94f602c9b929aae89c2599a01f16fb805104e18794058e1e8f901d",
@@ -1226,7 +1234,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/saotome/illustration-qa-extra.json",
-        "fileSHA256": "76f7ede5adfe6ab84293755212b546a8c6990f4095fe54876e1e2e47d21a2d68",
+        "fileSHA256": "a2309676afa4b7b5029aa86559f81e6c4a499814a9cee063650d6d3372b75ad2",
         "item": {
           "slot": "L3",
           "targetJsonPath": "$.kaupunkilehti[1].nostot[2]",
@@ -1269,11 +1277,11 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/saotome/qa.json",
-            "sha256": "6b5fe83447472d9c4f7a9c5e5b21652e13c65dc420eeb05adfb4102c5936f9f2"
+            "sha256": "2aa17f97234828a3f57edf815faed1c6dd55e861c1c33cf0a67f8f573e9a25b2"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/saotome/illustration-qa-extra.json",
-            "sha256": "76f7ede5adfe6ab84293755212b546a8c6990f4095fe54876e1e2e47d21a2d68"
+            "sha256": "a2309676afa4b7b5029aa86559f81e6c4a499814a9cee063650d6d3372b75ad2"
           }
         ]
       },
@@ -1358,7 +1366,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "072ecd7cba3831c781aba16ffcc2cce37491eb78b7d08db1054803888dc3aa6f",
       "targetAfterSHA256": "c7d1ed7c2a94f602c9b929aae89c2599a01f16fb805104e18794058e1e8f901d",
-      "contextAfterSHA256": "c7d1ed7c2a94f602c9b929aae89c2599a01f16fb805104e18794058e1e8f901d"
+      "contextAfterSHA256": "c7d1ed7c2a94f602c9b929aae89c2599a01f16fb805104e18794058e1e8f901d",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e06",
@@ -1408,7 +1418,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/saotome/sisalto.json",
-      "sourceContentSHA256": "e36dbd56f1336baa2ff4a3a76e2ec5d4c045dc562a2feaa9494595e66c23e818",
+      "sourceContentSHA256": "072ecd7cba3831c781aba16ffcc2cce37491eb78b7d08db1054803888dc3aa6f",
       "semanticSourceBind": {
         "targetBeforeSHA256": "a516871322f586d399c46e190f49eecd2f8297781bc65b6dc7d566e596c4e70f",
         "semanticContextSHA256": "a516871322f586d399c46e190f49eecd2f8297781bc65b6dc7d566e596c4e70f",
@@ -1474,7 +1484,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/saotome/illustration-qa-extra.json",
-        "fileSHA256": "76f7ede5adfe6ab84293755212b546a8c6990f4095fe54876e1e2e47d21a2d68",
+        "fileSHA256": "a2309676afa4b7b5029aa86559f81e6c4a499814a9cee063650d6d3372b75ad2",
         "item": {
           "slot": "L4",
           "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
@@ -1524,11 +1534,11 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/saotome/qa.json",
-            "sha256": "6b5fe83447472d9c4f7a9c5e5b21652e13c65dc420eeb05adfb4102c5936f9f2"
+            "sha256": "2aa17f97234828a3f57edf815faed1c6dd55e861c1c33cf0a67f8f573e9a25b2"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/saotome/illustration-qa-extra.json",
-            "sha256": "76f7ede5adfe6ab84293755212b546a8c6990f4095fe54876e1e2e47d21a2d68"
+            "sha256": "a2309676afa4b7b5029aa86559f81e6c4a499814a9cee063650d6d3372b75ad2"
           }
         ]
       },
@@ -1613,7 +1623,781 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "072ecd7cba3831c781aba16ffcc2cce37491eb78b7d08db1054803888dc3aa6f",
       "targetAfterSHA256": "a516871322f586d399c46e190f49eecd2f8297781bc65b6dc7d566e596c4e70f",
-      "contextAfterSHA256": "a516871322f586d399c46e190f49eecd2f8297781bc65b6dc7d566e596c4e70f"
+      "contextAfterSHA256": "a516871322f586d399c46e190f49eecd2f8297781bc65b6dc7d566e596c4e70f",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+    },
+    {
+      "era": "e06",
+      "city": "saotome",
+      "slot": "TRAVELER",
+      "type": "illustration",
+      "assetID": "job14-e06-saotome-traveler-v01",
+      "galleryImageID": "job14-e06-saotome-traveler-v01",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "matkailijalle",
+        "kuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/saotome/job14-e06-saotome-traveler-v01-af70fd345780.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva São Tomén oppaan grillikala-aiheesta.",
+        "lyhyt": "Havainnekuva São Tomén oppaan grillikala-aiheesta."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/saotome/job14-e06-saotome-traveler-v01-af70fd345780.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva São Tomén oppaan grillikala-aiheesta.",
+        "lyhyt": "Havainnekuva São Tomén oppaan grillikala-aiheesta."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "af70fd345780712af65f8a28dd4b6bae92ebaad2a30c891b144a040894a51d7b",
+      "exportSHA256": "6f6d4211d02292f497008b881be6fb15e1073cd9662b1487b23fd0a37d99c505",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/saotome/job14-e06-saotome-traveler-v01-af70fd345780.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/saotome/job14-e06-saotome-traveler-v01-af70fd345780.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e06/saotome/job14-e06-saotome-traveler-v01-af70fd345780.png",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/saotome/sisalto.json",
+      "sourceContentSHA256": "072ecd7cba3831c781aba16ffcc2cce37491eb78b7d08db1054803888dc3aa6f",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "038e0a72311396ba6121f1e48a12de4527b03b36bc724587298076e3a0e18bbe",
+        "subjectTitle": "Matkailijalle",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Yleistetty lähteistetty ruoka-/raaka-aineaihe ilman kuva-inputtia, ihmistä, suojattua teosta tai nimettyä paikkasommittelua. Rehellinen havainnekuva, ei autenttinen kaupunkivalokuva.",
+          "QA": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/saotome/assets/job14-e06-saotome-traveler-v01/image.png",
+            "nativeSHA256": "af70fd345780712af65f8a28dd4b6bae92ebaad2a30c891b144a040894a51d7b",
+            "nativeDimensions": [
+              1024,
+              1536
+            ],
+            "nativeRatio": 0.6666666666666666,
+            "manifestHashMatches": true,
+            "personallyViewed": true,
+            "viewTool": "view_image",
+            "viewedAt": "2026-10-13T13:33:13.327Z",
+            "visualFindingsFi": "Yksi kokonainen grillattu kala valkoisella soikealla lautasella, sommiteltu pystysuuntaan. Pää, kiduskansi, rintaevä, kyljen eväreuna ja pyrstö liittyvät luontevasti runkoon. Paistopinta, suomut, eväruodot ja lautasen varjot vaihtelevia. Ei ihmisiä, tekstiä, logoja tai kehystä. Natiivikoko 1024×1536, suhde 0.667.",
+            "captionFi": "Havainnekuva São Tomén oppaan grillikala-aiheesta.",
+            "sourceAndTargetCheckFi": "Luettu ajantasainen Matkailijalle-objekti ja Kala ja pienet annokset -jakso sekä faktapohjan S9 Eat/rivi70: grillikala kuuluu kaupungin ruokakuvaukseen. Continuation-20261013-tilaus nimeää tämän lähdesidonnaisen oppaan aiheen. Kuvateksti sanoo havainnekuva eikä väitä paikallista ravintolaa, todellista São Tomén ateriaa, kalalajia, reseptiä tai nykyistä tarjontaa. Aito natiivi pysty täyttää 0.60–0.85; 1200px CC-leveyttä ei sovelleta gen-natiiviin.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/saotome/sisalto.json",
+            "contentSHA256": "072ecd7cba3831c781aba16ffcc2cce37491eb78b7d08db1054803888dc3aa6f",
+            "textJsonPath": "$.kaupunkilehti[0].matkailijalle",
+            "currentText": {
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              },
+              "kappale": "São Tomén rannalla voi yhdistää lahden, linnakkeen historian ja torin samaan kaupunkikierrokseen. Taksit ja collectivo-yhteiskyydit palvelevat liikkumista. Obôn metsäalueet ovat erillinen retki kaupungin ulkopuolelle. Reitti ja kuljetus sovitaan paikallisen oppaan kanssa. Presidentinpalatsi ei kuulu vapaasti käytäviin tai kuvattaviin kohteisiin.",
+              "artikkeli": {
+                "nimi": "Matkailijan São Tomé",
+                "taitto": "opas",
+                "teksti": "Aloita lahden rannalta ja laajenna kierrosta halutessasi saaren metsiin.",
+                "nosto": "Keskustan kävely ja Obôn metsäretki tarvitsevat erilaiset järjestelyt.",
+                "jaksot": [
+                  {
+                    "otsikko": "Perille ja liikkeelle",
+                    "teksti": "São Tomén kansainvälisen lentoaseman koodi on TMS. Kaupungissa liikutaan takseilla ja collectivo-yhteiskyydeillä. Torin lähellä oleva taksiasema on yksi liikkumisen lähtöpaikoista.",
+                    "kuva": {
+                      "tiedosto": "",
+                      "lyhyt": "",
+                      "selite": "",
+                      "lahde": ""
+                    }
+                  },
+                  {
+                    "otsikko": "Lahden vanha kaupunki",
+                    "teksti": "Ana Chavesin rantaa seuraavalla kierroksella voi tutustua kaupungin merelliseen kehykseen ja São Sebastiãon linnakkeeseen. Katedraalin historiallinen paikka kuuluu keskustaan, mutta sen nykyinen julkisivu on myöhempi kuin vanhimmat rakennusvaiheet. Presidentinpalatsi ei ole avoin yleisölle, eikä sen kuvaus ole sallittua.",
+                    "kuva": {
+                      "tiedosto": "",
+                      "lyhyt": "",
+                      "selite": "",
+                      "lahde": ""
+                    }
+                  },
+                  {
+                    "otsikko": "Obô on erillinen retki",
+                    "teksti": "Obôn puisto käsittää useita saaren osia, joten puiston nimi ei vielä määritä retkireittiä. Metsään lähtöä varten järjestetään paikallinen opas ja kuljetus. Ilhéu das Cabras kuuluu rannalta hahmottuvaan saaren maisemaan; se ei itsessään tarkoita valmista veneretkeä.",
+                    "kuva": {
+                      "tiedosto": "",
+                      "lyhyt": "",
+                      "selite": "",
+                      "lahde": ""
+                    }
+                  },
+                  {
+                    "otsikko": "Kala ja pienet annokset",
+                    "teksti": "Kaupungin ruoka-aiheisiin kuuluvat grillikala, meren antimet ja petiscos, pienet annokset. Tori tarjoaa myös mahdollisuuden tutustua kaupungin kauppa-arkeen. Ravintolan nimi vanhassa matkaoppaassa ei takaa sen nykyistä toimintaa.",
+                    "kuva": {
+                      "tiedosto": "",
+                      "lyhyt": "",
+                      "selite": "",
+                      "lahde": ""
+                    }
+                  },
+                  {
+                    "otsikko": "Metsäkierroksen suunnittelu",
+                    "teksti": "Obôn retki sovitaan oppaan kanssa: samalla määritellään oikea puistoalue, kuljetus, reitti ja varusteet. Laajalle saarelle levittäytyvän puiston retkeä ei voi suunnitella pelkästään keskustan kävelykartasta.",
+                    "kuva": {
+                      "tiedosto": "",
+                      "lyhyt": "",
+                      "selite": "",
+                      "lahde": ""
+                    }
+                  }
+                ],
+                "matkailu": {
+                  "parasta": [
+                    {
+                      "mita": "Ana Chavesin ranta",
+                      "tahdet": 3,
+                      "selite": "Lahti hahmottaa koko rantakaupungin sijainnin."
+                    },
+                    {
+                      "mita": "São Sebastiãon linnake",
+                      "tahdet": 3,
+                      "selite": "Vanha puolustuspaikka toimii nykyisin museona."
+                    },
+                    {
+                      "mita": "Kunnallistori",
+                      "tahdet": 2,
+                      "selite": "Tori yhdistää kaupungin kaupan ja liikkumisen."
+                    },
+                    {
+                      "mita": "Tchiloli-esitys",
+                      "tahdet": 2,
+                      "selite": "Paikallisesti vahvistettu esitys avaa elävää teatteriperinnettä."
+                    },
+                    {
+                      "mita": "Obô oppaan kanssa",
+                      "tahdet": 3,
+                      "selite": "Erillinen metsäretki vie saaren toiseen mittakaavaan."
+                    }
+                  ],
+                  "hyvaTietaa": [
+                    {
+                      "otsikko": "Kieli ja raha",
+                      "teksti": "Maan virallinen kieli on portugali ja valuutta dobra."
+                    },
+                    {
+                      "otsikko": "Palatsin rajoitus",
+                      "teksti": "Presidentinpalatsi ei ole yleisölle avoin eikä vapaasti kuvattava."
+                    },
+                    {
+                      "otsikko": "Yhteiskyydit",
+                      "teksti": "Collectivot ovat minibussien hoitamia yhteiskyytejä."
+                    },
+                    {
+                      "otsikko": "Puiston mittakaava",
+                      "teksti": "Obô sijaitsee kaupungin ulkopuolella useina erillisinä alueina."
+                    }
+                  ]
+                },
+                "lahde": "Wikipedia"
+              }
+            },
+            "factPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/saotome/faktapohja.md",
+            "factSHA256": "3fa77a5192fa033a3a9f75700548b89be3d33fe8b0e2fcb0b54f377173d9e8ca",
+            "sourceEvidence": [
+              {
+                "type": "currentContent",
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/saotome/sisalto.json",
+                "sha256": "072ecd7cba3831c781aba16ffcc2cce37491eb78b7d08db1054803888dc3aa6f",
+                "jsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3]",
+                "text": "Kaupungin ruoka-aiheisiin kuuluvat grillikala, meren antimet ja petiscos, pienet annokset. Tori tarjoaa myös mahdollisuuden tutustua kaupungin kauppa-arkeen. Ravintolan nimi vanhassa matkaoppaassa ei takaa sen nykyistä toimintaa."
+              },
+              {
+                "type": "factSheet",
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/saotome/faktapohja.md",
+                "sha256": "3fa77a5192fa033a3a9f75700548b89be3d33fe8b0e2fcb0b54f377173d9e8ca",
+                "sourceUrl": "https://en.wikivoyage.org/wiki/S%C3%A3o_Tom%C3%A9"
+              },
+              {
+                "type": "sourceScoutingAudit",
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/source-scout/continuation-20261013/safe-topic-production-priorities.json",
+                "sha256": "b5fd12034028af4a090b68a5ac0644b7a6d737a177b35b838ab6b3974c772dc0",
+                "rowIdentity": {
+                  "era": "e06",
+                  "city": "saotome",
+                  "slot": "TRAVELER",
+                  "originalOwnerJob": 14
+                }
+              }
+            ],
+            "reviewedBy": "exclusive-e06-extra-QA",
+            "rightsCheckFi": "Turvallinen tavallinen esine-/luonto-/materiaalihavainne, ei nimettyä teosta tai rakennuksen/asettelun jäljennöstä."
+          },
+          "qaReason": "Natiivi grillikalapysty vastaa São Tomén oppaan lähteistettyä ruoka-aihetta ja kuvasuhdetta."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva São Tomén oppaan grillikala-aiheesta.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/saotome/illustration-qa-extra.json",
+        "fileSHA256": "a2309676afa4b7b5029aa86559f81e6c4a499814a9cee063650d6d3372b75ad2",
+        "item": {
+          "slot": "TRAVELER",
+          "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
+          "assetID": "job14-e06-saotome-traveler-v01",
+          "sha256": "af70fd345780712af65f8a28dd4b6bae92ebaad2a30c891b144a040894a51d7b",
+          "verdict": "accepted",
+          "reason": "Natiivi grillikalapysty vastaa São Tomén oppaan lähteistettyä ruoka-aihetta ja kuvasuhdetta.",
+          "evidence": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/saotome/assets/job14-e06-saotome-traveler-v01/image.png",
+            "nativeSHA256": "af70fd345780712af65f8a28dd4b6bae92ebaad2a30c891b144a040894a51d7b",
+            "nativeDimensions": [
+              1024,
+              1536
+            ],
+            "nativeRatio": 0.6666666666666666,
+            "manifestHashMatches": true,
+            "personallyViewed": true,
+            "viewTool": "view_image",
+            "viewedAt": "2026-10-13T13:33:13.327Z",
+            "visualFindingsFi": "Yksi kokonainen grillattu kala valkoisella soikealla lautasella, sommiteltu pystysuuntaan. Pää, kiduskansi, rintaevä, kyljen eväreuna ja pyrstö liittyvät luontevasti runkoon. Paistopinta, suomut, eväruodot ja lautasen varjot vaihtelevia. Ei ihmisiä, tekstiä, logoja tai kehystä. Natiivikoko 1024×1536, suhde 0.667.",
+            "captionFi": "Havainnekuva São Tomén oppaan grillikala-aiheesta.",
+            "sourceAndTargetCheckFi": "Luettu ajantasainen Matkailijalle-objekti ja Kala ja pienet annokset -jakso sekä faktapohjan S9 Eat/rivi70: grillikala kuuluu kaupungin ruokakuvaukseen. Continuation-20261013-tilaus nimeää tämän lähdesidonnaisen oppaan aiheen. Kuvateksti sanoo havainnekuva eikä väitä paikallista ravintolaa, todellista São Tomén ateriaa, kalalajia, reseptiä tai nykyistä tarjontaa. Aito natiivi pysty täyttää 0.60–0.85; 1200px CC-leveyttä ei sovelleta gen-natiiviin.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/saotome/sisalto.json",
+            "contentSHA256": "072ecd7cba3831c781aba16ffcc2cce37491eb78b7d08db1054803888dc3aa6f",
+            "textJsonPath": "$.kaupunkilehti[0].matkailijalle",
+            "currentText": {
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              },
+              "kappale": "São Tomén rannalla voi yhdistää lahden, linnakkeen historian ja torin samaan kaupunkikierrokseen. Taksit ja collectivo-yhteiskyydit palvelevat liikkumista. Obôn metsäalueet ovat erillinen retki kaupungin ulkopuolelle. Reitti ja kuljetus sovitaan paikallisen oppaan kanssa. Presidentinpalatsi ei kuulu vapaasti käytäviin tai kuvattaviin kohteisiin.",
+              "artikkeli": {
+                "nimi": "Matkailijan São Tomé",
+                "taitto": "opas",
+                "teksti": "Aloita lahden rannalta ja laajenna kierrosta halutessasi saaren metsiin.",
+                "nosto": "Keskustan kävely ja Obôn metsäretki tarvitsevat erilaiset järjestelyt.",
+                "jaksot": [
+                  {
+                    "otsikko": "Perille ja liikkeelle",
+                    "teksti": "São Tomén kansainvälisen lentoaseman koodi on TMS. Kaupungissa liikutaan takseilla ja collectivo-yhteiskyydeillä. Torin lähellä oleva taksiasema on yksi liikkumisen lähtöpaikoista.",
+                    "kuva": {
+                      "tiedosto": "",
+                      "lyhyt": "",
+                      "selite": "",
+                      "lahde": ""
+                    }
+                  },
+                  {
+                    "otsikko": "Lahden vanha kaupunki",
+                    "teksti": "Ana Chavesin rantaa seuraavalla kierroksella voi tutustua kaupungin merelliseen kehykseen ja São Sebastiãon linnakkeeseen. Katedraalin historiallinen paikka kuuluu keskustaan, mutta sen nykyinen julkisivu on myöhempi kuin vanhimmat rakennusvaiheet. Presidentinpalatsi ei ole avoin yleisölle, eikä sen kuvaus ole sallittua.",
+                    "kuva": {
+                      "tiedosto": "",
+                      "lyhyt": "",
+                      "selite": "",
+                      "lahde": ""
+                    }
+                  },
+                  {
+                    "otsikko": "Obô on erillinen retki",
+                    "teksti": "Obôn puisto käsittää useita saaren osia, joten puiston nimi ei vielä määritä retkireittiä. Metsään lähtöä varten järjestetään paikallinen opas ja kuljetus. Ilhéu das Cabras kuuluu rannalta hahmottuvaan saaren maisemaan; se ei itsessään tarkoita valmista veneretkeä.",
+                    "kuva": {
+                      "tiedosto": "",
+                      "lyhyt": "",
+                      "selite": "",
+                      "lahde": ""
+                    }
+                  },
+                  {
+                    "otsikko": "Kala ja pienet annokset",
+                    "teksti": "Kaupungin ruoka-aiheisiin kuuluvat grillikala, meren antimet ja petiscos, pienet annokset. Tori tarjoaa myös mahdollisuuden tutustua kaupungin kauppa-arkeen. Ravintolan nimi vanhassa matkaoppaassa ei takaa sen nykyistä toimintaa.",
+                    "kuva": {
+                      "tiedosto": "",
+                      "lyhyt": "",
+                      "selite": "",
+                      "lahde": ""
+                    }
+                  },
+                  {
+                    "otsikko": "Metsäkierroksen suunnittelu",
+                    "teksti": "Obôn retki sovitaan oppaan kanssa: samalla määritellään oikea puistoalue, kuljetus, reitti ja varusteet. Laajalle saarelle levittäytyvän puiston retkeä ei voi suunnitella pelkästään keskustan kävelykartasta.",
+                    "kuva": {
+                      "tiedosto": "",
+                      "lyhyt": "",
+                      "selite": "",
+                      "lahde": ""
+                    }
+                  }
+                ],
+                "matkailu": {
+                  "parasta": [
+                    {
+                      "mita": "Ana Chavesin ranta",
+                      "tahdet": 3,
+                      "selite": "Lahti hahmottaa koko rantakaupungin sijainnin."
+                    },
+                    {
+                      "mita": "São Sebastiãon linnake",
+                      "tahdet": 3,
+                      "selite": "Vanha puolustuspaikka toimii nykyisin museona."
+                    },
+                    {
+                      "mita": "Kunnallistori",
+                      "tahdet": 2,
+                      "selite": "Tori yhdistää kaupungin kaupan ja liikkumisen."
+                    },
+                    {
+                      "mita": "Tchiloli-esitys",
+                      "tahdet": 2,
+                      "selite": "Paikallisesti vahvistettu esitys avaa elävää teatteriperinnettä."
+                    },
+                    {
+                      "mita": "Obô oppaan kanssa",
+                      "tahdet": 3,
+                      "selite": "Erillinen metsäretki vie saaren toiseen mittakaavaan."
+                    }
+                  ],
+                  "hyvaTietaa": [
+                    {
+                      "otsikko": "Kieli ja raha",
+                      "teksti": "Maan virallinen kieli on portugali ja valuutta dobra."
+                    },
+                    {
+                      "otsikko": "Palatsin rajoitus",
+                      "teksti": "Presidentinpalatsi ei ole yleisölle avoin eikä vapaasti kuvattava."
+                    },
+                    {
+                      "otsikko": "Yhteiskyydit",
+                      "teksti": "Collectivot ovat minibussien hoitamia yhteiskyytejä."
+                    },
+                    {
+                      "otsikko": "Puiston mittakaava",
+                      "teksti": "Obô sijaitsee kaupungin ulkopuolella useina erillisinä alueina."
+                    }
+                  ]
+                },
+                "lahde": "Wikipedia"
+              }
+            },
+            "factPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/saotome/faktapohja.md",
+            "factSHA256": "3fa77a5192fa033a3a9f75700548b89be3d33fe8b0e2fcb0b54f377173d9e8ca",
+            "sourceEvidence": [
+              {
+                "type": "currentContent",
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/saotome/sisalto.json",
+                "sha256": "072ecd7cba3831c781aba16ffcc2cce37491eb78b7d08db1054803888dc3aa6f",
+                "jsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3]",
+                "text": "Kaupungin ruoka-aiheisiin kuuluvat grillikala, meren antimet ja petiscos, pienet annokset. Tori tarjoaa myös mahdollisuuden tutustua kaupungin kauppa-arkeen. Ravintolan nimi vanhassa matkaoppaassa ei takaa sen nykyistä toimintaa."
+              },
+              {
+                "type": "factSheet",
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/saotome/faktapohja.md",
+                "sha256": "3fa77a5192fa033a3a9f75700548b89be3d33fe8b0e2fcb0b54f377173d9e8ca",
+                "sourceUrl": "https://en.wikivoyage.org/wiki/S%C3%A3o_Tom%C3%A9"
+              },
+              {
+                "type": "sourceScoutingAudit",
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/source-scout/continuation-20261013/safe-topic-production-priorities.json",
+                "sha256": "b5fd12034028af4a090b68a5ac0644b7a6d737a177b35b838ab6b3974c772dc0",
+                "rowIdentity": {
+                  "era": "e06",
+                  "city": "saotome",
+                  "slot": "TRAVELER",
+                  "originalOwnerJob": 14
+                }
+              }
+            ],
+            "reviewedBy": "exclusive-e06-extra-QA",
+            "rightsCheckFi": "Turvallinen tavallinen esine-/luonto-/materiaalihavainne, ei nimettyä teosta tai rakennuksen/asettelun jäljennöstä."
+          },
+          "reviewedAt": "2026-10-13T13:33:41.583275+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/saotome/qa.json",
+            "sha256": "2aa17f97234828a3f57edf815faed1c6dd55e861c1c33cf0a67f8f573e9a25b2"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/saotome/illustration-qa-extra.json",
+            "sha256": "a2309676afa4b7b5029aa86559f81e6c4a499814a9cee063650d6d3372b75ad2"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/saotome/job14-e06-saotome-traveler-v01-af70fd345780.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/saotome/job14-e06-saotome-traveler-v01-af70fd345780.png?t=6f6d4211d02292f4",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/saotome/job14-e06-saotome-traveler-v01-af70fd345780.png",
+        "sha256": "6f6d4211d02292f497008b881be6fb15e1073cd9662b1487b23fd0a37d99c505",
+        "bytes": 2432383,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "job14-e06-saotome-traveler-v01",
+        "nativeSHA256": "af70fd345780712af65f8a28dd4b6bae92ebaad2a30c891b144a040894a51d7b",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e06/saotome/job14-e06-saotome-traveler-v01-af70fd345780.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e06",
+        "city": "saotome",
+        "slot": "TRAVELER",
+        "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
+        "verifiedAt": "2026-10-13T13:34:28.642708+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e06/saotome/job14-e06-saotome-traveler-v01-af70fd345780.png",
+        "sha256": "6f6d4211d02292f497008b881be6fb15e1073cd9662b1487b23fd0a37d99c505",
+        "bytes": 2432383,
+        "SHAReadAt": "2026-10-13T13:34:23.200363+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1024,
+        "height": 1536,
+        "pixelWidth": 1024,
+        "pixelHeight": 1536,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "af70fd345780712af65f8a28dd4b6bae92ebaad2a30c891b144a040894a51d7b",
+        "rgbPixelSHA256": "003c277661eb7ba3f7ef4f782c28f4409ead79c7170dcb9757d4018b82f20446",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "072ecd7cba3831c781aba16ffcc2cce37491eb78b7d08db1054803888dc3aa6f",
+      "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+      "contextAfterSHA256": "038e0a72311396ba6121f1e48a12de4527b03b36bc724587298076e3a0e18bbe",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+    },
+    {
+      "era": "e06",
+      "city": "saotome",
+      "slot": "K3",
+      "type": "illustration",
+      "assetID": "job14-e06-saotome-k3-v02",
+      "galleryImageID": "job14-e06-saotome-k3-v02",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].nostot[2]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "nostot",
+        2
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/saotome/job14-e06-saotome-k3-v02-70a1914ddd3e.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva minibussista.",
+        "lyhyt": "Havainnekuva minibussista."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/saotome/job14-e06-saotome-k3-v02-70a1914ddd3e.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva minibussista.",
+        "lyhyt": "Havainnekuva minibussista."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "70a1914ddd3e75e47934b29c8454dd90db2703a169a74dfbe7c0b9f5571b5303",
+      "exportSHA256": "50e0b8a69457b1195ce55d77bf08abe30fa6f94cf4a71f146fb0a20c35f63e5d",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/saotome/job14-e06-saotome-k3-v02-70a1914ddd3e.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/saotome/job14-e06-saotome-k3-v02-70a1914ddd3e.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e06/saotome/job14-e06-saotome-k3-v02-70a1914ddd3e.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/saotome/sisalto.json",
+      "sourceContentSHA256": "072ecd7cba3831c781aba16ffcc2cce37491eb78b7d08db1054803888dc3aa6f",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "9a09b47861494eb38c23d2459a2d09d746fd431b48ea776e3f3efa85d62cd5f2",
+        "semanticContextSHA256": "9a09b47861494eb38c23d2459a2d09d746fd431b48ea776e3f3efa85d62cd5f2",
+        "subjectTitle": "Tori on myös lähtöpiste",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Yleistetty lähteistetty materiaali tai tavallinen funktionaalinen esine. Ei kuva-inputtia, arkkitehtuurin/asettelun, suojatun laattakuvion/rituaaliesineen tai nykyteoksen jäljennöstä. Ei named-place documentary claim.",
+          "QA": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/saotome/assets/job14-e06-saotome-k3-v02/image.png",
+            "nativeSHA256": "70a1914ddd3e75e47934b29c8454dd90db2703a169a74dfbe7c0b9f5571b5303",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "nativeRatio": 1.5,
+            "manifestHashMatches": true,
+            "personallyViewed": true,
+            "viewTool": "view_image",
+            "viewedAt": "2026-10-13T13:29:28.309Z",
+            "visualFindingsFi": "Valkoinen minibussi takasivukulmasta neutraalilla harmaalla pinnalla. Ikkunat ovat umpimustat ilman istuimia, henkilöitä tai heijastuneita kasvoja. Pyörät, koripaneelit, peili ja takavalot uskottavia; rekisterialue ja vanteiden keskukset tyhjiä. Ei tekstiä, brändejä tai kehystä.",
+            "captionFi": "Havainnekuva minibussista.",
+            "sourceAndTargetCheckFi": "Ajantasainen K3 Tori on myös lähtöpiste ja itse luettu faktapohjan K3/S1/S9 mainitsevat collectivo-minibussit. Havainnekuva minibussista ei väitä São Tomén kalustoa, katua, reittiä tai nykyistä kuljetuspalvelua. V02 on eri nativeSHA kuin hylätty v01.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/saotome/sisalto.json",
+            "contentSHA256": "072ecd7cba3831c781aba16ffcc2cce37491eb78b7d08db1054803888dc3aa6f",
+            "textJsonPath": "$.kaupunkilehti[0].nostot[2]",
+            "currentText": "São Tomé on saaren maantie- ja bussiverkon keskus. Kaupungin kunnallistori ei siksi kuulu vain ostoskierrokseen: sen lähellä on myös taksiasema. Liikkumiseen käytetään taksien ohella collectivo-yhteiskyytejä, joita hoitavat minibussit. Saaren pääreittejä kulkee rannikon suunnassa, ja kaupungissa rantakatu Avenida 12 de Julho yhdistyy kävelykohteisiin. Torin, rantakadun ja lähtöpaikkojen kautta hahmottuu pääkaupunki, joka hoitaa samalla monia koko saaren arkisia yhteyksiä.",
+            "factPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/saotome/faktapohja.md",
+            "factSHA256": "3fa77a5192fa033a3a9f75700548b89be3d33fe8b0e2fcb0b54f377173d9e8ca",
+            "sourceEvidence": [
+              {
+                "type": "currentContent",
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/saotome/sisalto.json",
+                "sha256": "072ecd7cba3831c781aba16ffcc2cce37491eb78b7d08db1054803888dc3aa6f",
+                "jsonPath": "$.kaupunkilehti[0].nostot[2]",
+                "text": "São Tomé on saaren maantie- ja bussiverkon keskus. Kaupungin kunnallistori ei siksi kuulu vain ostoskierrokseen: sen lähellä on myös taksiasema. Liikkumiseen käytetään taksien ohella collectivo-yhteiskyytejä, joita hoitavat minibussit. Saaren pääreittejä kulkee rannikon suunnassa, ja kaupungissa rantakatu Avenida 12 de Julho yhdistyy kävelykohteisiin. Torin, rantakadun ja lähtöpaikkojen kautta hahmottuu pääkaupunki, joka hoitaa samalla monia koko saaren arkisia yhteyksiä."
+              },
+              {
+                "type": "factSheet",
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/saotome/faktapohja.md",
+                "sha256": "3fa77a5192fa033a3a9f75700548b89be3d33fe8b0e2fcb0b54f377173d9e8ca",
+                "sourceUrl": "https://en.wikivoyage.org/wiki/S%C3%A3o_Tom%C3%A9"
+              }
+            ],
+            "reviewedBy": "exclusive-e06-extra-QA",
+            "rightsCheckFi": "Turvallinen tavallinen esine-/luonto-/materiaalihavainne, ei nimettyä teosta tai rakennuksen/asettelun jäljennöstä."
+          },
+          "qaReason": "Uusi merkinnätön minibussihavainne korjaa v01:n ikkunoissa näkyneet kasvohahmot."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva minibussista.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/saotome/illustration-qa-extra.json",
+        "fileSHA256": "a2309676afa4b7b5029aa86559f81e6c4a499814a9cee063650d6d3372b75ad2",
+        "item": {
+          "slot": "K3",
+          "targetJsonPath": "$.kaupunkilehti[0].nostot[2]",
+          "assetID": "job14-e06-saotome-k3-v02",
+          "sha256": "70a1914ddd3e75e47934b29c8454dd90db2703a169a74dfbe7c0b9f5571b5303",
+          "verdict": "accepted",
+          "reason": "Uusi merkinnätön minibussihavainne korjaa v01:n ikkunoissa näkyneet kasvohahmot.",
+          "evidence": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/saotome/assets/job14-e06-saotome-k3-v02/image.png",
+            "nativeSHA256": "70a1914ddd3e75e47934b29c8454dd90db2703a169a74dfbe7c0b9f5571b5303",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "nativeRatio": 1.5,
+            "manifestHashMatches": true,
+            "personallyViewed": true,
+            "viewTool": "view_image",
+            "viewedAt": "2026-10-13T13:29:28.309Z",
+            "visualFindingsFi": "Valkoinen minibussi takasivukulmasta neutraalilla harmaalla pinnalla. Ikkunat ovat umpimustat ilman istuimia, henkilöitä tai heijastuneita kasvoja. Pyörät, koripaneelit, peili ja takavalot uskottavia; rekisterialue ja vanteiden keskukset tyhjiä. Ei tekstiä, brändejä tai kehystä.",
+            "captionFi": "Havainnekuva minibussista.",
+            "sourceAndTargetCheckFi": "Ajantasainen K3 Tori on myös lähtöpiste ja itse luettu faktapohjan K3/S1/S9 mainitsevat collectivo-minibussit. Havainnekuva minibussista ei väitä São Tomén kalustoa, katua, reittiä tai nykyistä kuljetuspalvelua. V02 on eri nativeSHA kuin hylätty v01.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/saotome/sisalto.json",
+            "contentSHA256": "072ecd7cba3831c781aba16ffcc2cce37491eb78b7d08db1054803888dc3aa6f",
+            "textJsonPath": "$.kaupunkilehti[0].nostot[2]",
+            "currentText": "São Tomé on saaren maantie- ja bussiverkon keskus. Kaupungin kunnallistori ei siksi kuulu vain ostoskierrokseen: sen lähellä on myös taksiasema. Liikkumiseen käytetään taksien ohella collectivo-yhteiskyytejä, joita hoitavat minibussit. Saaren pääreittejä kulkee rannikon suunnassa, ja kaupungissa rantakatu Avenida 12 de Julho yhdistyy kävelykohteisiin. Torin, rantakadun ja lähtöpaikkojen kautta hahmottuu pääkaupunki, joka hoitaa samalla monia koko saaren arkisia yhteyksiä.",
+            "factPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/saotome/faktapohja.md",
+            "factSHA256": "3fa77a5192fa033a3a9f75700548b89be3d33fe8b0e2fcb0b54f377173d9e8ca",
+            "sourceEvidence": [
+              {
+                "type": "currentContent",
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/saotome/sisalto.json",
+                "sha256": "072ecd7cba3831c781aba16ffcc2cce37491eb78b7d08db1054803888dc3aa6f",
+                "jsonPath": "$.kaupunkilehti[0].nostot[2]",
+                "text": "São Tomé on saaren maantie- ja bussiverkon keskus. Kaupungin kunnallistori ei siksi kuulu vain ostoskierrokseen: sen lähellä on myös taksiasema. Liikkumiseen käytetään taksien ohella collectivo-yhteiskyytejä, joita hoitavat minibussit. Saaren pääreittejä kulkee rannikon suunnassa, ja kaupungissa rantakatu Avenida 12 de Julho yhdistyy kävelykohteisiin. Torin, rantakadun ja lähtöpaikkojen kautta hahmottuu pääkaupunki, joka hoitaa samalla monia koko saaren arkisia yhteyksiä."
+              },
+              {
+                "type": "factSheet",
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/saotome/faktapohja.md",
+                "sha256": "3fa77a5192fa033a3a9f75700548b89be3d33fe8b0e2fcb0b54f377173d9e8ca",
+                "sourceUrl": "https://en.wikivoyage.org/wiki/S%C3%A3o_Tom%C3%A9"
+              }
+            ],
+            "reviewedBy": "exclusive-e06-extra-QA",
+            "rightsCheckFi": "Turvallinen tavallinen esine-/luonto-/materiaalihavainne, ei nimettyä teosta tai rakennuksen/asettelun jäljennöstä."
+          },
+          "reviewedAt": "2026-10-13T13:30:06.471836+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/saotome/qa.json",
+            "sha256": "2aa17f97234828a3f57edf815faed1c6dd55e861c1c33cf0a67f8f573e9a25b2"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/saotome/illustration-qa-extra.json",
+            "sha256": "a2309676afa4b7b5029aa86559f81e6c4a499814a9cee063650d6d3372b75ad2"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/saotome/job14-e06-saotome-k3-v02-70a1914ddd3e.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/saotome/job14-e06-saotome-k3-v02-70a1914ddd3e.png?t=50e0b8a69457b119",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/saotome/job14-e06-saotome-k3-v02-70a1914ddd3e.png",
+        "sha256": "50e0b8a69457b1195ce55d77bf08abe30fa6f94cf4a71f146fb0a20c35f63e5d",
+        "bytes": 1502768,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "job14-e06-saotome-k3-v02",
+        "nativeSHA256": "70a1914ddd3e75e47934b29c8454dd90db2703a169a74dfbe7c0b9f5571b5303",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e06/saotome/job14-e06-saotome-k3-v02-70a1914ddd3e.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e06",
+        "city": "saotome",
+        "slot": "K3",
+        "targetJsonPath": "$.kaupunkilehti[0].nostot[2]",
+        "verifiedAt": "2026-10-13T13:30:30.616398+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e06/saotome/job14-e06-saotome-k3-v02-70a1914ddd3e.png",
+        "sha256": "50e0b8a69457b1195ce55d77bf08abe30fa6f94cf4a71f146fb0a20c35f63e5d",
+        "bytes": 1502768,
+        "SHAReadAt": "2026-10-13T13:30:25.655584+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "70a1914ddd3e75e47934b29c8454dd90db2703a169a74dfbe7c0b9f5571b5303",
+        "rgbPixelSHA256": "7df8cb8d1ee605fe5ff6aab8cd42297b777c2cf6fa679719abcdb826352ab6bd",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "072ecd7cba3831c781aba16ffcc2cce37491eb78b7d08db1054803888dc3aa6f",
+      "targetAfterSHA256": "9a09b47861494eb38c23d2459a2d09d746fd431b48ea776e3f3efa85d62cd5f2",
+      "contextAfterSHA256": "9a09b47861494eb38c23d2459a2d09d746fd431b48ea776e3f3efa85d62cd5f2",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e06",
@@ -1666,7 +2450,7 @@
         3648
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/saotome/sisalto.json",
-      "sourceContentSHA256": "e36dbd56f1336baa2ff4a3a76e2ec5d4c045dc562a2feaa9494595e66c23e818",
+      "sourceContentSHA256": "072ecd7cba3831c781aba16ffcc2cce37491eb78b7d08db1054803888dc3aa6f",
       "semanticSourceBind": {
         "targetBeforeSHA256": "02148db1a99fd634154340755466799096a457feb939ef1503e8aceeacfe4c3a",
         "semanticContextSHA256": "02148db1a99fd634154340755466799096a457feb939ef1503e8aceeacfe4c3a",
@@ -1757,8 +2541,8 @@
             "replacedRejectedCandidate": "Embouchure de rivière à São Tomé.jpg; original face rejection preserved separately.",
             "currentContentVersionCheck": {
               "reviewedContentSHA256": "fcf6c23fa1c4f54f46f63351e7cb459f3c218615171ff9f1e9514565c06f832f",
-              "currentContentSHA256": "e36dbd56f1336baa2ff4a3a76e2ec5d4c045dc562a2feaa9494595e66c23e818",
-              "checkedAt": "2026-10-13T05:48:16.863970+00:00",
+              "currentContentSHA256": "072ecd7cba3831c781aba16ffcc2cce37491eb78b7d08db1054803888dc3aa6f",
+              "checkedAt": "2026-10-13T14:14:45.844727+00:00",
               "personallyViewedAgain": false,
               "reviewedSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/c-integration/history/e06/saotome/fcf6c23fa1c4f54f46f63351e7cb459f3c218615171ff9f1e9514565c06f832f-sisalto.json",
               "reviewedSnapshotSHA256": "fcf6c23fa1c4f54f46f63351e7cb459f3c218615171ff9f1e9514565c06f832f",
@@ -1769,8 +2553,8 @@
               "imageFieldsExcludedOnlyAtInventoriedSlots": true
             },
             "currentBindingMetadataCheck": {
-              "checkedAt": "2026-10-13T05:48:16.884321+00:00",
-              "contentSHA256": "e36dbd56f1336baa2ff4a3a76e2ec5d4c045dc562a2feaa9494595e66c23e818",
+              "checkedAt": "2026-10-13T14:14:45.858764+00:00",
+              "contentSHA256": "072ecd7cba3831c781aba16ffcc2cce37491eb78b7d08db1054803888dc3aa6f",
               "commonsFile": "Cours d'eau à São Tomé.jpg",
               "captionFi": "Vesiuoma São Tomén kaupungin pohjoisosassa.",
               "credit": "Ji-Elle, Commons (CC BY-SA 4.0)",
@@ -1792,7 +2576,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/saotome/qa.json",
-        "fileSHA256": "6b5fe83447472d9c4f7a9c5e5b21652e13c65dc420eeb05adfb4102c5936f9f2",
+        "fileSHA256": "2aa17f97234828a3f57edf815faed1c6dd55e861c1c33cf0a67f8f573e9a25b2",
         "item": {
           "slot": "PHOTO",
           "targetJsonPath": "$.valokuva",
@@ -1875,8 +2659,8 @@
             "replacedRejectedCandidate": "Embouchure de rivière à São Tomé.jpg; original face rejection preserved separately.",
             "currentContentVersionCheck": {
               "reviewedContentSHA256": "fcf6c23fa1c4f54f46f63351e7cb459f3c218615171ff9f1e9514565c06f832f",
-              "currentContentSHA256": "e36dbd56f1336baa2ff4a3a76e2ec5d4c045dc562a2feaa9494595e66c23e818",
-              "checkedAt": "2026-10-13T05:48:16.863970+00:00",
+              "currentContentSHA256": "072ecd7cba3831c781aba16ffcc2cce37491eb78b7d08db1054803888dc3aa6f",
+              "checkedAt": "2026-10-13T14:14:45.844727+00:00",
               "personallyViewedAgain": false,
               "reviewedSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/c-integration/history/e06/saotome/fcf6c23fa1c4f54f46f63351e7cb459f3c218615171ff9f1e9514565c06f832f-sisalto.json",
               "reviewedSnapshotSHA256": "fcf6c23fa1c4f54f46f63351e7cb459f3c218615171ff9f1e9514565c06f832f",
@@ -1887,8 +2671,8 @@
               "imageFieldsExcludedOnlyAtInventoriedSlots": true
             },
             "currentBindingMetadataCheck": {
-              "checkedAt": "2026-10-13T05:48:16.884321+00:00",
-              "contentSHA256": "e36dbd56f1336baa2ff4a3a76e2ec5d4c045dc562a2feaa9494595e66c23e818",
+              "checkedAt": "2026-10-13T14:14:45.858764+00:00",
+              "contentSHA256": "072ecd7cba3831c781aba16ffcc2cce37491eb78b7d08db1054803888dc3aa6f",
               "commonsFile": "Cours d'eau à São Tomé.jpg",
               "captionFi": "Vesiuoma São Tomén kaupungin pohjoisosassa.",
               "credit": "Ji-Elle, Commons (CC BY-SA 4.0)",
@@ -1902,11 +2686,11 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/saotome/qa.json",
-            "sha256": "6b5fe83447472d9c4f7a9c5e5b21652e13c65dc420eeb05adfb4102c5936f9f2"
+            "sha256": "2aa17f97234828a3f57edf815faed1c6dd55e861c1c33cf0a67f8f573e9a25b2"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/saotome/illustration-qa-extra.json",
-            "sha256": "76f7ede5adfe6ab84293755212b546a8c6990f4095fe54876e1e2e47d21a2d68"
+            "sha256": "a2309676afa4b7b5029aa86559f81e6c4a499814a9cee063650d6d3372b75ad2"
           }
         ]
       },
@@ -1981,7 +2765,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "072ecd7cba3831c781aba16ffcc2cce37491eb78b7d08db1054803888dc3aa6f",
       "targetAfterSHA256": "02148db1a99fd634154340755466799096a457feb939ef1503e8aceeacfe4c3a",
-      "contextAfterSHA256": "02148db1a99fd634154340755466799096a457feb939ef1503e8aceeacfe4c3a"
+      "contextAfterSHA256": "02148db1a99fd634154340755466799096a457feb939ef1503e8aceeacfe4c3a",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e06",
@@ -2034,7 +2820,7 @@
         3264
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/saotome/sisalto.json",
-      "sourceContentSHA256": "e36dbd56f1336baa2ff4a3a76e2ec5d4c045dc562a2feaa9494595e66c23e818",
+      "sourceContentSHA256": "072ecd7cba3831c781aba16ffcc2cce37491eb78b7d08db1054803888dc3aa6f",
       "semanticSourceBind": {
         "targetBeforeSHA256": "97623b35fb442efdfb1e5f322243041cc24624f2dacb559c48c754886222b539",
         "semanticContextSHA256": "97623b35fb442efdfb1e5f322243041cc24624f2dacb559c48c754886222b539",
@@ -2130,8 +2916,8 @@
             "depictedWorkAssessment": "Laaja todellinen rantavyöhyke ja rakennuskannan kokonaisympäristö, tekniset satamalaitteet sivuosassa. Ei nimetyn itsenäisen teoksen lähijäljennöstä tai rakennusten iästä pääteltyä yleistä PD-lupaa.",
             "currentContentVersionCheck": {
               "reviewedContentSHA256": "fcf6c23fa1c4f54f46f63351e7cb459f3c218615171ff9f1e9514565c06f832f",
-              "currentContentSHA256": "e36dbd56f1336baa2ff4a3a76e2ec5d4c045dc562a2feaa9494595e66c23e818",
-              "checkedAt": "2026-10-13T05:48:16.863970+00:00",
+              "currentContentSHA256": "072ecd7cba3831c781aba16ffcc2cce37491eb78b7d08db1054803888dc3aa6f",
+              "checkedAt": "2026-10-13T14:14:45.844727+00:00",
               "personallyViewedAgain": false,
               "reviewedSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/c-integration/history/e06/saotome/fcf6c23fa1c4f54f46f63351e7cb459f3c218615171ff9f1e9514565c06f832f-sisalto.json",
               "reviewedSnapshotSHA256": "fcf6c23fa1c4f54f46f63351e7cb459f3c218615171ff9f1e9514565c06f832f",
@@ -2142,8 +2928,8 @@
               "imageFieldsExcludedOnlyAtInventoriedSlots": true
             },
             "currentBindingMetadataCheck": {
-              "checkedAt": "2026-10-13T05:48:16.896195+00:00",
-              "contentSHA256": "e36dbd56f1336baa2ff4a3a76e2ec5d4c045dc562a2feaa9494595e66c23e818",
+              "checkedAt": "2026-10-13T14:14:45.863821+00:00",
+              "contentSHA256": "072ecd7cba3831c781aba16ffcc2cce37491eb78b7d08db1054803888dc3aa6f",
               "commonsFile": "São Tome DSC 8024 (32725547212).jpg",
               "captionFi": "São Tomén kaupunki kaartuu Ana Chavesin lahden ympärille.",
               "credit": "Ben Sutherland from Crystal Palace, London, UK, Wikimedia Commons (CC BY 2.0)",
@@ -2165,7 +2951,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/saotome/qa.json",
-        "fileSHA256": "6b5fe83447472d9c4f7a9c5e5b21652e13c65dc420eeb05adfb4102c5936f9f2",
+        "fileSHA256": "2aa17f97234828a3f57edf815faed1c6dd55e861c1c33cf0a67f8f573e9a25b2",
         "item": {
           "slot": "C1",
           "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
@@ -2253,8 +3039,8 @@
             "depictedWorkAssessment": "Laaja todellinen rantavyöhyke ja rakennuskannan kokonaisympäristö, tekniset satamalaitteet sivuosassa. Ei nimetyn itsenäisen teoksen lähijäljennöstä tai rakennusten iästä pääteltyä yleistä PD-lupaa.",
             "currentContentVersionCheck": {
               "reviewedContentSHA256": "fcf6c23fa1c4f54f46f63351e7cb459f3c218615171ff9f1e9514565c06f832f",
-              "currentContentSHA256": "e36dbd56f1336baa2ff4a3a76e2ec5d4c045dc562a2feaa9494595e66c23e818",
-              "checkedAt": "2026-10-13T05:48:16.863970+00:00",
+              "currentContentSHA256": "072ecd7cba3831c781aba16ffcc2cce37491eb78b7d08db1054803888dc3aa6f",
+              "checkedAt": "2026-10-13T14:14:45.844727+00:00",
               "personallyViewedAgain": false,
               "reviewedSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/c-integration/history/e06/saotome/fcf6c23fa1c4f54f46f63351e7cb459f3c218615171ff9f1e9514565c06f832f-sisalto.json",
               "reviewedSnapshotSHA256": "fcf6c23fa1c4f54f46f63351e7cb459f3c218615171ff9f1e9514565c06f832f",
@@ -2265,8 +3051,8 @@
               "imageFieldsExcludedOnlyAtInventoriedSlots": true
             },
             "currentBindingMetadataCheck": {
-              "checkedAt": "2026-10-13T05:48:16.896195+00:00",
-              "contentSHA256": "e36dbd56f1336baa2ff4a3a76e2ec5d4c045dc562a2feaa9494595e66c23e818",
+              "checkedAt": "2026-10-13T14:14:45.863821+00:00",
+              "contentSHA256": "072ecd7cba3831c781aba16ffcc2cce37491eb78b7d08db1054803888dc3aa6f",
               "commonsFile": "São Tome DSC 8024 (32725547212).jpg",
               "captionFi": "São Tomén kaupunki kaartuu Ana Chavesin lahden ympärille.",
               "credit": "Ben Sutherland from Crystal Palace, London, UK, Wikimedia Commons (CC BY 2.0)",
@@ -2280,11 +3066,11 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/saotome/qa.json",
-            "sha256": "6b5fe83447472d9c4f7a9c5e5b21652e13c65dc420eeb05adfb4102c5936f9f2"
+            "sha256": "2aa17f97234828a3f57edf815faed1c6dd55e861c1c33cf0a67f8f573e9a25b2"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/saotome/illustration-qa-extra.json",
-            "sha256": "76f7ede5adfe6ab84293755212b546a8c6990f4095fe54876e1e2e47d21a2d68"
+            "sha256": "a2309676afa4b7b5029aa86559f81e6c4a499814a9cee063650d6d3372b75ad2"
           }
         ]
       },
@@ -2357,383 +3143,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "072ecd7cba3831c781aba16ffcc2cce37491eb78b7d08db1054803888dc3aa6f",
       "targetAfterSHA256": "97623b35fb442efdfb1e5f322243041cc24624f2dacb559c48c754886222b539",
-      "contextAfterSHA256": "97623b35fb442efdfb1e5f322243041cc24624f2dacb559c48c754886222b539"
-    },
-    {
-      "era": "e06",
-      "city": "saotome",
-      "slot": "N3",
-      "type": "commons",
-      "assetID": "capital-cc-e06-saotome-n3-d69ff47743485c0b",
-      "galleryImageID": "capital-cc-e06-saotome-n3-d69ff47743485c0b",
-      "commonsFile": "Ilhéu das Cabras depuis Fernão Dias à São Tomé (1).jpg",
-      "targetJsonPath": "$.nahtavyydet[\"Ilhéu das Cabras\"].kuvat[0]",
-      "targetTokens": [
-        "nahtavyydet",
-        "Ilhéu das Cabras",
-        "kuvat",
-        0
-      ],
-      "operation": "merge-media-fields-preserve-other-content",
-      "CmediaFieldPayload": {
-        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e06/saotome/n3-d69ff47743485c0ba49a.jpg",
-        "suora": true,
-        "lahde": "Ji-Elle, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Ilhéu das Cabras näkyy Fernão Diasin rannalta.",
-        "lyhyt": "Ilhéu das Cabras näkyy Fernão Diasin rannalta.",
-        "tiedosto": "Ilhéu das Cabras depuis Fernão Dias à São Tomé (1).jpg"
-      },
-      "removeMediaKeys": [],
-      "CvalidatorCompatiblePayload": {
-        "lahde": "Ji-Elle, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Ilhéu das Cabras näkyy Fernão Diasin rannalta.",
-        "lyhyt": "Ilhéu das Cabras näkyy Fernão Diasin rannalta.",
-        "tiedosto": "Ilhéu das Cabras depuis Fernão Dias à São Tomé (1).jpg"
-      },
-      "runtimeMediaFieldPayload": {
-        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e06/saotome/n3-d69ff47743485c0ba49a.jpg",
-        "suora": true,
-        "lahde": "Ji-Elle, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Ilhéu das Cabras näkyy Fernão Diasin rannalta.",
-        "lyhyt": "Ilhéu das Cabras näkyy Fernão Diasin rannalta.",
-        "tiedosto": "Ilhéu das Cabras depuis Fernão Dias à São Tomé (1).jpg"
-      },
-      "runtimeRemoveMediaKeys": [],
-      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
-      "nativeSHA256": "d69ff47743485c0ba49a72d329c6684874725803dcbab415f77ac7e70d46c2df",
-      "exportSHA256": "d69ff47743485c0ba49a72d329c6684874725803dcbab415f77ac7e70d46c2df",
-      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e06/saotome/n3-d69ff47743485c0ba49a.jpg",
-      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e06/saotome/n3-d69ff47743485c0ba49a.jpg",
-      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/saotome/cc-work/60699a8ace27da82-preview.jpg",
-      "dimensions": [
-        5472,
-        3648
-      ],
-      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/saotome/sisalto.json",
-      "sourceContentSHA256": "e36dbd56f1336baa2ff4a3a76e2ec5d4c045dc562a2feaa9494595e66c23e818",
-      "semanticSourceBind": {
-        "targetBeforeSHA256": "f5d5b7130257a4c58548c7831aca565fc791cb01e11a6daa789a3d12bbdc54e0",
-        "semanticContextSHA256": "190be8b73f3026d4827af7bb20dc7b678bb561532d7199fea76c15cb0b911089",
-        "subjectTitle": "Ilhéu das Cabras",
-        "targetState": "existing-target"
-      },
-      "attribution": {
-        "author": "Ji-Elle",
-        "license": "CC BY-SA 4.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
-        "sourcePage": "https://commons.wikimedia.org/wiki/File:Ilh%C3%A9u_das_Cabras_depuis_Fern%C3%A3o_Dias_%C3%A0_S%C3%A3o_Tom%C3%A9_(1).jpg",
-        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Ilh%C3%A9u_das_Cabras_depuis_Fern%C3%A3o_Dias_%C3%A0_S%C3%A3o_Tom%C3%A9_%281%29.jpg",
-        "rightsEvidence": {
-          "selection": "Author Ji-Elle, Own work ja CC BY-SA 4.0 luettu tiedostosivulta. Description nimeää Ilhéu das Cabrasin sekä kuvauspaikan Fernão Dias São Tomén saaren pohjoisrannalla. N3:n luonnonsaari näkyy taustalla ja lähde paikantaa sen nimenomaisesti, ei arvata toisesta maasta. Luonnonmeri, ranta ja elävä kasvillisuus pääaiheina; pienet tavalliset puu-/kattorakenteet sivuosia, ei tunnistettavaa suojattua teosta.",
-          "QA": {
-            "manifestPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/saotome/cc-selection.json",
-            "candidateSnapshot": {
-              "commonsFile": "Ilhéu das Cabras depuis Fernão Dias à São Tomé (1).jpg",
-              "sourcePage": "https://commons.wikimedia.org/wiki/File:Ilh%C3%A9u_das_Cabras_depuis_Fern%C3%A3o_Dias_%C3%A0_S%C3%A3o_Tom%C3%A9_(1).jpg",
-              "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Ilh%C3%A9u_das_Cabras_depuis_Fern%C3%A3o_Dias_%C3%A0_S%C3%A3o_Tom%C3%A9_%281%29.jpg",
-              "author": "Ji-Elle",
-              "license": "CC BY-SA 4.0",
-              "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
-              "width": 5472,
-              "height": 3648,
-              "slot": "N3",
-              "targetJsonPath": "$.nahtavyydet[\"Ilhéu das Cabras\"].kuvat[0]",
-              "type": "commons",
-              "captionFi": "Ilhéu das Cabras näkyy Fernão Diasin rannalta.",
-              "rightsEvidence": "Author Ji-Elle, Own work ja CC BY-SA 4.0 luettu tiedostosivulta. Description nimeää Ilhéu das Cabrasin sekä kuvauspaikan Fernão Dias São Tomén saaren pohjoisrannalla. N3:n luonnonsaari näkyy taustalla ja lähde paikantaa sen nimenomaisesti, ei arvata toisesta maasta. Luonnonmeri, ranta ja elävä kasvillisuus pääaiheina; pienet tavalliset puu-/kattorakenteet sivuosia, ei tunnistettavaa suojattua teosta.",
-              "reviewState": "candidate",
-              "dateCaptured": "27 January 2019, 11:44:30",
-              "authorFieldSource": "Author table",
-              "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/saotome/cc-work/60699a8ace27da82-preview.jpg",
-              "sha256": "d69ff47743485c0ba49a72d329c6684874725803dcbab415f77ac7e70d46c2df",
-              "visualReview": "Katsottu natiivi5472x3648: Ilhéu das Cabrasin kaksikyttyräinen profiili vasemmalla, Fernão Diasin ranta ja palmut edessä. Etäiset henkilöt aivan pieniä, kasvonpiirteet eivät erotu. Ei lisättyä tekstiä, logoa, leimaa tai kehystä. Caption erottaa kohteen ja kuvauspaikan. Kuvaus27.1.2019, ei tuoreeksi opaskuvaksi nimetty.",
-              "sourceHtmlPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/saotome/cc-work/60699a8ace27da82.html",
-              "claimRecord": "/Volumes/T7 4TB/ChatGPT-Codex-active/coordination/paakaupungit-claims/08391cff28146b17/e06/saotome/N3/owner.json"
-            },
-            "candidateFingerprintSHA256": "eb8277d6f902601acafc04d6e49af574829bf7debe54f2a4591ceeee4455e870",
-            "currentContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/saotome/sisalto.json",
-            "currentContentSHA256": "fcf6c23fa1c4f54f46f63351e7cb459f3c218615171ff9f1e9514565c06f832f",
-            "targetExists": true,
-            "currentTargetContent": {
-              "tiedosto": "",
-              "lyhyt": "",
-              "selite": "",
-              "lahde": ""
-            },
-            "visualObservation": "Katsoin alkuperäisen kokoisen JPEGin sekä oikean rannan ihmisten 1:1-rajauksen. Luonnonsaaren kaksi mäkeä näkyvät vasemmalla meren takana; etualalla Fernão Diasin ranta, palmut ja kasvillisuus. Ihmiset ovat kaukana, pienet kasvomassat ilman luettavia yksilöiviä piirteitä. Muutama tavallinen rantakäytön rakennus ja laituriosa sivuosassa, ei taideteospääaihetta. Saaren huipun aivan pieni rakenne ei muodosta pääaiheista rakennusjäljennöstä. Ei lisättyä tekstiä, logoa, vesileimaa tai kehystä.",
-            "reviewedAt": "2026-10-12T20:15:13.237353+00:00",
-            "pixelsViewed": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/saotome/cc-work/60699a8ace27da82-preview.jpg",
-            "pixelSHA256": "d69ff47743485c0ba49a72d329c6684874725803dcbab415f77ac7e70d46c2df",
-            "sourceEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/saotome/cc-work/60699a8ace27da82.html",
-            "sourceMetadata": {
-              "author": [
-                "Ji-Elle"
-              ],
-              "licenses": [
-                "CC BY-SA 4.0"
-              ],
-              "dimensions": [
-                5472,
-                3648
-              ],
-              "sourceSHA256": "7fd038128dca7db4726130a1740425b95e859400d1f31f97a032ce2870ebe436"
-            },
-            "sourceLicenseLinks": [
-              "//creativecommons.org/licenses/by-sa/4.0/deed.en",
-              "https://creativecommons.org/share-your-work/licensing-considerations/compatible-licenses",
-              "https://creativecommons.org/publicdomain/zero/1.0/",
-              "https://creativecommons.org/licenses/by-sa/4.0/"
-            ],
-            "sourceDescriptionExcerpt": "Descriptions\":{\"search\":true,\"watchlist\":true,\"tagline\":true,\"nearby\":true},\"wgWMESchemaEditAttemptStepOversample\":false,\"wgWMEPageLength\":400,\"wbUserPreferredContentLanguages\":[\"en\"],\"wbUserSpecifiedLanguages\":[\"en\"],\"wbCopyright\":{\"version\":\"wikibase-1\",\"messageHtml\":\"By clicking \\\"publish\\\", you agree to the \\u003Ca href=\\\"/wiki/Commons:Copyrights\\\" class=\\\"mw-redirect\\\" title=\\\"Commons:Copyrights\\\"\\u003Eterms of use\\u003C/a\\u003E, and you irrevocably agree to release your contribution under the \\u003Ca rel=\\\"nofollow\\\" class=\\\"external text\\\" href=\\\"https://creativecommons.org/publicdomain/zero/1.0/\\\"\\u003ECreative Commons CC0 License\\u003C/a\\u003E.\"},\"wbBadgeItems\":[],\"wbMultiLingualStringLimit\":250,\"wbTaintedReferencesEnabled\":false,\"wbEntityId\":\"M76550807\",\"wgEditSubmitButtonLabelPublish\":true,\"wgTestKitchenUserExperiments\":{\"overrides\":[],\"enrolled\":[],\"assigned\":[],\"subject_ids\":[]},\"upwizPropertyTitles\":{\"P180\":\"Main subjects visible in this work\"},\"upwizPropertyPlaceholders\"",
-            "sourceDateExcerpt": "DateFormat\":\"dmy\",\"wgMonthNames\":[\"\",\"January\",\"February\",\"March\",\"April\",\"May\",\"June\",\"July\",\"August\",\"September\",\"October\",\"November\",\"December\"],\"wgRequestId\":\"6c38c009-abc1-4255-a0f3-c2d07f1288d0\",\"wgCanonicalNamespace\":\"File\",\"wgCanonicalSpecialPageName\":false,\"wgNamespaceNumber\":6,\"wgPageName\":\"File:Ilhéu_das_Cabras_depuis_Fernão_Dias_à_São_Tomé_(1).jpg\",\"wgTitle\":\"Ilhéu das Cabras depuis Fernão Dias à São Tomé (1).jpg\",\"wgCurRevisionId\":1191751447,\"wgRevisionId\":1191751447,\"wgArticleId\":76550807,\"wgIsArticle\":true,\"wgIsRedirect\":false,\"wgAction\":\"view\",\"wgUserName\":null,\"wgUserGroups\":[\"*\"],\"wgCategories\":[\"CC-BY-SA-4.0\",\"Self-published work\",\"Ilhéu das Cabras\",\"Beaches of Fernão Dias (São Tomé and Príncipe)\"],\"wgPageViewLanguage\":\"en\",\"wgPageContentLanguage\":\"en\",\"wgPageContentModel\":\"wikitext\",\"wgRelevantPageName\":\"File:Ilhéu_das_Cabras_depuis_Fernão_Dias_à_São_Tomé_(1).jpg\",\"wgRelevantArticleId\":76550807,\"wgTempUserName\":null,\"wgIsProbablyEditable\":true,\"wgRelevantPageIsProba",
-            "sourceAuthorExcerpt": "Author Ji-Elle Licensing [ edit ] I, the copyright holder of this work, hereby publish it under the following license: This file is licensed under the Creative Commons Attribution-Share Alike 4.0 International license. You are free: to share – to copy, distribute and transmit the work to remix – to adapt the work Under the following conditions: attribution – You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use. share alike – If you remix, transform, or build upon the material, you must distribute your contributions under the same or compatible license as the original. https://creativecommons.org/licenses/by-sa/4.0 CC BY-SA 4.0 Creative Commons Attribution-Share Alike 4.0 true true File history Click on a date/time to view the file as it appeared at that time. Date/Time Thumbnail Dimensions User Comment current 13:00, 13 February 2",
-            "sourceLicensingExcerpt": "Licensing 4 File history 5 File usage on Commons 6 Metadata Toggle the table of contents File : Ilhéu das Cabras depuis Fernão Dias à São Tomé (1).jpg File Discussion English Read Edit View history Tools Tools move to sidebar hide Actions Read Edit View history General What links here Related changes Permanent link Page information Cite this page Get shortened URL Concept URI Print/export Download as PDF Printable version In other projects Appearance move to sidebar hide From Wikimedia Commons, the free media repository Size of this preview: 960 × 640 pixels . Other resolutions: 330 × 220 pixels | 1,280 × 853 pixels | 3,840 × 2,560 pixels . Original file (5,472 × 3,648 pixels, file size: 4.85 MB, MIME type: image/jpeg ) File information Structured data Captions Captions English Add a one-line explanation of what this file represents French Ilhéu das Cabras depuis Fernão Dias à São Tomé Summary [ edit ] Description Ilhéu das Cabras depuis Fernão Dias à São Tomé (1).jpg Français : Ilhéu ",
-            "sourceCameralocationExcerpt": null,
-            "actualDimensions": [
-              5472,
-              3648
-            ],
-            "photographedAt": "2019-01-27",
-            "sourceDescriptionExact": "Ilhéu das Cabras au large de Fernão Dias au nord de l'île de São Tomé.",
-            "inspectionEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/saotome/qa-evidence/ileu-shore-people-inspection.png",
-            "inspectionCropNative": [
-              3600,
-              1300,
-              5472,
-              1750
-            ],
-            "placeBoundary": "Depicted target is Ilhéu das Cabras; camera is on Fernão Dias beach. No landing/access promise or 1873 lighthouse claim.",
-            "depictedWorkAssessment": "Luonnonsaari, meri ja kasvillisuus pääaiheina. Arkiset pienet rantarakenteet sivuosassa; ei itsenäistä suojattua teospintaa tai nimettyä rakennusta päämotiivina.",
-            "currentContentVersionCheck": {
-              "reviewedContentSHA256": "fcf6c23fa1c4f54f46f63351e7cb459f3c218615171ff9f1e9514565c06f832f",
-              "currentContentSHA256": "e36dbd56f1336baa2ff4a3a76e2ec5d4c045dc562a2feaa9494595e66c23e818",
-              "checkedAt": "2026-10-13T05:48:16.863970+00:00",
-              "personallyViewedAgain": false,
-              "reviewedSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/c-integration/history/e06/saotome/fcf6c23fa1c4f54f46f63351e7cb459f3c218615171ff9f1e9514565c06f832f-sisalto.json",
-              "reviewedSnapshotSHA256": "fcf6c23fa1c4f54f46f63351e7cb459f3c218615171ff9f1e9514565c06f832f",
-              "matches": true,
-              "method": "exact archived content SHA and full nonmedia comparison",
-              "reviewedNonmediaSHA256": "4692bea5d3b54152a1f67eac5092bfb3e511e06b7b1518f8c203fa912536b9dd",
-              "currentNonmediaSHA256": "4692bea5d3b54152a1f67eac5092bfb3e511e06b7b1518f8c203fa912536b9dd",
-              "imageFieldsExcludedOnlyAtInventoriedSlots": true
-            },
-            "currentBindingMetadataCheck": {
-              "checkedAt": "2026-10-13T05:48:16.907701+00:00",
-              "contentSHA256": "e36dbd56f1336baa2ff4a3a76e2ec5d4c045dc562a2feaa9494595e66c23e818",
-              "commonsFile": "Ilhéu das Cabras depuis Fernão Dias à São Tomé (1).jpg",
-              "captionFi": "Ilhéu das Cabras näkyy Fernão Diasin rannalta.",
-              "credit": "Ji-Elle, Wikimedia Commons (CC BY-SA 4.0)",
-              "captionMatchesReviewed": true,
-              "personallyViewedAgain": false
-            }
-          },
-          "qaReason": "Aito Ilhéu das Cabrasin näkymä Fernão Diasin rannalta sopii N3-kohteeseen. Alkuperäinen Description nimeää sekä saaren että kuvauspaikan; kahden mäen profiili vastaa ajantasaista kohdetekstiä. Ji-Elle ja CC BY-SA 4.0 varmennettu lähdesivulta. Alkuperäiset 5472×3648 pikselit ja SHA täsmäävät. Rantahahmojen native-rajauksessa kasvonpiirteet eivät ole yksilöitäviä."
-        }
-      },
-      "luentaMetadata": {
-        "existingImageLuenta": null,
-        "captionReadingText": "Ilhéu das Cabras näkyy Fernão Diasin rannalta.",
-        "existingArticleAndSectionLuentaPreserved": true,
-        "audioGenerated": false,
-        "audioURL": null,
-        "imageSpecificAudioProvided": false,
-        "reuseAudioAllowedByThisPacket": false
-      },
-      "qaEvidence": {
-        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/saotome/qa.json",
-        "fileSHA256": "6b5fe83447472d9c4f7a9c5e5b21652e13c65dc420eeb05adfb4102c5936f9f2",
-        "item": {
-          "slot": "N3",
-          "targetJsonPath": "$.nahtavyydet[\"Ilhéu das Cabras\"].kuvat[0]",
-          "commonsFile": "Ilhéu das Cabras depuis Fernão Dias à São Tomé (1).jpg",
-          "verdict": "accepted",
-          "reason": "Aito Ilhéu das Cabrasin näkymä Fernão Diasin rannalta sopii N3-kohteeseen. Alkuperäinen Description nimeää sekä saaren että kuvauspaikan; kahden mäen profiili vastaa ajantasaista kohdetekstiä. Ji-Elle ja CC BY-SA 4.0 varmennettu lähdesivulta. Alkuperäiset 5472×3648 pikselit ja SHA täsmäävät. Rantahahmojen native-rajauksessa kasvonpiirteet eivät ole yksilöitäviä.",
-          "evidence": {
-            "manifestPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/saotome/cc-selection.json",
-            "candidateSnapshot": {
-              "commonsFile": "Ilhéu das Cabras depuis Fernão Dias à São Tomé (1).jpg",
-              "sourcePage": "https://commons.wikimedia.org/wiki/File:Ilh%C3%A9u_das_Cabras_depuis_Fern%C3%A3o_Dias_%C3%A0_S%C3%A3o_Tom%C3%A9_(1).jpg",
-              "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Ilh%C3%A9u_das_Cabras_depuis_Fern%C3%A3o_Dias_%C3%A0_S%C3%A3o_Tom%C3%A9_%281%29.jpg",
-              "author": "Ji-Elle",
-              "license": "CC BY-SA 4.0",
-              "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
-              "width": 5472,
-              "height": 3648,
-              "slot": "N3",
-              "targetJsonPath": "$.nahtavyydet[\"Ilhéu das Cabras\"].kuvat[0]",
-              "type": "commons",
-              "captionFi": "Ilhéu das Cabras näkyy Fernão Diasin rannalta.",
-              "rightsEvidence": "Author Ji-Elle, Own work ja CC BY-SA 4.0 luettu tiedostosivulta. Description nimeää Ilhéu das Cabrasin sekä kuvauspaikan Fernão Dias São Tomén saaren pohjoisrannalla. N3:n luonnonsaari näkyy taustalla ja lähde paikantaa sen nimenomaisesti, ei arvata toisesta maasta. Luonnonmeri, ranta ja elävä kasvillisuus pääaiheina; pienet tavalliset puu-/kattorakenteet sivuosia, ei tunnistettavaa suojattua teosta.",
-              "reviewState": "candidate",
-              "dateCaptured": "27 January 2019, 11:44:30",
-              "authorFieldSource": "Author table",
-              "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/saotome/cc-work/60699a8ace27da82-preview.jpg",
-              "sha256": "d69ff47743485c0ba49a72d329c6684874725803dcbab415f77ac7e70d46c2df",
-              "visualReview": "Katsottu natiivi5472x3648: Ilhéu das Cabrasin kaksikyttyräinen profiili vasemmalla, Fernão Diasin ranta ja palmut edessä. Etäiset henkilöt aivan pieniä, kasvonpiirteet eivät erotu. Ei lisättyä tekstiä, logoa, leimaa tai kehystä. Caption erottaa kohteen ja kuvauspaikan. Kuvaus27.1.2019, ei tuoreeksi opaskuvaksi nimetty.",
-              "sourceHtmlPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/saotome/cc-work/60699a8ace27da82.html",
-              "claimRecord": "/Volumes/T7 4TB/ChatGPT-Codex-active/coordination/paakaupungit-claims/08391cff28146b17/e06/saotome/N3/owner.json"
-            },
-            "candidateFingerprintSHA256": "eb8277d6f902601acafc04d6e49af574829bf7debe54f2a4591ceeee4455e870",
-            "currentContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/saotome/sisalto.json",
-            "currentContentSHA256": "fcf6c23fa1c4f54f46f63351e7cb459f3c218615171ff9f1e9514565c06f832f",
-            "targetExists": true,
-            "currentTargetContent": {
-              "tiedosto": "",
-              "lyhyt": "",
-              "selite": "",
-              "lahde": ""
-            },
-            "visualObservation": "Katsoin alkuperäisen kokoisen JPEGin sekä oikean rannan ihmisten 1:1-rajauksen. Luonnonsaaren kaksi mäkeä näkyvät vasemmalla meren takana; etualalla Fernão Diasin ranta, palmut ja kasvillisuus. Ihmiset ovat kaukana, pienet kasvomassat ilman luettavia yksilöiviä piirteitä. Muutama tavallinen rantakäytön rakennus ja laituriosa sivuosassa, ei taideteospääaihetta. Saaren huipun aivan pieni rakenne ei muodosta pääaiheista rakennusjäljennöstä. Ei lisättyä tekstiä, logoa, vesileimaa tai kehystä.",
-            "reviewedAt": "2026-10-12T20:15:13.237353+00:00",
-            "pixelsViewed": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/saotome/cc-work/60699a8ace27da82-preview.jpg",
-            "pixelSHA256": "d69ff47743485c0ba49a72d329c6684874725803dcbab415f77ac7e70d46c2df",
-            "sourceEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/saotome/cc-work/60699a8ace27da82.html",
-            "sourceMetadata": {
-              "author": [
-                "Ji-Elle"
-              ],
-              "licenses": [
-                "CC BY-SA 4.0"
-              ],
-              "dimensions": [
-                5472,
-                3648
-              ],
-              "sourceSHA256": "7fd038128dca7db4726130a1740425b95e859400d1f31f97a032ce2870ebe436"
-            },
-            "sourceLicenseLinks": [
-              "//creativecommons.org/licenses/by-sa/4.0/deed.en",
-              "https://creativecommons.org/share-your-work/licensing-considerations/compatible-licenses",
-              "https://creativecommons.org/publicdomain/zero/1.0/",
-              "https://creativecommons.org/licenses/by-sa/4.0/"
-            ],
-            "sourceDescriptionExcerpt": "Descriptions\":{\"search\":true,\"watchlist\":true,\"tagline\":true,\"nearby\":true},\"wgWMESchemaEditAttemptStepOversample\":false,\"wgWMEPageLength\":400,\"wbUserPreferredContentLanguages\":[\"en\"],\"wbUserSpecifiedLanguages\":[\"en\"],\"wbCopyright\":{\"version\":\"wikibase-1\",\"messageHtml\":\"By clicking \\\"publish\\\", you agree to the \\u003Ca href=\\\"/wiki/Commons:Copyrights\\\" class=\\\"mw-redirect\\\" title=\\\"Commons:Copyrights\\\"\\u003Eterms of use\\u003C/a\\u003E, and you irrevocably agree to release your contribution under the \\u003Ca rel=\\\"nofollow\\\" class=\\\"external text\\\" href=\\\"https://creativecommons.org/publicdomain/zero/1.0/\\\"\\u003ECreative Commons CC0 License\\u003C/a\\u003E.\"},\"wbBadgeItems\":[],\"wbMultiLingualStringLimit\":250,\"wbTaintedReferencesEnabled\":false,\"wbEntityId\":\"M76550807\",\"wgEditSubmitButtonLabelPublish\":true,\"wgTestKitchenUserExperiments\":{\"overrides\":[],\"enrolled\":[],\"assigned\":[],\"subject_ids\":[]},\"upwizPropertyTitles\":{\"P180\":\"Main subjects visible in this work\"},\"upwizPropertyPlaceholders\"",
-            "sourceDateExcerpt": "DateFormat\":\"dmy\",\"wgMonthNames\":[\"\",\"January\",\"February\",\"March\",\"April\",\"May\",\"June\",\"July\",\"August\",\"September\",\"October\",\"November\",\"December\"],\"wgRequestId\":\"6c38c009-abc1-4255-a0f3-c2d07f1288d0\",\"wgCanonicalNamespace\":\"File\",\"wgCanonicalSpecialPageName\":false,\"wgNamespaceNumber\":6,\"wgPageName\":\"File:Ilhéu_das_Cabras_depuis_Fernão_Dias_à_São_Tomé_(1).jpg\",\"wgTitle\":\"Ilhéu das Cabras depuis Fernão Dias à São Tomé (1).jpg\",\"wgCurRevisionId\":1191751447,\"wgRevisionId\":1191751447,\"wgArticleId\":76550807,\"wgIsArticle\":true,\"wgIsRedirect\":false,\"wgAction\":\"view\",\"wgUserName\":null,\"wgUserGroups\":[\"*\"],\"wgCategories\":[\"CC-BY-SA-4.0\",\"Self-published work\",\"Ilhéu das Cabras\",\"Beaches of Fernão Dias (São Tomé and Príncipe)\"],\"wgPageViewLanguage\":\"en\",\"wgPageContentLanguage\":\"en\",\"wgPageContentModel\":\"wikitext\",\"wgRelevantPageName\":\"File:Ilhéu_das_Cabras_depuis_Fernão_Dias_à_São_Tomé_(1).jpg\",\"wgRelevantArticleId\":76550807,\"wgTempUserName\":null,\"wgIsProbablyEditable\":true,\"wgRelevantPageIsProba",
-            "sourceAuthorExcerpt": "Author Ji-Elle Licensing [ edit ] I, the copyright holder of this work, hereby publish it under the following license: This file is licensed under the Creative Commons Attribution-Share Alike 4.0 International license. You are free: to share – to copy, distribute and transmit the work to remix – to adapt the work Under the following conditions: attribution – You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use. share alike – If you remix, transform, or build upon the material, you must distribute your contributions under the same or compatible license as the original. https://creativecommons.org/licenses/by-sa/4.0 CC BY-SA 4.0 Creative Commons Attribution-Share Alike 4.0 true true File history Click on a date/time to view the file as it appeared at that time. Date/Time Thumbnail Dimensions User Comment current 13:00, 13 February 2",
-            "sourceLicensingExcerpt": "Licensing 4 File history 5 File usage on Commons 6 Metadata Toggle the table of contents File : Ilhéu das Cabras depuis Fernão Dias à São Tomé (1).jpg File Discussion English Read Edit View history Tools Tools move to sidebar hide Actions Read Edit View history General What links here Related changes Permanent link Page information Cite this page Get shortened URL Concept URI Print/export Download as PDF Printable version In other projects Appearance move to sidebar hide From Wikimedia Commons, the free media repository Size of this preview: 960 × 640 pixels . Other resolutions: 330 × 220 pixels | 1,280 × 853 pixels | 3,840 × 2,560 pixels . Original file (5,472 × 3,648 pixels, file size: 4.85 MB, MIME type: image/jpeg ) File information Structured data Captions Captions English Add a one-line explanation of what this file represents French Ilhéu das Cabras depuis Fernão Dias à São Tomé Summary [ edit ] Description Ilhéu das Cabras depuis Fernão Dias à São Tomé (1).jpg Français : Ilhéu ",
-            "sourceCameralocationExcerpt": null,
-            "actualDimensions": [
-              5472,
-              3648
-            ],
-            "photographedAt": "2019-01-27",
-            "sourceDescriptionExact": "Ilhéu das Cabras au large de Fernão Dias au nord de l'île de São Tomé.",
-            "inspectionEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/saotome/qa-evidence/ileu-shore-people-inspection.png",
-            "inspectionCropNative": [
-              3600,
-              1300,
-              5472,
-              1750
-            ],
-            "placeBoundary": "Depicted target is Ilhéu das Cabras; camera is on Fernão Dias beach. No landing/access promise or 1873 lighthouse claim.",
-            "depictedWorkAssessment": "Luonnonsaari, meri ja kasvillisuus pääaiheina. Arkiset pienet rantarakenteet sivuosassa; ei itsenäistä suojattua teospintaa tai nimettyä rakennusta päämotiivina.",
-            "currentContentVersionCheck": {
-              "reviewedContentSHA256": "fcf6c23fa1c4f54f46f63351e7cb459f3c218615171ff9f1e9514565c06f832f",
-              "currentContentSHA256": "e36dbd56f1336baa2ff4a3a76e2ec5d4c045dc562a2feaa9494595e66c23e818",
-              "checkedAt": "2026-10-13T05:48:16.863970+00:00",
-              "personallyViewedAgain": false,
-              "reviewedSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/c-integration/history/e06/saotome/fcf6c23fa1c4f54f46f63351e7cb459f3c218615171ff9f1e9514565c06f832f-sisalto.json",
-              "reviewedSnapshotSHA256": "fcf6c23fa1c4f54f46f63351e7cb459f3c218615171ff9f1e9514565c06f832f",
-              "matches": true,
-              "method": "exact archived content SHA and full nonmedia comparison",
-              "reviewedNonmediaSHA256": "4692bea5d3b54152a1f67eac5092bfb3e511e06b7b1518f8c203fa912536b9dd",
-              "currentNonmediaSHA256": "4692bea5d3b54152a1f67eac5092bfb3e511e06b7b1518f8c203fa912536b9dd",
-              "imageFieldsExcludedOnlyAtInventoriedSlots": true
-            },
-            "currentBindingMetadataCheck": {
-              "checkedAt": "2026-10-13T05:48:16.907701+00:00",
-              "contentSHA256": "e36dbd56f1336baa2ff4a3a76e2ec5d4c045dc562a2feaa9494595e66c23e818",
-              "commonsFile": "Ilhéu das Cabras depuis Fernão Dias à São Tomé (1).jpg",
-              "captionFi": "Ilhéu das Cabras näkyy Fernão Diasin rannalta.",
-              "credit": "Ji-Elle, Wikimedia Commons (CC BY-SA 4.0)",
-              "captionMatchesReviewed": true,
-              "personallyViewedAgain": false
-            }
-          },
-          "reviewedAt": "2026-10-12T20:15:13.287919+00:00",
-          "sha256": "d69ff47743485c0ba49a72d329c6684874725803dcbab415f77ac7e70d46c2df"
-        },
-        "allSources": [
-          {
-            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/saotome/qa.json",
-            "sha256": "6b5fe83447472d9c4f7a9c5e5b21652e13c65dc420eeb05adfb4102c5936f9f2"
-          },
-          {
-            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/saotome/illustration-qa-extra.json",
-            "sha256": "76f7ede5adfe6ab84293755212b546a8c6990f4095fe54876e1e2e47d21a2d68"
-          }
-        ]
-      },
-      "R2ByteVerification": {
-        "era": "e06",
-        "city": "saotome",
-        "slot": "N3",
-        "targetJsonPath": "$.nahtavyydet[\"Ilhéu das Cabras\"].kuvat[0]",
-        "commonsFile": "Ilhéu das Cabras depuis Fernão Dias à São Tomé (1).jpg",
-        "sha256": "d69ff47743485c0ba49a72d329c6684874725803dcbab415f77ac7e70d46c2df",
-        "sourcePage": "https://commons.wikimedia.org/wiki/File:Ilh%C3%A9u_das_Cabras_depuis_Fern%C3%A3o_Dias_%C3%A0_S%C3%A3o_Tom%C3%A9_(1).jpg",
-        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Ilh%C3%A9u_das_Cabras_depuis_Fern%C3%A3o_Dias_%C3%A0_S%C3%A3o_Tom%C3%A9_%281%29.jpg",
-        "author": "Ji-Elle",
-        "license": "CC BY-SA 4.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
-        "width": 5472,
-        "height": 3648,
-        "originalSHA256": "d69ff47743485c0ba49a72d329c6684874725803dcbab415f77ac7e70d46c2df",
-        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e06/saotome/n3-d69ff47743485c0ba49a.jpg",
-        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e06/saotome/n3-d69ff47743485c0ba49a.jpg",
-        "bytes": 5088962,
-        "http": 200,
-        "mime": "image/jpeg",
-        "cors": "https://matkakirja.app",
-        "byteExactReadback": true,
-        "canonicalReadbackByteExact": true,
-        "conditionalIfNoneMatch": "*",
-        "s3PutHttp": 200,
-        "verifiedAt": "2026-10-12T20:15:51.721689+00:00",
-        "ownerAcceptanceVerified": false,
-        "gameIntegrated": false,
-        "attributionSource": "current-exact-QA-and-source-manifest"
-      },
-      "producerExportProof": null,
-      "technicalExportProof": null,
-      "priorMediaFields": {
-        "tiedosto": "Ilhéu das Cabras depuis Fernão Dias à São Tomé (1).jpg",
-        "lahde": "Ji-Elle, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Ilhéu das Cabras näkyy Fernão Diasin rannalta.",
-        "lyhyt": "Ilhéu das Cabras näkyy Fernão Diasin rannalta."
-      },
-      "preservePreviousMediaObjects": true,
-      "authorization": {
-        "status": "waived-owner-review",
-        "authorizedByOwner": true,
-        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
-        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
-        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
-        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
-        "ownerAcceptanceImplied": false,
-        "QARequired": true,
-        "R2ByteVerificationRequired": true,
-        "galleryBeforeGameRequired": false,
-        "verifiedHumanMessageSource": {
-          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
-          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
-        }
-      },
-      "ownerAcceptanceVerified": false,
-      "gameIntegrated": false,
-      "gamePublicationVerified": false,
-      "inMemoryMergeVerified": true,
-      "CcommonsMetadataBound": true,
-      "CcommonsFieldPayload": {
-        "lahde": "Ji-Elle, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Ilhéu das Cabras näkyy Fernão Diasin rannalta.",
-        "lyhyt": "Ilhéu das Cabras näkyy Fernão Diasin rannalta.",
-        "tiedosto": "Ilhéu das Cabras depuis Fernão Dias à São Tomé (1).jpg"
-      },
-      "roleManifestBound": true,
-      "sourceContentAfterSHA256": "072ecd7cba3831c781aba16ffcc2cce37491eb78b7d08db1054803888dc3aa6f",
-      "targetAfterSHA256": "f5d5b7130257a4c58548c7831aca565fc791cb01e11a6daa789a3d12bbdc54e0",
-      "contextAfterSHA256": "190be8b73f3026d4827af7bb20dc7b678bb561532d7199fea76c15cb0b911089"
+      "contextAfterSHA256": "97623b35fb442efdfb1e5f322243041cc24624f2dacb559c48c754886222b539",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e06",
@@ -2786,10 +3198,10 @@
         2448
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/saotome/sisalto.json",
-      "sourceContentSHA256": "e36dbd56f1336baa2ff4a3a76e2ec5d4c045dc562a2feaa9494595e66c23e818",
+      "sourceContentSHA256": "072ecd7cba3831c781aba16ffcc2cce37491eb78b7d08db1054803888dc3aa6f",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "b3adffc1e02ac99850833796fd6edcd8f098109d9e788df1201fd0404f6feb08",
-        "semanticContextSHA256": "b3adffc1e02ac99850833796fd6edcd8f098109d9e788df1201fd0404f6feb08",
+        "targetBeforeSHA256": "303c801566c03687b58607ddd327fc9b20ad74ecb537f13ebb4d51325c1ade9c",
+        "semanticContextSHA256": "303c801566c03687b58607ddd327fc9b20ad74ecb537f13ebb4d51325c1ade9c",
         "subjectTitle": "Lahti pitää kaupunkia sylissä",
         "targetState": "existing-target"
       },
@@ -2895,6 +3307,28 @@
               ],
               "targetTopic": "Ana Chavesin lahti São Tomén kaupungin äärellä",
               "sourceHasDescription": false
+            },
+            "currentContentVersionCheck": {
+              "reviewedContentSHA256": "e36dbd56f1336baa2ff4a3a76e2ec5d4c045dc562a2feaa9494595e66c23e818",
+              "currentContentSHA256": "072ecd7cba3831c781aba16ffcc2cce37491eb78b7d08db1054803888dc3aa6f",
+              "checkedAt": "2026-10-13T14:14:45.868138+00:00",
+              "personallyViewedAgain": false,
+              "reviewedSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/c-integration/history/e06/saotome/e36dbd56f1336baa2ff4a3a76e2ec5d4c045dc562a2feaa9494595e66c23e818-sisalto.json",
+              "reviewedSnapshotSHA256": "e36dbd56f1336baa2ff4a3a76e2ec5d4c045dc562a2feaa9494595e66c23e818",
+              "matches": true,
+              "method": "exact archived content SHA and full nonmedia comparison",
+              "reviewedNonmediaSHA256": "4692bea5d3b54152a1f67eac5092bfb3e511e06b7b1518f8c203fa912536b9dd",
+              "currentNonmediaSHA256": "4692bea5d3b54152a1f67eac5092bfb3e511e06b7b1518f8c203fa912536b9dd",
+              "imageFieldsExcludedOnlyAtInventoriedSlots": true
+            },
+            "currentBindingMetadataCheck": {
+              "checkedAt": "2026-10-13T14:14:45.872465+00:00",
+              "contentSHA256": "072ecd7cba3831c781aba16ffcc2cce37491eb78b7d08db1054803888dc3aa6f",
+              "commonsFile": "São Tome (32729048862).jpg",
+              "captionFi": "Venehylyt lepäävät Ana Chavesin lahden vedessä São Tomén kaupungin edustalla vuonna 2017.",
+              "credit": "Ben Sutherland from Crystal Palace, London, UK, Wikimedia Commons (CC BY 2.0)",
+              "captionMatchesReviewed": true,
+              "personallyViewedAgain": false
             }
           },
           "qaReason": "Ana Chavesin lahden todellinen valokuva vastaa K1:n lahti- ja satama-aihetta. Tiedostosivun Author Ben Sutherland, CC BY 2.0, Flickr-lisenssitarkistus, vuoden 2017 kuvauspäivä ja lahteen sidotut koordinaatit/kategoriat tarkistettu. Muuttamaton 3264×2448 alkuperäinen ja SHA varmistettu."
@@ -2911,7 +3345,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/saotome/qa.json",
-        "fileSHA256": "6b5fe83447472d9c4f7a9c5e5b21652e13c65dc420eeb05adfb4102c5936f9f2",
+        "fileSHA256": "2aa17f97234828a3f57edf815faed1c6dd55e861c1c33cf0a67f8f573e9a25b2",
         "item": {
           "slot": "K1",
           "targetJsonPath": "$.kaupunkilehti[0].nostot[0]",
@@ -3012,6 +3446,28 @@
               ],
               "targetTopic": "Ana Chavesin lahti São Tomén kaupungin äärellä",
               "sourceHasDescription": false
+            },
+            "currentContentVersionCheck": {
+              "reviewedContentSHA256": "e36dbd56f1336baa2ff4a3a76e2ec5d4c045dc562a2feaa9494595e66c23e818",
+              "currentContentSHA256": "072ecd7cba3831c781aba16ffcc2cce37491eb78b7d08db1054803888dc3aa6f",
+              "checkedAt": "2026-10-13T14:14:45.868138+00:00",
+              "personallyViewedAgain": false,
+              "reviewedSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/c-integration/history/e06/saotome/e36dbd56f1336baa2ff4a3a76e2ec5d4c045dc562a2feaa9494595e66c23e818-sisalto.json",
+              "reviewedSnapshotSHA256": "e36dbd56f1336baa2ff4a3a76e2ec5d4c045dc562a2feaa9494595e66c23e818",
+              "matches": true,
+              "method": "exact archived content SHA and full nonmedia comparison",
+              "reviewedNonmediaSHA256": "4692bea5d3b54152a1f67eac5092bfb3e511e06b7b1518f8c203fa912536b9dd",
+              "currentNonmediaSHA256": "4692bea5d3b54152a1f67eac5092bfb3e511e06b7b1518f8c203fa912536b9dd",
+              "imageFieldsExcludedOnlyAtInventoriedSlots": true
+            },
+            "currentBindingMetadataCheck": {
+              "checkedAt": "2026-10-13T14:14:45.872465+00:00",
+              "contentSHA256": "072ecd7cba3831c781aba16ffcc2cce37491eb78b7d08db1054803888dc3aa6f",
+              "commonsFile": "São Tome (32729048862).jpg",
+              "captionFi": "Venehylyt lepäävät Ana Chavesin lahden vedessä São Tomén kaupungin edustalla vuonna 2017.",
+              "credit": "Ben Sutherland from Crystal Palace, London, UK, Wikimedia Commons (CC BY 2.0)",
+              "captionMatchesReviewed": true,
+              "personallyViewedAgain": false
             }
           },
           "reviewedAt": "2026-10-12T21:00:59.522030+00:00",
@@ -3020,11 +3476,11 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/saotome/qa.json",
-            "sha256": "6b5fe83447472d9c4f7a9c5e5b21652e13c65dc420eeb05adfb4102c5936f9f2"
+            "sha256": "2aa17f97234828a3f57edf815faed1c6dd55e861c1c33cf0a67f8f573e9a25b2"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/saotome/illustration-qa-extra.json",
-            "sha256": "76f7ede5adfe6ab84293755212b546a8c6990f4095fe54876e1e2e47d21a2d68"
+            "sha256": "a2309676afa4b7b5029aa86559f81e6c4a499814a9cee063650d6d3372b75ad2"
           }
         ]
       },
@@ -3061,10 +3517,10 @@
       "producerExportProof": null,
       "technicalExportProof": null,
       "priorMediaFields": {
-        "tiedosto": "",
-        "lahde": "",
-        "selite": "",
-        "lyhyt": ""
+        "tiedosto": "São Tome (32729048862).jpg",
+        "lahde": "Ben Sutherland from Crystal Palace, London, UK, Wikimedia Commons (CC BY 2.0)",
+        "selite": "Venehylyt lepäävät Ana Chavesin lahden vedessä São Tomén kaupungin edustalla vuonna 2017.",
+        "lyhyt": "Venehylyt lepäävät Ana Chavesin lahden vedessä São Tomén kaupungin edustalla vuonna 2017."
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -3097,10 +3553,392 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "072ecd7cba3831c781aba16ffcc2cce37491eb78b7d08db1054803888dc3aa6f",
       "targetAfterSHA256": "303c801566c03687b58607ddd327fc9b20ad74ecb537f13ebb4d51325c1ade9c",
-      "contextAfterSHA256": "303c801566c03687b58607ddd327fc9b20ad74ecb537f13ebb4d51325c1ade9c"
+      "contextAfterSHA256": "303c801566c03687b58607ddd327fc9b20ad74ecb537f13ebb4d51325c1ade9c",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+    },
+    {
+      "era": "e06",
+      "city": "saotome",
+      "slot": "N3",
+      "type": "commons",
+      "assetID": "capital-cc-e06-saotome-n3-d69ff47743485c0b",
+      "galleryImageID": "capital-cc-e06-saotome-n3-d69ff47743485c0b",
+      "commonsFile": "Ilhéu das Cabras depuis Fernão Dias à São Tomé (1).jpg",
+      "targetJsonPath": "$.nahtavyydet[\"Ilhéu das Cabras\"].kuvat[0]",
+      "targetTokens": [
+        "nahtavyydet",
+        "Ilhéu das Cabras",
+        "kuvat",
+        0
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e06/saotome/n3-d69ff47743485c0ba49a.jpg",
+        "suora": true,
+        "lahde": "Ji-Elle, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Ilhéu das Cabras näkyy Fernão Diasin rannalta.",
+        "lyhyt": "Ilhéu das Cabras näkyy Fernão Diasin rannalta.",
+        "tiedosto": "Ilhéu das Cabras depuis Fernão Dias à São Tomé (1).jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Ji-Elle, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Ilhéu das Cabras näkyy Fernão Diasin rannalta.",
+        "lyhyt": "Ilhéu das Cabras näkyy Fernão Diasin rannalta.",
+        "tiedosto": "Ilhéu das Cabras depuis Fernão Dias à São Tomé (1).jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e06/saotome/n3-d69ff47743485c0ba49a.jpg",
+        "suora": true,
+        "lahde": "Ji-Elle, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Ilhéu das Cabras näkyy Fernão Diasin rannalta.",
+        "lyhyt": "Ilhéu das Cabras näkyy Fernão Diasin rannalta.",
+        "tiedosto": "Ilhéu das Cabras depuis Fernão Dias à São Tomé (1).jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "d69ff47743485c0ba49a72d329c6684874725803dcbab415f77ac7e70d46c2df",
+      "exportSHA256": "d69ff47743485c0ba49a72d329c6684874725803dcbab415f77ac7e70d46c2df",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e06/saotome/n3-d69ff47743485c0ba49a.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e06/saotome/n3-d69ff47743485c0ba49a.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/saotome/cc-work/60699a8ace27da82-preview.jpg",
+      "dimensions": [
+        5472,
+        3648
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/saotome/sisalto.json",
+      "sourceContentSHA256": "072ecd7cba3831c781aba16ffcc2cce37491eb78b7d08db1054803888dc3aa6f",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "f5d5b7130257a4c58548c7831aca565fc791cb01e11a6daa789a3d12bbdc54e0",
+        "semanticContextSHA256": "190be8b73f3026d4827af7bb20dc7b678bb561532d7199fea76c15cb0b911089",
+        "subjectTitle": "Ilhéu das Cabras",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Ji-Elle",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Ilh%C3%A9u_das_Cabras_depuis_Fern%C3%A3o_Dias_%C3%A0_S%C3%A3o_Tom%C3%A9_(1).jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Ilh%C3%A9u_das_Cabras_depuis_Fern%C3%A3o_Dias_%C3%A0_S%C3%A3o_Tom%C3%A9_%281%29.jpg",
+        "rightsEvidence": {
+          "selection": "Author Ji-Elle, Own work ja CC BY-SA 4.0 luettu tiedostosivulta. Description nimeää Ilhéu das Cabrasin sekä kuvauspaikan Fernão Dias São Tomén saaren pohjoisrannalla. N3:n luonnonsaari näkyy taustalla ja lähde paikantaa sen nimenomaisesti, ei arvata toisesta maasta. Luonnonmeri, ranta ja elävä kasvillisuus pääaiheina; pienet tavalliset puu-/kattorakenteet sivuosia, ei tunnistettavaa suojattua teosta.",
+          "QA": {
+            "manifestPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/saotome/cc-selection.json",
+            "candidateSnapshot": {
+              "commonsFile": "Ilhéu das Cabras depuis Fernão Dias à São Tomé (1).jpg",
+              "sourcePage": "https://commons.wikimedia.org/wiki/File:Ilh%C3%A9u_das_Cabras_depuis_Fern%C3%A3o_Dias_%C3%A0_S%C3%A3o_Tom%C3%A9_(1).jpg",
+              "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Ilh%C3%A9u_das_Cabras_depuis_Fern%C3%A3o_Dias_%C3%A0_S%C3%A3o_Tom%C3%A9_%281%29.jpg",
+              "author": "Ji-Elle",
+              "license": "CC BY-SA 4.0",
+              "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+              "width": 5472,
+              "height": 3648,
+              "slot": "N3",
+              "targetJsonPath": "$.nahtavyydet[\"Ilhéu das Cabras\"].kuvat[0]",
+              "type": "commons",
+              "captionFi": "Ilhéu das Cabras näkyy Fernão Diasin rannalta.",
+              "rightsEvidence": "Author Ji-Elle, Own work ja CC BY-SA 4.0 luettu tiedostosivulta. Description nimeää Ilhéu das Cabrasin sekä kuvauspaikan Fernão Dias São Tomén saaren pohjoisrannalla. N3:n luonnonsaari näkyy taustalla ja lähde paikantaa sen nimenomaisesti, ei arvata toisesta maasta. Luonnonmeri, ranta ja elävä kasvillisuus pääaiheina; pienet tavalliset puu-/kattorakenteet sivuosia, ei tunnistettavaa suojattua teosta.",
+              "reviewState": "candidate",
+              "dateCaptured": "27 January 2019, 11:44:30",
+              "authorFieldSource": "Author table",
+              "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/saotome/cc-work/60699a8ace27da82-preview.jpg",
+              "sha256": "d69ff47743485c0ba49a72d329c6684874725803dcbab415f77ac7e70d46c2df",
+              "visualReview": "Katsottu natiivi5472x3648: Ilhéu das Cabrasin kaksikyttyräinen profiili vasemmalla, Fernão Diasin ranta ja palmut edessä. Etäiset henkilöt aivan pieniä, kasvonpiirteet eivät erotu. Ei lisättyä tekstiä, logoa, leimaa tai kehystä. Caption erottaa kohteen ja kuvauspaikan. Kuvaus27.1.2019, ei tuoreeksi opaskuvaksi nimetty.",
+              "sourceHtmlPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/saotome/cc-work/60699a8ace27da82.html",
+              "claimRecord": "/Volumes/T7 4TB/ChatGPT-Codex-active/coordination/paakaupungit-claims/08391cff28146b17/e06/saotome/N3/owner.json"
+            },
+            "candidateFingerprintSHA256": "eb8277d6f902601acafc04d6e49af574829bf7debe54f2a4591ceeee4455e870",
+            "currentContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/saotome/sisalto.json",
+            "currentContentSHA256": "fcf6c23fa1c4f54f46f63351e7cb459f3c218615171ff9f1e9514565c06f832f",
+            "targetExists": true,
+            "currentTargetContent": {
+              "tiedosto": "",
+              "lyhyt": "",
+              "selite": "",
+              "lahde": ""
+            },
+            "visualObservation": "Katsoin alkuperäisen kokoisen JPEGin sekä oikean rannan ihmisten 1:1-rajauksen. Luonnonsaaren kaksi mäkeä näkyvät vasemmalla meren takana; etualalla Fernão Diasin ranta, palmut ja kasvillisuus. Ihmiset ovat kaukana, pienet kasvomassat ilman luettavia yksilöiviä piirteitä. Muutama tavallinen rantakäytön rakennus ja laituriosa sivuosassa, ei taideteospääaihetta. Saaren huipun aivan pieni rakenne ei muodosta pääaiheista rakennusjäljennöstä. Ei lisättyä tekstiä, logoa, vesileimaa tai kehystä.",
+            "reviewedAt": "2026-10-12T20:15:13.237353+00:00",
+            "pixelsViewed": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/saotome/cc-work/60699a8ace27da82-preview.jpg",
+            "pixelSHA256": "d69ff47743485c0ba49a72d329c6684874725803dcbab415f77ac7e70d46c2df",
+            "sourceEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/saotome/cc-work/60699a8ace27da82.html",
+            "sourceMetadata": {
+              "author": [
+                "Ji-Elle"
+              ],
+              "licenses": [
+                "CC BY-SA 4.0"
+              ],
+              "dimensions": [
+                5472,
+                3648
+              ],
+              "sourceSHA256": "7fd038128dca7db4726130a1740425b95e859400d1f31f97a032ce2870ebe436"
+            },
+            "sourceLicenseLinks": [
+              "//creativecommons.org/licenses/by-sa/4.0/deed.en",
+              "https://creativecommons.org/share-your-work/licensing-considerations/compatible-licenses",
+              "https://creativecommons.org/publicdomain/zero/1.0/",
+              "https://creativecommons.org/licenses/by-sa/4.0/"
+            ],
+            "sourceDescriptionExcerpt": "Descriptions\":{\"search\":true,\"watchlist\":true,\"tagline\":true,\"nearby\":true},\"wgWMESchemaEditAttemptStepOversample\":false,\"wgWMEPageLength\":400,\"wbUserPreferredContentLanguages\":[\"en\"],\"wbUserSpecifiedLanguages\":[\"en\"],\"wbCopyright\":{\"version\":\"wikibase-1\",\"messageHtml\":\"By clicking \\\"publish\\\", you agree to the \\u003Ca href=\\\"/wiki/Commons:Copyrights\\\" class=\\\"mw-redirect\\\" title=\\\"Commons:Copyrights\\\"\\u003Eterms of use\\u003C/a\\u003E, and you irrevocably agree to release your contribution under the \\u003Ca rel=\\\"nofollow\\\" class=\\\"external text\\\" href=\\\"https://creativecommons.org/publicdomain/zero/1.0/\\\"\\u003ECreative Commons CC0 License\\u003C/a\\u003E.\"},\"wbBadgeItems\":[],\"wbMultiLingualStringLimit\":250,\"wbTaintedReferencesEnabled\":false,\"wbEntityId\":\"M76550807\",\"wgEditSubmitButtonLabelPublish\":true,\"wgTestKitchenUserExperiments\":{\"overrides\":[],\"enrolled\":[],\"assigned\":[],\"subject_ids\":[]},\"upwizPropertyTitles\":{\"P180\":\"Main subjects visible in this work\"},\"upwizPropertyPlaceholders\"",
+            "sourceDateExcerpt": "DateFormat\":\"dmy\",\"wgMonthNames\":[\"\",\"January\",\"February\",\"March\",\"April\",\"May\",\"June\",\"July\",\"August\",\"September\",\"October\",\"November\",\"December\"],\"wgRequestId\":\"6c38c009-abc1-4255-a0f3-c2d07f1288d0\",\"wgCanonicalNamespace\":\"File\",\"wgCanonicalSpecialPageName\":false,\"wgNamespaceNumber\":6,\"wgPageName\":\"File:Ilhéu_das_Cabras_depuis_Fernão_Dias_à_São_Tomé_(1).jpg\",\"wgTitle\":\"Ilhéu das Cabras depuis Fernão Dias à São Tomé (1).jpg\",\"wgCurRevisionId\":1191751447,\"wgRevisionId\":1191751447,\"wgArticleId\":76550807,\"wgIsArticle\":true,\"wgIsRedirect\":false,\"wgAction\":\"view\",\"wgUserName\":null,\"wgUserGroups\":[\"*\"],\"wgCategories\":[\"CC-BY-SA-4.0\",\"Self-published work\",\"Ilhéu das Cabras\",\"Beaches of Fernão Dias (São Tomé and Príncipe)\"],\"wgPageViewLanguage\":\"en\",\"wgPageContentLanguage\":\"en\",\"wgPageContentModel\":\"wikitext\",\"wgRelevantPageName\":\"File:Ilhéu_das_Cabras_depuis_Fernão_Dias_à_São_Tomé_(1).jpg\",\"wgRelevantArticleId\":76550807,\"wgTempUserName\":null,\"wgIsProbablyEditable\":true,\"wgRelevantPageIsProba",
+            "sourceAuthorExcerpt": "Author Ji-Elle Licensing [ edit ] I, the copyright holder of this work, hereby publish it under the following license: This file is licensed under the Creative Commons Attribution-Share Alike 4.0 International license. You are free: to share – to copy, distribute and transmit the work to remix – to adapt the work Under the following conditions: attribution – You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use. share alike – If you remix, transform, or build upon the material, you must distribute your contributions under the same or compatible license as the original. https://creativecommons.org/licenses/by-sa/4.0 CC BY-SA 4.0 Creative Commons Attribution-Share Alike 4.0 true true File history Click on a date/time to view the file as it appeared at that time. Date/Time Thumbnail Dimensions User Comment current 13:00, 13 February 2",
+            "sourceLicensingExcerpt": "Licensing 4 File history 5 File usage on Commons 6 Metadata Toggle the table of contents File : Ilhéu das Cabras depuis Fernão Dias à São Tomé (1).jpg File Discussion English Read Edit View history Tools Tools move to sidebar hide Actions Read Edit View history General What links here Related changes Permanent link Page information Cite this page Get shortened URL Concept URI Print/export Download as PDF Printable version In other projects Appearance move to sidebar hide From Wikimedia Commons, the free media repository Size of this preview: 960 × 640 pixels . Other resolutions: 330 × 220 pixels | 1,280 × 853 pixels | 3,840 × 2,560 pixels . Original file (5,472 × 3,648 pixels, file size: 4.85 MB, MIME type: image/jpeg ) File information Structured data Captions Captions English Add a one-line explanation of what this file represents French Ilhéu das Cabras depuis Fernão Dias à São Tomé Summary [ edit ] Description Ilhéu das Cabras depuis Fernão Dias à São Tomé (1).jpg Français : Ilhéu ",
+            "sourceCameralocationExcerpt": null,
+            "actualDimensions": [
+              5472,
+              3648
+            ],
+            "photographedAt": "2019-01-27",
+            "sourceDescriptionExact": "Ilhéu das Cabras au large de Fernão Dias au nord de l'île de São Tomé.",
+            "inspectionEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/saotome/qa-evidence/ileu-shore-people-inspection.png",
+            "inspectionCropNative": [
+              3600,
+              1300,
+              5472,
+              1750
+            ],
+            "placeBoundary": "Depicted target is Ilhéu das Cabras; camera is on Fernão Dias beach. No landing/access promise or 1873 lighthouse claim.",
+            "depictedWorkAssessment": "Luonnonsaari, meri ja kasvillisuus pääaiheina. Arkiset pienet rantarakenteet sivuosassa; ei itsenäistä suojattua teospintaa tai nimettyä rakennusta päämotiivina.",
+            "currentContentVersionCheck": {
+              "reviewedContentSHA256": "fcf6c23fa1c4f54f46f63351e7cb459f3c218615171ff9f1e9514565c06f832f",
+              "currentContentSHA256": "072ecd7cba3831c781aba16ffcc2cce37491eb78b7d08db1054803888dc3aa6f",
+              "checkedAt": "2026-10-13T14:14:45.844727+00:00",
+              "personallyViewedAgain": false,
+              "reviewedSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/c-integration/history/e06/saotome/fcf6c23fa1c4f54f46f63351e7cb459f3c218615171ff9f1e9514565c06f832f-sisalto.json",
+              "reviewedSnapshotSHA256": "fcf6c23fa1c4f54f46f63351e7cb459f3c218615171ff9f1e9514565c06f832f",
+              "matches": true,
+              "method": "exact archived content SHA and full nonmedia comparison",
+              "reviewedNonmediaSHA256": "4692bea5d3b54152a1f67eac5092bfb3e511e06b7b1518f8c203fa912536b9dd",
+              "currentNonmediaSHA256": "4692bea5d3b54152a1f67eac5092bfb3e511e06b7b1518f8c203fa912536b9dd",
+              "imageFieldsExcludedOnlyAtInventoriedSlots": true
+            },
+            "currentBindingMetadataCheck": {
+              "checkedAt": "2026-10-13T14:14:45.868124+00:00",
+              "contentSHA256": "072ecd7cba3831c781aba16ffcc2cce37491eb78b7d08db1054803888dc3aa6f",
+              "commonsFile": "Ilhéu das Cabras depuis Fernão Dias à São Tomé (1).jpg",
+              "captionFi": "Ilhéu das Cabras näkyy Fernão Diasin rannalta.",
+              "credit": "Ji-Elle, Wikimedia Commons (CC BY-SA 4.0)",
+              "captionMatchesReviewed": true,
+              "personallyViewedAgain": false
+            }
+          },
+          "qaReason": "Aito Ilhéu das Cabrasin näkymä Fernão Diasin rannalta sopii N3-kohteeseen. Alkuperäinen Description nimeää sekä saaren että kuvauspaikan; kahden mäen profiili vastaa ajantasaista kohdetekstiä. Ji-Elle ja CC BY-SA 4.0 varmennettu lähdesivulta. Alkuperäiset 5472×3648 pikselit ja SHA täsmäävät. Rantahahmojen native-rajauksessa kasvonpiirteet eivät ole yksilöitäviä."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Ilhéu das Cabras näkyy Fernão Diasin rannalta.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/saotome/qa.json",
+        "fileSHA256": "2aa17f97234828a3f57edf815faed1c6dd55e861c1c33cf0a67f8f573e9a25b2",
+        "item": {
+          "slot": "N3",
+          "targetJsonPath": "$.nahtavyydet[\"Ilhéu das Cabras\"].kuvat[0]",
+          "commonsFile": "Ilhéu das Cabras depuis Fernão Dias à São Tomé (1).jpg",
+          "verdict": "accepted",
+          "reason": "Aito Ilhéu das Cabrasin näkymä Fernão Diasin rannalta sopii N3-kohteeseen. Alkuperäinen Description nimeää sekä saaren että kuvauspaikan; kahden mäen profiili vastaa ajantasaista kohdetekstiä. Ji-Elle ja CC BY-SA 4.0 varmennettu lähdesivulta. Alkuperäiset 5472×3648 pikselit ja SHA täsmäävät. Rantahahmojen native-rajauksessa kasvonpiirteet eivät ole yksilöitäviä.",
+          "evidence": {
+            "manifestPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/saotome/cc-selection.json",
+            "candidateSnapshot": {
+              "commonsFile": "Ilhéu das Cabras depuis Fernão Dias à São Tomé (1).jpg",
+              "sourcePage": "https://commons.wikimedia.org/wiki/File:Ilh%C3%A9u_das_Cabras_depuis_Fern%C3%A3o_Dias_%C3%A0_S%C3%A3o_Tom%C3%A9_(1).jpg",
+              "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Ilh%C3%A9u_das_Cabras_depuis_Fern%C3%A3o_Dias_%C3%A0_S%C3%A3o_Tom%C3%A9_%281%29.jpg",
+              "author": "Ji-Elle",
+              "license": "CC BY-SA 4.0",
+              "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+              "width": 5472,
+              "height": 3648,
+              "slot": "N3",
+              "targetJsonPath": "$.nahtavyydet[\"Ilhéu das Cabras\"].kuvat[0]",
+              "type": "commons",
+              "captionFi": "Ilhéu das Cabras näkyy Fernão Diasin rannalta.",
+              "rightsEvidence": "Author Ji-Elle, Own work ja CC BY-SA 4.0 luettu tiedostosivulta. Description nimeää Ilhéu das Cabrasin sekä kuvauspaikan Fernão Dias São Tomén saaren pohjoisrannalla. N3:n luonnonsaari näkyy taustalla ja lähde paikantaa sen nimenomaisesti, ei arvata toisesta maasta. Luonnonmeri, ranta ja elävä kasvillisuus pääaiheina; pienet tavalliset puu-/kattorakenteet sivuosia, ei tunnistettavaa suojattua teosta.",
+              "reviewState": "candidate",
+              "dateCaptured": "27 January 2019, 11:44:30",
+              "authorFieldSource": "Author table",
+              "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/saotome/cc-work/60699a8ace27da82-preview.jpg",
+              "sha256": "d69ff47743485c0ba49a72d329c6684874725803dcbab415f77ac7e70d46c2df",
+              "visualReview": "Katsottu natiivi5472x3648: Ilhéu das Cabrasin kaksikyttyräinen profiili vasemmalla, Fernão Diasin ranta ja palmut edessä. Etäiset henkilöt aivan pieniä, kasvonpiirteet eivät erotu. Ei lisättyä tekstiä, logoa, leimaa tai kehystä. Caption erottaa kohteen ja kuvauspaikan. Kuvaus27.1.2019, ei tuoreeksi opaskuvaksi nimetty.",
+              "sourceHtmlPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/saotome/cc-work/60699a8ace27da82.html",
+              "claimRecord": "/Volumes/T7 4TB/ChatGPT-Codex-active/coordination/paakaupungit-claims/08391cff28146b17/e06/saotome/N3/owner.json"
+            },
+            "candidateFingerprintSHA256": "eb8277d6f902601acafc04d6e49af574829bf7debe54f2a4591ceeee4455e870",
+            "currentContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/saotome/sisalto.json",
+            "currentContentSHA256": "fcf6c23fa1c4f54f46f63351e7cb459f3c218615171ff9f1e9514565c06f832f",
+            "targetExists": true,
+            "currentTargetContent": {
+              "tiedosto": "",
+              "lyhyt": "",
+              "selite": "",
+              "lahde": ""
+            },
+            "visualObservation": "Katsoin alkuperäisen kokoisen JPEGin sekä oikean rannan ihmisten 1:1-rajauksen. Luonnonsaaren kaksi mäkeä näkyvät vasemmalla meren takana; etualalla Fernão Diasin ranta, palmut ja kasvillisuus. Ihmiset ovat kaukana, pienet kasvomassat ilman luettavia yksilöiviä piirteitä. Muutama tavallinen rantakäytön rakennus ja laituriosa sivuosassa, ei taideteospääaihetta. Saaren huipun aivan pieni rakenne ei muodosta pääaiheista rakennusjäljennöstä. Ei lisättyä tekstiä, logoa, vesileimaa tai kehystä.",
+            "reviewedAt": "2026-10-12T20:15:13.237353+00:00",
+            "pixelsViewed": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/saotome/cc-work/60699a8ace27da82-preview.jpg",
+            "pixelSHA256": "d69ff47743485c0ba49a72d329c6684874725803dcbab415f77ac7e70d46c2df",
+            "sourceEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/saotome/cc-work/60699a8ace27da82.html",
+            "sourceMetadata": {
+              "author": [
+                "Ji-Elle"
+              ],
+              "licenses": [
+                "CC BY-SA 4.0"
+              ],
+              "dimensions": [
+                5472,
+                3648
+              ],
+              "sourceSHA256": "7fd038128dca7db4726130a1740425b95e859400d1f31f97a032ce2870ebe436"
+            },
+            "sourceLicenseLinks": [
+              "//creativecommons.org/licenses/by-sa/4.0/deed.en",
+              "https://creativecommons.org/share-your-work/licensing-considerations/compatible-licenses",
+              "https://creativecommons.org/publicdomain/zero/1.0/",
+              "https://creativecommons.org/licenses/by-sa/4.0/"
+            ],
+            "sourceDescriptionExcerpt": "Descriptions\":{\"search\":true,\"watchlist\":true,\"tagline\":true,\"nearby\":true},\"wgWMESchemaEditAttemptStepOversample\":false,\"wgWMEPageLength\":400,\"wbUserPreferredContentLanguages\":[\"en\"],\"wbUserSpecifiedLanguages\":[\"en\"],\"wbCopyright\":{\"version\":\"wikibase-1\",\"messageHtml\":\"By clicking \\\"publish\\\", you agree to the \\u003Ca href=\\\"/wiki/Commons:Copyrights\\\" class=\\\"mw-redirect\\\" title=\\\"Commons:Copyrights\\\"\\u003Eterms of use\\u003C/a\\u003E, and you irrevocably agree to release your contribution under the \\u003Ca rel=\\\"nofollow\\\" class=\\\"external text\\\" href=\\\"https://creativecommons.org/publicdomain/zero/1.0/\\\"\\u003ECreative Commons CC0 License\\u003C/a\\u003E.\"},\"wbBadgeItems\":[],\"wbMultiLingualStringLimit\":250,\"wbTaintedReferencesEnabled\":false,\"wbEntityId\":\"M76550807\",\"wgEditSubmitButtonLabelPublish\":true,\"wgTestKitchenUserExperiments\":{\"overrides\":[],\"enrolled\":[],\"assigned\":[],\"subject_ids\":[]},\"upwizPropertyTitles\":{\"P180\":\"Main subjects visible in this work\"},\"upwizPropertyPlaceholders\"",
+            "sourceDateExcerpt": "DateFormat\":\"dmy\",\"wgMonthNames\":[\"\",\"January\",\"February\",\"March\",\"April\",\"May\",\"June\",\"July\",\"August\",\"September\",\"October\",\"November\",\"December\"],\"wgRequestId\":\"6c38c009-abc1-4255-a0f3-c2d07f1288d0\",\"wgCanonicalNamespace\":\"File\",\"wgCanonicalSpecialPageName\":false,\"wgNamespaceNumber\":6,\"wgPageName\":\"File:Ilhéu_das_Cabras_depuis_Fernão_Dias_à_São_Tomé_(1).jpg\",\"wgTitle\":\"Ilhéu das Cabras depuis Fernão Dias à São Tomé (1).jpg\",\"wgCurRevisionId\":1191751447,\"wgRevisionId\":1191751447,\"wgArticleId\":76550807,\"wgIsArticle\":true,\"wgIsRedirect\":false,\"wgAction\":\"view\",\"wgUserName\":null,\"wgUserGroups\":[\"*\"],\"wgCategories\":[\"CC-BY-SA-4.0\",\"Self-published work\",\"Ilhéu das Cabras\",\"Beaches of Fernão Dias (São Tomé and Príncipe)\"],\"wgPageViewLanguage\":\"en\",\"wgPageContentLanguage\":\"en\",\"wgPageContentModel\":\"wikitext\",\"wgRelevantPageName\":\"File:Ilhéu_das_Cabras_depuis_Fernão_Dias_à_São_Tomé_(1).jpg\",\"wgRelevantArticleId\":76550807,\"wgTempUserName\":null,\"wgIsProbablyEditable\":true,\"wgRelevantPageIsProba",
+            "sourceAuthorExcerpt": "Author Ji-Elle Licensing [ edit ] I, the copyright holder of this work, hereby publish it under the following license: This file is licensed under the Creative Commons Attribution-Share Alike 4.0 International license. You are free: to share – to copy, distribute and transmit the work to remix – to adapt the work Under the following conditions: attribution – You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use. share alike – If you remix, transform, or build upon the material, you must distribute your contributions under the same or compatible license as the original. https://creativecommons.org/licenses/by-sa/4.0 CC BY-SA 4.0 Creative Commons Attribution-Share Alike 4.0 true true File history Click on a date/time to view the file as it appeared at that time. Date/Time Thumbnail Dimensions User Comment current 13:00, 13 February 2",
+            "sourceLicensingExcerpt": "Licensing 4 File history 5 File usage on Commons 6 Metadata Toggle the table of contents File : Ilhéu das Cabras depuis Fernão Dias à São Tomé (1).jpg File Discussion English Read Edit View history Tools Tools move to sidebar hide Actions Read Edit View history General What links here Related changes Permanent link Page information Cite this page Get shortened URL Concept URI Print/export Download as PDF Printable version In other projects Appearance move to sidebar hide From Wikimedia Commons, the free media repository Size of this preview: 960 × 640 pixels . Other resolutions: 330 × 220 pixels | 1,280 × 853 pixels | 3,840 × 2,560 pixels . Original file (5,472 × 3,648 pixels, file size: 4.85 MB, MIME type: image/jpeg ) File information Structured data Captions Captions English Add a one-line explanation of what this file represents French Ilhéu das Cabras depuis Fernão Dias à São Tomé Summary [ edit ] Description Ilhéu das Cabras depuis Fernão Dias à São Tomé (1).jpg Français : Ilhéu ",
+            "sourceCameralocationExcerpt": null,
+            "actualDimensions": [
+              5472,
+              3648
+            ],
+            "photographedAt": "2019-01-27",
+            "sourceDescriptionExact": "Ilhéu das Cabras au large de Fernão Dias au nord de l'île de São Tomé.",
+            "inspectionEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/saotome/qa-evidence/ileu-shore-people-inspection.png",
+            "inspectionCropNative": [
+              3600,
+              1300,
+              5472,
+              1750
+            ],
+            "placeBoundary": "Depicted target is Ilhéu das Cabras; camera is on Fernão Dias beach. No landing/access promise or 1873 lighthouse claim.",
+            "depictedWorkAssessment": "Luonnonsaari, meri ja kasvillisuus pääaiheina. Arkiset pienet rantarakenteet sivuosassa; ei itsenäistä suojattua teospintaa tai nimettyä rakennusta päämotiivina.",
+            "currentContentVersionCheck": {
+              "reviewedContentSHA256": "fcf6c23fa1c4f54f46f63351e7cb459f3c218615171ff9f1e9514565c06f832f",
+              "currentContentSHA256": "072ecd7cba3831c781aba16ffcc2cce37491eb78b7d08db1054803888dc3aa6f",
+              "checkedAt": "2026-10-13T14:14:45.844727+00:00",
+              "personallyViewedAgain": false,
+              "reviewedSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/c-integration/history/e06/saotome/fcf6c23fa1c4f54f46f63351e7cb459f3c218615171ff9f1e9514565c06f832f-sisalto.json",
+              "reviewedSnapshotSHA256": "fcf6c23fa1c4f54f46f63351e7cb459f3c218615171ff9f1e9514565c06f832f",
+              "matches": true,
+              "method": "exact archived content SHA and full nonmedia comparison",
+              "reviewedNonmediaSHA256": "4692bea5d3b54152a1f67eac5092bfb3e511e06b7b1518f8c203fa912536b9dd",
+              "currentNonmediaSHA256": "4692bea5d3b54152a1f67eac5092bfb3e511e06b7b1518f8c203fa912536b9dd",
+              "imageFieldsExcludedOnlyAtInventoriedSlots": true
+            },
+            "currentBindingMetadataCheck": {
+              "checkedAt": "2026-10-13T14:14:45.868124+00:00",
+              "contentSHA256": "072ecd7cba3831c781aba16ffcc2cce37491eb78b7d08db1054803888dc3aa6f",
+              "commonsFile": "Ilhéu das Cabras depuis Fernão Dias à São Tomé (1).jpg",
+              "captionFi": "Ilhéu das Cabras näkyy Fernão Diasin rannalta.",
+              "credit": "Ji-Elle, Wikimedia Commons (CC BY-SA 4.0)",
+              "captionMatchesReviewed": true,
+              "personallyViewedAgain": false
+            }
+          },
+          "reviewedAt": "2026-10-12T20:15:13.287919+00:00",
+          "sha256": "d69ff47743485c0ba49a72d329c6684874725803dcbab415f77ac7e70d46c2df"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/saotome/qa.json",
+            "sha256": "2aa17f97234828a3f57edf815faed1c6dd55e861c1c33cf0a67f8f573e9a25b2"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/saotome/illustration-qa-extra.json",
+            "sha256": "a2309676afa4b7b5029aa86559f81e6c4a499814a9cee063650d6d3372b75ad2"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e06",
+        "city": "saotome",
+        "slot": "N3",
+        "targetJsonPath": "$.nahtavyydet[\"Ilhéu das Cabras\"].kuvat[0]",
+        "commonsFile": "Ilhéu das Cabras depuis Fernão Dias à São Tomé (1).jpg",
+        "sha256": "d69ff47743485c0ba49a72d329c6684874725803dcbab415f77ac7e70d46c2df",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Ilh%C3%A9u_das_Cabras_depuis_Fern%C3%A3o_Dias_%C3%A0_S%C3%A3o_Tom%C3%A9_(1).jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Ilh%C3%A9u_das_Cabras_depuis_Fern%C3%A3o_Dias_%C3%A0_S%C3%A3o_Tom%C3%A9_%281%29.jpg",
+        "author": "Ji-Elle",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+        "width": 5472,
+        "height": 3648,
+        "originalSHA256": "d69ff47743485c0ba49a72d329c6684874725803dcbab415f77ac7e70d46c2df",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e06/saotome/n3-d69ff47743485c0ba49a.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e06/saotome/n3-d69ff47743485c0ba49a.jpg",
+        "bytes": 5088962,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T20:15:51.721689+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "Ilhéu das Cabras depuis Fernão Dias à São Tomé (1).jpg",
+        "lahde": "Ji-Elle, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Ilhéu das Cabras näkyy Fernão Diasin rannalta.",
+        "lyhyt": "Ilhéu das Cabras näkyy Fernão Diasin rannalta."
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Ji-Elle, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Ilhéu das Cabras näkyy Fernão Diasin rannalta.",
+        "lyhyt": "Ilhéu das Cabras näkyy Fernão Diasin rannalta.",
+        "tiedosto": "Ilhéu das Cabras depuis Fernão Dias à São Tomé (1).jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "072ecd7cba3831c781aba16ffcc2cce37491eb78b7d08db1054803888dc3aa6f",
+      "targetAfterSHA256": "f5d5b7130257a4c58548c7831aca565fc791cb01e11a6daa789a3d12bbdc54e0",
+      "contextAfterSHA256": "190be8b73f3026d4827af7bb20dc7b678bb561532d7199fea76c15cb0b911089",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     }
   ],
   "runtimeIntegrationPending": true,
-  "ownerAcceptedNotImpliedByAuthorization": true,
-  "gameIntegrated": false
+  "ownerAcceptedNotImpliedByAuthorization": false,
+  "gameIntegrated": false,
+  "allAssetsExplicitlyOwnerApproved": true,
+  "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
 }

@@ -2,7 +2,7 @@
   "schemaVersion": "capital-city-role-assets/v1",
   "era": "e06",
   "city": "bangui",
-  "authorization": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+  "authorization": "hyväksyn kaikki tekemäsi kuvat. toimita ne claudelle. claudelta saat uusia ohjeita jatkoa varten",
   "sourceContentAfterSHA256": "c724bb2a9ad27bfe133e8e4d525c09d347cdb3c9f1649c6fa9cdcc15bb417a96",
   "assets": [
     {
@@ -268,7 +268,7 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/bangui/illustration-qa-extra.json",
-            "sha256": "1899b7529a49806e861076e6bb3d3ef61b21c95ce098e8386642e06fb4004d42"
+            "sha256": "cc32f058e4f220b6cea378ed663e9215bd5003ce0acac8cd18b1c3b3da72dc18"
           }
         ]
       },
@@ -353,7 +353,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "c724bb2a9ad27bfe133e8e4d525c09d347cdb3c9f1649c6fa9cdcc15bb417a96",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "a6c1e6023476f44df37926b83b6a7d5741dd2c297f868c164515cdefc430280a"
+      "contextAfterSHA256": "a6c1e6023476f44df37926b83b6a7d5741dd2c297f868c164515cdefc430280a",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e06",
@@ -618,7 +620,7 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/bangui/illustration-qa-extra.json",
-            "sha256": "1899b7529a49806e861076e6bb3d3ef61b21c95ce098e8386642e06fb4004d42"
+            "sha256": "cc32f058e4f220b6cea378ed663e9215bd5003ce0acac8cd18b1c3b3da72dc18"
           }
         ]
       },
@@ -703,7 +705,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "c724bb2a9ad27bfe133e8e4d525c09d347cdb3c9f1649c6fa9cdcc15bb417a96",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "c7319b2573b20214793e788f562b6832e4774e805300d2a3b64f6d15888e7a20"
+      "contextAfterSHA256": "c7319b2573b20214793e788f562b6832e4774e805300d2a3b64f6d15888e7a20",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e06",
@@ -965,7 +969,7 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/bangui/illustration-qa-extra.json",
-            "sha256": "1899b7529a49806e861076e6bb3d3ef61b21c95ce098e8386642e06fb4004d42"
+            "sha256": "cc32f058e4f220b6cea378ed663e9215bd5003ce0acac8cd18b1c3b3da72dc18"
           }
         ]
       },
@@ -1050,7 +1054,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "c724bb2a9ad27bfe133e8e4d525c09d347cdb3c9f1649c6fa9cdcc15bb417a96",
       "targetAfterSHA256": "c2809b769ee787261cb0dac0caf91e0bbfa26378c6b939a01bd61c75a416e7b7",
-      "contextAfterSHA256": "c2809b769ee787261cb0dac0caf91e0bbfa26378c6b939a01bd61c75a416e7b7"
+      "contextAfterSHA256": "c2809b769ee787261cb0dac0caf91e0bbfa26378c6b939a01bd61c75a416e7b7",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e06",
@@ -1347,7 +1353,7 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/bangui/illustration-qa-extra.json",
-            "sha256": "1899b7529a49806e861076e6bb3d3ef61b21c95ce098e8386642e06fb4004d42"
+            "sha256": "cc32f058e4f220b6cea378ed663e9215bd5003ce0acac8cd18b1c3b3da72dc18"
           }
         ]
       },
@@ -1432,7 +1438,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "c724bb2a9ad27bfe133e8e4d525c09d347cdb3c9f1649c6fa9cdcc15bb417a96",
       "targetAfterSHA256": "9d9b274b4370801f662eb2905fadfb76342504d0081be74d9648e48e34873578",
-      "contextAfterSHA256": "9d9b274b4370801f662eb2905fadfb76342504d0081be74d9648e48e34873578"
+      "contextAfterSHA256": "9d9b274b4370801f662eb2905fadfb76342504d0081be74d9648e48e34873578",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e06",
@@ -1694,7 +1702,7 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/bangui/illustration-qa-extra.json",
-            "sha256": "1899b7529a49806e861076e6bb3d3ef61b21c95ce098e8386642e06fb4004d42"
+            "sha256": "cc32f058e4f220b6cea378ed663e9215bd5003ce0acac8cd18b1c3b3da72dc18"
           }
         ]
       },
@@ -1779,7 +1787,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "c724bb2a9ad27bfe133e8e4d525c09d347cdb3c9f1649c6fa9cdcc15bb417a96",
       "targetAfterSHA256": "31b2885f71cde3cf6c1d53679a8f61686cb32100024f6f192a551415e9022af9",
-      "contextAfterSHA256": "31b2885f71cde3cf6c1d53679a8f61686cb32100024f6f192a551415e9022af9"
+      "contextAfterSHA256": "31b2885f71cde3cf6c1d53679a8f61686cb32100024f6f192a551415e9022af9",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e06",
@@ -2067,7 +2077,7 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/bangui/illustration-qa-extra.json",
-            "sha256": "1899b7529a49806e861076e6bb3d3ef61b21c95ce098e8386642e06fb4004d42"
+            "sha256": "cc32f058e4f220b6cea378ed663e9215bd5003ce0acac8cd18b1c3b3da72dc18"
           }
         ]
       },
@@ -2152,7 +2162,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "c724bb2a9ad27bfe133e8e4d525c09d347cdb3c9f1649c6fa9cdcc15bb417a96",
       "targetAfterSHA256": "455dd7266643de18ecd8c9b41cd6505192d62074fb898d6a23a50dfb1de66489",
-      "contextAfterSHA256": "455dd7266643de18ecd8c9b41cd6505192d62074fb898d6a23a50dfb1de66489"
+      "contextAfterSHA256": "455dd7266643de18ecd8c9b41cd6505192d62074fb898d6a23a50dfb1de66489",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e06",
@@ -2414,7 +2426,7 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/bangui/illustration-qa-extra.json",
-            "sha256": "1899b7529a49806e861076e6bb3d3ef61b21c95ce098e8386642e06fb4004d42"
+            "sha256": "cc32f058e4f220b6cea378ed663e9215bd5003ce0acac8cd18b1c3b3da72dc18"
           }
         ]
       },
@@ -2499,7 +2511,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "c724bb2a9ad27bfe133e8e4d525c09d347cdb3c9f1649c6fa9cdcc15bb417a96",
       "targetAfterSHA256": "615f3e4e70aa3eafe4c33c8bee34ce7b2e8835aff9adcf6e4f20c602404b9cd5",
-      "contextAfterSHA256": "615f3e4e70aa3eafe4c33c8bee34ce7b2e8835aff9adcf6e4f20c602404b9cd5"
+      "contextAfterSHA256": "615f3e4e70aa3eafe4c33c8bee34ce7b2e8835aff9adcf6e4f20c602404b9cd5",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e06",
@@ -2821,7 +2835,7 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/bangui/illustration-qa-extra.json",
-            "sha256": "1899b7529a49806e861076e6bb3d3ef61b21c95ce098e8386642e06fb4004d42"
+            "sha256": "cc32f058e4f220b6cea378ed663e9215bd5003ce0acac8cd18b1c3b3da72dc18"
           }
         ]
       },
@@ -2906,7 +2920,468 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "c724bb2a9ad27bfe133e8e4d525c09d347cdb3c9f1649c6fa9cdcc15bb417a96",
       "targetAfterSHA256": "55712ccb12511db8600b1169569c9197a13b9282a0e9638f6afbca24ea228407",
-      "contextAfterSHA256": "55712ccb12511db8600b1169569c9197a13b9282a0e9638f6afbca24ea228407"
+      "contextAfterSHA256": "55712ccb12511db8600b1169569c9197a13b9282a0e9638f6afbca24ea228407",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+    },
+    {
+      "era": "e06",
+      "city": "bangui",
+      "slot": "TRAVELER",
+      "type": "illustration",
+      "assetID": "job14-e06-bangui-traveler-v01",
+      "galleryImageID": "job14-e06-bangui-traveler-v01",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "matkailijalle",
+        "kuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/bangui/job14-e06-bangui-traveler-v01-72036b5f7aaa.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva Banguin ruokakuvauksen raaka-aineista.",
+        "lyhyt": "Havainnekuva Banguin ruokakuvauksen raaka-aineista."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/bangui/job14-e06-bangui-traveler-v01-72036b5f7aaa.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva Banguin ruokakuvauksen raaka-aineista.",
+        "lyhyt": "Havainnekuva Banguin ruokakuvauksen raaka-aineista."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "72036b5f7aaa71fbfd53ebd92a38904c38fef68bdd1d13817cbdaf3244823372",
+      "exportSHA256": "d9d69c40f78e5f98127f7097bd545c5b106beffacea624974c8ba77d8244a6cb",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/bangui/job14-e06-bangui-traveler-v01-72036b5f7aaa.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/bangui/job14-e06-bangui-traveler-v01-72036b5f7aaa.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e06/bangui/job14-e06-bangui-traveler-v01-72036b5f7aaa.png",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/bangui/sisalto.json",
+      "sourceContentSHA256": "c724bb2a9ad27bfe133e8e4d525c09d347cdb3c9f1649c6fa9cdcc15bb417a96",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "c25e1c494cd7609eead3e9bb952e5462a92439378cce819ebe222b660478ba6f",
+        "subjectTitle": "Matkailijalle",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Yleistetty lähteistetty ruoka-/raaka-aineaihe ilman kuva-inputtia, ihmistä, suojattua teosta tai nimettyä paikkasommittelua. Rehellinen havainnekuva, ei autenttinen kaupunkivalokuva.",
+          "QA": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/bangui/assets/job14-e06-bangui-traveler-v01/image.png",
+            "nativeSHA256": "72036b5f7aaa71fbfd53ebd92a38904c38fef68bdd1d13817cbdaf3244823372",
+            "nativeDimensions": [
+              1024,
+              1536
+            ],
+            "nativeRatio": 0.6666666666666666,
+            "manifestHashMatches": true,
+            "personallyViewed": true,
+            "viewTool": "view_image",
+            "viewedAt": "2026-10-13T13:34:47.200Z",
+            "visualFindingsFi": "Ruskeita maniokin varastojuuria, yksi valkoinen leikkauspinta; vihreitä uurteisia okrapalkoja ja pieni kulho kuorittuja maapähkinöitä. Leikkauspinta, kuoren vaihtelevuus, okran kärjet/kannat ja pähkinöiden kuoret luontevia. Ei toistuvaa synteettistä pintaa, ihmisiä, tekstiä, logoja tai kehystä. Natiivipysty 1024×1536, suhde 0.667.",
+            "captionFi": "Havainnekuva Banguin ruokakuvauksen raaka-aineista.",
+            "sourceAndTargetCheckFi": "Luettu ajantasainen Matkailijalle-objekti/Ruoka kaupungissa -jakso sekä faktapohjan B1 Cuisine/T1–T3: maniokki kuuluu perusruokiin, okra ja maapähkinä kastikeaineisiin. Continuation-tilaus nimeää tämän ruoka-aiheen. Ainekset ovat erillään; kuvateksti ei keksi maboké- tai soussou-reseptiä, ruokailusuositusta, Banguin todellista toria tai nykyistä tuotetarjontaa. Natiivi pysty täyttää 0.60–0.85, eikä CC-leveysporttia lisätä.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/bangui/sisalto.json",
+            "contentSHA256": "c724bb2a9ad27bfe133e8e4d525c09d347cdb3c9f1649c6fa9cdcc15bb417a96",
+            "textJsonPath": "$.kaupunkilehti[0].matkailijalle",
+            "currentText": {
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              },
+              "kappale": "Banguihin matkustamista kannattaa tällä hetkellä välttää, ellei matka ole välttämätön. Kaupungin historiaa voi tutkia joen maantieteen, arkeologian ja vanhan keskustan kautta. Boganda-museon kokoelmia ei pidä tulkita nykyiseksi käyntilupaukseksi. Boalin putoukset ovat erillinen, kaukana kaupungista sijaitseva paikka. Matkan suunnittelussa nämä kohdekuvaukset eivät korvaa nykyisiä käytännön järjestelyjä.",
+              "artikkeli": {
+                "nimi": "Matkailijan Bangui",
+                "taitto": "opas",
+                "teksti": "Tutustu Banguin jokisijaintiin ja kulttuuriin matkan nykyiset rajoitukset huomioiden.",
+                "nosto": "Kaupunki on kiinnostava historian kohde, mutta muuta kuin välttämätöntä matkustamista kannattaa välttää.",
+                "jaksot": [
+                  {
+                    "otsikko": "Perille",
+                    "teksti": "Banguin M’Pokon kansainvälisen lentoaseman koodi on BGF. Kaupungin jokisatama liittyy alueen kuljetusverkkoon. Banguihin matkustamista kannattaa välttää, ellei matka ole välttämätön; tämä koskee myös lentoasemalle saapumista.",
+                    "kuva": {
+                      "tiedosto": "",
+                      "lyhyt": "",
+                      "selite": "",
+                      "lahde": ""
+                    }
+                  },
+                  {
+                    "otsikko": "Rantakeskustan rakenne",
+                    "teksti": "Ubangi rajaa keskustaa etelän puolella, ja leveät bulevardit liittyvät vanhaan markkinapaikkaan. Yläpuoliset kosket ja vastarannan Zongo ovat osa kaupungin maantieteellistä kehystä. Paikkojen kuvaaminen historiana ei tarkoita lupausta turvallisesta nykykierroksesta.",
+                    "kuva": {
+                      "tiedosto": "",
+                      "lyhyt": "",
+                      "selite": "",
+                      "lahde": ""
+                    }
+                  },
+                  {
+                    "otsikko": "Raudanvalmistus ja museo",
+                    "teksti": "Metallurgiset jäänteet kertovat Banguin ympäristön kaupunkia vanhemmasta historiasta. Boganda-museon kokoelmissa on arkeologiaa, etnografiaa, luonnonhistoriaa, soittimia ja keramiikkaa. Museota kuvataan suljetuksi, joten sille ei voi suunnitella varmaa yleisökäyntiä.",
+                    "kuva": {
+                      "tiedosto": "",
+                      "lyhyt": "",
+                      "selite": "",
+                      "lahde": ""
+                    }
+                  },
+                  {
+                    "otsikko": "Ruoka kaupungissa",
+                    "teksti": "Maniokki, riisi, kurpitsat ja keittobanaanit kuuluvat kaupungin ruokakuvaukseen. Kastikkeissa esiintyy okraa ja maapähkinää; maboké ja soussou ovat kalaruokia. Näiden nimien kautta voi tutustua ruokaperinteeseen ilman vanhoihin ravintolaluetteloihin tai hintoihin nojaavaa käyntisuunnitelmaa.",
+                    "kuva": {
+                      "tiedosto": "",
+                      "lyhyt": "",
+                      "selite": "",
+                      "lahde": ""
+                    }
+                  },
+                  {
+                    "otsikko": "Matkustamisen rajat",
+                    "teksti": "Banguihin kannattaa matkustaa vain välttämättömästä syystä. Kaupungin ulkopuolista Boalin putousretkeä ei pidä liittää tähän suunnitelmaan tavallisena matkailukierroksena. Kaupungin historiallisia aiheita ja ruokakulttuuria voi tutkia myös ilman matkustamista.",
+                    "kuva": {
+                      "tiedosto": "",
+                      "lyhyt": "",
+                      "selite": "",
+                      "lahde": ""
+                    }
+                  }
+                ],
+                "matkailu": {
+                  "parasta": [],
+                  "hyvaTietaa": [
+                    {
+                      "otsikko": "Nykyinen matkustusrajoitus",
+                      "teksti": "Muuta kuin välttämätöntä matkustamista Banguihin kannattaa välttää."
+                    },
+                    {
+                      "otsikko": "Museokäynti ei ole varma",
+                      "teksti": "Boganda-museota kuvataan suljetuksi."
+                    },
+                    {
+                      "otsikko": "Vastaranta on eri valtio",
+                      "teksti": "Zongo kuuluu Kongon demokraattiseen tasavaltaan."
+                    },
+                    {
+                      "otsikko": "Kieli ja raha",
+                      "teksti": "Maan virallisia kieliä ovat sango ja ranska, valuutta Keski-Afrikan CFA-frangi."
+                    }
+                  ]
+                },
+                "lahde": "Wikipedia"
+              }
+            },
+            "factPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/bangui/faktapohja.md",
+            "factSHA256": "cff6b785eb34ffc5030d49fd61429eb299344580b2a76ba69b1689ceb8542be5",
+            "sourceEvidence": [
+              {
+                "type": "currentContent",
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/bangui/sisalto.json",
+                "sha256": "c724bb2a9ad27bfe133e8e4d525c09d347cdb3c9f1649c6fa9cdcc15bb417a96",
+                "jsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3]",
+                "text": "Maniokki, riisi, kurpitsat ja keittobanaanit kuuluvat kaupungin ruokakuvaukseen. Kastikkeissa esiintyy okraa ja maapähkinää; maboké ja soussou ovat kalaruokia. Näiden nimien kautta voi tutustua ruokaperinteeseen ilman vanhoihin ravintolaluetteloihin tai hintoihin nojaavaa käyntisuunnitelmaa."
+              },
+              {
+                "type": "factSheet",
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/bangui/faktapohja.md",
+                "sha256": "cff6b785eb34ffc5030d49fd61429eb299344580b2a76ba69b1689ceb8542be5",
+                "sourceUrl": "https://en.wikipedia.org/wiki/Bangui"
+              },
+              {
+                "type": "sourceScoutingAudit",
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/source-scout/continuation-20261013/safe-topic-production-priorities.json",
+                "sha256": "b5fd12034028af4a090b68a5ac0644b7a6d737a177b35b838ab6b3974c772dc0",
+                "rowIdentity": {
+                  "era": "e06",
+                  "city": "bangui",
+                  "slot": "TRAVELER",
+                  "originalOwnerJob": 14
+                }
+              }
+            ],
+            "reviewedBy": "exclusive-e06-extra-QA",
+            "rightsCheckFi": "Turvallinen tavallinen esine-/luonto-/materiaalihavainne, ei nimettyä teosta tai rakennuksen/asettelun jäljennöstä."
+          },
+          "qaReason": "Natiivi raaka-ainepysty vastaa Banguin oppaan maniokki-, okra- ja maapähkinäaiheita."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva Banguin ruokakuvauksen raaka-aineista.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/bangui/illustration-qa-extra.json",
+        "fileSHA256": "cc32f058e4f220b6cea378ed663e9215bd5003ce0acac8cd18b1c3b3da72dc18",
+        "item": {
+          "slot": "TRAVELER",
+          "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
+          "assetID": "job14-e06-bangui-traveler-v01",
+          "sha256": "72036b5f7aaa71fbfd53ebd92a38904c38fef68bdd1d13817cbdaf3244823372",
+          "verdict": "accepted",
+          "reason": "Natiivi raaka-ainepysty vastaa Banguin oppaan maniokki-, okra- ja maapähkinäaiheita.",
+          "evidence": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/bangui/assets/job14-e06-bangui-traveler-v01/image.png",
+            "nativeSHA256": "72036b5f7aaa71fbfd53ebd92a38904c38fef68bdd1d13817cbdaf3244823372",
+            "nativeDimensions": [
+              1024,
+              1536
+            ],
+            "nativeRatio": 0.6666666666666666,
+            "manifestHashMatches": true,
+            "personallyViewed": true,
+            "viewTool": "view_image",
+            "viewedAt": "2026-10-13T13:34:47.200Z",
+            "visualFindingsFi": "Ruskeita maniokin varastojuuria, yksi valkoinen leikkauspinta; vihreitä uurteisia okrapalkoja ja pieni kulho kuorittuja maapähkinöitä. Leikkauspinta, kuoren vaihtelevuus, okran kärjet/kannat ja pähkinöiden kuoret luontevia. Ei toistuvaa synteettistä pintaa, ihmisiä, tekstiä, logoja tai kehystä. Natiivipysty 1024×1536, suhde 0.667.",
+            "captionFi": "Havainnekuva Banguin ruokakuvauksen raaka-aineista.",
+            "sourceAndTargetCheckFi": "Luettu ajantasainen Matkailijalle-objekti/Ruoka kaupungissa -jakso sekä faktapohjan B1 Cuisine/T1–T3: maniokki kuuluu perusruokiin, okra ja maapähkinä kastikeaineisiin. Continuation-tilaus nimeää tämän ruoka-aiheen. Ainekset ovat erillään; kuvateksti ei keksi maboké- tai soussou-reseptiä, ruokailusuositusta, Banguin todellista toria tai nykyistä tuotetarjontaa. Natiivi pysty täyttää 0.60–0.85, eikä CC-leveysporttia lisätä.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/bangui/sisalto.json",
+            "contentSHA256": "c724bb2a9ad27bfe133e8e4d525c09d347cdb3c9f1649c6fa9cdcc15bb417a96",
+            "textJsonPath": "$.kaupunkilehti[0].matkailijalle",
+            "currentText": {
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              },
+              "kappale": "Banguihin matkustamista kannattaa tällä hetkellä välttää, ellei matka ole välttämätön. Kaupungin historiaa voi tutkia joen maantieteen, arkeologian ja vanhan keskustan kautta. Boganda-museon kokoelmia ei pidä tulkita nykyiseksi käyntilupaukseksi. Boalin putoukset ovat erillinen, kaukana kaupungista sijaitseva paikka. Matkan suunnittelussa nämä kohdekuvaukset eivät korvaa nykyisiä käytännön järjestelyjä.",
+              "artikkeli": {
+                "nimi": "Matkailijan Bangui",
+                "taitto": "opas",
+                "teksti": "Tutustu Banguin jokisijaintiin ja kulttuuriin matkan nykyiset rajoitukset huomioiden.",
+                "nosto": "Kaupunki on kiinnostava historian kohde, mutta muuta kuin välttämätöntä matkustamista kannattaa välttää.",
+                "jaksot": [
+                  {
+                    "otsikko": "Perille",
+                    "teksti": "Banguin M’Pokon kansainvälisen lentoaseman koodi on BGF. Kaupungin jokisatama liittyy alueen kuljetusverkkoon. Banguihin matkustamista kannattaa välttää, ellei matka ole välttämätön; tämä koskee myös lentoasemalle saapumista.",
+                    "kuva": {
+                      "tiedosto": "",
+                      "lyhyt": "",
+                      "selite": "",
+                      "lahde": ""
+                    }
+                  },
+                  {
+                    "otsikko": "Rantakeskustan rakenne",
+                    "teksti": "Ubangi rajaa keskustaa etelän puolella, ja leveät bulevardit liittyvät vanhaan markkinapaikkaan. Yläpuoliset kosket ja vastarannan Zongo ovat osa kaupungin maantieteellistä kehystä. Paikkojen kuvaaminen historiana ei tarkoita lupausta turvallisesta nykykierroksesta.",
+                    "kuva": {
+                      "tiedosto": "",
+                      "lyhyt": "",
+                      "selite": "",
+                      "lahde": ""
+                    }
+                  },
+                  {
+                    "otsikko": "Raudanvalmistus ja museo",
+                    "teksti": "Metallurgiset jäänteet kertovat Banguin ympäristön kaupunkia vanhemmasta historiasta. Boganda-museon kokoelmissa on arkeologiaa, etnografiaa, luonnonhistoriaa, soittimia ja keramiikkaa. Museota kuvataan suljetuksi, joten sille ei voi suunnitella varmaa yleisökäyntiä.",
+                    "kuva": {
+                      "tiedosto": "",
+                      "lyhyt": "",
+                      "selite": "",
+                      "lahde": ""
+                    }
+                  },
+                  {
+                    "otsikko": "Ruoka kaupungissa",
+                    "teksti": "Maniokki, riisi, kurpitsat ja keittobanaanit kuuluvat kaupungin ruokakuvaukseen. Kastikkeissa esiintyy okraa ja maapähkinää; maboké ja soussou ovat kalaruokia. Näiden nimien kautta voi tutustua ruokaperinteeseen ilman vanhoihin ravintolaluetteloihin tai hintoihin nojaavaa käyntisuunnitelmaa.",
+                    "kuva": {
+                      "tiedosto": "",
+                      "lyhyt": "",
+                      "selite": "",
+                      "lahde": ""
+                    }
+                  },
+                  {
+                    "otsikko": "Matkustamisen rajat",
+                    "teksti": "Banguihin kannattaa matkustaa vain välttämättömästä syystä. Kaupungin ulkopuolista Boalin putousretkeä ei pidä liittää tähän suunnitelmaan tavallisena matkailukierroksena. Kaupungin historiallisia aiheita ja ruokakulttuuria voi tutkia myös ilman matkustamista.",
+                    "kuva": {
+                      "tiedosto": "",
+                      "lyhyt": "",
+                      "selite": "",
+                      "lahde": ""
+                    }
+                  }
+                ],
+                "matkailu": {
+                  "parasta": [],
+                  "hyvaTietaa": [
+                    {
+                      "otsikko": "Nykyinen matkustusrajoitus",
+                      "teksti": "Muuta kuin välttämätöntä matkustamista Banguihin kannattaa välttää."
+                    },
+                    {
+                      "otsikko": "Museokäynti ei ole varma",
+                      "teksti": "Boganda-museota kuvataan suljetuksi."
+                    },
+                    {
+                      "otsikko": "Vastaranta on eri valtio",
+                      "teksti": "Zongo kuuluu Kongon demokraattiseen tasavaltaan."
+                    },
+                    {
+                      "otsikko": "Kieli ja raha",
+                      "teksti": "Maan virallisia kieliä ovat sango ja ranska, valuutta Keski-Afrikan CFA-frangi."
+                    }
+                  ]
+                },
+                "lahde": "Wikipedia"
+              }
+            },
+            "factPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/bangui/faktapohja.md",
+            "factSHA256": "cff6b785eb34ffc5030d49fd61429eb299344580b2a76ba69b1689ceb8542be5",
+            "sourceEvidence": [
+              {
+                "type": "currentContent",
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/bangui/sisalto.json",
+                "sha256": "c724bb2a9ad27bfe133e8e4d525c09d347cdb3c9f1649c6fa9cdcc15bb417a96",
+                "jsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3]",
+                "text": "Maniokki, riisi, kurpitsat ja keittobanaanit kuuluvat kaupungin ruokakuvaukseen. Kastikkeissa esiintyy okraa ja maapähkinää; maboké ja soussou ovat kalaruokia. Näiden nimien kautta voi tutustua ruokaperinteeseen ilman vanhoihin ravintolaluetteloihin tai hintoihin nojaavaa käyntisuunnitelmaa."
+              },
+              {
+                "type": "factSheet",
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/bangui/faktapohja.md",
+                "sha256": "cff6b785eb34ffc5030d49fd61429eb299344580b2a76ba69b1689ceb8542be5",
+                "sourceUrl": "https://en.wikipedia.org/wiki/Bangui"
+              },
+              {
+                "type": "sourceScoutingAudit",
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/source-scout/continuation-20261013/safe-topic-production-priorities.json",
+                "sha256": "b5fd12034028af4a090b68a5ac0644b7a6d737a177b35b838ab6b3974c772dc0",
+                "rowIdentity": {
+                  "era": "e06",
+                  "city": "bangui",
+                  "slot": "TRAVELER",
+                  "originalOwnerJob": 14
+                }
+              }
+            ],
+            "reviewedBy": "exclusive-e06-extra-QA",
+            "rightsCheckFi": "Turvallinen tavallinen esine-/luonto-/materiaalihavainne, ei nimettyä teosta tai rakennuksen/asettelun jäljennöstä."
+          },
+          "reviewedAt": "2026-10-13T13:35:14.374058+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/bangui/qa.json",
+            "sha256": "71b3e869ece5f9f39a7011b5838102f0ae8acefd43ec7349bb521e315b1927da"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/bangui/illustration-qa-extra.json",
+            "sha256": "cc32f058e4f220b6cea378ed663e9215bd5003ce0acac8cd18b1c3b3da72dc18"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/bangui/job14-e06-bangui-traveler-v01-72036b5f7aaa.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/bangui/job14-e06-bangui-traveler-v01-72036b5f7aaa.png?t=d9d69c40f78e5f98",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/bangui/job14-e06-bangui-traveler-v01-72036b5f7aaa.png",
+        "sha256": "d9d69c40f78e5f98127f7097bd545c5b106beffacea624974c8ba77d8244a6cb",
+        "bytes": 2499770,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "job14-e06-bangui-traveler-v01",
+        "nativeSHA256": "72036b5f7aaa71fbfd53ebd92a38904c38fef68bdd1d13817cbdaf3244823372",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e06/bangui/job14-e06-bangui-traveler-v01-72036b5f7aaa.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e06",
+        "city": "bangui",
+        "slot": "TRAVELER",
+        "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
+        "verifiedAt": "2026-10-13T13:35:34.023405+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e06/bangui/job14-e06-bangui-traveler-v01-72036b5f7aaa.png",
+        "sha256": "d9d69c40f78e5f98127f7097bd545c5b106beffacea624974c8ba77d8244a6cb",
+        "bytes": 2499770,
+        "SHAReadAt": "2026-10-13T13:35:27.123946+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1024,
+        "height": 1536,
+        "pixelWidth": 1024,
+        "pixelHeight": 1536,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "72036b5f7aaa71fbfd53ebd92a38904c38fef68bdd1d13817cbdaf3244823372",
+        "rgbPixelSHA256": "d37a60463066c9a4d43b5cc9a6deb9ea080e8b4710ab3a7f17c68b31f4e2854f",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "c724bb2a9ad27bfe133e8e4d525c09d347cdb3c9f1649c6fa9cdcc15bb417a96",
+      "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+      "contextAfterSHA256": "c25e1c494cd7609eead3e9bb952e5462a92439378cce819ebe222b660478ba6f",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e06",
@@ -3069,7 +3544,7 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/bangui/illustration-qa-extra.json",
-            "sha256": "1899b7529a49806e861076e6bb3d3ef61b21c95ce098e8386642e06fb4004d42"
+            "sha256": "cc32f058e4f220b6cea378ed663e9215bd5003ce0acac8cd18b1c3b3da72dc18"
           }
         ]
       },
@@ -3142,7 +3617,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "c724bb2a9ad27bfe133e8e4d525c09d347cdb3c9f1649c6fa9cdcc15bb417a96",
       "targetAfterSHA256": "ba204136ff02bdd677555a6a6d9218531d1dca52fca79906343a3b7ba0ae2e25",
-      "contextAfterSHA256": "ba204136ff02bdd677555a6a6d9218531d1dca52fca79906343a3b7ba0ae2e25"
+      "contextAfterSHA256": "ba204136ff02bdd677555a6a6d9218531d1dca52fca79906343a3b7ba0ae2e25",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e06",
@@ -3344,7 +3821,7 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/bangui/illustration-qa-extra.json",
-            "sha256": "1899b7529a49806e861076e6bb3d3ef61b21c95ce098e8386642e06fb4004d42"
+            "sha256": "cc32f058e4f220b6cea378ed663e9215bd5003ce0acac8cd18b1c3b3da72dc18"
           }
         ]
       },
@@ -3417,7 +3894,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "c724bb2a9ad27bfe133e8e4d525c09d347cdb3c9f1649c6fa9cdcc15bb417a96",
       "targetAfterSHA256": "62c1e4373f52b5b85aa47538f93a8b2deffbda37a77c9e254c2a1993d4783f15",
-      "contextAfterSHA256": "62c1e4373f52b5b85aa47538f93a8b2deffbda37a77c9e254c2a1993d4783f15"
+      "contextAfterSHA256": "62c1e4373f52b5b85aa47538f93a8b2deffbda37a77c9e254c2a1993d4783f15",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e06",
@@ -3613,7 +4092,7 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/bangui/illustration-qa-extra.json",
-            "sha256": "1899b7529a49806e861076e6bb3d3ef61b21c95ce098e8386642e06fb4004d42"
+            "sha256": "cc32f058e4f220b6cea378ed663e9215bd5003ce0acac8cd18b1c3b3da72dc18"
           }
         ]
       },
@@ -3686,7 +4165,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "c724bb2a9ad27bfe133e8e4d525c09d347cdb3c9f1649c6fa9cdcc15bb417a96",
       "targetAfterSHA256": "4be611dd2055aad86e081289051f8dc9d5a3d92f24ed726f84f85badeb86a8e7",
-      "contextAfterSHA256": "4be611dd2055aad86e081289051f8dc9d5a3d92f24ed726f84f85badeb86a8e7"
+      "contextAfterSHA256": "4be611dd2055aad86e081289051f8dc9d5a3d92f24ed726f84f85badeb86a8e7",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e06",
@@ -3884,7 +4365,7 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/bangui/illustration-qa-extra.json",
-            "sha256": "1899b7529a49806e861076e6bb3d3ef61b21c95ce098e8386642e06fb4004d42"
+            "sha256": "cc32f058e4f220b6cea378ed663e9215bd5003ce0acac8cd18b1c3b3da72dc18"
           }
         ]
       },
@@ -3957,10 +4438,14 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "c724bb2a9ad27bfe133e8e4d525c09d347cdb3c9f1649c6fa9cdcc15bb417a96",
       "targetAfterSHA256": "346fb646ea1fc9e2d8d3fc46c2ebba308f1d002c02cb5e17ed1e63766ee656c0",
-      "contextAfterSHA256": "346fb646ea1fc9e2d8d3fc46c2ebba308f1d002c02cb5e17ed1e63766ee656c0"
+      "contextAfterSHA256": "346fb646ea1fc9e2d8d3fc46c2ebba308f1d002c02cb5e17ed1e63766ee656c0",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     }
   ],
   "runtimeIntegrationPending": true,
-  "ownerAcceptedNotImpliedByAuthorization": true,
-  "gameIntegrated": false
+  "ownerAcceptedNotImpliedByAuthorization": false,
+  "gameIntegrated": false,
+  "allAssetsExplicitlyOwnerApproved": true,
+  "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
 }

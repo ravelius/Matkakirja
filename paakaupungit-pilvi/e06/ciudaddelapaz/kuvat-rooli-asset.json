@@ -2,7 +2,7 @@
   "schemaVersion": "capital-city-role-assets/v1",
   "era": "e06",
   "city": "ciudaddelapaz",
-  "authorization": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+  "authorization": "hyväksyn kaikki tekemäsi kuvat. toimita ne claudelle. claudelta saat uusia ohjeita jatkoa varten",
   "sourceContentAfterSHA256": "47e38962c98d602a84cfdcf267f30b8bb63841546623d08b72965b3604b09db5",
   "assets": [
     {
@@ -115,7 +115,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/ciudaddelapaz/illustration-qa-extra.json",
-        "fileSHA256": "641b86e90affbe6171f97a55d0bc34af1e3de0dd9130e6963f8d10747183892d",
+        "fileSHA256": "add6909a3d04d19812f34394d6b61c297279f613cfab22a51a2128ec762882d1",
         "item": {
           "slot": "O2",
           "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[1].kuva",
@@ -162,7 +162,7 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/ciudaddelapaz/illustration-qa-extra.json",
-            "sha256": "641b86e90affbe6171f97a55d0bc34af1e3de0dd9130e6963f8d10747183892d"
+            "sha256": "add6909a3d04d19812f34394d6b61c297279f613cfab22a51a2128ec762882d1"
           }
         ]
       },
@@ -247,7 +247,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "47e38962c98d602a84cfdcf267f30b8bb63841546623d08b72965b3604b09db5",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "9a03c3637b12f11100dba24a65e2d61dfa120c3a575b19f0ed830b2b373bc28b"
+      "contextAfterSHA256": "9a03c3637b12f11100dba24a65e2d61dfa120c3a575b19f0ed830b2b373bc28b",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e06",
@@ -396,7 +398,7 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/ciudaddelapaz/illustration-qa-extra.json",
-            "sha256": "641b86e90affbe6171f97a55d0bc34af1e3de0dd9130e6963f8d10747183892d"
+            "sha256": "add6909a3d04d19812f34394d6b61c297279f613cfab22a51a2128ec762882d1"
           }
         ]
       },
@@ -481,7 +483,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "47e38962c98d602a84cfdcf267f30b8bb63841546623d08b72965b3604b09db5",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "1da4e67b83fa2bf620bbb3679a41375cd0d8800c5ae8ca27fe4b05be2abd707e"
+      "contextAfterSHA256": "1da4e67b83fa2bf620bbb3679a41375cd0d8800c5ae8ca27fe4b05be2abd707e",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e06",
@@ -590,7 +594,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/ciudaddelapaz/illustration-qa-extra.json",
-        "fileSHA256": "641b86e90affbe6171f97a55d0bc34af1e3de0dd9130e6963f8d10747183892d",
+        "fileSHA256": "add6909a3d04d19812f34394d6b61c297279f613cfab22a51a2128ec762882d1",
         "item": {
           "slot": "K2",
           "targetJsonPath": "$.kaupunkilehti[0].nostot[1]",
@@ -637,7 +641,7 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/ciudaddelapaz/illustration-qa-extra.json",
-            "sha256": "641b86e90affbe6171f97a55d0bc34af1e3de0dd9130e6963f8d10747183892d"
+            "sha256": "add6909a3d04d19812f34394d6b61c297279f613cfab22a51a2128ec762882d1"
           }
         ]
       },
@@ -722,7 +726,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "47e38962c98d602a84cfdcf267f30b8bb63841546623d08b72965b3604b09db5",
       "targetAfterSHA256": "e90d2a3256de4050c736dcaf47dea4981ad8ad1af6d6b988dd5bd1bbfe9521f0",
-      "contextAfterSHA256": "e90d2a3256de4050c736dcaf47dea4981ad8ad1af6d6b988dd5bd1bbfe9521f0"
+      "contextAfterSHA256": "e90d2a3256de4050c736dcaf47dea4981ad8ad1af6d6b988dd5bd1bbfe9521f0",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e06",
@@ -831,7 +837,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/ciudaddelapaz/illustration-qa-extra.json",
-        "fileSHA256": "641b86e90affbe6171f97a55d0bc34af1e3de0dd9130e6963f8d10747183892d",
+        "fileSHA256": "add6909a3d04d19812f34394d6b61c297279f613cfab22a51a2128ec762882d1",
         "item": {
           "slot": "K3",
           "targetJsonPath": "$.kaupunkilehti[0].nostot[2]",
@@ -878,7 +884,7 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/ciudaddelapaz/illustration-qa-extra.json",
-            "sha256": "641b86e90affbe6171f97a55d0bc34af1e3de0dd9130e6963f8d10747183892d"
+            "sha256": "add6909a3d04d19812f34394d6b61c297279f613cfab22a51a2128ec762882d1"
           }
         ]
       },
@@ -963,7 +969,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "47e38962c98d602a84cfdcf267f30b8bb63841546623d08b72965b3604b09db5",
       "targetAfterSHA256": "bfe34ac5e76ca1223af5892d9a56a8f1802c1d39b22d0c785ce0f795207cdc7d",
-      "contextAfterSHA256": "bfe34ac5e76ca1223af5892d9a56a8f1802c1d39b22d0c785ce0f795207cdc7d"
+      "contextAfterSHA256": "bfe34ac5e76ca1223af5892d9a56a8f1802c1d39b22d0c785ce0f795207cdc7d",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e06",
@@ -1072,7 +1080,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/ciudaddelapaz/illustration-qa-extra.json",
-        "fileSHA256": "641b86e90affbe6171f97a55d0bc34af1e3de0dd9130e6963f8d10747183892d",
+        "fileSHA256": "add6909a3d04d19812f34394d6b61c297279f613cfab22a51a2128ec762882d1",
         "item": {
           "slot": "K4",
           "targetJsonPath": "$.kaupunkilehti[0].nostot[3]",
@@ -1119,7 +1127,7 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/ciudaddelapaz/illustration-qa-extra.json",
-            "sha256": "641b86e90affbe6171f97a55d0bc34af1e3de0dd9130e6963f8d10747183892d"
+            "sha256": "add6909a3d04d19812f34394d6b61c297279f613cfab22a51a2128ec762882d1"
           }
         ]
       },
@@ -1204,7 +1212,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "47e38962c98d602a84cfdcf267f30b8bb63841546623d08b72965b3604b09db5",
       "targetAfterSHA256": "010ee4d053e4bacd61df8aff75263f969c8b8ad6452a252e1a7f6c560545e180",
-      "contextAfterSHA256": "010ee4d053e4bacd61df8aff75263f969c8b8ad6452a252e1a7f6c560545e180"
+      "contextAfterSHA256": "010ee4d053e4bacd61df8aff75263f969c8b8ad6452a252e1a7f6c560545e180",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e06",
@@ -1313,7 +1323,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/ciudaddelapaz/illustration-qa-extra.json",
-        "fileSHA256": "641b86e90affbe6171f97a55d0bc34af1e3de0dd9130e6963f8d10747183892d",
+        "fileSHA256": "add6909a3d04d19812f34394d6b61c297279f613cfab22a51a2128ec762882d1",
         "item": {
           "slot": "L3",
           "targetJsonPath": "$.kaupunkilehti[1].nostot[2]",
@@ -1360,7 +1370,7 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/ciudaddelapaz/illustration-qa-extra.json",
-            "sha256": "641b86e90affbe6171f97a55d0bc34af1e3de0dd9130e6963f8d10747183892d"
+            "sha256": "add6909a3d04d19812f34394d6b61c297279f613cfab22a51a2128ec762882d1"
           }
         ]
       },
@@ -1445,7 +1455,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "47e38962c98d602a84cfdcf267f30b8bb63841546623d08b72965b3604b09db5",
       "targetAfterSHA256": "a50b52cca40c1dd33e48fdaaaf5b3e934699e290710d1e445cba06a09acf62a3",
-      "contextAfterSHA256": "a50b52cca40c1dd33e48fdaaaf5b3e934699e290710d1e445cba06a09acf62a3"
+      "contextAfterSHA256": "a50b52cca40c1dd33e48fdaaaf5b3e934699e290710d1e445cba06a09acf62a3",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e06",
@@ -1554,7 +1566,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/ciudaddelapaz/illustration-qa-extra.json",
-        "fileSHA256": "641b86e90affbe6171f97a55d0bc34af1e3de0dd9130e6963f8d10747183892d",
+        "fileSHA256": "add6909a3d04d19812f34394d6b61c297279f613cfab22a51a2128ec762882d1",
         "item": {
           "slot": "L4",
           "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
@@ -1601,7 +1613,7 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/ciudaddelapaz/illustration-qa-extra.json",
-            "sha256": "641b86e90affbe6171f97a55d0bc34af1e3de0dd9130e6963f8d10747183892d"
+            "sha256": "add6909a3d04d19812f34394d6b61c297279f613cfab22a51a2128ec762882d1"
           }
         ]
       },
@@ -1686,7 +1698,270 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "47e38962c98d602a84cfdcf267f30b8bb63841546623d08b72965b3604b09db5",
       "targetAfterSHA256": "c642de40a894b064ec498cdfe446a776508dab0b63c7920f6ba2ec99c2e2883c",
-      "contextAfterSHA256": "c642de40a894b064ec498cdfe446a776508dab0b63c7920f6ba2ec99c2e2883c"
+      "contextAfterSHA256": "c642de40a894b064ec498cdfe446a776508dab0b63c7920f6ba2ec99c2e2883c",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+    },
+    {
+      "era": "e06",
+      "city": "ciudaddelapaz",
+      "slot": "L2",
+      "type": "illustration",
+      "assetID": "job14-e06-ciudaddelapaz-l2-v02",
+      "galleryImageID": "job14-e06-ciudaddelapaz-l2-v02",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[1].nostot[1]",
+      "targetTokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        1
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/ciudaddelapaz/job14-e06-ciudaddelapaz-l2-v02-d52fb8917fd8.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva suunnittelun työvälineistä.",
+        "lyhyt": "Havainnekuva suunnittelun työvälineistä."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/ciudaddelapaz/job14-e06-ciudaddelapaz-l2-v02-d52fb8917fd8.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva suunnittelun työvälineistä.",
+        "lyhyt": "Havainnekuva suunnittelun työvälineistä."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "d52fb8917fd8368bb29869ed49c6bde43aaef74999fb93edcdf918a15f7e40de",
+      "exportSHA256": "c27fb8b9b74139fb8d82e40395b11899474d2c38c2067b648274b16252705db1",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/ciudaddelapaz/job14-e06-ciudaddelapaz-l2-v02-d52fb8917fd8.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/ciudaddelapaz/job14-e06-ciudaddelapaz-l2-v02-d52fb8917fd8.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e06/ciudaddelapaz/job14-e06-ciudaddelapaz-l2-v02-d52fb8917fd8.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/ciudaddelapaz/sisalto.json",
+      "sourceContentSHA256": "47e38962c98d602a84cfdcf267f30b8bb63841546623d08b72965b3604b09db5",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "9715e308a170771714426c4a923afa69a4d50eef090f1db0b63c5cf8bf11d6db",
+        "semanticContextSHA256": "9715e308a170771714426c4a923afa69a4d50eef090f1db0b63c5cf8bf11d6db",
+        "subjectTitle": "Asukkaat eivät asu tavoitteessa",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Yleistetty luonto-/materiaalin/tavanomaisen välineen havainnollistus. Ei kuva-inputtia, suojatun teoksen/kansi-/kaupunkikaavan jäljennöstä, kasvoja tai todellisen paikan tarkkaa asettelua. Drum-model kuvaa vain lähteen yleistä järjestysperiaatetta, ei nimettyä rituaaliesineistöä.",
+          "QA": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/ciudaddelapaz/assets/job14-e06-ciudaddelapaz-l2-v02/image.png",
+            "nativeSHA256": "d52fb8917fd8368bb29869ed49c6bde43aaef74999fb93edcdf918a15f7e40de",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "nativeRatio": 1.5,
+            "manifestHashMatches": true,
+            "personallyViewed": true,
+            "viewTool": "view_image",
+            "viewedAt": "2026-10-13T13:28:13.689Z",
+            "visualFindingsFi": "Yksi tyhjä paperiarkki ja merkinnätön puukynä harmaalla pinnalla. Paperin kulmat ja reunat, puunsyyt, teroituksen grafiitti ja varjot uskottavia. Ei kirjoitusta, numeroita, viivainta, logoja, kehyksiä tai ihmisiä.",
+            "captionFi": "Havainnekuva suunnittelun työvälineistä.",
+            "sourceAndTargetCheckFi": "Ajantasainen L2 Asukkaat eivät asu tavoitteessa erottaa suunnittelukapasiteetin toteutuneesta kaupungista. Luettu nykyinen teksti ja faktapohjan C1/Planning-suunnitteluperusta. Kuvateksti havainnollistaa työvälineitä, ei FAT-kaavapiirrosta, väestölukua tai todellista kaupunkisuunnitelmaa. Vanha v01 pysyy erikseen hylättynä.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/ciudaddelapaz/sisalto.json",
+            "contentSHA256": "47e38962c98d602a84cfdcf267f30b8bb63841546623d08b72965b3604b09db5",
+            "textJsonPath": "$.kaupunkilehti[1].nostot[1]",
+            "currentText": "Kaupunki voidaan suunnitella suurelle väestölle jo ennen kuin sen talot ovat valmiita. Ciudad de la Pazin suunnitelmissa on väestökapasiteetti, mutta kapasiteetti ei ole asukasluku: se kertoo, kuinka monelle ihmiselle tiloja on tarkoitus rakentaa. Nykyisten asukkaiden määrä on toinen kysymys. Samanlainen ero kulkee rakennettujen alueiden ja myöhempien rakennusvaiheiden välillä. Suunnittelukaupungista kertovaa karttaa lukee paremmin, kun erottaa tavoitteen toteutuneesta kaupungista.",
+            "factPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/ciudaddelapaz/faktapohja.md",
+            "factSHA256": "cf07636f5da0b3ef468810370222813bd77bd0869f21662c30f9c3dabef43472",
+            "sourceEvidence": [
+              {
+                "type": "currentContent",
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/ciudaddelapaz/sisalto.json",
+                "sha256": "47e38962c98d602a84cfdcf267f30b8bb63841546623d08b72965b3604b09db5",
+                "jsonPath": "$.kaupunkilehti[1].nostot[1]",
+                "text": "Kaupunki voidaan suunnitella suurelle väestölle jo ennen kuin sen talot ovat valmiita. Ciudad de la Pazin suunnitelmissa on väestökapasiteetti, mutta kapasiteetti ei ole asukasluku: se kertoo, kuinka monelle ihmiselle tiloja on tarkoitus rakentaa. Nykyisten asukkaiden määrä on toinen kysymys. Samanlainen ero kulkee rakennettujen alueiden ja myöhempien rakennusvaiheiden välillä. Suunnittelukaupungista kertovaa karttaa lukee paremmin, kun erottaa tavoitteen toteutuneesta kaupungista."
+              },
+              {
+                "type": "factSheet",
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/ciudaddelapaz/faktapohja.md",
+                "sha256": "cf07636f5da0b3ef468810370222813bd77bd0869f21662c30f9c3dabef43472",
+                "sourceUrl": "https://en.wikipedia.org/wiki/Ciudad_de_la_Paz"
+              }
+            ],
+            "reviewedBy": "exclusive-e06-extra-QA",
+            "rightsCheckFi": "Turvallinen tavallinen esine-/luonto-/materiaalihavainne, ei nimettyä teosta tai rakennuksen/asettelun jäljennöstä."
+          },
+          "qaReason": "Uusi paperi-/kynähavainne korvaa L2-v01:n numero- ja asteikkovirheen."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva suunnittelun työvälineistä.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/ciudaddelapaz/illustration-qa-extra.json",
+        "fileSHA256": "add6909a3d04d19812f34394d6b61c297279f613cfab22a51a2128ec762882d1",
+        "item": {
+          "slot": "L2",
+          "targetJsonPath": "$.kaupunkilehti[1].nostot[1]",
+          "assetID": "job14-e06-ciudaddelapaz-l2-v02",
+          "sha256": "d52fb8917fd8368bb29869ed49c6bde43aaef74999fb93edcdf918a15f7e40de",
+          "verdict": "accepted",
+          "reason": "Uusi paperi-/kynähavainne korvaa L2-v01:n numero- ja asteikkovirheen.",
+          "evidence": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/ciudaddelapaz/assets/job14-e06-ciudaddelapaz-l2-v02/image.png",
+            "nativeSHA256": "d52fb8917fd8368bb29869ed49c6bde43aaef74999fb93edcdf918a15f7e40de",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "nativeRatio": 1.5,
+            "manifestHashMatches": true,
+            "personallyViewed": true,
+            "viewTool": "view_image",
+            "viewedAt": "2026-10-13T13:28:13.689Z",
+            "visualFindingsFi": "Yksi tyhjä paperiarkki ja merkinnätön puukynä harmaalla pinnalla. Paperin kulmat ja reunat, puunsyyt, teroituksen grafiitti ja varjot uskottavia. Ei kirjoitusta, numeroita, viivainta, logoja, kehyksiä tai ihmisiä.",
+            "captionFi": "Havainnekuva suunnittelun työvälineistä.",
+            "sourceAndTargetCheckFi": "Ajantasainen L2 Asukkaat eivät asu tavoitteessa erottaa suunnittelukapasiteetin toteutuneesta kaupungista. Luettu nykyinen teksti ja faktapohjan C1/Planning-suunnitteluperusta. Kuvateksti havainnollistaa työvälineitä, ei FAT-kaavapiirrosta, väestölukua tai todellista kaupunkisuunnitelmaa. Vanha v01 pysyy erikseen hylättynä.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/ciudaddelapaz/sisalto.json",
+            "contentSHA256": "47e38962c98d602a84cfdcf267f30b8bb63841546623d08b72965b3604b09db5",
+            "textJsonPath": "$.kaupunkilehti[1].nostot[1]",
+            "currentText": "Kaupunki voidaan suunnitella suurelle väestölle jo ennen kuin sen talot ovat valmiita. Ciudad de la Pazin suunnitelmissa on väestökapasiteetti, mutta kapasiteetti ei ole asukasluku: se kertoo, kuinka monelle ihmiselle tiloja on tarkoitus rakentaa. Nykyisten asukkaiden määrä on toinen kysymys. Samanlainen ero kulkee rakennettujen alueiden ja myöhempien rakennusvaiheiden välillä. Suunnittelukaupungista kertovaa karttaa lukee paremmin, kun erottaa tavoitteen toteutuneesta kaupungista.",
+            "factPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/ciudaddelapaz/faktapohja.md",
+            "factSHA256": "cf07636f5da0b3ef468810370222813bd77bd0869f21662c30f9c3dabef43472",
+            "sourceEvidence": [
+              {
+                "type": "currentContent",
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/ciudaddelapaz/sisalto.json",
+                "sha256": "47e38962c98d602a84cfdcf267f30b8bb63841546623d08b72965b3604b09db5",
+                "jsonPath": "$.kaupunkilehti[1].nostot[1]",
+                "text": "Kaupunki voidaan suunnitella suurelle väestölle jo ennen kuin sen talot ovat valmiita. Ciudad de la Pazin suunnitelmissa on väestökapasiteetti, mutta kapasiteetti ei ole asukasluku: se kertoo, kuinka monelle ihmiselle tiloja on tarkoitus rakentaa. Nykyisten asukkaiden määrä on toinen kysymys. Samanlainen ero kulkee rakennettujen alueiden ja myöhempien rakennusvaiheiden välillä. Suunnittelukaupungista kertovaa karttaa lukee paremmin, kun erottaa tavoitteen toteutuneesta kaupungista."
+              },
+              {
+                "type": "factSheet",
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/ciudaddelapaz/faktapohja.md",
+                "sha256": "cf07636f5da0b3ef468810370222813bd77bd0869f21662c30f9c3dabef43472",
+                "sourceUrl": "https://en.wikipedia.org/wiki/Ciudad_de_la_Paz"
+              }
+            ],
+            "reviewedBy": "exclusive-e06-extra-QA",
+            "rightsCheckFi": "Turvallinen tavallinen esine-/luonto-/materiaalihavainne, ei nimettyä teosta tai rakennuksen/asettelun jäljennöstä."
+          },
+          "reviewedAt": "2026-10-13T13:28:13.769832+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/ciudaddelapaz/qa.json",
+            "sha256": "a6a86e7cd8174d6d4b5ffde36a10a90fc8b4571a1f89ddfc02fd3d7fe81b9769"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/ciudaddelapaz/illustration-qa-extra.json",
+            "sha256": "add6909a3d04d19812f34394d6b61c297279f613cfab22a51a2128ec762882d1"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/ciudaddelapaz/job14-e06-ciudaddelapaz-l2-v02-d52fb8917fd8.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/ciudaddelapaz/job14-e06-ciudaddelapaz-l2-v02-d52fb8917fd8.png?t=c27fb8b9b74139fb",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/ciudaddelapaz/job14-e06-ciudaddelapaz-l2-v02-d52fb8917fd8.png",
+        "sha256": "c27fb8b9b74139fb8d82e40395b11899474d2c38c2067b648274b16252705db1",
+        "bytes": 1748927,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "job14-e06-ciudaddelapaz-l2-v02",
+        "nativeSHA256": "d52fb8917fd8368bb29869ed49c6bde43aaef74999fb93edcdf918a15f7e40de",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e06/ciudaddelapaz/job14-e06-ciudaddelapaz-l2-v02-d52fb8917fd8.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e06",
+        "city": "ciudaddelapaz",
+        "slot": "L2",
+        "targetJsonPath": "$.kaupunkilehti[1].nostot[1]",
+        "verifiedAt": "2026-10-13T13:28:31.796886+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e06/ciudaddelapaz/job14-e06-ciudaddelapaz-l2-v02-d52fb8917fd8.png",
+        "sha256": "c27fb8b9b74139fb8d82e40395b11899474d2c38c2067b648274b16252705db1",
+        "bytes": 1748927,
+        "SHAReadAt": "2026-10-13T13:28:26.900130+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "d52fb8917fd8368bb29869ed49c6bde43aaef74999fb93edcdf918a15f7e40de",
+        "rgbPixelSHA256": "7293e8aab9a0344f6d43d3d31f8a5299a4286a824fc31d9ec7d978b546005939",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "47e38962c98d602a84cfdcf267f30b8bb63841546623d08b72965b3604b09db5",
+      "targetAfterSHA256": "9715e308a170771714426c4a923afa69a4d50eef090f1db0b63c5cf8bf11d6db",
+      "contextAfterSHA256": "9715e308a170771714426c4a923afa69a4d50eef090f1db0b63c5cf8bf11d6db",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e06",
@@ -1868,7 +2143,7 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/ciudaddelapaz/illustration-qa-extra.json",
-            "sha256": "641b86e90affbe6171f97a55d0bc34af1e3de0dd9130e6963f8d10747183892d"
+            "sha256": "add6909a3d04d19812f34394d6b61c297279f613cfab22a51a2128ec762882d1"
           }
         ]
       },
@@ -1941,10 +2216,14 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "47e38962c98d602a84cfdcf267f30b8bb63841546623d08b72965b3604b09db5",
       "targetAfterSHA256": "7c26d9c3b922239339822770757b929fe44626da532813d2850aae6757d87540",
-      "contextAfterSHA256": "7c26d9c3b922239339822770757b929fe44626da532813d2850aae6757d87540"
+      "contextAfterSHA256": "7c26d9c3b922239339822770757b929fe44626da532813d2850aae6757d87540",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     }
   ],
   "runtimeIntegrationPending": true,
-  "ownerAcceptedNotImpliedByAuthorization": true,
-  "gameIntegrated": false
+  "ownerAcceptedNotImpliedByAuthorization": false,
+  "gameIntegrated": false,
+  "allAssetsExplicitlyOwnerApproved": true,
+  "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
 }
