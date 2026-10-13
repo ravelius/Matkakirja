@@ -3,7 +3,7 @@
   "era": "e11",
   "city": "kingston",
   "authorization": "hyväksyn kaikki tekemäsi kuvat. toimita ne claudelle. claudelta saat uusia ohjeita jatkoa varten",
-  "sourceContentAfterSHA256": "747d00cfe7208b21ba14a6cf83e690f2f696bb7aa70b844e6902ee68d22ac031",
+  "sourceContentAfterSHA256": "8820ba730d423aab022cb7feb7dd7d130609f26d6d1eeb4682b1d8dc45e6639e",
   "assets": [
     {
       "era": "e11",
@@ -53,10 +53,10 @@
         1536
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/kingston/sisalto.json",
-      "sourceContentSHA256": "747d00cfe7208b21ba14a6cf83e690f2f696bb7aa70b844e6902ee68d22ac031",
+      "sourceContentSHA256": "8820ba730d423aab022cb7feb7dd7d130609f26d6d1eeb4682b1d8dc45e6639e",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "cbdab8c354f1247ae9cee20beb02db1b62f14e9633545cddc9d1da4ab85d6eaf",
+        "semanticContextSHA256": "4d498e20337e5cb8d26d19f7f7c0ae629eaf9e6b4d39519c19556cf0202af38d",
         "subjectTitle": "Matkailijalle",
         "targetState": "existing-target"
       },
@@ -499,9 +499,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "747d00cfe7208b21ba14a6cf83e690f2f696bb7aa70b844e6902ee68d22ac031",
+      "sourceContentAfterSHA256": "8820ba730d423aab022cb7feb7dd7d130609f26d6d1eeb4682b1d8dc45e6639e",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "cbdab8c354f1247ae9cee20beb02db1b62f14e9633545cddc9d1da4ab85d6eaf",
+      "contextAfterSHA256": "4d498e20337e5cb8d26d19f7f7c0ae629eaf9e6b4d39519c19556cf0202af38d",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -524,7 +524,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "8820ba730d423aab022cb7feb7dd7d130609f26d6d1eeb4682b1d8dc45e6639e",
+        "sameImageNativeSHA256": "fbfd56e255fc91c39b4f2c6a989db8ffb6c0ab476beb85b0b169c1f4cdf643c3",
+        "sameImageExportSHA256": "25f85f6bdc8bced96819ab6b05ce5dc8609dee4ce6fc673f412d0fe178a83347",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e11",
@@ -577,7 +585,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/kingston/sisalto.json",
-      "sourceContentSHA256": "747d00cfe7208b21ba14a6cf83e690f2f696bb7aa70b844e6902ee68d22ac031",
+      "sourceContentSHA256": "8820ba730d423aab022cb7feb7dd7d130609f26d6d1eeb4682b1d8dc45e6639e",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
         "semanticContextSHA256": "b112185afc4409b6eebf831cbc9b3034b373a49ad432ff671db5962afe5e5c4b",
@@ -821,7 +829,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "747d00cfe7208b21ba14a6cf83e690f2f696bb7aa70b844e6902ee68d22ac031",
+      "sourceContentAfterSHA256": "8820ba730d423aab022cb7feb7dd7d130609f26d6d1eeb4682b1d8dc45e6639e",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
       "contextAfterSHA256": "b112185afc4409b6eebf831cbc9b3034b373a49ad432ff671db5962afe5e5c4b",
       "ownerApproved": true,
@@ -846,7 +854,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "8820ba730d423aab022cb7feb7dd7d130609f26d6d1eeb4682b1d8dc45e6639e",
+        "sameImageNativeSHA256": "b74f82eee2e2a4274fca0ad7144d9e141170fe9ee459250eff01d8a3514b0def",
+        "sameImageExportSHA256": "746f5d9c3dd98e72093333339e4ae6eda059596bc5f2103e69cd9f0c5730a747",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e11",
@@ -896,10 +912,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/kingston/sisalto.json",
-      "sourceContentSHA256": "747d00cfe7208b21ba14a6cf83e690f2f696bb7aa70b844e6902ee68d22ac031",
+      "sourceContentSHA256": "8820ba730d423aab022cb7feb7dd7d130609f26d6d1eeb4682b1d8dc45e6639e",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "0df8b0f96e969917aac48b94bd8ed47fd4b6cf2b240c58fc259902b3534182a1",
-        "semanticContextSHA256": "0df8b0f96e969917aac48b94bd8ed47fd4b6cf2b240c58fc259902b3534182a1",
+        "targetBeforeSHA256": "5d1b18e4b648a9069489be09952f92de192aaf2804ee583b6908eb3be4dd7aff",
+        "semanticContextSHA256": "5d1b18e4b648a9069489be09952f92de192aaf2804ee583b6908eb3be4dd7aff",
         "subjectTitle": "Puutarhassa kokeiltiin viljelyä",
         "targetState": "existing-target"
       },
@@ -1138,9 +1154,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "747d00cfe7208b21ba14a6cf83e690f2f696bb7aa70b844e6902ee68d22ac031",
-      "targetAfterSHA256": "0df8b0f96e969917aac48b94bd8ed47fd4b6cf2b240c58fc259902b3534182a1",
-      "contextAfterSHA256": "0df8b0f96e969917aac48b94bd8ed47fd4b6cf2b240c58fc259902b3534182a1",
+      "sourceContentAfterSHA256": "8820ba730d423aab022cb7feb7dd7d130609f26d6d1eeb4682b1d8dc45e6639e",
+      "targetAfterSHA256": "5d1b18e4b648a9069489be09952f92de192aaf2804ee583b6908eb3be4dd7aff",
+      "contextAfterSHA256": "5d1b18e4b648a9069489be09952f92de192aaf2804ee583b6908eb3be4dd7aff",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -1163,7 +1179,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "8820ba730d423aab022cb7feb7dd7d130609f26d6d1eeb4682b1d8dc45e6639e",
+        "sameImageNativeSHA256": "03b4a4903eb7006b0407b3067f432343dd4c79cbd2c232e0468bc062a88c241f",
+        "sameImageExportSHA256": "9679d676e60e0345c8b6ddf6389be2e85ce6f668b522aa45363015afe6c1d986",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e11",
@@ -1213,10 +1237,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/kingston/sisalto.json",
-      "sourceContentSHA256": "747d00cfe7208b21ba14a6cf83e690f2f696bb7aa70b844e6902ee68d22ac031",
+      "sourceContentSHA256": "8820ba730d423aab022cb7feb7dd7d130609f26d6d1eeb4682b1d8dc45e6639e",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "8789e31d22f71d1ca16575e488db6246ceefed49352cf159f53c07eeac5eca25",
-        "semanticContextSHA256": "8789e31d22f71d1ca16575e488db6246ceefed49352cf159f53c07eeac5eca25",
+        "targetBeforeSHA256": "f6136d52316d45fb6f6b4187574fff2b4c5c3698bb10926c9ed0dc0f0d443023",
+        "semanticContextSHA256": "f6136d52316d45fb6f6b4187574fff2b4c5c3698bb10926c9ed0dc0f0d443023",
         "subjectTitle": "Kaiutin ei soita yksin",
         "targetState": "existing-target"
       },
@@ -1455,9 +1479,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "747d00cfe7208b21ba14a6cf83e690f2f696bb7aa70b844e6902ee68d22ac031",
-      "targetAfterSHA256": "8789e31d22f71d1ca16575e488db6246ceefed49352cf159f53c07eeac5eca25",
-      "contextAfterSHA256": "8789e31d22f71d1ca16575e488db6246ceefed49352cf159f53c07eeac5eca25",
+      "sourceContentAfterSHA256": "8820ba730d423aab022cb7feb7dd7d130609f26d6d1eeb4682b1d8dc45e6639e",
+      "targetAfterSHA256": "f6136d52316d45fb6f6b4187574fff2b4c5c3698bb10926c9ed0dc0f0d443023",
+      "contextAfterSHA256": "f6136d52316d45fb6f6b4187574fff2b4c5c3698bb10926c9ed0dc0f0d443023",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -1480,7 +1504,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "8820ba730d423aab022cb7feb7dd7d130609f26d6d1eeb4682b1d8dc45e6639e",
+        "sameImageNativeSHA256": "c921a9e21407ccd1f3b01711047733ecfedb45f560d75c3d001cecb475e684b9",
+        "sameImageExportSHA256": "27670f90f2c112663a1bca87fc4d598a8b68f62b7f50a734d974a495ddc0f777",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e11",
@@ -1530,7 +1562,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/kingston/sisalto.json",
-      "sourceContentSHA256": "747d00cfe7208b21ba14a6cf83e690f2f696bb7aa70b844e6902ee68d22ac031",
+      "sourceContentSHA256": "8820ba730d423aab022cb7feb7dd7d130609f26d6d1eeb4682b1d8dc45e6639e",
       "semanticSourceBind": {
         "targetBeforeSHA256": "2512b804edba225f9c8fbd56fb920ce3ff146367a78e7f85ed52a3fb08b80e01",
         "semanticContextSHA256": "2512b804edba225f9c8fbd56fb920ce3ff146367a78e7f85ed52a3fb08b80e01",
@@ -1772,7 +1804,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "747d00cfe7208b21ba14a6cf83e690f2f696bb7aa70b844e6902ee68d22ac031",
+      "sourceContentAfterSHA256": "8820ba730d423aab022cb7feb7dd7d130609f26d6d1eeb4682b1d8dc45e6639e",
       "targetAfterSHA256": "2512b804edba225f9c8fbd56fb920ce3ff146367a78e7f85ed52a3fb08b80e01",
       "contextAfterSHA256": "2512b804edba225f9c8fbd56fb920ce3ff146367a78e7f85ed52a3fb08b80e01",
       "ownerApproved": true,
@@ -1797,7 +1829,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "8820ba730d423aab022cb7feb7dd7d130609f26d6d1eeb4682b1d8dc45e6639e",
+        "sameImageNativeSHA256": "78ade5f2e81b90e159cbcae3f82f01db98d45c303969e9f1501718a2cd9dc76f",
+        "sameImageExportSHA256": "603bd4b69db75b7b73b484e3645a8b91659cd6884baf77a1e50175ea6eefd378",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e11",
@@ -1847,10 +1887,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/kingston/sisalto.json",
-      "sourceContentSHA256": "747d00cfe7208b21ba14a6cf83e690f2f696bb7aa70b844e6902ee68d22ac031",
+      "sourceContentSHA256": "8820ba730d423aab022cb7feb7dd7d130609f26d6d1eeb4682b1d8dc45e6639e",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "0a175906294b8a9df23f1f5d7ae643e675fdd83399aeebd38d214ae8951e5e7e",
-        "semanticContextSHA256": "0a175906294b8a9df23f1f5d7ae643e675fdd83399aeebd38d214ae8951e5e7e",
+        "targetBeforeSHA256": "28f6d7ee0567add7fc6ccbdb1825105116691ddb23efd8d55d0d85e09c9ad1cb",
+        "semanticContextSHA256": "28f6d7ee0567add7fc6ccbdb1825105116691ddb23efd8d55d0d85e09c9ad1cb",
         "subjectTitle": "Rocksteady rauhoitti vauhtia",
         "targetState": "existing-target"
       },
@@ -2089,9 +2129,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "747d00cfe7208b21ba14a6cf83e690f2f696bb7aa70b844e6902ee68d22ac031",
-      "targetAfterSHA256": "0a175906294b8a9df23f1f5d7ae643e675fdd83399aeebd38d214ae8951e5e7e",
-      "contextAfterSHA256": "0a175906294b8a9df23f1f5d7ae643e675fdd83399aeebd38d214ae8951e5e7e",
+      "sourceContentAfterSHA256": "8820ba730d423aab022cb7feb7dd7d130609f26d6d1eeb4682b1d8dc45e6639e",
+      "targetAfterSHA256": "28f6d7ee0567add7fc6ccbdb1825105116691ddb23efd8d55d0d85e09c9ad1cb",
+      "contextAfterSHA256": "28f6d7ee0567add7fc6ccbdb1825105116691ddb23efd8d55d0d85e09c9ad1cb",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -2114,7 +2154,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "8820ba730d423aab022cb7feb7dd7d130609f26d6d1eeb4682b1d8dc45e6639e",
+        "sameImageNativeSHA256": "4d1d0f0a468925462748d44bd23238016bb315f94af81930f57d7fdc6c7156fb",
+        "sameImageExportSHA256": "12a460631227b19ad567b5b4e21b5e0d0b4140ba73d2f65d5c8b85505d68695c",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e11",
@@ -2164,10 +2212,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/kingston/sisalto.json",
-      "sourceContentSHA256": "747d00cfe7208b21ba14a6cf83e690f2f696bb7aa70b844e6902ee68d22ac031",
+      "sourceContentSHA256": "8820ba730d423aab022cb7feb7dd7d130609f26d6d1eeb4682b1d8dc45e6639e",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "b413d8a563e09c3e3b5a7bf8becd34d33dd0caa948b5df077b07987dcb0dd7c2",
-        "semanticContextSHA256": "b413d8a563e09c3e3b5a7bf8becd34d33dd0caa948b5df077b07987dcb0dd7c2",
+        "targetBeforeSHA256": "2d25ec092e896a3eca9afa8396485deb406a61844e83ce1f02d1851595236953",
+        "semanticContextSHA256": "2d25ec092e896a3eca9afa8396485deb406a61844e83ce1f02d1851595236953",
         "subjectTitle": "Miksauspöydästä tuli soitin",
         "targetState": "existing-target"
       },
@@ -2406,9 +2454,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "747d00cfe7208b21ba14a6cf83e690f2f696bb7aa70b844e6902ee68d22ac031",
-      "targetAfterSHA256": "b413d8a563e09c3e3b5a7bf8becd34d33dd0caa948b5df077b07987dcb0dd7c2",
-      "contextAfterSHA256": "b413d8a563e09c3e3b5a7bf8becd34d33dd0caa948b5df077b07987dcb0dd7c2",
+      "sourceContentAfterSHA256": "8820ba730d423aab022cb7feb7dd7d130609f26d6d1eeb4682b1d8dc45e6639e",
+      "targetAfterSHA256": "2d25ec092e896a3eca9afa8396485deb406a61844e83ce1f02d1851595236953",
+      "contextAfterSHA256": "2d25ec092e896a3eca9afa8396485deb406a61844e83ce1f02d1851595236953",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -2431,7 +2479,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "8820ba730d423aab022cb7feb7dd7d130609f26d6d1eeb4682b1d8dc45e6639e",
+        "sameImageNativeSHA256": "5cb6938b7a8a4b2a46afbd636a7a507d63ad7937caac4b940fba7e8fbebeffa1",
+        "sameImageExportSHA256": "23381e8e491f19b3290dbed967cd6978b1eb57562d57775f26258c3b84485e8e",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e11",
@@ -2450,7 +2506,7 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/kingston/photo-a4dd2aa111218028028f.jpg",
         "suora": true,
         "lahde": "Katinka Zuchowicz Photography, Commons (CC BY-SA 3.0)",
-        "selite": "Etualalla on kivikkoista rantaa ja vettä; lahden toisella puolella näkyy Harbor Viewn suunta.",
+        "selite": "Palisadoesin rannikko Kingstonin satamalahdella vuonna 2009.",
         "lyhyt": "Palisadoesin kivikkoista rantaa Kingstonissa.",
         "tiedosto": "Jamaica Palisadoes Kingston; Harbor View Photo Katinka Zuchowicz Photography DSC 8572-2(2).jpg",
         "vuosi": "2009"
@@ -2458,7 +2514,7 @@
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Katinka Zuchowicz Photography, Commons (CC BY-SA 3.0)",
-        "selite": "Etualalla on kivikkoista rantaa ja vettä; lahden toisella puolella näkyy Harbor Viewn suunta.",
+        "selite": "Palisadoesin rannikko Kingstonin satamalahdella vuonna 2009.",
         "lyhyt": "Palisadoesin kivikkoista rantaa Kingstonissa.",
         "tiedosto": "Jamaica Palisadoes Kingston; Harbor View Photo Katinka Zuchowicz Photography DSC 8572-2(2).jpg",
         "vuosi": "2009"
@@ -2467,7 +2523,7 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/kingston/photo-a4dd2aa111218028028f.jpg",
         "suora": true,
         "lahde": "Katinka Zuchowicz Photography, Commons (CC BY-SA 3.0)",
-        "selite": "Etualalla on kivikkoista rantaa ja vettä; lahden toisella puolella näkyy Harbor Viewn suunta.",
+        "selite": "Palisadoesin rannikko Kingstonin satamalahdella vuonna 2009.",
         "lyhyt": "Palisadoesin kivikkoista rantaa Kingstonissa.",
         "tiedosto": "Jamaica Palisadoes Kingston; Harbor View Photo Katinka Zuchowicz Photography DSC 8572-2(2).jpg",
         "vuosi": "2009"
@@ -2484,10 +2540,10 @@
         1608
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/kingston/sisalto.json",
-      "sourceContentSHA256": "747d00cfe7208b21ba14a6cf83e690f2f696bb7aa70b844e6902ee68d22ac031",
+      "sourceContentSHA256": "8820ba730d423aab022cb7feb7dd7d130609f26d6d1eeb4682b1d8dc45e6639e",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "8efd60545ffa3df62bc2eb1a6339846ba83654bfc64c7c9fb948a99bbd801e42",
-        "semanticContextSHA256": "8efd60545ffa3df62bc2eb1a6339846ba83654bfc64c7c9fb948a99bbd801e42",
+        "targetBeforeSHA256": "e1a4e4a9cb41d0c44e0878fc180e055ada9be2fe6e803e7981baaf1b72b32625",
+        "semanticContextSHA256": "e1a4e4a9cb41d0c44e0878fc180e055ada9be2fe6e803e7981baaf1b72b32625",
         "subjectTitle": "kingston — aito paikkavalokuva",
         "targetState": "existing-target"
       },
@@ -2804,7 +2860,7 @@
       "priorMediaFields": {
         "tiedosto": "Jamaica Palisadoes Kingston; Harbor View Photo Katinka Zuchowicz Photography DSC 8572-2(2).jpg",
         "lyhyt": "Palisadoesin kivikkoista rantaa Kingstonissa.",
-        "selite": "Etualalla on kivikkoista rantaa ja vettä; lahden toisella puolella näkyy Harbor Viewn suunta.",
+        "selite": "Palisadoesin rannikko Kingstonin satamalahdella vuonna 2009.",
         "lahde": "Katinka Zuchowicz Photography, Commons (CC BY-SA 3.0)",
         "vuosi": "2009"
       },
@@ -2832,15 +2888,15 @@
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Katinka Zuchowicz Photography, Commons (CC BY-SA 3.0)",
-        "selite": "Etualalla on kivikkoista rantaa ja vettä; lahden toisella puolella näkyy Harbor Viewn suunta.",
+        "selite": "Palisadoesin rannikko Kingstonin satamalahdella vuonna 2009.",
         "lyhyt": "Palisadoesin kivikkoista rantaa Kingstonissa.",
         "tiedosto": "Jamaica Palisadoes Kingston; Harbor View Photo Katinka Zuchowicz Photography DSC 8572-2(2).jpg",
         "vuosi": "2009"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "747d00cfe7208b21ba14a6cf83e690f2f696bb7aa70b844e6902ee68d22ac031",
-      "targetAfterSHA256": "8efd60545ffa3df62bc2eb1a6339846ba83654bfc64c7c9fb948a99bbd801e42",
-      "contextAfterSHA256": "8efd60545ffa3df62bc2eb1a6339846ba83654bfc64c7c9fb948a99bbd801e42",
+      "sourceContentAfterSHA256": "8820ba730d423aab022cb7feb7dd7d130609f26d6d1eeb4682b1d8dc45e6639e",
+      "targetAfterSHA256": "e1a4e4a9cb41d0c44e0878fc180e055ada9be2fe6e803e7981baaf1b72b32625",
+      "contextAfterSHA256": "e1a4e4a9cb41d0c44e0878fc180e055ada9be2fe6e803e7981baaf1b72b32625",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -2863,7 +2919,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "8820ba730d423aab022cb7feb7dd7d130609f26d6d1eeb4682b1d8dc45e6639e",
+        "sameImageNativeSHA256": "a4dd2aa111218028028f48cc667159599a9aa9d3a4a0698dabe0f89ea8539a51",
+        "sameImageExportSHA256": "a4dd2aa111218028028f48cc667159599a9aa9d3a4a0698dabe0f89ea8539a51",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": true
+      }
     },
     {
       "era": "e11",
@@ -2885,14 +2949,14 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/kingston/c1-b3fc10255ba217d8fb97.jpg",
         "suora": true,
         "lahde": "NASA Astronauts, Wikimedia Commons (PD)",
-        "selite": "Kingstonin kaupunkialue levittäytyy lahden taakse. Kapea Palisadoesin kannas erottaa satamalahden avoimesta merestä tammikuussa 2010 otetussa kuvassa.",
+        "selite": "Kingstonin satamalahti ja Palisadoes kansainväliseltä avaruusasemalta tammikuussa 2010.",
         "lyhyt": "Kingstonin satamalahti ja Palisadoes avaruusasemalta.",
         "tiedosto": "Kingston, Jamaica.JPG"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "NASA Astronauts, Wikimedia Commons (PD)",
-        "selite": "Kingstonin kaupunkialue levittäytyy lahden taakse. Kapea Palisadoesin kannas erottaa satamalahden avoimesta merestä tammikuussa 2010 otetussa kuvassa.",
+        "selite": "Kingstonin satamalahti ja Palisadoes kansainväliseltä avaruusasemalta tammikuussa 2010.",
         "lyhyt": "Kingstonin satamalahti ja Palisadoes avaruusasemalta.",
         "tiedosto": "Kingston, Jamaica.JPG"
       },
@@ -2900,7 +2964,7 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/kingston/c1-b3fc10255ba217d8fb97.jpg",
         "suora": true,
         "lahde": "NASA Astronauts, Wikimedia Commons (PD)",
-        "selite": "Kingstonin kaupunkialue levittäytyy lahden taakse. Kapea Palisadoesin kannas erottaa satamalahden avoimesta merestä tammikuussa 2010 otetussa kuvassa.",
+        "selite": "Kingstonin satamalahti ja Palisadoes kansainväliseltä avaruusasemalta tammikuussa 2010.",
         "lyhyt": "Kingstonin satamalahti ja Palisadoes avaruusasemalta.",
         "tiedosto": "Kingston, Jamaica.JPG"
       },
@@ -2916,10 +2980,10 @@
         2832
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/kingston/sisalto.json",
-      "sourceContentSHA256": "747d00cfe7208b21ba14a6cf83e690f2f696bb7aa70b844e6902ee68d22ac031",
+      "sourceContentSHA256": "8820ba730d423aab022cb7feb7dd7d130609f26d6d1eeb4682b1d8dc45e6639e",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "8783a93397b9d2398be6dad8ade1f4bdf6bee10bb50e77a2791daa47587b6eca",
-        "semanticContextSHA256": "8783a93397b9d2398be6dad8ade1f4bdf6bee10bb50e77a2791daa47587b6eca",
+        "targetBeforeSHA256": "b337f4b0a6f4ca9be03e3feed1056ebc312d6eb1219aab63b3de19f29cdc9bcd",
+        "semanticContextSHA256": "b337f4b0a6f4ca9be03e3feed1056ebc312d6eb1219aab63b3de19f29cdc9bcd",
         "subjectTitle": "Kingston",
         "targetState": "existing-target"
       },
@@ -3194,7 +3258,7 @@
       "priorMediaFields": {
         "tiedosto": "Kingston, Jamaica.JPG",
         "lyhyt": "Kingstonin satamalahti ja Palisadoes avaruusasemalta.",
-        "selite": "Kingstonin kaupunkialue levittäytyy lahden taakse. Kapea Palisadoesin kannas erottaa satamalahden avoimesta merestä tammikuussa 2010 otetussa kuvassa.",
+        "selite": "Kingstonin satamalahti ja Palisadoes kansainväliseltä avaruusasemalta tammikuussa 2010.",
         "lahde": "NASA Astronauts, Wikimedia Commons (PD)"
       },
       "preservePreviousMediaObjects": true,
@@ -3221,14 +3285,14 @@
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "NASA Astronauts, Wikimedia Commons (PD)",
-        "selite": "Kingstonin kaupunkialue levittäytyy lahden taakse. Kapea Palisadoesin kannas erottaa satamalahden avoimesta merestä tammikuussa 2010 otetussa kuvassa.",
+        "selite": "Kingstonin satamalahti ja Palisadoes kansainväliseltä avaruusasemalta tammikuussa 2010.",
         "lyhyt": "Kingstonin satamalahti ja Palisadoes avaruusasemalta.",
         "tiedosto": "Kingston, Jamaica.JPG"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "747d00cfe7208b21ba14a6cf83e690f2f696bb7aa70b844e6902ee68d22ac031",
-      "targetAfterSHA256": "8783a93397b9d2398be6dad8ade1f4bdf6bee10bb50e77a2791daa47587b6eca",
-      "contextAfterSHA256": "8783a93397b9d2398be6dad8ade1f4bdf6bee10bb50e77a2791daa47587b6eca",
+      "sourceContentAfterSHA256": "8820ba730d423aab022cb7feb7dd7d130609f26d6d1eeb4682b1d8dc45e6639e",
+      "targetAfterSHA256": "b337f4b0a6f4ca9be03e3feed1056ebc312d6eb1219aab63b3de19f29cdc9bcd",
+      "contextAfterSHA256": "b337f4b0a6f4ca9be03e3feed1056ebc312d6eb1219aab63b3de19f29cdc9bcd",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -3251,7 +3315,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "8820ba730d423aab022cb7feb7dd7d130609f26d6d1eeb4682b1d8dc45e6639e",
+        "sameImageNativeSHA256": "b3fc10255ba217d8fb97c8a965900010d6b0b0505ae5bb7468a70aa9c71430f9",
+        "sameImageExportSHA256": "b3fc10255ba217d8fb97c8a965900010d6b0b0505ae5bb7468a70aa9c71430f9",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": true
+      }
     },
     {
       "era": "e11",
@@ -3273,14 +3345,14 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/kingston/k1-17f497e154ad7bf9ef5d.jpg",
         "suora": true,
         "lahde": "Raychristofer, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Tiilimuurin kaariaukot avautuvat ruohikkoiseen etualaan Port Royalissa vuonna 2011 otetussa kuvassa.",
+        "selite": "Port Royalin Fort Charles -linnoituksen muuria vuonna 2011.",
         "lyhyt": "Port Royalin linnoituksen tiilimuuria.",
         "tiedosto": "Fort Port Royal Jamaica.JPG"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Raychristofer, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Tiilimuurin kaariaukot avautuvat ruohikkoiseen etualaan Port Royalissa vuonna 2011 otetussa kuvassa.",
+        "selite": "Port Royalin Fort Charles -linnoituksen muuria vuonna 2011.",
         "lyhyt": "Port Royalin linnoituksen tiilimuuria.",
         "tiedosto": "Fort Port Royal Jamaica.JPG"
       },
@@ -3288,7 +3360,7 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/kingston/k1-17f497e154ad7bf9ef5d.jpg",
         "suora": true,
         "lahde": "Raychristofer, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Tiilimuurin kaariaukot avautuvat ruohikkoiseen etualaan Port Royalissa vuonna 2011 otetussa kuvassa.",
+        "selite": "Port Royalin Fort Charles -linnoituksen muuria vuonna 2011.",
         "lyhyt": "Port Royalin linnoituksen tiilimuuria.",
         "tiedosto": "Fort Port Royal Jamaica.JPG"
       },
@@ -3304,10 +3376,10 @@
         2592
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/kingston/sisalto.json",
-      "sourceContentSHA256": "747d00cfe7208b21ba14a6cf83e690f2f696bb7aa70b844e6902ee68d22ac031",
+      "sourceContentSHA256": "8820ba730d423aab022cb7feb7dd7d130609f26d6d1eeb4682b1d8dc45e6639e",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "58c864137c1833724b192755d89c03b0d2ba232bc7a22b3b3e0fcd91c77eb6ac",
-        "semanticContextSHA256": "58c864137c1833724b192755d89c03b0d2ba232bc7a22b3b3e0fcd91c77eb6ac",
+        "targetBeforeSHA256": "69df988a55530d7497bdcd895e396e9c889dcea05ba8d4893e3c3f1d6d6b08f9",
+        "semanticContextSHA256": "69df988a55530d7497bdcd895e396e9c889dcea05ba8d4893e3c3f1d6d6b08f9",
         "subjectTitle": "Kaupungin alku oli telttaleiri",
         "targetState": "existing-target"
       },
@@ -3588,7 +3660,7 @@
       "priorMediaFields": {
         "tiedosto": "Fort Port Royal Jamaica.JPG",
         "lyhyt": "Port Royalin linnoituksen tiilimuuria.",
-        "selite": "Tiilimuurin kaariaukot avautuvat ruohikkoiseen etualaan Port Royalissa vuonna 2011 otetussa kuvassa.",
+        "selite": "Port Royalin Fort Charles -linnoituksen muuria vuonna 2011.",
         "lahde": "Raychristofer, Wikimedia Commons (CC BY-SA 4.0)"
       },
       "preservePreviousMediaObjects": true,
@@ -3615,14 +3687,14 @@
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Raychristofer, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Tiilimuurin kaariaukot avautuvat ruohikkoiseen etualaan Port Royalissa vuonna 2011 otetussa kuvassa.",
+        "selite": "Port Royalin Fort Charles -linnoituksen muuria vuonna 2011.",
         "lyhyt": "Port Royalin linnoituksen tiilimuuria.",
         "tiedosto": "Fort Port Royal Jamaica.JPG"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "747d00cfe7208b21ba14a6cf83e690f2f696bb7aa70b844e6902ee68d22ac031",
-      "targetAfterSHA256": "58c864137c1833724b192755d89c03b0d2ba232bc7a22b3b3e0fcd91c77eb6ac",
-      "contextAfterSHA256": "58c864137c1833724b192755d89c03b0d2ba232bc7a22b3b3e0fcd91c77eb6ac",
+      "sourceContentAfterSHA256": "8820ba730d423aab022cb7feb7dd7d130609f26d6d1eeb4682b1d8dc45e6639e",
+      "targetAfterSHA256": "69df988a55530d7497bdcd895e396e9c889dcea05ba8d4893e3c3f1d6d6b08f9",
+      "contextAfterSHA256": "69df988a55530d7497bdcd895e396e9c889dcea05ba8d4893e3c3f1d6d6b08f9",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -3645,7 +3717,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "8820ba730d423aab022cb7feb7dd7d130609f26d6d1eeb4682b1d8dc45e6639e",
+        "sameImageNativeSHA256": "17f497e154ad7bf9ef5dc1be56d839bc3f2072218890d786ded241bac25386e1",
+        "sameImageExportSHA256": "17f497e154ad7bf9ef5dc1be56d839bc3f2072218890d786ded241bac25386e1",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": true
+      }
     }
   ],
   "runtimeIntegrationPending": true,
@@ -3657,6 +3737,9 @@
   "task118TextRevision": true,
   "independentTextResamplePending": true,
   "textAcceptanceVerified": false,
-  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task118/immutable-media-history/e11/kingston/5c8de8ddf08b81666782fa2d3931a9951c1a92649987408f3a6515517025d23b.json",
-  "task118ReboundAt": "2026-10-13T16:31:25.989210+00:00"
+  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task228/immutable-media-history/e11/kingston/1a37c5650aae11afbed1611a40bf0ba18414677cb8cda58f9869cefd6a1124b5.json",
+  "task118ReboundAt": "2026-10-13T16:31:25.989210+00:00",
+  "task228ExcludedAssets": [],
+  "task228TextRevision": true,
+  "task228ReboundAt": "2026-10-13T19:32:48.366608+00:00"
 }

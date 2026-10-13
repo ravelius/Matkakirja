@@ -3,7 +3,7 @@
   "era": "e11",
   "city": "washington",
   "authorization": "hyväksyn kaikki tekemäsi kuvat. toimita ne claudelle. claudelta saat uusia ohjeita jatkoa varten",
-  "sourceContentAfterSHA256": "12bf73df5a769f3806a71b2cc6b49aac7676ef169f8dbfb4e84666429dbeab7c",
+  "sourceContentAfterSHA256": "5de317d9d74cf18cc9dfdecd99576b1a4a5234552b2e3313f1c9d62b397dfbcc",
   "assets": [
     {
       "era": "e11",
@@ -56,10 +56,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/washington/sisalto.json",
-      "sourceContentSHA256": "12bf73df5a769f3806a71b2cc6b49aac7676ef169f8dbfb4e84666429dbeab7c",
+      "sourceContentSHA256": "5de317d9d74cf18cc9dfdecd99576b1a4a5234552b2e3313f1c9d62b397dfbcc",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "d7b18840d1fdc85502c65b73aafa440dffeb1b2a7203833ac19312ba32d38e30",
+        "semanticContextSHA256": "e20bca58f13fbe788fb0ebb69a26cfa05c2ac10ac4dcb0f3dac3af287ac1a572",
         "subjectTitle": "Mitä täällä syödään",
         "targetState": "existing-target"
       },
@@ -261,9 +261,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "12bf73df5a769f3806a71b2cc6b49aac7676ef169f8dbfb4e84666429dbeab7c",
+      "sourceContentAfterSHA256": "5de317d9d74cf18cc9dfdecd99576b1a4a5234552b2e3313f1c9d62b397dfbcc",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "d7b18840d1fdc85502c65b73aafa440dffeb1b2a7203833ac19312ba32d38e30",
+      "contextAfterSHA256": "e20bca58f13fbe788fb0ebb69a26cfa05c2ac10ac4dcb0f3dac3af287ac1a572",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -286,7 +286,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "5de317d9d74cf18cc9dfdecd99576b1a4a5234552b2e3313f1c9d62b397dfbcc",
+        "sameImageNativeSHA256": "1412ef0ba654608f13572e9cec85ba4291a718df982001fb01dd24492c26b4fc",
+        "sameImageExportSHA256": "b345809c3ea31fa7a19c7be9a122e5cb87b643acff05aa660333fda6621e2fed",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e11",
@@ -336,7 +344,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/washington/sisalto.json",
-      "sourceContentSHA256": "12bf73df5a769f3806a71b2cc6b49aac7676ef169f8dbfb4e84666429dbeab7c",
+      "sourceContentSHA256": "5de317d9d74cf18cc9dfdecd99576b1a4a5234552b2e3313f1c9d62b397dfbcc",
       "semanticSourceBind": {
         "targetBeforeSHA256": "7838a5ea6c2a1d4ae36ddfa3f810b3e5f374215540b04ebcdaabbe9fee7b4c7b",
         "semanticContextSHA256": "7838a5ea6c2a1d4ae36ddfa3f810b3e5f374215540b04ebcdaabbe9fee7b4c7b",
@@ -578,7 +586,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "12bf73df5a769f3806a71b2cc6b49aac7676ef169f8dbfb4e84666429dbeab7c",
+      "sourceContentAfterSHA256": "5de317d9d74cf18cc9dfdecd99576b1a4a5234552b2e3313f1c9d62b397dfbcc",
       "targetAfterSHA256": "7838a5ea6c2a1d4ae36ddfa3f810b3e5f374215540b04ebcdaabbe9fee7b4c7b",
       "contextAfterSHA256": "7838a5ea6c2a1d4ae36ddfa3f810b3e5f374215540b04ebcdaabbe9fee7b4c7b",
       "ownerApproved": true,
@@ -603,7 +611,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "5de317d9d74cf18cc9dfdecd99576b1a4a5234552b2e3313f1c9d62b397dfbcc",
+        "sameImageNativeSHA256": "c87e1d4a87aa5f867197c00b74ad5e83b8018c977f7126fe589c037c9e084693",
+        "sameImageExportSHA256": "f965d5b2617ac16ad23a0d17f8db77781d58c208eb4bd16af321473a92f3c77a",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e11",
@@ -653,10 +669,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/washington/sisalto.json",
-      "sourceContentSHA256": "12bf73df5a769f3806a71b2cc6b49aac7676ef169f8dbfb4e84666429dbeab7c",
+      "sourceContentSHA256": "5de317d9d74cf18cc9dfdecd99576b1a4a5234552b2e3313f1c9d62b397dfbcc",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "22a944f6464c77bd030a045b38d41508dfabb724a108afd5acaf79fe28763624",
-        "semanticContextSHA256": "22a944f6464c77bd030a045b38d41508dfabb724a108afd5acaf79fe28763624",
+        "targetBeforeSHA256": "2339555f178b79e6bceea2d4c14b307d206ed4655f963281a9c38af1b28b057a",
+        "semanticContextSHA256": "2339555f178b79e6bceea2d4c14b307d206ed4655f963281a9c38af1b28b057a",
         "subjectTitle": "Kiven väri kertoo keskeytyksestä",
         "targetState": "existing-target"
       },
@@ -895,9 +911,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "12bf73df5a769f3806a71b2cc6b49aac7676ef169f8dbfb4e84666429dbeab7c",
-      "targetAfterSHA256": "22a944f6464c77bd030a045b38d41508dfabb724a108afd5acaf79fe28763624",
-      "contextAfterSHA256": "22a944f6464c77bd030a045b38d41508dfabb724a108afd5acaf79fe28763624",
+      "sourceContentAfterSHA256": "5de317d9d74cf18cc9dfdecd99576b1a4a5234552b2e3313f1c9d62b397dfbcc",
+      "targetAfterSHA256": "2339555f178b79e6bceea2d4c14b307d206ed4655f963281a9c38af1b28b057a",
+      "contextAfterSHA256": "2339555f178b79e6bceea2d4c14b307d206ed4655f963281a9c38af1b28b057a",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -920,7 +936,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "5de317d9d74cf18cc9dfdecd99576b1a4a5234552b2e3313f1c9d62b397dfbcc",
+        "sameImageNativeSHA256": "b705dc20a42ae4bbc300449cbea2d54d0079e4d51bc0a76f66bb47a837601813",
+        "sameImageExportSHA256": "5fbb863b7445dbf4b8bd6021eb6ec2b6c79824b1be78d01c0ecd7a4d0f9cbdf9",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e11",
@@ -970,10 +994,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/washington/sisalto.json",
-      "sourceContentSHA256": "12bf73df5a769f3806a71b2cc6b49aac7676ef169f8dbfb4e84666429dbeab7c",
+      "sourceContentSHA256": "5de317d9d74cf18cc9dfdecd99576b1a4a5234552b2e3313f1c9d62b397dfbcc",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "9e4d7df75403fd26daf576550bb948afb54ad643140cbbbdd6e5c31fd9c02fbb",
-        "semanticContextSHA256": "9e4d7df75403fd26daf576550bb948afb54ad643140cbbbdd6e5c31fd9c02fbb",
+        "targetBeforeSHA256": "ee4d58cdd73532066c3bb2fa300187ae3ae78f4dc567a91f05d21b883e687df0",
+        "semanticContextSHA256": "ee4d58cdd73532066c3bb2fa300187ae3ae78f4dc567a91f05d21b883e687df0",
         "subjectTitle": "Vetovoima käveli veden vieressä",
         "targetState": "existing-target"
       },
@@ -1212,9 +1236,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "12bf73df5a769f3806a71b2cc6b49aac7676ef169f8dbfb4e84666429dbeab7c",
-      "targetAfterSHA256": "9e4d7df75403fd26daf576550bb948afb54ad643140cbbbdd6e5c31fd9c02fbb",
-      "contextAfterSHA256": "9e4d7df75403fd26daf576550bb948afb54ad643140cbbbdd6e5c31fd9c02fbb",
+      "sourceContentAfterSHA256": "5de317d9d74cf18cc9dfdecd99576b1a4a5234552b2e3313f1c9d62b397dfbcc",
+      "targetAfterSHA256": "ee4d58cdd73532066c3bb2fa300187ae3ae78f4dc567a91f05d21b883e687df0",
+      "contextAfterSHA256": "ee4d58cdd73532066c3bb2fa300187ae3ae78f4dc567a91f05d21b883e687df0",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -1237,7 +1261,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "5de317d9d74cf18cc9dfdecd99576b1a4a5234552b2e3313f1c9d62b397dfbcc",
+        "sameImageNativeSHA256": "ca8db7d2054c0cfd03984d82dd8b6cdf0508c5a08099b61f3291512a6874baf7",
+        "sameImageExportSHA256": "eb63e9cb7302ca2a5f9a2d6b69317acb15cd70aa8155e798e6129a5b4919c4d7",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e11",
@@ -1287,10 +1319,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/washington/sisalto.json",
-      "sourceContentSHA256": "12bf73df5a769f3806a71b2cc6b49aac7676ef169f8dbfb4e84666429dbeab7c",
+      "sourceContentSHA256": "5de317d9d74cf18cc9dfdecd99576b1a4a5234552b2e3313f1c9d62b397dfbcc",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "2dd71a21abac47e9a1dc8fb824c883f3127f143e91fd0aa805de9ab24042b54f",
-        "semanticContextSHA256": "2dd71a21abac47e9a1dc8fb824c883f3127f143e91fd0aa805de9ab24042b54f",
+        "targetBeforeSHA256": "d15eaa186f4cc6ff4b1bb21604fb869e467e7901b2e027eb90e63327da64ddbb",
+        "semanticContextSHA256": "d15eaa186f4cc6ff4b1bb21604fb869e467e7901b2e027eb90e63327da64ddbb",
         "subjectTitle": "Linna, jota varten ei tarvittu kuningasta",
         "targetState": "existing-target"
       },
@@ -1529,9 +1561,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "12bf73df5a769f3806a71b2cc6b49aac7676ef169f8dbfb4e84666429dbeab7c",
-      "targetAfterSHA256": "2dd71a21abac47e9a1dc8fb824c883f3127f143e91fd0aa805de9ab24042b54f",
-      "contextAfterSHA256": "2dd71a21abac47e9a1dc8fb824c883f3127f143e91fd0aa805de9ab24042b54f",
+      "sourceContentAfterSHA256": "5de317d9d74cf18cc9dfdecd99576b1a4a5234552b2e3313f1c9d62b397dfbcc",
+      "targetAfterSHA256": "d15eaa186f4cc6ff4b1bb21604fb869e467e7901b2e027eb90e63327da64ddbb",
+      "contextAfterSHA256": "d15eaa186f4cc6ff4b1bb21604fb869e467e7901b2e027eb90e63327da64ddbb",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -1554,7 +1586,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "5de317d9d74cf18cc9dfdecd99576b1a4a5234552b2e3313f1c9d62b397dfbcc",
+        "sameImageNativeSHA256": "ef448a894ee345d47936830944e517b589b4fd441dab2ad8b9a9dbc455e82939",
+        "sameImageExportSHA256": "d546c99eae40cb643f71ad0339376a5f543d8e601fee94e69dac920368672b07",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e11",
@@ -1604,10 +1644,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/washington/sisalto.json",
-      "sourceContentSHA256": "12bf73df5a769f3806a71b2cc6b49aac7676ef169f8dbfb4e84666429dbeab7c",
+      "sourceContentSHA256": "5de317d9d74cf18cc9dfdecd99576b1a4a5234552b2e3313f1c9d62b397dfbcc",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "77987039cd8372340ac1f18718c47cb802b30329562155fe0c59b5ba6681ed50",
-        "semanticContextSHA256": "77987039cd8372340ac1f18718c47cb802b30329562155fe0c59b5ba6681ed50",
+        "targetBeforeSHA256": "dab203bc93da3f6eb48f64ab006f42d9a8a65b62addf13da01689e1921883636",
+        "semanticContextSHA256": "dab203bc93da3f6eb48f64ab006f42d9a8a65b62addf13da01689e1921883636",
         "subjectTitle": "Kasvinäyte saattoi palata mereltä elävänä",
         "targetState": "existing-target"
       },
@@ -1846,9 +1886,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "12bf73df5a769f3806a71b2cc6b49aac7676ef169f8dbfb4e84666429dbeab7c",
-      "targetAfterSHA256": "77987039cd8372340ac1f18718c47cb802b30329562155fe0c59b5ba6681ed50",
-      "contextAfterSHA256": "77987039cd8372340ac1f18718c47cb802b30329562155fe0c59b5ba6681ed50",
+      "sourceContentAfterSHA256": "5de317d9d74cf18cc9dfdecd99576b1a4a5234552b2e3313f1c9d62b397dfbcc",
+      "targetAfterSHA256": "dab203bc93da3f6eb48f64ab006f42d9a8a65b62addf13da01689e1921883636",
+      "contextAfterSHA256": "dab203bc93da3f6eb48f64ab006f42d9a8a65b62addf13da01689e1921883636",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -1871,7 +1911,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "5de317d9d74cf18cc9dfdecd99576b1a4a5234552b2e3313f1c9d62b397dfbcc",
+        "sameImageNativeSHA256": "faa0b8b0b2faa87eb3191bf1a6af699aa3a5241d84d01d6b3afb556c1bf5814f",
+        "sameImageExportSHA256": "7d3fa5d7782d28b6501d925890ecfb72907dc249fce88ec590de2c20303126b7",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e11",
@@ -1921,10 +1969,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/washington/sisalto.json",
-      "sourceContentSHA256": "12bf73df5a769f3806a71b2cc6b49aac7676ef169f8dbfb4e84666429dbeab7c",
+      "sourceContentSHA256": "5de317d9d74cf18cc9dfdecd99576b1a4a5234552b2e3313f1c9d62b397dfbcc",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "94bc40e6dd98db5e425fe58b0f91f71116923d4c7dcd157e6ac394857ebcc663",
-        "semanticContextSHA256": "94bc40e6dd98db5e425fe58b0f91f71116923d4c7dcd157e6ac394857ebcc663",
+        "targetBeforeSHA256": "0de55034c2dbfc10b9bc2b6723a5a54b2a9cea40e618d6409295f99ead7cad59",
+        "semanticContextSHA256": "0de55034c2dbfc10b9bc2b6723a5a54b2a9cea40e618d6409295f99ead7cad59",
         "subjectTitle": "Kirjat kulkivat omassa tunnelissaan",
         "targetState": "existing-target"
       },
@@ -2163,9 +2211,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "12bf73df5a769f3806a71b2cc6b49aac7676ef169f8dbfb4e84666429dbeab7c",
-      "targetAfterSHA256": "94bc40e6dd98db5e425fe58b0f91f71116923d4c7dcd157e6ac394857ebcc663",
-      "contextAfterSHA256": "94bc40e6dd98db5e425fe58b0f91f71116923d4c7dcd157e6ac394857ebcc663",
+      "sourceContentAfterSHA256": "5de317d9d74cf18cc9dfdecd99576b1a4a5234552b2e3313f1c9d62b397dfbcc",
+      "targetAfterSHA256": "0de55034c2dbfc10b9bc2b6723a5a54b2a9cea40e618d6409295f99ead7cad59",
+      "contextAfterSHA256": "0de55034c2dbfc10b9bc2b6723a5a54b2a9cea40e618d6409295f99ead7cad59",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -2188,7 +2236,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "5de317d9d74cf18cc9dfdecd99576b1a4a5234552b2e3313f1c9d62b397dfbcc",
+        "sameImageNativeSHA256": "e7cbba55f33d9aa46d6925bef4fb90d36b878a0d66f995df2718f45f34cdd614",
+        "sameImageExportSHA256": "6b2fad7763ef9e26847ef24c49e1378fef7b772b02acd0fcd85ff128a9ca3d71",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e11",
@@ -2238,10 +2294,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/washington/sisalto.json",
-      "sourceContentSHA256": "12bf73df5a769f3806a71b2cc6b49aac7676ef169f8dbfb4e84666429dbeab7c",
+      "sourceContentSHA256": "5de317d9d74cf18cc9dfdecd99576b1a4a5234552b2e3313f1c9d62b397dfbcc",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "0bdd92e96f4bb3ac61c41d51318ea32242dfa3ead28bd79a5c729a664f1a4f56",
-        "semanticContextSHA256": "0bdd92e96f4bb3ac61c41d51318ea32242dfa3ead28bd79a5c729a664f1a4f56",
+        "targetBeforeSHA256": "b894dc08c09e3b163028b9bd261df23fb6c7226e31a82742b6e1cedcd76dfaa0",
+        "semanticContextSHA256": "b894dc08c09e3b163028b9bd261df23fb6c7226e31a82742b6e1cedcd76dfaa0",
         "subjectTitle": "Marmoria vain pinnalta",
         "targetState": "existing-target"
       },
@@ -2480,9 +2536,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "12bf73df5a769f3806a71b2cc6b49aac7676ef169f8dbfb4e84666429dbeab7c",
-      "targetAfterSHA256": "0bdd92e96f4bb3ac61c41d51318ea32242dfa3ead28bd79a5c729a664f1a4f56",
-      "contextAfterSHA256": "0bdd92e96f4bb3ac61c41d51318ea32242dfa3ead28bd79a5c729a664f1a4f56",
+      "sourceContentAfterSHA256": "5de317d9d74cf18cc9dfdecd99576b1a4a5234552b2e3313f1c9d62b397dfbcc",
+      "targetAfterSHA256": "b894dc08c09e3b163028b9bd261df23fb6c7226e31a82742b6e1cedcd76dfaa0",
+      "contextAfterSHA256": "b894dc08c09e3b163028b9bd261df23fb6c7226e31a82742b6e1cedcd76dfaa0",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -2505,7 +2561,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "5de317d9d74cf18cc9dfdecd99576b1a4a5234552b2e3313f1c9d62b397dfbcc",
+        "sameImageNativeSHA256": "5794fed2f31fb157434e6c94edea7f1090071cd62124e5653d67f6fbd4985ddb",
+        "sameImageExportSHA256": "8824ffb297f2fb4ec92315b102fb6dbf26f0e70aaa46a247828df58edbc5bc60",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e11",
@@ -2524,7 +2588,7 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/washington/photo-b94c1bf0f71415608542.jpg",
         "suora": true,
         "lahde": "AgnosticPreachersKid, Commons (CC BY-SA 3.0)",
-        "selite": "Kanavan kivireunojen välissä näkyy vettä, ja useat sillat ylittävät sen tiilirakennusten lomassa.",
+        "selite": "C&O-kanava Georgetownissa vuonna 2008.",
         "lyhyt": "C&O-kanavan vettä ja siltoja Georgetownissa.",
         "tiedosto": "C&O Canal - Georgetown.jpg",
         "vuosi": "2008"
@@ -2532,7 +2596,7 @@
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "AgnosticPreachersKid, Commons (CC BY-SA 3.0)",
-        "selite": "Kanavan kivireunojen välissä näkyy vettä, ja useat sillat ylittävät sen tiilirakennusten lomassa.",
+        "selite": "C&O-kanava Georgetownissa vuonna 2008.",
         "lyhyt": "C&O-kanavan vettä ja siltoja Georgetownissa.",
         "tiedosto": "C&O Canal - Georgetown.jpg",
         "vuosi": "2008"
@@ -2541,7 +2605,7 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/washington/photo-b94c1bf0f71415608542.jpg",
         "suora": true,
         "lahde": "AgnosticPreachersKid, Commons (CC BY-SA 3.0)",
-        "selite": "Kanavan kivireunojen välissä näkyy vettä, ja useat sillat ylittävät sen tiilirakennusten lomassa.",
+        "selite": "C&O-kanava Georgetownissa vuonna 2008.",
         "lyhyt": "C&O-kanavan vettä ja siltoja Georgetownissa.",
         "tiedosto": "C&O Canal - Georgetown.jpg",
         "vuosi": "2008"
@@ -2558,10 +2622,10 @@
         2581
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/washington/sisalto.json",
-      "sourceContentSHA256": "12bf73df5a769f3806a71b2cc6b49aac7676ef169f8dbfb4e84666429dbeab7c",
+      "sourceContentSHA256": "5de317d9d74cf18cc9dfdecd99576b1a4a5234552b2e3313f1c9d62b397dfbcc",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "c5482b841edb587c9b1fad6e13cf7b8bf11e6632ac5643fe8d93b9dfcc16dbcd",
-        "semanticContextSHA256": "c5482b841edb587c9b1fad6e13cf7b8bf11e6632ac5643fe8d93b9dfcc16dbcd",
+        "targetBeforeSHA256": "5ef43f09c6d73e210e5e15eceebb04bee05c191289db7d7199a97658f3981aa7",
+        "semanticContextSHA256": "5ef43f09c6d73e210e5e15eceebb04bee05c191289db7d7199a97658f3981aa7",
         "subjectTitle": "washington — aito paikkavalokuva",
         "targetState": "existing-target"
       },
@@ -2938,7 +3002,7 @@
       "priorMediaFields": {
         "tiedosto": "C&O Canal - Georgetown.jpg",
         "lyhyt": "C&O-kanavan vettä ja siltoja Georgetownissa.",
-        "selite": "Kanavan kivireunojen välissä näkyy vettä, ja useat sillat ylittävät sen tiilirakennusten lomassa.",
+        "selite": "C&O-kanava Georgetownissa vuonna 2008.",
         "lahde": "AgnosticPreachersKid, Commons (CC BY-SA 3.0)",
         "vuosi": "2008"
       },
@@ -2966,15 +3030,15 @@
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "AgnosticPreachersKid, Commons (CC BY-SA 3.0)",
-        "selite": "Kanavan kivireunojen välissä näkyy vettä, ja useat sillat ylittävät sen tiilirakennusten lomassa.",
+        "selite": "C&O-kanava Georgetownissa vuonna 2008.",
         "lyhyt": "C&O-kanavan vettä ja siltoja Georgetownissa.",
         "tiedosto": "C&O Canal - Georgetown.jpg",
         "vuosi": "2008"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "12bf73df5a769f3806a71b2cc6b49aac7676ef169f8dbfb4e84666429dbeab7c",
-      "targetAfterSHA256": "c5482b841edb587c9b1fad6e13cf7b8bf11e6632ac5643fe8d93b9dfcc16dbcd",
-      "contextAfterSHA256": "c5482b841edb587c9b1fad6e13cf7b8bf11e6632ac5643fe8d93b9dfcc16dbcd",
+      "sourceContentAfterSHA256": "5de317d9d74cf18cc9dfdecd99576b1a4a5234552b2e3313f1c9d62b397dfbcc",
+      "targetAfterSHA256": "5ef43f09c6d73e210e5e15eceebb04bee05c191289db7d7199a97658f3981aa7",
+      "contextAfterSHA256": "5ef43f09c6d73e210e5e15eceebb04bee05c191289db7d7199a97658f3981aa7",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -2997,7 +3061,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "5de317d9d74cf18cc9dfdecd99576b1a4a5234552b2e3313f1c9d62b397dfbcc",
+        "sameImageNativeSHA256": "b94c1bf0f71415608542072b3c8ae1d4f13c7d5e7fff65d74985e02f2e48574e",
+        "sameImageExportSHA256": "b94c1bf0f71415608542072b3c8ae1d4f13c7d5e7fff65d74985e02f2e48574e",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": true
+      }
     },
     {
       "era": "e11",
@@ -3019,14 +3091,14 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/washington/c1-85de5491a45274d5c0d5.jpg",
         "suora": true,
         "lahde": "Carol M. Highsmith, Wikimedia Commons (PD)",
-        "selite": "Etualalla on Lincoln Memorial; pitkän vesialtaan takana kohoaa Washington-monumentti ja kauempana näkyy Kapitoli.",
+        "selite": "Ilmakuva Lincoln Memorialista ja Washington-monumentista.",
         "lyhyt": "Lincoln Memorial ja Washington-monumentti ilmasta.",
         "tiedosto": "National Mall, Lincoln Memorial 04448v.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Carol M. Highsmith, Wikimedia Commons (PD)",
-        "selite": "Etualalla on Lincoln Memorial; pitkän vesialtaan takana kohoaa Washington-monumentti ja kauempana näkyy Kapitoli.",
+        "selite": "Ilmakuva Lincoln Memorialista ja Washington-monumentista.",
         "lyhyt": "Lincoln Memorial ja Washington-monumentti ilmasta.",
         "tiedosto": "National Mall, Lincoln Memorial 04448v.jpg"
       },
@@ -3034,7 +3106,7 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/washington/c1-85de5491a45274d5c0d5.jpg",
         "suora": true,
         "lahde": "Carol M. Highsmith, Wikimedia Commons (PD)",
-        "selite": "Etualalla on Lincoln Memorial; pitkän vesialtaan takana kohoaa Washington-monumentti ja kauempana näkyy Kapitoli.",
+        "selite": "Ilmakuva Lincoln Memorialista ja Washington-monumentista.",
         "lyhyt": "Lincoln Memorial ja Washington-monumentti ilmasta.",
         "tiedosto": "National Mall, Lincoln Memorial 04448v.jpg"
       },
@@ -3050,10 +3122,10 @@
         2625
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/washington/sisalto.json",
-      "sourceContentSHA256": "12bf73df5a769f3806a71b2cc6b49aac7676ef169f8dbfb4e84666429dbeab7c",
+      "sourceContentSHA256": "5de317d9d74cf18cc9dfdecd99576b1a4a5234552b2e3313f1c9d62b397dfbcc",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "b64e16013ffb1a79d8f9e101661559d7419d818d5ee6ce6b9aacd06e63333e0a",
-        "semanticContextSHA256": "b64e16013ffb1a79d8f9e101661559d7419d818d5ee6ce6b9aacd06e63333e0a",
+        "targetBeforeSHA256": "1b46698f4e50d261abe2a4dc8344e5267ce9d66f3a9701a9eda954700e688f02",
+        "semanticContextSHA256": "1b46698f4e50d261abe2a4dc8344e5267ce9d66f3a9701a9eda954700e688f02",
         "subjectTitle": "Washington",
         "targetState": "existing-target"
       },
@@ -3426,7 +3498,7 @@
       "priorMediaFields": {
         "tiedosto": "National Mall, Lincoln Memorial 04448v.jpg",
         "lyhyt": "Lincoln Memorial ja Washington-monumentti ilmasta.",
-        "selite": "Etualalla on Lincoln Memorial; pitkän vesialtaan takana kohoaa Washington-monumentti ja kauempana näkyy Kapitoli.",
+        "selite": "Ilmakuva Lincoln Memorialista ja Washington-monumentista.",
         "lahde": "Carol M. Highsmith, Wikimedia Commons (PD)"
       },
       "preservePreviousMediaObjects": true,
@@ -3453,14 +3525,14 @@
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Carol M. Highsmith, Wikimedia Commons (PD)",
-        "selite": "Etualalla on Lincoln Memorial; pitkän vesialtaan takana kohoaa Washington-monumentti ja kauempana näkyy Kapitoli.",
+        "selite": "Ilmakuva Lincoln Memorialista ja Washington-monumentista.",
         "lyhyt": "Lincoln Memorial ja Washington-monumentti ilmasta.",
         "tiedosto": "National Mall, Lincoln Memorial 04448v.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "12bf73df5a769f3806a71b2cc6b49aac7676ef169f8dbfb4e84666429dbeab7c",
-      "targetAfterSHA256": "b64e16013ffb1a79d8f9e101661559d7419d818d5ee6ce6b9aacd06e63333e0a",
-      "contextAfterSHA256": "b64e16013ffb1a79d8f9e101661559d7419d818d5ee6ce6b9aacd06e63333e0a",
+      "sourceContentAfterSHA256": "5de317d9d74cf18cc9dfdecd99576b1a4a5234552b2e3313f1c9d62b397dfbcc",
+      "targetAfterSHA256": "1b46698f4e50d261abe2a4dc8344e5267ce9d66f3a9701a9eda954700e688f02",
+      "contextAfterSHA256": "1b46698f4e50d261abe2a4dc8344e5267ce9d66f3a9701a9eda954700e688f02",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -3483,7 +3555,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "5de317d9d74cf18cc9dfdecd99576b1a4a5234552b2e3313f1c9d62b397dfbcc",
+        "sameImageNativeSHA256": "85de5491a45274d5c0d50f7db7b2419220bd1c6b40f42941381ff18021ccd76f",
+        "sameImageExportSHA256": "85de5491a45274d5c0d50f7db7b2419220bd1c6b40f42941381ff18021ccd76f",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": true
+      }
     },
     {
       "era": "e11",
@@ -3505,14 +3585,14 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/washington/c3-722e6c73b8e95cdae963.jpg",
         "suora": true,
         "lahde": "Sdkb, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Kivisen sillankaaren alta avautuu kanava, rantapolku ja tiilirakennuksia; vedessä ja reunoilla kasvaa vihreää kasvillisuutta.",
+        "selite": "C&O-kanava Georgetownissa keväällä 2019.",
         "lyhyt": "C&O-kanavaa Georgetownissa keväällä 2019.",
         "tiedosto": "C&O Canal in Georgetown in Spring 2019.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Sdkb, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Kivisen sillankaaren alta avautuu kanava, rantapolku ja tiilirakennuksia; vedessä ja reunoilla kasvaa vihreää kasvillisuutta.",
+        "selite": "C&O-kanava Georgetownissa keväällä 2019.",
         "lyhyt": "C&O-kanavaa Georgetownissa keväällä 2019.",
         "tiedosto": "C&O Canal in Georgetown in Spring 2019.jpg"
       },
@@ -3520,7 +3600,7 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/washington/c3-722e6c73b8e95cdae963.jpg",
         "suora": true,
         "lahde": "Sdkb, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Kivisen sillankaaren alta avautuu kanava, rantapolku ja tiilirakennuksia; vedessä ja reunoilla kasvaa vihreää kasvillisuutta.",
+        "selite": "C&O-kanava Georgetownissa keväällä 2019.",
         "lyhyt": "C&O-kanavaa Georgetownissa keväällä 2019.",
         "tiedosto": "C&O Canal in Georgetown in Spring 2019.jpg"
       },
@@ -3536,10 +3616,10 @@
         3283
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/washington/sisalto.json",
-      "sourceContentSHA256": "12bf73df5a769f3806a71b2cc6b49aac7676ef169f8dbfb4e84666429dbeab7c",
+      "sourceContentSHA256": "5de317d9d74cf18cc9dfdecd99576b1a4a5234552b2e3313f1c9d62b397dfbcc",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "61d9fb36e36379b79dd47606ad865bb7f43c97f3919111ef7ec3ff566e0d6f63",
-        "semanticContextSHA256": "61d9fb36e36379b79dd47606ad865bb7f43c97f3919111ef7ec3ff566e0d6f63",
+        "targetBeforeSHA256": "4362168a740a24fda13ee01c06270454386a833417d437704dd84aafedc3488a",
+        "semanticContextSHA256": "4362168a740a24fda13ee01c06270454386a833417d437704dd84aafedc3488a",
         "subjectTitle": "Washington",
         "targetState": "existing-target"
       },
@@ -3912,7 +3992,7 @@
       "priorMediaFields": {
         "tiedosto": "C&O Canal in Georgetown in Spring 2019.jpg",
         "lyhyt": "C&O-kanavaa Georgetownissa keväällä 2019.",
-        "selite": "Kivisen sillankaaren alta avautuu kanava, rantapolku ja tiilirakennuksia; vedessä ja reunoilla kasvaa vihreää kasvillisuutta.",
+        "selite": "C&O-kanava Georgetownissa keväällä 2019.",
         "lahde": "Sdkb, Wikimedia Commons (CC BY-SA 4.0)"
       },
       "preservePreviousMediaObjects": true,
@@ -3939,14 +4019,14 @@
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Sdkb, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Kivisen sillankaaren alta avautuu kanava, rantapolku ja tiilirakennuksia; vedessä ja reunoilla kasvaa vihreää kasvillisuutta.",
+        "selite": "C&O-kanava Georgetownissa keväällä 2019.",
         "lyhyt": "C&O-kanavaa Georgetownissa keväällä 2019.",
         "tiedosto": "C&O Canal in Georgetown in Spring 2019.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "12bf73df5a769f3806a71b2cc6b49aac7676ef169f8dbfb4e84666429dbeab7c",
-      "targetAfterSHA256": "61d9fb36e36379b79dd47606ad865bb7f43c97f3919111ef7ec3ff566e0d6f63",
-      "contextAfterSHA256": "61d9fb36e36379b79dd47606ad865bb7f43c97f3919111ef7ec3ff566e0d6f63",
+      "sourceContentAfterSHA256": "5de317d9d74cf18cc9dfdecd99576b1a4a5234552b2e3313f1c9d62b397dfbcc",
+      "targetAfterSHA256": "4362168a740a24fda13ee01c06270454386a833417d437704dd84aafedc3488a",
+      "contextAfterSHA256": "4362168a740a24fda13ee01c06270454386a833417d437704dd84aafedc3488a",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -3969,7 +4049,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "5de317d9d74cf18cc9dfdecd99576b1a4a5234552b2e3313f1c9d62b397dfbcc",
+        "sameImageNativeSHA256": "722e6c73b8e95cdae9634a89983d6844aa137020ad27cc6c0180de9a89689dbc",
+        "sameImageExportSHA256": "722e6c73b8e95cdae9634a89983d6844aa137020ad27cc6c0180de9a89689dbc",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": true
+      }
     },
     {
       "era": "e11",
@@ -3991,14 +4079,14 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/washington/traveler-c4f473b9acdedc90d197.jpg",
         "suora": true,
         "lahde": "Greyfiveys, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Obeliski kohoaa nurmikentän takana; sen juurella liehuu Yhdysvaltain lippuja vuonna 2022 otetussa kuvassa.",
+        "selite": "Washington-monumentti kuvattuna vuonna 2022.",
         "lyhyt": "Washington-monumentti ja sitä ympäröivät liput.",
         "tiedosto": "Washington Monument 2022.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Greyfiveys, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Obeliski kohoaa nurmikentän takana; sen juurella liehuu Yhdysvaltain lippuja vuonna 2022 otetussa kuvassa.",
+        "selite": "Washington-monumentti kuvattuna vuonna 2022.",
         "lyhyt": "Washington-monumentti ja sitä ympäröivät liput.",
         "tiedosto": "Washington Monument 2022.jpg"
       },
@@ -4006,7 +4094,7 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/washington/traveler-c4f473b9acdedc90d197.jpg",
         "suora": true,
         "lahde": "Greyfiveys, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Obeliski kohoaa nurmikentän takana; sen juurella liehuu Yhdysvaltain lippuja vuonna 2022 otetussa kuvassa.",
+        "selite": "Washington-monumentti kuvattuna vuonna 2022.",
         "lyhyt": "Washington-monumentti ja sitä ympäröivät liput.",
         "tiedosto": "Washington Monument 2022.jpg"
       },
@@ -4022,10 +4110,10 @@
         4032
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/washington/sisalto.json",
-      "sourceContentSHA256": "12bf73df5a769f3806a71b2cc6b49aac7676ef169f8dbfb4e84666429dbeab7c",
+      "sourceContentSHA256": "5de317d9d74cf18cc9dfdecd99576b1a4a5234552b2e3313f1c9d62b397dfbcc",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "263edbe43021f25198152c7a93c1e8a0c5a70ac2628cf71626b0688a1d886d22",
-        "semanticContextSHA256": "264dc8168b50c1e24e53e75fde239cad62b976070b5e2155ffda6d8520650b3f",
+        "targetBeforeSHA256": "dba166b1a8ee48dc755ed335fc3ad94e31a2eb39e649b4c360af664ebcef768f",
+        "semanticContextSHA256": "bd18dc357815deb7e195f8928844b0286b44274cab736198acf42aa9edde5c39",
         "subjectTitle": "Matkailijalle",
         "targetState": "existing-target"
       },
@@ -4663,7 +4751,7 @@
       "priorMediaFields": {
         "tiedosto": "Washington Monument 2022.jpg",
         "lyhyt": "Washington-monumentti ja sitä ympäröivät liput.",
-        "selite": "Obeliski kohoaa nurmikentän takana; sen juurella liehuu Yhdysvaltain lippuja vuonna 2022 otetussa kuvassa.",
+        "selite": "Washington-monumentti kuvattuna vuonna 2022.",
         "lahde": "Greyfiveys, Wikimedia Commons (CC BY-SA 4.0)"
       },
       "preservePreviousMediaObjects": true,
@@ -4690,14 +4778,14 @@
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Greyfiveys, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Obeliski kohoaa nurmikentän takana; sen juurella liehuu Yhdysvaltain lippuja vuonna 2022 otetussa kuvassa.",
+        "selite": "Washington-monumentti kuvattuna vuonna 2022.",
         "lyhyt": "Washington-monumentti ja sitä ympäröivät liput.",
         "tiedosto": "Washington Monument 2022.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "12bf73df5a769f3806a71b2cc6b49aac7676ef169f8dbfb4e84666429dbeab7c",
-      "targetAfterSHA256": "263edbe43021f25198152c7a93c1e8a0c5a70ac2628cf71626b0688a1d886d22",
-      "contextAfterSHA256": "264dc8168b50c1e24e53e75fde239cad62b976070b5e2155ffda6d8520650b3f",
+      "sourceContentAfterSHA256": "5de317d9d74cf18cc9dfdecd99576b1a4a5234552b2e3313f1c9d62b397dfbcc",
+      "targetAfterSHA256": "dba166b1a8ee48dc755ed335fc3ad94e31a2eb39e649b4c360af664ebcef768f",
+      "contextAfterSHA256": "bd18dc357815deb7e195f8928844b0286b44274cab736198acf42aa9edde5c39",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -4720,7 +4808,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "5de317d9d74cf18cc9dfdecd99576b1a4a5234552b2e3313f1c9d62b397dfbcc",
+        "sameImageNativeSHA256": "c4f473b9acdedc90d19759be0096efaf67ee478ffe7d903d7ab59692c93155b1",
+        "sameImageExportSHA256": "c4f473b9acdedc90d19759be0096efaf67ee478ffe7d903d7ab59692c93155b1",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": true
+      }
     },
     {
       "era": "e11",
@@ -4742,14 +4838,14 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/washington/k2-de6ea68e6c491440e822.jpg",
         "suora": true,
         "lahde": "APK, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Pienen talon kiviseinät, ikkunaluukut ja ulkoportaat näkyvät kadulta katsottuna.",
+        "selite": "Old Stone House on Georgetownin historiallinen kivitalo.",
         "lyhyt": "Georgetownin Old Stone Housen kivijulkisivu.",
         "tiedosto": "Old Stone House - Washington, D.C.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "APK, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Pienen talon kiviseinät, ikkunaluukut ja ulkoportaat näkyvät kadulta katsottuna.",
+        "selite": "Old Stone House on Georgetownin historiallinen kivitalo.",
         "lyhyt": "Georgetownin Old Stone Housen kivijulkisivu.",
         "tiedosto": "Old Stone House - Washington, D.C.jpg"
       },
@@ -4757,7 +4853,7 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/washington/k2-de6ea68e6c491440e822.jpg",
         "suora": true,
         "lahde": "APK, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Pienen talon kiviseinät, ikkunaluukut ja ulkoportaat näkyvät kadulta katsottuna.",
+        "selite": "Old Stone House on Georgetownin historiallinen kivitalo.",
         "lyhyt": "Georgetownin Old Stone Housen kivijulkisivu.",
         "tiedosto": "Old Stone House - Washington, D.C.jpg"
       },
@@ -4773,10 +4869,10 @@
         1347
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/washington/sisalto.json",
-      "sourceContentSHA256": "12bf73df5a769f3806a71b2cc6b49aac7676ef169f8dbfb4e84666429dbeab7c",
+      "sourceContentSHA256": "5de317d9d74cf18cc9dfdecd99576b1a4a5234552b2e3313f1c9d62b397dfbcc",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "bc84c47b9a29a045c2fe7ef9be227c3a28c2fb8fc58d4ab4bd5128c5f7d0c073",
-        "semanticContextSHA256": "bc84c47b9a29a045c2fe7ef9be227c3a28c2fb8fc58d4ab4bd5128c5f7d0c073",
+        "targetBeforeSHA256": "67e87f75c6a00a9f83ae53e43592d4e39d1e3051d52ca8d8042fb11832b487d7",
+        "semanticContextSHA256": "67e87f75c6a00a9f83ae53e43592d4e39d1e3051d52ca8d8042fb11832b487d7",
         "subjectTitle": "Talo, jonka väärä tarina pelasti",
         "targetState": "existing-target"
       },
@@ -5073,7 +5169,7 @@
       "priorMediaFields": {
         "tiedosto": "Old Stone House - Washington, D.C.jpg",
         "lyhyt": "Georgetownin Old Stone Housen kivijulkisivu.",
-        "selite": "Pienen talon kiviseinät, ikkunaluukut ja ulkoportaat näkyvät kadulta katsottuna.",
+        "selite": "Old Stone House on Georgetownin historiallinen kivitalo.",
         "lahde": "APK, Wikimedia Commons (CC BY-SA 4.0)"
       },
       "preservePreviousMediaObjects": true,
@@ -5100,14 +5196,14 @@
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "APK, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Pienen talon kiviseinät, ikkunaluukut ja ulkoportaat näkyvät kadulta katsottuna.",
+        "selite": "Old Stone House on Georgetownin historiallinen kivitalo.",
         "lyhyt": "Georgetownin Old Stone Housen kivijulkisivu.",
         "tiedosto": "Old Stone House - Washington, D.C.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "12bf73df5a769f3806a71b2cc6b49aac7676ef169f8dbfb4e84666429dbeab7c",
-      "targetAfterSHA256": "bc84c47b9a29a045c2fe7ef9be227c3a28c2fb8fc58d4ab4bd5128c5f7d0c073",
-      "contextAfterSHA256": "bc84c47b9a29a045c2fe7ef9be227c3a28c2fb8fc58d4ab4bd5128c5f7d0c073",
+      "sourceContentAfterSHA256": "5de317d9d74cf18cc9dfdecd99576b1a4a5234552b2e3313f1c9d62b397dfbcc",
+      "targetAfterSHA256": "67e87f75c6a00a9f83ae53e43592d4e39d1e3051d52ca8d8042fb11832b487d7",
+      "contextAfterSHA256": "67e87f75c6a00a9f83ae53e43592d4e39d1e3051d52ca8d8042fb11832b487d7",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -5130,7 +5226,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "5de317d9d74cf18cc9dfdecd99576b1a4a5234552b2e3313f1c9d62b397dfbcc",
+        "sameImageNativeSHA256": "de6ea68e6c491440e8223a10484be0e5076133d56d155b1f26d278fec8960f6f",
+        "sameImageExportSHA256": "de6ea68e6c491440e8223a10484be0e5076133d56d155b1f26d278fec8960f6f",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": true
+      }
     },
     {
       "era": "e11",
@@ -5152,14 +5256,14 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/washington/n1-b3c814505039faf604da.jpg",
         "suora": true,
         "lahde": "Something Original ( talk ), Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "Keittiössä näkyvät suuri tulisija, kattiloita, astiahylly ja tiililattia.",
+        "selite": "Old Stone Housen ensimmäisen kerroksen keittiö Georgetownissa.",
         "lyhyt": "Old Stone Housen ensimmäisen kerroksen keittiö.",
         "tiedosto": "Old Stone House (Washington, D.C.) First Floor Rear Kitchen.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Something Original ( talk ), Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "Keittiössä näkyvät suuri tulisija, kattiloita, astiahylly ja tiililattia.",
+        "selite": "Old Stone Housen ensimmäisen kerroksen keittiö Georgetownissa.",
         "lyhyt": "Old Stone Housen ensimmäisen kerroksen keittiö.",
         "tiedosto": "Old Stone House (Washington, D.C.) First Floor Rear Kitchen.jpg"
       },
@@ -5167,7 +5271,7 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/washington/n1-b3c814505039faf604da.jpg",
         "suora": true,
         "lahde": "Something Original ( talk ), Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "Keittiössä näkyvät suuri tulisija, kattiloita, astiahylly ja tiililattia.",
+        "selite": "Old Stone Housen ensimmäisen kerroksen keittiö Georgetownissa.",
         "lyhyt": "Old Stone Housen ensimmäisen kerroksen keittiö.",
         "tiedosto": "Old Stone House (Washington, D.C.) First Floor Rear Kitchen.jpg"
       },
@@ -5183,10 +5287,10 @@
         2736
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/washington/sisalto.json",
-      "sourceContentSHA256": "12bf73df5a769f3806a71b2cc6b49aac7676ef169f8dbfb4e84666429dbeab7c",
+      "sourceContentSHA256": "5de317d9d74cf18cc9dfdecd99576b1a4a5234552b2e3313f1c9d62b397dfbcc",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "23789da2c98f91eadaf94e34dc8cc11b466c0796cf7c7a0731c4441b697c03ef",
-        "semanticContextSHA256": "14cff194dfabfe72b1544dbf05d272ec66ae5cfc051392ad6e0dac70f3bb2cbd",
+        "targetBeforeSHA256": "1fccdf4e52e4b7586de9389f6e70de648a0f0a8852ca7b535dfa3f198bad5643",
+        "semanticContextSHA256": "e9eee469a58476aa61fe358a68bde961dcd1bb2ddf16d81b20a0adf3a54984f4",
         "subjectTitle": "Georgetownin vanha kivitalo",
         "targetState": "existing-target"
       },
@@ -5557,7 +5661,7 @@
       "priorMediaFields": {
         "tiedosto": "Old Stone House (Washington, D.C.) First Floor Rear Kitchen.jpg",
         "lyhyt": "Old Stone Housen ensimmäisen kerroksen keittiö.",
-        "selite": "Keittiössä näkyvät suuri tulisija, kattiloita, astiahylly ja tiililattia.",
+        "selite": "Old Stone Housen ensimmäisen kerroksen keittiö Georgetownissa.",
         "lahde": "Something Original ( talk ), Wikimedia Commons (CC BY-SA 3.0)"
       },
       "preservePreviousMediaObjects": true,
@@ -5584,14 +5688,14 @@
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Something Original ( talk ), Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "Keittiössä näkyvät suuri tulisija, kattiloita, astiahylly ja tiililattia.",
+        "selite": "Old Stone Housen ensimmäisen kerroksen keittiö Georgetownissa.",
         "lyhyt": "Old Stone Housen ensimmäisen kerroksen keittiö.",
         "tiedosto": "Old Stone House (Washington, D.C.) First Floor Rear Kitchen.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "12bf73df5a769f3806a71b2cc6b49aac7676ef169f8dbfb4e84666429dbeab7c",
-      "targetAfterSHA256": "23789da2c98f91eadaf94e34dc8cc11b466c0796cf7c7a0731c4441b697c03ef",
-      "contextAfterSHA256": "14cff194dfabfe72b1544dbf05d272ec66ae5cfc051392ad6e0dac70f3bb2cbd",
+      "sourceContentAfterSHA256": "5de317d9d74cf18cc9dfdecd99576b1a4a5234552b2e3313f1c9d62b397dfbcc",
+      "targetAfterSHA256": "1fccdf4e52e4b7586de9389f6e70de648a0f0a8852ca7b535dfa3f198bad5643",
+      "contextAfterSHA256": "e9eee469a58476aa61fe358a68bde961dcd1bb2ddf16d81b20a0adf3a54984f4",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -5614,7 +5718,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "5de317d9d74cf18cc9dfdecd99576b1a4a5234552b2e3313f1c9d62b397dfbcc",
+        "sameImageNativeSHA256": "b3c814505039faf604dad5a3ec7b756799ae14ec904913cead74ece9703baa32",
+        "sameImageExportSHA256": "b3c814505039faf604dad5a3ec7b756799ae14ec904913cead74ece9703baa32",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": true
+      }
     },
     {
       "era": "e11",
@@ -5636,14 +5748,14 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/washington/n2-a14ff8a7fcbe4a88f6db.jpg",
         "suora": true,
         "lahde": "ajay_suresh, Wikimedia Commons (CC BY 2.0)",
-        "selite": "Punaisesta hiekkakivestä tehdyn rakennuksen tornit ja pääsisäänkäynti näkyvät puistokäytävän takana.",
+        "selite": "Smithsonianin linnarakennus on tehty Marylandin punaisesta hiekkakivestä.",
         "lyhyt": "Smithsonianin linnan punainen julkisivu ja tornit.",
         "tiedosto": "Smithsonian Institution Building (53831938398).jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "ajay_suresh, Wikimedia Commons (CC BY 2.0)",
-        "selite": "Punaisesta hiekkakivestä tehdyn rakennuksen tornit ja pääsisäänkäynti näkyvät puistokäytävän takana.",
+        "selite": "Smithsonianin linnarakennus on tehty Marylandin punaisesta hiekkakivestä.",
         "lyhyt": "Smithsonianin linnan punainen julkisivu ja tornit.",
         "tiedosto": "Smithsonian Institution Building (53831938398).jpg"
       },
@@ -5651,7 +5763,7 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/washington/n2-a14ff8a7fcbe4a88f6db.jpg",
         "suora": true,
         "lahde": "ajay_suresh, Wikimedia Commons (CC BY 2.0)",
-        "selite": "Punaisesta hiekkakivestä tehdyn rakennuksen tornit ja pääsisäänkäynti näkyvät puistokäytävän takana.",
+        "selite": "Smithsonianin linnarakennus on tehty Marylandin punaisesta hiekkakivestä.",
         "lyhyt": "Smithsonianin linnan punainen julkisivu ja tornit.",
         "tiedosto": "Smithsonian Institution Building (53831938398).jpg"
       },
@@ -5667,10 +5779,10 @@
         3594
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/washington/sisalto.json",
-      "sourceContentSHA256": "12bf73df5a769f3806a71b2cc6b49aac7676ef169f8dbfb4e84666429dbeab7c",
+      "sourceContentSHA256": "5de317d9d74cf18cc9dfdecd99576b1a4a5234552b2e3313f1c9d62b397dfbcc",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "43ba7f9bbad8a7d7e875dbcd241b766609dfcf11a50987b11a0aa7479ad024af",
-        "semanticContextSHA256": "e5f4f8e3d6c52883fac53306c0c95264fcce1c2cb1c9d3e5adadccc8fe15451c",
+        "targetBeforeSHA256": "dc4e5c9fde9aa115aa771110e7da03c9bc85d45e86ccf88206d798e5f113e3cc",
+        "semanticContextSHA256": "2babfc587caab013fbfdf1e3c3e70021ab80e0c1f5e36337a832c5485c1864e4",
         "subjectTitle": "Smithsonianin linna",
         "targetState": "existing-target"
       },
@@ -6051,7 +6163,7 @@
       "priorMediaFields": {
         "tiedosto": "Smithsonian Institution Building (53831938398).jpg",
         "lyhyt": "Smithsonianin linnan punainen julkisivu ja tornit.",
-        "selite": "Punaisesta hiekkakivestä tehdyn rakennuksen tornit ja pääsisäänkäynti näkyvät puistokäytävän takana.",
+        "selite": "Smithsonianin linnarakennus on tehty Marylandin punaisesta hiekkakivestä.",
         "lahde": "ajay_suresh, Wikimedia Commons (CC BY 2.0)"
       },
       "preservePreviousMediaObjects": true,
@@ -6078,14 +6190,14 @@
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "ajay_suresh, Wikimedia Commons (CC BY 2.0)",
-        "selite": "Punaisesta hiekkakivestä tehdyn rakennuksen tornit ja pääsisäänkäynti näkyvät puistokäytävän takana.",
+        "selite": "Smithsonianin linnarakennus on tehty Marylandin punaisesta hiekkakivestä.",
         "lyhyt": "Smithsonianin linnan punainen julkisivu ja tornit.",
         "tiedosto": "Smithsonian Institution Building (53831938398).jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "12bf73df5a769f3806a71b2cc6b49aac7676ef169f8dbfb4e84666429dbeab7c",
-      "targetAfterSHA256": "43ba7f9bbad8a7d7e875dbcd241b766609dfcf11a50987b11a0aa7479ad024af",
-      "contextAfterSHA256": "e5f4f8e3d6c52883fac53306c0c95264fcce1c2cb1c9d3e5adadccc8fe15451c",
+      "sourceContentAfterSHA256": "5de317d9d74cf18cc9dfdecd99576b1a4a5234552b2e3313f1c9d62b397dfbcc",
+      "targetAfterSHA256": "dc4e5c9fde9aa115aa771110e7da03c9bc85d45e86ccf88206d798e5f113e3cc",
+      "contextAfterSHA256": "2babfc587caab013fbfdf1e3c3e70021ab80e0c1f5e36337a832c5485c1864e4",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -6108,7 +6220,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "5de317d9d74cf18cc9dfdecd99576b1a4a5234552b2e3313f1c9d62b397dfbcc",
+        "sameImageNativeSHA256": "a14ff8a7fcbe4a88f6db24b1ab802123b9fb6bbe1be0537e38cb9a44417a1fd4",
+        "sameImageExportSHA256": "a14ff8a7fcbe4a88f6db24b1ab802123b9fb6bbe1be0537e38cb9a44417a1fd4",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": true
+      }
     },
     {
       "era": "e11",
@@ -6161,10 +6281,10 @@
         3872
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/washington/sisalto.json",
-      "sourceContentSHA256": "12bf73df5a769f3806a71b2cc6b49aac7676ef169f8dbfb4e84666429dbeab7c",
+      "sourceContentSHA256": "5de317d9d74cf18cc9dfdecd99576b1a4a5234552b2e3313f1c9d62b397dfbcc",
       "semanticSourceBind": {
         "targetBeforeSHA256": "4845c789aaec73f3f1f98029657387be27ff0034e60e89a816774474a4660ab1",
-        "semanticContextSHA256": "39276a6186ec8b5583416eb80a2ab7a740a93ae7eeed0bb083b37366e2a71611",
+        "semanticContextSHA256": "240edb57c4a336b6fb986fce8c2a0a06a7566c3101cd5fb29c5405a0c14d4c47",
         "subjectTitle": "Washington-monumentti",
         "targetState": "existing-target"
       },
@@ -6549,9 +6669,9 @@
         "tiedosto": "Washington Monument 2011 earthquake damage 5.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "12bf73df5a769f3806a71b2cc6b49aac7676ef169f8dbfb4e84666429dbeab7c",
+      "sourceContentAfterSHA256": "5de317d9d74cf18cc9dfdecd99576b1a4a5234552b2e3313f1c9d62b397dfbcc",
       "targetAfterSHA256": "4845c789aaec73f3f1f98029657387be27ff0034e60e89a816774474a4660ab1",
-      "contextAfterSHA256": "39276a6186ec8b5583416eb80a2ab7a740a93ae7eeed0bb083b37366e2a71611",
+      "contextAfterSHA256": "240edb57c4a336b6fb986fce8c2a0a06a7566c3101cd5fb29c5405a0c14d4c47",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -6574,7 +6694,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "5de317d9d74cf18cc9dfdecd99576b1a4a5234552b2e3313f1c9d62b397dfbcc",
+        "sameImageNativeSHA256": "7cd24386a35c9eb19a0471557b06b710d70cf3ea27304141927a68458541d91f",
+        "sameImageExportSHA256": "7cd24386a35c9eb19a0471557b06b710d70cf3ea27304141927a68458541d91f",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     }
   ],
   "runtimeIntegrationPending": true,
@@ -6586,6 +6714,9 @@
   "task118TextRevision": true,
   "independentTextResamplePending": true,
   "textAcceptanceVerified": false,
-  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task118/immutable-media-history/e11/washington/f5fb1bb3233dde9b3c7ba3f14d27eee501d36e0c27c73e504543d7996b93cf91.json",
-  "task118ReboundAt": "2026-10-13T16:31:26.178398+00:00"
+  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task228/immutable-media-history/e11/washington/6d10e44ab29eb6fe6fdd69774e7a8439418748fcb9a243dd2a1c7f084016f65d.json",
+  "task118ReboundAt": "2026-10-13T16:31:26.178398+00:00",
+  "task228ExcludedAssets": [],
+  "task228TextRevision": true,
+  "task228ReboundAt": "2026-10-13T19:32:48.594981+00:00"
 }

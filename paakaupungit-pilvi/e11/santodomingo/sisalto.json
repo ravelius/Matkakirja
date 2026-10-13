@@ -1,399 +1,392 @@
 {
- "$skeema": "matkakirja-paakaupunki/1",
- "id": "santodomingo",
- "maa": "DOM",
- "era": "e11",
- "kaupunki": {
+  "$skeema": "matkakirja-paakaupunki/1",
   "id": "santodomingo",
-  "name": "Santo Domingo",
-  "wiki": "Santo Domingo",
-  "ambience": "satama",
-  "pallo": {
-   "lat": 18.4625,
-   "lon": -69.9361
-  }
- },
- "artikkeli": {
-  "intro": "Santo Domingo on **Dominikaanisen tasavallan pääkaupunki** Hispaniolan etelärannikolla, Ozama-joen suulla. Vanha keskus sijaitsee joen länsirannalla, mutta eurooppalainen asutus alkoi vastakkaiselta rannalta. Hurrikaanin jälkeen kaupungin hallinnollinen ydin siirrettiin länteen 1500-luvun alussa. Sen ruutukaavasta ja keskusaukiosta tuli myöhempien Amerikan kaupunkien suunnittelun malleja.\n\nNykyinen **Zona Colonial** on Unescon maailmanperintökohde, jossa vanhat kivirakennukset kuuluvat yhä elävään kaupunkiin. Calle El Conden kävelykadulla on kauppoja ja ruokapaikkoja, ja Malecónin meribulevardi avaa näkymän Karibianmerelle. Ozaman linnoitus vartioi aikanaan satamaa, kun taas Alcázar-palatsi oli Kristoffer Kolumbuksen pojan Diego Colónin koti ja hallintopaikka. Katedraalin holvien, Casa de Teatron esitysten ja joen toisella puolella sijaitsevien luolajärvien välillä pääkaupungin historia saa monta erilaista muotoa.",
-  "teksti": "Santo Domingon eurooppalainen kaupunki syntyi 1400-luvun lopulla. Ozama-joen itärannan asutusta kohtasi hurrikaani, ja hallinnollinen keskus siirrettiin länsirannalle 1500-luvun alussa. Silloin laadittu katuverkko ja aukiojärjestely vaikuttivat myöhempien kaupunkien suunnitteluun Amerikan mantereella.\n\nVanhassa keskustassa ovat Ozaman linnoitus, katedraali ja Alcázar de Colón. Isoisän matkavuonna 1873 linnoitus ja katedraali olivat jo vuosisatoja vanhoja. Palatsin tarina on erilainen: Diego Colónin perheen koti rappeutui ja kunnostettiin museoksi vasta 1900-luvulla.\n\nHistoriallinen keskus on edelleen asuttu ja käytössä. El Conden kaupat, Malecónin kahvilat ja Casa de Teatron kulttuuritoiminta kuuluvat pääkaupungin arkeen. Joen itäpuolella Santo Domingo Esten luolajärvet puolestaan vievät kivirakennusten keskeltä kalkkikiven ja maanalaisen veden muodostamaan ympäristöön."
- },
- "kysymykset": [
-  {
-   "q": "Minkä maan pääkaupunki Santo Domingo on?",
-   "options": [
-    "Dominikaanisen tasavallan",
-    "Saint Kittsin ja Nevisin",
-    "Trinidadin ja Tobagon",
-    "Antiguan ja Barbudan"
-   ],
-   "correct": 0,
-   "level": 1,
-   "hint": "Pääkaupunki sijaitsee Hispaniolan saaren itäosan valtiossa.",
-   "fact": "Santo Domingo on Dominikaanisen tasavallan pääkaupunki.",
-   "source": "https://en.wikipedia.org/wiki/Santo_Domingo"
-  },
-  {
-   "q": "Minkä joen suulla Santo Domingon vanha keskusta sijaitsee?",
-   "options": [
-    "Ozaman",
-    "Orinocon",
-    "Magdalenan",
-    "Amazonin"
-   ],
-   "correct": 0,
-   "level": 2,
-   "hint": "Joen mukaan on nimetty vanhan keskustan linnoitus.",
-   "fact": "Vanha keskusta sijaitsee Ozama-joen länsirannalla lähellä sen suuta.",
-   "source": "https://en.wikipedia.org/wiki/Santo_Domingo"
-  },
-  {
-   "q": "Kuka asui Alcázar de Colónissa perheineen?",
-   "options": [
-    "Diego Colón",
-    "Kristoffer Kolumbus",
-    "Bartolomeo Kolumbus",
-    "Nicolás de Ovando"
-   ],
-   "correct": 0,
-   "level": 3,
-   "hint": "Hän toimi Hispaniolan kuvernöörinä.",
-   "fact": "Alcázarissa asui Kristoffer Kolumbuksen poika Diego Colón perheineen.",
-   "source": "https://en.wikipedia.org/wiki/Alc%C3%A1zar_de_Col%C3%B3n"
-  },
-  {
-   "q": "Mitä kiveä käytettiin Ozaman linnoituksen rakentamiseen?",
-   "options": [
-    "Korallikiveä",
-    "Graniittia",
-    "Vuolukiveä",
-    "Laavakiveä"
-   ],
-   "correct": 0,
-   "level": 2,
-   "hint": "Rakennusmateriaali liittyy ympäröivään mereen.",
-   "fact": "Linnoituksen rakentamiseen käytettiin merestä saatua korallikiveä.",
-   "source": "https://en.wikipedia.org/wiki/Fortaleza_Ozama"
-  },
-  {
-   "q": "Minkä kadun toinen nimi on Santo Domingon Malecón?",
-   "options": [
-    "Avenida George Washingtonin",
-    "Avenida Winston Churchillin",
-    "Avenida John F. Kennedyn",
-    "Avenida Abraham Lincolnin"
-   ],
-   "correct": 0,
-   "level": 2,
-   "hint": "Nimi viittaa Yhdysvaltain varhaiseen presidenttiin.",
-   "fact": "Malecónin meribulevardi tunnetaan myös nimellä Avenida George Washington.",
-   "source": "https://en.wikipedia.org/wiki/Santo_Domingo"
-  }
- ],
- "tiedot": [
-  "Alcázar de Colón oli Kristoffer Kolumbuksen pojan Diego Colónin koti; nimi ei tarkoita, että tutkimusmatkailija itse olisi asunut siellä.",
-  "Casa de Teatron toimintaan kuuluu esitysten lisäksi kuvataidetta, kirjallisuutta ja taidekursseja.",
-  "Santo Domingon Malecón tunnetaan myös Avenida George Washingtonina: meriranta ja kaupungin katu ovat samassa paikassa."
- ],
- "valokuva": {
-  "tiedosto": "",
-  "lyhyt": "",
-  "selite": "",
-  "lahde": ""
- },
- "kaupunkilehti": [
-  {
-   "id": "kaupunki",
-   "nimi": "Santo Domingo",
-   "johdanto": "Ozaman rannalta levisi kaupunkien suunnittelumalli kauas Amerikkaan. Nykyisessä vanhassa keskustassa kivitalojen rinnalla jatkuvat kaupankäynti, ruokailu ja kulttuuri.",
-   "kansikuvat": [
-    {
-     "tiedosto": "",
-     "lyhyt": "",
-     "selite": "",
-     "lahde": ""
-    },
-    {
-     "tiedosto": "",
-     "lyhyt": "",
-     "selite": "",
-     "lahde": ""
-    },
-    {
-     "tiedosto": "",
-     "lyhyt": "",
-     "selite": "",
-     "lahde": ""
+  "maa": "DOM",
+  "era": "e11",
+  "kaupunki": {
+    "id": "santodomingo",
+    "name": "Santo Domingo",
+    "wiki": "Santo Domingo",
+    "ambience": "satama",
+    "pallo": {
+      "lat": 18.4625,
+      "lon": -69.9361
     }
-   ],
-   "nostot": [
+  },
+  "artikkeli": {
+    "intro": "Santo Domingo on **Dominikaanisen tasavallan pääkaupunki** Hispaniolan etelärannikolla, Ozama-joen suulla. Vanha keskus sijaitsee joen länsirannalla, mutta eurooppalainen asutus alkoi vastakkaiselta rannalta. Hurrikaanin jälkeen kaupungin hallinnollinen ydin siirrettiin länteen 1500-luvun alussa. Sen ruutukaavasta ja keskusaukiosta tuli myöhempien Amerikan kaupunkien suunnittelun malleja.\n\nNykyinen **Zona Colonial** on Unescon maailmanperintökohde, jossa vanhat kivirakennukset kuuluvat yhä elävään kaupunkiin. Calle El Conden kävelykadulla on kauppoja ja ruokapaikkoja, ja Malecónin meribulevardi avaa näkymän Karibianmerelle. Ozaman linnoitus vartioi aikanaan satamaa, kun taas Alcázar-palatsi oli Kristoffer Kolumbuksen pojan Diego Colónin koti ja hallintopaikka. Katedraalin holvien, Casa de Teatron esitysten ja joen toisella puolella sijaitsevien luolajärvien välillä pääkaupungin historia saa monta erilaista muotoa.",
+    "teksti": "Santo Domingon eurooppalainen kaupunki syntyi 1400-luvun lopulla. Ozama-joen itärannan asutuksen tuhosi hurrikaani, ja hallinnollinen keskus siirrettiin länsirannalle 1500-luvun alussa. Silloin laadittu katuverkko ja aukiojärjestely vaikuttivat myöhempien kaupunkien suunnitteluun Amerikan mantereella.\n\nVanhassa keskustassa ovat Ozaman linnoitus, katedraali ja Alcázar de Colón. Palatsin tarina on erilainen: Diego Colónin perheen koti rappeutui ja kunnostettiin museoksi vasta 1900-luvulla.\n\nHistoriallinen keskus on edelleen asuttu ja käytössä. El Conden kaupat, Malecónin kahvilat ja Casa de Teatron kulttuuritoiminta kuuluvat pääkaupungin arkeen. Joen itäpuolella Santo Domingo Esten luolajärvet puolestaan vievät kivirakennusten keskeltä kalkkikiven ja maanalaisen veden muodostamaan ympäristöön."
+  },
+  "kysymykset": [
     {
-     "otsikko": "Ruutukaava jatkoi matkaa",
-     "teksti": "Santo Domingon vanhan keskustan katuverkko laadittiin ruutukaavaksi 1500-luvun alussa. Keskusaukio, korttelit ja toisiaan leikkaavat kadut muodostivat suunnitelman, jota käytettiin mallina myöhemmissä Amerikan kaupungeissa. Vanhan keskustan katujen leveys ja tonttijako ovat säilyneet suurelta osin. Katujen leveys ja tonttijako ovat säilyneet suurelta osin alkuperäisinä. Sen vaikutus ulottui kauas Ozama-joen rannalta.",
-     "tiedosto": "",
-     "lyhyt": "",
-     "selite": "",
-     "lahde": "",
-     "wiki": "Santo Domingo"
-    },
-    {
-     "otsikko": "Kauppakatu kuuluu kävelijälle",
-     "teksti": "Calle El Conde oli Santo Domingon vanhan keskustan kauppakatu, ja kaupankäynti jatkuu siellä yhä. Nykyinen kävelykatu on kauppojen ja ruokapaikkojen reunustama; sen varrella liikkuvat myös kaupungin omat asukkaat. Katu johtaa Puerta del Conden portille ja Independencia-puiston suuntaan. Kadun varrella on kauppoja ja ruokapaikkoja. Ostokset, ateriat ja tavalliset kävelymatkat pitävät vanhan kauppareitin kiinni nykyisessä kaupungissa.",
-     "tiedosto": "",
-     "lyhyt": "",
-     "selite": "",
-     "lahde": "",
-     "wiki": "Santo Domingo"
-    },
-    {
-     "otsikko": "Malecón on myös katu",
-     "teksti": "Santo Domingon Malecón on Avenida George Washingtonin tunnettu nimi. Karibianmereen rajautuva bulevardi yhdistää merinäkymän kaupungin liikenteeseen, hotelleihin, kahviloihin ja puistoihin. Rannan kävelyosuuksilla voi pysähtyä katselemaan merta, ja alueella järjestetään myös konsertteja ja juhlia. Malecón on siten osa pääkaupungin julkista elämää. Bulevardin tunnettu nimi Malecón ja virallinen Avenida George Washington tarkoittavat samaa katua.",
-     "tiedosto": "",
-     "lyhyt": "",
-     "selite": "",
-     "lahde": "",
-     "wiki": "Santo Domingo"
-    },
-    {
-     "otsikko": "Talon täydeltä taidetta",
-     "teksti": "Casa de Teatro kokoaa Santo Domingossa yhteen taiteilijoita, näyttelijöitä ja muusikoita. Talossa järjestetään taide- ja kirjallisuusnäyttelyitä sekä esityksiä, ja sen toimintaan kuuluu maalaus-, teatteri- ja tanssikursseja. Myös runot ja novellit saavat tilaa kirjallisuuskilpailuissa. Yhden paikan ohjelma ulottuu näin katselemisesta tekemiseen. Pääkaupungin kulttuurielämässä vanhojen rakennusten ja kokoelmien rinnalla toimivat myös ihmiset, jotka kirjoittavat, esiintyvät ja opettavat.",
-     "tiedosto": "",
-     "lyhyt": "",
-     "selite": "",
-     "lahde": "",
-     "wiki": "Santo Domingo"
-    }
-   ],
-   "matkailijalle": {
-    "kuva": {
-     "tiedosto": "",
-     "lyhyt": "",
-     "selite": "",
-     "lahde": ""
-    },
-    "kappale": "Santo Domingon vanhan keskustan museot ja kivirakennukset sopivat kävelykierroksen aiheeksi. Calle El Conde jatkaa kierrosta kauppojen ja ruokapaikkojen välissä. Malecónin varrella näkyy Karibianmeri. Joen toisella puolella Santo Domingo Estessä sijaitsevat Los Tres Ojosin luolajärvet. Pidemmät siirtymät ja illan paluumatka kannattaa suunnitella etukäteen.",
-    "artikkeli": {
-     "nimi": "Matkailijan Santo Domingo",
-     "taitto": "opas",
-     "teksti": "Seuraa Santo Domingossa vanhan keskustan katuja ja Ozaman rantoja.",
-     "nosto": "Historiallisen kävelyn rinnalle voi valita meribulevardin tai joen toisella puolella sijaitsevat luolajärvet.",
-     "jaksot": [
-      {
-       "otsikko": "Perille ja liikkeelle",
-       "teksti": "Las Américasin kansainvälinen lentoasema sijaitsee Santo Domingon itäpuolella. Kaupungissa on metro ja bussiliikennettä, mutta historiallinen keskusta sopii myös kävelykierrokseen. Pidempiin siirtymiin ja illan paluumatkaan voi varata virallisen taksin. Kadunylityksissä tarvitaan tarkkaavaisuutta: suurten väylien liikenne ja jalkakäytävien kunto vaihtelevat.",
-       "kuva": {
-        "tiedosto": "",
-        "lyhyt": "",
-        "selite": "",
-        "lahde": ""
-       }
-      },
-      {
-       "otsikko": "Vanhan keskustan kivitalot",
-       "teksti": "Zona Colonialissa linnoitus, katedraali ja Alcázar-palatsi kuuluvat historialliseen kokonaisuuteen. Calle El Conden kaupat ja ruokapaikat antavat kävelylle toisenlaisen rytmin kuin museohuoneet. Museo Casas Reales sijaitsee myös vanhassa keskustassa. Museot sijoittuvat vanhan keskustan historiallisiin rakennuksiin.",
-       "kuva": {
-        "tiedosto": "",
-        "lyhyt": "",
-        "selite": "",
-        "lahde": ""
-       }
-      },
-      {
-       "otsikko": "Meri ja luolajärvet",
-       "teksti": "Malecónilta näkee Karibianmerelle, ja bulevardin varrella on kävelyosuuksia, kahviloita ja puistoja. Los Tres Ojosin luolajärvet sijaitsevat puolestaan Santo Domingo Este -kunnassa Ozaman itäpuolella. Luolissa liikutaan portaissa, joten kohde vaatii muuta kuin tasaista kaupunkikävelyä. Järviä ja meribulevardia ei kannata ajatella saman vanhan keskustan korttelin kohteina.",
-       "kuva": {
-        "tiedosto": "",
-        "lyhyt": "",
-        "selite": "",
-        "lahde": ""
-       }
-      },
-      {
-       "otsikko": "Mitä täällä syödään",
-       "teksti": "Comedor on ruokapaikka, jossa plato del día tarkoittaa päivän annosta. Ateriaan kuuluu usein riisiä, papuja, salaattia sekä lihaa tai kanaa. Mofongo puolestaan valmistetaan ruokabanaanista. Santo Domingon ruokatarjontaan kuuluu myös eri maiden keittiöitä, paikallisten comedor-ruokapaikkojen rinnalla. El Conden ympäristöstä ja Malecónilta löytyy ruokapaikkoja.",
-       "kuva": {
-        "tiedosto": "",
-        "lyhyt": "",
-        "selite": "",
-        "lahde": ""
-       }
-      },
-      {
-       "otsikko": "Milloin kannattaa tulla",
-       "teksti": "Santo Domingo on lämmin trooppinen rannikkokaupunki. Museot ja Casa de Teatro tarjoavat sisätiloissa nähtävää sateiseen päivään. Los Tres Ojosin luolajärvet ovat eri kunnan puolella, joten vanhan keskustan kävely ja luolaretki kannattaa erottaa toisistaan.",
-       "kuva": {
-        "tiedosto": "",
-        "lyhyt": "",
-        "selite": "",
-        "lahde": ""
-       }
-      }
-     ],
-     "matkailu": {
-      "parasta": [
-       {
-        "mita": "Zona Colonial",
-        "tahdet": 3,
-        "selite": "Vanhan keskustan ruutukaava ja kivirakennukset muodostavat maailmanperintökohteen."
-       },
-       {
-        "mita": "Calle El Conde",
-        "tahdet": 3,
-        "selite": "Kävelykadulla vanha kauppareitti jatkuu kauppojen ja ruokapaikkojen välissä."
-       },
-       {
-        "mita": "Ozaman linnoitus",
-        "tahdet": 2,
-        "selite": "Joen äärellä oleva kivirakennus vartioi aikanaan satamaa."
-       },
-       {
-        "mita": "Malecón",
-        "tahdet": 2,
-        "selite": "Meribulevardi yhdistää Karibianmeren näkymän kaupungin julkiseen elämään."
-       },
-       {
-        "mita": "Los Tres Ojos",
-        "tahdet": 2,
-        "selite": "Santo Domingo Esten luolajärville kuljetaan portaita pitkin."
-       }
+      "q": "Minkä maan pääkaupunki Santo Domingo on?",
+      "options": [
+        "Dominikaanisen tasavallan",
+        "Saint Kittsin ja Nevisin",
+        "Trinidadin ja Tobagon",
+        "Antiguan ja Barbudan"
       ],
-      "hyvaTietaa": [
-       {
-        "otsikko": "Varaa siirtymälle oikea kulku",
-        "teksti": "Pidempiin matkoihin ja illan paluuseen voi varata virallisen taksin."
-       },
-       {
-        "otsikko": "Luolissa on portaita",
-        "teksti": "Los Tres Ojos vaatii portaissa kulkemista, joten se ei ole tasainen kävelyreitti."
-       },
-       {
-        "otsikko": "Museon tilanne voi vaihtua",
-        "teksti": "Tarkista ajankohtainen käyntitilanne ja mahdolliset kunnostustyöt kohteesta."
-       },
-       {
-        "otsikko": "Seuraa säävaroituksia",
-        "teksti": "Hurrikaanit ja rankkasateet voivat vaikuttaa siirtymiin ja lentoliikenteeseen."
-       }
+      "correct": 0,
+      "level": 1,
+      "hint": "Pääkaupunki on Karibian alueella.",
+      "fact": "Santo Domingo on Dominikaanisen tasavallan pääkaupunki.",
+      "source": "https://en.wikipedia.org/wiki/Santo_Domingo"
+    },
+    {
+      "q": "Minkä joen suulla Santo Domingon vanha keskusta sijaitsee?",
+      "options": [
+        "Ozaman",
+        "Hainan",
+        "Yunan",
+        "Yaque del Norten"
+      ],
+      "correct": 0,
+      "level": 2,
+      "hint": "Joen itä- ja länsirannoille syntyi kaupungin eri vaiheita.",
+      "fact": "Vanha keskusta sijaitsee Ozama-joen länsirannalla lähellä sen suuta.",
+      "source": "https://en.wikipedia.org/wiki/Santo_Domingo"
+    },
+    {
+      "q": "Kuka asui Alcázar de Colónissa perheineen?",
+      "options": [
+        "Diego Colón",
+        "Kristoffer Kolumbus",
+        "Bartolomeo Kolumbus",
+        "Nicolás de Ovando"
+      ],
+      "correct": 0,
+      "level": 3,
+      "hint": "Palatsi oli perheen koti ja kuvernöörin hallintopaikka.",
+      "fact": "Alcázarissa asui Kristoffer Kolumbuksen poika Diego Colón perheineen.",
+      "source": "https://en.wikipedia.org/wiki/Alc%C3%A1zar_de_Col%C3%B3n"
+    },
+    {
+      "q": "Mitä kiveä käytettiin Ozaman linnoituksen rakentamiseen?",
+      "options": [
+        "Korallikiveä",
+        "Graniittia",
+        "Vuolukiveä",
+        "Laavakiveä"
+      ],
+      "correct": 0,
+      "level": 2,
+      "hint": "Kivestä rakennettiin myös linnoituksen Torre del Homenaje.",
+      "fact": "Linnoituksen rakentamiseen käytettiin merestä saatua korallikiveä.",
+      "source": "https://en.wikipedia.org/wiki/Fortaleza_Ozama"
+    },
+    {
+      "q": "Minkä kadun toinen nimi on Santo Domingon Malecón?",
+      "options": [
+        "Avenida George Washingtonin",
+        "Avenida Winston Churchillin",
+        "Avenida John F. Kennedyn",
+        "Avenida Abraham Lincolnin"
+      ],
+      "correct": 0,
+      "level": 2,
+      "hint": "Bulevardin virallinen nimi viittaa ulkomaiseen valtiomieheen.",
+      "fact": "Malecónin meribulevardi tunnetaan myös nimellä Avenida George Washington.",
+      "source": "https://en.wikipedia.org/wiki/Santo_Domingo"
+    }
+  ],
+  "tiedot": [
+    "Alcázar de Colón oli Kristoffer Kolumbuksen pojan Diego Colónin perheen koti ja kuvernöörin hallintopaikka.",
+    "Casa de Teatron toimintaan kuuluu esitysten lisäksi kuvataidetta, kirjallisuutta ja taidekursseja.",
+    "Los Tres Ojosin luolajärvet sijaitsevat Santo Domingo Este -kunnassa Ozaman itäpuolella."
+  ],
+  "valokuva": {
+    "tiedosto": "",
+    "lyhyt": "",
+    "selite": "",
+    "lahde": ""
+  },
+  "kaupunkilehti": [
+    {
+      "id": "kaupunki",
+      "nimi": "Santo Domingo",
+      "johdanto": "Ozaman rannalta levisi kaupunkien suunnittelumalli kauas Amerikkaan. Nykyisessä vanhassa keskustassa kivitalojen rinnalla jatkuvat kaupankäynti, ruokailu ja kulttuuri.",
+      "kansikuvat": [
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        }
+      ],
+      "nostot": [
+        {
+          "otsikko": "Ruutukaava jatkoi matkaa",
+          "teksti": "Santo Domingon vanhan keskustan katuverkko laadittiin ruutukaavaksi 1500-luvun alussa. Keskusaukio, korttelit ja toisiaan leikkaavat kadut muodostivat suunnitelman, jota käytettiin mallina myöhemmissä Amerikan kaupungeissa. Vanhan keskustan katujen leveys ja tonttijako ovat säilyneet suurelta osin. Keskustan säilyneeseen kokonaisuuteen kuuluvat katujen lisäksi niitä reunustavat julkiset ja yksityiset rakennukset sekä avoimet tilat.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "Santo Domingo"
+        },
+        {
+          "otsikko": "Kauppakatu kuuluu kävelijälle",
+          "teksti": "Calle El Conde oli Santo Domingon vanhan keskustan kauppakatu, ja kaupankäynti jatkuu siellä yhä. Nykyinen kävelykatu on kauppojen ja ruokapaikkojen reunustama. Katu johtaa Puerta del Conden portille ja Independencia-puiston suuntaan. Portilla julistettiin Dominikaanisen tasavallan itsenäisyys Haitista. Independencia-puiston Altar de la Patria säilyttää valtion perustajien jäännöksiä.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "Santo Domingo"
+        },
+        {
+          "otsikko": "Malecón on myös katu",
+          "teksti": "Santo Domingon Malecón on Avenida George Washingtonin tunnettu nimi. Karibianmereen rajautuvan bulevardin varrella on hotelleja, kahviloita ja puistoja. Rannan kävelyosuuksilla voi pysähtyä katselemaan merta, ja alueella järjestetään myös konsertteja ja juhlia. Rantareitti ulottuu Palo Hincado -kadulta Abraham Lincoln -avenidalle. Sen varrella on Eugenio María de Hostosin puisto, ja bulevardia käytetään Santo Domingon karnevaalikulkueen reittinä.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "Santo Domingo"
+        },
+        {
+          "otsikko": "Talon täydeltä taidetta",
+          "teksti": "Casa de Teatro on Santo Domingon taiteilijoiden, näyttelijöiden ja muusikoiden kokoontumispaikka. Talossa järjestetään kuvataidetta ja kirjallisuutta esitteleviä näyttelyitä sekä esityksiä. Koulutustarjontaan kuuluvat maalaus-, teatteri- ja tanssikurssit. Lisäksi järjestetään kirjallisuuskilpailuja, joissa ovat mukana runot, novellit ja muut kirjallisuuden lajit.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "Santo Domingo"
+        }
+      ],
+      "matkailijalle": {
+        "kuva": {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        "kappale": "Santo Domingon vanhan keskustan museot ja kivirakennukset sopivat kävelykierroksen aiheeksi. Calle El Conde jatkaa kierrosta kauppojen ja ruokapaikkojen välissä. Malecónin varrella näkyy Karibianmeri. Joen toisella puolella Santo Domingo Estessä sijaitsevat Los Tres Ojosin luolajärvet.",
+        "artikkeli": {
+          "nimi": "Matkailijan Santo Domingo",
+          "taitto": "opas",
+          "teksti": "Seuraa Santo Domingossa vanhan keskustan katuja ja Ozaman rantoja.",
+          "nosto": "Historiallisen kävelyn rinnalle voi valita meribulevardin tai joen toisella puolella sijaitsevat luolajärvet.",
+          "jaksot": [
+            {
+              "otsikko": "Perille ja liikkeelle",
+              "teksti": "Las Américasin kansainvälinen lentoasema sijaitsee Santo Domingon itäpuolella. Kaupungissa on metro ja bussiliikennettä, mutta historiallinen keskusta sopii myös kävelykierrokseen.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            },
+            {
+              "otsikko": "Vanhan keskustan kivitalot",
+              "teksti": "Zona Colonialissa linnoitus, katedraali ja Alcázar-palatsi kuuluvat historialliseen kokonaisuuteen. Calle El Conden kaupat ja ruokapaikat antavat kävelylle toisenlaisen rytmin kuin museohuoneet. Museo Casas Reales sijaitsee myös vanhassa keskustassa.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            },
+            {
+              "otsikko": "Meri ja luolajärvet",
+              "teksti": "Malecónilta näkee Karibianmerelle, ja bulevardin varrella on kävelyosuuksia, kahviloita ja puistoja. Los Tres Ojosin luolajärvet sijaitsevat Santo Domingo Este -kunnassa Ozaman itäpuolella. Luolissa liikutaan portaissa.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            },
+            {
+              "otsikko": "Mitä täällä syödään",
+              "teksti": "Comedor on ruokapaikka, jossa plato del día tarkoittaa päivän annosta. Ateriaan kuuluu usein riisiä, papuja, salaattia sekä lihaa tai kanaa. Mofongo puolestaan valmistetaan ruokabanaanista. Santo Domingon ruokatarjontaan kuuluu myös eri maiden keittiöitä, paikallisten comedor-ruokapaikkojen rinnalla. El Conden ympäristöstä ja Malecónilta löytyy ruokapaikkoja.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            },
+            {
+              "otsikko": "Milloin kannattaa tulla",
+              "teksti": "Santo Domingo on lämmin trooppinen rannikkokaupunki, jossa on sateisempia ja kuivempia kausia.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            }
+          ],
+          "matkailu": {
+            "parasta": [
+              {
+                "mita": "Zona Colonial",
+                "tahdet": 3,
+                "selite": "Vanhan keskustan ruutukaava ja kivirakennukset muodostavat maailmanperintökohteen."
+              },
+              {
+                "mita": "Calle El Conde",
+                "tahdet": 3,
+                "selite": "Kävelykadulla vanha kauppareitti jatkuu kauppojen ja ruokapaikkojen välissä."
+              },
+              {
+                "mita": "Ozaman linnoitus",
+                "tahdet": 2,
+                "selite": "Joen äärellä oleva kivirakennus vartioi aikanaan satamaa."
+              },
+              {
+                "mita": "Malecón",
+                "tahdet": 2,
+                "selite": "Meribulevardi yhdistää Karibianmeren näkymän kaupungin julkiseen elämään."
+              },
+              {
+                "mita": "Los Tres Ojos",
+                "tahdet": 2,
+                "selite": "Santo Domingo Esten luolajärville kuljetaan portaita pitkin."
+              }
+            ],
+            "hyvaTietaa": [
+              {
+                "otsikko": "Luolissa on portaita",
+                "teksti": "Los Tres Ojosin järville kuljetaan portaita pitkin."
+              },
+              {
+                "otsikko": "Kaksi rantaa",
+                "teksti": "Zona Colonial sijaitsee Ozaman länsirannalla, Los Tres Ojos itäpuolella Santo Domingo Estessä."
+              },
+              {
+                "otsikko": "Ruokapaikan sanat",
+                "teksti": "Comedor on ruokapaikka; plato del día tarkoittaa päivän annosta."
+              },
+              {
+                "otsikko": "Säävaroitukset",
+                "teksti": "Hurrikaanit ja rankkasateet voivat vaikuttaa siirtymiin ja lentoliikenteeseen."
+              }
+            ]
+          },
+          "lahde": "Wikipedia"
+        }
+      }
+    },
+    {
+      "id": "historia",
+      "nimi": "Kiven ja veden jäljet",
+      "johdanto": "Santo Domingon korallikivi kuuluu palatseihin, linnoituksiin ja katedraaliin. Luolajärvissä veden tulkinta on puolestaan jättänyt jäljen paikannimeen.",
+      "tehtava": {
+        "kysymys": "Mitä Lago de Azufren vedestä löytyi, vaikka nimi viittaa rikkiin?",
+        "vaihtoehdot": [
+          "Kalsiummineraaleja",
+          "Rikkimineraaleja",
+          "Rautamineraaleja",
+          "Kuparimineraaleja"
+        ],
+        "oikea": 0,
+        "fakta": "Nimi syntyi oletuksesta, että vedessä oli rikkiä. Tutkimuksessa vedestä löytyi kuitenkin kalsiumia."
+      },
+      "nostot": [
+        {
+          "otsikko": "Korallikivi vartioi satamaa",
+          "teksti": "Ozaman linnoitus rakennettiin 1500-luvun alussa kaupungin sataman sisääntulon vartiointiin. Sen keskeinen rakenne on Torre del Homenaje, jykevä kivitorni, ja rakentamiseen käytettiin merestä saatua korallikiveä. Rakennustyössä käytettiin orjuutettuja ihmisiä, myös taínoja. Myöhemmin rakennus palveli myös vankilana; nykyään se kuuluu vanhan keskustan historiallisiin kohteisiin.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "Fortaleza Ozama"
+        },
+        {
+          "otsikko": "Kolumbuksen pojan koti",
+          "teksti": "Alcázar de Colónin nimi viittaa Kolumbuksen perheeseen, mutta palatsissa asui Kristofferin poika Diego Colón perheineen. Korallikivestä tehty rakennus palveli sekä kotina että kuvernöörin hallintopaikkana. Sen arkkitehtuurissa yhdistyvät goottilaiset piirteet ja renessanssin kaaret. Palatsi rappeutui, ja nykyinen museokunnostus tehtiin 1900-luvulla. Sisällä on aikakauden esineistöä ja eurooppalaisia kuvakudoksia, ja kokoelma on koottu myöhemmin museota varten.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "Alcázar de Colón"
+        },
+        {
+          "otsikko": "Holvit kantavat kahta aikakautta",
+          "teksti": "Santo Domingon katedraalin julkisivussa on kullansävyistä korallipitoista kalkkikiveä. Rakennuksen goottilaisiin piirteisiin kuuluvat ruodeholvit, joissa holvipinnan poikki kulkevat kiviset ruoteet. Arkkitehtuurissa näkyy myös renessanssin vaikutus: vanhan keskustan rakennuksissa kohtasivat keskiajan loppu ja uuden aikakauden muodot. Katedraali valmistui 1500-luvulla ja toimii edelleen uskonnollisena rakennuksena.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "Basilica Cathedral of Santa María la Menor"
+        },
+        {
+          "otsikko": "Rikkiä nimessä, kalsiumia vedessä",
+          "teksti": "Los Tres Ojosin luolajärvet sijaitsevat Santo Domingo Estessä, Ozama-joen toisella puolella. Kalkkikiven luolien sortuminen synnytti painanteita, joihin kertyi vettä, ja järviin liittyy maanalainen vesiyhteys. Lago de Azufren nimi tarkoittaa rikkijärveä: sinertävää vettä pidettiin aluksi rikkipitoisena. Veden tutkimuksessa tunnistettiin kuitenkin kalsiummineraaleja. Toisen luolajärven nimi La Nevera tarkoittaa jääkaappia.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "Los Tres Ojos National Park"
+        }
       ]
-     },
-     "lahde": "Wikipedia"
     }
-   }
+  ],
+  "kohdekartta": {
+    "numeroympyrat": true,
+    "esittely": "Ozaman suun länsirannalla ovat vanhan keskustan kivirakennukset. Linnoitus ja katedraali kuuluivat Santo Domingoon jo vuosisatoja ennen nykyistä suurkaupunkia.",
+    "rajat": {
+      "pohjoinen": 18.4762,
+      "etela": 18.46978,
+      "lansi": -69.88689,
+      "ita": -69.87871
+    },
+    "kohteet": [
+      {
+        "nimi": "Ozaman linnoitus",
+        "lat": 18.4732,
+        "lon": -69.88171
+      },
+      {
+        "nimi": "Santo Domingon katedraali",
+        "lat": 18.47278,
+        "lon": -69.88389
+      }
+    ]
   },
-  {
-   "id": "historia",
-   "nimi": "Kiven ja veden jäljet",
-   "johdanto": "Santo Domingon korallikivi kuuluu palatseihin, linnoituksiin ja katedraaliin. Luolajärvissä veden tulkinta on puolestaan jättänyt jäljen paikannimeen.",
-   "tehtava": {
-    "kysymys": "Mitä Lago de Azufren vedestä löytyi, vaikka nimi viittaa rikkiin?",
-    "vaihtoehdot": [
-     "Kalsiummineraaleja",
-     "Rikkimineraaleja",
-     "Rautamineraaleja",
-     "Kuparimineraaleja"
-    ],
-    "oikea": 0,
-    "fakta": "Nimi syntyi oletuksesta, että vedessä oli rikkiä. Tutkimuksessa vedestä löytyi kuitenkin kalsiumia."
-   },
-   "nostot": [
-    {
-     "otsikko": "Korallikivi vartioi satamaa",
-     "teksti": "Ozaman linnoitus rakennettiin 1500-luvun alussa kaupungin sataman sisääntulon vartiointiin. Sen keskeinen rakenne on Torre del Homenaje, jykevä kivitorni, ja rakentamiseen käytettiin merestä saatua korallikiveä. Rakennustyössä käytettiin orjuutettuja ihmisiä, myös taínoja. Linnoitus kertoo siten sekä hallinnon puolustusrakentamisesta että niiden ihmisten työstä, jotka sen toteuttivat. Myöhemmin rakennus palveli myös vankilana; nykyään se kuuluu vanhan keskustan historiallisiin kohteisiin.",
-     "tiedosto": "",
-     "lyhyt": "",
-     "selite": "",
-     "lahde": "",
-     "wiki": "Fortaleza Ozama"
+  "nahtavyydet": {
+    "Ozaman linnoitus": {
+      "aika": "1500-luvun alku",
+      "teksti": "Ozaman linnoitus rakennettiin 1500-luvun alussa Santo Domingon sataman sisääntulon vartiointiin. Se sijaitsee Ozama-joen äärellä vanhassa keskustassa, ja sen keskellä kohoaa Torre del Homenaje. Rakennukseen käytettiin korallikiveä. Työhön osallistui orjuutettuja rakentajia, myös taínoja.\n\nRakennus palveli historiansa aikana myös vankilana. Nykyinen historiallinen kohde kuuluu Unescon maailmanperintöalueeseen yhdessä vanhan keskustan muiden rakennusten kanssa. Sen sijainti joen suun lähellä kertoo alkuperäisestä tehtävästä: vartiointi kohdistui satamaan tuleviin aluksiin ja kaupungin meriyhteyteen.",
+      "kuvat": [
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        }
+      ],
+      "lahde": "Wikipedia"
     },
-    {
-     "otsikko": "Kolumbuksen pojan koti",
-     "teksti": "Alcázar de Colónin nimi viittaa Kolumbuksen perheeseen, mutta palatsissa asui Kristofferin poika Diego Colón perheineen. Korallikivestä tehty rakennus palveli sekä kotina että kuvernöörin hallintopaikkana. Sen arkkitehtuurissa yhdistyvät goottilaiset piirteet ja renessanssin kaaret. Palatsi rappeutui, ja nykyinen museokunnostus tehtiin 1900-luvulla. Sisällä on aikakauden esineistöä ja eurooppalaisia seinävaatteita, ja kokoelma on koottu myöhemmin museota varten.",
-     "tiedosto": "",
-     "lyhyt": "",
-     "selite": "",
-     "lahde": "",
-     "wiki": "Alcázar de Colón"
-    },
-    {
-     "otsikko": "Holvit kantavat kahta aikakautta",
-     "teksti": "Santo Domingon katedraalin julkisivussa on kullansävyistä korallipitoista kalkkikiveä. Rakennuksen goottilaisiin piirteisiin kuuluvat ruodeholvit, joissa holvipinnan poikki kulkevat kiviset ruoteet. Arkkitehtuurissa näkyy myös renessanssin vaikutus: vanhan keskustan rakennuksissa kohtasivat keskiajan loppu ja uuden aikakauden muodot. Katedraali valmistui 1500-luvulla ja toimii edelleen uskonnollisena rakennuksena. Sen pitkää historiaa kantavat sekä kivirakenne että jatkuva käyttö.",
-     "tiedosto": "",
-     "lyhyt": "",
-     "selite": "",
-     "lahde": "",
-     "wiki": "Basilica Cathedral of Santa María la Menor"
-    },
-    {
-     "otsikko": "Rikkiä nimessä, kalsiumia vedessä",
-     "teksti": "Los Tres Ojosin luolajärvet sijaitsevat Santo Domingo Estessä, Ozama-joen toisella puolella. Kalkkikiven luolien sortuminen synnytti painanteita, joihin kertyi vettä, ja järviin liittyy maanalainen vesiyhteys. Lago de Azufren nimi tarkoittaa rikkijärveä: sinertävää vettä pidettiin aluksi rikkipitoisena. Veden tutkimuksessa tunnistettiin kuitenkin kalsiummineraaleja. Paikannimi säilyttää siis vanhan tulkinnan, vaikka veden koostumuksesta saatiin toisenlaista tietoa.",
-     "tiedosto": "",
-     "lyhyt": "",
-     "selite": "",
-     "lahde": "",
-     "wiki": "Los Tres Ojos National Park"
+    "Santo Domingon katedraali": {
+      "aika": "1500-luku",
+      "teksti": "Santa María la Menorin katedraali kuuluu Santo Domingon vanhan keskustan 1500-luvun rakennuksiin. Se on omistettu Marialle ja toimii edelleen katedraalina. Julkisivu on kullansävyistä korallipitoista kalkkikiveä. Rakennuksen arkkitehtuurissa goottilaiset piirteet ja ruodeholvit yhdistyvät renessanssin vaikutukseen.\n\nKatedraali kuuluu Unescon maailmanperintöalueeseen. Ruodeholvien poikki kulkevat kiviset ruoteet ovat osa rakennuksen goottilaista arkkitehtuuria.",
+      "kuvat": [
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        }
+      ],
+      "lahde": "Wikipedia"
     }
-   ]
+  },
+  "saatiedot": null,
+  "ehdotukset": {
+    "lentoasema": "Las Américas (SDQ)",
+    "huomiot": []
   }
- ],
- "kohdekartta": {
-  "numeroympyrat": true,
-  "esittely": "Ozaman suun länsirannalla ovat vanhan keskustan kivirakennukset. Linnoitus ja katedraali kuuluivat Santo Domingoon jo vuosisatoja ennen nykyistä suurkaupunkia.",
-  "rajat": {
-   "pohjoinen": 18.4762,
-   "etela": 18.46978,
-   "lansi": -69.88689,
-   "ita": -69.87871
-  },
-  "kohteet": [
-   {
-    "nimi": "Ozaman linnoitus",
-    "lat": 18.4732,
-    "lon": -69.88171
-   },
-   {
-    "nimi": "Santo Domingon katedraali",
-    "lat": 18.47278,
-    "lon": -69.88389
-   }
-  ]
- },
- "nahtavyydet": {
-  "Ozaman linnoitus": {
-   "aika": "1500-luvun alku",
-   "teksti": "Ozaman linnoitus rakennettiin 1500-luvun alussa Santo Domingon sataman sisääntulon vartiointiin. Se sijaitsee Ozama-joen äärellä vanhassa keskustassa, ja sen keskellä kohoaa Torre del Homenaje. Rakennukseen käytettiin korallikiveä. Työhön osallistui orjuutettuja rakentajia, myös taínoja; linnoituksen historiaan kuuluu siis hallinnon suunnitelmien lisäksi niiden toteuttajien työ.\n\nIsoisän matkavuonna 1873 linnoitus oli jo vuosisatoja vanha. Rakennus palveli historiansa aikana myös vankilana. Nykyinen historiallinen kohde kuuluu Unescon maailmanperintöalueeseen yhdessä vanhan keskustan muiden rakennusten kanssa. Sen sijainti joen suun lähellä kertoo alkuperäisestä tehtävästä: vartiointi kohdistui satamaan tuleviin aluksiin ja kaupungin meriyhteyteen.",
-   "kuvat": [
-    {
-     "tiedosto": "",
-     "lyhyt": "",
-     "selite": "",
-     "lahde": ""
-    }
-   ],
-   "lahde": "Wikipedia"
-  },
-  "Santo Domingon katedraali": {
-   "aika": "1500-luku",
-   "teksti": "Santa María la Menorin katedraali kuuluu Santo Domingon vanhan keskustan 1500-luvun rakennuksiin. Se on omistettu Marialle ja toimii edelleen katedraalina. Julkisivu on kullansävyistä korallipitoista kalkkikiveä. Rakennuksen arkkitehtuurissa goottilaiset piirteet ja ruodeholvit yhdistyvät renessanssin vaikutukseen. Vanhan keskustan maailmanperintöarvoon kuuluu juuri tämä eri aikakausien kohtaaminen rakennuksissa.\n\nVuonna 1873 katedraali oli jo vuosisatoja vanha osa Santo Domingoa. Se oli olemassa paljon ennen nykyistä suurkaupunkia ja sen liikenneverkkoa. Rakennus on säilynyt uskonnollisessa käytössä, joten kyse ei ole pelkästä historiallisesta kuoresta. Vierailu kohdistuu sekä vanhaan kivirakennukseen että toimivaan uskonnolliseen tilaan; sisätiloissa on hyvä ottaa huomioon paikan käyttö.",
-   "kuvat": [
-    {
-     "tiedosto": "",
-     "lyhyt": "",
-     "selite": "",
-     "lahde": ""
-    }
-   ],
-   "lahde": "Wikipedia"
-  }
- },
- "saatiedot": null,
- "ehdotukset": {
-  "lentoasema": "Las Américas (SDQ)",
-  "huomiot": [
-   "C-tekstiluonnos; kuvaroolit odottavat erillistä kuvaputkea.",
-   "Kartta partial: vain 2 alkuperäistä historiallista rakennusta; 6–8 kohteen portti avoin.",
-   "Alcázarin nykyisen museorekonstruktion teossuoja/restaurointitekijä ja Los Tres Ojosin oma koordinaatti avoimia; ei arvauksia.",
-   "Ozaman moderni pihaveistos ja myöhempi jokiseinä eivät kuvaputken aiheiksi; tarkka kuvakehystys auditoitava.",
-   "Saatiedot null: sääaseman 48/48 primäärivarmennus puuttuu.",
-   "Riippumaton D/E/F-tarkistus, hyväksyntä, pelikytkentä ja julkaisu tekemättä."
-  ]
- }
 }

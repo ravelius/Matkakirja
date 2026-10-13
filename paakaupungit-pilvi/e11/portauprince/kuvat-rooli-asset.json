@@ -3,7 +3,7 @@
   "era": "e11",
   "city": "portauprince",
   "authorization": "hyväksyn kaikki tekemäsi kuvat. toimita ne claudelle. claudelta saat uusia ohjeita jatkoa varten",
-  "sourceContentAfterSHA256": "736482cc94a62ddd7502ae74d9cf7091413e133ec8b00abe05885774889099b0",
+  "sourceContentAfterSHA256": "0a0b9efb9cfddd192ef998a751b0db35a73ca583e69a7716076b84e7233b9309",
   "assets": [
     {
       "era": "e11",
@@ -53,10 +53,10 @@
         1536
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/portauprince/sisalto.json",
-      "sourceContentSHA256": "736482cc94a62ddd7502ae74d9cf7091413e133ec8b00abe05885774889099b0",
+      "sourceContentSHA256": "0a0b9efb9cfddd192ef998a751b0db35a73ca583e69a7716076b84e7233b9309",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "6d04b21d0bcebc4e4ee4b6270f9128ced306ee5affa1406530b31faec3ba69ed",
+        "semanticContextSHA256": "09cdcd3529614183d832d1652a6ba950b66aa74b7d0d25bcb776268906a1afe1",
         "subjectTitle": "Matkailijalle",
         "targetState": "existing-target"
       },
@@ -499,9 +499,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "736482cc94a62ddd7502ae74d9cf7091413e133ec8b00abe05885774889099b0",
+      "sourceContentAfterSHA256": "0a0b9efb9cfddd192ef998a751b0db35a73ca583e69a7716076b84e7233b9309",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "6d04b21d0bcebc4e4ee4b6270f9128ced306ee5affa1406530b31faec3ba69ed",
+      "contextAfterSHA256": "09cdcd3529614183d832d1652a6ba950b66aa74b7d0d25bcb776268906a1afe1",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -524,7 +524,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "0a0b9efb9cfddd192ef998a751b0db35a73ca583e69a7716076b84e7233b9309",
+        "sameImageNativeSHA256": "99996271fdd708a60f7e6321bd17769bd13a7305ef9083a1b643a7c997cad50e",
+        "sameImageExportSHA256": "f0394631c5233ed145e58223f7d280169f3074265ec68c70ac2417e7ad24678e",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e11",
@@ -577,10 +585,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/portauprince/sisalto.json",
-      "sourceContentSHA256": "736482cc94a62ddd7502ae74d9cf7091413e133ec8b00abe05885774889099b0",
+      "sourceContentSHA256": "0a0b9efb9cfddd192ef998a751b0db35a73ca583e69a7716076b84e7233b9309",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "665549bf6f6e1bcee9766a1aa8e5889a2b282d9cca0a7012a859114ee0ee3ef4",
+        "semanticContextSHA256": "748721f810aea681b29e8b800230ab4bff5f5f0a5728aa00efe0be2d78ebd5c2",
         "subjectTitle": "Mitä täällä syödään",
         "targetState": "existing-target"
       },
@@ -821,9 +829,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "736482cc94a62ddd7502ae74d9cf7091413e133ec8b00abe05885774889099b0",
+      "sourceContentAfterSHA256": "0a0b9efb9cfddd192ef998a751b0db35a73ca583e69a7716076b84e7233b9309",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "665549bf6f6e1bcee9766a1aa8e5889a2b282d9cca0a7012a859114ee0ee3ef4",
+      "contextAfterSHA256": "748721f810aea681b29e8b800230ab4bff5f5f0a5728aa00efe0be2d78ebd5c2",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -846,7 +854,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "0a0b9efb9cfddd192ef998a751b0db35a73ca583e69a7716076b84e7233b9309",
+        "sameImageNativeSHA256": "af6b033d0644847e516a3d86ffe3773b5ea2681ceb72d1d05dd11d4c4ddb3b4d",
+        "sameImageExportSHA256": "7474824ec75d525135063fb4153f8c6bf708bee6a461029721fbedc474ed2369",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e11",
@@ -896,7 +912,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/portauprince/sisalto.json",
-      "sourceContentSHA256": "736482cc94a62ddd7502ae74d9cf7091413e133ec8b00abe05885774889099b0",
+      "sourceContentSHA256": "0a0b9efb9cfddd192ef998a751b0db35a73ca583e69a7716076b84e7233b9309",
       "semanticSourceBind": {
         "targetBeforeSHA256": "ad7e82fcf9fc7c2b8bf6d6498d3f0a9e3cb9696afbf24758c1c58d726d724c20",
         "semanticContextSHA256": "ad7e82fcf9fc7c2b8bf6d6498d3f0a9e3cb9696afbf24758c1c58d726d724c20",
@@ -1138,7 +1154,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "736482cc94a62ddd7502ae74d9cf7091413e133ec8b00abe05885774889099b0",
+      "sourceContentAfterSHA256": "0a0b9efb9cfddd192ef998a751b0db35a73ca583e69a7716076b84e7233b9309",
       "targetAfterSHA256": "ad7e82fcf9fc7c2b8bf6d6498d3f0a9e3cb9696afbf24758c1c58d726d724c20",
       "contextAfterSHA256": "ad7e82fcf9fc7c2b8bf6d6498d3f0a9e3cb9696afbf24758c1c58d726d724c20",
       "ownerApproved": true,
@@ -1163,7 +1179,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "0a0b9efb9cfddd192ef998a751b0db35a73ca583e69a7716076b84e7233b9309",
+        "sameImageNativeSHA256": "b3d4e1c76374789ca90f64bb286316e317b72df33859db8d258041667f2a218e",
+        "sameImageExportSHA256": "e307c7fcdc0c75db5765e9c61b2089fdb0bb06de5a7e28ed77bb0074e0201a84",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e11",
@@ -1213,7 +1237,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/portauprince/sisalto.json",
-      "sourceContentSHA256": "736482cc94a62ddd7502ae74d9cf7091413e133ec8b00abe05885774889099b0",
+      "sourceContentSHA256": "0a0b9efb9cfddd192ef998a751b0db35a73ca583e69a7716076b84e7233b9309",
       "semanticSourceBind": {
         "targetBeforeSHA256": "7cb9003fbe89cf0610ff5bfc54c68c93b8478ce2379471ee4e7e85eaa19f58be",
         "semanticContextSHA256": "7cb9003fbe89cf0610ff5bfc54c68c93b8478ce2379471ee4e7e85eaa19f58be",
@@ -1455,7 +1479,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "736482cc94a62ddd7502ae74d9cf7091413e133ec8b00abe05885774889099b0",
+      "sourceContentAfterSHA256": "0a0b9efb9cfddd192ef998a751b0db35a73ca583e69a7716076b84e7233b9309",
       "targetAfterSHA256": "7cb9003fbe89cf0610ff5bfc54c68c93b8478ce2379471ee4e7e85eaa19f58be",
       "contextAfterSHA256": "7cb9003fbe89cf0610ff5bfc54c68c93b8478ce2379471ee4e7e85eaa19f58be",
       "ownerApproved": true,
@@ -1480,7 +1504,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "0a0b9efb9cfddd192ef998a751b0db35a73ca583e69a7716076b84e7233b9309",
+        "sameImageNativeSHA256": "11ef36e91a8fe5eb2ed1228324147b52d27ccacd8b2f0b492e8c638faa521efd",
+        "sameImageExportSHA256": "45b9f4979262262316746396a3e23d52801f11c58328fe9d4074a46d5729f524",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e11",
@@ -1530,10 +1562,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/portauprince/sisalto.json",
-      "sourceContentSHA256": "736482cc94a62ddd7502ae74d9cf7091413e133ec8b00abe05885774889099b0",
+      "sourceContentSHA256": "0a0b9efb9cfddd192ef998a751b0db35a73ca583e69a7716076b84e7233b9309",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "66c60e831bf777efd7394c800ecd758c37ae924c1c4b17971c2823f6c130c1db",
-        "semanticContextSHA256": "66c60e831bf777efd7394c800ecd758c37ae924c1c4b17971c2823f6c130c1db",
+        "targetBeforeSHA256": "060e596c38788f34bda6a82b1a12913b171e2bd135f65dbf403d09c7f4574856",
+        "semanticContextSHA256": "060e596c38788f34bda6a82b1a12913b171e2bd135f65dbf403d09c7f4574856",
         "subjectTitle": "Fritay on ruokien perhe",
         "targetState": "existing-target"
       },
@@ -1772,9 +1804,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "736482cc94a62ddd7502ae74d9cf7091413e133ec8b00abe05885774889099b0",
-      "targetAfterSHA256": "66c60e831bf777efd7394c800ecd758c37ae924c1c4b17971c2823f6c130c1db",
-      "contextAfterSHA256": "66c60e831bf777efd7394c800ecd758c37ae924c1c4b17971c2823f6c130c1db",
+      "sourceContentAfterSHA256": "0a0b9efb9cfddd192ef998a751b0db35a73ca583e69a7716076b84e7233b9309",
+      "targetAfterSHA256": "060e596c38788f34bda6a82b1a12913b171e2bd135f65dbf403d09c7f4574856",
+      "contextAfterSHA256": "060e596c38788f34bda6a82b1a12913b171e2bd135f65dbf403d09c7f4574856",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -1797,7 +1829,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "0a0b9efb9cfddd192ef998a751b0db35a73ca583e69a7716076b84e7233b9309",
+        "sameImageNativeSHA256": "a159ba5cd7c8849045239110e2fbb5ab8319f5ffadef46c298d4eaf7c5741a1d",
+        "sameImageExportSHA256": "fda93eb480e42bbe695bf5ea8e656a67bfaec0dc74060f22301c9ad504bbe1c2",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e11",
@@ -1847,10 +1887,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/portauprince/sisalto.json",
-      "sourceContentSHA256": "736482cc94a62ddd7502ae74d9cf7091413e133ec8b00abe05885774889099b0",
+      "sourceContentSHA256": "0a0b9efb9cfddd192ef998a751b0db35a73ca583e69a7716076b84e7233b9309",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "611eda182da707303eabe25f65730a3b573f1fe68597b49ce3e26b5e4247e1ac",
-        "semanticContextSHA256": "611eda182da707303eabe25f65730a3b573f1fe68597b49ce3e26b5e4247e1ac",
+        "targetBeforeSHA256": "961efe8b247ee0cf3f21817118d5a9d3d6505c9d3ff0886079302d2fc02088e5",
+        "semanticContextSHA256": "961efe8b247ee0cf3f21817118d5a9d3d6505c9d3ff0886079302d2fc02088e5",
         "subjectTitle": "Pikliz antaa aterialle potkun",
         "targetState": "existing-target"
       },
@@ -2089,9 +2129,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "736482cc94a62ddd7502ae74d9cf7091413e133ec8b00abe05885774889099b0",
-      "targetAfterSHA256": "611eda182da707303eabe25f65730a3b573f1fe68597b49ce3e26b5e4247e1ac",
-      "contextAfterSHA256": "611eda182da707303eabe25f65730a3b573f1fe68597b49ce3e26b5e4247e1ac",
+      "sourceContentAfterSHA256": "0a0b9efb9cfddd192ef998a751b0db35a73ca583e69a7716076b84e7233b9309",
+      "targetAfterSHA256": "961efe8b247ee0cf3f21817118d5a9d3d6505c9d3ff0886079302d2fc02088e5",
+      "contextAfterSHA256": "961efe8b247ee0cf3f21817118d5a9d3d6505c9d3ff0886079302d2fc02088e5",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -2114,7 +2154,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "0a0b9efb9cfddd192ef998a751b0db35a73ca583e69a7716076b84e7233b9309",
+        "sameImageNativeSHA256": "b54a5d90fe4ec9311150b89e046bfe7de101ef79c90dc93c294ddd2d2f1e4622",
+        "sameImageExportSHA256": "171cf029dc11b3bb5a3e068a3f7fc8728811bd23c865ada12016c022f4142da4",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e11",
@@ -2164,10 +2212,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/portauprince/sisalto.json",
-      "sourceContentSHA256": "736482cc94a62ddd7502ae74d9cf7091413e133ec8b00abe05885774889099b0",
+      "sourceContentSHA256": "0a0b9efb9cfddd192ef998a751b0db35a73ca583e69a7716076b84e7233b9309",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "bf251517049d0d9e13b493a7aff924bffcb46572be5fe0e64d39e45f4afb2817",
-        "semanticContextSHA256": "bf251517049d0d9e13b493a7aff924bffcb46572be5fe0e64d39e45f4afb2817",
+        "targetBeforeSHA256": "72c494647b3c285808f77eab2b9a2ac67ed99cf2fe276a09dece28e20d4cbcdb",
+        "semanticContextSHA256": "72c494647b3c285808f77eab2b9a2ac67ed99cf2fe276a09dece28e20d4cbcdb",
         "subjectTitle": "Griot saa seurakseen piklizin",
         "targetState": "existing-target"
       },
@@ -2406,9 +2454,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "736482cc94a62ddd7502ae74d9cf7091413e133ec8b00abe05885774889099b0",
-      "targetAfterSHA256": "bf251517049d0d9e13b493a7aff924bffcb46572be5fe0e64d39e45f4afb2817",
-      "contextAfterSHA256": "bf251517049d0d9e13b493a7aff924bffcb46572be5fe0e64d39e45f4afb2817",
+      "sourceContentAfterSHA256": "0a0b9efb9cfddd192ef998a751b0db35a73ca583e69a7716076b84e7233b9309",
+      "targetAfterSHA256": "72c494647b3c285808f77eab2b9a2ac67ed99cf2fe276a09dece28e20d4cbcdb",
+      "contextAfterSHA256": "72c494647b3c285808f77eab2b9a2ac67ed99cf2fe276a09dece28e20d4cbcdb",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -2431,7 +2479,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "0a0b9efb9cfddd192ef998a751b0db35a73ca583e69a7716076b84e7233b9309",
+        "sameImageNativeSHA256": "b814d4c359520b8926140fa39c5a0e848f6fb9a333f1d862c511a0694bc49aed",
+        "sameImageExportSHA256": "206b6f86a2a6c704333ee04ddaecdbb022055b25ad02b93983b3a60379ff564f",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e11",
@@ -2481,10 +2537,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/portauprince/sisalto.json",
-      "sourceContentSHA256": "736482cc94a62ddd7502ae74d9cf7091413e133ec8b00abe05885774889099b0",
+      "sourceContentSHA256": "0a0b9efb9cfddd192ef998a751b0db35a73ca583e69a7716076b84e7233b9309",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "fba1d4d1f173a831f8382a535b35dc2aea108726628455e8660f07958253e617",
-        "semanticContextSHA256": "fba1d4d1f173a831f8382a535b35dc2aea108726628455e8660f07958253e617",
+        "targetBeforeSHA256": "ebc246e07718263433f507e90e636f857a64e9da83224dbc8405228acaaaf34b",
+        "semanticContextSHA256": "ebc246e07718263433f507e90e636f857a64e9da83224dbc8405228acaaaf34b",
         "subjectTitle": "Keittokattila muistuttaa vapaudesta",
         "targetState": "existing-target"
       },
@@ -2723,9 +2779,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "736482cc94a62ddd7502ae74d9cf7091413e133ec8b00abe05885774889099b0",
-      "targetAfterSHA256": "fba1d4d1f173a831f8382a535b35dc2aea108726628455e8660f07958253e617",
-      "contextAfterSHA256": "fba1d4d1f173a831f8382a535b35dc2aea108726628455e8660f07958253e617",
+      "sourceContentAfterSHA256": "0a0b9efb9cfddd192ef998a751b0db35a73ca583e69a7716076b84e7233b9309",
+      "targetAfterSHA256": "ebc246e07718263433f507e90e636f857a64e9da83224dbc8405228acaaaf34b",
+      "contextAfterSHA256": "ebc246e07718263433f507e90e636f857a64e9da83224dbc8405228acaaaf34b",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -2748,7 +2804,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "0a0b9efb9cfddd192ef998a751b0db35a73ca583e69a7716076b84e7233b9309",
+        "sameImageNativeSHA256": "41496f0f6eee6fcf05c30e0c9463c596e4973feb9f9707561a0945e3a6a0e192",
+        "sameImageExportSHA256": "35404b5bd00e8e0529e94099038a0d303560733b4d2f88560c8349b1ac00c358",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e11",
@@ -2767,14 +2831,14 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/portauprince/photo-89ec8957c2f38bb69614.jpg",
         "suora": true,
         "lahde": "Tech. Sgt. James L. Harper , USAF, Commons (PD)",
-        "selite": "Ilmakuvassa näkyvät kiitotie, lentoaseman asemataso ja ympäröivää Port-au-Princen kaupunkialuetta.",
+        "selite": "Port-au-Princen lentoasema ilmasta tammikuussa 2010.",
         "lyhyt": "Port-au-Princen lentoaseman kiitotie tammikuussa 2010.",
         "tiedosto": "Aerial view of PAP 2010-01-26 2.JPG"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Tech. Sgt. James L. Harper , USAF, Commons (PD)",
-        "selite": "Ilmakuvassa näkyvät kiitotie, lentoaseman asemataso ja ympäröivää Port-au-Princen kaupunkialuetta.",
+        "selite": "Port-au-Princen lentoasema ilmasta tammikuussa 2010.",
         "lyhyt": "Port-au-Princen lentoaseman kiitotie tammikuussa 2010.",
         "tiedosto": "Aerial view of PAP 2010-01-26 2.JPG"
       },
@@ -2782,7 +2846,7 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/portauprince/photo-89ec8957c2f38bb69614.jpg",
         "suora": true,
         "lahde": "Tech. Sgt. James L. Harper , USAF, Commons (PD)",
-        "selite": "Ilmakuvassa näkyvät kiitotie, lentoaseman asemataso ja ympäröivää Port-au-Princen kaupunkialuetta.",
+        "selite": "Port-au-Princen lentoasema ilmasta tammikuussa 2010.",
         "lyhyt": "Port-au-Princen lentoaseman kiitotie tammikuussa 2010.",
         "tiedosto": "Aerial view of PAP 2010-01-26 2.JPG"
       },
@@ -2798,10 +2862,10 @@
         2546
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/portauprince/sisalto.json",
-      "sourceContentSHA256": "736482cc94a62ddd7502ae74d9cf7091413e133ec8b00abe05885774889099b0",
+      "sourceContentSHA256": "0a0b9efb9cfddd192ef998a751b0db35a73ca583e69a7716076b84e7233b9309",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "8899d225158def6c80f4b84af36e4b41c887f91aa8615dba8411249ad16bd3cb",
-        "semanticContextSHA256": "8899d225158def6c80f4b84af36e4b41c887f91aa8615dba8411249ad16bd3cb",
+        "targetBeforeSHA256": "a1681d38c99f46fd3cf1322d5c2814fd3de7826ce0da947353914816261c2059",
+        "semanticContextSHA256": "a1681d38c99f46fd3cf1322d5c2814fd3de7826ce0da947353914816261c2059",
         "subjectTitle": "portauprince — aito paikkavalokuva",
         "targetState": "existing-target"
       },
@@ -3007,7 +3071,7 @@
       "priorMediaFields": {
         "tiedosto": "Aerial view of PAP 2010-01-26 2.JPG",
         "lyhyt": "Port-au-Princen lentoaseman kiitotie tammikuussa 2010.",
-        "selite": "Ilmakuvassa näkyvät kiitotie, lentoaseman asemataso ja ympäröivää Port-au-Princen kaupunkialuetta.",
+        "selite": "Port-au-Princen lentoasema ilmasta tammikuussa 2010.",
         "lahde": "Tech. Sgt. James L. Harper , USAF, Commons (PD)"
       },
       "preservePreviousMediaObjects": true,
@@ -3034,14 +3098,14 @@
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Tech. Sgt. James L. Harper , USAF, Commons (PD)",
-        "selite": "Ilmakuvassa näkyvät kiitotie, lentoaseman asemataso ja ympäröivää Port-au-Princen kaupunkialuetta.",
+        "selite": "Port-au-Princen lentoasema ilmasta tammikuussa 2010.",
         "lyhyt": "Port-au-Princen lentoaseman kiitotie tammikuussa 2010.",
         "tiedosto": "Aerial view of PAP 2010-01-26 2.JPG"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "736482cc94a62ddd7502ae74d9cf7091413e133ec8b00abe05885774889099b0",
-      "targetAfterSHA256": "8899d225158def6c80f4b84af36e4b41c887f91aa8615dba8411249ad16bd3cb",
-      "contextAfterSHA256": "8899d225158def6c80f4b84af36e4b41c887f91aa8615dba8411249ad16bd3cb",
+      "sourceContentAfterSHA256": "0a0b9efb9cfddd192ef998a751b0db35a73ca583e69a7716076b84e7233b9309",
+      "targetAfterSHA256": "a1681d38c99f46fd3cf1322d5c2814fd3de7826ce0da947353914816261c2059",
+      "contextAfterSHA256": "a1681d38c99f46fd3cf1322d5c2814fd3de7826ce0da947353914816261c2059",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -3064,7 +3128,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "0a0b9efb9cfddd192ef998a751b0db35a73ca583e69a7716076b84e7233b9309",
+        "sameImageNativeSHA256": "89ec8957c2f38bb6961424cc21345ff9494e5a6986d79e440ac1353057784b00",
+        "sameImageExportSHA256": "89ec8957c2f38bb6961424cc21345ff9494e5a6986d79e440ac1353057784b00",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": true
+      }
     },
     {
       "era": "e11",
@@ -3086,14 +3158,14 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/portauprince/c1-bd1040489a9f0ad78d85.jpg",
         "suora": true,
         "lahde": "Sharmoreland, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Etualalla on kivikkoista rinnettä ja kasvillisuutta; Port-au-Princen rakennukset levittäytyvät kauempana laaksoon.",
+        "selite": "Port-au-Princen näkymä Black Mountains -vuorilta.",
         "lyhyt": "Port-au-Prince Black Mountains -vuorilta nähtynä.",
         "tiedosto": "Port-Au-Prince, Haiti from the Black Mountains.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Sharmoreland, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Etualalla on kivikkoista rinnettä ja kasvillisuutta; Port-au-Princen rakennukset levittäytyvät kauempana laaksoon.",
+        "selite": "Port-au-Princen näkymä Black Mountains -vuorilta.",
         "lyhyt": "Port-au-Prince Black Mountains -vuorilta nähtynä.",
         "tiedosto": "Port-Au-Prince, Haiti from the Black Mountains.jpg"
       },
@@ -3101,7 +3173,7 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/portauprince/c1-bd1040489a9f0ad78d85.jpg",
         "suora": true,
         "lahde": "Sharmoreland, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Etualalla on kivikkoista rinnettä ja kasvillisuutta; Port-au-Princen rakennukset levittäytyvät kauempana laaksoon.",
+        "selite": "Port-au-Princen näkymä Black Mountains -vuorilta.",
         "lyhyt": "Port-au-Prince Black Mountains -vuorilta nähtynä.",
         "tiedosto": "Port-Au-Prince, Haiti from the Black Mountains.jpg"
       },
@@ -3117,10 +3189,10 @@
         1365
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/portauprince/sisalto.json",
-      "sourceContentSHA256": "736482cc94a62ddd7502ae74d9cf7091413e133ec8b00abe05885774889099b0",
+      "sourceContentSHA256": "0a0b9efb9cfddd192ef998a751b0db35a73ca583e69a7716076b84e7233b9309",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "bae29ab03dc135f076e28c3eaa2411ba755025d3482d539f0483c4fc14b4659b",
-        "semanticContextSHA256": "bae29ab03dc135f076e28c3eaa2411ba755025d3482d539f0483c4fc14b4659b",
+        "targetBeforeSHA256": "65a7b520e1d7abebf472f201756ecad7d92f63c8201019bc9376e0f51e6ac036",
+        "semanticContextSHA256": "65a7b520e1d7abebf472f201756ecad7d92f63c8201019bc9376e0f51e6ac036",
         "subjectTitle": "Port-au-Prince",
         "targetState": "existing-target"
       },
@@ -3304,7 +3376,7 @@
       "priorMediaFields": {
         "tiedosto": "Port-Au-Prince, Haiti from the Black Mountains.jpg",
         "lyhyt": "Port-au-Prince Black Mountains -vuorilta nähtynä.",
-        "selite": "Etualalla on kivikkoista rinnettä ja kasvillisuutta; Port-au-Princen rakennukset levittäytyvät kauempana laaksoon.",
+        "selite": "Port-au-Princen näkymä Black Mountains -vuorilta.",
         "lahde": "Sharmoreland, Wikimedia Commons (CC BY-SA 4.0)"
       },
       "preservePreviousMediaObjects": true,
@@ -3331,14 +3403,14 @@
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Sharmoreland, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Etualalla on kivikkoista rinnettä ja kasvillisuutta; Port-au-Princen rakennukset levittäytyvät kauempana laaksoon.",
+        "selite": "Port-au-Princen näkymä Black Mountains -vuorilta.",
         "lyhyt": "Port-au-Prince Black Mountains -vuorilta nähtynä.",
         "tiedosto": "Port-Au-Prince, Haiti from the Black Mountains.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "736482cc94a62ddd7502ae74d9cf7091413e133ec8b00abe05885774889099b0",
-      "targetAfterSHA256": "bae29ab03dc135f076e28c3eaa2411ba755025d3482d539f0483c4fc14b4659b",
-      "contextAfterSHA256": "bae29ab03dc135f076e28c3eaa2411ba755025d3482d539f0483c4fc14b4659b",
+      "sourceContentAfterSHA256": "0a0b9efb9cfddd192ef998a751b0db35a73ca583e69a7716076b84e7233b9309",
+      "targetAfterSHA256": "65a7b520e1d7abebf472f201756ecad7d92f63c8201019bc9376e0f51e6ac036",
+      "contextAfterSHA256": "65a7b520e1d7abebf472f201756ecad7d92f63c8201019bc9376e0f51e6ac036",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -3361,7 +3433,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "0a0b9efb9cfddd192ef998a751b0db35a73ca583e69a7716076b84e7233b9309",
+        "sameImageNativeSHA256": "bd1040489a9f0ad78d85304ce1a252305f7f32f3809d24a3c022625fcf14f6e1",
+        "sameImageExportSHA256": "bd1040489a9f0ad78d85304ce1a252305f7f32f3809d24a3c022625fcf14f6e1",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": true
+      }
     },
     {
       "era": "e11",
@@ -3383,14 +3463,14 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/portauprince/c2-5f8a4a3bea7bf02da5f6.jpg",
         "suora": true,
         "lahde": "NASA, Wikimedia Commons (PD)",
-        "selite": "Rannikon ja rinteiden väliin levittäytyvä asutus, katuverkko sekä lentoaseman kiitotie erottuvat ilmakuvassa.",
+        "selite": "Ilmakuva Port-au-Princen kaupunkialueesta.",
         "lyhyt": "Port-au-Princen tiheää kaupunkialuetta ilmasta.",
         "tiedosto": "Commune of Port-au-Prince, Haiti.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "NASA, Wikimedia Commons (PD)",
-        "selite": "Rannikon ja rinteiden väliin levittäytyvä asutus, katuverkko sekä lentoaseman kiitotie erottuvat ilmakuvassa.",
+        "selite": "Ilmakuva Port-au-Princen kaupunkialueesta.",
         "lyhyt": "Port-au-Princen tiheää kaupunkialuetta ilmasta.",
         "tiedosto": "Commune of Port-au-Prince, Haiti.jpg"
       },
@@ -3398,7 +3478,7 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/portauprince/c2-5f8a4a3bea7bf02da5f6.jpg",
         "suora": true,
         "lahde": "NASA, Wikimedia Commons (PD)",
-        "selite": "Rannikon ja rinteiden väliin levittäytyvä asutus, katuverkko sekä lentoaseman kiitotie erottuvat ilmakuvassa.",
+        "selite": "Ilmakuva Port-au-Princen kaupunkialueesta.",
         "lyhyt": "Port-au-Princen tiheää kaupunkialuetta ilmasta.",
         "tiedosto": "Commune of Port-au-Prince, Haiti.jpg"
       },
@@ -3414,10 +3494,10 @@
         3712
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/portauprince/sisalto.json",
-      "sourceContentSHA256": "736482cc94a62ddd7502ae74d9cf7091413e133ec8b00abe05885774889099b0",
+      "sourceContentSHA256": "0a0b9efb9cfddd192ef998a751b0db35a73ca583e69a7716076b84e7233b9309",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "ae5f5667209fc50722cd8b442fa4b9d07a264e55705c87f9b1e8ce5fac4db63a",
-        "semanticContextSHA256": "ae5f5667209fc50722cd8b442fa4b9d07a264e55705c87f9b1e8ce5fac4db63a",
+        "targetBeforeSHA256": "a5432d7f91429640a73901bfcfd707c5994885d99f32e7fe02eac553bae8f86e",
+        "semanticContextSHA256": "a5432d7f91429640a73901bfcfd707c5994885d99f32e7fe02eac553bae8f86e",
         "subjectTitle": "Port-au-Prince",
         "targetState": "existing-target"
       },
@@ -3601,7 +3681,7 @@
       "priorMediaFields": {
         "tiedosto": "Commune of Port-au-Prince, Haiti.jpg",
         "lyhyt": "Port-au-Princen tiheää kaupunkialuetta ilmasta.",
-        "selite": "Rannikon ja rinteiden väliin levittäytyvä asutus, katuverkko sekä lentoaseman kiitotie erottuvat ilmakuvassa.",
+        "selite": "Ilmakuva Port-au-Princen kaupunkialueesta.",
         "lahde": "NASA, Wikimedia Commons (PD)"
       },
       "preservePreviousMediaObjects": true,
@@ -3628,14 +3708,14 @@
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "NASA, Wikimedia Commons (PD)",
-        "selite": "Rannikon ja rinteiden väliin levittäytyvä asutus, katuverkko sekä lentoaseman kiitotie erottuvat ilmakuvassa.",
+        "selite": "Ilmakuva Port-au-Princen kaupunkialueesta.",
         "lyhyt": "Port-au-Princen tiheää kaupunkialuetta ilmasta.",
         "tiedosto": "Commune of Port-au-Prince, Haiti.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "736482cc94a62ddd7502ae74d9cf7091413e133ec8b00abe05885774889099b0",
-      "targetAfterSHA256": "ae5f5667209fc50722cd8b442fa4b9d07a264e55705c87f9b1e8ce5fac4db63a",
-      "contextAfterSHA256": "ae5f5667209fc50722cd8b442fa4b9d07a264e55705c87f9b1e8ce5fac4db63a",
+      "sourceContentAfterSHA256": "0a0b9efb9cfddd192ef998a751b0db35a73ca583e69a7716076b84e7233b9309",
+      "targetAfterSHA256": "a5432d7f91429640a73901bfcfd707c5994885d99f32e7fe02eac553bae8f86e",
+      "contextAfterSHA256": "a5432d7f91429640a73901bfcfd707c5994885d99f32e7fe02eac553bae8f86e",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -3658,7 +3738,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "0a0b9efb9cfddd192ef998a751b0db35a73ca583e69a7716076b84e7233b9309",
+        "sameImageNativeSHA256": "5f8a4a3bea7bf02da5f6bf2f35d09553b088b0abd4d33b4ddfd8ecf9161c3009",
+        "sameImageExportSHA256": "5f8a4a3bea7bf02da5f6bf2f35d09553b088b0abd4d33b4ddfd8ecf9161c3009",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": true
+      }
     },
     {
       "era": "e11",
@@ -3680,14 +3768,14 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/portauprince/c3-3aa9671d46c365f55d14.jpg",
         "suora": true,
         "lahde": "Earth Science and Remote Sensing Unit , Lyndon B. Johnson Space Center, Wikimedia Commons (PD)",
-        "selite": "Avaruuskuvassa näkyvät lahti, sen rannalla levittäytyvä kaupunkialue ja vuoristoinen tausta.",
+        "selite": "Port-au-Princen seutu ja Gonâvenlahti avaruusasemalta kuvattuna.",
         "lyhyt": "Port-au-Princen seutu ja Gonâvenlahti avaruusasemalta.",
         "tiedosto": "ISS030-E-35604 - View of Haiti.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Earth Science and Remote Sensing Unit , Lyndon B. Johnson Space Center, Wikimedia Commons (PD)",
-        "selite": "Avaruuskuvassa näkyvät lahti, sen rannalla levittäytyvä kaupunkialue ja vuoristoinen tausta.",
+        "selite": "Port-au-Princen seutu ja Gonâvenlahti avaruusasemalta kuvattuna.",
         "lyhyt": "Port-au-Princen seutu ja Gonâvenlahti avaruusasemalta.",
         "tiedosto": "ISS030-E-35604 - View of Haiti.jpg"
       },
@@ -3695,7 +3783,7 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/portauprince/c3-3aa9671d46c365f55d14.jpg",
         "suora": true,
         "lahde": "Earth Science and Remote Sensing Unit , Lyndon B. Johnson Space Center, Wikimedia Commons (PD)",
-        "selite": "Avaruuskuvassa näkyvät lahti, sen rannalla levittäytyvä kaupunkialue ja vuoristoinen tausta.",
+        "selite": "Port-au-Princen seutu ja Gonâvenlahti avaruusasemalta kuvattuna.",
         "lyhyt": "Port-au-Princen seutu ja Gonâvenlahti avaruusasemalta.",
         "tiedosto": "ISS030-E-35604 - View of Haiti.jpg"
       },
@@ -3711,10 +3799,10 @@
         2848
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/portauprince/sisalto.json",
-      "sourceContentSHA256": "736482cc94a62ddd7502ae74d9cf7091413e133ec8b00abe05885774889099b0",
+      "sourceContentSHA256": "0a0b9efb9cfddd192ef998a751b0db35a73ca583e69a7716076b84e7233b9309",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "de656b705936f95a1c6de5b65716c79dcc4bcc73f67cf005d6265753b67f585c",
-        "semanticContextSHA256": "de656b705936f95a1c6de5b65716c79dcc4bcc73f67cf005d6265753b67f585c",
+        "targetBeforeSHA256": "19f045086ff126f2a7fce9fab4442c645572bef2b9e9742c9a89d10a8dc3ddc1",
+        "semanticContextSHA256": "19f045086ff126f2a7fce9fab4442c645572bef2b9e9742c9a89d10a8dc3ddc1",
         "subjectTitle": "Port-au-Prince",
         "targetState": "existing-target"
       },
@@ -3915,7 +4003,7 @@
       "priorMediaFields": {
         "tiedosto": "ISS030-E-35604 - View of Haiti.jpg",
         "lyhyt": "Port-au-Princen seutu ja Gonâvenlahti avaruusasemalta.",
-        "selite": "Avaruuskuvassa näkyvät lahti, sen rannalla levittäytyvä kaupunkialue ja vuoristoinen tausta.",
+        "selite": "Port-au-Princen seutu ja Gonâvenlahti avaruusasemalta kuvattuna.",
         "lahde": "Earth Science and Remote Sensing Unit , Lyndon B. Johnson Space Center, Wikimedia Commons (PD)"
       },
       "preservePreviousMediaObjects": true,
@@ -3942,14 +4030,14 @@
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Earth Science and Remote Sensing Unit , Lyndon B. Johnson Space Center, Wikimedia Commons (PD)",
-        "selite": "Avaruuskuvassa näkyvät lahti, sen rannalla levittäytyvä kaupunkialue ja vuoristoinen tausta.",
+        "selite": "Port-au-Princen seutu ja Gonâvenlahti avaruusasemalta kuvattuna.",
         "lyhyt": "Port-au-Princen seutu ja Gonâvenlahti avaruusasemalta.",
         "tiedosto": "ISS030-E-35604 - View of Haiti.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "736482cc94a62ddd7502ae74d9cf7091413e133ec8b00abe05885774889099b0",
-      "targetAfterSHA256": "de656b705936f95a1c6de5b65716c79dcc4bcc73f67cf005d6265753b67f585c",
-      "contextAfterSHA256": "de656b705936f95a1c6de5b65716c79dcc4bcc73f67cf005d6265753b67f585c",
+      "sourceContentAfterSHA256": "0a0b9efb9cfddd192ef998a751b0db35a73ca583e69a7716076b84e7233b9309",
+      "targetAfterSHA256": "19f045086ff126f2a7fce9fab4442c645572bef2b9e9742c9a89d10a8dc3ddc1",
+      "contextAfterSHA256": "19f045086ff126f2a7fce9fab4442c645572bef2b9e9742c9a89d10a8dc3ddc1",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -3972,7 +4060,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "0a0b9efb9cfddd192ef998a751b0db35a73ca583e69a7716076b84e7233b9309",
+        "sameImageNativeSHA256": "3aa9671d46c365f55d14b236f93906cfdfc366b4828650b017b7c75aa0354077",
+        "sameImageExportSHA256": "3aa9671d46c365f55d14b236f93906cfdfc366b4828650b017b7c75aa0354077",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": true
+      }
     }
   ],
   "runtimeIntegrationPending": true,
@@ -3984,6 +4080,9 @@
   "task118TextRevision": true,
   "independentTextResamplePending": true,
   "textAcceptanceVerified": false,
-  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task118/immutable-media-history/e11/portauprince/5e08be63d43b86cf7e27dbb222437200ae88709c579f71f33660c463cd7fd00c.json",
-  "task118ReboundAt": "2026-10-13T16:31:26.046205+00:00"
+  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task228/immutable-media-history/e11/portauprince/924aed9f133cfaf7f24011106bc7110694dda3740a67454dcd64f0de708ab5fb.json",
+  "task118ReboundAt": "2026-10-13T16:31:26.046205+00:00",
+  "task228ExcludedAssets": [],
+  "task228TextRevision": true,
+  "task228ReboundAt": "2026-10-13T19:32:48.443006+00:00"
 }

@@ -3,7 +3,7 @@
   "era": "e11",
   "city": "tegucigalpa",
   "authorization": "hyväksyn kaikki tekemäsi kuvat. toimita ne claudelle. claudelta saat uusia ohjeita jatkoa varten",
-  "sourceContentAfterSHA256": "67910bb401d50f31138c3470b19c1984f64721d150c6db8bd639658f5020e88e",
+  "sourceContentAfterSHA256": "874aea1f90c6d5395ffb1c24f33bcc450e8a7d674456e85c002a5f101ad9c6ba",
   "assets": [
     {
       "era": "e11",
@@ -53,10 +53,10 @@
         1536
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/tegucigalpa/sisalto.json",
-      "sourceContentSHA256": "67910bb401d50f31138c3470b19c1984f64721d150c6db8bd639658f5020e88e",
+      "sourceContentSHA256": "874aea1f90c6d5395ffb1c24f33bcc450e8a7d674456e85c002a5f101ad9c6ba",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "cee6980c61d49bdabce2b4f93774df704976159bd44c2e0c5464a039aeff7ac9",
+        "semanticContextSHA256": "d436db2823cd0a4c6f5f57273c204fc516a144f7ab0892b518d80fde7cac03d9",
         "subjectTitle": "Matkailijalle",
         "targetState": "existing-target"
       },
@@ -557,9 +557,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "67910bb401d50f31138c3470b19c1984f64721d150c6db8bd639658f5020e88e",
+      "sourceContentAfterSHA256": "874aea1f90c6d5395ffb1c24f33bcc450e8a7d674456e85c002a5f101ad9c6ba",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "cee6980c61d49bdabce2b4f93774df704976159bd44c2e0c5464a039aeff7ac9",
+      "contextAfterSHA256": "d436db2823cd0a4c6f5f57273c204fc516a144f7ab0892b518d80fde7cac03d9",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -582,7 +582,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "874aea1f90c6d5395ffb1c24f33bcc450e8a7d674456e85c002a5f101ad9c6ba",
+        "sameImageNativeSHA256": "9f848d6b59f8f30d3013a2e95f8d99274bc4ba76c63a52aaa0d174b465b24aec",
+        "sameImageExportSHA256": "eb7558057ea9bf47926fa8e894a021faddc747d9736633065c260f9d3c44c2ff",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e11",
@@ -635,10 +643,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/tegucigalpa/sisalto.json",
-      "sourceContentSHA256": "67910bb401d50f31138c3470b19c1984f64721d150c6db8bd639658f5020e88e",
+      "sourceContentSHA256": "874aea1f90c6d5395ffb1c24f33bcc450e8a7d674456e85c002a5f101ad9c6ba",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "1119b2f3d8f0c4613811f5fdda6512538036880ffc1f6331392849f3948114eb",
+        "semanticContextSHA256": "1cfc49444a427b2e9ee334d5443e8ba444bb957d7c89720980a7bc1754de1614",
         "subjectTitle": "Mitä täällä syödään",
         "targetState": "existing-target"
       },
@@ -929,9 +937,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "67910bb401d50f31138c3470b19c1984f64721d150c6db8bd639658f5020e88e",
+      "sourceContentAfterSHA256": "874aea1f90c6d5395ffb1c24f33bcc450e8a7d674456e85c002a5f101ad9c6ba",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "1119b2f3d8f0c4613811f5fdda6512538036880ffc1f6331392849f3948114eb",
+      "contextAfterSHA256": "1cfc49444a427b2e9ee334d5443e8ba444bb957d7c89720980a7bc1754de1614",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -954,7 +962,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "874aea1f90c6d5395ffb1c24f33bcc450e8a7d674456e85c002a5f101ad9c6ba",
+        "sameImageNativeSHA256": "cc30679406579d8a252f6215f3419fce8f90c7208130bcf04ccdd8b591be94c6",
+        "sameImageExportSHA256": "6e0678499ed53c63e7cec61abe00a6c4a7098539e3ae3d8d1d8d599a16d6dae3",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e11",
@@ -1004,10 +1020,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/tegucigalpa/sisalto.json",
-      "sourceContentSHA256": "67910bb401d50f31138c3470b19c1984f64721d150c6db8bd639658f5020e88e",
+      "sourceContentSHA256": "874aea1f90c6d5395ffb1c24f33bcc450e8a7d674456e85c002a5f101ad9c6ba",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "7aab6ac9f7b94754d9e4c91607cf42d80d9537add27d034f6cb13d9d74e27726",
-        "semanticContextSHA256": "7aab6ac9f7b94754d9e4c91607cf42d80d9537add27d034f6cb13d9d74e27726",
+        "targetBeforeSHA256": "dd4bdebbcea09a9caeaaf2297804982136d5bdfc0b2d136060a9d66c257bdac4",
+        "semanticContextSHA256": "dd4bdebbcea09a9caeaaf2297804982136d5bdfc0b2d136060a9d66c257bdac4",
         "subjectTitle": "Baleadan perusta on papu",
         "targetState": "existing-target"
       },
@@ -1296,9 +1312,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "67910bb401d50f31138c3470b19c1984f64721d150c6db8bd639658f5020e88e",
-      "targetAfterSHA256": "7aab6ac9f7b94754d9e4c91607cf42d80d9537add27d034f6cb13d9d74e27726",
-      "contextAfterSHA256": "7aab6ac9f7b94754d9e4c91607cf42d80d9537add27d034f6cb13d9d74e27726",
+      "sourceContentAfterSHA256": "874aea1f90c6d5395ffb1c24f33bcc450e8a7d674456e85c002a5f101ad9c6ba",
+      "targetAfterSHA256": "dd4bdebbcea09a9caeaaf2297804982136d5bdfc0b2d136060a9d66c257bdac4",
+      "contextAfterSHA256": "dd4bdebbcea09a9caeaaf2297804982136d5bdfc0b2d136060a9d66c257bdac4",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -1321,7 +1337,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "874aea1f90c6d5395ffb1c24f33bcc450e8a7d674456e85c002a5f101ad9c6ba",
+        "sameImageNativeSHA256": "9b5d161add699a1510ef4adab97593dc5749d9300c6739420deeb29988e4fa75",
+        "sameImageExportSHA256": "682c43f3eb659f20872420fe5d6aff4137abd6aaa3dd9f3c2996b97e4e814f71",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e11",
@@ -1371,10 +1395,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/tegucigalpa/sisalto.json",
-      "sourceContentSHA256": "67910bb401d50f31138c3470b19c1984f64721d150c6db8bd639658f5020e88e",
+      "sourceContentSHA256": "874aea1f90c6d5395ffb1c24f33bcc450e8a7d674456e85c002a5f101ad9c6ba",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "d00df193061a73d024958b62c2f78a147a4de9b667eb30c48ec5e1a934c652a3",
-        "semanticContextSHA256": "d00df193061a73d024958b62c2f78a147a4de9b667eb30c48ec5e1a934c652a3",
+        "targetBeforeSHA256": "13573a254cea9051c7f5abec9431225171a3e28ffb399947f199d0f9083a5fa4",
+        "semanticContextSHA256": "13573a254cea9051c7f5abec9431225171a3e28ffb399947f199d0f9083a5fa4",
         "subjectTitle": "Pilvimetsä kuuluu pääkaupungin seutuun",
         "targetState": "existing-target"
       },
@@ -1663,9 +1687,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "67910bb401d50f31138c3470b19c1984f64721d150c6db8bd639658f5020e88e",
-      "targetAfterSHA256": "d00df193061a73d024958b62c2f78a147a4de9b667eb30c48ec5e1a934c652a3",
-      "contextAfterSHA256": "d00df193061a73d024958b62c2f78a147a4de9b667eb30c48ec5e1a934c652a3",
+      "sourceContentAfterSHA256": "874aea1f90c6d5395ffb1c24f33bcc450e8a7d674456e85c002a5f101ad9c6ba",
+      "targetAfterSHA256": "13573a254cea9051c7f5abec9431225171a3e28ffb399947f199d0f9083a5fa4",
+      "contextAfterSHA256": "13573a254cea9051c7f5abec9431225171a3e28ffb399947f199d0f9083a5fa4",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -1688,7 +1712,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "874aea1f90c6d5395ffb1c24f33bcc450e8a7d674456e85c002a5f101ad9c6ba",
+        "sameImageNativeSHA256": "a1d2aa36af613b570fa09a5b2e85d082bf52cc728a20b4bf79662e999281c2d1",
+        "sameImageExportSHA256": "e5dc195941ab5ae00907a0a8b0ec4a22e0c0bb3436124d677340b99601b71912",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e11",
@@ -1738,10 +1770,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/tegucigalpa/sisalto.json",
-      "sourceContentSHA256": "67910bb401d50f31138c3470b19c1984f64721d150c6db8bd639658f5020e88e",
+      "sourceContentSHA256": "874aea1f90c6d5395ffb1c24f33bcc450e8a7d674456e85c002a5f101ad9c6ba",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "f1202ac65ff9cdb9ec843b8f36452cb272d00e5847731fd5f43aa10c4558f13e",
-        "semanticContextSHA256": "f1202ac65ff9cdb9ec843b8f36452cb272d00e5847731fd5f43aa10c4558f13e",
+        "targetBeforeSHA256": "35b1f35b816077d6c00f858ba5ff3c0dae2b0d54fdc1a3b91cb933a8df36e723",
+        "semanticContextSHA256": "35b1f35b816077d6c00f858ba5ff3c0dae2b0d54fdc1a3b91cb933a8df36e723",
         "subjectTitle": "Don Quijote käynnisti teatterihankkeen",
         "targetState": "existing-target"
       },
@@ -2661,9 +2693,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "67910bb401d50f31138c3470b19c1984f64721d150c6db8bd639658f5020e88e",
-      "targetAfterSHA256": "f1202ac65ff9cdb9ec843b8f36452cb272d00e5847731fd5f43aa10c4558f13e",
-      "contextAfterSHA256": "f1202ac65ff9cdb9ec843b8f36452cb272d00e5847731fd5f43aa10c4558f13e",
+      "sourceContentAfterSHA256": "874aea1f90c6d5395ffb1c24f33bcc450e8a7d674456e85c002a5f101ad9c6ba",
+      "targetAfterSHA256": "35b1f35b816077d6c00f858ba5ff3c0dae2b0d54fdc1a3b91cb933a8df36e723",
+      "contextAfterSHA256": "35b1f35b816077d6c00f858ba5ff3c0dae2b0d54fdc1a3b91cb933a8df36e723",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -2686,7 +2718,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "874aea1f90c6d5395ffb1c24f33bcc450e8a7d674456e85c002a5f101ad9c6ba",
+        "sameImageNativeSHA256": "58119cd9e2b3385df711d4fe27f5ab8d25a88d781f1d707bab70f2b5469ee6de",
+        "sameImageExportSHA256": "38a7f00a0fdeea4d1030f7f73d031d22c380f6e78550b7ff302f276f8fb92803",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e11",
@@ -2705,7 +2745,7 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/tegucigalpa/photo-2d52c08b14dc94be6173.jpg",
         "suora": true,
         "lahde": "Jorge Luis Murillo Palma, Commons (CC BY-SA 3.0)",
-        "selite": "Tiheä puusto peittää rinnettä La Tigrassa; etualan oksissa näkyy sammalta ja muuta kasvillisuutta.",
+        "selite": "La Tigran pilvimetsää vuonna 2013.",
         "lyhyt": "La Tigran metsän puustoa ja oksien kasvillisuutta.",
         "tiedosto": "LA TIGRA, JlMurillo.jpg",
         "vuosi": "2013"
@@ -2713,7 +2753,7 @@
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Jorge Luis Murillo Palma, Commons (CC BY-SA 3.0)",
-        "selite": "Tiheä puusto peittää rinnettä La Tigrassa; etualan oksissa näkyy sammalta ja muuta kasvillisuutta.",
+        "selite": "La Tigran pilvimetsää vuonna 2013.",
         "lyhyt": "La Tigran metsän puustoa ja oksien kasvillisuutta.",
         "tiedosto": "LA TIGRA, JlMurillo.jpg",
         "vuosi": "2013"
@@ -2722,7 +2762,7 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/tegucigalpa/photo-2d52c08b14dc94be6173.jpg",
         "suora": true,
         "lahde": "Jorge Luis Murillo Palma, Commons (CC BY-SA 3.0)",
-        "selite": "Tiheä puusto peittää rinnettä La Tigrassa; etualan oksissa näkyy sammalta ja muuta kasvillisuutta.",
+        "selite": "La Tigran pilvimetsää vuonna 2013.",
         "lyhyt": "La Tigran metsän puustoa ja oksien kasvillisuutta.",
         "tiedosto": "LA TIGRA, JlMurillo.jpg",
         "vuosi": "2013"
@@ -2739,10 +2779,10 @@
         2856
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/tegucigalpa/sisalto.json",
-      "sourceContentSHA256": "67910bb401d50f31138c3470b19c1984f64721d150c6db8bd639658f5020e88e",
+      "sourceContentSHA256": "874aea1f90c6d5395ffb1c24f33bcc450e8a7d674456e85c002a5f101ad9c6ba",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "409b80bab606b4ca9756a30029ca421f8a83bb67eb3b0111d1193a598e77b0c8",
-        "semanticContextSHA256": "409b80bab606b4ca9756a30029ca421f8a83bb67eb3b0111d1193a598e77b0c8",
+        "targetBeforeSHA256": "6eb98f3c598ed61c63aa7a134f29c9cba096e1f9e480d0f58fa926ae9db84348",
+        "semanticContextSHA256": "6eb98f3c598ed61c63aa7a134f29c9cba096e1f9e480d0f58fa926ae9db84348",
         "subjectTitle": "tegucigalpa — aito paikkavalokuva",
         "targetState": "existing-target"
       },
@@ -2957,7 +2997,7 @@
       "priorMediaFields": {
         "tiedosto": "LA TIGRA, JlMurillo.jpg",
         "lyhyt": "La Tigran metsän puustoa ja oksien kasvillisuutta.",
-        "selite": "Tiheä puusto peittää rinnettä La Tigrassa; etualan oksissa näkyy sammalta ja muuta kasvillisuutta.",
+        "selite": "La Tigran pilvimetsää vuonna 2013.",
         "lahde": "Jorge Luis Murillo Palma, Commons (CC BY-SA 3.0)",
         "vuosi": "2013"
       },
@@ -2985,15 +3025,15 @@
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Jorge Luis Murillo Palma, Commons (CC BY-SA 3.0)",
-        "selite": "Tiheä puusto peittää rinnettä La Tigrassa; etualan oksissa näkyy sammalta ja muuta kasvillisuutta.",
+        "selite": "La Tigran pilvimetsää vuonna 2013.",
         "lyhyt": "La Tigran metsän puustoa ja oksien kasvillisuutta.",
         "tiedosto": "LA TIGRA, JlMurillo.jpg",
         "vuosi": "2013"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "67910bb401d50f31138c3470b19c1984f64721d150c6db8bd639658f5020e88e",
-      "targetAfterSHA256": "409b80bab606b4ca9756a30029ca421f8a83bb67eb3b0111d1193a598e77b0c8",
-      "contextAfterSHA256": "409b80bab606b4ca9756a30029ca421f8a83bb67eb3b0111d1193a598e77b0c8",
+      "sourceContentAfterSHA256": "874aea1f90c6d5395ffb1c24f33bcc450e8a7d674456e85c002a5f101ad9c6ba",
+      "targetAfterSHA256": "6eb98f3c598ed61c63aa7a134f29c9cba096e1f9e480d0f58fa926ae9db84348",
+      "contextAfterSHA256": "6eb98f3c598ed61c63aa7a134f29c9cba096e1f9e480d0f58fa926ae9db84348",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -3016,7 +3056,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "874aea1f90c6d5395ffb1c24f33bcc450e8a7d674456e85c002a5f101ad9c6ba",
+        "sameImageNativeSHA256": "2d52c08b14dc94be617390f7376b3260684c187e85fee048fa70bd3908fb507f",
+        "sameImageExportSHA256": "2d52c08b14dc94be617390f7376b3260684c187e85fee048fa70bd3908fb507f",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": true
+      }
     },
     {
       "era": "e11",
@@ -3038,14 +3086,14 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/tegucigalpa/c1-faf4a3768175becd9045.jpg",
         "suora": true,
         "lahde": "SSGT Jose L. Hernandez, Wikimedia Commons (PD)",
-        "selite": "Vanhassa valokuvassa talot ja kadut täyttävät laaksoa ja nousevat rinteille; etualalla näkyy puustoa.",
+        "selite": "Tegucigalpan rinteiden kaupunkiasutusta vuonna 1983.",
         "lyhyt": "Tegucigalpan rinteiden asutusta vuonna 1983.",
         "tiedosto": "Tegucigalpa 1983.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "SSGT Jose L. Hernandez, Wikimedia Commons (PD)",
-        "selite": "Vanhassa valokuvassa talot ja kadut täyttävät laaksoa ja nousevat rinteille; etualalla näkyy puustoa.",
+        "selite": "Tegucigalpan rinteiden kaupunkiasutusta vuonna 1983.",
         "lyhyt": "Tegucigalpan rinteiden asutusta vuonna 1983.",
         "tiedosto": "Tegucigalpa 1983.jpg"
       },
@@ -3053,7 +3101,7 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/tegucigalpa/c1-faf4a3768175becd9045.jpg",
         "suora": true,
         "lahde": "SSGT Jose L. Hernandez, Wikimedia Commons (PD)",
-        "selite": "Vanhassa valokuvassa talot ja kadut täyttävät laaksoa ja nousevat rinteille; etualalla näkyy puustoa.",
+        "selite": "Tegucigalpan rinteiden kaupunkiasutusta vuonna 1983.",
         "lyhyt": "Tegucigalpan rinteiden asutusta vuonna 1983.",
         "tiedosto": "Tegucigalpa 1983.jpg"
       },
@@ -3069,10 +3117,10 @@
         1850
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/tegucigalpa/sisalto.json",
-      "sourceContentSHA256": "67910bb401d50f31138c3470b19c1984f64721d150c6db8bd639658f5020e88e",
+      "sourceContentSHA256": "874aea1f90c6d5395ffb1c24f33bcc450e8a7d674456e85c002a5f101ad9c6ba",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "2eedda6abb8b1af012aad239c23cda6c92dbaaa4cf0cc9f700328e6c8acc109c",
-        "semanticContextSHA256": "2eedda6abb8b1af012aad239c23cda6c92dbaaa4cf0cc9f700328e6c8acc109c",
+        "targetBeforeSHA256": "f4799b340e017a230414a9e698bf5ca67bf503d31bd2551f1216dd287b0f1510",
+        "semanticContextSHA256": "f4799b340e017a230414a9e698bf5ca67bf503d31bd2551f1216dd287b0f1510",
         "subjectTitle": "Tegucigalpa",
         "targetState": "existing-target"
       },
@@ -3285,7 +3333,7 @@
       "priorMediaFields": {
         "tiedosto": "Tegucigalpa 1983.jpg",
         "lyhyt": "Tegucigalpan rinteiden asutusta vuonna 1983.",
-        "selite": "Vanhassa valokuvassa talot ja kadut täyttävät laaksoa ja nousevat rinteille; etualalla näkyy puustoa.",
+        "selite": "Tegucigalpan rinteiden kaupunkiasutusta vuonna 1983.",
         "lahde": "SSGT Jose L. Hernandez, Wikimedia Commons (PD)"
       },
       "preservePreviousMediaObjects": true,
@@ -3312,14 +3360,14 @@
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "SSGT Jose L. Hernandez, Wikimedia Commons (PD)",
-        "selite": "Vanhassa valokuvassa talot ja kadut täyttävät laaksoa ja nousevat rinteille; etualalla näkyy puustoa.",
+        "selite": "Tegucigalpan rinteiden kaupunkiasutusta vuonna 1983.",
         "lyhyt": "Tegucigalpan rinteiden asutusta vuonna 1983.",
         "tiedosto": "Tegucigalpa 1983.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "67910bb401d50f31138c3470b19c1984f64721d150c6db8bd639658f5020e88e",
-      "targetAfterSHA256": "2eedda6abb8b1af012aad239c23cda6c92dbaaa4cf0cc9f700328e6c8acc109c",
-      "contextAfterSHA256": "2eedda6abb8b1af012aad239c23cda6c92dbaaa4cf0cc9f700328e6c8acc109c",
+      "sourceContentAfterSHA256": "874aea1f90c6d5395ffb1c24f33bcc450e8a7d674456e85c002a5f101ad9c6ba",
+      "targetAfterSHA256": "f4799b340e017a230414a9e698bf5ca67bf503d31bd2551f1216dd287b0f1510",
+      "contextAfterSHA256": "f4799b340e017a230414a9e698bf5ca67bf503d31bd2551f1216dd287b0f1510",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -3342,7 +3390,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "874aea1f90c6d5395ffb1c24f33bcc450e8a7d674456e85c002a5f101ad9c6ba",
+        "sameImageNativeSHA256": "faf4a3768175becd90453564609116d1419e7172739dea808b5bd93ecd4038f9",
+        "sameImageExportSHA256": "faf4a3768175becd90453564609116d1419e7172739dea808b5bd93ecd4038f9",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": true
+      }
     }
   ],
   "runtimeIntegrationPending": true,
@@ -3354,6 +3410,9 @@
   "task118TextRevision": true,
   "independentTextResamplePending": true,
   "textAcceptanceVerified": false,
-  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task118/immutable-media-history/e11/tegucigalpa/893c9dc019c07a799617b5d062473efe8c83f34d10b62b9e74256adb715ee2ae.json",
-  "task118ReboundAt": "2026-10-13T16:31:26.150294+00:00"
+  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task228/immutable-media-history/e11/tegucigalpa/2515a87e70cebef24eca505bd3062010beaf34ca404630faaa0f17e614e581df.json",
+  "task118ReboundAt": "2026-10-13T16:31:26.150294+00:00",
+  "task228ExcludedAssets": [],
+  "task228TextRevision": true,
+  "task228ReboundAt": "2026-10-13T19:32:48.560041+00:00"
 }

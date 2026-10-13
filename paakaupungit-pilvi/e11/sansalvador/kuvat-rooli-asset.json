@@ -3,7 +3,7 @@
   "era": "e11",
   "city": "sansalvador",
   "authorization": "hyväksyn kaikki tekemäsi kuvat. toimita ne claudelle. claudelta saat uusia ohjeita jatkoa varten",
-  "sourceContentAfterSHA256": "a666562e1092b6f31d4c1dd6d4515e738e19c5d8fdc9b4fe113ae1d94d40e936",
+  "sourceContentAfterSHA256": "da0486009a17c348adf5d8124466e1fe4dda7c2885ac5cf25b981bddba996c1e",
   "assets": [
     {
       "era": "e11",
@@ -53,10 +53,10 @@
         1536
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/sansalvador/sisalto.json",
-      "sourceContentSHA256": "a666562e1092b6f31d4c1dd6d4515e738e19c5d8fdc9b4fe113ae1d94d40e936",
+      "sourceContentSHA256": "da0486009a17c348adf5d8124466e1fe4dda7c2885ac5cf25b981bddba996c1e",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "9590567c3ee2977d4dda1edd58c3ddc13397a092d435e389398a1d37f5bc4d68",
+        "semanticContextSHA256": "5541de7d7a23f668c8c7f3010ba4a86261d0208b38f278bafdec46dd9d96e2e0",
         "subjectTitle": "Matkailijalle",
         "targetState": "existing-target"
       },
@@ -507,9 +507,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "a666562e1092b6f31d4c1dd6d4515e738e19c5d8fdc9b4fe113ae1d94d40e936",
+      "sourceContentAfterSHA256": "da0486009a17c348adf5d8124466e1fe4dda7c2885ac5cf25b981bddba996c1e",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "9590567c3ee2977d4dda1edd58c3ddc13397a092d435e389398a1d37f5bc4d68",
+      "contextAfterSHA256": "5541de7d7a23f668c8c7f3010ba4a86261d0208b38f278bafdec46dd9d96e2e0",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -532,7 +532,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "da0486009a17c348adf5d8124466e1fe4dda7c2885ac5cf25b981bddba996c1e",
+        "sameImageNativeSHA256": "aecb9b39f2aadfb4c9aa472cc0dcc6bdc99f1471cb1088debe9385b803c31fa5",
+        "sameImageExportSHA256": "80e44c05e1d1adff702da23b5e8c22a16e41a7a536824b14f6eaf1271f669091",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e11",
@@ -585,7 +593,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/sansalvador/sisalto.json",
-      "sourceContentSHA256": "a666562e1092b6f31d4c1dd6d4515e738e19c5d8fdc9b4fe113ae1d94d40e936",
+      "sourceContentSHA256": "da0486009a17c348adf5d8124466e1fe4dda7c2885ac5cf25b981bddba996c1e",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
         "semanticContextSHA256": "4ab72f86a4235089110b45f8416f65f25f8f6cf65bb8f1a80159bab2598592eb",
@@ -829,7 +837,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "a666562e1092b6f31d4c1dd6d4515e738e19c5d8fdc9b4fe113ae1d94d40e936",
+      "sourceContentAfterSHA256": "da0486009a17c348adf5d8124466e1fe4dda7c2885ac5cf25b981bddba996c1e",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
       "contextAfterSHA256": "4ab72f86a4235089110b45f8416f65f25f8f6cf65bb8f1a80159bab2598592eb",
       "ownerApproved": true,
@@ -854,7 +862,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "da0486009a17c348adf5d8124466e1fe4dda7c2885ac5cf25b981bddba996c1e",
+        "sameImageNativeSHA256": "ef9d4da17e64ad019782c7fdfe02c0276f9165fa26a3b7fdc614198ddf8af158",
+        "sameImageExportSHA256": "bf66d4f97d1b7a06a84f56e3e98e8a00294be1790f70fdaa3ee111ae8ed5f540",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e11",
@@ -904,7 +920,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/sansalvador/sisalto.json",
-      "sourceContentSHA256": "a666562e1092b6f31d4c1dd6d4515e738e19c5d8fdc9b4fe113ae1d94d40e936",
+      "sourceContentSHA256": "da0486009a17c348adf5d8124466e1fe4dda7c2885ac5cf25b981bddba996c1e",
       "semanticSourceBind": {
         "targetBeforeSHA256": "c020f358d6163cc27d1d1b9964cc147d0b745a1f7e56200259ebb6f2dcf79e38",
         "semanticContextSHA256": "c020f358d6163cc27d1d1b9964cc147d0b745a1f7e56200259ebb6f2dcf79e38",
@@ -1146,7 +1162,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "a666562e1092b6f31d4c1dd6d4515e738e19c5d8fdc9b4fe113ae1d94d40e936",
+      "sourceContentAfterSHA256": "da0486009a17c348adf5d8124466e1fe4dda7c2885ac5cf25b981bddba996c1e",
       "targetAfterSHA256": "c020f358d6163cc27d1d1b9964cc147d0b745a1f7e56200259ebb6f2dcf79e38",
       "contextAfterSHA256": "c020f358d6163cc27d1d1b9964cc147d0b745a1f7e56200259ebb6f2dcf79e38",
       "ownerApproved": true,
@@ -1171,7 +1187,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "da0486009a17c348adf5d8124466e1fe4dda7c2885ac5cf25b981bddba996c1e",
+        "sameImageNativeSHA256": "a8a8788aa32c8aa349083d5af57fb3b7eae46644981e8dc22430c29c27d0d301",
+        "sameImageExportSHA256": "35619669371114866578a80ad902de33264f04c17cfecd1c012e6f2669cf612b",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e11",
@@ -1221,7 +1245,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/sansalvador/sisalto.json",
-      "sourceContentSHA256": "a666562e1092b6f31d4c1dd6d4515e738e19c5d8fdc9b4fe113ae1d94d40e936",
+      "sourceContentSHA256": "da0486009a17c348adf5d8124466e1fe4dda7c2885ac5cf25b981bddba996c1e",
       "semanticSourceBind": {
         "targetBeforeSHA256": "b1fbb23bdce4128661f67af59f30557842ff78c267b977476e8036e085727354",
         "semanticContextSHA256": "b1fbb23bdce4128661f67af59f30557842ff78c267b977476e8036e085727354",
@@ -1463,7 +1487,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "a666562e1092b6f31d4c1dd6d4515e738e19c5d8fdc9b4fe113ae1d94d40e936",
+      "sourceContentAfterSHA256": "da0486009a17c348adf5d8124466e1fe4dda7c2885ac5cf25b981bddba996c1e",
       "targetAfterSHA256": "b1fbb23bdce4128661f67af59f30557842ff78c267b977476e8036e085727354",
       "contextAfterSHA256": "b1fbb23bdce4128661f67af59f30557842ff78c267b977476e8036e085727354",
       "ownerApproved": true,
@@ -1488,7 +1512,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "da0486009a17c348adf5d8124466e1fe4dda7c2885ac5cf25b981bddba996c1e",
+        "sameImageNativeSHA256": "de1dc3e02528cb211bbc50a1851503ec0aab6d7c67c87ffcab9a5af7b9db0e1d",
+        "sameImageExportSHA256": "e2bacbe3870676223e1d2c78b1d2dfe0fcee02ada663da4496f6a509de07766a",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e11",
@@ -1538,10 +1570,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/sansalvador/sisalto.json",
-      "sourceContentSHA256": "a666562e1092b6f31d4c1dd6d4515e738e19c5d8fdc9b4fe113ae1d94d40e936",
+      "sourceContentSHA256": "da0486009a17c348adf5d8124466e1fe4dda7c2885ac5cf25b981bddba996c1e",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "02e32093549cbb7eafded45afea9ba593102167d3746107be2335b015860a339",
-        "semanticContextSHA256": "02e32093549cbb7eafded45afea9ba593102167d3746107be2335b015860a339",
+        "targetBeforeSHA256": "db981c280bbcf1d025923a99ec8623d4654c9c19925e06288db28b6593cb36e0",
+        "semanticContextSHA256": "db981c280bbcf1d025923a99ec8623d4654c9c19925e06288db28b6593cb36e0",
         "subjectTitle": "Kampus kokoaa monta tapaa kysyä",
         "targetState": "existing-target"
       },
@@ -1780,9 +1812,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "a666562e1092b6f31d4c1dd6d4515e738e19c5d8fdc9b4fe113ae1d94d40e936",
-      "targetAfterSHA256": "02e32093549cbb7eafded45afea9ba593102167d3746107be2335b015860a339",
-      "contextAfterSHA256": "02e32093549cbb7eafded45afea9ba593102167d3746107be2335b015860a339",
+      "sourceContentAfterSHA256": "da0486009a17c348adf5d8124466e1fe4dda7c2885ac5cf25b981bddba996c1e",
+      "targetAfterSHA256": "db981c280bbcf1d025923a99ec8623d4654c9c19925e06288db28b6593cb36e0",
+      "contextAfterSHA256": "db981c280bbcf1d025923a99ec8623d4654c9c19925e06288db28b6593cb36e0",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -1805,7 +1837,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "da0486009a17c348adf5d8124466e1fe4dda7c2885ac5cf25b981bddba996c1e",
+        "sameImageNativeSHA256": "62006e372600a6cdb05f1aef6385eb17d6c154ea0864ae7641ddf192a02aff9a",
+        "sameImageExportSHA256": "2a1c17c42d33f5ffc4323bbd90a0e65a49fd50362fcc8fe4a295685dc7d85ee5",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e11",
@@ -1824,14 +1864,14 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/sansalvador/photo-8e0272329c5d1892c177.jpg",
         "suora": true,
         "lahde": "Albergleiva, Commons (CC0)",
-        "selite": "Etualan vehreät rinteet ja kaupungin rakennukset jäävät tulivuoren pitkän rinteen eteen.",
+        "selite": "San Salvadorin tulivuori kohoaa kaupungin taustalla.",
         "lyhyt": "San Salvadorin tulivuori kaupungin takana.",
         "tiedosto": "Volcán de San Salvador, El Salvador.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Albergleiva, Commons (CC0)",
-        "selite": "Etualan vehreät rinteet ja kaupungin rakennukset jäävät tulivuoren pitkän rinteen eteen.",
+        "selite": "San Salvadorin tulivuori kohoaa kaupungin taustalla.",
         "lyhyt": "San Salvadorin tulivuori kaupungin takana.",
         "tiedosto": "Volcán de San Salvador, El Salvador.jpg"
       },
@@ -1839,7 +1879,7 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/sansalvador/photo-8e0272329c5d1892c177.jpg",
         "suora": true,
         "lahde": "Albergleiva, Commons (CC0)",
-        "selite": "Etualan vehreät rinteet ja kaupungin rakennukset jäävät tulivuoren pitkän rinteen eteen.",
+        "selite": "San Salvadorin tulivuori kohoaa kaupungin taustalla.",
         "lyhyt": "San Salvadorin tulivuori kaupungin takana.",
         "tiedosto": "Volcán de San Salvador, El Salvador.jpg"
       },
@@ -1855,10 +1895,10 @@
         1280
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/sansalvador/sisalto.json",
-      "sourceContentSHA256": "a666562e1092b6f31d4c1dd6d4515e738e19c5d8fdc9b4fe113ae1d94d40e936",
+      "sourceContentSHA256": "da0486009a17c348adf5d8124466e1fe4dda7c2885ac5cf25b981bddba996c1e",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "1657aa90c974965e59701170c32ef6f2eb0445c5f2568b32f54b6ccce75f966c",
-        "semanticContextSHA256": "1657aa90c974965e59701170c32ef6f2eb0445c5f2568b32f54b6ccce75f966c",
+        "targetBeforeSHA256": "a0dba108fae843cbba300cec20df487f72906654e63d2ca05d0327e0d83e4738",
+        "semanticContextSHA256": "a0dba108fae843cbba300cec20df487f72906654e63d2ca05d0327e0d83e4738",
         "subjectTitle": "sansalvador — aito paikkavalokuva",
         "targetState": "existing-target"
       },
@@ -1994,7 +2034,7 @@
       "priorMediaFields": {
         "tiedosto": "Volcán de San Salvador, El Salvador.jpg",
         "lyhyt": "San Salvadorin tulivuori kaupungin takana.",
-        "selite": "Etualan vehreät rinteet ja kaupungin rakennukset jäävät tulivuoren pitkän rinteen eteen.",
+        "selite": "San Salvadorin tulivuori kohoaa kaupungin taustalla.",
         "lahde": "Albergleiva, Commons (CC0)"
       },
       "preservePreviousMediaObjects": true,
@@ -2021,14 +2061,14 @@
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Albergleiva, Commons (CC0)",
-        "selite": "Etualan vehreät rinteet ja kaupungin rakennukset jäävät tulivuoren pitkän rinteen eteen.",
+        "selite": "San Salvadorin tulivuori kohoaa kaupungin taustalla.",
         "lyhyt": "San Salvadorin tulivuori kaupungin takana.",
         "tiedosto": "Volcán de San Salvador, El Salvador.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "a666562e1092b6f31d4c1dd6d4515e738e19c5d8fdc9b4fe113ae1d94d40e936",
-      "targetAfterSHA256": "1657aa90c974965e59701170c32ef6f2eb0445c5f2568b32f54b6ccce75f966c",
-      "contextAfterSHA256": "1657aa90c974965e59701170c32ef6f2eb0445c5f2568b32f54b6ccce75f966c",
+      "sourceContentAfterSHA256": "da0486009a17c348adf5d8124466e1fe4dda7c2885ac5cf25b981bddba996c1e",
+      "targetAfterSHA256": "a0dba108fae843cbba300cec20df487f72906654e63d2ca05d0327e0d83e4738",
+      "contextAfterSHA256": "a0dba108fae843cbba300cec20df487f72906654e63d2ca05d0327e0d83e4738",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -2051,7 +2091,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "da0486009a17c348adf5d8124466e1fe4dda7c2885ac5cf25b981bddba996c1e",
+        "sameImageNativeSHA256": "8e0272329c5d1892c17739103b956aaa7517f04198afbf1e676b77787c2a17a0",
+        "sameImageExportSHA256": "8e0272329c5d1892c17739103b956aaa7517f04198afbf1e676b77787c2a17a0",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": true
+      }
     },
     {
       "era": "e11",
@@ -2073,14 +2121,14 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/sansalvador/c1-910b1bf60efd5aaef1fe.jpg",
         "suora": true,
         "lahde": "Sammiethedeadrat, Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "Korkeita ja matalia rakennuksia näkyy vehreiden alueiden lomassa; taustalla kohoaa San Salvadorin tulivuori.",
+        "selite": "San Salvadorin kaupungin rakennuksia tulivuoren juurella.",
         "lyhyt": "San Salvadorin rakennuksia tulivuoren juurella.",
         "tiedosto": "Complete Skyline 2011.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Sammiethedeadrat, Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "Korkeita ja matalia rakennuksia näkyy vehreiden alueiden lomassa; taustalla kohoaa San Salvadorin tulivuori.",
+        "selite": "San Salvadorin kaupungin rakennuksia tulivuoren juurella.",
         "lyhyt": "San Salvadorin rakennuksia tulivuoren juurella.",
         "tiedosto": "Complete Skyline 2011.jpg"
       },
@@ -2088,7 +2136,7 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/sansalvador/c1-910b1bf60efd5aaef1fe.jpg",
         "suora": true,
         "lahde": "Sammiethedeadrat, Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "Korkeita ja matalia rakennuksia näkyy vehreiden alueiden lomassa; taustalla kohoaa San Salvadorin tulivuori.",
+        "selite": "San Salvadorin kaupungin rakennuksia tulivuoren juurella.",
         "lyhyt": "San Salvadorin rakennuksia tulivuoren juurella.",
         "tiedosto": "Complete Skyline 2011.jpg"
       },
@@ -2104,10 +2152,10 @@
         2448
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/sansalvador/sisalto.json",
-      "sourceContentSHA256": "a666562e1092b6f31d4c1dd6d4515e738e19c5d8fdc9b4fe113ae1d94d40e936",
+      "sourceContentSHA256": "da0486009a17c348adf5d8124466e1fe4dda7c2885ac5cf25b981bddba996c1e",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "22d67f8e8d4871f1106d47b792f507805fe66671b1c3aaf905a4e5314888b680",
-        "semanticContextSHA256": "22d67f8e8d4871f1106d47b792f507805fe66671b1c3aaf905a4e5314888b680",
+        "targetBeforeSHA256": "485e6b709b92ab7705c3b34cc4493cb250a1edf8ba5b81f130c7b64d06377b80",
+        "semanticContextSHA256": "485e6b709b92ab7705c3b34cc4493cb250a1edf8ba5b81f130c7b64d06377b80",
         "subjectTitle": "San Salvador",
         "targetState": "existing-target"
       },
@@ -2261,7 +2309,7 @@
       "priorMediaFields": {
         "tiedosto": "Complete Skyline 2011.jpg",
         "lyhyt": "San Salvadorin rakennuksia tulivuoren juurella.",
-        "selite": "Korkeita ja matalia rakennuksia näkyy vehreiden alueiden lomassa; taustalla kohoaa San Salvadorin tulivuori.",
+        "selite": "San Salvadorin kaupungin rakennuksia tulivuoren juurella.",
         "lahde": "Sammiethedeadrat, Wikimedia Commons (CC BY-SA 3.0)"
       },
       "preservePreviousMediaObjects": true,
@@ -2288,14 +2336,14 @@
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Sammiethedeadrat, Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "Korkeita ja matalia rakennuksia näkyy vehreiden alueiden lomassa; taustalla kohoaa San Salvadorin tulivuori.",
+        "selite": "San Salvadorin kaupungin rakennuksia tulivuoren juurella.",
         "lyhyt": "San Salvadorin rakennuksia tulivuoren juurella.",
         "tiedosto": "Complete Skyline 2011.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "a666562e1092b6f31d4c1dd6d4515e738e19c5d8fdc9b4fe113ae1d94d40e936",
-      "targetAfterSHA256": "22d67f8e8d4871f1106d47b792f507805fe66671b1c3aaf905a4e5314888b680",
-      "contextAfterSHA256": "22d67f8e8d4871f1106d47b792f507805fe66671b1c3aaf905a4e5314888b680",
+      "sourceContentAfterSHA256": "da0486009a17c348adf5d8124466e1fe4dda7c2885ac5cf25b981bddba996c1e",
+      "targetAfterSHA256": "485e6b709b92ab7705c3b34cc4493cb250a1edf8ba5b81f130c7b64d06377b80",
+      "contextAfterSHA256": "485e6b709b92ab7705c3b34cc4493cb250a1edf8ba5b81f130c7b64d06377b80",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -2318,7 +2366,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "da0486009a17c348adf5d8124466e1fe4dda7c2885ac5cf25b981bddba996c1e",
+        "sameImageNativeSHA256": "910b1bf60efd5aaef1fe5e143f738cd2f7d5eb9817dbcf780151d363f2a6b70b",
+        "sameImageExportSHA256": "910b1bf60efd5aaef1fe5e143f738cd2f7d5eb9817dbcf780151d363f2a6b70b",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": true
+      }
     },
     {
       "era": "e11",
@@ -2340,14 +2396,14 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/sansalvador/c2-f3e2369968a2423e8901.jpg",
         "suora": true,
         "lahde": "Renemgb, Wikimedia Commons (PD)",
-        "selite": "Laajassa ilmakuvassa asutus täyttää laaksoa ja jatkuu vuorten rinteille.",
+        "selite": "Ilmakuva San Salvadorin kaupunkialueesta.",
         "lyhyt": "San Salvadorin kaupunkialuetta ja ympäröiviä rinteitä ilmasta.",
         "tiedosto": "Panoaa8.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Renemgb, Wikimedia Commons (PD)",
-        "selite": "Laajassa ilmakuvassa asutus täyttää laaksoa ja jatkuu vuorten rinteille.",
+        "selite": "Ilmakuva San Salvadorin kaupunkialueesta.",
         "lyhyt": "San Salvadorin kaupunkialuetta ja ympäröiviä rinteitä ilmasta.",
         "tiedosto": "Panoaa8.jpg"
       },
@@ -2355,7 +2411,7 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/sansalvador/c2-f3e2369968a2423e8901.jpg",
         "suora": true,
         "lahde": "Renemgb, Wikimedia Commons (PD)",
-        "selite": "Laajassa ilmakuvassa asutus täyttää laaksoa ja jatkuu vuorten rinteille.",
+        "selite": "Ilmakuva San Salvadorin kaupunkialueesta.",
         "lyhyt": "San Salvadorin kaupunkialuetta ja ympäröiviä rinteitä ilmasta.",
         "tiedosto": "Panoaa8.jpg"
       },
@@ -2371,10 +2427,10 @@
         539
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/sansalvador/sisalto.json",
-      "sourceContentSHA256": "a666562e1092b6f31d4c1dd6d4515e738e19c5d8fdc9b4fe113ae1d94d40e936",
+      "sourceContentSHA256": "da0486009a17c348adf5d8124466e1fe4dda7c2885ac5cf25b981bddba996c1e",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "56864d9edf93512e26a782132eaef9abaf4ad21fc96e67764229eb59c8359d5a",
-        "semanticContextSHA256": "56864d9edf93512e26a782132eaef9abaf4ad21fc96e67764229eb59c8359d5a",
+        "targetBeforeSHA256": "5ecb7829108f3d2813eadc8e1740199997229ba8a208dd1853b8678a6bebc13d",
+        "semanticContextSHA256": "5ecb7829108f3d2813eadc8e1740199997229ba8a208dd1853b8678a6bebc13d",
         "subjectTitle": "San Salvador",
         "targetState": "existing-target"
       },
@@ -2528,7 +2584,7 @@
       "priorMediaFields": {
         "tiedosto": "Panoaa8.jpg",
         "lyhyt": "San Salvadorin kaupunkialuetta ja ympäröiviä rinteitä ilmasta.",
-        "selite": "Laajassa ilmakuvassa asutus täyttää laaksoa ja jatkuu vuorten rinteille.",
+        "selite": "Ilmakuva San Salvadorin kaupunkialueesta.",
         "lahde": "Renemgb, Wikimedia Commons (PD)"
       },
       "preservePreviousMediaObjects": true,
@@ -2555,14 +2611,14 @@
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Renemgb, Wikimedia Commons (PD)",
-        "selite": "Laajassa ilmakuvassa asutus täyttää laaksoa ja jatkuu vuorten rinteille.",
+        "selite": "Ilmakuva San Salvadorin kaupunkialueesta.",
         "lyhyt": "San Salvadorin kaupunkialuetta ja ympäröiviä rinteitä ilmasta.",
         "tiedosto": "Panoaa8.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "a666562e1092b6f31d4c1dd6d4515e738e19c5d8fdc9b4fe113ae1d94d40e936",
-      "targetAfterSHA256": "56864d9edf93512e26a782132eaef9abaf4ad21fc96e67764229eb59c8359d5a",
-      "contextAfterSHA256": "56864d9edf93512e26a782132eaef9abaf4ad21fc96e67764229eb59c8359d5a",
+      "sourceContentAfterSHA256": "da0486009a17c348adf5d8124466e1fe4dda7c2885ac5cf25b981bddba996c1e",
+      "targetAfterSHA256": "5ecb7829108f3d2813eadc8e1740199997229ba8a208dd1853b8678a6bebc13d",
+      "contextAfterSHA256": "5ecb7829108f3d2813eadc8e1740199997229ba8a208dd1853b8678a6bebc13d",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -2585,7 +2641,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "da0486009a17c348adf5d8124466e1fe4dda7c2885ac5cf25b981bddba996c1e",
+        "sameImageNativeSHA256": "f3e2369968a2423e8901c9f0d176e43c832530b27d421a1c3143a014582b9b7c",
+        "sameImageExportSHA256": "f3e2369968a2423e8901c9f0d176e43c832530b27d421a1c3143a014582b9b7c",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": true
+      }
     },
     {
       "era": "e11",
@@ -2607,14 +2671,14 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/sansalvador/c3-410aaa2253c9d7a56172.jpg",
         "suora": true,
         "lahde": "Alexander Bonilla, Wikimedia Commons (CC BY 2.0)",
-        "selite": "Kaupungin valot näkyvät hämärässä; taivas vaalenee oranssina ja rinteet jäävät tummina siluetteina etualalle.",
+        "selite": "San Salvador aamun sarastaessa.",
         "lyhyt": "San Salvadorin valot aamun sarastaessa.",
         "tiedosto": "Amanecer en San Salvador2.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Alexander Bonilla, Wikimedia Commons (CC BY 2.0)",
-        "selite": "Kaupungin valot näkyvät hämärässä; taivas vaalenee oranssina ja rinteet jäävät tummina siluetteina etualalle.",
+        "selite": "San Salvador aamun sarastaessa.",
         "lyhyt": "San Salvadorin valot aamun sarastaessa.",
         "tiedosto": "Amanecer en San Salvador2.jpg"
       },
@@ -2622,7 +2686,7 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/sansalvador/c3-410aaa2253c9d7a56172.jpg",
         "suora": true,
         "lahde": "Alexander Bonilla, Wikimedia Commons (CC BY 2.0)",
-        "selite": "Kaupungin valot näkyvät hämärässä; taivas vaalenee oranssina ja rinteet jäävät tummina siluetteina etualalle.",
+        "selite": "San Salvador aamun sarastaessa.",
         "lyhyt": "San Salvadorin valot aamun sarastaessa.",
         "tiedosto": "Amanecer en San Salvador2.jpg"
       },
@@ -2638,10 +2702,10 @@
         2848
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/sansalvador/sisalto.json",
-      "sourceContentSHA256": "a666562e1092b6f31d4c1dd6d4515e738e19c5d8fdc9b4fe113ae1d94d40e936",
+      "sourceContentSHA256": "da0486009a17c348adf5d8124466e1fe4dda7c2885ac5cf25b981bddba996c1e",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "fec1c54648cca6eb0e9c37d323f412bfc6eb1aa854eaa326f1d142ad3d5aec56",
-        "semanticContextSHA256": "fec1c54648cca6eb0e9c37d323f412bfc6eb1aa854eaa326f1d142ad3d5aec56",
+        "targetBeforeSHA256": "1dbc2b67dd8ac7e696b29ce1bed66360ebcdfc02856e05b3ff529b81c02474f3",
+        "semanticContextSHA256": "1dbc2b67dd8ac7e696b29ce1bed66360ebcdfc02856e05b3ff529b81c02474f3",
         "subjectTitle": "San Salvador",
         "targetState": "existing-target"
       },
@@ -2777,7 +2841,7 @@
       "priorMediaFields": {
         "tiedosto": "Amanecer en San Salvador2.jpg",
         "lyhyt": "San Salvadorin valot aamun sarastaessa.",
-        "selite": "Kaupungin valot näkyvät hämärässä; taivas vaalenee oranssina ja rinteet jäävät tummina siluetteina etualalle.",
+        "selite": "San Salvador aamun sarastaessa.",
         "lahde": "Alexander Bonilla, Wikimedia Commons (CC BY 2.0)"
       },
       "preservePreviousMediaObjects": true,
@@ -2804,14 +2868,14 @@
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Alexander Bonilla, Wikimedia Commons (CC BY 2.0)",
-        "selite": "Kaupungin valot näkyvät hämärässä; taivas vaalenee oranssina ja rinteet jäävät tummina siluetteina etualalle.",
+        "selite": "San Salvador aamun sarastaessa.",
         "lyhyt": "San Salvadorin valot aamun sarastaessa.",
         "tiedosto": "Amanecer en San Salvador2.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "a666562e1092b6f31d4c1dd6d4515e738e19c5d8fdc9b4fe113ae1d94d40e936",
-      "targetAfterSHA256": "fec1c54648cca6eb0e9c37d323f412bfc6eb1aa854eaa326f1d142ad3d5aec56",
-      "contextAfterSHA256": "fec1c54648cca6eb0e9c37d323f412bfc6eb1aa854eaa326f1d142ad3d5aec56",
+      "sourceContentAfterSHA256": "da0486009a17c348adf5d8124466e1fe4dda7c2885ac5cf25b981bddba996c1e",
+      "targetAfterSHA256": "1dbc2b67dd8ac7e696b29ce1bed66360ebcdfc02856e05b3ff529b81c02474f3",
+      "contextAfterSHA256": "1dbc2b67dd8ac7e696b29ce1bed66360ebcdfc02856e05b3ff529b81c02474f3",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -2834,7 +2898,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "da0486009a17c348adf5d8124466e1fe4dda7c2885ac5cf25b981bddba996c1e",
+        "sameImageNativeSHA256": "410aaa2253c9d7a56172c1d2fdfbbab5f9c34cfa7e8ced31355bcadbc8b184bf",
+        "sameImageExportSHA256": "410aaa2253c9d7a56172c1d2fdfbbab5f9c34cfa7e8ced31355bcadbc8b184bf",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": true
+      }
     },
     {
       "era": "e11",
@@ -2856,14 +2928,14 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/sansalvador/n1-ff48e17ea5eb0fae406c.jpg",
         "suora": true,
         "lahde": "Arne Müseler, Wikimedia Commons (CC BY-SA 3.0 de)",
-        "selite": "Pieni kartio näkyy metsän ympäröimän suuren kraatterin pohjalla; kraatterin jyrkät sisärinteet kiertävät sitä.",
+        "selite": "Boqueroncito on pieni kartio Boquerón-kraatterin pohjalla.",
         "lyhyt": "Boqueroncito Boquerón-kraatterin pohjalla.",
         "tiedosto": "El salvador Quezaltepeque Boquerón crater.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Arne Müseler, Wikimedia Commons (CC BY-SA 3.0 de)",
-        "selite": "Pieni kartio näkyy metsän ympäröimän suuren kraatterin pohjalla; kraatterin jyrkät sisärinteet kiertävät sitä.",
+        "selite": "Boqueroncito on pieni kartio Boquerón-kraatterin pohjalla.",
         "lyhyt": "Boqueroncito Boquerón-kraatterin pohjalla.",
         "tiedosto": "El salvador Quezaltepeque Boquerón crater.jpg"
       },
@@ -2871,7 +2943,7 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/sansalvador/n1-ff48e17ea5eb0fae406c.jpg",
         "suora": true,
         "lahde": "Arne Müseler, Wikimedia Commons (CC BY-SA 3.0 de)",
-        "selite": "Pieni kartio näkyy metsän ympäröimän suuren kraatterin pohjalla; kraatterin jyrkät sisärinteet kiertävät sitä.",
+        "selite": "Boqueroncito on pieni kartio Boquerón-kraatterin pohjalla.",
         "lyhyt": "Boqueroncito Boquerón-kraatterin pohjalla.",
         "tiedosto": "El salvador Quezaltepeque Boquerón crater.jpg"
       },
@@ -2887,10 +2959,10 @@
         2824
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/sansalvador/sisalto.json",
-      "sourceContentSHA256": "a666562e1092b6f31d4c1dd6d4515e738e19c5d8fdc9b4fe113ae1d94d40e936",
+      "sourceContentSHA256": "da0486009a17c348adf5d8124466e1fe4dda7c2885ac5cf25b981bddba996c1e",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "80fa661c595e62e680a5cf527ed5f6ea76a5c7dc36725903285496d3d7048b58",
-        "semanticContextSHA256": "8a8810246dd4ec5744905d47384c5686287d0ef5d4dea3bb0600a553cac7eed4",
+        "targetBeforeSHA256": "ce9c132b954e32f2d1cad8a27450233eb06b93e4a3bcaed596dc1f3b7a75f3e7",
+        "semanticContextSHA256": "17371a2ba7e82c6508f59793beb0dd5401290665a46ae19add71c9fb21309e5f",
         "subjectTitle": "San Salvadorin tulivuori",
         "targetState": "existing-target"
       },
@@ -3048,7 +3120,7 @@
       "priorMediaFields": {
         "tiedosto": "El salvador Quezaltepeque Boquerón crater.jpg",
         "lyhyt": "Boqueroncito Boquerón-kraatterin pohjalla.",
-        "selite": "Pieni kartio näkyy metsän ympäröimän suuren kraatterin pohjalla; kraatterin jyrkät sisärinteet kiertävät sitä.",
+        "selite": "Boqueroncito on pieni kartio Boquerón-kraatterin pohjalla.",
         "lahde": "Arne Müseler, Wikimedia Commons (CC BY-SA 3.0 de)"
       },
       "preservePreviousMediaObjects": true,
@@ -3075,14 +3147,14 @@
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Arne Müseler, Wikimedia Commons (CC BY-SA 3.0 de)",
-        "selite": "Pieni kartio näkyy metsän ympäröimän suuren kraatterin pohjalla; kraatterin jyrkät sisärinteet kiertävät sitä.",
+        "selite": "Boqueroncito on pieni kartio Boquerón-kraatterin pohjalla.",
         "lyhyt": "Boqueroncito Boquerón-kraatterin pohjalla.",
         "tiedosto": "El salvador Quezaltepeque Boquerón crater.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "a666562e1092b6f31d4c1dd6d4515e738e19c5d8fdc9b4fe113ae1d94d40e936",
-      "targetAfterSHA256": "80fa661c595e62e680a5cf527ed5f6ea76a5c7dc36725903285496d3d7048b58",
-      "contextAfterSHA256": "8a8810246dd4ec5744905d47384c5686287d0ef5d4dea3bb0600a553cac7eed4",
+      "sourceContentAfterSHA256": "da0486009a17c348adf5d8124466e1fe4dda7c2885ac5cf25b981bddba996c1e",
+      "targetAfterSHA256": "ce9c132b954e32f2d1cad8a27450233eb06b93e4a3bcaed596dc1f3b7a75f3e7",
+      "contextAfterSHA256": "17371a2ba7e82c6508f59793beb0dd5401290665a46ae19add71c9fb21309e5f",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -3105,7 +3177,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "da0486009a17c348adf5d8124466e1fe4dda7c2885ac5cf25b981bddba996c1e",
+        "sameImageNativeSHA256": "ff48e17ea5eb0fae406ccf9fa0454e6bf65f26858993ef3af7748f86b70c13f5",
+        "sameImageExportSHA256": "ff48e17ea5eb0fae406ccf9fa0454e6bf65f26858993ef3af7748f86b70c13f5",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": true
+      }
     }
   ],
   "runtimeIntegrationPending": true,
@@ -3117,6 +3197,9 @@
   "task118TextRevision": true,
   "independentTextResamplePending": true,
   "textAcceptanceVerified": false,
-  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task118/immutable-media-history/e11/sansalvador/f8f7f010e666d39414a07cacf861392fb8b4dbdf00fd9b2772a69a5818469835.json",
-  "task118ReboundAt": "2026-10-13T16:31:26.094219+00:00"
+  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task228/immutable-media-history/e11/sansalvador/007032cfc5f912d254e249053bbdf5698d27f525eaf2a4a89e21c47546b68486.json",
+  "task118ReboundAt": "2026-10-13T16:31:26.094219+00:00",
+  "task228ExcludedAssets": [],
+  "task228TextRevision": true,
+  "task228ReboundAt": "2026-10-13T19:32:48.500808+00:00"
 }

@@ -1,358 +1,350 @@
 {
- "$skeema": "matkakirja-paakaupunki/1",
- "id": "tegucigalpa",
- "maa": "HND",
- "era": "e11",
- "kaupunki": {
+  "$skeema": "matkakirja-paakaupunki/1",
   "id": "tegucigalpa",
-  "name": "Tegucigalpa",
-  "wiki": "Tegucigalpa",
-  "ambience": "kaupunki",
-  "pallo": {
-   "lat": 14.1058,
-   "lon": -87.2047
-  }
- },
- "artikkeli": {
-  "intro": "Tegucigalpa on Hondurasin pääkaupunki vuorten rajaamassa laaksossa. **Choluteca-joki** erottaa sen Comayagüelasta, jonka kanssa se muodostaa pääkaupungin Distrito Centralin. Katuverkko nousee rinteille, ja La Leonan puistosta näkyvät sekä keskusta että sitä ympäröivät kukkulat. Kaupungin espanjalaiskauden juuret ovat kaivostoiminnassa, mutta alueella oli jo lenca- ja tolupan-yhteisöjen asutusta.\n\nIsoisän matkavuonna 1873 Tegucigalpa oli jo vanha kaupunki, mutta **pysyvä pääkaupunkiasema** vakiintui vasta vuonna 1880. Keskustan San Miguelin katedraali ja Los Doloresin kirkko kuuluvat 1700-luvun rakennusperintöön. Kansallisen identiteetin museo taas toimii rakennuksessa, joka suunniteltiin alun perin sairaalaksi ja palveli myöhemmin valtion toimistoina. Seudun La Tigran kansallispuisto avaa näkymän pilvimetsään. Ruokaan voi tutustua baleadan kautta: vehnätortillan sisälle tulee papumuhennosta, kermaista lisuketta ja suolaista juustoa.",
-  "teksti": "Tegucigalpan espanjalaiskauden kaivoskaupunki perustettiin alueelle, jolla oli jo lenca- ja tolupan-yhteisöjen asutusta. Kaupungin nimen etymologiasta on useita tulkintoja. Nykyisessä pääkaupungissa Choluteca-joki erottaa Tegucigalpan ja Comayagüelan, joilla on oma historiallinen taustansa.\n\nTegucigalpa ja Comayagua vuorottelivat 1800-luvulla pääkaupungin tehtävässä. Tegucigalpan pysyvä asema vahvistui vuonna 1880. Hallinnon historiaan liittyy myös kansallisen identiteetin museon eli MIN-museon rakennus: se suunniteltiin sairaalaksi ja palveli sitten ministeriöiden toimistoina ennen nykyistä museokäyttöä.\n\nKulttuurirakennusten rinnalla kaupungin seutuun kuuluu La Tigran pilvimetsä. Puiston suojelutavoitteisiin kuuluvat luonnon ja vedenvarojen säilyttäminen. Kansallisteatterin historiassa taas Don Quijoten vuosijuhla johti uuden näyttämön suunnitteluun, ja kaupunki sai tilan monille esittäville taiteille."
- },
- "kysymykset": [
-  {
-   "q": "Minkä maan pääkaupunki Tegucigalpa on?",
-   "options": [
-    "Hondurasin",
-    "Nicaraguan",
-    "Guatemalan",
-    "El Salvadorin"
-   ],
-   "correct": 0,
-   "level": 1,
-   "hint": "Maalla on rannikko sekä Karibianmerellä että Tyynellämerellä.",
-   "fact": "Tegucigalpa ja Comayagüela muodostavat yhdessä Hondurasin pääkaupungin.",
-   "source": "https://en.wikipedia.org/wiki/Tegucigalpa"
-  },
-  {
-   "q": "Mikä joki erottaa Tegucigalpan ja Comayagüelan?",
-   "options": [
-    "Choluteca-joki",
-    "Patuca-joki",
-    "Ulúa-joki",
-    "Aguán-joki"
-   ],
-   "correct": 0,
-   "level": 2,
-   "hint": "Joki kulkee pääkaupungin kahden historiallisen kaupunkipuolen välissä.",
-   "fact": "Choluteca-joki erottaa Tegucigalpan ja länsirannan Comayagüelan.",
-   "source": "https://en.wikipedia.org/wiki/Tegucigalpa"
-  },
-  {
-   "q": "Mistä jauhosta baleadan tortilla tehdään?",
-   "options": [
-    "Vehnäjauhosta",
-    "Maissijauhosta",
-    "Riisijauhosta",
-    "Tattarijauhosta"
-   ],
-   "correct": 0,
-   "level": 1,
-   "hint": "Taikinan sisään tulee tavallisesti papumuhennosta ja juustoa.",
-   "fact": "Baleadan pohja on vehnäjauhotortilla.",
-   "source": "https://en.wikipedia.org/wiki/Baleada"
-  },
-  {
-   "q": "Millaista metsää La Tigran kansallispuisto suojelee?",
-   "options": [
-    "Pilvimetsää",
-    "Mangrovemetsää",
-    "Kuivaa lehtimetsää",
-    "Piikkipensasmetsää"
-   ],
-   "correct": 0,
-   "level": 3,
-   "hint": "Puisto sijaitsee vuoristoisella seudulla, ja kasvillisuuteen kuuluu sammalia ja saniaisia.",
-   "fact": "La Tigra suojelee Tegucigalpan seudun pilvimetsää.",
-   "source": "https://en.wikipedia.org/wiki/La_Tigra_National_Park"
-  },
-  {
-   "q": "Kenen kirjailijan kunniaksi Tegucigalpan kansallisteatteria aluksi suunniteltiin?",
-   "options": [
-    "Miguel de Cervantesin",
-    "Pedro Calderón de la Barcan",
-    "Félix Lope de Vegan",
-    "Luis Vélez de Guevaran"
-   ],
-   "correct": 0,
-   "level": 3,
-   "hint": "Alkuperäiseen nimiehdotukseen liittyi espanjalaisen kirjailijan merkkipäivä.",
-   "fact": "Teatterin ehdotettu alkuperäinen nimi oli Teatro Cervantes.",
-   "source": "https://es.wikipedia.org/wiki/Teatro_Nacional_Manuel_Bonilla"
-  }
- ],
- "tiedot": [
-  "Tegucigalpasta käytetään myös lyhyttä nimeä Tegus.",
-  "Baleadan mantequilla blanca tarkoittaa tässä kermaista crema-lisuketta.",
-  "MIN-museon EDUMIN-ohjelmassa koululaiset osallistuvat näyttelykäynteihin ja työpajoihin."
- ],
- "valokuva": {
-  "tiedosto": "LA TIGRA, JlMurillo.jpg",
-  "lyhyt": "La Tigran metsän puustoa ja oksien kasvillisuutta.",
-  "selite": "Tiheä puusto peittää rinnettä La Tigrassa; etualan oksissa näkyy sammalta ja muuta kasvillisuutta.",
-  "lahde": "Jorge Luis Murillo Palma, Commons (CC BY-SA 3.0)",
-  "vuosi": "2013"
- },
- "kaupunkilehti": [
-  {
-   "id": "kaupunki",
-   "nimi": "Tegucigalpa",
-   "johdanto": "Joen kahdella puolella on kaksi kaupunkinimeä, ja niiden ympärillä mäkinen pääkaupunki.",
-   "kansikuvat": [
-    {
-     "tiedosto": "Tegucigalpa 1983.jpg",
-     "lyhyt": "Tegucigalpan rinteiden asutusta vuonna 1983.",
-     "selite": "Vanhassa valokuvassa talot ja kadut täyttävät laaksoa ja nousevat rinteille; etualalla näkyy puustoa.",
-     "lahde": "SSGT Jose L. Hernandez, Wikimedia Commons (PD)"
-    },
-    {
-     "tiedosto": "",
-     "lyhyt": "",
-     "selite": "",
-     "lahde": ""
-    },
-    {
-     "tiedosto": "",
-     "lyhyt": "",
-     "selite": "",
-     "lahde": ""
+  "maa": "HND",
+  "era": "e11",
+  "kaupunki": {
+    "id": "tegucigalpa",
+    "name": "Tegucigalpa",
+    "wiki": "Tegucigalpa",
+    "ambience": "kaupunki",
+    "pallo": {
+      "lat": 14.1058,
+      "lon": -87.2047
     }
-   ],
-   "nostot": [
+  },
+  "artikkeli": {
+    "intro": "Tegucigalpa on Hondurasin pääkaupunki vuorten rajaamassa laaksossa. **Choluteca-joki** erottaa sen Comayagüelasta, jonka kanssa se muodostaa pääkaupungin Distrito Centralin. Katuverkko nousee rinteille, ja La Leonan puistosta näkyvät sekä keskusta että sitä ympäröivät kukkulat. Kaupungin espanjalaiskauden juuret ovat kaivostoiminnassa, mutta alueella oli jo lenca- ja tolupan-yhteisöjen asutusta.\n\nKeskustan San Miguelin katedraali ja Los Doloresin kirkko kuuluvat 1700-luvun rakennusperintöön. Kansallisen identiteetin museo taas toimii rakennuksessa, joka suunniteltiin alun perin sairaalaksi ja palveli myöhemmin valtion toimistoina. Seudun La Tigran kansallispuisto avaa näkymän pilvimetsään. Ruokaan voi tutustua baleadan kautta: vehnätortillan sisälle tulee papumuhennosta, kermaista lisuketta ja suolaista juustoa.",
+    "teksti": "Tegucigalpan espanjalaiskauden kaivoskaupunki perustettiin alueelle, jolla oli jo lenca- ja tolupan-yhteisöjen asutusta. Kaupungin nimen etymologiasta on useita tulkintoja. Nykyisessä pääkaupungissa Choluteca-joki erottaa Tegucigalpan ja Comayagüelan, joilla on oma historiallinen taustansa.\n\nTegucigalpa ja Comayagua vuorottelivat 1800-luvulla pääkaupungin tehtävässä. Tegucigalpan pysyvä asema vahvistui vuonna 1880. Hallinnon historiaan liittyy myös kansallisen identiteetin museon eli MIN-museon rakennus: se suunniteltiin sairaalaksi ja palveli sitten ministeriöiden toimistoina ennen nykyistä museokäyttöä.\n\nKulttuurirakennusten rinnalla kaupungin seutuun kuuluu La Tigran pilvimetsä. Puiston suojelutavoitteisiin kuuluvat luonnon ja vedenvarojen säilyttäminen. Kansallisteatterin historiassa taas Don Quijoten vuosijuhla johti uuden näyttämön suunnitteluun, ja kaupunki sai tilan monille esittäville taiteille."
+  },
+  "kysymykset": [
     {
-     "otsikko": "Joen toisella puolella toinen nimi",
-     "teksti": "Choluteca-joki erottaa Tegucigalpan ja Comayagüelan, jotka muodostavat yhdessä Hondurasin pääkaupungin. Comayagüela sijaitsee joen länsirannalla, ja sillat liittävät kaupungit toisiinsa. Sen vanhoissa kortteleissa näkyy ruutukaava, kun pääkaupungin muu katuverkko nousee ja mutkittelee rinteillä. Comayagüelan entisessä kaupungintalossa toimii kansallinen taidekoulu. Joen yli siirtyminen tuo siis vastaan oman kaupunkihistorian: eri nimiä ja vanhoja keskuksia on saman Distrito Centralin sisällä.",
-     "tiedosto": "",
-     "lyhyt": "",
-     "selite": "",
-     "lahde": "",
-     "wiki": "Tegucigalpa"
-    },
-    {
-     "otsikko": "Katu voi johtaa ylöspäin",
-     "teksti": "La Leonan vanhaan kaupunginosaan nousevat kadut ovat jyrkkiä ja mutkittelevia. La Leonan puistosta avautuu näkymä Tegucigalpan keskustaan, laaksoon ja sitä reunustaviin kukkuloihin. Mäkinen maasto tuntuu jo siinä, miten kadut liittyvät toisiinsa; kaupungin hahmoa ei saa selville pelkästä tasaisesta kartasta. Ylhäältä taas keskustan ja ympäröivien rinteiden suhde näkyy yhdellä silmäyksellä. Puisto on osa vanhaa kaupunkiseutua, jossa kaupunkinäkymään kuuluu myös ylöspäin kulkeva katuverkko.",
-     "tiedosto": "",
-     "lyhyt": "",
-     "selite": "",
-     "lahde": "",
-     "wiki": "Tegucigalpa"
-    },
-    {
-     "otsikko": "Baleadan perusta on papu",
-     "teksti": "Hondurasilaisen baleadan pohja on vehnäjauhotortilla. Sen sisälle levitetään paistetuista pavuista tehtyä muhennosta, kermaista mantequilla blancaa ja murennettua suolaista queso duro -juustoa. Tätä perusversiota kutsutaan nimellä baleada sencilla, yksinkertainen baleada. Täytteitä voi myös lisätä: mukana voi olla munakokkelia, avokadoa, lihaa tai keittobanaania. Perusruoan tunteminen auttaa lukemaan vaihtoehtoja: sama tortilla, papu ja juusto voivat saada seurakseen hyvin erilaisia lisukkeita.",
-     "tiedosto": "",
-     "lyhyt": "",
-     "selite": "",
-     "lahde": "",
-     "wiki": "Baleada"
-    },
-    {
-     "otsikko": "Pilvimetsä kuuluu pääkaupungin seutuun",
-     "teksti": "Tegucigalpan pohjoispuolella La Tigran kansallispuisto suojelee pilvimetsää. Sen kasvillisuuteen kuuluu saniaisia, sammalia ja bromelioita sekä tammia ja mäntyjä. Puiston suojelun tavoitteisiin kuuluu myös vedenvarojen säilyttäminen, joten metsä liittyy seudun vesitalouteen. Retkeilyä varten alueella on polkuja ja kävijäkeskukset Jutiapan ja El Rosarion suunnissa. La Tigra on oma seudullinen retkensä: suurkaupungin rinnalta pääsee tutustumaan metsään, jonka suojelussa yhdistyvät elävä luonto ja vesi.",
-     "tiedosto": "",
-     "lyhyt": "",
-     "selite": "",
-     "lahde": "",
-     "wiki": "La Tigra National Park"
-    }
-   ],
-   "matkailijalle": {
-    "kuva": {
-     "tiedosto": "",
-     "lyhyt": "",
-     "selite": "",
-     "lahde": ""
-    },
-    "kappale": "Tegucigalpan historiallinen keskusta ja MIN-museo avaavat kaupungin pitkää käyttö- ja rakennushistoriaa. La Leonan näkymä auttaa hahmottamaan laaksoa ja rinteitä. Ruokaan voi tutustua hondurasilaisen baleadan kautta. La Tigran pilvimetsä sopii erilliseksi seudun retkeksi.",
-    "artikkeli": {
-     "nimi": "Matkailijan Tegucigalpa",
-     "taitto": "opas",
-     "teksti": "Tutustu pääkaupungin museoihin, ruokaan ja lähiseudun pilvimetsään suunnitelluilla käynneillä.",
-     "nosto": "Erota kaupungin käyntikohteet ja seudun retket sekä varmista saapumislentoaseman tunnus.",
-     "jaksot": [
-      {
-       "otsikko": "Perille ja liikkeelle",
-       "teksti": "Palmerola eli Comayaguan kansainvälinen lentoasema, XPL, sijaitsee Comayaguan luona pääkaupungin ulkopuolella. Toncontín, TGU, on Tegucigalpassa: tarkista lipusta, kummalle kentälle saavut, ja varaa kuljetus etukäteen.",
-       "kuva": {
-        "tiedosto": "",
-        "lyhyt": "",
-        "selite": "",
-        "lahde": ""
-       }
-      },
-      {
-       "otsikko": "Historiallinen keskusta",
-       "teksti": "Parque Central eli Plaza Morazán ja sitä reunustava San Miguelin katedraali ovat historiallisen keskustan kiintopisteitä. Katedraali ja Los Doloresin kirkko kuuluvat 1700-luvun rakennusperintöön. La Leonan rinteiltä avautuu näkymä laaksoon ja keskustaan. La Leonan puisto sijaitsee keskustan yläpuolisella rinteellä.",
-       "kuva": {
-        "tiedosto": "",
-        "lyhyt": "",
-        "selite": "",
-        "lahde": ""
-       }
-      },
-      {
-       "otsikko": "Museon ja teatterin kertomukset",
-       "teksti": "Museo para la Identidad Nacional eli MIN sijaitsee entisessä ministeriöiden palatsissa. Talon ensimmäinen käyttötarkoitus oli sairaala, ja nykyinen museo käsittelee Hondurasin historiaa ja kulttuuria. Sen koululaisohjelmaan kuuluu näyttelykäyntejä ja työpajoja. Manuel Bonillan teatterin hankkeeseen liittyi Don Quijoten vuosijuhla. Teatteri liittyy kaupungin esittävien taiteiden historiaan.",
-       "kuva": {
-        "tiedosto": "",
-        "lyhyt": "",
-        "selite": "",
-        "lahde": ""
-       }
-      },
-      {
-       "otsikko": "Mitä täällä syödään",
-       "teksti": "Perinteisessä hondurasilaisessa baleadassa vehnäjauhotortillan sisään tulee papumuhennosta, kermaista mantequilla blancaa ja suolaista juustoa. Sencilla on perusversio; lisätäytteenä voi olla esimerkiksi kananmunaa tai avokadoa. Paikallisten aterioiden lisukkeina käytetään myös papuja, keittobanaania ja tortilloja. Täytteen valitseminen on helppo tapa aloittaa Hondurasiin tutustuminen ruokapöydässä.",
-       "kuva": {
-        "tiedosto": "",
-        "lyhyt": "",
-        "selite": "",
-        "lahde": ""
-       }
-      },
-      {
-       "otsikko": "Milloin kannattaa tulla",
-       "teksti": "Tegucigalpassa on trooppinen ylänköilmasto ja kuiva sekä sateinen kausi. Seuraa matkan ajankohdan ennustetta ja varaa metsäretkelle sadevaruste. La Tigran kansallispuisto on oma retkensä kaupungin ulkopuolella; sen reiteille pääsee Jutiapan tai El Rosarion suunnista. La Tigran pilvimetsä on erillinen retkikohde pääkaupungin ulkopuolella. Kaupungin kulttuurikohteet ja pilvimetsä sopivat eri päivien ohjelmaksi.",
-       "kuva": {
-        "tiedosto": "",
-        "lyhyt": "",
-        "selite": "",
-        "lahde": ""
-       }
-      }
-     ],
-     "matkailu": {
-      "parasta": [
-       {
-        "mita": "MIN-museo",
-        "tahdet": 3,
-        "selite": "Rakennuksen käyttöketju kulkee sairaalasta valtion toimistoihin ja museoksi."
-       },
-       {
-        "mita": "Historiallinen keskusta",
-        "tahdet": 2,
-        "selite": "San Miguelin katedraali ja Los Dolores kertovat 1700-luvun kaupungista."
-       },
-       {
-        "mita": "Baleada",
-        "tahdet": 3,
-        "selite": "Papu, kerma ja juusto ovat vehnätortillan perusyhdistelmä."
-       },
-       {
-        "mita": "La Tigran pilvimetsä",
-        "tahdet": 2,
-        "selite": "Metsän retkeilyreiteillä luonto ja vedenvarojen suojelu liittyvät samaan paikkaan."
-       },
-       {
-        "mita": "La Leonan näkymä",
-        "tahdet": 2,
-        "selite": "Keskusta ja ympäröivät kukkulat näkyvät samasta rinteestä."
-       }
+      "q": "Minkä maan pääkaupunki Tegucigalpa on?",
+      "options": [
+        "Hondurasin",
+        "Nicaraguan",
+        "Guatemalan",
+        "El Salvadorin"
       ],
-      "hyvaTietaa": [
-       {
-        "otsikko": "Saapumiskenttä",
-        "teksti": "Palmerola XPL sijaitsee Comayaguan luona, Toncontín TGU Tegucigalpassa."
-       },
-       {
-        "otsikko": "Kuljetukset",
-        "teksti": "Käytä luotettavan yrityksen tai majoituksen järjestämiä takseja."
-       },
-       {
-        "otsikko": "Turvallisuus",
-        "teksti": "Tarkista ennen matkaa Hondurasin ajantasainen matkustustiedote ulkoministeriöltä sekä teatterin käyntipääsy, La Tigran retkijärjestelyt ja kuljetukset."
-       },
-       {
-        "otsikko": "Metsäretki",
-        "teksti": "La Tigra on pilvimetsäpuisto ja kaupungin ulkopuolinen retkikohde."
-       }
-      ]
-     },
-     "lahde": "Wikipedia"
+      "correct": 0,
+      "level": 1,
+      "hint": "Maalla on rannikko sekä Karibianmerellä että Tyynellämerellä.",
+      "fact": "Tegucigalpa ja Comayagüela muodostavat yhdessä Hondurasin pääkaupungin.",
+      "source": "https://en.wikipedia.org/wiki/Tegucigalpa"
+    },
+    {
+      "q": "Mikä joki erottaa Tegucigalpan ja Comayagüelan?",
+      "options": [
+        "Choluteca-joki",
+        "Patuca-joki",
+        "Ulúa-joki",
+        "Aguán-joki"
+      ],
+      "correct": 0,
+      "level": 2,
+      "hint": "Joki kulkee pääkaupungin kahden historiallisen kaupunkipuolen välissä.",
+      "fact": "Choluteca-joki erottaa Tegucigalpan ja länsirannan Comayagüelan.",
+      "source": "https://en.wikipedia.org/wiki/Tegucigalpa"
+    },
+    {
+      "q": "Mistä jauhosta baleadan tortilla tehdään?",
+      "options": [
+        "Vehnäjauhosta",
+        "Maissijauhosta",
+        "Riisijauhosta",
+        "Tattarijauhosta"
+      ],
+      "correct": 0,
+      "level": 1,
+      "hint": "Taikinan sisään tulee tavallisesti papumuhennosta ja juustoa.",
+      "fact": "Baleadan pohja on vehnäjauhotortilla.",
+      "source": "https://en.wikipedia.org/wiki/Baleada"
+    },
+    {
+      "q": "Millaista metsää La Tigran kansallispuisto suojelee?",
+      "options": [
+        "Pilvimetsää",
+        "Mangrovemetsää",
+        "Kuivaa lehtimetsää",
+        "Piikkipensasmetsää"
+      ],
+      "correct": 0,
+      "level": 3,
+      "hint": "Puiston kävijäkeskukset ovat Jutiapan ja El Rosarion suunnissa.",
+      "fact": "La Tigra suojelee Tegucigalpan seudun pilvimetsää.",
+      "source": "https://en.wikipedia.org/wiki/La_Tigra_National_Park"
+    },
+    {
+      "q": "Kenen kirjailijan kunniaksi Tegucigalpan kansallisteatteria aluksi suunniteltiin?",
+      "options": [
+        "Miguel de Cervantesin",
+        "Pedro Calderón de la Barcan",
+        "Félix Lope de Vegan",
+        "Luis Vélez de Guevaran"
+      ],
+      "correct": 0,
+      "level": 3,
+      "hint": "Alkuperäiseen nimiehdotukseen liittyi espanjalaisen kirjailijan merkkipäivä.",
+      "fact": "Teatterin ehdotettu alkuperäinen nimi oli Teatro Cervantes.",
+      "source": "https://es.wikipedia.org/wiki/Teatro_Nacional_Manuel_Bonilla"
     }
-   }
+  ],
+  "tiedot": [
+    "Tegucigalpasta käytetään myös lyhyttä nimeä Tegus.",
+    "Baleadan mantequilla blanca tarkoittaa tässä kermaista crema-lisuketta.",
+    "MIN-museon EDUMIN-ohjelmassa koululaiset osallistuvat näyttelykäynteihin ja työpajoihin."
+  ],
+  "valokuva": {
+    "tiedosto": "LA TIGRA, JlMurillo.jpg",
+    "lyhyt": "La Tigran metsän puustoa ja oksien kasvillisuutta.",
+    "selite": "La Tigran pilvimetsää vuonna 2013.",
+    "lahde": "Jorge Luis Murillo Palma, Commons (CC BY-SA 3.0)",
+    "vuosi": "2013"
   },
-  {
-   "id": "historia",
-   "nimi": "Kaivoksesta kulttuurikaupungiksi",
-   "johdanto": "Kaivoskaupungin, sairaalan ja teatterin historiat liittyvät samaan pääkaupunkiin.",
-   "tehtava": {
-    "kysymys": "Mihin käyttöön MIN-museon nykyinen rakennus alun perin suunniteltiin?",
-    "vaihtoehdot": [
-     "Sairaalaksi",
-     "Postitoimistoksi",
-     "Rautatieasemaksi",
-     "Merenkulkukouluksi"
-    ],
-    "oikea": 0,
-    "fakta": "Talon käyttöketju alkoi terveydenhoidosta ennen valtion toimistoja ja museota."
-   },
-   "nostot": [
+  "kaupunkilehti": [
     {
-     "otsikko": "Kaivoskaupungin nimi on pitkä",
-     "teksti": "Real de Minas de San Miguel de Tegucigalpa oli espanjalaiskauden kaivoskaupungin nimi. Kaupunki perustettiin 1500-luvulla alueelle, jolla oli jo lenca- ja tolupan-yhteisöjen asutusta. Paikan historia ulottuu siis kaivoskaupungin perustamista kauemmas. Tegucigalpan nimen selityksiä on useita, ja usein tarjottu suomennos hopeakukkuloiksi on kiistanalainen. Kaivostausta on kaupungin historian osa, mutta nimen alkuperästä on useita tulkintoja.",
-     "tiedosto": "",
-     "lyhyt": "",
-     "selite": "",
-     "lahde": "",
-     "wiki": "Tegucigalpa"
+      "id": "kaupunki",
+      "nimi": "Tegucigalpa",
+      "johdanto": "Joen kahdella puolella on kaksi kaupunkinimeä, ja niiden ympärillä mäkinen pääkaupunki.",
+      "kansikuvat": [
+        {
+          "tiedosto": "Tegucigalpa 1983.jpg",
+          "lyhyt": "Tegucigalpan rinteiden asutusta vuonna 1983.",
+          "selite": "Tegucigalpan rinteiden kaupunkiasutusta vuonna 1983.",
+          "lahde": "SSGT Jose L. Hernandez, Wikimedia Commons (PD)"
+        },
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        }
+      ],
+      "nostot": [
+        {
+          "otsikko": "Joen toisella puolella toinen nimi",
+          "teksti": "Choluteca-joki erottaa Tegucigalpan ja Comayagüelan, jotka muodostavat yhdessä Hondurasin pääkaupungin. Comayagüela sijaitsee joen länsirannalla, ja sillat liittävät kaupungit toisiinsa. Sen vanhoissa kortteleissa näkyy ruutukaava, kun pääkaupungin muu katuverkko nousee ja mutkittelee rinteillä. Comayagüelan entisessä kaupungintalossa toimii kansallinen taidekoulu.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "Tegucigalpa"
+        },
+        {
+          "otsikko": "Katu voi johtaa ylöspäin",
+          "teksti": "La Leonan vanhaan kaupunginosaan nousevat kadut ovat jyrkkiä ja mutkittelevia. La Leonan puistosta avautuu näkymä Tegucigalpan keskustaan, laaksoon ja sitä reunustaviin kukkuloihin. Tegucigalpan vanhoissa kaupunginosissa kivikadut ja portaat jatkuvat rinteiden asuintalojen välissä. Pohjoisessa El Picachon rinteellä on Naciones Unidas -puisto; sen takana El Hatillon asuinalueet nousevat metsän lomaan.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "Tegucigalpa"
+        },
+        {
+          "otsikko": "Baleadan perusta on papu",
+          "teksti": "Hondurasilaisen baleadan pohja on vehnäjauhotortilla. Sen sisälle levitetään paistetuista pavuista tehtyä muhennosta, kermaista mantequilla blancaa ja murennettua suolaista queso duro -juustoa. Tätä perusversiota kutsutaan nimellä baleada sencilla, yksinkertainen baleada. Täytteitä voi myös lisätä: mukana voi olla munakokkelia, avokadoa, lihaa tai keittobanaania.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "Baleada"
+        },
+        {
+          "otsikko": "Pilvimetsä kuuluu pääkaupungin seutuun",
+          "teksti": "Tegucigalpan pohjoispuolella La Tigran kansallispuisto suojelee pilvimetsää. Sen kasvillisuuteen kuuluu saniaisia, sammalia ja bromelioita sekä tammia ja mäntyjä. Puiston suojelun tavoitteisiin kuuluu myös vedenvarojen säilyttäminen, joten metsä liittyy seudun vesitalouteen. Retkeilyä varten alueella on polkuja ja kävijäkeskukset Jutiapan ja El Rosarion suunnissa.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "La Tigra National Park"
+        }
+      ],
+      "matkailijalle": {
+        "kuva": {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        "kappale": "Tegucigalpan historiallinen keskusta ja MIN-museo avaavat kaupungin pitkää käyttö- ja rakennushistoriaa. La Leonan näkymä auttaa hahmottamaan laaksoa ja rinteitä. Ruokaan voi tutustua hondurasilaisen baleadan kautta. La Tigran pilvimetsä sopii erilliseksi seudun retkeksi.",
+        "artikkeli": {
+          "nimi": "Matkailijan Tegucigalpa",
+          "taitto": "opas",
+          "teksti": "Tutustu pääkaupungin museoihin, ruokaan ja lähiseudun pilvimetsään suunnitelluilla käynneillä.",
+          "nosto": "Palmerola sijaitsee Comayaguan luona, Toncontín Tegucigalpassa.",
+          "jaksot": [
+            {
+              "otsikko": "Perille ja liikkeelle",
+              "teksti": "Palmerola eli Comayaguan kansainvälinen lentoasema, XPL, sijaitsee Comayaguan luona pääkaupungin ulkopuolella. Toncontín, TGU, sijaitsee Tegucigalpassa.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            },
+            {
+              "otsikko": "Historiallinen keskusta",
+              "teksti": "Parque Central eli Plaza Morazán ja sitä reunustava San Miguelin katedraali ovat historiallisen keskustan kiintopisteitä. Katedraali ja Los Doloresin kirkko kuuluvat 1700-luvun rakennusperintöön. La Leonan rinteiltä avautuu näkymä laaksoon ja keskustaan.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            },
+            {
+              "otsikko": "Museon ja teatterin kertomukset",
+              "teksti": "Museo para la Identidad Nacional eli MIN sijaitsee entisessä ministeriöiden palatsissa. Talon ensimmäinen käyttötarkoitus oli sairaala, ja nykyinen museo käsittelee Hondurasin historiaa ja kulttuuria. Sen koululaisohjelmaan kuuluu näyttelykäyntejä ja työpajoja. Manuel Bonillan teatterin hankkeeseen liittyi Don Quijoten vuosijuhla.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            },
+            {
+              "otsikko": "Mitä täällä syödään",
+              "teksti": "Perinteisessä hondurasilaisessa baleadassa vehnäjauhotortillan sisään tulee papumuhennosta, kermaista mantequilla blancaa ja suolaista juustoa. Sencilla on perusversio; lisätäytteenä voi olla esimerkiksi kananmunaa tai avokadoa. Paikallisten aterioiden lisukkeina käytetään myös papuja, keittobanaania ja tortilloja.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            },
+            {
+              "otsikko": "Milloin kannattaa tulla",
+              "teksti": "Tegucigalpassa on trooppinen ylänköilmasto ja kuiva sekä sateinen kausi.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            }
+          ],
+          "matkailu": {
+            "parasta": [
+              {
+                "mita": "MIN-museo",
+                "tahdet": 3,
+                "selite": "Rakennuksen käyttöketju kulkee sairaalasta valtion toimistoihin ja museoksi."
+              },
+              {
+                "mita": "Historiallinen keskusta",
+                "tahdet": 2,
+                "selite": "San Miguelin katedraali ja Los Dolores kertovat 1700-luvun kaupungista."
+              },
+              {
+                "mita": "Baleada",
+                "tahdet": 3,
+                "selite": "Papu, kerma ja juusto ovat vehnätortillan perusyhdistelmä."
+              },
+              {
+                "mita": "La Tigran pilvimetsä",
+                "tahdet": 2,
+                "selite": "Metsän retkeilyreiteillä luonto ja vedenvarojen suojelu liittyvät samaan paikkaan."
+              },
+              {
+                "mita": "La Leonan näkymä",
+                "tahdet": 2,
+                "selite": "Keskusta ja ympäröivät kukkulat näkyvät samasta rinteestä."
+              }
+            ],
+            "hyvaTietaa": [
+              {
+                "otsikko": "Saapumiskenttä",
+                "teksti": "Palmerola XPL sijaitsee Comayaguan luona, Toncontín TGU Tegucigalpassa."
+              },
+              {
+                "otsikko": "Kuljetukset",
+                "teksti": "Käytä luotettavan yrityksen tai majoituksen järjestämiä takseja."
+              },
+              {
+                "otsikko": "Joen kaksi puolta",
+                "teksti": "Comayagüela sijaitsee Cholutecan länsirannalla."
+              },
+              {
+                "otsikko": "Metsäretki",
+                "teksti": "La Tigra on pilvimetsäpuisto ja kaupungin ulkopuolinen retkikohde."
+              }
+            ]
+          },
+          "lahde": "Wikipedia"
+        }
+      }
     },
     {
-     "otsikko": "Pääkaupungin tehtävä vaihtoi kaupunkia",
-     "teksti": "Tegucigalpa ja Comayagua hoitivat 1800-luvulla vuorotellen pääkaupungin tehtäviä. Pysyvä pääkaupunkiasema vakiintui Tegucigalpaan vuonna 1880. Isoisän matkavuonna 1873 tätä pysyvää ratkaisua ei siten ollut vielä tehty, vaikka Tegucigalpa oli jo pitkään ollut kaupunki ja hoitanut hallinnon tehtäviä. Entinen pääkaupunki Comayagua sijaitsee toisaalla; Tegucigalpan joen toisella rannalla on Comayagüela. Samankaltaiset nimet kuuluvat eri paikkoihin ja eri kohtiin pääkaupungin historiaa.",
-     "tiedosto": "",
-     "lyhyt": "",
-     "selite": "",
-     "lahde": "",
-     "wiki": "Tegucigalpa"
-    },
-    {
-     "otsikko": "Sairaala sai monta uutta tehtävää",
-     "teksti": "Museo para la Identidad Nacionalin rakennus suunniteltiin 1800-luvun lopulla sairaalaksi. Myöhemmin siihen sijoitettiin valtion toimistoja ja ministeriöitä, mistä tulee nimi Palacio de los Ministerios, ministeriöiden palatsi. Rakennus ehti jäädä myös huonoon kuntoon ennen kunnostusta ja museokäyttöä. Nyt talossa käsitellään Hondurasin historiaa ja kulttuuria. Museon koululaisille suunnattu EDUMIN-ohjelma tuo koululaisia näyttelyihin ja työpajoihin: vanhan rakennuksen uusia käyttäjiä ovat myös omaan kotimaahansa tutustuvat oppilaat.",
-     "tiedosto": "",
-     "lyhyt": "",
-     "selite": "",
-     "lahde": "",
-     "wiki": "Tegucigalpa"
-    },
-    {
-     "otsikko": "Don Quijote käynnisti teatterihankkeen",
-     "teksti": "Manuel Bonillan kansallisteatterin hankkeeseen liittyi kirjallinen merkkipäivä: Miguel de Cervantesin Don Quijoten julkaisemisen vuosijuhla. Tegucigalpan kirjallisuuden ja taiteen harrastajat ehdottivat kirjailijan kunniaksi teatteria, jonka nimeksi kaavailtiin aluksi Teatro Cervantesia. Rakennus valmistui 1900-luvun alussa näyttämöksi teatterille, oopperalle, zarzuelalle ja tanssille. Espanjalaisen romaanin muistaminen sai siten kaupungissa rakennushankkeen muodon ja koko joukon esittäviä taiteita saman katon alle.",
-     "tiedosto": "",
-     "lyhyt": "",
-     "selite": "",
-     "lahde": "",
-     "wiki": "Theater in Honduras"
+      "id": "historia",
+      "nimi": "Kaivoksesta kulttuurikaupungiksi",
+      "johdanto": "Kaivoskaupungin, sairaalan ja teatterin historiat liittyvät samaan pääkaupunkiin.",
+      "tehtava": {
+        "kysymys": "Mihin käyttöön MIN-museon nykyinen rakennus alun perin suunniteltiin?",
+        "vaihtoehdot": [
+          "Sairaalaksi",
+          "Postitoimistoksi",
+          "Rautatieasemaksi",
+          "Oppikouluksi"
+        ],
+        "oikea": 0,
+        "fakta": "Talon käyttöketju alkoi terveydenhoidosta ennen valtion toimistoja ja museota."
+      },
+      "nostot": [
+        {
+          "otsikko": "Kaivoskaupungin nimi on pitkä",
+          "teksti": "Real de Minas de San Miguel de Tegucigalpa oli espanjalaiskauden kaivoskaupungin nimi. Kaupunki perustettiin 1500-luvulla alueelle, jolla oli jo lenca- ja tolupan-yhteisöjen asutusta. Tegucigalpan nimen selityksiä on useita, ja usein tarjottu suomennos hopeakukkuloiksi on kiistanalainen. Filologi Alberto de Jesús Membreño ehdotti nimelle toista tulkintaa: terävien kivien talot. Hän liitti Taguzgalpa-nimen Hondurasin vanhaan itäiseen alueeseen.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "Tegucigalpa"
+        },
+        {
+          "otsikko": "Pääkaupungin tehtävä vaihtoi kaupunkia",
+          "teksti": "Tegucigalpa ja Comayagua hoitivat 1800-luvulla vuorotellen pääkaupungin tehtäviä. Pysyvä pääkaupunkiasema vakiintui Tegucigalpaan vuonna 1880. Entinen pääkaupunki Comayagua sijaitsee toisaalla; Tegucigalpan joen toisella rannalla on Comayagüela. Nykyinen Distrito Central muodostaa yhden kunnan, johon molemmat joenrannan kaupungit kuuluvat. Kansallisen hallinnon lisäksi Tegucigalpa on Francisco Morazánin departementin keskus.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "Tegucigalpa"
+        },
+        {
+          "otsikko": "Sairaala sai monta uutta tehtävää",
+          "teksti": "Museo para la Identidad Nacionalin rakennus suunniteltiin 1800-luvun lopulla sairaalaksi. Myöhemmin siihen sijoitettiin valtion toimistoja ja ministeriöitä, mistä tulee nimi Palacio de los Ministerios, ministeriöiden palatsi. Rakennus ehti jäädä myös huonoon kuntoon ennen kunnostusta ja museokäyttöä. Nyt talossa käsitellään Hondurasin historiaa ja kulttuuria. Museon koululaisille suunnattu EDUMIN-ohjelma tuo koululaisia näyttelyihin ja työpajoihin: vanhan rakennuksen uusia käyttäjiä ovat myös omaan kotimaahansa tutustuvat oppilaat.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "Tegucigalpa"
+        },
+        {
+          "otsikko": "Don Quijote käynnisti teatterihankkeen",
+          "teksti": "Manuel Bonillan kansallisteatterin hankkeeseen liittyi kirjallinen merkkipäivä: Miguel de Cervantesin Don Quijoten julkaisemisen vuosijuhla. Tegucigalpan kirjallisuuden ja taiteen harrastajat ehdottivat kirjailijan kunniaksi teatteria, jonka nimeksi kaavailtiin aluksi Teatro Cervantesia. Rakennus valmistui 1900-luvun alussa näyttämöksi teatterille, oopperalle, zarzuelalle ja tanssille.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "Theater in Honduras"
+        }
+      ]
     }
-   ]
+  ],
+  "kohdekartta": {
+    "numeroympyrat": true,
+    "esittely": "Choluteca-joki erottaa Tegucigalpan ja Comayagüelan. Historiallisessa keskustassa ovat San Miguelin katedraali ja kaupungin vanhat aukiot.",
+    "rajat": null,
+    "kohteet": []
+  },
+  "nahtavyydet": {},
+  "saatiedot": null,
+  "ehdotukset": {
+    "lentoasema": "Palmerola / Comayagua (XPL); lisäksi Toncontín (TGU)",
+    "huomiot": []
   }
- ],
- "kohdekartta": {
-  "numeroympyrat": true,
-  "esittely": "Choluteca-joki erottaa Tegucigalpan ja Comayagüelan. Historiallisessa keskustassa ovat San Miguelin katedraali ja kaupungin vanhat aukiot.",
-  "rajat": null,
-  "kohteet": []
- },
- "nahtavyydet": {},
- "saatiedot": null,
- "ehdotukset": {
-  "lentoasema": "Palmerola / Comayagua (XPL); lisäksi Toncontín (TGU)",
-  "huomiot": [
-   "C-tekstiluonnos: B-kuvavalintoja ei ole; kaikki kuvakentät tyhjiä.",
-   "Historiallisen keskustan kohdepisteet, rajaus ja tekijäketjut avoinna; kohteet tyhjä lista ja rajat:null.",
-   "La Tigra on seudullinen tekstiaihe, eikä sitä lisätty keskustakartan kohteeksi.",
-   "saatiedot:null; 48/48 primäärivarmennus ja sääauditointi avoinna.",
-   "Comayagua ja Comayagüela on erotettu; lähteen sekoittuneita nimiä ei kopioitu.",
-   "Väestöluku jätetty pois eri aluejakojen vuoksi.",
-   "D/E/F ja museon/teatterin ajantasainen käyntipääsy avoinna."
-  ]
- }
 }
