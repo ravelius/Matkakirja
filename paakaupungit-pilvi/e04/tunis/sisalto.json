@@ -29,7 +29,7 @@
       "correct": 0,
       "level": 1,
       "hint": "Sama portti tunnetaan myös nimellä Porte de France.",
-      "fact": "Bab el Bhar tarkoittaa Merenporttia ja erottaa medinan uudemmasta Tunisista.",
+      "fact": "Bab el Bhar tarkoittaa Merenporttia. Portin toinen nimi on Porte de France.",
       "source": "https://en.wikipedia.org/wiki/Bab_el_Bhar"
     },
     {
@@ -47,17 +47,17 @@
       "source": "https://en.wikipedia.org/wiki/Souk_El_Attarine"
     },
     {
-      "q": "Mikä Dar Ben Abdallah oli ennen museokäyttöä?",
+      "q": "Mikä suojasi Dar Ben Abdallahin pihaa kadulta tulevilta katseilta?",
       "options": [
-        "Palatsi",
-        "Satamavarasto",
-        "Koulukasarmi",
-        "Rautatieasema"
+        "Sisäänkäynnin mutkat",
+        "Sisäänkäynnin portaat",
+        "Pihan vesiallas",
+        "Julkisivun parveke"
       ],
       "correct": 0,
       "level": 2,
-      "hint": "Myöhempi omistaja oli silkkikauppias Mohamed Tahar Ben Abdallah.",
-      "fact": "Dar Ben Abdallah on vanha palatsi, joka sai museon tehtävän 1900-luvulla.",
+      "hint": "Ratkaisu kuului kadulta pihalle johtavaan reittiin.",
+      "fact": "Sisäänkäynnin peräkkäiset mutkat suojasivat Dar Ben Abdallahin pihan yksityisyyttä.",
       "source": "https://en.wikipedia.org/wiki/Dar_Ben_Abdallah"
     },
     {
@@ -66,7 +66,7 @@
         "Kivestä",
         "Tiilestä",
         "Puusta",
-        "Teräksestä"
+        "Kipsistä"
       ],
       "correct": 0,
       "level": 3,
@@ -90,14 +90,14 @@
     }
   ],
   "tiedot": [
-    "Bab el Bhar tunnetaan myös nimellä Porte de France. Merenportti erottaa vanhan medinan uudemmasta Tunisista, vaikka se ei ole nykyisellä merenrantaviivalla.",
+    "Bab el Bharin toinen nimi on Porte de France. Portin kautta päästiin funduq-rakennuksiin, joissa asui kristittyjä kauppiaita.",
     "Zitounan opetuksessa oli uskonnollisten aineiden rinnalla arabian kielioppia, historiaa ja lääketiedettä. Moskeija oli myös oppimisen paikka.",
     "Dar Lasramin huonejako erotti perheen ja vieraiden tilat eri kerroksiin. Myös varastot ja palvelutyö saivat talossa omat paikkansa."
   ],
   "valokuva": {
     "tiedosto": "View over the Medina of Tunis 02.jpg",
-    "lyhyt": "Tunisin medinan kattojen kokonaisuus vuonna 2019.",
-    "selite": "Tunisin medinan kattomaisema vuonna 2019 kuuluu historiallisten rakennusten, asuinkorttelien ja kauppakujien yhteiseen kaupunkirakenteeseen.",
+    "lyhyt": "Tunisin medinan kattoja Panorama-kahvilan terassilta vuonna 2019.",
+    "selite": "Tasakattoiset talot levittäytyvät Panorama-kahvilan terassin edessä kesäkuussa 2019. Niiden yläpuolelle kohoaa torneja; taustalla näkyy kukkuloita.",
     "lahde": "Kritzolina, Commons (CC BY-SA 4.0)",
     "vuosi": "2019"
   },
@@ -116,7 +116,7 @@
         {
           "tiedosto": "Tunisia-2024-1-4035.jpg",
           "lyhyt": "Medinan kattomaisemaa Tunisissa vuonna 2024.",
-          "selite": "Tunisin medinan kattomaisema vuonna 2024 kuuluu elävään vanhaan kaupunkiin, jonka kaupunkirakenne on osa maailmanperintökohdetta.",
+          "selite": "Medinan tasakattojen keskellä on terassi sinisine tuoleineen. Taustalla rakennusten yläpuolelle kohoaa minareetti vuonna 2024 otetussa kuvassa.",
           "lahde": "Buiobuione, Wikimedia Commons (CC BY-SA 4.0)"
         },
         {
@@ -138,10 +138,10 @@
         },
         {
           "otsikko": "Merenportti on kaupungin kynnys",
-          "teksti": "Bab el Bhar tarkoittaa Merenporttia, mutta nimi ei sijoita nykyistä porttia meren rantaviivalle. Se seisoo medinan itäpuolella ja erottaa vanhan kaupungin uudemmasta Tunisista. Portti tunnetaan myös nimellä Porte de France. Nykyiseen muotoon kuuluu suuri kaari ja sakarareunainen yläosa. Portti on muuttunut historiansa aikana. Portin kautta päästiin myös funduq-rakennuksiin, joissa asui kristittyjä kauppiaita. Vanha kulkupaikka liittyy näin myös Tunisin kaupankäynnin historiaan.",
+          "teksti": "Bab el Bhar tarkoittaa Merenporttia, mutta nimi ei sijoita nykyistä porttia meren rantaviivalle. Se seisoo medinan itäpuolella. Portti tunnetaan myös nimellä Porte de France. Nykyiseen muotoon kuuluu suuri kaari ja sakarareunainen yläosa. Portti on muuttunut historiansa aikana. Portin kautta päästiin myös funduq-rakennuksiin, joissa asui kristittyjä kauppiaita.",
           "tiedosto": "Bab Bhar2.JPG",
           "lyhyt": "Bab el Bhar on Tunisin medinan Merenportti.",
-          "selite": "Bab el Bharin sakarareunainen yläosa kuuluu porttiin, joka erottaa Tunisin medinan uudemmasta kaupungista.",
+          "selite": "Bab el Bharin kaaren yläpuolella on sakarareunainen osa. Portti on kuvattu Tunisissa alaviistosta.",
           "lahde": "IssamBarhoumi, Wikimedia Commons (CC BY-SA 3.0)",
           "wiki": "Bab el Bhar"
         },
@@ -159,32 +159,32 @@
           "teksti": "Souk El Attarine sijaitsee Zitounan pohjoispuolella ja on erikoistunut hajusteisiin sekä kauneustuotteisiin. Kujalla myydään jasmiinia, ruusuvettä, meripihkaa ja hennaa. Tunisin soukit ovat usein katettuja katuja, joiden varrella toimivat kaupat ja käsityöläiset. Muilla kujilla erikoistuminen liittyy esimerkiksi kankaisiin, villaan, nahkaan tai kuparituotteisiin. Souk ei näin tarkoita vain yhtä suurta torialuetta, vaan myös tietyn kaupan ympärille nimettyä katua.",
           "tiedosto": "Souk El Attarine avant l'ouverture des boutiques.jpg",
           "lyhyt": "Souk El Attarine on Tunisin medinan hajusteiden kauppakuja.",
-          "selite": "Tunisin medinan katettu Souk El Attarine -kauppakuja ennen kauppojen avautumista vuonna 2017.",
+          "selite": "Souk El Attarinen katettu kauppakuja vuonna 2017 ennen myymälöiden avautumista. Kuvassa liikkeiden metalliset rullakaihtimet ovat kiinni.",
           "lahde": "Wildtunis, Wikimedia Commons (CC BY-SA 4.0)",
           "wiki": "Souk El Attarine"
         }
       ],
       "matkailijalle": {
         "kuva": {},
-        "kappale": "Aloita medinan kävely Bab el Bharin portilta ja tutustu Zitounan ympäristön kauppakujiin. Palatsien pihat avaavat toisen näkökulman vanhaan kaupunkiin. Varmista moskeijoiden ja palatsien nykyinen käyntimahdollisuus sekä pukeutumisohjeet etukäteen. Tarkista julkisten rakennusten kuvaamisohjeet ja varaa kävelyyn aikaa sekä taukoja.",
+        "kappale": "Aloita medinan kävely Bab el Bharin portilta ja tutustu Zitounan ympäristön kauppakujiin. Souk El Attarinen myymälöissä on hajusteita, ruusuvettä ja hennaa. Dar Lasramin tilat jaettiin kerroksittain perheelle, vieraille ja palvelutyölle. Dar Ben Abdallahin museon aiheita ovat perhe-elämä sekä soukien, moskeijoiden ja kahviloiden arki.",
         "artikkeli": {
           "nimi": "Matkailijan Tunis",
           "taitto": "opas",
           "teksti": "Aloita Merenportilta ja anna medinan katujen, kauppakujien ja vanhojen pihatalojen rytmittää kävelyä.",
-          "nosto": "Historialliset kohteet ovat lähellä toisiaan, mutta moskeijoiden ja palatsien nykyinen vierailukäytäntö on varmistettava paikan omista ohjeista.",
+          "nosto": "Medinan kauppakujilla on omat erikoisalansa. Palatsien pihoihin johtavat eteiset ja käytävät erottivat kodin sisätilat kadun elämästä.",
           "jaksot": [
             {
               "otsikko": "Perille ja liikkeelle",
-              "teksti": "Tunis–Carthagen kansainvälisen lentoaseman tunnus on TUN. Kaupungissa on kevyen metron, bussien ja taksien verkosto. Medinan ytimen kohteet sijaitsevat kävelymatkan mittakaavassa toisiinsa nähden. Tarkista käytettävän liikennereitin pysäkki ja yhteys ennen lähtöä."
+              "teksti": "Tunis–Carthagen kansainvälisen lentoaseman tunnus on TUN. Metro léger on kaupungin kevyt raideliikenneverkko, jonka rinnalla kulkee busseja. TGM on erillinen rannikon esikaupunkirata; sen keskustan pääteasema on Tunis Marine. Medinan kapeilla kujilla liikutaan jalan."
             },
             {
               "otsikko": "Portilta kauppakujille",
-              "teksti": "Bab el Bhar erottaa medinan uudemmasta kaupungista. Zitouna on vanhan ytimen keskuksessa, ja Souk El Attarine sijaitsee sen pohjoispuolella. Kujilla on erikoistunutta kauppaa ja käsityötuotteita. Kasbah-moskeija kuuluu medinan läntiseen Kasbah-ympäristöön. Moskeijat ovat uskonnollisia paikkoja, joten varmista pääsy ja pukeutumisohjeet ennen vierailua.",
+              "teksti": "Zitouna on medinan keskuksessa, ja Souk El Attarine sijaitsee sen pohjoispuolella. Jasmiini, ruusuvesi ja henna kuuluvat kujan kauppatavaroihin. Kasbah-moskeija on medinan läntisessä Kasbah-kaupunginosassa; sen kiviminareetissa näkyy vinoneliömäinen sebka-koristelu.",
               "kuva": {}
             },
             {
               "otsikko": "Pihapalatsien kaupungissa",
-              "teksti": "Dar Lasram, Dar Othman ja Dar Hussein näyttävät medinan pihapalatsien erilaisia käyttövaiheita. Sisäpihoissa ja arkadeissa talo avautuu katujulkisivun taakse. Dar Ben Abdallahin museo käsittelee perhe-elämää sekä soukien, moskeijoiden ja kahviloiden arkea. Sovi kunkin palatsin vierailusta ylläpitäjän kanssa.",
+              "teksti": "Dar Lasram sijaitsee Tribunal-kadulla ja Dar Ben Abdallah medinan eteläosassa. Lasramin palatsin tilat jaettiin kerroksittain palvelutyölle, perheelle ja vieraille. Dar Ben Abdallahin museon aiheita ovat perhe-elämä sekä soukien, moskeijoiden ja kahviloiden arki. Sen sisäänkäynnin mutkat suojasivat pihaa kadulta tulevilta katseilta.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -194,17 +194,12 @@
             },
             {
               "otsikko": "Kahvitauko medinassa",
-              "teksti": "Medinan kahvilat ja uudemman kaupungin avenue-kahvilat ovat erilaisia taukopaikkoja. Tunisissa tarjotaan kahvia ja ranskalaistyylisiä leivonnaisia, ja kaupungissa on myös voileipäkauppoja. Zitounan ympäristössä kahvilat sijaitsevat lähellä hajusteisiin ja käsityötuotteisiin erikoistuneita kauppakujia.",
-              "kuva": {
-                "tiedosto": "Hiboun, Mahdia Governorate, Tunisia Feb 2024 - Croissant and Coffee.jpg",
-                "lyhyt": "Kahvi ja croissant Hibounissa Mahdian seudulla vuonna 2024.",
-                "selite": "Hibounissa Mahdian seudulla vuonna 2024 kuvattu kahvi ja croissant havainnollistavat kahvitaukoa yleisesti, eivät Tunisissa kuvattua annosta.",
-                "lahde": "Sharon Hahn Darlin, Wikimedia Commons (CC BY 2.0)"
-              }
+              "teksti": "Medinan kahvitaukoon voi liittyä näkymä kattojen yli: Panorama-kahvilan terassilta on kuvattu tämän lehden valokuva vuonna 2019. Matalien talojen yllä erottuu minareetteja ja kauempana kukkuloita. Habib Bourguiban avenuen kahvilat ovat puolestaan uudemman kaupungin pitkän pääkadun varrella.",
+              "kuva": {}
             },
             {
               "otsikko": "Kävelyyn viileämpi vuodenaika",
-              "teksti": "Talvella kuukausien keskilämpötilat ovat noin 12–14 astetta, keskikesällä noin 28–29. Heinä–elokuun tavanomaiset päivälämpötilan ylimmät arvot ovat noin 34–35 astetta. Kesä on selvästi talvea kuivempi. Kevät tai syksy tarjoaa keskikesää viileämmän ajankohdan kävelypainotteiselle matkalle. Varaa lämpimällä säällä taukoja ja juotavaa."
+              "teksti": "Talvella kuukausien keskilämpötilat ovat noin 12–14 astetta, keskikesällä noin 28–29. Heinä–elokuun tavanomaiset päivälämpötilan ylimmät arvot ovat noin 34–35 astetta. Kesä on selvästi talvea kuivempi. Kevät tai syksy tarjoaa keskikesää viileämmän ajankohdan kävelypainotteiselle matkalle."
             }
           ],
           "matkailu": {
@@ -217,7 +212,7 @@
               {
                 "mita": "Bab el Bhar",
                 "tahdet": 2,
-                "selite": "Merenportti on vanhan ja uudemman Tunisin kynnys."
+                "selite": "Portin ranskankielinen toinen nimi on Porte de France."
               },
               {
                 "mita": "Zitounan ympäristö",
@@ -232,25 +227,25 @@
               {
                 "mita": "Palatsien tilaratkaisut",
                 "tahdet": 2,
-                "selite": "Dar Lasramin, Othmanin ja Husseinin pihat avaavat vanhaa rakennushistoriaa, kun käyntimahdollisuus on varmistettu."
+                "selite": "Dar Lasramin kerrosjako erotti perheen, vieraiden ja palvelutyön tilat."
               }
             ],
             "hyvaTietaa": [
               {
-                "otsikko": "Ennen matkapäätöstä",
-                "teksti": "Tarkista Tunisian ajantasainen matkustustiedote Suomen ulkoministeriöstä ja noudata sen ohjeita."
+                "otsikko": "Kauppakujien erikoisalat",
+                "teksti": "Medinan soukeissa myydään muun muassa hajusteita, kankaita, nahkaa ja kuparituotteita."
               },
               {
                 "otsikko": "Vierailukäytännöt",
-                "teksti": "Tarkista moskeijan tai palatsin nykyinen pääsy- ja pukeutumisohje ennen käyntiä."
+                "teksti": "Moskeijoiden ja palatsien käynti- ja pukeutumiskäytännöt sekä julkisten rakennusten kuvaamisrajoitukset selvitetään ennen vierailua."
               },
               {
-                "otsikko": "Kuvaaminen",
-                "teksti": "Eräiden julkisten rakennusten kuvaaminen on kiellettyä; kysy lupa julkista rakennusta kuvatessasi."
+                "otsikko": "Minareetin eri aikakaudet",
+                "teksti": "Zitounan nykyinen minareetti on 1800-luvun lopulta, vaikka moskeijan vanhat rakennusvaiheet ovat keskiaikaisia."
               },
               {
-                "otsikko": "Medinan kaksi porttialuetta",
-                "teksti": "Bab el Bhar avautuu medinan ja uudemman kaupungin rajalle; Kasbah on vanhan kaupungin hallinnollista ydintä."
+                "otsikko": "Sisäänkäynnin nimi",
+                "teksti": "Dar Othmanin driba tarkoittaa eteistilaa; sen jälkeen kuljetaan sisäpihaan."
               }
             ]
           },
@@ -276,16 +271,16 @@
       "nostot": [
         {
           "otsikko": "Hallitsijoiden moskeija avautui kaupungille",
-          "teksti": "Kasbah-moskeija rakennettiin keskiajalla hafsidihallitsija Abu Zakariya Yahyan toimeksiannosta. Aluksi se palveli Kasbahin linnoitus- ja hallintoympäristössä asuneita hallitsijoita; myöhemmin siitä tuli julkinen perjantaimoskeija. Minareetin rakenne ja julkisivujen koristelu ovat kiveä. Tornissa näkyy sebka-koristelun vinoneliömäinen verkko. Rukoussalin hevosenkenkäkaaria tukevat marmoripylväät. Käyttötavan muutos liittää saman vanhan rakennuksen eri käyttäjäpiireihin.",
+          "teksti": "Kasbah-moskeija rakennettiin keskiajalla hafsidihallitsija Abu Zakariya Yahyan toimeksiannosta. Aluksi se palveli Kasbahin linnoitus- ja hallintoympäristössä asuneita hallitsijoita; myöhemmin siitä tuli julkinen perjantaimoskeija. Minareetin rakenne ja julkisivujen koristelu ovat kiveä. Tornissa näkyy sebka-koristelun vinoneliömäinen verkko. Rukoussalin hevosenkenkäkaaria tukevat marmoripylväät.",
           "tiedosto": "Mosquée de la casba.jpg",
           "lyhyt": "Kasbah-moskeijan kiviminareetti kuuluu keskiaikaiseen moskeijaan.",
-          "selite": "Kasbah-moskeijan kiviminareetti kuuluu keskiaikaiseen rakennukseen, joka palveli ensin Kasbahin hallitsijoita.",
+          "selite": "Kasbah-moskeijan minareetti kohoaa Tunisin medinassa. Tornin kivipinnassa näkyy vinoneliömäinen sebka-koristelu.",
           "lahde": "Ben guedria houcine, Wikimedia Commons (CC BY-SA 4.0)",
           "wiki": "Kasbah Mosque, Tunis"
         },
         {
           "otsikko": "Perhe ja vieraat asuivat eri kerroksissa",
-          "teksti": "Dar Lasramin palatsi rakennettiin 1800-luvun alkupuolella varakkaalle maanomistajalle ja kirjurille Hamouda Lasramille. Tonttia varten hankittiin ja purettiin viereisiä rakennuksia. Talon tehtävät jaettiin pystysuunnassa: pohjalla olivat varastot ja palvelutilat, niiden yläpuolella perheen tilat ja ylimpänä vieraille varattu kerros. Pihalla kaaret ja pylväät jäsentävät rakennusta. Myöhemmin taloon tulivat medinan suojeluyhdistys ja Tahar Haddad -klubi, uusia käyttäjiä vanhoihin tiloihin.",
+          "teksti": "Dar Lasramin palatsi rakennettiin 1800-luvun alkupuolella varakkaalle maanomistajalle ja kirjurille Hamouda Lasramille. Tonttia varten hankittiin ja purettiin viereisiä rakennuksia. Talon tehtävät jaettiin pystysuunnassa: pohjalla olivat varastot ja palvelutilat, niiden yläpuolella perheen tilat ja ylimpänä vieraille varattu kerros. Pihalla kaaret ja pylväät jäsentävät rakennusta. Myöhemmin taloon tulivat medinan suojeluyhdistys ja Tahar Haddad -klubi.",
           "tiedosto": "",
           "lyhyt": "",
           "selite": "",
@@ -294,7 +289,7 @@
         },
         {
           "otsikko": "Asuintalon arjesta tuli museon aihe",
-          "teksti": "Dar Ben Abdallah on medinan eteläosan 1700-luvun palatsi. Se sai nimensä myöhemmältä omistajalta, silkkikauppias Mohamed Tahar Ben Abdallahilta. Vastaanottotilojen rinnalla rakennukseen kuuluu arkadien ympäröimä piha. Sisäänkäynnin peräkkäiset mutkat suojasivat pihan yksityisyyttä. Palatsi sai 1900-luvulla museon tehtävän. Perhe-elämän rinnalla museokuvauksen aiheina ovat soukit, moskeijat ja kahvilat: talon sisäinen arki liittyy kaupungin yhteiseen elämään.",
+          "teksti": "Dar Ben Abdallah on medinan eteläosan 1700-luvun palatsi. Se sai nimensä myöhemmältä omistajalta, silkkikauppias Mohamed Tahar Ben Abdallahilta. Vastaanottotilojen rinnalla rakennukseen kuuluu arkadien ympäröimä piha. Sisäänkäynnin peräkkäiset mutkat suojasivat pihan yksityisyyttä. Palatsi sai 1900-luvulla museon tehtävän. Perhe-elämän rinnalla museokuvauksen aiheina ovat soukit, moskeijat ja kahvilat.",
           "tiedosto": "",
           "lyhyt": "",
           "selite": "",
@@ -303,7 +298,7 @@
         },
         {
           "otsikko": "Palatsi sai tarviketalon nimen",
-          "teksti": "Dar Othman rakennettiin Othman Deyn toimesta 1500- ja 1600-luvun taitteen tienoilla. Medinan eteläosan palatsin käyttö muuttui 1800-luvun alkupuolella, kun siitä tehtiin sotilaiden tarvikkeiden säilytyspaikka. Tähän tehtävään liittyy nimi Dar al-Oula, tarvikkeiden talo. Sisäänkäynti johtaa driba-nimiseen eteistilaan, jota reunustavat kivipenkit. Pihan yhteydessä on T-muotoisia huoneita ja alkoveja. Vanhan asuinrakennuksen nimi säilytti näin jäljen sen uudesta käytöstä.",
+          "teksti": "Dar Othman rakennettiin Othman Deyn toimesta 1500- ja 1600-luvun taitteen tienoilla. Medinan eteläosan palatsin käyttö muuttui 1800-luvun alkupuolella, kun siitä tehtiin sotilaiden tarvikkeiden säilytyspaikka. Tähän tehtävään liittyy nimi Dar al-Oula, tarvikkeiden talo. Sisäänkäynti johtaa driba-nimiseen eteistilaan, jota reunustavat kivipenkit. Pihan yhteydessä on T-muotoisia huoneita ja alkoveja.",
           "tiedosto": "",
           "lyhyt": "",
           "selite": "",
@@ -315,7 +310,7 @@
   ],
   "kohdekartta": {
     "numeroympyrat": true,
-    "esittely": "Medinan portti, moskeijat ja palatsit ovat eri kerroksia samassa kaupungissa. Katujen takana avautuvat rakennusten pihat ja muuttuneet käyttöhistoriat; nykyiset vierailukäytännöt tarkistetaan erikseen.",
+    "esittely": "Bab el Bharin portilta medinan kauppakujat jatkuvat moskeijoiden ja palatsien lomitse. Dar Lasramin kerrosjako ja Dar Othmanin eteinen kertovat pihatalojen tilaratkaisuista.",
     "rajat": {
       "pohjoinen": 36.805,
       "etela": 36.792,
@@ -358,12 +353,12 @@
   "nahtavyydet": {
     "Bab el Bhar – Merenportti": {
       "aika": "Vanha kaupunginportti, eri aikojen muutoksia",
-      "teksti": "Bab el Bhar on Tunisin medinan itäpuolinen portti. Sen nimi tarkoittaa Merenporttia, ja toinen tunnettu nimi on Porte de France. Portti erottaa vanhan kaupungin uudemmasta Tunisista. Merenportti-nimi ei tarkoita, että nykyinen portti seisoisi merenrantaviivalla.\n\nNykyinen portti muodostuu suuresta kaaresta ja sakarareunaisesta yläosasta. Se on muuttunut historiansa aikana. Portin ympäristön historiassa esiintyvät myös kauppiaiden funduq-rakennukset. Bab el Bhar kuuluu Unescon medinakuvauksessa nimettyihin monumentteihin, mutta sen merkitys avautuu myös ympäröivästä kaupungin rakenteesta.\n\nIsoisän matkavuonna 1873 medina kuului jo vanhaan Tunisiin. Portti liittyy kaupungin kulkureittien ja kaupan historiaan, ja sen rakennusmuoto on muuttunut eri aikoina. Nykyisessä kaupungissa Bab el Bhar on edelleen vanhan ja uudemman kaupunkirakenteen kynnys. Sen kautta medina liittyy ympäröivään Tunisiin.",
+      "teksti": "Bab el Bhar on Tunisin medinan itäpuolinen portti. Sen nimi tarkoittaa Merenporttia, ja toinen tunnettu nimi on Porte de France. Portti erottaa vanhan kaupungin uudemmasta Tunisista, vaikka se ei seiso nykyisellä merenrantaviivalla.\n\nSuuren kaaren yläpuolella on sakarareunainen osa. Portti on muuttunut historiansa aikana. Sen kautta päästiin funduq-rakennuksiin, joissa asui kristittyjä kauppiaita. Unescon medinakuvauksessa Bab el Bhar on yksi nimetyistä monumenteista.",
       "kuvat": [
         {
           "tiedosto": "Bab Bhar photo 2 باب البحر.jpg",
-          "lyhyt": "Bab el Bhar erottaa medinan uudemmasta Tunisista.",
-          "selite": "Bab el Bhar eli Merenportti on Tunisin medinan itäpuolinen portti, joka tunnetaan myös nimellä Porte de France.",
+          "lyhyt": "Bab el Bharin suuri kaari ja sakarareunainen yläosa.",
+          "selite": "Alhaalta kuvattu Bab el Bharin kaari kehystää kadun toisella puolella näkyviä rakennuksia. Kaaren yläpuolella on tekstilaatta ja sakarareuna.",
           "lahde": "Sami Mlouhi, Wikimedia Commons (CC BY-SA 4.0)"
         }
       ],
@@ -371,7 +366,7 @@
     },
     "Zitouna-moskeija": {
       "aika": "Varhaiskeskiaikainen perusta ja myöhempiä rakennusvaiheita",
-      "teksti": "Zitouna eli Oliivimoskeija sijaitsee Tunisin medinan keskuksessa. Sen perustamisen tarkasta ajasta on erilaisia historiallisia tulkintoja. Nykyisen kokonaisuuden keskeinen rakennusvaihe on 800-luvun uudelleenrakennus. Rakennus liittyy tiiviisti ympäröivään kaupunkiin.\n\nSisäpihaa reunustavat kaarigalleriat, ja rukoussalia jäsentävät pylväsrivit sekä hevosenkenkäkaaret. Moskeijaan liittyi pitkään korkeamman oppimisen perinne. Uskonnollisten aineiden ohella opetettiin esimerkiksi arabian kielioppia, historiaa ja lääketiedettä. Rukouksen ja opiskelun historiat kulkevat näin saman rakennuspaikan kautta.\n\nIsoisän matkavuonna 1873 moskeija ja sen opetuksen perinne olivat jo vanhoja. Nykyinen minareetti on kuitenkin 1800-luvun lopun jälleenrakennus ja ottaa tyylivaikutteita Kasbah-moskeijan tornista. Nykykuvan korkea maamerkki kuuluu siis myöhempään vaiheeseen kuin matkavuoden moskeija. ",
+      "teksti": "Zitouna eli Oliivimoskeija sijaitsee Tunisin medinan keskuksessa. Sen perustamisen tarkasta ajasta on erilaisia historiallisia tulkintoja. Nykyisen kokonaisuuden keskeinen rakennusvaihe on 800-luvun uudelleenrakennus.\n\nSisäpihaa reunustavat kaarigalleriat, ja rukoussalia jäsentävät pylväsrivit sekä hevosenkenkäkaaret. Moskeijaan liittyi pitkään korkeamman oppimisen perinne. Uskonnollisten aineiden ohella opetettiin esimerkiksi arabian kielioppia, historiaa ja lääketiedettä.\n\nVuoden 1873 moskeijalla oli eri torni: nykyinen minareetti on 1800-luvun lopun jälleenrakennus ja ottaa tyylivaikutteita Kasbah-moskeijan tornista.",
       "kuvat": [
         {
           "tiedosto": "Corridor of Al-Zaytuna Mosque.jpg",
@@ -384,7 +379,7 @@
     },
     "Kasbah-moskeija": {
       "aika": "Keskiaika, hafsidivaihe",
-      "teksti": "Kasbah-moskeija sijaitsee Tunisin medinan Kasbah-kaupunginosassa. Se rakennettiin keskiajalla hafsidihallitsija Abu Zakariya Yahyan toimeksiannosta. Moskeija kuului Kasbahin linnoitus- ja hallintoympäristöön. Aluksi sen käyttäjiä olivat siellä asuneet hallitsijat.\n\nMyöhemmin moskeijasta tuli julkinen perjantaimoskeija. Rukoussalin hevosenkenkäkaaria tukevat marmoripylväät, ja rukoussuuntaa osoittavan mihrabin edessä on muqarnas-koristeltu eli porrastettuihin koristeholveihin jäsennetty kupoli. Minareetin rakenne ja ornamentiikka ovat kiveä. Sen julkisivuissa sebka-koristelu muodostaa vinoneliömäisen verkon.\n\nIsoisän matkavuonna 1873 keskiaikainen moskeija oli jo olemassa. Myöhemmät Tunisin minareetit ottivat siitä tyylivaikutteita, joten torni liittyy myös muiden rakennusten historiaan. Kivinen torni on vanhan moskeijan tunnistettava osa. Sen vinoneliömäinen pintakoristelu toistuu myöhemmän Tunisin arkkitehtuurissa.",
+      "teksti": "Kasbah-moskeija sijaitsee Tunisin medinan Kasbah-kaupunginosassa. Se rakennettiin keskiajalla hafsidihallitsija Abu Zakariya Yahyan toimeksiannosta. Moskeija kuului Kasbahin linnoitus- ja hallintoympäristöön. Aluksi sen käyttäjiä olivat siellä asuneet hallitsijat.\n\nMyöhemmin moskeijasta tuli julkinen perjantaimoskeija. Rukoussalin hevosenkenkäkaaria tukevat marmoripylväät, ja rukoussuuntaa osoittavan mihrabin edessä on muqarnas-koristeltu eli porrastettuihin koristeholveihin jäsennetty kupoli. Minareetin rakenne ja ornamentiikka ovat kiveä. Sen julkisivuissa sebka-koristelu muodostaa vinoneliömäisen verkon. Myöhemmät Tunisin minareetit ottivat tornista tyylivaikutteita.",
       "kuvat": [
         {
           "tiedosto": "Tunis Mosqué Kasbah.JPG",
@@ -397,12 +392,12 @@
     },
     "Dar Lasram": {
       "aika": "1800-luvun alkupuoli",
-      "teksti": "Dar Lasram sijaitsee Tunisin medinassa Tribunal-kadulla. Palatsin rakennuttaja Hamouda Lasram oli varakas maanomistaja ja hallinnollinen kirjuri. Rakennuspaikka koottiin hankkimalla ja purkamalla viereisiä rakennuksia. Uusi palatsi syntyi 1800-luvun alkupuolella vanhan kaupungin sisään.\n\nTalon tilat jaettiin eri tehtäviin kerroksittain. Pohjakerros palveli varastoja ja palvelutyötä, perheellä oli omat tilansa ja vieraille varattiin ylempi kerros. Sisäpihan kaaret ja pylväät jäsentävät rakennusta. Palatsin arkkitehtuuriin kuuluvat myös stukkokoristelu ja maalatut katot.\n\nIsoisän matkavuonna 1873 palatsi oli jo rakennettu. Sen nykyisempi instituutiokäyttö alkoi myöhemmin: talossa ovat toimineet medinan suojeluyhdistys ja Tahar Haddad -klubi. Palatsin huonejako kertoo vanhasta asumisen ja vieraanvaraisuuden järjestyksestä, kun taas uudet käyttäjät kuuluvat myöhempään kaupunkiin. ",
+      "teksti": "Dar Lasram sijaitsee Tunisin medinassa Tribunal-kadulla. Palatsin rakennuttaja Hamouda Lasram oli varakas maanomistaja ja hallinnollinen kirjuri. Rakennuspaikka koottiin hankkimalla ja purkamalla viereisiä rakennuksia. Uusi palatsi syntyi 1800-luvun alkupuolella vanhan kaupungin sisään.\n\nTalon tilat jaettiin eri tehtäviin kerroksittain. Pohjakerros palveli varastoja ja palvelutyötä, perheellä oli omat tilansa ja vieraille varattiin ylempi kerros. Sisäpihan kaaret ja pylväät jäsentävät rakennusta. Palatsin arkkitehtuuriin kuuluvat myös stukkokoristelu ja maalatut katot. Myöhemmin talossa ovat toimineet medinan suojeluyhdistys ja Tahar Haddad -klubi.",
       "kuvat": [
         {
           "tiedosto": "Gate of Dar Lasrem - Porte du Dar Lasrem - باب دار الأصرم.jpg",
-          "lyhyt": "Dar Lasramin palatsin sisäänkäynti.",
-          "selite": "Dar Lasramin sisäänkäynti kuuluu 1800-luvun alkupuolen palatsiin, jonka rakennuttaja oli maanomistaja ja kirjuri Hamouda Lasram.",
+          "lyhyt": "Dar Lasramin kaareva puinen sisäänkäynti.",
+          "selite": "Dar Lasramin puuoven ympärillä on vaalea kivikaari. Ovessa näkyy kaksi metallista rengasta ja pieni käyntiovi.",
           "lahde": "Sami Mlouhi, Wikimedia Commons (CC BY-SA 4.0)"
         }
       ],
@@ -410,7 +405,7 @@
     },
     "Dar Othman": {
       "aika": "1500- ja 1600-luvun taite, myöhempiä käyttövaiheita",
-      "teksti": "Dar Othman on palatsi Tunisin medinan eteläosassa El Mebazaâ -kadulla. Sen rakennuttaja oli Othman Dey, ja rakentaminen ajoittuu 1500- ja 1600-luvun taitteen tienoille. Julkisivuun kuuluu hevosenkenkäkaari, pylväitä ja puisia rakenteita. Sisäänkäynti avaa reitin talon sisäisiin tiloihin.\n\nOven jälkeen tulee driba eli eteistila, jota reunustavat kivipenkit. Eteisestä kuljetaan pihaan. Pihan yhteydessä on T-muotoisia huoneita ja alkoveja. Rakennuksen tilaratkaisu kertoo palatsista, vaikka sen myöhemmät tehtävät ovat muuttuneet.\n\n1800-luvun alkupuolella palatsi muutettiin sotilaiden tarvikkeiden säilytyspaikaksi. Tähän käyttöön liittyy toinen nimi Dar al-Oula, tarvikkeiden talo. Isoisän matkavuonna 1873 sekä palatsi että varastovaihe olivat jo alkaneet. Myöhempi käyttö on liittynyt medinan kulttuuriperinnön suojeluun. ",
+      "teksti": "Dar Othman on palatsi Tunisin medinan eteläosassa El Mebazaâ -kadulla. Sen rakennuttaja oli Othman Dey, ja rakentaminen ajoittuu 1500- ja 1600-luvun taitteen tienoille. Julkisivuun kuuluu hevosenkenkäkaari, pylväitä ja puisia rakenteita.\n\nOven jälkeen tulee driba eli eteistila, jota reunustavat kivipenkit. Eteisestä kuljetaan pihaan. Pihan yhteydessä on T-muotoisia huoneita ja alkoveja.\n\n1800-luvun alkupuolella palatsi muutettiin sotilaiden tarvikkeiden säilytyspaikaksi. Tähän käyttöön liittyy toinen nimi Dar al-Oula, tarvikkeiden talo. Myöhempi käyttö on liittynyt medinan kulttuuriperinnön suojeluun. ",
       "kuvat": [
         {
           "tiedosto": "",
@@ -423,7 +418,7 @@
     },
     "Dar Hussein": {
       "aika": "Vanha palatsi, kerrostumia ennen 1800-lukua ja sen aikana",
-      "teksti": "Dar Hussein sijaitsee Tunisin medinassa Bab Menaran kaupunginosassa, Place du Château -osoitteessa. Palatsia on laajennettu ja koristeltu eri omistajien aikana. Sen nimi liittyy kenraali Husseiniin, yhteen rakennuksen entisistä omistajista. Sen nykyinen arkkitehtuuri syntyi useiden laajennus- ja koristeluvaiheiden kautta.\n\nPalatsin pihaan kuuluu valkoista marmoria, pylväitä ja uuskorinttilaisia kapiteeleja. Koristelussa esiintyvät Qallaline-kaakelit, stukko ja maalattu puu. Youssef Saheb Ettabaâ liittyy 1800-luvun koristeluvaiheeseen. Materiaalit ja eri vaiheiden muutokset kuuluvat palatsin rakennushistoriaan.\n\n1800-luvun puolivälissä rakennuksessa toimi kunnallinen neuvosto. Isoisän matkavuonna 1873 sekä palatsi että tämä aiempi kunnallinen käyttö olivat jo olemassa. Myöhempi instituutiokäyttö on liittynyt kansallisen kulttuuriperinnön hallintaan. Palatsin laajennus, koristeluvaiheet ja instituutiokäyttö ovat jatkuneet samalla paikalla.",
+      "teksti": "Dar Hussein sijaitsee Tunisin medinassa Bab Menaran kaupunginosassa, Place du Château -osoitteessa. Palatsia on laajennettu ja koristeltu eri omistajien aikana. Sen nimi liittyy kenraali Husseiniin, yhteen rakennuksen entisistä omistajista.\n\nPalatsin pihaan kuuluu valkoista marmoria, pylväitä ja uuskorinttilaisia kapiteeleja. Koristelussa esiintyvät Qallaline-kaakelit, stukko ja maalattu puu. Youssef Saheb Ettabaâ liittyy 1800-luvun koristeluvaiheeseen.\n\n1800-luvun puolivälissä rakennuksessa toimi kunnallinen neuvosto. Myöhempi instituutiokäyttö on liittynyt kansallisen kulttuuriperinnön hallintaan.",
       "kuvat": [
         {
           "tiedosto": "",
@@ -502,18 +497,6 @@
   },
   "ehdotukset": {
     "lentoasema": "Tunis–Carthage International Airport (TUN)",
-    "huomiot": [
-      "C-luonnos, 22 kuvaa ja kaikki vähimmäisroolit; O1/O5 ovat kaksi sallittua kuvatonta opasjaksoa. Ei F-valmis-, kaupunki-, peli- tai julkaisukuittausta ennen D/E/F-portteja.",
-      "C2 on medinan yleinen kattokuva2024, ei Bab el Bhar. K1 on medinakuja, K2/N1 eri Bab-detaljit; noudatettu lopullisia B:selected-rooleja.",
-      "O4 on Hibounissa Mahdian seudulla kuvattu kahvi ja croissant2024, yleiskuvitusta eikä Tunisissa kuvattu annos. O2:n suljettu katutila2020 ei nykyinen aukioloväite.",
-      "D tarkistaa etenkin H2/O3/N5/N6: vanha rakennustila ei ratkaise kaakeli-, stukko-, maalatun puun tai perinnekoristelun erillisiä oikeuksia. H4:n oven/katoksen koristepinnat ja C1:n terassien pinnat kirjattu myös katseluun. B:n ennen1966 arkkitehtuurin PD-polku ei ole blanket-lupa erillisille teoksille/museoesineille/nykylisäosille.",
-      "Kaikki22 esikatselua avattu itse. K4/valinta30 myös alkuperäisestä: liikkuva henkilö epäterävä, ei luettavia kasvonpiirteitä katselussa; D vahvistaa.30/31 identtiset esikatselubytes, vain30 käytössä. TRAVELER2017 pysty0,75; D arvioi toimituksellisen tuoreuden ja yhden kuja-aiheen.",
-      "Sää annettu saa.json ilman tausta. Alkuperäinen NOAA/WMO Tunis_Carthage60715 CSV otsikoi1991–2020, lämpö/sadesarjat vastaavat työkalun arvoja. Kosteuden/auringon ja ääriarvojen muut kaudet eivät ole kopioitujen kuukausinormaalien kausi.",
-      "Tarkat rakennus-/perustamis-/museovuodet ja määrät jätetty pois tai vuosisadoiksi A:n ristiriitojen mukaan. Babin nykyisen kaaren täsmällistä1873ulkoasua ei väitetä. Zitounan nykyminareetti on myöhempi1800-luvun lopun vaihe.",
-      "Väestö jätetty pois: kontekstin2024 luku koskee kuvernementtiä, ei Tunis-kuntaa tai Grand Tunis -metropolia. Pallo säilyy kontekstista36.8065/10.1815; A:n Q3572-piste-ero säilyy muistiinpanoissa.",
-      "Kartta kuusi A:n omaaWP/WDpaikkapistettä, ei medinan yleispiste tai kaupungin hallintopiste toiseksi kohteeksi nimettynä. Dar Ben Abdallah tekstiaiheena, ei kartan piilopiste: A:n paikannusero ratkaisematta.",
-      "Ei Karthagon/Tunisia-lehden historia-, ruoka-, taide-, musiikki- tai meritarinoiden toistoa. Kahvi on käytännön opasjakso, ei uusi ruokahistoria. Ei ukin toimia tai repliikkejä.",
-      "UM Tunisia4.8.2026 luettu11.10.2026: erityinen varovaisuus, liikenne, kuvaamisohje. Rajaseutujen ohje ei keskustan matkustuskielto. Nykyinen palatsi-/moskeijapääsy varmistettava; ei vanhoja hintoja tai aukioloaikoja."
-    ]
+    "huomiot": []
   }
 }

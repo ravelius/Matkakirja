@@ -1,7 +1,7 @@
 {
   "artikkeli": {
-    "intro": "Nouakchott on Mauritanian pääkaupunki **Saharan ja Atlantin rajalla**. Pääkaupungin rakentaminen aloitettiin vuonna 1958. Paikka ei kuitenkaan ollut tyhjä: pääkaupunkia edelsi linnoitettu rannikon kalastajakylä. Isoisän matkavuonna 1873 nykyistä suunniteltua suurkaupunkia ei vielä ollut. Myöhemmän 1900-luvun kuivuudet ja aavikoituminen vauhdittivat muuttoa kaupunkiin.\n\nLeveiden katujen hallintokeskuksesta kasvoi myös kaupan ja työn kaupunki. Kalastajarannassa puuveneiden saalis myydään ja kuljetetaan eteenpäin, kun taas tavaralaivojen syväsatama on erillinen paikka. Nouakchott tunnetaan myös Saharasta löydettyjen meteoriittien kauppapaikkana. Kaupungin reunoilla on puolestaan tehty työtä liikkuvan hiekan sitomiseksi oksa-aidoilla ja **elävällä vihervyöhykkeellä**.",
-    "teksti": "Nouakchottin pääkaupunkiasema kuuluu Mauritanian itsenäistymistä edeltäneeseen 1950-luvun loppuun. Vanhempi rannikkokylä jäi uuden kaupungin lähtökohdaksi. Suunnitelman hallintopainotus ei ennakoinut kaupan myöhempää merkitystä: asuinalueille syntyi myös laajoja ulkoilmamarkkinoita.\n\nAtlantin ranta yhdistää kaupungin kalastukseen. Saalis tuodaan pienveneistä rantaan, missä toimivat jälleenmyyjät ja kalankäsittelijät. Tuotteita kuljetetaan kaupunkiin ja myös käsittelyyn sekä vientiin. Kalastajaranta ja teollinen Friendship Port ovat eri kohteita.\n\nAavikon puolella kaupungin kasvua on seurannut hiekan sitomisen työ. Dokumentoiduissa hankkeissa oksa-aidat vakauttivat dyynejä ennen istutuksia. Taimien suojaaminen ja asukkaiden osallistuminen kuuluivat vihervyöhykkeen kunnostamiseen."
+    "intro": "Nouakchott on Mauritanian pääkaupunki **Saharan ja Atlantin rajalla**. Pääkaupungin rakentaminen aloitettiin vuonna 1958. Paikka ei kuitenkaan ollut tyhjä: pääkaupunkia edelsi linnoitettu rannikon kalastajakylä. Isoisän matkavuonna 1873 nykyistä suunniteltua suurkaupunkia ei vielä ollut. 1900-luvun lopun kuivuudet ja aavikoituminen vauhdittivat muuttoa kaupunkiin.\n\nLeveiden katujen hallintokeskuksesta kasvoi myös kaupan ja työn kaupunki. Kalastajarannassa puuveneiden saalis myydään ja kuljetetaan kaupungin myyntipaikkoihin. Nouakchott tunnetaan myös Saharasta löydettyjen meteoriittien kauppapaikkana. Kaupungin reunoilla on puolestaan tehty työtä liikkuvan hiekan sitomiseksi oksa-aidoilla ja **elävällä vihervyöhykkeellä**.",
+    "teksti": "Uutta pääkaupunkia alettiin rakentaa vuonna 1958, ja sen perusrakenteet olivat valmiina Mauritanian itsenäistyessä vuonna 1960. Vanhempi rannikkokylä jäi kaupungin lähtökohdaksi. Hallintoa varten suunnitellulle alueelle syntyi myöhemmin myös kaupan keskuksia ja laajoja ulkoilmamarkkinoita.\n\nAtlantin rannassa saalis tuodaan pienveneistä myyntiin. Jälleenmyyjät ja kalankäsittelijät jatkavat kalastajien työtä: osa kalasta kuljetetaan kaupunkiin myytäväksi, osa käsitellään ja pakataan vientiä varten.\n\nAavikon puolella oksa-aidat vakauttivat dyynejä ennen istutuksia. Vihervyöhykkeen kunnostamiseen osallistuivat asukkaat ja paikalliset toimijat. Nuoria taimia suojattiin myös laidunnukselta."
   },
   "kaupunkilehti": [
     {
@@ -17,14 +17,14 @@
         },
         {
           "tiedosto": "Nouakchott.jpg",
-          "lyhyt": "Nouakchottin asutusta suuren puustoisen alueen ympärillä.",
-          "selite": "Ilmakuvassa puusto erottuu tiheästä, pääosin matalasta asutuksesta. Katu jatkuu puistoalueen vierellä kohti kauempia kortteleita.",
+          "lyhyt": "Nouakchottin rakennuksia ja laaja palmujen peittämä alue.",
+          "selite": "Ilmakuvassa näkyy matalia kortteleita, joiden keskellä on laaja palmujen peittämä alue. Sen reunalla kulkee katu.",
           "lahde": "Laminesall96, Wikimedia Commons (CC BY-SA 4.0)"
         },
         {
           "tiedosto": "ISS062-E-81454 - View of Mauritania.jpg",
-          "lyhyt": "Nouakchottin rannikko ja katuverkko avaruusasemalta kuvattuna.",
-          "selite": "ISS-avaruusaseman kuvassa Nouakchottin asutus levittäytyy Atlantin rannalta hiekan reunalle. Meri ja tiheä katuverkko erottuvat toisistaan.",
+          "lyhyt": "Toujounine-aurinkovoimala ja Nouakchott ISS-avaruusasemalta kuvattuina.",
+          "selite": "Maaliskuussa 2020 otetussa kuvassa Toujounine-aurinkovoimalan paneelikentät erottuvat asutuksen laidalla. Vasemmalla näkyy Atlantin rannikko.",
           "lahde": "Earth Science and Remote Sensing Unit, NASA Johnson Space Center, Wikimedia Commons (PD)"
         }
       ],
@@ -34,13 +34,13 @@
           "teksti": "Nouakchottin uusi keskusta suunniteltiin leveiden katujen ruudukoksi. Sen päätehtäväksi ajateltiin hallintoa, eikä kaupalle ja muille elinkeinoille odotettu suurta roolia. Kaupungin arki kehittyi toisin. Cinquième Quartierista tuli asuinalue ja suuren ulkoilmamarkkinan paikka, ja uudet kaupunginosat kasvoivat vanhan ksarin ohi merkitykseltään. Nykyiseen keskustaan kuuluvat yritykset, pankit ja torit. Kauppa levittäytyi hallintoa varten suunnitellun keskustan ympärille ja muutti kaupunginosien asemaa.",
           "wiki": "Nouakchott",
           "tiedosto": "ISS062-E-255 - View of Earth.jpg",
-          "lyhyt": "Nouakchottin tiheää katuverkkoa Atlantin rannalla.",
-          "selite": "ISS-avaruusasemalta otettu kuva näyttää Nouakchottin katuverkon ja Atlantin rannikon. Kaupungin asutus levittäytyy kohti aavikkoa.",
+          "lyhyt": "Nouakchott avaruusasemalta helmikuussa 2020 kuvattuna.",
+          "selite": "Nouakchottin katuverkko erottuu hiekan keskellä ISS-avaruusaseman kuvassa. Atlantin rannikko kulkee kuvan yläreunassa.",
           "lahde": "Earth Science and Remote Sensing Unit, NASA Johnson Space Center, Wikimedia Commons (PD)"
         },
         {
           "otsikko": "Saalis vaihtaa kulkuneuvoa",
-          "teksti": "Atlantin kalastajarannalle tuodaan saalista puuveneillä. Rannassa työ jatkuu: kalaa myydään, perataan ja kuljetetaan edelleen kaupungin myyntipaikkoihin. Osa tuotteista menee käsittelyyn, pakkaamiseen ja vientiin. Tämä on pienimuotoisen kalastuksen rantautumisalue, eikä sama paikka kuin tavaralaivojen Friendship Port -syväsatama. Rannalle nostettavista puuveneistä käytetään ranskankielistä nimeä pirogue. Ranta on työpaikka, jossa merimatka muuttuu saaliin seuraavaksi matkaksi.",
+          "teksti": "Atlantin kalastajarannalle tuodaan saalista puuveneillä. Rannassa kalaa myydään, perataan ja kuljetetaan kaupungin myyntipaikkoihin. Osa saaliista käsitellään ja pakataan vientiä varten. Kalastajien jälkeen saaliin parissa työskentelevät jälleenmyyjät ja kalankäsittelijät. Pitkänomaisista puuveneistä käytetään ranskankielistä nimeä pirogue. Niitä vedetään hiekalle, jossa kala siirtyy veneistä seuraavan kuljetuksen kyytiin.",
           "wiki": "Fish market (Nouakchott)",
           "tiedosto": "",
           "lyhyt": "",
@@ -53,12 +53,12 @@
           "wiki": "Nouakchott",
           "tiedosto": "NWA Chondrite.jpg",
           "lyhyt": "Luoteis-Afrikan kondriitin leikattu pinta, meteoriitin yleiskuva.",
-          "selite": "Luoteis-Afrikan kondriitin leikattu pinta, meteoriitin yleiskuva. Ei Nouakchottissa myydyksi väitetty kappale.",
+          "selite": "Kondriittimeteoriitin leikattu pinta näyttää sen sisäisen rakenteen. Näyte on nimetty Luoteis-Afrikan alueen mukaan.",
           "lahde": "Geo Lightspeed7, Wikimedia Commons (CC BY-SA 4.0)"
         },
         {
           "otsikko": "Syväsatama rakennettiin avoimelle rannikolle",
-          "teksti": "Nouakchottin tavaralaivoille rakennettu Friendship Port on eri paikka kuin pienveneiden kalastajaranta. Se on keinotekoinen syväsatama avoimella Atlantin rannikolla. Aallonmurtajien betonilohkot suojaavat alusten lastauspaikkaa merenkäynniltä. Sataman kautta pääkaupunkia voitiin huoltaa ilman pelkkää Dakarista tulevaa maantiekuljetusta. Se avattiin vuonna 1986, ja laitureita on myöhemmin laajennettu. Tavaraliikenteen paikka siirsi osan pitkistä maakuljetuksista merireitille.",
+          "teksti": "Nouakchottin tavaralaivoille rakennettu Friendship Port on eri paikka kuin pienveneiden kalastajaranta. Se on keinotekoinen syväsatama avoimella Atlantin rannikolla. Aallonmurtajien betonilohkot suojaavat alusten lastauspaikkaa merenkäynniltä. Sataman kautta pääkaupunkia voitiin huoltaa ilman pelkkää Dakarista tulevaa maantiekuljetusta. Se avattiin vuonna 1986, ja laitureita on myöhemmin laajennettu. ",
           "wiki": "Friendship Port of Nouakchott",
           "tiedosto": "",
           "lyhyt": "",
@@ -73,7 +73,7 @@
           "selite": "",
           "lahde": ""
         },
-        "kappale": "Nouakchottissa kalastajaranta, tavaralaivojen satama ja keskustan markkinat ovat eri paikkoja. Kalastajarannalla saalis vaihtaa omistajaa puuveneiden vierellä. Kansallismuseon kokoelmissa on esihistoriallisia kivityökaluja, keramiikkaa ja Mauritanian yhteisöjen esineistöä.",
+        "kappale": "Nouakchottin kalastajarannalla saalis vaihtaa omistajaa puuveneiden vierellä. Marché Capitalen myyntipaikoissa on ruokaa, kankaita, koruja ja kodin tavaroita. Kansallismuseon kokoelmissa on esihistoriallisia kivityökaluja ja keramiikkaa. Museossa säilytetään myös Mauritanian eri yhteisöjen esineistöä.",
         "artikkeli": {
           "nimi": "Matkailijan Nouakchott",
           "taitto": "opas",
@@ -82,7 +82,7 @@
           "jaksot": [
             {
               "otsikko": "Perille ja liikkeelle",
-              "teksti": "Nouakchott–Oumtounsyn kansainvälinen lentoasema on kaupungin pohjoispuolella. Kaupungissa käytetään myös jaettuja takseja; sovi kulkuehdoista ennen lähtöä. Kalastajaranta on Atlantin puolella; tavaralaivojen syväsatama on siitä erillinen kohde.",
+              "teksti": "Nouakchott–Oumtounsyn kansainvälinen lentoasema on kaupungin pohjoispuolella. Kaupungin sisäisiin matkoihin käytetään myös jaettuja takseja. Kalastajaranta sijaitsee keskustasta länteen Atlantin äärellä.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -92,7 +92,7 @@
             },
             {
               "otsikko": "Kalastajarannan työpäivä",
-              "teksti": "Port de Pêche on pienveneiden rantautumis- ja kalakaupan alue. Saaliin purkaminen riippuu päivän toiminnasta. Anna tilaa työntekijöille, veneille ja kuljetuksille. Kalastajaranta on eri paikka kuin teollinen Friendship Port, jossa käsitellään tavaralaivojen lastia.",
+              "teksti": "Port de Pêche on pienveneiden rantautumis- ja kalakaupan alue. Pitkiä puuveneitä vedetään hiekalle saaliin purkamista varten. Kalankäsittelijät ja jälleenmyyjät jatkavat työtä rannassa, ja osa kalasta pakataan vientiin.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -102,7 +102,7 @@
             },
             {
               "otsikko": "Torit ja vanhat kokoelmat",
-              "teksti": "Marché Capitale, Marché Sixième ja Marocaine ovat erillisiä torinimiä. Kansallismuseon arkeologisiin ja etnografisiin aineistoihin kuuluu kivityökaluja, keramiikansirpaleita, nuolenkärkiä ja pukeutumiseen liittyviä kokoelmia. Museossa on myös vanhoista mauritanialaisista kaupungeista, kuten Koumbi Salehista ja Ouadanesta, löydettyä aineistoa.",
+              "teksti": "Marché Capitalella myydään ruokaa, kankaita, koruja ja kodin käyttöesineitä; yläkerrassa toimivat ompelijat ja muut käsityöläiset. Kansallismuseossa on kivityökaluja, keramiikansirpaleita, nuolenkärkiä ja pukeutumiseen liittyviä kokoelmia. Museossa säilytetään myös Koumbi Salehista ja Ouadanesta löydettyä aineistoa.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -112,7 +112,7 @@
             },
             {
               "otsikko": "Kala, riisi ja tee",
-              "teksti": "Kala-riisiruoka thieboudienne kuuluu Mauritanian rannikon ruokaperinteeseen. Nouakchottissa tarjotaan myös kalaa, mereneläviä ja arkisia voileipiä. Minttuteessä korkea kaato muodostaa vaahtoa. Thieboudiennessa kala ja riisi muodostavat saman aterian, kun taas tee tarjoillaan pienistä laseista.",
+              "teksti": "Kala-riisiruoka thieboudienne kuuluu Mauritanian rannikon ruokaperinteeseen. Nouakchottissa tarjotaan myös kalaa, mereneläviä ja arkisia voileipiä. Minttuteessä korkea kaato muodostaa vaahtoa. Tee tarjoillaan pienistä laseista.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -122,7 +122,7 @@
             },
             {
               "otsikko": "Saharan ja Atlantin välissä",
-              "teksti": "Nouakchott on aavikon rannikkokaupunki, jonka ympärillä tuuli liikuttaa hiekkaa. Rantaretken ja keskustassa liikkumisen olot voivat siksi poiketa toisistaan. Varaudu aurinkoon ja tuuleen sekä pidä päivän reitti joustavana.",
+              "teksti": "Nouakchottissa kuukauden keskilämpötila on tammikuussa noin 22 astetta ja syyskuussa noin 30 astetta. Sadetta kertyy etenkin elo- ja syyskuussa; huhtikuun ja toukokuun kuukausisade jää ilmastonormaalissa nollaan. Atlantin äärelläkin kaupunki on Saharan laidalla.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -151,7 +151,7 @@
               {
                 "mita": "Friendship Port",
                 "tahdet": 2,
-                "selite": "Keinotekoinen syväsatama on tavaralaivojen paikka erillään kalastajarannasta."
+                "selite": "Keinotekoinen syväsatama avattiin vuonna 1986."
               },
               {
                 "mita": "Minttutee",
@@ -162,19 +162,19 @@
             "hyvaTietaa": [
               {
                 "otsikko": "Matkan järjestelyt",
-                "teksti": "Tarkista Mauritanian ajantasainen matkustustiedote ja sovi kuljetukset sekä pääsy vierailupaikoille paikallisesti. Kalastajaranta on työalue; uimiseen, kuvaamiseen ja kaupungin ulkopuolisiin retkiin voi liittyä rajoituksia."
+                "teksti": "Kalastajaranta on työalue. Kuljetuksiin, kohteiden käyntikäytäntöihin ja kuvaamiseen liittyvät järjestelyt sovitaan paikallisesti."
               },
               {
-                "otsikko": "Eri satamat",
-                "teksti": "Port de Pêche on kalastajaranta; Port de l’Amitié eli Friendship Port on tavaralaivojen syväsatama."
+                "otsikko": "Kaupungin katuverkko",
+                "teksti": "Nouakchottin hallintokeskus suunniteltiin leveiden katujen ruudukoksi."
               },
               {
                 "otsikko": "Museon aineisto",
                 "teksti": "Kansallismuseossa on arkeologisia ja etnografisia kokoelmia, myös löydöksiä muista mauritanialaisista kaupungeista."
               },
               {
-                "otsikko": "Toripaikat erikseen",
-                "teksti": "Marché Capitale ja Marocaine-tori ovat eri markkinapaikkoja. Niiden nimet eivät tarkoita itälaidan eläinmarkkinaa."
+                "otsikko": "Käsityöläiset torilla",
+                "teksti": "Marché Capitalen yläkerrassa toimivat ompelijat ja muut käsityöläiset."
               }
             ]
           },
@@ -189,7 +189,7 @@
       "nostot": [
         {
           "otsikko": "Hiekanjyvä voi hypätä",
-          "teksti": "Tuuli kuljettaa hiekkaa eri tavoin. Suuret jyvät vierivät tai liukuvat maata pitkin, toiset etenevät hypyin. Hieno pöly voi puolestaan jäädä ilmaan pidemmäksi aikaa. Nouakchottiin kulkeutuu hiekkaa myös kaupungin itäpuolen dyyneiltä. Kasvillisuus hidastaa tuulta maanpinnan lähellä ja auttaa sitomaan hiekkaa. Hiekan liikkeen ymmärtäminen on kuulunut kaupungin ympärillä tehtyyn dyynien vakauttamistyöhön: kaikki tuulen mukana kulkeva aines ei etene samalla tavalla.",
+          "teksti": "Tuuli kuljettaa hiekkaa eri tavoin. Suuret jyvät vierivät tai liukuvat maata pitkin, toiset etenevät hypyin. Hieno pöly voi puolestaan jäädä ilmaan pidemmäksi aikaa. Nouakchottiin kulkeutuu hiekkaa myös kaupungin itäpuolen dyyneiltä. Kasvillisuus hidastaa tuulta maanpinnan lähellä ja auttaa sitomaan hiekkaa. Hiekan liikkeen ymmärtäminen on kuulunut kaupungin ympärillä tehtyyn dyynien vakauttamistyöhön.",
           "tiedosto": "",
           "lyhyt": "",
           "selite": "",
@@ -197,7 +197,7 @@
         },
         {
           "otsikko": "Aita, jonka läpi tuuli kulkee",
-          "teksti": "Nouakchottin dyynien vakauttamishankkeessa käytettiin oksa-aitoja ennen kasvien istuttamista. Aidan tehtävä oli hidastaa tuulta ja saada hiekkaa kertymään. Siksi sen piti päästää ilmaa lävitseen, eikä muodostaa täysin umpinaista seinää. Aitoja asetettiin ruudukoksi ja korotettiin hiekan kertyessä. Mekaaninen vakauttaminen auttoi luomaan istutuksille vakaamman pinnan. Hiekan kertyessä myös aidan korkeutta muutettiin, jotta tuuli kohtaisi esteen edelleen.",
+          "teksti": "Nouakchottin dyynien vakauttamishankkeessa käytettiin oksa-aitoja ennen kasvien istuttamista. Aidan tehtävä oli hidastaa tuulta ja saada hiekkaa kertymään. Siksi sen piti päästää ilmaa lävitseen, eikä muodostaa täysin umpinaista seinää. Aitoja asetettiin ruudukoksi ja korotettiin hiekan kertyessä. Mekaaninen vakauttaminen auttoi luomaan istutuksille vakaamman pinnan.",
           "tiedosto": "",
           "lyhyt": "",
           "selite": "",
@@ -205,7 +205,7 @@
         },
         {
           "otsikko": "Vihervyö tarvitsee hoitajia",
-          "teksti": "Nouakchottin ympärille on istutettu vihervyöhykettä, jonka tarkoitus on suojata kaupunkia hiekan kertymiseltä. Vanhoja istutuksia kuormittivat kasvava kaupunki ja maankäyttö, joten vyöhykettä kunnostettiin ja laajennettiin. Vakaammille pinnoille istutettiin ruoho- ja puuvartisia kasveja. Nuoret istutukset tarvitsivat suojaa myös laidunnukselta. Työhön osallistui asukkaita ja paikallisia toimijoita. Vihervyö ei näin ollut vain kartalle piirretty vihreä kaista, vaan istutuksia ja niiden suojaamiseen liittyvää työtä.",
+          "teksti": "Nouakchottin ympärille on istutettu vihervyöhykettä, jonka tarkoitus on suojata kaupunkia hiekan kertymiseltä. Vanhoja istutuksia kuormittivat kasvava kaupunki ja maankäyttö, joten vyöhykettä kunnostettiin ja laajennettiin. Vakaammille pinnoille istutettiin ruoho- ja puuvartisia kasveja. Nuoret istutukset tarvitsivat suojaa myös laidunnukselta. Työhön osallistui asukkaita ja paikallisia toimijoita.",
           "tiedosto": "",
           "lyhyt": "",
           "selite": "",
@@ -213,10 +213,10 @@
         },
         {
           "otsikko": "Rannikkokasvin täytyy kestää suolaa",
-          "teksti": "Rannikon ja sisämaan dyyneille ei Nouakchottin hankkeessa valittu automaattisesti samoja kasveja. Rannikkoistutuksissa tarvittiin suolaisuutta kestäviä lajeja, kuten Nitraria retusaa ja tamariskeja. Istuttaminen ajoitettiin maan kostumiseen, ja taimia kasteltiin tarvittaessa. Kuljetuksen aikana niitä suojattiin kuivattavalta auringolta ja tuulelta. Kasvin valinta oli siis vain osa työtä: myös siirtäminen, oikea kasvupaikka ja taimien hoito kuuluivat istutusten perustamiseen. Rannikon suolainen ympäristö ja sisämaan dyynit tarvitsivat erilaiset istutukset.",
+          "teksti": "Rannikon ja sisämaan dyyneille ei Nouakchottin hankkeessa valittu automaattisesti samoja kasveja. Rannikkoistutuksissa tarvittiin suolaisuutta kestäviä lajeja, kuten Nitraria retusaa ja tamariskeja. Istuttaminen ajoitettiin maan kostumiseen, ja taimia kasteltiin tarvittaessa. Kuljetuksen aikana niitä suojattiin kuivattavalta auringolta ja tuulelta.",
           "tiedosto": "Nitraria retusa Djerba Tunisia.JPG",
           "lyhyt": "Nitraria retusan kukkia ja lehtiä Tunisian Djerballa.",
-          "selite": "Nitraria retusan kukkia ja lehtiä Djerballa Tunisiassa vuonna 2013; lajin yleiskuva, ei Nouakchottin istutus.",
+          "selite": "Djerballa Tunisiassa vuonna 2013 kuvattu Nitraria retusa kukkii vaalein kukin. Kuva esittelee Nouakchottin rannikkoistutuksiin soveltuvaa lajia.",
           "lahde": "MurielBendel, Wikimedia Commons (CC BY-SA 4.0)"
         }
       ],
@@ -249,17 +249,17 @@
       "source": "https://en.wikipedia.org/wiki/Nouakchott"
     },
     {
-      "q": "Mikä valtameri on Nouakchottin kalastajarannan edustalla?",
+      "q": "Mikä näistä vesialueista on Nouakchottin edustalla?",
       "options": [
         "Atlantti",
-        "Intian valtameri",
-        "Tyynimeri",
-        "Jäämeri"
+        "Välimeri",
+        "Punainenmeri",
+        "Intian valtameri"
       ],
       "correct": 0,
       "level": 1,
-      "hint": "Ranta on Afrikan länsipuolella.",
-      "fact": "Nouakchottin rannikko avautuu länteen.",
+      "hint": "Mauritanialla on yhteinen maaraja Senegalin kanssa.",
+      "fact": "Nouakchott sijaitsee Atlantin rannikolla.",
       "source": "https://en.wikipedia.org/wiki/Nouakchott"
     },
     {
@@ -277,42 +277,42 @@
       "source": "https://en.wikipedia.org/wiki/Nouakchott"
     },
     {
-      "q": "Mikä on kalastajarannan keskeinen tehtävä?",
+      "q": "Mitä vastaan Nouakchottin vihervyöhykkeellä on taisteltu?",
       "options": [
-        "Saaliin maihintuonti",
-        "Tavaralaivojen huolto",
-        "Suolan teollinen louhinta",
-        "Öljysäiliöiden täyttö"
+        "Hiekan kertymistä",
+        "Suolaveden leviämistä",
+        "Rankkasadetulvia",
+        "Rannikon eroosiota"
       ],
       "correct": 0,
       "level": 2,
-      "hint": "Pienveneiden työ jatkuu rannassa.",
-      "fact": "Kala myydään ja siirretään rannan kautta kaupungin myyntipaikoille.",
-      "source": "https://en.wikipedia.org/wiki/Fish_market_(Nouakchott)"
+      "hint": "Hankkeessa oksa-aidat edelsivät istutuksia.",
+      "fact": "Oksa-aidoilla vakautettiin dyynejä ja istutuksilla sidottiin hiekkaa.",
+      "source": "https://www.fao.org/4/i1488e/i1488e.pdf"
     },
     {
       "q": "Minä vuonna Nouakchottin rakentaminen pääkaupungiksi aloitettiin?",
       "options": [
         "1958",
-        "1948",
-        "1968",
-        "1978"
+        "1955",
+        "1957",
+        "1959"
       ],
       "correct": 0,
       "level": 3,
-      "hint": "Rakentaminen alkoi ennen Mauritanian itsenäistymistä.",
+      "hint": "Uuden pääkaupungin hanke alkoi siirtomaa-ajan viimeisinä vuosina.",
       "fact": "Nouakchottin laajentaminen pääkaupungiksi alkoi vuonna 1958. Paikalla oli aiemmin linnoitettu kalastajakylä.",
       "source": "https://en.wikipedia.org/wiki/Nouakchott"
     }
   ],
   "tiedot": [
     "Nouakchottin suunniteltu pääkaupunki kasvoi vanhemman linnoitetun kalastajakylän paikalle.",
-    "Kalastajaranta ja tavaralaivojen Friendship Port -syväsatama ovat eri paikkoja.",
+    "Nouakchottin uudessa keskustassa kaupalle ei aluksi odotettu suurta roolia, mutta Cinquième Quartierista kasvoi suuren ulkoilmamarkkinan paikka.",
     "Saharasta myydyn meteoriitin tarkka löytöpaikka voi olla tuntematon; kauppapaikka ei ole putoamispaikka."
   ],
   "kohdekartta": {
     "numeroympyrat": true,
-    "esittely": "Kalastajarannalla pienveneiden saalis siirtyy myyntiin, kun taas Friendship Port on tavaralaivojen satama. Keskustassa markkina ja kansallismuseon kokoelmat avaavat kaupan ja esinehistorian näkökulman. Olympiastadion on urheilupaikka kaupungin pohjoispuolella.",
+    "esittely": "Kalastajarannalla pienveneiden saalis siirtyy myyntiin. Keskustassa Marché Capitale ja kansallismuseon kokoelmat kertovat kaupan ja esinehistorian eri vaiheista. Olympiastadion on urheilupaikka kaupungin pohjoispuolella.",
     "rajat": {
       "pohjoinen": 18.107744,
       "etela": 17.989148,
@@ -350,7 +350,7 @@
   "nahtavyydet": {
     "Kalastajaranta": {
       "aika": "nykykaupunki",
-      "teksti": "Nouakchottin kalastajaranta sijaitsee kaupungin länsipuolella Atlantin äärellä. Pienveneiden saalis tuodaan tänne myyntiin ja jatkokuljetukseen. Puuveneitä vedetään rannalle, ja työntekijät käsittelevät niiden tuomaa kalaa. Alueella toimivat jälleenmyyjät ja kalanperkaajat; osa tuotteista kulkee myös käsittelyyn, pakkaamiseen ja vientiin.\n\nPort de Pêche on pienveneiden kalastajaranta, erillään tavaralaivojen Friendship Port -satamasta. Veneiden saaliin ympärille on muodostunut kalakaupan ja käsittelyn työalue. Kala siirtyy rannasta kaupungin myyntipaikkoihin tai vientiä varten käsiteltäväksi ja pakattavaksi.",
+      "teksti": "Nouakchottin kalastajaranta sijaitsee kaupungin länsipuolella Atlantin äärellä. Puuveneitä vedetään hiekalle ja saalista tuodaan myyntiin. Rannan työalueella toimivat kalastajien lisäksi jälleenmyyjät ja kalanperkaajat.\n\nPienveneiden mukana tullut kala jatkaa rannasta useita reittejä. Osa kuljetetaan kaupungin myyntipaikkoihin, osa käsitellään ja pakataan vientiin. Saaliin purkaminen, kauppa ja jatkokäsittely tuovat rannan ympärille monenlaisia ammatteja.",
       "kuvat": [
         {
           "tiedosto": "",
@@ -369,31 +369,26 @@
     },
     "Friendship Port": {
       "aika": "1980-luvulta alkanut satamatoiminta",
-      "teksti": "Friendship Port eli Port de l’Amitié on Nouakchottin keinotekoinen syväsatama. Se rakennettiin 1980-luvulla avoimelle Atlantin rannikolle, jolla ei ollut luonnostaan suojaista satamalahtea. Betonilohkoista tehdyt aallonmurtajat suojaavat laivojen lastauspaikkaa merenkäynniltä.\n\nSatama avattiin vuonna 1986. Sen kautta pääkaupungin tavaroita voitiin tuoda suoraan meritse sen sijaan, että kuljetus olisi kulkenut ensin Dakarista maanteitse. Laitureita on myöhemmin laajennettu. Satama on tavaraliikenteen paikka, ei pohjoisempana sijaitseva puuveneiden kalastajaranta; isoisän matkavuonna 1873 nykyistä syväsatamaa ei ollut.",
+      "teksti": "Friendship Port eli Port de l’Amitié on Nouakchottin keinotekoinen syväsatama. Se rakennettiin 1980-luvulla avoimelle Atlantin rannikolle, jolla ei ollut luonnostaan suojaista satamalahtea. Betonilohkoista tehdyt aallonmurtajat suojaavat laivojen lastauspaikkaa merenkäynniltä.\n\nSatama avattiin vuonna 1986. Sen kautta pääkaupungin tavaroita voitiin tuoda suoraan meritse sen sijaan, että kuljetus olisi kulkenut ensin Dakarista maanteitse. Laitureita on myöhemmin laajennettu.",
       "kuvat": [],
       "lahde": "https://en.wikipedia.org/wiki/Friendship_Port_of_Nouakchott"
     },
     "Marché Capitale": {
       "aika": "Nykyisen pääkaupungin markkinapaikka",
-      "teksti": "Marché Capitale on Nouakchottin keskustan markkinapaikka Ould Abas -moskeijan luoteispuolella. Kauppaa käydään rakennuksissa ja niiden ympärillä. Markkinan tarjontaan on kuvattu ruokatavaroita, kankaita, koruja ja kodin käyttöesineitä.\n\nTorin yhteydessä toimii myös ompelijoita ja muita käsityöläisiä. Vaatteiden joukossa tunnetaan Mauritanian miesten väljä derra’a-asu. Marché Capitale on eri paikka kuin Marocaine-tori ja kaupungin eteläisempi Cinquième-markkina-alue. Toritoiminta kuuluu nykyisen pääkaupungin kauppa-arkeen.",
+      "teksti": "Marché Capitale on Nouakchottin keskustan markkinapaikka Ould Abas -moskeijan luoteispuolella. Kauppaa käydään rakennuksissa ja niiden ympärillä. Markkinan tarjontaan on kuvattu ruokatavaroita, kankaita, koruja ja kodin käyttöesineitä.\n\nTorin yhteydessä toimii myös ompelijoita ja muita käsityöläisiä. Vaatteiden joukossa tunnetaan Mauritanian miesten väljä derra’a-asu. Ompelimot ja muut käsityöläisten tilat sijaitsevat markkinarakennusten yläkerrassa.",
       "kuvat": [],
       "lahde": "https://en.wikipedia.org/wiki/March%C3%A9_Capitale ; https://de.wikipedia.org/wiki/Nouakchott"
     },
     "Nouakchottin olympiastadion": {
       "aika": "1980-luvulla avattu urheilupaikka",
-      "teksti": "Nouakchottin olympiastadion on kaupungin jalkapallopaikka, jonka kenttää ympäröi myös yleisurheilurata. Se sijaitsee keskustan pohjoispuolisella lähetystöalueella Route des Ambassadesin suunnassa. Kenttä ja rata palvelevat eri urheilulajeja samalla paikalla.\n\nStadion on avattu 1980-luvulla ja sitä on myöhemmin kunnostettu. Urheilun lisäksi paikalla on järjestetty musiikkiesityksiä; Nouakchottin kulttuurielämässä tunnetaan myös yksityisten kokoontumisten musiikki. Nykyinen stadion kuuluu pääkaupungin kasvun aikaan, eikä sitä ollut isoisän matkavuonna 1873.",
+      "teksti": "Nouakchottin olympiastadion on jalkapallopaikka, jonka kenttää ympäröi yleisurheilurata. Se sijaitsee keskustan pohjoispuolisella lähetystöalueella Route des Ambassadesin suunnassa. Kenttä ja rata ovat samalla urheilualueella.\n\nStadion avattiin vuonna 1983, ja sitä on myöhemmin kunnostettu. Siellä on järjestetty myös konsertteja. Stadionilla ovat esiintyneet mauritanialaiset laulajat Dimi Mint Abba ja Malouma.",
       "kuvat": [],
       "lahde": "https://fr.wikipedia.org/wiki/Stade_olympique_de_Nouakchott ; https://de.wikipedia.org/wiki/Nouakchott"
     }
   },
   "ehdotukset": {
     "lentoasema": "Nouakchott–Oumtounsy International Airport (NKC)",
-    "huomiot": [
-      "Korjaus118: viisi kohdetta lähteen omilla WP-koordinaateilla; urheilu-/museopaikat kuvataan toimintoina, ei modernina arkkitehtuuriteoksena.",
-      "Uudet Commons-kuvat puuttuvat useista rooleista; ei uusia generointeja eikä kuvien käyttöoikeusarvauksia.",
-      "Sää edelleen avoin: Wikipedia-taulukon 1991–2020-otsikko ristiriidassa sen DWD1961–1990-lähdeviitteen kanssa. Primäärivarmennus käynnissä; ei kopioitu ristiriitaista saadataa C:hen.",
-      "Sisältökirjurin task118 uusintapistokoe ja kuvatekstien runtime-rebind ennen pelikytkentää."
-    ]
+    "huomiot": []
   },
   "$skeema": "matkakirja-paakaupunki/1",
   "id": "nouakchott",
@@ -416,5 +411,38 @@
     "lahde": "Cooperazione, Commons (CC BY-SA 4.0)",
     "vuosi": "2020"
   },
-  "saatiedot": null
+  "saatiedot": {
+    "keskilampo": [
+      21.6,
+      23.3,
+      24.4,
+      24.6,
+      25.7,
+      26.9,
+      27.4,
+      28.7,
+      29.6,
+      29.2,
+      25.9,
+      22.9
+    ],
+    "sade": [
+      1.0,
+      0.1,
+      0.7,
+      0.0,
+      0.0,
+      3.6,
+      10.2,
+      46.4,
+      51.3,
+      7.9,
+      1.7,
+      8.8
+    ],
+    "lahde": {
+      "nimi": "JMA",
+      "kausi": "1991–2020"
+    }
+  }
 }
