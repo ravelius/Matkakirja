@@ -1,6 +1,6 @@
 # Euroopan uudet saapumisintroaiheet — osa 2/2, 13.10.2026
 
-3 QA/R2-varmennettua kuvaa toimitettu, 1 perusteltua lopullista poisjättöä. Käsitelty 4/47 tämän osan nimetyistä kuvista; 4 generointikutsua. Tilaus on kesken, kun kaikki nimetyt kohteet eivät vielä ole käsitelty.
+5 QA/R2-varmennettua kuvaa toimitettu, 1 perusteltua lopullista poisjättöä. Käsitelty 6/47 tämän osan nimetyistä kuvista; 6 generointikutsua. Tilaus on kesken, kun kaikki nimetyt kohteet eivät vielä ole käsitelty.
 
 Koko laajennus käsittää 95 nimettyä kuvaa (#133–227): osa 1 sisältää 48 ja osa 2 47 kuvaa. Aiempi 88+1 arvio ei korvaa lähteiden nimettyä inventaariota. Yksi uusi sisäänrakennettu generointi per kuva; ei uusintoja, vertailuottoja, inpaintingia tai rajauksia.
 
@@ -17,6 +17,13 @@ Manifesti: `posti/kuvatoimitus-saapumisintro-crete-uudet-6-8-20261013.json`. Toi
 
 - #199, slot 6: Chanian kattomeri ja Valkoiset vuoret Profitis Ilias -kukkulalta lounaaseen päivällä. Havainnekuva.
 - #200, slot 8: Chanian kaupunkibussi rannikkotiellä Agioi Apostoloin suunnalla, meri vieressä. Havainnekuva.
+
+## MOSKOVA
+
+Manifesti: `posti/kuvatoimitus-saapumisintro-moscow-uudet-6-8-20261013.json`. Toimitettu 2/2; kutsuja 2.
+
+- #201, slot 6: Moskovan kattomeri ja joen mutka Varpuskukkulan näköalatasanteelta koilliseen päivällä, Vapahtajan katedraali kaukana. Havainnekuva.
+- #202, slot 8: Moskovan metrojuna Lužnikin metrosillalla Moskva-joen yllä. Havainnekuva.
 
 Kuvat toimitetaan suoraan lähteen mukaisesti Päätoimittajan arvioitaviksi omistajan valtuutuksella. Todellista PT/omistajahyväksyntää, Fable-vastaanottokuittausta, runtime-kytkentää tai pelijulkaisua ei väitetä varmennetuiksi. Jokaisen toimitetun kuvan natiivi on rootin tarkastama, ja R2 on luettu takaisin kahdesti (kanoninen ja välimuistin ohittava URL), tavut, PNG-MIME ja CORS varmennettu. PNG 1536×1024, sRGB, läpinäkymätön; vain ICC/metadata lisätty, pikselit säilytetty. Promptit, viitteet sekä natiivi- ja vienti-SHA ovat manifesteissa.
 

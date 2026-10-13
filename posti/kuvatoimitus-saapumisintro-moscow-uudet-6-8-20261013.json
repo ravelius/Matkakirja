@@ -1,0 +1,352 @@
+{
+  "schemaVersion": 1,
+  "cityName": "MOSKOVA",
+  "gameCityId": "moskova",
+  "mediaSlug": "moscow",
+  "taskNumbers": [
+    201,
+    202
+  ],
+  "updatedAt": "2026-10-13T17:52:02.597813+00:00",
+  "sourcePath": "posti/fable-codex-saapumisintro-uudet-6-8-loput-2-20261013.md",
+  "sourceCommit": "dbdaff9a39fa0e5052f176c890c85836e1a69a1f",
+  "sourceBlob": "2e5adc4cb04a23fcb4cd8fdd75426ac78afdcc9d",
+  "sourceReadInFull": true,
+  "sourceReadBy": "/root/intro_owner_rejection_inventory",
+  "sourceReadReceiptPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/source-read-receipt.json",
+  "assets": [
+    {
+      "taskNumber": 201,
+      "mediaSlug": "moscow",
+      "slot": 6,
+      "filename": "moscow-6-nakoala-intro-v1.png",
+      "title": "koko kaupunki tunnetulta näköalapaikalta päivällä — Moskovan kattomeri ja joen mutka Varpuskukkulan näköalatasanteelta koilliseen päivällä, Vapahtajan katedraali kaukana.",
+      "fullDeliveryRequirement": "**6 / koko kaupunki tunnetulta näköalapaikalta päivällä — Moskovan kattomeri ja joen mutka Varpuskukkulan näköalatasanteelta koilliseen päivällä, Vapahtajan katedraali kaukana.** Tiedosto `moscow-6-nakoala-intro-v1.png`.\nMitä kuvataan: Moskovan panoraama Varpuskukkulan (Vorobjovy Gory) näköalatasanteelta kirkkaana kesäpäivänä (nykyaikainen värivalokuva). Etualalla kuvan alareunassa vain kapea kaistale vaaleaa kivikaidetta ja jyrkän rinteen puiden vihreitä latvoja, ei ihmisiä lähellä. Alhaalla laaja Moskva-joen mutka vihreine rantametsineen ja puistoineen. Keskellä kuvan taustalla pienenä ja utuisena Kristuksen Vapahtajan katedraalin valkoinen runko ja kultainen kupoli; sen takana ja oikealla keskustan tiheä kattomeri kaukana: vaaleita, keltaisia ja harmaita kerrostaloja, puistojen vihreitä kaistoja ja Kremlin tornien ja kultakupolien pieniä siluetteja utuun häivytettyinä (ilman lippuja, tähtiä tai muita tunnuksia). Autot ja kävelijät vain pieninä pisteinä kaukana alhaalla. Kulma: vaakakuva, kamera kaiteen takana silmänkorkeudelta, hieman alaspäin, katse koilliseen (suunta noin 42 astetta; näkökulma enintään noin 45 astetta: vasen reuna noin 20 astetta, oikea reuna noin 65 astetta). Katedraali jää keskelle ja Kremlin tornit ja kultakupolit heti sen oikealle puolelle; Moscow Cityn pilvenpiirtäjät (luoteessa), Lužnikin stadion ja Novodevitšin luostari (pohjoisessa) sekä Moskovan yliopiston päärakennus (kameran takana lounaassa) jäävät kuvan ulkopuolelle. Valo: kirkas mutta pehmeä aamupäivän valo, ohut kaupunkiutu kaukana, vaimeat värit, ei HDR:ää. Ei saa näkyä: lippuja (ei yhtään lippua, ei Kremlin Senaatin palatsin lippua), tähtiä tai muita neuvostosymboleja erottuvina, sotilaita, sotilasajoneuvoja, sota- tai voittomuistomerkkejä, patsaita (ei Lenin-patsasta), Lužnikin stadionia, Novodevitšin luostaria, Moskovan yliopiston päärakennusta, Ukraina-hotellia, Smolenskajan aukion tai Kotelnitšeskaja-rannan Stalinin pilvenpiirtäjiä tai muita korkeita rakennuksia erottuvina, Ostankinon TV-tornia, Moscow Cityn pilvenpiirtäjiä, Varpuskukkulan kirkkoa, hiihtohyppyrimäkeä, köysirataa, ihmisiä lähellä tai tunnistettavia kasvoja, tekstiä, kylttejä, mainoksia, logoja, vesileimaa, kehystä, ilotulitusta, drooneja. Fotorealistinen havainnekuva, vaimeat värit, 1536 x 1024.\nKuvateksti-ehdotus (loppuu sanaan Havainnekuva.): Moskovan kattomeri ja joen mutka Varpuskukkulan näköalatasanteelta koilliseen päivällä, Vapahtajan katedraali kaukana. Havainnekuva.\n\n",
+      "sourceVersions": [
+        {
+          "path": "posti/fable-codex-saapumisintro-uudet-6-8-loput-2-20261013.md",
+          "commit": "dbdaff9a39fa0e5052f176c890c85836e1a69a1f",
+          "blob": "2e5adc4cb04a23fcb4cd8fdd75426ac78afdcc9d",
+          "readInFull": true
+        }
+      ],
+      "ownerThreadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+      "hostId": "local",
+      "generationCap": 1,
+      "status": "QA-R2-delivered-for-PT-review",
+      "productionStarted": false,
+      "delivered": true,
+      "city": "MOSKOVA",
+      "gameID": "moskova",
+      "part": 2,
+      "sourceBlob": "2e5adc4cb04a23fcb4cd8fdd75426ac78afdcc9d",
+      "sourceCommit": "dbdaff9a39fa0e5052f176c890c85836e1a69a1f",
+      "sourcePath": "posti/fable-codex-saapumisintro-uudet-6-8-loput-2-20261013.md",
+      "sourceNasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/sources/fable-codex-saapumisintro-uudet-6-8-loput-2-20261013.md",
+      "sourceCharacterSpan": [
+        49302,
+        51780
+      ],
+      "sourceByteSpan": [
+        51147,
+        53718
+      ],
+      "fullDeliveryRequirementSHA256": "4190aff0a33a496fa56285aa75559db6fc2c28a4e9f32a40894d7ddbfbb36cb1",
+      "fullDirective": "Moskovan panoraama Varpuskukkulan (Vorobjovy Gory) näköalatasanteelta kirkkaana kesäpäivänä (nykyaikainen värivalokuva). Etualalla kuvan alareunassa vain kapea kaistale vaaleaa kivikaidetta ja jyrkän rinteen puiden vihreitä latvoja, ei ihmisiä lähellä. Alhaalla laaja Moskva-joen mutka vihreine rantametsineen ja puistoineen. Keskellä kuvan taustalla pienenä ja utuisena Kristuksen Vapahtajan katedraalin valkoinen runko ja kultainen kupoli; sen takana ja oikealla keskustan tiheä kattomeri kaukana: vaaleita, keltaisia ja harmaita kerrostaloja, puistojen vihreitä kaistoja ja Kremlin tornien ja kultakupolien pieniä siluetteja utuun häivytettyinä (ilman lippuja, tähtiä tai muita tunnuksia). Autot ja kävelijät vain pieninä pisteinä kaukana alhaalla. Kulma: vaakakuva, kamera kaiteen takana silmänkorkeudelta, hieman alaspäin, katse koilliseen (suunta noin 42 astetta; näkökulma enintään noin 45 astetta: vasen reuna noin 20 astetta, oikea reuna noin 65 astetta). Katedraali jää keskelle ja Kremlin tornit ja kultakupolit heti sen oikealle puolelle; Moscow Cityn pilvenpiirtäjät (luoteessa), Lužnikin stadion ja Novodevitšin luostari (pohjoisessa) sekä Moskovan yliopiston päärakennus (kameran takana lounaassa) jäävät kuvan ulkopuolelle. Valo: kirkas mutta pehmeä aamupäivän valo, ohut kaupunkiutu kaukana, vaimeat värit, ei HDR:ää. Ei saa näkyä: lippuja (ei yhtään lippua, ei Kremlin Senaatin palatsin lippua), tähtiä tai muita neuvostosymboleja erottuvina, sotilaita, sotilasajoneuvoja, sota- tai voittomuistomerkkejä, patsaita (ei Lenin-patsasta), Lužnikin stadionia, Novodevitšin luostaria, Moskovan yliopiston päärakennusta, Ukraina-hotellia, Smolenskajan aukion tai Kotelnitšeskaja-rannan Stalinin pilvenpiirtäjiä tai muita korkeita rakennuksia erottuvina, Ostankinon TV-tornia, Moscow Cityn pilvenpiirtäjiä, Varpuskukkulan kirkkoa, hiihtohyppyrimäkeä, köysirataa, ihmisiä lähellä tai tunnistettavia kasvoja, tekstiä, kylttejä, mainoksia, logoja, vesileimaa, kehystä, ilotulitusta, drooneja. Fotorealistinen havainnekuva, vaimeat värit, 1536 x 1024.",
+      "caption": "Moskovan kattomeri ja joen mutka Varpuskukkulan näköalatasanteelta koilliseen päivällä, Vapahtajan katedraali kaukana. Havainnekuva.",
+      "sourceReadInFullVerified": true,
+      "mappingBlockExactSourceMatch": true,
+      "r2Prefix": "julisteet/saapumisintro/moscow/20261013-uudet-6-8/",
+      "deliveryManifestPath": "posti/kuvatoimitus-saapumisintro-moscow-uudet-6-8-20261013.json",
+      "partDeliveryReportPath": "posti/codex-fable-saapumisintro-uudet-6-8-loput-2-20261013.md",
+      "generationCallsRecorded": 0,
+      "qaAcceptedVerified": true,
+      "r2BytesVerified": true,
+      "mailboxDeliveryVerified": false,
+      "ownerAcceptanceVerified": false,
+      "acceptanceRoute": "PT acts for owner; source authorizes direct delivery. Actual PT acceptance remains evidence-dependent.",
+      "gameIntegrated": false,
+      "published": false,
+      "r2Key": "julisteet/saapumisintro/moscow/20261013-uudet-6-8/moscow-6-nakoala-intro-v1.png",
+      "historical": false,
+      "id": "moscow-6-nakoala-intro-v1",
+      "sourceReadInFull": true,
+      "cityName": "MOSKOVA",
+      "gameCityId": "moskova",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/moscow/native-6.png",
+      "nativeSHA256": "5acd0575fb9ab65b0e561b2613facdd06b49f8e3aee12e31c793bd5fa1ccfb47",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/moscow/moscow-6-nakoala-intro-v1.png",
+      "workspacePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/eurooppa-introt-uudet68-loput-20261013/moscow/moscow-6-nakoala-intro-v1.png",
+      "sha256": "cd49a6613d3931c09089e0ffb9567ace1d3df0462ee4cfe61949cc249da4fc08",
+      "width": 1536,
+      "height": 1024,
+      "opaque": true,
+      "sRGB": true,
+      "neutralGrayscale": false,
+      "pixelIdentityAfterMetadataExport": true,
+      "pixelIdentityToNative": true,
+      "historicalGrayscaleEncodingNormalized": false,
+      "exportProcessing": "Metadata/sRGB only; pixels unchanged",
+      "generationPrompt": "Create exactly one original, contemporary COLOR photographic-looking illustrative image. Output a single landscape PNG at exactly 1536x1024, opaque RGB, natural camera perspective. No collage, borders or text overlays. The scene must follow ALL of the following exact Finnish scene instructions, including direction, geometry, exclusions, scale, vehicle movement and materials:\n\nMoskovan panoraama Varpuskukkulan (Vorobjovy Gory) näköalatasanteelta kirkkaana kesäpäivänä (nykyaikainen värivalokuva). Etualalla kuvan alareunassa vain kapea kaistale vaaleaa kivikaidetta ja jyrkän rinteen puiden vihreitä latvoja, ei ihmisiä lähellä. Alhaalla laaja Moskva-joen mutka vihreine rantametsineen ja puistoineen. Keskellä kuvan taustalla pienenä ja utuisena Kristuksen Vapahtajan katedraalin valkoinen runko ja kultainen kupoli; sen takana ja oikealla keskustan tiheä kattomeri kaukana: vaaleita, keltaisia ja harmaita kerrostaloja, puistojen vihreitä kaistoja ja Kremlin tornien ja kultakupolien pieniä siluetteja utuun häivytettyinä (ilman lippuja, tähtiä tai muita tunnuksia). Autot ja kävelijät vain pieninä pisteinä kaukana alhaalla. Kulma: vaakakuva, kamera kaiteen takana silmänkorkeudelta, hieman alaspäin, katse koilliseen (suunta noin 42 astetta; näkökulma enintään noin 45 astetta: vasen reuna noin 20 astetta, oikea reuna noin 65 astetta). Katedraali jää keskelle ja Kremlin tornit ja kultakupolit heti sen oikealle puolelle; Moscow Cityn pilvenpiirtäjät (luoteessa), Lužnikin stadion ja Novodevitšin luostari (pohjoisessa) sekä Moskovan yliopiston päärakennus (kameran takana lounaassa) jäävät kuvan ulkopuolelle. Valo: kirkas mutta pehmeä aamupäivän valo, ohut kaupunkiutu kaukana, vaimeat värit, ei HDR:ää. Ei saa näkyä: lippuja (ei yhtään lippua, ei Kremlin Senaatin palatsin lippua), tähtiä tai muita neuvostosymboleja erottuvina, sotilaita, sotilasajoneuvoja, sota- tai voittomuistomerkkejä, patsaita (ei Lenin-patsasta), Lužnikin stadionia, Novodevitšin luostaria, Moskovan yliopiston päärakennusta, Ukraina-hotellia, Smolenskajan aukion tai Kotelnitšeskaja-rannan Stalinin pilvenpiirtäjiä tai muita korkeita rakennuksia erottuvina, Ostankinon TV-tornia, Moscow Cityn pilvenpiirtäjiä, Varpuskukkulan kirkkoa, hiihtohyppyrimäkeä, köysirataa, ihmisiä lähellä tai tunnistettavia kasvoja, tekstiä, kylttejä, mainoksia, logoja, vesileimaa, kehystä, ilotulitusta, drooneja. Fotorealistinen havainnekuva, vaimeat värit, 1536 x 1024.\n\nThis is present-day life, not a historical reconstruction. Use restrained realistic natural light and subtle natural colour, genuine irregular surfaces and vegetation, no CGI/render/painting/HDR look. Do not invent extra landmarks or recognizable buildings outside the requested view; prohibited background features are equally prohibited. No legible text or numbers anywhere, no vehicle emblems/branding/flags, advertisements or identifiable close faces. Keep the whole requested scene in one coherent physical camera frame. Do not write the caption inside the image. No additional variants or edits.\n\nCritical framing: camera from Sparrow Hills facing northeast 42 degrees, restricted 45-degree horizontal field 20–65 degrees. Only a THIN lower-edge stone rail/tree canopy; broad river bend below, low distant city with the small white/gold Cathedral of Christ the Saviour center and small Kremlin silhouettes immediately right. Entirely exclude Luzhniki stadium, Novodevichy convent, Moscow State University, Moscow City, Stalin high-rises and any tower outside this sector. No flag, red star, propaganda symbol, soldier or war monument anywhere. Never insert a skyline icon just for recognition.\n",
+      "sourceReadReceiptPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/source-read-receipt.json",
+      "references": [
+        {
+          "kind": "exact-production-brief",
+          "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/sources/fable-codex-saapumisintro-uudet-6-8-loput-2-20261013.md",
+          "gitPath": "posti/fable-codex-saapumisintro-uudet-6-8-loput-2-20261013.md",
+          "commit": "dbdaff9a39fa0e5052f176c890c85836e1a69a1f",
+          "blob": "2e5adc4cb04a23fcb4cd8fdd75426ac78afdcc9d",
+          "sourceByteSpan": [
+            51147,
+            53718
+          ],
+          "fullRequirementSHA256": "4190aff0a33a496fa56285aa75559db6fc2c28a4e9f32a40894d7ddbfbb36cb1",
+          "use": "Text scene constraint, not a copyright photograph or image passed to generator."
+        },
+        {
+          "kind": "own-architectural-geographic-knowledge",
+          "use": "New image from scratch; no external visual reference supplied, no Google data used.",
+          "independentSurveyClaim": false
+        }
+      ],
+      "qaPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/moscow/qa-6.json",
+      "producerPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/moscow/producer-6.json",
+      "producerQAAccepted": true,
+      "producerQAVerdict": "accepted",
+      "actualGenerationCalls": 1,
+      "url": "https://media.matkakirja.app/julisteet/saapumisintro/moscow/20261013-uudet-6-8/moscow-6-nakoala-intro-v1.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/moscow/20261013-uudet-6-8/moscow-6-nakoala-intro-v1.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "QA": {
+        "slot": 6,
+        "taskNumber": 201,
+        "assetID": "moscow-6-nakoala-intro-v1",
+        "targetJsonPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/moscow/asset-6.json",
+        "nativeSHA256": "5acd0575fb9ab65b0e561b2613facdd06b49f8e3aee12e31c793bd5fa1ccfb47",
+        "finalSHA256": "cd49a6613d3931c09089e0ffb9567ace1d3df0462ee4cfe61949cc249da4fc08",
+        "verdict": "accepted",
+        "reason": "Moskva-joen mutka, keskellä pieni vaalea kultakupolinen katedraali ja oikealla Kremlin pieni siluetti näkyvät. Ei havaittavaa lippua, tähteä, stadionia, yliopistotornia tai kiellettyä pilvenpiirtäjää.",
+        "reviewer": "/root",
+        "reviewedAt": "2026-10-13T17:51:56.434281+00:00",
+        "nativeViewedInFull": true,
+        "assignedSourceCardReadInFull": true,
+        "nativePixelsEqualFinalVerified": true,
+        "technicalPassed": true,
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "published": false
+      },
+      "R2Proof": {
+        "slot": 6,
+        "r2Key": "julisteet/saapumisintro/moscow/20261013-uudet-6-8/moscow-6-nakoala-intro-v1.png",
+        "url": "https://media.matkakirja.app/julisteet/saapumisintro/moscow/20261013-uudet-6-8/moscow-6-nakoala-intro-v1.png",
+        "sha256": "cd49a6613d3931c09089e0ffb9567ace1d3df0462ee4cfe61949cc249da4fc08",
+        "nativeSHA256": "5acd0575fb9ab65b0e561b2613facdd06b49f8e3aee12e31c793bd5fa1ccfb47",
+        "bytes": 2823714,
+        "readbacks": [
+          {
+            "http": 200,
+            "byteExact": true,
+            "sha256": "cd49a6613d3931c09089e0ffb9567ace1d3df0462ee4cfe61949cc249da4fc08",
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "cacheBusted": false
+          },
+          {
+            "http": 200,
+            "byteExact": true,
+            "sha256": "cd49a6613d3931c09089e0ffb9567ace1d3df0462ee4cfe61949cc249da4fc08",
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "cacheBusted": true
+          }
+        ],
+        "byteExactReadback": true,
+        "verifiedAt": "2026-10-13T17:52:00.035516+00:00"
+      },
+      "FableReceiptVerified": false
+    },
+    {
+      "taskNumber": 202,
+      "mediaSlug": "moscow",
+      "slot": 8,
+      "filename": "moscow-8-kulkuneuvo-intro-v1.png",
+      "title": "kaupungin oma kulkuneuvo liikkeessä — Moskovan metrojuna Lužnikin metrosillalla Moskva-joen yllä.",
+      "fullDeliveryRequirement": "**8 / kaupungin oma kulkuneuvo liikkeessä — Moskovan metrojuna Lužnikin metrosillalla Moskva-joen yllä.** Tiedosto `moscow-8-kulkuneuvo-intro-v1.png`.\nMitä kuvataan: Lužnikin metrosilta Moskva-joen yllä päivällä (nykyaikainen värivalokuva): matala, pitkä, kaksikerroksinen betonikaarisilta, jonka yläkannella kulkee ajotie ja alakerrassa metrolinja; alakerran pitkä lasiseinäinen halli on silta-aseman rakenne, jonka lasin läpi erottuu selvästi liikkuva yksivärinen metrojuna sivulta katsottuna; juna on kuvan pääaihe ja täyttää suuren osan hallin pituudesta. Juna on vaalea harmaanvalkoinen, matala ja tavallinen kaupunkimetrojuna, pyöreäkulmainen etu, ei raitoja, ei brändimaalauksia, ei mainoksia, ei logoja; junan otsassa ja kyljessä ei numeroita, kirjaimia, reittinäyttöjä eikä mitään tekstiä. Sillan toisessa päässä jyrkkä vihreä puinen rinne (Varpuskukkulan juuri), edessä joen tumma vesi, jossa sillan heijastus. Ihmiset vain pieninä hahmoina (muutama kävelijä kaukana rantatiellä, selin tai kaukaa, ei tunnistettavia kasvoja). Kulma: vaakakuva, kamera joen rantapolulta noin 150–200 metrin päässä sillasta, silta nähtynä viistosti sivulta, kolme neljännestä sivusta, silta kulkee kuvan poikki vasemmalta oikealle ja täyttää noin kolme neljännestä kuvan leveydestä; kameran korkeus noin 1,5–2 m, juna hieman liikkeessä (kevyt liikesumennus lasin takana, silta itse terävä). Valo: pehmeä kesäpäivä, ohut kaupunkiutu, vaimeat värit, ei HDR:ää. Ei saa näkyä: lippuja, tähtiä tai muita neuvostosymboleja, sotilaita, sotilasajoneuvoja, sota- tai voittomuistomerkkejä, patsaita (ei Lenin-patsasta), Lužnikin stadionia, Moskovan yliopiston päärakennusta, Stalinin pilvenpiirtäjiä, kirkkoja, tekstiä, asemakylttejä, metron M-tunnusta, mainoksia, logoja, auton rekisterikilpiä, vesileimaa eikä kehystä; ajoneuvoliikenne sillan yläkannella vain kaukana ja merkittömänä. Fotorealistinen havainnekuva, vaimeat värit, 1536 x 1024.\nKuvateksti-ehdotus (loppuu sanaan Havainnekuva.): Moskovan metrojuna Lužnikin metrosillalla Moskva-joen yllä. Havainnekuva.\n\n",
+      "sourceVersions": [
+        {
+          "path": "posti/fable-codex-saapumisintro-uudet-6-8-loput-2-20261013.md",
+          "commit": "dbdaff9a39fa0e5052f176c890c85836e1a69a1f",
+          "blob": "2e5adc4cb04a23fcb4cd8fdd75426ac78afdcc9d",
+          "readInFull": true
+        }
+      ],
+      "ownerThreadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+      "hostId": "local",
+      "generationCap": 1,
+      "status": "QA-R2-delivered-for-PT-review",
+      "productionStarted": false,
+      "delivered": true,
+      "city": "MOSKOVA",
+      "gameID": "moskova",
+      "part": 2,
+      "sourceBlob": "2e5adc4cb04a23fcb4cd8fdd75426ac78afdcc9d",
+      "sourceCommit": "dbdaff9a39fa0e5052f176c890c85836e1a69a1f",
+      "sourcePath": "posti/fable-codex-saapumisintro-uudet-6-8-loput-2-20261013.md",
+      "sourceNasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/sources/fable-codex-saapumisintro-uudet-6-8-loput-2-20261013.md",
+      "sourceCharacterSpan": [
+        51780,
+        53831
+      ],
+      "sourceByteSpan": [
+        53718,
+        55863
+      ],
+      "fullDeliveryRequirementSHA256": "f868110aadf63729dd9c5ffb0e77216b3144ef577d66e792eae6d79d5dcfd899",
+      "fullDirective": "Lužnikin metrosilta Moskva-joen yllä päivällä (nykyaikainen värivalokuva): matala, pitkä, kaksikerroksinen betonikaarisilta, jonka yläkannella kulkee ajotie ja alakerrassa metrolinja; alakerran pitkä lasiseinäinen halli on silta-aseman rakenne, jonka lasin läpi erottuu selvästi liikkuva yksivärinen metrojuna sivulta katsottuna; juna on kuvan pääaihe ja täyttää suuren osan hallin pituudesta. Juna on vaalea harmaanvalkoinen, matala ja tavallinen kaupunkimetrojuna, pyöreäkulmainen etu, ei raitoja, ei brändimaalauksia, ei mainoksia, ei logoja; junan otsassa ja kyljessä ei numeroita, kirjaimia, reittinäyttöjä eikä mitään tekstiä. Sillan toisessa päässä jyrkkä vihreä puinen rinne (Varpuskukkulan juuri), edessä joen tumma vesi, jossa sillan heijastus. Ihmiset vain pieninä hahmoina (muutama kävelijä kaukana rantatiellä, selin tai kaukaa, ei tunnistettavia kasvoja). Kulma: vaakakuva, kamera joen rantapolulta noin 150–200 metrin päässä sillasta, silta nähtynä viistosti sivulta, kolme neljännestä sivusta, silta kulkee kuvan poikki vasemmalta oikealle ja täyttää noin kolme neljännestä kuvan leveydestä; kameran korkeus noin 1,5–2 m, juna hieman liikkeessä (kevyt liikesumennus lasin takana, silta itse terävä). Valo: pehmeä kesäpäivä, ohut kaupunkiutu, vaimeat värit, ei HDR:ää. Ei saa näkyä: lippuja, tähtiä tai muita neuvostosymboleja, sotilaita, sotilasajoneuvoja, sota- tai voittomuistomerkkejä, patsaita (ei Lenin-patsasta), Lužnikin stadionia, Moskovan yliopiston päärakennusta, Stalinin pilvenpiirtäjiä, kirkkoja, tekstiä, asemakylttejä, metron M-tunnusta, mainoksia, logoja, auton rekisterikilpiä, vesileimaa eikä kehystä; ajoneuvoliikenne sillan yläkannella vain kaukana ja merkittömänä. Fotorealistinen havainnekuva, vaimeat värit, 1536 x 1024.",
+      "caption": "Moskovan metrojuna Lužnikin metrosillalla Moskva-joen yllä. Havainnekuva.",
+      "sourceReadInFullVerified": true,
+      "mappingBlockExactSourceMatch": true,
+      "r2Prefix": "julisteet/saapumisintro/moscow/20261013-uudet-6-8/",
+      "deliveryManifestPath": "posti/kuvatoimitus-saapumisintro-moscow-uudet-6-8-20261013.json",
+      "partDeliveryReportPath": "posti/codex-fable-saapumisintro-uudet-6-8-loput-2-20261013.md",
+      "generationCallsRecorded": 0,
+      "qaAcceptedVerified": true,
+      "r2BytesVerified": true,
+      "mailboxDeliveryVerified": false,
+      "ownerAcceptanceVerified": false,
+      "acceptanceRoute": "PT acts for owner; source authorizes direct delivery. Actual PT acceptance remains evidence-dependent.",
+      "gameIntegrated": false,
+      "published": false,
+      "r2Key": "julisteet/saapumisintro/moscow/20261013-uudet-6-8/moscow-8-kulkuneuvo-intro-v1.png",
+      "historical": false,
+      "id": "moscow-8-kulkuneuvo-intro-v1",
+      "sourceReadInFull": true,
+      "cityName": "MOSKOVA",
+      "gameCityId": "moskova",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/moscow/native-8.png",
+      "nativeSHA256": "50ad6ddb5113fc19c55f4d44f16409bbbcfb11d0d43b8b25e752bad127c54504",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/moscow/moscow-8-kulkuneuvo-intro-v1.png",
+      "workspacePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/eurooppa-introt-uudet68-loput-20261013/moscow/moscow-8-kulkuneuvo-intro-v1.png",
+      "sha256": "382d78ddefe54a4bf76a38e7b61e33f28e6b604f4a8d7e6e9f64a63327031325",
+      "width": 1536,
+      "height": 1024,
+      "opaque": true,
+      "sRGB": true,
+      "neutralGrayscale": false,
+      "pixelIdentityAfterMetadataExport": true,
+      "pixelIdentityToNative": true,
+      "historicalGrayscaleEncodingNormalized": false,
+      "exportProcessing": "Metadata/sRGB only; pixels unchanged",
+      "generationPrompt": "Create exactly one original, contemporary COLOR photographic-looking illustrative image. Output a single landscape PNG at exactly 1536x1024, opaque RGB, natural camera perspective. No collage, borders or text overlays. The scene must follow ALL of the following exact Finnish scene instructions, including direction, geometry, exclusions, scale, vehicle movement and materials:\n\nLužnikin metrosilta Moskva-joen yllä päivällä (nykyaikainen värivalokuva): matala, pitkä, kaksikerroksinen betonikaarisilta, jonka yläkannella kulkee ajotie ja alakerrassa metrolinja; alakerran pitkä lasiseinäinen halli on silta-aseman rakenne, jonka lasin läpi erottuu selvästi liikkuva yksivärinen metrojuna sivulta katsottuna; juna on kuvan pääaihe ja täyttää suuren osan hallin pituudesta. Juna on vaalea harmaanvalkoinen, matala ja tavallinen kaupunkimetrojuna, pyöreäkulmainen etu, ei raitoja, ei brändimaalauksia, ei mainoksia, ei logoja; junan otsassa ja kyljessä ei numeroita, kirjaimia, reittinäyttöjä eikä mitään tekstiä. Sillan toisessa päässä jyrkkä vihreä puinen rinne (Varpuskukkulan juuri), edessä joen tumma vesi, jossa sillan heijastus. Ihmiset vain pieninä hahmoina (muutama kävelijä kaukana rantatiellä, selin tai kaukaa, ei tunnistettavia kasvoja). Kulma: vaakakuva, kamera joen rantapolulta noin 150–200 metrin päässä sillasta, silta nähtynä viistosti sivulta, kolme neljännestä sivusta, silta kulkee kuvan poikki vasemmalta oikealle ja täyttää noin kolme neljännestä kuvan leveydestä; kameran korkeus noin 1,5–2 m, juna hieman liikkeessä (kevyt liikesumennus lasin takana, silta itse terävä). Valo: pehmeä kesäpäivä, ohut kaupunkiutu, vaimeat värit, ei HDR:ää. Ei saa näkyä: lippuja, tähtiä tai muita neuvostosymboleja, sotilaita, sotilasajoneuvoja, sota- tai voittomuistomerkkejä, patsaita (ei Lenin-patsasta), Lužnikin stadionia, Moskovan yliopiston päärakennusta, Stalinin pilvenpiirtäjiä, kirkkoja, tekstiä, asemakylttejä, metron M-tunnusta, mainoksia, logoja, auton rekisterikilpiä, vesileimaa eikä kehystä; ajoneuvoliikenne sillan yläkannella vain kaukana ja merkittömänä. Fotorealistinen havainnekuva, vaimeat värit, 1536 x 1024.\n\nThis is present-day life, not a historical reconstruction. Use restrained realistic natural light and subtle natural colour, genuine irregular surfaces and vegetation, no CGI/render/painting/HDR look. Do not invent extra landmarks or recognizable buildings outside the requested view; prohibited background features are equally prohibited. No legible text or numbers anywhere, no vehicle emblems/branding/flags, advertisements or identifiable close faces. Keep the whole requested scene in one coherent physical camera frame. Do not write the caption inside the image. No additional variants or edits.\n\nPriority: an ordinary long LOW TWO-LEVEL CONCRETE BRIDGE spanning the Moskva River, road on upper deck and clearly visible light-grey metro train behind the long lower-level glazed station wall. The bridge occupies about three quarters of image width; camera bank distance 150–200m, slight oblique side view at 1.5–2m eye height. The vehicle is seen THROUGH GLASS on the lower bridge level, never on the road deck, no impossible duplicated rails. Green wooded steep bank at one end. No stadium, university, high-rise, church, flag, red star, M-logo, word or number anywhere.\n",
+      "sourceReadReceiptPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/source-read-receipt.json",
+      "references": [
+        {
+          "kind": "exact-production-brief",
+          "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/sources/fable-codex-saapumisintro-uudet-6-8-loput-2-20261013.md",
+          "gitPath": "posti/fable-codex-saapumisintro-uudet-6-8-loput-2-20261013.md",
+          "commit": "dbdaff9a39fa0e5052f176c890c85836e1a69a1f",
+          "blob": "2e5adc4cb04a23fcb4cd8fdd75426ac78afdcc9d",
+          "sourceByteSpan": [
+            53718,
+            55863
+          ],
+          "fullRequirementSHA256": "f868110aadf63729dd9c5ffb0e77216b3144ef577d66e792eae6d79d5dcfd899",
+          "use": "Text scene constraint, not a copyright photograph or image passed to generator."
+        },
+        {
+          "kind": "own-architectural-geographic-knowledge",
+          "use": "New image from scratch; no external visual reference supplied, no Google data used.",
+          "independentSurveyClaim": false
+        }
+      ],
+      "qaPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/moscow/qa-8.json",
+      "producerPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/moscow/producer-8.json",
+      "producerQAAccepted": true,
+      "producerQAVerdict": "accepted",
+      "actualGenerationCalls": 1,
+      "url": "https://media.matkakirja.app/julisteet/saapumisintro/moscow/20261013-uudet-6-8/moscow-8-kulkuneuvo-intro-v1.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/moscow/20261013-uudet-6-8/moscow-8-kulkuneuvo-intro-v1.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "QA": {
+        "slot": 8,
+        "taskNumber": 202,
+        "assetID": "moscow-8-kulkuneuvo-intro-v1",
+        "targetJsonPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/moscow/asset-8.json",
+        "nativeSHA256": "50ad6ddb5113fc19c55f4d44f16409bbbcfb11d0d43b8b25e752bad127c54504",
+        "finalSHA256": "382d78ddefe54a4bf76a38e7b61e33f28e6b604f4a8d7e6e9f64a63327031325",
+        "verdict": "accepted",
+        "reason": "Kaksikerroksinen betonikaarisilta, yläkannen ajotie ja lasitetun alakannen sisäinen pitkä vaalea metrojuna toteutuvat kameramaisina. Ei havaittavaa tekstiä, logoa tai poliittista tunnusta. Silta ulottuu kehyksen reunoihin; se on likimääräistä kolmen neljäsosan sommittelua leveämpi, mutta hallin sisällä oleva juna ja joenrantapaikka erottuvat selkeästi.",
+        "reviewer": "/root",
+        "reviewedAt": "2026-10-13T17:51:56.434281+00:00",
+        "nativeViewedInFull": true,
+        "assignedSourceCardReadInFull": true,
+        "nativePixelsEqualFinalVerified": true,
+        "technicalPassed": true,
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "published": false
+      },
+      "R2Proof": {
+        "slot": 8,
+        "r2Key": "julisteet/saapumisintro/moscow/20261013-uudet-6-8/moscow-8-kulkuneuvo-intro-v1.png",
+        "url": "https://media.matkakirja.app/julisteet/saapumisintro/moscow/20261013-uudet-6-8/moscow-8-kulkuneuvo-intro-v1.png",
+        "sha256": "382d78ddefe54a4bf76a38e7b61e33f28e6b604f4a8d7e6e9f64a63327031325",
+        "nativeSHA256": "50ad6ddb5113fc19c55f4d44f16409bbbcfb11d0d43b8b25e752bad127c54504",
+        "bytes": 2558129,
+        "readbacks": [
+          {
+            "http": 200,
+            "byteExact": true,
+            "sha256": "382d78ddefe54a4bf76a38e7b61e33f28e6b604f4a8d7e6e9f64a63327031325",
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "cacheBusted": false
+          },
+          {
+            "http": 200,
+            "byteExact": true,
+            "sha256": "382d78ddefe54a4bf76a38e7b61e33f28e6b604f4a8d7e6e9f64a63327031325",
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "cacheBusted": true
+          }
+        ],
+        "byteExactReadback": true,
+        "verifiedAt": "2026-10-13T17:52:02.511171+00:00"
+      },
+      "FableReceiptVerified": false
+    }
+  ],
+  "omittedItems": [],
+  "actualCalls": 2,
+  "maximumGenerationCalls": 2,
+  "allRequestedItemsHandled": true,
+  "allRequestedImagesDelivered": true,
+  "productionCompleteWithinSourceLimit": true,
+  "directMailboxDeliveryAuthorized": true,
+  "acceptanceRoute": "Päätoimittaja reviews on the owner authority in the exact source. This authorization is not yet an actual acceptance receipt.",
+  "ownerAcceptanceVerified": false,
+  "FableReceiptVerified": false,
+  "gameIntegrated": false,
+  "published": false,
+  "oldFiveApprovedPilotImagesPreserved": true,
+  "oldCelebrationAnd1873TopicsRemainWithdrawn": true,
+  "existingHeroSlotsPreserved": [
+    1,
+    2,
+    3
+  ],
+  "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+  "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+  "newTopics": {
+    "6": "daytime-city-panorama",
+    "8": "local-transport-in-motion"
+  }
+}
