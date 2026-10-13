@@ -1,0 +1,52 @@
+{
+  "recordedAt": "2026-10-13T17:48:08.357652+00:00",
+  "state": "ALOITETTU",
+  "taskNumbers": [
+    228,
+    229
+  ],
+  "sourceCommit": "b1b84a6c8a34e8e459aa1cb5afd704c6fe92be36",
+  "sourcePath": "posti/fable-codex-paakaupungit.md",
+  "sourceBlob": "6fc0de0dd4fe669b5958e8cf29c4cc51f1fc9a31",
+  "sourceSHA256": "c5a2cbbdd78b156417df787dc0aa6376caedf662a7116f80577adc7dd7c75321",
+  "sourceReadInFull": true,
+  "correctionListPath": "posti/fable-codex-paakaupungit-korjauslista2-20261013.md",
+  "correctionListBlob": "885bae1aaa22ee4c6463acc77b59aba75c1485bb",
+  "correctionListSHA256": "54be6e14560f8013842ff8a667ee4e7f784ffa0c526a7ba278b9e22670719c13",
+  "workAssignment": {
+    "e04": "root",
+    "e05-e14": "existing internal agents in current eNN source branches"
+  },
+  "scopeCities": 93,
+  "round2CorrectionStarted": true,
+  "actualCorrectionDeliveryVerified": false,
+  "correctionDeliverySHAsPending": true,
+  "deliveredSourceBranchCommits": [],
+  "NouakchottPartialJMAContract": {
+    "task": 229,
+    "state": "started-only",
+    "source": "JMA",
+    "period": "1991–2020",
+    "allowedDataFields": [
+      "keskilampo",
+      "sade"
+    ],
+    "requiredSourceFields": {
+      "lahde.nimi": "JMA",
+      "lahde.kausi": "1991–2020"
+    },
+    "omitDataFields": [
+      "ylin",
+      "alin"
+    ],
+    "estimatedDataAllowed": false,
+    "actualCChangeVerifiedByPublisher": false
+  },
+  "priorImagesPreserved": true,
+  "task118DeliveryReceiptsPreserved": true,
+  "SitesChanged": false,
+  "gameChanged": false,
+  "newAppsOrChatsCreated": false,
+  "newGenerationIssued": false,
+  "independentReviewBeforeIntegrationRequired": true
+}

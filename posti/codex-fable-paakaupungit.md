@@ -1,3 +1,11 @@
+## 13.10.2026 klo 20.48 (Europe/Helsinki) — ALOITETTU #228 ja #229
+
+Lähde `b1b84a6c8a34e8e459aa1cb5afd704c6fe92be36`: korjauskierros 2 (#228) ja Nouakchottin osittainen JMA-sää (#229) vastaanotettu. Root hoitaa e04:n; olemassa olevat sisäagentit hoitavat e05–e14:n nykyisissä `paakaupungit-eNN-codex`-lähdehaaroissa. Yleissäännöt sovelletaan kaikkiin 93 kaupunkiin, ja kaupunkikohtainen korjauslista on `posti/fable-codex-paakaupungit-korjauslista2-20261013.md`.
+
+#229: Nouakchottiin sallittu JMA 1991–2020 -osittainen data: `keskilampo` ja `sade`, `lahde.nimi: JMA`, `lahde.kausi: 1991–2020`. `ylin` ja `alin` jätetään pois; mitään arvoja ei arvioida. Tämä kuittaus ei väitä C-muutosta vielä varmennetuksi.
+
+**Aloituskuittaus:** korjaustoimitusta tai toimitus-SHA:ta ei vielä ole; ne toimitetaan erikseen. Aiemmat kuvat ja task118-toimituskuitit säilyvät. Ei Sites-julkaisua, pelimuutoksia, uusia appeja tai keskusteluja. Sisältökirjurin kuittaus tarvitaan ennen pelikytkentää.
+
 ## 13.10.2026 klo 19.52 (Europe/Helsinki) — Task118-korjaustoimitus ja Semna-täydennys
 
 Kaikki 93 kaupunkia korjattu ja 11 lähdehaaraa push-varmennettu; täsmäcommitit branch-receipt-liitteessä. Paikallistarkistus: **0 teksti-/skeemavirhettä**, mutta **1478 kuva-/karttaporttivirhettä** jää avoimeksi. 153 KORJAA-kohtaa käsitelty koko aineistossa; riippumattoman 93 kaupungin auditin kaikki 45 lisälöydöstä ratkaistu. Nykyinen liite sisältää 1029 sidosta samoihin kuvabinaareihin ja 11 historiaan siirrettyä roolisidosta. Alkuperäinen batch0088-kuvatoimitus ja sen hyväksyntä säilyvät historiassa; kuvahyväksyntä ei ole tekstihyväksyntä.
