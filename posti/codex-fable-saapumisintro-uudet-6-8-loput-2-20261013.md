@@ -1,6 +1,6 @@
 # Euroopan uudet saapumisintroaiheet — osa 2/2, 13.10.2026
 
-29 QA/R2-varmennettua kuvaa toimitettu, 11 perusteltua lopullista poisjättöä. Käsitelty 40/47 tämän osan nimetyistä kuvista; 38 generointikutsua. Tilaus on kesken, kun kaikki nimetyt kohteet eivät vielä ole käsitelty.
+30 QA/R2-varmennettua kuvaa toimitettu, 12 perusteltua lopullista poisjättöä. Käsitelty 42/47 tämän osan nimetyistä kuvista; 40 generointikutsua. Tilaus on kesken, kun kaikki nimetyt kohteet eivät vielä ole käsitelty.
 
 Koko laajennus käsittää 95 nimettyä kuvaa (#133–227): osa 1 sisältää 48 ja osa 2 47 kuvaa. Aiempi 88+1 arvio ei korvaa lähteiden nimettyä inventaariota. Yksi uusi sisäänrakennettu generointi per kuva; ei uusintoja, vertailuottoja, inpaintingia tai rajauksia.
 
@@ -143,6 +143,13 @@ Manifesti: `posti/kuvatoimitus-saapumisintro-luxembourg-uudet-6-8-20261013.json`
 
 - #220, slot 8: Luxemburgin Luxtram-raitiovaunu Kirchbergin kadulla päivällä. Havainnekuva.
 - Poisjättö #219, slot 6: Notre-Damen kaksi korkeaa tornia ovat kuvassa vierekkäin vasemmalla ja kolmas matalampi oikealla. Ohje edellyttää kahta korkeampaa tornia, joiden VÄLISSÄ on matalampi keskitorni. Pyydetty maamerkin tunnistettava kolmen tornin järjestys ei täyty.
+
+## LJUBLJANA
+
+Manifesti: `posti/kuvatoimitus-saapumisintro-ljubljana-uudet-6-8-20261013.json`. Toimitettu 1/2; kutsuja 2.
+
+- #222, slot 8: Ljubljanan linnavuoren funikulaari rinteellä päivällä. Havainnekuva.
+- Poisjättö #221, slot 6: Linnan tornin lipputangossa näkyy vihreä lippu kuvan oikeassa yläkulmassa (noin1448,92). Kuvakortti kieltää liput, joten muutoin sopivaa panoraamaa ei toimiteta.
 
 Kuvat toimitetaan suoraan lähteen mukaisesti Päätoimittajan arvioitaviksi omistajan valtuutuksella. Todellista PT/omistajahyväksyntää, Fable-vastaanottokuittausta, runtime-kytkentää tai pelijulkaisua ei väitetä varmennetuiksi. Jokaisen toimitetun kuvan natiivi on rootin tarkastama, ja R2 on luettu takaisin kahdesti (kanoninen ja välimuistin ohittava URL), tavut, PNG-MIME ja CORS varmennettu. PNG 1536×1024, sRGB, läpinäkymätön; vain ICC/metadata lisätty, pikselit säilytetty. Promptit, viitteet sekä natiivi- ja vienti-SHA ovat manifesteissa.
 

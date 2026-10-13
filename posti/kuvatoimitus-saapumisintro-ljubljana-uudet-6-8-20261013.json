@@ -1,0 +1,208 @@
+{
+  "schemaVersion": 1,
+  "cityName": "LJUBLJANA",
+  "gameCityId": "ljubljana",
+  "mediaSlug": "ljubljana",
+  "taskNumbers": [
+    221,
+    222
+  ],
+  "updatedAt": "2026-10-13T19:58:10.497835+00:00",
+  "sourcePath": "posti/fable-codex-saapumisintro-uudet-6-8-loput-2-20261013.md",
+  "sourceCommit": "dbdaff9a39fa0e5052f176c890c85836e1a69a1f",
+  "sourceBlob": "2e5adc4cb04a23fcb4cd8fdd75426ac78afdcc9d",
+  "sourceReadInFull": true,
+  "sourceReadBy": "/root/intro_owner_rejection_inventory",
+  "sourceReadReceiptPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/source-read-receipt.json",
+  "assets": [
+    {
+      "taskNumber": 222,
+      "mediaSlug": "ljubljana",
+      "slot": 8,
+      "filename": "ljubljana-8-kulkuneuvo-intro-v1.png",
+      "title": "kaupungin oma kulkuneuvo liikkeessä — Ljubljanan linnavuoren funikulaari rinteellä päivällä.",
+      "fullDeliveryRequirement": "**8 / kaupungin oma kulkuneuvo liikkeessä — Ljubljanan linnavuoren funikulaari rinteellä päivällä.** Tiedosto `ljubljana-8-kulkuneuvo-intro-v1.png`.\nMitä kuvataan: lasinen funikulaarivaunu (yksi pieni vaunu, jonka kyljet ovat suurelta osin lasia, rungon väri vaalea harmaa-valkoinen) kulkemassa jyrkkää raidetta pitkin metsäisellä kukkularinteellä päivällä, kuvattuna sivulta ja hieman alhaalta. Raide kulkee puiden välisessä aukossa, kaksi kiskoa ja välissä vetokaapeli, rinteen lehtipuita ja pensaita, ruohoa raiteen vierellä, ylhäällä rinteen päällä pieni vaalea kiviseinä ja linnarakennuksen osa epätarkkana. Alaviistossa vasemmalla pehmeästi epätarkkana vanhankaupungin punakattoinen kattomeri. Vaunun sisällä vain muutama matkustaja pienenä hahmona, ei tunnistettavia kasvoja. Vaunun otsassa ja kyljessä ei numeroita, kylttejä, logoja, mainoksia eikä tekstiä. Kulma: vaakakuva, kameran korkeus noin 1,5-2 m, raiteen sivusta viistosti etuvasemmalta, vaunu tulee kuvassa alhaalta vasemmalta ylös oikealle; vaunu täyttää noin kolmanneksen kuvan leveydestä. Valo: pehmeä iltapäivän valo, vaimeat värit, ei HDR:ää. Ei saa näkyä: tekstiä, kylttejä, mainoksia, logoja, numeroita, lippuja, alaaseman rakennusta, linnan tornin pääkuvaa, ihmisiä lähellä tai tunnistettavia kasvoja, ilotulitusta, drooneja. Fotorealistinen havainnekuva, vaimeat värit, 1536 x 1024.\nKuvateksti-ehdotus (loppuu sanaan Havainnekuva.): Ljubljanan linnavuoren funikulaari rinteellä päivällä. Havainnekuva.\n\n",
+      "sourceVersions": [
+        {
+          "path": "posti/fable-codex-saapumisintro-uudet-6-8-loput-2-20261013.md",
+          "commit": "dbdaff9a39fa0e5052f176c890c85836e1a69a1f",
+          "blob": "2e5adc4cb04a23fcb4cd8fdd75426ac78afdcc9d",
+          "readInFull": true
+        }
+      ],
+      "ownerThreadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+      "hostId": "local",
+      "generationCap": 1,
+      "status": "QA-R2-delivered-for-PT-review",
+      "productionStarted": false,
+      "delivered": true,
+      "city": "LJUBLJANA",
+      "gameID": "ljubljana",
+      "part": 2,
+      "sourceBlob": "2e5adc4cb04a23fcb4cd8fdd75426ac78afdcc9d",
+      "sourceCommit": "dbdaff9a39fa0e5052f176c890c85836e1a69a1f",
+      "sourcePath": "posti/fable-codex-saapumisintro-uudet-6-8-loput-2-20261013.md",
+      "sourceNasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/sources/fable-codex-saapumisintro-uudet-6-8-loput-2-20261013.md",
+      "sourceCharacterSpan": [
+        90532,
+        92012
+      ],
+      "sourceByteSpan": [
+        94010,
+        95554
+      ],
+      "fullDeliveryRequirementSHA256": "9f1793b4eed9a006bffa71bae53058306a75ebd9adfe17aea66d881ce0f32416",
+      "fullDirective": "lasinen funikulaarivaunu (yksi pieni vaunu, jonka kyljet ovat suurelta osin lasia, rungon väri vaalea harmaa-valkoinen) kulkemassa jyrkkää raidetta pitkin metsäisellä kukkularinteellä päivällä, kuvattuna sivulta ja hieman alhaalta. Raide kulkee puiden välisessä aukossa, kaksi kiskoa ja välissä vetokaapeli, rinteen lehtipuita ja pensaita, ruohoa raiteen vierellä, ylhäällä rinteen päällä pieni vaalea kiviseinä ja linnarakennuksen osa epätarkkana. Alaviistossa vasemmalla pehmeästi epätarkkana vanhankaupungin punakattoinen kattomeri. Vaunun sisällä vain muutama matkustaja pienenä hahmona, ei tunnistettavia kasvoja. Vaunun otsassa ja kyljessä ei numeroita, kylttejä, logoja, mainoksia eikä tekstiä. Kulma: vaakakuva, kameran korkeus noin 1,5-2 m, raiteen sivusta viistosti etuvasemmalta, vaunu tulee kuvassa alhaalta vasemmalta ylös oikealle; vaunu täyttää noin kolmanneksen kuvan leveydestä. Valo: pehmeä iltapäivän valo, vaimeat värit, ei HDR:ää. Ei saa näkyä: tekstiä, kylttejä, mainoksia, logoja, numeroita, lippuja, alaaseman rakennusta, linnan tornin pääkuvaa, ihmisiä lähellä tai tunnistettavia kasvoja, ilotulitusta, drooneja. Fotorealistinen havainnekuva, vaimeat värit, 1536 x 1024.",
+      "caption": "Ljubljanan linnavuoren funikulaari rinteellä päivällä. Havainnekuva.",
+      "sourceReadInFullVerified": true,
+      "mappingBlockExactSourceMatch": true,
+      "r2Prefix": "julisteet/saapumisintro/ljubljana/20261013-uudet-6-8/",
+      "deliveryManifestPath": "posti/kuvatoimitus-saapumisintro-ljubljana-uudet-6-8-20261013.json",
+      "partDeliveryReportPath": "posti/codex-fable-saapumisintro-uudet-6-8-loput-2-20261013.md",
+      "generationCallsRecorded": 0,
+      "qaAcceptedVerified": true,
+      "r2BytesVerified": true,
+      "mailboxDeliveryVerified": false,
+      "ownerAcceptanceVerified": false,
+      "acceptanceRoute": "PT acts for owner; source authorizes direct delivery. Actual PT acceptance remains evidence-dependent.",
+      "gameIntegrated": false,
+      "published": false,
+      "r2Key": "julisteet/saapumisintro/ljubljana/20261013-uudet-6-8/ljubljana-8-kulkuneuvo-intro-v1.png",
+      "historical": false,
+      "id": "ljubljana-8-kulkuneuvo-intro-v1",
+      "sourceReadInFull": true,
+      "cityName": "LJUBLJANA",
+      "gameCityId": "ljubljana",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/ljubljana/native-8.png",
+      "nativeSHA256": "df4b1df4da7795a1778abae9b02391fdb54bf2be6a4474b1e2c18d4b40ef60eb",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/ljubljana/ljubljana-8-kulkuneuvo-intro-v1.png",
+      "workspacePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/eurooppa-introt-uudet68-loput-20261013/ljubljana/ljubljana-8-kulkuneuvo-intro-v1.png",
+      "sha256": "eaf7d8fa77ff63122301122b3d402268a831965eed8f417518788b39e1210f2f",
+      "width": 1536,
+      "height": 1024,
+      "opaque": true,
+      "sRGB": true,
+      "neutralGrayscale": false,
+      "pixelIdentityAfterMetadataExport": true,
+      "pixelIdentityToNative": true,
+      "historicalGrayscaleEncodingNormalized": false,
+      "exportProcessing": "Metadata/sRGB only; pixels unchanged",
+      "generationPrompt": "An environmental eye-level photograph of a wooded steep hillside, with one small moving GLASS FUNICULAR CABIN as roughly one-third of image width.\nCreate exactly one original, contemporary COLOR photographic-looking illustrative image. Output a single landscape PNG at exactly 1536x1024, opaque RGB, natural camera perspective. No collage, borders or text overlays. The scene must follow ALL of the following exact Finnish scene instructions, including direction, geometry, exclusions, scale, vehicle movement and materials:\n\nlasinen funikulaarivaunu (yksi pieni vaunu, jonka kyljet ovat suurelta osin lasia, rungon väri vaalea harmaa-valkoinen) kulkemassa jyrkkää raidetta pitkin metsäisellä kukkularinteellä päivällä, kuvattuna sivulta ja hieman alhaalta. Raide kulkee puiden välisessä aukossa, kaksi kiskoa ja välissä vetokaapeli, rinteen lehtipuita ja pensaita, ruohoa raiteen vierellä, ylhäällä rinteen päällä pieni vaalea kiviseinä ja linnarakennuksen osa epätarkkana. Alaviistossa vasemmalla pehmeästi epätarkkana vanhankaupungin punakattoinen kattomeri. Vaunun sisällä vain muutama matkustaja pienenä hahmona, ei tunnistettavia kasvoja. Vaunun otsassa ja kyljessä ei numeroita, kylttejä, logoja, mainoksia eikä tekstiä. Kulma: vaakakuva, kameran korkeus noin 1,5-2 m, raiteen sivusta viistosti etuvasemmalta, vaunu tulee kuvassa alhaalta vasemmalta ylös oikealle; vaunu täyttää noin kolmanneksen kuvan leveydestä. Valo: pehmeä iltapäivän valo, vaimeat värit, ei HDR:ää. Ei saa näkyä: tekstiä, kylttejä, mainoksia, logoja, numeroita, lippuja, alaaseman rakennusta, linnan tornin pääkuvaa, ihmisiä lähellä tai tunnistettavia kasvoja, ilotulitusta, drooneja. Fotorealistinen havainnekuva, vaimeat värit, 1536 x 1024.\n\nThis is present-day life, not a historical reconstruction. Use restrained realistic natural light and subtle natural colour, genuine irregular surfaces and vegetation, no CGI/render/painting/HDR look. Do not invent extra landmarks or recognizable buildings outside the requested view; prohibited background features are equally prohibited. No legible text or numbers anywhere, no vehicle emblems/branding/flags, advertisements or identifiable close faces. Keep the whole requested scene in one coherent physical camera frame. Do not write the caption inside the image. No additional variants or edits.\n\nRail geometry priority: TWO continuous parallel steel rails with a traction cable BETWEEN, diagonal climbing from BOTTOM-LEFT toward TOP-RIGHT. One largely transparent glass cabin with plain pale-grey frame, travelling UP-RIGHT on the rails, slight low side/front-left view at1.5–2m eye height. Physically coherent level cabin floor on sloping undercarriage, tiny passengers silhouettes only. Rich natural irregular leaves/grass/woodland surround it. Small distant red-roof city lower-left, upper background only a SMALL blurred plain OLD STONE WALL and low castle-building part; absolutely no tower, mast, flagpole or flag. No stationbuilding/maincastletower, word/sign/logo/number, near person/face.\n",
+      "sourceReadReceiptPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/source-read-receipt.json",
+      "references": [
+        {
+          "kind": "exact-production-brief",
+          "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/sources/fable-codex-saapumisintro-uudet-6-8-loput-2-20261013.md",
+          "gitPath": "posti/fable-codex-saapumisintro-uudet-6-8-loput-2-20261013.md",
+          "commit": "dbdaff9a39fa0e5052f176c890c85836e1a69a1f",
+          "blob": "2e5adc4cb04a23fcb4cd8fdd75426ac78afdcc9d",
+          "sourceByteSpan": [
+            94010,
+            95554
+          ],
+          "fullRequirementSHA256": "9f1793b4eed9a006bffa71bae53058306a75ebd9adfe17aea66d881ce0f32416",
+          "use": "Text scene constraint, not a copyright photograph or image passed to generator."
+        },
+        {
+          "kind": "own-architectural-geographic-knowledge",
+          "use": "New image from scratch; no external visual reference supplied, no Google data used.",
+          "independentSurveyClaim": false
+        }
+      ],
+      "qaPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/ljubljana/qa-8.json",
+      "producerPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/ljubljana/producer-8.json",
+      "producerQAAccepted": true,
+      "producerQAVerdict": "accepted",
+      "actualGenerationCalls": 1,
+      "url": "https://media.matkakirja.app/julisteet/saapumisintro/ljubljana/20261013-uudet-6-8/ljubljana-8-kulkuneuvo-intro-v1.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/ljubljana/20261013-uudet-6-8/ljubljana-8-kulkuneuvo-intro-v1.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "QA": {
+        "slot": 8,
+        "taskNumber": 222,
+        "assetID": "ljubljana-8-kulkuneuvo-intro-v1",
+        "targetJsonPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/ljubljana/asset-8.json",
+        "nativeSHA256": "df4b1df4da7795a1778abae9b02391fdb54bf2be6a4474b1e2c18d4b40ef60eb",
+        "finalSHA256": "eaf7d8fa77ff63122301122b3d402268a831965eed8f417518788b39e1210f2f",
+        "verdict": "accepted",
+        "reason": "Pieni lasinen vaunu noin30%kuvaleveydestä, raide nousee alhaalta vasemmalta oikealle ylös, metsärinne ja pienenä pehmeä linnan seinä ylhäällä. Sisähahmot kaukaa ilman tunnistettavia kasvoja, eikä tekstiä/lippuja tai ala-asemaa.",
+        "reviewer": "/root",
+        "reviewedAt": "2026-10-13T19:57:23.157139+00:00",
+        "nativeViewedInFull": true,
+        "assignedSourceCardReadInFull": true,
+        "nativePixelsEqualFinalVerified": true,
+        "technicalPassed": true,
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "published": false
+      },
+      "R2Proof": {
+        "slot": 8,
+        "r2Key": "julisteet/saapumisintro/ljubljana/20261013-uudet-6-8/ljubljana-8-kulkuneuvo-intro-v1.png",
+        "url": "https://media.matkakirja.app/julisteet/saapumisintro/ljubljana/20261013-uudet-6-8/ljubljana-8-kulkuneuvo-intro-v1.png",
+        "sha256": "eaf7d8fa77ff63122301122b3d402268a831965eed8f417518788b39e1210f2f",
+        "nativeSHA256": "df4b1df4da7795a1778abae9b02391fdb54bf2be6a4474b1e2c18d4b40ef60eb",
+        "bytes": 3109833,
+        "readbacks": [
+          {
+            "http": 200,
+            "byteExact": true,
+            "sha256": "eaf7d8fa77ff63122301122b3d402268a831965eed8f417518788b39e1210f2f",
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "cacheBusted": false
+          },
+          {
+            "http": 200,
+            "byteExact": true,
+            "sha256": "eaf7d8fa77ff63122301122b3d402268a831965eed8f417518788b39e1210f2f",
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "cacheBusted": true
+          }
+        ],
+        "byteExactReadback": true,
+        "verifiedAt": "2026-10-13T19:58:10.416139+00:00"
+      },
+      "FableReceiptVerified": false
+    }
+  ],
+  "omittedItems": [
+    {
+      "taskNumber": 221,
+      "slot": 6,
+      "reason": "Linnan tornin lipputangossa näkyy vihreä lippu kuvan oikeassa yläkulmassa (noin1448,92). Kuvakortti kieltää liput, joten muutoin sopivaa panoraamaa ei toimiteta.",
+      "stage": "independent-QA",
+      "additionalGenerationAllowed": false,
+      "nativeSHA256": "4b2fd776aa9da1d044217a71d997cc9c7954f883b8398b8532b370694a6a1a1d",
+      "finalSHA256": "a5905dd5c7edf6bc4d9a40662ca23fe99cb7ae07961b0cdb27d8b89832a00c83"
+    }
+  ],
+  "actualCalls": 2,
+  "maximumGenerationCalls": 2,
+  "allRequestedItemsHandled": true,
+  "allRequestedImagesDelivered": false,
+  "productionCompleteWithinSourceLimit": true,
+  "directMailboxDeliveryAuthorized": true,
+  "acceptanceRoute": "Päätoimittaja reviews on the owner authority in the exact source. This authorization is not yet an actual acceptance receipt.",
+  "ownerAcceptanceVerified": false,
+  "FableReceiptVerified": false,
+  "gameIntegrated": false,
+  "published": false,
+  "oldFiveApprovedPilotImagesPreserved": true,
+  "oldCelebrationAnd1873TopicsRemainWithdrawn": true,
+  "existingHeroSlotsPreserved": [
+    1,
+    2,
+    3
+  ],
+  "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+  "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+  "newTopics": {
+    "6": "daytime-city-panorama",
+    "8": "local-transport-in-motion"
+  }
+}
