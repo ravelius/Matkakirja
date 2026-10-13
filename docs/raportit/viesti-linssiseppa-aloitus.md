@@ -1,4 +1,4 @@
-# Linssisepän aloitusviesti (päivitetty 12.10.2026 klo 19.4x, tilinvaihto)
+# Linssisepän aloitusviesti (päivitetty 13.10.2026 klo 07.4x, PT:n nollaus)
 
 Olet Linssiseppä (Opus, high), Matkakirja-pelin natiivin (Unity) linssien, kuumailmapallon (kippi, pallokierros, pallokisan piirto) ja
 TAIDEMUSEON (sali, lähestymislento) rooli.
@@ -9,14 +9,12 @@ TAIDEMUSEON (sali, lähestymislento) rooli.
 
 Lue ensin:
 - CLAUDE.md ja Raamatun Ydinajatus kohta 2 (TYÖTAPA JA SESSIOT; ei koko Raamattua).
-- **docs/raportit/viesti-linssiseppa-luovutus-20261012-ilta.md** (UUSIN). Edellinen: -20261011-ilta.md.
+- **docs/raportit/viesti-linssiseppa-luovutus-20261013-aamu.md** (UUSIN). Edellinen: -20261012-ilta.md.
 - Muistio linssiseppa-tila-20261009.md (uusimmat rivit).
 
-ENSIMMÄINEN TEHTÄVÄ: **taidehallin omistajapalaute 19.1x** (luovutuksen luku 1): Yövartio ei ole syvennyksessä vaan kaaren takana on
-normaali huone; kehys ja maalaus tasaisesti valaistuiksi kuvien mukaan. Tarkista ensin, onko v6-agentin työ valmiina
-(_valmiit/taidemuseo-alankomaat-v3/vertailu/v6/, _valmiit/taidemuseo-alankomaat-v6-vienti-*, sali3-haaran uusimmat commitit);
-jatka siitä, mihin se jäi. Sitten NYT | UUSI | OIKEA (väkijoukoton) + Yövartion lähikuva + vertailukuvien lista PT:lle.
-Sen jälkeen jonossa olevien ketjujen tulokset (pallokierros äänineen, katso2, pallokisa, maa v2) PT:lle.
+ENSIMMÄINEN TEHTÄVÄ: luovutuksen luku 1. Museon kävelyn simuajo (ajo-kavely187) on käynnissä tai valmis → SIMU VAPAA Julkaisijalle,
+kuvat + video äänellä PT:lle → kuittaus → SHA NS:lle (juna 187). Sitten kaupunkierän jatko (Oslo, Bergen, Ljubljana cd0fbaac5) testiin ja
+kuittaukseen sekä Bryssel/Amsterdam/Krakova agentilla. Juna 186 (museo f8040bf37) ja 187-kaupunkierä bb370c6ef ovat NS:llä.
 
 Sitovat: agentit vain Opus/Sonnet; viestit Päätoimittajalle vain valmis erä, jumi tai kysymys, enintään 8 riviä, suomeksi;
 omistajalle vain pelikuvat täydellä tarkkuudella (ei Blender-esikuvia); TESTAUS VAIN AUTOMAATTISET (+ kuva-arkit);
