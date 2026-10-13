@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 1,
+  "cityName": "HELSINKI",
+  "gameCityId": "helsinki",
+  "mediaSlug": "helsinki",
+  "taskNumbers": [
+    145,
+    146
+  ],
+  "updatedAt": "2026-10-13T17:57:29.407058+00:00",
+  "sourcePath": "posti/fable-codex-saapumisintro-uudet-6-8-loput-1-20261013.md",
+  "sourceCommit": "dbdaff9a39fa0e5052f176c890c85836e1a69a1f",
+  "sourceBlob": "1f499828d63779dfd3af7c99a4db2c4fa186e034",
+  "sourceReadInFull": true,
+  "sourceReadBy": "/root/intro_owner_rejection_inventory",
+  "sourceReadReceiptPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/source-read-receipt.json",
+  "assets": [],
+  "omittedItems": [
+    {
+      "taskNumber": 145,
+      "slot": 6,
+      "reason": "Tuomiokirkko ja Töölönlahti näkyvät, mutta vasemmalla oleva punatiilinen tornirakennus ei vastaa tunnistettavasti Uspenskin lähteen vaatimia kultaisia sipulikupoleita. Pyydetty kahden maamerkin yhteinen tunnistettavuus ei varmistu.",
+      "stage": "independent-QA",
+      "additionalGenerationAllowed": false,
+      "nativeSHA256": "146a91dc6b737f96868968471ec7b3695f942acd633e788d7bc2eaf1337bf96f",
+      "finalSHA256": "a53f9f0721606ef5b934438398a35c55f751db8d16a72603979fbea35821d6c8"
+    },
+    {
+      "taskNumber": 146,
+      "slot": 8,
+      "reason": "Kauppahallin punatiilisen kattopäädyn kirjainrivi on luettavaa julkisivutekstiä lähteen kiellon vastaisesti. Tätä ei peitetä tai retusoida, eikä uutta kutsua tehdä.",
+      "stage": "independent-QA",
+      "additionalGenerationAllowed": false,
+      "nativeSHA256": "581789eeafa34f4bf37f65404f11a370f3de81959543b8779e1b867817dea3bb",
+      "finalSHA256": "816d4f8899fabcbbe08a4d1e7fa3cc4ea01474ee21435b9f81b424f62e43aa54"
+    }
+  ],
+  "actualCalls": 2,
+  "maximumGenerationCalls": 2,
+  "allRequestedItemsHandled": true,
+  "allRequestedImagesDelivered": false,
+  "productionCompleteWithinSourceLimit": true,
+  "directMailboxDeliveryAuthorized": true,
+  "acceptanceRoute": "Päätoimittaja reviews on the owner authority in the exact source. This authorization is not yet an actual acceptance receipt.",
+  "ownerAcceptanceVerified": false,
+  "FableReceiptVerified": false,
+  "gameIntegrated": false,
+  "published": false,
+  "oldFiveApprovedPilotImagesPreserved": true,
+  "oldCelebrationAnd1873TopicsRemainWithdrawn": true,
+  "existingHeroSlotsPreserved": [
+    1,
+    2,
+    3
+  ],
+  "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+  "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+  "newTopics": {
+    "6": "daytime-city-panorama",
+    "8": "local-transport-in-motion"
+  }
+}

@@ -1,6 +1,6 @@
 # Euroopan uudet saapumisintroaiheet — osa 1/2, 13.10.2026
 
-9 QA/R2-varmennettua kuvaa toimitettu, 9 perusteltua lopullista poisjättöä. Käsitelty 18/48 tämän osan nimetyistä kuvista; 18 generointikutsua. Tilaus on kesken, kun kaikki nimetyt kohteet eivät vielä ole käsitelty.
+9 QA/R2-varmennettua kuvaa toimitettu, 11 perusteltua lopullista poisjättöä. Käsitelty 20/48 tämän osan nimetyistä kuvista; 20 generointikutsua. Tilaus on kesken, kun kaikki nimetyt kohteet eivät vielä ole käsitelty.
 
 Koko laajennus käsittää 95 nimettyä kuvaa (#133–227): osa 1 sisältää 48 ja osa 2 47 kuvaa. Aiempi 88+1 arvio ei korvaa lähteiden nimettyä inventaariota. Yksi uusi sisäänrakennettu generointi per kuva; ei uusintoja, vertailuottoja, inpaintingia tai rajauksia.
 
@@ -45,6 +45,13 @@ Manifesti: `posti/kuvatoimitus-saapumisintro-edinburgh-uudet-6-8-20261013.json`.
 
 - #143, slot 6: Calton Hill: Edinburghin linna, Old Town ja Princes Street päivällä länsilounaaseen. Havainnekuva.
 - #144, slot 8: Edinburghin raitiovaunu Princes Streetillä, Princes Street Gardens ja Castle Rock taustalla. Havainnekuva.
+
+## HELSINKI
+
+Manifesti: `posti/kuvatoimitus-saapumisintro-helsinki-uudet-6-8-20261013.json`. Toimitettu 0/2; kutsuja 2.
+
+- Poisjättö #145, slot 6: Tuomiokirkko ja Töölönlahti näkyvät, mutta vasemmalla oleva punatiilinen tornirakennus ei vastaa tunnistettavasti Uspenskin lähteen vaatimia kultaisia sipulikupoleita. Pyydetty kahden maamerkin yhteinen tunnistettavuus ei varmistu.
+- Poisjättö #146, slot 8: Kauppahallin punatiilisen kattopäädyn kirjainrivi on luettavaa julkisivutekstiä lähteen kiellon vastaisesti. Tätä ei peitetä tai retusoida, eikä uutta kutsua tehdä.
 
 ## BERLIINI
 
