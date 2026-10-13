@@ -1,6 +1,6 @@
 # Euroopan uudet saapumisintroaiheet — osa 1/2, 13.10.2026
 
-9 QA/R2-varmennettua kuvaa toimitettu, 11 perusteltua lopullista poisjättöä. Käsitelty 20/48 tämän osan nimetyistä kuvista; 20 generointikutsua. Tilaus on kesken, kun kaikki nimetyt kohteet eivät vielä ole käsitelty.
+10 QA/R2-varmennettua kuvaa toimitettu, 12 perusteltua lopullista poisjättöä. Käsitelty 22/48 tämän osan nimetyistä kuvista; 22 generointikutsua. Tilaus on kesken, kun kaikki nimetyt kohteet eivät vielä ole käsitelty.
 
 Koko laajennus käsittää 95 nimettyä kuvaa (#133–227): osa 1 sisältää 48 ja osa 2 47 kuvaa. Aiempi 88+1 arvio ei korvaa lähteiden nimettyä inventaariota. Yksi uusi sisäänrakennettu generointi per kuva; ei uusintoja, vertailuottoja, inpaintingia tai rajauksia.
 
@@ -73,6 +73,13 @@ Manifesti: `posti/kuvatoimitus-saapumisintro-florence-uudet-6-8-20261013.json`. 
 
 - #169, slot 6: Piazzale Michelangelo: koko Firenze luoteeseen päivällä. Havainnekuva.
 - Poisjättö #170, slot 8: Vaunu ja oikealle osoittava keula ovat muuten laadukkaita ja merkitön pinta siisti, mutta noin69%leveydestä on selvästi enemmän kuin lähteen noin puolet; pyydetty kaupunkiympäristön osuus jää pieneksi. Lopullinen lähteen sallima poisjättö, ei rajausta tai uutta kutsua.
+
+## GRANADA
+
+Manifesti: `posti/kuvatoimitus-saapumisintro-granada-uudet-6-8-20261013.json`. Toimitettu 1/2; kutsuja 2.
+
+- #172, slot 8: Albaicínin minibussi liikkeessä kapealla mukulakivikadulla. Havainnekuva.
+- Poisjättö #171, slot 6: Alhambran kokonaisuus täyttää yli puolet kuvan leveydestä. Lähde asettaa sille nimenomaisen enintään kolmanneksen rajan, joten kuva ei läpäise. Kaukainen punainen detalji on epävarma, eikä sitä tarvitse olettaa lipuksi hylkäyksen perusteeksi.
 
 Kuvat toimitetaan suoraan lähteen mukaisesti Päätoimittajan arvioitaviksi omistajan valtuutuksella. Todellista PT/omistajahyväksyntää, Fable-vastaanottokuittausta, runtime-kytkentää tai pelijulkaisua ei väitetä varmennetuiksi. Jokaisen toimitetun kuvan natiivi on rootin tarkastama, ja R2 on luettu takaisin kahdesti (kanoninen ja välimuistin ohittava URL), tavut, PNG-MIME ja CORS varmennettu. PNG 1536×1024, sRGB, läpinäkymätön; vain ICC/metadata lisätty, pikselit säilytetty. Promptit, viitteet sekä natiivi- ja vienti-SHA ovat manifesteissa.
 

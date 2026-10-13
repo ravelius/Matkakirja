@@ -1,0 +1,192 @@
+{
+  "schemaVersion": 1,
+  "cityName": "GRANADA",
+  "gameCityId": "granada",
+  "mediaSlug": "granada",
+  "taskNumbers": [
+    171,
+    172
+  ],
+  "updatedAt": "2026-10-13T17:57:36.369227+00:00",
+  "sourcePath": "posti/fable-codex-saapumisintro-uudet-6-8-loput-1-20261013.md",
+  "sourceCommit": "dbdaff9a39fa0e5052f176c890c85836e1a69a1f",
+  "sourceBlob": "1f499828d63779dfd3af7c99a4db2c4fa186e034",
+  "sourceReadInFull": true,
+  "sourceReadBy": "/root/intro_owner_rejection_inventory",
+  "sourceReadReceiptPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/source-read-receipt.json",
+  "assets": [
+    {
+      "taskNumber": 172,
+      "mediaSlug": "granada",
+      "slot": 8,
+      "filename": "granada-8-kulkuneuvo-intro-v1.png",
+      "title": "kaupungin oma kulkuneuvo liikkeessä — Albaicínin minibussi (C31/C32-tyyppinen) liikkeessä kapealla mukulakivikadulla.",
+      "fullDeliveryRequirement": "**8 / kaupungin oma kulkuneuvo liikkeessä — Albaicínin minibussi (C31/C32-tyyppinen) liikkeessä kapealla mukulakivikadulla.** Tiedosto `granada-8-kulkuneuvo-intro-v1.png`.\nMitä kuvataan: pieni kaupunkiminibussi (Albaicínin ja Alhambran linjojen tyyppinen, noin 7,5 metriä pitkä, pienikokoinen matalaetuinen bussi, enintään kaksi ovea) ajamassa hitaasti ylämäkeen kapealla mukulakivikadulla Albaicínin valkoisten talojen välissä päivällä (nykyaikainen värikuva): minibussin runko yksivärinen vaalea harmaanvalkoinen, ei raitoja, ei maalattuja kuvioita, ei numeroita, ei linjakylttejä, ei logoja, ei mainoksia eikä valmistajan tähteä tai tunnusta; lasit tummat ja heijastavat, matkustajat vain epäselvinä siluetteina, ei kasvoja. Kadun molemmin puolin kalkitut valkoiset seinät, tummat puiset ikkunaluukut, rautaparvekkeet, punaisia ja vaaleanpunaisia kukkaruukkuja ja köynnöksiä; katu on niin kapea, että minibussi täyttää lähes koko leveyden. Kadun päässä taustalla pehmeästi epätarkka sypressi ja vaaleansininen taivas. Jalankulkijoita vain muutama pieni hahmo kaukana ja selin. Kulma: vaakakuva, matala silmänkorkeus kadun reunalta, minibussi kolme neljäsosaa sivusta ja edestä kuvan keskikolmanneksessa liikkumassa ylös kohti kameran oikeaa puolta, täyttää noin puolet kuvan leveydestä. Valo: pehmeä aamupäivän valo, valkoisilla seinillä pehmeät varjot, vaimeat värit, ei HDR:ää. Ei saa näkyä: tekstiä, numeroita, linjakylttejä, pysäkkikylttejä, logoja, mainoksia, lippuja, tunnistettavia kasvoja, Alhambraa, Darro-jokea, kirkkoja, pysäköityjä autoja ja mopoja, muita ajoneuvoja, patsaita, valaistuksia. Fotorealistinen havainnekuva, vaimeat värit, 1536 x 1024.\nKuvateksti-ehdotus (loppuu sanaan Havainnekuva.): Albaicínin minibussi liikkeessä kapealla mukulakivikadulla. Havainnekuva.\n\n",
+      "sourceVersions": [
+        {
+          "path": "posti/fable-codex-saapumisintro-uudet-6-8-loput-1-20261013.md",
+          "commit": "dbdaff9a39fa0e5052f176c890c85836e1a69a1f",
+          "blob": "1f499828d63779dfd3af7c99a4db2c4fa186e034",
+          "readInFull": true
+        }
+      ],
+      "ownerThreadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+      "hostId": "local",
+      "generationCap": 1,
+      "status": "QA-R2-delivered-for-PT-review",
+      "productionStarted": false,
+      "delivered": true,
+      "city": "GRANADA",
+      "gameID": "granada",
+      "part": 1,
+      "sourceBlob": "1f499828d63779dfd3af7c99a4db2c4fa186e034",
+      "sourceCommit": "dbdaff9a39fa0e5052f176c890c85836e1a69a1f",
+      "sourcePath": "posti/fable-codex-saapumisintro-uudet-6-8-loput-1-20261013.md",
+      "sourceNasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/sources/fable-codex-saapumisintro-uudet-6-8-loput-1-20261013.md",
+      "sourceCharacterSpan": [
+        83763,
+        85553
+      ],
+      "sourceByteSpan": [
+        86872,
+        88731
+      ],
+      "fullDeliveryRequirementSHA256": "6093fdd9d22d4986988687af831fa843d96798221c342602c7e1149dc273c8b1",
+      "fullDirective": "pieni kaupunkiminibussi (Albaicínin ja Alhambran linjojen tyyppinen, noin 7,5 metriä pitkä, pienikokoinen matalaetuinen bussi, enintään kaksi ovea) ajamassa hitaasti ylämäkeen kapealla mukulakivikadulla Albaicínin valkoisten talojen välissä päivällä (nykyaikainen värikuva): minibussin runko yksivärinen vaalea harmaanvalkoinen, ei raitoja, ei maalattuja kuvioita, ei numeroita, ei linjakylttejä, ei logoja, ei mainoksia eikä valmistajan tähteä tai tunnusta; lasit tummat ja heijastavat, matkustajat vain epäselvinä siluetteina, ei kasvoja. Kadun molemmin puolin kalkitut valkoiset seinät, tummat puiset ikkunaluukut, rautaparvekkeet, punaisia ja vaaleanpunaisia kukkaruukkuja ja köynnöksiä; katu on niin kapea, että minibussi täyttää lähes koko leveyden. Kadun päässä taustalla pehmeästi epätarkka sypressi ja vaaleansininen taivas. Jalankulkijoita vain muutama pieni hahmo kaukana ja selin. Kulma: vaakakuva, matala silmänkorkeus kadun reunalta, minibussi kolme neljäsosaa sivusta ja edestä kuvan keskikolmanneksessa liikkumassa ylös kohti kameran oikeaa puolta, täyttää noin puolet kuvan leveydestä. Valo: pehmeä aamupäivän valo, valkoisilla seinillä pehmeät varjot, vaimeat värit, ei HDR:ää. Ei saa näkyä: tekstiä, numeroita, linjakylttejä, pysäkkikylttejä, logoja, mainoksia, lippuja, tunnistettavia kasvoja, Alhambraa, Darro-jokea, kirkkoja, pysäköityjä autoja ja mopoja, muita ajoneuvoja, patsaita, valaistuksia. Fotorealistinen havainnekuva, vaimeat värit, 1536 x 1024.",
+      "caption": "Albaicínin minibussi liikkeessä kapealla mukulakivikadulla. Havainnekuva.",
+      "sourceReadInFullVerified": true,
+      "mappingBlockExactSourceMatch": true,
+      "r2Prefix": "julisteet/saapumisintro/granada/20261013-uudet-6-8/",
+      "deliveryManifestPath": "posti/kuvatoimitus-saapumisintro-granada-uudet-6-8-20261013.json",
+      "partDeliveryReportPath": "posti/codex-fable-saapumisintro-uudet-6-8-loput-1-20261013.md",
+      "generationCallsRecorded": 0,
+      "qaAcceptedVerified": true,
+      "r2BytesVerified": true,
+      "mailboxDeliveryVerified": false,
+      "ownerAcceptanceVerified": false,
+      "acceptanceRoute": "PT acts for owner; source authorizes direct delivery. Actual PT acceptance remains evidence-dependent.",
+      "gameIntegrated": false,
+      "published": false,
+      "r2Key": "julisteet/saapumisintro/granada/20261013-uudet-6-8/granada-8-kulkuneuvo-intro-v1.png",
+      "historical": false,
+      "id": "granada-8-kulkuneuvo-intro-v1",
+      "sourceReadInFull": true,
+      "cityName": "GRANADA",
+      "gameCityId": "granada",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/granada/native-8.png",
+      "nativeSHA256": "5f01bc78d390c154378a35867c9c6c777a8cf9ac896a426982c12ba3661829b2",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/granada/granada-8-kulkuneuvo-intro-v1.png",
+      "workspacePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/eurooppa-introt-uudet68-loput-20261013/granada/granada-8-kulkuneuvo-intro-v1.png",
+      "sha256": "056873686c0b20d9d4bfc9b2d987e0fe298c3944637c9accb69edab86f169a0e",
+      "width": 1536,
+      "height": 1024,
+      "opaque": true,
+      "sRGB": true,
+      "neutralGrayscale": false,
+      "pixelIdentityAfterMetadataExport": true,
+      "pixelIdentityToNative": true,
+      "historicalGrayscaleEncodingNormalized": false,
+      "exportProcessing": "Metadata/sRGB only; pixels unchanged",
+      "generationPrompt": "Use case: photorealistic-natural.\nAsset: one NEW current-day full-color camera-photograph-like European city arrival image, exactly 1536 x 1024 pixels, landscape 3:2, opaque PNG. One image only, no collage or contact sheet.\nSubject: kaupungin oma kulkuneuvo liikkeessä — Albaicínin minibussi (C31/C32-tyyppinen) liikkeessä kapealla mukulakivikadulla.\n\nEXACT SCENE, VIEWPOINT, GEOMETRY, LIGHT AND EXCLUSIONS (the following Finnish source description is the controlling composition brief; follow every detail including bearing/FOV, relative left/right position, travel direction, scale, and exclusions):\npieni kaupunkiminibussi (Albaicínin ja Alhambran linjojen tyyppinen, noin 7,5 metriä pitkä, pienikokoinen matalaetuinen bussi, enintään kaksi ovea) ajamassa hitaasti ylämäkeen kapealla mukulakivikadulla Albaicínin valkoisten talojen välissä päivällä (nykyaikainen värikuva): minibussin runko yksivärinen vaalea harmaanvalkoinen, ei raitoja, ei maalattuja kuvioita, ei numeroita, ei linjakylttejä, ei logoja, ei mainoksia eikä valmistajan tähteä tai tunnusta; lasit tummat ja heijastavat, matkustajat vain epäselvinä siluetteina, ei kasvoja. Kadun molemmin puolin kalkitut valkoiset seinät, tummat puiset ikkunaluukut, rautaparvekkeet, punaisia ja vaaleanpunaisia kukkaruukkuja ja köynnöksiä; katu on niin kapea, että minibussi täyttää lähes koko leveyden. Kadun päässä taustalla pehmeästi epätarkka sypressi ja vaaleansininen taivas. Jalankulkijoita vain muutama pieni hahmo kaukana ja selin. Kulma: vaakakuva, matala silmänkorkeus kadun reunalta, minibussi kolme neljäsosaa sivusta ja edestä kuvan keskikolmanneksessa liikkumassa ylös kohti kameran oikeaa puolta, täyttää noin puolet kuvan leveydestä. Valo: pehmeä aamupäivän valo, valkoisilla seinillä pehmeät varjot, vaimeat värit, ei HDR:ää. Ei saa näkyä: tekstiä, numeroita, linjakylttejä, pysäkkikylttejä, logoja, mainoksia, lippuja, tunnistettavia kasvoja, Alhambraa, Darro-jokea, kirkkoja, pysäköityjä autoja ja mopoja, muita ajoneuvoja, patsaita, valaistuksia. Fotorealistinen havainnekuva, vaimeat värit, 1536 x 1024.\n\nFinal photographic requirements: Natural real-camera appearance with restrained ordinary exposure, soft realistic light and subdued COLOR; this is PRESENT DAY, not a historical reconstruction and not a youth party. Respect the exact stated transport form and uniformly neutral unmarked paint. Do not restore brand colors, stripes, vehicle identifiers, flags, signs, letters, numbers, logos, advertisements or clothing trademarks. Faces remain tiny anonymous silhouettes or back-facing at a distance as specified. No extra landmarks, sculpture, architecture, vehicles or geographic features beyond those the controlling description allows. Correct real-looking structural geometry and coherent physics. Irregular leaves, non-repeating water ripples, naturally varying worn stone/plaster, realistic glass and metal; no plastic AI surfaces, pattern stamping, HDR, cinematic oversaturation or CGI look. Any locomotive or boat motion is shown only as described, never with added drawn motion graphics. Frame native 1536 x 1024 from the start; do not create any in-image caption, disclaimer, filename, overlay, UI, frame or watermark.\n\nTransport composition reinforcement: Respect the source's approximate subject size, one HALF of the full image WIDTH, not merely of a crop or small center area. \n",
+      "sourceReadReceiptPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/source-read-receipt.json",
+      "references": [
+        {
+          "kind": "authorized-scene-commission",
+          "path": "posti/fable-codex-saapumisintro-uudet-6-8-loput-1-20261013.md",
+          "commit": "dbdaff9a39fa0e5052f176c890c85836e1a69a1f",
+          "blob": "1f499828d63779dfd3af7c99a4db2c4fa186e034",
+          "use": "Exact assigned source card read in full. Camera direction, FOV, landmark positions, transport geometry and exclusions are preserved; this is commission evidence, not a separate visual photograph reference."
+        }
+      ],
+      "url": "https://media.matkakirja.app/julisteet/saapumisintro/granada/20261013-uudet-6-8/granada-8-kulkuneuvo-intro-v1.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/granada/20261013-uudet-6-8/granada-8-kulkuneuvo-intro-v1.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "QA": {
+        "slot": 8,
+        "taskNumber": 172,
+        "assetID": "granada-8-kulkuneuvo-intro-v1",
+        "targetJsonPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/granada/asset-8.json",
+        "nativeSHA256": "5f01bc78d390c154378a35867c9c6c777a8cf9ac896a426982c12ba3661829b2",
+        "finalSHA256": "056873686c0b20d9d4bfc9b2d987e0fe298c3944637c9accb69edab86f169a0e",
+        "verdict": "accepted",
+        "reason": "Kokonainen merkitön pieni minibussi nousee oikealle kapealla mukulakivikadulla. Valkoiset seinät, puiset luukut, rautaparvekkeet ja kasvit ovat kameramaisia. Kuljettajan pieni varjoinen sivupää tuulilasin takana ei näytä tunnistettavia yksilöllisiä kasvopiirteitä; kaukaiset jalankulkijat ovat selin.",
+        "reviewer": "/root",
+        "reviewedAt": "2026-10-13T17:57:18.232871+00:00",
+        "nativeViewedInFull": true,
+        "assignedSourceCardReadInFull": true,
+        "nativePixelsEqualFinalVerified": true,
+        "technicalPassed": true,
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "published": false
+      },
+      "R2Proof": {
+        "slot": 8,
+        "r2Key": "julisteet/saapumisintro/granada/20261013-uudet-6-8/granada-8-kulkuneuvo-intro-v1.png",
+        "url": "https://media.matkakirja.app/julisteet/saapumisintro/granada/20261013-uudet-6-8/granada-8-kulkuneuvo-intro-v1.png",
+        "sha256": "056873686c0b20d9d4bfc9b2d987e0fe298c3944637c9accb69edab86f169a0e",
+        "nativeSHA256": "5f01bc78d390c154378a35867c9c6c777a8cf9ac896a426982c12ba3661829b2",
+        "bytes": 2581557,
+        "readbacks": [
+          {
+            "http": 200,
+            "byteExact": true,
+            "sha256": "056873686c0b20d9d4bfc9b2d987e0fe298c3944637c9accb69edab86f169a0e",
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "cacheBusted": false
+          },
+          {
+            "http": 200,
+            "byteExact": true,
+            "sha256": "056873686c0b20d9d4bfc9b2d987e0fe298c3944637c9accb69edab86f169a0e",
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "cacheBusted": true
+          }
+        ],
+        "byteExactReadback": true,
+        "verifiedAt": "2026-10-13T17:57:36.287577+00:00"
+      },
+      "FableReceiptVerified": false
+    }
+  ],
+  "omittedItems": [
+    {
+      "taskNumber": 171,
+      "slot": 6,
+      "reason": "Alhambran kokonaisuus täyttää yli puolet kuvan leveydestä. Lähde asettaa sille nimenomaisen enintään kolmanneksen rajan, joten kuva ei läpäise. Kaukainen punainen detalji on epävarma, eikä sitä tarvitse olettaa lipuksi hylkäyksen perusteeksi.",
+      "stage": "independent-QA",
+      "additionalGenerationAllowed": false,
+      "nativeSHA256": "7b543ae92143528497372b94e4aa921c3e372d1cbe0ec8a8c781021e28f90554",
+      "finalSHA256": "700abd79f733d6e1e57af6ec48e0d4ccdd5f4510b97fe9626d455864ab9ff37f"
+    }
+  ],
+  "actualCalls": 2,
+  "maximumGenerationCalls": 2,
+  "allRequestedItemsHandled": true,
+  "allRequestedImagesDelivered": false,
+  "productionCompleteWithinSourceLimit": true,
+  "directMailboxDeliveryAuthorized": true,
+  "acceptanceRoute": "Päätoimittaja reviews on the owner authority in the exact source. This authorization is not yet an actual acceptance receipt.",
+  "ownerAcceptanceVerified": false,
+  "FableReceiptVerified": false,
+  "gameIntegrated": false,
+  "published": false,
+  "oldFiveApprovedPilotImagesPreserved": true,
+  "oldCelebrationAnd1873TopicsRemainWithdrawn": true,
+  "existingHeroSlotsPreserved": [
+    1,
+    2,
+    3
+  ],
+  "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+  "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+  "newTopics": {
+    "6": "daytime-city-panorama",
+    "8": "local-transport-in-motion"
+  }
+}
